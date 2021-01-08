@@ -28,7 +28,7 @@ __snapshots__/
 /extensions/**/*.gif
 /extensions/**/*.jpeg
 /extensions/**/*.jpg
-# /extensions/**/*.js
+/extensions/**/*.js
 /extensions/**/*.json
 /extensions/**/*.jsx
 /extensions/**/*.md
