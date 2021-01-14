@@ -24,29 +24,29 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-reorg/update-project',
-    'version' => 'dev-reorg/update-project',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => 'b6c97cb636da51caa3571eedb618d65b7a2bc74b',
+    'reference' => 'e13487d0dbbe4c743739b6f1a3e37c143a8c2614',
     'name' => 'automattic/jetpack',
   ),
   'versions' => 
   array (
     'automattic/jetpack' => 
     array (
-      'pretty_version' => 'dev-reorg/update-project',
-      'version' => 'dev-reorg/update-project',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'b6c97cb636da51caa3571eedb618d65b7a2bc74b',
+      'reference' => 'e13487d0dbbe4c743739b6f1a3e37c143a8c2614',
     ),
     'automattic/jetpack-a8c-mc-stats' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -54,8 +54,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-abtest' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -63,8 +63,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-assets' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -72,8 +72,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-autoloader' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -81,8 +81,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-backup' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -90,8 +90,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-blocks' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -99,8 +99,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-compat' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -108,8 +108,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-config' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -117,8 +117,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-connection' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -126,8 +126,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-constants' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -135,8 +135,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-device-detection' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -144,8 +144,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-error' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -153,8 +153,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-heartbeat' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -162,8 +162,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-jitm' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -171,8 +171,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-lazy-images' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -180,8 +180,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-licensing' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -189,8 +189,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-logo' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -198,8 +198,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-options' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -207,8 +207,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-partner' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -216,8 +216,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-redirect' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -225,8 +225,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-roles' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -234,8 +234,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-status' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -243,8 +243,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-sync' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -252,8 +252,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-terms-of-service' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
@@ -261,8 +261,8 @@ private static $installed = array (
     ),
     'automattic/jetpack-tracking' => 
     array (
-      'pretty_version' => 'dev-feature/reorg',
-      'version' => 'dev-feature/reorg',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
