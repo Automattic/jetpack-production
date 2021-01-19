@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7c2075eba564b9e7eb345a4f4fc37684
+class ComposerStaticInit57fb11012ce7b82d1655817039eee9da
 {
     public static $files = array (
         'bce4ecd6aabb2a2948e06d0e2c4ea9a6' => __DIR__ . '/..' . '/automattic/jetpack-connection/legacy/load-ixr.php',
@@ -150,10 +150,10 @@ class ComposerStaticInit7c2075eba564b9e7eb345a4f4fc37684
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit7c2075eba564b9e7eb345a4f4fc37684::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit7c2075eba564b9e7eb345a4f4fc37684::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit7c2075eba564b9e7eb345a4f4fc37684::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit7c2075eba564b9e7eb345a4f4fc37684::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit57fb11012ce7b82d1655817039eee9da::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit57fb11012ce7b82d1655817039eee9da::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit57fb11012ce7b82d1655817039eee9da::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit57fb11012ce7b82d1655817039eee9da::$classMap;
 
         }, null, ClassLoader::class);
     }
