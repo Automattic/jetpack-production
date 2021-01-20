@@ -43,12 +43,7 @@
 			"@putenv COMPOSER_ROOT_VERSION=dev-monorepo"
 		]
 	},
-	"repositories": [
-		{
-			"type": "path",
-			"url": "../../packages/*"
-		}
-	],
+	"repositories": [],
 	"autoload": {
 		"classmap": [
 			"src"

@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '6dccb0847ca4290780a9cba1aafcb6efd359df3a',
+    'reference' => '718254f3c3e2fe1e99a949cd9d0e6e69c1474907',
     'name' => 'automattic/jetpack',
   ),
   'versions' => 
@@ -41,232 +41,232 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '6dccb0847ca4290780a9cba1aafcb6efd359df3a',
+      'reference' => '718254f3c3e2fe1e99a949cd9d0e6e69c1474907',
     ),
     'automattic/jetpack-a8c-mc-stats' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '6eee4d7a5e731b0faf800bda4800337bdb781b2a',
+      'reference' => '074e7c8789bf80b08e840f4e2507cbbf5865afec',
     ),
     'automattic/jetpack-abtest' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '113087dbb16ab1d151b84960347273280d710bfc',
+      'reference' => '0c08ac25bdeba0d54cb913cb7bec80e9886a1c7f',
     ),
     'automattic/jetpack-assets' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '93935a55c9da4f4d50f16d3eef8627bf49a423f5',
+      'reference' => '8ece5bc291357999bcc352780d1a2902e79f1c92',
     ),
     'automattic/jetpack-autoloader' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '25696631debb8f46bee0d3b0cbd02a92931a4b0b',
+      'reference' => '735cab76ed76d16a09191592ac9befd529d5176f',
     ),
     'automattic/jetpack-backup' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '2cfeb67da9ea0fa6980d6f35f483a69926891fc9',
+      'reference' => '33bd15c80294cde41e16cf94e83f8cc40c1021ad',
     ),
     'automattic/jetpack-blocks' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'ac50cb3379b53ac3148d35804f7a98eed4eb3152',
+      'reference' => '48094f51ce0df8ac40af0c6993a0f9c66c8236d9',
     ),
     'automattic/jetpack-compat' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '3ac292c1a9a82cb585f8bf1b50ccb908cba7ab86',
+      'reference' => '96779d57f886582f840cc11068e0d27e0e7c7978',
     ),
     'automattic/jetpack-config' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '711b4d5008cbd3ce2354e58e4ff4b1441234889a',
+      'reference' => 'b6e36d048e6a109d7f45dd7f522a8912b5f0dfc0',
     ),
     'automattic/jetpack-connection' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '8eb0c46ea88a099247fb43e6a4d9f0823ef18701',
+      'reference' => '23cbaa37fcb6dfaea5f0ee69282582d137f14762',
     ),
     'automattic/jetpack-constants' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '2d0c1e51e3c85cbc4f2dc1c95b81729524d7b0aa',
+      'reference' => 'b6b42c1dd67245397f23087cfb4dd01db2dff98c',
     ),
     'automattic/jetpack-device-detection' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '3fb490f2a3cb6a071b4dcd346e94e2da139d8e78',
+      'reference' => '3fade22d76e8bd2583a63a6bf1e1839d0e8d789a',
     ),
     'automattic/jetpack-error' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '376067daa3b8af94e1b5ddb09065f658daf22cdf',
+      'reference' => '77f69464ed97ecb8df22dcfd38108f60deda9a67',
     ),
     'automattic/jetpack-heartbeat' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'a2902505dbae754bdbdf48909ed328ad4ac697c5',
+      'reference' => 'faa37e2ea6a52e9e703e0d5e9fe21f787be24728',
     ),
     'automattic/jetpack-jitm' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '07d7f38c2e57898be6b58e3057a1b0b7846dcfff',
+      'reference' => 'b02a6b28b73754a6671f2e1366f90b47faf0a337',
     ),
     'automattic/jetpack-lazy-images' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'e153dcb295bb7d9df78de49cdc4c8d7cc5ec06a7',
+      'reference' => 'c01b8550482d42d5f9dbfe8d02a9b70ec3159002',
     ),
     'automattic/jetpack-licensing' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'de22ed7f8f6e0924d89ac45908b79f24ab0db95e',
+      'reference' => '71e23e4b883cdf174acc9aa7f44d258865c265ea',
     ),
     'automattic/jetpack-logo' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'eb58628884d68bc62c384201505e84f42eea3811',
+      'reference' => '6e0f608ae4e630285cbd6ed56394eaac325f1bd2',
     ),
     'automattic/jetpack-options' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '84a33019fa7b96309115fd3b00dfed443f79ae79',
+      'reference' => '40ce91f7f6c92a1003a5c54d5254ea164b44c750',
     ),
     'automattic/jetpack-partner' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '9821df864467d93c57242f62f0b7798614b12d32',
+      'reference' => '80da0d5649a6899e4d13fa144414b05351cfd784',
     ),
     'automattic/jetpack-redirect' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '01b000c360dcbdc9f7332fcf3ae3d18e6fb9fc44',
+      'reference' => '5a0663761ce35016ce4c697ea01ab9017139c81e',
     ),
     'automattic/jetpack-roles' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '478c1102e2e83ac6e102cd933a09a0d92a5651ec',
+      'reference' => '3bbe11c8b2eabce243accd78b9dcda5e0ff6f710',
     ),
     'automattic/jetpack-status' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'eb4b403e0b657dbf7d63758bea839f166f3e4766',
+      'reference' => 'cab25157f195f548e35ba8e8b71ede38a4e5a845',
     ),
     'automattic/jetpack-sync' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'bc078fce760ff212732ad407fdf00ab04b1446f7',
+      'reference' => 'bc79e0060777dbc339040ea8396661c22cc51f21',
     ),
     'automattic/jetpack-terms-of-service' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '5ff3c9e198479dbb9219f72adba7003ea9a79359',
+      'reference' => '8f60ed0fd8d70ba33f7de01d7cd4fe79d04d8fe3',
     ),
     'automattic/jetpack-tracking' => 
     array (
-      'pretty_version' => 'dev-monorepo',
-      'version' => 'dev-monorepo',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'ca3947eb0377d47276fc16086114ded89f2adedd',
+      'reference' => '5cc97f8ee9229bcc6a514b859bfbbcdbcf892a1d',
     ),
     'nojimage/twitter-text-php' => 
     array (

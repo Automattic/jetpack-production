@@ -2,12 +2,12 @@
     "packages": [
         {
             "name": "automattic/jetpack-a8c-mc-stats",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/a8c-mc-stats",
-                "reference": "6eee4d7a5e731b0faf800bda4800337bdb781b2a"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-a8c-mc-stats",
+                "reference": "074e7c8789bf80b08e840f4e2507cbbf5865afec"
             },
             "require-dev": {
                 "yoast/phpunit-polyfills": "0.2.0"
@@ -33,18 +33,19 @@
             ],
             "description": "Used to record internal usage stats for Automattic. Not visible to site owners.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-a8c-mc-stats"
         },
         {
             "name": "automattic/jetpack-abtest",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/abtest",
-                "reference": "113087dbb16ab1d151b84960347273280d710bfc"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-abtest",
+                "reference": "0c08ac25bdeba0d54cb913cb7bec80e9886a1c7f"
             },
             "require": {
                 "automattic/jetpack-connection": "@dev",
@@ -78,18 +79,19 @@
             ],
             "description": "Provides an interface to the WP.com A/B tests.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-abtest"
         },
         {
             "name": "automattic/jetpack-assets",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/assets",
-                "reference": "93935a55c9da4f4d50f16d3eef8627bf49a423f5"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-assets",
+                "reference": "8ece5bc291357999bcc352780d1a2902e79f1c92"
             },
             "require": {
                 "automattic/jetpack-constants": "@dev"
@@ -119,18 +121,19 @@
             ],
             "description": "Asset management utilities for Jetpack ecosystem packages",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-assets"
         },
         {
             "name": "automattic/jetpack-autoloader",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/autoloader",
-                "reference": "25696631debb8f46bee0d3b0cbd02a92931a4b0b"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-autoloader",
+                "reference": "735cab76ed76d16a09191592ac9befd529d5176f"
             },
             "require": {
                 "composer-plugin-api": "^1.1 || ^2.0"
@@ -163,18 +166,19 @@
             ],
             "description": "Creates a custom autoloader for a plugin or theme.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-autoloader"
         },
         {
             "name": "automattic/jetpack-backup",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/backup",
-                "reference": "2cfeb67da9ea0fa6980d6f35f483a69926891fc9"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-backup",
+                "reference": "33bd15c80294cde41e16cf94e83f8cc40c1021ad"
             },
             "type": "library",
             "extra": {
@@ -194,18 +198,19 @@
             ],
             "description": "Tools to assist with backing up Jetpack sites.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-backup"
         },
         {
             "name": "automattic/jetpack-blocks",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/blocks",
-                "reference": "ac50cb3379b53ac3148d35804f7a98eed4eb3152"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-blocks",
+                "reference": "48094f51ce0df8ac40af0c6993a0f9c66c8236d9"
             },
             "require-dev": {
                 "automattic/wordbless": "dev-master",
@@ -235,18 +240,19 @@
             ],
             "description": "Register and manage blocks within a plugin. Used to manage block registration, enqueues, and more.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-blocks"
         },
         {
             "name": "automattic/jetpack-compat",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/compat",
-                "reference": "3ac292c1a9a82cb585f8bf1b50ccb908cba7ab86"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-compat",
+                "reference": "96779d57f886582f840cc11068e0d27e0e7c7978"
             },
             "require-dev": {
                 "yoast/phpunit-polyfills": "0.2.0"
@@ -275,18 +281,19 @@
             ],
             "description": "Compatibility layer with previous versions of Jetpack",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-compat"
         },
         {
             "name": "automattic/jetpack-config",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/config",
-                "reference": "711b4d5008cbd3ce2354e58e4ff4b1441234889a"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-config",
+                "reference": "b6e36d048e6a109d7f45dd7f522a8912b5f0dfc0"
             },
             "type": "library",
             "extra": {
@@ -303,18 +310,19 @@
             ],
             "description": "Jetpack configuration package that initializes other packages and configures Jetpack's functionality. Can be used as a base for all variants of Jetpack package usage.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-config"
         },
         {
             "name": "automattic/jetpack-connection",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/connection",
-                "reference": "8eb0c46ea88a099247fb43e6a4d9f0823ef18701"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-connection",
+                "reference": "23cbaa37fcb6dfaea5f0ee69282582d137f14762"
             },
             "require": {
                 "automattic/jetpack-constants": "@dev",
@@ -356,18 +364,19 @@
             ],
             "description": "Everything needed to connect to the Jetpack infrastructure",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-connection"
         },
         {
             "name": "automattic/jetpack-constants",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/constants",
-                "reference": "2d0c1e51e3c85cbc4f2dc1c95b81729524d7b0aa"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-constants",
+                "reference": "b6b42c1dd67245397f23087cfb4dd01db2dff98c"
             },
             "require-dev": {
                 "brain/monkey": "2.6.0",
@@ -394,18 +403,19 @@
             ],
             "description": "A wrapper for defining constants in a more testable way.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-constants"
         },
         {
             "name": "automattic/jetpack-device-detection",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/device-detection",
-                "reference": "3fb490f2a3cb6a071b4dcd346e94e2da139d8e78"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-device-detection",
+                "reference": "3fade22d76e8bd2583a63a6bf1e1839d0e8d789a"
             },
             "require-dev": {
                 "yoast/phpunit-polyfills": "0.2.0"
@@ -431,18 +441,19 @@
             ],
             "description": "A way to detect device types based on User-Agent header.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-device-detection"
         },
         {
             "name": "automattic/jetpack-error",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/error",
-                "reference": "376067daa3b8af94e1b5ddb09065f658daf22cdf"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-error",
+                "reference": "77f69464ed97ecb8df22dcfd38108f60deda9a67"
             },
             "require-dev": {
                 "yoast/phpunit-polyfills": "0.2.0"
@@ -468,18 +479,19 @@
             ],
             "description": "Jetpack Error - a wrapper around WP_Error.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-error"
         },
         {
             "name": "automattic/jetpack-heartbeat",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/heartbeat",
-                "reference": "a2902505dbae754bdbdf48909ed328ad4ac697c5"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-heartbeat",
+                "reference": "faa37e2ea6a52e9e703e0d5e9fe21f787be24728"
             },
             "require": {
                 "automattic/jetpack-a8c-mc-stats": "@dev",
@@ -509,18 +521,19 @@
             ],
             "description": "This adds a cronjob that sends a batch of internal automattic stats to wp.com once a day",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-heartbeat"
         },
         {
             "name": "automattic/jetpack-jitm",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/jitm",
-                "reference": "07d7f38c2e57898be6b58e3057a1b0b7846dcfff"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-jitm",
+                "reference": "b02a6b28b73754a6671f2e1366f90b47faf0a337"
             },
             "require": {
                 "automattic/jetpack-assets": "@dev",
@@ -558,18 +571,19 @@
             ],
             "description": "Just in time messages for Jetpack",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-jitm"
         },
         {
             "name": "automattic/jetpack-lazy-images",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/lazy-images",
-                "reference": "e153dcb295bb7d9df78de49cdc4c8d7cc5ec06a7"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-lazy-images",
+                "reference": "c01b8550482d42d5f9dbfe8d02a9b70ec3159002"
             },
             "require": {
                 "automattic/jetpack-assets": "@dev",
@@ -603,18 +617,19 @@
             ],
             "description": "Speed up your site and create a smoother viewing experience by loading images as visitors scroll down the screen, instead of all at once.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-lazy-images"
         },
         {
             "name": "automattic/jetpack-licensing",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/licensing",
-                "reference": "de22ed7f8f6e0924d89ac45908b79f24ab0db95e"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-licensing",
+                "reference": "71e23e4b883cdf174acc9aa7f44d258865c265ea"
             },
             "require": {
                 "automattic/jetpack-connection": "@dev",
@@ -648,18 +663,19 @@
             ],
             "description": "Everything needed to manage Jetpack licenses client-side.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-licensing"
         },
         {
             "name": "automattic/jetpack-logo",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/logo",
-                "reference": "eb58628884d68bc62c384201505e84f42eea3811"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-logo",
+                "reference": "6e0f608ae4e630285cbd6ed56394eaac325f1bd2"
             },
             "require-dev": {
                 "yoast/phpunit-polyfills": "0.2.0"
@@ -685,18 +701,19 @@
             ],
             "description": "A logo for Jetpack",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-logo"
         },
         {
             "name": "automattic/jetpack-options",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/options",
-                "reference": "84a33019fa7b96309115fd3b00dfed443f79ae79"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-options",
+                "reference": "40ce91f7f6c92a1003a5c54d5254ea164b44c750"
             },
             "require": {
                 "automattic/jetpack-constants": "@dev"
@@ -719,18 +736,19 @@
             ],
             "description": "A wrapper for wp-options to manage specific Jetpack options.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-options"
         },
         {
             "name": "automattic/jetpack-partner",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/partner",
-                "reference": "9821df864467d93c57242f62f0b7798614b12d32"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-partner",
+                "reference": "80da0d5649a6899e4d13fa144414b05351cfd784"
             },
             "require-dev": {
                 "brain/monkey": "2.6.0",
@@ -757,18 +775,19 @@
             ],
             "description": "Support functions for Jetpack hosting partners.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-partner"
         },
         {
             "name": "automattic/jetpack-redirect",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/redirect",
-                "reference": "01b000c360dcbdc9f7332fcf3ae3d18e6fb9fc44"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-redirect",
+                "reference": "5a0663761ce35016ce4c697ea01ab9017139c81e"
             },
             "require": {
                 "automattic/jetpack-status": "@dev"
@@ -798,18 +817,19 @@
             ],
             "description": "Utilities to build URLs to the jetpack.com/redirect/ service",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-redirect"
         },
         {
             "name": "automattic/jetpack-roles",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/roles",
-                "reference": "478c1102e2e83ac6e102cd933a09a0d92a5651ec"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-roles",
+                "reference": "3bbe11c8b2eabce243accd78b9dcda5e0ff6f710"
             },
             "require-dev": {
                 "brain/monkey": "2.6.0",
@@ -836,18 +856,19 @@
             ],
             "description": "Utilities, related with user roles and capabilities.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-roles"
         },
         {
             "name": "automattic/jetpack-status",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/status",
-                "reference": "eb4b403e0b657dbf7d63758bea839f166f3e4766"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-status",
+                "reference": "cab25157f195f548e35ba8e8b71ede38a4e5a845"
             },
             "require-dev": {
                 "brain/monkey": "2.6.0",
@@ -874,18 +895,19 @@
             ],
             "description": "Used to retrieve information about the current status of Jetpack and the site overall.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-status"
         },
         {
             "name": "automattic/jetpack-sync",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/sync",
-                "reference": "bc078fce760ff212732ad407fdf00ab04b1446f7"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-sync",
+                "reference": "bc79e0060777dbc339040ea8396661c22cc51f21"
             },
             "require": {
                 "automattic/jetpack-connection": "@dev",
@@ -909,18 +931,19 @@
             ],
             "description": "Everything needed to allow syncing to the WP.com infrastructure.",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-sync"
         },
         {
             "name": "automattic/jetpack-terms-of-service",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/terms-of-service",
-                "reference": "5ff3c9e198479dbb9219f72adba7003ea9a79359"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-terms-of-service",
+                "reference": "8f60ed0fd8d70ba33f7de01d7cd4fe79d04d8fe3"
             },
             "require": {
                 "automattic/jetpack-options": "@dev",
@@ -951,18 +974,19 @@
             ],
             "description": "Everything need to manage the terms of service state",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-terms-of-service"
         },
         {
             "name": "automattic/jetpack-tracking",
-            "version": "dev-monorepo",
-            "version_normalized": "dev-monorepo",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/tracking",
-                "reference": "ca3947eb0377d47276fc16086114ded89f2adedd"
+                "url": "/tmp/jetpack-project-mirrors.MnOTXiOq/Automattic/jetpack-tracking",
+                "reference": "5cc97f8ee9229bcc6a514b859bfbbcdbcf892a1d"
             },
             "require": {
                 "automattic/jetpack-options": "@dev",
@@ -994,7 +1018,8 @@
             ],
             "description": "Tracking for Jetpack",
             "transport-options": {
-                "relative": true
+                "monorepo": true,
+                "relative": false
             },
             "install-path": "../automattic/jetpack-tracking"
         },
