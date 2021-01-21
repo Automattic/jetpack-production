@@ -330,10 +330,6 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-error/src/class-error.php'
 	),
-	'Automattic\\Jetpack\\Assets' => array(
-		'version' => 'dev-master',
-		'path'    => $vendorDir . '/automattic/jetpack-assets/src/class-assets.php'
-	),
 	'Jetpack_IXR_Client' => array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/legacy/class-jetpack-ixr-client.php'
@@ -421,6 +417,10 @@ return array(
 	'Automattic\\Jetpack\\Terms_Of_Service' => array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-terms-of-service/src/class-terms-of-service.php'
+	),
+	'Automattic\\Jetpack\\Assets' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-assets/src/class-assets.php'
 	),
 	'Automattic\\Jetpack\\Status' => array(
 		'version' => 'dev-master',

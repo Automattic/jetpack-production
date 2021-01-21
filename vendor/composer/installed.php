@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'f800b59aad4364e9dc425fe12f0281d4a4e54712',
+    'reference' => '7d76353666972a89c43556766acb0edb739cb4ff',
     'name' => 'automattic/jetpack',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'f800b59aad4364e9dc425fe12f0281d4a4e54712',
+      'reference' => '7d76353666972a89c43556766acb0edb739cb4ff',
     ),
     'automattic/jetpack-a8c-mc-stats' => 
     array (
@@ -243,7 +243,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '5cc97f8ee9229bcc6a514b859bfbbcdbcf892a1d',
+      'reference' => '9411f4fe529e1d99cce804dac9fae38958b5b3b4',
     ),
     'nojimage/twitter-text-php' => 
     array (
