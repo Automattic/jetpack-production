@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '46ce12007da52b79d356495bbb6a89a86e714d4c',
+    'reference' => 'b353fa7062d7f94f019a81f33d4f1402f5ef5ffb',
     'name' => 'automattic/jetpack',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '46ce12007da52b79d356495bbb6a89a86e714d4c',
+      'reference' => 'b353fa7062d7f94f019a81f33d4f1402f5ef5ffb',
     ),
     'automattic/jetpack-a8c-mc-stats' => 
     array (
