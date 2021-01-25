@@ -5,7 +5,7 @@
  * @package automattic/jetpack-autoloader
  */
 
-namespace Automattic\Jetpack\Autoloader\jp8165b821e76cb7543c5e0df9ebd3761d;
+namespace Automattic\Jetpack\Autoloader\jpd10059961bc464dc7a48b3f96ca62e10;
 
  // phpcs:ignore
 
@@ -34,6 +34,7 @@ class Plugin_Locator {
 	 * Finds the path to the current plugin.
 	 *
 	 * @return string $path The path to the current plugin.
+	 *
 	 * @throws \RuntimeException If the current plugin does not have an autoloader.
 	 */
 	public function find_current_plugin() {
@@ -70,6 +71,7 @@ class Plugin_Locator {
 	 * Checks for plugins in the `action` request parameter.
 	 *
 	 * @param string[] $allowed_actions The actions that we're allowed to return plugins for.
+	 *
 	 * @return array $plugin_paths The list of absolute paths we've found.
 	 */
 	public function find_using_request_action( $allowed_actions ) {
