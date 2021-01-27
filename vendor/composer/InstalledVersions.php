@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '53b06df61656b306931cec6e3ded2a64c4234831',
+    'reference' => 'eb4e11f8d147a461fbe43a38677ff96b34c2a641',
     'name' => 'automattic/jetpack',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '53b06df61656b306931cec6e3ded2a64c4234831',
+      'reference' => 'eb4e11f8d147a461fbe43a38677ff96b34c2a641',
     ),
     'automattic/jetpack-a8c-mc-stats' => 
     array (
@@ -176,7 +176,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'afcf71bde38a8a70a98a9b51056e2e253d307c22',
+      'reference' => 'ab615a94a539b4d18ad2b152c8447cdb860c6cab',
     ),
     'automattic/jetpack-licensing' => 
     array (
