@@ -1,24 +1,24 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => 'dev-monorepo',
+    'version' => 'dev-monorepo',
     'aliases' => 
     array (
     ),
-    'reference' => '0fa5e00cac6d0f3fdb4b7fd4238cb82f09cd3f43',
+    'reference' => NULL,
     'name' => 'automattic/jetpack',
   ),
   'versions' => 
   array (
     'automattic/jetpack' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'dev-monorepo',
+      'version' => 'dev-monorepo',
       'aliases' => 
       array (
       ),
-      'reference' => '0fa5e00cac6d0f3fdb4b7fd4238cb82f09cd3f43',
+      'reference' => NULL,
     ),
     'automattic/jetpack-a8c-mc-stats' => 
     array (

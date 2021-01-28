@@ -71,7 +71,7 @@ return array(
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/StringUtils.php'
 	),
 	'Automattic\\Jetpack\\Plugin\\Tracking' => array(
-		'version' => 'dev-master',
+		'version' => 'dev-monorepo',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
 	'Automattic\\Jetpack\\Sync\\Replicastore\\Table_Checksum' => array(
