@@ -322,7 +322,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-connection",
-                "reference": "23cbaa37fcb6dfaea5f0ee69282582d137f14762"
+                "reference": "95f504c1e8aa174b1a93c20f9cedd5430e7c2fb6"
             },
             "require": {
                 "automattic/jetpack-constants": "@dev",
@@ -334,6 +334,7 @@
             },
             "require-dev": {
                 "automattic/wordbless": "@dev",
+                "brain/monkey": "^2.6",
                 "yoast/phpunit-polyfills": "0.2.0"
             },
             "type": "library",

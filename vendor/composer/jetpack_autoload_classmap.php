@@ -386,6 +386,10 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-rest-connector.php'
 	),
+	'Automattic\\Jetpack\\Connection\\Webhooks' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-webhooks.php'
+	),
 	'Automattic\\Jetpack\\Connection\\Plugin' => array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-plugin.php'

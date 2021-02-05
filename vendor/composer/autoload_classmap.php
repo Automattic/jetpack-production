@@ -27,6 +27,7 @@ return array(
     'Automattic\\Jetpack\\Connection\\REST_Connector' => $vendorDir . '/automattic/jetpack-connection/src/class-rest-connector.php',
     'Automattic\\Jetpack\\Connection\\Rest_Authentication' => $vendorDir . '/automattic/jetpack-connection/src/class-rest-authentication.php',
     'Automattic\\Jetpack\\Connection\\Utils' => $vendorDir . '/automattic/jetpack-connection/src/class-utils.php',
+    'Automattic\\Jetpack\\Connection\\Webhooks' => $vendorDir . '/automattic/jetpack-connection/src/class-webhooks.php',
     'Automattic\\Jetpack\\Connection\\XMLRPC_Async_Call' => $vendorDir . '/automattic/jetpack-connection/src/class-xmlrpc-async-call.php',
     'Automattic\\Jetpack\\Connection\\XMLRPC_Connector' => $vendorDir . '/automattic/jetpack-connection/src/class-xmlrpc-connector.php',
     'Automattic\\Jetpack\\Constants' => $vendorDir . '/automattic/jetpack-constants/src/class-constants.php',
