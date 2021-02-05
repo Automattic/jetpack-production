@@ -101,6 +101,15 @@
       ),
       'reference' => '4f891aee07a0b7d9a0d15c05b0cff3267b4a7653',
     ),
+    'automattic/jetpack-connection-ui' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e5e2d501c1057a5f28dc31fc4c373f73bdc8cd27',
+    ),
     'automattic/jetpack-constants' => 
     array (
       'pretty_version' => 'dev-master',

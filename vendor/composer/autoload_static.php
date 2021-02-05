@@ -49,6 +49,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3cjetpack
         'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => __DIR__ . '/..' . '/automattic/jetpack-backup/src/class-helper-script-manager.php',
         'Automattic\\Jetpack\\Blocks' => __DIR__ . '/..' . '/automattic/jetpack-blocks/src/class-blocks.php',
         'Automattic\\Jetpack\\Config' => __DIR__ . '/..' . '/automattic/jetpack-config/src/class-config.php',
+        'Automattic\\Jetpack\\ConnectionUI\\Admin' => __DIR__ . '/..' . '/automattic/jetpack-connection-ui/src/class-admin.php',
         'Automattic\\Jetpack\\Connection\\Client' => __DIR__ . '/..' . '/automattic/jetpack-connection/src/class-client.php',
         'Automattic\\Jetpack\\Connection\\Error_Handler' => __DIR__ . '/..' . '/automattic/jetpack-connection/src/class-error-handler.php',
         'Automattic\\Jetpack\\Connection\\Manager' => __DIR__ . '/..' . '/automattic/jetpack-connection/src/class-manager.php',

@@ -404,6 +404,48 @@
             "install-path": "../automattic/jetpack-connection"
         },
         {
+            "name": "automattic/jetpack-connection-ui",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "/tmp/jetpack-build/Automattic/jetpack-connection-ui",
+                "reference": "e5e2d501c1057a5f28dc31fc4c373f73bdc8cd27"
+            },
+            "require": {
+                "automattic/jetpack-connection": "@dev"
+            },
+            "type": "library",
+            "extra": {
+                "mirror-repo": "Automattic/jetpack-connection-ui"
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "scripts": {
+                "build-development": [
+                    "Composer\\Config::disableProcessTimeout",
+                    "yarn build"
+                ],
+                "build-production": [
+                    "Composer\\Config::disableProcessTimeout",
+                    "yarn build"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Jetpack Connection UI",
+            "transport-options": {
+                "monorepo": true,
+                "relative": false
+            },
+            "install-path": "../automattic/jetpack-connection-ui"
+        },
+        {
             "name": "automattic/jetpack-constants",
             "version": "dev-master",
             "version_normalized": "dev-master",

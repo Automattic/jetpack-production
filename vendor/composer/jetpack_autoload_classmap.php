@@ -278,6 +278,10 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-device-detection.php'
 	),
+	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
+	),
 	'Automattic\\Jetpack\\Config' => array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
