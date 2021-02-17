@@ -177,7 +177,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9be907dc566fadf8f85493cbb7d78c46b531f1ad',
+      'reference' => '56f9a72b4ccd580df25a9f3d8f06035d5afeebad',
     ),
     'automattic/jetpack-lazy-images' => 
     array (
