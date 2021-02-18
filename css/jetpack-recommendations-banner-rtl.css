@@ -5,6 +5,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 55% 45%;
+  max-width: 1600px;
   min-height: 480px;
   background: linear-gradient(-120deg, white 0%, white 55%, #c5d9ed 55%);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.03), 0px 1px 2px rgba(0, 0, 0, 0.03);
@@ -12,15 +13,22 @@
   margin: 3rem 0 1.25rem 1.25rem;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 1152px) {
   .jp-recommendations-banner-main {
+    margin: 4rem 0 1.25rem 1.25rem;
     grid-template-columns: 100% 0%;
   }
 }
 
-@media (max-width: 960px) {
+@media (min-width: 1688px) {
   .jp-recommendations-banner-main {
-    margin: 4rem 0 1.25rem 1.25rem;
+    grid-template-columns: 65% 35%;
+  }
+}
+
+@media (max-width: 480px) {
+  .jp-recommendations-banner-main .notice-dismiss {
+    padding: 16px;
   }
 }
 
@@ -28,6 +36,24 @@
   display: flex;
   flex-direction: column;
   padding-left: 48px;
+}
+
+@media (min-width: 1688px) {
+  .jp-recommendations-banner__content {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 660px) {
+  .jp-recommendations-banner__content {
+    padding-left: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jp-recommendations-banner__content {
+    padding-left: 16px;
+  }
 }
 
 .jp-recommendations-banner__logo {
@@ -57,6 +83,12 @@
   margin: 32px 32px 24px 0;
 }
 
+@media (min-width: 1152px) {
+  .jp-recommendations-banner__description {
+    max-width: 600px;
+  }
+}
+
 @media (max-width: 660px) {
   .jp-recommendations-banner__description {
     margin: 32px 32px 24px 32px;
@@ -70,6 +102,7 @@
 }
 
 .jp-recommendations-banner__answer {
+  max-width: 600px;
   text-align: center;
   margin: 0 32px 32px 0;
 }
@@ -177,7 +210,7 @@
   left: 0;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 960px) {
   .jp-recommendations-banner__illustration-container {
     display: none;
   }
@@ -185,6 +218,7 @@
 
 .jp-recommendations-banner__illustration-background {
   width: 100%;
+  max-height: 480px;
 }
 
 .jp-recommendations-banner__illustration-foreground {
