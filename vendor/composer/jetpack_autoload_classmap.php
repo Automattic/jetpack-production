@@ -370,6 +370,10 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-webhooks.php'
 	),
+	'Automattic\\Jetpack\\Connection\\Secrets' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-secrets.php'
+	),
 	'Automattic\\Jetpack\\Connection\\Manager' => array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-manager.php'
@@ -381,6 +385,10 @@ return array(
 	'Automattic\\Jetpack\\Connection\\Plugin_Storage' => array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-plugin-storage.php'
+	),
+	'Automattic\\Jetpack\\Connection\\Tokens' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-tokens.php'
 	),
 	'Automattic\\Jetpack\\Connection\\REST_Connector' => array(
 		'version' => 'dev-master',
