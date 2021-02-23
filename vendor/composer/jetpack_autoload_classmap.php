@@ -278,6 +278,10 @@ return array(
 		'version' => '1.3.2.0',
 		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-user-agent-info.php'
 	),
+	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
+		'version' => '1.0.0.0',
+		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
+	),
 	'Automattic\\Jetpack\\Config' => array(
 		'version' => '1.4.3.0',
 		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
@@ -313,10 +317,6 @@ return array(
 	'Automattic\\Jetpack\\Abtest' => array(
 		'version' => '1.9.4.0',
 		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
-		'version' => 'dev-master',
-		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
 		'version' => '1.5.2.0',

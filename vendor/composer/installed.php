@@ -103,13 +103,12 @@
     ),
     'automattic/jetpack-connection-ui' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'v1.0.0',
+      'version' => '1.0.0.0',
       'aliases' => 
       array (
-        0 => '9999999-dev',
       ),
-      'reference' => '962b88d546c65311570724356e76f7d068684413',
+      'reference' => '6d6b3dcf640bcc686c70d65cf88240c2d89b0f77',
     ),
     'automattic/jetpack-constants' => 
     array (
