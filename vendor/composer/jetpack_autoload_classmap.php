@@ -362,6 +362,10 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-xmlrpc-async-call.php'
 	),
+	'Automattic\\Jetpack\\Connection\\Nonce_Handler' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-nonce-handler.php'
+	),
 	'Automattic\\Jetpack\\Connection\\Error_Handler' => array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-error-handler.php'
