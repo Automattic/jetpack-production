@@ -414,10 +414,6 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-heartbeat/src/class-heartbeat.php'
 	),
-	'Automattic\\Jetpack\\A8c_Mc_Stats' => array(
-		'version' => 'dev-master',
-		'path'    => $vendorDir . '/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php'
-	),
 	'Automattic\\Jetpack\\Roles' => array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-roles/src/class-roles.php'
@@ -437,6 +433,10 @@ return array(
 	'Automattic\\Jetpack\\Terms_Of_Service' => array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-terms-of-service/src/class-terms-of-service.php'
+	),
+	'Automattic\\Jetpack\\A8c_Mc_Stats' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php'
 	),
 	'Automattic\\Jetpack\\Assets' => array(
 		'version' => 'dev-master',

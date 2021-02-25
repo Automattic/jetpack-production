@@ -258,7 +258,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'bc79e0060777dbc339040ea8396661c22cc51f21',
+      'reference' => '5cf9995a78aefb96744667c6a41eab4c089726c0',
     ),
     'automattic/jetpack-terms-of-service' => 
     array (
