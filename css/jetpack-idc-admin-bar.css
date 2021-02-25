@@ -8,13 +8,13 @@
 #wp-admin-bar-jetpack-idc .jp-idc-admin-bar {
   background: #fff;
   border-radius: 2px;
-  color: #23282d;
+  color: #1d2327;
   padding: 4px 8px;
   font-size: 12px;
 }
 
 #wpadminbar #wp-admin-bar-jetpack-idc .dashicons {
-  color: #23282d;
+  color: #1d2327;
   font-family: 'dashicons';
 }
 
@@ -27,7 +27,7 @@
 }
 
 #wpadminbar #wp-admin-bar-jetpack-idc:hover .jp-idc-admin-bar {
-  background: #eee;
+  background: #f0f0f1;
 }
 
 /*# sourceMappingURL=jetpack-idc-admin-bar.css.map */

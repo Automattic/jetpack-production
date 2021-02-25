@@ -139,7 +139,7 @@
 
 .jp-recommendations-answer__checkbox-label.checked {
   background: #f8fbff;
-  border: 1px solid #007cba;
+  border: 1px solid #3582c4;
 }
 
 .jp-recommendations-answer__checkbox-label input {
@@ -157,8 +157,8 @@
 }
 
 .jp-recommendations-banner__continue-button {
-  background: #0071a1;
-  border-color: #0071a1;
+  background: #2271b1;
+  border-color: #2271b1;
   color: white;
   border-style: solid;
   border-width: 1px;
@@ -182,8 +182,8 @@
 }
 
 .jp-recommendations-banner__continue-button:hover {
-  background: #016087;
-  border-color: #016087;
+  background: #0a4b78;
+  border-color: #0a4b78;
   color: white;
 }
 

@@ -39,7 +39,7 @@ https://github.com/thoughtbot/bourbon
   font-weight: 600;
   height: 24px;
   padding: 24px;
-  color: #23282d;
+  color: #1d2327;
 }
 
 #TB_window.jetpack-disconnect-modal #TB_ajaxWindowTitle {
@@ -97,7 +97,7 @@ https://github.com/thoughtbot/bourbon
 #TB_window.jetpack-disconnect-modal #TB_closeWindowButton {
   left: auto;
   right: 22px;
-  color: #555d66;
+  color: #50575e;
   top: 22px;
 }
 
@@ -122,7 +122,7 @@ https://github.com/thoughtbot/bourbon
   position: absolute;
   bottom: 0px;
   width: 100%;
-  border-top: 1px solid #ccd0d4;
+  border-top: 1px solid #c3c4c7;
   background-color: white;
 }
 
@@ -157,11 +157,11 @@ https://github.com/thoughtbot/bourbon
 }
 
 #TB_window.jetpack-disconnect-modal .jetpack_deactivation_dialog_content__buttons-row .jetpack_deactivation_dialog_content__buttons button {
-  background: #f3f5f6;
-  border-color: #0071a1;
+  background: #f6f7f7;
+  border-color: #2271b1;
   border-style: solid;
   border-width: 1px;
-  color: #0071a1;
+  color: #2271b1;
   cursor: pointer;
   display: inline-block;
   margin: 0;

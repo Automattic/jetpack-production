@@ -323,7 +323,7 @@
 
 @media (max-width: 1147px) {
   .wrap.inner {
-    background: #f9f9f9;
+    background: #f6f7f7;
     padding: 15px;
   }
 }
@@ -341,14 +341,14 @@
 
 @media (max-width: 1147px) {
   .page-content.about {
-    background: #f9f9f9;
+    background: #f6f7f7;
     padding: 15px;
   }
 }
 
 @media (max-width: 1147px) {
   .page-content.configure {
-    background: #f9f9f9;
+    background: #f6f7f7;
   }
 }
 
@@ -471,12 +471,12 @@
 }
 
 .modal .close:hover {
-  background: #eee;
+  background: #f0f0f1;
   opacity: 0.8;
 }
 
 .modal .close:active {
-  background: #eee;
+  background: #f0f0f1;
   opacity: 0.4;
 }
 
@@ -525,7 +525,7 @@
   bottom: 0;
   width: 100%;
   padding: 12px 20px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dcdcde;
   background: #fff;
   text-align: right;
 }
@@ -577,7 +577,7 @@
 }
 
 .jp-info-img img {
-  border: 1px solid #ddd;
+  border: 1px solid #dcdcde;
   max-width: 100%;
   height: auto;
 }
@@ -724,7 +724,7 @@
 
 .primary {
   padding: 25px 15px 10px 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #f0f0f1;
 }
 
 .secondary-footer {
@@ -739,7 +739,7 @@
   .secondary-footer {
     padding: 8px 15px 10px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f0f0f1;
   }
 }
 
@@ -764,7 +764,7 @@
     font-weight: 400;
   }
   .secondary-footer a {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #f0f0f1;
   }
 }
 
@@ -804,7 +804,7 @@
 @media (min-width: 782px) {
   .secondary {
     padding: 0 15px 10px 15px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f0f0f1;
   }
 }
 
@@ -977,7 +977,7 @@
 }
 
 .configure .frame.top.fixed {
-  background: #f9f9f9;
+  background: #f6f7f7;
   border-bottom: 1px solid #e9e9e9;
   padding-left: 160px;
   margin-top: -6px;
@@ -986,7 +986,7 @@
   top: 32px;
   width: 100%;
   z-index: 4;
-  box-shadow: 0 2px 2px -2px #eee;
+  box-shadow: 0 2px 2px -2px #f0f0f1;
 }
 
 @media (max-width: 782px) {
@@ -1386,7 +1386,7 @@
   margin-top: 10px;
   background: #fff;
   padding: 10px;
-  border: 1px #ddd solid;
+  border: 1px #dcdcde solid;
   font-size: 16px;
   color: #000;
   max-width: 100%;

@@ -635,7 +635,7 @@
   margin: 0 !important;
   border: none !important;
   background: none !important;
-  color: #555d66 !important;
+  color: #50575e !important;
   position: relative !important;
   overflow: hidden !important;
   border-radius: 4px !important;
@@ -661,15 +661,15 @@
 
 .cleanslate .components-icon-button:not(:disabled):not([aria-disabled="true"]):not(.is-default):hover, .cleanslate .components-icon-button:not(:disabled):not([aria-disabled="true"]):not(.is-default):focus {
   background-color: #fff !important;
-  color: #191e23 !important;
+  color: #1d2327 !important;
   box-shadow: inset 0 0 0 1px #e2e4e7, inset 0 0 0 2px #fff, 0 1px 1px rgba(25, 30, 35, 0.2) !important;
 }
 
 .cleanslate .components-icon-button:not(:disabled):not([aria-disabled="true"]):not(.is-default):active {
   outline: none !important;
   background-color: #fff !important;
-  color: #191e23 !important;
-  box-shadow: inset 0 0 0 1px #ccd0d4, inset 0 0 0 2px #fff !important;
+  color: #1d2327 !important;
+  box-shadow: inset 0 0 0 1px #c3c4c7, inset 0 0 0 2px #fff !important;
 }
 
 .cleanslate .components-icon-button[aria-disabled="true"]:focus, .cleanslate .components-icon-button:disabled:focus {
@@ -704,7 +704,7 @@
 }
 
 .cleanslate .components-form-toggle .components-form-toggle__off {
-  color: #6c7781 !important;
+  color: #787c82 !important;
   fill: currentColor !important;
   right: 6px !important;
   width: 6px !important;
@@ -721,7 +721,7 @@
   box-sizing: border-box !important;
   vertical-align: top !important;
   background-color: #fff !important;
-  border: 2px solid #6c7781 !important;
+  border: 2px solid #787c82 !important;
   width: 36px !important;
   height: 18px !important;
   border-radius: 9px !important;
@@ -744,8 +744,8 @@
   height: 10px !important;
   border-radius: 50% !important;
   transition: 0.1s transform ease !important;
-  background-color: #6c7781 !important;
-  border: 5px solid #6c7781 !important;
+  background-color: #787c82 !important;
+  border: 5px solid #787c82 !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -755,16 +755,16 @@
 }
 
 .cleanslate .components-form-toggle:hover .components-form-toggle__track {
-  border: 2px solid #555d66 !important;
+  border: 2px solid #50575e !important;
 }
 
 .cleanslate .components-form-toggle:hover .components-form-toggle__thumb {
-  background-color: #555d66 !important;
-  border: 5px solid #6c7781 !important;
+  background-color: #50575e !important;
+  border: 5px solid #787c82 !important;
 }
 
 .cleanslate .components-form-toggle:hover .components-form-toggle__off {
-  color: #555d66 !important;
+  color: #50575e !important;
 }
 
 .cleanslate .components-form-toggle.is-checked .components-form-toggle__track {
@@ -774,7 +774,7 @@
 }
 
 .cleanslate .components-form-toggle__input:focus + .components-form-toggle__track {
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #6c7781 !important;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #787c82 !important;
   outline: 2px solid transparent !important;
   outline-offset: 2px !important;
 }
