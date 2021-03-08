@@ -2,12 +2,12 @@
     "packages": [
         {
             "name": "automattic/jetpack-a8c-mc-stats",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-a8c-mc-stats",
-                "reference": "7156ea09c61619a4c1515b17d652d1ee59e8ebf1"
+                "reference": "c2f807338583a9d504420964290483afb8d540df"
             },
             "require-dev": {
                 "yoast/phpunit-polyfills": "0.2.0"
@@ -47,12 +47,12 @@
         },
         {
             "name": "automattic/jetpack-abtest",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-abtest",
-                "reference": "14efb198c661d64f28333fb1ac67e7d1fcc7d8b7"
+                "reference": "67bd030126d364dc1d81e6103c56b3f67c43c665"
             },
             "require": {
                 "automattic/jetpack-connection": "@dev",
@@ -100,12 +100,12 @@
         },
         {
             "name": "automattic/jetpack-assets",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-assets",
-                "reference": "9b941d64692bf0f8708ed4b3b26c269ae4e7c068"
+                "reference": "d8da6b7971cae985fe791d2107bc552dd2cd1b12"
             },
             "require": {
                 "automattic/jetpack-constants": "@dev"
@@ -149,12 +149,12 @@
         },
         {
             "name": "automattic/jetpack-autoloader",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-autoloader",
-                "reference": "915dc04d28a411bc65c0a985daaa7dae5e006099"
+                "reference": "6f65cb3ee20032439cb576a1aaf118b3755efd13"
             },
             "require": {
                 "composer-plugin-api": "^1.1 || ^2.0"
@@ -202,12 +202,12 @@
         },
         {
             "name": "automattic/jetpack-backup",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-backup",
-                "reference": "33bd15c80294cde41e16cf94e83f8cc40c1021ad"
+                "reference": "72a1e68de6c1c85704f0c2fa6a752aeb2ab88374"
             },
             "type": "library",
             "extra": {
@@ -234,12 +234,12 @@
         },
         {
             "name": "automattic/jetpack-blocks",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-blocks",
-                "reference": "aeb6e0728ebc22e14982d1b3b1a13f3059f0dba9"
+                "reference": "38d16eb4ae40ba1dd4782a8a5ceac9f05f3511a7"
             },
             "require-dev": {
                 "automattic/wordbless": "dev-master",
@@ -283,12 +283,12 @@
         },
         {
             "name": "automattic/jetpack-compat",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-compat",
-                "reference": "c3de947e79c9dd1565f173269df9465c50aa7779"
+                "reference": "7f0ac52698a005b9d2e8be508f93522f640827c0"
             },
             "type": "library",
             "extra": {
@@ -315,12 +315,12 @@
         },
         {
             "name": "automattic/jetpack-config",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-config",
-                "reference": "b6e36d048e6a109d7f45dd7f522a8912b5f0dfc0"
+                "reference": "1e60943f1af667606437e6ce53f524bd1fda9e17"
             },
             "type": "library",
             "extra": {
@@ -344,12 +344,12 @@
         },
         {
             "name": "automattic/jetpack-connection",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-connection",
-                "reference": "6130495701229312bc256a7fac3ae0a1b7e8480a"
+                "reference": "1a1e327e3d0206b82199fa334ae2e83e72c9d376"
             },
             "require": {
                 "automattic/jetpack-constants": "@dev",
@@ -406,12 +406,12 @@
         },
         {
             "name": "automattic/jetpack-connection-ui",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-connection-ui",
-                "reference": "e5e2d501c1057a5f28dc31fc4c373f73bdc8cd27"
+                "reference": "90c1b66e786a9109b7a0e4e33bbc7376dade1941"
             },
             "require": {
                 "automattic/jetpack-connection": "@dev"
@@ -448,12 +448,12 @@
         },
         {
             "name": "automattic/jetpack-constants",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-constants",
-                "reference": "a527f047f419115f2b51d45ac66a0d61ff134874"
+                "reference": "9f8ed1c0745f52511c2a5e126b419437deda6f66"
             },
             "require-dev": {
                 "brain/monkey": "2.6.0",
@@ -494,12 +494,12 @@
         },
         {
             "name": "automattic/jetpack-device-detection",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-device-detection",
-                "reference": "36b243b66b60fec0a0fac6c691de87581788c131"
+                "reference": "4ec20c4c651244eb653f55fac32f47527e73ef8e"
             },
             "require-dev": {
                 "yoast/phpunit-polyfills": "0.2.0"
@@ -539,12 +539,12 @@
         },
         {
             "name": "automattic/jetpack-error",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-error",
-                "reference": "dd8fd6b46131c5737929713cf0e8529ead69b2f7"
+                "reference": "4c6ada752e8bcb976b8d5502935aa1ce2b675f7e"
             },
             "require-dev": {
                 "yoast/phpunit-polyfills": "0.2.0"
@@ -584,12 +584,12 @@
         },
         {
             "name": "automattic/jetpack-heartbeat",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-heartbeat",
-                "reference": "97974f5a3e0676a3bdf6d579ce9c9bdeec1e62a4"
+                "reference": "200e1058b83c1092e4a0725886007e598dc33adb"
             },
             "require": {
                 "automattic/jetpack-a8c-mc-stats": "@dev",
@@ -617,12 +617,12 @@
         },
         {
             "name": "automattic/jetpack-jitm",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-jitm",
-                "reference": "56f9a72b4ccd580df25a9f3d8f06035d5afeebad"
+                "reference": "9a7ba2b2b3dcd068b622657b947cbf4897d727d7"
             },
             "require": {
                 "automattic/jetpack-assets": "@dev",
@@ -682,12 +682,12 @@
         },
         {
             "name": "automattic/jetpack-lazy-images",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-lazy-images",
-                "reference": "43340d170d73e8cdf72ec864ef8489d382bee9a4"
+                "reference": "e6170c8e3accf9e887ffbea85067fb446bf7389f"
             },
             "require": {
                 "automattic/jetpack-assets": "@dev",
@@ -743,12 +743,12 @@
         },
         {
             "name": "automattic/jetpack-licensing",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-licensing",
-                "reference": "0872d4418f2b570437e3d4958552e83223b75331"
+                "reference": "01c4e9417bf376cc7d961a3866f85f4ff7a83b7e"
             },
             "require": {
                 "automattic/jetpack-connection": "@dev",
@@ -796,12 +796,12 @@
         },
         {
             "name": "automattic/jetpack-logo",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-logo",
-                "reference": "8a5becff9a7cd680d4cc6448b8a56550ce471e60"
+                "reference": "fe8674ad69a13b96f5f6c064c10ea4449cf8af13"
             },
             "require-dev": {
                 "yoast/phpunit-polyfills": "0.2.0"
@@ -841,12 +841,12 @@
         },
         {
             "name": "automattic/jetpack-options",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-options",
-                "reference": "40ce91f7f6c92a1003a5c54d5254ea164b44c750"
+                "reference": "03e5f24ded3522c912f5d5a1bc094d53a9ae1bc1"
             },
             "require": {
                 "automattic/jetpack-constants": "@dev"
@@ -876,12 +876,12 @@
         },
         {
             "name": "automattic/jetpack-partner",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-partner",
-                "reference": "e1d98cb396ab8574e376170cf7673d4acf84c91c"
+                "reference": "5b79c8a08e90e6f86863b28f8450182ae7b2e045"
             },
             "require-dev": {
                 "brain/monkey": "2.6.0",
@@ -922,12 +922,12 @@
         },
         {
             "name": "automattic/jetpack-redirect",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-redirect",
-                "reference": "9fb3f9636e16aa5d2f88f55a67046d79b5b23231"
+                "reference": "ceae5a0eaccac1f2a0cde3a938e76e82f450b3ce"
             },
             "require": {
                 "automattic/jetpack-status": "@dev"
@@ -971,12 +971,12 @@
         },
         {
             "name": "automattic/jetpack-roles",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-roles",
-                "reference": "4dc6d4b45b03ca4fda8e3a9edcc5fc042b06dea3"
+                "reference": "90d8ece525e5cc0abec5f940590183133b0b5517"
             },
             "require-dev": {
                 "brain/monkey": "2.6.0",
@@ -1017,12 +1017,12 @@
         },
         {
             "name": "automattic/jetpack-status",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-status",
-                "reference": "3f30c72b54a4d7ff011754b23dfe76a1c35a0f58"
+                "reference": "9adfa5092621b9d658f7bca3149534e377f2b438"
             },
             "require-dev": {
                 "brain/monkey": "2.6.0",
@@ -1063,12 +1063,12 @@
         },
         {
             "name": "automattic/jetpack-sync",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-sync",
-                "reference": "5cf9995a78aefb96744667c6a41eab4c089726c0"
+                "reference": "4ab8291c376eb507454b78cb5503006d8104d150"
             },
             "require": {
                 "automattic/jetpack-connection": "@dev",
@@ -1100,12 +1100,12 @@
         },
         {
             "name": "automattic/jetpack-terms-of-service",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-terms-of-service",
-                "reference": "880ff6e5951a98e476532726b2e7eddf4c6e3947"
+                "reference": "a6655799313cb6d4b40c6bb3328120c87fd850d7"
             },
             "require": {
                 "automattic/jetpack-options": "@dev",
@@ -1150,12 +1150,12 @@
         },
         {
             "name": "automattic/jetpack-tracking",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "dev-monorepo",
+            "version_normalized": "dev-monorepo",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-tracking",
-                "reference": "59e8ca9cb400b879e3e684fdd715f6f4dbe89690"
+                "reference": "d4c348c1c4e78162dc05c269c435e4a8d13ca9f7"
             },
             "require": {
                 "automattic/jetpack-assets": "@dev",
