@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 9.6-alpha - 2021-03-08
+## 9.6-alpha - 2021-03-09
 
 This is an alpha version! The changes listed here are not final.
 
