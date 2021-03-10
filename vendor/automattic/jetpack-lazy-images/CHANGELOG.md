@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Composer alias for dev-master, to improve dependencies
 - Created a changelog from the git history with help from [auto-changelog](https://www.npmjs.com/package/auto-changelog). It could probably use cleanup!
 
+### Fixed
+- Update icon file used for tests, WP 5.7 no longer silences exif errors.
+
 ## [1.4.1] - 2021-02-23
 
 - Update dependency webpack to v4.46.0
