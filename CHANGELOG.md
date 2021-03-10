@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 
 
 ### Bug fixes
+- Connection Flow: Resolve issue that prevented connections from Opera.
 - Search: fix an issue that led to a PHP notice for undefined index.
 
 ## 9.5.1 - 2021-03-04
