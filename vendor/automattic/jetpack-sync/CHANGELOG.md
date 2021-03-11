@@ -15,7 +15,12 @@ This is an alpha version! The changes listed here are not final.
 - Impose a max limit of 5MB on post_content that can be synced.
 
 ### Changed
+- Update dependency versions.
 - Update package dependencies.
+- Use the Heartbeat package to generate the stats array
+
+### Fixed
+- Update Sync Queue so that serialize is wrapped to catch errors
 
 ## [1.21.0] - 2021-02-23
 

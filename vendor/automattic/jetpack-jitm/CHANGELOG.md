@@ -14,6 +14,10 @@ This is an alpha version! The changes listed here are not final.
 - Created a changelog from the git history with help from [auto-changelog](https://www.npmjs.com/package/auto-changelog). It could probably use cleanup!
 
 ### Changed
+- Update colors to match upcoming WP 5.7 color changes
+- Update dependency eslint to v7.21.0
+- Update dependency versions.
+- Update Node to match latest LTS 12
 - Update package dependencies.
 
 ## [1.14.0] - 2021-02-23

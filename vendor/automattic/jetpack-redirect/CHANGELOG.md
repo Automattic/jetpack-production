@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+- Userless Connection: Redirect "userless" users to the "Plans" page
 
 ## [1.5.3] - 2021-02-23
 

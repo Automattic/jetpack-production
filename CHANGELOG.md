@@ -7,12 +7,30 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- General: Allow the use of some Jetpack features without connecting to a WordPress.com account.
+- Jetpack Search: Add a product layout for search results from WooCommerce.
 - Nav Unification: Remove "Links Manager" menu
 - WPCOM Admin Menu: Add Edit CSS menu item to Appearance sub menu for Simple sites.
 
+### Improved compatibility
+- Auto-updates: Respect auto-update constant/filters in plugin API endpoints.
+- Autoloader: Fix uninstallation fatal.
+- Beautiful Math: Remove title attribute from generated image.
+- General: Update colors to match dashboard color changes in WordPress 5.7.
+- Gravatar Hovercards: Fix compatibility with the AMP plugin for Pingbacks and Trackbacks.
+- Jetpack Search: only use site accelerator for displaying images if it is enabled on the site.
+- Latest Instagram Posts Block: Improve compatibility with Gutenberg 10.1.0.
+- Markdown: Avoid processing URLs that may include Markdown syntax.
+- Opentable Block: Improve compatibility with Gutenberg 10.1.0.
+- Podcast Player Block: Fix compatibility with the AMP plugin in the Customizer preview.
+- Podcast Player Block: Improve compatibility with Gutenberg 10.1.0.
+- Site Logo: Fix issues when updating logo in the Customizer.
+- Synchronization: avoid issues with themes or plugins using anonymous functions within hooks.
 
 ### Bug fixes
 - Connection Flow: Resolve issue that prevented connections from Opera.
+- Custom Content Types: fix inline quick editing of Restaurant menu items.
+- Recommendations: When enabling Site Accelerator, also enable Tiled Galleries.
 - Search: fix an issue that led to a PHP notice for undefined index.
 
 ## 9.5.1 - 2021-03-04

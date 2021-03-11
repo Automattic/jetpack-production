@@ -14,6 +14,10 @@ This is an alpha version! The changes listed here are not final.
 - Created a changelog from the git history with help from [auto-changelog](https://www.npmjs.com/package/auto-changelog). It could probably use cleanup!
 
 ### Changed
+- Connection UI: remove .github directory from production package
+- Pin dependencies
+- Update dependency versions.
+- Update Node to match latest LTS 12
 - Update package dependencies.
 
 ## 1.0.0 - 2021-02-23
