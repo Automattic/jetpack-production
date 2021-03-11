@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Nav Unification: Remove "Links Manager" menu
+- WPCOM Admin Menu: Add Edit CSS menu item to Appearance sub menu for Simple sites.
 
 
 ### Bug fixes
