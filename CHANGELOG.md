@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Beautiful Math: Remove title attribute from generated image.
 - General: Update colors to match dashboard color changes in WordPress 5.7.
 - Gravatar Hovercards: Fix compatibility with the AMP plugin for Pingbacks and Trackbacks.
+- Jetpack blocks: update fixture test script (no public changelog needed)
 - Jetpack Search: only use site accelerator for displaying images if it is enabled on the site.
 - Latest Instagram Posts Block: Improve compatibility with Gutenberg 10.1.0.
 - Markdown: Avoid processing URLs that may include Markdown syntax.
