@@ -6,6 +6,8 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Nav Unification: Remove "Links Manager" menu
 
 
 ### Bug fixes
