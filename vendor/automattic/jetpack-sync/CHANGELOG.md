@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Composer alias for dev-master, to improve dependencies
 - Created a changelog from the git history with help from [auto-changelog](https://www.npmjs.com/package/auto-changelog). It could probably use cleanup!
+- Impose a max limit of 5MB on post_content that can be synced.
 
 ### Changed
 - Update package dependencies.
