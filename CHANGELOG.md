@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - General: Allow the use of some Jetpack features without connecting to a WordPress.com account.
 - Jetpack Search: Add a product layout for search results from WooCommerce.
+- Jetpack Search: during setup, automatically use the product result format for sites with WooCommerce active.
 - Nav Unification: Remove "Links Manager" menu
 - WPCOM Admin Menu: Add Edit CSS menu item to Appearance sub menu for Simple sites.
 
