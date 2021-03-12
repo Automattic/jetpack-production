@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Blocks: add width option to buttons in Subscriptions, Revue, Form, Calendly, and Payments blocks.
 - General: Allow the use of some Jetpack features without connecting to a WordPress.com account.
 - Image Compare: Add block tests and fixtures.
 - Jetpack Search: Add a product layout for search results from WooCommerce.
