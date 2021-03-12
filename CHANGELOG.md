@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Search: Add a product layout for search results from WooCommerce.
 - Jetpack Search: during setup, automatically use the product result format for sites with WooCommerce active.
 - Nav Unification: Remove "Links Manager" menu
+- WordAds: Added block tests and fixtures.
 - WPCOM Admin Menu: Add Edit CSS menu item to Appearance sub menu for Simple sites.
 
 ### Improved compatibility
