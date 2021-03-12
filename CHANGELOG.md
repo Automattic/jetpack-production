@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom Content Types: fix inline quick editing of Restaurant menu items.
 - Recommendations: When enabling Site Accelerator, also enable Tiled Galleries.
 - Search: fix an issue that led to a PHP notice for undefined index.
+- Tiled Gallery: Prevent block validation errors for mosaic and column layouts.
 
 ## 9.5.1 - 2021-03-04
 ### Bug fixes
