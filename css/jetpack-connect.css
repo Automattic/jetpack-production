@@ -32,6 +32,8 @@ https://github.com/thoughtbot/bourbon
 @media (min-width: 491px) {
   .jp-jetpack-connect__iframe {
     background: #FFFFFF;
+  }
+  .jp-jetpack-connect__userless .jp-jetpack-connect__iframe {
     border: 2px solid #C1D0E8;
     box-sizing: border-box;
     border-radius: 6px;
