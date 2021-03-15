@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Beautiful Math: Remove title attribute from generated image.
 - Contact form: adding unit test. No need for a changelog entry.
 - General: Update colors to match dashboard color changes in WordPress 5.7.
+- Git block: Refactored class component into a functional one and added unit tests. No functional/UI changes. Changelog optional.
 - Gravatar Hovercards: Fix compatibility with the AMP plugin for Pingbacks and Trackbacks.
 - Jetpack blocks: update fixture test script (no public changelog needed)
 - Jetpack Search: only use site accelerator for displaying images if it is enabled on the site.
