@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Auto-updates: Respect auto-update constant/filters in plugin API endpoints.
 - Autoloader: Fix uninstallation fatal.
 - Beautiful Math: Remove title attribute from generated image.
+- Contact form: adding unit test. No need for a changelog entry.
 - General: Update colors to match dashboard color changes in WordPress 5.7.
 - Gravatar Hovercards: Fix compatibility with the AMP plugin for Pingbacks and Trackbacks.
 - Jetpack blocks: update fixture test script (no public changelog needed)
