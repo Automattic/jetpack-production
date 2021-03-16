@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Composer alias for dev-master, to improve dependencies
 - Created a changelog from the git history with help from [auto-changelog](https://www.npmjs.com/package/auto-changelog). It could probably use cleanup!
 - Implement a 60 second back-off for non-200 respones, if no retry-after header is present in the response.
+- Impose a max limit of 2MB on post meta values that are synced.
 - Impose a max limit of 5MB on post_content that can be synced.
 
 ### Changed
