@@ -39,8 +39,10 @@ This is an alpha version! The changes listed here are not final.
 - Synchronization: avoid issues with themes or plugins using anonymous functions within hooks.
 
 ### Bug fixes
+- Admin Menu: Do not alter menu slugs
 - Connection Flow: Resolve issue that prevented connections from Opera.
 - Custom Content Types: fix inline quick editing of Restaurant menu items.
+- Instant Search: ensure Escape key always closes search modal
 - Instant Search:  Prevent IE11 from spawning overlay on load.
 - Recommendations: When enabling Site Accelerator, also enable Tiled Galleries.
 - Search: fix an issue that led to a PHP notice for undefined index.
