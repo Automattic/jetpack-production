@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Instant Search: improve performance by lazily loading more of the library
 - Jetpack Search: Add a product layout for search results from WooCommerce.
 - Jetpack Search: during setup, automatically use the product result format for sites with WooCommerce active.
+- JITMs: add pre-connection JITMs using the jetpack_pre_connection_jitms filter.
 - Nav Unification: Remove "Links Manager" menu
 - Recommendations: adjust wording.
 - WordAds: Added block tests and fixtures.
@@ -36,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Opentable Block: Improve compatibility with Gutenberg 10.1.0.
 - Podcast Player Block: Fix compatibility with the AMP plugin in the Customizer preview.
 - Podcast Player Block: Improve compatibility with Gutenberg 10.1.0.
+- Related Posts Block: add tests (no public changelog required).
 - Site Logo: Fix issues when updating logo in the Customizer.
 - Synchronization: avoid issues with themes or plugins using anonymous functions within hooks.
 
