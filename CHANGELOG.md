@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Blocks: add width option to buttons in Subscriptions, Revue, Form, Calendly, and Payments blocks.
+- Dashboard: add new option to input license key.
 - General: Allow the use of some Jetpack features without connecting to a WordPress.com account.
 - General: Updating copy for Jetpack userless mode components.
 - Image Compare: Add block tests and fixtures.

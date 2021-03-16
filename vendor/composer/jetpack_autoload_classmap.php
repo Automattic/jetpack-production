@@ -251,7 +251,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-sync/src/class-users.php'
 	),
 	'Automattic\\Jetpack\\Licensing' => array(
-		'version' => '1.3.9999999.9999999-dev',
+		'version' => '1.4.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
 	),
 	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
