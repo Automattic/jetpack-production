@@ -74,22 +74,6 @@ return array(
 		'version' => 'dev-monorepo',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
-	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
-		'version' => '1.4.1.0',
-		'path'    => $vendorDir . '/automattic/jetpack-lazy-images/src/lazy-images.php'
-	),
-	'Automattic\\Jetpack\\JITMS\\JITM' => array(
-		'version' => '1.14.0.0',
-		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-jitm.php'
-	),
-	'Automattic\\Jetpack\\JITMS\\Post_Connection_JITM' => array(
-		'version' => '1.14.0.0',
-		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-post-connection-jitm.php'
-	),
-	'Automattic\\Jetpack\\JITMS\\Pre_Connection_JITM' => array(
-		'version' => '1.14.0.0',
-		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-pre-connection-jitm.php'
-	),
 	'Automattic\\Jetpack\\Sync\\Health' => array(
 		'version' => '1.21.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-sync/src/class-health.php'
@@ -270,6 +254,26 @@ return array(
 		'version' => '1.3.4.0',
 		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
 	),
+	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
+		'version' => '1.4.1.0',
+		'path'    => $vendorDir . '/automattic/jetpack-lazy-images/src/lazy-images.php'
+	),
+	'Automattic\\Jetpack\\JITMS\\JITM' => array(
+		'version' => '1.14.0.0',
+		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-jitm.php'
+	),
+	'Automattic\\Jetpack\\JITMS\\Post_Connection_JITM' => array(
+		'version' => '1.14.0.0',
+		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-post-connection-jitm.php'
+	),
+	'Automattic\\Jetpack\\JITMS\\Pre_Connection_JITM' => array(
+		'version' => '1.14.0.0',
+		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-pre-connection-jitm.php'
+	),
+	'Automattic\\Jetpack\\Abtest' => array(
+		'version' => '1.9.4.0',
+		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
+	),
 	'Automattic\\Jetpack\\Device_Detection' => array(
 		'version' => '1.3.2.0',
 		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-device-detection.php'
@@ -313,10 +317,6 @@ return array(
 	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
 		'version' => '1.0.3.0',
 		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-helper-script-manager.php'
-	),
-	'Automattic\\Jetpack\\Abtest' => array(
-		'version' => '1.9.4.0',
-		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
 		'version' => '1.5.2.0',
