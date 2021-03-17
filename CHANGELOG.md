@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Auto-updates: Respect auto-update constant/filters in plugin API endpoints.
 - Autoloader: Fix uninstallation fatal.
 - Beautiful Math: Remove title attribute from generated image.
+- Calypsoify: Move all initialisation to the admin_init hook
 - Calypsoify: Removed the setting mechanism and associated unused code
 - Contact form: adding unit test. No need for a changelog entry.
 - General: Update colors to match dashboard color changes in WordPress 5.7.
