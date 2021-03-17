@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - JITMs: add pre-connection JITMs using the jetpack_pre_connection_jitms filter.
 - Nav Unification: Remove "Links Manager" menu
 - Recommendations: adjust wording.
+- Revome the later Jetpack::init call.
 - WordAds: Added block tests and fixtures.
 - WordPress.com REST API: allow Facebook Metadata to be saved alongside posts created via the API.
 - WPCOM Admin Menu: Add Edit CSS menu item to Appearance sub menu for Simple sites.
