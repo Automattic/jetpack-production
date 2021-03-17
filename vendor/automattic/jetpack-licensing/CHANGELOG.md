@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix stored licenses not being attached on option creation
 - Use `composer update` rather than `install` in scripts, as composer.lock isn't checked in.
 
 ## [1.3.4] - 2021-02-23
