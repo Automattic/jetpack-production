@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Update Node to match latest LTS 12
 - Update package dependencies.
 
+### Fixed
+- Use `composer update` rather than `install` in scripts, as composer.lock isn't checked in.
+
 ## [1.14.0] - 2021-02-23
 
 - Recommendations: Hide JITMs when banner is displaying

@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Only check offline mode when needed in map_meta_cap filters
+- Use `composer update` rather than `install` in scripts, as composer.lock isn't checked in.
 
 ## [1.24.0] - 2021-02-23
 

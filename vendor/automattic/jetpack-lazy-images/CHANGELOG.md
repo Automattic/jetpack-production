@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Update icon file used for tests, WP 5.7 no longer silences exif errors.
+- Use `composer update` rather than `install` in scripts, as composer.lock isn't checked in.
 
 ## [1.4.1] - 2021-02-23
 

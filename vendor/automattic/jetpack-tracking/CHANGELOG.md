@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Use `composer update` rather than `install` in scripts, as composer.lock isn't checked in.
+
 ## [1.13.2] - 2021-02-23
 
 - CI: Make tests more generic
