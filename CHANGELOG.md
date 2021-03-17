@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Nav Unification: Remove "Links Manager" menu
 - Recommendations: adjust wording.
 - Revome the later Jetpack::init call.
+- Search: updated default photon image size
 - WordAds: Added block tests and fixtures.
 - WordPress.com REST API: allow Facebook Metadata to be saved alongside posts created via the API.
 - WPCOM Admin Menu: Add Edit CSS menu item to Appearance sub menu for Simple sites.
