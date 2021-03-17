@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Do not alter menu slugs
 - Connection Flow: Resolve issue that prevented connections from Opera.
 - Custom Content Types: fix inline quick editing of Restaurant menu items.
+- Eventbrite block: trimming input value, adding unit tests and fixtures.
 - Instant Search: ensure Escape key always closes search modal
 - Instant Search:  Prevent IE11 from spawning overlay on load.
 - Recommendations: When enabling Site Accelerator, also enable Tiled Galleries.
