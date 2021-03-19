@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast Player Block: Improve compatibility with Gutenberg 10.1.0.
 - Related Posts Block: add tests (no public changelog required).
 - Site Logo: Fix issues when updating logo in the Customizer.
+- Subscriptions block: adding unit tests only. Changelog entry not required.
 - Synchronization: avoid issues with themes or plugins using anonymous functions within hooks.
 
 ### Bug fixes
