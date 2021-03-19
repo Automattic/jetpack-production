@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Use the Heartbeat package to generate the stats array
 
 ### Fixed
+- Migrate locks to update_option to avaoid memcache inconsistencies that can be introduced by delete_option usage.
 - Update Sync Queue so that serialize is wrapped to catch errors
 
 ## [1.21.0] - 2021-02-23
