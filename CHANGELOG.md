@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Auto-updates: Respect auto-update constant/filters in plugin API endpoints.
 - Autoloader: Fix uninstallation fatal.
 - Beautiful Math: Remove title attribute from generated image.
+- Blocks: Add editor style dependency when registering Jetpack blocks to ensure support for the new site editor.
 - Calypsoify: Move all initialisation to the admin_init hook
 - Calypsoify: Removed the setting mechanism and associated unused code
 - Contact form: adding unit test. No need for a changelog entry.

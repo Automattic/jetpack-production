@@ -307,7 +307,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-client.php'
 	),
 	'Automattic\\Jetpack\\Blocks' => array(
-		'version' => '1.2.9999999.9999999-dev',
+		'version' => '1.3.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-blocks/src/class-blocks.php'
 	),
 	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
