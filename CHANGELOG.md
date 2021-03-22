@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Search: Add a product layout for search results from WooCommerce.
 - Jetpack Search: during setup, automatically use the product result format for sites with WooCommerce active.
 - JITMs: add pre-connection JITMs using the jetpack_pre_connection_jitms filter.
+- Moving some Userless Connection code to WP.com.
 - Nav Unification: Remove "Links Manager" menu
 - Recommendations: adjust wording.
 - Revome the later Jetpack::init call.
