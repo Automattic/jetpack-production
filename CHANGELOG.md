@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Auto activate default modules on user-less connections
 - Blocks: add width option to buttons in Subscriptions, Revue, Form, Calendly, and Payments blocks.
+- Calendly: Added block tests and fixtures.
 - Dashboard: add new option to input license key.
 - General: Allow the use of some Jetpack features without connecting to a WordPress.com account.
 - General: Updating copy for Jetpack userless mode components.
