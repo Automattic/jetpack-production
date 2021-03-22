@@ -72,7 +72,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '7563b88f7029f6b39fccad0758db5d5bbb9f2d8f',
+      'reference' => 'a2b194ab353d5bdbe584f3c9b8fb858fa1bb220f',
     ),
     'automattic/jetpack-compat' => 
     array (
