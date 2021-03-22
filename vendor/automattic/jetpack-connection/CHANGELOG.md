@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - API Nonces: performance optimization and refactoring
 - Update package dependencies.
+- User-less connection: Reconnect without asking the user to connect their WPCOM account
 
 ### Fixed
 - Only check offline mode when needed in map_meta_cap filters
