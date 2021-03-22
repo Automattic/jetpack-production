@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: fix an issue that led to a PHP notice for undefined index.
 - Site Card: If blogname is empty, replace it with domain name.
 - Tiled Gallery: Prevent block validation errors for mosaic and column layouts.
+- WordPress.com Block Editor: disable if all Jetpack blocks are disabled via a filter.
 
 ## 9.5.2 - 2021-03-16
 ### Improved compatibility
