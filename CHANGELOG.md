@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add a new admin menu class for domain-only sites which contains a single menu item to manage the domain.
 - Added a generic class for Admin Menu
 - Auto activate default modules on user-less connections
 - Blocks: add width option to buttons in Subscriptions, Revue, Form, Calendly, and Payments blocks.
