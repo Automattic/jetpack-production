@@ -64,6 +64,7 @@ This is an alpha version! The changes listed here are not final.
 - Force Posts and Pages menu items to link to WPAdmin on Atomic sites
 - Instant Search: ensure Escape key always closes search modal
 - Instant Search:  Prevent IE11 from spawning overlay on load.
+- Only remove the Links menu item if the user has added their own links. Auto-generated default links will not be counted in order to deprecate this feature.
 - Publicize: avoid notices as embeds are added to a post.
 - Recommendations: When enabling Site Accelerator, also enable Tiled Galleries.
 - Search: fix an issue that led to a PHP notice for undefined index.
