@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - Force Posts and Pages menu items to link to WPAdmin on Atomic sites
 - Instant Search: ensure Escape key always closes search modal
 - Instant Search:  Prevent IE11 from spawning overlay on load.
+- Publicize: avoid notices as embeds are added to a post.
 - Recommendations: When enabling Site Accelerator, also enable Tiled Galleries.
 - Search: fix an issue that led to a PHP notice for undefined index.
 - Site Card: If blogname is empty, replace it with domain name.
