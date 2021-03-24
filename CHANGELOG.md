@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - JITMs: add pre-connection JITMs using the jetpack_pre_connection_jitms filter.
 - Moving some Userless Connection code to WP.com.
 - Nav Unification: Remove "Links Manager" menu
+- Podcast Player Block: improve fetching of the podcast description
 - Recommendations: adjust wording.
 - Revome the later Jetpack::init call.
 - Search: Auto-spawn modal while in Search section of the Customizer
