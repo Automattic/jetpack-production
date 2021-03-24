@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Search: only use site accelerator for displaying images if it is enabled on the site.
 - Latest Instagram Posts Block: Improve compatibility with Gutenberg 10.1.0.
 - Markdown: Avoid processing URLs that may include Markdown syntax.
+- Move Jetpack specific XMLRPC methods from the Connection package into the plugin
 - Opentable Block: Improve compatibility with Gutenberg 10.1.0.
 - Podcast Player Block: Fix compatibility with the AMP plugin in the Customizer preview.
 - Podcast Player Block: Improve compatibility with Gutenberg 10.1.0.
