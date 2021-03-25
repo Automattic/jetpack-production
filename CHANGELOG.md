@@ -80,6 +80,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions Block: allow block to override color styles, falling back to theme defaults.
 - tiled-gallery: Do not photonize images on private atomic sites
 - Tiled Gallery: Prevent block validation errors for mosaic and column layouts.
+- Video Block: Display fallback when fetching video 404s.
 - WordPress.com Block Editor: disable if all Jetpack blocks are disabled via a filter.
 - WordPress.com REST API: make sure post metadata is always an array
 
