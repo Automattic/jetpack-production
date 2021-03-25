@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: updated default photon image size
 - WordAds: Added block tests and fixtures.
 - WordPress.com REST API: allow Facebook Metadata to be saved alongside posts created via the API.
+- WordPress.com REST API: create map blocks based on FB geo metadata
 - WPCOM Admin Menu: Add Edit CSS menu item to Appearance sub menu for Simple sites.
 
 ### Improved compatibility
@@ -75,6 +76,7 @@ This is an alpha version! The changes listed here are not final.
 - Star Rating Block: allow 0 stars to be selected
 - Tiled Gallery: Prevent block validation errors for mosaic and column layouts.
 - WordPress.com Block Editor: disable if all Jetpack blocks are disabled via a filter.
+- WordPress.com REST API: make sure post metadata is always an array
 
 ## 9.5.2 - 2021-03-16
 ### Improved compatibility
