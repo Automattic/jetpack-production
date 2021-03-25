@@ -1075,6 +1075,62 @@
             "install-path": "../automattic/jetpack-partner"
         },
         {
+            "name": "automattic/jetpack-password-checker",
+            "version": "0.1.x-dev",
+            "version_normalized": "0.1.9999999.9999999-dev",
+            "dist": {
+                "type": "path",
+                "url": "/tmp/jetpack-build/Automattic/jetpack-password-checker",
+                "reference": "58b59fb93c55020cc4fb4e51c8a85ce50feef8e5"
+            },
+            "require-dev": {
+                "automattic/jetpack-changelogger": "1.1.x-dev",
+                "automattic/wordbless": "@dev",
+                "yoast/phpunit-polyfills": "0.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "mirror-repo": "Automattic/jetpack-password-checker",
+                "changelogger": {
+                    "link-template": "https://github.com/Automattic/jetpack-password-checker/compare/v${old}...v${new}"
+                },
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "scripts": {
+                "phpunit": [
+                    "@composer update",
+                    "./vendor/phpunit/phpunit/phpunit --colors=always"
+                ],
+                "test-coverage": [
+                    "@composer update",
+                    "phpdbg -d memory_limit=2048M -d max_execution_time=900 -qrr ./vendor/bin/phpunit --coverage-clover \"$COVERAGE_DIR/clover.xml\""
+                ],
+                "test-php": [
+                    "@composer phpunit"
+                ],
+                "post-update-cmd": [
+                    "php -r \"copy('vendor/automattic/wordbless/src/dbless-wpdb.php', 'wordpress/wp-content/db.php');\""
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Password Checker.",
+            "transport-options": {
+                "monorepo": true,
+                "relative": false
+            },
+            "install-path": "../automattic/jetpack-password-checker"
+        },
+        {
             "name": "automattic/jetpack-redirect",
             "version": "1.5.x-dev",
             "version_normalized": "1.5.9999999.9999999-dev",

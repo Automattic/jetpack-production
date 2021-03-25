@@ -45,6 +45,7 @@ return array(
     'Automattic\\Jetpack\\Jetpack_Lazy_Images' => $vendorDir . '/automattic/jetpack-lazy-images/src/lazy-images.php',
     'Automattic\\Jetpack\\Licensing' => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php',
     'Automattic\\Jetpack\\Partner' => $vendorDir . '/automattic/jetpack-partner/src/class-partner.php',
+    'Automattic\\Jetpack\\Password_Checker' => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php',
     'Automattic\\Jetpack\\Plugin\\Tracking' => $baseDir . '/src/class-tracking.php',
     'Automattic\\Jetpack\\Redirect' => $vendorDir . '/automattic/jetpack-redirect/src/class-redirect.php',
     'Automattic\\Jetpack\\Roles' => $vendorDir . '/automattic/jetpack-roles/src/class-roles.php',

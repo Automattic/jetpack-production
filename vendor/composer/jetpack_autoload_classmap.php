@@ -250,6 +250,10 @@ return array(
 		'version' => '1.21.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-sync/src/class-users.php'
 	),
+	'Automattic\\Jetpack\\Password_Checker' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php'
+	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '1.4.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'

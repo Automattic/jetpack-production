@@ -200,6 +200,15 @@
       ),
       'reference' => 'cec1c6b6e2c15fe9695ae23a51c76193fe1b5ce8',
     ),
+    'automattic/jetpack-password-checker' => 
+    array (
+      'pretty_version' => '0.1.x-dev',
+      'version' => '0.1.9999999.9999999-dev',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '58b59fb93c55020cc4fb4e51c8a85ce50feef8e5',
+    ),
     'automattic/jetpack-redirect' => 
     array (
       'pretty_version' => '1.5.x-dev',

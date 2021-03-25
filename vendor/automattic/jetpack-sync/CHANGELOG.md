@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Impose a max limit of 5MB on post_content that can be synced.
 
 ### Changed
+- Sync: Use the new Password_Checker package instead of Jetpack_Password_Checker.
 - Update dependency versions.
 - Update package dependencies.
 - Use the Heartbeat package to generate the stats array

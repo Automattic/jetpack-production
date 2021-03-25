@@ -76,6 +76,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3cjetpack
         'Automattic\\Jetpack\\Jetpack_Lazy_Images' => __DIR__ . '/..' . '/automattic/jetpack-lazy-images/src/lazy-images.php',
         'Automattic\\Jetpack\\Licensing' => __DIR__ . '/..' . '/automattic/jetpack-licensing/src/class-licensing.php',
         'Automattic\\Jetpack\\Partner' => __DIR__ . '/..' . '/automattic/jetpack-partner/src/class-partner.php',
+        'Automattic\\Jetpack\\Password_Checker' => __DIR__ . '/..' . '/automattic/jetpack-password-checker/src/class-password-checker.php',
         'Automattic\\Jetpack\\Plugin\\Tracking' => __DIR__ . '/../..' . '/src/class-tracking.php',
         'Automattic\\Jetpack\\Redirect' => __DIR__ . '/..' . '/automattic/jetpack-redirect/src/class-redirect.php',
         'Automattic\\Jetpack\\Roles' => __DIR__ . '/..' . '/automattic/jetpack-roles/src/class-roles.php',

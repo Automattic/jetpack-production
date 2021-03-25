@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts Block: add tests (no public changelog required).
 - Site Logo: Fix issues when updating logo in the Customizer.
 - Subscriptions block: adding unit tests only. Changelog entry not required.
+- Sync: Use the new Password_Checker package instead of Jetpack_Password_Checker.
 - Synchronization: avoid issues with themes or plugins using anonymous functions within hooks.
 
 ### Bug fixes
