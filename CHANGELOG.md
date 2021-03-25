@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: Audit and replace Jetpack:is_active with user-less in mind.
 - Jetpack Search: Add a product layout for search results from WooCommerce.
 - Jetpack Search: during setup, automatically use the product result format for sites with WooCommerce active.
+- Jetpack Videos: update format status checks to support more transcoding formats
 - JITMs: add pre-connection JITMs using the jetpack_pre_connection_jitms filter.
 - Moving some Userless Connection code to WP.com.
 - Nav Unification: Remove "Links Manager" menu
