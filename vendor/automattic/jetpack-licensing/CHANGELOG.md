@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: add new option to input license key.
 
 ### Changed
+- Replace usage of deprecated is_active method
 - Update dependency versions.
 - Update package dependencies.
 
