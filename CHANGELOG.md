@@ -77,6 +77,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: Omit Open Graph description tag from posts with Premium Content.
 - Site Card: If blogname is empty, replace it with domain name.
 - Star Rating Block: allow 0 stars to be selected
+- Subscriptions Block: allow block to override color styles, falling back to theme defaults.
 - tiled-gallery: Do not photonize images on private atomic sites
 - Tiled Gallery: Prevent block validation errors for mosaic and column layouts.
 - WordPress.com Block Editor: disable if all Jetpack blocks are disabled via a filter.
