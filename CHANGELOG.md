@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Recommendations: adjust wording.
 - Revome the later Jetpack::init call.
 - Search: Auto-spawn modal while in Search section of the Customizer
+- Search: link review count to product reviews in the product result format.
 - Search: updated default photon image size
 - WordAds: Added block tests and fixtures.
 - WordPress.com REST API: allow Facebook Metadata to be saved alongside posts created via the API.
