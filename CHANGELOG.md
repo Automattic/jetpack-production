@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - General: Updating copy for Jetpack userless mode components.
 - Image Compare: Add block tests and fixtures.
 - Instant Search: improve performance by lazily loading more of the library
+- Jetpack: Audit and replace Jetpack:is_active with user-less in mind.
 - Jetpack Search: Add a product layout for search results from WooCommerce.
 - Jetpack Search: during setup, automatically use the product result format for sites with WooCommerce active.
 - JITMs: add pre-connection JITMs using the jetpack_pre_connection_jitms filter.
