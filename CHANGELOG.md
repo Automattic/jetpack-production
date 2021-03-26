@@ -64,6 +64,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions block: adding unit tests only. Changelog entry not required.
 - Sync: Use the new Password_Checker package instead of Jetpack_Password_Checker.
 - Synchronization: avoid issues with themes or plugins using anonymous functions within hooks.
+- Update tests to reflect changes on the Connection package
 
 ### Bug fixes
 - Admin Menu: Do not alter menu slugs
