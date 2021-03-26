@@ -82,6 +82,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: avoid notices as embeds are added to a post.
 - Recommendations: When enabling Site Accelerator, also enable Tiled Galleries.
 - Search: fix an issue that led to a PHP notice for undefined index.
+- Search: Fix modal opening bug within the Customizer
 - Search: hide "filters" menu on mobile if there are no filters to display
 - Sharing: Omit Open Graph description tag from posts with Premium Content.
 - Site Card: If blogname is empty, replace it with domain name.
