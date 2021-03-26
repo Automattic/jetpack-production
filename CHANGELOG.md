@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - WPCOM Admin Menu: Add Edit CSS menu item to Appearance sub menu for Simple sites.
 
 ### Improved compatibility
+- Add new test for blog token health to support user-less sites
 - Auto-updates: Respect auto-update constant/filters in plugin API endpoints.
 - Autoloader: Fix uninstallation fatal.
 - Beautiful Math: Remove title attribute from generated image.
