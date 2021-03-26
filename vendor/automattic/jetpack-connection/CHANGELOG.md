@@ -23,6 +23,9 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - User-less connection: Reconnect without asking the user to connect their WPCOM account
 
+### Deprecated
+- add deprecation notice and remove user-less check in is_active
+
 ### Fixed
 - Only check offline mode when needed in map_meta_cap filters
 - Use `composer update` rather than `install` in scripts, as composer.lock isn't checked in.

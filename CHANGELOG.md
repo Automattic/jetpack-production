@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Calypsoify: Move all initialisation to the admin_init hook
 - Calypsoify: Removed the setting mechanism and associated unused code
 - Contact form: adding unit test. No need for a changelog entry.
+- Deprecate is_active and add filter to the Connection Status API
 - General: Update colors to match dashboard color changes in WordPress 5.7.
 - Git block: Refactored class component into a functional one and added unit tests. No functional/UI changes. Changelog optional.
 - Gravatar Hovercards: Fix compatibility with the AMP plugin for Pingbacks and Trackbacks.
