@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - API Nonces: performance optimization and refactoring
 - Connection: Replace is_active usage towards gradually deprecating it.
+- Make connected_plugins REST endpoint available for the Jetpack Debugger
 - Move Jetpack specific XMLRPC methods from the Connection package into the plugin
 - Update package dependencies.
 - User-less connection: Reconnect without asking the user to connect their WPCOM account
