@@ -74,6 +74,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection Flow: Resolve issue that prevented connections from Opera.
 - Custom Content Types: fix inline quick editing of Restaurant menu items.
 - Eventbrite block: trimming input value, adding unit tests and fixtures.
+- Fixed center alignment of premium content login button.
 - Fix recommendations for user-less connections
 - Force Posts and Pages menu items to link to WPAdmin on Atomic sites
 - Instant Search: ensure Escape key always closes search modal
