@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Calendly: Added block tests and fixtures.
 - Connection: making Protect unavailable in Userless mode
 - Dashboard: add new option to input license key.
+- Dashboard: update recommmendations notice to improve accessibility
 - General: Allow the use of some Jetpack features without connecting to a WordPress.com account.
 - General: Updating copy for Jetpack userless mode components.
 - Image Compare: Add block tests and fixtures.

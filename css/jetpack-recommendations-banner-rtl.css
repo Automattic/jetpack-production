@@ -164,7 +164,7 @@
   border-width: 1px;
   cursor: pointer;
   display: inline-block;
-  margin: 0;
+  margin: 0 0 8px 0;
   outline: 0;
   overflow: hidden;
   font-size: 0.875rem;
@@ -210,9 +210,21 @@
   left: 0;
 }
 
-@media (max-width: 960px) {
+@media (min-width: 1152px) {
   .jp-recommendations-banner__illustration-container {
-    display: none;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1688px) {
+  .jp-recommendations-banner__illustration-container img {
+    bottom: -24px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .jp-recommendations-banner__illustration-container img {
+    bottom: 0;
   }
 }
 
@@ -224,6 +236,32 @@
 .jp-recommendations-banner__illustration-foreground {
   width: 75%;
   margin: 10%;
+}
+
+.jp-recommendations-banner__notice-dismiss {
+  background: 100% 0;
+  border: none;
+  color: #3c434a;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 32px 0 32px 32px;
+  float: left;
+}
+
+.jp-recommendations-banner__notice-dismiss:hover, .jp-recommendations-banner__notice-dismiss:active {
+  color: #101517;
+}
+
+.jp-recommendations-banner__notice-dismiss:hover .jp-recommendations-banner__svg-dismiss, .jp-recommendations-banner__notice-dismiss:active .jp-recommendations-banner__svg-dismiss {
+  fill: #101517;
+}
+
+.jp-recommendations-banner__notice-dismiss .jp-recommendations-banner__svg-dismiss {
+  fill: #3c434a;
+  margin-left: 4px;
 }
 
 /*# sourceMappingURL=jetpack-recommendations-banner-rtl.css.map */
