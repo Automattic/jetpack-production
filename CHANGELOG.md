@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Recommendations: adjust wording.
 - Revome the later Jetpack::init call.
 - Search: Auto-spawn modal while in Search section of the Customizer
+- Search: Improve product result format
 - Search: Lazy load images for improved performance
 - Search: link review count to product reviews in the product result format.
 - Search: updated default photon image size
