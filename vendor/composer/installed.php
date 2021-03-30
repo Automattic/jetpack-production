@@ -265,12 +265,12 @@
     ),
     'nojimage/twitter-text-php' => 
     array (
-      'pretty_version' => 'v3.1.1',
-      'version' => '3.1.1.0',
+      'pretty_version' => 'v3.1.2',
+      'version' => '3.1.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7f466b331cebfdd00e3568acaf45f2e90a39a320',
+      'reference' => '979bcf6a92d543b61588c7c0c0a87d0eb473d8f6',
     ),
   ),
 );

@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - PHPCS improvements to bring module up to coding standards
+- Publicize: update Twitter text processing library to avoid errors when using PHP 8
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added this new section going forward for changes that had been left out in the past.

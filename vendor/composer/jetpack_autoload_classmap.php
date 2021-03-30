@@ -27,47 +27,47 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/ManifestGenerator.php'
 	),
 	'Twitter\\Text\\ParseResults' => array(
-		'version' => '3.1.1.0',
+		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/ParseResults.php'
 	),
 	'Twitter\\Text\\Validator' => array(
-		'version' => '3.1.1.0',
+		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/Validator.php'
 	),
 	'Twitter\\Text\\TldLists' => array(
-		'version' => '3.1.1.0',
+		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/TldLists.php'
 	),
 	'Twitter\\Text\\Autolink' => array(
-		'version' => '3.1.1.0',
+		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/Autolink.php'
 	),
 	'Twitter\\Text\\Regex' => array(
-		'version' => '3.1.1.0',
+		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/Regex.php'
 	),
 	'Twitter\\Text\\Parser' => array(
-		'version' => '3.1.1.0',
+		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/Parser.php'
 	),
 	'Twitter\\Text\\EmojiRegex' => array(
-		'version' => '3.1.1.0',
+		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/EmojiRegex.php'
 	),
 	'Twitter\\Text\\HitHighlighter' => array(
-		'version' => '3.1.1.0',
+		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/HitHighlighter.php'
 	),
 	'Twitter\\Text\\Configuration' => array(
-		'version' => '3.1.1.0',
+		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/Configuration.php'
 	),
 	'Twitter\\Text\\StringUtils' => array(
-		'version' => '3.1.1.0',
+		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/StringUtils.php'
 	),
 	'Twitter\\Text\\Extractor' => array(
-		'version' => '3.1.1.0',
+		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/Extractor.php'
 	),
 	'Automattic\\Jetpack\\Plugin\\Tracking' => array(
