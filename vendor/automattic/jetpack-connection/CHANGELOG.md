@@ -5,18 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.25.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.25.0] - 2021-03-30
 ### Added
 - Add new test for blog token health to support user-less sites
 - Composer alias for dev-master, to improve dependencies
-- Created a changelog from the git history with help from [auto-changelog](https://www.npmjs.com/package/auto-changelog). It could probably use cleanup!
 
 ### Changed
 - API Nonces: performance optimization and refactoring
-- Connection: Replace is_active usage towards gradually deprecating it.
+- Replace is_active usage towards gradually deprecating it.
 - Do not use is_active to determine the XMLRPC methods that should be registered
 - Make connected_plugins REST endpoint available for the Jetpack Debugger
 - Move Jetpack specific XMLRPC methods from the Connection package into the plugin
@@ -330,7 +326,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[1.25.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.24.0...v1.25.0-alpha
+[1.25.0]: https://github.com/Automattic/jetpack-connection/compare/v1.24.0...v1.25.0
 [1.24.0]: https://github.com/Automattic/jetpack-connection/compare/v1.23.2...v1.24.0
 [1.23.2]: https://github.com/Automattic/jetpack-connection/compare/v1.23.1...v1.23.2
 [1.23.1]: https://github.com/Automattic/jetpack-connection/compare/v1.23.0...v1.23.1

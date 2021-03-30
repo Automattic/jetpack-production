@@ -5,20 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.14.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.14.1] - 2021-03-30
 ### Added
 - Composer alias for dev-master, to improve dependencies
-- Created a changelog from the git history with help from [auto-changelog](https://www.npmjs.com/package/auto-changelog). It could probably use cleanup!
 
 ### Changed
-- JITM: Use is_connected instead of is_active to instantiate Pre/Post_Connection_JITM
-- JITM package: add a jetpack_pre_connection_jitms filter.
+- Use is_connected instead of is_active to instantiate Pre/Post_Connection_JITM
+- Add a jetpack_pre_connection_jitms filter.
 - Update colors to match upcoming WP 5.7 color changes
-- Update dependency eslint to v7.21.0
-- Update dependency versions.
 - Update Node to match latest LTS 12
 - Update package dependencies.
 
@@ -254,7 +248,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Update Jetpack to use new JITM package
 
-[1.14.1-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v1.14.0...v1.14.1-alpha
+[1.14.1]: https://github.com/Automattic/jetpack-jitm/compare/v1.14.0...v1.14.1
 [1.14.0]: https://github.com/Automattic/jetpack-jitm/compare/v1.13.5...v1.14.0
 [1.13.5]: https://github.com/Automattic/jetpack-jitm/compare/v1.13.4...v1.13.5
 [1.13.4]: https://github.com/Automattic/jetpack-jitm/compare/v1.13.3...v1.13.4

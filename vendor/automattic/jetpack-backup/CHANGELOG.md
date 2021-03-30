@@ -5,13 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.0.4] - 2021-03-30
 ### Added
 - Composer alias for dev-master, to improve dependencies
-- Created a changelog from the git history with help from [auto-changelog](https://www.npmjs.com/package/auto-changelog). It could probably use cleanup!
 
 ### Changed
 - Update package dependencies.
@@ -29,6 +25,6 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[1.0.4-alpha]: https://github.com/Automattic/jetpack-backup/compare/v1.0.3...v1.0.4-alpha
+[1.0.4]: https://github.com/Automattic/jetpack-backup/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/Automattic/jetpack-backup/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/Automattic/jetpack-backup/compare/v1.0.0...v1.0.2

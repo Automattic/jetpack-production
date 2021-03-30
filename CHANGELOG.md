@@ -2,109 +2,55 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 9.6-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 9.6-beta - 2021-03-30
 ### Enhancements
-- Add a new admin menu class for domain-only sites which contains a single menu item to manage the domain.
-- Added a generic class for Admin Menu
-- Adds is_connection_ready method to Jetpack class
-- Auto activate default modules on user-less connections
+- Beautiful Math: remove title attribute from generated image.
 - Blocks: add width option to buttons in Subscriptions, Revue, Form, Calendly, and Payments blocks.
-- Calendly: Added block tests and fixtures.
-- Connection: making Protect unavailable in Userless mode
+- Blocks: improve reliability of all blocks via unit tests.
+- Dashboard: add new options to customize SEO settings.
 - Dashboard: add new option to input license key.
-- Dashboard: update recommmendations notice to improve accessibility
-- General: Allow the use of some Jetpack features without connecting to a WordPress.com account.
-- General: Updating copy for Jetpack userless mode components.
-- Image Compare: Add block tests and fixtures.
-- Instant Search: improve performance by lazily loading more of the library
-- Instant Search: Improve product result format layout
-- Jetpack: Audit and replace Jetpack:is_active with user-less in mind.
-- Jetpack Search: Add a product layout for search results from WooCommerce.
-- Jetpack Search: during setup, automatically use the product result format for sites with WooCommerce active.
+- Dashboard: update recommmendations notice to improve accessibility.
+- General: allow the use of some Jetpack features without connecting to a WordPress.com account.
+- Instant Search: improve performance thanks to lazily loading.
+- Instant Search: add a new result format layout, for sites using WooCommerce.
+- Instant Search: update the search modal design.
+- Instant Search: only use site accelerator for displaying images if it is enabled on the site.
 - Jetpack Videos: improve the display of transcoding status for newly uploaded videos.
-- Jetpack Videos: update format status checks to support more transcoding formats
-- JITMs: add pre-connection JITMs using the jetpack_pre_connection_jitms filter.
-- Moving some Userless Connection code to WP.com.
-- Nav Unification: Remove "Links Manager" menu
-- Podcast Player Block: improve fetching of the podcast description
-- Recommendations: adjust wording.
-- Remove the deprecated old Dashboard Stats widget. The "new" one has been in use since 2015.
-- Revome the later Jetpack::init call.
-- Search: Add animation to modal summoning
-- Search: Auto-spawn modal while in Search section of the Customizer
-- Search: Improve product result format
-- Search: Lazy load images for improved performance
-- Search: link review count to product reviews in the product result format.
-- Search: updated default photon image size
-- SEO Tools: existing settings now available in WP Admin
-- Syncrhonization: New sync/health endpoint to allow update of the sync health option.
-- WordAds: Added block tests and fixtures.
+- Podcast Player Block: improve fetching of the podcast description.
+- Syncrhonization: add new sync/health endpoint to allow update of the sync health options.
 - WordPress.com REST API: allow Facebook Metadata to be saved alongside posts created via the API.
-- WordPress.com REST API: create map blocks based on FB geo metadata
-- WPCOM Admin Menu: Add Edit CSS menu item to Appearance sub menu for Simple sites.
 
 ### Improved compatibility
-- Add new test for blog token health to support user-less sites
-- Auto-updates: Respect auto-update constant/filters in plugin API endpoints.
-- Autoloader: Fix uninstallation fatal.
-- Beautiful Math: Remove title attribute from generated image.
-- Blocks: Add editor style dependency when registering Jetpack blocks to ensure support for the new site editor.
-- Calypsoify: Move all initialisation to the admin_init hook
-- Calypsoify: Removed the setting mechanism and associated unused code
-- Contact form: adding unit test. No need for a changelog entry.
-- Deprecate is_active and add filter to the Connection Status API
-- General: Update colors to match dashboard color changes in WordPress 5.7.
-- Git block: Refactored class component into a functional one and added unit tests. No functional/UI changes. Changelog optional.
-- Gravatar Hovercards: Fix compatibility with the AMP plugin for Pingbacks and Trackbacks.
-- Jetpack blocks: update fixture test script (no public changelog needed)
-- Jetpack Search: only use site accelerator for displaying images if it is enabled on the site.
-- Latest Instagram Posts Block: Improve compatibility with Gutenberg 10.1.0.
-- Markdown: Avoid processing URLs that may include Markdown syntax.
-- Move Jetpack specific XMLRPC methods from the Connection package into the plugin
-- Opentable Block: Improve compatibility with Gutenberg 10.1.0.
-- PHPCS coding standars for the Stats module
-- Podcast Player Block: Fix compatibility with the AMP plugin in the Customizer preview.
-- Podcast Player Block: Improve compatibility with Gutenberg 10.1.0.
-- Related Posts Block: add tests (no public changelog required).
-- Site Logo: Fix issues when updating logo in the Customizer.
-- Subscriptions block: adding unit tests only. Changelog entry not required.
-- Sync: Use the new Password_Checker package instead of Jetpack_Password_Checker.
+- Auto-updates: respect auto-update constant/filters in plugin API endpoints.
+- Autoloader: fix uninstallation fatal.
+- General: update colors to match dashboard color changes in WordPress 5.7.
+- Gravatar Hovercards: fix compatibility with the AMP plugin for Pingbacks and Trackbacks.
+- Latest Instagram Posts Block: improve compatibility with Gutenberg 10.1.0.
+- Markdown: avoid processing URLs that may include Markdown syntax.
+- Opentable Block: improve compatibility with Gutenberg 10.1.0.
+- Podcast Player Block: fix compatibility with the AMP plugin in the Customizer preview.
+- Podcast Player Block: improve compatibility with Gutenberg 10.1.0.
 - Synchronization: avoid issues with themes or plugins using anonymous functions within hooks.
-- Update tests to reflect changes on the Connection package
 
 ### Bug fixes
-- Admin Menu: Do not alter menu slugs
-- Admin Menu: Handle RTL styles
-- Always adds Calypso Users menus when nav unification is enabled.
-- Connection Flow: Resolve issue that prevented connections from Opera.
+- Connection Flow: resolve issue that prevented connections from the Opera browser.
 - Custom Content Types: fix inline quick editing of Restaurant menu items.
-- Eventbrite block: trimming input value, adding unit tests and fixtures.
-- Fixed center alignment of premium content login button.
-- Fix recommendations for user-less connections
-- Force Posts and Pages menu items to link to WPAdmin on Atomic sites
-- Instant Search: ensure Escape key always closes search modal
-- Instant Search:  Prevent IE11 from spawning overlay on load.
-- Jetpack Admin: Check user connection constraints when fetching the available modules list.
-- Jetpack Recommendations: Hide Monitoring setting on User-less mode.
-- Only remove the Links menu item if the user has added their own links. Auto-generated default links will not be counted in order to deprecate this feature.
+- Instant Search: ensure Escape key always closes search modal.
+- Instant Search: prevent IE11 from spawning overlay on load.
 - Publicize: avoid notices as embeds are added to a post.
-- Recommendations: When enabling Site Accelerator, also enable Tiled Galleries.
-- Search: fix an issue that led to a PHP notice for undefined index.
-- Search: Fix modal opening bug within the Customizer
-- Search: fix visibility of filter checkboxes in Safari on Twenty Twenty and Twenty Twenty One themes
-- Search: hide "filters" menu on mobile if there are no filters to display
-- Sharing: Omit Open Graph description tag from posts with Premium Content.
-- Site Card: If blogname is empty, replace it with domain name.
-- Star Rating Block: allow 0 stars to be selected
+- Recommendations: when enabling Site Accelerator, also enable Tiled Galleries.
+- Instant Search: fix an issue that led to a PHP notice for undefined index.
+- Instant Search: Fix modal opening bug within the Customizer.
+- Instant Search: fix visibility of filter checkboxes in Safari on Twenty Twenty and Twenty Twenty One themes.
+- Instant Search: hide "filters" menu on mobile if there are no filters to display.
+- Sharing: omit Open Graph description tag from posts with Premium Content.
+- Site Logo: fix issues when updating logo in the Customizer.
+- Star Rating Block: allow 0 stars to be selected.
 - Subscriptions Block: allow block to override color styles, falling back to theme defaults.
-- tiled-gallery: Do not photonize images on private atomic sites
-- Tiled Gallery: Prevent block validation errors for mosaic and column layouts.
-- Video Block: Display fallback when fetching video 404s.
+- Tiled Gallery: prevent block validation errors for mosaic and column layouts.
+- Video Block: display fallback when fetching videos that have been deleted.
 - WordPress.com Block Editor: disable if all Jetpack blocks are disabled via a filter.
-- WordPress.com REST API: make sure post metadata is always an array
+- WordPress.com REST API: make sure post metadata is always an array.
 
 ## 9.5.2 - 2021-03-16
 ### Improved compatibility

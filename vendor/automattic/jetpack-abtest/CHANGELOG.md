@@ -5,16 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.9.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.9.5] - 2021-03-30
 ### Added
 - Composer alias for dev-master, to improve dependencies
-- Created a changelog from the git history with help from [auto-changelog](https://www.npmjs.com/package/auto-changelog). It could probably use cleanup!
 
 ### Changed
-- Update dependency versions.
 - Update package dependencies.
 
 ### Fixed
@@ -154,7 +149,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Introduce a simple A/B test package
 
-[1.9.5-alpha]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.4...v1.9.5-alpha
+[1.9.5]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.4...v1.9.5
 [1.9.4]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.3...v1.9.4
 [1.9.3]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.2...v1.9.3
 [1.9.2]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.1...v1.9.2

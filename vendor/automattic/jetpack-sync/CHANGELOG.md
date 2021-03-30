@@ -5,20 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.21.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.21.1] - 2021-03-30
 ### Added
 - Composer alias for dev-master, to improve dependencies
-- Created a changelog from the git history with help from [auto-changelog](https://www.npmjs.com/package/auto-changelog). It could probably use cleanup!
 - Implement a 60 second back-off for non-200 respones, if no retry-after header is present in the response.
 - Impose a max limit of 2MB on post meta values that are synced.
 - Impose a max limit of 5MB on post_content that can be synced.
 
 ### Changed
 - Sync: Use the new Password_Checker package instead of Jetpack_Password_Checker.
-- Update dependency versions.
 - Update package dependencies.
 - Use the Heartbeat package to generate the stats array
 
@@ -370,7 +365,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[1.21.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.21.0...v1.21.1-alpha
+[1.21.1]: https://github.com/Automattic/jetpack-sync/compare/v1.21.0...v1.21.1
 [1.21.0]: https://github.com/Automattic/jetpack-sync/compare/v1.20.2...v1.21.0
 [1.20.2]: https://github.com/Automattic/jetpack-sync/compare/v1.20.1...v1.20.2
 [1.20.1]: https://github.com/Automattic/jetpack-sync/compare/v1.20.0...v1.20.1
