@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast Player Block: improve fetching of the podcast description
 - Recommendations: adjust wording.
 - Revome the later Jetpack::init call.
+- Search: Add animation to modal summoning
 - Search: Auto-spawn modal while in Search section of the Customizer
 - Search: Improve product result format
 - Search: Lazy load images for improved performance
