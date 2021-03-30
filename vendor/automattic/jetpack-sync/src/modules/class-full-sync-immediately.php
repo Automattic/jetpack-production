@@ -341,7 +341,7 @@ class Full_Sync_Immediately extends Module {
 		if ( $retry_time ) {
 			// If expired delete but don't send. Send will occurr in new request to avoid race conditions.
 			if ( microtime( true ) > $retry_time ) {
-				update_option( Actions::RETRY_AFTER_PREFIX . 'immediate-send', false, false );
+				delete_option( Actions::RETRY_AFTER_PREFIX . 'immediate-send' );
 			}
 			return false;
 		}
