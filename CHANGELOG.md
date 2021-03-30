@@ -6,7 +6,6 @@
 
 This is an alpha version! The changes listed here are not final.
 
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added this new section going forward for changes that had been left out in the past.
 
