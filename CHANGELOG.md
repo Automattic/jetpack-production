@@ -85,6 +85,7 @@ This is an alpha version! The changes listed here are not final.
 - Instant Search: ensure Escape key always closes search modal
 - Instant Search:  Prevent IE11 from spawning overlay on load.
 - Jetpack Admin: Check user connection constraints when fetching the available modules list.
+- Jetpack Recommendations: Hide Monitoring setting on User-less mode.
 - Only remove the Links menu item if the user has added their own links. Auto-generated default links will not be counted in order to deprecate this feature.
 - Publicize: avoid notices as embeds are added to a post.
 - Recommendations: When enabling Site Accelerator, also enable Tiled Galleries.
