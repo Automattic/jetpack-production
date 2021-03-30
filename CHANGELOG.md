@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Nav Unification: Remove "Links Manager" menu
 - Podcast Player Block: improve fetching of the podcast description
 - Recommendations: adjust wording.
+- Remove the deprecated old Dashboard Stats widget. The "new" one has been in use since 2015.
 - Revome the later Jetpack::init call.
 - Search: Add animation to modal summoning
 - Search: Auto-spawn modal while in Search section of the Customizer
@@ -63,6 +64,7 @@ This is an alpha version! The changes listed here are not final.
 - Markdown: Avoid processing URLs that may include Markdown syntax.
 - Move Jetpack specific XMLRPC methods from the Connection package into the plugin
 - Opentable Block: Improve compatibility with Gutenberg 10.1.0.
+- PHPCS coding standars for the Stats module
 - Podcast Player Block: Fix compatibility with the AMP plugin in the Customizer preview.
 - Podcast Player Block: Improve compatibility with Gutenberg 10.1.0.
 - Related Posts Block: add tests (no public changelog required).
