@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 9.7-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 9.6-beta - 2021-03-30
 ### Enhancements
 - Beautiful Math: remove title attribute from generated image.
