@@ -74,6 +74,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Admin Menu: Do not alter menu slugs
+- Admin Menu: Handle RTL styles
 - Always adds Calypso Users menus when nav unification is enabled.
 - Connection Flow: Resolve issue that prevented connections from Opera.
 - Custom Content Types: fix inline quick editing of Restaurant menu items.
