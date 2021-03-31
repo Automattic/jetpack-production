@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Payments block: Fixed broken Connect to Stripe link.
 
+### Other
+- Readme: update link to changelog file. No changelog entry necessary.
+
 ## 9.6-beta - 2021-03-30
 ### Enhancements
 - Beautiful Math: remove title attribute from generated image.
