@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
+
 ### Improved compatibility
 - PHPCS improvements to bring module up to coding standards
 - Publicize: update Twitter text processing library to avoid errors when using PHP 8
