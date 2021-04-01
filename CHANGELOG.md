@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Payments block: Fixed broken Connect to Stripe link.
 
 ### Other
+- Admin Page: Do not show an error message with JSONP is disabled. The admin page does not use it.
 - Readme: update link to changelog file. No changelog entry necessary.
 
 ## 9.6-beta - 2021-03-30
