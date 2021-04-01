@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added this new section going forward for changes that had been left out in the past.
+- Admin Page: Do not show an error message with JSONP is disabled. The admin page does not use it.
 - Readme: update link to changelog file. No changelog entry necessary.
 
 ## 9.6-beta - 2021-03-30
