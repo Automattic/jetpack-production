@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 
 ### Bug fixes
+- Fixed an issue which prevented the unified admin menu from working correctly when AMP is enabled.
 - Payments block: Fixed broken Connect to Stripe link.
 
 ### Other
