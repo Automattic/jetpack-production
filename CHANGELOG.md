@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: update Twitter text processing library to avoid errors when using PHP 8
 
 ### Bug fixes
+- Fixed an issue which prevented some menu items from appearing in the unified admin menu because they were replaced with other menu items.
 - Fixed an issue which prevented the unified admin menu from working correctly when AMP is enabled.
 - Payments block: Fixed broken Connect to Stripe link.
 
