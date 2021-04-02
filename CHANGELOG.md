@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed an issue which prevented some menu items from appearing in the unified admin menu because they were replaced with other menu items.
 - Fixed an issue which prevented the unified admin menu from working correctly when AMP is enabled.
 - Payments block: Fixed broken Connect to Stripe link.
+- Search: Fix handling of Customizer controls using refresh
 
 ### Other
 - Admin Page: Do not show an error message with JSONP is disabled. The admin page does not use it.
