@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - PHPCS improvements to bring module up to coding standards
 - Publicize: update Twitter text processing library to avoid errors when using PHP 8
+- Removing the password-checker package from the Jetpack plugin composer.json file.
 
 ### Bug fixes
 - Fixed an issue which prevented some menu items from appearing in the unified admin menu because they were replaced with other menu items.

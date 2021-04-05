@@ -250,10 +250,6 @@ return array(
 		'version' => '1.21.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-sync/src/class-lock.php'
 	),
-	'Automattic\\Jetpack\\Password_Checker' => array(
-		'version' => '0.1.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php'
-	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '1.4.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
@@ -325,6 +321,10 @@ return array(
 	'Automattic\\Jetpack\\Abtest' => array(
 		'version' => '1.9.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
+	),
+	'Automattic\\Jetpack\\Password_Checker' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
 		'version' => '1.5.9999999.9999999-dev',

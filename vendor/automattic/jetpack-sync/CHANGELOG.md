@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Adding the password-checker package the the Sync package composer.json file.
+
 ## [1.21.1] - 2021-03-30
 ### Added
 - Composer alias for dev-master, to improve dependencies
