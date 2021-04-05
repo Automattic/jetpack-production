@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add additional save buttons for SEO tools in wp-admin since the card section can get long to scroll back to the top on.
 - In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
 
 ### Improved compatibility
