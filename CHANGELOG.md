@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Page: Do not show an error message with JSONP is disabled. The admin page does not use it.
 - Change the command to build Jetpack in E2E tests Github action workflow
 - Readme: update link to changelog file. No changelog entry necessary.
+- Updated package dependencies
 
 ## 9.6-beta - 2021-03-30
 ### Enhancements
