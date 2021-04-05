@@ -19,6 +19,7 @@ return array(
     'Automattic\\Jetpack\\Blocks' => $vendorDir . '/automattic/jetpack-blocks/src/class-blocks.php',
     'Automattic\\Jetpack\\Config' => $vendorDir . '/automattic/jetpack-config/src/class-config.php',
     'Automattic\\Jetpack\\ConnectionUI\\Admin' => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php',
+    'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php',
     'Automattic\\Jetpack\\Connection\\Client' => $vendorDir . '/automattic/jetpack-connection/src/class-client.php',
     'Automattic\\Jetpack\\Connection\\Error_Handler' => $vendorDir . '/automattic/jetpack-connection/src/class-error-handler.php',
     'Automattic\\Jetpack\\Connection\\Manager' => $vendorDir . '/automattic/jetpack-connection/src/class-manager.php',

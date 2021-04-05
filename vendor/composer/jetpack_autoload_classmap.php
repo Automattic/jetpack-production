@@ -286,6 +286,10 @@ return array(
 		'version' => '1.0.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
 	),
+	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
+		'version' => '1.0.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
+	),
 	'Automattic\\Jetpack\\Config' => array(
 		'version' => '1.4.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
