@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Change the command to build Jetpack in E2E tests Github action workflow
 - Updated package dependencies
 - Updated package dependencies
+- Updated package dependencies
 
 ## 9.6 - 2021-04-06
 ### Enhancements
