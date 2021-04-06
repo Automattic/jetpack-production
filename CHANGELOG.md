@@ -16,19 +16,14 @@ This is an alpha version! The changes listed here are not final.
 - Removing the password-checker package from the Jetpack plugin composer.json file.
 
 ### Bug fixes
-- Fixed an issue which prevented some menu items from appearing in the unified admin menu because they were replaced with other menu items.
-- Fixed an issue which prevented the unified admin menu from working correctly when AMP is enabled.
-- Payments block: Fixed broken Connect to Stripe link.
 - Search: Fix handling of Customizer controls using refresh
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added this new section going forward for changes that had been left out in the past.
-- Admin Page: Do not show an error message with JSONP is disabled. The admin page does not use it.
+- Changelog: update with latest changes that were cherry-picked to 9.6 during Beta period.
 - Change the command to build Jetpack in E2E tests Github action workflow
-- Readme: update link to changelog file. No changelog entry necessary.
 - Updated package dependencies
 
-## 9.6-beta - 2021-03-30
+## 9.6 - 2021-04-06
 ### Enhancements
 - Beautiful Math: remove title attribute from generated image.
 - Blocks: add width option to buttons in Subscriptions, Revue, Form, Calendly, and Payments blocks.
@@ -37,10 +32,10 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: add new option to input license key.
 - Dashboard: update recommmendations notice to improve accessibility.
 - General: allow the use of some Jetpack features without connecting to a WordPress.com account.
-- Instant Search: improve performance thanks to lazily loading.
 - Instant Search: add a new result format layout, for sites using WooCommerce.
-- Instant Search: update the search modal design.
+- Instant Search: improve performance thanks to lazily loading.
 - Instant Search: only use site accelerator for displaying images if it is enabled on the site.
+- Instant Search: update the search modal design.
 - Jetpack Videos: improve the display of transcoding status for newly uploaded videos.
 - Podcast Player Block: improve fetching of the podcast description.
 - Syncrhonization: add new sync/health endpoint to allow update of the sync health options.
@@ -61,13 +56,14 @@ This is an alpha version! The changes listed here are not final.
 - Connection Flow: resolve issue that prevented connections from the Opera browser.
 - Custom Content Types: fix inline quick editing of Restaurant menu items.
 - Instant Search: ensure Escape key always closes search modal.
+- Instant Search: fix an issue that led to a PHP notice for undefined index.
+- Instant Search: Fix modal opening bug within the Customizer.
+- Instant Search: fix handling of Customizer controls using refresh.
+- Instant Search: fix visibility of filter checkboxes in Safari on Twenty Twenty and Twenty Twenty One themes.
+- Instant Search: hide "filters" menu on mobile if there are no filters to display.
 - Instant Search: prevent IE11 from spawning overlay on load.
 - Publicize: avoid notices as embeds are added to a post.
 - Recommendations: when enabling Site Accelerator, also enable Tiled Galleries.
-- Instant Search: fix an issue that led to a PHP notice for undefined index.
-- Instant Search: Fix modal opening bug within the Customizer.
-- Instant Search: fix visibility of filter checkboxes in Safari on Twenty Twenty and Twenty Twenty One themes.
-- Instant Search: hide "filters" menu on mobile if there are no filters to display.
 - Sharing: omit Open Graph description tag from posts with Premium Content.
 - Site Logo: fix issues when updating logo in the Customizer.
 - Star Rating Block: allow 0 stars to be selected.
@@ -76,6 +72,10 @@ This is an alpha version! The changes listed here are not final.
 - Video Block: display fallback when fetching videos that have been deleted.
 - WordPress.com Block Editor: disable if all Jetpack blocks are disabled via a filter.
 - WordPress.com REST API: make sure post metadata is always an array.
+
+### Other
+- Admin Page: Do not show an error message with JSONP is disabled. The admin page does not use it.
+- Readme: update link to changelog file. No changelog entry necessary.
 
 ## 9.5.2 - 2021-03-16
 ### Improved compatibility
