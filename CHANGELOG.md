@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Removing the password-checker package from the Jetpack plugin composer.json file.
 
 ### Bug fixes
+- Search: Fix Customizer and styling bugs introduced in 9.6
 - Search: Fix handling of Customizer controls using refresh
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
