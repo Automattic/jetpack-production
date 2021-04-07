@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add additional save buttons for SEO tools in wp-admin since the card section can get long to scroll back to the top on.
 - In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
+- When we are retrieving links to see if the user has added any themselves to determine whether the Links Manager is in use (So we can hide it if it isn't). We are only retrieving visible links so if the user has added lots of invisible links we are incorrectly hiding the Links menu item. Here we are returning both visible and invisible links.
 
 ### Improved compatibility
 - PHPCS improvements to bring module up to coding standards
