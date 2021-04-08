@@ -274,6 +274,10 @@ return array(
 		'version' => '1.14.1.0',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-post-connection-jitm.php'
 	),
+	'Automattic\\Jetpack\\Abtest' => array(
+		'version' => '1.9.5.0',
+		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
+	),
 	'Automattic\\Jetpack\\Device_Detection\\User_Agent_Info' => array(
 		'version' => '1.4.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-user-agent-info.php'
@@ -317,10 +321,6 @@ return array(
 	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
 		'version' => '1.0.4.0',
 		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-helper-script-manager.php'
-	),
-	'Automattic\\Jetpack\\Abtest' => array(
-		'version' => '1.9.5.0',
-		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
 		'version' => '1.5.3.0',
