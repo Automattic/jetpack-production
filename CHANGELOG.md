@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Fix Customizer and styling bugs introduced in 9.6
 - Search: Fix handling of Customizer controls using refresh
 - Search: prevent user from excluding all post types
+- Stats: Fix time period selection on the stats page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changelog: update with latest changes that were cherry-picked to 9.6 during Beta period.
