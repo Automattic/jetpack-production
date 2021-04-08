@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Fix Customizer and styling bugs introduced in 9.6
 - Search: Fix handling of Customizer controls using refresh
 - Search: prevent user from excluding all post types
+- Sharing: ensure the feature can be used when Jetpack is used in Offline e mode.
 - Stats: Fix time period selection on the stats page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
