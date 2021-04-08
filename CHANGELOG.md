@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changelog: update with latest changes that were cherry-picked to 9.6 during Beta period.
 - Change the command to build Jetpack in E2E tests Github action workflow
+- Remove outdated reference to SEO as a paid feature in readme.txt
 - Updated package dependencies
 - Updated package dependencies
 - Updated package dependencies
