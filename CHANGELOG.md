@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 9.7-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other
+- Remove outdated reference to SEO as a paid feature in readme.txt
+
 ## 9.6 - 2021-04-06
 ### Enhancements
 - Beautiful Math: remove title attribute from generated image.
