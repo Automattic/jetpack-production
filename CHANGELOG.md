@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Search: Fix Customizer and styling bugs introduced in 9.6
+- Sharing: ensure the feature can be used when Jetpack is used in Offline e mode.
 - Stats: Fix time period selection on the stats page.
 
 ### Other
