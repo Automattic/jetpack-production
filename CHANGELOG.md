@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Search: Fix Customizer and styling bugs introduced in 9.6
 - Search: Fix handling of Customizer controls using refresh
+- Search: prevent user from excluding all post types
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changelog: update with latest changes that were cherry-picked to 9.6 during Beta period.
