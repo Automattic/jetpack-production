@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - When we are retrieving links to see if the user has added any themselves to determine whether the Links Manager is in use (So we can hide it if it isn't). We are only retrieving visible links so if the user has added lots of invisible links we are incorrectly hiding the Links menu item. Here we are returning both visible and invisible links.
 
+
 ### Bug fixes
 - Search: Fix Customizer and styling bugs introduced in 9.6
 
