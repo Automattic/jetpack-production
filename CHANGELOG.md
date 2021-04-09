@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: prevent user from excluding all post types
 - Sharing: ensure the feature can be used when Jetpack is used in Offline e mode.
 - Stats: Fix time period selection on the stats page.
+- Tiled Gallery Block: Fix verticaly height of add item button for compatibility with the new site editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changelog: update with latest changes that were cherry-picked to 9.6 during Beta period.
