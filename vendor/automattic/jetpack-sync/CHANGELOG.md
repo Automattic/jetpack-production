@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Adding the password-checker package the the Sync package composer.json file.
 
+### Fixed
+- Sync: Removing references to the JETPACK__PLUGIN_DIR constant.
+
 ## [1.21.1] - 2021-03-30
 ### Added
 - Composer alias for dev-master, to improve dependencies
