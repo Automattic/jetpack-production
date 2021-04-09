@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies
 - Updated package dependencies
+- WordAds: use WPCOM hosting type for Atomic sites
 
 ## 9.6 - 2021-04-06
 ### Enhancements
