@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - WordAds: add Global Privacy Control (GPC) support to CCPA
 
 ### Improved compatibility
+- Admin Menu: Centralize class loading in Jetpack codebase
 - PHPCS improvements to bring module up to coding standards
 - Publicize: update Twitter text processing library to avoid errors when using PHP 8
 - Removing the password-checker package from the Jetpack plugin composer.json file.
