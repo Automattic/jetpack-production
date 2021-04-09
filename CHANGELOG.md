@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Centralize class loading in Jetpack codebase
 
 ### Bug fixes
+- Cover block: fix paid-block-media-placeholder interference with flex positioning
 - Fixed the Spinner by deprecating our custom solution to use Core's Spinner in React.
 - Search: Fix Customizer and styling bugs introduced in 9.6
 - Search: Handle pagination edge case with excluded post types
