@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Removing the password-checker package from the Jetpack plugin composer.json file.
 
 ### Bug fixes
+- Contact Info Block: Fix styling issues in editing UI in the new site editor.
 - Fixed the Spinner by deprecating our custom solution to use Core's Spinner in React.
 - Search: Fix Customizer and styling bugs introduced in 9.6
 - Search: Fix handling of Customizer controls using refresh
