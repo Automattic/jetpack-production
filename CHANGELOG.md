@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed the Spinner by deprecating our custom solution to use Core's Spinner in React.
 - Search: Fix Customizer and styling bugs introduced in 9.6
 - Search: Fix handling of Customizer controls using refresh
+- Search: Fix race condition for API responses
 - Search: Handle pagination edge case with excluded post types
 - Search: prevent user from excluding all post types
 - Sharing: ensure the feature can be used when Jetpack is used in Offline e mode.
