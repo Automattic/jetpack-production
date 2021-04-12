@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - PHPCS improvements to bring module up to coding standards
 - Publicize: update Twitter text processing library to avoid errors when using PHP 8
 - Removing the password-checker package from the Jetpack plugin composer.json file.
+- Sharing: avoid broken sharing icons when using IE11 and the legacy AMP  plugin's theme.
 
 ### Bug fixes
 - Contact Info Block: Fix styling issues in editing UI in the new site editor.
