@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Fix race condition for API responses
 - Search: Handle pagination edge case with excluded post types
 - Search: prevent user from excluding all post types
+- Settings: Improve instant search toggle UX
 - Sharing: ensure the feature can be used when Jetpack is used in Offline e mode.
 - Stats: Fix time period selection on the stats page.
 - Tiled Gallery Block: Fix verticaly height of add item button for compatibility with the new site editor.
