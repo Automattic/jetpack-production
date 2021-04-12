@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed the Spinner by deprecating our custom solution to use Core's Spinner in React.
 - Google Calendar Block: Fix styling compatibility issues with the new site editor.
 - Replaced the string "Add new site" to "Add new site" on masterbar and corrected the unit tests.
+- Search: Enable link filtering on built-in WP taxonomies
 - Search: Fix Customizer and styling bugs introduced in 9.6
 - Search: Fix handling of Customizer controls using refresh
 - Search: Fix race condition for API responses
