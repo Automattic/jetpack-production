@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Changelog: update with latest changes that were cherry-picked to 9.6 during Beta period.
 - Change the command to build Jetpack in E2E tests Github action workflow
 - Docs: fix typos in E2E README
+- Jetpack Assistant: Add the product slug to the events dispatched when users see and click the product being upsold
 - Remove outdated reference to SEO as a paid feature in readme.txt
 - Updated package dependencies
 - Updated package dependencies
