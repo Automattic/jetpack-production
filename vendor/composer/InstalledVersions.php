@@ -118,12 +118,12 @@ private static $installed = array (
     ),
     'automattic/jetpack-connection' => 
     array (
-      'pretty_version' => 'v1.25.1',
-      'version' => '1.25.1.0',
+      'pretty_version' => 'v1.25.2',
+      'version' => '1.25.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '32b3a5474a1a0b0f2fc54cf12748a31ab4c7fb2c',
+      'reference' => '694ee277bceb238cd88622a7c8761622618f0904',
     ),
     'automattic/jetpack-connection-ui' => 
     array (
