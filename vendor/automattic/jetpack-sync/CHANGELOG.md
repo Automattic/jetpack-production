@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Sync: Removing references to the JETPACK__PLUGIN_DIR constant.
+- Sync Checksums : Update postmeta range query tperformance #19337
 
 ## [1.21.1] - 2021-03-30
 ### Added
