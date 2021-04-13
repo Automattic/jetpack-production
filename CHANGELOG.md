@@ -11,11 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Replace "Edit CSS" label with "Additional CSS".
 - Google Calendar: Refactored to functional component, added block tests and fixtures.
 - In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
-- When we are retrieving links to see if the user has added any themselves to determine whether the Links Manager is in use (So we can hide it if it isn't). We are only retrieving visible links so if the user has added lots of invisible links we are incorrectly hiding the Links menu item. Here we are returning both visible and invisible links.
 - WordAds: add Global Privacy Control (GPC) support to CCPA
 
 ### Improved compatibility
-- Admin Menu: Centralize class loading in Jetpack codebase
 - PHPCS improvements to bring module up to coding standards
 - Publicize: update Twitter text processing library to avoid errors when using PHP 8
 - Removing the password-checker package from the Jetpack plugin composer.json file.
@@ -24,20 +22,14 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Adding manual blur on inner text inputs in Address for Contact Info for mobile in order to stop focus from staying in the inner text inputs when clicking away.
 - Contact Info Block: Fix styling issues in editing UI in the new site editor.
-- Cover block: fix paid-block-media-placeholder interference with flex positioning
-- Fixed the Spinner by deprecating our custom solution to use Core's Spinner in React.
 - Google Calendar Block: Fix styling compatibility issues with the new site editor.
 - Mailchimp Block: Fix UX for non-connected users.
 - Replaced the string "Add new site" to "Add new site" on masterbar and corrected the unit tests.
 - Search: Enable link filtering on built-in WP taxonomies
-- Search: Fix Customizer and styling bugs introduced in 9.6
 - Search: Fix handling of Customizer controls using refresh
 - Search: Fix race condition for API responses
-- Search: Handle pagination edge case with excluded post types
 - Search: prevent user from excluding all post types
 - Settings: Improve instant search toggle UX
-- Sharing: ensure the feature can be used when Jetpack is used in Offline e mode.
-- Stats: Fix time period selection on the stats page.
 - Tiled Gallery Block: Fix verticaly height of add item button for compatibility with the new site editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
@@ -45,7 +37,6 @@ This is an alpha version! The changes listed here are not final.
 - Change the command to build Jetpack in E2E tests Github action workflow
 - Docs: fix typos in E2E README
 - Jetpack Assistant: Add the product slug to the events dispatched when users see and click the product being upsold
-- Remove outdated reference to SEO as a paid feature in readme.txt
 - Updated package dependencies
 - Updated package dependencies
 - Updated package dependencies
@@ -55,6 +46,21 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies
 - WordAds: use WPCOM hosting type for Atomic sites
+
+## 9.6.1 - 2021-04-13
+### Bug fixes
+- Connection tools: safeguard cleanup tool against accidental option removal.
+- Dashboard: fix loading indicator styles by deprecating our custom solution in favor of WordPress Core's Spinner.
+- Instant Search: fix Customizer and styling bugs introduced in 9.6.
+- Instant Search: Handle pagination edge-case with excluded post types.
+- Sharing: ensure the feature can be used when Jetpack is used in Offline mode.
+- Stats: Fix time period selection on the stats page.
+
+### Other
+- Admin Menu: Centralize class loading in Jetpack codebase.
+- Admin Menu: Fix the display of the Links Manager.
+- Cover block: fix paid-block-media-placeholder interference with flex positioning.
+- Remove outdated reference to SEO as a paid feature in readme.txt.
 
 ## 9.6 - 2021-04-06
 ### Enhancements
