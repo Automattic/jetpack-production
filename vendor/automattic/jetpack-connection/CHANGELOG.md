@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.25.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Connection: nonce cleanup safeguard against accidental option removal.
+
 ## [1.25.1] - 2021-04-08
 ### Fixed
 - Avoid determine_current_user going through infinite loops
@@ -331,6 +338,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[1.25.2-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.25.1...v1.25.2-alpha
 [1.25.1]: https://github.com/Automattic/jetpack-connection/compare/v1.25.0...v1.25.1
 [1.25.0]: https://github.com/Automattic/jetpack-connection/compare/v1.24.0...v1.25.0
 [1.24.0]: https://github.com/Automattic/jetpack-connection/compare/v1.23.2...v1.24.0
