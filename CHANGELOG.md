@@ -21,7 +21,6 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Fix time period selection on the stats page.
 
 ### Other
-- Add woocommerce_currency to the synced blog options
 - Remove outdated reference to SEO as a paid feature in readme.txt
 
 ## 9.6 - 2021-04-06
