@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: avoid broken sharing icons when using IE11 and the legacy AMP  plugin's theme.
 
 ### Bug fixes
+- Adding manual blur on inner text inputs in Address for Contact Info for mobile in order to stop focus from staying in the inner text inputs when clicking away.
 - Contact Info Block: Fix styling issues in editing UI in the new site editor.
 - Cover block: fix paid-block-media-placeholder interference with flex positioning
 - Fixed the Spinner by deprecating our custom solution to use Core's Spinner in React.
