@@ -2,26 +2,20 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 9.7-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Enhancements
-- When we are retrieving links to see if the user has added any themselves to determine whether the Links Manager is in use (So we can hide it if it isn't). We are only retrieving visible links so if the user has added lots of invisible links we are incorrectly hiding the Links menu item. Here we are returning both visible and invisible links.
-
-### Improved compatibility
-- Admin Menu: Centralize class loading in Jetpack codebase
-
+## 9.6.1 - 2021-04-13
 ### Bug fixes
-- Cover block: fix paid-block-media-placeholder interference with flex positioning
-- Fixed the Spinner by deprecating our custom solution to use Core's Spinner in React.
-- Search: Fix Customizer and styling bugs introduced in 9.6
-- Search: Handle pagination edge case with excluded post types
-- Sharing: ensure the feature can be used when Jetpack is used in Offline e mode.
+- Connection tools: safeguard cleanup tool against accidental option removal.
+- Dashboard: fix loading indicator styles by deprecating our custom solution in favor of WordPress Core's Spinner.
+- Instant Search: fix Customizer and styling bugs introduced in 9.6.
+- Instant Search: Handle pagination edge-case with excluded post types.
+- Sharing: ensure the feature can be used when Jetpack is used in Offline mode.
 - Stats: Fix time period selection on the stats page.
 
 ### Other
-- Remove outdated reference to SEO as a paid feature in readme.txt
+- Admin Menu: Centralize class loading in Jetpack codebase.
+- Admin Menu: Fix the display of the Links Manager.
+- Cover block: fix paid-block-media-placeholder interference with flex positioning.
+- Remove outdated reference to SEO as a paid feature in readme.txt.
 
 ## 9.6 - 2021-04-06
 ### Enhancements
