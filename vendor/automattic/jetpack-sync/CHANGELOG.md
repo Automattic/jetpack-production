@@ -11,7 +11,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Adding the password-checker package the the Sync package composer.json file.
-- Add woocommerce_currency to the synced blog options
 
 ### Fixed
 - Sync: Removing references to the JETPACK__PLUGIN_DIR constant.
