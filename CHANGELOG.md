@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Tiled Gallery Block: Fix verticaly height of add item button for compatibility with the new site editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add unit tests to cover the functionality of each step of the assistant
 - Changelog: update with latest changes that were cherry-picked to 9.6 during Beta period.
 - Change the command to build Jetpack in E2E tests Github action workflow
 - Docs: fix typos in E2E README
