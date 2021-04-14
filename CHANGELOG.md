@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - PHPCS improvements to bring module up to coding standards
+- PHPCS updates to bring in line with WordPress standards.
 - Publicize: update Twitter text processing library to avoid errors when using PHP 8
 - Removing the password-checker package from the Jetpack plugin composer.json file.
 - Sharing: avoid broken sharing icons when using IE11 and the legacy AMP  plugin's theme.
