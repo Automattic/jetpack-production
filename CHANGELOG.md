@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add additional save buttons for SEO tools in wp-admin since the card section can get long to scroll back to the top on.
+- Add inline styles to dashboard header for site icon when nav unification is enabled to prevent site icon images overlaying the users interface making it unusable when nav unification styles are prevented from loading.
 - Admin Menu: Replace "Edit CSS" label with "Additional CSS".
 - Google Calendar: Refactored to functional component, added block tests and fixtures.
 - In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
