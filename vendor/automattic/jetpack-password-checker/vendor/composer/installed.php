@@ -204,12 +204,12 @@
     ),
     'roots/wordpress' => 
     array (
-      'pretty_version' => '5.7',
-      'version' => '5.7.0.0',
+      'pretty_version' => '5.7.1',
+      'version' => '5.7.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5.7',
+      'reference' => '5.7.1',
     ),
     'roots/wordpress-core-installer' => 
     array (
