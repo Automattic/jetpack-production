@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Info Block: Fix styling issues in editing UI in the new site editor.
 - Google Calendar Block: Fix styling compatibility issues with the new site editor.
 - Mailchimp Block: Fix UX for non-connected users.
+- Photon: correct image URLs in srcset in certain cases.
 - Refactored the menu and submenu items replacement for nav unification
 - Replaced the string "Add new site" to "Add new site" on masterbar and corrected the unit tests.
 - Search: Enable link filtering on built-in WP taxonomies
