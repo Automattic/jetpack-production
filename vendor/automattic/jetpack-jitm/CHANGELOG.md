@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.14.2-alpha] - unreleased
+## [1.15.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Move JITM's REST API endpoints into the package
 
 ### Changed
 - Updated package dependencies
@@ -255,7 +258,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Update Jetpack to use new JITM package
 
-[1.14.2-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v1.14.1...v1.14.2-alpha
+[1.15.0-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v1.14.1...v1.15.0-alpha
 [1.14.1]: https://github.com/Automattic/jetpack-jitm/compare/v1.14.0...v1.14.1
 [1.14.0]: https://github.com/Automattic/jetpack-jitm/compare/v1.13.5...v1.14.0
 [1.13.5]: https://github.com/Automattic/jetpack-jitm/compare/v1.13.4...v1.13.5

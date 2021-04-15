@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - WordAds: add Global Privacy Control (GPC) support to CCPA
 
 ### Improved compatibility
+- Move JITM's REST API endpoints into the package
 - PHPCS improvements to bring module up to coding standards
 - PHPCS updates to bring in line with WordPress standards.
 - Publicize: update Twitter text processing library to avoid errors when using PHP 8

@@ -74,6 +74,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3cjetpack
         'Automattic\\Jetpack\\JITMS\\JITM' => __DIR__ . '/..' . '/automattic/jetpack-jitm/src/class-jitm.php',
         'Automattic\\Jetpack\\JITMS\\Post_Connection_JITM' => __DIR__ . '/..' . '/automattic/jetpack-jitm/src/class-post-connection-jitm.php',
         'Automattic\\Jetpack\\JITMS\\Pre_Connection_JITM' => __DIR__ . '/..' . '/automattic/jetpack-jitm/src/class-pre-connection-jitm.php',
+        'Automattic\\Jetpack\\JITMS\\Rest_Api_Endpoints' => __DIR__ . '/..' . '/automattic/jetpack-jitm/src/class-rest-api-endpoints.php',
         'Automattic\\Jetpack\\Jetpack_Lazy_Images' => __DIR__ . '/..' . '/automattic/jetpack-lazy-images/src/lazy-images.php',
         'Automattic\\Jetpack\\Licensing' => __DIR__ . '/..' . '/automattic/jetpack-licensing/src/class-licensing.php',
         'Automattic\\Jetpack\\Partner' => __DIR__ . '/..' . '/automattic/jetpack-partner/src/class-partner.php',
