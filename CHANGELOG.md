@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Replace "Edit CSS" label with "Additional CSS".
 - Google Calendar: Refactored to functional component, added block tests and fixtures.
 - In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
+- Nav Unification: remove the box-shadow at the top of the Sidebar.
 - Updated the Jetpack admin menu logo SVG for increased compatibility with colour schemes
 - VideoPress Block: Added 'Play Inline' setting to play a video inline instead of full-screen on mobile devices when enabled.
 - WordAds: add Global Privacy Control (GPC) support to CCPA
