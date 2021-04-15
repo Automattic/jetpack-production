@@ -744,9 +744,10 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-jitm",
-                "reference": "807078fe203148044f4ac8fcd14c9c7b48f8eeeb"
+                "reference": "74cf58936be8d6a25de4230b198fac2c0642e48a"
             },
             "require": {
+                "automattic/jetpack-a8c-mc-stats": "^1.4",
                 "automattic/jetpack-assets": "^1.11",
                 "automattic/jetpack-connection": "^1.25",
                 "automattic/jetpack-constants": "^1.6",

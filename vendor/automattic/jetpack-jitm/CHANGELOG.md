@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies
+- Use the a8c-mc-stats package to generate stats.
 
 ## [1.14.1] - 2021-03-30
 ### Added
