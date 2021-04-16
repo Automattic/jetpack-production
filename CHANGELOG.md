@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Move JITM's REST API endpoints into the package
+- Nav Unification: Remove Sharing submenu option from settings menu for wpcom sites.
 - PHPCS improvements to bring module up to coding standards
 - PHPCS updates to bring in line with WordPress standards.
 - Publicize: update Twitter text processing library to avoid errors when using PHP 8
