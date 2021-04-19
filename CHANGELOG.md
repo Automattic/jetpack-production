@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - WordAds: add Global Privacy Control (GPC) support to CCPA
 
 ### Improved compatibility
+- Form Block: ensure full compatibility with WordPress' Full Site Editing feature.
 - Making the block editor styles more specific to ensure Site/Block editor compatibility.
 - Move JITM's REST API endpoints into the package
 - Nav Unification: Remove Sharing submenu option from settings menu for wpcom sites.
@@ -33,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Info Block: Fix styling issues in editing UI in the new site editor.
 - Google Calendar Block: Fix styling compatibility issues with the new site editor.
 - Mailchimp Block: Fix UX for non-connected users.
+- Nav Unification: Always show the Theme Showcase (wordpress.com/themes) to WP.com free sites.
 - Photon: correct image URLs in srcset in certain cases.
 - Refactored the menu and submenu items replacement for nav unification
 - Replaced the string "Add new site" to "Add new site" on masterbar and corrected the unit tests.
@@ -41,10 +43,13 @@ This is an alpha version! The changes listed here are not final.
 - Search: Fix race condition for API responses
 - Search: prevent user from excluding all post types
 - Settings: Improve instant search toggle UX
+- Slideshow Block: Fix height of Upload Image button for compatibility with site editor.
 - Tiled Gallery Block: Fix verticaly height of add item button for compatibility with the new site editor.
+- WhatsApp Button Block: Add box-sizing to view CSS to fix height issue with the block in FSE.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add e2e test to cover Jetpack Assistant's (Recommendations) main flow
+- Add field for zendesk meta in /me/sites API for mobile apps
 - Add unit tests to cover the functionality of each step of the assistant
 - Changelog: update with latest changes that were cherry-picked to 9.6 during Beta period.
 - Change the command to build Jetpack in E2E tests Github action workflow
@@ -59,6 +64,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies
 - Updated package dependencies
+- WordAds: add translated text for use with inline and sticky slots
 - WordAds: use WPCOM hosting type for Atomic sites
 
 ## 9.6.1 - 2021-04-13
