@@ -56,6 +56,7 @@ This is an alpha version! The changes listed here are not final.
 - Change the command to build Jetpack in E2E tests Github action workflow
 - Docs: fix typos in E2E README
 - Jetpack Assistant: Add the product slug to the events dispatched when users see and click the product being upsold
+- REST API: Allow site-level authentication on plugins, themes, modules endpoints
 - update composer.lock
 - Updated package dependencies
 - Updated package dependencies
