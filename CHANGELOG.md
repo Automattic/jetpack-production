@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - WordAds: add Global Privacy Control (GPC) support to CCPA
 
 ### Improved compatibility
+- Making the block editor styles more specific to ensure Site/Block editor compatibility.
 - Move JITM's REST API endpoints into the package
 - Nav Unification: Remove Sharing submenu option from settings menu for wpcom sites.
 - PHPCS improvements to bring module up to coding standards
