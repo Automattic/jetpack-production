@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add React initial state.
 
+### Changed
+- Updated package dependencies.
+
 ## [1.0.1] - 2021-03-30
 ### Added
 - Composer alias for dev-master, to improve dependencies
