@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Fix handling of Customizer controls using refresh
 - Search: Fix race condition for API responses
 - Search: prevent user from excluding all post types
+- Search: Set the number of returned posts using the query's posts_per_page value.
 - Settings: Improve instant search toggle UX
 - Slideshow Block: Fix height of Upload Image button for compatibility with site editor.
 - Tiled Gallery Block: Fix verticaly height of add item button for compatibility with the new site editor.
