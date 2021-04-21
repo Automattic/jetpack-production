@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Mailchimp Block: Fix UX for non-connected users.
 - Markdown: Fix regression that broke links with single-quoted href attributes.
 - Nav Unification: Always show the Theme Showcase (wordpress.com/themes) to WP.com free sites.
+- Open Graph Tags: Properly encode URLs in OG tags
 - Photon: correct image URLs in srcset in certain cases.
 - Prevents incorrect image sizing within the site editor for the latest instagram posts block.
 - Refactored the menu and submenu items replacement for nav unification
