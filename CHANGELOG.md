@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Adding manual blur on inner text inputs in Address for Contact Info for mobile in order to stop focus from staying in the inner text inputs when clicking away.
 - Contact Info Block: Fix styling issues in editing UI in the new site editor.
+- Feature Hints: avoid Fatal errors when other plugins filter the plugin list.
 - Google Calendar Block: Fix styling compatibility issues with the new site editor.
 - Mailchimp Block: Fix UX for non-connected users.
 - Markdown: Fix regression that broke links with single-quoted href attributes.
