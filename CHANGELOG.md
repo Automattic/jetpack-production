@@ -61,6 +61,7 @@ This is an alpha version! The changes listed here are not final.
 - Add e2e test to cover Jetpack Assistant's (Recommendations) main flow
 - Add field for zendesk meta in /me/sites API for mobile apps
 - Add unit tests to cover the functionality of each step of the assistant
+- Autoloader: Use a different suffix for each release to fix #19472.
 - Changelog: update with latest changes that were cherry-picked to 9.6 during Beta period.
 - Change the command to build Jetpack in E2E tests Github action workflow
 - Docs: fix typos in E2E README
