@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: prevent user from excluding all post types
 - Search: Set the number of returned posts using the query's posts_per_page value.
 - Settings: Improve instant search toggle UX
+- Site Editor Compatibility: Provide CSS styles for ExternalLink component to workaround site editor styling issue in Gutenberg.
 - Slideshow Block: Fix height of Upload Image button for compatibility with site editor.
 - Tiled Gallery Block: Fix verticaly height of add item button for compatibility with the new site editor.
 - WhatsApp Button Block: Add box-sizing to view CSS to fix height issue with the block in FSE.
