@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: avoid broken sharing icons when using IE11 and the legacy AMP  plugin's theme.
 
 ### Bug fixes
+- Account for Categories and Tags in nav unification
 - Adding manual blur on inner text inputs in Address for Contact Info for mobile in order to stop focus from staying in the inner text inputs when clicking away.
 - Contact Info Block: Fix styling issues in editing UI in the new site editor.
 - Feature Hints: avoid Fatal errors when other plugins filter the plugin list.
