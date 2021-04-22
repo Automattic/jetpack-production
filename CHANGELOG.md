@@ -68,6 +68,7 @@ This is an alpha version! The changes listed here are not final.
 - Change the command to build Jetpack in E2E tests Github action workflow
 - Docs: fix typos in E2E README
 - Jetpack Assistant: Add the product slug to the events dispatched when users see and click the product being upsold
+- Reassign $submenu_file value as null for theme-install.php so correct menu item Add New Theme is highlighted in admin menu.
 - Replace fragile element selectors with a more robust version of themselves
 - REST API: Allow site-level authentication on plugins, themes, modules endpoints
 - update composer.lock
