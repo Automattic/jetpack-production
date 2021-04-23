@@ -61,6 +61,7 @@ This is an alpha version! The changes listed here are not final.
 - Site Editor Compatibility: Provide CSS styles for ExternalLink component to workaround site editor styling issue in Gutenberg.
 - Slideshow Block: Fix height of Upload Image button for compatibility with site editor.
 - Tiled Gallery Block: Fix verticaly height of add item button for compatibility with the new site editor.
+- Update prepare_menu_item_url in admin menu API to replace special characters in URLs with their HTML entities such as ampersand (e.g. convert &amp; to &).
 - WhatsApp Button Block: Add box-sizing to view CSS to fix height issue with the block in FSE.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
