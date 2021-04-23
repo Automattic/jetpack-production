@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add additional save buttons for SEO tools in wp-admin since the card section can get long to scroll back to the top on.
 - Add inline styles to dashboard header for site icon when nav unification is enabled to prevent site icon images overlaying the users interface making it unusable when nav unification styles are prevented from loading.
+- Adds a new Emails submenu to the existing Upgrades menu, and fixes the order of the items in the submenu.
 - Admin Menu: Replace "Edit CSS" label with "Additional CSS".
 - Connection: moving the registration REST endpoint to the Connection package.
 - Google Calendar: Refactored to functional component, added block tests and fixtures.
