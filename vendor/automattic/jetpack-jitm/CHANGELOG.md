@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Move JITM's REST API endpoints into the package
 
 ### Changed
+- JITM: Update CTA redirect url with unlinked query arg to indicate current user is not connected.
 - Updated package dependencies
 - Updated package dependencies.
 - Use the a8c-mc-stats package to generate stats.
