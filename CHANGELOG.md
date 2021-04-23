@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: moving the registration REST endpoint to the Connection package.
 - Google Calendar: Refactored to functional component, added block tests and fixtures.
 - In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
+- Modules list: Add explanation when a module is unavailable.
 - Nav Unification: remove the box-shadow at the top of the Sidebar.
 - REST API: Add list modules v1.2 endpoint
 - Show current WPCOM plan in sidebar menu item "Upgrades" when nav unification is enabled.

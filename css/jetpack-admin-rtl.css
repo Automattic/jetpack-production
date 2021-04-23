@@ -1113,6 +1113,10 @@
   }
 }
 
+.table-bordered.jetpack-modules tr.jetpack-module td .row-actions span.unavailable_reason {
+  color: #000;
+}
+
 .table-bordered.jetpack-modules.with-transparency tr.jetpack-module:hover td .row-actions span a {
   opacity: 1;
 }
