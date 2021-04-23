@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - WordAds: add Global Privacy Control (GPC) support to CCPA
 
 ### Improved compatibility
+- Always use WP Admin for comments in Atomic sites.
 - Form Block: ensure full compatibility with WordPress' Full Site Editing feature.
 - Making the block editor styles more specific to ensure Site/Block editor compatibility.
 - Move JITM's REST API endpoints into the package
