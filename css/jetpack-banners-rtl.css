@@ -215,6 +215,10 @@ https://github.com/thoughtbot/bourbon
   margin-top: 5rem;
 }
 
+#jp-connect-full__step2-header {
+  display: none;
+}
+
 .jp-connect-full__tos-blurb {
   font-size: 0.75rem;
   margin: 0 auto 1rem;
