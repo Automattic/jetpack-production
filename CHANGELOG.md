@@ -57,6 +57,7 @@ This is an alpha version! The changes listed here are not final.
 - Refactored the menu and submenu items replacement for nav unification
 - Remove broken link to Scan details on Atomic sites
 - Replaced the string "Add new site" to "Add new site" on masterbar and corrected the unit tests.
+- Sanitize the hookname used to generate menu item IDs
 - Search: Enable link filtering on built-in WP taxonomies
 - Search: Fix handling of Customizer controls using refresh
 - Search: Fix race condition for API responses
