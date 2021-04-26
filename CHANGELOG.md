@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds a new Emails submenu to the existing Upgrades menu, and fixes the order of the items in the submenu.
 - Admin Menu: Replace "Edit CSS" label with "Additional CSS".
 - Connection: moving the registration REST endpoint to the Connection package.
+- E2E tests: publish Testspace results in folders
 - Google Calendar: Refactored to functional component, added block tests and fixtures.
 - Improve message of the Blog Stats widget when there's no stats to display yet.
 - In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
