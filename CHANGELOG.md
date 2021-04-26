@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Feature Hints: avoid Fatal errors when other plugins filter the plugin list.
 - Google Calendar Block: Fix styling compatibility issues with the new site editor.
 - Mailchimp Block: Fix UX for non-connected users.
+- Mailchimp block: Remove placeholder wrapper div from server rendered markup to fix CSS issue when upgrade nudges are present on the front end.
 - Markdown: Fix regression that broke links with single-quoted href attributes.
 - Nav Unification: Always show the Theme Showcase (wordpress.com/themes) to WP.com free sites.
 - Open Graph Tags: Properly encode URLs in OG tags
