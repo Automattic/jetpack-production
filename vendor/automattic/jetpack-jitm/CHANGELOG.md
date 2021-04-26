@@ -13,6 +13,8 @@ This is an alpha version! The changes listed here are not final.
 - Move JITM's REST API endpoints into the package
 
 ### Changed
+- Always display pre-connection JITMs, without the need to set a filter.
+- Avoid wrapping text in the main CTA button
 - JITM: Update CTA redirect url with unlinked query arg to indicate current user is not connected.
 - Updated package dependencies
 - Updated package dependencies.
