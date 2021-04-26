@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Always use WP Admin for comments in Atomic sites.
 - Change copy on in-place connection title to match user-less behavior
+- Ensure compatibility with the Site Editor by injecting required media assets into the Site Editor canvas, and loading frontend scripts onDomReady
 - Form Block: ensure full compatibility with WordPress' Full Site Editing feature.
 - Making the block editor styles more specific to ensure Site/Block editor compatibility.
 - Move JITM's REST API endpoints into the package
