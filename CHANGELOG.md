@@ -23,6 +23,8 @@ This is an alpha version! The changes listed here are not final.
 - Record stat of the first time the site is registered
 - REST API: Add list modules v1.2 endpoint
 - Show current WPCOM plan in sidebar menu item "Upgrades" when nav unification is enabled.
+- Show the license-aware version of the Connection banner when there is a userless connection established and there are stored licenses.
+  Hide the Recommendations banner when the Connection banner is visible.
 - Sync sidebar collapsed state with wpcom.
 - Updated the Jetpack admin menu logo SVG for increased compatibility with colour schemes
 - VideoPress Block: Added 'Play Inline' setting to play a video inline instead of full-screen on mobile devices when enabled.
