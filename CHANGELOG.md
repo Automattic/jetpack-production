@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Replace "Edit CSS" label with "Additional CSS".
 - Connection: moving the registration REST endpoint to the Connection package.
 - Google Calendar: Refactored to functional component, added block tests and fixtures.
+- Improve message of the Blog Stats widget when there's no stats to display yet.
 - In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
 - Modules list: Add explanation when a module is unavailable.
 - Nav Unification: remove the box-shadow at the top of the Sidebar.
