@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Always display pre-connection JITMs, without the need to set a filter.
 - Avoid wrapping text in the main CTA button
+- bumped jitm package version requirement
 - JITM: Update CTA redirect url with unlinked query arg to indicate current user is not connected.
 - Updated package dependencies
 - Updated package dependencies.

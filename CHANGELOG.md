@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - WordAds: add Global Privacy Control (GPC) support to CCPA
 
 ### Improved compatibility
+- Adds segmentation "from" parameter to the registration request
 - Always use WP Admin for comments in Atomic sites.
 - Change copy on in-place connection title to match user-less behavior
 - Ensure compatibility with the Site Editor by injecting required media assets into the Site Editor canvas, and loading frontend scripts onDomReady

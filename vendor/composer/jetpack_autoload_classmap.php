@@ -335,7 +335,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-logo/src/class-logo.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
-		'version' => '1.4.9999999.9999999-dev',
+		'version' => '1.5.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-partner/src/class-partner.php'
 	),
 	'Automattic\\Jetpack\\Redirect' => array(

@@ -43,7 +43,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '8f9120be40ca3a3127665448928eecaa1ce70cb0',
+      'reference' => '10ed70c075c559ca5ceebbbc9168fea0df41f136',
     ),
     'automattic/jetpack-password-checker' => 
     array (
