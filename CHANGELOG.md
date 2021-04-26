@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: under-the-hood code improvements.
 
 ### Enhancements
+- Activates Jetpack without requiring connecting a WordPress.com user account
 - Add additional save buttons for SEO tools in wp-admin since the card section can get long to scroll back to the top on.
 - Add inline styles to dashboard header for site icon when nav unification is enabled to prevent site icon images overlaying the users interface making it unusable when nav unification styles are prevented from loading.
 - Adds a new Emails submenu to the existing Upgrades menu, and fixes the order of the items in the submenu.
