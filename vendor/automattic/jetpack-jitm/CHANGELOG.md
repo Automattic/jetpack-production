@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - JITM: Update CTA redirect url with unlinked query arg to indicate current user is not connected.
 - Updated package dependencies
 - Updated package dependencies.
+- Updated package dependencies.
 - Use the a8c-mc-stats package to generate stats.
 
 ## [1.14.1] - 2021-03-30

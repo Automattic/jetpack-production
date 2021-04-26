@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Updated package dependencies.
 
 ### Fixed
 - Sync: Removing references to the JETPACK__PLUGIN_DIR constant.

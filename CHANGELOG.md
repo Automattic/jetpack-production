@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
 - Modules list: Add explanation when a module is unavailable.
 - Nav Unification: remove the box-shadow at the top of the Sidebar.
+- Record stat of the first time the site is registered
 - REST API: Add list modules v1.2 endpoint
 - Show current WPCOM plan in sidebar menu item "Upgrades" when nav unification is enabled.
 - Sync sidebar collapsed state with wpcom.
@@ -96,6 +97,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies
 - Updated package dependencies
+- Updated package dependencies.
 - WordAds: add translated text for use with inline and sticky slots
 - WordAds: use WPCOM hosting type for Atomic sites
 

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Connection: moving the registration REST endpoint to the package.
 
+### Changed
+- Updated package dependencies.
+
 ## [1.25.2] - 2021-04-13
 ### Fixed
 - Connection: nonce cleanup safeguard against accidental option removal.
