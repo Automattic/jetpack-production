@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
   Hide the Recommendations banner when the Connection banner is visible.
 - Sync sidebar collapsed state with wpcom.
 - Updated the Jetpack admin menu logo SVG for increased compatibility with colour schemes
+- Update Modal: use the wp-block-library styles
 - VideoPress Block: Added 'Play Inline' setting to play a video inline instead of full-screen on mobile devices when enabled.
 - WordAds: add Global Privacy Control (GPC) support to CCPA
 
