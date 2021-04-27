@@ -56,6 +56,7 @@ This is an alpha version! The changes listed here are not final.
 - Calendly Block: Remove excess height in the placeholder state in the editor UI.
 - Calypso's Tool -> Export menu now honors the 'Show advanced dashboard pages' setting
 - Contact Info Block: Fix styling issues in editing UI in the new site editor.
+- E2E tests: fixed hover action
 - Feature Hints: avoid Fatal errors when other plugins filter the plugin list.
 - Google Calendar Block: Fix styling compatibility issues with the new site editor.
 - Mailchimp Block: Fix UX for non-connected users.
