@@ -153,7 +153,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '417800e36402b74174437a057781ecf2628e5b82',
+      'reference' => 'd4eb199f3f4a1479d4e2a1682a0193d7f81a6248',
     ),
     'automattic/jetpack-lazy-images' => 
     array (

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.15.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- JITM: Use the Device_Detection package to determine if the device is mobile.
+
 ## [1.15.0] - 2021-04-27
 ### Added
 - Move JITM's REST API endpoints into the package
@@ -260,6 +267,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update Jetpack to use new JITM package
 
+[1.15.1-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v1.15.0...v1.15.1-alpha
 [1.15.0]: https://github.com/Automattic/jetpack-jitm/compare/v1.14.1...v1.15.0
 [1.14.1]: https://github.com/Automattic/jetpack-jitm/compare/v1.14.0...v1.14.1
 [1.14.0]: https://github.com/Automattic/jetpack-jitm/compare/v1.13.5...v1.14.0

@@ -274,14 +274,6 @@ return array(
 		'version' => '1.15.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-jitm.php'
 	),
-	'Automattic\\Jetpack\\Device_Detection\\User_Agent_Info' => array(
-		'version' => '1.4.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-user-agent-info.php'
-	),
-	'Automattic\\Jetpack\\Device_Detection' => array(
-		'version' => '1.4.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-device-detection.php'
-	),
 	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
 		'version' => '1.0.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
@@ -329,6 +321,14 @@ return array(
 	'Automattic\\Jetpack\\Password_Checker' => array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php'
+	),
+	'Automattic\\Jetpack\\Device_Detection\\User_Agent_Info' => array(
+		'version' => '1.4.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-user-agent-info.php'
+	),
+	'Automattic\\Jetpack\\Device_Detection' => array(
+		'version' => '1.4.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-device-detection.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
 		'version' => '1.5.9999999.9999999-dev',

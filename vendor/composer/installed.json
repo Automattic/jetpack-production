@@ -745,13 +745,14 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-jitm",
-                "reference": "417800e36402b74174437a057781ecf2628e5b82"
+                "reference": "d4eb199f3f4a1479d4e2a1682a0193d7f81a6248"
             },
             "require": {
                 "automattic/jetpack-a8c-mc-stats": "^1.4",
                 "automattic/jetpack-assets": "^1.11",
                 "automattic/jetpack-connection": "^1.26",
                 "automattic/jetpack-constants": "^1.6",
+                "automattic/jetpack-device-detection": "^1.4",
                 "automattic/jetpack-logo": "^1.5",
                 "automattic/jetpack-options": "^1.12",
                 "automattic/jetpack-partner": "^1.5",
