@@ -2,110 +2,76 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 9.7-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Major Enhancements
-- Carousel: under-the-hood code improvements.
-
+## 9.7-beta - 2021-04-27
 ### Enhancements
-- Activates Jetpack without requiring connecting a WordPress.com user account
-- Add additional save buttons for SEO tools in wp-admin since the card section can get long to scroll back to the top on.
-- Add inline styles to dashboard header for site icon when nav unification is enabled to prevent site icon images overlaying the users interface making it unusable when nav unification styles are prevented from loading.
-- Adds a new Emails submenu to the existing Upgrades menu, and fixes the order of the items in the submenu.
-- Admin Menu: Replace "Edit CSS" label with "Additional CSS".
-- Connection: moving the registration REST endpoint to the Connection package.
-- E2E tests: publish Testspace results in folders
-- Google Calendar: Refactored to functional component, added block tests and fixtures.
-- Improve message of the Blog Stats widget when there's no stats to display yet.
-- In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
-- Modules list: Add explanation when a module is unavailable.
-- Nav Unification: remove the box-shadow at the top of the Sidebar.
-- Record stat of the first time the site is registered
-- REST API: Add list modules v1.2 endpoint
-- Show current WPCOM plan in sidebar menu item "Upgrades" when nav unification is enabled.
-- Show the license-aware version of the Connection banner when there is a userless connection established and there are stored licenses.
-  Hide the Recommendations banner when the Connection banner is visible.
-- Sync sidebar collapsed state with wpcom.
-- Updated the Jetpack admin menu logo SVG for increased compatibility with colour schemes
-- Update Modal: use the wp-block-library styles
-- VideoPress Block: Added 'Play Inline' setting to play a video inline instead of full-screen on mobile devices when enabled.
-- WordAds: add Global Privacy Control (GPC) support to CCPA
+- Blocks: improve test coverage for better reliability of each one of Jetpack's blocks.
+- Carousel: improve general performance.
+- Dashboard: add explanation when a feature is unavailable.
+- Dashboard: improve the display of buttons in the update modal.
+- Jetpack Videos: add "Play Inline" setting to play a video inline instead of full-screen on mobile devices when enabled.
+- SEO Tools: improve usability of settings interface.
+- Widgets: improve message displayed in Blog Stats Widget when there are no stats to display.
+- WordAds: add Global Privacy Control (GPC) support to CCPA.
 
 ### Improved compatibility
+- Blocks: continous work to ensure full compatibility between Jetpack's Blocks and WordPress' upcoming Full Site Editing feature.
+- Featured Content: avoid PHP warnings when terms are fetched without a taxonomy to filter by.
+- Feature Hints: avoid Fatal errors when other plugins filter the plugin list.
+- General: improvements to bring multiple features up to WordPress coding standards.
+- Publicize: update Twitter text processing library to avoid errors when using PHP 8.
+- Sharing: avoid broken sharing icons when using IE11 and the legacy AMP plugin's theme.
+
+### Bug fixes
+- Image CDN: correct image URLs in srcset in certain cases.
+- Instant Search: enable link filtering on built-in WordPress taxonomies.
+- Instant Search: fix handling of customizer controls using refresh.
+- Instant Search: fix race condition for API responses.
+- Instant Search: prevent excluding all post types.
+- Instant Search: set the number of returned posts using the query's `posts_per_page` value.
+- Instant Search: improve settings interface usability.
+- Markdown: fix regression that broke links with single-quoted href attributes.
+- Sharing / Publicize: properly encode URLs in Open Graph tags.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Account for Categories and Tags in nav unification
 - Adds segmentation "from" parameter to the registration request
 - Always use WP Admin for comments in Atomic sites.
 - Change copy on in-place connection title to match user-less behavior
-- Ensure compatibility with the Site Editor by injecting required media assets into the Site Editor canvas, and loading frontend scripts onDomReady
-- Featured Content: avoid PHP warnings when terms are fetched without a taxonomy to filter by.
-- Form Block: ensure full compatibility with WordPress' Full Site Editing feature.
-- Mailchimp block: add base styles to ensure compatibility with WordPress' Full Site Editing feature.
-- Making the block editor styles more specific to ensure Site/Block editor compatibility.
-- Move JITM's REST API endpoints into the package
-- Nav Unification: Remove Sharing submenu option from settings menu for wpcom sites.
-- PHPCS improvements to bring module up to coding standards
-- PHPCS updates to bring in line with WordPress standards.
-- Publicize: update Twitter text processing library to avoid errors when using PHP 8
-- Removing the password-checker package from the Jetpack plugin composer.json file.
-- Sharing: avoid broken sharing icons when using IE11 and the legacy AMP  plugin's theme.
-
-### Bug fixes
-- Account for Categories and Tags in nav unification
-- Adding manual blur on inner text inputs in Address for Contact Info for mobile in order to stop focus from staying in the inner text inputs when clicking away.
-- Calendly Block: Remove excess height in the placeholder state in the editor UI.
-- Calypso's Tool -> Export menu now honors the 'Show advanced dashboard pages' setting
-- Contact Info Block: Fix styling issues in editing UI in the new site editor.
-- E2E tests: fixed hover action
-- Feature Hints: avoid Fatal errors when other plugins filter the plugin list.
-- Google Calendar Block: Fix styling compatibility issues with the new site editor.
-- Mailchimp Block: Fix UX for non-connected users.
-- Mailchimp block: Remove placeholder wrapper div from server rendered markup to fix CSS issue when upgrade nudges are present on the front end.
-- Markdown: Fix regression that broke links with single-quoted href attributes.
-- Nav Unification: Always show the Theme Showcase (wordpress.com/themes) to WP.com free sites.
-- Open Graph Tags: Properly encode URLs in OG tags
-- Photon: correct image URLs in srcset in certain cases.
-- Prevents incorrect image sizing within the site editor for the latest instagram posts block.
-- Refactored the menu and submenu items replacement for nav unification
-- Remove broken link to Scan details on Atomic sites
-- Replaced the string "Add new site" to "Add new site" on masterbar and corrected the unit tests.
-- Sanitize the hookname used to generate menu item IDs
-- Search: Enable link filtering on built-in WP taxonomies
-- Search: Fix handling of Customizer controls using refresh
-- Search: Fix race condition for API responses
-- Search: prevent user from excluding all post types
-- Search: Set the number of returned posts using the query's posts_per_page value.
-- Settings: Improve instant search toggle UX
-- Site Editor Compatibility: Ensure Jetpack Button block always enqueues core Button block styles as a dependency.
-- Site Editor Compatibility: Provide CSS styles for ExternalLink component to workaround site editor styling issue in Gutenberg.
-- Slideshow Block: Fix height of Upload Image button for compatibility with site editor.
-- Tiled Gallery Block: Fix verticaly height of add item button for compatibility with the new site editor.
-- Update prepare_menu_item_url in admin menu API to replace special characters in URLs with their HTML entities such as ampersand (e.g. convert &amp; to &).
-- WhatsApp Button Block: Add box-sizing to view CSS to fix height issue with the block in FSE.
-
-### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add e2e test to cover Jetpack Assistant's (Recommendations) main flow
 - Add field for zendesk meta in /me/sites API for mobile apps
 - Add unit tests to cover the functionality of each step of the assistant
 - Autoloader: Use a different suffix for each release to fix #19472.
 - Avoid PHP Notices in jetpack_blog_display_custom_excerpt() when run outside of the loop / without post context.
+- Calypso's Tool -> Export menu now honors the 'Show advanced dashboard pages' setting
 - Changelog: update with latest changes that were cherry-picked to 9.6 during Beta period.
 - Change the command to build Jetpack in E2E tests Github action workflow
+- Connection: moving the registration REST endpoint to the Connection package.
 - Docs: fix typos in E2E README
 - Do not load modules that require a user when in user-less state
+- E2E tests: fixed hover action
+- E2E tests: publish Testspace results in folders
+- In-Place Connection: partially replace the secondary users connection flow with `InPlaceConnection` component from `@automattic/jetpack-connection` package.
 - Jetpack Assistant: Add the product slug to the events dispatched when users see and click the product being upsold
+- Licenses: show the license-aware version of the Connection banner when there is a userless connection established and there are stored licenses.
+- Licenses: hide the Recommendations banner when the Connection banner is visible.
+- Move JITM's REST API endpoints into the package
+- Nav Unification: Remove Sharing submenu option from settings menu for wpcom sites.
+- Nav unification: sync sidebar collapsed state with wpcom.
+- Nav unification: updated the Jetpack admin menu logo SVG for increased compatibility with colour schemes
+- Nav Unification: Always show the Theme Showcase (wordpress.com/themes) to WP.com free sites.
+- Nav Unification: remove the box-shadow at the top of the Sidebar.
+- Refactored the menu and submenu items replacement for nav unification
+- Remove broken link to Scan details on Atomic sites
+- Replaced the string "Add new site" to "Add new site" on masterbar and corrected the unit tests.
 - Reassign $submenu_file value as null for theme-install.php so correct menu item Add New Theme is highlighted in admin menu.
+- Record stat of the first time the site is registered
 - Replace fragile element selectors with a more robust version of themselves
 - REST API: Allow site-level authentication on plugins, themes, modules endpoints
-- update composer.lock
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
+- REST API: Add list modules v1.2 endpoint.
+- Removing the password-checker package from the Jetpack plugin composer.json file.
+- Sanitize the hookname used to generate menu item IDs
+- Show current WPCOM plan in sidebar menu item "Upgrades" when nav unification is enabled.
+- Update prepare_menu_item_url in admin menu API to replace special characters in URLs with their HTML entities such as ampersand (e.g. convert &amp; to &).
 - Updated package dependencies.
 - WordAds: add translated text for use with inline and sticky slots
 - WordAds: use WPCOM hosting type for Atomic sites

@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.5.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [1.5.4] - 2021-04-27
+### Changed
+- Updated package dependencies.
 
 ## [1.5.3] - 2021-03-30
 ### Added
@@ -70,7 +70,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Add a basic Jetpack Logo package
 
-[1.5.4-alpha]: https://github.com/Automattic/jetpack-logo/compare/v1.5.3...v1.5.4-alpha
+[1.5.4]: https://github.com/Automattic/jetpack-logo/compare/v1.5.3...v1.5.4
 [1.5.3]: https://github.com/Automattic/jetpack-logo/compare/v1.5.2...v1.5.3
 [1.5.2]: https://github.com/Automattic/jetpack-logo/compare/v1.5.1...v1.5.2
 [1.5.1]: https://github.com/Automattic/jetpack-logo/compare/v1.5.0...v1.5.1
