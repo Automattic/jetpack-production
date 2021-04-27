@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Ensure compatibility with the Site Editor by injecting required media assets into the Site Editor canvas, and loading frontend scripts onDomReady
 - Featured Content: avoid PHP warnings when terms are fetched without a taxonomy to filter by.
 - Form Block: ensure full compatibility with WordPress' Full Site Editing feature.
+- Mailchimp block: add base styles to ensure compatibility with WordPress' Full Site Editing feature.
 - Making the block editor styles more specific to ensure Site/Block editor compatibility.
 - Move JITM's REST API endpoints into the package
 - Nav Unification: Remove Sharing submenu option from settings menu for wpcom sites.
