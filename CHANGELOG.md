@@ -2,13 +2,6 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 9.8-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Enhancements
-- Standardize wording for connecting the user.
-
 ## 9.7-beta - 2021-04-27
 ### Enhancements
 - Blocks: improve test coverage for better reliability of each one of Jetpack's blocks.
@@ -78,6 +71,7 @@ This is an alpha version! The changes listed here are not final.
 - Removing the password-checker package from the Jetpack plugin composer.json file.
 - Sanitize the hookname used to generate menu item IDs
 - Show current WPCOM plan in sidebar menu item "Upgrades" when nav unification is enabled.
+- Standardize wording for connecting the user.
 - Update prepare_menu_item_url in admin menu API to replace special characters in URLs with their HTML entities such as ampersand (e.g. convert &amp; to &).
 - Updated package dependencies.
 - WordAds: add translated text for use with inline and sticky slots
