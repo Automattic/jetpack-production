@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - JITM: remove unnecessary add_filter calls for the JITM filters.
 - Search: added search happy route E2E tests
 - Updated package dependencies
+- Updated package dependencies
 
 ## 9.7-beta - 2021-04-27
 ### Enhancements
