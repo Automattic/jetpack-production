@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a way to connect E2E sites headlessly
 - Search: added search happy route E2E tests
+- Updated package dependencies
 
 ## 9.7-beta - 2021-04-27
 ### Enhancements
