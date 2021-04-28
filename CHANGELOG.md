@@ -7,6 +7,8 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- E2E tests: group test runs in CI
+- E2E tests: runner groups
 - Standardize wording for connecting the user.
 
 ### Improved compatibility
