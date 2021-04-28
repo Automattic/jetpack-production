@@ -311,7 +311,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-blocks/src/class-blocks.php'
 	),
 	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
-		'version' => '1.0.9999999.9999999-dev',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-helper-script-manager.php'
 	),
 	'Automattic\\Jetpack\\Abtest' => array(
