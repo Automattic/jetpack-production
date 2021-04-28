@@ -228,13 +228,12 @@ private static $installed = array (
     ),
     'automattic/jetpack-password-checker' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => '0.1.x-dev',
+      'version' => '0.1.9999999.9999999-dev',
       'aliases' => 
       array (
-        0 => '0.1.x-dev',
       ),
-      'reference' => 'ee6e6265b76b873ff230912c3c13c17f39d667ac',
+      'reference' => '72daf405f42fc240557ef73f560238d3cf97d762',
     ),
     'automattic/jetpack-redirect' => 
     array (

@@ -1098,12 +1098,12 @@
         },
         {
             "name": "automattic/jetpack-password-checker",
-            "version": "dev-master",
-            "version_normalized": "dev-master",
+            "version": "0.1.x-dev",
+            "version_normalized": "0.1.9999999.9999999-dev",
             "dist": {
                 "type": "path",
-                "url": "../../packages/password-checker",
-                "reference": "ee6e6265b76b873ff230912c3c13c17f39d667ac"
+                "url": "/tmp/jetpack-build/Automattic/jetpack-password-checker",
+                "reference": "72daf405f42fc240557ef73f560238d3cf97d762"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^1.1",
@@ -1149,7 +1149,7 @@
             "description": "Password Checker.",
             "transport-options": {
                 "monorepo": true,
-                "relative": true
+                "relative": false
             },
             "install-path": "../automattic/jetpack-password-checker"
         },
