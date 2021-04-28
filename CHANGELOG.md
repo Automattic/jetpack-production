@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Search: added search happy route E2E tests
+
 ## 9.7-beta - 2021-04-27
 ### Enhancements
 - Blocks: improve test coverage for better reliability of each one of Jetpack's blocks.
