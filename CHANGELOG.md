@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 9.8-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Enable the Plans tab for unlinked users
+
 ## 9.7-beta - 2021-04-27
 ### Enhancements
 - Blocks: improve test coverage for better reliability of each one of Jetpack's blocks.
