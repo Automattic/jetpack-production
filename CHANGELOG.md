@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: group test runs in CI
 - E2E tests: Increase timeout for loading animation on connection flow
 - E2E tests: runner groups
+- Enable the Plans tab for unlinked users
 - Standardize wording for connecting the user.
 
 ### Improved compatibility
