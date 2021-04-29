@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add REST API v2 endpoint for editing transients.
 - Enable the Plans tab for unlinked users
 
 ## 9.7-beta - 2021-04-27
