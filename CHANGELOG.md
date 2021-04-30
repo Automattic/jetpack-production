@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Changing the WPCOM subscription email control type from 'text' to 'email'.
 - Do not show multiple connection prompts in the Publicize settings card.
+- Fixed the Upgrades, Jetpack and Settings menu item slugs in WP-Admin
 - Fix upgrade notices for the site editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
