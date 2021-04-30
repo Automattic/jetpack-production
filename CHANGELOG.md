@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Do not display Protect card for non-admin users while in site-only connection
 - Do not show multiple connection prompts in the Publicize settings card.
 - Fixed the Upgrades, Jetpack and Settings menu item slugs in WP-Admin
+- Fix plan name display in Upgrades menu entry for translations with spaces or non-Latin characters
 - Fix upgrade notices for the site editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
