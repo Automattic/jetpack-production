@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Fixed compatibility issue with Page Optimize plugin for RTL layouts for jetpack-admin-menu and colors stylesheets
+- Hide Settings page for non-admin users when in site-only connection
 
 ### Bug fixes
 - Changing the WPCOM subscription email control type from 'text' to 'email'.
