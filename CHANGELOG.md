@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Enable the Plans tab for unlinked users
 
 ### Bug fixes
+- Do not show multiple connection prompts in the Publicize settings card.
 - Fixed the Upgrades, Jetpack and Settings menu item slugs in WP-Admin
 
 ## 9.7-beta - 2021-04-27
