@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Enable the Plans tab for unlinked users
 
 ### Bug fixes
+- Do not display Protect card for non-admin users while in site-only connection
 - Do not show multiple connection prompts in the Publicize settings card.
 - Fixed the Upgrades, Jetpack and Settings menu item slugs in WP-Admin
 
