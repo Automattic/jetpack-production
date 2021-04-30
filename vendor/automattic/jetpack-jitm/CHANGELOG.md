@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - JITM: set the default values of the jetpack_just_in_time_msgs and jetpack_just_in_time_msg_cache filters to true.
 - JITM: Use the Device_Detection package to determine if the device is mobile.
 - Updated package dependencies
+- Updated package dependencies.
 
 ## [1.15.0] - 2021-04-27
 ### Added

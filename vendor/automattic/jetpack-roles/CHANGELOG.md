@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.5-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [1.4.4] - 2021-04-08
 ### Changed
 - Packaging and build changes, no change to the package itself.
@@ -68,6 +75,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Jetpack DNA: Introduce a Roles package
 
+[1.4.5-alpha]: https://github.com/Automattic/jetpack-roles/compare/v1.4.4...v1.4.5-alpha
 [1.4.4]: https://github.com/Automattic/jetpack-roles/compare/v1.4.3...v1.4.4
 [1.4.3]: https://github.com/Automattic/jetpack-roles/compare/v1.4.2...v1.4.3
 [1.4.2]: https://github.com/Automattic/jetpack-roles/compare/v1.4.1...v1.4.2
