@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Add userless and classic connection tests
 - Fixed new PHPCS errors.
 - JITM: remove unnecessary add_filter calls for the JITM filters.
+- Remove CodeClimate
 - Search: added search happy route E2E tests
 - Updated package dependencies
 - Updated package dependencies
