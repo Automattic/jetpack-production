@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add REST API v2 endpoint for editing transients.
 - Enable the Plans tab for unlinked users
 
+### Improved compatibility
+- Hide Settings page for non-admin users when in site-only connection
+
 ### Bug fixes
 - Do not display Protect card for non-admin users while in site-only connection
 - Do not show multiple connection prompts in the Publicize settings card.
