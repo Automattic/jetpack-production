@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - JITM: set the default values of the jetpack_just_in_time_msgs and jetpack_just_in_time_msg_cache filters to true.
+- JITM: Use manager::get_authorization_url to obtain the authorization url in the user deletion notice.
 - JITM: Use the Device_Detection package to determine if the device is mobile.
 - Updated package dependencies
 - Updated package dependencies.
