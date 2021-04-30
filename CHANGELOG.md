@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add REST API v2 endpoint for editing transients.
 - Enable the Plans tab for unlinked users
 
+### Bug fixes
+- Fixed the Upgrades, Jetpack and Settings menu item slugs in WP-Admin
+
 ## 9.7-beta - 2021-04-27
 ### Enhancements
 - Blocks: improve test coverage for better reliability of each one of Jetpack's blocks.
