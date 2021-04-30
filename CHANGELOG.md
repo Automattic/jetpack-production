@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a way to connect E2E sites headlessly
+- Add userless and classic connection tests
 - Fixed new PHPCS errors.
 - JITM: remove unnecessary add_filter calls for the JITM filters.
 - Search: added search happy route E2E tests
