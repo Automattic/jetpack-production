@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Do not display Protect card for non-admin users while in site-only connection
 - Do not show multiple connection prompts in the Publicize settings card.
 - Fixed the Upgrades, Jetpack and Settings menu item slugs in WP-Admin
+- Fix the height of the User Authentication Dialog on the dashboard
 
 ## 9.7-beta - 2021-04-27
 ### Enhancements
