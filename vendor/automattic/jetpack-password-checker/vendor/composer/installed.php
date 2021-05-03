@@ -366,12 +366,12 @@
     ),
     'symfony/console' => 
     array (
-      'pretty_version' => 'v5.2.6',
-      'version' => '5.2.6.0',
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '35f039df40a3b335ebf310f244cb242b3a83ac8d',
+      'reference' => '90374b8ed059325b49a29b55b3f8bb4062c87629',
     ),
     'symfony/polyfill-ctype' => 
     array (
@@ -429,12 +429,12 @@
     ),
     'symfony/process' => 
     array (
-      'pretty_version' => 'v5.2.4',
-      'version' => '5.2.4.0',
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '313a38f09c77fbcdc1d223e57d368cea76a2fd2f',
+      'reference' => '98cb8eeb72e55d4196dd1e36f1f16e7b3a9a088e',
     ),
     'symfony/service-contracts' => 
     array (

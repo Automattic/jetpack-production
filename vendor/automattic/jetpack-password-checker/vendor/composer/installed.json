@@ -2300,17 +2300,17 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.2.6",
-            "version_normalized": "5.2.6.0",
+            "version": "v5.2.7",
+            "version_normalized": "5.2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "35f039df40a3b335ebf310f244cb242b3a83ac8d"
+                "reference": "90374b8ed059325b49a29b55b3f8bb4062c87629"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/35f039df40a3b335ebf310f244cb242b3a83ac8d",
-                "reference": "35f039df40a3b335ebf310f244cb242b3a83ac8d",
+                "url": "https://api.github.com/repos/symfony/console/zipball/90374b8ed059325b49a29b55b3f8bb4062c87629",
+                "reference": "90374b8ed059325b49a29b55b3f8bb4062c87629",
                 "shasum": ""
             },
             "require": {
@@ -2346,7 +2346,7 @@
                 "symfony/lock": "",
                 "symfony/process": ""
             },
-            "time": "2021-03-28T09:42:18+00:00",
+            "time": "2021-04-19T14:07:32+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -2380,7 +2380,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v5.2.6"
+                "source": "https://github.com/symfony/console/tree/v5.2.7"
             },
             "funding": [
                 {
@@ -2904,24 +2904,24 @@
         },
         {
             "name": "symfony/process",
-            "version": "v5.2.4",
-            "version_normalized": "5.2.4.0",
+            "version": "v5.2.7",
+            "version_normalized": "5.2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "313a38f09c77fbcdc1d223e57d368cea76a2fd2f"
+                "reference": "98cb8eeb72e55d4196dd1e36f1f16e7b3a9a088e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/313a38f09c77fbcdc1d223e57d368cea76a2fd2f",
-                "reference": "313a38f09c77fbcdc1d223e57d368cea76a2fd2f",
+                "url": "https://api.github.com/repos/symfony/process/zipball/98cb8eeb72e55d4196dd1e36f1f16e7b3a9a088e",
+                "reference": "98cb8eeb72e55d4196dd1e36f1f16e7b3a9a088e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
                 "symfony/polyfill-php80": "^1.15"
             },
-            "time": "2021-01-27T10:15:41+00:00",
+            "time": "2021-04-08T10:27:02+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -2949,7 +2949,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v5.2.4"
+                "source": "https://github.com/symfony/process/tree/v5.3.0-BETA1"
             },
             "funding": [
                 {
