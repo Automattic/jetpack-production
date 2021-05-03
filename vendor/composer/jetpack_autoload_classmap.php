@@ -274,6 +274,26 @@ return array(
 		'version' => '1.15.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-jitm.php'
 	),
+	'Automattic\\Jetpack\\Device_Detection\\User_Agent_Info' => array(
+		'version' => '1.4.1.0',
+		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-user-agent-info.php'
+	),
+	'Automattic\\Jetpack\\Device_Detection' => array(
+		'version' => '1.4.1.0',
+		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-device-detection.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
+		'version' => '1.0.2.0',
+		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
+		'version' => '1.0.2.0',
+		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
+	),
+	'Automattic\\Jetpack\\Config' => array(
+		'version' => '1.4.5.0',
+		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
+	),
 	'JetpackTracking' => array(
 		'version' => '1.6.4.0',
 		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpacktracking.php'
@@ -305,26 +325,6 @@ return array(
 	'Automattic\\Jetpack\\Abtest' => array(
 		'version' => '1.9.6.0',
 		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
-	),
-	'Automattic\\Jetpack\\Device_Detection\\User_Agent_Info' => array(
-		'version' => '1.4.1.0',
-		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-user-agent-info.php'
-	),
-	'Automattic\\Jetpack\\Device_Detection' => array(
-		'version' => '1.4.1.0',
-		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-device-detection.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
-		'version' => '1.0.2.0',
-		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
-		'version' => '1.0.2.0',
-		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
-	),
-	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.4.5.0',
-		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
 		'version' => '1.5.4.0',
