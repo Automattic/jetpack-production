@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix plan name display in Upgrades menu entry for translations with spaces or non-Latin characters
 - Fix the height of the User Authentication Dialog on the dashboard
 - Fix upgrade notices for the site editor.
+- Media Buttons: don't show duplicate buttons when a featured image is selected
 - Search: Fix modal intermittently scrolls to wrong position in Firefox
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
