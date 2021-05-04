@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Add userless and classic connection tests
 - Fixed new PHPCS errors.
 - JITM: remove unnecessary add_filter calls for the JITM filters.
+- Refactored to improve testability. No functionality is affected.
 - Remove CodeClimate
 - Removed the carousel reblog functionality (unused in Jetpack).
 - Search: added search happy route E2E tests
