@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Performance : If no Full Sync is in process early return before we update options .
+
 ## [1.21.2] - 2021-04-27
 ### Added
 - Added the password-checker package the the Sync package composer.json file.
