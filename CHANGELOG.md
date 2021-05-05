@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Comment: Story Block: Improve accessibility and resolve z-index issues when playing in fullscreen.
 - Fixed compatibility issue with Page Optimize plugin for RTL layouts for jetpack-admin-menu and colors stylesheets
 - Hide Settings page for non-admin users when in site-only connection
+- jp-tracks-functions script moved to Tracking package.
 - Update Sync Connection Tests to utilize fix nomenclature
 
 ### Bug fixes
