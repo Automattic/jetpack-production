@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a way to connect E2E sites headlessly
 - Add userless and classic connection tests
 - Fixed new PHPCS errors.
+- Fix LEGACY_META_OPTION handling for WPcom simple sites
 - JITM: remove unnecessary add_filter calls for the JITM filters.
 - Refactored to improve testability. No functionality is affected.
 - Remove CodeClimate
