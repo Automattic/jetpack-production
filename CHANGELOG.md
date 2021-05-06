@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Changing the WPCOM subscription email control type from 'text' to 'email'.
+- Contact Form: remove double quotes from names in email headers to improve compatiblity with different emailing solutions for WordPress.
 - Do not display Protect card for non-admin users while in site-only connection
 - Do not show multiple connection prompts in the Publicize settings card.
 - Fixed the Upgrades, Jetpack and Settings menu item slugs in WP-Admin
