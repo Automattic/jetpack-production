@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove CodeClimate
 - Removed the carousel reblog functionality (unused in Jetpack).
 - Search: added search happy route E2E tests
+- Story block: address minor display issues
 - Updated package dependencies
 - Updated package dependencies
 - Updated package dependencies
