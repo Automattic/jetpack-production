@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix upgrade notices for the site editor.
 - Media Buttons: don't show duplicate buttons when a featured image is selected
 - Search: Fix modal intermittently scrolls to wrong position in Firefox
+- Stripe Nudge: fix redirect for the Payments block, and for all blocks within the site-editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a way to connect E2E sites headlessly
