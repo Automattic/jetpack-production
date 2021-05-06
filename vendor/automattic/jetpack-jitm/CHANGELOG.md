@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - JITM: move sync updated option hook to the JITM package.
 
 ### Changed
+- JITM: prevent JITMs from being registered more than once.
 - JITM: set the default values of the jetpack_just_in_time_msgs and jetpack_just_in_time_msg_cache filters to true.
 - JITM: Use the Device_Detection package to determine if the device is mobile.
 - Updated package dependencies
