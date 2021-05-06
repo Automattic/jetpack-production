@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a way to connect E2E sites headlessly
 - Add userless and classic connection tests
+- Comment: Story block: Add more media options to choose from in the editor
 - Fixed new PHPCS errors.
 - Fix LEGACY_META_OPTION handling for WPcom simple sites
 - JITM: remove unnecessary add_filter calls for the JITM filters.
