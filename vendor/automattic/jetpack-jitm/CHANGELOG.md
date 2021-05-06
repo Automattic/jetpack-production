@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - JITM: Use the Device_Detection package to determine if the device is mobile.
 - Updated package dependencies
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## [1.15.1] - 2021-05-03
 ### Changed
