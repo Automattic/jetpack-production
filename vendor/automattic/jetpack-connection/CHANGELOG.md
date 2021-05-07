@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add "isUserConnected" to the connection status data.
+- Connection: add the default value of JETPACK__WPCOM_JSON_API_BASE to the Connection Utils class.
 
 ## [1.26.0] - 2021-04-27
 ### Added
