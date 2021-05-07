@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Adds an attribute to paid blocks to support hiding nested upgrade nudges on the frontend.
+
 ### Changed
 - Updated package dependencies.
 
