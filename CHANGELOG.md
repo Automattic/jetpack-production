@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 9.8-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Fixes the date used to fetch the Top posts in the Top posts dashboard widget
+
 ## 9.7 - 2021-05-04
 ### Enhancements
 - Blocks: improve test coverage for better reliability of each one of Jetpack's blocks.
