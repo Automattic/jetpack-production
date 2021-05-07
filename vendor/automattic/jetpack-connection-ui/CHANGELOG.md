@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Integrate the connection flow using RNA Connection package.
 
+### Fixed
+- Fixing the Connection UI initialization logical error
+
 ## [1.0.2] - 2021-04-27
 ### Added
 - Add React initial state.
