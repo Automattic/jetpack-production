@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Do not show multiple connection prompts in the Publicize settings card.
 - Ensures that the send_auth_cookies filter is respected
 - Fixed the Upgrades, Jetpack and Settings menu item slugs in WP-Admin
+- Fixes the date used to fetch the Top posts in the Top posts dashboard widget
 - Fix plan name display in Upgrades menu entry for translations with spaces or non-Latin characters
 - Fix the height of the User Authentication Dialog on the dashboard
 - Fix upgrade notices for the site editor.
