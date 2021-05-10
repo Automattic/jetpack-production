@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add "isUserConnected" to the connection status data.
 - Connection: add the default value of JETPACK__WPCOM_JSON_API_BASE to the Connection Utils class.
 
+### Removed
+- Remove do_post_authorization routine and add a hook instead
+
 ## [1.26.0] - 2021-04-27
 ### Added
 - Adds segmentation "from" parameter to the registration flow
