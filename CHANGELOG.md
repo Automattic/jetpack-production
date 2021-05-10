@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Admin Pages: prompt connect instead of upgrade when WordPress.com account is not connected
+- Calendly block: add target existence check before running init scripts
 - Changing the WPCOM subscription email control type from 'text' to 'email'.
 - Contact Form: remove double quotes from names in email headers to improve compatiblity with different emailing solutions for WordPress.
 - Do not display Protect card for non-admin users while in site-only connection
