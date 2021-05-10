@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Content blocks: Fix parent block selector button when premium content blocks are nested within other blocks.
 - Search: Fix modal intermittently scrolls to wrong position in Firefox
 - Stripe Nudge: fix redirect for the Payments block, and for all blocks within the site-editor.
+- udpate the way we save the time and date format on the settings endpoint
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a way to connect E2E sites headlessly
