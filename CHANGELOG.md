@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Hook into the Connection package remote_connect to perform Jetpack specific routines
 - Incease the priority of the Subscriptions block
 - jp-tracks-functions script moved to Tracking package.
+- SEO Tools: add SEOPress to the list of fellow SEO plugins.
 - Update Sync Connection Tests to utilize fix nomenclature
 
 ### Bug fixes
