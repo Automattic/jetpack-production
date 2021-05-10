@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixes the date used to fetch the Top posts in the Top posts dashboard widget
 - Fix plan name display in Upgrades menu entry for translations with spaces or non-Latin characters
 - Fix the height of the User Authentication Dialog on the dashboard
+- Fix the Paypal block so it works with the site editor.
 - Fix upgrade notices for the site editor.
 - Media Buttons: don't show duplicate buttons when a featured image is selected
 - Premium Content blocks: Fix parent block selector button when premium content blocks are nested within other blocks.
