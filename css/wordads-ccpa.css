@@ -93,6 +93,7 @@
   -webkit-background-clip: border-box !important;
   background-clip: border-box !important;
   background-size: auto !important;
+  -o-border-image: none !important;
   border-image: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -564,7 +565,6 @@
   background: #fff !important;
   align-items: center !important;
   height: 56px !important;
-  position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;
   z-index: 10 !important;
@@ -601,7 +601,6 @@
   padding: 0 16px !important;
   background: #fff !important;
   height: 110px !important;
-  position: -webkit-sticky !important;
   position: sticky !important;
   bottom: 0 !important;
   z-index: 10 !important;
