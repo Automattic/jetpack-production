@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Incease the priority of the Subscriptions block
 - jp-tracks-functions script moved to Tracking package.
 - SEO Tools: add SEOPress to the list of fellow SEO plugins.
+- Turns off css tidy shorthand optimisation to prevent clashes with gutenberg block validation
 - Update Sync Connection Tests to utilize fix nomenclature
 
 ### Bug fixes
