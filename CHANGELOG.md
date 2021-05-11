@@ -55,6 +55,7 @@ This is an alpha version! The changes listed here are not final.
 - Add userless and classic connection tests
 - Comment: Story block: Add more media options to choose from in the editor
 - Comment: Story Block: Use CSS scale3d() instead of scale()
+- Ensure video/videopress mime type is set on attachments when a videopress update xmlrpc call is received
 - Fixed new PHPCS errors.
 - Fix LEGACY_META_OPTION handling for WPcom simple sites
 - For users that are able to update the `LEGACY_META_OPTION` option, avoid trying to update `TITLE_FORMATS_OPTION` which would display an 403 in Calypso.
