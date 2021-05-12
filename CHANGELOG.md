@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Enable the Plans tab for unlinked users
 - Form block: allow users to replace the "Message Sent" heading with their own phrase.
 - Instagram Reel: Added oEmbed support for Instagram Reel posts.
+- Instant Search: add 'open when user submits the form' overlay trigger
 - Standardize wording for connecting the user.
 
 ### Improved compatibility
