@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Hook into the Connection package remote_connect to perform Jetpack specific routines
 - Incease the priority of the Subscriptions block
 - jp-tracks-functions script moved to Tracking package.
+- Related Posts Block: Do not automatically append Related Posts block to sites using the full site editor.
 - SEO Tools: add SEOPress to the list of fellow SEO plugins.
 - Turns off css tidy shorthand optimisation to prevent clashes with gutenberg block validation
 - Update Sync Connection Tests to utilize fix nomenclature
