@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fixing the Connection UI initialization logical error
+- Initialize the main connection-ui Admin class only once since it may be called multiple times.
 
 ## [1.0.2] - 2021-04-27
 ### Added
