@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Business Hours Block: Add server rendered PHP fixtures test.
 - Comment: Story Block: Improve accessibility and resolve z-index issues when playing in fullscreen.
+- Connection package independence: Move a Jetpack specfic connection routine out of the package and into the plugin
 - Fixed compatibility issue with Page Optimize plugin for RTL layouts for jetpack-admin-menu and colors stylesheets
 - Hide Settings page for non-admin users when in site-only connection
 - Hook into the Connection package remote_connect to perform Jetpack specific routines

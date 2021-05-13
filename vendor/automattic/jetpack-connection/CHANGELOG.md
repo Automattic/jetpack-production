@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add "isUserConnected" to the connection status data.
 - Connection: add the default value of JETPACK__WPCOM_JSON_API_BASE to the Connection Utils class.
 
+### Changed
+- Connection package independence: Move a Jetpack specfic connection routine out of the package and into the plugin
+
 ### Removed
 - Remove do_post_authorization routine and add a hook instead
 
