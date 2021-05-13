@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Hide Settings page for non-admin users when in site-only connection
 - Hook into the Connection package remote_connect to perform Jetpack specific routines
 - Incease the priority of the Subscriptions block
+- Instant Search: ensure search input is the correct width if an input max-width has been specified in the theme
 - jp-tracks-functions script moved to Tracking package.
 - Related Posts Block: Do not automatically append Related Posts block to sites using the full site editor.
 - Remove onboarding_token logic in the Remote provision XMLRPC method from the Connection package and add it to the Jetpack plugin
