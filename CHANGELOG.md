@@ -76,6 +76,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: added search happy route E2E tests
 - Simplify wpcom/v2 delete transient endpoint logic.
 - Story block: address minor display issues
+- Story Block: Fix video not loading on safari and Chrome iOS
 - Updated package dependencies
 - Updated package dependencies
 - Updated package dependencies
