@@ -64,6 +64,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a way to connect E2E sites headlessly
 - Add userless and classic connection tests
 - Comment: Story block: Add more media options to choose from in the editor
+- Comment: Story Block: Improve rendering in email notifications
 - Comment: Story Block: Use CSS scale3d() instead of scale()
 - Ensure video/videopress mime type is set on attachments when a videopress update xmlrpc call is received
 - Fixed new PHPCS errors.
