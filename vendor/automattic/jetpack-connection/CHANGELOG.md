@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Connection package independence: Move a Jetpack specfic connection routine out of the package and into the plugin
+- Package Independence: Add a filter to the remote_uri returned by remote_register XMLRPC method
 
 ### Removed
 - Remove do_post_authorization routine and add a hook instead
