@@ -55,6 +55,7 @@ This is an alpha version! The changes listed here are not final.
 - Media Buttons: don't show duplicate buttons when a featured image is selected
 - Paid blocks: Remove nested upgrade nudges on the frontend.
 - Premium Content blocks: Fix parent block selector button when premium content blocks are nested within other blocks.
+- Search: Fix a bug that malformed the API request when filtering for results posted/updated in December.
 - Search: Fix modal intermittently scrolls to wrong position in Firefox
 - Stripe Nudge: fix redirect for the Payments block, and for all blocks within the site-editor.
 - udpate the way we save the time and date format on the settings endpoint
