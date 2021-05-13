@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Dashboard: ensure that the Jetpack settings page can be accessed when using Jetpack's Offline mode.
 - Fixes the date used to fetch the Top posts in the Top posts dashboard widget
 
 ## 9.7 - 2021-05-04

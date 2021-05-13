@@ -326,13 +326,13 @@ return array(
 		'version' => '1.9.6.0',
 		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
 	),
-	'Automattic\\Jetpack\\Password_Checker' => array(
-		'version' => '0.1.1.0',
-		'path'    => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php'
-	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
 		'version' => '1.5.4.0',
 		'path'    => $vendorDir . '/automattic/jetpack-logo/src/class-logo.php'
+	),
+	'Automattic\\Jetpack\\Password_Checker' => array(
+		'version' => '0.1.1.0',
+		'path'    => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
 		'version' => '1.5.0.0',
