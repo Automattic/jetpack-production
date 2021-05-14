@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Integrate the connection flow using RNA Connection package.
 
 ### Fixed
+- Add docblock for `jetpack_on_connection_ui_init` hook.
 - Fixing the Connection UI initialization logical error
 - Initialize the main connection-ui Admin class only once since it may be called multiple times.
 
