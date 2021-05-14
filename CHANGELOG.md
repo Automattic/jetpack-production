@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Form block: allow users to replace the "Message Sent" heading with their own phrase.
 - Instagram Reel: Added oEmbed support for Instagram Reel posts.
 - Instant Search: add 'open when user submits the form' overlay trigger
+- Site Verification Tools: adds an option for Facebook Domain Verification.
 - Standardize wording for connecting the user.
 
 ### Improved compatibility
