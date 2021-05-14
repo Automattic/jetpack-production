@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Fix modal intermittently scrolls to wrong position in Firefox
 - Stripe Nudge: fix redirect for the Payments block, and for all blocks within the site-editor.
 - udpate the way we save the time and date format on the settings endpoint
+- Updated Jetpack_Google_Analytics to use static property $analytics
 - Update logic for showing a Redirect flag in the sidebar
 - WordPress.com API: allow switching from locale variant to primary in Site Settings endpoint.
 
