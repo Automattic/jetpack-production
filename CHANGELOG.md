@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add REST API v2 endpoint for editing transients.
 - Adds Advanced General menu item that points to WP Admin regardless of whether the Advanced Dashboard toggle is enabled or not.
+- Add upsell nudges in sidebar for WordPress.com users.
 - E2E tests: Change the timeout to wait for loading animation in connection frame, before the approve button is displayed.
 - E2E tests: fix for failing test when Mailchimp is already set up
 - E2E tests: group test runs in CI
