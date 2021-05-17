@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: ensure that the Jetpack settings page can be accessed when using Jetpack's Offline mode.
 - Do not display Protect card for non-admin users while in site-only connection
 - Do not show multiple connection prompts in the Publicize settings card.
+- E2E tests: fix Slack notification for scheduled jobs
 - Ensures that the send_auth_cookies filter is respected
 - Fixed the Upgrades, Jetpack and Settings menu item slugs in WP-Admin
 - Fixes the date used to fetch the Top posts in the Top posts dashboard widget
