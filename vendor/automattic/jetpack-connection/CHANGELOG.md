@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Package Independence: Add a filter to the remote_uri returned by remote_register XMLRPC method
 
 ### Removed
+- Removed "user-less" jargon from code
 - Remove do_post_authorization routine and add a hook instead
 - Remove onboarding_token logic in the Remote provision XMLRPC method from the Connection package and add it to the Jetpack plugin
 
