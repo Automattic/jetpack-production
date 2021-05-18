@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Instagram Reel: Added oEmbed support for Instagram Reel posts.
 - Instant Search: add 'open when user submits the form' overlay trigger
 - jetpack disconnect CLI command: Add support to delete the connection owner and improve error message
+- Related Posts: add height attribute to post images for better compatibility with page performance analysis tools.
 - Site Verification Tools: adds an option for Facebook Domain Verification.
 - Standardize wording for connecting the user.
 
@@ -35,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Incease the priority of the Subscriptions block
 - Instant Search: ensure search input is the correct width if an input max-width has been specified in the theme
 - jp-tracks-functions script moved to Tracking package.
+- Related Posts: avoid Fatal Errors when using plugins that may interact with WordPress' customizer in specific ways.
 - Related Posts Block: Do not automatically append Related Posts block to sites using the full site editor.
 - Remove "user-less" jargon from code
 - Remove onboarding_token logic in the Remote provision XMLRPC method from the Connection package and add it to the Jetpack plugin

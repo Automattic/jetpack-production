@@ -154,7 +154,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '306965ed036a852736659209c80385cfd3fcdbfa',
+      'reference' => 'a082616d3fb1b25576166715881d2be79de01baf',
     ),
     'automattic/jetpack-lazy-images' => 
     array (
