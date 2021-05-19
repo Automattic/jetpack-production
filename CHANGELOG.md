@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Instagram Reel: Added oEmbed support for Instagram Reel posts.
 - Instant Search: add 'open when user submits the form' overlay trigger
 - jetpack disconnect CLI command: Add support to delete the connection owner and improve error message
+- Offer features depending on the current plan of the site rather on the current platform of the site.
 - Related Posts: add height attribute to post images for better compatibility with page performance analysis tools.
 - Search: Apply configured highlight color to text highlights
 - Site Verification Tools: adds an option for Facebook Domain Verification.
