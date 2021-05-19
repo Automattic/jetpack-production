@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Performance : If no Full Sync is in process early return before we update options .
 
+### Fixed
+- Janitorial: avoid PHP notices in some edge-cases
+
 ## [1.21.2] - 2021-04-27
 ### Added
 - Added the password-checker package the the Sync package composer.json file.
