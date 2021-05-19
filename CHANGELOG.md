@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - Changing the WPCOM subscription email control type from 'text' to 'email'.
 - Contact Form: remove double quotes from names in email headers to improve compatiblity with different emailing solutions for WordPress.
 - Contact Form: Rename Feedback sub-menu to Form Responses
+- Correctly display connection owner information if user token is missing, but connection owner option is set.
 - Dashboard: display the Sharing settings tab when editors only need to customize Publicize settings for their own account.
 - Dashboard: ensure that the Jetpack settings page can be accessed when using Jetpack's Offline mode.
 - Do not display Protect card for non-admin users while in site-only connection
