@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Business Hours Block: Add server rendered PHP fixtures test.
+- Clicking the Write button in masterbar will now use WP Admin block editor.
 - Comment: Story Block: Improve accessibility and resolve z-index issues when playing in fullscreen.
 - Connection package independence: Filters the remote_register XMLRPC endpoint redirect URI
 - Connection package independence: Move a Jetpack specfic connection routine out of the package and into the plugin
