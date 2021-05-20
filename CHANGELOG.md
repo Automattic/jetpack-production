@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- add an API function to get hub a P2 hub id
 - Add REST API v2 endpoint for editing transients.
 - Adds Advanced General menu item that points to WP Admin regardless of whether the Advanced Dashboard toggle is enabled or not.
 - Add upsell nudges in sidebar for WordPress.com users.
