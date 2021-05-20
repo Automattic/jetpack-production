@@ -77,6 +77,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Fix a bug that malformed the API request when filtering for results posted/updated in December.
 - Search: Fix modal intermittently scrolls to wrong position in Firefox
 - Stripe Nudge: fix redirect for the Payments block, and for all blocks within the site-editor.
+- Supplying a default value for Calendly input values to avoid React controlled component console error.
 - udpate the way we save the time and date format on the settings endpoint
 - Updated Jetpack_Google_Analytics to use static property $analytics
 - Update logic for showing a Redirect flag in the sidebar
