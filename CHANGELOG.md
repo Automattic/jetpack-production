@@ -88,6 +88,7 @@ This is an alpha version! The changes listed here are not final.
 - Comment: Story block: Add more media options to choose from in the editor
 - Comment: Story Block: Improve rendering in email notifications
 - Comment: Story Block: Use CSS scale3d() instead of scale()
+- E2E tests: fixed typo in help of infrastructure script
 - Ensure video/videopress mime type is set on attachments when a videopress update xmlrpc call is received
 - Fixed new PHPCS errors.
 - Fix LEGACY_META_OPTION handling for WPcom simple sites
