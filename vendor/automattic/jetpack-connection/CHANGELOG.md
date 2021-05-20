@@ -22,6 +22,9 @@ This is an alpha version! The changes listed here are not final.
 - Remove do_post_authorization routine and add a hook instead
 - Remove onboarding_token logic in the Remote provision XMLRPC method from the Connection package and add it to the Jetpack plugin
 
+### Fixed
+- Disconnection flow: disconnect users from WordPress.com before to delete data locally.
+
 ## [1.26.0] - 2021-04-27
 ### Added
 - Adds segmentation "from" parameter to the registration flow
