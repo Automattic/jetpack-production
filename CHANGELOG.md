@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO Tools: add SEOPress to the list of fellow SEO plugins.
 - Turns off css tidy shorthand optimisation to prevent clashes with gutenberg block validation
 - Update Sync Connection Tests to utilize fix nomenclature
+- Update the priority for overriding unified nav styles.
 
 ### Bug fixes
 - Admin Pages: prompt connect instead of upgrade when WordPress.com account is not connected
