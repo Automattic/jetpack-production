@@ -90,6 +90,7 @@ This is an alpha version! The changes listed here are not final.
 - Comment: Story Block: Use CSS scale3d() instead of scale()
 - E2E: Fix wp-config setup script to match latest core changes
 - E2E tests: fixed typo in help of infrastructure script
+- E2E tests: use github object to get context info for slack notification
 - Ensure video/videopress mime type is set on attachments when a videopress update xmlrpc call is received
 - Fixed new PHPCS errors.
 - Fix LEGACY_META_OPTION handling for WPcom simple sites
