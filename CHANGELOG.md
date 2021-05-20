@@ -92,6 +92,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed new PHPCS errors.
 - Fix LEGACY_META_OPTION handling for WPcom simple sites
 - For users that are able to update the `LEGACY_META_OPTION` option, avoid trying to update `TITLE_FORMATS_OPTION` which would display an 403 in Calypso.
+- Hide plan links for P2 sites that can't have plans
 - JITM: remove unnecessary add_filter calls for the JITM filters.
 - No changelog needed, this is a fix for a Calypso feature that has not been enabled yet
 - Refactored to improve testability. No functionality is affected.
