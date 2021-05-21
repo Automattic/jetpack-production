@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove onboarding_token logic in the Remote provision XMLRPC method from the Connection package and add it to the Jetpack plugin
 - SEO Tools: add SEOPress to the list of fellow SEO plugins.
 - Turns off css tidy shorthand optimisation to prevent clashes with gutenberg block validation
+- update jetpack-redirect dependency
 - Update Sync Connection Tests to utilize fix nomenclature
 - Update the priority for overriding unified nav styles.
 

@@ -259,19 +259,19 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-lazy-images/src/lazy-images.php'
 	),
 	'Automattic\\Jetpack\\JITMS\\JITM' => array(
-		'version' => '1.15.9999999.9999999-dev',
+		'version' => '1.16.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-jitm.php'
 	),
 	'Automattic\\Jetpack\\JITMS\\Pre_Connection_JITM' => array(
-		'version' => '1.15.9999999.9999999-dev',
+		'version' => '1.16.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-pre-connection-jitm.php'
 	),
 	'Automattic\\Jetpack\\JITMS\\Post_Connection_JITM' => array(
-		'version' => '1.15.9999999.9999999-dev',
+		'version' => '1.16.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-post-connection-jitm.php'
 	),
 	'Automattic\\Jetpack\\JITMS\\Rest_Api_Endpoints' => array(
-		'version' => '1.15.9999999.9999999-dev',
+		'version' => '1.16.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-rest-api-endpoints.php'
 	),
 	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
@@ -331,7 +331,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-partner/src/class-partner.php'
 	),
 	'Automattic\\Jetpack\\Redirect' => array(
-		'version' => '1.5.9999999.9999999-dev',
+		'version' => '1.6.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-redirect/src/class-redirect.php'
 	),
 	'Automattic\\Jetpack\\Error' => array(
