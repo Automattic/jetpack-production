@@ -70,6 +70,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix the height of the User Authentication Dialog on the dashboard
 - Fix the Paypal block so it works with the site editor.
 - Fix upgrade notices for the site editor.
+- Hide the FAB icon on Yoast admin pages to avoid overlap with the Yoast help icon.
 - Media Buttons: don't show duplicate buttons when a featured image is selected
 - Paid blocks: Remove nested upgrade nudges on the frontend.
 - Premium Content blocks: Fix parent block selector button when premium content blocks are nested within other blocks.
