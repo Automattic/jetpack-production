@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Apply configured highlight color to text highlights
 - Site Verification Tools: adds an option for Facebook Domain Verification.
 - Standardize wording for connecting the user.
+- Story Block: This new block enables you to use photos and videos to create engaging and tappable fullscreen slideshows.
 - The "Feedback > Export CSV" submenu entry has been removed. The export funcionality is still available in "Feedback > Form responses".
 
 ### Improved compatibility
