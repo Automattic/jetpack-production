@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Janitorial: avoid PHP notices in some edge-cases
+- Update Meta Module so get_object_by_id returns all meta values.
 
 ## [1.21.2] - 2021-04-27
 ### Added
