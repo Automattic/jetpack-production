@@ -108,6 +108,7 @@ This is an alpha version! The changes listed here are not final.
 - Refactored to improve testability. No functionality is affected.
 - Remove CodeClimate
 - Removed the carousel reblog functionality (unused in Jetpack).
+- Removed use of experimental feature and replaced with new `useBlockProps` hook to ensure video block continues to function correctly
 - Search: added search happy route E2E tests
 - Simplify wpcom/v2 delete transient endpoint logic.
 - Story block: address minor display issues
