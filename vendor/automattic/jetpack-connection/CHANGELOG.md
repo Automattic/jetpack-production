@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.28.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add new 'connection/authorize_url' endpoint.
+
 ## [1.27.0] - 2021-05-25
 ### Added
 - Add "isUserConnected" to the connection status data.
@@ -361,6 +368,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[1.28.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.27.0...v1.28.0-alpha
 [1.27.0]: https://github.com/Automattic/jetpack-connection/compare/v1.26.0...v1.27.0
 [1.26.0]: https://github.com/Automattic/jetpack-connection/compare/v1.25.2...v1.26.0
 [1.25.2]: https://github.com/Automattic/jetpack-connection/compare/v1.25.1...v1.25.2

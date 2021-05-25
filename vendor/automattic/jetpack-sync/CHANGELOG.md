@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.21.4-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [1.21.3] - 2021-05-25
 ### Changed
 - Performance: If no Full Sync is in process early return before we update options.
@@ -384,6 +391,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[1.21.4-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.21.3...v1.21.4-alpha
 [1.21.3]: https://github.com/Automattic/jetpack-sync/compare/v1.21.2...v1.21.3
 [1.21.2]: https://github.com/Automattic/jetpack-sync/compare/v1.21.1...v1.21.2
 [1.21.1]: https://github.com/Automattic/jetpack-sync/compare/v1.21.0...v1.21.1

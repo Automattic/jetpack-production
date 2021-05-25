@@ -86,6 +86,132 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "../../js-packages/connection/components/connect-user/index.jsx":
+/*!***********************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/components/connect-user/index.jsx ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/slicedToArray.js");
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_url__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/url */ "@wordpress/url");
+/* harmony import */ var _wordpress_url__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_url__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "../../js-packages/connection/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _in_place_connection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../in-place-connection */ "../../js-packages/connection/components/in-place-connection/index.jsx");
+/* harmony import */ var _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../tools/jetpack-rest-api-client */ "../../js-packages/connection/tools/jetpack-rest-api-client/index.jsx");
+
+
+/**
+ * External dependencies
+ */
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+/**
+ * The user connection component.
+ *
+ * @param {object} props -- The properties.
+ * @param {Function} props.redirectFunc -- The redirect function (`window.location.assign()` by default).
+ * @param {string} props.connectUrl -- The authorization URL (no-iframe).
+ * @param {string} props.redirectUri -- The redirect admin URI.
+ * @param {string} props.inPlaceTitle -- The title for the In-Place Connection component.
+ * @param {boolean} props.forceCalypsoFlow -- Whether to go straight to Calypso flow, skipping the In-Place flow.
+ * @param {Function} props.onComplete -- The callback to be called when the connection is fully established.
+ * @param {string} props.from -- Where the connection request is coming from.
+ * @param {boolean} props.displayTOS -- Whether the site has connection owner connected.
+ *
+ * @returns {React.Component} The RNA connection component.
+ */
+
+var ConnectUser = function ConnectUser(props) {
+  var redirectFunc = props.redirectFunc,
+      connectUrl = props.connectUrl,
+      redirectUri = props.redirectUri,
+      inPlaceTitle = props.inPlaceTitle,
+      forceCalypsoFlow = props.forceCalypsoFlow,
+      from = props.from,
+      onComplete = props.onComplete,
+      displayTOS = props.displayTOS;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null),
+      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
+      authorizationUrl = _useState2[0],
+      setAuthorizationUrl = _useState2[1];
+
+  if (connectUrl && connectUrl !== authorizationUrl) {
+    setAuthorizationUrl(connectUrl);
+  }
+  /**
+   * Fetch the authorization URL on the first render.
+   * To be only run once.
+   */
+
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    if (!authorizationUrl) {
+      _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__["default"].fetchAuthorizationUrl(redirectUri).then(function (response) {
+        return setAuthorizationUrl(response.authorizeUrl);
+      }).catch(function (error) {
+        throw error;
+      });
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  if (!authorizationUrl) {
+    return null;
+  }
+
+  if (forceCalypsoFlow) {
+    redirectFunc(Object(_wordpress_url__WEBPACK_IMPORTED_MODULE_3__["addQueryArgs"])(authorizationUrl, {
+      from: from ? encodeURIComponent(from) : null
+    }));
+    return null;
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_in_place_connection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    connectUrl: authorizationUrl,
+    title: inPlaceTitle,
+    onComplete: onComplete,
+    displayTOS: displayTOS
+  });
+};
+
+ConnectUser.propTypes = {
+  connectUrl: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+  redirectUri: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string.isRequired,
+  inPlaceTitle: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+  forceCalypsoFlow: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
+  onComplete: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+  from: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+  displayTOS: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool.isRequired,
+  redirectFunc: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func
+};
+ConnectUser.defaultProps = {
+  redirectFunc: function redirectFunc(url) {
+    return window.location.assign(url);
+  },
+  inPlaceTitle: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Connect your WordPress.com account', 'jetpack'),
+  forceCalypsoFlow: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (ConnectUser);
+
+/***/ }),
+
 /***/ "../../js-packages/connection/components/in-place-connection/index.jsx":
 /*!******************************************************************************************************************!*\
   !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/components/in-place-connection/index.jsx ***!
@@ -152,7 +278,7 @@ var InPlaceConnection = function InPlaceConnection(props) {
    */
 
   var receiveData = function receiveData(e) {
-    if (e.source !== iframeRef.current.contentWindow) {
+    if (!iframeRef.current || e.source !== iframeRef.current.contentWindow) {
       return;
     }
 
@@ -235,7 +361,7 @@ InPlaceConnection.propTypes = {
 };
 InPlaceConnection.defaultProps = {
   isLoading: false,
-  height: '220',
+  height: '300',
   width: '100%',
   scrollToIframe: false
 };
@@ -263,18 +389,21 @@ InPlaceConnection.defaultProps = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "../../js-packages/connection/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _in_place_connection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../in-place-connection */ "../../js-packages/connection/components/in-place-connection/index.jsx");
+/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread2 */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/objectSpread2.js");
+/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/slicedToArray.js");
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "../../js-packages/connection/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../tools/jetpack-rest-api-client */ "../../js-packages/connection/tools/jetpack-rest-api-client/index.jsx");
+/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
+
 
 
 /**
@@ -291,90 +420,93 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * The in-place connection component.
+ * The RNA connection component.
  *
  * @param {object} props -- The properties.
- * @param {string} props.authorizationUrl -- The authorization URL.
  * @param {string} props.connectLabel -- The "Connect" button label.
  * @param {string} props.inPlaceTitle -- The title for the In-Place Connection component.
  * @param {boolean} props.forceCalypsoFlow -- Whether to go straight to Calypso flow, skipping the In-Place flow.
  * @param {string} props.apiRoot -- API root URL, required.
  * @param {string} props.apiNonce -- API Nonce, required.
  * @param {string} props.registrationNonce -- Separate registration nonce, required.
- * @param {boolean} props.isRegistered -- Whether the site is registered (has blog token), required.
- * @param {boolean} props.isUserConnected -- Whether the current user is connected (has user token), required.
- * @param {boolean} props.hasConnectedOwner -- Whether the site has connection owner, required.
  * @param {Function} props.onRegistered -- The callback to be called upon registration success.
  * @param {Function} props.onUserConnected -- The callback to be called when the connection is fully established.
- * @param {Function} props.redirectFunc -- The redirect function (`window.location.assign()` by default).
  *
- * @returns {React.Component} The in-place connection component.
+ * @returns {React.Component} The RNA connection component.
  */
 
 var Main = function Main(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
       isRegistering = _useState2[0],
       setIsRegistering = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
-      _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState3, 2),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState3, 2),
       isUserConnecting = _useState4[0],
       setIsUserConnecting = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(null),
+      _useState6 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState5, 2),
+      authorizationUrl = _useState6[0],
+      setAuthorizationUrl = _useState6[1];
+
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      _useState8 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState7, 2),
+      isFetchingConnectionStatus = _useState8[0],
+      setIsFetchingConnectionStatus = _useState8[1];
+
+  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({}),
+      _useState10 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState9, 2),
+      connectionStatus = _useState10[0],
+      setConnectionStatus = _useState10[1];
 
   var apiRoot = props.apiRoot,
       apiNonce = props.apiNonce,
       connectLabel = props.connectLabel,
-      authorizationUrl = props.authorizationUrl,
-      forceCalypsoFlow = props.forceCalypsoFlow,
-      isRegistered = props.isRegistered,
-      isUserConnected = props.isUserConnected,
       onRegistered = props.onRegistered,
       onUserConnected = props.onUserConnected,
       registrationNonce = props.registrationNonce,
-      redirectFunc = props.redirectFunc,
+      redirectUri = props.redirectUri,
+      forceCalypsoFlow = props.forceCalypsoFlow,
+      inPlaceTitle = props.inPlaceTitle,
       from = props.from,
-      redirectUri = props.redirectUri;
+      children = props.children;
   /**
    * Initialize the REST API.
    */
 
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
     _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__["default"].setApiRoot(apiRoot);
     _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__["default"].setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
-   * Initialize the user connection process.
+   * Fetch the connection status on the first render.
+   * To be only run once.
    */
 
-  var connectUser = Object(react__WEBPACK_IMPORTED_MODULE_1__["useCallback"])(function (url) {
-    url = url || authorizationUrl;
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+    setIsFetchingConnectionStatus(true);
+    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__["default"].fetchSiteConnectionStatus().then(function (response) {
+      setIsFetchingConnectionStatus(false);
+      setConnectionStatus(response);
+    }).catch(function (error) {
+      setIsFetchingConnectionStatus(false);
+      throw error;
+    });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-    if (!url.includes('?')) {
-      url += '?';
-    }
-
-    if (from) {
-      url += '&from=' + encodeURIComponent(from);
-    }
-
-    if (!url) {
-      throw new Error('Authorization URL is required');
-    }
-
-    if (forceCalypsoFlow) {
-      redirectFunc(url);
-      return;
-    }
-
-    setIsUserConnecting(true);
-  }, [authorizationUrl, forceCalypsoFlow, setIsUserConnecting, redirectFunc, from]);
   /**
    * Callback for the user connection success.
    */
 
-  var onUserConnectedCallback = Object(react__WEBPACK_IMPORTED_MODULE_1__["useCallback"])(function () {
+  var onUserConnectedCallback = Object(react__WEBPACK_IMPORTED_MODULE_2__["useCallback"])(function () {
     setIsUserConnecting(false);
+    setConnectionStatus(function (status) {
+      return _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, status), {}, {
+        isUserConnected: true
+      });
+    });
 
     if (onUserConnected) {
       onUserConnected();
@@ -384,11 +516,11 @@ var Main = function Main(props) {
    * Initialize the site registration process.
    */
 
-  var registerSite = Object(react__WEBPACK_IMPORTED_MODULE_1__["useCallback"])(function (e) {
+  var registerSite = Object(react__WEBPACK_IMPORTED_MODULE_2__["useCallback"])(function (e) {
     e && e.preventDefault();
 
-    if (isRegistered) {
-      connectUser();
+    if (connectionStatus.isRegistered) {
+      setIsUserConnecting(true);
       return;
     }
 
@@ -400,55 +532,57 @@ var Main = function Main(props) {
         onRegistered(response);
       }
 
-      connectUser(response.authorizeUrl);
+      setAuthorizationUrl(response.authorizeUrl);
+      setIsUserConnecting(true);
+      setConnectionStatus(function (status) {
+        return _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, status), {}, {
+          isRegistered: true
+        });
+      });
     }).catch(function (error) {
+      setIsRegistering(false);
       throw error;
     });
-  }, [setIsRegistering, isRegistered, onRegistered, connectUser, registrationNonce, redirectUri]);
-
-  if (isRegistered && isUserConnected) {
-    return null;
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, [setIsRegistering, setAuthorizationUrl, connectionStatus, setConnectionStatus, onRegistered, registrationNonce, redirectUri]);
+  var childrenCallback = Object(react__WEBPACK_IMPORTED_MODULE_2__["useCallback"])(function () {
+    if (children && {}.toString.call(children) === '[object Function]') {
+      return children(connectionStatus);
+    }
+  }, [connectionStatus, children]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "jp-connection-main"
-  }, !isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+  }, childrenCallback(), isFetchingConnectionStatus && "Loading...", (!connectionStatus.isRegistered || !connectionStatus.isUserConnected) && !isFetchingConnectionStatus && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Button"], {
     label: connectLabel,
     onClick: registerSite,
     isPrimary: true,
     disabled: isRegistering || isUserConnecting
-  }, connectLabel), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_in_place_connection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, connectLabel), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_connect_user__WEBPACK_IMPORTED_MODULE_7__["default"], {
     connectUrl: authorizationUrl,
-    title: props.inPlaceTitle,
+    redirectUri: redirectUri,
+    inPlaceTitle: inPlaceTitle,
     onComplete: onUserConnectedCallback,
-    displayTOS: props.hasConnectedOwner || isRegistered
+    displayTOS: connectionStatus.hasConnectedOwner || connectionStatus.isRegistered,
+    forceCalypsoFlow: forceCalypsoFlow,
+    from: from
   }));
 };
 
 Main.propTypes = {
-  authorizationUrl: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string.isRequired,
-  connectLabel: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
-  inPlaceTitle: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
-  forceCalypsoFlow: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-  apiRoot: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string.isRequired,
-  apiNonce: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string.isRequired,
-  isRegistered: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool.isRequired,
-  isUserConnected: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool.isRequired,
-  hasConnectedOwner: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool.isRequired,
-  onRegistered: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  onUserConnected: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  registrationNonce: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string.isRequired,
-  redirectFunc: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  from: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
-  redirectUri: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string
+  connectLabel: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
+  inPlaceTitle: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
+  forceCalypsoFlow: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool,
+  apiRoot: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string.isRequired,
+  apiNonce: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string.isRequired,
+  onRegistered: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  onUserConnected: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  registrationNonce: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string.isRequired,
+  from: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
+  redirectUri: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string.isRequired
 };
 Main.defaultProps = {
-  inPlaceTitle: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Connect your WordPress.com account', 'jetpack'),
+  inPlaceTitle: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Connect your WordPress.com account', 'jetpack'),
   forceCalypsoFlow: false,
-  connectLabel: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Connect', 'jetpack'),
-  redirectFunc: function redirectFunc(url) {
-    return window.location.assign(url);
-  }
+  connectLabel: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Connect', 'jetpack')
 };
 /* harmony default export */ __webpack_exports__["default"] = (Main);
 
@@ -480,7 +614,7 @@ var thirdPartyCookiesFallback = function thirdPartyCookiesFallback(fallbackURL) 
 /*!***********************************************************************************!*\
   !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/index.jsx ***!
   \***********************************************************************************/
-/*! exports provided: JetpackConnection, InPlaceConnection, thirdPartyCookiesFallbackHelper */
+/*! exports provided: JetpackConnection, InPlaceConnection, ConnectUser, thirdPartyCookiesFallbackHelper */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -491,8 +625,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_in_place_connection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/in-place-connection */ "../../js-packages/connection/components/in-place-connection/index.jsx");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InPlaceConnection", function() { return _components_in_place_connection__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
-/* harmony import */ var _helpers_third_party_cookies_fallback__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers/third-party-cookies-fallback */ "../../js-packages/connection/helpers/third-party-cookies-fallback.jsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "thirdPartyCookiesFallbackHelper", function() { return _helpers_third_party_cookies_fallback__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+/* harmony import */ var _components_connect_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ConnectUser", function() { return _components_connect_user__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _helpers_third_party_cookies_fallback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers/third-party-cookies-fallback */ "../../js-packages/connection/helpers/third-party-cookies-fallback.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "thirdPartyCookiesFallbackHelper", function() { return _helpers_third_party_cookies_fallback__WEBPACK_IMPORTED_MODULE_3__["default"]; });
 
 /*
 This program is free software; you can redistribute it and/or
@@ -513,6 +650,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 /**
  * Components.
  */
+
 
 
 /**
@@ -670,6 +808,33 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
 
+/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/defineProperty.js":
+/*!*******************************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/defineProperty.js ***!
+  \*******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+module.exports = _defineProperty;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+
 /***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/getPrototypeOf.js":
 /*!*******************************************************************************************************************************!*\
   !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
@@ -814,6 +979,58 @@ function _nonIterableRest() {
 }
 
 module.exports = _nonIterableRest;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+
+/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/objectSpread2.js":
+/*!******************************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/objectSpread2.js ***!
+  \******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var defineProperty = __webpack_require__(/*! ./defineProperty.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/defineProperty.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+
+    if (enumerableOnly) {
+      symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+    }
+
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+module.exports = _objectSpread2;
 module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
@@ -2219,8 +2436,6 @@ __webpack_require__.r(__webpack_exports__);
  * External dependencies
  */
 
-/* eslint-disable no-unused-vars */
-
 /**
  * Helps create new custom error classes to better notify upper layers.
  *
@@ -2311,6 +2526,12 @@ function JetpackRestApiClient(root, nonce) {
           redirect_uri: redirectUri
         })
       }).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchAuthorizationUrl: function fetchAuthorizationUrl(redirectUri) {
+      return getRequest("".concat(apiRoot, "jetpack/v4/connection/authorize_url?no_iframe=1&redirect_uri=").concat(encodeURIComponent(redirectUri)), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchSiteConnectionStatus: function fetchSiteConnectionStatus() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/connection"), getParams).then(parseJsonResponse);
     }
   };
   /**
@@ -2355,8 +2576,6 @@ function JetpackRestApiClient(root, nonce) {
 
   Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])(this, methods);
 }
-/* eslint-enable no-unused-vars */
-
 /**
  * Check the response status.
  *
@@ -2430,55 +2649,23 @@ var restApi = new JetpackRestApiClient();
 
 /***/ }),
 
-/***/ "./_inc/actions/connection-data.js":
-/*!*****************************************!*\
-  !*** ./_inc/actions/connection-data.js ***!
-  \*****************************************/
-/*! exports provided: CONNECTION_DATA_SET_AUTHORIZATION_URL, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CONNECTION_DATA_SET_AUTHORIZATION_URL", function() { return CONNECTION_DATA_SET_AUTHORIZATION_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return connectionDataActions; });
-var CONNECTION_DATA_SET_AUTHORIZATION_URL = 'CONNECTION_DATA_AUTHORIZATION_URL_SET';
-var connectionDataActions = {
-  connectionDataSetAuthorizationUrl: function connectionDataSetAuthorizationUrl(url) {
-    return {
-      type: CONNECTION_DATA_SET_AUTHORIZATION_URL,
-      url: url
-    };
-  }
-};
-
-
-/***/ }),
-
 /***/ "./_inc/actions/connection-status.js":
 /*!*******************************************!*\
   !*** ./_inc/actions/connection-status.js ***!
   \*******************************************/
-/*! exports provided: CONNECTION_STATUS_REGISTERED, CONNECTION_STATUS_USER_CONNECTED, default */
+/*! exports provided: SET_CONNECTION_STATUS, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CONNECTION_STATUS_REGISTERED", function() { return CONNECTION_STATUS_REGISTERED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CONNECTION_STATUS_USER_CONNECTED", function() { return CONNECTION_STATUS_USER_CONNECTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_CONNECTION_STATUS", function() { return SET_CONNECTION_STATUS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return connectionStatusActions; });
-var CONNECTION_STATUS_REGISTERED = 'CONNECTION_STATUS_REGISTERED';
-var CONNECTION_STATUS_USER_CONNECTED = 'CONNECTION_STATUS_USER_CONNECTED';
+var SET_CONNECTION_STATUS = 'SET_CONNECTION_STATUS';
 var connectionStatusActions = {
-  connectionStatusSetRegistered: function connectionStatusSetRegistered(isRegistered) {
+  setConnectionStatus: function setConnectionStatus(connectionStatus) {
     return {
-      type: CONNECTION_STATUS_REGISTERED,
-      isRegistered: isRegistered
-    };
-  },
-  connectionStatusSetUserConnected: function connectionStatusSetUserConnected(isUserConnected) {
-    return {
-      type: CONNECTION_STATUS_USER_CONNECTED,
-      isUserConnected: isUserConnected
+      type: SET_CONNECTION_STATUS,
+      connectionStatus: connectionStatus
     };
   }
 };
@@ -2498,7 +2685,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread2 */ "./node_modules/@babel/runtime/helpers/objectSpread2.js");
 /* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./connection-status */ "./_inc/actions/connection-status.js");
-/* harmony import */ var _connection_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./connection-data */ "./_inc/actions/connection-data.js");
 
 
 /**
@@ -2506,8 +2692,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-
-var actions = _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, _connection_status__WEBPACK_IMPORTED_MODULE_1__["default"]), _connection_data__WEBPACK_IMPORTED_MODULE_2__["default"]);
+var actions = _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, _connection_status__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 
@@ -2603,17 +2788,11 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Admin() {
-  var connectionStatus = Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__["useSelect"])(function (select) {
-    return select(_store__WEBPACK_IMPORTED_MODULE_4__["STORE_ID"]).getConnectionStatus();
-  }, []);
   var APINonce = Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__["useSelect"])(function (select) {
     return select(_store__WEBPACK_IMPORTED_MODULE_4__["STORE_ID"]).getAPINonce();
   }, []);
   var APIRoot = Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__["useSelect"])(function (select) {
     return select(_store__WEBPACK_IMPORTED_MODULE_4__["STORE_ID"]).getAPIRoot();
-  }, []);
-  var authorizationUrl = Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__["useSelect"])(function (select) {
-    return select(_store__WEBPACK_IMPORTED_MODULE_4__["STORE_ID"]).getAuthorizationUrl();
   }, []);
   var doNotUseConnectionIframe = Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__["useSelect"])(function (select) {
     return select(_store__WEBPACK_IMPORTED_MODULE_4__["STORE_ID"]).getDoNotUseConnectionIframe();
@@ -2621,37 +2800,25 @@ function Admin() {
   var registrationNonce = Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__["useSelect"])(function (select) {
     return select(_store__WEBPACK_IMPORTED_MODULE_4__["STORE_ID"]).getRegistrationNonce();
   }, []);
+  var connectionStatus = Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__["useSelect"])(function (select) {
+    return select(_store__WEBPACK_IMPORTED_MODULE_4__["STORE_ID"]).getConnectionStatus();
+  }, []);
 
   var _useDispatch = Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])(_store__WEBPACK_IMPORTED_MODULE_4__["STORE_ID"]),
-      connectionStatusSetRegistered = _useDispatch.connectionStatusSetRegistered,
-      connectionStatusSetUserConnected = _useDispatch.connectionStatusSetUserConnected,
-      connectionDataSetAuthorizationUrl = _useDispatch.connectionDataSetAuthorizationUrl;
+      setConnectionStatus = _useDispatch.setConnectionStatus;
 
-  var onUserConnected = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(function () {
-    connectionStatusSetUserConnected(true);
-  }, [connectionStatusSetUserConnected]);
-  var onRegistered = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(function (response) {
-    connectionStatusSetRegistered(true);
-
-    if (response.authorizeUrl) {
-      connectionDataSetAuthorizationUrl(response.authorizeUrl);
-    }
-  }, [connectionStatusSetRegistered, connectionDataSetAuthorizationUrl]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "connection-status-card"
   }, connectionStatus.isRegistered && !connectionStatus.isUserConnected && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Site Registered', 'jetpack')), connectionStatus.isRegistered && connectionStatus.isUserConnected && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Site and User Connected', 'jetpack'))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_2__["JetpackConnection"], {
     apiRoot: APIRoot,
     apiNonce: APINonce,
-    authorizationUrl: authorizationUrl,
-    isRegistered: connectionStatus.isRegistered,
-    isUserConnected: connectionStatus.isUserConnected,
-    hasConnectedOwner: connectionStatus.hasConnectedOwner,
     forceCalypsoFlow: doNotUseConnectionIframe,
-    onRegistered: onRegistered,
-    onUserConnected: onUserConnected,
     registrationNonce: registrationNonce,
     from: "connection-ui",
     redirectUri: "tools.php?page=wpcom-connection-manager"
+  }, function (status) {
+    setConnectionStatus(status);
+    return null;
   }));
 }
 
@@ -2747,27 +2914,8 @@ var API = function API() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread2 */ "./node_modules/@babel/runtime/helpers/objectSpread2.js");
-/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _actions_connection_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/connection-data */ "./_inc/actions/connection-data.js");
-
-
-/**
- * Internal dependencies
- */
-
-
 var settings = function settings() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
-  switch (action.type) {
-    case _actions_connection_data__WEBPACK_IMPORTED_MODULE_1__["CONNECTION_DATA_SET_AUTHORIZATION_URL"]:
-      return _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, state), {}, {
-        authorizationUrl: action.url
-      });
-  }
-
   return state;
 };
 
@@ -2784,11 +2932,7 @@ var settings = function settings() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread2 */ "./node_modules/@babel/runtime/helpers/objectSpread2.js");
-/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _actions_connection_status__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/connection-status */ "./_inc/actions/connection-status.js");
-
-
+/* harmony import */ var _actions_connection_status__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/connection-status */ "./_inc/actions/connection-status.js");
 /**
  * Internal dependencies
  */
@@ -2799,15 +2943,8 @@ var connectionStatus = function connectionStatus() {
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case _actions_connection_status__WEBPACK_IMPORTED_MODULE_1__["CONNECTION_STATUS_REGISTERED"]:
-      return _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, state), {}, {
-        isRegistered: action.isRegistered
-      });
-
-    case _actions_connection_status__WEBPACK_IMPORTED_MODULE_1__["CONNECTION_STATUS_USER_CONNECTED"]:
-      return _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, state), {}, {
-        isUserConnected: action.isUserConnected
-      });
+    case _actions_connection_status__WEBPACK_IMPORTED_MODULE_0__["SET_CONNECTION_STATUS"]:
+      return action.connectionStatus;
   }
 
   return state;
@@ -2887,9 +3024,6 @@ __webpack_require__.r(__webpack_exports__);
 var settingsSelectors = {
   getDoNotUseConnectionIframe: function getDoNotUseConnectionIframe(state) {
     return state.connectionData.doNotUseConnectionIframe || null;
-  },
-  getAuthorizationUrl: function getAuthorizationUrl(state) {
-    return state.connectionData.authorizationUrl || null;
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (settingsSelectors);
@@ -3078,6 +3212,17 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /***/ (function(module, exports) {
 
 (function() { module.exports = window["wp"]["i18n"]; }());
+
+/***/ }),
+
+/***/ "@wordpress/url":
+/*!*****************************!*\
+  !*** external ["wp","url"] ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = window["wp"]["url"]; }());
 
 /***/ }),
 
