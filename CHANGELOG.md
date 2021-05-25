@@ -82,6 +82,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Add a Jetpack Search class name to body and fix background for modal close button.
 - Search: Fix a bug that malformed the API request when filtering for results posted/updated in December.
 - Search: Fix modal intermittently scrolls to wrong position in Firefox
+- Search: prevent standard sidebar widgets ending up in the search modal sidebar when switching themes
 - Stripe Nudge: fix redirect for the Payments block, and for all blocks within the site-editor.
 - Supplying a default value for Calendly input values to avoid React controlled component console error.
 - udpate the way we save the time and date format on the settings endpoint
