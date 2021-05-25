@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.16.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.16.0] - 2021-05-25
 ### Added
 - JITM: allow the plugin to set the icon for pre-connection JITMs.
 - JITM: move sync updated option hook to the JITM package.
@@ -20,9 +17,6 @@ This is an alpha version! The changes listed here are not final.
 - JITM: Use an action instead of a property to prevent JITMs from being registered multiple times
 - JITM: Use the Device_Detection package to determine if the device is mobile.
 - Updated package dependencies
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
 - update jetpack-redirect dependency
 
 ## [1.15.1] - 2021-05-03
@@ -284,7 +278,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Update Jetpack to use new JITM package
 
-[1.16.0-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v1.15.1...v1.16.0-alpha
+[1.16.0]: https://github.com/Automattic/jetpack-jitm/compare/v1.15.1...v1.16.0
 [1.15.1]: https://github.com/Automattic/jetpack-jitm/compare/v1.15.0...v1.15.1
 [1.15.0]: https://github.com/Automattic/jetpack-jitm/compare/v1.14.1...v1.15.0
 [1.14.1]: https://github.com/Automattic/jetpack-jitm/compare/v1.14.0...v1.14.1
