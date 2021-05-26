@@ -1,7 +1,7 @@
-/* global idcL10n, jQuery, analytics, history, wpCookies */
+/* global idcL10n, analytics, wpCookies */
 
 ( function ( $ ) {
-	var restNonce = idcL10n.nonce,
+	const restNonce = idcL10n.nonce,
 		currentUrl = idcL10n.currentUrl,
 		restRoot = idcL10n.apiRoot,
 		notice = $( '.jp-idc-notice' ),
@@ -13,8 +13,9 @@
 		fixConnectionButton = $( '#jp-idc-fix-connection-action' ),
 		migrateButton = $( '#jp-idc-migrate-action' ),
 		reconnectButton = $( '#jp-idc-reconnect-site-action' ),
-		errorNotice = $( '.jp-idc-error__notice' ),
-		erroredAction = false;
+		errorNotice = $( '.jp-idc-error__notice' );
+
+	let erroredAction = false;
 
 	// Initialize Tracks and bump stats.
 	if ( 'undefined' !== typeof analytics ) {
@@ -30,7 +31,7 @@
 
 	// If the user dismisses the notice, set a cookie for one week so we don't display it for that time.
 	notice.on( 'click', '.notice-dismiss', function () {
-		var secure = 'https:' === window.location.protocol;
+		const secure = 'https:' === window.location.protocol;
 		wpCookies.set( 'jetpack_idc_dismiss_notice', '1', 7 * 24 * 60 * 60, false, false, secure );
 		trackAndBumpMCStats( 'non_admin_notice_dismiss', { page: tracksEvent.currentScreen } );
 	} );
@@ -64,14 +65,25 @@
 	// Starts migration process.
 	migrateButton.on( 'click', migrateStatsAndSubscribers );
 
+	/**
+	 * Disable Dops Buttons.
+	 */
 	function disableDopsButtons() {
 		idcButtons.prop( 'disabled', true );
 	}
 
+	/**
+	 * Eanble Dops Buttons.
+	 */
 	function enableDopsButtons() {
 		idcButtons.prop( 'disabled', false );
 	}
 
+	/**
+	 * Cleare confirmation arguments from url.
+	 *
+	 * @param {boolean} allowReload - Should we allow reload.
+	 */
 	function clearConfirmationArgsFromUrl( allowReload ) {
 		allowReload = 'undefined' === typeof allowReload ? false : allowReload;
 
@@ -95,11 +107,14 @@
 		}
 	}
 
+	/**
+	 * Confirm Safe Mode.
+	 */
 	function confirmSafeMode() {
 		errorNotice.hide();
 		trackAndBumpMCStats( 'confirm_safe_mode' );
 
-		var route = restRoot + 'jetpack/v4/identity-crisis/confirm-safe-mode';
+		const route = restRoot + 'jetpack/v4/identity-crisis/confirm-safe-mode';
 		disableDopsButtons();
 		$.ajax( {
 			method: 'POST',
@@ -125,11 +140,14 @@
 		} );
 	}
 
+	/**
+	 * Migrate Stats and Subscribers.
+	 */
 	function migrateStatsAndSubscribers() {
 		errorNotice.hide();
 		trackAndBumpMCStats( 'migrate' );
 
-		var route = restRoot + 'jetpack/v4/identity-crisis/migrate';
+		const route = restRoot + 'jetpack/v4/identity-crisis/migrate';
 		disableDopsButtons();
 		$.ajax( {
 			method: 'POST',
@@ -154,6 +172,9 @@
 		} );
 	}
 
+	/**
+	 * Fix Jetpack Connection.
+	 */
 	function fixJetpackConnection() {
 		errorNotice.hide();
 		trackAndBumpMCStats( 'fix_connection' );
@@ -168,7 +189,7 @@
 		errorNotice.hide();
 		trackAndBumpMCStats( 'start_fresh' );
 
-		var route = restRoot + 'jetpack/v4/identity-crisis/start-fresh';
+		const route = restRoot + 'jetpack/v4/identity-crisis/start-fresh';
 		disableDopsButtons();
 		$.ajax( {
 			method: 'POST',
@@ -192,10 +213,10 @@
 	/**
 	 * Displays an error message from the REST endpoints we're hitting.
 	 *
-	 * @param error {Object} Object containing the errored response from the API
+	 * @param {object} error - Object containing the errored response from the API
 	 */
 	function displayErrorNotice( error ) {
-		var errorDescription = $( '.jp-idc-error__desc' );
+		const errorDescription = $( '.jp-idc-error__desc' );
 		if ( error && error.responseJSON && error.responseJSON.message ) {
 			errorDescription.html( error.responseJSON.message );
 		} else {
@@ -208,11 +229,11 @@
 	 * This function will fire both a Tracks and MC stat.
 	 * It will make sure to format the event name properly for the given stat home.
 	 *
-	 * Tracks: Will be prefixed by 'jetpack_idc_' and use underscores.
-	 * MC: Will not be prefixed, and will use dashes.
+	 * Tracks Will be prefixed by 'jetpack_idc_' and use underscores.
+	 * MC Will not be prefixed, and will use dashes.
 	 *
-	 * @param eventName string
-	 * @param extraProps object
+	 * @param {string} eventName - name.
+	 * @param {object} extraProps - extra props.
 	 */
 	function trackAndBumpMCStats( eventName, extraProps ) {
 		if ( 'undefined' === typeof extraProps || 'object' !== typeof extraProps ) {

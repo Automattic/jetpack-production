@@ -1,5 +1,5 @@
 /*!
-* Do not modify this file directly.  It is compiled SASS code.
+* Do not modify this file directly.  It is automatically generated.
 */
 @charset "UTF-8";
 /*
@@ -28,8 +28,8 @@ https://github.com/thoughtbot/bourbon
 }
 
 .jp-idc-notice {
-  margin-left: 0;
-  margin-right: 10px;
+  margin-right: 0;
+  margin-left: 10px;
   margin-top: 10px;
   overflow: hidden;
   padding-bottom: 16px;
@@ -42,7 +42,7 @@ https://github.com/thoughtbot/bourbon
 
 @media all and (min-width: 783px) {
   .jp-idc-notice {
-    margin-right: 20px;
+    margin-left: 20px;
     margin-top: 20px;
   }
   .jp-idc-notice.has-help-tabs {
@@ -106,8 +106,8 @@ https://github.com/thoughtbot/bourbon
   fill: #00be28;
   width: 25px;
   height: 25px;
-  margin: 0 1em 0 auto;
-  float: left;
+  margin: 0 auto 0 1em;
+  float: right;
 }
 
 .jp-idc-notice__header__text {
@@ -159,16 +159,16 @@ https://github.com/thoughtbot/bourbon
   }
   .jp-idc-notice__action {
     flex: 1;
-    margin: 0 8px 0 0;
-  }
-  .jp-idc-notice__action:last-child {
     margin: 0 0 0 8px;
   }
+  .jp-idc-notice__action:last-child {
+    margin: 0 8px 0 0;
+  }
   .jp-idc-notice__action:first-child {
-    padding-right: 24px;
+    padding-left: 24px;
   }
   .jp-idc-notice__action:last-child {
-    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
@@ -183,7 +183,7 @@ https://github.com/thoughtbot/bourbon
 }
 
 .jp-idc-notice.is-dismissible .jp-idc-notice__separator {
-  margin-right: -46px;
+  margin-left: -46px;
 }
 
 @media only screen and (min-width: 782px) {
@@ -191,7 +191,7 @@ https://github.com/thoughtbot/bourbon
     margin: 0 -12px 0 -12px;
   }
   .jp-idc-notice.is-dismissible .jp-idc-notice__separator {
-    margin-right: -38px;
+    margin-left: -38px;
   }
 }
 
@@ -213,5 +213,3 @@ https://github.com/thoughtbot/bourbon
     line-height: 24px;
   }
 }
-
-/*# sourceMappingURL=jetpack-idc.css.map */
