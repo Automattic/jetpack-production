@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: Replace the usage of Jetpack_IDC with Identity_Crisis.
 - Update Sync test_get_post_types_method test.
 
+### Bug fixes
+- Instant Search: don't photon-ize SVG images as they're not supported by Photon
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 9.9 release cycle.
 
