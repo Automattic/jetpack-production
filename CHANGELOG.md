@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Sync test_get_post_types_method test.
 
 ### Bug fixes
+- Fixed regression introduced in posts page icon notification WP-Admin edit.php page.
 - Instant Search: don't photon-ize SVG images as they're not supported by Photon
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
