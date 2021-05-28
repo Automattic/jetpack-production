@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Notice: Undefined variable: poster_url
 - Init 9.9 release cycle.
 - P2: Conditionally hide admin menu items for hubs/spaces
+- Story Block: Fix syncing muted state
 
 ## 9.8-beta - 2021-05-25
 ### Enhancements
