@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add two jetpack/v4 endpoints to retrieve and delete a site's purchase token
 - Init 9.9 release cycle.
+- P2: Conditionally hide admin menu items for hubs/spaces
 
 ## 9.8-beta - 2021-05-25
 ### Enhancements
