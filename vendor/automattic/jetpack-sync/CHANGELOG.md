@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Sync: Adding the Identity_Crisis package.
 - Updated package dependencies.
+- Updated package dependencies.
 
 ### Deprecated
 - Deprecated URL methods in `Automattic\Jetpack\Sync\Functions` in favor of `Automattic\Jetpack\Connection\Urls`.

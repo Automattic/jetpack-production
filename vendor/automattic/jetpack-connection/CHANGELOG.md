@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added Urls class, migrated from Sync Functions.
 - Add new 'connection/authorize_url' endpoint.
+- Enable site-level authentication (blog token) for REST API endpoints
 
 ## [1.27.0] - 2021-05-25
 ### Added

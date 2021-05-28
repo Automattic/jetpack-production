@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.13.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Added 'purchase_token' option for logged-out user purchases on WordPress.com
+
 ## [1.12.1] - 2021-05-25
 ### Changed
 - Updated package dependencies.
@@ -107,6 +114,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
+[1.13.0-alpha]: https://github.com/Automattic/jetpack-options/compare/v1.12.1...v1.13.0-alpha
 [1.12.1]: https://github.com/Automattic/jetpack-options/compare/v1.12.0...v1.12.1
 [1.12.0]: https://github.com/Automattic/jetpack-options/compare/v1.11.4...v1.12.0
 [1.11.4]: https://github.com/Automattic/jetpack-options/compare/v1.11.3...v1.11.4
