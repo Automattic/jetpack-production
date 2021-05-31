@@ -2,6 +2,18 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 9.9-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Fixed regression introduced in posts page icon notification WP-Admin edit.php page.
+- Fix invalid `@media only` block styles
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fix Notice: Undefined variable: poster_url
+- Story Block: Fix syncing muted state
+
 ## 9.8-beta - 2021-05-25
 ### Enhancements
 - Contact Form: the "Feedback > Export CSV" submenu entry has been removed. The export functionality is still available in "Feedback > Form Responses".
