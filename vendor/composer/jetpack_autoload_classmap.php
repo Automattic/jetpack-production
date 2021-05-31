@@ -330,10 +330,6 @@ return array(
 		'version' => '1.5.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-partner/src/class-partner.php'
 	),
-	'Automattic\\Jetpack\\Redirect' => array(
-		'version' => '1.6.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-redirect/src/class-redirect.php'
-	),
 	'Automattic\\Jetpack\\Error' => array(
 		'version' => '1.3.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-error/src/class-error.php'
@@ -433,6 +429,10 @@ return array(
 	'Automattic\\Jetpack\\Heartbeat' => array(
 		'version' => '1.3.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-heartbeat/src/class-heartbeat.php'
+	),
+	'Automattic\\Jetpack\\Redirect' => array(
+		'version' => '1.6.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-redirect/src/class-redirect.php'
 	),
 	'Automattic\\Jetpack\\Roles' => array(
 		'version' => '1.4.9999999.9999999-dev',

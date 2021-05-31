@@ -100,7 +100,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '85524e25a5542947a49d07d18225d39a6445e0f5',
+      'reference' => '8de70607b366e0779848820dcd073910f2df2043',
     ),
     'automattic/jetpack-connection-ui' => 
     array (
