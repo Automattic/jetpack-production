@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fixed regression introduced in posts page icon notification WP-Admin edit.php page.
+- Fix invalid `@media only` block styles
 - Instant Search: don't photon-ize SVG images as they're not supported by Photon
 - Search: don't open overlay when user is composing text using an input method editor (Chinese, Japanese, Korean and Indic languages)
 
