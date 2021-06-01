@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Jetpack: Replace the usage of Jetpack_IDC with Identity_Crisis.
+- Repeat Visitor Block: Add JS and PHP block fixture tests.
 - Update Sync test_get_post_types_method test.
 
 ### Bug fixes
