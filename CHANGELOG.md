@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Carousel: harden fetching comments in Carousel view.
 - Fixed regression introduced in posts page icon notification WP-Admin edit.php page.
 - Fix invalid `@media only` block styles
 - Instant Search: don't photon-ize SVG images as they're not supported by Photon
