@@ -86,1134 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../../js-packages/connection/components/connect-user/index.jsx":
-/*!***********************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/components/connect-user/index.jsx ***!
-  \***********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "../../js-packages/connection/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _in_place_connection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../in-place-connection */ "../../js-packages/connection/components/in-place-connection/index.jsx");
-/* harmony import */ var _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../tools/jetpack-rest-api-client */ "../../js-packages/connection/tools/jetpack-rest-api-client/index.jsx");
-
-
-/**
- * External dependencies
- */
-
-
-
-/**
- * Internal dependencies
- */
-
-
-
-/**
- * The user connection component.
- *
- * @param {object} props -- The properties.
- * @param {Function} props.redirectFunc -- The redirect function (`window.location.assign()` by default).
- * @param {string} props.connectUrl -- The authorization URL (no-iframe).
- * @param {string} props.redirectUri -- The redirect admin URI.
- * @param {string} props.inPlaceTitle -- The title for the In-Place Connection component.
- * @param {boolean} props.forceCalypsoFlow -- Whether to go straight to Calypso flow, skipping the In-Place flow.
- * @param {Function} props.onComplete -- The callback to be called when the connection is fully established.
- * @param {string} props.from -- Where the connection request is coming from.
- * @param {boolean} props.displayTOS -- Whether the site has connection owner connected.
- *
- * @returns {React.Component} The RNA connection component.
- */
-
-var ConnectUser = function ConnectUser(props) {
-  var redirectFunc = props.redirectFunc,
-      connectUrl = props.connectUrl,
-      redirectUri = props.redirectUri,
-      inPlaceTitle = props.inPlaceTitle,
-      forceCalypsoFlow = props.forceCalypsoFlow,
-      from = props.from,
-      onComplete = props.onComplete,
-      displayTOS = props.displayTOS;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      authorizationUrl = _useState2[0],
-      setAuthorizationUrl = _useState2[1];
-
-  if (connectUrl && connectUrl !== authorizationUrl) {
-    setAuthorizationUrl(connectUrl);
-  }
-  /**
-   * Fetch the authorization URL on the first render.
-   * To be only run once.
-   */
-
-
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    if (!authorizationUrl) {
-      _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__["default"].fetchAuthorizationUrl(redirectUri).then(function (response) {
-        return setAuthorizationUrl(response.authorizeUrl);
-      }).catch(function (error) {
-        throw error;
-      });
-    }
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  if (!authorizationUrl) {
-    return null;
-  }
-
-  if (forceCalypsoFlow) {
-    redirectFunc(authorizationUrl + (from ? (authorizationUrl.includes('?') ? '&' : '?') + 'from=' + encodeURIComponent(from) : ''));
-    return null;
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_in_place_connection__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    connectUrl: authorizationUrl,
-    title: inPlaceTitle,
-    onComplete: onComplete,
-    displayTOS: displayTOS
-  });
-};
-
-ConnectUser.propTypes = {
-  connectUrl: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
-  redirectUri: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string.isRequired,
-  inPlaceTitle: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
-  forceCalypsoFlow: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
-  onComplete: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
-  from: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
-  displayTOS: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool.isRequired,
-  redirectFunc: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func
-};
-ConnectUser.defaultProps = {
-  redirectFunc: function redirectFunc(url) {
-    return window.location.assign(url);
-  },
-  inPlaceTitle: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Connect your WordPress.com account', 'jetpack'),
-  forceCalypsoFlow: false
-};
-/* harmony default export */ __webpack_exports__["default"] = (ConnectUser);
-
-/***/ }),
-
-/***/ "../../js-packages/connection/components/in-place-connection/index.jsx":
-/*!******************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/components/in-place-connection/index.jsx ***!
-  \******************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../js-packages/connection/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/in-place-connection/style.scss");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
-/**
- * External dependencies
- */
-
-
-
-/**
- * Internal dependencies
- */
-
-
-/**
- * The in-place connection component.
- *
- * @param {object} props -- The properties.
- * @param {string} props.title -- Element title.
- * @param {boolean} props.isLoading -- Whether the element is still loading.
- * @param {string|number} props.width -- Iframe width.
- * @param {string|number} props.height -- Iframe height.
- * @param {boolean} props.displayTOS -- Whether the site has connection owner connected.
- * @param {boolean} props.scrollToIframe -- Whether we need to auto-scroll the window upon element rendering.
- * @param {string} props.connectUrl -- The connection URL.
- * @param {Function} props.onComplete -- The callback to be called upon complete of the connection process.
- * @param {Function} props.onThirdPartyCookiesBlocked -- The callback to be called if third-party cookies are disabled.
- * @param {string} props.location -- Component location identifier passed to WP.com.
- *
- * @returns {React.Component} The in-place connection component.
- */
-
-var InPlaceConnection = function InPlaceConnection(props) {
-  var title = props.title,
-      isLoading = props.isLoading,
-      width = props.width,
-      displayTOS = props.displayTOS,
-      scrollToIframe = props.scrollToIframe,
-      connectUrl = props.connectUrl,
-      onComplete = props.onComplete,
-      onThirdPartyCookiesBlocked = props.onThirdPartyCookiesBlocked,
-      location = props.location;
-  var height = props.height;
-  var iframeWrapRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
-  var iframeRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
-  /**
-   * Handles messages received from inside the iframe.
-   *
-   * @param {object} e -- Event object.
-   */
-
-  var receiveData = function receiveData(e) {
-    if (!iframeRef.current || e.source !== iframeRef.current.contentWindow) {
-      return;
-    }
-
-    switch (e.data) {
-      case 'close':
-        // Remove listener, our job here is done.
-        window.removeEventListener('message', receiveData);
-
-        if (onComplete) {
-          onComplete();
-        }
-
-        break;
-
-      case 'wpcom_nocookie':
-        // Third-party cookies blocked.
-        if (onThirdPartyCookiesBlocked) {
-          onThirdPartyCookiesBlocked();
-        }
-
-        break;
-    }
-  };
-
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(
-  /**
-   * The component initialization.
-   */
-  function () {
-    // Scroll to the iframe container
-    if (scrollToIframe) {
-      window.scrollTo(0, iframeWrapRef.current.offsetTop - 10);
-    } // Add an event listener to identify successful authorization via iframe.
-
-
-    window.addEventListener('message', receiveData);
-  }); // The URL looks like https://jetpack.wordpress.com/jetpack.authorize_iframe/1/. We need to include the trailing
-  // slash below so that we don't end up with something like /jetpack.authorize_iframe_iframe/
-
-  var src = connectUrl.replace('authorize/', 'authorize_iframe/');
-
-  if (!src.includes('?')) {
-    src += '?';
-  }
-
-  if (displayTOS) {
-    src += '&display-tos';
-    height = (parseInt(height) + 50).toString();
-  }
-
-  src += '&iframe_height=' + parseInt(height);
-
-  if (location) {
-    src += '&iframe_source=' + location;
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "dops-card fade-in jp-iframe-wrap",
-    ref: iframeWrapRef
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, title), isLoading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Loading…', 'jetpack')) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-    title: title,
-    width: width,
-    height: height,
-    src: src,
-    ref: iframeRef
-  }));
-};
-
-InPlaceConnection.propTypes = {
-  title: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  isLoading: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-  width: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
-  height: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
-  connectUrl: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  displayTOS: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired,
-  scrollToIframe: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-  onComplete: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-  onThirdPartyCookiesBlocked: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-  location: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string
-};
-InPlaceConnection.defaultProps = {
-  isLoading: false,
-  height: '300',
-  width: '100%',
-  scrollToIframe: false
-};
-/* harmony default export */ __webpack_exports__["default"] = (InPlaceConnection);
-
-/***/ }),
-
-/***/ "../../js-packages/connection/components/in-place-connection/style.scss":
-/*!*******************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/components/in-place-connection/style.scss ***!
-  \*******************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "../../js-packages/connection/components/main/index.jsx":
-/*!***************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/components/main/index.jsx ***!
-  \***************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread2 */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/objectSpread2.js");
-/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "../../js-packages/connection/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../tools/jetpack-rest-api-client */ "../../js-packages/connection/tools/jetpack-rest-api-client/index.jsx");
-/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
-
-
-
-/**
- * External dependencies
- */
-
-
-
-
-/**
- * Internal dependencies
- */
-
-
-
-/**
- * The RNA connection component.
- *
- * @param {object} props -- The properties.
- * @param {string} props.connectLabel -- The "Connect" button label.
- * @param {string} props.inPlaceTitle -- The title for the In-Place Connection component.
- * @param {boolean} props.forceCalypsoFlow -- Whether to go straight to Calypso flow, skipping the In-Place flow.
- * @param {string} props.apiRoot -- API root URL, required.
- * @param {string} props.apiNonce -- API Nonce, required.
- * @param {string} props.registrationNonce -- Separate registration nonce, required.
- * @param {Function} props.onRegistered -- The callback to be called upon registration success.
- * @param {Function} props.onUserConnected -- The callback to be called when the connection is fully established.
- *
- * @returns {React.Component} The RNA connection component.
- */
-
-var Main = function Main(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
-      isRegistering = _useState2[0],
-      setIsRegistering = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState3, 2),
-      isUserConnecting = _useState4[0],
-      setIsUserConnecting = _useState4[1];
-
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(null),
-      _useState6 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState5, 2),
-      authorizationUrl = _useState6[0],
-      setAuthorizationUrl = _useState6[1];
-
-  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      _useState8 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState7, 2),
-      isFetchingConnectionStatus = _useState8[0],
-      setIsFetchingConnectionStatus = _useState8[1];
-
-  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({}),
-      _useState10 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState9, 2),
-      connectionStatus = _useState10[0],
-      setConnectionStatus = _useState10[1];
-
-  var apiRoot = props.apiRoot,
-      apiNonce = props.apiNonce,
-      connectLabel = props.connectLabel,
-      onRegistered = props.onRegistered,
-      onUserConnected = props.onUserConnected,
-      registrationNonce = props.registrationNonce,
-      redirectUri = props.redirectUri,
-      forceCalypsoFlow = props.forceCalypsoFlow,
-      inPlaceTitle = props.inPlaceTitle,
-      from = props.from,
-      children = props.children;
-  /**
-   * Initialize the REST API.
-   */
-
-  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__["default"].setApiRoot(apiRoot);
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__["default"].setApiNonce(apiNonce);
-  }, [apiRoot, apiNonce]);
-  /**
-   * Fetch the connection status on the first render.
-   * To be only run once.
-   */
-
-  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
-    setIsFetchingConnectionStatus(true);
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__["default"].fetchSiteConnectionStatus().then(function (response) {
-      setIsFetchingConnectionStatus(false);
-      setConnectionStatus(response);
-    }).catch(function (error) {
-      setIsFetchingConnectionStatus(false);
-      throw error;
-    });
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  /**
-   * Callback for the user connection success.
-   */
-
-  var onUserConnectedCallback = Object(react__WEBPACK_IMPORTED_MODULE_2__["useCallback"])(function () {
-    setIsUserConnecting(false);
-    setConnectionStatus(function (status) {
-      return _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, status), {}, {
-        isUserConnected: true
-      });
-    });
-
-    if (onUserConnected) {
-      onUserConnected();
-    }
-  }, [setIsUserConnecting, onUserConnected]);
-  /**
-   * Initialize the site registration process.
-   */
-
-  var registerSite = Object(react__WEBPACK_IMPORTED_MODULE_2__["useCallback"])(function (e) {
-    e && e.preventDefault();
-
-    if (connectionStatus.isRegistered) {
-      setIsUserConnecting(true);
-      return;
-    }
-
-    setIsRegistering(true);
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__["default"].registerSite(registrationNonce, redirectUri).then(function (response) {
-      setIsRegistering(false);
-
-      if (onRegistered) {
-        onRegistered(response);
-      }
-
-      setAuthorizationUrl(response.authorizeUrl);
-      setIsUserConnecting(true);
-      setConnectionStatus(function (status) {
-        return _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, status), {}, {
-          isRegistered: true
-        });
-      });
-    }).catch(function (error) {
-      setIsRegistering(false);
-      throw error;
-    });
-  }, [setIsRegistering, setAuthorizationUrl, connectionStatus, setConnectionStatus, onRegistered, registrationNonce, redirectUri]);
-  var childrenCallback = Object(react__WEBPACK_IMPORTED_MODULE_2__["useCallback"])(function () {
-    if (children && {}.toString.call(children) === '[object Function]') {
-      return children(connectionStatus);
-    }
-  }, [connectionStatus, children]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "jp-connection-main"
-  }, childrenCallback(), isFetchingConnectionStatus && "Loading...", (!connectionStatus.isRegistered || !connectionStatus.isUserConnected) && !isFetchingConnectionStatus && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Button"], {
-    label: connectLabel,
-    onClick: registerSite,
-    isPrimary: true,
-    disabled: isRegistering || isUserConnecting
-  }, connectLabel), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_connect_user__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    connectUrl: authorizationUrl,
-    redirectUri: redirectUri,
-    inPlaceTitle: inPlaceTitle,
-    onComplete: onUserConnectedCallback,
-    displayTOS: connectionStatus.hasConnectedOwner || connectionStatus.isRegistered,
-    forceCalypsoFlow: forceCalypsoFlow,
-    from: from
-  }));
-};
-
-Main.propTypes = {
-  connectLabel: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
-  inPlaceTitle: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
-  forceCalypsoFlow: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool,
-  apiRoot: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string.isRequired,
-  apiNonce: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string.isRequired,
-  onRegistered: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
-  onUserConnected: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
-  registrationNonce: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string.isRequired,
-  from: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
-  redirectUri: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string.isRequired
-};
-Main.defaultProps = {
-  inPlaceTitle: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Connect your WordPress.com account', 'jetpack'),
-  forceCalypsoFlow: false,
-  connectLabel: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Connect', 'jetpack')
-};
-/* harmony default export */ __webpack_exports__["default"] = (Main);
-
-/***/ }),
-
-/***/ "../../js-packages/connection/helpers/third-party-cookies-fallback.jsx":
-/*!******************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/helpers/third-party-cookies-fallback.jsx ***!
-  \******************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/**
- * Performs the fallback redirect if third-party cookies are not available.
- *
- * @param {string} fallbackURL -- The fallback URL.
- */
-var thirdPartyCookiesFallback = function thirdPartyCookiesFallback(fallbackURL) {
-  window.location.replace(fallbackURL);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (thirdPartyCookiesFallback);
-
-/***/ }),
-
-/***/ "../../js-packages/connection/index.jsx":
-/*!***********************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/index.jsx ***!
-  \***********************************************************************************/
-/*! exports provided: JetpackConnection, InPlaceConnection, ConnectUser, thirdPartyCookiesFallbackHelper */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/main */ "../../js-packages/connection/components/main/index.jsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "JetpackConnection", function() { return _components_main__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-/* harmony import */ var _components_in_place_connection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/in-place-connection */ "../../js-packages/connection/components/in-place-connection/index.jsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InPlaceConnection", function() { return _components_in_place_connection__WEBPACK_IMPORTED_MODULE_1__["default"]; });
-
-/* harmony import */ var _components_connect_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ConnectUser", function() { return _components_connect_user__WEBPACK_IMPORTED_MODULE_2__["default"]; });
-
-/* harmony import */ var _helpers_third_party_cookies_fallback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers/third-party-cookies-fallback */ "../../js-packages/connection/helpers/third-party-cookies-fallback.jsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "thirdPartyCookiesFallbackHelper", function() { return _helpers_third_party_cookies_fallback__WEBPACK_IMPORTED_MODULE_3__["default"]; });
-
-/*
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-*/
-
-/**
- * Components.
- */
-
-
-
-/**
- * Helpers.
- */
-
-
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/arrayLikeToArray.js":
-/*!*********************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/arrayLikeToArray.js ***!
-  \*********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
-module.exports = _arrayLikeToArray;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/arrayWithHoles.js":
-/*!*******************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
-  \*******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-module.exports = _arrayWithHoles;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/assertThisInitialized.js":
-/*!**************************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
-  \**************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-module.exports = _assertThisInitialized;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/classCallCheck.js":
-/*!*******************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/classCallCheck.js ***!
-  \*******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/construct.js":
-/*!**************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/construct.js ***!
-  \**************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-var isNativeReflectConstruct = __webpack_require__(/*! ./isNativeReflectConstruct.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js");
-
-function _construct(Parent, args, Class) {
-  if (isNativeReflectConstruct()) {
-    module.exports = _construct = Reflect.construct;
-    module.exports["default"] = module.exports, module.exports.__esModule = true;
-  } else {
-    module.exports = _construct = function _construct(Parent, args, Class) {
-      var a = [null];
-      a.push.apply(a, args);
-      var Constructor = Function.bind.apply(Parent, a);
-      var instance = new Constructor();
-      if (Class) setPrototypeOf(instance, Class.prototype);
-      return instance;
-    };
-
-    module.exports["default"] = module.exports, module.exports.__esModule = true;
-  }
-
-  return _construct.apply(null, arguments);
-}
-
-module.exports = _construct;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/createSuper.js":
-/*!****************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/createSuper.js ***!
-  \****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-
-var isNativeReflectConstruct = __webpack_require__(/*! ./isNativeReflectConstruct.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js");
-
-var possibleConstructorReturn = __webpack_require__(/*! ./possibleConstructorReturn.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-
-function _createSuper(Derived) {
-  var hasNativeReflectConstruct = isNativeReflectConstruct();
-  return function _createSuperInternal() {
-    var Super = getPrototypeOf(Derived),
-        result;
-
-    if (hasNativeReflectConstruct) {
-      var NewTarget = getPrototypeOf(this).constructor;
-      result = Reflect.construct(Super, arguments, NewTarget);
-    } else {
-      result = Super.apply(this, arguments);
-    }
-
-    return possibleConstructorReturn(this, result);
-  };
-}
-
-module.exports = _createSuper;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/defineProperty.js":
-/*!*******************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/defineProperty.js ***!
-  \*******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-module.exports = _defineProperty;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/getPrototypeOf.js":
-/*!*******************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \*******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  module.exports["default"] = module.exports, module.exports.__esModule = true;
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/inherits.js":
-/*!*************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/inherits.js ***!
-  \*************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-
-module.exports = _inherits;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/isNativeFunction.js":
-/*!*********************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/isNativeFunction.js ***!
-  \*********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _isNativeFunction(fn) {
-  return Function.toString.call(fn).indexOf("[native code]") !== -1;
-}
-
-module.exports = _isNativeFunction;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js":
-/*!*****************************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js ***!
-  \*****************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-module.exports = _isNativeReflectConstruct;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
-/*!*************************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
-  \*************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _iterableToArrayLimit(arr, i) {
-  var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]);
-
-  if (_i == null) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-
-  var _s, _e;
-
-  try {
-    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-module.exports = _iterableToArrayLimit;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/nonIterableRest.js":
-/*!********************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/nonIterableRest.js ***!
-  \********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-module.exports = _nonIterableRest;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/objectSpread2.js":
-/*!******************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/objectSpread2.js ***!
-  \******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var defineProperty = __webpack_require__(/*! ./defineProperty.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/defineProperty.js");
-
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-
-    if (enumerableOnly) {
-      symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      });
-    }
-
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
-  }
-
-  return target;
-}
-
-module.exports = _objectSpread2;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
-/*!******************************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
-  \******************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/typeof.js")["default"];
-
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/setPrototypeOf.js":
-/*!*******************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
-  \*******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _setPrototypeOf(o, p) {
-  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  module.exports["default"] = module.exports, module.exports.__esModule = true;
-  return _setPrototypeOf(o, p);
-}
-
-module.exports = _setPrototypeOf;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/slicedToArray.js":
-/*!******************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/slicedToArray.js ***!
-  \******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/arrayWithHoles.js");
-
-var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
-
-var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
-
-var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/nonIterableRest.js");
-
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
-}
-
-module.exports = _slicedToArray;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/typeof.js":
-/*!***********************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/typeof.js ***!
-  \***********************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-
-    module.exports["default"] = module.exports, module.exports.__esModule = true;
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-
-    module.exports["default"] = module.exports, module.exports.__esModule = true;
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js":
-/*!*******************************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js ***!
-  \*******************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
-}
-
-module.exports = _unsupportedIterableToArray;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/@babel/runtime/helpers/wrapNativeSuper.js":
-/*!********************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/@babel/runtime/helpers/wrapNativeSuper.js ***!
-  \********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-var isNativeFunction = __webpack_require__(/*! ./isNativeFunction.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/isNativeFunction.js");
-
-var construct = __webpack_require__(/*! ./construct.js */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/construct.js");
-
-function _wrapNativeSuper(Class) {
-  var _cache = typeof Map === "function" ? new Map() : undefined;
-
-  module.exports = _wrapNativeSuper = function _wrapNativeSuper(Class) {
-    if (Class === null || !isNativeFunction(Class)) return Class;
-
-    if (typeof Class !== "function") {
-      throw new TypeError("Super expression must either be null or a function");
-    }
-
-    if (typeof _cache !== "undefined") {
-      if (_cache.has(Class)) return _cache.get(Class);
-
-      _cache.set(Class, Wrapper);
-    }
-
-    function Wrapper() {
-      return construct(Class, arguments, getPrototypeOf(this).constructor);
-    }
-
-    Wrapper.prototype = Object.create(Class.prototype, {
-      constructor: {
-        value: Wrapper,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-    return setPrototypeOf(Wrapper, Class);
-  };
-
-  module.exports["default"] = module.exports, module.exports.__esModule = true;
-  return _wrapNativeSuper(Class);
-}
-
-module.exports = _wrapNativeSuper;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../js-packages/connection/node_modules/object-assign/index.js":
-/*!*************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/object-assign/index.js ***!
-  \*************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/object-assign@4.1.1/node_modules/object-assign/index.js":
+/*!********************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/node_modules/.pnpm/object-assign@4.1.1/node_modules/object-assign/index.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1312,10 +188,10 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
-/***/ "../../js-packages/connection/node_modules/prop-types/checkPropTypes.js":
-/*!*******************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/prop-types/checkPropTypes.js ***!
-  \*******************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/checkPropTypes.js":
+/*!************************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/checkPropTypes.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1332,7 +208,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 var printWarning = function() {};
 
 if (undefined !== 'production') {
-  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "../../js-packages/connection/node_modules/prop-types/lib/ReactPropTypesSecret.js");
+  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/lib/ReactPropTypesSecret.js");
   var loggedTypeFailures = {};
   var has = Function.call.bind(Object.prototype.hasOwnProperty);
 
@@ -1426,10 +302,10 @@ module.exports = checkPropTypes;
 
 /***/ }),
 
-/***/ "../../js-packages/connection/node_modules/prop-types/factoryWithThrowingShims.js":
-/*!*****************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/prop-types/factoryWithThrowingShims.js ***!
-  \*****************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/factoryWithThrowingShims.js":
+/*!**********************************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/factoryWithThrowingShims.js ***!
+  \**********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1443,7 +319,7 @@ module.exports = checkPropTypes;
 
 
 
-var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "../../js-packages/connection/node_modules/prop-types/lib/ReactPropTypesSecret.js");
+var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 function emptyFunction() {}
 function emptyFunctionWithReset() {}
@@ -1502,10 +378,10 @@ module.exports = function() {
 
 /***/ }),
 
-/***/ "../../js-packages/connection/node_modules/prop-types/factoryWithTypeCheckers.js":
-/*!****************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/prop-types/factoryWithTypeCheckers.js ***!
-  \****************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/factoryWithTypeCheckers.js":
+/*!*********************************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/factoryWithTypeCheckers.js ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1519,11 +395,11 @@ module.exports = function() {
 
 
 
-var ReactIs = __webpack_require__(/*! react-is */ "../../js-packages/connection/node_modules/react-is/index.js");
-var assign = __webpack_require__(/*! object-assign */ "../../js-packages/connection/node_modules/object-assign/index.js");
+var ReactIs = __webpack_require__(/*! react-is */ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/index.js");
+var assign = __webpack_require__(/*! object-assign */ "../../../node_modules/.pnpm/object-assign@4.1.1/node_modules/object-assign/index.js");
 
-var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "../../js-packages/connection/node_modules/prop-types/lib/ReactPropTypesSecret.js");
-var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "../../js-packages/connection/node_modules/prop-types/checkPropTypes.js");
+var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/lib/ReactPropTypesSecret.js");
+var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/checkPropTypes.js");
 
 var has = Function.call.bind(Object.prototype.hasOwnProperty);
 var printWarning = function() {};
@@ -2105,10 +981,10 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 /***/ }),
 
-/***/ "../../js-packages/connection/node_modules/prop-types/index.js":
-/*!**********************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/prop-types/index.js ***!
-  \**********************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js":
+/*!***************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2120,25 +996,25 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
  */
 
 if (undefined !== 'production') {
-  var ReactIs = __webpack_require__(/*! react-is */ "../../js-packages/connection/node_modules/react-is/index.js");
+  var ReactIs = __webpack_require__(/*! react-is */ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/index.js");
 
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "../../js-packages/connection/node_modules/prop-types/factoryWithTypeCheckers.js")(ReactIs.isElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/factoryWithTypeCheckers.js")(ReactIs.isElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(/*! ./factoryWithThrowingShims */ "../../js-packages/connection/node_modules/prop-types/factoryWithThrowingShims.js")();
+  module.exports = __webpack_require__(/*! ./factoryWithThrowingShims */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/factoryWithThrowingShims.js")();
 }
 
 
 /***/ }),
 
-/***/ "../../js-packages/connection/node_modules/prop-types/lib/ReactPropTypesSecret.js":
-/*!*****************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
-  \*****************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/lib/ReactPropTypesSecret.js":
+/*!**********************************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
+  \**********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2159,10 +1035,10 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
-/***/ "../../js-packages/connection/node_modules/react-is/cjs/react-is.development.js":
-/*!***************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/react-is/cjs/react-is.development.js ***!
-  \***************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.development.js":
+/*!*******************************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.development.js ***!
+  \*******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2352,10 +1228,10 @@ exports.typeOf = typeOf;
 
 /***/ }),
 
-/***/ "../../js-packages/connection/node_modules/react-is/cjs/react-is.production.min.js":
-/*!******************************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/react-is/cjs/react-is.production.min.js ***!
-  \******************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.production.min.js":
+/*!**********************************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.production.min.js ***!
+  \**********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2379,10 +1255,10 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 /***/ }),
 
-/***/ "../../js-packages/connection/node_modules/react-is/index.js":
-/*!********************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/node_modules/react-is/index.js ***!
-  \********************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/index.js":
+/*!************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/index.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2390,10 +1266,577 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 if (undefined === 'production') {
-  module.exports = __webpack_require__(/*! ./cjs/react-is.production.min.js */ "../../js-packages/connection/node_modules/react-is/cjs/react-is.production.min.js");
+  module.exports = __webpack_require__(/*! ./cjs/react-is.production.min.js */ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.production.min.js");
 } else {
-  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "../../js-packages/connection/node_modules/react-is/cjs/react-is.development.js");
+  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.development.js");
 }
+
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/connect-user/index.jsx":
+/*!***********************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/components/connect-user/index.jsx ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/slicedToArray'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _in_place_connection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../in-place-connection */ "../../js-packages/connection/components/in-place-connection/index.jsx");
+/* harmony import */ var _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../tools/jetpack-rest-api-client */ "../../js-packages/connection/tools/jetpack-rest-api-client/index.jsx");
+
+
+/**
+ * External dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+/**
+ * The user connection component.
+ *
+ * @param {object} props -- The properties.
+ * @param {Function} props.redirectFunc -- The redirect function (`window.location.assign()` by default).
+ * @param {string} props.connectUrl -- The authorization URL (no-iframe).
+ * @param {string} props.redirectUri -- The redirect admin URI.
+ * @param {string} props.inPlaceTitle -- The title for the In-Place Connection component.
+ * @param {boolean} props.forceCalypsoFlow -- Whether to go straight to Calypso flow, skipping the In-Place flow.
+ * @param {Function} props.onComplete -- The callback to be called when the connection is fully established.
+ * @param {string} props.from -- Where the connection request is coming from.
+ * @param {boolean} props.displayTOS -- Whether the site has connection owner connected.
+ *
+ * @returns {React.Component} The RNA connection component.
+ */
+
+var ConnectUser = function ConnectUser(props) {
+  var redirectFunc = props.redirectFunc,
+      connectUrl = props.connectUrl,
+      redirectUri = props.redirectUri,
+      inPlaceTitle = props.inPlaceTitle,
+      forceCalypsoFlow = props.forceCalypsoFlow,
+      from = props.from,
+      onComplete = props.onComplete,
+      displayTOS = props.displayTOS;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null),
+      _useState2 = !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/slicedToArray'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(_useState, 2),
+      authorizationUrl = _useState2[0],
+      setAuthorizationUrl = _useState2[1];
+
+  if (connectUrl && connectUrl !== authorizationUrl) {
+    setAuthorizationUrl(connectUrl);
+  }
+  /**
+   * Fetch the authorization URL on the first render.
+   * To be only run once.
+   */
+
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    if (!authorizationUrl) {
+      _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__["default"].fetchAuthorizationUrl(redirectUri).then(function (response) {
+        return setAuthorizationUrl(response.authorizeUrl);
+      }).catch(function (error) {
+        throw error;
+      });
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  if (!authorizationUrl) {
+    return null;
+  }
+
+  if (forceCalypsoFlow) {
+    redirectFunc(authorizationUrl + (from ? (authorizationUrl.includes('?') ? '&' : '?') + 'from=' + encodeURIComponent(from) : ''));
+    return null;
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_in_place_connection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    connectUrl: authorizationUrl,
+    title: inPlaceTitle,
+    onComplete: onComplete,
+    displayTOS: displayTOS
+  });
+};
+
+ConnectUser.propTypes = {
+  connectUrl: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+  redirectUri: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string.isRequired,
+  inPlaceTitle: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+  forceCalypsoFlow: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+  onComplete: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
+  from: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+  displayTOS: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool.isRequired,
+  redirectFunc: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func
+};
+ConnectUser.defaultProps = {
+  redirectFunc: function redirectFunc(url) {
+    return window.location.assign(url);
+  },
+  inPlaceTitle: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Connect your WordPress.com account', 'jetpack'),
+  forceCalypsoFlow: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (ConnectUser);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/in-place-connection/index.jsx":
+/*!******************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/components/in-place-connection/index.jsx ***!
+  \******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/in-place-connection/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+/**
+ * External dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+/**
+ * The in-place connection component.
+ *
+ * @param {object} props -- The properties.
+ * @param {string} props.title -- Element title.
+ * @param {boolean} props.isLoading -- Whether the element is still loading.
+ * @param {string|number} props.width -- Iframe width.
+ * @param {string|number} props.height -- Iframe height.
+ * @param {boolean} props.displayTOS -- Whether the site has connection owner connected.
+ * @param {boolean} props.scrollToIframe -- Whether we need to auto-scroll the window upon element rendering.
+ * @param {string} props.connectUrl -- The connection URL.
+ * @param {Function} props.onComplete -- The callback to be called upon complete of the connection process.
+ * @param {Function} props.onThirdPartyCookiesBlocked -- The callback to be called if third-party cookies are disabled.
+ * @param {string} props.location -- Component location identifier passed to WP.com.
+ *
+ * @returns {React.Component} The in-place connection component.
+ */
+
+var InPlaceConnection = function InPlaceConnection(props) {
+  var title = props.title,
+      isLoading = props.isLoading,
+      width = props.width,
+      displayTOS = props.displayTOS,
+      scrollToIframe = props.scrollToIframe,
+      connectUrl = props.connectUrl,
+      onComplete = props.onComplete,
+      onThirdPartyCookiesBlocked = props.onThirdPartyCookiesBlocked,
+      location = props.location;
+  var height = props.height;
+  var iframeWrapRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  var iframeRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  /**
+   * Handles messages received from inside the iframe.
+   *
+   * @param {object} e -- Event object.
+   */
+
+  var receiveData = function receiveData(e) {
+    if (!iframeRef.current || e.source !== iframeRef.current.contentWindow) {
+      return;
+    }
+
+    switch (e.data) {
+      case 'close':
+        // Remove listener, our job here is done.
+        window.removeEventListener('message', receiveData);
+
+        if (onComplete) {
+          onComplete();
+        }
+
+        break;
+
+      case 'wpcom_nocookie':
+        // Third-party cookies blocked.
+        if (onThirdPartyCookiesBlocked) {
+          onThirdPartyCookiesBlocked();
+        }
+
+        break;
+    }
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(
+  /**
+   * The component initialization.
+   */
+  function () {
+    // Scroll to the iframe container
+    if (scrollToIframe) {
+      window.scrollTo(0, iframeWrapRef.current.offsetTop - 10);
+    } // Add an event listener to identify successful authorization via iframe.
+
+
+    window.addEventListener('message', receiveData);
+  }); // The URL looks like https://jetpack.wordpress.com/jetpack.authorize_iframe/1/. We need to include the trailing
+  // slash below so that we don't end up with something like /jetpack.authorize_iframe_iframe/
+
+  var src = connectUrl.replace('authorize/', 'authorize_iframe/');
+
+  if (!src.includes('?')) {
+    src += '?';
+  }
+
+  if (displayTOS) {
+    src += '&display-tos';
+    height = (parseInt(height) + 50).toString();
+  }
+
+  src += '&iframe_height=' + parseInt(height);
+
+  if (location) {
+    src += '&iframe_source=' + location;
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dops-card fade-in jp-iframe-wrap",
+    ref: iframeWrapRef
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, title), isLoading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Loading…', 'jetpack')) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+    title: title,
+    width: width,
+    height: height,
+    src: src,
+    ref: iframeRef
+  }));
+};
+
+InPlaceConnection.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
+  isLoading: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
+  width: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
+  height: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
+  connectUrl: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
+  displayTOS: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired,
+  scrollToIframe: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
+  onComplete: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
+  onThirdPartyCookiesBlocked: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
+  location: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string
+};
+InPlaceConnection.defaultProps = {
+  isLoading: false,
+  height: '300',
+  width: '100%',
+  scrollToIframe: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (InPlaceConnection);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/in-place-connection/style.scss":
+/*!*******************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/components/in-place-connection/style.scss ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/main/index.jsx":
+/*!***************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/components/main/index.jsx ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/objectSpread2'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/slicedToArray'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../tools/jetpack-rest-api-client */ "../../js-packages/connection/tools/jetpack-rest-api-client/index.jsx");
+/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
+
+
+
+/**
+ * External dependencies
+ */
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+/**
+ * The RNA connection component.
+ *
+ * @param {object} props -- The properties.
+ * @param {string} props.connectLabel -- The "Connect" button label.
+ * @param {string} props.inPlaceTitle -- The title for the In-Place Connection component.
+ * @param {boolean} props.forceCalypsoFlow -- Whether to go straight to Calypso flow, skipping the In-Place flow.
+ * @param {string} props.apiRoot -- API root URL, required.
+ * @param {string} props.apiNonce -- API Nonce, required.
+ * @param {string} props.registrationNonce -- Separate registration nonce, required.
+ * @param {Function} props.onRegistered -- The callback to be called upon registration success.
+ * @param {Function} props.onUserConnected -- The callback to be called when the connection is fully established.
+ *
+ * @returns {React.Component} The RNA connection component.
+ */
+
+var Main = function Main(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      _useState2 = !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/slicedToArray'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(_useState, 2),
+      isRegistering = _useState2[0],
+      setIsRegistering = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      _useState4 = !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/slicedToArray'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(_useState3, 2),
+      isUserConnecting = _useState4[0],
+      setIsUserConnecting = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null),
+      _useState6 = !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/slicedToArray'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(_useState5, 2),
+      authorizationUrl = _useState6[0],
+      setAuthorizationUrl = _useState6[1];
+
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      _useState8 = !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/slicedToArray'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(_useState7, 2),
+      isFetchingConnectionStatus = _useState8[0],
+      setIsFetchingConnectionStatus = _useState8[1];
+
+  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({}),
+      _useState10 = !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/slicedToArray'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(_useState9, 2),
+      connectionStatus = _useState10[0],
+      setConnectionStatus = _useState10[1];
+
+  var apiRoot = props.apiRoot,
+      apiNonce = props.apiNonce,
+      connectLabel = props.connectLabel,
+      onRegistered = props.onRegistered,
+      onUserConnected = props.onUserConnected,
+      registrationNonce = props.registrationNonce,
+      redirectUri = props.redirectUri,
+      forceCalypsoFlow = props.forceCalypsoFlow,
+      inPlaceTitle = props.inPlaceTitle,
+      from = props.from,
+      children = props.children;
+  /**
+   * Initialize the REST API.
+   */
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__["default"].setApiRoot(apiRoot);
+    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__["default"].setApiNonce(apiNonce);
+  }, [apiRoot, apiNonce]);
+  /**
+   * Fetch the connection status on the first render.
+   * To be only run once.
+   */
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    setIsFetchingConnectionStatus(true);
+    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__["default"].fetchSiteConnectionStatus().then(function (response) {
+      setIsFetchingConnectionStatus(false);
+      setConnectionStatus(response);
+    }).catch(function (error) {
+      setIsFetchingConnectionStatus(false);
+      throw error;
+    });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  /**
+   * Callback for the user connection success.
+   */
+
+  var onUserConnectedCallback = Object(react__WEBPACK_IMPORTED_MODULE_1__["useCallback"])(function () {
+    setIsUserConnecting(false);
+    setConnectionStatus(function (status) {
+      return !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/objectSpread2'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/objectSpread2'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())({}, status), {}, {
+        isUserConnected: true
+      });
+    });
+
+    if (onUserConnected) {
+      onUserConnected();
+    }
+  }, [setIsUserConnecting, onUserConnected]);
+  /**
+   * Initialize the site registration process.
+   */
+
+  var registerSite = Object(react__WEBPACK_IMPORTED_MODULE_1__["useCallback"])(function (e) {
+    e && e.preventDefault();
+
+    if (connectionStatus.isRegistered) {
+      setIsUserConnecting(true);
+      return;
+    }
+
+    setIsRegistering(true);
+    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__["default"].registerSite(registrationNonce, redirectUri).then(function (response) {
+      setIsRegistering(false);
+
+      if (onRegistered) {
+        onRegistered(response);
+      }
+
+      setAuthorizationUrl(response.authorizeUrl);
+      setIsUserConnecting(true);
+      setConnectionStatus(function (status) {
+        return !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/objectSpread2'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/objectSpread2'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())({}, status), {}, {
+          isRegistered: true
+        });
+      });
+    }).catch(function (error) {
+      setIsRegistering(false);
+      throw error;
+    });
+  }, [setIsRegistering, setAuthorizationUrl, connectionStatus, setConnectionStatus, onRegistered, registrationNonce, redirectUri]);
+  var childrenCallback = Object(react__WEBPACK_IMPORTED_MODULE_1__["useCallback"])(function () {
+    if (children && {}.toString.call(children) === '[object Function]') {
+      return children(connectionStatus);
+    }
+  }, [connectionStatus, children]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "jp-connection-main"
+  }, childrenCallback(), isFetchingConnectionStatus && "Loading...", (!connectionStatus.isRegistered || !connectionStatus.isUserConnected) && !isFetchingConnectionStatus && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+    label: connectLabel,
+    onClick: registerSite,
+    isPrimary: true,
+    disabled: isRegistering || isUserConnecting
+  }, connectLabel), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_connect_user__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    connectUrl: authorizationUrl,
+    redirectUri: redirectUri,
+    inPlaceTitle: inPlaceTitle,
+    onComplete: onUserConnectedCallback,
+    displayTOS: connectionStatus.hasConnectedOwner || connectionStatus.isRegistered,
+    forceCalypsoFlow: forceCalypsoFlow,
+    from: from
+  }));
+};
+
+Main.propTypes = {
+  connectLabel: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+  inPlaceTitle: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+  forceCalypsoFlow: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
+  apiRoot: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string.isRequired,
+  apiNonce: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string.isRequired,
+  onRegistered: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+  onUserConnected: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+  registrationNonce: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string.isRequired,
+  from: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+  redirectUri: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string.isRequired
+};
+Main.defaultProps = {
+  inPlaceTitle: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Connect your WordPress.com account', 'jetpack'),
+  forceCalypsoFlow: false,
+  connectLabel: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Connect', 'jetpack')
+};
+/* harmony default export */ __webpack_exports__["default"] = (Main);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/helpers/third-party-cookies-fallback.jsx":
+/*!******************************************************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/helpers/third-party-cookies-fallback.jsx ***!
+  \******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Performs the fallback redirect if third-party cookies are not available.
+ *
+ * @param {string} fallbackURL -- The fallback URL.
+ */
+var thirdPartyCookiesFallback = function thirdPartyCookiesFallback(fallbackURL) {
+  window.location.replace(fallbackURL);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (thirdPartyCookiesFallback);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/index.jsx":
+/*!***********************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/index.jsx ***!
+  \***********************************************************************************/
+/*! exports provided: JetpackConnection, InPlaceConnection, ConnectUser, thirdPartyCookiesFallbackHelper */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/main */ "../../js-packages/connection/components/main/index.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "JetpackConnection", function() { return _components_main__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _components_in_place_connection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/in-place-connection */ "../../js-packages/connection/components/in-place-connection/index.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InPlaceConnection", function() { return _components_in_place_connection__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _components_connect_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ConnectUser", function() { return _components_connect_user__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _helpers_third_party_cookies_fallback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers/third-party-cookies-fallback */ "../../js-packages/connection/helpers/third-party-cookies-fallback.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "thirdPartyCookiesFallbackHelper", function() { return _helpers_third_party_cookies_fallback__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/*
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+
+/**
+ * Components.
+ */
+
+
+
+/**
+ * Helpers.
+ */
+
 
 
 /***/ }),
@@ -2412,16 +1855,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Api404Error", function() { return Api404Error; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Api404AfterRedirectError", function() { return Api404AfterRedirectError; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FetchNetworkError", function() { return FetchNetworkError; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createSuper */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/createSuper.js");
-/* harmony import */ var _babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/wrapNativeSuper */ "../../js-packages/connection/node_modules/@babel/runtime/helpers/wrapNativeSuper.js");
-/* harmony import */ var _babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "lodash");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/classCallCheck'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/inherits'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/createSuper'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/wrapNativeSuper'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -2440,14 +1879,14 @@ __webpack_require__.r(__webpack_exports__);
 
 function createCustomError(name) {
   var CustomError = /*#__PURE__*/function (_Error) {
-    _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default()(CustomError, _Error);
+    !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/inherits'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(CustomError, _Error);
 
-    var _super = _babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2___default()(CustomError);
+    var _super = !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/createSuper'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(CustomError);
 
     function CustomError() {
       var _this;
 
-      _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, CustomError);
+      !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/classCallCheck'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(this, CustomError);
 
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
         args[_key] = arguments[_key];
@@ -2459,7 +1898,7 @@ function createCustomError(name) {
     }
 
     return CustomError;
-  }( /*#__PURE__*/_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3___default()(Error));
+  }( /*#__PURE__*/!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/wrapNativeSuper'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(Error));
 
   return CustomError;
 }
@@ -2489,7 +1928,7 @@ function JetpackRestApiClient(root, nonce) {
       postParams = {
     method: 'post',
     credentials: 'same-origin',
-    headers: Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])({}, headers, {
+    headers: Object(lodash__WEBPACK_IMPORTED_MODULE_1__["assign"])({}, headers, {
       'Content-type': 'application/json'
     })
   };
@@ -2508,7 +1947,7 @@ function JetpackRestApiClient(root, nonce) {
       postParams = {
         method: 'post',
         credentials: 'same-origin',
-        headers: Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])({}, headers, {
+        headers: Object(lodash__WEBPACK_IMPORTED_MODULE_1__["assign"])({}, headers, {
           'Content-type': 'application/json'
         })
       };
@@ -2566,10 +2005,10 @@ function JetpackRestApiClient(root, nonce) {
 
 
   function postRequest(route, params, body) {
-    return fetch(route, Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])({}, params, body)).catch(catchNetworkErrors);
+    return fetch(route, Object(lodash__WEBPACK_IMPORTED_MODULE_1__["assign"])({}, params, body)).catch(catchNetworkErrors);
   }
 
-  Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])(this, methods);
+  Object(lodash__WEBPACK_IMPORTED_MODULE_1__["assign"])(this, methods);
 }
 /**
  * Check the response status.
@@ -2677,8 +2116,7 @@ var connectionStatusActions = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread2 */ "./node_modules/@babel/runtime/helpers/objectSpread2.js");
-/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/objectSpread2'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./connection-status */ "./_inc/actions/connection-status.js");
 
 
@@ -2687,7 +2125,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var actions = _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, _connection_status__WEBPACK_IMPORTED_MODULE_1__["default"]);
+var actions = !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/objectSpread2'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())({}, _connection_status__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 
@@ -3052,8 +2490,7 @@ var connectionSelectors = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread2 */ "./node_modules/@babel/runtime/helpers/objectSpread2.js");
-/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/objectSpread2'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./connection-status */ "./_inc/selectors/connection-status.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api */ "./_inc/selectors/api.js");
 /* harmony import */ var _connection_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./connection-data */ "./_inc/selectors/connection-data.js");
@@ -3066,7 +2503,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var selectors = _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, _connection_status__WEBPACK_IMPORTED_MODULE_1__["default"]), _api__WEBPACK_IMPORTED_MODULE_2__["default"]), _connection_data__WEBPACK_IMPORTED_MODULE_3__["default"]);
+var selectors = !(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/objectSpread2'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/objectSpread2'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(!(function webpackMissingModule() { var e = new Error("Cannot find module '@babel/runtime/helpers/objectSpread2'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())({}, _connection_status__WEBPACK_IMPORTED_MODULE_1__["default"]), _api__WEBPACK_IMPORTED_MODULE_2__["default"]), _connection_data__WEBPACK_IMPORTED_MODULE_3__["default"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (selectors);
 
@@ -3099,85 +2536,6 @@ var storeConfig = {
   selectors: _selectors__WEBPACK_IMPORTED_MODULE_2__["default"],
   initialState: window.CUI_INITIAL_STATE || {}
 };
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/defineProperty.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-module.exports = _defineProperty;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/objectSpread2.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/objectSpread2.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var defineProperty = __webpack_require__(/*! ./defineProperty.js */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-
-    if (enumerableOnly) {
-      symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      });
-    }
-
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
-  }
-
-  return target;
-}
-
-module.exports = _objectSpread2;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
 

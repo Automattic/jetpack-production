@@ -492,7 +492,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-connection-ui",
-                "reference": "a922d1747b5ce31ceaedd1b7e88ba5f02f9742a4"
+                "reference": "8ce25577bdd97775dd84af1f909c52e9b8ca951c"
             },
             "require": {
                 "automattic/jetpack-connection": "^1.28",
@@ -522,11 +522,11 @@
             "scripts": {
                 "build-development": [
                     "Composer\\Config::disableProcessTimeout",
-                    "yarn build"
+                    "pnpm run build"
                 ],
                 "build-production": [
                     "Composer\\Config::disableProcessTimeout",
-                    "yarn build"
+                    "pnpm run build"
                 ]
             },
             "license": [
@@ -749,7 +749,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-identity-crisis",
-                "reference": "9664974020e5e3b09d51bbedd8bdf8f73735cfd3"
+                "reference": "4cb38cac7c93d0004bb16a44880d6bb08c6f791f"
             },
             "require": {
                 "automattic/jetpack-connection": "^1.28",
@@ -787,11 +787,11 @@
             "scripts": {
                 "build-development": [
                     "Composer\\Config::disableProcessTimeout",
-                    "yarn build"
+                    "pnpm run build"
                 ],
                 "build-production": [
                     "Composer\\Config::disableProcessTimeout",
-                    "NODE_ENV='production' yarn build"
+                    "NODE_ENV='production' pnpm run build"
                 ],
                 "phpunit": [
                     "@composer install",
@@ -825,7 +825,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-jitm",
-                "reference": "6ad1b9d2fd2cc60c32e686e0e43de25589d067ad"
+                "reference": "ef76d33e430e6b726966068a716d6eefa0ae591e"
             },
             "require": {
                 "automattic/jetpack-a8c-mc-stats": "^1.4",
@@ -867,11 +867,11 @@
             "scripts": {
                 "build-production": [
                     "Composer\\Config::disableProcessTimeout",
-                    "yarn build-production"
+                    "pnpm run build-production"
                 ],
                 "build-development": [
                     "Composer\\Config::disableProcessTimeout",
-                    "yarn build"
+                    "pnpm run build"
                 ],
                 "phpunit": [
                     "@composer update",
@@ -902,7 +902,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-lazy-images",
-                "reference": "26d041b05aef8ada8f7c6a6aefe492053e6fc559"
+                "reference": "b76de2971622dce0a71148ead08af9f8a6289b1d"
             },
             "require": {
                 "automattic/jetpack-assets": "^1.11",
@@ -933,11 +933,11 @@
             "scripts": {
                 "build-production": [
                     "Composer\\Config::disableProcessTimeout",
-                    "yarn build-production"
+                    "pnpm run build-production"
                 ],
                 "build-development": [
                     "Composer\\Config::disableProcessTimeout",
-                    "yarn build"
+                    "pnpm run build"
                 ],
                 "phpunit": [
                     "@composer update",

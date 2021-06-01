@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Remove the 'authorizeUrl' RNA Connection parameter as it's no longer needed.
+- Update docs to replace yarn with pnpm.
 
 ### Fixed
 - Remove dependency on @wordpress/url as it caused dependency issues in build test flows.

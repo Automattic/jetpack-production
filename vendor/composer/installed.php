@@ -109,7 +109,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'a922d1747b5ce31ceaedd1b7e88ba5f02f9742a4',
+      'reference' => '8ce25577bdd97775dd84af1f909c52e9b8ca951c',
     ),
     'automattic/jetpack-constants' => 
     array (
@@ -154,7 +154,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '9664974020e5e3b09d51bbedd8bdf8f73735cfd3',
+      'reference' => '4cb38cac7c93d0004bb16a44880d6bb08c6f791f',
     ),
     'automattic/jetpack-jitm' => 
     array (
@@ -163,7 +163,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '6ad1b9d2fd2cc60c32e686e0e43de25589d067ad',
+      'reference' => 'ef76d33e430e6b726966068a716d6eefa0ae591e',
     ),
     'automattic/jetpack-lazy-images' => 
     array (
@@ -172,7 +172,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '26d041b05aef8ada8f7c6a6aefe492053e6fc559',
+      'reference' => 'b76de2971622dce0a71148ead08af9f8a6289b1d',
     ),
     'automattic/jetpack-licensing' => 
     array (
