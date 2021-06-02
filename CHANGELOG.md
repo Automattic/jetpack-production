@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Changes the main connection flow and chooses between in-place or calypso flows only after the site registration
 
 ### Enhancements
+- Added Social Preview panel to the pre-publish sidebar to increase visibility.
 - Publicly includes whether the site is a WP.com Atomic one as part of the Sites API.
 
 ### Improved compatibility
