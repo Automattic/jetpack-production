@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 9.9 release cycle.
 - P2: Conditionally hide admin menu items for hubs/spaces
 - Story Block: allow multiple stories per post
+- Story Block: Defaults to adding new media in media picker instead of replacing them
 - Story Block: Fix syncing muted state
 
 ## 9.8-beta - 2021-05-25
