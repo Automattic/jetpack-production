@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Sync test_get_post_types_method test.
 
 ### Bug fixes
+- Carousel: fix photo info position
 - Carousel: harden fetching comments in Carousel view.
 - Fixed regression introduced in posts page icon notification WP-Admin edit.php page.
 - Fix invalid `@media only` block styles
