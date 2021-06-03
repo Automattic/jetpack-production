@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: fix tunnel log not being written
 - Init 9.9 release cycle.
 - P2: Conditionally hide admin menu items for hubs/spaces
+- Removed unneeded "test-spelling" script with a vulnerable dependency.
 - Story Block: allow multiple stories per post
 - Story Block: Defaults to adding new media in media picker instead of replacing them
 
