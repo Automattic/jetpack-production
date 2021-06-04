@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Remove dependency on @wordpress/url as it caused dependency issues in build test flows.
+- Use `absoluteRuntime` in babel JS build to avoid module not found errors.
 
 ## [1.1.0] - 2021-05-25
 ### Added
