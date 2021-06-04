@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Removed unneeded "test-spelling" script with a vulnerable dependency.
 - Story Block: allow multiple stories per post
 - Story Block: Defaults to adding new media in media picker instead of replacing them
+- Story block: Fix (server-side) rendering of external stories
 
 ## 9.8 - 2021-06-01
 ### Enhancements
