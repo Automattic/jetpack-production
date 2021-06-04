@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added Urls class, migrated from Sync Functions.
+- Adding new REST endpoint /jetpack/v4/user-token that allows us to add/update user tokens remotely.
 - Add new 'connection/authorize_url' endpoint.
 - Adds information received from the server to the register_site REST response
 - Enable site-level authentication (blog token) for REST API endpoints
