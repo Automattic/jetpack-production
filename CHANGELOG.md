@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Added 'purchasetoken' query param to all url's leading to checkout for allowing logged out user purchases on WordPress.com.
 - Add two jetpack/v4 endpoints to retrieve and delete a site's purchase token
 - Admin Page: Modularize Redux initialization into a separate helper class.
+- Business Hours Block: Refactor PHP server-rendered fixture test to use parent class.
 - Change build and E2E tests to use pnpm rather than yarn. Add some missing direct deps too, and remove a few unnecessary ones.
 - E2E tests: fix tunnel log not being written
 - Init 9.9 release cycle.
