@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Sync test_get_post_types_method test.
 
 ### Bug fixes
+- Carousel: avoid JavaScript errors when trying to load the Carousel view when logged out of your WordPress site.
 - Carousel: fix photo info position
 - Related Posts: avoid squished images when img height isn't defined
 - Search: don't open overlay when user is composing text using an input method editor (Chinese, Japanese, Korean and Indic languages)
