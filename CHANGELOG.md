@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: fix photo info position
 - Related Posts: avoid squished images when img height isn't defined
 - Search: don't open overlay when user is composing text using an input method editor (Chinese, Japanese, Korean and Indic languages)
+- Search: Show correct count for paginated results
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added 'purchasetoken' query param to all url's leading to checkout for allowing logged out user purchases on WordPress.com.
