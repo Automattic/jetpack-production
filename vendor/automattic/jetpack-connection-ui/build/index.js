@@ -1905,7 +1905,7 @@ var ConnectUser = function ConnectUser(props) {
     if (!authorizationUrl) {
       _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__["default"].fetchAuthorizationUrl(redirectUri).then(function (response) {
         return setAuthorizationUrl(response.authorizeUrl);
-      }).catch(function (error) {
+      })["catch"](function (error) {
         throw error;
       });
     }
@@ -2227,7 +2227,7 @@ var Main = function Main(props) {
     _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_6__["default"].fetchSiteConnectionStatus().then(function (response) {
       setIsFetchingConnectionStatus(false);
       setConnectionStatus(response);
-    }).catch(function (error) {
+    })["catch"](function (error) {
       setIsFetchingConnectionStatus(false);
       throw error;
     });
@@ -2276,7 +2276,7 @@ var Main = function Main(props) {
           isRegistered: true
         });
       });
-    }).catch(function (error) {
+    })["catch"](function (error) {
       setIsRegistering(false);
       throw error;
     });
@@ -2566,7 +2566,7 @@ function JetpackRestApiClient(root, nonce) {
 
 
   function postRequest(route, params, body) {
-    return fetch(route, Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])({}, params, body)).catch(catchNetworkErrors);
+    return fetch(route, Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])({}, params, body))["catch"](catchNetworkErrors);
   }
 
   Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])(this, methods);
@@ -2592,7 +2592,7 @@ function checkStatus(response) {
     });
   }
 
-  return response.json().catch(function (e) {
+  return response.json()["catch"](function (e) {
     return catchJsonParseError(e);
   }).then(function (json) {
     var error = new Error("".concat(json.message, " (Status ").concat(response.status, ")"));
@@ -2610,7 +2610,7 @@ function checkStatus(response) {
 
 
 function parseJsonResponse(response) {
-  return response.json().catch(function (e) {
+  return response.json()["catch"](function (e) {
     return catchJsonParseError(e, response.redirected, response.url);
   });
 }
