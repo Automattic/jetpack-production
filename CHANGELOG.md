@@ -2,20 +2,15 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 9.9-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Improved compatibility
-- Obtain lock before performing autoupdates.
-
+## 9.8.1 - 2021-06-08
 ### Bug fixes
 - Carousel: avoid JavaScript errors when trying to load the Carousel view when logged out of your WordPress site.
-- Related Posts: avoid squished images when img height isn't defined
+- Related Posts: avoid squished images when image height isn't defined.
+- Story Block: allow multiple stories per post.
+- Story Block: allow selecting additional media items in media picker instead of only replacing the existing selection.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Story Block: allow multiple stories per post
-- Story Block: Defaults to adding new media in media picker instead of replacing them
+- Obtain lock before performing autoupdates.
 
 ## 9.8 - 2021-06-01
 ### Enhancements
