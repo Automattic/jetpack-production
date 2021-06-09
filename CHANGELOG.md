@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Story Block: allow multiple stories per post
 - Story Block: Defaults to adding new media in media picker instead of replacing them
 - Story block: Fix (server-side) rendering of external stories
+- Temp: Remove sync tests to unblock dev
 
 ## 9.8 - 2021-06-01
 ### Enhancements
