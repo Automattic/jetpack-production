@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added Social Preview panel to the pre-publish sidebar to increase visibility.
+- Dashboard: provide more useful information and an option to contact support when there are display issues in the Jetpack dashboard.
 - E2E tests: trigger workflow dispatch to generate test reports
 - E2E tests reports: send PR number to test reporter
 - Publicly includes whether the site is a WP.com Atomic one as part of the Sites API.
