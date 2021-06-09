@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: Replace the usage of Jetpack_IDC with Identity_Crisis.
 - Obtain lock before performing autoupdates.
 - Repeat Visitor Block: Add JS and PHP block fixture tests.
+- Theme Tools: Improve compatibility between Site Logo and the new Site Logo block from WordPress.
 - Update Sync test_get_post_types_method test.
 
 ### Bug fixes
