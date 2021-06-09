@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Business Hours Block: Refactor PHP server-rendered fixture test to use parent class.
 - Change build and E2E tests to use pnpm rather than yarn. Add some missing direct deps too, and remove a few unnecessary ones.
 - E2E tests: fix tunnel log not being written
+- Fixes to build with calypso-build 6.5.0
 - Handle blavatar_url case for story playback site icon
 - Init 9.9 release cycle.
 - P2: Conditionally hide admin menu items for hubs/spaces
