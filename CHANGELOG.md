@@ -17,15 +17,12 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Jetpack: Replace the usage of Jetpack_IDC with Identity_Crisis.
-- Obtain lock before performing autoupdates.
 - Repeat Visitor Block: Add JS and PHP block fixture tests.
 - Theme Tools: Improve compatibility between Site Logo and the new Site Logo block from WordPress.
 - Update Sync test_get_post_types_method test.
 
 ### Bug fixes
-- Carousel: avoid JavaScript errors when trying to load the Carousel view when logged out of your WordPress site.
 - Carousel: fix photo info position
-- Related Posts: avoid squished images when img height isn't defined
 - Search: don't open overlay when user is composing text using an input method editor (Chinese, Japanese, Korean and Indic languages)
 - Search: prevent standard sidebar widgets ending up in the search modal sidebar when switching themes for WPCOM sites
 - Search: Show correct count for paginated results
@@ -40,10 +37,19 @@ This is an alpha version! The changes listed here are not final.
 - Init 9.9 release cycle.
 - P2: Conditionally hide admin menu items for hubs/spaces
 - Removed unneeded "test-spelling" script with a vulnerable dependency.
-- Story Block: allow multiple stories per post
-- Story Block: Defaults to adding new media in media picker instead of replacing them
 - Story block: Fix (server-side) rendering of external stories
 - Temp: Remove sync tests to unblock dev
+- Updated package dependencies
+
+## 9.8.1 - 2021-06-08
+### Bug fixes
+- Carousel: avoid JavaScript errors when trying to load the Carousel view when logged out of your WordPress site.
+- Related Posts: avoid squished images when image height isn't defined.
+- Story Block: allow multiple stories per post.
+- Story Block: allow selecting additional media items in media picker instead of only replacing the existing selection.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Obtain lock before performing autoupdates.
 
 ## 9.8 - 2021-06-01
 ### Enhancements
