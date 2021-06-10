@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: don't open overlay when user is composing text using an input method editor (Chinese, Japanese, Korean and Indic languages)
 - Search: prevent standard sidebar widgets ending up in the search modal sidebar when switching themes for WPCOM sites
 - Search: Show correct count for paginated results
+- Videopress: do not allowing video files in WoA sites with Free plan
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added 'purchasetoken' query param to all url's leading to checkout for allowing logged out user purchases on WordPress.com.
