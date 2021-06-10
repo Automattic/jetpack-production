@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.4.5-alpha] - unreleased
+## [1.5.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Build using calypso-build, and use the intersection-observer npm module instead of bundling a copy.
 - Update docs to replace yarn with pnpm.
 
 ## [1.4.4] - 2021-05-25
@@ -93,7 +94,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Lazy Images: Move into a package
 
-[1.4.5-alpha]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.4.4...v1.4.5-alpha
+[1.5.0-alpha]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.4.4...v1.5.0-alpha
 [1.4.4]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.4.3...v1.4.4
 [1.4.3]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.4.2...v1.4.3
 [1.4.2]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.4.1...v1.4.2

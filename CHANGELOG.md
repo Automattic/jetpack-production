@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Story block: Fix (server-side) rendering of external stories
 - Temp: Remove sync tests to unblock dev
 - Updated package dependencies
+- Updated package dependencies.
 
 ## 9.8.1 - 2021-06-08
 ### Bug fixes
