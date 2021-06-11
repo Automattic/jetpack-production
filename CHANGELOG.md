@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Changes the main connection flow and chooses between in-place or calypso flows only after the site registration
 
 ### Enhancements
+- Added a nudge for Atomic and WPCOM that is loaded in Customizer's "Additional CSS" section.
 - Added Social Preview panel to the pre-publish sidebar to increase visibility.
 - Dashboard: provide more useful information and an option to contact support when there are display issues in the Jetpack dashboard.
 - E2E test reports: send more information about PR to test reporter
