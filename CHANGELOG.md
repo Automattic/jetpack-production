@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: don't open overlay when user is composing text using an input method editor (Chinese, Japanese, Korean and Indic languages)
 - Search: prevent standard sidebar widgets ending up in the search modal sidebar when switching themes for WPCOM sites
 - Search: Show correct count for paginated results
+- Updates the webpack configuration for extensions to prevent JS conflicts with other plugins
 - Videopress: do not allowing video files in WoA sites with Free plan
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
