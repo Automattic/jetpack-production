@@ -4,7 +4,7 @@
  *
  * @since 4.4.2
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**

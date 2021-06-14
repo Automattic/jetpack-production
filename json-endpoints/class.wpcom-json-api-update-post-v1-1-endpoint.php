@@ -321,18 +321,9 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 			$new_status = isset( $input['status'] ) ? $input['status'] : $last_status;
 
 			// Make sure that drafts get the current date when transitioning to publish if not supplied in the post.
-			// Similarly, scheduled posts that are manually published before their scheduled date should have the date reset.
 			$date_in_past = ( strtotime($post->post_date_gmt) < time() );
-			$reset_draft_date     = 'publish' === $new_status && 'draft'  === $last_status && ! isset( $input['date_gmt'] ) && $date_in_past;
-			$reset_scheduled_date = 'publish' === $new_status && 'future' === $last_status && ! isset( $input['date_gmt'] ) && ! $date_in_past;
-
-			if ( $reset_draft_date || $reset_scheduled_date ) {
+			if ( 'publish' === $new_status && 'draft' === $last_status && ! isset( $input['date_gmt'] ) && $date_in_past ) {
 				$input['date_gmt'] = gmdate( 'Y-m-d H:i:s' );
-			}
-
-			// Untrash a post so that the proper hooks get called as well as the comments get untrashed.
-			if ( $this->should_untrash_post( $last_status, $new_status, $post ) ) {
-				$input = $this->untrash_post( $post, $input );
 			}
 		}
 
@@ -564,7 +555,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 			$insert['ID'] = $post->ID;
 
 			// wp_update_post ignores date unless edit_date is set
-			// See: https://codex.wordpress.org/Function_Reference/wp_update_post#Scheduling_posts
+			// See: http://codex.wordpress.org/Function_Reference/wp_update_post#Scheduling_posts
 			// See: https://core.trac.wordpress.org/browser/tags/3.9.2/src/wp-includes/post.php#L3302
 			if ( isset( $input['date_gmt'] ) || isset( $input['date'] ) ) {
 				$insert['edit_date'] = true;
@@ -620,7 +611,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 		if ( $new ) {
 			if ( $sitewide_likes_enabled ) {
 				if ( false === $likes ) {
-					update_post_meta( $post_id, 'switch_like_status', 0 );
+					update_post_meta( $post_id, 'switch_like_status', 1 );
 				} else {
 					delete_post_meta( $post_id, 'switch_like_status' );
 				}
@@ -635,7 +626,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 			if ( isset( $likes ) ) {
 				if ( $sitewide_likes_enabled ) {
 					if ( false === $likes ) {
-						update_post_meta( $post_id, 'switch_like_status', 0 );
+						update_post_meta( $post_id, 'switch_like_status', 1 );
 					} else {
 						delete_post_meta( $post_id, 'switch_like_status' );
 					}
@@ -789,6 +780,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 
 				$meta = (object) $meta;
 
+				// Custom meta description can only be set on sites that have a business subscription.
 				if ( Jetpack_SEO_Posts::DESCRIPTION_META_KEY == $meta->key && ! Jetpack_SEO_Utils::is_enabled_jetpack_seo() ) {
 					return new WP_Error( 'unauthorized', __( 'SEO tools are not enabled for this site.', 'jetpack' ), 403 );
 				}
@@ -829,6 +821,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 
 				switch ( $meta->operation ) {
 					case 'delete':
+
 						if ( ! empty( $meta->id ) && ! empty( $existing_meta_item->meta_key ) && current_user_can( 'delete_post_meta', $post_id, $unslashed_existing_meta_key ) ) {
 							delete_metadata_by_mid( 'post', $meta->id );
 						} elseif ( ! empty( $meta->key ) && ! empty( $meta->previous_value ) && current_user_can( 'delete_post_meta', $post_id, $unslashed_meta_key ) ) {
@@ -839,16 +832,18 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 
 						break;
 					case 'add':
+
 						if ( ! empty( $meta->id ) || ! empty( $meta->previous_value ) ) {
-							break;
+							continue;
 						} elseif ( ! empty( $meta->key ) && ! empty( $meta->value ) && ( current_user_can( 'add_post_meta', $post_id, $unslashed_meta_key ) ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) {
 							add_post_meta( $post_id, $meta->key, $meta->value );
 						}
 
 						break;
 					case 'update':
+
 						if ( ! isset( $meta->value ) ) {
-							break;
+							continue;
 						} elseif ( ! empty( $meta->id ) && ! empty( $existing_meta_item->meta_key ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_existing_meta_key ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) ) {
 							update_metadata_by_mid( 'post', $meta->id, $meta->value );
 						} elseif ( ! empty( $meta->key ) && ! empty( $meta->previous_value ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_meta_key ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) ) {
@@ -859,6 +854,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 
 						break;
 				}
+
 			}
 		}
 
@@ -994,20 +990,6 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 			return new WP_Error( 'invalid_author', 'Invalid author provided' );
 
 		return $_user->ID;
-	}
-
-	protected function should_untrash_post( $last_status, $new_status, $post ) {
-		return 'trash' === $last_status && 'trash' !== $new_status && isset( $post->ID );
-	}
-
-	protected function untrash_post( $post, $input ) {
-		wp_untrash_post( $post->ID );
-		$untrashed_post = get_post( $post->ID );
-		// Lets make sure that we use the reverted the slug.
-		if ( isset( $untrashed_post->post_name ) && $untrashed_post->post_name . '__trashed' === $input['slug'] ) {
-			unset( $input['slug'] );
-		}
-		return $input;
 	}
 
 	protected function should_load_theme_functions( $post_id = null ) {

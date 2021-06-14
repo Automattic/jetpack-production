@@ -72,24 +72,6 @@ class Jetpack_Search_Template_Tags {
 	}
 
 	/**
-	 * Renders filters for instant search.
-	 *
-	 * @since 8.3.0
-	 *
-	 * @param array $filters    The available filters for the current query.
-	 * @param array $post_types An array of post types (ignored).
-	 */
-	public static function render_instant_filters( $filters = null, $post_types = null ) {
-		if ( is_null( $filters ) ) {
-			$filters = Jetpack_Search::instance()->get_filters();
-		}
-
-		foreach ( (array) $filters as $filter ) {
-			self::render_instant_filter( $filter );
-		}
-	}
-
-	/**
 	 * Renders a single filter that can be applied to the current search.
 	 *
 	 * @since 5.8.0
@@ -129,105 +111,28 @@ class Jetpack_Search_Template_Tags {
 			</div>
 		<?php endif; ?>
 		<ul class="jetpack-search-filters-widget__filter-list">
-			<?php
-			foreach ( $filter['buckets'] as $item ) :
-				$url = ( empty( $item['active'] ) ) ?  $item['url'] : $item['remove_url'];
-				?>
+			<?php foreach ( $filter['buckets'] as $item ) : ?>
 				<li>
 					<label>
-						<input type="checkbox"<?php checked( ! empty( $item['active'] ) ); ?> disabled="disabled" />&nbsp;
-						<a href="<?php echo esc_url( $url ); ?>">
+						<?php if ( empty( $item['active'] ) ) : ?>
+						<a href="<?php echo esc_url( $item['url'] ); ?>">
+						<?php else : ?>
+						<a href="<?php echo esc_url( $item['remove_url'] ); ?>">
+						<?php endif; ?>
+							<input
+								type="checkbox"
+								<?php checked( ! empty( $item['active'] ) ); ?>
+								disabled
+							/>&nbsp;
+							<?php echo esc_html( $item['name'] ); ?>&nbsp;
 							<?php
-								echo esc_html( $item['name'] );
-								echo '&nbsp;';
-								echo esc_html( sprintf(
-									'(%s)',
-									number_format_i18n( absint( $item['count'] ) )
-								) );
-							?>
-						</a>
-					</label>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-		<?php
-	}
-
-	/**
-	 * Renders a single filter for instant search.
-	 *
-	 * @since 8.3.0
-	 *
-	 * @param array $filter             The filter to render.
-	 */
-	public static function render_instant_filter( $filter ) {
-		if ( empty( $filter ) || empty( $filter['buckets'] ) ) {
-			return;
-		}
-
-		$data_base = '';
-		$qv        = $filter['buckets'][0]['query_vars'];
-		$tax_key   = '';
-		switch ( $filter['buckets'][0]['type'] ) {
-			case 'taxonomy':
-				$data_base = 'data-filter-type="' . esc_attr( $filter['buckets'][0]['type'] ) . '" ';
-				$tax_key   = key( $qv );
-				if ( 'category_name' === $tax_key ) {
-					$data_base .= 'data-taxonomy="category"';
-				} elseif ( 'tag' === $tax_key ) {
-					$data_base .= 'data-taxonomy="post_tag"';
-				} else {
-					$data_base .= 'data-taxonomy="' . esc_attr( $tax_key ) . '"';
-				}
-				break;
-			case 'post_type':
-				$data_base = 'data-filter-type="post_types" ';
-				break;
-			case 'date_histogram':
-				if ( $filter['buckets'][0]['query_vars']['monthnum'] ) {
-					$data_base = 'data-filter-type="month_post_date" ';
-				} else {
-					$data_base = 'data-filter-type="year_post_date" ';
-				}
-				break;
-		}
-
-		?>
-		<h4 class="jetpack-search-filters-widget__sub-heading">
-			<?php echo esc_html( $filter['name'] ); ?>
-		</h4>
-		<ul class="jetpack-search-filters-widget__filter-list">
-			<?php
-			foreach ( $filter['buckets'] as $item ) :
-				$data_str = $data_base . ' ';
-				switch ( $filter['buckets'][0]['type'] ) {
-					case 'taxonomy':
-						$data_str .= 'data-val="' . esc_attr( $item['query_vars'][ $tax_key ] ) . '"';
-						break;
-					case 'post_type':
-						$data_str .= 'data-val="' . esc_attr( $item['query_vars']['post_type'] ) . '"';
-						break;
-					case 'date_histogram':
-						if ( $item['query_vars']['monthnum'] ) {
-							$d = sprintf( '%d-%02d-01 00:00:00', $item['query_vars']['year'], $item['query_vars']['monthnum'] );
-						} else {
-							$d = sprintf( '%d-01-01 00:00:00', $item['query_vars']['year'] );
-						}
-						$data_str .= 'data-val="' . esc_attr( $d ) . '" ';
-						break;
-				}
-				?>
-				<li>
-				<a href="#" class="jetpack-search-filter__link" <?php echo $data_str; ?>>
-						<?php
-							echo esc_html( $item['name'] );
-							echo '&nbsp;';
 							echo esc_html( sprintf(
 								'(%s)',
 								number_format_i18n( absint( $item['count'] ) )
 							) );
-						?>
-					</a>
+							?>
+						</a>
+					</label>
 				</li>
 			<?php endforeach; ?>
 		</ul>
