@@ -4,22 +4,17 @@
  *
  * @since 6.8.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
-
-namespace Automattic\Jetpack\Extensions\Markdown;
-
-use Automattic\Jetpack\Blocks;
-
-const FEATURE_NAME = 'markdown';
-const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
 
 /**
- * Registers the block for use in Gutenberg
- * This is done via an action so that we can disable
- * registration if we need to.
+ * The block depends on the Markdown module to be active for now.
+ * Related discussion: https://github.com/Automattic/jetpack/issues/10294
  */
-function register_block() {
-	Blocks::jetpack_register_block( BLOCK_NAME );
+if (
+	( defined( 'IS_WPCOM' ) && IS_WPCOM )
+	|| ( method_exists( 'Jetpack', 'is_module_active' ) && Jetpack::is_module_active( 'markdown' ) )
+) {
+	jetpack_register_block( 'jetpack/markdown' );
 }
-add_action( 'init', __NAMESPACE__ . '\register_block' );
+

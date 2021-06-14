@@ -222,7 +222,7 @@ class csstidy_print {
 				case SEL_START:
 					if ($this->parser->get_cfg('lowercase_s'))
 						$token[1] = strtolower($token[1]);
-					$out .= ( $token[1][0] !== '@') ? $template[2] . $this->_htmlsp($token[1], $plain) : $template[0] . $this->_htmlsp($token[1], $plain);
+					$out .= ( $token[1]{0} !== '@') ? $template[2] . $this->_htmlsp($token[1], $plain) : $template[0] . $this->_htmlsp($token[1], $plain);
 					$out .= $template[3];
 					break;
 
@@ -308,7 +308,7 @@ class csstidy_print {
 		foreach ($this->css as $medium => $val) {
 			if ($this->parser->get_cfg('sort_selectors'))
 				ksort($val);
-			if ( (int) $medium < DEFAULT_AT ) {
+			if (intval($medium) < DEFAULT_AT) {
 				$this->parser->_add_token(AT_START, $medium, true);
 			}
 			elseif ($default_media) {
@@ -328,7 +328,7 @@ class csstidy_print {
 				$this->parser->_add_token(SEL_END, $selector, true);
 			}
 
-			if ( (int) $medium < DEFAULT_AT ) {
+			if (intval($medium) < DEFAULT_AT) {
 				$this->parser->_add_token(AT_END, $medium, true);
 			}
 			elseif ($default_media) {

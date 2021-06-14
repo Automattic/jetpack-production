@@ -2,7 +2,7 @@
 /**
  * Class for the Jetpack About Page within the wp-admin.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -56,6 +56,9 @@ class Jetpack_About_Page extends Jetpack_Admin_Page {
 	 * @param string $hook Hook of current page, unused.
 	 */
 	public function add_page_actions( $hook ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+		// Place the Jetpack menu item on top and others in the order they appear.
+		add_filter( 'custom_menu_order', '__return_true' );
+		add_filter( 'menu_order', array( $this, 'submenu_order' ) );
 		$this->a8c_data = $this->fetch_a8c_data();
 	}
 
@@ -84,6 +87,37 @@ class Jetpack_About_Page extends Jetpack_Admin_Page {
 	 */
 	public function render() {
 		Jetpack_Admin_Page::wrap_ui( array( $this, 'page_render' ), array( 'show-nav' => false ) );
+	}
+
+	/**
+	 * Change order of menu item so the About page menu item is below Site Stats.
+	 *
+	 * @param array $menu_order List of menu slugs. It's unaffected. This filter is used to reorder the Jetpack submenu items.
+	 *
+	 * @return array
+	 */
+	public function submenu_order( $menu_order ) {
+		global $submenu;
+
+		$stats_key = null;
+		$about_key = null;
+
+		foreach ( $submenu['jetpack'] as $index => $menu_item ) {
+			if ( false !== array_search( 'stats', $menu_item, true ) ) {
+				$stats_key = $index;
+			}
+			if ( false !== array_search( 'jetpack_about', $menu_item, true ) ) {
+				$about_key = $index;
+			}
+		}
+
+		if ( $stats_key && $about_key ) {
+			$temp                             = $submenu['jetpack'][ $stats_key ];
+			$submenu['jetpack'][ $stats_key ] = $submenu['jetpack'][ $about_key ]; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$submenu['jetpack'][ $about_key ] = $temp; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		}
+
+		return $menu_order;
 	}
 
 	/**
@@ -570,9 +604,9 @@ class Jetpack_About_Page extends Jetpack_Admin_Page {
 			'https://1.gravatar.com/avatar/1c75d26ad0d38624f02b15accc1f20cd',
 			'https://1.gravatar.com/avatar/c510e69d83c7d10be4df64feeff4e46a',
 			'https://0.gravatar.com/avatar/88ec0dcadea38adf5f30a17e54e9b248',
-			'https://1.gravatar.com/avatar/1ec3571e0201a990ceca5e365e780efa',
+			'https://1.gravatar.com/avatar/bc45834430c5b0936d76e3f468f9ca57',
 			'https://0.gravatar.com/avatar/0619d4de8aef78c81b2194ff1d164d85',
-			'https://0.gravatar.com/avatar/7fdcad31a04def0ab9583af475c9036c',
+			'https://0.gravatar.com/avatar/72a638c2520ea177976e8eafb201a82f',
 			'https://0.gravatar.com/avatar/b3618d70c63bbc5cc7caee0beded5ff0',
 			'https://1.gravatar.com/avatar/4d346581a3340e32cf93703c9ce46bd4',
 			'https://2.gravatar.com/avatar/9c2f6b95a00dfccfadc6a912a2b859ba',

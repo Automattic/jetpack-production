@@ -35,7 +35,7 @@ class Jetpack_Portfolio {
 		// Make sure the post types are loaded for imports
 		add_action( 'import_start',                                                    array( $this, 'register_post_types' ) );
 
-		// Add to REST API post type allowed list.
+		// Add to REST API post type whitelist
 		add_filter( 'rest_api_allowed_post_types',                                     array( $this, 'allow_portfolio_rest_api_type' ) );
 
 		$setting = Jetpack_Options::get_option_and_ensure_autoload( self::OPTION_NAME, '0' );
@@ -288,8 +288,6 @@ class Jetpack_Portfolio {
 				'wpcom-markdown',
 				'revisions',
 				'excerpt',
-				'custom-fields',
-				'newspack_blocks',
 			),
 			'rewrite' => array(
 				'slug'       => 'portfolio',
@@ -543,7 +541,7 @@ class Jetpack_Portfolio {
 	}
 
 	/**
-	 * Add to REST API post type allowed list.
+	 * Add to REST API post type whitelist
 	 */
 	function allow_portfolio_rest_api_type( $post_types ) {
 		$post_types[] = self::CUSTOM_POST_TYPE;
@@ -600,7 +598,7 @@ class Jetpack_Portfolio {
 
 		$atts['columns'] = absint( $atts['columns'] );
 
-		$atts['showposts'] = (int) $atts['showposts'];
+		$atts['showposts'] = intval( $atts['showposts'] );
 
 
 		if ( $atts['order'] ) {
@@ -632,9 +630,7 @@ class Jetpack_Portfolio {
 		}
 
 		// enqueue shortcode styles when shortcode is used
-		if ( ! wp_style_is( 'jetpack-portfolio-style', 'enqueued' ) ) {
-			wp_enqueue_style( 'jetpack-portfolio-style', plugins_url( 'css/portfolio-shortcode.css', __FILE__ ), array(), '20140326' );
-		}
+		wp_enqueue_style( 'jetpack-portfolio-style', plugins_url( 'css/portfolio-shortcode.css', __FILE__ ), array(), '20140326' );
 
 		return self::portfolio_shortcode_html( $atts );
 	}

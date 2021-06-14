@@ -5,11 +5,16 @@
  * Usage:
  * [spotify id="spotify:track:4bz7uB4edifWKJXSDxwHcs" width="400" height="100"]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 if ( ! shortcode_exists( 'spotify' ) ) {
 	add_shortcode( 'spotify', 'jetpack_spotify_shortcode' );
+
+	if ( get_option( 'embed_autourls' ) ) {
+		// If user enabled autourls, also convert syntax like spotify:track:4bz7uB4edifWKJXSDxwHcs.
+		add_filter( 'the_content', 'jetpack_spotify_embed_ids', 7 );
+	}
 }
 
 /**
@@ -70,8 +75,7 @@ function jetpack_spotify_embed_ids( $content ) {
 			continue;
 		}
 
-		// If this element does not contain a Spotify embed, continue.
-		if ( false === strpos( $element, 'spotify:' ) ) {
+		if ( substr( ltrim( $element ), 0, 8 ) !== 'spotify:' ) {
 			continue;
 		}
 
@@ -80,7 +84,6 @@ function jetpack_spotify_embed_ids( $content ) {
 
 	return implode( '', $textarr );
 }
-add_filter( 'the_content', 'jetpack_spotify_embed_ids', 7 );
 
 /**
  * Call shortcode with ID provided by matching pattern.

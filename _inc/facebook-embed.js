@@ -1,7 +1,7 @@
 /* global FB, jpfbembed */
-( function ( window ) {
-	var facebookEmbed = function () {
-		var fbroot, src, newScript, firstScript;
+( function( window ) {
+	var facebookEmbed = function() {
+		var fbroot, src;
 
 		if ( 'undefined' !== typeof FB && FB.XFBML ) {
 			FB.XFBML.parse();
@@ -15,15 +15,11 @@
 				src += '&appId=' + jpfbembed.appid;
 			}
 			src += '&version=v2.3';
-
-			newScript = document.createElement( 'script' );
-			newScript.setAttribute( 'src', src );
-			firstScript = document.querySelector( 'script' );
-			firstScript.parentNode.insertBefore( newScript, firstScript );
+			jQuery.getScript( src );
 		}
 	};
 
-	window.fbAsyncInit = function () {
+	window.fbAsyncInit = function() {
 		FB.init( {
 			appId: jpfbembed.appid,
 			version: 'v2.3',
@@ -33,7 +29,7 @@
 	};
 
 	if ( 'undefined' !== typeof infiniteScroll ) {
-		document.body.addEventListener( 'post-load', facebookEmbed );
+		jQuery( document.body ).on( 'post-load', facebookEmbed );
 	}
 
 	facebookEmbed();

@@ -45,13 +45,13 @@ class Highlander_Comments_Base {
 	 * @param ...
 	 * @return false|string false if it's not a Highlander POST request.  The matching credentials slug if it is.
 	 */
-	function is_highlander_comment_post( ...$args ) {
+	function is_highlander_comment_post() {
 		if ( empty( $_POST['hc_post_as'] ) ) {
 			return false;
 		}
 
-		if ( $args ) {
-			foreach ( $args as $id_source ) {
+		if ( func_num_args() ) {
+			foreach ( func_get_args() as $id_source ) {
 				if ( $id_source === $_POST['hc_post_as'] ) {
 					return $id_source;
 				}

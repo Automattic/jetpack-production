@@ -1,76 +1,43 @@
 /* global WPGroHo:true, Gravatar */
-( function () {
-	var extend = function ( out ) {
-		out = out || {};
-
-		for ( var i = 1; i < arguments.length; i++ ) {
-			if ( ! arguments[ i ] ) continue;
-
-			for ( var key in arguments[ i ] ) {
-				if ( arguments[ i ].hasOwnProperty( key ) ) out[ key ] = arguments[ i ][ key ];
+WPGroHo = jQuery.extend(
+	{
+		my_hash: '',
+		data: {},
+		renderers: {},
+		syncProfileData: function( hash, id ) {
+			if ( ! WPGroHo.data[ hash ] ) {
+				WPGroHo.data[ hash ] = {};
+				jQuery( 'div.grofile-hash-map-' + hash + ' span' ).each( function() {
+					WPGroHo.data[ hash ][ this.className ] = jQuery( this ).text();
+				} );
 			}
-		}
 
-		return out;
-	};
-
-	WPGroHo = extend(
-		{
-			my_hash: '',
-			data: {},
-			renderers: {},
-			syncProfileData: function ( hash, id ) {
-				var hashElements;
-
-				if ( ! WPGroHo.data[ hash ] ) {
-					WPGroHo.data[ hash ] = {};
-					hashElements = document.querySelectorAll( 'div.grofile-hash-map-' + hash + ' span' );
-					for ( var i = 0; i < hashElements.length; i++ ) {
-						WPGroHo.data[ hash ][ hashElements[ i ].className ] = hashElements[ i ].innerText;
-					}
-				}
-
-				WPGroHo.appendProfileData( WPGroHo.data[ hash ], hash, id );
-			},
-			appendProfileData: function ( data, hash, id ) {
-				for ( var key in data ) {
-					if ( 'function' === typeof WPGroHo.renderers[ key ] ) {
-						return WPGroHo.renderers[ key ]( data[ key ], hash, id, key );
-					}
-
-					var card = document.getElementById( id );
-					if ( card ) {
-						var heading = card.querySelector( 'h4' );
-						if ( heading ) {
-							var extra = document.createElement( 'p' );
-							extra.className = 'grav-extra ' + key;
-							extra.innerHTML = data[ key ];
-
-							heading.insertAdjacentElement( 'afterend', extra );
-						}
-					}
-				}
-			},
+			WPGroHo.appendProfileData( WPGroHo.data[ hash ], hash, id );
 		},
-		WPGroHo || {}
-	);
+		appendProfileData: function( data, hash, id ) {
+			for ( var key in data ) {
+				if ( jQuery.isFunction( WPGroHo.renderers[ key ] ) ) {
+					return WPGroHo.renderers[ key ]( data[ key ], hash, id, key );
+				}
 
-	var jetpackHovercardsInit = function () {
-		if ( 'undefined' === typeof Gravatar ) {
-			return;
-		}
+				jQuery( '#' + id )
+					.find( 'h4' )
+					.after( jQuery( '<p class="grav-extra ' + key + '" />' ).html( data[ key ] ) );
+			}
+		},
+	},
+	WPGroHo
+);
 
-		Gravatar.profile_cb = function ( h, d ) {
-			WPGroHo.syncProfileData( h, d );
-		};
+jQuery( document ).ready( function() {
+	if ( 'undefined' === typeof Gravatar ) {
+		return;
+	}
 
-		Gravatar.my_hash = WPGroHo.my_hash;
-		Gravatar.init( 'body', '#wpadminbar' );
+	Gravatar.profile_cb = function( h, d ) {
+		WPGroHo.syncProfileData( h, d );
 	};
 
-	if ( document.readyState === 'interactive' || document.readyState === 'complete' ) {
-		jetpackHovercardsInit();
-	} else {
-		document.addEventListener( 'DOMContentLoaded', jetpackHovercardsInit );
-	}
-} )();
+	Gravatar.my_hash = WPGroHo.my_hash;
+	Gravatar.init( 'body', '#wpadminbar' );
+} );
