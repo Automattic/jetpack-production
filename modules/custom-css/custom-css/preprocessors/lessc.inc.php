@@ -2,7 +2,7 @@
 
 /**
  * lessphp v0.5.0
- * https://leafo.net/lessphp
+ * http://leafo.net/lessphp
  *
  * LESS CSS compiler, adapted from http://lesscss.org
  *
@@ -746,7 +746,7 @@ class lessc {
 					if ($suffix !== null &&
 						$subProp[0] == "assign" &&
 						is_string($subProp[1]) &&
-						$subProp[1][0] != $this->vPrefix)
+						$subProp[1]{0} != $this->vPrefix)
 					{
 						$subProp[2] = array(
 							'list', ' ',
@@ -999,7 +999,13 @@ class lessc {
 			// IE8 can't handle data uris larger than 32KB
 			if($fsize/1024 < 32) {
 				if(is_null($mime)) {
-					$mime = jetpack_mime_content_type( $fullpath );
+					if(class_exists('finfo')) { // php 5.3+
+						$finfo = new finfo(FILEINFO_MIME);
+						$mime = explode('; ', $finfo->file($fullpath));
+						$mime = $mime[0];
+					} elseif(function_exists('mime_content_type')) { // PHP 5.2
+						$mime = mime_content_type($fullpath);
+					}
 				}
 
 				if(!is_null($mime)) // fallback if the mime type is still unknown
@@ -1098,7 +1104,7 @@ class lessc {
 		}
 		list($color, $delta) = $args[2];
 		$color = $this->assertColor($color);
-		$delta = (float) $delta[1];
+		$delta = floatval($delta[1]);
 
 		return array($color, $delta);
 	}
@@ -1195,7 +1201,7 @@ class lessc {
 
 	// mixes two colors by weight
 	// mix(@color1, @color2, [@weight: 50%]);
-	// https://sass-lang.com/documentation/functions/color#mix
+	// http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#mix-instance_method
 	protected function lib_mix($args) {
 		if ($args[0] != "list" || count($args[2]) < 2)
 			$this->throwError("mix expects (color1, color2, weight)");
@@ -1396,7 +1402,7 @@ class lessc {
 			$i = 0;
 			foreach ($rawComponents as $c) {
 				$val = $this->reduce($c);
-				$val = isset( $val[1] ) ? (float) $val[1] : 0;
+				$val = isset($val[1]) ? floatval($val[1]) : 0;
 
 				if ($i == 0) $clamp = 360;
 				elseif ($i < 3) $clamp = 100;
@@ -1418,13 +1424,13 @@ class lessc {
 					if ($c[0] == "number" && $c[2] == "%") {
 						$components[] = 255 * ($c[1] / 100);
 					} else {
-						$components[] = (float) $c[1];
+						$components[] = floatval($c[1]);
 					}
 				} elseif ($i == 4) {
 					if ($c[0] == "number" && $c[2] == "%") {
 						$components[] = 1.0 * ($c[1] / 100);
 					} else {
-						$components[] = (float) $c[1];
+						$components[] = floatval($c[1]);
 					}
 				} else break;
 
@@ -1851,7 +1857,7 @@ class lessc {
 		$this->pushEnv();
 		$parser = new lessc_parser($this, __METHOD__);
 		foreach ($args as $name => $strValue) {
-			if ($name[0] != '@') $name = '@'.$name;
+			if ($name{0} != '@') $name = '@'.$name;
 			$parser->count = 0;
 			$parser->buffer = (string)$strValue;
 			if (!$parser->propertyValue($value)) {
@@ -2229,7 +2235,6 @@ class lessc {
 		'plum' => '221,160,221',
 		'powderblue' => '176,224,230',
 		'purple' => '128,0,128',
-		'rebeccapurple' => '102,51,153',
 		'red' => '255,0,0',
 		'rosybrown' => '188,143,143',
 		'royalblue' => '65,105,225',
@@ -2511,7 +2516,7 @@ class lessc_parser {
 				$hidden = true;
 				if (!isset($block->args)) {
 					foreach ($block->tags as $tag) {
-						if (!is_string($tag) || $tag[0] != $this->lessc->mPrefix) {
+						if (!is_string($tag) || $tag{0} != $this->lessc->mPrefix) {
 							$hidden = false;
 							break;
 						}
@@ -2565,7 +2570,7 @@ class lessc_parser {
 	protected function fixTags($tags) {
 		// move @ tags out of variable namespace
 		foreach ($tags as &$tag) {
-			if ($tag[0] == $this->lessc->vPrefix)
+			if ($tag{0} == $this->lessc->vPrefix)
 				$tag[0] = $this->lessc->mPrefix;
 		}
 		return $tags;
@@ -2587,7 +2592,7 @@ class lessc_parser {
 
 	/**
 	 * Attempt to consume an expression.
-	 * @link https://en.wikipedia.org/wiki/Operator-precedence_parser#Pseudo-code
+	 * @link http://en.wikipedia.org/wiki/Operator-precedence_parser#Pseudo-code
 	 */
 	protected function expression(&$out) {
 		if ($this->value($lhs)) {
@@ -3759,3 +3764,4 @@ class lessc_formatter_lessjs extends lessc_formatter_classic {
 	public $assignSeparator = ": ";
 	public $selectorSeparator = ",";
 }
+

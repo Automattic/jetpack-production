@@ -12,8 +12,6 @@ new WPCOM_JSON_API_Get_Taxonomy_Endpoint( array(
 		'$category' => '(string) The category slug'
 	),
 
-	'allow_fallback_to_jetpack_blog_token' => true,
-
 	'example_request'  => 'https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/categories/slug:community'
 ) );
 
@@ -28,8 +26,6 @@ new WPCOM_JSON_API_Get_Taxonomy_Endpoint( array(
 		'$site' => '(int|string) Site ID or domain',
 		'$tag'  => '(string) The tag slug'
 	),
-
-	'allow_fallback_to_jetpack_blog_token' => true,
 
 	'example_request'  => 'https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/tags/slug:wordpresscom'
 ) );
