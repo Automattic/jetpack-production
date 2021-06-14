@@ -48,13 +48,8 @@ class Partner {
 	public static function init() {
 		if ( is_null( self::$instance ) ) {
 			self::$instance = new Partner();
-			add_filter( 'jetpack_build_authorize_url', array( self::$instance, 'add_subsidiary_id_as_query_arg' ) );
-			add_filter( 'jetpack_build_authorize_url', array( self::$instance, 'add_affiliate_code_as_query_arg' ) );
 			add_filter( 'jetpack_build_connection_url', array( self::$instance, 'add_subsidiary_id_as_query_arg' ) );
 			add_filter( 'jetpack_build_connection_url', array( self::$instance, 'add_affiliate_code_as_query_arg' ) );
-
-			add_filter( 'jetpack_register_request_body', array( self::$instance, 'add_subsidiary_id_to_params_array' ) );
-			add_filter( 'jetpack_register_request_body', array( self::$instance, 'add_affiliate_code_to_params_array' ) );
 		}
 
 		return self::$instance;
@@ -83,36 +78,6 @@ class Partner {
 	}
 
 	/**
-	 * Adds the partner subsidiary code to the passed array.
-	 *
-	 * @param array $params The parameters array.
-	 *
-	 * @return array
-	 * @since 9.7.0
-	 */
-	public function add_subsidiary_id_to_params_array( $params ) {
-		if ( ! is_array( $params ) ) {
-			return $params;
-		}
-		return array_merge( $params, $this->get_code_as_array( self::SUBSIDIARY_CODE ) );
-	}
-
-	/**
-	 * Adds the affiliate code to the passed array.
-	 *
-	 * @param array $params The parameters array.
-	 *
-	 * @return array
-	 * @since 9.7.0
-	 */
-	public function add_affiliate_code_to_params_array( $params ) {
-		if ( ! is_array( $params ) ) {
-			return $params;
-		}
-		return array_merge( $params, $this->get_code_as_array( self::AFFILIATE_CODE ) );
-	}
-
-	/**
 	 * Returns the passed URL with the partner code added as a URL query arg.
 	 *
 	 * @param string $type The partner code.
@@ -122,17 +87,6 @@ class Partner {
 	 * @since 8.1.0
 	 */
 	public function add_code_as_query_arg( $type, $url ) {
-		return add_query_arg( $this->get_code_as_array( $type ), $url );
-	}
-
-	/**
-	 * Gets the partner code in an associative array format
-	 *
-	 * @param string $type The partner code.
-	 * @return array
-	 * @since 9.7.0
-	 */
-	private function get_code_as_array( $type ) {
 		switch ( $type ) {
 			case self::AFFILIATE_CODE:
 				$query_arg_name = 'aff';
@@ -141,16 +95,16 @@ class Partner {
 				$query_arg_name = 'subsidiaryId';
 				break;
 			default:
-				return array();
+				return $url;
 		}
 
 		$code = $this->get_partner_code( $type );
 
 		if ( '' === $code ) {
-			return array();
+			return $url;
 		}
 
-		return array( $query_arg_name => $code );
+		return add_query_arg( $query_arg_name, $code, $url );
 	}
 
 	/**

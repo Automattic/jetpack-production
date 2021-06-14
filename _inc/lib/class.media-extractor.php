@@ -3,7 +3,7 @@
  * Class with methods to extract metadata from a post/page about videos, images, links, mentions embedded
  * in or attached to the post/page.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -59,9 +59,6 @@ class Jetpack_Media_Meta_Extractor {
 
 		$post = get_post( $post_id );
 		if ( ! $post instanceof WP_Post ) {
-			if ( function_exists( 'restore_current_blog' ) ) {
-				restore_current_blog();
-			}
 			return array();
 		}
 		$content  = $post->post_title . "\n\n" . $post->post_content;
@@ -82,7 +79,7 @@ class Jetpack_Media_Meta_Extractor {
 			$what_to_extract = $what_to_extract - self::IMAGES;
 		}
 
-		if ( function_exists( 'restore_current_blog' ) ) {
+		if ( function_exists( 'switch_to_blog' ) ) {
 			restore_current_blog();
 		}
 
@@ -244,12 +241,7 @@ class Jetpack_Media_Meta_Extractor {
 					$url = wp_parse_url( $link_raw );
 
 					// Data URI links.
-					if ( ! isset( $url['scheme'] ) || 'data' === $url['scheme'] ) {
-						continue;
-					}
-
-					// Reject invalid URLs.
-					if ( ! isset( $url['host'] ) ) {
+					if ( isset( $url['scheme'] ) && 'data' === $url['scheme'] ) {
 						continue;
 					}
 

@@ -2,7 +2,7 @@
 /**
  * Custom logo uploader control for the Customizer.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 class Site_Logo_Image_Control extends WP_Customize_Control {
 	/**

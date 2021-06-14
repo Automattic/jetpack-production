@@ -2,7 +2,7 @@
 /**
  * CCPA Class
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 use Automattic\Jetpack\Assets;
@@ -86,6 +86,7 @@ class WordAds_California_Privacy {
 
 		return '<a href="#" class="ccpa-do-not-sell" style="display: none;">' . self::get_optout_link_text() . '</a>';
 	}
+
 
 	/**
 	 * Gets the text used to link to the opt-out page. By law must read 'Do Not Sell My Personal Information'.

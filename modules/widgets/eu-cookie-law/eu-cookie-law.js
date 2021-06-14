@@ -5,14 +5,9 @@
 		),
 		overlay = document.getElementById( 'eu-cookie-law' ),
 		widget = document.querySelector( '.widget_eu_cookie_law_widget' ),
-		inCustomizer = widget && widget.hasAttribute( 'data-customize-widget-id' ),
 		getScrollTop,
 		initialScrollPosition,
 		scrollFunction;
-
-	if ( null === widget || null === overlay ) {
-		return;
-	}
 
 	/**
 	 * Gets the amount that the window is scrolled.
@@ -32,10 +27,10 @@
 			/(?:(?:^|.*;\s*)personalized-ads-consent\s*\=\s*([^;]*).*$)|^.*$/,
 			'$1'
 		);
-		if ( '' !== cookieValue && '' !== adsCookieValue && ! inCustomizer ) {
+		if ( '' !== cookieValue && '' !== adsCookieValue ) {
 			overlay.parentNode.removeChild( overlay );
 		}
-	} else if ( '' !== cookieValue && ! inCustomizer ) {
+	} else if ( '' !== cookieValue ) {
 		overlay.parentNode.removeChild( overlay );
 	}
 

@@ -36,7 +36,6 @@ class Jetpack_Options {
 				return array(
 					'activated',
 					'active_modules',
-					'active_modules_initialized', // (bool) used to determine that all the default modules were activated, so we know how to act on a reconnection.
 					'allowed_xsite_search_ids', // (array) Array of WP.com blog ids that are allowed to search the content of this site
 					'available_modules',
 					'do_activate',
@@ -59,7 +58,6 @@ class Jetpack_Options {
 					'site_icon_id',                // (int)    Attachment id of the site icon file
 					'dismissed_manage_banner',     // (bool) Dismiss Jetpack manage banner allows the user to dismiss the banner permanently
 					'unique_connection',           // (array)  A flag to determine a unique connection to wordpress.com two values "connected" and "disconnected" with values for how many times each has occured
-					'unique_registrations',        // (integer) A counter of how many times the site was registered
 					'protect_whitelist',           // (array) IP Address for the Protect module to ignore
 					'sync_error_idc',              // (bool|array) false or array containing the site's home and siteurl at time of IDC error
 					'sync_health_status',          // (bool|array) An array of data relating to Jetpack's sync health.
@@ -73,7 +71,7 @@ class Jetpack_Options {
 					'mapbox_api_key',              // (string) Mapbox API Key, for use with Map block.
 					'mailchimp',                   // (string) Mailchimp keyring data, for mailchimp block.
 					'xmlrpc_errors',               // (array) Keys are XML-RPC signature error codes. Values are truthy.
-					'dismissed_wizard_banner',     // (int) (DEPRECATED) True if the Wizard banner has been dismissed.
+					'dismissed_wizard_banner',     // (int) True if the Wizard banner has been dismissed.
 				);
 
 			case 'private':
@@ -81,7 +79,6 @@ class Jetpack_Options {
 					'blog_token',  // (string) The Client Secret/Blog Token of this site.
 					'user_token',  // (string) The User Token of this site. (deprecated)
 					'user_tokens',  // (array)  User Tokens for each user of this site who has connected to jetpack.wordpress.com.
-					'purchase_token', // (string) Token for logged out user purchases.
 				);
 
 			case 'network':
@@ -92,34 +89,29 @@ class Jetpack_Options {
 		}
 
 		return array(
-			'id',                               // (int)    The Client ID/WP.com Blog ID of this site.
-			'publicize_connections',            // (array)  An array of Publicize connections from WordPress.com.
-			'master_user',                      // (int)    The local User ID of the user who connected this site to jetpack.wordpress.com.
-			'version',                          // (string) Used during upgrade procedure to auto-activate new modules. version:time.
-			'old_version',                      // (string) Used to determine which modules are the most recently added. previous_version:time.
-			'fallback_no_verify_ssl_certs',     // (int)    Flag for determining if this host must skip SSL Certificate verification due to misconfigured SSL.
-			'time_diff',                        // (int)    Offset between Jetpack server's clocks and this server's clocks. Jetpack Server Time = time() + (int) Jetpack_Options::get_option( 'time_diff' )
-			'public',                           // (int|bool) If we think this site is public or not (1, 0), false if we haven't yet tried to figure it out.
-			'videopress',                       // (array)  VideoPress options array.
-			'is_network_site',                  // (int|bool) If we think this site is a network or a single blog (1, 0), false if we haven't yet tried to figue it out.
-			'social_links',                     // (array)  The specified links for each social networking site.
-			'identity_crisis_whitelist',        // (array)  An array of options, each having an array of the values whitelisted for it.
-			'gplus_authors',                    // (array)  The Google+ authorship information for connected users.
-			'last_heartbeat',                   // (int)    The timestamp of the last heartbeat that fired.
-			'hide_jitm',                        // (array)  A list of just in time messages that we should not show because they have been dismissed by the user.
-			'custom_css_4.7_migration',         // (bool)   Whether Custom CSS has scanned for and migrated any legacy CSS CPT entries to the new Core format.
-			'image_widget_migration',           // (bool)   Whether any legacy Image Widgets have been converted to the new Core widget.
-			'gallery_widget_migration',         // (bool)   Whether any legacy Gallery Widgets have been converted to the new Core widget.
-			'sso_first_login',                  // (bool)   Is this the first time the user logins via SSO.
-			'dismissed_hints',                  // (array)  Part of Plugin Search Hints. List of cards that have been dismissed.
-			'first_admin_view',                 // (bool)   Set to true the first time the user views the admin. Usually after the initial connection.
-			'setup_wizard_questionnaire',       // (array)  (DEPRECATED) List of user choices from the setup wizard.
-			'setup_wizard_status',              // (string) (DEPRECATED) Status of the setup wizard.
-			'licensing_error',                  // (string) Last error message occurred while attaching licenses that is yet to be surfaced to the user.
-			'recommendations_banner_dismissed', // (bool) Determines if the recommendations dashboard banner is dismissed or not.
-			'recommendations_banner_enabled',   // (bool)   Whether the recommendations are enabled or not.
-			'recommendations_data',             // (array)  The user choice and other data for the recommendations.
-			'recommendations_step',             // (string) The current step of the recommendations.
+			'id',                           // (int)    The Client ID/WP.com Blog ID of this site.
+			'publicize_connections',        // (array)  An array of Publicize connections from WordPress.com.
+			'master_user',                  // (int)    The local User ID of the user who connected this site to jetpack.wordpress.com.
+			'version',                      // (string) Used during upgrade procedure to auto-activate new modules. version:time.
+			'old_version',                  // (string) Used to determine which modules are the most recently added. previous_version:time.
+			'fallback_no_verify_ssl_certs', // (int)    Flag for determining if this host must skip SSL Certificate verification due to misconfigured SSL.
+			'time_diff',                    // (int)    Offset between Jetpack server's clocks and this server's clocks. Jetpack Server Time = time() + (int) Jetpack_Options::get_option( 'time_diff' )
+			'public',                       // (int|bool) If we think this site is public or not (1, 0), false if we haven't yet tried to figure it out.
+			'videopress',                   // (array)  VideoPress options array.
+			'is_network_site',              // (int|bool) If we think this site is a network or a single blog (1, 0), false if we haven't yet tried to figue it out.
+			'social_links',                 // (array)  The specified links for each social networking site.
+			'identity_crisis_whitelist',    // (array)  An array of options, each having an array of the values whitelisted for it.
+			'gplus_authors',                // (array)  The Google+ authorship information for connected users.
+			'last_heartbeat',               // (int)    The timestamp of the last heartbeat that fired.
+			'hide_jitm',                    // (array)  A list of just in time messages that we should not show because they have been dismissed by the user.
+			'custom_css_4.7_migration',     // (bool)   Whether Custom CSS has scanned for and migrated any legacy CSS CPT entries to the new Core format.
+			'image_widget_migration',       // (bool)   Whether any legacy Image Widgets have been converted to the new Core widget.
+			'gallery_widget_migration',     // (bool)   Whether any legacy Gallery Widgets have been converted to the new Core widget.
+			'sso_first_login',              // (bool)   Is this the first time the user logins via SSO.
+			'dismissed_hints',              // (array)  Part of Plugin Search Hints. List of cards that have been dismissed.
+			'first_admin_view',             // (bool)   Set to true the first time the user views the admin. Usually after the initial connection.
+			'setup_wizard_questionnaire',   // (array)  List of user choices from the setup wizard.
+			'setup_wizard_status',          // (string) Status of the setup wizard.
 		);
 	}
 
@@ -619,7 +611,6 @@ class Jetpack_Options {
 			'jetpack_connection_banner_ab',
 			'jetpack_active_plan',
 			'jetpack_activation_source',
-			'jetpack_site_products',
 			'jetpack_sso_match_by_email',
 			'jetpack_sso_require_two_step',
 			'jetpack_sso_remove_login_form',

@@ -2,7 +2,7 @@
 /**
  * The password strength checker.
  *
- * @package automattic/jetpack
+ * @package jetpack
  */
 
 /**

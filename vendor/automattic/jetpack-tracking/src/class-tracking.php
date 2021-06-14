@@ -7,19 +7,12 @@
 
 namespace Automattic\Jetpack;
 
+use Automattic\Jetpack\Terms_Of_Service;
+
 /**
  * The Tracking class, used to record events in wpcom
  */
 class Tracking {
-	/**
-	 * The assets version.
-	 *
-	 * @since 9.4.0
-	 *
-	 * @var string Assets version.
-	 */
-	const ASSETS_VERSION = '1.0.0';
-
 	/**
 	 * Slug of the product that we are tracking.
 	 *
@@ -50,93 +43,10 @@ class Tracking {
 	}
 
 	/**
-	 * Universal method for for all tracking events triggered via the JavaScript client.
-	 *
-	 * @access public
-	 */
-	public function ajax_tracks() {
-		// Check for nonce.
-		if (
-			empty( $_REQUEST['tracksNonce'] )
-			|| ! wp_verify_nonce( $_REQUEST['tracksNonce'], 'jp-tracks-ajax-nonce' )
-		) {
-			wp_send_json_error(
-				__( 'You aren’t authorized to do that.', 'jetpack' ),
-				403
-			);
-		}
-
-		if ( ! isset( $_REQUEST['tracksEventName'] ) || ! isset( $_REQUEST['tracksEventType'] ) ) {
-			wp_send_json_error(
-				__( 'No valid event name or type.', 'jetpack' ),
-				403
-			);
-		}
-
-		$tracks_data = array();
-		if ( 'click' === $_REQUEST['tracksEventType'] && isset( $_REQUEST['tracksEventProp'] ) ) {
-			if ( is_array( $_REQUEST['tracksEventProp'] ) ) {
-				$tracks_data = $_REQUEST['tracksEventProp'];
-			} else {
-				$tracks_data = array( 'clicked' => $_REQUEST['tracksEventProp'] );
-			}
-		}
-
-		$this->record_user_event( $_REQUEST['tracksEventName'], $tracks_data );
-
-		wp_send_json_success();
-	}
-
-	/**
-	 * Register script necessary for tracking.
-	 *
-	 * @param boolean $enqueue Also enqueue? defaults to false.
-	 */
-	public static function register_tracks_functions_scripts( $enqueue = false ) {
-
-		// Register jp-tracks as it is a dependency.
-		wp_register_script(
-			'jp-tracks',
-			'//stats.wp.com/w.js',
-			array(),
-			gmdate( 'YW' ),
-			true
-		);
-
-		if ( $enqueue ) {
-			// Enqueue jp-tracks-functions script.
-			wp_enqueue_script(
-				'jp-tracks-functions',
-				Assets::get_file_url_for_environment( 'js/tracks-callables.js', 'js/tracks-callables.js', __FILE__ ),
-				array( 'jp-tracks' ),
-				self::ASSETS_VERSION,
-				true
-			);
-		} else {
-			// Register jp-tracks-functions script.
-			wp_register_script(
-				'jp-tracks-functions',
-				Assets::get_file_url_for_environment( 'js/tracks-callables.js', 'js/tracks-callables.js', __FILE__ ),
-				array( 'jp-tracks' ),
-				self::ASSETS_VERSION,
-				true
-			);
-		}
-
-	}
-
-	/**
 	 * Enqueue script necessary for tracking.
 	 */
 	public function enqueue_tracks_scripts() {
-		wp_enqueue_script(
-			'jptracks',
-			Assets::get_file_url_for_environment( 'js/tracks-ajax.js', 'js/tracks-ajax.js', __FILE__ ),
-			array(),
-			self::ASSETS_VERSION,
-			true
-		);
-
+		wp_enqueue_script( 'jptracks', plugins_url( '_inc/lib/tracks/tracks-ajax.js', JETPACK__PLUGIN_FILE ), array(), JETPACK__VERSION, true );
 		wp_localize_script(
 			'jptracks',
 			'jpTracksAJAX',
@@ -193,9 +103,8 @@ class Tracking {
 			return false;
 		}
 		$terms_of_service = new Terms_Of_Service();
-		$status           = new Status();
-		// Don't track users who have not agreed to our TOS.
-		if ( ! $this->should_enable_tracking( $terms_of_service, $status ) ) {
+		// Don't track users who have opted out or not agreed to our TOS, or are not running an active Jetpack.
+		if ( ! $terms_of_service->has_agreed() ) {
 			return false;
 		}
 
@@ -206,22 +115,6 @@ class Tracking {
 		}
 
 		return $event_obj->record();
-	}
-
-	/**
-	 * Determines whether tracking should be enabled.
-	 *
-	 * @param Automattic\Jetpack\Terms_Of_Service $terms_of_service A Terms_Of_Service object.
-	 * @param Automattic\Jetpack\Status           $status A Status object.
-	 *
-	 * @return boolean True if tracking should be enabled, else false.
-	 */
-	public function should_enable_tracking( $terms_of_service, $status ) {
-		if ( $status->is_offline_mode() ) {
-			return false;
-		}
-
-		return $terms_of_service->has_agreed() || $this->connection->is_user_connected();
 	}
 
 	/**

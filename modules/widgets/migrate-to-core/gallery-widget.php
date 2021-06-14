@@ -4,7 +4,7 @@
  *
  * @since 5.5
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 /**
  * Migrates all active instances of Jetpack's Gallery widget to Core's Media Gallery widget.

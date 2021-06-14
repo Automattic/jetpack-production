@@ -7,13 +7,12 @@
  *
  * Please namespace with jetpack_
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Connection\Client;
-use Automattic\Jetpack\Device_Detection;
 use Automattic\Jetpack\Redirect;
-use Automattic\Jetpack\Sync\Functions;
+use Automattic\Jetpack\Device_Detection;
 
 /**
  * Disable direct access.
@@ -234,8 +233,6 @@ function jetpack_get_migration_data( $option_name ) {
 /**
  * Prints a TOS blurb used throughout the connection prompts.
  *
- * Note: custom ToS messages are also defined in Jetpack_Pre_Connection_JITMs->get_raw_messages()
- *
  * @since 5.3
  *
  * @echo string
@@ -271,7 +268,7 @@ function jetpack_render_tos_blurb() {
  * @return array|bool|WP_Error
  */
 function jetpack_theme_update( $preempt, $r, $url ) {
-	if ( 0 === stripos( $url, JETPACK__WPCOM_JSON_API_BASE . '/rest/v1/themes/download' ) ) {
+	if ( false !== stripos( $url, JETPACK__WPCOM_JSON_API_HOST . '/rest/v1/themes/download' ) ) {
 		$file = $r['filename'];
 		if ( ! $file ) {
 			return new WP_Error( 'problem_creating_theme_file', esc_html__( 'Problem creating file for theme download', 'jetpack' ) );
@@ -313,12 +310,11 @@ function jetpack_upgrader_pre_download( $reply ) {
 
 add_filter( 'upgrader_pre_download', 'jetpack_upgrader_pre_download' );
 
+
 /**
  * Wraps data in a way so that we can distinguish between objects and array and also prevent object recursion.
  *
  * @since 6.1.0
-
- * @deprecated Automattic\Jetpack\Sync\Functions::json_wrap
  *
  * @param array|obj $any        Source data to be cleaned up.
  * @param array     $seen_nodes Built array of nodes.
@@ -326,9 +322,33 @@ add_filter( 'upgrader_pre_download', 'jetpack_upgrader_pre_download' );
  * @return array
  */
 function jetpack_json_wrap( &$any, $seen_nodes = array() ) {
-	_deprecated_function( __METHOD__, 'jetpack-9.5', 'Automattic\Jetpack\Sync\Functions' );
+	if ( is_object( $any ) ) {
+		$input        = get_object_vars( $any );
+		$input['__o'] = 1;
+	} else {
+		$input = &$any;
+	}
 
-	return Functions::json_wrap( $any, $seen_nodes );
+	if ( is_array( $input ) ) {
+		$seen_nodes[] = &$any;
+
+		$return = array();
+
+		foreach ( $input as $k => &$v ) {
+			if ( ( is_array( $v ) || is_object( $v ) ) ) {
+				if ( in_array( $v, $seen_nodes, true ) ) {
+					continue;
+				}
+				$return[ $k ] = jetpack_json_wrap( $v, $seen_nodes );
+			} else {
+				$return[ $k ] = $v;
+			}
+		}
+
+		return $return;
+	}
+
+	return $any;
 }
 
 /**
@@ -463,37 +483,4 @@ function jetpack_is_mobile( $kind = 'any', $return_matched_agent = false ) {
 	 * @param bool        $return_matched_agent Boolean indicating if the UA should be returned
 	 */
 	return apply_filters( 'jetpack_is_mobile', $return, $kind, $return_matched_agent );
-}
-
-/**
- * Determine whether the current request is for accessing the frontend.
- *
- * @return bool True if it's a frontend request, false otherwise.
- */
-function jetpack_is_frontend() {
-	$is_frontend = true;
-
-	if (
-		is_admin() ||
-		wp_doing_ajax() ||
-		wp_doing_cron() ||
-		wp_is_json_request() ||
-		wp_is_jsonp_request() ||
-		wp_is_xml_request() ||
-		is_feed() ||
-		( defined( 'REST_REQUEST' ) && REST_REQUEST ) ||
-		( defined( 'REST_API_REQUEST' ) && REST_API_REQUEST ) ||
-		( defined( 'WP_CLI' ) && WP_CLI )
-	) {
-		$is_frontend = false;
-	}
-
-	/**
-	 * Filter whether the current request is for accessing the frontend.
-	 *
-	 * @since  9.0.0
-	 *
-	 * @param bool $is_frontend Whether the current request is for accessing the frontend.
-	 */
-	return (bool) apply_filters( 'jetpack_is_frontend', $is_frontend );
 }

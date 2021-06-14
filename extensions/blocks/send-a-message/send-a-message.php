@@ -2,14 +2,14 @@
 /**
  * Send a Message Block.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Send_A_Message;
 
-require_once __DIR__ . '/whatsapp-button/whatsapp-button.php';
+require_once dirname( __FILE__ ) . '/whatsapp-button/whatsapp-button.php';
 
-use Automattic\Jetpack\Blocks;
+use Jetpack;
 use Jetpack_Gutenberg;
 
 const FEATURE_NAME = 'send-a-message';
@@ -21,7 +21,7 @@ const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
  * registration if we need to.
  */
 function register_block() {
-	Blocks::jetpack_register_block(
+	jetpack_register_block(
 		BLOCK_NAME,
 		array(
 			'render_callback' => __NAMESPACE__ . '\render_block',
