@@ -9,10 +9,6 @@ class WPCOM_JSON_API_List_Comments_Walker extends Walker {
 	);
 
 	public function start_el( &$output, $object, $depth = 0, $args = array(), $current_object_id = 0 ) {
-		if ( ! is_array( $output ) ) {
-			$output = array();
-		}
-
 		$output[] = $object->comment_ID;
 	}
 
@@ -72,9 +68,7 @@ new WPCOM_JSON_API_List_Comments_Endpoint( array(
 		'$site' => '(int|string) Site ID or domain',
 	),
 
-	'allow_fallback_to_jetpack_blog_token' => true,
-
-	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/comments/?number=2',
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/comments/?number=2'
 ) );
 
 new WPCOM_JSON_API_List_Comments_Endpoint( array(
@@ -89,9 +83,7 @@ new WPCOM_JSON_API_List_Comments_Endpoint( array(
 		'$post_ID' => '(int) The post ID',
 	),
 
-	'allow_fallback_to_jetpack_blog_token' => true,
-
-	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/posts/7/replies/?number=2',
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/posts/7/replies/?number=2'
 ) );
 
 // @todo permissions
@@ -169,7 +161,7 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 		if ( !$comment_id ) {
 			// We can get comment counts for the whole site or for a single post, but only for certain queries
 			if ( 'any' === $args['type'] && !isset( $args['after'] ) && !isset( $args['before'] ) ) {
-				$count = $this->api->wp_count_comments( $post_id );
+				$count = wp_count_comments( $post_id );
 			}
 		}
 
@@ -198,16 +190,10 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 			}
 		}
 
-		/** This filter is documented in class.json-api.php */
-		$exclude = apply_filters( 'jetpack_api_exclude_comment_types',
-			array( 'order_note', 'webhook_delivery', 'review', 'action_log' )
-		);
-
 		$query = array(
-			'order'        => $args['order'],
-			'type'         => 'any' === $args['type'] ? false : $args['type'],
-			'status'       => $status,
-			'type__not_in' => $exclude,
+			'order'  => $args['order'],
+			'type'   => 'any' === $args['type'] ? false : $args['type'],
+			'status' => $status,
 		);
 
 		if ( isset( $args['page'] ) ) {
