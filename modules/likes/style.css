@@ -1,41 +1,5 @@
-/**
- * Like Button toolbar button, loading text & container styles
- */
-
-/* Master container */
-#jp-post-flair {
-	padding-top: .5em;
-}
-
-/* Overall Sharedaddy block title */
-div.sharedaddy,
-#content div.sharedaddy,
-#main div.sharedaddy {
-	clear: both;
-}
-
-div.sharedaddy h3.sd-title {
-	margin: 0 0 1em 0;
-	display: inline-block;
-	line-height: 1.2;
-	font-size: 9pt;
-	font-weight: bold;
-}
-
-div.sharedaddy h3.sd-title:before {
-	content: "";
-	display: block;
-	width: 100%;
-	min-width: 30px;
-	border-top: 1px solid #dcdcde;
-	margin-bottom: 1em;
-}
-
-
-/* Toolbar */
 #wpadminbar li#wp-admin-bar-admin-bar-likes-widget {
 	width: 61px;
-	overflow: hidden;
 }
 
 #wpadminbar iframe.admin-bar-likes-widget {
@@ -49,8 +13,6 @@ div.sharedaddy h3.sd-title:before {
 
 div.jetpack-likes-widget-wrapper {
 	width: 100%;
-	min-height: 50px;	/* Previous height, 60px */
-	position: relative; /* Need to abs position placeholder and iframe so there isn't a jarring jump */
 }
 
 div.jetpack-likes-widget-wrapper .sd-link-color {
@@ -59,27 +21,17 @@ div.jetpack-likes-widget-wrapper .sd-link-color {
 
 div.jetpack-likes-widget-wrapper.slim-likes-widget {
 	width: 1px; /* initial default */
-	min-height: 0;
-}
-
-div.jetpack-comment-likes-widget-wrapper {
-	width: 100%;
-	position: relative;
-	min-height: 31px;
-}
-
-div.jetpack-comment-likes-widget-wrapper iframe {
-	margin-bottom: 0;
 }
 
 #likes-other-gravatars {
 	display: none;
 	position: absolute;
-	padding: 10px 10px 12px 10px;
-	background-color: #2e4453;
+	padding: 10px;
+	background-color: #000;
 	border-width: 0;
-	box-shadow: 0 0 10px #2e4453;
-	box-shadow: 0 0 10px rgba(46,68,83,.6);
+	opacity: 0.88;
+	filter: alpha(opacity=88);
+	box-shadow: 0 0 10px black;
 	min-width: 130px;
 	z-index: 1000;
 }
@@ -90,8 +42,8 @@ div.jetpack-comment-likes-widget-wrapper iframe {
 
 #likes-other-gravatars .likes-text {
 	color: white;
-	font-size: 12px;
-	padding-bottom: 8px;
+	font-size: 14px;
+	padding-bottom: 5px;
 }
 
 #likes-other-gravatars ul,
@@ -109,6 +61,7 @@ div.jetpack-comment-likes-widget-wrapper iframe {
 #likes-other-gravatars ul.wpl-avatars {
 	overflow: auto;
 	display: block;
+	position: absolute;
 	max-height: 190px;
 }
 
@@ -133,65 +86,94 @@ div.jetpack-comment-likes-widget-wrapper iframe {
 	position: static;
 }
 
+
 div.sd-box {
-	border-top: 1px solid #dcdcde;
+	border-top: 1px solid #ddd;
 	border-top: 1px solid rgba(0,0,0,.13);
+}
+
+h3.sd-title {
+	font-size: 12px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin: 3px 0;
+	padding: 0;
+	text-transform: none;
+	letter-spacing: 0;
+	line-height: 1;
+	font-weight: bold;
+	width: 15.625%; /* 100px / 640px */ float: left;
+	position: static;
+	background: none;
+	border: none;
+}
+
+.rtl .sd-title {
+	float: right;
+	text-align: right;
 }
 
 .entry-content .post-likes-widget, .post-likes-widget,
 .comment-likes-widget {
 	margin: 0;
 	border-width: 0;
-	display: block;
 }
 
-/* Loading text */
-.post-likes-widget-placeholder,
-.comment-likes-widget-placeholder {
+.post-likes-widget-placeholder {
 	margin: 0;
 	border-width: 0;
-	position: relative;
-}
-
-.comment-likes-widget-placeholder {
-	height: 18px;
-	position: absolute;
-	display: flex;
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.comment-likes-widget-placeholder::before {
-	color: #2EA2CC;
-	width: 16px;
-	height: 16px;
-	content: '';
-	display: inline-block;
-	position: relative;
-	top: 3px;
-	padding-right: 5px;
-	background-repeat: no-repeat;
-	background-size: 16px 16px;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='0' fill='none' width='24' height='24'/%3E%3Cg%3E%3Cpath fill='%232EA2CC' d='M12 2l2.582 6.953L22 9.257l-5.822 4.602L18.18 21 12 16.89 5.82 21l2.002-7.14L2 9.256l7.418-.304'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .post-likes-widget-placeholder .button {
-	display: none;	/* Let's not show a dummy like button, let's just make a great button experience once it's loaded */
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	background: #efefef;
+	background: -moz-linear-gradient(top, #f7f7f7 0%, #efefef 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#efefef));
+	background: -webkit-linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+	background: -o-linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+	background: -ms-linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+	background: linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+	border-radius: 3px;
+	border: 1px solid #ddd !important;
+	box-shadow: inset 0 1px 0 #fff;
+	color: #999;
+	text-decoration: none;
+	line-height: 1;
+	font-size: 12px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
 }
 
 .post-likes-widget-placeholder .button span {
+	padding: 1px 5px 1px 2px;
+	display: block;
+	opacity: .8;
+	line-height: 1.5em;
+	text-shadow: none;
 }
 
-.post-likes-widget-placeholder .loading,
-.comment-likes-widget-placeholder .loading {
+.post-likes-widget-placeholder .button span:before {
+	color: #97A8CC;
+	font-family: "Noticons";
+	content: '\f408';
+	font-size: 16px;
+	line-height: 0;
+	text-shadow: 0 1px 0 #fff;
+	position: relative;
+	top: 3px;
+}
+
+.post-likes-widget-placeholder .loading {
 	color: #999;
 	font-size: 12px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.comment-likes-widget-placeholder .loading {
-	padding-left: 5px;
-	margin-top: 4px;
-	align-self: center;
-	color: #4E4E4E;
+.post-likes-widget {
+	width: 82.125%;
+	display: none;
+	float: right;
 }
 
 .slim-likes-widget .post-likes-widget {
@@ -200,6 +182,7 @@ div.sd-box {
 }
 
 /* Like Special cases (display on it's own) */
+
 div.sharedaddy.sd-like-enabled .sd-like h3 {
 	display: none;
 }
@@ -207,23 +190,17 @@ div.sharedaddy.sd-like-enabled .sd-like h3 {
 div.sharedaddy.sd-like-enabled .sd-like .post-likes-widget {
 	width: 100%;
 	float: none;
-	position: absolute; /* Need to abs position placeholder and iframe so there isn't a jarring jump */
-	top: 0;
+}
+
+div.sharedaddy.sd-rating-enabled .sd-like .post-likes-widget, div.sharedaddy.sd-sharing-enabled .sd-like .post-likes-widget {
+	width: 82.125%;
+	float: right;
+}
+
+div.sharedaddy.sd-rating-enabled .sd-like h3, div.sharedaddy.sd-sharing-enabled .sd-like h3 {
+	display: block;
 }
 
 .comment-likes-widget {
 	width: 100%;
-}
-
-
-/* Make ratings block. @todo: make !important unnecessary by removing inline style */
-.pd-rating,
-.cs-rating {
-	display: block !important;
-}
-
-
-/* Hide G+ title */
-.sd-gplus .sd-title {
-	display: none;
 }

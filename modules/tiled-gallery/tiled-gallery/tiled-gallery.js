@@ -1,199 +1,150 @@
-( function () {
-	function TiledGalleryCollection() {
-		this.galleries = [];
-		this.findAndSetupNewGalleries();
-	}
+( function($) {
 
-	TiledGalleryCollection.prototype.findAndSetupNewGalleries = function () {
-		var self = this;
-		var unresizedGalleries = document.querySelectorAll( '.tiled-gallery.tiled-gallery-unresized' );
+var TiledGallery = function() {
+	this.resizeTimeout = null;
 
-		Array.prototype.forEach.call( unresizedGalleries, function ( el ) {
-			self.galleries.push( new TiledGallery( el ) );
-		} );
-	};
+	this.populate();
 
-	TiledGalleryCollection.prototype.resizeAll = function () {
-		Array.prototype.forEach.call( this.galleries, function ( gallery ) {
-			gallery.resize();
-		} );
-	};
+	var self = this;
 
-	function TiledGallery( galleryElem ) {
-		this.gallery = galleryElem;
+	$( window ).on( 'resize', function () {
+		clearTimeout( self.resizeTimeout );
 
-		this.addCaptionEvents();
+		self.resizeTimeout = setTimeout( function () { self.resize(); }, 150 );
+	} );
 
-		// Resize when initialized to fit the gallery to window dimensions
-		this.resize();
+    // Make any new galleries loaded by Infinite Scroll flexible
+    $( 'body' ).on( 'post-load', $.proxy( self.initialize, self ) );
 
-		// Displays the gallery and prevents it from being initialized again
-		this.gallery.classList.remove( 'tiled-gallery-unresized' );
-	}
+	// Populate and set up captions on newdash galleries.
+	$( document ).on( 'page-rendered.wpcom-newdash', $.proxy( self.populate, self ) );
 
-	/**
-	 * Selector for all resizeable elements inside a Tiled Gallery
-	 */
+	this.resize();
+};
 
-	TiledGallery.prototype.resizeableElementsSelector =
-		'.gallery-row, .gallery-group, .tiled-gallery-item img';
+TiledGallery.prototype.populate = function() {
+	this.gallery = $( '.tiled-gallery' );
+	this.item    = this.gallery.find( '.tiled-gallery-item' );
+	this.caption = this.gallery.find( '.tiled-gallery-caption' );
 
-	/**
-	 * Story
-	 */
+	this.Captions();
+};
 
-	TiledGallery.prototype.addCaptionEvents = function () {
-		// Hide captions
-		var galleryCaptions = this.gallery.querySelectorAll( '.tiled-gallery-caption' );
-		Array.prototype.forEach.call( galleryCaptions, function ( el ) {
-			el.style.display = 'none';
-		} );
+TiledGallery.prototype.initialize = function() {
+	var self = this;
 
-		var mouseHoverHandler = function ( e ) {
-			var itemEl = e.target.closest( '.tiled-gallery-item' );
-			var displayValue = 'mouseover' === e.type ? 'block' : 'none';
+	self.populate();
 
-			if ( itemEl ) {
-				var itemCaption = itemEl.querySelector( '.tiled-gallery-caption' );
-				if ( itemCaption ) {
-					itemCaption.style.display = displayValue;
-				}
+	// After each image load, run resize in case all images in the gallery are loaded.
+	self.gallery.find( 'img' ).off( 'load.tiled-gallery' ).on( 'load.tiled-gallery', function () {
+		self.resize();
+	} );
+
+	// Run resize now in case all images loaded from cache.
+	self.resize();
+};
+
+/**
+ * Story
+ */
+TiledGallery.prototype.Captions = function() {
+	/* Hide captions */
+	this.caption.hide();
+
+	this.item.on( 'mouseenter mouseleave', function() {
+		$( this ).find( '.tiled-gallery-caption' ).slideToggle( 'fast' );
+	});
+};
+
+TiledGallery.prototype.resize = function() {
+	var resizeableElements = '.gallery-row, .gallery-group, .tiled-gallery-item img';
+
+	this.gallery.each( function ( galleryIndex, galleryElement ) {
+		var thisGallery = $( galleryElement );
+
+		// All images must be loaded before proceeding.
+		var imagesLoaded = true;
+
+		thisGallery.find( 'img' ).each( function () {
+			if ( ! this.complete ) {
+				imagesLoaded = false;
+				return false;
 			}
-		};
+		} );
 
-		// Add hover effects to bring the caption up and down for each item
-		this.gallery.addEventListener( 'mouseover', mouseHoverHandler );
-		this.gallery.addEventListener( 'mouseout', mouseHoverHandler );
-	};
+		if ( ! imagesLoaded ) {
+			var loadCallback = arguments.callee;
 
-	TiledGallery.prototype.getExtraDimension = function ( el, attribute, mode ) {
-		if ( mode === 'horizontal' ) {
-			var left = attribute === 'border' ? 'borderLeftWidth' : attribute + 'Left';
-			var right = attribute === 'border' ? 'borderRightWidth' : attribute + 'Right';
-			return ( parseInt( el.style[ left ], 10 ) || 0 ) + ( parseInt( el.style[ right ], 10 ) || 0 );
-		} else if ( mode === 'vertical' ) {
-			var top = attribute === 'border' ? 'borderTopWidth' : attribute + 'Top';
-			var bottom = attribute === 'border' ? 'borderBottomWidth' : attribute + 'Bottom';
-			return ( parseInt( el.style[ top ], 10 ) || 0 ) + ( parseInt( el.style[ bottom ], 10 ) || 0 );
-		} else {
-			return 0;
+			// Once all of the images have loaded,
+			// re-call this containing function.
+			$( window ).load( function () {
+				loadCallback( null, thisGallery );
+			} );
+
+			return;
 		}
-	};
 
-	TiledGallery.prototype.resize = function () {
+		if ( ! thisGallery.data( 'sizes-set' ) ) {
+			// Maintain a record of the original widths and heights of these elements
+			// for proper scaling.
+			thisGallery.data( 'sizes-set', true );
+
+			thisGallery.find( resizeableElements ).each( function () {
+				var thisGalleryElement = $( this );
+
+				// Don't change margins, but remember what they were so they can be
+				// accounted for in size calculations.  When the screen width gets
+				// small enough, ignoring the margins can cause images to overflow
+				// into new rows.
+				var extraWidth = ( parseInt( thisGalleryElement.css( 'marginLeft' ), 10 ) || 0 ) + ( parseInt( thisGalleryElement.css( 'marginRight' ), 10 ) || 0 );
+				var extraHeight = ( parseInt( thisGalleryElement.css( 'marginTop' ), 10 ) || 0 ) + ( parseInt( thisGalleryElement.css( 'marginBottom' ), 10 ) || 0 )
+
+				// In some situations, tiled galleries in Firefox have shown scrollbars on the images because
+				// the .outerWidth() call on the image returns a value larger than the container. Restrict
+				// widths used in the resizing functions to the maximum width of the container.
+				var parentElement = $( thisGalleryElement.parents( resizeableElements ).get( 0 ) );
+
+				if ( parentElement && parentElement.data( 'original-width' ) ) {
+					thisGalleryElement
+						.data( 'original-width', Math.min( parentElement.data( 'original-width' ), thisGalleryElement.outerWidth( true ) ) )
+						.data( 'original-height', Math.min( parentElement.data( 'original-height' ), thisGalleryElement.outerHeight( true ) ) );
+				}
+				else {
+					thisGalleryElement
+						.data( 'original-width', thisGalleryElement.outerWidth( true ) )
+						.data( 'original-height', thisGalleryElement.outerHeight( true ) );
+				}
+
+				thisGalleryElement
+					.data( 'extra-width', extraWidth )
+					.data( 'extra-height', extraHeight );
+			} );
+		}
+
 		// Resize everything in the gallery based on the ratio of the current content width
 		// to the original content width;
-		var originalWidth = parseInt( this.gallery.dataset.originalWidth, 10 );
-		var currentWidth = parseFloat(
-			getComputedStyle( this.gallery.parentNode, null ).width.replace( 'px', '' )
-		);
+		var originalWidth = thisGallery.data( 'original-width' );
+		var currentWidth = thisGallery.parent().width();
 		var resizeRatio = Math.min( 1, currentWidth / originalWidth );
 
-		var self = this;
-		var resizableElements = this.gallery.querySelectorAll( this.resizeableElementsSelector );
-		Array.prototype.forEach.call( resizableElements, function ( el ) {
-			var marginWidth = self.getExtraDimension( el, 'margin', 'horizontal' );
-			var marginHeight = self.getExtraDimension( el, 'margin', 'vertical' );
+		thisGallery.find( resizeableElements ).each( function () {
+			var thisGalleryElement = $( this );
 
-			var paddingWidth = self.getExtraDimension( el, 'padding', 'horizontal' );
-			var paddingHeight = self.getExtraDimension( el, 'padding', 'vertical' );
-
-			var borderWidth = self.getExtraDimension( el, 'border', 'horizontal' );
-			var borderHeight = self.getExtraDimension( el, 'border', 'vertical' );
-
-			// Take all outer dimensions into account when resizing so that images
-			// scale with constant empty space between them
-			var outerWidth =
-				parseInt( el.dataset.originalWidth, 10 ) + paddingWidth + borderWidth + marginWidth;
-			var outerHeight =
-				parseInt( el.dataset.originalHeight, 10 ) + paddingHeight + borderHeight + marginHeight;
-
-			// Subtract margins so that images don't overflow on small browser windows
-			el.style.width = Math.floor( resizeRatio * outerWidth ) - marginWidth + 'px';
-			el.style.height = Math.floor( resizeRatio * outerHeight ) - marginHeight + 'px';
+			thisGalleryElement
+				.width( Math.floor( resizeRatio * thisGalleryElement.data( 'original-width' ) ) - thisGalleryElement.data( 'extra-width' ) )
+				.height( Math.floor( resizeRatio * thisGalleryElement.data( 'original-height' ) ) - thisGalleryElement.data( 'extra-height' ) );
 		} );
-	};
-
-	/**
-	 * Resizing logic
-	 */
-
-	var requestAnimationFrame =
-		window.requestAnimationFrame ||
-		window.mozRequestAnimationFrame ||
-		window.webkitRequestAnimationFrame ||
-		window.msRequestAnimationFrame;
-
-	function attachResizeInAnimationFrames( tiledGalleries ) {
-		var resizing = false;
-		var resizeTimeout = null;
-
-		function handleFrame() {
-			tiledGalleries.resizeAll();
-			if ( resizing ) {
-				requestAnimationFrame( handleFrame );
-			}
-		}
-
-		window.addEventListener( 'resize', function () {
-			clearTimeout( resizeTimeout );
-
-			if ( ! resizing ) {
-				requestAnimationFrame( handleFrame );
-			}
-			resizing = true;
-			resizeTimeout = setTimeout( function () {
-				resizing = false;
-			}, 15 );
-		} );
-	}
-
-	function attachPlainResize( tiledGalleries ) {
-		window.addEventListener( 'resize', function () {
-			tiledGalleries.resizeAll();
-		} );
-	}
-
-	/**
-	 * Ready, set...
-	 */
-	function ready( fn ) {
-		if ( document.readyState !== 'loading' ) {
-			fn();
-		} else {
-			document.addEventListener( 'DOMContentLoaded', fn );
-		}
-	}
-	ready( function () {
-		var tiledGalleries = new TiledGalleryCollection();
-
-		document.body.addEventListener( 'is.post-load', function () {
-			tiledGalleries.findAndSetupNewGalleries();
-		} );
-
-		if ( typeof jQuery === 'function' ) {
-			jQuery( document ).on( 'page-rendered.wpcom-newdash', function () {
-				tiledGalleries.findAndSetupNewGalleries();
-			} );
-		}
-
-		// Chrome is a unique snow flake and will start lagging on occasion
-		// It helps if we only resize on animation frames
-		//
-		// For other browsers it seems like there is no lag even if we resize every
-		// time there is an event
-		if ( window.chrome && requestAnimationFrame ) {
-			attachResizeInAnimationFrames( tiledGalleries );
-		} else {
-			attachPlainResize( tiledGalleries );
-		}
-
-		if ( 'undefined' !== typeof wp && wp.customize && wp.customize.selectiveRefresh ) {
-			wp.customize.selectiveRefresh.bind( 'partial-content-rendered', function ( placement ) {
-				if ( wp.isJetpackWidgetPlaced( placement, 'gallery' ) ) {
-					tiledGalleries.findAndSetupNewGalleries();
-				}
-			} );
-		}
 	} );
-} )();
+};
+
+/**
+ * Ready, set...
+ */
+$( document ).ready( function() {
+
+	// Instance!
+	var TiledGalleryInstance = new TiledGallery;
+
+});
+
+})(jQuery);
