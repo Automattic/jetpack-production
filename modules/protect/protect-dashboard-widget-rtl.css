@@ -8,7 +8,8 @@
 }
 
 .jetpack-security * {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 /* alert msgs */
@@ -65,8 +66,8 @@
 }
 
 .blocked-attacks {
-	background: #f6f7f7;
-	border-bottom: 1px #f0f0f1 solid;
+	background: #fafafa;
+	border-bottom: 1px #eee solid;
 	padding-bottom: 35px;
 }
 

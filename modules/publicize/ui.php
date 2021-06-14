@@ -99,15 +99,15 @@ class Publicize_UI {
 		<h4><?php
 			printf(
 				wp_kses(
-					__( "We've made some updates to Publicize. Please visit the <a href='%s' class='jptracks' data-jptracks-name='legacy_publicize_settings'>WordPress.com sharing page</a> to manage your publicize connections or use the button below.", 'jetpack' ),
-					array( 'a' => array( 'href' => array(), 'class' => array(), 'data-jptracks-name' => array() ) )
+					__( "We've made some updates to Publicize. Please visit the <a href='%s'>WordPress.com sharing page</a> to manage your publicize connections or use the button below.", 'jetpack' ),
+					array( 'a' => array( 'href' => array() ) )
 				),
 				esc_url( publicize_calypso_url() )
 			);
 			?>
 		</h4>
 
-		<a href="<?php echo esc_url( publicize_calypso_url() ); ?>" class="button button-primary jptracks" data-jptracks-name='legacy_publicize_settings'><?php esc_html_e( 'Publicize Settings', 'jetpack' ); ?></a>
+		<a href="<?php echo esc_url( publicize_calypso_url() ); ?>" class="button button-primary"><?php esc_html_e( 'Publicize Settings', 'jetpack' ); ?></a>
 		<?php
 	}
 
@@ -130,6 +130,12 @@ class Publicize_UI {
 
 		$max_length = defined( 'JETPACK_PUBLICIZE_TWITTER_LENGTH' ) ? JETPACK_PUBLICIZE_TWITTER_LENGTH : 280;
 		$max_length = $max_length - 24; // t.co link, space
+
+		// for deprecation tooltip
+		wp_enqueue_style( 'wp-pointer' );
+		wp_enqueue_script( 'wp-pointer' );
+
+		$this->google_plus_shut_down_tooltip_script();
 
 		?>
 
@@ -366,7 +372,7 @@ jQuery( function($) {
 	padding-left: 1em;
 }
 .publicize__notice-warning {
-	display: block;
+	display: inline-block;
 	padding: 7px 10px;
 	margin: 5px 0;
 	border-left-width: 4px;
@@ -374,13 +380,17 @@ jQuery( function($) {
 	font-size: 12px;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 }
-.publicize-external-link {
+.publicize__sharing-settings {
 	display: block;
 	text-decoration: none;
 	margin-top: 8px;
 }
-.publicize-external-link__text {
-	text-decoration: underline;
+.publicize__sharing-settings:after {
+	content: "\f504";
+	font: normal 18px/.5em dashicons;
+	speak: none;
+	margin-left: 5px;
+	vertical-align: middle;
 }
 #publicize-title:before {
 	content: "\f237";
@@ -390,7 +400,7 @@ jQuery( function($) {
 	padding-right: 3px;
 	vertical-align: top;
 	-webkit-font-smoothing: antialiased;
-	color: #8c8f94;
+	color: #82878c;
 }
 .post-new-php .authorize-link, .post-php .authorize-link {
 	line-height: 1.5em;
@@ -404,7 +414,7 @@ jQuery( function($) {
 .wpas-twitter-length-limit {
 	color: red;
 }
-.publicize__notice-warning .dashicons {
+.publicize-disabled-service-message .dashicons {
 	font-size: 16px;
 	text-decoration: none;
 }
@@ -478,21 +488,16 @@ jQuery( function($) {
 						foreach ( $must_reauth as $connection_name ) {
 							?>
 							<span class="notice-warning publicize__notice-warning">
-								<?php
-									/* translators: %s is the name of a Pubilicize service like "LinkedIn" */
-									printf( esc_html__(
-										'Your %s connection needs to be reauthenticated to continue working – head to Sharing to take care of it.',
-										'jetpack'
-									), $connection_name );
-								?>
+				                <?php
+				                printf( esc_html__(
+					                'Your %s connection needs to be reauthenticated to continue working – head to Sharing to take care of it.',
+							'jetpack'
+				                ), $connection_name );
+				                ?>
 								<a
-									class="publicize-external-link"
-									href="<?php echo publicize_calypso_url() ?>"
-									target="_blank"
-								>
-									<span class="publicize-external-link__text"><?php esc_html_e( 'Go to Sharing settings', 'jetpack' ); ?></span>
-									<span class="dashicons dashicons-external"></span>
-								</a>
+										class="publicize__sharing-settings"
+										href="<?php echo publicize_calypso_url() ?>"
+								><?php esc_html_e( 'Go to Sharing settings', 'jetpack' ) ?></a>
 							</span>
 							<?php
 						}
@@ -501,9 +506,14 @@ jQuery( function($) {
 					}
 
 					$labels = array();
+					$has_google_plus = false;
 					foreach ( $connections_data as $connection_data ) {
 						if ( ! $connection_data['enabled'] ) {
 							continue;
+						}
+
+						if ( 'google_plus' === $connection_data['service_name'] ) {
+							$has_google_plus = true;
 						}
 
 						$labels[] = sprintf(
@@ -514,6 +524,17 @@ jQuery( function($) {
 
 				?>
 					<span id="publicize-defaults"><?php echo join( ', ', $labels ); ?></span>
+				<?php if ( $has_google_plus ) : ?>
+					<div class="notice inline notice-warning publicize-disabled-service-message">
+						<p>
+							<strong><?php esc_html_e( 'Google+ support is being removed', 'jetpack' ); ?></strong>
+							<a href="javascript:void(0)" id="jetpack-gplus-deprecated-notice">
+								<?php esc_html_e( 'Why?', 'jetpack' ); ?>
+								<span class="dashicons dashicons-info"></span>
+							</a>
+						</p>
+					</div>
+				<?php endif; ?>
 					<a href="#" id="publicize-form-edit"><?php esc_html_e( 'Edit', 'jetpack' ); ?></a>&nbsp;<a href="<?php echo esc_url( $this->publicize_settings_url ); ?>" rel="noopener noreferrer" target="_blank"><?php _e( 'Settings', 'jetpack' ); ?></a><br />
 				<?php
 
@@ -653,5 +674,54 @@ jQuery( function($) {
 			<a href="#" class="hide-if-no-js button" id="publicize-disconnected-form-hide"><?php esc_html_e( 'OK', 'jetpack' ); ?></a>
 		</div><?php // #publicize-form
 		return ob_get_clean();
+	}
+
+	private function google_plus_shut_down_notice() {
+		return wp_kses(
+			sprintf(
+				/* Translators: placeholder is a link to an announcement post on Google's blog. */
+				__(
+					'<h3>Google+ Support is being removed</h3><p>Google recently <a href="%1$s" target="_blank">announced</a> that Google+ is shutting down in April 2019, and access via third-party tools like Jetpack will cease in March 2019.</p><p>For now, you can still post to Google+ using existing connections, but you cannot add new connections. The ability to post will be removed in early 2019.</p>',
+					'jetpack'
+				),
+				esc_url( 'https://www.blog.google/technology/safety-security/expediting-changes-google-plus/' )
+			),
+			array(
+				'a'  => array(
+					'href' => true,
+					'target' => true,
+				),
+				'h3' => true,
+				'p'  => true,
+			)
+		);
+	}
+
+	private function google_plus_shut_down_tooltip_script() {
+		$google_plus_exp_msg = $this->google_plus_shut_down_notice();
+	?>
+		<script>
+		// deprecation tooltip
+		(function($){
+			var setup = function() {
+				$('#jetpack-gplus-deprecated-notice').first().pointer(
+					{
+						content: decodeURIComponent( "<?php echo rawurlencode( $google_plus_exp_msg ); ?>" ),
+						position: {
+							edge: "right",
+							align: "bottom"
+						},
+						pointerClass: "wp-pointer arrow-bottom",
+						pointerWidth: 420
+					}
+				).click( function( e ) {
+					e.preventDefault();
+					$( this ).pointer( 'open' );
+				} );
+			};
+			$(document).ready( setup );
+		})(jQuery);
+		</script>
+	<?php
 	}
 }

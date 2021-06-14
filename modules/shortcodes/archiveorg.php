@@ -8,8 +8,6 @@
  * [archiveorg id=Experime1940 width=640 height=480 autoplay=1]
 
  * <iframe src="http://archive.org/embed/Experime1940&autoplay=1&poster=http://archive.org/images/map.png" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
- *
- * @package automattic/jetpack
  */
 
 /**
@@ -17,7 +15,7 @@
  *
  * @since 4.5.0
  *
- * @param array $atts Shortcode attributes.
+ * @param array $atts
  *
  * @return int|string
  */
@@ -69,13 +67,13 @@ function jetpack_archiveorg_shortcode( $atts ) {
 	if ( ! $atts['width'] ) {
 		$width = absint( $content_width );
 	} else {
-		$width = (int) $atts['width'];
+		$width = intval( $atts['width'] );
 	}
 
 	if ( ! $atts['height'] ) {
 		$height = round( ( $width / 640 ) * 360 );
 	} else {
-		$height = (int) $atts['height'];
+		$height = intval( $atts['height'] );
 	}
 
 	if ( $atts['autoplay'] ) {
@@ -90,11 +88,9 @@ function jetpack_archiveorg_shortcode( $atts ) {
 		$poster = '';
 	}
 
-	$url = esc_url( "https://archive.org/embed/{$id}{$autoplay}{$poster}" );
+	$url = esc_url( set_url_scheme( "https://archive.org/embed/{$id}{$autoplay}{$poster}" ) );
 
-	$title = esc_html__( 'Archive.org', 'jetpack' );
-
-	$html = "<div class='embed-archiveorg' style='text-align:center;'><iframe title='$title' src='$url' width='$width' height='$height' style='border:0;' webkitallowfullscreen='true' mozallowfullscreen='true' allowfullscreen></iframe></div>";
+	$html = "<div class='embed-archiveorg' style='text-align:center;'><iframe src='$url' width='$width' height='$height' style='border:0;' webkitallowfullscreen='true' mozallowfullscreen='true' allowfullscreen></iframe></div>";
 
 	return $html;
 }
@@ -106,7 +102,7 @@ add_shortcode( 'archiveorg', 'jetpack_archiveorg_shortcode' );
  *
  * @since 4.5.0
  *
- * @param string $content Post content.
+ * @param string $content
  *
  * @return mixed
  */
@@ -125,11 +121,9 @@ function jetpack_archiveorg_embed_to_shortcode( $content ) {
 		$url = explode( '&amp;', $match[1] );
 		$id  = 'id=' . $url[0];
 
-		$autoplay  = '';
-		$poster    = '';
-		$url_count = count( $url );
-
-		for ( $ii = 1; $ii < $url_count; $ii++ ) {
+		$autoplay = '';
+		$poster   = '';
+		for ( $ii = 1; $ii < count( $url ); $ii++ ) {
 			if ( 'autoplay=1' === $url[ $ii ] ) {
 				$autoplay = ' autoplay="1"';
 			}
