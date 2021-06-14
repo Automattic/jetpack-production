@@ -257,11 +257,6 @@
 	margin: 1em auto;
 }
 
-/* Facebook */
-.entry-content .fb-video {
-	display: block;
-}
-
 /**
  * Blocks
  */
@@ -284,22 +279,4 @@
 /* Beautiful Math */
 .entry-content img.latex {
 	display: inline;
-}
-
-/**
- * .com Toolbar
- */
-
-/* fix wordpress.com notification iframe width */
-iframe#wpnt-notes-iframe2.wide {
-	width: auto !important;
-}
-
-/* fix site position when overflow nav modal  */
-.admin-bar {
-	position: unset !important;
-}
-
-.screen-reader-text {
-	position: absolute;
 }

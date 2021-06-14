@@ -4,12 +4,11 @@
  *
  * @since 7.1.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions;
 
-use Automattic\Jetpack\Blocks;
 use Jetpack;
 use Jetpack_Gutenberg;
 
@@ -57,7 +56,7 @@ class WordAds {
 	 */
 	public static function register() {
 		if ( self::is_available() ) {
-			Blocks::jetpack_register_block(
+			jetpack_register_block(
 				self::BLOCK_NAME,
 				array(
 					'render_callback' => array( __CLASS__, 'gutenblock_render' ),
@@ -74,7 +73,7 @@ class WordAds {
 			Jetpack_Gutenberg::set_extension_unavailable( self::BLOCK_NAME, 'WordAds unavailable' );
 			return;
 		}
-		// Make the block available. Just in case it wasn't registered before.
+		// Make the block available. Just in case it wasn't registed before.
 		Jetpack_Gutenberg::set_extension_available( self::BLOCK_NAME );
 	}
 
@@ -88,7 +87,7 @@ class WordAds {
 	public static function gutenblock_render( $attr ) {
 		global $wordads;
 
-		/** This filter is already documented in modules/wordads/class-wordads.php `insert_ad()` */
+		/** This filter is already documented in modules/wordads/wordads.php `insert_ad()` */
 		if (
 			empty( $wordads )
 			|| empty( $wordads->params )
@@ -106,7 +105,7 @@ class WordAds {
 			return $wordads->get_ad( 'inline', 'house' );
 		}
 
-		// section_id is mostly deprecated at this point, but it helps us (devs) keep track of which ads end up where
+		// section_id is mostly depricated at this point, but it helps us (devs) keep track of which ads end up where
 		// 6 is to keep track of gutenblock ads.
 		$section_id = $wordads->params->blog_id . '6';
 		$align      = 'center';
@@ -117,7 +116,7 @@ class WordAds {
 
 		$ad_tag_ids = $wordads->get_ad_tags();
 		$format     = 'mrec';
-		if ( isset( $attr['format'] ) && isset( $ad_tag_ids[ $attr['format'] ] ) ) {
+		if ( isset( $attr['format'] ) && in_array( $attr['format'], array_keys( $ad_tag_ids ), true ) ) {
 			$format = $attr['format'];
 		}
 

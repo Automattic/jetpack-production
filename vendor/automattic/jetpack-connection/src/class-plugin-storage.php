@@ -7,16 +7,19 @@
 
 namespace Automattic\Jetpack\Connection;
 
+use Automattic\Jetpack\Config;
 use WP_Error;
 
 /**
- * The class serves a single purpose - to store the data which plugins use the connection, along with some auxiliary information.
+ * The class serves a single purpose - to store the data that plugins use the connection, along with some auxiliary information.
+ * Well, we don't really store all that. The information is provided on runtime,
+ * so all we need to do is to save the data into the class property and retrieve it from there on demand.
+ *
+ * @todo Adapt for multisite installations.
  */
 class Plugin_Storage {
 
 	const ACTIVE_PLUGINS_OPTION_NAME = 'jetpack_connection_active_plugins';
-
-	const PLUGINS_DISABLED_OPTION_NAME = 'jetpack_connection_disabled_plugins';
 
 	/**
 	 * Whether this class was configured for the first time or not.
@@ -40,13 +43,12 @@ class Plugin_Storage {
 	private static $plugins = array();
 
 	/**
-	 * The blog ID the storage is setup for.
-	 * The data will be refreshed if the blog ID changes.
-	 * Used for the multisite networks.
+	 * Whether the plugins were configured.
+	 * To make sure we don't call the configuration process again and again.
 	 *
-	 * @var int
+	 * @var bool
 	 */
-	private static $current_blog_id = null;
+	private static $plugins_configuration_finished = false;
 
 	/**
 	 * Add or update the plugin information in the storage.
@@ -60,7 +62,7 @@ class Plugin_Storage {
 		self::$plugins[ $slug ] = $args;
 
 		// if plugin is not in the list of active plugins, refresh the list.
-		if ( ! array_key_exists( $slug, (array) get_option( self::ACTIVE_PLUGINS_OPTION_NAME, array() ) ) ) {
+		if ( ! array_key_exists( $slug, get_option( self::ACTIVE_PLUGINS_OPTION_NAME, array() ) ) ) {
 			self::$refresh_connected_plugins = true;
 		}
 
@@ -93,18 +95,16 @@ class Plugin_Storage {
 	 * Even if you don't use Jetpack Config, it may be introduced later by other plugins,
 	 * so please make sure not to run the method too early in the code.
 	 *
-	 * @param bool $connected_only Exclude plugins that were explicitly disconnected.
-	 *
 	 * @return array|WP_Error
 	 */
-	public static function get_all( $connected_only = false ) {
+	public static function get_all() {
 		$maybe_error = self::ensure_configured();
 
 		if ( $maybe_error instanceof WP_Error ) {
 			return $maybe_error;
 		}
 
-		return $connected_only ? array_diff_key( self::$plugins, array_flip( self::get_all_disabled_plugins() ) ) : self::$plugins;
+		return self::$plugins;
 	}
 
 	/**
@@ -141,11 +141,6 @@ class Plugin_Storage {
 			return new WP_Error( 'too_early', __( 'You cannot call this method until Jetpack Config is configured', 'jetpack' ) );
 		}
 
-		if ( is_multisite() && get_current_blog_id() !== self::$current_blog_id ) {
-			self::$plugins         = (array) get_option( self::ACTIVE_PLUGINS_OPTION_NAME, array() );
-			self::$current_blog_id = get_current_blog_id();
-		}
-
 		return true;
 	}
 
@@ -155,16 +150,13 @@ class Plugin_Storage {
 	 * @return void
 	 */
 	public static function configure() {
+
 		if ( self::$configured ) {
 			return;
 		}
 
-		if ( is_multisite() ) {
-			self::$current_blog_id = get_current_blog_id();
-		}
-
 		// If a plugin was activated or deactivated.
-		$number_of_plugins_differ = count( self::$plugins ) !== count( (array) get_option( self::ACTIVE_PLUGINS_OPTION_NAME, array() ) );
+		$number_of_plugins_differ = count( self::$plugins ) !== count( get_option( self::ACTIVE_PLUGINS_OPTION_NAME, array() ) );
 
 		if ( $number_of_plugins_differ || true === self::$refresh_connected_plugins ) {
 			self::update_active_plugins_option();
@@ -182,52 +174,6 @@ class Plugin_Storage {
 	public static function update_active_plugins_option() {
 		// Note: Since this options is synced to wpcom, if you change its structure, you have to update the sanitizer at wpcom side.
 		update_option( self::ACTIVE_PLUGINS_OPTION_NAME, self::$plugins );
-	}
-
-	/**
-	 * Add the plugin to the set of disconnected ones.
-	 *
-	 * @param string $slug Plugin slug.
-	 *
-	 * @return bool
-	 */
-	public static function disable_plugin( $slug ) {
-		$disconnects = self::get_all_disabled_plugins();
-
-		if ( ! in_array( $slug, $disconnects, true ) ) {
-			$disconnects[] = $slug;
-			update_option( self::PLUGINS_DISABLED_OPTION_NAME, $disconnects );
-		}
-
-		return true;
-	}
-
-	/**
-	 * Remove the plugin from the set of disconnected ones.
-	 *
-	 * @param string $slug Plugin slug.
-	 *
-	 * @return bool
-	 */
-	public static function enable_plugin( $slug ) {
-		$disconnects = self::get_all_disabled_plugins();
-
-		$slug_index = array_search( $slug, $disconnects, true );
-		if ( false !== $slug_index ) {
-			unset( $disconnects[ $slug_index ] );
-			update_option( self::PLUGINS_DISABLED_OPTION_NAME, $disconnects );
-		}
-
-		return true;
-	}
-
-	/**
-	 * Get all plugins that were disconnected by user.
-	 *
-	 * @return array
-	 */
-	public static function get_all_disabled_plugins() {
-		return (array) get_option( self::PLUGINS_DISABLED_OPTION_NAME, array() );
 	}
 
 }

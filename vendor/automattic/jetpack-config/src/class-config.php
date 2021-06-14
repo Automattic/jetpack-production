@@ -7,15 +7,10 @@
 
 namespace Automattic\Jetpack;
 
-/*
- * The Config package does not require the composer packages that
- * contain the package classes shown below. The consumer plugin
- * must require the corresponding packages to use these features.
- */
 use Automattic\Jetpack\Connection\Manager;
+use Automattic\Jetpack\JITMS\JITM;
 use Automattic\Jetpack\Connection\Plugin;
-use Automattic\Jetpack\JITM as JITM;
-use Automattic\Jetpack\JITMS\JITM as JITMS_JITM;
+use Automattic\Jetpack\Plugin\Tracking as Plugin_Tracking;
 use Automattic\Jetpack\Sync\Main as Sync_Main;
 
 /**
@@ -36,6 +31,8 @@ class Config {
 		'jitm'       => false,
 		'connection' => false,
 		'sync'       => false,
+		'tracking'   => false,
+		'tos'        => false,
 	);
 
 	/**
@@ -82,16 +79,20 @@ class Config {
 				&& $this->ensure_feature( 'connection' );
 		}
 
+		if ( $this->config['tracking'] ) {
+			$this->ensure_class( 'Automattic\Jetpack\Terms_Of_Service' )
+				&& $this->ensure_class( 'Automattic\Jetpack\Tracking' )
+				&& $this->ensure_feature( 'tracking' );
+		}
+
 		if ( $this->config['sync'] ) {
 			$this->ensure_class( 'Automattic\Jetpack\Sync\Main' )
 				&& $this->ensure_feature( 'sync' );
 		}
 
 		if ( $this->config['jitm'] ) {
-			// Check for the JITM class in both namespaces. The namespace was changed in jetpack-jitm v1.6.
-			( $this->ensure_class( 'Automattic\Jetpack\JITMS\JITM', false )
-				|| $this->ensure_class( 'Automattic\Jetpack\JITM' ) )
-			&& $this->ensure_feature( 'jitm' );
+			$this->ensure_class( 'Automattic\Jetpack\JITMS\JITM' )
+				&& $this->ensure_feature( 'jitm' );
 		}
 	}
 
@@ -99,15 +100,13 @@ class Config {
 	 * Returns true if the required class is available and alerts the user if it's not available
 	 * in case the site is in debug mode.
 	 *
-	 * @param String  $classname a fully qualified class name.
-	 * @param Boolean $log_notice whether the E_USER_NOTICE should be generated if the class is not found.
-	 *
+	 * @param String $classname a fully qualified class name.
 	 * @return Boolean whether the class is available.
 	 */
-	protected function ensure_class( $classname, $log_notice = true ) {
+	protected function ensure_class( $classname ) {
 		$available = class_exists( $classname );
 
-		if ( $log_notice && ! $available && defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+		if ( ! $available && defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 			trigger_error( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
 				sprintf(
 					/* translators: %1$s is a PHP class name. */
@@ -159,15 +158,39 @@ class Config {
 	}
 
 	/**
+	 * Dummy method to enable Terms of Service.
+	 */
+	protected function enable_tos() {
+		return true;
+	}
+
+	/**
+	 * Enables the tracking feature. Depends on the Terms of Service package, so enables it too.
+	 */
+	protected function enable_tracking() {
+
+		// Enabling dependencies.
+		$this->ensure_feature( 'tos' );
+
+		$terms_of_service = new Terms_Of_Service();
+		$tracking         = new Plugin_Tracking();
+		if ( $terms_of_service->has_agreed() ) {
+			add_action( 'init', array( $tracking, 'init' ) );
+		} else {
+			/**
+			 * Initialize tracking right after the user agrees to the terms of service.
+			 */
+			add_action( 'jetpack_agreed_to_terms_of_service', array( $tracking, 'init' ) );
+		}
+
+		return true;
+	}
+
+	/**
 	 * Enables the JITM feature.
 	 */
 	protected function enable_jitm() {
-		if ( class_exists( 'Automattic\Jetpack\JITMS\JITM' ) ) {
-			JITMS_JITM::configure();
-		} else {
-			// Provides compatibility with jetpack-jitm <v1.6.
-			JITM::configure();
-		}
+		JITM::configure();
 
 		return true;
 	}

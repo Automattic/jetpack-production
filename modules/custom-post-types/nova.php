@@ -32,12 +32,7 @@ class Nova_Restaurant {
 	const MENU_ITEM_LABEL_TAX = 'nova_menu_item_label';
 	const MENU_TAX = 'nova_menu';
 
-	/**
-	 * Version number used when enqueuing all resources (css and js).
-	 *
-	 * @var string
-	 */
-	public $version = '20210303';
+	public $version = '0.1';
 
 	protected $default_menu_item_loop_markup = array(
 		'menu_tag'               => 'section',
@@ -330,38 +325,14 @@ class Nova_Restaurant {
 		$number_menu_items = wp_count_posts( self::MENU_ITEM_POST_TYPE );
 
 		if ( current_user_can( 'administrator' ) ) {
-			$number_menu_items_published = sprintf(
-				'<a href="%1$s">%2$s</a>',
-				esc_url(
-					get_admin_url(
-						get_current_blog_id(),
-						'edit.php?post_type=' . self::MENU_ITEM_POST_TYPE
-					)
-				),
-				sprintf(
-					/* translators: Placehoder is a number of items. */
-					_n(
-						'%1$d Food Menu Item',
-						'%1$d Food Menu Items',
-						(int) $number_menu_items->publish,
-						'jetpack'
-					),
-					number_format_i18n( $number_menu_items->publish )
-				)
+			$number_menu_items_published = sprintf( '<a href="%1$s">%2$s</a>',
+				esc_url( get_admin_url( get_current_blog_id(), 'edit.php?post_type=' . self::MENU_ITEM_POST_TYPE ) ),
+				sprintf( _n( '%1$d Food Menu Item', '%1$d Food Menu Items', intval( $number_menu_items->publish ), 'jetpack' ), number_format_i18n( $number_menu_items->publish ) )
 			);
-		} else {
-			$number_menu_items_published = sprintf(
-				'<span>%1$s</span>',
-				sprintf(
-					/* translators: Placehoder is a number of items. */
-					_n(
-						'%1$d Food Menu Item',
-						'%1$d Food Menu Items',
-						(int) $number_menu_items->publish,
-						'jetpack'
-					),
-					number_format_i18n( $number_menu_items->publish )
-				)
+		}
+		else {
+			$number_menu_items_published = sprintf( '<span>%1$s</span>',
+				sprintf( _n( '%1$d Food Menu Item', '%1$d Food Menu Items', intval( $number_menu_items->publish ), 'jetpack' ), number_format_i18n( $number_menu_items->publish ) )
 			);
 		}
 

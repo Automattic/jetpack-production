@@ -96,11 +96,11 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 	 */
 	public function include_svg_icons() {
 		// Define SVG sprite file in Jetpack.
-		$svg_icons = dirname( __DIR__ ) . '/theme-tools/social-menu/social-menu.svg';
+		$svg_icons = dirname( dirname( __FILE__ ) ) . '/theme-tools/social-menu/social-menu.svg';
 
 		// Define SVG sprite file in WPCOM.
 		if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-			$svg_icons = dirname( __DIR__ ) . '/social-menu/social-menu.svg';
+			$svg_icons = dirname( dirname( __FILE__ ) ) . '/social-menu/social-menu.svg';
 		}
 
 		// If it exists, include it.
@@ -135,6 +135,12 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 			$social_icons = $this->get_supported_icons();
 			$default_icon = $this->get_svg_icon( array( 'icon' => 'chain' ) );
 
+			// Set target attribute for the link.
+			if ( true === $instance['new-tab'] ) {
+				$target = '_blank';
+			} else {
+				$target = '_self';
+			}
 			?>
 
 			<ul class="jetpack-social-widget-list size-<?php echo esc_attr( $instance['icon-size'] ); ?>">
@@ -143,40 +149,33 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 
 					<?php if ( ! empty( $icon['url'] ) ) : ?>
 						<li class="jetpack-social-widget-item">
-							<?php
-							printf(
-								'<a href="%1$s" %2$s>',
-								esc_url( $icon['url'], array( 'http', 'https', 'mailto', 'skype' ) ),
-								true === $instance['new-tab'] ?
-									'target="_blank" rel="noopener noreferrer"' :
-									'target="_self"'
-							);
+							<a href="<?php echo esc_url( $icon['url'], array( 'http', 'https', 'mailto', 'skype' ) ); ?>" target="<?php echo esc_attr( $target ); ?>">
+								<?php
+									$found_icon = false;
 
-							$found_icon = false;
-
-							foreach ( $social_icons as $social_icon ) {
-								foreach ( $social_icon['url'] as $url_fragment ) {
-									if ( false !== stripos( $icon['url'], $url_fragment ) ) {
-										printf(
-											'<span class="screen-reader-text">%1$s</span>%2$s',
-											esc_attr( $social_icon['label'] ),
-											// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-											$this->get_svg_icon(
-												array(
-													'icon' => esc_attr( $social_icon['icon'] ),
+								foreach ( $social_icons as $social_icon ) {
+									foreach ( $social_icon['url'] as $url_fragment ) {
+										if ( false !== stripos( $icon['url'], $url_fragment ) ) {
+											printf(
+												'<span class="screen-reader-text">%1$s</span>%2$s',
+												esc_attr( $social_icon['label'] ),
+												// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+												$this->get_svg_icon(
+													array(
+														'icon' => esc_attr( $social_icon['icon'] ),
+													)
 												)
-											)
-										);
-										$found_icon = true;
-										break 2;
+											);
+											$found_icon = true;
+											break;
+										}
 									}
 								}
-							}
 
-							if ( ! $found_icon ) {
-								echo $default_icon; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							}
-							?>
+								if ( ! $found_icon ) {
+									echo $default_icon; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+								}
+								?>
 							</a>
 						</li>
 					<?php endif; ?>
@@ -204,7 +203,7 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 	 *
 	 * @return array Updated safe values to be saved.
 	 */
-	public function update( $new_instance, $old_instance ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 
 		$instance['title']     = sanitize_text_field( $new_instance['title'] );
@@ -305,7 +304,7 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 		?>
 
 		<p>
-			<em><a href="<?php echo esc_url( $support ); ?>" target="_blank" rel="noopener noreferrer">
+			<em><a href="<?php echo esc_url( $support ); ?>" target="_blank">
 				<?php esc_html_e( 'View available icons', 'jetpack' ); ?>
 			</a></em>
 		</p>
@@ -458,14 +457,6 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 				'label' => 'Behance',
 			),
 			array(
-				'url'   => array(
-					'blogger.com',
-					'blogspot.com',
-				),
-				'icon'  => 'blogger',
-				'label' => 'Blogger',
-			),
-			array(
 				'url'   => array( 'codepen.io' ),
 				'icon'  => 'codepen',
 				'label' => 'CodePen',
@@ -501,14 +492,37 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 				'label' => 'Etsy',
 			),
 			array(
-				'url'   => array( 'eventbrite.com' ),
-				'icon'  => 'eventbrite',
-				'label' => 'Eventbrite',
-			),
-			array(
 				'url'   => array( 'facebook.com' ),
 				'icon'  => 'facebook',
 				'label' => 'Facebook',
+			),
+			array(
+				'url'   => array(
+					'/feed/',         // WordPress default feed url.
+					'/feeds/',        // Blogspot and others.
+					'/blog/feed',     // No trailing slash WordPress feed, could use /feed but may match unexpectedly.
+					'format=RSS',     // Squarespace and others.
+					'/rss',           // Tumblr.
+					'/.rss',          // Reddit.
+					'/rss.xml',       // Moveable Type, Typepad.
+					'http://rss.',    // Old custom format.
+					'https://rss.',   // Old custom format.
+					'rss=1',
+					'/feed=rss',      // Catches feed=rss / feed=rss2.
+					'?feed=rss',      // WordPress non-permalink - Catches feed=rss / feed=rss2.
+					'?feed=rdf',      // WordPress non-permalink.
+					'?feed=atom',     // WordPress non-permalink.
+					'http://feeds.',  // FeedBurner.
+					'https://feeds.', // FeedBurner.
+					'/feed.xml',      // Feedburner Alias, and others.
+					'/index.xml',     // Moveable Type, and others.
+					'/atom.xml',      // Typepad, Squarespace.
+					'.atom',          // Shopify blog.
+					'/atom',          // Some non-WordPress feeds.
+					'index.rdf',      // Typepad.
+				),
+				'icon'  => 'feed',
+				'label' => __( 'RSS Feed', 'jetpack' ),
 			),
 			array(
 				'url'   => array( 'flickr.com' ),
@@ -519,11 +533,6 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 				'url'   => array( 'foursquare.com' ),
 				'icon'  => 'foursquare',
 				'label' => 'Foursquare',
-			),
-			array(
-				'url'   => array( 'ghost.org' ),
-				'icon'  => 'ghost',
-				'label' => 'Ghost',
 			),
 			array(
 				'url'   => array( 'goodreads.com' ),
@@ -564,11 +573,6 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 				'url'   => array( 'medium.com' ),
 				'icon'  => 'medium',
 				'label' => 'Medium',
-			),
-			array(
-				'url'   => array( 'patreon.com' ),
-				'icon'  => 'patreon',
-				'label' => 'Patreon',
 			),
 			array(
 				'url'   => array( 'pinterest.' ),
@@ -631,16 +635,6 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 				'label' => 'StumbleUpon',
 			),
 			array(
-				'url'   => array( 'telegram.me', 't.me' ),
-				'icon'  => 'telegram',
-				'label' => 'Telegram',
-			),
-			array(
-				'url'   => array( 'tiktok.com' ),
-				'icon'  => 'tiktok',
-				'label' => 'TikTok',
-			),
-			array(
 				'url'   => array( 'tumblr.com' ),
 				'icon'  => 'tumblr',
 				'label' => 'Tumblr',
@@ -666,16 +660,6 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 				'label' => 'VK',
 			),
 			array(
-				'url'   => array( 'whatsapp.com' ),
-				'icon'  => 'whatsapp',
-				'label' => 'WhatsApp',
-			),
-			array(
-				'url'   => array( 'woocommerce.com' ),
-				'icon'  => 'woocommerce',
-				'label' => 'WooCommerce',
-			),
-			array(
 				'url'   => array( 'wordpress.com', 'wordpress.org' ),
 				'icon'  => 'wordpress',
 				'label' => 'WordPress',
@@ -686,44 +670,9 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 				'label' => 'Yelp',
 			),
 			array(
-				'url'   => array( 'xanga.com' ),
-				'icon'  => 'xanga',
-				'label' => 'Xanga',
-			),
-			array(
 				'url'   => array( 'youtube.com' ),
 				'icon'  => 'youtube',
 				'label' => 'YouTube',
-			),
-
-			// keep feed at the end so that more specific icons can take precedence.
-			array(
-				'url'   => array(
-					'/feed/',         // WordPress default feed url.
-					'/feeds/',        // Blogspot and others.
-					'/blog/feed',     // No trailing slash WordPress feed, could use /feed but may match unexpectedly.
-					'format=RSS',     // Squarespace and others.
-					'/rss',           // Tumblr.
-					'/.rss',          // Reddit.
-					'/rss.xml',       // Moveable Type, Typepad.
-					'http://rss.',    // Old custom format.
-					'https://rss.',   // Old custom format.
-					'rss=1',
-					'/feed=rss',      // Catches feed=rss / feed=rss2.
-					'?feed=rss',      // WordPress non-permalink - Catches feed=rss / feed=rss2.
-					'?feed=rdf',      // WordPress non-permalink.
-					'?feed=atom',     // WordPress non-permalink.
-					'http://feeds.',  // FeedBurner.
-					'https://feeds.', // FeedBurner.
-					'/feed.xml',      // Feedburner Alias, and others.
-					'/index.xml',     // Moveable Type, and others.
-					'/atom.xml',      // Typepad, Squarespace.
-					'.atom',          // Shopify blog.
-					'/atom',          // Some non-WordPress feeds.
-					'index.rdf',      // Typepad.
-				),
-				'icon'  => 'feed',
-				'label' => __( 'RSS Feed', 'jetpack' ),
 			),
 		);
 

@@ -38,73 +38,42 @@ class Meta extends Module {
 	 * @return array
 	 */
 	public function get_objects_by_id( $object_type, $config ) {
+		global $wpdb;
+
 		$table = _get_meta_table( $object_type );
 
 		if ( ! $table ) {
 			return array();
 		}
 
-		if ( ! is_array( $config ) ) {
+		if ( ! isset( $config['meta_key'] ) || ! isset( $config['ids'] ) || ! is_array( $config['ids'] ) ) {
 			return array();
 		}
 
-		$meta_objects = array();
-		foreach ( $config as $item ) {
-			$meta = null;
-			if ( isset( $item['id'] ) && isset( $item['meta_key'] ) ) {
-				$meta = $this->get_object_by_id( $object_type, (int) $item['id'], (string) $item['meta_key'] );
-			}
-			$meta_objects[ $item['id'] . '-' . $item['meta_key'] ] = $meta;
-		}
-
-		return $meta_objects;
-	}
-
-	/**
-	 * Get a single Meta Result.
-	 *
-	 * @param string $object_type  post, comment, term, user.
-	 * @param null   $id           Object ID.
-	 * @param null   $meta_key     Meta Key.
-	 *
-	 * @return mixed|null
-	 */
-	public function get_object_by_id( $object_type, $id = null, $meta_key = null ) {
-		global $wpdb;
-
-		if ( ! is_int( $id ) || ! is_string( $meta_key ) ) {
-			return null;
-		}
-
-		$table            = _get_meta_table( $object_type );
+		$meta_key         = $config['meta_key'];
+		$ids              = $config['ids'];
 		$object_id_column = $object_type . '_id';
 
 		// Sanitize so that the array only has integer values.
-		$meta = $wpdb->get_results(
+		$ids_string = implode( ', ', array_map( 'intval', $ids ) );
+		$metas      = $wpdb->get_results(
 			$wpdb->prepare(
-			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-				"SELECT * FROM {$table} WHERE {$object_id_column} = %d AND meta_key = %s",
-				$id,
+				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				"SELECT * FROM {$table} WHERE {$object_id_column} IN ( {$ids_string} ) AND meta_key = %s",
 				$meta_key
-			),
-			ARRAY_A
+			)
 		);
 
-		$meta_objects = null;
-
-		if ( ! is_wp_error( $meta ) && ! empty( $meta ) ) {
-			foreach ( $meta as $meta_entry ) {
-				if ( 'post' === $object_type && strlen( $meta_entry['meta_value'] ) >= Posts::MAX_POST_META_LENGTH ) {
-					$meta_entry['meta_value'] = '';
-				}
-				$meta_objects[] = array(
-					'meta_type'  => $object_type,
-					'meta_id'    => $meta_entry['meta_id'],
-					'meta_key'   => $meta_key,
-					'meta_value' => $meta_entry['meta_value'],
-					'object_id'  => $meta_entry[ $object_id_column ],
-				);
-			}
+		$meta_objects = array();
+		foreach ( (array) $metas as $meta_object ) {
+			$meta_object                                       = (array) $meta_object;
+			$meta_objects[ $meta_object[ $object_id_column ] ] = array(
+				'meta_type'  => $object_type,
+				'meta_id'    => $meta_object['meta_id'],
+				'meta_key'   => $meta_key,
+				'meta_value' => $meta_object['meta_value'],
+				'object_id'  => $meta_object[ $object_id_column ],
+			);
 		}
 
 		return $meta_objects;

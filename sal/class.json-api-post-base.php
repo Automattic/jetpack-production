@@ -9,8 +9,7 @@
 
 require_once dirname( __FILE__ ) . '/class.json-api-metadata.php';
 require_once dirname( __FILE__ ) . '/class.json-api-date.php';
-require_once ABSPATH . 'wp-admin/includes/post.php';
-require_once ABSPATH . 'wp-includes/post.php';
+require_once ( ABSPATH . "wp-includes/post.php" );
 
 abstract class SAL_Post {
 	public $post;
@@ -133,6 +132,7 @@ abstract class SAL_Post {
 						current_user_can( 'edit_post_meta', $this->post->ID , $meta_key )
 					);
 
+			// Only business plan subscribers can view custom meta description
 			if ( Jetpack_SEO_Posts::DESCRIPTION_META_KEY == $meta_key && ! Jetpack_SEO_Utils::is_enabled_jetpack_seo() ) {
 				$show = false;
 			}
@@ -146,7 +146,11 @@ abstract class SAL_Post {
 			}
 		}
 
-		return $metadata;
+		if ( ! empty( $metadata ) ) {
+			return $metadata;
+		} else {
+			return false;
+		}
 	}
 
 	public function get_meta() {
@@ -613,11 +617,8 @@ abstract class SAL_Post {
 
 		if ( in_array( $ext, array( 'mp3', 'm4a', 'wav', 'ogg' ) ) ) {
 			$metadata = wp_get_attachment_metadata( $media_item->ID );
-			if ( isset( $metadata['length'] ) ) {
-				$response['length'] = $metadata['length'];
-			}
-
-			$response['exif'] = $metadata;
+			$response['length'] = $metadata['length'];
+			$response['exif']   = $metadata;
 		}
 
 		if ( in_array( $ext, array( 'ogv', 'mp4', 'mov', 'wmv', 'avi', 'mpg', '3gp', '3g2', 'm4v' ) ) ) {

@@ -94,9 +94,6 @@ class Plugins extends Module {
 	 * @param bool|WP_Error $response Install response, true if successful, WP_Error if not.
 	 */
 	public function populate_plugins( $response ) {
-		if ( ! function_exists( 'get_plugins' ) ) {
-			require_once ABSPATH . 'wp-admin/includes/plugin.php';
-		}
 		$this->plugins = get_plugins();
 		return $response;
 	}

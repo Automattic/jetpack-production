@@ -279,7 +279,7 @@ class Constants extends Module {
 	 *
 	 * @return int total
 	 */
-	public function total( $config ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+	public function total( $config ) {
 		return count( $this->get_constants_whitelist() );
 	}
 }

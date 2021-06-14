@@ -32,6 +32,7 @@ class Full_Sync extends Module {
 	 */
 	const STATUS_OPTION_PREFIX = 'jetpack_sync_full_';
 
+
 	/**
 	 * Enqueue Lock name.
 	 *
@@ -175,25 +176,13 @@ class Full_Sync extends Module {
 	 * @param array $configs Full sync configuration for all sync modules.
 	 */
 	public function continue_enqueuing( $configs = null ) {
-		// Return early if not in progress.
-		if ( ! $this->get_status_option( 'started' ) || $this->get_status_option( 'queue_finished' ) ) {
+		if ( ! $this->is_started() || ! ( new Lock() )->attempt( self::ENQUEUE_LOCK_NAME ) || $this->get_status_option( 'queue_finished' ) ) {
 			return;
 		}
 
-		// Attempt to obtain lock.
-		$lock            = new Lock();
-		$lock_expiration = $lock->attempt( self::ENQUEUE_LOCK_NAME );
-
-		// Return if unable to obtain lock.
-		if ( false === $lock_expiration ) {
-			return;
-		}
-
-		// enqueue full sync actions.
 		$this->enqueue( $configs );
 
-		// Remove lock.
-		$lock->remove( self::ENQUEUE_LOCK_NAME, $lock_expiration );
+		( new Lock() )->remove( self::ENQUEUE_LOCK_NAME );
 	}
 
 	/**
@@ -528,7 +517,7 @@ class Full_Sync extends Module {
 	 * @return boolean
 	 */
 	public function is_started() {
-		return (bool) $this->get_status_option( 'started' );
+		return ! ! $this->get_status_option( 'started' );
 	}
 
 	/**
@@ -539,7 +528,7 @@ class Full_Sync extends Module {
 	 * @return boolean
 	 */
 	public function is_finished() {
-		return (bool) $this->get_status_option( 'finished' );
+		return ! ! $this->get_status_option( 'finished' );
 	}
 
 	/**
@@ -624,7 +613,7 @@ class Full_Sync extends Module {
 	public function reset_data() {
 		$this->clear_status();
 		$this->delete_config();
-		( new Lock() )->remove( self::ENQUEUE_LOCK_NAME, true );
+		( new Lock() )->remove( self::ENQUEUE_LOCK_NAME );
 
 		$listener = Listener::get_instance();
 		$listener->get_full_sync_queue()->reset();
@@ -642,7 +631,7 @@ class Full_Sync extends Module {
 	private function get_status_option( $name, $default = null ) {
 		$value = \Jetpack_Options::get_raw_option( self::STATUS_OPTION_PREFIX . "_$name", $default );
 
-		return is_numeric( $value ) ? (int) $value : $value;
+		return is_numeric( $value ) ? intval( $value ) : $value;
 	}
 
 	/**

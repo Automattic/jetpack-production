@@ -52,15 +52,6 @@ class Admin_Bar_Notice {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_toolbar_script' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_toolbar_script' ) );
 		add_action( 'admin_bar_menu', array( $this, 'add_threats_to_toolbar' ), 999 );
-
-		// Inject the data-ampdevmode attribute into the inline <script> output via wp_localize_script(). To revisit after https://github.com/ampproject/amp-wp/issues/4598.
-		add_filter(
-			'amp_dev_mode_element_xpaths',
-			static function ( $expressions ) {
-				$expressions[] = '//script[ contains( text(), "Jetpack_Scan" ) ]';
-				return $expressions;
-			}
-		);
 	}
 
 	/**
@@ -99,7 +90,7 @@ class Admin_Bar_Notice {
 		}
 
 		// We don't know about threats in the cache lets load the JS that fetches the info and updates the admin bar.
-		Assets::enqueue_async_script( self::SCRIPT_NAME, '_inc/build/scan/admin-bar-notice.min.js', 'modules/scan/admin-bar-notice.js', array( 'admin-bar' ), self::SCRIPT_VERSION, true );
+		Assets::enqueue_async_script( self::SCRIPT_NAME, '_inc/build/scan/admin-bar-notice.min.js', 'modules/scan/admin-bar-notice.js', array(), self::SCRIPT_VERSION, true );
 
 		$script_data = array(
 			'nonce'              => wp_create_nonce( 'wp_rest' ),
@@ -123,7 +114,7 @@ class Admin_Bar_Notice {
 		}
 
 		// We might be showing the threats in the admin bar lets make sure that they look great!
-		$hide_wording_on_mobile = '#wp-admin-bar-jetpack-scan-notice .is-hidden { display:none; } @media screen and (max-width: 959px ) { #wpadminbar #wp-admin-bar-jetpack-scan-notice { width:32px; } #wpadminbar #wp-admin-bar-jetpack-scan-notice a { color: transparent!important; } }';
+		$hide_wording_on_mobile = '#wp-admin-bar-jetpack-scan-notice .is-hidden { display:none; } @media screen and (max-width: 959px ) { #wpadminbar #wp-admin-bar-jetpack-scan-notice { width:32px; } #wpadminbar #wp-admin-bar-jetpack-scan-notice a { color: transparent!important; }';
 		$style                  = '#wp-admin-bar-jetpack-scan-notice svg { float:left; margin-top: 4px; margin-right: 6px; width: 18px; height: 22px; }' . $hide_wording_on_mobile;
 		if ( is_rtl() ) {
 			$style = '#wp-admin-bar-jetpack-scan-notice svg { float:right; margin-top: 4px; margin-left: 6px; width: 18px; height: 22px; }' . $hide_wording_on_mobile;

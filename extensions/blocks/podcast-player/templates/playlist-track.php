@@ -2,7 +2,7 @@
 /**
  * Podcast Title template.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Podcast_Player;
@@ -17,7 +17,6 @@ namespace Automattic\Jetpack\Extensions\Podcast_Player;
  */
 
 $track_title    = $attachment['title'];
-$track_link     = empty( $attachment['link'] ) ? $attachment['src'] : $attachment['link'];
 $track_duration = ! empty( $attachment['duration'] ) ? $attachment['duration'] : '';
 
 $class = 'jetpack-podcast-player__track ' . $secondary_colors['class'];
@@ -35,7 +34,7 @@ if ( $is_active ) {
 >
 	<a
 		class="jetpack-podcast-player__track-link jetpack-podcast-player__link"
-		href="<?php echo esc_url( $track_link ); ?>"
+		href="<?php echo esc_url( $attachment['link'] ); ?>"
 		role="button"
 		<?php echo $is_active ? 'aria-current="track"' : ''; ?>
 	>

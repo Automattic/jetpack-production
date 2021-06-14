@@ -7,6 +7,9 @@
 
 namespace Automattic\Jetpack;
 
+use Automattic\Jetpack\Connection\Manager;
+use Automattic\Jetpack\Status;
+
 /**
  * Class Terms_Of_Service
  *
@@ -52,23 +55,16 @@ class Terms_Of_Service {
 	 * The following conditions have to be met in order to agree to the terms of service.
 	 * 1. The master user has gone though the connect flow.
 	 * 2. The site is not in dev mode.
-	 * 3. The master user of the site is still connected (deprecated @since 8.9.0).
+	 * 3. The master user of the site is still connected.
 	 *
 	 * @return bool
 	 */
 	public function has_agreed() {
-		if ( $this->is_offline_mode() ) {
+		if ( $this->is_development_mode() ) {
 			return false;
 		}
-		/**
-		 * Before 8.9.0 we used to also check if the master user of the site is connected
-		 * by calling the Connection related `is_active` method.
-		 * As of 8.9.0 we have removed this check in order to resolve the
-		 * circular dependencies it was introducing to composer packages.
-		 *
-		 * @since 8.9.0
-		 */
-		return $this->get_raw_has_agreed();
+
+		return $this->get_raw_has_agreed() || $this->is_active();
 	}
 
 	/**
@@ -77,8 +73,18 @@ class Terms_Of_Service {
 	 *
 	 * @return bool
 	 */
-	protected function is_offline_mode() {
-		return ( new Status() )->is_offline_mode();
+	protected function is_development_mode() {
+		return ( new Status() )->is_development_mode();
+	}
+
+	/**
+	 * Tells us if the site is connected.
+	 * Abstracted for testing purposes.
+	 *
+	 * @return bool
+	 */
+	protected function is_active() {
+		return ( new Manager() )->is_active();
 	}
 
 	/**

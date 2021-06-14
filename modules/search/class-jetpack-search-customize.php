@@ -2,7 +2,7 @@
 /**
  * Jetpack Search Overlay Customization
  *
- * @package automattic/jetpack
+ * @package jetpack
  */
 
 // Exit if file is accessed directly.
@@ -10,8 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-require_once __DIR__ . '/class.jetpack-search-helpers.php';
-require_once __DIR__ . '/class-jetpack-search-options.php';
+require_once dirname( __FILE__ ) . '/class-jetpack-search-options.php';
 
 /**
  * Class to customize search on the site.
@@ -27,7 +26,6 @@ class Jetpack_Search_Customize {
 	 */
 	public function __construct() {
 		add_action( 'customize_register', array( $this, 'customize_register' ) );
-		add_action( 'customize_controls_enqueue_scripts', array( $this, 'customize_controls_enqueue_scripts' ) );
 	}
 
 	/**
@@ -38,17 +36,16 @@ class Jetpack_Search_Customize {
 	 * @param WP_Customize_Manager $wp_customize Customizer instance.
 	 */
 	public function customize_register( $wp_customize ) {
-		require_once dirname( JETPACK__PLUGIN_FILE ) . '/modules/search/customize-controls/class-label-control.php';
-		require_once dirname( JETPACK__PLUGIN_FILE ) . '/modules/search/customize-controls/class-excluded-post-types-control.php';
 		$section_id     = 'jetpack_search';
 		$setting_prefix = Jetpack_Search_Options::OPTION_PREFIX;
 
 		$wp_customize->add_section(
 			$section_id,
 			array(
-				'title'      => esc_html__( 'Jetpack Search', 'jetpack' ),
-				'capability' => 'edit_theme_options',
-				'priority'   => 200,
+				'title'       => esc_html__( 'Jetpack Search', 'jetpack' ),
+				'description' => __( 'Use these settings to customize the search overlay.', 'jetpack' ),
+				'capability'  => 'edit_theme_options',
+				'priority'    => 200,
 			)
 		);
 
@@ -65,7 +62,7 @@ class Jetpack_Search_Customize {
 			$id,
 			array(
 				'label'       => __( 'Theme', 'jetpack' ),
-				'description' => __( 'Select a theme for your search overlay.', 'jetpack' ),
+				'description' => __( 'A light or dark theme for your search overlay.', 'jetpack' ),
 				'section'     => $section_id,
 				'type'        => 'radio',
 				'choices'     => array(
@@ -75,58 +72,11 @@ class Jetpack_Search_Customize {
 			)
 		);
 
-		$id = $setting_prefix . 'result_format';
-		$wp_customize->add_setting(
-			$id,
-			array(
-				'default'   => 'minimal',
-				'transport' => 'postMessage',
-				'type'      => 'option',
-			)
-		);
-		$wp_customize->add_control(
-			$id,
-			array(
-				'label'       => __( 'Result Format', 'jetpack' ),
-				'description' => __( 'Choose how the search results look.', 'jetpack' ),
-				'section'     => $section_id,
-				'type'        => 'select',
-				'choices'     => array(
-					'minimal'  => __( 'Minimal', 'jetpack' ),
-					'expanded' => __( 'Expanded (shows images)', 'jetpack' ),
-					'product'  => __( 'Product (for WooCommerce stores)', 'jetpack' ),
-				),
-			)
-		);
-
-		$id = $setting_prefix . 'default_sort';
-		$wp_customize->add_setting(
-			$id,
-			array(
-				'default' => 'relevance',
-				'type'    => 'option',
-			)
-		);
-		$wp_customize->add_control(
-			$id,
-			array(
-				'choices'     => array(
-					'relevance' => __( 'Relevance (recommended)', 'jetpack' ),
-					'newest'    => __( 'Newest first', 'jetpack' ),
-					'oldest'    => __( 'Oldest first', 'jetpack' ),
-				),
-				'description' => __( 'Pick the initial sort for your search results.', 'jetpack' ),
-				'label'       => __( 'Default Sort', 'jetpack' ),
-				'section'     => $section_id,
-				'type'        => 'select',
-			)
-		);
-
 		$id = $setting_prefix . 'overlay_trigger';
 		$wp_customize->add_setting(
 			$id,
 			array(
-				'default'   => 'results',
+				'default'   => 'immediate',
 				'transport' => 'postMessage',
 				'type'      => 'option',
 			)
@@ -134,35 +84,38 @@ class Jetpack_Search_Customize {
 		$wp_customize->add_control(
 			$id,
 			array(
-				'label'       => __( 'Search Input Overlay Trigger', 'jetpack' ),
-				'description' => __( 'Select when your overlay should appear.', 'jetpack' ),
+				'label'       => __( 'Overlay Trigger', 'jetpack' ),
+				'description' => __( 'Choose when the search overlay should appear.', 'jetpack' ),
 				'section'     => $section_id,
 				'type'        => 'select',
 				'choices'     => array(
-					'immediate' => __( 'Open when user starts typing', 'jetpack' ),
+					'immediate' => __( 'Open immediately', 'jetpack' ),
 					'results'   => __( 'Open when results are available', 'jetpack' ),
-					'submit'    => __( 'Open when user submits the form', 'jetpack' ),
 				),
 			)
 		);
 
-		$id = $setting_prefix . 'excluded_post_types';
+		$id = $setting_prefix . 'opacity';
 		$wp_customize->add_setting(
 			$id,
 			array(
-				'default' => '',
-				'type'    => 'option',
+				'default'   => 97,
+				'transport' => 'postMessage',
+				'type'      => 'option',
 			)
 		);
 		$wp_customize->add_control(
-			new Excluded_Post_Types_Control(
-				$wp_customize,
-				$id,
-				array(
-					'description' => __( 'Choose post types to exclude from search results. You must leave at least one post type unchecked.', 'jetpack' ),
-					'label'       => __( 'Excluded Post Types', 'jetpack' ),
-					'section'     => $section_id,
-				)
+			$id,
+			array(
+				'type'        => 'range',
+				'section'     => $section_id,
+				'label'       => __( 'Background Opacity', 'jetpack' ),
+				'description' => __( 'Select an opacity for the search overlay.', 'jetpack' ),
+				'input_attrs' => array(
+					'min'  => 85,
+					'max'  => 100,
+					'step' => 0.5,
+				),
 			)
 		);
 
@@ -187,51 +140,13 @@ class Jetpack_Search_Customize {
 			)
 		);
 
-		$id = $setting_prefix . 'additional_settings_placeholder';
-		$wp_customize->add_setting(
-			$id,
-			array( 'type' => 'option' )
-		);
-		$wp_customize->add_control(
-			new Label_Control(
-				$wp_customize,
-				$id,
-				array(
-					'label'   => __( 'Additional Jetpack Search Settings', 'jetpack' ),
-					'section' => $section_id,
-				)
-			)
-		);
-
-		$id = $setting_prefix . 'enable_sort';
-		$wp_customize->add_setting(
-			$id,
-			array(
-				'default'              => '1',
-				'sanitize_callback'    => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value' ),
-				'sanitize_js_callback' => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value_for_js' ),
-				'transport'            => 'postMessage',
-				'type'                 => 'option',
-			)
-		);
-		$wp_customize->add_control(
-			$id,
-			array(
-				'label'   => __( 'Show sort selector', 'jetpack' ),
-				'section' => $section_id,
-				'type'    => 'checkbox',
-			)
-		);
-
 		$id = $setting_prefix . 'inf_scroll';
 		$wp_customize->add_setting(
 			$id,
 			array(
-				'default'              => '1',
-				'sanitize_callback'    => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value' ),
-				'sanitize_js_callback' => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value_for_js' ),
-				'transport'            => 'postMessage',
-				'type'                 => 'option',
+				'default'   => true,
+				'transport' => 'postMessage',
+				'type'      => 'option',
 			)
 		);
 		$wp_customize->add_control(
@@ -239,7 +154,7 @@ class Jetpack_Search_Customize {
 			array(
 				'type'    => 'checkbox',
 				'section' => $section_id,
-				'label'   => __( 'Enable infinite scrolling', 'jetpack' ),
+				'label'   => __( 'Infinite Scroll Results', 'jetpack' ),
 			)
 		);
 
@@ -247,11 +162,9 @@ class Jetpack_Search_Customize {
 		$wp_customize->add_setting(
 			$id,
 			array(
-				'default'              => '1',
-				'sanitize_callback'    => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value' ),
-				'sanitize_js_callback' => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value_for_js' ),
-				'transport'            => 'postMessage',
-				'type'                 => 'option',
+				'default'   => true,
+				'transport' => 'postMessage',
+				'type'      => 'option',
 			)
 		);
 		$wp_customize->add_control(
@@ -263,22 +176,5 @@ class Jetpack_Search_Customize {
 			)
 		);
 	}
-
-	/**
-	 * Enqueue assets for Customizer controls.
-	 *
-	 * @since 9.6.0
-	 */
-	public function customize_controls_enqueue_scripts() {
-		$script_relative_path = 'modules/search/customize-controls/customize-controls.js';
-		$script_version       = Jetpack_Search_Helpers::get_asset_version( $script_relative_path );
-		$script_path          = plugins_url( $script_relative_path, JETPACK__PLUGIN_FILE );
-		wp_enqueue_script(
-			'jetpack-instant-search-customizer',
-			$script_path,
-			array( 'customize-controls' ),
-			$script_version,
-			true
-		);
-	}
 }
+

@@ -6,13 +6,12 @@
  * Recommendation Order: 7
  * First Introduced: 2.0
  * Requires Connection: Yes
- * Requires User Connection: Yes
  * Auto Activate: No
  * Module Tags: Social, Recommended
  * Feature: Engagement
  * Additional Search Queries: facebook, jetpack publicize, twitter, tumblr, linkedin, social, tweet, connections, sharing, social media, automated, automated sharing, auto publish, auto tweet and like, auto tweet, facebook auto post, facebook posting
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 /**
@@ -39,16 +38,16 @@ class Jetpack_Publicize {
 			Jetpack::enable_module_configurable( __FILE__ );
 		}
 
-		require_once __DIR__ . '/publicize/publicize.php';
+		require_once dirname( __FILE__ ) . '/publicize/publicize.php';
 
 		if ( $this->in_jetpack ) {
-			require_once __DIR__ . '/publicize/publicize-jetpack.php';
+			require_once dirname( __FILE__ ) . '/publicize/publicize-jetpack.php';
 		} else {
-			require_once dirname( __DIR__ ) . '/mu-plugins/keyring/keyring.php';
-			require_once __DIR__ . '/publicize/publicize-wpcom.php';
+			require_once dirname( dirname( __FILE__ ) ) . '/mu-plugins/keyring/keyring.php';
+			require_once dirname( __FILE__ ) . '/publicize/publicize-wpcom.php';
 		}
 
-		require_once __DIR__ . '/publicize/ui.php';
+		require_once dirname( __FILE__ ) . '/publicize/ui.php';
 		$publicize_ui             = new Publicize_UI();
 		$publicize_ui->in_jetpack = $this->in_jetpack;
 
@@ -71,7 +70,7 @@ class Jetpack_Publicize {
 			 */
 			add_action(
 				'save_post',
-				function () {
+				function() {
 					$publicize_options = get_option( 'jetpack_publicize_options', array() );
 
 					/**
@@ -97,6 +96,7 @@ class Jetpack_Publicize {
 	}
 }
 
+global $publicize_ui;
 new Jetpack_Publicize();
 
 if ( ! ( defined( 'IS_WPCOM' ) && IS_WPCOM ) && ! function_exists( 'publicize_init' ) ) {
@@ -112,7 +112,7 @@ if ( ! ( defined( 'IS_WPCOM' ) && IS_WPCOM ) && ! function_exists( 'publicize_in
 		global $publicize;
 
 		if ( ! class_exists( 'Publicize' ) ) {
-			require_once __DIR__ . '/publicize/publicize.php';
+			require_once dirname( __FILE__ ) . '/publicize/publicize.php';
 		}
 
 		return $publicize;

@@ -416,6 +416,7 @@ abstract class WPCOM_JSON_API_Post_Endpoint extends WPCOM_JSON_API_Endpoint {
 					if ( current_user_can( 'edit_post_meta', $post_id , $meta['meta_key'] ) )
 						$show = true;
 
+					// Only business plan subscribers can view custom meta description.
 					if ( Jetpack_SEO_Posts::DESCRIPTION_META_KEY === $meta['meta_key'] && ! Jetpack_SEO_Utils::is_enabled_jetpack_seo() ) {
 						$show = false;
 					}
@@ -546,7 +547,7 @@ abstract class WPCOM_JSON_API_Post_Endpoint extends WPCOM_JSON_API_Endpoint {
 		add_image_size( 'win8app-column', 480 );
 		$size = 'win8app-column';
 
-		$id = (int) $id;
+		$id = intval( $id );
 		if ( 'RAND' === $order )
 			$orderby = 'none';
 

@@ -3,7 +3,7 @@
  * VR Viewer Shortcode
  * converts [vr] shortcode to an iframe viewer hosted on vr.me.sh
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -25,7 +25,7 @@ function jetpack_vr_viewer_get_viewer_url_params( $params ) {
 	$url_params = array();
 
 	if ( isset( $params['rotation'] ) ) {
-		$url_params['rotation'] = (int) $params['rotation'];
+		$url_params['rotation'] = intval( $params['rotation'], 10 );
 	}
 
 	if ( isset( $params['view'] ) && in_array( $params['view'], array( 'cinema', '360' ), true ) ) {

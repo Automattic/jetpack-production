@@ -7,7 +7,7 @@
  * [gravatar email="user@example.org" size="48"]
  * [gravatar_profile who="user@example.org"]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 add_shortcode( 'gravatar', 'jetpack_gravatar_shortcode' );
@@ -35,7 +35,7 @@ function jetpack_gravatar_shortcode( $atts ) {
 		return false;
 	}
 
-	$atts['size'] = (int) $atts['size'];
+	$atts['size'] = intval( $atts['size'] );
 	if ( 0 > $atts['size'] ) {
 		$atts['size'] = 96;
 	}
@@ -107,11 +107,8 @@ function jetpack_gravatar_profile_shortcode( $atts ) {
 
 	ob_start();
 
-	if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
-		wp_enqueue_style( 'gravatar-style', plugins_url( '/css/gravatar-amp.css', __FILE__ ), array(), JETPACK__VERSION );
-	} else {
-		?>
-		<script type="text/javascript">
+	?>
+	<script type="text/javascript">
 		( function() {
 			if ( null === document.getElementById( 'gravatar-profile-embed-styles' ) ) {
 				var headID = document.getElementsByTagName( 'head' )[0];
@@ -119,7 +116,7 @@ function jetpack_gravatar_profile_shortcode( $atts ) {
 				styleNode.type = 'text/css';
 				styleNode.id = 'gravatar-profile-embed-styles';
 
-				var gCSS = '.grofile-wrap { border: solid 1px #f0f0f1; padding: 10px; } .grofile { padding: 0 0 5px 0; }  .grofile-left { float: left; display: block; width: 96px; margin-right: 15px; } .grofile .gravatar { margin-bottom: 5px; } .grofile-clear { clear: left; font-size: 1px; height: 1px; } .grofile ul li a { text-indent: -99999px; } .grofile .grofile-left a:hover { text-decoration: none !important; border: none !important; } .grofile-name { margin-top: 0; }';
+				var gCSS = '.grofile-wrap { border: solid 1px #eee; padding: 10px; } .grofile { padding: 0 0 5px 0; }  .grofile-left { float: left; display: block; width: 96px; margin-right: 15px; } .grofile .gravatar { margin-bottom: 5px; } .grofile-clear { clear: left; font-size: 1px; height: 1px; } .grofile ul li a { text-indent: -99999px; } .grofile .grofile-left a:hover { text-decoration: none !important; border: none !important; } .grofile-name { margin-top: 0; }';
 
 				if ( document.all ) {
 					styleNode.innerText = gCSS;
@@ -130,10 +127,7 @@ function jetpack_gravatar_profile_shortcode( $atts ) {
 				headID.appendChild( styleNode );
 			}
 		} )();
-		</script>
-		<?php
-	}
-	?>
+	</script>
 
 	<div class="grofile vcard" id="grofile-embed-<?php echo esc_attr( $instance ); ?>">
 		<div class="grofile-inner">

@@ -12,11 +12,11 @@
  * Additional Search Queries: site accelerator, accelerate, static, assets, javascript, css, files, performance, cdn, bandwidth, content delivery network, pagespeed, combine js, optimize css
  */
 
-use Automattic\Jetpack\Assets;
-
 $GLOBALS['concatenate_scripts'] = false;
 
-Assets::add_resource_hint( '//c0.wp.com', 'dns-prefetch' );
+Jetpack::dns_prefetch( array(
+	'//c0.wp.com',
+) );
 
 class Jetpack_Photon_Static_Assets_CDN {
 	const CDN = 'https://c0.wp.com/';
@@ -129,20 +129,17 @@ class Jetpack_Photon_Static_Assets_CDN {
 	/**
 	 * Ensure use of the correct local path when loading the JavaScript translation file for a CDN'ed asset.
 	 *
-	 * @param string|false $file   Path to the translation file to load. False if there isn't one.
-	 * @param string       $handle The script handle.
-	 * @param string       $domain The text domain.
-	 *
+	 * @param string $file   The path that's going to be loaded.
+	 * @param string $handle The script handle.
+	 * @param string $domain The text domain.
 	 * @return string The transformed local languages path.
 	 */
 	public static function fix_local_script_translation_path( $file, $handle, $domain ) {
 		global $wp_scripts;
-
 		// This is a rewritten plugin URL, so load the language file from the plugins path.
-		if ( $file && isset( $wp_scripts->registered[ $handle ] ) && wp_startswith( $wp_scripts->registered[ $handle ]->src, self::CDN . 'p' ) ) {
+		if ( isset( $wp_scripts->registered[ $handle ] ) && wp_startswith( $wp_scripts->registered[ $handle ]->src, self::CDN . 'p' ) ) {
 			return WP_LANG_DIR . '/plugins/' . basename( $file );
 		}
-
 		return $file;
 	}
 
@@ -253,7 +250,7 @@ class Jetpack_Photon_Static_Assets_CDN {
 			}
 			if ( is_numeric( $cache[ $plugin ][ $version ] ) ) {
 				// Cache an empty result for up to 24h.
-				if ( (int) $cache[ $plugin ][ $version ] + DAY_IN_SECONDS > time() ) {
+				if ( intval( $cache[ $plugin ][ $version ] ) + DAY_IN_SECONDS > time() ) {
 					return array();
 				}
 			}
