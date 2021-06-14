@@ -1,7 +1,5 @@
 <?php
 
-use Automattic\Jetpack\Constants;
-
 if ( ! class_exists( 'Featured_Content' ) && isset( $GLOBALS['pagenow'] ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
 
 	/**
@@ -334,7 +332,7 @@ if ( ! class_exists( 'Featured_Content' ) && isset( $GLOBALS['pagenow'] ) && 'pl
 				return;
 			}
 
-			// We need to respect post ids already in the blocklist.
+			// We need to respect post ids already in the blacklist.
 			$post__not_in = $query->get( 'post__not_in' );
 
 			if ( ! empty( $post__not_in ) ) {
@@ -390,12 +388,6 @@ if ( ! class_exists( 'Featured_Content' ) && isset( $GLOBALS['pagenow'] ) && 'pl
 				return $terms;
 			}
 
-			// WordPress defines the parameter as `array`, but it passes null if `get_terms( $args )` was called
-			// without a 'taxonomy' in $args.
-			if ( ! is_array( $taxonomies ) ) {
-				return $terms;
-			}
-
 			// We only want to hide the featured tag.
 			if ( ! in_array( 'post_tag', $taxonomies ) ) {
 				return $terms;
@@ -446,7 +438,7 @@ if ( ! class_exists( 'Featured_Content' ) && isset( $GLOBALS['pagenow'] ) && 'pl
 		public static function hide_the_featured_term( $terms, $id, $taxonomy ) {
 
 			// This filter is only appropriate on the front-end.
-			if ( is_admin() || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) || ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) ) {
+			if ( is_admin() ) {
 				return $terms;
 			}
 
@@ -509,7 +501,7 @@ if ( ! class_exists( 'Featured_Content' ) && isset( $GLOBALS['pagenow'] ) && 'pl
 			Add Featured Content settings.
 			 *
 			 * Sanitization callback registered in Featured_Content::validate_settings().
-			 * See https://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/comment-page-1/#comment-12374
+			 * See http://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/comment-page-1/#comment-12374
 			 */
 			$wp_customize->add_setting(
 				'featured-content[tag-name]',
@@ -722,7 +714,7 @@ if ( ! class_exists( 'Featured_Content' ) && isset( $GLOBALS['pagenow'] ) && 'pl
 		return $request;
 	}
 
-	if ( Constants::is_true( 'IS_WPCOM' ) && Constants::is_true( 'REST_API_REQUEST' ) ) {
+	if ( Jetpack_Constants::is_true( 'IS_WPCOM' ) && Jetpack_Constants::is_true( 'REST_API_REQUEST' ) ) {
 		add_filter( 'rest_request_before_callbacks', 'wpcom_rest_request_before_callbacks');
 	}
 

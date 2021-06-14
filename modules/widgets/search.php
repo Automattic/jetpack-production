@@ -7,23 +7,14 @@
  * @since      5.0.0
  */
 
-use Automattic\Jetpack\Constants;
-use Automattic\Jetpack\Status;
-use Automattic\Jetpack\Redirect;
-use Automattic\Jetpack\Tracking;
-
 add_action( 'widgets_init', 'jetpack_search_widget_init' );
 
 function jetpack_search_widget_init() {
-	if (
-		! Jetpack::is_connection_ready()
-		|| ( method_exists( 'Jetpack_Plan', 'supports' ) && ! Jetpack_Plan::supports( 'search' ) )
-	) {
+	if ( ! Jetpack::is_active() || ! Jetpack::active_plan_supports( 'search' ) ) {
 		return;
 	}
 
 	require_once JETPACK__PLUGIN_DIR . 'modules/search/class.jetpack-search-helpers.php';
-	require_once JETPACK__PLUGIN_DIR . 'modules/search/class-jetpack-search-options.php';
 
 	register_widget( 'Jetpack_Search_Widget' );
 }
@@ -76,7 +67,7 @@ class Jetpack_Search_Widget extends WP_Widget {
 			apply_filters( 'jetpack_widget_name', $name ),
 			array(
 				'classname'   => 'jetpack-filters widget_search',
-				'description' => __( 'Instant search and filtering to help visitors quickly find relevant answers and explore your site.', 'jetpack' ),
+				'description' => __( 'Replaces the default search with an Elasticsearch-powered search interface and filters.', 'jetpack' ),
 			)
 		);
 
@@ -94,11 +85,7 @@ class Jetpack_Search_Widget extends WP_Widget {
 		}
 
 		add_action( 'jetpack_search_render_filters_widget_title', array( 'Jetpack_Search_Template_Tags', 'render_widget_title' ), 10, 3 );
-		if ( Jetpack_Search_Options::is_instant_enabled() ) {
-			add_action( 'jetpack_search_render_filters', array( 'Jetpack_Search_Template_Tags', 'render_instant_filters' ), 10, 2 );
-		} else {
-			add_action( 'jetpack_search_render_filters', array( 'Jetpack_Search_Template_Tags', 'render_available_filters' ), 10, 2 );
-		}
+		add_action( 'jetpack_search_render_filters', array( 'Jetpack_Search_Template_Tags', 'render_available_filters' ), 10, 2 );
 	}
 
 	/**
@@ -128,13 +115,27 @@ class Jetpack_Search_Widget extends WP_Widget {
 	public function widget_admin_setup() {
 		wp_enqueue_style( 'widget-jetpack-search-filters', plugins_url( 'search/css/search-widget-admin-ui.css', __FILE__ ) );
 
-		// Register jp-tracks and jp-tracks-functions.
-		Tracking::register_tracks_functions_scripts();
+		// Required for Tracks
+		wp_register_script(
+			'jp-tracks',
+			'//stats.wp.com/w.js',
+			array(),
+			gmdate( 'YW' ),
+			true
+		);
+
+		wp_register_script(
+			'jp-tracks-functions',
+			plugins_url( '_inc/lib/tracks/tracks-callables.js', JETPACK__PLUGIN_FILE ),
+			array(),
+			JETPACK__VERSION,
+			false
+		);
 
 		wp_register_script(
 			'jetpack-search-widget-admin',
 			plugins_url( 'search/js/search-widget-admin.js', __FILE__ ),
-			array( 'jquery', 'jquery-ui-sortable', 'jp-tracks-functions' ),
+			array( 'jquery', 'jquery-ui-sortable', 'jp-tracks', 'jp-tracks-functions' ),
 			JETPACK__VERSION
 		);
 
@@ -143,7 +144,7 @@ class Jetpack_Search_Widget extends WP_Widget {
 				'defaultFilterCount' => self::DEFAULT_FILTER_COUNT,
 				'tracksUserData'     => Jetpack_Tracks_Client::get_connected_user_tracks_identity(),
 				'tracksEventData'    => array(
-					'is_customizer' => (int) is_customize_preview(),
+					'is_customizer' => ( function_exists( 'is_customize_preview' ) && is_customize_preview() ) ? 1 : 0,
 				),
 				'i18n'               => array(
 					'month'        => Jetpack_Search_Helpers::get_date_filter_type_name( 'month', false ),
@@ -163,14 +164,14 @@ class Jetpack_Search_Widget extends WP_Widget {
 	 * @since 5.8.0
 	 */
 	public function enqueue_frontend_scripts() {
-		if ( ! is_active_widget( false, false, $this->id_base, true ) || Jetpack_Search_Options::is_instant_enabled() ) {
+		if ( ! is_active_widget( false, false, $this->id_base, true ) ) {
 			return;
 		}
 
 		wp_enqueue_script(
 			'jetpack-search-widget',
 			plugins_url( 'search/js/search-widget.js', __FILE__ ),
-			array(),
+			array( 'jquery' ),
 			JETPACK__VERSION,
 			true
 		);
@@ -253,23 +254,6 @@ class Jetpack_Search_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Populates the instance array with appropriate default values.
-	 *
-	 * @since 8.6.0
-	 * @param array $instance Previously saved values from database.
-	 * @return array Instance array with default values approprate for instant search
-	 */
-	public function populate_defaults_for_instant_search( $instance ) {
-		return wp_parse_args(
-			(array) $instance,
-			array(
-				'title'   => '',
-				'filters' => array(),
-			)
-		);
-	}
-
-	/**
 	 * Responsible for rendering the widget on the frontend.
 	 *
 	 * @since 5.0.0
@@ -280,40 +264,20 @@ class Jetpack_Search_Widget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		$instance = $this->jetpack_search_populate_defaults( $instance );
 
-		if ( ( new Status() )->is_offline_mode() ) {
-			echo $args['before_widget']; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		$display_filters = false;
+
+		if ( Jetpack::is_development_mode() ) {
+			echo $args['before_widget'];
 			?><div id="<?php echo esc_attr( $this->id ); ?>-wrapper">
 				<div class="jetpack-search-sort-wrapper">
 					<label>
-						<?php esc_html_e( 'Jetpack Search not supported in Offline Mode', 'jetpack' ); ?>
+						<?php esc_html_e( 'Jetpack Search not supported in Development Mode', 'jetpack' ); ?>
 					</label>
 				</div>
 			</div><?php
-			echo $args['after_widget']; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $args['after_widget'];
 			return;
 		}
-
-		if ( Jetpack_Search_Options::is_instant_enabled() ) {
-			if ( 'jetpack-instant-search-sidebar' === $args['id'] ) {
-				$this->widget_empty_instant( $args, $instance );
-			} else {
-				$this->widget_instant( $args, $instance );
-			}
-		} else {
-			$this->widget_non_instant( $args, $instance );
-		}
-	}
-
-	/**
-	 * Render the non-instant frontend widget.
-	 *
-	 * @since 8.3.0
-	 *
-	 * @param array $args     Widgets args supplied by the theme.
-	 * @param array $instance The current widget instance.
-	 */
-	public function widget_non_instant( $args, $instance ) {
-		$display_filters = false;
 
 		if ( is_search() ) {
 			if ( Jetpack_Search_Helpers::should_rerun_search_in_customizer_preview() ) {
@@ -335,14 +299,17 @@ class Jetpack_Search_Widget extends WP_Widget {
 			return;
 		}
 
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : '';
+		$title = isset( $instance['title'] ) ? $instance['title'] : '';
+
+		if ( empty( $title ) ) {
+			$title = '';
+		}
 
 		/** This filter is documented in core/src/wp-includes/default-widgets.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
-		echo $args['before_widget']; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		?>
-			<div id="<?php echo esc_attr( $this->id ); ?>-wrapper" >
+		echo $args['before_widget'];
+		?><div id="<?php echo esc_attr( $this->id ); ?>-wrapper">
 		<?php
 
 		if ( ! empty( $title ) ) {
@@ -408,120 +375,8 @@ class Jetpack_Search_Widget extends WP_Widget {
 		$this->maybe_render_sort_javascript( $instance, $order, $orderby );
 
 		echo '</div>';
-		echo $args['after_widget']; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $args['after_widget'];
 	}
-
-	/**
-	 * Render the instant frontend widget.
-	 *
-	 * @since 8.3.0
-	 *
-	 * @param array $args     Widgets args supplied by the theme.
-	 * @param array $instance The current widget instance.
-	 */
-	public function widget_instant( $args, $instance ) {
-		if ( Jetpack_Search_Helpers::should_rerun_search_in_customizer_preview() ) {
-			Jetpack_Search::instance()->update_search_results_aggregations();
-		}
-
-		$filters = Jetpack_Search::instance()->get_filters();
-		if ( ! Jetpack_Search_Helpers::are_filters_by_widget_disabled() && ! $this->should_display_sitewide_filters() ) {
-			$filters = array_filter( $filters, array( $this, 'is_for_current_widget' ) );
-		}
-
-		$display_filters = ! empty( $filters );
-
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : '';
-
-		/** This filter is documented in core/src/wp-includes/default-widgets.php */
-		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
-
-		echo $args['before_widget']; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		?>
-			<div id="<?php echo esc_attr( $this->id ); ?>-wrapper" class="jetpack-instant-search-wrapper">
-		<?php
-
-		if ( ! empty( $title ) ) {
-			/**
-			 * Responsible for displaying the title of the Jetpack Search filters widget.
-			 *
-			 * @module search
-			 *
-			 * @since  5.7.0
-			 *
-			 * @param string $title                The widget's title
-			 * @param string $args['before_title'] The HTML tag to display before the title
-			 * @param string $args['after_title']  The HTML tag to display after the title
-			 */
-			do_action( 'jetpack_search_render_filters_widget_title', $title, $args['before_title'], $args['after_title'] );
-		}
-
-		Jetpack_Search_Template_Tags::render_widget_search_form( array(), '', '' );
-
-		if ( $display_filters ) {
-			/**
-			 * Responsible for rendering filters to narrow down search results.
-			 *
-			 * @module search
-			 *
-			 * @since  5.8.0
-			 *
-			 * @param array $filters    The possible filters for the current query.
-			 * @param array $post_types An array of post types to limit filtering to.
-			 */
-			do_action(
-				'jetpack_search_render_filters',
-				$filters,
-				null
-			);
-		}
-
-		echo '</div>';
-		echo $args['after_widget']; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	}
-
-	/**
-	 * Render the instant widget for the overlay.
-	 *
-	 * @since 8.3.0
-	 *
-	 * @param array $args     Widgets args supplied by the theme.
-	 * @param array $instance The current widget instance.
-	 */
-	public function widget_empty_instant( $args, $instance ) {
-		$title = isset( $instance['title'] ) ? $instance['title'] : '';
-
-		if ( empty( $title ) ) {
-			$title = '';
-		}
-
-		/** This filter is documented in core/src/wp-includes/default-widgets.php */
-		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
-
-		echo $args['before_widget']; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		?>
-			<div id="<?php echo esc_attr( $this->id ); ?>-wrapper" class="jetpack-instant-search-wrapper">
-		<?php
-
-		if ( ! empty( $title ) ) {
-			/**
-			 * Responsible for displaying the title of the Jetpack Search filters widget.
-			 *
-			 * @module search
-			 *
-			 * @since  5.7.0
-			 *
-			 * @param string $title                The widget's title
-			 * @param string $args['before_title'] The HTML tag to display before the title
-			 * @param string $args['after_title']  The HTML tag to display after the title
-			 */
-			do_action( 'jetpack_search_render_filters_widget_title', $title, $args['before_title'], $args['after_title'] );
-		}
-
-		echo '</div>';
-		echo $args['after_widget']; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	}
-
 
 	/**
 	 * Renders JavaScript for the sorting controls on the frontend.
@@ -538,53 +393,42 @@ class Jetpack_Search_Widget extends WP_Widget {
 	 * @param string $orderby  The orderby to initialize the select with.
 	 */
 	private function maybe_render_sort_javascript( $instance, $order, $orderby ) {
-		if ( Jetpack_Search_Options::is_instant_enabled() ) {
-			return;
-		}
-
 		if ( ! empty( $instance['user_sort_enabled'] ) ) :
 		?>
 		<script type="text/javascript">
-			var jetpackSearchModuleSorting = function() {
-				var orderByDefault = '<?php echo 'date' === $orderby ? 'date' : 'relevance'; ?>',
-					orderDefault   = '<?php echo 'ASC' === $order ? 'ASC' : 'DESC'; ?>',
-					widgetId       = decodeURIComponent( '<?php echo rawurlencode( $this->id ); ?>' ),
-					searchQuery    = decodeURIComponent( '<?php echo rawurlencode( get_query_var( 's', '' ) ); ?>' ),
-					isSearch       = <?php echo (int) is_search(); ?>;
+				jQuery( document ).ready( function( $ ) {
+					var orderByDefault = <?php echo wp_json_encode( $orderby ); ?>,
+						orderDefault   = <?php echo wp_json_encode( $order ); ?>,
+						widgetId       = <?php echo wp_json_encode( $this->id ); ?>,
+						searchQuery    = <?php echo wp_json_encode( get_query_var( 's', '' ) ); ?>,
+						isSearch       = <?php echo wp_json_encode( is_search() ); ?>;
 
-				var container = document.getElementById( widgetId + '-wrapper' ),
-					form = container.querySelector( '.jetpack-search-form form' ),
-					orderBy = form.querySelector( 'input[name=orderby]' ),
-					order = form.querySelector( 'input[name=order]' ),
-					searchInput = form.querySelector( 'input[name="s"]' ),
-					sortSelectInput = container.querySelector( '.jetpack-search-sort' );
+					var container = $( '#' + widgetId + '-wrapper' ),
+						form = container.find('.jetpack-search-form form'),
+						orderBy = form.find( 'input[name=orderby]'),
+						order = form.find( 'input[name=order]'),
+						searchInput = form.find( 'input[name="s"]' );
 
-				orderBy.value = orderByDefault;
-				order.value = orderDefault;
+					orderBy.val( orderByDefault );
+					order.val( orderDefault );
 
-				// Some themes don't set the search query, which results in the query being lost
-				// when doing a sort selection. So, if the query isn't set, let's set it now. This approach
-				// is chosen over running a regex over HTML for every search query performed.
-				if ( isSearch && ! searchInput.value ) {
-					searchInput.value = searchQuery;
-				}
+					// Some themes don't set the search query, which results in the query being lost
+					// when doing a sort selection. So, if the query isn't set, let's set it now. This approach
+					// is chosen over running a regex over HTML for every search query performed.
+					if ( isSearch && ! searchInput.val() ) {
+						searchInput.val( searchQuery );
+					}
 
-				searchInput.classList.add( 'show-placeholder' );
+					searchInput.addClass( 'show-placeholder' );
 
-				sortSelectInput.addEventListener( 'change', function( event ) {
-					var values  = event.target.value.split( '|' );
-					orderBy.value = values[0];
-					order.value = values[1];
+					container.find( '.jetpack-search-sort' ).change( function( event ) {
+						var values  = event.target.value.split( '|' );
+						orderBy.val( values[0] );
+						order.val( values[1] );
 
-					form.submit();
+						form.submit();
+					});
 				} );
-			}
-
-			if ( document.readyState === 'interactive' || document.readyState === 'complete' ) {
-				jetpackSearchModuleSorting();
-			} else {
-				document.addEventListener( 'DOMContentLoaded', jetpackSearchModuleSorting );
-			}
 			</script>
 		<?php
 		endif;
@@ -636,7 +480,7 @@ class Jetpack_Search_Widget extends WP_Widget {
 		$filters = array();
 		if ( isset( $new_instance['filter_type'] ) ) {
 			foreach ( (array) $new_instance['filter_type'] as $index => $type ) {
-				$count = (int) $new_instance['num_filters'][ $index ];
+				$count = intval( $new_instance['num_filters'][ $index ] );
 				$count = min( 50, $count ); // Set max boundary at 50.
 				$count = max( 1, $count );  // Set min boundary at 1.
 
@@ -681,13 +525,9 @@ class Jetpack_Search_Widget extends WP_Widget {
 	 *
 	 * @since 5.0.0
 	 *
-	 * @param array $instance Previously saved values from database.
+	 * @param array $instance Current settings.
 	 */
 	public function form( $instance ) {
-		if ( Jetpack_Search_Options::is_instant_enabled() ) {
-			return $this->form_for_instant_search( $instance );
-		}
-
 		$instance = $this->jetpack_search_populate_defaults( $instance );
 
 		$title = strip_tags( $instance['title'] );
@@ -726,7 +566,6 @@ class Jetpack_Search_Widget extends WP_Widget {
 					<?php esc_html_e( 'Show search box', 'jetpack' ); ?>
 				</label>
 			</p>
-
 			<p>
 				<label>
 					<input
@@ -791,63 +630,11 @@ class Jetpack_Search_Widget extends WP_Widget {
 				</noscript>
 				<?php if ( is_customize_preview() ) : ?>
 					<p class="jetpack-search-filters-help">
-						<a href="<?php echo esc_url( Redirect::get_url( 'jetpack-support-search', array( 'anchor' => 'filters-not-showing-up' ) ) ); ?>" target="_blank">
+						<a href="https://jetpack.com/support/search/#filters-not-showing-up" target="_blank">
 							<?php esc_html_e( "Why aren't my filters appearing?", 'jetpack' ); ?>
 						</a>
 					</p>
 				<?php endif; ?>
-			<?php endif; ?>
-		</div>
-		<?php
-	}
-
-	/**
-	 * Outputs the widget update form to be used in the Customizer for Instant Search.
-	 *
-	 * @since 8.6.0
-	 *
-	 * @param array $instance Previously saved values from database.
-	 */
-	private function form_for_instant_search( $instance ) {
-		$instance = $this->populate_defaults_for_instant_search( $instance );
-		$classes  = sprintf( 'jetpack-search-filters-widget %s', $this->id );
-
-		?>
-		<div class="<?php echo esc_attr( $classes ); ?>">
-			<!-- Title control -->
-			<p>
-				<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
-					<?php esc_html_e( 'Title (optional):', 'jetpack' ); ?>
-				</label>
-				<input
-					class="widefat"
-					id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
-					name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
-					type="text"
-					value="<?php echo esc_attr( wp_strip_all_tags( $instance['title'] ) ); ?>"
-				/>
-			</p>
-
-			<!-- Filters control -->
-			<?php if ( ! Jetpack_Search_Helpers::are_filters_by_widget_disabled() ) : ?>
-				<div class="jetpack-search-filters-widget__filters">
-					<?php foreach ( (array) $instance['filters'] as $filter ) : ?>
-						<?php $this->render_widget_edit_filter( $filter ); ?>
-					<?php endforeach; ?>
-				</div>
-				<p class="jetpack-search-filters-widget__add-filter-wrapper">
-					<a class="button jetpack-search-filters-widget__add-filter" href="#">
-						<?php esc_html_e( 'Add a filter', 'jetpack' ); ?>
-					</a>
-				</p>
-				<script class="jetpack-search-filters-widget__filter-template" type="text/template">
-					<?php $this->render_widget_edit_filter( array(), true ); ?>
-				</script>
-				<noscript>
-					<p class="jetpack-search-filters-help">
-						<?php echo esc_html_e( 'Adding filters requires JavaScript!', 'jetpack' ); ?>
-					</p>
-				</noscript>
 			<?php endif; ?>
 		</div>
 		<?php
@@ -881,8 +668,8 @@ class Jetpack_Search_Widget extends WP_Widget {
 	 * @param bool   $is_template Whether this is for an Underscore template or not.
 	 */
 	private function render_widget_option_selected( $name, $value, $compare, $is_template ) {
-		$compare_js = rawurlencode( $compare );
-		echo $is_template ? "<%= decodeURIComponent( '$compare_js' ) === $name ? 'selected=\"selected\"' : '' %>" : selected( $value, $compare );
+		$compare_json = wp_json_encode( $compare );
+		echo $is_template ? "<%= $compare_json === $name ? 'selected=\"selected\"' : '' %>" : selected( $value, $compare );
 	}
 
 	/**
@@ -978,7 +765,7 @@ class Jetpack_Search_Widget extends WP_Widget {
 
 			<p class="jetpack-search-filters-widget__date-histogram-select">
 				<label>
-					<?php esc_html_e( 'Choose an interval:', 'jetpack' ); ?>
+					<?php esc_html_e( 'Choose an interval:' ); ?>
 					<select name="<?php echo esc_attr( $this->get_field_name( 'date_histogram_interval' ) ); ?>[]" class="widefat date-interval-select">
 						<option value="month" <?php $this->render_widget_option_selected( 'interval', $args['interval'], 'month', $is_template ); ?>>
 							<?php esc_html_e( 'Month', 'jetpack' ); ?>

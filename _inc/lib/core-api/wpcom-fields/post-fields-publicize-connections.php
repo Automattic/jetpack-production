@@ -23,10 +23,8 @@
  * @since 6.8.0
  */
 class WPCOM_REST_API_V2_Post_Publicize_Connections_Field extends WPCOM_REST_API_V2_Field_Controller {
-	protected $object_type = array( 'post' );
+	protected $object_type = 'post';
 	protected $field_name  = 'jetpack_publicize_connections';
-
-	private $_meta_saved = array();
 
 	public $memoized_updates = array();
 
@@ -36,6 +34,7 @@ class WPCOM_REST_API_V2_Post_Publicize_Connections_Field extends WPCOM_REST_API_
 	 */
 	public function register_fields() {
 		$this->object_type = get_post_types_by_support( 'publicize' );
+
 		foreach ( $this->object_type as $post_type ) {
 			// Adds meta support for those post types that don't already have it.
 			// Only runs during REST API requests, so it doesn't impact UI.
@@ -116,14 +115,6 @@ class WPCOM_REST_API_V2_Post_Publicize_Connections_Field extends WPCOM_REST_API_
 	function permission_check( $post_id ) {
 		global $publicize;
 
-		if ( ! $publicize ) {
-			return new WP_Error(
-				'publicize_not_available',
-				__( 'Sorry, Publicize is not available on your site right now.', 'jetpack' ),
-				array( 'status' => rest_authorization_required_code() )
-			);
-		}
-
 		if ( $publicize->current_user_can_access_publicize_data( $post_id ) ) {
 			return true;
 		}
@@ -169,10 +160,6 @@ class WPCOM_REST_API_V2_Post_Publicize_Connections_Field extends WPCOM_REST_API_
 	public function get( $post_array, $request ) {
 		global $publicize;
 
-		if ( ! $publicize ) {
-			return array();
-		}
-
 		$schema     = $this->post_connection_schema();
 		$properties = array_keys( $schema['properties'] );
 
@@ -209,17 +196,13 @@ class WPCOM_REST_API_V2_Post_Publicize_Connections_Field extends WPCOM_REST_API_
 		}
 
 		$permission_check = $this->update_permission_check( $request['jetpack_publicize_connections'], $post, $request );
+
 		if ( is_wp_error( $permission_check ) ) {
 			return $permission_check;
 		}
+
 		// memoize
 		$this->get_meta_to_update( $request['jetpack_publicize_connections'], isset( $post->ID ) ? $post->ID : 0 );
-
-		if ( isset( $post->ID ) ) {
-			// Set the meta before we mark the post as published so that publicize works as expected.
-			// If this is not the case post end up on social media when they are marked as skipped.
-			$this->update( $request['jetpack_publicize_connections'], $post, $request );
-		}
 
 		return $post;
 	}
@@ -254,10 +237,6 @@ class WPCOM_REST_API_V2_Post_Publicize_Connections_Field extends WPCOM_REST_API_
 
 	protected function get_meta_to_update( $requested_connections, $post_id = 0 ) {
 		global $publicize;
-
-		if ( ! $publicize ) {
-			return array();
-		}
 
 		if ( isset( $this->memoized_updates[$post_id] ) ) {
 			return $this->memoized_updates[$post_id];
@@ -343,9 +322,6 @@ class WPCOM_REST_API_V2_Post_Publicize_Connections_Field extends WPCOM_REST_API_
 	 * @param WP_REST_Request
 	 */
 	public function update( $requested_connections, $post, $request ) {
-		if ( isset( $this->_meta_saved[ $post->ID ] ) ) { // Make sure we only save it once - per request.
-			return;
-		}
 		foreach ( $this->get_meta_to_update( $requested_connections, $post->ID ) as $meta_key => $meta_value ) {
 			if ( is_null( $meta_value ) ) {
 				delete_post_meta( $post->ID, $meta_key );
@@ -353,7 +329,6 @@ class WPCOM_REST_API_V2_Post_Publicize_Connections_Field extends WPCOM_REST_API_
 				update_post_meta( $post->ID, $meta_key, $meta_value );
 			}
 		}
-		$this->_meta_saved[ $post->ID ] = true;
 	}
 }
 

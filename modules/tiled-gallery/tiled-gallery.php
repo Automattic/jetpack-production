@@ -1,8 +1,5 @@
 <?php
 
-use Automattic\Jetpack\Assets;
-use Automattic\Jetpack\Status;
-
 // Include the class file containing methods for rounding constrained array elements.
 // Here the constrained array element is the dimension of a row, group or an image in the tiled gallery.
 require_once dirname( __FILE__ ) . '/math/class-constrained-array-rounding.php';
@@ -130,11 +127,11 @@ class Jetpack_Tiled_Gallery {
 	public static function default_scripts_and_styles() {
 		wp_enqueue_script(
 			'tiled-gallery',
-			Assets::get_file_url_for_environment(
+			Jetpack::get_file_url_for_environment(
 				'_inc/build/tiled-gallery/tiled-gallery/tiled-gallery.min.js',
 				'modules/tiled-gallery/tiled-gallery/tiled-gallery.js'
 			),
-			array()
+			array( 'jquery' )
 		);
 		wp_enqueue_style( 'tiled-gallery', plugins_url( 'tiled-gallery/tiled-gallery.css', __FILE__ ), array(), '2012-09-21' );
 		wp_style_add_data( 'tiled-gallery', 'rtl', 'replace' );
@@ -184,7 +181,7 @@ class Jetpack_Tiled_Gallery {
 			if ( $gallery_html && class_exists( 'Jetpack' ) && class_exists( 'Jetpack_Photon' ) ) {
 				// Tiled Galleries in Jetpack require that Photon be active.
 				// If it's not active, run it just on the gallery output.
-				if ( ! in_array( 'photon', Jetpack::get_active_modules(), true ) && ! ( new Status() )->is_offline_mode() ) {
+				if ( ! in_array( 'photon', Jetpack::get_active_modules() ) && ! Jetpack::is_development_mode() ) {
 					$gallery_html = Jetpack_Photon::filter_the_content( $gallery_html );
 				}
 			}
