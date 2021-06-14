@@ -6,10 +6,10 @@
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
   font-family: monospace;
-  height: 400px;
+  height: 300px;
 }
 .CodeMirror-scroll {
-  /* Set scrolling behavior here */
+  /* Set scrolling behaviour here */
   overflow: auto;
 }
 
@@ -29,8 +29,8 @@
 /* GUTTER */
 
 .CodeMirror-gutters {
-  border-right: 1px solid #dcdcde;
-  background-color: #f6f7f7;
+  border-right: 1px solid #ddd;
+  background-color: #f7f7f7;
   white-space: nowrap;
 }
 .CodeMirror-linenumbers {}

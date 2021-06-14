@@ -6,8 +6,8 @@ class Jetpack_JSON_API_Updates_Status extends Jetpack_JSON_API_Endpoint {
 
 	protected function result() {
 
+		// pass an option to do it conditional;
 		wp_update_themes();
-		wp_update_plugins();
 
 		$update_data = wp_get_update_data();
 		if ( !  isset( $update_data['counts'] ) ) {
@@ -18,14 +18,6 @@ class Jetpack_JSON_API_Updates_Status extends Jetpack_JSON_API_Endpoint {
 
 		include( ABSPATH . WPINC . '/version.php' ); // $wp_version;
 		$result['wp_version'] = isset( $wp_version ) ? $wp_version : null;
-
-		if ( ! empty( $result['wordpress'] ) ) {
-			$cur = get_preferred_from_update_core();
-			if ( isset( $cur->response ) && $cur->response === 'upgrade' ) {
-				$result['wp_update_version'] = $cur->current;
-			}
-		}
-
 		$result['jp_version'] = JETPACK__VERSION;
 
 		return $result;

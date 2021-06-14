@@ -1,22 +1,8 @@
-<?php
-$add_link = 'none' !== $this->link;
-
-// We do this for accessibility.  Titles without alt's break screen readers.
-if ( empty( $item->image_alt ) && ! empty( $item->image_title ) ) {
-	$item->image_alt = $item->image_title;
-}
-?>
-<div class="tiled-gallery-item
-<?php
-if ( isset( $item->size ) ) {
-	echo " tiled-gallery-item-$item->size";}
-?>
-" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-	<?php if ( $add_link ) : ?>
-	<a href="<?php echo $item->link; ?>" border="0" itemprop="url">
+<?php $add_link = 'none' !== $this->link; ?>
+<div class="tiled-gallery-item<?php if ( isset( $item->size ) ) echo " tiled-gallery-item-$item->size"; ?>">
+	<?php if ( $add_link ): ?>
+	<a href="<?php echo $item->link; ?>" border="0">
 	<?php endif; ?>
-		<meta itemprop="width" content="<?php echo esc_attr( $item->image->width ); ?>">
-		<meta itemprop="height" content="<?php echo esc_attr( $item->image->height ); ?>">
 		<img
 			<?php $this->partial( 'carousel-image-args', array( 'item' => $item ) ); ?>
 			src="<?php echo esc_url( $item->img_src ); ?>"
@@ -24,21 +10,18 @@ if ( isset( $item->size ) ) {
 			height="<?php echo esc_attr( $item->image->height ); ?>"
 			data-original-width="<?php echo esc_attr( $item->image->width ); ?>"
 			data-original-height="<?php echo esc_attr( $item->image->height ); ?>"
-			itemprop="http://schema.org/image"
 			title="<?php echo esc_attr( $item->image_title ); ?>"
 			alt="<?php echo esc_attr( $item->image_alt ); ?>"
 			style="width: <?php echo esc_attr( $item->image->width ); ?>px; height: <?php echo esc_attr( $item->image->height ); ?>px;"
 		/>
-	<?php if ( $add_link ) : ?>
+	<?php if ( $add_link ): ?>
 	</a>
 	<?php endif; ?>
 
-	<?php if ( $this->grayscale == true ) : ?>
-		<?php if ( $add_link ) : ?>
-		<a href="<?php echo $item->link; ?>" border="0" itemprop="url">
+	<?php if ( $this->grayscale == true ): ?>
+		<?php if ( $add_link ): ?>
+		<a href="<?php echo $item->link; ?>" border="0">
 		<?php endif; ?>
-			<meta itemprop="width" content="<?php echo esc_attr( $item->image->width ); ?>">
-			<meta itemprop="height" content="<?php echo esc_attr( $item->image->height ); ?>">
 			<img
 				class="grayscale"
 				src="<?php echo esc_url( $item->img_src_grayscale ); ?>"
@@ -46,20 +29,20 @@ if ( isset( $item->size ) ) {
 				height="<?php echo esc_attr( $item->image->height ); ?>"
 				data-original-width="<?php echo esc_attr( $item->image->width ); ?>"
 				data-original-height="<?php echo esc_attr( $item->image->height ); ?>"
-				itemprop="http://schema.org/image"
 				title="<?php echo esc_attr( $item->image_title ); ?>"
 				align="left"
 				alt="<?php echo esc_attr( $item->image_alt ); ?>"
 				style="width: <?php echo esc_attr( $item->image->width ); ?>px; height: <?php echo esc_attr( $item->image->height ); ?>px;"
 			/>
-		<?php if ( $add_link ) : ?>
+		<?php if ( $add_link ): ?>
 		</a>
 		<?php endif; ?>
 	<?php endif; ?>
 
-	<?php if ( trim( $item->image->post_excerpt ) ) : ?>
-		<div class="tiled-gallery-caption" itemprop="caption description">
+	<?php if ( trim( $item->image->post_excerpt ) ): ?>
+		<div class="tiled-gallery-caption">
 			<?php echo wptexturize( $item->image->post_excerpt ); ?>
 		</div>
 	<?php endif; ?>
 </div>
+
