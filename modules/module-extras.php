@@ -1,96 +1,56 @@
 <?php
-/**
+/*
  * Load module code that is needed even when a module isn't active.
- * For example, if a module shouldn't be activatable unless certain conditions are met,
- * the code belongs in this file.
- *
- * @package automattic/jetpack
+ * For example, if a module shouldn't be activatable unless certain conditions are met, the code belongs in this file.
  */
 
 /**
- * Features available all the time:
- *    - When in offline mode.
- *    - When connected to WordPress.com.
+ * INFINITE SCROLL
  */
-$tools = array(
-	// Always loaded, but only registered if theme supports it.
-	'custom-post-types/comics.php',
-	'custom-post-types/testimonial.php',
-	'custom-post-types/nova.php',
-	'geo-location.php',
-	// Those oEmbed providers are always available.
-	'shortcodes/facebook.php',
-	'shortcodes/others.php',
-	// Theme Tools.
-	'theme-tools.php',
-	'theme-tools/social-links.php',
-	'theme-tools/random-redirect.php',
-	'theme-tools/featured-content.php',
-	'theme-tools/infinite-scroll.php',
-	'theme-tools/responsive-videos.php',
-	'theme-tools/site-logo.php',
-	'theme-tools/site-breadcrumbs.php',
-	'theme-tools/social-menu.php',
-	'theme-tools/content-options.php',
-	'theme-tools/devicepx.php',
-	// Needed for SEO Tools.
-	'seo-tools/jetpack-seo-utils.php',
-	'seo-tools/jetpack-seo-titles.php',
-	'seo-tools/jetpack-seo-posts.php',
-	'verification-tools/verification-tools-utils.php',
-	// Needed for VideoPress, so videos keep working in existing posts/pages when the module is deactivated.
-	'videopress/utility-functions.php',
-	'videopress/class.videopress-gutenberg.php',
-);
-
-// Some features are only available when connected to WordPress.com.
-$connected_tools = array(
-	'calypsoify/class-jetpack-calypsoify.php',
-	'cloudflare-analytics/cloudflare-analytics.php',
-	'plugin-search.php',
-	'scan/scan.php', // Shows Jetpack Scan alerts in the admin bar if threats found.
-	'simple-payments/simple-payments.php',
-	'wpcom-block-editor/class-jetpack-wpcom-block-editor.php',
-	'wpcom-tos/wpcom-tos.php',
-	// These oEmbed providers are available when connected to WordPress.com.
-	// Starting from 2020-10-24, they need an authentication token, and that token is stored on WordPress.com.
-	// More information: https://developers.facebook.com/docs/instagram/oembed/.
-	'shortcodes/instagram.php',
-);
-
-// Add connected features to our existing list if the site is currently connected.
-if ( Jetpack::is_connection_ready() ) {
-	$tools = array_merge( $tools, $connected_tools );
-}
 
 /**
- * Filter extra tools (not modules) to include.
+ * Load theme's infinite scroll annotation file, if present in the IS plugin.
+ * The `setup_theme` action is used because the annotation files should be using `after_setup_theme` to register support for IS.
  *
- * @since 2.4.0
- * @since 5.4.0 can be used in multisite when Jetpack is not connected to WordPress.com and not in offline mode.
+ * As released in Jetpack 2.0, a child theme's parent wasn't checked for in the plugin's bundled support, hence the convoluted way the parent is checked for now.
  *
- * @param array $tools Array of extra tools to include.
+ * @uses is_admin, wp_get_theme, get_theme, get_current_theme, apply_filters
+ * @action setup_theme
+ * @return null
  */
-$jetpack_tools_to_include = apply_filters( 'jetpack_tools_to_include', $tools );
+function jetpack_load_infinite_scroll_annotation() {
+	if ( is_admin() && isset( $_GET['page'] ) && 'jetpack' == $_GET['page'] ) {
+		$theme = function_exists( 'wp_get_theme' ) ? wp_get_theme() : get_theme( get_current_theme() );
 
-if ( ! empty( $jetpack_tools_to_include ) ) {
-	foreach ( $jetpack_tools_to_include as $tool ) {
-		if ( file_exists( JETPACK__PLUGIN_DIR . '/modules/' . $tool ) ) {
-			require_once JETPACK__PLUGIN_DIR . '/modules/' . $tool;
+		if ( ! is_a( $theme, 'WP_Theme' ) && ! is_array( $theme ) )
+			return;
+
+		$customization_file = apply_filters( 'infinite_scroll_customization_file', dirname( __FILE__ ) . "/infinite-scroll/themes/{$theme['Stylesheet']}.php", $theme['Stylesheet'] );
+
+		if ( is_readable( $customization_file ) ) {
+			require_once( $customization_file );
+		}
+		elseif ( ! empty( $theme['Template'] ) ) {
+			$customization_file = dirname( __FILE__ ) . "/infinite-scroll/themes/{$theme['Template']}.php";
+
+			if ( is_readable( $customization_file ) )
+				require_once( $customization_file );
 		}
 	}
 }
+add_action( 'setup_theme', 'jetpack_load_infinite_scroll_annotation' );
 
 /**
- * Add the "(Jetpack)" suffix to the widget names
+ * Prevent IS from being activated if theme doesn't support it
  *
- * @param string $widget_name Widget name.
+ * @param bool $can_activate
+ * @filter jetpack_can_activate_infinite-scroll
+ * @return bool
  */
-function jetpack_widgets_add_suffix( $widget_name ) {
-	return sprintf(
-		/* Translators: Placeholder is the name of a widget. */
-		__( '%s (Jetpack)', 'jetpack' ),
-		$widget_name
-	);
+function jetpack_can_activate_infinite_scroll( $can_activate ) {
+	return (bool) current_theme_supports( 'infinite-scroll' );
 }
-add_filter( 'jetpack_widget_name', 'jetpack_widgets_add_suffix' );
+add_filter( 'jetpack_can_activate_infinite-scroll', 'jetpack_can_activate_infinite_scroll' );
+
+// Happy Holidays!
+require_once( dirname( __FILE__ ) . '/holiday-snow.php' );

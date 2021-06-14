@@ -23,7 +23,7 @@ function jetpack_register_css_preprocessors( $preprocessors ) {
 	);
 
 	$preprocessors['sass'] = array(
-		'name' => 'Sass (SCSS Syntax)',
+		'name' => 'SASS (SCSS Syntax)',
 		'callback' => 'jetpack_sass_css_preprocess'
 	);
 
@@ -33,7 +33,7 @@ function jetpack_register_css_preprocessors( $preprocessors ) {
 add_filter( 'jetpack_custom_css_preprocessors', 'jetpack_register_css_preprocessors' );
 
 function jetpack_less_css_preprocess( $less ) {
-	require_once( dirname( __FILE__ ) . '/preprocessors/lessc.inc.php' );
+	require( dirname( __FILE__ ) . '/preprocessors/lessc.inc.php' );
 
 	$compiler = new lessc();
 
@@ -48,7 +48,6 @@ function jetpack_sass_css_preprocess( $sass ) {
 	require_once( dirname( __FILE__ ) . '/preprocessors/scss.inc.php' );
 
 	$compiler = new scssc();
-	$compiler->setFormatter( 'scss_formatter' );
 
 	try {
 		return $compiler->compile( $sass );
