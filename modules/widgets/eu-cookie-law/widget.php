@@ -1,33 +1,32 @@
-<?php // phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
-/**
- * Widget for Cookies and Consent.
- *
- * @package automattic/jetpack
- */
-?>
-
 <div
-	class="<?php echo implode( ' ', $classes ); ?>"
-	data-hide-timeout="<?php echo (int) $instance['hide-timeout']; ?>"
-	data-consent-expiration="<?php echo (int) $instance['consent-expiration']; ?>"
+	class="<?php echo 'negative' === $instance['color-scheme'] ? 'negative ' : '';
+	?>hide-on-<?php echo esc_attr( $instance['hide'] ); ?>"
+	data-hide-timeout="<?php echo intval( $instance['hide-timeout'] ); ?>"
 	id="eu-cookie-law"
 >
 	<form method="post">
+		<?php wp_nonce_field( 'eucookielaw' ); ?>
+		<input type="hidden" name="eucookielaw" value="accept" />
+		<input type="hidden" name="redirect_url" value="<?php echo esc_attr( $_SERVER['REQUEST_URI'] ); ?>" />
 		<input type="submit" value="<?php echo esc_attr( $instance['button'] ); ?>" class="accept" />
 	</form>
 
 	<?php if ( 'default' == $instance['text'] || empty( $instance['customtext'] ) ) {
-		echo nl2br( $instance['default-text'] );
+		echo $instance['default-text'];
+		?>
+		<br />
+		<?php
+		esc_html_e( 'To find out more, as well as how to remove or block these, see here:', 'jetpack' );
 	} else {
-		echo nl2br( esc_html( $instance['customtext'] ) );
+		echo esc_html( $instance['customtext'] );
 	} ?>
 
-	<?php
-	$is_default_policy = 'default' === $instance['policy-url'] || empty( $instance['custom-policy-url'] );
-	$policy_link_url   = $is_default_policy ? $instance['default-policy-url'] : $instance['custom-policy-url'];
-	$policy_link_rel   = $is_default_policy ? 'nofollow' : '';
-	?>
-	<a href="<?php echo esc_url( $policy_link_url ); ?>" rel="<?php echo esc_attr( $policy_link_rel ); ?>">
+	<a href="<?php
+		$policy_link_text = 'default' === $instance['policy-url'] || empty( $instance['custom-policy-url'] )
+			? $instance['default-policy-url']
+			: $instance['custom-policy-url'];
+		echo esc_url( $policy_link_text );
+	?>" >
 		<?php echo esc_html( $instance['policy-link-text'] ); ?>
 	</a>
 </div>

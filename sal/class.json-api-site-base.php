@@ -51,8 +51,6 @@ abstract class SAL_Site {
 
 	abstract public function is_mapped_domain();
 
-	abstract public function get_unmapped_url();
-
 	abstract public function is_redirect();
 
 	abstract public function is_headstart_fresh();
@@ -63,15 +61,11 @@ abstract class SAL_Site {
 
 	abstract public function get_frame_nonce();
 
-	abstract public function get_jetpack_frame_nonce();
-
 	abstract public function allowed_file_types();
 
 	abstract public function get_post_formats();
 
 	abstract public function is_private();
-
-	abstract public function is_coming_soon();
 
 	abstract public function is_following();
 
@@ -79,23 +73,9 @@ abstract class SAL_Site {
 
 	abstract public function get_locale();
 
-	/**
-	 * The flag indicates that the site has Jetpack installed
-	 *
-	 * @return bool
-	 */
 	abstract public function is_jetpack();
 
-	/**
-	 * The flag indicates that the site is connected to WP.com via Jetpack Connection
-	 *
-	 * @return bool
-	 */
-	abstract public function is_jetpack_connection();
-
 	abstract public function get_jetpack_modules();
-
-	abstract public function is_module_active( $module );
 
 	abstract public function is_vip();
 
@@ -108,8 +88,6 @@ abstract class SAL_Site {
 	abstract public function get_ak_vp_bundle_enabled();
 
 	abstract public function get_podcasting_archive();
-
-	abstract public function get_import_engine();
 
 	abstract public function get_jetpack_seo_front_page_description();
 
@@ -130,66 +108,7 @@ abstract class SAL_Site {
 	abstract protected function is_a8c_publication( $post_id );
 
 	public function is_automated_transfer() {
-		/**
-		 * Filter if a site is an automated-transfer site.
-		 *
-		 * @module json-api
-		 *
-		 * @since 6.4.0
-		 *
-		 * @param bool is_automated_transfer( $this->blog_id )
-		 * @param int  $blog_id Blog identifier.
-		 */
-		return apply_filters(
-			'jetpack_site_automated_transfer',
-			false,
-			$this->blog_id
-		);
-	}
-
-	abstract protected function is_wpforteams_site();
-
-	/**
-	 * Get hub blog id for P2 sites.
-	 *
-	 * @return null
-	 */
-	public function get_p2_hub_blog_id() {
-		return null;
-	}
-
-	/**
-	 * Getter for the p2 organization ID.
-	 *
-	 * @return int
-	 */
-	public function get_p2_organization_id() {
-		return 0; // WPForTeams\Constants\NO_ORG_ID not loaded.
-	}
-
-	/**
-	 * Detect whether a site is a WordPress.com on Atomic site.
-	 *
-	 * @return bool
-	 */
-	public function is_wpcom_atomic() {
-		return jetpack_is_atomic_site();
-	}
-
-	public function is_wpcom_store() {
 		return false;
-	}
-
-	public function woocommerce_is_active() {
-		return false;
-	}
-
-	public function is_cloud_eligible() {
-		return false;
-	}
-
-	public function get_products() {
-		return array();
 	}
 
 	public function get_post_by_id( $post_id, $context ) {
@@ -222,7 +141,7 @@ abstract class SAL_Site {
 
 		switch ( $context ) {
 		case 'edit' :
-			if ( ! current_user_can( 'edit_post', $post->ID ) ) {
+			if ( ! current_user_can( 'edit_post', $post ) ) {
 				return new WP_Error( 'unauthorized', 'User cannot edit post', 403 );
 			}
 			break;
@@ -262,30 +181,18 @@ abstract class SAL_Site {
 	// copied from class.json-api-endpoints.php
 	public function is_post_type_allowed( $post_type ) {
 		// if the post type is empty, that's fine, WordPress will default to post
-		if ( empty( $post_type ) ) {
+		if ( empty( $post_type ) )
 			return true;
-		}
 
 		// allow special 'any' type
-		if ( 'any' == $post_type ) {
+		if ( 'any' == $post_type )
 			return true;
-		}
 
 		// check for allowed types
-		if ( in_array( $post_type, $this->get_whitelisted_post_types() ) ) {
+		if ( in_array( $post_type, $this->get_whitelisted_post_types() ) )
 			return true;
-		}
 
-		if ( $post_type_object = get_post_type_object( $post_type ) ) {
-			if ( ! empty( $post_type_object->show_in_rest ) ) {
-				return $post_type_object->show_in_rest;
-			}
-			if ( ! empty( $post_type_object->publicly_queryable ) ) {
-				return $post_type_object->publicly_queryable;
-			}
-		}
-
-		return ! empty( $post_type_object->public );
+		return false;
 	}
 
 	// copied from class.json-api-endpoints.php
@@ -427,7 +334,7 @@ abstract class SAL_Site {
 	}
 
 	function get_xmlrpc_url() {
-		$xmlrpc_scheme = apply_filters( 'wpcom_json_api_xmlrpc_scheme', wp_parse_url( get_option( 'home' ), PHP_URL_SCHEME ) );
+		$xmlrpc_scheme = apply_filters( 'wpcom_json_api_xmlrpc_scheme', parse_url( get_option( 'home' ), PHP_URL_SCHEME ) );
 		return site_url( 'xmlrpc.php', $xmlrpc_scheme );
 	}
 
@@ -443,8 +350,6 @@ abstract class SAL_Site {
 	}
 
 	function get_capabilities() {
-		$is_wpcom_blog_owner = wpcom_get_blog_owner() === (int) get_current_user_id();
-
 		return array(
 			'edit_pages'          => current_user_can( 'edit_pages' ),
 			'edit_posts'          => current_user_can( 'edit_posts' ),
@@ -457,26 +362,13 @@ abstract class SAL_Site {
 			'list_users'          => current_user_can( 'list_users' ),
 			'manage_categories'   => current_user_can( 'manage_categories' ),
 			'manage_options'      => current_user_can( 'manage_options' ),
-			'moderate_comments'   => current_user_can( 'moderate_comments' ),
-			'activate_wordads'    => $is_wpcom_blog_owner,
+			'activate_wordads'    => wpcom_get_blog_owner() === (int) get_current_user_id(),
 			'promote_users'       => current_user_can( 'promote_users' ),
 			'publish_posts'       => current_user_can( 'publish_posts' ),
 			'upload_files'        => current_user_can( 'upload_files' ),
 			'delete_users'        => current_user_can( 'delete_users' ),
 			'remove_users'        => current_user_can( 'remove_users' ),
-			'own_site'            => $is_wpcom_blog_owner,
-			/**
-		 	 * Filter whether the Hosting section in Calypso should be available for site.
-			 *
-			 * @module json-api
-			 *
-			 * @since 8.2.0
-			 *
-			 * @param bool $view_hosting Can site access Hosting section. Default to false.
-			 */
-			'view_hosting'        => apply_filters( 'jetpack_json_api_site_can_view_hosting', false ),
-			'view_stats'          => stats_is_blog_user( $this->blog_id ),
-			'activate_plugins'    => current_user_can( 'activate_plugins' ),
+			'view_stats'          => stats_is_blog_user( $this->blog_id )
 		);
 	}
 
@@ -536,6 +428,10 @@ abstract class SAL_Site {
 
 	function get_admin_url() {
 		return get_admin_url();
+	}
+
+	function get_unmapped_url() {
+		return get_site_url( get_current_blog_id() );
 	}
 
 	function get_theme_slug() {
@@ -652,74 +548,5 @@ abstract class SAL_Site {
 	function is_domain_only() {
 		$options = get_option( 'options' );
 		return ! empty ( $options['is_domain_only'] ) ? (bool) $options['is_domain_only'] : false;
-	}
-
-	function get_blog_public() {
-		return (int) get_option( 'blog_public' );
-	}
-
-	function has_pending_automated_transfer() {
-		/**
-		 * Filter if a site is in pending automated transfer state.
-		 *
-		 * @module json-api
-		 *
-		 * @since 6.4.0
-		 *
-		 * @param bool has_site_pending_automated_transfer( $this->blog_id )
-		 * @param int  $blog_id Blog identifier.
-		 */
-		return apply_filters(
-			'jetpack_site_pending_automated_transfer',
-			false,
-			$this->blog_id
-		);
-	}
-
-	function signup_is_store() {
-		return $this->get_design_type() === 'store';
-	}
-
-	function get_roles() {
-		return new WP_Roles();
-	}
-
-	function get_design_type() {
-		$options = get_option( 'options' );
-		return empty( $options[ 'designType'] ) ? null : $options[ 'designType' ];
-	}
-
-	function get_site_goals() {
-		$options = get_option( 'options' );
-		return empty( $options[ 'siteGoals'] ) ? null : $options[ 'siteGoals' ];
-	}
-
-	function get_launch_status() {
-		return false;
-	}
-
-	function get_migration_meta() {
-		return null;
-	}
-
-	function get_site_segment() {
-		return false;
-	}
-
-	function get_site_creation_flow() {
-		return get_option( 'site_creation_flow' );
-	}
-
-	public function get_selected_features() {
-		return get_option( 'selected_features' );
-	}
-
-	/**
-	 * Get the option storing the Anchor podcast ID that identifies a site as a podcasting site.
-	 *
-	 * @return string
-	 */
-	public function get_anchor_podcast() {
-		return get_option( 'anchor_podcast' );
 	}
 }

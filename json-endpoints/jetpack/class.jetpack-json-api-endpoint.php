@@ -58,7 +58,7 @@ abstract class Jetpack_JSON_API_Endpoint extends WPCOM_JSON_API_Endpoint {
 	 * Switches to the blog and checks current user capabilities.
 	 * @return bool|WP_Error a WP_Error object or true if things are good.
 	 */
-	protected function validate_call( $_blog_id, $capability, $check_validation = true ) {
+	protected function validate_call( $_blog_id, $capability, $check_manage_active = true ) {
 		$blog_id = $this->api->switch_to_blog_and_validate_user( $this->api->get_blog_id( $_blog_id ) );
 		if ( is_wp_error( $blog_id ) ) {
 			return $blog_id;
@@ -68,20 +68,7 @@ abstract class Jetpack_JSON_API_Endpoint extends WPCOM_JSON_API_Endpoint {
 			return $error;
 		}
 
-		if (
-			$check_validation &&
-			'GET' !== $this->method &&
-			/**
-			 * Filter to disallow JSON API requests to the site.
-			 * Setting to false disallows you to manage your site remotely from WordPress.com
-			 * and disallows plugin auto-updates.
-			 *
-			 * @since 7.3.0
-			 *
-			 * @param bool $check_validation Whether to allow API requests to manage the site
-			 */
-			! apply_filters( 'jetpack_json_manage_api_enabled', $check_validation )
-		) {
+		if ( $check_manage_active &&  'GET' !== $this->method && ! Jetpack::is_module_active( 'manage' ) ) {
 			return new WP_Error( 'unauthorized_full_access', __( 'Full management mode is off for this site.', 'jetpack' ), 403 );
 		}
 
@@ -94,10 +81,6 @@ abstract class Jetpack_JSON_API_Endpoint extends WPCOM_JSON_API_Endpoint {
 	 * @return bool|WP_Error
 	 */
 	protected function check_capability( $capability ) {
-		// If this endpoint accepts site based authentication, skip capabilities check.
-		if ( $this->accepts_site_based_authentication() ) {
-			return true;
-		}
 		if ( is_array( $capability ) ) {
 			// the idea is that the we can pass in an array of capabilitie that the user needs to have before we allowing them to do something
 			$capabilities = ( isset( $capability['capabilities'] ) ? $capability['capabilities'] : $capability );
@@ -115,15 +98,11 @@ abstract class Jetpack_JSON_API_Endpoint extends WPCOM_JSON_API_Endpoint {
 					$failed[] = $cap;
 				}
 			}
-			// Check if all conditions have passed.
+			// Check that must have conditions is less then
 			if ( $passed < $must_pass ) {
-				return new WP_Error(
-					'unauthorized',
-					/* translators: %s: comma-separated list of capabilities */
-					sprintf( __( 'This user is not authorized to %s on this blog.', 'jetpack' ), implode( ', ', $failed ) ),
-					403
-				);
+				return new WP_Error( 'unauthorized', sprintf( __( 'This user is not authorized to %s on this blog.', 'jetpack' ), implode( ', ', $failed ), 403 ) );
 			}
+
 		} else {
 			if ( !current_user_can( $capability ) ) {
 				return new WP_Error( 'unauthorized', sprintf( __( 'This user is not authorized to %s on this blog.', 'jetpack' ), $capability ), 403 );

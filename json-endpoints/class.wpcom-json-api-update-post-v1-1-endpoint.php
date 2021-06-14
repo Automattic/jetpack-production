@@ -1,190 +1,4 @@
 <?php
-
-new WPCOM_JSON_API_Update_Post_v1_1_Endpoint( array(
-	'description' => 'Create a post.',
-	'group'       => 'posts',
-	'stat'        => 'posts:new',
-	'new_version' => '1.2',
-	'min_version' => '1.1',
-	'max_version' => '1.1',
-	'method'      => 'POST',
-	'path'        => '/sites/%s/posts/new',
-	'path_labels' => array(
-		'$site' => '(int|string) Site ID or domain',
-	),
-
-	'request_format' => array(
-		// explicitly document all input
-		'date'      => "(ISO 8601 datetime) The post's creation time.",
-		'title'     => '(HTML) The post title.',
-		'content'   => '(HTML) The post content.',
-		'excerpt'   => '(HTML) An optional post excerpt.',
-		'slug'      => '(string) The name (slug) for the post, used in URLs.',
-		'author'    => '(string) The username or ID for the user to assign the post to.',
-		'publicize' => '(array|bool) True or false if the post be publicized to external services. An array of services if we only want to publicize to a select few. Defaults to true.',
-		'publicize_message' => '(string) Custom message to be publicized to external services.',
-		'status'    => array(
-			'publish' => 'Publish the post.',
-			'private' => 'Privately publish the post.',
-			'draft'   => 'Save the post as a draft.',
-			'pending' => 'Mark the post as pending editorial approval.',
-			'future'  => 'Schedule the post (alias for publish; you must also set a future date).',
-			'auto-draft' => 'Save a placeholder for a newly created post, with no content.',
-		),
-		'sticky'    => array(
-			'false'   => 'Post is not marked as sticky.',
-			'true'    => 'Stick the post to the front page.',
-		),
-		'password'  => '(string) The plaintext password protecting the post, or, more likely, the empty string if the post is not password protected.',
-		'parent'    => "(int) The post ID of the new post's parent.",
-		'type'      => "(string) The post type. Defaults to 'post'. Post types besides post and page need to be whitelisted using the <code>rest_api_allowed_post_types</code> filter.",
-		'terms'      => '(object) Mapping of taxonomy to comma-separated list or array of terms (name or id)',
-		'categories' => "(array|string) Comma-separated list or array of categories (name or id)",
-		'tags'       => "(array|string) Comma-separated list or array of tags (name or id)",
-		'format'     => array_merge( array( 'default' => 'Use default post format' ), get_post_format_strings() ),
-		'featured_image' => "(string) The post ID of an existing attachment to set as the featured image. Pass an empty string to delete the existing image.",
-		'media'      => "(media) An array of files to attach to the post. To upload media, the entire request should be multipart/form-data encoded. Multiple media items will be displayed in a gallery. Accepts  jpg, jpeg, png, gif, pdf, doc, ppt, odt, pptx, docx, pps, ppsx, xls, xlsx, key. Audio and Video may also be available. See <code>allowed_file_types</code> in the options response of the site endpoint. Errors produced by media uploads, if any, will be in `media_errors` in the response. <br /><br /><strong>Example</strong>:<br />" .
-		 				"<code>curl \<br />--form 'title=Image Post' \<br />--form 'media[0]=@/path/to/file.jpg' \<br />--form 'media_attrs[0][caption]=My Great Photo' \<br />-H 'Authorization: BEARER your-token' \<br />'https://public-api.wordpress.com/rest/v1/sites/123/posts/new'</code>",
-		'media_urls' => "(array) An array of URLs for images to attach to a post. Sideloads the media in for a post. Errors produced by media sideloading, if any, will be in `media_errors` in the response.",
-		'media_attrs' => "(array) An array of attributes (`title`, `description` and `caption`) are supported to assign to the media uploaded via the `media` or `media_urls` properties. You must use a numeric index for the keys of `media_attrs` which follow the same sequence as `media` and `media_urls`. <br /><br /><strong>Example</strong>:<br />" .
-		                 "<code>curl \<br />--form 'title=Gallery Post' \<br />--form 'media[]=@/path/to/file1.jpg' \<br />--form 'media_urls[]=http://exapmple.com/file2.jpg' \<br /> \<br />--form 'media_attrs[0][caption]=This will be the caption for file1.jpg' \<br />--form 'media_attrs[1][title]=This will be the title for file2.jpg' \<br />-H 'Authorization: BEARER your-token' \<br />'https://public-api.wordpress.com/rest/v1/sites/123/posts/new'</code>",
-		'metadata'      => "(array) Array of metadata objects containing the following properties: `key` (metadata key), `id` (meta ID), `previous_value` (if set, the action will only occur for the provided previous value), `value` (the new value to set the meta to), `operation` (the operation to perform: `update` or `add`; defaults to `update`). All unprotected meta keys are available by default for read requests. Both unprotected and protected meta keys are avaiable for authenticated requests with proper capabilities. Protected meta keys can be made available with the <code>rest_api_allowed_public_metadata</code> filter.",
-		'discussion'    => '(object) A hash containing one or more of the following boolean values, which default to the blog\'s discussion preferences: `comments_open`, `pings_open`',
-		'likes_enabled' => "(bool) Should the post be open to likes? Defaults to the blog's preference.",
-		'sharing_enabled' => "(bool) Should sharing buttons show on this post? Defaults to true.",
-		'menu_order'    => "(int) (Pages Only) the order pages should appear in. Use 0 to maintain alphabetical order.",
-		'page_template' => '(string) (Pages Only) The page template this page should use.',
-	),
-
-	'example_request'      => 'https://public-api.wordpress.com/rest/v1.1/sites/82974409/posts/new/',
-
-	'example_request_data' => array(
-		'headers' => array(
-			'authorization' => 'Bearer YOUR_API_TOKEN'
-		),
-
-		'body' => array(
-			'title'      => 'Hello World',
-			'content'    => 'Hello. I am a test post. I was created by the API',
-			'tags'       => 'tests',
-			'categories' => 'API'
-		)
-	)
-) );
-
-new WPCOM_JSON_API_Update_Post_v1_1_Endpoint( array(
-	'description' => 'Edit a post.',
-	'group'       => 'posts',
-	'stat'        => 'posts:1:POST',
-	'new_version' => '1.2',
-	'min_version' => '1.1',
-	'max_version' => '1.1',
-	'method'      => 'POST',
-	'path'        => '/sites/%s/posts/%d',
-	'path_labels' => array(
-		'$site'    => '(int|string) Site ID or domain',
-		'$post_ID' => '(int) The post ID',
-	),
-
-	'request_format' => array(
-		'date'      => "(ISO 8601 datetime) The post's creation time.",
-		'title'     => '(HTML) The post title.',
-		'content'   => '(HTML) The post content.',
-		'excerpt'   => '(HTML) An optional post excerpt.',
-		'slug'      => '(string) The name (slug) for the post, used in URLs.',
-		'author'    => '(string) The username or ID for the user to assign the post to.',
-		'publicize' => '(array|bool) True or false if the post be publicized to external services. An array of services if we only want to publicize to a select few. Defaults to true.',
-		'publicize_message' => '(string) Custom message to be publicized to external services.',
-		'status'    => array(
-			'publish' => 'Publish the post.',
-			'private' => 'Privately publish the post.',
-			'draft'   => 'Save the post as a draft.',
-			'future'  => 'Schedule the post (alias for publish; you must also set a future date).',
-			'pending' => 'Mark the post as pending editorial approval.',
-			'trash'   => 'Set the post as trashed.',
-		),
-		'sticky'    => array(
-			'false'   => 'Post is not marked as sticky.',
-			'true'    => 'Stick the post to the front page.',
-		),
-		'password'   => '(string) The plaintext password protecting the post, or, more likely, the empty string if the post is not password protected.',
-		'parent'     => "(int) The post ID of the new post's parent.",
-		'terms'      => '(object) Mapping of taxonomy to comma-separated list or array of terms (name or id)',
-		'categories' => "(array|string) Comma-separated list or array of categories (name or id)",
-		'tags'       => "(array|string) Comma-separated list or array of tags (name or id)",
-		'format'     => array_merge( array( 'default' => 'Use default post format' ), get_post_format_strings() ),
-		'discussion' => '(object) A hash containing one or more of the following boolean values, which default to the blog\'s discussion preferences: `comments_open`, `pings_open`',
-		'likes_enabled' => "(bool) Should the post be open to likes?",
-		'menu_order'    => "(int) (Pages only) the order pages should appear in. Use 0 to maintain alphabetical order.",
-		'page_template' => '(string) (Pages Only) The page template this page should use.',
-		'sharing_enabled' => "(bool) Should sharing buttons show on this post?",
-		'featured_image' => "(string) The post ID of an existing attachment to set as the featured image. Pass an empty string to delete the existing image.",
-		'media'      => "(media) An array of files to attach to the post. To upload media, the entire request should be multipart/form-data encoded. Multiple media items will be displayed in a gallery. Accepts  jpg, jpeg, png, gif, pdf, doc, ppt, odt, pptx, docx, pps, ppsx, xls, xlsx, key. Audio and Video may also be available. See <code>allowed_file_types</code> in the options resposne of the site endpoint. <br /><br /><strong>Example</strong>:<br />" .
-		 				"<code>curl \<br />--form 'title=Image' \<br />--form 'media[]=@/path/to/file.jpg' \<br />-H 'Authorization: BEARER your-token' \<br />'https://public-api.wordpress.com/rest/v1/sites/123/posts/new'</code>",
-		'media_urls' => "(array) An array of URLs for images to attach to a post. Sideloads the media in for a post.",
-		'metadata'      => "(array) Array of metadata objects containing the following properties: `key` (metadata key), `id` (meta ID), `previous_value` (if set, the action will only occur for the provided previous value), `value` (the new value to set the meta to), `operation` (the operation to perform: `update` or `add`; defaults to `update`). All unprotected meta keys are available by default for read requests. Both unprotected and protected meta keys are available for authenticated requests with proper capabilities. Protected meta keys can be made available with the <code>rest_api_allowed_public_metadata</code> filter.",
-	),
-
-	'example_request'      => 'https://public-api.wordpress.com/rest/v1.1/sites/82974409/posts/881',
-
-	'example_request_data' => array(
-		'headers' => array(
-			'authorization' => 'Bearer YOUR_API_TOKEN'
-		),
-
-		'body' => array(
-			'title'      => 'Hello World (Again)',
-			'content'    => 'Hello. I am an edited post. I was edited by the API',
-			'tags'       => 'tests',
-			'categories' => 'API'
-		)
-	)
-) );
-
-new WPCOM_JSON_API_Update_Post_v1_1_Endpoint( array(
-	'description' => 'Delete a post. Note: If the trash is enabled, this request will send the post to the trash. A second request will permanently delete the post.',
-	'group'       => 'posts',
-	'stat'        => 'posts:1:delete',
-	'min_version' => '1.1',
-	'max_version' => '1.1',
-	'method'      => 'POST',
-	'path'        => '/sites/%s/posts/%d/delete',
-	'path_labels' => array(
-		'$site'    => '(int|string) Site ID or domain',
-		'$post_ID' => '(int) The post ID',
-	),
-
-	'example_request'      => 'https://public-api.wordpress.com/rest/v1.1/sites/82974409/posts/$post_ID/delete/',
-
-	'example_request_data' => array(
-		'headers' => array(
-			'authorization' => 'Bearer YOUR_API_TOKEN'
-		)
-	)
-) );
-
-new WPCOM_JSON_API_Update_Post_v1_1_Endpoint( array(
-	'description' => 'Restore a post or page from the trash to its previous status.',
-	'group'       => 'posts',
-	'stat'        => 'posts:1:restore',
-	'min_version' => '1.1',
-	'max_version' => '1.1',
-	'method'      => 'POST',
-	'path'        => '/sites/%s/posts/%d/restore',
-	'path_labels' => array(
-		'$site'    => '(int|string) Site ID or domain',
-		'$post_ID' => '(int) The post ID',
-	),
-
-	'example_request'      => 'https://public-api.wordpress.com/rest/v1.1/sites/82974409/posts/$post_ID/restore/',
-
-	'example_request_data' => array(
-		'headers' => array(
-			'authorization' => 'Bearer YOUR_API_TOKEN'
-		)
-	)
-) );
-
 class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_Endpoint {
 	function __construct( $args ) {
 		parent::__construct( $args );
@@ -321,18 +135,9 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 			$new_status = isset( $input['status'] ) ? $input['status'] : $last_status;
 
 			// Make sure that drafts get the current date when transitioning to publish if not supplied in the post.
-			// Similarly, scheduled posts that are manually published before their scheduled date should have the date reset.
 			$date_in_past = ( strtotime($post->post_date_gmt) < time() );
-			$reset_draft_date     = 'publish' === $new_status && 'draft'  === $last_status && ! isset( $input['date_gmt'] ) && $date_in_past;
-			$reset_scheduled_date = 'publish' === $new_status && 'future' === $last_status && ! isset( $input['date_gmt'] ) && ! $date_in_past;
-
-			if ( $reset_draft_date || $reset_scheduled_date ) {
+			if ( 'publish' === $new_status && 'draft' === $last_status && ! isset( $input['date_gmt'] ) && $date_in_past ) {
 				$input['date_gmt'] = gmdate( 'Y-m-d H:i:s' );
-			}
-
-			// Untrash a post so that the proper hooks get called as well as the comments get untrashed.
-			if ( $this->should_untrash_post( $last_status, $new_status, $post ) ) {
-				$input = $this->untrash_post( $post, $input );
 			}
 		}
 
@@ -564,7 +369,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 			$insert['ID'] = $post->ID;
 
 			// wp_update_post ignores date unless edit_date is set
-			// See: https://codex.wordpress.org/Function_Reference/wp_update_post#Scheduling_posts
+			// See: http://codex.wordpress.org/Function_Reference/wp_update_post#Scheduling_posts
 			// See: https://core.trac.wordpress.org/browser/tags/3.9.2/src/wp-includes/post.php#L3302
 			if ( isset( $input['date_gmt'] ) || isset( $input['date'] ) ) {
 				$insert['edit_date'] = true;
@@ -620,7 +425,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 		if ( $new ) {
 			if ( $sitewide_likes_enabled ) {
 				if ( false === $likes ) {
-					update_post_meta( $post_id, 'switch_like_status', 0 );
+					update_post_meta( $post_id, 'switch_like_status', 1 );
 				} else {
 					delete_post_meta( $post_id, 'switch_like_status' );
 				}
@@ -635,7 +440,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 			if ( isset( $likes ) ) {
 				if ( $sitewide_likes_enabled ) {
 					if ( false === $likes ) {
-						update_post_meta( $post_id, 'switch_like_status', 0 );
+						update_post_meta( $post_id, 'switch_like_status', 1 );
 					} else {
 						delete_post_meta( $post_id, 'switch_like_status' );
 					}
@@ -789,6 +594,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 
 				$meta = (object) $meta;
 
+				// Custom meta description can only be set on sites that have a business subscription.
 				if ( Jetpack_SEO_Posts::DESCRIPTION_META_KEY == $meta->key && ! Jetpack_SEO_Utils::is_enabled_jetpack_seo() ) {
 					return new WP_Error( 'unauthorized', __( 'SEO tools are not enabled for this site.', 'jetpack' ), 403 );
 				}
@@ -829,6 +635,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 
 				switch ( $meta->operation ) {
 					case 'delete':
+
 						if ( ! empty( $meta->id ) && ! empty( $existing_meta_item->meta_key ) && current_user_can( 'delete_post_meta', $post_id, $unslashed_existing_meta_key ) ) {
 							delete_metadata_by_mid( 'post', $meta->id );
 						} elseif ( ! empty( $meta->key ) && ! empty( $meta->previous_value ) && current_user_can( 'delete_post_meta', $post_id, $unslashed_meta_key ) ) {
@@ -839,16 +646,18 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 
 						break;
 					case 'add':
+
 						if ( ! empty( $meta->id ) || ! empty( $meta->previous_value ) ) {
-							break;
+							continue;
 						} elseif ( ! empty( $meta->key ) && ! empty( $meta->value ) && ( current_user_can( 'add_post_meta', $post_id, $unslashed_meta_key ) ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) {
 							add_post_meta( $post_id, $meta->key, $meta->value );
 						}
 
 						break;
 					case 'update':
+
 						if ( ! isset( $meta->value ) ) {
-							break;
+							continue;
 						} elseif ( ! empty( $meta->id ) && ! empty( $existing_meta_item->meta_key ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_existing_meta_key ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) ) {
 							update_metadata_by_mid( 'post', $meta->id, $meta->value );
 						} elseif ( ! empty( $meta->key ) && ! empty( $meta->previous_value ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_meta_key ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) ) {
@@ -859,6 +668,7 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 
 						break;
 				}
+
 			}
 		}
 
@@ -994,20 +804,6 @@ class WPCOM_JSON_API_Update_Post_v1_1_Endpoint extends WPCOM_JSON_API_Post_v1_1_
 			return new WP_Error( 'invalid_author', 'Invalid author provided' );
 
 		return $_user->ID;
-	}
-
-	protected function should_untrash_post( $last_status, $new_status, $post ) {
-		return 'trash' === $last_status && 'trash' !== $new_status && isset( $post->ID );
-	}
-
-	protected function untrash_post( $post, $input ) {
-		wp_untrash_post( $post->ID );
-		$untrashed_post = get_post( $post->ID );
-		// Lets make sure that we use the reverted the slug.
-		if ( isset( $untrashed_post->post_name ) && $untrashed_post->post_name . '__trashed' === $input['slug'] ) {
-			unset( $input['slug'] );
-		}
-		return $input;
 	}
 
 	protected function should_load_theme_functions( $post_id = null ) {

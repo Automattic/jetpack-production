@@ -1,9 +1,8 @@
 <?php
 
-use Automattic\Jetpack\Assets;
-
 /**
  * VideoPress in Jetpack
+ *
  */
 class Jetpack_VideoPress {
 	/** @var string */
@@ -19,7 +18,7 @@ class Jetpack_VideoPress {
 		static $instance = false;
 
 		if ( ! $instance ) {
-			$instance = new Jetpack_VideoPress();
+			$instance = new Jetpack_VideoPress;
 		}
 
 		return $instance;
@@ -31,7 +30,7 @@ class Jetpack_VideoPress {
 	 * Sets up the initializer and makes sure that videopress activates and deactivates properly.
 	 */
 	private function __construct() {
-		// $this->version = time(); // <s>ghost</s> cache busters!
+		//$this->version = time(); // <s>ghost</s> cache busters!
 		add_action( 'init', array( $this, 'on_init' ) );
 		add_action( 'jetpack_deactivate_module_videopress', array( $this, 'jetpack_module_deactivated' ) );
 	}
@@ -44,7 +43,7 @@ class Jetpack_VideoPress {
 		add_filter( 'plupload_default_settings', array( $this, 'videopress_pluploder_config' ) );
 		add_filter( 'wp_get_attachment_url', array( $this, 'update_attachment_url_for_videopress' ), 10, 2 );
 
-		if ( Jetpack_Plan::supports( 'videopress' ) ) {
+		if ( Jetpack::active_plan_supports( 'videopress' ) ) {
 			add_filter( 'upload_mimes', array( $this, 'add_video_upload_mimes' ), 999 );
 		}
 
@@ -54,6 +53,8 @@ class Jetpack_VideoPress {
 		add_filter( 'wp_mime_type_icon', array( $this, 'wp_mime_type_icon' ), 10, 3 );
 
 		add_filter( 'wp_video_extensions', array( $this, 'add_videopress_extenstion' ) );
+
+		$this->add_media_new_notice();
 
 		VideoPress_Scheduler::init();
 		VideoPress_XMLRPC::init();
@@ -78,11 +79,12 @@ class Jetpack_VideoPress {
 		}
 
 		// Connection owners are allowed to do all the things.
-		if ( Jetpack::connection()->is_connection_owner( $user_id ) ) {
+		if ( $this->is_connection_owner( $user_id ) ) {
 			return true;
 		}
 
 		// Additional and internal caps checks
+
 		if ( ! user_can( $user_id, 'upload_files' ) ) {
 			return false;
 		}
@@ -100,15 +102,31 @@ class Jetpack_VideoPress {
 
 	/**
 	 * Returns true if the provided user is the Jetpack connection owner.
-	 *
-	 * @deprecated since 7.7
-	 *
-	 * @param Integer|Boolean $user_id the user identifier. False for current user.
-	 * @return bool Whether the current user is the connection owner.
 	 */
 	public function is_connection_owner( $user_id = false ) {
-		_deprecated_function( __METHOD__, 'jetpack-7.7', 'Automattic\\Jetpack\\Connection\\Manager::is_connection_owner' );
-		return Jetpack::connection()->is_connection_owner( $user_id );
+		if ( ! $user_id ) {
+			$user_id = get_current_user_id();
+		}
+
+		$user_token = Jetpack_Data::get_access_token( JETPACK_MASTER_USER );
+
+		return $user_token && is_object( $user_token ) && isset( $user_token->external_user_id ) && $user_id === $user_token->external_user_id;
+	}
+
+	/**
+	 * Add a notice to the top of the media-new.php to let the user know how to upload a video.
+	 */
+	public function add_media_new_notice() {
+		global $pagenow;
+
+		if ( $pagenow != 'media-new.php' ) {
+			return;
+		}
+
+		$jitm = Jetpack_JITM::init();
+
+		add_action( 'admin_enqueue_scripts', array( $jitm, 'jitm_enqueue_files' ) );
+		add_action( 'admin_notices', array( $jitm, 'videopress_media_upload_warning_msg' ) );
 	}
 
 	/**
@@ -130,35 +148,26 @@ class Jetpack_VideoPress {
 		if ( $this->should_override_media_uploader() ) {
 			wp_enqueue_script(
 				'videopress-plupload',
-				Assets::get_file_url_for_environment(
-					'_inc/build/videopress/js/videopress-plupload.min.js',
-					'modules/videopress/js/videopress-plupload.js'
-				),
+				plugins_url( 'js/videopress-plupload.js', __FILE__ ),
 				array(
 					'jquery',
-					'wp-plupload',
+					'wp-plupload'
 				),
 				$this->version
 			);
 
 			wp_enqueue_script(
 				'videopress-uploader',
-				Assets::get_file_url_for_environment(
-					'_inc/build/videopress/js/videopress-uploader.min.js',
-					'modules/videopress/js/videopress-uploader.js'
-				),
+				plugins_url( 'js/videopress-uploader.js', __FILE__ ),
 				array(
-					'videopress-plupload',
+					'videopress-plupload'
 				),
 				$this->version
 			);
 
 			wp_enqueue_script(
 				'media-video-widget-extensions',
-				Assets::get_file_url_for_environment(
-					'_inc/build/videopress/js/media-video-widget-extensions.min.js',
-					'modules/videopress/js/media-video-widget-extensions.js'
-				),
+				plugins_url( 'js/media-video-widget-extensions.js', __FILE__ ),
 				array(),
 				$this->version,
 				true
@@ -179,7 +188,7 @@ class Jetpack_VideoPress {
 	 * This is an action proxy to the videopress_get_attachment_url() utility function.
 	 *
 	 * @param string $url
-	 * @param int    $post_id
+	 * @param int $post_id
 	 *
 	 * @return string
 	 */
@@ -232,7 +241,7 @@ class Jetpack_VideoPress {
 		);
 
 		// Only load on the post, new post, or upload pages.
-		if ( ! in_array( $pagenow, $acceptable_pages ) ) {
+		if ( !in_array( $pagenow, $acceptable_pages ) ) {
 			return false;
 		}
 
@@ -258,7 +267,7 @@ class Jetpack_VideoPress {
 			return false;
 		}
 
-		if ( ! isset( $_GET['action'] ) || $_GET['action'] !== 'add-new' ) {
+		if ( ! isset ( $_GET['action'] ) || $_GET['action'] !== 'add-new' ) {
 			return false;
 		}
 
@@ -275,13 +284,22 @@ class Jetpack_VideoPress {
 	}
 
 	/**
+	 * Changes the add new menu location, so that VideoPress will be enabled
+	 * when a user clicks that button.
+	 */
+	public function change_add_new_menu_location() {
+		$page = remove_submenu_page( 'upload.php', 'media-new.php' );
+		add_submenu_page( 'upload.php', $page[0], $page[0], 'upload_files', 'upload.php?action=add-new');
+	}
+
+	/**
 	 * Makes sure that all video mimes are added in, as multi site installs can remove them.
 	 *
 	 * @param array $existing_mimes
 	 * @return array
 	 */
 	public function add_video_upload_mimes( $existing_mimes = array() ) {
-		$mime_types  = wp_get_mime_types();
+		$mime_types = wp_get_mime_types();
 		$video_types = array_filter( $mime_types, array( $this, 'filter_video_mimes' ) );
 
 		foreach ( $video_types as $key => $value ) {
@@ -302,12 +320,12 @@ class Jetpack_VideoPress {
 	 */
 	public function filter_video_mimes( $value ) {
 		return preg_match( '@^video/@', $value );
-	}
+  }
 
 	/**
 	 * @param string $icon
 	 * @param string $mime
-	 * @param int    $post_id
+	 * @param int $post_id
 	 *
 	 * @return string
 	 */
