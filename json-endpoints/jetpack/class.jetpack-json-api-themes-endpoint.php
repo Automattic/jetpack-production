@@ -129,16 +129,7 @@ abstract class Jetpack_JSON_API_Themes_Endpoint extends Jetpack_JSON_API_Endpoin
 			$formatted_theme['log'] = $this->log[ $id ];
 		}
 
-		/**
-		 * Filter the array of theme information that will be returned per theme by the Jetpack theme APIs.
-		 *
-		 * @module json-api
-		 *
-		 * @since 4.7.0
-		 *
-		 * @param array $formatted_theme The theme info array.
-		 */
-		return apply_filters( 'jetpack_format_theme_details', $formatted_theme );
+		return $formatted_theme;
 	}
 
 	/**

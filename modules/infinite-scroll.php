@@ -1,7 +1,7 @@
 <?php
 /**
  * Module Name: Infinite Scroll
- * Module Description: Automatically load new content when a visitor scrolls
+ * Module Description: Automatically load new content when a visitor scrolls.
  * Sort Order: 26
  * First Introduced: 2.0
  * Requires Connection: No
@@ -57,12 +57,24 @@ class Jetpack_Infinite_Scroll_Extras {
 	/**
 	 * Enable "Configure" button on module card
 	 *
-	 * @uses Jetpack::enable_module_configurable
+	 * @uses Jetpack::enable_module_configurable, Jetpack::module_configuration_load
 	 * @action jetpack_modules_loaded
 	 * @return null
 	 */
 	public function action_jetpack_modules_loaded() {
 		Jetpack::enable_module_configurable( __FILE__ );
+		Jetpack::module_configuration_load( __FILE__, array( $this, 'module_configuration_load' ) );
+	}
+
+	/**
+	 * Redirect configure button to Settings > Reading
+	 *
+	 * @uses wp_safe_redirect, admin_url
+	 * @return null
+	 */
+	public function module_configuration_load() {
+		wp_safe_redirect( admin_url( 'options-reading.php#infinite-scroll-options' ) );
+		exit;
 	}
 
 	/**
@@ -84,7 +96,7 @@ class Jetpack_Infinite_Scroll_Extras {
 	 * @return html
 	 */
 	public function setting_google_analytics() {
-		echo '<label><input name="infinite_scroll_google_analytics" type="checkbox" value="1" ' . checked( true, (bool) get_option( $this->option_name_google_analytics, false ), false ) . ' /> ' . esc_html__( 'Track each scroll load (7 posts by default) as a page view in Google Analytics', 'jetpack' )  . '</label>';
+		echo '<label><input name="infinite_scroll_google_analytics" type="checkbox" value="1" ' . checked( true, (bool) get_option( $this->option_name_google_analytics, false ), false ) . ' /> ' . esc_html__( 'Track each Infinite Scroll post load as a page view in Google Analytics', 'jetpack' )  . '</label>';
 		echo '<p class="description">' . esc_html__( 'Check the box above to record each new set of posts loaded via Infinite Scroll as a page view in Google Analytics.', 'jetpack' ) . '</p>';
 	}
 
@@ -104,12 +116,12 @@ class Jetpack_Infinite_Scroll_Extras {
 	 *
 	 * As released in Jetpack 2.0, a child theme's parent wasn't checked for in the plugin's bundled support, hence the convoluted way the parent is checked for now.
 	 *
-	 * @uses is_admin, wp_get_theme, apply_filters
+	 * @uses is_admin, wp_get_theme, get_theme, get_current_theme, apply_filters
 	 * @action setup_theme
 	 * @return null
 	 */
 	function action_after_setup_theme() {
-		$theme = wp_get_theme();
+		$theme = function_exists( 'wp_get_theme' ) ? wp_get_theme() : get_theme( get_current_theme() );
 
 		if ( ! is_a( $theme, 'WP_Theme' ) && ! is_array( $theme ) )
 			return;
@@ -149,7 +161,7 @@ class Jetpack_Infinite_Scroll_Extras {
 			}
 
 			// We made it this far, so gather the data needed to track IS views
-			$settings['stats'] = 'blog=' . Jetpack_Options::get_option( 'id' ) . '&host=' . wp_parse_url( get_option( 'home' ), PHP_URL_HOST ) . '&v=ext&j=' . JETPACK__API_VERSION . ':' . JETPACK__VERSION;
+			$settings['stats'] = 'blog=' . Jetpack_Options::get_option( 'id' ) . '&host=' . parse_url( get_option( 'home' ), PHP_URL_HOST ) . '&v=ext&j=' . JETPACK__API_VERSION . ':' . JETPACK__VERSION;
 
 			// Pagetype parameter
 			$settings['stats'] .= '&x_pagetype=infinite';
@@ -208,12 +220,29 @@ class Jetpack_Infinite_Scroll_Extras {
 		// Fire the post_gallery action early so Carousel scripts are present.
 		if ( Jetpack::is_module_active( 'carousel' ) ) {
 			/** This filter is already documented in core/wp-includes/media.php */
-			do_action( 'post_gallery', '', '', 0 );
+			do_action( 'post_gallery', '', '' );
 		}
 
 		// Always enqueue Tiled Gallery scripts when both IS and Tiled Galleries are enabled
 		if ( Jetpack::is_module_active( 'tiled-gallery' ) ) {
 			Jetpack_Tiled_Gallery::default_scripts_and_styles();
+		}
+
+		// Core's Audio and Video Shortcodes
+		if (
+			/** This filter is already documented in core/wp-includes/media.php */
+			'mediaelement' === apply_filters( 'wp_audio_shortcode_library', 'mediaelement' )
+		) {
+			wp_enqueue_style( 'wp-mediaelement' );
+			wp_enqueue_script( 'wp-mediaelement' );
+		}
+
+		if (
+			/** This filter is already documented in core/wp-includes/media.php */
+			'mediaelement' === apply_filters( 'wp_video_shortcode_library', 'mediaelement' )
+		) {
+			wp_enqueue_style( 'wp-mediaelement' );
+			wp_enqueue_script( 'wp-mediaelement' );
 		}
 	}
 }

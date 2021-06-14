@@ -1,7 +1,5 @@
 <?php
 
-use Automattic\Jetpack\Device_Detection\User_Agent_Info;
-
 abstract class Sharing_Source {
 	public	  $button_style;
 	public	  $smart;
@@ -30,10 +28,6 @@ abstract class Sharing_Source {
 		if ( isset( $settings['smart'] ) ) {
 			$this->smart = $settings['smart'];
 		}
-	}
-
-	public function is_deprecated() {
-		return false;
 	}
 
 	public function http() {
@@ -157,7 +151,7 @@ abstract class Sharing_Source {
 		if ( ! empty( $query ) ) {
 			if ( false === stripos( $url, '?' ) ) {
 				$url .= '?' . $query;
-			} else {
+			} else { 
 				$url .= '&amp;' . $query;
 			}
 		}
@@ -207,8 +201,7 @@ abstract class Sharing_Source {
 		$text = apply_filters( 'jetpack_sharing_display_text', $text, $this, $id, $args );
 
 		return sprintf(
-			'<a rel="nofollow%s" data-shared="%s" class="%s" href="%s"%s title="%s"><span%s>%s</span></a>',
-			( true == $this->open_link_in_new ) ? ' noopener noreferrer' : '',
+			'<a rel="nofollow" data-shared="%s" class="%s" href="%s"%s title="%s"><span%s>%s</span></a>',
 			( $id ? esc_attr( $id ) : '' ),
 			implode( ' ', $klasses ),
 			$url,
@@ -246,51 +239,6 @@ abstract class Sharing_Source {
 		return false;
 	}
 
-	/**
-	 * Get the AMP specific markup for a sharing button.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	public function get_amp_display( $post ) {
-		// Only display markup if we're on a post.
-		if ( empty( $post ) ) {
-			return false;
-		}
-
-		return $this->build_amp_markup();
-	}
-
-	/**
-	 * Generates and returns the markup for an AMP sharing button.
-	 *
-	 * @param array $attrs Custom attributes for rendering the social icon.
-	 */
-	protected function build_amp_markup( $attrs = array() ) {
-
-		$title = sprintf(
-			/* translators: placeholder is a service name, such as "Twitter" or "Facebook". */
-			__( 'Click to share on %s', 'jetpack' ),
-			$this->get_name()
-		);
-
-		$attrs        = array_merge(
-			array(
-				'type'       => $this->get_id(),
-				'height'     => '32px',
-				'width'      => '32px',
-				'aria-label' => $title,
-				'title'      => $title,
-			),
-			$attrs
-		);
-		$sharing_link = '<amp-social-share';
-		foreach ( $attrs as $key => $value ) {
-			$sharing_link .= sprintf( ' %s="%s"', sanitize_key( $key ), esc_attr( $value ) );
-		}
-		$sharing_link .= '></amp-social-share>';
-		return $sharing_link;
-	}
-
 	public function display_preview( $echo = true, $force_smart = false, $button_style = null ) {
 		$text = '&nbsp;';
 		$button_style = ( ! empty( $button_style ) ) ? $button_style : $this->button_style;
@@ -314,23 +262,11 @@ abstract class Sharing_Source {
 			$klasses[] = 'no-icon';
 		}
 
-		$is_deprecated = $this->is_deprecated();
-
 		$link = sprintf(
 			'<a rel="nofollow" class="%s" href="javascript:void(0)" title="%s"><span>%s</span></a>',
 			implode( ' ', $klasses ),
-			esc_attr(
-				$is_deprecated
-					/* translators: %1$s is the name of a deprecated Sharing Service like "Google+" */
-					? sprintf( __( 'The %1$s service has shut down. This sharing button is not displayed to your visitors and should be removed.', 'jetpack' ), $this->get_name() )
-					: $this->get_name()
-			),
-			esc_html(
-				$is_deprecated
-					/* translators: %1$s is the name of a deprecated Sharing Service like "Google+" */
-					? sprintf( __( '%1$s has shut down', 'jetpack' ), $this->get_name() )
-					: $text
-			)
+			$this->get_name(),
+			$text
 		);
 
 		$smart = ( $this->smart || $force_smart ) ? 'on' : 'off';
@@ -409,105 +345,14 @@ abstract class Sharing_Source {
 		// Add JS after sharing-js has been enqueued.
 		wp_add_inline_script( 'sharing-js',
 			"var windowOpen;
-			( function () {
-				function matches( el, sel ) {
-					return !! (
-						el.matches && el.matches( sel ) ||
-						el.msMatchesSelector && el.msMatchesSelector( sel )
-					);
+			jQuery( document.body ).on( 'click', 'a.share-$name', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
 				}
-
-				document.body.addEventListener( 'click', function ( event ) {
-					if ( ! event.target ) {
-						return;
-					}
-
-					var el;
-					if ( matches( event.target, 'a.share-$name' ) ) {
-						el = event.target;
-					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-$name' ) ) {
-						el = event.target.parentNode;
-					}
-
-					if ( el ) {
-						event.preventDefault();
-
-						// If there's another sharing window open, close it.
-						if ( typeof windowOpen !== 'undefined' ) {
-							windowOpen.close();
-						}
-						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcom$name', '$opts' );
-						return false;
-					}
-				} );
-			} )();"
-		);
-	}
-}
-
-abstract class Deprecated_Sharing_Source extends Sharing_Source {
-	public	  $button_style = 'text';
-	public	  $smart = false;
-	protected $open_link_in_new = false;
-	protected $id;
-	protected $deprecated = true;
-
-	final public function __construct( $id, array $settings ) {
-		$this->id = $id;
-
-		if ( isset( $settings['button_style'] ) ) {
-			$this->button_style = $settings['button_style'];
-		}
-	}
-
-	final public function is_deprecated() {
-		return true;
-	}
-
-	final public function get_share_url( $post_id ) {
-		return get_permalink( $post_id );
-	}
-
-	/**
-	 * No AMP display for deprecated sources.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	final public function get_amp_display( $post ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
-		return false;
-	}
-
-	final public function display_preview( $echo = true, $force_smart = false, $button_style = null ) {
-		return parent::display_preview( $echo, false, $button_style );
-	}
-
-	final public function get_total( $post = false ) {
-		return 0;
-	}
-
-	final public function get_posts_total() {
-		return 0;
-	}
-
-	final public function process_request( $post, array $post_data ) {
-		parent::process_request( $post, $post_data );
-	}
-
-	final public function get_display( $post ) {
-		if ( current_user_can( 'manage_options' ) ) {
-			return $this->display_deprecated( $post );
-		}
-
-		return '';
-	}
-
-	public function display_deprecated( $post ) {
-		return $this->get_link(
-			$this->get_share_url( $post->ID ),
-			/* translators: %1$s is the name of a deprecated Sharing Service like "Google+" */
-			sprintf( __( '%1$s has shut down', 'jetpack' ), $this->get_name() ),
-			/* translators: %1$s is the name of a deprecated Sharing Service like "Google+" */
-			sprintf( __( 'The %1$s service has shut down. This sharing button is not displayed to your visitors and should be removed.', 'jetpack' ), $this->get_name() )
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcom$name', '$opts' );
+				return false;
+			});"
 		);
 	}
 }
@@ -522,15 +367,16 @@ abstract class Sharing_Advanced_Source extends Sharing_Source {
 	abstract public function get_options();
 }
 
+
 class Share_Email extends Sharing_Source {
 	public $shortname = 'email';
-	public $icon = '\f410';
+	public $genericon = '\f410';
 	public function __construct( $id, array $settings ) {
 		parent::__construct( $id, $settings );
 
 		if ( 'official' == $this->button_style ) {
 			$this->smart = true;
-		} else {
+		} else { 
 			$this->smart = false;
 		}
 	}
@@ -580,11 +426,10 @@ class Share_Email extends Sharing_Source {
 			 */
 			if ( apply_filters( 'sharing_email_check', true, $post, $post_data ) ) {
 				$data = array(
-					'post'           => $post,
-					'source'         => $source_email,
-					'target'         => $target_email,
-					'name'           => $source_name,
-					'sharing_source' => $this,
+					'post'	 => $post,
+					'source' => $source_email,
+					'target' => $target_email,
+					'name'	 => $source_name,
 				);
 				// todo: implement an error message when email doesn't get sent.
 				/**
@@ -626,14 +471,14 @@ class Share_Email extends Sharing_Source {
 				}
 
 				die();
-			} else {
+			} else { 
 				$error = 2;	  // Email check failed
 			}
 		}
 
 		if ( $ajax ) {
 			echo $error;
-		} else {
+		} else { 
 			wp_safe_redirect( get_permalink( $post->ID ) . '?shared=email&msg=fail' );
 		}
 
@@ -642,15 +487,6 @@ class Share_Email extends Sharing_Source {
 
 	public function get_display( $post ) {
 		return $this->get_link( $this->get_process_request_url( $post->ID ), _x( 'Email', 'share to', 'jetpack' ), __( 'Click to email this to a friend', 'jetpack' ), 'share=email' );
-	}
-
-	/**
-	 * No AMP display for email.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	public function get_amp_display( $post ) { // phpcs:ignore
-		return false;
 	}
 
 	/**
@@ -678,7 +514,8 @@ class Share_Email extends Sharing_Source {
 				<input type="email" name="source_email" id="source_email" value="" />
 
 			<?php endif; ?>
-			<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" title="<?php esc_attr_e( 'This field is for validation and should not be changed', 'jetpack' ); ?>" />
+			<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" />
+			<script>jQuery( document ).ready( function(){ document.getElementById('jetpack-source_f_name').value = '' });</script>
 			<?php
 				/**
 				 * Fires when the Email sharing dialog is loaded.
@@ -696,7 +533,7 @@ class Share_Email extends Sharing_Source {
 			/** This filter is documented in modules/stats.php */
 			echo apply_filters( 'jetpack_static_url', plugin_dir_url( __FILE__ ) . 'images/loading.gif' ); ?>" alt="loading" width="16" height="16" />
 			<input type="submit" value="<?php esc_attr_e( 'Send Email', 'jetpack' ); ?>" class="sharing_send" />
-			<a rel="nofollow" href="#cancel" class="sharing_cancel" role="button"><?php _e( 'Cancel', 'jetpack' ); ?></a>
+			<a rel="nofollow" href="#cancel" class="sharing_cancel"><?php _e( 'Cancel', 'jetpack' ); ?></a>
 
 			<div class="errors errors-1" style="display: none;">
 				<?php _e( 'Post was not sent - check your email addresses!', 'jetpack' ); ?>
@@ -717,7 +554,7 @@ class Share_Email extends Sharing_Source {
 
 class Share_Twitter extends Sharing_Source {
 	public $shortname = 'twitter';
-	public $icon = '\f202';
+	public $genericon = '\f202';
 	// 'https://dev.twitter.com/rest/reference/get/help/configuration' ( 2015/02/06 ) short_url_length is 22, short_url_length_https is 23
 	public $short_url_length = 24;
 
@@ -726,7 +563,7 @@ class Share_Twitter extends Sharing_Source {
 
 		if ( 'official' == $this->button_style ) {
 			$this->smart = true;
-		} else {
+		} else { 
 			$this->smart = false;
 		}
 	}
@@ -735,14 +572,7 @@ class Share_Twitter extends Sharing_Source {
 		return __( 'Twitter', 'jetpack' );
 	}
 
-	/**
-	 * Determine the Twitter 'via' value for a post.
-	 *
-	 * @param  WP_Post|int $post Post object or post ID.
-	 * @return string Twitter handle without the preceding @.
-	 **/
-	public static function sharing_twitter_via( $post ) {
-		$post = get_post( $post );
+	function sharing_twitter_via( $post ) {
 		/**
 		 * Allow third-party plugins to customize the Twitter username used as "twitter:site" Twitter Card Meta Tag.
 		 *
@@ -753,12 +583,7 @@ class Share_Twitter extends Sharing_Source {
 		 * @param string $string Twitter Username.
 		 * @param array $args Array of Open Graph Meta Tags and Twitter Cards tags.
 		 */
-		$twitter_site_tag_value = apply_filters(
-			'jetpack_twitter_cards_site_tag',
-			'',
-			/** This action is documented in modules/sharedaddy/sharing-sources.php */
-			array( 'twitter:creator' => apply_filters( 'jetpack_sharing_twitter_via', '', $post->ID ) )
-		);
+		$twitter_site_tag_value = apply_filters( 'jetpack_twitter_cards_site_tag', '', array() );
 
 		/*
 		 * Hack to remove the unwanted behavior of adding 'via @jetpack' which
@@ -786,14 +611,7 @@ class Share_Twitter extends Sharing_Source {
 		return preg_replace( '/[^\da-z_]+/i', '', $twitter_site_tag_value );
 	}
 
-	/**
-	 * Determine the 'related' Twitter accounts for a post.
-	 *
-	 * @param  WP_Post|int $post Post object or post ID.
-	 * @return string Comma-separated list of Twitter handles.
-	 **/
-	public static function get_related_accounts( $post ) {
-		$post = get_post( $post );
+	public function get_related_accounts( $post ) {
 		/**
 		 * Filter the list of related Twitter accounts added to the Twitter sharing button.
 		 *
@@ -895,9 +713,9 @@ class Share_Twitter extends Sharing_Source {
 		$suffix_length = $this->short_url_length + $strlen( $sig );
 		// $sig is handled by twitter in their 'via' argument.
 		// $post_link is handled by twitter in their 'url' argument.
-		if ( 280 < $strlen( $post_title ) + $suffix_length ) {
+		if ( 140 < $strlen( $post_title ) + $suffix_length ) {
 			// The -1 is for "\xE2\x80\xA6", a UTF-8 ellipsis.
-			$text = $substr( $post_title, 0, 280 - $suffix_length - 1 ) . "\xE2\x80\xA6";
+			$text = $substr( $post_title, 0, 140 - $suffix_length - 1 ) . "\xE2\x80\xA6";
 		} else {
 			$text = $post_title;
 		}
@@ -934,13 +752,13 @@ class Share_Twitter extends Sharing_Source {
 
 class Share_Reddit extends Sharing_Source {
 	public $shortname = 'reddit';
-	public $icon = '\f222';
+	public $genericon = '\f222';
 	public function __construct( $id, array $settings ) {
 		parent::__construct( $id, $settings );
 
 		if ( 'official' == $this->button_style ) {
 			$this->smart = true;
-		} else {
+		} else { 
 			$this->smart = false;
 		}
 	}
@@ -952,22 +770,9 @@ class Share_Reddit extends Sharing_Source {
 	public function get_display( $post ) {
 		if ( $this->smart ) {
 			return '<div class="reddit_button"><iframe src="' . $this->http() . '://www.reddit.com/static/button/button1.html?newwindow=true&width=120&amp;url=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&amp;title=' . rawurlencode( $this->get_share_title( $post->ID ) ) . '" height="22" width="120" scrolling="no" frameborder="0"></iframe></div>';
-		} else {
+		} else { 
 			return $this->get_link( $this->get_process_request_url( $post->ID ), _x( 'Reddit', 'share to', 'jetpack' ), __( 'Click to share on Reddit', 'jetpack' ), 'share=reddit' );
 		}
-	}
-
-	/**
-	 * AMP display for Reddit.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	public function get_amp_display( $post ) {
-		$attrs = array(
-			'data-share-endpoint' => esc_url_raw( 'https://reddit.com/submit?url=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&title=' . rawurlencode( $this->get_share_title( $post->ID ) ) ),
-		);
-
-		return $this->build_amp_markup( $attrs );
 	}
 
 	public function process_request( $post, array $post_data ) {
@@ -984,13 +789,13 @@ class Share_Reddit extends Sharing_Source {
 
 class Share_LinkedIn extends Sharing_Source {
 	public $shortname = 'linkedin';
-	public $icon = '\f207';
+	public $genericon = '\f207';
 	public function __construct( $id, array $settings ) {
 		parent::__construct( $id, $settings );
 
 		if ( 'official' == $this->button_style ) {
 			$this->smart = true;
-		} else {
+		} else { 
 			$this->smart = false;
 		}
 	}
@@ -1043,50 +848,24 @@ class Share_LinkedIn extends Sharing_Source {
 		if ( ! $this->smart ) {
 			$this->js_dialog( $this->shortname, array( 'width' => 580, 'height' => 450 ) );
 		} else {
-			?>
-			<script type="text/javascript">
-				( function () {
-					var currentScript = document.currentScript;
-
-					// Helper function to load an external script.
-					function loadScript( url, cb ) {
-						var script = document.createElement( 'script' );
-						var prev = currentScript || document.getElementsByTagName( 'script' )[ 0 ];
-						script.setAttribute( 'async', true );
-						script.setAttribute( 'src', url );
-						prev.parentNode.insertBefore( script, prev );
-						script.addEventListener( 'load', cb );
-					}
-
-					function init() {
-						loadScript( 'https://platform.linkedin.com/in.js?async=true', function () {
-							if ( typeof IN !== 'undefined' ) {
-								IN.init();
-							}
-						} );
-					}
-
-					if ( document.readyState === 'loading' ) {
-						document.addEventListener( 'DOMContentLoaded', init );
-					} else {
-						init();
-					}
-
-					document.body.addEventListener( 'is.post-load', function() {
-						if ( typeof IN !== 'undefined' ) {
-							IN.parse();
-						}
-					} );
-				} )();
-			</script>
-			<?php
+			?><script type="text/javascript">
+			jQuery( document ).ready( function() {
+				jQuery.getScript( 'https://platform.linkedin.com/in.js?async=true', function success() {
+					IN.init();
+				});
+			});
+			jQuery( document.body ).on( 'post-load', function() {
+				if ( typeof IN != 'undefined' )
+					IN.parse();
+			});
+			</script><?php
 		}
 	}
 }
 
 class Share_Facebook extends Sharing_Source {
 	public $shortname = 'facebook';
-	public $icon = '\f204';
+	public $genericon = '\f204';
 	private $share_type = 'default';
 
 	public function __construct( $id, array $settings ) {
@@ -1098,7 +877,7 @@ class Share_Facebook extends Sharing_Source {
 
 		if ( 'official' == $this->button_style ) {
 			$this->smart = true;
-		} else {
+		} else { 
 			$this->smart = false;
 		}
 	}
@@ -1174,20 +953,6 @@ class Share_Facebook extends Sharing_Source {
 		return $this->get_link( $this->get_process_request_url( $post->ID ), _x( 'Facebook', 'share to', 'jetpack' ), __( 'Click to share on Facebook', 'jetpack' ), 'share=facebook', 'sharing-facebook-' . $post->ID );
 	}
 
-	/**
-	 * AMP display for Facebook.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	public function get_amp_display( $post ) {
-		$attrs = array(
-			/** This filter is documented in modules/sharedaddy/sharing-sources.php */
-			'data-param-app_id' => apply_filters( 'jetpack_sharing_facebook_app_id', '249643311490' ),
-		);
-
-		return $this->build_amp_markup( $attrs );
-	}
-
 	public function process_request( $post, array $post_data ) {
 		$fb_url = $this->http() . '://www.facebook.com/sharer.php?u=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&t=' . rawurlencode( $this->get_share_title( $post->ID ) );
 
@@ -1222,7 +987,7 @@ class Share_Facebook extends Sharing_Source {
 			?><div id="fb-root"></div>
 			<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/<?php echo $locale; ?>/sdk.js#xfbml=1<?php echo $fb_app_id; ?>&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
 			<script>
-			document.body.addEventListener( 'is.post-load', function() {
+			jQuery( document.body ).on( 'post-load', function() {
 				if ( 'undefined' !== typeof FB ) {
 					FB.XFBML.parse();
 				}
@@ -1235,13 +1000,13 @@ class Share_Facebook extends Sharing_Source {
 
 class Share_Print extends Sharing_Source {
 	public $shortname = 'print';
-	public $icon = '\f469';
+	public $genericon = '\f469';
 	public function __construct( $id, array $settings ) {
 		parent::__construct( $id, $settings );
 
 		if ( 'official' == $this->button_style ) {
 			$this->smart = true;
-		} else {
+		} else { 
 			$this->smart = false;
 		}
 	}
@@ -1253,30 +1018,17 @@ class Share_Print extends Sharing_Source {
 	public function get_display( $post ) {
 		return $this->get_link( $this->get_process_request_url( $post->ID ) . ( ( is_single() || is_page() ) ? '#print': '' ), _x( 'Print', 'share to', 'jetpack' ), __( 'Click to print', 'jetpack' ) );
 	}
-
-	/**
-	 * AMP display for Print.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	public function get_amp_display( $post ) {
-		if ( empty( $post ) ) {
-			return false;
-		}
-
-		return '<button class="amp-social-share print" on="tap:AMP.print">Print</button>';
-	}
 }
 
 class Share_PressThis extends Sharing_Source {
 	public $shortname = 'pressthis';
-	public $icon = '\f205';
+	public $genericon = '\f205';
 	public function __construct( $id, array $settings ) {
 		parent::__construct( $id, $settings );
 
 		if ( 'official' == $this->button_style ) {
 			$this->smart = true;
-		} else {
+		} else { 
 			$this->smart = false;
 		}
 	}
@@ -1313,35 +1065,129 @@ class Share_PressThis extends Sharing_Source {
 
 		$blog = current( $blogs );
 
-		$args = array(
-			'u' => rawurlencode( $this->get_share_url( $post->ID ) ),
-			);
+		$url = $blog->siteurl . '/wp-admin/press-this.php?u=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&t=' . rawurlencode( $this->get_share_title( $post->ID ) );
 
-		$args[ 'url-scan-submit' ] = 'Scan';
-		$args[ '_wpnonce' ]        = wp_create_nonce( 'scan-site' );
-
-		$url = $blog->siteurl . '/wp-admin/press-this.php';
-		$url = add_query_arg( $args, $url );
+		if ( isset( $_GET['sel'] ) ) {
+			$url .= '&s=' . rawurlencode( $_GET['sel'] );
+		}
 
 		// Record stats
 		parent::process_request( $post, $post_data );
 
 		// Redirect to Press This
-		wp_redirect( $url );
+		wp_safe_redirect( $url );
 		die();
 	}
 
 	public function get_display( $post ) {
 		return $this->get_link( $this->get_process_request_url( $post->ID ), _x( 'Press This', 'share to', 'jetpack' ), __( 'Click to Press This!', 'jetpack' ), 'share=press-this' );
 	}
+}
 
-	/**
-	 * No AMP display for PressThis.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	public function get_amp_display( $post ) { // phpcs:ignore
-		return false;
+class Share_GooglePlus1 extends Sharing_Source {
+	public $shortname = 'googleplus1';
+	public $genericon = '\f218';
+	private $state = false;
+
+	public function __construct( $id, array $settings ) {
+		parent::__construct( $id, $settings );
+
+		if ( 'official' == $this->button_style ) {
+			$this->smart = true;
+		} else { 
+			$this->smart = false;
+		}
+	}
+
+	public function get_name() {
+		return __( 'Google', 'jetpack' );
+	}
+
+	public function has_custom_button_style() {
+		return $this->smart;
+	}
+
+	public function get_display( $post ) {
+
+		if ( $this->smart ) {
+			$share_url = $this->get_share_url( $post->ID );
+			return '<div class="googleplus1_button"><div class="g-plus" data-action="share" data-annotation="bubble" data-href="' . esc_url( $share_url ) . '"></div></div>';
+		} else {
+			return $this->get_link( $this->get_process_request_url( $post->ID ), _x( 'Google', 'share to', 'jetpack' ), __( 'Click to share on Google+', 'jetpack' ), 'share=google-plus-1', 'sharing-google-' . $post->ID );
+		}
+	}
+
+	public function get_state() {
+		return $this->state;
+	}
+
+	public function process_request( $post, array $post_data ) {
+
+		if ( isset( $post_data['state'] ) ) {
+			$this->state = $post_data['state'];
+		}
+		// Record stats
+		parent::process_request( $post, $post_data );
+
+		// Redirect to Google +'s sharing endpoint
+		$url = 'https://plus.google.com/share?url=' . rawurlencode( $this->get_share_url( $post->ID ) );
+		wp_redirect( $url );
+		die();
+	}
+
+	public function display_footer() {
+		global $post;
+
+		if ( $this->smart ) { ?>
+			<script>
+			function renderGooglePlus1() {
+				if ( 'undefined' === typeof gapi ) {
+					return;
+				}
+
+				jQuery( '.g-plus' ).each(function() {
+					var $button = jQuery( this );
+
+					if ( ! $button.data( 'gplus-rendered' ) ) {
+						gapi.plusone.render( this, {
+							href: $button.attr( 'data-href' ),
+							size: $button.attr( 'data-size' ),
+							annotation: $button.attr( 'data-annotation' )
+						});
+
+						$button.data( 'gplus-rendered', true );
+					}
+				});
+			}
+
+			(function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				po.innerHTML = '{"parsetags": "explicit"}';
+				po.onload = renderGooglePlus1;
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			})();
+
+			jQuery( document.body ).on( 'post-load', renderGooglePlus1 );
+			</script>
+			<?php
+		} else {
+			$this->js_dialog( 'google-plus-1', array( 'width' => 480, 'height' => 550 ) );
+		}
+	}
+
+	public function get_total( $post = false ) {
+		global $wpdb, $blog_id;
+
+		$name = strtolower( $this->get_id() );
+
+		if ( $post == false ) {
+			// get total number of shares for service
+			return $wpdb->get_var( $wpdb->prepare( 'SELECT SUM( count ) FROM sharing_stats WHERE blog_id = %d AND share_service = %s', $blog_id, $name ) );
+		}
+
+		// get total shares for a post
+		return $wpdb->get_var( $wpdb->prepare( 'SELECT count FROM sharing_stats WHERE blog_id = %d AND post_id = %d AND share_service = %s', $blog_id, $post->ID, $name ) );
 	}
 }
 
@@ -1397,15 +1243,6 @@ class Share_Custom extends Sharing_Advanced_Source {
 		return str_replace( '<span>', '<span style="' . esc_attr( 'background-image:url("' . addcslashes( esc_url_raw( $this->icon ), '"' ) . '");' ) . '">', $str );
 	}
 
-	/**
-	 * No AMP display for custom elements.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	public function get_amp_display( $post ) { // phpcs:ignore
-		return false;
-	}
-
 	public function process_request( $post, array $post_data ) {
 		$url = str_replace( '&amp;', '&', $this->url );
 		$url = str_replace( '%post_id%', rawurlencode( $post->ID ), $url );
@@ -1420,12 +1257,11 @@ class Share_Custom extends Sharing_Advanced_Source {
 			$tagged = '';
 
 			if ( $tags ) {
-				$tagged_raw = array();
 				foreach ( $tags as $tag ) {
-					$tagged_raw[] = rawurlencode( $tag->name );
+					$tagged[] = rawurlencode( $tag->name );
 				}
 
-				$tagged = implode( ',', $tagged_raw );
+				$tagged = implode( ',', $tagged );
 			}
 
 			$url = str_replace( '%post_tags%', $tagged, $url );
@@ -1551,12 +1387,12 @@ class Share_Custom extends Sharing_Advanced_Source {
 
 class Share_Tumblr extends Sharing_Source {
 	public $shortname = 'tumblr';
-	public $icon = '\f214';
+	public $genericon = '\f214';
 	public function __construct( $id, array $settings ) {
 		parent::__construct( $id, $settings );
 		if ( 'official' == $this->button_style ) {
 			$this->smart = true;
-		} else {
+		} else { 
 			$this->smart = false;
 		}
 	}
@@ -1572,28 +1408,7 @@ class Share_Tumblr extends Sharing_Source {
 				$target = '_blank';
 			}
 
-			/**
-			 * If we are looking at a single post, let Tumblr figure out the post type (text, photo, link, quote, chat, or video)
-			 * based on the content available on the page.
-			 * If we are not looking at a single post, content from other posts can appear on the page and Tumblr will pick that up.
-			 * In this case, we want Tumblr to focus on our current post, so we will limit the post type to link, where we can give Tumblr a link to our post.
-			 */
-			if ( ! is_single() ) {
-				$posttype = 'data-posttype="link"';
-			} else {
-				$posttype = '';
-			}
-
-			// Documentation: https://www.tumblr.com/docs/en/share_button
-			return sprintf(
-				'<a class="tumblr-share-button" target="%1$s" href="%2$s" data-title="%3$s" data-content="%4$s" title="%5$s"%6$s>%5$s</a>',
-				$target,
-				'https://www.tumblr.com/share',
-				$this->get_share_title( $post->ID ),
-				$this->get_share_url( $post->ID ),
-				__( 'Share on Tumblr', 'jetpack' ),
-				$posttype
-			);
+			return '<a target="' . $target . '" href="https://www.tumblr.com/share/link/?url=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&name=' . rawurlencode( $this->get_share_title( $post->ID ) ) . '" title="' . __( 'Share on Tumblr', 'jetpack' ) . '" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:62px; height:20px; background:url(\'https://platform.tumblr.com/v1/share_2.png\') top left no-repeat transparent;">' . __( 'Share on Tumblr', 'jetpack' ) . '</a>';
 		 } else {
 			return $this->get_link( $this->get_process_request_url( $post->ID ), _x( 'Tumblr', 'share to', 'jetpack' ), __( 'Click to share on Tumblr', 'jetpack' ), 'share=tumblr' );
 		}
@@ -1608,10 +1423,10 @@ class Share_Tumblr extends Sharing_Source {
 		wp_redirect( $url );
 		die();
 	}
-
+	// http://www.tumblr.com/share?v=3&u=URL&t=TITLE&s=
 	public function display_footer() {
 		if ( $this->smart ) {
-			?><script id="tumblr-js" type="text/javascript" src="https://assets.tumblr.com/share-button.js"></script><?php
+			?><script type="text/javascript" src="https://platform.tumblr.com/v1/share.js"></script><?php
 		} else {
 			$this->js_dialog( $this->shortname, array( 'width' => 450, 'height' => 450 ) );
 		}
@@ -1620,13 +1435,13 @@ class Share_Tumblr extends Sharing_Source {
 
 class Share_Pinterest extends Sharing_Source {
 	public $shortname = 'pinterest';
-	public $icon = '\f209';
+	public $genericon = '\f209';
 
 	public function __construct( $id, array $settings ) {
 		parent::__construct( $id, $settings );
 		if ( 'official' == $this->button_style ) {
 			$this->smart = true;
-		} else {
+		} else { 
 			$this->smart = false;
 		}
 	}
@@ -1733,69 +1548,38 @@ class Share_Pinterest extends Sharing_Source {
 		?>
 		<?php if ( $this->smart ) : ?>
 			<script type="text/javascript">
-				( function () {
-					// Pinterest shared resources
-					var s = document.createElement( 'script' );
-					s.type = 'text/javascript';
-					s.async = true;
-					<?php
-					if ( $jetpack_pinit_over ) {
-						echo "s.setAttribute( 'data-pin-hover', true );";
-					}
-					?>
-					s.src = window.location.protocol + '//assets.pinterest.com/js/pinit.js';
-					var x = document.getElementsByTagName( 'script' )[ 0 ];
-					x.parentNode.insertBefore(s, x);
-					// if 'Pin it' button has 'counts' make container wider
-					function init() {
-						var shares = document.querySelectorAll( 'li.share-pinterest' );
-						for ( var i = 0; i < shares.length; i++ ) {
-							var share = shares[ i ];
-							if ( share.querySelector( 'a span:visible' ) ) {
-								share.style.width = '80px';
-							}
-						}
-					}
-
-					if ( document.readyState !== 'complete' ) {
-						document.addEventListener( 'load', init );
-					} else {
-						init();
-					}
-				} )();
+				// Pinterest shared resources
+				var s = document.createElement("script");
+				s.type = "text/javascript";
+				s.async = true;
+				<?php if ( $jetpack_pinit_over ) { 
+				echo "s.setAttribute('data-pin-hover', true);";
+				} ?>
+				s.src = window.location.protocol + "//assets.pinterest.com/js/pinit.js";
+				var x = document.getElementsByTagName("script")[0];
+				x.parentNode.insertBefore(s, x);
+				// if 'Pin it' button has 'counts' make container wider
+				jQuery(window).load( function(){ jQuery( 'li.share-pinterest a span:visible' ).closest( '.share-pinterest' ).width( '80px' ); } );
 			</script>
 		<?php elseif ( 'buttonPin' != $this->get_widget_type() ) : ?>
 			<script type="text/javascript">
-				( function () {
-					function init() {
-						document.body.addEventListener( 'click', function ( e ) {
-							if ( e.target && (
-								e.target.matches && e.target.matches( 'a.share-pinterest' ) ||
-								e.target.msMatchesSelector && e.target.msMatchesSelector( 'a.share-pinterest' )
-							) ) {
-								e.preventDefault();
-								// Load Pinterest Bookmarklet code
-								var s = document.createElement( 'script' );
-								s.type = 'text/javascript';
-								s.src = window.location.protocol + '//assets.pinterest.com/js/pinmarklet.js?r=' + ( Math.random() * 99999999 );
-								var x = document.getElementsByTagName( 'script' )[ 0 ];
-								x.parentNode.insertBefore( s, x );
-								// Trigger Stats
-								var s = document.createElement( 'script' );
-								s.type = 'text/javascript';
-								s.src = e.target.href + ( e.target.href.indexOf( '?' ) ? '&' : '?' ) + 'js_only=1';
-								var x = document.getElementsByTagName( 'script' )[ '0' ];
-								x.parentNode.insertBefore( s, x );
-							}
-						} );
-					}
-
-					if ( document.readyState === 'loading' ) {
-						document.addEventListener( 'DOMContentLoaded', init );
-					} else {
-						init();
-					}
-				} )();
+				jQuery(document).ready( function(){
+					jQuery('body').on('click', 'a.share-pinterest', function(e){
+						e.preventDefault();
+						// Load Pinterest Bookmarklet code
+						var s = document.createElement("script");
+						s.type = "text/javascript";
+						s.src = window.location.protocol + "//assets.pinterest.com/js/pinmarklet.js?r=" + ( Math.random() * 99999999 );
+						var x = document.getElementsByTagName("script")[0];
+						x.parentNode.insertBefore(s, x);
+						// Trigger Stats
+						var s = document.createElement("script");
+						s.type = "text/javascript";
+						s.src = this + ( this.toString().indexOf( '?' ) ? '&' : '?' ) + 'js_only=1';
+						var x = document.getElementsByTagName("script")[0];
+						x.parentNode.insertBefore(s, x);
+					});
+				});
 			</script>
 		<?php endif;
 	}
@@ -1803,14 +1587,14 @@ class Share_Pinterest extends Sharing_Source {
 
 class Share_Pocket extends Sharing_Source {
 	public $shortname = 'pocket';
-	public $icon = '\f224';
+	public $genericon = '\f224';
 
 	public function __construct( $id, array $settings ) {
 		parent::__construct( $id, $settings );
 
 		if ( 'official' == $this->button_style ) {
 			$this->smart = true;
-		} else {
+		} else { 
 			$this->smart = false;
 		}
 	}
@@ -1844,42 +1628,16 @@ class Share_Pocket extends Sharing_Source {
 
 	}
 
-	/**
-	 * AMP display for Pocket.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	public function get_amp_display( $post ) {
-		$attrs = array(
-			'data-share-endpoint' => esc_url_raw( 'https://getpocket.com/save/?url=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&title=' . rawurlencode( $this->get_share_title( $post->ID ) ) ),
-		);
-
-		return $this->build_amp_markup( $attrs );
-	}
-
 	function display_footer() {
 		if ( $this->smart ) :
 		?>
 		<script>
-		( function () {
-			var currentScript = document.currentScript;
-
-			// Don't use Pocket's default JS as it we need to force init new Pocket share buttons loaded via JS.
-			function jetpack_sharing_pocket_init() {
-				var script = document.createElement( 'script' );
-				var prev = currentScript || document.getElementsByTagName( 'script' )[ 0 ];
-				script.setAttribute( 'async', true );
-				script.setAttribute( 'src', 'https://widgets.getpocket.com/v1/j/btn.js?v=1' );
-				prev.parentNode.insertBefore( script, prev );
-			}
-
-			if ( document.readyState === 'loading' ) {
-				document.addEventListener( 'DOMContentLoaded', jetpack_sharing_pocket_init );
-			} else {
-				jetpack_sharing_pocket_init();
-			}
-			document.body.addEventListener( 'is.post-load', jetpack_sharing_pocket_init );
-		} )();
+		// Don't use Pocket's default JS as it we need to force init new Pocket share buttons loaded via JS.
+		function jetpack_sharing_pocket_init() {
+			jQuery.getScript( 'https://widgets.getpocket.com/v1/j/btn.js?v=1' );
+		}
+		jQuery( document ).ready( jetpack_sharing_pocket_init );
+		jQuery( document.body ).on( 'post-load', jetpack_sharing_pocket_init );
 		</script>
 		<?php
 		else :
@@ -1912,19 +1670,6 @@ class Share_Telegram extends Sharing_Source {
 		return $this->get_link( $this->get_process_request_url( $post->ID ), _x( 'Telegram', 'share to', 'jetpack' ), __( 'Click to share on Telegram', 'jetpack' ), 'share=telegram' );
 	}
 
-	/**
-	 * AMP display for Telegram.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	public function get_amp_display( $post ) {
-		$attrs = array(
-			'data-share-endpoint' => esc_url_raw( 'https://telegram.me/share/url?url=' . rawurlencode( $this->get_share_url( $post->ID ) ) . '&text=' . rawurlencode( $this->get_share_title( $post->ID ) ) ),
-		);
-
-		return $this->build_amp_markup( $attrs );
-	}
-
 	function display_footer() {
 		$this->js_dialog( $this->shortname, array( 'width' => 450, 'height' => 450 ) );
 	}
@@ -1942,42 +1687,13 @@ class Jetpack_Share_WhatsApp extends Sharing_Source {
 	}
 
 	public function get_display( $post ) {
-		return $this->get_link( $this->get_process_request_url( $post->ID ), _x( 'WhatsApp', 'share to', 'jetpack' ), __( 'Click to share on WhatsApp', 'jetpack' ), 'share=jetpack-whatsapp' );
-	}
-
-	/**
-	 * AMP display for Whatsapp.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	public function get_amp_display( $post ) {
-		$attrs = array(
-			'type' => 'whatsapp',
-		);
-
-		return $this->build_amp_markup( $attrs );
-	}
-
-	public function process_request( $post, array $post_data ) {
-		// Record stats
-		parent::process_request( $post, $post_data );
-
-		// Firefox for desktop doesn't handle the "api.whatsapp.com" URL properly, so use "web.whatsapp.com"
-		if ( User_Agent_Info::is_firefox_desktop() ) {
-			$url = 'https://web.whatsapp.com/send?text=';
-		} else {
-			$url = 'https://api.whatsapp.com/send?text=';
-		}
-
-		$url .= rawurlencode( $this->get_share_title( $post->ID ) . ' ' . $this->get_share_url( $post->ID ) );
-		wp_redirect( $url );
-		exit;
+		return $this->get_link( 'whatsapp://send?text=' . rawurlencode( $this->get_share_title( $post->ID ) ) . ' ' . rawurlencode( $this->get_share_url( $post->ID ) ), _x( 'WhatsApp', 'share to', 'jetpack' ), __( 'Click to share on WhatsApp', 'jetpack' ) );
 	}
 }
 
 class Share_Skype extends Sharing_Source {
 	public $shortname = 'skype';
-	public $icon = '\f220';
+	public $genericon = '\f220';
 	private $share_type = 'default';
 
 	public function __construct( $id, array $settings ) {
@@ -1992,7 +1708,6 @@ class Share_Skype extends Sharing_Source {
 		} else {
 			$this->smart = false;
 		}
-
 	}
 
 	public function get_name() {
@@ -2014,24 +1729,7 @@ class Share_Skype extends Sharing_Source {
 			sharing_register_post_for_share_counts( $post->ID );
 		}
 		return $this->get_link(
-			$this->get_process_request_url( $post->ID ), _x( 'Skype', 'share to', 'jetpack' ), __( 'Click to share on Skype', 'jetpack' ), 'share=skype', 'sharing-skype-' . $post->ID );
-	}
-
-	/**
-	 * AMP display for Skype.
-	 *
-	 * @param \WP_Post $post The current post being viewed.
-	 */
-	public function get_amp_display( $post ) {
-		$attrs = array(
-			'data-share-endpoint' => sprintf(
-				'https://web.skype.com/share?url=%1$s&lang=%2$s=&source=jetpack',
-				rawurlencode( $this->get_share_url( $post->ID ) ),
-				'en-US'
-			),
-		);
-
-		return $this->build_amp_markup( $attrs );
+			$this->get_process_request_url( $post->ID ), _x( 'Skype', 'share to', 'jetpack' ), __( 'Share on Skype', 'jetpack' ), 'share=skype', 'sharing-skype-' . $post->ID );
 	}
 
 	public function process_request( $post, array $post_data ) {
@@ -2051,26 +1749,26 @@ class Share_Skype extends Sharing_Source {
 
 	public function display_footer() {
 		if ( $this->smart ) :
-			?>
-			<script>
-				(function(r, d, s) {
-					r.loadSkypeWebSdkAsync = r.loadSkypeWebSdkAsync || function(p) {
-							var js, sjs = d.getElementsByTagName(s)[0];
-							if (d.getElementById(p.id)) { return; }
-							js = d.createElement(s);
-							js.id = p.id;
-							js.src = p.scriptToLoad;
-							js.onload = p.callback
-							sjs.parentNode.insertBefore(js, sjs);
-						};
-					var p = {
-						scriptToLoad: 'https://swx.cdn.skype.com/shared/v/latest/skypewebsdk.js',
-						id: 'skype_web_sdk'
-					};
-					r.loadSkypeWebSdkAsync(p);
-				})(window, document, 'script');
-			</script>
-			<?php
+		?>
+		<script>
+		(function(r, d, s) {
+			r.loadSkypeWebSdkAsync = r.loadSkypeWebSdkAsync || function(p) {
+				var js, sjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(p.id)) { return; }
+				js = d.createElement(s);
+				js.id = p.id;
+				js.src = p.scriptToLoad;
+				js.onload = p.callback
+				sjs.parentNode.insertBefore(js, sjs);
+			};
+			var p = {
+				scriptToLoad: 'https://swx.cdn.skype.com/shared/v/latest/skypewebsdk.js',
+				id: 'skype_web_sdk'
+			};
+			r.loadSkypeWebSdkAsync(p);
+		})(window, document, 'script');
+		</script>
+		<?php
 		else :
 			$this->js_dialog( $this->shortname, array( 'width' => 305, 'height' => 665 ) );
 		endif;

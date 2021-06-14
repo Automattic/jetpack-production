@@ -1,7 +1,5 @@
 <?php
 
-use Automattic\Jetpack\Connection\Client;
-
 /**
  * We won't have any videos less than sixty pixels wide. That would be silly.
  */
@@ -32,8 +30,8 @@ function videopress_get_video_details( $guid ) {
 		return new WP_Error( 'bad-guid-format', __( 'Invalid Video GUID!', 'jetpack' ) );
 	}
 
-	$version   = '1.1';
-	$endpoint  = sprintf( '/videos/%1$s', $guid );
+	$version  = '1.1';
+	$endpoint = sprintf( '/videos/%1$s', $guid );
 	$query_url = sprintf(
 		'https://public-api.wordpress.com/rest/v%1$s%2$s',
 		$version,
@@ -71,18 +69,15 @@ function videopress_get_video_details( $guid ) {
 /**
  * Get an attachment ID given a URL.
  *
- * Modified from https://wpscholar.com/blog/get-attachment-id-from-wp-image-url/
+ * Modified from http://wpscholar.com/blog/get-attachment-id-from-wp-image-url/
  *
- * @deprecated since 8.4.0
- * @see videopress_get_post_id_by_guid()
+ * @todo: Add some caching in here.
  *
  * @param string $url
  *
  * @return int|bool Attachment ID on success, false on failure
  */
 function videopress_get_attachment_id_by_url( $url ) {
-	_deprecated_function( __FUNCTION__, 'jetpack-8.4' );
-
 	$wp_upload_dir = wp_upload_dir();
 	// Strip out protocols, so it doesn't fail because searching for http: in https: dir.
 	$dir = set_url_scheme( trailingslashit( $wp_upload_dir['baseurl'] ), 'relative' );
@@ -102,7 +97,7 @@ function videopress_get_attachment_id_by_url( $url ) {
 					'compare' => 'LIKE',
 					'value'   => $file,
 				),
-			),
+			)
 		);
 
 		$query = new WP_Query( $query_args );
@@ -118,6 +113,7 @@ function videopress_get_attachment_id_by_url( $url ) {
 				}
 			}
 		}
+
 	}
 
 	return false;
@@ -138,7 +134,7 @@ function videopress_download_poster_image( $url, $attachment_id ) {
 		return new WP_Error( 'image_sideload_failed', __( 'Invalid image URL', 'jetpack' ) );
 	}
 
-	$file_array             = array();
+	$file_array = array();
 	$file_array['name']     = basename( $matches[0] );
 	$file_array['tmp_name'] = download_url( $url );
 
@@ -157,10 +153,50 @@ function videopress_download_poster_image( $url, $attachment_id ) {
 }
 
 /**
+ * Downloads and sets a file to the given attachment.
+ *
+ * @param string $url
+ * @param int $attachment_id
+ * @return bool|WP_Error
+ */
+function videopress_download_video( $url, $attachment_id ) {
+
+	if ( ! $attachment = get_post( $attachment_id ) )  {
+		return new WP_Error( 'invalid_attachment', __( 'Could not find video attachment', 'jetpack' ) );
+	}
+
+	$tmpfile   = download_url( $url );
+
+	$remote_file_path = parse_url( $url, PHP_URL_PATH );
+
+	$file_name =  pathinfo( $remote_file_path, PATHINFO_FILENAME ) . '.' . pathinfo( $remote_file_path, PATHINFO_EXTENSION );
+
+	$time = date( 'YYYY/MM', strtotime( $attachment->post_date ) );
+
+	if ( ! ( ( $uploads = wp_upload_dir( $time ) ) && false === $uploads['error'] ) ) {
+		return new WP_Error( 'video_save_failed', __( 'Could not save video', 'jetpack' ) );
+	}
+
+	$unique_filename = wp_unique_filename( $uploads['path'], $file_name );
+
+	$save_path = $uploads['path'] . DIRECTORY_SEPARATOR . $unique_filename;
+
+	if ( ! @ copy( $tmpfile, $save_path ) ) {
+		return new WP_Error( 'video_save_failed', __( 'Could not save video', 'jetpack' ) );
+	}
+
+	unlink( $tmpfile );
+
+	update_attached_file( $attachment_id, $save_path );
+
+	return true;
+}
+
+/**
  * Creates a local media library item of a remote VideoPress video.
  *
  * @param $guid
- * @param int  $parent_id
+ * @param int $parent_id
  *
  * @return int|object
  */
@@ -182,13 +218,10 @@ function create_local_media_library_for_videopress_guid( $guid, $parent_id = 0 )
 
 	if ( ! is_wp_error( $attachment_id ) ) {
 		update_post_meta( $attachment_id, 'videopress_guid', $guid );
-		wp_update_attachment_metadata(
-			$attachment_id,
-			array(
-				'width'  => $vp_data->width,
-				'height' => $vp_data->height,
-			)
-		);
+		wp_update_attachment_metadata( $attachment_id, array(
+			'width'  => $vp_data->width,
+			'height' => $vp_data->height,
+		) );
 
 		$thumbnail_id = videopress_download_poster_image( $vp_data->poster, $attachment_id );
 		update_post_meta( $attachment_id, '_thumbnail_id', $thumbnail_id );
@@ -219,7 +252,7 @@ function videopress_cleanup_media_library() {
 				'key'   => 'videopress_status',
 				'value' => 'new',
 			),
-		),
+		)
 	);
 
 	$query = new WP_Query( $query_args );
@@ -279,7 +312,7 @@ function videopress_get_transcoding_status( $post_id ) {
 		'std_mp4' => isset( $info->mp4 ) ? $info->mp4 : null,
 		'std_ogg' => isset( $info->ogg ) ? $info->ogg : null,
 		'dvd_mp4' => isset( $info->dvd ) ? $info->dvd : null,
-		'hd_mp4'  => isset( $info->hd ) ? $info->hd : null,
+		'hd_mp4'  => isset( $info->hd )  ? $info->hd : null,
 	);
 
 	return $status;
@@ -382,11 +415,20 @@ function videopress_is_finished_processing( $post_id ) {
 	}
 
 	$meta = wp_get_attachment_metadata( $post->ID );
-	if ( ! isset( $meta['videopress']['finished'] ) ) {
+
+	if ( ! isset( $meta['file_statuses'] ) || ! is_array( $meta['file_statuses'] ) ) {
 		return false;
 	}
 
-	return $meta['videopress']['finished'];
+	$check_statuses = array( 'hd', 'dvd', 'mp4', 'ogg' );
+
+	foreach ( $check_statuses as $status ) {
+		if ( ! isset( $meta['file_statuses'][ $status ] ) || $meta['file_statuses'][ $status ] != 'DONE' ) {
+			return false;
+		}
+	}
+
+	return true;
 }
 
 
@@ -483,9 +525,10 @@ function is_videopress_attachment( $post_id ) {
  */
 function videopress_make_video_get_path( $guid ) {
 	return sprintf(
-		'%s/rest/v%s/videos/%s',
-		JETPACK__WPCOM_JSON_API_BASE,
-		Client::WPCOM_JSON_API_VERSION,
+		'%s://%s/rest/v%s/videos/%s',
+		'https',
+		JETPACK__WPCOM_JSON_API_HOST,
+		Jetpack_Client::WPCOM_JSON_API_VERSION,
 		$guid
 	);
 }
@@ -503,281 +546,3 @@ function videopress_make_media_upload_path( $blog_id ) {
 		$blog_id
 	);
 }
-
-/**
- * This is a mock of the internal VideoPress method, which is meant to duplicate the functionality
- * of the WPCOM API, so that the Jetpack REST API returns the same data with no modifications.
- *
- * @param int $blog_id Blog ID.
- * @param int $post_id Post ID.
- * @return bool|stdClass
- */
-function video_get_info_by_blogpostid( $blog_id, $post_id ) {
-	$post = get_post( $post_id );
-
-	$video_info                  = new stdClass();
-	$video_info->post_id         = $post_id;
-	$video_info->blog_id         = $blog_id;
-	$video_info->guid            = null;
-	$video_info->finish_date_gmt = '0000-00-00 00:00:00';
-	$video_info->rating          = null;
-
-	if ( is_wp_error( $post ) ) {
-		return $video_info;
-	}
-
-	if ( 'video/videopress' !== $post->post_mime_type ) {
-		return $video_info;
-	}
-
-	// Since this is a VideoPress post, lt's fill out the rest of the object.
-	$video_info->guid = get_post_meta( $post_id, 'videopress_guid', true );
-	$meta             = wp_get_attachment_metadata( $post_id );
-
-	if ( $meta && isset( $meta['videopress'] ) ) {
-		$videopress_meta    = $meta['videopress'];
-		$video_info->rating = $videopress_meta['rating'];
-	}
-
-	if ( videopress_is_finished_processing( $post_id ) ) {
-		$video_info->finish_date_gmt = date( 'Y-m-d H:i:s' );
-	}
-
-	return $video_info;
-}
-
-
-/**
- * Check that a VideoPress video format has finished processing.
- *
- * This uses the info object, because that is what the WPCOM endpoint
- * uses, however we don't have a complete info object in the same way
- * WPCOM does, so we pull the meta information out of the post
- * options instead.
- *
- * Note: This mimics the WPCOM function of the same name and helps the media
- * API endpoint add all needed VideoPress data.
- *
- * @param stdClass $info
- * @param string   $format
- * @return bool
- */
-function video_format_done( $info, $format ) {
-
-	// Avoids notice when a non-videopress item is found.
-	if ( ! is_object( $info ) ) {
-		return false;
-	}
-
-	$post_id = $info->post_id;
-
-	if ( get_post_mime_type( $post_id ) !== 'video/videopress' ) {
-		return false;
-	}
-
-	$post = get_post( $post_id );
-
-	if ( is_wp_error( $post ) ) {
-		return false;
-	}
-
-	$meta = wp_get_attachment_metadata( $post->ID );
-
-	$video_format = str_replace( array( 'fmt_', 'fmt1_' ), '', $format );
-
-	if ( 'ogg' === $video_format ) {
-		return isset( $meta['videopress']['files']['std']['ogg'] );
-	} else {
-		return isset( $meta['videopress']['files'][ $video_format ]['mp4'] );
-	}
-}
-
-/**
- * Get the image URL for the given VideoPress GUID
- *
- * We look up by GUID, because that is what WPCOM does and this needs to be
- * parameter compatible with that.
- *
- * Note: This mimics the WPCOM function of the same name and helps the media
- * API endpoint add all needed VideoPress data.
- *
- * @param string $guid
- * @param string $format
- * @return string
- */
-function video_image_url_by_guid( $guid, $format ) {
-
-	$post = videopress_get_post_by_guid( $guid );
-
-	if ( is_wp_error( $post ) ) {
-		return null;
-	}
-
-	$meta = wp_get_attachment_metadata( $post->ID );
-
-	$poster = apply_filters( 'jetpack_photon_url', $meta['videopress']['poster'] );
-
-	return $poster;
-}
-
-/**
- * Using a GUID, find a post.
- *
- * @param string $guid The post guid.
- * @return WP_Post|false The post for that guid, or false if none is found.
- */
-function videopress_get_post_by_guid( $guid ) {
-	$cache_key   = 'get_post_by_guid_' . $guid;
-	$cache_group = 'videopress';
-	$cached_post = wp_cache_get( $cache_key, $cache_group );
-
-	if ( is_object( $cached_post ) && 'WP_Post' === get_class( $cached_post ) ) {
-		return $cached_post;
-	}
-
-	$post_id = videopress_get_post_id_by_guid( $guid );
-
-	if ( is_int( $post_id ) ) {
-		$post = get_post( $post_id );
-		wp_cache_set( $cache_key, $post, $cache_group, HOUR_IN_SECONDS );
-
-		return $post;
-	}
-
-	return false;
-}
-
-/**
- * Using a GUID, find a post.
- *
- * Kept for backward compatibility. Use videopress_get_post_by_guid() instead.
- *
- * @deprecated since 8.4.0
- * @see videopress_get_post_by_guid()
- *
- * @param string $guid The post guid.
- * @return WP_Post|false The post for that guid, or false if none is found.
- */
-function video_get_post_by_guid( $guid ) {
-	_deprecated_function( __FUNCTION__, 'jetpack-8.4' );
-	return videopress_get_post_by_guid( $guid );
-}
-
-/**
- * Using a GUID, find the associated post ID.
- *
- * @since 8.4.0
- * @param string $guid The guid to look for the post ID of.
- * @return int|false The post ID for that guid, or false if none is found.
- */
-function videopress_get_post_id_by_guid( $guid ) {
-	$cache_key = 'videopress_get_post_id_by_guid_' . $guid;
-	$cached_id = get_transient( $cache_key );
-
-	if ( is_int( $cached_id ) ) {
-		return $cached_id;
-	}
-
-	$args = array(
-		'post_type'      => 'attachment',
-		'post_mime_type' => 'video/videopress',
-		'post_status'    => 'inherit',
-		'no_found_rows'  => true,
-		'fields'         => 'ids',
-		'meta_query'     => array(
-			array(
-				'key'     => 'videopress_guid',
-				'value'   => $guid,
-				'compare' => '=',
-			),
-		),
-	);
-
-	$query = new WP_Query( $args );
-
-	if ( $query->have_posts() ) {
-		$post_id = $query->next_post();
-		set_transient( $cache_key, $post_id, HOUR_IN_SECONDS );
-
-		return $post_id;
-	}
-
-	return false;
-}
-
-/**
- * From the given VideoPress post_id, return back the appropriate attachment URL.
- *
- * When the MP4 hasn't been processed yet or this is not a VideoPress video, this will return null.
- *
- * @param int $post_id Post ID of the attachment.
- * @return string|null
- */
-function videopress_get_attachment_url( $post_id ) {
-
-	// We only handle VideoPress attachments.
-	if ( get_post_mime_type( $post_id ) !== 'video/videopress' ) {
-		return null;
-	}
-
-	$meta = wp_get_attachment_metadata( $post_id );
-
-	if ( ! isset( $meta['videopress']['files']['hd']['mp4'] ) ) {
-		// Use the original file as the url if it isn't transcoded yet.
-		if ( isset( $meta['original'] ) ) {
-			$return = $meta['original'];
-		} else {
-			// Otherwise, there isn't much we can do.
-			return null;
-		}
-	} else {
-		$return = $meta['videopress']['file_url_base']['https'] . $meta['videopress']['files']['hd']['mp4'];
-	}
-
-	// If the URL is a string, return it. Otherwise, we shouldn't to avoid errors downstream, so null.
-	return ( is_string( $return ) ) ? $return : null;
-}
-
-/**
- * Converts VideoPress flash embeds into oEmbed-able URLs.
- *
- * Older VideoPress embed depended on Flash, which no longer work,
- * so let us convert them to an URL that WordPress can oEmbed.
- *
- * Note that this file is always loaded via modules/module-extras.php and is not dependent on module status.
- *
- * @param string $content the content.
- * @return string filtered content
- */
-function jetpack_videopress_flash_embed_filter( $content ) {
-	$regex   = '%<embed[^>]*+>(?:\s*</embed>)?%i';
-	$content = preg_replace_callback(
-		$regex,
-		function( $matches, $orig_html = null ) {
-			$embed_code  = $matches[0];
-			$url_matches = array();
-
-			// get video ID from flash URL.
-			$url_matched = preg_match( '/src="http:\/\/v.wordpress.com\/([^"]+)"/', $embed_code, $url_matches );
-
-			if ( $url_matched ) {
-				$video_id = $url_matches[1];
-				return "https://videopress.com/v/$video_id";
-			}
-		},
-		$content
-	);
-	return $content;
-}
-
-/**
- * Checks if the provided rating string is a valid VideoPress video rating value.
- *
- * @param mixed $rating The video rating to validate.
- * @return bool
- */
-function videopress_is_valid_video_rating( $rating ) {
-	return in_array( $rating, array( 'G', 'PG-13', 'R-17', 'X-18' ), true );
-}
-
-add_filter( 'the_content', 'jetpack_videopress_flash_embed_filter', 7 ); // Needs to be priority 7 to allow Core to oEmbed.

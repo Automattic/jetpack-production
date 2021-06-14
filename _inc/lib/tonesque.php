@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name: Tonesque
-Plugin URI: https://automattic.com/
+Plugin URI: http://automattic.com/
 Description: Grab an average color representation from an image.
 Version: 1.0
 Author: Automattic, Matias Ventura
-Author URI: https://automattic.com/
+Author URI: http://automattic.com/
 License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 class Tonesque {
@@ -46,7 +46,7 @@ class Tonesque {
 			$content_url = content_url();
 			$_image_url  = set_url_scheme( $image_url );
 			if ( wp_startswith( $_image_url, $content_url ) ) {
-				$_image_path = str_replace( $content_url, WP_CONTENT_DIR, $_image_url );
+				$_image_path = str_replace( $content_url, ABSPATH . 'wp-content', $_image_url );
 				if ( file_exists( $_image_path ) ) {
 					$filetype = wp_check_filetype( $_image_path );
 					$ext = $filetype['ext'];
@@ -86,7 +86,7 @@ class Tonesque {
 	 *
 	 * Construct object from image.
 	 *
-	 * @param optional $type (hex, rgb, hsv)
+	 * @param optional $type (hex, rgb, hsl)
 	 * @return color as a string formatted as $type
 	 *
  	 */
@@ -203,13 +203,13 @@ class Tonesque {
 
 		switch ( $type ) {
 			case 'rgb' :
-				$color = implode( ',', $c->toRgbInt() );
+				$color = implode( $c->toRgbInt(), ',' );
 				break;
 			case 'hex' :
 				$color = $c->toHex();
 				break;
 			case 'hsv' :
-				$color = implode( ',', $c->toHsvInt() );
+				$color = implode( $c->toHsvInt(), ',' );
 				break;
 			default:
 				return $color = $c->toHex();
@@ -231,7 +231,7 @@ class Tonesque {
 			return false;
 
 		$c = $this->color->getMaxContrastColor();
-		return implode( ',', $c->toRgbInt() );
+		return implode( $c->toRgbInt(), ',' );
 	}
 
 };
