@@ -7,7 +7,6 @@
 
 namespace Automattic\Jetpack\Sync\Modules;
 
-use Automattic\Jetpack\Sync\Functions;
 use Automattic\Jetpack\Sync\Listener;
 use Automattic\Jetpack\Sync\Replicastore;
 use Automattic\Jetpack\Sync\Sender;
@@ -188,7 +187,7 @@ abstract class Module {
 		if ( $sort && is_array( $values ) ) {
 			$this->recursive_ksort( $values );
 		}
-		return crc32( wp_json_encode( Functions::json_wrap( $values ) ) );
+		return crc32( wp_json_encode( jetpack_json_wrap( $values ) ) );
 	}
 
 	/**
@@ -347,7 +346,6 @@ SQL
 			$result = $this->send_action( 'jetpack_full_sync_' . $this->name(), array( $objects, $status['last_sent'] ) );
 
 			if ( is_wp_error( $result ) || $wpdb->last_error ) {
-				$status['error'] = true;
 				return $status;
 			}
 			// The $ids are ordered in descending order.
@@ -361,6 +359,7 @@ SQL
 
 		return $status;
 	}
+
 
 	/**
 	 * Immediately sends a single item without firing or enqueuing it

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Module Name: Search
  * Module Description: Help visitors quickly find answers with highly relevant instant search results and powerful filtering.
@@ -10,11 +11,8 @@
  * Feature: Search
  * Additional Search Queries: search, elastic, elastic search, elasticsearch, fast search, search results, search performance, google search
  * Plans: business, complete
- *
- * @package automattic/jetpack
  */
 
-// Include everything.
-require_once __DIR__ . '/search/class.jetpack-search.php';
+require_once( dirname( __FILE__ ) . '/search/class.jetpack-search.php' );
 
 Jetpack_Search::instance();

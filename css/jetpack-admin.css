@@ -323,7 +323,7 @@
 
 @media (max-width: 1147px) {
   .wrap.inner {
-    background: #f6f7f7;
+    background: #f9f9f9;
     padding: 15px;
   }
 }
@@ -341,14 +341,14 @@
 
 @media (max-width: 1147px) {
   .page-content.about {
-    background: #f6f7f7;
+    background: #f9f9f9;
     padding: 15px;
   }
 }
 
 @media (max-width: 1147px) {
   .page-content.configure {
-    background: #f6f7f7;
+    background: #f9f9f9;
   }
 }
 
@@ -471,12 +471,12 @@
 }
 
 .modal .close:hover {
-  background: #f0f0f1;
+  background: #eee;
   opacity: 0.8;
 }
 
 .modal .close:active {
-  background: #f0f0f1;
+  background: #eee;
   opacity: 0.4;
 }
 
@@ -525,7 +525,7 @@
   bottom: 0;
   width: 100%;
   padding: 12px 20px;
-  border-top: 1px solid #dcdcde;
+  border-top: 1px solid #ddd;
   background: #fff;
   text-align: right;
 }
@@ -577,7 +577,7 @@
 }
 
 .jp-info-img img {
-  border: 1px solid #dcdcde;
+  border: 1px solid #ddd;
   max-width: 100%;
   height: auto;
 }
@@ -724,7 +724,7 @@
 
 .primary {
   padding: 25px 15px 10px 15px;
-  border-bottom: 1px solid #f0f0f1;
+  border-bottom: 1px solid #eee;
 }
 
 .secondary-footer {
@@ -739,7 +739,7 @@
   .secondary-footer {
     padding: 8px 15px 10px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #f0f0f1;
+    border-bottom: 1px solid #eee;
   }
 }
 
@@ -764,7 +764,7 @@
     font-weight: 400;
   }
   .secondary-footer a {
-    border-top: 1px solid #f0f0f1;
+    border-top: 1px solid #eee;
   }
 }
 
@@ -804,7 +804,7 @@
 @media (min-width: 782px) {
   .secondary {
     padding: 0 15px 10px 15px;
-    border-bottom: 1px solid #f0f0f1;
+    border-bottom: 1px solid #eee;
   }
 }
 
@@ -977,7 +977,7 @@
 }
 
 .configure .frame.top.fixed {
-  background: #f6f7f7;
+  background: #f9f9f9;
   border-bottom: 1px solid #e9e9e9;
   padding-left: 160px;
   margin-top: -6px;
@@ -986,7 +986,7 @@
   top: 32px;
   width: 100%;
   z-index: 4;
-  box-shadow: 0 2px 2px -2px #f0f0f1;
+  box-shadow: 0 2px 2px -2px #eee;
 }
 
 @media (max-width: 782px) {
@@ -1111,10 +1111,6 @@
     padding-left: 10px;
     visibility: visible;
   }
-}
-
-.table-bordered.jetpack-modules tr.jetpack-module td .row-actions span.unavailable_reason {
-  color: #000;
 }
 
 .table-bordered.jetpack-modules.with-transparency tr.jetpack-module:hover td .row-actions span a {
@@ -1390,7 +1386,7 @@
   margin-top: 10px;
   background: #fff;
   padding: 10px;
-  border: 1px #dcdcde solid;
+  border: 1px #ddd solid;
   font-size: 16px;
   color: #000;
   max-width: 100%;

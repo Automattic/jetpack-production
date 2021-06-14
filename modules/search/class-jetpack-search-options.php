@@ -33,16 +33,6 @@ class Jetpack_Search_Options {
 	const OPTION_PREFIX = 'jetpack_search_';
 
 	/**
-	 * Available result formats.
-	 *
-	 * @since 9.6.0
-	 * @var string
-	 */
-	const RESULT_FORMAT_MINIMAL  = 'minimal';
-	const RESULT_FORMAT_EXPANDED = 'expanded';
-	const RESULT_FORMAT_PRODUCT  = 'product';
-
-	/**
 	 * Returns a boolean for whether instant search is enabled.
 	 *
 	 * @since 8.3.0
@@ -52,6 +42,7 @@ class Jetpack_Search_Options {
 	public static function is_instant_enabled() {
 		return true === (bool) get_option( 'instant_search_enabled' );
 	}
+
 
 	/**
 	 * Returns a boolean for whether the current site has a VIP index.
@@ -77,5 +68,6 @@ class Jetpack_Search_Options {
 		 */
 		return apply_filters( 'jetpack_search_has_vip_index', $has_vip_index );
 	}
+
 
 }

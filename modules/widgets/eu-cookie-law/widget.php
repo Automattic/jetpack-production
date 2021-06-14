@@ -2,14 +2,14 @@
 /**
  * Widget for Cookies and Consent.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 ?>
 
 <div
 	class="<?php echo implode( ' ', $classes ); ?>"
-	data-hide-timeout="<?php echo (int) $instance['hide-timeout']; ?>"
-	data-consent-expiration="<?php echo (int) $instance['consent-expiration']; ?>"
+	data-hide-timeout="<?php echo intval( $instance['hide-timeout'] ); ?>"
+	data-consent-expiration="<?php echo intval( $instance['consent-expiration'] ); ?>"
 	id="eu-cookie-law"
 >
 	<form method="post">

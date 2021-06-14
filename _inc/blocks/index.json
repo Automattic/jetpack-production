@@ -26,28 +26,19 @@
 		"repeat-visitor",
 		"revue",
 		"send-a-message",
-		"whatsapp-button",
-		"seo",
+		"send-a-message/whatsapp-button",
 		"sharing",
 		"shortlinks",
 		"simple-payments",
 		"slideshow",
 		"social-previews",
-		"story",
 		"subscriptions",
 		"tiled-gallery",
 		"videopress",
 		"wordads"
 	],
-	"beta": [
-		"amazon"
-	],
-	"experimental": [
-		"anchor-fm",
-		"premium-content",
-		"conversation",
-		"dialogue"
-	],
+	"beta": [ "amazon", "story" ],
+	"experimental": [ "seo" ],
 	"no-post-editor": [
 		"business-hours",
 		"button",

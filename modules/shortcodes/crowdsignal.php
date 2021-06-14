@@ -15,7 +15,7 @@
  * [crowdsignal poll=9541291 type=slider]
  * [crowdsignal rating=8755352]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Assets;
@@ -238,7 +238,7 @@ if (
 			/*
 			 * Rating embed.
 			 */
-			if ( (int) $attributes['rating'] > 0 && ! $no_script ) {
+			if ( intval( $attributes['rating'] ) > 0 && ! $no_script ) {
 
 				if ( empty( $attributes['unique_id'] ) ) {
 					$attributes['unique_id'] = is_page() ? 'wp-page-' . $post->ID : 'wp-post-' . $post->ID;
@@ -257,7 +257,7 @@ if (
 					$attributes['permalink'] = get_permalink( $post->ID );
 				}
 
-				$rating    = (int) $attributes['rating'];
+				$rating    = intval( $attributes['rating'] );
 				$unique_id = preg_replace( '/[^\-_a-z0-9]/i', '', wp_strip_all_tags( $attributes['unique_id'] ) );
 				$item_id   = wp_strip_all_tags( $attributes['item_id'] );
 				$item_id   = preg_replace( '/[^_a-z0-9]/i', '', $item_id );
@@ -330,7 +330,7 @@ if (
 						);
 					}
 				}
-			} elseif ( (int) $attributes['poll'] > 0 ) {
+			} elseif ( intval( $attributes['poll'] ) > 0 ) {
 				/*
 				 * Poll embed.
 				 */
@@ -339,7 +339,7 @@ if (
 					$attributes['title'] = esc_html__( 'Take Our Poll', 'jetpack' );
 				}
 
-				$poll = (int) $attributes['poll'];
+				$poll = intval( $attributes['poll'] );
 
 				if ( 'crowdsignal.com' === $attributes['site'] ) {
 					$poll_url = sprintf( 'https://poll.fm/%d', $poll );
@@ -379,9 +379,9 @@ if (
 						$settings = array(
 							'type'  => 'slider',
 							'embed' => 'poll',
-							'delay' => (int) $attributes['delay'],
+							'delay' => intval( $attributes['delay'] ),
 							'visit' => $attributes['visit'],
-							'id'    => (int) $poll,
+							'id'    => intval( $poll ),
 							'site'  => $attributes['site'],
 						);
 
@@ -425,7 +425,7 @@ if (
 
 							$data = array( 'url' => $poll_js );
 
-							self::$scripts['poll'][ (int) $poll ] = $data;
+							self::$scripts['poll'][ intval( $poll ) ] = $data;
 
 							add_action( 'wp_footer', array( $this, 'generate_scripts' ) );
 
@@ -450,7 +450,7 @@ if (
 							 *
 							 * @param int $poll Poll ID.
 							 */
-							do_action( 'crowdsignal_shortcode_before', (int) $poll );
+							do_action( 'crowdsignal_shortcode_before', intval( $poll ) );
 
 							return sprintf(
 								'<a name="pd_a_%1$d"></a><div class="CSS_Poll PDS_Poll" id="PDI_container%1$d" data-settings="%2$s" style="%3$s%4$s"></div><div id="PD_superContainer"></div><noscript>%5$s</noscript>',
@@ -474,7 +474,7 @@ if (
 							);
 
 							/** This action is already documented in modules/shortcodes/crowdsignal.php */
-							do_action( 'crowdsignal_shortcode_before', (int) $poll );
+							do_action( 'crowdsignal_shortcode_before', intval( $poll ) );
 
 							return sprintf(
 								'<a id="pd_a_%1$s"></a><div class="CSS_Poll PDS_Poll" id="PDI_container%1$s" style="%2$s%3$s"></div><div id="PD_superContainer"></div><noscript>%4$s</noscript>',
@@ -511,20 +511,12 @@ if (
 						$inline = false;
 					}
 
-					$survey_url = '';
+					$survey = preg_replace( '/[^a-f0-9]/i', '', $attributes['survey'] );
 
-					if ( 'true' !== $attributes['survey'] ) {
-						$survey = preg_replace( '/[^a-f0-9]/i', '', $attributes['survey'] );
-
-						if ( 'crowdsignal.com' === $attributes['site'] ) {
-							$survey_url = 'https://survey.fm/' . $survey;
-						} else {
-							$survey_url = 'https://polldaddy.com/s/' . $survey;
-						}
+					if ( 'crowdsignal.com' === $attributes['site'] ) {
+						$survey_url = 'https://survey.fm/' . $survey;
 					} else {
-						if ( isset( $attributes['domain'] ) && isset( $attributes['id'] ) ) {
-							$survey_url = 'https://' . $attributes['domain'] . '.survey.fm/' . $attributes['id'];
-						}
+						$survey_url = 'https://polldaddy.com/s/' . $survey;
 					}
 
 					$survey_link = sprintf(

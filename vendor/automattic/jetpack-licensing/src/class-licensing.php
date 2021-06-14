@@ -8,6 +8,7 @@
 namespace Automattic\Jetpack;
 
 use Automattic\Jetpack\Connection\Manager as Connection_Manager;
+use Jetpack;
 use Jetpack_IXR_ClientMulticall;
 use Jetpack_Options;
 use WP_Error;
@@ -59,7 +60,6 @@ class Licensing {
 	 * @return void
 	 */
 	public function initialize() {
-		add_action( 'add_option_' . self::LICENSES_OPTION_NAME, array( $this, 'attach_stored_licenses' ) );
 		add_action( 'update_option_' . self::LICENSES_OPTION_NAME, array( $this, 'attach_stored_licenses' ) );
 		add_action( 'jetpack_authorize_ending_authorized', array( $this, 'attach_stored_licenses_on_connection' ) );
 	}
@@ -114,20 +114,6 @@ class Licensing {
 	}
 
 	/**
-	 * Append a license
-	 *
-	 * @param string $license A jetpack license key.
-	 * @return bool True if the option was updated with the new license, false otherwise.
-	 */
-	public function append_license( $license ) {
-		$licenses = $this->stored_licenses();
-
-		array_push( $licenses, $license );
-
-		return update_option( self::LICENSES_OPTION_NAME, $licenses );
-	}
-
-	/**
 	 * Make an authenticated WP.com XMLRPC multicall request to attach the provided license keys.
 	 *
 	 * @param string[] $licenses License keys to attach.
@@ -152,8 +138,8 @@ class Licensing {
 	 * @return array|WP_Error Results for each license (which may include WP_Error instances) or a WP_Error instance.
 	 */
 	public function attach_licenses( array $licenses ) {
-		if ( ! $this->connection()->has_connected_owner() ) {
-			return new WP_Error( 'not_connected', __( 'Jetpack doesn\'t have a connected owner.', 'jetpack' ) );
+		if ( ! $this->connection()->is_active() ) {
+			return new WP_Error( 'not_connected', __( 'Jetpack is not connected.', 'jetpack' ) );
 		}
 
 		if ( empty( $licenses ) ) {
@@ -213,7 +199,7 @@ class Licensing {
 			$this->log_error(
 				sprintf(
 					/* translators: %s is a comma-separated list of license keys. */
-					__( 'The following Jetpack licenses are invalid, already in use, or revoked: %s', 'jetpack' ),
+					__( 'The following Jetpack licenses are invalid, already in use or revoked: %s', 'jetpack' ),
 					implode( ', ', $failed )
 				)
 			);
@@ -231,22 +217,5 @@ class Licensing {
 		if ( $this->connection()->is_connection_owner() ) {
 			$this->attach_stored_licenses();
 		}
-	}
-
-	/**
-	 * Is the current user allowed to use the Licensing Input UI?
-	 *
-	 * @since 9.6.0
-	 * @return bool
-	 */
-	public static function is_licensing_input_enabled() {
-		/**
-		 * Filter that checks if the user is allowed to see the Licensing UI. `true` enables it.
-		 *
-		 * @since 9.6.0
-		 *
-		 * @param bool False by default.
-		 */
-		return apply_filters( 'jetpack_licensing_ui_enabled', false ) && current_user_can( 'jetpack_connect_user' );
 	}
 }

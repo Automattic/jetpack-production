@@ -12,15 +12,14 @@
  * Feature: Engagement
  * Additional Search Queries: share, sharing, sharedaddy, social buttons, buttons, share facebook, share twitter, social media sharing, social media share, social share, icons, email, facebook, twitter, linkedin, pinterest, pocket, social widget, social media
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
-use Automattic\Jetpack\Connection\Manager as Connection_Manager;
-use Automattic\Jetpack\Redirect;
 use Automattic\Jetpack\Status;
+use Automattic\Jetpack\Redirect;
 
 if ( ! function_exists( 'sharing_init' ) ) {
-	require __DIR__ . '/sharedaddy/sharedaddy.php';
+	require dirname( __FILE__ ) . '/sharedaddy/sharedaddy.php';
 }
 
 add_action( 'jetpack_modules_loaded', 'sharedaddy_loaded' );
@@ -40,7 +39,7 @@ function sharedaddy_loaded() {
  */
 function jetpack_sharedaddy_configuration_url() {
 	$status = new Status();
-	if ( $status->is_offline_mode() || $status->is_staging_site() || ! ( new Connection_Manager( 'jetpack' ) )->is_user_connected() ) {
+	if ( $status->is_offline_mode() || $status->is_staging_site() || ! Jetpack::is_user_connected() ) {
 		return admin_url( 'options-general.php?page=sharing' );
 	}
 

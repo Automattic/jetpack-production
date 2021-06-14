@@ -7,10 +7,10 @@
 
 namespace Automattic\Jetpack\Sync\Modules;
 
-use Automattic\Jetpack\Constants as Jetpack_Constants;
-use Automattic\Jetpack\Sync\Defaults;
 use Automattic\Jetpack\Sync\Functions;
+use Automattic\Jetpack\Sync\Defaults;
 use Automattic\Jetpack\Sync\Settings;
+use Automattic\Jetpack\Constants as Jetpack_Constants;
 
 /**
  * Class to handle sync for callables.
@@ -226,14 +226,10 @@ class Callables extends Module {
 	 * @access private
 	 *
 	 * @param callable $callable Callable to invoke.
-	 * @return mixed Return value of the callable, null if not callable.
+	 * @return mixed Return value of the callable.
 	 */
 	private function get_callable( $callable ) {
-		if ( is_callable( $callable ) ) {
-			return call_user_func( $callable );
-		} else {
-			return null;
-		}
+		return call_user_func( $callable );
 	}
 
 	/**
@@ -374,13 +370,8 @@ class Callables extends Module {
 			/** This filter is documented in src/wp-admin/includes/class-wp-plugins-list-table.php */
 			$action_links = apply_filters( 'plugin_action_links', $action_links, $plugin_file, null, 'all' );
 			/** This filter is documented in src/wp-admin/includes/class-wp-plugins-list-table.php */
-			$action_links = apply_filters( "plugin_action_links_{$plugin_file}", $action_links, $plugin_file, null, 'all' );
-			// Verify $action_links is still an array to resolve warnings from filters not returning an array.
-			if ( is_array( $action_links ) ) {
-				$action_links = array_filter( $action_links );
-			} else {
-				$action_links = array();
-			}
+			$action_links           = apply_filters( "plugin_action_links_{$plugin_file}", $action_links, $plugin_file, null, 'all' );
+			$action_links           = array_filter( $action_links );
 			$formatted_action_links = null;
 			if ( ! empty( $action_links ) && count( $action_links ) > 0 ) {
 				$dom_doc = new \DOMDocument();

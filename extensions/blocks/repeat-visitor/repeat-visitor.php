@@ -4,7 +4,7 @@
  *
  * @since 7.2.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Repeat_Visitor;
@@ -21,7 +21,7 @@ const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
  * registration if we need to.
  */
 function register_block() {
-	Blocks::jetpack_register_block(
+	jetpack_register_block(
 		BLOCK_NAME,
 		array( 'render_callback' => __NAMESPACE__ . '\render_block' )
 	);
@@ -41,9 +41,9 @@ function render_block( $attributes, $content ) {
 
 	$classes = Blocks::classes( FEATURE_NAME, $attributes );
 
-	$count     = isset( $_COOKIE['jp-visit-counter'] ) ? (int) $_COOKIE['jp-visit-counter'] : 0;
+	$count     = isset( $_COOKIE['jp-visit-counter'] ) ? intval( $_COOKIE['jp-visit-counter'] ) : 0;
 	$criteria  = isset( $attributes['criteria'] ) ? $attributes['criteria'] : 'after-visits';
-	$threshold = isset( $attributes['threshold'] ) ? (int) $attributes['threshold'] : 3;
+	$threshold = isset( $attributes['threshold'] ) ? intval( $attributes['threshold'] ) : 3;
 
 	if (
 		( 'after-visits' === $criteria && $count >= $threshold ) ||

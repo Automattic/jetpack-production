@@ -4,12 +4,13 @@
  *
  * @since 8.4.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Podcast_Player;
 
 use Automattic\Jetpack\Blocks;
+use WP_Error;
 use Jetpack_Gutenberg;
 use Jetpack_Podcast_Helper;
 
@@ -25,22 +26,18 @@ if ( ! class_exists( 'Jetpack_Podcast_Helper' ) ) {
  * we can disable registration if we need to.
  */
 function register_block() {
-	Blocks::jetpack_register_block(
+	jetpack_register_block(
 		BLOCK_NAME,
 		array(
 			'attributes'      => array(
 				'url'                    => array(
-					'type' => 'string',
+					'type' => 'url',
 				),
 				'itemsToShow'            => array(
 					'type'    => 'integer',
 					'default' => 5,
 				),
 				'showCoverArt'           => array(
-					'type'    => 'boolean',
-					'default' => true,
-				),
-				'showEpisodeTitle'       => array(
 					'type'    => 'boolean',
 					'default' => true,
 				),
@@ -74,15 +71,10 @@ function render_error( $message ) {
 /**
  * Podcast Player block registration/dependency declaration.
  *
- * @param array  $attributes Array containing the Podcast Player block attributes.
- * @param string $content    Fallback content - a direct link to RSS, as rendered by save.js.
+ * @param array $attributes Array containing the Podcast Player block attributes.
  * @return string
  */
-function render_block( $attributes, $content ) {
-	// Don't render an interactive version of the block outside the frontend context.
-	if ( ! jetpack_is_frontend() ) {
-		return $content;
-	}
+function render_block( $attributes ) {
 
 	// Test for empty URLS.
 	if ( empty( $attributes['url'] ) ) {
@@ -94,21 +86,10 @@ function render_block( $attributes, $content ) {
 		return render_error( __( 'Your podcast URL is invalid and couldn\'t be embedded. Please double check your URL.', 'jetpack' ) );
 	}
 
-	if ( isset( $attributes['selectedEpisodes'] ) && count( $attributes['selectedEpisodes'] ) ) {
-		$guids       = array_map(
-			function ( $episode ) {
-				return $episode['guid'];
-			},
-			$attributes['selectedEpisodes']
-		);
-		$player_args = array( 'guids' => $guids );
-	} else {
-		$player_args = array();
-	}
-
 	// Sanitize the URL.
 	$attributes['url'] = esc_url_raw( $attributes['url'] );
-	$player_data       = ( new Jetpack_Podcast_Helper( $attributes['url'] ) )->get_player_data( $player_args );
+
+	$player_data = Jetpack_Podcast_Helper::get_player_data( $attributes['url'] );
 
 	if ( is_wp_error( $player_data ) ) {
 		return render_error( $player_data->get_error_message() );
@@ -290,7 +271,7 @@ function render( $name, $template_props = array(), $print = true ) {
 		$name = $name . '.php';
 	}
 
-	$template_path = __DIR__ . '/templates/' . $name;
+	$template_path = dirname( __FILE__ ) . '/templates/' . $name;
 
 	if ( ! file_exists( $template_path ) ) {
 		return '';

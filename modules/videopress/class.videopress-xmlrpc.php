@@ -113,8 +113,7 @@ class VideoPress_XMLRPC {
 			return false;
 		}
 
-		$attachment->guid           = $info['original'];
-		$attachment->post_mime_type = 'video/videopress';
+		$attachment->guid = $info['original'];
 
 		wp_update_post( $attachment );
 
@@ -130,7 +129,8 @@ class VideoPress_XMLRPC {
 		$meta['videopress']['url'] = 'https://videopress.com/v/' . $info['guid'];
 
 		// Update file statuses
-		if ( ! empty( $format ) ) {
+		$valid_formats = array( 'hd', 'ogg', 'mp4', 'dvd' );
+		if ( in_array( $format, $valid_formats ) ) {
 			$meta['file_statuses'][ $format ] = $status;
 		}
 
@@ -167,7 +167,8 @@ class VideoPress_XMLRPC {
 			return false;
 		}
 
-		$poster = apply_filters( 'jetpack_photon_url', $poster );
+		// We add ssl => 1 to make sure that the videos.files.wordpress.com domain is parsed as photon.
+		$poster = apply_filters( 'jetpack_photon_url', $poster, array( 'ssl' => 1 ), 'https' );
 
 		$meta                         = wp_get_attachment_metadata( $post_id );
 		$meta['videopress']['poster'] = $poster;

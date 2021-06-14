@@ -1,4 +1,4 @@
-/* global ajaxurl jetpack_empty_spam_button_parameters */
+/* global ajaxurl */
 jQuery( function ( $ ) {
 	if ( typeof jetpack_empty_spam_button_parameters !== 'undefined' ) {
 		// Create the "Empty Spam" button and add it above and below the list of spam feedbacks.
@@ -38,30 +38,21 @@ jQuery( function ( $ ) {
 	} );
 
 	function grunion_check_for_spam( offset, limit ) {
-		var nonceName = $( '#jetpack-check-feedback-spam' ).data( 'nonce-name' );
-		var nonce = $( '#' + nonceName ).attr( 'value' );
-		var failureUrl = $( '#jetpack-check-feedback-spam' ).data( 'failure-url' );
-
-		var requestOptions = {
-			action: 'grunion_recheck_queue',
-			offset: offset,
-			limit: limit,
-		};
-		requestOptions[ nonceName ] = nonce;
-
-		$.post( ajaxurl, requestOptions )
-			.fail( function ( result ) {
-				// An error is only returned in the case of a missing nonce or invalid permissions, so we don't need the actual error message.
-				window.location.href = failureUrl;
-				return;
-			} )
-			.done( function ( result ) {
+		$.post(
+			ajaxurl,
+			{
+				action: 'grunion_recheck_queue',
+				offset: offset,
+				limit: limit,
+			},
+			function ( result ) {
 				if ( result.processed < limit ) {
 					window.location.reload();
 				} else {
 					grunion_check_for_spam( offset + limit, limit );
 				}
-			} );
+			}
+		);
 	}
 
 	var initial_spam_count = 0;

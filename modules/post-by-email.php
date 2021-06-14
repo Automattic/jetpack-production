@@ -5,19 +5,18 @@
  * First Introduced: 2.0
  * Sort Order: 14
  * Requires Connection: Yes
- * Requires User Connection: Yes
  * Auto Activate: No
  * Module Tags: Writing
  * Feature: Writing
  * Additional Search Queries: post by email, email
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
  * Require the PBE Class.
  */
-require_once __DIR__ . '/post-by-email/class-jetpack-post-by-email.php';
+require_once dirname( __FILE__ ) . '/post-by-email/class-jetpack-post-by-email.php';
 
 add_action( 'jetpack_modules_loaded', array( 'Jetpack_Post_By_Email', 'init' ) );
 

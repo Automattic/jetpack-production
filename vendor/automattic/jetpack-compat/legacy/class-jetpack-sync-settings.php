@@ -66,6 +66,7 @@ class Jetpack_Sync_Settings {
 		return Settings::is_network_setting( $setting );
 	}
 
+
 	/**
 	 * Return blocklisted post types SQL.
 	 *

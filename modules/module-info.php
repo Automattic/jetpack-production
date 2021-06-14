@@ -8,7 +8,7 @@
  * - The second creates a information block.
  * It is hooked into `jetpack_module_more_info_ . $module`
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Redirect;
@@ -259,6 +259,7 @@ function jetpack_enhanced_distribution_more_info() {
 	);
 }
 add_action( 'jetpack_module_more_info_enhanced-distribution', 'jetpack_enhanced_distribution_more_info' );
+
 
 /**
  * Protect support link.
@@ -655,7 +656,7 @@ add_action( 'jetpack_learn_more_button_verification-tools', 'jetpack_verificatio
  */
 function jetpack_verification_tools_more_info() {
 	esc_html_e(
-		'Verify your site ownership with services like Google, Bing, Pinterest, Yandex, and Facebook. This gives you access to
+		'Verify your site ownership with services like Google, Bing, Pinterest, and Yandex. This gives you access to
 		advanced features on these services and get verification badges.',
 		'jetpack'
 	);

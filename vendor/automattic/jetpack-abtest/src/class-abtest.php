@@ -8,6 +8,7 @@
 namespace Automattic\Jetpack;
 
 use Automattic\Jetpack\Connection\Client;
+use Automattic\Jetpack\Error;
 
 /**
  * This class provides an interface to the WP.com A/B tests.

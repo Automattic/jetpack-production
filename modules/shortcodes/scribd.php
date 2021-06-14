@@ -9,7 +9,7 @@
  *
  * [scribd id=39027960 key=key-3kaiwcjqhtipf25m8tw mode=list]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**

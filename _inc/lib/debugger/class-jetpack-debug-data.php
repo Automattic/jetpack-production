@@ -2,16 +2,15 @@
 /**
  * Jetpack Debug Data for the Site Health sections.
  *
- * @package automattic/jetpack
+ * @package jetpack
  */
 
-use Automattic\Jetpack\Connection\Tokens;
-use Automattic\Jetpack\Connection\Urls;
 use Automattic\Jetpack\Constants;
-use Automattic\Jetpack\Identity_Crisis;
-use Automattic\Jetpack\Redirect;
 use Automattic\Jetpack\Sync\Modules;
+use Automattic\Jetpack\Sync\Functions;
 use Automattic\Jetpack\Sync\Sender;
+use Automattic\Jetpack\Redirect;
+use Automattic\Jetpack\Connection\Manager as Connection_Manager;
 
 /**
  * Class Jetpack_Debug_Data
@@ -45,7 +44,7 @@ class Jetpack_Debug_Data {
 	 * @return string Human readable time.
 	 */
 	public static function seconds_to_time( $seconds ) {
-		$seconds = (int) $seconds;
+		$seconds = intval( $seconds );
 		$units   = array(
 			'week'   => WEEK_IN_SECONDS,
 			'day'    => DAY_IN_SECONDS,
@@ -59,7 +58,7 @@ class Jetpack_Debug_Data {
 		}
 		$human_readable = '';
 		foreach ( $units as $name => $divisor ) {
-			$quot = (int) ( $seconds / $divisor );
+			$quot = intval( $seconds / $divisor );
 			if ( $quot ) {
 				$human_readable .= "$quot $name";
 				$human_readable .= ( abs( $quot ) > 1 ? 's' : '' ) . ', ';
@@ -182,8 +181,9 @@ class Jetpack_Debug_Data {
 		 * If a token does not contain a period, then it is malformed and we report it as such.
 		 */
 		$user_id    = get_current_user_id();
-		$blog_token = ( new Tokens() )->get_access_token();
-		$user_token = ( new Tokens() )->get_access_token( $user_id );
+		$cxn_mgr    = new Connection_Manager();
+		$blog_token = $cxn_mgr->get_access_token();
+		$user_token = $cxn_mgr->get_access_token( $user_id );
 
 		$tokenset = '';
 		if ( $blog_token ) {
@@ -326,8 +326,8 @@ class Jetpack_Debug_Data {
 		 * Must follow sync debug since it depends on sync functionality.
 		 */
 		$idc_urls = array(
-			'home'       => Urls::home_url(),
-			'siteurl'    => Urls::site_url(),
+			'home'       => Functions::home_url(),
+			'siteurl'    => Functions::site_url(),
 			'WP_HOME'    => Constants::is_defined( 'WP_HOME' ) ? Constants::get_constant( 'WP_HOME' ) : '',
 			'WP_SITEURL' => Constants::is_defined( 'WP_SITEURL' ) ? Constants::get_constant( 'WP_SITEURL' ) : '',
 		);
@@ -344,7 +344,7 @@ class Jetpack_Debug_Data {
 		);
 		$debug_info['idc_optin']        = array(
 			'label'   => 'IDC Opt-in',
-			'value'   => Identity_Crisis::sync_idc_optin(),
+			'value'   => Jetpack::sync_idc_optin(),
 			'private' => false,
 		);
 

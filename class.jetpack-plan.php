@@ -5,7 +5,7 @@
  * Not to be confused with the `Jetpack_Plans` class (in `_inc/lib/plans.php`), which
  * fetches general information about all available plans from WordPress.com, side-effect free.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Connection\Client;
@@ -44,7 +44,6 @@ class Jetpack_Plan {
 				'opentable',
 				'calendly',
 				'send-a-message',
-				'whatsapp-button',
 				'social-previews',
 
 				'core/video',
@@ -63,7 +62,6 @@ class Jetpack_Plan {
 			'supports' => array(
 				'akismet',
 				'recurring-payments',
-				'premium-content/container',
 			),
 		),
 		'premium'  => array(
@@ -145,13 +143,6 @@ class Jetpack_Plan {
 		}
 
 		if ( ! isset( $results['plan'] ) ) {
-			return false;
-		}
-
-		$current_plan = get_option( self::PLAN_OPTION, array() );
-
-		if ( ! empty( $current_plan ) && $current_plan === $results['plan'] ) {
-			// Bail if the plans array hasn't changed.
 			return false;
 		}
 
@@ -294,7 +285,7 @@ class Jetpack_Plan {
 	 *  the feature or false if not found
 	 */
 	public static function get_minimum_plan_for_feature( $feature ) {
-		foreach ( self::PLAN_DATA as $details ) {
+		foreach ( self::PLAN_DATA as $class => $details ) {
 			if ( in_array( $feature, $details['supports'], true ) ) {
 				return $details['plans'][0];
 			}

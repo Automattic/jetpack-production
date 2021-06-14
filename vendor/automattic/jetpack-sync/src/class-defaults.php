@@ -20,51 +20,78 @@ class Defaults {
 	 * @var array
 	 */
 	public static $default_options_whitelist = array(
-		'active_plugins',
-		'admin_email',
-		'advanced_seo_front_page_description', // Jetpack_SEO_Utils::FRONT_PAGE_META_OPTION.
-		'advanced_seo_title_formats', // Jetpack_SEO_Titles::TITLE_FORMATS_OPTION.
-		'avatar_default',
-		'avatar_rating',
-		'blog_charset',
-		'blog_public',
+		'stylesheet',
 		'blogname',
 		'blogdescription',
-		'carousel_background_color',
-		'carousel_display_exif',
-		'carousel_display_comments',
+		'blog_charset',
+		'permalink_structure',
 		'category_base',
-		'ce4wp_referred_by', // Creative Mail. See pbtFPC-H5-p2.
-		'close_comments_days_old',
+		'tag_base',
+		'sidebars_widgets',
+		'comment_moderation',
+		'default_comment_status',
+		'page_on_front',
+		'rss_use_excerpt',
+		'subscription_options',
+		'stb_enabled',
+		'stc_enabled',
+		'comment_registration',
+		'show_avatars',
+		'avatar_default',
+		'avatar_rating',
+		'highlander_comment_form_prompt',
+		'jetpack_comment_form_color_scheme',
+		'stats_options',
+		'gmt_offset',
+		'timezone_string',
+		'jetpack_sync_non_public_post_stati',
+		'jetpack_options',
+		'site_icon', // (int) - ID of core's Site Icon attachment ID
+		'default_post_format',
+		'default_category',
+		'large_size_w',
+		'large_size_h',
+		'thumbnail_size_w',
+		'thumbnail_size_h',
+		'medium_size_w',
+		'medium_size_h',
+		'thumbnail_crop',
+		'image_default_link_type',
+		'site_logo',
+		'sharing-options',
+		'sharing-services',
+		'post_count',
+		'default_ping_status',
+		'sticky_posts',
+		'blog_public',
+		'default_pingback_flag',
+		'require_name_email',
 		'close_comments_for_old_posts',
+		'close_comments_days_old',
+		'thread_comments',
+		'thread_comments_depth',
+		'page_comments',
+		'comments_per_page',
+		'default_comments_page',
+		'comment_order',
+		'comments_notify',
+		'moderation_notify',
+		'social_notifications_like',
+		'social_notifications_reblog',
+		'social_notifications_subscribe',
 		'comment_previously_approved',
 		'comment_max_links',
-		'comment_moderation',
-		'comment_order',
-		'comment_registration',
-		'comments_notify',
-		'comments_per_page',
-		'date_format',
-		'default_category',
-		'default_comment_status',
-		'default_comments_page',
-		'default_email_category',
-		'default_ping_status',
-		'default_pingback_flag',
-		'default_post_format',
-		'default_role',
+		'moderation_keys',
+		'jetpack_wga',
 		'disabled_likes',
 		'disabled_reblogs',
-		'disallowed_keys',
-		'enable_header_ad',
-		'gmt_offset',
-		'gravatar_disable_hovercards',
-		'highlander_comment_form_prompt',
-		'image_default_link_type',
-		'infinite_scroll',
-		'infinite_scroll_google_analytics',
+		'jetpack_comment_likes_enabled',
+		'twitter_via',
+		'jetpack-memberships-connected-account-id',
+		'jetpack-twitter-cards-site-tag',
+		'wpcom_publish_posts_with_markdown',
+		'wpcom_publish_comments_with_markdown',
 		'jetpack_activated',
-		'jetpack_api_cache_enabled',
 		'jetpack_available_modules',
 		'jetpack_allowed_xsite_search_ids',
 		'jetpack_autoupdate_plugins',
@@ -73,88 +100,55 @@ class Defaults {
 		'jetpack_autoupdate_themes_translations',
 		'jetpack_autoupdate_core',
 		'jetpack_autoupdate_translations',
-		'jetpack_comment_likes_enabled',
-		'jetpack_comment_form_color_scheme',
-		'jetpack_connection_active_plugins',
-		'jetpack_excluded_extensions',
-		'jetpack-memberships-connected-account-id',
-		'jetpack_mailchimp',
-		'jetpack_relatedposts',
-		'jetpack_options',
+		'carousel_background_color',
+		'carousel_display_exif',
+		'carousel_display_comments',
 		'jetpack_portfolio',
 		'jetpack_portfolio_posts_per_page',
-		'jetpack_protect_key',
-		'jetpack_protect_global_whitelist',
-		'jetpack_publicize_options',
 		'jetpack_testimonial',
 		'jetpack_testimonial_posts_per_page',
+		'tiled_galleries',
+		'gravatar_disable_hovercards',
+		'infinite_scroll',
+		'infinite_scroll_google_analytics',
+		'wp_mobile_excerpt',
+		'wp_mobile_featured_images',
+		'wp_mobile_app_promos',
+		'monitor_receive_notifications',
+		'post_by_email_address',
+		'jetpack_mailchimp',
+		'jetpack_protect_key',
+		'jetpack_protect_global_whitelist',
 		'jetpack_sso_require_two_step',
 		'jetpack_sso_match_by_email',
-		'jetpack_sync_non_blocking', // is non-blocking Jetpack Sync flow enabled.
-		'jetpack_sync_non_public_post_stati',
-		'jetpack_sync_settings_comment_meta_whitelist',
-		'jetpack_sync_settings_post_meta_whitelist',
-		'jetpack_sync_settings_post_types_blacklist',
-		'jetpack_sync_settings_taxonomies_blacklist',
-		'jetpack-twitter-cards-site-tag',
-		'jetpack_wga',
-		'large_size_h',
-		'large_size_w',
+		'jetpack_relatedposts',
+		'verification_services_codes',
+		'users_can_register',
+		'active_plugins',
+		'uninstall_plugins',
+		'advanced_seo_front_page_description', // Jetpack_SEO_Utils::FRONT_PAGE_META_OPTION.
+		'advanced_seo_title_formats', // Jetpack_SEO_Titles::TITLE_FORMATS_OPTION.
+		'jetpack_api_cache_enabled',
+		'start_of_week',
+		'disallowed_keys',
+		'posts_per_page',
+		'posts_per_rss',
+		'show_on_front',
+		'ping_sites',
+		'uploads_use_yearmonth_folders',
+		'date_format',
+		'time_format',
+		'admin_email',
+		'new_admin_email',
+		'default_email_category',
+		'default_role',
+		'page_for_posts',
 		'mailserver_url',
 		'mailserver_login', // Not syncing contents, only the option name.
 		'mailserver_pass', // Not syncing contents, only the option name.
 		'mailserver_port',
-		'medium_size_h',
-		'medium_size_w',
-		'moderation_keys',
-		'moderation_notify',
-		'monitor_receive_notifications',
-		'new_admin_email',
-		'page_comments',
-		'page_for_posts',
-		'page_on_front',
-		'permalink_structure',
-		'ping_sites',
-		'post_by_email_address',
-		'post_count',
-		'posts_per_page',
-		'posts_per_rss',
-		'require_name_email',
-		'rss_use_excerpt',
-		'sharing-options',
-		'sharing-services',
-		'show_avatars',
-		'show_on_front',
-		'sidebars_widgets',
-		'site_icon', // (int) - ID of core's Site Icon attachment ID
-		'site_logo',
-		'site_segment',
-		'site_user_type',
-		'site_vertical',
-		'social_notifications_like',
-		'social_notifications_reblog',
-		'social_notifications_subscribe',
-		'start_of_week',
-		'stats_options',
-		'stb_enabled',
-		'stc_enabled',
-		'sticky_posts',
-		'stylesheet',
-		'subscription_options',
-		'tag_base',
-		'thread_comments',
-		'thread_comments_depth',
-		'thumbnail_crop',
-		'thumbnail_size_h',
-		'thumbnail_size_w',
-		'tiled_galleries',
-		'time_format',
-		'timezone_string',
-		'twitter_via',
-		'uninstall_plugins',
-		'uploads_use_yearmonth_folders',
-		'users_can_register',
-		'verification_services_codes',
+		'wp_page_for_privacy_policy',
+		'enable_header_ad',
 		'wordads_second_belowpost',
 		'wordads_display_front_page',
 		'wordads_display_post',
@@ -164,12 +158,14 @@ class Defaults {
 		'wordads_custom_adstxt_enabled',
 		'wordads_ccpa_enabled',
 		'wordads_ccpa_privacy_policy_url',
-		'wp_mobile_excerpt',
-		'wp_mobile_featured_images',
-		'wp_mobile_app_promos',
-		'wp_page_for_privacy_policy',
-		'wpcom_publish_posts_with_markdown',
-		'wpcom_publish_comments_with_markdown',
+		'site_segment',
+		'site_user_type',
+		'site_vertical',
+		'jetpack_excluded_extensions',
+		'jetpack_publicize_options',
+		'jetpack_connection_active_plugins',
+		'jetpack_sync_non_blocking', // is non-blocking Jetpack Sync flow enabled.
+		'ce4wp_referred_by', // Creative Mail. See pbtFPC-H5-p2 .
 	);
 
 	/**
@@ -279,10 +275,12 @@ class Defaults {
 		'wp_max_upload_size'               => 'wp_max_upload_size',
 		'is_main_network'                  => array( __CLASS__, 'is_multi_network' ),
 		'is_multi_site'                    => 'is_multisite',
-		'main_network_site'                => array( 'Automattic\\Jetpack\\Connection\\Urls', 'main_network_site_url' ),
+		'main_network_site'                => array( 'Automattic\\Jetpack\\Sync\\Functions', 'main_network_site_url' ),
 		'main_network_site_wpcom_id'       => array( 'Automattic\\Jetpack\\Sync\\Functions', 'main_network_site_wpcom_id' ),
-		'site_url'                         => array( 'Automattic\\Jetpack\\Connection\\Urls', 'site_url' ),
-		'home_url'                         => array( 'Automattic\\Jetpack\\Connection\\Urls', 'home_url' ),
+		'site_url'                         => array( 'Automattic\\Jetpack\\Sync\\Functions', 'site_url' ),
+		'home_url'                         => array( 'Automattic\\Jetpack\\Sync\\Functions', 'home_url' ),
+		'single_user_site'                 => array( 'Jetpack', 'is_single_user_site' ),
+		'updates'                          => array( 'Jetpack', 'get_updates' ),
 		'has_file_system_write_access'     => array( 'Automattic\\Jetpack\\Sync\\Functions', 'file_system_write_access' ),
 		'is_version_controlled'            => array( 'Automattic\\Jetpack\\Sync\\Functions', 'is_version_controlled' ),
 		'taxonomies'                       => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_taxonomies' ),
@@ -294,16 +292,19 @@ class Defaults {
 		'wp_version'                       => array( 'Automattic\\Jetpack\\Sync\\Functions', 'wp_version' ),
 		'get_plugins'                      => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_plugins' ),
 		'get_plugins_action_links'         => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_plugins_action_links' ),
+		'active_modules'                   => array( 'Jetpack', 'get_active_modules' ),
 		'hosting_provider'                 => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_hosting_provider' ),
 		'locale'                           => 'get_locale',
 		'site_icon_url'                    => array( 'Automattic\\Jetpack\\Sync\\Functions', 'site_icon_url' ),
 		'roles'                            => array( 'Automattic\\Jetpack\\Sync\\Functions', 'roles' ),
 		'timezone'                         => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_timezone' ),
+		'available_jetpack_blocks'         => array( 'Jetpack_Gutenberg', 'get_availability' ), // Includes both Gutenberg blocks *and* plugins.
 		'paused_themes'                    => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_paused_themes' ),
 		'paused_plugins'                   => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_paused_plugins' ),
 		'theme_support'                    => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_theme_support' ),
-		'wp_get_environment_type'          => 'wp_get_environment_type',
+
 	);
+
 
 	/**
 	 * Array of post type attributes synced.
@@ -348,6 +349,19 @@ class Defaults {
 	 * @return array Whitelist of callables allowed to be managed via the JSON API.
 	 */
 	public static function get_callable_whitelist() {
+		$default = self::$default_callable_whitelist;
+
+		if ( defined( 'JETPACK__PLUGIN_DIR' ) && include_once JETPACK__PLUGIN_DIR . 'modules/sso/class.jetpack-sso-helpers.php' ) {
+			$sso_helpers = array(
+				'sso_is_two_step_required'      => array( 'Jetpack_SSO_Helpers', 'is_two_step_required' ),
+				'sso_should_hide_login_form'    => array( 'Jetpack_SSO_Helpers', 'should_hide_login_form' ),
+				'sso_match_by_email'            => array( 'Jetpack_SSO_Helpers', 'match_by_email' ),
+				'sso_new_user_override'         => array( 'Jetpack_SSO_Helpers', 'new_user_override' ),
+				'sso_bypass_default_login_form' => array( 'Jetpack_SSO_Helpers', 'bypass_login_forward_wpcom' ),
+			);
+			$default     = array_merge( $default, $sso_helpers );
+		}
+
 		/**
 		 * Filter the list of callables that are manageable via the JSON API.
 		 *
@@ -357,7 +371,7 @@ class Defaults {
 		 *
 		 * @param array The default list of callables.
 		 */
-		return apply_filters( 'jetpack_sync_callable_whitelist', self::$default_callable_whitelist );
+		return apply_filters( 'jetpack_sync_callable_whitelist', $default );
 	}
 
 	/**
@@ -369,7 +383,6 @@ class Defaults {
 	 */
 	public static $blacklisted_post_types = array(
 		'ai_log', // Logger - https://github.com/alleyinteractive/logger.
-		'amp_validated_url', // AMP Validation Errors.
 		'ai1ec_event',
 		'bwg_album',
 		'bwg_gallery',
@@ -655,7 +668,14 @@ class Defaults {
 	 *
 	 * @var array multsite callables whitelisted
 	 */
-	public static $default_multisite_callable_whitelist = array();
+	public static $default_multisite_callable_whitelist = array(
+		'network_name'                        => array( 'Jetpack', 'network_name' ),
+		'network_allow_new_registrations'     => array( 'Jetpack', 'network_allow_new_registrations' ),
+		'network_add_new_users'               => array( 'Jetpack', 'network_add_new_users' ),
+		'network_site_upload_space'           => array( 'Jetpack', 'network_site_upload_space' ),
+		'network_upload_file_types'           => array( 'Jetpack', 'network_upload_file_types' ),
+		'network_enable_administration_menus' => array( 'Jetpack', 'network_enable_administration_menus' ),
+	);
 
 	/**
 	 * Get array of multisite callables whitelisted.
@@ -686,7 +706,6 @@ class Defaults {
 		'_feedback_extra_fields',
 		'_g_feedback_shortcode',
 		'_jetpack_post_thumbnail',
-		'_last_editor_used_jetpack',
 		'_menu_item_classes',
 		'_menu_item_menu_item_parent',
 		'_menu_item_object',
@@ -786,14 +805,7 @@ class Defaults {
 		'custom-logo',
 		'menus',
 		'automatic-feed-links',
-		'align-wide',
-		'wp-block-styles',
-		'responsive-embeds',
-		'disable-custom-gradients',
-		'disable-custom-font-sizes',
-		'disable-custom-colors',
-		'dark-editor-style',
-		'customize-selective-refresh-widgets',
+		'editor-style',
 		'widgets',
 		'html5',
 		'title-tag',
@@ -803,9 +815,6 @@ class Defaults {
 		'site-logo',
 		'editor-color-palette',
 		'editor-gradient-presets',
-		'editor-font-sizes',
-		'editor-styles',
-		'editor-style', // deprecated.
 	);
 
 	/**
@@ -914,7 +923,7 @@ class Defaults {
 	 * @return float Number of seconds.
 	 */
 	public static function get_max_sync_execution_time() {
-		$max_exec_time = (int) ini_get( 'max_execution_time' );
+		$max_exec_time = intval( ini_get( 'max_execution_time' ) );
 		if ( 0 === $max_exec_time ) {
 			// 0 actually means "unlimited", but let's not treat it that way.
 			$max_exec_time = 60;
@@ -1115,13 +1124,6 @@ class Defaults {
 	 * @var int Bool-ish. Default 0.
 	 */
 	public static $default_network_disable = 0;
-
-	/**
-	 * Default for disabling checksums.
-	 *
-	 * @var int Bool-ish. Default 0.
-	 */
-	public static $default_checksum_disable = 0;
 
 	/**
 	 * Should Sync use cron?

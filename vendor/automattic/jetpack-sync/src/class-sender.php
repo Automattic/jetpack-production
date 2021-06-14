@@ -187,7 +187,7 @@ class Sender {
 	private function init() {
 		add_action( 'jetpack_sync_before_send_queue_sync', array( $this, 'maybe_set_user_from_token' ), 1 );
 		add_action( 'jetpack_sync_before_send_queue_sync', array( $this, 'maybe_clear_user_from_token' ), 20 );
-		add_filter( 'jetpack_xmlrpc_unauthenticated_methods', array( $this, 'register_jetpack_xmlrpc_methods' ) );
+		add_filter( 'jetpack_xmlrpc_methods', array( $this, 'register_jetpack_xmlrpc_methods' ) );
 		foreach ( Modules::get_modules() as $module ) {
 			$module->init_before_send();
 		}
@@ -260,22 +260,9 @@ class Sender {
 		if ( ! $sync_module ) {
 			return;
 		}
-		// Full Sync Disabled.
 		if ( ! Settings::get_setting( 'full_sync_sender_enabled' ) ) {
 			return;
 		}
-
-		// Don't sync if request is marked as read only.
-		if ( Constants::is_true( 'JETPACK_SYNC_READ_ONLY' ) ) {
-			return new \WP_Error( 'jetpack_sync_read_only' );
-		}
-
-		// Sync not started or Sync finished.
-		$status = $sync_module->get_status();
-		if ( false === $status['started'] || ( ! empty( $status['started'] ) && ! empty( $status['finished'] ) ) ) {
-			return false;
-		}
-
 		$this->continue_full_sync_enqueue();
 		// immediate full sync sends data in continue_full_sync_enqueue.
 		if ( false === strpos( get_class( $sync_module ), 'Full_Sync_Immediately' ) ) {
@@ -349,16 +336,6 @@ class Sender {
 			return new \WP_Error( 'sender_disabled_for_queue_' . $queue->id );
 		}
 
-		// Return early if we've gotten a retry-after header response.
-		$retry_time = get_option( Actions::RETRY_AFTER_PREFIX . $queue->id );
-		if ( $retry_time ) {
-			// If expired update to false but don't send. Send will occurr in new request to avoid race conditions.
-			if ( microtime( true ) > $retry_time ) {
-				update_option( Actions::RETRY_AFTER_PREFIX . $queue->id, false, false );
-			}
-			return new \WP_Error( 'retry_after' );
-		}
-
 		// Don't sync if we are throttled.
 		if ( $this->get_next_sync_time( $queue->id ) > microtime( true ) ) {
 			return new \WP_Error( 'sync_throttled' );
@@ -404,10 +381,6 @@ class Sender {
 		$upload_size   = 0;
 		$items_to_send = array();
 		$items         = is_array( $buffer_or_items ) ? $buffer_or_items : $buffer_or_items->get_items();
-		if ( ! is_array( $items ) ) {
-			$items = array();
-		}
-
 		// Set up current screen to avoid errors rendering content.
 		require_once ABSPATH . 'wp-admin/includes/class-wp-screen.php';
 		require_once ABSPATH . 'wp-admin/includes/screen.php';

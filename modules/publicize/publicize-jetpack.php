@@ -1,6 +1,5 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 
-use Automattic\Jetpack\Connection\Tokens;
 use Automattic\Jetpack\Redirect;
 
 class Publicize extends Publicize_Base {
@@ -8,7 +7,7 @@ class Publicize extends Publicize_Base {
 	function __construct() {
 		parent::__construct();
 
-		add_filter( 'jetpack_xmlrpc_unauthenticated_methods', array( $this, 'register_update_publicize_connections_xmlrpc_method' ) );
+		add_filter( 'jetpack_xmlrpc_methods', array( $this, 'register_update_publicize_connections_xmlrpc_method' ) );
 
 		add_action( 'load-settings_page_sharing', array( $this, 'admin_page_load' ), 9 );
 
@@ -48,7 +47,7 @@ class Publicize extends Publicize_Base {
 
 	function force_user_connection() {
 		global $current_user;
-		$user_token        = ( new Tokens() )->get_access_token( $current_user->ID );
+		$user_token        = Jetpack_Data::get_access_token( $current_user->ID );
 		$is_user_connected = $user_token && ! is_wp_error( $user_token );
 
 		// If the user is already connected via Jetpack, then we're good
@@ -155,7 +154,7 @@ class Publicize extends Publicize_Base {
 		if ( ! empty( $connections ) ) {
 			foreach ( (array) $connections as $service_name => $connections_for_service ) {
 				foreach ( $connections_for_service as $id => $connection ) {
-					$user_id = (int) $connection['connection_data']['user_id'];
+					$user_id = intval( $connection['connection_data']['user_id'] );
 					// phpcs:ignore WordPress.PHP.YodaConditions.NotYoda
 					if ( $user_id === 0 || $this->user_id() === $user_id ) {
 						$connections_to_return[ $service_name ][ $id ] = $connection;

@@ -19,10 +19,6 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * styling from each theme; including fixed footer.
  */
 class The_Neverending_Home_Page {
-	/**
-	* Maximum allowed number of posts per page in $_REQUEST.
-	*/
-	const MAX_ALLOWED_POSTS_PER_PAGE_ΙΝ_REQUEST = 5000;
 
 	/**
 	 * Register actions and filters, plus parse IS settings
@@ -257,23 +253,11 @@ class The_Neverending_Home_Page {
 	 * @return int
 	 */
 	static function posts_per_page() {
-		$posts_per_page             = self::get_settings()->posts_per_page ? self::get_settings()->posts_per_page : self::wp_query()->get( 'posts_per_page' );
-		$posts_per_page_core_option = get_option( 'posts_per_page' );
+		$posts_per_page = self::get_settings()->posts_per_page ? self::get_settings()->posts_per_page : self::wp_query()->get( 'posts_per_page' );
 
-		// If Infinite Scroll is set to click, and if the site owner changed posts_per_page, let's use that.
-		if (
-			'click' === self::get_settings()->type
-				&& ( '10' !== $posts_per_page_core_option )
-		) {
-			$posts_per_page = $posts_per_page_core_option;
-		}
-
-		// Take JS query into consideration here.
-		$posts_per_page_in_request = isset( $_REQUEST['query_args']['posts_per_page'] ) ? (int) $_REQUEST['query_args']['posts_per_page'] : 0; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		if ( $posts_per_page_in_request > 0 &&
-			self::MAX_ALLOWED_POSTS_PER_PAGE_ΙΝ_REQUEST >= $posts_per_page_in_request
-		) {
-			$posts_per_page = $posts_per_page_in_request;
+		// Take JS query into consideration here
+		if ( true === isset( $_REQUEST['query_args']['posts_per_page'] ) ) {
+			$posts_per_page = $_REQUEST['query_args']['posts_per_page'];
 		}
 
 		/**
@@ -468,7 +452,7 @@ class The_Neverending_Home_Page {
 				'modules/infinite-scroll/infinity.js'
 			),
 			array(),
-			JETPACK__VERSION . '-is5.0.1', // Added for ability to cachebust on WP.com.
+			JETPACK__VERSION . '-is5.0.0', // Added for ability to cachebust on WP.com.
 			true
 		);
 

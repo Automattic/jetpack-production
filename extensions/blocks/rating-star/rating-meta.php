@@ -4,7 +4,7 @@
  *
  * @since 8.0.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 if ( ! function_exists( 'jetpack_rating_meta_get_symbol_low_fidelity' ) ) {
