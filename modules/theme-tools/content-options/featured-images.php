@@ -5,22 +5,8 @@
 function jetpack_featured_images_remove_post_thumbnail( $metadata, $object_id, $meta_key, $single ) {
 	$opts = jetpack_featured_images_get_settings();
 
-	/**
-	 * Allow featured images to be displayed at all times for specific CPTs.
-	 *
-	 * @module theme-tools
-	 *
-	 * @since 9.1.0
-	 *
-	 * @param array $excluded_post_types Array of excluded post types.
-	 */
-	$excluded_post_types = apply_filters(
-		'jetpack_content_options_featured_image_exclude_cpt',
-		array( 'jp_pay_product' )
-	);
-
-	// Automatically return metadata for specific post types, when we don't want to hide the Featured Image.
-	if ( in_array( get_post_type( $object_id ), $excluded_post_types, true ) ) {
+	// Automatically return metadata if it's a PayPal product - we don't want to hide the Featured Image.
+	if ( 'jp_pay_product' === get_post_type( $object_id ) ) {
 		return $metadata;
 	}
 
@@ -88,7 +74,7 @@ function jetpack_is_shop_page() {
 	$current_page_id      = $wp_query->get( 'page_id' );
 	$is_static_front_page = 'page' === get_option( 'show_on_front' );
 
-	if ( $is_static_front_page && $front_page_id === $current_page_id ) {
+	if ( $is_static_front_page && $front_page_id === $current_page_id  ) {
 		$is_shop_page = ( $current_page_id === wc_get_page_id( 'shop' ) ) ? true : false;
 	} else {
 		$is_shop_page = is_shop();
