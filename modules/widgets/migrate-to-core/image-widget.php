@@ -4,8 +4,46 @@
  *
  * @since 4.9
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
+
+/**
+ * Stores legacy image widget data in the database.
+ */
+function jetpack_store_legacy_image_widget_options( $option_name, $option_value ){
+	$post = get_page_by_title( $option_name, 'OBJECT', 'jetpack_migration' );
+
+	if ( null !== $post ) {
+		return wp_insert_post( array(
+			'ID' => $post->ID,
+			'post_title' => $option_name,
+			'post_content_filtered' => $option_value,
+			'post_type' => 'jetpack_migration',
+			'post_date' => date( 'Y-m-d H:i:s', time() ),
+		), true );
+	} else {
+		return wp_insert_post( array(
+			'post_title' => $option_name,
+			'post_content_filtered' => $option_value,
+			'post_type' => 'jetpack_migration',
+			'post_date' => date( 'Y-m-d H:i:s', time() ),
+		), true );
+	}
+}
+
+/**
+ * Retrieves legacy image widget data.
+ */
+function jetpack_get_legacy_image_widget_option( $option_name ) {
+
+	$post = get_page_by_title( $option_name, 'OBJECT', 'jetpack_migration' );
+
+	if ( null !== $post ) {
+		return maybe_unserialize( $post->post_content_filtered );
+	} else {
+		return null;
+	}
+}
 
 /**
  * Migrates all active instances of Jetpack's image widget to Core's media image widget.
@@ -46,13 +84,13 @@ function jetpack_migrate_image_widget() {
 	$sidebars_widgets = wp_get_sidebars_widgets();
 
 	// Persist old and current widgets in backup table.
-	jetpack_store_migration_data( 'widget_image', maybe_serialize( $old_widgets ) );
-	if ( jetpack_get_migration_data( 'widget_image' ) !== $old_widgets ) {
+	jetpack_store_legacy_image_widget_options( 'widget_image', maybe_serialize( $old_widgets ) );
+	if ( jetpack_get_legacy_image_widget_option( 'widget_image' ) !== $old_widgets ) {
 		return false;
 	}
 
-	jetpack_store_migration_data( 'sidebars_widgets', maybe_serialize( $sidebars_widgets ) );
-	if ( jetpack_get_migration_data( 'sidebars_widgets' ) !== $sidebars_widgets ) {
+	jetpack_store_legacy_image_widget_options( 'sidebars_widgets', maybe_serialize( $sidebars_widgets ) );
+	if ( jetpack_get_legacy_image_widget_option( 'sidebars_widgets' ) !== $sidebars_widgets ) {
 		return false;
 	}
 
@@ -72,24 +110,21 @@ function jetpack_migrate_image_widget() {
 		// Ensure widget has no keys other than those expected.
 		// Not all widgets have conditions, so lets add it in.
 		$widget_copy = array_merge( array( 'conditions' => null ), $widget );
-		$non_allowed_keys = array_diff_key(
-			$widget_copy,
-			array(
-				'title'             => '',
-				'img_url'           => '',
-				'alt_text'          => '',
-				'img_title'         => '',
-				'caption'           => '',
-				'align'             => '',
-				'img_width'         => '',
-				'img_height'        => '',
-				'link'              => '',
-				'link_target_blank' => '',
-				'conditions'        => '',
-			)
-		);
+		$non_whitelisted_keys = array_diff_key( $widget_copy, array(
+			'title' => '',
+			'img_url' => '',
+			'alt_text' => '',
+			'img_title' => '',
+			'caption' => '',
+			'align' => '',
+			'img_width' => '',
+			'img_height' => '',
+			'link' => '',
+			'link_target_blank' => '',
+			'conditions' => '',
+		) );
 
-		if ( count( $non_allowed_keys ) > 0 ) {
+		if ( count( $non_whitelisted_keys ) > 0 ) {
 			// skipping the widget in question
 			continue;
 		}
@@ -133,7 +168,6 @@ function jetpack_migrate_image_widget() {
 			),
 			'post_status' => 'inherit',
 			'post_type'   => 'attachment',
-			'suppress_filters' => false,
 		) );
 
 		foreach ( $attachment_ids as $attachment_id ) {
@@ -202,22 +236,16 @@ function jetpack_migrate_image_widget() {
 
 		wp_set_sidebars_widgets( $sidebars_widgets );
 
+		Jetpack_Options::update_option( 'image_widget_migration', true );
+
 		// We need to refresh on widgets page for changes to take effect.
 		add_action( 'current_screen', 'jetpack_refresh_on_widget_page' );
-	} else {
-		$widget_media_image = get_option( 'widget_media_image' );
-		if ( is_array( $widget_media_image ) ) {
-			delete_option( 'widget_image' );
-		}
 	}
-
-	Jetpack_Options::update_option( 'image_widget_migration', true );
 }
 add_action( 'widgets_init', 'jetpack_migrate_image_widget' );
 
 function jetpack_refresh_on_widget_page( $current ) {
 	if ( 'widgets' === $current->base ) {
 		wp_safe_redirect( admin_url( 'widgets.php' ) );
-		exit;
 	}
 }

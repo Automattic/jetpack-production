@@ -20,7 +20,7 @@ function jetpack_featured_images_fallback_get_image( $html, $post_id, $post_thum
 	}
 
 	if ( jetpack_featured_images_should_load() ) {
-		if (
+		if ( 
 			( true === $opts['archive'] && ( is_home() || is_archive() || is_search() ) && ! $opts['archive-option'] )
 			|| ( true === $opts['post'] && is_single() && ! $opts['post-option'] )
 			|| ! $opts['fallback-option']
@@ -57,7 +57,7 @@ function jetpack_featured_images_fallback_get_image( $html, $post_id, $post_thum
 			// Use the theme's crop setting rather than forcing to true
 			$image_src = add_query_arg( 'crop', $image['crop'], $image_src );
 
-			$html = '<img src="' . esc_url( $image_src ) . '" title="' . esc_attr( strip_tags( get_the_title() ) ) . '" class="attachment-' . esc_attr( $size ) . ' wp-post-image" />';
+			$html      = '<img src="' . esc_url( $image_src ) . '" title="' . esc_attr( strip_tags( get_the_title() ) ) . '" class="attachment-' . esc_attr( $size ) . ' wp-post-image" />';
 
 			return trim( $html );
 		}
@@ -71,9 +71,9 @@ add_filter( 'post_thumbnail_html', 'jetpack_featured_images_fallback_get_image',
  * Get URL of one image from a specified post in the following order:
  * Featured Image then first image from the_content HTML
  *
- * @param int    $post_id           The post ID to check.
- * @param int    $post_thumbnail_id The ID of the featured image.
- * @param string $size              The image size to return, defaults to 'post-thumbnail'.
+ * @param int          $post_id           The post ID to check.
+ * @param int          $post_thumbnail_id The ID of the featured image.
+ * @param string       $size              The image size to return, defaults to 'post-thumbnail'.
  *
  * @return string|null $image_src         The URL of the thumbnail image.
  */
@@ -142,9 +142,9 @@ function jetpack_has_featured_image( $post = null ) {
 /**
  * Adds custom class to the array of post classes.
  *
- * @param array $classes Classes for the post element.
- * @param array $class   Optional. Comma separated list of additional classes.
- * @param array $post_id Unique The post ID to check
+ * @param array  $classes Classes for the post element.
+ * @param array  $class   Optional. Comma separated list of additional classes.
+ * @param array  $post_id Unique The post ID to check
  *
  * @return array $classes
  */
@@ -152,7 +152,7 @@ function jetpack_featured_images_post_class( $classes, $class, $post_id ) {
 	$post_password_required = post_password_required( $post_id );
 	$opts                   = jetpack_featured_images_get_settings();
 
-	if ( jetpack_has_featured_image( $post_id ) && (bool) 1 === (bool) $opts['fallback-option'] && ! is_attachment() && ! $post_password_required && 'post' === get_post_type() ) {
+	if ( jetpack_has_featured_image( $post_id ) && (bool) 1 === (bool) $opts['fallback-option'] && ! is_attachment() && ! $post_password_required ) {
 		$classes[] = 'has-post-thumbnail';
 	}
 

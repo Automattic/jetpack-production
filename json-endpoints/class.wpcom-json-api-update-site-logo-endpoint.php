@@ -1,54 +1,5 @@
 <?php
 
-new WPCOM_JSON_API_Update_Site_Logo_Endpoint( array (
-	'description'      => 'Set site logo settings',
-	'group'            => '__do_not_document',
-	'stat'             => 'sites:1:logo',
-	'method'           => 'POST',
-	'min_version'      => '1.1',
-	'path'             => '/sites/%s/logo',
-	'path_labels'      => array(
-		'$site' => '(string) Site ID or domain.',
-	),
-	'request_format'  => array(
-		'id' => '(int) The ID of the logo post',
-		'url' => '(string) The URL of the logo post',
-	),
-	'response_format'  => array(
-		'id' => '(int) The ID of the logo post',
-		'url' => '(string) The URL of the logo post',
-	),
-	'example_request'  => 'https://public-api.wordpress.com/rest/v1.1/sites/82974409/logo',
-	'example_request_data' => array(
-		'headers' => array( 'authorization' => 'Bearer YOUR_API_TOKEN' ),
-		'body' => array(
-			'id' => 12345,
-			'url' => 'https://s.w.org/about/images/logos/codeispoetry-rgb.png',
-		),
-	),
-	'example_response' => '
-	{
-		"id": 12345,
-		"url": "https:\/\/s.w.org\/about\/images\/logos\/codeispoetry-rgb.png"
-	}'
-) );
-
-new WPCOM_JSON_API_Update_Site_Logo_Endpoint( array (
-	'description'      => 'Delete site logo settings',
-	'group'            => '__do_not_document',
-	'stat'             => 'sites:1:logo:delete',
-	'method'           => 'POST',
-	'min_version'      => '1.1',
-	'path'             => '/sites/%s/logo/delete',
-	'path_labels'      => array(
-		'$site' => '(string) Site ID or domain.',
-	),
-	'example_request'  => 'https://public-api.wordpress.com/rest/v1.1/sites/82974409/logo/delete',
-	'example_request_data' => array(
-		'headers' => array( 'authorization' => 'Bearer YOUR_API_TOKEN' ),
-	),
-) );
-
 class WPCOM_JSON_API_Update_Site_Logo_Endpoint extends WPCOM_JSON_API_Endpoint {
 	function callback( $path = '', $site_id = 0 ) {
 		// Switch to the given blog.
@@ -73,7 +24,7 @@ class WPCOM_JSON_API_Update_Site_Logo_Endpoint extends WPCOM_JSON_API_Endpoint {
 		}
 
 		if ( isset( $args['id'] ) ) {
-			$logo_settings['id'] = (int) $args['id'];
+			$logo_settings['id'] = intval( $args['id'], 10 );
 		}
 		if ( isset( $args['url'] ) ) {
 			$logo_settings['url'] = $args['url'];

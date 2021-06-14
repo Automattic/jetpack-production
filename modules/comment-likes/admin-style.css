@@ -1,3 +1,11 @@
+.vers img {
+    display: none;
+}
+
+.metabox-prefs .vers img {
+    display: inline;
+}
+
 .fixed .column-comment_likes {
     width: 5.5em;
     padding: 8px 0;
@@ -9,6 +17,8 @@
 }
 
 .fixed .column-comment_likes .comment-like-count {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
     padding: 0 8px;
@@ -16,18 +26,18 @@
     margin-top: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    background-color: #787c82;
-    color: #fff;
+    background-color: #72777C;
+    color: #FFF;
     font-size: 11px;
     line-height: 21px;
 }
 
 .fixed .column-comment_likes .comment-like-count:after {
-    border: none;
+    border: none !important;
 }
 
 .fixed .column-comment_likes .comment-like-count:hover {
-    background-color: #2271b1;
+    background-color: #0073AA;
 }
 
 .fixed .column-comment_likes .vers:before {
