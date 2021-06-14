@@ -266,12 +266,6 @@ abstract class Jetpack_JSON_API_Plugins_Endpoint extends Jetpack_JSON_API_Endpoi
 
 			$formatted_plugin = $this->format_plugin( $plugin, $installed_plugins[ $plugin ] );
 
-			// If this endpoint accepts site based authentication and a blog token is used, skip capabilities check.
-			if ( $this->accepts_site_based_authentication() ) {
-				$plugins[] = $formatted_plugin;
-				continue;
-			}
-
 			/*
 			 * Do not show network-active plugins
 			 * to folks who do not have the permission to see them.
@@ -304,11 +298,6 @@ abstract class Jetpack_JSON_API_Plugins_Endpoint extends Jetpack_JSON_API_Endpoi
 
 		if ( isset( $args['network_wide'] ) && $args['network_wide'] ) {
 			$this->network_wide = true;
-		}
-
-		// If this endpoint accepts site based authentication and a blog token is used, skip capabilities check.
-		if ( $this->accepts_site_based_authentication() ) {
-			return true;
 		}
 
 		if ( $this->network_wide && ! current_user_can( 'manage_network_plugins' ) ) {

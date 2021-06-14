@@ -39,7 +39,6 @@
 
 			var args = 'relatedposts=1';
 			var relatedPosts = document.querySelector( '#jp-relatedposts' );
-
 			if ( relatedPosts.hasAttribute( 'data-exclude' ) ) {
 				args += '&relatedposts_exclude=' + relatedPosts.getAttribute( 'data-exclude' );
 			}
@@ -165,8 +164,6 @@
 						post.img.src +
 						'" width="' +
 						post.img.width +
-						'" height="' +
-						post.img.height +
 						'" alt="' +
 						post.img.alt_text +
 						'" />' +

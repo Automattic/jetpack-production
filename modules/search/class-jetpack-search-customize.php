@@ -139,9 +139,8 @@ class Jetpack_Search_Customize {
 				'section'     => $section_id,
 				'type'        => 'select',
 				'choices'     => array(
-					'immediate' => __( 'Open when user starts typing', 'jetpack' ),
+					'immediate' => __( 'Open when the user starts typing', 'jetpack' ),
 					'results'   => __( 'Open when results are available', 'jetpack' ),
-					'submit'    => __( 'Open when user submits the form', 'jetpack' ),
 				),
 			)
 		);
@@ -159,7 +158,7 @@ class Jetpack_Search_Customize {
 				$wp_customize,
 				$id,
 				array(
-					'description' => __( 'Choose post types to exclude from search results. You must leave at least one post type unchecked.', 'jetpack' ),
+					'description' => __( 'Choose post types to exclude from search results.', 'jetpack' ),
 					'label'       => __( 'Excluded Post Types', 'jetpack' ),
 					'section'     => $section_id,
 				)

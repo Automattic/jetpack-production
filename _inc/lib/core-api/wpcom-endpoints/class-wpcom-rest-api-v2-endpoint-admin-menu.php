@@ -113,6 +113,13 @@ class WPCOM_REST_API_V2_Endpoint_Admin_Menu extends WP_REST_Controller {
 			if ( ! empty( $submenu[ $menu_item[2] ] ) ) {
 				$submenu_items = array_values( $submenu[ $menu_item[2] ] );
 
+				// If the user doesn't have the caps for the top level menu item, let's promote the first submenu item.
+				if ( empty( $item ) ) {
+					$menu_item[1] = $submenu_items[0][1]; // Capability.
+					$menu_item[2] = $submenu_items[0][2]; // Menu slug.
+					$item         = $this->prepare_menu_item( $menu_item );
+				}
+
 				// Add submenu items.
 				foreach ( $submenu_items as $submenu_item ) {
 					$submenu_item = $this->prepare_submenu_item( $submenu_item, $menu_item );
@@ -146,22 +153,18 @@ class WPCOM_REST_API_V2_Endpoint_Admin_Menu extends WP_REST_Controller {
 			'title'      => 'Admin Menu',
 			'type'       => 'object',
 			'properties' => array(
-				'count'      => array(
+				'count'    => array(
 					'description' => 'Core/Plugin/Theme update count or unread comments count.',
 					'type'        => 'integer',
 				),
-				'icon'       => array(
+				'icon'     => array(
 					'description' => 'Menu item icon. Dashicon slug or base64-encoded SVG.',
 					'type'        => 'string',
 				),
-				'inlineText' => array(
-					'description' => 'Additional text to be added inline with the menu title.',
-					'type'        => 'string',
-				),
-				'slug'       => array(
+				'slug'     => array(
 					'type' => 'string',
 				),
-				'children'   => array(
+				'children' => array(
 					'items' => array(
 						'count'  => array(
 							'description' => 'Core/Plugin/Theme update count or unread comments count.',
@@ -187,14 +190,14 @@ class WPCOM_REST_API_V2_Endpoint_Admin_Menu extends WP_REST_Controller {
 					),
 					'type'  => 'array',
 				),
-				'title'      => array(
+				'title'    => array(
 					'type' => 'string',
 				),
-				'type'       => array(
+				'type'     => array(
 					'enum' => array( 'separator', 'menu-item' ),
 					'type' => 'string',
 				),
-				'url'        => array(
+				'url'      => array(
 					'format' => 'uri',
 					'type'   => 'string',
 				),
@@ -211,17 +214,8 @@ class WPCOM_REST_API_V2_Endpoint_Admin_Menu extends WP_REST_Controller {
 	private function prepare_menu_item( array $menu_item ) {
 		global $submenu;
 
-		$current_user_can_access_menu = current_user_can( $menu_item[1] );
-		$submenu_items                = isset( $submenu[ $menu_item[2] ] ) ? array_values( $submenu[ $menu_item[2] ] ) : array();
-		$has_first_menu_item          = isset( $submenu_items[0] );
-
-		// Exclude unauthorized menu items when the user does not have access to the menu and the first submenu item.
-		if ( ! $current_user_can_access_menu && $has_first_menu_item && ! current_user_can( $submenu_items[0][1] ) ) {
-			return array();
-		}
-
-		// Exclude unauthorized menu items that don't have submenus.
-		if ( ! $current_user_can_access_menu && ! $has_first_menu_item ) {
+		// Exclude unauthorized menu items.
+		if ( ! current_user_can( $menu_item[1] ) ) {
 			return array();
 		}
 
@@ -339,14 +333,12 @@ class WPCOM_REST_API_V2_Endpoint_Admin_Menu extends WP_REST_Controller {
 			if ( 0 === strpos( $url, 'https://wordpress.com/' ) ) {
 				// Calypso needs the domain removed so they're not interpreted as external links.
 				$url = str_replace( 'https://wordpress.com', '', $url );
-				// Replace special characters with their correct entities e.g. &amp; to &.
-				return wp_specialchars_decode( esc_url_raw( $url ) );
+				return esc_url_raw( $url );
 			}
 
 			// Allow URLs pointing to Jetpack.com.
 			if ( 0 === strpos( $url, 'https://jetpack.com/' ) ) {
-				// Replace special characters with their correct entities e.g. &amp; to &.
-				return wp_specialchars_decode( esc_url_raw( $url ) );
+				return esc_url_raw( $url );
 			}
 
 			// Disallow other external URLs.
@@ -378,7 +370,7 @@ class WPCOM_REST_API_V2_Endpoint_Admin_Menu extends WP_REST_Controller {
 			$url = admin_url( $url );
 		}
 
-		return wp_specialchars_decode( esc_url_raw( $url ) );
+		return esc_url_raw( $url );
 	}
 
 	/**
@@ -400,19 +392,6 @@ class WPCOM_REST_API_V2_Endpoint_Admin_Menu extends WP_REST_Controller {
 			if ( $count > 0 ) {
 				// Keep the counter in the item array.
 				$item['count'] = $count;
-			}
-
-			// Finally remove the markup.
-			$title = trim( str_replace( $matches[0], '', $title ) );
-		}
-
-		if ( false !== strpos( $title, 'inline-text' ) ) {
-			preg_match( '/<span class="inline-text".+\s?>(.+)<\/span>/', $title, $matches );
-
-			$text = $matches[1];
-			if ( $text ) {
-				// Keep the text in the item array.
-				$item['inlineText'] = $text;
 			}
 
 			// Finally remove the markup.

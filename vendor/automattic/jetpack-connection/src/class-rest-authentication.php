@@ -21,16 +21,6 @@ class Rest_Authentication {
 	private $rest_authentication_status = null;
 
 	/**
-	 * The rest authentication type.
-	 * Can be either 'user' or 'blog' depending on whether the request
-	 * is signed with a user or a blog token.
-	 *
-	 * @since 9.9.0
-	 * @var string
-	 */
-	private $rest_authentication_type = null;
-
-	/**
 	 * The Manager object.
 	 *
 	 * @since 8.9.0
@@ -83,7 +73,7 @@ class Rest_Authentication {
 	 *
 	 * @param int|bool $user User ID if one has been determined, false otherwise.
 	 *
-	 * @return int|null The user id or null if the request was authenticated via blog token, or not authenticated at all.
+	 * @return int|null The user id or null if the request was not authenticated.
 	 */
 	public function wp_rest_authenticate( $user ) {
 		if ( $this->doing_determine_current_user_filter ) {
@@ -152,23 +142,11 @@ class Rest_Authentication {
 			if (
 				$verified &&
 				isset( $verified['type'] ) &&
-				'blog' === $verified['type']
-			) {
-				// Site-level authentication successful.
-				$this->rest_authentication_status = true;
-				$this->rest_authentication_type   = 'blog';
-				return null;
-			}
-
-			if (
-				$verified &&
-				isset( $verified['type'] ) &&
 				'user' === $verified['type'] &&
 				! empty( $verified['user_id'] )
 			) {
-				// User-level authentication successful.
+				// Authentication successful.
 				$this->rest_authentication_status = true;
-				$this->rest_authentication_type   = 'user';
 				return $verified['user_id'];
 			}
 
@@ -203,18 +181,5 @@ class Rest_Authentication {
 	public function reset_saved_auth_state() {
 		$this->rest_authentication_status = null;
 		$this->connection_manager->reset_saved_auth_state();
-	}
-
-	/**
-	 * Whether the request was signed with a blog token.
-	 *
-	 * @since 9.9.0
-	 *
-	 * @return bool True if the request was signed with a valid blog token, false otherwise.
-	 */
-	public static function is_signed_with_blog_token() {
-		$instance = self::init();
-
-		return true === $instance->rest_authentication_status && 'blog' === $instance->rest_authentication_type;
 	}
 }

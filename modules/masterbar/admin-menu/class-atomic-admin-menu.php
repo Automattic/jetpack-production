@@ -7,9 +7,6 @@
 
 namespace Automattic\Jetpack\Dashboard_Customizations;
 
-use Automattic\Jetpack\Connection\Client;
-use Jetpack_Plan;
-
 require_once __DIR__ . '/class-admin-menu.php';
 
 /**
@@ -25,11 +22,6 @@ class Atomic_Admin_Menu extends Admin_Menu {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_scripts' ), 20 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'dequeue_scripts' ), 20 );
-		add_action( 'wp_ajax_sidebar_state', array( $this, 'ajax_sidebar_state' ) );
-
-		if ( ! $this->is_api_request ) {
-			add_filter( 'submenu_file', array( $this, 'override_the_theme_installer' ), 10, 2 );
-		}
 
 		add_action(
 			'admin_menu',
@@ -69,10 +61,6 @@ class Atomic_Admin_Menu extends Admin_Menu {
 		if ( ! $this->is_api_request ) {
 			$this->add_browse_sites_link();
 			$this->add_site_card_menu();
-			$nudge = $this->get_upsell_nudge();
-			if ( $nudge ) {
-				parent::add_upsell_nudge( $nudge );
-			}
 			$this->add_new_site_link();
 		}
 
@@ -153,7 +141,7 @@ class Atomic_Admin_Menu extends Admin_Menu {
 		}
 
 		$this->add_admin_menu_separator();
-		add_menu_page( __( 'Add New Site', 'jetpack' ), __( 'Add New Site', 'jetpack' ), 'read', 'https://wordpress.com/start?ref=calypso-sidebar', null, 'dashicons-plus-alt' );
+		add_menu_page( __( 'Add new site', 'jetpack' ), __( 'Add new site', 'jetpack' ), 'read', 'https://wordpress.com/start?ref=calypso-sidebar', null, 'dashicons-plus-alt' );
 	}
 
 	/**
@@ -219,58 +207,12 @@ class Atomic_Admin_Menu extends Admin_Menu {
 	}
 
 	/**
-	 * Returns the first available upsell nudge.
-	 *
-	 * @return array
-	 */
-	public function get_upsell_nudge() {
-		$jitm         = \Automattic\Jetpack\JITMS\JITM::get_instance();
-		$message_path = 'calypso:sites:sidebar_notice';
-		$message      = $jitm->get_messages( $message_path, wp_json_encode( array( 'message_path' => $message_path ) ), false );
-
-		if ( isset( $message[0] ) ) {
-			$message = $message[0];
-			return array(
-				'content'                      => $message->content->message,
-				'cta'                          => $message->CTA->message, // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-				'link'                         => $message->CTA->link, // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-				'tracks_impression_event_name' => $message->tracks->display->name,
-				'tracks_impression_cta_name'   => $message->tracks->display->props->cta_name,
-				'tracks_click_event_name'      => $message->tracks->click->name,
-				'tracks_click_cta_name'        => $message->tracks->click->props->cta_name,
-			);
-		}
-	}
-
-	/**
 	 * Adds Upgrades menu.
-	 *
-	 * @param string $plan The current WPCOM plan of the blog.
 	 */
-	public function add_upgrades_menu( $plan = null ) {
-		$products = Jetpack_Plan::get();
-		if ( array_key_exists( 'product_name_short', $products ) ) {
-			$plan = $products['product_name_short'];
-		}
-		parent::add_upgrades_menu( $plan );
+	public function add_upgrades_menu() {
+		parent::add_upgrades_menu();
 
-		$last_upgrade_submenu_position = $this->get_submenu_item_count( 'paid-upgrades.php' );
-
-		add_submenu_page( 'paid-upgrades.php', __( 'Domains', 'jetpack' ), __( 'Domains', 'jetpack' ), 'manage_options', 'https://wordpress.com/domains/manage/' . $this->domain, null, $last_upgrade_submenu_position - 1 );
-
-		/**
-		 * Whether to show the WordPress.com Emails submenu under the main Upgrades menu.
-		 *
-		 * @use add_filter( 'jetpack_show_wpcom_upgrades_email_menu', '__return_true' );
-		 * @module masterbar
-		 *
-		 * @since 9.7.0
-		 *
-		 * @param bool $show_wpcom_upgrades_email_menu Load the WordPress.com Emails submenu item. Default to false.
-		 */
-		if ( apply_filters( 'jetpack_show_wpcom_upgrades_email_menu', false ) ) {
-			add_submenu_page( 'paid-upgrades.php', __( 'Emails', 'jetpack' ), __( 'Emails', 'jetpack' ), 'manage_options', 'https://wordpress.com/email/' . $this->domain, null, $last_upgrade_submenu_position );
-		}
+		add_submenu_page( 'paid-upgrades.php', __( 'Domains', 'jetpack' ), __( 'Domains', 'jetpack' ), 'manage_options', 'https://wordpress.com/domains/manage/' . $this->domain, null, 10 );
 	}
 
 	/**
@@ -296,6 +238,7 @@ class Atomic_Admin_Menu extends Admin_Menu {
 
 		// No need to add a menu linking to WP Admin if there is already one.
 		if ( ! $wp_admin ) {
+			add_submenu_page( 'options-general.php', esc_attr__( 'Advanced General', 'jetpack' ), __( 'Advanced General', 'jetpack' ), 'manage_options', 'options-general.php' );
 			add_submenu_page( 'options-general.php', esc_attr__( 'Advanced Writing', 'jetpack' ), __( 'Advanced Writing', 'jetpack' ), 'manage_options', 'options-writing.php' );
 		}
 	}
@@ -311,21 +254,6 @@ class Atomic_Admin_Menu extends Admin_Menu {
 		parent::add_appearance_menu( $wp_admin_themes, true );
 
 		add_submenu_page( 'themes.php', esc_attr__( 'Add New Theme', 'jetpack' ), __( 'Add New Theme', 'jetpack' ), 'install_themes', 'theme-install.php', null, 1 );
-	}
-
-	/**
-	 * Override the global submenu_file for theme-install.php page so the WP Admin menu item gets highlighted correctly.
-	 *
-	 * @param string $submenu_file The current pages $submenu_file global variable value.
-	 * @return string | null
-	 */
-	public function override_the_theme_installer( $submenu_file ) {
-		global $pagenow;
-
-		if ( 'themes.php' === $submenu_file && 'theme-install.php' === $pagenow ) {
-			return null;
-		}
-		return $submenu_file;
 	}
 
 	/**
@@ -348,32 +276,5 @@ class Atomic_Admin_Menu extends Admin_Menu {
 		// Always remove the Gutenberg menu.
 		remove_menu_page( 'gutenberg' );
 		parent::add_gutenberg_menus( $wp_admin );
-	}
-
-	/**
-	 * Always use WP Admin for comments.
-	 *
-	 * @param bool $wp_admin Optional. Whether links should point to Calypso or wp-admin. Default false (Calypso).
-	 */
-	public function add_comments_menu( $wp_admin = false ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
-		parent::add_comments_menu( true );
-	}
-
-	/**
-	 * Saves the sidebar state ( expanded / collapsed ) via an ajax request.
-	 */
-	public function ajax_sidebar_state() {
-		$expanded = filter_var( $_REQUEST['expanded'], FILTER_VALIDATE_BOOLEAN ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		Client::wpcom_json_api_request_as_user(
-			'/me/preferences',
-			'2',
-			array(
-				'method' => 'POST',
-			),
-			(object) array( 'calypso_preferences' => (object) array( 'sidebarCollapsed' => ! $expanded ) ),
-			'wpcom'
-		);
-
-		wp_die();
 	}
 }
