@@ -2,7 +2,7 @@
 /**
  * Config for the WP.com REST API
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 define( 'WPCOM_JSON_API__CURRENT_VERSION', '1.1' );

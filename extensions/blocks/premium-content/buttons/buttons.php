@@ -2,7 +2,7 @@
 /**
  * Premium Content Buttons Child Block.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Premium_Content;

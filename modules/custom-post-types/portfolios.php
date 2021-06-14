@@ -289,7 +289,6 @@ class Jetpack_Portfolio {
 				'revisions',
 				'excerpt',
 				'custom-fields',
-				'newspack_blocks',
 			),
 			'rewrite' => array(
 				'slug'       => 'portfolio',

@@ -2,7 +2,7 @@
 /**
  * Functionality that is executed when Jetpack is uninstalled via built-in WordPress commands.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Backup\Helper_Script_Manager;

@@ -7,7 +7,6 @@
 
 namespace Automattic\Jetpack\Sync\Modules;
 
-use Automattic\Jetpack\Sync\Functions;
 use Automattic\Jetpack\Sync\Listener;
 use Automattic\Jetpack\Sync\Replicastore;
 use Automattic\Jetpack\Sync\Sender;
@@ -188,7 +187,7 @@ abstract class Module {
 		if ( $sort && is_array( $values ) ) {
 			$this->recursive_ksort( $values );
 		}
-		return crc32( wp_json_encode( Functions::json_wrap( $values ) ) );
+		return crc32( wp_json_encode( jetpack_json_wrap( $values ) ) );
 	}
 
 	/**

@@ -2,7 +2,7 @@
 /**
  * Domain Mapping 3rd Party
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 namespace Automattic\Jetpack\Third_Party;

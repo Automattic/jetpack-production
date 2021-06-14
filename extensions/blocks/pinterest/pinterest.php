@@ -4,7 +4,7 @@
  *
  * @since 8.0.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Pinterest;

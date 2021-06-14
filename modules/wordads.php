@@ -10,7 +10,7 @@
  * Additional Search Queries: advertising, ad codes, ads
  * Plans: premium, business, security, complete
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**

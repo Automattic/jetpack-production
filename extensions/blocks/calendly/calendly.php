@@ -4,7 +4,7 @@
  *
  * @since 8.2.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Calendly;
@@ -171,9 +171,6 @@ function enqueue_calendly_js() {
 		'jetpack-calendly-external-js',
 		"function jetpackInitCalendly( url, elementId ) {
 			function initCalendlyWidget() {
-				if ( ! document.getElementById( elementId ) ) {
-					return;
-				}
 				Calendly.initInlineWidget({
 					url: url,
 					parentElement: document.getElementById( elementId ),

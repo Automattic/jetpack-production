@@ -2,7 +2,7 @@
 /**
  * Our Site Logo class for managing a theme-agnostic logo through the Customizer.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 class Site_Logo {
 	/**

@@ -2,7 +2,7 @@
 /**
  * REST API endpoint for managing VideoPress metadata.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 9.3.0
  */
 

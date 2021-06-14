@@ -10,10 +10,6 @@
 		initialScrollPosition,
 		scrollFunction;
 
-	if ( null === widget || null === overlay ) {
-		return;
-	}
-
 	/**
 	 * Gets the amount that the window is scrolled.
 	 *

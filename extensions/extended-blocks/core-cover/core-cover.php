@@ -2,7 +2,7 @@
 /**
  * Plan checks for uploading video files to core/cover.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  **/
 
 // Populate the available extensions with core/cover.

@@ -2,7 +2,7 @@
 /**
  * Class for the Jetpack About Page within the wp-admin.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**

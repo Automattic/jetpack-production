@@ -2,7 +2,7 @@
 /**
  * Legacy Jetpack Tracks Client
  *
- * @package automattic/jetpack-tracking
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Connection\Manager;

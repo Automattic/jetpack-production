@@ -2,7 +2,7 @@
 /**
  * REST API endpoint for resolving URL redirects.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 8.0.0
  */
 

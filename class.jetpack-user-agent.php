@@ -2,7 +2,7 @@
 /**
  * Deprecated. Use Automattic\Jetpack\Device_Detection\User_Agent_Info instead.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  *
  * @deprecated 8.7.0 Use Automattic\Jetpack\Device_Detection\User_Agent_Info
  *

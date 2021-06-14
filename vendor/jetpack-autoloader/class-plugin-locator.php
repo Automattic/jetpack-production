@@ -5,7 +5,7 @@
  * @package automattic/jetpack-autoloader
  */
 
-namespace Automattic\Jetpack\Autoloader\jpf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ9_9_alpha;
+namespace Automattic\Jetpack\Autoloader\jpce302d0569c1e7e04f1a2b90682aef31;
 
  // phpcs:ignore
 
@@ -59,8 +59,8 @@ class Plugin_Locator {
 	 * @return array $plugin_paths The list of absolute paths we've found.
 	 */
 	public function find_using_option( $option_name, $site_option = false ) {
-		$raw = $site_option ? get_site_option( $option_name ) : get_option( $option_name );
-		if ( false === $raw ) {
+		$raw = $site_option ? get_site_option( $option_name, array() ) : get_option( $option_name, array() );
+		if ( empty( $raw ) ) {
 			return array();
 		}
 
@@ -128,10 +128,6 @@ class Plugin_Locator {
 	 * @return string[]
 	 */
 	private function convert_plugins_to_paths( $plugins ) {
-		if ( ! is_array( $plugins ) || empty( $plugins ) ) {
-			return array();
-		}
-
 		// We're going to look for plugins in the standard directories.
 		$path_constants = array( WP_PLUGIN_DIR, WPMU_PLUGIN_DIR );
 

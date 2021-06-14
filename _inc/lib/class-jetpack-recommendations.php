@@ -2,18 +2,12 @@
 /**
  * Utilities related to the Jetpack Recommendations
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Connection\Client;
 use Automattic\Jetpack\Connection\Manager as Connection_Manager;
 use Automattic\Jetpack\Status;
-
-/**
- * Contains utilities related to the Jetpack Recommendations.
- *
- * @package automattic/jetpack
- */
 
 /**
  * Jetpack_Recommendations class
@@ -27,8 +21,8 @@ class Jetpack_Recommendations {
 	 * @return bool
 	 */
 	public static function is_enabled() {
-		// Shortcircuit early if Jetpack is not active or we are in offline mode.
-		if ( ! Jetpack::is_connection_ready() || ( new Status() )->is_offline_mode() ) {
+		// Shortcircuit early if we are in offline mode.
+		if ( ( new Status() )->is_offline_mode() ) {
 			return false;
 		}
 
@@ -119,7 +113,7 @@ class Jetpack_Recommendations {
 	public static function get_recommendations_data() {
 		self::initialize_jetpack_recommendations();
 
-		return Jetpack_Options::get_option( 'recommendations_data', array() );
+		return Jetpack_Options::get_option( 'recommendations_data', (object) array() );
 	}
 
 	/**

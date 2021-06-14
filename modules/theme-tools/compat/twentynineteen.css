@@ -37,7 +37,7 @@
 .site-main #infinite-handle span button:hover,
 .site-main #infinite-handle span button:focus {
 	transition: background 150ms ease-in-out;
-	background: #2271b1;
+	background: #0073aa;
 	border: none;
 	border-radius: 5px;
 	box-sizing: border-box;

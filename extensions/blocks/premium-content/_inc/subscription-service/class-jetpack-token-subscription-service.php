@@ -8,7 +8,7 @@
 
 namespace Automattic\Jetpack\Extensions\Premium_Content\Subscription_Service;
 
-use Automattic\Jetpack\Connection\Tokens;
+use Automattic\Jetpack\Connection\Manager;
 
 /**
  * Class Jetpack_Token_Subscription_Service
@@ -41,7 +41,8 @@ class Jetpack_Token_Subscription_Service extends Token_Subscription_Service {
 	 * @return string The key.
 	 */
 	public function get_key() {
-		$token = ( new Tokens() )->get_access_token();
+		$connection = new Manager();
+		$token      = $connection->get_access_token();
 		if ( ! isset( $token->secret ) ) {
 			return false;
 		}

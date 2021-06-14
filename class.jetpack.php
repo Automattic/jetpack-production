@@ -1,24 +1,19 @@
 <?php
-
 use Automattic\Jetpack\Assets;
 use Automattic\Jetpack\Assets\Logo as Jetpack_Logo;
 use Automattic\Jetpack\Config;
 use Automattic\Jetpack\Connection\Client;
 use Automattic\Jetpack\Connection\Manager as Connection_Manager;
-use Automattic\Jetpack\Connection\Nonce_Handler;
 use Automattic\Jetpack\Connection\Plugin_Storage as Connection_Plugin_Storage;
 use Automattic\Jetpack\Connection\Rest_Authentication as Connection_Rest_Authentication;
-use Automattic\Jetpack\Connection\Secrets;
-use Automattic\Jetpack\Connection\Tokens;
 use Automattic\Jetpack\Connection\Utils as Connection_Utils;
-use Automattic\Jetpack\Connection\Webhooks as Connection_Webhooks;
 use Automattic\Jetpack\Constants;
 use Automattic\Jetpack\Device_Detection\User_Agent_Info;
-use Automattic\Jetpack\Identity_Crisis;
 use Automattic\Jetpack\Licensing;
 use Automattic\Jetpack\Partner;
 use Automattic\Jetpack\Plugin\Tracking as Plugin_Tracking;
 use Automattic\Jetpack\Redirect;
+use Automattic\Jetpack\Roles;
 use Automattic\Jetpack\Status;
 use Automattic\Jetpack\Sync\Functions;
 use Automattic\Jetpack\Sync\Health;
@@ -418,8 +413,6 @@ class Jetpack {
 		if ( ! self::$instance ) {
 			self::$instance = new Jetpack();
 			add_action( 'plugins_loaded', array( self::$instance, 'plugin_upgrade' ) );
-			// Initialize Identity Crisis.
-			add_action( 'plugins_loaded', array( 'Automattic\\Jetpack\\Identity_Crisis', 'init' ) );
 		}
 
 		return self::$instance;
@@ -429,7 +422,7 @@ class Jetpack {
 	 * Must never be called statically
 	 */
 	function plugin_upgrade() {
-		if ( self::is_connection_ready() ) {
+		if ( self::is_active() ) {
 			list( $version ) = explode( ':', Jetpack_Options::get_option( 'version' ) );
 			if ( JETPACK__VERSION != $version ) {
 				// Prevent multiple upgrades at once - only a single process should trigger
@@ -679,8 +672,8 @@ class Jetpack {
 		add_action( 'set_user_role', array( $this, 'maybe_clear_other_linked_admins_transient' ), 10, 3 );
 
 		// Unlink user before deleting the user from WP.com.
-		add_action( 'deleted_user', array( $this, 'disconnect_user' ), 10, 1 );
-		add_action( 'remove_user_from_blog', array( $this, 'disconnect_user' ), 10, 1 );
+		add_action( 'deleted_user', array( 'Automattic\\Jetpack\\Connection\\Manager', 'disconnect_user' ), 10, 1 );
+		add_action( 'remove_user_from_blog', array( 'Automattic\\Jetpack\\Connection\\Manager', 'disconnect_user' ), 10, 1 );
 
 		add_action( 'jetpack_event_log', array( 'Jetpack', 'log' ), 10, 2 );
 
@@ -704,7 +697,7 @@ class Jetpack {
 
 		add_action( 'wp_ajax_jetpack_connection_banner', array( $this, 'jetpack_connection_banner_callback' ) );
 
-		add_action( 'wp_ajax_jetpack_recommendations_banner', array( 'Jetpack_Recommendations_Banner', 'ajax_callback' ) );
+		add_action( 'wp_ajax_jetpack_wizard_banner', array( 'Jetpack_Wizard_Banner', 'ajax_callback' ) );
 
 		add_action( 'wp_loaded', array( $this, 'register_assets' ) );
 
@@ -726,9 +719,10 @@ class Jetpack {
 		add_filter( 'jetpack_get_default_modules', array( $this, 'filter_default_modules' ) );
 		add_filter( 'jetpack_get_default_modules', array( $this, 'handle_deprecated_modules' ), 99 );
 
-		require_once JETPACK__PLUGIN_DIR . 'class-jetpack-pre-connection-jitms.php';
-		$jetpack_jitm_messages = ( new Jetpack_Pre_Connection_JITMs() );
-		add_filter( 'jetpack_pre_connection_jitms', array( $jetpack_jitm_messages, 'add_pre_connection_jitms' ) );
+		// A filter to control all just in time messages
+		add_filter( 'jetpack_just_in_time_msgs', '__return_true', 9 );
+
+		add_filter( 'jetpack_just_in_time_msg_cache', '__return_true', 9 );
 
 		/*
 		 * If enabled, point edit post, page, and comment links to Calypso instead of WP-Admin.
@@ -770,26 +764,23 @@ class Jetpack {
 			add_action( 'wp_print_footer_scripts', array( $this, 'implode_frontend_css' ), -1 ); // Run first to trigger before `print_late_styles`
 		}
 
+		/**
+		 * These are sync actions that we need to keep track of for jitms
+		 */
+		add_filter( 'jetpack_sync_before_send_updated_option', array( $this, 'jetpack_track_last_sync_callback' ), 99 );
+
 		// Actually push the stats on shutdown.
 		if ( ! has_action( 'shutdown', array( $this, 'push_stats' ) ) ) {
 			add_action( 'shutdown', array( $this, 'push_stats' ) );
 		}
-
-		// After a successful connection.
-		add_action( 'jetpack_site_registered', array( $this, 'activate_default_modules_on_site_register' ) );
-		add_action( 'jetpack_site_registered', array( $this, 'handle_unique_registrations_stats' ) );
 
 		// Actions for Manager::authorize().
 		add_action( 'jetpack_authorize_starting', array( $this, 'authorize_starting' ) );
 		add_action( 'jetpack_authorize_ending_linked', array( $this, 'authorize_ending_linked' ) );
 		add_action( 'jetpack_authorize_ending_authorized', array( $this, 'authorize_ending_authorized' ) );
 
-		add_action( 'jetpack_client_authorize_error', array( Jetpack_Client_Server::class, 'client_authorize_error' ) );
-		add_filter( 'jetpack_client_authorize_already_authorized_url', array( Jetpack_Client_Server::class, 'client_authorize_already_authorized_url' ) );
-		add_action( 'jetpack_client_authorize_processing', array( Jetpack_Client_Server::class, 'client_authorize_processing' ) );
-		add_filter( 'jetpack_client_authorize_fallback_url', array( Jetpack_Client_Server::class, 'client_authorize_fallback_url' ) );
-
 		// Filters for the Manager::get_token() urls and request body.
+		add_filter( 'jetpack_token_processing_url', array( __CLASS__, 'filter_connect_processing_url' ) );
 		add_filter( 'jetpack_token_redirect_url', array( __CLASS__, 'filter_connect_redirect_url' ) );
 		add_filter( 'jetpack_token_request_body', array( __CLASS__, 'filter_token_request_body' ) );
 
@@ -799,15 +790,8 @@ class Jetpack {
 		// Actions for licensing.
 		Licensing::instance()->initialize();
 
-		// Filters for Sync Callables.
-		add_filter( 'jetpack_sync_callable_whitelist', array( $this, 'filter_sync_callable_whitelist' ), 10, 1 );
-		add_filter( 'jetpack_sync_multisite_callable_whitelist', array( $this, 'filter_sync_multisite_callable_whitelist' ), 10, 1 );
-
 		// Make resources use static domain when possible.
 		add_filter( 'jetpack_static_url', array( 'Automattic\\Jetpack\\Assets', 'staticize_subdomain' ) );
-
-		// Validate the domain names in Jetpack development versions.
-		add_action( 'jetpack_pre_register', array( get_called_class(), 'registration_check_domains' ) );
 	}
 
 	/**
@@ -820,7 +804,6 @@ class Jetpack {
 		foreach (
 			array(
 				'sync',
-				'jitm',
 			)
 			as $feature
 		) {
@@ -835,20 +818,12 @@ class Jetpack {
 			)
 		);
 
+		if ( is_admin() ) {
+			$config->ensure( 'jitm' );
+		}
+
 		if ( ! $this->connection_manager ) {
 			$this->connection_manager = new Connection_Manager( 'jetpack' );
-
-			/**
-			 * Filter to activate Jetpack Connection UI.
-			 * INTERNAL USE ONLY.
-			 *
-			 * @since 9.5.0
-			 *
-			 * @param bool false Whether to activate the Connection UI.
-			 */
-			if ( apply_filters( 'jetpack_connection_ui_active', false ) ) {
-				Automattic\Jetpack\ConnectionUI\Admin::init();
-			}
 		}
 
 		/*
@@ -863,7 +838,7 @@ class Jetpack {
 			$network->set_connection( $this->connection_manager );
 		}
 
-		if ( self::is_connection_ready() ) {
+		if ( $this->connection_manager->is_active() ) {
 			add_action( 'login_form_jetpack_json_api_authorization', array( $this, 'login_form_json_api_authorization' ) );
 
 			Jetpack_Heartbeat::init();
@@ -879,7 +854,7 @@ class Jetpack {
 		/*
 		 * Enable enhanced handling of previewing sites in Calypso
 		 */
-		if ( self::is_connection_ready() ) {
+		if ( self::is_active() ) {
 			require_once JETPACK__PLUGIN_DIR . '_inc/lib/class.jetpack-iframe-embed.php';
 			add_action( 'init', array( 'Jetpack_Iframe_Embed', 'init' ), 9, 0 );
 			require_once JETPACK__PLUGIN_DIR . '_inc/lib/class.jetpack-keyring-service-helper.php';
@@ -1034,73 +1009,27 @@ class Jetpack {
 
 	}
 
-	/**
-	 * Extend Sync callables with Jetpack Plugin functions.
-	 *
-	 * @param array $callables list of callables.
-	 *
-	 * @return array list of callables.
-	 */
-	public function filter_sync_callable_whitelist( $callables ) {
-
-		// Jetpack Functions.
-		$jetpack_callables = array(
-			'single_user_site'         => array( 'Jetpack', 'is_single_user_site' ),
-			'updates'                  => array( 'Jetpack', 'get_updates' ),
-			'active_modules'           => array( 'Jetpack', 'get_active_modules' ),
-			'available_jetpack_blocks' => array( 'Jetpack_Gutenberg', 'get_availability' ), // Includes both Gutenberg blocks *and* plugins.
-		);
-		$callables         = array_merge( $callables, $jetpack_callables );
-
-		// Jetpack_SSO_Helpers.
-		if ( include_once JETPACK__PLUGIN_DIR . 'modules/sso/class.jetpack-sso-helpers.php' ) {
-			$sso_helpers = array(
-				'sso_is_two_step_required'      => array( 'Jetpack_SSO_Helpers', 'is_two_step_required' ),
-				'sso_should_hide_login_form'    => array( 'Jetpack_SSO_Helpers', 'should_hide_login_form' ),
-				'sso_match_by_email'            => array( 'Jetpack_SSO_Helpers', 'match_by_email' ),
-				'sso_new_user_override'         => array( 'Jetpack_SSO_Helpers', 'new_user_override' ),
-				'sso_bypass_default_login_form' => array( 'Jetpack_SSO_Helpers', 'bypass_login_forward_wpcom' ),
-			);
-			$callables   = array_merge( $callables, $sso_helpers );
+	function jetpack_track_last_sync_callback( $params ) {
+		/**
+		 * Filter to turn off jitm caching
+		 *
+		 * @since 5.4.0
+		 *
+		 * @param bool false Whether to cache just in time messages
+		 */
+		if ( ! apply_filters( 'jetpack_just_in_time_msg_cache', false ) ) {
+			return $params;
 		}
 
-		return $callables;
-	}
+		if ( is_array( $params ) && isset( $params[0] ) ) {
+			$option = $params[0];
+			if ( 'active_plugins' === $option ) {
+				// use the cache if we can, but not terribly important if it gets evicted
+				set_transient( 'jetpack_last_plugin_sync', time(), HOUR_IN_SECONDS );
+			}
+		}
 
-	/**
-	 * Extend Sync multisite callables with Jetpack Plugin functions.
-	 *
-	 * @param array $callables list of callables.
-	 *
-	 * @return array list of callables.
-	 */
-	public function filter_sync_multisite_callable_whitelist( $callables ) {
-
-		// Jetpack Funtions.
-		$jetpack_multisite_callables = array(
-			'network_name'                        => array( 'Jetpack', 'network_name' ),
-			'network_allow_new_registrations'     => array( 'Jetpack', 'network_allow_new_registrations' ),
-			'network_add_new_users'               => array( 'Jetpack', 'network_add_new_users' ),
-			'network_site_upload_space'           => array( 'Jetpack', 'network_site_upload_space' ),
-			'network_upload_file_types'           => array( 'Jetpack', 'network_upload_file_types' ),
-			'network_enable_administration_menus' => array( 'Jetpack', 'network_enable_administration_menus' ),
-		);
-		$callables                   = array_merge( $callables, $jetpack_multisite_callables );
-
-		return $callables;
-	}
-
-	/**
-	 * Deprecated
-	 * Please use Automattic\Jetpack\JITMS\JITM::jetpack_track_last_sync_callback instead.
-	 *
-	 * @param array $params The action parameters.
-	 *
-	 * @deprecated since 9.8.
-	 */
-	function jetpack_track_last_sync_callback( $params ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.8', '\Automattic\Jetpack\JITMS\JITM->jetpack_track_last_sync_callback' );
-		return Automattic\Jetpack\JITMS\JITM::get_instance()->jetpack_track_last_sync_callback( $params );
+		return $params;
 	}
 
 	function jetpack_connection_banner_callback() {
@@ -1186,6 +1115,7 @@ class Jetpack {
 	 * @param array    $args    Adds the context to the cap. Typically the object ID.
 	 */
 	public function jetpack_custom_caps( $caps, $cap, $user_id, $args ) {
+		$is_offline_mode = ( new Status() )->is_offline_mode();
 		switch ( $cap ) {
 			case 'jetpack_manage_modules':
 			case 'jetpack_activate_modules':
@@ -1209,7 +1139,6 @@ class Jetpack {
 				$caps = array( 'manage_sites' );
 				break;
 			case 'jetpack_admin_page':
-				$is_offline_mode = ( new Status() )->is_offline_mode();
 				if ( $is_offline_mode ) {
 					$caps = array( 'manage_options' );
 					break;
@@ -1700,43 +1629,10 @@ class Jetpack {
 	 * Is Jetpack active?
 	 * The method only checks if there's an existing token for the master user. It doesn't validate the token.
 	 *
-	 * This method is deprecated since 9.6.0. Please use one of the methods provided by the Manager class in the Connection package,
-	 * or Jetpack::is_connection_ready if you want to know when the Jetpack plugin starts considering the connection ready to be used.
-	 *
-	 * Since this method has a wide spread use, we decided not to throw any deprecation warnings for now.
-	 *
-	 * @deprecated 9.6.0
-	 *
 	 * @return bool
 	 */
 	public static function is_active() {
 		return self::connection()->is_active();
-	}
-
-	/**
-	 * Returns true if the current site is connected to WordPress.com and has the minimum requirements to enable Jetpack UI
-	 *
-	 * This method was introduced just before the release of the possibility to use Jetpack without a user connection, while
-	 * it was available only when no_user_testing_mode was enabled. In the near future, this will return is_connected for all
-	 * users and this option will be available by default for everybody.
-	 *
-	 * @since 9.6.0
-	 * @since 9.7.0 returns is_connected in all cases and adds filter to the returned value
-	 *
-	 * @return bool is the site connection ready to be used?
-	 */
-	public static function is_connection_ready() {
-		/**
-		 * Allows filtering whether the connection is ready to be used. If true, this will enable the Jetpack UI and modules
-		 *
-		 * Modules will be enabled depending on the connection status and if the module requires a connection or user connection.
-		 *
-		 * @since 9.7.0
-		 *
-		 * @param bool                                  $is_connection_ready Is the connection ready?
-		 * @param Automattic\Jetpack\Connection\Manager $connection_manager Instance of the Manager class, can be used to check the connection status.
-		 */
-		return apply_filters( 'jetpack_is_connection_ready', self::connection()->is_connected(), self::connection() );
 	}
 
 	/**
@@ -1784,7 +1680,6 @@ class Jetpack {
 	 * @deprecated since 8.0.
 	 */
 	public static function is_development_mode() {
-		_deprecated_function( __METHOD__, 'jetpack-8.0', '\Automattic\Jetpack\Status->is_offline_mode' );
 		return ( new Status() )->is_offline_mode();
 	}
 
@@ -1983,7 +1878,7 @@ class Jetpack {
 	public static function load_modules() {
 		$is_offline_mode = ( new Status() )->is_offline_mode();
 		if (
-			! self::is_connection_ready()
+			! self::is_active()
 			&& ! $is_offline_mode
 			&& ! self::is_onboarding()
 			&& (
@@ -2026,21 +1921,15 @@ class Jetpack {
 			$modules = array_diff( $modules, $updated_modules );
 		}
 
-		$is_site_connection = self::connection()->is_site_connection();
-
 		foreach ( $modules as $index => $module ) {
-			// If we're in offline/site-connection mode, disable modules requiring a connection/user connection.
-			if ( $is_offline_mode || $is_site_connection ) {
+			// If we're in offline mode, disable modules requiring a connection.
+			if ( $is_offline_mode ) {
 				// Prime the pump if we need to
 				if ( empty( $modules_data[ $module ] ) ) {
 					$modules_data[ $module ] = self::get_module( $module );
 				}
 				// If the module requires a connection, but we're in local mode, don't include it.
-				if ( $is_offline_mode && $modules_data[ $module ]['requires_connection'] ) {
-					continue;
-				}
-
-				if ( $is_site_connection && $modules_data[ $module ]['requires_user_connection'] ) {
+				if ( $modules_data[ $module ]['requires_connection'] ) {
 					continue;
 				}
 			}
@@ -2320,9 +2209,9 @@ class Jetpack {
 	}
 
 	/**
-	 * Enters a user token into the user_tokens option
+	 * @deprecated 8.0 Use Automattic\Jetpack\Connection\Utils::update_user_token() instead.
 	 *
-	 * @deprecated 8.0 Use Automattic\Jetpack\Connection\Tokens->update_user_token() instead.
+	 * Enters a user token into the user_tokens option
 	 *
 	 * @param int    $user_id The user id.
 	 * @param string $token The user token.
@@ -2330,8 +2219,8 @@ class Jetpack {
 	 * @return bool
 	 */
 	public static function update_user_token( $user_id, $token, $is_master_user ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.5', 'Automattic\\Jetpack\\Connection\\Tokens->update_user_token' );
-		return ( new Tokens() )->update_user_token( $user_id, $token, $is_master_user );
+		_deprecated_function( __METHOD__, 'jetpack-8.0', 'Automattic\\Jetpack\\Connection\\Utils::update_user_token' );
+		return Connection_Utils::update_user_token( $user_id, $token, $is_master_user );
 	}
 
 	/**
@@ -2372,7 +2261,7 @@ class Jetpack {
 	}
 
 	public static function activate_new_modules( $redirect = false ) {
-		if ( ! self::is_connection_ready() && ! ( new Status() )->is_offline_mode() ) {
+		if ( ! self::is_active() && ! ( new Status() )->is_offline_mode() ) {
 			return;
 		}
 
@@ -2434,15 +2323,8 @@ class Jetpack {
 	/**
 	 * List available Jetpack modules. Simply lists .php files in /modules/.
 	 * Make sure to tuck away module "library" files in a sub-directory.
-	 *
-	 * @param bool|string $min_version Only return modules introduced in this version or later. Default is false, do not filter.
-	 * @param bool|string $max_version Only return modules introduced before this version. Default is false, do not filter.
-	 * @param bool|null   $requires_connection Pass a boolean value to only return modules that require (or do not require) a connection.
-	 * @param bool|null   $requires_user_connection Pass a boolean value to only return modules that require (or do not require) a user connection.
-	 *
-	 * @return array $modules Array of module slugs
 	 */
-	public static function get_available_modules( $min_version = false, $max_version = false, $requires_connection = null, $requires_user_connection = null ) {
+	public static function get_available_modules( $min_version = false, $max_version = false ) {
 		static $modules = null;
 
 		if ( ! isset( $modules ) ) {
@@ -2480,12 +2362,10 @@ class Jetpack {
 		 * @param array $modules Array of available modules.
 		 * @param string $min_version Minimum version number required to use modules.
 		 * @param string $max_version Maximum version number required to use modules.
-		 * @param bool|null $requires_connection Value of the Requires Connection filter.
-		 * @param bool|null $requires_user_connection Value of the Requires User Connection filter.
 		 */
-		$mods = apply_filters( 'jetpack_get_available_modules', $modules, $min_version, $max_version, $requires_connection, $requires_user_connection );
+		$mods = apply_filters( 'jetpack_get_available_modules', $modules, $min_version, $max_version );
 
-		if ( ! $min_version && ! $max_version && is_null( $requires_connection ) && is_null( $requires_user_connection ) ) {
+		if ( ! $min_version && ! $max_version ) {
 			return array_keys( $mods );
 		}
 
@@ -2499,16 +2379,6 @@ class Jetpack {
 				continue;
 			}
 
-			$mod_details = self::get_module( $slug );
-
-			if ( null !== $requires_connection && (bool) $requires_connection !== $mod_details['requires_connection'] ) {
-				continue;
-			}
-
-			if ( null !== $requires_user_connection && (bool) $requires_user_connection !== $mod_details['requires_user_connection'] ) {
-				continue;
-			}
-
 			$r[] = $slug;
 		}
 
@@ -2516,19 +2386,12 @@ class Jetpack {
 	}
 
 	/**
-	 * Get default modules loaded on activation.
-	 *
-	 * @param bool|string $min_version Onlu return modules introduced in this version or later. Default is false, do not filter.
-	 * @param bool|string $max_version Only return modules introduced before this version. Default is false, do not filter.
-	 * @param bool|null   $requires_connection Pass a boolean value to only return modules that require (or do not require) a connection.
-	 * @param bool|null   $requires_user_connection Pass a boolean value to only return modules that require (or do not require) a user connection.
-	 *
-	 * @return array $modules Array of module slugs
+	 * Default modules loaded on activation.
 	 */
-	public static function get_default_modules( $min_version = false, $max_version = false, $requires_connection = null, $requires_user_connection = null ) {
+	public static function get_default_modules( $min_version = false, $max_version = false ) {
 		$return = array();
 
-		foreach ( self::get_available_modules( $min_version, $max_version, $requires_connection, $requires_user_connection ) as $module ) {
+		foreach ( self::get_available_modules( $min_version, $max_version ) as $module ) {
 			$module_data = self::get_module( $module );
 
 			switch ( strtolower( $module_data['auto_activate'] ) ) {
@@ -2553,10 +2416,8 @@ class Jetpack {
 		 * @param array $return Array of default modules.
 		 * @param string $min_version Minimum version number required to use modules.
 		 * @param string $max_version Maximum version number required to use modules.
-		 * @param bool|null $requires_connection Value of the Requires Connection filter.
-		 * @param bool|null $requires_user_connection Value of the Requires User Connection filter.
 		 */
-		return apply_filters( 'jetpack_get_default_modules', $return, $min_version, $max_version, $requires_connection, $requires_user_connection );
+		return apply_filters( 'jetpack_get_default_modules', $return, $min_version, $max_version );
 	}
 
 	/**
@@ -2678,7 +2539,6 @@ class Jetpack {
 			'deactivate'                => 'Deactivate',
 			'free'                      => 'Free',
 			'requires_connection'       => 'Requires Connection',
-			'requires_user_connection'  => 'Requires User Connection',
 			'auto_activate'             => 'Auto Activate',
 			'module_tags'               => 'Module Tags',
 			'feature'                   => 'Feature',
@@ -2686,55 +2546,45 @@ class Jetpack {
 			'plan_classes'              => 'Plans',
 		);
 
-		static $modules_details;
 		$file = self::get_module_path( self::get_module_slug( $module ) );
 
-		if ( isset( $modules_details[ $module ] ) ) {
-			$mod = $modules_details[ $module ];
+		$mod = self::get_file_data( $file, $headers );
+		if ( empty( $mod['name'] ) ) {
+			return false;
+		}
+
+		$mod['sort']                 = empty( $mod['sort'] ) ? 10 : (int) $mod['sort'];
+		$mod['recommendation_order'] = empty( $mod['recommendation_order'] ) ? 20 : (int) $mod['recommendation_order'];
+		$mod['deactivate']           = empty( $mod['deactivate'] );
+		$mod['free']                 = empty( $mod['free'] );
+		$mod['requires_connection']  = ( ! empty( $mod['requires_connection'] ) && 'No' == $mod['requires_connection'] ) ? false : true;
+
+		if ( empty( $mod['auto_activate'] ) || ! in_array( strtolower( $mod['auto_activate'] ), array( 'yes', 'no', 'public' ) ) ) {
+			$mod['auto_activate'] = 'No';
 		} else {
+			$mod['auto_activate'] = (string) $mod['auto_activate'];
+		}
 
-			$mod = self::get_file_data( $file, $headers );
-			if ( empty( $mod['name'] ) ) {
-				return false;
-			}
+		if ( $mod['module_tags'] ) {
+			$mod['module_tags'] = explode( ',', $mod['module_tags'] );
+			$mod['module_tags'] = array_map( 'trim', $mod['module_tags'] );
+			$mod['module_tags'] = array_map( array( __CLASS__, 'translate_module_tag' ), $mod['module_tags'] );
+		} else {
+			$mod['module_tags'] = array( self::translate_module_tag( 'Other' ) );
+		}
 
-			$mod['sort']                     = empty( $mod['sort'] ) ? 10 : (int) $mod['sort'];
-			$mod['recommendation_order']     = empty( $mod['recommendation_order'] ) ? 20 : (int) $mod['recommendation_order'];
-			$mod['deactivate']               = empty( $mod['deactivate'] );
-			$mod['free']                     = empty( $mod['free'] );
-			$mod['requires_connection']      = ( ! empty( $mod['requires_connection'] ) && 'No' === $mod['requires_connection'] ) ? false : true;
-			$mod['requires_user_connection'] = ( empty( $mod['requires_user_connection'] ) || 'No' === $mod['requires_user_connection'] ) ? false : true;
+		if ( $mod['plan_classes'] ) {
+			$mod['plan_classes'] = explode( ',', $mod['plan_classes'] );
+			$mod['plan_classes'] = array_map( 'strtolower', array_map( 'trim', $mod['plan_classes'] ) );
+		} else {
+			$mod['plan_classes'] = array( 'free' );
+		}
 
-			if ( empty( $mod['auto_activate'] ) || ! in_array( strtolower( $mod['auto_activate'] ), array( 'yes', 'no', 'public' ), true ) ) {
-				$mod['auto_activate'] = 'No';
-			} else {
-				$mod['auto_activate'] = (string) $mod['auto_activate'];
-			}
-
-			if ( $mod['module_tags'] ) {
-				$mod['module_tags'] = explode( ',', $mod['module_tags'] );
-				$mod['module_tags'] = array_map( 'trim', $mod['module_tags'] );
-				$mod['module_tags'] = array_map( array( __CLASS__, 'translate_module_tag' ), $mod['module_tags'] );
-			} else {
-				$mod['module_tags'] = array( self::translate_module_tag( 'Other' ) );
-			}
-
-			if ( $mod['plan_classes'] ) {
-				$mod['plan_classes'] = explode( ',', $mod['plan_classes'] );
-				$mod['plan_classes'] = array_map( 'strtolower', array_map( 'trim', $mod['plan_classes'] ) );
-			} else {
-				$mod['plan_classes'] = array( 'free' );
-			}
-
-			if ( $mod['feature'] ) {
-				$mod['feature'] = explode( ',', $mod['feature'] );
-				$mod['feature'] = array_map( 'trim', $mod['feature'] );
-			} else {
-				$mod['feature'] = array( self::translate_module_tag( 'Other' ) );
-			}
-
-			$modules_details[ $module ] = $mod;
-
+		if ( $mod['feature'] ) {
+			$mod['feature'] = explode( ',', $mod['feature'] );
+			$mod['feature'] = array_map( 'trim', $mod['feature'] );
+		} else {
+			$mod['feature'] = array( self::translate_module_tag( 'Other' ) );
 		}
 
 		/**
@@ -2942,9 +2792,7 @@ class Jetpack {
 		$max_version = false,
 		$other_modules = array(),
 		$redirect = null,
-		$send_state_messages = null,
-		$requires_connection = null,
-		$requires_user_connection = null
+		$send_state_messages = null
 	) {
 		$jetpack = self::init();
 
@@ -2972,7 +2820,7 @@ class Jetpack {
 			$send_state_messages = current_user_can( 'jetpack_activate_modules' );
 		}
 
-		$modules = self::get_default_modules( $min_version, $max_version, $requires_connection, $requires_user_connection );
+		$modules = self::get_default_modules( $min_version, $max_version );
 		$modules = array_merge( $other_modules, $modules );
 
 		// Look for standalone plugins and disable if active.
@@ -3015,13 +2863,11 @@ class Jetpack {
 		 *
 		 * @since 1.9.0
 		 *
-		 * @param string    $min_version Minimum version number required to use modules.
-		 * @param string    $max_version Maximum version number required to use modules.
-		 * @param array     $other_modules Array of other modules to activate alongside the default modules.
-		 * @param bool|null $requires_connection Value of the Requires Connection filter.
-		 * @param bool|null $requires_user_connection Value of the Requires User Connection filter.
+		 * @param string $min_version Minimum version number required to use modules.
+		 * @param string $max_version Maximum version number required to use modules.
+		 * @param array $other_modules Array of other modules to activate alongside the default modules.
 		 */
-		do_action( 'jetpack_before_activate_default_modules', $min_version, $max_version, $other_modules, $requires_connection, $requires_user_connection );
+		do_action( 'jetpack_before_activate_default_modules', $min_version, $max_version, $other_modules );
 
 		// Check each module for fatal errors, a la wp-admin/plugins.php::activate before activating
 		if ( $send_state_messages ) {
@@ -3101,13 +2947,11 @@ class Jetpack {
 		 *
 		 * @since 1.9.0
 		 *
-		 * @param string    $min_version Minimum version number required to use modules.
-		 * @param string    $max_version Maximum version number required to use modules.
-		 * @param array     $other_modules Array of other modules to activate alongside the default modules.
-		 * @param bool|null $requires_connection Value of the Requires Connection filter.
-		 * @param bool|null $requires_user_connection Value of the Requires User Connection filter.
+		 * @param string $min_version Minimum version number required to use modules.
+		 * @param string $max_version Maximum version number required to use modules.
+		 * @param array $other_modules Array of other modules to activate alongside the default modules.
 		 */
-		do_action( 'jetpack_activate_default_modules', $min_version, $max_version, $other_modules, $requires_connection, $requires_user_connection );
+		do_action( 'jetpack_activate_default_modules', $min_version, $max_version, $other_modules );
 	}
 
 	public static function activate_module( $module, $exit = true, $redirect = true ) {
@@ -3143,7 +2987,7 @@ class Jetpack {
 		$module_data = self::get_module( $module );
 
 		$is_offline_mode = ( new Status() )->is_offline_mode();
-		if ( ! self::is_connection_ready() ) {
+		if ( ! self::is_active() ) {
 			if ( ! $is_offline_mode && ! self::is_onboarding() ) {
 				return false;
 			}
@@ -3379,7 +3223,6 @@ p {
 	 */
 	public static function do_version_bump( $version, $old_version ) {
 		if ( $old_version ) { // For existing Jetpack installations.
-			add_action( 'admin_enqueue_scripts', __CLASS__ . '::enqueue_block_style' );
 
 			// If a front end page is visited after the update, the 'wp' action will fire.
 			add_action( 'wp', 'Jetpack::set_update_modal_display' );
@@ -3394,18 +3237,6 @@ p {
 	 */
 	public static function set_update_modal_display() {
 		self::state( 'display_update_modal', true );
-
-	}
-
-	/**
-	 * Enqueues the block library styles.
-	 *
-	 * @param string $hook The current admin page.
-	 */
-	public static function enqueue_block_style( $hook ) {
-		if ( 'toplevel_page_jetpack' === $hook ) {
-			wp_enqueue_style( 'wp-block-library' );
-		}
 	}
 
 	/**
@@ -3458,12 +3289,11 @@ p {
 		wp_clear_scheduled_hook( 'jetpack_clean_nonces' );
 
 		$connection = self::connection();
-
-		( new Nonce_Handler() )->clean_all();
+		$connection->clean_nonces( true );
 
 		// If the site is in an IDC because sync is not allowed,
 		// let's make sure to not disconnect the production site.
-		if ( ! Identity_Crisis::validate_sync_error_idc_option() ) {
+		if ( ! self::validate_sync_error_idc_option() ) {
 			$tracking = new Tracking();
 			$tracking->record_user_event( 'disconnect_site', array() );
 
@@ -3471,7 +3301,7 @@ p {
 		}
 
 		$connection->delete_all_connection_tokens( true );
-		Identity_Crisis::clear_all_idc_options();
+		Jetpack_IDC::clear_all_idc_options();
 
 		if ( $update_activated_state ) {
 			Jetpack_Options::update_option( 'activated', 4 );
@@ -3502,37 +3332,30 @@ p {
 	}
 
 	/**
-	 * Disconnects the user
+	 * Unlinks the current user from the linked WordPress.com user.
 	 *
-	 * @param int $user_id The user ID to disconnect.
+	 * @deprecated since 7.7
+	 * @see Automattic\Jetpack\Connection\Manager::disconnect_user()
+	 *
+	 * @param Integer $user_id the user identifier.
+	 * @return Boolean Whether the disconnection of the user was successful.
 	 */
-	public function disconnect_user( $user_id ) {
-		$this->connection_manager->disconnect_user( $user_id );
+	public static function unlink_user( $user_id = null ) {
+		_deprecated_function( __METHOD__, 'jetpack-7.7', 'Automattic\\Jetpack\\Connection\\Manager::disconnect_user' );
+		return Connection_Manager::disconnect_user( $user_id );
 	}
 
 	/**
 	 * Attempts Jetpack registration.  If it fail, a state flag is set: @see ::admin_page_load()
-	 *
-	 * @deprecated since Jetpack 9.7.0
-	 * @see Automattic\Jetpack\Connection\Manager::try_registration()
-	 *
-	 * @return bool|WP_Error
 	 */
 	public static function try_registration() {
-		_deprecated_function( __METHOD__, 'jetpack-9.7', 'Automattic\\Jetpack\\Connection\\Manager::try_registration' );
-		return static::connection()->try_registration();
-	}
+		$terms_of_service = new Terms_Of_Service();
+		// The user has agreed to the TOS at some point by now.
+		$terms_of_service->agree();
 
-	/**
-	 * Checking the domain names in beta versions.
-	 * If this is a development version, before attempting to connect, let's make sure that the domains are viable.
-	 *
-	 * @param null|\WP_Error $error The domain validation error, or `null` if everything's fine.
-	 *
-	 * @return null|\WP_Error The domain validation error, or `null` if everything's fine.
-	 */
-	public static function registration_check_domains( $error ) {
-		if ( static::is_development_version() && defined( 'PHP_URL_HOST' ) ) {
+		// Let's get some testing in beta versions and such.
+		if ( self::is_development_version() && defined( 'PHP_URL_HOST' ) ) {
+			// Before attempting to connect, let's make sure that the domains are viable.
 			$domains_to_check = array_unique(
 				array(
 					'siteurl' => wp_parse_url( get_site_url(), PHP_URL_HOST ),
@@ -3540,14 +3363,21 @@ p {
 				)
 			);
 			foreach ( $domains_to_check as $domain ) {
-				$result = static::connection()->is_usable_domain( $domain );
+				$result = self::connection()->is_usable_domain( $domain );
 				if ( is_wp_error( $result ) ) {
 					return $result;
 				}
 			}
 		}
 
-		return $error;
+		$result = self::register();
+
+		// If there was an error with registration and the site was not registered, record this so we can show a message.
+		if ( ! $result || is_wp_error( $result ) ) {
+			return $result;
+		} else {
+			return true;
+		}
 	}
 
 	/**
@@ -3715,23 +3545,18 @@ p {
 			self::plugin_initialize();
 		}
 
-		$is_offline_mode              = ( new Status() )->is_offline_mode();
-		$fallback_no_verify_ssl_certs = Jetpack_Options::get_option( 'fallback_no_verify_ssl_certs' );
-		/** Already documented in automattic/jetpack-connection::src/class-client.php */
-		$client_verify_ssl_certs = apply_filters( 'jetpack_client_verify_ssl_certs', false );
-
-		if ( ! $is_offline_mode ) {
+		$is_offline_mode = ( new Status() )->is_offline_mode();
+		if ( ! self::is_active() && ! $is_offline_mode ) {
 			Jetpack_Connection_Banner::init();
-		}
-
-		if ( ( self::is_connection_ready() || $is_offline_mode ) && false === $fallback_no_verify_ssl_certs && ! $client_verify_ssl_certs ) {
+			/** Already documented in automattic/jetpack-connection::src/class-client.php */
+		} elseif ( ( false === Jetpack_Options::get_option( 'fallback_no_verify_ssl_certs' ) ) && ! apply_filters( 'jetpack_client_verify_ssl_certs', false ) ) {
 			// Upgrade: 1.1 -> 1.1.1
 			// Check and see if host can verify the Jetpack servers' SSL certificate
 			$args = array();
 			Client::_wp_remote_request( self::connection()->api_url( 'test' ), $args, true );
 		}
 
-		Jetpack_Recommendations_Banner::init();
+		Jetpack_Wizard_Banner::init();
 
 		if ( current_user_can( 'manage_options' ) && ! self::permit_ssl() ) {
 			add_action( 'jetpack_notices', array( $this, 'alert_auto_ssl_fail' ) );
@@ -3740,14 +3565,9 @@ p {
 		add_action( 'load-plugins.php', array( $this, 'intercept_plugin_error_scrape_init' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_menu_css' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'deactivate_dialog' ) );
-
-		if ( isset( $_COOKIE['jetpackState']['display_update_modal'] ) ) {
-			add_action( 'admin_enqueue_scripts', __CLASS__ . '::enqueue_block_style' );
-		}
-
 		add_filter( 'plugin_action_links_' . plugin_basename( JETPACK__PLUGIN_DIR . 'jetpack.php' ), array( $this, 'plugin_action_links' ) );
 
-		if ( self::is_connection_ready() || $is_offline_mode ) {
+		if ( self::is_active() || $is_offline_mode ) {
 			// Artificially throw errors in certain specific cases during plugin activation.
 			add_action( 'activate_plugin', array( $this, 'throw_error_on_activate_plugin' ) );
 		}
@@ -3761,7 +3581,7 @@ p {
 	function admin_body_class( $admin_body_class = '' ) {
 		$classes = explode( ' ', trim( $admin_body_class ) );
 
-		$classes[] = self::is_connection_ready() ? 'jetpack-connected' : 'jetpack-disconnected';
+		$classes[] = self::is_active() ? 'jetpack-connected' : 'jetpack-disconnected';
 
 		$admin_body_class = implode( ' ', array_unique( $classes ) );
 		return " $admin_body_class ";
@@ -3936,7 +3756,7 @@ p {
 
 		$media_keys = array_keys( $_FILES['media'] );
 
-		$token = ( new Tokens() )->get_access_token( get_current_user_id() );
+		$token = Jetpack_Data::get_access_token( get_current_user_id() );
 		if ( ! $token || is_wp_error( $token ) ) {
 			return new WP_Error( 'unknown_token', 'Unknown Jetpack token', 403 );
 		}
@@ -4055,7 +3875,7 @@ p {
 				'id'      => 'home',
 				'title'   => __( 'Home', 'jetpack' ),
 				'content' =>
-					'<p><strong>' . __( 'Jetpack', 'jetpack' ) . '</strong></p>' .
+					'<p><strong>' . __( 'Jetpack by WordPress.com', 'jetpack' ) . '</strong></p>' .
 					'<p>' . __( 'Jetpack supercharges your self-hosted WordPress site with the awesome cloud power of WordPress.com.', 'jetpack' ) . '</p>' .
 					'<p>' . __( 'On this page, you are able to view the modules available within Jetpack, learn more about them, and activate or deactivate them as needed.', 'jetpack' ) . '</p>',
 			)
@@ -4068,7 +3888,7 @@ p {
 					'id'      => 'settings',
 					'title'   => __( 'Settings', 'jetpack' ),
 					'content' =>
-						'<p><strong>' . __( 'Jetpack', 'jetpack' ) . '</strong></p>' .
+						'<p><strong>' . __( 'Jetpack by WordPress.com', 'jetpack' ) . '</strong></p>' .
 						'<p>' . __( 'You can activate or deactivate individual Jetpack modules to suit your needs.', 'jetpack' ) . '</p>' .
 						'<ol>' .
 							'<li>' . __( 'Each module has an Activate or Deactivate link so you can toggle one individually.', 'jetpack' ) . '</li>' .
@@ -4138,9 +3958,9 @@ p {
 
 	function plugin_action_links( $actions ) {
 
-		$jetpack_home = array( 'jetpack-home' => sprintf( '<a href="%s">%s</a>', self::admin_url( 'page=jetpack' ), __( 'My Jetpack', 'jetpack' ) ) );
+		$jetpack_home = array( 'jetpack-home' => sprintf( '<a href="%s">%s</a>', self::admin_url( 'page=jetpack' ), 'Jetpack' ) );
 
-		if ( current_user_can( 'jetpack_manage_modules' ) && ( self::is_connection_ready() || ( new Status() )->is_offline_mode() ) ) {
+		if ( current_user_can( 'jetpack_manage_modules' ) && ( self::is_active() || ( new Status() )->is_offline_mode() ) ) {
 			return array_merge(
 				$jetpack_home,
 				array( 'settings' => sprintf( '<a href="%s">%s</a>', self::admin_url( 'page=jetpack#/settings' ), __( 'Settings', 'jetpack' ) ) ),
@@ -4162,7 +3982,7 @@ p {
 	public function deactivate_dialog( $hook ) {
 		if (
 			'plugins.php' === $hook
-			&& self::is_connection_ready()
+			&& self::is_active()
 		) {
 
 			$active_plugins_using_connection = Connection_Plugin_Storage::get_all();
@@ -4171,8 +3991,21 @@ p {
 
 				add_thickbox();
 
-				// Register jp-tracks-functions dependency.
-				Tracking::register_tracks_functions_scripts();
+				wp_register_script(
+					'jp-tracks',
+					'//stats.wp.com/w.js',
+					array(),
+					gmdate( 'YW' ),
+					true
+				);
+
+				wp_register_script(
+					'jp-tracks-functions',
+					plugins_url( '_inc/lib/tracks/tracks-callables.js', JETPACK__PLUGIN_FILE ),
+					array( 'jp-tracks' ),
+					JETPACK__VERSION,
+					false
+				);
 
 				wp_enqueue_script(
 					'jetpack-deactivate-dialog-js',
@@ -4330,54 +4163,15 @@ p {
 
 		if ( isset( $_GET['action'] ) ) {
 			switch ( $_GET['action'] ) {
-				case 'authorize_redirect':
-					self::log( 'authorize_redirect' );
-
-					add_filter(
-						'allowed_redirect_hosts',
-						function ( $domains ) {
-							$domains[] = 'jetpack.com';
-							$domains[] = 'jetpack.wordpress.com';
-							$domains[] = 'wordpress.com';
-							$domains[] = wp_parse_url( static::get_calypso_host(), PHP_URL_HOST ); // May differ from `wordpress.com`.
-							return array_unique( $domains );
-						}
-					);
-
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-					$dest_url = empty( $_GET['dest_url'] ) ? null : $_GET['dest_url'];
-
-					if ( ! $dest_url || ( 0 === stripos( $dest_url, 'https://jetpack.com/' ) && 0 === stripos( $dest_url, 'https://wordpress.com/' ) ) ) {
-						// The destination URL is missing or invalid, nothing to do here.
-						exit;
-					}
-
-					if ( static::connection()->is_connected() && static::connection()->is_user_connected() ) {
-						// The user is either already connected, or finished the connection process.
-						wp_safe_redirect( $dest_url );
-						exit;
-					} elseif ( ! empty( $_GET['done'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-						// The user decided not to proceed with setting up the connection.
-						wp_safe_redirect( self::admin_url( 'page=jetpack' ) );
-						exit;
-					}
-
-					$redirect_args = array(
-						'page'     => 'jetpack',
-						'action'   => 'authorize_redirect',
-						'dest_url' => rawurlencode( $dest_url ),
-						'done'     => '1',
-					);
-
-					if ( ! empty( $_GET['from'] ) && 'jetpack_site_only_checkout' === $_GET['from'] ) {
-						$redirect_args['from'] = 'jetpack_site_only_checkout';
-					}
-
-					wp_safe_redirect( static::build_authorize_url( self::admin_url( $redirect_args ) ) );
-					exit;
 				case 'authorize':
-					_doing_it_wrong( __METHOD__, 'The `page=jetpack&action=authorize` webhook is deprecated. Use `handler=jetpack-connection-webhooks&action=authorize` instead', 'Jetpack 9.5.0' );
-					( new Connection_Webhooks( $this->connection_manager ) )->handle_authorize();
+					if ( self::is_active() && self::is_user_connected() ) {
+						self::state( 'message', 'already_authorized' );
+						wp_safe_redirect( self::admin_url() );
+						exit;
+					}
+					self::log( 'authorize' );
+					$client_server = new Jetpack_Client_Server();
+					$client_server->client_authorize();
 					exit;
 				case 'register':
 					if ( ! current_user_can( 'jetpack_connect' ) ) {
@@ -4387,11 +4181,7 @@ p {
 					check_admin_referer( 'jetpack-register' );
 					self::log( 'register' );
 					self::maybe_set_version_option();
-					$from = isset( $_GET['from'] ) ? $_GET['from'] : false;
-					if ( $from ) {
-						static::connection()->add_register_request_param( 'from', (string) $from );
-					}
-					$registered = static::connection()->try_registration();
+					$registered = self::try_registration();
 					if ( is_wp_error( $registered ) ) {
 						$error = $registered->get_error_code();
 						self::state( 'error', $error );
@@ -4409,6 +4199,7 @@ p {
 						break;
 					}
 
+					$from     = isset( $_GET['from'] ) ? $_GET['from'] : false;
 					$redirect = isset( $_GET['redirect'] ) ? $_GET['redirect'] : false;
 
 					/**
@@ -4476,7 +4267,7 @@ p {
 
 					check_admin_referer( 'jetpack-reconnect' );
 					self::log( 'reconnect' );
-					self::disconnect();
+					$this->disconnect();
 					wp_redirect( $this->build_connect_url( true, false, 'reconnect' ) );
 					exit;
 				case 'deactivate':
@@ -4499,7 +4290,7 @@ p {
 					$redirect = isset( $_GET['redirect'] ) ? $_GET['redirect'] : '';
 					check_admin_referer( 'jetpack-unlink' );
 					self::log( 'unlink' );
-					$this->connection_manager->disconnect_user();
+					Connection_Manager::disconnect_user();
 					self::state( 'message', 'unlinked' );
 					if ( 'sub-unlink' == $redirect ) {
 						wp_safe_redirect( admin_url() );
@@ -4829,6 +4620,78 @@ endif;
 	}
 
 	/**
+	 * Get the role of the current user.
+	 *
+	 * @deprecated 7.6 Use Automattic\Jetpack\Roles::translate_current_user_to_role() instead.
+	 *
+	 * @access public
+	 * @static
+	 *
+	 * @return string|boolean Current user's role, false if not enough capabilities for any of the roles.
+	 */
+	public static function translate_current_user_to_role() {
+		_deprecated_function( __METHOD__, 'jetpack-7.6.0' );
+
+		$roles = new Roles();
+		return $roles->translate_current_user_to_role();
+	}
+
+	/**
+	 * Get the role of a particular user.
+	 *
+	 * @deprecated 7.6 Use Automattic\Jetpack\Roles::translate_user_to_role() instead.
+	 *
+	 * @access public
+	 * @static
+	 *
+	 * @param \WP_User $user User object.
+	 * @return string|boolean User's role, false if not enough capabilities for any of the roles.
+	 */
+	public static function translate_user_to_role( $user ) {
+		_deprecated_function( __METHOD__, 'jetpack-7.6.0' );
+
+		$roles = new Roles();
+		return $roles->translate_user_to_role( $user );
+	}
+
+	/**
+	 * Get the minimum capability for a role.
+	 *
+	 * @deprecated 7.6 Use Automattic\Jetpack\Roles::translate_role_to_cap() instead.
+	 *
+	 * @access public
+	 * @static
+	 *
+	 * @param string $role Role name.
+	 * @return string|boolean Capability, false if role isn't mapped to any capabilities.
+	 */
+	public static function translate_role_to_cap( $role ) {
+		_deprecated_function( __METHOD__, 'jetpack-7.6.0' );
+
+		$roles = new Roles();
+		return $roles->translate_role_to_cap( $role );
+	}
+
+	/**
+	 * Sign a user role with the master access token.
+	 * If not specified, will default to the current user.
+	 *
+	 * @deprecated since 7.7
+	 * @see Automattic\Jetpack\Connection\Manager::sign_role()
+	 *
+	 * @access public
+	 * @static
+	 *
+	 * @param string $role    User role.
+	 * @param int    $user_id ID of the user.
+	 * @return string Signed user role.
+	 */
+	public static function sign_role( $role, $user_id = null ) {
+		_deprecated_function( __METHOD__, 'jetpack-7.7', 'Automattic\\Jetpack\\Connection\\Manager::sign_role' );
+		return self::connection()->sign_role( $role, $user_id );
+	}
+
+	/**
 	 * Builds a URL to the Jetpack connection auth page
 	 *
 	 * @since 3.9.5
@@ -4843,7 +4706,7 @@ endif;
 	 */
 	function build_connect_url( $raw = false, $redirect = false, $from = false, $register = false ) {
 		$site_id    = Jetpack_Options::get_option( 'id' );
-		$blog_token = ( new Tokens() )->get_access_token();
+		$blog_token = Jetpack_Data::get_access_token();
 
 		if ( $register || ! $blog_token || ! $site_id ) {
 			$url = self::nonce_url_no_esc( self::admin_url( 'action=register' ), 'jetpack-register' );
@@ -4908,6 +4771,7 @@ endif;
 
 		add_filter( 'jetpack_connect_request_body', array( __CLASS__, 'filter_connect_request_body' ) );
 		add_filter( 'jetpack_connect_redirect_url', array( __CLASS__, 'filter_connect_redirect_url' ) );
+		add_filter( 'jetpack_connect_processing_url', array( __CLASS__, 'filter_connect_processing_url' ) );
 
 		if ( $iframe ) {
 			add_filter( 'jetpack_use_iframe_authorization_flow', '__return_true' );
@@ -4918,6 +4782,7 @@ endif;
 
 		remove_filter( 'jetpack_connect_request_body', array( __CLASS__, 'filter_connect_request_body' ) );
 		remove_filter( 'jetpack_connect_redirect_url', array( __CLASS__, 'filter_connect_redirect_url' ) );
+		remove_filter( 'jetpack_connect_processing_url', array( __CLASS__, 'filter_connect_processing_url' ) );
 
 		if ( $iframe ) {
 			remove_filter( 'jetpack_use_iframe_authorization_flow', '__return_true' );
@@ -4976,12 +4841,8 @@ endif;
 	 *
 	 * @param String $processing_url the default redirect URL used by the package.
 	 * @return String the modified URL.
-	 *
-	 * @deprecated since Jetpack 9.5.0
 	 */
 	public static function filter_connect_processing_url( $processing_url ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.5' );
-
 		$processing_url = admin_url( 'admin.php?page=jetpack' ); // Making PHPCS happy.
 		return $processing_url;
 	}
@@ -5035,25 +4896,6 @@ endif;
 	}
 
 	/**
-	 * This action fires when the site is registered (connected at a site level).
-	 */
-	public function handle_unique_registrations_stats() {
-		$jetpack_unique_registrations = Jetpack_Options::get_option( 'unique_registrations' );
-		// Checking if site has been registered previously before recording unique connection.
-		if ( ! $jetpack_unique_registrations ) {
-
-			$jetpack_unique_registrations = 0;
-
-			$this->stat( 'connections', 'unique-registrations' );
-			$this->do_stats( 'server_side' );
-		}
-
-		// Increment number of times connected.
-		$jetpack_unique_registrations ++;
-		Jetpack_Options::update_option( 'unique_registrations', $jetpack_unique_registrations );
-	}
-
-	/**
 	 * This action fires at the end of the Manager::authorize method when a secondary user is
 	 * linked.
 	 */
@@ -5087,25 +4929,6 @@ endif;
 		$do_redirect_on_error = ( 'client' === $data['auth_type'] );
 
 		self::handle_post_authorization_actions( $activate_sso, $do_redirect_on_error );
-	}
-
-	/**
-	 * Fires on the jetpack_site_registered hook and acitvates default modules
-	 */
-	public static function activate_default_modules_on_site_register() {
-		$active_modules = Jetpack_Options::get_option( 'active_modules' );
-		if ( $active_modules ) {
-			self::delete_active_modules();
-
-			// If there was previously activated modules (a reconnection), re-activate them all including those that require a user, and do not re-activate those that have been deactivated.
-			self::activate_default_modules( 999, 1, $active_modules, false );
-		} else {
-			// On a fresh new connection, at this point we activate only modules that do not require a user connection.
-			self::activate_default_modules( false, false, array(), false, null, null, false );
-		}
-
-		// Since this is a fresh connection, be sure to clear out IDC options.
-		Identity_Crisis::clear_all_idc_options();
 	}
 
 	/**
@@ -5444,8 +5267,6 @@ endif;
 	 *
 	 * Note these tokens are unique per call, NOT static per site for connecting.
 	 *
-	 * @deprecated 9.5 Use Automattic\Jetpack\Connection\Secrets->generate() instead.
-	 *
 	 * @since 2.6
 	 * @param String  $action  The action name.
 	 * @param Integer $user_id The user identifier.
@@ -5453,22 +5274,31 @@ endif;
 	 * @return array
 	 */
 	public static function generate_secrets( $action, $user_id = false, $exp = 600 ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.5', 'Automattic\\Jetpack\\Connection\\Secrets->generate' );
 		return self::connection()->generate_secrets( $action, $user_id, $exp );
 	}
 
 	public static function get_secrets( $action, $user_id ) {
-		$secrets = ( new Secrets() )->get( $action, $user_id );
+		$secrets = self::connection()->get_secrets( $action, $user_id );
 
-		if ( Secrets::SECRETS_MISSING === $secrets ) {
+		if ( Connection_Manager::SECRETS_MISSING === $secrets ) {
 			return new WP_Error( 'verify_secrets_missing', 'Verification secrets not found' );
 		}
 
-		if ( Secrets::SECRETS_EXPIRED === $secrets ) {
+		if ( Connection_Manager::SECRETS_EXPIRED === $secrets ) {
 			return new WP_Error( 'verify_secrets_expired', 'Verification took too long' );
 		}
 
 		return $secrets;
+	}
+
+	/**
+	 * @deprecated 7.5 Use Connection_Manager instead.
+	 *
+	 * @param $action
+	 * @param $user_id
+	 */
+	public static function delete_secrets( $action, $user_id ) {
+		return self::connection()->delete_secrets( $action, $user_id );
 	}
 
 	/**
@@ -5530,28 +5360,43 @@ endif;
 	}
 
 	/**
-	 * @deprecated since Jetpack 9.7.0
-	 * @see Automattic\Jetpack\Connection\Manager::try_registration()
-	 *
 	 * @return bool|WP_Error
 	 */
 	public static function register() {
-		_deprecated_function( __METHOD__, 'jetpack-9.7', 'Automattic\\Jetpack\\Connection\\Manager::try_registration' );
-		return static::connection()->try_registration( false );
+		$tracking = new Tracking();
+		$tracking->record_user_event( 'jpc_register_begin' );
+
+		add_filter( 'jetpack_register_request_body', array( __CLASS__, 'filter_register_request_body' ) );
+
+		$connection   = self::connection();
+		$registration = $connection->register();
+
+		remove_filter( 'jetpack_register_request_body', array( __CLASS__, 'filter_register_request_body' ) );
+
+		if ( ! $registration || is_wp_error( $registration ) ) {
+			return $registration;
+		}
+
+		return true;
 	}
 
 	/**
 	 * Filters the registration request body to include tracking properties.
 	 *
-	 * @deprecated since Jetpack 9.7.0
-	 * @see Automattic\Jetpack\Connection\Utils::filter_register_request_body()
-	 *
 	 * @param array $properties
 	 * @return array amended properties.
 	 */
 	public static function filter_register_request_body( $properties ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.7', 'Automattic\\Jetpack\\Connection\\Utils::filter_register_request_body' );
-		return Connection_Utils::filter_register_request_body( $properties );
+		$tracking        = new Tracking();
+		$tracks_identity = $tracking->tracks_get_identity( get_current_user_id() );
+
+		return array_merge(
+			$properties,
+			array(
+				'_ui' => $tracks_identity['_ui'],
+				'_ut' => $tracks_identity['_ut'],
+			)
+		);
 	}
 
 	/**
@@ -5909,7 +5754,7 @@ endif;
 		$client_blog_id = is_multisite() ? $blog_id : 0;
 
 		if ( ! isset( $clients[ $client_blog_id ] ) ) {
-			$clients[ $client_blog_id ] = new Jetpack_IXR_ClientMulticall( array( 'user_id' => true ) );
+			$clients[ $client_blog_id ] = new Jetpack_IXR_ClientMulticall( array( 'user_id' => Connection_Manager::CONNECTION_OWNER ) );
 			if ( function_exists( 'ignore_user_abort' ) ) {
 				ignore_user_abort( true );
 			}
@@ -6045,8 +5890,8 @@ endif;
 			? $_REQUEST
 			: $environment;
 
-		list( $env_token,, $env_user_id ) = explode( ':', $environment['token'] );
-		$token                            = ( new Tokens() )->get_access_token( $env_user_id, $env_token );
+		list( $envToken, $envVersion, $envUserId ) = explode( ':', $environment['token'] );
+		$token                                     = Jetpack_Data::get_access_token( $envUserId, $envToken );
 		if ( ! $token || empty( $token->secret ) ) {
 			wp_die( __( 'You must connect your Jetpack plugin to WordPress.com to use this feature.', 'jetpack' ) );
 		}
@@ -6119,7 +5964,7 @@ endif;
 			$this->connection_manager = new Connection_Manager();
 		}
 
-		if ( ! ( new Nonce_Handler() )->add( $timestamp, $nonce ) ) {
+		if ( ! $this->connection_manager->add_nonce( $timestamp, $nonce ) ) {
 			// De-nonce the nonce, at least for 5 minutes.
 			// We have to reuse this nonce at least once (used the first time when the initial request is made, used a second time when the login form is POSTed)
 			$old_nonce_time = get_option( "jetpack_nonce_{$timestamp}_{$nonce}" );
@@ -6215,7 +6060,7 @@ endif;
 	 * @return array|bool Array of options that are in a crisis, or false if everything is OK.
 	 */
 	public static function check_identity_crisis() {
-		if ( ! self::is_connection_ready() || ( new Status() )->is_offline_mode() || ! Identity_Crisis::validate_sync_error_idc_option() ) {
+		if ( ! self::is_active() || ( new Status() )->is_offline_mode() || ! self::validate_sync_error_idc_option() ) {
 			return false;
 		}
 
@@ -6244,8 +6089,46 @@ endif;
 	 * @return bool
 	 */
 	public static function validate_sync_error_idc_option() {
-		_deprecated_function( __METHOD__, 'jetpack-9.8', '\\Automattic\\Jetpack\\Identity_Crisis::validate_sync_error_idc_option' );
-		return Identity_Crisis::validate_sync_error_idc_option();
+		$is_valid = false;
+
+		// Is the site opted in and does the stored sync_error_idc option match what we now generate?
+		$sync_error = Jetpack_Options::get_option( 'sync_error_idc' );
+		if ( $sync_error && self::sync_idc_optin() ) {
+			$local_options = self::get_sync_error_idc_option();
+			// Ensure all values are set.
+			if ( isset( $sync_error['home'] ) && isset( $local_options['home'] ) && isset( $sync_error['siteurl'] ) && isset( $local_options['siteurl'] ) ) {
+
+				// If the WP.com expected home and siteurl match local home and siteurl it is not valid IDC.
+				if (
+						isset( $sync_error['wpcom_home'] ) &&
+						isset( $sync_error['wpcom_siteurl'] ) &&
+						$sync_error['wpcom_home'] === $local_options['home'] &&
+						$sync_error['wpcom_siteurl'] === $local_options['siteurl']
+				) {
+					$is_valid = false;
+					// Enable migrate_for_idc so that sync actions are accepted.
+					Jetpack_Options::update_option( 'migrate_for_idc', true );
+				} elseif ( $sync_error['home'] === $local_options['home'] && $sync_error['siteurl'] === $local_options['siteurl'] ) {
+					$is_valid = true;
+				}
+			}
+		}
+
+		/**
+		 * Filters whether the sync_error_idc option is valid.
+		 *
+		 * @since 4.4.0
+		 *
+		 * @param bool $is_valid If the sync_error_idc is valid or not.
+		 */
+		$is_valid = (bool) apply_filters( 'jetpack_sync_error_idc_validation', $is_valid );
+
+		if ( ! $is_valid && $sync_error ) {
+			// Since the option exists, and did not validate, delete it
+			Jetpack_Options::delete_option( 'sync_error_idc' );
+		}
+
+		return $is_valid;
 	}
 
 	/**
@@ -6279,8 +6162,36 @@ endif;
 	 * @return array Array of the local urls, wpcom urls, and error code
 	 */
 	public static function get_sync_error_idc_option( $response = array() ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.8', '\\Automattic\\Jetpack\\Identity_Crisis::get_sync_error_idc_option' );
-		return Identity_Crisis::get_sync_error_idc_option( $response );
+		// Since the local options will hit the database directly, store the values
+		// in a transient to allow for autoloading and caching on subsequent views.
+		$local_options = get_transient( 'jetpack_idc_local' );
+		if ( false === $local_options ) {
+			$local_options = array(
+				'home'    => Functions::home_url(),
+				'siteurl' => Functions::site_url(),
+			);
+			set_transient( 'jetpack_idc_local', $local_options, MINUTE_IN_SECONDS );
+		}
+
+		$options = array_merge( $local_options, $response );
+
+		$returned_values = array();
+		foreach ( $options as $key => $option ) {
+			if ( 'error_code' === $key ) {
+				$returned_values[ $key ] = $option;
+				continue;
+			}
+
+			if ( is_wp_error( $normalized_url = self::normalize_url_protocol_agnostic( $option ) ) ) {
+				continue;
+			}
+
+			$returned_values[ $key ] = $normalized_url;
+		}
+
+		set_transient( 'jetpack_idc_option', $returned_values, MINUTE_IN_SECONDS );
+
+		return $returned_values;
 	}
 
 	/**
@@ -6291,8 +6202,22 @@ endif;
 	 * @return bool
 	 */
 	public static function sync_idc_optin() {
-		_deprecated_function( __METHOD__, 'jetpack-9.8', '\\Automattic\\Jetpack\\Identity_Crisis::sync_idc_optin' );
-		return Identity_Crisis::sync_idc_optin();
+		if ( Constants::is_defined( 'JETPACK_SYNC_IDC_OPTIN' ) ) {
+			$default = Constants::get_constant( 'JETPACK_SYNC_IDC_OPTIN' );
+		} else {
+			$default = ! Constants::is_defined( 'SUNRISE' ) && ! is_multisite();
+		}
+
+		/**
+		 * Allows sites to opt in for IDC mitigation which blocks the site from syncing to WordPress.com when the home
+		 * URL or site URL do not match what WordPress.com expects. The default value is either true, or the value of
+		 * JETPACK_SYNC_IDC_OPTIN constant if set.
+		 *
+		 * @since 4.3.2
+		 *
+		 * @param bool $default Whether the site is opted in to IDC mitigation.
+		 */
+		return (bool) apply_filters( 'jetpack_sync_idc_optin', $default );
 	}
 
 	/**
@@ -6828,7 +6753,7 @@ endif;
 		}
 
 		// We do not want to use the imploded file in dev mode, or if not connected
-		if ( ( new Status() )->is_offline_mode() || ! self::is_connection_ready() ) {
+		if ( ( new Status() )->is_offline_mode() || ! self::is_active() ) {
 			if ( ! $travis_test ) {
 				return;
 			}
@@ -6990,7 +6915,7 @@ endif;
 	}
 
 	public function wp_dashboard_setup() {
-		if ( self::is_connection_ready() ) {
+		if ( self::is_active() ) {
 			add_action( 'jetpack_dashboard_widget', array( __CLASS__, 'dashboard_widget_footer' ), 999 );
 		}
 
@@ -7017,7 +6942,7 @@ endif;
 			wp_style_add_data( 'jetpack-dashboard-widget', 'rtl', 'replace' );
 
 			// If we're inactive and not in offline mode, sort our box to the top.
-			if ( ! self::is_connection_ready() && ! ( new Status() )->is_offline_mode() ) {
+			if ( ! self::is_active() && ! ( new Status() )->is_offline_mode() ) {
 				global $wp_meta_boxes;
 
 				$dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
@@ -7264,8 +7189,7 @@ endif;
 	 * @return bool|int|mixed
 	 */
 	public static function is_rewind_enabled() {
-		// Rewind is a paid feature, therefore requires a user-level connection.
-		if ( ! static::connection()->has_connected_owner() ) {
+		if ( ! self::is_active() ) {
 			return false;
 		}
 
@@ -7347,20 +7271,16 @@ endif;
 			? array( 'sso' )
 			: array();
 
-		if ( Jetpack_Options::get_option( 'active_modules_initialized' ) ) {
-			$active_modules = Jetpack_Options::get_option( 'active_modules' );
+		if ( $active_modules = Jetpack_Options::get_option( 'active_modules' ) ) {
 			self::delete_active_modules();
 
 			self::activate_default_modules( 999, 1, array_merge( $active_modules, $other_modules ), $redirect_on_activation_error, $send_state_messages );
 		} else {
-			// Default modules that don't require a user were already activated on site_register.
-			// This time let's activate only those that require a user, this assures we don't reactivate manually deactivated modules while the site was connected only at a site level.
-			self::activate_default_modules( false, false, $other_modules, $redirect_on_activation_error, $send_state_messages, null, true );
-			Jetpack_Options::update_option( 'active_modules_initialized', true );
+			self::activate_default_modules( false, false, $other_modules, $redirect_on_activation_error, $send_state_messages );
 		}
 
 		// Since this is a fresh connection, be sure to clear out IDC options
-		Identity_Crisis::clear_all_idc_options();
+		Jetpack_IDC::clear_all_idc_options();
 
 		if ( $send_state_messages ) {
 			self::state( 'message', 'authorized' );
@@ -7453,14 +7373,14 @@ endif;
 	/**
 	 * Checks if a Jetpack site is both active and not in offline mode.
 	 *
-	 * This is a DRY function to avoid repeating `Jetpack::is_connection_ready && ! Automattic\Jetpack\Status->is_offline_mode`.
+	 * This is a DRY function to avoid repeating `Jetpack::is_active && ! Automattic\Jetpack\Status->is_offline_mode`.
 	 *
 	 * @since 8.8.0
 	 *
 	 * @return bool True if Jetpack is active and not in offline mode.
 	 */
 	public static function is_active_and_not_offline_mode() {
-		if ( ! self::is_connection_ready() || ( new Status() )->is_offline_mode() ) {
+		if ( ! self::is_active() || ( new Status() )->is_offline_mode() ) {
 			return false;
 		}
 		return true;
@@ -7563,26 +7483,4 @@ endif;
 
 		return $products;
 	}
-
-	/**
-	 * Determine if the current user is allowed to make Jetpack purchases without
-	 * a WordPress.com account
-	 *
-	 * @return boolean True if the user can make purchases, false if not
-	 */
-	public static function current_user_can_purchase() {
-
-		// The site must be site-connected to Jetpack (no users connected).
-		if ( ! self::connection()->is_site_connection() ) {
-			return false;
-		}
-
-		// Make sure only administrators can make purchases.
-		if ( ! current_user_can( 'manage_options' ) ) {
-			return false;
-		}
-
-		return true;
-	}
-
 }

@@ -11,7 +11,7 @@
  * Additional Search Queries: search, elastic, elastic search, elasticsearch, fast search, search results, search performance, google search
  * Plans: business, complete
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 // Include everything.

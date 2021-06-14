@@ -2,7 +2,7 @@
 /**
  * The WordAds API.
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 use Automattic\Jetpack\Connection\Client;
@@ -94,7 +94,7 @@ class WordAds_API {
 			self::get_wordads_status();
 		}
 
-		return (bool) self::$wordads_status['approved'];
+		return self::$wordads_status['approved'] ? '1' : '0';
 	}
 
 	/**
@@ -109,7 +109,7 @@ class WordAds_API {
 			self::get_wordads_status();
 		}
 
-		return (bool) self::$wordads_status['active'];
+		return self::$wordads_status['active'] ? '1' : '0';
 	}
 
 	/**
@@ -124,7 +124,7 @@ class WordAds_API {
 			self::get_wordads_status();
 		}
 
-		return (bool) self::$wordads_status['house'];
+		return self::$wordads_status['house'] ? '1' : '0';
 	}
 
 	/**
@@ -139,7 +139,7 @@ class WordAds_API {
 			self::get_wordads_status();
 		}
 
-		return (bool) self::$wordads_status['unsafe'];
+		return self::$wordads_status['unsafe'] ? '1' : '0';
 	}
 
 	/**
