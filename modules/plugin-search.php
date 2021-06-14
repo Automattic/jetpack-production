@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if (
 	is_admin() &&
-	Jetpack::is_connection_ready() &&
+	Jetpack::is_active() &&
 	/** This filter is documented in _inc/lib/admin-pages/class.jetpack-react-page.php */
 	apply_filters( 'jetpack_show_promotions', true ) &&
 	// Disable feature hints when plugins cannot be installed.
@@ -423,21 +423,7 @@ class Jetpack_Plugin_Search {
 	 * @return bool
 	 */
 	public function filter_cards( $plugin ) {
-		/*
-		 * $plugin is normally an array.
-		 * However, since the response data can be filtered,
-		 * we cannot fully trust its format.
-		 * Let's handle both arrays and objects, and bail if it's neither.
-		 */
-		if ( is_array( $plugin ) && ! empty( $plugin['slug'] ) ) {
-			$slug = $plugin['slug'];
-		} elseif ( is_object( $plugin ) && ! empty( $plugin->slug ) ) {
-			$slug = $plugin->slug;
-		} else {
-			return false;
-		}
-
-		return ! in_array( $slug, array( 'jetpack' ), true );
+		return ! in_array( $plugin['slug'], array( 'jetpack' ), true );
 	}
 
 	/**

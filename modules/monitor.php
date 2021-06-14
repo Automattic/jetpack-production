@@ -6,7 +6,6 @@
  * Recommendation Order: 10
  * First Introduced: 2.6
  * Requires Connection: Yes
- * Requires User Connection: Yes
  * Auto Activate: No
  * Module Tags: Recommended
  * Feature: Security

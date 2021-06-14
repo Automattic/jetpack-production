@@ -279,10 +279,10 @@ class Defaults {
 		'wp_max_upload_size'               => 'wp_max_upload_size',
 		'is_main_network'                  => array( __CLASS__, 'is_multi_network' ),
 		'is_multi_site'                    => 'is_multisite',
-		'main_network_site'                => array( 'Automattic\\Jetpack\\Connection\\Urls', 'main_network_site_url' ),
+		'main_network_site'                => array( 'Automattic\\Jetpack\\Sync\\Functions', 'main_network_site_url' ),
 		'main_network_site_wpcom_id'       => array( 'Automattic\\Jetpack\\Sync\\Functions', 'main_network_site_wpcom_id' ),
-		'site_url'                         => array( 'Automattic\\Jetpack\\Connection\\Urls', 'site_url' ),
-		'home_url'                         => array( 'Automattic\\Jetpack\\Connection\\Urls', 'home_url' ),
+		'site_url'                         => array( 'Automattic\\Jetpack\\Sync\\Functions', 'site_url' ),
+		'home_url'                         => array( 'Automattic\\Jetpack\\Sync\\Functions', 'home_url' ),
 		'has_file_system_write_access'     => array( 'Automattic\\Jetpack\\Sync\\Functions', 'file_system_write_access' ),
 		'is_version_controlled'            => array( 'Automattic\\Jetpack\\Sync\\Functions', 'is_version_controlled' ),
 		'taxonomies'                       => array( 'Automattic\\Jetpack\\Sync\\Functions', 'get_taxonomies' ),
@@ -655,7 +655,14 @@ class Defaults {
 	 *
 	 * @var array multsite callables whitelisted
 	 */
-	public static $default_multisite_callable_whitelist = array();
+	public static $default_multisite_callable_whitelist = array(
+		'network_name'                        => array( 'Jetpack', 'network_name' ),
+		'network_allow_new_registrations'     => array( 'Jetpack', 'network_allow_new_registrations' ),
+		'network_add_new_users'               => array( 'Jetpack', 'network_add_new_users' ),
+		'network_site_upload_space'           => array( 'Jetpack', 'network_site_upload_space' ),
+		'network_upload_file_types'           => array( 'Jetpack', 'network_upload_file_types' ),
+		'network_enable_administration_menus' => array( 'Jetpack', 'network_enable_administration_menus' ),
+	);
 
 	/**
 	 * Get array of multisite callables whitelisted.

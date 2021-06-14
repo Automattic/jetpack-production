@@ -491,11 +491,11 @@ class Jetpack_Network {
 	 * @param Object $token the received token.
 	 */
 	public function filter_register_user_token( $token ) {
-		$is_connection_owner = ! $this->connection->has_connected_owner();
+		$is_master_user = ! Jetpack::is_active();
 		( new Tokens() )->update_user_token(
 			get_current_user_id(),
 			sprintf( '%s.%d', $token->secret, get_current_user_id() ),
-			$is_connection_owner
+			$is_master_user
 		);
 	}
 
@@ -561,7 +561,7 @@ class Jetpack_Network {
 
 		// We should be, but ensure we are on the main blog.
 		switch_to_blog( $current_site->blog_id );
-		$main_active = $jp->is_connection_ready();
+		$main_active = $jp->is_active();
 		restore_current_blog();
 
 		// If we are in dev mode, just show the notice and bail.
@@ -604,7 +604,7 @@ class Jetpack_Network {
 	 * @since 2.9
 	 */
 	public function network_admin_page_header() {
-		$is_connected = Jetpack::is_connection_ready();
+		$is_connected = Jetpack::is_active();
 
 		$data = array(
 			'is_connected' => $is_connected,

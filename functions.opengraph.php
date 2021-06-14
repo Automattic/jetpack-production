@@ -130,14 +130,12 @@ function jetpack_og_tags() {
 			/*
 			 * If the post author set an excerpt, use that.
 			 * Otherwise, pick the post content that comes before the More tag if there is one.
-			 * Do not use the post content if it contains premium content.
 			 */
-			if ( ! empty( $data->post_excerpt ) ) {
-				$tags['og:description'] = jetpack_og_get_description( $data->post_excerpt );
-			} elseif ( ! has_block( 'premium-content/container', $data->post_content ) ) {
-				$excerpt                = explode( '<!--more-->', $data->post_content )[0];
-				$tags['og:description'] = jetpack_og_get_description( $excerpt );
-			}
+			$excerpt = ! empty( $data->post_excerpt )
+				? $data->post_excerpt
+				: explode( '<!--more-->', $data->post_content )[0];
+
+			$tags['og:description'] = jetpack_og_get_description( $excerpt );
 		}
 
 		$tags['article:published_time'] = gmdate( 'c', strtotime( $data->post_date_gmt ) );
@@ -255,23 +253,7 @@ function jetpack_og_tags() {
 			if ( empty( $tag_content_single ) ) {
 				continue; // Don't ever output empty tags.
 			}
-
-			switch ( $tag_property ) {
-				case 'og:url':
-				case 'og:image':
-				case 'og:image:url':
-				case 'og:image:secure_url':
-				case 'og:audio':
-				case 'og:audio:url':
-				case 'og:audio:secure_url':
-				case 'og:video':
-				case 'og:video:url':
-				case 'og:video:secure_url':
-					$og_tag = sprintf( '<meta property="%s" content="%s" />', esc_attr( $tag_property ), esc_url( $tag_content_single ) );
-					break;
-				default:
-					$og_tag = sprintf( '<meta property="%s" content="%s" />', esc_attr( $tag_property ), esc_attr( $tag_content_single ) );
-			}
+			$og_tag = sprintf( '<meta property="%s" content="%s" />', esc_attr( $tag_property ), esc_attr( $tag_content_single ) );
 			/**
 			 * Filter the HTML Output of each Open Graph Meta tag.
 			 *

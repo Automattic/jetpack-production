@@ -382,11 +382,20 @@ function videopress_is_finished_processing( $post_id ) {
 	}
 
 	$meta = wp_get_attachment_metadata( $post->ID );
-	if ( ! isset( $meta['videopress']['finished'] ) ) {
+
+	if ( ! isset( $meta['file_statuses'] ) || ! is_array( $meta['file_statuses'] ) ) {
 		return false;
 	}
 
-	return $meta['videopress']['finished'];
+	$check_statuses = array( 'hd', 'dvd', 'mp4', 'ogg' );
+
+	foreach ( $check_statuses as $status ) {
+		if ( ! isset( $meta['file_statuses'][ $status ] ) || $meta['file_statuses'][ $status ] != 'DONE' ) {
+			return false;
+		}
+	}
+
+	return true;
 }
 
 
@@ -583,13 +592,25 @@ function video_format_done( $info, $format ) {
 
 	$meta = wp_get_attachment_metadata( $post->ID );
 
-	$video_format = str_replace( array( 'fmt_', 'fmt1_' ), '', $format );
+	switch ( $format ) {
+		case 'fmt_hd':
+			return isset( $meta['videopress']['files']['hd']['mp4'] );
+			break;
 
-	if ( 'ogg' === $video_format ) {
-		return isset( $meta['videopress']['files']['std']['ogg'] );
-	} else {
-		return isset( $meta['videopress']['files'][ $video_format ]['mp4'] );
+		case 'fmt_dvd':
+			return isset( $meta['videopress']['files']['dvd']['mp4'] );
+			break;
+
+		case 'fmt_std':
+			return isset( $meta['videopress']['files']['std']['mp4'] );
+			break;
+
+		case 'fmt_ogg':
+			return isset( $meta['videopress']['files']['std']['ogg'] );
+			break;
 	}
+
+	return false;
 }
 
 /**

@@ -76,9 +76,6 @@ class Jetpack_Podcast_Helper {
 			$title = $rss->get_title();
 			$title = $this->get_plain_text( $title );
 
-			$description = $rss->get_description();
-			$description = $this->get_plain_text( $description );
-
 			$cover = $rss->get_image_url();
 			$cover = ! empty( $cover ) ? esc_url( $cover ) : null;
 
@@ -86,11 +83,10 @@ class Jetpack_Podcast_Helper {
 			$link = ! empty( $link ) ? esc_url( $link ) : null;
 
 			$player_data = array(
-				'title'       => $title,
-				'description' => $description,
-				'link'        => $link,
-				'cover'       => $cover,
-				'tracks'      => $tracks,
+				'title'  => $title,
+				'link'   => $link,
+				'cover'  => $cover,
+				'tracks' => $tracks,
 			);
 
 			if ( $episode_options ) {

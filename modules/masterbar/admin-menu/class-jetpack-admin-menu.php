@@ -13,15 +13,6 @@ require_once __DIR__ . '/class-admin-menu.php';
  * Class Jetpack_Admin_Menu.
  */
 class Jetpack_Admin_Menu extends Admin_Menu {
-	/**
-	 * Determines whether the current locale is right-to-left (RTL).
-	 *
-	 * Performs the check against the current locale set on the WordPress.com's account settings.
-	 * See `Masterbar::__construct` in `modules/masterbar/masterbar/class-masterbar.php`.
-	 */
-	public function is_rtl() {
-		return get_user_option( 'jetpack_wpcom_is_rtl' );
-	}
 
 	/**
 	 * Create the desired menu output.
@@ -29,16 +20,19 @@ class Jetpack_Admin_Menu extends Admin_Menu {
 	public function reregister_menu_items() {
 		global $menu, $submenu;
 
-		// Reset menus so there are no third-party plugin items.
-		$menu    = array(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-		$submenu = array(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		// Change the menu only when rendered in Calypso.
+		if ( $this->is_api_request || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ) {
+			// Reset menus so there are no third-party plugin items.
+			$menu    = array(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$submenu = array(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 
-		parent::reregister_menu_items();
+			parent::reregister_menu_items();
 
-		$this->add_feedback_menu();
-		$this->add_wp_admin_menu();
+			$this->add_feedback_menu();
+			$this->add_wp_admin_menu();
 
-		ksort( $GLOBALS['menu'] );
+			ksort( $GLOBALS['menu'] );
+		}
 	}
 
 	/**
@@ -129,7 +123,7 @@ class Jetpack_Admin_Menu extends Admin_Menu {
 		}
 
 		$slug       = 'edit.php?post_type=' . $post_type;
-		$name       = __( 'Feedback', 'jetpack' );
+		$name       = $ptype_obj->labels->menu_name;
 		$capability = $ptype_obj->cap->edit_posts;
 		$icon       = $ptype_obj->menu_icon;
 		$position   = 45; // Before Jetpack.
@@ -160,18 +154,12 @@ class Jetpack_Admin_Menu extends Admin_Menu {
 	 *
 	 * @param bool $wp_admin_themes Optional. Whether Themes link should point to Calypso or wp-admin. Default false (Calypso).
 	 * @param bool $wp_admin_customize Optional. Whether Customize link should point to Calypso or wp-admin. Default false (Calypso).
-	 * @return string The Customizer URL.
 	 */
 	public function add_appearance_menu( $wp_admin_themes = false, $wp_admin_customize = false ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
-		$themes_url = 'https://wordpress.com/themes/' . $this->domain;
+		add_menu_page( esc_attr__( 'Appearance', 'jetpack' ), __( 'Appearance', 'jetpack' ), 'switch_themes', 'https://wordpress.com/themes/' . $this->domain, null, 'dashicons-admin-appearance', 60 );
+		add_submenu_page( 'themes.php', esc_attr__( 'Themes', 'jetpack' ), __( 'Themes', 'jetpack' ), 'switch_themes', 'https://wordpress.com/themes/' . $this->domain );
 		// Customize on Jetpack sites is always done on WP Admin (unsupported by Calypso).
-		$customize_url = 'customize.php';
-
-		add_menu_page( esc_attr__( 'Appearance', 'jetpack' ), __( 'Appearance', 'jetpack' ), 'switch_themes', $themes_url, null, 'dashicons-admin-appearance', 60 );
-		add_submenu_page( $themes_url, esc_attr__( 'Themes', 'jetpack' ), __( 'Themes', 'jetpack' ), 'switch_themes', 'https://wordpress.com/themes/' . $this->domain );
-		add_submenu_page( $themes_url, esc_attr__( 'Customize', 'jetpack' ), __( 'Customize', 'jetpack' ), 'customize', $customize_url );
-
-		return $customize_url;
+		add_submenu_page( 'themes.php', esc_attr__( 'Customize', 'jetpack' ), __( 'Customize', 'jetpack' ), 'customize', 'customize.php' );
 	}
 
 	/**
@@ -213,7 +201,7 @@ class Jetpack_Admin_Menu extends Admin_Menu {
 		add_submenu_page( 'tools.php', esc_attr__( 'Export', 'jetpack' ), __( 'Export', 'jetpack' ), 'export', 'export.php' );
 
 		// Remove the submenu auto-created by Core.
-		$this->hide_submenu_page( 'tools.php', 'tools.php' );
+		remove_submenu_page( 'tools.php', 'tools.php' );
 	}
 
 	/**

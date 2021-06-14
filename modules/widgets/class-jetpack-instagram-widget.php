@@ -600,17 +600,11 @@ class Jetpack_Instagram_Widget extends WP_Widget {
 			$instance['token_id'] = $old_instance['token_id'];
 		}
 
-		if ( isset( $new_instance['title'] ) ) {
-			$instance['title'] = wp_strip_all_tags( $new_instance['title'] );
-		}
+		$instance['title'] = wp_strip_all_tags( $new_instance['title'] );
 
-		if ( isset( $new_instance['columns'] ) ) {
-			$instance['columns'] = max( 1, min( $this->valid_options['max_columns'], (int) $new_instance['columns'] ) );
-		}
+		$instance['columns'] = max( 1, min( $this->valid_options['max_columns'], (int) $new_instance['columns'] ) );
 
-		if ( isset( $new_instance['count'] ) ) {
-			$instance['count'] = max( 1, min( $this->valid_options['max_count'], (int) $new_instance['count'] ) );
-		}
+		$instance['count'] = max( 1, min( $this->valid_options['max_count'], (int) $new_instance['count'] ) );
 
 		return $instance;
 	}
@@ -619,7 +613,7 @@ class Jetpack_Instagram_Widget extends WP_Widget {
 add_action(
 	'widgets_init',
 	function () {
-		if ( Jetpack::is_connection_ready() ) {
+		if ( Jetpack::is_active() ) {
 			register_widget( 'Jetpack_Instagram_Widget' );
 		}
 	}
