@@ -21,8 +21,6 @@ new WPCOM_JSON_API_Update_Comment_Endpoint( array(
 
 	'pass_wpcom_user_details' => true,
 
-	'allow_fallback_to_jetpack_blog_token' => true,
-
 	'example_request'      => 'https://public-api.wordpress.com/rest/v1/sites/82974409/posts/843/replies/new/',
 	'example_request_data' =>  array(
 		'headers' => array(
@@ -53,8 +51,6 @@ new WPCOM_JSON_API_Update_Comment_Endpoint( array(
 	),
 
 	'pass_wpcom_user_details' => true,
-
-	'allow_fallback_to_jetpack_blog_token' => true,
 
 	'example_request'      => 'https://public-api.wordpress.com/rest/v1/sites/82974409/comments/29/replies/new',
 	'example_request_data' => array(
@@ -195,7 +191,7 @@ class WPCOM_JSON_API_Update_Comment_Endpoint extends WPCOM_JSON_API_Comment_Endp
 			return new WP_Error( 'unauthorized', 'User cannot create comments', 403 );
 		}
 
-		if ( ! comments_open( $post->ID ) && ! current_user_can( 'edit_post', $post->ID ) ) {
+		if ( ! ( comments_open( $post->ID ) || current_user_can( 'moderate_comments' ) ) ) {
 			return new WP_Error( 'unauthorized', 'Comments on this post are closed', 403 );
 		}
 
@@ -230,16 +226,6 @@ class WPCOM_JSON_API_Update_Comment_Endpoint extends WPCOM_JSON_API_Comment_Endp
 				if ( !isset( $user->ID ) ) {
 					$user->ID = 0;
 				}
-
-				$author = get_user_by( 'id', (int) $user->ID );
-				// If we have a user with an external ID saved, we can use it.
-				if (
-					! $auth_required
-					&& $user->ID
-					&& $author
-				) {
-					$user = $author;
-				}
 			} else {
 				$auth_required = true;
 			}
@@ -257,7 +243,7 @@ class WPCOM_JSON_API_Update_Comment_Endpoint extends WPCOM_JSON_API_Comment_Endp
 			'comment_author_url'   => $user->user_url,
 			'comment_content'      => $input['content'],
 			'comment_parent'       => $comment_parent_id,
-			'comment_type'         => 'comment',
+			'comment_type'         => '',
 		);
 
 		if ( $comment_parent_id ) {
@@ -306,6 +292,10 @@ class WPCOM_JSON_API_Update_Comment_Endpoint extends WPCOM_JSON_API_Comment_Endp
 		}
 
 		$comment_status = wp_get_comment_status( $comment->comment_ID );
+		if ( $comment_status !== $update['comment_status'] && !current_user_can( 'moderate_comments' ) ) {
+			return new WP_Error( 'unauthorized', 'User cannot moderate comments', 403 );
+		}
+
 		if ( isset( $update['comment_status'] ) ) {
 			switch ( $update['comment_status'] ) {
 				case 'approved' :

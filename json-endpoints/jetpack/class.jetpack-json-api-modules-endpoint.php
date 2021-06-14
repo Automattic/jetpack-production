@@ -18,8 +18,7 @@ abstract class Jetpack_JSON_API_Modules_Endpoint extends Jetpack_JSON_API_Endpoi
 		'introduced'  => '(string)   The Jetpack version when the module was introduced.',
 		'changed'     => '(string)   The Jetpack version when the module was changed.',
 		'free'        => '(boolean)  The module\'s Free or Paid status.',
-		'module_tags' => '(array)    The module\'s tags.',
-		'override'    => '(string)   The module\'s override. Empty if no override, otherwise \'active\' or \'inactive\'',
+		'module_tags' => '(array)    The module\'s tags.'
 	);
 
 	protected function result() {
@@ -91,9 +90,6 @@ abstract class Jetpack_JSON_API_Modules_Endpoint extends Jetpack_JSON_API_Endpoi
 		$module['changed']           = $module_data['changed'];
 		$module['free']              = $module_data['free'];
 		$module['module_tags']       = $module_data['module_tags'];
-
-		$overrides_instance = Jetpack_Modules_Overrides::instance();
-		$module['override']         = $overrides_instance->get_module_override( $module_slug );
 
 		// Fetch the HTML formatted long description
 		ob_start();

@@ -2,8 +2,6 @@
 
 new WPCOM_JSON_API_Get_Comments_Tree_Endpoint( array(
 	'description' => 'Get a comments tree for site.',
-	'max_version' => '1',
-	'new_version' => '1.1',
 	'group'       => 'comments-tree',
 	'stat'        => 'comments-tree:1',
 
@@ -13,7 +11,7 @@ new WPCOM_JSON_API_Get_Comments_Tree_Endpoint( array(
 		'$site'   => '(int|string) Site ID or domain',
 	),
 	'query_parameters' => array(
-		'status' => '(string) Filter returned comments based on this value (allowed values: all, approved, unapproved, pending, trash, spam).'
+		'status' => '(string) Filter returned comments based on this value (allowed values: all, approved, pending, trash, spam).'
 	),
 	'response_format' => array(
 		'comments_count' => '(int) Total number of comments on the site',
@@ -102,9 +100,10 @@ class WPCOM_JSON_API_Get_Comments_Tree_Endpoint extends WPCOM_JSON_API_Endpoint 
 	 */
 	function get_site_tree_total_count( $status, $type ) {
 		global $wpdb;
-
 		$db_status = $this->get_comment_db_status( $status );
-		$type      = $this->get_sanitized_comment_type( $type );
+		$type = $this->get_sanitized_comment_type( $type );
+		// An empty value in the comments_type column denotes a regular comment.
+		$type = ( 'comment' === $type ) ? '' : $type;
 
 		$result = $wpdb->get_var(
 			$wpdb->prepare(
@@ -112,12 +111,10 @@ class WPCOM_JSON_API_Get_Comments_Tree_Endpoint extends WPCOM_JSON_API_Endpoint 
 				"FROM $wpdb->comments AS comments " .
 				"INNER JOIN $wpdb->posts AS posts ON comments.comment_post_ID = posts.ID " .
 				"WHERE comment_type = %s AND ( %s = 'all' OR comment_approved = %s )",
-				$type,
-				$db_status,
-				$db_status
+				$type, $db_status, $db_status
 			)
 		);
-		return (int) $result;
+		return intval( $result );
 	}
 
 	/**
@@ -131,7 +128,7 @@ class WPCOM_JSON_API_Get_Comments_Tree_Endpoint extends WPCOM_JSON_API_Endpoint 
 		if ( 'approved' === $status ) {
 			return '1';
 		}
-		if ( 'pending' === $status || 'unapproved' === $status ) {
+		if ( 'pending' === $status ) {
 			return '0';
 		}
 		return $status;
@@ -145,7 +142,7 @@ class WPCOM_JSON_API_Get_Comments_Tree_Endpoint extends WPCOM_JSON_API_Endpoint 
 	 * @return boolean
 	 */
 	function validate_status_param( $status ) {
-		return in_array( $status, array( 'all', 'approved', 'unapproved', 'pending', 'spam', 'trash' ) );
+		return in_array( $status, array( 'all', 'approved', 'pending', 'spam', 'trash' ) );
 	}
 
 	/**
