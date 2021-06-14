@@ -4,12 +4,12 @@
  *
  * Usage:
  * [archiveorg-book goodytwoshoes00newyiala]
- * [archiveorg-book https://www.archive.org/stream/goodytwoshoes00newyiala]
+ * [archiveorg-book http://www.archive.org/stream/goodytwoshoes00newyiala]
  * [archiveorg id=goodytwoshoes00newyiala width=480 height=430]
 
  * <iframe src='https://www.archive.org/stream/goodytwoshoes00newyiala?ui=embed#mode/1up' width='480px' height='430px' frameborder='0' ></iframe>
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -67,20 +67,18 @@ function jetpack_archiveorg_book_shortcode( $atts ) {
 	if ( ! $atts['width'] ) {
 		$width = absint( $content_width );
 	} else {
-		$width = (int) $atts['width'];
+		$width = intval( $atts['width'] );
 	}
 
 	if ( ! $atts['height'] ) {
 		$height = round( ( $width / 640 ) * 360 );
 	} else {
-		$height = (int) $atts['height'];
+		$height = intval( $atts['height'] );
 	}
 
-	$url = esc_url( "https://archive.org/stream/{$id}?ui=embed#mode/1up" );
+	$url = esc_url( set_url_scheme( "http://archive.org/stream/{$id}?ui=embed#mode/1up" ) );
 
-	$title = esc_html__( 'Archive.org Book', 'jetpack' );
-
-	$html = "<div class='embed-archiveorg-book' style='text-align:center;'><iframe title='$title' src='$url' width='$width' height='$height' style='border:0;' webkitallowfullscreen='true' mozallowfullscreen='true' allowfullscreen></iframe></div>";
+	$html = "<div class='embed-archiveorg-book' style='text-align:center;'><iframe src='$url' width='$width' height='$height' style='border:0;' webkitallowfullscreen='true' mozallowfullscreen='true' allowfullscreen></iframe></div>";
 	return $html;
 }
 

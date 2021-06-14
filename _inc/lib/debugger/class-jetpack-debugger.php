@@ -1,38 +1,76 @@
 <?php
 /**
- * Jetpack Debugger functionality allowing for self-service diagnostic information via the legacy jetpack debugger.
+ * Jetpack Debugger functionality allowing for self-service diagnostic information.
  *
- * @package automattic/jetpack
+ * @package jetpack
  */
-
-use Automattic\Jetpack\Redirect;
-use Automattic\Jetpack\Status;
 
 /**
  * Class Jetpack_Debugger
  *
- * A namespacing class for functionality related to the legacy in-plugin diagnostic tooling.
+ * A namespacing class for functionality related to the in-plugin diagnostic tooling.
  */
 class Jetpack_Debugger {
+
+	/**
+	 * Determine the active plan and normalize it for the debugger results.
+	 *
+	 * @return string The plan slug prepended with "JetpackPlan"
+	 */
+	private static function what_jetpack_plan() {
+		$plan = Jetpack_Plan::get();
+		$plan = ! empty( $plan['class'] ) ? $plan['class'] : 'undefined';
+		return 'JetpackPlan' . $plan;
+	}
+
+	/**
+	 * Convert seconds to human readable time.
+	 *
+	 * A dedication function instead of using Core functionality to allow for output in seconds.
+	 *
+	 * @param int $seconds Number of seconds to convert to human time.
+	 *
+	 * @return string Human readable time.
+	 */
+	public static function seconds_to_time( $seconds ) {
+		$seconds = intval( $seconds );
+		$units   = array(
+			'week'   => WEEK_IN_SECONDS,
+			'day'    => DAY_IN_SECONDS,
+			'hour'   => HOUR_IN_SECONDS,
+			'minute' => MINUTE_IN_SECONDS,
+			'second' => 1,
+		);
+		// specifically handle zero.
+		if ( 0 === $seconds ) {
+			return '0 seconds';
+		}
+		$human_readable = '';
+		foreach ( $units as $name => $divisor ) {
+			$quot = intval( $seconds / $divisor );
+			if ( $quot ) {
+				$human_readable .= "$quot $name";
+				$human_readable .= ( abs( $quot ) > 1 ? 's' : '' ) . ', ';
+				$seconds        -= $quot * $divisor;
+			}
+		}
+		return substr( $human_readable, 0, -2 );
+	}
+
 	/**
 	 * Returns 30 for use with a filter.
 	 *
 	 * To allow time for WP.com to run upstream testing, this function exists to increase the http_request_timeout value
 	 * to 30.
 	 *
-	 * @deprecated 8.0.0
-	 *
 	 * @return int 30
 	 */
 	public static function jetpack_increase_timeout() {
-		_deprecated_function( __METHOD__, 'jetpack-8.0', 'Jetpack_Cxn_Tests::increase_timeout' );
 		return 30; // seconds.
 	}
 
 	/**
 	 * Disconnect Jetpack and redirect user to connection flow.
-	 *
-	 * Used in class.jetpack-admin.php.
 	 */
 	public static function disconnect_and_redirect() {
 		if ( ! ( isset( $_GET['nonce'] ) && wp_verify_nonce( $_GET['nonce'], 'jp_disconnect' ) ) ) {
@@ -40,7 +78,7 @@ class Jetpack_Debugger {
 		}
 
 		if ( isset( $_GET['disconnect'] ) && $_GET['disconnect'] ) {
-			if ( Jetpack::is_connection_ready() ) {
+			if ( Jetpack::is_active() ) {
 				Jetpack::disconnect();
 				wp_safe_redirect( Jetpack::admin_url() );
 				exit;
@@ -56,9 +94,118 @@ class Jetpack_Debugger {
 			wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'jetpack' ) );
 		}
 
-		$support_url = Jetpack::is_development_version()
-			? Redirect::get_url( 'jetpack-contact-support-beta-group' )
-			: Redirect::get_url( 'jetpack-contact-support' );
+		$user_id     = get_current_user_id();
+		$user_tokens = Jetpack_Options::get_option( 'user_tokens' );
+		if ( is_array( $user_tokens ) && array_key_exists( $user_id, $user_tokens ) ) {
+			$user_token = $user_tokens[ $user_id ];
+		} else {
+			$user_token = '[this user has no token]';
+		}
+		unset( $user_tokens );
+
+		$debug_info = "\r\n";
+		foreach ( array(
+			'CLIENT_ID'   => 'id',
+			'BLOG_TOKEN'  => 'blog_token',
+			'MASTER_USER' => 'master_user',
+			'CERT'        => 'fallback_no_verify_ssl_certs',
+			'TIME_DIFF'   => 'time_diff',
+			'VERSION'     => 'version',
+			'OLD_VERSION' => 'old_version',
+			'PUBLIC'      => 'public',
+		) as $label => $option_name ) {
+			$debug_info .= "\r\n" . esc_html( $label . ': ' . Jetpack_Options::get_option( $option_name ) );
+		}
+
+		$debug_info .= "\r\n" . esc_html( 'USER_ID: ' . $user_id );
+		$debug_info .= "\r\n" . esc_html( 'USER_TOKEN: ' . $user_token );
+		$debug_info .= "\r\n" . esc_html( 'PHP_VERSION: ' . PHP_VERSION );
+		$debug_info .= "\r\n" . esc_html( 'WORDPRESS_VERSION: ' . $GLOBALS['wp_version'] );
+		$debug_info .= "\r\n" . esc_html( 'JETPACK__VERSION: ' . JETPACK__VERSION );
+		$debug_info .= "\r\n" . esc_html( 'JETPACK__PLUGIN_DIR: ' . JETPACK__PLUGIN_DIR );
+		$debug_info .= "\r\n" . esc_html( 'SITE_URL: ' . site_url() );
+		$debug_info .= "\r\n" . esc_html( 'HOME_URL: ' . home_url() );
+		$debug_info .= "\r\n" . esc_html( 'PLAN: ' . self::what_jetpack_plan() );
+
+		$debug_info .= "\r\n";
+
+		$debug_info .= "\r\n" . '-- SYNC Status -- ';
+		require_once JETPACK__PLUGIN_DIR . 'sync/class.jetpack-sync-modules.php';
+		$sync_module = Jetpack_Sync_Modules::get_module( 'full-sync' );
+		if ( $sync_module ) {
+			$sync_statuses              = $sync_module->get_status();
+			$human_readable_sync_status = array();
+			foreach ( $sync_statuses  as $sync_status => $sync_status_value ) {
+				$human_readable_sync_status[ $sync_status ] =
+					in_array( $sync_status, array( 'started', 'queue_finished', 'send_started', 'finished' ), true )
+						? date( 'r', $sync_status_value ) : $sync_status_value;
+			}
+			/* translators: A string reporting status. Example: "started" */
+			$debug_info .= "\r\n" . sprintf( esc_html__( 'Jetpack Sync Full Status: `%1$s`', 'jetpack' ), print_r( $human_readable_sync_status, 1 ) ); //phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+		}
+
+		require_once JETPACK__PLUGIN_DIR . 'sync/class.jetpack-sync-sender.php';
+
+		$queue = Jetpack_Sync_Sender::get_instance()->get_sync_queue();
+
+		/* translators: The number of items waiting to be synced. */
+		$debug_info .= "\r\n" . sprintf( esc_html__( 'Sync Queue size: %1$s', 'jetpack' ), $queue->size() );
+		/* translators: Human-readable time since the oldest item in the sync queue. */
+		$debug_info .= "\r\n" . sprintf( esc_html__( 'Sync Queue lag: %1$s', 'jetpack' ), self::seconds_to_time( $queue->lag() ) );
+
+		$full_sync_queue = Jetpack_Sync_Sender::get_instance()->get_full_sync_queue();
+
+		/* translators: The number of items waiting to be synced. */
+		$debug_info .= "\r\n" . sprintf( esc_html__( 'Full Sync Queue size: %1$s', 'jetpack' ), $full_sync_queue->size() );
+		/* translators: Human-readable time since the oldest item in the sync queue. */
+		$debug_info .= "\r\n" . sprintf( esc_html__( 'Full Sync Queue lag: %1$s', 'jetpack' ), self::seconds_to_time( $full_sync_queue->lag() ) );
+
+		require_once JETPACK__PLUGIN_DIR . 'sync/class.jetpack-sync-functions.php';
+		$idc_urls = array(
+			'home'       => Jetpack_Sync_Functions::home_url(),
+			'siteurl'    => Jetpack_Sync_Functions::site_url(),
+			'WP_HOME'    => Jetpack_Constants::is_defined( 'WP_HOME' ) ? Jetpack_Constants::get_constant( 'WP_HOME' ) : '',
+			'WP_SITEURL' => Jetpack_Constants::is_defined( 'WP_SITEURL' ) ? Jetpack_Constants::get_constant( 'WP_SITEURL' ) : '',
+		);
+		/* translators: List of URLs. */
+		$debug_info .= "\r\n" . esc_html( sprintf( 'Sync IDC URLs: %s', wp_json_encode( $idc_urls ) ) );
+		/* translators: String of a current option. */
+		$debug_info .= "\r\n" . esc_html( sprintf( 'Sync error IDC option: %s', wp_json_encode( Jetpack_Options::get_option( 'sync_error_idc' ) ) ) );
+		/* translators: String of a current option. */
+		$debug_info .= "\r\n" . esc_html( sprintf( 'Sync IDC Optin: %s', (string) Jetpack::sync_idc_optin() ) );
+
+		$debug_info .= "\r\n";
+
+		foreach ( array(
+			'HTTP_HOST',
+			'SERVER_PORT',
+			'HTTPS',
+			'GD_PHP_HANDLER',
+			'HTTP_AKAMAI_ORIGIN_HOP',
+			'HTTP_CF_CONNECTING_IP',
+			'HTTP_CLIENT_IP',
+			'HTTP_FASTLY_CLIENT_IP',
+			'HTTP_FORWARDED',
+			'HTTP_FORWARDED_FOR',
+			'HTTP_INCAP_CLIENT_IP',
+			'HTTP_TRUE_CLIENT_IP',
+			'HTTP_X_CLIENTIP',
+			'HTTP_X_CLUSTER_CLIENT_IP',
+			'HTTP_X_FORWARDED',
+			'HTTP_X_FORWARDED_FOR',
+			'HTTP_X_IP_TRAIL',
+			'HTTP_X_REAL_IP',
+			'HTTP_X_VARNISH',
+			'REMOTE_ADDR',
+		) as $header ) {
+			if ( isset( $_SERVER[ $header ] ) ) {
+				$debug_info .= "\r\n" . esc_html( $header . ': ' . $_SERVER[ $header ] );
+			}
+		}
+
+		$debug_info .= "\r\n" . esc_html( 'PROTECT_TRUSTED_HEADER: ' . wp_json_encode( get_site_option( 'trusted_ip_header' ) ) );
+
+		$debug_info .= "\r\n\r\nTEST RESULTS:\r\n\r\n";
 
 		$cxntests = new Jetpack_Cxn_Tests();
 		?>
@@ -69,26 +216,20 @@ class Jetpack_Debugger {
 					<?php
 					if ( $cxntests->pass() ) {
 						echo '<div class="jetpack-tests-succeed">' . esc_html__( 'Your Jetpack setup looks a-okay!', 'jetpack' ) . '</div>';
+						$debug_info .= "All tests passed.\r\n";
+						$debug_info .= print_r( $cxntests->raw_results(), true ); //phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
 					} else {
 						$failures = $cxntests->list_fails();
 						foreach ( $failures as $fail ) {
-							$action_link  = $fail['action'];
-							$action_label = $fail['action_label'];
-							$action       = ( $action_link ) ? '<a href="' . $action_link . '">' . $action_label . '</a>' : $action_label;
 							echo '<div class="jetpack-test-error">';
-							echo '<p><a class="jetpack-test-heading" href="#">' . esc_html( $fail['short_description'] );
+							echo '<p><a class="jetpack-test-heading" href="#">' . esc_html( $fail['message'] );
 							echo '<span class="noticon noticon-collapse"></span></a></p>';
-							echo '<p class="jetpack-test-details">' . wp_kses(
-								$action,
-								array(
-									'a' => array(
-										'href'   => array(),
-										'target' => array(),
-										'rel'    => array(),
-									),
-								)
-							) . '</p>';
+							echo '<p class="jetpack-test-details">' . esc_html( $fail['resolution'] ) . '</p>';
 							echo '</div>';
+
+							$debug_info .= "FAILED TESTS!\r\n";
+							$debug_info .= $fail['name'] . ': ' . $fail['message'] . "\r\n";
+							$debug_info .= print_r( $cxntests->raw_results(), true ); //phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
 						}
 					}
 					?>
@@ -114,10 +255,10 @@ class Jetpack_Debugger {
 									),
 								)
 							),
-							esc_url( Redirect::get_url( 'jetpack-contact-support-known-issues' ) ),
-							esc_url( Redirect::get_url( 'jetpack-contact-support-known-issues' ) ),
-							esc_url( Redirect::get_url( 'jetpack-support' ) ),
-							esc_url( Redirect::get_url( 'wporg-support-plugin-jetpack' ) )
+							'http://jetpack.com/support/getting-started-with-jetpack/known-issues/',
+							'http://jetpack.com/support/getting-started-with-jetpack/known-issues/',
+							'http://jetpack.com/support/',
+							'https://wordpress.org/support/plugin/jetpack'
 						);
 						?>
 						</li>
@@ -152,7 +293,7 @@ class Jetpack_Debugger {
 							<li>- <?php esc_html_e( 'If you get a 404 message, contact your web host. Their security may block XMLRPC.', 'jetpack' ); ?></li>
 						</ul>
 					</li>
-					<?php if ( current_user_can( 'jetpack_disconnect' ) && Jetpack::is_connection_ready() ) : ?>
+					<?php if ( current_user_can( 'jetpack_disconnect' ) && Jetpack::is_active() ) : ?>
 						<li>
 							<strong><em><?php esc_html_e( 'A connection problem with WordPress.com.', 'jetpack' ); ?></em></strong>
 							<?php
@@ -187,22 +328,18 @@ class Jetpack_Debugger {
 				<h4><?php esc_html_e( 'Still having trouble?', 'jetpack' ); ?></h4>
 				<p><b><em><?php esc_html_e( 'Ask us for help!', 'jetpack' ); ?></em></b>
 				<?php
-				/**
-				 * Offload to new WordPress debug data.
-				 */
-					echo sprintf(
-						wp_kses(
-							/* translators: URL for Jetpack support. URL for WordPress's Site Health */
-							__( '<a href="%1$s">Contact our Happiness team</a>. When you do, please include the <a href="%2$s">full debug information from your site</a>.', 'jetpack' ),
-							array( 'a' => array( 'href' => array() ) )
-						),
-						esc_url( $support_url ),
-						esc_url( admin_url() . 'site-health.php?tab=debug' )
-					);
+				echo sprintf(
+					wp_kses(
+						/* translators: URL for Jetpack support. */
+						__( '<a href="%s">Contact our Happiness team</a>. When you do, please include the full debug information below.', 'jetpack' ),
+						array( 'a' => array( 'href' => array() ) )
+					),
+					'https://jetpack.com/contact-support/'
+				);
 				?>
 						</p>
 				<hr />
-				<?php if ( Jetpack::is_connection_ready() ) : ?>
+				<?php if ( Jetpack::is_active() ) : ?>
 					<div id="connected-user-details">
 						<h3><?php esc_html_e( 'More details about your Jetpack settings', 'jetpack' ); ?></h3>
 						<p>
@@ -225,10 +362,10 @@ class Jetpack_Debugger {
 						printf(
 							wp_kses(
 								/* translators: Link to a Jetpack support page. */
-								__( 'Would you like to use Jetpack on your local development site? You can do so thanks to <a href="%s">Jetpack\'s offline mode</a>.', 'jetpack' ),
+								__( 'Would you like to use Jetpack on your local development site? You can do so thanks to <a href="%s">Jetpack\'s development mode</a>.', 'jetpack' ),
 								array( 'a' => array( 'href' => array() ) )
 							),
-							esc_url( Redirect::get_url( 'jetpack-support-development-mode' ) )
+							'https://jetpack.com/support/development-mode/'
 						);
 						?>
 							</p>
@@ -237,7 +374,7 @@ class Jetpack_Debugger {
 				<?php
 				if (
 					current_user_can( 'jetpack_manage_modules' )
-					&& ( ( new Status() )->is_offline_mode() || Jetpack::is_connection_ready() )
+					&& ( Jetpack::is_development_mode() || Jetpack::is_active() )
 				) {
 					printf(
 						wp_kses(
@@ -253,6 +390,12 @@ class Jetpack_Debugger {
 				}
 				?>
 			</div>
+		<hr />
+		<div id="toggle_debug_info"><?php esc_html_e( 'Advanced Debug Results', 'jetpack' ); ?></div>
+			<div id="debug_info_div">
+			<h4><?php esc_html_e( 'Debug Info', 'jetpack' ); ?></h4>
+			<div id="debug_info"><pre><?php echo esc_html( $debug_info ); ?></pre></div>
+		</div>
 		</div>
 		<?php
 	}
@@ -316,10 +459,10 @@ class Jetpack_Debugger {
 			}
 
 			.formbox input[type="text"], .formbox input[type="email"], .formbox input[type="url"], .formbox textarea, #debug_info_div {
-				border: 1px solid #dcdcde;
+				border: 1px solid #e5e5e5;
 				border-radius: 11px;
 				box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-				color: #646970;
+				color: #666;
 				font-size: 14px;
 				padding: 10px;
 				width: 97%;
@@ -339,7 +482,7 @@ class Jetpack_Debugger {
 				height: auto !important;
 				margin: 0 0 2em 10px !important;
 				padding: 8px 16px !important;
-				background-color: #dcdcde;
+				background-color: #ddd;
 				border: 1px solid rgba(0,0,0,0.05);
 				border-top-color: rgba(255,255,255,0.1);
 				border-bottom-color: rgba(0,0,0,0.15);

@@ -1,12 +1,5 @@
 <?php //phpcs:ignore
 
-use Automattic\Jetpack\Connection\Client;
-use Automattic\Jetpack\Connection\Secrets;
-use Automattic\Jetpack\Connection\Tokens;
-use Automattic\Jetpack\Identity_Crisis;
-use Automattic\Jetpack\Roles;
-use Automattic\Jetpack\Sync\Actions;
-
 class Jetpack_Provision { //phpcs:ignore
 
 	/**
@@ -24,42 +17,51 @@ class Jetpack_Provision { //phpcs:ignore
 		);
 
 		foreach ( $url_args as $url_arg => $constant_name ) {
+			// Anonymous functions were introduced in 5.3.0. So, if we're running on
+			// >= 5.3.0, use an anonymous function to set the home/siteurl value%s.
+			//
+			// Otherwise, fallback to setting the home/siteurl value via the WP_HOME and
+			// WP_SITEURL constants if the constant hasn't already been defined.
 			if ( isset( $named_args[ $url_arg ] ) ) {
-				add_filter(
-					$url_arg,
-					function() use ( $url_arg, $named_args ) {
+				if ( version_compare( phpversion(), '5.3.0', '>=' ) ) {
+					add_filter( $url_arg, function() use ( $url_arg, $named_args ) { // phpcs:ignore PHPCompatibility.PHP.NewClosure.Found
 						return $named_args[ $url_arg ];
-					},
-					11
-				);
+					}, 11 );
+				} elseif ( ! defined( $constant_name ) ) {
+					define( $constant_name, $named_args[ $url_arg ] );
+				}
 			}
 		}
 
 		// If Jetpack is currently connected, and is not in Safe Mode already, kick off a sync of the current
 		// functions/callables so that we can test if this site is in IDC.
-		if ( Jetpack::is_connection_ready() && ! Identity_Crisis::validate_sync_error_idc_option() && Actions::sync_allowed() ) {
-			Actions::do_full_sync( array( 'functions' => true ) );
-			Actions::$sender->do_full_sync();
+		if ( Jetpack::is_active() && ! Jetpack::validate_sync_error_idc_option() && Jetpack_Sync_Actions::sync_allowed() ) {
+			Jetpack_Sync_Actions::do_full_sync( array( 'functions' => true ) );
+			Jetpack_Sync_Actions::$sender->do_full_sync();
 		}
 
-		if ( Identity_Crisis::validate_sync_error_idc_option() ) {
+		if ( Jetpack::validate_sync_error_idc_option() ) {
 			return new WP_Error(
 				'site_in_safe_mode',
 				__( 'Can not provision a plan while in safe mode. See: https://jetpack.com/support/safe-mode/', 'jetpack' )
 			);
 		}
 
+		$blog_id    = Jetpack_Options::get_option( 'id' );
+		$blog_token = Jetpack_Options::get_option( 'blog_token' );
 
-		if ( ! Jetpack::connection()->is_connected() || ( isset( $named_args['force_register'] ) && (int) $named_args['force_register'] ) ) {
+		if ( ! $blog_id || ! $blog_token || ( isset( $named_args['force_register'] ) && intval( $named_args['force_register'] ) ) ) {
 			// This code mostly copied from Jetpack::admin_page_load.
 			Jetpack::maybe_set_version_option();
-			Jetpack::connection()->add_register_request_param( 'from', 'jetpack-start' );
-			$registered = Jetpack::connection()->try_registration();
+			$registered = Jetpack::try_registration();
 			if ( is_wp_error( $registered ) ) {
 				return $registered;
 			} elseif ( ! $registered ) {
 				return new WP_Error( 'registration_error', __( 'There was an unspecified error registering the site', 'jetpack' ) );
 			}
+
+			$blog_id    = Jetpack_Options::get_option( 'id' );
+			$blog_token = Jetpack_Options::get_option( 'blog_token' );
 		}
 
 		// If the user isn't specified, but we have a current master user, then set that to current user.
@@ -70,7 +72,7 @@ class Jetpack_Provision { //phpcs:ignore
 
 		$site_icon = get_site_icon_url();
 
-		$auto_enable_sso = ( ! Jetpack::connection()->has_connected_owner() || Jetpack::is_module_active( 'sso' ) );
+		$auto_enable_sso = ( ! Jetpack::is_active() || Jetpack::is_module_active( 'sso' ) );
 
 		/** This filter is documented in class.jetpack-cli.php */
 		if ( apply_filters( 'jetpack_start_enable_sso', $auto_enable_sso ) ) {
@@ -98,11 +100,10 @@ class Jetpack_Provision { //phpcs:ignore
 			$user = wp_get_current_user();
 
 			// Role.
-			$roles       = new Roles();
-			$role        = $roles->translate_current_user_to_role();
-			$signed_role = Jetpack::connection()->sign_role( $role );
+			$role        = Jetpack::translate_current_user_to_role();
+			$signed_role = Jetpack::sign_role( $role );
 
-			$secrets = ( new Secrets() )->generate( 'authorize' );
+			$secrets = Jetpack::init()->generate_secrets( 'authorize' );
 
 			// Jetpack auth stuff.
 			$request_body['scope']  = $signed_role;
@@ -129,11 +130,11 @@ class Jetpack_Provision { //phpcs:ignore
 		}
 
 		if ( isset( $named_args['onboarding'] ) && ! empty( $named_args['onboarding'] ) ) {
-			$request_body['onboarding'] = (int) $named_args['onboarding'];
+			$request_body['onboarding'] = intval( $named_args['onboarding'] );
 		}
 
 		if ( isset( $named_args['force_connect'] ) && ! empty( $named_args['force_connect'] ) ) {
-			$request_body['force_connect'] = (int) $named_args['force_connect'];
+			$request_body['force_connect'] = intval( $named_args['force_connect'] );
 		}
 
 		if ( isset( $request_body['onboarding'] ) && (bool) $request_body['onboarding'] ) {
@@ -176,7 +177,7 @@ class Jetpack_Provision { //phpcs:ignore
 
 		$blog_id = Jetpack_Options::get_option( 'id' );
 		$url     = esc_url_raw( sprintf(
-			'%s/rest/v1.3/jpphp/%d/partner-provision',
+			'https://%s/rest/v1.3/jpphp/%d/partner-provision',
 			self::get_api_host(),
 			$blog_id
 		) );
@@ -185,12 +186,11 @@ class Jetpack_Provision { //phpcs:ignore
 		}
 
 		// Add calypso env if set.
-		$calypso_env = Jetpack::get_calypso_env();
-		if ( ! empty( $calypso_env ) ) {
-			$url = add_query_arg( array( 'calypso_env' => $calypso_env ), $url );
+		if ( getenv( 'CALYPSO_ENV' ) ) {
+			$url = add_query_arg( array( 'calypso_env' => getenv( 'CALYPSO_ENV' ) ), $url );
 		}
 
-		$result = Client::_wp_remote_request( $url, $request );
+		$result = Jetpack_Client::_wp_remote_request( $url, $request );
 
 		if ( is_wp_error( $result ) ) {
 			return $result;
@@ -213,7 +213,7 @@ class Jetpack_Provision { //phpcs:ignore
 
 		if ( isset( $body_json->access_token ) && is_user_logged_in() ) {
 			// Check if this matches the existing token before replacing.
-			$existing_token = ( new Tokens() )->get_access_token( get_current_user_id() );
+			$existing_token = Jetpack_Data::get_access_token( get_current_user_id() );
 			if ( empty( $existing_token ) || $existing_token->secret !== $body_json->access_token ) {
 				self::authorize_user( get_current_user_id(), $body_json->access_token );
 			}
@@ -224,7 +224,7 @@ class Jetpack_Provision { //phpcs:ignore
 
 	private static function authorize_user( $user_id, $access_token ) {
 		// authorize user and enable SSO
-		( new Tokens() )->update_user_token( $user_id, sprintf( '%s.%d', $access_token, $user_id ), true );
+		Jetpack::update_user_token( $user_id, sprintf( '%s.%d', $access_token, $user_id ), true );
 
 		/**
 		 * Auto-enable SSO module for new Jetpack Start connections
@@ -256,8 +256,8 @@ class Jetpack_Provision { //phpcs:ignore
 			'body'    => ''
 		);
 
-		$url    = sprintf( '%s/rest/v1.3/jpphp/partner-keys/verify', self::get_api_host() );
-		$result = Client::_wp_remote_request( $url, $request );
+		$url = sprintf( 'https://%s/rest/v1.3/jpphp/partner-keys/verify', self::get_api_host() );
+		$result = Jetpack_Client::_wp_remote_request( $url, $request );
 
 		if ( is_wp_error( $result ) ) {
 			return $result;
@@ -278,7 +278,7 @@ class Jetpack_Provision { //phpcs:ignore
 	}
 
 	private static function get_api_host() {
-		$env_api_host = getenv( 'JETPACK_START_API_HOST', true ); // phpcs:ignore PHPCompatibility.FunctionUse.NewFunctionParameters.getenv_local_onlyFound
-		return $env_api_host ? 'https://' . $env_api_host : JETPACK__WPCOM_JSON_API_BASE;
+		$env_api_host = getenv( 'JETPACK_START_API_HOST', true );
+		return $env_api_host ? $env_api_host : JETPACK__WPCOM_JSON_API_HOST;
 	}
 }

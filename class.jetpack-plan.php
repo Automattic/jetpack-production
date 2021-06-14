@@ -1,17 +1,12 @@
 <?php //phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
 /**
- * Handles fetching of the site's plan and products from WordPress.com and caching values locally.
+ * Handles fetching of the site's plan from WordPress.com and caching the value locally.
  *
- * Not to be confused with the `Jetpack_Plans` class (in `_inc/lib/plans.php`), which
- * fetches general information about all available plans from WordPress.com, side-effect free.
- *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
-use Automattic\Jetpack\Connection\Client;
-
 /**
- * Provides methods methods for fetching the site's plan and products from WordPress.com.
+ * Provides methods methods for fetching the plan from WordPress.com.
  */
 class Jetpack_Plan {
 	/**
@@ -21,102 +16,11 @@ class Jetpack_Plan {
 	 */
 	private static $active_plan_cache;
 
-	/**
-	 * The name of the option that will store the site's plan.
-	 *
-	 * @var string
-	 */
 	const PLAN_OPTION = 'jetpack_active_plan';
 
 	/**
-	 * The name of the option that will store the site's products.
-	 *
-	 * @var string
-	 */
-	const SITE_PRODUCTS_OPTION = 'jetpack_site_products';
-
-	const PLAN_DATA = array(
-		'free'     => array(
-			'plans'    => array(
-				'jetpack_free',
-			),
-			'supports' => array(
-				'opentable',
-				'calendly',
-				'send-a-message',
-				'whatsapp-button',
-				'social-previews',
-
-				'core/video',
-				'core/cover',
-				'core/audio',
-			),
-		),
-		'personal' => array(
-			'plans'    => array(
-				'jetpack_personal',
-				'jetpack_personal_monthly',
-				'personal-bundle',
-				'personal-bundle-monthly',
-				'personal-bundle-2y',
-			),
-			'supports' => array(
-				'akismet',
-				'recurring-payments',
-				'premium-content/container',
-			),
-		),
-		'premium'  => array(
-			'plans'    => array(
-				'jetpack_premium',
-				'jetpack_premium_monthly',
-				'value_bundle',
-				'value_bundle-monthly',
-				'value_bundle-2y',
-			),
-			'supports' => array(
-				'donations',
-				'simple-payments',
-				'vaultpress',
-				'videopress',
-			),
-		),
-		'security' => array(
-			'plans'    => array(
-				'jetpack_security_daily',
-				'jetpack_security_daily_monthly',
-				'jetpack_security_realtime',
-				'jetpack_security_realtime_monthly',
-			),
-			'supports' => array(),
-		),
-		'business' => array(
-			'plans'    => array(
-				'jetpack_business',
-				'jetpack_business_monthly',
-				'business-bundle',
-				'business-bundle-monthly',
-				'business-bundle-2y',
-				'ecommerce-bundle',
-				'ecommerce-bundle-monthly',
-				'ecommerce-bundle-2y',
-				'vip',
-			),
-			'supports' => array(),
-		),
-
-		'complete' => array(
-			'plans'    => array(
-				'jetpack_complete',
-				'jetpack_complete_monthly',
-			),
-			'supports' => array(),
-		),
-	);
-
-	/**
 	 * Given a response to the `/sites/%d` endpoint, will parse the response and attempt to set the
-	 * site's plan and products from the response.
+	 * plan from the response.
 	 *
 	 * @param array $response The response from `/sites/%d`.
 	 * @return bool Was the plan successfully updated?
@@ -135,28 +39,31 @@ class Jetpack_Plan {
 		// Decode the results.
 		$results = json_decode( $body, true );
 
-		if ( ! is_array( $results ) ) {
-			return false;
-		}
-
-		if ( isset( $results['products'] ) ) {
-			// Store the site's products in an option and return true if updated.
-			self::store_data_in_option( self::SITE_PRODUCTS_OPTION, $results['products'] );
-		}
-
-		if ( ! isset( $results['plan'] ) ) {
+		// Bail if there were no results or plan details returned.
+		if ( ! is_array( $results ) || ! isset( $results['plan'] ) ) {
 			return false;
 		}
 
 		$current_plan = get_option( self::PLAN_OPTION, array() );
 
-		if ( ! empty( $current_plan ) && $current_plan === $results['plan'] ) {
-			// Bail if the plans array hasn't changed.
+		// If the plans don't differ, then there's nothing to do.
+		if ( ! empty( $current_plan ) && $current_plan['product_slug'] === $results['plan']['product_slug'] ) {
 			return false;
 		}
 
+		// Set flag for newly purchased plan.
+		if ( 'jetpack_free' !== $results['plan']['product_slug'] ) {
+			update_option( 'show_welcome_for_new_plan', true );
+		}
+
 		// Store the new plan in an option and return true if updated.
-		$result = self::store_data_in_option( self::PLAN_OPTION, $results['plan'] );
+		$result = update_option( self::PLAN_OPTION, $results['plan'], true );
+		if ( ! $result ) {
+			// If we got to this point, then we know we need to update. So, assume there is an issue
+			// with caching. To fix that issue, we can delete the current option and then update.
+			delete_option( self::PLAN_OPTION );
+			$result = update_option( self::PLAN_OPTION, $results['plan'], true );
+		}
 
 		if ( $result ) {
 			// Reset the cache since we've just updated the plan.
@@ -167,29 +74,10 @@ class Jetpack_Plan {
 	}
 
 	/**
-	 * Store data in an option.
-	 *
-	 * @param string $option The name of the option that will store the data.
-	 * @param array  $data Data to be store in an option.
-	 * @return bool Were the subscriptions successfully updated?
-	 */
-	private static function store_data_in_option( $option, $data ) {
-		$result = update_option( $option, $data, true );
-
-		// If something goes wrong with the update, so delete the current option and then update it.
-		if ( ! $result ) {
-			delete_option( $option );
-			$result = update_option( $option, $data, true );
-		}
-
-		return $result;
-	}
-
-	/**
 	 * Make an API call to WordPress.com for plan status
 	 *
 	 * @uses Jetpack_Options::get_option()
-	 * @uses Client::wpcom_json_api_request_as_blog()
+	 * @uses Jetpack_Client::wpcom_json_api_request_as_blog()
 	 * @uses update_option()
 	 *
 	 * @access public
@@ -200,7 +88,7 @@ class Jetpack_Plan {
 	public static function refresh_from_wpcom() {
 		// Make the API request.
 		$request  = sprintf( '/sites/%d', Jetpack_Options::get_option( 'id' ) );
-		$response = Client::wpcom_json_api_request_as_blog( $request, '1.1' );
+		$response = Jetpack_Client::wpcom_json_api_request_as_blog( $request, '1.1' );
 
 		return self::update_from_sites_response( $response );
 	}
@@ -235,7 +123,56 @@ class Jetpack_Plan {
 			)
 		);
 
-		list( $plan['class'], $supports ) = self::get_class_and_features( $plan['product_slug'] );
+		$supports = array();
+
+		// Define what paid modules are supported by personal plans.
+		$personal_plans = array(
+			'jetpack_personal',
+			'jetpack_personal_monthly',
+			'personal-bundle',
+			'personal-bundle-2y',
+		);
+
+		if ( in_array( $plan['product_slug'], $personal_plans, true ) ) {
+			// special support value, not a module but a separate plugin.
+			$supports[]    = 'akismet';
+			$plan['class'] = 'personal';
+		}
+
+		// Define what paid modules are supported by premium plans.
+		$premium_plans = array(
+			'jetpack_premium',
+			'jetpack_premium_monthly',
+			'value_bundle',
+			'value_bundle-2y',
+		);
+
+		if ( in_array( $plan['product_slug'], $premium_plans, true ) ) {
+			$supports[]    = 'akismet';
+			$supports[]    = 'simple-payments';
+			$supports[]    = 'vaultpress';
+			$supports[]    = 'videopress';
+			$plan['class'] = 'premium';
+		}
+
+		// Define what paid modules are supported by professional plans.
+		$business_plans = array(
+			'jetpack_business',
+			'jetpack_business_monthly',
+			'business-bundle',
+			'business-bundle-2y',
+			'ecommerce-bundle',
+			'ecommerce-bundle-2y',
+			'vip',
+		);
+
+		if ( in_array( $plan['product_slug'], $business_plans, true ) ) {
+			$supports[]    = 'akismet';
+			$supports[]    = 'simple-payments';
+			$supports[]    = 'vaultpress';
+			$supports[]    = 'videopress';
+			$plan['class'] = 'business';
+		}
 
 		// get available features.
 		foreach ( Jetpack::get_available_modules() as $module_slug ) {
@@ -256,53 +193,6 @@ class Jetpack_Plan {
 	}
 
 	/**
-	 * Get the site's products.
-	 *
-	 * @uses get_option()
-	 *
-	 * @access public
-	 * @static
-	 *
-	 * @return array Active Jetpack products
-	 */
-	public static function get_products() {
-		return get_option( self::SITE_PRODUCTS_OPTION, array() );
-	}
-
-	/**
-	 * Get the class of plan and a list of features it supports
-	 *
-	 * @param string $plan_slug The plan that we're interested in.
-	 * @return array Two item array, the plan class and the an array of features.
-	 */
-	private static function get_class_and_features( $plan_slug ) {
-		$features = array();
-		foreach ( self::PLAN_DATA as $class => $details ) {
-			$features = array_merge( $features, $details['supports'] );
-			if ( in_array( $plan_slug, $details['plans'], true ) ) {
-				return array( $class, $features );
-			}
-		}
-		return array( 'free', self::PLAN_DATA['free']['supports'] );
-	}
-
-	/**
-	 * Gets the minimum plan slug that supports the given feature
-	 *
-	 * @param string $feature The name of the feature.
-	 * @return string|bool The slug for the minimum plan that supports.
-	 *  the feature or false if not found
-	 */
-	public static function get_minimum_plan_for_feature( $feature ) {
-		foreach ( self::PLAN_DATA as $details ) {
-			if ( in_array( $feature, $details['supports'], true ) ) {
-				return $details['plans'][0];
-			}
-		}
-		return false;
-	}
-
-	/**
 	 * Determine whether the active plan supports a particular feature
 	 *
 	 * @uses Jetpack_Plan::get()
@@ -315,11 +205,6 @@ class Jetpack_Plan {
 	 * @return bool True if plan supports feature, false if not
 	 */
 	public static function supports( $feature ) {
-		// Search product bypasses plan feature check.
-		if ( 'search' === $feature && (bool) get_option( 'has_jetpack_search_product' ) ) {
-			return true;
-		}
-
 		$plan = self::get();
 
 		// Manually mapping WordPress.com features to Jetpack module slugs.

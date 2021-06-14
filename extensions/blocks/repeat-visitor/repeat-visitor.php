@@ -4,29 +4,15 @@
  *
  * @since 7.2.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
-namespace Automattic\Jetpack\Extensions\Repeat_Visitor;
-
-use Automattic\Jetpack\Blocks;
-use Jetpack_Gutenberg;
-
-const FEATURE_NAME = 'repeat-visitor';
-const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
-
-/**
- * Registers the block for use in Gutenberg
- * This is done via an action so that we can disable
- * registration if we need to.
- */
-function register_block() {
-	Blocks::jetpack_register_block(
-		BLOCK_NAME,
-		array( 'render_callback' => __NAMESPACE__ . '\render_block' )
-	);
-}
-add_action( 'init', __NAMESPACE__ . '\register_block' );
+jetpack_register_block(
+	'jetpack/repeat-visitor',
+	array(
+		'render_callback' => 'jetpack_repeat_visitor_block_render',
+	)
+);
 
 /**
  * Repeat Visitor block dependency declaration.
@@ -36,14 +22,12 @@ add_action( 'init', __NAMESPACE__ . '\register_block' );
  *
  * @return string
  */
-function render_block( $attributes, $content ) {
-	Jetpack_Gutenberg::load_assets_as_required( FEATURE_NAME );
+function jetpack_repeat_visitor_block_render( $attributes, $content ) {
+	Jetpack_Gutenberg::load_assets_as_required( 'repeat-visitor', array( 'wp-polyfill' ) );
 
-	$classes = Blocks::classes( FEATURE_NAME, $attributes );
-
-	$count     = isset( $_COOKIE['jp-visit-counter'] ) ? (int) $_COOKIE['jp-visit-counter'] : 0;
+	$count     = isset( $_COOKIE['jp-visit-counter'] ) ? intval( $_COOKIE['jp-visit-counter'] ) : 0;
 	$criteria  = isset( $attributes['criteria'] ) ? $attributes['criteria'] : 'after-visits';
-	$threshold = isset( $attributes['threshold'] ) ? (int) $attributes['threshold'] : 3;
+	$threshold = isset( $attributes['threshold'] ) ? intval( $attributes['threshold'] ) : 3;
 
 	if (
 		( 'after-visits' === $criteria && $count >= $threshold ) ||
@@ -53,5 +37,5 @@ function render_block( $attributes, $content ) {
 	}
 
 	// return an empty div so that view script increments the visit counter in the cookie.
-	return '<div class="' . esc_attr( $classes ) . '"></div>';
+	return '<div class="wp-block-jetpack-repeat-visitor"></div>';
 }

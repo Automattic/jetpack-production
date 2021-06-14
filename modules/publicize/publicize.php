@@ -1,8 +1,4 @@
 <?php
-// phpcs:disable WordPress.NamingConventions.ValidVariableName
-
-use Automattic\Jetpack\Redirect;
-use Automattic\Jetpack\Status;
 
 abstract class Publicize_Base {
 
@@ -23,14 +19,6 @@ abstract class Publicize_Base {
 	*/
 	public $ADMIN_PAGE        = 'wpas';
 	public $POST_MESS         = '_wpas_mess';
-
-	/**
-	 * Post meta key for flagging when the post is a tweetstorm.
-	 *
-	 * @var string
-	 */
-	public $POST_TWEETSTORM = '_wpas_is_tweetstorm';
-
 	public $POST_SKIP         = '_wpas_skip_'; // connection id appended to indicate that a connection should NOT be publicized to
 	public $POST_DONE         = '_wpas_done_'; // connection id appended to indicate a connection has already been publicized to
 	public $USER_AUTH         = 'wpas_authorize';
@@ -220,10 +208,6 @@ abstract class Publicize_Base {
 			case 'linkedin':
 				return 'LinkedIn';
 				break;
-			case 'google_drive': // google-drive used to be called google_drive.
-			case 'google-drive':
-				return 'Google Drive';
-				break;
 			case 'twitter':
 			case 'facebook':
 			case 'tumblr':
@@ -336,7 +320,7 @@ abstract class Publicize_Base {
 		$cmeta = $this->get_connection_meta( $connection );
 
 		if ( isset( $cmeta['connection_data']['meta']['link'] ) ) {
-			if ( 'facebook' == $service_name && 0 === strpos( wp_parse_url( $cmeta['connection_data']['meta']['link'], PHP_URL_PATH ), '/app_scoped_user_id/' ) ) {
+			if ( 'facebook' == $service_name && 0 === strpos( parse_url( $cmeta['connection_data']['meta']['link'], PHP_URL_PATH ), '/app_scoped_user_id/' ) ) {
 				// App-scoped Facebook user IDs are not usable profile links
 				return false;
 			}
@@ -345,7 +329,7 @@ abstract class Publicize_Base {
 		} elseif ( 'facebook' == $service_name && isset( $cmeta['connection_data']['meta']['facebook_page'] ) ) {
 			return 'https://facebook.com/' . $cmeta['connection_data']['meta']['facebook_page'];
 		} elseif ( 'tumblr' == $service_name && isset( $cmeta['connection_data']['meta']['tumblr_base_hostname'] ) ) {
-			 return 'https://' . $cmeta['connection_data']['meta']['tumblr_base_hostname'];
+			 return 'http://' . $cmeta['connection_data']['meta']['tumblr_base_hostname'];
 		} elseif ( 'twitter' == $service_name ) {
 			return 'https://twitter.com/' . substr( $cmeta['external_display'], 1 ); // Has a leading '@'
 		} else if ( 'linkedin' == $service_name ) {
@@ -353,7 +337,7 @@ abstract class Publicize_Base {
 				return false;
 			}
 
-			$profile_url_query = wp_parse_url( $cmeta['connection_data']['meta']['profile_url'], PHP_URL_QUERY );
+			$profile_url_query = parse_url( $cmeta['connection_data']['meta']['profile_url'], PHP_URL_QUERY );
 			wp_parse_str( $profile_url_query, $profile_url_query_args );
 			if ( isset( $profile_url_query_args['key'] ) ) {
 				$id = $profile_url_query_args['key'];
@@ -363,7 +347,7 @@ abstract class Publicize_Base {
 				return false;
 			}
 
-			return esc_url_raw( add_query_arg( 'id', urlencode( $id ), 'https://www.linkedin.com/profile/view' ) );
+			return esc_url_raw( add_query_arg( 'id', urlencode( $id ), 'http://www.linkedin.com/profile/view' ) );
 		} else {
 			return false; // no fallback. we just won't link it
 		}
@@ -862,29 +846,18 @@ abstract class Publicize_Base {
 	}
 
 	/**
-	 * Registers the post_meta for use in the REST API.
+	 * Registers the ->POST_MESS post_meta for use in the REST API.
 	 *
 	 * Registers for each post type that with `publicize` feature support.
 	 */
 	function register_post_meta() {
-		$message_args = array(
-			'type'          => 'string',
-			'description'   => __( 'The message to use instead of the title when sharing to Publicize Services', 'jetpack' ),
-			'single'        => true,
-			'default'       => '',
-			'show_in_rest'  => array(
-				'name' => 'jetpack_publicize_message',
-			),
-			'auth_callback' => array( $this, 'message_meta_auth_callback' ),
-		);
-
-		$tweetstorm_args = array(
-			'type'          => 'boolean',
-			'description'   => __( 'Whether or not the post should be treated as a Twitter thread.', 'jetpack' ),
-			'single'        => true,
-			'default'       => false,
-			'show_in_rest'  => array(
-				'name' => 'jetpack_is_tweetstorm',
+		$args = array(
+			'type' => 'string',
+			'description' => __( 'The message to use instead of the title when sharing to Publicize Services', 'jetpack' ),
+			'single' => true,
+			'default' => '',
+			'show_in_rest' => array(
+				'name' => 'jetpack_publicize_message'
 			),
 			'auth_callback' => array( $this, 'message_meta_auth_callback' ),
 		);
@@ -894,11 +867,9 @@ abstract class Publicize_Base {
 				continue;
 			}
 
-			$message_args['object_subtype']    = $post_type;
-			$tweetstorm_args['object_subtype'] = $post_type;
+			$args['object_subtype'] = $post_type;
 
-			register_meta( 'post', $this->POST_MESS, $message_args );
-			register_meta( 'post', $this->POST_TWEETSTORM, $tweetstorm_args );
+			register_meta( 'post', $this->POST_MESS, $args );
 		}
 	}
 
@@ -1005,11 +976,10 @@ abstract class Publicize_Base {
 		foreach ( (array) $this->get_services( 'connected' ) as $service_name => $connections ) {
 			foreach ( $connections as $connection ) {
 				$connection_data = '';
-				if ( is_object( $connection ) && method_exists( $connection, 'get_meta' ) ) {
+				if ( method_exists( $connection, 'get_meta' ) )
 					$connection_data = $connection->get_meta( 'connection_data' );
-				} elseif ( ! empty( $connection['connection_data'] ) ) {
+				elseif ( ! empty( $connection['connection_data'] ) )
 					$connection_data = $connection['connection_data'];
-				}
 
 				/** This action is documented in modules/publicize/ui.php */
 				if ( false == apply_filters( 'wpas_submit_post?', $submit_post, $post_id, $service_name, $connection_data ) ) {
@@ -1264,5 +1234,16 @@ abstract class Publicize_Base {
 }
 
 function publicize_calypso_url() {
-	return Redirect::get_url( 'calypso-marketing-connections', array( 'site' => ( new Status() )->get_site_suffix() ) );
+	$calypso_sharing_url = 'https://wordpress.com/sharing/';
+	if ( class_exists( 'Jetpack' ) && method_exists( 'Jetpack', 'build_raw_urls' ) ) {
+		$site_suffix = Jetpack::build_raw_urls( home_url() );
+	} elseif ( class_exists( 'WPCOM_Masterbar' ) && method_exists( 'WPCOM_Masterbar', 'get_calypso_site_slug' ) ) {
+		$site_suffix = WPCOM_Masterbar::get_calypso_site_slug( get_current_blog_id() );
+	}
+
+	if ( $site_suffix ) {
+		return $calypso_sharing_url . $site_suffix;
+	} else {
+		return $calypso_sharing_url;
+	}
 }

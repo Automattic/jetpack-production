@@ -1,7 +1,5 @@
 <?php
 
-use Automattic\Jetpack\Assets;
-
 /**
  * VideoPress in Jetpack
  */
@@ -78,7 +76,7 @@ class Jetpack_VideoPress {
 		}
 
 		// Connection owners are allowed to do all the things.
-		if ( Jetpack::connection()->is_connection_owner( $user_id ) ) {
+		if ( $this->is_connection_owner( $user_id ) ) {
 			return true;
 		}
 
@@ -100,15 +98,15 @@ class Jetpack_VideoPress {
 
 	/**
 	 * Returns true if the provided user is the Jetpack connection owner.
-	 *
-	 * @deprecated since 7.7
-	 *
-	 * @param Integer|Boolean $user_id the user identifier. False for current user.
-	 * @return bool Whether the current user is the connection owner.
 	 */
 	public function is_connection_owner( $user_id = false ) {
-		_deprecated_function( __METHOD__, 'jetpack-7.7', 'Automattic\\Jetpack\\Connection\\Manager::is_connection_owner' );
-		return Jetpack::connection()->is_connection_owner( $user_id );
+		if ( ! $user_id ) {
+			$user_id = get_current_user_id();
+		}
+
+		$user_token = Jetpack_Data::get_access_token( JETPACK_MASTER_USER );
+
+		return $user_token && is_object( $user_token ) && isset( $user_token->external_user_id ) && $user_id === $user_token->external_user_id;
 	}
 
 	/**
@@ -130,7 +128,7 @@ class Jetpack_VideoPress {
 		if ( $this->should_override_media_uploader() ) {
 			wp_enqueue_script(
 				'videopress-plupload',
-				Assets::get_file_url_for_environment(
+				Jetpack::get_file_url_for_environment(
 					'_inc/build/videopress/js/videopress-plupload.min.js',
 					'modules/videopress/js/videopress-plupload.js'
 				),
@@ -143,7 +141,7 @@ class Jetpack_VideoPress {
 
 			wp_enqueue_script(
 				'videopress-uploader',
-				Assets::get_file_url_for_environment(
+				Jetpack::get_file_url_for_environment(
 					'_inc/build/videopress/js/videopress-uploader.min.js',
 					'modules/videopress/js/videopress-uploader.js'
 				),
@@ -155,7 +153,7 @@ class Jetpack_VideoPress {
 
 			wp_enqueue_script(
 				'media-video-widget-extensions',
-				Assets::get_file_url_for_environment(
+				Jetpack::get_file_url_for_environment(
 					'_inc/build/videopress/js/media-video-widget-extensions.min.js',
 					'modules/videopress/js/media-video-widget-extensions.js'
 				),

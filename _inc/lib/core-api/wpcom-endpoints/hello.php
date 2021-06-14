@@ -8,9 +8,8 @@ class WPCOM_REST_API_V2_Endpoint_Hello {
 	public function register_routes() {
 		register_rest_route( 'wpcom/v2', '/hello', array(
 			array(
-				'methods'             => WP_REST_Server::READABLE,
-				'callback'            => array( $this, 'get_data' ),
-				'permission_callback' => '__return_true',
+				'methods'  => WP_REST_Server::READABLE,
+				'callback' => array( $this, 'get_data' ),
 			),
 		) );
 	}
