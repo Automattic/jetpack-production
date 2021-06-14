@@ -1,4 +1,3 @@
-/* Do not modify this file directly.  It is concatenated from individual module CSS files. */
 /* NOAUTORTL */
 .rtl .CodeMirror {
   direction: rtl; /* code should always be written left to right */
@@ -7,10 +6,10 @@
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
   font-family: monospace;
-  height: 400px;
+  height: 300px;
 }
 .CodeMirror-scroll {
-  /* Set scrolling behavior here */
+  /* Set scrolling behaviour here */
   overflow: auto;
 }
 
@@ -30,8 +29,8 @@
 /* GUTTER */
 
 .CodeMirror-gutters {
-  border-left: 1px solid #dcdcde;
-  background-color: #f6f7f7;
+  border-left: 1px solid #ddd;
+  background-color: #f7f7f7;
   white-space: nowrap;
 }
 .CodeMirror-linenumbers {}
@@ -177,7 +176,8 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   cursor: text;
 }
 .CodeMirror pre {
-  /* Reset some styles that the rest of the page might have set */ border-radius: 0;
+  /* Reset some styles that the rest of the page might have set */
+  -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
   border-width: 0;
   background: transparent;
   font-family: inherit;
@@ -198,6 +198,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
 }
 .CodeMirror-code pre {
   border-left: 30px solid transparent;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }

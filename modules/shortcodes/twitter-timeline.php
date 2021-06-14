@@ -1,76 +1,31 @@
 <?php
-/**
- * Twitter Timeline Shortcode.
- *
- * Examples:
- * [twitter-timeline username=jetpack]
- *
- * @package automattic/jetpack
- */
+add_shortcode( 'twitter-timeline', 'twitter_timeline_shortcode' );
 
-/**
- * Render the Twitter shortcode.
- *
- * @param array $atts Shortcode attributes.
- */
-function twitter_timeline_shortcode( $atts ) {
+function twitter_timeline_shortcode( $attr ) {
+
 	$default_atts = array(
-		'username' => '',
-		'id'       => '',
-		'width'    => '450',
-		'height'   => '282',
+		'username'         => '',
+		'id'               => '',
+		'height'           => 282,
+		'width'            => 450,
+
 	);
 
-	$atts = shortcode_atts( $default_atts, $atts, 'twitter-timeline' );
+	$attr = shortcode_atts( $default_atts, $attr, 'twitter-timeline' );
 
-	$atts['username'] = preg_replace( '/[^A-Za-z0-9_]+/', '', $atts['username'] );
+	if ( $attr['username'] != preg_replace( '/[^A-Za-z0-9_]+/', '', $attr['username'] ) )
+		return '<!--' . __( 'Invalid username', 'jetpack' ) . '-->';
 
-	if ( empty( $atts['username'] ) && ! is_numeric( $atts['id'] ) ) {
-		return '<!-- ' . __( 'Must specify Twitter Timeline id or username.', 'jetpack' ) . ' -->';
-	}
+	if ( ! is_numeric( $attr['id'] ) )
+		return '<!--' . __( 'Invalid id', 'jetpack' ) . '-->';
 
-	$output = '<a class="twitter-timeline"';
-
-	/** This filter is documented in modules/shortcodes/tweet.php */
-	$partner = apply_filters( 'jetpack_twitter_partner_id', 'jetpack' );
-	if ( ! empty( $partner ) ) {
-		$output .= ' data-partner="' . esc_attr( $partner ) . '"';
-	}
-	if ( is_numeric( $atts['width'] ) ) {
-		$output .= ' data-width="' . esc_attr( $atts['width'] ) . '"';
-	}
-	if ( is_numeric( $atts['height'] ) ) {
-		$output .= ' data-height="' . esc_attr( $atts['height'] ) . '"';
-	}
-	if ( is_numeric( $atts['id'] ) ) {
-		$output .= ' data-widget-id="' . esc_attr( $atts['id'] ) . '"';
-	}
-	if ( ! empty( $atts['username'] ) ) {
-		$output .= ' href="' . esc_url( 'https://twitter.com/' . $atts['username'] ) . '"';
-	}
-
-	$output .= '>';
-
-	$output .= sprintf(
-		/* Translators: placeholder is a Twitter username. */
-		__( 'Tweets by @%s', 'jetpack' ),
-		$atts['username']
-	);
-
-	$output .= '</a>';
-
-	wp_enqueue_script( 'jetpack-twitter-timeline' );
+	$tweets_by = sprintf( __( 'Tweets by @%s', 'jetpack' ), $attr['username'] );
+	$output = '<a class="twitter-timeline" width="' . (int)$attr['width'] . '" height="' . (int)$attr['height'] . '" href="' . esc_url( 'https://twitter.com/'. $attr['username'] ) . '" data-widget-id="' . esc_attr( $attr['id'] ) . '">' . esc_html( $tweets_by ) . '</a>';
+	add_action( 'wp_footer', 'twitter_timeline_js' );
 
 	return $output;
 }
-add_shortcode( 'twitter-timeline', 'twitter_timeline_shortcode' );
 
-/**
- * Enqueue the js used by the Twitter shortcode.
- */
 function twitter_timeline_js() {
-	if ( is_customize_preview() ) {
-		wp_enqueue_script( 'jetpack-twitter-timeline' );
-	}
+	echo '<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>';
 }
-add_action( 'wp_enqueue_scripts', 'twitter_timeline_js' );
