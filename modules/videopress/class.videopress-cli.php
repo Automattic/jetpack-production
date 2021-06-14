@@ -16,9 +16,10 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		 * ## EXAMPLES
 		 *
 		 * wp videopress import kUJmAcSf
+		 *
 		 */
 		public function import( $args ) {
-			$guid          = $args[0];
+			$guid = $args[0];
 			$attachment_id = create_local_media_library_for_videopress_guid( $guid );
 			if ( $attachment_id && ! is_wp_error( $attachment_id ) ) {
 				WP_CLI::success( sprintf( __( 'The video has been imported as Attachment ID %d', 'jetpack' ), $attachment_id ) );
@@ -37,7 +38,7 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		public function cleanup_videos() {
 			$num_cleaned = videopress_cleanup_media_library();
 
-			WP_CLI::success( sprintf( _n( 'Cleaned up %d video.', 'Cleaned up a total of %d videos.', $num_cleaned, 'jetpack' ), $num_cleaned ) );
+			WP_CLI::success( sprintf( __( 'Cleaned up a total of %d videos.', 'jetpack' ), $num_cleaned ) );
 		}
 
 		/**
@@ -50,21 +51,25 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		public function list_crons() {
 
 			$scheduler = VideoPress_Scheduler::init();
-			$crons     = $scheduler->get_crons();
+			$crons = $scheduler->get_crons();
 
 			$schedules = wp_get_schedules();
+
 
 			if ( count( $crons ) === 0 ) {
 				WP_CLI::success( __( 'Found no available cron jobs.', 'jetpack' ) );
 
+			} elseif ( count( $crons ) === 1 ) {
+				WP_CLI::success( __( 'Found 1 available cron job.', 'jetpack' ) );
+
 			} else {
-				WP_CLI::success( sprintf( _n( 'Found %d available cron job.', 'Found %d available cron jobs.', count( $crons ), 'jetpack' ), count( $crons ) ) );
+				WP_CLI::success( sprintf( __( 'Found %d available cron jobs.', 'jetpack' ), count( $crons ) ) );
 			}
 
 			foreach ( $crons as $cron_name => $cron ) {
-				$interval  = isset( $schedules[ $cron['interval'] ]['display'] ) ? $schedules[ $cron['interval'] ]['display'] : $cron['interval'];
+				$interval = isset( $schedules[ $cron['interval'] ]['display'] ) ? $schedules[ $cron['interval'] ]['display'] : $cron['interval'];
 				$runs_next = $scheduler->check_cron( $cron_name );
-				$status    = $runs_next ? sprintf( 'Scheduled - Runs Next at %s GMT', gmdate( 'Y-m-d H:i:s', $runs_next ) ) : 'Not Scheduled';
+				$status = $runs_next ? sprintf( 'Scheduled - Runs Next at %s GMT', gmdate( 'Y-m-d H:i:s', $runs_next ) ) : 'Not Scheduled';
 
 				WP_CLI::log( 'Name: ' . $cron_name );
 				WP_CLI::log( 'Method: ' . $cron['method'] );

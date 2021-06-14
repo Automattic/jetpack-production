@@ -84,37 +84,6 @@ class iCalendarReader {
 		return $vcal['VEVENT'];
 	}
 
-	function apply_timezone_offset( $events ) {
-		if ( ! $events ) {
-			return $events;
-		}
-
-		// get timezone offset from the timezone name.
-		$timezone = wp_timezone();
-
-		$offsetted_events = array();
-
-		foreach ( $events as $event ) {
-			// Don't handle all-day events
-			if ( 8 < strlen( $event['DTSTART'] ) ) {
-				$start_time = preg_replace( '/Z$/', '', $event['DTSTART'] );
-				$start_time = new DateTime( $start_time, $this->timezone );
-				$start_time->setTimeZone( $timezone );
-
-				$end_time = preg_replace( '/Z$/', '', $event['DTEND'] );
-				$end_time = new DateTime( $end_time, $this->timezone );
-				$end_time->setTimeZone( $timezone );
-
-				$event['DTSTART'] = $start_time->format( 'YmdHis\Z' );
-				$event['DTEND'] = $end_time->format( 'YmdHis\Z' );
-			}
-
-			$offsetted_events[] = $event;
-		}
-
-		return $offsetted_events;
-	}
-
 	protected function filter_past_and_recurring_events( $events ) {
 		$upcoming = array();
 		$set_recurring_events = array();
@@ -123,7 +92,7 @@ class iCalendarReader {
 		 * This filter allows any time to be passed in for testing or changing timezones, etc...
 		 *
 		 * @module widgets
-		 *
+		 * 
 		 * @since 3.4.0
 		 *
 		 * @param object time() A time object.
@@ -741,7 +710,6 @@ class iCalendarReader {
 		) );
 
 		$events = $this->get_events( $url, $args['number'] );
-		$events = $this->apply_timezone_offset( $events );
 
 		if ( empty( $events ) )
 			return false;
@@ -820,9 +788,9 @@ class iCalendarReader {
 		}
 		$single_day = $end ? ( $end - $start ) <= DAY_IN_SECONDS : true;
 
-		/* translators: Date and time */
+		/* Translators: Date and time */
 		$date_with_time = __( '%1$s at %2$s' , 'jetpack' );
-		/* translators: Two dates with a separator */
+		/* Translators: Two dates with a separator */
 		$two_dates = __( '%1$s &ndash; %2$s' , 'jetpack' );
 
 		// we'll always have the start date. Maybe with time
@@ -880,7 +848,7 @@ class iCalendarReader {
  * @return array
  */
 function icalendar_get_events( $url = '', $count = 5 ) {
-	// Find your calendar's address https://support.google.com/calendar/bin/answer.py?hl=en&answer=37103
+	// Find your calendar's address http://support.google.com/calendar/bin/answer.py?hl=en&answer=37103
 	$ical = new iCalendarReader();
 	return $ical->get_events( $url, $count );
 }

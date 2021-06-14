@@ -30,7 +30,7 @@ class Jetpack_Testimonial {
 		// If called via REST API, we need to register later in lifecycle
 		add_action( 'restapi_theme_init',          array( $this, 'maybe_register_cpt' ) );
 
-		// Add to REST API post type allowed list.
+		// Add to REST API post type whitelist
 		add_filter( 'rest_api_allowed_post_types', array( $this, 'allow_cpt_rest_api_type' ) );
 
 		$this->maybe_register_cpt();
@@ -56,6 +56,11 @@ class Jetpack_Testimonial {
 
 		if ( ( ! defined( 'IS_WPCOM' ) || ! IS_WPCOM ) && ! Jetpack::is_module_active( 'custom-content-types' ) ) {
 			return;
+		}
+
+		// Enable Omnisearch for CPT.
+		if ( class_exists( 'Jetpack_Omnisearch_Posts' ) ) {
+			new Jetpack_Omnisearch_Posts( self::CUSTOM_POST_TYPE );
 		}
 
 		// CPT magic
@@ -152,14 +157,13 @@ class Jetpack_Testimonial {
 			<label for="<?php echo esc_attr( self::OPTION_NAME ); ?>">
 				<input name="<?php echo esc_attr( self::OPTION_NAME ); ?>" id="<?php echo esc_attr( self::OPTION_NAME ); ?>" <?php echo checked( get_option( self::OPTION_NAME, '0' ), true, false ); ?> type="checkbox" value="1" />
 				<?php esc_html_e( 'Enable Testimonials for this site.', 'jetpack' ); ?>
-				<a target="_blank" href="https://en.support.wordpress.com/testimonials/"><?php esc_html_e( 'Learn More', 'jetpack' ); ?></a>
+				<a target="_blank" href="http://en.support.wordpress.com/testimonials/"><?php esc_html_e( 'Learn More', 'jetpack' ); ?></a>
 			</label>
 		<?php endif;
 
 		if ( $this->site_supports_custom_post_type() ) :
 			printf( '<p><label for="%1$s">%2$s</label></p>',
 				esc_attr( self::OPTION_READING_SETTING ),
-				/* translators: %1$s is replaced with an input field for numbers */
 				sprintf( __( 'Testimonial pages display at most %1$s testimonials', 'jetpack' ),
 					sprintf( '<input name="%1$s" id="%1$s" type="number" step="1" min="1" value="%2$s" class="small-text" />',
 						esc_attr( self::OPTION_READING_SETTING ),
@@ -185,7 +189,7 @@ class Jetpack_Testimonial {
 	}
 
 	/**
-	 * Add to REST API post type allowed list.
+	 * Add to REST API post type whitelist
 	 */
 	function allow_cpt_rest_api_type( $post_types ) {
 		$post_types[] = self::CUSTOM_POST_TYPE;
@@ -314,8 +318,6 @@ class Jetpack_Testimonial {
 				'thumbnail',
 				'page-attributes',
 				'revisions',
-				'excerpt',
-				'newspack_blocks',
 			),
 			'rewrite' => array(
 				'slug'       => 'testimonial',
@@ -353,7 +355,7 @@ class Jetpack_Testimonial {
 			7  => esc_html__( 'Testimonial saved.', 'jetpack' ),
 			8  => sprintf( __( 'Testimonial submitted. <a target="_blank" href="%s">Preview testimonial</a>', 'jetpack'), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) ),
 			9  => sprintf( __( 'Testimonial scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview testimonial</a>', 'jetpack' ),
-				// translators: Publish box date format, see https://php.net/date
+				// translators: Publish box date format, see http://php.net/date
 				date_i18n( __( 'M j, Y @ G:i', 'jetpack' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post->ID) ) ),
 			10 => sprintf( __( 'Testimonial draft updated. <a target="_blank" href="%s">Preview testimonial</a>', 'jetpack' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) ),
 		);
@@ -365,9 +367,10 @@ class Jetpack_Testimonial {
 	 * Change ‘Enter Title Here’ text for the Testimonial.
 	 */
 	function change_default_title( $title ) {
-		if ( self::CUSTOM_POST_TYPE == get_post_type() ) {
+		$screen = get_current_screen();
+
+		if ( self::CUSTOM_POST_TYPE == $screen->post_type )
 			$title = esc_html__( "Enter the customer's name here", 'jetpack' );
-		}
 
 		return $title;
 	}
@@ -532,7 +535,7 @@ class Jetpack_Testimonial {
 			'columns'         => 1,
 			'showposts'       => -1,
 			'order'           => 'asc',
-			'orderby'         => 'menu_order,date',
+			'orderby'         => 'date',
 		), $atts, 'testimonial' );
 
 		// A little sanitization
@@ -546,7 +549,7 @@ class Jetpack_Testimonial {
 
 		$atts['columns'] = absint( $atts['columns'] );
 
-		$atts['showposts'] = (int) $atts['showposts'];
+		$atts['showposts'] = intval( $atts['showposts'] );
 
 		if ( $atts['order'] ) {
 			$atts['order'] = urldecode( $atts['order'] );
@@ -559,7 +562,7 @@ class Jetpack_Testimonial {
 		if ( $atts['orderby'] ) {
 			$atts['orderby'] = urldecode( $atts['orderby'] );
 			$atts['orderby'] = strtolower( $atts['orderby'] );
-			$allowed_keys = array( 'author', 'date', 'title', 'menu_order', 'rand' );
+			$allowed_keys = array('author', 'date', 'title', 'rand');
 
 			$parsed = array();
 			foreach ( explode( ',', $atts['orderby'] ) as $testimonial_index_number => $orderby ) {
@@ -577,9 +580,7 @@ class Jetpack_Testimonial {
 		}
 
 		// enqueue shortcode styles when shortcode is used
-		if ( ! wp_style_is( 'jetpack-testimonial-style', 'enqueued' ) ) {
-			wp_enqueue_style( 'jetpack-testimonial-style', plugins_url( 'css/testimonial-shortcode.css', __FILE__ ), array(), '20140326' );
-		}
+		wp_enqueue_style( 'jetpack-testimonial-style', plugins_url( 'css/testimonial-shortcode.css', __FILE__ ), array(), '20140326' );
 
 		return self::jetpack_testimonial_shortcode_html( $atts );
 	}

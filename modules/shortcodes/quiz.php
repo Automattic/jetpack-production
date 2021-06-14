@@ -1,7 +1,4 @@
-<?php //phpcs:ignore WordPress.Files.FileName.InvalidClassFileNam
-
-use Automattic\Jetpack\Assets;
-
+<?php
 /**
  * Quiz shortcode.
  *
@@ -81,14 +78,8 @@ class Quiz_Shortcode {
 	 * @since 4.5.0
 	 */
 	private static function enqueue_scripts() {
-		wp_enqueue_style( 'quiz', plugins_url( 'css/quiz.css', __FILE__ ), array(), JETPACK__VERSION );
-		wp_enqueue_script(
-			'quiz',
-			Assets::get_file_url_for_environment( '_inc/build/shortcodes/js/quiz.min.js', 'modules/shortcodes/js/quiz.js' ),
-			array( 'jquery' ),
-			JETPACK__VERSION,
-			true
-		);
+		wp_enqueue_style( 'quiz', plugins_url( 'css/quiz.css', __FILE__ ) );
+		wp_enqueue_script( 'quiz', plugins_url( 'js/quiz.js', __FILE__ ), array( 'jquery' ), null, true );
 	}
 
 	/**
@@ -104,12 +95,10 @@ class Quiz_Shortcode {
 		}
 
 		if ( is_feed() ) {
-			self::$javascript_unavailable = true;
-			return self::$javascript_unavailable;
+			return self::$javascript_unavailable = true;
 		}
 
-		self::$javascript_unavailable = false;
-		return self::$javascript_unavailable;
+		return self::$javascript_unavailable = false;
 	}
 
 	/**
@@ -151,84 +140,75 @@ class Quiz_Shortcode {
 	public static function shortcode( $atts, $content = null ) {
 
 		// There's nothing to do if there's nothing enclosed.
-		if ( empty( $content ) ) {
+		if ( null == $content ) {
 			return '';
 		}
 
 		$id = '';
 
 		if ( self::is_javascript_unavailable() ) {
-			// in an e-mail print the question and the info sentence once per question, too.
+			// in an e-mail print the question and the info sentence once per question, too
 			self::$noscript_info_printed = false;
 		} else {
 
 			if ( ! self::$scripts_enqueued ) {
-				// lazy enqueue cannot use the wp_enqueue_scripts action anymore.
+				// lazy enqueue cannot use the wp_enqueue_scripts action anymore
 				self::enqueue_scripts();
 				self::$scripts_enqueued = true;
 			}
 
 			$default_atts = self::is_wpcom()
 				? array(
-					'trackid'     => '',
+					'trackid' => '',
 					'a8ctraining' => '',
 				)
 				: array(
 					'trackid' => '',
 				);
 
+
 			self::$quiz_params = shortcode_atts( $default_atts, $atts );
 
-			if ( ! empty( self::$quiz_params['trackid'] ) ) {
-				$id .= ' data-trackid="' . esc_attr( self::$quiz_params['trackid'] ) . '"';
+			if ( ! empty( self::$quiz_params[ 'trackid' ] ) ) {
+				$id .= ' data-trackid="' . esc_attr( self::$quiz_params[ 'trackid' ] ) . '"';
 			}
-			if ( self::is_wpcom() && ! empty( self::$quiz_params['a8ctraining'] ) ) {
+			if ( self::is_wpcom() && ! empty( self::$quiz_params[ 'a8ctraining' ] ) ) {
 				if ( is_null( self::$username ) ) {
 					self::$username = wp_get_current_user()->user_login;
 				}
-				$id .= ' data-a8ctraining="' . esc_attr( self::$quiz_params['a8ctraining'] ) . '" data-username="' . esc_attr( self::$username ) . '"';
+				$id .= ' data-a8ctraining="'. esc_attr( self::$quiz_params[ 'a8ctraining' ] ) . '" data-username="' . esc_attr( self::$username ) . '"';
 			}
 		}
 
 		$quiz = self::do_shortcode( $content );
-		return '<div class="jetpack-quiz quiz"' . $id . '>' . $quiz . '</div>';
+		return '<div class="quiz"' . $id . '>' . $quiz . '</div>';
 	}
 
 	/**
-	 * Strip line breaks, restrict allowed HTML to a few allowed tags and execute nested shortcodes.
+	 * Strip line breaks, restrict allowed HTML to a few whitelisted tags and execute nested shortcodes.
 	 *
 	 * @since 4.5.0
 	 *
-	 * @param string $content Post content.
+	 * @param string $content
 	 *
 	 * @return mixed|string
 	 */
 	private static function do_shortcode( $content ) {
-		// strip autoinserted line breaks.
+		// strip autoinserted line breaks
 		$content = preg_replace( '#(<(?:br /|/?p)>\n?)*(\[/?[a-z]+\])(<(?:br /|/?p)>\n?)*#', '$2', $content );
 
-		// Add internal parameter so it's only rendered when it has it.
+		// Add internal parameter so it's only rendered when it has it
 		$content = preg_replace( '/\[(question|answer|wrong|explanation)\]/i', '[$1 quiz_item="true"]', $content );
 		$content = do_shortcode( $content );
-		$content = wp_kses(
-			$content,
-			array(
-				'tt'     => array(),
-				'a'      => array( 'href' => true ),
-				'pre'    => array(),
-				'strong' => array(),
-				'i'      => array(),
-				'br'     => array(),
-				'img'    => array( 'src' => true ),
-				'div'    => array(
-					'class'            => true,
-					'data-correct'     => 1,
-					'data-track-id'    => 1,
-					'data-a8ctraining' => 1,
-					'data-username'    => 1,
-				),
-			)
-		);
+		$content = wp_kses( $content, array(
+			'tt' => array(),
+			'pre' => array(),
+			'strong' => array(),
+			'i' => array(),
+			'br' => array(),
+			'img' => array( 'src' => true),
+			'div' => array( 'class' => true, 'data-correct' => 1, 'data-track-id' => 1, 'data-a8ctraining' => 1, 'data-username' => 1 ),
+		) );
 		return $content;
 	}
 
@@ -237,14 +217,14 @@ class Quiz_Shortcode {
 	 *
 	 * @since 4.5.0
 	 *
-	 * @param array $atts    Shortcode attributes.
-	 * @param null  $content Post content.
+	 * @param array $atts
+	 * @param null  $content
 	 *
 	 * @return string
 	 */
 	public static function question_shortcode( $atts, $content = null ) {
 		return isset( $atts['quiz_item'] )
-			? '<div class="jetpack-quiz-question question">' . self::do_shortcode( $content ) . '</div>'
+			? '<div class="question">' . self::do_shortcode( $content ) . '</div>'
 			: '';
 	}
 
@@ -253,8 +233,8 @@ class Quiz_Shortcode {
 	 *
 	 * @since 4.5.0
 	 *
-	 * @param array $atts    Shortcode attributes.
-	 * @param null  $content Post content.
+	 * @param array $atts
+	 * @param null  $content
 	 *
 	 * @return string
 	 */
@@ -264,7 +244,7 @@ class Quiz_Shortcode {
 		}
 
 		return isset( $atts['quiz_item'] )
-			? '<div class="jetpack-quiz-answer answer" data-correct="1">' . self::do_shortcode( $content ) . '</div>'
+			? '<div class="answer" data-correct="1">' . self::do_shortcode( $content ) . '</div>'
 			: '';
 	}
 
@@ -273,8 +253,8 @@ class Quiz_Shortcode {
 	 *
 	 * @since 4.5.0
 	 *
-	 * @param array $atts    Shortcode attributes.
-	 * @param null  $content Post content.
+	 * @param array $atts
+	 * @param null  $content
 	 *
 	 * @return string
 	 */
@@ -284,7 +264,7 @@ class Quiz_Shortcode {
 		}
 
 		return isset( $atts['quiz_item'] )
-			? '<div class="jetpack-quiz-answer answer">' . self::do_shortcode( $content ) . '</div>'
+			? '<div class="answer">' . self::do_shortcode( $content ) . '</div>'
 			: '';
 	}
 
@@ -293,8 +273,8 @@ class Quiz_Shortcode {
 	 *
 	 * @since 4.5.0
 	 *
-	 * @param array $atts    Shortcode attributes.
-	 * @param null  $content Post content.
+	 * @param array $atts
+	 * @param null  $content
 	 *
 	 * @return string
 	 */
@@ -304,7 +284,7 @@ class Quiz_Shortcode {
 		}
 
 		return isset( $atts['quiz_item'] )
-			? '<div class="jetpack-quiz-explanation explanation">' . self::do_shortcode( $content ) . '</div>'
+			? '<div class="explanation">' . self::do_shortcode( $content ) . '</div>'
 			: '';
 	}
 }

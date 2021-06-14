@@ -6,24 +6,14 @@
 	margin: 0;
 	direction: ltr;
 	text-align: left;
-	border-top: 1px solid #dcdcde;
-	border-bottom: 1px solid #dcdcde;
-}
-#customize-control-custom_css#customize-control-custom_css {
-	margin-right: -12px;
-	margin-left: -12px;
-	width: calc( 100% + 24px );
-}
-.customize-control-code_editor .CodeMirror {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 	height: 300px;
-	height: calc( 100vh - 268px );
+	height: calc( 100vh - 244px );
 }
 .for-codemirror {
 	width: 98%;
 	height: 300px;
-}
-#customize-control-wpcom_custom_css_content_width_control {
-	position: relative;
 }
 #customize-control-wpcom_custom_css_content_width_control > label {
 	position: relative;
@@ -44,7 +34,11 @@
 	padding-top: 3px;
 	opacity: .8;
 }
-
+@-moz-document url-prefix() {
+	#customize-control-wpcom_custom_css_content_width_control input[type="text"] + span {
+		top: 47px;
+	}
+}
 #customize-control-wpcom_custom_css_content_width_control input[type="text"]:focus + span {
 	opacity: 1;
 }
@@ -52,7 +46,7 @@
 #customize-control-wpcom_custom_css_content_width_control .description {
 	display: block;
 	margin: 28px 0 0 0;
-	color: #a7aaad;
+	color: #aaa;
 }
 
 #customize-control-wpcom_custom_css_content_width_control .description strong {
@@ -64,7 +58,7 @@
 }
 
 .css-help {
-	border-bottom: 1px solid #dcdcde;
+	border-bottom: 1px solid #ddd;
 	background: #ffffff;
 	position: relative;
 	right: 0;
@@ -79,13 +73,13 @@
 	display: inline-block;
 	text-decoration: none;
 	border-bottom: 4px solid transparent;
-	color: #50575e;
+	color: #555d66;
 	padding: 7px 10px 5px;
 	transition: .15s color ease-in-out,.15s background-color ease-in-out,.15s border-color ease-in-out;
 }
 
 .css-help a:hover {
-	color: #2271b1;
+	color: #0073aa;
 	background-color: #f3f3f5;
 }
 
@@ -100,9 +94,9 @@
 }
 
 .css-help a:focus {
-	color: #2271b1;
+	color: #0073aa;
 	background-color: #f3f3f5;
-	border-bottom-color: #2271b1;
+	border-bottom-color: #0073aa;
 	box-shadow: none;
 }
 
@@ -143,3 +137,4 @@ body.editing-css .wp-full-overlay.expanded {
 input[type=jetpackCss] {
 	display: none;
 }
+

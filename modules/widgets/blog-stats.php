@@ -4,7 +4,7 @@
  *
  * @since 4.5.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -28,8 +28,8 @@ class Jetpack_Blog_Stats_Widget extends WP_Widget {
 	 */
 	function __construct() {
 		$widget_ops = array(
-			'classname'                   => 'blog-stats',
-			'description'                 => esc_html__( 'Show a hit counter for your blog.', 'jetpack' ),
+			'classname' => 'blog-stats',
+			'description' => esc_html__( 'Show a hit counter for your blog.', 'jetpack' ),
 			'customize_selective_refresh' => true,
 		);
 		parent::__construct(
@@ -77,7 +77,7 @@ class Jetpack_Blog_Stats_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Back end widget form.
+	 * Back-end widget form.
 	 *
 	 * @see WP_Widget::form()
 	 *
@@ -94,7 +94,7 @@ class Jetpack_Blog_Stats_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'hits' ) ); ?>"><?php esc_html_e( 'Pageview Description:', 'jetpack' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'hits' ) ); ?>"><?php echo number_format_i18n( '12345' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'hits' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'hits' ) ); ?>" type="text" value="<?php echo esc_attr( $instance['hits'] ); ?>" />
 		</p>
 		<p><?php esc_html_e( 'Hit counter is delayed by up to 60 seconds.', 'jetpack' ); ?></p>
@@ -143,16 +143,14 @@ class Jetpack_Blog_Stats_Widget extends WP_Widget {
 		// Get the Site Stats.
 		$views = $this->get_stats();
 
-		if ( 0 === $views ) {
-			esc_html_e( 'There is nothing to display yet', 'jetpack' );
-		} elseif ( $views ) {
+		if ( ! empty( $views ) ) {
 			printf(
 				'<ul><li>%1$s %2$s</li></ul>',
 				number_format_i18n( $views ),
 				isset( $instance['hits'] ) ? esc_html( $instance['hits'] ) : ''
 			);
 		} else {
-			esc_html_e( 'There was an issue retrieving stats. Please try again later.', 'jetpack' );
+			esc_html_e( 'No hits.', 'jetpack' );
 		}
 
 		echo $args['after_widget'];
