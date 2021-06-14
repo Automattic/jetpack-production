@@ -64,8 +64,8 @@
 }
 
 .blocked-attacks {
-	background: #f6f7f7;
-	border-bottom: 1px #f0f0f1 solid;
+	background: #fafafa;
+	border-bottom: 1px #eee solid;
 	padding-bottom: 35px;
 }
 
@@ -88,6 +88,7 @@
 .blocked-attacks h2,
 .blocked-attacks h3 {
 	color: #7BAC48;
+	font-family: "proxima-nova", "Open Sans", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 }
 

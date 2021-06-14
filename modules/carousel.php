@@ -2,15 +2,15 @@
 
 /**
  * Module Name: Carousel
- * Module Description: Display images and galleries in a gorgeous, full-screen browsing experience
+ * Module Description: Transform standard image galleries into full-screen slideshows.
+ * Jumpstart Description: brings your photos and images to life as full-size, easily navigable galleries.
  * Sort Order: 22
  * Recommendation Order: 12
  * First Introduced: 1.5
  * Requires Connection: No
  * Auto Activate: No
  * Module Tags: Photos and Videos
- * Feature: Appearance
- * Additional Search Queries: gallery, carousel, diaporama, slideshow, images, lightbox, exif, metadata, image
+ * Feature: Jumpstart
  */
 
 include dirname( __FILE__ ) . '/carousel/jetpack-carousel.php';
