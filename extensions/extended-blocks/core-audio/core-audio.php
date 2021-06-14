@@ -2,7 +2,7 @@
 /**
  * Plan checks for uploading audio files to core/audio.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  **/
 
 // Populate the available extensions with core/audio.
@@ -21,7 +21,7 @@ add_filter(
 // Set the core/audio block availability, depending on the site plan.
 add_action(
 	'jetpack_register_gutenberg_extensions',
-	function () {
+	function() {
 		\Jetpack_Gutenberg::set_availability_for_plan( 'core/audio' );
 	}
 );

@@ -55,7 +55,6 @@ class Settings {
 		'full_sync_sender_enabled'               => true,
 		'full_sync_send_duration'                => true,
 		'full_sync_limits'                       => true,
-		'checksum_disable'                       => true,
 	);
 
 	/**
@@ -152,7 +151,7 @@ class Settings {
 		}
 
 		if ( is_numeric( $value ) ) {
-			$value = (int) $value;
+			$value = intval( $value );
 		}
 		$default_array_value = null;
 		switch ( $setting ) {
@@ -205,7 +204,7 @@ class Settings {
 			}
 
 			// If we set the disabled option to true, clear the queues.
-			if ( ( 'disable' === $setting || 'network_disable' === $setting ) && (bool) $value ) {
+			if ( ( 'disable' === $setting || 'network_disable' === $setting ) && ! ! $value ) {
 				$listener = Listener::get_instance();
 				$listener->get_sync_queue()->reset();
 				$listener->get_full_sync_queue()->reset();
@@ -240,23 +239,6 @@ class Settings {
 	}
 
 	/**
-	 * Returns escaped values for disallowed post types.
-	 *
-	 * @access public
-	 * @static
-	 *
-	 * @return array Post type filter values
-	 */
-	public static function get_disallowed_post_types_structured() {
-		return array(
-			'post_type' => array(
-				'operator' => 'NOT IN',
-				'values'   => array_map( 'esc_sql', self::get_setting( 'post_types_blacklist' ) ),
-			),
-		);
-	}
-
-	/**
 	 * Returns escaped SQL for blacklisted taxonomies.
 	 * Can be injected directly into a WHERE clause.
 	 *
@@ -283,40 +265,6 @@ class Settings {
 	}
 
 	/**
-	 * Returns escaped SQL for allowed post meta keys.
-	 *
-	 * @access public
-	 * @static
-	 *
-	 * @return array Meta keys filter values
-	 */
-	public static function get_allowed_post_meta_structured() {
-		return array(
-			'meta_key' => array(
-				'operator' => 'IN',
-				'values'   => array_map( 'esc_sql', self::get_setting( 'post_meta_whitelist' ) ),
-			),
-		);
-	}
-
-	/**
-	 * Returns structured SQL clause for blacklisted taxonomies.
-	 *
-	 * @access public
-	 * @static
-	 *
-	 * @return array taxonomies filter values
-	 */
-	public static function get_blacklisted_taxonomies_structured() {
-		return array(
-			'taxonomy' => array(
-				'operator' => 'NOT IN',
-				'values'   => array_map( 'esc_sql', self::get_setting( 'taxonomies_blacklist' ) ),
-			),
-		);
-	}
-
-	/**
 	 * Returns escaped SQL for blacklisted comment meta.
 	 * Can be injected directly into a WHERE clause.
 	 *
@@ -327,23 +275,6 @@ class Settings {
 	 */
 	public static function get_whitelisted_comment_meta_sql() {
 		return 'meta_key IN (\'' . join( '\', \'', array_map( 'esc_sql', self::get_setting( 'comment_meta_whitelist' ) ) ) . '\')';
-	}
-
-	/**
-	 * Returns SQL-escaped values for allowed post meta keys.
-	 *
-	 * @access public
-	 * @static
-	 *
-	 * @return array Meta keys filter values
-	 */
-	public static function get_allowed_comment_meta_structured() {
-		return array(
-			'meta_key' => array(
-				'operator' => 'IN',
-				'values'   => array_map( 'esc_sql', self::get_setting( 'comment_meta_whitelist' ) ),
-			),
-		);
 	}
 
 	/**
@@ -506,18 +437,6 @@ class Settings {
 	 */
 	public static function is_sender_enabled( $queue_id ) {
 		return (bool) self::get_setting( $queue_id . '_sender_enabled' );
-	}
-
-	/**
-	 * Whether checksums are enabled.
-	 *
-	 * @access public
-	 * @static
-	 *
-	 * @return boolean Whether sync is enabled.
-	 */
-	public static function is_checksum_enabled() {
-		return ! (bool) self::get_setting( 'checksum_disable' );
 	}
 
 }

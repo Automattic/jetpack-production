@@ -2,7 +2,7 @@
 /**
  * Class for photon functionality.
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 use Automattic\Jetpack\Assets;
@@ -369,14 +369,19 @@ class Jetpack_Photon {
 					$width  = false;
 					$height = false;
 
-					// First, check the image tag. Note we only check for pixel sizes now; HTML4 percentages have never been correctly
-					// supported, so we stopped pretending to support them in JP 9.1.0.
+					// First, check the image tag.
 					if ( preg_match( '#[\s|"|\']width=["|\']?([\d%]+)["|\']?#i', $images['img_tag'][ $index ], $width_string ) ) {
-						$width = false === strpos( $width_string[1], '%' ) ? $width_string[1] : false;
+						$width = $width_string[1];
 					}
 
 					if ( preg_match( '#[\s|"|\']height=["|\']?([\d%]+)["|\']?#i', $images['img_tag'][ $index ], $height_string ) ) {
-						$height = false === strpos( $height_string[1], '%' ) ? $height_string[1] : false;
+						$height = $height_string[1];
+					}
+
+					// Can't pass both a relative width and height, so unset the height in favor of not breaking the horizontal layout.
+					if ( false !== strpos( $width, '%' ) && false !== strpos( $height, '%' ) ) {
+						$width  = false;
+						$height = false;
 					}
 
 					// Detect WP registered image size from HTML class.
@@ -415,7 +420,7 @@ class Jetpack_Photon {
 						 */
 						apply_filters( 'jetpack_photon_image_is_local', false, compact( 'src', 'tag', 'images', 'index' ) )
 					) {
-						$attachment_id = (int) array_pop( $attachment_id );
+						$attachment_id = intval( array_pop( $attachment_id ) );
 
 						if ( $attachment_id ) {
 							$attachment = get_post( $attachment_id );
@@ -461,11 +466,13 @@ class Jetpack_Photon {
 					$transform_orig = $transform;
 
 					// If width is available, constrain to $content_width.
-					if ( false !== $width && is_numeric( $content_width ) && $width > $content_width ) {
-						if ( false !== $height ) {
+					if ( false !== $width && false === strpos( $width, '%' ) && is_numeric( $content_width ) ) {
+						if ( $width > $content_width && false !== $height && false === strpos( $height, '%' ) ) {
 							$height = round( ( $content_width * $height ) / $width );
+							$width  = $content_width;
+						} elseif ( $width > $content_width ) {
+							$width = $content_width;
 						}
-						$width = $content_width;
 					}
 
 					// Set a width if none is found and $content_width is available.
@@ -491,7 +498,7 @@ class Jetpack_Photon {
 					// Build array of Photon args and expose to filter before passing to Photon URL function.
 					$args = array();
 
-					if ( false !== $width && false !== $height ) {
+					if ( false !== $width && false !== $height && false === strpos( $width, '%' ) && false === strpos( $height, '%' ) ) {
 						$args[ $transform ] = $width . ',' . $height;
 					} elseif ( false !== $width ) {
 						$args['w'] = $width;
@@ -554,9 +561,8 @@ class Jetpack_Photon {
 						}
 
 						// If we are not transforming the image with resize, fit, or letterbox (lb), then we should remove
-						// the width and height arguments (including HTML4 percentages) from the image to prevent distortion.
-						// Even if $args['w'] and $args['h'] are present, Photon does not crop to those dimensions. Instead,
-						// it appears to favor height.
+						// the width and height arguments from the image to prevent distortion. Even if $args['w'] and $args['h']
+						// are present, Photon does not crop to those dimensions. Instead, it appears to favor height.
 						//
 						// If we are transforming the image via one of those methods, let's update the width and height attributes.
 						if ( empty( $args['resize'] ) && empty( $args['fit'] ) && empty( $args['lb'] ) ) {
@@ -578,7 +584,7 @@ class Jetpack_Photon {
 
 							// (?<=\s)         - Ensure width or height attribute is preceded by a space
 							// (width=["|\']?) - Matches, and captures, width=, width=", or width='
-							// [\d%]+          - Matches 1 or more digits or percent signs
+							// [\d%]+          - Matches 1 or more digits
 							// (["|\']?)       - Matches, and captures, ", ', or empty string
 							// \s              - Ensures there's a space after the attribute
 							$new_tag = preg_replace( '#(?<=\s)(width=["|\']?)[\d%]+(["|\']?)\s?#i', sprintf( '${1}%d${2} ', $resize_args[0] ), $new_tag );
@@ -626,6 +632,7 @@ class Jetpack_Photon {
 
 		return $galleries;
 	}
+
 
 	/**
 	 * Runs the image widget through photon.
@@ -751,8 +758,8 @@ class Jetpack_Photon {
 				}
 
 				if ( isset( $image_meta['width'], $image_meta['height'] ) ) {
-					$image_args['width']  = (int) $image_meta['width'];
-					$image_args['height'] = (int) $image_meta['height'];
+					$image_args['width']  = $image_meta['width'];
+					$image_args['height'] = $image_meta['height'];
 
 					list( $image_args['width'], $image_args['height'] ) = image_constrain_size_for_editor( $image_args['width'], $image_args['height'], $size, 'display' );
 					$has_size_meta                                      = true;
@@ -922,7 +929,7 @@ class Jetpack_Photon {
 
 			$args = array();
 			if ( 'w' === $source['descriptor'] ) {
-				if ( $height && ( (int) $source['value'] === $width ) ) {
+				if ( $height && ( $source['value'] === $width ) ) {
 					$args['resize'] = $width . ',' . $height;
 				} else {
 					$args['w'] = $source['value'];
@@ -1166,23 +1173,23 @@ class Jetpack_Photon {
 			// Populate an array matching the data structure of $_wp_additional_image_sizes so we have a consistent structure for image sizes.
 			$images = array(
 				'thumb'        => array(
-					'width'  => (int) get_option( 'thumbnail_size_w' ),
-					'height' => (int) get_option( 'thumbnail_size_h' ),
+					'width'  => intval( get_option( 'thumbnail_size_w' ) ),
+					'height' => intval( get_option( 'thumbnail_size_h' ) ),
 					'crop'   => (bool) get_option( 'thumbnail_crop' ),
 				),
 				'medium'       => array(
-					'width'  => (int) get_option( 'medium_size_w' ),
-					'height' => (int) get_option( 'medium_size_h' ),
+					'width'  => intval( get_option( 'medium_size_w' ) ),
+					'height' => intval( get_option( 'medium_size_h' ) ),
 					'crop'   => false,
 				),
 				'medium_large' => array(
-					'width'  => (int) get_option( 'medium_large_size_w' ),
-					'height' => (int) get_option( 'medium_large_size_h' ),
+					'width'  => intval( get_option( 'medium_large_size_w' ) ),
+					'height' => intval( get_option( 'medium_large_size_h' ) ),
 					'crop'   => false,
 				),
 				'large'        => array(
-					'width'  => (int) get_option( 'large_size_w' ),
-					'height' => (int) get_option( 'large_size_h' ),
+					'width'  => intval( get_option( 'large_size_w' ) ),
+					'height' => intval( get_option( 'large_size_h' ) ),
 					'crop'   => false,
 				),
 				'full'         => array(

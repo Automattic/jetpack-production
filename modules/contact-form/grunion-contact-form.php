@@ -4,11 +4,10 @@
  * Add a contact form to any post, page or text widget.
  * Emails will be sent to the post's author by default, or any email address you choose.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Assets;
-use Automattic\Jetpack\Blocks;
 use Automattic\Jetpack\Sync\Settings;
 
 define( 'GRUNION_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
@@ -107,8 +106,8 @@ class Grunion_Contact_Form_Plugin {
 	public static function strip_tags( $data_with_tags ) {
 		if ( is_array( $data_with_tags ) ) {
 			foreach ( $data_with_tags as $index => $value ) {
-				$index = sanitize_text_field( (string) $index );
-				$value = wp_kses( (string) $value, array() );
+				$index = sanitize_text_field( strval( $index ) );
+				$value = wp_kses( strval( $value ), array() );
 				$value = str_replace( '&amp;', '&', $value ); // undo damage done by wp_kses_normalize_entities()
 
 				$data_without_tags[ $index ] = $value;
@@ -150,7 +149,6 @@ class Grunion_Contact_Form_Plugin {
 		}
 
 		add_action( 'loop_start', array( 'Grunion_Contact_Form', '_style_on' ) );
-		add_action( 'pre_amp_render_post', array( 'Grunion_Contact_Form', '_style_on' ) );
 
 		add_action( 'wp_ajax_grunion-contact-form', array( $this, 'ajax_request' ) );
 		add_action( 'wp_ajax_nopriv_grunion-contact-form', array( $this, 'ajax_request' ) );
@@ -163,23 +161,23 @@ class Grunion_Contact_Form_Plugin {
 		if ( is_admin() ) {
 			add_action( 'admin_init', array( $this, 'download_feedback_as_csv' ) );
 			add_action( 'admin_footer-edit.php', array( $this, 'export_form' ) );
+			add_action( 'admin_menu', array( $this, 'admin_menu' ) );
+			add_action( 'current_screen', array( $this, 'unread_count' ) );
 		}
-		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
-		add_action( 'current_screen', array( $this, 'unread_count' ) );
 
 		// custom post type we'll use to keep copies of the feedback items
 		register_post_type(
 			'feedback', array(
 				'labels'                => array(
-					'name'               => __( 'Form Responses', 'jetpack' ),
-					'singular_name'      => __( 'Form Responses', 'jetpack' ),
-					'search_items'       => __( 'Search Responses', 'jetpack' ),
-					'not_found'          => __( 'No responses found', 'jetpack' ),
-					'not_found_in_trash' => __( 'No responses found', 'jetpack' ),
+					'name'               => __( 'Feedback', 'jetpack' ),
+					'singular_name'      => __( 'Feedback', 'jetpack' ),
+					'search_items'       => __( 'Search Feedback', 'jetpack' ),
+					'not_found'          => __( 'No feedback found', 'jetpack' ),
+					'not_found_in_trash' => __( 'No feedback found', 'jetpack' ),
 				),
-				'menu_icon'             => 'dashicons-feedback',
+				// Matrial Ballot icon
+				'menu_icon'             => 'data:image/svg+xml;base64,' . base64_encode('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M13 7.5h5v2h-5zm0 7h5v2h-5zM19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM11 6H6v5h5V6zm-1 4H7V7h3v3zm1 3H6v5h5v-5zm-1 4H7v-3h3v3z"/></svg>'),
 				'show_ui'               => true,
-				'show_in_menu'          => false,
 				'show_in_admin_bar'     => false,
 				'public'                => false,
 				'rewrite'               => false,
@@ -245,92 +243,56 @@ class Grunion_Contact_Form_Plugin {
 	}
 
 	private static function register_contact_form_blocks() {
-		Blocks::jetpack_register_block(
-			'jetpack/contact-form',
-			array(
-				'render_callback' => array( __CLASS__, 'gutenblock_render_form' ),
-			)
-		);
+		jetpack_register_block( 'jetpack/contact-form', array(
+			'render_callback' => array( __CLASS__, 'gutenblock_render_form' ),
+		) );
 
 		// Field render methods.
-		Blocks::jetpack_register_block(
-			'jetpack/field-text',
-			array(
-				'parent'          => array( 'jetpack/contact-form' ),
-				'render_callback' => array( __CLASS__, 'gutenblock_render_field_text' ),
-			)
-		);
-		Blocks::jetpack_register_block(
-			'jetpack/field-name',
-			array(
-				'parent'          => array( 'jetpack/contact-form' ),
-				'render_callback' => array( __CLASS__, 'gutenblock_render_field_name' ),
-			)
-		);
-		Blocks::jetpack_register_block(
-			'jetpack/field-email',
-			array(
-				'parent'          => array( 'jetpack/contact-form' ),
-				'render_callback' => array( __CLASS__, 'gutenblock_render_field_email' ),
-			)
-		);
-		Blocks::jetpack_register_block(
-			'jetpack/field-url',
-			array(
-				'parent'          => array( 'jetpack/contact-form' ),
-				'render_callback' => array( __CLASS__, 'gutenblock_render_field_url' ),
-			)
-		);
-		Blocks::jetpack_register_block(
-			'jetpack/field-date',
-			array(
-				'parent'          => array( 'jetpack/contact-form' ),
-				'render_callback' => array( __CLASS__, 'gutenblock_render_field_date' ),
-			)
-		);
-		Blocks::jetpack_register_block(
-			'jetpack/field-telephone',
-			array(
-				'parent'          => array( 'jetpack/contact-form' ),
-				'render_callback' => array( __CLASS__, 'gutenblock_render_field_telephone' ),
-			)
-		);
-		Blocks::jetpack_register_block(
-			'jetpack/field-textarea',
-			array(
-				'parent'          => array( 'jetpack/contact-form' ),
-				'render_callback' => array( __CLASS__, 'gutenblock_render_field_textarea' ),
-			)
-		);
-		Blocks::jetpack_register_block(
-			'jetpack/field-checkbox',
-			array(
-				'parent'          => array( 'jetpack/contact-form' ),
-				'render_callback' => array( __CLASS__, 'gutenblock_render_field_checkbox' ),
-			)
-		);
-		Blocks::jetpack_register_block(
-			'jetpack/field-checkbox-multiple',
-			array(
-				'parent'          => array( 'jetpack/contact-form' ),
-				'render_callback' => array( __CLASS__, 'gutenblock_render_field_checkbox_multiple' ),
-			)
-		);
-		Blocks::jetpack_register_block(
-			'jetpack/field-radio',
-			array(
-				'parent'          => array( 'jetpack/contact-form' ),
-				'render_callback' => array( __CLASS__, 'gutenblock_render_field_radio' ),
-			)
-		);
-		Blocks::jetpack_register_block(
-			'jetpack/field-select',
-			array(
-				'parent'          => array( 'jetpack/contact-form' ),
-				'render_callback' => array( __CLASS__, 'gutenblock_render_field_select' ),
-			)
-		);
-		Blocks::jetpack_register_block(
+		jetpack_register_block( 'jetpack/field-text', array(
+			'parent'          => array( 'jetpack/contact-form' ),
+			'render_callback' => array( __CLASS__, 'gutenblock_render_field_text' ),
+		) );
+		jetpack_register_block( 'jetpack/field-name', array(
+			'parent'          => array( 'jetpack/contact-form' ),
+			'render_callback' => array( __CLASS__, 'gutenblock_render_field_name' ),
+		) );
+		jetpack_register_block( 'jetpack/field-email', array(
+			'parent'          => array( 'jetpack/contact-form' ),
+			'render_callback' => array( __CLASS__, 'gutenblock_render_field_email' ),
+		) );
+		jetpack_register_block( 'jetpack/field-url', array(
+			'parent'          => array( 'jetpack/contact-form' ),
+			'render_callback' => array( __CLASS__, 'gutenblock_render_field_url' ),
+		) );
+		jetpack_register_block( 'jetpack/field-date', array(
+			'parent'          => array( 'jetpack/contact-form' ),
+			'render_callback' => array( __CLASS__, 'gutenblock_render_field_date' ),
+		) );
+		jetpack_register_block( 'jetpack/field-telephone', array(
+			'parent'          => array( 'jetpack/contact-form' ),
+			'render_callback' => array( __CLASS__, 'gutenblock_render_field_telephone' ),
+		) );
+		jetpack_register_block( 'jetpack/field-textarea', array(
+			'parent'          => array( 'jetpack/contact-form' ),
+			'render_callback' => array( __CLASS__, 'gutenblock_render_field_textarea' ),
+		) );
+		jetpack_register_block( 'jetpack/field-checkbox', array(
+			'parent'          => array( 'jetpack/contact-form' ),
+			'render_callback' => array( __CLASS__, 'gutenblock_render_field_checkbox' ),
+		) );
+		jetpack_register_block( 'jetpack/field-checkbox-multiple', array(
+			'parent'          => array( 'jetpack/contact-form' ),
+			'render_callback' => array( __CLASS__, 'gutenblock_render_field_checkbox_multiple' ),
+		) );
+		jetpack_register_block( 'jetpack/field-radio', array(
+			'parent'          => array( 'jetpack/contact-form' ),
+			'render_callback' => array( __CLASS__, 'gutenblock_render_field_radio' ),
+		) );
+		jetpack_register_block( 'jetpack/field-select', array(
+			'parent'          => array( 'jetpack/contact-form' ),
+			'render_callback' => array( __CLASS__, 'gutenblock_render_field_select' ),
+		) );
+		jetpack_register_block(
 			'jetpack/field-consent',
 			array(
 				'parent'          => array( 'jetpack/contact-form' ),
@@ -340,17 +302,6 @@ class Grunion_Contact_Form_Plugin {
 	}
 
 	public static function gutenblock_render_form( $atts, $content ) {
-
-		// Render fallback in other contexts than frontend (i.e. feed, emails, API, etc.), unless the form is being submitted.
-		if ( ! jetpack_is_frontend() && ! isset( $_POST['contact-form-id'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
-			return sprintf(
-				'<div class="%1$s"><a href="%2$s" target="_blank" rel="noopener noreferrer">%3$s</a></div>',
-				esc_attr( Blocks::classes( 'contact-form', $atts ) ),
-				esc_url( get_the_permalink() ),
-				esc_html__( 'Submit a form.', 'jetpack' )
-			);
-		}
-
 		return Grunion_Contact_Form::parse( $atts, do_blocks( $content ) );
 	}
 
@@ -435,34 +386,16 @@ class Grunion_Contact_Form_Plugin {
 	}
 
 	/**
-	 * Add the 'Form Responses' menu item as a submenu of Feedback.
+	 * Add the 'Export' menu item as a submenu of Feedback.
 	 */
 	public function admin_menu() {
-		$slug = 'feedback';
-
-		add_menu_page(
-			__( 'Feedback', 'jetpack' ),
-			__( 'Feedback', 'jetpack' ),
-			'edit_pages',
-			$slug,
-			null,
-			'dashicons-feedback',
-			45
-		);
-
 		add_submenu_page(
-			$slug,
-			__( 'Form Responses', 'jetpack' ),
-			__( 'Form Responses', 'jetpack' ),
-			'edit_pages',
 			'edit.php?post_type=feedback',
-			null,
-			0
-		);
-
-		remove_submenu_page(
-			$slug,
-			$slug
+			__( 'Export feedback as CSV', 'jetpack' ),
+			__( 'Export CSV', 'jetpack' ),
+			'export',
+			'feedback-export',
+			array( $this, 'export_form' )
 		);
 	}
 
@@ -485,16 +418,14 @@ class Grunion_Contact_Form_Plugin {
 		if ( isset( $screen->post_type ) && 'feedback' == $screen->post_type ) {
 			update_option( 'feedback_unread_count', 0 );
 		} else {
-			global $submenu;
-			if ( isset( $submenu['feedback'] ) && is_array( $submenu['feedback'] ) && ! empty( $submenu['feedback'] ) ) {
-				foreach ( $submenu['feedback'] as $index => $menu_item ) {
+			global $menu;
+			if ( isset( $menu ) && is_array( $menu ) && ! empty( $menu ) ) {
+				foreach ( $menu as $index => $menu_item ) {
 					if ( 'edit.php?post_type=feedback' == $menu_item[2] ) {
 						$unread = get_option( 'feedback_unread_count', 0 );
 						if ( $unread > 0 ) {
-							$unread_count = current_user_can( 'publish_pages' ) ? " <span class='feedback-unread count-{$unread} awaiting-mod'><span class='feedback-unread-count'>" . number_format_i18n( $unread ) . '</span></span>' : '';
-
-							// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-							$submenu['feedback'][ $index ][0] .= $unread_count;
+							$unread_count       = current_user_can( 'publish_pages' ) ? " <span class='feedback-unread count-{$unread} awaiting-mod'><span class='feedback-unread-count'>" . number_format_i18n( $unread ) . '</span></span>' : '';
+							$menu[ $index ][0] .= $unread_count;
 						}
 						break;
 					}
@@ -763,18 +694,33 @@ class Grunion_Contact_Form_Plugin {
 	 * @return bool Returns true if the form submission matches the disallowed list and false if it doesn't.
 	 */
 	public function is_in_disallowed_list( $in_disallowed_list, $form = array() ) {
+		global $wp_version;
+
 		if ( $in_disallowed_list ) {
 			return $in_disallowed_list;
 		}
 
+		/*
+		 * wp_blacklist_check was deprecated in WP 5.5.
+		 * @todo: remove when WordPress 5.5 is the minimum required version.
+		 */
+		if ( version_compare( $wp_version, '5.5-alpha', '>=' ) ) {
+			$check_comment_disallowed_list = 'wp_check_comment_disallowed_list';
+		} else {
+			$check_comment_disallowed_list = 'wp_blacklist_check';
+		}
+
 		if (
-			wp_check_comment_disallowed_list(
-				$form['comment_author'],
-				$form['comment_author_email'],
-				$form['comment_author_url'],
-				$form['comment_content'],
-				$form['user_ip'],
-				$form['user_agent']
+			call_user_func_array(
+				$check_comment_disallowed_list,
+				array(
+					$form['comment_author'],
+					$form['comment_author_email'],
+					$form['comment_author_url'],
+					$form['comment_content'],
+					$form['user_ip'],
+					$form['user_agent'],
+				)
 			)
 		) {
 			return true;
@@ -921,13 +867,13 @@ class Grunion_Contact_Form_Plugin {
 		?>
 
 		<div id="feedback-export" style="display:none">
-			<h2><?php esc_html_e( 'Export responses as CSV', 'jetpack' ); ?></h2>
+			<h2><?php _e( 'Export feedback as CSV', 'jetpack' ); ?></h2>
 			<div class="clear"></div>
 			<form action="<?php echo admin_url( 'admin-post.php' ); ?>" method="post" class="form">
 				<?php wp_nonce_field( 'feedback_export', 'feedback_export_nonce' ); ?>
 
 				<input name="action" value="feedback_export" type="hidden">
-				<label for="post"><?php esc_html_e( 'Select responses to download', 'jetpack' ); ?></label>
+				<label for="post"><?php _e( 'Select feedback to download', 'jetpack' ); ?></label>
 				<select name="post">
 					<option value="all"><?php esc_html_e( 'All posts', 'jetpack' ); ?></option>
 					<?php echo $this->get_feedbacks_as_options(); ?>
@@ -1983,7 +1929,6 @@ class Grunion_Contact_Form extends Crunion_Contact_Form_Shortcode {
 			'submit_button_text'     => __( 'Submit', 'jetpack' ),
 			// These attributes come from the block editor, so use camel case instead of snake case.
 			'customThankyou'         => '', // Whether to show a custom thankyou response after submitting a form. '' for no, 'message' for a custom message, 'redirect' to redirect to a new URL.
-			'customThankyouHeading'  => __( 'Message Sent', 'jetpack' ), // The text to show above customThankyouMessage.
 			'customThankyouMessage'  => __( 'Thank you for your submission!', 'jetpack' ), // The message to show when customThankyou is set to 'message'.
 			'customThankyouRedirect' => '', // The URL to redirect to when customThankyou is set to 'redirect'.
 			'jetpackCRM'             => true, // Whether Jetpack CRM should store the form submission.
@@ -2131,7 +2076,7 @@ class Grunion_Contact_Form extends Crunion_Contact_Form_Shortcode {
 			$back_url = remove_query_arg( array( 'contact-form-id', 'contact-form-sent', '_wpnonce' ) );
 
 			$r_success_message =
-				'<h3>' . esc_html( $form->get_attribute( 'customThankyouHeading' ) ) .
+				'<h3>' . __( 'Message Sent', 'jetpack' ) .
 				' (<a href="' . esc_url( $back_url ) . '">' . esc_html__( 'go back', 'jetpack' ) . '</a>)' .
 				"</h3>\n\n";
 
@@ -2384,34 +2329,6 @@ class Grunion_Contact_Form extends Crunion_Contact_Form_Shortcode {
 	}
 
 	/**
-	 * Escape a shortcode value.
-	 *
-	 * Shortcode attribute values have a number of unfortunate restrictions, which fortunately we
-	 * can get around by adding some extra HTML encoding.
-	 *
-	 * The output HTML will have a few extra escapes, but that makes no functional difference.
-	 *
-	 * @since 9.1.0
-	 * @param string $val Value to escape.
-	 * @return string
-	 */
-	private static function esc_shortcode_val( $val ) {
-		return strtr(
-			esc_html( $val ),
-			array(
-				// Brackets in attribute values break the shortcode parser.
-				'['  => '&#091;',
-				']'  => '&#093;',
-				// Shortcode parser screws up backslashes too, thanks to calls to `stripcslashes`.
-				'\\' => '&#092;',
-				// The existing code here represents arrays as comma-separated strings.
-				// Rather than trying to change representations now, just escape the commas in values.
-				','  => '&#044;',
-			)
-		);
-	}
-
-	/**
 	 * The contact-field shortcode processor
 	 * We use an object method here instead of a static Grunion_Contact_Form_Field class method to parse contact-field shortcodes so that we can tie them to the contact-form object.
 	 *
@@ -2429,18 +2346,18 @@ class Grunion_Contact_Form extends Crunion_Contact_Form_Shortcode {
 			}
 			foreach ( $attributes as $att => $val ) {
 				if ( is_numeric( $att ) ) { // Is a valueless attribute
-					$att_strs[] = self::esc_shortcode_val( $val );
+					$att_strs[] = esc_html( $val );
 				} elseif ( isset( $val ) ) { // A regular attr - value pair
 					if ( ( $att === 'options' || $att === 'values' ) && is_string( $val ) ) { // remove any empty strings
 						$val = explode( ',', $val );
 					}
-					if ( is_array( $val ) ) {
+ 					if ( is_array( $val ) ) {
 						$val =  array_filter( $val, array( __CLASS__, 'remove_empty' ) ); // removes any empty strings
-						$att_strs[] = esc_html( $att ) . '="' . implode( ',', array_map( array( __CLASS__, 'esc_shortcode_val' ), $val ) ) . '"';
+						$att_strs[] = esc_html( $att ) . '="' . implode( ',', array_map( 'esc_html', $val ) ) . '"';
 					} elseif ( is_bool( $val ) ) {
-						$att_strs[] = esc_html( $att ) . '="' . ( $val ? '1' : '' ) . '"';
+						$att_strs[] = esc_html( $att ) . '="' . esc_html( $val ? '1' : '' ) . '"';
 					} else {
-						$att_strs[] = esc_html( $att ) . '="' . self::esc_shortcode_val( $val ) . '"';
+						$att_strs[] = esc_html( $att ) . '="' . esc_html( $val ) . '"';
 					}
 				}
 			}
@@ -2864,14 +2781,8 @@ class Grunion_Contact_Form extends Crunion_Contact_Form_Shortcode {
 			$reply_to_addr = $comment_author_email;
 		}
 
-		/*
-		 * The email headers here are formatted in a format
-		 * that is the most likely to be accepted by wp_mail(),
-		 * without escaping.
-		 * More info: https://github.com/Automattic/jetpack/pull/19727
-		 */
-		$headers = 'From: ' . $comment_author . ' <' . $from_email_addr . ">\r\n" .
-			'Reply-To: ' . $comment_author . ' <' . $reply_to_addr . ">\r\n";
+		$headers = 'From: "' . $comment_author . '" <' . $from_email_addr . ">\r\n" .
+		           'Reply-To: "' . $comment_author . '" <' . $reply_to_addr . ">\r\n";
 
 		$all_values['email_marketing_consent'] = $email_marketing_consent;
 
@@ -3158,7 +3069,7 @@ class Grunion_Contact_Form extends Crunion_Contact_Form_Shortcode {
 	 * Add a display name part to an email address
 	 *
 	 * SpamAssassin doesn't like addresses in HTML messages that are missing display names (e.g., `foo@bar.org`
-	 * instead of `Foo Bar <foo@bar.org>`.
+	 * instead of `"Foo Bar" <foo@bar.org>`.
 	 *
 	 * @param string $address
 	 *
@@ -3168,14 +3079,7 @@ class Grunion_Contact_Form extends Crunion_Contact_Form_Shortcode {
 		// If it's just the address, without a display name
 		if ( is_email( $address ) ) {
 			$address_parts = explode( '@', $address );
-
-			/*
-			 * The email address format here is formatted in a format
-			 * that is the most likely to be accepted by wp_mail(),
-			 * without escaping.
-			 * More info: https://github.com/Automattic/jetpack/pull/19727
-			 */
-			$address = sprintf( '%s <%s>', $address_parts[0], $address );
+			$address       = sprintf( '"%s" <%s>', $address_parts[0], $address );
 		}
 
 		return $address;
@@ -3545,7 +3449,7 @@ class Grunion_Contact_Form_Field extends Crunion_Contact_Form_Shortcode {
 		return apply_filters( 'grunion_contact_form_field_html', $rendered_field, $field_label, ( in_the_loop() ? get_the_ID() : null ) );
 	}
 
-	public function render_label( $type, $id, $label, $required, $required_field_text ) {
+	function render_label( $type = '', $id, $label, $required, $required_field_text ) {
 
 		$type_class = $type ? ' ' .$type : '';
 		return

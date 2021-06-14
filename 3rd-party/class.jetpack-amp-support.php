@@ -1,6 +1,5 @@
 <?php //phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
 
-use Automattic\Jetpack\Assets;
 use Automattic\Jetpack\Sync\Functions;
 
 /**
@@ -96,16 +95,6 @@ class Jetpack_AMP_Support {
 	}
 
 	/**
-	 * Is AMP available for this request
-	 * This returns false for admin, CLI requests etc.
-	 *
-	 * @return bool is_amp_available
-	 */
-	public static function is_amp_available() {
-		return ( function_exists( 'amp_is_available' ) && amp_is_available() );
-	}
-
-	/**
 	 * Does the page return AMP content.
 	 *
 	 * @return bool $is_amp_request Are we on am AMP view.
@@ -187,7 +176,7 @@ class Jetpack_AMP_Support {
 			$metadata = self::add_site_icon_to_metadata( $metadata );
 		}
 
-		if ( ! isset( $metadata['image'] ) && ! empty( $post ) ) {
+		if ( ! isset( $metadata['image'] ) ) {
 			$metadata = self::add_image_to_metadata( $metadata, $post );
 		}
 
@@ -310,7 +299,7 @@ class Jetpack_AMP_Support {
 		if ( function_exists( 'staticize_subdomain' ) ) {
 			return staticize_subdomain( $domain );
 		} else {
-			return Assets::staticize_subdomain( $domain );
+			return Jetpack::staticize_subdomain( $domain );
 		}
 	}
 
@@ -392,7 +381,7 @@ class Jetpack_AMP_Support {
 		}
 
 		$sharing_links = array();
-		foreach ( $sharing_enabled['visible'] as $service ) {
+		foreach ( $sharing_enabled['visible'] as $id => $service ) {
 			$sharing_link = $service->get_amp_display( $post );
 			if ( ! empty( $sharing_link ) ) {
 				$sharing_links[] = $sharing_link;
@@ -427,7 +416,7 @@ class Jetpack_AMP_Support {
 	 */
 	public static function amp_enqueue_sharing_css() {
 		if ( self::is_amp_request() ) {
-			wp_enqueue_style( 'sharedaddy-amp', plugin_dir_url( __DIR__ ) . 'modules/sharedaddy/amp-sharing.css', array( 'social-logos' ), JETPACK__VERSION );
+			wp_enqueue_style( 'sharedaddy-amp', plugin_dir_url( dirname( __FILE__ ) ) . 'modules/sharedaddy/amp-sharing.css', array( 'social-logos' ), JETPACK__VERSION );
 		}
 	}
 
@@ -436,21 +425,18 @@ class Jetpack_AMP_Support {
 	 */
 	public static function amp_reader_sharing_css() {
 		// If sharing is not enabled, we should not proceed to render the CSS.
-		if ( ! defined( 'JETPACK_SOCIAL_LOGOS_DIR' ) | ! defined( 'JETPACK_SOCIAL_LOGOS_URL' ) || ! defined( 'WP_SHARING_PLUGIN_DIR' ) ) {
+		if ( ! defined( 'JETPACK_SOCIAL_LOGOS_DIR' ) || ! defined( 'WP_SHARING_PLUGIN_DIR' ) ) {
 			return;
 		}
 
 		/*
 		 * We'll need to output the full contents of the 2 files
 		 * in the head on AMP views. We can't rely on regular enqueues here.
-		 * @todo As of AMP plugin v1.5, you can actually rely on regular enqueues thanks to https://github.com/ampproject/amp-wp/pull/4299. Once WPCOM upgrades AMP, then this method can be eliminated.
 		 *
 		 * phpcs:disable WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		 * phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 		 */
-		$css = file_get_contents( JETPACK_SOCIAL_LOGOS_DIR . 'social-logos.css' );
-		$css = preg_replace( '#(?<=url\(")(?=social-logos\.)#', JETPACK_SOCIAL_LOGOS_URL, $css ); // Make sure font files get their absolute paths.
-		echo $css;
+		echo file_get_contents( JETPACK_SOCIAL_LOGOS_DIR . 'social-logos.css' );
 		echo file_get_contents( WP_SHARING_PLUGIN_DIR . 'amp-sharing.css' );
 
 		/*

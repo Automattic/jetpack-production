@@ -172,7 +172,7 @@ class Jetpack_RSS_Links_Widget extends WP_Widget {
 		echo '</select></label></p></div>';
 	}
 
-	function _rss_link( $type, $args ) {
+	function _rss_link( $type = 'posts', $args ) {
 		if ( 'posts' == $type ) {
 			$type_text = __( 'Posts', 'jetpack' );
 			$rss_type  = 'rss2_url';

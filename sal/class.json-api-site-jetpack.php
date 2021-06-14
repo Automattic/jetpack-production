@@ -287,12 +287,16 @@ class Jetpack_Site extends Abstract_Jetpack_Site {
 
 	/**
 	 * Check if site should be considered as eligible for use of the core Site Editor.
-	 * The Site Editor requires a block based theme to be active.
+	 * The Site Editor requires the FSE plugin to be installed and activated.
+	 * The plugin can be explicitly enabled via the a8c_enable_core_site_editor filter.
 	 *
 	 * @return bool true if site is eligible for the Site Editor
 	 */
 	public function is_core_site_editor_enabled() {
-		return function_exists( 'gutenberg_is_fse_theme' ) && gutenberg_is_fse_theme();
+		if ( ! Jetpack::is_plugin_active( 'full-site-editing/full-site-editing-plugin.php' ) ) {
+			return false;
+		}
+		return function_exists( '\A8C\FSE\is_site_editor_active' ) && \A8C\FSE\is_site_editor_active();
 	}
 
 	/**
@@ -310,15 +314,6 @@ class Jetpack_Site extends Abstract_Jetpack_Site {
 
 	function wrap_post( $post, $context ) {
 		return new Jetpack_Post( $this, $post, $context );
-	}
-
-	/**
-	 * Get the option storing the Anchor podcast ID that identifies a site as a podcasting site.
-	 *
-	 * @return string
-	 */
-	public function get_anchor_podcast() {
-		return $this->get_atomic_cloud_site_option( 'anchor_podcast' );
 	}
 
 }

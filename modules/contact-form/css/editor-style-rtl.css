@@ -69,6 +69,7 @@ input[type="email"],
 input[type="url"] {
 	border-radius: 0;
 	-webkit-appearance: none;
+	   -moz-appearance: none;
 	        appearance: none;
 	box-sizing: border-box;
 	margin: 0;
@@ -84,6 +85,10 @@ input[type="url"] {
 }
 
 input[type="text"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder {
+	color: #87a6bc;
+}
+
+input[type="text"]::-ms-input-placeholder, input[type="tel"]::-ms-input-placeholder, input[type="email"]::-ms-input-placeholder, input[type="url"]::-ms-input-placeholder {
 	color: #87a6bc;
 }
 
@@ -138,6 +143,10 @@ input[type="text"]:disabled:-ms-input-placeholder, input[type="tel"]:disabled:-m
 	color: #a8bece;
 }
 
+input[type="text"]:disabled::-ms-input-placeholder, input[type="tel"]:disabled::-ms-input-placeholder, input[type="email"]:disabled::-ms-input-placeholder, input[type="url"]:disabled::-ms-input-placeholder {
+	color: #a8bece;
+}
+
 input[type="text"]:disabled::placeholder,
 input[type="tel"]:disabled::placeholder,
 input[type="email"]:disabled::placeholder,
@@ -153,6 +162,7 @@ input[type="url"]:disabled::placeholder {
 textarea {
 	border-radius: 0;
 	-webkit-appearance: none;
+	   -moz-appearance: none;
 	        appearance: none;
 	box-sizing: border-box;
 	margin: 0;
@@ -169,6 +179,10 @@ textarea {
 }
 
 textarea:-ms-input-placeholder {
+	color: #87a6bc;
+}
+
+textarea::-ms-input-placeholder {
 	color: #87a6bc;
 }
 
@@ -205,6 +219,10 @@ textarea:disabled:-ms-input-placeholder {
 	color: #a8bece;
 }
 
+textarea:disabled::-ms-input-placeholder {
+	color: #a8bece;
+}
+
 textarea:disabled::placeholder {
 	color: #a8bece;
 }
@@ -233,7 +251,8 @@ input[type="checkbox"] {
 	line-height: 0;
 	text-align: center;
 	vertical-align: middle;
-	appearance: none;
+	-moz-appearance: none;
+	     appearance: none;
 	transition: all .15s ease-in-out;
 	clear: none;
 	cursor: pointer;
@@ -312,7 +331,8 @@ input[type=radio] {
 	vertical-align: middle;
 	width: 16px;
 	min-width: 16px;
-	appearance: none;
+	-moz-appearance: none;
+	     appearance: none;
 	border-radius: 50%;
 	line-height: 10px;
 }
@@ -358,6 +378,10 @@ input[type="radio"]:disabled:hover {
 }
 
 input[type="radio"]:disabled:-ms-input-placeholder {
+	color: #a8bece;
+}
+
+input[type="radio"]:disabled::-ms-input-placeholder {
 	color: #a8bece;
 }
 
@@ -431,6 +455,7 @@ select {
 	/* Aligns the text to the 8px baseline grid and adds padding on right to allow for the arrow. */
 	padding: 7px 14px 9px 32px;
 	-webkit-appearance: none;
+	-moz-appearance: none;
 	appearance: none;
 }
 
@@ -499,6 +524,7 @@ input[type="submit"] {
 	padding: 0;
 	font-size: 14px;
 	-webkit-appearance: none;
+	-moz-appearance: none;
 			 appearance: none;
 	vertical-align: baseline;
 	background: white;
@@ -521,6 +547,7 @@ input[type="submit"] {
 	border-radius: 4px;
 	padding: 7px 14px 9px;
 	-webkit-appearance: none;
+	-moz-appearance: none;
 			 appearance: none;
 }
 
