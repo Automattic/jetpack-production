@@ -178,8 +178,7 @@ class Jetpack_Search_Helpers {
 					$widget_filter['name'] = self::generate_widget_filter_name( $widget_filter );
 				}
 
-				$type = ( isset( $widget_filter['type'] ) ) ? $widget_filter['type'] : '';
-				$key  = sprintf( '%s_%d', $type, count( $filters ) );
+				$key = sprintf( '%s_%d', $widget_filter['type'], count( $filters ) );
 
 				$filters[ $key ] = $widget_filter;
 			}
@@ -227,10 +226,6 @@ class Jetpack_Search_Helpers {
 	 */
 	static function generate_widget_filter_name( $widget_filter ) {
 		$name = '';
-
-		if ( ! isset( $widget_filter['type'] ) ) {
-			return $name;
-		}
 
 		switch ( $widget_filter['type'] ) {
 			case 'post_type':
@@ -717,54 +712,5 @@ class Jetpack_Search_Helpers {
 		return Jetpack::is_development_version() && file_exists( JETPACK__PLUGIN_DIR . $file )
 			? filemtime( JETPACK__PLUGIN_DIR . $file )
 			: JETPACK__VERSION;
-	}
-
-
-	/**
-	 * Generates a customizer settings ID for a given post type.
-	 *
-	 * @since 8.8.0
-	 * @param object $post_type Post type object returned from get_post_types.
-	 * @return string $customizer_id Customizer setting ID.
-	 */
-	public static function generate_post_type_customizer_id( $post_type ) {
-		return Jetpack_Search_Options::OPTION_PREFIX . 'disable_post_type_' . $post_type->name;
-	}
-
-	/**
-	 * Generates an array of post types associated with their customizer IDs.
-	 *
-	 * @since 8.8.0
-	 * @return array $ids Post type => post type customizer ID object.
-	 */
-	public static function generate_post_type_customizer_ids() {
-		return array_map(
-			array( 'self', 'generate_post_type_customizer_id' ),
-			get_post_types( array( 'exclude_from_search' => false ), 'objects' )
-		);
-	}
-
-	/**
-	 * Sanitizes a checkbox value for writing to the database.
-	 *
-	 * @since 8.9.0
-	 *
-	 * @param any $value from the customizer form.
-	 * @return string either '0' or '1'.
-	 */
-	public static function sanitize_checkbox_value( $value ) {
-		return true === $value ? '1' : '0';
-	}
-
-	/**
-	 * Sanitizes a checkbox value for rendering the Customizer.
-	 *
-	 * @since 8.9.0
-	 *
-	 * @param any $value from the database.
-	 * @return boolean
-	 */
-	public static function sanitize_checkbox_value_for_js( $value ) {
-		return '1' === $value;
 	}
 }

@@ -2,7 +2,7 @@
 /**
  * Jetpack Search Overlay Customization
  *
- * @package automattic/jetpack
+ * @package jetpack
  */
 
 // Exit if file is accessed directly.
@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-require_once __DIR__ . '/class.jetpack-search-helpers.php';
-require_once __DIR__ . '/class-jetpack-search-options.php';
+require_once dirname( __FILE__ ) . '/class-jetpack-search-options.php';
+require_once dirname( __FILE__ ) . '/customize-controls/class-label-control.php';
 
 /**
  * Class to customize search on the site.
@@ -27,7 +27,6 @@ class Jetpack_Search_Customize {
 	 */
 	public function __construct() {
 		add_action( 'customize_register', array( $this, 'customize_register' ) );
-		add_action( 'customize_controls_enqueue_scripts', array( $this, 'customize_controls_enqueue_scripts' ) );
 	}
 
 	/**
@@ -38,8 +37,6 @@ class Jetpack_Search_Customize {
 	 * @param WP_Customize_Manager $wp_customize Customizer instance.
 	 */
 	public function customize_register( $wp_customize ) {
-		require_once dirname( JETPACK__PLUGIN_FILE ) . '/modules/search/customize-controls/class-label-control.php';
-		require_once dirname( JETPACK__PLUGIN_FILE ) . '/modules/search/customize-controls/class-excluded-post-types-control.php';
 		$section_id     = 'jetpack_search';
 		$setting_prefix = Jetpack_Search_Options::OPTION_PREFIX;
 
@@ -71,30 +68,6 @@ class Jetpack_Search_Customize {
 				'choices'     => array(
 					'light' => __( 'Light', 'jetpack' ),
 					'dark'  => __( 'Dark', 'jetpack' ),
-				),
-			)
-		);
-
-		$id = $setting_prefix . 'result_format';
-		$wp_customize->add_setting(
-			$id,
-			array(
-				'default'   => 'minimal',
-				'transport' => 'postMessage',
-				'type'      => 'option',
-			)
-		);
-		$wp_customize->add_control(
-			$id,
-			array(
-				'label'       => __( 'Result Format', 'jetpack' ),
-				'description' => __( 'Choose how the search results look.', 'jetpack' ),
-				'section'     => $section_id,
-				'type'        => 'select',
-				'choices'     => array(
-					'minimal'  => __( 'Minimal', 'jetpack' ),
-					'expanded' => __( 'Expanded (shows images)', 'jetpack' ),
-					'product'  => __( 'Product (for WooCommerce stores)', 'jetpack' ),
 				),
 			)
 		);
@@ -134,35 +107,61 @@ class Jetpack_Search_Customize {
 		$wp_customize->add_control(
 			$id,
 			array(
-				'label'       => __( 'Search Input Overlay Trigger', 'jetpack' ),
+				'label'       => __( 'Search Overlay Trigger', 'jetpack' ),
 				'description' => __( 'Select when your overlay should appear.', 'jetpack' ),
 				'section'     => $section_id,
 				'type'        => 'select',
 				'choices'     => array(
-					'immediate' => __( 'Open when user starts typing', 'jetpack' ),
+					'immediate' => __( 'Open immediately', 'jetpack' ),
 					'results'   => __( 'Open when results are available', 'jetpack' ),
-					'submit'    => __( 'Open when user submits the form', 'jetpack' ),
 				),
 			)
 		);
 
-		$id = $setting_prefix . 'excluded_post_types';
+		$id = $setting_prefix . 'result_format';
 		$wp_customize->add_setting(
 			$id,
 			array(
-				'default' => '',
-				'type'    => 'option',
+				'default'   => 'minimal',
+				'transport' => 'postMessage',
+				'type'      => 'option',
 			)
 		);
 		$wp_customize->add_control(
-			new Excluded_Post_Types_Control(
-				$wp_customize,
-				$id,
-				array(
-					'description' => __( 'Choose post types to exclude from search results. You must leave at least one post type unchecked.', 'jetpack' ),
-					'label'       => __( 'Excluded Post Types', 'jetpack' ),
-					'section'     => $section_id,
-				)
+			$id,
+			array(
+				'label'       => __( 'Result Format', 'jetpack' ),
+				'description' => __( 'Choose how the search results look.', 'jetpack' ),
+				'section'     => $section_id,
+				'type'        => 'select',
+				'choices'     => array(
+					'minimal'  => __( 'Minimal', 'jetpack' ),
+					'expanded' => __( 'Expanded', 'jetpack' ),
+				),
+			)
+		);
+
+		$id = $setting_prefix . 'opacity';
+		$wp_customize->add_setting(
+			$id,
+			array(
+				'default'   => 97,
+				'transport' => 'postMessage',
+				'type'      => 'option',
+			)
+		);
+		$wp_customize->add_control(
+			$id,
+			array(
+				'type'        => 'range',
+				'section'     => $section_id,
+				'label'       => __( 'Background Opacity', 'jetpack' ),
+				'description' => __( 'Select an opacity for your search overlay.', 'jetpack' ),
+				'input_attrs' => array(
+					'min'  => 85,
+					'max'  => 100,
+					'step' => 0.5,
+				),
 			)
 		);
 
@@ -207,11 +206,10 @@ class Jetpack_Search_Customize {
 		$wp_customize->add_setting(
 			$id,
 			array(
-				'default'              => '1',
-				'sanitize_callback'    => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value' ),
-				'sanitize_js_callback' => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value_for_js' ),
-				'transport'            => 'postMessage',
-				'type'                 => 'option',
+				'default'           => '1',
+				'sanitize_callback' => 'rest_sanitize_boolean',
+				'transport'         => 'postMessage',
+				'type'              => 'option',
 			)
 		);
 		$wp_customize->add_control(
@@ -227,11 +225,10 @@ class Jetpack_Search_Customize {
 		$wp_customize->add_setting(
 			$id,
 			array(
-				'default'              => '1',
-				'sanitize_callback'    => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value' ),
-				'sanitize_js_callback' => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value_for_js' ),
-				'transport'            => 'postMessage',
-				'type'                 => 'option',
+				'default'           => '1',
+				'sanitize_callback' => 'rest_sanitize_boolean',
+				'transport'         => 'postMessage',
+				'type'              => 'option',
 			)
 		);
 		$wp_customize->add_control(
@@ -247,11 +244,10 @@ class Jetpack_Search_Customize {
 		$wp_customize->add_setting(
 			$id,
 			array(
-				'default'              => '1',
-				'sanitize_callback'    => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value' ),
-				'sanitize_js_callback' => array( 'Jetpack_Search_Helpers', 'sanitize_checkbox_value_for_js' ),
-				'transport'            => 'postMessage',
-				'type'                 => 'option',
+				'default'           => '1',
+				'sanitize_callback' => 'rest_sanitize_boolean',
+				'transport'         => 'postMessage',
+				'type'              => 'option',
 			)
 		);
 		$wp_customize->add_control(
@@ -263,22 +259,5 @@ class Jetpack_Search_Customize {
 			)
 		);
 	}
-
-	/**
-	 * Enqueue assets for Customizer controls.
-	 *
-	 * @since 9.6.0
-	 */
-	public function customize_controls_enqueue_scripts() {
-		$script_relative_path = 'modules/search/customize-controls/customize-controls.js';
-		$script_version       = Jetpack_Search_Helpers::get_asset_version( $script_relative_path );
-		$script_path          = plugins_url( $script_relative_path, JETPACK__PLUGIN_FILE );
-		wp_enqueue_script(
-			'jetpack-instant-search-customizer',
-			$script_path,
-			array( 'customize-controls' ),
-			$script_version,
-			true
-		);
-	}
 }
+

@@ -199,7 +199,7 @@ class Jetpack_Core_API_Module_List_Endpoint {
 			if (
 				isset( $modules[ $slug ]['requires_connection'] )
 				&& $modules[ $slug ]['requires_connection']
-				&& ( new Status() )->is_offline_mode()
+				&& ( new Status() )->is_development_mode()
 			) {
 				$modules[ $slug ]['activated'] = false;
 			}
@@ -366,7 +366,7 @@ class Jetpack_Core_API_Data extends Jetpack_Core_API_XMLRPC_Consumer_Endpoint {
 			if (
 				isset( $module['requires_connection'] )
 				&& $module['requires_connection']
-				&& ( new Status() )->is_offline_mode()
+				&& ( new Status() )->is_development_mode()
 			) {
 				$module['activated'] = false;
 			}
@@ -455,14 +455,14 @@ class Jetpack_Core_API_Data extends Jetpack_Core_API_XMLRPC_Consumer_Endpoint {
 					$business_address = is_array( $business_address ) ? array_map( array( $this, 'decode_special_characters' ), $business_address ) : $business_address;
 
 					$response[ $setting ] = array(
-						'siteTitle'          => $this->decode_special_characters( get_option( 'blogname' ) ),
-						'siteDescription'    => $this->decode_special_characters( get_option( 'blogdescription' ) ),
-						'siteType'           => get_option( 'jpo_site_type' ),
-						'homepageFormat'     => get_option( 'jpo_homepage_format' ),
-						'addContactForm'     => (int) get_option( 'jpo_contact_page' ),
-						'businessAddress'    => $business_address,
+						'siteTitle' => $this->decode_special_characters( get_option( 'blogname' ) ),
+						'siteDescription' => $this->decode_special_characters( get_option( 'blogdescription' ) ),
+						'siteType' => get_option( 'jpo_site_type' ),
+						'homepageFormat' => get_option( 'jpo_homepage_format' ),
+						'addContactForm' => intval( get_option( 'jpo_contact_page' ) ),
+						'businessAddress' => $business_address,
 						'installWooCommerce' => is_plugin_active( 'woocommerce/woocommerce.php' ),
-						'stats'              => Jetpack::is_connection_ready() && Jetpack::is_module_active( 'stats' ),
+						'stats' => Jetpack::is_active() && Jetpack::is_module_active( 'stats' ),
 					);
 					break;
 
@@ -715,12 +715,7 @@ class Jetpack_Core_API_Data extends Jetpack_Core_API_XMLRPC_Consumer_Endpoint {
 					break;
 
 				case 'jetpack_protect_global_whitelist':
-					if ( ! function_exists( 'jetpack_protect_save_whitelist' ) ) {
-						require_once JETPACK__PLUGIN_DIR . 'modules/protect/shared-functions.php';
-					}
-
 					$updated = jetpack_protect_save_whitelist( explode( PHP_EOL, str_replace( array( ' ', ',' ), array( '', "\n" ), $value ) ) );
-
 					if ( is_wp_error( $updated ) ) {
 						$error = $updated->get_error_message();
 					}
@@ -757,7 +752,6 @@ class Jetpack_Core_API_Data extends Jetpack_Core_API_XMLRPC_Consumer_Endpoint {
 				case 'bing':
 				case 'pinterest':
 				case 'yandex':
-				case 'facebook':
 					$grouped_options = $grouped_options_current = (array) get_option( 'verification_services_codes' );
 
 					// Extracts the content attribute from the HTML meta tag if needed
@@ -910,13 +904,6 @@ class Jetpack_Core_API_Data extends Jetpack_Core_API_XMLRPC_Consumer_Endpoint {
 						$error = sprintf( esc_html__( 'Onboarding failed to process: %s', 'jetpack' ), $result );
 						$updated = false;
 					}
-					break;
-
-				case 'stb_enabled':
-				case 'stc_enabled':
-					// Convert the false value to 0. This allows the option to be updated if it doesn't exist yet.
-					$sub_value = $value ? $value : 0;
-					$updated   = (string) get_option( $option ) !== (string) $sub_value ? update_option( $option, $sub_value ) : true;
 					break;
 
 				default:
@@ -1123,7 +1110,7 @@ class Jetpack_Core_API_Data extends Jetpack_Core_API_XMLRPC_Consumer_Endpoint {
 		}
 
 		if ( ! empty( $data['stats'] ) ) {
-			if ( Jetpack::is_connection_ready() ) {
+			if ( Jetpack::is_active() ) {
 				$stats_module_active = Jetpack::is_module_active( 'stats' );
 				if ( ! $stats_module_active ) {
 					$stats_module_active = Jetpack::activate_module( 'stats', false, false );
@@ -1546,9 +1533,6 @@ class Jetpack_Core_API_Module_Data_Endpoint {
 						break;
 					case 'yandex':
 						$services[] = 'Yandex';
-						break;
-					case 'facebook':
-						$services[] = 'Facebook';
 						break;
 				}
 			}

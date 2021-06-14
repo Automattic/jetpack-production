@@ -7,7 +7,7 @@ use Automattic\Jetpack\Extensions\Slideshow;
  * Slideshow shortcode.
  * Adds a new "slideshow" gallery type when adding a gallery using the classic editor.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -113,7 +113,7 @@ class Jetpack_Slideshow_Shortcode {
 		}
 
 		// Don't restrict to the current post if include.
-		$post_parent = ( empty( $attr['include'] ) ) ? (int) $attr['id'] : null;
+		$post_parent = ( empty( $attr['include'] ) ) ? intval( $attr['id'] ) : null;
 
 		$attachments = get_posts(
 			array(

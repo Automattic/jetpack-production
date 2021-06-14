@@ -2,10 +2,10 @@
 /**
  * Main WordAds file.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
-define( 'WORDADS_ROOT', __DIR__ );
+define( 'WORDADS_ROOT', dirname( __FILE__ ) );
 define( 'WORDADS_BASENAME', plugin_basename( __FILE__ ) );
 define( 'WORDADS_FILE_PATH', WORDADS_ROOT . '/' . basename( __FILE__ ) );
 define( 'WORDADS_URL', plugins_url( '/', __FILE__ ) );
@@ -79,17 +79,6 @@ class WordAds {
 		'gutenberg'     => 200,
 		'inline'        => 310,
 		'inline-plugin' => 320,
-	);
-
-	/**
-	 * Mapping array of form factor slugs to form factor ids
-	 *
-	 * @var array
-	 */
-	public static $form_factor_ids = array(
-		'square'      => '001', // 250x250
-		'leaderboard' => '002', // 728x90
-		'skyscraper'  => '003', // 120x600
 	);
 
 	/**
@@ -360,14 +349,13 @@ class WordAds {
 		if ( self::is_amp() ) {
 			return;
 		}
-		$hosting_type = jetpack_is_atomic_site() ? 1 : 2; // 1 = WPCOM, 2 = Jetpack.
-		$pagetype     = (int) $this->params->get_page_type_ipw();
-		$data_tags    = ( $this->params->cloudflare ) ? ' data-cfasync="false"' : '';
-		$site_id      = $this->params->blog_id;
-		$consent      = (int) isset( $_COOKIE['personalized-ads-consent'] );
+		$pagetype  = intval( $this->params->get_page_type_ipw() );
+		$data_tags = ( $this->params->cloudflare ) ? ' data-cfasync="false"' : '';
+		$site_id   = $this->params->blog_id;
+		$consent   = intval( isset( $_COOKIE['personalized-ads-consent'] ) );
 		?>
 		<script<?php echo esc_attr( $data_tags ); ?> type="text/javascript">
-			var __ATA_PP = { pt: <?php echo esc_js( $pagetype ); ?>, ht: <?php echo esc_js( $hosting_type ); ?>, tn: '<?php echo esc_js( get_stylesheet() ); ?>', amp: false, siteid: <?php echo esc_js( $site_id ); ?>, consent: <?php echo esc_js( $consent ); ?>, ad: { label: { text: '<?php echo esc_js( __( 'Advertisements', 'jetpack' ) ); ?>' }, reportAd: { text: '<?php echo esc_js( __( 'Report this ad', 'jetpack' ) ); ?>' } } };
+			var __ATA_PP = { pt: <?php echo esc_js( $pagetype ); ?>, ht: 2, tn: '<?php echo esc_js( get_stylesheet() ); ?>', amp: false, siteid: <?php echo esc_js( $site_id ); ?>, consent: <?php echo esc_js( $consent ); ?> };
 			var __ATA = __ATA || {};
 			__ATA.cmd = __ATA.cmd || [];
 			__ATA.criteo = __ATA.criteo || {};
@@ -385,12 +373,11 @@ class WordAds {
 		if ( self::is_amp() ) {
 			return;
 		}
-
 		$data_tags = ( $this->params->cloudflare ) ? ' data-cfasync="false"' : '';
 		?>
 		<script<?php echo esc_attr( $data_tags ); ?> type="text/javascript">
-		(function(){var g=Date.now||function(){return+new Date};function h(a,b){a:{for(var c=a.length,d="string"==typeof a?a.split(""):a,e=0;e<c;e++)if(e in d&&b.call(void 0,d[e],e,a)){b=e;break a}b=-1}return 0>b?null:"string"==typeof a?a.charAt(b):a[b]};function k(a,b,c){c=null!=c?"="+encodeURIComponent(String(c)):"";if(b+=c){c=a.indexOf("#");0>c&&(c=a.length);var d=a.indexOf("?");if(0>d||d>c){d=c;var e=""}else e=a.substring(d+1,c);a=[a.substr(0,d),e,a.substr(c)];c=a[1];a[1]=b?c?c+"&"+b:b:c;a=a[0]+(a[1]?"?"+a[1]:"")+a[2]}return a};var l=0;function m(a,b){var c=document.createElement("script");c.src=a;c.onload=function(){b&&b(void 0)};c.onerror=function(){b&&b("error")};a=document.getElementsByTagName("head");var d;a&&0!==a.length?d=a[0]:d=document.documentElement;d.appendChild(c)}function n(a){var b=void 0===b?document.cookie:b;return(b=h(b.split("; "),function(c){return-1!=c.indexOf(a+"=")}))?b.split("=")[1]:""}function p(a){return"string"==typeof a&&0<a.length}
-		function r(a,b,c){b=void 0===b?"":b;c=void 0===c?".":c;var d=[];Object.keys(a).forEach(function(e){var f=a[e],q=typeof f;"object"==q&&null!=f||"function"==q?d.push(r(f,b+e+c)):null!==f&&void 0!==f&&(e=encodeURIComponent(b+e),d.push(e+"="+encodeURIComponent(f)))});return d.filter(p).join("&")}function t(a,b){a||((window.__ATA||{}).config=b.c,m(b.url))}var u=Math.floor(1E13*Math.random()),v=window.__ATA||{};window.__ATA=v;window.__ATA.cmd=v.cmd||[];v.rid=u;v.createdAt=g();var w=window.__ATA||{},x="s.pubmine.com";
+		(function(){var g=Date.now||function(){return+new Date};function h(a,b){a:{for(var c=a.length,d="string"==typeof a?a.split(""):a,e=0;e<c;e++)if(e in d&&b.call(void 0,d[e],e,a)){b=e;break a}b=-1}return 0>b?null:"string"==typeof a?a.charAt(b):a[b]};function k(a,b,c){c=null!=c?"="+encodeURIComponent(String(c)):"";if(b+=c){c=a.indexOf("#");0>c&&(c=a.length);var d=a.indexOf("?");if(0>d||d>c){d=c;var e=""}else e=a.substring(d+1,c);a=[a.substr(0,d),e,a.substr(c)];c=a[1];a[1]=b?c?c+"&"+b:b:c;a=a[0]+(a[1]?"?"+a[1]:"")+a[2]}return a};var l=0;function m(a,b){var c=document.createElement("script");c.src=a;c.onload=function(){b&&b(void 0)};c.onerror=function(){b("error")};a=document.getElementsByTagName("head");var d;a&&0!==a.length?d=a[0]:d=document.documentElement;d.appendChild(c)}function n(a){var b=void 0===b?document.cookie:b;return(b=h(b.split("; "),function(c){return-1!=c.indexOf(a+"=")}))?b.split("=")[1]:""}function p(a){return"string"==typeof a&&0<a.length}
+		function r(a,b,c){b=void 0===b?"":b;c=void 0===c?".":c;var d=[];Object.keys(a).forEach(function(e){var f=a[e],q=typeof f;"object"==q&&null!=f||"function"==q?d.push(r(f,b+e+c)):null!==f&&void 0!==f&&(e=encodeURIComponent(b+e),d.push(e+"="+encodeURIComponent(f)))});return d.filter(p).join("&")}function t(a,b){a||((window.__ATA||{}).config=b.c,m(b.url))}var u=Math.floor(1E13*Math.random()),v=window.__ATA||{};window.__ATA=v;v.rid=u;v.createdAt=g();var w=window.__ATA||{},x="s.pubmine.com";
 		w&&w.serverDomain&&(x=w.serverDomain);var y="//"+x+"/conf",z=window.top===window,A=window.__ATA_PP&&window.__ATA_PP.gdpr_applies,B="boolean"===typeof A?Number(A):null,C=window.__ATA_PP||null,D=z?document.referrer?document.referrer:null:null,E=z?window.location.href:document.referrer?document.referrer:null,F,G=n("__ATA_tuuid");F=G?G:null;var H=window.innerWidth+"x"+window.innerHeight,I=n("usprivacy"),J=r({gdpr:B,pp:C,rid:u,src:D,ref:E,tuuid:F,vp:H,us_privacy:I?I:null},"",".");
 		(function(a){var b=void 0===b?"cb":b;l++;var c="callback__"+g().toString(36)+"_"+l.toString(36);a=k(a,b,c);window[c]=function(d){t(void 0,d)};m(a,function(d){d&&t(d)})})(y+"?"+J);}).call(this);
 		</script>
@@ -514,9 +501,23 @@ class WordAds {
 				break;
 		}
 
-		$section_id  = 0 === $this->params->blog_id ? WORDADS_API_TEST_ID : $this->params->blog_id . '2';
-		$form_factor = $this->params->mobile_device ? 'square' : 'leaderboard';
-		echo $this->get_dynamic_ad_snippet( $section_id, $form_factor, 'top', $selector ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		$ad_type = $this->option( 'wordads_house' ) ? 'house' : 'iponweb';
+		echo $this->get_ad( 'top', $ad_type ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		if ( ! self::is_amp() ) {
+			?>
+		<script type="text/javascript">
+			(function ( selector ) {
+				var main = document.querySelector( selector );
+				var headerAd = document.querySelector('.wpcnt-header');
+
+				if ( main ) {
+					main.parentNode.insertBefore( headerAd, main );
+				}
+			})( '<?php echo esc_js( $selector ); ?>' );
+
+		</script>
+			<?php
+		}
 	}
 
 	/**
@@ -567,25 +568,36 @@ class WordAds {
 	public function get_ad( $spot, $type = 'iponweb' ) {
 		$snippet = '';
 		if ( 'iponweb' === $type ) {
+			// Default to mrec.
+			$width  = 300;
+			$height = 250;
+
 			$section_id = WORDADS_API_TEST_ID;
 			$snippet    = '';
-
 			if ( 'top' === $spot ) {
 				// mrec for mobile, leaderboard for desktop.
-				$section_id  = 0 === $this->params->blog_id ? WORDADS_API_TEST_ID : $this->params->blog_id . '2';
-				$form_factor = $this->params->mobile_device ? 'square' : 'leaderboard';
-				$snippet     = $this->get_dynamic_ad_snippet( $section_id, $form_factor, $spot );
+				$section_id = 0 === $this->params->blog_id ? WORDADS_API_TEST_ID : $this->params->blog_id . '2';
+				$width      = $this->params->mobile_device ? 300 : 728;
+				$height     = $this->params->mobile_device ? 250 : 90;
+				$snippet    = $this->get_ad_snippet( $section_id, $height, $width, $spot );
 			} elseif ( 'belowpost' === $spot ) {
 				$section_id = 0 === $this->params->blog_id ? WORDADS_API_TEST_ID : $this->params->blog_id . '1';
-				$snippet    = $this->get_dynamic_ad_snippet( $section_id, 'square', $spot );
+				$width      = 300;
+				$height     = 250;
+
+				$snippet = $this->get_ad_snippet( $section_id, $height, $width, $spot, self::$solo_unit_css );
+				if ( $this->option( 'wordads_second_belowpost', true ) ) {
+					$section_id2 = 0 === $this->params->blog_id ? WORDADS_API_TEST_ID2 : $this->params->blog_id . '4';
+					$snippet    .= $this->get_ad_snippet( $section_id2, $height, $width, $spot . '2', 'float:left;margin-top:0px;' );
+				}
 			} elseif ( 'inline' === $spot ) {
 				$section_id = 0 === $this->params->blog_id ? WORDADS_API_TEST_ID : $this->params->blog_id . '5';
-				$snippet    = $this->get_dynamic_ad_snippet( $section_id, 'square', $spot );
+				$snippet    = $this->get_ad_snippet( $section_id, $height, $width, $spot, self::$solo_unit_css );
 			} elseif ( 'top_amp' === $spot ) {
 				// Ad unit which can safely be inserted below title, above content in a variety of themes.
 				$width   = $this->params->mobile_device ? 320 : 300;
 				$height  = $this->params->mobile_device ? 50 : 250;
-				$snippet = $this->get_ad_div( $spot, $this->get_amp_snippet( $height, $width ) );
+				$snippet = $this->get_ad_snippet( null, $height, $width );
 			}
 		} elseif ( 'house' === $type ) {
 			$leaderboard = 'top' === $spot && ! $this->params->mobile_device;
@@ -595,34 +607,12 @@ class WordAds {
 			}
 		}
 
-		return $snippet;
+		return $this->get_ad_div( $spot, $snippet );
 	}
 
-	/**
-	 * Returns the AMP snippet to be inserted
-	 *
-	 * @param  int $height Height.
-	 * @param  int $width  Width.
-	 * @return string
-	 *
-	 * @since 8.7
-	 */
-	public function get_amp_snippet( $height, $width ) {
-		$height         = esc_attr( $height + 15 ); // this will ensure enough padding for "Report this ad".
-		$width          = esc_attr( $width );
-		$amp_section_id = esc_attr( self::get_amp_section_id() );
-		$site_id        = esc_attr( $this->params->blog_id );
-		return <<<HTML
-		<amp-ad width="$width" height="$height"
-		    type="pubmine"
-		    data-siteid="$site_id"
-		    data-section="$amp_section_id">
-		</amp-ad>
-HTML;
-	}
 
 	/**
-	 * Compatibility function -- main functionality replaced with get_dynamic_ad_snippet
+	 * Returns the snippet to be inserted into the ad unit
 	 *
 	 * @param  int    $section_id Ad section.
 	 * @param  int    $height Ad height.
@@ -635,122 +625,51 @@ HTML;
 	 * @since 5.7
 	 */
 	public function get_ad_snippet( $section_id, $height, $width, $location = '', $css = '' ) {
-		if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
-			return $this->get_amp_snippet( $height, $width );
-		}
-
 		$this->ads[] = array(
 			'location' => $location,
 			'width'    => $width,
 			'height'   => $height,
 		);
 
-		if ( 'gutenberg' === $location ) {
-			$ad_number = count( $this->ads ) . '-' . uniqid();
-			$data_tags = $this->params->cloudflare ? ' data-cfasync="false"' : '';
-			$css       = esc_attr( $css );
-
-			$loc_id = 100;
-			if ( ! empty( self::$ad_location_ids[ $location ] ) ) {
-				$loc_id = self::$ad_location_ids[ $location ];
-			}
-
-			$loc_id = esc_js( $loc_id );
+		if ( self::is_amp() ) {
+			$height         = esc_attr( $height + 15 ); // this will ensure enough padding for "Report this ad".
+			$width          = esc_attr( $width );
+			$amp_section_id = esc_attr( self::get_amp_section_id() );
+			$site_id        = esc_attr( $this->params->blog_id );
 			return <<<HTML
-			<div style="padding-bottom:15px;width:{$width}px;height:{$height}px;$css">
-				<div id="atatags-{$ad_number}">
-					<script$data_tags type="text/javascript">
-					__ATA.cmd.push(function() {
-						__ATA.initSlot('atatags-{$ad_number}',  {
-							collapseEmpty: 'before',
-							sectionId: '{$section_id}',
-							location: {$loc_id},
-							width: {$width},
-							height: {$height}
-						});
-					});
-					</script>
-				</div>
-			</div>
+			<amp-ad width="$width" height="$height"
+			    type="pubmine"
+			    data-siteid="$site_id"
+			    data-section="$amp_section_id">
+			</amp-ad>
 HTML;
 		}
 
-		$form_factor = 'square';
-		if ( 250 > $width ) {
-			$form_factor = 'skyscraper';
-		} elseif ( 300 < $width ) {
-			$form_factor = 'leaderboard';
-		}
-
-		return $this->get_dynamic_ad_snippet( $section_id, $form_factor, $location );
-	}
-
-	/**
-	 * Returns the dynamic snippet to be inserted into the ad unit
-	 *
-	 * @param  int    $section_id  section_id.
-	 * @param  string $form_factor form_factor.
-	 * @param  string $location    location.
-	 * @param  string $relocate    location to be moved after the fact for themes without required hook.
-	 * @return string
-	 *
-	 * @since 8.7
-	 */
-	public function get_dynamic_ad_snippet( $section_id, $form_factor = 'square', $location = '', $relocate = '' ) {
-		$div_id = 'atatags-' . $section_id . '-' . uniqid();
-		$div_id = esc_js( $div_id );
-
-		// Default form factor.
-		$form_factor_id = self::$form_factor_ids['square'];
-		if ( isset( self::$form_factor_ids[ $form_factor ] ) ) {
-			$form_factor_id = self::$form_factor_ids[ $form_factor ];
-		}
+		$ad_number = count( $this->ads ) . '-' . uniqid();
+		$data_tags = $this->params->cloudflare ? ' data-cfasync="false"' : '';
+		$css       = esc_attr( $css );
 
 		$loc_id = 100;
-		if ( isset( self::$ad_location_ids[ $location ] ) ) {
+		if ( ! empty( self::$ad_location_ids[ $location ] ) ) {
 			$loc_id = self::$ad_location_ids[ $location ];
 		}
 
-		$form_factor_id        = esc_js( $form_factor_id );
-		$advertisements_text   = esc_js( __( 'Advertisements', 'jetpack' ) );
-		$report_ad_text        = esc_js( __( 'Report this ad', 'jetpack' ) );
-		$privacy_settings_text = esc_js( __( 'Privacy settings', 'jetpack' ) );
-
-		$relocate_script = '';
-		if ( ! empty( $relocate ) ) {
-			$relocate        = esc_js( $relocate );
-			$relocate_script = <<<JS
-			<script type="text/javascript">
-			var adNode       = document.getElementById( '$div_id' );
-			var relocateNode = document.querySelector( '$relocate' );
-			relocateNode.parentNode.insertBefore( adNode, relocateNode );
-			</script>
-JS;
-		}
-
 		return <<<HTML
-		<div id="{$div_id}"></div>
-		{$relocate_script}
-		<script>
-			__ATA.cmd.push(function() {
-				__ATA.initDynamicSlot({
-					id: '{$div_id}',
-					location: {$loc_id},
-					formFactor: '{$form_factor_id}',
-					label: {
-						text: '{$advertisements_text}',
-					},
-					creative: {
-						reportAd: {
-							text: '{$report_ad_text}',
-						},
-						privacySettings: {
-							text: '{$privacy_settings_text}',
-						}
-					}
+		<div style="padding-bottom:15px;width:{$width}px;height:{$height}px;$css">
+			<div id="atatags-{$ad_number}">
+				<script$data_tags type="text/javascript">
+				__ATA.cmd.push(function() {
+					__ATA.initSlot('atatags-{$ad_number}',  {
+						collapseEmpty: 'before',
+						sectionId: '{$section_id}',
+						location: {$loc_id},
+						width: {$width},
+						height: {$height}
+					});
 				});
-			});
-		</script>
+				</script>
+			</div>
+		</div>
 HTML;
 	}
 
@@ -765,10 +684,6 @@ HTML;
 	 * @since 7.1
 	 */
 	public function get_ad_div( $spot, $snippet, array $css_classes = array() ) {
-		if ( strpos( strtolower( $spot ), 'amp' ) === false && ! 'inline' === $spot ) {
-			return $snippet; // we don't want dynamic ads to be inserted for AMP & Gutenberg.
-		}
-
 		if ( empty( $css_classes ) ) {
 			$css_classes = array();
 		}

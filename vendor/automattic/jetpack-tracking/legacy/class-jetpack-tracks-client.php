@@ -2,10 +2,8 @@
 /**
  * Legacy Jetpack Tracks Client
  *
- * @package automattic/jetpack-tracking
+ * @package Jetpack
  */
-
-use Automattic\Jetpack\Connection\Manager;
 
 /**
  * Jetpack_Tracks_Client
@@ -216,7 +214,7 @@ class Jetpack_Tracks_Client {
 	 * @return array|bool
 	 */
 	public static function get_connected_user_tracks_identity() {
-		$user_data = ( new Manager() )->get_connected_user_data();
+		$user_data = Jetpack::get_connected_user_data();
 		if ( ! $user_data ) {
 			return false;
 		}

@@ -3,7 +3,7 @@
 }
 
 .contact-form input::placeholder {
-	transition: opacity 0.3s ease-out;
+	transition: opacity .3s ease-out;
 }
 .contact-form input:hover::placeholder {
 	opacity: 0.5;
@@ -19,13 +19,10 @@
 	box-sizing: border-box;
 	margin-bottom: 1.5em;
 	width: 100%;
-	padding: 14px 7px;
 }
 
 .contact-form select {
 	margin-bottom: 1.5em;
-	padding: 14px 7px;
-	min-width: 150px;
 }
 
 .contact-form textarea {
@@ -34,19 +31,13 @@
 	height: 200px;
 	margin-bottom: 1.5em;
 	width: 100%;
-	padding: 7px;
-	font: inherit;
 }
 
 .contact-form input[type='radio'],
 .contact-form input[type='checkbox'] {
 	float: none;
-	margin: 0 0.75rem 0 5px;
-}
-
-.contact-form input[type='checkbox'] {
-	top: 0;
-	margin-left: 0;
+	margin-bottom: 1em;
+	vertical-align: middle;
 }
 
 .contact-form label {
@@ -56,22 +47,16 @@
 	display: block;
 }
 
-.contact-form label.consent-implicit input {
-	display: none;
-}
-
 .contact-form label.checkbox,
 .contact-form label.checkbox-multiple,
 .contact-form label.radio {
 	margin-bottom: 0.25em;
 	float: none;
 	font-weight: normal;
-	display: inline-flex;
-	align-items: center;
+	display: inline-block;
 }
 
 .contact-form .grunion-field-checkbox-wrap,
-.contact-form .grunion-field-consent-wrap,
 .contact-form .grunion-field-checkbox-multiple-wrap,
 .contact-form .grunion-field-radio-wrap {
 	margin-bottom: 1em;
@@ -126,15 +111,8 @@
 	flex-direction: row;
 }
 
-.wp-block-jetpack-contact-form .grunion-field-wrap,
-.wp-block-jetpack-button {
+.wp-block-jetpack-contact-form .grunion-field-wrap, .wp-block-jetpack-button {
 	flex: 0 0 100%;
-}
-
-.wp-block-jetpack-button button {
-	padding: 20px 30px;
-	border: inherit;
-	font: inherit;
 }
 
 .wp-block-jetpack-button.alignright button {
@@ -159,12 +137,11 @@
 	flex: 0 0 75%;
 }
 
-.grunion-field-checkbox-wrap,
-.grunion-field-consent-wrap {
+.grunion-field-checkbox-wrap {
 	align-self: center;
 }
 
-@media only screen and ( min-width: 600px ) {
+@media only screen and (min-width: 600px) {
 	.contact-form input[type='text'],
 	.contact-form input[type='email'],
 	.contact-form input[type='tel'],

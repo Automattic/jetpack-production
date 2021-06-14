@@ -2,7 +2,7 @@
 /**
  * REST API endpoint for the External Media.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 8.7.0
  */
 
@@ -116,18 +116,13 @@ class WPCOM_REST_API_V2_Endpoint_External_Media extends WP_REST_Controller {
 				'callback'            => array( $this, 'copy_external_media' ),
 				'permission_callback' => array( $this, 'create_item_permissions_check' ),
 				'args'                => array(
-					'media'   => array(
+					'media' => array(
 						'description'       => __( 'Media data to copy.', 'jetpack' ),
 						'items'             => $this->media_schema,
 						'required'          => true,
 						'type'              => 'array',
 						'sanitize_callback' => array( $this, 'sanitize_media' ),
 						'validate_callback' => array( $this, 'validate_media' ),
-					),
-					'post_id' => array(
-						'description' => __( 'The post ID to attach the upload to.', 'jetpack' ),
-						'type'        => 'number',
-						'minimum'     => 0,
 					),
 				),
 			)
@@ -139,16 +134,6 @@ class WPCOM_REST_API_V2_Endpoint_External_Media extends WP_REST_Controller {
 			array(
 				'methods'             => \WP_REST_Server::READABLE,
 				'callback'            => array( $this, 'get_connection_details' ),
-				'permission_callback' => array( $this, 'permission_callback' ),
-			)
-		);
-
-		register_rest_route(
-			$this->namespace,
-			$this->rest_base . '/connection/(?P<service>google_photos)',
-			array(
-				'methods'             => \WP_REST_Server::DELETABLE,
-				'callback'            => array( $this, 'delete_connection' ),
 				'permission_callback' => array( $this, 'permission_callback' ),
 			)
 		);
@@ -264,7 +249,7 @@ class WPCOM_REST_API_V2_Endpoint_External_Media extends WP_REST_Controller {
 		// Build query string to pass to wpcom endpoint.
 		$service_args = array_filter(
 			$params,
-			function ( $key ) {
+			function( $key ) {
 				return in_array( $key, array( 'search', 'number', 'path', 'page_handle', 'filter' ), true );
 			},
 			ARRAY_FILTER_USE_KEY
@@ -277,7 +262,7 @@ class WPCOM_REST_API_V2_Endpoint_External_Media extends WP_REST_Controller {
 
 		switch ( wp_remote_retrieve_response_code( $response ) ) {
 			case 200:
-				$response = json_decode( wp_remote_retrieve_body( $response ), true );
+				$response = json_decode( wp_remote_retrieve_body( $response ) );
 				break;
 
 			case 401:
@@ -319,8 +304,6 @@ class WPCOM_REST_API_V2_Endpoint_External_Media extends WP_REST_Controller {
 		require_once ABSPATH . 'wp-admin/includes/media.php';
 		require_once ABSPATH . 'wp-admin/includes/image.php';
 
-		$post_id = $request->get_param( 'post_id' );
-
 		$responses = array();
 		foreach ( $request->get_param( 'media' ) as $item ) {
 			// Download file to temp dir.
@@ -330,7 +313,7 @@ class WPCOM_REST_API_V2_Endpoint_External_Media extends WP_REST_Controller {
 				continue;
 			}
 
-			$id = $this->sideload_media( $item['guid']['name'], $download_url, $post_id );
+			$id = $this->sideload_media( $item['guid']['name'], $download_url );
 			if ( is_wp_error( $id ) ) {
 				$responses[] = $id;
 				continue;
@@ -356,43 +339,21 @@ class WPCOM_REST_API_V2_Endpoint_External_Media extends WP_REST_Controller {
 		$wpcom_path = sprintf( '/meta/external-media/connection/%s', $service );
 
 		if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-			$internal_request = new \WP_REST_Request( 'GET', '/' . $this->namespace . $wpcom_path );
-			$internal_request->set_query_params( $request->get_params() );
+			$request = new \WP_REST_Request( 'GET', '/' . $this->namespace . $wpcom_path );
+			$request->set_query_params( $request->get_params() );
 
-			return rest_do_request( $internal_request );
+			return rest_do_request( $request );
 		}
 
 		$response = Client::wpcom_json_api_request_as_user( $wpcom_path );
+		$response = json_decode( wp_remote_retrieve_body( $response ) );
 
-		return json_decode( wp_remote_retrieve_body( $response ), true );
-	}
-
-	/**
-	 * Deletes a Google Photos connection.
-	 *
-	 * @param WP_REST_Request $request Full details about the request.
-	 * @return array|WP_Error|WP_REST_Response
-	 */
-	public function delete_connection( WP_REST_Request $request ) {
-		$service    = rawurlencode( $request->get_param( 'service' ) );
-		$wpcom_path = sprintf( '/meta/external-media/connection/%s', $service );
-
-		if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-			$internal_request = new WP_REST_Request( REQUESTS::DELETE, '/' . $this->namespace . $wpcom_path );
-			$internal_request->set_query_params( $request->get_params() );
-
-			return rest_do_request( $internal_request );
+		if ( isset( $response->code, $response->message, $response->data ) ) {
+			$response->data = empty( $response->data->status ) ? array( 'status' => $response->data ) : $response->data;
+			$response       = new WP_Error( $response->code, $response->message, $response->data );
 		}
 
-		$response = Client::wpcom_json_api_request_as_user(
-			$wpcom_path,
-			'2',
-			array(
-				'method' => REQUESTS::DELETE,
-			)
-		);
-
-		return json_decode( wp_remote_retrieve_body( $response ), true );
+		return $response;
 	}
 
 	/**
@@ -428,17 +389,16 @@ class WPCOM_REST_API_V2_Endpoint_External_Media extends WP_REST_Controller {
 	 *
 	 * @param string $file_name    Name of media file.
 	 * @param string $download_url Download URL.
-	 * @param int    $post_id      The ID of the post to attach the image to.
 	 *
 	 * @return int|\WP_Error
 	 */
-	public function sideload_media( $file_name, $download_url, $post_id = 0 ) {
+	public function sideload_media( $file_name, $download_url ) {
 		$file = array(
 			'name'     => wp_basename( $file_name ),
 			'tmp_name' => $download_url,
 		);
 
-		$id = media_handle_sideload( $file, $post_id, null );
+		$id = media_handle_sideload( $file, 0, null );
 		if ( is_wp_error( $id ) ) {
 			@unlink( $file['tmp_name'] ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
 			$id->add_data( array( 'status' => 400 ) );

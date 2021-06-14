@@ -2,7 +2,7 @@
 /**
  * The WordAds API.
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 use Automattic\Jetpack\Connection\Client;
@@ -31,7 +31,7 @@ class WordAds_API {
 	 */
 	public static function get_wordads_status() {
 		global $wordads_status_response;
-		if ( ( new Status() )->is_offline_mode() ) {
+		if ( ( new Status() )->is_development_mode() ) {
 			self::$wordads_status = array(
 				'approved' => true,
 				'active'   => true,
@@ -94,7 +94,7 @@ class WordAds_API {
 			self::get_wordads_status();
 		}
 
-		return (bool) self::$wordads_status['approved'];
+		return self::$wordads_status['approved'] ? '1' : '0';
 	}
 
 	/**
@@ -109,7 +109,7 @@ class WordAds_API {
 			self::get_wordads_status();
 		}
 
-		return (bool) self::$wordads_status['active'];
+		return self::$wordads_status['active'] ? '1' : '0';
 	}
 
 	/**
@@ -124,8 +124,9 @@ class WordAds_API {
 			self::get_wordads_status();
 		}
 
-		return (bool) self::$wordads_status['house'];
+		return self::$wordads_status['house'] ? '1' : '0';
 	}
+
 
 	/**
 	 * Returns whether or not this site is safe to run ads on.
@@ -139,7 +140,7 @@ class WordAds_API {
 			self::get_wordads_status();
 		}
 
-		return (bool) self::$wordads_status['unsafe'];
+		return self::$wordads_status['unsafe'] ? '1' : '0';
 	}
 
 	/**

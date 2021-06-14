@@ -2,18 +2,17 @@
 /**
  * Collection of tests to run on the Jetpack connection locally.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Connection\Client;
-use Automattic\Jetpack\Connection\Manager as Connection_Manager;
-use Automattic\Jetpack\Connection\Tokens;
-use Automattic\Jetpack\Redirect;
 use Automattic\Jetpack\Status;
-use Automattic\Jetpack\Sync\Health as Sync_Health;
+use Automattic\Jetpack\Connection\Utils as Connection_Utils;
 use Automattic\Jetpack\Sync\Modules;
-use Automattic\Jetpack\Sync\Sender as Sync_Sender;
 use Automattic\Jetpack\Sync\Settings as Sync_Settings;
+use Automattic\Jetpack\Sync\Health as Sync_Health;
+use Automattic\Jetpack\Sync\Sender as Sync_Sender;
+use Automattic\Jetpack\Redirect;
 
 /**
  * Class Jetpack_Cxn_Tests contains all of the actual tests.
@@ -77,7 +76,7 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 	 * Is Jetpack even connected and supposed to be talking to WP.com?
 	 */
 	protected function helper_is_jetpack_connected() {
-		return Jetpack::is_connection_ready() && ! ( new Status() )->is_offline_mode();
+		return Jetpack::is_active() && ! ( new Status() )->is_development_mode();
 	}
 
 	/**
@@ -86,11 +85,11 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 	 * @return object|false
 	 */
 	protected function helper_get_blog_token() {
-		return ( new Tokens() )->get_access_token();
+		return Jetpack::connection()->get_access_token();
 	}
 
 	/**
-	 * Returns a support url based on using a development version.
+	 * Returns a support url based on development mode.
 	 */
 	protected function helper_get_support_url() {
 		return Jetpack::is_development_version()
@@ -99,82 +98,10 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 	}
 
 	/**
-	 * Returns the url to reconnect Jetpack.
-	 *
-	 * @return string The reconnect url.
-	 */
-	protected static function helper_get_reconnect_url() {
-		return admin_url( 'admin.php?page=jetpack#/reconnect' );
-	}
-
-	/**
 	 * Gets translated support text.
 	 */
 	protected function helper_get_support_text() {
 		return __( 'Please contact Jetpack support.', 'jetpack' );
-	}
-
-	/**
-	 * Returns the translated text to reconnect Jetpack.
-	 *
-	 * @return string The translated reconnect text.
-	 */
-	protected static function helper_get_reconnect_text() {
-		return __( 'Reconnect Jetpack now', 'jetpack' );
-	}
-
-	/**
-	 * Returns the translated text for failing tests due to timeouts.
-	 *
-	 * @return string The translated timeout text.
-	 */
-	protected static function helper_get_timeout_text() {
-		return __( 'The test timed out which may sometimes indicate a failure or may be a false failure. Please relaunch tests.', 'jetpack' );
-	}
-
-	/**
-	 * Gets translated reconnect long description.
-	 *
-	 * @param string $connection_error The connection specific error.
-	 * @param string $recommendation The recommendation for resolving the connection error.
-	 *
-	 * @return string The translated long description for reconnection recommendations.
-	 */
-	protected static function helper_get_reconnect_long_description( $connection_error, $recommendation ) {
-
-		return sprintf(
-			'<p>%1$s</p>' .
-			'<p><span class="dashicons fail"><span class="screen-reader-text">%2$s</span></span> %3$s</p><p><strong>%4$s</strong></p>',
-			__( 'A healthy connection ensures Jetpack essential services are provided to your WordPress site, such as Stats and Site Security.', 'jetpack' ),
-			/* translators: screen reader text indicating a test failed */
-			__( 'Error', 'jetpack' ),
-			$connection_error,
-			$recommendation
-		);
-	}
-
-	/**
-	 * Helper function to return consistent responses for a connection failing test.
-	 *
-	 * @param string $name The raw method name that runs the test. Default unnamed_test.
-	 * @param string $connection_error The connection specific error. Default 'Your site is not connected to Jetpack.'.
-	 * @param string $recommendation The recommendation for resolving the connection error. Default 'We recommend reconnecting Jetpack.'.
-	 *
-	 * @return array Test results.
-	 */
-	public static function connection_failing_test( $name, $connection_error = '', $recommendation = '' ) {
-		$connection_error = empty( $connection_error ) ? __( 'Your site is not connected to Jetpack.', 'jetpack' ) : $connection_error;
-		$recommendation   = empty( $recommendation ) ? __( 'We recommend reconnecting Jetpack.', 'jetpack' ) : $recommendation;
-
-		$args = array(
-			'name'              => $name,
-			'short_description' => $connection_error,
-			'action'            => self::helper_get_reconnect_url(),
-			'action_label'      => self::helper_get_reconnect_text(),
-			'long_description'  => self::helper_get_reconnect_long_description( $connection_error, $recommendation ),
-		);
-
-		return self::failing_test( $args );
 	}
 
 	/**
@@ -214,24 +141,19 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 	 * @return array
 	 */
 	protected function test__blog_token_if_exists() {
-		$name = __FUNCTION__;
-
-		if ( ! $this->helper_is_jetpack_connected() ) {
-			return self::skipped_test(
-				array(
-					'name'              => $name,
-					'short_description' => __( 'Jetpack is not connected. No blog token to check.', 'jetpack' ),
-				)
-			);
-		}
 		$blog_token = $this->helper_get_blog_token();
 
 		if ( $blog_token ) {
-			$result = self::passing_test( array( 'name' => $name ) );
+			$result = self::passing_test( array( 'name' => __FUNCTION__ ) );
 		} else {
-			$connection_error = __( 'Blog token is missing.', 'jetpack' );
-
-			$result = self::connection_failing_test( $name, $connection_error );
+			$result = self::failing_test(
+				array(
+					'name'              => __FUNCTION__,
+					'short_description' => __( 'Blog token is missing.', 'jetpack' ),
+					'action'            => admin_url( 'admin.php?page=jetpack#/dashboard' ),
+					'action_label'      => __( 'Disconnect your site from WordPress.com, and connect it again.', 'jetpack' ),
+				)
+			);
 		}
 
 		return $result;
@@ -267,17 +189,31 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 					),
 				)
 			);
-		} elseif ( ( new Status() )->is_offline_mode() ) {
+		} elseif ( ( new Status() )->is_development_mode() ) {
 			$result = self::skipped_test(
 				array(
 					'name'              => $name,
-					'short_description' => __( 'Jetpack is in Offline Mode:', 'jetpack' ) . ' ' . Jetpack::development_mode_trigger_text(),
+					'short_description' => __( 'Jetpack is in Development Mode:', 'jetpack' ) . ' ' . Jetpack::development_mode_trigger_text(),
 				)
 			);
 		} else {
-			$connection_error = __( 'Your site is not connected to Jetpack', 'jetpack' );
-
-			$result = self::connection_failing_test( $name, $connection_error );
+			$result = self::failing_test(
+				array(
+					'name'             => $name,
+					'label'            => __( 'Your site is not connected to Jetpack', 'jetpack' ),
+					'action'           => admin_url( 'admin.php?page=jetpack#/dashboard' ),
+					'action_label'     => __( 'Reconnect your site now', 'jetpack' ),
+					'long_description' => sprintf(
+						'<p>%1$s</p>' .
+						'<p><span class="dashicons fail"><span class="screen-reader-text">%2$s</span></span> %3$s<strong> %4$s</strong></p>',
+						__( 'A healthy connection ensures Jetpack essential services are provided to your WordPress site, such as Stats and Site Security.', 'jetpack' ),
+						/* translators: screen reader text indicating a test failed */
+						__( 'Error', 'jetpack' ),
+						__( 'Your site is not connected to Jetpack.', 'jetpack' ),
+						__( 'We recommend reconnecting Jetpack.', 'jetpack' )
+					),
+				)
+			);
 		}
 
 		return $result;
@@ -298,22 +234,19 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 				)
 			);
 		}
-		if ( ! ( new Connection_Manager() )->get_connection_owner_id() ) {
-			return self::skipped_test(
-				array(
-					'name'              => $name,
-					'short_description' => __( 'Jetpack is running without a connected user. No master user to check.', 'jetpack' ),
-				)
-			);
-		}
 		$local_user = $this->helper_retrieve_local_master_user();
 
 		if ( $local_user->exists() ) {
 			$result = self::passing_test( array( 'name' => $name ) );
 		} else {
-			$connection_error = __( 'The user who setup the Jetpack connection no longer exists on this site.', 'jetpack' );
-
-			$result = self::connection_failing_test( $name, $connection_error );
+			$result = self::failing_test(
+				array(
+					'name'              => $name,
+					'short_description' => __( 'The user who setup the Jetpack connection no longer exists on this site.', 'jetpack' ),
+					'action_label'      => __( 'Please disconnect and reconnect Jetpack.', 'jetpack' ),
+					'action'            => Redirect::get_url( 'jetpack-support-reconnecting-reinstalling-jetpack' ),
+				)
+			);
 		}
 
 		return $result;
@@ -336,25 +269,20 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 				)
 			);
 		}
-		if ( ! ( new Connection_Manager() )->get_connection_owner_id() ) {
-			return self::skipped_test(
-				array(
-					'name'              => $name,
-					'short_description' => __( 'Jetpack is running without a connected user. No master user to check.', 'jetpack' ),
-				)
-			);
-		}
 		$master_user = $this->helper_retrieve_local_master_user();
 
 		if ( user_can( $master_user, 'manage_options' ) ) {
 			$result = self::passing_test( array( 'name' => $name ) );
 		} else {
-			/* translators: a WordPress username */
-			$connection_error = sprintf( __( 'The user (%s) who setup the Jetpack connection is not an administrator.', 'jetpack' ), $master_user->user_login );
-			/* translators: a WordPress username */
-			$recommendation = sprintf( __( 'We recommend either upgrading the user (%s) or reconnecting Jetpack.', 'jetpack' ), $master_user->user_login );
-
-			$result = self::connection_failing_test( $name, $connection_error, $recommendation );
+			$result = self::failing_test(
+				array(
+					'name'              => $name,
+					/* translators: a WordPress username */
+					'short_description' => sprintf( __( 'The user (%s) who setup the Jetpack connection is not an administrator.', 'jetpack' ), $master_user->user_login ),
+					'action_label'      => __( 'Either upgrade the user or disconnect and reconnect Jetpack.', 'jetpack' ),
+					'action'            => Redirect::get_url( 'jetpack-support-reconnecting-reinstalling-jetpack' ),
+				)
+			);
 		}
 
 		return $result;
@@ -395,7 +323,7 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 		$request = wp_remote_get( preg_replace( '/^https:/', 'http:', JETPACK__API_BASE ) . 'test/1/' );
 		$code    = wp_remote_retrieve_response_code( $request );
 
-		if ( 200 === (int) $code ) {
+		if ( 200 === intval( $code ) ) {
 			$result = self::passing_test( array( 'name' => $name ) );
 		} else {
 			$result = self::failing_test(
@@ -419,7 +347,7 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 		$request = wp_remote_get( preg_replace( '/^http:/', 'https:', JETPACK__API_BASE ) . 'test/1/' );
 		$code    = wp_remote_retrieve_response_code( $request );
 
-		if ( 200 === (int) $code ) {
+		if ( 200 === intval( $code ) ) {
 			$result = self::passing_test( array( 'name' => $name ) );
 		} else {
 			$result = self::failing_test(
@@ -471,99 +399,6 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 	}
 
 	/**
-	 * Tests the health of the Connection tokens.
-	 *
-	 * This will always check the blog token health. It will also check the user token health if
-	 * a user is logged in and connected, or if there's a connected owner.
-	 *
-	 * @since 9.0.0
-	 * @since 9.6.0 Checks only blog token if current user not connected or site does not have a connected owner.
-	 *
-	 * @return array Test results.
-	 */
-	protected function test__connection_token_health() {
-		$name    = __FUNCTION__;
-		$m       = new Connection_Manager();
-		$user_id = get_current_user_id();
-
-		// Check if there's a connected logged in user.
-		if ( $user_id && ! $m->is_user_connected( $user_id ) ) {
-				$user_id = false;
-		}
-
-		// If no logged in user to check, let's see if there's a master_user set.
-		if ( ! $user_id ) {
-				$user_id = Jetpack_Options::get_option( 'master_user' );
-			if ( $user_id && ! $m->is_user_connected( $user_id ) ) {
-				return self::connection_failing_test( $name, __( 'Missing token for the connection owner.', 'jetpack' ) );
-			}
-		}
-
-		if ( $user_id ) {
-			return $this->check_tokens_health( $user_id );
-		} else {
-			return $this->check_blog_token_health();
-		}
-	}
-
-	/**
-	 * Tests blog and user's token against wp.com's check-token-health endpoint.
-	 *
-	 * @since 9.6.0
-	 *
-	 * @return array Test results.
-	 */
-	protected function check_blog_token_health() {
-		$name  = 'test__connection_token_health';
-		$valid = ( new Tokens() )->validate_blog_token();
-
-		if ( ! $valid ) {
-			return self::connection_failing_test( $name, __( 'Blog token validation failed.', 'jetpack' ) );
-		} else {
-			return self::passing_test( array( 'name' => $name ) );
-		}
-	}
-
-	/**
-	 * Tests blog token against wp.com's check-token-health endpoint.
-	 *
-	 * @since 9.6.0
-	 *
-	 * @param int $user_id The user ID to check the tokens for.
-	 *
-	 * @return array Test results.
-	 */
-	protected function check_tokens_health( $user_id ) {
-		$name             = 'test__connection_token_health';
-		$validated_tokens = ( new Tokens() )->validate( $user_id );
-
-		if ( ! is_array( $validated_tokens ) || count( array_diff_key( array_flip( array( 'blog_token', 'user_token' ) ), $validated_tokens ) ) ) {
-			return self::skipped_test(
-				array(
-					'name'              => $name,
-					'short_description' => __( 'Token health check failed to validate tokens.', 'jetpack' ),
-				)
-			);
-		}
-
-		$invalid_tokens_exist = false;
-		foreach ( $validated_tokens as $validated_token ) {
-			if ( ! $validated_token['is_healthy'] ) {
-				$invalid_tokens_exist = true;
-				break;
-			}
-		}
-
-		if ( false === $invalid_tokens_exist ) {
-			return self::passing_test( array( 'name' => $name ) );
-		}
-
-		$connection_error = __( 'Invalid Jetpack connection tokens.', 'jetpack' );
-
-		return self::connection_failing_test( $name, $connection_error );
-	}
-
-	/**
 	 * Tests connection status against wp.com's test-connection endpoint.
 	 *
 	 * @todo: Compare with the wpcom_self_test. We only need one of these.
@@ -574,7 +409,7 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 		$name = __FUNCTION__;
 
 		$status = new Status();
-		if ( ! Jetpack::is_connection_ready() || $status->is_offline_mode() || $status->is_staging_site() || ! $this->pass ) {
+		if ( ! Jetpack::is_active() || $status->is_development_mode() || $status->is_staging_site() || ! $this->pass ) {
 			return self::skipped_test( array( 'name' => $name ) );
 		}
 
@@ -586,21 +421,15 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 		remove_filter( 'http_request_timeout', array( 'Jetpack_Cxn_Tests', 'increase_timeout' ) );
 
 		if ( is_wp_error( $response ) ) {
-			if ( false !== strpos( $response->get_error_message(), 'cURL error 28' ) ) { // Timeout.
-				$result = self::skipped_test(
-					array(
-						'name'              => $name,
-						'short_description' => self::helper_get_timeout_text(),
-					)
-				);
-			} else {
-				/* translators: %1$s is the error code, %2$s is the error message */
-				$message = sprintf( __( 'Connection test failed (#%1$s: %2$s)', 'jetpack' ), $response->get_error_code(), $response->get_error_message() );
-
-				$result = self::connection_failing_test( $name, $message );
-			}
-
-			return $result;
+			return self::failing_test(
+				array(
+					'name'              => $name,
+					/* translators: %1$s is the error code, %2$s is the error message */
+					'short_description' => sprintf( __( 'Connection test failed (#%1$s: %2$s)', 'jetpack' ), $response->get_error_code(), $response->get_error_message() ),
+					'action_label'      => $this->helper_get_support_text(),
+					'action'            => $this->helper_get_support_url(),
+				)
+			);
 		}
 
 		$body = wp_remote_retrieve_body( $response );
@@ -629,12 +458,17 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 		$message      = $result->message . ': ' . wp_remote_retrieve_response_code( $response );
 
 		if ( $is_connected ) {
-			$res = self::passing_test( array( 'name' => $name ) );
+			return self::passing_test( array( 'name' => $name ) );
 		} else {
-			$res = self::connection_failing_test( $name, $message );
+			return self::failing_test(
+				array(
+					'name'              => $name,
+					'short_description' => $message,
+					'action_label'      => $this->helper_get_support_text(),
+					'action'            => $this->helper_get_support_url(),
+				)
+			);
 		}
-
-		return $res;
 	}
 
 	/**
@@ -816,7 +650,7 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 					esc_html__( 'Error', 'jetpack' )
 				);
 				$description .= wp_kses(
-					__( 'Jetpack has detected that data is not properly in sync which may be impacting some of your site’s functionality. <strong>Click <a id="full_sync_request_link" href="#">here</a> to start a fix</strong> to align Jetpack with your site data. If you still notice this error after running the fix process, please contact support for additional assistance.', 'jetpack' ),
+					__( 'Jetpack has detected an error while syncing your site. <strong>We recommend <a id="full_sync_request_link" href="#">a full sync</a> to align Jetpack with your site data.</strong>', 'jetpack' ),
 					array(
 						'a'      => array(
 							'id'   => array(),
@@ -834,7 +668,7 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 						'severity'          => 'critical',
 						'action'            => Redirect::get_url( 'jetpack-contact-support' ),
 						'action_label'      => __( 'Contact Jetpack Support', 'jetpack' ),
-						'short_description' => __( 'Jetpack has detected that data is not properly in sync which may be impacting some of your site’s functionality. We recommend performing a fix to align Jetpack with your site data. If you still notice this error after running the fix process, please contact support for additional assistance.', 'jetpack' ),
+						'short_description' => __( 'Jetpack has detected an error while syncing your site. We recommend a full sync to align Jetpack with your site data.', 'jetpack' ),
 						'long_description'  => $description,
 					)
 				);
@@ -862,7 +696,7 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 							_n(
 								'Jetpack has identified a delay while syncing individual content updates. Certain features might be slower than usual, but this is only temporary while sync catches up with recent changes to your site. <strong>We’re seeing a current delay of %1$d minute.</strong>',
 								'Jetpack has identified a delay while syncing individual content updates. Certain features might be slower than usual, but this is only temporary while sync catches up with recent changes to your site. <strong>We’re seeing a current delay of %1$d minutes.</strong>',
-								(int) ( $sync_queue->lag() / MINUTE_IN_SECONDS ),
+								intval( $sync_queue->lag() / MINUTE_IN_SECONDS ),
 								'jetpack'
 							),
 							number_format_i18n( $sync_queue->lag() / MINUTE_IN_SECONDS )
@@ -942,13 +776,13 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 		$name = 'test__wpcom_self_test';
 
 		$status = new Status();
-		if ( ! Jetpack::is_connection_ready() || $status->is_offline_mode() || $status->is_staging_site() || ! $this->pass ) {
+		if ( ! Jetpack::is_active() || $status->is_development_mode() || $status->is_staging_site() || ! $this->pass ) {
 			return self::skipped_test( array( 'name' => $name ) );
 		}
 
 		$self_xml_rpc_url = site_url( 'xmlrpc.php' );
 
-		$testsite_url = JETPACK__API_BASE . 'testsite/1/?url=';
+		$testsite_url = Connection_Utils::fix_url_for_bad_hosts( JETPACK__API_BASE . 'testsite/1/?url=' );
 
 		// Using PHP_INT_MAX - 1 so that there is still a way to override this if needed and since it only impacts this one call.
 		add_filter( 'http_request_timeout', array( 'Jetpack_Cxn_Tests', 'increase_timeout' ), PHP_INT_MAX - 1 );
@@ -958,16 +792,16 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 		remove_filter( 'http_request_timeout', array( 'Jetpack_Cxn_Tests', 'increase_timeout' ), PHP_INT_MAX - 1 );
 
 		if ( 200 === wp_remote_retrieve_response_code( $response ) ) {
-			$result = self::passing_test( array( 'name' => $name ) );
+			return self::passing_test( array( 'name' => $name ) );
 		} elseif ( is_wp_error( $response ) && false !== strpos( $response->get_error_message(), 'cURL error 28' ) ) { // Timeout.
-			$result = self::skipped_test(
+			return self::skipped_test(
 				array(
 					'name'              => $name,
-					'short_description' => self::helper_get_timeout_text(),
+					'short_description' => __( 'The test timed out which may sometimes indicate a failure or may be a false failure.', 'jetpack' ),
 				)
 			);
 		} else {
-			$result = self::failing_test(
+			return self::failing_test(
 				array(
 					'name'              => $name,
 					'short_description' => sprintf(
@@ -980,7 +814,5 @@ class Jetpack_Cxn_Tests extends Jetpack_Cxn_Test_Base {
 				)
 			);
 		}
-
-		return $result;
 	}
 }

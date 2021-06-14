@@ -75,15 +75,6 @@ class Error_Handler {
 	 * @since 8.7.0
 	 */
 	const ERROR_LIFE_TIME = DAY_IN_SECONDS;
-
-	/**
-	 * The error code for event tracking purposes.
-	 * If there are many, only the first error code will be tracked.
-	 *
-	 * @var string
-	 */
-	private $error_code;
-
 	/**
 	 * List of known errors. Only error codes in this list will be handled
 	 *
@@ -101,8 +92,7 @@ class Error_Handler {
 		'token_malformed',
 		'user_id_mismatch',
 		'no_possible_tokens',
-		'no_valid_user_token',
-		'no_valid_blog_token',
+		'no_valid_token',
 		'unknown_token',
 		'could_not_sign',
 		'invalid_scheme',
@@ -140,10 +130,6 @@ class Error_Handler {
 		// If the site gets reconnected, clear errors.
 		add_action( 'jetpack_site_registered', array( $this, 'delete_all_errors' ) );
 		add_action( 'jetpack_get_site_data_success', array( $this, 'delete_all_errors' ) );
-		add_filter( 'jetpack_connection_disconnect_site_wpcom', array( $this, 'delete_all_errors_and_return_unfiltered_value' ) );
-		add_filter( 'jetpack_connection_delete_all_tokens', array( $this, 'delete_all_errors_and_return_unfiltered_value' ) );
-		add_action( 'jetpack_unlinked_user', array( $this, 'delete_all_errors' ) );
-		add_action( 'jetpack_updated_user_token', array( $this, 'delete_all_errors' ) );
 	}
 
 	/**
@@ -155,27 +141,21 @@ class Error_Handler {
 	 */
 	public function handle_verified_errors() {
 		$verified_errors = $this->get_verified_errors();
-		foreach ( array_keys( $verified_errors ) as $error_code ) {
+		foreach ( $verified_errors as $error_code => $user_errors ) {
+
 			switch ( $error_code ) {
 				case 'malformed_token':
 				case 'token_malformed':
 				case 'no_possible_tokens':
-				case 'no_valid_user_token':
-				case 'no_valid_blog_token':
+				case 'no_valid_token':
 				case 'unknown_token':
 				case 'could_not_sign':
 				case 'invalid_token':
 				case 'token_mismatch':
 				case 'invalid_signature':
 				case 'signature_mismatch':
-				case 'no_user_tokens':
-				case 'no_token_for_user':
-					add_action( 'admin_notices', array( $this, 'generic_admin_notice_error' ) );
-					add_action( 'react_connection_errors_initial_state', array( $this, 'jetpack_react_dashboard_error' ) );
-					$this->error_code = $error_code;
-
-					// Since we are only generically handling errors, we don't need to trigger error messages for each one of them.
-					break 2;
+					new Error_Handlers\Invalid_Blog_Token( $user_errors );
+					break;
 			}
 		}
 	}
@@ -393,7 +373,7 @@ class Error_Handler {
 	public function get_user_id_from_token( $token ) {
 		$parsed_token = explode( ':', wp_unslash( $token ) );
 
-		if ( isset( $parsed_token[2] ) && ctype_digit( $parsed_token[2] ) ) {
+		if ( isset( $parsed_token[2] ) && ! empty( $parsed_token[2] ) && ctype_digit( $parsed_token[2] ) ) {
 			$user_id = $parsed_token[2];
 		} else {
 			$user_id = 'invalid';
@@ -466,7 +446,7 @@ class Error_Handler {
 		// Clear empty error codes.
 		$errors = array_filter(
 			$errors,
-			function ( $user_errors ) {
+			function( $user_errors ) {
 				return ! empty( $user_errors );
 			}
 		);
@@ -483,21 +463,6 @@ class Error_Handler {
 	public function delete_all_errors() {
 		$this->delete_stored_errors();
 		$this->delete_verified_errors();
-	}
-
-	/**
-	 * Delete all stored and verified errors from the database and returns unfiltered value
-	 *
-	 * This is used to hook into a couple of filters that expect true to not short circuit the disconnection flow
-	 *
-	 * @since 8.9.0
-	 *
-	 * @param mixed $check The input sent by the filter.
-	 * @return boolean
-	 */
-	public function delete_all_errors_and_return_unfiltered_value( $check ) {
-		$this->delete_all_errors();
-		return $check;
 	}
 
 	/**
@@ -580,10 +545,9 @@ class Error_Handler {
 			'jetpack/v4',
 			'/verify_xmlrpc_error',
 			array(
-				'methods'             => \WP_REST_Server::CREATABLE,
-				'callback'            => array( $this, 'verify_xml_rpc_error' ),
-				'permission_callback' => '__return_true',
-				'args'                => array(
+				'methods'  => \WP_REST_Server::CREATABLE,
+				'callback' => array( $this, 'verify_xml_rpc_error' ),
+				'args'     => array(
 					'nonce' => array(
 						'required' => true,
 						'type'     => 'string',
@@ -613,78 +577,6 @@ class Error_Handler {
 
 		return new \WP_REST_Response( false, 200 );
 
-	}
-
-	/**
-	 * Prints a generic error notice for all connection errors
-	 *
-	 * @since 8.9.0
-	 *
-	 * @return void
-	 */
-	public function generic_admin_notice_error() {
-		// do not add admin notice to the jetpack dashboard.
-		global $pagenow;
-		if ( 'admin.php' === $pagenow || isset( $_GET['page'] ) && 'jetpack' === $_GET['page'] ) { // phpcs:ignore
-			return;
-		}
-
-		if ( ! current_user_can( 'jetpack_connect' ) ) {
-			return;
-		}
-
-		/**
-		 * Filters the message to be displayed in the admin notices area when there's a xmlrpc error.
-		 *
-		 * By default  we don't display any errors.
-		 *
-		 * Return an empty value to disable the message.
-		 *
-		 * @since 8.9.0
-		 *
-		 * @param string $message The error message.
-		 * @param array  $errors The array of errors. See Automattic\Jetpack\Connection\Error_Handler for details on the array structure.
-		 */
-		$message = apply_filters( 'jetpack_connection_error_notice_message', '', $this->get_verified_errors() );
-
-		/**
-		 * Fires inside the admin_notices hook just before displaying the error message for a broken connection.
-		 *
-		 * If you want to disable the default message from being displayed, return an emtpy value in the jetpack_connection_error_notice_message filter.
-		 *
-		 * @since 8.9.0
-		 *
-		 * @param array $errors The array of errors. See Automattic\Jetpack\Connection\Error_Handler for details on the array structure.
-		 */
-		do_action( 'jetpack_connection_error_notice', $this->get_verified_errors() );
-
-		if ( empty( $message ) ) {
-			return;
-		}
-
-		?>
-		<div class="notice notice-error is-dismissible jetpack-message jp-connect" style="display:block !important;">
-			<p><?php echo esc_html( $message ); ?></p>
-		</div>
-		<?php
-	}
-
-	/**
-	 * Adds the error message to the Jetpack React Dashboard
-	 *
-	 * @since 8.9.0
-	 *
-	 * @param array $errors The array of errors. See Automattic\Jetpack\Connection\Error_Handler for details on the array structure.
-	 * @return array
-	 */
-	public function jetpack_react_dashboard_error( $errors ) {
-		$errors[] = array(
-			'code'    => 'xmlrpc_error',
-			'message' => __( 'Your connection with WordPress.com seems to be broken. If you\'re experiencing issues, please try reconnecting.', 'jetpack' ),
-			'action'  => 'reconnect',
-			'data'    => array( 'api_error_code' => $this->error_code ),
-		);
-		return $errors;
 	}
 
 }

@@ -2,7 +2,7 @@
 /**
  * Build the sitemap tree.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 4.8.0
  * @author Automattic
  */
@@ -587,7 +587,7 @@ class Jetpack_Sitemap_Builder {
 		if ( 1 === $number && 'page' !== get_option( 'show_on_front' ) ) {
 			$item_array = array(
 				'url' => array(
-					'loc' => home_url( '/' ),
+					'loc' => home_url(),
 				),
 			);
 

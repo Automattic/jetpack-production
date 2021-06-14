@@ -1,13 +1,13 @@
 /**
  * Outputs Javascript to handle California IP detection, consent modal, and setting of default cookies.
  */
-( function () {
+( function() {
 	/* global ccpaSettings */
 
 	// Minimal Mozilla Cookie library
 	// https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework
 	var cookieLib = {
-		getItem: function ( e ) {
+		getItem: function( e ) {
 			return (
 				( e &&
 					decodeURIComponent(
@@ -23,7 +23,7 @@
 				null
 			);
 		},
-		setItem: function ( e, o, n, t, r, i ) {
+		setItem: function( e, o, n, t, r, i ) {
 			if ( ! e || /^(?:expires|max\-age|path|domain|secure)$/i.test( e ) ) {
 				return ! 1;
 			}
@@ -44,7 +44,10 @@
 				( 'rootDomain' !== r && '.rootDomain' !== r ) ||
 					( r =
 						( '.rootDomain' === r ? '.' : '' ) +
-						document.location.hostname.split( '.' ).slice( -2 ).join( '.' ) ),
+						document.location.hostname
+							.split( '.' )
+							.slice( -2 )
+							.join( '.' ) ),
 				( document.cookie =
 					encodeURIComponent( e ) +
 					'=' +
@@ -58,48 +61,20 @@
 		},
 	};
 
-	// Implement IAB USP API.
-	window.__uspapi = function ( command, version, callback ) {
-		if ( typeof callback !== 'function' ) {
-			return;
-		}
-
-		if ( command !== 'getUSPData' || version !== 1 ) {
-			callback( null, false );
-			return;
-		}
-
-		// Check for GPC.
-		if ( navigator.globalPrivacyControl ) {
-			callback( { version: 1, uspString: '1YYN' }, true );
-			return;
-		}
-
-		// Check for cookie.
-		var consent = cookieLib.getItem( 'usprivacy' );
-
-		if ( null === consent ) {
-			callback( null, false );
-			return;
-		}
-
-		callback( { version: 1, uspString: consent }, true );
-	};
-
-	var setDefaultOptInCookie = function () {
+	var setDefaultOptInCookie = function() {
 		var value = ccpaSettings.defaultOptinCookieString;
 		var domain =
 			'.wordpress.com' === location.hostname.slice( -14 ) ? '.rootDomain' : location.hostname;
 		cookieLib.setItem( 'usprivacy', value, 365 * 24 * 60 * 60, '/', domain );
 	};
 
-	var setCcpaAppliesCookie = function ( value ) {
+	var setCcpaAppliesCookie = function( value ) {
 		var domain =
 			'.wordpress.com' === location.hostname.slice( -14 ) ? '.rootDomain' : location.hostname;
 		cookieLib.setItem( 'ccpa_applies', value, 24 * 60 * 60, '/', domain );
 	};
 
-	var injectLoadingMessage = function () {
+	var injectLoadingMessage = function() {
 		var wrapper = document.createElement( 'div' );
 		document.body.insertBefore( wrapper, document.body.firstElementChild );
 		wrapper.outerHTML =
@@ -112,7 +87,7 @@
 			'</div>';
 	};
 
-	var destroyModal = function () {
+	var destroyModal = function() {
 		var node = document.querySelector( '#ccpa-modal' );
 
 		if ( node ) {
@@ -120,7 +95,7 @@
 		}
 	};
 
-	var injectModal = function () {
+	var injectModal = function() {
 		destroyModal();
 
 		injectLoadingMessage();
@@ -131,7 +106,7 @@
 			ccpaSettings.ajaxUrl + '?action=privacy_optout_markup&security=' + ccpaSettings.ajaxNonce,
 			true
 		);
-		request.onreadystatechange = function () {
+		request.onreadystatechange = function() {
 			if ( 4 === this.readyState ) {
 				if ( 200 === this.status ) {
 					document.getElementById( 'ccpa-loading' ).remove();
@@ -141,14 +116,14 @@
 					document.getElementById( 'ccpa-opt-out' ).focus();
 
 					var optOut = document.querySelector( '#ccpa-modal .opt-out' );
-					optOut.addEventListener( 'click', function ( e ) {
+					optOut.addEventListener( 'click', function( e ) {
 						var post = new XMLHttpRequest();
 						post.open( 'POST', ccpaSettings.ajaxUrl, true );
 						post.setRequestHeader(
 							'Content-Type',
 							'application/x-www-form-urlencoded; charset=UTF-8'
 						);
-						post.onreadystatechange = function () {
+						post.onreadystatechange = function() {
 							if ( 4 === this.readyState ) {
 								if ( 200 === this.status ) {
 									var result = JSON.parse( this.response );
@@ -188,8 +163,8 @@
 					}
 
 					var buttons = document.querySelectorAll( '#ccpa-modal .components-button' );
-					Array.prototype.forEach.call( buttons, function ( el ) {
-						el.addEventListener( 'click', function () {
+					Array.prototype.forEach.call( buttons, function( el ) {
+						el.addEventListener( 'click', function() {
 							destroyModal();
 						} );
 					} );
@@ -200,15 +175,15 @@
 		request.send();
 	};
 
-	var doNotSellCallback = function () {
+	var doNotSellCallback = function() {
 		var dnsLinks = document.querySelectorAll( '.ccpa-do-not-sell' );
 
 		if ( 0 === dnsLinks.length ) {
 			return false;
 		}
 
-		Array.prototype.forEach.call( dnsLinks, function ( dnsLink ) {
-			dnsLink.addEventListener( 'click', function ( e ) {
+		Array.prototype.forEach.call( dnsLinks, function( dnsLink ) {
+			dnsLink.addEventListener( 'click', function( e ) {
 				e.preventDefault();
 
 				if ( ! ccpaSettings.stylesLoaded ) {
@@ -232,7 +207,7 @@
 	};
 
 	// Initialization.
-	document.addEventListener( 'DOMContentLoaded', function () {
+	document.addEventListener( 'DOMContentLoaded', function() {
 		// CCPA consent value storage.
 		var usprivacyCookie = cookieLib.getItem( 'usprivacy' );
 
@@ -248,7 +223,7 @@
 			var request = new XMLHttpRequest();
 			request.open( 'GET', 'https://public-api.wordpress.com/geo/', true );
 
-			request.onreadystatechange = function () {
+			request.onreadystatechange = function() {
 				if ( 4 === this.readyState ) {
 					if ( 200 === this.status ) {
 						var data = JSON.parse( this.response );

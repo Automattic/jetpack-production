@@ -10,13 +10,12 @@
 use Automattic\Jetpack\Constants;
 use Automattic\Jetpack\Status;
 use Automattic\Jetpack\Redirect;
-use Automattic\Jetpack\Tracking;
 
 add_action( 'widgets_init', 'jetpack_search_widget_init' );
 
 function jetpack_search_widget_init() {
 	if (
-		! Jetpack::is_connection_ready()
+		! Jetpack::is_active()
 		|| ( method_exists( 'Jetpack_Plan', 'supports' ) && ! Jetpack_Plan::supports( 'search' ) )
 	) {
 		return;
@@ -128,13 +127,27 @@ class Jetpack_Search_Widget extends WP_Widget {
 	public function widget_admin_setup() {
 		wp_enqueue_style( 'widget-jetpack-search-filters', plugins_url( 'search/css/search-widget-admin-ui.css', __FILE__ ) );
 
-		// Register jp-tracks and jp-tracks-functions.
-		Tracking::register_tracks_functions_scripts();
+		// Required for Tracks
+		wp_register_script(
+			'jp-tracks',
+			'//stats.wp.com/w.js',
+			array(),
+			gmdate( 'YW' ),
+			true
+		);
+
+		wp_register_script(
+			'jp-tracks-functions',
+			plugins_url( '_inc/lib/tracks/tracks-callables.js', JETPACK__PLUGIN_FILE ),
+			array(),
+			JETPACK__VERSION,
+			false
+		);
 
 		wp_register_script(
 			'jetpack-search-widget-admin',
 			plugins_url( 'search/js/search-widget-admin.js', __FILE__ ),
-			array( 'jquery', 'jquery-ui-sortable', 'jp-tracks-functions' ),
+			array( 'jquery', 'jquery-ui-sortable', 'jp-tracks', 'jp-tracks-functions' ),
 			JETPACK__VERSION
 		);
 
@@ -263,8 +276,9 @@ class Jetpack_Search_Widget extends WP_Widget {
 		return wp_parse_args(
 			(array) $instance,
 			array(
-				'title'   => '',
-				'filters' => array(),
+				'title'      => '',
+				'filters'    => array(),
+				'post_types' => array(),
 			)
 		);
 	}
@@ -280,12 +294,12 @@ class Jetpack_Search_Widget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		$instance = $this->jetpack_search_populate_defaults( $instance );
 
-		if ( ( new Status() )->is_offline_mode() ) {
+		if ( ( new Status() )->is_development_mode() ) {
 			echo $args['before_widget']; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			?><div id="<?php echo esc_attr( $this->id ); ?>-wrapper">
 				<div class="jetpack-search-sort-wrapper">
 					<label>
-						<?php esc_html_e( 'Jetpack Search not supported in Offline Mode', 'jetpack' ); ?>
+						<?php esc_html_e( 'Jetpack Search not supported in Development Mode', 'jetpack' ); ?>
 					</label>
 				</div>
 			</div><?php
@@ -636,7 +650,7 @@ class Jetpack_Search_Widget extends WP_Widget {
 		$filters = array();
 		if ( isset( $new_instance['filter_type'] ) ) {
 			foreach ( (array) $new_instance['filter_type'] as $index => $type ) {
-				$count = (int) $new_instance['num_filters'][ $index ];
+				$count = intval( $new_instance['num_filters'][ $index ] );
 				$count = min( 50, $count ); // Set max boundary at 50.
 				$count = max( 1, $count );  // Set min boundary at 1.
 
@@ -826,6 +840,22 @@ class Jetpack_Search_Widget extends WP_Widget {
 					type="text"
 					value="<?php echo esc_attr( wp_strip_all_tags( $instance['title'] ) ); ?>"
 				/>
+			</p>
+
+			<!-- Post types control -->
+			<p class="jetpack-search-filters-widget__post-types-select">
+				<label><?php esc_html_e( 'Post types to search (minimum of 1):', 'jetpack' ); ?></label>
+				<?php foreach ( get_post_types( array( 'exclude_from_search' => false ), 'objects' ) as $post_type ) : ?>
+					<label>
+						<input
+							type="checkbox"
+							value="<?php echo esc_attr( $post_type->name ); ?>"
+							name="<?php echo esc_attr( $this->get_field_name( 'post_types' ) ); ?>[]"
+							<?php checked( empty( $instance['post_types'] ) || in_array( $post_type->name, $instance['post_types'], true ) ); ?>
+						/>&nbsp;
+						<?php echo esc_html( $post_type->label ); ?>
+					</label>
+				<?php endforeach; ?>
 			</p>
 
 			<!-- Filters control -->

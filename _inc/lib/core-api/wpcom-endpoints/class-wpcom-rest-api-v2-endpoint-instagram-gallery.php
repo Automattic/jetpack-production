@@ -2,7 +2,7 @@
 /**
  * REST API endpoint for the Instagram connections.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 8.5.0
  */
 
@@ -45,9 +45,8 @@ class WPCOM_REST_API_V2_Endpoint_Instagram_Gallery extends WP_REST_Controller {
 			$this->namespace,
 			$this->rest_base . '/connect-url',
 			array(
-				'methods'             => WP_REST_Server::READABLE,
-				'callback'            => array( $this, 'get_instagram_connect_url' ),
-				'permission_callback' => '__return_true',
+				'methods'  => WP_REST_Server::READABLE,
+				'callback' => array( $this, 'get_instagram_connect_url' ),
 			)
 		);
 
@@ -55,9 +54,8 @@ class WPCOM_REST_API_V2_Endpoint_Instagram_Gallery extends WP_REST_Controller {
 			$this->namespace,
 			$this->rest_base . '/connections',
 			array(
-				'methods'             => WP_REST_Server::READABLE,
-				'callback'            => array( $this, 'get_instagram_connections' ),
-				'permission_callback' => 'is_user_logged_in',
+				'methods'  => WP_REST_Server::READABLE,
+				'callback' => array( $this, 'get_instagram_connections' ),
 			)
 		);
 
@@ -65,7 +63,7 @@ class WPCOM_REST_API_V2_Endpoint_Instagram_Gallery extends WP_REST_Controller {
 			$this->namespace,
 			$this->rest_base . '/gallery',
 			array(
-				'args'                => array(
+				'args'     => array(
 					'access_token' => array(
 						'description' => __( 'An Instagram Keyring access token.', 'jetpack' ),
 						'type'        => 'string',
@@ -80,9 +78,8 @@ class WPCOM_REST_API_V2_Endpoint_Instagram_Gallery extends WP_REST_Controller {
 						},
 					),
 				),
-				'methods'             => WP_REST_Server::READABLE,
-				'callback'            => array( $this, 'get_instagram_gallery' ),
-				'permission_callback' => '__return_true',
+				'methods'  => WP_REST_Server::READABLE,
+				'callback' => array( $this, 'get_instagram_gallery' ),
 			)
 		);
 	}
