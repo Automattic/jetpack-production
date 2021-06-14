@@ -175,25 +175,13 @@ class Full_Sync extends Module {
 	 * @param array $configs Full sync configuration for all sync modules.
 	 */
 	public function continue_enqueuing( $configs = null ) {
-		// Return early if not in progress.
-		if ( ! $this->get_status_option( 'started' ) || $this->get_status_option( 'queue_finished' ) ) {
+		if ( ! $this->is_started() || ! ( new Lock() )->attempt( self::ENQUEUE_LOCK_NAME ) || $this->get_status_option( 'queue_finished' ) ) {
 			return;
 		}
 
-		// Attempt to obtain lock.
-		$lock            = new Lock();
-		$lock_expiration = $lock->attempt( self::ENQUEUE_LOCK_NAME );
-
-		// Return if unable to obtain lock.
-		if ( false === $lock_expiration ) {
-			return;
-		}
-
-		// enqueue full sync actions.
 		$this->enqueue( $configs );
 
-		// Remove lock.
-		$lock->remove( self::ENQUEUE_LOCK_NAME, $lock_expiration );
+		( new Lock() )->remove( self::ENQUEUE_LOCK_NAME );
 	}
 
 	/**
@@ -624,7 +612,7 @@ class Full_Sync extends Module {
 	public function reset_data() {
 		$this->clear_status();
 		$this->delete_config();
-		( new Lock() )->remove( self::ENQUEUE_LOCK_NAME, true );
+		( new Lock() )->remove( self::ENQUEUE_LOCK_NAME );
 
 		$listener = Listener::get_instance();
 		$listener->get_full_sync_queue()->reset();

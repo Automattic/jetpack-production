@@ -32,12 +32,7 @@ class Nova_Restaurant {
 	const MENU_ITEM_LABEL_TAX = 'nova_menu_item_label';
 	const MENU_TAX = 'nova_menu';
 
-	/**
-	 * Version number used when enqueuing all resources (css and js).
-	 *
-	 * @var string
-	 */
-	public $version = '20210303';
+	public $version = '0.1';
 
 	protected $default_menu_item_loop_markup = array(
 		'menu_tag'               => 'section',

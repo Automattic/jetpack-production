@@ -3,7 +3,7 @@
  * API endpoint /sites/%s/delete-backup-helper-script
  * This API endpoint deletes a Jetpack Backup Helper Script
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Backup\Helper_Script_Manager;

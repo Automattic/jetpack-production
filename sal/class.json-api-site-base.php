@@ -149,31 +149,8 @@ abstract class SAL_Site {
 
 	abstract protected function is_wpforteams_site();
 
-	/**
-	 * Get hub blog id for P2 sites.
-	 *
-	 * @return null
-	 */
-	public function get_p2_hub_blog_id() {
-		return null;
-	}
-
-	/**
-	 * Getter for the p2 organization ID.
-	 *
-	 * @return int
-	 */
-	public function get_p2_organization_id() {
-		return 0; // WPForTeams\Constants\NO_ORG_ID not loaded.
-	}
-
-	/**
-	 * Detect whether a site is a WordPress.com on Atomic site.
-	 *
-	 * @return bool
-	 */
 	public function is_wpcom_atomic() {
-		return jetpack_is_atomic_site();
+		return false;
 	}
 
 	public function is_wpcom_store() {
@@ -475,8 +452,7 @@ abstract class SAL_Site {
 			 * @param bool $view_hosting Can site access Hosting section. Default to false.
 			 */
 			'view_hosting'        => apply_filters( 'jetpack_json_api_site_can_view_hosting', false ),
-			'view_stats'          => stats_is_blog_user( $this->blog_id ),
-			'activate_plugins'    => current_user_can( 'activate_plugins' ),
+			'view_stats'          => stats_is_blog_user( $this->blog_id )
 		);
 	}
 
@@ -712,14 +688,5 @@ abstract class SAL_Site {
 
 	public function get_selected_features() {
 		return get_option( 'selected_features' );
-	}
-
-	/**
-	 * Get the option storing the Anchor podcast ID that identifies a site as a podcasting site.
-	 *
-	 * @return string
-	 */
-	public function get_anchor_podcast() {
-		return get_option( 'anchor_podcast' );
 	}
 }

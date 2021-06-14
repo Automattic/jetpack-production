@@ -15,7 +15,7 @@
  * [crowdsignal poll=9541291 type=slider]
  * [crowdsignal rating=8755352]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Assets;
@@ -511,20 +511,12 @@ if (
 						$inline = false;
 					}
 
-					$survey_url = '';
+					$survey = preg_replace( '/[^a-f0-9]/i', '', $attributes['survey'] );
 
-					if ( 'true' !== $attributes['survey'] ) {
-						$survey = preg_replace( '/[^a-f0-9]/i', '', $attributes['survey'] );
-
-						if ( 'crowdsignal.com' === $attributes['site'] ) {
-							$survey_url = 'https://survey.fm/' . $survey;
-						} else {
-							$survey_url = 'https://polldaddy.com/s/' . $survey;
-						}
+					if ( 'crowdsignal.com' === $attributes['site'] ) {
+						$survey_url = 'https://survey.fm/' . $survey;
 					} else {
-						if ( isset( $attributes['domain'] ) && isset( $attributes['id'] ) ) {
-							$survey_url = 'https://' . $attributes['domain'] . '.survey.fm/' . $attributes['id'];
-						}
+						$survey_url = 'https://polldaddy.com/s/' . $survey;
 					}
 
 					$survey_link = sprintf(

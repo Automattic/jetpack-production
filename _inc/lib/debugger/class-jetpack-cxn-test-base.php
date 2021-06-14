@@ -2,7 +2,7 @@
 /**
  * Base class for Jetpack's debugging tests.
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 use Automattic\Jetpack\Status;
@@ -15,7 +15,7 @@ use Automattic\Jetpack\Status;
  * Individual tests should be added to the class-jetpack-cxn-tests.php file.
  *
  * @author Brandon Kraft
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**

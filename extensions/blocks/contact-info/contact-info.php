@@ -4,7 +4,7 @@
  *
  * @since 7.1.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Blocks;

@@ -1,6 +1,6 @@
 .jetpack-search-filters-widget__filter {
-	background: #f6f7f7;
-	border: 1px solid #dcdcde;
+	background: #f9f9f9;
+	border: 1px solid #dfdfdf;
 	padding: 0 12px;
 	margin-bottom: 12px;
 	cursor: move;
@@ -15,7 +15,7 @@
 }
 
 .jetpack-search-filters-widget__controls .delete {
-	color: #d63638;
+	color: #a00;
 }
 
 .jetpack-search-filters-widget.hide-filters .jetpack-search-filters-widget__filter {
@@ -37,7 +37,7 @@
 
 .jetpack-search-filters-widget__filter-placeholder {
 	border: 1px #555 dashed;
-	background-color: #f0f0f1;
+	background-color: #eee;
 	height: 286px;
 	margin-bottom: 12px;
 }

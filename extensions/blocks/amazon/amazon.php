@@ -4,7 +4,7 @@
  *
  * @since 8.x
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Amazon;

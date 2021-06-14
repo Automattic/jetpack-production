@@ -4,7 +4,7 @@
  *
  * @since 8.4.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Podcast_Player;
@@ -30,7 +30,7 @@ function register_block() {
 		array(
 			'attributes'      => array(
 				'url'                    => array(
-					'type' => 'string',
+					'type' => 'url',
 				),
 				'itemsToShow'            => array(
 					'type'    => 'integer',
@@ -94,21 +94,10 @@ function render_block( $attributes, $content ) {
 		return render_error( __( 'Your podcast URL is invalid and couldn\'t be embedded. Please double check your URL.', 'jetpack' ) );
 	}
 
-	if ( isset( $attributes['selectedEpisodes'] ) && count( $attributes['selectedEpisodes'] ) ) {
-		$guids       = array_map(
-			function ( $episode ) {
-				return $episode['guid'];
-			},
-			$attributes['selectedEpisodes']
-		);
-		$player_args = array( 'guids' => $guids );
-	} else {
-		$player_args = array();
-	}
-
 	// Sanitize the URL.
 	$attributes['url'] = esc_url_raw( $attributes['url'] );
-	$player_data       = ( new Jetpack_Podcast_Helper( $attributes['url'] ) )->get_player_data( $player_args );
+
+	$player_data = Jetpack_Podcast_Helper::get_player_data( $attributes['url'] );
 
 	if ( is_wp_error( $player_data ) ) {
 		return render_error( $player_data->get_error_message() );

@@ -33,7 +33,6 @@
 					height: newVal.sizes[ size ].height,
 					width: newVal.sizes[ size ].width,
 					src: newVal.sizes[ size ].url,
-					srcset: '',
 				} );
 
 				$anchor.show();

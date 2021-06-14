@@ -2,7 +2,7 @@
 /**
  * Facebook embeds
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 define( 'JETPACK_FACEBOOK_EMBED_REGEX', '#^https?://(www.)?facebook\.com/([^/]+)/(posts|photos)/([^/]+)?#' );

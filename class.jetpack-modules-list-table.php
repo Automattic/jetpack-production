@@ -114,9 +114,6 @@ class Jetpack_Modules_List_Table extends WP_List_Table {
 						<# } else if ( item.available && 'videopress' !== item.module ) { #>
 							<span class='activate'><a href="<?php echo admin_url( 'admin.php' ); ?>?page=jetpack&#038;action=activate&#038;module={{{ item.module }}}&#038;_wpnonce={{{ item.activate_nonce }}}"><?php _e( 'Activate', 'jetpack' ); ?></a></span>
 						<# } #>
-						<# if ( ! item.available ) { #>
-							<span class='unavailable_reason'>{{{ item.unavailable_reason }}}</span>
-						<# } #>
 						</div>
 					</td>
 				</tr>
@@ -138,7 +135,7 @@ class Jetpack_Modules_List_Table extends WP_List_Table {
 		/** This filter is already documented in class.jetpack-modules-list-table.php */
 		$modules              = apply_filters( 'jetpack_modules_list_table_items', Jetpack_Admin::init()->get_modules() );
 		$array_of_module_tags = wp_list_pluck( $modules, 'module_tags' );
-		$module_tags          = array_merge( ...array_values( $array_of_module_tags ) );
+		$module_tags          = call_user_func_array( 'array_merge', $array_of_module_tags );
 		$module_tags_unique   = array_count_values( $module_tags );
 		ksort( $module_tags_unique );
 

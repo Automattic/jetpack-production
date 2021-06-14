@@ -2,7 +2,7 @@
 /**
  * Plan checks for uploading video files to premium-content/container.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  **/
 
 // Populate the available extensions with premium-content/container.

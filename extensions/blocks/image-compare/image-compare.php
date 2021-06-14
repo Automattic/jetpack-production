@@ -4,7 +4,7 @@
  *
  * @since 8.6
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\ImageCompare;
@@ -41,9 +41,7 @@ function load_assets( $attr, $content ) {
 	wp_localize_script(
 		'jetpack-block-' . sanitize_title_with_dashes( FEATURE_NAME ),
 		'imageCompareHandle',
-		array(
-			'msg' => __( 'Slide to compare images', 'jetpack' ),
-		)
+		__( 'Slide to compare images', 'jetpack' )
 	);
 	if ( Blocks::is_amp_request() ) {
 		$content = preg_replace(

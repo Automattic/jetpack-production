@@ -5,7 +5,7 @@
  * @author bubel & nickmomrik
  * [archives limit=10]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 add_shortcode( 'archives', 'archives_shortcode' );

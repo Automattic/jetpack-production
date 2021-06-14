@@ -2,7 +2,7 @@
 /**
  * WhatsApp Button Block.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\WhatsApp_Button;
@@ -22,10 +22,7 @@ const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
 function register_block() {
 	Blocks::jetpack_register_block(
 		BLOCK_NAME,
-		array(
-			'render_callback' => __NAMESPACE__ . '\render_block',
-			'plan_check'      => true,
-		)
+		array( 'render_callback' => __NAMESPACE__ . '\render_block' )
 	);
 }
 add_action( 'init', __NAMESPACE__ . '\register_block' );
@@ -39,7 +36,7 @@ add_action( 'init', __NAMESPACE__ . '\register_block' );
  * @return string
  */
 function render_block( $attributes, $content ) {
-	Jetpack_Gutenberg::load_styles_as_required( PARENT_NAME );
+	Jetpack_Gutenberg::load_styles_as_required( PARENT_NAME . '/' . FEATURE_NAME );
 
 	return $content;
 }

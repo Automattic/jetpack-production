@@ -49,7 +49,6 @@ class WPCOM_JSON_API_GET_Site_Endpoint extends WPCOM_JSON_API_Endpoint {
 		'single_user_site'            => '(bool) Whether the site is single user. Only returned for WP.com sites and for Jetpack sites with version 3.4 or higher.',
 		'is_vip'                      => '(bool) If the site is a VIP site or not.',
 		'is_following'                => '(bool) If the current user is subscribed to this site in the reader',
-		'organization_id'             => '(int) P2 Organization identifier.',
 		'options'                     => '(array) An array of options/settings for the blog. Only viewable by users with post editing rights to the site. Note: Post formats is deprecated, please see /sites/$id/post-formats/',
 		'plan'                        => '(array) Details of the current plan for this site.',
 		'updates'                     => '(array) An array of available updates for plugins, themes, wordpress, and languages.',
@@ -61,7 +60,6 @@ class WPCOM_JSON_API_GET_Site_Endpoint extends WPCOM_JSON_API_Endpoint {
 		'is_fse_active'               => '(bool) If the site has Full Site Editing active or not.',
 		'is_fse_eligible'             => '(bool) If the site is capable of Full Site Editing or not',
 		'is_core_site_editor_enabled' => '(bool) If the site has the core site editor enabled.',
-		'is_wpcom_atomic'             => '(bool) If the site is a WP.com Atomic one.',
 	);
 
 	protected static $no_member_fields = array(
@@ -87,7 +85,6 @@ class WPCOM_JSON_API_GET_Site_Endpoint extends WPCOM_JSON_API_Endpoint {
 		'is_fse_active',
 		'is_fse_eligible',
 		'is_core_site_editor_enabled',
-		'is_wpcom_atomic',
 	);
 
 	protected static $site_options_format = array(
@@ -151,11 +148,9 @@ class WPCOM_JSON_API_GET_Site_Endpoint extends WPCOM_JSON_API_Endpoint {
 		'site_segment',
 		'import_engine',
 		'is_wpforteams_site',
-		'p2_hub_blog_id',
 		'site_creation_flow',
 		'is_cloud_eligible',
 		'selected_features',
-		'anchor_podcast',
 	);
 
 	protected static $jetpack_response_field_additions = array(
@@ -397,11 +392,6 @@ class WPCOM_JSON_API_GET_Site_Endpoint extends WPCOM_JSON_API_Endpoint {
 			case 'is_multisite' :
 				$response[ $key ] = $this->site->is_multisite();
 				break;
-
-			case 'organization_id':
-				$response[ $key ] = $this->site->get_p2_organization_id();
-				break;
-
 			case 'capabilities' :
 				$response[ $key ] = $this->site->get_capabilities();
 				break;
@@ -415,9 +405,6 @@ class WPCOM_JSON_API_GET_Site_Endpoint extends WPCOM_JSON_API_Endpoint {
 				break;
 			case 'products' :
 				$response[ $key ] = $this->site->get_products();
-				break;
-			case 'zendesk_site_meta':
-				$response[ $key ] = $this->site->get_zendesk_site_meta();
 				break;
 			case 'quota' :
 				$response[ $key ] = $this->site->get_quota();
@@ -433,9 +420,6 @@ class WPCOM_JSON_API_GET_Site_Endpoint extends WPCOM_JSON_API_Endpoint {
 				break;
 			case 'is_core_site_editor_enabled':
 				$response[ $key ] = $this->site->is_core_site_editor_enabled();
-				break;
-			case 'is_wpcom_atomic':
-				$response[ $key ] = $this->site->is_wpcom_atomic();
 				break;
 		}
 
@@ -643,10 +627,6 @@ class WPCOM_JSON_API_GET_Site_Endpoint extends WPCOM_JSON_API_Endpoint {
 				case 'is_wpforteams_site':
 					$options[ $key ] = $site->is_wpforteams_site();
 					break;
-				case 'p2_hub_blog_id':
-					$options[ $key ] = $site->get_p2_hub_blog_id();
-					break;
-
 				case 'site_creation_flow':
 					$site_creation_flow = $site->get_site_creation_flow();
 					if ( $site_creation_flow ) {
@@ -661,9 +641,6 @@ class WPCOM_JSON_API_GET_Site_Endpoint extends WPCOM_JSON_API_Endpoint {
 					if ( $selected_features ) {
 						$options[ $key ] = $selected_features;
 					}
-					break;
-				case 'anchor_podcast':
-					$options[ $key ] = $site->get_anchor_podcast();
 					break;
 			}
 		}

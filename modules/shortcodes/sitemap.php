@@ -4,7 +4,7 @@
  *
  * Usage: [sitemap]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 add_shortcode( 'sitemap', 'jetpack_sitemap_shortcode' );

@@ -10,7 +10,7 @@
  * Feature: Engagement
  * Additional Search Queries: woocommerce, analytics, stats, statistics, tracking, analytics, views
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**

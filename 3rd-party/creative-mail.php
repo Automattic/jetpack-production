@@ -5,7 +5,7 @@
  *
  * @since 8.9.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Creative_Mail;

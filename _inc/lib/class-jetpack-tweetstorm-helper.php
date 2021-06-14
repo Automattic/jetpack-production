@@ -2,7 +2,7 @@
 /**
  * Tweetstorm block and API helper.
  *
- * @package automattic/jetpack
+ * @package jetpack
  * @since 8.7.0
  */
 
@@ -318,6 +318,11 @@ class Jetpack_Tweetstorm_Helper {
 	private static function get_block_definition( $block_name ) {
 		if ( isset( self::$supported_blocks[ $block_name ] ) ) {
 			return self::$supported_blocks[ $block_name ];
+		}
+
+		// @todo This is a fallback definition, it can be removed when WordPress 5.6 is the minimum supported version.
+		if ( 0 === strpos( $block_name, 'core-embed/' ) ) {
+			return self::$supported_blocks['core/embed'];
 		}
 
 		return null;
@@ -1191,10 +1196,12 @@ class Jetpack_Tweetstorm_Helper {
 	 * @return string The tweet URL. Empty string if there is none available.
 	 */
 	private static function extract_tweet_from_block( $block ) {
-		if (
-			'core/embed' === $block['blockName']
-			&& ( isset( $block['attrs']['providerNameSlug'] ) && 'twitter' === $block['attrs']['providerNameSlug'] )
-		) {
+		if ( 'core/embed' === $block['blockName'] && 'twitter' === $block['attrs']['providerNameSlug'] ) {
+			return $block['attrs']['url'];
+		}
+
+		// @todo This fallback can be removed when WordPress 5.6 is the minimum supported version.
+		if ( 'core-embed/twitter' === $block['blockName'] ) {
 			return $block['attrs']['url'];
 		}
 
@@ -1215,10 +1222,12 @@ class Jetpack_Tweetstorm_Helper {
 		}
 
 		// Twitter embeds are handled in ::extract_tweet_from_block().
-		if (
-			'core/embed' === $block['blockName']
-			&& ( isset( $block['attrs']['providerNameSlug'] ) && 'twitter' === $block['attrs']['providerNameSlug'] )
-		) {
+		if ( 'core/embed' === $block['blockName'] && 'twitter' === $block['attrs']['providerNameSlug'] ) {
+			return '';
+		}
+
+		// @todo This fallback can be removed when WordPress 5.6 is the minimum supported version.
+		if ( 'core-embed/twitter' === $block['blockName'] ) {
 			return '';
 		}
 
@@ -1586,22 +1595,14 @@ class Jetpack_Tweetstorm_Helper {
 	 * @return array The Twitter card data.
 	 */
 	public static function generate_cards( $urls ) {
-		$validator = new Twitter_Validator();
-
 		$requests = array_map(
-			function ( $url ) use ( $validator ) {
-				if ( $validator->isValidURL( $url ) ) {
-					return array(
-						'url' => $url,
-					);
-				}
-
-				return false;
+			function ( $url ) {
+				return array(
+					'url' => $url,
+				);
 			},
 			$urls
 		);
-
-		$requests = array_filter( $requests );
 
 		$results = Requests::request_multiple( $requests );
 
@@ -1628,8 +1629,12 @@ class Jetpack_Tweetstorm_Helper {
 		);
 
 		$cards = array();
-		foreach ( $results as $id => $result ) {
-			$url = $requests[ $id ]['url'];
+		foreach ( $results as $result ) {
+			if ( count( $result->history ) > 0 ) {
+				$url = $result->history[0]->url;
+			} else {
+				$url = $result->url;
+			}
 
 			if ( ! $result->success ) {
 				$cards[ $url ] = array(
