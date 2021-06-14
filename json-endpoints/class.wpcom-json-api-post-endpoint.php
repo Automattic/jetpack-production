@@ -262,8 +262,11 @@ abstract class WPCOM_JSON_API_Post_Endpoint extends WPCOM_JSON_API_Endpoint {
 			case 'likes_enabled' :
 				/** This filter is documented in modules/likes.php */
 				$sitewide_likes_enabled = (bool) apply_filters( 'wpl_is_enabled_sitewide', ! get_option( 'disabled_likes' ) );
-				$post_likes_switched    = get_post_meta( $post->ID, 'switch_like_status', true );
-				$post_likes_enabled = $post_likes_switched || ( $sitewide_likes_enabled && $post_likes_switched !== '0' );
+				$post_likes_switched    = (bool) get_post_meta( $post->ID, 'switch_like_status', true );
+				$post_likes_enabled = $sitewide_likes_enabled;
+				if ( $post_likes_switched ) {
+					$post_likes_enabled = ! $post_likes_enabled;
+				}
 				$response[$key] = (bool) $post_likes_enabled;
 				break;
 			case 'sharing_enabled' :
@@ -416,6 +419,7 @@ abstract class WPCOM_JSON_API_Post_Endpoint extends WPCOM_JSON_API_Endpoint {
 					if ( current_user_can( 'edit_post_meta', $post_id , $meta['meta_key'] ) )
 						$show = true;
 
+					// Only business plan subscribers can view custom meta description.
 					if ( Jetpack_SEO_Posts::DESCRIPTION_META_KEY === $meta['meta_key'] && ! Jetpack_SEO_Utils::is_enabled_jetpack_seo() ) {
 						$show = false;
 					}
@@ -546,7 +550,7 @@ abstract class WPCOM_JSON_API_Post_Endpoint extends WPCOM_JSON_API_Endpoint {
 		add_image_size( 'win8app-column', 480 );
 		$size = 'win8app-column';
 
-		$id = (int) $id;
+		$id = intval( $id );
 		if ( 'RAND' === $order )
 			$orderby = 'none';
 
@@ -612,9 +616,9 @@ abstract class WPCOM_JSON_API_Post_Endpoint extends WPCOM_JSON_API_Endpoint {
 	 */
 	function get_current_user_capabilities( $post ) {
 		return array(
-			'publish_post' => current_user_can( 'publish_post', $post->ID ),
-			'delete_post'  => current_user_can( 'delete_post', $post->ID ),
-			'edit_post'    => current_user_can( 'edit_post', $post->ID )
+			'publish_post' => current_user_can( 'publish_post', $post ),
+			'delete_post'  => current_user_can( 'delete_post', $post ),
+			'edit_post'    => current_user_can( 'edit_post', $post )
 		);
 	}
 

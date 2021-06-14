@@ -64,8 +64,7 @@ label {
 
 input[type="text"],
 input[type="tel"],
-input[type="email"],
-input[type="url"] {
+input[type="email"] {
 	border-radius: 0;
 	appearance: none;
 	box-sizing: border-box;
@@ -83,22 +82,19 @@ input[type="url"] {
 
 input[type="text"]::placeholder,
 input[type="tel"]::placeholder,
-input[type="email"]::placeholder,
-input[type="url"]::placeholder {
+input[type="email"]::placeholder {
 	color: #87a6bc;
 }
 
 input[type="text"]:hover,
 input[type="tel"]:hover,
-input[type="email"]:hover,
-input[type="url"]:hover {
+input[type="email"]:hover {
 	border-color: #a8bece;
 }
 
 input[type="text"]:focus,
 input[type="tel"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus {
+input[type="email"]:focus {
 	border-color: #0087be;
 	outline: none;
 	box-shadow: 0 0 0 2px #78dcfa;
@@ -106,15 +102,13 @@ input[type="url"]:focus {
 
 input[type="text"]:focus::-ms-clear,
 input[type="tel"]:focus::-ms-clear,
-input[type="email"]:focus::-ms-clear,
-input[type="url"]:focus::-ms-clear {
+input[type="email"]:focus::-ms-clear {
 	display: none;
 }
 
 input[type="text"]:disabled,
 input[type="tel"]:disabled,
-input[type="email"]:disabled,
-input[type="url"]:disabled {
+input[type="email"]:disabled {
 	background: #f3f6f8;
 	border-color: #e9eff3;
 	color: #a8bece;
@@ -123,15 +117,13 @@ input[type="url"]:disabled {
 
 input[type="text"]:disabled:hover,
 input[type="tel"]:disabled:hover,
-input[type="email"]:disabled:hover,
-input[type="url"]:disabled:hover {
+input[type="email"]:disabled:hover {
 	cursor: default;
 }
 
 input[type="text"]:disabled::placeholder,
 input[type="tel"]:disabled::placeholder,
-input[type="email"]:disabled::placeholder,
-input[type="url"]:disabled::placeholder {
+input[type="email"]:disabled::placeholder {
 	color: #a8bece;
 }
 
@@ -405,8 +397,7 @@ select {
 	vertical-align: top;
 	white-space: nowrap;
 	box-sizing: border-box;
-	/* Aligns the text to the 8px baseline grid and adds padding on right to allow for the arrow. */
-	padding: 7px 32px 9px 14px;
+	padding: 7px 32px 9px 14px; // Aligns the text to the 8px baseline grid and adds padding on right to allow for the arrow.
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
