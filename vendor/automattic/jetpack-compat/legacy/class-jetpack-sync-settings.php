@@ -66,8 +66,9 @@ class Jetpack_Sync_Settings {
 		return Settings::is_network_setting( $setting );
 	}
 
+
 	/**
-	 * Return blocklisted post types SQL.
+	 * Return blacklisted post types SQL.
 	 *
 	 * @deprecated See Automattic\Jetpack\Sync\Settings
 	 */
@@ -77,7 +78,7 @@ class Jetpack_Sync_Settings {
 	}
 
 	/**
-	 * Return allowed post meta SQL.
+	 * Return whitelisted post meta SQL.
 	 *
 	 * @deprecated See Automattic\Jetpack\Sync\Settings
 	 *
@@ -89,7 +90,7 @@ class Jetpack_Sync_Settings {
 	}
 
 	/**
-	 * Return allowed comment meta SQL
+	 * Return whitelsited comment meta SQL
 	 *
 	 * @deprecated See Automattic\Jetpack\Sync\Settings
 	 */

@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Automattic\\Jetpack\\Autoloader\\' => array($vendorDir . '/automattic/jetpack-autoloader/src'),
+    'Automattic\\Jetpack\\' => array($vendorDir . '/automattic/jetpack-status/src'),
 );

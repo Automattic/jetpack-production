@@ -7,7 +7,7 @@
  * [googlemaps https://maps.google.com/maps?f=q&hl=en&geocode=&q=San+Francisco,+CA&sll=43.469466,-83.998504&sspn=0.01115,0.025942&g=San+Francisco,+CA&ie=UTF8&z=12&iwloc=addr&ll=37.808156,-122.402458&output=embed&s=AARTsJp56EajYksz3JXgNCwT3LJnGsqqAQ&w=425&h=350]
  * [googlemaps https://mapsengine.google.com/map/embed?mid=zbBhkou4wwtE.kUmp8K6QJ7SA&w=640&h=480]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -124,20 +124,7 @@ function jetpack_googlemaps_shortcode( $atts ) {
 			}
 		}
 
-		$sandbox = class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request()
-			? 'sandbox="allow-popups allow-scripts allow-same-origin"'
-			: '';
-
-		return sprintf(
-			'<div class="%1$s">
-				<iframe width="%2$d" height="%3$d" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" %5$s src="%4$s"></iframe>
-			</div>',
-			esc_attr( $css_class ),
-			absint( $width ),
-			absint( $height ),
-			esc_url( $url ),
-			$sandbox
-		);
+		return '<div class="' . esc_attr( $css_class ) . '"><iframe width="' . $width . '" height="' . $height . '" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="' . $url . '"></iframe></div>';
 	}
 }
 add_shortcode( 'googlemaps', 'jetpack_googlemaps_shortcode' );

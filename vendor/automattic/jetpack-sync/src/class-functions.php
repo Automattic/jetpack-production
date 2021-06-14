@@ -7,7 +7,6 @@
 
 namespace Automattic\Jetpack\Sync;
 
-use Automattic\Jetpack\Connection\Urls;
 use Automattic\Jetpack\Constants;
 
 /**
@@ -23,13 +22,9 @@ class Functions {
 	 * @return array
 	 */
 	public static function get_modules() {
-		if ( defined( 'JETPACK__PLUGIN_DIR' ) ) {
-			require_once JETPACK__PLUGIN_DIR . 'class.jetpack-admin.php';
+		require_once JETPACK__PLUGIN_DIR . 'class.jetpack-admin.php';
 
-			return \Jetpack_Admin::init()->get_modules();
-		}
-
-		return array();
+		return \Jetpack_Admin::init()->get_modules();
 	}
 
 	/**
@@ -166,83 +161,22 @@ class Functions {
 	 * @return string Hosting provider.
 	 */
 	public static function get_hosting_provider() {
-		$hosting_provider_detection_methods = array(
-			'get_hosting_provider_by_known_constant',
-			'get_hosting_provider_by_known_class',
-			'get_hosting_provider_by_known_function',
-		);
-
-		$functions = new Functions();
-		foreach ( $hosting_provider_detection_methods as $method ) {
-			$hosting_provider = call_user_func( array( $functions, $method ) );
-			if ( false !== $hosting_provider ) {
-				return $hosting_provider;
-			}
+		if ( defined( 'GD_SYSTEM_PLUGIN_DIR' ) || class_exists( '\\WPaaS\\Plugin' ) ) {
+			return 'gd-managed-wp';
 		}
-
+		if ( defined( 'MM_BASE_DIR' ) ) {
+			return 'bh';
+		}
+		if ( defined( 'IS_PRESSABLE' ) ) {
+			return 'pressable';
+		}
+		if ( function_exists( 'is_wpe' ) || function_exists( 'is_wpe_snapshot' ) ) {
+			return 'wpe';
+		}
+		if ( defined( 'VIP_GO_ENV' ) && false !== VIP_GO_ENV ) {
+			return 'vip-go';
+		}
 		return 'unknown';
-	}
-
-	/**
-	 * Return a hosting provider using a set of known constants.
-	 *
-	 * @return mixed A host identifier string or false.
-	 */
-	public function get_hosting_provider_by_known_constant() {
-		$hosting_provider_constants = array(
-			'GD_SYSTEM_PLUGIN_DIR' => 'gd-managed-wp',
-			'MM_BASE_DIR'          => 'bh',
-			'PAGELYBIN'            => 'pagely',
-			'KINSTAMU_VERSION'     => 'kinsta',
-			'FLYWHEEL_CONFIG_DIR'  => 'flywheel',
-			'IS_PRESSABLE'         => 'pressable',
-			'VIP_GO_ENV'           => 'vip-go',
-		);
-
-		foreach ( $hosting_provider_constants as $constant => $constant_value ) {
-			if ( Constants::is_defined( $constant ) ) {
-				if ( 'VIP_GO_ENV' === $constant && false === Constants::get_constant( 'VIP_GO_ENV' ) ) {
-					continue;
-				}
-				return $constant_value;
-			}
-		}
-
-		return false;
-	}
-
-	/**
-	 * Return a hosting provider using a set of known classes.
-	 *
-	 * @return mixed A host identifier string or false.
-	 */
-	public function get_hosting_provider_by_known_class() {
-		$hosting_provider = false;
-
-		switch ( true ) {
-			case ( class_exists( '\\WPaaS\\Plugin' ) ):
-				$hosting_provider = 'gd-managed-wp';
-				break;
-		}
-
-		return $hosting_provider;
-	}
-
-	/**
-	 * Return a hosting provider using a set of known functions.
-	 *
-	 * @return mixed A host identifier string or false.
-	 */
-	public function get_hosting_provider_by_known_function() {
-		$hosting_provider = false;
-
-		switch ( true ) {
-			case ( function_exists( 'is_wpe' ) || function_exists( 'is_wpe_snapshot' ) ):
-				$hosting_provider = 'wpe';
-				break;
-		}
-
-		return $hosting_provider;
 	}
 
 	/**
@@ -261,17 +195,7 @@ class Functions {
 	 * @return array Array of allowed metadata.
 	 */
 	public static function rest_api_allowed_public_metadata() {
-		/**
-		 * Filters the meta keys accessible by the REST API.
-		 *
-		 * @see https://developer.wordpress.com/2013/04/26/custom-post-type-and-metadata-support-in-the-rest-api/
-		 *
-		 * @module json-api
-		 *
-		 * @since 2.2.3
-		 *
-		 * @param array $whitelisted_meta Array of metadata that is accessible by the REST API.
-		 */
+		/** This filter is documented in json-endpoints/class.wpcom-json-api-post-endpoint.php */
 		return apply_filters( 'rest_api_allowed_public_metadata', array() );
 	}
 
@@ -287,7 +211,7 @@ class Functions {
 		}
 		$updater = new \WP_Automatic_Updater();
 
-		return (bool) (string) $updater->is_vcs_checkout( ABSPATH );
+		return (bool) strval( $updater->is_vcs_checkout( ABSPATH ) );
 	}
 
 	/**
@@ -330,8 +254,22 @@ class Functions {
 	 * @return string
 	 */
 	public static function get_raw_or_filtered_url( $url_type ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.9', '\\Automattic\\Jetpack\\Connection\\Urls::get_raw_or_filtered_url' );
-		return Urls::get_raw_or_filtered_url( $url_type );
+		$url_function = ( 'home' === $url_type )
+			? 'home_url'
+			: 'site_url';
+
+		if (
+			! Constants::is_defined( 'JETPACK_SYNC_USE_RAW_URL' ) ||
+			Constants::get_constant( 'JETPACK_SYNC_USE_RAW_URL' )
+		) {
+			$scheme = is_ssl() ? 'https' : 'http';
+			$url    = self::get_raw_url( $url_type );
+			$url    = set_url_scheme( $url, $scheme );
+		} else {
+			$url = self::normalize_www_in_url( $url_type, $url_function );
+		}
+
+		return self::get_protocol_normalized_url( $url_function, $url );
 	}
 
 	/**
@@ -340,8 +278,16 @@ class Functions {
 	 * @return string
 	 */
 	public static function home_url() {
-		_deprecated_function( __METHOD__, 'jetpack-9.9', '\\Automattic\\Jetpack\\Connection\\Urls::home_url' );
-		return Urls::home_url();
+		$url = self::get_raw_or_filtered_url( 'home' );
+
+		/**
+		 * Allows overriding of the home_url value that is synced back to WordPress.com.
+		 *
+		 * @since 5.2.0
+		 *
+		 * @param string $home_url
+		 */
+		return esc_url_raw( apply_filters( 'jetpack_sync_home_url', $url ) );
 	}
 
 	/**
@@ -350,8 +296,16 @@ class Functions {
 	 * @return string
 	 */
 	public static function site_url() {
-		_deprecated_function( __METHOD__, 'jetpack-9.9', '\\Automattic\\Jetpack\\Connection\\Urls::site_url' );
-		return Urls::site_url();
+		$url = self::get_raw_or_filtered_url( 'siteurl' );
+
+		/**
+		 * Allows overriding of the site_url value that is synced back to WordPress.com.
+		 *
+		 * @since 5.2.0
+		 *
+		 * @param string $site_url
+		 */
+		return esc_url_raw( apply_filters( 'jetpack_sync_site_url', $url ) );
 	}
 
 	/**
@@ -360,31 +314,7 @@ class Functions {
 	 * @return string
 	 */
 	public static function main_network_site_url() {
-		_deprecated_function( __METHOD__, 'jetpack-9.9', '\\Automattic\\Jetpack\\Connection\\Urls::main_network_site_url' );
-		return Urls::main_network_site_url();
-	}
-
-	/**
-	 * Return main site WordPress.com site ID.
-	 *
-	 * @return string
-	 */
-	public static function main_network_site_wpcom_id() {
-		/**
-		 * Return the current site WPCOM ID for single site installs
-		 */
-		if ( ! is_multisite() ) {
-			return \Jetpack_Options::get_option( 'id' );
-		}
-
-		/**
-		 * Return the main network site WPCOM ID for multi-site installs
-		 */
-		$current_network = get_network();
-		switch_to_blog( $current_network->blog_id );
-		$wpcom_blog_id = \Jetpack_Options::get_option( 'id' );
-		restore_current_blog();
-		return $wpcom_blog_id;
+		return self::get_protocol_normalized_url( 'main_network_site_url', network_site_url() );
 	}
 
 	/**
@@ -395,8 +325,28 @@ class Functions {
 	 * @return string Normalized URL.
 	 */
 	public static function get_protocol_normalized_url( $callable, $new_value ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.9', '\\Automattic\\Jetpack\\Connection\\Urls::get_protocol_normalized_url' );
-		return Urls::get_protocol_normalized_url( $callable, $new_value );
+		$option_key = self::HTTPS_CHECK_OPTION_PREFIX . $callable;
+
+		$parsed_url = wp_parse_url( $new_value );
+		if ( ! $parsed_url ) {
+			return $new_value;
+		}
+		if ( array_key_exists( 'scheme', $parsed_url ) ) {
+			$scheme = $parsed_url['scheme'];
+		} else {
+			$scheme = '';
+		}
+		$scheme_history   = get_option( $option_key, array() );
+		$scheme_history[] = $scheme;
+
+		// Limit length to self::HTTPS_CHECK_HISTORY.
+		$scheme_history = array_slice( $scheme_history, ( self::HTTPS_CHECK_HISTORY * -1 ) );
+
+		update_option( $option_key, $scheme_history );
+
+		$forced_scheme = in_array( 'https', $scheme_history, true ) ? 'https' : 'http';
+
+		return set_url_scheme( $new_value, $forced_scheme );
 	}
 
 	/**
@@ -407,8 +357,22 @@ class Functions {
 	 * @return mixed|null URL.
 	 */
 	public static function get_raw_url( $option_name ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.9', '\\Automattic\\Jetpack\\Connection\\Urls::get_raw_url' );
-		return Urls::get_raw_url( $option_name );
+		$value    = null;
+		$constant = ( 'home' === $option_name )
+			? 'WP_HOME'
+			: 'WP_SITEURL';
+
+		// Since we disregard the constant for multisites in ms-default-filters.php,
+		// let's also use the db value if this is a multisite.
+		if ( ! is_multisite() && Constants::is_defined( $constant ) ) {
+			$value = Constants::get_constant( $constant );
+		} else {
+			// Let's get the option from the database so that we can bypass filters. This will help
+			// ensure that we get more uniform values.
+			$value = \Jetpack_Options::get_raw_option( $option_name );
+		}
+
+		return $value;
 	}
 
 	/**
@@ -419,8 +383,32 @@ class Functions {
 	 * @return mixed|string URL.
 	 */
 	public static function normalize_www_in_url( $option, $url_function ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.9', '\\Automattic\\Jetpack\\Connection\\Urls::normalize_www_in_url' );
-		return Urls::normalize_www_in_url( $option, $url_function );
+		$url        = wp_parse_url( call_user_func( $url_function ) );
+		$option_url = wp_parse_url( get_option( $option ) );
+
+		if ( ! $option_url || ! $url ) {
+			return $url;
+		}
+
+		if ( "www.{$option_url[ 'host' ]}" === $url['host'] ) {
+			// remove www if not present in option URL.
+			$url['host'] = $option_url['host'];
+		}
+		if ( "www.{$url[ 'host' ]}" === $option_url['host'] ) {
+			// add www if present in option URL.
+			$url['host'] = $option_url['host'];
+		}
+
+		$normalized_url = "{$url['scheme']}://{$url['host']}";
+		if ( isset( $url['path'] ) ) {
+			$normalized_url .= "{$url['path']}";
+		}
+
+		if ( isset( $url['query'] ) ) {
+			$normalized_url .= "?{$url['query']}";
+		}
+
+		return $normalized_url;
 	}
 
 	/**
@@ -512,7 +500,7 @@ class Functions {
 
 		$gmt_offset = get_option( 'gmt_offset', 0 );
 
-		$formatted_gmt_offset = sprintf( '%+g', (float) $gmt_offset );
+		$formatted_gmt_offset = sprintf( '%+g', floatval( $gmt_offset ) );
 
 		$formatted_gmt_offset = str_replace(
 			array( '.25', '.5', '.75' ),
@@ -527,81 +515,30 @@ class Functions {
 	/**
 	 * Return list of paused themes.
 	 *
+	 * @todo Remove function_exists check when WP 5.2 is the minimum.
+	 *
 	 * @return array|bool Array of paused themes or false if unsupported.
 	 */
 	public static function get_paused_themes() {
-		$paused_themes = wp_paused_themes();
-		return $paused_themes->get_all();
+		if ( function_exists( 'wp_paused_themes' ) ) {
+			$paused_themes = wp_paused_themes();
+			return $paused_themes->get_all();
+		}
+		return false;
 	}
 
 	/**
 	 * Return list of paused plugins.
 	 *
+	 * @todo Remove function_exists check when WP 5.2 is the minimum.
+	 *
 	 * @return array|bool Array of paused plugins or false if unsupported.
 	 */
 	public static function get_paused_plugins() {
-		$paused_plugins = wp_paused_plugins();
-		return $paused_plugins->get_all();
-	}
-
-	/**
-	 * Return the theme's supported features.
-	 * Used for syncing the supported feature that we care about.
-	 *
-	 * @return array List of features that the theme supports.
-	 */
-	public static function get_theme_support() {
-		global $_wp_theme_features;
-
-		$theme_support = array();
-		foreach ( Defaults::$default_theme_support_whitelist as $theme_feature ) {
-			$has_support = current_theme_supports( $theme_feature );
-			if ( $has_support ) {
-				$theme_support[ $theme_feature ] = $_wp_theme_features[ $theme_feature ];
-			}
+		if ( function_exists( 'wp_paused_plugins' ) ) {
+			$paused_plugins = wp_paused_plugins();
+			return $paused_plugins->get_all();
 		}
-
-		return $theme_support;
-	}
-
-	/**
-	 * Wraps data in a way so that we can distinguish between objects and array and also prevent object recursion.
-	 *
-	 * @since 9.5.0
-	 *
-	 * @param array|obj $any        Source data to be cleaned up.
-	 * @param array     $seen_nodes Built array of nodes.
-	 *
-	 * @return array
-	 */
-	public static function json_wrap( &$any, $seen_nodes = array() ) {
-		if ( is_object( $any ) ) {
-			$input        = get_object_vars( $any );
-			$input['__o'] = 1;
-		} else {
-			$input = &$any;
-		}
-
-		if ( is_array( $input ) ) {
-			$seen_nodes[] = &$any;
-
-			$return = array();
-
-			foreach ( $input as $k => &$v ) {
-				if ( ( is_array( $v ) || is_object( $v ) ) ) {
-					if ( in_array( $v, $seen_nodes, true ) ) {
-						continue;
-					}
-					$return[ $k ] = self::json_wrap( $v, $seen_nodes );
-				} else {
-					$return[ $k ] = $v;
-				}
-			}
-
-			return $return;
-		}
-
-		return $any;
-
+		return false;
 	}
 }

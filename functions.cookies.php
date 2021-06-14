@@ -5,7 +5,7 @@
  *
  * This file is loaded whether or not Jetpack is connected to WP.com.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -21,7 +21,7 @@
 function jetpack_shim_setcookie( $name, $value, $options ) {
 	$not_allowed_chars = ",; \t\r\n\013\014";
 
-	if ( false !== strpbrk( $name, $not_allowed_chars ) ) {
+	if ( strpbrk( $name, $not_allowed_chars ) !== false ) {
 		return false;
 	}
 
@@ -45,14 +45,14 @@ function jetpack_shim_setcookie( $name, $value, $options ) {
 	}
 
 	if ( ! empty( $options['domain'] ) && is_string( $options['domain'] ) ) {
-		if ( false !== strpbrk( $options['domain'], $not_allowed_chars ) ) {
+		if ( strpbrk( $options['domain'], false !== $not_allowed_chars ) ) {
 			return false;
 		}
 		$cookie .= sprintf( 'domain=%s', $options['domain'] . '; ' );
 	}
 
 	if ( ! empty( $options['path'] ) && is_string( $options['path'] ) ) {
-		if ( false !== strpbrk( $options['path'], $not_allowed_chars ) ) {
+		if ( strpbrk( $options['path'], false !== $not_allowed_chars ) ) {
 			return false;
 		}
 		$cookie .= sprintf( 'path=%s', $options['path'] . '; ' );

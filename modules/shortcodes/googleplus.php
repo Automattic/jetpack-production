@@ -4,7 +4,7 @@
  * Google+ has shut down. Output the link for history's sake.
  * Other than that, there's not much we can do.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 define( 'JETPACK_GOOGLEPLUS_EMBED_REGEX', '#^https?://plus\.(sandbox\.)?google\.com/(u/\d+/)?([^/]+)/posts/([^/]+)$#' );

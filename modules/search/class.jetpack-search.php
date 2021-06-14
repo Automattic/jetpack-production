@@ -9,8 +9,7 @@
  */
 
 use Automattic\Jetpack\Connection\Client;
-
-require_once __DIR__ . '/class-jetpack-search-options.php';
+use Automattic\Jetpack\Constants;
 
 /**
  * The main class for the Jetpack Search module.
@@ -139,12 +138,7 @@ class Jetpack_Search {
 	 */
 	public static function instance() {
 		if ( ! isset( self::$instance ) ) {
-			if ( Jetpack_Search_Options::is_instant_enabled() ) {
-				require_once __DIR__ . '/class-jetpack-instant-search.php';
-				self::$instance = new Jetpack_Instant_Search();
-			} else {
-				self::$instance = new Jetpack_Search();
-			}
+			self::$instance = new Jetpack_Search();
 
 			self::$instance->setup();
 		}
@@ -160,7 +154,7 @@ class Jetpack_Search {
 	 * @since 5.0.0
 	 */
 	public function setup() {
-		if ( ! Jetpack::is_connection_ready() || ! $this->is_search_supported() ) {
+		if ( ! Jetpack::is_active() || ! $this->is_search_supported() ) {
 			/**
 			 * Fires when the Jetpack Search fails and would fallback to MySQL.
 			 *
@@ -182,26 +176,11 @@ class Jetpack_Search {
 			return;
 		}
 
-		$this->load_php();
-		$this->init_hooks();
-	}
-
-	/**
-	 * Loads the php for this version of search
-	 *
-	 * @since 8.3.0
-	 */
-	public function load_php() {
-		$this->base_load_php();
-	}
-
-	/**
-	 * Loads the PHP common to all search. Should be called from extending classes.
-	 */
-	protected function base_load_php() {
-		require_once __DIR__ . '/class.jetpack-search-helpers.php';
-		require_once __DIR__ . '/class.jetpack-search-template-tags.php';
+		require_once dirname( __FILE__ ) . '/class.jetpack-search-helpers.php';
+		require_once dirname( __FILE__ ) . '/class.jetpack-search-template-tags.php';
 		require_once JETPACK__PLUGIN_DIR . 'modules/widgets/search.php';
+
+		$this->init_hooks();
 	}
 
 	/**
@@ -221,11 +200,87 @@ class Jetpack_Search {
 			add_action( 'init', array( $this, 'set_filters_from_widgets' ) );
 
 			add_action( 'pre_get_posts', array( $this, 'maybe_add_post_type_as_var' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'load_assets' ) );
 		} else {
 			add_action( 'update_option', array( $this, 'track_widget_updates' ), 10, 3 );
 		}
 
 		add_action( 'jetpack_deactivate_module_search', array( $this, 'move_search_widgets_to_inactive' ) );
+	}
+
+	/**
+	 * Loads assets for Jetpack Instant Search Prototype featuring Search As You Type experience.
+	 */
+	public function load_assets() {
+		if ( Constants::is_true( 'JETPACK_SEARCH_PROTOTYPE' ) ) {
+			$script_relative_path = '_inc/build/instant-search/jp-search.bundle.js';
+			if ( file_exists( JETPACK__PLUGIN_DIR . $script_relative_path ) ) {
+				$script_version = self::get_asset_version( $script_relative_path );
+				$script_path    = plugins_url( $script_relative_path, JETPACK__PLUGIN_FILE );
+				wp_enqueue_script( 'jetpack-instant-search', $script_path, array(), $script_version, true );
+				$this->load_and_initialize_tracks();
+
+				$widget_options = Jetpack_Search_Helpers::get_widgets_from_option();
+				if ( is_array( $widget_options ) ) {
+					$widget_options = end( $widget_options );
+				}
+
+				$filters = Jetpack_Search_Helpers::get_filters_from_widgets();
+				$widgets = array();
+				foreach ( $filters as $key => $filter ) {
+					if ( ! isset( $widgets[ $filter['widget_id'] ] ) ) {
+						$widgets[ $filter['widget_id'] ]['filters']   = array();
+						$widgets[ $filter['widget_id'] ]['widget_id'] = $filter['widget_id'];
+					}
+					$new_filter                                   = $filter;
+					$new_filter['filter_id']                      = $key;
+					$widgets[ $filter['widget_id'] ]['filters'][] = $new_filter;
+				}
+
+				$post_type_objs   = get_post_types( array(), 'objects' );
+				$post_type_labels = array();
+				foreach ( $post_type_objs as $key => $obj ) {
+					$post_type_labels[ $key ] = array(
+						'singular_name' => $obj->labels->singular_name,
+						'name'          => $obj->labels->name,
+					);
+				}
+				// This is probably a temporary filter for testing the prototype.
+				$options = array(
+					'enableLoadOnScroll' => false,
+					'homeUrl'            => home_url(),
+					'locale'             => str_replace( '_', '-', get_locale() ),
+					'postTypeFilters'    => $widget_options['post_types'],
+					'postTypes'          => $post_type_labels,
+					'siteId'             => Jetpack::get_option( 'id' ),
+					'sort'               => $widget_options['sort'],
+					'widgets'            => array_values( $widgets ),
+				);
+				/**
+				 * Customize Instant Search Options.
+				 *
+				 * @module search
+				 *
+				 * @since 7.7.0
+				 *
+				 * @param array $options Array of parameters used in Instant Search queries.
+				 */
+				$options = apply_filters( 'jetpack_instant_search_options', $options );
+
+				wp_localize_script(
+					'jetpack-instant-search',
+					'JetpackInstantSearchOptions',
+					$options
+				);
+			}
+
+			$style_relative_path = '_inc/build/instant-search/instant-search.min.css';
+			if ( file_exists( JETPACK__PLUGIN_DIR . $script_relative_path ) ) {
+				$style_version = self::get_asset_version( $style_relative_path );
+				$style_path    = plugins_url( $style_relative_path, JETPACK__PLUGIN_FILE );
+				wp_enqueue_style( 'jetpack-instant-search', $style_path, array(), $style_version );
+			}
+		}
 	}
 
 	/**
@@ -250,6 +305,25 @@ class Jetpack_Search {
 	 */
 	public function has_vip_index() {
 		return defined( 'JETPACK_SEARCH_VIP_INDEX' ) && JETPACK_SEARCH_VIP_INDEX;
+	}
+
+	/**
+	 * Loads scripts for Tracks analytics library
+	 */
+	public function load_and_initialize_tracks() {
+		wp_enqueue_script( 'jp-tracks', '//stats.wp.com/w.js', array(), gmdate( 'YW' ), true );
+	}
+
+	/**
+	 * Get the version number to use when loading the file. Allows us to bypass cache when developing.
+	 *
+	 * @param string $file Path of the file we are looking for.
+	 * @return string $script_version Version number.
+	 */
+	public static function get_asset_version( $file ) {
+		return Jetpack::is_development_version() && file_exists( JETPACK__PLUGIN_DIR . $file )
+			? filemtime( JETPACK__PLUGIN_DIR . $file )
+			: JETPACK__VERSION;
 	}
 
 	/**
@@ -301,7 +375,7 @@ class Jetpack_Search {
 		if ( $this->last_query_info ) {
 			printf(
 				'<!-- Jetpack Search took %s ms, ES time %s ms -->',
-				(int) $this->last_query_info['elapsed_time'],
+				intval( $this->last_query_info['elapsed_time'] ),
 				esc_html( $this->last_query_info['es_time'] )
 			);
 
@@ -552,7 +626,6 @@ class Jetpack_Search {
 			'post_type'           => 'any',
 			'ignore_sticky_posts' => true,
 			'suppress_filters'    => true,
-			'posts_per_page'      => $query->get( 'posts_per_page' ),
 		);
 
 		$posts_query = new WP_Query( $args );
@@ -805,7 +878,7 @@ class Jetpack_Search {
 	 * @module search
 	 */
 	public function action__widgets_init() {
-		require_once __DIR__ . '/class.jetpack-search-widget-filters.php';
+		require_once dirname( __FILE__ ) . '/class.jetpack-search-widget-filters.php';
 
 		register_widget( 'Jetpack_Search_Widget_Filters' );
 	}
@@ -850,7 +923,7 @@ class Jetpack_Search {
 					$date_start = $query->get( 'year' ) . '-' . $date_monthnum . '-' . $date_day . ' 00:00:00';
 					$date_end   = $query->get( 'year' ) . '-' . $date_monthnum . '-' . $date_day . ' 23:59:59';
 				} else {
-					$days_in_month = gmdate( 't', mktime( 0, 0, 0, $query->get( 'monthnum' ), 14, $query->get( 'year' ) ) ); // 14 = middle of the month so no chance of DST issues
+					$days_in_month = date( 't', mktime( 0, 0, 0, $query->get( 'monthnum' ), 14, $query->get( 'year' ) ) ); // 14 = middle of the month so no chance of DST issues
 
 					$date_start = $query->get( 'year' ) . '-' . $date_monthnum . '-01 00:00:00';
 					$date_end   = $query->get( 'year' ) . '-' . $date_monthnum . '-' . $days_in_month . ' 23:59:59';
@@ -1062,7 +1135,7 @@ class Jetpack_Search {
 		$decay_params = apply_filters(
 			'jetpack_search_recency_score_decay',
 			array(
-				'origin' => gmdate( 'Y-m-d' ),
+				'origin' => date( 'Y-m-d' ),
 				'scale'  => '360d',
 				'decay'  => 0.9,
 			),
@@ -1282,9 +1355,6 @@ class Jetpack_Search {
 	 */
 	public function add_aggregations_to_es_query_builder( array $aggregations, Jetpack_WPES_Query_Builder $builder ) {
 		foreach ( $aggregations as $label => $aggregation ) {
-			if ( ! isset( $aggregation['type'] ) ) {
-				continue;
-			}
 			switch ( $aggregation['type'] ) {
 				case 'taxonomy':
 					$this->add_taxonomy_aggregation_to_es_query_builder( $aggregation, $label, $builder );
@@ -1378,7 +1448,7 @@ class Jetpack_Search {
 		);
 
 		if ( isset( $aggregation['min_doc_count'] ) ) {
-			$args['min_doc_count'] = (int) $aggregation['min_doc_count'];
+			$args['min_doc_count'] = intval( $aggregation['min_doc_count'] );
 		} else {
 			$args['min_doc_count'] = 1;
 		}
@@ -1664,7 +1734,7 @@ class Jetpack_Search {
 
 						switch ( $this->aggregations[ $label ]['interval'] ) {
 							case 'year':
-								$year = (int) gmdate( 'Y', $timestamp );
+								$year = (int) date( 'Y', $timestamp );
 
 								$query_vars = array(
 									'year'     => $year,
@@ -1684,8 +1754,8 @@ class Jetpack_Search {
 								break;
 
 							case 'month':
-								$year  = (int) gmdate( 'Y', $timestamp );
-								$month = (int) gmdate( 'n', $timestamp );
+								$year  = (int) date( 'Y', $timestamp );
+								$month = (int) date( 'n', $timestamp );
 
 								$query_vars = array(
 									'year'     => $year,
@@ -1693,7 +1763,7 @@ class Jetpack_Search {
 									'day'      => false,
 								);
 
-								$name = gmdate( 'F Y', $timestamp );
+								$name = date( 'F Y', $timestamp );
 
 								// Is this month currently selected?
 								if ( ! empty( $current_year ) && (int) $current_year === $year &&
@@ -1706,9 +1776,9 @@ class Jetpack_Search {
 								break;
 
 							case 'day':
-								$year  = (int) gmdate( 'Y', $timestamp );
-								$month = (int) gmdate( 'n', $timestamp );
-								$day   = (int) gmdate( 'j', $timestamp );
+								$year  = (int) date( 'Y', $timestamp );
+								$month = (int) date( 'n', $timestamp );
+								$day   = (int) date( 'j', $timestamp );
 
 								$query_vars = array(
 									'year'     => $year,
@@ -1716,7 +1786,7 @@ class Jetpack_Search {
 									'day'      => $day,
 								);
 
-								$name = gmdate( 'F jS, Y', $timestamp );
+								$name = date( 'F jS, Y', $timestamp );
 
 								// Is this day currently selected?
 								if ( ! empty( $current_year ) && (int) $current_year === $year &&
@@ -1923,8 +1993,10 @@ class Jetpack_Search {
 	 * Moves any active search widgets to the inactive category.
 	 *
 	 * @since 5.9.0
+	 *
+	 * @param string $module Unused. The Jetpack module being disabled.
 	 */
-	public function move_search_widgets_to_inactive() {
+	public function move_search_widgets_to_inactive( $module ) {
 		if ( ! is_active_widget( false, false, Jetpack_Search_Helpers::FILTER_WIDGET_BASE, true ) ) {
 			return;
 		}

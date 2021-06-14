@@ -1,7 +1,6 @@
 <?php
 
 use Automattic\Jetpack\Sync\Actions;
-use Automattic\Jetpack\Sync\Health;
 use Automattic\Jetpack\Sync\Modules;
 use Automattic\Jetpack\Sync\Queue;
 use Automattic\Jetpack\Sync\Queue_Buffer;
@@ -11,13 +10,6 @@ use Automattic\Jetpack\Sync\Settings;
 
 // POST /sites/%s/sync
 class Jetpack_JSON_API_Sync_Endpoint extends Jetpack_JSON_API_Endpoint {
-
-	/**
-	 * This endpoint allows authentication both via a blog and a user token.
-	 * If a user token is used, that user should have `manage_options` capability.
-	 *
-	 * @var array|string
-	 */
 	protected $needed_capabilities = 'manage_options';
 
 	protected function validate_call( $_blog_id, $capability, $check_manage_active = true ) {
@@ -75,7 +67,6 @@ class Jetpack_JSON_API_Sync_Status_Endpoint extends Jetpack_JSON_API_Sync_Endpoi
 // GET /sites/%s/data-check
 class Jetpack_JSON_API_Sync_Check_Endpoint extends Jetpack_JSON_API_Sync_Endpoint {
 	protected function result() {
-		Actions::mark_sync_read_only();
 		$store = new Replicastore();
 		return $store->checksum_all();
 	}
@@ -97,61 +88,11 @@ class Jetpack_JSON_API_Sync_Histogram_Endpoint extends Jetpack_JSON_API_Sync_End
 		if ( ! isset( $args['strip_non_ascii'] ) ) {
 			$args['strip_non_ascii'] = true;
 		}
-
-		/**
-		 * Hack: nullify the values of `start_id` and `end_id` if we're only requesting ranges.
-		 *
-		 * The endpoint doesn't support nullable values :(
-		 */
-		if ( true === $args['only_range_edges'] ) {
-			if ( 0 === $args['start_id'] ) {
-				$args['start_id'] = null;
-			}
-
-			if ( 0 === $args['end_id'] ) {
-				$args['end_id'] = null;
-			}
-		}
-
-		$histogram = $store->checksum_histogram( $args['object_type'], $args['buckets'], $args['start_id'], $args['end_id'], $columns, $args['strip_non_ascii'], $args['shared_salt'], $args['only_range_edges'], $args['detailed_drilldown'] );
-
-		// Hack to disable Sync during this call, so we can resolve faster.
-		Actions::mark_sync_read_only();
+		$histogram = $store->checksum_histogram( $args['object_type'], $args['buckets'], $args['start_id'], $args['end_id'], $columns, $args['strip_non_ascii'], $args['shared_salt'] );
 
 		return array( 'histogram' => $histogram, 'type' => $store->get_checksum_type() );
 	}
 }
-
-// phpcs:disable Generic.Files.OneObjectStructurePerFile.MultipleFound
-/**
- * POST /sites/%s/sync/health
- */
-class Jetpack_JSON_API_Sync_Modify_Health_Endpoint extends Jetpack_JSON_API_Sync_Endpoint {
-
-	/**
-	 * Callback for sync/health endpoint.
-	 *
-	 * @return array|WP_Error result of request.
-	 */
-	protected function result() {
-		$args = $this->input();
-
-		switch ( $args['status'] ) {
-			case Health::STATUS_IN_SYNC:
-			case Health::STATUS_OUT_OF_SYNC:
-				Health::update_status( $args['status'] );
-				break;
-			default:
-				return new WP_Error( 'invalid_status', 'Invalid Sync Status Provided.' );
-		}
-
-		// re-fetch so we see what's really being stored.
-		return array(
-			'success' => Health::get_status(),
-		);
-	}
-}
-// phpcs:enable
 
 // POST /sites/%s/sync/settings
 class Jetpack_JSON_API_Sync_Modify_Settings_Endpoint extends Jetpack_JSON_API_Sync_Endpoint {
@@ -206,7 +147,6 @@ class Jetpack_JSON_API_Sync_Object extends Jetpack_JSON_API_Sync_Endpoint {
 
 		$codec = Sender::get_instance()->get_codec();
 
-		Actions::mark_sync_read_only();
 		Settings::set_is_syncing( true );
 		$objects = $codec->encode( $sync_module->get_objects_by_id( $object_type, $object_ids ) );
 		Settings::set_is_syncing( false );
@@ -309,14 +249,7 @@ class Jetpack_JSON_API_Sync_Checkout_Endpoint extends Jetpack_JSON_API_Sync_Endp
 		}
 	}
 
-	/**
-	 * Check out a buffer of full sync actions.
-	 *
-	 * @param null $number_of_items Number of Actions to check-out.
-	 *
-	 * @return array Sync Actions to be returned to requestor
-	 */
-	public function immediate_full_sync_pull( $number_of_items = null ) {
+	public function immediate_full_sync_pull( $number_of_items ) {
 		// try to give ourselves as much time as possible.
 		set_time_limit( 0 );
 
@@ -361,7 +294,6 @@ class Jetpack_JSON_API_Sync_Checkout_Endpoint extends Jetpack_JSON_API_Sync_Endp
 
 class Jetpack_JSON_API_Sync_Close_Endpoint extends Jetpack_JSON_API_Sync_Endpoint {
 	protected function result() {
-
 		$request_body = $this->input();
 		$queue_name = $this->validate_queue( $request_body['queue'] );
 
@@ -385,28 +317,13 @@ class Jetpack_JSON_API_Sync_Close_Endpoint extends Jetpack_JSON_API_Sync_Endpoin
 
 		$items = $queue->peek_by_id( $request_body['item_ids'] );
 
-		// Update Full Sync Status if queue is "full_sync".
-		if ( 'full_sync' === $queue_name ) {
-			$full_sync_module = Modules::get_module( 'full-sync' );
+		/** This action is documented in packages/sync/src/modules/Full_Sync.php */
+		$full_sync_module = Modules::get_module( 'full-sync' );
 
-			$full_sync_module->update_sent_progress_action( $items );
-		}
+		$full_sync_module->update_sent_progress_action( $items );
 
 		$buffer = new Queue_Buffer( $request_body['buffer_id'], $request_body['item_ids'] );
 		$response = $queue->close( $buffer, $request_body['item_ids'] );
-
-		// Perform another checkout?
-		if ( isset( $request_body['continue'] ) && $request_body['continue'] ) {
-			if ( in_array( $queue_name, array( 'full_sync', 'immediate' ), true ) ) {
-				// Send Full Sync Actions.
-				Sender::get_instance()->do_full_sync();
-			} else {
-				// Send Incremental Sync Actions.
-				if ( $queue->has_any_items() ) {
-					Sender::get_instance()->do_sync();
-				}
-			}
-		}
 
 		if ( is_wp_error( $response ) ) {
 			return $response;
@@ -420,7 +337,7 @@ class Jetpack_JSON_API_Sync_Close_Endpoint extends Jetpack_JSON_API_Sync_Endpoin
 
 	protected static function sanitize_item_ids( $item ) {
 		// lets not delete any options that don't start with jpsq_sync-
-		if ( ! is_string( $item ) || substr( $item, 0, 5 ) !== 'jpsq_' ) {
+		if ( substr( $item, 0, 5 ) !== 'jpsq_' ) {
 			return null;
 		}
 		//Limit to A-Z,a-z,0-9,_,-,.
