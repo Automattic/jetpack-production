@@ -4,6 +4,15 @@
 	padding-bottom: 92px;
 }
 
+.jetpack-sso .message {
+	margin-top: 20px;
+}
+
+.jetpack-sso #login .message:first-child,
+.jetpack-sso #login h1 + .message {
+	margin-top: 0;
+}
+
 .jetpack-sso-repositioned #loginform {
 	padding-bottom: 26px;
 }
@@ -97,7 +106,7 @@
 }
 
 .jetpack-sso-or:before {
-	background: #dcdcde;
+	background: #E5E5E5;
 	content: '';
 	height: 1px;
 	position: absolute;
@@ -167,10 +176,4 @@
 
 .jetpack-sso-form-display #backtoblog {
 	margin: 24px 0 0;
-}
-
-.jetpack-sso-clear:after {
-	content: "";
-	display: table;
-	clear: both;
 }

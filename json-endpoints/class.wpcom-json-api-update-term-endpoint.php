@@ -1,87 +1,16 @@
 <?php
-
-new WPCOM_JSON_API_Update_Term_Endpoint( array(
-	'description' => 'Create a new term.',
-	'group'       => 'taxonomy',
-	'stat'        => 'terms:new',
-	'method'      => 'POST',
-	'path'        => '/sites/%s/taxonomies/%s/terms/new',
-	'path_labels' => array(
-		'$site'     => '(int|string) Site ID or domain',
-		'$taxonomy' => '(string) Taxonomy',
-	),
-	'request_format' => array(
-		'name'        => '(string) Name of the term',
-		'description' => '(string) A description of the term',
-		'parent'      => '(int) The parent ID for the term, if hierarchical',
-	),
-	'example_request'      => 'https://public-api.wordpress.com/rest/v1/sites/82974409/taxonomies/post_tag/terms/new',
-	'example_request_data' => array(
-		'headers' => array(
-			'authorization' => 'Bearer YOUR_API_TOKEN'
-		),
-		'body' => array(
-			'name' => 'Ribs & Chicken'
-		)
-	)
-) );
-
-new WPCOM_JSON_API_Update_Term_Endpoint( array(
-	'description' => 'Edit a term.',
-	'group'       => 'taxonomy',
-	'stat'        => 'terms:1:POST',
-	'method'      => 'POST',
-	'path'        => '/sites/%s/taxonomies/%s/terms/slug:%s',
-	'path_labels' => array(
-		'$site'     => '(int|string) Site ID or domain',
-		'$taxonomy' => '(string) Taxonomy',
-		'$slug'     => '(string) The term slug',
-	),
-	'request_format' => array(
-		'name'        => '(string) Name of the term',
-		'description' => '(string) A description of the term',
-		'parent'      => '(int) The parent ID for the term, if hierarchical',
-	),
-	'example_request'      => 'https://public-api.wordpress.com/rest/v1/sites/82974409/taxonomies/post_tag/terms/slug:testing-term',
-	'example_request_data' => array(
-		'headers' => array(
-			'authorization' => 'Bearer YOUR_API_TOKEN'
-		),
-		'body' => array(
-			'description' => 'The most delicious'
-		)
-	)
-) );
-
-new WPCOM_JSON_API_Update_Term_Endpoint( array(
-	'description' => 'Delete a term.',
-	'group'       => 'taxonomy',
-	'stat'        => 'terms:1:delete',
-	'method'      => 'POST',
-	'path'        => '/sites/%s/taxonomies/%s/terms/slug:%s/delete',
-	'path_labels' => array(
-		'$site'     => '(int|string) Site ID or domain',
-		'$taxonomy' => '(string) Taxonomy',
-		'$slug'     => '(string) The term slug',
-	),
-	'response_format' => array(
-		'slug'    => '(string) The slug of the deleted term',
-		'success' => '(bool) Whether the operation was successful',
-	),
-	'example_request'      => 'https://public-api.wordpress.com/rest/v1/sites/82974409/taxonomies/post_tag/terms/slug:$term/delete',
-	'example_request_data' => array(
-		'headers' => array(
-			'authorization' => 'Bearer YOUR_API_TOKEN'
-		),
-	)
-) );
+/*
+ * WARNING: This file is distributed verbatim in Jetpack.
+ * There should be nothing WordPress.com specific in this file.
+ *
+ * @hide-in-jetpack
+ */
 
 class WPCOM_JSON_API_Update_Term_Endpoint extends WPCOM_JSON_API_Taxonomy_Endpoint {
 	// /sites/%s/taxonomies/%s/terms/new            -> $blog_id, $taxonomy
 	// /sites/%s/taxonomies/%s/terms/slug:%s        -> $blog_id, $taxonomy, $slug
 	// /sites/%s/taxonomies/%s/terms/slug:%s/delete -> $blog_id, $taxonomy, $slug
 	function callback( $path = '', $blog_id = 0, $taxonomy = 'category', $slug = 0 ) {
-		$slug = urldecode( $slug );
 		$blog_id = $this->api->switch_to_blog_and_validate_user( $this->api->get_blog_id( $blog_id ) );
 		if ( is_wp_error( $blog_id ) ) {
 			return $blog_id;
@@ -98,7 +27,7 @@ class WPCOM_JSON_API_Update_Term_Endpoint extends WPCOM_JSON_API_Taxonomy_Endpoi
 
 		$taxonomy_meta = get_taxonomy( $taxonomy );
 		if ( false === $taxonomy_meta || (
-				! $taxonomy_meta->public &&
+				! $taxonomy_meta->public && 
 				! current_user_can( $taxonomy_meta->cap->manage_terms ) &&
 				! current_user_can( $taxonomy_meta->cap->edit_terms ) &&
 				! current_user_can( $taxonomy_meta->cap->delete_terms ) ) ) {
@@ -132,15 +61,16 @@ class WPCOM_JSON_API_Update_Term_Endpoint extends WPCOM_JSON_API_Taxonomy_Endpoi
 		}
 
 		if ( $term = get_term_by( 'name', $input['name'], $taxonomy ) ) {
-			// the same name is allowed as long as the parents are different
-			if ( $input['parent'] === $term->parent ) {
+			// get_term_by is not case-sensitive, but a name with different casing is allowed
+			// also, the exact same name is allowed as long as the parents are different
+			if ( $input['name'] === $term->name && $input['parent'] === $term->parent ) {
 				return new WP_Error( 'duplicate', 'A taxonomy with that name already exists', 409 );
 			}
 		}
 
 		$data = wp_insert_term( addslashes( $input['name'] ), $taxonomy, array(
-			'description' => isset( $input['description'] ) ? addslashes( $input['description'] ) : '',
-			'parent'      => $input['parent']
+	  		'description' => addslashes( $input['description'] ),
+	  		'parent'      => $input['parent']
 		) );
 
 		if ( is_wp_error( $data ) ) {
@@ -182,7 +112,7 @@ class WPCOM_JSON_API_Update_Term_Endpoint extends WPCOM_JSON_API_Taxonomy_Endpoi
 			$update['parent'] = $input['parent'];
 		}
 
-		if ( isset( $input['description'] ) ) {
+		if ( ! empty( $input['description'] ) ) {
 			$update['description'] = addslashes( $input['description'] );
 		}
 
@@ -191,10 +121,6 @@ class WPCOM_JSON_API_Update_Term_Endpoint extends WPCOM_JSON_API_Taxonomy_Endpoi
 		}
 
 		$data = wp_update_term( $term->term_id, $taxonomy, $update );
-		if ( is_wp_error( $data ) ) {
-			return $data;
-		}
-
 		$term = get_term_by( 'id', $data['term_id'], $taxonomy );
 
 		$return = $this->get_taxonomy( $term->slug, $taxonomy, $args['context'] );

@@ -1,83 +1,79 @@
 <?php
 /**
- * Twitch.tv shortcode
- *
- * Examples:
- * [twitchtv url='https://www.twitch.tv/paperbat' height='378' width='620' autoplay='false']
- * [twitchtv url='https://www.twitch.tv/paperbat/b/323486192' height='378' width='620' autoplay='false']
- *
- * @package automattic/jetpack
- */
+ * twitch.tv shortcode
+ * [twitchtv url='http://www.twitch.tv/paperbat' height='378' width='620' autoplay='false']
+ * [twitchtv url='http://www.twitch.tv/paperbat/b/323486192' height='378' width='620' autoplay='false']
+ **/
 
 /**
- * (Live URL) https://www.twitch.tv/paperbat
- *
- * <iframe src="https://player.twitch.tv/?autoplay=false&#038;muted=false&#038;channel=paperbat" width="620" height="378" frameborder="0" scrolling="no" allowfullscreen></iframe>
- *
- * (Archive URL) https://www.twitch.tv/paperbat/v/323486192
- *
- * <iframe src="https://player.twitch.tv/?autoplay=false&#038;muted=false&#038;video=v323486192" width="620" height="378" frameborder="0" scrolling="no" allowfullscreen></iframe>
- *
- * @param array $atts User supplied shortcode arguments.
- *
- * @return string HTML output of the shortcode.
+ * Flash:
+(Live URL) http://www.twitch.tv/paperbat
+
+Video:
+<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="//www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf?channel=paperbat" bgcolor="#000000">
+<param name="allowFullScreen" value="true" />
+<param name="allowScriptAccess" value="always" />
+<param name="allowNetworking" value="all" />
+<param name="movie" value="//www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf" />
+<param name="flashvars" value="hostname=www.twitch.tv&channel=paperbat&auto_play=true&start_volume=25" />
+</object>
+
+(Archive URL) http://www.twitch.tv/paperbat/v/323486192
+
+<object bgcolor='#000000' data='//www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf' height='378' id='clip_embed_player_flash' type='application/x-shockwave-flash' width='620'>
+<param name='movie' value='//www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf'>
+<param name='allowScriptAccess' value='always'>
+<param name='allowNetworking' value='all'>
+<param name='allowFullScreen' value='true'>
+<param name='flashvars' value='videoId=v323486192&hostname=www.twitch.tv&channel=paperbat&auto_play=false&title=PBat+Live+-+Playin%27+for+funnnnn+%287%2F1%2F2012%29&start_volume=25'>
+</object>
  */
-function wpcom_twitchtv_shortcode( $atts ) {
-	$attr = shortcode_atts(
-		array(
-			'height'   => 378,
-			'width'    => 620,
-			'url'      => '',
-			'autoplay' => 'false',
-			'muted'    => 'false',
-			'time'     => null,
-		),
-		$atts
-	);
+function wpcom_twitchtv_shortcode( $attr, $content = NULL ) {
+	$attr = extract( shortcode_atts( array(
+		'height'	 => 378,
+		'width'	  => 620,
+		'url'		=> '',
+		'autoplay'   => false
+	), $attr ) );
 
-	if ( empty( $attr['url'] ) ) {
-		return '<!-- Invalid twitchtv URL -->';
-	}
+	if ( empty( $url ) )
+		return;
 
-	preg_match( '|^https?://www.twitch.tv/([^/?]+)(/v/(\d+))?|i', $attr['url'], $match );
+	preg_match( '|^http://www.twitch.tv/([^/?]+)(/v/(\d+))?|i', $url, $match );
 
-	$url_args = array(
-		'autoplay' => ( false !== $attr['autoplay'] && 'false' !== $attr['autoplay'] ) ? 'true' : 'false',
-		'muted'    => ( false !== $attr['muted'] && 'false' !== $attr['muted'] ) ? 'true' : 'false',
-		'time'     => $attr['time'],
-	);
+	$width = (int) $width;
+	$height = (int) $height;
+	$autoplay = var_export( filter_var( $autoplay, FILTER_VALIDATE_BOOLEAN ), true );
 
-	$width  = (int) $attr['width'];
-	$height = (int) $attr['height'];
-
-	$user_id  = $match[1];
+	$user_id = esc_attr( $match[1] );
 	$video_id = 0;
-	if ( ! empty( $match[3] ) ) {
+	if ( !empty( $match[3] ) )
 		$video_id = (int) $match[3];
-	}
 
+	/** This action is documented in modules/widgets/social-media-icons.php */
 	do_action( 'jetpack_bump_stats_extras', 'twitchtv', 'shortcode' );
 
 	if ( $video_id > 0 ) {
-		$url_args['video'] = 'v' . $video_id;
-	} else {
-		$url_args['channel'] = $user_id;
+		// Archive video
+		return "<object bgcolor='#000000' data='//www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf' height='$height' width='$width' id='clip_embed_player_flash' type='application/x-shockwave-flash'>
+<param name='movie' value='//www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf'>
+<param name='allowScriptAccess' value='always'>
+<param name='allowNetworking' value='all'>
+<param name='allowFullScreen' value='true'>
+<param name='flashvars' value='videoId=v$video_id&hostname=www.twitch.tv&channel=$user_id&auto_play=$autoplay'>
+</object>";
 	}
 
-	// See https://discuss.dev.twitch.tv/t/twitch-embedded-player-updates-in-2020/23956.
-	// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-	$url_args['parent'] = isset( $_SERVER['HTTP_HOST'] )
-		? rawurlencode( wp_unslash( $_SERVER['HTTP_HOST'] ) ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-		: '';
+	$html = "<object type='application/x-shockwave-flash' height='$height' width='$width' id='live_embed_player_flash' data='//www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf?channel=$user_id' bgcolor='#000000'>
+<param name='allowFullScreen' value='true' />
+<param name='allowScriptAccess' value='always' />
+<param name='allowNetworking' value='all' />
+<param name='movie' value='//www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf' />
+<param name='flashvars' value='hostname=www.twitch.tv&channel=$user_id&auto_play=$autoplay&start_volume=25' />
+</object>";
 
-	$url = add_query_arg( $url_args, 'https://player.twitch.tv/' );
-
-	return sprintf(
-		'<iframe src="%s" width="%d" height="%d" frameborder="0" scrolling="no" allowfullscreen sandbox="allow-popups allow-scripts allow-same-origin allow-presentation"></iframe>',
-		esc_url( $url ),
-		esc_attr( $width ),
-		esc_attr( $height )
-	);
+	return $html;
 }
+
 add_shortcode( 'twitch', 'wpcom_twitchtv_shortcode' );
 add_shortcode( 'twitchtv', 'wpcom_twitchtv_shortcode' );
