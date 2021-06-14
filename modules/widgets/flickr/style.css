@@ -1,16 +1,12 @@
-.flickr-images {
-	text-align: center;
+#flickr_badge_uber_wrapper,
+#flickr_badge_wrapper,
+.widget_flickr table td {
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 
-.flickr-size-thumbnail .flickr-images {
-	align-content: space-between;
-	align-items: center;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-}
-
-.flickr-images img {
-	max-width: 100%;
-	margin: 5px;
+#flickr_badge_uber_wrapper {
+	width: auto;
 }

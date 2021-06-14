@@ -23,14 +23,14 @@
 </p>
 <p>
 	<small>
-		<?php esc_html_e( 'To find your Flickr RSS URL, go to your photostream, add "?details=1" to the URL, and hit enter. Scroll down until you see the RSS icon or the "Latest" link. Right-click on either options and copy the URL. Paste into the box above.', 'jetpack' ); ?>
+		<?php esc_html_e( 'To find your Flickr RSS URL, go to your photostream, open the "More" menu and click on "Edit". Scroll down until you see the RSS icon or the "Latest" link. Right click on either and copy the URL. Paste into the box above.', 'jetpack' ); ?>
 	</small>
 </p>
 <p>
 	<small>
 		<?php printf(
 			__( 'Leave the Flickr RSS URL field blank to display <a target="_blank" href="%s">interesting</a> Flickr photos.', 'jetpack' ),
-			'https://www.flickr.com/explore/interesting'
+			'http://www.flickr.com/explore/interesting'
 		); ?>
 	</small>
 </p>
@@ -53,51 +53,28 @@
 
 <p>
 	<label>
-		<input
-			type="checkbox"
-			name="<?php echo esc_attr( $this->get_field_name( 'target' ) ); ?>"
-			<?php checked( $instance['target'] ); ?>
-		/>
-		<?php esc_html_e( 'Open images in new tab?', 'jetpack' ); ?>
-	</label>
-</p>
-<p>
-	<div>
 		<?php esc_html_e( 'What size photos would you like to display?', 'jetpack' ); ?>
-	</div>
-	<ul>
-		<li>
-			<label>
-				<input
-					<?php checked( $instance['flickr_image_size'], 'thumbnail' ); ?>
-					name="<?php echo esc_attr( $this->get_field_name( 'flickr_image_size' ) ); ?>"
-					type="radio"
-					value="thumbnail"
-				/>
-				<?php esc_html_e( 'Thumbnail', 'jetpack' ); ?>
-			</label>
-		</li>
-		<li>
-			<label>
-				<input
-					<?php checked( $instance['flickr_image_size'], 'small' ); ?>
-					name="<?php echo esc_attr( $this->get_field_name( 'flickr_image_size' ) ); ?>"
-					type="radio"
-					value="small"
-				/>
-				<?php esc_html_e( 'Medium', 'jetpack' ); ?>
-			</label>
-		</li>
-		<li>
-			<label>
-				<input
-					<?php checked( $instance['flickr_image_size'], 'large' ); ?>
-					name="<?php echo esc_attr( $this->get_field_name( 'flickr_image_size' ) ); ?>"
-					type="radio"
-					value="large"
-				/>
-				<?php esc_html_e( 'Large', 'jetpack' ); ?>
-			</label>
-		</li>
-	</ul>
+	</label>
+	<select name="<?php echo esc_attr( $this->get_field_name( 'flickr_image_size' ) ); ?>">
+		<?php
+		$flickr_sizes = array(
+			array(
+				'size' => 'thumbnail',
+				'text' => esc_html__( 'Thumbnail', 'jetpack' ),
+			),
+			array(
+				'size' => 'small',
+				'text' => esc_html__( 'Small', 'jetpack' ),
+			),
+		);
+		foreach( $flickr_sizes as $flickr_size ) { ?>
+			<option
+				<?php selected( $instance['flickr_image_size'], $flickr_size['size'] ); ?>
+				value="<?php echo esc_attr( $flickr_size['size'] ); ?>"
+			>
+				<?php esc_html_e( $flickr_size['text'] ); ?>
+			</option>
+		<?php }
+		?>
+	</select>
 </p>

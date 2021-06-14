@@ -1,6 +1,6 @@
 <?php
 /*
-    Copyright 2006 Aaron D. Campbell (email : wp_plugins@xavisys.com)
+		Copyright 2006  Aaron D. Campbell  (email : wp_plugins@xavisys.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -20,19 +20,8 @@
 /**
  * Jetpack_Google_Analytics is the class that handles ALL of the plugin functionality.
  * It helps us avoid name collisions
- * https://codex.wordpress.org/Writing_a_Plugin#Avoiding_Function_Name_Collisions
+ * http://codex.wordpress.org/Writing_a_Plugin#Avoiding_Function_Name_Collisions
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-require_once( plugin_basename( 'classes/wp-google-analytics-utils.php' ) );
-require_once( plugin_basename( 'classes/wp-google-analytics-options.php' ) );
-require_once( plugin_basename( 'classes/wp-google-analytics-legacy.php' ) );
-require_once( plugin_basename( 'classes/wp-google-analytics-universal.php' ) );
-require_once plugin_basename( 'classes/class-jetpack-google-amp-analytics.php' );
-
 class Jetpack_Google_Analytics {
 
 	/**
@@ -41,24 +30,12 @@ class Jetpack_Google_Analytics {
 	static $instance = false;
 
 	/**
-	 * @var Static property to hold concrete analytics impl that does the work (universal or legacy)
-	 */
-	static $analytics = false;
-
-	/**
 	 * This is our constructor, which is private to force the use of get_instance()
 	 *
 	 * @return void
 	 */
 	private function __construct() {
-		// At this time, we only leverage universal analytics when enhanced ecommerce is selected and WooCommerce is active.
-		// Otherwise, don't bother emitting the tracking ID or fetching analytics.js
-		if ( class_exists( 'WooCommerce' ) && Jetpack_Google_Analytics_Options::enhanced_ecommerce_tracking_is_enabled() ) {
-			self::$analytics = new Jetpack_Google_Analytics_Universal();
-			new Jetpack_Google_AMP_Analytics();
-		} else {
-			self::$analytics = new Jetpack_Google_Analytics_Legacy();
-		}
+		add_action( 'wp_footer', array( $this, 'insert_code' ) );
 	}
 
 	/**
@@ -73,70 +50,118 @@ class Jetpack_Google_Analytics {
 	}
 
 	/**
-	 * Add amp-analytics tags.
+	 * Used to generate a tracking URL
 	 *
-	 * @param array $analytics_entries An associative array of the analytics entries.
-	 *
-	 * @return array
+	 * @param array $track - Must have ['data'] and ['code'].
+	 * @return string - Tracking URL
 	 */
-	public static function amp_analytics_entries( $analytics_entries ) {
-		if ( ! is_array( $analytics_entries ) ) {
-			$analytics_entries = array();
+	private function _get_url( $track ) {
+		$site_url = ( is_ssl() ? 'https://':'http://' ) . sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ); // Input var okay.
+		foreach ( $track as $k => $value ) {
+			if ( strpos( strtolower( $value ), strtolower( $site_url ) ) === 0 ) {
+				$track[ $k ] = substr( $track[ $k ], strlen( $site_url ) );
+			}
+			if ( 'data' === $k ) {
+				$track[ $k ] = preg_replace( '/^https?:\/\/|^\/+/i', '', $track[ $k ] );
+			}
+
+			// This way we don't lose search data.
+			if ( 'data' === $k && 'search' === $track['code'] ) {
+				$track[ $k ] = rawurlencode( $track[ $k ] );
+			} else {
+				$track[ $k ] = preg_replace( '/[^a-z0-9\.\/\+\?=-]+/i', '_', $track[ $k ] );
+			}
+
+			$track[ $k ] = trim( $track[ $k ], '_' );
 		}
-
-		$amp_tracking_codes = static::get_amp_tracking_codes( $analytics_entries );
-		$jetpack_account    = Jetpack_Google_Analytics_Options::get_tracking_code();
-
-		// Bypass tracking codes already set on AMP plugin.
-		if ( in_array( $jetpack_account, $amp_tracking_codes, true ) ) {
-			return $analytics_entries;
-		}
-
-		$config_data = wp_json_encode(
-			array(
-				'vars'     => array(
-					'account' => Jetpack_Google_Analytics_Options::get_tracking_code(),
-				),
-				'triggers' => array(
-					'trackPageview' => array(
-						'on'      => 'visible',
-						'request' => 'pageview',
-					),
-				),
-			)
-		);
-
-		// Generate a hash string to uniquely identify this entry.
-		$entry_id = substr( md5( 'googleanalytics' . $config_data ), 0, 12 );
-
-		$analytics_entries[ $entry_id ] = array(
-			'type'   => 'googleanalytics',
-			'config' => $config_data,
-		);
-
-		return $analytics_entries;
+		$char = ( strpos( $track['data'], '?' ) === false ) ? '?' : '&amp;';
+		return str_replace( "'", "\'", "/{$track['code']}/{$track['data']}{$char}referer=" . rawurlencode( isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : '' ) ); // Input var okay.
 	}
 
 	/**
-	 * Get AMP tracking codes.
-	 *
-	 * @param array $analytics_entries The codes available for AMP.
-	 *
-	 * @return array
+	 * Maybe output or return, depending on the context
 	 */
-	protected static function get_amp_tracking_codes( $analytics_entries ) {
-		$entries  = array_column( $analytics_entries, 'config' );
-		$accounts = array();
+	private function _output_or_return( $val, $maybe ) {
+		if ( $maybe ) {
+			echo $val . "\r\n";
+		} else {
+			return $val;
+		}
+	}
 
-		foreach ( $entries as $entry ) {
-			$entry = json_decode( $entry );
+	/**
+	 * This injects the Google Analytics code into the footer of the page.
+	 *
+	 * @param bool[optional] $output - defaults to true, false returns but does NOT echo the code.
+	 */
+	public function insert_code( $output = true ) {
+		// If $output is not a boolean false, set it to true (default).
+		$output = ( false !== $output);
 
-			if ( ! empty( $entry->vars->account ) ) {
-				$accounts[] = $entry->vars->account;
-			}
+		$tracking_id = $this->_get_tracking_code();
+		if ( empty( $tracking_id ) ) {
+			return $this->_output_or_return( '<!-- Your Google Analytics Plugin is missing the tracking ID -->', $output );
 		}
 
-		return $accounts;
+		// If we're in the admin_area, return without inserting code.
+		if ( is_admin() ) {
+			return $this->_output_or_return( '<!-- Your Google Analytics Plugin is set to ignore Admin area -->', $output );
+		}
+
+		$custom_vars = array(
+			"_gaq.push(['_setAccount', '{$tracking_id}']);",
+		);
+
+		$track = array();
+		if ( is_404() ) {
+			// This is a 404 and we are supposed to track them.
+			$custom_vars[] = "_gaq.push( [ '_trackEvent', '404', document.location.href, document.referrer ] );";
+		} elseif ( is_search() ) {
+			// Set track for searches, if it's a search, and we are supposed to.
+			$track['data'] = sanitize_text_field( wp_unslash( $_REQUEST['s'] ) ); // Input var okay.
+			$track['code'] = 'search';
+		}
+
+		if ( ! empty( $track ) ) {
+			$track['url'] = $this->_get_url( $track );
+			// adjust the code that we output, account for both types of tracking.
+			$track['url'] = esc_js( str_replace( '&', '&amp;', $track['url'] ) );
+			$custom_vars[] = "_gaq.push(['_trackPageview','{$track['url']}']);";
+		} else {
+			$custom_vars[] = "_gaq.push(['_trackPageview']);";
+		}
+
+		$async_code = "<!-- Jetpack Google Analytics -->
+		<script type='text/javascript'>
+							var _gaq = _gaq || [];
+							%custom_vars%
+
+							(function() {
+								var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+								ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+								var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+							})();
+						</script>";
+
+		$custom_vars_string = implode( "\r\n", $custom_vars );
+		$async_code = str_replace( '%custom_vars%', $custom_vars_string, $async_code );
+
+		return $this->_output_or_return( $async_code, $output );
+	}
+
+	/**
+	 * Used to get the tracking code option
+	 *
+	 * @return tracking code option value.
+	 */
+	private function _get_tracking_code() {
+		$o = get_option( 'jetpack_wga' );
+
+		if ( isset( $o['code'] ) && preg_match( '#UA-[\d-]+#', $o['code'], $matches ) ) {
+				return $o['code'];
+		}
+
+		return '';
 	}
 }
 
