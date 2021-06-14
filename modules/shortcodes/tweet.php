@@ -15,7 +15,7 @@
  * More parameters and another tweet syntax admitted:
  * [tweet tweet="https://twitter.com/jack/statuses/20" align="left" width="350" align="center" lang="es"]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 add_shortcode( 'tweet', array( 'Jetpack_Tweet', 'jetpack_tweet_shortcode' ) );
@@ -68,13 +68,13 @@ class Jetpack_Tweet {
 
 		if ( ctype_digit( $attr['tweet'] ) ) {
 			$id       = 'https://twitter.com/jetpack/status/' . $attr['tweet'];
-			$tweet_id = (int) $attr['tweet'];
+			$tweet_id = intval( $attr['tweet'] );
 		} else {
 			preg_match( '/^http(s|):\/\/twitter\.com(\/\#\!\/|\/)([a-zA-Z0-9_]{1,20})\/status(es)*\/(\d+)$/', $attr['tweet'], $urlbits );
 
-			if ( isset( $urlbits[5] ) && (int) $urlbits[5] ) {
-				$id       = 'https://twitter.com/' . $urlbits[3] . '/status/' . (int) $urlbits[5];
-				$tweet_id = (int) $urlbits[5];
+			if ( isset( $urlbits[5] ) && intval( $urlbits[5] ) ) {
+				$id       = 'https://twitter.com/' . $urlbits[3] . '/status/' . intval( $urlbits[5] );
+				$tweet_id = intval( $urlbits[5] );
 			} else {
 				return '<!-- Invalid tweet id -->';
 			}
@@ -110,7 +110,7 @@ class Jetpack_Tweet {
 				$screen_name = esc_html( $data->user->screen_name );
 				$name        = esc_html( $data->user->name );
 
-				$url = 'https://twitter.com/' . $screen_name . '/status/' . (int) $data->id;
+				$url = 'https://twitter.com/' . $screen_name . '/status/' . intval( $data->id );
 
 				// Only show the user's real name if they set it to something different from their screename.
 				if ( $screen_name !== $name ) {
@@ -120,8 +120,8 @@ class Jetpack_Tweet {
 				}
 
 				$time           = strtotime( $data->created_at );
-				$human_readable = gmdate( 'F d, Y', $time );
-				$data_datetime  = gmdate( 'Y-m-d\TH:i:sP', $time );
+				$human_readable = date( 'F d, Y', $time );
+				$data_datetime  = date( 'Y-m-d\TH:i:sP', $time );
 
 				/*
 				 * Additional params.
@@ -149,14 +149,14 @@ class Jetpack_Tweet {
 
 				// width.
 				$width_html = '';
-				$width      = (int) $attr['width'];
+				$width      = intval( $attr['width'] );
 				if ( $width > 100 ) {
 					$width_html = ' width="' . esc_attr( $width ) . '"';
 				}
 
 				// in reply to id (conversation tweets).
 				$in_reply_to_html = '';
-				$in_reply_to      = (int) $data->in_reply_to_status_id;
+				$in_reply_to      = intval( $data->in_reply_to_status_id );
 				if ( ! empty( $in_reply_to ) && 'false' === $attr['hide_thread'] ) {
 					$in_reply_to_html = ' data-in-reply-to="' . esc_attr( $in_reply_to ) . '"';
 				}
@@ -204,22 +204,11 @@ class Jetpack_Tweet {
 			remove_filter( 'oembed_fetch_url', array( 'Jetpack_Tweet', 'jetpack_tweet_url_extra_args' ), 10 );
 		}
 
+		// Add Twitter widgets.js script to the footer.
+		add_action( 'wp_footer', array( 'Jetpack_Tweet', 'jetpack_tweet_shortcode_script' ) );
+
 		/** This action is documented in modules/widgets/social-media-icons.php */
 		do_action( 'jetpack_bump_stats_extras', 'embeds', 'tweet' );
-
-		if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
-			$width  = ! empty( $attr['width'] ) ? $attr['width'] : 600;
-			$height = 480;
-			$output = sprintf(
-				'<amp-twitter data-tweetid="%1$s" layout="responsive" width="%2$d" height="%3$d"></amp-twitter>',
-				esc_attr( $tweet_id ),
-				absint( $width ),
-				absint( $height )
-			);
-		} else {
-			// Add Twitter widgets.js script to the footer.
-			add_action( 'wp_footer', array( 'Jetpack_Tweet', 'jetpack_tweet_shortcode_script' ) );
-		}
 
 		return $output;
 	}

@@ -108,8 +108,8 @@ class VideoPress_Player {
 
 			if ( ! defined( 'WP_DEBUG' ) || WP_DEBUG !== true ) {
 				$expire = 3600;
-				if ( isset( $this->video->expires ) && is_int( $this->video->expires ) ) {
-					$expires_diff = time() - $this->video->expires;
+				if ( isset( $video->expires ) && is_int( $video->expires ) ) {
+					$expires_diff = time() - $video->expires;
 					if ( $expires_diff > 0 && $expires_diff < 86400 ) { // allowed range: 1 second to 1 day
 						$expire = $expires_diff;
 					}
@@ -629,8 +629,8 @@ class VideoPress_Player {
 		foreach ( $this->options as $option => $value ) {
 			switch ( $option ) {
 				case 'at':
-					if ( (int) $value ) {
-						$videopress_options[ $option ] = (int) $value;
+					if ( intval( $value ) ) {
+						$videopress_options[ $option ] = intval( $value );
 					}
 					break;
 				case 'autoplay':

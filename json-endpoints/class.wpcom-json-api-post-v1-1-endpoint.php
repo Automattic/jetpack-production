@@ -291,7 +291,7 @@ abstract class WPCOM_JSON_API_Post_v1_1_Endpoint extends WPCOM_JSON_API_Endpoint
 		foreach ( $response['posts'] as $post ) {
 
 			if ( ! isset( $post['meta'] ) || ! isset( $post['meta']->data ) || (! is_array( $post['meta']->data ) && ! is_object( $post['meta']->data ) ) ) {
-				continue;
+				break;
 			}
 			
 			$newmeta = [];
@@ -352,7 +352,7 @@ abstract class WPCOM_JSON_API_Post_v1_1_Endpoint extends WPCOM_JSON_API_Endpoint
 		add_image_size( 'win8app-column', 480 );
 		$size = 'win8app-column';
 
-		$id = (int) $id;
+		$id = intval( $id );
 		if ( 'RAND' === $order )
 			$orderby = 'none';
 

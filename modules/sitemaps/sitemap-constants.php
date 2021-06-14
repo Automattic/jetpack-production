@@ -2,7 +2,7 @@
 /**
  * Sitemap-related constants.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 4.8.0
  * @author Automattic
  */

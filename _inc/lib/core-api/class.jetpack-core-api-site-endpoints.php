@@ -2,7 +2,7 @@
 /**
  * List of /site core REST API endpoints used in Jetpack's dashboard.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Connection\Client;
@@ -11,18 +11,7 @@ use Automattic\Jetpack\Connection\Client;
  * This is the endpoint class for `/site` endpoints.
  */
 class Jetpack_Core_API_Site_Endpoint {
-	/**
-	 * Returns commonly used WP_Error indicating failure to fetch data
-	 *
-	 * @return WP_Error that denotes our inability to fetch the requested data
-	 */
-	private static function get_failed_fetch_error() {
-		return new WP_Error(
-			'failed_to_fetch_data',
-			esc_html__( 'Unable to fetch the requested data.', 'jetpack' ),
-			array( 'status' => 500 )
-		);
-	}
+
 
 	/**
 	 * Returns the result of `/sites/%s/features` endpoint call.
@@ -33,13 +22,18 @@ class Jetpack_Core_API_Site_Endpoint {
 	 *                     of plan slugs that enable these features
 	 */
 	public static function get_features() {
+
 		// Make the API request.
 		$request  = sprintf( '/sites/%d/features', Jetpack_Options::get_option( 'id' ) );
 		$response = Client::wpcom_json_api_request_as_blog( $request, '1.1' );
 
 		// Bail if there was an error or malformed response.
 		if ( is_wp_error( $response ) || ! is_array( $response ) || ! isset( $response['body'] ) ) {
-			return self::get_failed_fetch_error();
+			return new WP_Error(
+				'failed_to_fetch_data',
+				esc_html__( 'Unable to fetch the requested data.', 'jetpack' ),
+				array( 'status' => 500 )
+			);
 		}
 
 		// Decode the results.
@@ -47,7 +41,11 @@ class Jetpack_Core_API_Site_Endpoint {
 
 		// Bail if there were no results or plan details returned.
 		if ( ! is_array( $results ) ) {
-			return self::get_failed_fetch_error();
+			return new WP_Error(
+				'failed_to_fetch_data',
+				esc_html__( 'Unable to fetch the requested data.', 'jetpack' ),
+				array( 'status' => 500 )
+			);
 		}
 
 		return rest_ensure_response(
@@ -55,69 +53,6 @@ class Jetpack_Core_API_Site_Endpoint {
 				'code'    => 'success',
 				'message' => esc_html__( 'Site features correctly received.', 'jetpack' ),
 				'data'    => wp_remote_retrieve_body( $response ),
-			)
-		);
-	}
-
-	/**
-	 * Returns the result of `/sites/%s/purchases` endpoint call.
-	 *
-	 * @return array of site purchases.
-	 */
-	public static function get_purchases() {
-		// Make the API request.
-		$request  = sprintf( '/sites/%d/purchases', Jetpack_Options::get_option( 'id' ) );
-		$response = Client::wpcom_json_api_request_as_blog( $request, '1.1' );
-
-		// Bail if there was an error or malformed response.
-		if ( is_wp_error( $response ) || ! is_array( $response ) || ! isset( $response['body'] ) ) {
-			return self::get_failed_fetch_error();
-		}
-
-		if ( 200 !== (int) wp_remote_retrieve_response_code( $response ) ) {
-			return self::get_failed_fetch_error();
-		}
-
-		// Decode the results.
-		$results = json_decode( $response['body'], true );
-
-		// Bail if there were no results or purchase details returned.
-		if ( ! is_array( $results ) ) {
-			return self::get_failed_fetch_error();
-		}
-
-		return rest_ensure_response(
-			array(
-				'code'    => 'success',
-				'message' => esc_html__( 'Site purchases correctly received.', 'jetpack' ),
-				'data'    => wp_remote_retrieve_body( $response ),
-			)
-		);
-	}
-
-	/**
-	 * Returns the result of `/sites/%d/products` endpoint call.
-	 *
-	 * @return array of site products.
-	 */
-	public static function get_products() {
-		$url      = sprintf( '/sites/%d/products?locale=%s&type=jetpack', Jetpack_Options::get_option( 'id' ), get_user_locale() );
-		$response = Client::wpcom_json_api_request_as_blog( $url, '1.1' );
-
-		if ( is_wp_error( $response ) || ! is_array( $response ) || ! isset( $response['body'] ) ) {
-			return self::get_failed_fetch_error();
-		}
-
-		$results = json_decode( wp_remote_retrieve_body( $response ), true );
-		if ( ! is_array( $results ) ) {
-			return self::get_failed_fetch_error();
-		}
-
-		return rest_ensure_response(
-			array(
-				'code'    => 'success',
-				'message' => esc_html__( 'Site products correctly received.', 'jetpack' ),
-				'data'    => $results,
 			)
 		);
 	}
@@ -154,10 +89,8 @@ class Jetpack_Core_API_Site_Endpoint {
 			$stats = stats_get_from_restapi( array( 'fields' => 'stats' ) );
 		}
 
-		$has_stats = null !== $stats && ! is_wp_error( $stats );
-
 		// Yearly visitors.
-		if ( $has_stats && $stats->stats->visitors > 0 ) {
+		if ( null !== $stats && $stats->stats->visitors > 0 ) {
 			$benefits[] = array(
 				'name'        => 'jetpack-stats',
 				'title'       => esc_html__( 'Site Stats', 'jetpack' ),
@@ -180,7 +113,7 @@ class Jetpack_Core_API_Site_Endpoint {
 		}
 
 		// Number of followers.
-		if ( $has_stats && $stats->stats->followers_blog > 0 && Jetpack::is_module_active( 'subscriptions' ) ) {
+		if ( null !== $stats && $stats->stats->followers_blog > 0 && Jetpack::is_module_active( 'subscriptions' ) ) {
 			$benefits[] = array(
 				'name'        => 'subscribers',
 				'title'       => esc_html__( 'Subscribers', 'jetpack' ),
@@ -271,7 +204,7 @@ class Jetpack_Core_API_Site_Endpoint {
 		}
 
 		// Total number of shares.
-		if ( $has_stats && $stats->stats->shares > 0 ) {
+		if ( null !== $stats && $stats->stats->shares > 0 ) {
 			$benefits[] = array(
 				'name'        => 'sharing',
 				'title'       => esc_html__( 'Sharing', 'jetpack' ),
