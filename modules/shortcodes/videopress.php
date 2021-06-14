@@ -5,14 +5,15 @@
  * @since 2.4
  * @since 3.9.5 Added compatibility with refactored VideoPress module.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 if ( ! Jetpack::is_module_active( 'videopress' ) ) {
 
-	\Automattic\Jetpack\Assets::add_resource_hint(
-		'//v0.wordpress.com',
-		'dns-prefetch'
+	Jetpack::dns_prefetch(
+		array(
+			'//v0.wordpress.com',
+		)
 	);
 
 	include_once JETPACK__PLUGIN_DIR . 'modules/videopress/utility-functions.php';

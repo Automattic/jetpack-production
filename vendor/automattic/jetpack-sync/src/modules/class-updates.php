@@ -520,7 +520,7 @@ class Updates extends Module {
 	 *
 	 * @return int total
 	 */
-	public function total( $config ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+	public function total( $config ) {
 		return 3;
 	}
 

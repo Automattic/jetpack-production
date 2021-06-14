@@ -7,6 +7,8 @@
 
 namespace Automattic\Jetpack\Sync\Modules;
 
+use Automattic\Jetpack\Sync\Defaults;
+
 /**
  * Class to handle sync for themes.
  */
@@ -107,7 +109,7 @@ class Themes extends Module {
 	 * @param mixed  $old_value  Old value of the network option.
 	 * @param int    $network_id ID of the network.
 	 */
-	public function sync_network_allowed_themes_change( $option, $value, $old_value, $network_id ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+	public function sync_network_allowed_themes_change( $option, $value, $old_value, $network_id ) {
 		$all_enabled_theme_slugs = array_keys( $value );
 
 		if ( count( $old_value ) > count( $value ) ) {
@@ -255,7 +257,8 @@ class Themes extends Module {
 			return;
 		}
 
-		if ( ! wp_verify_nonce( $args['nonce'], 'edit-theme_' . $stylesheet . '_' . $file ) ) {
+		$real_file = $theme->get_stylesheet_directory() . '/' . $file;
+		if ( ! wp_verify_nonce( $args['nonce'], 'edit-theme_' . $real_file . $stylesheet ) ) {
 			return;
 		}
 
@@ -282,7 +285,6 @@ class Themes extends Module {
 			}
 		}
 
-		$real_file = $theme->get_stylesheet_directory() . '/' . $file;
 		if ( 0 !== validate_file( $real_file, $allowed_files ) ) {
 			return;
 		}
@@ -456,17 +458,18 @@ class Themes extends Module {
 	 * @param \WP_Theme $old_theme The previous theme.
 	 */
 	public function sync_theme_support( $new_name, $new_theme = null, $old_theme = null ) {
-		$previous_theme = $this->get_theme_info( $old_theme );
+		$previous_theme = $this->get_theme_support_info( $old_theme );
 
 		/**
 		 * Fires when the client needs to sync theme support info
+		 * Only sends theme support attributes whitelisted in Defaults::$default_theme_support_whitelist
 		 *
 		 * @since 4.2.0
 		 *
 		 * @param array the theme support array
 		 * @param array the previous theme since Jetpack 6.5.0
 		 */
-		do_action( 'jetpack_sync_current_theme_support', $this->get_theme_info(), $previous_theme );
+		do_action( 'jetpack_sync_current_theme_support', $this->get_theme_support_info(), $previous_theme );
 	}
 
 	/**
@@ -552,7 +555,7 @@ class Themes extends Module {
 	 * @return array Theme data.
 	 */
 	public function expand_theme_data() {
-		return array( $this->get_theme_info() );
+		return array( $this->get_theme_support_info() );
 	}
 
 	/**
@@ -780,15 +783,23 @@ class Themes extends Module {
 	 * @access private
 	 *
 	 * @param \WP_Theme $theme Theme object. Optional, will default to the current theme.
-	 *
 	 * @return array Theme data.
 	 */
-	private function get_theme_info( $theme = null ) {
+	private function get_theme_support_info( $theme = null ) {
+		global $_wp_theme_features;
+
 		$theme_support = array();
 
 		// We are trying to get the current theme info.
 		if ( null === $theme ) {
 			$theme = wp_get_theme();
+
+			foreach ( Defaults::$default_theme_support_whitelist as $theme_feature ) {
+				$has_support = current_theme_supports( $theme_feature );
+				if ( $has_support ) {
+					$theme_support[ $theme_feature ] = $_wp_theme_features[ $theme_feature ];
+				}
+			}
 		}
 
 		$theme_support['name']    = $theme->get( 'Name' );
@@ -838,7 +849,7 @@ class Themes extends Module {
 	 *
 	 * @return int total
 	 */
-	public function total( $config ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+	public function total( $config ) {
 		return 1;
 	}
 

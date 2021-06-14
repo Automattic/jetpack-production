@@ -4,13 +4,10 @@
  *
  * @since 8.3.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
-namespace Automattic\Jetpack\Extensions\Google_Calendar;
-
-use Automattic\Jetpack\Blocks;
-use Jetpack_Gutenberg;
+namespace Jetpack\Google_Calendar_Block;
 
 const FEATURE_NAME = 'google-calendar';
 const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
@@ -21,14 +18,15 @@ const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
  * registration if we need to.
  */
 function register_block() {
-	Blocks::jetpack_register_block(
+	jetpack_register_block(
 		BLOCK_NAME,
 		array(
-			'render_callback' => __NAMESPACE__ . '\load_assets',
+			'render_callback' => 'Jetpack\Google_Calendar_Block\load_assets',
 		)
 	);
 }
-add_action( 'init', __NAMESPACE__ . '\register_block' );
+
+add_action( 'init', 'Jetpack\Google_Calendar_Block\register_block' );
 
 /**
  * Google Calendar block registration/dependency declaration.
@@ -37,50 +35,32 @@ add_action( 'init', __NAMESPACE__ . '\register_block' );
  * @return string
  */
 function load_assets( $attr ) {
+	$width   = isset( $attr['width'] ) ? $attr['width'] : '800';
 	$height  = isset( $attr['height'] ) ? $attr['height'] : '600';
 	$url     = isset( $attr['url'] )
-		? Jetpack_Gutenberg::validate_block_embed_url( $attr['url'], array( 'calendar.google.com' ) ) :
+		? \Jetpack_Gutenberg::validate_block_embed_url( $attr['url'], array( 'calendar.google.com' ) ) :
 		'';
-	$classes = Blocks::classes( FEATURE_NAME, $attr );
-
-	Jetpack_Gutenberg::load_assets_as_required( FEATURE_NAME );
+	$classes = \Jetpack_Gutenberg::block_classes( 'google-calendar', $attr );
 
 	if ( empty( $url ) ) {
-		return '';
+		return;
 	}
 
-	$sandbox = 'allow-scripts allow-same-origin';
-	if ( Blocks::is_amp_request() ) {
-		$noscript_src = str_replace(
-			'//calendar.google.com/calendar/embed',
-			'//calendar.google.com/calendar/htmlembed',
-			$url
-		);
-
-		$iframe = sprintf(
-			'<amp-iframe src="%1$s" frameborder="0" scrolling="no" height="%2$d" layout="fixed-height" sandbox="%3$s">%4$s%5$s</amp-iframe>',
+	if ( class_exists( 'Jetpack_AMP_Support' ) && \Jetpack_AMP_Support::is_amp_request() ) {
+		return sprintf(
+			'<div class="%1$s"><amp-iframe src="%2$s" frameborder="0" style="border:0" scrolling="no" width="%3$d" height="%4$d" sandbox="allow-scripts allow-same-origin" layout="responsive"></amp-iframe></div>',
+			esc_attr( $classes ),
 			esc_url( $url ),
-			absint( $height ),
-			esc_attr( $sandbox ),
-			sprintf(
-				'<a href="%s" placeholder>%s</a>',
-				esc_url( $url ),
-				esc_html__( 'Google Calendar', 'jetpack' )
-			),
-			sprintf(
-				'<noscript><iframe src="%1$s" frameborder="0" scrolling="no" sandbox="%2$s"></iframe></noscript>',
-				esc_url( $noscript_src ),
-				esc_attr( $sandbox )
-			)
+			absint( $width ),
+			absint( $height )
 		);
 	} else {
-		$iframe = sprintf(
-			'<iframe src="%1$s" frameborder="0" style="border:0" scrolling="no" height="%2$d" width="100%%" sandbox="%3$s"></iframe>',
+		return sprintf(
+			'<div class="%1$s"><iframe src="%2$s" frameborder="0" style="border:0" scrolling="no" width="%3$d" height="%4$d"></iframe></div>',
+			esc_attr( $classes ),
 			esc_url( $url ),
-			absint( $height ),
-			esc_attr( $sandbox )
+			absint( $width ),
+			absint( $height )
 		);
 	}
-
-	return sprintf( '<div class="%s">%s</div>', esc_attr( $classes ), $iframe );
 }

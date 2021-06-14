@@ -25,22 +25,22 @@
  *
  * @link https://support.google.com/webmasters/answer/74288 News sitemap extension.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 3.9.0
  * @since 4.8.0 Remove 1000 post limit.
  * @author Automattic
  */
 
 /* Include all of the sitemap subclasses. */
-require_once __DIR__ . '/sitemap-constants.php';
-require_once __DIR__ . '/sitemap-buffer.php';
-require_once __DIR__ . '/sitemap-stylist.php';
-require_once __DIR__ . '/sitemap-librarian.php';
-require_once __DIR__ . '/sitemap-finder.php';
-require_once __DIR__ . '/sitemap-builder.php';
+require_once dirname( __FILE__ ) . '/sitemap-constants.php';
+require_once dirname( __FILE__ ) . '/sitemap-buffer.php';
+require_once dirname( __FILE__ ) . '/sitemap-stylist.php';
+require_once dirname( __FILE__ ) . '/sitemap-librarian.php';
+require_once dirname( __FILE__ ) . '/sitemap-finder.php';
+require_once dirname( __FILE__ ) . '/sitemap-builder.php';
 
 if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-	require_once __DIR__ . '/sitemap-logger.php';
+	require_once dirname( __FILE__ ) . '/sitemap-logger.php';
 }
 
 /**
