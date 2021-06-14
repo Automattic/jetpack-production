@@ -7,11 +7,11 @@
  * in the sitemaps.
  *
  * @since 4.8.0
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /* Ensure sitemap constants are available. */
-require_once __DIR__ . '/sitemap-constants.php';
+require_once dirname( __FILE__ ) . '/sitemap-constants.php';
 
 /**
  * This object handles any database interaction required

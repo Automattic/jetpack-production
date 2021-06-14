@@ -5,7 +5,7 @@
  * Usage:
  * [kickstarter url="https://www.kickstarter.com/projects/peaktoplateau/yak-wool-baselayers-from-tibet-to-the-world" width="480" height=""]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 add_shortcode( 'kickstarter', 'jetpack_kickstarter_shortcode' );

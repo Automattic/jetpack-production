@@ -32,7 +32,6 @@ class WPCOM_REST_API_V2_Endpoint_Service_API_Keys extends WP_REST_Controller {
 				array(
 					'methods'             => WP_REST_Server::READABLE,
 					'callback'            => array( __CLASS__, 'get_service_api_key' ),
-					'permission_callback' => '__return_true',
 				),
 				array(
 					'methods'             => WP_REST_Server::EDITABLE,
@@ -41,7 +40,7 @@ class WPCOM_REST_API_V2_Endpoint_Service_API_Keys extends WP_REST_Controller {
 					'args'                => array(
 						'service_api_key' => array(
 							'required' => true,
-							'type'     => 'string',
+							'type'     => 'text',
 						),
 					),
 				),

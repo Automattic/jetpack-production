@@ -6,14 +6,11 @@
  * Recommendation Order: 8
  * First Introduced: 1.2
  * Requires Connection: Yes
- * Requires User Connection: Yes
  * Auto Activate: No
  * Module Tags: Social
  * Feature: Engagement
  * Additional Search Queries: subscriptions, subscription, email, follow, followers, subscribers, signup
  */
-
-use Automattic\Jetpack\Connection\XMLRPC_Async_Call;
 
 add_action( 'jetpack_modules_loaded', 'jetpack_subscriptions_load' );
 
@@ -433,7 +430,7 @@ class Jetpack_Subscriptions {
 	 * @since 8.1
 	 */
 	public function social_notifications_subscribe_field() {
-		$checked = (int) ( 'on' === get_option( 'social_notifications_subscribe', 'on' ) );
+		$checked = intval( 'on' === get_option( 'social_notifications_subscribe', 'on' ) );
 		?>
 
 		<label>
@@ -520,7 +517,7 @@ class Jetpack_Subscriptions {
 	 * @param array  $post_ids (optional) defaults to 0 for blog posts only: array of post IDs to subscribe to blog's posts
 	 * @param bool   $async    (optional) Should the subscription be performed asynchronously?  Defaults to true.
 	 *
-	 * @return true|WP_Error true on success
+	 * @return true|Jetpack_Error true on success
 	 *	invalid_email   : not a valid email address
 	 *	invalid_post_id : not a valid post ID
 	 *	unknown_post_id : unknown post
@@ -533,7 +530,7 @@ class Jetpack_Subscriptions {
 	 */
 	function subscribe( $email, $post_ids = 0, $async = true, $extra_data = array() ) {
 		if ( !is_email( $email ) ) {
-			return new WP_Error( 'invalid_email' );
+			return new Jetpack_Error( 'invalid_email' );
 		}
 
 		if ( !$async ) {
@@ -543,13 +540,13 @@ class Jetpack_Subscriptions {
 		foreach ( (array) $post_ids as $post_id ) {
 			$post_id = (int) $post_id;
 			if ( $post_id < 0 ) {
-				return new WP_Error( 'invalid_post_id' );
+				return new Jetpack_Error( 'invalid_post_id' );
 			} else if ( $post_id && !$post = get_post( $post_id ) ) {
-				return new WP_Error( 'unknown_post_id' );
+				return new Jetpack_Error( 'unknown_post_id' );
 			}
 
 			if ( $async ) {
-				XMLRPC_Async_Call::add_call( 'jetpack.subscribeToSite', 0, $email, $post_id, serialize( $extra_data ) ); //phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
+				Jetpack::xmlrpc_async_call( 'jetpack.subscribeToSite', $email, $post_id, serialize( $extra_data ) );
 			} else {
 				$xml->addCall( 'jetpack.subscribeToSite', $email, $post_id, serialize( $extra_data ) );
 			}
@@ -576,28 +573,28 @@ class Jetpack_Subscriptions {
 			}
 
 			if ( !is_array( $response[0] ) || empty( $response[0]['status'] ) ) {
-				$r[] = new WP_Error( 'unknown' );
+				$r[] = new Jetpack_Error( 'unknown' );
 				continue;
 			}
 
 			switch ( $response[0]['status'] ) {
 				case 'error':
-					$r[] = new WP_Error( 'not_subscribed' );
+					$r[] = new Jetpack_Error( 'not_subscribed' );
 					continue 2;
 				case 'disabled':
-					$r[] = new WP_Error( 'disabled' );
+					$r[] = new Jetpack_Error( 'disabled' );
 					continue 2;
 				case 'active':
-					$r[] = new WP_Error( 'active' );
+					$r[] = new Jetpack_Error( 'active' );
 					continue 2;
 				case 'confirming':
 					$r[] = true;
 					continue 2;
 				case 'pending':
-					$r[] = new WP_Error( 'pending' );
+					$r[] = new Jetpack_Error( 'pending' );
 					continue 2;
 				default:
-					$r[] = new WP_Error( 'unknown_status', (string) $response[0]['status'] );
+					$r[] = new Jetpack_Error( 'unknown_status', (string) $response[0]['status'] );
 					continue 2;
 			}
 		}
@@ -616,14 +613,14 @@ class Jetpack_Subscriptions {
 			check_admin_referer( 'blogsub_subscribe_' . get_current_blog_id() );
 		}
 
-		if ( empty( $_REQUEST['email'] ) || ! is_string( $_REQUEST['email'] ) )
+		if ( empty( $_REQUEST['email'] ) )
 			return false;
 
 		$redirect_fragment = false;
 		if ( isset( $_REQUEST['redirect_fragment'] ) ) {
 			$redirect_fragment = preg_replace( '/[^a-z0-9_-]/i', '', $_REQUEST['redirect_fragment'] );
 		}
-		if ( !$redirect_fragment || ! is_string( $redirect_fragment ) ) {
+		if ( !$redirect_fragment ) {
 			$redirect_fragment = 'subscribe-blog';
 		}
 
@@ -835,7 +832,7 @@ class Jetpack_Subscriptions {
 	 * @param bool $subscribe_to_blog Whether the user chose to subscribe to all new posts on the blog.
 	 */
 	function set_cookies( $subscribe_to_post = false, $post_id = null, $subscribe_to_blog = false ) {
-		$post_id = (int) $post_id;
+		$post_id = intval( $post_id );
 
 		/** This filter is already documented in core/wp-includes/comment-functions.php */
 		$cookie_lifetime = apply_filters( 'comment_cookie_lifetime',       30000000 );

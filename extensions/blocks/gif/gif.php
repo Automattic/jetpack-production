@@ -4,12 +4,12 @@
  *
  * @since 7.0.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Gif;
 
-use Automattic\Jetpack\Blocks;
+use Jetpack_AMP_Support;
 use Jetpack_Gutenberg;
 
 const FEATURE_NAME = 'gif';
@@ -21,7 +21,7 @@ const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
  * registration if we need to.
  */
 function register_block() {
-	Blocks::jetpack_register_block(
+	jetpack_register_block(
 		BLOCK_NAME,
 		array( 'render_callback' => __NAMESPACE__ . '\render_block' )
 	);
@@ -48,7 +48,7 @@ function render_block( $attr ) {
 		return null;
 	}
 
-	$classes = Blocks::classes( FEATURE_NAME, $attr );
+	$classes = Jetpack_Gutenberg::block_classes( FEATURE_NAME, $attr );
 
 	$placeholder = sprintf( '<a href="%s">%s</a>', esc_url( $giphy_url ), esc_attr( $search_text ) );
 
@@ -56,7 +56,7 @@ function render_block( $attr ) {
 	?>
 	<div class="<?php echo esc_attr( $classes ); ?>">
 		<figure>
-			<?php if ( Blocks::is_amp_request() ) : ?>
+			<?php if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) : ?>
 				<amp-iframe src="<?php echo esc_url( $giphy_url ); ?>" width="100" height="<?php echo absint( $padding_top ); ?>" sandbox="allow-scripts allow-same-origin" layout="responsive">
 					<div placeholder>
 						<?php echo wp_kses_post( $placeholder ); ?>

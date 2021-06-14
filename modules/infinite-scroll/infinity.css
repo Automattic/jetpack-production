@@ -10,7 +10,7 @@
 #infinite-handle span {
 	background: #333;
 	border-radius: 1px;
-	color: #f0f0f1;
+	color: #eee;
 	cursor: pointer;
 	font-size: 13px;
 	padding: 6px 16px;
@@ -218,7 +218,7 @@
 	text-align: right;
 }
 #infinite-footer .blog-credits a {
-	color: #646970;
+	color: #666;
 }
 
 /**
@@ -257,22 +257,4 @@
 	#infinite-footer {
 		position: static;
 	}
-}
-
-/**
- * Hide infinite aria feedback visually
- */
-#infinite-aria {
-	position: absolute;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	height: 1px; width: 1px;
-	margin: -1px; padding: 0; border: 0;
-}
-
-/**
- * Hide focus on infinite wrappers
- */
-.infinite-wrap:focus {
-	outline: 0 !important;
 }

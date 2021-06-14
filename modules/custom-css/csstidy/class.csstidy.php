@@ -386,7 +386,7 @@ class csstidy {
 		if ($line === -1) {
 			$line = $this->line;
 		}
-		$line = (int) $line;
+		$line = intval($line);
 		$add = array('m' => $message, 't' => $type);
 		if (!isset($this->log[$line]) || !in_array($add, $this->log[$line])) {
 			$this->log[$line][] = $add;

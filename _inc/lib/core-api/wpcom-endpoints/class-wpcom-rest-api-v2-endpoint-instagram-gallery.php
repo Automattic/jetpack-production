@@ -2,7 +2,7 @@
 /**
  * REST API endpoint for the Instagram connections.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 8.5.0
  */
 
@@ -20,15 +20,6 @@ class WPCOM_REST_API_V2_Endpoint_Instagram_Gallery extends WP_REST_Controller {
 	public function __construct() {
 		$this->namespace = 'wpcom/v2';
 		$this->rest_base = 'instagram-gallery';
-		$this->is_wpcom  = false;
-
-		if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-			$this->is_wpcom = true;
-
-			if ( ! class_exists( 'WPCOM_Instagram_Gallery_Helper' ) ) {
-				\jetpack_require_lib( 'instagram-gallery-helper' );
-			}
-		}
 
 		if ( ! class_exists( 'Jetpack_Instagram_Gallery_Helper' ) ) {
 			\jetpack_require_lib( 'class-jetpack-instagram-gallery-helper' );
@@ -45,19 +36,24 @@ class WPCOM_REST_API_V2_Endpoint_Instagram_Gallery extends WP_REST_Controller {
 			$this->namespace,
 			$this->rest_base . '/connect-url',
 			array(
-				'methods'             => WP_REST_Server::READABLE,
-				'callback'            => array( $this, 'get_instagram_connect_url' ),
-				'permission_callback' => '__return_true',
+				'methods'  => WP_REST_Server::READABLE,
+				'callback' => array( $this, 'get_instagram_connect_url' ),
 			)
 		);
 
 		register_rest_route(
 			$this->namespace,
-			$this->rest_base . '/connections',
+			$this->rest_base . '/delete-access-token',
 			array(
-				'methods'             => WP_REST_Server::READABLE,
-				'callback'            => array( $this, 'get_instagram_connections' ),
-				'permission_callback' => 'is_user_logged_in',
+				'args'     => array(
+					'access_token' => array(
+						'description' => __( 'An Instagram Keyring access token.', 'jetpack' ),
+						'type'        => 'string',
+						'required'    => true,
+					),
+				),
+				'methods'  => WP_REST_Server::DELETABLE,
+				'callback' => array( $this, 'delete_instagram_access_token' ),
 			)
 		);
 
@@ -65,7 +61,7 @@ class WPCOM_REST_API_V2_Endpoint_Instagram_Gallery extends WP_REST_Controller {
 			$this->namespace,
 			$this->rest_base . '/gallery',
 			array(
-				'args'                => array(
+				'args'     => array(
 					'access_token' => array(
 						'description' => __( 'An Instagram Keyring access token.', 'jetpack' ),
 						'type'        => 'string',
@@ -80,9 +76,8 @@ class WPCOM_REST_API_V2_Endpoint_Instagram_Gallery extends WP_REST_Controller {
 						},
 					),
 				),
-				'methods'             => WP_REST_Server::READABLE,
-				'callback'            => array( $this, 'get_instagram_gallery' ),
-				'permission_callback' => '__return_true',
+				'methods'  => WP_REST_Server::READABLE,
+				'callback' => array( $this, 'get_instagram_gallery' ),
 			)
 		);
 	}
@@ -93,10 +88,6 @@ class WPCOM_REST_API_V2_Endpoint_Instagram_Gallery extends WP_REST_Controller {
 	 * @return mixed
 	 */
 	public function get_instagram_connect_url() {
-		if ( $this->is_wpcom ) {
-			return WPCOM_Instagram_Gallery_Helper::get_connect_url();
-		}
-
 		$site_id = Jetpack_Instagram_Gallery_Helper::get_site_id();
 		if ( is_wp_error( $site_id ) ) {
 			return $site_id;
@@ -121,34 +112,34 @@ class WPCOM_REST_API_V2_Endpoint_Instagram_Gallery extends WP_REST_Controller {
 	}
 
 	/**
-	 * Get a list of stored Instagram connections for the current user.
-	 *
+	 * Delete a stored Instagram access token.
+
+	 * @param  WP_REST_Request $request The request.
 	 * @return mixed
 	 */
-	public function get_instagram_connections() {
-		if ( $this->is_wpcom ) {
-			return WPCOM_Instagram_Gallery_Helper::get_connections();
+	public function delete_instagram_access_token( $request ) {
+		$site_id = Jetpack_Instagram_Gallery_Helper::get_site_id();
+		if ( is_wp_error( $site_id ) ) {
+			return $site_id;
 		}
 
-		$response = Client::wpcom_json_api_request_as_user( '/me/connections' );
+		$path     = sprintf( '/sites/%d/instagram/%s', $site_id, $request['access_token'] );
+		$response = Client::wpcom_json_api_request_as_blog(
+			$path,
+			2,
+			array(
+				'headers' => array( 'content-type' => 'application/json' ),
+				'method'  => 'DELETE',
+			),
+			null,
+			'wpcom'
+		);
 		if ( is_wp_error( $response ) ) {
 			return $response;
 		}
-		$body = json_decode( wp_remote_retrieve_body( $response ) );
+		$response_code = wp_remote_retrieve_response_code( $response );
 
-		$connections = array();
-
-		if ( isset( $body->connections ) && is_array( $body->connections ) ) {
-			foreach ( $body->connections as $connection ) {
-				if ( 'instagram-basic-display' === $connection->service && 'ok' === $connection->status ) {
-					$connections[] = array(
-						'token'    => (string) $connection->ID,
-						'username' => $connection->external_name,
-					);
-				}
-			}
-		}
-		return $connections;
+		return $response_code;
 	}
 
 	/**

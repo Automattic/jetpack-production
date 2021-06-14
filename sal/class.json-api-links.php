@@ -22,9 +22,7 @@ class WPCOM_JSON_API_Links {
 		$this->api = WPCOM_JSON_API::init();
 	}
 	private function __clone() { }
-	public function __wakeup() {
-		die( "Please don't __wakeup WPCOM_JSON_API_Links" );
-	}
+	private function __wakeup() { }
 
 	/**
 	 * Generate a URL to an endpoint

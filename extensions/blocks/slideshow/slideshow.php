@@ -4,12 +4,12 @@
  *
  * @since 7.1.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Slideshow;
 
-use Automattic\Jetpack\Blocks;
+use Jetpack_AMP_Support;
 use Jetpack_Gutenberg;
 
 const FEATURE_NAME = 'slideshow';
@@ -21,7 +21,7 @@ const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
  * registration if we need to.
  */
 function register_block() {
-	Blocks::jetpack_register_block(
+	jetpack_register_block(
 		BLOCK_NAME,
 		array( 'render_callback' => __NAMESPACE__ . '\load_assets' )
 	);
@@ -38,7 +38,7 @@ add_action( 'init', __NAMESPACE__ . '\register_block' );
  */
 function load_assets( $attr, $content ) {
 	Jetpack_Gutenberg::load_assets_as_required( FEATURE_NAME );
-	if ( Blocks::is_amp_request() ) {
+	if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
 		return render_amp( $attr );
 	}
 	return $content;
@@ -52,21 +52,18 @@ function load_assets( $attr, $content ) {
  * @return string
  */
 function render_amp( $attr ) {
-	if ( empty( $attr['ids'] ) ) {
-		return '';
-	}
-
 	static $wp_block_jetpack_slideshow_id = 0;
 	$wp_block_jetpack_slideshow_id++;
 
-	$ids      = $attr['ids'];
-	$autoplay = empty( $attr['autoplay'] ) ? false : true;
-	$extras   = array(
+	$ids      = empty( $attr['ids'] ) ? array() : $attr['ids'];
+	$autoplay = empty( $attr['autoplay'] ) ? false : $attr['autoplay'];
+
+	$extras  = array(
 		'wp-amp-block',
 		$autoplay ? 'wp-block-jetpack-slideshow__autoplay' : null,
 		$autoplay ? 'wp-block-jetpack-slideshow__autoplay-playing' : null,
 	);
-	$classes  = Blocks::classes( FEATURE_NAME, $attr, $extras );
+	$classes = Jetpack_Gutenberg::block_classes( FEATURE_NAME, $attr, $extras );
 
 	return sprintf(
 		'<div class="%1$s" id="wp-block-jetpack-slideshow__%2$d"><div class="wp-block-jetpack-slideshow_container swiper-container">%3$s%4$s%5$s</div></div>',
@@ -116,7 +113,7 @@ function amp_carousel( $attr, $block_ordinal ) {
  */
 function slides( $ids = array(), $width = 400, $height = 300 ) {
 	return array_map(
-		function ( $id ) use ( $width, $height ) {
+		function( $id ) use ( $width, $height ) {
 			$caption    = wp_get_attachment_caption( $id );
 			$figcaption = $caption ? sprintf(
 				'<figcaption class="wp-block-jetpack-slideshow_caption gallery-caption">%s</figcaption>',
@@ -151,7 +148,7 @@ function slides( $ids = array(), $width = 400, $height = 300 ) {
  */
 function bullets( $ids = array(), $block_ordinal = 0 ) {
 	$buttons = array_map(
-		function ( $index ) {
+		function( $index ) {
 			$aria_label = sprintf(
 				/* translators: %d: Slide number. */
 				__( 'Go to slide %d', 'jetpack' ),

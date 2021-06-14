@@ -2,7 +2,7 @@
 /**
  * WP Site Health functionality temporarily stored in this file until all of Jetpack is PHP 5.3+
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 use Automattic\Jetpack\Sync\Modules;
@@ -35,26 +35,13 @@ function jetpack_debugger_site_status_tests( $core_tests ) {
 
 		$core_tests['direct'][ $test['name'] ] = array(
 			'label' => __( 'Jetpack: ', 'jetpack' ) . $test['name'],
-			/**
-			 * Callable for Core's Site Health system to execute.
-			 *
-			 * @param array $test A Jetpack Testing Suite test array.
-			 * @param Jetpack_Cxn_Tests $cxn_tests An instance of the Jetpack Test Suite.
-			 *
-			 * @return array {
-			 *      A results array to match the format expected by WordPress Core.
-			 *
-			 *      @type string $label Name for the test.
-			 *      @type string $status 'critical', 'recommended', or 'good'.
-			 *      @type array $badge Array for Site Health status. Keys label and color.
-			 *      @type string $description Description of the test result.
-			 *      @type string $action HTML to a link to resolve issue.
-			 *      @type string $test Unique test identifier.
-			 *  }
-			 */
-			'test'  => function () use ( $test, $cxn_tests ) {
+			'test'  => function() use ( $test, $cxn_tests ) { // phpcs:ignore PHPCompatibility.FunctionDeclarations.NewClosure.Found
 				$results = $cxn_tests->run_test( $test['name'] );
 				if ( is_wp_error( $results ) ) {
+					return;
+				}
+
+				if ( isset( $results['show_in_site_health'] ) && false === $results['show_in_site_health'] ) {
 					return;
 				}
 
@@ -177,7 +164,7 @@ function jetpack_debugger_sync_progress_ajax() {
 		echo 'done';
 		wp_die();
 	}
-	echo (int) $progress_percent;
+	echo intval( $progress_percent );
 	wp_die();
 }
 

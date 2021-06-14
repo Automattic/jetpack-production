@@ -1,8 +1,8 @@
 /* globals infiniteScroll, _wpmejsSettings, ga, _gaq, WPCOM_sharing_counts, MediaElementPlayer */
-( function () {
+( function() {
 	// Open closure.
 	// Local vars.
-	var Scroller, ajaxurl, stats, type, text, totop, loading_text;
+	var Scroller, ajaxurl, stats, type, text, totop;
 
 	// IE requires special handling
 	var isIE = -1 != navigator.userAgent.search( 'MSIE' );
@@ -22,7 +22,7 @@
 	/**
 	 * Loads new posts when users scroll near the bottom of the page.
 	 */
-	Scroller = function ( settings ) {
+	Scroller = function( settings ) {
 		var self = this;
 
 		// Initialize our variables
@@ -68,14 +68,14 @@
 			// Throttle to check for such case every 300ms
 
 			// On event the case becomes a fact
-			this.window.addEventListener( 'scroll', function () {
+			this.window.addEventListener( 'scroll', function() {
 				self.throttle = true;
 			} );
 
 			// Go back top method
 			self.gotop();
 
-			setInterval( function () {
+			setInterval( function() {
 				if ( self.throttle ) {
 					// Once the case is the case, the action occurs and the fact is no more
 					self.throttle = false;
@@ -95,7 +95,7 @@
 				this.element.appendChild( this.handle );
 			}
 
-			this.handle.addEventListener( 'click', function () {
+			this.handle.addEventListener( 'click', function() {
 				// Handle the handle
 				if ( self.click_handle ) {
 					self.handle.parentNode.removeChild( self.handle );
@@ -113,14 +113,14 @@
 	/**
 	 * Normalize the access to the document scrollTop value.
 	 */
-	Scroller.prototype.getScrollTop = function () {
+	Scroller.prototype.getScrollTop = function() {
 		return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 	};
 
 	/**
 	 * Polyfill jQuery.extend.
 	 */
-	Scroller.prototype.extend = function ( out ) {
+	Scroller.prototype.extend = function( out ) {
 		out = out || {};
 
 		for ( var i = 1; i < arguments.length; i++ ) {
@@ -140,7 +140,7 @@
 	/**
 	 * Check whether we should fetch any additional posts.
 	 */
-	Scroller.prototype.check = function () {
+	Scroller.prototype.check = function() {
 		var wrapperMeasurements = this.measure( this.element, [ this.wrapperClass ] );
 
 		// Fetch more posts when we're less than 2 screens away from the bottom.
@@ -150,7 +150,7 @@
 	/**
 	 * Renders the results from a successful response.
 	 */
-	Scroller.prototype.render = function ( response ) {
+	Scroller.prototype.render = function( response ) {
 		var childrenToAppend = Array.prototype.slice.call( response.fragment.childNodes );
 		this.body.classList.add( 'infinity-success' );
 
@@ -171,7 +171,7 @@
 	/**
 	 * Returns the object used to query for new posts.
 	 */
-	Scroller.prototype.query = function () {
+	Scroller.prototype.query = function() {
 		return {
 			page: this.page + this.offset, // Load the next page.
 			currentday: this.currentday,
@@ -184,7 +184,7 @@
 		};
 	};
 
-	Scroller.prototype.animate = function ( cb, duration ) {
+	Scroller.prototype.animate = function( cb, duration ) {
 		var start = performance.now();
 
 		requestAnimationFrame( function animate( time ) {
@@ -200,7 +200,7 @@
 	/**
 	 * Scroll back to top.
 	 */
-	Scroller.prototype.gotop = function () {
+	Scroller.prototype.gotop = function() {
 		var blog = document.getElementById( 'infinity-blog-title' );
 		var self = this;
 
@@ -209,11 +209,11 @@
 		}
 
 		blog.setAttribute( 'title', totop );
-		blog.addEventListener( 'click', function ( e ) {
+		blog.addEventListener( 'click', function( e ) {
 			var sourceScroll = self.window.pageYOffset;
 			e.preventDefault();
 
-			self.animate( function ( progress ) {
+			self.animate( function( progress ) {
 				var currentScroll = sourceScroll - sourceScroll * progress;
 				document.documentElement.scrollTop = document.body.scrollTop = currentScroll;
 			}, 200 );
@@ -223,7 +223,7 @@
 	/**
 	 * The infinite footer.
 	 */
-	Scroller.prototype.thefooter = function () {
+	Scroller.prototype.thefooter = function() {
 		var self = this,
 			pageWrapper,
 			footerContainer,
@@ -260,7 +260,7 @@
 		targetBottom = this.window.pageYOffset >= 350 ? 0 : -50;
 
 		if ( sourceBottom !== targetBottom ) {
-			self.animate( function ( progress ) {
+			self.animate( function( progress ) {
 				var currentBottom = sourceBottom + ( targetBottom - sourceBottom ) * progress;
 				self.footer.el.style.bottom = currentBottom + 'px';
 
@@ -274,7 +274,7 @@
 	/**
 	 * Recursively convert a JS object into URL encoded data.
 	 */
-	Scroller.prototype.urlEncodeJSON = function ( obj, prefix ) {
+	Scroller.prototype.urlEncodeJSON = function( obj, prefix ) {
 		var params = [],
 			encodedKey,
 			newPrefix;
@@ -300,7 +300,7 @@
 	/**
 	 * Controls the flow of the refresh. Don't mess.
 	 */
-	Scroller.prototype.refresh = function () {
+	Scroller.prototype.refresh = function() {
 		var self = this,
 			query,
 			xhr,
@@ -319,7 +319,6 @@
 		// Create a loader element to show it's working.
 		if ( this.click_handle ) {
 			if ( ! loader ) {
-				document.getElementById( 'infinite-aria' ).textContent = loading_text;
 				loader = document.createElement( 'div' );
 				loader.classList.add( 'infinite-loader' );
 				loader.setAttribute( 'role', 'progress' );
@@ -342,7 +341,7 @@
 			customized = {};
 			query.wp_customize = 'on';
 			query.theme = wp.customize.settings.theme.stylesheet;
-			wp.customize.each( function ( setting ) {
+			wp.customize.each( function( setting ) {
 				if ( setting._dirty ) {
 					customized[ setting.id ] = setting();
 				}
@@ -354,12 +353,11 @@
 		// Fire the ajax request.
 		xhr = new XMLHttpRequest();
 		xhr.open( 'POST', infiniteScroll.settings.ajaxurl, true );
-		xhr.setRequestHeader( 'X-Requested-With', 'XMLHttpRequest' );
 		xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8' );
 		xhr.send( self.urlEncodeJSON( query ) );
 
 		// Allow refreshes to occur again if an error is triggered.
-		xhr.onerror = function () {
+		xhr.onerror = function() {
 			if ( self.click_handle ) {
 				loader.parentNode.removeChild( loader );
 			}
@@ -368,15 +366,12 @@
 		};
 
 		// Success handler
-		xhr.onload = function () {
+		xhr.onload = function() {
 			var response = JSON.parse( xhr.responseText ),
 				httpCheck = xhr.status >= 200 && xhr.status < 300,
 				responseCheck = 'undefined' !== typeof response.html;
 
 			if ( ! response || ! httpCheck || ! responseCheck ) {
-				if ( self.click_handle ) {
-					loader.parentNode.removeChild( loader );
-				}
 				return;
 			}
 
@@ -387,7 +382,7 @@
 
 			// If additional scripts are required by the incoming set of posts, parse them
 			if ( response.scripts && Array.isArray( response.scripts ) ) {
-				response.scripts.forEach( function ( item ) {
+				response.scripts.forEach( function( item ) {
 					var elementToAppendTo = item.footer ? 'body' : 'head';
 
 					// Add script handle to list of those already parsed
@@ -395,11 +390,15 @@
 
 					// Output extra data, if present
 					if ( item.extra_data ) {
-						self.appendInlineScript( item.extra_data, elementToAppendTo );
-					}
+						var data = document.createElement( 'script' ),
+							dataContent = document.createTextNode(
+								'//<![CDATA[ \n' + item.extra_data + '\n//]]>'
+							);
 
-					if ( item.before_handle ) {
-						self.appendInlineScript( item.before_handle, elementToAppendTo );
+						data.type = 'text/javascript';
+						data.appendChild( dataContent );
+
+						document.getElementsByTagName( elementToAppendTo )[ 0 ].appendChild( data );
 					}
 
 					// Build script tag and append to DOM in requested location
@@ -411,12 +410,6 @@
 					// Dynamically loaded scripts are async by default.
 					// We don't want that, it breaks stuff, e.g. wp-mediaelement init.
 					script.async = false;
-
-					if ( item.after_handle ) {
-						script.onload = function () {
-							self.appendInlineScript( item.after_handle, elementToAppendTo );
-						};
-					}
 
 					// If MediaElement.js is loaded in by item set of posts, don't initialize the players a second time as it breaks them all
 					if ( 'wp-mediaelement' === item.handle ) {
@@ -436,7 +429,7 @@
 
 			// If additional stylesheets are required by the incoming set of posts, parse them
 			if ( response.styles && Array.isArray( response.styles ) ) {
-				response.styles.forEach( function ( item ) {
+				response.styles.forEach( function( item ) {
 					// Add stylesheet handle to list of those already parsed
 					window.infiniteScroll.settings.styles.push( item.handle );
 
@@ -489,17 +482,6 @@
 
 			// If 'click' type and there are still posts to fetch, add back the handle
 			if ( type == 'click' ) {
-				// add focus to new posts, only in button mode as we know where page focus currently is and only if we have a wrapper
-				if ( infiniteScroll.settings.wrapper ) {
-					document
-						.querySelector(
-							'#infinite-view-' + ( self.page + self.offset - 1 ) + ' a:first-of-type'
-						)
-						.focus( {
-							preventScroll: true,
-						} );
-				}
-
 				if ( response.lastbatch ) {
 					if ( self.click_handle ) {
 						// Update body classes
@@ -543,30 +525,10 @@
 	};
 
 	/**
-	 * Given JavaScript blob and the name of a parent tag, this helper function will
-	 * generate a script tag, insert the JavaScript blob, and append it to the parent.
-	 *
-	 * It's important to note that the JavaScript blob will be evaluated immediately. If
-	 * you need a parent script to load first, use that script element's onload handler.
-	 *
-	 * @param {string} script    The blob of JavaScript to run.
-	 * @param {string} parentTag The tag name of the parent element.
-	 */
-	Scroller.prototype.appendInlineScript = function ( script, parentTag ) {
-		var element = document.createElement( 'script' ),
-			scriptContent = document.createTextNode( '//<![CDATA[ \n' + script + '\n//]]>' );
-
-		element.type = 'text/javascript';
-		element.appendChild( scriptContent );
-
-		document.getElementsByTagName( parentTag )[ 0 ].appendChild( element );
-	};
-
-	/**
 	 * Core's native media player uses MediaElement.js
 	 * The library's size is sufficient that it may not be loaded in time for Core's helper to invoke it, so we need to delay until `mejs` exists.
 	 */
-	Scroller.prototype.maybeLoadMejs = function () {
+	Scroller.prototype.maybeLoadMejs = function() {
 		if ( null === this.wpMediaelement ) {
 			return;
 		}
@@ -587,7 +549,7 @@
 	/**
 	 * Initialize the MediaElement.js player for any posts not previously initialized
 	 */
-	Scroller.prototype.initializeMejs = function ( e ) {
+	Scroller.prototype.initializeMejs = function( e ) {
 		// Are there media players in the incoming set of posts?
 		if (
 			! e.detail ||
@@ -612,12 +574,12 @@
 			settings.pluginPath = _wpmejsSettings.pluginPath;
 		}
 
-		settings.success = function ( mejs ) {
+		settings.success = function( mejs ) {
 			var autoplay = mejs.attributes.autoplay && 'false' !== mejs.attributes.autoplay;
 			if ( 'flash' === mejs.pluginType && autoplay ) {
 				mejs.addEventListener(
 					'canplay',
-					function () {
+					function() {
 						mejs.play();
 					},
 					false
@@ -629,7 +591,7 @@
 		audioVideoElements = Array.prototype.slice.call( audioVideoElements );
 
 		// Only process already unprocessed shortcodes.
-		audioVideoElements = audioVideoElements.filter( function ( el ) {
+		audioVideoElements = audioVideoElements.filter( function( el ) {
 			while ( el.parentNode ) {
 				if ( el.classList.contains( 'mejs-container' ) ) {
 					return false;
@@ -649,7 +611,7 @@
 	 *
 	 * @returns {object}
 	 */
-	Scroller.prototype.measure = function ( element, expandClasses ) {
+	Scroller.prototype.measure = function( element, expandClasses ) {
 		expandClasses = expandClasses || [];
 
 		var childrenToTest = Array.prototype.slice.call( element.children );
@@ -705,7 +667,7 @@
 	 * On large displays, or when posts are very short, the viewport may not be filled with posts,
 	 * so we overcome this by loading additional posts when IS initializes.
 	 */
-	Scroller.prototype.ensureFilledViewport = function () {
+	Scroller.prototype.ensureFilledViewport = function() {
 		var self = this,
 			windowHeight = self.window.innerHeight,
 			wrapperMeasurements = self.measure( self.element, [ self.wrapperClass ] );
@@ -724,7 +686,7 @@
 	 * Event handler for ensureFilledViewport(), tied to the post-load trigger.
 	 * Necessary to ensure that the variable `this` contains the scroller when used in ensureFilledViewport(). Since this function is tied to an event, `this` becomes the DOM element the event is tied to.
 	 */
-	Scroller.prototype.checkViewportOnLoad = function () {
+	Scroller.prototype.checkViewportOnLoad = function() {
 		this.ensureFilledViewport();
 	};
 
@@ -742,7 +704,7 @@
 	/**
 	 * Identify archive page that corresponds to majority of posts shown in the current browser window.
 	 */
-	Scroller.prototype.determineURL = function () {
+	Scroller.prototype.determineURL = function() {
 		var self = this,
 			pageNum = -1,
 			currentFullScreenState = fullscreenState(),
@@ -788,7 +750,7 @@
 	 * Update address bar to reflect archive page URL for a given page number.
 	 * Checks if URL is different to prevent pollution of browser history.
 	 */
-	Scroller.prototype.updateURL = function ( page ) {
+	Scroller.prototype.updateURL = function( page ) {
 		// IE only supports pushState() in v10 and above, so don't bother if those conditions aren't met.
 		if ( ! window.history.pushState ) {
 			return;
@@ -813,14 +775,14 @@
 	/**
 	 * Pause scrolling.
 	 */
-	Scroller.prototype.pause = function () {
+	Scroller.prototype.pause = function() {
 		this.disabled = true;
 	};
 
 	/**
 	 * Resume scrolling.
 	 */
-	Scroller.prototype.resume = function () {
+	Scroller.prototype.resume = function() {
 		this.disabled = false;
 	};
 
@@ -831,7 +793,7 @@
 	 * @param {string} eventName
 	 * @param {*}      data
 	 */
-	Scroller.prototype.trigger = function ( el, eventName, opts ) {
+	Scroller.prototype.trigger = function( el, eventName, opts ) {
 		opts = opts || {};
 
 		/**
@@ -861,7 +823,7 @@
 	/**
 	 * Ready, set, go!
 	 */
-	var jetpackInfinityModule = function () {
+	var jetpackInfinityModule = function() {
 		var bodyClasses = infiniteScroll.settings.body_class.split( ' ' );
 
 		// Check for our variables
@@ -869,7 +831,7 @@
 			return;
 		}
 
-		bodyClasses.forEach( function ( className ) {
+		bodyClasses.forEach( function( className ) {
 			if ( className ) {
 				document.body.classList.add( className );
 			}
@@ -886,9 +848,6 @@
 		text = infiniteScroll.settings.text;
 		totop = infiniteScroll.settings.totop;
 
-		// aria text
-		loading_text = infiniteScroll.settings.loading_text;
-
 		// Initialize the scroller (with the ID of the element from the theme)
 		infiniteScroll.scroller = new Scroller( infiniteScroll.settings );
 
@@ -897,12 +856,12 @@
 		 */
 		if ( type == 'click' ) {
 			var timer = null;
-			window.addEventListener( 'scroll', function () {
+			window.addEventListener( 'scroll', function() {
 				// run the real scroll handler once every 250 ms.
 				if ( timer ) {
 					return;
 				}
-				timer = setTimeout( function () {
+				timer = setTimeout( function() {
 					infiniteScroll.scroller.determineURL();
 					timer = null;
 				}, 250 );

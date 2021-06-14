@@ -31,7 +31,7 @@ div.sharedaddy h3.sd-title:before {
 	display: block;
 	width: 100%;
 	min-width: 30px;
-	border-top: 1px solid #dcdcde;
+	border-top: 1px solid #ddd;
 	margin-bottom: 1em;
 }
 
@@ -45,12 +45,9 @@ body.highlander-dark h3.sd-title:before {
 
 
 /* Sharing services list */
-.sd-sharing {
-	margin-bottom: 1em;
-}
 .sd-content ul {
 	padding: 0 !important;
-	margin: 0 !important;
+	margin: 0 0 .7em 0 !important;
 	list-style: none !important;
 }
 
@@ -145,7 +142,7 @@ body.highlander-dark h3.sd-title:before {
 .sd-social-official .sd-content>ul>li .digg_button>a:hover,
 .sd-social-official .sd-content>ul>li .digg_button>a:active {
 	color: #555;
-	background: #f6f7f7;
+	background: #fafafa;
 	border: 1px solid #999999;
 }
 
@@ -621,7 +618,7 @@ body .sd-social-icon .sd-content li.share-custom a span {
 }
 
 .sd-social-icon .sd-content ul li[class*='share-'].share-press-this a.sd-button {
-	background: #4f94d4;
+	background: #1e8cbe;
 	color: #fff !important;
 }
 
@@ -665,7 +662,7 @@ body .sd-social-icon .sd-content li.share-custom a span {
 .sharing-screen-reader-text:hover,
 .sharing-screen-reader-text:active,
 .sharing-screen-reader-text:focus {
-	background-color: #f0f0f1;
+	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
@@ -755,14 +752,4 @@ div.sharedaddy.sharedaddy-dark #sharing_email {
 	width: 312px;
 	height: 123px;
 	margin: 0 0 1em 0;
-}
-
-.sd-content .share-customize-link {
-	margin-top: 0em;
-	line-height: 11px;
-}
-
-.sd-content .share-customize-link a {
-	font-size: 11px;
-	font-family: "Open Sans", sans-serif;
 }

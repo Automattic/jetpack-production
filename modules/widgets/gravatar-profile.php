@@ -1,5 +1,7 @@
 <?php
 
+use Automattic\Jetpack\Redirect;
+
 /**
  * Register the widget for use in Appearance -> Widgets
  */
@@ -268,7 +270,7 @@ class Jetpack_Gravatar_Profile_Widget extends WP_Widget {
 			$profile_url = admin_url( 'profile.php' );
 
 			if ( isset( $_REQUEST['calypso'] ) ) {
-				$profile_url = 'https://wordpress.com/me';
+				$profile_url = Redirect::get_url( 'calypso-me' );
 			}
 		}
 		?>
@@ -349,7 +351,7 @@ class Jetpack_Gravatar_Profile_Widget extends WP_Widget {
 
 		$instance['title']               = isset( $new_instance['title'] ) ? wp_kses( $new_instance['title'], array() ) : '';
 		$instance['email']               = isset( $new_instance['email'] ) ? wp_kses( $new_instance['email'], array() ) : '';
-		$instance['email_user']          = isset( $new_instance['email_user'] ) ? (int) $new_instance['email_user'] : -1;
+		$instance['email_user']          = isset( $new_instance['email_user'] ) ? intval( $new_instance['email_user'] ) : -1;
 		$instance['show_personal_links'] = isset( $new_instance['show_personal_links'] ) ? (bool) $new_instance['show_personal_links'] : false;
 		$instance['show_account_links']  = isset( $new_instance['show_account_links'] ) ? (bool) $new_instance['show_account_links'] : false;
 
