@@ -53,7 +53,7 @@ use Automattic\Jetpack\Assets;
  *   properly, however.
  * - Exiting fullscreen mode will not properly reset the scroll locations in Safari
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 if ( ! class_exists( 'Presentations' ) ) :
@@ -89,10 +89,10 @@ if ( ! class_exists( 'Presentations' ) ) :
 			$this->scripts_and_style_included = false;
 
 			// Registers shortcodes.
-			add_action( 'wp_head', array( $this, 'add_scripts' ), 1 );
+			add_action( 'wp_head', array( &$this, 'add_scripts' ), 1 );
 
-			add_shortcode( 'presentation', array( $this, 'presentation_shortcode' ) );
-			add_shortcode( 'slide', array( $this, 'slide_shortcode' ) );
+			add_shortcode( 'presentation', array( &$this, 'presentation_shortcode' ) );
+			add_shortcode( 'slide', array( &$this, 'slide_shortcode' ) );
 		}
 
 		/**

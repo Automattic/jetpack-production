@@ -3,7 +3,7 @@
  * REST API Compatibility: bbPress & Jetpack
  * Enables bbPress to work with the Jetpack REST API
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**

@@ -2,7 +2,7 @@
 /**
  * Base class for Jetpack's debugging tests.
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 use Automattic\Jetpack\Status;
@@ -15,7 +15,7 @@ use Automattic\Jetpack\Status;
  * Individual tests should be added to the class-jetpack-cxn-tests.php file.
  *
  * @author Brandon Kraft
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -527,7 +527,7 @@ class Jetpack_Cxn_Test_Base {
 
 		$public_key = openssl_get_publickey( JETPACK__DEBUGGER_PUBLIC_KEY );
 
-		if ( $public_key && openssl_seal( $data, $encrypted_data, $env_key, array( $public_key ), 'RC4' ) ) {
+		if ( $public_key && openssl_seal( $data, $encrypted_data, $env_key, array( $public_key ) ) ) {
 			// We are returning base64-encoded values to ensure they're characters we can use in JSON responses without issue.
 			$return = array(
 				'data'   => base64_encode( $encrypted_data ), // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
@@ -536,10 +536,7 @@ class Jetpack_Cxn_Test_Base {
 			);
 		}
 
-		// openssl_free_key was deprecated as no longer needed in PHP 8.0+. Can remove when PHP 8.0 is our minimum. (lol).
-		if ( PHP_VERSION_ID < 80000 ) {
-			openssl_free_key( $public_key ); // phpcs:ignore PHPCompatibility.FunctionUse.RemovedFunctions.openssl_free_keyDeprecated
-		}
+		openssl_free_key( $public_key );
 
 		return $return;
 	}

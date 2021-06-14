@@ -8,7 +8,7 @@
  * @link https://ogp.me/
  * @link https://developers.facebook.com/docs/opengraph/
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 add_action( 'wp_head', 'jetpack_og_tags' );
@@ -130,14 +130,12 @@ function jetpack_og_tags() {
 			/*
 			 * If the post author set an excerpt, use that.
 			 * Otherwise, pick the post content that comes before the More tag if there is one.
-			 * Do not use the post content if it contains premium content.
 			 */
-			if ( ! empty( $data->post_excerpt ) ) {
-				$tags['og:description'] = jetpack_og_get_description( $data->post_excerpt );
-			} elseif ( ! has_block( 'premium-content/container', $data->post_content ) ) {
-				$excerpt                = explode( '<!--more-->', $data->post_content )[0];
-				$tags['og:description'] = jetpack_og_get_description( $excerpt );
-			}
+			$excerpt = ! empty( $data->post_excerpt )
+				? $data->post_excerpt
+				: explode( '<!--more-->', $data->post_content )[0];
+
+			$tags['og:description'] = jetpack_og_get_description( $excerpt );
 		}
 
 		$tags['article:published_time'] = gmdate( 'c', strtotime( $data->post_date_gmt ) );
@@ -255,23 +253,7 @@ function jetpack_og_tags() {
 			if ( empty( $tag_content_single ) ) {
 				continue; // Don't ever output empty tags.
 			}
-
-			switch ( $tag_property ) {
-				case 'og:url':
-				case 'og:image':
-				case 'og:image:url':
-				case 'og:image:secure_url':
-				case 'og:audio':
-				case 'og:audio:url':
-				case 'og:audio:secure_url':
-				case 'og:video':
-				case 'og:video:url':
-				case 'og:video:secure_url':
-					$og_tag = sprintf( '<meta property="%s" content="%s" />', esc_attr( $tag_property ), esc_url( $tag_content_single ) );
-					break;
-				default:
-					$og_tag = sprintf( '<meta property="%s" content="%s" />', esc_attr( $tag_property ), esc_attr( $tag_content_single ) );
-			}
+			$og_tag = sprintf( '<meta property="%s" content="%s" />', esc_attr( $tag_property ), esc_attr( $tag_content_single ) );
 			/**
 			 * Filter the HTML Output of each Open Graph Meta tag.
 			 *
@@ -334,21 +316,23 @@ function jetpack_og_get_image( $width = 200, $height = 200, $deprecated = null )
 
 		// Attempt to find something good for this post using our generalized PostImages code.
 		if ( empty( $image ) && class_exists( 'Jetpack_PostImages' ) ) {
-			$post_image = Jetpack_PostImages::get_image(
+			$post_images = Jetpack_PostImages::get_images(
 				get_the_ID(),
 				array(
 					'width'  => $width,
 					'height' => $height,
 				)
 			);
-			if ( ! empty( $post_image ) && is_array( $post_image ) ) {
-				$image['src'] = $post_image['src'];
-				if ( isset( $post_image['src_width'], $post_image['src_height'] ) ) {
-					$image['width']  = $post_image['src_width'];
-					$image['height'] = $post_image['src_height'];
-				}
-				if ( ! empty( $post_image['alt_text'] ) ) {
-					$image['alt_text'] = $post_image['alt_text'];
+			if ( $post_images && ! is_wp_error( $post_images ) ) {
+				foreach ( (array) $post_images as $post_image ) {
+					$image['src'] = $post_image['src'];
+					if ( isset( $post_image['src_width'], $post_image['src_height'] ) ) {
+						$image['width']  = $post_image['src_width'];
+						$image['height'] = $post_image['src_height'];
+					}
+					if ( ! empty( $post_image['alt_text'] ) ) {
+						$image['alt_text'] = $post_image['alt_text'];
+					}
 				}
 			}
 		}
@@ -416,6 +400,7 @@ function jetpack_og_get_image( $width = 200, $height = 200, $deprecated = null )
 
 	return $image;
 }
+
 
 /**
  * Validate the width and height against required width and height

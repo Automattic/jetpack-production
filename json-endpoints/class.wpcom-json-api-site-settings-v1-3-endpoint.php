@@ -65,9 +65,11 @@ new WPCOM_JSON_API_Site_Settings_V1_3_Endpoint( array(
 		'social_notifications_reblog'             => '(bool) Email me when someone reblogs my post?',
 		'social_notifications_subscribe'          => '(bool) Email me when someone follows my blog?',
 		'comment_moderation'                      => '(bool) Moderate comments for manual approval?',
+		'comment_whitelist'                       => '(bool) Moderate comments unless author has a previously-approved comment?', // Now deprecated. Replaced by comment_previously_approved https://wp.me/p2AvED-lv6 Remove when minimum required is WordPress 5.5.
 		'comment_previously_approved'             => '(bool) Moderate comments unless author has a previously-approved comment?',
 		'comment_max_links'                       => '(int) Moderate comments that contain X or more links',
 		'moderation_keys'                         => '(string) Words or phrases that trigger comment moderation, one per line',
+		'blacklist_keys'                          => '(string) Words or phrases that mark comment spam, one per line', // Now deprecated. Replaced by disallowed_keys https://wp.me/p2AvED-lv6 Remove when minimum required is WordPress 5.5.
 		'disallowed_keys'                         => '(string) Words or phrases that mark comment spam, one per line',
 		'lang_id'                                 => '(int) ID for language blog is written in',
 		'locale'                                  => '(string) locale code for language blog is written in',
@@ -93,7 +95,7 @@ new WPCOM_JSON_API_Site_Settings_V1_3_Endpoint( array(
 		'jetpack_portfolio_posts_per_page'        => '(int) Number of portfolio projects to show per page',
 		Jetpack_SEO_Utils::FRONT_PAGE_META_OPTION => '(string) The SEO meta description for the site.',
 		Jetpack_SEO_Titles::TITLE_FORMATS_OPTION  => '(array) SEO meta title formats. Allowed keys: front_page, posts, pages, groups, archives',
-		'verification_services_codes'             => '(array) Website verification codes. Allowed keys: google, pinterest, bing, yandex, facebook',
+		'verification_services_codes'             => '(array) Website verification codes. Allowed keys: google, pinterest, bing, yandex',
 		'amp_is_enabled'                          => '(bool) Whether AMP is enabled for this site',
 		'podcasting_archive'                      => '(string) The post category, if any, used for publishing podcasts',
 		'site_icon'                               => '(int) Media attachment ID to use as site icon. Set to zero or an otherwise empty value to clear',

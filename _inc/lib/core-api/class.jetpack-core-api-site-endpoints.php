@@ -2,7 +2,7 @@
 /**
  * List of /site core REST API endpoints used in Jetpack's dashboard.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Connection\Client;
@@ -58,6 +58,7 @@ class Jetpack_Core_API_Site_Endpoint {
 			)
 		);
 	}
+
 
 	/**
 	 * Returns the result of `/sites/%s/purchases` endpoint call.

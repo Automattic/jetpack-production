@@ -315,7 +315,6 @@ class Jetpack_Testimonial {
 				'page-attributes',
 				'revisions',
 				'excerpt',
-				'newspack_blocks',
 			),
 			'rewrite' => array(
 				'slug'       => 'testimonial',

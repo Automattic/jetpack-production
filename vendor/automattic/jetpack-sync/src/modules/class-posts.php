@@ -54,26 +54,6 @@ class Posts extends Module {
 	private $import_end = false;
 
 	/**
-	 * Max bytes allowed for post_content => length.
-	 * Current Setting : 5MB.
-	 *
-	 * @access public
-	 *
-	 * @var int
-	 */
-	const MAX_POST_CONTENT_LENGTH = 5000000;
-
-	/**
-	 * Max bytes allowed for post meta_value => length.
-	 * Current Setting : 2MB.
-	 *
-	 * @access public
-	 *
-	 * @var int
-	 */
-	const MAX_POST_META_LENGTH = 2000000;
-
-	/**
 	 * Default previous post state.
 	 * Used for default previous post status.
 	 *
@@ -136,7 +116,6 @@ class Posts extends Module {
 		$this->action_handler = $callable;
 
 		add_action( 'wp_insert_post', array( $this, 'wp_insert_post' ), 11, 3 );
-		add_action( 'wp_after_insert_post', array( $this, 'wp_after_insert_post' ), 11, 2 );
 		add_action( 'jetpack_sync_save_post', $callable, 10, 4 );
 
 		add_action( 'deleted_post', $callable, 10 );
@@ -215,11 +194,6 @@ class Posts extends Module {
 	public function init_before_send() {
 		add_filter( 'jetpack_sync_before_send_jetpack_sync_save_post', array( $this, 'expand_jetpack_sync_save_post' ) );
 
-		// meta.
-		add_filter( 'jetpack_sync_before_send_added_post_meta', array( $this, 'trim_post_meta' ) );
-		add_filter( 'jetpack_sync_before_send_updated_post_meta', array( $this, 'trim_post_meta' ) );
-		add_filter( 'jetpack_sync_before_send_deleted_post_meta', array( $this, 'trim_post_meta' ) );
-
 		// Full sync.
 		add_filter( 'jetpack_sync_before_send_jetpack_full_sync_posts', array( $this, 'expand_post_ids' ) );
 	}
@@ -291,24 +265,6 @@ class Posts extends Module {
 	}
 
 	/**
-	 * Filter meta arguments so that we don't sync meta_values over MAX_POST_META_LENGTH.
-	 *
-	 * @param array $args action arguments.
-	 *
-	 * @return array filtered action arguments.
-	 */
-	public function trim_post_meta( $args ) {
-		list( $meta_id, $object_id, $meta_key, $meta_value ) = $args;
-		// Explicitly truncate meta_value when it exceeds limit.
-		// Large content will cause OOM issues and break Sync.
-		$serialized_value = maybe_serialize( $meta_value );
-		if ( strlen( $serialized_value ) >= self::MAX_POST_META_LENGTH ) {
-			$meta_value = '';
-		}
-		return array( $meta_id, $object_id, $meta_key, $meta_value );
-	}
-
-	/**
 	 * Process content before send.
 	 *
 	 * @param array $args Arguments of the `wp_insert_post` hook.
@@ -375,7 +331,7 @@ class Posts extends Module {
 	 */
 	public function is_whitelisted_post_meta( $meta_key ) {
 		// The _wpas_skip_ meta key is used by Publicize.
-		return in_array( $meta_key, Settings::get_setting( 'post_meta_whitelist' ), true ) || ( 0 === strpos( $meta_key, '_wpas_skip_' ) );
+		return in_array( $meta_key, Settings::get_setting( 'post_meta_whitelist' ), true ) || wp_startswith( $meta_key, '_wpas_skip_' );
 	}
 
 	/**
@@ -475,12 +431,6 @@ class Posts extends Module {
 
 		if ( 0 < strlen( $post->post_password ) ) {
 			$post->post_password = 'auto-' . wp_generate_password( 10, false );
-		}
-
-		// Explicitly omit post_content when it exceeds limit.
-		// Large content will cause OOM issues and break Sync.
-		if ( strlen( $post->post_content ) >= self::MAX_POST_CONTENT_LENGTH ) {
-			$post->post_content = '';
 		}
 
 		/** This filter is already documented in core. wp-includes/post-template.php */
@@ -619,24 +569,6 @@ class Posts extends Module {
 		 */
 		do_action( 'jetpack_sync_save_post', $post_ID, $post, $update, $state );
 		unset( $this->previous_status[ $post_ID ] );
-	}
-
-	/**
-	 * Handler for the wp_after_insert_post hook.
-	 * Called after creation/update of a new post.
-	 *
-	 * @param int      $post_ID Post ID.
-	 * @param \WP_Post $post    Post object.
-	 **/
-	public function wp_after_insert_post( $post_ID, $post ) {
-		if ( ! is_numeric( $post_ID ) || is_null( $post ) ) {
-			return;
-		}
-
-		// Workaround for https://github.com/woocommerce/woocommerce/issues/18007.
-		if ( $post && 'shop_order' === $post->post_type ) {
-			$post = get_post( $post_ID );
-		}
 
 		$this->send_published( $post_ID, $post );
 	}

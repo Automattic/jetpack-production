@@ -2,9 +2,11 @@
 /**
  * REST API endpoint for parsing Tweetstorms out of block content.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 9.0.0
  */
+
+use Automattic\Jetpack\Connection\Client;
 
 /**
  * Tweetstorm gatherer.

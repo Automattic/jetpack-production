@@ -41,14 +41,14 @@ class WPCOM_REST_API_V2_Endpoint_Memberships extends WP_REST_Controller {
 						'type'   => array(
 							'type'              => 'string',
 							'required'          => false,
-							'validate_callback' => function ( $param ) {
+							'validate_callback' => function( $param ) {
 								return in_array( $param, array( 'donation', 'all' ), true );
 							},
 						),
 						'source' => array(
 							'type'              => 'string',
 							'required'          => false,
-							'validate_callback' => function ( $param ) {
+							'validate_callback' => function( $param ) {
 								return in_array( $param, array( 'calypso', 'earn', 'gutenberg', 'gutenberg-wpcom' ), true );
 							},
 						),
@@ -259,6 +259,6 @@ class WPCOM_REST_API_V2_Endpoint_Memberships extends WP_REST_Controller {
 	}
 }
 
-if ( ( defined( 'IS_WPCOM' ) && IS_WPCOM ) || Jetpack::is_connection_ready() ) {
+if ( ( defined( 'IS_WPCOM' ) && IS_WPCOM ) || Jetpack::is_active() ) {
 	wpcom_rest_api_v2_load_plugin( 'WPCOM_REST_API_V2_Endpoint_Memberships' );
 }

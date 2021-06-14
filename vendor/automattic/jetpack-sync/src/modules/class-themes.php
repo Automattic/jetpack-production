@@ -7,6 +7,9 @@
 
 namespace Automattic\Jetpack\Sync\Modules;
 
+use Automattic\Jetpack\Sync\Defaults;
+use Automattic\Jetpack\Sync\Functions;
+
 /**
  * Class to handle sync for themes.
  */

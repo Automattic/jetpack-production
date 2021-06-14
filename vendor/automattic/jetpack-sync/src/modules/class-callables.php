@@ -7,10 +7,10 @@
 
 namespace Automattic\Jetpack\Sync\Modules;
 
-use Automattic\Jetpack\Constants as Jetpack_Constants;
-use Automattic\Jetpack\Sync\Defaults;
 use Automattic\Jetpack\Sync\Functions;
+use Automattic\Jetpack\Sync\Defaults;
 use Automattic\Jetpack\Sync\Settings;
+use Automattic\Jetpack\Constants as Jetpack_Constants;
 
 /**
  * Class to handle sync for callables.
@@ -226,14 +226,10 @@ class Callables extends Module {
 	 * @access private
 	 *
 	 * @param callable $callable Callable to invoke.
-	 * @return mixed Return value of the callable, null if not callable.
+	 * @return mixed Return value of the callable.
 	 */
 	private function get_callable( $callable ) {
-		if ( is_callable( $callable ) ) {
-			return call_user_func( $callable );
-		} else {
-			return null;
-		}
+		return call_user_func( $callable );
 	}
 
 	/**

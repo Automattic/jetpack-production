@@ -7,8 +7,9 @@
 
 namespace Automattic\Jetpack;
 
-use Jetpack_Options;
+use Automattic\Jetpack\A8c_Mc_Stats;
 use WP_CLI;
+use Jetpack_Options;
 
 /**
  * Heartbeat sends a batch of stats to wp.com once a day
@@ -49,6 +50,7 @@ class Heartbeat {
 	 * Constructor for singleton
 	 *
 	 * @since 2.3.3
+	 * @return Heartbeat
 	 */
 	private function __construct() {
 

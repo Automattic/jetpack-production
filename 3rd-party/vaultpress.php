@@ -1,9 +1,4 @@
 <?php
-/**
- * Handles VaultPress->Rewind transition by deactivating VaultPress when needed.
- *
- * @package automattic/jetpack
- */
 
 use Automattic\Jetpack\Redirect;
 
@@ -18,7 +13,9 @@ function jetpack_vaultpress_rewind_enabled_notice() {
 	deactivate_plugins( 'vaultpress/vaultpress.php' );
 
 	// Remove WP core notice that says that the plugin was activated.
-	unset( $_GET['activate'] ); // phpcs:ignore WordPress.Security.NonceVerification
+	if ( isset( $_GET['activate'] ) ) {
+		unset( $_GET['activate'] );
+	}
 	?>
 	<div class="notice notice-success is-dismissible vp-deactivated">
 		<p style="margin-bottom: 0.25em;"><strong><?php esc_html_e( 'Jetpack is now handling your backups.', 'jetpack' ); ?></strong></p>
@@ -52,11 +49,10 @@ function jetpack_vaultpress_rewind_enabled_notice() {
  * @since 5.8
  */
 function jetpack_vaultpress_rewind_check() {
-	if (
-		Jetpack::is_connection_ready() &&
-		Jetpack::is_plugin_active( 'vaultpress/vaultpress.php' ) &&
-		Jetpack::is_rewind_enabled()
-	) {
+	if ( Jetpack::is_active() &&
+		 Jetpack::is_plugin_active( 'vaultpress/vaultpress.php' ) &&
+		 Jetpack::is_rewind_enabled()
+		) {
 		remove_submenu_page( 'jetpack', 'vaultpress' );
 
 		add_action( 'admin_notices', 'jetpack_vaultpress_rewind_enabled_notice' );

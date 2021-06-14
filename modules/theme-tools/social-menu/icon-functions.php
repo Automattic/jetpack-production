@@ -2,7 +2,7 @@
 /**
  * SVG icons related functions and filters
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 if ( ! function_exists( 'jetpack_social_menu_include_svg_icons' ) ) :
@@ -11,7 +11,7 @@ if ( ! function_exists( 'jetpack_social_menu_include_svg_icons' ) ) :
 	 */
 	function jetpack_social_menu_include_svg_icons() {
 		// Define SVG sprite file.
-		$svg_icons = __DIR__ . '/social-menu.svg';
+		$svg_icons = dirname( __FILE__ ) . '/social-menu.svg';
 
 		// If it exists, include it.
 		if ( file_exists( $svg_icons ) ) {
@@ -130,8 +130,6 @@ if ( ! function_exists( 'jetpack_social_menu_social_links_icons' ) ) :
 			'itunes.com'        => 'apple',
 			'bandcamp.com'      => 'bandcamp',
 			'behance.net'       => 'behance',
-			'blogger.com'       => 'blogger',
-			'blogspot.com'      => 'blogger',
 			'codepen.io'        => 'codepen',
 			'deviantart.com'    => 'deviantart',
 			'discord.gg'        => 'discord',
@@ -140,12 +138,10 @@ if ( ! function_exists( 'jetpack_social_menu_social_links_icons' ) ) :
 			'dribbble.com'      => 'dribbble',
 			'dropbox.com'       => 'dropbox',
 			'etsy.com'          => 'etsy',
-			'eventbrite.com'    => 'eventbrite',
 			'facebook.com'      => 'facebook',
 			'/feed/'            => 'feed',
 			'flickr.com'        => 'flickr',
 			'foursquare.com'    => 'foursquare',
-			'ghost.org'         => 'ghost',
 			'goodreads.com'     => 'goodreads',
 			'google.com'        => 'google',
 			'github.com'        => 'github',
@@ -154,7 +150,6 @@ if ( ! function_exists( 'jetpack_social_menu_social_links_icons' ) ) :
 			'mailto:'           => 'mail',
 			'meetup.com'        => 'meetup',
 			'medium.com'        => 'medium',
-			'patreon.com'       => 'patreon',
 			'pinterest.'        => 'pinterest',
 			'getpocket.com'     => 'pocket',
 			'ravelry.com'       => 'ravelry',
@@ -168,18 +163,14 @@ if ( ! function_exists( 'jetpack_social_menu_social_links_icons' ) ) :
 			'stackoverflow.com' => 'stackoverflow',
 			'stumbleupon.com'   => 'stumbleupon',
 			'telegram.me'       => 'telegram',
-			'tiktok.com'        => 'tiktok',
 			'tumblr.com'        => 'tumblr',
 			'twitch.tv'         => 'twitch',
 			'twitter.com'       => 'twitter',
 			'vimeo.com'         => 'vimeo',
 			'vk.com'            => 'vk',
-			'whatsapp.com'      => 'whatsapp',
-			'woocommerce.com'   => 'woocommerce',
 			'wordpress.org'     => 'wordpress',
 			'wordpress.com'     => 'wordpress',
 			'yelp.com'          => 'yelp',
-			'xanga.com'         => 'xanga',
 			'youtube.com'       => 'youtube',
 		);
 

@@ -4,7 +4,7 @@
  *
  * @since 8.5.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Instagram_Gallery;
@@ -23,7 +23,7 @@ const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
  * registration if we need to.
  */
 function register_block() {
-	if ( ( defined( 'IS_WPCOM' ) && IS_WPCOM ) || Jetpack::is_connection_ready() ) {
+	if ( ( defined( 'IS_WPCOM' ) && IS_WPCOM ) || Jetpack::is_active() ) {
 		Blocks::jetpack_register_block(
 			BLOCK_NAME,
 			array( 'render_callback' => __NAMESPACE__ . '\render_block' )
@@ -40,7 +40,7 @@ add_action( 'init', __NAMESPACE__ . '\register_block' );
  *
  * @return string
  */
-function render_block( $attributes, $content ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+function render_block( $attributes, $content ) {
 	if ( ! array_key_exists( 'accessToken', $attributes ) ) {
 		return '';
 	}
@@ -61,10 +61,8 @@ function render_block( $attributes, $content ) { // phpcs:ignore VariableAnalysi
 		)
 	);
 
-	$grid_style = sprintf(
-		'grid-gap: %1$spx; --latest-instagram-posts-spacing: %1$spx;',
-		$spacing
-	);
+	$grid_style  = 'grid-gap: ' . $spacing . 'px;';
+	$photo_style = 'padding: ' . $spacing . 'px;';
 
 	if ( ! class_exists( 'Jetpack_Instagram_Gallery_Helper' ) ) {
 		\jetpack_require_lib( 'class-jetpack-instagram-gallery-helper' );
@@ -111,6 +109,7 @@ function render_block( $attributes, $content ) { // phpcs:ignore VariableAnalysi
 				class="wp-block-jetpack-instagram-gallery__grid-post"
 				href="<?php echo esc_url( $image->link ); ?>"
 				rel="noopener noreferrer"
+				style="<?php echo esc_attr( $photo_style ); ?>"
 				target="_blank"
 			>
 				<img

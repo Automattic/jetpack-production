@@ -2,7 +2,7 @@
 /**
  * Abstract sitemap generation state class.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 4.8.0
  * @author Automattic
  */

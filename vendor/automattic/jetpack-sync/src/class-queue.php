@@ -46,14 +46,6 @@ class Queue {
 	public function add( $item ) {
 		global $wpdb;
 		$added = false;
-
-		// Attempt to serialize data, if an exception (closures) return early.
-		try {
-			$item = serialize( $item ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
-		} catch ( \Exception $ex ) {
-			return;
-		}
-
 		// This basically tries to add the option until enough time has elapsed that
 		// it has a unique (microtime-based) option key.
 		while ( ! $added ) {
@@ -61,7 +53,7 @@ class Queue {
 				$wpdb->prepare(
 					"INSERT INTO $wpdb->options (option_name, option_value, autoload) VALUES (%s, %s,%s)",
 					$this->get_next_data_row_option_name(),
-					$item,
+					serialize( $item ), // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
 					'no'
 				)
 			);
@@ -85,14 +77,9 @@ class Queue {
 		$rows        = array();
 		$count_items = count( $items );
 		for ( $i = 0; $i < $count_items; ++$i ) {
-			try {
-				$option_name  = esc_sql( $base_option_name . '-' . $i );
-				$option_value = esc_sql( serialize( $items[ $i ] ) ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
-				$rows[]       = "('$option_name', '$option_value', 'no')";
-			} catch ( \Exception $e ) {
-				// Item cannot be serialized so skip.
-				continue;
-			}
+			$option_name  = esc_sql( $base_option_name . '-' . $i );
+			$option_value = esc_sql( serialize( $items[ $i ] ) ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
+			$rows[]       = "('$option_name', '$option_value', 'no')";
 		}
 
 		$rows_added = $wpdb->query( $query . join( ',', $rows ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
@@ -260,7 +247,7 @@ class Queue {
 	 */
 	public function get_ids( $items ) {
 		return array_map(
-			function ( $item ) {
+			function( $item ) {
 				return $item->id;
 			},
 			$items
@@ -692,7 +679,7 @@ class Queue {
 	private function unserialize_values( $items ) {
 		array_walk(
 			$items,
-			function ( $item ) {
+			function( $item ) {
 				$item->value = maybe_unserialize( $item->value );
 			}
 		);

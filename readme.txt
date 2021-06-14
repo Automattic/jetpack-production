@@ -1,10 +1,10 @@
 === Jetpack - WP Security, Backup, Speed, & Growth ===
 Contributors: automattic, adamkheckler, aduth, akirk, allendav, alternatekev, andy, annezazu, apeatling, azaozz, batmoo, barry, beaulebens, biskobe, blobaugh, brbrr, cainm, cena, cfinke, chaselivingston, chellycat, clickysteve, csonnek, danielbachhuber, davoraltman, daniloercoli, delawski, designsimply, dllh, drawmyface, dsmart, dzver, ebinnion, egregor, eliorivero, enej, eoigal, erania-pinnera, ethitter, fgiannar, gcorne, georgestephanis, gibrown, goldsounds, hew, hugobaeta, hypertextranch, iammattthomas, iandunn, jblz, jasmussen, jeffgolenski, jeherve, jenhooks, jenia, jessefriedman, jgs, jkudish, jmdodd, joanrho, johnjamesjacoby, jshreve, kbrownkd, keoshi, koke, kraftbj, lancewillett, leogermani, lschuyler, macmanx, martinremy, matt, matveb, mattwiebe, maverick3x6, mcsf, mdawaffe, mdbitz, MichaelArestad, migueluy, mikeyarce, mkaz, nancythanki, nickmomrik, obenland, oskosk, pento, professor44, rachelsquirrel, rdcoll, ryancowles, richardmuscat, richardmtl, robertbpugh, roccotripaldi, samhotchkiss, scarstocea, scottsweb, sdquirk, sermitr, simison, stephdau, tmoorewp, tyxla, Viper007Bond, westi, yoavf, zinigor
 Tags: WP, backup, social, AMP, WooCommerce, malware, scan, spam, CDN, social
-Stable tag: 9.8.1
-Requires at least: 5.7
+Stable tag: 9.1.1
+Requires at least: 5.4
 Requires PHP: 5.6
-Tested up to: 5.8
+Tested up to: 5.5
 
 The best WP plugin for backup, anti spam, malware scan, CDN, AMP, social, search, contact form, and integrations with Woo, Facebook, Instagram, Google
 
@@ -12,7 +12,7 @@ The best WP plugin for backup, anti spam, malware scan, CDN, AMP, social, search
 
 = The most popular WordPress plugin for just about everything. =
 
-Security, performance, marketing, and design tools — Jetpack is made by WordPress experts to make WP sites safer and faster, and help you grow your traffic.
+Security, performance, marketing, and design tools — Jetpack is made by the WordPress experts to make WP sites safer and faster, and help you grow your traffic.
 
 = 24/7 AUTO SITE SECURITY =
 We guard your site so you can run your site or business. Jetpack Security provides easy-to-use, comprehensive WordPress site security including auto real-time backups and easy restores, malware scanning, and spam protection. Essential features like brute force protection and downtime / uptime monitoring are free.
@@ -47,7 +47,7 @@ Create and customize your WordPress site, optimize it for visitors and revenue, 
 * Grow traffic with SEO tools for Google, Bing, Twitter, Facebook, and WordPress.com. XML sitemap created automatically.
 * Advertise on your site to generate revenue. The Jetpack ad network automatically does the work for you to find high-quality ads that are placed on your site.
 * Manage Jetpack features from anywhere with the official WordPress mobile app, available for Apple iOS (iPhone or iPad) and Google Android.
-* Looking for Customer Relationship Management? Check out the [Jetpack CRM plugin](https://jetpackcrm.com) which works alongside Jetpack to give you a simple and practical way to build relationships with your customers and leads.
+* Looking for a CRM? Check out the Jetpack CRM plugin which works alongside Jetpack to give you a simple and practical way to build relationships with your customers and leads.
 
 = EASY DESIGN TOOLS =
 Quickly customize your site to make it stand out — no coding needed.
@@ -95,11 +95,11 @@ Alternatively, install Jetpack via the plugin directory, or upload the files man
 
 Yes! Jetpack's core features are and always will be free.
 
-These include: site stats, a high-speed CDN for images, related posts, downtime monitoring, brute force attack protection, automated sharing to social networks, sidebar customization, SEO (search engine optimization) tools, and much more.
+These include: site stats, a high-speed CDN for images, related posts, downtime monitoring, brute force attack protection, automated sharing to social networks, sidebar customization, and much more.
 
 = Should I purchase a paid plan? =
 
-It depends on your site and what kind of protection, performance, and design you need. If you make money from your site, the answer is often “yes.” For context, Jetpack's paid services include real-time backups, security scanning, premium themes, spam filtering, video hosting, site monetization, search, priority support, and more.
+It depends on your site and what kind of protection, performance, and design you need. If you make money from your site, the answer is often “yes.” For context, Jetpack's paid services include real-time backups, security scanning, premium themes, spam filtering, video hosting, site monetization, SEO (search engine optimization) tools, search, priority support, and more.
 
 To learn more about the essential security and WordPress services we provide and see how we can improve your site, visit [our plans page](https://jetpack.com/pricing?from=wporg).
 
@@ -118,6 +118,10 @@ Once you’ve installed Jetpack, your stats will be available on your Jetpack da
 = How do I contribute to Jetpack? =
 
 There are opportunities for developers at all levels to contribute. [Learn more about contributing to Jetpack](https://jetpack.com/contribute) or consider [joining our beta program](https://jetpack.com/beta).
+
+= Is Jetpack CRM included in the Jetpack plugin? =
+
+No, please download the separate Jetpack CRM plugin to use Jetpack CRM.
 
 = What else does Jetpack include? =
 
@@ -238,49 +242,85 @@ Our Cookie and Consent Banner can help you comply with GDPR. The European Union�
 4. Promote your newest posts, pages, and products across your social media channels.
 
 == Changelog ==
-### 9.8.1 - 2021-06-08
-#### Bug fixes
-- Carousel: avoid JavaScript errors when trying to load the Carousel view when logged out of your WordPress site.
-- Related Posts: avoid squished images when image height isn't defined.
-- Story Block: allow multiple stories per post.
-- Story Block: allow selecting additional media items in media picker instead of only replacing the existing selection.
 
-### 9.8 - 2021-06-01
-#### Enhancements
-- Contact Form: the "Feedback > Export CSV" submenu entry has been removed. The export functionality is still available in "Feedback > Form Responses".
-- Form block: allow replacing the "Message Sent" heading with custom phrase.
-- Instagram Reel: add oEmbed support for Instagram Reel posts.
-- Instant Search: add 'open when visitor submits the form' overlay trigger.
-- Instant Search: apply configured highlight color to text highlights.
-- Site Verification Tools: adds an option for Facebook domain verification.
-- Story Block: add new block that enables you to use photos and videos to create engaging and tappable fullscreen slideshows.
+= 9.1.1 =
+Release date: June 2, 2021
 
-#### Improved compatibility
-- Blocks: ensure blocks are compatible with upcoming Full Site Editor feature.
-- Blocks: ensure tiled gallery and slideshow blocks do not output invalid CSS when used with AMP plugin.
-- Dashboard: hide Settings page for non-admin users when in site-only connection.
-- Instant Search: ensure search input is the correct width if an input max-width has been specified in the theme.
-- Related Posts: add height attribute to post images for better compatibility with page performance analysis tools.
-- Related Posts: avoid Fatal Errors when using plugins that may interact with WordPress' customizer in specific ways.
-- SEO Tools: ensure Jetpack SEO does not conflict with SEOPress.
-- Story Block: Improve accessibility and resolve z-index issues when playing in fullscreen.
+Security:
 
-#### Bug fixes
-- Carousel: harden fetching comments in Carousel view.
-- Contact Form: remove double quotes from names in email headers to improve compatibility with different emailing solutions for WordPress.
-- Dashboard: display the Sharing settings tab when editors only need to customize Publicize settings for their own account.
-- Dashboard: do not display Protect card for non-admin users while in site-only connection.
-- Dashboard: do not show multiple connection prompts in the Publicize settings card.
-- Dashboard: ensure connected user details properly displayed.
-- Dashboard: ensure that the Jetpack settings page can be accessed when using Jetpack's Offline mode.
-- Fixed regression introduced in posts page icon notification WP-Admin edit.php page.
-- General: ensures that the send_auth_cookies filter is respected.
-- Instant Search: don't photon-ize SVG images as they're not supported by Photon
-- Instant Search: fixes for design conflicts.
-- Instant Search: prevent standard sidebar widgets ending up in the search modal sidebar when switching themes.
-- Social Previews: don't show duplicate buttons when a featured image is selected.
-- Stats: fixes the date used to fetch the Top posts in the Top posts dashboard widget.
+* Carousel: prevent fetching comments from posts, and from attachments of private posts.
+
+= 9.1 =
+
+* Release date: November 10, 2020
+* Release post: https://wp.me/p1moTy-s0E
+
+**Enhancements**
+
+* Button Block: add a center alignment option to all Jetpack button blocks.
+* Content Options: add new filter to allow theme and plugin authors to disable featured image removal for their Custom Post Types.
+* Dashboard: improve the display of dates in the Jetpack Plan screen and in the Stats graph.
+* Dashboard: improve the display of numbers in all languages.
+* Donations Block: improve the display of the block outside WordPress (in subscription emails, for example).
+* Embeds: update Loom logo.
+* External Media: add feature to the Cover block.
+* Google Calendar Block: improve the display of the block in the editor.
+* Image Compare Block: accessibility improvements.
+* Instant Search: improve accessibility of the Search modal.
+* Likes: remove jQuery dependency where possible.
+* Pay with PayPal Block: improve the styling of the buttons in subscription emails.
+* Pay with PayPal Block: improve the display of currencies.
+* Podcast Player Block: add option to hide the episode title.
+* Podcast Player Block: display more helpful error messages when a podcast cannot be embedded.
+* Publicize: improve the usability of the Twitter thread options.
+* REST API: support needed capabilities in Jetpack REST API endpoints that allow site based authentication.
+* Social Menu & Social Media Icons: add support for Telegram profiles.
+* Synchronization: improve reliability of synchronization of theme changes.
+* WhatsApp Block: add option to change the alignment of the button.
+* Widget Visibility: improve performance on sites with a large number of pages.
+* WordPress.com Block Editor: add option to add metadata to a post indicating the last editor used.
+* WordPress.com REST API: remove outdated code that allowed non-secure requests to the API, as such requests are no longer accepted.
+
+**Improved compatibility**
+
+* Comments: avoid AMP validation errors when using Jetpack's Comments feature and the AMP plugin.
+* Dashboard: better support all states available when using one of Jetpack's Security solutions.
+* Embeds: improve compatibility between Jetpack's Instagram embed and WordPress' own embed.
+* Embeds: ensure Facebook Embeds work well with the AMP plugin.
+* External Media: update iconography and improve forward compatibility.
+* General: better detect local development environments.
+* Google Analytics: add support for the AMP plugin to track WooCommerce events.
+* OpenTable Block: ensure full compatibility with the AMP plugin.
+* Pay with PayPal Block: ensure full compatibility with the AMP plugin.
+* Sharing: add support for the Google Web Stories plugin.
+* Slideshow Block: ensure that the block can be displayed using the Full Width alignment setting when using the Gutenberg plugin.
+* Widget Visibility: avoid performance impact it may have on the block editor when used with the Gutenberg plugin.
+* YouTube embeds: ensure that all YouTube video embeds work well when using the AMP plugin.
+
+**Bug fixes**
+
+* Calendly and Eventbrite Blocks: fix layout issue when selecting block styles in the editor.
+* Contact Form: selection widgets, radio buttons, and checkboxes can now use commas, brackets, and backslashes in the labels and values without breaking the form.
+* Donations / Payments Block: fix visual bug in Stripe connection banner.
+* Embeds: ensure Facebook videos are centered properly with the Twenty Twenty theme.
+* Google Analytics: support updated Google Analytics 4 properties.
+* Image CDN: the CDN will now ignore attempts to specify percentages for width or height in an image tag.
+* Infinite Scroll: ensure the number of posts loaded when using Infinite Scroll respects posts per page settings.
+* Latest Instagram Posts Block: avoid PHP warning when no images can be retrieved from Instagram.
+* Lazy Images: attempt to load all images when printing a post, and inform the user when printing if images haven't been loaded.
+* Pay with PayPal Block: add default price value.
+* Pay with PayPal Block: ensure currencies are displayed properly in the editor.
+* Protect: fix handling of IPv6 addresses.
+* Publicize: ensure that custom messages can be saved when using the Portfolio Custom Post Type.
+* Publicize: ensure that tweets consisting only of whitespace aren't added to Twitter threads.
+* Publicize: when generating Twitter threads, allow text to be split at line breaks where appropriate.
+* Security / Contact Form: add additional checks before checking submitted forms for spam.
+* Security / WordPress.com REST API: improve authentication checks when making proxied requests to a site's API endpoints.
+* Slideshow Block: fix a bug that prevented the first and last images from displaying when the slideshow loops.
+* Stats: no longer incorrectly report a term ID as a post ID in some rare cases.
+* Videos: ensure Jetpack videos use the correct aspect ratio in both the editor and the frontend, even when used within column blocks.
+* WhatsApp Block: fix issue when the text color would not be correct.
 
 --------
 
-[See the previous changelogs here](https://github.com/Automattic/jetpack/blob/master/projects/plugins/jetpack/CHANGELOG.md#changelog)
+[See the previous changelogs here](https://raw.githubusercontent.com/Automattic/jetpack/master/changelog.txt).

@@ -1338,16 +1338,6 @@ abstract class WPCOM_JSON_API_Endpoint {
 		$file_info = pathinfo( $file );
 		$ext       = isset( $file_info['extension'] ) ? $file_info['extension'] : null;
 
-		// File operations are handled differently on WordPress.com.
-		if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-			$attachment_metadata = wp_get_attachment_metadata( $media_item->ID );
-			$filesize            = ! empty( $attachment_metadata['filesize'] )
-				? $attachment_metadata['filesize']
-				: 0;
-		} else {
-			$filesize = filesize( $attachment_file );
-		}
-
 		$response = array(
 			'ID'          => $media_item->ID,
 			'URL'         => wp_get_attachment_url( $media_item->ID ),
@@ -1363,7 +1353,6 @@ abstract class WPCOM_JSON_API_Endpoint {
 			'description' => $media_item->post_content,
 			'alt'         => get_post_meta( $media_item->ID, '_wp_attachment_image_alt', true ),
 			'icon'        => wp_mime_type_icon( $media_item->ID ),
-			'size'        => size_format( (int) $filesize, 2 ),
 			'thumbnails'  => array(),
 		);
 
@@ -1618,7 +1607,7 @@ abstract class WPCOM_JSON_API_Endpoint {
 
 		// VIP context loading is handled elsewhere, so bail to prevent
 		// duplicate loading. See `switch_to_blog_and_validate_user()`
-		if ( defined( 'WPCOM_IS_VIP_ENV' ) && WPCOM_IS_VIP_ENV ) {
+		if ( function_exists( 'wpcom_is_vip' ) && wpcom_is_vip() ) {
 			return;
 		}
 
@@ -2134,7 +2123,7 @@ abstract class WPCOM_JSON_API_Endpoint {
 		 */
 		if ( function_exists( 'idn_to_utf8' ) ) {
 			// The third parameter is set explicitly to prevent issues with newer PHP versions compiled with an old ICU version.
-			// phpcs:ignore PHPCompatibility.Constants.RemovedConstants.intl_idna_variant_2003Deprecated, PHPCompatibility.Constants.RemovedConstants.intl_idna_variant_2003DeprecatedRemoved
+			// phpcs:ignore PHPCompatibility.Constants.RemovedConstants.intl_idna_variant_2003Deprecated
 			$host = idn_to_utf8( $host, IDNA_DEFAULT, defined( 'INTL_IDNA_VARIANT_UTS46' ) ? INTL_IDNA_VARIANT_UTS46 : INTL_IDNA_VARIANT_2003 );
 		}
 		$subdomain = str_replace( array( '-', '.' ), array( '--', '-' ), $host );

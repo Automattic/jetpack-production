@@ -65,6 +65,19 @@ class Admin_Sidebar_Link {
 			return;
 		}
 
+		$new_link = $this->get_new_link();
+
+		// Splice the nav menu item into the Jetpack nav.
+		global $submenu;
+		array_splice( $submenu['jetpack'], $this->get_link_offset(), 0, array( $new_link ) );
+	}
+
+	/**
+	 * Retuns the new link.
+	 *
+	 *  @return array Link array to be added to the sidebar.
+	 */
+	private function get_new_link() {
 		$has_scan   = $this->has_scan();
 		$has_backup = $this->has_backup();
 
@@ -79,11 +92,16 @@ class Admin_Sidebar_Link {
 			$menu_label = __( 'Backup & Scan', 'jetpack' );
 		}
 
-		add_submenu_page( 'jetpack', $menu_label, esc_html( $menu_label ) . ' <span class="dashicons dashicons-external"></span>', 'manage_options', esc_url( $url ), null, $this->get_link_offset() );
+		return array(
+			esc_html( $menu_label ) . ' <span class="dashicons dashicons-external"></span>',
+			'manage_options', // Check permissions here.
+			esc_url( $url ),
+		);
+
 	}
 
 	/**
-	 * We create a menu offset by counting all the pages that have a jetpack_admin_page set as the capability.
+	 * We create a menu offset by counting all the pages that have a jetpack_admin_page set as the link.
 	 *
 	 * This makes it so that the highlight of the pages works as expected. When you click on the Setting or Dashboard.
 	 *

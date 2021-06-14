@@ -4,7 +4,7 @@
  *
  * @since 7.1.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Blocks;
@@ -39,4 +39,4 @@ Blocks::jetpack_register_block(
 		'render_callback' => array( 'Jetpack_Contact_Info_Block', 'render_phone' ),
 	)
 );
-require_once __DIR__ . '/class-jetpack-contact-info-block.php';
+require_once dirname( __FILE__ ) . '/class-jetpack-contact-info-block.php';
