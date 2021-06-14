@@ -1,11 +1,11 @@
-/* This file was automatically generated on Oct 01 2015 20:17:19 */
+/* This file was automatically generated on Jan 05 2013 15:45:53 */
 
 /* =Tiled Gallery Default Styles
 -------------------------------------------------------------- */
 
 .tiled-gallery {
 	clear: both;
-	margin: 0 0 20px;
+	margin: 0;
 	overflow: hidden;
 }
 .tiled-gallery img {
@@ -13,21 +13,22 @@
 }
 .tiled-gallery .gallery-group {
 	float: right;
+	overflow-y: hidden;
 	position: relative;
 }
 .tiled-gallery .tiled-gallery-item {
 	float: right;
 	margin: 0;
 	position: relative;
-	width: inherit; /* prevents ie8 bug with inline width styles */
 }
 .tiled-gallery .gallery-row {
 	 overflow: hidden;
+	 margin-bottom: 2px;
 }
 .tiled-gallery .tiled-gallery-item a { /* Needs to reset some properties for theme compatibility */
 	background: transparent;
 	border: none;
-	color: inherit;
+	color: none;
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
@@ -61,14 +62,6 @@
 	font-size: 11px;
 }
 
-/* Hide galleries in widgets until they've been resized to fit.
-   Gallery widgets are almost guaranteed to need resizing, and
-   the jump is a little more obvious than galleries in content. */
-.widget-gallery .tiled-gallery-unresized {
-	visibility: hidden;
-	height: 0px;
-	overflow: hidden;
-}
 
 /* =Greyscale
 -------------------------------------------------------------- */
@@ -93,4 +86,3 @@
 	display: none;
 	opacity: 0;
 }
-

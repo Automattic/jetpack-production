@@ -31,10 +31,6 @@ foreach ( $GLOBALS['csstidy']['all_properties'] as $property => $levels ) {
 	}
 }
 
-// Add `display` to the list of properties that can be used multiple times in a single selector
-$GLOBALS['csstidy']['multiple_properties'][] = 'display';
-
-// Allow vendor prefixes for any property that is allowed to be used multiple times inside a single selector
 foreach ( $GLOBALS['csstidy']['multiple_properties'] as $property ) {
 	if ( '-' != $property[0] ) {
 		$GLOBALS['csstidy']['multiple_properties'][] = '-o-' . $property;
@@ -53,15 +49,6 @@ foreach ( $GLOBALS['csstidy']['multiple_properties'] as $property ) {
 $GLOBALS['csstidy']['at_rules']['-webkit-keyframes'] = 'at';
 $GLOBALS['csstidy']['at_rules']['-moz-keyframes'] = 'at';
 $GLOBALS['csstidy']['at_rules']['-ms-keyframes'] = 'at';
-$GLOBALS['csstidy']['at_rules']['-o-keyframes'] = 'at';
-
-/**
- * Non-standard viewport rule.
- */
-$GLOBALS['csstidy']['at_rules']['viewport'] = 'is';
-$GLOBALS['csstidy']['at_rules']['-webkit-viewport'] = 'is';
-$GLOBALS['csstidy']['at_rules']['-moz-viewport'] = 'is';
-$GLOBALS['csstidy']['at_rules']['-ms-viewport'] = 'is';
 
 /**
  * Non-standard CSS properties.  They're not part of any spec, but we say
@@ -78,7 +65,6 @@ $GLOBALS['csstidy']['all_properties']['-webkit-transform-origin-x'] = 'CSS3.0';
 $GLOBALS['csstidy']['all_properties']['-webkit-transform-origin-y'] = 'CSS3.0';
 $GLOBALS['csstidy']['all_properties']['-webkit-transform-origin-z'] = 'CSS3.0';
 $GLOBALS['csstidy']['all_properties']['-webkit-font-smoothing'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['-moz-osx-font-smoothing'] = 'CSS3.0';
 $GLOBALS['csstidy']['all_properties']['-font-smooth'] = 'CSS3.0';
 $GLOBALS['csstidy']['all_properties']['-o-object-fit'] = 'CSS3.0';
 $GLOBALS['csstidy']['all_properties']['object-fit'] = 'CSS3.0';
@@ -86,17 +72,4 @@ $GLOBALS['csstidy']['all_properties']['-o-object-position'] = 'CSS3.0';
 $GLOBALS['csstidy']['all_properties']['object-position'] = 'CSS3.0';
 $GLOBALS['csstidy']['all_properties']['text-overflow'] = 'CSS3.0';
 $GLOBALS['csstidy']['all_properties']['zoom'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['pointer-events'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['font-feature-settings'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['font-kerning'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['font-language-override'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['font-synthesis'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['font-variant-alternates'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['font-variant-caps'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['font-variant-east-asian'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['font-variant-ligatures'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['font-variant-numeric'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['font-variant-position'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['font-variation-settings'] = 'CSS3.0';
-$GLOBALS['csstidy']['all_properties']['line-height-step'] = 'CSS3.0';
 

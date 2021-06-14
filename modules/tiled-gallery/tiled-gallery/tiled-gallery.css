@@ -3,7 +3,7 @@
 
 .tiled-gallery {
 	clear: both;
-	margin: 0 0 20px;
+	margin: 0;
 	overflow: hidden;
 }
 .tiled-gallery img {
@@ -17,15 +17,15 @@
 	float: left;
 	margin: 0;
 	position: relative;
-	width: inherit; /* prevents ie8 bug with inline width styles */
 }
 .tiled-gallery .gallery-row {
 	 overflow: hidden;
+	 margin-bottom: 2px;
 }
 .tiled-gallery .tiled-gallery-item a { /* Needs to reset some properties for theme compatibility */
 	background: transparent;
 	border: none;
-	color: inherit;
+	color: none;
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
@@ -41,7 +41,7 @@
 	vertical-align: middle;
 }
 .tiled-gallery-caption { /* Captions */
-	background: #f0f0f1;
+	background: #eee;
 	background: rgba( 255,255,255,0.8 );
 	color: #333;
 	font-size: 13px;
@@ -59,14 +59,6 @@
 	font-size: 11px;
 }
 
-/* Hide galleries in widgets until they've been resized to fit.
-   Gallery widgets are almost guaranteed to need resizing, and
-   the jump is a little more obvious than galleries in content. */
-.widget-gallery .tiled-gallery-unresized {
-	visibility: hidden;
-	height: 0px;
-	overflow: hidden;
-}
 
 /* =Greyscale
 -------------------------------------------------------------- */
@@ -86,15 +78,8 @@
 
 .tiled-gallery.type-circle .tiled-gallery-item img {
 	border-radius: 50% !important; /* Ensure that circles are displayed in themes that add border-radius to all images as a default */
-	object-fit: cover;
 }
 .tiled-gallery.type-circle .tiled-gallery-caption {
 	display: none;
-}
-
-
-/* =Square Layout
--------------------------------------------------------------- */
-.tiled-gallery.type-square .tiled-gallery-item img {
-	object-fit: cover;
+	opacity: 0;
 }
