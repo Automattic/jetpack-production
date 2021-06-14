@@ -2,97 +2,6 @@
  * Jetpack related posts
  */
 
-/**
- * The Gutenberg block
- */
-
-.jp-related-posts-i2__row {
-	display: flex;
-	margin-top: 1.5rem;
-}
-
-.jp-related-posts-i2__row:first-child {
-	margin-top: 0;
-}
-
-.jp-related-posts-i2__post {
-	flex-grow: 1;
-	flex-basis: 0;
-	margin: 0 10px;
-	display: flex;
-	flex-direction: column;
-	padding-left: 0;
-}
-
-.jp-related-posts-i2__row[data-post-count="3"] .jp-related-posts-i2__post {
-	max-width: calc(33% - 20px);
-}
-
-.jp-related-posts-i2__row[data-post-count="2"] .jp-related-posts-i2__post,
-.jp-related-posts-i2__row[data-post-count="1"] .jp-related-posts-i2__post {
-	max-width: calc(50% - 20px);
-}
-
-.jp-related-posts-i2__post-heading, .jp-related-posts-i2__post-img-link,
-.jp-related-posts-i2__post-date, .jp-related-posts-i2__post-context {
-	flex-direction: row;
-	display: block;
-}
-
-.jp-related-posts-i2__post-heading {
-	margin: 0.5rem 0;
-	font-size: 1rem;
-	line-height: 1.2em;
-}
-
-.jp-related-posts-i2__post-link {
-	display: block;
-	width: 100%;
-	line-height: 1.2em;
-}
-
-.jp-related-posts-i2__post-img-link {
-	order: -1;
-}
-.jp-related-posts-i2__post-img-link img {
-	width: 100%;
-}
-
-/* List view */
-
-.jp-relatedposts-i2[data-layout="list"] .jp-related-posts-i2__row{
-	margin-top: 0;
-	display: block;
-}
-
-.jp-relatedposts-i2[data-layout="list"] .jp-related-posts-i2__post {
-	max-width: none;
-	margin: 0;
-}
-
-.jp-relatedposts-i2[data-layout="list"].jp-related-posts-i2__post-img-link {
-	margin-top: 1rem;
-}
-
-/* Breakpoints */
-@media only screen and (max-width: 640px) {
-	.jp-related-posts-i2__row {
-		margin-top: 0;
-		display: block;
-	}
-	.jp-related-posts-i2__row[data-post-count] .jp-related-posts-i2__post {
-		max-width: none;
-		margin: 0;
-		margin-top: 1rem;
-	}
-	.jp-related-posts-i2__post-img-link {
-		margin-top: 1rem;
-	}
-	.jp-related-posts-i2__post-img-link img {
-		width: 350px;
-	}
-}
-
 /* Container */
 
 #jp-relatedposts {
@@ -125,7 +34,7 @@
 	display: block;
 	width: 100%;
 	min-width: 30px;
-	border-top: 1px solid #dcdcde;
+	border-top: 1px solid #ddd;
 	border-top: 1px solid rgba(0,0,0,.2);
 	margin-bottom: 1em;
 }
@@ -181,8 +90,7 @@
 /* Related posts item content */
 
 #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title,
-#jp-relatedposts .jp-relatedposts-items p,
-#jp-relatedposts .jp-relatedposts-items time {
+#jp-relatedposts .jp-relatedposts-items p {
 	font-size: 14px;
 	line-height: 20px;
 	margin: 0;
@@ -200,8 +108,7 @@
 	border-bottom: 0;
 }
 
-#jp-relatedposts .jp-relatedposts-items p,
-#jp-relatedposts .jp-relatedposts-items time {
+#jp-relatedposts .jp-relatedposts-items p {
 	margin-bottom: 0;
 }
 
@@ -236,7 +143,6 @@
 
 #jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post img.jp-relatedposts-post-img,
 #jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post span {
-	height: auto;
 	max-width: 100%;
 }
 

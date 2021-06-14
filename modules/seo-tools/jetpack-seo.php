@@ -43,8 +43,6 @@ class Jetpack_SEO {
 		}
 
 		add_filter( 'jetpack_open_graph_tags', array( $this, 'set_custom_og_tags' ) );
-		Jetpack_SEO_Posts::register_post_meta();
-		Jetpack_SEO_Posts::register_gutenberg_extension();
 	}
 
 	private function get_authors() {
@@ -107,42 +105,75 @@ class Jetpack_SEO {
 			return;
 		}
 
+		/**
+		 * Can be used to insert custom site host that will used for meta title.
+		 *
+		 * @module seo-tools
+		 *
+		 * @since 4.4.0
+		 *
+		 * @param string Name of the site host. Defaults to empty string.
+		 */
+		$site_host     = apply_filters( 'jetpack_seo_site_host', '' );
+
+		$meta['title'] = sprintf( _x( '%1$s', 'Site Title', 'jetpack' ), get_bloginfo( 'title' ) );
+
+		if ( ! empty( $site_host ) ) {
+			$meta['title'] = sprintf(
+				_x( '%1$s on %2$s', 'Site Title on WordPress', 'jetpack' ),
+				get_bloginfo( 'title' ),
+				$site_host
+			);
+		}
+
 		$front_page_meta     = Jetpack_SEO_Utils::get_front_page_meta_description();
 		$description         = $front_page_meta ? $front_page_meta : get_bloginfo( 'description' );
 		$meta['description'] = trim( $description );
 
 		// Try to target things if we're on a "specific" page of any kind.
 		if ( is_singular() ) {
+			$meta['title'] = sprintf(
+				_x( '%1$s | %2$s', 'Post Title | Site Title on WordPress', 'jetpack' ),
+				get_the_title(),
+				$meta['title']
+			);
+
+			// Business users can overwrite the description.
 			if ( ! ( is_front_page() && Jetpack_SEO_Utils::get_front_page_meta_description() ) ) {
 				$description = Jetpack_SEO_Posts::get_post_description( get_post() );
 
 				if ( $description ) {
-					$description         = wp_trim_words(
-						strip_shortcodes(
-							wp_strip_all_tags( $description, true )
-						)
-					);
+					$description = wp_trim_words( strip_shortcodes( wp_kses( $description, array() ) ) );
 					$meta['description'] = $description;
 				}
 			}
+
 		} elseif ( is_author() ) {
 			$obj = get_queried_object();
 
+			$meta['title'] = sprintf(
+				_x( 'Posts by %1$s | %2$s', 'Posts by Author Name | Blog Title on WordPress', 'jetpack' ),
+				$obj->display_name,
+				$meta['title']
+			);
+
 			$meta['description'] = sprintf(
-				/* translators: first property is an user's display name, the second is the site's title. */
 				_x( 'Read all of the posts by %1$s on %2$s', 'Read all of the posts by Author Name on Blog Title', 'jetpack' ),
-				isset( $obj->display_name ) ? $obj->display_name : __( 'the author', 'jetpack' ),
+				$obj->display_name,
 				get_bloginfo( 'title' )
 			);
 		} elseif ( is_tag() || is_category() || is_tax() ) {
-			$obj         = get_queried_object();
-			$description = '';
+			$obj = get_queried_object();
 
-			if ( isset( $obj->term_id ) && isset( $obj->taxonomy ) ) {
-				$description = get_term_field( 'description', $obj->term_id, $obj->taxonomy, 'raw' );
-			}
+			$meta['title'] = sprintf(
+				_x( 'Posts about %1$s on %2$s', 'Posts about Category on Blog Title', 'jetpack' ),
+				single_term_title( '', false ),
+				get_bloginfo( 'title' )
+			);
 
-			if ( ! is_wp_error( $description ) && $description ) {
+			$description = get_term_field( 'description', $obj->term_id, $obj->taxonomy, 'raw' );
+
+			if ( ! is_wp_error( $description ) && '' != $description ) {
 				$meta['description'] = wp_trim_words( $description );
 			} else {
 				$authors = $this->get_authors();
@@ -189,8 +220,20 @@ class Jetpack_SEO {
 				);
 			}
 
+			$meta['title'] = sprintf(
+				_x( 'Posts from %1$s on %2$s', 'Posts from May 2012 on Blog Title', 'jetpack' ),
+				$period,
+				get_bloginfo( 'title' )
+			);
+
 			$authors             = $this->get_authors();
 			$meta['description'] = wp_sprintf( $template, count( $wp_query->posts ), $authors, $period );
+		}
+
+		$custom_title = Jetpack_SEO_Titles::get_custom_title();
+
+		if ( ! empty( $custom_title ) ) {
+			$meta['title'] = $custom_title;
 		}
 
 		/**
