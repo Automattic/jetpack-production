@@ -2,18 +2,18 @@
 
 /*
 Plugin Name: Easy Markdown
-Plugin URI: https://automattic.com/
+Plugin URI: http://automattic.com/
 Description: Write in Markdown, publish in WordPress
 Version: 0.1
 Author: Matt Wiebe
-Author URI: https://automattic.com/
+Author URI: http://automattic.com/
 */
 
 /**
  * Copyright (c) Automattic. All rights reserved.
  *
  * Released under the GPL license
- * https://www.opensource.org/licenses/gpl-license.php
+ * http://www.opensource.org/licenses/gpl-license.php
  *
  * This is an add-on for WordPress
  * https://wordpress.org/
@@ -92,12 +92,6 @@ class WPCom_Markdown {
 	 * @return null
 	 */
 	public function maybe_load_actions_and_filters( $new_blog_id = null, $old_blog_id = null ) {
-
-		// When WP sites are being installed, the options table is not available yet.
-		if ( function_exists( 'wp_installing' ) && wp_installing() ) {
-			return;
-		}
-
 		// If this is a switch_to_blog call, and the blog isn't changing, we'll already be loaded
 		if ( $new_blog_id && $new_blog_id === $old_blog_id ) {
 			return;
@@ -313,7 +307,7 @@ class WPCom_Markdown {
 		 *
 		 * @param string $url Markdown support URL.
 		 */
-		return apply_filters( 'easy_markdown_support_url', 'https://en.support.wordpress.com/markdown-quick-reference/' );
+		return apply_filters( 'easy_markdown_support_url', 'http://en.support.wordpress.com/markdown-quick-reference/' );
 	}
 
 	/**
@@ -450,7 +444,7 @@ class WPCom_Markdown {
 
 	/**
 	 * TinyMCE needs to know not to strip the 'markdown' attribute. Unfortunately, it doesn't
-	 * really offer a nice API for allowed attributes, so we have to manually add it
+	 * really offer a nice API for whitelisting attributes, so we have to manually add it
 	 * to the schema instead.
 	 */
 	public function after_wp_tiny_mce() {
@@ -578,11 +572,6 @@ jQuery( function() {
 	 * @return string        Markdown-processed content
 	 */
 	public function transform( $text, $args = array() ) {
-		// If this contains Gutenberg content, let's keep it intact.
-		if ( has_blocks( $text ) ) {
-			return $text;
-		}
-
 		$args = wp_parse_args( $args, array(
 			'id' => false,
 			'unslash' => true,

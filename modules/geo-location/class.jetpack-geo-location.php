@@ -33,15 +33,6 @@
 class Jetpack_Geo_Location {
 	private static $instance;
 
-	/**
-	 * Whether dashicons are enqueued.
-	 *
-	 * @since 6.6.0
-	 *
-	 * @var bool
-	 */
-	private static $style_enqueued = false;
-
 	public static function init() {
 		if ( is_null( self::$instance ) ) {
 			self::$instance = new Jetpack_Geo_Location();
@@ -61,6 +52,7 @@ class Jetpack_Geo_Location {
 		add_action( 'init', array( $this, 'wordpress_init' ) );
 		add_action( 'wp_head', array( $this, 'wp_head' ) );
 		add_filter( 'the_content', array( $this, 'the_content_microformat' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
 		$this->register_rss_hooks();
 	}
@@ -160,12 +152,6 @@ class Jetpack_Geo_Location {
 			return;
 		}
 
-		if ( ! self::$style_enqueued ) {
-			// only enqueue scripts and styles when needed.
-			self::enqueue_scripts();
-			self::$style_enqueued = true;
-		}
-
 		echo "\n<!-- Jetpack Geo-location Tags -->\n";
 
 		if ( $meta_values['label'] ) {
@@ -249,9 +235,7 @@ class Jetpack_Geo_Location {
 	 * Add the georss namespace during RSS generation.
 	 */
 	public function rss_namespace() {
-		echo PHP_EOL . "\t" . 'xmlns:georss="http://www.georss.org/georss"';
-		echo PHP_EOL . "\t" . 'xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"';
-		echo PHP_EOL . "\t";
+		echo 'xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" ';
 	}
 
 	/**
@@ -278,7 +262,7 @@ class Jetpack_Geo_Location {
 	/**
 	 * Enqueue CSS for rendering post flair with geo-location.
 	 */
-	private static function enqueue_scripts() {
+	public function enqueue_scripts() {
 		wp_enqueue_style( 'dashicons' );
 	}
 
