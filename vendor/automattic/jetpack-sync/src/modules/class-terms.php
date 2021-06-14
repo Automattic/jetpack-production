@@ -14,6 +14,14 @@ use Automattic\Jetpack\Sync\Settings;
  * Class to handle sync for terms.
  */
 class Terms extends Module {
+	/**
+	 * Whitelist for taxonomies we want to sync.
+	 *
+	 * @access private
+	 *
+	 * @var array
+	 */
+	private $taxonomy_whitelist;
 
 	/**
 	 * Sync module name.
@@ -34,7 +42,7 @@ class Terms extends Module {
 	 * @return string
 	 */
 	public function id_field() {
-		return 'term_taxonomy_id';
+		return 'term_id';
 	}
 
 	/**
@@ -45,7 +53,7 @@ class Terms extends Module {
 	 * @return string
 	 */
 	public function table_name() {
-		return 'term_taxonomy';
+		return 'terms';
 	}
 
 	/**
@@ -60,7 +68,7 @@ class Terms extends Module {
 		global $wpdb;
 		$object = false;
 		if ( 'term' === $object_type ) {
-			$object = get_term( (int) $id );
+			$object = get_term( intval( $id ) );
 
 			if ( is_wp_error( $object ) && $object->get_error_code() === 'invalid_taxonomy' ) {
 				// Fetch raw term.
@@ -104,7 +112,6 @@ class Terms extends Module {
 		add_action( 'delete_term', $callable, 10, 4 );
 		add_action( 'set_object_terms', $callable, 10, 6 );
 		add_action( 'deleted_term_relationships', $callable, 10, 2 );
-		add_filter( 'jetpack_sync_before_enqueue_set_object_terms', array( $this, 'filter_set_object_terms_no_update' ) );
 		add_filter( 'jetpack_sync_before_enqueue_jetpack_sync_save_term', array( $this, 'filter_blacklisted_taxonomies' ) );
 		add_filter( 'jetpack_sync_before_enqueue_jetpack_sync_add_term', array( $this, 'filter_blacklisted_taxonomies' ) );
 	}
@@ -257,20 +264,24 @@ class Terms extends Module {
 	}
 
 	/**
-	 * Filter out set_object_terms actions where the terms have not changed.
+	 * Set the taxonomy whitelist.
 	 *
-	 * @param array $args Hook args.
-	 * @return array|boolean False if no change in terms, the original hook args otherwise.
+	 * @access public
+	 *
+	 * @param array $taxonomies The new taxonomyy whitelist.
 	 */
-	public function filter_set_object_terms_no_update( $args ) {
-		// There is potential for other plugins to modify args, therefore lets validate # of and types.
-		// $args[2] is $tt_ids, $args[5] is $old_tt_ids see wp-includes/taxonomy.php L2740.
-		if ( 6 === count( $args ) && is_array( $args[2] ) && is_array( $args[5] ) ) {
-			if ( empty( array_diff( $args[2], $args[5] ) ) && empty( array_diff( $args[5], $args[2] ) ) ) {
-				return false;
-			}
-		}
-		return $args;
+	public function set_taxonomy_whitelist( $taxonomies ) {
+		$this->taxonomy_whitelist = $taxonomies;
+	}
+
+	/**
+	 * Set module defaults.
+	 * Define the taxonomy whitelist to be the default one.
+	 *
+	 * @access public
+	 */
+	public function set_defaults() {
+		$this->taxonomy_whitelist = Defaults::$default_taxonomy_whitelist;
 	}
 
 	/**
@@ -308,5 +319,4 @@ class Terms extends Module {
 	public function expand_terms_for_relationship( $relationship ) {
 		return get_term_by( 'term_taxonomy_id', $relationship->term_taxonomy_id );
 	}
-
 }

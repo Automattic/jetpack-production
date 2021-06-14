@@ -7,7 +7,7 @@
  * Not to be confused with the `Jetpack_Plan` (singular)
  * class, which stores and syncs data about the site's _current_ plan.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 class Jetpack_Plans {
 	/**
@@ -23,7 +23,7 @@ class Jetpack_Plans {
 				require WP_CONTENT_DIR . '/admin-plugins/wpcom-billing/store-product-list.php';
 			}
 
-			return Store_Product_List::api_only_get_active_plans_v1_4();
+			return Store_Product_List::get_active_plans_v1_5();
 		}
 
 		// We're on Jetpack, so it's safe to use this namespace.

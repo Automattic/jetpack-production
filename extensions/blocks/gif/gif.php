@@ -4,29 +4,15 @@
  *
  * @since 7.0.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
-namespace Automattic\Jetpack\Extensions\Gif;
-
-use Automattic\Jetpack\Blocks;
-use Jetpack_Gutenberg;
-
-const FEATURE_NAME = 'gif';
-const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
-
-/**
- * Registers the block for use in Gutenberg
- * This is done via an action so that we can disable
- * registration if we need to.
- */
-function register_block() {
-	Blocks::jetpack_register_block(
-		BLOCK_NAME,
-		array( 'render_callback' => __NAMESPACE__ . '\render_block' )
-	);
-}
-add_action( 'init', __NAMESPACE__ . '\register_block' );
+jetpack_register_block(
+	'jetpack/gif',
+	array(
+		'render_callback' => 'jetpack_gif_block_render',
+	)
+);
 
 /**
  * Gif block registration/dependency declaration.
@@ -35,12 +21,10 @@ add_action( 'init', __NAMESPACE__ . '\register_block' );
  *
  * @return string
  */
-function render_block( $attr ) {
+function jetpack_gif_block_render( $attr ) {
 	$padding_top = isset( $attr['paddingTop'] ) ? $attr['paddingTop'] : 0;
 	$style       = 'padding-top:' . $padding_top;
-	$giphy_url   = isset( $attr['giphyUrl'] )
-		? Jetpack_Gutenberg::validate_block_embed_url( $attr['giphyUrl'], array( 'giphy.com' ) )
-		: null;
+	$giphy_url   = isset( $attr['giphyUrl'] ) ? $attr['giphyUrl'] : null;
 	$search_text = isset( $attr['searchText'] ) ? $attr['searchText'] : '';
 	$caption     = isset( $attr['caption'] ) ? $attr['caption'] : null;
 
@@ -48,7 +32,7 @@ function render_block( $attr ) {
 		return null;
 	}
 
-	$classes = Blocks::classes( FEATURE_NAME, $attr );
+	$classes = Jetpack_Gutenberg::block_classes( 'gif', $attr );
 
 	$placeholder = sprintf( '<a href="%s">%s</a>', esc_url( $giphy_url ), esc_attr( $search_text ) );
 
@@ -56,7 +40,7 @@ function render_block( $attr ) {
 	?>
 	<div class="<?php echo esc_attr( $classes ); ?>">
 		<figure>
-			<?php if ( Blocks::is_amp_request() ) : ?>
+			<?php if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) : ?>
 				<amp-iframe src="<?php echo esc_url( $giphy_url ); ?>" width="100" height="<?php echo absint( $padding_top ); ?>" sandbox="allow-scripts allow-same-origin" layout="responsive">
 					<div placeholder>
 						<?php echo wp_kses_post( $placeholder ); ?>
@@ -75,7 +59,7 @@ function render_block( $attr ) {
 	<?php
 	$html = ob_get_clean();
 
-	Jetpack_Gutenberg::load_assets_as_required( FEATURE_NAME );
+	Jetpack_Gutenberg::load_assets_as_required( 'gif' );
 
 	return $html;
 }

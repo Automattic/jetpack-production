@@ -60,9 +60,6 @@ class Options extends Module {
 		add_action( 'update_option_site_icon', array( $this, 'jetpack_sync_core_icon' ) );
 		add_action( 'delete_option_site_icon', array( $this, 'jetpack_sync_core_icon' ) );
 
-		// Handle deprecated options.
-		add_filter( 'jetpack_options_whitelist', array( $this, 'add_deprecated_options' ) );
-
 		$whitelist_option_handler = array( $this, 'whitelist_options' );
 		add_filter( 'jetpack_sync_before_enqueue_deleted_option', $whitelist_option_handler );
 		add_filter( 'jetpack_sync_before_enqueue_added_option', $whitelist_option_handler );
@@ -115,32 +112,6 @@ class Options extends Module {
 	}
 
 	/**
-	 * Add old deprecated options to the list of options to keep in sync.
-	 *
-	 * @since 8.8.0
-	 *
-	 * @access public
-	 *
-	 * @param array $options The default list of site options.
-	 */
-	public function add_deprecated_options( $options ) {
-		global $wp_version;
-
-		$deprecated_options = array(
-			'blacklist_keys'    => '5.5-alpha', // Replaced by disallowed_keys.
-			'comment_whitelist' => '5.5-alpha', // Replaced by comment_previously_approved.
-		);
-
-		foreach ( $deprecated_options as $option => $version ) {
-			if ( version_compare( $wp_version, $version, '<=' ) ) {
-				$options[] = $option;
-			}
-		}
-
-		return $options;
-	}
-
-	/**
 	 * Enqueue the options actions for full sync.
 	 *
 	 * @access public
@@ -162,25 +133,6 @@ class Options extends Module {
 
 		// The number of actions enqueued, and next module state (true == done).
 		return array( 1, true );
-	}
-
-	/**
-	 * Send the options actions for full sync.
-	 *
-	 * @access public
-	 *
-	 * @param array $config Full sync configuration for this sync module.
-	 * @param int   $send_until The timestamp until the current request can send.
-	 * @param array $state This module Full Sync status.
-	 *
-	 * @return array This module Full Sync status.
-	 */
-	public function send_full_sync_actions( $config, $send_until, $state ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
-		// we call this instead of do_action when sending immediately.
-		$this->send_action( 'jetpack_full_sync_options', array( true ) );
-
-		// The number of actions enqueued, and next module state (true == done).
-		return array( 'finished' => true );
 	}
 
 	/**
@@ -364,16 +316,9 @@ class Options extends Module {
 	public function jetpack_sync_core_icon() {
 		$url = get_site_icon_url();
 
-		$jetpack_url = \Jetpack_Options::get_option( 'site_icon_url' );
-		if ( defined( 'JETPACK__PLUGIN_DIR' ) ) {
-			if ( ! function_exists( 'jetpack_site_icon_url' ) ) {
-				require_once JETPACK__PLUGIN_DIR . 'modules/site-icon/site-icon-functions.php';
-			}
-			$jetpack_url = jetpack_site_icon_url();
-		}
-
+		require_once JETPACK__PLUGIN_DIR . 'modules/site-icon/site-icon-functions.php';
 		// If there's a core icon, maybe update the option.  If not, fall back to Jetpack's.
-		if ( ! empty( $url ) && $jetpack_url !== $url ) {
+		if ( ! empty( $url ) && jetpack_site_icon_url() !== $url ) {
 			// This is the option that is synced with dotcom.
 			\Jetpack_Options::update_option( 'site_icon_url', $url );
 		} elseif ( empty( $url ) ) {
@@ -396,16 +341,4 @@ class Options extends Module {
 
 		return $args;
 	}
-
-	/**
-	 * Return Total number of objects.
-	 *
-	 * @param array $config Full Sync config.
-	 *
-	 * @return int total
-	 */
-	public function total( $config ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
-		return count( Defaults::get_options_whitelist() );
-	}
-
 }

@@ -1,23 +1,17 @@
 <?php
 /**
  * Module Name: Monitor
- * Module Description: Jetpack’s downtime monitoring will continuously watch your site and alert you the moment that downtime is detected.
+ * Module Description: Jetpack’s downtime monitoring will continuously watch your site, and alert you the moment that downtime is detected.
  * Sort Order: 28
  * Recommendation Order: 10
  * First Introduced: 2.6
  * Requires Connection: Yes
- * Requires User Connection: Yes
  * Auto Activate: No
  * Module Tags: Recommended
  * Feature: Security
  * Additional Search Queries: monitor, uptime, downtime, monitoring, maintenance, maintenance mode, offline, site is down, site down, down, repair, error
  */
 
-use Automattic\Jetpack\Connection\Manager as Connection_Manager;
-
-/**
- * Class Jetpack_Monitor
- */
 class Jetpack_Monitor {
 
 	public $module = 'monitor';
@@ -28,7 +22,7 @@ class Jetpack_Monitor {
 	}
 
 	public function activate_module() {
-		if ( ( new Connection_Manager( 'jetpack' ) )->is_user_connected() ) {
+		if ( Jetpack::is_user_connected() ) {
 			self::update_option_receive_jetpack_monitor_notification( true );
 		}
 	}
@@ -37,16 +31,7 @@ class Jetpack_Monitor {
 		Jetpack::enable_module_configurable( $this->module );
 	}
 
-	/**
-	 * Send an API request to check if the monitor is active.
-	 *
-	 * @return mixed
-	 *
-	 * @deprecated 8.9.0 The method is not being used since Jetpack 4.2.0, to be removed.
-	 */
 	public function is_active() {
-		_deprecated_function( __METHOD__, 'jetpack-8.9.0' );
-
 		$xml = new Jetpack_IXR_Client( array(
 			'user_id' => get_current_user_id()
 		) );
@@ -57,13 +42,6 @@ class Jetpack_Monitor {
 		return $xml->getResponse();
 	}
 
-	/**
-	 * Whether to receive the notifications.
-	 *
-	 * @param bool $value `true` to enable notifications, `false` to disable them.
-	 *
-	 * @return bool
-	 */
 	public function update_option_receive_jetpack_monitor_notification( $value ) {
 		$xml = new Jetpack_IXR_Client( array(
 			'user_id' => get_current_user_id()
@@ -106,16 +84,7 @@ class Jetpack_Monitor {
 		return $xml->getResponse();
 	}
 
-	/**
-	 * Send an API request to activate the monitor.
-	 *
-	 * @return bool
-	 *
-	 * @deprecated 8.9.0 The method is not being used since Jetpack 4.2.0, to be removed.
-	 */
 	public function activate_monitor() {
-		_deprecated_function( __METHOD__, 'jetpack-8.9.0' );
-
 		$xml = new Jetpack_IXR_Client( array(
 			'user_id' => get_current_user_id()
 		) );
@@ -128,16 +97,7 @@ class Jetpack_Monitor {
 		return true;
 	}
 
-	/**
-	 * Send an API request to deactivate the monitor.
-	 *
-	 * @return bool
-	 *
-	 * @deprecated 8.9.0 The method is not being used since Jetpack 4.2.0, to be removed.
-	 */
 	public function deactivate_monitor() {
-		_deprecated_function( __METHOD__, 'jetpack-8.9.0' );
-
 		$xml = new Jetpack_IXR_Client( array(
 			'user_id' => get_current_user_id()
 		) );
@@ -157,7 +117,13 @@ class Jetpack_Monitor {
 	 * @return date in YYYY-MM-DD HH:mm:ss format
 	 */
 	public function monitor_get_last_downtime() {
-		$xml = new Jetpack_IXR_Client();
+//		if ( $last_down = get_transient( 'monitor_last_downtime' ) ) {
+//			return $last_down;
+//		}
+
+		$xml = new Jetpack_IXR_Client( array(
+			'user_id' => get_current_user_id()
+		) );
 
 		$xml->query( 'jetpack.monitor.getLastDowntime' );
 

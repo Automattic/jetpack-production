@@ -61,8 +61,7 @@ class Constants {
 
 	/**
 	 * Attempts to retrieve the "constant" from constants Manager, and if it hasn't been set,
-	 * then attempts to get the constant with the constant() function. If that also hasn't
-	 * been set, attempts to get a value from filters.
+	 * then attempts to get the constant with the constant() function.
 	 *
 	 * @param string $name The name of the constant.
 	 *
@@ -73,19 +72,7 @@ class Constants {
 			return self::$set_constants[ $name ];
 		}
 
-		if ( defined( $name ) ) {
-			return constant( $name );
-		}
-
-		/**
-		 * Filters the value of the constant.
-		 *
-		 * @since 8.5.0
-		 *
-		 * @param null The constant value to be filtered. The default is null.
-		 * @param String $name The constant name.
-		 */
-		return apply_filters( 'jetpack_constant_default_value', null, $name );
+		return defined( $name ) ? constant( $name ) : null;
 	}
 
 	/**

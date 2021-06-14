@@ -39,18 +39,10 @@ class WC_Services_Installer {
 	 * Constructor
 	 */
 	public function __construct() {
-		add_action( 'jetpack_loaded', array( $this, 'on_jetpack_loaded' ) );
+		$this->jetpack = Jetpack::init();
+
 		add_action( 'admin_init', array( $this, 'add_error_notice' ) );
 		add_action( 'admin_init', array( $this, 'try_install' ) );
-	}
-
-	/**
-	 * Runs on Jetpack being ready to load its packages.
-	 *
-	 * @param Jetpack $jetpack object.
-	 */
-	public function on_jetpack_loaded( $jetpack ) {
-		$this->jetpack = $jetpack;
 	}
 
 	/**
@@ -126,14 +118,22 @@ class WC_Services_Installer {
 	 * @return bool result of installation
 	 */
 	private function install() {
-		jetpack_require_lib( 'plugins' );
-		$result = Jetpack_Plugins::install_plugin( 'woocommerce-services' );
+		include_once ABSPATH . '/wp-admin/includes/admin.php';
+		include_once ABSPATH . '/wp-admin/includes/plugin-install.php';
+		include_once ABSPATH . '/wp-admin/includes/plugin.php';
+		include_once ABSPATH . '/wp-admin/includes/class-wp-upgrader.php';
+		include_once ABSPATH . '/wp-admin/includes/class-plugin-upgrader.php';
 
-		if ( is_wp_error( $result ) ) {
+		$api = plugins_api( 'plugin_information', array( 'slug' => 'woocommerce-services' ) );
+
+		if ( is_wp_error( $api ) ) {
 			return false;
-		} else {
-			return true;
 		}
+
+		$upgrader = new Plugin_Upgrader( new Automatic_Upgrader_Skin() );
+		$result   = $upgrader->install( $api->download_link );
+
+		return true === $result;
 	}
 
 	/**

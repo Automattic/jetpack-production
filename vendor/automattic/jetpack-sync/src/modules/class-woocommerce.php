@@ -58,17 +58,6 @@ class WooCommerce extends Module {
 	private $order_item_table_name;
 
 	/**
-	 * The table in the database.
-	 *
-	 * @access public
-	 *
-	 * @return string
-	 */
-	public function table_name() {
-		return $this->order_item_table_name;
-	}
-
-	/**
 	 * Constructor.
 	 *
 	 * @global $wpdb
@@ -281,7 +270,7 @@ class WooCommerce extends Module {
 	 * @param array $config Full sync configuration for this sync module.
 	 * @return string WHERE SQL clause.
 	 */
-	public function get_where_sql( $config ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+	private function get_where_sql( $config ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
 		return '1=1';
 	}
 
@@ -401,8 +390,6 @@ class WooCommerce extends Module {
 		'woocommerce_currency_pos',
 		'woocommerce_api_enabled',
 		'woocommerce_allow_tracking',
-		'woocommerce_task_list_hidden',
-		'woocommerce_onboarding_profile',
 	);
 
 	/**

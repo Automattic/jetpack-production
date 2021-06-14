@@ -1,14 +1,13 @@
 <?php
-/**
+/*
  * Service API Keys: Exposes 3rd party api keys that are used on a site.
  *
  * [
  *   { # Availabilty Object. See schema for more detail.
- *      code:                   (string) Displays success if the operation was successfully executed and an error code if it was not
- *      service:                (string) The name of the service in question
- *      service_api_key:        (string) The API key used by the service empty if one is not set yet
- *      service_api_key_source: (string) The source of the API key, defaults to "site"
- *      message:                (string) User friendly message
+ *      code:            (string) Displays success if the operation was successfully executed and an error code if it was not
+ *      service:         (string) The name of the service in question
+ *      service_api_key: (string) The API key used by the service empty if one is not set yet
+ *      message:         (string) User friendly message
  *   },
  *   ...
  * ]
@@ -32,7 +31,6 @@ class WPCOM_REST_API_V2_Endpoint_Service_API_Keys extends WP_REST_Controller {
 				array(
 					'methods'             => WP_REST_Server::READABLE,
 					'callback'            => array( __CLASS__, 'get_service_api_key' ),
-					'permission_callback' => '__return_true',
 				),
 				array(
 					'methods'             => WP_REST_Server::EDITABLE,
@@ -41,7 +39,7 @@ class WPCOM_REST_API_V2_Endpoint_Service_API_Keys extends WP_REST_Controller {
 					'args'                => array(
 						'service_api_key' => array(
 							'required' => true,
-							'type'     => 'string',
+							'type'     => 'text',
 						),
 					),
 				),
@@ -79,23 +77,19 @@ class WPCOM_REST_API_V2_Endpoint_Service_API_Keys extends WP_REST_Controller {
 			'title'      => 'service-api-keys',
 			'type'       => 'object',
 			'properties' => array(
-				'code'                   => array(
+				'code'          => array(
 					'description' => __( 'Displays success if the operation was successfully executed and an error code if it was not', 'jetpack' ),
 					'type'        => 'string',
 				),
-				'service'                => array(
+				'service' => array(
 					'description' => __( 'The name of the service in question', 'jetpack' ),
 					'type'        => 'string',
 				),
-				'service_api_key'        => array(
+				'service_api_key'          => array(
 					'description' => __( 'The API key used by the service. Empty if none has been set yet', 'jetpack' ),
 					'type'        => 'string',
 				),
-				'service_api_key_source' => array(
-					'description' => __( 'The source of the API key. Defaults to "site"', 'jetpack' ),
-					'type'        => 'string',
-				),
-				'message'                => array(
+				'message'          => array(
 					'description' => __( 'User friendly message', 'jetpack' ),
 					'type'        => 'string',
 				),
@@ -115,34 +109,18 @@ class WPCOM_REST_API_V2_Endpoint_Service_API_Keys extends WP_REST_Controller {
 	 * }
 	 */
 	public static function get_service_api_key( $request ) {
+
 		$service = self::validate_service_api_service( $request['service'] );
 		if ( ! $service ) {
 			return self::service_api_invalid_service_response();
 		}
-
-		switch ( $service ) {
-			case 'mapbox':
-				if ( ! class_exists( 'Jetpack_Mapbox_Helper' ) ) {
-					jetpack_require_lib( 'class-jetpack-mapbox-helper' );
-				}
-				$mapbox                 = Jetpack_Mapbox_Helper::get_access_token();
-				$service_api_key        = $mapbox['key'];
-				$service_api_key_source = $mapbox['source'];
-				break;
-			default:
-				$option                 = self::key_for_api_service( $service );
-				$service_api_key        = Jetpack_Options::get_option( $option, '' );
-				$service_api_key_source = 'site';
-		};
-
+		$option  = self::key_for_api_service( $service );
 		$message = esc_html__( 'API key retrieved successfully.', 'jetpack' );
-
 		return array(
-			'code'                   => 'success',
-			'service'                => $service,
-			'service_api_key'        => $service_api_key,
-			'service_api_key_source' => $service_api_key_source,
-			'message'                => $message,
+			'code'            => 'success',
+			'service'         => $service,
+			'service_api_key' => Jetpack_Options::get_option( $option, '' ),
+			'message'         => $message,
 		);
 	}
 
@@ -172,11 +150,10 @@ class WPCOM_REST_API_V2_Endpoint_Service_API_Keys extends WP_REST_Controller {
 		$message = esc_html__( 'API key updated successfully.', 'jetpack' );
 		Jetpack_Options::update_option( $option, $service_api_key );
 		return array(
-			'code'                   => 'success',
-			'service'                => $service,
-			'service_api_key'        => Jetpack_Options::get_option( $option, '' ),
-			'service_api_key_source' => 'site',
-			'message'                => $message,
+			'code'            => 'success',
+			'service'         => $service,
+			'service_api_key' => Jetpack_Options::get_option( $option, '' ),
+			'message'         => $message,
 		);
 	}
 
@@ -197,28 +174,11 @@ class WPCOM_REST_API_V2_Endpoint_Service_API_Keys extends WP_REST_Controller {
 		$option = self::key_for_api_service( $service );
 		Jetpack_Options::delete_option( $option );
 		$message = esc_html__( 'API key deleted successfully.', 'jetpack' );
-
-		switch ( $service ) {
-			case 'mapbox':
-				// After deleting a custom Mapbox key, try to revert to the WordPress.com one if available.
-				if ( ! class_exists( 'Jetpack_Mapbox_Helper' ) ) {
-					jetpack_require_lib( 'class-jetpack-mapbox-helper' );
-				}
-				$mapbox                 = Jetpack_Mapbox_Helper::get_access_token();
-				$service_api_key        = $mapbox['key'];
-				$service_api_key_source = $mapbox['source'];
-				break;
-			default:
-				$service_api_key        = Jetpack_Options::get_option( $option, '' );
-				$service_api_key_source = 'site';
-		};
-
 		return array(
-			'code'                   => 'success',
-			'service'                => $service,
-			'service_api_key'        => $service_api_key,
-			'service_api_key_source' => $service_api_key_source,
-			'message'                => $message,
+			'code'            => 'success',
+			'service'         => $service,
+			'service_api_key' => Jetpack_Options::get_option( $option, '' ),
+			'message'         => $message,
 		);
 	}
 

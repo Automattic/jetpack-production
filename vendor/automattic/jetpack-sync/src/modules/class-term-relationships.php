@@ -131,51 +131,11 @@ class Term_Relationships extends Module {
 
 		// We need to do this extra check in case $max_items_to_enqueue * $term_relationships_full_sync_item_size == relationships objects left.
 		$count = $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM $wpdb->term_relationships WHERE ( object_id = %d AND term_taxonomy_id < %d ) OR ( object_id < %d ) ORDER BY object_id DESC, term_taxonomy_id DESC LIMIT %d", $last_object_enqueued['object_id'], $last_object_enqueued['term_taxonomy_id'], $last_object_enqueued['object_id'], 1 ) );
-		if ( 0 === (int) $count ) {
+		if ( intval( $count ) === 0 ) {
 			return array( $items_enqueued_count, true );
 		}
 
 		return array( $items_enqueued_count, $last_object_enqueued );
-	}
-
-	/**
-	 * Return the initial last sent object.
-	 *
-	 * @return string|array initial status.
-	 */
-	public function get_initial_last_sent() {
-		return array(
-			'object_id'        => self::MAX_INT,
-			'term_taxonomy_id' => self::MAX_INT,
-		);
-	}
-
-	/**
-	 * Given the Module Full Sync Configuration and Status return the next chunk of items to send.
-	 *
-	 * @param array $config This module Full Sync configuration.
-	 * @param array $status This module Full Sync status.
-	 * @param int   $chunk_size Chunk size.
-	 *
-	 * @return array|object|null
-	 */
-	public function get_next_chunk( $config, $status, $chunk_size ) {
-		global $wpdb;
-
-		return $wpdb->get_results(
-			$wpdb->prepare(
-				"SELECT object_id, term_taxonomy_id 
-				FROM $wpdb->term_relationships 
-				WHERE ( object_id = %d AND term_taxonomy_id < %d ) OR ( object_id < %d ) 
-				ORDER BY object_id DESC, term_taxonomy_id 
-				DESC LIMIT %d",
-				$status['last_sent']['object_id'],
-				$status['last_sent']['term_taxonomy_id'],
-				$status['last_sent']['object_id'],
-				$chunk_size
-			),
-			ARRAY_A
-		);
 	}
 
 	/**
@@ -203,7 +163,7 @@ class Term_Relationships extends Module {
 	 * @param array $config Full sync configuration for this sync module.
 	 * @return int Number of items yet to be enqueued.
 	 */
-	public function estimate_full_sync_actions( $config ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+	public function estimate_full_sync_actions( $config ) {
 		global $wpdb;
 
 		$query = "SELECT COUNT(*) FROM $wpdb->term_relationships";

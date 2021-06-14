@@ -9,7 +9,7 @@
  * @param location int Location ID for the Untappd venue. Required.
  * @param theme    int Theme ID for the Untappd menu. Required.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -37,7 +37,7 @@ class Jetpack_Untappd {
 	 * @param array  $atts    Shortocde attributes.
 	 * @param string $content Post content.
 	 */
-	public static function menu_shortcode( $atts, $content = '' ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+	public static function menu_shortcode( $atts, $content = '' ) {
 		// Let's bail if we don't have location or theme.
 		if ( ! isset( $atts['location'] ) || ! isset( $atts['theme'] ) ) {
 			if ( current_user_can( 'edit_posts' ) ) {

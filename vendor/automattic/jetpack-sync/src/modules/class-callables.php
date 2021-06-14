@@ -7,10 +7,10 @@
 
 namespace Automattic\Jetpack\Sync\Modules;
 
-use Automattic\Jetpack\Constants as Jetpack_Constants;
-use Automattic\Jetpack\Sync\Defaults;
 use Automattic\Jetpack\Sync\Functions;
+use Automattic\Jetpack\Sync\Defaults;
 use Automattic\Jetpack\Sync\Settings;
+use Automattic\Jetpack\Constants as Jetpack_Constants;
 
 /**
  * Class to handle sync for callables.
@@ -53,20 +53,7 @@ class Callables extends Module {
 		'jetpack_sync_error_idc',
 		'paused_plugins',
 		'paused_themes',
-
 	);
-
-	const ALWAYS_SEND_UPDATES_TO_THESE_OPTIONS_NEXT_TICK = array(
-		'stylesheet',
-	);
-	/**
-	 * Setting this value to true will make it so that the callables will not be unlocked
-	 * but the lock will be removed after content is send so that callables will be
-	 * sent in the next request.
-	 *
-	 * @var bool
-	 */
-	private $force_send_callables_on_next_tick = false;
 
 	/**
 	 * For some options, the callable key differs from the option name/key
@@ -104,7 +91,6 @@ class Callables extends Module {
 		} else {
 			$this->callable_whitelist = Defaults::get_callable_whitelist();
 		}
-		$this->force_send_callables_on_next_tick = false; // Resets here as well mostly for tests.
 	}
 
 	/**
@@ -121,11 +107,6 @@ class Callables extends Module {
 		foreach ( self::ALWAYS_SEND_UPDATES_TO_THESE_OPTIONS as $option ) {
 			add_action( "update_option_{$option}", array( $this, 'unlock_sync_callable' ) );
 			add_action( "delete_option_{$option}", array( $this, 'unlock_sync_callable' ) );
-		}
-
-		foreach ( self::ALWAYS_SEND_UPDATES_TO_THESE_OPTIONS_NEXT_TICK as $option ) {
-			add_action( "update_option_{$option}", array( $this, 'unlock_sync_callable_next_tick' ) );
-			add_action( "delete_option_{$option}", array( $this, 'unlock_sync_callable_next_tick' ) );
 		}
 
 		// Provide a hook so that hosts can send changes to certain callables right away.
@@ -226,14 +207,10 @@ class Callables extends Module {
 	 * @access private
 	 *
 	 * @param callable $callable Callable to invoke.
-	 * @return mixed Return value of the callable, null if not callable.
+	 * @return mixed Return value of the callable.
 	 */
 	private function get_callable( $callable ) {
-		if ( is_callable( $callable ) ) {
-			return call_user_func( $callable );
-		} else {
-			return null;
-		}
+		return call_user_func( $callable );
 	}
 
 	/**
@@ -258,25 +235,6 @@ class Callables extends Module {
 
 		// The number of actions enqueued, and next module state (true == done).
 		return array( 1, true );
-	}
-
-	/**
-	 * Send the callable actions for full sync.
-	 *
-	 * @access public
-	 *
-	 * @param array $config Full sync configuration for this sync module.
-	 * @param int   $send_until The timestamp until the current request can send.
-	 * @param array $status This Module Full Sync Status.
-	 *
-	 * @return array This Module Full Sync Status.
-	 */
-	public function send_full_sync_actions( $config, $send_until, $status ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
-		// we call this instead of do_action when sending immediately.
-		$this->send_action( 'jetpack_full_sync_callables', array( true ) );
-
-		// The number of actions enqueued, and next module state (true == done).
-		return array( 'finished' => true );
 	}
 
 	/**
@@ -309,17 +267,6 @@ class Callables extends Module {
 	 */
 	public function unlock_sync_callable() {
 		delete_transient( self::CALLABLES_AWAIT_TRANSIENT_NAME );
-	}
-
-	/**
-	 * Unlock callables on the next tick.
-	 * Sometime the true callable values are only present on the next tick.
-	 * When switching themes for example.
-	 *
-	 * @access public
-	 */
-	public function unlock_sync_callable_next_tick() {
-		$this->force_send_callables_on_next_tick = true;
 	}
 
 	/**
@@ -374,13 +321,8 @@ class Callables extends Module {
 			/** This filter is documented in src/wp-admin/includes/class-wp-plugins-list-table.php */
 			$action_links = apply_filters( 'plugin_action_links', $action_links, $plugin_file, null, 'all' );
 			/** This filter is documented in src/wp-admin/includes/class-wp-plugins-list-table.php */
-			$action_links = apply_filters( "plugin_action_links_{$plugin_file}", $action_links, $plugin_file, null, 'all' );
-			// Verify $action_links is still an array to resolve warnings from filters not returning an array.
-			if ( is_array( $action_links ) ) {
-				$action_links = array_filter( $action_links );
-			} else {
-				$action_links = array();
-			}
+			$action_links           = apply_filters( "plugin_action_links_{$plugin_file}", $action_links, $plugin_file, null, 'all' );
+			$action_links           = array_filter( $action_links );
 			$formatted_action_links = null;
 			if ( ! empty( $action_links ) && count( $action_links ) > 0 ) {
 				$dom_doc = new \DOMDocument();
@@ -450,6 +392,7 @@ class Callables extends Module {
 	 * @access public
 	 */
 	public function maybe_sync_callables() {
+
 		$callables = $this->get_all_callables();
 		if ( ! apply_filters( 'jetpack_check_and_send_callables', false ) ) {
 			if ( ! is_admin() ) {
@@ -461,9 +404,6 @@ class Callables extends Module {
 				$callables = $this->get_always_sent_callables();
 			}
 			if ( get_transient( self::CALLABLES_AWAIT_TRANSIENT_NAME ) ) {
-				if ( $this->force_send_callables_on_next_tick ) {
-					$this->unlock_sync_callable();
-				}
 				return;
 			}
 		}
@@ -471,34 +411,25 @@ class Callables extends Module {
 		if ( empty( $callables ) ) {
 			return;
 		}
-		// No need to set the transiant we are trying to remove it anyways.
-		if ( ! $this->force_send_callables_on_next_tick ) {
-			set_transient( self::CALLABLES_AWAIT_TRANSIENT_NAME, microtime( true ), Defaults::$default_sync_callables_wait_time );
-		}
+
+		set_transient( self::CALLABLES_AWAIT_TRANSIENT_NAME, microtime( true ), Defaults::$default_sync_callables_wait_time );
 
 		$callable_checksums = (array) \Jetpack_Options::get_raw_option( self::CALLABLES_CHECKSUM_OPTION_NAME, array() );
 		$has_changed        = false;
 		// Only send the callables that have changed.
 		foreach ( $callables as $name => $value ) {
 			$checksum = $this->get_check_sum( $value );
-
 			// Explicitly not using Identical comparison as get_option returns a string.
 			if ( ! is_null( $value ) && $this->should_send_callable( $callable_checksums, $name, $checksum ) ) {
-
-				// Only send callable if the non sorted checksum also does not match.
-				if ( $this->should_send_callable( $callable_checksums, $name, $this->get_check_sum( $value, false ) ) ) {
-
-					/**
-					 * Tells the client to sync a callable (aka function) to the server
-					 *
-					 * @param string The name of the callable
-					 * @param mixed The value of the callable
-					 *
-					 * @since 4.2.0
-					 */
-					do_action( 'jetpack_sync_callable', $name, $value );
-				}
-
+				/**
+				 * Tells the client to sync a callable (aka function) to the server
+				 *
+				 * @since 4.2.0
+				 *
+				 * @param string The name of the callable
+				 * @param mixed The value of the callable
+				 */
+				do_action( 'jetpack_sync_callable', $name, $value );
 				$callable_checksums[ $name ] = $checksum;
 				$has_changed                 = true;
 			} else {
@@ -509,9 +440,6 @@ class Callables extends Module {
 			\Jetpack_Options::update_raw_option( self::CALLABLES_CHECKSUM_OPTION_NAME, $callable_checksums );
 		}
 
-		if ( $this->force_send_callables_on_next_tick ) {
-			$this->unlock_sync_callable();
-		}
 	}
 
 	/**
@@ -560,16 +488,4 @@ class Callables extends Module {
 
 		return $args;
 	}
-
-	/**
-	 * Return Total number of objects.
-	 *
-	 * @param array $config Full Sync config.
-	 *
-	 * @return int total
-	 */
-	public function total( $config ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
-		return count( $this->get_callable_whitelist() );
-	}
-
 }

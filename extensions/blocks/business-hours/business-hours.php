@@ -4,36 +4,20 @@
  *
  * @since 7.1.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
-namespace Automattic\Jetpack\Extensions\Business_Hours;
-
-use Automattic\Jetpack\Blocks;
-use Jetpack_Gutenberg;
-
-const FEATURE_NAME = 'business-hours';
-const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
-
-/**
- * Registers the block for use in Gutenberg
- * This is done via an action so that we can disable
- * registration if we need to.
- */
-function register_block() {
-	Blocks::jetpack_register_block(
-		BLOCK_NAME,
-		array( 'render_callback' => __NAMESPACE__ . '\render' )
-	);
-}
-add_action( 'init', __NAMESPACE__ . '\register_block' );
+jetpack_register_block(
+	'jetpack/business-hours',
+	array( 'render_callback' => 'jetpack_business_hours_render' )
+);
 
 /**
  * Get's default days / hours to render a business hour block with no data provided.
  *
  * @return array
  */
-function get_default_days() {
+function jetpack_business_hours_get_default_days() {
 	return array(
 		array(
 			'name'  => 'Sun',
@@ -98,11 +82,11 @@ function get_default_days() {
  *
  * @return string
  */
-function render( $attributes ) {
+function jetpack_business_hours_render( $attributes ) {
 	global $wp_locale;
 
 	if ( empty( $attributes['days'] ) || ! is_array( $attributes['days'] ) ) {
-		$attributes['days'] = get_default_days();
+		$attributes['days'] = jetpack_business_hours_get_default_days();
 	}
 
 	$start_of_week = (int) get_option( 'start_of_week', 0 );
@@ -135,8 +119,8 @@ function render( $attributes ) {
 			}
 			$days_hours .= sprintf(
 				'%1$s - %2$s',
-				gmdate( $time_format, $opening ),
-				gmdate( $time_format, $closing )
+				date( $time_format, $opening ),
+				date( $time_format, $closing )
 			);
 			if ( $key + 1 < count( $day['hours'] ) ) {
 				$days_hours .= ', ';
@@ -152,7 +136,7 @@ function render( $attributes ) {
 
 	$content .= '</dl>';
 
-	Jetpack_Gutenberg::load_assets_as_required( FEATURE_NAME );
+	Jetpack_Gutenberg::load_assets_as_required( 'business-hours' );
 
 	/**
 	 * Allows folks to filter the HTML content for the Business Hours block

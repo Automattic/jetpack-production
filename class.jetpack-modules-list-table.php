@@ -17,16 +17,16 @@ class Jetpack_Modules_List_Table extends WP_List_Table {
 			array_push( $this->compat_fields, 'all_items' );
 		}
 
+		$this->items = $this->all_items = Jetpack_Admin::init()->get_modules();
+		$this->items = $this->filter_displayed_table_items( $this->items );
 		/**
 		 * Filters the list of modules available to be displayed in the Jetpack Settings screen.
 		 *
 		 * @since 3.0.0
 		 *
-		 * @param array $modules Array of Jetpack modules.
+		 * @param array $this->items Array of Jetpack modules.
 		 */
-		$this->all_items       = apply_filters( 'jetpack_modules_list_table_items', Jetpack_Admin::init()->get_modules() );
-		$this->items           = $this->all_items;
-		$this->items           = $this->filter_displayed_table_items( $this->items );
+		$this->items           = apply_filters( 'jetpack_modules_list_table_items', $this->items );
 		$this->_column_headers = array( $this->get_columns(), array(), array(), 'name' );
 		$modal_info            = isset( $_GET['info'] ) ? $_GET['info'] : false;
 
@@ -96,7 +96,9 @@ class Jetpack_Modules_List_Table extends WP_List_Table {
 			<# var i = 0;
 			if ( data.items.length ) {
 			_.each( data.items, function( item, key, list ) {
-				if ( item === undefined ) return; #>
+				if ( item === undefined ) return;
+				if ( 'pwa' == item.module && ! item.activated ) return;
+				if ( 'manage' == item.module && item.activated ) return; #>
 				<tr class="jetpack-module <# if ( ++i % 2 ) { #> alternate<# } #><# if ( item.activated ) { #> active<# } #><# if ( ! item.available ) { #> unavailable<# } #>" id="{{{ item.module }}}">
 					<th scope="row" class="check-column">
 						<# if ( 'videopress' !== item.module ) { #>
@@ -113,9 +115,6 @@ class Jetpack_Modules_List_Table extends WP_List_Table {
 							<span class='delete'><a href="<?php echo admin_url( 'admin.php' ); ?>?page=jetpack&#038;action=deactivate&#038;module={{{ item.module }}}&#038;_wpnonce={{{ item.deactivate_nonce }}}"><?php _e( 'Deactivate', 'jetpack' ); ?></a></span>
 						<# } else if ( item.available && 'videopress' !== item.module ) { #>
 							<span class='activate'><a href="<?php echo admin_url( 'admin.php' ); ?>?page=jetpack&#038;action=activate&#038;module={{{ item.module }}}&#038;_wpnonce={{{ item.activate_nonce }}}"><?php _e( 'Activate', 'jetpack' ); ?></a></span>
-						<# } #>
-						<# if ( ! item.available ) { #>
-							<span class='unavailable_reason'>{{{ item.unavailable_reason }}}</span>
 						<# } #>
 						</div>
 					</td>
@@ -135,10 +134,9 @@ class Jetpack_Modules_List_Table extends WP_List_Table {
 	}
 
 	function get_views() {
-		/** This filter is already documented in class.jetpack-modules-list-table.php */
-		$modules              = apply_filters( 'jetpack_modules_list_table_items', Jetpack_Admin::init()->get_modules() );
+		$modules              = Jetpack_Admin::init()->get_modules();
 		$array_of_module_tags = wp_list_pluck( $modules, 'module_tags' );
-		$module_tags          = array_merge( ...array_values( $array_of_module_tags ) );
+		$module_tags          = call_user_func_array( 'array_merge', $array_of_module_tags );
 		$module_tags_unique   = array_count_values( $module_tags );
 		ksort( $module_tags_unique );
 
@@ -335,7 +333,7 @@ class Jetpack_Modules_List_Table extends WP_List_Table {
 	}
 
 	// Check if the info parameter provided in the URL corresponds to an actual module
-	function module_info_check( $info, $modules ) {
+	function module_info_check( $info = false, $modules ) {
 		if ( false == $info ) {
 			return false;
 		} elseif ( array_key_exists( $info, $modules ) ) {

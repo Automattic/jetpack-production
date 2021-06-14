@@ -30,7 +30,7 @@ class Jetpack_Testimonial {
 		// If called via REST API, we need to register later in lifecycle
 		add_action( 'restapi_theme_init',          array( $this, 'maybe_register_cpt' ) );
 
-		// Add to REST API post type allowed list.
+		// Add to REST API post type whitelist
 		add_filter( 'rest_api_allowed_post_types', array( $this, 'allow_cpt_rest_api_type' ) );
 
 		$this->maybe_register_cpt();
@@ -185,7 +185,7 @@ class Jetpack_Testimonial {
 	}
 
 	/**
-	 * Add to REST API post type allowed list.
+	 * Add to REST API post type whitelist
 	 */
 	function allow_cpt_rest_api_type( $post_types ) {
 		$post_types[] = self::CUSTOM_POST_TYPE;
@@ -315,7 +315,6 @@ class Jetpack_Testimonial {
 				'page-attributes',
 				'revisions',
 				'excerpt',
-				'newspack_blocks',
 			),
 			'rewrite' => array(
 				'slug'       => 'testimonial',
@@ -546,7 +545,7 @@ class Jetpack_Testimonial {
 
 		$atts['columns'] = absint( $atts['columns'] );
 
-		$atts['showposts'] = (int) $atts['showposts'];
+		$atts['showposts'] = intval( $atts['showposts'] );
 
 		if ( $atts['order'] ) {
 			$atts['order'] = urldecode( $atts['order'] );
@@ -577,9 +576,7 @@ class Jetpack_Testimonial {
 		}
 
 		// enqueue shortcode styles when shortcode is used
-		if ( ! wp_style_is( 'jetpack-testimonial-style', 'enqueued' ) ) {
-			wp_enqueue_style( 'jetpack-testimonial-style', plugins_url( 'css/testimonial-shortcode.css', __FILE__ ), array(), '20140326' );
-		}
+		wp_enqueue_style( 'jetpack-testimonial-style', plugins_url( 'css/testimonial-shortcode.css', __FILE__ ), array(), '20140326' );
 
 		return self::jetpack_testimonial_shortcode_html( $atts );
 	}

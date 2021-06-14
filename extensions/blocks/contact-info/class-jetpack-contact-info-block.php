@@ -2,7 +2,7 @@
 /**
  * Class Jetpack_Contact_Info_Block
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -98,8 +98,7 @@ class Jetpack_Contact_Info_Block {
 	}
 
 	/**
-	 * Adds phone schema attributes. Also wraps the tel link in a span so that
-	 * it's recognized as a telephone number in Google's Structured Data.
+	 * Adds phone schema attributes.
 	 *
 	 * @param array  $attr    Array containing the phone block attributes.
 	 * @param string $content String containing the phone block content.
@@ -107,14 +106,9 @@ class Jetpack_Contact_Info_Block {
 	 * @return string
 	 */
 	public static function render_phone( $attr, $content ) {
-		if ( self::has_attributes( $attr, array( 'className' ) ) ) {
-			return str_replace(
-				array( '<a href="tel:', '</a>' ),
-				array( '<span itemprop="telephone"><a href="tel:', '</a></span>' ),
-				$content
-			);
-		}
-
-		return '';
+		$content = self::has_attributes( $attr, array( 'className' ) ) ?
+			str_replace( 'href="tel:', 'itemprop="telephone" href="tel:', $content ) :
+			'';
+		return $content;
 	}
 }

@@ -8,7 +8,6 @@
 namespace Automattic\Jetpack\Sync;
 
 use Automattic\Jetpack\Connection\Manager as Jetpack_Connection;
-use Automattic\Jetpack\Connection\XMLRPC_Async_Call;
 use Automattic\Jetpack\Roles;
 
 /**
@@ -28,6 +27,16 @@ class Users {
 	public static $user_roles = array();
 
 	/**
+	 * Jetpack connection manager instance.
+	 *
+	 * @access public
+	 * @static
+	 *
+	 * @var null|Automattic\Jetpack\Connection\Manager
+	 */
+	public static $connection = null;
+
+	/**
 	 * Initialize sync for user data changes.
 	 *
 	 * @access public
@@ -35,9 +44,8 @@ class Users {
 	 * @todo Eventually, connection needs to be instantiated at the top level in the sync package.
 	 */
 	public static function init() {
-		add_action( 'jetpack_user_authorized', array( 'Automattic\\Jetpack\\Sync\\Actions', 'do_initial_sync' ), 10, 0 );
-		$connection = new Jetpack_Connection();
-		if ( $connection->has_connected_user() ) {
+		self::$connection = new Jetpack_Connection();
+		if ( self::$connection->is_active() ) {
 			// Kick off synchronization of user role when it changes.
 			add_action( 'set_user_role', array( __CLASS__, 'user_role_change' ) );
 		}
@@ -52,8 +60,7 @@ class Users {
 	 * @param int $user_id ID of the user.
 	 */
 	public static function user_role_change( $user_id ) {
-		$connection = new Jetpack_Connection();
-		if ( $connection->is_user_connected( $user_id ) ) {
+		if ( self::$connection->is_user_connected( $user_id ) ) {
 			self::update_role_on_com( $user_id );
 			// Try to choose a new master if we're demoting the current one.
 			self::maybe_demote_master_user( $user_id );
@@ -94,8 +101,7 @@ class Users {
 	 * @return string Signed role of the user.
 	 */
 	public static function get_signed_role( $user_id ) {
-		$connection = new Jetpack_Connection();
-		return $connection->sign_role( self::get_role( $user_id ), $user_id );
+		return \Jetpack::connection()->sign_role( self::get_role( $user_id ), $user_id );
 	}
 
 	/**
@@ -108,7 +114,7 @@ class Users {
 	 */
 	public static function update_role_on_com( $user_id ) {
 		$signed_role = self::get_signed_role( $user_id );
-		XMLRPC_Async_Call::add_call( 'jetpack.updateRole', get_current_user_id(), $user_id, $signed_role );
+		\Jetpack::xmlrpc_async_call( 'jetpack.updateRole', $user_id, $signed_role );
 	}
 
 	/**
@@ -134,10 +140,9 @@ class Users {
 				)
 			);
 			$new_master = false;
-			$connection = new Jetpack_Connection();
 			foreach ( $query->results as $result ) {
 				$found_user_id = absint( $result->id );
-				if ( $found_user_id && $connection->is_user_connected( $found_user_id ) ) {
+				if ( $found_user_id && self::$connection->is_user_connected( $found_user_id ) ) {
 					$new_master = $found_user_id;
 					break;
 				}
