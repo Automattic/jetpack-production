@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 9.9 release cycle.
 - P2: Conditionally hide admin menu items for hubs/spaces
 - Removed unneeded "test-spelling" script with a vulnerable dependency.
+- Remove premium theme info
 - Search: Modularize Customizer and DOM integration
 - Search: Use aliased Preact imports
 - Story block: Fix (server-side) rendering of external stories
