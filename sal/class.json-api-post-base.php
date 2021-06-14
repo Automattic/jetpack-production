@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
  * This class wraps a WP_Post and proxies any undefined attributes
  * and methods to the wrapped class. We need to do this because at present
@@ -9,8 +9,7 @@
 
 require_once dirname( __FILE__ ) . '/class.json-api-metadata.php';
 require_once dirname( __FILE__ ) . '/class.json-api-date.php';
-require_once ABSPATH . 'wp-admin/includes/post.php';
-require_once ABSPATH . 'wp-includes/post.php';
+require_once ( ABSPATH . "wp-includes/post.php" );
 
 abstract class SAL_Post {
 	public $post;
@@ -53,7 +52,7 @@ abstract class SAL_Post {
 	abstract public function is_following();
 	abstract public function get_global_id();
 	abstract public function get_geo();
-
+	
 	public function get_menu_order() {
 		return (int) $this->post->menu_order;
 	}
@@ -124,15 +123,16 @@ abstract class SAL_Post {
 		foreach ( (array) has_meta( $this->post->ID ) as $meta ) {
 			// Don't expose protected fields.
 			$meta_key = $meta['meta_key'];
-
+			
 			$show = !( WPCOM_JSON_API_Metadata::is_internal_only( $meta_key ) )
 				&&
-					(
-						WPCOM_JSON_API_Metadata::is_public( $meta_key )
-					||
+					( 
+						WPCOM_JSON_API_Metadata::is_public( $meta_key ) 
+					|| 
 						current_user_can( 'edit_post_meta', $this->post->ID , $meta_key )
 					);
 
+			// Only business plan subscribers can view custom meta description
 			if ( Jetpack_SEO_Posts::DESCRIPTION_META_KEY == $meta_key && ! Jetpack_SEO_Utils::is_enabled_jetpack_seo() ) {
 				$show = false;
 			}
@@ -141,12 +141,16 @@ abstract class SAL_Post {
 				$metadata[] = array(
 					'id'    => $meta['meta_id'],
 					'key'   => $meta['meta_key'],
-					'value' => $this->safe_maybe_unserialize( $meta['meta_value'] ),
+					'value' => maybe_unserialize( $meta['meta_value'] ),
 				);
 			}
 		}
 
-		return $metadata;
+		if ( ! empty( $metadata ) ) {
+			return $metadata;
+		} else {
+			return false;
+		}
 	}
 
 	public function get_meta() {
@@ -160,12 +164,6 @@ abstract class SAL_Post {
 			),
 		);
 
-		$amp_permalink = get_post_meta( $this->post->ID, '_jetpack_amp_permalink', true );
-
-		if ( ! empty( $amp_permalink ) ) {
-			$meta->links->amp = (string) $amp_permalink;
-		}
-
 		// add autosave link if a more recent autosave exists
 		if ( 'edit' === $this->context ) {
 			$autosave = wp_get_post_autosave( $this->post->ID );
@@ -178,9 +176,9 @@ abstract class SAL_Post {
 
 	public function get_current_user_capabilities() {
 		return array(
-			'publish_post' => current_user_can( 'publish_post', $this->post->ID ),
-			'delete_post'  => current_user_can( 'delete_post', $this->post->ID ),
-			'edit_post'    => current_user_can( 'edit_post', $this->post->ID )
+			'publish_post' => current_user_can( 'publish_post', $this->post ),
+			'delete_post'  => current_user_can( 'delete_post', $this->post ),
+			'edit_post'    => current_user_can( 'edit_post', $this->post )
 		);
 	}
 
@@ -409,9 +407,12 @@ abstract class SAL_Post {
 	public function is_likes_enabled() {
 		/** This filter is documented in modules/likes.php */
 		$sitewide_likes_enabled = (bool) apply_filters( 'wpl_is_enabled_sitewide', ! get_option( 'disabled_likes' ) );
-		$post_likes_switched    = get_post_meta( $this->post->ID, 'switch_like_status', true );
-
-		return $post_likes_switched || ( $sitewide_likes_enabled && $post_likes_switched !== '0' );
+		$post_likes_switched    = (bool) get_post_meta( $this->post->ID, 'switch_like_status', true );
+		$post_likes_enabled = $sitewide_likes_enabled;
+		if ( $post_likes_switched ) {
+			$post_likes_enabled = ! $post_likes_enabled;
+		}
+		return (bool) $post_likes_enabled;
 	}
 
 	public function is_sharing_enabled() {
@@ -454,7 +455,7 @@ abstract class SAL_Post {
 		if ( 0 == $this->post->post_author )
 			return null;
 
-		$show_email = $this->context === 'edit' && current_user_can( 'edit_post', $this->post->ID );
+		$show_email = $this->context === 'edit' && current_user_can( 'edit_post', $this->post );
 
 		$user = get_user_by( 'id', $this->post->post_author );
 
@@ -468,9 +469,9 @@ abstract class SAL_Post {
 		if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
 			$active_blog = get_active_blog_for_user( $user->ID );
 			$site_id     = $active_blog->blog_id;
-			$profile_URL = "https://en.gravatar.com/{$user->user_login}";
+			$profile_URL = "http://en.gravatar.com/{$user->user_login}";
 		} else {
-			$profile_URL = 'https://en.gravatar.com/' . md5( strtolower( trim( $user->user_email ) ) );
+			$profile_URL = 'http://en.gravatar.com/' . md5( strtolower( trim( $user->user_email ) ) );
 			$site_id     = -1;
 		}
 
@@ -613,11 +614,8 @@ abstract class SAL_Post {
 
 		if ( in_array( $ext, array( 'mp3', 'm4a', 'wav', 'ogg' ) ) ) {
 			$metadata = wp_get_attachment_metadata( $media_item->ID );
-			if ( isset( $metadata['length'] ) ) {
-				$response['length'] = $metadata['length'];
-			}
-
-			$response['exif'] = $metadata;
+			$response['length'] = $metadata['length'];
+			$response['exif']   = $metadata;
 		}
 
 		if ( in_array( $ext, array( 'ogv', 'mp4', 'mov', 'wmv', 'avi', 'mpg', '3gp', '3g2', 'm4v' ) ) ) {
@@ -677,21 +675,5 @@ abstract class SAL_Post {
 		}
 
 		return (object) $response;
-	}
-
-	/**
-	 * Temporary wrapper around maybe_unserialize() to catch exceptions thrown by unserialize().
-	 *
-	 * Can be removed after https://core.trac.wordpress.org/ticket/45895 lands in Core.
-	 *
-	 * @param  string $original Serialized string.
-	 * @return string Unserialized string or original string if an exception was raised.
-	 **/
-	protected function safe_maybe_unserialize( $original ) {
-		try {
-			return maybe_unserialize( $original );
-		} catch ( Exception $e ) {
-			return $original;
-		}
 	}
 }
