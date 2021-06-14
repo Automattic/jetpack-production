@@ -1,14 +1,12 @@
 .slideshow-window {
 	background-color: #222;
 	border: 20px solid #222;
-	border-radius: 10px;
-	height: 0;
+	border-radius: 11px;
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	-khtml-border-radius: 11px;
 	margin-bottom: 20px;
-	overflow: hidden;
-	padding-top: 30px !important;
-	padding-bottom: 56.25% !important;
-	position: relative;
-	z-index: 1;
+	height: 410px;
 }
 
 .slideshow-window.slideshow-white {
@@ -29,20 +27,14 @@
 }
 
 body div.slideshow-window * img {
-	/* Override any styles that might be present in the page stylesheet */
-	background-color: transparent !important;
-	background-image: none !important;
-	border-width: 0 !important;
-	display: block;
-	margin: 0 auto;
-	max-width: 100%;
-	max-height: 100%;
-	padding: 0 !important;
-	position: relative;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	top: 50%;
+    /* Override any styles that might be present in the page stylesheet */
+    border-width: 0 !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    max-width: 100%;
 }
 
 .slideshow-loading img {
@@ -50,14 +42,11 @@ body div.slideshow-window * img {
 }
 
 .slideshow-slide {
-	display: none;
-	height: 100% !important;
-	left: 0;
-	margin: auto;
-	position: absolute;
+	height: 100%;
+	width: 100%;
 	text-align: center;
-	top: 0;
-	width: 100% !important;
+	margin: auto;
+	display: none;
 }
 
 .slideshow-slide img {
@@ -73,7 +62,7 @@ body div.slideshow-window * img {
 .slideshow-slide-caption {
 	font-size: 13px;
 	font-family: "Helvetica Neue", sans-serif;
-	color: #f6f7f7;
+	color: #f7f7f7;
 	text-shadow: #222 1px 1px 2px;
 	line-height: 25px;
 	height: 25px;
@@ -85,25 +74,16 @@ body div.slideshow-window * img {
 	text-align: center;
 }
 
+/* @noflip */
 .slideshow-controls {
 	z-index: 1000;
-	position: absolute;
-	bottom: 30px;
-	margin: auto;
+        position: absolute;
+        bottom: 30px;
+        margin: auto;
 	text-align: center;
 	width: 100%;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-	opacity: 0.5;
-	/*rtl:ignore*/
+	display: none;
 	direction:ltr;
-	-webkit-transition: 300ms opacity ease-out;
-	-moz-transition: 300ms opacity ease-out;
-	transition: 300ms opacity ease-out;
-}
-
-.slideshow-window:hover .slideshow-controls {
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	opacity: 1;
 }
 
 body div div.slideshow-controls a,

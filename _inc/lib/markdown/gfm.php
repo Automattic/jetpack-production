@@ -36,12 +36,6 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	public $preserve_latex = true;
 
 	/**
-	 * Preserve single-line <code> blocks.
-	 * @var boolean
-	 */
-	public $preserve_inline_code_blocks = true;
-
-	/**
 	 * Strip paragraphs from the output. This is the right default for WordPress,
 	 * which generally wants to create its own paragraphs with `wpautop`
 	 * @var boolean
@@ -60,20 +54,11 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	 */
 	public function __construct() {
 		$this->use_code_shortcode  = class_exists( 'SyntaxHighlighter' );
-		/**
-		 * Allow processing shortcode contents.
-		 *
-		 * @module markdown
-		 *
-		 * @since 4.4.0
-		 *
-		 * @param boolean $preserve_shortcodes Defaults to $this->preserve_shortcodes.
-		 */
-		$this->preserve_shortcodes = apply_filters( 'jetpack_markdown_preserve_shortcodes', $this->preserve_shortcodes ) && function_exists( 'get_shortcode_regex' );
+		$this->preserve_shortcodes = function_exists( 'get_shortcode_regex' );
 		$this->preserve_latex      = function_exists( 'latex_markup' );
 		$this->strip_paras         = function_exists( 'wpautop' );
 
-		parent::__construct();
+		parent::MarkdownExtra_Parser();
 	}
 
 	/**
@@ -86,10 +71,6 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	 * @return string       HTML-transformed text
 	 */
 	public function transform( $text ) {
-		// Preserve anything inside a single-line <code> element
-		if ( $this->preserve_inline_code_blocks ) {
-			$text = $this->single_line_code_preserve( $text );
-		}
 		// Remove all shortcodes so their interiors are left intact
 		if ( $this->preserve_shortcodes ) {
 			$text = $this->shortcode_preserve( $text );
@@ -99,64 +80,24 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 			$text = $this->latex_preserve( $text );
 		}
 
-		// Do not process characters inside URLs.
-		$text = $this->urls_preserve( $text );
-
 		// escape line-beginning # chars that do not have a space after them.
 		$text = preg_replace_callback( '|^#{1,6}( )?|um', array( $this, '_doEscapeForHashWithoutSpacing' ), $text );
-
-		/**
-		 * Allow third-party plugins to define custom patterns that won't be processed by Markdown.
-		 *
-		 * @module markdown
-		 *
-		 * @since 3.9.2
-		 *
-		 * @param array $custom_patterns Array of custom patterns to be ignored by Markdown.
-		 */
-		$custom_patterns = apply_filters( 'jetpack_markdown_preserve_pattern', array() );
-		if ( is_array( $custom_patterns ) && ! empty( $custom_patterns ) ) {
-			foreach ( $custom_patterns as $pattern ) {
-				$text = preg_replace_callback( $pattern, array( $this, '_doRemoveText'), $text );
-			}
-		}
 
 		// run through core Markdown
 		$text = parent::transform( $text );
 
-		// Occasionally Markdown Extra chokes on a para structure, producing odd paragraphs.
-		$text = str_replace( "<p>&lt;</p>\n\n<p>p>", '<p>', $text );
-
 		// put start-of-line # chars back in place
-		$text = $this->restore_leading_hash( $text );
+		$text = preg_replace( "/^(<p>)?(&#35;|\\\\#)/um", "$1#", $text );
+
+		// Restore shortcodes/LaTeX
+		$text = $this->shortcode_restore( $text );
 
 		// Strip paras if set
 		if ( $this->strip_paras ) {
 			$text = $this->unp( $text );
 		}
 
-		// Restore preserved things like shortcodes/LaTeX
-		$text = $this->do_restore( $text );
-
 		return $text;
-	}
-
-	/**
-	 * Prevents blocks like <code>__this__</code> from turning into <code><strong>this</strong></code>
-	 * @param  string $text Text that may need preserving
-	 * @return string       Text that was preserved if needed
-	 */
-	public function single_line_code_preserve( $text ) {
-		return preg_replace_callback( '|<code\b[^>]*>(.*?)</code>|', array( $this, 'do_single_line_code_preserve' ), $text );
-	}
-
-	/**
-	 * Regex callback for inline code presevation
-	 * @param  array $matches Regex matches
-	 * @return string         Hashed content for later restoration
-	 */
-	public function do_single_line_code_preserve( $matches ) {
-		return '<code>' . $this->hash_block( $matches[1] ) . '</code>';
 	}
 
 	/**
@@ -165,7 +106,9 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	 * @return string       Markdown/HTML content with escaped code blocks
 	 */
 	public function codeblock_preserve( $text ) {
-		return preg_replace_callback( "/^([`~]{3})([^`\n]+)?\n([^`~]+)(\\1)/m", array( $this, 'do_codeblock_preserve' ), $text );
+		$text = preg_replace_callback( "/^(`{3})([^`\n]+)?\n([^`~]+)(`{3})/m", array( $this, 'do_codeblock_preserve' ), $text );
+		$text = preg_replace_callback( "/^(~{3})([^~\n]+)?\n([^~~]+)(~{3})/m", array( $this, 'do_codeblock_preserve' ), $text );
+		return $text;
 	}
 
 	/**
@@ -176,7 +119,6 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	public function do_codeblock_preserve( $matches ) {
 		$block = stripslashes( $matches[3] );
 		$block = esc_html( $block );
-		$block = str_replace( '\\', '\\\\', $block );
 		$open = $matches[1] . $matches[2] . "\n";
 		return $open . $block . $matches[4];
 	}
@@ -187,7 +129,9 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	 * @return string       Markdown/HTML content
 	 */
 	public function codeblock_restore( $text ) {
-		return preg_replace_callback( "/^([`~]{3})([^`\n]+)?\n([^`~]+)(\\1)/m", array( $this, 'do_codeblock_restore' ), $text );
+		$text = preg_replace_callback( "/^(`{3})([^`\n]+)?\n([^`~]+)(`{3})/m", array( $this, 'do_codeblock_restore' ), $text );
+		$text = preg_replace_callback( "/^(~{3})([^~\n]+)?\n([^~~]+)(~{3})/m", array( $this, 'do_codeblock_restore' ), $text );
+		return $text;
 	}
 
 	/**
@@ -196,7 +140,7 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	 * @return string         Codeblock with unescaped interior
 	 */
 	public function do_codeblock_restore( $matches ) {
-		$block = html_entity_decode( $matches[3], ENT_QUOTES );
+		$block = html_entity_decode( $matches[3] );
 		$open = $matches[1] . $matches[2] . "\n";
 		return $open . $block . $matches[4];
 	}
@@ -232,30 +176,12 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	}
 
 	/**
-	 * Avoid characters inside URLs from being formatted by Markdown in any way.
-	 *
-	 * @param  string $text Text in which to preserve URLs.
-	 *
-	 * @return string Text with URLs replaced by a hash that will be restored later.
-	 */
-	protected function urls_preserve( $text ) {
-		$text = preg_replace_callback(
-			'#(?<!<)(?:https?|ftp)://([^\s<>"\'\[\]()]+|\[(?1)*+\]|\((?1)*+\))+(?<![_*.?])#i',
-			array( $this, '_doRemoveText' ),
-			$text
-		);
-		return $text;
-	}
-
-	/**
-	 * Restores any text preserved by $this->hash_block()
+	 * Restores any text preserved by $this->latex_preserve() or $this->shortcode_preserve()
 	 * @param  string $text Text that may have hashed preservation placeholders
 	 * @return string       Text with hashed preseravtion placeholders replaced by original text
 	 */
-	protected function do_restore( $text ) {
-		// Reverse hashes to ensure nested blocks are restored.
-		$hashes = array_reverse( $this->preserve_text_hash, true );
-		foreach( $hashes as $hash => $value ) {
+	protected function shortcode_restore( $text ) {
+		foreach( $this->preserve_text_hash as $hash => $value ) {
 			$placeholder = $this->hash_maker( $hash );
 			$text = str_replace( $placeholder, $value, $text );
 		}
@@ -270,17 +196,8 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	 * @return string    A placeholder that will later be replaced by the original text
 	 */
 	protected function _doRemoveText( $m ) {
-		return $this->hash_block( $m[0] );
-	}
-
-	/**
-	 * Call this to store a text block for later restoration.
-	 * @param  string $text Text to preserve for later
-	 * @return string       Placeholder that will be swapped out later for the original text
-	 */
-	protected function hash_block( $text ) {
-		$hash = md5( $text );
-		$this->preserve_text_hash[ $hash ] = $text;
+		$hash = md5( $m[0] );
+		$this->preserve_text_hash[ $hash ] = $m[0];
 		$placeholder = $this->hash_maker( $hash );
 		return $placeholder;
 	}
@@ -291,7 +208,7 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	 * @return string       A placeholder hash
 	 */
 	protected function hash_maker( $hash ) {
-		return 'MARKDOWN_HASH' . $hash . 'MARKDOWN_HASH';
+		return 'MARDOWN_HASH' . $hash . 'MARKDOWN_HASH';
 	}
 
 	/**
@@ -311,20 +228,7 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	 */
 	protected function get_shortcode_regex() {
 		$pattern = get_shortcode_regex();
-
-		// don't match markdown link anchors that could be mistaken for shortcodes.
-		$pattern .= '(?!\()';
-
 		return "/$pattern/s";
-	}
-
-	/**
-	 * Since we escape unspaced #Headings, put things back later.
-	 * @param  string $text text with a leading escaped hash
-	 * @return string       text with leading hashes unescaped
-	 */
-	protected function restore_leading_hash( $text ) {
-		return preg_replace( "/^(<p>)?(&#35;|\\\\#)/um", "$1#", $text );
 	}
 
 	/**
@@ -393,8 +297,6 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	 * Overload to support Viper's [code] shortcode. Because awesome.
 	 */
 	public function _doFencedCodeBlocks_callback( $matches ) {
-		// in case we have some escaped leading hashes right at the start of the block
-		$matches[4] = $this->restore_leading_hash( $matches[4] );
 		// just MarkdownExtra_Parser if we're not going ultra-deluxe
 		if ( ! $this->use_code_shortcode ) {
 			return parent::_doFencedCodeBlocks_callback( $matches );
@@ -408,7 +310,7 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 		$classname =& $matches[2];
 		$codeblock = preg_replace_callback('/^\n+/', array( $this, '_doFencedCodeBlocks_newlines' ), $matches[4] );
 
-		if ( $classname[0] == '.' )
+		if ( $classname{0} == '.' )
 			$classname = substr( $classname, 1 );
 
 		$codeblock = esc_html( $codeblock );
