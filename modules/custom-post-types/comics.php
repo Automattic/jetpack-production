@@ -1,7 +1,5 @@
 <?php
-
-use Automattic\Jetpack\Assets;
-
+ 
 class Jetpack_Comic {
 	const POST_TYPE = 'jetpack-comic';
 
@@ -9,7 +7,7 @@ class Jetpack_Comic {
 		static $instance = false;
 
 		if ( ! $instance )
-			$instance = new Jetpack_Comic();
+			$instance = new Jetpack_Comic;
 
 		return $instance;
 	}
@@ -24,15 +22,6 @@ class Jetpack_Comic {
 	 * WordPress. We'll just return early instead.
 	 */
 	function __construct() {
-		// Make sure the post types are loaded for imports
-		add_action( 'import_start', array( $this, 'register_post_types' ) );
-
-		// Add to REST API post type allowed list.
-		add_filter( 'rest_api_allowed_post_types', array( $this, 'allow_rest_api_type' ) );
-
-		// If called via REST API, we need to register later in lifecycle
-		add_action( 'restapi_theme_init', array( $this, 'maybe_register_post_types' ) );
-
 		// Return early if theme does not support Jetpack Comic.
 		if ( ! ( $this->site_supports_comics() ) )
 			return;
@@ -49,12 +38,14 @@ class Jetpack_Comic {
 		// post type needs to be registered no matter what, but none of the UI needs to be
 		// available.
 
+		// Enable Omnisearch for Comic posts.
+		// @see http://themedevp2.wordpress.com/2013/06/21/howdy-cainm-id-like-to // @wpcom
+		if ( class_exists( 'Jetpack_Omnisearch_Posts' ) )
+			new Jetpack_Omnisearch_Posts( self::POST_TYPE );
+
 		add_filter( 'post_updated_messages', array( $this, 'updated_messages' ) );
 
-		if ( function_exists( 'queue_publish_post' ) ) {
-			add_action( 'publish_jetpack-comic', 'queue_publish_post', 10, 2 );
-		}
-
+		add_action( 'publish_jetpack-comic', 'queue_publish_post', 10, 2 );
 		add_action( 'pre_get_posts', array( $this, 'include_in_feeds' ) );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
@@ -170,74 +161,45 @@ class Jetpack_Comic {
 	}
 
 	public function register_scripts() {
-		wp_enqueue_style( 'jetpack-comics-style', plugins_url( 'comics/comics.css', __FILE__ ), array(), JETPACK__VERSION );
-		wp_style_add_data( 'jetpack-comics-style', 'rtl', 'replace' );
+		wp_enqueue_style( 'jetpack-comics-style', plugins_url( 'comics/comics.css', __FILE__ ) );
+		wp_enqueue_script( 'jetpack-comics', plugins_url( 'comics/comics.js', __FILE__ ), array( 'jquery', 'jquery.spin' ) );
 
-		$is_amp = class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request();
-		if ( ! $is_amp ) {
-			wp_enqueue_script(
-				'jetpack-comics',
-				Assets::get_file_url_for_environment(
-					'_inc/build/custom-post-types/comics/comics.min.js',
-					'modules/custom-post-types/comics/comics.js'
-				),
-				array( 'jquery' ),
-				JETPACK__VERSION,
-				false
-			);
+		$options = array(
+			'nonce' => wp_create_nonce( 'jetpack_comic_upload_nonce' ),
+			'writeURL' => admin_url( 'admin-ajax.php?action=jetpack_comic_upload' ),
+			'labels' => array(
+				'dragging' => __( 'Drop images to upload', 'jetpack' ),
+				'uploading' => __( 'Uploading...', 'jetpack' ),
+				'processing' => __( 'Processing...', 'jetpack' ),
+				'unsupported' => __( "Sorry, your browser isn't supported. Upgrade at browsehappy.com.", 'jetpack' ),
+				'invalidUpload' => __( 'Only images can be uploaded here.', 'jetpack' ),
+				'error' => __( "Your upload didn't complete; try again later or cross your fingers and try again right now.", 'jetpack' ),
+			)
+		);
 
-			$options = array(
-				'nonce'    => wp_create_nonce( 'jetpack_comic_upload_nonce' ),
-				'writeURL' => admin_url( 'admin-ajax.php?action=jetpack_comic_upload' ),
-				'labels'   => array(
-					'dragging'      => __( 'Drop images to upload', 'jetpack' ),
-					'uploading'     => __( 'Uploading...', 'jetpack' ),
-					'processing'    => __( 'Processing...', 'jetpack' ),
-					'unsupported'   => __( "Sorry, your browser isn't supported. Upgrade at browsehappy.com.", 'jetpack' ),
-					'invalidUpload' => __( 'Only images can be uploaded here.', 'jetpack' ),
-					'error'         => __( "Your upload didn't complete; try again later or cross your fingers and try again right now.", 'jetpack' ),
-				),
-			);
-
-			wp_localize_script( 'jetpack-comics', 'Jetpack_Comics_Options', $options );
-		}
+		wp_localize_script( 'jetpack-comics', 'Jetpack_Comics_Options', $options );
 	}
 
 	public function admin_enqueue_scripts() {
 		wp_enqueue_style( 'jetpack-comics-admin', plugins_url( 'comics/admin.css', __FILE__ ) );
 	}
 
-	public function maybe_register_post_types() {
-		// Return early if theme does not support Jetpack Comic.
-		if ( ! ( $this->site_supports_comics() ) )
-			return;
-
-		$this->register_post_types();
-	}
-
 	function register_post_types() {
-		if ( post_type_exists( self::POST_TYPE ) ) {
-			return;
-		}
-
 		register_post_type( self::POST_TYPE, array(
 			'description' => __( 'Comics', 'jetpack' ),
 			'labels' => array(
-				'name'                  => esc_html__( 'Comics',                   'jetpack' ),
-				'singular_name'         => esc_html__( 'Comic',                    'jetpack' ),
-				'menu_name'             => esc_html__( 'Comics',                   'jetpack' ),
-				'all_items'             => esc_html__( 'All Comics',               'jetpack' ),
-				'add_new'               => esc_html__( 'Add New',                  'jetpack' ),
-				'add_new_item'          => esc_html__( 'Add New Comic',            'jetpack' ),
-				'edit_item'             => esc_html__( 'Edit Comic',               'jetpack' ),
-				'new_item'              => esc_html__( 'New Comic',                'jetpack' ),
-				'view_item'             => esc_html__( 'View Comic',               'jetpack' ),
-				'search_items'          => esc_html__( 'Search Comics',            'jetpack' ),
-				'not_found'             => esc_html__( 'No Comics found',          'jetpack' ),
-				'not_found_in_trash'    => esc_html__( 'No Comics found in Trash', 'jetpack' ),
-				'filter_items_list'     => esc_html__( 'Filter comics list',       'jetpack' ),
-				'items_list_navigation' => esc_html__( 'Comics list navigation',   'jetpack' ),
-				'items_list'            => esc_html__( 'Comics list',              'jetpack' ),
+				'name'               => esc_html__( 'Comics',                   'jetpack' ),
+				'singular_name'      => esc_html__( 'Comic',                    'jetpack' ),
+				'menu_name'          => esc_html__( 'Comics',                   'jetpack' ),
+				'all_items'          => esc_html__( 'All Comics',               'jetpack' ),
+				'add_new'            => esc_html__( 'Add New',                  'jetpack' ),
+				'add_new_item'       => esc_html__( 'Add New Comic',            'jetpack' ),
+				'edit_item'          => esc_html__( 'Edit Comic',               'jetpack' ),
+				'new_item'           => esc_html__( 'New Comic',                'jetpack' ),
+				'view_item'          => esc_html__( 'View Comic',               'jetpack' ),
+				'search_items'       => esc_html__( 'Search Comics',            'jetpack' ),
+				'not_found'          => esc_html__( 'No Comics found',          'jetpack' ),
+				'not_found_in_trash' => esc_html__( 'No Comics found in Trash', 'jetpack' ),
 			),
 			'supports' => array(
 				'title',
@@ -263,7 +225,6 @@ class Jetpack_Comic {
 			'map_meta_cap'    => true,
 			'has_archive'     => true,
 			'query_var'       => 'comic',
-			'show_in_rest'    => true,
 		) );
 	}
 
@@ -286,7 +247,7 @@ class Jetpack_Comic {
 	 * for Feedbag (the Reader's feed storage mechanism), eschew
 	 * a pretty URL for one that will get the post into the Reader.
 	 *
-	 * @see https://core.trac.wordpress.org/ticket/19744
+	 * @see http://core.trac.wordpress.org/ticket/19744
 	 * @param string $permalink The existing (possibly pretty) permalink.
 	 */
 	public function custom_permalink_for_feedbag( $permalink ) {
@@ -317,7 +278,7 @@ class Jetpack_Comic {
 			7  => esc_html__( 'Comic saved.', 'jetpack' ),
 			8  => sprintf( __( 'Comic submitted. <a target="_blank" href="%s">Preview comic</a>', 'jetpack'), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) ),
 			9  => sprintf( __( 'Comic scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview comic</a>', 'jetpack' ),
-			// translators: Publish box date format, see https://php.net/date
+			// translators: Publish box date format, see http://php.net/date
 			date_i18n( __( 'M j, Y @ G:i', 'jetpack' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post->ID) ) ),
 			10 => sprintf( __( 'Comic draft updated. <a target="_blank" href="%s">Preview comic</a>', 'jetpack' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) ),
 		);
@@ -325,49 +286,23 @@ class Jetpack_Comic {
 		return $messages;
 	}
 
-	/**
-	 * Should this Custom Post Type be made available?
-	 */
 	public function site_supports_comics() {
-		/**
-		 * @todo: Extract this out into a wpcom only file.
-		 */
 		if ( 'blog-rss.php' == substr( $_SERVER['PHP_SELF'], -12 ) && count( $_SERVER['argv'] ) > 1 ) {
 			// blog-rss.php isn't run in the context of the target blog when the init action fires,
 			// so check manually whether the target blog supports comics.
 			switch_to_blog( $_SERVER['argv'][1] );
 			// The add_theme_support( 'jetpack-comic' ) won't fire on switch_to_blog, so check for Panel manually.
-			$supports_comics = ( ( function_exists( 'site_vertical' ) && 'comics' == site_vertical() )
-								|| current_theme_supports( self::POST_TYPE )
-								|| get_stylesheet() == 'pub/panel' );
+			$supports_comics = $this->_site_supports_comics() || get_stylesheet() == 'pub/panel';
 			restore_current_blog();
-
-			/** This action is documented in modules/custom-post-types/nova.php */
-			return (bool) apply_filters( 'jetpack_enable_cpt', $supports_comics, self::POST_TYPE );
+			return $supports_comics;
 		}
-
-		$supports_comics = false;
-
-		/**
-		 * If we're on WordPress.com, and it has the menu site vertical.
-		 * @todo: Extract this out into a wpcom only file.
-		 */
-		if ( function_exists( 'site_vertical' ) && 'comics' == site_vertical() ) {
-			$supports_comics = true;
+		else {
+			return $this->_site_supports_comics();
 		}
+	}
 
-		/**
-		 * Else, if the current theme requests it.
-		 */
-		if ( current_theme_supports( self::POST_TYPE ) ) {
-			$supports_comics = true;
-		}
-
-		/**
-		 * Filter it in case something else knows better.
-		 */
-		/** This action is documented in modules/custom-post-types/nova.php */
-		return (bool) apply_filters( 'jetpack_enable_cpt', $supports_comics, self::POST_TYPE );
+	private function _site_supports_comics() {
+		return ( ( function_exists( 'site_vertical' ) && 'comics' == site_vertical() ) || current_theme_supports( self::POST_TYPE ) );
 	}
 
 	/**
@@ -508,14 +443,6 @@ class Jetpack_Comic {
 		return $query;
 	}
 
-	/**
-	 * Add to REST API post type allowed list.
-	 */
-	public function allow_rest_api_type( $post_types ) {
-		$post_types[] = self::POST_TYPE;
-		return $post_types;
-	}
-
 }
 
 add_action( 'init', array( 'Jetpack_Comic', 'init' ) );
@@ -527,7 +454,7 @@ function comics_welcome_email( $welcome_email, $blog_id, $user_id, $password, $t
 
 Your webcomic's new site is ready to go. Get started by <a href=\"BLOG_URLwp-admin/customize.php#title\">setting your comic's title and tagline</a> so your readers know what it's all about.
 
-Looking for more help with setting up your site? Check out the WordPress.com <a href=\"https://learn.wordpress.com/\" target=\"_blank\">beginner's tutorial</a> and the <a href=\"https://en.support.wordpress.com/comics/\" target=\"_blank\">guide to comics on WordPress.com</a>. Dive right in by <a href=\"BLOG_URLwp-admin/customize.php#title\">publishing your first strip!</a>
+Looking for more help with setting up your site? Check out the WordPress.com <a href=\"http://learn.wordpress.com/\">beginner's tutorial</a> and the <a href=\"http://en.support.wordpress.com/comics/\">guide to comics on WordPress.com</a>. Dive right in by <a href=\"BLOG_URLwp-admin/customize.php#title\">publishing your first strip!</a>
 
 Lots of laughs,
 The WordPress.com Team", 'jetpack' );
@@ -537,3 +464,4 @@ The WordPress.com Team", 'jetpack' );
 }
 
 add_filter( 'update_welcome_email_pre_replacement', 'comics_welcome_email', 10, 6 );
+

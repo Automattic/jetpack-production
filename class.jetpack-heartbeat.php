@@ -1,37 +1,27 @@
 <?php
 
-use Automattic\Jetpack\Connection\Manager;
-use Automattic\Jetpack\Heartbeat;
-
 class Jetpack_Heartbeat {
 
 	/**
 	 * Holds the singleton instance of this class
-	 *
+	 * 
 	 * @since 2.3.3
-	 * @var Jetpack_Heartbeat
+	 * @var Jetpack_Heartbeat 
 	 */
-	private static $instance = false;
+	static $instance = false;
 
-	/**
-	 * Holds the singleton instance of the proxied class
-	 *
-	 * @since 8.9.0
-	 * @var Automattic\Jetpack\Heartbeat
-	 */
-	private static $proxied_instance = false;
+	private $cron_name = 'jetpack_heartbeat';
 
 	/**
 	 * Singleton
-	 *
+	 * 
 	 * @since 2.3.3
 	 * @static
 	 * @return Jetpack_Heartbeat
 	 */
 	public static function init() {
 		if ( ! self::$instance ) {
-			self::$instance         = new Jetpack_Heartbeat();
-			self::$proxied_instance = Heartbeat::init();
+			self::$instance = new Jetpack_Heartbeat;
 		}
 
 		return self::$instance;
@@ -39,148 +29,93 @@ class Jetpack_Heartbeat {
 
 	/**
 	 * Constructor for singleton
-	 *
+	 * 
 	 * @since 2.3.3
-	 * @return Jetpack_Heartbeat
+	 * @return Jetpack_Heartbeat 
 	 */
 	private function __construct() {
-		add_filter( 'jetpack_heartbeat_stats_array', array( $this, 'add_stats_to_heartbeat' ) );
-	}
+		// Add weekly interval for wp-cron
+		add_filter('cron_schedules', array( $this, 'add_cron_intervals' ) );
 
+		// Schedule the task
+		add_action( $this->cron_name, array( $this, 'cron_exec' ) );
+
+		if (!wp_next_scheduled( $this->cron_name ) ) {
+			wp_schedule_event( time(), 'jetpack_weekly', $this->cron_name );
+		}
+	}
+	
 	/**
 	 * Method that gets executed on the wp-cron call
-	 *
-	 * @deprecated since 8.9.0
-	 * @see Automattic\Jetpack\Heartbeat::cron_exec()
-	 *
+	 * 
 	 * @since 2.3.3
-	 * @global string $wp_version
+	 * @global string $wp_version 
 	 */
 	public function cron_exec() {
-		_deprecated_function( __METHOD__, 'jetpack-8.9.0', 'Automattic\\Jetpack\\Heartbeat::cron_exec' );
-		return self::$proxied_instance->cron_exec();
 
+		/*
+		 * Check for an identity crisis
+		 * 
+		 * If one exists:
+		 * - Bump stat for ID crisis
+		 * - Email site admin about potential ID crisis
+		 */ 
+
+
+
+		/**
+		 * Setup an array of items that will eventually be stringified
+		 * and sent off to the Jetpack API 
+		 * 
+		 * Associative array with format group => values
+		 * - values should be an array that will be imploded to a string
+		 */
+
+		$jetpack = Jetpack::init();
+
+		$jetpack->stat( 'active-modules', implode( ',', $jetpack->get_active_modules() )       );
+		$jetpack->stat( 'active',         JETPACK__VERSION                                     );
+		$jetpack->stat( 'wp-version',     get_bloginfo( 'version' )                            );
+		$jetpack->stat( 'php-version',    PHP_VERSION                                          );
+		$jetpack->stat( 'ssl',            $jetpack->permit_ssl()                               );
+		$jetpack->stat( 'language',       get_bloginfo( 'language' )                           );
+		$jetpack->stat( 'charset',        get_bloginfo( 'charset' )                            );
+		$jetpack->stat( 'qty-posts',      wp_count_posts()->publish                            );
+		$jetpack->stat( 'qty-pages',      wp_count_posts( 'page' )->publish                    );
+		$jetpack->stat( 'qty-comments',   wp_count_comments()->approved                        );
+		$jetpack->stat( 'is-multisite',   is_multisite() ? 'multisite' : 'singlesite'          );
+
+		// Only check a few plugins, to see if they're currently active.
+		$plugins_to_check = array(
+			'vaultpress/vaultpress.php',
+			'akismet/akismet.php',
+			'wp-super-cache/wp-cache.php',
+		);
+		$plugins = array_intersect( $plugins_to_check, get_option( 'active_plugins', array() ) );
+		foreach( $plugins as $plugin ) {
+			$jetpack->stat( 'plugins', $plugin );
+		}
+
+		$jetpack->do_stats( 'server_side' );
 	}
 
 	/**
-	 * Generates heartbeat stats data.
-	 *
-	 * @param string $prefix Prefix to add before stats identifier.
-	 *
-	 * @return array The stats array.
+	 * Adds additional Jetpack specific intervals to wp-cron
+	 * 
+	 * @since 2.3.3
+	 * @return array 
 	 */
-	public static function generate_stats_array( $prefix = '' ) {
-		$return = array();
-
-		$return[ "{$prefix}version" ]        = JETPACK__VERSION;
-		$return[ "{$prefix}wp-version" ]     = get_bloginfo( 'version' );
-		$return[ "{$prefix}php-version" ]    = PHP_VERSION;
-		$return[ "{$prefix}branch" ]         = (float) JETPACK__VERSION;
-		$return[ "{$prefix}wp-branch" ]      = (float) get_bloginfo( 'version' );
-		$return[ "{$prefix}php-branch" ]     = (float) PHP_VERSION;
-		$return[ "{$prefix}public" ]         = Jetpack_Options::get_option( 'public' );
-		$return[ "{$prefix}ssl" ]            = Jetpack::permit_ssl();
-		$return[ "{$prefix}is-https" ]       = is_ssl() ? 'https' : 'http';
-		$return[ "{$prefix}language" ]       = get_bloginfo( 'language' );
-		$return[ "{$prefix}charset" ]        = get_bloginfo( 'charset' );
-		$return[ "{$prefix}is-multisite" ]   = is_multisite() ? 'multisite' : 'singlesite';
-		$return[ "{$prefix}identitycrisis" ] = Jetpack::check_identity_crisis() ? 'yes' : 'no';
-		$return[ "{$prefix}plugins" ]        = implode( ',', Jetpack::get_active_plugins() );
-		if ( function_exists( 'get_mu_plugins' ) ) {
-			$return[ "{$prefix}mu-plugins" ] = implode( ',', array_keys( get_mu_plugins() ) );
-		}
-		$return[ "{$prefix}manage-enabled" ] = true;
-
-		$xmlrpc_errors = Jetpack_Options::get_option( 'xmlrpc_errors', array() );
-		if ( $xmlrpc_errors ) {
-			$return[ "{$prefix}xmlrpc-errors" ] = implode( ',', array_keys( $xmlrpc_errors ) );
-			Jetpack_Options::delete_option( 'xmlrpc_errors' );
-		}
-
-		// Missing the connection owner?
-		$connection_manager                 = new Manager();
-		$return[ "{$prefix}missing-owner" ] = $connection_manager->is_missing_connection_owner();
-
-		// is-multi-network can have three values, `single-site`, `single-network`, and `multi-network`.
-		$return[ "{$prefix}is-multi-network" ] = 'single-site';
-		if ( is_multisite() ) {
-			$return[ "{$prefix}is-multi-network" ] = Jetpack::is_multi_network() ? 'multi-network' : 'single-network';
-		}
-
-		if ( ! empty( $_SERVER['SERVER_ADDR'] ) || ! empty( $_SERVER['LOCAL_ADDR'] ) ) {
-			$ip     = ! empty( $_SERVER['SERVER_ADDR'] ) ? $_SERVER['SERVER_ADDR'] : $_SERVER['LOCAL_ADDR'];
-			$ip_arr = array_map( 'intval', explode( '.', $ip ) );
-			if ( 4 === count( $ip_arr ) ) {
-				$return[ "{$prefix}ip-2-octets" ] = implode( '.', array_slice( $ip_arr, 0, 2 ) );
-			}
-		}
-
-		foreach ( Jetpack::get_available_modules() as $slug ) {
-			$return[ "{$prefix}module-{$slug}" ] = Jetpack::is_module_active( $slug ) ? 'on' : 'off';
-		}
-
-		return $return;
+	public function add_cron_intervals( $schedules ) {
+		$schedules['jetpack_weekly'] = array(
+		    'interval' => WEEK_IN_SECONDS,
+		    'display' => __( 'Jetpack weekly', 'jetpack' ),
+		);
+		return $schedules;
 	}
 
-	/**
-	 * Registers jetpack.getHeartbeatData xmlrpc method
-	 *
-	 * @deprecated since 8.9.0
-	 * @see Automattic\Jetpack\Heartbeat::jetpack_xmlrpc_methods()
-	 *
-	 * @param array $methods The list of methods to be filtered.
-	 * @return array $methods
-	 */
-	public static function jetpack_xmlrpc_methods( $methods ) {
-		_deprecated_function( __METHOD__, 'jetpack-8.9.0', 'Automattic\\Jetpack\\Heartbeat::jetpack_xmlrpc_methods' );
-		return Heartbeat::jetpack_xmlrpc_methods( $methods );
-	}
-
-	/**
-	 * Handles the response for the jetpack.getHeartbeatData xmlrpc method
-	 *
-	 * @deprecated since 8.9.0
-	 * @see Automattic\Jetpack\Heartbeat::xmlrpc_data_response()
-	 *
-	 * @param array $params The parameters received in the request.
-	 * @return array $params all the stats that hearbeat handles.
-	 */
-	public static function xmlrpc_data_response( $params = array() ) {
-		_deprecated_function( __METHOD__, 'jetpack-8.9.0', 'Automattic\\Jetpack\\Heartbeat::xmlrpc_data_response' );
-		return Heartbeat::xmlrpc_data_response( $params );
-	}
-
-	/**
-	 * Clear scheduled events
-	 *
-	 * @deprecated since 8.9.0
-	 * @see Automattic\Jetpack\Heartbeat::deactivate()
-	 *
-	 * @return void
-	 */
 	public function deactivate() {
-		// Cronjobs are now handled by the Heartbeat package and we don't want to deactivate it here.
-		// We are adding jetpack stats to the heartbeat only if the connection is available. so we don't need to disable the cron when disconnecting.
-		_deprecated_function( __METHOD__, 'jetpack-8.9.0', 'Automattic\\Jetpack\\Heartbeat::deactivate' );
-	}
-
-	/**
-	 * Add Jetpack Stats array to Heartbeat if Jetpack is connected
-	 *
-	 * @since 8.9.0
-	 *
-	 * @param array $stats Jetpack Heartbeat stats.
-	 * @return array $stats
-	 */
-	public function add_stats_to_heartbeat( $stats ) {
-
-		if ( ! Jetpack::is_connection_ready() ) {
-			return $stats;
-		}
-
-		$jetpack_stats = self::generate_stats_array();
-
-		return array_merge( $stats, $jetpack_stats );
+		$timestamp = wp_next_scheduled( $this->cron_name );
+		wp_unschedule_event( $timestamp, $this->cron_name );
 	}
 
 }
