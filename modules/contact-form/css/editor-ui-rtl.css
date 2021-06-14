@@ -1,12 +1,12 @@
 /* Do not modify this file directly.  It is concatenated from individual module CSS files. */
 i.mce-i-grunion {
-	font-size: 20px;
 	font-family: dashicons;
+	font-size: 20px;
 }
 
 i.mce-i-grunion:before,
 .jetpack-contact-form-icon:before {
-	content: '\f175';
+	content: "\f175";
 	vertical-align: top;
 }
 

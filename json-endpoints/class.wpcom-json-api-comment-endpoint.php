@@ -23,12 +23,10 @@ abstract class WPCOM_JSON_API_Comment_Endpoint extends WPCOM_JSON_API_Endpoint {
 			'comment'   => 'The comment is a regular comment.',
 			'trackback' => 'The comment is a trackback.',
 			'pingback'  => 'The comment is a pingback.',
-			'review'    => 'The comment is a product review.',
 		),
-		'like_count'   => '(int) The number of likes for this comment.',
-		'i_like'       => '(bool) Does the current user like this comment?',
-		'meta'         => '(object) Meta data',
-		'can_moderate' => '(bool) Whether current user can moderate the comment.',
+		'like_count'     => '(int) The number of likes for this comment.',
+		'i_like'         => '(bool) Does the current user like this comment?',
+		'meta' => '(object) Meta data',
 	);
 
 	// public $response_format =& $this->comment_object_format;
@@ -48,7 +46,7 @@ abstract class WPCOM_JSON_API_Comment_Endpoint extends WPCOM_JSON_API_Endpoint {
 			return new WP_Error( 'unknown_comment', 'Unknown comment', 404 );
 		}
 
-		$types = array( '', 'comment', 'pingback', 'trackback', 'review' );
+		$types = array( '', 'comment', 'pingback', 'trackback' );
 		if ( !in_array( $comment->comment_type, $types ) ) {
 			return new WP_Error( 'unknown_comment', 'Unknown comment', 404 );
 		}
@@ -193,9 +191,6 @@ abstract class WPCOM_JSON_API_Comment_Endpoint extends WPCOM_JSON_API_Endpoint {
 						'likes'   => (string) $this->links->get_comment_link( $this->api->get_blog_id_for_output(), $comment->comment_ID, 'likes/' ),
 					),
 				);
-				break;
-			case 'can_moderate':
-				$response[ $key ] = (bool) current_user_can( 'edit_comment', $comment_id );
 				break;
 			}
 		}

@@ -11,9 +11,6 @@ new WPCOM_JSON_API_Update_Post_v1_2_Endpoint( array(
 	'path_labels' => array(
 		'$site' => '(int|string) Site ID or domain',
 	),
-	'query_parameters' => array(
-		'autosave' => '(bool) True if the post was saved automatically.',
-	),
 
 	'request_format' => array(
 		// explicitly document all input
@@ -151,8 +148,6 @@ new WPCOM_JSON_API_Update_Post_v1_2_Endpoint( array(
 	)
 ) );
 
-use function \Automattic\Jetpack\Extensions\Map\map_block_from_geo_points;
-
 class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Post_v1_1_Endpoint {
 
 	// /sites/%s/posts/new       -> $blog_id
@@ -267,18 +262,9 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 			$new_status = isset( $input['status'] ) ? $input['status'] : $last_status;
 
 			// Make sure that drafts get the current date when transitioning to publish if not supplied in the post.
-			// Similarly, scheduled posts that are manually published before their scheduled date should have the date reset.
 			$date_in_past = ( strtotime($post->post_date_gmt) < time() );
-			$reset_draft_date     = 'publish' === $new_status && 'draft'  === $last_status && ! isset( $input['date_gmt'] ) && $date_in_past;
-			$reset_scheduled_date = 'publish' === $new_status && 'future' === $last_status && ! isset( $input['date_gmt'] ) && ! $date_in_past;
-
-			if ( $reset_draft_date || $reset_scheduled_date ) {
+			if ( 'publish' === $new_status && 'draft' === $last_status && ! isset( $input['date_gmt'] ) && $date_in_past ) {
 				$input['date_gmt'] = gmdate( 'Y-m-d H:i:s' );
-			}
-
-			// Untrash a post so that the proper hooks get called as well as the comments get untrashed.
-			if ( $this->should_untrash_post( $last_status, $new_status, $post ) ) {
-				$input = $this->untrash_post( $post, $input );
 			}
 		}
 
@@ -509,12 +495,6 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 			$media_id_string = join( ',', array_filter( array_map( 'absint', $media_results['media_ids'] ) ) );
 		}
 
-		$is_dtp_fb_post = false;
-		if ( in_array( '_dtp_fb', wp_list_pluck( (array) $metadata, 'key' ), true ) ) {
-			$is_dtp_fb_post = true;
-			add_filter( 'rest_api_allowed_public_metadata', array( $this, 'dtp_fb_allowed_metadata' ) );
-		}
-
 		if ( $new ) {
 			if ( isset( $input['content'] ) && ! has_shortcode( $input['content'], 'gallery' ) && ( $has_media || $has_media_by_url ) ) {
 				switch ( ( $has_media + $has_media_by_url ) ) {
@@ -531,28 +511,19 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 				default :
 					// Several images - 3 column gallery
 					$insert['post_content'] = $input['content'] = sprintf(
-						"[gallery ids='%s']\n\n",
+						"[gallery ids='%s']\n\n", 
 						$media_id_string
 					) . $input['content'];
 					break;
 				}
 			}
 
-			$insert['post_date'] = isset( $insert['post_date'] ) ? $insert['post_date'] : '';
-
-			if ( $is_dtp_fb_post ) {
-				$insert = $this->dtp_fb_preprocess_post( $insert, $metadata );
-			}
-
-			$post_id = $this->post_exists( $insert['post_title'], $insert['post_content'], $insert['post_date'], $post_type->name );
-			if ( 0 === $post_id ) {
-				$post_id = wp_insert_post( add_magic_quotes( $insert ), true );
-			}
+			$post_id = wp_insert_post( add_magic_quotes( $insert ), true );
 		} else {
 			$insert['ID'] = $post->ID;
 
 			// wp_update_post ignores date unless edit_date is set
-			// See: https://codex.wordpress.org/Function_Reference/wp_update_post#Scheduling_posts
+			// See: http://codex.wordpress.org/Function_Reference/wp_update_post#Scheduling_posts
 			// See: https://core.trac.wordpress.org/browser/tags/3.9.2/src/wp-includes/post.php#L3302
 			if ( isset( $input['date_gmt'] ) || isset( $input['date'] ) ) {
 				$insert['edit_date'] = true;
@@ -608,7 +579,7 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 		if ( $new ) {
 			if ( $sitewide_likes_enabled ) {
 				if ( false === $likes ) {
-					update_post_meta( $post_id, 'switch_like_status', 0 );
+					update_post_meta( $post_id, 'switch_like_status', 1 );
 				} else {
 					delete_post_meta( $post_id, 'switch_like_status' );
 				}
@@ -623,7 +594,7 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 			if ( isset( $likes ) ) {
 				if ( $sitewide_likes_enabled ) {
 					if ( false === $likes ) {
-						update_post_meta( $post_id, 'switch_like_status', 0 );
+						update_post_meta( $post_id, 'switch_like_status', 1 );
 					} else {
 						delete_post_meta( $post_id, 'switch_like_status' );
 					}
@@ -777,6 +748,7 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 
 				$meta = (object) $meta;
 
+				// Custom meta description can only be set on sites that have a business subscription.
 				if ( Jetpack_SEO_Posts::DESCRIPTION_META_KEY == $meta->key && ! Jetpack_SEO_Utils::is_enabled_jetpack_seo() ) {
 					return new WP_Error( 'unauthorized', __( 'SEO tools are not enabled for this site.', 'jetpack' ), 403 );
 				}
@@ -804,7 +776,7 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 
 				$unslashed_meta_key = wp_unslash( $meta->key ); // should match what the final key will be
 				$meta->key = wp_slash( $meta->key );
-				$unslashed_existing_meta_key = isset( $existing_meta_item->meta_key ) ? wp_unslash( $existing_meta_item->meta_key ) : '';
+				$unslashed_existing_meta_key = wp_unslash( $existing_meta_item->meta_key );
 				$existing_meta_item->meta_key = wp_slash( $existing_meta_item->meta_key );
 
 				// make sure that the meta id passed matches the existing meta key
@@ -817,6 +789,7 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 
 				switch ( $meta->operation ) {
 					case 'delete':
+
 						if ( ! empty( $meta->id ) && ! empty( $existing_meta_item->meta_key ) && current_user_can( 'delete_post_meta', $post_id, $unslashed_existing_meta_key ) ) {
 							delete_metadata_by_mid( 'post', $meta->id );
 						} elseif ( ! empty( $meta->key ) && ! empty( $meta->previous_value ) && current_user_can( 'delete_post_meta', $post_id, $unslashed_meta_key ) ) {
@@ -827,16 +800,18 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 
 						break;
 					case 'add':
+
 						if ( ! empty( $meta->id ) || ! empty( $meta->previous_value ) ) {
-							break;
+							continue;
 						} elseif ( ! empty( $meta->key ) && ! empty( $meta->value ) && ( current_user_can( 'add_post_meta', $post_id, $unslashed_meta_key ) ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) {
 							add_post_meta( $post_id, $meta->key, $meta->value );
 						}
 
 						break;
 					case 'update':
+
 						if ( ! isset( $meta->value ) ) {
-							break;
+							continue;
 						} elseif ( ! empty( $meta->id ) && ! empty( $existing_meta_item->meta_key ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_existing_meta_key ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) ) {
 							update_metadata_by_mid( 'post', $meta->id, $meta->value );
 						} elseif ( ! empty( $meta->key ) && ! empty( $meta->previous_value ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_meta_key ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) ) {
@@ -847,6 +822,7 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 
 						break;
 				}
+
 			}
 		}
 
@@ -867,15 +843,8 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 			$return['sticky'] = ( true === $sticky );
 		}
 
-		if ( ! empty( $media_results['errors'] ) ) {
-			/*
-			 * Depending on whether the errors array keys are sequential or not
-			 * json_encode would transform this into either an array or an object
-			 * see https://www.php.net/manual/en/function.json-encode.php#example-3967
-			 * We use array_values to always return an array
-			 */
-			$return['media_errors'] = array_values( $media_results['errors'] );
-		}
+		if ( ! empty( $media_results['errors'] ) )
+			$return['media_errors'] = $media_results['errors'];
 
 		if ( 'publish' !== $return['status'] && isset( $input['title'] )) {
 			$sal_site = $this->get_sal_post_by( 'ID', $post_id, $args['context'] );
@@ -897,97 +866,5 @@ class WPCOM_JSON_API_Update_Post_v1_2_Endpoint extends WPCOM_JSON_API_Update_Pos
 		}
 
 		return ! empty( $type ) && ! in_array( $type, array( 'post', 'revision' ) );
-	}
-
-	/**
-	 * Filter for rest_api_allowed_public_metadata.
-	 * Adds FB's DTP specific metadata.
-	 *
-	 * @param array $keys Array of metadata that is accessible by the REST API.
-	 *
-	 * @return array
-	 */
-	public function dtp_fb_allowed_metadata( $keys ) {
-		return array_merge( $keys, array( '_dtp_fb', '_dtp_fb_geo_points', '_dtp_fb_post_link' ) );
-	}
-
-	/**
-	 * Pre-process FB DTP posts before inserting.
-	 * Here we can improve the DTP content for the following issues:
-	 * - Render the map block based on provided coordinates in metadata
-	 * - [TODO] Improve the title
-	 *
-	 * @param array $post Post to be inserted.
-	 * @param array $metadata Metadata for the post.
-	 *
-	 * @return mixed
-	 */
-	private function dtp_fb_preprocess_post( $post, $metadata ) {
-		$geo_points_metadata = wp_filter_object_list( $metadata, array( 'key' => '_dtp_fb_geo_points' ), 'and', 'value' );
-		if ( ! empty( $geo_points_metadata ) ) {
-			$fb_points  = reset( $geo_points_metadata );
-			$geo_points = array();
-
-			// Prepare Geo Points so that they match the format expected by the map block.
-			foreach ( $fb_points as $fb_point ) {
-				$geo_points[] = array(
-					'coordinates' => array(
-						'longitude' => $fb_point['longitude'],
-						'latitude'  => $fb_point['latitude'],
-					),
-					'title'       => $fb_point['name'],
-				);
-			}
-			$map_block = map_block_from_geo_points( $geo_points );
-
-			$post['post_content'] = $map_block . $post['post_content'];
-		}
-
-		$post['post_format'] = 'aside';
-
-		return $post;
-	}
-
-	/**
-	 * Determines if a post exists based on title, content, date, and type,
-	 * But excluding IDs in gallery shortcodes.
-	 * This will prevent duplication of posts created through the API.
-	 *
-	 * @param string $title   Post title.
-	 * @param string $content Post content.
-	 * @param string $post_date    Post date.
-	 * @param string $type    Optional post type.
-	 * @return int Post ID if post exists, 0 otherwise.
-	 */
-	private function post_exists( $title, $content, $post_date, $type = '' ) {
-		$date = date_create( $post_date );
-
-		$posts = get_posts(
-			array(
-				'year'             => date_format( $date, 'Y' ),
-				'monthnum'         => date_format( $date, 'n' ),
-				'day'              => date_format( $date, 'j' ),
-				'hour'             => date_format( $date, 'G' ),
-				'minute'           => date_format( $date, 'i' ),
-				'second'           => date_format( $date, 's' ),
-				'post_type'        => $type,
-				'title'            => $title,
-				'numberposts'      => -1,
-				'suppress_filters' => false,
-			)
-		);
-
-		foreach ( $posts as $post ) {
-			$gallery_ids_pattern = "/(\[gallery[^\]]*)(\sids='[\d,]+')([^\]]*\])/";
-
-			$post->post_content = preg_replace( $gallery_ids_pattern, '$1$3', $post->post_content );
-			$content            = preg_replace( $gallery_ids_pattern, '$1$3', $content );
-
-			if ( $content === $post->post_content ) {
-				return $post->ID;
-			}
-		}
-
-		return 0;
 	}
 }
