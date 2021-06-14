@@ -3,7 +3,7 @@
  * The fallback buffer for users with no XML support.
  *
  * @since 5.3.0
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -29,8 +29,8 @@ abstract class Jetpack_Sitemap_Buffer_Fallback extends Jetpack_Sitemap_Buffer {
 
 		$this->finder = new Jetpack_Sitemap_Finder();
 
-		$this->item_capacity = max( 1, (int) $item_limit );
-		$this->byte_capacity = max( 1, (int) $byte_limit ) - strlen( $this->contents() );
+		$this->item_capacity = max( 1, intval( $item_limit ) );
+		$this->byte_capacity = max( 1, intval( $byte_limit ) ) - strlen( $this->contents() );
 	}
 
 	/**
@@ -98,7 +98,7 @@ abstract class Jetpack_Sitemap_Buffer_Fallback extends Jetpack_Sitemap_Buffer {
 	/**
 	 * Legacy implementation of array to XML conversion without using DOMDocument.
 	 *
-	 * @param array $array
+	 * @param Array $array
 	 * @return String $result
 	 */
 	public function array_to_xml_string( $array, $parent = null, $root = null ) {

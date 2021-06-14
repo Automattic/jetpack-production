@@ -2,7 +2,7 @@
 /**
  * Custom logo uploader control for the Customizer.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 class Site_Logo_Image_Control extends WP_Customize_Control {
 	/**
@@ -54,27 +54,8 @@ class Site_Logo_Image_Control extends WP_Customize_Control {
 		// Enqueues all needed media resources.
 		wp_enqueue_media();
 
-		/*
-		 * Enqueue our control script and styles.
-		 */
-
-		// We only enqueue a minified version of the file on prod. Jetpack.
-		$min = (
-			( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG )
-			|| ( defined( 'IS_WPCOM' ) && IS_WPCOM )
-		)
-			? ''
-			: '.min';
-
-		wp_enqueue_style(
-			'site-logo-control',
-			plugins_url( '../css/site-logo-control.css', __FILE__ ),
-			array(),
-			JETPACK__VERSION
-		);
-		wp_style_add_data( 'site-logo-control', 'rtl', 'replace' );
-		wp_style_add_data( 'site-logo-control', 'suffix', $min );
-
+		// Enqueue our control script and styles.
+		wp_enqueue_style( 'site-logo-control', plugins_url( '../css/site-logo-control.css', __FILE__ ) );
 		wp_enqueue_script( 'site-logo-control', plugins_url( '../js/site-logo-control.js', __FILE__ ), array( 'media-views', 'customize-controls', 'underscore' ), '', true );
 	}
 

@@ -2,36 +2,36 @@
 /**
  * Build the sitemap tree.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 4.8.0
  * @author Automattic
  */
 
 /* Include sitemap subclasses, if not already, and include proper buffer based on phpxml's availability. */
-require_once __DIR__ . '/sitemap-constants.php';
-require_once __DIR__ . '/sitemap-buffer.php';
+require_once dirname( __FILE__ ) . '/sitemap-constants.php';
+require_once dirname( __FILE__ ) . '/sitemap-buffer.php';
 
 if ( ! class_exists( 'DOMDocument' ) ) {
-	require_once __DIR__ . '/sitemap-buffer-fallback.php';
-	require_once __DIR__ . '/sitemap-buffer-image-fallback.php';
-	require_once __DIR__ . '/sitemap-buffer-master-fallback.php';
-	require_once __DIR__ . '/sitemap-buffer-news-fallback.php';
-	require_once __DIR__ . '/sitemap-buffer-page-fallback.php';
-	require_once __DIR__ . '/sitemap-buffer-video-fallback.php';
+	require_once dirname( __FILE__ ) . '/sitemap-buffer-fallback.php';
+	require_once dirname( __FILE__ ) . '/sitemap-buffer-image-fallback.php';
+	require_once dirname( __FILE__ ) . '/sitemap-buffer-master-fallback.php';
+	require_once dirname( __FILE__ ) . '/sitemap-buffer-news-fallback.php';
+	require_once dirname( __FILE__ ) . '/sitemap-buffer-page-fallback.php';
+	require_once dirname( __FILE__ ) . '/sitemap-buffer-video-fallback.php';
 } else {
-	require_once __DIR__ . '/sitemap-buffer-image.php';
-	require_once __DIR__ . '/sitemap-buffer-master.php';
-	require_once __DIR__ . '/sitemap-buffer-news.php';
-	require_once __DIR__ . '/sitemap-buffer-page.php';
-	require_once __DIR__ . '/sitemap-buffer-video.php';
+	require_once dirname( __FILE__ ) . '/sitemap-buffer-image.php';
+	require_once dirname( __FILE__ ) . '/sitemap-buffer-master.php';
+	require_once dirname( __FILE__ ) . '/sitemap-buffer-news.php';
+	require_once dirname( __FILE__ ) . '/sitemap-buffer-page.php';
+	require_once dirname( __FILE__ ) . '/sitemap-buffer-video.php';
 }
 
-require_once __DIR__ . '/sitemap-librarian.php';
-require_once __DIR__ . '/sitemap-finder.php';
-require_once __DIR__ . '/sitemap-state.php';
+require_once dirname( __FILE__ ) . '/sitemap-librarian.php';
+require_once dirname( __FILE__ ) . '/sitemap-finder.php';
+require_once dirname( __FILE__ ) . '/sitemap-state.php';
 
 if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-	require_once __DIR__ . '/sitemap-logger.php';
+	require_once dirname( __FILE__ ) . '/sitemap-logger.php';
 }
 
 /**
@@ -587,7 +587,7 @@ class Jetpack_Sitemap_Builder {
 		if ( 1 === $number && 'page' !== get_option( 'show_on_front' ) ) {
 			$item_array = array(
 				'url' => array(
-					'loc' => home_url( '/' ),
+					'loc' => home_url(),
 				),
 			);
 
@@ -998,7 +998,7 @@ class Jetpack_Sitemap_Builder {
 	/**
 	 * Construct the sitemap index url entry for a sitemap row.
 	 *
-	 * @link https://www.sitemaps.org/protocol.html#sitemapIndex_sitemap
+	 * @link http://www.sitemaps.org/protocol.html#sitemapIndex_sitemap
 	 *
 	 * @access private
 	 * @since 4.8.0
@@ -1104,7 +1104,7 @@ class Jetpack_Sitemap_Builder {
 	/**
 	 * Construct the sitemap url entry for a WP_Post.
 	 *
-	 * @link https://www.sitemaps.org/protocol.html#urldef
+	 * @link http://www.sitemaps.org/protocol.html#urldef
 	 * @access private
 	 * @since 4.8.0
 	 *
@@ -1182,7 +1182,7 @@ class Jetpack_Sitemap_Builder {
 	/**
 	 * Construct the image sitemap url entry for a WP_Post of image type.
 	 *
-	 * @link https://www.sitemaps.org/protocol.html#urldef
+	 * @link http://www.sitemaps.org/protocol.html#urldef
 	 *
 	 * @access private
 	 * @since 4.8.0
@@ -1267,7 +1267,7 @@ class Jetpack_Sitemap_Builder {
 	/**
 	 * Construct the video sitemap url entry for a WP_Post of video type.
 	 *
-	 * @link https://www.sitemaps.org/protocol.html#urldef
+	 * @link http://www.sitemaps.org/protocol.html#urldef
 	 * @link https://developers.google.com/webmasters/videosearch/sitemaps
 	 *
 	 * @access private
@@ -1320,20 +1320,6 @@ class Jetpack_Sitemap_Builder {
 		/** This filter is already documented in core/wp-includes/feed.php */
 		$content = apply_filters( 'the_content_feed', $content, 'rss2' );
 
-		// Include thumbnails for VideoPress videos, use blank image for others
-		if ( 'complete' === get_post_meta( $post->ID, 'videopress_status', true ) && has_post_thumbnail( $post ) ) {
-			$video_thumbnail_url = get_the_post_thumbnail_url( $post );
-		} else {
-			/**
-			 * Filter the thumbnail image used in the video sitemap for non-VideoPress videos.
-			 *
-			 * @since 7.2.0
-			 *
-			 * @param string $str Image URL.
-			 */
-			$video_thumbnail_url = apply_filters( 'jetpack_video_sitemap_default_thumbnail', 'https://s0.wp.com/i/blank.jpg' );
-		}
-
 		$item_array = array(
 			'url' => array(
 				'loc'         => $parent_url,
@@ -1341,7 +1327,7 @@ class Jetpack_Sitemap_Builder {
 				'video:video' => array(
 					/** This filter is already documented in core/wp-includes/feed.php */
 					'video:title'         => apply_filters( 'the_title_rss', $post->post_title ),
-					'video:thumbnail_loc' => esc_url( $video_thumbnail_url ),
+					'video:thumbnail_loc' => '',
 					'video:description'   => $content,
 					'video:content_loc'   => esc_url( wp_get_attachment_url( $post->ID ) ),
 				),
@@ -1377,7 +1363,7 @@ class Jetpack_Sitemap_Builder {
 	/**
 	 * Construct the news sitemap url entry for a WP_Post.
 	 *
-	 * @link https://www.sitemaps.org/protocol.html#urldef
+	 * @link http://www.sitemaps.org/protocol.html#urldef
 	 *
 	 * @access private
 	 * @since 4.8.0
@@ -1417,7 +1403,7 @@ class Jetpack_Sitemap_Builder {
 		/*
 		 * Trim the locale to an ISO 639 language code as required by Google.
 		 * Special cases are zh-cn (Simplified Chinese) and zh-tw (Traditional Chinese).
-		 * @link https://www.loc.gov/standards/iso639-2/php/code_list.php
+		 * @link http://www.loc.gov/standards/iso639-2/php/code_list.php
 		 */
 		$language = strtolower( get_locale() );
 

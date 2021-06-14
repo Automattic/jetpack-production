@@ -37,7 +37,7 @@
 .site-main #infinite-handle span button:hover,
 .site-main #infinite-handle span button:focus {
 	transition: background 150ms ease-in-out;
-	background: #2271b1;
+	background: #0073aa;
 	border: none;
 	border-radius: 5px;
 	box-sizing: border-box;
@@ -112,9 +112,12 @@
 	margin-bottom: -0.3125em !important;
 }
 
-.sd-social-icon .sd-content ul,
-.sd-social-official .sd-content ul {
+.sd-social-icon .sd-content ul {
 	margin-bottom: 0 !important;
+}
+
+.sd-social-official .sd-content ul {
+	margin-bottom: -0.625em !important;
 }
 
 .entry #sharing_email .sharing_send,
