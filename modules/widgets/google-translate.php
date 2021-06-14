@@ -4,11 +4,11 @@ use Automattic\Jetpack\Assets;
 
 /**
  * Plugin Name: Google Translate Widget for WordPress.com
- * Plugin URI: https://automattic.com
+ * Plugin URI: http://automattic.com
  * Description: Add a widget for automatic translation
  * Author: Artur Piszek
  * Version: 0.1
- * Author URI: https://automattic.com
+ * Author URI: http://automattic.com
  * Text Domain: jetpack
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -129,7 +129,7 @@ class Jetpack_Google_Translate_Widget extends WP_Widget {
 				'_wp_google_translate_widget',
 				array(
 					'lang'   => get_locale(),
-					'layout' => (int) $button_layout,
+					'layout' => intval( $button_layout ),
 				)
 			);
 			wp_enqueue_script( 'google-translate-init' );

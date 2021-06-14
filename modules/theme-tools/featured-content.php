@@ -334,7 +334,7 @@ if ( ! class_exists( 'Featured_Content' ) && isset( $GLOBALS['pagenow'] ) && 'pl
 				return;
 			}
 
-			// We need to respect post ids already in the blocklist.
+			// We need to respect post ids already in the blacklist.
 			$post__not_in = $query->get( 'post__not_in' );
 
 			if ( ! empty( $post__not_in ) ) {
@@ -387,12 +387,6 @@ if ( ! class_exists( 'Featured_Content' ) && isset( $GLOBALS['pagenow'] ) && 'pl
 
 			// This filter is only appropriate on the front-end.
 			if ( is_admin() || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) || ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) ) {
-				return $terms;
-			}
-
-			// WordPress defines the parameter as `array`, but it passes null if `get_terms( $args )` was called
-			// without a 'taxonomy' in $args.
-			if ( ! is_array( $taxonomies ) ) {
 				return $terms;
 			}
 
@@ -509,7 +503,7 @@ if ( ! class_exists( 'Featured_Content' ) && isset( $GLOBALS['pagenow'] ) && 'pl
 			Add Featured Content settings.
 			 *
 			 * Sanitization callback registered in Featured_Content::validate_settings().
-			 * See https://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/comment-page-1/#comment-12374
+			 * See http://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/comment-page-1/#comment-12374
 			 */
 			$wp_customize->add_setting(
 				'featured-content[tag-name]',

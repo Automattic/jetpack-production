@@ -30,7 +30,7 @@
 	<small>
 		<?php printf(
 			__( 'Leave the Flickr RSS URL field blank to display <a target="_blank" href="%s">interesting</a> Flickr photos.', 'jetpack' ),
-			'https://www.flickr.com/explore/interesting'
+			'http://www.flickr.com/explore/interesting'
 		); ?>
 	</small>
 </p>

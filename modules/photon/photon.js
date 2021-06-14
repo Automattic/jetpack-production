@@ -1,4 +1,6 @@
-( function () {
+/* jshint onevar: false */
+
+( function() {
 	function recalculate() {
 		if ( this.complete ) {
 			// Support for lazy loading: if there is a lazy-src attribute and it's value
@@ -27,7 +29,7 @@
 	/**
 	 * For images lacking explicit dimensions and needing them, try to add them.
 	 */
-	var restore_dims = function () {
+	var restore_dims = function() {
 			var elements = document.querySelectorAll( 'img[data-recalc-dims]' );
 			for ( var i = 0; i < elements.length; i++ ) {
 				recalculate.call( elements[ i ] );
@@ -36,7 +38,7 @@
 		/**
 		 * Modify given image's markup so that devicepx-jetpack.js will act on the image and it won't be reprocessed by this script.
 		 */
-		reset_for_retina = function ( img ) {
+		reset_for_retina = function( img ) {
 			img.removeAttribute( 'data-recalc-dims' );
 			img.removeAttribute( 'scale' );
 		};
@@ -53,5 +55,5 @@
 		}
 	}
 
-	document.body.addEventListener( 'is.post-load', restore_dims );
+	document.body.addEventListener( 'post-load', restore_dims );
 } )();

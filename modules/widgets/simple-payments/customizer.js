@@ -1,17 +1,17 @@
 /* global jQuery, jpSimplePaymentsStrings, confirm, _ */
 /* eslint no-var: 0, quote-props: 0 */
 
-( function ( api, wp, $ ) {
+( function( api, wp, $ ) {
 	var $document = $( document );
 
-	$document.ready( function () {
-		$document.on( 'widget-added', function ( event, widgetContainer ) {
+	$document.ready( function() {
+		$document.on( 'widget-added', function( event, widgetContainer ) {
 			if ( widgetContainer.is( '[id*="jetpack_simple_payments_widget"]' ) ) {
 				initWidget( widgetContainer );
 			}
 		} );
 
-		$document.on( 'widget-synced widget-updated', function ( event, widgetContainer ) {
+		$document.on( 'widget-synced widget-updated', function( event, widgetContainer ) {
 			//this fires for all widgets, this prevent errors for non SP widgets
 			if ( ! widgetContainer.is( '[id*="jetpack_simple_payments_widget"]' ) ) {
 				return;
@@ -65,7 +65,7 @@
 		//Input, Select and Checkbox change
 		widgetForm.find( 'select, input, textarea, checkbox' ).on(
 			'change input propertychange',
-			_.debounce( function () {
+			_.debounce( function() {
 				disableFormActions( widgetForm );
 			}, 250 )
 		);
@@ -78,18 +78,18 @@
 			customize_changeset_uuid: api.settings.changeset.uuid,
 		} );
 
-		request.done( function ( data ) {
+		request.done( function( data ) {
 			var selectedProduct = 0;
 
 			$( document )
 				.find( 'select.jetpack-simple-payments-products' )
-				.each( function ( index, select ) {
+				.each( function( index, select ) {
 					var $select = $( select );
 					selectedProduct = $select.val();
 
 					$select.find( 'option' ).remove();
 					$select.append(
-						$.map( data, function ( product ) {
+						$.map( data, function( product ) {
 							return $( '<option>', { value: product.ID, text: product.post_title } );
 						} )
 					);
@@ -128,11 +128,14 @@
 	}
 
 	function changeFormAction( widgetForm, action ) {
-		widgetForm.find( '.jetpack-simple-payments-form-action' ).val( action ).change();
+		widgetForm
+			.find( '.jetpack-simple-payments-form-action' )
+			.val( action )
+			.change();
 	}
 
 	function showAddNewForm( widgetForm ) {
-		return function ( event ) {
+		return function( event ) {
 			event.preventDefault();
 
 			showForm( widgetForm );
@@ -141,7 +144,7 @@
 	}
 
 	function showEditForm( widgetForm ) {
-		return function ( event ) {
+		return function( event ) {
 			event.preventDefault();
 
 			showForm( widgetForm );
@@ -150,7 +153,7 @@
 	}
 
 	function clearForm( widgetForm ) {
-		return function ( event ) {
+		return function( event ) {
 			event.preventDefault();
 
 			hideForm( widgetForm );
@@ -197,7 +200,7 @@
 	}
 
 	function selectImage( widgetForm ) {
-		return function ( event ) {
+		return function( event ) {
 			event.preventDefault();
 
 			var imageContainer = widgetForm.find( '.jetpack-simple-payments-image' );
@@ -209,19 +212,29 @@
 				button: { text: 'Choose Image' },
 			} );
 
-			mediaFrame.on( 'select', function () {
-				var selection = mediaFrame.state().get( 'selection' ).first().toJSON();
+			mediaFrame.on( 'select', function() {
+				var selection = mediaFrame
+					.state()
+					.get( 'selection' )
+					.first()
+					.toJSON();
 				//hide placeholder
 				widgetForm.find( '.jetpack-simple-payments-image-fieldset .placeholder' ).hide();
 
 				//load image from media library
-				imageContainer.find( 'img' ).attr( 'src', selection.url ).show();
+				imageContainer
+					.find( 'img' )
+					.attr( 'src', selection.url )
+					.show();
 
 				//show image and remove button
 				widgetForm.find( '.jetpack-simple-payments-image' ).show();
 
 				//set hidden field for the selective refresh
-				widgetForm.find( '.jetpack-simple-payments-form-image-id' ).val( selection.id ).change();
+				widgetForm
+					.find( '.jetpack-simple-payments-form-image-id' )
+					.val( selection.id )
+					.change();
 			} );
 
 			mediaFrame.open();
@@ -229,7 +242,7 @@
 	}
 
 	function removeImage( widgetForm ) {
-		return function ( event ) {
+		return function( event ) {
 			event.preventDefault();
 
 			//show placeholder
@@ -239,7 +252,10 @@
 			widgetForm.find( '.jetpack-simple-payments-image' ).hide();
 
 			//set hidden field for the selective refresh
-			widgetForm.find( '.jetpack-simple-payments-form-image-id' ).val( '' ).change();
+			widgetForm
+				.find( '.jetpack-simple-payments-form-image-id' )
+				.val( '' )
+				.change();
 		};
 	}
 
@@ -313,7 +329,7 @@
 	}
 
 	function saveChanges( widgetForm ) {
-		return function ( event ) {
+		return function( event ) {
 			event.preventDefault();
 			var productPostId = widgetForm.find( '.jetpack-simple-payments-form-product-id' ).val();
 
@@ -347,7 +363,7 @@
 				},
 			} );
 
-			request.done( function ( data ) {
+			request.done( function( data ) {
 				var select = widgetForm.find( 'select.jetpack-simple-payments-products' );
 				var productOption = select.find( 'option[value="' + productPostId + '"]' );
 
@@ -370,14 +386,14 @@
 				hideForm( widgetForm );
 			} );
 
-			request.fail( function ( data ) {
+			request.fail( function( data ) {
 				var validCodes = {
 					post_title: 'product-title',
 					price: 'product-price',
 					email: 'product-email',
 				};
 
-				data.forEach( function ( item ) {
+				data.forEach( function( item ) {
 					if ( validCodes.hasOwnProperty( item.code ) ) {
 						widgetForm
 							.find( '.jetpack-simple-payments-form-' + validCodes[ item.code ] )
@@ -391,7 +407,7 @@
 	}
 
 	function deleteProduct( widgetForm ) {
-		return function ( event ) {
+		return function( event ) {
 			event.preventDefault();
 
 			if ( ! confirm( jpSimplePaymentsStrings.deleteConfirmation ) ) {
@@ -419,7 +435,7 @@
 				},
 			} );
 
-			request.done( function () {
+			request.done( function() {
 				var productList = widgetForm.find( 'select.jetpack-simple-payments-products' )[ 0 ];
 				productList.remove( productList.selectedIndex );
 				productList.dispatchEvent( new Event( 'change' ) );

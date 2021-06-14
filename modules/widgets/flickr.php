@@ -74,7 +74,7 @@ if ( ! class_exists( 'Jetpack_Flickr_Widget' ) ) {
 				 * Parse the URL, and rebuild a URL that's sure to display images.
 				 * Some Flickr Feeds do not display images by default.
 				 */
-				$flickr_parameters = wp_parse_url( htmlspecialchars_decode( $instance['flickr_rss_url'] ) );
+				$flickr_parameters = parse_url( htmlspecialchars_decode( $instance['flickr_rss_url'] ) );
 
 				// Is it a Flickr Feed.
 				if (
@@ -190,7 +190,7 @@ if ( ! class_exists( 'Jetpack_Flickr_Widget' ) ) {
 			}
 
 			if ( isset( $new_instance['items'] ) ) {
-				$instance['items'] = (int) $new_instance['items'];
+				$instance['items'] = intval( $new_instance['items'] );
 			}
 
 			if ( isset( $new_instance['target'] ) ) {

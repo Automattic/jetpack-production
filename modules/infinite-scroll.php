@@ -149,7 +149,7 @@ class Jetpack_Infinite_Scroll_Extras {
 			}
 
 			// We made it this far, so gather the data needed to track IS views
-			$settings['stats'] = 'blog=' . Jetpack_Options::get_option( 'id' ) . '&host=' . wp_parse_url( get_option( 'home' ), PHP_URL_HOST ) . '&v=ext&j=' . JETPACK__API_VERSION . ':' . JETPACK__VERSION;
+			$settings['stats'] = 'blog=' . Jetpack_Options::get_option( 'id' ) . '&host=' . parse_url( get_option( 'home' ), PHP_URL_HOST ) . '&v=ext&j=' . JETPACK__API_VERSION . ':' . JETPACK__VERSION;
 
 			// Pagetype parameter
 			$settings['stats'] .= '&x_pagetype=infinite';
@@ -214,6 +214,23 @@ class Jetpack_Infinite_Scroll_Extras {
 		// Always enqueue Tiled Gallery scripts when both IS and Tiled Galleries are enabled
 		if ( Jetpack::is_module_active( 'tiled-gallery' ) ) {
 			Jetpack_Tiled_Gallery::default_scripts_and_styles();
+		}
+
+		// Core's Audio and Video Shortcodes
+		if (
+			/** This filter is already documented in core/wp-includes/media.php */
+			'mediaelement' === apply_filters( 'wp_audio_shortcode_library', 'mediaelement' )
+		) {
+			wp_enqueue_style( 'wp-mediaelement' );
+			wp_enqueue_script( 'wp-mediaelement' );
+		}
+
+		if (
+			/** This filter is already documented in core/wp-includes/media.php */
+			'mediaelement' === apply_filters( 'wp_video_shortcode_library', 'mediaelement' )
+		) {
+			wp_enqueue_style( 'wp-mediaelement' );
+			wp_enqueue_script( 'wp-mediaelement' );
 		}
 	}
 }

@@ -2,7 +2,7 @@
 /**
  * Dailymotion code
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -135,8 +135,8 @@ function dailymotion_shortcode( $atts ) {
 	}
 
 	/*set width and height using provided parameters if any */
-	$width  = isset( $atts['width'] ) ? (int) $atts['width'] : 0;
-	$height = isset( $atts['height'] ) ? (int) $atts['height'] : 0;
+	$width  = isset( $atts['width'] ) ? intval( $atts['width'] ) : 0;
+	$height = isset( $atts['height'] ) ? intval( $atts['height'] ) : 0;
 
 	if ( ! $width && ! $height ) {
 		if ( ! empty( $content_width ) ) {
@@ -149,15 +149,6 @@ function dailymotion_shortcode( $atts ) {
 		$height = $width / 425 * 334;
 	} elseif ( ! $width ) {
 		$width = $height / 334 * 425;
-	}
-
-	if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
-		return sprintf(
-			'<amp-dailymotion data-videoid="%1$s" layout="responsive" width="%2$d" height="%3$d"></amp-dailymotion>',
-			esc_attr( $id ),
-			absint( $width ),
-			absint( $height )
-		);
 	}
 
 	/**
@@ -180,7 +171,7 @@ function dailymotion_shortcode( $atts ) {
 		$player_params['sharing-enable'] = '0';
 	}
 	if ( isset( $atts['start'] ) && ! empty( $atts['start'] ) ) {
-		$player_params['start'] = abs( (int) $atts['start'] );
+		$player_params['start'] = abs( intval( $atts['start'] ) );
 	}
 	if ( isset( $atts['subtitles-default'] ) && ! empty( $atts['subtitles-default'] ) ) {
 		$player_params['subtitles-default'] = esc_attr( $atts['subtitles-default'] );
@@ -217,7 +208,7 @@ function dailymotion_shortcode( $atts ) {
 			&& array_key_exists( 'title', $atts )
 			&& $title
 		) {
-			$output .= '<br /><strong><a href="' . esc_url( 'https://www.dailymotion.com/video/' . $video ) . '" target="_blank">' . esc_html( $title ) . '</a></strong>';
+			$output .= '<br /><strong><a href="' . esc_url( 'http://www.dailymotion.com/video/' . $video ) . '" target="_blank">' . esc_html( $title ) . '</a></strong>';
 		}
 
 		$user = preg_replace( '/[^-a-z0-9_]/i', '', $atts['user'] );
@@ -227,7 +218,7 @@ function dailymotion_shortcode( $atts ) {
 				sprintf(
 					/* Translators: placeholder is a Dailymotion username, linking to a Dailymotion profile page. */
 					__( 'Uploaded by %s', 'jetpack' ),
-					'<a href="' . esc_url( 'https://www.dailymotion.com/' . $user ) . '" target="_blank">' . esc_html( $user ) . '</a>'
+					'<a href="' . esc_url( 'http://www.dailymotion.com/' . $user ) . '" target="_blank">' . esc_html( $user ) . '</a>'
 				),
 				array(
 					'a' => array(
@@ -257,13 +248,13 @@ function dailymotion_channel_shortcode( $atts ) {
 
 	switch ( $atts['type'] ) {
 		case 'grid':
-			$channel_iframe = '<iframe sandbox="allow-popups allow-scripts allow-same-origin allow-presentation" width="300px" height="264px" scrolling="no" style="border:0;" src="' . esc_url( '//www.dailymotion.com/badge/user/' . $username . '?type=grid' ) . '"></iframe>';
+			$channel_iframe = '<iframe width="300px" height="264px" scrolling="no" style="border:0;" src="' . esc_url( '//www.dailymotion.com/badge/user/' . $username . '?type=grid' ) . '"></iframe>';
 			break;
 		case 'carousel':
-			$channel_iframe = '<iframe sandbox="allow-popups allow-scripts allow-same-origin allow-presentation" width="300px" height="360px" scrolling="no" style="border:0;" src="' . esc_url( '//www.dailymotion.com/badge/user/' . $username . '?type=carousel' ) . '"></iframe>';
+			$channel_iframe = '<iframe width="300px" height="360px" scrolling="no" style="border:0;" src="' . esc_url( '//www.dailymotion.com/badge/user/' . $username . '?type=carousel' ) . '"></iframe>';
 			break;
 		default:
-			$channel_iframe = '<iframe sandbox="allow-popups allow-scripts allow-same-origin allow-presentation" width="300px" height="78px" scrolling="no" style="border:0;" src="' . esc_url( '//www.dailymotion.com/badge/user/' . $username ) . '"></iframe>';
+			$channel_iframe = '<iframe width="300px" height="78px" scrolling="no" style="border:0;" src="' . esc_url( '//www.dailymotion.com/badge/user/' . $username ) . '"></iframe>';
 	}
 
 	return $channel_iframe;

@@ -1,11 +1,10 @@
 <?php
 
 use Automattic\Jetpack\Assets;
-use Automattic\Jetpack\Blocks;
 use Automattic\Jetpack\Sync\Settings;
 
 class Jetpack_RelatedPosts {
-	const VERSION   = '20210604';
+	const VERSION   = '20190204';
 	const SHORTCODE = 'jetpack-related-posts';
 
 	private static $instance     = null;
@@ -73,7 +72,7 @@ class Jetpack_RelatedPosts {
 		// Add Related Posts to the REST API Post response.
 		add_action( 'rest_api_init', array( $this, 'rest_register_related_posts' ) );
 
-		Blocks::jetpack_register_block(
+		jetpack_register_block(
 			'jetpack/related-posts',
 			array(
 				'render_callback' => array( $this, 'render_block' ),
@@ -112,7 +111,7 @@ class Jetpack_RelatedPosts {
 	}
 
 	/**
-	 * Load related posts assets if it's an eligible front end page or execute search and return JSON if it's an endpoint request.
+	 * Load related posts assets if it's a elegiable front end page or execute search and return JSON if it's an endpoint request.
 	 *
 	 * @global $_GET
 	 * @action wp
@@ -164,8 +163,7 @@ class Jetpack_RelatedPosts {
 
 	/**
 	 * Adds a target to the post content to load related posts into if a shortcode for it did not already exist.
-	 * Will skip adding the target if the post content contains a Related Posts block, if the 'get_the_excerpt'
-	 * hook is in the current filter list, or if the site is running an FSE/Site Editor theme.
+	 * Will skip adding the target if the post content contains a Related Posts block.
 	 *
 	 * @filter the_content
 	 *
@@ -174,11 +172,11 @@ class Jetpack_RelatedPosts {
 	 * @returns string
 	 */
 	public function filter_add_target_to_dom( $content ) {
-		if ( has_block( 'jetpack/related-posts' ) || Blocks::is_fse_theme() ) {
+		if ( has_block( 'jetpack/related-posts', $content ) ) {
 			return $content;
 		}
 
-		if ( ! $this->_found_shortcode && ! doing_filter( 'get_the_excerpt' ) ) {
+		if ( ! $this->_found_shortcode ) {
 			if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
 				$content .= "\n" . $this->get_server_rendered_html();
 			} else {
@@ -195,7 +193,7 @@ class Jetpack_RelatedPosts {
 	 * @return string Rendered related posts HTML.
 	 */
 	public function get_server_rendered_html() {
-		$rp_settings       = $this->get_options();
+		$rp_settings       = Jetpack_Options::get_option( 'relatedposts', array() );
 		$block_rp_settings = array(
 			'displayThumbnails' => $rp_settings['show_thumbnails'],
 			'showHeadline'      => $rp_settings['show_headline'],
@@ -234,10 +232,6 @@ class Jetpack_RelatedPosts {
 		if ( Settings::is_syncing() ) {
 			return '';
 		}
-
-		// For client-side rendering, enqueue both the styles and the scripts for fetching related posts.
-		// This supports related posts added via the shortcode, or via the hook for non-AMP requests.
-		$this->_enqueue_assets( true, true );
 
 		/**
 		 * Filter the Related Posts headline.
@@ -298,21 +292,20 @@ EOT;
 		);
 
 		$item_markup .= sprintf(
-			'<li class="jp-related-posts-i2__post-link"><a id="%1$s" href="%2$s" %4$s>%3$s</a></li>',
+			'<li class="jp-related-posts-i2__post-link"><a id="%1$s" href="%2$s" rel="%4$s">%3$s</a></li>',
 			esc_attr( $label_id ),
 			esc_url( $related_post['url'] ),
 			esc_attr( $related_post['title'] ),
-			( ! empty( $related_post['rel'] ) ? 'rel="' . esc_attr( $related_post['rel'] ) . '"' : '' )
+			esc_attr( $related_post['rel'] )
 		);
 
 		if ( ! empty( $block_attributes['show_thumbnails'] ) && ! empty( $related_post['img']['src'] ) ) {
 			$img_link = sprintf(
-				'<li class="jp-related-posts-i2__post-img-link"><a href="%1$s" %2$s><img src="%3$s" width="%4$s" height="%5$s" alt="%6$s" /></a></li>',
+				'<li class="jp-related-posts-i2__post-img-link"><a href="%1$s" rel="%2$s"><img src="%3$s" width="%4$s" alt="%5$s" /></a></li>',
 				esc_url( $related_post['url'] ),
-				( ! empty( $related_post['rel'] ) ? 'rel="' . esc_attr( $related_post['rel'] ) . '"' : '' ),
+				esc_attr( $related_post['rel'] ),
 				esc_url( $related_post['img']['src'] ),
 				esc_attr( $related_post['img']['width'] ),
-				esc_attr( $related_post['img']['height'] ),
 				esc_attr( $related_post['img']['alt_text'] )
 			);
 
@@ -367,10 +360,6 @@ EOT;
 	 * @return string
 	 */
 	public function render_block( $attributes ) {
-		// Enqueue styles for Related Posts. We do not need to enqueue the scripts, as the related posts are
-		// fetched server-side.
-		$this->_enqueue_assets( false, true );
-
 		$block_attributes = array(
 			'headline'        => isset( $attributes['headline'] ) ? $attributes['headline'] : null,
 			'show_thumbnails' => isset( $attributes['displayThumbnails'] ) && $attributes['displayThumbnails'],
@@ -380,7 +369,17 @@ EOT;
 			'size'            => ! empty( $attributes['postsToShow'] ) ? absint( $attributes['postsToShow'] ) : 3,
 		);
 
-		$excludes = $this->parse_numeric_get_arg( 'relatedposts_origin' );
+		$excludes      = $this->parse_numeric_get_arg( 'relatedposts_origin' );
+
+		$target_to_dom_priority = has_filter(
+			'the_content',
+			array( $this, 'filter_add_target_to_dom' )
+		);
+		remove_filter(
+			'the_content',
+			array( $this, 'filter_add_target_to_dom' ),
+			$target_to_dom_priority
+		);
 
 		$related_posts = $this->get_for_post_id(
 			get_the_ID(),
@@ -416,6 +415,22 @@ EOT;
 			$rows_markup .= $this->render_block_row( $lower_row_posts, $block_attributes );
 		}
 
+		/*
+		 * Below is a hack to get the block content to render correctly.
+		 *
+		 * This functionality should be covered in /inc/blocks.php but due to an error,
+		 * this has not been fixed as of this writing.
+		 *
+		 * Alda has submitted a patch to Core in order to have this issue fixed at
+		 * https://core.trac.wordpress.org/ticket/45495 and
+		 * made it into WordPress 5.2.
+		 *
+		 * @todo update when WP 5.2 is the minimum support version.
+		 */
+		$priority = has_filter( 'the_content', 'wpautop' );
+		remove_filter( 'the_content', 'wpautop', $priority );
+		add_filter( 'the_content', '_restore_wpautop_hook', $priority + 1 );
+
 		return sprintf(
 			'<nav class="jp-relatedposts-i2" data-layout="%1$s">%2$s%3$s</nav>',
 			esc_attr( $block_attributes['layout'] ),
@@ -437,7 +452,7 @@ EOT;
 	 *
 	 * @uses absint
 	 *
-	 * @param string $arg Name of the GET variable.
+	 * @param string $arg Name of the GET variable
 	 * @return array $result Parsed value(s)
 	 */
 	public function parse_numeric_get_arg( $arg ) {
@@ -1207,12 +1222,11 @@ EOT;
 			 * @module related-posts
 			 *
 			 * @since 3.7.0
-			 * @since 7.9.0 - Change Default value to empty.
 			 *
-			 * @param string $link_rel Link rel attribute for Related Posts' link. Default is empty.
-			 * @param int    $post->ID Post ID.
+			 * @param string nofollow Link rel attribute for Related Posts' link. Default is nofollow.
+			 * @param int $post->ID Post ID.
 			 */
-			'rel' => apply_filters( 'jetpack_relatedposts_filter_post_link_rel', '', $post->ID ),
+			'rel' => apply_filters( 'jetpack_relatedposts_filter_post_link_rel', 'nofollow', $post->ID ),
 			/**
 			 * Filter the context displayed below each Related Post.
 			 *
@@ -1627,7 +1641,6 @@ EOT;
 		$enabled = is_single()
 			&& ! is_attachment()
 			&& ! is_admin()
-			&& ! is_embed()
 			&& ( ! $this->_allow_feature_toggle() || $this->get_option( 'enabled' ) );
 
 		/**
@@ -1643,12 +1656,15 @@ EOT;
 	}
 
 	/**
-	 * Adds filters.
+	 * Adds filters and enqueues assets.
 	 *
 	 * @uses self::_enqueue_assets, self::_setup_shortcode, add_filter
 	 * @return null
 	 */
 	protected function _action_frontend_init_page() {
+
+		$enqueue_script = ! ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() );
+		$this->_enqueue_assets( $enqueue_script, true );
 		$this->_setup_shortcode();
 
 		add_filter( 'the_content', array( $this, 'filter_add_target_to_dom' ), 40 );
@@ -1661,7 +1677,7 @@ EOT;
 	 * @return null
 	 */
 	protected function _enqueue_assets( $script, $style ) {
-		$dependencies = is_customize_preview() ? array( 'customize-base' ) : array();
+		$dependencies = is_customize_preview() ? array( 'customize-base' ) : array( 'jquery' );
 		if ( $script ) {
 			wp_enqueue_script(
 				'jetpack_related-posts',
@@ -1739,19 +1755,14 @@ EOT;
 	 * @return null
 	 */
 	public function rest_register_related_posts() {
-		/** This filter is already documented in class.json-api-endpoints.php */
-		$post_types = apply_filters( 'rest_api_allowed_post_types', array( 'post', 'page', 'revision' ) );
-		foreach ( $post_types as $post_type ) {
-			register_rest_field(
-				$post_type,
-				'jetpack-related-posts',
-				array(
-					'get_callback'    => array( $this, 'rest_get_related_posts' ),
-					'update_callback' => null,
-					'schema'          => null,
-				)
-			);
-		}
+		register_rest_field( 'post',
+			'jetpack-related-posts',
+			array(
+				'get_callback' => array( $this, 'rest_get_related_posts' ),
+				'update_callback' => null,
+				'schema'          => null,
+			)
+		);
 	}
 
 	/**

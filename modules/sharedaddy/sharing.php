@@ -181,7 +181,6 @@ class Sharing_Admin {
 		$title = '';
 		$klasses = array( 'service', 'advanced', 'share-' . $service->get_class() );
 		if ( $service->is_deprecated() ) {
-			/* translators: %1$s is the name of a deprecated Sharing Service like "Google+" */
 			$title = sprintf( __( 'The %1$s service has shut down. This sharing button is not displayed to your visitors and should be removed.', 'jetpack' ), $service->get_name() );
 			$klasses[] = 'share-deprecated';
 		}
@@ -215,7 +214,7 @@ class Sharing_Admin {
 
 		if ( false == function_exists( 'mb_stripos' ) ) {
 			echo '<div id="message" class="updated fade"><h3>' . __( 'Warning! Multibyte support missing!', 'jetpack' ) . '</h3>';
-			echo '<p>' . sprintf( __( 'This plugin will work without it, but multibyte support is used <a href="%s" rel="noopener noreferrer" target="_blank">if available</a>. You may see minor problems with Tweets and other sharing services.', 'jetpack' ), 'https://www.php.net/manual/en/mbstring.installation.php' ) . '</p></div>';
+			echo '<p>' . sprintf( __( 'This plugin will work without it, but multibyte support is used <a href="%s" rel="noopener noreferrer" target="_blank">if available</a>. You may see minor problems with Tweets and other sharing services.', 'jetpack' ), 'http://www.php.net/manual/en/mbstring.installation.php' ) . '</p></div>';
 		}
 
 		if ( isset( $_GET['update'] ) && $_GET['update'] == 'saved' ) {
