@@ -17,7 +17,7 @@
  *  pro   = Slideshare Pro      (yes/no)
  *  style = Inline CSS          (string)
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -57,15 +57,15 @@ function slideshare_shortcode( $atts ) {
 	}
 
 	// check the width/height.
-	$w = (int) $attr['w'];
+	$w = intval( $attr['w'] );
 
 	// If no width was specified (or uses the wrong format), and if we have a $content_width, use that.
 	if ( empty( $w ) && ! empty( $content_width ) ) {
-		$w = (int) $content_width;
+		$w = intval( $content_width );
 	} elseif ( $w < 300 || $w > 1600 ) { // If width was specified, but is too small/large, set default value.
 		$w = 425;
 	} else {
-		$w = (int) $w;
+		$w = intval( $w );
 	}
 
 	$h = ceil( $w * 348 / 425 ); // Note: user-supplied height is ignored.
@@ -77,32 +77,28 @@ function slideshare_shortcode( $atts ) {
 	}
 
 	if ( isset( $attr['rel'] ) ) {
-		$source = add_query_arg( 'rel', (int) $attr['rel'], $source );
+		$source = add_query_arg( 'rel', intval( $attr['rel'] ), $source );
 	}
 
 	if ( ! empty( $attr['startSlide'] ) ) {
-		$source = add_query_arg( 'startSlide', (int) $attr['startSlide'], $source );
+		$source = add_query_arg( 'startSlide', intval( $attr['startSlide'] ), $source );
 	}
 
 	$player = sprintf( "<iframe src='%s' width='%d' height='%d'", esc_url( $source ), $w, $h );
 
 	// check the frameborder.
 	if ( ! empty( $attr['fb'] ) || '0' === $attr['fb'] ) {
-		$player .= " frameborder='" . (int) $attr['fb'] . "'";
+		$player .= " frameborder='" . intval( $attr['fb'] ) . "'";
 	}
 
-	$is_amp = ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() );
+	// check the margin width; if not empty, cast as int.
+	if ( ! empty( $attr['mw'] ) || '0' === $attr['mw'] ) {
+		$player .= " marginwidth='" . intval( $attr['mw'] ) . "'";
+	}
 
-	if ( ! $is_amp ) {
-		// check the margin width; if not empty, cast as int.
-		if ( ( ! empty( $attr['mw'] ) || '0' === $attr['mw'] ) ) {
-			$player .= " marginwidth='" . (int) $attr['mw'] . "'";
-		}
-
-		// check the margin height, if not empty, cast as int.
-		if ( ( ! empty( $attr['mh'] ) || '0' === $attr['mh'] ) ) {
-			$player .= " marginheight='" . (int) $attr['mh'] . "'";
-		}
+	// check the margin height, if not empty, cast as int.
+	if ( ! empty( $attr['mh'] ) || '0' === $attr['mh'] ) {
+		$player .= " marginheight='" . intval( $attr['mh'] ) . "'";
 	}
 
 	if ( ! empty( $attr['style'] ) ) {
@@ -118,7 +114,7 @@ function slideshare_shortcode( $atts ) {
 		}
 	}
 
-	$player .= ' sandbox="allow-popups allow-scripts allow-same-origin allow-presentation" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>';
+	$player .= ' allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>';
 
 	/**
 	 * Filter the returned SlideShare shortcode.

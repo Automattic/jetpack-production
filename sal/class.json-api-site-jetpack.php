@@ -138,49 +138,8 @@ class Jetpack_Site extends Abstract_Jetpack_Site {
 		return $allowed_file_types;
 	}
 
-	/**
-	 * Return site's privacy status.
-	 *
-	 * @return boolean  Is site private?
-	 */
 	function is_private() {
-		return (int) $this->get_atomic_cloud_site_option( 'blog_public' ) === -1;
-	}
-
-	/**
-	 * Return site's coming soon status.
-	 *
-	 * @return boolean  Is site "Coming soon"?
-	 */
-	function is_coming_soon() {
-		return $this->is_private() && (int) $this->get_atomic_cloud_site_option( 'wpcom_coming_soon' ) === 1;
-	}
-
-	/**
-	 * Return site's launch status.
-	 *
-	 * @return string|boolean  Launch status ('launched', 'unlaunched', or false).
-	 */
-	function get_launch_status() {
-		return $this->get_atomic_cloud_site_option( 'launch-status' );
-	}
-
-	function get_atomic_cloud_site_option( $option ) {
-		if ( ! jetpack_is_atomic_site() ) {
-			return false;
-		}
-
-		$jetpack = Jetpack::init();
-		if ( ! method_exists( $jetpack, 'get_cloud_site_options' ) ) {
-			return false;
-		}
-
-		$result = $jetpack->get_cloud_site_options( [ $option ] );
-		if ( ! array_key_exists( $option, $result ) ) {
-			return false;
-		}
-
-		return $result[ $option ];
+		return false;
 	}
 
 	function get_plan() {
@@ -199,21 +158,7 @@ class Jetpack_Site extends Abstract_Jetpack_Site {
 		return get_bloginfo( 'language' );
 	}
 
-	/**
-	 * The flag indicates that the site has Jetpack installed
-	 *
-	 * @return bool
-	 */
-	public function is_jetpack() {
-		return true;
-	}
-
-	/**
-	 * The flag indicates that the site is connected to WP.com via Jetpack Connection
-	 *
-	 * @return bool
-	 */
-	public function is_jetpack_connection() {
+	function is_jetpack() {
 		return true;
 	}
 
@@ -241,10 +186,6 @@ class Jetpack_Site extends Abstract_Jetpack_Site {
 
 	function is_connected_site() {
 		return true;
-	}
-
-	function is_wpforteams_site() {
-		return false;
 	}
 
 	function current_user_can( $role ) {
@@ -286,16 +227,6 @@ class Jetpack_Site extends Abstract_Jetpack_Site {
 	}
 
 	/**
-	 * Check if site should be considered as eligible for use of the core Site Editor.
-	 * The Site Editor requires a block based theme to be active.
-	 *
-	 * @return bool true if site is eligible for the Site Editor
-	 */
-	public function is_core_site_editor_enabled() {
-		return function_exists( 'gutenberg_is_fse_theme' ) && gutenberg_is_fse_theme();
-	}
-
-	/**
 	 * Return the last engine used for an import on the site.
 	 *
 	 * This option is not used in Jetpack.
@@ -310,15 +241,6 @@ class Jetpack_Site extends Abstract_Jetpack_Site {
 
 	function wrap_post( $post, $context ) {
 		return new Jetpack_Post( $this, $post, $context );
-	}
-
-	/**
-	 * Get the option storing the Anchor podcast ID that identifies a site as a podcasting site.
-	 *
-	 * @return string
-	 */
-	public function get_anchor_podcast() {
-		return $this->get_atomic_cloud_site_option( 'anchor_podcast' );
 	}
 
 }

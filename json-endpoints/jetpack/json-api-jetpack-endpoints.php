@@ -8,243 +8,218 @@ require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-endpoint.php
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-themes-endpoint.php' );
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-themes-active-endpoint.php' );
 
-new Jetpack_JSON_API_Themes_Active_Endpoint(
-	array(
-		'description'             => 'Get the active theme of your blog',
-		'stat'                    => 'themes:mine',
-		'method'                  => 'GET',
-		'path'                    => '/sites/%s/themes/mine',
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
+new Jetpack_JSON_API_Themes_Active_Endpoint( array(
+	'description'     => 'Get the active theme of your blog',
+	'stat'            => 'themes:mine',
+	'method'          => 'GET',
+	'path'            => '/sites/%s/themes/mine',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'response_format' => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'response_format'         => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/mine',
-	)
-);
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/mine'
+) );
 
-new Jetpack_JSON_API_Themes_Active_Endpoint(
-	array(
-		'description'             => 'Change the active theme of your blog',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/themes/mine',
-		'stat'                    => 'themes:mine',
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
+new Jetpack_JSON_API_Themes_Active_Endpoint( array(
+	'description'     => 'Change the active theme of your blog',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/themes/mine',
+	'stat'            => 'themes:mine',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'query_parameters' => array(
+		'context' => false
+	),
+	'request_format' => array(
+		'theme'   => '(string) The ID of the theme that should be activated'
+	),
+	'response_format' => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'query_parameters'        => array(
-			'context' => false,
-		),
-		'request_format'          => array(
-			'theme' => '(string) The ID of the theme that should be activated',
-		),
-		'response_format'         => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-			'body'    => array(
-				'theme' => 'twentytwelve',
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/mine',
-	)
-);
+		'body' => array(
+			'theme' => 'twentytwelve'
+		)
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/mine'
+) );
 
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-themes-list-endpoint.php' );
 
-new Jetpack_JSON_API_Themes_List_Endpoint(
-	array(
-		'description'             => 'Get WordPress.com Themes allowed on your blog',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'themes',
-		'method'                  => 'GET',
-		'path'                    => '/sites/%s/themes',
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
+new Jetpack_JSON_API_Themes_List_Endpoint( array(
+	'description'     => 'Get WordPress.com Themes allowed on your blog',
+	'group'           => '__do_not_document',
+	'stat'            => 'themes',
+	'method'          => 'GET',
+	'path'            => '/sites/%s/themes',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'response_format' => array(
+		'found'  => '(int) The total number of themes found.',
+		'themes' => '(array) An array of theme objects.',
+	),
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'response_format'         => array(
-			'found'  => '(int) The total number of themes found.',
-			'themes' => '(array) An array of theme objects.',
-		),
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes',
-	)
-);
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes'
+) );
 
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-themes-get-endpoint.php' );
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-themes-new-endpoint.php' );
 
 // POST /sites/%s/themes/%new
-new Jetpack_JSON_API_Themes_New_Endpoint(
-	array(
-		'description'             => 'Install a theme to your jetpack blog',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'themes:new',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/themes/new',
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
+new Jetpack_JSON_API_Themes_New_Endpoint( array(
+	'description'     => 'Install a theme to your jetpack blog',
+	'group'           => '__do_not_document',
+	'stat'            => 'themes:new',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/themes/new',
+	'path_labels' => array(
+		'$site'   => '(int|string) The site ID, The site domain',
+	),
+	'request_format' => array(
+		'zip'       => '(zip) Theme package zip file. multipart/form-data encoded. ',
+	),
+	'response_format' => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'request_format'          => array(
-			'zip' => '(zip) Theme package zip file. multipart/form-data encoded. ',
-		),
-		'response_format'         => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/new',
-	)
-);
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/new'
+) );
 
-new Jetpack_JSON_API_Themes_Get_Endpoint(
-	array(
-		'description'             => 'Get a single theme on a jetpack blog',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'themes:get:1',
-		'method'                  => 'GET',
-		'path'                    => '/sites/%s/themes/%s',
-		'path_labels'             => array(
-			'$site'  => '(int|string) The site ID, The site domain',
-			'$theme' => '(string) The theme slug',
+
+
+new Jetpack_JSON_API_Themes_Get_Endpoint( array(
+	'description'     => 'Get a single theme on a jetpack blog',
+	'group'           => '__do_not_document',
+	'stat'            => 'themes:get:1',
+	'method'          => 'GET',
+	'path'            => '/sites/%s/themes/%s',
+	'path_labels' => array(
+		'$site'   => '(int|string) The site ID, The site domain',
+		'$theme'  => '(string) The theme slug',
+	),
+	'response_format' => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'response_format'         => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/twentyfourteen',
-	)
-);
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/twentyfourteen'
+) );
 
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-themes-modify-endpoint.php' );
-new Jetpack_JSON_API_Themes_Modify_Endpoint(
-	array(
-		'description'             => 'Modify a single theme on a jetpack blog',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'themes:modify:1',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/themes/%s',
-		'path_labels'             => array(
-			'$site'  => '(int|string) The site ID, The site domain',
-			'$theme' => '(string) The theme slug',
+new Jetpack_JSON_API_Themes_Modify_Endpoint( array(
+	'description'     => 'Modify a single theme on a jetpack blog',
+	'group'           => '__do_not_document',
+	'stat'            => 'themes:modify:1',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/themes/%s',
+	'path_labels' => array(
+		'$site'   => '(int|string) The site ID, The site domain',
+		'$theme'  => '(string) The theme slug',
+	),
+	'request_format' => array(
+		'action'       => '(string) Only possible value is \'update\'. More to follow.',
+		'autoupdate'   => '(bool) Whether or not to automatically update the theme.',
+	),
+	'response_format' => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'request_format'          => array(
-			'action'     => '(string) Only possible value is \'update\'. More to follow.',
-			'autoupdate' => '(bool) Whether or not to automatically update the theme.',
-		),
-		'response_format'         => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-			'body'    => array(
-				'action' => 'update',
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/twentyfourteen',
-	)
-);
+		'body' => array(
+			'action' => 'update',
+		)
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/twentyfourteen'
+) );
 
-new Jetpack_JSON_API_Themes_Modify_Endpoint(
-	array(
-		'description'             => 'Modify a list of themes on a jetpack blog',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'themes:modify',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/themes',
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
+new Jetpack_JSON_API_Themes_Modify_Endpoint( array(
+	'description'     => 'Modify a list of themes on a jetpack blog',
+	'group'           => '__do_not_document',
+	'stat'            => 'themes:modify',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/themes',
+	'path_labels' => array(
+		'$site'   => '(int|string) The site ID, The site domain',
+	),
+	'request_format' => array(
+		'action'       => '(string) Only possible value is \'update\'. More to follow.',
+		'autoupdate'   => '(bool) Whether or not to automatically update the theme.',
+		'themes'       => '(array) A list of theme slugs',
+	),
+	'response_format' => array(
+		'themes' => '(array:theme) A list of theme objects',
+	),
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'request_format'          => array(
-			'action'     => '(string) Only possible value is \'update\'. More to follow.',
-			'autoupdate' => '(bool) Whether or not to automatically update the theme.',
-			'themes'     => '(array) A list of theme slugs',
-		),
-		'response_format'         => array(
-			'themes' => '(array:theme) A list of theme objects',
-		),
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
+		'body' => array(
+			'action' => 'autoupdate_on',
+			'themes'     => array(
+				'twentytwelve',
+				'twentyfourteen',
 			),
-			'body'    => array(
-				'action' => 'autoupdate_on',
-				'themes' => array(
-					'twentytwelve',
-					'twentyfourteen',
-				),
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes',
-	)
-);
+		)
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes'
+) );
 
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-themes-install-endpoint.php' );
 // POST /sites/%s/themes/%s/install
-new Jetpack_JSON_API_Themes_Install_Endpoint(
-	array(
-		'description'             => 'Install a theme to your jetpack blog',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'themes:1:install',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/themes/%s/install',
-		'path_labels'             => array(
-			'$site'  => '(int|string) The site ID, The site domain',
-			'$theme' => '(int|string) The theme slug to install',
+new Jetpack_JSON_API_Themes_Install_Endpoint( array(
+	'description'     => 'Install a theme to your jetpack blog',
+	'group'           => '__do_not_document',
+	'stat'            => 'themes:1:install',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/themes/%s/install',
+	'path_labels' => array(
+		'$site'   => '(int|string) The site ID, The site domain',
+		'$theme' => '(int|string) The theme slug to install',
+	),
+	'response_format' => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'response_format'         => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/twentyfourteen/install',
-	)
-);
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/twentyfourteen/install'
+) );
 
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-themes-delete-endpoint.php' );
 // POST /sites/%s/themes/%s/delete
-new Jetpack_JSON_API_Themes_Delete_Endpoint(
-	array(
-		'description'             => 'Delete/Uninstall a theme from your jetpack blog',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'themes:1:delete',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/themes/%s/delete',
-		'path_labels'             => array(
-			'$site'  => '(int|string) The site ID, The site domain',
-			'$theme' => '(string) The slug of the theme to delete',
+new Jetpack_JSON_API_Themes_Delete_Endpoint( array(
+	'description'     => 'Delete/Uninstall a theme from your jetpack blog',
+	'group'           => '__do_not_document',
+	'stat'            => 'themes:1:delete',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/themes/%s/delete',
+	'path_labels' => array(
+		'$site'   => '(int|string) The site ID, The site domain',
+		'$theme'  => '(string) The slug of the theme to delete',
+	),
+	'response_format' => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'response_format'         => Jetpack_JSON_API_Themes_Endpoint::$_response_format,
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/twentyfourteen/delete',
-	)
-);
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/themes/twentyfourteen/delete'
+) );
 
 
 // PLUGINS
@@ -263,107 +238,71 @@ require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-plugins-modi
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-modules-endpoint.php' );
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-modules-get-endpoint.php' );
 
-new Jetpack_JSON_API_Modules_Get_Endpoint(
-	array(
-		'description'             => 'Get the info about a Jetpack Module on your Jetpack Site',
-		'method'                  => 'GET',
-		'path'                    => '/sites/%s/jetpack/modules/%s/',
-		'stat'                    => 'jetpack:modules:1',
-		'path_labels'             => array(
-			'$site'   => '(int|string) The site ID, The site domain',
-			'$module' => '(string) The module name',
+new Jetpack_JSON_API_Modules_Get_Endpoint( array(
+	'description'     => 'Get the info about a Jetpack Module on your Jetpack Site',
+	'method'          => 'GET',
+	'path'            => '/sites/%s/jetpack/modules/%s/',
+	'stat'            => 'jetpack:modules:1',
+	'path_labels' => array(
+		'$site'   => '(int|string) The site ID, The site domain',
+		'$module' => '(string) The module name',
+	),
+	'response_format' => Jetpack_JSON_API_Modules_Endpoint::$_response_format,
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'response_format'         => Jetpack_JSON_API_Modules_Endpoint::$_response_format,
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/jetpack/modules/stats',
-	)
-);
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/jetpack/modules/stats'
+) );
 
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-modules-modify-endpoint.php' );
 
-new Jetpack_JSON_API_Modules_Modify_Endpoint(
-	array(
-		'description'             => 'Modify the status of a Jetpack Module on your Jetpack Site',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/jetpack/modules/%s/',
-		'stat'                    => 'jetpack:modules:1',
-		'path_labels'             => array(
-			'$site'   => '(int|string) The site ID, The site domain',
-			'$module' => '(string) The module name',
+new Jetpack_JSON_API_Modules_Modify_Endpoint( array(
+	'description'     => 'Modify the status of a Jetpack Module on your Jetpack Site',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/jetpack/modules/%s/',
+	'stat'            => 'jetpack:modules:1',
+	'path_labels' => array(
+		'$site'   => '(int|string) The site ID, The site domain',
+		'$module' => '(string) The module name',
+	),
+	'request_format' => array(
+		'active'   => '(bool) The module activation status',
+	),
+	'response_format' => Jetpack_JSON_API_Modules_Endpoint::$_response_format,
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'request_format'          => array(
-			'active' => '(bool) The module activation status',
-		),
-		'response_format'         => Jetpack_JSON_API_Modules_Endpoint::$_response_format,
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-			'body'    => array(
-				'active' => true,
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/jetpack/modules/stats',
-	)
-);
+		'body' => array(
+			'active' => true,
+		)
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/jetpack/modules/stats'
+) );
 
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-modules-list-endpoint.php' );
 
-new Jetpack_JSON_API_Modules_List_Endpoint(
-	array(
-		'description'             => 'Get the list of available Jetpack modules on your site',
-		'method'                  => 'GET',
-		'path'                    => '/sites/%s/jetpack/modules',
-		'stat'                    => 'jetpack:modules',
-		'min_version'             => '1',
-		'max_version'             => '1.1',
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
+new Jetpack_JSON_API_Modules_List_Endpoint( array(
+	'description'     => 'Get the list of available Jetpack modules on your site',
+	'method'          => 'GET',
+	'path'            => '/sites/%s/jetpack/modules',
+	'stat'            => 'jetpack:modules',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'response_format' => array(
+		'found'  => '(int) The total number of modules found.',
+		'modules' => '(array) An array of module objects.',
+	),
+	'example_request_data' => array(
+		'headers' => array(
+			'authorization' => 'Bearer YOUR_API_TOKEN'
 		),
-		'response_format'         => array(
-			'found'   => '(int) The total number of modules found.',
-			'modules' => '(array) An array of module objects.',
-		),
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/jetpack/modules',
-	)
-);
-
-require_once $json_jetpack_endpoints_dir . 'class-jetpack-json-api-modules-list-v1-2-endpoint.php';
-
-new Jetpack_JSON_API_Modules_List_V1_2_Endpoint(
-	array(
-		'description'             => 'Get the list of available Jetpack modules on your site',
-		'method'                  => 'GET',
-		'path'                    => '/sites/%s/jetpack/modules',
-		'stat'                    => 'jetpack:modules',
-		'min_version'             => '1.2',
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'response_format'         => array(
-			'modules' => '(array) An array of module objects.',
-		),
-		'allow_jetpack_site_auth' => true,
-		'example_request_data'    => array(
-			'headers' => array(
-				'authorization' => 'Bearer YOUR_API_TOKEN',
-			),
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.2/sites/example.wordpress.org/jetpack/modules',
-	)
-);
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/example.wordpress.org/jetpack/modules'
+) );
 
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-updates-status-endpoint.php' );
 
@@ -495,44 +434,40 @@ new Jetpack_JSON_API_Core_Endpoint( array(
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-sync-endpoint.php' );
 
 // POST /sites/%s/sync
-new Jetpack_JSON_API_Sync_Endpoint(
-	array(
-		'description'             => 'Force sync of all options and constants',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/sync',
-		'stat'                    => 'sync',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'request_format'          => array(
-			'modules'  => '(string) Comma-delimited set of sync modules to use (default: all of them)',
-			'posts'    => '(string) Comma-delimited list of post IDs to sync',
-			'comments' => '(string) Comma-delimited list of comment IDs to sync',
-			'users'    => '(string) Comma-delimited list of user IDs to sync',
-		),
-		'response_format'         => array(
-			'scheduled' => '(bool) Whether or not the synchronisation was started',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync',
-	)
-);
+new Jetpack_JSON_API_Sync_Endpoint( array(
+	'description'     => 'Force sync of all options and constants',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/sync',
+	'stat'            => 'sync',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'request_format' => array(
+		'modules'  => '(string) Comma-delimited set of sync modules to use (default: all of them)',
+		'posts'    => '(string) Comma-delimited list of post IDs to sync',
+		'comments' => '(string) Comma-delimited list of comment IDs to sync',
+		'users'    => '(string) Comma-delimited list of user IDs to sync',
+	),
+	'response_format' => array(
+		'scheduled' => '(bool) Whether or not the synchronisation was started'
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync'
+) );
 
 // GET /sites/%s/sync/status
 new Jetpack_JSON_API_Sync_Status_Endpoint(
 	array(
-		'description'             => 'Status of the current full sync or the previous full sync',
-		'method'                  => 'GET',
-		'path'                    => '/sites/%s/sync/status',
-		'stat'                    => 'sync-status',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
+		'description'      => 'Status of the current full sync or the previous full sync',
+		'method'           => 'GET',
+		'path'             => '/sites/%s/sync/status',
+		'stat'             => 'sync-status',
+		'path_labels'      => array(
 			'$site' => '(int|string) The site ID, The site domain',
 		),
-		'query_parameters'        => array(
+		'query_parameters' => array(
 			'fields' => '(string|null) List of comma-separated fields to return (see `response_format`).',
 		),
-		'response_format'         => array(
+		'response_format'  => array(
 			'posts_checksum'        => '(string|null) Posts checksum. Needs to be requested using the filter parameter.',
 			'comments_checksum'     => '(string|null) Comments checksum. Needs to be requested using the filter parameter.',
 			'post_meta_checksum'    => '(string|null) Post Meta checksum. Needs to be requested using the filter parameter.',
@@ -554,85 +489,54 @@ new Jetpack_JSON_API_Sync_Status_Endpoint(
 			'cron_size'             => '(int) Size of the current cron array',
 			'next_cron'             => '(int) The number of seconds till the next item in cron.',
 			'progress'              => '(array) Full Sync status by module',
-			'debug_details'         => '(array) Details as to why Sync is disabled.',
 		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/status',
+		'example_request'  => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/status',
 	)
 );
 
 
 // GET /sites/%s/data-checksums
-new Jetpack_JSON_API_Sync_Check_Endpoint(
-	array(
-		'description'             => 'Check that cacheable data on the site is in sync with wordpress.com',
-		'group'                   => '__do_not_document',
-		'method'                  => 'GET',
-		'path'                    => '/sites/%s/data-checksums',
-		'stat'                    => 'data-checksums',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'response_format'         => array(
-			'posts'    => '(string) Posts checksum',
-			'comments' => '(string) Comments checksum',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/data-checksums',
-	)
-);
+new Jetpack_JSON_API_Sync_Check_Endpoint( array(
+	'description'     => 'Check that cacheable data on the site is in sync with wordpress.com',
+	'group'           => '__do_not_document',
+	'method'          => 'GET',
+	'path'            => '/sites/%s/data-checksums',
+	'stat'            => 'data-checksums',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'response_format' => array(
+		'posts' => '(string) Posts checksum',
+		'comments' => '(string) Comments checksum',
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/data-checksums'
+) );
 
 // GET /sites/%s/data-histogram
-new Jetpack_JSON_API_Sync_Histogram_Endpoint(
-	array(
-		'description'             => 'Get a histogram of checksums for certain synced data',
-		'group'                   => '__do_not_document',
-		'method'                  => 'GET',
-		'path'                    => '/sites/%s/data-histogram',
-		'stat'                    => 'data-histogram',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'query_parameters'        => array(
-			'object_type'        => '(string=posts) The type of object to checksum - posts, comments or options',
-			'buckets'            => '(int=10) The number of buckets for the checksums',
-			'start_id'           => '(int=0) Starting ID for the range',
-			'end_id'             => '(int=null) Ending ID for the range',
-			'columns'            => '(string) Columns to checksum',
-			'strip_non_ascii'    => '(bool=true) Strip non-ascii characters from all columns',
-			'shared_salt'        => '(string) Salt to reduce the collision and improve validation',
-			'only_range_edges'   => '(bool=false) Only return the edges of the specified range',
-			'detailed_drilldown' => '(bool=false) Return a detailed drilldown in `key => checksum` format',
-		),
-		'response_format'         => array(
-			'histogram' => '(array) Associative array of histograms by ID range, e.g. "500-999" => "abcd1234"',
-			'type'      => '(string) Type of checksum algorithm',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/data-histogram',
-	)
-);
-
-// POST /sites/%s/sync/health .
-new Jetpack_JSON_API_Sync_Modify_Health_Endpoint(
-	array(
-		'description'             => 'Update sync health',
-		'method'                  => 'POST',
-		'group'                   => '__do_not_document',
-		'path'                    => '/sites/%s/sync/health',
-		'stat'                    => 'write-sync-health',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'request_format'          => array(
-			'status' => '(string) Sync Health Status of site',
-		),
-		'response_format'         => array(
-			'response' => '(string) Current Sync Health ',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/health',
-	)
-);
+new Jetpack_JSON_API_Sync_Histogram_Endpoint( array(
+	'description'     => 'Get a histogram of checksums for certain synced data',
+	'group'           => '__do_not_document',
+	'method'          => 'GET',
+	'path'            => '/sites/%s/data-histogram',
+	'stat'            => 'data-histogram',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'query_parameters' => array(
+		'object_type' => '(string=posts) The type of object to checksum - posts, comments or options',
+		'buckets' => '(int=10) The number of buckets for the checksums',
+		'start_id' => '(int=0) Starting ID for the range',
+		'end_id' => '(int=null) Ending ID for the range',
+		'columns' => '(string) Columns to checksum',
+		'strip_non_ascii' => '(bool=true) Strip non-ascii characters from all columns',
+		'shared_salt' => '(string) Salt to reduce the collision and improve validation',
+	),
+	'response_format' => array(
+		'histogram' => '(array) Associative array of histograms by ID range, e.g. "500-999" => "abcd1234"',
+		'type'      => '(string) Type of checksum algorithm',
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/data-histogram'
+) );
 
 $sync_settings_response = array(
 	'dequeue_max_bytes'        => '(int|bool=false) Maximum bytes to read from queue in a single request',
@@ -647,7 +551,6 @@ $sync_settings_response = array(
 	'post_meta_whitelist'      => '(array|string|bool=false) List of post meta to be included in sync. Send "empty" to unset.',
 	'comment_meta_whitelist'   => '(array|string|bool=false) List of comment meta to be included in sync. Send "empty" to unset.',
 	'disable'                  => '(int|bool=false) Set to 1 or true to disable sync entirely.',
-	'checksum_disable'         => '(int|bool=false) Set to 1 or true to disable checksums entirely.',
 	'render_filtered_content'  => '(int|bool=true) Set to 1 or true to render filtered content.',
 	'max_enqueue_full_sync'    => '(int|bool=false) Maximum number of rows to enqueue during each full sync process',
 	'max_queue_size_full_sync' => '(int|bool=false) Maximum queue size that full sync is allowed to use',
@@ -660,186 +563,161 @@ $sync_settings_response = array(
 );
 
 // GET /sites/%s/sync/settings
-new Jetpack_JSON_API_Sync_Get_Settings_Endpoint(
-	array(
-		'description'             => 'Update sync settings',
-		'method'                  => 'GET',
-		'group'                   => '__do_not_document',
-		'path'                    => '/sites/%s/sync/settings',
-		'stat'                    => 'write-sync-settings',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'response_format'         => $sync_settings_response,
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/settings',
-	)
-);
+new Jetpack_JSON_API_Sync_Get_Settings_Endpoint( array(
+	'description'     => 'Update sync settings',
+	'method'          => 'GET',
+	'group'           => '__do_not_document',
+	'path'            => '/sites/%s/sync/settings',
+	'stat'            => 'write-sync-settings',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'response_format' => $sync_settings_response,
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/settings'
+) );
 
 // POST /sites/%s/sync/settings
-new Jetpack_JSON_API_Sync_Modify_Settings_Endpoint(
-	array(
-		'description'             => 'Update sync settings',
-		'method'                  => 'POST',
-		'group'                   => '__do_not_document',
-		'path'                    => '/sites/%s/sync/settings',
-		'stat'                    => 'write-sync-settings',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'request_format'          => $sync_settings_response,
-		'response_format'         => $sync_settings_response,
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/settings',
-	)
-);
+new Jetpack_JSON_API_Sync_Modify_Settings_Endpoint( array(
+	'description'     => 'Update sync settings',
+	'method'          => 'POST',
+	'group'           => '__do_not_document',
+	'path'            => '/sites/%s/sync/settings',
+	'stat'            => 'write-sync-settings',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'request_format' => $sync_settings_response,
+	'response_format' => $sync_settings_response,
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/settings'
+) );
 
 // GET /sites/%s/sync/object
-new Jetpack_JSON_API_Sync_Object(
-	array(
-		'description'             => 'Get an object by ID from one of the sync modules, in the format it would be synced in',
-		'group'                   => '__do_not_document',
-		'method'                  => 'GET',
-		'path'                    => '/sites/%s/sync/object',
-		'stat'                    => 'sync-object',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'query_parameters'        => array(
-			'module_name' => '(string) The sync module ID, e.g. "posts"',
-			'object_type' => '(string) An identified for the object type, e.g. "post"',
-			'object_ids'  => '(array) The IDs of the objects',
-		),
-		'response_format'         => array(
-			'objects' => '(string) The encoded objects',
-			'codec'   => '(string) The codec used to encode the objects, deflate-json-array or simple',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/object?module_name=posts&object_type=post&object_ids[]=1&object_ids[]=2&object_ids[]=3',
-	)
-);
+new Jetpack_JSON_API_Sync_Object( array(
+	'description'     => 'Get an object by ID from one of the sync modules, in the format it would be synced in',
+	'group'           => '__do_not_document',
+	'method'          => 'GET',
+	'path'            => '/sites/%s/sync/object',
+	'stat'            => 'sync-object',
+	'path_labels' => array(
+		'$site'        => '(int|string) The site ID, The site domain'
+	),
+	'query_parameters' => array(
+		'module_name'    => '(string) The sync module ID, e.g. "posts"',
+		'object_type'    => '(string) An identified for the object type, e.g. "post"',
+		'object_ids'     => '(array) The IDs of the objects',
+	),
+	'response_format' => array(
+		'objects' => '(string) The encoded objects',
+		'codec'   => '(string) The codec used to encode the objects, deflate-json-array or simple'
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/object?module_name=posts&object_type=post&object_ids[]=1&object_ids[]=2&object_ids[]=3'
+) );
 
 // POST /sites/%s/sync/now
-new Jetpack_JSON_API_Sync_Now_Endpoint(
-	array(
-		'description'             => 'Force immediate sync of top items on a queue',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/sync/now',
-		'stat'                    => 'sync-now',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'request_format'          => array(
-			'queue' => '(string) sync or full_sync',
-		),
-		'response_format'         => array(
-			'response' => '(array) The response from the server',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/now?queue=full_sync',
-	)
-);
+new Jetpack_JSON_API_Sync_Now_Endpoint( array(
+	'description'     => 'Force immediate sync of top items on a queue',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/sync/now',
+	'stat'            => 'sync-now',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'request_format' => array(
+		'queue'  => '(string) sync or full_sync',
+	),
+	'response_format' => array(
+		'response' => '(array) The response from the server'
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/now?queue=full_sync'
+) );
 
 
 // POST /sites/%s/sync/unlock
-new Jetpack_JSON_API_Sync_Unlock_Endpoint(
-	array(
-		'description'             => 'Unlock the queue in case it gets locked by a process.',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/sync/unlock',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'sync-unlock',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'request_format'          => array(
-			'queue' => '(string) sync or full_sync',
-		),
-		'response_format'         => array(
-			'success' => '(bool) Unlocking the queue successful?',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/unlock',
-	)
-);
+new Jetpack_JSON_API_Sync_Unlock_Endpoint( array(
+	'description'     => 'Unlock the queue in case it gets locked by a process.',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/sync/unlock',
+	'group'           => '__do_not_document',
+	'stat'            => 'sync-unlock',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'request_format' => array(
+		'queue'      => '(string) sync or full_sync',
+	),
+	'response_format' => array(
+		'success' => '(bool) Unlocking the queue successful?'
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/unlock'
+) );
 
 // GET /sites/%s/sync/object-id-range
-new Jetpack_JSON_API_Sync_Object_Id_Range(
-	array(
-		'description'             => 'Gets minimum and maximum object ids for each batch of given batch size.',
-		'method'                  => 'GET',
-		'path'                    => '/sites/%s/sync/object-id-range',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'sync-object-id-range',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'query_parameters'        => array(
-			'batch_size'  => '(int=1000) The amount of objects per batch.',
-			'sync_module' => '(string=posts) The sync module used to enumerate the ranges.',
-		),
-		'response_format'         => array(
-			'ranges' => '(array) An array of range objects with min and max properties for each batch.',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/object-id-range?batch_size=100&sync_module=comments',
-	)
-);
+new Jetpack_JSON_API_Sync_Object_Id_Range( array(
+	'description'     => 'Gets minimum and maximum object ids for each batch of given batch size.',
+	'method'          => 'GET',
+	'path'            => '/sites/%s/sync/object-id-range',
+	'group'           => '__do_not_document',
+	'stat'            => 'sync-object-id-range',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'query_parameters' => array(
+		'batch_size' => '(int=1000) The amount of objects per batch.',
+		'sync_module' => '(string=posts) The sync module used to enumerate the ranges.',
+	),
+	'response_format' => array(
+		'ranges' => '(array) An array of range objects with min and max properties for each batch.',
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/object-id-range?batch_size=100&sync_module=comments'
+) );
 
 // POST /sites/%s/sync/checkout
-new Jetpack_JSON_API_Sync_Checkout_Endpoint(
-	array(
-		'description'             => 'Locks the queue and returns items and the buffer ID.',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/sync/checkout',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'sync-checkout',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'request_format'          => array(
-			'queue'           => '(string) sync or full_sync',
-			'number_of_items' => '(int=10) Maximum number of items from the queue to be returned',
-			'encode'          => '(bool=true) Use the default encode method',
-			'force'           => '(bool=false) Force unlock the queue',
-			'pop'             => '(bool=false) Pop from the queue without checkout, use carefully 😱',
-		),
-		'response_format'         => array(
-			'buffer_id'      => '(string) Buffer ID that we are using',
-			'items'          => '(array) Items from the queue that are ready to be processed by the sync server',
-			'skipped_items'  => '(array) Skipped item ids',
-			'codec'          => '(string) The name of the codec used to encode the data',
-			'sent_timestamp' => '(int) Current timestamp of the server',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/checkout',
-	)
-);
+new Jetpack_JSON_API_Sync_Checkout_Endpoint( array(
+	'description'     => 'Locks the queue and returns items and the buffer ID.',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/sync/checkout',
+	'group'           => '__do_not_document',
+	'stat'            => 'sync-checkout',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'request_format' => array(
+		'queue'             => '(string) sync or full_sync',
+		'number_of_items'   => '(int=10) Maximum number of items from the queue to be returned',
+		'encode'            => '(bool=true) Use the default encode method',
+		'force'             => '(bool=false) Force unlock the queue',
+		'pop'               => '(bool=false) Pop from the queue without checkout, use carefully 😱',
+	),
+	'response_format' => array(
+		'buffer_id' => '(string) Buffer ID that we are using',
+		'items'             => '(array) Items from the queue that are ready to be processed by the sync server',
+		'skipped_items'     => '(array) Skipped item ids',
+		'codec'             => '(string) The name of the codec used to encode the data',
+		'sent_timestamp'    => '(int) Current timestamp of the server',
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/checkout'
+) );
 
 // POST /sites/%s/sync/close
-new Jetpack_JSON_API_Sync_Close_Endpoint(
-	array(
-		'description'             => 'Closes the buffer and delete the processed items from the queue.',
-		'method'                  => 'POST',
-		'path'                    => '/sites/%s/sync/close',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'sync-close',
-		'allow_jetpack_site_auth' => true,
-		'path_labels'             => array(
-			'$site' => '(int|string) The site ID, The site domain',
-		),
-		'request_format'          => array(
-			'item_ids'  => '(array) Item IDs to delete from the queue.',
-			'queue'     => '(string) sync or full_sync',
-			'buffer_id' => '(string) buffer ID that was opened during the checkout step.',
-			'continue'  => '(bool=false) Perform another checkout from queue.',
-		),
-		'response_format'         => array(
-			'success' => '(bool) Closed the buffer successfully?',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/close',
-	)
-);
+new Jetpack_JSON_API_Sync_Close_Endpoint( array(
+	'description'     => 'Closes the buffer and delete the processed items from the queue.',
+	'method'          => 'POST',
+	'path'            => '/sites/%s/sync/close',
+	'group'           => '__do_not_document',
+	'stat'            => 'sync-close',
+	'path_labels' => array(
+		'$site' => '(int|string) The site ID, The site domain'
+	),
+	'request_format' => array(
+		'item_ids'  => '(array) Item IDs to delete from the queue.',
+		'queue'      => '(string) sync or full_sync',
+		'buffer_id'  => '(string) buffer ID that was opened during the checkout step.',
+	),
+	'response_format' => array(
+		'success' => '(bool) Closed the buffer successfully?'
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/example.wordpress.org/sync/close'
+) );
 
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-log-endpoint.php' );
 
@@ -951,64 +829,58 @@ new Jetpack_JSON_API_Translations_Modify_Endpoint( array(
 // Options
 require_once( $json_jetpack_endpoints_dir . 'class.wpcom-json-api-get-option-endpoint.php' );
 
-new WPCOM_JSON_API_Get_Option_Endpoint(
-	array(
-		'method'                  => 'GET',
-		'description'             => 'Fetches an option.',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'option',
-		'allow_jetpack_site_auth' => true,
-		'path'                    => '/sites/%s/option',
-		'path_labels'             => array(
-			'$site' => '(int|string) Site ID or domain',
-		),
-		'query_parameters'        => array(
-			'option_name' => '(string) The name of the option to fetch.',
-			'site_option' => '(bool=false) True if the option is a site option.',
-		),
-		'response_format'         => array(
-			'option_value' => '(string|object) The value of the option.',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/82974409/option?option_name=blogname',
-		'example_request_data'    => array(
-			'headers' => array( 'authorization' => 'Bearer YOUR_API_TOKEN' ),
-		),
-	)
-);
+new WPCOM_JSON_API_Get_Option_Endpoint( array (
+	'method' => 'GET',
+	'description' => 'Fetches an option.',
+	'group' => '__do_not_document',
+	'stat' => 'option',
+	'path' => '/sites/%s/option',
+	'path_labels' => array(
+		'$site' => '(int|string) Site ID or domain',
+	),
+	'query_parameters' => array(
+		'option_name' => '(string) The name of the option to fetch.',
+		'site_option' => '(bool=false) True if the option is a site option.',
+	),
+	'response_format' => array(
+		'option_value' => '(string|object) The value of the option.',
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/82974409/option?option_name=blogname',
+	'example_request_data' => array(
+		'headers' => array( 'authorization' => 'Bearer YOUR_API_TOKEN' ),
+	),
+) );
 
 require_once( $json_jetpack_endpoints_dir . 'class.wpcom-json-api-update-option-endpoint.php' );
 
-new WPCOM_JSON_API_Update_Option_Endpoint(
-	array(
-		'method'                  => 'POST',
-		'description'             => 'Updates an option.',
-		'group'                   => '__do_not_document',
-		'stat'                    => 'option:update',
-		'allow_jetpack_site_auth' => true,
-		'path'                    => '/sites/%s/option',
-		'path_labels'             => array(
-			'$site' => '(int|string) Site ID or domain',
+new WPCOM_JSON_API_Update_Option_Endpoint( array (
+	'method' => 'POST',
+	'description' => 'Updates an option.',
+	'group' => '__do_not_document',
+	'stat' => 'option:update',
+	'path' => '/sites/%s/option',
+	'path_labels' => array(
+		'$site' => '(int|string) Site ID or domain',
+	),
+	'query_parameters' => array(
+		'option_name' => '(string) The name of the option to fetch.',
+		'site_option' => '(bool=false) True if the option is a site option.',
+		'is_array' => '(bool=false) True if the value should be converted to an array before saving.',
+	),
+	'request_format' => array(
+		'option_value' => '(string|object) The new value of the option.',
+	),
+	'response_format' => array(
+		'option_value' => '(string|object) The value of the updated option.',
+	),
+	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/82974409/option',
+	'example_request_data' => array(
+		'headers' => array( 'authorization' => 'Bearer YOUR_API_TOKEN' ),
+		'body' => array(
+			'option_value' => 'My new blog name'
 		),
-		'query_parameters'        => array(
-			'option_name' => '(string) The name of the option to fetch.',
-			'site_option' => '(bool=false) True if the option is a site option.',
-			'is_array'    => '(bool=false) True if the value should be converted to an array before saving.',
-		),
-		'request_format'          => array(
-			'option_value' => '(string|object) The new value of the option.',
-		),
-		'response_format'         => array(
-			'option_value' => '(string|object) The value of the updated option.',
-		),
-		'example_request'         => 'https://public-api.wordpress.com/rest/v1.1/sites/82974409/option',
-		'example_request_data'    => array(
-			'headers' => array( 'authorization' => 'Bearer YOUR_API_TOKEN' ),
-			'body'    => array(
-				'option_value' => 'My new blog name',
-			),
-		),
-	)
-);
+	),
+) );
 
 
 require_once( $json_jetpack_endpoints_dir . 'class.jetpack-json-api-cron-endpoint.php' );

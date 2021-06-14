@@ -4,57 +4,40 @@
  *
  * @since 6.8.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
-namespace Automattic\Jetpack\Extensions\Map;
-
-use Automattic\Jetpack\Blocks;
-use Automattic\Jetpack\Tracking;
-use Jetpack;
-use Jetpack_Gutenberg;
-use Jetpack_Mapbox_Helper;
-
-const FEATURE_NAME = 'map';
-const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
-
-if ( ! class_exists( 'Jetpack_Mapbox_Helper' ) ) {
-	\jetpack_require_lib( 'class-jetpack-mapbox-helper' );
-}
+jetpack_register_block(
+	'jetpack/map',
+	array(
+		'render_callback' => 'jetpack_map_block_load_assets',
+	)
+);
 
 /**
- * Registers the block for use in Gutenberg
- * This is done via an action so that we can disable
- * registration if we need to.
- */
-function register_block() {
-	Blocks::jetpack_register_block(
-		BLOCK_NAME,
-		array(
-			'render_callback' => __NAMESPACE__ . '\load_assets',
-		)
-	);
-}
-add_action( 'init', __NAMESPACE__ . '\register_block' );
-
-/**
- * Record a Tracks event every time the Map block is loaded on WordPress.com and Atomic.
+ * Return the site's own Mapbox API key if set, or the WordPress.com's one otherwise.
  *
- * @param string $access_token_source The Mapbox API access token source.
+ * @return string
  */
-function wpcom_load_event( $access_token_source ) {
-	if ( 'wpcom' !== $access_token_source ) {
-		return;
+function jetpack_get_mapbox_api_key() {
+	if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
+		$endpoint = sprintf(
+			'https://public-api.wordpress.com/wpcom/v2/sites/%d/service-api-keys/mapbox',
+			get_current_blog_id()
+		);
+	} else {
+		$endpoint = rest_url( 'wpcom/v2/service-api-keys/mapbox' );
 	}
 
-	$event_name = 'map_block_mapbox_wpcom_key_load';
-	if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-		jetpack_require_lib( 'tracks/client' );
-		tracks_record_event( wp_get_current_user(), $event_name );
-	} elseif ( jetpack_is_atomic_site() && Jetpack::is_connection_ready() ) {
-		$tracking = new Tracking();
-		$tracking->record_user_event( $event_name );
+	$response      = wp_remote_get( esc_url_raw( $endpoint ) );
+	$response_code = wp_remote_retrieve_response_code( $response );
+
+	if ( 200 === $response_code ) {
+		$response_body = json_decode( wp_remote_retrieve_body( $response ) );
+		return $response_body->service_api_key;
 	}
+
+	return Jetpack_Options::get_option( 'mapbox_api_key' );
 }
 
 /**
@@ -65,12 +48,10 @@ function wpcom_load_event( $access_token_source ) {
  *
  * @return string
  */
-function load_assets( $attr, $content ) {
-	$access_token = Jetpack_Mapbox_Helper::get_access_token();
+function jetpack_map_block_load_assets( $attr, $content ) {
+	$api_key = jetpack_get_mapbox_api_key();
 
-	wpcom_load_event( $access_token['source'] );
-
-	if ( Blocks::is_amp_request() ) {
+	if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
 		static $map_block_counter = array();
 
 		$id = get_the_ID();
@@ -98,15 +79,15 @@ function load_assets( $attr, $content ) {
 		);
 	}
 
-	Jetpack_Gutenberg::load_assets_as_required( FEATURE_NAME );
+	Jetpack_Gutenberg::load_assets_as_required( 'map' );
 
-	return preg_replace( '/<div /', '<div data-api-key="' . esc_attr( $access_token['key'] ) . '" ', $content, 1 );
+	return preg_replace( '/<div /', '<div data-api-key="' . esc_attr( $api_key ) . '" ', $content, 1 );
 }
 
 /**
  * Render a page containing only a single Map block.
  */
-function render_single_block_page() {
+function jetpack_map_block_render_single_block_page() {
 	// phpcs:ignore WordPress.Security.NonceVerification
 	$map_block_counter = isset( $_GET, $_GET['map-block-counter'] ) ? absint( $_GET['map-block-counter'] ) : null;
 	// phpcs:ignore WordPress.Security.NonceVerification
@@ -123,7 +104,7 @@ function render_single_block_page() {
 		return;
 	}
 
-	$post_html = new \DOMDocument();
+	$post_html = new DOMDocument();
 	/** This filter is already documented in core/wp-includes/post-template.php */
 	$content = apply_filters( 'the_content', $post->post_content );
 
@@ -132,7 +113,7 @@ function render_single_block_page() {
 	@$post_html->loadHTML( $content ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
 	libxml_use_internal_errors( false );
 
-	$xpath     = new \DOMXPath( $post_html );
+	$xpath     = new DOMXPath( $post_html );
 	$container = $xpath->query( '//div[ contains( @class, "wp-block-jetpack-map" ) ]' )->item( $map_block_counter - 1 );
 
 	/* Check that we have a block matching the counter position */
@@ -145,7 +126,7 @@ function render_single_block_page() {
 
 	add_filter( 'jetpack_is_amp_request', '__return_false' );
 
-	Jetpack_Gutenberg::load_assets_as_required( FEATURE_NAME );
+	Jetpack_Gutenberg::load_assets_as_required( 'map' );
 	wp_scripts()->do_items();
 	wp_styles()->do_items();
 
@@ -155,58 +136,14 @@ function render_single_block_page() {
 
 	/* Put together a new complete document containing only the requested block markup and the scripts/styles needed to render it */
 	$block_markup = $post_html->saveHTML( $container );
-	$access_token = Jetpack_Mapbox_Helper::get_access_token();
+	$api_key      = jetpack_get_mapbox_api_key();
 	$page_html    = sprintf(
 		'<!DOCTYPE html><head><style>html, body { margin: 0; padding: 0; }</style>%s</head><body>%s</body>',
 		$head_content,
-		preg_replace( '/(?<=<div\s)/', 'data-api-key="' . esc_attr( $access_token['key'] ) . '" ', $block_markup, 1 )
+		preg_replace( '/(?<=<div\s)/', 'data-api-key="' . esc_attr( $api_key ) . '" ', $block_markup, 1 )
 	);
 	echo $page_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	exit;
 }
-add_action( 'wp', __NAMESPACE__ . '\render_single_block_page' );
 
-/**
- * Helper function to generate the markup of the block in PHP.
- *
- * @param Array $points - Array containing geo location points.
- *
- * @return string Markup for the jetpack/map block.
- */
-function map_block_from_geo_points( $points ) {
-	$map_block_data = array(
-		'points'    => $points,
-		'zoom'      => 8,
-		'mapCenter' => array(
-			'lng' => $points[0]['coordinates']['longitude'],
-			'lat' => $points[0]['coordinates']['latitude'],
-		),
-	);
-
-	$list_items = array_map(
-		function ( $point ) {
-			$link = add_query_arg(
-				array(
-					'api'   => 1,
-					'query' => $point['coordinates']['latitude'] . ',' . $point['coordinates']['longitude'],
-				),
-				'https://www.google.com/maps/search/'
-			);
-			return sprintf( '<li><a href="%s">%s</a></li>', esc_url( $link ), $point['title'] );
-		},
-		$points
-	);
-
-	$map_block  = '<!-- wp:jetpack/map ' . wp_json_encode( $map_block_data ) . ' -->' . PHP_EOL;
-	$map_block .= sprintf(
-		'<div class="wp-block-jetpack-map" data-map-style="default" data-map-details="true" data-points="%1$s" data-zoom="%2$d" data-map-center="%3$s" data-marker-color="red" data-show-fullscreen-button="true">',
-		esc_html( wp_json_encode( $map_block_data['points'] ) ),
-		(int) $map_block_data['zoom'],
-		esc_html( wp_json_encode( $map_block_data['mapCenter'] ) )
-	);
-	$map_block .= '<ul>' . implode( "\n", $list_items ) . '</ul>';
-	$map_block .= '</div>' . PHP_EOL;
-	$map_block .= '<!-- /wp:jetpack/map -->';
-
-	return $map_block;
-}
+add_action( 'wp', 'jetpack_map_block_render_single_block_page' );

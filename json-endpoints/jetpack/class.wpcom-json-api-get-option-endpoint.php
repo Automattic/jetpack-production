@@ -3,12 +3,7 @@
 use Automattic\Jetpack\Sync\Defaults;
 
 class WPCOM_JSON_API_Get_Option_Endpoint extends Jetpack_JSON_API_Endpoint {
-	/**
-	 * This endpoint allows authentication both via a blog and a user token.
-	 * If a user token is used, that user should have `manage_options` capability.
-	 *
-	 * @var array|string
-	 */
+
 	protected $needed_capabilities = 'manage_options';
 
 	public $option_name;

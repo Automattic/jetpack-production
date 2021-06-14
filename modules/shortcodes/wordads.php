@@ -5,7 +5,7 @@
  * Examples:
  * [wordads]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -63,7 +63,7 @@ class Jetpack_WordAds_Shortcode {
 	 *
 	 * @return string HTML output
 	 */
-	private static function wordads_shortcode_html( $atts, $content = '' ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+	private static function wordads_shortcode_html( $atts, $content = '' ) {
 		global $wordads;
 
 		if ( empty( $wordads ) ) {

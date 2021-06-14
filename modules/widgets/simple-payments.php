@@ -10,9 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'Jetpack_Simple_Payments_Widget' ) ) {
 	/**
-	 * Pay with PayPal (aka Simple Payments)
+	 * Simple Payments Button
 	 *
-	 * Display a Pay with PayPal button as a Widget.
+	 * Display a Simple Payments Button as a Widget.
 	 */
 	class Jetpack_Simple_Payments_Widget extends WP_Widget {
 		/**
@@ -24,7 +24,7 @@ if ( ! class_exists( 'Jetpack_Simple_Payments_Widget' ) ) {
 		 * @link https://github.com/Automattic/jetpack/blob/31efa189ad223c0eb7ad085ac0650a23facf9ef5/modules/simple-payments/simple-payments.php#L386-L415
 		 *
 		 * Indian Rupee (INR) is listed here for backwards compatibility with previously added widgets.
-		 * It's not supported by Pay with PayPal because at the time of the creation of this file
+		 * It's not supported by Simple Payments because at the time of the creation of this file
 		 * because it's limited to in-country PayPal India accounts only.
 		 * Discussion: https://github.com/Automattic/wp-calypso/pull/28236
 		 */
@@ -62,10 +62,10 @@ if ( ! class_exists( 'Jetpack_Simple_Payments_Widget' ) ) {
 			parent::__construct(
 				'jetpack_simple_payments_widget',
 				/** This filter is documented in modules/widgets/facebook-likebox.php */
-				apply_filters( 'jetpack_widget_name', __( 'Pay with PayPal', 'jetpack' ) ),
+				apply_filters( 'jetpack_widget_name', __( 'Simple Payments', 'jetpack' ) ),
 				array(
 					'classname'                   => 'jetpack-simple-payments',
-					'description'                 => __( 'Add a Pay with PayPal button as a Widget.', 'jetpack' ),
+					'description'                 => __( 'Add a Simple Payments Button as a Widget.', 'jetpack' ),
 					'customize_selective_refresh' => true,
 				)
 			);
@@ -205,7 +205,7 @@ if ( ! class_exists( 'Jetpack_Simple_Payments_Widget' ) ) {
 				wp_send_json_error( $errors );
 			}
 
-			$product_post_id = isset( $params['product_post_id'] ) ? (int) $params['product_post_id'] : 0;
+			$product_post_id = isset( $params['product_post_id'] ) ? intval( $params['product_post_id'] ) : 0;
 
 			$product_post = array(
 				'ID'            => $product_post_id,
@@ -217,7 +217,7 @@ if ( ! class_exists( 'Jetpack_Simple_Payments_Widget' ) ) {
 				'meta_input'    => array(
 					'spay_currency' => $params['currency'],
 					'spay_price'    => $params['price'],
-					'spay_multiple' => isset( $params['multiple'] ) ? (int) $params['multiple'] : 0,
+					'spay_multiple' => isset( $params['multiple'] ) ? intval( $params['multiple'] ) : 0,
 					'spay_email'    => is_email( $params['email'] ),
 				),
 			);
@@ -313,7 +313,7 @@ if ( ! class_exists( 'Jetpack_Simple_Payments_Widget' ) ) {
 				$errors->add( 'post_title', __( "People need to know what they're paying for! Please add a brief title.", 'jetpack' ) );
 			}
 
-			if ( empty( $params['price'] ) || ! is_numeric( $params['price'] ) || (float) $params['price'] <= 0 ) {
+			if ( empty( $params['price'] ) || ! is_numeric( $params['price'] ) || floatval( $params['price'] ) <= 0 ) {
 				$errors->add( 'price', __( 'Everything comes with a price tag these days. Please add a your product price.', 'jetpack' ) );
 			}
 
@@ -442,7 +442,7 @@ if ( ! class_exists( 'Jetpack_Simple_Payments_Widget' ) ) {
 
 			// `bumps_stats_extra` only exists on .com
 			if ( function_exists( 'bump_stats_extras' ) ) {
-				jetpack_require_lib( 'tracks/client' );
+				require_lib( 'tracks/client' );
 				tracks_record_event( $current_user, 'simple_payments_button_' . $event_action, $event_properties );
 				/** This action is documented in modules/widgets/social-media-icons.php */
 				do_action( 'jetpack_bump_stats_extra', 'jetpack-simple_payments', $stat_name );

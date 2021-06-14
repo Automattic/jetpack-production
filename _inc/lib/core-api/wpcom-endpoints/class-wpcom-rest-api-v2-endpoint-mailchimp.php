@@ -1,7 +1,6 @@
 <?php
 
 use Automattic\Jetpack\Connection\Client;
-use Automattic\Jetpack\Redirect;
 
 /**
  * Mailchimp: Get Mailchimp Status.
@@ -29,9 +28,8 @@ class WPCOM_REST_API_V2_Endpoint_Mailchimp extends WP_REST_Controller {
 			$this->rest_base,
 			array(
 				array(
-					'methods'             => WP_REST_Server::READABLE,
-					'callback'            => array( $this, 'get_mailchimp_status' ),
-					'permission_callback' => '__return_true',
+					'methods'  => WP_REST_Server::READABLE,
+					'callback' => array( $this, 'get_mailchimp_status' ),
 				),
 			)
 		);
@@ -40,9 +38,8 @@ class WPCOM_REST_API_V2_Endpoint_Mailchimp extends WP_REST_Controller {
 			$this->rest_base . '/groups',
 			array(
 				array(
-					'methods'             => WP_REST_Server::READABLE,
-					'callback'            => array( $this, 'get_mailchimp_groups' ),
-					'permission_callback' => '__return_true',
+					'methods'  => WP_REST_Server::READABLE,
+					'callback' => array( $this, 'get_mailchimp_groups' ),
 				),
 			)
 		);
@@ -83,13 +80,7 @@ class WPCOM_REST_API_V2_Endpoint_Mailchimp extends WP_REST_Controller {
 				403
 			);
 		}
-		$connect_url = Redirect::get_url(
-			'calypso-marketing-connections',
-			array(
-				'site'  => rawurlencode( $site_id ),
-				'query' => 'mailchimp',
-			)
-		);
+		$connect_url = sprintf( 'https://wordpress.com/marketing/connections/%s?mailchimp', rawurlencode( $site_id ) );
 		return array(
 			'code'        => $this->is_connected() ? 'connected' : 'not_connected',
 			'connect_url' => $connect_url,

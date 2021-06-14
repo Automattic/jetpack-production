@@ -6,7 +6,7 @@
  * Examples:
  * [wufoo username="jeherve" formhash="z1x13ltw1m8jtrw" autoresize="true" height="338" header="show"]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -51,8 +51,6 @@ function wufoo_shortcode( $atts ) {
 				'https://help.wufoo.com/articles/en_US/kb/Embed'
 			);
 		}
-
-		return;
 	}
 
 	/**
@@ -68,12 +66,12 @@ function wufoo_shortcode( $atts ) {
 	 * An error will be returned inside the form if they are invalid.
 	 */
 	$js_embed = sprintf(
-		'(function(){try{var wufoo_%1$s = new WufooForm();wufoo_%1$s.initialize({"userName":"%2$s","formHash":"%1$s","autoResize":%3$s,"height":"%4$d","header":"%5$s","ssl":true,"async":true});wufoo_%1$s.display();}catch(e){}})();',
+		'(function(){try{var wufoo_%1$s = new WufooForm();wufoo_%1$s.initialize({"userName":"%2$s","formHash":"%1$s","autoResize":"%3$s","height":"%4$d","header":"%5$s","ssl":true,"async":true});wufoo_%1$s.display();}catch(e){}})();',
 		esc_attr( $attr['formhash'] ),
 		esc_attr( $attr['username'] ),
-		'true' == $attr['autoresize'] ? 'true' : 'false', // phpcs:ignore WordPress.PHP.StrictComparisons.LooseComparison
+		esc_attr( $attr['autoresize'] ),
 		absint( $attr['height'] ),
-		'show' === $attr['header'] ? 'show' : 'hide'
+		esc_js( $attr['header'] )
 	);
 
 	// Embed URL.

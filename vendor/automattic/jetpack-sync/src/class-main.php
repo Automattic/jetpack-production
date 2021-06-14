@@ -25,7 +25,7 @@ class Main {
 			add_action( 'plugins_loaded', array( __CLASS__, 'on_plugins_loaded_late' ), 90 );
 		}
 		// Any hooks below are special cases that need to be declared even if Sync is not allowed.
-		add_action( 'jetpack_site_registered', array( 'Automattic\\Jetpack\\Sync\\Actions', 'do_initial_sync' ), 10, 0 );
+		add_action( 'jetpack_user_authorized', array( 'Automattic\\Jetpack\\Sync\\Actions', 'do_initial_sync' ), 10, 0 );
 	}
 
 	/**
@@ -59,28 +59,7 @@ class Main {
 		 * with a high priority or sites that use alternate cron.
 		 */
 		Sync_Actions::init();
-
-		// Enable non-blocking Jetpack Sync flow.
-		$non_block_enabled = (bool) get_option( 'jetpack_sync_non_blocking', false );
-
-		/**
-		 * Filters the option to enable non-blocking sync.
-		 *
-		 * Default value is false, filter to true to enable non-blocking mode which will have
-		 * WP.com return early and use the sync/close endpoint to check-in processed items.
-		 *
-		 * @since 8.6.0
-		 *
-		 * @param bool $enabled Should non-blocking flow be enabled.
-		 */
-		$filtered = (bool) apply_filters( 'jetpack_sync_non_blocking', $non_block_enabled );
-
-		if ( $non_block_enabled !== $filtered ) {
-			update_option( 'jetpack_sync_non_blocking', $filtered, false );
-		}
-
-		// Initialize health-related hooks after plugins have loaded.
-		Health::init();
 	}
+
 
 }
