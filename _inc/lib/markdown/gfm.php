@@ -99,9 +99,6 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 			$text = $this->latex_preserve( $text );
 		}
 
-		// Do not process characters inside URLs.
-		$text = $this->urls_preserve( $text );
-
 		// escape line-beginning # chars that do not have a space after them.
 		$text = preg_replace_callback( '|^#{1,6}( )?|um', array( $this, '_doEscapeForHashWithoutSpacing' ), $text );
 
@@ -228,22 +225,6 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	 */
 	protected function shortcode_preserve( $text ) {
 		$text = preg_replace_callback( $this->get_shortcode_regex(), array( $this, '_doRemoveText' ), $text );
-		return $text;
-	}
-
-	/**
-	 * Avoid characters inside URLs from being formatted by Markdown in any way.
-	 *
-	 * @param  string $text Text in which to preserve URLs.
-	 *
-	 * @return string Text with URLs replaced by a hash that will be restored later.
-	 */
-	protected function urls_preserve( $text ) {
-		$text = preg_replace_callback(
-			'#(?<!<)(?:https?|ftp)://([^\s<>"\'\[\]()]+|\[(?1)*+\]|\((?1)*+\))+(?<![_*.?])#i',
-			array( $this, '_doRemoveText' ),
-			$text
-		);
 		return $text;
 	}
 
@@ -408,7 +389,7 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 		$classname =& $matches[2];
 		$codeblock = preg_replace_callback('/^\n+/', array( $this, '_doFencedCodeBlocks_newlines' ), $matches[4] );
 
-		if ( $classname[0] == '.' )
+		if ( $classname{0} == '.' )
 			$classname = substr( $classname, 1 );
 
 		$codeblock = esc_html( $codeblock );

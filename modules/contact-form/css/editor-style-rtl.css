@@ -69,6 +69,7 @@ input[type="email"],
 input[type="url"] {
 	border-radius: 0;
 	-webkit-appearance: none;
+	   -moz-appearance: none;
 	        appearance: none;
 	box-sizing: border-box;
 	margin: 0;
@@ -83,7 +84,10 @@ input[type="url"] {
 	box-shadow: none;
 }
 
-input[type="text"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="url"]:-ms-input-placeholder {
 	color: #87a6bc;
 }
 
@@ -134,7 +138,10 @@ input[type="url"]:disabled:hover {
 	cursor: default;
 }
 
-input[type="text"]:disabled:-ms-input-placeholder, input[type="tel"]:disabled:-ms-input-placeholder, input[type="email"]:disabled:-ms-input-placeholder, input[type="url"]:disabled:-ms-input-placeholder {
+input[type="text"]:disabled:-ms-input-placeholder,
+input[type="tel"]:disabled:-ms-input-placeholder,
+input[type="email"]:disabled:-ms-input-placeholder,
+input[type="url"]:disabled:-ms-input-placeholder {
 	color: #a8bece;
 }
 
@@ -153,6 +160,7 @@ input[type="url"]:disabled::placeholder {
 textarea {
 	border-radius: 0;
 	-webkit-appearance: none;
+	   -moz-appearance: none;
 	        appearance: none;
 	box-sizing: border-box;
 	margin: 0;
@@ -233,7 +241,8 @@ input[type="checkbox"] {
 	line-height: 0;
 	text-align: center;
 	vertical-align: middle;
-	appearance: none;
+	-moz-appearance: none;
+	     appearance: none;
 	transition: all .15s ease-in-out;
 	clear: none;
 	cursor: pointer;
@@ -312,7 +321,8 @@ input[type=radio] {
 	vertical-align: middle;
 	width: 16px;
 	min-width: 16px;
-	appearance: none;
+	-moz-appearance: none;
+	     appearance: none;
 	border-radius: 50%;
 	line-height: 10px;
 }
@@ -428,10 +438,11 @@ select {
 	vertical-align: top;
 	white-space: nowrap;
 	box-sizing: border-box;
-	/* Aligns the text to the 8px baseline grid and adds padding on right to allow for the arrow. */
-	padding: 7px 14px 9px 32px;
+	padding: 7px 14px 9px 32px; // Aligns the text to the 8px baseline grid and adds padding on right to allow for the arrow.
 	-webkit-appearance: none;
-	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	        appearance: none;
 }
 
 select:hover {
@@ -499,6 +510,7 @@ input[type="submit"] {
 	padding: 0;
 	font-size: 14px;
 	-webkit-appearance: none;
+	-moz-appearance: none;
 			 appearance: none;
 	vertical-align: baseline;
 	background: white;
@@ -521,6 +533,7 @@ input[type="submit"] {
 	border-radius: 4px;
 	padding: 7px 14px 9px;
 	-webkit-appearance: none;
+	-moz-appearance: none;
 			 appearance: none;
 }
 

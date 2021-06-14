@@ -1,8 +1,4 @@
 <?php
-// phpcs:disable WordPress.NamingConventions.ValidVariableName
-
-use Automattic\Jetpack\Redirect;
-use Automattic\Jetpack\Status;
 
 abstract class Publicize_Base {
 
@@ -23,14 +19,6 @@ abstract class Publicize_Base {
 	*/
 	public $ADMIN_PAGE        = 'wpas';
 	public $POST_MESS         = '_wpas_mess';
-
-	/**
-	 * Post meta key for flagging when the post is a tweetstorm.
-	 *
-	 * @var string
-	 */
-	public $POST_TWEETSTORM = '_wpas_is_tweetstorm';
-
 	public $POST_SKIP         = '_wpas_skip_'; // connection id appended to indicate that a connection should NOT be publicized to
 	public $POST_DONE         = '_wpas_done_'; // connection id appended to indicate a connection has already been publicized to
 	public $USER_AUTH         = 'wpas_authorize';
@@ -52,7 +40,7 @@ abstract class Publicize_Base {
 	 * All users with this cap can un-globalize all other global connections, and globalize any of their own
 	 * Globalized connections cannot be unselected by users without this capability when publishing
 	 */
-	public $GLOBAL_CAP = 'publish_posts';
+	public $GLOBAL_CAP = 'edit_others_posts';
 
 	/**
 	* Sets up the basics of Publicize
@@ -128,10 +116,6 @@ abstract class Publicize_Base {
 
 		// Connection test callback
 		add_action( 'wp_ajax_test_publicize_conns', array( $this, 'test_publicize_conns' ) );
-
-		add_action( 'init', array( $this, 'add_post_type_support' ) );
-		add_action( 'init', array( $this, 'register_post_meta' ), 20 );
-		add_action( 'jetpack_register_gutenberg_extensions', array( $this, 'register_gutenberg_extension' ) );
 	}
 
 /*
@@ -151,10 +135,6 @@ abstract class Publicize_Base {
 	 * @return array
 	 */
 	abstract function get_services( $filter = 'all', $_blog_id = false, $_user_id = false );
-
-	function can_connect_service( $service_name ) {
-		return true;
-	}
 
 	/**
 	 * Does the given user have a connection to the service on the given blog?
@@ -220,9 +200,8 @@ abstract class Publicize_Base {
 			case 'linkedin':
 				return 'LinkedIn';
 				break;
-			case 'google_drive': // google-drive used to be called google_drive.
-			case 'google-drive':
-				return 'Google Drive';
+			case 'google_plus':
+				return  'Google+';
 				break;
 			case 'twitter':
 			case 'facebook':
@@ -336,7 +315,7 @@ abstract class Publicize_Base {
 		$cmeta = $this->get_connection_meta( $connection );
 
 		if ( isset( $cmeta['connection_data']['meta']['link'] ) ) {
-			if ( 'facebook' == $service_name && 0 === strpos( wp_parse_url( $cmeta['connection_data']['meta']['link'], PHP_URL_PATH ), '/app_scoped_user_id/' ) ) {
+			if ( 'facebook' == $service_name && 0 === strpos( parse_url( $cmeta['connection_data']['meta']['link'], PHP_URL_PATH ), '/app_scoped_user_id/' ) ) {
 				// App-scoped Facebook user IDs are not usable profile links
 				return false;
 			}
@@ -345,15 +324,19 @@ abstract class Publicize_Base {
 		} elseif ( 'facebook' == $service_name && isset( $cmeta['connection_data']['meta']['facebook_page'] ) ) {
 			return 'https://facebook.com/' . $cmeta['connection_data']['meta']['facebook_page'];
 		} elseif ( 'tumblr' == $service_name && isset( $cmeta['connection_data']['meta']['tumblr_base_hostname'] ) ) {
-			 return 'https://' . $cmeta['connection_data']['meta']['tumblr_base_hostname'];
+			 return 'http://' . $cmeta['connection_data']['meta']['tumblr_base_hostname'];
 		} elseif ( 'twitter' == $service_name ) {
 			return 'https://twitter.com/' . substr( $cmeta['external_display'], 1 ); // Has a leading '@'
+		} elseif ( 'google_plus' == $service_name && isset( $cmeta['connection_data']['meta']['google_plus_page'] ) ) {
+			return 'https://plus.google.com/' . $cmeta['connection_data']['meta']['google_plus_page'];
+		} elseif ( 'google_plus' == $service_name ) {
+			return 'https://plus.google.com/' . $cmeta['external_id'];
 		} else if ( 'linkedin' == $service_name ) {
 			if ( !isset( $cmeta['connection_data']['meta']['profile_url'] ) ) {
 				return false;
 			}
 
-			$profile_url_query = wp_parse_url( $cmeta['connection_data']['meta']['profile_url'], PHP_URL_QUERY );
+			$profile_url_query = parse_url( $cmeta['connection_data']['meta']['profile_url'], PHP_URL_QUERY );
 			wp_parse_str( $profile_url_query, $profile_url_query_args );
 			if ( isset( $profile_url_query_args['key'] ) ) {
 				$id = $profile_url_query_args['key'];
@@ -363,7 +346,7 @@ abstract class Publicize_Base {
 				return false;
 			}
 
-			return esc_url_raw( add_query_arg( 'id', urlencode( $id ), 'https://www.linkedin.com/profile/view' ) );
+			return esc_url_raw( add_query_arg( 'id', urlencode( $id ), 'http://www.linkedin.com/profile/view' ) );
 		} else {
 			return false; // no fallback. we just won't link it
 		}
@@ -443,19 +426,6 @@ abstract class Publicize_Base {
 	}
 
 	/**
-	 * LinkedIn needs to be reauthenticated to use v2 of their API.
-	 * If it's using LinkedIn old API, it's an 'invalid' connection
-	 *
-	 * @param object|array The Connection object (WordPress.com) or array (Jetpack)
-	 * @return bool
-	 */
-	function is_invalid_linkedin_connection( $connection ) {
-		// LinkedIn API v1 included the profile link in the connection data.
-		$connection_meta = $this->get_connection_meta( $connection );
-		return isset( $connection_meta['connection_data']['meta']['profile_url'] );
-	}
-
-	/**
 	 * Whether the Connection currently being connected
 	 *
 	 * @param object|array The Connection object (WordPress.com) or array (Jetpack)
@@ -472,26 +442,6 @@ abstract class Publicize_Base {
 	 * @return void
 	 */
 	function test_publicize_conns() {
-		wp_send_json_success( $this->get_publicize_conns_test_results() );
-	}
-
-	/**
-	 * Run connection tests on all Connections
-	 *
-	 * @return array {
-	 *     Array of connection test results.
-	 *
-	 *     @type string 'connectionID'          Connection identifier string that is unique for each connection
-	 *     @type string 'serviceName'           Slug of the connection's service (facebook, twitter, ...)
-	 *     @type bool   'connectionTestPassed'  Whether the connection test was successful
-	 *     @type string 'connectionTestMessage' Test success or error message
-	 *     @type bool   'userCanRefresh'        Whether the user can re-authenticate their connection to the service
-	 *     @type string 'refreshText'           Message instructing user to re-authenticate their connection to the service
-	 *     @type string 'refreshURL'            URL, which, when visited by the user, re-authenticates their connection to the service.
-	 *     @type string 'unique_id'             ID string representing connection
-	 * }
-	 */
-	function get_publicize_conns_test_results() {
 		$test_results = array();
 
 		foreach ( (array) $this->get_services( 'connected' ) as $service_name => $connections ) {
@@ -524,15 +474,8 @@ abstract class Publicize_Base {
 					if ( ! $this->is_valid_facebook_connection( $connection ) ) {
 						$connection_test_passed = false;
 						$user_can_refresh = false;
-						$connection_test_message = __( 'Please select a Facebook Page to publish updates.', 'jetpack' );
+						$connection_test_message = __( 'Facebook no longer supports Publicize connections to Facebook Profiles, but you can still connect Facebook Pages. Please select a Facebook Page to publish updates to.' );
 					}
-				}
-
-				// LinkedIn needs reauthentication to be compatible with v2 of their API
-				if ( 'linkedin' === $service_name && $this->is_invalid_linkedin_connection( $connection ) ) {
-					$connection_test_passed = 'must_reauth';
-					$user_can_refresh = false;
-					$connection_test_message = esc_html__( 'Your LinkedIn connection needs to be reauthenticated to continue working – head to Sharing to take care of it.', 'jetpack' );
 				}
 
 				$unique_id = null;
@@ -555,7 +498,7 @@ abstract class Publicize_Base {
 			}
 		}
 
-		return $test_results;
+		wp_send_json_success( $test_results );
 	}
 
 	/**
@@ -801,108 +744,6 @@ abstract class Publicize_Base {
 	abstract function flag_post_for_publicize( $new_status, $old_status, $post );
 
 	/**
-	 * Ensures the Post internal post-type supports `publicize`
-	 *
-	 * This feature support flag is used by the REST API.
-	 */
-	function add_post_type_support() {
-		add_post_type_support( 'post', 'publicize' );
-	}
-
-	/**
-	 * Register the Publicize Gutenberg extension
-	 */
-	function register_gutenberg_extension() {
-		// TODO: The `gutenberg/available-extensions` endpoint currently doesn't accept a post ID,
-		// so we cannot pass one to `$this->current_user_can_access_publicize_data()`.
-
-		if ( $this->current_user_can_access_publicize_data() ) {
-			Jetpack_Gutenberg::set_extension_available( 'jetpack/publicize' );
-		} else {
-			Jetpack_Gutenberg::set_extension_unavailable( 'jetpack/publicize', 'unauthorized' );
-
-		}
-	}
-
-	/**
-	 * Can the current user access Publicize Data.
-	 *
-	 * @param int $post_id. 0 for general access. Post_ID for specific access.
-	 * @return bool
-	 */
-	function current_user_can_access_publicize_data( $post_id = 0 ) {
-		/**
-		 * Filter what user capability is required to use the publicize form on the edit post page. Useful if publish post capability has been removed from role.
-		 *
-		 * @module publicize
-		 *
-		 * @since 4.1.0
-		 *
-		 * @param string $capability User capability needed to use publicize
-		 */
-		$capability = apply_filters( 'jetpack_publicize_capability', 'publish_posts' );
-
-		if ( 'publish_posts' === $capability && $post_id ) {
-			return current_user_can( 'publish_post', $post_id );
-		}
-
-		return current_user_can( $capability );
-	}
-
-	/**
-	 * Auth callback for the protected ->POST_MESS post_meta
-	 *
-	 * @param bool $allowed
-	 * @param string $meta_key
-	 * @param int $object_id Post ID
-	 * @return bool
-	 */
-	function message_meta_auth_callback( $allowed, $meta_key, $object_id ) {
-		return $this->current_user_can_access_publicize_data( $object_id );
-	}
-
-	/**
-	 * Registers the post_meta for use in the REST API.
-	 *
-	 * Registers for each post type that with `publicize` feature support.
-	 */
-	function register_post_meta() {
-		$message_args = array(
-			'type'          => 'string',
-			'description'   => __( 'The message to use instead of the title when sharing to Publicize Services', 'jetpack' ),
-			'single'        => true,
-			'default'       => '',
-			'show_in_rest'  => array(
-				'name' => 'jetpack_publicize_message',
-			),
-			'auth_callback' => array( $this, 'message_meta_auth_callback' ),
-		);
-
-		$tweetstorm_args = array(
-			'type'          => 'boolean',
-			'description'   => __( 'Whether or not the post should be treated as a Twitter thread.', 'jetpack' ),
-			'single'        => true,
-			'default'       => false,
-			'show_in_rest'  => array(
-				'name' => 'jetpack_is_tweetstorm',
-			),
-			'auth_callback' => array( $this, 'message_meta_auth_callback' ),
-		);
-
-		foreach ( get_post_types() as $post_type ) {
-			if ( ! $this->post_type_is_publicizeable( $post_type ) ) {
-				continue;
-			}
-
-			$message_args['object_subtype']    = $post_type;
-			$tweetstorm_args['object_subtype'] = $post_type;
-
-			register_meta( 'post', $this->POST_MESS, $message_args );
-			register_meta( 'post', $this->POST_TWEETSTORM, $tweetstorm_args );
-		}
-	}
-
-	/**
 	 * Fires when a post is saved, checks conditions and saves state in postmeta so that it
 	 * can be picked up later by @see ::publicize_post() on WordPress.com codebase.
 	 *
@@ -1005,11 +846,10 @@ abstract class Publicize_Base {
 		foreach ( (array) $this->get_services( 'connected' ) as $service_name => $connections ) {
 			foreach ( $connections as $connection ) {
 				$connection_data = '';
-				if ( is_object( $connection ) && method_exists( $connection, 'get_meta' ) ) {
+				if ( method_exists( $connection, 'get_meta' ) )
 					$connection_data = $connection->get_meta( 'connection_data' );
-				} elseif ( ! empty( $connection['connection_data'] ) ) {
+				elseif ( ! empty( $connection['connection_data'] ) )
 					$connection_data = $connection['connection_data'];
-				}
 
 				/** This action is documented in modules/publicize/ui.php */
 				if ( false == apply_filters( 'wpas_submit_post?', $submit_post, $post_id, $service_name, $connection_data ) ) {
@@ -1083,12 +923,6 @@ abstract class Publicize_Base {
 		if ( ! $this->post_type_is_publicizeable( $post_type ) ) {
 			return $messages;
 		}
-
-		// Bail early if the post is private.
-		if ( 'publish' !== $post->post_status ) {
-			return $messages;
-		}
-
 		$view_post_link_html = '';
 		$viewable = is_post_type_viewable( $post_type_object );
 		if ( $viewable ) {
@@ -1264,5 +1098,16 @@ abstract class Publicize_Base {
 }
 
 function publicize_calypso_url() {
-	return Redirect::get_url( 'calypso-marketing-connections', array( 'site' => ( new Status() )->get_site_suffix() ) );
+	$calypso_sharing_url = 'https://wordpress.com/sharing/';
+	if ( class_exists( 'Jetpack' ) && method_exists( 'Jetpack', 'build_raw_urls' ) ) {
+		$site_suffix = Jetpack::build_raw_urls( home_url() );
+	} elseif ( class_exists( 'WPCOM_Masterbar' ) && method_exists( 'WPCOM_Masterbar', 'get_calypso_site_slug' ) ) {
+		$site_suffix = WPCOM_Masterbar::get_calypso_site_slug( get_current_blog_id() );
+	}
+
+	if ( $site_suffix ) {
+		return $calypso_sharing_url . $site_suffix;
+	} else {
+		return $calypso_sharing_url;
+	}
 }

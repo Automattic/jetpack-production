@@ -7,10 +7,6 @@
  * @since      5.8.0
  */
 
-use Automattic\Jetpack\Constants;
-
-require_once dirname( __FILE__ ) . '/class-jetpack-search-options.php';
-
 /**
  * Various helper functions for reuse throughout the Jetpack Search code.
  *
@@ -150,11 +146,9 @@ class Jetpack_Search_Helpers {
 	 *
 	 * @since 5.8.0
 	 *
-	 * @param array|null $allowed_widget_ids array of allowed widget IDs.
-	 *
 	 * @return array Active filters.
 	 */
-	public static function get_filters_from_widgets( $allowed_widget_ids = null ) {
+	static function get_filters_from_widgets() {
 		$filters = array();
 
 		$widget_options = self::get_widgets_from_option();
@@ -167,9 +161,6 @@ class Jetpack_Search_Helpers {
 			if ( ! self::is_active_widget( $widget_id ) || empty( $settings['filters'] ) ) {
 				continue;
 			}
-			if ( isset( $allowed_widget_ids ) && ! in_array( $widget_id, $allowed_widget_ids, true ) ) {
-				continue;
-			}
 
 			foreach ( (array) $settings['filters'] as $widget_filter ) {
 				$widget_filter['widget_id'] = $widget_id;
@@ -178,8 +169,7 @@ class Jetpack_Search_Helpers {
 					$widget_filter['name'] = self::generate_widget_filter_name( $widget_filter );
 				}
 
-				$type = ( isset( $widget_filter['type'] ) ) ? $widget_filter['type'] : '';
-				$key  = sprintf( '%s_%d', $type, count( $filters ) );
+				$key = sprintf( '%s_%d', $widget_filter['type'], count( $filters ) );
 
 				$filters[ $key ] = $widget_filter;
 			}
@@ -227,10 +217,6 @@ class Jetpack_Search_Helpers {
 	 */
 	static function generate_widget_filter_name( $widget_filter ) {
 		$name = '';
-
-		if ( ! isset( $widget_filter['type'] ) ) {
-			return $name;
-		}
 
 		switch ( $widget_filter['type'] ) {
 			case 'post_type':
@@ -665,6 +651,31 @@ class Jetpack_Search_Helpers {
 	}
 
 	/**
+	 * Returns a boolean for whether the current site has a VIP index.
+	 *
+	 * @since 5.8.0
+	 *
+	 * @return bool
+	 */
+	public static function site_has_vip_index() {
+		$has_vip_index = (
+			Jetpack_Constants::is_defined( 'JETPACK_SEARCH_VIP_INDEX' ) &&
+			Jetpack_Constants::get_constant( 'JETPACK_SEARCH_VIP_INDEX' )
+		);
+
+		/**
+		 * Allows developers to filter whether the current site has a VIP index.
+		 *
+		 * @module search
+		 *
+		 * @since  5.8.0
+		 *
+		 * @param bool $has_vip_index Whether the current site has a VIP index.
+		 */
+		return apply_filters( 'jetpack_search_has_vip_index', $has_vip_index );
+	}
+
+	/**
 	 * Returns the maximum posts per page for a search query.
 	 *
 	 * @since 5.8.0
@@ -672,7 +683,7 @@ class Jetpack_Search_Helpers {
 	 * @return int
 	 */
 	public static function get_max_posts_per_page() {
-		return Jetpack_Search_Options::site_has_vip_index() ? 1000 : 100;
+		return self::site_has_vip_index() ? 1000 : 100;
 	}
 
 	/**
@@ -683,88 +694,6 @@ class Jetpack_Search_Helpers {
 	 * @return int
 	 */
 	public static function get_max_offset() {
-		return Jetpack_Search_Options::site_has_vip_index() ? 9000 : 1000;
-	}
-
-	/**
-	 * Returns the maximum offset for a search query.
-	 *
-	 * @since 8.4.0
-	 * @param string $locale    A potentially valid locale string.
-	 *
-	 * @return bool
-	 */
-	public static function is_valid_locale( $locale ) {
-		if ( ! class_exists( 'GP_Locales' ) ) {
-			if ( defined( 'JETPACK__GLOTPRESS_LOCALES_PATH' ) && file_exists( JETPACK__GLOTPRESS_LOCALES_PATH ) ) {
-				require JETPACK__GLOTPRESS_LOCALES_PATH;
-			} else {
-				// Assume locale to be valid if we can't check with GlotPress.
-				return true;
-			}
-		}
-		return false !== GP_Locales::by_field( 'wp_locale', $locale );
-	}
-
-	/**
-	 * Get the version number to use when loading the file. Allows us to bypass cache when developing.
-	 *
-	 * @since 8.6.0
-	 * @param string $file Path of the file we are looking for.
-	 * @return string $script_version Version number.
-	 */
-	public static function get_asset_version( $file ) {
-		return Jetpack::is_development_version() && file_exists( JETPACK__PLUGIN_DIR . $file )
-			? filemtime( JETPACK__PLUGIN_DIR . $file )
-			: JETPACK__VERSION;
-	}
-
-
-	/**
-	 * Generates a customizer settings ID for a given post type.
-	 *
-	 * @since 8.8.0
-	 * @param object $post_type Post type object returned from get_post_types.
-	 * @return string $customizer_id Customizer setting ID.
-	 */
-	public static function generate_post_type_customizer_id( $post_type ) {
-		return Jetpack_Search_Options::OPTION_PREFIX . 'disable_post_type_' . $post_type->name;
-	}
-
-	/**
-	 * Generates an array of post types associated with their customizer IDs.
-	 *
-	 * @since 8.8.0
-	 * @return array $ids Post type => post type customizer ID object.
-	 */
-	public static function generate_post_type_customizer_ids() {
-		return array_map(
-			array( 'self', 'generate_post_type_customizer_id' ),
-			get_post_types( array( 'exclude_from_search' => false ), 'objects' )
-		);
-	}
-
-	/**
-	 * Sanitizes a checkbox value for writing to the database.
-	 *
-	 * @since 8.9.0
-	 *
-	 * @param any $value from the customizer form.
-	 * @return string either '0' or '1'.
-	 */
-	public static function sanitize_checkbox_value( $value ) {
-		return true === $value ? '1' : '0';
-	}
-
-	/**
-	 * Sanitizes a checkbox value for rendering the Customizer.
-	 *
-	 * @since 8.9.0
-	 *
-	 * @param any $value from the database.
-	 * @return boolean
-	 */
-	public static function sanitize_checkbox_value_for_js( $value ) {
-		return '1' === $value;
+		return self::site_has_vip_index() ? 9000 : 1000;
 	}
 }
