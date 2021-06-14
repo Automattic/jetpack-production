@@ -5,7 +5,7 @@
 * https://developers.google.com/analytics/devguides/collection/analyticsjs/
 * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce
 *
-* @author allendav
+* @author allendav 
 */
 
 /**
@@ -49,11 +49,9 @@ class Jetpack_Google_Analytics_Universal {
 			return;
 		}
 
-		if ( Jetpack_AMP_Support::is_amp_request() ) {
-			// For Reader mode — legacy.
-			add_filter( 'amp_post_template_analytics', 'Jetpack_Google_Analytics::amp_analytics_entries', 1000 );
-			// For Standard and Transitional modes.
-			add_filter( 'amp_analytics_entries', 'Jetpack_Google_Analytics::amp_analytics_entries', 1000 );
+		// At this time, we only leverage universal analytics for enhanced ecommerce. If WooCommerce is not
+		// present, don't bother emitting the tracking ID or fetching analytics.js
+		if ( ! class_exists( 'WooCommerce' ) ) {
 			return;
 		}
 
@@ -250,26 +248,22 @@ class Jetpack_Google_Analytics_Universal {
 	}
 
 	/**
-	 * Adds the product ID and SKU to the remove product link (for use by remove_from_cart above) if not present
-	 *
-	 * @param string $url Full HTML a tag of the link to remove an item from the cart.
-	 * @param string $key Unique Key ID for a cart item.
-	 */
+	* Adds the product ID and SKU to the remove product link (for use by remove_from_cart above) if not present
+	*/
 	public function remove_from_cart_attributes( $url, $key ) {
 		if ( false !== strpos( $url, 'data-product_id' ) ) {
 			return $url;
 		}
 
-		$item    = WC()->cart->get_cart_item( $key );
-		$product = $item['data'];
+		$item = WC()->cart->get_cart_item( $key );
+		$product = $item[ 'data' ];
 
-		$new_attributes = sprintf(
-			'" data-product_id="%1$s" data-product_sku="%2$s">',
+		$new_attributes = sprintf( 'href="%s" data-product_id="%s" data-product_sku="%s"',
+			esc_attr( $url ),
 			esc_attr( $product->get_id() ),
 			esc_attr( $product->get_sku() )
-		);
-
-		$url = str_replace( '">', $new_attributes, $url );
+			);
+		$url = str_replace( 'href=', $new_attributes );
 		return $url;
 	}
 

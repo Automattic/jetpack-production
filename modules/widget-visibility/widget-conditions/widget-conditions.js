@@ -1,14 +1,19 @@
-/* global isRtl, widget_conditions_parent_pages, widget_conditions_data, jQuery */
+/* jshint onevar: false, smarttabs: true */
+/* global isRtl */
+/* global widget_conditions_parent_pages */
+/* global widget_conditions_data */
+/* global jQuery */
 
-jQuery( function ( $ ) {
+jQuery( function( $ ) {
 	var widgets_shell = $( 'div#widgets-right' );
 
-	if ( ! widgets_shell && ! widgets_shell.length ) {
+	if ( ! widgets_shell.length || ! $( widgets_shell ).find( '.widget-control-actions' ).length ) {
 		widgets_shell = $( 'form#customize-controls' );
 	}
 
 	function setWidgetMargin( $widget ) {
-		var currentWidth, extra;
+		var currentWidth,
+			extra;
 
 		if ( $( 'body' ).hasClass( 'wp-customizer' ) ) {
 			// set the inside widget 2 top this way we can see the widget settings
@@ -31,15 +36,9 @@ jQuery( function ( $ ) {
 			if ( currentWidth < 400 ) {
 				extra = 400 - currentWidth;
 				if ( isRtl ) {
-					$widget
-						.css( 'position', 'relative' )
-						.css( 'right', '-' + extra + 'px' )
-						.css( 'width', '400px' );
+					$widget.css( 'position', 'relative' ).css( 'right', '-' + extra + 'px' ).css( 'width', '400px' );
 				} else {
-					$widget
-						.css( 'position', 'relative' )
-						.css( 'left', '-' + extra + 'px' )
-						.css( 'width', '400px' );
+					$widget.css( 'position', 'relative' ).css( 'left', '-' + extra + 'px' ).css( 'width', '400px' );
 				}
 			}
 		} else if ( $widget.data( 'original-style' ) ) {
@@ -57,46 +56,37 @@ jQuery( function ( $ ) {
 		// Widgets with no configurable options don't show the Save button's container.
 		$displayOptionsButton
 			.parent()
-			.removeClass( 'widget-control-noform' )
-			.find( '.spinner' )
-			.remove()
-			.css( 'float', 'left' )
-			.prependTo( $displayOptionsButton.parent() );
+				.removeClass( 'widget-control-noform' )
+				.find( '.spinner' )
+					.remove()
+					.css( 'float', 'left' )
+					.prependTo( $displayOptionsButton.parent() );
 	}
 
-	$( '.widget' ).each( function () {
+	$( '.widget' ).each( function() {
 		moveWidgetVisibilityButton( $( this ) );
 	} );
 
-	$( document ).on( 'widget-added', function ( e, $widget ) {
+	$( document ).on( 'widget-added', function( e, $widget ) {
 		if ( $widget.find( 'div.widget-control-actions a.display-options' ).length === 0 ) {
 			moveWidgetVisibilityButton( $widget );
 		}
 	} );
 
-	widgets_shell.on( 'click.widgetconditions', 'a.add-condition', function ( e ) {
+	widgets_shell.on( 'click.widgetconditions', 'a.add-condition', function( e ) {
 		var $condition = $( this ).closest( 'div.condition' ),
-			$conditionClone = $condition
-				.clone()
-				.data( 'rule-major', '' )
-				.data( 'rule-minor', '' )
-				.data( 'has-children', '' )
-				.insertAfter( $condition );
+			$conditionClone = $condition.clone().data( 'rule-major', '' ).data( 'rule-minor', '' ).data( 'has-children','' ).insertAfter( $condition );
 
 		e.preventDefault();
 
 		$conditionClone.find( 'select.conditions-rule-major' ).val( '' );
 		$conditionClone.find( 'select.conditions-rule-minor' ).html( '' ).attr( 'disabled' );
-		$conditionClone
-			.find( 'span.conditions-rule-has-children' )
-			.hide()
-			.find( 'input[type="checkbox"]' )
-			.removeAttr( 'checked' );
+		$conditionClone.find( 'span.conditions-rule-has-children' ).hide().find( 'input[type="checkbox"]' ).removeAttr( 'checked' );
 
 		resetRuleIndexes( $conditionClone.closest( '.conditions' ) );
 	} );
 
-	widgets_shell.on( 'click.widgetconditions', 'a.display-options', function ( e ) {
+	widgets_shell.on( 'click.widgetconditions', 'a.display-options', function( e ) {
 		var $displayOptionsButton = $( this ),
 			$widget = $displayOptionsButton.closest( 'div.widget' );
 
@@ -109,7 +99,7 @@ jQuery( function ( $ ) {
 
 		if ( $( this ).hasClass( 'active' ) ) {
 			$widget.find( 'input[name=widget-conditions-visible]' ).val( '1' );
-			$widget.find( '.condition' ).each( function () {
+			$widget.find( '.condition' ).each( function() {
 				buildMinorConditions( $( this ) );
 			} );
 		} else {
@@ -117,7 +107,7 @@ jQuery( function ( $ ) {
 		}
 	} );
 
-	widgets_shell.on( 'click.widgetconditions', 'a.delete-condition', function ( e ) {
+	widgets_shell.on( 'click.widgetconditions', 'a.delete-condition', function( e ) {
 		var $condition = $( this ).closest( 'div.condition' );
 
 		e.preventDefault();
@@ -133,7 +123,7 @@ jQuery( function ( $ ) {
 		resetRuleIndexes( $condition.closest( '.conditions' ) );
 	} );
 
-	widgets_shell.on( 'click.widgetconditions', 'div.widget-top', function () {
+	widgets_shell.on( 'click.widgetconditions', 'div.widget-top', function() {
 		var $widget = $( this ).closest( 'div.widget' ),
 			$displayOptionsButton = $widget.find( 'a.display-options' );
 
@@ -148,19 +138,16 @@ jQuery( function ( $ ) {
 		}
 	} );
 
-	widgets_shell.on( 'change.widgetconditions', 'input.conditions-match-all', function () {
-		$( this )
-			.parents( '.widget-conditional' )
+	widgets_shell.on( 'change.widgetconditions', 'input.conditions-match-all', function() {
+		$( this ).parents( '.widget-conditional' )
 			.toggleClass( 'conjunction' )
 			.toggleClass( 'intersection' );
 	} );
 
-	$( document ).on( 'change.widgetconditions', 'select.conditions-rule-major', function () {
+	$( document ).on( 'change.widgetconditions', 'select.conditions-rule-major', function() {
 		var $conditionsRuleMajor = $( this ),
 			$conditionsRuleMinor = $conditionsRuleMajor.siblings( 'select.conditions-rule-minor:first' ),
-			$conditionsRuleHasChildren = $conditionsRuleMajor.siblings(
-				'span.conditions-rule-has-children'
-			),
+			$conditionsRuleHasChildren = $conditionsRuleMajor.siblings( 'span.conditions-rule-has-children' ),
 			$condition = $conditionsRuleMinor.closest( '.condition' );
 
 		$condition.data( 'rule-minor', '' ).data( 'rule-major', $conditionsRuleMajor.val() );
@@ -168,20 +155,15 @@ jQuery( function ( $ ) {
 		if ( $conditionsRuleMajor.val() ) {
 			buildMinorConditions( $condition );
 		} else {
-			$conditionsRuleMajor
-				.siblings( 'select.conditions-rule-minor' )
-				.attr( 'disabled', 'disabled' )
-				.html( '' );
+			$conditionsRuleMajor.siblings( 'select.conditions-rule-minor' ).attr( 'disabled', 'disabled' ).html( '' );
 			$conditionsRuleHasChildren.hide().find( 'input[type="checkbox"]' ).removeAttr( 'checked' );
 		}
 	} );
 
-	$( document ).on( 'change.widgetconditions', 'select.conditions-rule-minor', function () {
+	$( document ).on( 'change.widgetconditions', 'select.conditions-rule-minor', function() {
 		var $conditionsRuleMinor = $( this ),
 			$conditionsRuleMajor = $conditionsRuleMinor.siblings( 'select.conditions-rule-major' ),
-			$conditionsRuleHasChildren = $conditionsRuleMinor.siblings(
-				'span.conditions-rule-has-children'
-			),
+			$conditionsRuleHasChildren = $conditionsRuleMinor.siblings( 'span.conditions-rule-has-children' ),
 			$condition = $conditionsRuleMinor.closest( '.condition' );
 
 		$condition.data( 'rule-minor', $conditionsRuleMinor.val() );
@@ -197,8 +179,8 @@ jQuery( function ( $ ) {
 		}
 	} );
 
-	$( document ).on( 'widget-updated widget-synced', function ( e, widget ) {
-		widget.find( '.condition' ).each( function () {
+	$( document ).on( 'widget-updated widget-synced', function( e, widget ) {
+		widget.find( '.condition' ).each( function() {
 			buildMinorConditions( $( this ) );
 		} );
 	} );
@@ -232,30 +214,22 @@ jQuery( function ( $ ) {
 		majorData = widget_conditions_data[ major ];
 
 		for ( i = 0, _len = majorData.length; i < _len; i++ ) {
-			key = majorData[ i ][ 0 ];
-			val = majorData[ i ][ 1 ];
+			key = majorData[i][0];
+			val = majorData[i][1];
 
 			if ( typeof val === 'object' ) {
 				optgroup = $( '<optgroup/>' ).attr( 'label', key );
 
 				for ( j = 0, _jlen = val.length; j < _jlen; j++ ) {
-					subkey = majorData[ i ][ 1 ][ j ][ 0 ];
-					subval = majorData[ i ][ 1 ][ j ][ 1 ];
+					subkey = majorData[i][1][j][0];
+					subval = majorData[i][1][j][1];
 
-					optgroup.append(
-						$( '<option/>' )
-							.val( subkey )
-							.text( decodeEntities( subval.replace( /&nbsp;/g, '\xA0' ) ) )
-					);
+					optgroup.append( $( '<option/>' ).val( subkey ).text( decodeEntities( subval.replace( /&nbsp;/g, '\xA0' ) ) ) );
 				}
 
 				select.append( optgroup );
 			} else {
-				select.append(
-					$( '<option/>' )
-						.val( key )
-						.text( decodeEntities( val.replace( /&nbsp;/g, '\xA0' ) ) )
-				);
+				select.append( $( '<option/>' ).val( key ).text( decodeEntities( val.replace( /&nbsp;/g, '\xA0' ) ) ) );
 			}
 		}
 
@@ -266,26 +240,18 @@ jQuery( function ( $ ) {
 			select.siblings( 'span.conditions-rule-has-children' ).show();
 
 			if ( hasChildren ) {
-				select
-					.siblings( 'span.conditions-rule-has-children' )
-					.find( 'input[type="checkbox"]' )
-					.attr( 'checked', 'checked' );
+				select.siblings( 'span.conditions-rule-has-children' ).find( 'input[type="checkbox"]' ).attr( 'checked', 'checked' );
 			}
 		} else {
-			select
-				.siblings( 'span.conditions-rule-has-children' )
-				.hide()
-				.find( 'input[type="checkbox"]' )
-				.removeAttr( 'checked' );
+			select.siblings( 'span.conditions-rule-has-children' ).hide().find( 'input[type="checkbox"]' ).removeAttr( 'checked' );
 		}
 	}
 
 	function resetRuleIndexes( widget ) {
 		var index = 0;
-		widget
-			.find( 'span.conditions-rule-has-children' )
+		widget.find( 'span.conditions-rule-has-children' )
 			.find( 'input[type="checkbox"]' )
-			.each( function () {
+			.each( function() {
 				$( this ).attr( 'name', 'conditions[page_children][' + index + ']' );
 				index++;
 			} );

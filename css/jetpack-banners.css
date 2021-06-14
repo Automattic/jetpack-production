@@ -28,40 +28,21 @@ https://github.com/thoughtbot/bourbon
 }
 
 .updated .jp-banner__header {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 400;
   margin-top: 0;
 }
 
 .updated .jp-banner__button-container {
-  padding: 2rem 0 0;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-@media (min-width: 600px) {
-  .updated .jp-banner__button-container {
-    display: flex;
-  }
+  padding: 0.75rem 0 0;
 }
 
 .updated .jp-banner__tos-blurb {
   display: block;
   padding: 0.375rem 0;
   line-height: 1.5;
-  font-size: 0.75rem;
-  color: #414141;
-}
-
-@media (min-width: 600px) {
-  .updated .jp-banner__tos-blurb {
-    margin-left: 1.125rem;
-  }
-}
-
-.updated .jp-banner__tos-blurb a {
-  color: inherit;
+  font-size: 0.6875rem;
+  color: #2e4453;
 }
 
 .jp-banner .notice-dismiss {
@@ -81,17 +62,12 @@ https://github.com/thoughtbot/bourbon
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 1.25rem;
+  bottom: 0;
   left: 0;
-  z-index: 999;
-  background: #f1f1f1;
+  z-index: 9999;
+  background: rgba(243, 246, 248, 0.95);
   text-align: center;
-}
-
-@media (max-width: 530px) {
-  .jetpack-disconnected .jp-connect-full__container {
-    top: 42px;
-  }
+  padding: 2rem;
 }
 
 @media (min-width: 782px) {
@@ -100,70 +76,29 @@ https://github.com/thoughtbot/bourbon
   }
 }
 
-.jetpack-disconnected .jp-connect-full__container .jp-connect-full__container-card {
-  padding: 4rem 4rem 6rem;
-  background: white;
-  margin: 1em;
-}
-
-@media (max-width: 530px) {
-  .jetpack-disconnected .jp-connect-full__container .jp-connect-full__container-card {
-    padding: 2rem 2rem;
-  }
-}
-
-.jetpack-disconnected .jp-connect-full__container .jp-connect-full__container-card img.jetpack-logo {
-  width: 160px;
-}
-
-.jetpack-disconnected .jp-connect-full__container .jp-connect-full__container-card img.support-characters {
-  margin-top: 1.5rem;
-  width: 50%;
-}
-
-.jetpack-disconnected .jp-connect-full__container h4 {
-  line-height: 1.25;
-  font-size: 1.5rem;
-  font-weight: normal;
-  margin: 1em 0;
-}
-
-.jetpack-disconnected.toplevel_page_jetpack .jp-connect-full__container {
-  position: relative;
-  bottom: 0;
-  box-shadow: 0 0 0 1px #c3c4c7, 0 1px 1px 1px rgba(0, 0, 0, 0.04);
-  display: none;
-}
-
-.jetpack-disconnected.toplevel_page_jetpack .jp-connect-full__container .jp-connect-full__container-card {
-  margin: 0;
-}
-
-@media (min-width: 782px) {
-  .jetpack-disconnected.toplevel_page_jetpack .jp-connect-full__container {
-    left: 0;
-  }
+.jp-connect-full__svg-jupiter {
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  opacity: .90;
 }
 
 @media (max-width: 782px) {
-  .jetpack-disconnected.toplevel_page_jetpack .jp-connect-full__container {
-    top: 32px;
+  .jp-connect-full__svg-jupiter {
+    display: none;
   }
 }
 
-@media (max-width: 530px) {
-  .jetpack-disconnected.toplevel_page_jetpack .jp-connect-full__container {
-    top: 0px;
-  }
+.jp-connect-full__svg-stars {
+  position: absolute;
+  left: 6.25rem;
+  top: 6.25rem;
+  opacity: .90;
 }
 
-.jetpack-disconnected.toplevel_page_jetpack .jp-jetpack-connect__container .jp-connect-full__container {
-  display: block;
-}
-
-@media (max-width: 530px) {
-  .jetpack-disconnected.toplevel_page_jetpack .jp-jetpack-connect__container .jp-connect-full__container .jp-connect-full__step-header h2 {
-    margin: 0;
+@media (max-width: 782px) {
+  .jp-connect-full__svg-stars {
+    display: none;
   }
 }
 
@@ -171,158 +106,124 @@ https://github.com/thoughtbot/bourbon
   position: absolute;
   right: 0;
   top: 0;
-  fill: #a2a2a2;
+  fill: #87a6bc;
   padding: 1rem;
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.jp-connect-full__step-header {
-  max-width: 700px;
-  margin: 0 auto 40px auto;
-  line-height: 1.5;
-}
-
-@media (max-width: 530px) {
-  .jp-connect-full__step-header {
-    margin-bottom: 1.5rem;
+@media (max-width: 600px) {
+  .jp-connect-full__svg-dismiss {
+    top: 3.125rem;
   }
 }
 
-.jp-connect-full__step-header h2 {
-  margin: 1.5rem 10% 0;
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.2;
-  color: black;
+.jp-connect-full__step-header-logos {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
-@media (max-width: 530px) {
-  .jp-connect-full__step-header h2 {
-    margin-top: 1rem;
-    font-size: 1.5rem;
+.jp-connect-full__step-header-logos .jp-connect-full__svg-jetpack,
+.jp-connect-full__step-header-logos .jp-connect-full__svg-jetpack {
+  fill: #87a6bc;
+}
+
+.jp-connect-full__step-header-logos .jp-connect-full__svg-sync {
+  fill: #2e4453;
+  margin: 0 1rem;
+}
+
+@media (max-width: 600px) {
+  .jp-connect-full__step-header-logos {
+    padding-top: 2rem;
   }
 }
 
-.jp-connect-full__step-header h3 {
-  color: #747474;
-  font-size: 1rem;
-  font-weight: normal;
-  margin: 0.625rem 0 1.5rem;
+.jp-connect-full__step-header-title {
+  padding: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: #2e4453;
+  font-weight: 400;
 }
 
-.jp-connect-full__step-header.bottom {
-  margin-top: 5rem;
+.jp-connect-full__card {
+  padding: 0;
+  margin: 0 auto;
+  box-shadow: 0 0 0 1px rgba(200, 215, 225, 0.5), 0 1px 2px #e9eff3;
+  background: white;
+  max-width: 34.375rem;
 }
 
-#jp-connect-full__step2-header {
-  display: none;
+.jp-connect-full__card-inner {
+  padding: 1rem;
+}
+
+.jp-connect-full__card-description {
+  font-size: 0.875rem;
+  color: #2e4453;
+}
+
+.jp-connect-full__card-footer {
+  background: #f3f6f8;
+  padding: 1rem;
+  box-shadow: 0 0 0 1px rgba(200, 215, 225, 0.5), 0 1px 2px #e9eff3;
 }
 
 .jp-connect-full__tos-blurb {
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   margin: 0 auto 1rem;
+  max-width: 24.0625rem;
+  color: #2e4453;
+}
+
+.jp-connect-full__tos-a {
+  text-decoration: none;
+  color: #0087be;
+}
+
+.jp-connect-full__button-container {
+  margin: 0;
+}
+
+.jp-connect-full__button-container .dops-button.is-primary {
+  background: #00BE28;
+  border-color: #00a523;
+}
+
+.jp-connect-full__button-container .dops-button.is-primary:hover, .jp-connect-full__button-container .dops-button.is-primary:focus {
+  background: #00a523;
+  border-color: #008b1d;
+}
+
+.jp-connect-full__help-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #87a6bc;
+  padding: 1rem;
+}
+
+.jp-connect-full__help-button .gridicon {
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  top: 4px;
 }
 
 .jp-connect-full__dismiss {
   cursor: pointer;
 }
 
-.jp-connect-full__dismiss-paragraph {
-  font-size: 0.75rem;
-}
-
-.jp-connect-full__tos-blurb a,
-.jp-connect-full__dismiss-paragraph a {
-  cursor: pointer;
-  color: inherit;
-  text-decoration: underline;
-}
-
-.jp-connect-full__row {
-  display: flex;
-  justify-content: space-around;
-  justify-content: space-evenly;
-  text-align: left;
-  align-items: baseline;
-  margin: 0 auto;
-  max-width: 1000px;
-}
-
-.jp-connect-full__slide {
-  max-width: 38%;
-  margin: 3rem 0;
-}
-
-@media (max-width: 782px) {
-  .jp-connect-full__slide {
-    margin: 1.875rem 0;
-  }
-}
-
-.jp-connect-full__slide h3 {
-  font-size: 1.25rem;
-}
-
-.jp-connect-full__slide img {
-  max-width: 100%;
-}
-
-.jp-connect-full__slide ul {
-  list-style: disc;
-  margin-left: 16px;
-}
-
-@media (min-width: 600px) {
-  .jp-connect-full__slide .illustration {
-    margin-bottom: 2rem;
-  }
-}
-
-.jp-connect-full__step-support {
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.25;
-}
-
-.jp-connect-full__step-support h2 {
-  margin: 1rem 0 0;
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: black;
-}
-
-.jp-connect-full__step-support h3 {
-  color: #747474;
-  font-size: 1rem;
-  font-weight: normal;
-  margin: 0.625rem 0 1.5rem;
-}
-
-.jp-connect-full__button-container-loading {
-  font-size: 0.875rem;
-  animation: jetpack-loading-fade 1.6s ease-in-out infinite;
-}
-
-.jp-connect-full__button-container .jp-spinner {
-  width: 100%;
-}
-
-@media screen and (max-width: 480px) {
-  .jp-connect-full__row {
-    display: block;
-  }
-  .jp-connect-full__slide {
-    margin: 2em 0;
-    max-width: 100%;
-  }
-}
-
 .updated.jp-wpcom-connect__container {
   border-left: none;
   padding: 0;
-  border: 1px solid #c3c4c7;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 0 1px rgba(200, 215, 225, 0.5), 0 1px 2px #e9eff3;
 }
 
 @media screen and (max-width: 782px) {
@@ -340,51 +241,10 @@ https://github.com/thoughtbot/bourbon
   text-decoration: none;
 }
 
-.jp-wpcom-connect__container-top-text + .jp-wpcom-connect__inner-container .notice-dismiss::before {
-  color: white;
-}
-
-.jp-wpcom-connect__container-top-text {
-  padding: 15px 35px 25px 15px;
-  background-color: #00be28;
-  color: white;
-  display: flex;
-  align-items: baseline;
-}
-
-.jp-wpcom-connect__container-top-text svg {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  position: relative;
-  top: 7px;
-}
-
-@media (max-width: 530px) {
-  .jp-wpcom-connect__container-top-text svg {
-    flex: 1;
-  }
-}
-
-.jp-wpcom-connect__container-top-text svg path {
-  fill: #fff;
-}
-
-.jp-wpcom-connect__container-top-text span {
-  display: inline-block;
-}
-
-@media (max-width: 530px) {
-  .jp-wpcom-connect__container-top-text span {
-    flex: 9;
-  }
-}
-
 .jp-wpcom-connect__container {
   display: block;
   position: relative;
   box-sizing: border-box;
-  background-color: #00be28;
 }
 
 .jp-wpcom-connect__inner-container > a:first-child {
@@ -392,70 +252,51 @@ https://github.com/thoughtbot/bourbon
 }
 
 .jp-wpcom-connect__inner-container {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: left;
-  background: #fff;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: left;
+      justify-content: left;
 }
 
 .jp-wpcom-connect__content-container {
-  width: 1250px;
+  max-width: 800px;
   position: relative;
   padding: 2rem;
   z-index: 0;
 }
 
+@media (min-width: 782px) {
+  .jp-wpcom-connect__content-container {
+    padding: 2rem 2rem 6rem 2rem;
+  }
+}
+
 .jp-wpcom-connect__content-container p {
-  color: #6f6f6f;
+  color: #4f748e;
   font-size: 0.875rem;
 }
 
 .jp-wpcom-connect__content-container h2 {
   margin-top: 0;
+  color: #4F748E;
   line-height: 1.6;
-  display: block;
-  margin-bottom: 1.5rem;
-}
-
-@media (max-width: 530px) {
-  .jp-wpcom-connect__hide-phone-and-smaller {
-    display: none !important;
-  }
 }
 
 .jp-wpcom-connect__content-icon {
-  margin: 0 1.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.jp-connect-illo img {
-  display: block;
-  margin: 0 auto;
-}
-
-.jp-connect-illo .jetpack-logo {
-  margin-bottom: 2.25rem;
-}
-
-@media (max-width: 530px) {
-  .jp-connect-illo .jetpack-logo {
-    margin-left: 0;
-  }
+  float: right;
+  margin: 0 1.5rem 0 2.25rem;
 }
 
 @media (max-width: 782px) {
-  .jp-connect-illo {
+  .jp-wpcom-connect__content-icon.jp-connect-illo {
+    float: none;
     width: 100%;
-    margin: 0.5rem 0;
-    display: block;
-  }
-}
-
-@media (min-width: 900px) {
-  .jp-wpcom-connect__slide-text {
-    padding-left: 2.8125rem;
+    text-align: center;
+    margin: 2.25rem 0 1.5rem;
   }
 }
 
@@ -464,24 +305,14 @@ https://github.com/thoughtbot/bourbon
 }
 
 .jp-wpcom-connect__slide.jp__slide-is-active {
-  display: flex;
-  align-items: flex-start;
+  display: block;
 }
 
-@media (max-width: 782px) {
-  .jp-wpcom-connect__slide.jp__slide-is-active {
-    display: block;
+@media (min-width: 782px) {
+  .jp-wpcom-connect__content-container .jp-banner__button-container {
+    position: absolute;
+    bottom: 0.5rem;
   }
-}
-
-.jp-wpcom-connect__slide ul {
-  list-style: disc;
-  padding: 0 0 0 0.9375rem;
-}
-
-.jp-wpcom-connect__slide ul li {
-  color: #6f6f6f;
-  font-size: 0.75rem;
 }
 
 .jp-banner__button-container .dops-button {
@@ -489,11 +320,8 @@ https://github.com/thoughtbot/bourbon
 }
 
 .jp-banner__button-container .dops-button.is-primary {
-  background: #00be28;
+  background: #00BE28;
   border-color: #00a523;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  flex-shrink: 0;
 }
 
 .jp-banner__button-container .dops-button.is-primary:hover, .jp-banner__button-container .dops-button.is-primary:focus {
@@ -501,21 +329,85 @@ https://github.com/thoughtbot/bourbon
   border-color: #008b1d;
 }
 
-.jp-banner__button-container .dops-button.is-primary:focus {
-  box-shadow: 0 0 0 1px white, 0 0 0 3px #008b1d;
+.jp-wpcom-connect__vertical-nav {
+  background-color: #F3F6F8;
 }
 
-.jp-wpcom-connect__quest {
-  position: relative;
-  padding-left: 2.8125rem;
-  font-size: 1.25rem;
+@media (min-width: 600px) {
+  .jp-wpcom-connect__vertical-nav {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
 }
 
-.jp-wpcom-connect__quest-marker.gridicon {
-  position: absolute;
-  left: 0;
-  top: -0.1875rem;
-  fill: #eec74f;
+@media (max-width: 600px) {
+  .jp-wpcom-connect__vertical-nav {
+    display: none;
+  }
+}
+
+.jp-wpcom-connect__vertical-nav-container {
+  width: 15rem;
+}
+
+.vertical-menu__feature-item-label {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .vertical-menu__feature-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+    border: none;
+    padding: 0.5rem;
+    border-bottom: 1px solid #c8d7e1;
+    border-right: 1px solid #c8d7e1;
+    border-left: 3px solid #F3F6F8;
+    background-color: #F3F6F8;
+    color: #87a6bc;
+    cursor: pointer;
+  }
+  .vertical-menu__feature-item:last-of-type {
+    position: relative;
+    top: 1px;
+  }
+  .vertical-menu__feature-item-is-selected {
+    border-left: 3px solid #0087be;
+    border-right: 1px solid #fff;
+    background-color: #fff;
+    color: #2e4453;
+  }
+  .vertical-menu__feature-item-is-selected.jp-feature-intro {
+    border-left: 3px solid #00BE28;
+  }
+  .vertical-menu__feature-item-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.25rem;
+    text-align: center;
+  }
+  .vertical-menu__feature-item svg {
+    fill: #86A6BD;
+  }
+  .vertical-menu__feature-item-is-selected svg {
+    fill: #3D596D;
+  }
+  .vertical-menu__feature-item-is-selected.jp-feature-intro svg {
+    fill: #00BE28;
+  }
+  .vertical-menu__feature-item-is-selected.wp-app-logo svg path {
+    fill: #3D596D;
+  }
+  .vertical-menu__feature-item-label {
+    display: block;
+    padding: 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=jetpack-banners.css.map */

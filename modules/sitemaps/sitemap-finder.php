@@ -3,7 +3,7 @@
  * The functions in this class provide an API for handling
  * sitemap related URIs.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 4.8.0
  * @author Automattic
  */
@@ -29,14 +29,7 @@ class Jetpack_Sitemap_Finder {
 	 * @return string Complete URI of the given sitemap file.
 	 */
 	public function construct_sitemap_url( $filename ) {
-		$url = jetpack_sitemap_uri( $filename );
-
-		if ( pathinfo( $filename, PATHINFO_EXTENSION ) === 'xsl' ) {
-			// strip scheme for sites where sitemap could be access via http or https
-			$url = preg_replace( '/^https?:/', '', $url );
-		}
-
-		return $url;
+		return jetpack_sitemap_uri( $filename );
 	}
 
 	/**
