@@ -3,7 +3,7 @@
  * Deprecated since 7.7.
  *
  * @deprecated
- * @package automattic/jetpack
+ * @package jetpack
  */
 
 // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

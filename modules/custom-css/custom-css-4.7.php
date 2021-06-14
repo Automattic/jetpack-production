@@ -7,7 +7,7 @@ use Automattic\Jetpack\Assets;
  *
  * @since 4.4.2
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -135,10 +135,10 @@ class Jetpack_Custom_CSS_Enhancements {
 	 */
 	public static function admin_menu() {
 		// Add in our legacy page to support old bookmarks and such.
-		add_submenu_page( null, __( 'CSS', 'jetpack' ), __( 'Additional CSS', 'jetpack' ), 'edit_theme_options', 'editcss', array( __CLASS__, 'admin_page' ) );
+		add_submenu_page( null, __( 'CSS', 'jetpack' ), __( 'Edit CSS', 'jetpack' ), 'edit_theme_options', 'editcss', array( __CLASS__, 'admin_page' ) );
 
 		// Add in our new page slug that will redirect to the customizer.
-		$hook = add_theme_page( __( 'CSS', 'jetpack' ), __( 'Additional CSS', 'jetpack' ), 'edit_theme_options', 'editcss-customizer-redirect', array( __CLASS__, 'admin_page' ) );
+		$hook = add_theme_page( __( 'CSS', 'jetpack' ), __( 'Edit CSS', 'jetpack' ), 'edit_theme_options', 'editcss-customizer-redirect', array( __CLASS__, 'admin_page' ) );
 		add_action( "load-{$hook}", array( __CLASS__, 'customizer_redirect' ) );
 	}
 
@@ -365,9 +365,9 @@ class Jetpack_Custom_CSS_Enhancements {
 		$content_help = __( 'Set a different content width for full size images.', 'jetpack' );
 		if ( ! empty( $GLOBALS['content_width'] ) ) {
 			$content_help .= sprintf(
-				_n( ' The default content width for the <strong>%1$s</strong> theme is %2$d pixel.', ' The default content width for the <strong>%1$s</strong> theme is %2$d pixels.', (int) $GLOBALS['content_width'], 'jetpack' ),
+				_n( ' The default content width for the <strong>%1$s</strong> theme is %2$d pixel.', ' The default content width for the <strong>%1$s</strong> theme is %2$d pixels.', intval( $GLOBALS['content_width'] ), 'jetpack' ),
 				wp_get_theme()->Name,
-				(int) $GLOBALS['content_width']
+				intval( $GLOBALS['content_width'] )
 			);
 		}
 
@@ -1017,7 +1017,7 @@ class Jetpack_Custom_CSS_Enhancements {
 	 * @return int Integer.
 	 */
 	public static function intval_base10( $value ) {
-		return (int) $value;
+		return intval( $value, 10 );
 	}
 
 	/**

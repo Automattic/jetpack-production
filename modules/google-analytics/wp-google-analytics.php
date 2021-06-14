@@ -31,7 +31,6 @@ require_once( plugin_basename( 'classes/wp-google-analytics-utils.php' ) );
 require_once( plugin_basename( 'classes/wp-google-analytics-options.php' ) );
 require_once( plugin_basename( 'classes/wp-google-analytics-legacy.php' ) );
 require_once( plugin_basename( 'classes/wp-google-analytics-universal.php' ) );
-require_once plugin_basename( 'classes/class-jetpack-google-amp-analytics.php' );
 
 class Jetpack_Google_Analytics {
 
@@ -54,11 +53,11 @@ class Jetpack_Google_Analytics {
 		// At this time, we only leverage universal analytics when enhanced ecommerce is selected and WooCommerce is active.
 		// Otherwise, don't bother emitting the tracking ID or fetching analytics.js
 		if ( class_exists( 'WooCommerce' ) && Jetpack_Google_Analytics_Options::enhanced_ecommerce_tracking_is_enabled() ) {
-			self::$analytics = new Jetpack_Google_Analytics_Universal();
-			new Jetpack_Google_AMP_Analytics();
+			$analytics = new Jetpack_Google_Analytics_Universal();
 		} else {
-			self::$analytics = new Jetpack_Google_Analytics_Legacy();
+			$analytics = new Jetpack_Google_Analytics_Legacy();
 		}
+
 	}
 
 	/**
@@ -70,73 +69,6 @@ class Jetpack_Google_Analytics {
 		}
 
 		return self::$instance;
-	}
-
-	/**
-	 * Add amp-analytics tags.
-	 *
-	 * @param array $analytics_entries An associative array of the analytics entries.
-	 *
-	 * @return array
-	 */
-	public static function amp_analytics_entries( $analytics_entries ) {
-		if ( ! is_array( $analytics_entries ) ) {
-			$analytics_entries = array();
-		}
-
-		$amp_tracking_codes = static::get_amp_tracking_codes( $analytics_entries );
-		$jetpack_account    = Jetpack_Google_Analytics_Options::get_tracking_code();
-
-		// Bypass tracking codes already set on AMP plugin.
-		if ( in_array( $jetpack_account, $amp_tracking_codes, true ) ) {
-			return $analytics_entries;
-		}
-
-		$config_data = wp_json_encode(
-			array(
-				'vars'     => array(
-					'account' => Jetpack_Google_Analytics_Options::get_tracking_code(),
-				),
-				'triggers' => array(
-					'trackPageview' => array(
-						'on'      => 'visible',
-						'request' => 'pageview',
-					),
-				),
-			)
-		);
-
-		// Generate a hash string to uniquely identify this entry.
-		$entry_id = substr( md5( 'googleanalytics' . $config_data ), 0, 12 );
-
-		$analytics_entries[ $entry_id ] = array(
-			'type'   => 'googleanalytics',
-			'config' => $config_data,
-		);
-
-		return $analytics_entries;
-	}
-
-	/**
-	 * Get AMP tracking codes.
-	 *
-	 * @param array $analytics_entries The codes available for AMP.
-	 *
-	 * @return array
-	 */
-	protected static function get_amp_tracking_codes( $analytics_entries ) {
-		$entries  = array_column( $analytics_entries, 'config' );
-		$accounts = array();
-
-		foreach ( $entries as $entry ) {
-			$entry = json_decode( $entry );
-
-			if ( ! empty( $entry->vars->account ) ) {
-				$accounts[] = $entry->vars->account;
-			}
-		}
-
-		return $accounts;
 	}
 }
 

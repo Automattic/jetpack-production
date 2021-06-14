@@ -8,8 +8,6 @@
  * 'after_setup_theme' action:
  *
  * add_theme_support( 'jetpack-devicepx' );
- *
- * @package automattic/jetpack
  */
 
 /**

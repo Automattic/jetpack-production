@@ -4,14 +4,15 @@
  *
  * @since 8.4.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Podcast_Player;
 
-use Automattic\Jetpack\Blocks;
+use WP_Error;
 use Jetpack_Gutenberg;
 use Jetpack_Podcast_Helper;
+use Jetpack_AMP_Support;
 
 const FEATURE_NAME = 'podcast-player';
 const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
@@ -21,26 +22,23 @@ if ( ! class_exists( 'Jetpack_Podcast_Helper' ) ) {
 }
 
 /**
- * Registers the block for use in Gutenberg. This is done via an action so that
- * we can disable registration if we need to.
+ * Registers the block for use in Gutenberg
+ * This is done via an action so that we can disable
+ * registration if we need to.
  */
 function register_block() {
-	Blocks::jetpack_register_block(
+	jetpack_register_block(
 		BLOCK_NAME,
 		array(
 			'attributes'      => array(
 				'url'                    => array(
-					'type' => 'string',
+					'type' => 'url',
 				),
 				'itemsToShow'            => array(
 					'type'    => 'integer',
 					'default' => 5,
 				),
 				'showCoverArt'           => array(
-					'type'    => 'boolean',
-					'default' => true,
-				),
-				'showEpisodeTitle'       => array(
 					'type'    => 'boolean',
 					'default' => true,
 				),
@@ -56,62 +54,30 @@ function register_block() {
 add_action( 'init', __NAMESPACE__ . '\register_block' );
 
 /**
- * Returns the error message wrapped in HTML if current user
- * has the capability to edit the post. Public visitors will
- * never see errors.
- *
- * @param string $message The error message to display.
- * @return string
- */
-function render_error( $message ) {
-	// Suppress errors for users unable to address them.
-	if ( ! current_user_can( 'edit_posts' ) ) {
-		return '';
-	}
-	return '<p>' . esc_html( $message ) . '</p>';
-}
-
-/**
  * Podcast Player block registration/dependency declaration.
  *
- * @param array  $attributes Array containing the Podcast Player block attributes.
- * @param string $content    Fallback content - a direct link to RSS, as rendered by save.js.
+ * @param array $attributes Array containing the Podcast Player block attributes.
  * @return string
  */
-function render_block( $attributes, $content ) {
-	// Don't render an interactive version of the block outside the frontend context.
-	if ( ! jetpack_is_frontend() ) {
-		return $content;
-	}
+function render_block( $attributes ) {
 
 	// Test for empty URLS.
 	if ( empty( $attributes['url'] ) ) {
-		return render_error( __( 'No Podcast URL provided. Please enter a valid Podcast RSS feed URL.', 'jetpack' ) );
+		return '<p>' . esc_html__( 'No Podcast URL provided. Please enter a valid Podcast RSS feed URL.', 'jetpack' ) . '</p>';
 	}
 
 	// Test for invalid URLs.
 	if ( ! wp_http_validate_url( $attributes['url'] ) ) {
-		return render_error( __( 'Your podcast URL is invalid and couldn\'t be embedded. Please double check your URL.', 'jetpack' ) );
-	}
-
-	if ( isset( $attributes['selectedEpisodes'] ) && count( $attributes['selectedEpisodes'] ) ) {
-		$guids       = array_map(
-			function ( $episode ) {
-				return $episode['guid'];
-			},
-			$attributes['selectedEpisodes']
-		);
-		$player_args = array( 'guids' => $guids );
-	} else {
-		$player_args = array();
+		return '<p>' . esc_html__( 'Your podcast URL is invalid and couldn\'t be embedded. Please double check your URL.', 'jetpack' ) . '</p>';
 	}
 
 	// Sanitize the URL.
 	$attributes['url'] = esc_url_raw( $attributes['url'] );
-	$player_data       = ( new Jetpack_Podcast_Helper( $attributes['url'] ) )->get_player_data( $player_args );
+
+	$player_data = Jetpack_Podcast_Helper::get_player_data( $attributes['url'] );
 
 	if ( is_wp_error( $player_data ) ) {
-		return render_error( $player_data->get_error_message() );
+		return '<p>' . esc_html( $player_data->get_error_message() ) . '</p>';
 	}
 
 	return render_player( $player_data, $attributes );
@@ -127,7 +93,7 @@ function render_block( $attributes, $content ) {
 function render_player( $player_data, $attributes ) {
 	// If there are no tracks (it is possible) then display appropriate user facing error message.
 	if ( empty( $player_data['tracks'] ) ) {
-		return render_error( __( 'No tracks available to play.', 'jetpack' ) );
+		return '<p>' . esc_html__( 'No tracks available to play.', 'jetpack' ) . '</p>';
 	}
 
 	// Only use the amount of tracks requested.
@@ -138,7 +104,7 @@ function render_player( $player_data, $attributes ) {
 	);
 
 	// Generate a unique id for the block instance.
-	$instance_id             = wp_unique_id( 'jetpack-podcast-player-block-' . get_the_ID() . '-' );
+	$instance_id             = wp_unique_id( 'jetpack-podcast-player-block-' );
 	$player_data['playerId'] = $instance_id;
 
 	// Generate object to be used as props for PodcastPlayer.
@@ -149,58 +115,55 @@ function render_player( $player_data, $attributes ) {
 		$player_data
 	);
 
-	$primary_colors    = get_colors( 'primary', $attributes, 'color' );
 	$secondary_colors  = get_colors( 'secondary', $attributes, 'color' );
 	$background_colors = get_colors( 'background', $attributes, 'background-color' );
 
-	$player_classes_name  = trim( "{$secondary_colors['class']} {$background_colors['class']}" );
-	$player_inline_style  = trim( "{$secondary_colors['style']} ${background_colors['style']}" );
-	$player_inline_style .= get_css_vars( $attributes );
+	$player_classes_name = trim( "{$secondary_colors['class']} {$background_colors['class']}" );
+	$player_inline_style = trim( "{$secondary_colors['style']} ${background_colors['style']}" );
 
-	$block_classname = Blocks::classes( FEATURE_NAME, $attributes, array( 'is-default' ) );
-	$is_amp          = Blocks::is_amp_request();
+	$block_classname = Jetpack_Gutenberg::block_classes( FEATURE_NAME, $attributes, array( 'is-default' ) );
+	$is_amp          = ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() );
 
 	ob_start();
 	?>
 	<div class="<?php echo esc_attr( $block_classname ); ?>" id="<?php echo esc_attr( $instance_id ); ?>">
 		<section
-			class="jetpack-podcast-player <?php echo esc_attr( $player_classes_name ); ?>"
+			class="<?php echo esc_attr( $player_classes_name ); ?>"
 			style="<?php echo esc_attr( $player_inline_style ); ?>"
 		>
-			<?php
-			render(
-				'podcast-header',
-				array_merge(
-					$player_props,
-					array(
-						'primary_colors' => $primary_colors,
-						'player_id'      => $player_data['playerId'],
-					)
-				)
-			);
-			?>
-			<?php if ( count( $player_data['tracks'] ) > 1 ) : ?>
-			<ol class="jetpack-podcast-player__tracks">
-				<?php foreach ( $player_data['tracks'] as $track_index => $attachment ) : ?>
-					<?php
-					render(
-						'playlist-track',
-						array(
-							'is_active'        => 0 === $track_index,
-							'attachment'       => $attachment,
-							'primary_colors'   => $primary_colors,
-							'secondary_colors' => $secondary_colors,
-						)
-					);
-					?>
+			<ol class="jetpack-podcast-player__episodes">
+				<?php foreach ( $player_data['tracks'] as $attachment ) : ?>
+				<li
+					class="jetpack-podcast-player__episode <?php echo esc_attr( $secondary_colors['class'] ); ?>"
+					style="<?php echo esc_attr( $secondary_colors['style'] ); ?>"
+				>
+					<a
+						class="jetpack-podcast-player__episode-link"
+						href="<?php echo esc_url( $attachment['link'] ); ?>"
+						role="button"
+						aria-pressed="false"
+					>
+						<span class="jetpack-podcast-player__episode-status-icon"></span>
+						<span class="jetpack-podcast-player__episode-title"><?php echo esc_html( $attachment['title'] ); ?></span>
+						<time class="jetpack-podcast-player__episode-duration"><?php echo ( ! empty( $attachment['duration'] ) ? esc_html( $attachment['duration'] ) : '' ); ?></time>
+					</a>
+				</li>
 				<?php endforeach; ?>
 			</ol>
-			<?php endif; ?>
 		</section>
 		<?php if ( ! $is_amp ) : ?>
 		<script type="application/json"><?php echo wp_json_encode( $player_props ); ?></script>
 		<?php endif; ?>
 	</div>
+	<?php if ( ! $is_amp ) : ?>
+	<script>
+		( function( instanceId ) {
+			document.getElementById( instanceId ).classList.remove( 'is-default' );
+			window.jetpackPodcastPlayers=(window.jetpackPodcastPlayers||[]);
+			window.jetpackPodcastPlayers.push( instanceId );
+		} )( <?php echo wp_json_encode( $instance_id ); ?> );
+	</script>
+	<?php endif; ?>
 	<?php
 	/**
 	 * Enqueue necessary scripts and styles.
@@ -250,72 +213,4 @@ function get_colors( $name, $attrs, $property ) {
 	}
 
 	return $colors;
-}
-
-/**
- * It generates a string with CSS variables according to the
- * block colors, prefixing each one with `--jetpack-podcast-player'.
- *
- * @param array $attrs Podcast Block attributes object.
- * @return string      CSS variables depending on block colors.
- */
-function get_css_vars( $attrs ) {
-	$colors_name = array( 'primary', 'secondary', 'background' );
-
-	$inline_style = '';
-	foreach ( $colors_name as $color ) {
-		$hex_color = 'hex' . ucfirst( $color ) . 'Color';
-		if ( ! empty( $attrs[ $hex_color ] ) ) {
-			$inline_style .= " --jetpack-podcast-player-{$color}: {$attrs[ $hex_color ]};";
-		}
-	}
-	return $inline_style;
-}
-
-/**
- * Render the given template in server-side.
- * Important note:
- *    The $template_props array will be extracted.
- *    This means it will create a var for each array item.
- *    Keep it mind when using this param to pass
- *    properties to the template.
- *
- * @param string $name           Template name, available in `./templates` folder.
- * @param array  $template_props Template properties. Optional.
- * @param bool   $print          Render template. True as default.
- * @return false|string          HTML markup or false.
- */
-function render( $name, $template_props = array(), $print = true ) {
-	if ( ! strpos( $name, '.php' ) ) {
-		$name = $name . '.php';
-	}
-
-	$template_path = __DIR__ . '/templates/' . $name;
-
-	if ( ! file_exists( $template_path ) ) {
-		return '';
-	}
-
-	/*
-	 * Optionally provided an assoc array of data to pass to template.
-	 * IMPORTANT: It will be extracted into variables.
-	 */
-	if ( is_array( $template_props ) ) {
-		/*
-		 * It ignores the `discouraging` sniffer rule for extract, since it's needed
-		 * to make the templating system works.
-		 */
-		extract( $template_props ); // phpcs:ignore WordPress.PHP.DontExtract.extract_extract
-	}
-
-	if ( $print ) {
-		include $template_path;
-	} else {
-		ob_start();
-		include $template_path;
-		$markup = ob_get_contents();
-		ob_end_clean();
-
-		return $markup;
-	}
 }

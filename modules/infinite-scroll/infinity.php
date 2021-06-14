@@ -1,7 +1,6 @@
 <?php
 
 use Automattic\Jetpack\Assets;
-use Automattic\Jetpack\Redirect;
 
 /*
 Plugin Name: The Neverending Home Page.
@@ -19,10 +18,6 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * styling from each theme; including fixed footer.
  */
 class The_Neverending_Home_Page {
-	/**
-	* Maximum allowed number of posts per page in $_REQUEST.
-	*/
-	const MAX_ALLOWED_POSTS_PER_PAGE_ΙΝ_REQUEST = 5000;
 
 	/**
 	 * Register actions and filters, plus parse IS settings
@@ -45,10 +40,6 @@ class The_Neverending_Home_Page {
 
 		// Plugin compatibility
 		add_filter( 'grunion_contact_form_redirect_url', array( $this, 'filter_grunion_redirect_url' ) );
-
-		// AMP compatibility
-		// needs to happen after parse_query so that Jetpack_AMP_Support::is_amp_request() is ready.
-		add_action( 'wp', array( $this, 'amp_load_hooks' ) );
 
 		// Parse IS settings from theme
 		self::get_settings();
@@ -257,23 +248,11 @@ class The_Neverending_Home_Page {
 	 * @return int
 	 */
 	static function posts_per_page() {
-		$posts_per_page             = self::get_settings()->posts_per_page ? self::get_settings()->posts_per_page : self::wp_query()->get( 'posts_per_page' );
-		$posts_per_page_core_option = get_option( 'posts_per_page' );
+		$posts_per_page = self::get_settings()->posts_per_page ? self::get_settings()->posts_per_page : self::wp_query()->get( 'posts_per_page' );
 
-		// If Infinite Scroll is set to click, and if the site owner changed posts_per_page, let's use that.
-		if (
-			'click' === self::get_settings()->type
-				&& ( '10' !== $posts_per_page_core_option )
-		) {
-			$posts_per_page = $posts_per_page_core_option;
-		}
-
-		// Take JS query into consideration here.
-		$posts_per_page_in_request = isset( $_REQUEST['query_args']['posts_per_page'] ) ? (int) $_REQUEST['query_args']['posts_per_page'] : 0; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		if ( $posts_per_page_in_request > 0 &&
-			self::MAX_ALLOWED_POSTS_PER_PAGE_ΙΝ_REQUEST >= $posts_per_page_in_request
-		) {
-			$posts_per_page = $posts_per_page_in_request;
+		// Take JS query into consideration here
+		if ( true === isset( $_REQUEST['query_args']['posts_per_page'] ) ) {
+			$posts_per_page = $_REQUEST['query_args']['posts_per_page'];
 		}
 
 		/**
@@ -411,12 +390,11 @@ class The_Neverending_Home_Page {
 	}
 
 	function infinite_setting_html_calypso_placeholder() {
-		$details     = get_blog_details();
-		$writing_url = Redirect::get_url( 'calypso-settings-writing', array( 'site' => $details->domain ) );
+		$details = get_blog_details();
 		echo '<span>' . sprintf(
 			/* translators: Variables are the enclosing link to the settings page */
-			esc_html__( 'This option has moved. You can now manage it %1$shere%2$s.', 'jetpack' ),
-			'<a href="' . esc_url( $writing_url ) . '">',
+			esc_html__( 'This option has moved. You can now manage it %1$shere%2$s.' ),
+			'<a href="' . esc_url( 'https://wordpress.com/settings/writing/' . $details->domain ) . '">',
 			'</a>'
 		) . '</span>';
 	}
@@ -455,11 +433,6 @@ class The_Neverending_Home_Page {
 		if ( empty( $id ) )
 			return;
 
-		// AMP infinite scroll functionality will start on amp_load_hooks().
-		if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
-			return;
-		}
-
 		// Add our scripts.
 		wp_register_script(
 			'the-neverending-homepage',
@@ -468,7 +441,7 @@ class The_Neverending_Home_Page {
 				'modules/infinite-scroll/infinity.js'
 			),
 			array(),
-			JETPACK__VERSION . '-is5.0.1', // Added for ability to cachebust on WP.com.
+			JETPACK__VERSION . '-is5.0.0', // Added for ability to cachebust on WP.com.
 			true
 		);
 
@@ -854,11 +827,7 @@ class The_Neverending_Home_Page {
 
 			// Check if the taxonomy is attached to one post type only and use its plural name.
 			// If not, use "Posts" without confusing the users.
-			if (
-				is_a( $taxonomy, 'WP_Taxonomy' )
-				&& is_countable( $taxonomy->object_type )
-				&& count( $taxonomy->object_type ) < 2
-			) {
+			if ( count( $taxonomy->object_type ) < 2 ) {
 				$post_type = $taxonomy->object_type[0];
 			}
 		}
@@ -910,7 +879,6 @@ class The_Neverending_Home_Page {
 			'query_before'    => current_time( 'mysql' ),
 			'last_post_date'  => self::get_last_post_date(),
 			'body_class'	  => self::body_class(),
-			'loading_text'	  => esc_js( __( 'Loading new page', 'jetpack' ) ),
 		);
 
 		// Optional order param
@@ -1063,15 +1031,7 @@ class The_Neverending_Home_Page {
 				extend( window.infiniteScroll.settings.scripts, <?php echo wp_json_encode( $scripts ); ?> );
 				extend( window.infiniteScroll.settings.styles, <?php echo wp_json_encode( $styles ); ?> );
 			})();
-		</script>
-		<?php
-		$aria_live = 'assertive';
-		if ( 'scroll' === self::get_settings()->type ) {
-			$aria_live = 'polite';
-		}
-		?>
-		<span id="infinite-aria" aria-live="<?php echo esc_attr( $aria_live ); ?>"></span>
-		<?php
+		</script><?php
 	}
 
 	/**
@@ -1094,19 +1054,7 @@ class The_Neverending_Home_Page {
 			global $wp_scripts;
 
 			// Identify new scripts needed by the latest set of IS posts
-			$new_scripts = array_filter(
-				$wp_scripts->done,
-				function ( $script_name ) use ( $initial_scripts ) {
-					// Jetpack block scripts should always be sent, even if they've been
-					// sent before. These scripts only run once on when loaded, they don't
-					// watch for new blocks being added.
-					if ( 0 === strpos( $script_name, 'jetpack-block-' ) ) {
-						return true;
-					}
-
-					return ! in_array( $script_name, $initial_scripts, true );
-				}
-			);
+			$new_scripts = array_diff( $wp_scripts->done, $initial_scripts );
 
 			// If new scripts are needed, extract relevant data from $wp_scripts
 			if ( ! empty( $new_scripts ) ) {
@@ -1123,11 +1071,9 @@ class The_Neverending_Home_Page {
 
 					// Provide basic script data
 					$script_data = array(
-						'handle'        => $handle,
-						'footer'        => ( is_array( $wp_scripts->in_footer ) && in_array( $handle, $wp_scripts->in_footer, true ) ),
-						'extra_data'    => $wp_scripts->print_extra_script( $handle, false ),
-						'before_handle' => $wp_scripts->print_inline_script( $handle, 'before', false ),
-						'after_handle'  => $wp_scripts->print_inline_script( $handle, 'after', false ),
+						'handle'     => $handle,
+						'footer'     => ( is_array( $wp_scripts->in_footer ) && in_array( $handle, $wp_scripts->in_footer ) ),
+						'extra_data' => $wp_scripts->print_extra_script( $handle, false )
 					);
 
 					// Base source
@@ -1368,49 +1314,39 @@ class The_Neverending_Home_Page {
 			$results['type'] = 'success';
 
 			/**
-			 * Fires when rendering Infinite Scroll posts.
+			 * Gather renderer callbacks. These will be called in order and allow multiple callbacks to be queued. Once content is found, no futher callbacks will run.
 			 *
 			 * @module infinite-scroll
 			 *
-			 * @since 2.0.0
+			 * @since 6.0.0
 			 */
-			do_action( 'infinite_scroll_render' );
-			$results['html'] = ob_get_clean();
-			if ( empty( $results['html'] ) ) {
-				/**
-				 * Gather renderer callbacks. These will be called in order and allow multiple callbacks to be queued. Once content is found, no futher callbacks will run.
-				 *
-				 * @module infinite-scroll
-				 *
-				 * @since 6.0.0
-				 */
-				$callbacks = apply_filters(
-					'infinite_scroll_render_callbacks',
-					array( self::get_settings()->render ) // This is the setting callback e.g. from add theme support.
-				);
+			$callbacks = apply_filters( 'infinite_scroll_render_callbacks', array(
+				self::get_settings()->render, // This is the setting callback e.g. from add theme support.
+			) );
 
-				// Append fallback callback. That rhymes.
-				$callbacks[] = array( $this, 'render' );
+			// Append fallback callback. That rhymes.
+			$callbacks[] = array( $this, 'render' );
 
-				foreach ( $callbacks as $callback ) {
-					if ( false !== $callback && is_callable( $callback ) ) {
-						rewind_posts();
-						ob_start();
-						add_action( 'infinite_scroll_render', $callback );
+			foreach ( $callbacks as $callback ) {
+				if ( false !== $callback && is_callable( $callback ) ) {
+					rewind_posts();
+					ob_start();
+					add_action( 'infinite_scroll_render', $callback );
 
-						/**
-						 * This action is already documented above.
-						 * See https://github.com/Automattic/jetpack/pull/16317/
-						 * for more details as to why it was introduced.
-						 */
-						do_action( 'infinite_scroll_render' );
+					/**
+					 * Fires when rendering Infinite Scroll posts.
+					 *
+					 * @module infinite-scroll
+					 *
+					 * @since 2.0.0
+					 */
+					do_action( 'infinite_scroll_render' );
 
-						$results['html'] = ob_get_clean();
-						remove_action( 'infinite_scroll_render', $callback );
-					}
-					if ( ! empty( $results['html'] ) ) {
-						break;
-					}
+					$results['html'] = ob_get_clean();
+					remove_action( 'infinite_scroll_render', $callback );
+				}
+				if ( ! empty( $results['html'] ) ) {
+					break;
 				}
 			}
 
@@ -1430,13 +1366,8 @@ class The_Neverending_Home_Page {
 				$wrapper_classes = is_string( self::get_settings()->wrapper ) ? self::get_settings()->wrapper : 'infinite-wrap';
 				$wrapper_classes .= ' infinite-view-' . $page;
 				$wrapper_classes = trim( $wrapper_classes );
-				$aria_label = sprintf(
-					/* translators: %1$s is the page count */
-					__( 'Page: %1$d.', 'jetpack' ),
-					$page
-				);
 
-				$results['html'] = '<div class="' . esc_attr( $wrapper_classes ) . '" id="infinite-view-' . $page . '" data-page-num="' . $page . '" role="region" aria-label="' . esc_attr( $aria_label ) . '">' . $results['html'] . '</div>';
+				$results['html'] = '<div class="' . esc_attr( $wrapper_classes ) . '" id="infinite-view-' . $page . '" data-page-num="' . $page . '">' . $results['html'] . '</div>';
 			}
 
 			// Fire wp_footer to ensure that all necessary scripts are enqueued. Output isn't used, but scripts are extracted in self::action_wp_footer.
@@ -1613,10 +1544,6 @@ class The_Neverending_Home_Page {
 	 * @return string or null
 	 */
 	function footer() {
-		if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
-			return;
-		}
-
 		// Bail if theme requested footer not show
 		if ( false == self::get_settings()->footer )
 			return;
@@ -1735,270 +1662,6 @@ class The_Neverending_Home_Page {
 			}
 		}
 		return $scripts_data;
-	}
-
-	/**
-	 * Determines whether the legacy AMP Reader post templates are being used.
-	 *
-	 * @return bool
-	 */
-	private function is_exempted_amp_page() {
-		if ( is_singular( 'web-story' ) ) {
-			// Ensure that <amp-next-page> is not injected after <amp-story> as generated by the Web Stories plugin.
-			return true;
-		}
-		if ( function_exists( 'amp_is_legacy' ) ) {
-			// Available since AMP v2.0, this will return false if a theme like Twenty Twenty is selected as the Reader theme.
-			return amp_is_legacy();
-		}
-		if ( method_exists( 'AMP_Options_Manager', 'get_option' ) ) {
-			// In versions prior to v2.0, checking the template mode as being 'reader' is sufficient.
-			return 'reader' === AMP_Options_Manager::get_option( 'theme_support' );
-		}
-		return false;
-	}
-
-	/**
-	 * Load AMP specific hooks.
-	 *
-	 * @return void
-	 */
-	public function amp_load_hooks() {
-		if ( $this->is_exempted_amp_page() ) {
-			return;
-		}
-
-		if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
-			$template = self::get_settings()->render;
-
-			add_filter( 'jetpack_infinite_scroll_load_scripts_and_styles', '__return_false' );
-
-			add_action( 'template_redirect', array( $this, 'amp_start_output_buffering' ), 0 );
-			add_action( 'shutdown', array( $this, 'amp_output_buffer' ), 1 );
-
-			if ( is_callable( "amp_{$template}_hooks" ) ) {
-				call_user_func( "amp_{$template}_hooks" );
-			}
-
-			// Warms up the amp next page markup.
-			// This should be done outside the output buffering callback started in the template_redirect.
-			$this->amp_get_footer_template();
-		}
-	}
-
-	/**
-	 * Start the AMP output buffering.
-	 *
-	 * @return void
-	 */
-	public function amp_start_output_buffering() {
-		ob_start( array( $this, 'amp_finish_output_buffering' ) );
-	}
-
-	/**
-	 * Flush the AMP output buffer.
-	 *
-	 * @return void
-	 */
-	public function amp_output_buffer() {
-		if ( ob_get_contents() ) {
-			ob_end_flush();
-		}
-	}
-
-	/**
-	 * Filter the AMP output buffer contents.
-	 *
-	 * @param string $buffer Contents of the output buffer.
-	 *
-	 * @return string|false
-	 */
-	public function amp_finish_output_buffering( $buffer ) {
-		// Hide WordPress admin bar on next page load.
-		$buffer = preg_replace(
-			'/id="wpadminbar"/',
-			'$0 next-page-hide',
-			$buffer
-		);
-
-		/**
-		 * Get the theme footers.
-		 *
-		 * @module infinite-scroll
-		 *
-		 * @since 9.0.0
-		 *
-		 * @param array  array() An array to store multiple markup entries to be added to the footer.
-		 * @param string $buffer The contents of the output buffer.
-		 */
-		$footers = apply_filters( 'jetpack_amp_infinite_footers', array(), $buffer );
-
-		/**
-		 * Filter the output buffer.
-		 * Themes can leverage this hook to add custom markup on next page load.
-		 *
-		 * @module infinite-scroll
-		 *
-		 * @since 9.0.0
-		 *
-		 * @param string $buffer The contents of the output buffer.
-		 */
-		$buffer = apply_filters( 'jetpack_amp_infinite_output', $buffer );
-
-		// Add the amp next page markup.
-		$buffer = preg_replace(
-			'~</body>~',
-			$this->amp_get_footer_template( $footers ) . '$0',
-			$buffer
-		);
-
-		return $buffer;
-	}
-
-	/**
-	 * Get AMP next page markup with the custom footers.
-	 *
-	 * @param string[] $footers The theme footers.
-	 *
-	 * @return string
-	 */
-	protected function amp_get_footer_template( $footers = array() ) {
-		static $template = null;
-
-		if ( null === $template ) {
-			$template = $this->amp_footer_template();
-		}
-
-		if ( empty( $footers ) ) {
-			return $template;
-		}
-
-		return preg_replace(
-			'/%%footer%%/',
-			implode( '', $footers ),
-			$template
-		);
-	}
-
-	/**
-	 * AMP Next Page markup.
-	 *
-	 * @return string
-	 */
-	protected function amp_footer_template() {
-		ob_start();
-		?>
-<amp-next-page max-pages="<?php echo esc_attr( $this->amp_get_max_pages() ); ?>">
-	<script type="application/json">
-		[
-			<?php echo wp_json_encode( $this->amp_next_page() ); ?>
-		]
-	</script>
-	<div separator>
-		<?php
-		echo wp_kses_post(
-			/**
-			 * AMP infinite scroll separator.
-			 *
-			 * @module infinite-scroll
-			 *
-			 * @since 9.0.0
-			 *
-			 * @param string '' The markup for the next page separator.
-			 */
-			apply_filters( 'jetpack_amp_infinite_separator', '' )
-		);
-		?>
-	</div>
-	<div recommendation-box class="recommendation-box">
-		<template type="amp-mustache">
-			{{#pages}}
-			<?php
-			echo wp_kses_post(
-				/**
-				 * AMP infinite scroll older posts markup.
-				 *
-				 * @module infinite-scroll
-				 *
-				 * @since 9.0.0
-				 *
-				 * @param string '' The markup for the older posts/next page.
-				 */
-				apply_filters( 'jetpack_amp_infinite_older_posts', '' )
-			);
-			?>
-			{{/pages}}
-		</template>
-	</div>
-	<div footer>
-		%%footer%%
-	</div>
-</amp-next-page>
-		<?php
-		return ob_get_clean();
-	}
-
-	/**
-	 * Get the AMP next page information.
-	 *
-	 * @return array
-	 */
-	protected function amp_next_page() {
-		$title = '';
-		$url   = '';
-		$image = '';
-
-		if ( ! static::amp_is_last_page() ) {
-			$title = sprintf(
-				'%s - %s %d - %s',
-				wp_title( '', false ),
-				__( 'Page', 'jetpack' ),
-				max( get_query_var( 'paged', 1 ), 1 ) + 1,
-				get_bloginfo( 'name' )
-			);
-			$url   = get_next_posts_page_link();
-		}
-
-		$next_page = array(
-			'title' => $title,
-			'url'   => $url,
-			'image' => $image,
-		);
-
-		/**
-		 * The next page settings.
-		 * An array containing:
-		 *  - title => The title to be featured on the browser tab.
-		 *  - url   => The URL of next page.
-		 *  - image => The image URL. A required AMP setting, not in use currently. Themes are welcome to leverage.
-		 *
-		 * @module infinite-scroll
-		 *
-		 * @since 9.0.0
-		 *
-		 * @param array $next_page The contents of the output buffer.
-		 */
-		return apply_filters( 'jetpack_amp_infinite_next_page_data', $next_page );
-	}
-
-	/**
-	 * Get the number of pages left.
-	 *
-	 * @return int
-	 */
-	protected static function amp_get_max_pages() {
-		global $wp_query;
-
-		return (int) $wp_query->max_num_pages - $wp_query->query_vars['paged'];
-	}
-
-	/**
-	 * Is the last page.
-	 *
-	 * @return bool
-	 */
-	protected static function amp_is_last_page() {
-		return 0 === static::amp_get_max_pages();
 	}
 };
 

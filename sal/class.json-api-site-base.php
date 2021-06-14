@@ -79,19 +79,7 @@ abstract class SAL_Site {
 
 	abstract public function get_locale();
 
-	/**
-	 * The flag indicates that the site has Jetpack installed
-	 *
-	 * @return bool
-	 */
 	abstract public function is_jetpack();
-
-	/**
-	 * The flag indicates that the site is connected to WP.com via Jetpack Connection
-	 *
-	 * @return bool
-	 */
-	abstract public function is_jetpack_connection();
 
 	abstract public function get_jetpack_modules();
 
@@ -147,33 +135,8 @@ abstract class SAL_Site {
 		);
 	}
 
-	abstract protected function is_wpforteams_site();
-
-	/**
-	 * Get hub blog id for P2 sites.
-	 *
-	 * @return null
-	 */
-	public function get_p2_hub_blog_id() {
-		return null;
-	}
-
-	/**
-	 * Getter for the p2 organization ID.
-	 *
-	 * @return int
-	 */
-	public function get_p2_organization_id() {
-		return 0; // WPForTeams\Constants\NO_ORG_ID not loaded.
-	}
-
-	/**
-	 * Detect whether a site is a WordPress.com on Atomic site.
-	 *
-	 * @return bool
-	 */
 	public function is_wpcom_atomic() {
-		return jetpack_is_atomic_site();
+		return false;
 	}
 
 	public function is_wpcom_store() {
@@ -184,15 +147,11 @@ abstract class SAL_Site {
 		return false;
 	}
 
-	public function is_cloud_eligible() {
-		return false;
-	}
-
-	public function get_products() {
-		return array();
-	}
-
 	public function get_post_by_id( $post_id, $context ) {
+		// Remove the skyword tracking shortcode for posts returned via the API.
+		remove_shortcode( 'skyword-tracking' );
+		add_shortcode( 'skyword-tracking', '__return_empty_string' );
+
 		$post = get_post( $post_id, OBJECT, $context );
 
 		if ( ! $post ) {
@@ -443,8 +402,6 @@ abstract class SAL_Site {
 	}
 
 	function get_capabilities() {
-		$is_wpcom_blog_owner = wpcom_get_blog_owner() === (int) get_current_user_id();
-
 		return array(
 			'edit_pages'          => current_user_can( 'edit_pages' ),
 			'edit_posts'          => current_user_can( 'edit_posts' ),
@@ -458,13 +415,12 @@ abstract class SAL_Site {
 			'manage_categories'   => current_user_can( 'manage_categories' ),
 			'manage_options'      => current_user_can( 'manage_options' ),
 			'moderate_comments'   => current_user_can( 'moderate_comments' ),
-			'activate_wordads'    => $is_wpcom_blog_owner,
+			'activate_wordads'    => wpcom_get_blog_owner() === (int) get_current_user_id(),
 			'promote_users'       => current_user_can( 'promote_users' ),
 			'publish_posts'       => current_user_can( 'publish_posts' ),
 			'upload_files'        => current_user_can( 'upload_files' ),
 			'delete_users'        => current_user_can( 'delete_users' ),
 			'remove_users'        => current_user_can( 'remove_users' ),
-			'own_site'            => $is_wpcom_blog_owner,
 			/**
 		 	 * Filter whether the Hosting section in Calypso should be available for site.
 			 *
@@ -475,8 +431,7 @@ abstract class SAL_Site {
 			 * @param bool $view_hosting Can site access Hosting section. Default to false.
 			 */
 			'view_hosting'        => apply_filters( 'jetpack_json_api_site_can_view_hosting', false ),
-			'view_stats'          => stats_is_blog_user( $this->blog_id ),
-			'activate_plugins'    => current_user_can( 'activate_plugins' ),
+			'view_stats'          => stats_is_blog_user( $this->blog_id )
 		);
 	}
 
@@ -704,22 +659,5 @@ abstract class SAL_Site {
 
 	function get_site_segment() {
 		return false;
-	}
-
-	function get_site_creation_flow() {
-		return get_option( 'site_creation_flow' );
-	}
-
-	public function get_selected_features() {
-		return get_option( 'selected_features' );
-	}
-
-	/**
-	 * Get the option storing the Anchor podcast ID that identifies a site as a podcasting site.
-	 *
-	 * @return string
-	 */
-	public function get_anchor_podcast() {
-		return get_option( 'anchor_podcast' );
 	}
 }

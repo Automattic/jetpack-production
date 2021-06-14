@@ -4,12 +4,11 @@
  *
  * @since 8.3.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Revue;
 
-use Automattic\Jetpack\Blocks;
 use Jetpack_Gutenberg;
 
 const FEATURE_NAME = 'revue';
@@ -21,7 +20,7 @@ const BLOCK_NAME   = 'jetpack/' . FEATURE_NAME;
  * registration if we need to.
  */
 function register_block() {
-	Blocks::jetpack_register_block(
+	jetpack_register_block(
 		BLOCK_NAME,
 		array( 'render_callback' => __NAMESPACE__ . '\render_block' )
 	);
@@ -31,12 +30,11 @@ add_action( 'init', __NAMESPACE__ . '\register_block' );
 /**
  * Revue block render callback.
  *
- * @param array  $attributes Array containing the Revue block attributes.
- * @param string $content    The Revue block content.
+ * @param array $attributes Array containing the Revue block attributes.
  *
  * @return string
  */
-function render_block( $attributes, $content ) {
+function render_block( $attributes ) {
 	if ( ! array_key_exists( 'revueUsername', $attributes ) ) {
 		return '';
 	}
@@ -50,8 +48,8 @@ function render_block( $attributes, $content ) {
 	$last_name_placeholder  = get_revue_attribute( 'lastNamePlaceholder', $attributes );
 	$last_name_show         = get_revue_attribute( 'lastNameShow', $attributes );
 	$url                    = sprintf( 'https://www.getrevue.co/profile/%s/add_subscriber', $attributes['revueUsername'] );
-	$base_class             = Blocks::classes( FEATURE_NAME, array() ) . '__';
-	$classes                = Blocks::classes( FEATURE_NAME, $attributes );
+	$base_class             = Jetpack_Gutenberg::block_classes( FEATURE_NAME, array() ) . '__';
+	$classes                = Jetpack_Gutenberg::block_classes( FEATURE_NAME, $attributes );
 
 	Jetpack_Gutenberg::load_assets_as_required( FEATURE_NAME );
 
@@ -107,15 +105,9 @@ function render_block( $attributes, $content ) {
 				</label>
 			</div>
 			<?php
-		endif;
-
-		// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
-		if ( false !== strpos( $content, 'wp-block-jetpack-revue__fallback' ) ) {
-			echo $content;
-		} else {
-			echo get_deprecated_v1_revue_button( $attributes );
-		}
-		// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
+			endif;
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo get_revue_button( $attributes );
 		?>
 	</form>
 	<div class="<?php echo esc_attr( $base_class . 'message' ); ?>">
@@ -133,47 +125,15 @@ function render_block( $attributes, $content ) {
 }
 
 /**
- * Get Revue block attribute.
- *
- * @param string $attribute  String containing the attribute name to get.
- * @param array  $attributes Array containing the Revue block attributes.
- *
- * @return mixed
- */
-function get_revue_attribute( $attribute, $attributes ) {
-	if ( array_key_exists( $attribute, $attributes ) ) {
-		return $attributes[ $attribute ];
-	}
-
-	$default_attributes = array(
-		'text'                 => __( 'Subscribe', 'jetpack' ),
-		'emailLabel'           => __( 'Email address', 'jetpack' ),
-		'emailPlaceholder'     => __( 'Enter your email address', 'jetpack' ),
-		'firstNameLabel'       => __( 'First name', 'jetpack' ),
-		'firstNamePlaceholder' => __( 'Enter your first name', 'jetpack' ),
-		'firstNameShow'        => true,
-		'lastNameLabel'        => __( 'Last name', 'jetpack' ),
-		'lastNamePlaceholder'  => __( 'Enter your last name', 'jetpack' ),
-		'lastNameShow'         => true,
-	);
-
-	if ( array_key_exists( $attribute, $default_attributes ) ) {
-		return $default_attributes[ $attribute ];
-	}
-}
-
-/**
- * DEPRECATED V1
- */
-
-/**
  * Create the Revue subscribe button.
+ *
+ * @see https://github.com/WordPress/gutenberg/blob/015555fcdf648b13af57e08cee60bf3f3501ff63/packages/block-library/src/navigation/index.php
  *
  * @param array $attributes Array containing the Revue block attributes.
  *
  * @return string
  */
-function get_deprecated_v1_revue_button( $attributes ) {
+function get_revue_button( $attributes ) {
 	$classes = array( 'wp-block-button__link' );
 	$styles  = array();
 
@@ -250,4 +210,34 @@ function get_deprecated_v1_revue_button( $attributes ) {
 
 	<?php
 	return ob_get_clean();
+}
+
+/**
+ * Get Revue block attribute.
+ *
+ * @param string $attribute  String containing the attribute name to get.
+ * @param array  $attributes Array containing the Revue block attributes.
+ *
+ * @return mixed
+ */
+function get_revue_attribute( $attribute, $attributes ) {
+	if ( array_key_exists( $attribute, $attributes ) ) {
+		return $attributes[ $attribute ];
+	}
+
+	$default_attributes = array(
+		'text'                 => __( 'Subscribe', 'jetpack' ),
+		'emailLabel'           => __( 'Email address', 'jetpack' ),
+		'emailPlaceholder'     => __( 'Enter your email address', 'jetpack' ),
+		'firstNameLabel'       => __( 'First name', 'jetpack' ),
+		'firstNamePlaceholder' => __( 'Enter your first name', 'jetpack' ),
+		'firstNameShow'        => true,
+		'lastNameLabel'        => __( 'Last name', 'jetpack' ),
+		'lastNamePlaceholder'  => __( 'Enter your last name', 'jetpack' ),
+		'lastNameShow'         => true,
+	);
+
+	if ( array_key_exists( $attribute, $default_attributes ) ) {
+		return $default_attributes[ $attribute ];
+	}
 }

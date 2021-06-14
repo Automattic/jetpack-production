@@ -5,7 +5,7 @@
  * Takes a plain-text PDF URL (*.pdf), and attempts to embed it directly
  * in the post instead of leaving it as a bare link.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 wp_embed_register_handler( 'inline-pdfs', '#https?://[^<]*\.pdf$#i', 'jetpack_inline_pdf_embed_handler' );
@@ -28,19 +28,10 @@ function jetpack_inline_pdf_embed_handler( $matches, $attr, $url ) {
 			esc_html__( 'PDF Document', 'jetpack' )
 		);
 	}
-
-	$filename      = basename( wp_parse_url( $url, PHP_URL_PATH ) );
-	$fallback_text = sprintf(
-		/* translators: Placeholder is a file name, for example "file.pdf" */
-		esc_html__( 'Click to access %1$s', 'jetpack' ),
-		$filename
-	);
-
 	return sprintf(
-		'<object data="%1$s" type="application/pdf" width="100%%" height="800" style="height: 800px;">
-			<p><a href="%1$s">%2$s</a></p>
+		'<object data="%1$s" type="application/pdf" width="100%%" height="800">
+			<p><a href="%1$s">%1$s</a></p>
 		</object>',
-		esc_attr( $url ),
-		$fallback_text
+		esc_attr( $url )
 	);
 }

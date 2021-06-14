@@ -21,8 +21,6 @@ new WPCOM_JSON_API_Update_Comment_Endpoint( array(
 
 	'pass_wpcom_user_details' => true,
 
-	'allow_fallback_to_jetpack_blog_token' => true,
-
 	'example_request'      => 'https://public-api.wordpress.com/rest/v1/sites/82974409/posts/843/replies/new/',
 	'example_request_data' =>  array(
 		'headers' => array(
@@ -53,8 +51,6 @@ new WPCOM_JSON_API_Update_Comment_Endpoint( array(
 	),
 
 	'pass_wpcom_user_details' => true,
-
-	'allow_fallback_to_jetpack_blog_token' => true,
 
 	'example_request'      => 'https://public-api.wordpress.com/rest/v1/sites/82974409/comments/29/replies/new',
 	'example_request_data' => array(
@@ -231,12 +227,13 @@ class WPCOM_JSON_API_Update_Comment_Endpoint extends WPCOM_JSON_API_Comment_Endp
 					$user->ID = 0;
 				}
 
-				$author = get_user_by( 'id', (int) $user->ID );
 				// If we have a user with an external ID saved, we can use it.
 				if (
 					! $auth_required
 					&& $user->ID
-					&& $author
+					&& (
+						$author = get_user_by( 'id', intval( $user->ID ) )
+					)
 				) {
 					$user = $author;
 				}
@@ -257,7 +254,7 @@ class WPCOM_JSON_API_Update_Comment_Endpoint extends WPCOM_JSON_API_Comment_Endp
 			'comment_author_url'   => $user->user_url,
 			'comment_content'      => $input['content'],
 			'comment_parent'       => $comment_parent_id,
-			'comment_type'         => 'comment',
+			'comment_type'         => '',
 		);
 
 		if ( $comment_parent_id ) {

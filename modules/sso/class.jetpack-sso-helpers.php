@@ -190,7 +190,6 @@ class Jetpack_SSO_Helpers {
 		$hosts[] = 'wordpress.com';
 		$hosts[] = 'jetpack.wordpress.com';
 		$hosts[] = 'public-api.wordpress.com';
-		$hosts[] = 'jetpack.com';
 
 		if ( false === strpos( $api_base, 'jetpack.wordpress.com/jetpack' ) ) {
 			$base_url_parts = wp_parse_url( esc_url_raw( $api_base ) );
@@ -213,7 +212,7 @@ class Jetpack_SSO_Helpers {
 		 *
 		 * @param int 5 By default, SSO will attempt to random generate a user up to 5 times.
 		 */
-		$num_tries = (int) apply_filters( 'jetpack_sso_allowed_username_generate_retries', 5 );
+		$num_tries = intval( apply_filters( 'jetpack_sso_allowed_username_generate_retries', 5 ) );
 
 		$tries = 0;
 		while ( ( $exists = username_exists( $username ) ) && $tries++ < $num_tries ) {
@@ -255,7 +254,7 @@ class Jetpack_SSO_Helpers {
 		 *
 		 * @param int YEAR_IN_SECONDS
 		 */
-		return (int) apply_filters( 'jetpack_sso_auth_cookie_expiration', YEAR_IN_SECONDS );
+		return intval( apply_filters( 'jetpack_sso_auth_cookie_expiration', YEAR_IN_SECONDS ) );
 	}
 
 	/**
@@ -321,31 +320,6 @@ class Jetpack_SSO_Helpers {
 			array( 'jetpack_json_api_original_query' => $original_request )
 		);
 	}
-
-		/**
-		 * Check if the site has a custom login page URL, and return it.
-		 * If default login page URL is used (`wp-login.php`), `null` will be returned.
-		 *
-		 * @return string|null
-		 */
-		public static function get_custom_login_url() {
-			$login_url = wp_login_url();
-
-			if ( 'wp-login.php' === substr( $login_url, -12 ) ) {
-				// No custom URL found.
-				return null;
-			}
-
-			$site_url = trailingslashit( site_url() );
-
-			if ( 0 !== strpos( $login_url, $site_url ) ) {
-				// Something went wrong, we can't properly extract the custom URL.
-				return null;
-			}
-
-			// Extracting the "path" part of the URL, because we don't need the `site_url` part.
-			return str_ireplace( $site_url, '', $login_url );
-		}
 }
 
 endif;

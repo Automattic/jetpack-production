@@ -43,7 +43,6 @@ function jetpack_load_theme_compat() {
 			'twentyseventeen' => JETPACK__PLUGIN_DIR . 'modules/theme-tools/compat/twentyseventeen.php',
 			'twentynineteen'  => JETPACK__PLUGIN_DIR . 'modules/theme-tools/compat/twentynineteen.php',
 			'twentytwenty'    => JETPACK__PLUGIN_DIR . 'modules/theme-tools/compat/twentytwenty.php',
-			'twentytwentyone' => JETPACK__PLUGIN_DIR . 'modules/theme-tools/compat/twentytwentyone.php',
 		)
 	);
 

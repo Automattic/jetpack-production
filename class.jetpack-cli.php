@@ -1,17 +1,15 @@
 <?php
 
+WP_CLI::add_command( 'jetpack', 'Jetpack_CLI' );
+
 use Automattic\Jetpack\Connection\Client;
 use Automattic\Jetpack\Connection\Manager as Connection_Manager;
-use Automattic\Jetpack\Connection\Tokens;
-use Automattic\Jetpack\Identity_Crisis;
+use Automattic\Jetpack\Connection\Utils as Connection_Utils;
 use Automattic\Jetpack\Status;
 use Automattic\Jetpack\Sync\Actions;
 use Automattic\Jetpack\Sync\Listener;
-use Automattic\Jetpack\Sync\Modules;
 use Automattic\Jetpack\Sync\Queue;
 use Automattic\Jetpack\Sync\Settings;
-
-WP_CLI::add_command( 'jetpack', 'Jetpack_CLI' );
 
 /**
  * Control your local Jetpack installation.
@@ -65,7 +63,7 @@ class Jetpack_CLI extends WP_CLI_Command {
 
 			$cxntests->output_results_for_cli();
 
-			WP_CLI::error( __( 'One or more tests did not pass. Please investigate!', 'jetpack' ) ); // Exit CLI.
+			WP_CLI::error( __( 'Jetpack connection is broken.', 'jetpack' ) ); // Exit CLI.
 		}
 
 		/* translators: %s is current version of Jetpack, for example 7.3 */
@@ -133,7 +131,7 @@ class Jetpack_CLI extends WP_CLI_Command {
 		/* translators: %s is the site URL */
 		WP_CLI::line( sprintf( __( 'Testing connection for %s', 'jetpack' ), esc_url( get_site_url() ) ) );
 
-		if ( ! Jetpack::is_connection_ready() ) {
+		if ( ! Jetpack::is_active() ) {
 			WP_CLI::error( __( 'Jetpack is not currently connected to WordPress.com', 'jetpack' ) );
 		}
 
@@ -172,21 +170,21 @@ class Jetpack_CLI extends WP_CLI_Command {
 	 *
 	 * user <user_identifier>: Disconnect a specific user from WordPress.com.
 	 *
-	 * [--force]
-	 * If the user ID provided is the connection owner, it will only be disconnected if --force is passed
+	 * Please note, the primary account that the blog is connected
+	 * to WordPress.com with cannot be disconnected without
+	 * disconnecting the entire blog.
 	 *
 	 * ## EXAMPLES
 	 *
 	 * wp jetpack disconnect blog
 	 * wp jetpack disconnect user 13
-	 * wp jetpack disconnect user 1 --force
 	 * wp jetpack disconnect user username
 	 * wp jetpack disconnect user email@domain.com
 	 *
-	 * @synopsis <blog|user> [<user_identifier>] [--force]
+	 * @synopsis <blog|user> [<user_identifier>]
 	 */
 	public function disconnect( $args, $assoc_args ) {
-		if ( ! Jetpack::is_connection_ready() ) {
+		if ( ! Jetpack::is_active() ) {
 			WP_CLI::success( __( 'The site is not currently connected, so nothing to do!', 'jetpack' ) );
 			return;
 		}
@@ -218,8 +216,6 @@ class Jetpack_CLI extends WP_CLI_Command {
 			}
 		}
 
-		$force_user_disconnect = ! empty( $assoc_args['force'] );
-
 		switch ( $action ) {
 			case 'blog':
 				Jetpack::log( 'disconnect' );
@@ -233,23 +229,12 @@ class Jetpack_CLI extends WP_CLI_Command {
 				);
 				break;
 			case 'user':
-				$connection_manager = new Connection_Manager( 'jetpack' );
-				$disconnected       = $connection_manager->disconnect_user( $user->ID, $force_user_disconnect );
-				if ( $disconnected ) {
+				if ( Connection_Manager::disconnect_user( $user->ID ) ) {
 					Jetpack::log( 'unlink', $user->ID );
 					WP_CLI::success( __( 'User has been successfully disconnected.', 'jetpack' ) );
 				} else {
-					if ( ! $connection_manager->is_user_connected( $user->ID ) ) {
-						/* translators: %s is a username */
-						$error_message = sprintf( __( 'User %s could not be disconnected because it is not connected!', 'jetpack' ), "{$user->data->user_login} <{$user->data->user_email}>" );
-					} elseif ( ! $force_user_disconnect && $connection_manager->is_connection_owner( $user->ID ) ) {
-						/* translators: %s is a username */
-						$error_message = sprintf( __( 'User %s could not be disconnected because it is the connection owner! If you want to disconnect in anyway, use the --force parameter.', 'jetpack' ), "{$user->data->user_login} <{$user->data->user_email}>" );
-					} else {
-						/* translators: %s is a username */
-						$error_message = sprintf( __( 'User %s could not be disconnected.', 'jetpack' ), "{$user->data->user_login} <{$user->data->user_email}>" );
-					}
-					WP_CLI::error( $error_message );
+					/* translators: %s is a username */
+					WP_CLI::error( sprintf( __( "User %s could not be disconnected. Are you sure they're connected currently?", 'jetpack' ), "{$user->login} <{$user->email}>" ) );
 				}
 				break;
 			case 'prompt':
@@ -578,20 +563,20 @@ class Jetpack_CLI extends WP_CLI_Command {
 	 *
 	 * ## OPTIONS
 	 *
-	 * allow: Add an IP address to an always allow list.  You can also read or clear the allow list.
+	 * whitelist: Whitelist an IP address.  You can also read or clear the whitelist.
 	 *
 	 *
 	 * ## EXAMPLES
 	 *
-	 * wp jetpack protect allow <ip address>
-	 * wp jetpack protect allow list
-	 * wp jetpack protect allow clear
+	 * wp jetpack protect whitelist <ip address>
+	 * wp jetpack protect whitelist list
+	 * wp jetpack protect whitelist clear
 	 *
-	 * @synopsis <allow> [<ip|ip_low-ip_high|list|clear>]
+	 * @synopsis <whitelist> [<ip|ip_low-ip_high|list|clear>]
 	 */
 	public function protect( $args, $assoc_args ) {
 		$action = isset( $args[0] ) ? $args[0] : 'prompt';
-		if ( ! in_array( $action, array( 'whitelist', 'allow' ), true ) ) { // Still allow "whitelist" for legacy support.
+		if ( ! in_array( $action, array( 'whitelist' ) ) ) {
 			/* translators: %s is a command like "prompt" */
 			WP_CLI::error( sprintf( __( '%s is not a valid command.', 'jetpack' ), $action ) );
 		}
@@ -600,96 +585,96 @@ class Jetpack_CLI extends WP_CLI_Command {
 			/* translators: %s is a module name */
 			WP_CLI::error( sprintf( _x( '%1$s is not active. You can activate it with "wp jetpack module activate %2$s"', '"wp jetpack module activate" is a command - do not translate', 'jetpack' ), __FUNCTION__, __FUNCTION__ ) );
 		}
-		if ( in_array( $action, array( 'allow', 'whitelist' ), true ) ) {
+		if ( in_array( $action, array( 'whitelist' ) ) ) {
 			if ( isset( $args[1] ) ) {
-				$action = 'allow';
+				$action = 'whitelist';
 			} else {
 				$action = 'prompt';
 			}
 		}
 		switch ( $action ) {
-			case 'allow':
-				$allow         = array();
-				$new_ip        = $args[1];
-				$current_allow = get_site_option( 'jetpack_protect_whitelist', array() ); // @todo Update the option name.
+			case 'whitelist':
+				$whitelist         = array();
+				$new_ip            = $args[1];
+				$current_whitelist = get_site_option( 'jetpack_protect_whitelist', array() );
 
-				// Build array of IPs that are already on the allowed list.
+				// Build array of IPs that are already whitelisted.
 				// Re-build manually instead of using jetpack_protect_format_whitelist() so we can easily get
 				// low & high range params for jetpack_protect_ip_address_is_in_range();
-				foreach ( $current_allow as $allowed ) {
+				foreach ( $current_whitelist as $whitelisted ) {
 
 					// IP ranges
-					if ( $allowed->range ) {
+					if ( $whitelisted->range ) {
 
-						// Is it already on the allowed list?
-						if ( jetpack_protect_ip_address_is_in_range( $new_ip, $allowed->range_low, $allowed->range_high ) ) {
+						// Is it already whitelisted?
+						if ( jetpack_protect_ip_address_is_in_range( $new_ip, $whitelisted->range_low, $whitelisted->range_high ) ) {
 							/* translators: %s is an IP address */
-							WP_CLI::error( sprintf( __( '%s is already on the always allow list.', 'jetpack' ), $new_ip ) );
+							WP_CLI::error( sprintf( __( '%s has already been whitelisted', 'jetpack' ), $new_ip ) );
 							break;
 						}
-						$allow[] = $allowed->range_low . ' - ' . $allowed->range_high;
+						$whitelist[] = $whitelisted->range_low . ' - ' . $whitelisted->range_high;
 
 					} else { // Individual IPs
 
-						// Check if the IP is already on the allow list (single IP only).
-						if ( $new_ip === $allowed->ip_address ) {
+						// Check if the IP is already whitelisted (single IP only)
+						if ( $new_ip == $whitelisted->ip_address ) {
 							/* translators: %s is an IP address */
-							WP_CLI::error( sprintf( __( '%s is already on the always allow list.', 'jetpack' ), $new_ip ) );
+							WP_CLI::error( sprintf( __( '%s has already been whitelisted', 'jetpack' ), $new_ip ) );
 							break;
 						}
-						$allow[] = $allowed->ip_address;
+						$whitelist[] = $whitelisted->ip_address;
 
 					}
 				}
 
 				/*
-				 * List the allowed IPs.
-				 * Done here because it's easier to read the $allow array after it's been rebuilt.
+				 * List the whitelist
+				 * Done here because it's easier to read the $whitelist array after it's been rebuilt
 				 */
 				if ( isset( $args[1] ) && 'list' == $args[1] ) {
-					if ( ! empty( $allow ) ) {
-						WP_CLI::success( __( 'Here are your always allowed IPs:', 'jetpack' ) );
-						foreach ( $allow as $ip ) {
+					if ( ! empty( $whitelist ) ) {
+						WP_CLI::success( __( 'Here are your whitelisted IPs:', 'jetpack' ) );
+						foreach ( $whitelist as $ip ) {
 							WP_CLI::line( "\t" . str_pad( $ip, 24 ) );
 						}
 					} else {
-						WP_CLI::line( __( 'Always allow list is empty.', 'jetpack' ) );
+						WP_CLI::line( __( 'Whitelist is empty.', 'jetpack' ) );
 					}
 					break;
 				}
 
 				/*
-				 * Clear the always allow list.
+				 * Clear the whitelist
 				 */
 				if ( isset( $args[1] ) && 'clear' == $args[1] ) {
-					if ( ! empty( $allow ) ) {
-						$allow = array();
-						jetpack_protect_save_whitelist( $allow ); // @todo Need to update function name in the Protect module.
-						WP_CLI::success( __( 'Cleared all IPs from the always allow list.', 'jetpack' ) );
+					if ( ! empty( $whitelist ) ) {
+						$whitelist = array();
+						jetpack_protect_save_whitelist( $whitelist );
+						WP_CLI::success( __( 'Cleared all whitelisted IPs', 'jetpack' ) );
 					} else {
-						WP_CLI::line( __( 'Always allow list is empty.', 'jetpack' ) );
+						WP_CLI::line( __( 'Whitelist is empty.', 'jetpack' ) );
 					}
 					break;
 				}
 
-				// Append new IP to allow array.
-				array_push( $allow, $new_ip );
+				// Append new IP to whitelist array
+				array_push( $whitelist, $new_ip );
 
-				// Save allow list if there are no errors.
-				$result = jetpack_protect_save_whitelist( $allow ); // @todo Need to update function name in the Protect module.
+				// Save whitelist if there are no errors
+				$result = jetpack_protect_save_whitelist( $whitelist );
 				if ( is_wp_error( $result ) ) {
 					WP_CLI::error( $result );
 				}
 
 				/* translators: %s is an IP address */
-				WP_CLI::success( sprintf( __( '%s has been added to the always allowed list.', 'jetpack' ), $new_ip ) );
+				WP_CLI::success( sprintf( __( '%s has been whitelisted.', 'jetpack' ), $new_ip ) );
 				break;
 			case 'prompt':
 				WP_CLI::error(
 					__( 'No command found.', 'jetpack' ) . "\n" .
-					__( 'Please enter the IP address you want to always allow.', 'jetpack' ) . "\n" .
-					_x( 'You can save a range of IPs {low_range}-{high_range}. No spaces allowed.  (example: 1.1.1.1-2.2.2.2)', 'Instructions on how to add IP ranges - low_range/high_range should be translated.', 'jetpack' ) . "\n" .
-					_x( "You can also 'list' or 'clear' the always allowed list.", "'list' and 'clear' are commands and should not be translated", 'jetpack' ) . "\n"
+					__( 'Please enter the IP address you want to whitelist.', 'jetpack' ) . "\n" .
+					_x( 'You can save a range of IPs {low_range}-{high_range}. No spaces allowed.  (example: 1.1.1.1-2.2.2.2)', 'Instructions on how to whitelist IP ranges - low_range/high_range should be translated.', 'jetpack' ) . "\n" .
+					_x( "You can also 'list' or 'clear' the whitelist.", "'list' and 'clear' are commands and should not be translated", 'jetpack' ) . "\n"
 				);
 				break;
 		}
@@ -911,22 +896,19 @@ class Jetpack_CLI extends WP_CLI_Command {
 				break;
 			case 'start':
 				if ( ! Actions::sync_allowed() ) {
-					if ( Settings::get_setting( 'disable' ) ) {
+					if ( ! Settings::get_setting( 'disable' ) ) {
 						WP_CLI::error( __( 'Jetpack sync is not currently allowed for this site. It is currently disabled. Run `wp jetpack sync enable` to enable it.', 'jetpack' ) );
 						return;
 					}
-					$connection = new Connection_Manager();
-					if ( ! $connection->is_connected() ) {
-						if ( ! doing_action( 'jetpack_site_registered' ) ) {
-							WP_CLI::error( __( 'Jetpack sync is not currently allowed for this site. Jetpack is not connected.', 'jetpack' ) );
-							return;
-						}
+					if ( doing_action( 'jetpack_user_authorized' ) || Jetpack::is_active() ) {
+						WP_CLI::error( __( 'Jetpack sync is not currently allowed for this site. Jetpack is not connected.', 'jetpack' ) );
+						return;
 					}
 
 					$status = new Status();
 
-					if ( $status->is_offline_mode() ) {
-						WP_CLI::error( __( 'Jetpack sync is not currently allowed for this site. The site is in offline mode.', 'jetpack' ) );
+					if ( $status->is_development_mode() ) {
+						WP_CLI::error( __( 'Jetpack sync is not currently allowed for this site. The site is in development mode.', 'jetpack' ) );
 						return;
 					}
 					if ( $status->is_staging_site() ) {
@@ -1014,11 +996,6 @@ class Jetpack_CLI extends WP_CLI_Command {
 							WP_CLI::log( __( 'Sent data to WordPress.com', 'jetpack' ) );
 						} else {
 							WP_CLI::log( __( 'Sent more data to WordPress.com', 'jetpack' ) );
-						}
-
-						// Immediate Full Sync does not wait for WP.com to process data so we need to enforce a wait.
-						if ( false !== strpos( get_class( Modules::get_module( 'full-sync' ) ), 'Full_Sync_Immediately' ) ) {
-							sleep( 15 );
 						}
 					}
 					$i++;
@@ -1124,7 +1101,7 @@ class Jetpack_CLI extends WP_CLI_Command {
 			$this->partner_provision_error( new WP_Error( 'missing_access_token', __( 'Missing or invalid access token', 'jetpack' ) ) );
 		}
 
-		if ( Identity_Crisis::validate_sync_error_idc_option() ) {
+		if ( Jetpack::validate_sync_error_idc_option() ) {
 			$this->partner_provision_error(
 				new WP_Error(
 					'site_in_safe_mode',
@@ -1136,8 +1113,7 @@ class Jetpack_CLI extends WP_CLI_Command {
 		$site_identifier = Jetpack_Options::get_option( 'id' );
 
 		if ( ! $site_identifier ) {
-			$status          = new Status();
-			$site_identifier = $status->get_site_suffix();
+			$site_identifier = Jetpack::build_raw_urls( get_home_url() );
 		}
 
 		$request = array(
@@ -1149,7 +1125,7 @@ class Jetpack_CLI extends WP_CLI_Command {
 			'method'  => 'POST',
 		);
 
-		$url = sprintf( '%s/rest/v1.3/jpphp/%s/partner-cancel', $this->get_api_host(), $site_identifier );
+		$url = sprintf( 'https://%s/rest/v1.3/jpphp/%s/partner-cancel', $this->get_api_host(), $site_identifier );
 		if ( ! empty( $named_args ) && ! empty( $named_args['partner_tracking_id'] ) ) {
 			$url = esc_url_raw( add_query_arg( 'partner_tracking_id', $named_args['partner_tracking_id'], $url ) );
 		}
@@ -1255,7 +1231,7 @@ class Jetpack_CLI extends WP_CLI_Command {
 	 * @synopsis <rebuild> [--purge]
 	 */
 	public function sitemap( $args, $assoc_args ) {
-		if ( ! Jetpack::is_connection_ready() ) {
+		if ( ! Jetpack::is_active() ) {
 			WP_CLI::error( __( 'Jetpack is not currently connected to WordPress.com', 'jetpack' ) );
 		}
 		if ( ! Jetpack::is_module_active( 'sitemaps' ) ) {
@@ -1292,14 +1268,14 @@ class Jetpack_CLI extends WP_CLI_Command {
 			WP_CLI::error( __( 'A non-empty token argument must be passed.', 'jetpack' ) );
 		}
 
-		$is_connection_owner = ! Jetpack::connection()->has_connected_owner();
-		$current_user_id     = get_current_user_id();
+		$is_master_user  = ! Jetpack::is_active();
+		$current_user_id = get_current_user_id();
 
-		( new Tokens() )->update_user_token( $current_user_id, sprintf( '%s.%d', $named_args['token'], $current_user_id ), $is_connection_owner );
+		Connection_Utils::update_user_token( $current_user_id, sprintf( '%s.%d', $named_args['token'], $current_user_id ), $is_master_user );
 
 		WP_CLI::log( wp_json_encode( $named_args ) );
 
-		if ( $is_connection_owner ) {
+		if ( $is_master_user ) {
 			/**
 			 * Auto-enable SSO module for new Jetpack Start connections
 			*
@@ -1351,7 +1327,7 @@ class Jetpack_CLI extends WP_CLI_Command {
 	 * wp jetpack call_api --resource='/sites/%d'
 	 */
 	public function call_api( $args, $named_args ) {
-		if ( ! Jetpack::is_connection_ready() ) {
+		if ( ! Jetpack::is_active() ) {
 			WP_CLI::error( __( 'Jetpack is not currently connected to WordPress.com', 'jetpack' ) );
 		}
 
@@ -1450,7 +1426,7 @@ class Jetpack_CLI extends WP_CLI_Command {
 	 * wp jetpack updload_ssh_creds --host=example.com --ssh-user=example --kpri=key
 	 */
 	public function upload_ssh_creds( $args, $named_args ) {
-		if ( ! Jetpack::is_connection_ready() ) {
+		if ( ! Jetpack::is_active() ) {
 			WP_CLI::error( __( 'Jetpack is not currently connected to WordPress.com', 'jetpack' ) );
 		}
 
@@ -1630,25 +1606,24 @@ class Jetpack_CLI extends WP_CLI_Command {
 	 *     $ wp jetpack publicize disconnect twitter
 	 */
 	public function publicize( $args, $named_args ) {
-		if ( ! Jetpack::connection()->has_connected_owner() ) {
-			WP_CLI::error( __( 'Publicize requires a user-level connection to WordPress.com', 'jetpack' ) );
+		if ( ! Jetpack::is_active() ) {
+			WP_CLI::error( __( 'Jetpack is not currently connected to WordPress.com', 'jetpack' ) );
 		}
 
 		if ( ! Jetpack::is_module_active( 'publicize' ) ) {
 			WP_CLI::error( __( 'The publicize module is not active.', 'jetpack' ) );
 		}
 
-		if ( ( new Status() )->is_offline_mode() ) {
+		if ( ( new Status() )->is_development_mode() ) {
 			if (
 				! defined( 'JETPACK_DEV_DEBUG' ) &&
 				! has_filter( 'jetpack_development_mode' ) &&
-				! has_filter( 'jetpack_offline_mode' ) &&
 				false === strpos( site_url(), '.' )
 			) {
-				WP_CLI::error( __( "Jetpack is current in offline mode because the site url does not contain a '.', which often occurs when dynamically setting the WP_SITEURL constant. While in offline mode, the publicize module will not load.", 'jetpack' ) );
+				WP_CLI::error( __( "Jetpack is current in development mode because the site url does not contain a '.', which often occurs when dynamically setting the WP_SITEURL constant. While in development mode, the publicize module will not load.", 'jetpack' ) );
 			}
 
-			WP_CLI::error( __( 'Jetpack is currently in offline mode, so the publicize module will not load.', 'jetpack' ) );
+			WP_CLI::error( __( 'Jetpack is currently in development mode, so the publicize module will not load.', 'jetpack' ) );
 		}
 
 		if ( ! class_exists( 'Publicize' ) ) {
@@ -1808,7 +1783,7 @@ class Jetpack_CLI extends WP_CLI_Command {
 
 	private function get_api_host() {
 		$env_api_host = getenv( 'JETPACK_START_API_HOST', true );
-		return $env_api_host ? 'https://' . $env_api_host : JETPACK__WPCOM_JSON_API_BASE;
+		return $env_api_host ? $env_api_host : JETPACK__WPCOM_JSON_API_HOST;
 	}
 
 	private function partner_provision_error( $error ) {
@@ -2023,7 +1998,7 @@ class Jetpack_CLI extends WP_CLI_Command {
 					"--------------------------------------------------------------------------------------------------------------------\n" .
 					/* translators: the placeholder is a directory path */
 					esc_html__( 'The files were created at %3$s', 'jetpack' ) . "\n" .
-					esc_html__( 'To start using the block, build the blocks with pnpm run build-extensions', 'jetpack' ) . "\n" .
+					esc_html__( 'To start using the block, build the blocks with yarn run build-extensions', 'jetpack' ) . "\n" .
 					/* translators: the placeholder is a file path */
 					esc_html__( 'The block slug has been added to the %4$s list at %5$s', 'jetpack' ) . "\n" .
 					'%6$s' . "\n" .

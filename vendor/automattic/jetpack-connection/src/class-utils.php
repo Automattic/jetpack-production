@@ -7,35 +7,39 @@
 
 namespace Automattic\Jetpack\Connection;
 
-use Automattic\Jetpack\Tracking;
+use Automattic\Jetpack\Constants;
 
 /**
  * Provides utility methods for the Connection package.
  */
 class Utils {
 
-	const DEFAULT_JETPACK__API_VERSION         = 1;
-	const DEFAULT_JETPACK__API_BASE            = 'https://jetpack.wordpress.com/jetpack.';
-	const DEFAULT_JETPACK__WPCOM_JSON_API_BASE = 'https://public-api.wordpress.com';
+	const DEFAULT_JETPACK_API_VERSION = 1;
 
 	/**
-	 * This method used to set the URL scheme to HTTP when HTTPS requests can't be made.
-	 * Now it returns the exact same URL you pass as an argument.
+	 * Some hosts disable the OpenSSL extension and so cannot make outgoing HTTPS requests.
+	 * This method sets the URL scheme to HTTP when HTTPS requests can't be made.
 	 *
 	 * @param string $url The url.
-	 * @return string The exact same url.
-	 *
-	 * @deprecated 9.1.0 Jetpack can't function properly on servers that don't support outbound HTTPS requests.
+	 * @return string The url with the required URL scheme.
 	 */
 	public static function fix_url_for_bad_hosts( $url ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.1.0' );
+		// If we receive an http url, return it.
+		if ( 'http' === wp_parse_url( $url, PHP_URL_SCHEME ) ) {
+			return $url;
+		}
+
+		// If the url should never be https, ensure it isn't https.
+		if ( 'NEVER' === Constants::get_constant( 'JETPACK_CLIENT__HTTPS' ) ) {
+			return set_url_scheme( $url, 'http' );
+		}
+
+		// Otherwise, return the https url.
 		return $url;
 	}
 
 	/**
 	 * Enters a user token into the user_tokens option
-	 *
-	 * @deprecated 9.5 Use Automattic\Jetpack\Connection\Tokens->update_user_token() instead.
 	 *
 	 * @param int    $user_id The user id.
 	 * @param string $token The user token.
@@ -43,59 +47,30 @@ class Utils {
 	 * @return bool
 	 */
 	public static function update_user_token( $user_id, $token, $is_master_user ) {
-		_deprecated_function( __METHOD__, 'jetpack-9.5', 'Automattic\\Jetpack\\Connection\\Tokens->update_user_token' );
-		return ( new Tokens() )->update_user_token( $user_id, $token, $is_master_user );
-	}
-
-	/**
-	 * Filters the value of the api constant.
-	 *
-	 * @param String $constant_value The constant value.
-	 * @param String $constant_name The constant name.
-	 * @return mixed | null
-	 */
-	public static function jetpack_api_constant_filter( $constant_value, $constant_name ) {
-		if ( ! is_null( $constant_value ) ) {
-			// If the constant value was already set elsewhere, use that value.
-			return $constant_value;
+		// Not designed for concurrent updates.
+		$user_tokens = \Jetpack_Options::get_option( 'user_tokens' );
+		if ( ! is_array( $user_tokens ) ) {
+			$user_tokens = array();
 		}
-
-		if ( defined( "self::DEFAULT_$constant_name" ) ) {
-			return constant( "self::DEFAULT_$constant_name" );
+		$user_tokens[ $user_id ] = $token;
+		if ( $is_master_user ) {
+			$master_user = $user_id;
+			$options     = compact( 'user_tokens', 'master_user' );
+		} else {
+			$options = compact( 'user_tokens' );
 		}
-
-		return null;
+		return \Jetpack_Options::update_options( $options );
 	}
 
 	/**
-	 * Add a filter to initialize default values of the constants.
-	 */
-	public static function init_default_constants() {
-		add_filter(
-			'jetpack_constant_default_value',
-			array( __CLASS__, 'jetpack_api_constant_filter' ),
-			10,
-			2
-		);
-	}
-
-	/**
-	 * Filters the registration request body to include tracking properties.
+	 * Returns the Jetpack__API_VERSION constant if it exists, else returns a
+	 * default value of 1.
 	 *
-	 * @param array $properties Already prepared tracking properties.
-	 * @return array amended properties.
+	 * @return integer
 	 */
-	public static function filter_register_request_body( $properties ) {
-		$tracking        = new Tracking();
-		$tracks_identity = $tracking->tracks_get_identity( get_current_user_id() );
-
-		return array_merge(
-			$properties,
-			array(
-				'_ui' => $tracks_identity['_ui'],
-				'_ut' => $tracks_identity['_ut'],
-			)
-		);
+	public static function get_jetpack_api_version() {
+		$api_version = Constants::get_constant( 'JETPACK__API_VERSION' );
+		$api_version = $api_version ? $api_version : self::DEFAULT_JETPACK_API_VERSION;
+		return $api_version;
 	}
-
 }

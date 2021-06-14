@@ -1,11 +1,4 @@
 <?php
-/**
- * Handles VaultPress->Rewind transition by deactivating VaultPress when needed.
- *
- * @package automattic/jetpack
- */
-
-use Automattic\Jetpack\Redirect;
 
 /**
  * Notify user that VaultPress has been disabled. Hide VaultPress notice that requested attention.
@@ -18,7 +11,9 @@ function jetpack_vaultpress_rewind_enabled_notice() {
 	deactivate_plugins( 'vaultpress/vaultpress.php' );
 
 	// Remove WP core notice that says that the plugin was activated.
-	unset( $_GET['activate'] ); // phpcs:ignore WordPress.Security.NonceVerification
+	if ( isset( $_GET['activate'] ) ) {
+		unset( $_GET['activate'] );
+	}
 	?>
 	<div class="notice notice-success is-dismissible vp-deactivated">
 		<p style="margin-bottom: 0.25em;"><strong><?php esc_html_e( 'Jetpack is now handling your backups.', 'jetpack' ); ?></strong></p>
@@ -27,8 +22,8 @@ function jetpack_vaultpress_rewind_enabled_notice() {
 			<?php
 				echo sprintf(
 					wp_kses(
-						/* Translators: first variable is the full URL to the new dashboard */
-						__( 'You can access your backups at <a href="%s" target="_blank" rel="noopener noreferrer">this  dashboard</a>.', 'jetpack' ),
+						/* Translators: first variable is the URL of the web site without the protocol, e.g. mysite.com */
+						__( 'You can access your backups on your site\'s <a href="https://wordpress.com/activity-log/%s" target="_blank" rel="noopener noreferrer">Activity</a> page.', 'jetpack' ),
 						array(
 							'a' => array(
 								'href'   => array(),
@@ -37,7 +32,7 @@ function jetpack_vaultpress_rewind_enabled_notice() {
 							),
 						)
 					),
-					esc_url( Redirect::get_url( 'calypso-backups' ) )
+					esc_attr( Jetpack::build_raw_urls( get_home_url() ) )
 				);
 			?>
 		</p>
@@ -52,11 +47,10 @@ function jetpack_vaultpress_rewind_enabled_notice() {
  * @since 5.8
  */
 function jetpack_vaultpress_rewind_check() {
-	if (
-		Jetpack::is_connection_ready() &&
-		Jetpack::is_plugin_active( 'vaultpress/vaultpress.php' ) &&
-		Jetpack::is_rewind_enabled()
-	) {
+	if ( Jetpack::is_active() &&
+		 Jetpack::is_plugin_active( 'vaultpress/vaultpress.php' ) &&
+		 Jetpack::is_rewind_enabled()
+		) {
 		remove_submenu_page( 'jetpack', 'vaultpress' );
 
 		add_action( 'admin_notices', 'jetpack_vaultpress_rewind_enabled_notice' );

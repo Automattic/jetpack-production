@@ -7,8 +7,6 @@
  * Instead, we don't register the widget if the Stats Module isn't active.
  */
 
-use Automattic\Jetpack\Redirect;
-
 /**
  * Register the widget for use in Appearance -> Widgets
  */
@@ -301,7 +299,7 @@ class Jetpack_Top_Posts_Widget extends WP_Widget {
 		}
 
 		if ( ! $posts ) {
-			$link = esc_url( Redirect::get_url( 'jetpack-support-getting-more-views-and-traffic' ) );
+			$link = 'https://jetpack.com/support/getting-more-views-and-traffic/';
 			if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
 				$link = 'https://en.support.wordpress.com/getting-more-site-traffic/';
 			}
@@ -569,7 +567,7 @@ class Jetpack_Top_Posts_Widget extends WP_Widget {
 			$days = 2;
 		}
 
-		$post_view_posts = stats_get_from_restapi( array(), 'top-posts?max=11&summarize=1&num=' . (int) $days );
+		$post_view_posts = stats_get_from_restapi( array(), 'top-posts?max=11&summarize=1&num=' . intval( $days ) );
 
 		if ( ! isset( $post_view_posts->summary ) || empty( $post_view_posts->summary->postviews ) ) {
 			return array();

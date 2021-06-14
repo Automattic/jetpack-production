@@ -10,61 +10,10 @@
  * <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="2" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"><div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding-bottom:55%; padding-top:45%; text-align:center; width:100%;"><div style="position:relative;"><div style=" -webkit-animation:dkaXkpbBxI 1s ease-out infinite; animation:dkaXkpbBxI 1s ease-out infinite; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-44px; width:44px;"></div><span style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:12px; font-style:normal; font-weight:bold; position:relative; top:15px;">Loading</span></div></div><p style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin:8px 0 0 0; padding:0 4px; word-wrap:break-word;"> Balloons</p><p style=" line-height:32px; margin-bottom:0; margin-top:8px; padding:0; text-align:center;"> <a href="https://instagram.com/p/r9vfPrmjeB/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; text-decoration:none;" target="_top"> View on Instagram</a></p></div><style>@-webkit-keyframes"dkaXkpbBxI"{ 0%{opacity:0.5;} 50%{opacity:1;} 100%{opacity:0.5;} } @keyframes"dkaXkpbBxI"{ 0%{opacity:0.5;} 50%{opacity:1;} 100%{opacity:0.5;} }</style></blockquote>
  * <script async defer src="https://platform.instagram.com/en_US/embeds.js"></script>
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
-use Automattic\Jetpack\Connection\Client;
-use Automattic\Jetpack\Constants;
-use Automattic\Jetpack\Status;
-
-if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-	add_action( 'init', 'jetpack_instagram_enable_embeds' );
-} else {
-	jetpack_instagram_enable_embeds();
-}
-
-/**
- * Register Instagram as oembed provider, and add required filters for the API request.
- * Add filter to reverse iframes to shortcode. Register [instagram] shortcode.
- *
- * @since 9.1.0
- */
-function jetpack_instagram_enable_embeds() {
-	wp_oembed_add_provider(
-		'#https?://(www\.)?instagr(\.am|am\.com)/(p|tv|reel)/.*#i',
-		'https://graph.facebook.com/v5.0/instagram_oembed/',
-		true
-	);
-
-	/**
-	 * Handle an alternate Instagram URL format, where the username is also part of the URL.
-	 */
-	wp_oembed_add_provider(
-		'#https?://(?:www\.)?instagr(?:\.am|am\.com)/(?:[^/]*)/(p|tv|reel)/([^\/]*)#i',
-		'https://graph.facebook.com/v5.0/instagram_oembed/',
-		true
-	);
-
-	/**
-	 * Add auth token required by Instagram's oEmbed REST API, or proxy through WP.com.
-	 */
-	add_filter( 'oembed_fetch_url', 'jetpack_instagram_oembed_fetch_url', 10, 3 );
-
-	/**
-	 * Add JP auth headers if we're proxying through WP.com.
-	 */
-	add_filter( 'oembed_remote_get_args', 'jetpack_instagram_oembed_remote_get_args', 10, 2 );
-
-	/**
-	 * Embed reversal: Convert an embed code from Instagram.com to an oEmbeddable URL.
-	 */
-	add_filter( 'pre_kses', 'jetpack_instagram_embed_reversal' );
-
-	/**
-	 * Add the shortcode.
-	 */
-	add_shortcode( 'instagram', 'jetpack_shortcode_instagram' );
-}
+use Automattic\Jetpack\Assets;
 
 /**
  * Embed Reversal for Instagram
@@ -123,171 +72,182 @@ function jetpack_instagram_embed_reversal( $content ) {
 	return $content;
 }
 
+add_filter( 'pre_kses', 'jetpack_instagram_embed_reversal' );
+
 /**
- * List of allowed and sanitized parameters
- * that can be used with the Instagram oEmbed endpoint.
+ * Instagram's custom Embed provider.
+ * We first remove 2 different embed providers, both registered by Core.
+ * - The first is the original provider,that only supports images.
+ * - The second is tne new provider that replaced the first one in Core when Core added support for videos. https://core.trac.wordpress.org/changeset/44486
  *
- * Those parameters can be provided via the Instagram URL, or via shortcode parameters.
- *
- * @see https://developers.facebook.com/docs/graph-api/reference/instagram-oembed#parameters
- *
- * @since 9.1.0
- *
- * @param string $url  URL of the content to be embedded.
- * @param array  $atts Shortcode attributes.
- *
- * @return array $params Array of parameters to be used in Instagram query.
+ * Once the core embed provider is removed (one or the other, depending on your version of Core), we declare our own.
  */
-function jetpack_instagram_get_allowed_parameters( $url, $atts = array() ) {
+wp_oembed_remove_provider( '#https?://(www\.)?instagr(\.am|am\.com)/p/.*#i' );
+wp_oembed_remove_provider( '#https?://(www\.)?instagr(\.am|am\.com)/(p|tv)/.*#i' );
+wp_embed_register_handler(
+	'jetpack_instagram',
+	'#http(s?)://(www\.)?instagr(\.am|am\.com)/(p|tv)/([^\/]*)#i',
+	'jetpack_instagram_handler'
+);
+
+/**
+ * Handle Instagram embeds (build embed from regex).
+ *
+ * @param array  $matches Array of matches from the regex.
+ * @param array  $atts    The original unmodified attributes.
+ * @param string $url     The original URL that was matched by the regex.
+ */
+function jetpack_instagram_handler( $matches, $atts, $url ) {
 	global $content_width;
 
-	// Any URL passed via a shortcode attribute takes precedence.
-	if ( ! empty( $atts['url'] ) ) {
-		$url = $atts['url'];
-		unset( $atts['url'] );
-	}
-
-	/*
-	 * Get URL and parameters from the URL if possible.
-	 *
-	 * We'll also clean any other query params from the URL since Facebook's new API for Instagram
-	 * embeds does not like query parameters. See p7H4VZ-2DU-p2.
-	 */
-	$parsed_url = wp_parse_url( $url );
-	if ( $parsed_url && isset( $parsed_url['host'] ) && isset( $parsed_url['path'] ) ) {
-		// Bail early if this is not an Instagram URL.
-		if ( ! preg_match( '/(?:^|\.)instagr(?:\.am|am\.com)$/', $parsed_url['host'] ) ) {
-			return array();
-		}
-
-		$url = 'https://www.instagram.com' . $parsed_url['path'];
-
-		// If we have any parameters as part of the URL, we merge them with our attributes.
-		if ( ! empty( $parsed_url['query'] ) ) {
-			$query_args = array();
-			wp_parse_str( $parsed_url['query'], $query_args );
-
-			$atts = array_merge( $atts, $query_args );
-		}
-	} else {
-		return array();
-	}
+	// keep a copy of the passed-in URL since it's modified below.
+	$passed_url = $url;
 
 	$max_width = 698;
 	$min_width = 320;
 
-	$params = shortcode_atts(
+	if ( is_feed() ) {
+		// Instagram offers direct links to images, but not to videos.
+		if ( 'p' === $matches[1] ) {
+			$media_url = sprintf( 'https://instagr.am/p/%1$s/media/?size=l', $matches[2] );
+			return sprintf(
+				'<a href="%1$s" title="%2$s" target="_blank"><img src="%3$s" alt="%4$s" /></a>',
+				esc_url( $url ),
+				esc_attr__( 'View on Instagram', 'jetpack' ),
+				esc_url( $media_url ),
+				esc_html__( 'Instagram Photo', 'jetpack' )
+			);
+		} elseif ( 'tv' === $matches[1] ) {
+			return sprintf(
+				'<a href="%1$s" title="%2$s" target="_blank">%3$s</a>',
+				esc_url( $url ),
+				esc_attr__( 'View on Instagram', 'jetpack' ),
+				esc_html__( 'Instagram Video', 'jetpack' )
+			);
+		}
+	}
+
+	$atts = shortcode_atts(
 		array(
-			'url'         => $url,
 			'width'       => isset( $content_width ) ? $content_width : $max_width,
-			'height'      => '',
 			'hidecaption' => false,
 		),
-		$atts,
-		'instagram'
+		$atts
 	);
 
-	// Ensure width is within bounds.
-	$params['width'] = absint( $params['width'] );
-	if ( $params['width'] > $max_width ) {
-		$params['width'] = $max_width;
-	} elseif ( $params['width'] < $min_width ) {
-		$params['width'] = $min_width;
+	$atts['width'] = absint( $atts['width'] );
+	if ( $atts['width'] > $max_width ) {
+		$atts['width'] = $max_width;
+	} elseif ( $atts['width'] < $min_width ) {
+		$atts['width'] = $min_width;
 	}
 
-	return $params;
-}
+	// remove the modal param from the URL.
+	$url = remove_query_arg( 'modal', $url );
 
-/**
- * Add auth token required by Instagram's oEmbed REST API, or proxy through WP.com.
- *
- * @since 9.1.0
- *
- * @param string $provider URL of the oEmbed provider.
- * @param string $url      URL of the content to be embedded.
- * @param array  $args      Additional arguments for retrieving embed HTML.
- *
- * @return string
- */
-function jetpack_instagram_oembed_fetch_url( $provider, $url, $args ) {
-	if ( ! wp_startswith( $provider, 'https://graph.facebook.com/v5.0/instagram_oembed/' ) ) {
-		return $provider;
-	}
+	// force .com instead of .am for https support.
+	$url = str_replace( 'instagr.am', 'instagram.com', $url );
 
-	// Get a set of URL and parameters supported by Facebook.
-	$clean_parameters = jetpack_instagram_get_allowed_parameters( $url, $args );
+	// The oembed endpoint expects HTTP, but HTTP requests 301 to HTTPS.
+	$instagram_http_url = str_replace( 'https://', 'http://', $url );
 
-	// Replace existing URL by our clean version.
-	if ( ! empty( $clean_parameters['url'] ) ) {
-		$provider = add_query_arg( 'url', rawurlencode( $clean_parameters['url'] ), $provider );
-	}
-
-	// Our shortcode supports the width param, but the API expects maxwidth.
-	if ( ! empty( $clean_parameters['width'] ) ) {
-		$provider = add_query_arg( 'maxwidth', $clean_parameters['width'], $provider );
-	}
-
-	if ( ! empty( $clean_parameters['hidecaption'] ) ) {
-		$provider = add_query_arg( 'hidecaption', true, $provider );
-	}
-
-	$access_token = jetpack_instagram_get_access_token();
-
-	if ( ! empty( $access_token ) ) {
-		return add_query_arg( 'access_token', $access_token, $provider );
-	}
-
-	// If we don't have an access token, we go through the WP.com proxy instead.
-	// To that end, we need to make sure that we're connected to WP.com.
-	if ( ! Jetpack::is_connection_ready() || ( new Status() )->is_offline_mode() ) {
-		return $provider;
-	}
-
-	// @TODO Use Core's /oembed/1.0/proxy endpoint on WP.com
-	// (Currently not global but per-site, i.e. /oembed/1.0/sites/1234567/proxy)
-	// and deprecate /oembed-proxy/instagram endpoint.
-	$wpcom_oembed_proxy = Constants::get_constant( 'JETPACK__WPCOM_JSON_API_BASE' ) . '/wpcom/v2/oembed-proxy/instagram/';
-	return str_replace( 'https://graph.facebook.com/v5.0/instagram_oembed/', $wpcom_oembed_proxy, $provider );
-}
-
-/**
- * Add JP auth headers if we're proxying through WP.com.
- *
- * @param array  $args oEmbed remote get arguments.
- * @param string $url  URL to be inspected.
- */
-function jetpack_instagram_oembed_remote_get_args( $args, $url ) {
-	if ( ! wp_startswith( $url, Constants::get_constant( 'JETPACK__WPCOM_JSON_API_BASE' ) . '/wpcom/v2/oembed-proxy/instagram/' ) ) {
-		return $args;
-	}
-
-	$method         = 'GET';
-	$signed_request = Client::build_signed_request(
-		compact( 'url', 'method' )
+	$url_args = array(
+		'url'        => $instagram_http_url,
+		'maxwidth'   => $atts['width'],
+		'omitscript' => 1,
 	);
 
-	return $signed_request['request'];
-}
+	if ( $atts['hidecaption'] ) {
+		$url_args['hidecaption'] = 'true';
+	}
 
-/**
- * Fetches a Facebook API access token used for query for Instagram embed information, if one is set.
- *
- * @return string The access token or ''
- */
-function jetpack_instagram_get_access_token() {
+	$url = esc_url_raw( add_query_arg( $url_args, 'https://api.instagram.com/oembed/' ) );
+
 	/**
-	 * Filters the Instagram embed token that is used for querying the Facebook API.
+	 * Filter Object Caching for response from Instagram.
 	 *
-	 * When this token is set, requests are not proxied through the WordPress.com API. Instead, a request is made directly to the
-	 * Facebook API to query for information about the embed which should provide a performance benefit.
+	 * Allow enabling of object caching for the response sent by Instagram when querying for Instagram image HTML.
 	 *
 	 * @module shortcodes
 	 *
-	 * @since  9.0.0
+	 * @since  3.3.0
 	 *
-	 * @param string string The access token set via the JETPACK_INSTAGRAM_EMBED_TOKEN constant.
+	 * @param        bool        false Object caching is off by default.
+	 * @param array  $matches    Array of Instagram URLs found in the post.
+	 * @param array  $atts       Instagram Shortcode attributes.
+	 * @param string $passed_url Instagram API URL.
 	 */
-	return (string) apply_filters( 'jetpack_instagram_embed_token', (string) Constants::get_constant( 'JETPACK_INSTAGRAM_EMBED_TOKEN' ) );
+	$response_body_use_cache = apply_filters( 'instagram_cache_oembed_api_response_body', false, $matches, $atts, $passed_url );
+	$response_body           = false;
+	if ( $response_body_use_cache ) {
+		$cache_key     = 'oembed_response_body_' . md5( $url );
+		$response_body = wp_cache_get( $cache_key, 'instagram_embeds' );
+	}
+
+	if ( ! $response_body ) {
+		// Not using cache (default case) or cache miss.
+		$instagram_response = wp_remote_get( $url, array( 'redirection' => 0 ) );
+		if (
+			is_wp_error( $instagram_response )
+			|| 200 !== $instagram_response['response']['code']
+			|| empty( $instagram_response['body'] ) ) {
+			return '<!-- instagram error: invalid instagram resource -->';
+		}
+
+		$response_body = json_decode( $instagram_response['body'] );
+		if ( $response_body_use_cache ) {
+			// if caching it is short-lived since this is a "Cache-Control: no-cache" resource.
+			wp_cache_set(
+				$cache_key,
+				$response_body,
+				'instagram_embeds',
+				HOUR_IN_SECONDS + wp_rand( 0, HOUR_IN_SECONDS )
+			);
+		}
+	}
+
+	if ( ! empty( $response_body->html ) ) {
+		wp_enqueue_script(
+			'jetpack-instagram-embed',
+			Assets::get_file_url_for_environment( '_inc/build/shortcodes/js/instagram.min.js', 'modules/shortcodes/js/instagram.js' ),
+			array( 'jquery' ),
+			JETPACK__VERSION,
+			true
+		);
+		return $response_body->html;
+	}
+
+	return '<!-- instagram error: no embed found -->';
+}
+
+/**
+ * Handle an alternate Instagram URL format, where the username is also part of the URL.
+ * We do not actually need that username for the embed.
+ */
+wp_embed_register_handler(
+	'jetpack_instagram_alternate_format',
+	'#https?://(?:www\.)?instagr(?:\.am|am\.com)/(?:[^/]*)/(p|tv)/([^\/]*)#i',
+	'jetpack_instagram_alternate_format_handler'
+);
+
+/**
+ * Handle alternate Instagram embeds (build embed from regex).
+ *
+ * @param array  $matches Array of matches from the regex.
+ * @param array  $atts    The original unmodified attributes.
+ * @param string $url     The original URL that was matched by the regex.
+ */
+function jetpack_instagram_alternate_format_handler( $matches, $atts, $url ) {
+	// Replace URL saved by original Instagram URL (no username).
+	$matches[0] = esc_url_raw(
+		sprintf(
+			'https://www.instagram.com/%1$s/%2$s',
+			$matches[1],
+			$matches[2]
+		)
+	);
+
+	return jetpack_instagram_handler( $matches, $atts, $url );
 }
 
 /**
@@ -297,12 +257,6 @@ function jetpack_instagram_get_access_token() {
  */
 function jetpack_shortcode_instagram( $atts ) {
 	global $wp_embed;
-
-	if ( empty( $atts['url'] ) ) {
-		return '';
-	}
-
-	$atts = jetpack_instagram_get_allowed_parameters( $atts['url'], $atts );
 
 	if ( empty( $atts['url'] ) ) {
 		return '';
@@ -331,3 +285,4 @@ function jetpack_shortcode_instagram( $atts ) {
 
 	return $wp_embed->shortcode( $atts, $atts['url'] );
 }
+add_shortcode( 'instagram', 'jetpack_shortcode_instagram' );
