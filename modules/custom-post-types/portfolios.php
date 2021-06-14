@@ -1,13 +1,22 @@
 <?php
+/**
+ * Plugin Name: Jetpack Portfolio
+ * Plugin URI:
+ * Author: Automattic
+ * Version: 0.1
+ * License: GPL v2 or later
+ * Text Domain: jetpack
+ * Domain Path: /languages/
+ */
 
 class Jetpack_Portfolio {
-	const CUSTOM_POST_TYPE       = 'jetpack-portfolio';
-	const CUSTOM_TAXONOMY_TYPE   = 'jetpack-portfolio-type';
-	const CUSTOM_TAXONOMY_TAG    = 'jetpack-portfolio-tag';
-	const OPTION_NAME            = 'jetpack_portfolio';
+	const CUSTOM_POST_TYPE = 'jetpack-portfolio';
+	const CUSTOM_TAXONOMY_TYPE = 'jetpack-portfolio-type';
+	const CUSTOM_TAXONOMY_TAG = 'jetpack-portfolio-tag';
+	const OPTION_NAME = 'jetpack_portfolio';
 	const OPTION_READING_SETTING = 'jetpack_portfolio_posts_per_page';
 
-	public $version = '0.1';
+	var $version = '0.1';
 
 	static function init() {
 		static $instance = false;
@@ -30,18 +39,15 @@ class Jetpack_Portfolio {
 		add_action( 'admin_init',                                                      array( $this, 'settings_api_init' ) );
 
 		// Check on theme switch if theme supports CPT and setting is disabled
-		add_action( 'after_switch_theme',                                              array( $this, 'activation_post_type_support' ) );
+		add_action( 'after_switch_theme',                                              array( $this, 'theme_activation_post_type_support' ) );
 
 		// Make sure the post types are loaded for imports
 		add_action( 'import_start',                                                    array( $this, 'register_post_types' ) );
 
-		// Add to REST API post type allowed list.
-		add_filter( 'rest_api_allowed_post_types',                                     array( $this, 'allow_portfolio_rest_api_type' ) );
-
-		$setting = Jetpack_Options::get_option_and_ensure_autoload( self::OPTION_NAME, '0' );
+		$setting = get_option( self::OPTION_NAME, '0' );
 
 		// Bail early if Portfolio option is not set and the theme doesn't declare support
-		if ( empty( $setting ) && ! $this->site_supports_custom_post_type() ) {
+		if ( empty( $setting ) && ! $this->site_supports_portfolios() ) {
 			return;
 		}
 
@@ -50,48 +56,37 @@ class Jetpack_Portfolio {
 		add_action( sprintf( 'add_option_%s', self::OPTION_NAME ),                     array( $this, 'flush_rules_on_enable' ), 10 );
 		add_action( sprintf( 'update_option_%s', self::OPTION_NAME ),                  array( $this, 'flush_rules_on_enable' ), 10 );
 		add_action( sprintf( 'publish_%s', self::CUSTOM_POST_TYPE),                    array( $this, 'flush_rules_on_first_project' ) );
-		add_action( 'after_switch_theme',                                              array( $this, 'flush_rules_on_switch' ) );
 
-		// Admin Customization
 		add_filter( 'post_updated_messages',                                           array( $this, 'updated_messages'   ) );
 		add_filter( sprintf( 'manage_%s_posts_columns', self::CUSTOM_POST_TYPE),       array( $this, 'edit_admin_columns' ) );
 		add_filter( sprintf( 'manage_%s_posts_custom_column', self::CUSTOM_POST_TYPE), array( $this, 'image_column'       ), 10, 2 );
-		add_action( 'customize_register',                                              array( $this, 'customize_register' ) );
-
-		if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-
-			// Track all the things
-			add_action( sprintf( 'add_option_%s', self::OPTION_NAME ),                 array( $this, 'new_activation_stat_bump' ) );
-			add_action( sprintf( 'update_option_%s', self::OPTION_NAME ),              array( $this, 'update_option_stat_bump' ), 11, 2 );
-			add_action( sprintf( 'publish_%s', self::CUSTOM_POST_TYPE),                array( $this, 'new_project_stat_bump' ) );
-		}
 
 		add_image_size( 'jetpack-portfolio-admin-thumb', 50, 50, true );
 		add_action( 'admin_enqueue_scripts',                                           array( $this, 'enqueue_admin_styles'  ) );
+		add_action( 'after_switch_theme',                                              array( $this, 'flush_rules_on_switch' ) );
 
-		// register jetpack_portfolio shortcode and portfolio shortcode (legacy)
+		// Portfolio shortcode
 		add_shortcode( 'portfolio',                                                    array( $this, 'portfolio_shortcode' ) );
-		add_shortcode( 'jetpack_portfolio',                                            array( $this, 'portfolio_shortcode' ) );
-
-		// Adjust CPT archive and custom taxonomies to obey CPT reading setting
-		add_filter( 'infinite_scroll_settings',                                        array( $this, 'infinite_scroll_click_posts_per_page' ) );
-		add_filter( 'infinite_scroll_results',                                         array( $this, 'infinite_scroll_results' ), 10, 3 );
-
-		if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
-			// Add to Dotcom XML sitemaps
-			add_filter( 'wpcom_sitemap_post_types',                                    array( $this, 'add_to_sitemap' ) );
-		} else {
-			// Add to Jetpack XML sitemap
-			add_filter( 'jetpack_sitemap_post_types',                                  array( $this, 'add_to_sitemap' ) );
-		}
 
 		// Adjust CPT archive and custom taxonomies to obey CPT reading setting
 		add_filter( 'pre_get_posts',                                                   array( $this, 'query_reading_setting' ) );
 
 		// If CPT was enabled programatically and no CPT items exist when user switches away, disable
-		if ( $setting && $this->site_supports_custom_post_type() ) {
+		if ( $setting && $this->site_supports_portfolios() ) {
 			add_action( 'switch_theme',                                                array( $this, 'deactivation_post_type_support' ) );
 		}
+	}
+
+	/**
+	* Should this Custom Post Type be made available?
+	*/
+	function site_supports_portfolios() {
+		// If the current theme requests it.
+		if ( current_theme_supports( self::CUSTOM_POST_TYPE ) )
+			return true;
+
+		// Otherwise, say no unless something wants to filter us to say yes.
+		return (bool) apply_filters( 'jetpack_enable_cpt', false, self::CUSTOM_POST_TYPE );
 	}
 
 	/**
@@ -101,6 +96,14 @@ class Jetpack_Portfolio {
 	 * @return null
 	 */
 	function settings_api_init() {
+		/* Writing settings */
+		add_settings_section(
+			'jetpack_cpt_section',
+			'<span id="cpt-options">' . __( 'Your Custom Content Types', 'jetpack' ) . '</span>',
+			array( $this, 'jetpack_cpt_section_callback' ),
+			'writing'
+		);
+
 		add_settings_field(
 			self::OPTION_NAME,
 			'<span class="cpt-options">' . __( 'Portfolio Projects', 'jetpack' ) . '</span>',
@@ -114,14 +117,40 @@ class Jetpack_Portfolio {
 			'intval'
 		);
 
-		// Check if CPT is enabled first so that intval doesn't get set to NULL on re-registering
-		if ( get_option( self::OPTION_NAME, '0' ) || current_theme_supports( self::CUSTOM_POST_TYPE ) ) {
-			register_setting(
-				'writing',
-				self::OPTION_READING_SETTING,
-				'intval'
-			);
-		}
+		/* Reading settings */
+		add_settings_section(
+			'jetpack_portfolio_project_reading',
+			'<span id="cpt-options">' . __( 'Your Custom Content Types', 'jetpack' ) . '</span>',
+			array( $this, 'jetpack_cpt_section_callback' ),
+			'reading'
+		);
+
+		add_settings_field( 
+			'jetpack_portfolio_project_reading',  
+			__( 'Portfolio Projects', 'jetpack' ), 
+			array( $this, 'jetpack_cpt_section_reading' ),
+			'reading',
+			'jetpack_portfolio_project_reading'
+		);
+		
+		register_setting(
+			'reading',
+			self::OPTION_READING_SETTING,
+			'intval'
+		);
+	}
+
+	/**
+	 * Settings section description
+	 *
+	 * @todo add link to CPT support docs
+	 */
+	function jetpack_cpt_section_callback() {
+		?>
+		<p>
+			<?php esc_html_e( 'Use these settings to display different types of content on your site.', 'jetpack' ); ?>
+		</p>
+		<?php
 	}
 
 	/**
@@ -131,68 +160,33 @@ class Jetpack_Portfolio {
 	 * @return html
 	 */
 	function setting_html() {
-		if ( current_theme_supports( self::CUSTOM_POST_TYPE ) ) : ?>
-			<p><?php printf( /* translators: %s is the name of a custom post type such as "jetpack-portfolio" */ __( 'Your theme supports <strong>%s</strong>', 'jetpack' ), self::CUSTOM_POST_TYPE ); ?></p>
+		if( current_theme_supports( self::CUSTOM_POST_TYPE ) ) : ?>
+			<p><?php printf( __( 'Your theme supports <strong>%s</strong>', 'jetpack' ), self::CUSTOM_POST_TYPE ); ?></p>
 		<?php else : ?>
 			<label for="<?php echo esc_attr( self::OPTION_NAME ); ?>">
 				<input name="<?php echo esc_attr( self::OPTION_NAME ); ?>" id="<?php echo esc_attr( self::OPTION_NAME ); ?>" <?php echo checked( get_option( self::OPTION_NAME, '0' ), true, false ); ?> type="checkbox" value="1" />
 				<?php esc_html_e( 'Enable Portfolio Projects for this site.', 'jetpack' ); ?>
-				<a target="_blank" href="https://en.support.wordpress.com/portfolios/"><?php esc_html_e( 'Learn More', 'jetpack' ); ?></a>
+				<a target="_blank" href="http://en.support.wordpress.com/portfolios/"><?php esc_html_e( 'Learn More', 'jetpack' ); ?></a>
 			</label>
 		<?php endif;
-		if ( get_option( self::OPTION_NAME, '0' ) || current_theme_supports( self::CUSTOM_POST_TYPE ) ) :
+	}
+
+	function jetpack_cpt_section_reading(){
+
+		if( get_option( self::OPTION_NAME, '0' ) || current_theme_supports( self::CUSTOM_POST_TYPE ) ) {
 			printf( '<p><label for="%1$s">%2$s</label></p>',
 				esc_attr( self::OPTION_READING_SETTING ),
-				/* translators: %1$s is replaced with an input field for numbers */
 				sprintf( __( 'Portfolio pages display at most %1$s projects', 'jetpack' ),
 					sprintf( '<input name="%1$s" id="%1$s" type="number" step="1" min="1" value="%2$s" class="small-text" />',
 						esc_attr( self::OPTION_READING_SETTING ),
-						esc_attr( get_option( self::OPTION_READING_SETTING, '10' ) )
+						esc_attr( get_option( self::OPTION_READING_SETTING, '10' ), true, false )
 					)
 				)
 			);
-		endif;
-	}
-
-	/*
-	 * Bump Portfolio > New Activation stat
-	 */
-	function new_activation_stat_bump() {
-		bump_stats_extras( 'portfolios', 'new-activation' );
-	}
-
-	/*
-	 * Bump Portfolio > Option On/Off stats to get total active
-	 */
-	function update_option_stat_bump( $old, $new ) {
-		if ( empty( $old ) && ! empty( $new ) ) {
-			bump_stats_extras( 'portfolios', 'option-on' );
+		} else {
+			// Temporary Fix for 3.1 so we don't break a translation string before release.
+			printf( str_replace( 'update it\'s settings.', 'update its settings.', __( 'You need to <a href="%s">enable portfolio</a> custom post type before you can update it\'s settings.', 'jetpack' ) ), admin_url( 'options-writing.php#jetpack_portfolio' ) ); 
 		}
-
-		if ( ! empty( $old ) && empty( $new ) ) {
-			bump_stats_extras( 'portfolios', 'option-off' );
-		}
-	}
-
-	/*
-	 * Bump Portfolio > Published Projects stat when projects are published
-	 */
-	function new_project_stat_bump() {
-		bump_stats_extras( 'portfolios', 'published-projects' );
-	}
-
-	/**
-	* Should this Custom Post Type be made available?
-	*/
-	function site_supports_custom_post_type() {
-		// If the current theme requests it.
-		if ( current_theme_supports( self::CUSTOM_POST_TYPE ) || get_option( self::OPTION_NAME, '0' ) ) {
-			return true;
-		}
-
-		// Otherwise, say no unless something wants to filter us to say yes.
-		/** This action is documented in modules/custom-post-types/nova.php */
-		return (bool) apply_filters( 'jetpack_enable_cpt', false, self::CUSTOM_POST_TYPE );
 	}
 
 	/*
@@ -218,19 +212,22 @@ class Jetpack_Portfolio {
 		}
 	}
 
-	/*
-	 * Flush permalinks when CPT supported theme is activated
+	/**
+	 * On plugin activation, check if current theme supports CPT
 	 */
-	function flush_rules_on_switch() {
+	static function plugin_activation_post_type_support() {
 		if ( current_theme_supports( self::CUSTOM_POST_TYPE ) ) {
-			flush_rewrite_rules();
+			update_option( self::OPTION_NAME, '1' );
 		}
 	}
 
 	/**
-	 * On plugin/theme activation, check if current theme supports CPT
+	 * On plugin activation and theme switch, check if theme supports CPT
+	 * and user setting is disabled. If so, enable option.
+	 *
+	 * Plugin activation is for backwards compatibility with old CPT theme support
 	 */
-	static function activation_post_type_support() {
+	static function theme_activation_post_type_support() {
 		if ( current_theme_supports( self::CUSTOM_POST_TYPE ) ) {
 			update_option( self::OPTION_NAME, '1' );
 		}
@@ -252,6 +249,15 @@ class Jetpack_Portfolio {
 		}
 	}
 
+	/*
+	 * Flush permalinks when CPT supported theme is activated
+	 */
+	function flush_rules_on_switch() {
+		if ( current_theme_supports( self::CUSTOM_POST_TYPE ) ) {
+			flush_rewrite_rules();
+		}
+	}
+
 	/**
 	 * Register Post Type
 	 */
@@ -261,35 +267,28 @@ class Jetpack_Portfolio {
 		}
 
 		register_post_type( self::CUSTOM_POST_TYPE, array(
+			'description' => __( 'Portfolio Items', 'jetpack' ),
 			'labels' => array(
-				'name'                  => esc_html__( 'Projects',                   'jetpack' ),
-				'singular_name'         => esc_html__( 'Project',                    'jetpack' ),
-				'menu_name'             => esc_html__( 'Portfolio',                  'jetpack' ),
-				'all_items'             => esc_html__( 'All Projects',               'jetpack' ),
-				'add_new'               => esc_html__( 'Add New',                    'jetpack' ),
-				'add_new_item'          => esc_html__( 'Add New Project',            'jetpack' ),
-				'edit_item'             => esc_html__( 'Edit Project',               'jetpack' ),
-				'new_item'              => esc_html__( 'New Project',                'jetpack' ),
-				'view_item'             => esc_html__( 'View Project',               'jetpack' ),
-				'search_items'          => esc_html__( 'Search Projects',            'jetpack' ),
-				'not_found'             => esc_html__( 'No Projects found',          'jetpack' ),
-				'not_found_in_trash'    => esc_html__( 'No Projects found in Trash', 'jetpack' ),
-				'filter_items_list'     => esc_html__( 'Filter projects list',       'jetpack' ),
-				'items_list_navigation' => esc_html__( 'Project list navigation',    'jetpack' ),
-				'items_list'            => esc_html__( 'Projects list',              'jetpack' ),
+				'name'               => esc_html__( 'Projects',                   'jetpack' ),
+				'singular_name'      => esc_html__( 'Project',                    'jetpack' ),
+				'menu_name'          => esc_html__( 'Portfolio',                  'jetpack' ),
+				'all_items'          => esc_html__( 'All Projects',               'jetpack' ),
+				'add_new'            => esc_html__( 'Add New',                    'jetpack' ),
+				'add_new_item'       => esc_html__( 'Add New Project',            'jetpack' ),
+				'edit_item'          => esc_html__( 'Edit Project',               'jetpack' ),
+				'new_item'           => esc_html__( 'New Project',                'jetpack' ),
+				'view_item'          => esc_html__( 'View Project',               'jetpack' ),
+				'search_items'       => esc_html__( 'Search Projects',            'jetpack' ),
+				'not_found'          => esc_html__( 'No Projects found',          'jetpack' ),
+				'not_found_in_trash' => esc_html__( 'No Projects found in Trash', 'jetpack' ),
 			),
 			'supports' => array(
 				'title',
 				'editor',
 				'thumbnail',
-				'author',
-				'comments',
+				'post-formats',
 				'publicize',
 				'wpcom-markdown',
-				'revisions',
-				'excerpt',
-				'custom-fields',
-				'newspack_blocks',
 			),
 			'rewrite' => array(
 				'slug'       => 'portfolio',
@@ -306,31 +305,27 @@ class Jetpack_Portfolio {
 			'taxonomies'      => array( self::CUSTOM_TAXONOMY_TYPE, self::CUSTOM_TAXONOMY_TAG ),
 			'has_archive'     => true,
 			'query_var'       => 'portfolio',
-			'show_in_rest'    => true,
 		) );
 
 		register_taxonomy( self::CUSTOM_TAXONOMY_TYPE, self::CUSTOM_POST_TYPE, array(
 			'hierarchical'      => true,
 			'labels'            => array(
-				'name'                  => esc_html__( 'Project Types',                 'jetpack' ),
-				'singular_name'         => esc_html__( 'Project Type',                  'jetpack' ),
-				'menu_name'             => esc_html__( 'Project Types',                 'jetpack' ),
-				'all_items'             => esc_html__( 'All Project Types',             'jetpack' ),
-				'edit_item'             => esc_html__( 'Edit Project Type',             'jetpack' ),
-				'view_item'             => esc_html__( 'View Project Type',             'jetpack' ),
-				'update_item'           => esc_html__( 'Update Project Type',           'jetpack' ),
-				'add_new_item'          => esc_html__( 'Add New Project Type',          'jetpack' ),
-				'new_item_name'         => esc_html__( 'New Project Type Name',         'jetpack' ),
-				'parent_item'           => esc_html__( 'Parent Project Type',           'jetpack' ),
-				'parent_item_colon'     => esc_html__( 'Parent Project Type:',          'jetpack' ),
-				'search_items'          => esc_html__( 'Search Project Types',          'jetpack' ),
-				'items_list_navigation' => esc_html__( 'Project type list navigation',  'jetpack' ),
-				'items_list'            => esc_html__( 'Project type list',             'jetpack' ),
+				'name'              => esc_html__( 'Project Types',         'jetpack' ),
+				'singular_name'     => esc_html__( 'Project Type',          'jetpack' ),
+				'menu_name'         => esc_html__( 'Project Types',         'jetpack' ),
+				'all_items'         => esc_html__( 'All Project Types',     'jetpack' ),
+				'edit_item'         => esc_html__( 'Edit Project Type',     'jetpack' ),
+				'view_item'         => esc_html__( 'View Project Type',     'jetpack' ),
+				'update_item'       => esc_html__( 'Update Project Type',   'jetpack' ),
+				'add_new_item'      => esc_html__( 'Add New Project Type',  'jetpack' ),
+				'new_item_name'     => esc_html__( 'New Project Type Name', 'jetpack' ),
+				'parent_item'       => esc_html__( 'Parent Project Type',   'jetpack' ),
+				'parent_item_colon' => esc_html__( 'Parent Project Type:',  'jetpack' ),
+				'search_items'      => esc_html__( 'Search Project Types',  'jetpack' ),
 			),
 			'public'            => true,
 			'show_ui'           => true,
 			'show_in_nav_menus' => true,
-			'show_in_rest'      => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
 			'rewrite'           => array( 'slug' => 'project-type' ),
@@ -354,13 +349,10 @@ class Jetpack_Portfolio {
 				'add_or_remove_items'        => esc_html__( 'Add or remove tags',             'jetpack' ),
 				'choose_from_most_used'      => esc_html__( 'Choose from the most used tags', 'jetpack' ),
 				'not_found'                  => esc_html__( 'No tags found.',                 'jetpack' ),
-				'items_list_navigation'      => esc_html__( 'Project tag list navigation',    'jetpack' ),
-				'items_list'                 => esc_html__( 'Project tag list',               'jetpack' ),
 			),
 			'public'            => true,
 			'show_ui'           => true,
 			'show_in_nav_menus' => true,
-			'show_in_rest'      => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
 			'rewrite'           => array( 'slug' => 'project-tag' ),
@@ -385,7 +377,7 @@ class Jetpack_Portfolio {
 			7  => esc_html__( 'Project saved.', 'jetpack' ),
 			8  => sprintf( __( 'Project submitted. <a target="_blank" href="%s">Preview project</a>', 'jetpack'), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) ),
 			9  => sprintf( __( 'Project scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview project</a>', 'jetpack' ),
-			// translators: Publish box date format, see https://php.net/date
+			// translators: Publish box date format, see http://php.net/date
 			date_i18n( __( 'M j, Y @ G:i', 'jetpack' ), strtotime( $post->post_date ) ), esc_url( get_permalink( $post->ID ) ) ),
 			10 => sprintf( __( 'Project item draft updated. <a target="_blank" href="%s">Preview project</a>', 'jetpack' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) ),
 		);
@@ -400,7 +392,7 @@ class Jetpack_Portfolio {
 	function edit_admin_columns( $columns ) {
 		// change 'Title' to 'Project'
 		$columns['title'] = __( 'Project', 'jetpack' );
-		if ( current_theme_supports( 'post-thumbnails' ) ) {
+		if( current_theme_supports( 'post-thumbnails' ) ) {
 			// add featured image before 'Project'
 			$columns = array_slice( $columns, 0, 1, true ) + array( 'thumbnail' => '' ) + array_slice( $columns, 1, NULL, true );
 		}
@@ -424,72 +416,10 @@ class Jetpack_Portfolio {
 	 * Adjust image column width
 	 */
 	function enqueue_admin_styles( $hook ) {
-		$screen = get_current_screen();
+    	$screen = get_current_screen();
 
-		if ( 'edit.php' == $hook && self::CUSTOM_POST_TYPE == $screen->post_type && current_theme_supports( 'post-thumbnails' ) ) {
+    	if( 'edit.php' == $hook && self::CUSTOM_POST_TYPE == $screen->post_type && current_theme_supports( 'post-thumbnails' ) ) {
 			wp_add_inline_style( 'wp-admin', '.manage-column.column-thumbnail { width: 50px; } @media screen and (max-width: 360px) { .column-thumbnail{ display:none; } }' );
-		}
-	}
-
-	/**
-	 * Adds portfolio section to the Customizer.
-	 */
-	function customize_register( $wp_customize ) {
-		$options = get_theme_support( self::CUSTOM_POST_TYPE );
-
-		if ( ( ! isset( $options[0]['title'] ) || true !== $options[0]['title'] ) && ( ! isset( $options[0]['content'] ) || true !== $options[0]['content'] ) && ( ! isset( $options[0]['featured-image'] ) || true !== $options[0]['featured-image'] ) ) {
-			return;
-		}
-
-		$wp_customize->add_section( 'jetpack_portfolio', array(
-			'title'                    => esc_html__( 'Portfolio', 'jetpack' ),
-			'theme_supports'           => self::CUSTOM_POST_TYPE,
-			'priority'                 => 130,
-		) );
-
-		if ( isset( $options[0]['title'] ) && true === $options[0]['title'] ) {
-			$wp_customize->add_setting( 'jetpack_portfolio_title', array(
-				'default'              => esc_html__( 'Projects', 'jetpack' ),
-				'type'                 => 'option',
-				'sanitize_callback'    => 'sanitize_text_field',
-				'sanitize_js_callback' => 'sanitize_text_field',
-			) );
-
-			$wp_customize->add_control( 'jetpack_portfolio_title', array(
-				'section'              => 'jetpack_portfolio',
-				'label'                => esc_html__( 'Portfolio Archive Title', 'jetpack' ),
-				'type'                 => 'text',
-			) );
-		}
-
-		if ( isset( $options[0]['content'] ) && true === $options[0]['content'] ) {
-			$wp_customize->add_setting( 'jetpack_portfolio_content', array(
-				'default'              => '',
-				'type'                 => 'option',
-				'sanitize_callback'    => 'wp_kses_post',
-				'sanitize_js_callback' => 'wp_kses_post',
-			) );
-
-			$wp_customize->add_control( 'jetpack_portfolio_content', array(
-				'section'              => 'jetpack_portfolio',
-				'label'                => esc_html__( 'Portfolio Archive Content', 'jetpack' ),
-				'type'                 => 'textarea',
-			) );
-		}
-
-		if ( isset( $options[0]['featured-image'] ) && true === $options[0]['featured-image'] ) {
-			$wp_customize->add_setting( 'jetpack_portfolio_featured_image', array(
-				'default'              => '',
-				'type'                 => 'option',
-				'sanitize_callback'    => 'attachment_url_to_postid',
-				'sanitize_js_callback' => 'attachment_url_to_postid',
-				'theme_supports'       => 'post-thumbnails',
-			) );
-
-			$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'jetpack_portfolio_featured_image', array(
-				'section'              => 'jetpack_portfolio',
-				'label'                => esc_html__( 'Portfolio Archive Featured Image', 'jetpack' ),
-			) ) );
 		}
 	}
 
@@ -497,58 +427,12 @@ class Jetpack_Portfolio {
 	 * Follow CPT reading setting on CPT archive and taxonomy pages
 	 */
 	function query_reading_setting( $query ) {
-		if ( ( ! is_admin() || ( is_admin() && defined( 'DOING_AJAX' ) && DOING_AJAX ) )
-			&& $query->is_main_query()
-			&& ( $query->is_post_type_archive( self::CUSTOM_POST_TYPE )
-				|| $query->is_tax( self::CUSTOM_TAXONOMY_TYPE )
-				|| $query->is_tax( self::CUSTOM_TAXONOMY_TAG ) )
+		if ( ! is_admin() &&
+			$query->is_main_query() &&
+			( $query->is_post_type_archive( self::CUSTOM_POST_TYPE ) || $query->is_tax( self::CUSTOM_TAXONOMY_TYPE ) || $query->is_tax( self::CUSTOM_TAXONOMY_TAG ) )
 		) {
 			$query->set( 'posts_per_page', get_option( self::OPTION_READING_SETTING, '10' ) );
 		}
-	}
-
-	/*
-	 * If Infinite Scroll is set to 'click', use our custom reading setting instead of core's `posts_per_page`.
-	 */
-	function infinite_scroll_click_posts_per_page( $settings ) {
-		global $wp_query;
-
-		if ( ( ! is_admin() || ( is_admin() && defined( 'DOING_AJAX' ) && DOING_AJAX ) )
-			&& true === $settings['click_handle']
-			&& ( $wp_query->is_post_type_archive( self::CUSTOM_POST_TYPE )
-				|| $wp_query->is_tax( self::CUSTOM_TAXONOMY_TYPE )
-				|| $wp_query->is_tax( self::CUSTOM_TAXONOMY_TAG ) )
-		) {
-			$settings['posts_per_page'] = get_option( self::OPTION_READING_SETTING, $settings['posts_per_page'] );
-		}
-
-		return $settings;
-	}
-
-	/*
-	 * Filter the results of infinite scroll to make sure we get `lastbatch` right.
-	 */
-	function infinite_scroll_results( $results, $query_args, $query ) {
-		$results['lastbatch'] = $query_args['paged'] >= $query->max_num_pages;
-		return $results;
-	}
-
-	/**
-	 * Add CPT to Dotcom sitemap
-	 */
-	function add_to_sitemap( $post_types ) {
-		$post_types[] = self::CUSTOM_POST_TYPE;
-
-		return $post_types;
-	}
-
-	/**
-	 * Add to REST API post type allowed list.
-	 */
-	function allow_portfolio_rest_api_type( $post_types ) {
-		$post_types[] = self::CUSTOM_POST_TYPE;
-
-		return $post_types;
 	}
 
 	/**
@@ -563,14 +447,11 @@ class Jetpack_Portfolio {
 			'display_types'   => true,
 			'display_tags'    => true,
 			'display_content' => true,
-			'display_author'  => false,
 			'show_filter'     => false,
 			'include_type'    => false,
 			'include_tag'     => false,
 			'columns'         => 2,
 			'showposts'       => -1,
-			'order'           => 'asc',
-			'orderby'         => 'date',
 		), $atts, 'portfolio' );
 
 		// A little sanitization
@@ -582,11 +463,7 @@ class Jetpack_Portfolio {
 			$atts['display_tags'] = false;
 		}
 
-		if ( $atts['display_author'] && 'true' != $atts['display_author'] ) {
-			$atts['display_author'] = false;
-		}
-
-		if ( $atts['display_content'] && 'true' != $atts['display_content'] && 'full' != $atts['display_content'] ) {
+		if ( $atts['display_content'] && 'true' != $atts['display_content'] ) {
 			$atts['display_content'] = false;
 		}
 
@@ -600,41 +477,10 @@ class Jetpack_Portfolio {
 
 		$atts['columns'] = absint( $atts['columns'] );
 
-		$atts['showposts'] = (int) $atts['showposts'];
-
-
-		if ( $atts['order'] ) {
-			$atts['order'] = urldecode( $atts['order'] );
-			$atts['order'] = strtoupper( $atts['order'] );
-			if ( 'DESC' != $atts['order'] ) {
-				$atts['order'] = 'ASC';
-			}
-		}
-
-		if ( $atts['orderby'] ) {
-			$atts['orderby'] = urldecode( $atts['orderby'] );
-			$atts['orderby'] = strtolower( $atts['orderby'] );
-			$allowed_keys = array( 'author', 'date', 'title', 'rand' );
-
-			$parsed = array();
-			foreach ( explode( ',', $atts['orderby'] ) as $portfolio_index_number => $orderby ) {
-				if ( ! in_array( $orderby, $allowed_keys ) ) {
-					continue;
-				}
-				$parsed[] = $orderby;
-			}
-
-			if ( empty( $parsed ) ) {
-				unset( $atts['orderby'] );
-			} else {
-				$atts['orderby'] = implode( ' ', $parsed );
-			}
-		}
+		$atts['showposts'] = intval( $atts['showposts'] );
 
 		// enqueue shortcode styles when shortcode is used
-		if ( ! wp_style_is( 'jetpack-portfolio-style', 'enqueued' ) ) {
-			wp_enqueue_style( 'jetpack-portfolio-style', plugins_url( 'css/portfolio-shortcode.css', __FILE__ ), array(), '20140326' );
-		}
+		wp_enqueue_style( 'jetpack-portfolio-style', plugins_url( 'css/portfolio-shortcode.css', __FILE__ ), array(), '20140326' );
 
 		return self::portfolio_shortcode_html( $atts );
 	}
@@ -646,14 +492,11 @@ class Jetpack_Portfolio {
 	 */
 	static function portfolio_query( $atts ) {
 		// Default query arguments
-		$default = array(
-			'order'          => $atts['order'],
-			'orderby'        => $atts['orderby'],
+		$args = array(
+			'post_type'      => self::CUSTOM_POST_TYPE,
+			'order'          => 'ASC',
 			'posts_per_page' => $atts['showposts'],
 		);
-
-		$args = wp_parse_args( $atts, $default );
-		$args['post_type'] = self::CUSTOM_POST_TYPE; // Force this post type
 
 		if ( false != $atts['include_type'] || false != $atts['include_tag'] ) {
 			$args['tax_query'] = array();
@@ -695,9 +538,8 @@ class Jetpack_Portfolio {
 	static function portfolio_shortcode_html( $atts ) {
 
 		$query = self::portfolio_query( $atts );
-		$portfolio_index_number = 0;
-
-		ob_start();
+		$html = false;
+		$i = 0;
 
 		// If we have posts, create the html
 		// with hportfolio markup
@@ -706,74 +548,57 @@ class Jetpack_Portfolio {
 			// Render styles
 			//self::themecolor_styles();
 
-		?>
-			<div class="jetpack-portfolio-shortcode column-<?php echo esc_attr( $atts['columns'] ); ?>">
-			<?php  // open .jetpack-portfolio
+			$html = '<div class="jetpack-portfolio-shortcode">'; // open .jetpack-portfolio
 
 			// Construct the loop...
 			while ( $query->have_posts() ) {
 				$query->the_post();
 				$post_id = get_the_ID();
-				?>
-				<div class="portfolio-entry <?php echo esc_attr( self::get_project_class( $portfolio_index_number, $atts['columns'] ) ); ?>">
-					<header class="portfolio-entry-header">
-					<?php
-					// Featured image
-					echo self::get_portfolio_thumbnail_link( $post_id );
-					?>
 
-					<h2 class="portfolio-entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php echo esc_attr( the_title_attribute( ) ); ?>"><?php the_title(); ?></a></h2>
+				$html .= '<div class="portfolio-entry ' . esc_attr( self::get_project_class( $i, $atts['columns'] ) ) . '">'; // open .portfolio-entry
 
-						<div class="portfolio-entry-meta">
-						<?php
-						if ( false != $atts['display_types'] ) {
-							echo self::get_project_type( $post_id );
-						}
+				$html .= '<header class="portfolio-entry-header">';
 
-						if ( false != $atts['display_tags'] ) {
-							echo self::get_project_tags( $post_id );
-						}
+				// Featured image
+				$html .= self::get_thumbnail( $post_id );
 
-						if ( false != $atts['display_author'] ) {
-							echo self::get_project_author( $post_id );
-						}
-						?>
-						</div>
+				// The title
+				$html .= '<h2 class="portfolio-entry-title"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h2>';
 
-					</header>
+					$html .= '<div class="portfolio-entry-meta">';
 
-				<?php
-				// The content
-				if ( false !== $atts['display_content'] ) {
-					add_filter( 'wordads_inpost_disable', '__return_true', 20 );
-					if ( 'full' === $atts['display_content'] ) {
-					?>
-						<div class="portfolio-entry-content"><?php the_content(); ?></div>
-					<?php
-					} else {
-					?>
-						<div class="portfolio-entry-content"><?php the_excerpt(); ?></div>
-					<?php
+					if ( false != $atts['display_types'] ) {
+						$html .= self::get_project_type( $post_id );
 					}
-					remove_filter( 'wordads_inpost_disable', '__return_true', 20 );
+
+					if ( false != $atts['display_tags'] ) {
+						$html .= self::get_project_tags( $post_id );
+					}
+
+					$html .= '</div>';
+
+				$html .= '</header>';
+
+				// The content
+				if ( false != $atts['display_content'] ) {
+					$html .= '<div class="portfolio-entry-content">' . apply_filters( 'the_excerpt', get_the_excerpt() ) . '</div>';
 				}
-				?>
-				</div><!-- close .portfolio-entry -->
-				<?php $portfolio_index_number++;
-			} // end of while loop
+
+				$html .= '</div>';  // close .portfolio-entry
+
+				$i++;
+			}
 
 			wp_reset_postdata();
-			?>
-			</div><!-- close .jetpack-portfolio -->
-		<?php
-		} else { ?>
-			<p><em><?php _e( 'Your Portfolio Archive currently has no entries. You can start creating them on your dashboard.', 'jetpack' ); ?></p></em>
-		<?php
+
+			$html .= '</div>'; // close .jetpack-portfolio
 		}
-		$html = ob_get_clean();
+		else {
+			$html .= '<p><em>' . __( 'Your Portfolio Archive currently has no entries. You can start creating them on your dashboard.', 'jetpack' ) . '</p></em>';
+		}
 
 		// If there is a [portfolio] within a [portfolio], remove the shortcode
-		if ( has_shortcode( $html, 'portfolio' ) ){
+		if ( has_shortcode( $html, 'portfolio' ) ) {
 			remove_shortcode( 'portfolio' );
 		}
 
@@ -786,7 +611,7 @@ class Jetpack_Portfolio {
 	 *
 	 * @return string
 	 */
-	static function get_project_class( $portfolio_index_number, $columns ) {
+	static function get_project_class( $i, $columns ) {
 		$project_types = wp_get_object_terms( get_the_ID(), self::CUSTOM_TAXONOMY_TYPE, array( 'fields' => 'slugs' ) );
 		$class = array();
 
@@ -796,34 +621,30 @@ class Jetpack_Portfolio {
 			$class[] = 'type-' . esc_html( $project_type );
 		}
 		if( $columns > 1) {
-			if ( ( $portfolio_index_number % 2 ) == 0 ) {
+			if ( ($i % 2) == 0 ) {
 				$class[] = 'portfolio-entry-mobile-first-item-row';
 			} else {
 				$class[] = 'portfolio-entry-mobile-last-item-row';
 			}
 		}
-
+		
 		// add first and last classes to first and last items in a row
-		if ( ( $portfolio_index_number % $columns ) == 0 ) {
+		if ( ($i % $columns) == 0 ) {
 			$class[] = 'portfolio-entry-first-item-row';
-		} elseif ( ( $portfolio_index_number % $columns ) == ( $columns - 1 ) ) {
+		} elseif ( ($i % $columns) == ( $columns - 1 ) ) {
 			$class[] = 'portfolio-entry-last-item-row';
 		}
-
+		
 
 		/**
-		 * Filter the class applied to project div in the portfolio
-		 *
-		 * @module custom-content-types
-		 *
-		 * @since 3.1.0
+		 * Filter the class applied to project div in the portfolio 
 		 *
 		 * @param string $class class name of the div.
-		 * @param int $portfolio_index_number iterator count the number of columns up starting from 0.
+		 * @param int $i iterator count the number of columns up starting from 0.
 		 * @param int $columns number of columns to display the content in.
-		 *
+		 * 
 		 */
-		return apply_filters( 'portfolio-project-post-class', implode( " ", $class ) , $portfolio_index_number, $columns );
+		return apply_filters( 'portfolio-project-post-class', implode( " ", $class) , $i, $columns );
 	}
 
 	/**
@@ -882,24 +703,7 @@ class Jetpack_Portfolio {
 
 			$tags[] = '<a href="' . esc_url( $project_tag_link ) . '" rel="tag">' . esc_html( $project_tag->name ) . '</a>';
 		}
-		$html .= ' '. implode( ', ', $tags );
-		$html .= '</div>';
-
-		return $html;
-	}
-
-	/**
-	 * Displays the author of the current portfolio project.
-	 *
-	 * @return html
-	 */
-	static function get_project_author() {
-		$html = '<div class="project-author">';
-		/* translators: %1$s is link to author posts, %2$s is author display name */
-		$html .= sprintf( __( '<span>Author:</span> <a href="%1$s">%2$s</a>', 'jetpack' ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_html( get_the_author() )
-		);
+		$html .= ' '. implode( ', ', $tags);
 		$html .= '</div>';
 
 		return $html;
@@ -910,18 +714,9 @@ class Jetpack_Portfolio {
 	 *
 	 * @return html
 	 */
-	static function get_portfolio_thumbnail_link( $post_id ) {
+	static function get_thumbnail( $post_id ) {
 		if ( has_post_thumbnail( $post_id ) ) {
-			/**
-			 * Change the Portfolio thumbnail size.
-			 *
-			 * @module custom-content-types
-			 *
-			 * @since 3.4.0
-			 *
-			 * @param string|array $var Either a registered size keyword or size array.
-			 */
-			return '<a class="portfolio-featured-image" href="' . esc_url( get_permalink( $post_id ) ) . '">' . get_the_post_thumbnail( $post_id, apply_filters( 'jetpack_portfolio_thumbnail_size', 'large' ) ) . '</a>';
+			return '<a class="portfolio-featured-image" href="' . esc_url( get_permalink( $post_id ) ) . '">' . get_the_post_thumbnail( $post_id, 'full' ) . '</a>';
 		}
 	}
 }
@@ -929,5 +724,5 @@ class Jetpack_Portfolio {
 add_action( 'init', array( 'Jetpack_Portfolio', 'init' ) );
 
 // Check on plugin activation if theme supports CPT
-register_activation_hook( __FILE__,                         array( 'Jetpack_Portfolio', 'activation_post_type_support' ) );
-add_action( 'jetpack_activate_module_custom-content-types', array( 'Jetpack_Portfolio', 'activation_post_type_support' ) );
+register_activation_hook( __FILE__,                         array( 'Jetpack_Portfolio', 'plugin_activation_post_type_support' ) );
+add_action( 'jetpack_activate_module_custom-content-types', array( 'Jetpack_Portfolio', 'plugin_activation_post_type_support' ) );

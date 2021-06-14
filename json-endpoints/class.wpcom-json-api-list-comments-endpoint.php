@@ -1,123 +1,26 @@
 <?php
 
-class WPCOM_JSON_API_List_Comments_Walker extends Walker {
-	public $tree_type = 'comment';
-
-	public $db_fields = array(
-		'parent' => 'comment_parent',
-		'id'     => 'comment_ID'
-	);
-
-	public function start_el( &$output, $object, $depth = 0, $args = array(), $current_object_id = 0 ) {
-		if ( ! is_array( $output ) ) {
-			$output = array();
-		}
-
-		$output[] = $object->comment_ID;
-	}
-
-	/**
-	 * Taken from WordPress's Walker_Comment::display_element()
-	 *
-	 * This function is designed to enhance Walker::display_element() to
-	 * display children of higher nesting levels than selected inline on
-	 * the highest depth level displayed. This prevents them being orphaned
-	 * at the end of the comment list.
-	 *
-	 * Example: max_depth = 2, with 5 levels of nested content.
-	 * 1
-	 *  1.1
-	 *    1.1.1
-	 *    1.1.1.1
-	 *    1.1.1.1.1
-	 *    1.1.2
-	 *    1.1.2.1
-	 * 2
-	 *  2.2
-	 *
-	 * @see Walker_Comment::display_element()
-	 * @see Walker::display_element()
-	 * @see wp_list_comments()
-	 */
-	public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
-
-		if ( !$element )
-			return;
-
-		$id_field = $this->db_fields['id'];
-		$id = $element->$id_field;
-
-		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-
-		// If we're at the max depth, and the current element still has children, loop over those and display them at this level
-		// This is to prevent them being orphaned to the end of the list.
-		if ( $max_depth <= $depth + 1 && isset( $children_elements[$id]) ) {
-			foreach ( $children_elements[ $id ] as $child )
-				$this->display_element( $child, $children_elements, $max_depth, $depth, $args, $output );
-
-			unset( $children_elements[ $id ] );
-		}
-
-	}
-}
-
-new WPCOM_JSON_API_List_Comments_Endpoint( array(
-	'description' => 'Get a list of recent comments.',
-	'group'       => 'comments',
-	'stat'        => 'comments',
-
-	'method'      => 'GET',
-	'path'        => '/sites/%s/comments/',
-	'path_labels' => array(
-		'$site' => '(int|string) Site ID or domain',
-	),
-
-	'allow_fallback_to_jetpack_blog_token' => true,
-
-	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/comments/?number=2',
-) );
-
-new WPCOM_JSON_API_List_Comments_Endpoint( array(
-	'description' => 'Get a list of recent comments on a post.',
-	'group'       => 'comments',
-	'stat'        => 'posts:1:replies',
-
-	'method'      => 'GET',
-	'path'        => '/sites/%s/posts/%d/replies/',
-	'path_labels' => array(
-		'$site'    => '(int|string) Site ID or domain',
-		'$post_ID' => '(int) The post ID',
-	),
-
-	'allow_fallback_to_jetpack_blog_token' => true,
-
-	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/posts/7/replies/?number=2',
-) );
-
 // @todo permissions
 class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpoint {
-	public $response_format = array(
+	var $date_range = array();
+
+	var $response_format = array(
 		'found'    => '(int) The total number of comments found that match the request (ignoring limits, offsets, and pagination).',
-		'site_ID'  => '(int) The site ID',
 		'comments' => '(array:comment) An array of comment objects.',
 	);
 
 	function __construct( $args ) {
 		parent::__construct( $args );
 		$this->query = array_merge( $this->query, array(
-			'number'   => '(int=20) The number of comments to return.  Limit: 100. When using hierarchical=1, number refers to the number of top-level comments returned.',
-			'offset'   => '(int=0) 0-indexed offset. Not available if using hierarchical=1.',
-			'page'     => '(int) Return the Nth 1-indexed page of comments.  Takes precedence over the <code>offset</code> parameter. When using hierarchical=1, pagination is a bit different.  See the note on the number parameter.',
+			'number'   => '(int=20) The number of comments to return.  Limit: 100.',
+			'offset'   => '(int=0) 0-indexed offset.',
+			'page'     => '(int) Return the Nth 1-indexed page of comments.  Takes precedence over the <code>offset</code> parameter.',
 			'order'    => array(
 				'DESC' => 'Return comments in descending order from newest to oldest.',
 				'ASC'  => 'Return comments in ascending order from oldest to newest.',
 			),
-			'hierarchical' => array(
-				'false' => '',
-				'true' => '(BETA) Order the comment list hierarchically.',
-			),
-			'after'    => '(ISO 8601 datetime) Return comments dated on or after the specified datetime. Not available if using hierarchical=1.',
-			'before'   => '(ISO 8601 datetime) Return comments dated on or before the specified datetime. Not available if using hierarchical=1.',
+			'after'    => '(ISO 8601 datetime) Return comments dated on or after the specified datetime.',
+			'before'   => '(ISO 8601 datetime) Return comments dated on or before the specified datetime.',
 			'type'     => array(
 				'any'       => 'Return all comments regardless of type.',
 				'comment'   => 'Return only regular comments.',
@@ -169,7 +72,7 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 		if ( !$comment_id ) {
 			// We can get comment counts for the whole site or for a single post, but only for certain queries
 			if ( 'any' === $args['type'] && !isset( $args['after'] ) && !isset( $args['before'] ) ) {
-				$count = $this->api->wp_count_comments( $post_id );
+				$count = wp_count_comments( $post_id );
 			}
 		}
 
@@ -181,7 +84,7 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 			}
 			break;
 		default :
-			if ( ! current_user_can( 'edit_posts' ) ) {
+			if ( !current_user_can( 'moderate_comments' ) ) {
 				return new WP_Error( 'unauthorized', 'User cannot read non-approved comments', 403 );
 			}
 			if ( 'unapproved' === $args['status'] ) {
@@ -198,55 +101,12 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 			}
 		}
 
-		/** This filter is documented in class.json-api.php */
-		$exclude = apply_filters( 'jetpack_api_exclude_comment_types',
-			array( 'order_note', 'webhook_delivery', 'review', 'action_log' )
-		);
-
 		$query = array(
-			'order'        => $args['order'],
-			'type'         => 'any' === $args['type'] ? false : $args['type'],
-			'status'       => $status,
-			'type__not_in' => $exclude,
+			'number' => $args['number'],
+			'order'  => $args['order'],
+			'type'   => 'any' === $args['type'] ? false : $args['type'],
+			'status' => $status,
 		);
-
-		if ( isset( $args['page'] ) ) {
-			if ( $args['page'] < 1 ) {
-				$args['page'] = 1;
-			}
-		} else {
-			if ( $args['offset'] < 0 ) {
-				$args['offset'] = 0;
-			}
-		}
-
-		if ( ! $args['hierarchical'] ) {
-			$query['number'] = $args['number'];
-
-			if ( isset( $args['page'] ) ) {
-				$query['offset'] = ( $args['page'] - 1 ) * $args['number'];
-			} else {
-				$query['offset'] = $args['offset'];
-			}
-
-			$is_before = isset( $args['before_gmt'] );
-			$is_after  = isset( $args['after_gmt'] );
-
-			if ( $is_before || $is_after ) {
-				$query['date_query'] = array(
-					'column' => 'comment_date_gmt',
-					'inclusive' => true,
-				);
-
-				if ( $is_before ) {
-					$query['date_query']['before'] = $args['before_gmt'];
-				}
-
-				if ( $is_after ) {
-					$query['date_query']['after'] = $args['after_gmt'];
-				}
-			}
-		}
 
 		if ( $post_id ) {
 			$post = get_post( $post_id );
@@ -265,16 +125,34 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 			$query['parent'] = $comment_id;
 		}
 
-		$comments = get_comments( $query );
-
-		update_comment_cache( $comments );
-
-		if ( $args['hierarchical'] ) {
-			$walker = new WPCOM_JSON_API_List_Comments_Walker;
-			$comment_ids = $walker->paged_walk( $comments, get_option( 'thread_comments_depth', -1 ), isset( $args['page'] ) ? $args['page'] : 1 , $args['number'] );
-			if ( ! empty( $comment_ids ) ) {
-				$comments = array_map( 'get_comment', $comment_ids );
+		if ( isset( $args['page'] ) ) {
+			if ( $args['page'] < 1 ) {
+				$args['page'] = 1;
 			}
+
+			$query['offset'] = ( $args['page'] - 1 ) * $args['number'];
+		} else {
+			if ( $args['offset'] < 0 ) {
+				$args['offset'] = 0;
+			}
+
+			$query['offset'] = $args['offset'];
+		}
+
+		if ( isset( $args['before_gmt'] ) ) {
+			$this->date_range['before_gmt'] = $args['before_gmt'];
+		}
+		if ( isset( $args['after_gmt'] ) ) {
+			$this->date_range['after_gmt'] = $args['after_gmt'];
+		}
+
+		if ( $this->date_range ) {
+			add_filter( 'comments_clauses', array( $this, 'handle_date_range' ) );
+		}
+		$comments = get_comments( $query );
+		if ( $this->date_range ) {
+			remove_filter( 'comments_clauses', array( $this, 'handle_date_range' ) );
+			$this->date_range = array();
 		}
 
 		$return = array();
@@ -282,32 +160,55 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 		foreach ( array_keys( $this->response_format ) as $key ) {
 			switch ( $key ) {
 			case 'found' :
-				$return[ $key ] = (int) $found;
-				break;
-			case 'site_ID' :
-				$return[ $key ] = (int) $blog_id;
+				$return[$key] = (int) $found;
 				break;
 			case 'comments' :
 				$return_comments = array();
-				if ( ! empty( $comments ) ) {
-					foreach ( $comments as $comment ) {
-						$the_comment = $this->get_comment( $comment->comment_ID, $args['context'] );
-						if ( $the_comment && !is_wp_error( $the_comment ) ) {
-							$return_comments[] = $the_comment;
-						}
+				foreach ( $comments as $comment ) {
+					$the_comment = $this->get_comment( $comment->comment_ID, $args['context'] );
+					if ( $the_comment && !is_wp_error( $the_comment ) ) {
+						$return_comments[] = $the_comment;
 					}
 				}
 
 				if ( $return_comments ) {
-					/** This action is documented in json-endpoints/class.wpcom-json-api-site-settings-endpoint.php */
 					do_action( 'wpcom_json_api_objects', 'comments', count( $return_comments ) );
 				}
 
-				$return[ $key ] = $return_comments;
+				$return[$key] = $return_comments;
 				break;
 			}
 		}
 
 		return $return;
+	}
+
+	function handle_date_range( $clauses ) {
+		global $wpdb;
+
+		switch ( count( $this->date_range ) ) {
+		case 2 :
+			$clauses['where'] .= $wpdb->prepare(
+				" AND `$wpdb->comments`.comment_date_gmt BETWEEN CAST( %s AS DATETIME ) AND CAST( %s AS DATETIME ) ",
+				$this->date_range['after_gmt'],
+				$this->date_range['before_gmt']
+			);
+			break;
+		case 1 :
+			if ( isset( $this->date_range['before_gmt'] ) ) {
+				$clauses['where'] .= $wpdb->prepare(
+					" AND `$wpdb->comments`.comment_date_gmt <= CAST( %s AS DATETIME ) ",
+					$this->date_range['before_gmt']
+				);
+			} else {
+				$clauses['where'] .= $wpdb->prepare(
+					" AND `$wpdb->comments`.comment_date_gmt >= CAST( %s AS DATETIME ) ",
+					$this->date_range['after_gmt']
+				);
+			}
+			break;
+		}
+
+		return $clauses;
 	}
 }
