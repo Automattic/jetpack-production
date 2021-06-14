@@ -1,9 +1,9 @@
-jQuery( document ).ready( function ( $ ) {
+jQuery( document ).ready( function( $ ) {
 	var jsonAPIbase = 'https://public-api.wordpress.com/rest/v1',
 		APIqueue = [];
 
 	function getCommentLikeCounts() {
-		$( '.comment-like-count' ).each( function () {
+		$( '.comment-like-count' ).each( function() {
 			var blogId = $( this ).attr( 'data-blog-id' ),
 				commentId = $( this ).attr( 'data-comment-id' );
 
@@ -15,7 +15,7 @@ jQuery( document ).ready( function ( $ ) {
 			url: jsonAPIbase + '/batch',
 			dataType: 'jsonp',
 			data: 'urls[]=' + APIqueue.map( encodeURIComponent ).join( '&urls[]=' ),
-			success: function ( response ) {
+			success: function( response ) {
 				for ( var path in response ) {
 					if ( ! response[ path ].error_data ) {
 						var urlPieces = path.split( '/' ),
@@ -26,15 +26,11 @@ jQuery( document ).ready( function ( $ ) {
 							return;
 						}
 
-						$( '#comment-like-count-' + commentId )
-							.find( '.like-count' )
-							.hide()
-							.text( likeCount )
-							.fadeIn();
+						$( '#comment-like-count-' + commentId ).find( '.like-count' ).hide().text( likeCount ).fadeIn();
 					}
 				}
 			},
-			error: function () {},
+			error: function() {}
 		} );
 	}
 
