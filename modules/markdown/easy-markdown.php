@@ -1,22 +1,21 @@
 <?php
-
 /*
 Plugin Name: Easy Markdown
-Plugin URI: https://automattic.com/
+Plugin URI: http://automattic.com/
 Description: Write in Markdown, publish in WordPress
 Version: 0.1
 Author: Matt Wiebe
-Author URI: https://automattic.com/
+Author URI: http://automattic.com/
 */
 
 /**
  * Copyright (c) Automattic. All rights reserved.
  *
  * Released under the GPL license
- * https://www.opensource.org/licenses/gpl-license.php
+ * http://www.opensource.org/licenses/gpl-license.php
  *
  * This is an add-on for WordPress
- * https://wordpress.org/
+ * http://wordpress.org/
  *
  * **********************************************************************
  * This program is free software; you can redistribute it and/or modify
@@ -64,56 +63,28 @@ class WPCom_Markdown {
 	public function load() {
 		$this->add_default_post_type_support();
 		$this->maybe_load_actions_and_filters();
-		if ( defined( 'REST_API_REQUEST' ) && REST_API_REQUEST ) {
-			add_action( 'switch_blog', array( $this, 'maybe_load_actions_and_filters' ), 10, 2 );
-		}
+		add_action( 'switch_blog', array( $this, 'maybe_load_actions_and_filters' ) );
 		add_action( 'admin_init', array( $this, 'register_setting' ) );
-		add_action( 'admin_init', array( $this, 'maybe_unload_for_bulk_edit' ) );
 		if ( current_theme_supports( 'o2' ) || class_exists( 'P2' ) ) {
 			$this->add_o2_helpers();
 		}
 	}
 
 	/**
-	 * If we're in a bulk edit session, unload so that we don't lose our markdown metadata
-	 * @return null
-	 */
-	public function maybe_unload_for_bulk_edit() {
-		if ( isset( $_REQUEST['bulk_edit'] ) && $this->is_posting_enabled() ) {
-			$this->unload_markdown_for_posts();
-		}
-	}
-
-	/**
-	 * Called on init and fires on switch_blog to decide if our actions and filters
+	 * Called on init and fires on blog_switch to decide if our actions and filters
 	 * should be running.
-	 * @param int|null $new_blog_id New blog ID
-	 * @param int|null $old_blog_id Old blog ID
 	 * @return null
 	 */
-	public function maybe_load_actions_and_filters( $new_blog_id = null, $old_blog_id = null ) {
-
-		// When WP sites are being installed, the options table is not available yet.
-		if ( function_exists( 'wp_installing' ) && wp_installing() ) {
-			return;
-		}
-
-		// If this is a switch_to_blog call, and the blog isn't changing, we'll already be loaded
-		if ( $new_blog_id && $new_blog_id === $old_blog_id ) {
-			return;
-		}
-
-		if ( $this->is_posting_enabled() ) {
+	public function maybe_load_actions_and_filters() {
+		if ( $this->is_posting_enabled() )
 			$this->load_markdown_for_posts();
-		} else {
+		else
 			$this->unload_markdown_for_posts();
-		}
 
-		if ( $this->is_commenting_enabled() ) {
+		if ( $this->is_commenting_enabled() )
 			$this->load_markdown_for_comments();
-		} else {
+		else
 			$this->unload_markdown_for_comments();
-		}
 	}
 
 	/**
@@ -121,8 +92,6 @@ class WPCom_Markdown {
 	 * @return null
 	 */
 	public function load_markdown_for_posts() {
-		add_filter( 'wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ), 10, 2 );
-		add_action( 'after_wp_tiny_mce', array( $this, 'after_wp_tiny_mce' ) );
 		add_action( 'wp_insert_post', array( $this, 'wp_insert_post' ) );
 		add_filter( 'wp_insert_post_data', array( $this, 'wp_insert_post_data' ), 10, 2 );
 		add_filter( 'edit_post_content', array( $this, 'edit_post_content' ), 10, 2 );
@@ -130,9 +99,8 @@ class WPCom_Markdown {
 		add_action( 'wp_restore_post_revision', array( $this, 'wp_restore_post_revision' ), 10, 2 );
 		add_filter( '_wp_post_revision_fields', array( $this, '_wp_post_revision_fields' ) );
 		add_action( 'xmlrpc_call', array( $this, 'xmlrpc_actions' ) );
-		add_filter( 'content_save_pre', array( $this, 'preserve_code_blocks' ), 1 );
 		if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) {
-			$this->check_for_early_methods();
+			$this->check_for_mwgetpost();
 		}
 	}
 
@@ -141,8 +109,6 @@ class WPCom_Markdown {
 	 * @return null
 	 */
 	public function unload_markdown_for_posts() {
-		remove_filter( 'wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ) );
-		remove_action( 'after_wp_tiny_mce', array( $this, 'after_wp_tiny_mce' ) );
 		remove_action( 'wp_insert_post', array( $this, 'wp_insert_post' ) );
 		remove_filter( 'wp_insert_post_data', array( $this, 'wp_insert_post_data' ), 10, 2 );
 		remove_filter( 'edit_post_content', array( $this, 'edit_post_content' ), 10, 2 );
@@ -150,7 +116,6 @@ class WPCom_Markdown {
 		remove_action( 'wp_restore_post_revision', array( $this, 'wp_restore_post_revision' ), 10, 2 );
 		remove_filter( '_wp_post_revision_fields', array( $this, '_wp_post_revision_fields' ) );
 		remove_action( 'xmlrpc_call', array( $this, 'xmlrpc_actions' ) );
-		remove_filter( 'content_save_pre', array( $this, 'preserve_code_blocks' ), 1 );
 	}
 
 	/**
@@ -158,9 +123,8 @@ class WPCom_Markdown {
 	 * @return null
 	 */
 	protected function load_markdown_for_comments() {
-		// Use priority 9 so that Markdown runs before KSES, which can clean up
-		// any munged HTML.
-		add_filter( 'pre_comment_content', array( $this, 'pre_comment_content' ), 9 );
+		add_filter( 'preprocess_comment', array( $this, 'preprocess_comment' ) );
+		add_filter( 'comment_save_pre', array( $this, 'comment_save_pre' ) );
 	}
 
 	/**
@@ -168,7 +132,8 @@ class WPCom_Markdown {
 	 * @return null
 	 */
 	protected function unload_markdown_for_comments() {
-		remove_filter( 'pre_comment_content', array( $this, 'pre_comment_content' ), 9 );
+		remove_filter( 'preprocess_comment', array( $this, 'preprocess_comment' ) );
+		remove_filter( 'comment_save_pre', array( $this, 'comment_save_pre' ) );
 	}
 
 	/**
@@ -227,15 +192,6 @@ class WPCom_Markdown {
 	 */
 	public function o2_unescape_lists( $text ) {
 		return preg_replace( '/^[&]\#042; /um', '* ', $text );
-	}
-
-	/**
-	 * Preserve code blocks from being munged by KSES before they have a chance
-	 * @param  string $text post content
-	 * @return string       post content with code blocks escaped
-	 */
-	public function preserve_code_blocks( $text ) {
-		return $this->get_parser()->codeblock_preserve( $text );
 	}
 
 	/**
@@ -304,16 +260,7 @@ class WPCom_Markdown {
 	 * @return string support url
 	 */
 	protected function get_support_url() {
-		/**
-		 * Filter the Markdown support URL.
-		 *
-		 * @module markdown
-		 *
-		 * @since 2.8.0
-		 *
-		 * @param string $url Markdown support URL.
-		 */
-		return apply_filters( 'easy_markdown_support_url', 'https://en.support.wordpress.com/markdown-quick-reference/' );
+		return apply_filters( 'easy_markdown_support_url', 'http://en.support.wordpress.com/markdown-quick-reference/' );
 	}
 
 	/**
@@ -321,7 +268,7 @@ class WPCom_Markdown {
 	 * @return boolean
 	 */
 	public function is_posting_enabled() {
-		return (bool) Jetpack_Options::get_option_and_ensure_autoload( self::POST_OPTION, '' );
+		return (bool) get_option( self::POST_OPTION, '' );
 	}
 
 	/**
@@ -329,7 +276,7 @@ class WPCom_Markdown {
 	 * @return boolean
 	 */
 	public function is_commenting_enabled() {
-		return (bool) Jetpack_Options::get_option_and_ensure_autoload( self::COMMENT_OPTION, '' );
+		return (bool) get_option( self::COMMENT_OPTION, '' );
 	}
 
 	/**
@@ -356,7 +303,7 @@ class WPCom_Markdown {
 	 * instantiating our parser.
 	 * @return object WPCom_GHF_Markdown_Parser instance.
 	 */
-	public function get_parser() {
+	protected function get_parser() {
 
 		if ( ! self::$parser ) {
 			jetpack_require_lib( 'markdown' );
@@ -401,10 +348,8 @@ class WPCom_Markdown {
 	public function edit_post_content( $content, $id ) {
 		if ( $this->is_markdown( $id ) ) {
 			$post = get_post( $id );
-			if ( $post && ! empty( $post->post_content_filtered ) ) {
-				$post = $this->swap_for_editing( $post );
-				return $post->post_content;
-			}
+			if ( $post && ! empty( $post->post_content_filtered ) )
+				$content = $post->post_content_filtered;
 		}
 		return $content;
 	}
@@ -426,52 +371,6 @@ class WPCom_Markdown {
 	}
 
 	/**
-	 * Some tags are allowed to have a 'markdown' attribute, allowing them to contain Markdown.
-	 * We need to tell KSES about those tags.
-	 * @param  array $tags     List of tags that KSES allows.
-	 * @param  string $context The context that KSES is allowing these tags.
-	 * @return array           The tags that KSES allows, with our extra 'markdown' parameter where necessary.
-	 */
-	public function wp_kses_allowed_html( $tags, $context ) {
-		if ( 'post' !== $context ) {
-			return $tags;
-		}
-
-		$re = '/' . $this->get_parser()->contain_span_tags_re . '/';
-		foreach ( $tags as $tag => $attributes ) {
-			if ( preg_match( $re, $tag ) ) {
-				$attributes['markdown'] = true;
-				$tags[ $tag ] = $attributes;
-			}
-		}
-
-		return $tags;
-	}
-
-	/**
-	 * TinyMCE needs to know not to strip the 'markdown' attribute. Unfortunately, it doesn't
-	 * really offer a nice API for allowed attributes, so we have to manually add it
-	 * to the schema instead.
-	 */
-	public function after_wp_tiny_mce() {
-?>
-<script type="text/javascript">
-jQuery( function() {
-	( 'undefined' !== typeof tinymce ) && tinymce.on( 'AddEditor', function( event ) {
-		event.editor.on( 'BeforeSetContent', function( event ) {
-			var editor = event.target;
-			Object.keys( editor.schema.elements ).forEach( function( key, index ) {
-				editor.schema.elements[ key ].attributes['markdown'] = {};
-				editor.schema.elements[ key ].attributesOrder.push( 'markdown' );
-			} );
-		} );
-	}, true );
-} );
-</script>
-<?php
-	}
-
-	/**
 	 * Magic happens here. Markdown is converted and stored on post_content. Original Markdown is stored
 	 * in post_content_filtered so that we can continue editing as Markdown.
 	 * @param  array $post_data  The post data that will be inserted into the DB. Slashed.
@@ -487,34 +386,17 @@ jQuery( function() {
 			if ( $this->is_markdown( $post_id ) && ! empty( $post_data['post_content_filtered'] ) ) {
 				$post_data['post_content_filtered'] = '';
 			}
-			// we have no context to determine supported post types in the `post_content_pre` hook,
-			// which already ran to sanitize code blocks. Undo that.
-			$post_data['post_content'] = $this->get_parser()->codeblock_restore( $post_data['post_content'] );
 			return $post_data;
 		}
 		// rejigger post_content and post_content_filtered
 		// revisions are already in the right place, except when we're restoring, but that's taken care of elsewhere
-		// also prevent quick edit feature from overriding already-saved markdown (issue https://github.com/Automattic/jetpack/issues/636)
-		if ( 'revision' !== $post_data['post_type'] && ! isset( $_POST['_inline_edit'] ) ) {
-			/**
-			 * Filter the original post content passed to Markdown.
-			 *
-			 * @module markdown
-			 *
-			 * @since 2.8.0
-			 *
-			 * @param string $post_data['post_content'] Untransformed post content.
-			 */
+		if ( 'revision' !== $post_data['post_type'] ) {
 			$post_data['post_content_filtered'] = apply_filters( 'wpcom_untransformed_content', $post_data['post_content'] );
 			$post_data['post_content'] = $this->transform( $post_data['post_content'], array( 'id' => $post_id ) );
-			/** This filter is already documented in core/wp-includes/default-filters.php */
 			$post_data['post_content'] = apply_filters( 'content_save_pre', $post_data['post_content'] );
 		} elseif ( 0 === strpos( $post_data['post_name'], $post_data['post_parent'] . '-autosave' ) ) {
 			// autosaves for previews are weird
-			/** This filter is already documented in modules/markdown/easy-markdown.php */
-			$post_data['post_content_filtered'] = apply_filters( 'wpcom_untransformed_content', $post_data['post_content'] );
 			$post_data['post_content'] = $this->transform( $post_data['post_content'], array( 'id' => $post_data['post_parent'] ) );
-			/** This filter is already documented in core/wp-includes/default-filters.php */
 			$post_data['post_content'] = apply_filters( 'content_save_pre', $post_data['post_content'] );
 		}
 
@@ -553,12 +435,20 @@ jQuery( function() {
 
 	/**
 	 * Run a comment through Markdown. Easy peasy.
-	 * @param  string $content
-	 * @return string
+	 * @param  string $comment_data A comment.
+	 * @return string               A comment, processed by Markdown.
 	 */
-	public function pre_comment_content( $content ) {
+	public function preprocess_comment( $comment_data ) {
+		$comment_data['comment_content'] = $this->transform( $comment_data['comment_content'], array(
+			'id' => $this->comment_hash( $comment_data['comment_content'] )
+		) );
+		return $comment_data;
+	}
+
+	public function comment_save_pre( $content ) {
 		return $this->transform( $content, array(
 			'id' => $this->comment_hash( $content ),
+			'unslash' => false
 		) );
 	}
 
@@ -572,36 +462,17 @@ jQuery( function() {
 	 * @param  array  $args  Arguments, with keys:
 	 *                       id: provide a string to prefix footnotes with a unique identifier
 	 *                       unslash: when true, expects and returns slashed data
-	 *                       decode_code_blocks: when true, assume that text in fenced code blocks is already
-	 *                         HTML encoded and should be decoded before being passed to Markdown, which does
-	 *                         its own encoding.
 	 * @return string        Markdown-processed content
 	 */
 	public function transform( $text, $args = array() ) {
-		// If this contains Gutenberg content, let's keep it intact.
-		if ( has_blocks( $text ) ) {
-			return $text;
-		}
-
 		$args = wp_parse_args( $args, array(
 			'id' => false,
-			'unslash' => true,
-			'decode_code_blocks' => ! $this->get_parser()->use_code_shortcode
+			'unslash' => true
 		) );
 		// probably need to unslash
 		if ( $args['unslash'] )
 			$text = wp_unslash( $text );
 
-		/**
-		 * Filter the content to be run through Markdown, before it's transformed by Markdown.
-		 *
-		 * @module markdown
-		 *
-		 * @since 2.8.0
-		 *
-		 * @param string $text Content to be run through Markdown
-		 * @param array $args Array of Markdown options.
-		 */
 		$text = apply_filters( 'wpcom_markdown_transform_pre', $text, $args );
 		// ensure our paragraphs are separated
 		$text = str_replace( array( '</p><p>', "</p>\n<p>" ), "</p>\n\n<p>", $text );
@@ -611,26 +482,12 @@ jQuery( function() {
 		$text = preg_replace( '/^&gt;/m', '>', $text );
 		// prefixes are because we need to namespace footnotes by post_id
 		$this->get_parser()->fn_id_prefix = $args['id'] ? $args['id'] . '-' : '';
-		// If we're not using the code shortcode, prevent over-encoding.
-		if ( $args['decode_code_blocks'] ) {
-			$text = $this->get_parser()->codeblock_restore( $text );
-		}
 		// Transform it!
 		$text = $this->get_parser()->transform( $text );
 		// Fix footnotes - kses doesn't like the : IDs it supplies
 		$text = preg_replace( '/((id|href)="#?fn(ref)?):/', "$1-", $text );
 		// Markdown inserts extra spaces to make itself work. Buh-bye.
 		$text = rtrim( $text );
-		/**
-		 * Filter the content to be run through Markdown, after it was transformed by Markdown.
-		 *
-		 * @module markdown
-		 *
-		 * @since 2.8.0
-		 *
-		 * @param string $text Content to be run through Markdown
-		 * @param array $args Array of Markdown options.
-		 */
 		$text = apply_filters( 'wpcom_markdown_transform_post', $text, $args );
 
 		// probably need to re-slash
@@ -697,7 +554,6 @@ jQuery( function() {
 		switch ( $xmlrpc_method ) {
 			case 'metaWeblog.getRecentPosts':
 			case 'wp.getPosts':
-			case 'wp.getPages':
 				add_action( 'parse_query', array( $this, 'make_filterable' ), 10, 1 );
 				break;
 			case 'wp.getPost':
@@ -707,21 +563,19 @@ jQuery( function() {
 	}
 
 	/**
-	 * metaWeblog.getPost and wp.getPage fire xmlrpc_call action *after* get_post() is called.
-	 * So, we have to detect those methods and prime the post cache early.
+	 * The metaWeblog.getPost xmlrpc_call action fires *after* get_post() is called.
+	 * So, we have to detect that method and prime the post cache early.
 	 * @return null
 	 */
-	protected function check_for_early_methods() {
-		$raw_post_data = file_get_contents( "php://input" );
-		if ( false === strpos( $raw_post_data, 'metaWeblog.getPost' )
-			&& false === strpos( $raw_post_data, 'wp.getPage' ) ) {
+	protected function check_for_mwgetpost() {
+		global $HTTP_RAW_POST_DATA;
+		if ( false === strpos( $HTTP_RAW_POST_DATA, 'metaWeblog.getPost') ) {
 			return;
 		}
 		include_once( ABSPATH . WPINC . '/class-IXR.php' );
-		$message = new IXR_Message( $raw_post_data );
+		$message = new IXR_Message( $HTTP_RAW_POST_DATA );
 		$message->parse();
-		$post_id_position = 'metaWeblog.getPost' === $message->methodName ? 0 : 1;
-		$this->prime_post_cache( $message->params[ $post_id_position ] );
+		$this->prime_post_cache( $message->params[0] );
 	}
 
 	/**
@@ -733,7 +587,7 @@ jQuery( function() {
 	private function prime_post_cache( $post_id = false ) {
 		global $wp_xmlrpc_server;
 		if ( ! $post_id ) {
-			$post_id = $wp_xmlrpc_server->message->params[3];
+			$post_id = $wp_xmlrpc_server->message->params[0];
 		}
 
 		// prime the post cache
@@ -741,7 +595,9 @@ jQuery( function() {
 			$post = get_post( $post_id );
 			if ( ! empty( $post->post_content_filtered ) ) {
 				wp_cache_delete( $post->ID, 'posts' );
-				$post = $this->swap_for_editing( $post );
+				$markdown = $post->post_content_filtered;
+				$post->post_content_filtered = $post->post_content;
+				$post->post_content = $markdown;
 				wp_cache_add( $post->ID, $post, 'posts' );
 				$this->posts_to_uncache[] = $post_id;
 			}
@@ -751,23 +607,6 @@ jQuery( function() {
 			add_action( 'shutdown', array( $this, 'uncache_munged_posts' ) );
 		}
 	}
-
-	/**
-	 * Swaps `post_content_filtered` back to `post_content` for editing purposes.
-	 * @param  object $post WP_Post object
-	 * @return object       WP_Post object with swapped `post_content_filtered` and `post_content`
-	 */
-	protected function swap_for_editing( $post ) {
-		$markdown = $post->post_content_filtered;
-		// unencode encoded code blocks
-		$markdown = $this->get_parser()->codeblock_restore( $markdown );
-		// restore beginning of line blockquotes
-		$markdown = preg_replace( '/^&gt; /m', '> ', $markdown );
-		$post->post_content_filtered = $post->post_content;
-		$post->post_content = $markdown;
-		return $post;
-	}
-
 
 	/**
 	 * We munge the post cache to serve proper markdown content to XML-RPC clients.

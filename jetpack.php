@@ -1,190 +1,83 @@
 <?php
-/**
- * Plugin Name: Jetpack
- * Plugin URI: https://jetpack.com
- * Description: Security, performance, and marketing tools made by WordPress experts. Jetpack keeps your site protected so you can focus on more important things.
+
+/*
+ * Plugin Name: Jetpack by WordPress.com
+ * Plugin URI: http://wordpress.org/extend/plugins/jetpack/
+ * Description: Bring the power of the WordPress.com cloud to your self-hosted WordPress. Jetpack enables you to connect your blog to a WordPress.com account to use the powerful features normally only available to WordPress.com users.
  * Author: Automattic
- * Version: 9.9-alpha
- * Author URI: https://jetpack.com
+ * Version: 2.8.4
+ * Author URI: http://jetpack.me
  * License: GPL2+
  * Text Domain: jetpack
- * Requires at least: 5.7
- * Requires PHP: 5.6
- *
- * @package automattic/jetpack
+ * Domain Path: /languages/
  */
 
-/*
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
+defined( 'JETPACK__API_BASE' ) or define( 'JETPACK__API_BASE', 'https://jetpack.wordpress.com/jetpack.' );
+define( 'JETPACK__API_VERSION', 1 );
+define( 'JETPACK__MINIMUM_WP_VERSION', '3.7' );
+defined( 'JETPACK_CLIENT__AUTH_LOCATION' ) or define( 'JETPACK_CLIENT__AUTH_LOCATION', 'header' );
+defined( 'JETPACK_CLIENT__HTTPS' ) or define( 'JETPACK_CLIENT__HTTPS', 'AUTO' );
+define( 'JETPACK__VERSION', '2.8.4' );
+define( 'JETPACK__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+defined( 'JETPACK__GLOTPRESS_LOCALES_PATH' ) or define( 'JETPACK__GLOTPRESS_LOCALES_PATH', JETPACK__PLUGIN_DIR . 'locales.php' );
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-*/
-
-define( 'JETPACK__MINIMUM_WP_VERSION', '5.7' );
-define( 'JETPACK__MINIMUM_PHP_VERSION', '5.6' );
-define( 'JETPACK__VERSION', '9.9-alpha' );
-
-/**
- * Constant used to fetch the connection owner token
- *
- * @deprecated 9.0.0
- * @var boolean
- */
 define( 'JETPACK_MASTER_USER', true );
 
-define( 'JETPACK__API_VERSION', 1 );
-define( 'JETPACK__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'JETPACK__PLUGIN_FILE', __FILE__ );
+// Constants for expressing human-readable intervals
+// in their respective number of seconds.
+// Introduced in WordPress 3.5, specified here for backward compatability.
+defined( 'MINUTE_IN_SECONDS' ) or define( 'MINUTE_IN_SECONDS', 60 );
+defined( 'HOUR_IN_SECONDS' )   or define( 'HOUR_IN_SECONDS',   60 * MINUTE_IN_SECONDS );
+defined( 'DAY_IN_SECONDS' )    or define( 'DAY_IN_SECONDS',    24 * HOUR_IN_SECONDS   );
+defined( 'WEEK_IN_SECONDS' )   or define( 'WEEK_IN_SECONDS',    7 * DAY_IN_SECONDS    );
+defined( 'YEAR_IN_SECONDS' )   or define( 'YEAR_IN_SECONDS',  365 * DAY_IN_SECONDS    );
 
-defined( 'JETPACK__RELEASE_POST_BLOG_SLUG' ) || define( 'JETPACK__RELEASE_POST_BLOG_SLUG', 'jetpackreleaseblog.wordpress.com' );
-defined( 'JETPACK_CLIENT__AUTH_LOCATION' ) || define( 'JETPACK_CLIENT__AUTH_LOCATION', 'header' );
+// @todo: Abstract out the admin functions, and only include them if is_admin()
+// @todo: Only include things like class.jetpack-sync.php if we're connected.
+require_once( JETPACK__PLUGIN_DIR . 'class.jetpack.php'               );
+require_once( JETPACK__PLUGIN_DIR . 'class.jetpack-client.php'        );
+require_once( JETPACK__PLUGIN_DIR . 'class.jetpack-data.php'          );
+require_once( JETPACK__PLUGIN_DIR . 'class.jetpack-client-server.php' );
+require_once( JETPACK__PLUGIN_DIR . 'class.jetpack-sync.php'          );
+require_once( JETPACK__PLUGIN_DIR . 'class.jetpack-options.php'       );
+require_once( JETPACK__PLUGIN_DIR . 'class.jetpack-user-agent.php'    );
+require_once( JETPACK__PLUGIN_DIR . 'class.jetpack-post-images.php'   );
+require_once( JETPACK__PLUGIN_DIR . 'class.media-extractor.php'       );
+require_once( JETPACK__PLUGIN_DIR . 'class.media-summary.php'         );
+require_once( JETPACK__PLUGIN_DIR . 'class.jetpack-error.php'         );
+require_once( JETPACK__PLUGIN_DIR . 'class.jetpack-debugger.php'      );
+require_once( JETPACK__PLUGIN_DIR . 'class.jetpack-heartbeat.php'     );
+require_once( JETPACK__PLUGIN_DIR . 'class.photon.php'                );
+require_once( JETPACK__PLUGIN_DIR . 'functions.photon.php'            );
+require_once( JETPACK__PLUGIN_DIR . 'functions.compat.php'            );
+require_once( JETPACK__PLUGIN_DIR . 'functions.gallery.php'           );
+require_once( JETPACK__PLUGIN_DIR . 'require-lib.php'                 );
 
-/**
- * WP.com API no longer supports `http://` protocol.
- * This means Jetpack can't function properly on servers that can't send outbound HTTPS requests.
- * The constant is no longer used.
- *
- * @deprecated 9.1.0
- */
-defined( 'JETPACK_CLIENT__HTTPS' ) || define( 'JETPACK_CLIENT__HTTPS', 'AUTO' );
-
-defined( 'JETPACK__GLOTPRESS_LOCALES_PATH' ) || define( 'JETPACK__GLOTPRESS_LOCALES_PATH', JETPACK__PLUGIN_DIR . 'locales.php' );
-defined( 'JETPACK__API_BASE' ) || define( 'JETPACK__API_BASE', 'https://jetpack.wordpress.com/jetpack.' );
-defined( 'JETPACK_PROTECT__API_HOST' ) || define( 'JETPACK_PROTECT__API_HOST', 'https://api.bruteprotect.com/' );
-defined( 'JETPACK__WPCOM_JSON_API_BASE' ) || define( 'JETPACK__WPCOM_JSON_API_BASE', 'https://public-api.wordpress.com' );
-
-/**
- * WP.com API no longer supports `http://` protocol.
- * Use `JETPACK__WPCOM_JSON_API_BASE` instead, which has the protocol hardcoded.
- *
- * @deprecated 9.1.0
- */
-defined( 'JETPACK__WPCOM_JSON_API_HOST' ) || define( 'JETPACK__WPCOM_JSON_API_HOST', 'public-api.wordpress.com' );
-
-defined( 'JETPACK__SANDBOX_DOMAIN' ) || define( 'JETPACK__SANDBOX_DOMAIN', '' );
-defined( 'JETPACK__DEBUGGER_PUBLIC_KEY' ) || define(
-	'JETPACK__DEBUGGER_PUBLIC_KEY',
-	"\r\n" . '-----BEGIN PUBLIC KEY-----' . "\r\n"
-	. 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm+uLLVoxGCY71LS6KFc6' . "\r\n"
-	. '1UnF6QGBAsi5XF8ty9kR3/voqfOkpW+gRerM2Kyjy6DPCOmzhZj7BFGtxSV2ZoMX' . "\r\n"
-	. '9ZwWxzXhl/Q/6k8jg8BoY1QL6L2K76icXJu80b+RDIqvOfJruaAeBg1Q9NyeYqLY' . "\r\n"
-	. 'lEVzN2vIwcFYl+MrP/g6Bc2co7Jcbli+tpNIxg4Z+Hnhbs7OJ3STQLmEryLpAxQO' . "\r\n"
-	. 'q8cbhQkMx+FyQhxzSwtXYI/ClCUmTnzcKk7SgGvEjoKGAmngILiVuEJ4bm7Q1yok' . "\r\n"
-	. 'xl9+wcfW6JAituNhml9dlHCWnn9D3+j8pxStHihKy2gVMwiFRjLEeD8K/7JVGkb/' . "\r\n"
-	. 'EwIDAQAB' . "\r\n"
-	. '-----END PUBLIC KEY-----' . "\r\n"
-);
-
-/*
- * These constants can be set in wp-config.php to ensure sites behind proxies will still work.
- * Setting these constants, though, is *not* the preferred method. It's better to configure
- * the proxy to send the X-Forwarded-Port header.
- */
-defined( 'JETPACK_SIGNATURE__HTTP_PORT' ) || define( 'JETPACK_SIGNATURE__HTTP_PORT', 80 );
-defined( 'JETPACK_SIGNATURE__HTTPS_PORT' ) || define( 'JETPACK_SIGNATURE__HTTPS_PORT', 443 );
-
-/**
- * Check if the version of WordPress in use on the site is supported by Jetpack.
- */
-if ( version_compare( $GLOBALS['wp_version'], JETPACK__MINIMUM_WP_VERSION, '<' ) ) {
-	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-		error_log( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-			sprintf(
-				/* translators: Placeholders are numbers, versions of WordPress in use on the site, and required by WordPress. */
-				esc_html__( 'Your version of WordPress (%1$s) is lower than the version required by Jetpack (%2$s). Please update WordPress to continue enjoying Jetpack.', 'jetpack' ),
-				$GLOBALS['wp_version'],
-				JETPACK__MINIMUM_WP_VERSION
-			)
-		);
-	}
-
-	/**
-	 * Outputs for an admin notice about running Jetpack on outdated WordPress.
-	 *
-	 * @since 7.2.0
-	 */
-	function jetpack_admin_unsupported_wp_notice() { ?>
-		<div class="notice notice-error is-dismissible">
-			<p><?php esc_html_e( 'Jetpack requires a more recent version of WordPress and has been paused. Please update WordPress to continue enjoying Jetpack.', 'jetpack' ); ?></p>
-		</div>
-		<?php
-	}
-
-	add_action( 'admin_notices', 'jetpack_admin_unsupported_wp_notice' );
-	return;
-}
-
-/**
- * This is where the loading of Jetpack begins.
- *
- * First, we try to load our composer autoloader.
- *
- * - If it fails, we "pause" Jetpack by ending the loading process
- *   and displaying an admin_notice to inform the site owner.
- *   (We want to fail gracefully if `composer install` has not been executed yet, so we are checking for the autoloader.)
- * - If it succeeds, we require load-jetpack.php, where all legacy files are required,
- *   and where we add on to various hooks that we expect to always run.
- */
-$jetpack_autoloader = JETPACK__PLUGIN_DIR . 'vendor/autoload_packages.php';
-if ( is_readable( $jetpack_autoloader ) ) {
-	require $jetpack_autoloader;
-} else {
-	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-		error_log( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-			sprintf(
-				/* translators: Placeholder is a link to a support document. */
-				__( 'Your installation of Jetpack is incomplete. If you installed Jetpack from GitHub, please refer to this document to set up your development environment: %1$s', 'jetpack' ),
-				'https://github.com/Automattic/jetpack/blob/master/docs/development-environment.md'
-			)
-		);
-	}
-
-	/**
-	 * Outputs an admin notice for folks running Jetpack without having run composer install.
-	 *
-	 * @since 7.4.0
-	 */
-	function jetpack_admin_missing_autoloader() {
-		?>
-		<div class="notice notice-error is-dismissible">
-			<p>
-				<?php
-				printf(
-					wp_kses(
-						/* translators: Placeholder is a link to a support document. */
-						__( 'Your installation of Jetpack is incomplete. If you installed Jetpack from GitHub, please refer to <a href="%1$s" target="_blank" rel="noopener noreferrer">this document</a> to set up your development environment.', 'jetpack' ),
-						array(
-							'a' => array(
-								'href'   => array(),
-								'target' => array(),
-								'rel'    => array(),
-							),
-						)
-					),
-					'https://github.com/Automattic/jetpack/blob/master/docs/development-environment.md'
-				);
-				?>
-			</p>
-		</div>
-		<?php
-	}
-
-	add_action( 'admin_notices', 'jetpack_admin_missing_autoloader' );
-	return;
+// Play nice with http://wp-cli.org/
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+	require_once( JETPACK__PLUGIN_DIR . 'class.jetpack-cli.php'       );
 }
 
 register_activation_hook( __FILE__, array( 'Jetpack', 'plugin_activation' ) );
 register_deactivation_hook( __FILE__, array( 'Jetpack', 'plugin_deactivation' ) );
 
-// Require everything else, that is not loaded via the autoloader.
-require_once JETPACK__PLUGIN_DIR . 'load-jetpack.php';
+add_action( 'init', array( 'Jetpack', 'init' ) );
+add_action( 'plugins_loaded', array( 'Jetpack', 'load_modules' ), 100 );
+add_filter( 'jetpack_static_url', array( 'Jetpack', 'staticize_subdomain' ) );
+
+/**
+ * Add an easy way to photon-ize a URL that is safe to call even if Jetpack isn't active.
+ *
+ * See: http://jetpack.me/2013/07/11/photon-and-themes/
+ */
+if ( Jetpack::init()->is_module_active( 'photon' ) ) {
+	add_filter( 'jetpack_photon_url', 'jetpack_photon_url', 10, 3 );
+} else {
+	remove_filter( 'jetpack_photon_url', 'jetpack_photon_url', 10, 3 );
+}
+
+/*
+if ( is_admin() && ! Jetpack::check_identity_crisis() ) {
+	Jetpack_Sync::sync_options( __FILE__, 'db_version', 'jetpack_active_modules', 'active_plugins' );
+}
+*/
