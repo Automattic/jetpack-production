@@ -1,16 +1,22 @@
 <?php
 /**
  * Module Name: JSON API
- * Module Description: Allow applications to securely access your content.
+ * Module Description: Allow applications to securely access your content through the cloud.
  * Sort Order: 19
  * First Introduced: 1.9
  * Requires Connection: Yes
  * Auto Activate: Public
  * Module Tags: Writing, Developers
- * Feature: General
- * Additional Search Queries: api, rest, develop, developers, json, klout, oauth
- *
- * @package automattic/jetpack
  */
 
-// Nothing fires here. Module status is checked on the WP.com-side to allow third-party applications.
+function jetpack_json_api_toggle() {
+	$jetpack = Jetpack::init();
+	$jetpack->sync->register( 'noop' );
+
+	if ( false !== strpos( current_filter(), 'jetpack_activate_module_' ) ) {
+		Jetpack::check_privacy( __FILE__ );
+	}
+}
+
+add_action( 'jetpack_activate_module_json-api',   'jetpack_json_api_toggle' );
+add_action( 'jetpack_deactivate_module_json-api', 'jetpack_json_api_toggle' );
