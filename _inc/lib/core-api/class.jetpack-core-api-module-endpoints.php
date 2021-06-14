@@ -757,7 +757,6 @@ class Jetpack_Core_API_Data extends Jetpack_Core_API_XMLRPC_Consumer_Endpoint {
 				case 'bing':
 				case 'pinterest':
 				case 'yandex':
-				case 'facebook':
 					$grouped_options = $grouped_options_current = (array) get_option( 'verification_services_codes' );
 
 					// Extracts the content attribute from the HTML meta tag if needed
@@ -1546,9 +1545,6 @@ class Jetpack_Core_API_Module_Data_Endpoint {
 						break;
 					case 'yandex':
 						$services[] = 'Yandex';
-						break;
-					case 'facebook':
-						$services[] = 'Facebook';
 						break;
 				}
 			}

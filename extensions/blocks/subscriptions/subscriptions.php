@@ -30,7 +30,7 @@ function register_block() {
 		);
 	}
 }
-add_action( 'init', __NAMESPACE__ . '\register_block', 9 );
+add_action( 'init', __NAMESPACE__ . '\register_block' );
 
 /**
  * Subscriptions block render callback.

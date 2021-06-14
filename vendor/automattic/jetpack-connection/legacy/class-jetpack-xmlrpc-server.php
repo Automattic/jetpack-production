@@ -9,8 +9,8 @@ use Automattic\Jetpack\Connection\Client;
 use Automattic\Jetpack\Connection\Manager as Connection_Manager;
 use Automattic\Jetpack\Connection\Secrets;
 use Automattic\Jetpack\Connection\Tokens;
-use Automattic\Jetpack\Connection\Urls;
 use Automattic\Jetpack\Roles;
+use Automattic\Jetpack\Sync\Functions;
 use Automattic\Jetpack\Sync\Sender;
 
 /**
@@ -325,6 +325,7 @@ class Jetpack_XMLRPC_Server {
 			wp_set_current_user( $user->ID );
 
 			// This code mostly copied from Jetpack::admin_page_load.
+			Jetpack::maybe_set_version_option();
 			if ( isset( $request['from'] ) ) {
 				$this->connection->add_register_request_param( 'from', (string) $request['from'] );
 			}
@@ -375,14 +376,20 @@ class Jetpack_XMLRPC_Server {
 
 		$site_icon = get_site_icon_url();
 
-		/**
-		 * Filters the Redirect URI returned by the remote_register XMLRPC method
-		 *
-		 * @param string $redirect_uri The Redirect URI
-		 *
-		 * @since 9.8.0
-		 */
-		$redirect_uri = apply_filters( 'jetpack_xmlrpc_remote_register_redirect_uri', admin_url() );
+		$auto_enable_sso = ( ! $this->connection->has_connected_owner() || Jetpack::is_module_active( 'sso' ) );
+
+		/** This filter is documented in class.jetpack-cli.php */
+		if ( apply_filters( 'jetpack_start_enable_sso', $auto_enable_sso ) ) {
+			$redirect_uri = add_query_arg(
+				array(
+					'action'      => 'jetpack-sso',
+					'redirect_to' => rawurlencode( admin_url() ),
+				),
+				wp_login_url() // TODO: come back to Jetpack dashboard?
+			);
+		} else {
+			$redirect_uri = admin_url();
+		}
 
 		// Generate secrets.
 		$roles   = new Roles();
@@ -404,16 +411,10 @@ class Jetpack_XMLRPC_Server {
 			$response['site_icon'] = $site_icon;
 		}
 
-		/**
-		 * Filters the response of the remote_provision XMLRPC method
-		 *
-		 * @param array    $response The response.
-		 * @param array    $request An array containing at minimum a nonce key and a local_username key.
-		 * @param \WP_User $user The local authenticated user.
-		 *
-		 * @since 9.8.0
-		 */
-		$response = apply_filters( 'jetpack_remote_xmlrpc_provision_response', $response, $request, $user );
+		if ( ! empty( $request['onboarding'] ) ) {
+			Jetpack::create_onboarding_token();
+			$response['onboarding_token'] = Jetpack_Options::get_option( 'onboarding' );
+		}
 
 		return $response;
 	}
@@ -489,12 +490,7 @@ class Jetpack_XMLRPC_Server {
 
 		( new Tokens() )->update_user_token( $user->ID, sprintf( '%s.%d', $token, $user->ID ), true );
 
-		/**
-		 * Hook fired at the end of the jetpack.remoteConnect XML-RPC callback
-		 *
-		 * @since 9.8.0
-		 */
-		do_action( 'jetpack_remote_connect_end' );
+		$this->do_post_authorization();
 
 		return $this->connection->has_connected_owner();
 	}
@@ -762,8 +758,8 @@ class Jetpack_XMLRPC_Server {
 	 */
 	public function validate_urls_for_idc_mitigation() {
 		return array(
-			'home'    => Urls::home_url(),
-			'siteurl' => Urls::site_url(),
+			'home'    => Functions::home_url(),
+			'siteurl' => Functions::site_url(),
 		);
 	}
 
@@ -782,6 +778,20 @@ class Jetpack_XMLRPC_Server {
 				'post_parent' => $parent_id,
 			)
 		);
+	}
+
+	/**
+	 * Handles authorization actions after connecting a site, such as enabling modules.
+	 *
+	 * This do_post_authorization() is used in this class, as opposed to calling
+	 * Jetpack::handle_post_authorization_actions() directly so that we can mock this method as necessary.
+	 *
+	 * @return void
+	 */
+	public function do_post_authorization() {
+		/** This filter is documented in class.jetpack-cli.php */
+		$enable_sso = apply_filters( 'jetpack_start_enable_sso', true );
+		Jetpack::handle_post_authorization_actions( $enable_sso, false, false );
 	}
 
 	/**

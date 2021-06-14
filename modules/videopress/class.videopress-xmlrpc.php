@@ -113,8 +113,7 @@ class VideoPress_XMLRPC {
 			return false;
 		}
 
-		$attachment->guid           = $info['original'];
-		$attachment->post_mime_type = 'video/videopress';
+		$attachment->guid = $info['original'];
 
 		wp_update_post( $attachment );
 

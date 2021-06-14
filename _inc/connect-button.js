@@ -25,36 +25,33 @@ jQuery( document ).ready( function ( $ ) {
 			connectionHelpSections.fadeOut( 600 );
 		}
 
-		jetpackConnectButton.startConnectionFlow();
+		jetpackConnectButton.selectAndStartConnectionFlow();
 	} );
 
 	var jetpackConnectButton = {
 		isRegistering: false,
 		isPaidPlan: false,
-		startConnectionFlow: function () {
+		selectAndStartConnectionFlow: function () {
 			var connectionHelpSections = $( '#jetpack-connection-cards, .jp-connect-full__testimonial' );
 			if ( connectionHelpSections.length ) {
 				connectionHelpSections.fadeOut( 600 );
 			}
 
 			if ( ! jetpackConnectButton.isRegistering ) {
-				jetpackConnectButton.handleConnection();
-			}
-		},
-		selectAndStartAuthorizationFlow: function ( data ) {
-			if ( data.allowInplaceAuthorization && 'original' !== jpConnect.forceVariation ) {
-				jetpackConnectButton.handleAuthorizeInPlaceFlow( data );
-			} else {
-				// Forcing original connection flow, `JETPACK_SHOULD_NOT_USE_CONNECTION_IFRAME = true`
-				// or we're dealing with Safari which has issues with handling 3rd party cookies.
-				if ( data.alternateAuthorizeUrl ) {
-					window.location = data.alternateAuthorizeUrl;
+				if ( 'original' === jpConnect.forceVariation ) {
+					// Forcing original connection flow, `JETPACK_SHOULD_NOT_USE_CONNECTION_IFRAME = true`
+					// or we're dealing with Safari which has issues with handling 3rd party cookies.
+					jetpackConnectButton.handleOriginalFlow();
 				} else {
-					window.location = data.authorizeUrl;
+					// Default in-place connection flow.
+					jetpackConnectButton.handleConnectInPlaceFlow();
 				}
 			}
 		},
-		handleConnection: function () {
+		handleOriginalFlow: function () {
+			window.location = connectButton.attr( 'href' );
+		},
+		handleConnectInPlaceFlow: function () {
 			// Alternative connection buttons should redirect to the main one for the "connect in place" flow.
 			if ( connectButton.hasClass( 'jp-banner__alt-connect-button' ) ) {
 				// Make sure we don't lose the `from` parameter, if set.
@@ -83,10 +80,9 @@ jQuery( document ).ready( function ( $ ) {
 					registration_nonce: jpConnect.registrationNonce,
 					_wpnonce: jpConnect.apiNonce,
 					from: connectButtonFrom,
-					no_iframe: 'original' === jpConnect.forceVariation,
 				},
 				error: jetpackConnectButton.handleConnectionError,
-				success: jetpackConnectButton.selectAndStartAuthorizationFlow,
+				success: jetpackConnectButton.handleConnectionSuccess,
 			} );
 		},
 		triggerLoadingState: function () {
@@ -100,7 +96,7 @@ jQuery( document ).ready( function ( $ ) {
 			$( '<div>' ).addClass( 'jp-spinner__inner' ).appendTo( spinnerOuter );
 			loadingText.after( spinner );
 		},
-		handleAuthorizeInPlaceFlow: function ( data ) {
+		handleConnectionSuccess: function ( data ) {
 			window.addEventListener( 'message', jetpackConnectButton.receiveData );
 			jetpackConnectIframe.attr(
 				'src',
@@ -183,8 +179,7 @@ jQuery( document ).ready( function ( $ ) {
 		},
 		handleConnectionError: function ( error ) {
 			jetpackConnectButton.isRegistering = false;
-			// If something goes wrong, we take users to Calypso.
-			window.location = connectButton.attr( 'href' );
+			jetpackConnectButton.handleOriginalFlow();
 		},
 	};
 
@@ -199,6 +194,6 @@ jQuery( document ).ready( function ( $ ) {
 			connectionHelpSections.hide();
 		}
 
-		jetpackConnectButton.startConnectionFlow();
+		jetpackConnectButton.selectAndStartConnectionFlow();
 	}
 } );

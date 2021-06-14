@@ -320,7 +320,7 @@ class Jetpack_Subscriptions_Widget extends WP_Widget {
 					<?php
 					printf(
 						'<input
-							type="email"
+							type="text"
 							name="email"
 							%1$s
 							style="%2$s"

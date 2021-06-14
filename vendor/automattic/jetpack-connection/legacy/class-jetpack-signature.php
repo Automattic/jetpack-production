@@ -235,7 +235,7 @@ class Jetpack_Signature {
 			strtoupper( $method ),
 			strtolower( $parsed['host'] ),
 			$port,
-			empty( $parsed['path'] ) ? '' : $parsed['path'],
+			$parsed['path'],
 			// Normalized Query String.
 		);
 

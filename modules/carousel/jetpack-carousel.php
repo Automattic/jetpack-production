@@ -234,7 +234,7 @@ class Jetpack_Carousel {
 					'_inc/build/carousel/jetpack-carousel.min.js',
 					'modules/carousel/jetpack-carousel.js'
 				),
-				array(),
+				array( 'jquery' ),
 				$this->asset_version( JETPACK__VERSION ),
 				true
 			);
@@ -455,9 +455,12 @@ class Jetpack_Carousel {
 							<?php if ( $localize_strings['display_comments'] ) : ?>
 							<a class="jp-carousel-commentlink" href="#"><?php echo esc_html( $localize_strings['comment'] ); ?></a>
 							<?php endif ?>
+							<?php if ( is_user_logged_in() && in_array( 'reblog_enabled', $localize_strings, true ) && $localize_strings['reblog_enabled'] ) : ?>
+								<a class="jp-carousel-reblog" href="#"><?php echo esc_html( $localize_strings['reblog'] ); ?></a>
+							<?php endif ?>
 						</div>
 						<ul class="jp-carousel-image-exif" style="display: none;"></ul>
-						<a class="jp-carousel-image-download" target="_blank" style="display: none;"></a>
+						<a class="jp-carousel-image-download" style="display: none;"></a>
 						<div class="jp-carousel-image-map" style="display: none;"></div>
 					</div>
 				</div>

@@ -52,7 +52,7 @@ class Rest_Api_Endpoints {
 	public static function get_jitm_message( $request ) {
 		$jitm = JITM::get_instance();
 
-		if ( ! $jitm->jitms_enabled() ) {
+		if ( ! $jitm->register() ) {
 			return array();
 		}
 
@@ -69,7 +69,7 @@ class Rest_Api_Endpoints {
 	public static function delete_jitm_message( $request ) {
 		$jitm = JITM::get_instance();
 
-		if ( ! $jitm->jitms_enabled() ) {
+		if ( ! $jitm->register() ) {
 			return true;
 		}
 

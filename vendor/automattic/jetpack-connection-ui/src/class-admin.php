@@ -16,24 +16,20 @@ class Admin {
 	 * Construction.
 	 */
 	public function __construct() {
-		if ( ! did_action( 'jetpack_on_connection_ui_init' ) ) {
-			add_action( 'admin_menu', array( $this, 'register_submenu_page' ), 1000 );
-			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-
-			/**
-			 * Action called after initializing Connection UI Admin resources.
-			 *
-			 * @since 9.8.0
-			 */
-			do_action( 'jetpack_on_connection_ui_init' );
-		}
+		add_action( 'admin_menu', array( $this, 'register_submenu_page' ), 1000 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 
 	/**
 	 * Initialize the UI.
 	 */
 	public static function init() {
-		new static();
+		add_action(
+			'plugins_loaded',
+			function () {
+				new static();
+			}
+		);
 	}
 
 	/**
@@ -63,9 +59,6 @@ class Admin {
 
 			wp_set_script_translations( 'react-jetpack_connection_ui_script', 'jetpack' );
 			wp_add_inline_script( 'jetpack_connection_ui_script', $this->get_initial_state(), 'before' );
-
-			wp_enqueue_style( 'jetpack_connection_ui_style', plugin_dir_url( __DIR__ ) . 'build/index.css', array( 'wp-components' ), $build_assets['version'] );
-			wp_style_add_data( 'jetpack_connection_ui_style', 'rtl', plugin_dir_url( __DIR__ ) . 'build/index.rtl.css' );
 		}
 	}
 

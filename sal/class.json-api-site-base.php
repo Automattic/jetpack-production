@@ -150,15 +150,6 @@ abstract class SAL_Site {
 	abstract protected function is_wpforteams_site();
 
 	/**
-	 * Get hub blog id for P2 sites.
-	 *
-	 * @return null
-	 */
-	public function get_p2_hub_blog_id() {
-		return null;
-	}
-
-	/**
 	 * Getter for the p2 organization ID.
 	 *
 	 * @return int
@@ -167,13 +158,8 @@ abstract class SAL_Site {
 		return 0; // WPForTeams\Constants\NO_ORG_ID not loaded.
 	}
 
-	/**
-	 * Detect whether a site is a WordPress.com on Atomic site.
-	 *
-	 * @return bool
-	 */
 	public function is_wpcom_atomic() {
-		return jetpack_is_atomic_site();
+		return false;
 	}
 
 	public function is_wpcom_store() {

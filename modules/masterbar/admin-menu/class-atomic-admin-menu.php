@@ -69,10 +69,6 @@ class Atomic_Admin_Menu extends Admin_Menu {
 		if ( ! $this->is_api_request ) {
 			$this->add_browse_sites_link();
 			$this->add_site_card_menu();
-			$nudge = $this->get_upsell_nudge();
-			if ( $nudge ) {
-				parent::add_upsell_nudge( $nudge );
-			}
 			$this->add_new_site_link();
 		}
 
@@ -219,30 +215,6 @@ class Atomic_Admin_Menu extends Admin_Menu {
 	}
 
 	/**
-	 * Returns the first available upsell nudge.
-	 *
-	 * @return array
-	 */
-	public function get_upsell_nudge() {
-		$jitm         = \Automattic\Jetpack\JITMS\JITM::get_instance();
-		$message_path = 'calypso:sites:sidebar_notice';
-		$message      = $jitm->get_messages( $message_path, wp_json_encode( array( 'message_path' => $message_path ) ), false );
-
-		if ( isset( $message[0] ) ) {
-			$message = $message[0];
-			return array(
-				'content'                      => $message->content->message,
-				'cta'                          => $message->CTA->message, // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-				'link'                         => $message->CTA->link, // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-				'tracks_impression_event_name' => $message->tracks->display->name,
-				'tracks_impression_cta_name'   => $message->tracks->display->props->cta_name,
-				'tracks_click_event_name'      => $message->tracks->click->name,
-				'tracks_click_cta_name'        => $message->tracks->click->props->cta_name,
-			);
-		}
-	}
-
-	/**
 	 * Adds Upgrades menu.
 	 *
 	 * @param string $plan The current WPCOM plan of the blog.
@@ -296,6 +268,7 @@ class Atomic_Admin_Menu extends Admin_Menu {
 
 		// No need to add a menu linking to WP Admin if there is already one.
 		if ( ! $wp_admin ) {
+			add_submenu_page( 'options-general.php', esc_attr__( 'Advanced General', 'jetpack' ), __( 'Advanced General', 'jetpack' ), 'manage_options', 'options-general.php' );
 			add_submenu_page( 'options-general.php', esc_attr__( 'Advanced Writing', 'jetpack' ), __( 'Advanced Writing', 'jetpack' ), 'manage_options', 'options-writing.php' );
 		}
 	}
@@ -377,3 +350,4 @@ class Atomic_Admin_Menu extends Admin_Menu {
 		wp_die();
 	}
 }
+
