@@ -29,7 +29,7 @@ class Lock {
 	 *
 	 * @var int
 	 */
-	const LOCK_TRANSIENT_EXPIRY = 180; // Seconds.
+	const LOCK_TRANSIENT_EXPIRY = 300; // Seconds.
 
 	/**
 	 * Attempt to lock.
@@ -42,19 +42,17 @@ class Lock {
 	 * @return boolean True if succeeded, false otherwise.
 	 */
 	public function attempt( $name, $expiry = self::LOCK_TRANSIENT_EXPIRY ) {
-		$lock_name   = self::LOCK_PREFIX . $name;
-		$locked_time = get_option( $lock_name );
+		$name        = self::LOCK_PREFIX . $name;
+		$locked_time = get_option( $name );
 
 		if ( $locked_time ) {
-			// If expired update to false but don't send. Send will occurr in new request to avoid race conditions.
-			if ( microtime( true ) > $locked_time ) {
-				update_option( $lock_name, false, false );
+			if ( microtime( true ) < $locked_time ) {
+				return false;
 			}
-			return false;
 		}
-
 		$locked_time = microtime( true ) + $expiry;
-		update_option( $lock_name, $locked_time, false );
+		update_option( $name, $locked_time );
+
 		return $locked_time;
 	}
 
@@ -67,11 +65,8 @@ class Lock {
 	 * @param bool|float $lock_expiration lock expiration.
 	 */
 	public function remove( $name, $lock_expiration = false ) {
-		$lock_name = self::LOCK_PREFIX . $name;
-
-		// Only remove lock if current value matches our lock.
-		if ( true === $lock_expiration || (string) get_option( $lock_name ) === (string) $lock_expiration ) {
-			update_option( $lock_name, false, false );
+		if ( true === $lock_expiration || (string) get_option( self::LOCK_PREFIX . $name ) === (string) $lock_expiration ) {
+			delete_option( self::LOCK_PREFIX . $name );
 		}
 	}
 }

@@ -2,7 +2,7 @@
 /**
  * Proxy endpoint for Jetpack Search
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 use Automattic\Jetpack\Connection\Client;

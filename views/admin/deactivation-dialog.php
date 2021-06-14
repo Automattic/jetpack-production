@@ -2,7 +2,7 @@
 /**
  * The deactivation modal content.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  *
  * phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
  * because $data is magically loaded by Jetpack::load_view()

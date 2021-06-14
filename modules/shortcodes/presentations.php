@@ -53,7 +53,7 @@ use Automattic\Jetpack\Assets;
  *   properly, however.
  * - Exiting fullscreen mode will not properly reset the scroll locations in Safari
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 if ( ! class_exists( 'Presentations' ) ) :

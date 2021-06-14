@@ -2,7 +2,7 @@
 /**
  * 3rd Party Integration for BuddyPress.
  *
- * @package automattic/jetpack.
+ * @package Jetpack.
  */
 
 namespace Automattic\Jetpack\Third_Party;

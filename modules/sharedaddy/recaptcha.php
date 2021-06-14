@@ -75,7 +75,6 @@ class Jetpack_ReCaptcha {
 			'language'       => get_locale(),
 			'script_async'   => false,
 			'script_defer'   => true,
-			'script_lazy'    => false,
 			'tag_class'      => 'g-recaptcha',
 			'tag_attributes' => array(
 				'theme'    => 'light',
@@ -182,42 +181,26 @@ class Jetpack_ReCaptcha {
 	 * @return string
 	 */
 	public function get_recaptcha_html() {
-		$url = sprintf(
-			'https://www.google.com/recaptcha/api.js?hl=%s',
-			rawurlencode( $this->config['language'] )
-		);
-
-		$html = sprintf(
+		return sprintf(
 			'
 			<div
 				class="%s"
 				data-sitekey="%s"
 				data-theme="%s"
 				data-type="%s"
-				data-tabindex="%s"
-				data-lazy="%s"
-				data-url="%s"></div>
+				data-tabindex="%s"></div>
+			' .
+			// phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
+			'<script src="https://www.google.com/recaptcha/api.js?hl=%s"%s%s></script>
 			',
 			esc_attr( $this->config['tag_class'] ),
 			esc_attr( $this->site_key ),
 			esc_attr( $this->config['tag_attributes']['theme'] ),
 			esc_attr( $this->config['tag_attributes']['type'] ),
 			esc_attr( $this->config['tag_attributes']['tabindex'] ),
-			$this->config['script_lazy'] ? 'true' : 'false',
-			esc_attr( $url )
+			rawurlencode( $this->config['language'] ),
+			$this->config['script_async'] && ! $this->config['script_defer'] ? ' async' : '',
+			$this->config['script_defer'] ? ' defer' : ''
 		);
-
-		if ( ! $this->config['script_lazy'] ) {
-			$html = $html . sprintf(
-				// phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
-				'<script src="%s"%s%s></script>
-				',
-				$url,
-				$this->config['script_async'] && ! $this->config['script_defer'] ? ' async' : '',
-				$this->config['script_defer'] ? ' defer' : ''
-			);
-		}
-
-		return $html;
 	}
 }

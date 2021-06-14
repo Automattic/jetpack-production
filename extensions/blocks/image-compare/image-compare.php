@@ -4,7 +4,7 @@
  *
  * @since 8.6
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\ImageCompare;

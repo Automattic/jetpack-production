@@ -94,14 +94,6 @@ class Jetpack_WPES_Query_Builder {
 	 * @return void
 	 */
 	public function add_weighting_function( $function ) {
-		// check for danger.
-		if ( isset( $function['random_score'] ) ) {
-			return $this;
-		}
-		if ( isset( $function['script_score'] ) ) {
-			return $this;
-		}
-
 		$this->weighting_functions[] = $function;
 
 		return $this;
@@ -293,7 +285,7 @@ class Jetpack_WPES_Query_Builder {
 
 		// If there are any function score adjustments, then combine those
 		if ( $this->functions || $this->decays || $this->scripts || $this->weighting_functions ) {
-			$weighting_functions = $this->weighting_functions;
+			$weighting_functions = array();
 
 			if ( $this->functions ) {
 				foreach ( $this->functions as $function_type => $configs ) {

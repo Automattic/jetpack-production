@@ -2,7 +2,7 @@
 /**
  * Instagram Gallery block and API helper.
  *
- * @package automattic/jetpack
+ * @package jetpack
  */
 
 use Automattic\Jetpack\Connection\Client;

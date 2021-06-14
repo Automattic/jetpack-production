@@ -2,7 +2,7 @@
 /**
  * Jetpack_WooCommerce_Analytics_Universal
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @author Automattic
  */
 

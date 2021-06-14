@@ -4,7 +4,7 @@
  *
  * @since 7.2.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Extensions\Repeat_Visitor;

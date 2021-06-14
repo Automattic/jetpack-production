@@ -2,7 +2,7 @@
 /**
  * Masterbar file.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 namespace Automattic\Jetpack\Dashboard_Customizations;
@@ -19,6 +19,7 @@ use Jetpack;
 use Jetpack_AMP_Support;
 use Jetpack_Plan;
 use WP_Admin_Bar;
+use WP_User;
 
 /**
  * Provides custom admin bar instead of the default WordPress admin bar.
@@ -38,13 +39,6 @@ class Masterbar {
 	 * @var string
 	 */
 	private $locale;
-
-	/**
-	 * WordPress.com user locale of the connected user.
-	 *
-	 * @var string
-	 */
-	private $user_locale;
 
 	/**
 	 * Current User ID.
@@ -83,11 +77,11 @@ class Masterbar {
 	 */
 	private $primary_site_slug;
 	/**
-	 * Whether the text direction is RTL (based on connected WordPress.com user's interface settings).
+	 * Text direction (ltr or rtl) based on connected WordPress.com user's interface settings.
 	 *
-	 * @var boolean
+	 * @var string
 	 */
-	private $is_rtl;
+	private $user_text_direction;
 	/**
 	 * Number of sites owned by connected WordPress.com user.
 	 *
@@ -99,49 +93,23 @@ class Masterbar {
 	 * Constructor
 	 */
 	public function __construct() {
-		$this->user_id      = get_current_user_id();
-		$connection_manager = new Connection_Manager( 'jetpack' );
-
-		if ( ! $connection_manager->is_user_connected( $this->user_id ) ) {
-			return;
-		}
-
-		$this->user_data       = $connection_manager->get_connected_user_data( $this->user_id );
-		$this->user_login      = $this->user_data['login'];
-		$this->user_email      = $this->user_data['email'];
-		$this->display_name    = $this->user_data['display_name'];
-		$this->user_site_count = $this->user_data['site_count'];
-		$this->is_rtl          = 'rtl' === $this->user_data['text_direction'];
-		$this->user_locale     = $this->user_data['user_locale'];
-
-		// Store part of the connected user data as user options so it can be used
-		// by other files of the masterbar module without making another XMLRPC
-		// request. Although `get_connected_user_data` tries to save the data for
-		// future uses on a transient, the data is not guaranteed to be cached.
-		update_user_option( $this->user_id, 'jetpack_wpcom_is_rtl', $this->is_rtl ? '1' : '0' );
-		if ( isset( $this->user_data['use_wp_admin_links'] ) ) {
-			update_user_option( $this->user_id, 'jetpack_admin_menu_link_destination', $this->user_data['use_wp_admin_links'] ? '1' : '0' );
-		}
-		// If Atomic, store and install user locale.
-		if ( jetpack_is_atomic_site() ) {
-			$this->user_locale = $this->get_jetpack_locale( $this->user_locale );
-			$this->install_locale( $this->user_locale );
-			update_user_option( $this->user_id, 'locale', $this->user_locale, true );
-		}
-
 		add_action( 'admin_bar_init', array( $this, 'init' ) );
 
-		if ( ! empty( $this->user_data['ID'] ) ) {
-			// Post logout on the site, also log the user out of WordPress.com.
-			add_filter( 'logout_redirect', array( $this, 'maybe_logout_user_from_wpcom' ) );
-		}
+		// Post logout on the site, also log the user out of WordPress.com.
+		add_filter( 'logout_redirect', array( $this, 'maybe_logout_user_from_wpcom' ), 10, 3 );
 	}
 
 	/**
 	 * Initialize our masterbar.
 	 */
 	public function init() {
-		$this->locale = $this->get_locale();
+		$this->locale  = $this->get_locale();
+		$this->user_id = get_current_user_id();
+
+		// Limit the masterbar to be shown only to connected Jetpack users.
+		if ( ! Jetpack::is_user_connected( $this->user_id ) ) {
+			return;
+		}
 
 		// Don't show the masterbar on WordPress mobile apps.
 		if ( User_Agent_Info::is_mobile_app() ) {
@@ -152,7 +120,6 @@ class Masterbar {
 		// Disable the Masterbar on AMP views.
 		if (
 			class_exists( 'Jetpack_AMP_Support' )
-			&& Jetpack_AMP_Support::is_amp_available()
 			&& Jetpack_AMP_Support::is_amp_request()
 		) {
 			return;
@@ -179,11 +146,20 @@ class Masterbar {
 			add_filter( 'show_admin_bar', '__return_true' );
 		}
 
+		$this->user_data       = Jetpack::get_connected_user_data( $this->user_id );
+		$this->user_login      = $this->user_data['login'];
+		$this->user_email      = $this->user_data['email'];
+		$this->display_name    = $this->user_data['display_name'];
+		$this->user_site_count = $this->user_data['site_count'];
+
 		// Used to build menu links that point directly to Calypso.
 		$this->primary_site_slug = ( new Status() )->get_site_suffix();
 
 		// Used for display purposes and for building WP Admin links.
 		$this->primary_site_url = str_replace( '::', '/', $this->primary_site_slug );
+
+		// We need to use user's setting here, instead of relying on current blog's text direction.
+		$this->user_text_direction = $this->user_data['text_direction'];
 
 		add_filter( 'admin_body_class', array( $this, 'admin_body_class' ) );
 
@@ -195,25 +171,20 @@ class Masterbar {
 		add_action( 'wp_enqueue_scripts', array( $this, 'remove_core_styles' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'remove_core_styles' ) );
 
-		if ( Jetpack::is_module_active( 'notes' ) && $this->is_rtl ) {
+		if ( Jetpack::is_module_active( 'notes' ) && $this->is_rtl() ) {
 			// Override Notification module to include RTL styles.
 			add_action( 'a8c_wpcom_masterbar_enqueue_rtl_notification_styles', '__return_true' );
-		}
-
-		// Hides and replaces the language dropdown for the current user, on Atomic.
-		if ( jetpack_is_atomic_site() &&
-			defined( 'IS_PROFILE_PAGE' ) && IS_PROFILE_PAGE ) {
-			add_action( 'user_edit_form_tag', array( $this, 'hide_language_dropdown' ) );
-			add_action( 'personal_options', array( $this, 'replace_language_dropdown' ), 9 );
 		}
 	}
 
 	/**
 	 * Log out from WordPress.com when logging out of the local site.
 	 *
-	 * @param string $redirect_to The redirect destination URL.
+	 * @param string  $redirect_to           The redirect destination URL.
+	 * @param string  $requested_redirect_to The requested redirect destination URL passed as a parameter.
+	 * @param WP_User $user                  The WP_User object for the user that's logging out.
 	 */
-	public function maybe_logout_user_from_wpcom( $redirect_to ) {
+	public function maybe_logout_user_from_wpcom( $redirect_to, $requested_redirect_to, $user ) {
 		/**
 		 * Whether we should sign out from wpcom too when signing out from the masterbar.
 		 *
@@ -228,17 +199,26 @@ class Masterbar {
 			&& 'masterbar' === $_GET['context'] // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			&& $masterbar_should_logout_from_wpcom
 		) {
-			/**
-			 * Hook into the log out event happening from the Masterbar.
-			 *
-			 * @since 5.1.0
-			 * @since 7.9.0 Added the $wpcom_user_id parameter to the action.
-			 *
-			 * @module masterbar
-			 *
-			 * @param int $wpcom_user_id WordPress.com User ID.
+			/*
+			 * Get the associated WordPress.com User ID, if the user is connected.
 			 */
-			do_action( 'wp_masterbar_logout', $this->user_data['ID'] );
+			$connection_manager = new Connection_Manager();
+			if ( $connection_manager->is_user_connected( $user->ID ) ) {
+				$wpcom_user_data = $connection_manager->get_connected_user_data( $user->ID );
+				if ( ! empty( $wpcom_user_data['ID'] ) ) {
+					/**
+					 * Hook into the log out event happening from the Masterbar.
+					 *
+					 * @since 5.1.0
+					 * @since 7.9.0 Added the $wpcom_user_id parameter to the action.
+					 *
+					 * @module masterbar
+					 *
+					 * @param int $wpcom_user_id WordPress.com User ID.
+					 */
+					do_action( 'wp_masterbar_logout', $wpcom_user_data['ID'] );
+				}
+			}
 		}
 
 		return $redirect_to;
@@ -271,11 +251,18 @@ class Masterbar {
 	}
 
 	/**
+	 * Check if the user settings are for an RTL language or not.
+	 */
+	public function is_rtl() {
+		return 'rtl' === $this->user_text_direction ? true : false;
+	}
+
+	/**
 	 * Enqueue our own CSS and JS to display our custom admin bar.
 	 */
 	public function add_styles_and_scripts() {
 
-		if ( $this->is_rtl ) {
+		if ( $this->is_rtl() ) {
 			wp_enqueue_style( 'a8c-wpcom-masterbar-rtl', $this->wpcom_static_url( '/wp-content/mu-plugins/admin-bar/rtl/wpcom-admin-bar-rtl.css' ), array(), JETPACK__VERSION );
 			wp_enqueue_style( 'a8c-wpcom-masterbar-overrides-rtl', $this->wpcom_static_url( '/wp-content/mu-plugins/admin-bar/masterbar-overrides/rtl/masterbar-rtl.css' ), array(), JETPACK__VERSION );
 		} else {
@@ -415,79 +402,6 @@ class Masterbar {
 	}
 
 	/**
-	 * Get Jetpack locale name.
-	 *
-	 * @param  string $slug Locale slug.
-	 * @return string Jetpack locale.
-	 */
-	public function get_jetpack_locale( $slug = '' ) {
-		if ( ! class_exists( 'GP_Locales' ) ) {
-			if ( defined( 'JETPACK__GLOTPRESS_LOCALES_PATH' ) && file_exists( JETPACK__GLOTPRESS_LOCALES_PATH ) ) {
-				require JETPACK__GLOTPRESS_LOCALES_PATH;
-			}
-		}
-
-		if ( class_exists( 'GP_Locales' ) ) {
-			$jetpack_locale_object = GP_Locales::by_field( 'slug', $slug );
-			if ( $jetpack_locale_object instanceof GP_Locale ) {
-				$jetpack_locale = $jetpack_locale_object->wp_locale ? $jetpack_locale_object->wp_locale : 'en_US';
-			}
-		}
-
-		return $jetpack_locale;
-	}
-
-	/**
-	 * Install locale if not yet available.
-	 *
-	 * @param string $locale The new locale slug.
-	 */
-	public function install_locale( $locale = '' ) {
-		if ( ! in_array( $locale, get_available_languages(), true )
-			&& ! empty( $locale ) && current_user_can( 'install_languages' ) ) {
-
-			if ( ! function_exists( 'wp_download_language_pack' ) ) {
-				require_once ABSPATH . 'wp-admin/includes/translation-install.php';
-			}
-
-			if ( ! function_exists( 'request_filesystem_credentials' ) ) {
-				require_once ABSPATH . 'wp-admin/includes/file.php';
-			}
-
-			if ( wp_can_install_language_pack() ) {
-				wp_download_language_pack( $locale );
-				load_default_textdomain( $locale );
-			}
-		}
-	}
-
-	/**
-	 * Hide language dropdown on user edit form.
-	 */
-	public function hide_language_dropdown() {
-		add_filter( 'get_available_languages', '__return_null' );
-	}
-
-	/**
-	 * Replace language dropdown with link to WordPress.com.
-	 */
-	public function replace_language_dropdown() {
-		$language_row  = printf( '<tr class="user-language-wrap"><th scope="row">' );
-		$language_row .= printf(
-			'<label for="locale">%1$s<span class="dashicons dashicons-translation" aria-hidden="true"></span></label>',
-			esc_html__( 'Language', 'jetpack' )
-		);
-		$language_row .= printf( '</th><td>' );
-		$language_row .= printf(
-			'<a target="_blank" href="%1$s">%2$s</a>',
-			esc_url( 'https://wordpress.com/me/account' ),
-			esc_html__( 'Set your profile language on WordPress.com.', 'jetpack' )
-		);
-		$language_row .= printf( '</td></tr>' );
-		return $language_row;
-	}
-
-	/**
 	 * Add the Notifications menu item.
 	 *
 	 * @param WP_Admin_Bar $wp_admin_bar Admin Bar instance.
@@ -500,7 +414,7 @@ class Masterbar {
 						 <span class="screen-reader-text">' . esc_html__( 'Notifications', 'jetpack' ) . '</span>
 						 <span class="noticon noticon-bell"></span>',
 				'meta'   => array(
-					'html'  => '<div id="wpnt-notes-panel2" style="display:none" lang="' . esc_attr( $this->locale ) . '" dir="' . ( $this->is_rtl ? 'rtl' : 'ltr' ) . '">' .
+					'html'  => '<div id="wpnt-notes-panel2" style="display:none" lang="' . esc_attr( $this->locale ) . '" dir="' . ( $this->is_rtl() ? 'rtl' : 'ltr' ) . '">' .
 								'<div class="wpnt-notes-panel-header">' .
 								'<span class="wpnt-notes-header">' .
 								esc_html__( 'Notifications', 'jetpack' ) .
@@ -527,17 +441,12 @@ class Masterbar {
 				'parent' => 'root-default',
 				'id'     => 'newdash',
 				'title'  => esc_html__( 'Reader', 'jetpack' ),
-				'href'   => 'https://wordpress.com/read',
+				'href'   => '#',
 				'meta'   => array(
 					'class' => 'mb-trackable',
 				),
 			)
 		);
-
-		/** This filter is documented in modules/masterbar.php */
-		if ( apply_filters( 'jetpack_load_admin_menu_class', false ) ) {
-			return;
-		}
 
 		$wp_admin_bar->add_menu(
 			array(
@@ -697,17 +606,12 @@ class Masterbar {
 				'id'     => 'my-account',
 				'parent' => 'top-secondary',
 				'title'  => $avatar . '<span class="ab-text">' . esc_html__( 'Me', 'jetpack' ) . '</span>',
-				'href'   => 'https://wordpress.com/me',
+				'href'   => '#',
 				'meta'   => array(
 					'class' => $class,
 				),
 			)
 		);
-
-		/** This filter is documented in modules/masterbar.php */
-		if ( apply_filters( 'jetpack_load_admin_menu_class', false ) ) {
-			return;
-		}
 
 		$id = 'user-actions';
 		$wp_admin_bar->add_group(
@@ -880,11 +784,13 @@ class Masterbar {
 			return;
 		}
 
+		$blog_post_page = Redirect::get_url( 'calypso-edit-post' );
+
 		$wp_admin_bar->add_menu(
 			array(
 				'parent' => 'top-secondary',
 				'id'     => 'ab-new-post',
-				'href'   => admin_url( 'post-new.php' ),
+				'href'   => $blog_post_page,
 				'title'  => '<span>' . esc_html__( 'Write', 'jetpack' ) . '</span>',
 				'meta'   => array(
 					'class' => 'mb-trackable',
@@ -915,17 +821,12 @@ class Masterbar {
 				'parent' => 'root-default',
 				'id'     => 'blog',
 				'title'  => _n( 'My Site', 'My Sites', $this->user_site_count, 'jetpack' ),
-				'href'   => 'https://wordpress.com/sites/' . $this->primary_site_url,
+				'href'   => '#',
 				'meta'   => array(
 					'class' => 'my-sites mb-trackable',
 				),
 			)
 		);
-
-		/** This filter is documented in modules/masterbar.php */
-		if ( apply_filters( 'jetpack_load_admin_menu_class', false ) ) {
-			return;
-		}
 
 		if ( $this->user_site_count > 1 ) {
 			$wp_admin_bar->add_menu(
@@ -1036,7 +937,7 @@ class Masterbar {
 				array(
 					'url'   => $plans_url,
 					'id'    => 'wp-admin-bar-plan-badge',
-					'label' => ! empty( $plan['product_name_short'] ) ? $plan['product_name_short'] : esc_html__( 'Free', 'jetpack' ),
+					'label' => $plan['product_name_short'],
 				)
 			);
 

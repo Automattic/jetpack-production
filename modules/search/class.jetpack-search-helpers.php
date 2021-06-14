@@ -178,8 +178,7 @@ class Jetpack_Search_Helpers {
 					$widget_filter['name'] = self::generate_widget_filter_name( $widget_filter );
 				}
 
-				$type = ( isset( $widget_filter['type'] ) ) ? $widget_filter['type'] : '';
-				$key  = sprintf( '%s_%d', $type, count( $filters ) );
+				$key = sprintf( '%s_%d', $widget_filter['type'], count( $filters ) );
 
 				$filters[ $key ] = $widget_filter;
 			}

@@ -76,7 +76,7 @@
 }
 
 .jetpack-masterbar #wpadminbar #wp-admin-bar-recovery-mode {
-	background-color: #d63638;
+	background-color: #ca4a1f;
 	color: #fff;
 	margin-right: 1em;
 }
@@ -134,7 +134,6 @@
 	.jetpack-masterbar.post-new-php.block-editor-page #wpadminbar li#wp-admin-bar-newdash {
 		order: 3;
 	}
-
 	#wpadminbar #wp-admin-bar-jetpack-scan-notice,
 	.jetpack-masterbar #wpadminbar #wp-admin-bar-recovery-mode {
 		display: none;

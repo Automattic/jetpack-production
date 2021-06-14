@@ -5,7 +5,7 @@
  * Examples:
  * [wordads]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**

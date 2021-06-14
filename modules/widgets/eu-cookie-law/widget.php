@@ -2,7 +2,7 @@
 /**
  * Widget for Cookies and Consent.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 ?>
 

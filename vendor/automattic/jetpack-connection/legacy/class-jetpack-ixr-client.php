@@ -23,13 +23,6 @@ class Jetpack_IXR_Client extends IXR_Client {
 	public $jetpack_args = null;
 
 	/**
-	 * Remote Response Headers.
-	 *
-	 * @var array
-	 */
-	public $response_headers = null;
-
-	/**
 	 * Constructor.
 	 * Initialize a new Jetpack IXR client instance.
 	 *
@@ -68,9 +61,6 @@ class Jetpack_IXR_Client extends IXR_Client {
 		$xml     = trim( $request->getXml() );
 
 		$response = Client::remote_request( $this->jetpack_args, $xml );
-
-		// Store response headers.
-		$this->response_headers = wp_remote_retrieve_headers( $response );
 
 		if ( is_wp_error( $response ) ) {
 			$this->error = new IXR_Error( -10520, sprintf( 'Jetpack: [%s] %s', $response->get_error_code(), $response->get_error_message() ) );
@@ -131,22 +121,5 @@ class Jetpack_IXR_Client extends IXR_Client {
 		}
 
 		return new \WP_Error( "IXR_{$fault_code}", $fault_string );
-	}
-
-	/**
-	 * Retrieve a response header if set.
-	 *
-	 * @param  string $name  header name.
-	 * @return string|bool Header value if set, false if not set.
-	 */
-	public function get_response_header( $name ) {
-		if ( isset( $this->response_headers[ $name ] ) ) {
-			return $this->response_headers[ $name ];
-		}
-		// case-insensitive header names: http://www.ietf.org/rfc/rfc2616.txt.
-		if ( isset( $this->response_headers[ strtolower( $name ) ] ) ) {
-			return $this->response_headers[ strtolower( $name ) ];
-		}
-		return false;
 	}
 }

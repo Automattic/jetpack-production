@@ -49,6 +49,7 @@ class Heartbeat {
 	 * Constructor for singleton
 	 *
 	 * @since 2.3.3
+	 * @return Heartbeat
 	 */
 	private function __construct() {
 

@@ -4,7 +4,7 @@
  * static strings. This class handles the construction of
  * those strings.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 4.8.0
  */
 

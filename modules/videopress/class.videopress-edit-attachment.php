@@ -97,7 +97,7 @@ class VideoPress_Edit_Attachment {
 		if ( isset( $attachment['rating'] ) ) {
 			$rating = $attachment['rating'];
 
-			if ( ! empty( $rating ) && videopress_is_valid_video_rating( $rating ) ) {
+			if ( ! empty( $rating ) && in_array( $rating, array( 'G', 'PG-13', 'R-17', 'X-18' ) ) ) {
 				$values['rating'] = $rating;
 			}
 		}
@@ -248,9 +248,30 @@ class VideoPress_Edit_Attachment {
 
 		$info = (object) $meta['videopress'];
 
+		$status = videopress_get_transcoding_status( $post_id );
+
+		$formats = array(
+			'std_mp4' => 'Standard MP4',
+			'std_ogg' => 'OGG Vorbis',
+			'dvd_mp4' => 'DVD',
+			'hd_mp4'  => 'High Definition',
+		);
+
 		$embed = "[videopress {$guid}]";
 
 		$shortcode = '<input type="text" id="plugin-embed" readonly="readonly" style="width:180px;" value="' . esc_attr( $embed ) . '" onclick="this.focus();this.select();" />';
+
+		$trans_status   = '';
+		$all_trans_done = true;
+		foreach ( $formats as $status_key => $name ) {
+			if ( 'DONE' !== $status[ $status_key ] ) {
+				$all_trans_done = false;
+			}
+
+			$trans_status .= '- <strong>' . $name . ":</strong> <span id=\"status_$status_key\">" . ( 'DONE' === $status[ $status_key ] ? 'Done' : 'Processing' ) . '</span><br>';
+		}
+
+		$nonce = wp_create_nonce( 'videopress-update-transcoding-status' );
 
 		$url = 'empty';
 		if ( ! empty( $guid ) ) {
@@ -261,6 +282,11 @@ class VideoPress_Edit_Attachment {
 		$poster = '<em>Still Processing</em>';
 		if ( ! empty( $info->poster ) ) {
 			$poster = "<br><img src=\"{$info->poster}\" width=\"175px\">";
+		}
+
+		$status_update = '';
+		if ( ! $all_trans_done ) {
+			$status_update = ' (<a href="javascript:;" id="videopress-update-transcoding-status">update</a>)';
 		}
 
 		$html = <<< HTML
@@ -277,6 +303,37 @@ class VideoPress_Edit_Attachment {
 	<strong>Poster</strong>
 	{$poster}
 </div>
+<div class="misc-pub-section misc-pub-status">
+	<strong>Transcoding Status$status_update:</strong>
+	<div id="videopress-transcoding-status">{$trans_status}</div>
+</div>
+
+
+
+<script>
+	jQuery( function($) {
+		$( '#videopress-update-transcoding-status' ).on( "click", function() {
+			jQuery.ajax( {
+				type: 'post',
+				url: 'admin-ajax.php',
+				data: {
+					action: 'videopress-update-transcoding-status',
+					post_id: '{$post_id}',
+					_ajax_nonce: '{$nonce}'
+				},
+				complete: function( response ) {
+					if ( 200 === response.status ) {
+						var statuses = response.responseJSON.data.status;
+
+						for (var key in statuses) {
+							$('#status_' + key).text( 'DONE' === statuses[key] ? 'Done' : 'Processing' );
+						}
+					}
+				}
+			});
+		} );
+	} );
+</script>
 HTML;
 
 		echo $html;

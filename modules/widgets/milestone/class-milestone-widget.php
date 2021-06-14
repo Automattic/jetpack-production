@@ -2,7 +2,7 @@
 /**
  * Milestone Countdown Widget
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 use Automattic\Jetpack\Assets;

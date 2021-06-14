@@ -2,7 +2,7 @@
 /**
  * CCPA Class
  *
- * @package automattic/jetpack
+ * @package Jetpack.
  */
 
 use Automattic\Jetpack\Assets;

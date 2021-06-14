@@ -2,7 +2,7 @@
 /**
  * Plan checks for uploading audio files to core/audio.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  **/
 
 // Populate the available extensions with core/audio.
