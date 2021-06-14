@@ -6,8 +6,6 @@
  * @since      7.3.0
  */
 
-use Automattic\Jetpack\Blocks;
-
 /**
  * Class Jetpack_Memberships
  * This class represents the Memberships functionality.
@@ -44,55 +42,12 @@ class Jetpack_Memberships {
 	 * @var array
 	 */
 	private static $tags_allowed_in_the_button = array( 'br' => array() );
-
-	/**
-	 * The minimum required plan for this Gutenberg block.
-	 *
-	 * @var string Plan slug
-	 */
-	private static $required_plan;
-
-	/**
-	 * Track recurring payments block registration.
-	 *
-	 * @var boolean True if block registration has been executed.
-	 */
-	private static $has_registered_block = false;
-
 	/**
 	 * Classic singleton pattern
 	 *
 	 * @var Jetpack_Memberships
 	 */
 	private static $instance;
-
-	/**
-	 * Currencies we support and Stripe's minimum amount for a transaction in that currency.
-	 *
-	 * @link https://stripe.com/docs/currencies#minimum-and-maximum-charge-amounts
-	 *
-	 * List has to be in with `SUPPORTED_CURRENCIES` in extensions/shared/currencies.js and
-	 * `Memberships_Product::SUPPORTED_CURRENCIES` in the WP.com memberships library.
-	 */
-	const SUPPORTED_CURRENCIES = array(
-		'USD' => 0.5,
-		'AUD' => 0.5,
-		'BRL' => 0.5,
-		'CAD' => 0.5,
-		'CHF' => 0.5,
-		'DKK' => 2.5,
-		'EUR' => 0.5,
-		'GBP' => 0.3,
-		'HKD' => 4.0,
-		'INR' => 0.5,
-		'JPY' => 50,
-		'MXN' => 10,
-		'NOK' => 3.0,
-		'NZD' => 0.5,
-		'PLN' => 2.0,
-		'SEK' => 3.0,
-		'SGD' => 0.5,
-	);
 
 	/**
 	 * Jetpack_Memberships constructor.
@@ -108,8 +63,6 @@ class Jetpack_Memberships {
 		if ( ! self::$instance ) {
 			self::$instance = new self();
 			self::$instance->register_init_hook();
-			// Yes, `personal-bundle` with a dash, `jetpack_personal` with an underscore. Check the v1.5 endpoint to verify.
-			self::$required_plan = ( defined( 'IS_WPCOM' ) && IS_WPCOM ) ? 'personal-bundle' : 'jetpack_personal';
 		}
 
 		return self::$instance;
@@ -138,7 +91,6 @@ class Jetpack_Memberships {
 	 */
 	private function register_init_hook() {
 		add_action( 'init', array( $this, 'init_hook_action' ) );
-		add_action( 'jetpack_register_gutenberg_extensions', array( $this, 'register_gutenberg_block' ) );
 	}
 
 	/**
@@ -227,77 +179,21 @@ class Jetpack_Memberships {
 	public function return_meta( $map ) {
 		return $map['meta'];
 	}
-
-	/**
-	 * Renders a preview of the Recurring Payment button, which is not hooked
-	 * up to the subscription url. Used to preview the block on the frontend
-	 * for site editors when Stripe has not been connected.
-	 *
-	 * @param array  $attrs - attributes in the shortcode.
-	 * @param string $content - Recurring Payment block content.
-	 *
-	 * @return string|void
-	 */
-	public function render_button_preview( $attrs, $content = null ) {
-		if ( ! empty( $content ) ) {
-			$block_id = esc_attr( wp_unique_id( 'recurring-payments-block-' ) );
-			$content  = str_replace( 'recurring-payments-id', $block_id, $content );
-			$content  = str_replace( 'wp-block-jetpack-recurring-payments', 'wp-block-jetpack-recurring-payments wp-block-button', $content );
-			return $content;
-		}
-		return $this->deprecated_render_button_v1( $attrs, null );
-	}
-
-	/**
-	 * Determines whether the button preview should be rendered. Returns true
-	 * if the user has editing permissions, the button is not configured correctly
-	 * (because it requires a plan upgrade or Stripe connection), and the
-	 * button is a child of a Premium Content block.
-	 *
-	 * @param WP_Block $block Recurring Payments block instance.
-	 *
-	 * @return boolean
-	 */
-	public function should_render_button_preview( $block ) {
-		$user_can_edit              = $this->user_can_edit();
-		$requires_stripe_connection = ! $this->get_connected_account_id();
-
-		$requires_upgrade = ! self::is_supported_jetpack_recurring_payments();
-
-		$is_premium_content_child = false;
-		if ( isset( $block ) && isset( $block->context['isPremiumContentChild'] ) ) {
-			$is_premium_content_child = (int) $block->context['isPremiumContentChild'];
-		}
-
-		return (
-			$is_premium_content_child &&
-			$user_can_edit &&
-			( $requires_upgrade || $requires_stripe_connection )
-		);
-	}
-
 	/**
 	 * Callback that parses the membership purchase shortcode.
 	 *
-	 * @param array    $attributes - attributes in the shortcode. `id` here is the CPT id of the plan.
-	 * @param string   $content - Recurring Payment block content.
-	 * @param WP_Block $block - Recurring Payment block instance.
+	 * @param array $attrs - attributes in the shortcode. `id` here is the CPT id of the plan.
 	 *
 	 * @return string|void
 	 */
-	public function render_button( $attributes, $content = null, $block = null ) {
+	public function render_button( $attrs ) {
 		Jetpack_Gutenberg::load_assets_as_required( self::$button_block_name, array( 'thickbox', 'wp-polyfill' ) );
 
-		if ( $this->should_render_button_preview( $block ) ) {
-			return $this->render_button_preview( $attributes, $content );
-		}
-
-		if ( empty( $attributes['planId'] ) ) {
+		if ( empty( $attrs['planId'] ) ) {
 			return;
 		}
-
-		$plan_id = (int) $attributes['planId'];
-		$product = get_post( $plan_id );
+		$id      = intval( $attrs['planId'] );
+		$product = get_post( $id );
 		if ( ! $product || is_wp_error( $product ) ) {
 			return;
 		}
@@ -305,54 +201,27 @@ class Jetpack_Memberships {
 			return;
 		}
 
-		add_thickbox();
-
-		if ( ! empty( $content ) ) {
-			$block_id      = esc_attr( wp_unique_id( 'recurring-payments-block-' ) );
-			$content       = str_replace( 'recurring-payments-id', $block_id, $content );
-			$content       = str_replace( 'wp-block-jetpack-recurring-payments', 'wp-block-jetpack-recurring-payments wp-block-button', $content );
-			$subscribe_url = $this->get_subscription_url( $plan_id );
-			return str_replace( 'href="#"', 'href="' . $subscribe_url . '"', $content );
-		}
-
-		return $this->deprecated_render_button_v1( $attributes, $plan_id );
-	}
-
-	/**
-	 * Builds subscription URL for this membership using the current blog and
-	 * supplied plan IDs.
-	 *
-	 * @param integer $plan_id - Unique ID for the plan being subscribed to.
-	 * @return string
-	 */
-	public function get_subscription_url( $plan_id ) {
-		global $wp;
-
-		return add_query_arg(
-			array(
-				'blog'     => esc_attr( self::get_blog_id() ),
-				'plan'     => esc_attr( $plan_id ),
-				'lang'     => esc_attr( get_locale() ),
-				'pid'      => esc_attr( get_the_ID() ), // Needed for analytics purposes.
-				'redirect' => esc_attr( rawurlencode( home_url( $wp->request ) ) ), // Needed for redirect back in case of redirect-based flow.
-			),
-			'https://subscribe.wordpress.com/memberships/'
+		$data = array(
+			'blog_id'      => self::get_blog_id(),
+			'id'           => $id,
+			'button_label' => __( 'Your contribution', 'jetpack' ),
+			'powered_text' => __( 'Powered by WordPress.com', 'jetpack' ),
 		);
-	}
 
-	/**
-	 * Renders a deprecated legacy version of the button HTML.
-	 *
-	 * @param array   $attrs - Array containing the Recurring Payment block attributes.
-	 * @param integer $plan_id - Unique plan ID the membership is for.
-	 *
-	 * @return string
-	 */
-	public function deprecated_render_button_v1( $attrs, $plan_id ) {
-		$button_label = isset( $attrs['submitButtonText'] )
-			? $attrs['submitButtonText']
-			: __( 'Your contribution', 'jetpack' );
-
+		$classes = array(
+			'wp-block-button__link',
+			'components-button',
+			'is-primary',
+			'is-button',
+			'wp-block-jetpack-' . self::$button_block_name,
+			self::$css_classname_prefix . '-' . $data['id'],
+		);
+		if ( isset( $attrs['className'] ) ) {
+			array_push( $classes, $attrs['className'] );
+		}
+		if ( isset( $attrs['submitButtonText'] ) ) {
+			$data['button_label'] = $attrs['submitButtonText'];
+		}
 		$button_styles = array();
 		if ( ! empty( $attrs['customBackgroundButtonColor'] ) ) {
 			array_push(
@@ -372,22 +241,17 @@ class Jetpack_Memberships {
 				)
 			);
 		}
-		$button_styles = implode( ';', $button_styles );
-
+		$button_styles = implode( $button_styles, ';' );
+		add_thickbox();
 		return sprintf(
-			'<div class="%1$s"><a role="button" %6$s href="%2$s" class="%3$s" style="%4$s">%5$s</a></div>',
-			esc_attr(
-				Jetpack_Gutenberg::block_classes(
-					self::$button_block_name,
-					$attrs,
-					array( 'wp-block-button' )
-				)
-			),
-			esc_url( $this->get_subscription_url( $plan_id ) ),
-			isset( $attrs['submitButtonClasses'] ) ? esc_attr( $attrs['submitButtonClasses'] ) : 'wp-block-button__link',
+			'<button data-blog-id="%d" data-powered-text="%s" data-plan-id="%d" data-lang="%s" class="%s" style="%s">%s</button>',
+			esc_attr( $data['blog_id'] ),
+			esc_attr( $data['powered_text'] ),
+			esc_attr( $data['id'] ),
+			esc_attr( get_locale() ),
+			esc_attr( implode( $classes, ' ' ) ),
 			esc_attr( $button_styles ),
-			wp_kses( $button_label, self::$tags_allowed_in_the_button ),
-			isset( $attrs['submitButtonAttributes'] ) ? sanitize_text_field( $attrs['submitButtonAttributes'] ) : '' // Needed for arbitrary target=_blank on WPCOM VIP.
+			wp_kses( $data['button_label'], self::$tags_allowed_in_the_button )
 		);
 	}
 
@@ -411,86 +275,6 @@ class Jetpack_Memberships {
 	 */
 	public static function get_connected_account_id() {
 		return get_option( self::$connected_account_id_option_name );
-	}
-
-	/**
-	 * Determines whether the current user can edit.
-	 *
-	 * @return bool Whether the user can edit.
-	 */
-	public static function user_can_edit() {
-		$user = wp_get_current_user();
-		// phpcs:ignore ImportDetection.Imports.RequireImports.Symbol
-		return 0 !== $user->ID && current_user_can( 'edit_post', get_the_ID() );
-	}
-
-	/**
-	 * Whether Recurring Payments are enabled. True if the block
-	 * is supported by the site's plan, or if it is a Jetpack site
-	 * and the feature to enable upgrade nudges is active.
-	 *
-	 * @return bool
-	 */
-	public static function is_enabled_jetpack_recurring_payments() {
-		return (
-			self::is_supported_jetpack_recurring_payments() ||
-			(
-				Jetpack::is_connection_ready() &&
-				/** This filter is documented in class.jetpack-gutenberg.php */
-				! apply_filters( 'jetpack_block_editor_enable_upgrade_nudge', false )
-			)
-		);
-	}
-
-	/**
-	 * Whether the site's plan supports the Recurring Payments block.
-	 */
-	public static function is_supported_jetpack_recurring_payments() {
-		// For WPCOM sites.
-		if ( defined( 'IS_WPCOM' ) && IS_WPCOM && function_exists( 'has_any_blog_stickers' ) ) {
-			$site_id = get_current_blog_id();
-			return has_any_blog_stickers( array( 'personal-plan', 'premium-plan', 'business-plan', 'ecommerce-plan' ), $site_id );
-		}
-		// For Jetpack sites.
-		return (
-			Jetpack::is_connection_ready() &&
-			Jetpack_Plan::supports( 'recurring-payments' )
-		);
-	}
-
-	/**
-	 * Register the Recurring Payments Gutenberg block
-	 */
-	public function register_gutenberg_block() {
-		// This gate was introduced to prevent duplicate registration. A race condition exists where
-		// the registration that happens via extensions/blocks/recurring-payments/recurring-payments.php
-		// was adding the registration action after the action had been run in some contexts.
-		if ( self::$has_registered_block ) {
-			return;
-		}
-
-		if ( self::is_enabled_jetpack_recurring_payments() ) {
-			$deprecated = function_exists( 'gutenberg_get_post_from_context' );
-			$uses       = $deprecated ? 'context' : 'uses_context';
-			Blocks::jetpack_register_block(
-				'jetpack/recurring-payments',
-				array(
-					'render_callback' => array( $this, 'render_button' ),
-					$uses             => array( 'isPremiumContentChild' ),
-				)
-			);
-		} else {
-			Jetpack_Gutenberg::set_extension_unavailable(
-				'jetpack/recurring-payments',
-				'missing_plan',
-				array(
-					'required_feature' => 'memberships',
-					'required_plan'    => self::$required_plan,
-				)
-			);
-		}
-
-		self::$has_registered_block = true;
 	}
 }
 Jetpack_Memberships::get_instance();

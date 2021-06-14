@@ -11,7 +11,7 @@
  * http://www.youtube.com/v/9FhMMmqzbD8?fs=1&hl=en_US
  * https://www.youtube.com/playlist?list=PLP7HaNDU4Cifov7C2fQM8Ij6Ew_uPHEXW
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -27,8 +27,8 @@
  * 12-2010:
  * <object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/3H8bnKdf654?fs=1&amp;hl=en_GB"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/3H8bnKdf654?fs=1&amp;hl=en_GB" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
  * 01-2011:
- * <iframe title="YouTube video player" class="youtube-player" width="640" height="390" src="http://www.youtube.com/embed/Qq9El3ki0_g" frameborder="0" allowFullScreen></iframe>
- * <iframe class="youtube-player" width="640" height="385" src="http://www.youtube.com/embed/VIDEO_ID" frameborder="0"></iframe>
+ * <iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/Qq9El3ki0_g" frameborder="0" allowFullScreen></iframe>
+ * <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/VIDEO_ID" frameborder="0"></iframe>
  *
  * @param string $content HTML content.
  * @return string The content with YouTube embeds replaced with YouTube shortcodes.
@@ -168,7 +168,6 @@ endif;
  *    http://www.youtube.com/v/jF-kELmmvgA
  *    http://www.youtube.com/v/9FhMMmqzbD8?fs=1&hl=en_US
  *    http://youtu.be/Rrohlqeir5E
- *    https://www.youtube.com/watch?v=GJNxoe-iSb4&list=PLAVZ4NFtZX0fE54mDSqNKym-o_rz-8xmk
  *
  * @param string $url Youtube URL.
  */
@@ -176,54 +175,107 @@ function youtube_id( $url ) {
 	$id = jetpack_get_youtube_id( $url );
 
 	if ( ! $id ) {
-		return sprintf( '<!--%s-->', esc_html__( 'YouTube Error: bad URL entered', 'jetpack' ) );
+		return '<!--YouTube Error: bad URL entered-->';
 	}
 
 	$url = youtube_sanitize_url( $url );
 	$url = wp_parse_url( $url );
 
-	$args = jetpack_shortcode_youtube_args( $url );
-	if ( empty( $args ) ) {
-		return sprintf( '<!--%s-->', esc_html__( 'YouTube Error: empty URL args', 'jetpack' ) );
-	}
-
-	// Account for URL having both v and list, where jetpack_get_youtube_id() only accounts for one or the other.
-	if ( isset( $args['list'] ) && $args['list'] === $id ) {
-		$id = null;
-	}
-	if ( isset( $args['v'] ) ) {
-		$id = $args['v'];
-	}
-	if ( ! $id && empty( $args['list'] ) ) {
-		return sprintf( '<!--%s-->', esc_html__( 'YouTube Error: missing id and/or list', 'jetpack' ) );
-	}
-
-	list( $w, $h ) = jetpack_shortcode_youtube_dimensions( $args );
-
-	$params = array(
-		'rel'            => ( isset( $args['rel'] ) && '0' === $args['rel'] ) ? 0 : 1,
-		'showsearch'     => ( isset( $args['showsearch'] ) && '1' === $args['showsearch'] ) ? 1 : 0, // Now deprecated. See https://developers.google.com/youtube/player_parameters#march-29,-2012.
-		'showinfo'       => ( isset( $args['showinfo'] ) && '0' === $args['showinfo'] ) ? 0 : 1, // Now obsolete. See https://developers.google.com/youtube/player_parameters#showinfo.
-		'iv_load_policy' => ( isset( $args['iv_load_policy'] ) && '3' === $args['iv_load_policy'] ) ? 3 : 1,
-		'fs'             => 1,
-		'hl'             => str_replace( '_', '-', get_locale() ),
-	);
-	if ( isset( $args['fmt'] ) && (int) $args['fmt'] ) {
-		$params['fmt'] = (int) $args['fmt']; // Apparently an obsolete parameter. Not referenced on https://developers.google.com/youtube/player_parameters.
-	}
-
-	// The autohide parameter has been deprecated since 2015. See https://developers.google.com/youtube/player_parameters#august-19,-2015.
-	if ( ! isset( $args['autohide'] ) || ( $args['autohide'] < 0 || 2 < $args['autohide'] ) ) {
-		$params['autohide'] = 2;
+	$qargs = array();
+	if ( ! empty( $url['query'] ) ) {
+		wp_parse_str( $url['query'], $qargs );
 	} else {
-		$params['autohide'] = (int) $args['autohide'];
+		return false;
+	}
+
+	$fargs = array();
+	if ( ! empty( $url['fragment'] ) ) {
+		wp_parse_str( $url['fragment'], $fargs );
+	}
+
+	$qargs = array_merge( $fargs, $qargs );
+
+	// calculate the width and height, taking content_width into consideration.
+	global $content_width;
+
+	$input_w = ( isset( $qargs['w'] ) && intval( $qargs['w'] ) ) ? intval( $qargs['w'] ) : 0;
+	$input_h = ( isset( $qargs['h'] ) && intval( $qargs['h'] ) ) ? intval( $qargs['h'] ) : 0;
+
+	// If we have $content_width, use it.
+	if ( ! empty( $content_width ) ) {
+		$default_width = $content_width;
+	} else {
+		// Otherwise get default width from the old, now deprecated embed_size_w option.
+		$default_width = get_option( 'embed_size_w' );
+	}
+
+	// If we don't know those 2 values use a hardcoded width.
+	if ( empty( $default_width ) ) {
+		$default_width = 640;
+	}
+
+	if ( $input_w > 0 && $input_h > 0 ) {
+		$w = $input_w;
+		$h = $input_h;
+	} elseif ( 0 === $input_w && 0 === $input_h ) {
+		if ( isset( $qargs['fmt'] ) && intval( $qargs['fmt'] ) ) {
+			$w = ( ! empty( $content_width ) ? min( $content_width, 480 ) : 480 );
+		} else {
+			$w = ( ! empty( $content_width ) ? min( $content_width, $default_width ) : $default_width );
+			$h = ceil( ( $w / 16 ) * 9 );
+		}
+	} elseif ( $input_w > 0 ) {
+		$w = $input_w;
+		$h = ceil( ( $w / 16 ) * 9 );
+	} else {
+		if ( isset( $qargs['fmt'] ) && intval( $qargs['fmt'] ) ) {
+			$w = ( ! empty( $content_width ) ? min( $content_width, 480 ) : 480 );
+		} else {
+			$w = ( ! empty( $content_width ) ? min( $content_width, $default_width ) : $default_width );
+			$h = $input_h;
+		}
+	}
+
+	/**
+	 * Filter the YouTube player width.
+	 *
+	 * @module shortcodes
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param int $w Width of the YouTube player in pixels.
+	 */
+	$w = (int) apply_filters( 'youtube_width', $w );
+
+	/**
+	 * Filter the YouTube player height.
+	 *
+	 * @module shortcodes
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param int $h Height of the YouTube player in pixels.
+	 */
+	$h = (int) apply_filters( 'youtube_height', $h );
+
+	$rel    = ( isset( $qargs['rel'] ) && '0' === $qargs['rel'] ) ? 0 : 1;
+	$search = ( isset( $qargs['showsearch'] ) && '1' === $qargs['showsearch'] ) ? 1 : 0;
+	$info   = ( isset( $qargs['showinfo'] ) && '0' === $qargs['showinfo'] ) ? 0 : 1;
+	$iv     = ( isset( $qargs['iv_load_policy'] ) && '3' === $qargs['iv_load_policy'] ) ? 3 : 1;
+
+	$fmt = ( isset( $qargs['fmt'] ) && intval( $qargs['fmt'] ) ) ? '&fmt=' . (int) $qargs['fmt'] : '';
+
+	if ( ! isset( $qargs['autohide'] ) || ( $qargs['autohide'] < 0 || 2 < $qargs['autohide'] ) ) {
+		$autohide = '&autohide=2';
+	} else {
+		$autohide = '&autohide=' . absint( $qargs['autohide'] );
 	}
 
 	$start = 0;
-	if ( isset( $args['start'] ) ) {
-		$start = (int) $args['start'];
-	} elseif ( isset( $args['t'] ) ) {
-		$time_pieces = preg_split( '/(?<=\D)(?=\d+)/', $args['t'] );
+	if ( isset( $qargs['start'] ) ) {
+		$start = intval( $qargs['start'] );
+	} elseif ( isset( $qargs['t'] ) ) {
+		$time_pieces = preg_split( '/(?<=\D)(?=\d+)/', $qargs['t'] );
 
 		foreach ( $time_pieces as $time_piece ) {
 			$int = (int) $time_piece;
@@ -240,43 +292,21 @@ function youtube_id( $url ) {
 			}
 		}
 	}
-	if ( $start ) {
-		$params['start'] = (int) $start;
-	}
 
-	if ( isset( $args['end'] ) && (int) $args['end'] ) {
-		$params['end'] = (int) $args['end'];
-	}
-	if ( isset( $args['hd'] ) && (int) $args['hd'] ) {
-		$params['hd'] = (int) $args['hd']; // Now obsolete per https://developers.google.com/youtube/player_parameters#march-29,-2012.
-	}
-	if ( isset( $args['vq'] ) && in_array( $args['vq'], array( 'hd720', 'hd1080' ), true ) ) {
-		$params['vq'] = $args['vq']; // Note, this appears to be obsolete. Not referenced on https://developers.google.com/youtube/player_parameters.
-	}
-	if ( isset( $args['cc_load_policy'] ) ) {
-		$params['cc_load_policy'] = 1;
-	}
-	if ( isset( $args['cc_lang_pref'] ) ) {
-		$params['cc_lang_pref'] = preg_replace( '/[^_a-z0-9-]/i', '', $args['cc_lang_pref'] );
-	}
+	$start = $start ? '&start=' . $start : '';
+	$end   = ( isset( $qargs['end'] ) && intval( $qargs['end'] ) ) ? '&end=' . (int) $qargs['end'] : '';
+	$hd    = ( isset( $qargs['hd'] ) && intval( $qargs['hd'] ) ) ? '&hd=' . (int) $qargs['hd'] : '';
 
-	// The wmode parameter appears to be obsolete. Not referenced on https://developers.google.com/youtube/player_parameters.
-	if ( isset( $args['wmode'] ) && in_array( strtolower( $args['wmode'] ), array( 'opaque', 'window', 'transparent' ), true ) ) {
-		$params['wmode'] = $args['wmode'];
-	} else {
-		$params['wmode'] = 'transparent';
-	}
+	$vq = ( isset( $qargs['vq'] ) && in_array( $qargs['vq'], array( 'hd720', 'hd1080' ), true ) ) ? '&vq=' . $qargs['vq'] : '';
 
-	// The theme parameter is obsolete per https://developers.google.com/youtube/player_parameters#august-19,-2015.
-	if ( isset( $args['theme'] ) && in_array( strtolower( $args['theme'] ), array( 'dark', 'light' ), true ) ) {
-		$params['theme'] = $args['theme'];
-	}
+	$cc      = ( isset( $qargs['cc_load_policy'] ) ) ? '&cc_load_policy=1' : '';
+	$cc_lang = ( isset( $qargs['cc_lang_pref'] ) ) ? '&cc_lang_pref=' . preg_replace( '/[^_a-z0-9-]/i', '', $qargs['cc_lang_pref'] ) : '';
 
-	if ( isset( $args['list'] ) ) {
-		$params['listType'] = 'playlist';
-		$params['list']     = preg_replace( '|[^_a-z0-9-]|i', '', $args['list'] );
-	}
+	$wmode = ( isset( $qargs['wmode'] ) && in_array( strtolower( $qargs['wmode'] ), array( 'opaque', 'window', 'transparent' ), true ) ) ? $qargs['wmode'] : 'transparent';
 
+	$theme = ( isset( $qargs['theme'] ) && in_array( strtolower( $qargs['theme'] ), array( 'dark', 'light' ), true ) ) ? '&theme=' . $qargs['theme'] : '';
+
+	$autoplay = '';
 	/**
 	 * Allow YouTube videos to start playing automatically.
 	 *
@@ -286,62 +316,24 @@ function youtube_id( $url ) {
 	 *
 	 * @param bool false Enable autoplay for YouTube videos.
 	 */
-	if ( apply_filters( 'jetpack_youtube_allow_autoplay', false ) && isset( $args['autoplay'] ) ) {
-		$params['autoplay'] = (int) $args['autoplay'];
+	if ( apply_filters( 'jetpack_youtube_allow_autoplay', false ) && isset( $qargs['autoplay'] ) ) {
+		$autoplay = '&autoplay=' . (int) $qargs['autoplay'];
 	}
 
-	$is_amp = class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request();
-
-	if ( $is_amp && $id ) {
-		// Note that <amp-youtube> currently is not well suited for playlists that don't have an individual video selected, hence the $id check above.
-		$placeholder = sprintf(
-			'<a href="%1$s" placeholder><amp-img src="%2$s" alt="%3$s" layout="fill" object-fit="cover"><noscript><img src="%2$s" loading="lazy" decoding="async" alt="%3$s"></noscript></amp-img></a>',
-			esc_url( add_query_arg( 'v', $id, 'https://www.youtube.com/watch' ) ),
-			esc_url( "https://i.ytimg.com/vi/$id/hqdefault.jpg" ),
-			esc_attr__( 'YouTube Poster', 'jetpack' ) // Would be preferable to provide YouTube video title, but not available in this non-oEmbed context.
-		);
-
-		$html_attributes = array();
-		foreach ( $params as $param_name => $param_value ) {
-			$html_attributes[] = sprintf(
-				'data-param-%s="%s"',
-				sanitize_key( $param_name ),
-				esc_attr( $param_value )
-			);
-		}
-
-		$html = sprintf(
-			'<amp-youtube data-videoid="%s" %s width="%d" height="%d" layout="responsive">%s</amp-youtube>',
-			esc_attr( $id ),
-			implode( ' ', $html_attributes ), // Note: Escaping done above.
-			esc_attr( $w ),
-			esc_attr( $h ),
-			$placeholder
-		);
+	if (
+		( isset( $url['path'] ) && '/videoseries' === $url['path'] )
+		|| isset( $qargs['list'] )
+	) {
+		$html = "<iframe class='youtube-player' type='text/html' width='$w' height='$h' src='" . esc_url( "https://www.youtube.com/embed/videoseries?list=$id&hl=en_US" ) . "' allowfullscreen='true' style='border:0;'></iframe>";
 	} else {
-		// In AMP, the AMP_Iframe_Sanitizer will convert into <amp-iframe> as required.
-		$src = 'https://www.youtube.com/embed';
-		if ( $id ) {
-			$src .= "/$id";
-		}
-		$src = add_query_arg(
-			array_merge(
-				array( 'version' => 3 ),
-				$params
-			),
-			$src
-		);
-
-		$layout = $is_amp ? 'layout="responsive" ' : '';
-
-		$html = "<iframe class='youtube-player' width='$w' height='$h' {$layout}src='" . esc_url( $src ) . "' allowfullscreen='true' style='border:0;' sandbox='allow-scripts allow-same-origin allow-popups allow-presentation'></iframe>";
+		$html = "<iframe class='youtube-player' type='text/html' width='$w' height='$h' src='" . esc_url( "https://www.youtube.com/embed/$id?version=3&rel=$rel&fs=1$fmt$autohide&showsearch=$search&showinfo=$info&iv_load_policy=$iv$start$end$hd&wmode=$wmode$theme$autoplay$vq{$cc}{$cc_lang}" ) . "' allowfullscreen='true' style='border:0;'></iframe>";
 	}
 
 	// Let's do some alignment wonder in a span, unless we're producing a feed.
 	if ( ! is_feed() ) {
 		$alignmentcss = 'text-align:center;';
-		if ( isset( $args['align'] ) ) {
-			switch ( $args['align'] ) {
+		if ( isset( $qargs['align'] ) ) {
+			switch ( $qargs['align'] ) {
 				case 'left':
 					$alignmentcss = "float:left; width:{$w}px; height:{$h}px; margin-right:10px; margin-bottom: 10px;";
 					break;
@@ -374,151 +366,14 @@ function youtube_id( $url ) {
 }
 
 /**
- * Gets the args present in the YouTube shortcode URL.
- *
- * @since 8.0.0
- *
- * @param array $url The parsed URL of the shortcode.
- *
- * @return array|false The query args of the URL, or false.
- */
-function jetpack_shortcode_youtube_args( $url ) {
-	$qargs = array();
-	if ( ! empty( $url['query'] ) ) {
-		wp_parse_str( $url['query'], $qargs );
-	} else {
-		return false;
-	}
-
-	$fargs = array();
-	if ( ! empty( $url['fragment'] ) ) {
-		wp_parse_str( $url['fragment'], $fargs );
-	}
-
-	return array_merge( $fargs, $qargs );
-}
-
-/**
  * Display the Youtube shortcode.
  *
  * @param array $atts Shortcode attributes.
- *
- * @return string The rendered shortcode.
  */
 function youtube_shortcode( $atts ) {
-	$url = ( isset( $atts[0] ) ) ? ltrim( $atts[0], '=' ) : shortcode_new_to_old_params( $atts );
-	return youtube_id( $url );
+	return youtube_id( ( isset( $atts[0] ) ) ? ltrim( $atts[0], '=' ) : shortcode_new_to_old_params( $atts ) );
 }
 add_shortcode( 'youtube', 'youtube_shortcode' );
-
-/**
- * Renders the [youtube] shortcode as an AMP component.
- *
- * @since 8.0.0
- * @deprecated Use youtube_id() instead.
- *
- * @param string $url The YouTube URL.
- *
- * @return string The AMP-compatible rendered shortcode.
- */
-function jetpack_amp_youtube_shortcode( $url ) {
-	_deprecated_function( __FUNCTION__, 'jetpack-9.1.0', 'youtube_id' );
-	$video_id = jetpack_get_youtube_id( $url );
-	if ( empty( $video_id ) ) {
-		return sprintf(
-			'<a href="%1$s" class="amp-wp-embed-fallback">%1$s</a>',
-			esc_url( $url )
-		);
-	}
-
-	$sanitized_url          = youtube_sanitize_url( $url );
-	$parsed_url             = wp_parse_url( $sanitized_url );
-	$args                   = jetpack_shortcode_youtube_args( $parsed_url );
-	list( $width, $height ) = jetpack_shortcode_youtube_dimensions( $args );
-	return sprintf(
-		'<amp-youtube data-videoid="%s" layout="responsive" width="%d" height="%d"></amp-youtube>',
-		esc_attr( $video_id ),
-		absint( $width ),
-		absint( $height )
-	);
-}
-
-/**
- * Gets the dimensions of the [youtube] shortcode.
- *
- * Calculates the width and height, taking $content_width into consideration.
- *
- * @since 8.0.0
- *
- * @param array $query_args The query args of the URL.
- *
- * @return array The width and height of the shortcode.
- */
-function jetpack_shortcode_youtube_dimensions( $query_args ) {
-	global $content_width;
-
-	$input_w = ( isset( $query_args['w'] ) && (int) $query_args['w'] ) ? (int) $query_args['w'] : 0;
-	$input_h = ( isset( $query_args['h'] ) && (int) $query_args['h'] ) ? (int) $query_args['h'] : 0;
-
-	// If we have $content_width, use it.
-	if ( ! empty( $content_width ) ) {
-		$default_width = $content_width;
-	} else {
-		// Otherwise get default width from the old, now deprecated embed_size_w option.
-		$default_width = get_option( 'embed_size_w' );
-	}
-
-	// If we don't know those 2 values use a hardcoded width.
-	if ( empty( $default_width ) ) {
-		$default_width = 640;
-	}
-
-	if ( $input_w > 0 && $input_h > 0 ) {
-		$w = $input_w;
-		$h = $input_h;
-	} elseif ( 0 === $input_w && 0 === $input_h ) {
-		if ( isset( $query_args['fmt'] ) && (int) $query_args['fmt'] ) {
-			$w = ( ! empty( $content_width ) ? min( $content_width, 480 ) : 480 );
-		} else {
-			$w = ( ! empty( $content_width ) ? min( $content_width, $default_width ) : $default_width );
-			$h = ceil( ( $w / 16 ) * 9 );
-		}
-	} elseif ( $input_w > 0 ) {
-		$w = $input_w;
-		$h = ceil( ( $w / 16 ) * 9 );
-	} else {
-		if ( isset( $query_args['fmt'] ) && (int) $query_args['fmt'] ) {
-			$w = ( ! empty( $content_width ) ? min( $content_width, 480 ) : 480 );
-		} else {
-			$w = ( ! empty( $content_width ) ? min( $content_width, $default_width ) : $default_width );
-			$h = $input_h;
-		}
-	}
-
-	/**
-	 * Filter the YouTube player width.
-	 *
-	 * @module shortcodes
-	 *
-	 * @since 1.1.0
-	 *
-	 * @param int $w Width of the YouTube player in pixels.
-	 */
-	$w = (int) apply_filters( 'youtube_width', $w );
-
-	/**
-	 * Filter the YouTube player height.
-	 *
-	 * @module shortcodes
-	 *
-	 * @since 1.1.0
-	 *
-	 * @param int $h Height of the YouTube player in pixels.
-	 */
-	$h = (int) apply_filters( 'youtube_height', $h );
-
-	return array( $w, $h );
-}
 
 /**
  * For bare URLs on their own line of the form
@@ -540,21 +395,16 @@ function wpcom_youtube_embed_crazy_url_init() {
 }
 add_action( 'init', 'wpcom_youtube_embed_crazy_url_init' );
 
-if (
-	! is_admin()
-	/**
-	 * Allow oEmbeds in Jetpack's Comment form.
-	 *
-	 * @module shortcodes
-	 *
-	 * @since 2.8.0
-	 *
-	 * @param int $allow_oembed Option to automatically embed all plain text URLs.
-	 */
-	&& apply_filters( 'jetpack_comments_allow_oembed', true )
-	// No need for this on WordPress.com, this is done for multiple shortcodes at a time there.
-	&& ( ! defined( 'IS_WPCOM' ) || ! IS_WPCOM )
-) {
+/**
+ * Allow oEmbeds in Jetpack's Comment form.
+ *
+ * @module shortcodes
+ *
+ * @since 2.8.0
+ *
+ * @param int get_option('embed_autourls') Option to automatically embed all plain text URLs.
+ */
+if ( ! is_admin() && apply_filters( 'jetpack_comments_allow_oembed', true ) ) {
 	/*
 	 * We attach wp_kses_post to comment_text in default-filters.php with priority of 10 anyway,
 	 * so the iframe gets filtered out.

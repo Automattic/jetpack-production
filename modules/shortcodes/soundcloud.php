@@ -17,7 +17,7 @@
  * [soundcloud url="https://soundcloud.com/closetorgan/sets/smells-like-lynx-africa-private" color="00cc11"]
  * <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/150745932&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -30,7 +30,6 @@
  * @return string                  Widget embed code HTML
  */
 function soundcloud_shortcode( $atts, $content = null ) {
-	global $wp_embed;
 
 	// Custom shortcode options.
 	$shortcode_options = array_merge(
@@ -110,17 +109,7 @@ function soundcloud_shortcode( $atts, $content = null ) {
 		$options['visual'] = false;
 	}
 
-	if (
-		class_exists( 'Jetpack_AMP_Support' )
-		&& Jetpack_AMP_Support::is_amp_request()
-		&& ! empty( $options['url'] )
-		&& 'api.soundcloud.com' !== wp_parse_url( $options['url'], PHP_URL_HOST )
-	) {
-		// Defer to oEmbed if an oEmbeddable URL is provided.
-		return $wp_embed->shortcode( $options, $options['url'] );
-	}
-
-	// Build our list of Soundcloud parameters.
+	// Build our list of Souncloud parameters.
 	$query_args = array(
 		'url' => rawurlencode( $options['url'] ),
 	);
@@ -224,7 +213,7 @@ function jetpack_soundcloud_embed_reversal( $content ) {
 			if ( ! preg_match( '#height="(\d+)"#i', $match[0], $hmatch ) ) {
 				$height = '';
 			} else {
-				$height = ' height="' . (int) $hmatch[1] . '"';
+				$height = ' height="' . intval( $hmatch[1] ) . '"';
 			}
 
 			unset( $args['url'] );

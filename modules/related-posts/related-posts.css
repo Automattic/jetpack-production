@@ -53,6 +53,7 @@
 
 .jp-related-posts-i2__post-img-link {
 	order: -1;
+	line-height: 1em;
 }
 .jp-related-posts-i2__post-img-link img {
 	width: 100%;
@@ -125,7 +126,7 @@
 	display: block;
 	width: 100%;
 	min-width: 30px;
-	border-top: 1px solid #dcdcde;
+	border-top: 1px solid #ddd;
 	border-top: 1px solid rgba(0,0,0,.2);
 	margin-bottom: 1em;
 }
@@ -181,8 +182,7 @@
 /* Related posts item content */
 
 #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title,
-#jp-relatedposts .jp-relatedposts-items p,
-#jp-relatedposts .jp-relatedposts-items time {
+#jp-relatedposts .jp-relatedposts-items p {
 	font-size: 14px;
 	line-height: 20px;
 	margin: 0;
@@ -200,8 +200,7 @@
 	border-bottom: 0;
 }
 
-#jp-relatedposts .jp-relatedposts-items p,
-#jp-relatedposts .jp-relatedposts-items time {
+#jp-relatedposts .jp-relatedposts-items p {
 	margin-bottom: 0;
 }
 
@@ -236,7 +235,6 @@
 
 #jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post img.jp-relatedposts-post-img,
 #jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post span {
-	height: auto;
 	max-width: 100%;
 }
 

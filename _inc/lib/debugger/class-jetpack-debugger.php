@@ -2,11 +2,11 @@
 /**
  * Jetpack Debugger functionality allowing for self-service diagnostic information via the legacy jetpack debugger.
  *
- * @package automattic/jetpack
+ * @package jetpack
  */
 
-use Automattic\Jetpack\Redirect;
-use Automattic\Jetpack\Status;
+/** Ensure the Jetpack_Debug_Data class is available. It should be via the library loaded, but defense is good. */
+require_once 'class-jetpack-debug-data.php';
 
 /**
  * Class Jetpack_Debugger
@@ -14,25 +14,47 @@ use Automattic\Jetpack\Status;
  * A namespacing class for functionality related to the legacy in-plugin diagnostic tooling.
  */
 class Jetpack_Debugger {
+
+	/**
+	 * Determine the active plan and normalize it for the debugger results.
+	 *
+	 * @return string The plan slug prepended with "JetpackPlan"
+	 */
+	private static function what_jetpack_plan() {
+		// Specifically not deprecating this function since it modifies the output of the Jetpack_Debug_Data::what_jetpack_plan return.
+		return 'JetpackPlan' . Jetpack_Debug_Data::what_jetpack_plan();
+	}
+
+	/**
+	 * Convert seconds to human readable time.
+	 *
+	 * A dedication function instead of using Core functionality to allow for output in seconds.
+	 *
+	 * @deprecated 7.3.0
+	 *
+	 * @param int $seconds Number of seconds to convert to human time.
+	 *
+	 * @return string Human readable time.
+	 */
+	public static function seconds_to_time( $seconds ) {
+		_deprecated_function( 'Jetpack_Debugger::seconds_to_time', 'Jetpack 7.3.0', 'Jeptack_Debug_Data::seconds_to_time' );
+		return Jetpack_Debug_Data::seconds_to_time( $seconds );
+	}
+
 	/**
 	 * Returns 30 for use with a filter.
 	 *
 	 * To allow time for WP.com to run upstream testing, this function exists to increase the http_request_timeout value
 	 * to 30.
 	 *
-	 * @deprecated 8.0.0
-	 *
 	 * @return int 30
 	 */
 	public static function jetpack_increase_timeout() {
-		_deprecated_function( __METHOD__, 'jetpack-8.0', 'Jetpack_Cxn_Tests::increase_timeout' );
 		return 30; // seconds.
 	}
 
 	/**
 	 * Disconnect Jetpack and redirect user to connection flow.
-	 *
-	 * Used in class.jetpack-admin.php.
 	 */
 	public static function disconnect_and_redirect() {
 		if ( ! ( isset( $_GET['nonce'] ) && wp_verify_nonce( $_GET['nonce'], 'jp_disconnect' ) ) ) {
@@ -40,7 +62,7 @@ class Jetpack_Debugger {
 		}
 
 		if ( isset( $_GET['disconnect'] ) && $_GET['disconnect'] ) {
-			if ( Jetpack::is_connection_ready() ) {
+			if ( Jetpack::is_active() ) {
 				Jetpack::disconnect();
 				wp_safe_redirect( Jetpack::admin_url() );
 				exit;
@@ -52,13 +74,23 @@ class Jetpack_Debugger {
 	 * Handles output to the browser for the in-plugin debugger.
 	 */
 	public static function jetpack_debug_display_handler() {
+		global $wp_version;
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'jetpack' ) );
 		}
 
-		$support_url = Jetpack::is_development_version()
-			? Redirect::get_url( 'jetpack-contact-support-beta-group' )
-			: Redirect::get_url( 'jetpack-contact-support' );
+		$data       = Jetpack_Debug_Data::debug_data();
+		$debug_info = '';
+		foreach ( $data as $datum ) {
+			$debug_info .= $datum['label'] . ': ' . $datum['value'] . "\r\n";
+		}
+
+		$debug_info .= "\r\n" . esc_html( 'PHP_VERSION: ' . PHP_VERSION );
+		$debug_info .= "\r\n" . esc_html( 'WORDPRESS_VERSION: ' . $GLOBALS['wp_version'] );
+		$debug_info .= "\r\n" . esc_html( 'SITE_URL: ' . site_url() );
+		$debug_info .= "\r\n" . esc_html( 'HOME_URL: ' . home_url() );
+
+		$debug_info .= "\r\n\r\nTEST RESULTS:\r\n\r\n";
 
 		$cxntests = new Jetpack_Cxn_Tests();
 		?>
@@ -69,26 +101,20 @@ class Jetpack_Debugger {
 					<?php
 					if ( $cxntests->pass() ) {
 						echo '<div class="jetpack-tests-succeed">' . esc_html__( 'Your Jetpack setup looks a-okay!', 'jetpack' ) . '</div>';
+						$debug_info .= "All tests passed.\r\n";
+						$debug_info .= print_r( $cxntests->raw_results(), true ); //phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
 					} else {
 						$failures = $cxntests->list_fails();
 						foreach ( $failures as $fail ) {
-							$action_link  = $fail['action'];
-							$action_label = $fail['action_label'];
-							$action       = ( $action_link ) ? '<a href="' . $action_link . '">' . $action_label . '</a>' : $action_label;
 							echo '<div class="jetpack-test-error">';
-							echo '<p><a class="jetpack-test-heading" href="#">' . esc_html( $fail['short_description'] );
+							echo '<p><a class="jetpack-test-heading" href="#">' . esc_html( $fail['message'] );
 							echo '<span class="noticon noticon-collapse"></span></a></p>';
-							echo '<p class="jetpack-test-details">' . wp_kses(
-								$action,
-								array(
-									'a' => array(
-										'href'   => array(),
-										'target' => array(),
-										'rel'    => array(),
-									),
-								)
-							) . '</p>';
+							echo '<p class="jetpack-test-details">' . esc_html( $fail['resolution'] ) . '</p>';
 							echo '</div>';
+
+							$debug_info .= "FAILED TESTS!\r\n";
+							$debug_info .= $fail['name'] . ': ' . $fail['message'] . "\r\n";
+							$debug_info .= print_r( $cxntests->raw_results(), true ); //phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
 						}
 					}
 					?>
@@ -114,10 +140,10 @@ class Jetpack_Debugger {
 									),
 								)
 							),
-							esc_url( Redirect::get_url( 'jetpack-contact-support-known-issues' ) ),
-							esc_url( Redirect::get_url( 'jetpack-contact-support-known-issues' ) ),
-							esc_url( Redirect::get_url( 'jetpack-support' ) ),
-							esc_url( Redirect::get_url( 'wporg-support-plugin-jetpack' ) )
+							'http://jetpack.com/support/getting-started-with-jetpack/known-issues/',
+							'http://jetpack.com/support/getting-started-with-jetpack/known-issues/',
+							'http://jetpack.com/support/',
+							'https://wordpress.org/support/plugin/jetpack'
 						);
 						?>
 						</li>
@@ -152,7 +178,7 @@ class Jetpack_Debugger {
 							<li>- <?php esc_html_e( 'If you get a 404 message, contact your web host. Their security may block XMLRPC.', 'jetpack' ); ?></li>
 						</ul>
 					</li>
-					<?php if ( current_user_can( 'jetpack_disconnect' ) && Jetpack::is_connection_ready() ) : ?>
+					<?php if ( current_user_can( 'jetpack_disconnect' ) && Jetpack::is_active() ) : ?>
 						<li>
 							<strong><em><?php esc_html_e( 'A connection problem with WordPress.com.', 'jetpack' ); ?></em></strong>
 							<?php
@@ -188,21 +214,36 @@ class Jetpack_Debugger {
 				<p><b><em><?php esc_html_e( 'Ask us for help!', 'jetpack' ); ?></em></b>
 				<?php
 				/**
-				 * Offload to new WordPress debug data.
+				 * Offload to new WordPress debug data in WP 5.2+
+				 *
+				 * @todo remove fallback when 5.2 is the minimum supported.
 				 */
+				if ( version_compare( $wp_version, '5.2-alpha', '>=' ) ) {
 					echo sprintf(
 						wp_kses(
 							/* translators: URL for Jetpack support. URL for WordPress's Site Health */
 							__( '<a href="%1$s">Contact our Happiness team</a>. When you do, please include the <a href="%2$s">full debug information from your site</a>.', 'jetpack' ),
 							array( 'a' => array( 'href' => array() ) )
 						),
-						esc_url( $support_url ),
+						'https://jetpack.com/contact-support/',
 						esc_url( admin_url() . 'site-health.php?tab=debug' )
 					);
+					$hide_debug = true;
+				} else { // Versions before 5.2, fallback.
+					echo sprintf(
+						wp_kses(
+							/* translators: URL for Jetpack support. */
+							__( '<a href="%s">Contact our Happiness team</a>. When you do, please include the full debug information below.', 'jetpack' ),
+							array( 'a' => array( 'href' => array() ) )
+						),
+						'https://jetpack.com/contact-support/'
+					);
+					$hide_debug = false;
+				}
 				?>
 						</p>
 				<hr />
-				<?php if ( Jetpack::is_connection_ready() ) : ?>
+				<?php if ( Jetpack::is_active() ) : ?>
 					<div id="connected-user-details">
 						<h3><?php esc_html_e( 'More details about your Jetpack settings', 'jetpack' ); ?></h3>
 						<p>
@@ -225,10 +266,10 @@ class Jetpack_Debugger {
 						printf(
 							wp_kses(
 								/* translators: Link to a Jetpack support page. */
-								__( 'Would you like to use Jetpack on your local development site? You can do so thanks to <a href="%s">Jetpack\'s offline mode</a>.', 'jetpack' ),
+								__( 'Would you like to use Jetpack on your local development site? You can do so thanks to <a href="%s">Jetpack\'s development mode</a>.', 'jetpack' ),
 								array( 'a' => array( 'href' => array() ) )
 							),
-							esc_url( Redirect::get_url( 'jetpack-support-development-mode' ) )
+							'https://jetpack.com/support/development-mode/'
 						);
 						?>
 							</p>
@@ -237,7 +278,7 @@ class Jetpack_Debugger {
 				<?php
 				if (
 					current_user_can( 'jetpack_manage_modules' )
-					&& ( ( new Status() )->is_offline_mode() || Jetpack::is_connection_ready() )
+					&& ( Jetpack::is_development_mode() || Jetpack::is_active() )
 				) {
 					printf(
 						wp_kses(
@@ -253,6 +294,18 @@ class Jetpack_Debugger {
 				}
 				?>
 			</div>
+		<hr />
+			<?php
+			if ( ! $hide_debug ) {
+				?>
+			<div id="toggle_debug_info"><?php esc_html_e( 'Advanced Debug Results', 'jetpack' ); ?></div>
+			<div id="debug_info_div">
+				<h4><?php esc_html_e( 'Debug Info', 'jetpack' ); ?></h4>
+				<div id="debug_info"><pre><?php echo esc_html( $debug_info ); ?></pre></div>
+			</div>
+				<?php
+			}
+			?>
 		</div>
 		<?php
 	}
@@ -316,10 +369,10 @@ class Jetpack_Debugger {
 			}
 
 			.formbox input[type="text"], .formbox input[type="email"], .formbox input[type="url"], .formbox textarea, #debug_info_div {
-				border: 1px solid #dcdcde;
+				border: 1px solid #e5e5e5;
 				border-radius: 11px;
 				box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-				color: #646970;
+				color: #666;
 				font-size: 14px;
 				padding: 10px;
 				width: 97%;
@@ -339,7 +392,7 @@ class Jetpack_Debugger {
 				height: auto !important;
 				margin: 0 0 2em 10px !important;
 				padding: 8px 16px !important;
-				background-color: #dcdcde;
+				background-color: #ddd;
 				border: 1px solid rgba(0,0,0,0.05);
 				border-top-color: rgba(255,255,255,0.1);
 				border-bottom-color: rgba(0,0,0,0.15);

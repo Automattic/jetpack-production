@@ -1,4 +1,7 @@
 <?php
+
+use Automattic\Jetpack\Assets;
+
 /**
  * GitHub's Gist site supports oEmbed but their oembed provider only
  * returns raw HTML (no styling) and the first little bit of the code.
@@ -15,7 +18,7 @@
  * Gist ID with username: [gist jeherve/57cc50246aab776e110060926a2face2]
  * Gist private ID with username: [gist xknown/fc5891af153e2cf365c9]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 wp_embed_register_handler( 'github-gist', '#https?://gist\.github\.com/([a-zA-Z0-9/]+)(\#file\-[a-zA-Z0-9\_\-]+)?#', 'github_gist_embed_handler' );
@@ -56,7 +59,6 @@ function jetpack_gist_get_shortcode_id( $gist = '' ) {
 	$gist_info = array(
 		'id'   => '',
 		'file' => '',
-		'ts'   => 8,
 	);
 	// Simple shortcode, with just an ID.
 	if ( ctype_alnum( $gist ) ) {
@@ -75,7 +77,6 @@ function jetpack_gist_get_shortcode_id( $gist = '' ) {
 			return array(
 				'id'   => '',
 				'file' => '',
-				'ts'   => 8,
 			);
 		}
 
@@ -86,18 +87,9 @@ function jetpack_gist_get_shortcode_id( $gist = '' ) {
 
 		// Keep the unique identifier without any leading or trailing slashes.
 		if ( ! empty( $parsed_url['path'] ) ) {
-			$gist_info['id'] = trim( $parsed_url['path'], '/' );
+			$gist_info['id'] = preg_replace( '/^\/([^\.]+)\./', '$1', $parsed_url['path'] );
 			// Overwrite $gist with our identifier to clean it up below.
 			$gist = $gist_info['id'];
-		}
-
-		// Parse the query args to obtain the tab spacing.
-		if ( ! empty( $parsed_url['query'] ) ) {
-			$query_args = array();
-			wp_parse_str( $parsed_url['query'], $query_args );
-			if ( ! empty( $query_args['ts'] ) ) {
-				$gist_info['ts'] = absint( $query_args['ts'] );
-			}
 		}
 	}
 
@@ -165,12 +157,6 @@ function github_gist_shortcode( $atts, $content = '' ) {
 		$file = rawurlencode( $file );
 	}
 
-	// Set the tab size, allowing attributes to override the query string.
-	$tab_size = $gist_info['ts'];
-	if ( ! empty( $atts['ts'] ) ) {
-		$tab_size = absint( $atts['ts'] );
-	}
-
 	if (
 		class_exists( 'Jetpack_AMP_Support' )
 		&& Jetpack_AMP_Support::is_amp_request()
@@ -199,31 +185,18 @@ function github_gist_shortcode( $atts, $content = '' ) {
 	}
 
 	// URL points to the entire gist, including the file name if there was one.
-	$id     = ( ! empty( $file ) ? $id . '?file=' . $file : $id );
-	$return = false;
+	$id = ( ! empty( $file ) ? $id . '?file=' . $file : $id );
 
-	$request      = wp_remote_get( esc_url_raw( 'https://gist.github.com/' . esc_attr( $id ) ) );
-	$request_code = wp_remote_retrieve_response_code( $request );
+	wp_enqueue_script(
+		'jetpack-gist-embed',
+		Assets::get_file_url_for_environment( '_inc/build/shortcodes/js/gist.min.js', 'modules/shortcodes/js/gist.js' ),
+		array( 'jquery' ),
+		JETPACK__VERSION,
+		true
+	);
 
-	if ( 200 === $request_code ) {
-		$request_body = wp_remote_retrieve_body( $request );
-		$request_data = json_decode( $request_body );
-
-		wp_enqueue_style( 'jetpack-gist-styling', esc_url( $request_data->stylesheet ), array(), JETPACK__VERSION );
-
-		$gist = substr_replace( $request_data->div, sprintf( 'style="tab-size: %1$s" ', absint( $tab_size ) ), 5, 0 );
-
-		// Add inline styles for the tab style in the opening div of the gist.
-		$gist = preg_replace(
-			'#(\<div\s)+(id=\"gist[0-9]+\")+(\sclass=\"gist\"\>)?#',
-			sprintf( '$1style="tab-size: %1$s" $2$3', absint( $tab_size ) ),
-			$request_data->div,
-			1
-		);
-
-		// Add inline style to prevent the bottom margin to the embed that themes like TwentyTen, et al., add to tables.
-		$return = sprintf( '<style>.gist table { margin-bottom: 0; }</style>%1$s', $gist );
-	}
+	// inline style to prevent the bottom margin to the embed that themes like TwentyTen, et al., add to tables.
+	$return = '<style>.gist table { margin-bottom: 0; }</style><div class="gist-oembed" data-gist="' . esc_attr( $id ) . '"></div>';
 
 	if (
 		// No need to check for a nonce here, that's already handled by Core further up.
@@ -234,7 +207,7 @@ function github_gist_shortcode( $atts, $content = '' ) {
 		&& 'parse-embed' === $_POST['action']
 		// phpcs:enable WordPress.Security.NonceVerification.Missing
 	) {
-		return github_gist_simple_embed( $id, $tab_size );
+		return github_gist_simple_embed( $id );
 	}
 
 	return $return;
@@ -246,11 +219,9 @@ function github_gist_shortcode( $atts, $content = '' ) {
  *
  * @since 3.9.0
  *
- * @param string $id       The ID of the gist.
- * @param int    $tab_size The tab size of the gist.
- * @return string          The script tag of the gist.
+ * @param string $id The ID of the gist.
  */
-function github_gist_simple_embed( $id, $tab_size = 8 ) {
+function github_gist_simple_embed( $id ) {
 	$id = str_replace( 'json', 'js', $id );
-	return '<script src="' . esc_url( "https://gist.github.com/$id?ts=$tab_size" ) . '"></script>'; // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
+	return '<script src="' . esc_url( "https://gist.github.com/$id" ) . '"></script>'; // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
 }

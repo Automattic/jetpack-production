@@ -10,10 +10,9 @@ class Jetpack_SEO_Utils {
 	const FRONT_PAGE_META_OPTION = 'advanced_seo_front_page_description';
 
 	/**
-	 * The LEGACY_META_OPTION is used to support legacy usage on WPcom simple sites (free or paid).
-	 * For WPorg JP sites, the JP seo-tools features were made free for all sites (free or paid).
+	 * Old version of option name that was previously used under Free plan.
 	 */
-	const LEGACY_META_OPTION = 'seo_meta_description';
+	const GRANDFATHERED_META_OPTION = 'seo_meta_description';
 
 	/**
 	 * Used to check whether SEO tools are enabled for given site.
@@ -37,7 +36,7 @@ class Jetpack_SEO_Utils {
 		}
 
 		if ( function_exists( 'has_any_blog_stickers' ) ) {
-			// For WPCOM simple sites.
+			// For WPCOM sites
 			if ( empty( $site_id ) ) {
 				$site_id = get_current_blog_id();
 			}
@@ -45,57 +44,52 @@ class Jetpack_SEO_Utils {
 			return has_any_blog_stickers( array( 'business-plan', 'ecommerce-plan' ), $site_id );
 		}
 
-		// For all Jetpack sites.
+		// For all Jetpack sites
 		return true;
 	}
 
 	/**
-	 * Checks if this option was set while it was freely available to all WPcom simple sites.
+	 * Checks if this option was set while it was still available under free plan.
 	 *
-	 * @return bool True if we should enable legacy usage, false otherwise.
+	 * @return bool True if we should enable grandfathering, false otherwise.
 	 */
-	public static function has_legacy_front_page_meta() {
-		return ! self::is_enabled_jetpack_seo() && get_option( self::LEGACY_META_OPTION );
+	public static function has_grandfathered_front_page_meta() {
+		return ! self::is_enabled_jetpack_seo() && get_option( self::GRANDFATHERED_META_OPTION );
 	}
 
 	/**
 	 * Returns front page meta description for current site.
+	 *
+	 * Since we allowed non-business users to set Front page meta description for some time,
+	 * before bundling it with other SEO tools features that require a business plan,
+	 * we are supporting grandfathering here.
 	 *
 	 * @return string Front page meta description string or empty string.
 	 */
 	public static function get_front_page_meta_description() {
 		if ( self::is_enabled_jetpack_seo() ) {
 			$front_page_meta = get_option( self::FRONT_PAGE_META_OPTION );
-			return $front_page_meta ? $front_page_meta : get_option( self::LEGACY_META_OPTION, '' );
+			return  $front_page_meta ? $front_page_meta : get_option( self::GRANDFATHERED_META_OPTION, '' );
 		}
 
-		// Support legacy usage for WPcom simple sites.
-		return get_option( self::LEGACY_META_OPTION, '' );
-	}
-
-	/**
-	 * Sanitizes the custom front page meta description input.
-	 *
-	 * @param string $value Front page meta string.
-	 *
-	 * @return string The sanitized string.
-	 */
-	public static function sanitize_front_page_meta_description( $value ) {
-		return wp_strip_all_tags( $value );
+		// Support grandfathering for non-business users.
+		return get_option( self::GRANDFATHERED_META_OPTION, '' );
 	}
 
 	/**
 	 * Updates the site option value for front page meta description.
 	 *
-	 * @param string $value New value for front page meta description.
+	 * We are taking care to update the correct option, in case the value is grandfathered for current site.
+	 *
+	 * @param $value string New value for front page meta description.
 	 *
 	 * @return string Saved value, or empty string if no update was performed.
 	 */
 	public static function update_front_page_meta_description( $value ) {
-		$front_page_description = self::sanitize_front_page_meta_description( $value );
+		$front_page_description = sanitize_text_field( $value );
 
 		/**
-		 * Can be used to limit the length of front page meta description.
+		 * Can be used to limit the lenght of front page meta description.
 		 *
 		 * @module seo-tools
 		 *
@@ -111,16 +105,16 @@ class Jetpack_SEO_Utils {
 			$front_page_description = substr( $front_page_description, 0, $description_max_length );
 		}
 
-		$can_set_meta       = self::is_enabled_jetpack_seo();
-		$legacy_meta_option = get_option( self::LEGACY_META_OPTION );
-		$has_old_meta       = ! empty( $legacy_meta_option );
-		$option_name        = self::has_legacy_front_page_meta() ? self::LEGACY_META_OPTION : self::FRONT_PAGE_META_OPTION;
+		$can_set_meta = self::is_enabled_jetpack_seo();
+		$grandfathered_meta_option = get_option( self::GRANDFATHERED_META_OPTION );
+		$has_old_meta = ! empty( $grandfathered_meta_option );
+		$option_name = self::has_grandfathered_front_page_meta() ? self::GRANDFATHERED_META_OPTION : self::FRONT_PAGE_META_OPTION;
 
 		$did_update = update_option( $option_name, $front_page_description );
 
 		if ( $did_update && $has_old_meta && $can_set_meta ) {
-			// Delete legacy option if user has switched to Business or eCommerce plan and updated the front page meta description.
-			delete_option( self::LEGACY_META_OPTION );
+			// Delete grandfathered option if user has switched to Business plan and updated meta description.
+			delete_option( 'seo_meta_description' );
 		}
 
 		if ( $did_update ) {
