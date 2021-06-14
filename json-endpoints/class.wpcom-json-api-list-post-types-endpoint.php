@@ -1,29 +1,5 @@
 <?php
 
-new WPCOM_JSON_API_List_Post_Types_Endpoint( array (
-	'description' => 'Get a list of post types available for a site.',
-	'group'       => 'sites',
-	'stat'        => 'sites:X:post-types',
-
-	'method'      => 'GET',
-	'path'        => '/sites/%s/post-types',
-	'path_labels' => array(
-		'$site' => '(int|string) Site ID or domain',
-	),
-
-	'allow_fallback_to_jetpack_blog_token' => true,
-
-	'query_parameters' => array(
-		'api_queryable' => '(bool) If true, only queryable post types are returned',
-	),
-
-	'response_format' => array(
-		'found'      => '(int) The number of post types found',
-		'post_types' => '(array) A list of available post types',
-	),
-	'example_request' => 'https://public-api.wordpress.com/rest/v1.1/sites/33534099/post-types'
-) );
-
 class WPCOM_JSON_API_List_Post_Types_Endpoint extends WPCOM_JSON_API_Endpoint {
 	static $post_type_keys_to_include = array(
 		'name'         => 'name',
@@ -32,10 +8,6 @@ class WPCOM_JSON_API_List_Post_Types_Endpoint extends WPCOM_JSON_API_Endpoint {
 		'description'  => 'description',
 		'map_meta_cap' => 'map_meta_cap',
 		'cap'          => 'capabilities',
-		'hierarchical' => 'hierarchical',
-		'public'       => 'public',
-		'show_ui'      => 'show_ui',
-		'publicly_queryable' => 'publicly_queryable',
 	);
 
 	// /sites/%s/post-types -> $blog_id
@@ -51,27 +23,23 @@ class WPCOM_JSON_API_List_Post_Types_Endpoint extends WPCOM_JSON_API_Endpoint {
 
 		$args = $this->query_args();
 
-		/**
-		 * Whether API responses should be returned in a custom locale.  False
-		 * for Jetpack; may be true for WP.com requests.
-		 *
-		 * @since 3.9.2
-		 */
+		// API localization occurs after the initial post types have been 
+		// registered, so re-register if localizing response
 		if ( apply_filters( 'rest_api_localize_response', false ) ) {
-			// API localization occurs after the initial post types have been
-			// registered, so re-register if localizing response
 			create_initial_post_types();
 		}
 
+		$queryable_only = isset( $args['api_queryable'] ) && $args['api_queryable'];
+
 		// Get a list of available post types
-		$post_types = get_post_types();
+		$post_types = get_post_types( array( 'public' => true ) );
 		$formatted_post_type_objects = array();
 
 		// Retrieve post type object for each post type
 		foreach ( $post_types as $post_type ) {
 			// Skip non-queryable if filtering on queryable only
 			$is_queryable = $this->is_post_type_allowed( $post_type );
-			if ( ! $is_queryable ) {
+			if ( $queryable_only && ! $is_queryable ) {
 				continue;
 			}
 
@@ -96,12 +64,12 @@ class WPCOM_JSON_API_List_Post_Types_Endpoint extends WPCOM_JSON_API_Endpoint {
 			'post_types' => $formatted_post_type_objects
 		);
 	}
-
+	
 	function post_type_supports_tags( $post_type ) {
 		if ( in_array( 'post_tag', get_object_taxonomies( $post_type ) ) ) {
 			return true;
 		}
-
+		
 		// the featured content module adds post_tag support
 		// to the post types that are registered for it
 		// however it does so in a way that isn't available
@@ -110,10 +78,7 @@ class WPCOM_JSON_API_List_Post_Types_Endpoint extends WPCOM_JSON_API_Endpoint {
 		if ( ! $featured_content || empty( $featured_content[0] ) || empty( $featured_content[0]['post_types'] ) ) {
 			return false;
 		}
-
-		if ( is_array( $featured_content[0]['post_types'] ) ) {
-			return in_array( $post_type, $featured_content[0]['post_types'] );
-		}
-		return $post_type === $featured_content[0]['post_types'];
+		
+		return in_array( $post_type, $featured_content[0]['post_types'] );
 	}
 }

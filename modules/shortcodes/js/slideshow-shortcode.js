@@ -1,3 +1,4 @@
+/* jshint onevar:false, loopfunc:true */
 /* global jetpackSlideshowSettings, escape */
 
 function JetpackSlideshow( element, transition, autostart ) {
@@ -8,7 +9,7 @@ function JetpackSlideshow( element, transition, autostart ) {
 	this.autostart = autostart;
 }
 
-JetpackSlideshow.prototype.showLoadingImage = function ( toggle ) {
+JetpackSlideshow.prototype.showLoadingImage = function( toggle ) {
 	if ( toggle ) {
 		this.loadingImage_ = document.createElement( 'div' );
 		this.loadingImage_.className = 'slideshow-loading';
@@ -23,68 +24,68 @@ JetpackSlideshow.prototype.showLoadingImage = function ( toggle ) {
 	}
 };
 
-JetpackSlideshow.prototype.init = function () {
-	this.showLoadingImage( true );
+JetpackSlideshow.prototype.init = function() {
+	this.showLoadingImage(true);
 
 	var self = this;
 	// Set up DOM.
 	for ( var i = 0; i < this.images.length; i++ ) {
-		var imageInfo = this.images[ i ];
+		var imageInfo = this.images[i];
 		var img = document.createElement( 'img' );
 		img.src = imageInfo.src;
-		img.title = typeof imageInfo.title !== 'undefined' ? imageInfo.title : '';
-		img.alt = typeof imageInfo.alt !== 'undefined' ? imageInfo.alt : '';
+		img.title = typeof( imageInfo.title ) !== 'undefined' ? imageInfo.title : '';
+		img.alt = typeof( imageInfo.alt ) !== 'undefined' ? imageInfo.alt : '';
 		img.align = 'middle';
-		img.setAttribute( 'itemprop', 'image' );
+		img.setAttribute('itemprop','image');
 		img.nopin = 'nopin';
 		var caption = document.createElement( 'div' );
 		caption.className = 'slideshow-slide-caption';
-		caption.setAttribute( 'itemprop', 'caption description' );
+		caption.setAttribute('itemprop','caption description');
 		caption.innerHTML = imageInfo.caption;
-		var container = document.createElement( 'div' );
+		var container = document.createElement('div');
 		container.className = 'slideshow-slide';
-		container.setAttribute( 'itemprop', 'associatedMedia' );
-		container.setAttribute( 'itemscope', '' );
-		container.setAttribute( 'itemtype', 'https://schema.org/ImageObject' );
+		container.setAttribute('itemprop','associatedMedia');
+		container.setAttribute('itemscope','');
+		container.setAttribute('itemtype','http://schema.org/ImageObject');
 
 		// Hide loading image once first image has loaded.
 		if ( i === 0 ) {
 			if ( img.complete ) {
 				// IE, image in cache
-				setTimeout( function () {
+				setTimeout( function() {
 					self.finishInit_();
-				}, 1 );
+				}, 1);
 			} else {
-				jQuery( img ).load( function () {
+				jQuery( img ).load(function() {
 					self.finishInit_();
-				} );
+				});
 			}
 		}
 		container.appendChild( img );
 		// I'm not sure where these were coming from, but IE adds
 		// bad values for width/height for portrait-mode images
-		img.removeAttribute( 'width' );
-		img.removeAttribute( 'height' );
+		img.removeAttribute('width');
+		img.removeAttribute('height');
 		container.appendChild( this.makeZeroWidthSpan() );
 		container.appendChild( caption );
 		this.element.append( container );
 	}
 };
 
-JetpackSlideshow.prototype.makeZeroWidthSpan = function () {
+JetpackSlideshow.prototype.makeZeroWidthSpan = function() {
 	var emptySpan = document.createElement( 'span' );
 	emptySpan.className = 'slideshow-line-height-hack';
 	// Having a NBSP makes IE act weird during transitions, but other
 	// browsers ignore a text node with a space in it as whitespace.
 	if ( -1 !== window.navigator.userAgent.indexOf( 'MSIE ' ) ) {
-		emptySpan.appendChild( document.createTextNode( ' ' ) );
+		emptySpan.appendChild( document.createTextNode(' ') );
 	} else {
 		emptySpan.innerHTML = '&nbsp;';
 	}
 	return emptySpan;
 };
 
-JetpackSlideshow.prototype.finishInit_ = function () {
+JetpackSlideshow.prototype.finishInit_ = function() {
 	this.showLoadingImage( false );
 	this.renderControls_();
 
@@ -95,23 +96,22 @@ JetpackSlideshow.prototype.finishInit_ = function () {
 			fx: this.transition,
 			prev: this.controls.prev,
 			next: this.controls.next,
-			timeout: jetpackSlideshowSettings.speed,
 			slideExpr: '.slideshow-slide',
-			onPrevNextEvent: function () {
+			onPrevNextEvent: function() {
 				return self.onCyclePrevNextClick_.apply( self, arguments );
-			},
+			}
 		} );
 
 		var slideshow = this.element;
 
 		if ( ! this.autostart ) {
 			slideshow.cycle( 'pause' );
-			jQuery( this.controls.stop ).removeClass( 'running' );
-			jQuery( this.controls.stop ).addClass( 'paused' );
+			jQuery(this.controls.stop).removeClass( 'running' );
+			jQuery(this.controls.stop).addClass( 'paused' );
 		}
 
-		jQuery( this.controls.stop ).click( function () {
-			var button = jQuery( this );
+		jQuery( this.controls.stop ).click( function() {
+			var button = jQuery(this);
 			if ( ! button.hasClass( 'paused' ) ) {
 				slideshow.cycle( 'pause' );
 				button.removeClass( 'running' );
@@ -130,7 +130,7 @@ JetpackSlideshow.prototype.finishInit_ = function () {
 	this.initialized_ = true;
 };
 
-JetpackSlideshow.prototype.renderControls_ = function () {
+JetpackSlideshow.prototype.renderControls_ = function() {
 	if ( this.controlsDiv_ ) {
 		return;
 	}
@@ -140,46 +140,33 @@ JetpackSlideshow.prototype.renderControls_ = function () {
 
 	var controls = [ 'prev', 'stop', 'next' ];
 	for ( var i = 0; i < controls.length; i++ ) {
-		var controlName = controls[ i ];
-		var label_name = 'label_' + controlName;
+		var controlName = controls[i];
 		var a = document.createElement( 'a' );
-
 		a.href = '#';
-		a.className = 'button-' + controlName;
-		a.setAttribute( 'aria-label', jetpackSlideshowSettings[ label_name ] );
-		a.setAttribute( 'role', 'button' );
-
 		controlsDiv.appendChild( a );
-		this.controls[ controlName ] = a;
+		this.controls[controlName] = a;
 	}
 	this.element.append( controlsDiv );
 	this.controlsDiv_ = controlsDiv;
 };
 
-JetpackSlideshow.prototype.onCyclePrevNextClick_ = function ( isNext, i /*, slideElement*/ ) {
+JetpackSlideshow.prototype.onCyclePrevNextClick_ = function( isNext, i/*, slideElement*/ ) {
 	// If blog_id not present don't track page views
 	if ( ! jetpackSlideshowSettings.blog_id ) {
 		return;
 	}
 
-	var postid = this.images[ i ].id;
+	var postid = this.images[i].id;
 	var stats = new Image();
-	stats.src =
-		document.location.protocol +
+	stats.src = document.location.protocol +
 		'//pixel.wp.com/g.gif?host=' +
 		escape( document.location.host ) +
-		'&rand=' +
-		Math.random() +
-		'&blog=' +
-		jetpackSlideshowSettings.blog_id +
-		'&subd=' +
-		jetpackSlideshowSettings.blog_subdomain +
-		'&user_id=' +
-		jetpackSlideshowSettings.user_id +
-		'&post=' +
-		postid +
-		'&ref=' +
-		escape( document.location );
+		'&rand=' + Math.random() +
+		'&blog=' + jetpackSlideshowSettings.blog_id +
+		'&subd=' + jetpackSlideshowSettings.blog_subdomain +
+		'&user_id=' + jetpackSlideshowSettings.user_id +
+		'&post=' + postid +
+		'&ref=' + escape( document.location );
 };
 
 ( function ( $ ) {
@@ -193,11 +180,7 @@ JetpackSlideshow.prototype.onCyclePrevNextClick_ = function ( isNext, i /*, slid
 				return;
 			}
 
-			var slideshow = new JetpackSlideshow(
-				container,
-				container.data( 'trans' ),
-				container.data( 'autostart' )
-			);
+			var slideshow = new JetpackSlideshow( container, container.data( 'trans' ), container.data( 'autostart' ) );
 			slideshow.images = container.data( 'gallery' );
 			slideshow.init();
 
