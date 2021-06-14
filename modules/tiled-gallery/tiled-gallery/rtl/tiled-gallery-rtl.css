@@ -1,4 +1,4 @@
-/* This file was automatically generated on Oct 01 2015 20:17:19 */
+/* This file was automatically generated on Jul 31 2013 21:21:12 */
 
 /* =Tiled Gallery Default Styles
 -------------------------------------------------------------- */
@@ -23,11 +23,12 @@
 }
 .tiled-gallery .gallery-row {
 	 overflow: hidden;
+	 margin-bottom: 2px;
 }
 .tiled-gallery .tiled-gallery-item a { /* Needs to reset some properties for theme compatibility */
 	background: transparent;
 	border: none;
-	color: inherit;
+	color: none;
 	margin: 0;
 	padding: 0;
 	text-decoration: none;

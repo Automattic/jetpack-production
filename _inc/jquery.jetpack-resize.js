@@ -1,4 +1,3 @@
-/* global Jetpack, JSON */
 /**
  * Resizeable Iframes.
  *
@@ -20,14 +19,16 @@
  * Stop listening to all resize postMessage events:
  * Jetpack.resizeable( 'off' );
  */
-( function ( $ ) {
-	var listening = false, // Are we listening for resize postMessage events
-		sourceOrigins = [], // What origins are allowed to send resize postMessage events
-		$sources = false, // What iframe elements are we tracking resize postMessage events from
-		URLtoOrigin, // Utility to convert URLs into origins
-		setupListener, // Binds global resize postMessage event handler
-		destroyListener, // Unbinds global resize postMessage event handler
-		methods; // Jetpack.resizeable methods
+(function($) {
+	var listening     = false, // Are we listening for resize postMessage events
+	    sourceOrigins = [],    // What origins are allowed to send resize postMessage events
+	    $sources      = false, // What iframe elements are we tracking resize postMessage events from
+
+	    URLtoOrigin,     // Utility to convert URLs into origins
+	    setupListener,   // Binds global resize postMessage event handler
+	    destroyListener, // Unbinds global resize postMessage event handler
+
+	    methods; // Jetpack.resizeable methods
 
 	// Setup the Jetpack global
 	if ( 'undefined' === typeof window.Jetpack ) {
@@ -45,13 +46,13 @@
 			 * @param string context: jQuery selector
 			 * @return jQuery|undefined object on which to perform operations or undefined when context cannot be determined
 			 */
-			getTarget: function ( context ) {
+			getTarget: function( context ) {
 				if ( this instanceof jQuery ) {
 					return context ? this.filter( context ) : this;
 				}
 
 				return context ? $( context ) : context;
-			},
+			}
 		};
 	}
 
@@ -64,10 +65,10 @@
 		 * @param ...
 		 * @return mixed|jQuery (chainable)
 		 */
-		$.fn.Jetpack = function ( namespace ) {
-			if ( 'function' === typeof Jetpack[ namespace ] ) {
+		$.fn.Jetpack = function( namespace ) {
+			if ( 'function' === typeof Jetpack[namespace] ) {
 				// Send the call to the correct Jetpack.namespace
-				return Jetpack[ namespace ].apply( this, Array.prototype.slice.call( arguments, 1 ) );
+				return Jetpack[namespace].apply( this, Array.prototype.slice.call( arguments, 1 ) );
 			} else {
 				$.error( 'Namespace "' + namespace + '" does not exist on jQuery.Jetpack' );
 			}
@@ -81,9 +82,9 @@
 			 * Defines the Jetpack.resizeable() namespace.
 			 * See below for non-trivial definition for browsers with postMessage.
 			 */
-			resizeable: function () {
+			resizeable: function() {
 				$.error( 'Browser does not support window.postMessage' );
-			},
+			}
 		} );
 
 		return;
@@ -97,7 +98,7 @@
 	 * @param string URL
 	 * @return string origin
 	 */
-	URLtoOrigin = function ( URL ) {
+	URLtoOrigin = function( URL ) {
 		if ( ! URL.match( /^https?:\/\// ) ) {
 			URL = document.location.href;
 		}
@@ -107,12 +108,12 @@
 	/**
 	 * Binds global resize postMessage event handler
 	 */
-	setupListener = function () {
+	setupListener = function() {
 		listening = true;
 
-		$( window ).on( 'message.JetpackResizeableIframe', function ( e ) {
+		$( window ).on( 'message.JetpackResizeableIframe', function( e ) {
 			var event = e.originalEvent,
-				data;
+			    data;
 
 			// Ensure origin is allowed
 			if ( -1 === $.inArray( event.origin, sourceOrigins ) ) {
@@ -130,7 +131,7 @@
 				}
 			}
 
-			if ( ! data.data ) {
+			if ( !data.data ) {
 				return;
 			}
 
@@ -143,23 +144,19 @@
 			}
 
 			// Find the correct iframe and resize it
-			$sources
-				.filter( function () {
-					if ( 'undefined' !== typeof data.name ) {
-						return this.name === data.name;
-					} else {
-						return event.source === this.contentWindow;
-					}
-				} )
-				.first()
-				.Jetpack( 'resizeable', 'resize', data );
+			$sources.filter( function() {
+				if ( 'undefined' !== typeof data.name )
+					return this.name === data.name;
+				else
+					return event.source === this.contentWindow;
+			} ).first().Jetpack( 'resizeable', 'resize', data );
 		} );
 	};
 
 	/**
 	 * Unbinds global resize postMessage event handler
 	 */
-	destroyListener = function () {
+	destroyListener = function() {
 		listening = false;
 		$( window ).off( 'message.JetpackResizeableIframe' );
 
@@ -179,18 +176,16 @@
 		 * @param string context jQuery selector.
 		 * @return jQuery (chainable)
 		 */
-		on: function ( context ) {
+		on: function( context ) {
 			var target = Jetpack.getTarget.call( this, context );
 
 			if ( ! listening ) {
 				setupListener();
 			}
 
-			target
-				.each( function () {
-					sourceOrigins.push( URLtoOrigin( $( this ).attr( 'src' ) ) );
-				} )
-				.addClass( 'jetpack-resizeable' );
+			target.each( function() {
+				sourceOrigins.push( URLtoOrigin( $( this ).attr( 'src' ) ) );
+			} ).addClass( 'jetpack-resizeable' );
 
 			$sources = $( '.jetpack-resizeable' );
 
@@ -206,7 +201,7 @@
 		 * @param string context jQuery selector
 		 * @return jQuery (chainable)
 		 */
-		off: function ( context ) {
+		off: function( context ) {
 			var target = Jetpack.getTarget.call( this, context );
 
 			if ( 'undefined' === typeof target ) {
@@ -215,16 +210,14 @@
 				return target;
 			}
 
-			target
-				.each( function () {
-					var origin = URLtoOrigin( $( this ).attr( 'src' ) ),
-						pos = $.inArray( origin, sourceOrigins );
+			target.each( function() {
+				var origin = URLtoOrigin( $( this ).attr( 'src' ) ),
+				    pos = $.inArray( origin, sourceOrigins );
 
-					if ( -1 !== pos ) {
-						sourceOrigins.splice( pos, 1 );
-					}
-				} )
-				.removeClass( 'jetpack-resizeable' );
+				if ( -1 !== pos ) {
+					sourceOrigins.splice( pos, 1 );
+				}
+			} ).removeClass( 'jetpack-resizeable' );
 
 			$sources = $( '.jetpack-resizeable' );
 
@@ -241,27 +234,26 @@
 		 * @param string context jQuery selector
 		 * @return jQuery (chainable)
 		 */
-		resize: function ( dimensions, context ) {
+		resize: function( dimensions, context ) {
 			var target = Jetpack.getTarget.call( this, context );
 
-			$.each( [ 'width', 'height' ], function ( i, variable ) {
-				var value = 0,
-					container;
-				if ( 'undefined' !== typeof dimensions[ variable ] ) {
-					value = parseInt( dimensions[ variable ], 10 );
+			$.each( [ 'width', 'height' ], function( i, variable ) {
+				var value = 0;
+				if ( 'undefined' !== typeof dimensions[variable] ) {
+					value = parseInt( dimensions[variable], 10 );
 				}
 
 				if ( 0 !== value ) {
-					target[ variable ]( value );
-					container = target.parent();
+					target[variable]( value );
+					var container = target.parent();
 					if ( container.hasClass( 'slim-likes-widget' ) ) {
-						container[ variable ]( value );
+						container[variable]( value );
 					}
 				}
 			} );
 
 			return target;
-		},
+		}
 	};
 
 	// Define Jetpack.resizeable() namespace
@@ -274,17 +266,17 @@
 		 * @param ...
 		 * @return mixed|jQuery (chainable)
 		 */
-		resizeable: function ( method ) {
-			if ( methods[ method ] ) {
+		resizeable: function( method ) {
+			if ( methods[method] ) {
 				// Send the call to the correct Jetpack.resizeable() method
-				return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ) );
+				return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ) );
 			} else if ( ! method ) {
 				// By default, send to Jetpack.resizeable( 'on' ), which isn't useful in that form but is when called as
 				// jQuery( selector ).Jetpack( 'resizeable' )
 				return methods.on.apply( this );
 			} else {
-				$.error( 'Method ' + method + ' does not exist on Jetpack.resizeable' );
+				$.error( 'Method ' +  method + ' does not exist on Jetpack.resizeable' );
 			}
-		},
+		}
 	} );
-} )( jQuery );
+})(jQuery);
