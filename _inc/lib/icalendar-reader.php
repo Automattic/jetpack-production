@@ -90,7 +90,16 @@ class iCalendarReader {
 		}
 
 		// get timezone offset from the timezone name.
-		$timezone = wp_timezone();
+		$timezone_name = get_option( 'timezone_string' );
+		if ( $timezone_name ) {
+			$timezone = new DateTimeZone( $timezone_name );
+		} else {
+			// If the timezone isn't set then the GMT offset must be set.
+			// generate a DateInterval object from the timezone offset
+			$gmt_offset = get_option( 'gmt_offset' ) * HOUR_IN_MINUTES;
+			$timezone_offset_interval = date_interval_create_from_date_string( "{$gmt_offset} minutes" );
+			$timezone = new DateTimeZone( 'UTC' );
+		}
 
 		$offsetted_events = array();
 
@@ -104,6 +113,11 @@ class iCalendarReader {
 				$end_time = preg_replace( '/Z$/', '', $event['DTEND'] );
 				$end_time = new DateTime( $end_time, $this->timezone );
 				$end_time->setTimeZone( $timezone );
+				
+				if ( $timezone_offset_interval ) {
+					$start_time->add( $timezone_offset_interval );
+					$end_time->add( $timezone_offset_interval );
+				}
 
 				$event['DTSTART'] = $start_time->format( 'YmdHis\Z' );
 				$event['DTEND'] = $end_time->format( 'YmdHis\Z' );
@@ -123,7 +137,7 @@ class iCalendarReader {
 		 * This filter allows any time to be passed in for testing or changing timezones, etc...
 		 *
 		 * @module widgets
-		 *
+		 * 
 		 * @since 3.4.0
 		 *
 		 * @param object time() A time object.
@@ -820,9 +834,9 @@ class iCalendarReader {
 		}
 		$single_day = $end ? ( $end - $start ) <= DAY_IN_SECONDS : true;
 
-		/* translators: Date and time */
+		/* Translators: Date and time */
 		$date_with_time = __( '%1$s at %2$s' , 'jetpack' );
-		/* translators: Two dates with a separator */
+		/* Translators: Two dates with a separator */
 		$two_dates = __( '%1$s &ndash; %2$s' , 'jetpack' );
 
 		// we'll always have the start date. Maybe with time
@@ -880,7 +894,7 @@ class iCalendarReader {
  * @return array
  */
 function icalendar_get_events( $url = '', $count = 5 ) {
-	// Find your calendar's address https://support.google.com/calendar/bin/answer.py?hl=en&answer=37103
+	// Find your calendar's address http://support.google.com/calendar/bin/answer.py?hl=en&answer=37103
 	$ical = new iCalendarReader();
 	return $ical->get_events( $url, $count );
 }

@@ -1,7 +1,5 @@
 <?php
 
-use Automattic\Jetpack\Assets;
-
 // Exit if file is accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -97,7 +95,7 @@ class Jetpack_Related_Posts_Customize {
 		// If selective refresh is available, implement it.
 		if ( isset( $wp_customize->selective_refresh ) ) {
 			$wp_customize->selective_refresh->add_partial( "$this->prefix", array(
-				'selector'            => '.jp-relatedposts:not(.jp-relatedposts-block)',
+				'selector'            => '.jp-relatedposts',
 				'settings'            => $selective_options,
 				'render_callback'     => __CLASS__ . '::render_callback',
 				'container_inclusive' => false,
@@ -116,49 +114,24 @@ class Jetpack_Related_Posts_Customize {
 	}
 
 	/**
-	 * Check whether the current post contains a Related Posts block.
-	 *
-	 * @since 6.9.0
-	 *
-	 * @return bool
-	 */
-	public static function contains_related_posts_block() {
-		if ( has_block( 'jetpack/related-posts' ) ) {
-			return true;
-		}
-
-		return false;
-	}
-
-	/**
 	 * Check that we're in a single post view.
-	 * Will return `false` if the current post contains a Related Posts block,
-	 * because in that case we want to hide the Customizer controls.
 	 *
 	 * @since 4.4.0
 	 *
 	 * @return bool
 	 */
 	public static function is_single() {
-		if ( self::contains_related_posts_block() ) {
-			return false;
-		}
 		return is_single();
 	}
 
 	/**
 	 * Check that we're not in a single post view.
-	 * Will return `false` if the current post contains a Related Posts block,
-	 * because in that case we want to hide the Customizer controls.
 	 *
 	 * @since 4.4.0
 	 *
 	 * @return bool
 	 */
 	public static function is_not_single() {
-		if ( self::contains_related_posts_block() ) {
-			return false;
-		}
 		return ! is_single();
 	}
 
@@ -174,21 +147,15 @@ class Jetpack_Related_Posts_Customize {
 	function get_options( $wp_customize ) {
 		$transport = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
 
-		$switched_locale = switch_to_locale( get_user_locale() );
+		// Get the correct translated string for preview in WP 4.7 and later.
+		$switched_locale = function_exists( 'switch_to_locale' )
+			? switch_to_locale( get_user_locale() )
+			: false;
 		$headline = __( 'Related', 'jetpack' );
 		if ( $switched_locale ) {
 			restore_previous_locale();
 		}
 
-		/**
-		 * The filter allows you to change the options used to display Related Posts in the Customizer.
-		 *
-		 * @module related-posts
-		 *
-		 * @since 4.4.0
-		 *
-		 * @param array $options Array of options used to display Related Posts in the Customizer.
-		 */
 		return apply_filters(
 			'jetpack_related_posts_customize_options', array(
 				'enabled'       => array(
@@ -215,7 +182,7 @@ class Jetpack_Related_Posts_Customize {
 				),
 				'show_thumbnails'     => array(
 					'label'        => esc_html__( 'Show thumbnails', 'jetpack' ),
-					'description'  => esc_html__( 'Show a thumbnail image where available.', 'jetpack' ),
+					'description'  => esc_html__( 'Use a large and visually striking layout.', 'jetpack' ),
 					'control_type' => 'checkbox',
 					'default'      => 1,
 					'setting_type' => 'option',
@@ -268,15 +235,7 @@ class Jetpack_Related_Posts_Customize {
 	 * @since 4.4.0
 	 */
 	function customize_controls_enqueue_scripts() {
-		wp_enqueue_script(
-			'jetpack_related-posts-customizer',
-			Assets::get_file_url_for_environment(
-				'_inc/build/related-posts/related-posts-customizer.min.js',
-				'modules/related-posts/related-posts-customizer.js'
-			),
-			array( 'customize-controls' ),
-			JETPACK__VERSION
-		);
+		wp_enqueue_script( 'jetpack_related-posts-customizer', plugins_url( 'related-posts-customizer.js', __FILE__ ), array( 'customize-controls' ), JETPACK__VERSION);
 	}
 
 } // class end
@@ -299,4 +258,4 @@ class Jetpack_Message_Control extends WP_Customize_Control {
 } // class end
 
 // Initialize controls
-new Jetpack_Related_Posts_Customize();
+new Jetpack_Related_Posts_Customize;

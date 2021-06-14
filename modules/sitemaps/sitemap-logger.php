@@ -2,7 +2,7 @@
 /**
  * A message logger for the Jetpack Sitemap module.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 4.8.0
  */
 
@@ -44,11 +44,12 @@ class Jetpack_Sitemap_Logger {
 	 * @param string $message An optional message string to be written to the debug log on initialization.
 	 */
 	public function __construct( $message = null ) {
-		$this->key       = wp_generate_password( 5, false );
+		$this->key = wp_generate_password( 5, false );
 		$this->starttime = microtime( true );
 		if ( ! is_null( $message ) ) {
 			$this->report( $message );
 		}
+		return;
 	}
 
 	/**
@@ -57,18 +58,13 @@ class Jetpack_Sitemap_Logger {
 	 * @access public
 	 * @since 4.8.0
 	 *
-	 * @param string  $message  The string to be written to the log.
-	 * @param boolean $is_error If true, $message will be logged even if JETPACK_DEV_DEBUG is not enabled.
+	 * @param string $message The string to be written to the log.
 	 */
-	public function report( $message, $is_error = false ) {
-		$message = 'jp-sitemap-' . $this->key . ': ' . $message;
-		if ( ! ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ) {
-			return;
+	public function report( $message ) {
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			error_log( 'jp-sitemap-' . $this->key . ': ' . $message );
 		}
-		if ( ! $is_error && ! ( defined( 'JETPACK_DEV_DEBUG' ) && JETPACK_DEV_DEBUG ) ) {
-			return;
-		}
-		error_log( $message ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+		return;
 	}
 
 	/**
@@ -82,5 +78,6 @@ class Jetpack_Sitemap_Logger {
 	public function time( $message = '' ) {
 		$time = round( microtime( true ) - $this->starttime, 3 );
 		$this->report( $message . ' ' . $time . ' seconds elapsed.' );
+		return;
 	}
 }
