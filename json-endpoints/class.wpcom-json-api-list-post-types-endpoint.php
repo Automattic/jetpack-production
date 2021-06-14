@@ -11,8 +11,6 @@ new WPCOM_JSON_API_List_Post_Types_Endpoint( array (
 		'$site' => '(int|string) Site ID or domain',
 	),
 
-	'allow_fallback_to_jetpack_blog_token' => true,
-
 	'query_parameters' => array(
 		'api_queryable' => '(bool) If true, only queryable post types are returned',
 	),
@@ -33,8 +31,7 @@ class WPCOM_JSON_API_List_Post_Types_Endpoint extends WPCOM_JSON_API_Endpoint {
 		'map_meta_cap' => 'map_meta_cap',
 		'cap'          => 'capabilities',
 		'hierarchical' => 'hierarchical',
-		'public'       => 'public',
-		'show_ui'      => 'show_ui',
+		'show_ui'   => 'show_ui',
 		'publicly_queryable' => 'publicly_queryable',
 	);
 
@@ -111,9 +108,6 @@ class WPCOM_JSON_API_List_Post_Types_Endpoint extends WPCOM_JSON_API_Endpoint {
 			return false;
 		}
 
-		if ( is_array( $featured_content[0]['post_types'] ) ) {
-			return in_array( $post_type, $featured_content[0]['post_types'] );
-		}
-		return $post_type === $featured_content[0]['post_types'];
+		return in_array( $post_type, $featured_content[0]['post_types'] );
 	}
 }
