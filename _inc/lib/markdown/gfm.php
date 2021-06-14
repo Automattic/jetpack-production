@@ -60,16 +60,7 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	 */
 	public function __construct() {
 		$this->use_code_shortcode  = class_exists( 'SyntaxHighlighter' );
-		/**
-		 * Allow processing shortcode contents.
-		 *
-		 * @module markdown
-		 *
-		 * @since 4.4.0
-		 *
-		 * @param boolean $preserve_shortcodes Defaults to $this->preserve_shortcodes.
-		 */
-		$this->preserve_shortcodes = apply_filters( 'jetpack_markdown_preserve_shortcodes', $this->preserve_shortcodes ) && function_exists( 'get_shortcode_regex' );
+		$this->preserve_shortcodes = function_exists( 'get_shortcode_regex' );
 		$this->preserve_latex      = function_exists( 'latex_markup' );
 		$this->strip_paras         = function_exists( 'wpautop' );
 
@@ -99,27 +90,8 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 			$text = $this->latex_preserve( $text );
 		}
 
-		// Do not process characters inside URLs.
-		$text = $this->urls_preserve( $text );
-
 		// escape line-beginning # chars that do not have a space after them.
 		$text = preg_replace_callback( '|^#{1,6}( )?|um', array( $this, '_doEscapeForHashWithoutSpacing' ), $text );
-
-		/**
-		 * Allow third-party plugins to define custom patterns that won't be processed by Markdown.
-		 *
-		 * @module markdown
-		 *
-		 * @since 3.9.2
-		 *
-		 * @param array $custom_patterns Array of custom patterns to be ignored by Markdown.
-		 */
-		$custom_patterns = apply_filters( 'jetpack_markdown_preserve_pattern', array() );
-		if ( is_array( $custom_patterns ) && ! empty( $custom_patterns ) ) {
-			foreach ( $custom_patterns as $pattern ) {
-				$text = preg_replace_callback( $pattern, array( $this, '_doRemoveText'), $text );
-			}
-		}
 
 		// run through core Markdown
 		$text = parent::transform( $text );
@@ -232,30 +204,12 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 	}
 
 	/**
-	 * Avoid characters inside URLs from being formatted by Markdown in any way.
-	 *
-	 * @param  string $text Text in which to preserve URLs.
-	 *
-	 * @return string Text with URLs replaced by a hash that will be restored later.
-	 */
-	protected function urls_preserve( $text ) {
-		$text = preg_replace_callback(
-			'#(?<!<)(?:https?|ftp)://([^\s<>"\'\[\]()]+|\[(?1)*+\]|\((?1)*+\))+(?<![_*.?])#i',
-			array( $this, '_doRemoveText' ),
-			$text
-		);
-		return $text;
-	}
-
-	/**
 	 * Restores any text preserved by $this->hash_block()
 	 * @param  string $text Text that may have hashed preservation placeholders
 	 * @return string       Text with hashed preseravtion placeholders replaced by original text
 	 */
 	protected function do_restore( $text ) {
-		// Reverse hashes to ensure nested blocks are restored.
-		$hashes = array_reverse( $this->preserve_text_hash, true );
-		foreach( $hashes as $hash => $value ) {
+		foreach( $this->preserve_text_hash as $hash => $value ) {
 			$placeholder = $this->hash_maker( $hash );
 			$text = str_replace( $placeholder, $value, $text );
 		}
@@ -408,7 +362,7 @@ class WPCom_GHF_Markdown_Parser extends MarkdownExtra_Parser {
 		$classname =& $matches[2];
 		$codeblock = preg_replace_callback('/^\n+/', array( $this, '_doFencedCodeBlocks_newlines' ), $matches[4] );
 
-		if ( $classname[0] == '.' )
+		if ( $classname{0} == '.' )
 			$classname = substr( $classname, 1 );
 
 		$codeblock = esc_html( $codeblock );
