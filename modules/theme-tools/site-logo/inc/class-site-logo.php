@@ -2,7 +2,7 @@
 /**
  * Our Site Logo class for managing a theme-agnostic logo through the Customizer.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 class Site_Logo {
 	/**
@@ -23,7 +23,7 @@ class Site_Logo {
 	 */
 	public static function instance() {
 		if ( ! isset( self::$instance ) ) {
-			self::$instance = new Site_Logo();
+			self::$instance = new Site_Logo;
 			self::$instance->register_hooks();
 		}
 
@@ -51,11 +51,6 @@ class Site_Logo {
 	 * @uses add_filter
 	 */
 	public function register_hooks() {
-		// This would only happen if a theme supports BOTH site-logo and custom-logo for some reason
-		if ( current_theme_supports( 'custom-logo' ) ) {
-			return;
-		}
-
 		add_action( 'wp_head', array( $this, 'head_text_styles' ) );
 		add_action( 'customize_register', array( $this, 'customize_register' ) );
 		add_action( 'customize_preview_init', array( $this, 'preview_enqueue' ) );
@@ -77,61 +72,46 @@ class Site_Logo {
 	 */
 	public function customize_register( $wp_customize ) {
 		// Include our custom control.
-		require dirname( __FILE__ ) . '/class-site-logo-control.php';
+		require( dirname( __FILE__ ) . '/class-site-logo-control.php' );
+
+		//Update the Customizer section title for discoverability.
+		$wp_customize->get_section('title_tagline')->title = __( 'Site Title, Tagline, and Logo', 'jetpack' );
 
 		// Add a setting to hide header text if the theme isn't supporting the feature itself
 		if ( ! current_theme_supports( 'custom-header' ) ) {
-			$wp_customize->add_setting(
-				'site_logo_header_text',
-				array(
-					'default'           => 1,
-					'sanitize_callback' => array( $this, 'sanitize_checkbox' ),
-					'transport'         => 'postMessage',
-				)
-			);
+			$wp_customize->add_setting( 'site_logo_header_text', array(
+				'default'           => 1,
+				'sanitize_callback' => array( $this, 'sanitize_checkbox' ),
+				'transport'         => 'postMessage',
+			) );
 
-			$wp_customize->add_control(
-				new WP_Customize_Control(
-					$wp_customize,
-					'site_logo_header_text',
-					array(
-						'label'    => __( 'Display Header Text', 'jetpack' ),
-						'section'  => 'title_tagline',
-						'settings' => 'site_logo_header_text',
-						'type'     => 'checkbox',
-					)
-				)
-			);
+			$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'site_logo_header_text', array(
+			    'label'    => __( 'Display Header Text', 'jetpack' ),
+			    'section'  => 'title_tagline',
+			    'settings' => 'site_logo_header_text',
+			    'type'     => 'checkbox',
+			) ) );
 		}
 
 		// Add the setting for our logo value.
-		$wp_customize->add_setting(
-			'site_logo',
-			array(
-				'capability'        => 'manage_options',
-				'default'           => array(
-					'id'    => 0,
-					'sizes' => array(),
-					'url'   => false,
-				),
-				'sanitize_callback' => array( $this, 'sanitize_logo_setting' ),
-				'transport'         => 'postMessage',
-				'type'              => 'option',
-			)
-		);
+		$wp_customize->add_setting( 'site_logo', array(
+			'capability'        => 'manage_options',
+			'default'           => array(
+				'id'    => 0,
+				'sizes' => array(),
+				'url'   => false,
+			),
+			'sanitize_callback' => array( $this, 'sanitize_logo_setting' ),
+			'transport'         => 'postMessage',
+			'type'              => 'option',
+		) );
 
 		// Add our image uploader.
-		$wp_customize->add_control(
-			new Site_Logo_Image_Control(
-				$wp_customize,
-				'site_logo',
-				array(
-					'label'    => __( 'Logo', 'jetpack' ),
-					'section'  => 'title_tagline',
-					'settings' => 'site_logo',
-				)
-			)
-		);
+		$wp_customize->add_control( new Site_Logo_Image_Control( $wp_customize, 'site_logo', array(
+		    'label'    => __( 'Logo', 'jetpack' ),
+		    'section'  => 'title_tagline',
+		    'settings' => 'site_logo',
+		) ) );
 	}
 
 	/**
@@ -150,7 +130,7 @@ class Site_Logo {
 		if ( ! current_theme_supports( 'custom-header' ) ) {
 			$classes = jetpack_sanitize_header_text_classes( $this->header_text_classes() );
 			wp_enqueue_script( 'site-logo-header-text', plugins_url( '../js/site-logo-header-text.js', __FILE__ ), array( 'media-views' ), '', true );
-			wp_localize_script( 'site-logo-header-text', 'site_logo_header_classes', array( 'classes' => $classes ) );
+			wp_localize_script( 'site-logo-header-text', 'site_logo_header_classes', $classes );
 		}
 	}
 
@@ -163,9 +143,9 @@ class Site_Logo {
 	public function header_text_classes() {
 		$args = get_theme_support( 'site-logo' );
 
-		if ( isset( $args[0]['header-text'] ) ) {
+		if ( isset( $args[0][ 'header-text' ] ) ) {
 			// Use any classes defined in add_theme_support().
-			$classes = $args[0]['header-text'];
+			$classes = $args[0][ 'header-text' ];
 		} else {
 			// Otherwise, use these defaults, which will work with any Underscores-based theme.
 			$classes = array(
@@ -220,7 +200,7 @@ class Site_Logo {
 	 * @return string Size specified in add_theme_support declaration, or 'thumbnail' default
 	 */
 	public function theme_size() {
-		$args        = get_theme_support( 'site-logo' );
+		$args = get_theme_support( 'site-logo' );
 		$valid_sizes = get_intermediate_image_sizes();
 
 		// Add 'full' to the list of accepted values.
@@ -303,14 +283,11 @@ class Site_Logo {
 	 * @uses update_option()
 	 */
 	public function remove_site_logo() {
-		update_option(
-			'site_logo',
-			array(
-				'id'    => (int) 0,
-				'sizes' => array(),
-				'url'   => '',
-			)
-		);
+		update_option( 'site_logo', array(
+			'id' => (int) 0,
+			'sizes' => array(),
+			'url' => '',
+		) );
 	}
 
 	/**

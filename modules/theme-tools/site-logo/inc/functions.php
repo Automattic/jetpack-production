@@ -2,7 +2,7 @@
 /**
  * Functions and template tags for using site logos.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -31,51 +31,6 @@ function jetpack_get_site_logo( $show = 'url' ) {
 }
 
 /**
- * Retrieve an array of the dimensions of the Site Logo.
- *
- * @uses Site_Logo::theme_size()
- * @uses get_option( 'thumbnail_size_w' )
- * @uses get_option( 'thumbnail_size_h' )
- * @uses global $_wp_additional_image_sizes;
- *
- * @since 3.6.0
- *
- * @return array $dimensions {
- *      An array of dimensions of the Site Logo.
- *
- *      @type string $width Width of the logo in pixels.
- *      @type string $height Height of the logo in pixels.
- * }
- */
-function jetpack_get_site_logo_dimensions() {
-	// Get the image size to use with the logo.
-	$size = site_logo()->theme_size();
-
-	// If the size is the default `thumbnail`, get its dimensions. Otherwise, get them from $_wp_additional_image_sizes
-	if ( empty( $size ) ) {
-		return false;
-	} elseif ( 'thumbnail' == $size ) {
-		$dimensions = array(
-			'width'  => get_option( 'thumbnail_size_w' ),
-			'height' => get_option( 'thumbnail_size_h' ),
-		);
-	} else {
-		global $_wp_additional_image_sizes;
-
-		if ( ! isset( $_wp_additional_image_sizes[ $size ] ) ) {
-			return false;
-		}
-
-		$dimensions = array(
-			'width'  => $_wp_additional_image_sizes[ $size ]['width'],
-			'height' => $_wp_additional_image_sizes[ $size ]['height'],
-		);
-	}
-
-	return $dimensions;
-}
-
-/**
  * Determine if a site logo is assigned or not.
  *
  * @uses get_option
@@ -101,76 +56,38 @@ function jetpack_has_site_logo() {
  * @since 1.0
  */
 function jetpack_the_site_logo() {
+	$logo = site_logo()->logo;
 	$size = site_logo()->theme_size();
+	$html = '';
 
 	// If no logo is set, but we're in the Customizer, leave a placeholder (needed for the live preview).
-	if (
-		! jetpack_has_site_logo()
-		&& jetpack_is_customize_preview()
-	) {
-		/*
-		 * Reason: the output is escaped in the sprintf.
-		 * phpcs:disable WordPress.Security.EscapeOutput
-		 */
-		/** This filter is documented in modules/theme-tools/site-logo/inc/functions.php */
-		echo apply_filters(
-			'jetpack_the_site_logo',
-			sprintf(
-				'<a href="%1$s" class="site-logo-link" style="display:none;"><img class="site-logo" data-size="%2$s" /></a>',
+	if ( ! jetpack_has_site_logo() ) {
+		if ( jetpack_is_customize_preview() ) {
+			$html = sprintf( '<a href="%1$s" class="site-logo-link" style="display:none;"><img class="site-logo" data-size="%2$s" /></a>',
 				esc_url( home_url( '/' ) ),
 				esc_attr( $size )
-			),
-			array(),
-			$size
-		);
-		/* phpcs:enable WordPress.Security.EscapeOutput */
-		return;
+			);
+		}
 	}
 
-	// Check for WP 4.5 Site Logo and Jetpack logo.
-	$logo_id      = get_theme_mod( 'custom_logo' );
-	$jetpack_logo = site_logo()->logo;
-
-	// Use WP Core logo if present and is an id (of an attachment), otherwise use Jetpack's.
-	if ( ! is_numeric( $logo_id ) && isset( $jetpack_logo['id'] ) ) {
-		$logo_id = $jetpack_logo['id'];
-	}
-
-	/*
-	 * Reason: the output is escaped in the sprintf.
-	 * phpcs:disable WordPress.Security.EscapeOutput
-	 */
-	/**
-	 * Filter the Site Logo output.
-	 *
-	 * @module theme-tools
-	 *
-	 * @since 3.2.0
-	 *
-	 * @param string $html Site Logo HTML output.
-	 * @param array $jetpack_logo Array of Site Logo details.
-	 * @param string $size Size specified in add_theme_support declaration, or 'thumbnail' default.
-	 */
-	echo apply_filters(
-		'jetpack_the_site_logo',
-		sprintf(
-			'<a href="%1$s" class="site-logo-link" rel="home" itemprop="url">%2$s</a>',
+	// We have a logo. Logo is go.
+	else {
+		$html = sprintf( '<a href="%1$s" class="site-logo-link" rel="home" itemprop="url">%2$s</a>',
 			esc_url( home_url( '/' ) ),
 			wp_get_attachment_image(
-				$logo_id,
+				$logo['id'],
 				$size,
 				false,
 				array(
 					'class'     => "site-logo attachment-$size",
 					'data-size' => $size,
-					'itemprop'  => 'logo',
+					'itemprop'  => "logo"
 				)
 			)
-		),
-		$jetpack_logo,
-		$size
-	);
-	/* phpcs:enable WordPress.Security.EscapeOutput */
+		);
+	}
+
+	echo apply_filters( 'jetpack_the_site_logo', $html, $logo, $size );
 }
 
 /**
