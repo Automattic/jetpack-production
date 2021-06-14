@@ -1,19 +1,6 @@
 <?php
-/**
- * Migration from Jetpack Custom CSS to WordPress' Core CSS.
- *
- * @since 4.4.2
- *
- * @package automattic/jetpack
- */
 
-/**
- * Class Jetpack_Custom_CSS_Data_Migration
- */
 class Jetpack_Custom_CSS_Data_Migration {
-	/**
-	 * Set up assorted actions and filters used by this class.
-	 */
 	public static function add_hooks() {
 		add_action( 'init', array( __CLASS__, 'register_legacy_post_type' ) );
 		add_action( 'admin_init', array( __CLASS__, 'do_migration' ) );
@@ -24,11 +11,6 @@ class Jetpack_Custom_CSS_Data_Migration {
 		}
 	}
 
-	/**
-	 * Do the bulk of the migration.
-	 *
-	 * @return int|null
-	 */
 	public static function do_migration() {
 		Jetpack_Options::update_option( 'custom_css_4.7_migration', true );
 		Jetpack::log( 'custom_css_4.7_migration', 'start' );
@@ -41,11 +23,6 @@ class Jetpack_Custom_CSS_Data_Migration {
 		$preprocessors      = apply_filters( 'jetpack_custom_css_preprocessors', array() );
 		$core_css_post      = wp_get_custom_css_post();
 		$jetpack_css_post   = self::get_post();
-
-		if ( ! $jetpack_css_post ) {
-			return;
-		}
-
 		$revisions          = self::get_all_revisions();
 
 		// Migrate the settings from revision meta to theme mod.
@@ -55,9 +32,7 @@ class Jetpack_Custom_CSS_Data_Migration {
 		if ( empty( $revisions ) || ! is_array( $revisions ) ) {
 			if ( $jetpack_css_post instanceof WP_Post ) {
 				// Feed in the raw, if the current setting is Sass/LESS, it'll filter it inside.
-				kses_remove_filters();
 				wp_update_custom_css_post( $jetpack_css_post->post_content );
-				kses_init();
 				return 1;
 			}
 			return null;
@@ -86,12 +61,12 @@ class Jetpack_Custom_CSS_Data_Migration {
 				$css = call_user_func( $preprocessors[ $preprocessor ]['callback'], $pre );
 			}
 
-			kses_remove_filters();
+			// Do we need to remove any filters here for users without `unfiltered_html` ?
+
 			wp_update_custom_css_post( $css, array(
 				'stylesheet'   => $stylesheet,
 				'preprocessed' => $pre,
 			) );
-			kses_init();
 		}
 
 		// If we've migrated some CSS for the current theme and there was already something there in the Core dataset ...
@@ -118,13 +93,10 @@ class Jetpack_Custom_CSS_Data_Migration {
 			) );
 		}
 
-		Jetpack::log( 'custom_css_4.7_migration', count( $migrated ) . 'revisions migrated' );
-		return count( $migrated );
+		Jetpack::log( 'custom_css_4.7_migration', sizeof( $migrated ) . 'revisions migrated' );
+		return sizeof( $migrated );
 	}
 
-	/**
-	 * Re-register the legacy CPT so we can play with the content already in the database.
-	 */
 	public static function register_legacy_post_type() {
 		if ( post_type_exists( 'safecss' ) ) {
 			return;
@@ -148,15 +120,19 @@ class Jetpack_Custom_CSS_Data_Migration {
 		) );
 	}
 
-	/**
-	 * Get the post used for legacy storage.
-	 *
-	 * Jetpack used to use a single post for all themes, just blanking it on theme switch.  This gets that post.
-	 *
-	 * @return array|bool|null|WP_Post
-	 */
 	public static function get_post() {
-		/** This filter is documented in modules/custom-css/custom-css.php */
+		/**
+		 * Filter the ID of the post where Custom CSS is stored, before the ID is retrieved.
+		 *
+		 * If the callback function returns a non-null value, then post_id() will immediately
+		 * return that value, instead of retrieving the normal post ID.
+		 *
+		 * @module custom-css
+		 *
+		 * @since 3.8.1
+		 *
+		 * @param null null The ID to return instead of the normal ID.
+		 */
 		$custom_css_post_id = apply_filters( 'jetpack_custom_css_pre_post_id', null );
 		if ( ! is_null( $custom_css_post_id ) ) {
 			return get_post( $custom_css_post_id );
@@ -189,18 +165,8 @@ class Jetpack_Custom_CSS_Data_Migration {
 		return get_post( $custom_css_post_id );
 	}
 
-	/**
-	 * Get all revisions of the Jetpack CSS CPT entry.
-	 *
-	 * @return array
-	 */
 	public static function get_all_revisions() {
 		$post = self::get_post();
-
-		if ( ! $post ) {
-			return array();
-		}
-
 		$revisions = wp_get_post_revisions( $post->ID, array(
 			'posts_per_page' => -1,
 			'orderby'        => 'date',
@@ -210,15 +176,6 @@ class Jetpack_Custom_CSS_Data_Migration {
 		return $revisions;
 	}
 
-	/**
-	 * Get the options stored for a given revision ID.
-	 *
-	 * Jetpack used to version the settings by storing them as meta on the revision.
-	 *
-	 * @param integer $post_id Post ID.
-	 *
-	 * @return array
-	 */
 	public static function get_options( $post_id = null ) {
 		if ( empty( $post_id ) ) {
 			$post = self::get_post();

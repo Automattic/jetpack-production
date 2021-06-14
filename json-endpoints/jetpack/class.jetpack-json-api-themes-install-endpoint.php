@@ -3,8 +3,6 @@
 include_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
 include_once ABSPATH . 'wp-admin/includes/file.php';
 
-use Automattic\Jetpack\Connection\Client;
-
 class Jetpack_JSON_API_Themes_Install_Endpoint extends Jetpack_JSON_API_Themes_Endpoint {
 
 	// POST  /sites/%s/themes/%s/install
@@ -16,37 +14,11 @@ class Jetpack_JSON_API_Themes_Install_Endpoint extends Jetpack_JSON_API_Themes_E
 
 		foreach ( $this->themes as $theme ) {
 
-			/**
-			 * Filters whether to use an alternative process for installing a WordPress.com theme.
-			 * The alternative process can be executed during the filter.
-			 *
-			 * The filter can also return an instance of WP_Error; in which case the endpoint response will
-			 * contain this error.
-			 *
-			 * @module json-api
-			 *
-			 * @since 4.4.2
-			 *
-			 * @param bool   $use_alternative_install_method Whether to use the alternative method of installing
-			 *                                               a WPCom theme.
-			 * @param string $theme_slug                     Theme name (slug). If it is a WPCom theme,
-			 *                                               it should be suffixed with `-wpcom`.
-			 */
-			$result = apply_filters( 'jetpack_wpcom_theme_install', false, $theme );
+			$skin      = new Jetpack_Automatic_Install_Skin();
+			$upgrader  = new Theme_Upgrader( $skin );
 
-			$skin = null;
-			$upgrader = null;
-			$link = null;
-
-			// If the alternative install method was not used, use the standard method.
-			if ( ! $result ) {
-				jetpack_require_lib( 'class.jetpack-automatic-install-skin' );
-				$skin     = new Jetpack_Automatic_Install_Skin();
-				$upgrader = new Theme_Upgrader( $skin );
-
-				$link   = $this->download_links[ $theme ];
-				$result = $upgrader->install( $link );
-			}
+			$link = $this->download_links[ $theme ];
+			$result = $upgrader->install( $link );
 
 			if ( file_exists( $link ) ) {
 				// Delete if link was tmp local file
@@ -65,7 +37,7 @@ class Jetpack_JSON_API_Themes_Install_Endpoint extends Jetpack_JSON_API_Themes_E
 				$error = $this->log[ $theme ]['error'] = __( 'There was an error installing your theme', 'jetpack' );
 			}
 
-			elseif ( $upgrader ) {
+			else {
 				$this->log[ $theme ][] = $upgrader->skin->get_upgrade_messages();
 			}
 		}
@@ -87,34 +59,8 @@ class Jetpack_JSON_API_Themes_Install_Endpoint extends Jetpack_JSON_API_Themes_E
 				return new WP_Error( 'theme_already_installed', __( 'The theme is already installed', 'jetpack' ) );
 			}
 
-			/**
-			 * Filters whether to skip the standard method of downloading and validating a WordPress.com
-			 * theme. An alternative method of WPCom theme download and validation can be
-			 * executed during the filter.
-			 *
-			 * The filter can also return an instance of WP_Error; in which case the endpoint response will
-			 * contain this error.
-			 *
-			 * @module json-api
-			 *
-			 * @since 4.4.2
-			 *
-			 * @param bool   $skip_download_filter_result Whether to skip the standard method of downloading
-			 *                                            and validating a WPCom theme.
-			 * @param string $theme_slug                  Theme name (slug). If it is a WPCom theme,
-			 *                                            it should be suffixed with `-wpcom`.
-			 */
-			$skip_download_filter_result = apply_filters( 'jetpack_wpcom_theme_skip_download', false, $theme );
-
-			if ( is_wp_error( $skip_download_filter_result ) ) {
-				return $skip_download_filter_result;
-			} elseif ( $skip_download_filter_result ) {
-				continue;
-			}
-
 			if ( wp_endswith( $theme, '-wpcom' ) ) {
 				$file = self::download_wpcom_theme_to_file( $theme );
-
 				if ( is_wp_error( $file ) ) {
 					return $file;
 				}
@@ -162,7 +108,7 @@ class Jetpack_JSON_API_Themes_Install_Endpoint extends Jetpack_JSON_API_Themes_E
 
 		$url = "themes/download/$theme.zip";
 		$args = array( 'stream' => true, 'filename' => $file );
-		$result = Client::wpcom_json_api_request_as_blog( $url, '1.1', $args );
+		$result = Jetpack_Client::wpcom_json_api_request_as_blog( $url, '1.1', $args );
 
 		$response =  $result[ 'response' ];
 		if ( $response[ 'code' ] !== 200 ) {

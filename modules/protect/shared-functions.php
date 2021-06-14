@@ -156,7 +156,7 @@ function jetpack_protect_save_whitelist( $whitelist, $global = false ) {
  * Jetpack Protect Get IP.
  *
  * @access public
- * @return string|false IP.
+ * @return IP.
  */
 function jetpack_protect_get_ip() {
 	$trusted_header_data = get_site_option( 'trusted_ip_header' );
@@ -167,11 +167,6 @@ function jetpack_protect_get_ip() {
 	} else {
 		$ip = $_SERVER['REMOTE_ADDR'];
 	}
-
-	if ( ! $ip ) {
-		return false;
-	}
-
 	$ips = explode( ',', $ip );
 	if ( ! isset( $segments ) || ! $segments ) {
 		$segments = 1;
@@ -194,34 +189,16 @@ function jetpack_protect_get_ip() {
  * Jetpack Clean IP.
  *
  * @access public
- * @param string $ip IP.
- * @return string|false IP.
+ * @param mixed $ip IP.
+ * @return $ip IP.
  */
 function jetpack_clean_ip( $ip ) {
-
-	// Some misconfigured servers give back extra info, which comes after "unless".
-	$ips = explode( ' unless ', $ip );
-	$ip = $ips[0];
-
-	$ip = strtolower( trim( $ip ) );
-
-	// Check for IPv4 with port.
-	if ( preg_match( '/^(\d+\.\d+\.\d+\.\d+):\d+$/', $ip, $matches ) ) {
-		$ip = $matches[1];
-	}
-
-	// Check for IPv6 (or IPvFuture) with brackets and optional port.
-	if ( preg_match( '/^\[([a-z0-9\-._~!$&\'()*+,;=:]+)\](?::\d+)?$/', $ip, $matches ) ) {
-		$ip = $matches[1];
-	}
-
+	$ip = trim( $ip );
 	// Check for IPv4 IP cast as IPv6.
 	if ( preg_match( '/^::ffff:(\d+\.\d+\.\d+\.\d+)$/', $ip, $matches ) ) {
 		$ip = $matches[1];
 	}
-
-	// Validate and return.
-	return filter_var( $ip, FILTER_VALIDATE_IP ) ? $ip : false;
+	return $ip;
 }
 
 /**
