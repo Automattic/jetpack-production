@@ -1,11 +1,9 @@
 <?php
 
-use Automattic\Jetpack\Assets;
-
 /*
  * A prototype to allow inline editing / editor views for contact forms.\
  *
- * Originally developed in: https://github.com/automattic/gm2016-grunion-editor
+ * Originally developed in: http://github.com/automattic/gm2016-grunion-editor
  * Authors: Michael Arestad, Andrew Ozz, and George Stephanis
  */
 
@@ -41,7 +39,7 @@ class Grunion_Editor_View {
 	}
 
 	public static function mce_external_plugins( $plugin_array ) {
-		$plugin_array['grunion_form'] = Assets::get_file_url_for_environment(
+		$plugin_array['grunion_form'] = Jetpack::get_file_url_for_environment(
 			'_inc/build/contact-form/js/tinymce-plugin-form-button.min.js',
 			'modules/contact-form/js/tinymce-plugin-form-button.js'
 		);
@@ -71,7 +69,7 @@ class Grunion_Editor_View {
 		wp_style_add_data( 'grunion-editor-ui', 'rtl', 'replace' );
 		wp_enqueue_script(
 			'grunion-editor-view',
-			Assets::get_file_url_for_environment(
+			Jetpack::get_file_url_for_environment(
 				'_inc/build/contact-form/js/editor-view.min.js',
 				'modules/contact-form/js/editor-view.js'
 			),
@@ -108,7 +106,7 @@ class Grunion_Editor_View {
 	public static function editor_view_js_templates() {
 		?>
 <script type="text/html" id="tmpl-grunion-contact-form">
-	<form class="card jetpack-contact-form-shortcode-preview" action='#' method='post' class='contact-form commentsblock' onsubmit="return false;">
+	<form class="card" action='#' method='post' class='contact-form commentsblock' onsubmit="return false;">
 		{{{ data.body }}}
 		<p class='contact-submit'>
 			<input type='submit' value='{{ data.submit_button_text }}' class='pushbutton-wide'/>

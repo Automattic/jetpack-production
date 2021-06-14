@@ -1,14 +1,11 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
-
-use Automattic\Jetpack\Connection\Tokens;
-use Automattic\Jetpack\Redirect;
+<?php
 
 class Publicize extends Publicize_Base {
 
 	function __construct() {
 		parent::__construct();
 
-		add_filter( 'jetpack_xmlrpc_unauthenticated_methods', array( $this, 'register_update_publicize_connections_xmlrpc_method' ) );
+		add_filter( 'jetpack_xmlrpc_methods', array( $this, 'register_update_publicize_connections_xmlrpc_method' ) );
 
 		add_action( 'load-settings_page_sharing', array( $this, 'admin_page_load' ), 9 );
 
@@ -16,13 +13,17 @@ class Publicize extends Publicize_Base {
 		add_action( 'wp_ajax_publicize_facebook_options_page', array( $this, 'options_page_facebook' ) );
 		add_action( 'wp_ajax_publicize_twitter_options_page', array( $this, 'options_page_twitter' ) );
 		add_action( 'wp_ajax_publicize_linkedin_options_page', array( $this, 'options_page_linkedin' ) );
+		add_action( 'wp_ajax_publicize_google_plus_options_page', array( $this, 'options_page_google_plus' ) );
 
 		add_action( 'wp_ajax_publicize_tumblr_options_save', array( $this, 'options_save_tumblr' ) );
 		add_action( 'wp_ajax_publicize_facebook_options_save', array( $this, 'options_save_facebook' ) );
 		add_action( 'wp_ajax_publicize_twitter_options_save', array( $this, 'options_save_twitter' ) );
 		add_action( 'wp_ajax_publicize_linkedin_options_save', array( $this, 'options_save_linkedin' ) );
+		add_action( 'wp_ajax_publicize_google_plus_options_save', array( $this, 'options_save_google_plus' ) );
 
 		add_action( 'load-settings_page_sharing', array( $this, 'force_user_connection' ) );
+
+		add_filter( 'publicize_checkbox_default', array( $this, 'publicize_checkbox_default' ), 10, 4 );
 
 		add_filter( 'jetpack_published_post_flags', array( $this, 'set_post_flags' ), 10, 2 );
 
@@ -48,7 +49,7 @@ class Publicize extends Publicize_Base {
 
 	function force_user_connection() {
 		global $current_user;
-		$user_token        = ( new Tokens() )->get_access_token( $current_user->ID );
+		$user_token        = Jetpack_Data::get_access_token( $current_user->ID );
 		$is_user_connected = $user_token && ! is_wp_error( $user_token );
 
 		// If the user is already connected via Jetpack, then we're good
@@ -118,25 +119,16 @@ class Publicize extends Publicize_Base {
 	}
 
 	function get_all_connections() {
-		$connections = Jetpack_Options::get_option( 'publicize_connections' );
-		if ( isset( $connections['google_plus'] ) ) {
-			unset( $connections['google_plus'] );
-		}
-		return $connections;
+		return Jetpack_Options::get_option( 'publicize_connections' );
 	}
 
 	function get_connections( $service_name, $_blog_id = false, $_user_id = false ) {
-		if ( false === $_user_id ) {
-			$_user_id = $this->user_id();
-		}
-
 		$connections           = $this->get_all_connections();
 		$connections_to_return = array();
-
 		if ( ! empty( $connections ) && is_array( $connections ) ) {
 			if ( ! empty( $connections[ $service_name ] ) ) {
 				foreach ( $connections[ $service_name ] as $id => $connection ) {
-					if ( 0 == $connection['connection_data']['user_id'] || $_user_id == $connection['connection_data']['user_id'] ) {
+					if ( 0 == $connection['connection_data']['user_id'] || $this->user_id() == $connection['connection_data']['user_id'] ) {
 						$connections_to_return[ $id ] = $connection;
 					}
 				}
@@ -155,7 +147,7 @@ class Publicize extends Publicize_Base {
 		if ( ! empty( $connections ) ) {
 			foreach ( (array) $connections as $service_name => $connections_for_service ) {
 				foreach ( $connections_for_service as $id => $connection ) {
-					$user_id = (int) $connection['connection_data']['user_id'];
+					$user_id = intval( $connection['connection_data']['user_id'] );
 					// phpcs:ignore WordPress.PHP.YodaConditions.NotYoda
 					if ( $user_id === 0 || $this->user_id() === $user_id ) {
 						$connections_to_return[ $service_name ][ $id ] = $connection;
@@ -171,10 +163,6 @@ class Publicize extends Publicize_Base {
 
 	function get_connection_id( $connection ) {
 		return $connection['connection_data']['id'];
-	}
-
-	function get_connection_unique_id( $connection ) {
-		return $connection['connection_data']['token_id'];
 	}
 
 	function get_connection_meta( $connection ) {
@@ -243,41 +231,29 @@ class Publicize extends Publicize_Base {
 
 	function globalization() {
 		if ( 'on' == $_REQUEST['global'] ) {
-			$globalize_connection = $_REQUEST['connection'];
+			$id = $_REQUEST['connection'];
+
 			if ( ! current_user_can( $this->GLOBAL_CAP ) ) {
 				return;
 			}
 
-			$this->globalize_connection( $globalize_connection );
+			Jetpack::load_xml_rpc_client();
+			$xml = new Jetpack_IXR_Client();
+			$xml->query( 'jetpack.globalizePublicizeConnection', $id, 'globalize' );
+
+			if ( ! $xml->isError() ) {
+				$response = $xml->getResponse();
+				Jetpack_Options::update_option( 'publicize_connections', $response );
+			}
 		}
 	}
 
-	function globalize_connection( $connection_id ) {
-		$xml = new Jetpack_IXR_Client();
-		$xml->query( 'jetpack.globalizePublicizeConnection', $connection_id, 'globalize' );
-
-		if ( ! $xml->isError() ) {
-			$response = $xml->getResponse();
-			$this->receive_updated_publicize_connections( $response );
-		}
+	function connect_url( $service_name ) {
+		return Jetpack_Keyring_Service_Helper::connect_url( $service_name );
 	}
 
-	function unglobalize_connection( $connection_id ) {
-		$xml = new Jetpack_IXR_Client();
-		$xml->query( 'jetpack.globalizePublicizeConnection', $connection_id, 'unglobalize' );
-
-		if ( ! $xml->isError() ) {
-			$response = $xml->getResponse();
-			$this->receive_updated_publicize_connections( $response );
-		}
-	}
-
-	function connect_url( $service_name, $for = 'publicize' ) {
-		return Jetpack_Keyring_Service_Helper::connect_url( $service_name, $for );
-	}
-
-	function refresh_url( $service_name, $for = 'publicize' ) {
-		return Jetpack_Keyring_Service_Helper::refresh_url( $service_name, $for );
+	function refresh_url( $service_name ) {
+		return Jetpack_Keyring_Service_Helper::refresh_url( $service_name );
 	}
 
 	function disconnect_url( $service_name, $id ) {
@@ -294,29 +270,30 @@ class Publicize extends Publicize_Base {
 	 *
 	 * @return array List of social networks.
 	 */
-	function get_services( $filter = 'all', $_blog_id = false, $_user_id = false ) {
+	function get_services( $filter = 'all' ) {
 		$services = array(
 			'facebook'    => array(),
 			'twitter'     => array(),
 			'linkedin'    => array(),
 			'tumblr'      => array(),
+			'google_plus' => array(),
 		);
 
 		if ( 'all' == $filter ) {
 			return $services;
 		} else {
 			$connected_services = array();
-			foreach ( $services as $service_name => $empty ) {
-				$connections = $this->get_connections( $service_name, $_blog_id, $_user_id );
+			foreach ( $services as $service => $empty ) {
+				$connections = $this->get_connections( $service );
 				if ( $connections ) {
-					$connected_services[ $service_name ] = $connections;
+					$connected_services[ $service ] = $connections;
 				}
 			}
 			return $connected_services;
 		}
 	}
 
-	function get_connection( $service_name, $id, $_blog_id = false, $_user_id = false ) {
+	function get_connection( $service, $id, $_blog_id = false, $_user_id = false ) {
 		// Stub
 	}
 
@@ -350,6 +327,7 @@ class Publicize extends Publicize_Base {
 
 		$id = $this->get_connection_id( $connection );
 
+		Jetpack::load_xml_rpc_client();
 		$xml = new Jetpack_IXR_Client();
 		$xml->query( 'jetpack.testPublicizeConnection', $id );
 
@@ -376,29 +354,6 @@ class Publicize extends Publicize_Base {
 		);
 
 		return new WP_Error( 'pub_conn_test_failed', $connection_test_message, $error_data );
-	}
-
-	/**
-	 * Checks if post has already been shared by Publicize in the past.
-	 *
-	 * Jetpack uses two methods:
-	 * 1. A POST_DONE . 'all' postmeta flag, or
-	 * 2. if the post has already been published.
-	 *
-	 * @since 6.7.0
-	 *
-	 * @param integer $post_id Optional. Post ID to query connection status for: will use current post if missing.
-	 *
-	 * @return bool True if post has already been shared by Publicize, false otherwise.
-	 */
-	public function post_is_done_sharing( $post_id = null ) {
-		// Defaults to current post if $post_id is null.
-		$post = get_post( $post_id );
-		if ( is_null( $post ) ) {
-			return false;
-		}
-
-		return 'publish' == $post->post_status || get_post_meta( $post->ID, $this->POST_DONE . 'all', true );
 	}
 
 	/**
@@ -493,7 +448,7 @@ class Publicize extends Publicize_Base {
 			}
 			$page_info_message = sprintf(
 				__( 'Facebook supports Publicize connections to Facebook Pages, but not to Facebook Profiles. <a href="%s">Learn More about Publicize for Facebook</a>', 'jetpack' ),
-				esc_url( Redirect::get_url( 'jetpack-support-publicize-facebook' ) )
+				'https://jetpack.com/support/publicize/facebook'
 			);
 
 			if ( $pages ) : ?>
@@ -642,7 +597,7 @@ class Publicize extends Publicize_Base {
 	}
 
 	function get_basehostname( $url ) {
-		return wp_parse_url( $url, PHP_URL_HOST );
+		return parse_url( $url, PHP_URL_HOST );
 	}
 
 	function options_save_tumblr() {
@@ -655,6 +610,7 @@ class Publicize extends Publicize_Base {
 	}
 
 	function set_remote_publicize_options( $id, $options ) {
+		Jetpack::load_xml_rpc_client();
 		$xml = new Jetpack_IXR_Client();
 		$xml->query( 'jetpack.setPublicizeOptions', $id, $options );
 
@@ -673,6 +629,10 @@ class Publicize extends Publicize_Base {
 		Publicize_UI::options_page_other( 'linkedin' );
 	}
 
+	function options_page_google_plus() {
+		Publicize_UI::options_page_other( 'google_plus' );
+	}
+
 	function options_save_twitter() {
 		$this->options_save_other( 'twitter' );
 	}
@@ -681,10 +641,26 @@ class Publicize extends Publicize_Base {
 		$this->options_save_other( 'linkedin' );
 	}
 
+	function options_save_google_plus() {
+		$this->options_save_other( 'google_plus' );
+	}
+
 	function options_save_other( $service_name ) {
 		// Nonce check
 		check_admin_referer( 'save_' . $service_name . '_token_' . $_REQUEST['connection'] );
 		$this->globalization();
+	}
+
+	/**
+	 * Already-published posts should not be Publicized by default. This filter sets checked to
+	 * false if a post has already been published.
+	 */
+	function publicize_checkbox_default( $checked, $post_id, $name, $connection ) {
+		if ( 'publish' == get_post_status( $post_id ) ) {
+			return false;
+		}
+
+		return $checked;
 	}
 
 	/**

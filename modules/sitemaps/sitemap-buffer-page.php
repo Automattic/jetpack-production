@@ -6,7 +6,7 @@
  * buffer.
  *
  * @since 5.3.0
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
