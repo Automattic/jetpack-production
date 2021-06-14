@@ -1,14 +1,11 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
-
-use Automattic\Jetpack\Connection\Tokens;
-use Automattic\Jetpack\Redirect;
+<?php
 
 class Publicize extends Publicize_Base {
 
 	function __construct() {
 		parent::__construct();
 
-		add_filter( 'jetpack_xmlrpc_unauthenticated_methods', array( $this, 'register_update_publicize_connections_xmlrpc_method' ) );
+		add_filter( 'jetpack_xmlrpc_methods', array( $this, 'register_update_publicize_connections_xmlrpc_method' ) );
 
 		add_action( 'load-settings_page_sharing', array( $this, 'admin_page_load' ), 9 );
 
@@ -16,11 +13,13 @@ class Publicize extends Publicize_Base {
 		add_action( 'wp_ajax_publicize_facebook_options_page', array( $this, 'options_page_facebook' ) );
 		add_action( 'wp_ajax_publicize_twitter_options_page', array( $this, 'options_page_twitter' ) );
 		add_action( 'wp_ajax_publicize_linkedin_options_page', array( $this, 'options_page_linkedin' ) );
+		add_action( 'wp_ajax_publicize_google_plus_options_page', array( $this, 'options_page_google_plus' ) );
 
 		add_action( 'wp_ajax_publicize_tumblr_options_save', array( $this, 'options_save_tumblr' ) );
 		add_action( 'wp_ajax_publicize_facebook_options_save', array( $this, 'options_save_facebook' ) );
 		add_action( 'wp_ajax_publicize_twitter_options_save', array( $this, 'options_save_twitter' ) );
 		add_action( 'wp_ajax_publicize_linkedin_options_save', array( $this, 'options_save_linkedin' ) );
+		add_action( 'wp_ajax_publicize_google_plus_options_save', array( $this, 'options_save_google_plus' ) );
 
 		add_action( 'load-settings_page_sharing', array( $this, 'force_user_connection' ) );
 
@@ -48,7 +47,7 @@ class Publicize extends Publicize_Base {
 
 	function force_user_connection() {
 		global $current_user;
-		$user_token        = ( new Tokens() )->get_access_token( $current_user->ID );
+		$user_token        = Jetpack_Data::get_access_token( $current_user->ID );
 		$is_user_connected = $user_token && ! is_wp_error( $user_token );
 
 		// If the user is already connected via Jetpack, then we're good
@@ -118,11 +117,7 @@ class Publicize extends Publicize_Base {
 	}
 
 	function get_all_connections() {
-		$connections = Jetpack_Options::get_option( 'publicize_connections' );
-		if ( isset( $connections['google_plus'] ) ) {
-			unset( $connections['google_plus'] );
-		}
-		return $connections;
+		return Jetpack_Options::get_option( 'publicize_connections' );
 	}
 
 	function get_connections( $service_name, $_blog_id = false, $_user_id = false ) {
@@ -155,7 +150,7 @@ class Publicize extends Publicize_Base {
 		if ( ! empty( $connections ) ) {
 			foreach ( (array) $connections as $service_name => $connections_for_service ) {
 				foreach ( $connections_for_service as $id => $connection ) {
-					$user_id = (int) $connection['connection_data']['user_id'];
+					$user_id = intval( $connection['connection_data']['user_id'] );
 					// phpcs:ignore WordPress.PHP.YodaConditions.NotYoda
 					if ( $user_id === 0 || $this->user_id() === $user_id ) {
 						$connections_to_return[ $service_name ][ $id ] = $connection;
@@ -244,15 +239,17 @@ class Publicize extends Publicize_Base {
 	function globalization() {
 		if ( 'on' == $_REQUEST['global'] ) {
 			$globalize_connection = $_REQUEST['connection'];
+
 			if ( ! current_user_can( $this->GLOBAL_CAP ) ) {
 				return;
 			}
 
-			$this->globalize_connection( $globalize_connection );
+			$this->globalize_connection( $connection_id );
 		}
 	}
 
 	function globalize_connection( $connection_id ) {
+		Jetpack::load_xml_rpc_client();
 		$xml = new Jetpack_IXR_Client();
 		$xml->query( 'jetpack.globalizePublicizeConnection', $connection_id, 'globalize' );
 
@@ -263,6 +260,7 @@ class Publicize extends Publicize_Base {
 	}
 
 	function unglobalize_connection( $connection_id ) {
+		Jetpack::load_xml_rpc_client();
 		$xml = new Jetpack_IXR_Client();
 		$xml->query( 'jetpack.globalizePublicizeConnection', $connection_id, 'unglobalize' );
 
@@ -300,6 +298,7 @@ class Publicize extends Publicize_Base {
 			'twitter'     => array(),
 			'linkedin'    => array(),
 			'tumblr'      => array(),
+			'google_plus' => array(),
 		);
 
 		if ( 'all' == $filter ) {
@@ -350,6 +349,7 @@ class Publicize extends Publicize_Base {
 
 		$id = $this->get_connection_id( $connection );
 
+		Jetpack::load_xml_rpc_client();
 		$xml = new Jetpack_IXR_Client();
 		$xml->query( 'jetpack.testPublicizeConnection', $id );
 
@@ -493,7 +493,7 @@ class Publicize extends Publicize_Base {
 			}
 			$page_info_message = sprintf(
 				__( 'Facebook supports Publicize connections to Facebook Pages, but not to Facebook Profiles. <a href="%s">Learn More about Publicize for Facebook</a>', 'jetpack' ),
-				esc_url( Redirect::get_url( 'jetpack-support-publicize-facebook' ) )
+				'https://jetpack.com/support/publicize/facebook'
 			);
 
 			if ( $pages ) : ?>
@@ -642,7 +642,7 @@ class Publicize extends Publicize_Base {
 	}
 
 	function get_basehostname( $url ) {
-		return wp_parse_url( $url, PHP_URL_HOST );
+		return parse_url( $url, PHP_URL_HOST );
 	}
 
 	function options_save_tumblr() {
@@ -655,6 +655,7 @@ class Publicize extends Publicize_Base {
 	}
 
 	function set_remote_publicize_options( $id, $options ) {
+		Jetpack::load_xml_rpc_client();
 		$xml = new Jetpack_IXR_Client();
 		$xml->query( 'jetpack.setPublicizeOptions', $id, $options );
 
@@ -673,12 +674,20 @@ class Publicize extends Publicize_Base {
 		Publicize_UI::options_page_other( 'linkedin' );
 	}
 
+	function options_page_google_plus() {
+		Publicize_UI::options_page_other( 'google_plus' );
+	}
+
 	function options_save_twitter() {
 		$this->options_save_other( 'twitter' );
 	}
 
 	function options_save_linkedin() {
 		$this->options_save_other( 'linkedin' );
+	}
+
+	function options_save_google_plus() {
+		$this->options_save_other( 'google_plus' );
 	}
 
 	function options_save_other( $service_name ) {

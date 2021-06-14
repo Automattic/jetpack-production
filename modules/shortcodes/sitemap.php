@@ -3,8 +3,6 @@
  * Sitemap shortcode.
  *
  * Usage: [sitemap]
- *
- * @package automattic/jetpack
  */
 
 add_shortcode( 'sitemap', 'jetpack_sitemap_shortcode' );

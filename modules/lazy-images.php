@@ -2,23 +2,29 @@
 
 /**
  * Module Name: Lazy Images
- * Module Description: Speed up your site and create a smoother viewing experience by loading images as visitors scroll down the screen, instead of all at once.
+ * Module Description: Lazy load images
+ * Jumpstart Description: Lazy-loading images improve your site's speed and create a smoother viewing experience. Images will load as visitors scroll down the screen, instead of all at once.
  * Sort Order: 24
  * Recommendation Order: 14
  * First Introduced: 5.6.0
  * Requires Connection: No
  * Auto Activate: No
  * Module Tags: Appearance, Recommended
- * Feature: Appearance
- * Additional Search Queries: mobile, theme, fast images, fast image, image, lazy, lazy load, lazyload, images, lazy images, thumbnail, image lazy load, lazy loading, load, loading
+ * Feature: Appearance, Jumpstart
+ * Additional Search Queries: mobile, theme, performance, image
  */
 
 /**
+ * This module relies heavily upon the Lazy Load plugin which was worked on by
+ * Mohammad Jangda (batmoo), the WordPress.com VIP team, the TechCrunch 2011
+ * redesign team, and Jake Goldman of 10up LLC.
  *
- * @since 8.8
- *
- * The core of this module has been migrated to an standalone reusable package.
+ * The JavaScript has been updated to rely on InterSection observer instead of
+ * jQuery Sonar. Many thanks to Dean Hume (deanhume) and his example:
+ * https://github.com/deanhume/lazy-observer-load
  */
+
+require_once( JETPACK__PLUGIN_DIR . 'modules/lazy-images/lazy-images.php' );
 
 /*
  * Initialize lazy images on the wp action so that conditional
@@ -31,4 +37,4 @@
  * See: https://github.com/Automattic/jetpack/issues/8888
  */
 
-add_action( 'wp', array( 'Automattic\\Jetpack\\Jetpack_Lazy_Images', 'instance' ) );
+add_action( 'wp', array( 'Jetpack_Lazy_Images', 'instance' ) );

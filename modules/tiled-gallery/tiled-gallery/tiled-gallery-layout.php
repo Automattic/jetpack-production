@@ -1,6 +1,6 @@
 <?php
 abstract class Jetpack_Tiled_Gallery_Layout {
-	// Template allow list.
+	// Template whitelist
 	private static $templates = array( 'carousel-container', 'circle-layout', 'rectangular-layout', 'square-layout' );
 	private static $partials  = array( 'carousel-image-args', 'item' );
 
