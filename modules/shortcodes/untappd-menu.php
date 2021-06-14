@@ -1,4 +1,4 @@
-<?php //phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 /**
  * Untappd Shortcodes
  *
@@ -8,36 +8,22 @@
  * @since  4.1.0
  * @param location int Location ID for the Untappd venue. Required.
  * @param theme    int Theme ID for the Untappd menu. Required.
- *
- * @package automattic/jetpack
  */
 
-/**
- * Display Untappd data in posts and pages.
- */
 class Jetpack_Untappd {
 
-	/**
-	 * Constructor
-	 */
-	public function __construct() {
+	function __construct() {
 		add_action( 'init', array( $this, 'action_init' ) );
 	}
 
-	/**
-	 * Register our shortcodes.
-	 */
-	public function action_init() {
+	function action_init() {
 		add_shortcode( 'untappd-menu', array( $this, 'menu_shortcode' ) );
 	}
 
 	/**
 	 * [untappd-menu] shortcode.
-	 *
-	 * @param array  $atts    Shortocde attributes.
-	 * @param string $content Post content.
 	 */
-	public static function menu_shortcode( $atts, $content = '' ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+	static function menu_shortcode( $atts, $content = '' ) {
 		// Let's bail if we don't have location or theme.
 		if ( ! isset( $atts['location'] ) || ! isset( $atts['theme'] ) ) {
 			if ( current_user_can( 'edit_posts' ) ) {

@@ -1,7 +1,5 @@
 <?php
 
-use Automattic\Jetpack\Sync\Settings;
-
 class Jetpack_Likes_Settings {
 	function __construct() {
 		$this->in_jetpack = ! ( defined( 'IS_WPCOM' ) && IS_WPCOM );
@@ -271,7 +269,8 @@ class Jetpack_Likes_Settings {
 	 * similar logic and filters apply here, too.
 	 */
 	function is_likes_visible() {
-		if ( Settings::is_syncing() ) {
+		require_once JETPACK__PLUGIN_DIR . '/sync/class.jetpack-sync-settings.php';
+		if ( Jetpack_Sync_Settings::is_syncing() ) {
 			return false;
 		}
 
@@ -305,7 +304,7 @@ class Jetpack_Likes_Settings {
 
 			// Single post including custom post types
 			if ( is_single() ) {
-				if ( ! $this->is_single_post_enabled( ( $post instanceof WP_Post ) ? $post->post_type : 'post' ) ) {
+				if ( ! $this->is_single_post_enabled( $post->post_type ) ) {
 					$enabled = false;
 				}
 

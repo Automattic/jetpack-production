@@ -4,8 +4,10 @@
  * of simple-payments module.
  */
 
-/* global paypal, jQuery */
+/* global paypal */
+/* global jQuery */
 /* exported PaypalExpressCheckout */
+/* jshint unused:false, es3:false, esversion:5 */
 var PaypalExpressCheckout = {
 	primaryCssClassName: 'jetpack-simple-payments',
 	messageCssClassName: 'jetpack-simple-payments-purchase-message',
@@ -13,7 +15,7 @@ var PaypalExpressCheckout = {
 	wpRestAPIHost: 'https://public-api.wordpress.com',
 	wpRestAPIVersion: '/wpcom/v2',
 
-	getEnvironment: function () {
+	getEnvironment: function() {
 		if (
 			localStorage &&
 			localStorage.getItem &&
@@ -24,7 +26,7 @@ var PaypalExpressCheckout = {
 		return 'production';
 	},
 
-	getCreatePaymentEndpoint: function ( blogId ) {
+	getCreatePaymentEndpoint: function( blogId ) {
 		return (
 			PaypalExpressCheckout.wpRestAPIHost +
 			PaypalExpressCheckout.wpRestAPIVersion +
@@ -34,7 +36,7 @@ var PaypalExpressCheckout = {
 		);
 	},
 
-	getExecutePaymentEndpoint: function ( blogId, paymentId ) {
+	getExecutePaymentEndpoint: function( blogId, paymentId ) {
 		return (
 			PaypalExpressCheckout.wpRestAPIHost +
 			PaypalExpressCheckout.wpRestAPIVersion +
@@ -46,7 +48,7 @@ var PaypalExpressCheckout = {
 		);
 	},
 
-	getNumberOfItems: function ( field, enableMultiple ) {
+	getNumberOfItems: function( field, enableMultiple ) {
 		if ( enableMultiple !== '1' ) {
 			return 1;
 		}
@@ -72,7 +74,7 @@ var PaypalExpressCheckout = {
 	 * @param  string domId id of the payment button placeholder
 	 * @return Element the dom element to print the message
 	 */
-	getMessageContainer: function ( domId ) {
+	getMessageContainer: function( domId ) {
 		return document.getElementById( domId + '-message-container' );
 	},
 
@@ -85,7 +87,7 @@ var PaypalExpressCheckout = {
 	 * @param  {String} domId paypal-button element dom identifier
 	 * @param  {Boolean} [error] defines if it's a message error. Not TRUE as default.
 	 */
-	showMessage: function ( message, domId, isError ) {
+	showMessage: function( message, domId, isError ) {
 		var domEl = PaypalExpressCheckout.getMessageContainer( domId );
 
 		// set css classes
@@ -93,17 +95,17 @@ var PaypalExpressCheckout = {
 		cssClasses += isError ? 'error' : 'success';
 
 		// show message 1s after PayPal popup is closed
-		setTimeout( function () {
+		setTimeout( function() {
 			domEl.innerHTML = message;
 			domEl.setAttribute( 'class', cssClasses );
 		}, 1000 );
 	},
 
-	showError: function ( message, domId ) {
+	showError: function( message, domId ) {
 		PaypalExpressCheckout.showMessage( message, domId, true );
 	},
 
-	processErrorMessage: function ( errorResponse ) {
+	processErrorMessage: function( errorResponse ) {
 		var error = errorResponse ? errorResponse.responseJSON : null;
 		var defaultMessage = 'There was an issue processing your payment.';
 
@@ -113,7 +115,7 @@ var PaypalExpressCheckout = {
 
 		if ( error.additional_errors ) {
 			var messages = [];
-			error.additional_errors.forEach( function ( additionalError ) {
+			error.additional_errors.forEach( function( additionalError ) {
 				if ( additionalError.message ) {
 					messages.push( '<p>' + additionalError.message.toString() + '</p>' );
 				}
@@ -124,7 +126,7 @@ var PaypalExpressCheckout = {
 		return '<p>' + ( error.message || defaultMessage ) + '</p>';
 	},
 
-	processSuccessMessage: function ( successResponse ) {
+	processSuccessMessage: function( successResponse ) {
 		var message = successResponse.message;
 		var defaultMessage = 'Thank you. Your purchase was successful!';
 
@@ -135,13 +137,13 @@ var PaypalExpressCheckout = {
 		return '<p>' + message + '</p>';
 	},
 
-	cleanAndHideMessage: function ( domId ) {
+	cleanAndHideMessage: function( domId ) {
 		var domEl = PaypalExpressCheckout.getMessageContainer( domId );
 		domEl.setAttribute( 'class', PaypalExpressCheckout.messageCssClassName );
 		domEl.innerHTML = '';
 	},
 
-	renderButton: function ( blogId, buttonId, domId, enableMultiple ) {
+	renderButton: function( blogId, buttonId, domId, enableMultiple ) {
 		var env = PaypalExpressCheckout.getEnvironment();
 
 		if ( ! paypal ) {
@@ -162,7 +164,7 @@ var PaypalExpressCheckout = {
 					fundingicons: true,
 				},
 
-				payment: function () {
+				payment: function() {
 					PaypalExpressCheckout.cleanAndHideMessage( domId );
 
 					var payload = {
@@ -171,10 +173,10 @@ var PaypalExpressCheckout = {
 						env: env,
 					};
 
-					return new paypal.Promise( function ( resolve, reject ) {
+					return new paypal.Promise( function( resolve, reject ) {
 						jQuery
 							.post( PaypalExpressCheckout.getCreatePaymentEndpoint( blogId ), payload )
-							.done( function ( paymentResponse ) {
+							.done( function( paymentResponse ) {
 								if ( ! paymentResponse ) {
 									PaypalExpressCheckout.showError(
 										PaypalExpressCheckout.processErrorMessage(),
@@ -185,7 +187,7 @@ var PaypalExpressCheckout = {
 
 								resolve( paymentResponse.id );
 							} )
-							.fail( function ( paymentError ) {
+							.fail( function( paymentError ) {
 								var paymentErrorMessage = PaypalExpressCheckout.processErrorMessage( paymentError );
 								PaypalExpressCheckout.showError( paymentErrorMessage, domId );
 
@@ -199,19 +201,19 @@ var PaypalExpressCheckout = {
 					} );
 				},
 
-				onAuthorize: function ( onAuthData ) {
+				onAuthorize: function( onAuthData ) {
 					var payload = {
 						buttonId: buttonId,
 						payerId: onAuthData.payerID,
 						env: env,
 					};
-					return new paypal.Promise( function ( resolve, reject ) {
+					return new paypal.Promise( function( resolve, reject ) {
 						jQuery
 							.post(
 								PaypalExpressCheckout.getExecutePaymentEndpoint( blogId, onAuthData.paymentID ),
 								payload
 							)
-							.done( function ( authResponse ) {
+							.done( function( authResponse ) {
 								if ( ! authResponse ) {
 									PaypalExpressCheckout.showError(
 										PaypalExpressCheckout.processErrorMessage(),
@@ -226,7 +228,7 @@ var PaypalExpressCheckout = {
 								);
 								resolve();
 							} )
-							.fail( function ( authError ) {
+							.fail( function( authError ) {
 								var authErrorMessage = PaypalExpressCheckout.processErrorMessage( authError );
 								PaypalExpressCheckout.showError( authErrorMessage, domId );
 

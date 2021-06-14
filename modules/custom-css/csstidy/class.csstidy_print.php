@@ -20,9 +20,9 @@
  *   GNU Lesser General Public License for more details.
  *
  *   You should have received a copy of the GNU Lesser General Public License
- *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @license https://opensource.org/licenses/lgpl-license.php GNU Lesser General Public License
+ * @license http://opensource.org/licenses/lgpl-license.php GNU Lesser General Public License
  * @package csstidy
  * @author Florian Schmitz (floele at gmail dot com) 2005-2007
  * @author Brett Zamir (brettz9 at yahoo dot com) 2007
@@ -222,7 +222,7 @@ class csstidy_print {
 				case SEL_START:
 					if ($this->parser->get_cfg('lowercase_s'))
 						$token[1] = strtolower($token[1]);
-					$out .= ( $token[1][0] !== '@') ? $template[2] . $this->_htmlsp($token[1], $plain) : $template[0] . $this->_htmlsp($token[1], $plain);
+					$out .= ( $token[1]{0} !== '@') ? $template[2] . $this->_htmlsp($token[1], $plain) : $template[0] . $this->_htmlsp($token[1], $plain);
 					$out .= $template[3];
 					break;
 
@@ -308,7 +308,7 @@ class csstidy_print {
 		foreach ($this->css as $medium => $val) {
 			if ($this->parser->get_cfg('sort_selectors'))
 				ksort($val);
-			if ( (int) $medium < DEFAULT_AT ) {
+			if (intval($medium) < DEFAULT_AT) {
 				$this->parser->_add_token(AT_START, $medium, true);
 			}
 			elseif ($default_media) {
@@ -328,7 +328,7 @@ class csstidy_print {
 				$this->parser->_add_token(SEL_END, $selector, true);
 			}
 
-			if ( (int) $medium < DEFAULT_AT ) {
+			if (intval($medium) < DEFAULT_AT) {
 				$this->parser->_add_token(AT_END, $medium, true);
 			}
 			elseif ($default_media) {

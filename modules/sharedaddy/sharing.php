@@ -1,14 +1,10 @@
 <?php
-
-use Automattic\Jetpack\Assets;
-
 if ( ! defined( 'WP_SHARING_PLUGIN_URL' ) ) {
 	define( 'WP_SHARING_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 	define( 'WP_SHARING_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 }
 
 class Sharing_Admin {
-
 	public function __construct() {
 		require_once WP_SHARING_PLUGIN_DIR . 'sharing-service.php';
 
@@ -28,7 +24,7 @@ class Sharing_Admin {
 	public function sharing_head() {
 		wp_enqueue_script(
 			'sharing-js',
-			Assets::get_file_url_for_environment(
+			Jetpack::get_file_url_for_environment(
 				'_inc/build/sharedaddy/admin-sharing.min.js',
 				'modules/sharedaddy/admin-sharing.js'
 			),
@@ -181,7 +177,6 @@ class Sharing_Admin {
 		$title = '';
 		$klasses = array( 'service', 'advanced', 'share-' . $service->get_class() );
 		if ( $service->is_deprecated() ) {
-			/* translators: %1$s is the name of a deprecated Sharing Service like "Google+" */
 			$title = sprintf( __( 'The %1$s service has shut down. This sharing button is not displayed to your visitors and should be removed.', 'jetpack' ), $service->get_name() );
 			$klasses[] = 'share-deprecated';
 		}
@@ -215,7 +210,7 @@ class Sharing_Admin {
 
 		if ( false == function_exists( 'mb_stripos' ) ) {
 			echo '<div id="message" class="updated fade"><h3>' . __( 'Warning! Multibyte support missing!', 'jetpack' ) . '</h3>';
-			echo '<p>' . sprintf( __( 'This plugin will work without it, but multibyte support is used <a href="%s" rel="noopener noreferrer" target="_blank">if available</a>. You may see minor problems with Tweets and other sharing services.', 'jetpack' ), 'https://www.php.net/manual/en/mbstring.installation.php' ) . '</p></div>';
+			echo '<p>' . sprintf( __( 'This plugin will work without it, but multibyte support is used <a href="%s" rel="noopener noreferrer" target="_blank">if available</a>. You may see minor problems with Tweets and other sharing services.', 'jetpack' ), 'http://www.php.net/manual/en/mbstring.installation.php' ) . '</p></div>';
 		}
 
 		if ( isset( $_GET['update'] ) && $_GET['update'] == 'saved' ) {

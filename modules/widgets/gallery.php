@@ -5,10 +5,8 @@ Plugin Name: Gallery
 Description: Gallery widget
 Author: Automattic Inc.
 Version: 1.0
-Author URI: https://automattic.com
+Author URI: http://automattic.com
 */
-
-use Automattic\Jetpack\Assets;
 
 class Jetpack_Gallery_Widget extends WP_Widget {
 	const THUMB_SIZE    = 45;
@@ -270,11 +268,11 @@ class Jetpack_Gallery_Widget extends WP_Widget {
 			);
 		}
 
-		$max_width  = (int) get_option( 'large_size_w' );
+		$max_width  = intval( get_option( 'large_size_w' ) );
 		$max_height = 175;
 
-		if ( (int) $content_width > 0 ) {
-			$max_width = min( (int) $content_width, $max_width );
+		if ( intval( $content_width ) > 0 ) {
+			$max_width = min( intval( $content_width ), $max_width );
 		}
 
 		$color     = Jetpack_Options::get_option( 'slideshow_background_color', 'black' );
@@ -328,7 +326,7 @@ class Jetpack_Gallery_Widget extends WP_Widget {
 	 * Sanitize the $instance's values to the set of allowed values. If a value is not acceptable,
 	 * it is set to its default.
 	 *
-	 * Helps keep things nice and secure by listing only allowed values.
+	 * Helps keep things nice and secure by whitelisting only allowed values
 	 *
 	 * @param array $instance The Widget instance to sanitize values for
 	 * @return array $instance The Widget instance with values sanitized
@@ -402,7 +400,7 @@ class Jetpack_Gallery_Widget extends WP_Widget {
 	public function enqueue_frontend_scripts() {
 		wp_register_script(
 			'gallery-widget',
-			Assets::get_file_url_for_environment(
+			Jetpack::get_file_url_for_environment(
 				'_inc/build/widgets/gallery/js/gallery.min.js',
 				'modules/widgets/gallery/js/gallery.js'
 			)
@@ -419,7 +417,7 @@ class Jetpack_Gallery_Widget extends WP_Widget {
 
 			wp_enqueue_script(
 				'gallery-widget-admin',
-				Assets::get_file_url_for_environment(
+				Jetpack::get_file_url_for_environment(
 					'_inc/build/widgets/gallery/js/admin.min.js',
 					'modules/widgets/gallery/js/admin.js'
 				),

@@ -1,7 +1,5 @@
 <?php //phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
 
-use Automattic\Jetpack\Assets;
-
 /**
  * Brightcove shortcode.
  *
@@ -53,7 +51,7 @@ class Jetpack_Brightcove_Shortcode {
 	 * The latest: [shortcode a=1 b=2] and the legacy: [shortcode a=1&b=2]
 	 * For an old shortcode: [shortcode a=1&b=2&c=3], it would be parsed into array( 'a' => 1&b=2&c=3' ), which is useless.
 	 * However, since we want to determine whether to call convert_to_legacy_studio() or convert_to_new_studio() via passed parameters, we still need to parse the two properly.
-	 * See https://jetpack.wp-a2z.org/oik_api/shortcode_new_to_old_params/
+	 * See http://jetpack.wp-a2z.org/oik_api/shortcode_new_to_old_params/
 	 *
 	 * @since 4.5.0
 	 *
@@ -193,14 +191,14 @@ class Jetpack_Brightcove_Shortcode {
 				$attr['surl'] = 'http://c.brightcove.com/services';
 			}
 
-			$attr['exp3']  = (int) $attr['exp3'];
-			$attr['pubid'] = (int) $attr['pubid'];
-			$attr['vid']   = (int) $attr['vid'];
+			$attr['exp3']  = intval( $attr['exp3'] );
+			$attr['pubid'] = intval( $attr['pubid'] );
+			$attr['vid']   = intval( $attr['vid'] );
 
 			$fv['servicesURL'] = $attr['surl'];
 			$fv['playerID']    = $attr['exp3'];
 			$fv['domain']      = 'embed';
-			$fv['videoID']     = (int) $attr['vid'];
+			$fv['videoID']     = intval( $attr['vid'] );
 
 			$src   = sprintf(
 				'%s/viewer/federated_f9/%s?isVid=1&amp;isUI=1&amp;publisherID=%s',
@@ -210,7 +208,7 @@ class Jetpack_Brightcove_Shortcode {
 			);
 			$html5 = true;
 		} elseif ( isset( $attr['exp'] ) ) {
-			$attr['exp'] = (int) $attr['exp'];
+			$attr['exp'] = intval( $attr['exp'] );
 			$src         = 'http://services.brightcove.com/services/viewer/federated_f8/' . $attr['exp'];
 			if ( $attr['vid'] ) {
 				$fv['videoId'] = $attr['vid'];
@@ -253,7 +251,7 @@ class Jetpack_Brightcove_Shortcode {
 		if ( $html5 ) {
 			wp_enqueue_script(
 				'brightcove-loader',
-				Assets::get_file_url_for_environment( '_inc/build/shortcodes/js/brightcove.min.js', 'modules/shortcodes/js/brightcove.js' ),
+				Jetpack::get_file_url_for_environment( '_inc/build/shortcodes/js/brightcove.min.js', 'modules/shortcodes/js/brightcove.js' ),
 				array( 'jquery' ),
 				20121127,
 				false

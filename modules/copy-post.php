@@ -1,7 +1,8 @@
 <?php
 /**
  * Module Name: Copy Post
- * Module Description: Enable the option to copy entire posts and pages, including tags and settings
+ * Module Description: Copy an existing post's content into a new draft post
+ * Jumpstart Description: Copy an existing post's content into a new draft post
  * Sort Order: 15
  * First Introduced: 7.0
  * Requires Connection: No
@@ -112,7 +113,7 @@ class Jetpack_Copy_Post {
 			'post_excerpt'   => $source_post->post_excerpt,
 			'comment_status' => $source_post->comment_status,
 			'ping_status'    => $source_post->ping_status,
-			'post_category'  => wp_get_post_categories( $source_post->ID ),
+			'post_category'  => $source_post->post_category,
 			'post_password'  => $source_post->post_password,
 			'tags_input'     => $source_post->tags_input,
 		);
@@ -200,21 +201,10 @@ class Jetpack_Copy_Post {
 	 * @return array Array with the results of each update action.
 	 */
 	protected function update_likes_sharing( $source_post, $target_post_id ) {
-		$likes   = get_post_meta( $source_post->ID, 'switch_like_status', true );
-		$sharing = get_post_meta( $source_post->ID, 'sharing_disabled', true );
-
-		if ( '' !== $likes ) {
-			$likes_result = update_post_meta( $target_post_id, 'switch_like_status', $likes );
-		} else {
-			$likes_result = null;
-		}
-
-		if ( '' !== $sharing ) {
-			$sharing_result = update_post_meta( $target_post_id, 'sharing_disabled', $sharing );
-		} else {
-			$sharing_result = null;
-		}
-
+		$likes          = get_post_meta( $source_post->ID, 'switch_like_status', true );
+		$sharing        = get_post_meta( $source_post->ID, 'sharing_disabled', false );
+		$likes_result   = update_post_meta( $target_post_id, 'switch_like_status', $likes );
+		$sharing_result = update_post_meta( $target_post_id, 'sharing_disabled', $sharing );
 		return array(
 			'likes'   => $likes_result,
 			'sharing' => $sharing_result,

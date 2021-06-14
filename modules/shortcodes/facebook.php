@@ -2,15 +2,16 @@
 /**
  * Facebook embeds
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 define( 'JETPACK_FACEBOOK_EMBED_REGEX', '#^https?://(www.)?facebook\.com/([^/]+)/(posts|photos)/([^/]+)?#' );
 define( 'JETPACK_FACEBOOK_ALTERNATE_EMBED_REGEX', '#^https?://(www.)?facebook\.com/permalink.php\?([^\s]+)#' );
 define( 'JETPACK_FACEBOOK_PHOTO_EMBED_REGEX', '#^https?://(www.)?facebook\.com/photo.php\?([^\s]+)#' );
 define( 'JETPACK_FACEBOOK_PHOTO_ALTERNATE_EMBED_REGEX', '#^https?://(www.)?facebook\.com/([^/]+)/photos/([^/]+)?#' );
-define( 'JETPACK_FACEBOOK_VIDEO_EMBED_REGEX', '#^https?://(www.)?facebook\.com/(?:video.php|watch\/?)\?([^\s]+)#' );
+define( 'JETPACK_FACEBOOK_VIDEO_EMBED_REGEX', '#^https?://(www.)?facebook\.com/video.php\?([^\s]+)#' );
 define( 'JETPACK_FACEBOOK_VIDEO_ALTERNATE_EMBED_REGEX', '#^https?://(www.)?facebook\.com/([^/]+)/videos/([^/]+)?#' );
+
 
 /*
  * Example URL: https://www.facebook.com/VenusWilliams/posts/10151647007373076
@@ -33,11 +34,7 @@ wp_embed_register_handler( 'facebook-photo', JETPACK_FACEBOOK_PHOTO_EMBED_REGEX,
 wp_embed_register_handler( 'facebook-alternate-photo', JETPACK_FACEBOOK_PHOTO_ALTERNATE_EMBED_REGEX, 'jetpack_facebook_embed_handler' );
 
 /*
- * Videos
- *
- * Formats:
- * https://www.facebook.com/video.php?v=2836814009877992
- * https://www.facebook.com/watch/?v=2836814009877992
+ * Videos e.g. https://www.facebook.com/video.php?v=772471122790796
  */
 wp_embed_register_handler( 'facebook-video', JETPACK_FACEBOOK_VIDEO_EMBED_REGEX, 'jetpack_facebook_embed_handler' );
 
@@ -49,17 +46,12 @@ wp_embed_register_handler( 'facebook-alternate-video', JETPACK_FACEBOOK_VIDEO_AL
 /**
  * Callback to modify output of embedded Facebook posts.
  *
- * @param array  $matches Regex partial matches against the URL passed.
- * @param array  $attr    Attributes received in embed response.
- * @param string $url     Requested URL to be embedded.
- * @return string Facebook embed markup.
+ * @param array $matches Regex partial matches against the URL passed.
+ * @param array $attr    Attributes received in embed response.
+ * @param array $url     Requested URL to be embedded.
  */
 function jetpack_facebook_embed_handler( $matches, $attr, $url ) {
-	if (
-		false !== strpos( $url, 'video.php' )
-		|| false !== strpos( $url, '/videos/' )
-		|| false !== strpos( $url, '/watch' )
-	) {
+	if ( false !== strpos( $url, 'video.php' ) || false !== strpos( $url, '/videos/' ) ) {
 		$embed = sprintf( '<div class="fb-video" data-allowfullscreen="true" data-href="%s"></div>', esc_url( $url ) );
 	} else {
 		$width = 552; // As of 01/2017, the default width of Facebook embeds when no width attribute provided.
@@ -69,12 +61,7 @@ function jetpack_facebook_embed_handler( $matches, $attr, $url ) {
 			$width = min( $width, $content_width );
 		}
 
-		$embed = sprintf( '<div class="fb-post" data-href="%s" data-width="%s"></div>', esc_url( $url ), esc_attr( $width ) );
-	}
-
-	// Skip rendering scripts in an AMP context.
-	if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
-		return $embed;
+		$embed = sprintf( '<fb:post href="%s" data-width="%s"></fb:post>', esc_url( $url ), esc_attr( $width ) );
 	}
 
 	// since Facebook is a faux embed, we need to load the JS SDK in the wpview embed iframe.
