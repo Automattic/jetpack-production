@@ -31,7 +31,7 @@
  * Example usage (from Search on Reader Manage):
  *
  *		require_lib( 'jetpack-wpes-query-builder/jetpack-wpes-search-query-parser' );
- *		$parser = new Jetpack_WPES_Search_Query_Parser( $args['q'], array( $lang ) );
+ *		$parser = new WPES_Search_Query_Parser( $args['q'], array( $lang ) );
  *
  *		//author
  *		$parser->author_field_filter( array(
@@ -111,26 +111,18 @@ jetpack_require_lib( 'jetpack-wpes-query-builder' );
 
 class Jetpack_WPES_Search_Query_Parser extends Jetpack_WPES_Query_Builder {
 
-	protected $orig_query = '';
-	protected $current_query = '';
-	protected $langs;
-	protected $avail_langs = array( 'ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'en', 'es', 'eu', 'fa', 'fi', 'fr', 'he', 'hi', 'hu', 'hy', 'id', 'it', 'ja', 'ko', 'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr', 'zh' );
+	var $orig_query = '';
+	var $current_query = '';
+	var $langs;
+	var $avail_langs = array( 'ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'en', 'es', 'eu', 'fa', 'fi', 'fr', 'he', 'hi', 'hu', 'hy', 'id', 'it', 'ja', 'ko', 'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr', 'zh' );
 
-	public function __construct( $user_query, $langs ) {
+	function __construct( $user_query, $langs ) {
 		$this->orig_query = $user_query;
 		$this->current_query = $this->orig_query;
 		$this->langs = $this->norm_langs( $langs );
 	}
 
-	protected $extracted_phrases = array();
-
-	public function get_current_query() {
-		return $this->current_query;
-	}
-
-	public function set_current_query( $q ) {
-		$this->current_query = $q;
-	}
+	var $extracted_phrases = array();
 
 	///////////////////////////////////////////////////////
 	// Methods for Building arrays of multilingual fields
@@ -138,7 +130,7 @@ class Jetpack_WPES_Search_Query_Parser extends Jetpack_WPES_Query_Builder {
 	/*
 	 * Normalize language codes
 	 */
-	public function norm_langs( $langs ) {
+	function norm_langs( $langs ) {
 		$lst = array();
 		foreach( $langs as $l ) {
 			$l = strtok( $l, '-_' );
@@ -151,20 +143,11 @@ class Jetpack_WPES_Search_Query_Parser extends Jetpack_WPES_Query_Builder {
 		return array_keys( $lst );
 	}
 
-	public function get_lang_field_suffix() {
-		if ( ! is_array( $this->langs ) || empty( $this->langs ) ) {
-			return;
-		}
-
-		// Returns the first language only
-		return $this->langs[0];
-	}
-
 	/*
 	 * Take a list of field prefixes and expand them for multi-lingual
 	 * with the provided boostings.
 	 */
-	public function merge_ml_fields( $fields2boosts, $additional_fields ) {
+	function merge_ml_fields( $fields2boosts, $additional_fields ) {
 		$flds = array();
 		foreach( $fields2boosts as $f => $b ) {
 			foreach( $this->langs as $l ) {
@@ -195,7 +178,7 @@ class Jetpack_WPES_Search_Query_Parser extends Jetpack_WPES_Query_Builder {
 	 *
 	 * See also: https://github.com/twitter/twitter-text/blob/master/java/src/com/twitter/Regex.java
 	 */
-	public function author_field_filter( $args ) {
+	function author_field_filter( $args ) {
 		$defaults = array(
 			'wpcom_id_field' => 'author_id',
 			'must_query_fields' => null,
@@ -298,7 +281,7 @@ class Jetpack_WPES_Search_Query_Parser extends Jetpack_WPES_Query_Builder {
 	 *  returns true/false of whether any were found
 	 *
 	 */
-	public function text_field_filter( $args ) {
+	function text_field_filter( $args ) {
 		$defaults = array(
 			'must_query_fields' => array( 'tag.name' ),
 			'boost_query_fields' => array( 'tag.name' ),
@@ -381,7 +364,7 @@ class Jetpack_WPES_Search_Query_Parser extends Jetpack_WPES_Query_Builder {
 	 *  returns true/false of whether any were found
 	 *
 	 */
-	public function phrase_filter( $args ) {
+	function phrase_filter( $args ) {
 		$defaults = array(
 			'must_query_fields' => array( 'all_content' ),
 			'boost_query_fields' => array( 'title' ),
@@ -409,9 +392,9 @@ class Jetpack_WPES_Search_Query_Parser extends Jetpack_WPES_Query_Builder {
 			$phrase_prefix = $matches[1][0];
 			$this->current_query = preg_replace( '/"([^"]+)$/', '', $this->current_query );
 		}
-		if ( preg_match_all( "/(?:'\B|\B')([^']+)$/", $this->current_query, $matches ) ) {
+		if ( preg_match_all( "/'([^']+)$/", $this->current_query, $matches ) ) {
 			$phrase_prefix = $matches[1][0];
-			$this->current_query = preg_replace( "/(?:'\B|\B')([^']+)$/", '', $this->current_query );
+			$this->current_query = preg_replace( "/'([^']+)$/", '', $this->current_query );
 		}
 
 		if ( $phrase_prefix ) {
@@ -452,7 +435,7 @@ class Jetpack_WPES_Search_Query_Parser extends Jetpack_WPES_Query_Builder {
 	 *    boost_query_fields: array of fields to boost the remaining terms on (optional)
 	 *
 	 */
-	public function remaining_query( $args ) {
+	function remaining_query( $args ) {
 		$defaults = array(
 			'must_query_fields' => null,
 			'boost_query_fields' => null,
@@ -497,7 +480,7 @@ class Jetpack_WPES_Search_Query_Parser extends Jetpack_WPES_Query_Builder {
 	 *    boost_query_fields: array of fields to boost the remaining terms on (optional)
 	 *
 	 */
-	public function remaining_prefix_query( $args ) {
+	function remaining_prefix_query( $args ) {
 		$defaults = array(
 			'must_query_fields' => array( 'all_content' ),
 			'boost_query_fields' => array( 'title' ),
@@ -645,7 +628,7 @@ class Jetpack_WPES_Search_Query_Parser extends Jetpack_WPES_Query_Builder {
 	 *  args:
 	 *    langs2prob: list of languages to search in with associated boosts
 	 */
-	public function boost_lang_probs( $langs2prob ) {
+	function boost_lang_probs( $langs2prob ) {
 		foreach( $langs2prob as $l => $p ) {
 			$this->add_function( 'field_value_factor', array(
 				'modifier' => 'none',
@@ -674,7 +657,7 @@ class Jetpack_WPES_Search_Query_Parser extends Jetpack_WPES_Query_Builder {
 	}
 
 	//Best effort string truncation that splits on word breaks
-	protected function truncate_string( $string, $limit, $break=" " ) {
+	function truncate_string( $string, $limit, $break=" " ) {
 		if ( mb_strwidth( $string ) <= $limit ) {
 			return $string;
 		}

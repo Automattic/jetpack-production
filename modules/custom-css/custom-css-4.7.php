@@ -1,20 +1,16 @@
 <?php
-
-use Automattic\Jetpack\Assets;
-
 /**
  * Alternate Custom CSS source for 4.7 compat.
  *
  * @since 4.4.2
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
  * Class Jetpack_Custom_CSS_Enhancements
  */
 class Jetpack_Custom_CSS_Enhancements {
-
 	/**
 	 * Set up the actions and filters needed for our compatability layer on top of core's Custom CSS implementation.
 	 */
@@ -34,6 +30,10 @@ class Jetpack_Custom_CSS_Enhancements {
 		add_filter( 'customize_value_custom_css', array( __CLASS__, 'customize_value_custom_css' ), 10, 2 );
 		add_filter( 'customize_update_custom_css_post_content_args', array( __CLASS__, 'customize_update_custom_css_post_content_args' ), 10, 3 );
 		add_filter( 'update_custom_css_data', array( __CLASS__, 'update_custom_css_data' ), 10, 2 );
+
+		// Handle Sass/LESS.
+		add_filter( 'customize_value_custom_css', array( __CLASS__, 'customize_value_custom_css' ), 10, 2 );
+		add_filter( 'customize_update_custom_css_post_content_args', array( __CLASS__, 'customize_update_custom_css_post_content_args' ), 10, 3 );
 
 		// Stuff for stripping out the theme's default stylesheet...
 		add_filter( 'stylesheet_uri', array( __CLASS__, 'style_filter' ) );
@@ -59,28 +59,11 @@ class Jetpack_Custom_CSS_Enhancements {
 		}
 
 		wp_register_style( 'jetpack-codemirror',      plugins_url( 'custom-css/css/codemirror.css', __FILE__ ), array(), '20120905' );
-		wp_register_style( 'jetpack-customizer-css',  plugins_url( 'custom-css/css/customizer-control.css', __FILE__ ), array(), '20140728' );
+		wp_register_style( 'jetpack-customizer-css',  plugins_url( 'custom-css/css/customizer-control.css', __FILE__ ), array( 'jetpack-codemirror' ), '20140728' );
 		wp_register_script( 'jetpack-codemirror',     plugins_url( 'custom-css/js/codemirror.min.js', __FILE__ ), array(), '3.16', true );
+		wp_register_script( 'jetpack-customizer-css', plugins_url( 'custom-css/js/core-customizer-css.js', __FILE__ ), array( 'customize-controls', 'underscore', 'jetpack-codemirror' ), JETPACK__VERSION, true );
 
-		$src    = Assets::get_file_url_for_environment(
-			'_inc/build/custom-css/custom-css/js/core-customizer-css.core-4.9.min.js',
-			'modules/custom-css/custom-css/js/core-customizer-css.core-4.9.js'
-		);
-		wp_register_script( 'jetpack-customizer-css', $src, array(
-			'customize-controls',
-			'underscore'
-		), JETPACK__VERSION, true );
-
-		wp_register_script(
-			'jetpack-customizer-css-preview',
-			Assets::get_file_url_for_environment(
-				'_inc/build/custom-css/custom-css/js/core-customizer-css-preview.min.js',
-				'modules/custom-css/custom-css/js/core-customizer-css-preview.js'
-			),
-			array( 'customize-selective-refresh' ),
-			JETPACK__VERSION,
-			true
-		);
+		wp_register_script( 'jetpack-customizer-css-preview', plugins_url( 'custom-css/js/core-customizer-css-preview.js', __FILE__ ), array( 'customize-selective-refresh' ), JETPACK__VERSION, true );
 
 		remove_action( 'wp_head', 'wp_custom_css_cb', 11 ); // 4.7.0 had it at 11, 4.7.1 moved it to 101.
 		remove_action( 'wp_head', 'wp_custom_css_cb', 101 );
@@ -135,10 +118,10 @@ class Jetpack_Custom_CSS_Enhancements {
 	 */
 	public static function admin_menu() {
 		// Add in our legacy page to support old bookmarks and such.
-		add_submenu_page( null, __( 'CSS', 'jetpack' ), __( 'Additional CSS', 'jetpack' ), 'edit_theme_options', 'editcss', array( __CLASS__, 'admin_page' ) );
+		add_submenu_page( null, __( 'CSS', 'jetpack' ), __( 'Edit CSS', 'jetpack' ), 'edit_theme_options', 'editcss', array( __CLASS__, 'admin_page' ) );
 
 		// Add in our new page slug that will redirect to the customizer.
-		$hook = add_theme_page( __( 'CSS', 'jetpack' ), __( 'Additional CSS', 'jetpack' ), 'edit_theme_options', 'editcss-customizer-redirect', array( __CLASS__, 'admin_page' ) );
+		$hook = add_theme_page( __( 'CSS', 'jetpack' ), __( 'Edit CSS', 'jetpack' ), 'edit_theme_options', 'editcss-customizer-redirect', array( __CLASS__, 'admin_page' ) );
 		add_action( "load-{$hook}", array( __CLASS__, 'customizer_redirect' ) );
 	}
 
@@ -154,7 +137,6 @@ class Jetpack_Custom_CSS_Enhancements {
 		wp_safe_redirect( self::customizer_link( array(
 			'return_url' => wp_get_referer(),
 		) ) );
-		exit;
 	}
 
 	/**
@@ -365,9 +347,9 @@ class Jetpack_Custom_CSS_Enhancements {
 		$content_help = __( 'Set a different content width for full size images.', 'jetpack' );
 		if ( ! empty( $GLOBALS['content_width'] ) ) {
 			$content_help .= sprintf(
-				_n( ' The default content width for the <strong>%1$s</strong> theme is %2$d pixel.', ' The default content width for the <strong>%1$s</strong> theme is %2$d pixels.', (int) $GLOBALS['content_width'], 'jetpack' ),
+				_n( ' The default content width for the <strong>%1$s</strong> theme is %2$d pixel.', ' The default content width for the <strong>%1$s</strong> theme is %2$d pixels.', intval( $GLOBALS['content_width'] ), 'jetpack' ),
 				wp_get_theme()->Name,
-				(int) $GLOBALS['content_width']
+				intval( $GLOBALS['content_width'] )
 			);
 		}
 
@@ -693,24 +675,12 @@ class Jetpack_Custom_CSS_Enhancements {
 		 * CONTROLS.
 		 */
 
-		// Overwrite or Tweak the Core Control.
+		// Overwrite the Core Control.
 		$core_custom_css = $wp_customize->get_control( 'custom_css' );
 		if ( $core_custom_css ) {
-			if ( $core_custom_css instanceof WP_Customize_Code_Editor_Control ) {
-				// In WP 4.9, we let the Core CodeMirror control keep running the show, but hook into it to tweak stuff.
-				$types = array(
-					'default' => 'text/css',
-					'less'    => 'text/x-less',
-					'sass'    => 'text/x-scss',
-				);
-				$preprocessor = $wp_customize->get_setting( 'jetpack_custom_css[preprocessor]' )->value();
-				if ( isset( $types[ $preprocessor ] ) ) {
-					$core_custom_css->code_type = $types[ $preprocessor ];
-				}
-			} else {
-				// Core < 4.9 Fallback
-				$core_custom_css->type = 'jetpackCss';
-			}
+			$wp_customize->remove_control( 'custom_css' );
+			$core_custom_css->type = 'jetpackCss';
+			$wp_customize->add_control( $core_custom_css );
 		}
 
 		$wp_customize->selective_refresh->add_partial( 'custom_css', array(
@@ -1017,7 +987,7 @@ class Jetpack_Custom_CSS_Enhancements {
 	 * @return int Integer.
 	 */
 	public static function intval_base10( $value ) {
-		return (int) $value;
+		return intval( $value, 10 );
 	}
 
 	/**
