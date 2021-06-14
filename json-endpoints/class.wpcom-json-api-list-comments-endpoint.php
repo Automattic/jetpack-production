@@ -9,10 +9,6 @@ class WPCOM_JSON_API_List_Comments_Walker extends Walker {
 	);
 
 	public function start_el( &$output, $object, $depth = 0, $args = array(), $current_object_id = 0 ) {
-		if ( ! is_array( $output ) ) {
-			$output = array();
-		}
-
 		$output[] = $object->comment_ID;
 	}
 
@@ -60,39 +56,6 @@ class WPCOM_JSON_API_List_Comments_Walker extends Walker {
 
 	}
 }
-
-new WPCOM_JSON_API_List_Comments_Endpoint( array(
-	'description' => 'Get a list of recent comments.',
-	'group'       => 'comments',
-	'stat'        => 'comments',
-
-	'method'      => 'GET',
-	'path'        => '/sites/%s/comments/',
-	'path_labels' => array(
-		'$site' => '(int|string) Site ID or domain',
-	),
-
-	'allow_fallback_to_jetpack_blog_token' => true,
-
-	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/comments/?number=2',
-) );
-
-new WPCOM_JSON_API_List_Comments_Endpoint( array(
-	'description' => 'Get a list of recent comments on a post.',
-	'group'       => 'comments',
-	'stat'        => 'posts:1:replies',
-
-	'method'      => 'GET',
-	'path'        => '/sites/%s/posts/%d/replies/',
-	'path_labels' => array(
-		'$site'    => '(int|string) Site ID or domain',
-		'$post_ID' => '(int) The post ID',
-	),
-
-	'allow_fallback_to_jetpack_blog_token' => true,
-
-	'example_request' => 'https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/posts/7/replies/?number=2',
-) );
 
 // @todo permissions
 class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpoint {
@@ -169,7 +132,7 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 		if ( !$comment_id ) {
 			// We can get comment counts for the whole site or for a single post, but only for certain queries
 			if ( 'any' === $args['type'] && !isset( $args['after'] ) && !isset( $args['before'] ) ) {
-				$count = $this->api->wp_count_comments( $post_id );
+				$count = wp_count_comments( $post_id );
 			}
 		}
 
@@ -181,7 +144,7 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 			}
 			break;
 		default :
-			if ( ! current_user_can( 'edit_posts' ) ) {
+			if ( !current_user_can( 'moderate_comments' ) ) {
 				return new WP_Error( 'unauthorized', 'User cannot read non-approved comments', 403 );
 			}
 			if ( 'unapproved' === $args['status'] ) {
@@ -198,16 +161,10 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 			}
 		}
 
-		/** This filter is documented in class.json-api.php */
-		$exclude = apply_filters( 'jetpack_api_exclude_comment_types',
-			array( 'order_note', 'webhook_delivery', 'review', 'action_log' )
-		);
-
 		$query = array(
-			'order'        => $args['order'],
-			'type'         => 'any' === $args['type'] ? false : $args['type'],
-			'status'       => $status,
-			'type__not_in' => $exclude,
+			'order'  => $args['order'],
+			'type'   => 'any' === $args['type'] ? false : $args['type'],
+			'status' => $status,
 		);
 
 		if ( isset( $args['page'] ) ) {
@@ -272,9 +229,7 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 		if ( $args['hierarchical'] ) {
 			$walker = new WPCOM_JSON_API_List_Comments_Walker;
 			$comment_ids = $walker->paged_walk( $comments, get_option( 'thread_comments_depth', -1 ), isset( $args['page'] ) ? $args['page'] : 1 , $args['number'] );
-			if ( ! empty( $comment_ids ) ) {
-				$comments = array_map( 'get_comment', $comment_ids );
-			}
+			$comments = array_map( 'get_comment', $comment_ids );
 		}
 
 		$return = array();
@@ -289,12 +244,10 @@ class WPCOM_JSON_API_List_Comments_Endpoint extends WPCOM_JSON_API_Comment_Endpo
 				break;
 			case 'comments' :
 				$return_comments = array();
-				if ( ! empty( $comments ) ) {
-					foreach ( $comments as $comment ) {
-						$the_comment = $this->get_comment( $comment->comment_ID, $args['context'] );
-						if ( $the_comment && !is_wp_error( $the_comment ) ) {
-							$return_comments[] = $the_comment;
-						}
+				foreach ( $comments as $comment ) {
+					$the_comment = $this->get_comment( $comment->comment_ID, $args['context'] );
+					if ( $the_comment && !is_wp_error( $the_comment ) ) {
+						$return_comments[] = $the_comment;
 					}
 				}
 
