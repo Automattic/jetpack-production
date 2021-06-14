@@ -11,7 +11,7 @@
  * [mixcloud]MalibuRum/play-6-kissy-sellouts-winter-sun-house-party-mix/[/mixcloud]
  * [mixcloud http://www.mixcloud.com/mat/playlists/classics/ width=660 height=208 hide_cover=1 hide_tracklist=1]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /*
@@ -79,28 +79,6 @@ function mixcloud_shortcode( $atts, $content = null ) {
 
 	$response_body = json_decode( $mixcloud_response['body'] );
 
-	$html = $response_body->html;
-
-	preg_match( '/sandbox="([^"]*)"/', $html, $matches );
-
-	if ( empty( $matches ) ) { // MixCloud doesn't use sandbox attribute.
-		$html = preg_replace( '/>/', ' sandbox="allow-popups allow-scripts allow-same-origin allow-presentation">', $html, 1 );
-	} else { // MixCloud uses sandbox attribute.
-
-		$allowed_values = array();
-		// Here we make sure that these string are not repeated in the sandbox attribute.
-		$attrs = array( 'allow-popups', 'allow-scripts', 'allow-same-origin', 'allow-presentation' );
-		foreach ( $attrs as $attr ) {
-			if ( false === strpos( $matches[1], $attr ) ) {
-				$allowed_values[] = $attr;
-			}
-		}
-
-		$sandbox_value = $matches[1] . ' ' . implode( ' ', $allowed_values );
-
-		$html = preg_replace( '/sandbox="([^"]*)"/', "sandbox=\"$sandbox_value\"", $html );
-	}
-
-	return $html;
+	return $response_body->html;
 }
 add_shortcode( 'mixcloud', 'mixcloud_shortcode' );

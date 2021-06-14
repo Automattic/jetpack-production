@@ -14,7 +14,7 @@ function jetpack_shortcode_get_youtube_id( $url ) {
 }
 
 /**
-* @param string $url Can be just the $url or the whole $atts array
+* @param $url Can be just the $url or the whole $atts array
 * @return bool|mixed The Youtube video ID
 */
 function jetpack_get_youtube_id( $url ) {
@@ -24,7 +24,7 @@ function jetpack_get_youtube_id( $url ) {
 	}
 
 	$url = youtube_sanitize_url( $url );
-	$url = wp_parse_url( $url );
+	$url = parse_url( $url );
 	$id  = false;
 
 	if ( ! isset( $url['query'] ) )
