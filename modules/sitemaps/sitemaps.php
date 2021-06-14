@@ -14,7 +14,7 @@
  *    well as the home url. To include other post types use the 'jetpack_sitemap_post_types'
  *    filter.
  *
- * @link https://www.sitemaps.org/protocol.html Base sitemaps protocol.
+ * @link http://sitemaps.org/protocol.php Base sitemaps protocol.
  * @link https://support.google.com/webmasters/answer/178636 Image sitemap extension.
  * @link https://developers.google.com/webmasters/videosearch/sitemaps Video sitemap extension.
  *
@@ -23,24 +23,24 @@
  *    completeness, instead including at most 1000 of the most recent published posts
  *    from the previous 2 days, per the news-sitemap spec.
  *
- * @link https://support.google.com/webmasters/answer/74288 News sitemap extension.
+ * @link http://www.google.com/support/webmasters/bin/answer.py?answer=74288 News sitemap extension.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  * @since 3.9.0
  * @since 4.8.0 Remove 1000 post limit.
  * @author Automattic
  */
 
 /* Include all of the sitemap subclasses. */
-require_once __DIR__ . '/sitemap-constants.php';
-require_once __DIR__ . '/sitemap-buffer.php';
-require_once __DIR__ . '/sitemap-stylist.php';
-require_once __DIR__ . '/sitemap-librarian.php';
-require_once __DIR__ . '/sitemap-finder.php';
-require_once __DIR__ . '/sitemap-builder.php';
+require_once dirname( __FILE__ ) . '/sitemap-constants.php';
+require_once dirname( __FILE__ ) . '/sitemap-buffer.php';
+require_once dirname( __FILE__ ) . '/sitemap-stylist.php';
+require_once dirname( __FILE__ ) . '/sitemap-librarian.php';
+require_once dirname( __FILE__ ) . '/sitemap-finder.php';
+require_once dirname( __FILE__ ) . '/sitemap-builder.php';
 
 if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-	require_once __DIR__ . '/sitemap-logger.php';
+	require_once dirname( __FILE__ ) . '/sitemap-logger.php';
 }
 
 /**
@@ -441,7 +441,7 @@ class Jetpack_Sitemap_Manager {
 		 *
 		 * @param bool $discover_sitemap Make default sitemap discoverable to robots.
 		 */
-		$discover_sitemap = apply_filters_deprecated( 'jetpack_sitemap_generate', array( true ), 'jetpack-7.4.0', 'jetpack_sitemap_include_in_robotstxt' );
+		$discover_sitemap = apply_filters_deprecated( 'jetpack_sitemap_generate', true, 'jetpack-7.4.0', 'jetpack_sitemap_include_in_robotstxt' );
 
 		/**
 		 * Filter whether to make the default sitemap discoverable to robots or not. Default true.
@@ -467,7 +467,7 @@ class Jetpack_Sitemap_Manager {
 		 *
 		 * @param bool $discover_news_sitemap Make default news sitemap discoverable to robots.
 		 */
-		$discover_news_sitemap = apply_filters_deprecated( 'jetpack_news_sitemap_generate', array( true ), 'jetpack-7.4.0', 'jetpack_news_sitemap_include_in_robotstxt' );
+		$discover_news_sitemap = apply_filters_deprecated( 'jetpack_news_sitemap_generate', true, 'jetpack-7.4.0', 'jetpack_news_sitemap_include_in_robotstxt' );
 
 		/**
 		 * Filter whether to make the news sitemap discoverable to robots or not. Default true.
@@ -546,7 +546,7 @@ class Jetpack_Sitemap_Manager {
 			 * This way we don't have to wait for init to finish before building sitemaps.
 			 *
 			 * @link https://tools.ietf.org/html/rfc3986#section-3.3 RFC 3986
-			 * @link https://www.sitemaps.org/ The sitemap protocol
+			 * @link http://www.sitemaps.org/ The sitemap protocol
 			 *
 			 * @since 4.8.0
 			 */

@@ -1,7 +1,4 @@
 <?php //phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
-
-use Automattic\Jetpack\Assets;
-
 /**
  * Presentations
  * Presentations plugin based on the work done by <a href="http://darylkoop.com/">Daryl Koopersmith</a>. Powered by jmpress.js
@@ -53,7 +50,7 @@ use Automattic\Jetpack\Assets;
  *   properly, however.
  * - Exiting fullscreen mode will not properly reset the scroll locations in Safari
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 if ( ! class_exists( 'Presentations' ) ) :
@@ -89,10 +86,10 @@ if ( ! class_exists( 'Presentations' ) ) :
 			$this->scripts_and_style_included = false;
 
 			// Registers shortcodes.
-			add_action( 'wp_head', array( $this, 'add_scripts' ), 1 );
+			add_action( 'wp_head', array( &$this, 'add_scripts' ), 1 );
 
-			add_shortcode( 'presentation', array( $this, 'presentation_shortcode' ) );
-			add_shortcode( 'slide', array( $this, 'slide_shortcode' ) );
+			add_shortcode( 'presentation', array( &$this, 'presentation_shortcode' ) );
+			add_shortcode( 'slide', array( &$this, 'slide_shortcode' ) );
 		}
 
 		/**
@@ -123,14 +120,14 @@ if ( ! class_exists( 'Presentations' ) ) :
 			wp_enqueue_script( 'jquery' );
 			wp_enqueue_script(
 				'jmpress',
-				Assets::get_file_url_for_environment( '_inc/build/shortcodes/js/jmpress.min.js', 'modules/shortcodes/js/jmpress.js' ),
+				Jetpack::get_file_url_for_environment( '_inc/build/shortcodes/js/jmpress.min.js', 'modules/shortcodes/js/jmpress.js' ),
 				array( 'jquery' ),
 				JETPACK__VERSION,
 				true
 			);
 			wp_enqueue_script(
 				'presentations',
-				Assets::get_file_url_for_environment( '_inc/build/shortcodes/js/main.min.js', 'modules/shortcodes/js/main.js' ),
+				Jetpack::get_file_url_for_environment( '_inc/build/shortcodes/js/main.min.js', 'modules/shortcodes/js/main.js' ),
 				array( 'jquery', 'jmpress' ),
 				JETPACK__VERSION,
 				true
@@ -187,11 +184,11 @@ if ( ! class_exists( 'Presentations' ) ) :
 			}
 
 			if ( '' !== trim( $atts['scale'] ) ) {
-				$this->presentation_settings['scale'] = (float) $atts['scale'];
+				$this->presentation_settings['scale'] = floatval( $atts['scale'] );
 			}
 
 			if ( '' !== trim( $atts['rotate'] ) ) {
-				$this->presentation_settings['rotate'] = (float) $atts['rotate'];
+				$this->presentation_settings['rotate'] = floatval( $atts['rotate'] );
 			}
 
 			if ( '' !== trim( $atts['fade'] ) ) {
@@ -204,27 +201,27 @@ if ( ! class_exists( 'Presentations' ) ) :
 
 			// Set any settings the slides don't care about.
 			if ( '' !== trim( $atts['duration'] ) ) {
-				$duration = (float) $atts['duration'] . 's';
+				$duration = floatval( $atts['duration'] ) . 's';
 			} else {
 				$duration = '1s';
 			}
 
 			// Autoplay durations are set in milliseconds.
 			if ( '' !== trim( $atts['autoplay'] ) ) {
-				$autoplay = (float) $atts['autoplay'] * 1000;
+				$autoplay = floatval( $atts['autoplay'] ) * 1000;
 			} else {
 				$autoplay = 0;
 			} // No autoplay
 
 			// Set the presentation size as specified or with some nicely sized dimensions.
 			if ( '' !== trim( $atts['width'] ) ) {
-				$this->presentation_settings['width'] = (int) $atts['width'];
+				$this->presentation_settings['width'] = intval( $atts['width'] );
 			} else {
 				$this->presentation_settings['width'] = 480;
 			}
 
 			if ( '' !== trim( $atts['height'] ) ) {
-				$this->presentation_settings['height'] = (int) $atts['height'];
+				$this->presentation_settings['height'] = intval( $atts['height'] );
 			} else {
 				$this->presentation_settings['height'] = 370;
 			}
@@ -316,7 +313,7 @@ if ( ! class_exists( 'Presentations' ) ) :
 			if ( '' === trim( $atts['scale'] ) ) {
 				$scale = 1;
 			} else {
-				$scale = (float) $atts['scale'];
+				$scale = floatval( $atts['scale'] );
 			}
 
 			if ( $scale < 0 ) {
@@ -331,7 +328,7 @@ if ( ! class_exists( 'Presentations' ) ) :
 			if ( '' === trim( $atts['rotate'] ) ) {
 				$rotate = 0;
 			} else {
-				$rotate = (float) $atts['rotate'];
+				$rotate = floatval( $atts['rotate'] );
 			}
 
 			// Setting if the content should fade.

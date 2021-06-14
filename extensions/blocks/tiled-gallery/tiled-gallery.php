@@ -1,29 +1,19 @@
 <?php //phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+
 /**
- * Tiled Gallery block.
- * Relies on Photon, but can be used even when the module is not active.
+ * Tiled Gallery block. Depends on the Photon module.
  *
  * @since 6.9.0
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
-
-namespace Automattic\Jetpack\Extensions;
-
-use Automattic\Jetpack\Blocks;
-use Jetpack;
-use Jetpack_Gutenberg;
-use Jetpack_Plan;
 
 /**
  * Jetpack Tiled Gallery Block class
  *
  * @since 7.3
  */
-class Tiled_Gallery {
-	const FEATURE_NAME = 'tiled-gallery';
-	const BLOCK_NAME   = 'jetpack/' . self::FEATURE_NAME;
-
+class Jetpack_Tiled_Gallery_Block {
 	/* Values for building srcsets */
 	const IMG_SRCSET_WIDTH_MAX  = 2000;
 	const IMG_SRCSET_WIDTH_MIN  = 600;
@@ -33,17 +23,12 @@ class Tiled_Gallery {
 	 * Register the block
 	 */
 	public static function register() {
-		if (
-			( defined( 'IS_WPCOM' ) && IS_WPCOM )
-			|| Jetpack::is_connection_ready()
-		) {
-			Blocks::jetpack_register_block(
-				self::BLOCK_NAME,
-				array(
-					'render_callback' => array( __CLASS__, 'render' ),
-				)
-			);
-		}
+		jetpack_register_block(
+			'jetpack/tiled-gallery',
+			array(
+				'render_callback' => array( __CLASS__, 'render' ),
+			)
+		);
 	}
 
 	/**
@@ -55,15 +40,9 @@ class Tiled_Gallery {
 	 * @return string
 	 */
 	public static function render( $attr, $content ) {
-		Jetpack_Gutenberg::load_assets_as_required( self::FEATURE_NAME );
+		Jetpack_Gutenberg::load_assets_as_required( 'tiled-gallery' );
 
 		$is_squareish_layout = self::is_squareish_layout( $attr );
-
-		// Jetpack_Plan does not exist on WordPress.com.
-		if ( class_exists( 'Jetpack_Plan' ) ) {
-			$jetpack_plan = Jetpack_Plan::get();
-			wp_localize_script( 'jetpack-gallery-settings', 'jetpack_plan', array( 'data' => $jetpack_plan['product_slug'] ) );
-		}
 
 		if ( preg_match_all( '/<img [^>]+>/', $content, $images ) ) {
 			/**
@@ -106,7 +85,7 @@ class Tiled_Gallery {
 							$srcset_src = add_query_arg(
 								array(
 									'resize' => $w . ',' . $w,
-									'strip'  => 'info',
+									'strip'  => 'all',
 								),
 								$orig_src
 							);
@@ -125,7 +104,7 @@ class Tiled_Gallery {
 						for ( $w = $min_width; $w <= $max_width; $w = min( $max_width, $w + self::IMG_SRCSET_WIDTH_STEP ) ) {
 							$srcset_src = add_query_arg(
 								array(
-									'strip' => 'info',
+									'strip' => 'all',
 									'w'     => $w,
 								),
 								$orig_src
@@ -184,4 +163,9 @@ class Tiled_Gallery {
 	}
 }
 
-Tiled_Gallery::register();
+if (
+	( defined( 'IS_WPCOM' ) && IS_WPCOM )
+	|| class_exists( 'Jetpack_Photon' ) && Jetpack::is_module_active( 'photon' )
+) {
+	Jetpack_Tiled_Gallery_Block::register();
+}

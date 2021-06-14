@@ -91,7 +91,7 @@ function jetpack_preg_replace_outside_tags( $pattern, $replacement, $content, $s
 	$textarr = wp_html_split( $content );
 	unset( $content );
 	foreach ( $textarr as &$element ) {
-		if ( '' === $element || '<' === $element[0] ) {
+		if ( '' === $element || '<' === $element{0} ) {
 			continue;
 		}
 		$element = preg_replace( $pattern, $replacement, $element );
@@ -119,7 +119,7 @@ function jetpack_preg_replace_callback_outside_tags( $pattern, $callback, $conte
 	$textarr = wp_html_split( $content );
 	unset( $content );
 	foreach ( $textarr as &$element ) {
-		if ( '' === $element || '<' === $element[0] ) {
+		if ( '' === $element || '<' === $element{0} ) {
 			continue;
 		}
 		$element = preg_replace_callback( $pattern, $callback, $element );
@@ -179,8 +179,8 @@ function wpcom_shortcodereverse_parseattr( $attrs ) {
 	$attrs = shortcode_atts( $defaults, $attrs );
 
 	$attrs['src']    = strip_tags( $attrs['src'] ); // For sanity
-	$attrs['width']  = ( is_numeric( $attrs['width'] ) ) ? abs( (int) $attrs['width'] ) : $defaults['width'];
-	$attrs['height'] = ( is_numeric( $attrs['height'] ) ) ? abs( (int) $attrs['height'] ) : $defaults['height'];
+	$attrs['width']  = ( is_numeric( $attrs['width'] ) ) ? abs( intval( $attrs['width'] ) ) : $defaults['width'];
+	$attrs['height'] = ( is_numeric( $attrs['height'] ) ) ? abs( intval( $attrs['height'] ) ) : $defaults['height'];
 
 	return $attrs;
 }

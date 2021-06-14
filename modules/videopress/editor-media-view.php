@@ -1,7 +1,5 @@
 <?php
 
-use Automattic\Jetpack\Assets;
-
 /**
  * WordPress Shortcode Editor View JS Code
  */
@@ -17,7 +15,7 @@ function videopress_handle_editor_view_js() {
 	wp_enqueue_style( 'videopress-editor-ui', plugins_url( 'css/editor.css', __FILE__ ) );
 	wp_enqueue_script(
 		'videopress-editor-view',
-		Assets::get_file_url_for_environment(
+		Jetpack::get_file_url_for_environment(
 			'_inc/build/videopress/js/editor-view.min.js',
 			'modules/videopress/js/editor-view.js'
 		),
@@ -29,7 +27,7 @@ function videopress_handle_editor_view_js() {
 		'videopress-editor-view',
 		'vpEditorView',
 		array(
-			'home_url_host'     => wp_parse_url( home_url(), PHP_URL_HOST ),
+			'home_url_host'     => parse_url( home_url(), PHP_URL_HOST ),
 			'min_content_width' => VIDEOPRESS_MIN_WIDTH,
 			'content_width'     => $content_width,
 			'modal_labels'      => array(
@@ -73,7 +71,7 @@ function videopress_editor_view_js_templates() {
 	<script type="text/html" id="tmpl-videopress_iframe_vnext">
 		<div class="tmpl-videopress_iframe_next" style="max-height:{{ data.height }}px;">
 			<div class="videopress-editor-wrapper" style="padding-top:{{ data.ratio }}%;">
-				<iframe style="display: block; max-width: 100%; max-height: 100%;" width="{{ data.width }}" height="{{ data.height }}" src="https://videopress.com/embed/{{ data.guid }}?{{ data.urlargs }}" frameborder='0' allowfullscreen></iframe>
+				<iframe style="display: block;" width="{{ data.width }}" height="{{ data.height }}" src="https://videopress.com/embed/{{ data.guid }}?{{ data.urlargs }}" frameborder='0' allowfullscreen></iframe>
 			</div>
 		</div>
 	</script>
@@ -170,7 +168,7 @@ function add_videopress_media_overrides() {
 function videopress_override_media_templates() {
 	?>
 	<script type="text/html" id="tmpl-videopress_iframe_vnext">
-		<iframe style="display: block; max-width: 100%; max-height: 100%;" width="{{ data.width }}" height="{{ data.height }}" src="https://videopress.com/embed/{{ data.guid }}?{{ data.urlargs }}" frameborder='0' allowfullscreen></iframe>
+		<iframe style="display: block; max-width: 100%;" width="{{ data.width }}" height="{{ data.height }}" src="https://videopress.com/embed/{{ data.guid }}?{{ data.urlargs }}" frameborder='0' allowfullscreen></iframe>
 	</script>
 	<script>
 		(function( media ){
@@ -189,8 +187,8 @@ function videopress_override_media_templates() {
 						if ( this.model.get('videopress_guid') ) {
 							this.$('.attachment-media-view .thumbnail-video').html( vp_template( {
 								guid   : this.model.get('videopress_guid'),
-								width  : this.model.get('width') > 0 ? this.model.get('width') : '100%',
-								height : this.model.get('height') > 0 ? this.model.get('height') : '100%'
+								width  : this.model.get('width'),
+								height : this.model.get('height')
 							}));
 						}
 					}

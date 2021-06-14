@@ -1,17 +1,9 @@
 <?php
 /**
- * Jetpack Debug Data for the Site Health sections.
+ * Jetpack Debug Data for the legacy Jetpack debugger page and the WP 5.2-era Site Health sections.
  *
- * @package automattic/jetpack
+ * @package jetpack
  */
-
-use Automattic\Jetpack\Connection\Tokens;
-use Automattic\Jetpack\Connection\Urls;
-use Automattic\Jetpack\Constants;
-use Automattic\Jetpack\Identity_Crisis;
-use Automattic\Jetpack\Redirect;
-use Automattic\Jetpack\Sync\Modules;
-use Automattic\Jetpack\Sync\Sender;
 
 /**
  * Class Jetpack_Debug_Data
@@ -45,7 +37,7 @@ class Jetpack_Debug_Data {
 	 * @return string Human readable time.
 	 */
 	public static function seconds_to_time( $seconds ) {
-		$seconds = (int) $seconds;
+		$seconds = intval( $seconds );
 		$units   = array(
 			'week'   => WEEK_IN_SECONDS,
 			'day'    => DAY_IN_SECONDS,
@@ -59,7 +51,7 @@ class Jetpack_Debug_Data {
 		}
 		$human_readable = '';
 		foreach ( $units as $name => $divisor ) {
-			$quot = (int) ( $seconds / $divisor );
+			$quot = intval( $seconds / $divisor );
 			if ( $quot ) {
 				$human_readable .= "$quot $name";
 				$human_readable .= ( abs( $quot ) > 1 ? 's' : '' ) . ', ';
@@ -97,10 +89,6 @@ class Jetpack_Debug_Data {
 	 * @return array $args Debug information in the same format as the initial argument.
 	 */
 	public static function core_debug_data( $debug ) {
-		$support_url = Jetpack::is_development_version()
-			? Redirect::get_url( 'jetpack-contact-support-beta-group' )
-			: Redirect::get_url( 'jetpack-contact-support' );
-
 		$jetpack = array(
 			'jetpack' => array(
 				'label'       => __( 'Jetpack', 'jetpack' ),
@@ -110,7 +98,7 @@ class Jetpack_Debug_Data {
 						'Diagnostic information helpful to <a href="%1$s" target="_blank" rel="noopener noreferrer">your Jetpack Happiness team<span class="screen-reader-text">%2$s</span></a>',
 						'jetpack'
 					),
-					esc_url( $support_url ),
+					esc_html( 'https://jetpack.com/contact-support/' ),
 					__( '(opens in a new tab)', 'jetpack' )
 				),
 				'fields'      => self::debug_data(),
@@ -168,7 +156,7 @@ class Jetpack_Debug_Data {
 		);
 		$debug_info['master_user']    = array(
 			'label'   => 'Jetpack Master User',
-			'value'   => self::human_readable_master_user(), // Only ID number and user name.
+			'value'   => self::human_readable_master_user(),
 			'private' => false,
 		);
 
@@ -182,8 +170,8 @@ class Jetpack_Debug_Data {
 		 * If a token does not contain a period, then it is malformed and we report it as such.
 		 */
 		$user_id    = get_current_user_id();
-		$blog_token = ( new Tokens() )->get_access_token();
-		$user_token = ( new Tokens() )->get_access_token( $user_id );
+		$blog_token = Jetpack_Data::get_access_token();
+		$user_token = Jetpack_Data::get_access_token( $user_id );
 
 		$tokenset = '';
 		if ( $blog_token ) {
@@ -266,7 +254,7 @@ class Jetpack_Debug_Data {
 				$debug_info[ $header ] = array(
 					'label'   => 'Server Variable ' . $header,
 					'value'   => ( $_SERVER[ $header ] ) ? $_SERVER[ $header ] : 'false',
-					'private' => true, // This isn't really 'private' information, but we don't want folks to easily paste these into public forums.
+					'private' => false,
 				);
 			}
 		}
@@ -278,14 +266,21 @@ class Jetpack_Debug_Data {
 		);
 
 		/** Sync Debug Information */
-		$sync_module = Modules::get_module( 'full-sync' );
+		/** Load Sync modules */
+		require_once JETPACK__PLUGIN_DIR . 'sync/class.jetpack-sync-modules.php';
+		/** Load Sync sender */
+		require_once JETPACK__PLUGIN_DIR . 'sync/class.jetpack-sync-sender.php';
+		/** Load Sync functions */
+		require_once JETPACK__PLUGIN_DIR . 'sync/class.jetpack-sync-functions.php';
+
+		$sync_module = Jetpack_Sync_Modules::get_module( 'full-sync' );
 		if ( $sync_module ) {
 			$sync_statuses              = $sync_module->get_status();
 			$human_readable_sync_status = array();
 			foreach ( $sync_statuses as $sync_status => $sync_status_value ) {
 				$human_readable_sync_status[ $sync_status ] =
 					in_array( $sync_status, array( 'started', 'queue_finished', 'send_started', 'finished' ), true )
-						? gmdate( 'r', $sync_status_value ) : $sync_status_value;
+						? date( 'r', $sync_status_value ) : $sync_status_value;
 			}
 			$debug_info['full_sync'] = array(
 				'label'   => 'Full Sync Status',
@@ -294,7 +289,7 @@ class Jetpack_Debug_Data {
 			);
 		}
 
-		$queue = Sender::get_instance()->get_sync_queue();
+		$queue = Jetpack_Sync_Sender::get_instance()->get_sync_queue();
 
 		$debug_info['sync_size'] = array(
 			'label'   => 'Sync Queue Size',
@@ -307,7 +302,7 @@ class Jetpack_Debug_Data {
 			'private' => false,
 		);
 
-		$full_sync_queue = Sender::get_instance()->get_full_sync_queue();
+		$full_sync_queue = Jetpack_Sync_Sender::get_instance()->get_full_sync_queue();
 
 		$debug_info['full_sync_size'] = array(
 			'label'   => 'Full Sync Queue Size',
@@ -326,10 +321,10 @@ class Jetpack_Debug_Data {
 		 * Must follow sync debug since it depends on sync functionality.
 		 */
 		$idc_urls = array(
-			'home'       => Urls::home_url(),
-			'siteurl'    => Urls::site_url(),
-			'WP_HOME'    => Constants::is_defined( 'WP_HOME' ) ? Constants::get_constant( 'WP_HOME' ) : '',
-			'WP_SITEURL' => Constants::is_defined( 'WP_SITEURL' ) ? Constants::get_constant( 'WP_SITEURL' ) : '',
+			'home'       => Jetpack_Sync_Functions::home_url(),
+			'siteurl'    => Jetpack_Sync_Functions::site_url(),
+			'WP_HOME'    => Jetpack_Constants::is_defined( 'WP_HOME' ) ? Jetpack_Constants::get_constant( 'WP_HOME' ) : '',
+			'WP_SITEURL' => Jetpack_Constants::is_defined( 'WP_SITEURL' ) ? Jetpack_Constants::get_constant( 'WP_SITEURL' ) : '',
 		);
 
 		$debug_info['idc_urls']         = array(
@@ -344,7 +339,7 @@ class Jetpack_Debug_Data {
 		);
 		$debug_info['idc_optin']        = array(
 			'label'   => 'IDC Opt-in',
-			'value'   => Identity_Crisis::sync_idc_optin(),
+			'value'   => Jetpack::sync_idc_optin(),
 			'private' => false,
 		);
 
@@ -395,6 +390,6 @@ class Jetpack_Debug_Data {
 	private static function human_readable_user( $user ) {
 		$user = new WP_User( $user );
 
-		return sprintf( '#%1$d %2$s', $user->ID, $user->user_login ); // Format: "#1 username".
+		return sprintf( '#%1$d %2$s (%3$s)', $user->ID, $user->user_login, $user->user_email ); // Format: "#1 username (user@example.com)".
 	}
 }

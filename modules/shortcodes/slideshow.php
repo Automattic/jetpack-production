@@ -1,13 +1,9 @@
 <?php //phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
-
-use Automattic\Jetpack\Assets;
-use Automattic\Jetpack\Extensions\Slideshow;
-
 /**
  * Slideshow shortcode.
  * Adds a new "slideshow" gallery type when adding a gallery using the classic editor.
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
 /**
@@ -113,7 +109,7 @@ class Jetpack_Slideshow_Shortcode {
 		}
 
 		// Don't restrict to the current post if include.
-		$post_parent = ( empty( $attr['include'] ) ) ? (int) $attr['id'] : null;
+		$post_parent = ( empty( $attr['include'] ) ) ? intval( $attr['id'] ) : null;
 
 		$attachments = get_posts(
 			array(
@@ -164,13 +160,13 @@ class Jetpack_Slideshow_Shortcode {
 			);
 		}
 
-		$color     = Jetpack_Options::get_option( 'slideshow_background_color', 'black' );
-		$autostart = $attr['autostart'] ? $attr['autostart'] : 'true';
-		$js_attr   = array(
+		$color = Jetpack_Options::get_option( 'slideshow_background_color', 'black' );
+
+		$js_attr = array(
 			'gallery'   => $gallery,
 			'selector'  => $gallery_instance,
 			'trans'     => $attr['trans'] ? $attr['trans'] : 'fade',
-			'autostart' => $autostart,
+			'autostart' => $attr['autostart'] ? $attr['autostart'] : 'true',
 			'color'     => $color,
 		);
 
@@ -181,21 +177,6 @@ class Jetpack_Slideshow_Shortcode {
 				esc_url( get_permalink( $post_id ) . '#' . $gallery_instance . '-slideshow' ),
 				esc_html__( 'Click to view slideshow.', 'jetpack' )
 			);
-		}
-
-		if ( class_exists( 'Jetpack_AMP_Support' ) && Jetpack_AMP_Support::is_amp_request() ) {
-			// Load the styles and use the rendering method from the Slideshow block.
-			Jetpack_Gutenberg::load_styles_as_required( 'slideshow' );
-
-			$amp_args = array(
-				'ids' => wp_list_pluck( $gallery, 'id' ),
-			);
-
-			if ( 'true' == $autostart ) { // phpcs:ignore WordPress.PHP.StrictComparisons.LooseComparison -- attribute can be stored as boolean or string.
-				$amp_args['autoplay'] = true;
-			}
-
-			return Slideshow\render_amp( $amp_args );
 		}
 
 		return $this->slideshow_js( $js_attr );
@@ -270,7 +251,7 @@ class Jetpack_Slideshow_Shortcode {
 		wp_enqueue_script( 'jquery-cycle', plugins_url( '/js/jquery.cycle.min.js', __FILE__ ), array( 'jquery' ), '20161231', true );
 		wp_enqueue_script(
 			'jetpack-slideshow',
-			Assets::get_file_url_for_environment( '_inc/build/shortcodes/js/slideshow-shortcode.min.js', 'modules/shortcodes/js/slideshow-shortcode.js' ),
+			Jetpack::get_file_url_for_environment( '_inc/build/shortcodes/js/slideshow-shortcode.min.js', 'modules/shortcodes/js/slideshow-shortcode.js' ),
 			array( 'jquery-cycle' ),
 			'20160119.1',
 			true
@@ -295,20 +276,14 @@ class Jetpack_Slideshow_Shortcode {
 			 * @since 4.7.0 Added the `speed` option to the array of options.
 			 *
 			 * @param array $args
-			 * - string - spinner        - URL of the spinner image.
-			 * - string - speed          - Speed of the slideshow. Defaults to 4000.
-			 * - string - label_prev     - Aria label for slideshow's previous button
-			 * - string - label_stop    - Aria label for slideshow's pause button
-			 * - string - label_next     - Aria label for slideshow's next button
+			 * - string - spinner - URL of the spinner image.
+			 * - string - speed   - Speed of the slideshow. Defaults to 4000.
 			 */
 			apply_filters(
 				'jetpack_js_slideshow_settings',
 				array(
-					'spinner'    => plugins_url( '/img/slideshow-loader.gif', __FILE__ ),
-					'speed'      => '4000',
-					'label_prev' => __( 'Previous Slide', 'jetpack' ),
-					'label_stop' => __( 'Pause Slideshow', 'jetpack' ),
-					'label_next' => __( 'Next Slide', 'jetpack' ),
+					'spinner' => plugins_url( '/img/slideshow-loader.gif', __FILE__ ),
+					'speed'   => '4000',
 				)
 			)
 		);

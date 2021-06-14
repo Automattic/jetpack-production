@@ -10,11 +10,11 @@
  * [ted id="http://www.ted.com/talks/view/id/210" lang="en"]
  * [ted id=1539 lang=fr width=560 height=315]
  *
- * @package automattic/jetpack
+ * @package Jetpack
  */
 
-wp_oembed_add_provider( '!https?://(www\.)?ted.com/talks/view/id/.+!i', 'https://www.ted.com/talks/oembed.json', true );
-wp_oembed_add_provider( '!https?://(www\.)?ted.com/talks/[a-zA-Z\-\_]+\.html!i', 'https://www.ted.com/talks/oembed.json', true );
+wp_oembed_add_provider( '!https?://(www\.)?ted.com/talks/view/id/.+!i', 'http://www.ted.com/talks/oembed.json', true );
+wp_oembed_add_provider( '!https?://(www\.)?ted.com/talks/[a-zA-Z\-\_]+\.html!i', 'http://www.ted.com/talks/oembed.json', true );
 
 /**
  * Get the unique ID of a TED video.
@@ -48,9 +48,9 @@ function shortcode_ted( $atts ) {
 
 	$url = '';
 	if ( preg_match( '#^[\d]+$#', $atts['id'], $matches ) ) {
-		$url = 'https://ted.com/talks/view/id/' . $matches[0];
+		$url = 'http://ted.com/talks/view/id/' . $matches[0];
 	} elseif ( preg_match( '#^https?://(www\.)?ted\.com/talks/view/id/[0-9]+$#', $atts['id'], $matches ) ) {
-		$url = set_url_scheme( $matches[0], 'https' );
+		$url = $matches[0];
 	}
 
 	unset( $atts['id'] );
@@ -96,26 +96,3 @@ add_shortcode( 'ted', 'shortcode_ted' );
 function ted_filter_oembed_fetch_url( $provider, $url, $args ) {
 	return add_query_arg( 'lang', $args['lang'], $provider );
 }
-
-/**
- * Filter the oembed html to set the sandbox attribute in the iframe
- *
- * @param string|false $cache The cached HTML result, stored in post meta.
- * @param string       $url   The attempted embed URL.
- *
- * @return string|false
- */
-function ted_filter_oembed_amp_iframe( $cache, $url ) {
-	if ( is_string( $cache )
-		&& strpos( $url, 'ted.com' )
-	) {
-		$cache = preg_replace(
-			'/src=[\'"].*?[\'"]/',
-			'$0 sandbox="allow-popups allow-scripts allow-same-origin"',
-			$cache
-		);
-	}
-
-	return $cache;
-}
-add_filter( 'embed_oembed_html', 'ted_filter_oembed_amp_iframe', 10, 2 );

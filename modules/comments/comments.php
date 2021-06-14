@@ -1,12 +1,11 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 
 require dirname( __FILE__ ) . '/base.php';
-use Automattic\Jetpack\Connection\Tokens;
 
 /**
  * Main Comments class
  *
- * @package automattic/jetpack
+ * @package JetpackComments
  * @version 1.4
  * @since   1.4
  */
@@ -156,7 +155,7 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 
 		// Detect whether it's a Facebook or Twitter avatar
 		$foreign_avatar          = get_comment_meta( $comment->comment_ID, 'hc_avatar', true );
-		$foreign_avatar_hostname = wp_parse_url( $foreign_avatar, PHP_URL_HOST );
+		$foreign_avatar_hostname = parse_url( $foreign_avatar, PHP_URL_HOST );
 		if ( ! $foreign_avatar_hostname ||
 			! preg_match( '/\.?(graph\.facebook\.com|twimg\.com)$/', $foreign_avatar_hostname ) ) {
 			return $avatar;
@@ -174,7 +173,7 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 	 */
 	public function comment_form_before() {
 		/**
-		 * Filters the setting that determines if Jetpack comments should be enabled for
+		 * Filters the setting that determines if Jetpagk comments should be enabled for
 		 * the current post type.
 		 *
 		 * @module comments
@@ -277,11 +276,11 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 			$params['has_cookie_consent']  = (int) ! empty( $commenter['comment_author_email'] );
 		}
 
-		$blog_token        = ( new Tokens() )->get_access_token();
+		$blog_token = Jetpack_Data::get_access_token();
 		list( $token_key ) = explode( '.', $blog_token->secret, 2 );
 		// Prophylactic check: anything else should never happen.
 		if ( $token_key && $token_key !== $blog_token->secret ) {
-			// Is the token a Special Token (@see class.tokens.php)?
+			// Is the token a Special Token (@see class.jetpack-data.php)?
 			if ( preg_match( '/^;.\d+;\d+;$/', $token_key, $matches ) ) {
 				// The token key for a Special Token is public.
 				$params['token_key'] = $token_key;
@@ -292,7 +291,7 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 				 * one Normal Token per site, avoid concern by
 				 * sending the magic "use the Normal Token" token key.
 				 */
-				$params['token_key'] = Tokens::MAGIC_NORMAL_TOKEN_KEY;
+				$params['token_key'] = Jetpack_Data::MAGIC_NORMAL_TOKEN_KEY;
 			}
 		}
 
@@ -302,7 +301,7 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 		}
 
 		$params['sig']    = $signature;
-		$url_origin       = 'https://jetpack.wordpress.com';
+		$url_origin       = set_url_scheme( 'http://jetpack.wordpress.com' );
 		$url              = "{$url_origin}/jetpack-comment/?" . http_build_query( $params );
 		$url              = "{$url}#parent=" . urlencode( set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ) );
 		$this->signed_url = $url;
@@ -325,8 +324,6 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 		$show_greeting = apply_filters( 'jetpack_comment_form_display_greeting', true );
 
 		// The actual iframe (loads comment form from Jetpack server)
-
-		$is_amp = Jetpack_AMP_Support::is_amp_request();
 		?>
 
 		<div id="respond" class="comment-respond">
@@ -336,26 +333,8 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 				</h3>
 			<?php endif; ?>
 			<form id="commentform" class="comment-form">
-				<iframe
-					title="<?php esc_attr_e( 'Comment Form', 'jetpack' ); ?>"
-					src="<?php echo esc_url( $url ); ?>"
-					<?php if ( $is_amp ) : ?>
-						resizable
-						layout="fixed-height"
-						height="<?php echo esc_attr( $height ); ?>"
-					<?php else : ?>
-						name="jetpack_remote_comment"
-						style="width:100%; height: <?php echo esc_attr( $height ); ?>px; border:0;"
-					<?php endif; ?>
-					class="jetpack_remote_comment"
-					id="jetpack_remote_comment"
-					sandbox="allow-same-origin allow-top-navigation allow-scripts allow-forms allow-popups"
-				>
-					<?php if ( $is_amp ) : ?>
-						<button overflow><?php esc_html_e( 'Show more', 'jetpack' ); ?></button>
-					<?php endif; ?>
-				</iframe>
-				<?php if ( ! $is_amp ) : ?>
+				<iframe title="<?php esc_attr_e( 'Comment Form', 'jetpack' ); ?>" src="<?php echo esc_url( $url ); ?>" style="width:100%; height: <?php echo $height; ?>px; border:0;" name="jetpack_remote_comment" class="jetpack_remote_comment" id="jetpack_remote_comment" sandbox="allow-same-origin allow-top-navigation allow-scripts allow-forms allow-popups"></iframe>
+				<?php if ( ! Jetpack_AMP_Support::is_amp_request() ) : ?>
 					<!--[if !IE]><!-->
 					<script>
 						document.addEventListener('DOMContentLoaded', function () {
@@ -384,12 +363,7 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 	 * @since JetpackComments (1.4)
 	 */
 	public function watch_comment_parent() {
-		if ( Jetpack_AMP_Support::is_amp_request() ) {
-			// @todo Implement AMP support.
-			return;
-		}
-
-		$url_origin = 'https://jetpack.wordpress.com';
+		$url_origin = set_url_scheme( 'http://jetpack.wordpress.com' );
 		?>
 
 		<!--[if IE]>
@@ -510,7 +484,7 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 			$post_array['hc_avatar'] = htmlentities( $post_array['hc_avatar'] );
 		}
 
-		$blog_token = ( new Tokens() )->get_access_token( false, $post_array['token_key'] );
+		$blog_token = Jetpack_Data::get_access_token( false, $post_array['token_key'] );
 		if ( ! $blog_token ) {
 			wp_die( __( 'Unknown security token.', 'jetpack' ), 400 );
 		}

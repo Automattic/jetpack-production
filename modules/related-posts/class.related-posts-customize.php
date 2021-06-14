@@ -1,7 +1,5 @@
 <?php
 
-use Automattic\Jetpack\Assets;
-
 // Exit if file is accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -270,7 +268,7 @@ class Jetpack_Related_Posts_Customize {
 	function customize_controls_enqueue_scripts() {
 		wp_enqueue_script(
 			'jetpack_related-posts-customizer',
-			Assets::get_file_url_for_environment(
+			Jetpack::get_file_url_for_environment(
 				'_inc/build/related-posts/related-posts-customizer.min.js',
 				'modules/related-posts/related-posts-customizer.js'
 			),
@@ -299,4 +297,4 @@ class Jetpack_Message_Control extends WP_Customize_Control {
 } // class end
 
 // Initialize controls
-new Jetpack_Related_Posts_Customize();
+new Jetpack_Related_Posts_Customize;
