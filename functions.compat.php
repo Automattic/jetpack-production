@@ -1,30 +1,31 @@
 <?php
 
-use Automattic\Jetpack\Connection\Manager as Connection_Manager;
-
+if ( !function_exists( 'rawurlencode_deep' ) ) :
 /**
-* Required for class.media-extractor.php to match expected function naming convention.
-*
-* @param $url Can be just the $url or the whole $atts array
-* @return bool|mixed The Youtube video ID via jetpack_get_youtube_id
-*/
-
-function jetpack_shortcode_get_youtube_id( $url ) {
-	return jetpack_get_youtube_id( $url );
+ * Navigates through an array and raw encodes the values to be used in a URL.
+ *
+ * @since WordPress 3.4.0
+ *
+ * @param array|string $value The array or string to be encoded.
+ * @return array|string $value The encoded array (or string from the callback).
+ */
+function rawurlencode_deep( $value ) {
+	return is_array( $value ) ? array_map( 'rawurlencode_deep', $value ) : rawurlencode( $value );
 }
+endif;
 
+if ( !function_exists( 'get_youtube_id' ) ) :
 /**
-* @param string $url Can be just the $url or the whole $atts array
+* @param $url Can be just the $url or the whole $atts array
 * @return bool|mixed The Youtube video ID
 */
-function jetpack_get_youtube_id( $url ) {
+function get_youtube_id( $url ) {
 	// Do we have an $atts array?  Get first att
-	if ( is_array( $url ) ) {
-		$url = reset( $url );
-	}
+	if ( is_array( $url ) )
+		$url = $url[0];
 
 	$url = youtube_sanitize_url( $url );
-	$url = wp_parse_url( $url );
+	$url = parse_url( $url );
 	$id  = false;
 
 	if ( ! isset( $url['query'] ) )
@@ -43,6 +44,7 @@ function jetpack_get_youtube_id( $url ) {
 
 	return $id;
 }
+endif;
 
 if ( !function_exists( 'youtube_sanitize_url' ) ) :
 /**
@@ -56,7 +58,7 @@ function youtube_sanitize_url( $url ) {
 	$url = trim( $url );
 	$url = str_replace( array( 'youtu.be/', '/v/', '#!v=', '&amp;', '&#038;', 'playlist' ), array( 'youtu.be/?v=', '/?v=', '?v=', '&', '&', 'videoseries' ), $url );
 
-	// Replace any extra question marks with ampersands - the result of a URL like "https://www.youtube.com/v/9FhMMmqzbD8?fs=1&hl=en_US" being passed in.
+	// Replace any extra question marks with ampersands - the result of a URL like "http://www.youtube.com/v/9FhMMmqzbD8?fs=1&hl=en_US" being passed in.
 	$query_string_start = strpos( $url, "?" );
 
 	if ( false !== $query_string_start ) {
@@ -66,35 +68,3 @@ function youtube_sanitize_url( $url ) {
 	return $url;
 }
 endif;
-
-/**
- * Merge in three string helper functions from WPCOM.
- *
- * @see WPCOM/wp-content/mu-plugins/string-helpers.php
- */
-if ( ! function_exists( 'wp_startswith' ) ) :
-	function wp_startswith( $haystack, $needle ) {
-		return 0 === strpos( $haystack, $needle );
-	}
-endif;
-
-
-if ( ! function_exists( 'wp_endswith' ) ) :
-	function wp_endswith( $haystack, $needle ) {
-		return $needle === substr( $haystack, -strlen( $needle ));
-	}
-endif;
-
-if ( ! function_exists( 'wp_in' ) ) :
-	function wp_in( $needle, $haystack ) {
-		return false !== strpos( $haystack, $needle );
-	}
-endif;
-
-/**
- * @deprecated 7.5 Use Connection_Manager instead.
- */
-function jetpack_sha1_base64( $text ) {
-	$connection = new Connection_Manager();
-	return $connection->sha1_base64( $text );
-}
