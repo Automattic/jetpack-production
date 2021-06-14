@@ -1,7 +1,5 @@
 <?php
 
-use Automattic\Jetpack\Assets;
-
 /**
  * WordPress Shortcode Editor View JS Code
  */
@@ -15,40 +13,27 @@ function videopress_handle_editor_view_js() {
 	add_action( 'admin_print_footer_scripts', 'videopress_editor_view_js_templates' );
 
 	wp_enqueue_style( 'videopress-editor-ui', plugins_url( 'css/editor.css', __FILE__ ) );
-	wp_enqueue_script(
-		'videopress-editor-view',
-		Assets::get_file_url_for_environment(
-			'_inc/build/videopress/js/editor-view.min.js',
-			'modules/videopress/js/editor-view.js'
-		),
-		array( 'wp-util', 'jquery' ),
-		false,
-		true
-	);
-	wp_localize_script(
-		'videopress-editor-view',
-		'vpEditorView',
-		array(
-			'home_url_host'     => wp_parse_url( home_url(), PHP_URL_HOST ),
-			'min_content_width' => VIDEOPRESS_MIN_WIDTH,
-			'content_width'     => $content_width,
-			'modal_labels'      => array(
-				'title'     => esc_html__( 'VideoPress Shortcode', 'jetpack' ),
-				'guid'      => esc_html__( 'Video ID', 'jetpack' ),
-				'w'         => esc_html__( 'Video Width', 'jetpack' ),
-				'w_unit'    => esc_html__( 'pixels', 'jetpack' ),
-				/* Translators: example of usage of this is "Start Video After 10 seconds" */
-				'at'        => esc_html__( 'Start Video After', 'jetpack' ),
-				'at_unit'   => esc_html__( 'seconds', 'jetpack' ),
-				'hd'        => esc_html__( 'High definition on by default', 'jetpack' ),
-				'permalink' => esc_html__( 'Link the video title to its URL on VideoPress.com', 'jetpack' ),
-				'autoplay'  => esc_html__( 'Autoplay video on page load', 'jetpack' ),
-				'loop'      => esc_html__( 'Loop video playback', 'jetpack' ),
-				'freedom'   => esc_html__( 'Use only Open Source codecs (may degrade performance)', 'jetpack' ),
-				'flashonly' => esc_html__( 'Use legacy Flash Player (not recommended)', 'jetpack' ),
-			),
+	wp_enqueue_script( 'videopress-editor-view', plugins_url( 'js/editor-view.js', __FILE__ ), array( 'wp-util', 'jquery' ), false, true );
+	wp_localize_script( 'videopress-editor-view', 'vpEditorView', array(
+		'home_url_host'     => parse_url( home_url(), PHP_URL_HOST ),
+		'min_content_width' => VIDEOPRESS_MIN_WIDTH,
+		'content_width'     => $content_width,
+		'modal_labels'      => array(
+			'title'     => esc_html__( 'VideoPress Shortcode', 'jetpack' ),
+			'guid'      => esc_html__( 'Video ID', 'jetpack' ),
+			'w'         => esc_html__( 'Video Width', 'jetpack' ),
+			'w_unit'    => esc_html__( 'pixels', 'jetpack' ),
+			/* Translators: example of usage of this is "Start Video After 10 seconds" */
+			'at'        => esc_html__( 'Start Video After', 'jetpack' ),
+			'at_unit'   => esc_html__( 'seconds', 'jetpack' ),
+			'hd'        => esc_html__( 'High definition on by default', 'jetpack' ),
+			'permalink' => esc_html__( 'Link the video title to its URL on VideoPress.com', 'jetpack' ),
+			'autoplay'  => esc_html__( 'Autoplay video on page load', 'jetpack' ),
+			'loop'      => esc_html__( 'Loop video playback', 'jetpack' ),
+			'freedom'   => esc_html__( 'Use only Open Source codecs (may degrade performance)', 'jetpack' ),
+			'flashonly' => esc_html__( 'Use legacy Flash Player (not recommended)', 'jetpack' ),
 		)
-	);
+	) );
 
 	add_editor_style( plugins_url( 'css/videopress-editor-style.css', __FILE__ ) );
 }
@@ -73,7 +58,7 @@ function videopress_editor_view_js_templates() {
 	<script type="text/html" id="tmpl-videopress_iframe_vnext">
 		<div class="tmpl-videopress_iframe_next" style="max-height:{{ data.height }}px;">
 			<div class="videopress-editor-wrapper" style="padding-top:{{ data.ratio }}%;">
-				<iframe style="display: block; max-width: 100%; max-height: 100%;" width="{{ data.width }}" height="{{ data.height }}" src="https://videopress.com/embed/{{ data.guid }}?{{ data.urlargs }}" frameborder='0' allowfullscreen></iframe>
+				<iframe style="display: block;" width="{{ data.width }}" height="{{ data.height }}" src="https://videopress.com/embed/{{ data.guid }}?{{ data.urlargs }}" frameborder='0' allowfullscreen></iframe>
 			</div>
 		</div>
 	</script>
@@ -83,7 +68,7 @@ function videopress_editor_view_js_templates() {
 /*************************************************\
 | This is the chunk that handles overriding core  |
 | media stuff so VideoPress can display natively. |
-\*/
+\*************************************************/
 
 /**
  * Media Grid:
@@ -116,14 +101,6 @@ function videopress_ajax_query_attachments_args( $args ) {
  */
 add_action( 'pre_get_posts', 'videopress_media_list_table_query' );
 function videopress_media_list_table_query( $query ) {
-
-	if (
-		! function_exists( 'get_current_screen' )
-		|| is_null( get_current_screen() )
-	) {
-		return;
-	}
-
 	if ( is_admin() && $query->is_main_query() && ( 'upload' === get_current_screen()->id ) ) {
 		$meta_query = array(
 			array(
@@ -167,10 +144,10 @@ function add_videopress_media_overrides() {
  *
  * We have a template for the iframe to get injected.
  */
-function videopress_override_media_templates() {
+function videopress_override_media_templates(){
 	?>
 	<script type="text/html" id="tmpl-videopress_iframe_vnext">
-		<iframe style="display: block; max-width: 100%; max-height: 100%;" width="{{ data.width }}" height="{{ data.height }}" src="https://videopress.com/embed/{{ data.guid }}?{{ data.urlargs }}" frameborder='0' allowfullscreen></iframe>
+		<iframe style="display: block; max-width: 100%;" width="{{ data.width }}" height="{{ data.height }}" src="https://videopress.com/embed/{{ data.guid }}?{{ data.urlargs }}" frameborder='0' allowfullscreen></iframe>
 	</script>
 	<script>
 		(function( media ){
@@ -189,8 +166,8 @@ function videopress_override_media_templates() {
 						if ( this.model.get('videopress_guid') ) {
 							this.$('.attachment-media-view .thumbnail-video').html( vp_template( {
 								guid   : this.model.get('videopress_guid'),
-								width  : this.model.get('width') > 0 ? this.model.get('width') : '100%',
-								height : this.model.get('height') > 0 ? this.model.get('height') : '100%'
+								width  : this.model.get('width'),
+								height : this.model.get('height')
 							}));
 						}
 					}
@@ -224,15 +201,13 @@ function videopress_media_send_to_editor( $html, $id, $attachment ) {
 	$videopress_guid = get_post_meta( $id, 'videopress_guid', true );
 	if ( $videopress_guid && videopress_is_valid_guid( $videopress_guid ) ) {
 		if ( '[video ' === substr( $html, 0, 7 ) ) {
-			$html = sprintf( '[videopress %1$s]', esc_attr( $videopress_guid ) );
-
+			$replace = sprintf( ' videopress_guid="%1$s"][/video]', esc_attr( $videopress_guid ) );
+			$html = str_replace( '][/video]', $replace, $html );
 		} elseif ( '<a href=' === substr( $html, 0, 8 ) ) {
 			// We got here because `wp_attachment_is()` returned false for
 			// video, because there isn't a local copy of the file.
 			$html = sprintf( '[videopress %1$s]', esc_attr( $videopress_guid ) );
 		}
-	} elseif ( videopress_is_attachment_without_guid( $id ) ) {
-		$html = sprintf( '[videopress postid=%d]', $id );
 	}
 	return $html;
 }

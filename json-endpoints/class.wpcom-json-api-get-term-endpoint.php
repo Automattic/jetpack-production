@@ -1,29 +1,10 @@
 <?php
-
-new WPCOM_JSON_API_Get_Term_Endpoint( array(
-	'description' => 'Get information about a single term.',
-	'group'       => 'taxonomy',
-	'stat'        => 'terms:1',
-	'method'      => 'GET',
-	'path'        => '/sites/%s/taxonomies/%s/terms/slug:%s',
-	'path_labels' => array(
-		'$site'     => '(int|string) Site ID or domain',
-		'$taxonomy' => '(string) Taxonomy',
-		'$slug'     => '(string) Term slug',
-	),
-	'response_format' => array(
-		'ID'          => '(int) The term ID.',
-		'name'        => '(string) The name of the term.',
-		'slug'        => '(string) The slug of the term.',
-		'description' => '(string) The description of the term.',
-		'post_count'  => '(int) The number of posts using this term.',
-		'parent'      => '(int) The parent ID for the term, if hierarchical.',
-	),
-
-	'allow_fallback_to_jetpack_blog_token' => true,
-
-	'example_request'  => 'https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/taxonomies/post_tag/terms/slug:wordpresscom',
-) );
+/*
+ * WARNING: This file is distributed verbatim in Jetpack.
+ * There should be nothing WordPress.com specific in this file.
+ *
+ * @hide-in-jetpack
+ */
 
 class WPCOM_JSON_API_Get_Term_Endpoint extends WPCOM_JSON_API_Endpoint {
 	// /sites/%s/taxonomies/%s/terms/slug:%s -> $blog_id, $taxonomy, $slug
@@ -38,7 +19,7 @@ class WPCOM_JSON_API_Get_Term_Endpoint extends WPCOM_JSON_API_Endpoint {
 		}
 
 		$taxonomy_meta = get_taxonomy( $taxonomy );
-		if ( false === $taxonomy_meta || ( ! $taxonomy_meta->public &&
+		if ( false === $taxonomy_meta || ( ! $taxonomy_meta->public && 
 				! current_user_can( $taxonomy_meta->cap->assign_terms ) ) ) {
 			return new WP_Error( 'invalid_taxonomy', 'The taxonomy does not exist', 400 );
 		}
