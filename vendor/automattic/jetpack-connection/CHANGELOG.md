@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Add new 'connection/authorize_url' endpoint.
 - Adds information received from the server to the register_site REST response
 - Enable site-level authentication (blog token) for REST API endpoints
+- Move 'connection/owner' endpoint to Connection package.
 
 ## [1.27.0] - 2021-05-25
 ### Added

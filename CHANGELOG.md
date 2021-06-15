@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixes to build with calypso-build 6.5.0
 - Handle blavatar_url case for story playback site icon
 - Init 9.9 release cycle.
+- Move 'connection/owner' endpoint to Connection package.
 - P2: Conditionally hide admin menu items for hubs/spaces
 - Removed unneeded "test-spelling" script with a vulnerable dependency.
 - Remove premium theme info
