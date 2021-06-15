@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicly includes whether the site is a WP.com Atomic one as part of the Sites API.
 
 ### Improved compatibility
+- Disabling admin bar in Jetpack notifications to prevent keystroke hijacking in the Site Editor.
 - Edit User: hide profile fields ( First Name, Last Name, Display Name, About, Email, Website ) for WordPress.com users. These fields can be edited in WordPress.com from their respective users.
 - Jetpack: Replace the usage of Jetpack_IDC with Identity_Crisis.
 - Repeat Visitor Block: Add JS and PHP block fixture tests.
