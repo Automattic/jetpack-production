@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Extend sync/object to support callables.
 - Implement v4 REST endpoints.
 
 ## [1.22.0] - 2021-06-15

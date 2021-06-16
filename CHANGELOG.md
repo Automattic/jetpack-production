@@ -55,6 +55,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Modularize Customizer and DOM integration
 - Search: Use aliased Preact imports
 - Story block: Fix (server-side) rendering of external stories
+- Sync Unit Test for options get_objects_by_id
 - Temp: Remove sync tests to unblock dev
 - Updated package dependencies
 - Updated package dependencies.
