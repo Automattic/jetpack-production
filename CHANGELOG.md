@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: fix photo info position
 - Inline PDFs: Fix the height to 800px to overcome theme specific CSS.
 - Search: don't open overlay when user is composing text using an input method editor (Chinese, Japanese, Korean and Indic languages)
+- Search: Fix render-breaking typo for Expanded search results
 - Search: prevent standard sidebar widgets ending up in the search modal sidebar when switching themes for WPCOM sites
 - Search: Show correct count for paginated results
 - Updates the webpack configuration for extensions to prevent JS conflicts with other plugins
