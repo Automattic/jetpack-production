@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Adds a setting to csstidy to tell the optimizer to preserve leading decimal zeros.
+- API: properly allow requests to upgrade a plugin outside of autoupdates.
 - Carousel: fix photo info position
 - Inline PDFs: Fix the height to 800px to overcome theme specific CSS.
 - Search: don't open overlay when user is composing text using an input method editor (Chinese, Japanese, Korean and Indic languages)
