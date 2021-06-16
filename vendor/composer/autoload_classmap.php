@@ -89,6 +89,8 @@ return array(
     'Automattic\\Jetpack\\Sync\\Modules\\WooCommerce' => $vendorDir . '/automattic/jetpack-sync/src/modules/class-woocommerce.php',
     'Automattic\\Jetpack\\Sync\\Queue' => $vendorDir . '/automattic/jetpack-sync/src/class-queue.php',
     'Automattic\\Jetpack\\Sync\\Queue_Buffer' => $vendorDir . '/automattic/jetpack-sync/src/class-queue-buffer.php',
+    'Automattic\\Jetpack\\Sync\\REST_Endpoints' => $vendorDir . '/automattic/jetpack-sync/src/class-rest-endpoints.php',
+    'Automattic\\Jetpack\\Sync\\REST_Sender' => $vendorDir . '/automattic/jetpack-sync/src/class-rest-sender.php',
     'Automattic\\Jetpack\\Sync\\Replicastore' => $vendorDir . '/automattic/jetpack-sync/src/class-replicastore.php',
     'Automattic\\Jetpack\\Sync\\Replicastore\\Table_Checksum' => $vendorDir . '/automattic/jetpack-sync/src/replicastore/class-table-checksum.php',
     'Automattic\\Jetpack\\Sync\\Replicastore_Interface' => $vendorDir . '/automattic/jetpack-sync/src/interface-replicastore.php',
