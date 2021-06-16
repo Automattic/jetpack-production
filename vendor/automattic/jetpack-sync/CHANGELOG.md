@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add support to callables to sync/object endpoint.
+- Expand sync/object to support constants
 - Extend sync/object to support callables.
 - Implement v4 REST endpoints.
 
