@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add support to callables to sync/object endpoint.
 - Enable sync/object endpoint support for theme-info
+- Enhance updates module to support get_objects_by_id
 - Expand sync/object to support constants
 - Extend sync/object to support callables.
 - Implement v4 REST endpoints.

@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 - Story block: Fix (server-side) rendering of external stories
 - Sync tests for get_objects_by_id implementation for themes
 - Sync Unit Test for options get_objects_by_id
+- Sync unit tests for get_object_by_id methods in Updates module
 - Temp: Remove sync tests to unblock dev
 - Unit Tests for Sync constants
 - Updated package dependencies
