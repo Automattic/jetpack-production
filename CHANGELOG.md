@@ -67,6 +67,7 @@ This is an alpha version! The changes listed here are not final.
 - Unit Tests for Sync constants
 - Updated package dependencies
 - Updated package dependencies
+- Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
 
