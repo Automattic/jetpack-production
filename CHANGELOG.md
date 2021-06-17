@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: fix photo info position
 - Fix the GIF block to support the widget editor and customizer preview pane.
 - Inline PDFs: Fix the height to 800px to overcome theme specific CSS.
+- Instant Search: prevent override of modal close button styles by theme
 - Search: don't open overlay when user is composing text using an input method editor (Chinese, Japanese, Korean and Indic languages)
 - Search: Fix render-breaking typo for Expanded search results
 - Search: prevent standard sidebar widgets ending up in the search modal sidebar when switching themes for WPCOM sites
