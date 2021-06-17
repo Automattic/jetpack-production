@@ -65,6 +65,7 @@ This is an alpha version! The changes listed here are not final.
 - Unit Tests for Sync constants
 - Updated package dependencies
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## 9.8.1 - 2021-06-08
 ### Bug fixes
