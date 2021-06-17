@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Edit User: hide profile fields ( First Name, Last Name, Display Name, About, Email, Website ) for WordPress.com users. These fields can be edited in WordPress.com from their respective users.
 - Jetpack: Replace the usage of Jetpack_IDC with Identity_Crisis.
 - Repeat Visitor Block: Add JS and PHP block fixture tests.
+- Search: fixed search widget settings are not accessible in WordPress 5.8 Beta widget editor
 - Theme Tools: Improve compatibility between Site Logo and the new Site Logo block from WordPress.
 - Updated minimum supported WordPress to 5.7 in anticipation for WordPress 5.8 coming later this month.
 - Update Sync test_get_post_types_method test.
