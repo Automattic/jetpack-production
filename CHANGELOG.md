@@ -65,6 +65,7 @@ This is an alpha version! The changes listed here are not final.
 - Temp: Remove sync tests to unblock dev
 - Unit Tests for Sync constants
 - Updated package dependencies
+- Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
 
