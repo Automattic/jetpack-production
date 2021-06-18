@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Sync Unit Tests
 - Add two jetpack/v4 endpoints to retrieve and delete a site's purchase token
 - Admin Page: Modularize Redux initialization into a separate helper class.
+- Bump jetpack-backup package version
 - Business Hours Block: Refactor PHP server-rendered fixture test to use parent class.
 - Change build and E2E tests to use pnpm rather than yarn. Add some missing direct deps too, and remove a few unnecessary ones.
 - E2E tests: fix tunnel log not being written

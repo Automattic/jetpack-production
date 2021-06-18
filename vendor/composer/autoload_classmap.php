@@ -16,6 +16,7 @@ return array(
     'Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin' => $vendorDir . '/automattic/jetpack-autoloader/src/CustomAutoloaderPlugin.php',
     'Automattic\\Jetpack\\Autoloader\\ManifestGenerator' => $vendorDir . '/automattic/jetpack-autoloader/src/ManifestGenerator.php',
     'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => $vendorDir . '/automattic/jetpack-backup/src/class-helper-script-manager.php',
+    'Automattic\\Jetpack\\Backup\\REST_Controller' => $vendorDir . '/automattic/jetpack-backup/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Blocks' => $vendorDir . '/automattic/jetpack-blocks/src/class-blocks.php',
     'Automattic\\Jetpack\\Config' => $vendorDir . '/automattic/jetpack-config/src/class-config.php',
     'Automattic\\Jetpack\\ConnectionUI\\Admin' => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php',

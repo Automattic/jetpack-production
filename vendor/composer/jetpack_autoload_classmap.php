@@ -318,6 +318,10 @@ return array(
 		'version' => '1.4.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-blocks/src/class-blocks.php'
 	),
+	'Automattic\\Jetpack\\Backup\\REST_Controller' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-rest-controller.php'
+	),
 	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
 		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-helper-script-manager.php'
