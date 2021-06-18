@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Expand sync/object to support constants
 - Extend sync/object to support callables.
 - Implement v4 REST endpoints.
+- Sync: initialize the IDC package in the Sync package
 
 ## [1.22.0] - 2021-06-15
 ### Changed
