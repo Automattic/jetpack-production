@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Adds a setting to csstidy to tell the optimizer to preserve leading decimal zeros.
 - API: properly allow requests to upgrade a plugin outside of autoupdates.
+- Carousel: fix crashes when opening images with missing data.
 - Carousel: fix photo info position
 - Fix the GIF block to support the widget editor and customizer preview pane.
 - Inline PDFs: Fix the height to 800px to overcome theme specific CSS.
