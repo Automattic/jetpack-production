@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: no longer depends on jQuery.
 - Dashboard: provide more useful information and an option to contact support when there are display issues in the Jetpack dashboard.
 - E2E test reports: send more information about PR to test reporter
+- E2E tests: add test report in Slack notification
 - E2E tests: attach video recordings to test reports
 - E2E tests: trigger workflow dispatch to generate test reports
 - E2E tests reports: send PR number to test reporter
