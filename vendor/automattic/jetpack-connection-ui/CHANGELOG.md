@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Adjust the RNA Connection usage because 'Main' component has been removed to 'ConnectButton'
 - Clean up the code that used to be required for now removed In-Place Connection flow.
 
 ## [1.1.1] - 2021-06-15
