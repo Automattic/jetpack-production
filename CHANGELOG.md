@@ -77,6 +77,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Modularize Customizer and DOM integration
 - Search: Use aliased Preact imports
 - Story block: Fix (server-side) rendering of external stories
+- Story Block: improve navigation, long press to pause and exit story on last tap
 - Sync tests for get_objects_by_id implementation for themes
 - Sync Unit Test for options get_objects_by_id
 - Sync unit tests for get_object_by_id methods in Updates module
