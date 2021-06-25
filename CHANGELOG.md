@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 - Updates the webpack configuration for extensions to prevent JS conflicts with other plugins
 - Videopress: do not allowing video files in WoA sites with Free plan
 - [Carousel]: Improve size of touch zone for close button.
+- [Payments]: Do not hide block configuration instructions when block is nested.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added 'purchasetoken' query param to all url's leading to checkout for allowing logged out user purchases on WordPress.com.
