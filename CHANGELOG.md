@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added a Dashboard Switcher in screen options so that WordPress.com users can switch between WP Admin & WordPress.com screens.
 - Added a nudge for Atomic and WPCOM that is loaded in Customizer's "Additional CSS" section.
+- Added display_embed and rating properties from VideoPress in the update and get media API endpoints.
 - Added Social Preview panel to the pre-publish sidebar to increase visibility.
 - Admin menu: Register Calypso settings pages as independent submenus
 - Carousel: no longer depends on jQuery.
