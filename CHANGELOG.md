@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Changes the main connection flow and chooses between in-place or calypso flows only after the site registration
 
 ### Enhancements
+- Added a Dashboard Switcher in screen options so that WordPress.com users can switch between WP Admin & WordPress.com screens.
 - Added a nudge for Atomic and WPCOM that is loaded in Customizer's "Additional CSS" section.
 - Added Social Preview panel to the pre-publish sidebar to increase visibility.
 - Admin menu: Register Calypso settings pages as independent submenus
