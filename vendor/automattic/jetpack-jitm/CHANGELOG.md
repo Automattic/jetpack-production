@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 - Update node version requirement to 14.16.1
+- Updates the usage of Redirect lib and passes the unliked param as a query argument
 
 ## [1.16.0] - 2021-05-25
 ### Added

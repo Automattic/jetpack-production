@@ -443,7 +443,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-heartbeat/src/class-heartbeat.php'
 	),
 	'Automattic\\Jetpack\\Redirect' => array(
-		'version' => '1.6.9999999.9999999-dev',
+		'version' => '1.7.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-redirect/src/class-redirect.php'
 	),
 	'Automattic\\Jetpack\\Roles' => array(
