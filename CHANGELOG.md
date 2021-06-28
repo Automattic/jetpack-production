@@ -56,6 +56,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: prevent standard sidebar widgets ending up in the search modal sidebar when switching themes for WPCOM sites
 - Search: Show correct count for paginated results
 - Shortcodes: Correctly handle YouTube URLs that include a start time.
+- Since Gutenberg #31873 we can specify Site Editor assets to enqueue in the register block function. We need to specify wp-mediaelement styles for the podcast player.
 - Updates the webpack configuration for extensions to prevent JS conflicts with other plugins
 - Videopress: do not allowing video files in WoA sites with Free plan
 - [Carousel]: Improve size of touch zone for close button.
