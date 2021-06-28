@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add jetpack_idc_disonnect action to clear Sync options on disconnect.
 - Add support to callables to sync/object endpoint.
 - Enable sync/object endpoint support for theme-info
 - Enhance updates module to support get_objects_by_id

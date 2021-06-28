@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: Replace the usage of Jetpack_IDC with Identity_Crisis.
 - Make sure upgrade and connection notices in blocks work with the widget and customizer block editors.
 - Plugins Modify endpoint now supports per plugin locks.
+- Remove jetpack_idc_disconnect hook as functionality has been migrated to packages.
 - Removes dashboard switcher from index.php to improve parity with Calypso.
 - Repeat Visitor Block: Add JS and PHP block fixture tests.
 - Search: fixed search widget settings are not accessible in WordPress 5.8 Beta widget editor
@@ -82,6 +83,7 @@ This is an alpha version! The changes listed here are not final.
 - Handle blavatar_url case for story playback site icon
 - Init 9.9 release cycle.
 - Instant Search: support for searching by group id
+- Migrate identity-crisis/migrate and identity-crisis/confirm-safe-mode endpoints to Identity Crisis package.
 - Move 'connection/owner' endpoint to Connection package.
 - P2: Conditionally hide admin menu items for hubs/spaces
 - Removed unneeded "test-spelling" script with a vulnerable dependency.

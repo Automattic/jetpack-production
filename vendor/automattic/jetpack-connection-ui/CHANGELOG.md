@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Adjust the RNA Connection usage because 'Main' component has been removed to 'ConnectButton'
 - Clean up the code that used to be required for now removed In-Place Connection flow.
+- Updated package dependencies.
 - Update node version requirement to 14.16.1
 
 ## [1.1.1] - 2021-06-15

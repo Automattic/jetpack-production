@@ -73,6 +73,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ9_9_alpha
         'Automattic\\Jetpack\\Device_Detection\\User_Agent_Info' => __DIR__ . '/..' . '/automattic/jetpack-device-detection/src/class-user-agent-info.php',
         'Automattic\\Jetpack\\Error' => __DIR__ . '/..' . '/automattic/jetpack-error/src/class-error.php',
         'Automattic\\Jetpack\\Heartbeat' => __DIR__ . '/..' . '/automattic/jetpack-heartbeat/src/class-heartbeat.php',
+        'Automattic\\Jetpack\\IdentityCrisis\\REST_Endpoints' => __DIR__ . '/..' . '/automattic/jetpack-identity-crisis/src/class-rest-endpoints.php',
         'Automattic\\Jetpack\\Identity_Crisis' => __DIR__ . '/..' . '/automattic/jetpack-identity-crisis/src/class-identity-crisis.php',
         'Automattic\\Jetpack\\JITMS\\JITM' => __DIR__ . '/..' . '/automattic/jetpack-jitm/src/class-jitm.php',
         'Automattic\\Jetpack\\JITMS\\Post_Connection_JITM' => __DIR__ . '/..' . '/automattic/jetpack-jitm/src/class-post-connection-jitm.php',
