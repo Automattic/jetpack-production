@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix the GIF block to support the widget editor and customizer preview pane.
 - Fix top AMP ad unit being cropped on mobile devices
 - Inline PDFs: Fix the height to 800px to overcome theme specific CSS.
+- Instant Search: ensure alt text does not contain mark element
 - Instant Search: prevent override of modal close button styles by theme
 - Search: don't open overlay when user is composing text using an input method editor (Chinese, Japanese, Korean and Indic languages)
 - Search: Fix render-breaking typo for Expanded search results
