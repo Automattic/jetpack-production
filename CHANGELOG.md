@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests reports: send PR number to test reporter
 - Instant Search: drop modal animation and use a simple transition
 - Instant Search: set the default overlay trigger to 'immediate'
+- New "disconnect" route to open the "Disconnect" modal.
 - Publicly includes whether the site is a WP.com Atomic one as part of the Sites API.
 
 ### Improved compatibility
