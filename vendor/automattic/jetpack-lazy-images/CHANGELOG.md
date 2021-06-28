@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Build using calypso-build, and use the intersection-observer npm module instead of bundling a copy.
 - Update docs to replace yarn with pnpm.
+- Update node version requirement to 14.16.1
 
 ## [1.4.4] - 2021-05-25
 ### Changed

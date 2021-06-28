@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - Updated package dependencies.
+- Update node version requirement to 14.16.1
 
 ## [1.16.0] - 2021-05-25
 ### Added
