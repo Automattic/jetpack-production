@@ -85,6 +85,7 @@ This is an alpha version! The changes listed here are not final.
 - Removed unneeded "test-spelling" script with a vulnerable dependency.
 - Remove premium theme info
 - Search: Modularize Customizer and DOM integration
+- Search: Prepare application for Gutenberg customization
 - Search: Use aliased Preact imports
 - Story block: Fix (server-side) rendering of external stories
 - Story Block: improve navigation, long press to pause and exit story on last tap
