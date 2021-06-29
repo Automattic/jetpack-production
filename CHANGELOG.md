@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added field for zendesk meta in /sites/id for jetpack sites.
 - Init 10.0 release cycle
 - Updates To Test file for 9.9 beta
 
