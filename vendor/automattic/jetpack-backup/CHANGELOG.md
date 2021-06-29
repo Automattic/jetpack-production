@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add backup-helper-script endpoints under the jetpack/v4 namespace.
+- Add backup real time endpoints.
 
 ## [1.0.6] - 2021-05-25
 ### Changed

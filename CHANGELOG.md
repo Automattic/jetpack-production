@@ -104,6 +104,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
+- Update lock file
 
 ## 9.8.1 - 2021-06-08
 ### Bug fixes
