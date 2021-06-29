@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: add yet more resilience to missing image data.
 - Carousel: fix crashes when opening images with missing data.
 - Carousel: fix photo info position
+- E2E tests: remove call to missing function
 - Fixed the Settings > Jetpack menu link on Atomic sites.
 - Fix the GIF block to support the widget editor and customizer preview pane.
 - Fix top AMP ad unit being cropped on mobile devices
