@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Major Enhancements
 - Changes the main connection flow and chooses between in-place or calypso flows only after the site registration
+- Replaces the image slider functionality within the carousel module with the swiper js library
 
 ### Enhancements
 - Added a Dashboard Switcher in screen options so that WordPress.com users can switch between WP Admin & WordPress.com screens.
