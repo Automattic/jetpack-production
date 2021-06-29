@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Implement v4 REST endpoints.
 - Sync: initialize the IDC package in the Sync package
 
+### Removed
+- Sync: remove product_cat from blocked taxonomies
+
 ## [1.22.0] - 2021-06-15
 ### Changed
 - Sync: Adding the Identity_Crisis package.
