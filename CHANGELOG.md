@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a nudge for Atomic and WPCOM that is loaded in Customizer's "Additional CSS" section.
 - Added display_embed and rating properties from VideoPress in the update and get media API endpoints.
 - Added Social Preview panel to the pre-publish sidebar to increase visibility.
+- Add support for choosing a preferred view on individual screens accessed from the WP.com sidebar menu
 - Admin menu: Register Calypso settings pages as independent submenus
 - Carousel: no longer depends on jQuery.
 - Dashboard: provide more useful information and an option to contact support when there are display issues in the Jetpack dashboard.
