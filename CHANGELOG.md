@@ -77,6 +77,7 @@ This is an alpha version! The changes listed here are not final.
 - Business Hours Block: Refactor PHP server-rendered fixture test to use parent class.
 - Change build and E2E tests to use pnpm rather than yarn. Add some missing direct deps too, and remove a few unnecessary ones.
 - Changed redirect lib to accept any param. relaced harcoded redirect link to use the lib  instead
+- E2E tests: do no save videos for passed tests
 - E2E tests: fix tunnel log not being written
 - E2E tests: updated readme with reporting info
 - Extracted JetpackLogo component into RNA Components package.
