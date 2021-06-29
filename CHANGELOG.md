@@ -2,13 +2,20 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.0-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 10.0 release cycle
+
 ## 9.9-beta - 2021-06-29
 ### Major Enhancements
 - Carousel: improve carousel usability, performance, accessibility, mobile friendliness.
 - Carousel: improve stability, fixes multiple bugs.
 
 ### Enhancements
-- Blocks: additional automated tests to improve reliability. 
+- Blocks: additional automated tests to improve reliability.
 - Editor: added Social Preview panel to the pre-publish sidebar to increase visibility.
 - Dashboard: provide more useful information and an option to contact support when there are display issues in the Jetpack dashboard.
 - Instant Search: improve modal animation and transition speed.
