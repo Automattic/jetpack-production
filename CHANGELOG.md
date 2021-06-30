@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Adding comment indicator icon to carousel comments icon.
+
 ### Improved compatibility
 - Carousel: Ensure refactored carousel is compatible with Twenty Nineteen theme styles.
 
