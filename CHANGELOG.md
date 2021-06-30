@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Carousel: Fix intermittent issue with unresponsive prev button.
+- Disabling transitions on prev/next images to prevent flash effect on pinch, zoom and swipe.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added field for zendesk meta in /sites/id for jetpack sites.
