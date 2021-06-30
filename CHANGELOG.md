@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Carousel: Ensure refactored carousel is compatible with Twenty Nineteen theme styles.
+
 ### Bug fixes
 - Carousel: Fix intermittent issue with unresponsive prev button.
 - Carousel: Set pagination font weight to normal to avoid conflicts with theme styles.
