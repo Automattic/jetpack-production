@@ -6,12 +6,16 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Adding comment indicator icon to carousel comments icon.
+
 ### Improved compatibility
 - Carousel: Ensure refactored carousel is compatible with Twenty Nineteen theme styles.
 
 ### Bug fixes
 - Carousel: Fix intermittent issue with unresponsive prev button.
 - Carousel: Set pagination font weight to normal to avoid conflicts with theme styles.
+- Disabling transitions on prev/next images to prevent flash effect on pinch, zoom and swipe.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updates To Test file for 9.9 beta
