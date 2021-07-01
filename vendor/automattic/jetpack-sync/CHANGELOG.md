@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Checksum parent_table joins need distinct selection to account for possibility of multiple rows.
 
+### Fixed
+- Update term_taxonomy checksum query to an allowed list vs disallowed
+
 ## [1.23.0] - 2021-06-29
 ### Added
 - Add jetpack_idc_disonnect action to clear Sync options on disconnect.
