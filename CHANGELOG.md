@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Disabling transitions on prev/next images to prevent flash effect on pinch, zoom and swipe.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Modified swiper to use svg icons on carousel instead of font icons
 - Updates To Test file for 9.9 beta
 
 ## 9.9-beta - 2021-06-29
