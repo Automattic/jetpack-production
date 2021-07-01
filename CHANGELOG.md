@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: Set pagination font weight to normal to avoid conflicts with theme styles.
 - Disabling transitions on prev/next images to prevent flash effect on pinch, zoom and swipe.
 - Fix image quality on carousel zoom.
+- Widgets: avoid PHP notice when using the Milestone Widget within the upcoming widget management screen in WordPress 5.8.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Modified swiper to use svg icons on carousel instead of font icons
