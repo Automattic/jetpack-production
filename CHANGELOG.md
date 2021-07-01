@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Carousel: Ensure refactored carousel is compatible with Twenty Nineteen theme styles.
+- Updates the legacy site-logo feature to use an attachment ID for the `site_logo` option, rather than a settings array, for compatibility with WordPress 5.8.
 
 ### Bug fixes
 - Carousel: Fix intermittent issue with unresponsive prev button.
