@@ -74,6 +74,14 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
+	'Automattic\\Jetpack\\Licensing' => array(
+		'version' => '1.4.3.0',
+		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
+	),
+	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
+		'version' => '1.5.0.0',
+		'path'    => $vendorDir . '/automattic/jetpack-lazy-images/src/lazy-images.php'
+	),
 	'Automattic\\Jetpack\\JITMS\\JITM' => array(
 		'version' => '1.16.1.0',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-jitm.php'
@@ -102,13 +110,9 @@ return array(
 		'version' => '1.4.6.0',
 		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
 	),
-	'Automattic\\Jetpack\\Licensing' => array(
-		'version' => '1.4.3.0',
-		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
-	),
-	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
-		'version' => '1.5.0.0',
-		'path'    => $vendorDir . '/automattic/jetpack-lazy-images/src/lazy-images.php'
+	'Automattic\\Jetpack\\Abtest' => array(
+		'version' => '1.9.8.0',
+		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Jetpack_Sync_Settings' => array(
 		'version' => '1.6.5.0',
@@ -141,10 +145,6 @@ return array(
 	'Automattic\\Jetpack\\Backup\\REST_Controller' => array(
 		'version' => '1.1.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-rest-controller.php'
-	),
-	'Automattic\\Jetpack\\Abtest' => array(
-		'version' => '1.9.8.0',
-		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
 		'version' => '1.5.1.0',
