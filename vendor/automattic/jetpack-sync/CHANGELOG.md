@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.23.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Checksum parent_table joins need distinct selection to account for possibility of multiple rows.
+
 ## [1.23.0] - 2021-06-29
 ### Added
 - Add jetpack_idc_disonnect action to clear Sync options on disconnect.
@@ -406,6 +413,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[1.23.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.23.0...v1.23.1-alpha
 [1.23.0]: https://github.com/Automattic/jetpack-sync/compare/v1.22.0...v1.23.0
 [1.22.0]: https://github.com/Automattic/jetpack-sync/compare/v1.21.3...v1.22.0
 [1.21.3]: https://github.com/Automattic/jetpack-sync/compare/v1.21.2...v1.21.3
