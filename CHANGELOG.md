@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: Fix intermittent issue with unresponsive prev button.
 - Carousel: Set pagination font weight to normal to avoid conflicts with theme styles.
 - Disabling transitions on prev/next images to prevent flash effect on pinch, zoom and swipe.
+- Fix image quality on carousel zoom.
 - Remove specific form colors from the contact form block
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
