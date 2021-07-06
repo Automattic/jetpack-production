@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Added field for zendesk meta in /sites/id for jetpack sites.
 - Init 10.0 release cycle
 - Modified swiper to use svg icons on carousel instead of font icons
+- Removed a line of duplicated code
 - Updates To Test file for 9.9 beta
 
 ## 9.9-beta - 2021-06-29
