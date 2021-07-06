@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: Set pagination font weight to normal to avoid conflicts with theme styles.
 - Disabling transitions on prev/next images to prevent flash effect on pinch, zoom and swipe.
 - Fix image quality on carousel zoom.
+- Instant Search: fix visual glitch on breadcrumb in Firefox
 - Remove specific form colors from the contact form block
 - Widgets: avoid PHP notice when using the Milestone Widget within the upcoming widget management screen in WordPress 5.8.
 
