@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- Search: add search setting page with only toggles
+
 ### Enhancements
 - Adding comment indicator icon to carousel comments icon.
 
