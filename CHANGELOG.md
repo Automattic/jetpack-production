@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: add search setting page with only toggles
 
 ### Enhancements
+- E2E tests: add listeners for page errors and request failed
 - Improve carousel icons.
 - Store the preferred view after a page switch using the new WP.com quick switcher
 
