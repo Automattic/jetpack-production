@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Major Enhancements
 - Search: add search setting page with only toggles
 
+### Enhancements
+- Store the preferred view after a page switch using the new WP.com quick switcher
+
 ### Bug fixes
 - Instant Search: fix visual glitch on breadcrumb in Firefox
 - Remove specific form colors from the contact form block
