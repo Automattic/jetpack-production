@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Added field for zendesk meta in /sites/id for jetpack sites.
 - Init 10.0 release cycle
 - Removed a line of duplicated code
+- Updated package dependencies.
 
 ## 9.9 - 2021-07-06
 ### Major Enhancements
