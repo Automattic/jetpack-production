@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Improve carousel icons.
 - Store the preferred view after a page switch using the new WP.com quick switcher
 
 ## 9.9 - 2021-07-06
