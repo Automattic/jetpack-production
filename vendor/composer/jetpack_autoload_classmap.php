@@ -110,10 +110,6 @@ return array(
 		'version' => '1.4.6.0',
 		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
 	),
-	'Automattic\\Jetpack\\Abtest' => array(
-		'version' => '1.9.8.0',
-		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
-	),
 	'Jetpack_Sync_Settings' => array(
 		'version' => '1.6.5.0',
 		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-sync-settings.php'
@@ -145,6 +141,10 @@ return array(
 	'Automattic\\Jetpack\\Backup\\REST_Controller' => array(
 		'version' => '1.1.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-rest-controller.php'
+	),
+	'Automattic\\Jetpack\\Abtest' => array(
+		'version' => '1.9.8.0',
+		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
 		'version' => '1.5.1.0',
@@ -346,10 +346,6 @@ return array(
 		'version' => '1.4.2.0',
 		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-device-detection.php'
 	),
-	'Automattic\\Jetpack\\Password_Checker' => array(
-		'version' => '0.1.2.0',
-		'path'    => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php'
-	),
 	'Automattic\\Jetpack\\Identity_Crisis' => array(
 		'version' => '0.2.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-identity-crisis/src/class-identity-crisis.php'
@@ -357,6 +353,10 @@ return array(
 	'Automattic\\Jetpack\\IdentityCrisis\\REST_Endpoints' => array(
 		'version' => '0.2.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-identity-crisis/src/class-rest-endpoints.php'
+	),
+	'Automattic\\Jetpack\\Password_Checker' => array(
+		'version' => '0.1.2.0',
+		'path'    => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
 		'version' => '1.5.5.0',
