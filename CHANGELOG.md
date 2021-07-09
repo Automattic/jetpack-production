@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - E2E tests: add listeners for page errors and request failed
 - Improve carousel icons.
+- Search: Added widgets editor and search customizer buttons for search admin page
 - Store the preferred view after a page switch using the new WP.com quick switcher
 
 ### Bug fixes
