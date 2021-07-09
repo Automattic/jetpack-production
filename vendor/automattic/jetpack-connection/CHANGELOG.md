@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Fix `@covers` directives in tests.
+
 ## [1.29.0] - 2021-06-29
 ### Changed
 - Implement disconnect_site function.
