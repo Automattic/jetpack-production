@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Search: Added widgets editor and search customizer buttons for search admin page
 - Store the preferred view after a page switch using the new WP.com quick switcher
 
+### Improved compatibility
+- add Full Site Editing support to callback options
+
 ### Bug fixes
 - Instant Search: fix visual glitch on breadcrumb in Firefox
 - Remove specific form colors from the contact form block
