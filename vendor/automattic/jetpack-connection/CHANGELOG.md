@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Added second parameter to Tokens::get_connected_users to allow any connected user to be returned.
+
 ### Fixed
 - Fix `@covers` directives in tests.
 
