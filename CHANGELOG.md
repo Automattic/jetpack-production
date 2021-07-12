@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - add Full Site Editing support to callback options
+- Support coming soon v2 sites with the coming soon badge in the admin menu
 
 ### Bug fixes
 - Instant Search: fix visual glitch on breadcrumb in Firefox
