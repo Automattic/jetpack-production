@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Instant Search: fix visual glitch on breadcrumb in Firefox
+- Instant Search: make sure ?s= is set when using filter links
 - Remove specific form colors from the contact form block
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
