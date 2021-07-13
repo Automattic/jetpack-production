@@ -5,12 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.29.1-alpha] - unreleased
+## [1.30.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added second parameter to Tokens::get_connected_users to allow any connected user to be returned.
+
+### Changed
+- Moved the get_connected_users logic back to the Manager class
 
 ### Fixed
 - Fix `@covers` directives in tests.
@@ -385,7 +388,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[1.29.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.29.0...v1.29.1-alpha
+[1.30.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.29.0...v1.30.0-alpha
 [1.29.0]: https://github.com/Automattic/jetpack-connection/compare/v1.28.0...v1.29.0
 [1.28.0]: https://github.com/Automattic/jetpack-connection/compare/v1.27.0...v1.28.0
 [1.27.0]: https://github.com/Automattic/jetpack-connection/compare/v1.26.0...v1.27.0

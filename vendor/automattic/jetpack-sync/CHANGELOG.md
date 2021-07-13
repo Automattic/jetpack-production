@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - add Full Site Editing support to callback options
 
+### Changed
+- Updated package dependencies.
+
 ### Fixed
 - Performance of Sync checksums degraded with the update to correlated subquery. This restricts its usage to term_taxonomy joins only."
 
