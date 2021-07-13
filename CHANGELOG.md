@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## 9.9 - 2021-07-06
 ### Major Enhancements
