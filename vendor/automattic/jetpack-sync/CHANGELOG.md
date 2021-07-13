@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - add Full Site Editing support to callback options
 
+### Fixed
+- Performance of Sync checksums degraded with the update to correlated subquery. This restricts its usage to term_taxonomy joins only."
+
 ## [1.23.1] - 2021-07-01
 ### Changed
 - Checksum parent_table joins need distinct selection to account for possibility of multiple rows.
