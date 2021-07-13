@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Improve carousel icons.
 - Store the preferred view after a page switch using the new WP.com quick switcher
 
+### Improved compatibility
+- Removing static images and related code. Also ensuring that arrows look and work correctly in RTL.
+
 ### Bug fixes
 - Carousel: Prevent comments indicator from bumping icon width of comments button.
 
