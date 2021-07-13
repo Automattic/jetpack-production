@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Support coming soon v2 sites with the coming soon badge in the admin menu
 
 ### Bug fixes
+- Carousel: Prevent comments indicator from bumping icon width of comments button.
 - Ensure on pageload that the active menu item is keyboard focused in nav unification so its consistent with Calypso
 - Instant Search: fix visual glitch on breadcrumb in Firefox
 - Instant Search: make sure ?s= is set when using filter links
