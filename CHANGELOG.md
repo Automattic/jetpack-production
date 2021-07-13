@@ -16,6 +16,10 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Carousel: Prevent comments indicator from bumping icon width of comments button.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated package dependencies.
+- Updated package dependencies.
+
 ## 9.9 - 2021-07-06
 ### Major Enhancements
 - Carousel: improve carousel usability, performance, accessibility, mobile friendliness.

@@ -74,18 +74,6 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
-	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.4.6.0',
-		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
-	),
-	'Automattic\\Jetpack\\Licensing' => array(
-		'version' => '1.4.3.0',
-		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
-	),
-	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
-		'version' => '1.5.0.0',
-		'path'    => $vendorDir . '/automattic/jetpack-lazy-images/src/lazy-images.php'
-	),
 	'Automattic\\Jetpack\\JITMS\\JITM' => array(
 		'version' => '1.16.1.0',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-jitm.php'
@@ -102,6 +90,14 @@ return array(
 		'version' => '1.16.1.0',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-post-connection-jitm.php'
 	),
+	'Automattic\\Jetpack\\Licensing' => array(
+		'version' => '1.4.3.0',
+		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
+	),
+	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
+		'version' => '1.5.0.0',
+		'path'    => $vendorDir . '/automattic/jetpack-lazy-images/src/lazy-images.php'
+	),
 	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
 		'version' => '1.2.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
@@ -109,6 +105,14 @@ return array(
 	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
 		'version' => '1.2.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
+	),
+	'Automattic\\Jetpack\\Config' => array(
+		'version' => '1.4.6.0',
+		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
+	),
+	'Automattic\\Jetpack\\Abtest' => array(
+		'version' => '1.9.8.0',
+		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Jetpack_Sync_Settings' => array(
 		'version' => '1.6.5.0',
@@ -141,10 +145,6 @@ return array(
 	'Automattic\\Jetpack\\Backup\\REST_Controller' => array(
 		'version' => '1.1.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-rest-controller.php'
-	),
-	'Automattic\\Jetpack\\Abtest' => array(
-		'version' => '1.9.8.0',
-		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
 		'version' => '1.5.1.0',
@@ -363,83 +363,83 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-logo/src/class-logo.php'
 	),
 	'Jetpack_IXR_ClientMulticall' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/legacy/class-jetpack-ixr-clientmulticall.php'
 	),
 	'Jetpack_Signature' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/legacy/class-jetpack-signature.php'
 	),
 	'Jetpack_XMLRPC_Server' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/legacy/class-jetpack-xmlrpc-server.php'
 	),
 	'Jetpack_IXR_Client' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/legacy/class-jetpack-ixr-client.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Webhooks' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-webhooks.php'
 	),
 	'Automattic\\Jetpack\\Connection\\XMLRPC_Async_Call' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-xmlrpc-async-call.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Secrets' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-secrets.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Plugin_Storage' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-plugin-storage.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Manager_Interface' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/interface-manager.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Plugin' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-plugin.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Nonce_Handler' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-nonce-handler.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Error_Handler' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-error-handler.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Manager' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-manager.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Tokens' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-tokens.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Rest_Authentication' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-rest-authentication.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Utils' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-utils.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Client' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-client.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Urls' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-urls.php'
 	),
 	'Automattic\\Jetpack\\Connection\\REST_Connector' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-rest-connector.php'
 	),
 	'Automattic\\Jetpack\\Connection\\XMLRPC_Connector' => array(
-		'version' => '1.29.0.0',
+		'version' => 'dev-master',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-xmlrpc-connector.php'
 	),
 	'Automattic\\Jetpack\\Redirect' => array(

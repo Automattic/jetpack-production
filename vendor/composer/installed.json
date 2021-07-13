@@ -405,17 +405,17 @@
         },
         {
             "name": "automattic/jetpack-connection",
-            "version": "v1.29.0",
-            "version_normalized": "1.29.0.0",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-connection.git",
-                "reference": "47789f8b56171ae226931da28764d3b1c9f2f95b"
+                "reference": "23535d4bd4d7845a0607ca6a2d191c2dd4553cfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-connection/zipball/47789f8b56171ae226931da28764d3b1c9f2f95b",
-                "reference": "47789f8b56171ae226931da28764d3b1c9f2f95b",
+                "url": "https://api.github.com/repos/Automattic/jetpack-connection/zipball/23535d4bd4d7845a0607ca6a2d191c2dd4553cfb",
+                "reference": "23535d4bd4d7845a0607ca6a2d191c2dd4553cfb",
                 "shasum": ""
             },
             "require": {
@@ -435,7 +435,8 @@
                 "brain/monkey": "2.6.0",
                 "yoast/phpunit-polyfills": "0.2.0"
             },
-            "time": "2021-06-29T15:33:51+00:00",
+            "time": "2021-07-13T12:44:41+00:00",
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "autotagger": true,
@@ -444,7 +445,7 @@
                     "link-template": "https://github.com/Automattic/jetpack-connection/compare/v${old}...v${new}"
                 },
                 "branch-alias": {
-                    "dev-master": "1.29.x-dev"
+                    "dev-master": "1.30.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -463,7 +464,7 @@
             ],
             "description": "Everything needed to connect to the Jetpack infrastructure",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-connection/tree/v1.29.0"
+                "source": "https://github.com/Automattic/jetpack-connection/tree/master"
             },
             "install-path": "../automattic/jetpack-connection"
         },
