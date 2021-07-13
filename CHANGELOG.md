@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Improve carousel icons.
 - Store the preferred view after a page switch using the new WP.com quick switcher
 
+### Bug fixes
+- Carousel: Prevent comments indicator from bumping icon width of comments button.
+
 ## 9.9 - 2021-07-06
 ### Major Enhancements
 - Carousel: improve carousel usability, performance, accessibility, mobile friendliness.
