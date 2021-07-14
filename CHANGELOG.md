@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added field for zendesk meta in /sites/id for jetpack sites.
 - Adds admin / frontend CSS files to the build watcher.
+- Dev Tools: Add list items to the Dev Tools card for new Backup and Security products.
 - Init 10.0 release cycle
 - Plans: Add slugs for new real-time Backup and Security offerings.
 - Removed a line of duplicated code
