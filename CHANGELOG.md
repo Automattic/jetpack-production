@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Support coming soon v2 sites with the coming soon badge in the admin menu
 
 ### Bug fixes
+- Allow the use of widget visibility conditions in gutenberg based widget editing
 - Carousel: Prevent comments indicator from bumping icon width of comments button.
 - Comments: fix subsequent commenting when using a social profile.
 - Ensure on pageload that the active menu item is keyboard focused in nav unification so its consistent with Calypso
