@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Make sure we show the caption of the image in carousel images.
 - Publicize: avoid PHP notices in edge-cases where no info about a post can be found.
 - Remove specific form colors from the contact form block
+- WordPress.com Block Editor: do not use in the upcoming Block-based Widgets Editor
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added field for zendesk meta in /sites/id for jetpack sites.
