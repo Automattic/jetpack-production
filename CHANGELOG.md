@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: add search setting page with only toggles
 
 ### Enhancements
+- Add jetpack_connection_active_plugins option in JSON API site endpoint response options.
 - E2E tests: add listeners for page errors and request failed
 - Improve carousel icons.
 - Search: Added widgets editor and search customizer buttons for search admin page
