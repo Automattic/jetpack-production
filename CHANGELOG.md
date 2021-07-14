@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add jetpack_connection_active_plugins option in JSON API site endpoint response options.
 - E2E tests: add listeners for page errors and request failed
 - Improve carousel icons.
+- Search: added footer for search dashboard
 - Search: Added widgets editor and search customizer buttons for search admin page
 - Store the preferred view after a page switch using the new WP.com quick switcher
 
@@ -35,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Added field for zendesk meta in /sites/id for jetpack sites.
 - Adds admin / frontend CSS files to the build watcher.
 - Init 10.0 release cycle
+- Plans: Add slugs for new real-time Backup and Security offerings.
 - Removed a line of duplicated code
 - Updated package dependencies
 - Updated package dependencies.
