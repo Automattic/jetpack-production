@@ -14,8 +14,10 @@ This is an alpha version! The changes listed here are not final.
 - Removing static images and related code. Also ensuring that arrows look and work correctly in RTL.
 
 ### Bug fixes
+- Allow the use of widget visibility conditions in gutenberg based widget editing
 - Carousel: Prevent comments indicator from bumping icon width of comments button.
 - Make sure we show the caption of the image in carousel images.
+- WordPress.com Block Editor: do not use in the upcoming Block-based Widgets Editor
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updated package dependencies.
