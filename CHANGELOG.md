@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Allow the use of widget visibility conditions in gutenberg based widget editing
 - Carousel: Prevent comments indicator from bumping icon width of comments button.
+- Carousel CSS tweaks to ensure text and comment loader spinners dislay correctly in dark and light theme views.
 - Comments: fix subsequent commenting when using a social profile.
 - Ensure on pageload that the active menu item is keyboard focused in nav unification so its consistent with Calypso
 - Fix Opentable block input width when used in block editor.
