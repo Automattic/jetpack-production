@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Improve carousel icons.
 - Search: added footer for search dashboard
 - Search: Added widgets editor and search customizer buttons for search admin page
+- Search: Add scaffolding for Gutenberg-enabled Customizer (Customberg)
 - Store the preferred view after a page switch using the new WP.com quick switcher
 
 ### Improved compatibility
