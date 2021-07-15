@@ -43,6 +43,8 @@
   background: #FFFFFF;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
   border-radius: 4px; }
+  .jp-connect-screen.jp-connect-screen--loading {
+    display: none; }
   .jp-connect-screen .jp-connect-screen--left, .jp-connect-screen .jp-connect-screen--right {
     box-sizing: border-box; }
   .jp-connect-screen .jp-connect-screen--left {
