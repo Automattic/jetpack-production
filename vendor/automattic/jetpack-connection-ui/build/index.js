@@ -2109,6 +2109,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _automattic_byline_logo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../automattic-byline-logo */ "../../js-packages/components/components/automattic-byline-logo/index.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/jetpack-footer/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _jetpack_logo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../jetpack-logo */ "../../js-packages/components/components/jetpack-logo/index.jsx");
 
 
 
@@ -2121,6 +2122,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Internal dependencies
  */
+
 
 
 
@@ -2147,9 +2149,14 @@ function JetpackFooter(_ref) {
     className: classnames__WEBPACK_IMPORTED_MODULE_4___default()('jp-dashboard-footer', className)
   }, otherProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "jp-dashboard-footer__footer-left"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "jp-dashboard-footer__logo"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, moduleName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_jetpack_logo__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    logoColor: "#000",
+    showText: false,
+    height: "16",
+    className: "jp-dashboard-footer__jetpack-symbol"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "jp-dashboard-footer__module-name"
+  }, moduleName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "jp-dashboard-footer__footer-right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: a8cLogoHref
@@ -2180,20 +2187,25 @@ function JetpackFooter(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/extends */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/extends.js");
 /* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/classCallCheck */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createClass */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/inherits */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createSuper */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createSuper.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/objectWithoutProperties */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/objectWithoutProperties.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/classCallCheck */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createClass */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/inherits */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createSuper */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createSuper.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! classnames */ "../../../node_modules/.pnpm/classnames@2.3.1/node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_9__);
+
 
 
 
@@ -2207,58 +2219,71 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var JetpackLogo = /*#__PURE__*/function (_React$Component) {
-  _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(JetpackLogo, _React$Component);
 
-  var _super = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4___default()(JetpackLogo);
+var JetpackLogo = /*#__PURE__*/function (_React$Component) {
+  _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(JetpackLogo, _React$Component);
+
+  var _super = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5___default()(JetpackLogo);
 
   function JetpackLogo() {
-    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, JetpackLogo);
+    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, JetpackLogo);
 
     return _super.apply(this, arguments);
   }
 
-  _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(JetpackLogo, [{
+  _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(JetpackLogo, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("svg", _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
+      var _this$props = this.props,
+          logoColor = _this$props.logoColor,
+          showText = _this$props.showText,
+          className = _this$props.className,
+          otherProps = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default()(_this$props, ["logoColor", "showText", "className"]);
+
+      var viewBox = showText ? '0 0 118 32' : '0 0 32 32';
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("svg", _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
         xmlns: "http://www.w3.org/2000/svg",
         x: "0px",
         y: "0px",
-        viewBox: "0 0 118 32"
-      }, this.props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
-        fill: "#00BE28",
+        viewBox: viewBox,
+        className: classnames__WEBPACK_IMPORTED_MODULE_9___default()('jetpack-logo', className)
+      }, otherProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
+        fill: logoColor,
         d: "M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M15,19H7l8-16V19z M17,29V13h8L17,29z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
+      }), showText && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
         d: "M41.3,26.6c-0.5-0.7-0.9-1.4-1.3-2.1c2.3-1.4,3-2.5,3-4.6V8h-3V6h6v13.4C46,22.8,45,24.8,41.3,26.6z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
         d: "M65,18.4c0,1.1,0.8,1.3,1.4,1.3c0.5,0,2-0.2,2.6-0.4v2.1c-0.9,0.3-2.5,0.5-3.7,0.5c-1.5,0-3.2-0.5-3.2-3.1V12H60v-2h2.1V7.1 H65V10h4v2h-4V18.4z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
         d: "M71,10h3v1.3c1.1-0.8,1.9-1.3,3.3-1.3c2.5,0,4.5,1.8,4.5,5.6s-2.2,6.3-5.8,6.3c-0.9,0-1.3-0.1-2-0.3V28h-3V10z M76.5,12.3 c-0.8,0-1.6,0.4-2.5,1.2v5.9c0.6,0.1,0.9,0.2,1.8,0.2c2,0,3.2-1.3,3.2-3.9C79,13.4,78.1,12.3,76.5,12.3z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
         d: "M93,22h-3v-1.5c-0.9,0.7-1.9,1.5-3.5,1.5c-1.5,0-3.1-1.1-3.1-3.2c0-2.9,2.5-3.4,4.2-3.7l2.4-0.3v-0.3c0-1.5-0.5-2.3-2-2.3 c-0.7,0-2.3,0.5-3.7,1.1L84,11c1.2-0.4,3-1,4.4-1c2.7,0,4.6,1.4,4.6,4.7L93,22z M90,16.4l-2.2,0.4c-0.7,0.1-1.4,0.5-1.4,1.6 c0,0.9,0.5,1.4,1.3,1.4s1.5-0.5,2.3-1V16.4z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
         d: "M104.5,21.3c-1.1,0.4-2.2,0.6-3.5,0.6c-4.2,0-5.9-2.4-5.9-5.9c0-3.7,2.3-6,6.1-6c1.4,0,2.3,0.2,3.2,0.5V13 c-0.8-0.3-2-0.6-3.2-0.6c-1.7,0-3.2,0.9-3.2,3.6c0,2.9,1.5,3.8,3.3,3.8c0.9,0,1.9-0.2,3.2-0.7V21.3z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
         d: "M110,15.2c0.2-0.3,0.2-0.8,3.8-5.2h3.7l-4.6,5.7l5,6.3h-3.7l-4.2-5.8V22h-3V6h3V15.2z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
         d: "M58.5,21.3c-1.5,0.5-2.7,0.6-4.2,0.6c-3.6,0-5.8-1.8-5.8-6c0-3.1,1.9-5.9,5.5-5.9s4.9,2.5,4.9,4.9c0,0.8,0,1.5-0.1,2h-7.3 c0.1,2.5,1.5,2.8,3.6,2.8c1.1,0,2.2-0.3,3.4-0.7C58.5,19,58.5,21.3,58.5,21.3z M56,15c0-1.4-0.5-2.9-2-2.9c-1.4,0-2.3,1.3-2.4,2.9 C51.6,15,56,15,56,15z"
-      }));
+      })));
     }
   }]);
 
   return JetpackLogo;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
 
-_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default()(JetpackLogo, "propTypes", {
-  className: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.string,
-  width: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.number,
-  height: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.number
+_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(JetpackLogo, "propTypes", {
+  className: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.string,
+  width: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.number,
+  height: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.number,
+  showText: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.bool,
+  logoColor: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.string
 });
 
-_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default()(JetpackLogo, "defaultProps", {
-  className: 'jetpack-logo',
-  height: 32
+_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(JetpackLogo, "defaultProps", {
+  className: '',
+  height: 32,
+  showText: true,
+  logoColor: '#00BE28'
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (JetpackLogo);
