@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add jetpack_connection_active_plugins option in JSON API site endpoint response options.
 - E2E tests: add listeners for page errors and request failed
 - Improve carousel icons.
+- Like Button: Added title and aria-hidden attributes to the like button iframe
 - Modules: Include all module info in the module-headings.php file during the build step.
 - Search: added footer for search dashboard
 - Search: Added widgets editor and search customizer buttons for search admin page
