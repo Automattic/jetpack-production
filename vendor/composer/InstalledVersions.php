@@ -89,7 +89,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9fd914f246408e63dbc738ec434b7d65a7fb12b8',
+      'reference' => '9349c8ad82b16b8aab9b3baf7a85da16daa688d7',
     ),
     'automattic/jetpack-blocks' => 
     array (
@@ -125,7 +125,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'bfd899a0b92a1f6fc3dc81c227477c3cb9ec1946',
+      'reference' => '984462e9b160282876bbd29f8d4620bb55c2601c',
     ),
     'automattic/jetpack-connection-ui' => 
     array (
@@ -278,7 +278,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9932678289823465ce22531afeb7e45146765a6a',
+      'reference' => '0da924aad159358842af89ee324aee6e81c6ef87',
     ),
     'automattic/jetpack-terms-of-service' => 
     array (

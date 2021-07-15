@@ -142,6 +142,10 @@ return array(
 		'version' => '1.1.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-rest-controller.php'
 	),
+	'Automattic\\Jetpack\\Backup\\Package_Version' => array(
+		'version' => '1.1.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-package-version.php'
+	),
 	'Automattic\\Jetpack\\Abtest' => array(
 		'version' => '1.9.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
@@ -318,6 +322,10 @@ return array(
 		'version' => '1.24.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-sync/src/class-listener.php'
 	),
+	'Automattic\\Jetpack\\Sync\\Package_Version' => array(
+		'version' => '1.24.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-sync/src/class-package-version.php'
+	),
 	'Automattic\\Jetpack\\Sync\\Settings' => array(
 		'version' => '1.24.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-sync/src/class-settings.php'
@@ -433,6 +441,10 @@ return array(
 	'Automattic\\Jetpack\\Connection\\Urls' => array(
 		'version' => '1.30.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-urls.php'
+	),
+	'Automattic\\Jetpack\\Connection\\Package_Version' => array(
+		'version' => '1.30.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-package-version.php'
 	),
 	'Automattic\\Jetpack\\Connection\\REST_Connector' => array(
 		'version' => '1.30.9999999.9999999-dev',
