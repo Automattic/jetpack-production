@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add a package version constant.
 - add Full Site Editing support to callback options
 
+### Fixed
+- Update Options module to return jetpack_sync_settings_* values from the Settings class vs direct option lookup.
+
 ## [1.23.2] - 2021-07-13
 ### Changed
 - Updated package dependencies.

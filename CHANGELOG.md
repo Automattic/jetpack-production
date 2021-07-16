@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - add Full Site Editing support to callback options
 - Removing static images and related code. Also ensuring that arrows look and work correctly in RTL.
 - Support coming soon v2 sites with the coming soon badge in the admin menu
+- Update Sync tests to include case for jetpack_sync_settings options.
 
 ### Bug fixes
 - Allow the use of widget visibility conditions in gutenberg based widget editing
