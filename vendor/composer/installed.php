@@ -247,12 +247,12 @@
     ),
     'automattic/jetpack-sync' => 
     array (
-      'pretty_version' => 'v1.23.2',
-      'version' => '1.23.2.0',
+      'pretty_version' => 'v1.23.3',
+      'version' => '1.23.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'dd8e48bbd0c0db5af64a9c75d23b599779281e22',
+      'reference' => '8be11f9f2b03682131ca94f71db0c3f865aa944a',
     ),
     'automattic/jetpack-terms-of-service' => 
     array (
