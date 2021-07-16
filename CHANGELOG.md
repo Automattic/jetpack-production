@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Like Button: Added title and aria-hidden attributes to the like button iframe
 - Modules: Include all module info in the module-headings.php file during the build step.
 - Search: added footer for search dashboard
+- Search: added mocked legacy search interface for admin page
 - Search: Added widgets editor and search customizer buttons for search admin page
 - Search: add instant search upsell nudge for business plan.
 - Search: Add scaffolding for Gutenberg-enabled Customizer (Customberg)
