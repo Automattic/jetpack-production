@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Allow the use of widget visibility conditions in gutenberg based widget editing
 - Carousel: Prevent comments indicator from bumping icon width of comments button.
 - Carousel CSS tweaks to ensure text and comment loader spinners dislay correctly in dark and light theme views.
+- Enqueue block dependencies for customizer block widget previews. Also removes invalid `isLarge` prop from the FormFileUpload component.
 - Make sure we show the caption of the image in carousel images.
 - WordPress.com Block Editor: do not use in the upcoming Block-based Widgets Editor
 
