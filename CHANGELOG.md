@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Modules: Include all module info in the module-headings.php file during the build step.
 - Search: added footer for search dashboard
 - Search: Added widgets editor and search customizer buttons for search admin page
+- Search: add instant search upsell nudge for business plan.
 - Search: Add scaffolding for Gutenberg-enabled Customizer (Customberg)
 - Store the preferred view after a page switch using the new WP.com quick switcher
 
