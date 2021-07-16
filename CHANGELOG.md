@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add jetpack_connection_active_plugins option in JSON API site endpoint response options.
+- Adds a section with upgrade nudges to the Site Stats page (work in progress)
 - E2E tests: add listeners for page errors and request failed
 - Improve carousel icons.
 - Like Button: Added title and aria-hidden attributes to the like button iframe
