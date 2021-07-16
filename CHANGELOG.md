@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Removing static images and related code. Also ensuring that arrows look and work correctly in RTL.
+- Update Sync tests to include case for jetpack_sync_settings options.
 
 ### Bug fixes
 - Allow the use of widget visibility conditions in gutenberg based widget editing
