@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a package version constant.
 - add Full Site Editing support to callback options
 
+## [1.23.3] - 2021-07-16
 ### Fixed
 - Update Options module to return jetpack_sync_settings_* values from the Settings class vs direct option lookup.
 
@@ -431,7 +432,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[1.24.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.23.2...v1.24.0-alpha
+[1.24.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.23.3...v1.24.0-alpha
+[1.23.3]: https://github.com/Automattic/jetpack-sync/compare/v1.23.2...v1.23.3
 [1.23.2]: https://github.com/Automattic/jetpack-sync/compare/v1.23.1...v1.23.2
 [1.23.1]: https://github.com/Automattic/jetpack-sync/compare/v1.23.0...v1.23.1
 [1.23.0]: https://github.com/Automattic/jetpack-sync/compare/v1.22.0...v1.23.0
