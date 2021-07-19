@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - add Full Site Editing support to callback options
+- Compatibility: Adds support for block_editor_settings_all when running WordPress 5.8 or higher
 - Removing static images and related code. Also ensuring that arrows look and work correctly in RTL.
 - Support coming soon v2 sites with the coming soon badge in the admin menu
 - Update Sync tests to include case for jetpack_sync_settings options.
