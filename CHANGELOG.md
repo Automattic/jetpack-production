@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Store the preferred view after a page switch using the new WP.com quick switcher
 
 ### Improved compatibility
+- Compatibility: Adds support for block_editor_settings_all when running WordPress 5.8 or higher
 - Removing static images and related code. Also ensuring that arrows look and work correctly in RTL.
 - Update Sync tests to include case for jetpack_sync_settings options.
 
