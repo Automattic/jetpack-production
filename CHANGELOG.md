@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Ensure on pageload that the active menu item is keyboard focused in nav unification so its consistent with Calypso
 - Fixed the condition that disables Nav-unification when SSO is disabled and the admin-menu class is overriden in jetpack_admin_menu_class filter.
 - Fix Opentable block input width when used in block editor.
+- Force Calypso interfaces for Atomic sites that have Jetpack SSO disabled.
 - Instant Search: fix visual glitch on breadcrumb in Firefox
 - Instant Search: make sure ?s= is set when using filter links
 - Make sure we show the caption of the image in carousel images.
