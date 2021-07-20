@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Instant Search: fix visual glitch on breadcrumb in Firefox
 - Instant Search: make sure ?s= is set when using filter links
 - Make sure we show the caption of the image in carousel images.
+- Only adds the security nav item to the Atomic admin menu if the site has the security-settings feature.
 - Publicize: avoid PHP notices in edge-cases where no info about a post can be found.
 - Remove specific form colors from the contact form block
 - SEO Tools: Ensure functions are loaded before API endpoint attempts to use them.
