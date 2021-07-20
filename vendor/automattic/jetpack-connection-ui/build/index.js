@@ -2654,7 +2654,10 @@ var ImageSlider = function ImageSlider(props) {
 
 ImageSlider.propTypes = {
   images: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string).isRequired,
-  assetBaseUrl: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
+  assetBaseUrl: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+ImageSlider.defaultProps = {
+  assetBaseUrl: ''
 };
 /* harmony default export */ __webpack_exports__["default"] = (ImageSlider);
 
@@ -2729,7 +2732,7 @@ var ConnectScreen = function ConnectScreen(props) {
       images = props.images,
       children = props.children,
       assetBaseUrl = props.assetBaseUrl;
-  var showImageSlider = images.length && assetBaseUrl;
+  var showImageSlider = images.length;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({}),
       _useState2 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
