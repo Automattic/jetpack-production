@@ -13,7 +13,6 @@ This is an alpha version! The changes listed here are not final.
 - Add jetpack_connection_active_plugins option in JSON API site endpoint response options.
 - Adds a section with upgrade nudges to the Site Stats page (work in progress)
 - E2E tests: add listeners for page errors and request failed
-- Improve carousel icons.
 - Like Button: Added title and aria-hidden attributes to the like button iframe
 - Modules: Include all module info in the module-headings.php file during the build step.
 - Search: added footer for search dashboard
@@ -21,33 +20,23 @@ This is an alpha version! The changes listed here are not final.
 - Search: Added widgets editor and search customizer buttons for search admin page
 - Search: add instant search upsell nudge for business plan.
 - Search: Add scaffolding for Gutenberg-enabled Customizer (Customberg)
-- Store the preferred view after a page switch using the new WP.com quick switcher
 
 ### Improved compatibility
 - add Full Site Editing support to callback options
-- Compatibility: Adds support for block_editor_settings_all when running WordPress 5.8 or higher
-- Removing static images and related code. Also ensuring that arrows look and work correctly in RTL.
 - Support coming soon v2 sites with the coming soon badge in the admin menu
-- Update Sync tests to include case for jetpack_sync_settings options.
 
 ### Bug fixes
-- Allow the use of widget visibility conditions in gutenberg based widget editing
-- Carousel: Prevent comments indicator from bumping icon width of comments button.
-- Carousel CSS tweaks to ensure text and comment loader spinners dislay correctly in dark and light theme views.
 - Comments: fix subsequent commenting when using a social profile.
-- Enqueue block dependencies for customizer block widget previews. Also removes invalid `isLarge` prop from the FormFileUpload component.
 - Ensure on pageload that the active menu item is keyboard focused in nav unification so its consistent with Calypso
 - Fixed the condition that disables Nav-unification when SSO is disabled and the admin-menu class is overriden in jetpack_admin_menu_class filter.
 - Fix Opentable block input width when used in block editor.
 - Force Calypso interfaces for Atomic sites that have Jetpack SSO disabled.
 - Instant Search: fix visual glitch on breadcrumb in Firefox
 - Instant Search: make sure ?s= is set when using filter links
-- Make sure we show the caption of the image in carousel images.
 - Only adds the security nav item to the Atomic admin menu if the site has the security-settings feature.
 - Publicize: avoid PHP notices in edge-cases where no info about a post can be found.
 - Remove specific form colors from the contact form block
 - SEO Tools: Ensure functions are loaded before API endpoint attempts to use them.
-- WordPress.com Block Editor: do not use in the upcoming Block-based Widgets Editor
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added field for zendesk meta in /sites/id for jetpack sites.
@@ -59,10 +48,28 @@ This is an alpha version! The changes listed here are not final.
 - Plans: Add slugs for new real-time Backup and Security offerings.
 - Removed a line of duplicated code
 - Updated package dependencies
+
+## 9.9.1 - 2021-07-20
+### Enhancements
+- Carousel: improve carousel icons.
+
+### Improved compatibility
+- Carousel: ensure that arrows look and work correctly in right-to-left languages.
+
+### Bug fixes
+- Carousel: prevent comments indicator from bumping icon width of comments button.
+- Carousel: CSS tweaks to ensure text and comment loader spinners dislay correctly in dark and light theme views.
+- Carousel: ensures caption is shown in carousel images.
+- Carousel: ensure carousel CSS doesn't override other non-Jetpack carousel styling.
+- Widgets: allow the use of widget visibility conditions in gutenberg based widget editing.
+- Widgets: ensure block previews display in customizer for multiple blocks.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
+- Compatibility: adds support for block_editor_settings_all when running WordPress 5.8 or higher.
+- WordPress.com Block Editor: do not use in the upcoming Block-based Widgets Editor
+- Nav Unification: stores the preferred view after a page switch using the new WP.com quick switcher
+- Symc: update Sync tests to include case for jetpack_sync_settings options.
 
 ## 9.9 - 2021-07-06
 ### Major Enhancements
