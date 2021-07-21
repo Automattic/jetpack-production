@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: avoid PHP notices in edge-cases where no info about a post can be found.
 - Remove specific form colors from the contact form block
 - SEO Tools: Ensure functions are loaded before API endpoint attempts to use them.
+- Tiled Gallery: Fix blurry display of images much wider than they are high.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added field for zendesk meta in /sites/id for jetpack sites.
