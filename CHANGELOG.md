@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add jetpack_connection_active_plugins option in JSON API site endpoint response options.
 - Adds a section with upgrade nudges to the Site Stats page (work in progress)
+- Carousel: Add JS-based smooth scroll behaviour to the footer buttons.
 - E2E tests: add listeners for page errors and request failed
 - Like Button: Added title and aria-hidden attributes to the like button iframe
 - Modules: Include all module info in the module-headings.php file during the build step.
