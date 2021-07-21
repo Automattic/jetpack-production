@@ -106,6 +106,272 @@
   100% {
     opacity: 1; } }
 
+@charset "UTF-8";
+/********* RNA styles *********/
+:root {
+  --font-title-large: 36px;
+  --font-title-small: 24px;
+  --font-body: 16px;
+  --font-label: 12px;
+  --jp-black:           #000000;
+  --jp-black-80:        #2C3338;
+  --jp-white:           #FFFFFF;
+  --jp-white-off:       #F9F9F6;
+  --jp-gray:            #DCDCDE;
+  --jp-gray-off:        #E2E2DF;
+  --jp-red:             #D63639;
+  --jp-green-primary:   #069E08;
+  --jp-green-secondary: #2FB41F;
+  --jp-border-radius: 4px;
+  --jp-menu-border-height: 1px;
+  --jp-underline-thickness: 2px; }
+
+/********* Mixins *********/
+/********* Generic styles *********/
+* {
+  box-sizing: border-box; }
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif; }
+
+.jp-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1128px;
+  margin: 0 auto; }
+
+.jp-row {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  margin: 0 16px; }
+  @media (min-width: 600px) {
+    .jp-row {
+      grid-template-columns: repeat(8, 1fr);
+      margin: 0 18px; } }
+  @media (min-width: 960px) {
+    .jp-row {
+      grid-template-columns: repeat(12, 1fr);
+      max-width: 1128px;
+      margin: 0 24px; } }
+
+.sm-col-span-1 {
+  grid-column-end: span 1; }
+
+.sm-col-span-2 {
+  grid-column-end: span 2; }
+
+.sm-col-span-3 {
+  grid-column-end: span 3; }
+
+.sm-col-span-4 {
+  grid-column-end: span 4; }
+
+@media (min-width: 600px) {
+  .md-col-span-1 {
+    grid-column-end: span 1; }
+  .md-col-span-2 {
+    grid-column-end: span 2; }
+  .md-col-span-3 {
+    grid-column-end: span 3; }
+  .md-col-span-4 {
+    grid-column-end: span 4; }
+  .md-col-span-5 {
+    grid-column-end: span 5; }
+  .md-col-span-6 {
+    grid-column-end: span 6; }
+  .md-col-span-7 {
+    grid-column-end: span 7; }
+  .md-col-span-8 {
+    grid-column-end: span 8; } }
+
+@media (min-width: 960px) {
+  .lg-col-span-1 {
+    grid-column-end: span 1; }
+  .lg-col-span-2 {
+    grid-column-end: span 2; }
+  .lg-col-span-3 {
+    grid-column-end: span 3; }
+  .lg-col-span-4 {
+    grid-column-end: span 4; }
+  .lg-col-span-5 {
+    grid-column-end: span 5; }
+  .lg-col-span-6 {
+    grid-column-end: span 6; }
+  .lg-col-span-7 {
+    grid-column-end: span 7; }
+  .lg-col-span-8 {
+    grid-column-end: span 8; }
+  .lg-col-span-9 {
+    grid-column-end: span 9; }
+  .lg-col-span-10 {
+    grid-column-end: span 10; }
+  .lg-col-span-11 {
+    grid-column-end: span 11; }
+  .lg-col-span-12 {
+    grid-column-end: span 12; } }
+
+@media (max-width: 960px) {
+  .md-col-span-0 {
+    display: none; } }
+
+@media (max-width: 600px) {
+  .sm-col-span-0 {
+    display: none; } }
+
+.jp-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1128px;
+  margin: 0 auto; }
+
+.jp-row {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  margin: 0 16px; }
+  @media (min-width: 600px) {
+    .jp-row {
+      grid-template-columns: repeat(8, 1fr);
+      margin: 0 18px; } }
+  @media (min-width: 960px) {
+    .jp-row {
+      grid-template-columns: repeat(12, 1fr);
+      max-width: 1128px;
+      margin: 0 24px; } }
+
+.jp-cut {
+  position: relative;
+  display: block;
+  margin: 32px 0;
+  padding: 16px 64px 16px 24px;
+  border: 2px solid #069E08;
+  border: 2px solid var(--jp-green-primary);
+  border-radius: 4px;
+  border-radius: var(--jp-border-radius);
+  text-decoration: none; }
+  .jp-cut span {
+    display: block; }
+    .jp-cut span:last-of-type {
+      font-weight: 600; }
+  .jp-cut:hover span:last-of-type, .jp-cut:focus span:last-of-type {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-thickness: var(--jp-underline-thickness); }
+  .jp-cut:hover:after, .jp-cut:focus:after {
+    transform: translateY(-50%) translateX(8px); }
+  .jp-cut:after {
+    content: "→";
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #069E08;
+    color: var(--jp-green-primary);
+    transform: translateY(-50%);
+    transition: transform 0.15s ease-out; }
+
+.jp-disconnect-dialog h1 {
+  margin-top: 0;
+  line-height: 1.2;
+  font-size: 36px;
+  font-size: var(--font-title-large);
+  font-weight: 600; }
+
+.jp-disconnect-dialog h2 {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 24px;
+  font-size: var(--font-title-small);
+  font-weight: 400; }
+
+.jp-disconnect-dialog__link {
+  color: #000000;
+  color: var(--jp-black);
+  text-decoration: underline; }
+  .jp-disconnect-dialog__link:hover {
+    color: #000000;
+    color: var(--jp-black);
+    text-decoration-thickness: 2px;
+    text-decoration-thickness: var(--jp-underline-thickness); }
+  .jp-disconnect-dialog__link:focus {
+    color: #000000;
+    color: var(--jp-black);
+    box-shadow: none !important; }
+
+.jp-disconnect-dialog .components-modal__content {
+  padding: 0; }
+
+.jp-disconnect-dialog .components-modal__header {
+  display: none; }
+
+.jp-disconnect-dialog .jp-row {
+  align-items: center; }
+
+.jp-disconnect-dialog__content {
+  background: #F9F9F6;
+  background: var(--jp-white-off);
+  margin: 0;
+  padding: 80px;
+  border-radius: 4px;
+  text-align: center; }
+
+.jp-disconnect-dialog__actions {
+  background: #FFFFFF;
+  background: var(--jp-white);
+  padding: 10px 48px; }
+  .jp-disconnect-dialog__actions p {
+    font-size: 16px;
+    font-size: var(--font-body); }
+  .jp-disconnect-dialog__actions .components-button {
+    height: 40px;
+    font-size: var(--font-body-small);
+    border-radius: 4px; }
+
+.jp-disconnect-dialog__btn-dismiss {
+  background: #000000 !important;
+  background: var(--jp-black) !important;
+  margin-right: 10px; }
+
+.jp-disconnect-dialog__btn-disconnect {
+  background: #D63639 !important;
+  background: var(--jp-red) !important; }
+
+.jp-disconnect-dialog__btn-back-to-wp {
+  background: #000000 !important;
+  background: var(--jp-black) !important; }
+
+.jp-disconnect-dialog__button-wrap {
+  text-align: center; }
+
+.jp-disconnect-dialog__error {
+  color: #D63639;
+  color: var(--jp-red); }
+
+.jp-disconnect-dialog__success .components-modal__content {
+  background: #FFFFFF;
+  background: var(--jp-white);
+  padding: 50px; }
+
+.jp-disconnect-dialog__success h1 {
+  margin-top: 20px; }
+
+@media (min-width: 960px) {
+  .jp-disconnect-dialog {
+    min-width: 900px; }
+    .jp-disconnect-dialog__success {
+      min-width: auto; }
+  .jp-row {
+    margin-left: 0px; } }
+
 #jetpack-connection-ui-container .jetpack-cui__header h1 {
   text-align: left;
   font-size: 4.6em;

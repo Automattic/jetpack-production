@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Integrate DisconnectDialog RNA component.
 - Integrated the RNA connection screen component.
 
 ## [1.2.0] - 2021-06-29
