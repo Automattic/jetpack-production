@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: add search setting page with only toggles
 
 ### Enhancements
+- Adding upgrade nudges to the Site Stats page
 - Add jetpack_connection_active_plugins option in JSON API site endpoint response options.
 - Adds a section with upgrade nudges to the Site Stats page (work in progress)
 - Carousel: Add JS-based smooth scroll behaviour to the footer buttons.
