@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: add listeners for page errors and request failed
 - Like Button: Added title and aria-hidden attributes to the like button iframe
 - Modules: Include all module info in the module-headings.php file during the build step.
+- My Plan: Recognize and display new Backup, Security plans.
 - Search: added footer for search dashboard
 - Search: added mocked legacy search interface for admin page
 - Search: Added widgets editor and search customizer buttons for search admin page
