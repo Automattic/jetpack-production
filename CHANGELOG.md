@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - Plans: Add slugs for new real-time Backup and Security offerings.
 - Removed a line of duplicated code
 - Updated package dependencies
+- Updates contributor list.
 
 ## 9.9.1 - 2021-07-20
 ### Enhancements
