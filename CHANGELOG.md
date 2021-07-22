@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Comments: refactor jQuery usage.
 - Development: Soft-fail if Jetpack is not built.
 - Dev Tools: Add list items to the Dev Tools card for new Backup and Security products.
+- E2E tests: Require local node to match one defined in package.json
 - Init 10.0 release cycle
 - Plans: Add slugs for new real-time Backup and Security offerings.
 - Removed a line of duplicated code
