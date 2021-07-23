@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: Require local node to match one defined in package.json
 - Fail build if the php:module-headings step fails.
 - Init 10.0 release cycle
+- Move site disconnection endpoint to Connection package.
 - Plans: Add slugs for new real-time Backup and Security offerings.
 - Removed a line of duplicated code
 - Updated package dependencies

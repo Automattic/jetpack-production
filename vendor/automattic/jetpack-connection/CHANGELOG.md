@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a package version constant.
 
+### Changed
+- Move site disconnection endpoint to Connection package.
+
 ### Fixed
 - Fix `@covers` directives in tests.
 

@@ -1987,6 +1987,13 @@ class Manager {
 
 			\Jetpack_Options::update_option( 'unique_connection', $jetpack_unique_connection );
 		}
+
+		/**
+		 * Fires when a site is disconnected.
+		 *
+		 * @since 1.30.1-alpha
+		 */
+		do_action( 'jetpack_site_disconnected' );
 	}
 
 	/**
