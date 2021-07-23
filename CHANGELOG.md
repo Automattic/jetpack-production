@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Like Button: Added title and aria-hidden attributes to the like button iframe
 - Modules: Include all module info in the module-headings.php file during the build step.
 - My Plan: Recognize and display new Backup, Security plans.
+- On resize of an image, fade out the bottom bar, and the close button. Fade it back in when sized back to original, or the image is swiped/tapped.
 - Search: added footer for search dashboard
 - Search: added mocked legacy search interface for admin page
 - Search: Added widgets editor and search customizer buttons for search admin page
