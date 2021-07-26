@@ -13,9 +13,6 @@ This is an alpha version! The changes listed here are not final.
 - Add a package version constant.
 - add Full Site Editing support to callback options
 
-### Fixed
-- Update Sender so it adheres to max upload bytes when not encoding items.
-
 ## [1.23.3] - 2021-07-16
 ### Fixed
 - Update Options module to return jetpack_sync_settings_* values from the Settings class vs direct option lookup.
