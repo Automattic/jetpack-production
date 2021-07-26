@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Only adds the security nav item to the Atomic admin menu if the site has the security-settings feature.
 - Publicize: avoid PHP notices in edge-cases where no info about a post can be found.
 - Remove specific form colors from the contact form block
+- Search: Fix notice issue with WP 5.8's widget editor.
 - SEO Tools: Ensure functions are loaded before API endpoint attempts to use them.
 - Tiled Gallery: Fix blurry display of images much wider than they are high.
 
