@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Added widgets editor and search customizer buttons for search admin page
 - Search: add instant search upsell nudge for business plan.
 - Search: Add scaffolding for Gutenberg-enabled Customizer (Customberg)
+- Style the Stats Upgrade Nudges section
 
 ### Improved compatibility
 - add Full Site Editing support to callback options
