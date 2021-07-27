@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a package version constant.
 
 ### Changed
+- Move connection/data endpoint to Connection package.
 - Move site disconnection endpoint to Connection package.
 
 ### Fixed

@@ -60,6 +60,7 @@ This is an alpha version! The changes listed here are not final.
 - Fail build if the php:module-headings step fails.
 - Heartbeat: Calculate media library size
 - Init 10.0 release cycle
+- Move connection/data endpoint to Connection package.
 - Move site disconnection endpoint to Connection package.
 - Plans: Add slugs for new real-time Backup and Security offerings.
 - Removed a line of duplicated code
