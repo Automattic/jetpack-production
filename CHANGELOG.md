@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: avoid PHP notices in edge-cases where no info about a post can be found.
 - Remove specific form colors from the contact form block
 - Search: Fix notice issue with WP 5.8's widget editor.
+- Select Dropdown Component: Add content-box box sizing to prevent global box-sizing settings from affecting dropdown size.
 - SEO Tools: Ensure functions are loaded before API endpoint attempts to use them.
 - Tiled Gallery: Fix blurry display of images much wider than they are high.
 
