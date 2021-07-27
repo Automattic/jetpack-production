@@ -1997,7 +1997,7 @@ class Manager {
 		/**
 		 * Fires when a site is disconnected.
 		 *
-		 * @since 1.30.1-alpha
+		 * @since 1.30.1
 		 */
 		do_action( 'jetpack_site_disconnected' );
 	}
