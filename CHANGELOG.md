@@ -2,6 +2,14 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.1-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Add badge to admin menus endpoint
+- Admin menu: Move site editor menu item and add beta badge
+
 ## 10.0-beta - 2021-07-27
 ### Enhancements
 - Carousel: add settings toggle to control display of colorized slide background.
