@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add badge to admin menus endpoint
+- Admin menu: Move site editor menu item and add beta badge
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init Jetpack 10.1 release cycle.
