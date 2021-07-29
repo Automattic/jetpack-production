@@ -136,10 +136,6 @@ input[type="url"] {
 	box-shadow: none;
 }
 
-input[type="text"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder {
-	color: #87a6bc;
-}
-
 input[type="text"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="email"]::placeholder,
@@ -187,10 +183,6 @@ input[type="url"]:disabled:hover {
 	cursor: default;
 }
 
-input[type="text"]:disabled:-ms-input-placeholder, input[type="tel"]:disabled:-ms-input-placeholder, input[type="email"]:disabled:-ms-input-placeholder, input[type="url"]:disabled:-ms-input-placeholder {
-	color: #a8bece;
-}
-
 input[type="text"]:disabled::placeholder,
 input[type="tel"]:disabled::placeholder,
 input[type="email"]:disabled::placeholder,
@@ -221,10 +213,6 @@ textarea {
 	box-shadow: none;
 }
 
-textarea:-ms-input-placeholder {
-	color: #87a6bc;
-}
-
 textarea::placeholder {
 	color: #87a6bc;
 }
@@ -252,10 +240,6 @@ textarea:disabled {
 
 textarea:disabled:hover {
 	cursor: default;
-}
-
-textarea:disabled:-ms-input-placeholder {
-	color: #a8bece;
 }
 
 textarea:disabled::placeholder {
@@ -423,10 +407,6 @@ input[type="radio"]:disabled {
 .radio-button:disabled:hover,
 input[type="radio"]:disabled:hover {
 	cursor: default;
-}
-
-.radio-button:disabled:-ms-input-placeholder, input[type="radio"]:disabled:-ms-input-placeholder {
-	color: #a8bece;
 }
 
 .radio-button:disabled::placeholder,

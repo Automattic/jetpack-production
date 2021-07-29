@@ -10,12 +10,16 @@ This is an alpha version! The changes listed here are not final.
 - Add badge to admin menus endpoint
 - Admin menu: Move site editor menu item and add beta badge
 
+### Improved compatibility
+- Browser Compatibility: allow use of new JavaScript features not supported by Internet Explorer 11.
+
 ### Bug fixes
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init Jetpack 10.1 release cycle.
 - Jetpack 10.0: update beta testing instructions.
+- Updated package dependencies
 
 ## 10.0-beta - 2021-07-27
 ### Enhancements

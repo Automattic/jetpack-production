@@ -118,7 +118,6 @@
 	font-size: 12px;
 	line-height: 1.4;
 	-webkit-hyphens: none;
-	    -ms-hyphens: none;
 	        hyphens: none;
 }
 
@@ -242,8 +241,7 @@
 	position: absolute;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
-	-ms-user-select: none;
-	    user-select: none;
+	user-select: none;
 	pointer-events: none;
 	top: 0;
 	bottom: 0;
