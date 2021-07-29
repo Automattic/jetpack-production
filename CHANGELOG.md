@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Browser Compatibility: allow use of new JavaScript features not supported by Internet Explorer 11.
+- Search: Remove required attribute from search inputs
 
 ### Bug fixes
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
