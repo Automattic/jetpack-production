@@ -82,10 +82,6 @@ return array(
 		'version' => '1.3.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
 	),
-	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.4.6.0',
-		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
-	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '1.4.4.0',
 		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
@@ -110,25 +106,9 @@ return array(
 		'version' => '1.16.2.0',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-pre-connection-jitm.php'
 	),
-	'Jetpack_Sync_Actions' => array(
-		'version' => '1.6.5.0',
-		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-sync-actions.php'
-	),
-	'Jetpack_Sync_Settings' => array(
-		'version' => '1.6.5.0',
-		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-sync-settings.php'
-	),
-	'JetpackTracking' => array(
-		'version' => '1.6.5.0',
-		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpacktracking.php'
-	),
-	'Jetpack_Client' => array(
-		'version' => '1.6.5.0',
-		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-client.php'
-	),
-	'Jetpack_Sync_Modules' => array(
-		'version' => '1.6.5.0',
-		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-sync-modules.php'
+	'Automattic\\Jetpack\\Config' => array(
+		'version' => '1.4.6.0',
+		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
 	),
 	'Automattic\\Jetpack\\Blocks' => array(
 		'version' => '1.4.1.0',
@@ -149,6 +129,26 @@ return array(
 	'Automattic\\Jetpack\\Abtest' => array(
 		'version' => '1.9.9.0',
 		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
+	),
+	'Jetpack_Sync_Actions' => array(
+		'version' => '1.6.5.0',
+		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-sync-actions.php'
+	),
+	'Jetpack_Sync_Settings' => array(
+		'version' => '1.6.5.0',
+		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-sync-settings.php'
+	),
+	'JetpackTracking' => array(
+		'version' => '1.6.5.0',
+		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpacktracking.php'
+	),
+	'Jetpack_Client' => array(
+		'version' => '1.6.5.0',
+		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-client.php'
+	),
+	'Jetpack_Sync_Modules' => array(
+		'version' => '1.6.5.0',
+		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-sync-modules.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
 		'version' => '1.5.1.0',
