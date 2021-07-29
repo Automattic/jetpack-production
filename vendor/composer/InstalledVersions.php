@@ -273,12 +273,12 @@ private static $installed = array (
     ),
     'automattic/jetpack-sync' => 
     array (
-      'pretty_version' => 'v1.24.0',
-      'version' => '1.24.0.0',
+      'pretty_version' => 'v1.24.1',
+      'version' => '1.24.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd59c075ef6df1ebb5aeff06ff97a3b931789b665',
+      'reference' => 'ad3276a419a3281b9c977a734f0a9f11237d5113',
     ),
     'automattic/jetpack-terms-of-service' => 
     array (
