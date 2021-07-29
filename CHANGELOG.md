@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add badge to admin menus endpoint
 - Admin menu: Move site editor menu item and add beta badge
 
+### Improved compatibility
+- Search: Remove required attribute from search inputs
+
 ## 10.0-beta - 2021-07-27
 ### Enhancements
 - Carousel: add settings toggle to control display of colorized slide background.
