@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init Jetpack 10.1 release cycle.
 - Jetpack 10.0: update beta testing instructions.
+- Rename a generated js file to avoid triggering an outdated minifier on wpcom's cdn.
 - Updated package dependencies
 
 ## 10.0-beta - 2021-07-27
