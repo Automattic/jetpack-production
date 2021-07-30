@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Init Jetpack 10.1 release cycle.
 - Jetpack 10.0: update beta testing instructions.
 - Rename a generated js file to avoid triggering an outdated minifier on wpcom's cdn.
+- Search: Fix search E2E test failure caused by new block widgets in WP 5.8
 - Updated package dependencies
 - Updated package dependencies
 
