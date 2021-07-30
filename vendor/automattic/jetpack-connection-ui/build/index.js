@@ -2051,7 +2051,6 @@ __webpack_require__.r(__webpack_exports__);
  * @param {string} props.title - Title for SVG.
  * @param {number} props.height - Height for SVG.
  * @param {number} props.className - Additional className for the a wrapper, default only: `jp-automattic-byline-logo`.
- *
  * @returns {React.Component} AutomatticBylineLogo component.
  */
 
@@ -2133,7 +2132,6 @@ __webpack_require__.r(__webpack_exports__);
  * @param {object} props.a8cLogoHref - Link for 'An Automattic Airline'.
  * @param {object} props.moduleName - Name of the module, e.g. 'Jetpack Search'.
  * @param {object} props.className - additional className of the wrapper, default only: `jp-dashboard-footer`.
- *
  * @returns {React.Component} JetpackFooter component.
  */
 
@@ -2355,18 +2353,15 @@ __webpack_require__.r(__webpack_exports__);
  * Note: if using full URL, query parameters and anchor must be passed in args. Any querystring of url fragment in the URL will be discarded.
  *
  * @since 0.2.0
- *
  * @param {string}  source - The URL handler registered in the server or the full destination URL (starting with https://).
  * @param {object}  args - {
  *
  * Additional arguments to build the url.  This is not a complete list as any argument passed here will be sent to as a query parameter to the Redirect server. These parameters will not necessarily be passed over to the final destination URL. If you want to add a parameter to the final destination URL, use the `query` argument.
- *
  * @type {string}  site URL of the current site. Will default to the value of jetpack_redirects.currentSiteRawUrl, if available.
  * @type {string}  path Additional path to be appended to the URL
  * @type {string}  query Query parameters to be added to the final destination URL. should be in query string format (e.g. 'key=value&foo=bar').
  * @type {string}  anchor Anchor to be added to the URL
  * }
- *
  * @returns {string} The redirect URL
  */
 function getRedirectUrl(source) {
@@ -2460,7 +2455,6 @@ __webpack_require__.r(__webpack_exports__);
  * @param {string} props.redirectUri -- The redirect admin URI.
  * @param {string} props.from -- Where the connection request is coming from.
  * @param {Function} props.statusCallback -- Callback to pull connection status from the component.
- *
  * @returns {React.Component} The RNA connection component.
  */
 
@@ -2620,7 +2614,6 @@ __webpack_require__.r(__webpack_exports__);
  * @param {object} props -- The properties.
  * @param {Array} props.images -- Images to display on the right side.
  * @param {string} props.assetBaseUrl -- The assets base URL
- *
  * @returns {React.Component} The `ImageSlider` component.
  */
 
@@ -2709,7 +2702,6 @@ __webpack_require__.r(__webpack_exports__);
  * @param {Function} props.statusCallback -- Callback to pull connection status from the component.
  * @param {Array} props.images -- Images to display on the right side.
  * @param {string} props.assetBaseUrl -- The assets base URL.
- *
  * @returns {React.Component} The `ConnectScreen` component.
  */
 
@@ -2840,7 +2832,6 @@ __webpack_require__.r(__webpack_exports__);
  * @param {string} props.connectUrl -- The authorization URL (no-iframe).
  * @param {string} props.redirectUri -- The redirect admin URI.
  * @param {string} props.from -- Where the connection request is coming from.
- *
  * @returns {null} -- Nothing to return.
  */
 
@@ -2950,7 +2941,6 @@ __webpack_require__.r(__webpack_exports__);
  * @param {string}   props.title -- The Card title.
  * @param {string}   props.connectionInfoText -- The text that will be displayed under the title, containing info how to leverage the connection.
  * @param {Function} props.onDisconnected -- The callback to be called upon disconnection success.
- *
  * @returns {React.Component} The `ConnectionStatusCard` component.
  */
 
@@ -3138,7 +3128,6 @@ __webpack_require__.r(__webpack_exports__);
  * @param {Function} props.onDisconnected -- The callback to be called upon disconnection success.
  * @param {Function} props.onError -- The callback to be called upon disconnection failure.
  * @param {Function} props.errorMessage -- The error message to display upon disconnection failure.
- *
  * @returns {React.Component} The `DisconnectDialog` component.
  */
 
@@ -3359,7 +3348,6 @@ __webpack_require__.r(__webpack_exports__);
  * @param {Function} props.onComplete -- The callback to be called upon complete of the connection process.
  * @param {Function} props.onThirdPartyCookiesBlocked -- The callback to be called if third-party cookies are disabled.
  * @param {string} props.location -- Component location identifier passed to WP.com.
- *
  * @returns {React.Component} The in-place connection component.
  */
 
