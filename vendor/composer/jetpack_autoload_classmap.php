@@ -110,6 +110,10 @@ return array(
 		'version' => '1.4.6.0',
 		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
 	),
+	'Automattic\\Jetpack\\Abtest' => array(
+		'version' => '1.9.9.0',
+		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
+	),
 	'Jetpack_Sync_Actions' => array(
 		'version' => '1.6.5.0',
 		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-sync-actions.php'
@@ -145,10 +149,6 @@ return array(
 	'Automattic\\Jetpack\\Backup\\Package_Version' => array(
 		'version' => '1.1.1.0',
 		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-package-version.php'
-	),
-	'Automattic\\Jetpack\\Abtest' => array(
-		'version' => '1.9.9.0',
-		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
 		'version' => '1.5.1.0',

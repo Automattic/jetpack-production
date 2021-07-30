@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin menu: Move site editor menu item and add beta badge
 
 ### Improved compatibility
+- Adds a Swiper JS param to prevent interaction on the carousel while transitioning between slides
 - Search: Remove required attribute from search inputs
 
 ## 10.0-beta - 2021-07-27
