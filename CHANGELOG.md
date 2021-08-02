@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds a Swiper JS param to prevent interaction on the carousel while transitioning between slides
 - Browser Compatibility: allow use of new JavaScript features not supported by Internet Explorer 11.
 - Search: Remove required attribute from search inputs
+- Update Jest dependencies to fix Jetpack JS tests.
 
 ### Bug fixes
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
