@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Jest dependencies to fix Jetpack JS tests.
 
 ### Bug fixes
+- Contact Form: Disable the Block Editor for contact form submissions
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
