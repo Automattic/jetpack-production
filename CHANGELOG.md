@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add badge to admin menus endpoint
 - Admin menu: Move site editor menu item and add beta badge
+- WordPress.com REST API: Add new field to comment endpoint response.
 
 ### Improved compatibility
 - Adds a Swiper JS param to prevent interaction on the carousel while transitioning between slides
