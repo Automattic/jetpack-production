@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - [Carousel]: Fix bug preventing user from swiping in gallery when images are configured to link to Attachment Page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Carousel: Replace color CSS with CSS variables to simplify theming
 - Init Jetpack 10.1 release cycle.
 - Jetpack 10.0: update beta testing instructions.
 - Rename a generated js file to avoid triggering an outdated minifier on wpcom's cdn.
