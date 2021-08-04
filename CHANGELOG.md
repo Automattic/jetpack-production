@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Browser Compatibility: allow use of new JavaScript features not supported by Internet Explorer 11.
+- Hide UI controls in the carousel for single images.
 - Update Jest dependencies to fix Jetpack JS tests.
 
 ### Bug fixes
