@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Search: removes forward slash from empty breadcrumb display
 - Widget Visibility - rename taxonomy label "All Pages" in dropdown
 - WordPress.com REST API: Add new field to comment endpoint response.
 
