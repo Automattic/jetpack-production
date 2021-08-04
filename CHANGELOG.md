@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Browser Compatibility: allow use of new JavaScript features not supported by Internet Explorer 11.
 - Hide UI controls in the carousel for single images.
 - Update Jest dependencies to fix Jetpack JS tests.
+- Updates copy in Mailchimp block to use audience instead of lists.
 
 ### Bug fixes
 - Contact Form: Disable the Block Editor for contact form submissions
