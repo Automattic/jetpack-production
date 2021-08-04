@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Widget Visibility - rename taxonomy label "All Pages" in dropdown
 - WordPress.com REST API: Add new field to comment endpoint response.
 
 ### Improved compatibility
