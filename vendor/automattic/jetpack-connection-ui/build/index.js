@@ -2133,6 +2133,21 @@ function JetpackRestApiClient(root, nonce) {
     setCacheBusterCallback: function setCacheBusterCallback(callback) {
       cacheBusterCallback = callback;
     },
+    registerSite: function registerSite(registrationNonce, redirectUri) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/connection/register"), postParams, {
+        body: JSON.stringify({
+          registration_nonce: registrationNonce,
+          no_iframe: true,
+          redirect_uri: redirectUri
+        })
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchAuthorizationUrl: function fetchAuthorizationUrl(redirectUri) {
+      return getRequest("".concat(apiRoot, "jetpack/v4/connection/authorize_url?no_iframe=1&redirect_uri=").concat(encodeURIComponent(redirectUri)), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchSiteConnectionData: function fetchSiteConnectionData() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/connection/data"), getParams).then(parseJsonResponse);
+    },
     fetchSiteConnectionStatus: function fetchSiteConnectionStatus() {
       return getRequest("".concat(apiRoot, "jetpack/v4/connection"), getParams).then(parseJsonResponse);
     },
