@@ -2015,6 +2015,520 @@ if (undefined === 'production') {
 
 /***/ }),
 
+/***/ "../../js-packages/api/index.jsx":
+/*!****************************************************************************!*\
+  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/api/index.jsx ***!
+  \****************************************************************************/
+/*! exports provided: JsonParseError, JsonParseAfterRedirectError, Api404Error, Api404AfterRedirectError, FetchNetworkError, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsonParseError", function() { return JsonParseError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsonParseAfterRedirectError", function() { return JsonParseAfterRedirectError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Api404Error", function() { return Api404Error; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Api404AfterRedirectError", function() { return Api404AfterRedirectError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FetchNetworkError", function() { return FetchNetworkError; });
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/classCallCheck */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/inherits */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createSuper */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createSuper.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/wrapNativeSuper */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/wrapNativeSuper.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+/**
+ * External dependencies
+ */
+
+/**
+ * Helps create new custom error classes to better notify upper layers.
+ *
+ * @param {string} name - the Error name that will be availble in Error.name
+ * @returns {Error}      a new custom error class.
+ */
+
+function createCustomError(name) {
+  var CustomError = /*#__PURE__*/function (_Error) {
+    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default()(CustomError, _Error);
+
+    var _super = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2___default()(CustomError);
+
+    function CustomError() {
+      var _this;
+
+      _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, CustomError);
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      _this = _super.call.apply(_super, [this].concat(args));
+      _this.name = name;
+      return _this;
+    }
+
+    return CustomError;
+  }( /*#__PURE__*/_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3___default()(Error));
+
+  return CustomError;
+}
+
+var JsonParseError = createCustomError('JsonParseError');
+var JsonParseAfterRedirectError = createCustomError('JsonParseAfterRedirectError');
+var Api404Error = createCustomError('Api404Error');
+var Api404AfterRedirectError = createCustomError('Api404AfterRedirectError');
+var FetchNetworkError = createCustomError('FetchNetworkError');
+/**
+ * Create a Jetpack Rest Api Client
+ *
+ * @param {string} root - The API root
+ * @param {string} nonce - The API Nonce
+ */
+
+function JetpackRestApiClient(root, nonce) {
+  var apiRoot = root,
+      headers = {
+    'X-WP-Nonce': nonce
+  },
+      getParams = {
+    credentials: 'same-origin',
+    headers: headers
+  },
+      postParams = {
+    method: 'post',
+    credentials: 'same-origin',
+    headers: Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])({}, headers, {
+      'Content-type': 'application/json'
+    })
+  },
+      cacheBusterCallback = addCacheBuster;
+  var methods = {
+    setApiRoot: function setApiRoot(newRoot) {
+      apiRoot = newRoot;
+    },
+    setApiNonce: function setApiNonce(newNonce) {
+      headers = {
+        'X-WP-Nonce': newNonce
+      };
+      getParams = {
+        credentials: 'same-origin',
+        headers: headers
+      };
+      postParams = {
+        method: 'post',
+        credentials: 'same-origin',
+        headers: Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])({}, headers, {
+          'Content-type': 'application/json'
+        })
+      };
+    },
+    setCacheBusterCallback: function setCacheBusterCallback(callback) {
+      cacheBusterCallback = callback;
+    },
+    fetchSiteConnectionStatus: function fetchSiteConnectionStatus() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/connection"), getParams).then(parseJsonResponse);
+    },
+    fetchSiteConnectionTest: function fetchSiteConnectionTest() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/connection/test"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchUserConnectionData: function fetchUserConnectionData() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/connection/data"), getParams).then(parseJsonResponse);
+    },
+    fetchUserTrackingSettings: function fetchUserTrackingSettings() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/tracking/settings"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    updateUserTrackingSettings: function updateUserTrackingSettings(newSettings) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/tracking/settings"), postParams, {
+        body: JSON.stringify(newSettings)
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    disconnectSite: function disconnectSite() {
+      return postRequest("".concat(apiRoot, "jetpack/v4/connection"), postParams, {
+        body: JSON.stringify({
+          isActive: false
+        })
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchConnectUrl: function fetchConnectUrl() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/connection/url"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    unlinkUser: function unlinkUser() {
+      return postRequest("".concat(apiRoot, "jetpack/v4/connection/user"), postParams, {
+        body: JSON.stringify({
+          linked: false
+        })
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    reconnect: function reconnect() {
+      return postRequest("".concat(apiRoot, "jetpack/v4/connection/reconnect"), postParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchConnectedPlugins: function fetchConnectedPlugins() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/connection/plugins"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchModules: function fetchModules() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/module/all"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchModule: function fetchModule(slug) {
+      return getRequest("".concat(apiRoot, "jetpack/v4/module/").concat(slug), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    activateModule: function activateModule(slug) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/module/").concat(slug, "/active"), postParams, {
+        body: JSON.stringify({
+          active: true
+        })
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    deactivateModule: function deactivateModule(slug) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/module/").concat(slug, "/active"), postParams, {
+        body: JSON.stringify({
+          active: false
+        })
+      });
+    },
+    updateModuleOptions: function updateModuleOptions(slug, newOptionValues) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/module/").concat(slug), postParams, {
+        body: JSON.stringify(newOptionValues)
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    updateSettings: function updateSettings(newOptionValues) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/settings"), postParams, {
+        body: JSON.stringify(newOptionValues)
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    getProtectCount: function getProtectCount() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/module/protect/data"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    resetOptions: function resetOptions(options) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/options/").concat(options), postParams, {
+        body: JSON.stringify({
+          reset: true
+        })
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    activateVaultPress: function activateVaultPress() {
+      return postRequest("".concat(apiRoot, "jetpack/v4/plugins"), postParams, {
+        body: JSON.stringify({
+          slug: 'vaultpress',
+          status: 'active'
+        })
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    getVaultPressData: function getVaultPressData() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/module/vaultpress/data"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    installPlugin: function installPlugin(slug, source) {
+      var props = {
+        slug: slug,
+        status: 'active'
+      };
+
+      if (source) {
+        props.source = source;
+      }
+
+      return postRequest("".concat(apiRoot, "jetpack/v4/plugins"), postParams, {
+        body: JSON.stringify(props)
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    activateAkismet: function activateAkismet() {
+      return postRequest("".concat(apiRoot, "jetpack/v4/plugins"), postParams, {
+        body: JSON.stringify({
+          slug: 'akismet',
+          status: 'active'
+        })
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    getAkismetData: function getAkismetData() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/module/akismet/data"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    checkAkismetKey: function checkAkismetKey() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/module/akismet/key/check"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    checkAkismetKeyTyped: function checkAkismetKeyTyped(apiKey) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/module/akismet/key/check"), postParams, {
+        body: JSON.stringify({
+          api_key: apiKey
+        })
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchStatsData: function fetchStatsData(range) {
+      return getRequest(statsDataUrl(range), getParams).then(checkStatus).then(parseJsonResponse).then(handleStatsResponseError);
+    },
+    getPluginUpdates: function getPluginUpdates() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/updates/plugins"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    getPlans: function getPlans() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/plans"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchSettings: function fetchSettings() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/settings"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    updateSetting: function updateSetting(updatedSetting) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/settings"), postParams, {
+        body: JSON.stringify(updatedSetting)
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchSiteData: function fetchSiteData() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/site"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
+        return JSON.parse(body.data);
+      });
+    },
+    fetchSiteFeatures: function fetchSiteFeatures() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/site/features"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
+        return JSON.parse(body.data);
+      });
+    },
+    fetchSiteProducts: function fetchSiteProducts() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/site/products"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchSitePurchases: function fetchSitePurchases() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/site/purchases"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
+        return JSON.parse(body.data);
+      });
+    },
+    fetchSiteBenefits: function fetchSiteBenefits() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/site/benefits"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
+        return JSON.parse(body.data);
+      });
+    },
+    fetchSetupQuestionnaire: function fetchSetupQuestionnaire() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/setup/questionnaire"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchRecommendationsData: function fetchRecommendationsData() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/recommendations/data"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchRecommendationsUpsell: function fetchRecommendationsUpsell() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/recommendations/upsell"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    saveRecommendationsData: function saveRecommendationsData(data) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/recommendations/data"), postParams, {
+        body: JSON.stringify({
+          data: data
+        })
+      }).then(checkStatus);
+    },
+    fetchProducts: function fetchProducts() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/products"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchRewindStatus: function fetchRewindStatus() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/rewind"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
+        return JSON.parse(body.data);
+      });
+    },
+    fetchScanStatus: function fetchScanStatus() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/scan"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
+        return JSON.parse(body.data);
+      });
+    },
+    dismissJetpackNotice: function dismissJetpackNotice(notice) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/notice/").concat(notice), postParams, {
+        body: JSON.stringify({
+          dismissed: true
+        })
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchPluginsData: function fetchPluginsData() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/plugins"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchVerifySiteGoogleStatus: function fetchVerifySiteGoogleStatus(keyringId) {
+      var request = keyringId !== null ? getRequest("".concat(apiRoot, "jetpack/v4/verify-site/google/").concat(keyringId), getParams) : getRequest("".concat(apiRoot, "jetpack/v4/verify-site/google"), getParams);
+      return request.then(checkStatus).then(parseJsonResponse);
+    },
+    verifySiteGoogle: function verifySiteGoogle(keyringId) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/verify-site/google"), postParams, {
+        body: JSON.stringify({
+          keyring_id: keyringId
+        })
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    sendMobileLoginEmail: function sendMobileLoginEmail() {
+      return postRequest("".concat(apiRoot, "jetpack/v4/mobile/send-login-email"), postParams).then(checkStatus).then(parseJsonResponse);
+    },
+    submitSurvey: function submitSurvey(surveyResponse) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/marketing/survey"), postParams, {
+        body: JSON.stringify(surveyResponse)
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    saveSetupQuestionnaire: function saveSetupQuestionnaire(props) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/setup/questionnaire"), postParams, {
+        body: JSON.stringify(props)
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    updateLicensingError: function updateLicensingError(props) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/licensing/error"), postParams, {
+        body: JSON.stringify(props)
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    updateLicenseKey: function updateLicenseKey(license) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/licensing/set-license"), postParams, {
+        body: JSON.stringify({
+          license: license
+        })
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    updateRecommendationsStep: function updateRecommendationsStep(step) {
+      return postRequest("".concat(apiRoot, "jetpack/v4/recommendations/step"), postParams, {
+        body: JSON.stringify({
+          step: step
+        })
+      }).then(checkStatus);
+    }
+  };
+  /**
+   * The default callback to add a cachebuster parameter to route
+   *
+   * @param {string} route - the route
+   * @returns {string} - the route with the cachebuster appended
+   */
+
+  function addCacheBuster(route) {
+    var parts = route.split('?'),
+        query = parts.length > 1 ? parts[1] : '',
+        args = query.length ? query.split('&') : [];
+    args.push('_cacheBuster=' + new Date().getTime());
+    return parts[0] + '?' + args.join('&');
+  }
+  /**
+   * Generate a request promise for the route and params. Automatically adds a cachebuster.
+   *
+   * @param {string} route - the route
+   * @param {object} params - the params
+   * @returns {Promise<Response>} - the http request promise
+   */
+
+
+  function getRequest(route, params) {
+    return fetch(cacheBusterCallback(route), params);
+  }
+  /**
+   * Generate a POST request promise for the route and params. Automatically adds a cachebuster.
+   *
+   * @param {string} route - the route
+   * @param {object} params - the params
+   * @param {string} body - the body
+   * @returns {Promise<Response>} - the http response promise
+   */
+
+
+  function postRequest(route, params, body) {
+    return fetch(route, Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])({}, params, body))["catch"](catchNetworkErrors);
+  }
+  /**
+   * Returns the stats data URL for the given date range
+   *
+   * @param {string} range - the range
+   * @returns {string} - the stats URL
+   */
+
+
+  function statsDataUrl(range) {
+    var url = "".concat(apiRoot, "jetpack/v4/module/stats/data");
+
+    if (url.indexOf('?') !== -1) {
+      url = url + "&range=".concat(encodeURIComponent(range));
+    } else {
+      url = url + "?range=".concat(encodeURIComponent(range));
+    }
+
+    return url;
+  }
+  /**
+   * Returns stats data if possible, otherwise an empty object
+   *
+   * @param {object} statsData - the stats data or error
+   * @returns {object} - the handled stats data
+   */
+
+
+  function handleStatsResponseError(statsData) {
+    // If we get a .response property, it means that .com's response is errory.
+    // Probably because the site does not have stats yet.
+    var responseOk = statsData.general && statsData.general.response === undefined || statsData.week && statsData.week.response === undefined || statsData.month && statsData.month.response === undefined;
+    return responseOk ? statsData : {};
+  }
+
+  Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])(this, methods);
+}
+
+var restApi = new JetpackRestApiClient();
+/* harmony default export */ __webpack_exports__["default"] = (restApi);
+/**
+ * Check the status of the response. Throw an error if it was not OK
+ *
+ * @param {Response} response - the API response
+ * @returns {Promise<object>} - a promise to return the parsed JSON body as an object
+ */
+
+function checkStatus(response) {
+  // Regular success responses
+  if (response.status >= 200 && response.status < 300) {
+    return response;
+  }
+
+  if (response.status === 404) {
+    return new Promise(function () {
+      var err = response.redirected ? new Api404AfterRedirectError(response.redirected) : new Api404Error();
+      throw err;
+    });
+  }
+
+  return response.json()["catch"](function (e) {
+    return catchJsonParseError(e);
+  }).then(function (json) {
+    var error = new Error("".concat(json.message, " (Status ").concat(response.status, ")"));
+    error.response = json;
+    error.name = 'ApiError';
+    throw error;
+  });
+}
+/**
+ * Parse the JSON response
+ *
+ * @param {Response} response - the response object
+ * @returns {Promise<object>} - promise to return the parsed json object
+ */
+
+
+function parseJsonResponse(response) {
+  return response.json()["catch"](function (e) {
+    return catchJsonParseError(e, response.redirected, response.url);
+  });
+}
+/**
+ * Throw appropriate exception given an API error
+ *
+ * @param {Error} e - the error
+ * @param {boolean} redirected - are we being redirected?
+ * @param {string} url - the URL that returned the error
+ */
+
+
+function catchJsonParseError(e, redirected, url) {
+  var err = redirected ? new JsonParseAfterRedirectError(url) : new JsonParseError();
+  throw err;
+}
+/**
+ * Catches TypeError coming from the Fetch API implementation
+ */
+
+
+function catchNetworkErrors() {
+  //Either one of:
+  // * A preflight error like a redirection to an external site (which results in a CORS)
+  // * A preflight error like ERR_TOO_MANY_REDIRECTS
+  throw new FetchNetworkError();
+}
+
+/***/ }),
+
 /***/ "../../js-packages/components/components/automattic-byline-logo/index.jsx":
 /*!*********************************************************************************************************************!*\
   !*** /home/runner/work/jetpack/jetpack/projects/js-packages/components/components/automattic-byline-logo/index.jsx ***!
@@ -2423,7 +2937,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../tools/jetpack-rest-api-client */ "../../js-packages/connection/tools/jetpack-rest-api-client/index.jsx");
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
 /* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/connect-button/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_7__);
@@ -2436,10 +2950,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Internal dependencies
  */
-
 
 
 
@@ -2497,8 +3011,8 @@ var ConnectButton = function ConnectButton(props) {
    */
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__["default"].setApiRoot(apiRoot);
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__["default"].setApiNonce(apiNonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
    * Fetch the connection status on the first render.
@@ -2507,7 +3021,7 @@ var ConnectButton = function ConnectButton(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     setIsFetchingConnectionStatus(true);
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__["default"].fetchSiteConnectionStatus().then(function (response) {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].fetchSiteConnectionStatus().then(function (response) {
       setIsFetchingConnectionStatus(false);
       setConnectionStatus(response);
     })["catch"](function (error) {
@@ -2529,7 +3043,7 @@ var ConnectButton = function ConnectButton(props) {
     }
 
     setIsRegistering(true);
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_5__["default"].registerSite(registrationNonce, redirectUri).then(function (response) {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].registerSite(registrationNonce, redirectUri).then(function (response) {
       setIsRegistering(false);
 
       if (onRegistered) {
@@ -2811,17 +3325,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../tools/jetpack-rest-api-client */ "../../js-packages/connection/tools/jetpack-rest-api-client/index.jsx");
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
 
 
 /**
  * External dependencies
  */
 
-
-/**
- * Internal dependencies
- */
 
 
 /**
@@ -2857,7 +3367,7 @@ var ConnectUser = function ConnectUser(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     if (!authorizationUrl) {
-      _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_3__["default"].fetchAuthorizationUrl(redirectUri).then(function (response) {
+      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__["default"].fetchAuthorizationUrl(redirectUri).then(function (response) {
         return setAuthorizationUrl(response.authorizeUrl);
       })["catch"](function (error) {
         throw error;
@@ -2907,9 +3417,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
-/* harmony import */ var _disconnect_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../disconnect-dialog */ "../../js-packages/connection/components/disconnect-dialog/index.jsx");
-/* harmony import */ var _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../tools/jetpack-rest-api-client */ "../../js-packages/connection/tools/jetpack-rest-api-client/index.jsx");
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
+/* harmony import */ var _disconnect_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../disconnect-dialog */ "../../js-packages/connection/components/disconnect-dialog/index.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/connection-status-card/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_8__);
 
@@ -2921,10 +3431,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Internal dependencies
  */
-
 
 
 
@@ -2975,8 +3485,8 @@ var ConnectionStatusCard = function ConnectionStatusCard(props) {
    */
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_7__["default"].setApiRoot(apiRoot);
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_7__["default"].setApiNonce(apiNonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
    * Fetch the connection data on the first render.
@@ -2985,7 +3495,7 @@ var ConnectionStatusCard = function ConnectionStatusCard(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     setIsFetchingConnectionData(true);
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_7__["default"].fetchSiteConnectionData().then(function (response) {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].fetchSiteConnectionData().then(function (response) {
       var _response$currentUser, _response$currentUser2, _response$currentUser3;
 
       setIsFetchingConnectionData(false);
@@ -3029,7 +3539,7 @@ var ConnectionStatusCard = function ConnectionStatusCard(props) {
     className: "jp-connection-status-card--list"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "jp-connection-status-card--list-item-success"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Site connected.', 'jetpack'), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_disconnect_dialog__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Site connected.', 'jetpack'), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_disconnect_dialog__WEBPACK_IMPORTED_MODULE_7__["default"], {
     apiRoot: apiRoot,
     apiNonce: apiNonce,
     onDisconnected: onDisconnectedCallback
@@ -3042,7 +3552,7 @@ var ConnectionStatusCard = function ConnectionStatusCard(props) {
     disabled: isUserConnecting,
     onClick: setIsUserConnecting,
     className: "jp-connection-status-card--btn-connect-user"
-  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Connect your WordPress.com account', 'jetpack')), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_connect_user__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Connect your WordPress.com account', 'jetpack')), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_connect_user__WEBPACK_IMPORTED_MODULE_6__["default"], {
     redirectUri: redirectUri
   }));
 };
@@ -3098,7 +3608,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/index.jsx");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../tools/jetpack-rest-api-client */ "../../js-packages/connection/tools/jetpack-rest-api-client/index.jsx");
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/disconnect-dialog/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_8__);
 
@@ -3112,10 +3622,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Internal dependencies
  */
-
 
 
 /**
@@ -3164,8 +3674,8 @@ var DisconnectDialog = function DisconnectDialog(props) {
    */
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_7__["default"].setApiRoot(apiRoot);
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_7__["default"].setApiNonce(apiNonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__["default"].setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__["default"].setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
    * Open the Disconnect Dialog.
@@ -3191,7 +3701,7 @@ var DisconnectDialog = function DisconnectDialog(props) {
     e && e.preventDefault();
     setDisconnectError(false);
     setIsDisconnecting(true);
-    _tools_jetpack_rest_api_client__WEBPACK_IMPORTED_MODULE_7__["default"].disconnectSite().then(function () {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__["default"].disconnectSite().then(function () {
       setIsDisconnecting(false);
       setIsDisconnected(true);
     })["catch"](function (error) {
@@ -3555,262 +4065,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
 
-
-/***/ }),
-
-/***/ "../../js-packages/connection/tools/jetpack-rest-api-client/index.jsx":
-/*!*****************************************************************************************************************!*\
-  !*** /home/runner/work/jetpack/jetpack/projects/js-packages/connection/tools/jetpack-rest-api-client/index.jsx ***!
-  \*****************************************************************************************************************/
-/*! exports provided: JsonParseError, JsonParseAfterRedirectError, Api404Error, Api404AfterRedirectError, FetchNetworkError, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsonParseError", function() { return JsonParseError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsonParseAfterRedirectError", function() { return JsonParseAfterRedirectError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Api404Error", function() { return Api404Error; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Api404AfterRedirectError", function() { return Api404AfterRedirectError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FetchNetworkError", function() { return FetchNetworkError; });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/classCallCheck */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/inherits */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createSuper */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/createSuper.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! /home/runner/work/jetpack/jetpack/node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/wrapNativeSuper */ "../../../node_modules/.pnpm/@babel+runtime@7.14.0/node_modules/@babel/runtime/helpers/wrapNativeSuper.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "lodash");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-/**
- * External dependencies
- */
-
-/**
- * Helps create new custom error classes to better notify upper layers.
- *
- * @param {string} name - The Error name that will be available in `Error.name`.
- * @returns {Error}      a new custom error class.
- */
-
-function createCustomError(name) {
-  var CustomError = /*#__PURE__*/function (_Error) {
-    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default()(CustomError, _Error);
-
-    var _super = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2___default()(CustomError);
-
-    function CustomError() {
-      var _this;
-
-      _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, CustomError);
-
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      _this = _super.call.apply(_super, [this].concat(args));
-      _this.name = name;
-      return _this;
-    }
-
-    return CustomError;
-  }( /*#__PURE__*/_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_14_0_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3___default()(Error));
-
-  return CustomError;
-}
-
-var JsonParseError = createCustomError('JsonParseError');
-var JsonParseAfterRedirectError = createCustomError('JsonParseAfterRedirectError');
-var Api404Error = createCustomError('Api404Error');
-var Api404AfterRedirectError = createCustomError('Api404AfterRedirectError');
-var FetchNetworkError = createCustomError('FetchNetworkError');
-/**
- * Jetpack REST API Client.
- *
- * @param {string} root - The API root URL.
- * @param {string} nonce - The API nonce.
- * @class
- */
-
-function JetpackRestApiClient(root, nonce) {
-  var apiRoot = root,
-      headers = {
-    'X-WP-Nonce': nonce
-  },
-      getParams = {
-    credentials: 'same-origin',
-    headers: headers
-  },
-      postParams = {
-    method: 'post',
-    credentials: 'same-origin',
-    headers: Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])({}, headers, {
-      'Content-type': 'application/json'
-    })
-  };
-  var methods = {
-    setApiRoot: function setApiRoot(newRoot) {
-      apiRoot = newRoot;
-    },
-    setApiNonce: function setApiNonce(newNonce) {
-      headers = {
-        'X-WP-Nonce': newNonce
-      };
-      getParams = {
-        credentials: 'same-origin',
-        headers: headers
-      };
-      postParams = {
-        method: 'post',
-        credentials: 'same-origin',
-        headers: Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])({}, headers, {
-          'Content-type': 'application/json'
-        })
-      };
-    },
-    registerSite: function registerSite(registrationNonce, redirectUri) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/connection/register"), postParams, {
-        body: JSON.stringify({
-          registration_nonce: registrationNonce,
-          no_iframe: true,
-          redirect_uri: redirectUri
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchAuthorizationUrl: function fetchAuthorizationUrl(redirectUri) {
-      return getRequest("".concat(apiRoot, "jetpack/v4/connection/authorize_url?no_iframe=1&redirect_uri=").concat(encodeURIComponent(redirectUri)), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchSiteConnectionStatus: function fetchSiteConnectionStatus() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/connection"), getParams).then(parseJsonResponse);
-    },
-    fetchSiteConnectionData: function fetchSiteConnectionData() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/connection/data"), getParams).then(parseJsonResponse);
-    },
-    disconnectSite: function disconnectSite() {
-      return postRequest("".concat(apiRoot, "jetpack/v4/connection"), postParams, {
-        body: JSON.stringify({
-          isActive: false
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    }
-  };
-  /**
-   * Add the cache buster value to the URL.
-   *
-   * @param {string} route - The API route URL.
-   * @returns {string} The API route URL with cache buster added.
-   */
-
-  function addCacheBuster(route) {
-    var parts = route.split('?'),
-        query = parts.length > 1 ? parts[1] : '',
-        args = query.length ? query.split('&') : [];
-    args.push('_cacheBuster=' + new Date().getTime());
-    return parts[0] + '?' + args.join('&');
-  }
-  /**
-   * Perform a GET API request.
-   *
-   * @param {string} route - The API route.
-   * @param {object} params - The request params.
-   * @returns {Promise<Response>} The request result promise.
-   */
-
-
-  function getRequest(route, params) {
-    return fetch(addCacheBuster(route), params);
-  }
-  /**
-   * Perform a GET API request.
-   *
-   * @param {string} route - The API route.
-   * @param {object} params - The request params.
-   * @param {object} [body] - The request body.
-   * @returns {Promise<Response>} The request result promise.
-   */
-
-
-  function postRequest(route, params, body) {
-    return fetch(route, Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])({}, params, body))["catch"](catchNetworkErrors);
-  }
-
-  Object(lodash__WEBPACK_IMPORTED_MODULE_4__["assign"])(this, methods);
-}
-/**
- * Check the response status.
- *
- * @param {object} response - The API response.
- * @returns {Promise} - The status promise.
- */
-
-
-function checkStatus(response) {
-  // Regular success responses
-  if (response.status >= 200 && response.status < 300) {
-    return response;
-  }
-
-  if (response.status === 404) {
-    return new Promise(function () {
-      var err = response.redirected ? new Api404AfterRedirectError(response.redirected) : new Api404Error();
-      throw err;
-    });
-  }
-
-  return response.json()["catch"](function (e) {
-    return catchJsonParseError(e);
-  }).then(function (json) {
-    var error = new Error("".concat(json.message, " (Status ").concat(response.status, ")"));
-    error.response = json;
-    error.name = 'ApiError';
-    throw error;
-  });
-}
-/**
- * Parse JSON response.
- *
- * @param {string} response - The JSON string.
- * @returns {object} The parsed JSON object.
- */
-
-
-function parseJsonResponse(response) {
-  return response.json()["catch"](function (e) {
-    return catchJsonParseError(e, response.redirected, response.url);
-  });
-}
-/**
- * Catch a JSON parse error.
- *
- * @param {object} e - The error.
- * @param {boolean} redirected - Whether it is an "after redirect" parse error.
- * @param {string} url - The redirect URL.
- */
-
-
-function catchJsonParseError(e, redirected, url) {
-  var err = redirected ? new JsonParseAfterRedirectError(url) : new JsonParseError();
-  throw err;
-}
-/**
- * Catches TypeError coming from the Fetch API implementation
- */
-
-
-function catchNetworkErrors() {
-  //Either one of:
-  // * A preflight error like a redirection to an external site (which results in a CORS)
-  // * A preflight error like ERR_TOO_MANY_REDIRECTS
-  throw new FetchNetworkError();
-}
-
-var restApi = new JetpackRestApiClient();
-/* harmony default export */ __webpack_exports__["default"] = (restApi);
 
 /***/ }),
 

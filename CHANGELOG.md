@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: Replace color CSS with CSS variables to simplify theming
 - Init Jetpack 10.1 release cycle.
 - Jetpack 10.0: update beta testing instructions.
+- Move API calls to jetpack-api package
 - Rename a generated js file to avoid triggering an outdated minifier on wpcom's cdn.
 - Search: Fix search E2E test failure caused by new block widgets in WP 5.8
 - Updated package dependencies
