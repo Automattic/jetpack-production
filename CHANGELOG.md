@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Contact Form: Disable the Block Editor for contact form submissions
+- Form Block: fix form button alignment in editor
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
 - [Carousel]: Fix bug preventing user from swiping in gallery when images are configured to link to Attachment Page.
 
