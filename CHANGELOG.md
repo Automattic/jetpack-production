@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add `wpcom_is_fse_activated` to sync list
 - E2E tests: use Allure test steps for better reporting
 - Search: improves handling of really long breadcrumbs
 - Search: removes forward slash from empty breadcrumb display
