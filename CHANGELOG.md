@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add `wpcom_is_fse_activated` to sync list
 - E2E tests: added tests prerequisites abstraction
 - E2E tests: use Allure test steps for better reporting
+- Search: improve checkbox alignment by removing custom checkbox margins added by some themes
 - Search: improves handling of really long breadcrumbs
 - Search: removes forward slash from empty breadcrumb display
 - Tiled Gallery Block: ensure it can be used when in Offline Mode as well.
