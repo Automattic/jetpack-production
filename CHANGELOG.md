@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: ensure that the image CDN does not get enabled by default when using the Site Accelerator toggle while in Offline mode.
 - Form Block: fix form button alignment in editor
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
+- Stats: allow better translations of page view counts in the Stats widget.
 - [Carousel]: Fix bug preventing user from swiping in gallery when images are configured to link to Attachment Page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
