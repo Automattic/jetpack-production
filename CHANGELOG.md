@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: ensure that the image CDN does not get enabled by default when using the Site Accelerator toggle while in Offline mode.
 - E2E tests: fixed PayPal block fields not getting filled
 - Form Block: fix form button alignment in editor
+- Related Posts: Fix issue with dequeueing scripts and styles
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
 - Stats: allow better translations of page view counts in the Stats widget.
 - [Carousel]: Fix bug preventing user from swiping in gallery when images are configured to link to Attachment Page.
