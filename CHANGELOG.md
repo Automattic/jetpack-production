@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: Disable the Block Editor for contact form submissions
 - Dashboard: ensure that the image CDN does not get enabled by default when using the Site Accelerator toggle while in Offline mode.
 - E2E tests: fixed PayPal block fields not getting filled
+- Fix broken SSO sync test
 - Fixed submenu positioning issue for Nav-Unification in WP-Admin
 - Form Block: fix form button alignment in editor
 - Related Posts: Fix issue with dequeueing scripts and styles
