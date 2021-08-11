@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies
+- Update jest dependency to fix jetpack search tests
 
 ## [1.3.0] - 2021-07-27
 ### Added
