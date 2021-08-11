@@ -45,6 +45,8 @@
     box-sizing: border-box; }
   .jp-connect-screen .jp-connect-screen--left {
     padding: 64px 96px; }
+    .jp-connect-screen .jp-connect-screen--left .jetpack-logo {
+      margin-bottom: 24px; }
     .jp-connect-screen .jp-connect-screen--left h2 {
       font-style: normal;
       font-weight: bold;
@@ -68,7 +70,7 @@
     .jp-connect-screen .jp-connect-screen--left .jp-connect-button {
       margin-top: 40px; }
     .jp-connect-screen .jp-connect-screen--left .jp-connnect-screen--tos {
-      margin-top: 32px;
+      margin-top: 28px;
       max-width: 360px; }
   .jp-connect-screen .jp-connect-screen--right {
     padding: 64px 0; }
