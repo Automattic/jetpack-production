@@ -2665,7 +2665,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function JetpackFooter(_ref) {
-  var a8cLogoHref = _ref.a8cLogoHref,
+  var _ref$a8cLogoHref = _ref.a8cLogoHref,
+      a8cLogoHref = _ref$a8cLogoHref === void 0 ? 'https://jetpack.com' : _ref$a8cLogoHref,
       _ref$moduleName = _ref.moduleName,
       moduleName = _ref$moduleName === void 0 ? Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Jetpack', 'jetpack') : _ref$moduleName,
       _ref$className = _ref.className,
