@@ -418,6 +418,10 @@ return array(
 		'version' => '1.30.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-rest-connector.php'
 	),
+	'Automattic\\Jetpack\\Connection\\Package_Version_Tracker' => array(
+		'version' => '1.30.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-package-version-tracker.php'
+	),
 	'Automattic\\Jetpack\\Connection\\Manager_Interface' => array(
 		'version' => '1.30.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/interface-manager.php'

@@ -28,6 +28,7 @@ return array(
     'Automattic\\Jetpack\\Connection\\Manager_Interface' => $vendorDir . '/automattic/jetpack-connection/src/interface-manager.php',
     'Automattic\\Jetpack\\Connection\\Nonce_Handler' => $vendorDir . '/automattic/jetpack-connection/src/class-nonce-handler.php',
     'Automattic\\Jetpack\\Connection\\Package_Version' => $vendorDir . '/automattic/jetpack-connection/src/class-package-version.php',
+    'Automattic\\Jetpack\\Connection\\Package_Version_Tracker' => $vendorDir . '/automattic/jetpack-connection/src/class-package-version-tracker.php',
     'Automattic\\Jetpack\\Connection\\Plugin' => $vendorDir . '/automattic/jetpack-connection/src/class-plugin.php',
     'Automattic\\Jetpack\\Connection\\Plugin_Storage' => $vendorDir . '/automattic/jetpack-connection/src/class-plugin-storage.php',
     'Automattic\\Jetpack\\Connection\\REST_Connector' => $vendorDir . '/automattic/jetpack-connection/src/class-rest-connector.php',

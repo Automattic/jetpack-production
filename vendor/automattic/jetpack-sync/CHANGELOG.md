@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add package version tracking.
 - Add `wpcom_is_fse_activated` to sync list
 - Made /sync/object endpoint accessible over POST, not only GET, to allow fetching more items in a single request.
 

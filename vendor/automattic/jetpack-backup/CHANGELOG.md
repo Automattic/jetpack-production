@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add package version tracking.
+
 ## [1.1.1] - 2021-07-27
 ### Added
 - Add a package version constant.
