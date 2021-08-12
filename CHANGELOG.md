@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Adds a navigation link to Beta Testing page for WPCOM sites
 - Add `wpcom_is_fse_activated` to sync list
 - E2E tests: added tests prerequisites abstraction
 - E2E tests: use Allure test steps for better reporting
