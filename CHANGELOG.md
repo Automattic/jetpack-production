@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Browser Compatibility: allow use of new JavaScript features not supported by Internet Explorer 11.
 - Hide UI controls in the carousel for single images.
+- Related Posts: allow shortcodes in Related Posts titles, to allow third-party plugins processing shortcodes in post titles to work.
 - Update Jest dependencies to fix Jetpack JS tests.
 - Updates copy in Mailchimp block to use audience instead of lists.
 
