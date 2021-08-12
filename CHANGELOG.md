@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Fix search E2E test failure caused by new block widgets in WP 5.8
 - Updated package dependencies
 - Updated package dependencies
+- Updated package dependencies.
 
 ## 10.0 - 2021-08-03
 ### Enhancements
