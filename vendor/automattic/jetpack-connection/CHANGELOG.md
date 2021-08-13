@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Make sure generated secrets have the required length
 - Remove tracked package versions when disconnecting the site.
 
 ## [1.30.2] - 2021-08-12
