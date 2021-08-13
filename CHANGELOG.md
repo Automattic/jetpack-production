@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: improve checkbox alignment by removing custom checkbox margins added by some themes
 - Search: improves handling of really long breadcrumbs
 - Search: removes forward slash from empty breadcrumb display
+- Search: visual and functional improvements to new wp-admin section
 - Secure Sign On: remove additional redirect during sign in process.
 - Tiled Gallery Block: ensure it can be used when in Offline Mode as well.
 - Widget Visibility - rename taxonomy label "All Pages" in dropdown
