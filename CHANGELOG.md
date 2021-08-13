@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: fixed PayPal block fields not getting filled
 - Fix broken SSO sync test
 - Fixed submenu positioning issue for Nav-Unification in WP-Admin
+- Fixed Video block resizing so that they don't display black bars at the sides.
 - Form Block: fix form button alignment in editor
 - Related Posts: Fix issue with dequeueing scripts and styles
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
