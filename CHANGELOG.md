@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed Video block resizing so that they don't display black bars at the sides.
 - Form Block: fix form button alignment in editor
 - Related Posts: Fix issue with dequeueing scripts and styles
+- Search: fix allowing scrolling behind the modal when it is open on mobile devices
 - Search: fixed modal not scrolling to top when keyboard is opened on mobile devices
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
 - Stats: allow better translations of page view counts in the Stats widget.
