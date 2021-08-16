@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed submenu positioning issue for Nav-Unification in WP-Admin
 - Fixed Video block resizing so that they don't display black bars at the sides.
 - Form Block: fix form button alignment in editor
+- Improve test robustness and tooling for extensions
 - Related Posts: Fix issue with dequeueing scripts and styles
 - Search: fix allowing scrolling behind the modal when it is open on mobile devices
 - Search: fixed modal not scrolling to top when keyboard is opened on mobile devices
