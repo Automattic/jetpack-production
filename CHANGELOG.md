@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- Search: Adds a Gutenberg powered customization interface
+
 ### Enhancements
 - Adds a navigation link to Beta Testing page for WPCOM sites
 - Add `wpcom_is_fse_activated` to sync list
