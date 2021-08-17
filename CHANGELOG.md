@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: added tests prerequisites abstraction
 - E2E tests: optimize specs prerequisites
 - E2E tests: use Allure test steps for better reporting
+- Search: fix label coloring in dark mode with some themes
 - Search: improve checkbox alignment by removing custom checkbox margins added by some themes
 - Search: improves handling of really long breadcrumbs
 - Search: removes forward slash from empty breadcrumb display
