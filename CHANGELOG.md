@@ -57,6 +57,7 @@ This is an alpha version! The changes listed here are not final.
 - Classic views are now forced for Customizer screens (WP.com only)
 - E2E tests: fixed mailchimp tests failing after a button label change
 - E2E tests: fix selector for block editor search field
+- E2E Tests: switch to Jetpack Docker
 - Init Jetpack 10.1 release cycle.
 - Jetpack 10.0: update beta testing instructions.
 - Move API calls to jetpack-api package
