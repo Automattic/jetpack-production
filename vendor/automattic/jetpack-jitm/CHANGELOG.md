@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies
+- Upgrade to Webpack 5
 
 ## [1.16.2] - 2021-07-27
 ### Changed

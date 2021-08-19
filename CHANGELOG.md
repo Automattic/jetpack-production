@@ -67,6 +67,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies.
 - Updated product slugs for new/imminent real-time Backup and Security products.
+- Upgrade to Webpack 5
 
 ## 10.0 - 2021-08-03
 ### Enhancements
