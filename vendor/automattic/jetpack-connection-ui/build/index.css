@@ -4,14 +4,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 65rem;
+  max-width: 1128px;
   color: #000; }
-  @media (max-width: 1250px) {
-    .jp-dashboard-footer {
-      width: 95%; } }
-  @media (max-width: 480px) {
-    .jp-dashboard-footer {
-      justify-content: space-around; } }
 
 .jp-dashboard-footer__module-name,
 .jp-dashboard-footer__jetpack-symbol {
@@ -19,7 +13,9 @@
   display: inline-block; }
 
 .jp-dashboard-footer__module-name {
-  margin-left: 5px; }
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: 600; }
 
 .jp-connect-button .jp-connect-button--button {
   background: #000;

@@ -2681,13 +2681,15 @@ function JetpackFooter(_ref) {
     logoColor: "#000",
     showText: false,
     height: "16",
-    className: "jp-dashboard-footer__jetpack-symbol"
+    className: "jp-dashboard-footer__jetpack-symbol",
+    "aria-label": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Jetpack logo', 'jetpack')
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "jp-dashboard-footer__module-name"
   }, moduleName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "jp-dashboard-footer__footer-right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    href: a8cLogoHref
+    href: a8cLogoHref,
+    "aria-label": Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('An Automattic Airline', 'jetpack')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_automattic_byline_logo__WEBPACK_IMPORTED_MODULE_5__["default"], null))));
 }
 
@@ -2733,6 +2735,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! classnames */ "../../../node_modules/.pnpm/classnames@2.3.1/node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__);
 
 
 
@@ -2745,6 +2749,11 @@ __webpack_require__.r(__webpack_exports__);
  * External dependencies
  */
 
+
+
+/**
+ * WordPress dependencies
+ */
 
 
 
@@ -2774,8 +2783,11 @@ var JetpackLogo = /*#__PURE__*/function (_React$Component) {
         x: "0px",
         y: "0px",
         viewBox: viewBox,
-        className: classnames__WEBPACK_IMPORTED_MODULE_9___default()('jetpack-logo', className)
-      }, otherProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
+        className: classnames__WEBPACK_IMPORTED_MODULE_9___default()('jetpack-logo', className),
+        "aria-labelledby": "jetpack-logo-title"
+      }, otherProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("title", {
+        id: "jetpack-logo-title"
+      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__["__"])('Jetpack Logo', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
         fill: logoColor,
         d: "M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M15,19H7l8-16V19z M17,29V13h8L17,29z"
       }), showText && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
