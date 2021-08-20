@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add `wpcom_is_fse_activated` to sync list
 - Carousel: photo info and comment sections stay open once toggled on.
 - Carousel: show image info icon even if Exif metadata option is off.
+- Carousel: use photo description as caption if caption and title fields are blank.
 - E2E tests: added tests prerequisites abstraction
 - E2E tests: optimize specs prerequisites
 - E2E tests: run tests against an arbitrary site
