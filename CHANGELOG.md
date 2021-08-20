@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add wordpress/babel-preset-default package for use by Instant Search customization
+- Bump changelogger version
 - Carousel: Replace color CSS with CSS variables to simplify theming
 - Classic views are now forced for Customizer screens (WP.com only)
 - E2E tests: fixed mailchimp tests failing after a button label change

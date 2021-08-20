@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.9.10-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Run composer update on test-php command instead of phpunit
+
 ## [1.9.9] - 2021-07-27
 ### Changed
 - Updated package dependencies.
@@ -165,6 +172,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Introduce a simple A/B test package
 
+[1.9.10-alpha]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.9...v1.9.10-alpha
 [1.9.9]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.8...v1.9.9
 [1.9.8]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.7...v1.9.8
 [1.9.7]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.6...v1.9.7

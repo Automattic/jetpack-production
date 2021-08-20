@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Make sure generated secrets have the required length
 - Remove tracked package versions when disconnecting the site.
+- Run composer update on test-php command instead of phpunit
 
 ## [1.30.2] - 2021-08-12
 ### Added
