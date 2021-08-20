@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts: Fix issue with dequeueing scripts and styles
 - Search: fix allowing scrolling behind the modal when it is open on mobile devices
 - Search: fixed modal not scrolling to top when keyboard is opened on mobile devices
+- Search: fixed search widgets not saving for block widget editor
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
 - Stats: allow better translations of page view counts in the Stats widget.
 - [Carousel]: Fix bug preventing user from swiping in gallery when images are configured to link to Attachment Page.
