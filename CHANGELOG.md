@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Adds a navigation link to Beta Testing page for WPCOM sites
 - Add `wpcom_is_fse_activated` to sync list
+- Carousel: show image info icon even if Exif metadata option is off.
 - E2E tests: added tests prerequisites abstraction
 - E2E tests: optimize specs prerequisites
 - E2E tests: run tests against an arbitrary site
