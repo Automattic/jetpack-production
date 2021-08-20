@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix broken SSO sync test
 - Fixed submenu positioning issue for Nav-Unification in WP-Admin
 - Fixed Video block resizing so that they don't display black bars at the sides.
+- Fixes some issues in docker cli
 - Form Block: fix form button alignment in editor
 - Improve test robustness and tooling for extensions
 - Related Posts: Fix issue with dequeueing scripts and styles
