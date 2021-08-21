@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Run composer update on test-php command instead of phpunit
+- update annotations versions
 
 ## [1.4.1] - 2021-06-29
 ### Changed
