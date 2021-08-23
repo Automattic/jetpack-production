@@ -70,6 +70,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack 10.0: update beta testing instructions.
 - Move API calls to jetpack-api package
 - Rename a generated js file to avoid triggering an outdated minifier on wpcom's cdn.
+- Search: Backports Customberg babel configuration from WordPress.com
 - Search: Fix search E2E test failure caused by new block widgets in WP 5.8
 - Updated package dependencies
 - Updated package dependencies
