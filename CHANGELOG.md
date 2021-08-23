@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixes some issues in docker cli
 - Form Block: fix form button alignment in editor
 - Improve test robustness and tooling for extensions
+- In mutlti-site, list sites will show based on current network id
 - Related Posts: Fix issue with dequeueing scripts and styles
 - Search: fix allowing scrolling behind the modal when it is open on mobile devices
 - Search: fixed modal not scrolling to top when keyboard is opened on mobile devices
