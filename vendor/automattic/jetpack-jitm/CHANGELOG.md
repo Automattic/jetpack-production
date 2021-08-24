@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Run composer update on test-php command instead of phpunit
 - Updated package dependencies
+- Update to latest webpack, webpack-cli and calypso-build
 - Upgrade to Webpack 5
 
 ## [1.16.2] - 2021-07-27
