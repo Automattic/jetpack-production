@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Bump connection package version to 0.5.2-alpha
+- Updated Package versions in annotations
 - Update to latest webpack, webpack-cli and calypso-build
 - Use the "withConnectionStatus" HOC for ConnectScreen component.
 
