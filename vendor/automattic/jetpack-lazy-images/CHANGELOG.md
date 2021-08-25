@@ -5,13 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.5.2-alpha] - unreleased
+## [2.0.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Run composer update on test-php command instead of phpunit
 - Update to latest webpack, webpack-cli and calypso-build
+
+### Removed
+- Removed IE11 support.
 
 ## [1.5.1] - 2021-08-10
 ### Changed
@@ -104,7 +107,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Lazy Images: Move into a package
 
-[1.5.2-alpha]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.5.1...v1.5.2-alpha
+[2.0.0-alpha]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.5.1...v2.0.0-alpha
 [1.5.1]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.4.4...v1.5.0
 [1.4.4]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.4.3...v1.4.4
