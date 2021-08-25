@@ -29,7 +29,6 @@ https://github.com/thoughtbot/bourbon
   margin: 1rem auto 0;
   background: #FFFFFF;
 }
-
 .jp-jetpack-connect__site_connection .jp-jetpack-connect__iframe {
   width: 600px;
   height: 600px;
@@ -39,5 +38,4 @@ https://github.com/thoughtbot/bourbon
   margin-top: 84px;
   display: block;
 }
-
 /*# sourceMappingURL=jetpack-connect.css.map */

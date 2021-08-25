@@ -12,20 +12,17 @@
   border: 1px solid #d5d5d5;
   margin: 3rem 1.25rem 1.25rem 0;
 }
-
 @media (max-width: 1152px) {
   .jp-recommendations-banner-main {
     margin: 4rem 1.25rem 1.25rem 0;
     grid-template-columns: 100% 0%;
   }
 }
-
 @media (min-width: 1688px) {
   .jp-recommendations-banner-main {
     grid-template-columns: 65% 35%;
   }
 }
-
 @media (max-width: 480px) {
   .jp-recommendations-banner-main .notice-dismiss {
     padding: 16px;
@@ -37,19 +34,16 @@
   flex-direction: column;
   padding-right: 48px;
 }
-
 @media (min-width: 1688px) {
   .jp-recommendations-banner__content {
     max-width: 600px;
   }
 }
-
 @media (max-width: 660px) {
   .jp-recommendations-banner__content {
     padding-right: 32px;
   }
 }
-
 @media (max-width: 480px) {
   .jp-recommendations-banner__content {
     padding-right: 16px;
@@ -59,7 +53,6 @@
 .jp-recommendations-banner__logo {
   margin: 32px 32px 0 32px;
 }
-
 @media (max-width: 480px) {
   .jp-recommendations-banner__logo {
     margin: 16px 16px 32px 16px;
@@ -71,7 +64,6 @@
   line-height: 1.4;
   margin: 32px 32px 0 32px;
 }
-
 @media (max-width: 480px) {
   .jp-recommendations-banner__question {
     margin: 0 16px 32px 16px;
@@ -82,19 +74,16 @@
   font-size: 16px;
   margin: 32px 0 24px 32px;
 }
-
 @media (min-width: 1152px) {
   .jp-recommendations-banner__description {
     max-width: 600px;
   }
 }
-
 @media (max-width: 660px) {
   .jp-recommendations-banner__description {
     margin: 32px 32px 24px 32px;
   }
 }
-
 @media (max-width: 480px) {
   .jp-recommendations-banner__description {
     margin: 0 16px 16px 16px;
@@ -106,7 +95,6 @@
   text-align: center;
   margin: 0 0 32px 32px;
 }
-
 @media (max-width: 480px) {
   .jp-recommendations-banner__answer {
     margin: 0 0 16px 16px;
@@ -119,7 +107,6 @@
   grid-template-rows: auto auto;
   grid-template-columns: auto auto;
 }
-
 @media (max-width: 480px) {
   .jp-recommendations-banner__checkboxes {
     grid-template-rows: auto auto auto auto;
@@ -136,12 +123,10 @@
   cursor: pointer;
   background: white;
 }
-
 .jp-recommendations-answer__checkbox-label.checked {
   background: #f8fbff;
   border: 1px solid #3582c4;
 }
-
 .jp-recommendations-answer__checkbox-label input {
   margin: 16px 8px 16px 16px;
 }
@@ -174,13 +159,11 @@
   border-radius: 3px;
   padding: 7px 14px 9px;
 }
-
 @media (max-width: 480px) {
   .jp-recommendations-banner__continue-button {
     width: 100%;
   }
 }
-
 .jp-recommendations-banner__continue-button:hover {
   background: #0a4b78;
   border-color: #0a4b78;
@@ -192,7 +175,6 @@
   margin: 24px auto 0 auto;
   max-width: 300px;
 }
-
 @media (max-width: 480px) {
   .jp-recommendations-banner__continue-description {
     display: none;
@@ -203,25 +185,21 @@
   width: 100%;
   position: relative;
 }
-
 .jp-recommendations-banner__illustration-container img {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-
 @media (min-width: 1152px) {
   .jp-recommendations-banner__illustration-container {
     overflow: hidden;
   }
 }
-
 @media (max-width: 1688px) {
   .jp-recommendations-banner__illustration-container img {
     bottom: -24px;
   }
 }
-
 @media (max-width: 1600px) {
   .jp-recommendations-banner__illustration-container img {
     bottom: 0;
@@ -250,18 +228,14 @@
   padding: 32px 32px 32px 0;
   float: right;
 }
-
 .jp-recommendations-banner__notice-dismiss:hover, .jp-recommendations-banner__notice-dismiss:active {
   color: #101517;
 }
-
 .jp-recommendations-banner__notice-dismiss:hover .jp-recommendations-banner__svg-dismiss, .jp-recommendations-banner__notice-dismiss:active .jp-recommendations-banner__svg-dismiss {
   fill: #101517;
 }
-
 .jp-recommendations-banner__notice-dismiss .jp-recommendations-banner__svg-dismiss {
   fill: #3c434a;
   margin-right: 4px;
 }
-
 /*# sourceMappingURL=jetpack-recommendations-banner.css.map */
