@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Update to latest webpack, webpack-cli and calypso-build
 - Use the "withConnectionStatus" HOC for ConnectScreen component.
 
+### Removed
+- Removed unused method
+
 ## [1.3.1] - 2021-08-12
 ### Changed
 - Updated package dependencies
