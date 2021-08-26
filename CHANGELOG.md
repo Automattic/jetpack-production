@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - Form Block: fix form button alignment in editor
 - Improve test robustness and tooling for extensions
 - In mutlti-site, list sites will show based on current network id
+- Instant Search: ensure box-shadow and text-shadow aren't applied to search buttons
 - Related Posts: Fix issue with dequeueing scripts and styles
 - Scroll to subscription message after submitting the form
 - Search: fix allowing scrolling behind the modal when it is open on mobile devices
