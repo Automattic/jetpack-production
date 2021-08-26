@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Bump changelogger version
+- Updated package dependencies.
 
 ## [1.1.2] - 2021-08-12
 ### Added

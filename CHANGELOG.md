@@ -81,6 +81,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
 - Updated product slugs for new/imminent real-time Backup and Security products.
 - Update to latest webpack, webpack-cli and calypso-build
 - Upgrade to Webpack 5
