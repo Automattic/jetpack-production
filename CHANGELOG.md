@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: run tests against an arbitrary site
 - E2E tests: use Allure test steps for better reporting
 - Image CDN: added support for the WEBP format
+- Integrate RNA connection screen into the main connection flow.
 - Search: Apply design polish to new customization interface
 - Search: fix label coloring in dark mode with some themes
 - Search: improve checkbox alignment by removing custom checkbox margins added by some themes

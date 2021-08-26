@@ -640,6 +640,43 @@ body {
     margin-right: 0px;
   }
 }
+/**
+ * Breakpoints & Media Queries
+ */
+/**
+*  Converts a hex value into the rgb equivalent.
+*
+* @param {string} hex - the hexadecimal value to convert
+* @return {string} comma separated rgb values
+*/
+/**
+ * Breakpoint mixins
+ */
+/**
+ * Long content fade mixin
+ *
+ * Creates a fading overlay to signify that the content is longer
+ * than the space allows.
+ */
+/**
+ * Focus styles.
+ */
+/**
+ * Applies editor left position to the selector passed as argument
+ */
+/**
+ * Styles that are reused verbatim in a few places
+ */
+/**
+ * Allows users to opt-out of animations via OS-level preferences.
+ */
+/**
+ * Reset default styles for JavaScript UI based pages.
+ * This is a WP-admin agnostic reset
+ */
+/**
+ * Reset the WP Admin page styles for Gutenberg-like pages.
+ */
 .jp-connect-screen {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   background: #FFFFFF;
@@ -653,7 +690,12 @@ body {
   box-sizing: border-box;
 }
 .jp-connect-screen .jp-connect-screen--left {
-  padding: 64px 96px;
+  padding: 25px;
+}
+@media (min-width: 600px) {
+  .jp-connect-screen .jp-connect-screen--left {
+    padding: 64px 96px;
+  }
 }
 .jp-connect-screen .jp-connect-screen--left .jetpack-logo {
   margin-bottom: 24px;
@@ -664,6 +706,8 @@ body {
   font-size: 36px;
   line-height: 40px;
   color: #000;
+  margin-top: 32px;
+  margin-bottom: 0;
 }
 .jp-connect-screen .jp-connect-screen--left p, .jp-connect-screen .jp-connect-screen--left li {
   font-style: normal;
@@ -673,12 +717,14 @@ body {
 }
 .jp-connect-screen .jp-connect-screen--left p {
   color: #101517;
+  margin: 16px 0;
 }
 .jp-connect-screen .jp-connect-screen--left ul {
   list-style-type: none;
 }
 .jp-connect-screen .jp-connect-screen--left ul li {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADuSURBVHgB7ZS9DYJAFIDfHT93JSMwAiPoAmhpR22lTqBbmJggbqCyAJZ0xg1YwQ4MeB5GjPIT8KCTL6Hhke9LHgcAPT2NcahOHDLL35agC7hcZeABoIlsStfETfxshKEtbzno/ArQDR0+xwjakJPjCIbhNAy6CTSQp4ityNE0FdC+Tl4eWFMdauWRB4wZdfJiYKMYCmFnZUutLuSFAJHkAQKk8RezK0QE5Clf30Hixr5kyrwBPARjPJKD+zG+iMpTSk+RatMVnyyfDzC2YBhbIvLKQD7y4md5SuWvgq/rlK1LVN4IYpM5rTu6Pf/NA02TfHxOAFa6AAAAAElFTkSuQmCC) no-repeat;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAANlBMVEVHcEwFnwUInggGnggGnggHnAcAnwUFnQcAnwcGnwkFnQgGnQgFnwcGnQYFnQcFnAcGnQkDnwdhiL0pAAAAEnRSTlMAMF//f2Aw7yBQ3+9gcIBgcED+HDbkAAAAZklEQVR4Ae3LNwICARDDQC0+cv7/Y8mwV9odSfWIcf/+VegnGkIvDaGXKvTTn/Gz+Uf5xTL0K1XotS7fs5H6GHvvaO8d7c3j7rdgHne/A/PYt/cO+R42oYdN6OEQetiFHo4A//6dAXqtBEkmtWutAAAAAElFTkSuQmCC) no-repeat;
+  background-size: 24px;
   padding-right: 30px;
   color: #000;
   margin-bottom: 9px;
@@ -686,7 +732,13 @@ body {
 .jp-connect-screen .jp-connect-screen--left .jp-connect-button {
   margin-top: 40px;
 }
-.jp-connect-screen .jp-connect-screen--left .jp-connnect-screen--tos {
+.jp-connect-screen .jp-connect-screen--left .jp-connect-button button {
+  max-width: 100%;
+}
+.jp-connect-screen .jp-connect-screen--left .jp-connect-button button:disabled {
+  color: rgba(255, 255, 255, 0.4);
+}
+.jp-connect-screen .jp-connect-screen--left .jp-connect-screen--tos {
   margin-top: 28px;
   max-width: 360px;
 }
@@ -698,12 +750,23 @@ body {
 }
 .jp-connect-screen.jp-connect-screen--two-columns .jp-connect-screen--left {
   float: right;
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 1080px) {
+  .jp-connect-screen.jp-connect-screen--two-columns .jp-connect-screen--left {
+    width: 52%;
+  }
 }
 .jp-connect-screen.jp-connect-screen--two-columns .jp-connect-screen--right {
   float: left;
-  width: 49%;
+  width: 47%;
   background: #F9F9F6;
+  display: none;
+}
+@media (min-width: 1080px) {
+  .jp-connect-screen.jp-connect-screen--two-columns .jp-connect-screen--right {
+    display: block;
+  }
 }
 .jp-connect-screen .jp-connect-screen--clearfix {
   clear: both;

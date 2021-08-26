@@ -2095,12 +2095,17 @@ function JetpackRestApiClient(root, nonce) {
       cacheBusterCallback = callback;
     },
     registerSite: function registerSite(registrationNonce, redirectUri) {
+      var params = {
+        registration_nonce: registrationNonce,
+        no_iframe: true
+      };
+
+      if (null !== redirectUri) {
+        params.redirect_uri = redirectUri;
+      }
+
       return postRequest("".concat(apiRoot, "jetpack/v4/connection/register"), postParams, {
-        body: JSON.stringify({
-          registration_nonce: registrationNonce,
-          no_iframe: true,
-          redirect_uri: redirectUri
-        })
+        body: JSON.stringify(params)
       }).then(checkStatus).then(parseJsonResponse);
     },
     fetchAuthorizationUrl: function fetchAuthorizationUrl(redirectUri) {
@@ -2849,7 +2854,8 @@ ConnectButton.propTypes = {
   registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string.isRequired)
 };
 ConnectButton.defaultProps = {
-  connectLabel: __('Connect', 'jetpack')
+  connectLabel: __('Connect', 'jetpack'),
+  redirectUri: null
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConnectButton);
 
@@ -3016,7 +3022,7 @@ var ConnectScreen = function ConnectScreen(props) {
     statusCallback: statusHandler,
     connectLabel: __('Set up Jetpack', 'jetpack')
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "jp-connnect-screen--tos"
+    className: "jp-connect-screen--tos"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('By clicking the button above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>share details</shareDetailsLink> with WordPress.com.', 'jetpack'), {
     tosLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", {
       href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__.default)('wpcom-tos'),
@@ -3028,12 +3034,12 @@ var ConnectScreen = function ConnectScreen(props) {
       rel: "noopener noreferrer",
       target: "_blank"
     })
-  }))), showImageSlider && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }))), showImageSlider ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "jp-connect-screen--right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_image_slider__WEBPACK_IMPORTED_MODULE_10__.default, {
     images: images,
     assetBaseUrl: assetBaseUrl
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "jp-connect-screen--clearfix"
   }));
 };
@@ -3052,7 +3058,8 @@ ConnectScreen.propTypes = {
 };
 ConnectScreen.defaultProps = {
   title: __('Over 5 million WordPress sites are faster and more secure', 'jetpack'),
-  images: []
+  images: [],
+  redirectUri: null
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConnectScreen);
 
@@ -4089,7 +4096,7 @@ function Admin() {
     statusCallback: statusCallback,
     images: [_assets_connect_right_png__WEBPACK_IMPORTED_MODULE_6__],
     assetBaseUrl: assetBuildUrl
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, __("Secure and speed up your site for free with Jetpack's powerful WordPress tools.", 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Measure your impact with beautiful stats', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Speed up your site with optimized images', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Protect your site against bot attacs', 'jetpacks')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Get notifications if your site goes offline', 'jetpacks')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Enhance your site with dozens of other features', 'jetpack')))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, __("Secure and speed up your site for free with Jetpack's powerful WordPress tools.", 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Measure your impact with beautiful stats', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Speed up your site with optimized images', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Protect your site against bot attacks', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Get notifications if your site goes offline', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Enhance your site with dozens of other features', 'jetpack')))));
 }
 
 /***/ }),
