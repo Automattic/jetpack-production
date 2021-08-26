@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Contact Form: Disable the Block Editor for contact form submissions
 - Correct REQUEST_URI checking to work for wp.com as well as .org endpoints
+- Custom CSS: Ensure that short CSS is added inline instead of via an external file.
 - Dashboard: ensure that the image CDN does not get enabled by default when using the Site Accelerator toggle while in Offline mode.
 - E2E tests: fixed PayPal block fields not getting filled
 - Fix broken SSO sync test
