@@ -65,6 +65,7 @@ This is an alpha version! The changes listed here are not final.
 - Bump changelogger version
 - Carousel: Replace color CSS with CSS variables to simplify theming
 - Classic views are now forced for Customizer screens (WP.com only)
+- E2E tests: clean-up wp-env leftovers
 - E2E tests: fixed mailchimp tests failing after a button label change
 - E2E tests: fix selector for block editor search field
 - E2E Tests: switch to Jetpack Docker
