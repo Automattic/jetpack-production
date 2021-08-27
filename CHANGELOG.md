@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: added tests prerequisites abstraction
 - E2E tests: optimize specs prerequisites
 - E2E tests: run tests against an arbitrary site
+- E2E tests: scheduled test runs on atomic test site
 - E2E tests: use Allure test steps for better reporting
 - Image CDN: added support for the WEBP format
 - Integrate RNA connection screen into the main connection flow.
