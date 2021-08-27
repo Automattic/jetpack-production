@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add support for WooCommerce table to the checksum/fix process.
 - Enable support for utf8 conversion during checksum calculation.
 
 ### Changed
