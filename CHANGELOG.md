@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: improve checkbox alignment by removing custom checkbox margins added by some themes
 - Search: improves handling of really long breadcrumbs
 - Search: removes forward slash from empty breadcrumb display
+- Search: Search dashboard accessbility and layout improvements
 - Search: visual and functional improvements to new wp-admin section
 - Secure Sign On: remove additional redirect during sign in process.
 - Shortcodes: allow wrapping quizzes together with the Quiz shortcode.
