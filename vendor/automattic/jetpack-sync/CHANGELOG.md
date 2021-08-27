@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Don't run composer install on regular phpunit script
 - Tests: update PHPUnit polyfills dependency (yoast/phpunit-polyfills).
 
+### Fixed
+- Sync Checksums - ensure last object is included in histogram
+
 ## [1.25.0] - 2021-08-12
 ### Added
 - Add package version tracking.
