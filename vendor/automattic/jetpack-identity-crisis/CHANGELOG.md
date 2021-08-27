@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Tests: update PHPUnit polyfills dependency (yoast/phpunit-polyfills).
 - update annotations versions
 - Update to latest webpack, webpack-cli and calypso-build
+- Use Node 16.7.0 in tooling. This shouldn't change the behavior of the code itself.
 
 ## [0.2.3] - 2021-08-12
 ### Changed

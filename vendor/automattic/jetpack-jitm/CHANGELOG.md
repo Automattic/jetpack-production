@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Update to latest webpack, webpack-cli and calypso-build
 - Upgrade to Webpack 5
+- Use Node 16.7.0 in tooling. This shouldn't change the behavior of the code itself.
 
 ### Removed
 - Removed IE11 support.

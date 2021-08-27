@@ -82,6 +82,7 @@ This is an alpha version! The changes listed here are not final.
 - Init Jetpack 10.1 release cycle.
 - Jetpack 10.0: update beta testing instructions.
 - Move API calls to jetpack-api package
+- Move Jetpack-specific JS test init into Jetpack's test init, and move a test out of Jetpack's test init because it was triggering a ton of extra stuff to load before the init could happen.
 - Rename a generated js file to avoid triggering an outdated minifier on wpcom's cdn.
 - Search: Backports Customberg babel configuration from WordPress.com
 - Search: Fix search E2E test failure caused by new block widgets in WP 5.8
@@ -92,9 +93,11 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
 - Updated product slugs for new/imminent real-time Backup and Security products.
 - Update to latest webpack, webpack-cli and calypso-build
 - Upgrade to Webpack 5
+- Use Node 16.7.0 in tooling. This shouldn't change the behavior of the code itself.
 
 ## 10.0 - 2021-08-03
 ### Enhancements
