@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Tests: update PHPUnit polyfills dependency (yoast/phpunit-polyfills).
+- update annotations versions
 
 ## [1.13.0] - 2021-06-15
 ### Changed

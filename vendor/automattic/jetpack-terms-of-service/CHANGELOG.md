@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Run composer update on test-php command instead of phpunit
 - Tests: update PHPUnit polyfills dependency (yoast/phpunit-polyfills).
+- update annotations versions
 
 ## [1.9.8] - 2021-06-15
 
