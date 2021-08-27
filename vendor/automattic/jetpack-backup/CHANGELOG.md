@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Bump changelogger version
+- Tests: update PHPUnit polyfills dependency (yoast/phpunit-polyfills).
 - Updated package dependencies.
 
 ## [1.1.2] - 2021-08-12
