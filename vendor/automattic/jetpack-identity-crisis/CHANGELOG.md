@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Bump changelogger version
 - Tests: update PHPUnit polyfills dependency (yoast/phpunit-polyfills).
+- update annotations versions
 - Update to latest webpack, webpack-cli and calypso-build
 
 ## [0.2.3] - 2021-08-12
