@@ -72,6 +72,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: fixed modal not scrolling to top when keyboard is opened on mobile devices
 - Search: fixed search widgets not saving for block widget editor
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
+- Social Icons Widget: Fix issue in wp-admin editor where icons don't save on refresh.
 - Stats: allow better translations of page view counts in the Stats widget.
 - [Carousel]: Fix bug preventing user from swiping in gallery when images are configured to link to Attachment Page.
 
