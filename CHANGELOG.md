@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom CSS: Ensure that short CSS is added inline instead of via an external file.
 - Dashboard: ensure that the image CDN does not get enabled by default when using the Site Accelerator toggle while in Offline mode.
 - E2E tests: fixed PayPal block fields not getting filled
+- Fix a bug that prevented the Facebook Page widget from being added in the wp-admin/widget.php page.
 - Fix broken SSO sync test
 - Fixed submenu positioning issue for Nav-Unification in WP-Admin
 - Fixed Video block resizing so that they don't display black bars at the sides.
