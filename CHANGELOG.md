@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Spotify Shortcode: Added lazy loading support
 - Tiled Gallery Block: ensure it can be used when in Offline Mode as well.
 - Widget Visibility - rename taxonomy label "All Pages" in dropdown
+- WordPress.com: allow for ZIP files to be uploaded to sites via WordPress.com.
 - WordPress.com REST API: Add new field to comment endpoint response.
 
 ### Improved compatibility
