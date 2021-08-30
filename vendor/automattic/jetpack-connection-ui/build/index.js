@@ -719,6 +719,19 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
+/***/ "../../js-packages/components/components/spinner/style.scss":
+/*!******************************************************************!*\
+  !*** ../../js-packages/components/components/spinner/style.scss ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "../../js-packages/connection/components/connect-button/style.scss":
 /*!*************************************************************************!*\
   !*** ../../js-packages/connection/components/connect-button/style.scss ***!
@@ -2643,6 +2656,63 @@ _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_mo
 
 /***/ }),
 
+/***/ "../../js-packages/components/components/spinner/index.jsx":
+/*!*****************************************************************!*\
+  !*** ../../js-packages/components/components/spinner/index.jsx ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/spinner/style.scss");
+/**
+ * External dependencies
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+var Spinner = function Spinner(props) {
+  var className = props.className + ' jp-components-spinner';
+  var style = {
+    width: props.size,
+    height: props.size,
+    fontSize: props.size // allows border-width to be specified in em units
+
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: className
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components-spinner__outer",
+    style: style
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components-spinner__inner"
+  })));
+};
+
+Spinner.propTypes = {
+  className: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  size: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number)
+};
+Spinner.defaultProps = {
+  size: 20,
+  className: ''
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Spinner);
+
+/***/ }),
+
 /***/ "../../js-packages/components/tools/jp-redirect/index.jsx":
 /*!****************************************************************!*\
   !*** ../../js-packages/components/tools/jp-redirect/index.jsx ***!
@@ -2739,7 +2809,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
+/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/connect-button/style.scss");
 
 
@@ -2749,6 +2820,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+
 
 
 
@@ -2854,7 +2926,7 @@ var ConnectButton = function ConnectButton(props) {
     onClick: registerSite,
     isPrimary: true,
     disabled: isRegistering || isUserConnecting
-  }, connectLabel), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_7__.default, {
+  }, isRegistering || isUserConnecting ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default, null) : connectLabel), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_8__.default, {
     connectUrl: authorizationUrl,
     redirectUri: redirectUri,
     from: from
