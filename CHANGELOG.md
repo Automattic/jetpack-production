@@ -53,6 +53,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: Disable the Block Editor for contact form submissions
 - Correct REQUEST_URI checking to work for wp.com as well as .org endpoints
 - Custom CSS: Ensure that short CSS is added inline instead of via an external file.
+- Dashboard: Add a new message to the backup card if the site is too new have an accurate status.
 - Dashboard: ensure that the image CDN does not get enabled by default when using the Site Accelerator toggle while in Offline mode.
 - E2E tests: fixed PayPal block fields not getting filled
 - Fix a bug that prevented the Facebook Page widget from being added in the wp-admin/widget.php page.
