@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Secure Sign On: remove additional redirect during sign in process.
 - Shortcodes: allow wrapping quizzes together with the Quiz shortcode.
 - Spotify Shortcode: Added lazy loading support
+- Stats: add the ability to collapse the nudges UI.
 - Tiled Gallery Block: ensure it can be used when in Offline Mode as well.
 - Widget Visibility - rename taxonomy label "All Pages" in dropdown
 - WordPress.com: allow for ZIP files to be uploaded to sites via WordPress.com.
