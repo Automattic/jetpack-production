@@ -2766,6 +2766,7 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
  * @param {string} props.from -- Where the connection request is coming from.
  * @param {object} props.connectionStatus -- The connection status object.
  * @param {boolean} props.connectionStatusIsFetching -- The flag indicating that connection status is being fetched.
+ * @param {boolean} props.autoTrigger -- Whether to initiate the connection process automatically upon rendering the component.
  * @returns {React.Component} The RNA connection component.
  */
 
@@ -2793,7 +2794,8 @@ var ConnectButton = function ConnectButton(props) {
       redirectUri = props.redirectUri,
       from = props.from,
       connectionStatus = props.connectionStatus,
-      connectionStatusIsFetching = props.connectionStatusIsFetching;
+      connectionStatusIsFetching = props.connectionStatusIsFetching,
+      autoTrigger = props.autoTrigger;
   /**
    * Initialize the REST API.
    */
@@ -2829,6 +2831,16 @@ var ConnectButton = function ConnectButton(props) {
       throw error;
     });
   }, [setIsRegistering, setAuthorizationUrl, connectionStatus, onRegistered, registrationNonce, redirectUri]);
+  /**
+   * Auto-trigger the flow, only do it once.
+   */
+
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (autoTrigger && !isRegistering && !isUserConnecting) {
+      registerSite();
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "jp-connect-button"
   }, connectionStatusIsFetching && "Loading...", (!connectionStatus.isRegistered || !connectionStatus.isUserConnected) && !connectionStatusIsFetching && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
@@ -2851,11 +2863,13 @@ ConnectButton.propTypes = {
   onRegistered: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func),
   from: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
   redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string.isRequired),
-  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string.isRequired)
+  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string.isRequired),
+  autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool)
 };
 ConnectButton.defaultProps = {
   connectLabel: __('Connect', 'jetpack'),
-  redirectUri: null
+  redirectUri: null,
+  autoTrigger: false
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConnectButton);
 
@@ -2981,11 +2995,13 @@ var ConnectButtonWithConnectionStatus = (0,_with_connection_status__WEBPACK_IMPO
  * @param {Function} props.statusCallback -- Callback to pull connection status from the component.
  * @param {Array} props.images -- Images to display on the right side.
  * @param {string} props.assetBaseUrl -- The assets base URL.
+ * @param {boolean} props.autoTrigger -- Whether to initiate the connection process automatically upon rendering the component.
  * @returns {React.Component} The `ConnectScreen` component.
  */
 
 var ConnectScreen = function ConnectScreen(props) {
   var title = props.title,
+      buttonLabel = props.buttonLabel,
       apiRoot = props.apiRoot,
       apiNonce = props.apiNonce,
       registrationNonce = props.registrationNonce,
@@ -2994,7 +3010,8 @@ var ConnectScreen = function ConnectScreen(props) {
       statusCallback = props.statusCallback,
       images = props.images,
       children = props.children,
-      assetBaseUrl = props.assetBaseUrl;
+      assetBaseUrl = props.assetBaseUrl,
+      autoTrigger = props.autoTrigger;
   var showImageSlider = images.length;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({}),
@@ -3020,7 +3037,8 @@ var ConnectScreen = function ConnectScreen(props) {
     from: from,
     redirectUri: redirectUri,
     statusCallback: statusHandler,
-    connectLabel: __('Set up Jetpack', 'jetpack')
+    connectLabel: buttonLabel,
+    autoTrigger: autoTrigger
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "jp-connect-screen--tos"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('By clicking the button above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>share details</shareDetailsLink> with WordPress.com.', 'jetpack'), {
@@ -3047,6 +3065,7 @@ var ConnectScreen = function ConnectScreen(props) {
 ConnectScreen.propTypes = {
   title: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
   body: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+  buttonLabel: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
   apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
   apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
   from: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
@@ -3054,12 +3073,15 @@ ConnectScreen.propTypes = {
   registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
   statusCallback: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func),
   images: prop_types__WEBPACK_IMPORTED_MODULE_2___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)),
-  assetBaseUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)
+  assetBaseUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+  autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool)
 };
 ConnectScreen.defaultProps = {
   title: __('Over 5 million WordPress sites are faster and more secure', 'jetpack'),
+  buttonLabel: __('Set up Jetpack', 'jetpack'),
   images: [],
-  redirectUri: null
+  redirectUri: null,
+  autoTrigger: false
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConnectScreen);
 
@@ -3149,7 +3171,8 @@ ConnectUser.propTypes = {
 ConnectUser.defaultProps = {
   redirectFunc: function redirectFunc(url) {
     return window.location.assign(url);
-  }
+  },
+  redirectUri: null
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConnectUser);
 

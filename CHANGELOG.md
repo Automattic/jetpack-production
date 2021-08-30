@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Major Enhancements
+- Connection: remove in-place connection for secondary flows.
 - Search: Adds a Gutenberg powered customization interface
 
 ### Enhancements
