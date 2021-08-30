@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Bump connection package version to 0.5.2-alpha
 - Updated package dependencies.
+- Updated package dependencies.
 - Updated Package versions in annotations
 - Update to latest webpack, webpack-cli and calypso-build
 - Use Node 16.7.0 in tooling. This shouldn't change the behavior of the code itself.

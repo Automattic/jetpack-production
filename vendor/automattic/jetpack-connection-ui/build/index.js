@@ -2288,6 +2288,9 @@ function JetpackRestApiClient(root, nonce) {
     fetchRecommendationsData: function fetchRecommendationsData() {
       return getRequest("".concat(apiRoot, "jetpack/v4/recommendations/data"), getParams).then(checkStatus).then(parseJsonResponse);
     },
+    fetchRecommendationsProductSuggestions: function fetchRecommendationsProductSuggestions() {
+      return getRequest("".concat(apiRoot, "jetpack/v4/recommendations/product-suggestions"), getParams).then(checkStatus).then(parseJsonResponse);
+    },
     fetchRecommendationsUpsell: function fetchRecommendationsUpsell() {
       return getRequest("".concat(apiRoot, "jetpack/v4/recommendations/upsell"), getParams).then(checkStatus).then(parseJsonResponse);
     },
