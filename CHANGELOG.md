@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Updates copy in Mailchimp block to use audience instead of lists.
 
 ### Bug fixes
+- Carousel: fix a bug that changes the cursor to a pointer over all nested blocks
 - Contact Form: Disable the Block Editor for contact form submissions
 - Correct REQUEST_URI checking to work for wp.com as well as .org endpoints
 - Custom CSS: Ensure that short CSS is added inline instead of via an external file.
