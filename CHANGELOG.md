@@ -2,119 +2,103 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.1-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.1-beta - 2021-08-31
 ### Major Enhancements
-- Connection: remove in-place connection for secondary flows.
-- Search: Adds a Gutenberg powered customization interface
+- Search: add a Gutenberg powered customization interface.
 
 ### Enhancements
-- Adds a navigation link to Beta Testing page for WPCOM sites
-- Add `wpcom_is_fse_activated` to sync list
 - Carousel: photo info and comment sections stay open once toggled on.
 - Carousel: show image info icon even if Exif metadata option is off.
 - Carousel: use photo description as caption if caption and title fields are blank.
-- E2E tests: added tests prerequisites abstraction
-- E2E tests: add option to pass test report name in Slack notifications
-- E2E tests: optimize specs prerequisites
-- E2E tests: run tests against an arbitrary site
-- E2E tests: scheduled test runs on atomic test site
-- E2E tests: send report name for atomic test runs
-- E2E tests: use Allure test steps for better reporting
-- Image CDN: added support for the WEBP format
-- Integrate RNA connection screen into the main connection flow.
-- Jetpack Assistant: Introduce a new "Product Suggestion" step to inform new users of relevant Jetpack services.
-- Search: Apply design polish to new customization interface
-- Search: fix label coloring in dark mode with some themes
-- Search: improve checkbox alignment by removing custom checkbox margins added by some themes
-- Search: improves handling of really long breadcrumbs
-- Search: removes forward slash from empty breadcrumb display
-- Search: Search dashboard accessbility and layout improvements
-- Search: visual and functional improvements to new wp-admin section
+- Form Block: scroll to subscription message after submitting the form.
+- Jetpack Assistant: introduce a new "Product Suggestion" step to inform new users of relevant Jetpack services.
+- Search: visual, functional, and accessibility improvements to new wp-admin section and customization interface.
+- Search: greater theme compatibility, including label coloring and custom checkbox margins.
+- Search: improves handling of breadcrumb display.
 - Secure Sign On: remove additional redirect during sign in process.
 - Shortcodes: allow wrapping quizzes together with the Quiz shortcode.
-- Spotify Shortcode: Added lazy loading support
+- Spotify Shortcode: add lazy loading support.
 - Stats: add the ability to collapse the nudges UI.
-- Tiled Gallery Block: ensure it can be used when in Offline Mode as well.
-- Widget Visibility - rename taxonomy label "All Pages" in dropdown
-- WordPress.com: allow for ZIP files to be uploaded to sites via WordPress.com.
-- WordPress.com REST API: Add new field to comment endpoint response.
+- Tiled Gallery Block: ensure it can be used when in Offline Mode.
+- Widget Visibility: rename taxonomy label "All Pages" in dropdown.
 
 ### Improved compatibility
 - Browser Compatibility: allow use of new JavaScript features not supported by Internet Explorer 11.
-- Hide UI controls in the carousel for single images.
-- Masterbar: show Beta Testing link on Atomic Sites and hide it on P2
-- Related Posts: allow shortcodes in Related Posts titles, to allow third-party plugins processing shortcodes in post titles to work.
-- Update Jest dependencies to fix Jetpack JS tests.
-- Updates copy in Mailchimp block to use audience instead of lists.
+- Image CDN: added support for the WEBP format.
+- Mailchimp Block: updates terminology to use "Audience" instead of "Lists".
+- Media: allow ZIP files to be uploaded to sites via WordPress.com.
+- Related Posts: allow shortcodes in Related Posts titles.
 
 ### Bug fixes
-- Carousel: fix a bug that changes the cursor to a pointer over all nested blocks
-- Contact Form: Disable the Block Editor for contact form submissions
-- Correct REQUEST_URI checking to work for wp.com as well as .org endpoints
-- Custom CSS: Ensure that short CSS is added inline instead of via an external file.
-- Dashboard: Add a new message to the backup card if the site is too new have an accurate status.
+- Carousel: fix a bug that changes the cursor to a pointer over all nested blocks.
+- Carousel: fix bug preventing user from swiping in gallery when images are configured to link to Attachment Page.
+- Carousel: hide UI controls in the carousel for single images.
+- Contact Form: disable the Block Editor for contact form submissions.
+- Custom CSS: ensure that short CSS is added inline instead of via an external file.
+- Dashboard: add a new message to the backup card if the site is too new to have an accurate status.
 - Dashboard: ensure that the image CDN does not get enabled by default when using the Site Accelerator toggle while in Offline mode.
-- E2E tests: fixed PayPal block fields not getting filled
-- Fix a bug that prevented the Facebook Page widget from being added in the wp-admin/widget.php page.
-- Fix broken SSO sync test
-- Fixed submenu positioning issue for Nav-Unification in WP-Admin
-- Fixed Video block resizing so that they don't display black bars at the sides.
-- Fixes some issues in docker cli
-- Form Block: fix form button alignment in editor
-- Improve test robustness and tooling for extensions
-- In mutlti-site, list sites will show based on current network id
-- Instant Search: ensure box-shadow and text-shadow aren't applied to search buttons
-- Related Posts: Fix issue with dequeueing scripts and styles
-- Responsive Videos: account for newer embed block format when detecting videos in post content.
-- Scroll to subscription message after submitting the form
-- Search: fix allowing scrolling behind the modal when it is open on mobile devices
-- Search: fixed body and overlay scroll position issue
-- Search: fixed modal not scrolling to top when keyboard is opened on mobile devices
-- Search: fixed search widgets not saving for block widget editor
-- Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
-- Social Icons Widget: Fix issue in wp-admin editor where icons don't save on refresh.
+- Facebook Page Widget: fix a bug that prevented widget from being added in the wp-admin widget editor.
+- Form Block: fix form button alignment in editor.
+- Instant Search: ensure box-shadow and text-shadow aren't applied to search buttons.
+- Search: fix various issues with scrolling on both desktop and mobile devices.
+- Search: fix search widgets not saving in block widget editor.
+- Slideshow Block: fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
+- Social Icons Widget: fix issue in wp-admin widget editor where icons don't save on refresh.
 - Stats: allow better translations of page view counts in the Stats widget.
-- [Carousel]: Fix bug preventing user from swiping in gallery when images are configured to link to Attachment Page.
+- Video Block: fix resizing so that video block doesn't display black bars on the sides.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Adapt the test to recent changes to connection banner
-- Added additional event properties to woocommerceanalytics_product_checkout and woocommerceanalytics_product_purchase events
-- Add wordpress/babel-preset-default package for use by Instant Search customization
-- Bump changelogger version
-- Carousel: Replace color CSS with CSS variables to simplify theming
-- Classic views are now forced for Customizer screens (WP.com only)
-- E2E tests: clean-up wp-env leftovers
-- E2E tests: don't throw when get debug log from docker fails
+- Adds a navigation link to Beta Testing page for WPCOM sites.
+- Add `wpcom_is_fse_activated` to sync list.
+- Adapt the test to recent changes to connection banner.
+- Add additional event properties to woocommerceanalytics_product_checkout and woocommerceanalytics_product_purchase events.
+- Add wordpress/babel-preset-default package for use by Instant Search customization.
+- Bump changelogger version.
+- Carousel: Replace color CSS with CSS variables to simplify theming.
+- Classic views are now forced for Customizer screens (WP.com only).
+- Connection: remove in-place connection for secondary flows.
+- Correct REQUEST_URI checking to work for wp.com as well as .org endpoints.
+- E2E tests: fix PayPal block fields not getting filled.
+- E2E tests: add tests prerequisites abstraction.
+- E2E tests: add option to pass test report name in Slack notifications.
+- E2E tests: optimize specs prerequisites.
+- E2E tests: run tests against an arbitrary site.
+- E2E tests: scheduled test runs on atomic test site.
+- E2E tests: send report name for atomic test runs.
+- E2E tests: use Allure test steps for better reporting.
+- E2E tests: clean-up wp-env leftovers.
+- E2E tests: don't throw when get debug log from docker fails.
 - E2E tests: Expect `jetpack docker exec` to pass through exit statuses.
-- E2E tests: fixed mailchimp tests failing after a button label change
-- E2E tests: fix missing action for e2e on atomic workflow
-- E2E tests: fix selector for block editor search field
-- E2E Tests: switch to Jetpack Docker
-- E2E tests: temporarily disable plugin updater test
-- Fix Mailchimp test
+- E2E tests: fix mailchimp tests failing after a button label change.
+- E2E tests: fix missing action for e2e on atomic workflow.
+- E2E tests: fix selector for block editor search field.
+- E2E Tests: switch to Jetpack Docker.
+- E2E tests: temporarily disable plugin updater test.
+- Fix Mailchimp test.
+- Fix broken SSO sync test.
+- Fix submenu positioning issue for Nav-Unification in WP-Admin.
+- Fix some issues in Docker cli.
 - Init Jetpack 10.1 release cycle.
+- Improve test robustness and tooling for extensions.
+- Integrate RNA connection screen into the main connection flow.
 - Jetpack 10.0: update beta testing instructions.
-- Move API calls to jetpack-api package
-- Move Jetpack-specific JS test init into Jetpack's test init, and move a test out of Jetpack's test init because it was triggering a ton of extra stuff to load before the init could happen.
-- Rename a generated js file to avoid triggering an outdated minifier on wpcom's cdn.
-- Search: Backports Customberg babel configuration from WordPress.com
-- Search: Fix search E2E test failure caused by new block widgets in WP 5.8
+- Masterbar: show Beta Testing link on Atomic Sites and hide it on P2.
+- Move API calls to jetpack-api package.
+- Move Jetpack-specific JS test init into Jetpack's test init.
+- Move a test out of Jetpack's test init.
+- Multi-site: list sites will show based on current network id.
+- Related Posts: Fix issue with dequeueing scripts and styles.
+- Rename a generated js file to avoid triggering an outdated minifier on WordPress.com's cdn.
+- Responsive Videos: account for newer embed block format when detecting videos in post content.
+- Search: Backports Customberg babel configuration from WordPress.com.
+- Search: Fix search E2E test failure caused by new block widgets in WP 5.8.
+- Update Jest dependencies to fix Jetpack JS tests.
 - Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
 - Updated product slugs for new/imminent real-time Backup and Security products.
-- Update to latest webpack, webpack-cli and calypso-build
-- Upgrade to Webpack 5
-- Use Node 16.7.0 in tooling. This shouldn't change the behavior of the code itself.
+- Update to latest webpack, webpack-cli and calypso-build.
+- Upgrade to Webpack 5.
+- Use Node 16.7.0 in tooling.
+- WordPress.com REST API: Add new field to comment endpoint response.
 
 ## 10.0 - 2021-08-03
 ### Enhancements

@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.0.0] - 2021-08-31
 ### Changed
-- Run composer update on test-php command instead of phpunit
+- Run composer update on test-php command instead of phpunit.
 - Tests: update PHPUnit polyfills dependency (yoast/phpunit-polyfills).
-- update annotations versions
-- Updated package dependencies
-- Update to latest webpack, webpack-cli and calypso-build
-- Upgrade to Webpack 5
-- Use Node 16.7.0 in tooling. This shouldn't change the behavior of the code itself.
+- Update annotations versions.
+- Updated package dependencies.
+- Update to latest webpack, webpack-cli and calypso-build.
+- Upgrade to Webpack 5.
+- Use Node 16.7.0 in tooling.
 
 ### Removed
 - Removed IE11 support.
@@ -304,7 +301,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Update Jetpack to use new JITM package
 
-[2.0.0-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v1.16.2...v2.0.0-alpha
+[2.0.0]: https://github.com/Automattic/jetpack-jitm/compare/v1.16.2...v2.0.0
 [1.16.2]: https://github.com/Automattic/jetpack-jitm/compare/v1.16.1...v1.16.2
 [1.16.1]: https://github.com/Automattic/jetpack-jitm/compare/v1.16.0...v1.16.1
 [1.16.0]: https://github.com/Automattic/jetpack-jitm/compare/v1.15.1...v1.16.0
