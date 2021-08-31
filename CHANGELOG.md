@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.2-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Social Icons: fix being able to remove icons from widget.
+
 ## 10.1-beta - 2021-08-31
 ### Major Enhancements
 - Search: add a Gutenberg powered customization interface.
