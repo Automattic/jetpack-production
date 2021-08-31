@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: show image info icon even if Exif metadata option is off.
 - Carousel: use photo description as caption if caption and title fields are blank.
 - E2E tests: added tests prerequisites abstraction
+- E2E tests: add option to pass test report name in Slack notifications
 - E2E tests: optimize specs prerequisites
 - E2E tests: run tests against an arbitrary site
 - E2E tests: scheduled test runs on atomic test site
