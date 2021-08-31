@@ -69,6 +69,7 @@ This is an alpha version! The changes listed here are not final.
 - Responsive Videos: account for newer embed block format when detecting videos in post content.
 - Scroll to subscription message after submitting the form
 - Search: fix allowing scrolling behind the modal when it is open on mobile devices
+- Search: fixed body and overlay scroll position issue
 - Search: fixed modal not scrolling to top when keyboard is opened on mobile devices
 - Search: fixed search widgets not saving for block widget editor
 - Slideshow Block: Fix intermittent issue where next/prev buttons sometimes don't respond to clicks.
