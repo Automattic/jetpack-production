@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updates to-test.md.
+- Update `copy-webpack-plugin` dep.
 
 ## 10.1-beta - 2021-08-31
 ### Major Enhancements
