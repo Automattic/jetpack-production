@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Add better checks if the WooCommerce tables should be enabled for checksum/fix.
+- Prevent PHP notices on queue_pull if all args are not set.
 
 ## [1.26.0] - 2021-08-30
 ### Added
