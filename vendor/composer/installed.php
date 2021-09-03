@@ -139,12 +139,12 @@
     ),
     'automattic/jetpack-heartbeat' => 
     array (
-      'pretty_version' => 'v1.3.9',
-      'version' => '1.3.9.0',
+      'pretty_version' => 'v1.3.10',
+      'version' => '1.3.10.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'eb45635854bb755674da4c73793c67a04b6e94a1',
+      'reference' => 'caade9254cbde292b62b3959547a30a0d80b90da',
     ),
     'automattic/jetpack-identity-crisis' => 
     array (
@@ -247,12 +247,12 @@
     ),
     'automattic/jetpack-sync' => 
     array (
-      'pretty_version' => 'v1.26.0',
-      'version' => '1.26.0.0',
+      'pretty_version' => 'v1.26.1',
+      'version' => '1.26.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6cfdcc01cfdfa681b5671bacefed09d59ad95408',
+      'reference' => 'f60b01c93ac9408fd9121bb5bd8a1ba7a6b33dd4',
     ),
     'automattic/jetpack-terms-of-service' => 
     array (
