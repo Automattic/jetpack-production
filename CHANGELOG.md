@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Contact Form: add filter to allow customizing email headers.
 - Updated the edit icon design in the VideoPress block toolbar.
 
 ### Improved compatibility
