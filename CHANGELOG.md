@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Blocks: fix HTML markup of buttons added to our blocks.
 - Social Icons: fix being able to remove icons from widget.
 
 ## 10.1-beta - 2021-08-31
