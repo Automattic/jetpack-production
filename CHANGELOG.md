@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Blocks: fix HTML markup of buttons added to our blocks.
 - Fixed a bug related to deleting VideoPress videos.
+- Search: Improve style specificity for result highlights in Customberg
 - Social Icons: fix being able to remove icons from widget.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
