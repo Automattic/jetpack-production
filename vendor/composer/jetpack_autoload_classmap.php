@@ -354,6 +354,10 @@ return array(
 		'version' => '1.4.3.0',
 		'path'    => $vendorDir . '/automattic/jetpack-device-detection/src/class-user-agent-info.php'
 	),
+	'Automattic\\Jetpack\\Password_Checker' => array(
+		'version' => '0.1.3.0',
+		'path'    => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php'
+	),
 	'Automattic\\Jetpack\\IdentityCrisis\\REST_Endpoints' => array(
 		'version' => '0.2.5.0',
 		'path'    => $vendorDir . '/automattic/jetpack-identity-crisis/src/class-rest-endpoints.php'
@@ -361,10 +365,6 @@ return array(
 	'Automattic\\Jetpack\\Identity_Crisis' => array(
 		'version' => '0.2.5.0',
 		'path'    => $vendorDir . '/automattic/jetpack-identity-crisis/src/class-identity-crisis.php'
-	),
-	'Automattic\\Jetpack\\Password_Checker' => array(
-		'version' => '0.1.3.0',
-		'path'    => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
 		'version' => '1.5.6.0',
