@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: fix wrapping issue on super wide screens
 - Search: Improve style specificity for result highlights in Customberg
 - Social Icons: fix being able to remove icons from widget.
+- Widget Visibility: fix undefined property reference.
 
 ## 10.1-beta - 2021-08-31
 ### Major Enhancements
