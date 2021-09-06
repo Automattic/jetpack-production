@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Contact Form: add filter to allow customizing email headers.
+- E2E tests: support user mentions in Slack based on report name and branch name
 - Updated the edit icon design in the VideoPress block toolbar.
 
 ### Improved compatibility
