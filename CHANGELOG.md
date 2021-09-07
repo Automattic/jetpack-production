@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Blocks: fix HTML markup of buttons added to our blocks.
 - Fixed a bug related to deleting VideoPress videos.
+- Fixes previews in block editor by working around incorrect Calypso build configuration
 - Search: fix wrapping issue on super wide screens
 - Search: hide search sub menu on site disconnection
 - Search: Improve style specificity for result highlights in Customberg
