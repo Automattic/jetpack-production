@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Show the Connect button on the Media card in site-only mode.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adds wp-block-button__link to the button on the subscription widget
 - E2E tests: fixed stacktrace sometimes missing from Slack notification
 - Improve Mailchimp test stability
 - Remove Custom CSS placeholder text to stay in sync with wpcom. The placeholder was only displaying on Simple Sites.
