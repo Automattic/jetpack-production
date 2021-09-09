@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds wp-block-button__link to the button on the subscription widget
+- Allow Node ^14.17.6 to be used in this project. This shouldn't change the behavior of the code itself.
 - E2E tests: fixed stacktrace sometimes missing from Slack notification
 - Improve Mailchimp test stability
 - Remove Custom CSS placeholder text to stay in sync with wpcom. The placeholder was only displaying on Simple Sites.
