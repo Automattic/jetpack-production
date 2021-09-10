@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed a bug related to deleting VideoPress videos.
 - Show the Connect button on the Media card in site-only mode.
 - Slideshow block: fix fade transition background
+- WordPress.com Notifications and Reader: fix Spotify shortcode render
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds wp-block-button__link to the button on the subscription widget
