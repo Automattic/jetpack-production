@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: add filter to allow customizing email headers.
 - Dashboard: improve the performance of the query used to display Anti-spam stats.
 - E2E tests: support user mentions in Slack based on report name and branch name
+- Refactoring sharing plugin. Replace HOC with hooks.
 - Updated the edit icon design in the VideoPress block toolbar.
 
 ### Improved compatibility
