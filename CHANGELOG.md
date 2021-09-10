@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: log Jetpack version
 - Improve Mailchimp test stability
 - Remove Custom CSS placeholder text to stay in sync with wpcom. The placeholder was only displaying on Simple Sites.
+- skip test_get_user_connection_data_with_connected_user for multisite
 - test anotation fix
 - Updated package dependencies.
 - Updated package dependencies.
