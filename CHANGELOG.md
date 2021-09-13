@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Improved security by sanitizing return value of get_current_screen function
 - Show the Connect button on the Media card in site-only mode.
 - Slideshow block: fix fade transition background
+- Theme Tools: remove unnecessary extra Social Menu added in the Twenty Twenty theme.
 - WordPress.com Notifications: fix Dailymotion shortcode notification render
 - WordPress.com Notifications: fix SoundCloud shortcode notification render
 - WordPress.com Notifications and Reader: fix Spotify shortcode render
