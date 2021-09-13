@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated the edit icon design in the VideoPress block toolbar.
 
 ### Improved compatibility
+- Reverted import statement for BlockControl brower console warning
 - VideoPress file url field now displays the HLS playlist if one was generated. The fragmented mp4 file is not meant to be played on its own. MP4 file will only be displayed as the video url if it was created prior to the HLS update.
 
 ### Bug fixes
