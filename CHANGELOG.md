@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Show the Connect button on the Media card in site-only mode.
 - Slideshow block: fix fade transition background
 - Theme Tools: remove unnecessary extra Social Menu added in the Twenty Twenty theme.
+- Widgets: Fix a conflict between various Jetpack blocks and some WordPress core legacy widgets.
 - WordPress.com Notifications: fix Dailymotion shortcode notification render
 - WordPress.com Notifications: fix SoundCloud shortcode notification render
 - WordPress.com Notifications and Reader: fix Spotify shortcode render
