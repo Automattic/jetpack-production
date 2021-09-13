@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress.com Notifications and Reader: fix Spotify shortcode render
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add back skipped tests checking the Screen Options functionality of Nav Unification
 - Adds wp-block-button__link to the button on the subscription widget
 - Allow Node ^14.17.6 to be used in this project. This shouldn't change the behavior of the code itself.
 - E2E tests: fixed stacktrace sometimes missing from Slack notification
