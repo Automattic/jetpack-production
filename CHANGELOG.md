@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Allow Node ^14.17.6 to be used in this project. This shouldn't change the behavior of the code itself.
 - E2E tests: fixed stacktrace sometimes missing from Slack notification
 - E2E tests: log Jetpack version
+- Fix failing phpunit test on multisite installation.
 - Improve Mailchimp test stability
 - Remove Custom CSS placeholder text to stay in sync with wpcom. The placeholder was only displaying on Simple Sites.
 - skip test_get_user_connection_data_with_connected_user for multisite
