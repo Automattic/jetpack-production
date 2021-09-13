@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form block: Make sure the set height of the Spacer block nested inside the Contact Form block is respected
 - Fix broken Jetpack Sync unit tests
 - Fixed a bug related to deleting VideoPress videos.
+- Improved security by sanitizing return value of get_current_screen function
 - Show the Connect button on the Media card in site-only mode.
 - Slideshow block: fix fade transition background
 - WordPress.com Notifications: fix SoundCloud shortcode notification render
