@@ -1,1 +1,0 @@
-!function(t){if(!t.currentScript){const e=t.createElement("script");e.src=window.JetpackInstantSearchIe11PolyfillPath,t.head.appendChild(e)}}(document);
