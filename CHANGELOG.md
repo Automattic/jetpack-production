@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Widgets: Fix a conflict between various Jetpack blocks and some WordPress core legacy widgets.
 - WordPress.com Notifications: fix Dailymotion shortcode notification render
 - WordPress.com Notifications: fix SoundCloud shortcode notification render
+- WordPress.com Notifications: fix YouTube shortcode notification render
 - WordPress.com Notifications and Reader: fix Spotify shortcode render
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
