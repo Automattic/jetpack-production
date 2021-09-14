@@ -2858,10 +2858,15 @@ var ConnectButton = function ConnectButton(props) {
       isUserConnecting = _useState4[0],
       setIsUserConnecting = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
       _useState6 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState5, 2),
-      authorizationUrl = _useState6[0],
-      setAuthorizationUrl = _useState6[1];
+      registationError = _useState6[0],
+      setRegistrationError = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
+      _useState8 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState7, 2),
+      authorizationUrl = _useState8[0],
+      setAuthorizationUrl = _useState8[1];
 
   var apiRoot = props.apiRoot,
       apiNonce = props.apiNonce,
@@ -2887,6 +2892,7 @@ var ConnectButton = function ConnectButton(props) {
 
   var registerSite = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function (e) {
     e && e.preventDefault();
+    setRegistrationError(false);
 
     if (connectionStatus.isRegistered) {
       setIsUserConnecting(true);
@@ -2905,6 +2911,7 @@ var ConnectButton = function ConnectButton(props) {
       setIsUserConnecting(true);
     })["catch"](function (error) {
       setIsRegistering(false);
+      setRegistrationError(error);
       throw error;
     });
   }, [setIsRegistering, setAuthorizationUrl, connectionStatus, onRegistered, registrationNonce, redirectUri]);
@@ -2926,7 +2933,9 @@ var ConnectButton = function ConnectButton(props) {
     onClick: registerSite,
     isPrimary: true,
     disabled: isRegistering || isUserConnecting
-  }, isRegistering || isUserConnecting ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default, null) : connectLabel), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_8__.default, {
+  }, isRegistering || isUserConnecting ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default, null) : connectLabel), registationError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", {
+    className: "jp-connect-button__error"
+  }, __('An error occurred. Please try again.', 'jetpack')), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_8__.default, {
     connectUrl: authorizationUrl,
     redirectUri: redirectUri,
     from: from
