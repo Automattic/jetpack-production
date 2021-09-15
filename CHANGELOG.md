@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add `./extensions/plugins` folder to the building system.
 - Contact Form: add filter to allow customizing email headers.
 - Dashboard: improve the performance of the query used to display Anti-spam stats.
+- E2E tests: make sure videos are saved for all opened tabs
 - E2E tests: support user mentions in Slack based on report name and branch name
 - Move publicize plugin to the proper extension folder
 - Refactoring sharing plugin. Replace HOC with hooks.
