@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed a bug related to deleting VideoPress videos.
 - Fix VR shortcode not rendered on notification content.
 - Improved security by sanitizing return value of get_current_screen function
+- Sharing: fix the icon position in icon-only button style.
 - Show the Connect button on the Media card in site-only mode.
 - Slideshow block: fix fade transition background
 - Theme Tools: remove unnecessary extra Social Menu added in the Twenty Twenty theme.
