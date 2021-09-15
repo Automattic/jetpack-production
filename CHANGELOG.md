@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add `./extensions/plugins` folder to the building system.
 - Contact Form: add filter to allow customizing email headers.
+- Custom Content Type: improve the performance of the Testimonial CPT.
 - Dashboard: improve the performance of the query used to display Anti-spam stats.
 - E2E tests: generate application password at environment start
 - E2E tests: make sure videos are saved for all opened tabs
