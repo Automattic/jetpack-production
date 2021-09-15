@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: support user mentions in Slack based on report name and branch name
 - Move publicize plugin to the proper extension folder
 - Refactoring sharing plugin. Replace HOC with hooks.
+- Related Posts: enable lazy loading for images.
 - Search: improve filter label formatting for longer text entries
 - SEO Tools: add "Archive Title" option for custom Archive page titles.
 - Updated the edit icon design in the VideoPress block toolbar.
