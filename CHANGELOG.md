@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated Google Photos logo and icon
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated scss files for sass division deprecation.
 - Updates to-test.md.
 - Update `copy-webpack-plugin` dep.
 
