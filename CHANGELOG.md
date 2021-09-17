@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Instant Search: As IE11 support was removed in Jetpack 10.1, remove an IE11 polyfill.
 - Reverted import statement for BlockControl brower console warning
+- Search: Remove @wordpress/interface dependency for new configurator
 - VideoPress file url field now displays the HLS playlist if one was generated. The fragmented mp4 file is not meant to be played on its own. MP4 file will only be displayed as the video url if it was created prior to the HLS update.
 
 ### Bug fixes
