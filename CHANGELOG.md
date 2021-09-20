@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated the edit icon design in the VideoPress block toolbar.
 
 ### Improved compatibility
+- Instagram Widget: removed from Legacy Widget block
 - Instant Search: As IE11 support was removed in Jetpack 10.1, remove an IE11 polyfill.
 - Reverted import statement for BlockControl brower console warning
 - Search: Remove @wordpress/interface dependency for new configurator
