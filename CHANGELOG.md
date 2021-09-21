@@ -67,6 +67,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated scss files for sass division deprecation.
 - Updates to-test.md.
 - Update `copy-webpack-plugin` dep.
+- Use `[contenthash]` in Webpack chunk names for better long-term caching.
 
 ## 10.1 - 2021-09-07
 ### Major Enhancements
