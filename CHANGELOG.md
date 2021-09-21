@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix typo in Jetpack ad banner.
 - Improve Mailchimp test stability
 - Remove Custom CSS placeholder text to stay in sync with wpcom. The placeholder was only displaying on Simple Sites.
+- Replace `page` library with equivalent plain JavaScript.
 - skip test_get_user_connection_data_with_connected_user for multisite
 - test anotation fix
 - Updated Google Photos logo and icon
