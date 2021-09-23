@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: make sure videos are saved for all opened tabs
 - E2E tests: support user mentions in Slack based on report name and branch name
 - Move publicize plugin to the proper extension folder
+- Publicize: fix/improve refreshing connections list
 - Publicize: re-implement main form. Add React hooks.
 - Publicize: replace native texarea by custom/core-based component
 - Refactoring sharing plugin. Replace HOC with hooks.
