@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added two filters to improve anti-spam functionality in the Contact Form.
+- Added visibility settings to widgets using the block editor, under the advanced section of the sidebar.
 - Add `./extensions/plugins` folder to the building system.
 - Contact Form: add filter to allow customizing email headers.
 - Custom Content Type: improve the performance of the Testimonial CPT.
