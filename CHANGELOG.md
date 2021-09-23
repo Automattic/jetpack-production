@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - Add back skipped tests checking the Screen Options functionality of Nav Unification
 - Adds wp-block-button__link to the button on the subscription widget
 - Allow Node ^14.17.6 to be used in this project. This shouldn't change the behavior of the code itself.
+- Beautiful Math: avoid using extract() t(and avoid PHPCS warnings in the process)
 - Dashboard: do not display Jetpack version on WoA sites.
 - E2e tests: fixed logged Jetpack version
 - E2E tests: fixed stacktrace sometimes missing from Slack notification
