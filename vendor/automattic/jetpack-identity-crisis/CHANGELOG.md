@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Allow Node ^14.17.6 to be used in this project. This shouldn't change the behavior of the code itself.
+- IDC: Rename the Identity_Crisis::sync_idc_optin method to Identity_Crisis:should_handle_idc. Add a new filter and constant that use the new name.
 - Updated package dependencies
 
 ## [0.2.5] - 2021-08-31
