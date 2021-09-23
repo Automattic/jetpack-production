@@ -445,7 +445,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-connection",
-                "reference": "6b52bfee327a1243b65aea041f84010cb3f385a7"
+                "reference": "3b5b95dedec0e5c980ec66c5c3edd148ba171c94"
             },
             "require": {
                 "automattic/jetpack-a8c-mc-stats": "^1.4",
@@ -480,9 +480,6 @@
             },
             "installation-source": "dist",
             "autoload": {
-                "files": [
-                    "legacy/load-ixr.php"
-                ],
                 "classmap": [
                     "legacy",
                     "src/"
