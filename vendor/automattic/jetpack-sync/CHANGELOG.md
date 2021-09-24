@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Sync Checksums - Utilize distinct clause in term counts
+- Sync Queue - better handling of serialization issues and empty actions
 
 ## [1.26.1] - 2021-09-03
 ### Fixed
