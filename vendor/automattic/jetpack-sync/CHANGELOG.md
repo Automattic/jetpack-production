@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Sync Checksums - Utilize distinct clause in term counts
+
 ## [1.26.1] - 2021-09-03
 ### Fixed
 - Add better checks if the WooCommerce tables should be enabled for checksum/fix.
