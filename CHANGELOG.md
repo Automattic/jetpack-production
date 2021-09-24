@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: fixed stacktrace sometimes missing from Slack notification
 - E2E tests: log Jetpack version
 - Fix failing phpunit test on multisite installation.
+- Fix flakiness in some of the tests
 - Fix tests after WordPress backported polyfill stuff to WP 5.7 and 5.8.
 - Fix typo in Jetpack ad banner.
 - Improve Mailchimp test stability
