@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: include Github commit SHA in Jetpack version for local dev sites
 - E2E tests: make sure videos are saved for all opened tabs
 - E2E tests: support user mentions in Slack based on report name and branch name
+- Instant Search customization: title improvements
 - Move publicize plugin to the proper extension folder
 - Publicize: fix/improve refreshing connections list
 - Publicize: re-implement main form. Add React hooks.
