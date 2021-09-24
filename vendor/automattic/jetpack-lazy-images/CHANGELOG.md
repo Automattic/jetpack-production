@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Allow Node ^14.17.6 to be used in this project. This shouldn't change the behavior of the code itself.
 - Updated package dependencies
 - Updated package dependencies
+- Updated package dependencies.
 
 ## [2.0.0] - 2021-08-31
 ### Changed
