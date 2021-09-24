@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Add allow-popups permission to Google Calendar embed so that links internal to the iFrame will open.
 - Contact Form block: Make sure the set height of the Spacer block nested inside the Contact Form block is respected
+- Ensures the custom excerpt is used when sharing to Facebook
 - Fix broken Jetpack Sync unit tests
 - Fixed a bug related to deleting VideoPress videos.
 - Fix VR shortcode not rendered on notification content.
