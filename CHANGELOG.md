@@ -69,6 +69,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix tests after WordPress backported polyfill stuff to WP 5.7 and 5.8.
 - Fix typo in Jetpack ad banner.
 - Improve Mailchimp test stability
+- Move the jetpack stats widget for the WordPress dashboard into its own class.
 - Multisite Settings: remove old commented out code and fix PHPCS linting errors.
 - Refactor extract() usage.
 - Refactor extract() usage.
