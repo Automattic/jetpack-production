@@ -66,6 +66,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix typo in Jetpack ad banner.
 - Improve Mailchimp test stability
 - Multisite Settings: remove old commented out code and fix PHPCS linting errors.
+- Refactor extract() usage.
 - Remove Custom CSS placeholder text to stay in sync with wpcom. The placeholder was only displaying on Simple Sites.
 - Replace `page` library with equivalent plain JavaScript.
 - skip test_get_user_connection_data_with_connected_user for multisite
