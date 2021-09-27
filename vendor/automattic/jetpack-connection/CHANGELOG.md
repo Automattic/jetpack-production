@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Package Version Tracker: send package versions to wpcom on the init hook instead of plugins_loaded
 - Updated package dependencies.
 
 ### Fixed
