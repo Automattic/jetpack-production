@@ -71,6 +71,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix failing phpunit test on multisite installation.
 - Fix flakiness in some of the tests
 - Fix tests after WordPress backported polyfill stuff to WP 5.7 and 5.8.
+- Fix tests to run with WordPress master (5.9-in-progress).
 - Fix typo in Jetpack ad banner.
 - Improve Mailchimp test stability
 - Move analytics library into package
