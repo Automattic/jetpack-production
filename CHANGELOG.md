@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed a bug related to deleting VideoPress videos.
 - Fix VR shortcode not rendered on notification content.
 - Improved security by sanitizing return value of get_current_screen function
+- Instant Search: ensure Safari input clear button is hidden
 - Search: Enable search on private WPCOM simple sites
 - Search: fix dashboard buttons too big on Safari
 - Sharing: fix the icon position in icon-only button style.
