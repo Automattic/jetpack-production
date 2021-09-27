@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added a new "Inbox" menu item in the left side menu, just after Upgrades item. Only visible for wpcom and atomic sites.
 - Added two filters to improve anti-spam functionality in the Contact Form.
 - Added visibility settings to widgets using the block editor, under the advanced section of the sidebar.
 - Add `./extensions/plugins` folder to the building system.
