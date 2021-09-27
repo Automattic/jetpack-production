@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add support for checksumming user-related tabled - wp_users and wp_usermeta
+
 ### Changed
 - update annotations versions
 - Updated package dependencies.

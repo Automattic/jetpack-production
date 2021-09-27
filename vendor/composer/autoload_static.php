@@ -129,6 +129,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_2_alpha
         'Automattic\\Jetpack\\Sync\\REST_Sender' => __DIR__ . '/..' . '/automattic/jetpack-sync/src/class-rest-sender.php',
         'Automattic\\Jetpack\\Sync\\Replicastore' => __DIR__ . '/..' . '/automattic/jetpack-sync/src/class-replicastore.php',
         'Automattic\\Jetpack\\Sync\\Replicastore\\Table_Checksum' => __DIR__ . '/..' . '/automattic/jetpack-sync/src/replicastore/class-table-checksum.php',
+        'Automattic\\Jetpack\\Sync\\Replicastore\\Table_Checksum_Usermeta' => __DIR__ . '/..' . '/automattic/jetpack-sync/src/replicastore/class-table-checksum-usermeta.php',
         'Automattic\\Jetpack\\Sync\\Replicastore_Interface' => __DIR__ . '/..' . '/automattic/jetpack-sync/src/interface-replicastore.php',
         'Automattic\\Jetpack\\Sync\\Sender' => __DIR__ . '/..' . '/automattic/jetpack-sync/src/class-sender.php',
         'Automattic\\Jetpack\\Sync\\Server' => __DIR__ . '/..' . '/automattic/jetpack-sync/src/class-server.php',

@@ -302,6 +302,10 @@ return array(
 		'version' => '1.26.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-sync/src/replicastore/class-table-checksum.php'
 	),
+	'Automattic\\Jetpack\\Sync\\Replicastore\\Table_Checksum_Usermeta' => array(
+		'version' => '1.26.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-sync/src/replicastore/class-table-checksum-usermeta.php'
+	),
 	'Automattic\\Jetpack\\Sync\\Health' => array(
 		'version' => '1.26.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-sync/src/class-health.php'

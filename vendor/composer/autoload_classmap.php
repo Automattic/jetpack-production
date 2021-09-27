@@ -99,6 +99,7 @@ return array(
     'Automattic\\Jetpack\\Sync\\REST_Sender' => $vendorDir . '/automattic/jetpack-sync/src/class-rest-sender.php',
     'Automattic\\Jetpack\\Sync\\Replicastore' => $vendorDir . '/automattic/jetpack-sync/src/class-replicastore.php',
     'Automattic\\Jetpack\\Sync\\Replicastore\\Table_Checksum' => $vendorDir . '/automattic/jetpack-sync/src/replicastore/class-table-checksum.php',
+    'Automattic\\Jetpack\\Sync\\Replicastore\\Table_Checksum_Usermeta' => $vendorDir . '/automattic/jetpack-sync/src/replicastore/class-table-checksum-usermeta.php',
     'Automattic\\Jetpack\\Sync\\Replicastore_Interface' => $vendorDir . '/automattic/jetpack-sync/src/interface-replicastore.php',
     'Automattic\\Jetpack\\Sync\\Sender' => $vendorDir . '/automattic/jetpack-sync/src/class-sender.php',
     'Automattic\\Jetpack\\Sync\\Server' => $vendorDir . '/automattic/jetpack-sync/src/class-server.php',
