@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new "Inbox" menu item in the left side menu, just after Upgrades item. Only visible for wpcom and atomic sites.
 - Added two filters to improve anti-spam functionality in the Contact Form.
 - Added visibility settings to widgets using the block editor, under the advanced section of the sidebar.
+- Adds new VideoPress product and enables VideoPress to be used for free for 1 video upload.
 - Add `./extensions/plugins` folder to the building system.
 - Contact Form: add filter to allow customizing email headers.
 - Custom Content Type: improve the performance of the Testimonial CPT.
