@@ -87,6 +87,7 @@ This is an alpha version! The changes listed here are not final.
 - Replace `page` library with equivalent plain JavaScript.
 - skip test_get_user_connection_data_with_connected_user for multisite
 - test anotation fix
+- Tiled Galleries: avoid use of extract()
 - Updated Google Photos logo and icon
 - Updated package dependencies.
 - Updated package dependencies.
