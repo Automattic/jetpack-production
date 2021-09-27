@@ -1018,14 +1018,14 @@ function jetpack_get_module_info( $key ) {
 	    'introduced' => '2.5',
 	    'changed' => '',
 	    'deactivate' => '',
-	    'free' => 'false',
+	    'free' => '',
 	    'requires_connection' => 'Yes',
 	    'requires_user_connection' => '',
 	    'auto_activate' => '',
 	    'module_tags' => 'Photos and Videos',
 	    'feature' => 'Writing',
 	    'additional_search_queries' => 'video, videos, videopress, video gallery, video player, videoplayer, mobile video, vimeo, youtube, html5 video, stream',
-	    'plan_classes' => 'business, premium, security, complete',
+	    'plan_classes' => '',
 	  ),
 	  'widget-visibility' => 
 	  array (
