@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Enable search on private WPCOM simple sites
 - Search: fix dashboard buttons too big on Safari
 - Sharing: fix the icon position in icon-only button style.
+- Shortcodes: removed Hulu from available embeds
 - Show the Connect button on the Media card in site-only mode.
 - Slideshow block: fix fade transition background
 - Theme Tools: remove unnecessary extra Social Menu added in the Twenty Twenty theme.
