@@ -79,6 +79,7 @@ This is an alpha version! The changes listed here are not final.
 - Move analytics library into package
 - Move the jetpack stats widget for the WordPress dashboard into its own class.
 - Multisite Settings: remove old commented out code and fix PHPCS linting errors.
+- Podcast Player Block: avoid use of extract()
 - Refactor extract() usage.
 - Refactor extract() usage.
 - Refactor extract() usage.
