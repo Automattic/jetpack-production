@@ -2,102 +2,77 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.2-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.2-beta - 2021-09-28
 ### Enhancements
-- Added a new "Inbox" menu item in the left side menu, just after Upgrades item. Only visible for wpcom and atomic sites.
-- Added two filters to improve anti-spam functionality in the Contact Form.
-- Added visibility settings to widgets using the block editor, under the advanced section of the sidebar.
-- Adds new VideoPress product and enables VideoPress to be used for free for 1 video upload.
-- Add `./extensions/plugins` folder to the building system.
+- Contact Form: add two filters to improve anti-spam functionality.
 - Contact Form: add filter to allow customizing email headers.
-- Custom Content Type: improve the performance of the Testimonial CPT.
-- Dashboard: improve the performance of the query used to display Anti-spam stats.
-- E2E tests: generate application password at environment start
-- E2E tests: include Github commit SHA in Jetpack version for local dev sites
-- E2E tests: make sure videos are saved for all opened tabs
-- E2E tests: support user mentions in Slack based on report name and branch name
-- Instant Search customization: title improvements
-- Move publicize plugin to the proper extension folder
-- Publicize: fix/improve refreshing connections list
-- Publicize: re-implement main form. Add React hooks.
-- Publicize: replace native texarea by custom/core-based component
-- Refactoring sharing plugin. Replace HOC with hooks.
 - Related Posts: enable lazy loading for images.
-- Search: improve filter label formatting for longer text entries
-- SEO Tools: add "Archive Title" option for custom Archive page titles.
-- SmartFrame Embeds: add support SmartFrame embed using URLs, embed code, and shortcodes
-- Updated the edit icon design in the VideoPress block toolbar.
+- Search: improve filter label formatting for longer text entries.
+- Search: title customization improvements.
+- SEO Tools: add "Archive Title" option for custom archive page titles.
+- SmartFrame Embeds: add support for SmartFrame embed using URLs, embed code, and shortcodes.
+- VideoPress: add new VideoPress product and enables VideoPress to be used for free for 1 video upload.
+- Widgets: add visibility settings to widgets using the block editor, under the advanced section of the sidebar.
 
 ### Improved compatibility
-- External Media: Updated verbiage around Google Photos to improve compatibility with their UX guidelines.
-- Instagram Widget: removed from Legacy Widget block
-- Instant Search: As IE11 support was removed in Jetpack 10.1, remove an IE11 polyfill.
-- Reverted import statement for BlockControl brower console warning
-- Search: Remove @wordpress/interface dependency for new configurator
-- VideoPress file url field now displays the HLS playlist if one was generated. The fragmented mp4 file is not meant to be played on its own. MP4 file will only be displayed as the video url if it was created prior to the HLS update.
+- External Media: update verbiage around Google Photos to improve compatibility with their UX guidelines.
+- Instagram Widget: remove from Legacy Widget block.
+- Search: as IE11 support was removed in Jetpack 10.1, remove an IE11 polyfill.
+- Publicize: replace native text-area with custom/core-based component.
+- VideoPress: file url field now displays the HLS playlist if one was generated. The fragmented mp4 file is not meant to be played on its own. MP4 file will only be displayed as the video url if it was created prior to the HLS update.
 
 ### Bug fixes
-- Add allow-popups permission to Google Calendar embed so that links internal to the iFrame will open.
-- Contact Form block: Make sure the set height of the Spacer block nested inside the Contact Form block is respected
-- Ensures the custom excerpt is used when sharing to Facebook
-- Fix broken Jetpack Sync unit tests
-- Fixed a bug related to deleting VideoPress videos.
-- Fix VR shortcode not rendered on notification content.
-- Improved security by sanitizing return value of get_current_screen function
-- Instant Search: ensure Safari input clear button is hidden
-- Search: Enable search on private WPCOM simple sites
-- Search: fix dashboard buttons too big on Safari
+- Contact Form: make sure the set height of the Spacer block nested inside a Contact Form block is respected.
+- Custom Content Type: improve the performance of the Testimonial CPT.
+- Dashboard: improve the performance of the query used to display Anti-spam stats.
+- Embeds: add allow-popups permission to Google Calendar embed so that links internal to the iFrame will open.
+- Publicize: improve refreshing connections list.
+- Publicize: ensure the custom excerpt is used when sharing to Facebook.
+- Search: ensure Safari input clear button is hidden.
+- Search: fix dashboard buttons too big on Safari.
 - Sharing: fix the icon position in icon-only button style.
-- Shortcodes: removed Hulu from available embeds
-- Show the Connect button on the Media card in site-only mode.
-- Slideshow block: fix fade transition background
+- Shortcodes: remove Hulu from available embeds.
+- Slideshow: fix fade transition background.
 - Theme Tools: remove unnecessary extra Social Menu added in the Twenty Twenty theme.
-- VideoPress can now be managed on the Modules page for any plan type.
-- Widgets: Fix a conflict between various Jetpack blocks and some WordPress core legacy widgets.
-- WordPress.com Notifications: fix Dailymotion shortcode notification render
-- WordPress.com Notifications: fix SoundCloud shortcode notification render
-- WordPress.com Notifications: fix YouTube shortcode notification render
-- WordPress.com Notifications and Reader: fix Spotify shortcode render
+- VideoPress: fix a bug related to deleting VideoPress videos.
+- Widgets: fix a conflict between various Jetpack blocks and some WordPress core legacy widgets.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add back skipped tests checking the Screen Options functionality of Nav Unification
-- Adds wp-block-button__link to the button on the subscription widget
-- Allow Node ^14.17.6 to be used in this project. This shouldn't change the behavior of the code itself.
-- Beautiful Math: avoid using extract() t(and avoid PHPCS warnings in the process)
+- Add back skipped tests checking the Screen Options functionality of Nav Unification.
+- Add wp-block-button__link to the button on the subscription widget.
+- Admin menu: improve security by sanitizing return value of get_current_screen function.
 - Dashboard: do not display Jetpack version on WoA sites.
-- E2e tests: fixed logged Jetpack version
-- E2E tests: fixed stacktrace sometimes missing from Slack notification
-- E2E tests: log Jetpack version
+- Dashboard: show the Connect button on the Media card in site-only mode.
+- E2e tests: fixed logged Jetpack version.
+- E2E tests: fixed stacktrace sometimes missing from Slack notification.
+- E2E tests: generate application password at environment start.
+- E2E tests: include Github commit SHA in Jetpack version for local dev sites.
+- E2E tests: make sure videos are saved for all opened tabs.
+- E2E tests: support user mentions in Slack based on report name and branch name.
 - Fix failing phpunit test on multisite installation.
-- Fix flakiness in some of the tests
 - Fix tests after WordPress backported polyfill stuff to WP 5.7 and 5.8.
-- Fix tests to run with WordPress master (5.9-in-progress).
 - Fix typo in Jetpack ad banner.
-- Improve Mailchimp test stability
-- Move analytics library into package
-- Move the jetpack stats widget for the WordPress dashboard into its own class.
-- Multisite Settings: remove old commented out code and fix PHPCS linting errors.
-- Podcast Player Block: avoid use of extract()
-- Refactor extract() usage.
-- Refactor extract() usage.
-- Refactor extract() usage.
+- Improve Mailchimp test stability.
+- Move analytics library into a package.
+- Move the Jetpack stats widget for the WordPress dashboard into its own class.
+- Multisite settings: remove old commented out code and fix PHPCS linting errors.
+- Publicize: plugin to the proper extension folder.
+- Publicize: re-implement main form, add React hooks.
+- Refactor extract() usage used in the monorepo.
 - Remove Custom CSS placeholder text to stay in sync with wpcom. The placeholder was only displaying on Simple Sites.
 - Replace `page` library with equivalent plain JavaScript.
-- skip test_get_user_connection_data_with_connected_user for multisite
-- test anotation fix
-- Tiled Galleries: avoid use of extract()
-- Updated Google Photos logo and icon
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
+- Search: remove @wordpress/interface dependency for new configurator.
+- Sharing: refactor sharing plugin, replace HOC with hooks.
+- Skip test_get_user_connection_data_with_connected_user for multisite.
+- Updated Google Photos logo and icon.
 - Updated package dependencies.
 - Updated scss files for sass division deprecation.
-- Updates to-test.md.
 - Update `copy-webpack-plugin` dep.
 - Use `[contenthash]` in Webpack chunk names for better long-term caching.
+- VideoPress: can now be managed on the Modules page for any plan type.
+- VideoPress: update the edit icon design in the VideoPress block toolbar.
+- WPcom: added a new "Inbox" menu item in the left side menu, just after Upgrades item. Only visible for wpcom and atomic sites.
+- WPcom: fix various shortcode rendering in notifications.
 
 ## 10.1 - 2021-09-07
 ### Major Enhancements

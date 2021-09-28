@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.11-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.3.11] - 2021-09-28
 ### Changed
 - Updated package dependencies.
 
@@ -83,7 +80,7 @@ This is an alpha version! The changes listed here are not final.
 - Use new heartbeat package
 - Creates the Jetpack Heartbeat package
 
-[1.3.11-alpha]: https://github.com/Automattic/jetpack-heartbeat/compare/v1.3.10...v1.3.11-alpha
+[1.3.11]: https://github.com/Automattic/jetpack-heartbeat/compare/v1.3.10...v1.3.11
 [1.3.10]: https://github.com/Automattic/jetpack-heartbeat/compare/v1.3.9...v1.3.10
 [1.3.9]: https://github.com/Automattic/jetpack-heartbeat/compare/v1.3.8...v1.3.9
 [1.3.8]: https://github.com/Automattic/jetpack-heartbeat/compare/v1.3.7...v1.3.8

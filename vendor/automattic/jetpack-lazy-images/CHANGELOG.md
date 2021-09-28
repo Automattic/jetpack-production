@@ -5,14 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.0.1] - 2021-09-28
 ### Changed
 - Allow Node ^14.17.6 to be used in this project. This shouldn't change the behavior of the code itself.
-- Updated package dependencies
-- Updated package dependencies
 - Updated package dependencies.
 
 ## [2.0.0] - 2021-08-31
@@ -117,7 +112,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Lazy Images: Move into a package
 
-[2.0.1-alpha]: https://github.com/Automattic/jetpack-lazy-images/compare/v2.0.0...v2.0.1-alpha
+[2.0.1]: https://github.com/Automattic/jetpack-lazy-images/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.5.1...v2.0.0
 [1.5.1]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/Automattic/jetpack-lazy-images/compare/v1.4.4...v1.5.0
