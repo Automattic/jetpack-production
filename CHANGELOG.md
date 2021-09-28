@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init Jetpack 10.3 release cycle.
+- Update Jetpack 10.2 to-test.md
 
 ## 10.2-beta - 2021-09-28
 ### Enhancements
