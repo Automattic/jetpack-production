@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Resolve indirect modification notice.
 - Sync Checksums - Utilize distinct clause in term counts
 - Sync Queue - better handling of serialization issues and empty actions
 
