@@ -3032,31 +3032,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _connect_button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../connect-button */ "../../js-packages/connection/components/connect-button/index.jsx");
-/* harmony import */ var _with_connection_status__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../with-connection-status */ "../../js-packages/connection/components/with-connection-status/index.jsx");
-/* harmony import */ var _image_slider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./image-slider */ "../../js-packages/connection/components/connect-screen/image-slider.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/connect-screen/style.scss");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _connect_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../connect-button */ "../../js-packages/connection/components/connect-button/index.jsx");
+/* harmony import */ var _image_slider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./image-slider */ "../../js-packages/connection/components/connect-screen/image-slider.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/connect-screen/style.scss");
 /**
  * External dependencies
  */
 
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
+var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 /**
@@ -3066,8 +3061,6 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
 
 
 
-
-var ConnectButtonWithConnectionStatus = (0,_with_connection_status__WEBPACK_IMPORTED_MODULE_6__.default)(_connect_button__WEBPACK_IMPORTED_MODULE_7__.default);
 /**
  * The Connection Screen component.
  *
@@ -3078,7 +3071,6 @@ var ConnectButtonWithConnectionStatus = (0,_with_connection_status__WEBPACK_IMPO
  * @param {string} props.redirectUri -- The redirect admin URI.
  * @param {string} props.from -- Where the connection request is coming from.
  * @param {string} props.title -- Page title.
- * @param {Function} props.statusCallback -- Callback to pull connection status from the component.
  * @param {Array} props.images -- Images to display on the right side.
  * @param {string} props.assetBaseUrl -- The assets base URL.
  * @param {boolean} props.autoTrigger -- Whether to initiate the connection process automatically upon rendering the component.
@@ -3093,74 +3085,61 @@ var ConnectScreen = function ConnectScreen(props) {
       registrationNonce = props.registrationNonce,
       from = props.from,
       redirectUri = props.redirectUri,
-      statusCallback = props.statusCallback,
       images = props.images,
       children = props.children,
       assetBaseUrl = props.assetBaseUrl,
-      autoTrigger = props.autoTrigger;
+      autoTrigger = props.autoTrigger,
+      connectionStatus = props.connectionStatus;
   var showImageSlider = images.length;
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({}),
-      _useState2 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      connectionStatus = _useState2[0],
-      setConnectionStatus = _useState2[1];
-
-  var statusHandler = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function (status) {
-    setConnectionStatus(status);
-
-    if (statusCallback && {}.toString.call(statusCallback) === '[object Function]') {
-      return statusCallback(status);
-    }
-  }, [statusCallback, setConnectionStatus]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: 'jp-connect-screen' + (showImageSlider ? ' jp-connect-screen--two-columns' : '') + (connectionStatus.hasOwnProperty('isRegistered') ? '' : ' jp-connect-screen--loading')
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connect-screen--left"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", null, title), children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(ConnectButtonWithConnectionStatus, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, title), children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_button__WEBPACK_IMPORTED_MODULE_6__.default, {
     apiRoot: apiRoot,
     apiNonce: apiNonce,
     registrationNonce: registrationNonce,
     from: from,
     redirectUri: redirectUri,
-    statusCallback: statusHandler,
+    connectionStatus: connectionStatus,
     connectLabel: buttonLabel,
     autoTrigger: autoTrigger
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connect-screen--tos"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('By clicking the button above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>share details</shareDetailsLink> with WordPress.com.', 'jetpack'), {
-    tosLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__.default)('wpcom-tos'),
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)(__('By clicking the button above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>share details</shareDetailsLink> with WordPress.com.', 'jetpack'), {
+    tosLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default)('wpcom-tos'),
       rel: "noopener noreferrer",
       target: "_blank"
     }),
-    shareDetailsLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__.default)('jetpack-support-what-data-does-jetpack-sync'),
+    shareDetailsLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default)('jetpack-support-what-data-does-jetpack-sync'),
       rel: "noopener noreferrer",
       target: "_blank"
     })
-  }))), showImageSlider ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }))), showImageSlider ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connect-screen--right"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_image_slider__WEBPACK_IMPORTED_MODULE_10__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_image_slider__WEBPACK_IMPORTED_MODULE_8__.default, {
     images: images,
     assetBaseUrl: assetBaseUrl
-  })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connect-screen--clearfix"
   }));
 };
 
 ConnectScreen.propTypes = {
-  title: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  body: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  buttonLabel: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  from: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  statusCallback: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func),
-  images: prop_types__WEBPACK_IMPORTED_MODULE_2___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)),
-  assetBaseUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool)
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  body: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  buttonLabel: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  from: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  images: prop_types__WEBPACK_IMPORTED_MODULE_1___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)),
+  assetBaseUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
+  connectionStatus: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object.isRequired)
 };
 ConnectScreen.defaultProps = {
   title: __('Over 5 million WordPress sites are faster and more secure', 'jetpack'),
@@ -4129,8 +4108,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/connection-status-card/index.jsx");
+/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/with-connection-status/index.jsx");
 /* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/connect-screen/index.jsx");
+/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/connection-status-card/index.jsx");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store */ "./_inc/store.js");
@@ -4153,6 +4133,7 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 
+var ConnectScreenWithConnectionStatus = (0,_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__.default)(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_8__.default);
 /**
  * The Connection IU Admin App.
  *
@@ -4189,14 +4170,14 @@ function Admin() {
       isUserConnected: false
     });
   }, [setConnectionStatus]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_4__.default, null), connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__.default, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_4__.default, null), connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__.default, {
     isRegistered: connectionStatus.isRegistered,
     isUserConnected: connectionStatus.isUserConnected,
     apiRoot: APIRoot,
     apiNonce: APINonce,
     onDisconnected: onDisconnectedCallback,
     redirectUri: "tools.php?page=wpcom-connection-manager"
-  }), !connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_8__.default, {
+  }), !connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ConnectScreenWithConnectionStatus, {
     apiRoot: APIRoot,
     apiNonce: APINonce,
     registrationNonce: registrationNonce,
