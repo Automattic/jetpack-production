@@ -268,7 +268,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../automattic/jetpack-tracking',
             'aliases' => array(),
-            'reference' => 'dedb680944e1f31d2d1bbaa835b70d2130fb00af',
+            'reference' => '3e770d92c64e3b706f97d25bf7ee040a60009aa5',
             'dev_requirement' => false,
         ),
         'nojimage/twitter-text-php' => array(
