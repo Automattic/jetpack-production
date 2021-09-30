@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Social Icons Widget: deprecate widget and transform to Social Links block
 
+### Bug fixes
+- Correct AMP validation errors.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Disable webpack's concatenateModules optimization, it can break WordPress's translation extraction.
 - E2E tests: extract shared e2e tools
