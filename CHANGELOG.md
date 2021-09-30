@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Disable webpack's concatenateModules optimization, it can break WordPress's translation extraction.
+- Remove ajax callback for Tracks within the Jetpack plugin since it is set up in jetpack-tracking library.
 
 ## 10.2-beta - 2021-09-28
 ### Enhancements

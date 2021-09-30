@@ -1402,10 +1402,9 @@
                 "reference": "ab152bf58aafa2dd0bdf925055dae44ef6d16aee"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-tracking/zipball/ab152bf58aafa2dd0bdf925055dae44ef6d16aee",
-                "reference": "ab152bf58aafa2dd0bdf925055dae44ef6d16aee",
-                "shasum": ""
+                "type": "path",
+                "url": "../../packages/tracking",
+                "reference": "7d6238640b64fb8fe2860a83c1f2aa50e528b04c"
             },
             "require": {
                 "automattic/jetpack-assets": "^1.11",
@@ -1415,6 +1414,7 @@
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^2.0",
+                "brain/monkey": "2.6.0",
                 "yoast/phpunit-polyfills": "1.0.1"
             },
             "time": "2021-09-28T18:19:59+00:00",
