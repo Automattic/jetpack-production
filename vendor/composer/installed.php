@@ -263,12 +263,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-tracking' => array(
-            'pretty_version' => 'v1.13.10',
-            'version' => '1.13.10.0',
+            'pretty_version' => 'v1.13.11',
+            'version' => '1.13.11.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../automattic/jetpack-tracking',
             'aliases' => array(),
-            'reference' => 'ab152bf58aafa2dd0bdf925055dae44ef6d16aee',
+            'reference' => 'ed8ce7054fd04d1c75e2bdd87683e17d4b852295',
             'dev_requirement' => false,
         ),
         'nojimage/twitter-text-php' => array(

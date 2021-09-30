@@ -74,6 +74,18 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
+	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
+		'version' => '1.4.1.0',
+		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
+		'version' => '1.4.1.0',
+		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
+	),
+	'Automattic\\Jetpack\\Config' => array(
+		'version' => '1.5.1.0',
+		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
+	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '1.4.6.0',
 		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
@@ -97,18 +109,6 @@ return array(
 	'Automattic\\Jetpack\\JITMS\\JITM' => array(
 		'version' => '2.0.1.0',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-jitm.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
-		'version' => '1.4.1.0',
-		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
-		'version' => '1.4.1.0',
-		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
-	),
-	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.5.1.0',
-		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
 	),
 	'Jetpack_Sync_Actions' => array(
 		'version' => '1.6.6.0',
@@ -475,15 +475,15 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-roles/src/class-roles.php'
 	),
 	'Jetpack_Tracks_Event' => array(
-		'version' => '1.13.10.0',
+		'version' => '1.13.11.0',
 		'path'    => $vendorDir . '/automattic/jetpack-tracking/legacy/class-jetpack-tracks-event.php'
 	),
 	'Jetpack_Tracks_Client' => array(
-		'version' => '1.13.10.0',
+		'version' => '1.13.11.0',
 		'path'    => $vendorDir . '/automattic/jetpack-tracking/legacy/class-jetpack-tracks-client.php'
 	),
 	'Automattic\\Jetpack\\Tracking' => array(
-		'version' => '1.13.10.0',
+		'version' => '1.13.11.0',
 		'path'    => $vendorDir . '/automattic/jetpack-tracking/src/class-tracking.php'
 	),
 	'Automattic\\Jetpack\\Assets' => array(
