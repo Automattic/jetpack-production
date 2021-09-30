@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Social Icons Widget: deprecate widget and transform to Social Links block
 
 ### Bug fixes
+- Avoid console errors if Related Posts main div is not in the DOM
 - Correct AMP validation errors.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
