@@ -92,12 +92,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection' => array(
-            'pretty_version' => 'v1.30.5',
-            'version' => '1.30.5.0',
+            'pretty_version' => 'v1.30.6',
+            'version' => '1.30.6.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../automattic/jetpack-connection',
             'aliases' => array(),
-            'reference' => '2c0f6a8c37601afe5497b2ba8a62e119684e3e53',
+            'reference' => 'a76d26bb08da9db1be1301acdd470233053f2340',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection-ui' => array(
