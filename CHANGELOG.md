@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Open Jetpack plugin sidebar by default when URL includes query param.
+
 ### Improved compatibility
 - Social Icons Widget: deprecate widget and transform to Social Links block
 
