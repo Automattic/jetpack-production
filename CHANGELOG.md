@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Avoid console errors if Related Posts main div is not in the DOM
+- Search: ensure translations are available for lazy-loaded payloads
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Disable webpack's concatenateModules optimization, it can break WordPress's translation extraction.
