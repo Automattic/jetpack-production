@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Avoid console errors if Related Posts main div is not in the DOM
 - Correct AMP validation errors.
+- Eventbrite Block: consider event URLs without event IDs invalid.
 - General: avoid PHP notices that may happen when installing the plugin.
 - Publicize: Refresh connections only when the post publishes.
 - Search: ensure translations are available for lazy-loaded payloads
