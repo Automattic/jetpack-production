@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: extract shared e2e tools
 - Exclude `vendor/` from code coverage.
 - Init Jetpack 10.3 release cycle.
+- P2: Conditionally hide Pattern admin menu items for hubs/spaces
 - Remove ajax callback for Tracks within the Jetpack plugin since it is set up in jetpack-tracking library.
 - Update Jetpack 10.2 to-test.md
 
