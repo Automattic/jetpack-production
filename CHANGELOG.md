@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Secure Sign On: add new filter allowing one to customize the explanation displayed next to the SSO button.
 
 ### Improved compatibility
+- Hide Backup from submenu if Backup plugin is present
 - Social Icons Widget: deprecate widget and transform to Social Links block
 
 ### Bug fixes
