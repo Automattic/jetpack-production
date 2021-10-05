@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Open Jetpack plugin sidebar by default when URL includes query param.
+- Search: Always show save button for mobile Customberg
 - Secure Sign On: add new filter allowing one to customize the explanation displayed next to the SSO button.
 
 ### Improved compatibility
