@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - General: avoid PHP notices that may happen when installing the plugin.
 - Publicize: Refresh connections only when the post publishes.
 - Search: ensure translations are available for lazy-loaded payloads
+- Search: Fix infinite scroll in Customberg
 - Search: fix user could not uncheck filter when result is empty
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
