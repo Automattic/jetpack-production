@@ -23,6 +23,8 @@ This is an alpha version! The changes listed here are not final.
 - Search: ensure translations are available for lazy-loaded payloads
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add click tracking for Widget Visibility
+- Added an admin notice to media-new.php notifying the user that videos uploaded here will not be sent to VideoPress.
 - Disable webpack's concatenateModules optimization, it can break WordPress's translation extraction.
 - E2E tests: extract shared e2e tools
 - E2E tests: updated dependencies

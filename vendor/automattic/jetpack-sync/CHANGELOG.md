@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Remove initialization of the identity-crisis package. That will be handled by the Config package.
 
+### Fixed
+- Reduce transient expiration for how often we check the state of the queue.
+
 ## [1.26.2] - 2021-09-28
 ### Added
 - Add support for checksumming user-related tabled: wp_users and wp_usermeta
