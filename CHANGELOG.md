@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Added an admin notice to media-new.php notifying the user that videos uploaded here will not be sent to VideoPress.
 - E2E tests: extract shared e2e tools
 - E2E tests: updated dependencies
+- Embed block: Add native version of index file to control the available variations.
 - Exclude `vendor/` from code coverage.
 - Init Jetpack 10.3 release cycle.
 - Init the identity-crisis package using the Config package
