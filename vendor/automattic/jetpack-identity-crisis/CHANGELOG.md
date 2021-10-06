@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add the new check_response_for_idc method to the Identity_Crisis class
 
+### Changed
+- Updated package dependencies
+
 ## [0.2.6] - 2021-09-28
 ### Changed
 - Allow Node ^14.17.6 to be used in this project. This shouldn't change the behavior of the code itself.

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a new action to the Client::remote_request method, jetpack_received_remote_request_response
 
+### Changed
+- Updated package dependencies
+
 ## [1.30.7] - 2021-10-04
 ### Added
 - Sandbox Server: add the sandbox-server class to the connection package.
