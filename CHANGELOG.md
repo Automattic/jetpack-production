@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add Publicize Share POST endpoint
 - Open Jetpack plugin sidebar by default when URL includes query param.
+- Publicize: use post metadata to store publicize data
 - Search: Always show save button for mobile Customberg
 - Secure Sign On: add new filter allowing one to customize the explanation displayed next to the SSO button.
 
