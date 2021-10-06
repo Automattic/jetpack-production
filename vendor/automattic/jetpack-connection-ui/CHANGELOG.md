@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Temporarily force the IDC screen to appear for debugging purposes.
+
 ### Changed
 - Use the "withConnectionStatus" HOC for ConnectScreen component.
 

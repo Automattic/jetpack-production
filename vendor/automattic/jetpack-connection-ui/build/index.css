@@ -198,6 +198,161 @@
   border-right-color: white;
   opacity: 0.4;
 }
+/**
+ * Breakpoints & Media Queries
+ */
+/**
+*  Converts a hex value into the rgb equivalent.
+*
+* @param {string} hex - the hexadecimal value to convert
+* @return {string} comma separated rgb values
+*/
+/**
+ * Breakpoint mixins
+ */
+/**
+ * Long content fade mixin
+ *
+ * Creates a fading overlay to signify that the content is longer
+ * than the space allows.
+ */
+/**
+ * Focus styles.
+ */
+/**
+ * Applies editor left position to the selector passed as argument
+ */
+/**
+ * Styles that are reused verbatim in a few places
+ */
+/**
+ * Allows users to opt-out of animations via OS-level preferences.
+ */
+/**
+ * Reset default styles for JavaScript UI based pages.
+ * This is a WP-admin agnostic reset
+ */
+/**
+ * Reset the WP Admin page styles for Gutenberg-like pages.
+ */
+.jp-idc-screen-base {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  border-left: 4px solid #E68B28;
+  max-width: 1128px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .jp-idc-screen-base {
+    padding: 48px;
+  }
+}
+.jp-idc-screen-base .jp-idc-header {
+  display: flex;
+  align-items: center;
+}
+.jp-idc-screen-base .jp-idc-header .jp-idc-logo-label {
+  font-size: 14px;
+  line-height: 22px;
+  margin: -7px 0 0 8px;
+}
+.jp-idc-screen-base h2 {
+  margin: 32px 0 16px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+}
+.jp-idc-screen-base h3 {
+  margin: 24px 0 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
+.jp-idc-screen-base p {
+  margin: 0;
+  max-width: 710px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2C3338;
+}
+.jp-idc-screen-base .jp-idc-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 1400px) {
+  .jp-idc-screen-base .jp-idc-cards {
+    flex-direction: row;
+  }
+}
+.jp-idc-screen-base .jp-idc-cards .jp-idc-cards-separator {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #23282D;
+  margin: 0 24px;
+  align-self: center;
+}
+.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 480px;
+  border: 1px solid #C3C4C7;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 24px 0;
+}
+@media (min-width: 600px) {
+  .jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base {
+    padding: 24px;
+  }
+}
+.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base h4 {
+  margin: 0 0 8px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+}
+.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base p {
+  margin: 0 0 24px;
+}
+.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base .jp-idc-card-action-sitename {
+  width: 100%;
+  background: #F9F9F6;
+  border-radius: 33px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2C3338;
+  text-align: center;
+  padding: 16px;
+  overflow-wrap: anywhere;
+}
+.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base .jp-idc-card-action-separator {
+  margin: 12px auto;
+  display: block;
+}
+.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base .jp-idc-card-action-button {
+  margin-top: 24px;
+  padding: 8px 24px;
+  width: 100%;
+  height: auto;
+  min-height: 40px;
+  background: #000000;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  justify-content: center;
+}
 @charset "UTF-8";
 /********* RNA styles *********/
 :root {
