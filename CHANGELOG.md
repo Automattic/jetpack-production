@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Exclude `vendor/` from code coverage.
 - Init Jetpack 10.3 release cycle.
 - Init the identity-crisis package using the Config package
+- Nav Unification feature flag check. It only affects WPCOM Atomic sites.
 - P2: Conditionally hide Pattern admin menu items for hubs/spaces
 - Updated package dependencies
 - Update Jetpack 10.2 to-test.md
