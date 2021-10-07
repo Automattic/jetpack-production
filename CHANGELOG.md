@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Social Icons Widget: deprecate widget and transform to Social Links block
 
 ### Bug fixes
+- Calendly block: Fix the preview in the block inserter
 - Correct AMP validation errors.
 - Eventbrite Block: consider event URLs without event IDs invalid.
 - General: avoid PHP notices that may happen when installing the plugin.
