@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Reduce transient expiration for how often we check the state of the queue.
+- Sync Checksums - exclude locale from checksum if same as site setting
 
 ## [1.26.2] - 2021-09-28
 ### Added
