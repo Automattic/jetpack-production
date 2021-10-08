@@ -353,6 +353,18 @@
   color: #FFFFFF;
   justify-content: center;
 }
+.jp-idc-screen-base .jp-idc-safe-mode {
+  text-align: center;
+}
+.jp-idc-screen-base .jp-idc-safe-mode, .jp-idc-screen-base .jp-idc-safe-mode button {
+  font-size: 16px;
+  line-height: 24px;
+  color: #2C3338;
+}
+.jp-idc-screen-base .jp-idc-safe-mode button {
+  padding: 0;
+  text-decoration: underline;
+}
 @charset "UTF-8";
 /********* RNA styles *********/
 :root {

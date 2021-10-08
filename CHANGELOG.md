@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Add click tracking for Widget Visibility
 - Added an admin notice to media-new.php notifying the user that videos uploaded here will not be sent to VideoPress.
 - Allow empty string in message parameter.
+- Bump the RNA API version.
 - E2E tests: extract shared e2e tools
 - E2E tests: updated dependencies
 - Embed block: Add native version of index file to control the available variations.
