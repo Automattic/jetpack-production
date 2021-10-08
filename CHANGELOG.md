@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Init the identity-crisis package using the Config package
 - Nav Unification feature flag check. It only affects WPCOM Atomic sites.
 - P2: Conditionally hide Pattern admin menu items for hubs/spaces
+- Remove "beta testing" item from the menu for all users
 - Updated package dependencies
 - Update Jetpack 10.2 to-test.md
 
