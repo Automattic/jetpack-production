@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: use post metadata to store publicize data
 - Search: Always show save button for mobile Customberg
 - Secure Sign On: add new filter allowing one to customize the explanation displayed next to the SSO button.
+- VideoPress upload errors are now displayed properly from the Media Library and the Gutenberg editor (video block)
 
 ### Improved compatibility
 - Hide Backup from submenu if Backup plugin is present
