@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: Refresh connections only when the post publishes.
 - Search: Fix infinite scroll in Customberg
 - Search: fix user could not uncheck filter when result is empty
+- Search: reduce browser history noise by debounce setQuery requests
 - Update Sync Unit Tests to reset settings modified during tests.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
