@@ -74,10 +74,6 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
-	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
-		'version' => '2.0.2.0',
-		'path'    => $vendorDir . '/automattic/jetpack-lazy-images/src/lazy-images.php'
-	),
 	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
 		'version' => '1.5.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
@@ -90,9 +86,9 @@ return array(
 		'version' => '1.4.7.0',
 		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
 	),
-	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.5.2.0',
-		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
+	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
+		'version' => '2.0.2.0',
+		'path'    => $vendorDir . '/automattic/jetpack-lazy-images/src/lazy-images.php'
 	),
 	'Automattic\\Jetpack\\JITMS\\Rest_Api_Endpoints' => array(
 		'version' => '2.0.2.0',
@@ -109,6 +105,10 @@ return array(
 	'Automattic\\Jetpack\\JITMS\\Pre_Connection_JITM' => array(
 		'version' => '2.0.2.0',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-pre-connection-jitm.php'
+	),
+	'Automattic\\Jetpack\\Config' => array(
+		'version' => '1.5.2.0',
+		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
 	),
 	'Jetpack_Sync_Settings' => array(
 		'version' => '1.6.6.0',
