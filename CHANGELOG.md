@@ -2,7 +2,15 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.3-2110.1 - 2021-10-12
+## 10.3-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Flag for weekly Atomic releases ("dev-releases" in composer.json).
+- Updated package dependencies.
+
+## 10.3-a.1 - 2021-10-12
 ### Enhancements
 - Instant Search: always show the save button on the mobile view of the Search Settings dashboard.
 - Secure Sign On: add new filter allowing one to customize the explanation displayed next to the SSO button.
