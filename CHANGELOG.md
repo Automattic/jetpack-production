@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Remove "download" mentions from the VideoPress share option
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: move search helpers from e2e-commons to plugin e2e checks project
 - Flag for weekly Atomic releases ("dev-releases" in composer.json).
