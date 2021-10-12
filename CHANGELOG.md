@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Sync Unit Tests to reset settings modified during tests.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add a wpcom menu item linking to wordpess.com/woocommerce-installation/
 - Add click tracking for Widget Visibility
 - Added an admin notice to media-new.php notifying the user that videos uploaded here will not be sent to VideoPress.
 - Allow empty string in message parameter.
