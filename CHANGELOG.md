@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Add a "cover" option to the VideoPress iframe and shortcode to handle video resizing to its container
+- Milestone widget: Fix styles of the widget fields
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: move search helpers from e2e-commons to plugin e2e checks project
