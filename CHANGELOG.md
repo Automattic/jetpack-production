@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: tidy using panel components
 - Remove "download" mentions from the VideoPress share option
 
+### Bug fixes
+- Add a "cover" option to the VideoPress iframe and shortcode to handle video resizing to its container
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: move search helpers from e2e-commons to plugin e2e checks project
 - E2E tests: named exports for pages
