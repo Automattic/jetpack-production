@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Publicize: tidy using panel components
 - Remove "download" mentions from the VideoPress share option
+- RePublicize: add feature flag to handle feature visibility
 
 ### Bug fixes
 - Add a "cover" option to the VideoPress iframe and shortcode to handle video resizing to its container
