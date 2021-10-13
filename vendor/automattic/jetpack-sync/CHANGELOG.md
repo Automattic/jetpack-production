@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Sync Checksums: Convert text fields to latin1 before generating checksum.
 - Updated package dependencies.
 
+### Fixed
+- Sync Checksums - Update distinct clause to use $wpdb-> table names to accouunt for differences in prefixes.
+
 ## [1.26.3] - 2021-10-12
 ### Changed
 - Updated package dependencies
