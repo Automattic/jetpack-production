@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: named exports for pages
 - Flag for weekly Atomic releases ("dev-releases" in composer.json).
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## 10.3-a.1 - 2021-10-12
 ### Enhancements

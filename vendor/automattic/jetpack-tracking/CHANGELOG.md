@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.13.13-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.13.13] - 2021-10-13
 ### Changed
 - Updated package dependencies.
 
@@ -178,7 +175,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Create package for Jetpack Tracking
 
-[1.13.13-alpha]: https://github.com/Automattic/jetpack-tracking/compare/v1.13.12...v1.13.13-alpha
+[1.13.13]: https://github.com/Automattic/jetpack-tracking/compare/v1.13.12...v1.13.13
 [1.13.12]: https://github.com/Automattic/jetpack-tracking/compare/v1.13.11...v1.13.12
 [1.13.11]: https://github.com/Automattic/jetpack-tracking/compare/v1.13.10...v1.13.11
 [1.13.10]: https://github.com/Automattic/jetpack-tracking/compare/v1.13.9...v1.13.10
