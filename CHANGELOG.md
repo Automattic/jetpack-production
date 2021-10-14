@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Remove "download" mentions from the VideoPress share option
 - RePublicize: add feature flag to handle feature visibility
 
+### Improved compatibility
+- Add support for handling unparsed bodies for VideoPress uploads for cases where another plugin is modifying apiFetch's behaviour.
+
 ### Bug fixes
 - Add a "cover" option to the VideoPress iframe and shortcode to handle video resizing to its container
 - Fix spelling of 'deprecated' in pnpm tasks
