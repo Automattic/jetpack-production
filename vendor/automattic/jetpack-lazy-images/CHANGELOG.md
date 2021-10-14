@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Deprecated
+- General: remove numerous long-deprecated functions.
+
 ## [2.0.2] - 2021-10-12
 ### Changed
 - Updated package dependencies
