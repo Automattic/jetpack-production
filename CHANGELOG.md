@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Cloud product descriptions: Add a new view that shortly summarize Jetpack products, when pressing an upgrade button, before being redirected to Jetpack checkout.
 - Publicize: make the publicize enable feature persistent
 - Publicize: tidy using panel components
 - Remove "download" mentions from the VideoPress share option
