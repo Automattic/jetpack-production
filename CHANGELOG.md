@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: tidy using panel components
 - Remove "download" mentions from the VideoPress share option
 - RePublicize: add feature flag to handle feature visibility
+- Stats: Remove some upgrade notifications.
 
 ### Improved compatibility
 - Add support for handling unparsed bodies for VideoPress uploads for cases where another plugin is modifying apiFetch's behaviour.
