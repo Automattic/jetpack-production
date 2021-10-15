@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Publicize: make the publicize enable feature persistent
 - Publicize: tidy using panel components
 - Remove "download" mentions from the VideoPress share option
 - RePublicize: add feature flag to handle feature visibility
