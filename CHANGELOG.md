@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a "cover" option to the VideoPress iframe and shortcode to handle video resizing to its container
 - Fix spelling of 'deprecated' in pnpm tasks
 - Milestone widget: Fix styles of the widget fields
+- Search: fix translations not available for .min.js assets
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Build: do not include Instant Search Settings raw files in production build
