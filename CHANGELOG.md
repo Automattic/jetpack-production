@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - VideoPress upload errors are now displayed properly from the Media Library and the Gutenberg editor (video block)
 
+### Improved compatibility
+- Add support for handling unparsed bodies for VideoPress uploads for cases where another plugin is modifying apiFetch's behaviour.
+
 ## 10.2 - 2021-10-05
 ### Enhancements
 - Contact Form: add filter to allow customizing email headers.

@@ -110,18 +110,6 @@ return array(
 		'version' => '1.5.1.0',
 		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
 	),
-	'Automattic\\Jetpack\\Backup\\Package_Version' => array(
-		'version' => '1.1.4.0',
-		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-package-version.php'
-	),
-	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
-		'version' => '1.1.4.0',
-		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-helper-script-manager.php'
-	),
-	'Automattic\\Jetpack\\Backup\\REST_Controller' => array(
-		'version' => '1.1.4.0',
-		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-rest-controller.php'
-	),
 	'Jetpack_Sync_Settings' => array(
 		'version' => '1.6.6.0',
 		'path'    => $vendorDir . '/automattic/jetpack-compat/legacy/class-jetpack-sync-settings.php'
@@ -145,6 +133,18 @@ return array(
 	'Automattic\\Jetpack\\Blocks' => array(
 		'version' => '1.4.3.0',
 		'path'    => $vendorDir . '/automattic/jetpack-blocks/src/class-blocks.php'
+	),
+	'Automattic\\Jetpack\\Backup\\Package_Version' => array(
+		'version' => '1.1.4.0',
+		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-package-version.php'
+	),
+	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
+		'version' => '1.1.4.0',
+		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-helper-script-manager.php'
+	),
+	'Automattic\\Jetpack\\Backup\\REST_Controller' => array(
+		'version' => '1.1.4.0',
+		'path'    => $vendorDir . '/automattic/jetpack-backup/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Abtest' => array(
 		'version' => '1.9.11.0',
