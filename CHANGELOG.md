@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add support for handling unparsed bodies for VideoPress uploads for cases where another plugin is modifying apiFetch's behaviour.
 
 ### Bug fixes
+- Fix connection for non-admin users.
 - Search: fix translations not available for .min.js assets
 - Update Sync Unit Tests to reset settings modified during tests.
 
