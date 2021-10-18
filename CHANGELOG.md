@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.3-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- VideoPress upload errors are now displayed properly from the Media Library and the Gutenberg editor (video block)
+
 ## 10.2 - 2021-10-05
 ### Enhancements
 - Contact Form: add filter to allow customizing email headers.
