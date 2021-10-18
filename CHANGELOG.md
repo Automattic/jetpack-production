@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Add support for handling unparsed bodies for VideoPress uploads for cases where another plugin is modifying apiFetch's behaviour.
 
+### Bug fixes
+- Search: fix translations not available for .min.js assets
+
 ## 10.2 - 2021-10-05
 ### Enhancements
 - Contact Form: add filter to allow customizing email headers.
