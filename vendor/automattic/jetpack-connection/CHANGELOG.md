@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - General: remove numerous long-deprecated functions.
 
+### Fixed
+- Fix permission check for authorization_url endpoint.
+
 ## [1.30.9] - 2021-10-13
 ### Changed
 - Updated package dependencies.
