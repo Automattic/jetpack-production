@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Search: fix translations not available for .min.js assets
 - Update Sync Unit Tests to reset settings modified during tests.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init the identity-crisis package using the Config package
+
 ## 10.2 - 2021-10-05
 ### Enhancements
 - Contact Form: add filter to allow customizing email headers.
