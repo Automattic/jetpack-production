@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Search: fix translations not available for .min.js assets
+- Update Sync Unit Tests to reset settings modified during tests.
 
 ## 10.2 - 2021-10-05
 ### Enhancements
