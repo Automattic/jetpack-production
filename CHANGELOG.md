@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: named exports for pages
 - Flag for weekly Atomic releases ("dev-releases" in composer.json).
 - General: remove numerous long-deprecated functions.
+- Sharing: hide sharing buttons on password protected posts unless password provided.
 - Updated package dependencies.
 - Updated package dependencies.
 
