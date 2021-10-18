@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_2
 {
     public static $files = array (
-        'd4eb94df91a729802d18373ee8cdc79f' => __DIR__ . '/..' . '/automattic/jetpack-backup/actions.php',
         '009de6aaa0d497eacea41fab13fc05f1' => __DIR__ . '/..' . '/automattic/jetpack-compat/functions.php',
+        'd4eb94df91a729802d18373ee8cdc79f' => __DIR__ . '/..' . '/automattic/jetpack-backup/actions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
