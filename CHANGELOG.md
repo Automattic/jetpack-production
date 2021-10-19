@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix connection for non-admin users.
 - Fixes a bug where the external media modal collapsed on larger screens and did not leave enough whitespace.
 - Fix spelling of 'deprecated' in pnpm tasks
+- Fix the connect button disappearing bug for secondary users.
 - Milestone widget: Fix styles of the widget fields
 - Search: fix translations not available for .min.js assets
 
