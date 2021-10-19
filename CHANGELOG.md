@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Add a "cover" option to the VideoPress iframe and shortcode to handle video resizing to its container
 - Fix connection for non-admin users.
+- Fixes a bug where the external media modal collapsed on larger screens and did not leave enough whitespace.
 - Fix spelling of 'deprecated' in pnpm tasks
 - Milestone widget: Fix styles of the widget fields
 - Search: fix translations not available for .min.js assets
