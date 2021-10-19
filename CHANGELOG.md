@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix connection for non-admin users.
+- Fix the connect button disappearing bug for secondary users.
 - Search: fix translations not available for .min.js assets
 - Update Sync Unit Tests to reset settings modified during tests.
 
