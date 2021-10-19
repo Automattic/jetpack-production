@@ -719,10 +719,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ "../../js-packages/components/components/spinner/style.scss":
-/*!******************************************************************!*\
-  !*** ../../js-packages/components/components/spinner/style.scss ***!
-  \******************************************************************/
+/***/ "../../js-packages/components/components/action-button/style.scss":
+/*!************************************************************************!*\
+  !*** ../../js-packages/components/components/action-button/style.scss ***!
+  \************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -732,10 +732,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "../../js-packages/connection/components/connect-button/style.scss":
-/*!*************************************************************************!*\
-  !*** ../../js-packages/connection/components/connect-button/style.scss ***!
-  \*************************************************************************/
+/***/ "../../js-packages/components/components/spinner/style.scss":
+/*!******************************************************************!*\
+  !*** ../../js-packages/components/components/spinner/style.scss ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2560,6 +2560,96 @@ function catchNetworkErrors() {
 
 /***/ }),
 
+/***/ "../../js-packages/components/components/action-button/index.jsx":
+/*!***********************************************************************!*\
+  !*** ../../js-packages/components/components/action-button/index.jsx ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/action-button/style.scss");
+/* harmony import */ var _spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../spinner */ "../../js-packages/components/components/spinner/index.jsx");
+/**
+ * External dependencies
+ */
+
+
+var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+/**
+ * The Jetpack Action button.
+ *
+ * This component extends the regular `Button` component and adds a `isLoading` prop that will disable and display a spinner, giving the user the feedback that some action is happening. It also provides a generic error message.
+ *
+ * It is useful to async actions when the user has to wait the result of a request or process.
+ *
+ * @param {object} props - The properties.
+ * @returns {React.Component} The `ActionButton` component.
+ */
+
+var ActionButton = function ActionButton(props) {
+  var label = props.label,
+      onClick = props.onClick,
+      isLoading = props.isLoading,
+      displayError = props.displayError,
+      errorMessage = props.errorMessage;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-action-button"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+    className: "jp-action-button--button",
+    label: label,
+    onClick: onClick,
+    isPrimary: true,
+    disabled: isLoading
+  }, isLoading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_spinner__WEBPACK_IMPORTED_MODULE_5__.default, null) : label), displayError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "jp-action-button__error"
+  }, errorMessage));
+};
+
+ActionButton.propTypes = {
+  /** The button label. */
+  label: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
+
+  /** The callback to be called on click. */
+  onClick: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func),
+
+  /** Will disable the button and display a spinner if set to true. */
+  isLoading: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
+
+  /** Displays an error message */
+  displayError: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
+
+  /** The error message string */
+  errorMessage: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string)
+};
+ActionButton.defaultProps = {
+  isLoading: false,
+  displayError: false,
+  errorMessage: __('An error occurred. Please try again.', 'jetpack')
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ActionButton);
+
+/***/ }),
+
 /***/ "../../js-packages/components/components/jetpack-logo/index.jsx":
 /*!**********************************************************************!*\
   !*** ../../js-packages/components/components/jetpack-logo/index.jsx ***!
@@ -2836,14 +2926,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
-/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/connect-button/style.scss");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/action-button/index.jsx");
+/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
 
 
 /**
@@ -2855,11 +2942,9 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 
-
 /**
  * Internal dependencies
  */
-
 
 
 /**
@@ -2892,7 +2977,7 @@ var ConnectButton = function ConnectButton(props) {
 
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
       _useState6 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState5, 2),
-      registationError = _useState6[0],
+      registrationError = _useState6[0],
       setRegistrationError = _useState6[1];
 
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
@@ -2915,8 +3000,8 @@ var ConnectButton = function ConnectButton(props) {
    */
 
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.setApiNonce(apiNonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
    * Initialize the site registration process.
@@ -2932,7 +3017,7 @@ var ConnectButton = function ConnectButton(props) {
     }
 
     setIsRegistering(true);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.registerSite(registrationNonce, redirectUri).then(function (response) {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.registerSite(registrationNonce, redirectUri).then(function (response) {
       setIsRegistering(false);
 
       if (onRegistered) {
@@ -2957,17 +3042,12 @@ var ConnectButton = function ConnectButton(props) {
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "jp-connect-button"
-  }, connectionStatusIsFetching && "Loading...", (!connectionStatus.isRegistered || !connectionStatus.isUserConnected) && !connectionStatusIsFetching && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
-    className: "jp-connect-button--button",
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, connectionStatusIsFetching && "Loading...", (!connectionStatus.isRegistered || !connectionStatus.isUserConnected) && !connectionStatusIsFetching && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__.default, {
     label: connectLabel,
     onClick: registerSite,
-    isPrimary: true,
-    disabled: isRegistering || isUserConnecting
-  }, isRegistering || isUserConnecting ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default, null) : connectLabel), registationError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", {
-    className: "jp-connect-button__error"
-  }, __('An error occurred. Please try again.', 'jetpack')), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_8__.default, {
+    displayError: registrationError,
+    isLoading: isRegistering || isUserConnecting
+  }), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_6__.default, {
     connectUrl: authorizationUrl,
     redirectUri: redirectUri,
     from: from
@@ -2975,14 +3055,14 @@ var ConnectButton = function ConnectButton(props) {
 };
 
 ConnectButton.propTypes = {
-  connectLabel: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
-  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string.isRequired),
-  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string.isRequired),
-  onRegistered: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func),
-  from: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
-  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string.isRequired),
-  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string.isRequired),
-  autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool)
+  connectLabel: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
+  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
+  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
+  onRegistered: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func),
+  from: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
+  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
+  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
+  autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool)
 };
 ConnectButton.defaultProps = {
   connectLabel: __('Connect', 'jetpack'),

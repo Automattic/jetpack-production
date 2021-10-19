@@ -107,13 +107,13 @@
   text-decoration: none;
   padding-right: 5px;
 }
-.jp-connect-screen .jp-connect-screen--left .jp-connect-button {
+.jp-connect-screen .jp-connect-screen--left .jp-action-button {
   margin-top: 40px;
 }
-.jp-connect-screen .jp-connect-screen--left .jp-connect-button button {
+.jp-connect-screen .jp-connect-screen--left .jp-action-button button {
   max-width: 100%;
 }
-.jp-connect-screen .jp-connect-screen--left .jp-connect-button button:disabled {
+.jp-connect-screen .jp-connect-screen--left .jp-action-button button:disabled {
   color: rgba(255, 255, 255, 0.4);
 }
 .jp-connect-screen .jp-connect-screen--left .jp-connect-screen--tos {
@@ -149,7 +149,7 @@
 .jp-connect-screen .jp-connect-screen--clearfix {
   clear: both;
 }
-.jp-connect-button--button {
+.jp-action-button--button {
   background: #000;
   border-radius: 4px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
@@ -162,7 +162,7 @@
   height: 40px;
   display: block;
 }
-.jp-connect-button__error {
+.jp-action-button__error {
   color: var(--jp-red) !important;
   line-height: 25px !important;
   padding-right: 25px;
