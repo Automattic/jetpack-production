@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Load block editor plugins
 - Masterbar: update default link in Upgrades > Plans to "Plans" instead of "My Plan".
 - Publicize: adjust feature description depending on the state
+- publicize: do not disable connection toggle after sharing
 - Publicize: enable feature as default
 - Publicize: make the publicize enable feature persistent
 - Publicize: tidy using panel components
