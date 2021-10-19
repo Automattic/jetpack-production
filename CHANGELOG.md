@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Changed the class variable to a const
 - Update "Appearance > Widgets" and "Appearance > Menus" links back to classic wp-admin destination for Atomic and Simple sites.
 
 ## 10.3-a.3 - 2021-10-19
