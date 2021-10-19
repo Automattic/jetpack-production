@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Add support for handling unparsed bodies for VideoPress uploads for cases where another plugin is modifying apiFetch's behaviour.
 - Subscription Widget: removed from Legacy Widget block and added transform
+- WordAds: update handling and setting CCPA related cookies.
 
 ### Bug fixes
 - Add a "cover" option to the VideoPress iframe and shortcode to handle video resizing to its container
