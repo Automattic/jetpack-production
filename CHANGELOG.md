@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: named exports for pages
 - Flag for weekly Atomic releases ("dev-releases" in composer.json).
 - General: remove numerous long-deprecated functions.
+- Improve e2e tooling for better support from other plugins making use of the Jetpack e2e framework
 - Sharing: hide sharing buttons on password protected posts unless password provided.
 - Updated package dependencies.
 - Updated package dependencies.
