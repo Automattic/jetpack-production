@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.4.7-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.4.7] - 2021-10-19
 ### Deprecated
 - General: remove numerous long-deprecated functions.
 
@@ -81,7 +78,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Moving jetpack_is_mobile into a package
 
-[1.4.7-alpha]: https://github.com/Automattic/jetpack-device-detection/compare/v1.4.6...v1.4.7-alpha
+[1.4.7]: https://github.com/Automattic/jetpack-device-detection/compare/v1.4.6...v1.4.7
 [1.4.6]: https://github.com/Automattic/jetpack-device-detection/compare/v1.4.5...v1.4.6
 [1.4.5]: https://github.com/Automattic/jetpack-device-detection/compare/v1.4.4...v1.4.5
 [1.4.4]: https://github.com/Automattic/jetpack-device-detection/compare/v1.4.3...v1.4.4

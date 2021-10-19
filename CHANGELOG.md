@@ -2,48 +2,38 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.3-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.3-a.3 - 2021-10-19
 ### Enhancements
-- Add site_owner to sites API endpoint
-- Cloud product descriptions: Add a new view that shortly summarize Jetpack products, when pressing an upgrade button, before being redirected to Jetpack checkout.
-- Load block editor plugins
-- Masterbar: update default link in Upgrades > Plans to "Plans" instead of "My Plan".
-- Publicize: adjust feature description depending on the state
-- publicize: do not disable connection toggle after sharing
-- Publicize: enable feature as default
-- Publicize: make the publicize enable feature persistent
-- Publicize: tidy using panel components
-- Remove "download" mentions from the VideoPress share option
-- RePublicize: add feature flag to handle feature visibility
-- Stats: Remove some upgrade notifications.
-
-### Improved compatibility
-- Add support for handling unparsed bodies for VideoPress uploads for cases where another plugin is modifying apiFetch's behaviour.
-- Subscription Widget: removed from Legacy Widget block and added transform
+- Dashboard: add a new view that shortly summarizes available Jetpack products and facilitates the purchase process.
+- Publicize editor settings: refactor, improve layout and wording in preparation for the addition of RePublicize.
+- Stats: remove some upgrade notifications.
+- Subscriptions: add an option to transform the Legacy Subscription Widget into a Subscription Block in the new block-based Widget editor.
 - WordAds: update handling and setting CCPA related cookies.
 
+### Improved compatibility
+- VideoPress: avoid video upload issues when other plugins modify WordPress' API fetching features in the block editor.
+
 ### Bug fixes
-- Add a "cover" option to the VideoPress iframe and shortcode to handle video resizing to its container
-- Fix connection for non-admin users.
-- Fixes a bug where the external media modal collapsed on larger screens and did not leave enough whitespace.
-- Fix spelling of 'deprecated' in pnpm tasks
-- Fix the connect button disappearing bug for secondary users.
-- Milestone widget: Fix styles of the widget fields
-- Search: fix translations not available for .min.js assets
+- Dashboard: fix the connection flow for non-admin users.
+- External Media block options: fix a bug where the external media modal collapsed on larger screens and did not leave enough whitespace.
+- Instant Search: fix translations not available for minified Instant Search Modal assets.
+- Widgets: fix styles of the Milestone widget fields.
+- VideoPress: add a "cover" option to the VideoPress iframe and shortcode to handle video resizing to its container.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: update how block editor plugins are loaded.
 - Build: do not include Instant Search Settings raw files in production build
 - E2E tests: move search helpers from e2e-commons to plugin e2e checks project
 - E2E tests: named exports for pages
+- Fix spelling of 'deprecated' in pnpm tasks
 - Flag for weekly Atomic releases ("dev-releases" in composer.json).
 - General: remove numerous long-deprecated functions.
 - Improve e2e tooling for better support from other plugins making use of the Jetpack e2e framework
+- Masterbar: update default link in Upgrades > Plans to "Plans" instead of "My Plan".
+- Remove "download" mentions from the VideoPress share option
 - Sharing: hide sharing buttons on password protected posts unless password provided.
 - Updated package dependencies.
-- Updated package dependencies.
+- WordPress.com API: add site_owner to sites API endpoint.
 
 ## 10.3-a.1 - 2021-10-12
 ### Enhancements
