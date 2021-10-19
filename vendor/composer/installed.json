@@ -472,17 +472,17 @@
         },
         {
             "name": "automattic/jetpack-connection-ui",
-            "version": "v1.5.2",
-            "version_normalized": "1.5.2.0",
+            "version": "v1.4.1",
+            "version_normalized": "1.4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-connection-ui.git",
-                "reference": "66dc48bf3c1d9531792c9d3cb08a7e1354f1edb3"
+                "reference": "be40cbab419791ce398eab701f3b1dc8340f6c24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-connection-ui/zipball/66dc48bf3c1d9531792c9d3cb08a7e1354f1edb3",
-                "reference": "66dc48bf3c1d9531792c9d3cb08a7e1354f1edb3",
+                "url": "https://api.github.com/repos/Automattic/jetpack-connection-ui/zipball/be40cbab419791ce398eab701f3b1dc8340f6c24",
+                "reference": "be40cbab419791ce398eab701f3b1dc8340f6c24",
                 "shasum": ""
             },
             "require": {
@@ -491,9 +491,9 @@
                 "automattic/jetpack-device-detection": "^1.4"
             },
             "require-dev": {
-                "automattic/jetpack-changelogger": "^3.0"
+                "automattic/jetpack-changelogger": "^2.0"
             },
-            "time": "2021-10-19T10:39:58+00:00",
+            "time": "2021-09-28T18:20:06+00:00",
             "type": "library",
             "extra": {
                 "autotagger": true,
@@ -502,7 +502,7 @@
                     "link-template": "https://github.com/Automattic/jetpack-connection-ui/compare/v${old}...v${new}"
                 },
                 "branch-alias": {
-                    "dev-master": "1.5.x-dev"
+                    "dev-master": "1.4.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -517,7 +517,7 @@
             ],
             "description": "Jetpack Connection UI",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-connection-ui/tree/v1.5.2"
+                "source": "https://github.com/Automattic/jetpack-connection-ui/tree/v1.4.1"
             },
             "install-path": "../automattic/jetpack-connection-ui"
         },

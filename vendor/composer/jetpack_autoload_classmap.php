@@ -74,14 +74,6 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
-	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
-		'version' => '1.5.2.0',
-		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
-		'version' => '1.5.2.0',
-		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
-	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '1.4.8.0',
 		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
@@ -105,6 +97,14 @@ return array(
 	'Automattic\\Jetpack\\JITMS\\Pre_Connection_JITM' => array(
 		'version' => '2.0.3.0',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-pre-connection-jitm.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
+		'version' => '1.4.1.0',
+		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
+		'version' => '1.4.1.0',
+		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
 	),
 	'Automattic\\Jetpack\\Config' => array(
 		'version' => '1.5.3.0',
