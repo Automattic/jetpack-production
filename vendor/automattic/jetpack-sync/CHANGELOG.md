@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added the _wpas_feature_enabled meta key to the sync list
 
+### Fixed
+- Increase send timeout to 20 seconds allowing capture of WP.com 408 responses.
+
 ## [1.26.4] - 2021-10-13
 ### Changed
 - Sync Checksums: Convert text fields to latin1 before generating checksum.
