@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Publicize: add useSharePost() hook
 - Publicize: clean and tidy code
+- Removed filters from Jetpack that were used to test the Inbox menu prior to its official release.
 
 ### Improved compatibility
 - For videos uploaded to VideoPress, the originally uploaded video file will be played in all non-VideoPress players. The File URL field in the Media Library will be a link to the originally uploaded video file.
