@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changed the class variable to a const
+- Displays realtime backups in AAG for tiered backup products (Not yet user facing)
 - E2E tests: renamed test
 - Update "Appearance > Widgets" and "Appearance > Menus" links back to classic wp-admin destination for Atomic and Simple sites.
 - Updates the display of Jetpack Backup storage amounts. (Not yet user facing.)
