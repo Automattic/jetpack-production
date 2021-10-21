@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: add useSharePost() hook
 - Publicize: clean and tidy code
 - Publicize: do not disable message text control when RePublicize is enabled
+- Publicize: Handle properly error handling when publizicing
 - Removed filters from Jetpack that were used to test the Inbox menu prior to its official release.
 - RePublicize: add Share Post button
 
