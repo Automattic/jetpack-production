@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: add useSharePost() hook
 - Publicize: clean and tidy code
 
+### Improved compatibility
+- For videos uploaded to VideoPress, the originally uploaded video file will be played in all non-VideoPress players. The File URL field in the Media Library will be a link to the originally uploaded video file.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changed the class variable to a const
 - E2E tests: renamed test
