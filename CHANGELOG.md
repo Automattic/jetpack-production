@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - For videos uploaded to VideoPress, the originally uploaded video file will be played in all non-VideoPress players. The File URL field in the Media Library will be a link to the originally uploaded video file.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adjust test which relies on the "remoteRegister" XMLRPC method now being registered by the Connection package
 - Changed the class variable to a const
 - Displays realtime backups in AAG for tiered backup products (Not yet user facing)
 - E2E tests: renamed test
