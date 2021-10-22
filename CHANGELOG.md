@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add tooltips to VideoPress block settings in Gutenberg
+- Instagram widget: link directly to user connection if user is not connected
 - Publicize: add useSharePost() hook
 - Publicize: clean and tidy code
 - Publicize: do not disable message text control when RePublicize is enabled
