@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Sync Error Log to capture failed sync requests.
 
 ### Fixed
+- Check the return value of get_comment() before to use it.
 - Increase send timeout to 20 seconds allowing capture of WP.com 408 responses.
 
 ## [1.26.4] - 2021-10-13
