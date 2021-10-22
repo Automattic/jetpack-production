@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.9-alpha] - unreleased
+## [0.3.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add redirect_uri parameter for IDC Start Fresh endpoint.
 - Delete the migrate_for_idc option when a remote request returns migrated_for_idc
 
 ## [0.2.8] - 2021-10-13
@@ -69,7 +70,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Use Connection/Urls for home_url and site_url functions migrated from Sync.
 
-[0.2.9-alpha]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.2.8...v0.2.9-alpha
+[0.3.0-alpha]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.2.8...v0.3.0-alpha
 [0.2.8]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.2.7...v0.2.8
 [0.2.7]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.2.6...v0.2.7
 [0.2.6]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.2.5...v0.2.6

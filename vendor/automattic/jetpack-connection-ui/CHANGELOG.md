@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add the redirect URI for RNA IDC "Start Fresh" functionality.
+
 ### Changed
 - Updated package dependencies.
 

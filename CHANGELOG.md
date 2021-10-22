@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Displays realtime backups in AAG for tiered backup products (Not yet user facing)
 - E2E tests: renamed test
 - Make the Backups only settings card show for tiered backup products (not yet user facing)
+- Package version bump.
 - Update "Appearance > Widgets" and "Appearance > Menus" links back to classic wp-admin destination for Atomic and Simple sites.
 - Updates the display of Jetpack Backup storage amounts. (Not yet user facing.)
 
