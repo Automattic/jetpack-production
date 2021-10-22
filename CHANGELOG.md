@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Dashboard: ensure feature cards display the right information when the site uses Jetpack's Offline mode.
+- Stats: remove the wpcom blog details update that occurs when the stats module is first activated
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adjust test which relies on the "remoteRegister" XMLRPC method now being registered by the Connection package
