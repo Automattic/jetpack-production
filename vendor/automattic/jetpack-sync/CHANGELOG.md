@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.26.5-alpha] - unreleased
+## [1.27.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added the _wpas_feature_enabled meta key to the sync list
+- Sync Error Log to capture failed sync requests.
 
 ### Fixed
 - Increase send timeout to 20 seconds allowing capture of WP.com 408 responses.
@@ -510,7 +511,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[1.26.5-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.26.4...v1.26.5-alpha
+[1.27.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.26.4...v1.27.0-alpha
 [1.26.4]: https://github.com/Automattic/jetpack-sync/compare/v1.26.3...v1.26.4
 [1.26.3]: https://github.com/Automattic/jetpack-sync/compare/v1.26.2...v1.26.3
 [1.26.2]: https://github.com/Automattic/jetpack-sync/compare/v1.26.1...v1.26.2
