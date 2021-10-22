@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add tooltips to VideoPress block settings in Gutenberg
 - Publicize: add useSharePost() hook
 - Publicize: clean and tidy code
 - Publicize: do not disable message text control when RePublicize is enabled
