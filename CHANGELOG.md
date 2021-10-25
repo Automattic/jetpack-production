@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: Handle properly error handling when publizicing
 - Removed filters from Jetpack that were used to test the Inbox menu prior to its official release.
 - RePublicize: add Share Post button
+- Social Icons Widget: Added Strava icon to Social Icons Widget
 
 ### Improved compatibility
 - For videos uploaded to VideoPress, the originally uploaded video file will be played in all non-VideoPress players. The File URL field in the Media Library will be a link to the originally uploaded video file.
