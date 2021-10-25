@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds an upgrade nudge to the Stats page if the user doesn't have VideoPress.
 - Add tooltips to VideoPress block settings in Gutenberg
 - Instagram widget: link directly to user connection if user is not connected
+- Map block: Add `address` attribute to the block
 - Moves Add New (plugin) submenu to the top (valid only for Atomic sites).
 - Optimizes product images that are displayed on the Upgrade page. This reduces their file size and will improve the performance when downloading them
 - Publicize: add useSharePost() hook
@@ -22,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Social Icons Widget: Added Strava icon to Social Icons Widget
 
 ### Improved compatibility
+- Contact Info & Map widget: Add legacy widget - block transform
 - For videos uploaded to VideoPress, the originally uploaded video file will be played in all non-VideoPress players. The File URL field in the Media Library will be a link to the originally uploaded video file.
 
 ### Bug fixes
