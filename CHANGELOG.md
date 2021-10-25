@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: remove the wpcom blog details update that occurs when the stats module is first activated
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add Tracks events when clicking or viewing upgrade buttons on the At a Glance page
 - Adjust test which relies on the "remoteRegister" XMLRPC method now being registered by the Connection package
 - Changed the class variable to a const
 - Displays realtime backups in AAG for tiered backup products (Not yet user facing)
