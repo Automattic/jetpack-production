@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the redirect URI for RNA IDC "Start Fresh" functionality.
 
 ### Changed
+- Updated package dependencies
 - Updated package dependencies.
 
 ## [1.5.2] - 2021-10-19

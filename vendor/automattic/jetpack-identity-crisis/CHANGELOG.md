@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add redirect_uri parameter for IDC Start Fresh endpoint.
 - Delete the migrate_for_idc option when a remote request returns migrated_for_idc
 
+### Changed
+- Updated package dependencies
+
 ## [0.2.8] - 2021-10-13
 ### Changed
 - Updated package dependencies.

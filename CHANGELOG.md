@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Package version bump.
 - PHPUnit tests will now catch `exit` calls, instead of exiting PHPUnit.
 - Update "Appearance > Widgets" and "Appearance > Menus" links back to classic wp-admin destination for Atomic and Simple sites.
+- Updated package dependencies
 - Updates the display of Jetpack Backup storage amounts. (Not yet user facing.)
 
 ## 10.3-a.3 - 2021-10-19
