@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- E2E tests: update pnpm commands to use new tunnel wrapper script
+
 ## 10.3-beta - 2021-10-26
 ### Enhancements
 - Dashboard: add a new screen to provide more information about the VideoPress feature.
