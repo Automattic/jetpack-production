@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: update pnpm commands to use new tunnel wrapper script
 - Publicize: show/hide main toggle control depending on post state (published)
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Set `convertDeprecationsToExceptions` true in PHPUnit config.
+
 ## 10.3-beta - 2021-10-26
 ### Enhancements
 - Dashboard: add a new screen to provide more information about the VideoPress feature.

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Set `convertDeprecationsToExceptions` true in PHPUnit config.
+
 ## [0.3.0] - 2021-10-26
 ### Added
 - Add redirect_uri parameter for IDC Start Fresh endpoint.
@@ -70,6 +77,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Use Connection/Urls for home_url and site_url functions migrated from Sync.
 
+[0.3.1-alpha]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.3.0...v0.3.1-alpha
 [0.3.0]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.2.8...v0.3.0
 [0.2.8]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.2.7...v0.2.8
 [0.2.7]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.2.6...v0.2.7
