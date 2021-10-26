@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Removed filters from Jetpack that were used to test the Inbox menu prior to its official release.
 - Remove X-18 rating from VideoPress upload.
 - RePublicize: add Share Post button
+- RePublicize: enable/disable feature according to the site plan
 - Social Icons Widget: Added Strava icon to Social Icons Widget
 
 ### Improved compatibility
