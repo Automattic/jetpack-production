@@ -60,6 +60,7 @@ return array(
     'Automattic\\Jetpack\\Redirect' => $vendorDir . '/automattic/jetpack-redirect/src/class-redirect.php',
     'Automattic\\Jetpack\\Roles' => $vendorDir . '/automattic/jetpack-roles/src/class-roles.php',
     'Automattic\\Jetpack\\Status' => $vendorDir . '/automattic/jetpack-status/src/class-status.php',
+    'Automattic\\Jetpack\\Status\\Host' => $vendorDir . '/automattic/jetpack-status/src/class-host.php',
     'Automattic\\Jetpack\\Sync\\Actions' => $vendorDir . '/automattic/jetpack-sync/src/class-actions.php',
     'Automattic\\Jetpack\\Sync\\Codec_Interface' => $vendorDir . '/automattic/jetpack-sync/src/interface-codec.php',
     'Automattic\\Jetpack\\Sync\\Defaults' => $vendorDir . '/automattic/jetpack-sync/src/class-defaults.php',
