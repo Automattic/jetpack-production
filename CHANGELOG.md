@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: do not disable message text control when RePublicize is enabled
 - Publicize: Handle properly error handling when publizicing
 - Removed filters from Jetpack that were used to test the Inbox menu prior to its official release.
+- Remove X-18 rating from VideoPress upload.
 - RePublicize: add Share Post button
 - Social Icons Widget: Added Strava icon to Social Icons Widget
 
