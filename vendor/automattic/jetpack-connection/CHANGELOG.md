@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Change the error code returned when a remoteRegister XMLRPC call is executed to the more helpful "already_registered" when the blog is already registered
+- Updated package dependencies.
 
 ## [1.30.10] - 2021-10-19
 ### Deprecated

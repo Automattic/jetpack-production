@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Contact Info & Map widget: Add legacy widget - block transform
+- Deprecate `jetpack_is_atomic` for the new Automattic\Jetpack\Status\Host->is_woa_site() function.
 - For videos uploaded to VideoPress, the originally uploaded video file will be played in all non-VideoPress players. The File URL field in the Media Library will be a link to the originally uploaded video file.
 
 ### Bug fixes
