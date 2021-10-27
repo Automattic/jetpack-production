@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Set `convertDeprecationsToExceptions` true in PHPUnit config.
+- Updated package dependencies.
 
 ## 10.3-beta - 2021-10-26
 ### Enhancements
