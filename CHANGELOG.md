@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: update pnpm commands to use new tunnel wrapper script
 - Publicize: show/hide main toggle control depending on post state (published)
 
+### Bug fixes
+- Publicize: fix visual issue when the panel shows in the pre publish step of the post
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Set `convertDeprecationsToExceptions` true in PHPUnit config.
 - Updated package dependencies.
