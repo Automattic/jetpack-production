@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add the idc url query args to remote requests
 - Set `convertDeprecationsToExceptions` true in PHPUnit config.
+- Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
 ## [0.3.0] - 2021-10-26
 ### Added

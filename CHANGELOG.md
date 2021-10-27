@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: fix visual issue when the panel shows in the pre publish step of the post
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fix `@covers` directives in various tests.
 - Set `convertDeprecationsToExceptions` true in PHPUnit config.
 - Updated package dependencies.
 
