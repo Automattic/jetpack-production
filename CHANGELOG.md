@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: show/hide main toggle control depending on post state (published)
 
 ### Bug fixes
+- Image CDN: ensure that Wikipedia URLs are not served via our image CDN.
 - Publicize: fix visual issue when the panel shows in the pre publish step of the post
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
