@@ -1,6 +1,1117 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/currencies.js":
+/*!*********************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/currencies.js ***!
+  \*********************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CURRENCIES": () => (/* binding */ CURRENCIES),
+/* harmony export */   "getCurrencyDefaults": () => (/* binding */ getCurrencyDefaults)
+/* harmony export */ });
+var CURRENCIES = {
+  AED: {
+    symbol: 'د.إ.‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  AFN: {
+    symbol: '؋',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  ALL: {
+    symbol: 'Lek',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  AMD: {
+    symbol: '֏',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  ANG: {
+    symbol: 'ƒ',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  AOA: {
+    symbol: 'Kz',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  ARS: {
+    symbol: '$',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  AUD: {
+    symbol: 'A$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  AWG: {
+    symbol: 'ƒ',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  AZN: {
+    symbol: '₼',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  BAM: {
+    symbol: 'КМ',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  BBD: {
+    symbol: 'Bds$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  BDT: {
+    symbol: '৳',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  BGN: {
+    symbol: 'лв.',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  BHD: {
+    symbol: 'د.ب.‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 3
+  },
+  BIF: {
+    symbol: 'FBu',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  BMD: {
+    symbol: '$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  BND: {
+    symbol: '$',
+    grouping: '.',
+    decimal: ',',
+    precision: 0
+  },
+  BOB: {
+    symbol: 'Bs',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  BRL: {
+    symbol: 'R$',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  BSD: {
+    symbol: '$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  BTC: {
+    symbol: 'Ƀ',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  BTN: {
+    symbol: 'Nu.',
+    grouping: ',',
+    decimal: '.',
+    precision: 1
+  },
+  BWP: {
+    symbol: 'P',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  BYR: {
+    symbol: 'р.',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  BZD: {
+    symbol: 'BZ$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  CAD: {
+    symbol: 'C$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  CDF: {
+    symbol: 'FC',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  CHF: {
+    symbol: 'CHF',
+    grouping: "'",
+    decimal: '.',
+    precision: 2
+  },
+  CLP: {
+    symbol: '$',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  CNY: {
+    symbol: '¥',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  COP: {
+    symbol: '$',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  CRC: {
+    symbol: '₡',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  CUC: {
+    symbol: 'CUC',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  CUP: {
+    symbol: '$MN',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  CVE: {
+    symbol: '$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  CZK: {
+    symbol: 'Kč',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  DJF: {
+    symbol: 'Fdj',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  DKK: {
+    symbol: 'kr.',
+    grouping: '',
+    decimal: ',',
+    precision: 2
+  },
+  DOP: {
+    symbol: 'RD$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  DZD: {
+    symbol: 'د.ج.‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  EGP: {
+    symbol: 'ج.م.‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  ERN: {
+    symbol: 'Nfk',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  ETB: {
+    symbol: 'ETB',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  EUR: {
+    symbol: '€',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  FJD: {
+    symbol: 'FJ$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  FKP: {
+    symbol: '£',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  GBP: {
+    symbol: '£',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  GEL: {
+    symbol: 'Lari',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  GHS: {
+    symbol: '₵',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  GIP: {
+    symbol: '£',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  GMD: {
+    symbol: 'D',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  GNF: {
+    symbol: 'FG',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  GTQ: {
+    symbol: 'Q',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  GYD: {
+    symbol: 'G$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  HKD: {
+    symbol: 'HK$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  HNL: {
+    symbol: 'L.',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  HRK: {
+    symbol: 'kn',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  HTG: {
+    symbol: 'G',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  HUF: {
+    symbol: 'Ft',
+    grouping: '.',
+    decimal: ',',
+    precision: 0
+  },
+  IDR: {
+    symbol: 'Rp',
+    grouping: '.',
+    decimal: ',',
+    precision: 0
+  },
+  ILS: {
+    symbol: '₪',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  INR: {
+    symbol: '₹',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  IQD: {
+    symbol: 'د.ع.‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  IRR: {
+    symbol: '﷼',
+    grouping: ',',
+    decimal: '/',
+    precision: 2
+  },
+  ISK: {
+    symbol: 'kr.',
+    grouping: '.',
+    decimal: ',',
+    precision: 0
+  },
+  JMD: {
+    symbol: 'J$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  JOD: {
+    symbol: 'د.ا.‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 3
+  },
+  JPY: {
+    symbol: '¥',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  KES: {
+    symbol: 'S',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  KGS: {
+    symbol: 'сом',
+    grouping: ' ',
+    decimal: '-',
+    precision: 2
+  },
+  KHR: {
+    symbol: '៛',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  KMF: {
+    symbol: 'CF',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  KPW: {
+    symbol: '₩',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  KRW: {
+    symbol: '₩',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  KWD: {
+    symbol: 'د.ك.‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 3
+  },
+  KYD: {
+    symbol: '$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  KZT: {
+    symbol: '₸',
+    grouping: ' ',
+    decimal: '-',
+    precision: 2
+  },
+  LAK: {
+    symbol: '₭',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  LBP: {
+    symbol: 'ل.ل.‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  LKR: {
+    symbol: '₨',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  LRD: {
+    symbol: 'L$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  LSL: {
+    symbol: 'M',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  LYD: {
+    symbol: 'د.ل.‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 3
+  },
+  MAD: {
+    symbol: 'د.م.‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  MDL: {
+    symbol: 'lei',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  MGA: {
+    symbol: 'Ar',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  MKD: {
+    symbol: 'ден.',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  MMK: {
+    symbol: 'K',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  MNT: {
+    symbol: '₮',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  MOP: {
+    symbol: 'MOP$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  MRO: {
+    symbol: 'UM',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  MTL: {
+    symbol: '₤',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  MUR: {
+    symbol: '₨',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  MVR: {
+    symbol: 'MVR',
+    grouping: ',',
+    decimal: '.',
+    precision: 1
+  },
+  MWK: {
+    symbol: 'MK',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  MXN: {
+    symbol: 'MX$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  MYR: {
+    symbol: 'RM',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  MZN: {
+    symbol: 'MT',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  NAD: {
+    symbol: 'N$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  NGN: {
+    symbol: '₦',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  NIO: {
+    symbol: 'C$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  NOK: {
+    symbol: 'kr',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  NPR: {
+    symbol: '₨',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  NZD: {
+    symbol: 'NZ$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  OMR: {
+    symbol: '﷼',
+    grouping: ',',
+    decimal: '.',
+    precision: 3
+  },
+  PAB: {
+    symbol: 'B/.',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  PEN: {
+    symbol: 'S/.',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  PGK: {
+    symbol: 'K',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  PHP: {
+    symbol: '₱',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  PKR: {
+    symbol: '₨',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  PLN: {
+    symbol: 'zł',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  PYG: {
+    symbol: '₲',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  QAR: {
+    symbol: '﷼',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  RON: {
+    symbol: 'lei',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  RSD: {
+    symbol: 'Дин.',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  RUB: {
+    symbol: '₽',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  RWF: {
+    symbol: 'RWF',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  SAR: {
+    symbol: '﷼',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SBD: {
+    symbol: 'S$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SCR: {
+    symbol: '₨',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SDD: {
+    symbol: 'LSd',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SDG: {
+    symbol: '£‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SEK: {
+    symbol: 'kr',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SGD: {
+    symbol: 'S$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SHP: {
+    symbol: '£',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SLL: {
+    symbol: 'Le',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SOS: {
+    symbol: 'S',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SRD: {
+    symbol: '$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  STD: {
+    symbol: 'Db',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SVC: {
+    symbol: '₡',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SYP: {
+    symbol: '£',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  SZL: {
+    symbol: 'E',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  THB: {
+    symbol: '฿',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  TJS: {
+    symbol: 'TJS',
+    grouping: ' ',
+    decimal: ';',
+    precision: 2
+  },
+  TMT: {
+    symbol: 'm',
+    grouping: ' ',
+    decimal: ',',
+    precision: 0
+  },
+  TND: {
+    symbol: 'د.ت.‏',
+    grouping: ',',
+    decimal: '.',
+    precision: 3
+  },
+  TOP: {
+    symbol: 'T$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  TRY: {
+    symbol: 'TL',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  TTD: {
+    symbol: 'TT$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  TVD: {
+    symbol: '$T',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  TWD: {
+    symbol: 'NT$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  TZS: {
+    symbol: 'TSh',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  UAH: {
+    symbol: '₴',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  UGX: {
+    symbol: 'USh',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  USD: {
+    symbol: '$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  UYU: {
+    symbol: '$U',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  UZS: {
+    symbol: 'сўм',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  VEB: {
+    symbol: 'Bs.',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  VEF: {
+    symbol: 'Bs. F.',
+    grouping: '.',
+    decimal: ',',
+    precision: 2
+  },
+  VND: {
+    symbol: '₫',
+    grouping: '.',
+    decimal: ',',
+    precision: 1
+  },
+  VUV: {
+    symbol: 'VT',
+    grouping: ',',
+    decimal: '.',
+    precision: 0
+  },
+  WST: {
+    symbol: 'WS$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  XAF: {
+    symbol: 'F',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  XCD: {
+    symbol: '$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  XOF: {
+    symbol: 'F',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  XPF: {
+    symbol: 'F',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  YER: {
+    symbol: '﷼',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  ZAR: {
+    symbol: 'R',
+    grouping: ' ',
+    decimal: ',',
+    precision: 2
+  },
+  ZMW: {
+    symbol: 'ZK',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  },
+  WON: {
+    symbol: '₩',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  }
+};
+/**
+ * Returns currency defaults.
+ * @param   {String} code      currency code
+ * @returns {?Object}          currency defaults
+ */
+
+function getCurrencyDefaults(code) {
+  var defaultCurrency = {
+    symbol: '$',
+    grouping: ',',
+    decimal: '.',
+    precision: 2
+  };
+  return CURRENCIES[code] || defaultCurrency;
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/index.js":
+/*!****************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/index.js ***!
+  \****************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getCurrencyDefaults": () => (/* reexport safe */ _currencies__WEBPACK_IMPORTED_MODULE_1__.getCurrencyDefaults),
+/* harmony export */   "CURRENCIES": () => (/* reexport safe */ _currencies__WEBPACK_IMPORTED_MODULE_1__.CURRENCIES),
+/* harmony export */   "default": () => (/* binding */ formatCurrency),
+/* harmony export */   "getCurrencyObject": () => (/* binding */ getCurrencyObject)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/objectSpread.js");
+/* harmony import */ var i18n_calypso__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! i18n-calypso */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/index.js");
+/* harmony import */ var _currencies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./currencies */ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/currencies.js");
+
+
+/**
+ * External dependencies
+ */
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+/**
+ * Formats money with a given currency code
+ * @param   {Number}     number              number to format
+ * @param   {String}     code                currency code e.g. 'USD'
+ * @param   {Object}     options             options object
+ * @param   {String}     options.decimal     decimal symbol e.g. ','
+ * @param   {String}     options.grouping    thousands separator
+ * @param   {Number}     options.precision   decimal digits
+ * @param   {String}     options.symbol      currency symbol e.g. 'A$'
+ * @returns {?String}                        A formatted string.
+ */
+
+function formatCurrency(number, code) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  var currencyDefaults = (0,_currencies__WEBPACK_IMPORTED_MODULE_1__.getCurrencyDefaults)(code);
+
+  if (!currencyDefaults || isNaN(number)) {
+    return null;
+  }
+
+  var _currencyDefaults$opt = (0,_babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0__.default)({}, currencyDefaults, options),
+      decimal = _currencyDefaults$opt.decimal,
+      grouping = _currencyDefaults$opt.grouping,
+      precision = _currencyDefaults$opt.precision,
+      symbol = _currencyDefaults$opt.symbol;
+
+  var sign = number < 0 ? '-' : '';
+  var value = (0,i18n_calypso__WEBPACK_IMPORTED_MODULE_2__.numberFormat)(Math.abs(number), {
+    decimals: precision,
+    thousandsSep: grouping,
+    decPoint: decimal
+  });
+  return "".concat(sign).concat(symbol).concat(value);
+}
+/**
+ * Returns a formatted price object.
+ * @param   {Number}     number              number to format
+ * @param   {String}     code                currency code e.g. 'USD'
+ * @param   {Object}     options             options object
+ * @param   {String}     options.decimal     decimal symbol e.g. ','
+ * @param   {String}     options.grouping    thousands separator
+ * @param   {Number}     options.precision   decimal digits
+ * @param   {String}     options.symbol      currency symbol e.g. 'A$'
+ * @returns {?String}                        A formatted string e.g. { symbol:'$', integer: '$99', fraction: '.99', sign: '-' }
+ */
+
+function getCurrencyObject(number, code) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  var currencyDefaults = (0,_currencies__WEBPACK_IMPORTED_MODULE_1__.getCurrencyDefaults)(code);
+
+  if (!currencyDefaults || isNaN(number)) {
+    return null;
+  }
+
+  var _currencyDefaults$opt2 = (0,_babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0__.default)({}, currencyDefaults, options),
+      decimal = _currencyDefaults$opt2.decimal,
+      grouping = _currencyDefaults$opt2.grouping,
+      precision = _currencyDefaults$opt2.precision,
+      symbol = _currencyDefaults$opt2.symbol;
+
+  var sign = number < 0 ? '-' : '';
+  var absNumber = Math.abs(number);
+  var rawInteger = Math.floor(absNumber);
+  var integer = (0,i18n_calypso__WEBPACK_IMPORTED_MODULE_2__.numberFormat)(rawInteger, {
+    decimals: 0,
+    thousandsSep: grouping,
+    decPoint: decimal
+  });
+  var fraction = precision > 0 ? (0,i18n_calypso__WEBPACK_IMPORTED_MODULE_2__.numberFormat)(absNumber - rawInteger, {
+    decimals: precision,
+    thousandsSep: grouping,
+    decPoint: decimal
+  }).slice(1) : '';
+  return {
+    sign: sign,
+    symbol: symbol,
+    integer: integer,
+    fraction: fraction
+  };
+}
+
+/***/ }),
+
 /***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayLikeToArray.js":
 /*!*****************************************************************************************************************!*\
   !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayLikeToArray.js ***!
@@ -33,6 +1144,23 @@ function _arrayWithHoles(arr) {
 }
 
 module.exports = _arrayWithHoles;
+module.exports.default = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayWithoutHoles.js":
+/*!******************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
+  \******************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return arrayLikeToArray(arr);
+}
+
+module.exports = _arrayWithoutHoles;
 module.exports.default = module.exports, module.exports.__esModule = true;
 
 /***/ }),
@@ -311,6 +1439,21 @@ module.exports.default = module.exports, module.exports.__esModule = true;
 
 /***/ }),
 
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/iterableToArray.js":
+/*!****************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/iterableToArray.js ***!
+  \****************************************************************************************************************/
+/***/ ((module) => {
+
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+}
+
+module.exports = _iterableToArray;
+module.exports.default = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+
 /***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
 /*!*********************************************************************************************************************!*\
   !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
@@ -363,6 +1506,21 @@ function _nonIterableRest() {
 }
 
 module.exports = _nonIterableRest;
+module.exports.default = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/nonIterableSpread.js":
+/*!******************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/nonIterableSpread.js ***!
+  \******************************************************************************************************************/
+/***/ ((module) => {
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+module.exports = _nonIterableSpread;
 module.exports.default = module.exports, module.exports.__esModule = true;
 
 /***/ }),
@@ -545,6 +1703,29 @@ module.exports.default = module.exports, module.exports.__esModule = true;
 
 /***/ }),
 
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/toConsumableArray.js":
+/*!******************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/toConsumableArray.js ***!
+  \******************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayWithoutHoles = __webpack_require__(/*! ./arrayWithoutHoles.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
+
+var iterableToArray = __webpack_require__(/*! ./iterableToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/iterableToArray.js");
+
+var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
+
+var nonIterableSpread = __webpack_require__(/*! ./nonIterableSpread.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/nonIterableSpread.js");
+
+function _toConsumableArray(arr) {
+  return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
+}
+
+module.exports = _toConsumableArray;
+module.exports.default = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+
 /***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/typeof.js":
 /*!*******************************************************************************************************!*\
   !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/typeof.js ***!
@@ -652,6 +1833,498 @@ module.exports.default = module.exports, module.exports.__esModule = true;
 
 /***/ }),
 
+/***/ "../../../node_modules/.pnpm/@tannin+compile@1.1.0/node_modules/@tannin/compile/index.js":
+/*!***********************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@tannin+compile@1.1.0/node_modules/@tannin/compile/index.js ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ compile)
+/* harmony export */ });
+/* harmony import */ var _tannin_postfix__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tannin/postfix */ "../../../node_modules/.pnpm/@tannin+postfix@1.1.0/node_modules/@tannin/postfix/index.js");
+/* harmony import */ var _tannin_evaluate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @tannin/evaluate */ "../../../node_modules/.pnpm/@tannin+evaluate@1.2.0/node_modules/@tannin/evaluate/index.js");
+
+
+
+/**
+ * Given a C expression, returns a function which can be called to evaluate its
+ * result.
+ *
+ * @example
+ *
+ * ```js
+ * import compile from '@tannin/compile';
+ *
+ * const evaluate = compile( 'n > 1' );
+ *
+ * evaluate( { n: 2 } );
+ * // ⇒ true
+ * ```
+ *
+ * @param {string} expression C expression.
+ *
+ * @return {(variables?:{[variable:string]:*})=>*} Compiled evaluator.
+ */
+function compile( expression ) {
+	var terms = (0,_tannin_postfix__WEBPACK_IMPORTED_MODULE_0__.default)( expression );
+
+	return function( variables ) {
+		return (0,_tannin_evaluate__WEBPACK_IMPORTED_MODULE_1__.default)( terms, variables );
+	};
+}
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@tannin+evaluate@1.2.0/node_modules/@tannin/evaluate/index.js":
+/*!*************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@tannin+evaluate@1.2.0/node_modules/@tannin/evaluate/index.js ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ evaluate)
+/* harmony export */ });
+/**
+ * Operator callback functions.
+ *
+ * @type {Object}
+ */
+var OPERATORS = {
+	'!': function( a ) {
+		return ! a;
+	},
+	'*': function( a, b ) {
+		return a * b;
+	},
+	'/': function( a, b ) {
+		return a / b;
+	},
+	'%': function( a, b ) {
+		return a % b;
+	},
+	'+': function( a, b ) {
+		return a + b;
+	},
+	'-': function( a, b ) {
+		return a - b;
+	},
+	'<': function( a, b ) {
+		return a < b;
+	},
+	'<=': function( a, b ) {
+		return a <= b;
+	},
+	'>': function( a, b ) {
+		return a > b;
+	},
+	'>=': function( a, b ) {
+		return a >= b;
+	},
+	'==': function( a, b ) {
+		return a === b;
+	},
+	'!=': function( a, b ) {
+		return a !== b;
+	},
+	'&&': function( a, b ) {
+		return a && b;
+	},
+	'||': function( a, b ) {
+		return a || b;
+	},
+	'?:': function( a, b, c ) {
+		if ( a ) {
+			throw b;
+		}
+
+		return c;
+	},
+};
+
+/**
+ * Given an array of postfix terms and operand variables, returns the result of
+ * the postfix evaluation.
+ *
+ * @example
+ *
+ * ```js
+ * import evaluate from '@tannin/evaluate';
+ *
+ * // 3 + 4 * 5 / 6 ⇒ '3 4 5 * 6 / +'
+ * const terms = [ '3', '4', '5', '*', '6', '/', '+' ];
+ *
+ * evaluate( terms, {} );
+ * // ⇒ 6.333333333333334
+ * ```
+ *
+ * @param {string[]} postfix   Postfix terms.
+ * @param {Object}   variables Operand variables.
+ *
+ * @return {*} Result of evaluation.
+ */
+function evaluate( postfix, variables ) {
+	var stack = [],
+		i, j, args, getOperatorResult, term, value;
+
+	for ( i = 0; i < postfix.length; i++ ) {
+		term = postfix[ i ];
+
+		getOperatorResult = OPERATORS[ term ];
+		if ( getOperatorResult ) {
+			// Pop from stack by number of function arguments.
+			j = getOperatorResult.length;
+			args = Array( j );
+			while ( j-- ) {
+				args[ j ] = stack.pop();
+			}
+
+			try {
+				value = getOperatorResult.apply( null, args );
+			} catch ( earlyReturn ) {
+				return earlyReturn;
+			}
+		} else if ( variables.hasOwnProperty( term ) ) {
+			value = variables[ term ];
+		} else {
+			value = +term;
+		}
+
+		stack.push( value );
+	}
+
+	return stack[ 0 ];
+}
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@tannin+plural-forms@1.1.0/node_modules/@tannin/plural-forms/index.js":
+/*!*********************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@tannin+plural-forms@1.1.0/node_modules/@tannin/plural-forms/index.js ***!
+  \*********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ pluralForms)
+/* harmony export */ });
+/* harmony import */ var _tannin_compile__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tannin/compile */ "../../../node_modules/.pnpm/@tannin+compile@1.1.0/node_modules/@tannin/compile/index.js");
+
+
+/**
+ * Given a C expression, returns a function which, when called with a value,
+ * evaluates the result with the value assumed to be the "n" variable of the
+ * expression. The result will be coerced to its numeric equivalent.
+ *
+ * @param {string} expression C expression.
+ *
+ * @return {Function} Evaluator function.
+ */
+function pluralForms( expression ) {
+	var evaluate = (0,_tannin_compile__WEBPACK_IMPORTED_MODULE_0__.default)( expression );
+
+	return function( n ) {
+		return +evaluate( { n: n } );
+	};
+}
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@tannin+postfix@1.1.0/node_modules/@tannin/postfix/index.js":
+/*!***********************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@tannin+postfix@1.1.0/node_modules/@tannin/postfix/index.js ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ postfix)
+/* harmony export */ });
+var PRECEDENCE, OPENERS, TERMINATORS, PATTERN;
+
+/**
+ * Operator precedence mapping.
+ *
+ * @type {Object}
+ */
+PRECEDENCE = {
+	'(': 9,
+	'!': 8,
+	'*': 7,
+	'/': 7,
+	'%': 7,
+	'+': 6,
+	'-': 6,
+	'<': 5,
+	'<=': 5,
+	'>': 5,
+	'>=': 5,
+	'==': 4,
+	'!=': 4,
+	'&&': 3,
+	'||': 2,
+	'?': 1,
+	'?:': 1,
+};
+
+/**
+ * Characters which signal pair opening, to be terminated by terminators.
+ *
+ * @type {string[]}
+ */
+OPENERS = [ '(', '?' ];
+
+/**
+ * Characters which signal pair termination, the value an array with the
+ * opener as its first member. The second member is an optional operator
+ * replacement to push to the stack.
+ *
+ * @type {string[]}
+ */
+TERMINATORS = {
+	')': [ '(' ],
+	':': [ '?', '?:' ],
+};
+
+/**
+ * Pattern matching operators and openers.
+ *
+ * @type {RegExp}
+ */
+PATTERN = /<=|>=|==|!=|&&|\|\||\?:|\(|!|\*|\/|%|\+|-|<|>|\?|\)|:/;
+
+/**
+ * Given a C expression, returns the equivalent postfix (Reverse Polish)
+ * notation terms as an array.
+ *
+ * If a postfix string is desired, simply `.join( ' ' )` the result.
+ *
+ * @example
+ *
+ * ```js
+ * import postfix from '@tannin/postfix';
+ *
+ * postfix( 'n > 1' );
+ * // ⇒ [ 'n', '1', '>' ]
+ * ```
+ *
+ * @param {string} expression C expression.
+ *
+ * @return {string[]} Postfix terms.
+ */
+function postfix( expression ) {
+	var terms = [],
+		stack = [],
+		match, operator, term, element;
+
+	while ( ( match = expression.match( PATTERN ) ) ) {
+		operator = match[ 0 ];
+
+		// Term is the string preceding the operator match. It may contain
+		// whitespace, and may be empty (if operator is at beginning).
+		term = expression.substr( 0, match.index ).trim();
+		if ( term ) {
+			terms.push( term );
+		}
+
+		while ( ( element = stack.pop() ) ) {
+			if ( TERMINATORS[ operator ] ) {
+				if ( TERMINATORS[ operator ][ 0 ] === element ) {
+					// Substitution works here under assumption that because
+					// the assigned operator will no longer be a terminator, it
+					// will be pushed to the stack during the condition below.
+					operator = TERMINATORS[ operator ][ 1 ] || operator;
+					break;
+				}
+			} else if ( OPENERS.indexOf( element ) >= 0 || PRECEDENCE[ element ] < PRECEDENCE[ operator ] ) {
+				// Push to stack if either an opener or when pop reveals an
+				// element of lower precedence.
+				stack.push( element );
+				break;
+			}
+
+			// For each popped from stack, push to terms.
+			terms.push( element );
+		}
+
+		if ( ! TERMINATORS[ operator ] ) {
+			stack.push( operator );
+		}
+
+		// Slice matched fragment from expression to continue match.
+		expression = expression.substr( match.index + operator.length );
+	}
+
+	// Push remainder of operand, if exists, to terms.
+	expression = expression.trim();
+	if ( expression ) {
+		terms.push( expression );
+	}
+
+	// Pop remaining items from stack into terms.
+	return terms.concat( stack.reverse() );
+}
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@tannin+sprintf@1.2.0/node_modules/@tannin/sprintf/index.js":
+/*!***********************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@tannin+sprintf@1.2.0/node_modules/@tannin/sprintf/index.js ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ sprintf)
+/* harmony export */ });
+/**
+ * Regular expression matching format placeholder syntax.
+ *
+ * The pattern for matching named arguments is a naive and incomplete matcher
+ * against valid JavaScript identifier names.
+ *
+ * via Mathias Bynens:
+ *
+ * >An identifier must start with $, _, or any character in the Unicode
+ * >categories “Uppercase letter (Lu)”, “Lowercase letter (Ll)”, “Titlecase
+ * >letter (Lt)”, “Modifier letter (Lm)”, “Other letter (Lo)”, or “Letter
+ * >number (Nl)”.
+ * >
+ * >The rest of the string can contain the same characters, plus any U+200C zero
+ * >width non-joiner characters, U+200D zero width joiner characters, and
+ * >characters in the Unicode categories “Non-spacing mark (Mn)”, “Spacing
+ * >combining mark (Mc)”, “Decimal digit number (Nd)”, or “Connector
+ * >punctuation (Pc)”.
+ *
+ * If browser support is constrained to those supporting ES2015, this could be
+ * made more accurate using the `u` flag:
+ *
+ * ```
+ * /^[$_\p{L}\p{Nl}][$_\p{L}\p{Nl}\u200C\u200D\p{Mn}\p{Mc}\p{Nd}\p{Pc}]*$/u;
+ * ```
+ *
+ * @see http://www.pixelbeat.org/programming/gcc/format_specs.html
+ * @see https://mathiasbynens.be/notes/javascript-identifiers#valid-identifier-names
+ *
+ * @type {RegExp}
+ */
+var PATTERN = /%(((\d+)\$)|(\(([$_a-zA-Z][$_a-zA-Z0-9]*)\)))?[ +0#-]*\d*(\.(\d+|\*))?(ll|[lhqL])?([cduxXefgsp%])/g;
+//               ▲         ▲                    ▲       ▲  ▲            ▲           ▲ type
+//               │         │                    │       │  │            └ Length (unsupported)
+//               │         │                    │       │  └ Precision / max width
+//               │         │                    │       └ Min width (unsupported)
+//               │         │                    └ Flags (unsupported)
+//               └ Index   └ Name (for named arguments)
+
+/**
+ * Given a format string, returns string with arguments interpolatation.
+ * Arguments can either be provided directly via function arguments spread, or
+ * with an array as the second argument.
+ *
+ * @see https://en.wikipedia.org/wiki/Printf_format_string
+ *
+ * @example
+ *
+ * ```js
+ * import sprintf from '@tannin/sprintf';
+ *
+ * sprintf( 'Hello %s!', 'world' );
+ * // ⇒ 'Hello world!'
+ * ```
+ *
+ * @param {string}                                   string printf format string
+ * @param {...string|string[]|Object<string,string>} [args] String arguments.
+ *
+ * @return {string} Formatted string.
+ */
+function sprintf( string, args ) {
+	var i;
+
+	if ( ! Array.isArray( args ) ) {
+		// Construct a copy of arguments from index one, used for replace
+		// function placeholder substitution.
+		args = new Array( arguments.length - 1 );
+		for ( i = 1; i < arguments.length; i++ ) {
+			args[ i - 1 ] = arguments[ i ];
+		}
+	}
+
+	i = 1;
+
+	return string.replace( PATTERN, function() {
+		var index, name, precision, type, value;
+
+		index = arguments[ 3 ];
+		name = arguments[ 5 ];
+		precision = arguments[ 7 ];
+		type = arguments[ 9 ];
+
+		// There's no placeholder substitution in the explicit "%", meaning it
+		// is not necessary to increment argument index.
+		if ( type === '%' ) {
+			return '%';
+		}
+
+		// Asterisk precision determined by peeking / shifting next argument.
+		if ( precision === '*' ) {
+			precision = args[ i - 1 ];
+			i++;
+		}
+
+		if ( name !== undefined ) {
+			// If it's a named argument, use name.
+			if ( args[ 0 ] && typeof args[ 0 ] === 'object' &&
+					args[ 0 ].hasOwnProperty( name ) ) {
+				value = args[ 0 ][ name ];
+			}
+		} else {
+			// If not a positional argument, use counter value.
+			if ( index === undefined ) {
+				index = i;
+			}
+
+			i++;
+
+			// Positional argument.
+			value = args[ index - 1 ];
+		}
+
+		// Parse as type.
+		if ( type === 'f' ) {
+			value = parseFloat( value ) || 0;
+		} else if ( type === 'd' ) {
+			value = parseInt( value ) || 0;
+		}
+
+		// Apply precision.
+		if ( precision !== undefined ) {
+			if ( type === 'f' ) {
+				value = value.toFixed( precision );
+			} else if ( type === 's' ) {
+				value = value.substr( 0, precision );
+			}
+		}
+
+		// To avoid "undefined" concatenation, return empty string if no
+		// placeholder substitution can be performed.
+		return value !== undefined && value !== null ? value : '';
+	} );
+}
+
+
+/***/ }),
+
 /***/ "../../../node_modules/.pnpm/classnames@2.3.1/node_modules/classnames/index.js":
 /*!*************************************************************************************!*\
   !*** ../../../node_modules/.pnpm/classnames@2.3.1/node_modules/classnames/index.js ***!
@@ -719,10 +2392,2445 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
+/***/ "../../../node_modules/.pnpm/events@3.3.0/node_modules/events/events.js":
+/*!******************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/events@3.3.0/node_modules/events/events.js ***!
+  \******************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+var R = typeof Reflect === 'object' ? Reflect : null
+var ReflectApply = R && typeof R.apply === 'function'
+  ? R.apply
+  : function ReflectApply(target, receiver, args) {
+    return Function.prototype.apply.call(target, receiver, args);
+  }
+
+var ReflectOwnKeys
+if (R && typeof R.ownKeys === 'function') {
+  ReflectOwnKeys = R.ownKeys
+} else if (Object.getOwnPropertySymbols) {
+  ReflectOwnKeys = function ReflectOwnKeys(target) {
+    return Object.getOwnPropertyNames(target)
+      .concat(Object.getOwnPropertySymbols(target));
+  };
+} else {
+  ReflectOwnKeys = function ReflectOwnKeys(target) {
+    return Object.getOwnPropertyNames(target);
+  };
+}
+
+function ProcessEmitWarning(warning) {
+  if (console && console.warn) console.warn(warning);
+}
+
+var NumberIsNaN = Number.isNaN || function NumberIsNaN(value) {
+  return value !== value;
+}
+
+function EventEmitter() {
+  EventEmitter.init.call(this);
+}
+module.exports = EventEmitter;
+module.exports.once = once;
+
+// Backwards-compat with node 0.10.x
+EventEmitter.EventEmitter = EventEmitter;
+
+EventEmitter.prototype._events = undefined;
+EventEmitter.prototype._eventsCount = 0;
+EventEmitter.prototype._maxListeners = undefined;
+
+// By default EventEmitters will print a warning if more than 10 listeners are
+// added to it. This is a useful default which helps finding memory leaks.
+var defaultMaxListeners = 10;
+
+function checkListener(listener) {
+  if (typeof listener !== 'function') {
+    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
+  }
+}
+
+Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
+  enumerable: true,
+  get: function() {
+    return defaultMaxListeners;
+  },
+  set: function(arg) {
+    if (typeof arg !== 'number' || arg < 0 || NumberIsNaN(arg)) {
+      throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + '.');
+    }
+    defaultMaxListeners = arg;
+  }
+});
+
+EventEmitter.init = function() {
+
+  if (this._events === undefined ||
+      this._events === Object.getPrototypeOf(this)._events) {
+    this._events = Object.create(null);
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+};
+
+// Obviously not all Emitters should be limited to 10. This function allows
+// that to be increased. Set to zero for unlimited.
+EventEmitter.prototype.setMaxListeners = function setMaxListeners(n) {
+  if (typeof n !== 'number' || n < 0 || NumberIsNaN(n)) {
+    throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + '.');
+  }
+  this._maxListeners = n;
+  return this;
+};
+
+function _getMaxListeners(that) {
+  if (that._maxListeners === undefined)
+    return EventEmitter.defaultMaxListeners;
+  return that._maxListeners;
+}
+
+EventEmitter.prototype.getMaxListeners = function getMaxListeners() {
+  return _getMaxListeners(this);
+};
+
+EventEmitter.prototype.emit = function emit(type) {
+  var args = [];
+  for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
+  var doError = (type === 'error');
+
+  var events = this._events;
+  if (events !== undefined)
+    doError = (doError && events.error === undefined);
+  else if (!doError)
+    return false;
+
+  // If there is no 'error' event listener then throw.
+  if (doError) {
+    var er;
+    if (args.length > 0)
+      er = args[0];
+    if (er instanceof Error) {
+      // Note: The comments on the `throw` lines are intentional, they show
+      // up in Node's output if this results in an unhandled exception.
+      throw er; // Unhandled 'error' event
+    }
+    // At least give some kind of context to the user
+    var err = new Error('Unhandled error.' + (er ? ' (' + er.message + ')' : ''));
+    err.context = er;
+    throw err; // Unhandled 'error' event
+  }
+
+  var handler = events[type];
+
+  if (handler === undefined)
+    return false;
+
+  if (typeof handler === 'function') {
+    ReflectApply(handler, this, args);
+  } else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      ReflectApply(listeners[i], this, args);
+  }
+
+  return true;
+};
+
+function _addListener(target, type, listener, prepend) {
+  var m;
+  var events;
+  var existing;
+
+  checkListener(listener);
+
+  events = target._events;
+  if (events === undefined) {
+    events = target._events = Object.create(null);
+    target._eventsCount = 0;
+  } else {
+    // To avoid recursion in the case that type === "newListener"! Before
+    // adding it to the listeners, first emit "newListener".
+    if (events.newListener !== undefined) {
+      target.emit('newListener', type,
+                  listener.listener ? listener.listener : listener);
+
+      // Re-assign `events` because a newListener handler could have caused the
+      // this._events to be assigned to a new object
+      events = target._events;
+    }
+    existing = events[type];
+  }
+
+  if (existing === undefined) {
+    // Optimize the case of one listener. Don't need the extra array object.
+    existing = events[type] = listener;
+    ++target._eventsCount;
+  } else {
+    if (typeof existing === 'function') {
+      // Adding the second element, need to change to array.
+      existing = events[type] =
+        prepend ? [listener, existing] : [existing, listener];
+      // If we've already got an array, just append.
+    } else if (prepend) {
+      existing.unshift(listener);
+    } else {
+      existing.push(listener);
+    }
+
+    // Check for listener leak
+    m = _getMaxListeners(target);
+    if (m > 0 && existing.length > m && !existing.warned) {
+      existing.warned = true;
+      // No error code for this since it is a Warning
+      // eslint-disable-next-line no-restricted-syntax
+      var w = new Error('Possible EventEmitter memory leak detected. ' +
+                          existing.length + ' ' + String(type) + ' listeners ' +
+                          'added. Use emitter.setMaxListeners() to ' +
+                          'increase limit');
+      w.name = 'MaxListenersExceededWarning';
+      w.emitter = target;
+      w.type = type;
+      w.count = existing.length;
+      ProcessEmitWarning(w);
+    }
+  }
+
+  return target;
+}
+
+EventEmitter.prototype.addListener = function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
+};
+
+EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+
+EventEmitter.prototype.prependListener =
+    function prependListener(type, listener) {
+      return _addListener(this, type, listener, true);
+    };
+
+function onceWrapper() {
+  if (!this.fired) {
+    this.target.removeListener(this.type, this.wrapFn);
+    this.fired = true;
+    if (arguments.length === 0)
+      return this.listener.call(this.target);
+    return this.listener.apply(this.target, arguments);
+  }
+}
+
+function _onceWrap(target, type, listener) {
+  var state = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
+  var wrapped = onceWrapper.bind(state);
+  wrapped.listener = listener;
+  state.wrapFn = wrapped;
+  return wrapped;
+}
+
+EventEmitter.prototype.once = function once(type, listener) {
+  checkListener(listener);
+  this.on(type, _onceWrap(this, type, listener));
+  return this;
+};
+
+EventEmitter.prototype.prependOnceListener =
+    function prependOnceListener(type, listener) {
+      checkListener(listener);
+      this.prependListener(type, _onceWrap(this, type, listener));
+      return this;
+    };
+
+// Emits a 'removeListener' event if and only if the listener was removed.
+EventEmitter.prototype.removeListener =
+    function removeListener(type, listener) {
+      var list, events, position, i, originalListener;
+
+      checkListener(listener);
+
+      events = this._events;
+      if (events === undefined)
+        return this;
+
+      list = events[type];
+      if (list === undefined)
+        return this;
+
+      if (list === listener || list.listener === listener) {
+        if (--this._eventsCount === 0)
+          this._events = Object.create(null);
+        else {
+          delete events[type];
+          if (events.removeListener)
+            this.emit('removeListener', type, list.listener || listener);
+        }
+      } else if (typeof list !== 'function') {
+        position = -1;
+
+        for (i = list.length - 1; i >= 0; i--) {
+          if (list[i] === listener || list[i].listener === listener) {
+            originalListener = list[i].listener;
+            position = i;
+            break;
+          }
+        }
+
+        if (position < 0)
+          return this;
+
+        if (position === 0)
+          list.shift();
+        else {
+          spliceOne(list, position);
+        }
+
+        if (list.length === 1)
+          events[type] = list[0];
+
+        if (events.removeListener !== undefined)
+          this.emit('removeListener', type, originalListener || listener);
+      }
+
+      return this;
+    };
+
+EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
+
+EventEmitter.prototype.removeAllListeners =
+    function removeAllListeners(type) {
+      var listeners, events, i;
+
+      events = this._events;
+      if (events === undefined)
+        return this;
+
+      // not listening for removeListener, no need to emit
+      if (events.removeListener === undefined) {
+        if (arguments.length === 0) {
+          this._events = Object.create(null);
+          this._eventsCount = 0;
+        } else if (events[type] !== undefined) {
+          if (--this._eventsCount === 0)
+            this._events = Object.create(null);
+          else
+            delete events[type];
+        }
+        return this;
+      }
+
+      // emit removeListener for all listeners on all events
+      if (arguments.length === 0) {
+        var keys = Object.keys(events);
+        var key;
+        for (i = 0; i < keys.length; ++i) {
+          key = keys[i];
+          if (key === 'removeListener') continue;
+          this.removeAllListeners(key);
+        }
+        this.removeAllListeners('removeListener');
+        this._events = Object.create(null);
+        this._eventsCount = 0;
+        return this;
+      }
+
+      listeners = events[type];
+
+      if (typeof listeners === 'function') {
+        this.removeListener(type, listeners);
+      } else if (listeners !== undefined) {
+        // LIFO order
+        for (i = listeners.length - 1; i >= 0; i--) {
+          this.removeListener(type, listeners[i]);
+        }
+      }
+
+      return this;
+    };
+
+function _listeners(target, type, unwrap) {
+  var events = target._events;
+
+  if (events === undefined)
+    return [];
+
+  var evlistener = events[type];
+  if (evlistener === undefined)
+    return [];
+
+  if (typeof evlistener === 'function')
+    return unwrap ? [evlistener.listener || evlistener] : [evlistener];
+
+  return unwrap ?
+    unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
+}
+
+EventEmitter.prototype.listeners = function listeners(type) {
+  return _listeners(this, type, true);
+};
+
+EventEmitter.prototype.rawListeners = function rawListeners(type) {
+  return _listeners(this, type, false);
+};
+
+EventEmitter.listenerCount = function(emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+};
+
+EventEmitter.prototype.listenerCount = listenerCount;
+function listenerCount(type) {
+  var events = this._events;
+
+  if (events !== undefined) {
+    var evlistener = events[type];
+
+    if (typeof evlistener === 'function') {
+      return 1;
+    } else if (evlistener !== undefined) {
+      return evlistener.length;
+    }
+  }
+
+  return 0;
+}
+
+EventEmitter.prototype.eventNames = function eventNames() {
+  return this._eventsCount > 0 ? ReflectOwnKeys(this._events) : [];
+};
+
+function arrayClone(arr, n) {
+  var copy = new Array(n);
+  for (var i = 0; i < n; ++i)
+    copy[i] = arr[i];
+  return copy;
+}
+
+function spliceOne(list, index) {
+  for (; index + 1 < list.length; index++)
+    list[index] = list[index + 1];
+  list.pop();
+}
+
+function unwrapListeners(arr) {
+  var ret = new Array(arr.length);
+  for (var i = 0; i < ret.length; ++i) {
+    ret[i] = arr[i].listener || arr[i];
+  }
+  return ret;
+}
+
+function once(emitter, name) {
+  return new Promise(function (resolve, reject) {
+    function errorListener(err) {
+      emitter.removeListener(name, resolver);
+      reject(err);
+    }
+
+    function resolver() {
+      if (typeof emitter.removeListener === 'function') {
+        emitter.removeListener('error', errorListener);
+      }
+      resolve([].slice.call(arguments));
+    };
+
+    eventTargetAgnosticAddListener(emitter, name, resolver, { once: true });
+    if (name !== 'error') {
+      addErrorHandlerIfEventEmitter(emitter, errorListener, { once: true });
+    }
+  });
+}
+
+function addErrorHandlerIfEventEmitter(emitter, handler, flags) {
+  if (typeof emitter.on === 'function') {
+    eventTargetAgnosticAddListener(emitter, 'error', handler, flags);
+  }
+}
+
+function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
+  if (typeof emitter.on === 'function') {
+    if (flags.once) {
+      emitter.once(name, listener);
+    } else {
+      emitter.on(name, listener);
+    }
+  } else if (typeof emitter.addEventListener === 'function') {
+    // EventTarget does not have `error` event semantics like Node
+    // EventEmitters, we do not listen for `error` events here.
+    emitter.addEventListener(name, function wrapListener(arg) {
+      // IE does not have builtin `{ once: true }` support so we
+      // have to do it manually.
+      if (flags.once) {
+        emitter.removeEventListener(name, wrapListener);
+      }
+      listener(arg);
+    });
+  } else {
+    throw new TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof emitter);
+  }
+}
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/emptyFunction.js":
+/*!**************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/emptyFunction.js ***!
+  \**************************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * 
+ */
+
+function makeEmptyFunction(arg) {
+  return function () {
+    return arg;
+  };
+}
+
+/**
+ * This function accepts and discards inputs; it has no side effects. This is
+ * primarily useful idiomatically for overridable function endpoints which
+ * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+ */
+var emptyFunction = function emptyFunction() {};
+
+emptyFunction.thatReturns = makeEmptyFunction;
+emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+emptyFunction.thatReturnsThis = function () {
+  return this;
+};
+emptyFunction.thatReturnsArgument = function (arg) {
+  return arg;
+};
+
+module.exports = emptyFunction;
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/invariant.js":
+/*!**********************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/invariant.js ***!
+  \**********************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+
+
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
+var validateFormat = function validateFormat(format) {};
+
+if (undefined !== 'production') {
+  validateFormat = function validateFormat(format) {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  };
+}
+
+function invariant(condition, format, a, b, c, d, e, f) {
+  validateFormat(format);
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(format.replace(/%s/g, function () {
+        return args[argIndex++];
+      }));
+      error.name = 'Invariant Violation';
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+}
+
+module.exports = invariant;
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/warning.js":
+/*!********************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/warning.js ***!
+  \********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+
+
+var emptyFunction = __webpack_require__(/*! ./emptyFunction */ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/emptyFunction.js");
+
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var warning = emptyFunction;
+
+if (undefined !== 'production') {
+  var printWarning = function printWarning(format) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    var argIndex = 0;
+    var message = 'Warning: ' + format.replace(/%s/g, function () {
+      return args[argIndex++];
+    });
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+
+  warning = function warning(condition, format) {
+    if (format === undefined) {
+      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+
+    if (format.indexOf('Failed Composite propType: ') === 0) {
+      return; // Ignore CompositeComponent proptype check.
+    }
+
+    if (!condition) {
+      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        args[_key2 - 2] = arguments[_key2];
+      }
+
+      printWarning.apply(undefined, [format].concat(args));
+    }
+  };
+}
+
+module.exports = warning;
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/common.js":
+/*!*****************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/common.js ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./utils */ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/utils.js");
+var assert = __webpack_require__(/*! minimalistic-assert */ "../../../node_modules/.pnpm/minimalistic-assert@1.0.1/node_modules/minimalistic-assert/index.js");
+
+function BlockHash() {
+  this.pending = null;
+  this.pendingTotal = 0;
+  this.blockSize = this.constructor.blockSize;
+  this.outSize = this.constructor.outSize;
+  this.hmacStrength = this.constructor.hmacStrength;
+  this.padLength = this.constructor.padLength / 8;
+  this.endian = 'big';
+
+  this._delta8 = this.blockSize / 8;
+  this._delta32 = this.blockSize / 32;
+}
+exports.BlockHash = BlockHash;
+
+BlockHash.prototype.update = function update(msg, enc) {
+  // Convert message to array, pad it, and join into 32bit blocks
+  msg = utils.toArray(msg, enc);
+  if (!this.pending)
+    this.pending = msg;
+  else
+    this.pending = this.pending.concat(msg);
+  this.pendingTotal += msg.length;
+
+  // Enough data, try updating
+  if (this.pending.length >= this._delta8) {
+    msg = this.pending;
+
+    // Process pending data in blocks
+    var r = msg.length % this._delta8;
+    this.pending = msg.slice(msg.length - r, msg.length);
+    if (this.pending.length === 0)
+      this.pending = null;
+
+    msg = utils.join32(msg, 0, msg.length - r, this.endian);
+    for (var i = 0; i < msg.length; i += this._delta32)
+      this._update(msg, i, i + this._delta32);
+  }
+
+  return this;
+};
+
+BlockHash.prototype.digest = function digest(enc) {
+  this.update(this._pad());
+  assert(this.pending === null);
+
+  return this._digest(enc);
+};
+
+BlockHash.prototype._pad = function pad() {
+  var len = this.pendingTotal;
+  var bytes = this._delta8;
+  var k = bytes - ((len + this.padLength) % bytes);
+  var res = new Array(k + this.padLength);
+  res[0] = 0x80;
+  for (var i = 1; i < k; i++)
+    res[i] = 0;
+
+  // Append length
+  len <<= 3;
+  if (this.endian === 'big') {
+    for (var t = 8; t < this.padLength; t++)
+      res[i++] = 0;
+
+    res[i++] = 0;
+    res[i++] = 0;
+    res[i++] = 0;
+    res[i++] = 0;
+    res[i++] = (len >>> 24) & 0xff;
+    res[i++] = (len >>> 16) & 0xff;
+    res[i++] = (len >>> 8) & 0xff;
+    res[i++] = len & 0xff;
+  } else {
+    res[i++] = len & 0xff;
+    res[i++] = (len >>> 8) & 0xff;
+    res[i++] = (len >>> 16) & 0xff;
+    res[i++] = (len >>> 24) & 0xff;
+    res[i++] = 0;
+    res[i++] = 0;
+    res[i++] = 0;
+    res[i++] = 0;
+
+    for (t = 8; t < this.padLength; t++)
+      res[i++] = 0;
+  }
+
+  return res;
+};
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/sha/1.js":
+/*!****************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/sha/1.js ***!
+  \****************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ../utils */ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/utils.js");
+var common = __webpack_require__(/*! ../common */ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/common.js");
+var shaCommon = __webpack_require__(/*! ./common */ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/sha/common.js");
+
+var rotl32 = utils.rotl32;
+var sum32 = utils.sum32;
+var sum32_5 = utils.sum32_5;
+var ft_1 = shaCommon.ft_1;
+var BlockHash = common.BlockHash;
+
+var sha1_K = [
+  0x5A827999, 0x6ED9EBA1,
+  0x8F1BBCDC, 0xCA62C1D6
+];
+
+function SHA1() {
+  if (!(this instanceof SHA1))
+    return new SHA1();
+
+  BlockHash.call(this);
+  this.h = [
+    0x67452301, 0xefcdab89, 0x98badcfe,
+    0x10325476, 0xc3d2e1f0 ];
+  this.W = new Array(80);
+}
+
+utils.inherits(SHA1, BlockHash);
+module.exports = SHA1;
+
+SHA1.blockSize = 512;
+SHA1.outSize = 160;
+SHA1.hmacStrength = 80;
+SHA1.padLength = 64;
+
+SHA1.prototype._update = function _update(msg, start) {
+  var W = this.W;
+
+  for (var i = 0; i < 16; i++)
+    W[i] = msg[start + i];
+
+  for(; i < W.length; i++)
+    W[i] = rotl32(W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16], 1);
+
+  var a = this.h[0];
+  var b = this.h[1];
+  var c = this.h[2];
+  var d = this.h[3];
+  var e = this.h[4];
+
+  for (i = 0; i < W.length; i++) {
+    var s = ~~(i / 20);
+    var t = sum32_5(rotl32(a, 5), ft_1(s, b, c, d), e, W[i], sha1_K[s]);
+    e = d;
+    d = c;
+    c = rotl32(b, 30);
+    b = a;
+    a = t;
+  }
+
+  this.h[0] = sum32(this.h[0], a);
+  this.h[1] = sum32(this.h[1], b);
+  this.h[2] = sum32(this.h[2], c);
+  this.h[3] = sum32(this.h[3], d);
+  this.h[4] = sum32(this.h[4], e);
+};
+
+SHA1.prototype._digest = function digest(enc) {
+  if (enc === 'hex')
+    return utils.toHex32(this.h, 'big');
+  else
+    return utils.split32(this.h, 'big');
+};
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/sha/common.js":
+/*!*********************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/sha/common.js ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ../utils */ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/utils.js");
+var rotr32 = utils.rotr32;
+
+function ft_1(s, x, y, z) {
+  if (s === 0)
+    return ch32(x, y, z);
+  if (s === 1 || s === 3)
+    return p32(x, y, z);
+  if (s === 2)
+    return maj32(x, y, z);
+}
+exports.ft_1 = ft_1;
+
+function ch32(x, y, z) {
+  return (x & y) ^ ((~x) & z);
+}
+exports.ch32 = ch32;
+
+function maj32(x, y, z) {
+  return (x & y) ^ (x & z) ^ (y & z);
+}
+exports.maj32 = maj32;
+
+function p32(x, y, z) {
+  return x ^ y ^ z;
+}
+exports.p32 = p32;
+
+function s0_256(x) {
+  return rotr32(x, 2) ^ rotr32(x, 13) ^ rotr32(x, 22);
+}
+exports.s0_256 = s0_256;
+
+function s1_256(x) {
+  return rotr32(x, 6) ^ rotr32(x, 11) ^ rotr32(x, 25);
+}
+exports.s1_256 = s1_256;
+
+function g0_256(x) {
+  return rotr32(x, 7) ^ rotr32(x, 18) ^ (x >>> 3);
+}
+exports.g0_256 = g0_256;
+
+function g1_256(x) {
+  return rotr32(x, 17) ^ rotr32(x, 19) ^ (x >>> 10);
+}
+exports.g1_256 = g1_256;
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/utils.js":
+/*!****************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/utils.js ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var assert = __webpack_require__(/*! minimalistic-assert */ "../../../node_modules/.pnpm/minimalistic-assert@1.0.1/node_modules/minimalistic-assert/index.js");
+var inherits = __webpack_require__(/*! inherits */ "../../../node_modules/.pnpm/inherits@2.0.4/node_modules/inherits/inherits_browser.js");
+
+exports.inherits = inherits;
+
+function isSurrogatePair(msg, i) {
+  if ((msg.charCodeAt(i) & 0xFC00) !== 0xD800) {
+    return false;
+  }
+  if (i < 0 || i + 1 >= msg.length) {
+    return false;
+  }
+  return (msg.charCodeAt(i + 1) & 0xFC00) === 0xDC00;
+}
+
+function toArray(msg, enc) {
+  if (Array.isArray(msg))
+    return msg.slice();
+  if (!msg)
+    return [];
+  var res = [];
+  if (typeof msg === 'string') {
+    if (!enc) {
+      // Inspired by stringToUtf8ByteArray() in closure-library by Google
+      // https://github.com/google/closure-library/blob/8598d87242af59aac233270742c8984e2b2bdbe0/closure/goog/crypt/crypt.js#L117-L143
+      // Apache License 2.0
+      // https://github.com/google/closure-library/blob/master/LICENSE
+      var p = 0;
+      for (var i = 0; i < msg.length; i++) {
+        var c = msg.charCodeAt(i);
+        if (c < 128) {
+          res[p++] = c;
+        } else if (c < 2048) {
+          res[p++] = (c >> 6) | 192;
+          res[p++] = (c & 63) | 128;
+        } else if (isSurrogatePair(msg, i)) {
+          c = 0x10000 + ((c & 0x03FF) << 10) + (msg.charCodeAt(++i) & 0x03FF);
+          res[p++] = (c >> 18) | 240;
+          res[p++] = ((c >> 12) & 63) | 128;
+          res[p++] = ((c >> 6) & 63) | 128;
+          res[p++] = (c & 63) | 128;
+        } else {
+          res[p++] = (c >> 12) | 224;
+          res[p++] = ((c >> 6) & 63) | 128;
+          res[p++] = (c & 63) | 128;
+        }
+      }
+    } else if (enc === 'hex') {
+      msg = msg.replace(/[^a-z0-9]+/ig, '');
+      if (msg.length % 2 !== 0)
+        msg = '0' + msg;
+      for (i = 0; i < msg.length; i += 2)
+        res.push(parseInt(msg[i] + msg[i + 1], 16));
+    }
+  } else {
+    for (i = 0; i < msg.length; i++)
+      res[i] = msg[i] | 0;
+  }
+  return res;
+}
+exports.toArray = toArray;
+
+function toHex(msg) {
+  var res = '';
+  for (var i = 0; i < msg.length; i++)
+    res += zero2(msg[i].toString(16));
+  return res;
+}
+exports.toHex = toHex;
+
+function htonl(w) {
+  var res = (w >>> 24) |
+            ((w >>> 8) & 0xff00) |
+            ((w << 8) & 0xff0000) |
+            ((w & 0xff) << 24);
+  return res >>> 0;
+}
+exports.htonl = htonl;
+
+function toHex32(msg, endian) {
+  var res = '';
+  for (var i = 0; i < msg.length; i++) {
+    var w = msg[i];
+    if (endian === 'little')
+      w = htonl(w);
+    res += zero8(w.toString(16));
+  }
+  return res;
+}
+exports.toHex32 = toHex32;
+
+function zero2(word) {
+  if (word.length === 1)
+    return '0' + word;
+  else
+    return word;
+}
+exports.zero2 = zero2;
+
+function zero8(word) {
+  if (word.length === 7)
+    return '0' + word;
+  else if (word.length === 6)
+    return '00' + word;
+  else if (word.length === 5)
+    return '000' + word;
+  else if (word.length === 4)
+    return '0000' + word;
+  else if (word.length === 3)
+    return '00000' + word;
+  else if (word.length === 2)
+    return '000000' + word;
+  else if (word.length === 1)
+    return '0000000' + word;
+  else
+    return word;
+}
+exports.zero8 = zero8;
+
+function join32(msg, start, end, endian) {
+  var len = end - start;
+  assert(len % 4 === 0);
+  var res = new Array(len / 4);
+  for (var i = 0, k = start; i < res.length; i++, k += 4) {
+    var w;
+    if (endian === 'big')
+      w = (msg[k] << 24) | (msg[k + 1] << 16) | (msg[k + 2] << 8) | msg[k + 3];
+    else
+      w = (msg[k + 3] << 24) | (msg[k + 2] << 16) | (msg[k + 1] << 8) | msg[k];
+    res[i] = w >>> 0;
+  }
+  return res;
+}
+exports.join32 = join32;
+
+function split32(msg, endian) {
+  var res = new Array(msg.length * 4);
+  for (var i = 0, k = 0; i < msg.length; i++, k += 4) {
+    var m = msg[i];
+    if (endian === 'big') {
+      res[k] = m >>> 24;
+      res[k + 1] = (m >>> 16) & 0xff;
+      res[k + 2] = (m >>> 8) & 0xff;
+      res[k + 3] = m & 0xff;
+    } else {
+      res[k + 3] = m >>> 24;
+      res[k + 2] = (m >>> 16) & 0xff;
+      res[k + 1] = (m >>> 8) & 0xff;
+      res[k] = m & 0xff;
+    }
+  }
+  return res;
+}
+exports.split32 = split32;
+
+function rotr32(w, b) {
+  return (w >>> b) | (w << (32 - b));
+}
+exports.rotr32 = rotr32;
+
+function rotl32(w, b) {
+  return (w << b) | (w >>> (32 - b));
+}
+exports.rotl32 = rotl32;
+
+function sum32(a, b) {
+  return (a + b) >>> 0;
+}
+exports.sum32 = sum32;
+
+function sum32_3(a, b, c) {
+  return (a + b + c) >>> 0;
+}
+exports.sum32_3 = sum32_3;
+
+function sum32_4(a, b, c, d) {
+  return (a + b + c + d) >>> 0;
+}
+exports.sum32_4 = sum32_4;
+
+function sum32_5(a, b, c, d, e) {
+  return (a + b + c + d + e) >>> 0;
+}
+exports.sum32_5 = sum32_5;
+
+function sum64(buf, pos, ah, al) {
+  var bh = buf[pos];
+  var bl = buf[pos + 1];
+
+  var lo = (al + bl) >>> 0;
+  var hi = (lo < al ? 1 : 0) + ah + bh;
+  buf[pos] = hi >>> 0;
+  buf[pos + 1] = lo;
+}
+exports.sum64 = sum64;
+
+function sum64_hi(ah, al, bh, bl) {
+  var lo = (al + bl) >>> 0;
+  var hi = (lo < al ? 1 : 0) + ah + bh;
+  return hi >>> 0;
+}
+exports.sum64_hi = sum64_hi;
+
+function sum64_lo(ah, al, bh, bl) {
+  var lo = al + bl;
+  return lo >>> 0;
+}
+exports.sum64_lo = sum64_lo;
+
+function sum64_4_hi(ah, al, bh, bl, ch, cl, dh, dl) {
+  var carry = 0;
+  var lo = al;
+  lo = (lo + bl) >>> 0;
+  carry += lo < al ? 1 : 0;
+  lo = (lo + cl) >>> 0;
+  carry += lo < cl ? 1 : 0;
+  lo = (lo + dl) >>> 0;
+  carry += lo < dl ? 1 : 0;
+
+  var hi = ah + bh + ch + dh + carry;
+  return hi >>> 0;
+}
+exports.sum64_4_hi = sum64_4_hi;
+
+function sum64_4_lo(ah, al, bh, bl, ch, cl, dh, dl) {
+  var lo = al + bl + cl + dl;
+  return lo >>> 0;
+}
+exports.sum64_4_lo = sum64_4_lo;
+
+function sum64_5_hi(ah, al, bh, bl, ch, cl, dh, dl, eh, el) {
+  var carry = 0;
+  var lo = al;
+  lo = (lo + bl) >>> 0;
+  carry += lo < al ? 1 : 0;
+  lo = (lo + cl) >>> 0;
+  carry += lo < cl ? 1 : 0;
+  lo = (lo + dl) >>> 0;
+  carry += lo < dl ? 1 : 0;
+  lo = (lo + el) >>> 0;
+  carry += lo < el ? 1 : 0;
+
+  var hi = ah + bh + ch + dh + eh + carry;
+  return hi >>> 0;
+}
+exports.sum64_5_hi = sum64_5_hi;
+
+function sum64_5_lo(ah, al, bh, bl, ch, cl, dh, dl, eh, el) {
+  var lo = al + bl + cl + dl + el;
+
+  return lo >>> 0;
+}
+exports.sum64_5_lo = sum64_5_lo;
+
+function rotr64_hi(ah, al, num) {
+  var r = (al << (32 - num)) | (ah >>> num);
+  return r >>> 0;
+}
+exports.rotr64_hi = rotr64_hi;
+
+function rotr64_lo(ah, al, num) {
+  var r = (ah << (32 - num)) | (al >>> num);
+  return r >>> 0;
+}
+exports.rotr64_lo = rotr64_lo;
+
+function shr64_hi(ah, al, num) {
+  return ah >>> num;
+}
+exports.shr64_hi = shr64_hi;
+
+function shr64_lo(ah, al, num) {
+  var r = (ah << (32 - num)) | (al >>> num);
+  return r >>> 0;
+}
+exports.shr64_lo = shr64_lo;
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/i18n.js":
+/*!*************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/i18n.js ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! debug */ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js");
+/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(debug__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var interpolate_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! interpolate-components */ "../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/index.js");
+/* harmony import */ var tannin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tannin */ "../../../node_modules/.pnpm/tannin@1.2.0/node_modules/tannin/index.js");
+/* harmony import */ var lru__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lru */ "../../../node_modules/.pnpm/lru@3.1.0/node_modules/lru/index.js");
+/* harmony import */ var lru__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lru__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! hash.js/lib/hash/sha/1 */ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/sha/1.js");
+/* harmony import */ var hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var events__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! events */ "../../../node_modules/.pnpm/events@3.3.0/node_modules/events/events.js");
+/* harmony import */ var events__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(events__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _tannin_sprintf__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @tannin/sprintf */ "../../../node_modules/.pnpm/@tannin+sprintf@1.2.0/node_modules/@tannin/sprintf/index.js");
+/* harmony import */ var _number_format__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./number-format */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/number-format.js");
+
+
+
+/**
+ * External dependencies
+ */
+
+
+
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+/**
+ * Module variables
+ */
+
+var debug = debug__WEBPACK_IMPORTED_MODULE_2___default()('i18n-calypso');
+/**
+ * Constants
+ */
+
+var decimal_point_translation_key = 'number_format_decimals';
+var thousands_sep_translation_key = 'number_format_thousands_sep';
+var domain_key = 'messages';
+var translationLookup = [// By default don't modify the options when looking up translations.
+function (options) {
+  return options;
+}];
+var hashCache = {}; // raise a console warning
+
+function warn() {
+  if (!I18N.throwErrors) {
+    return;
+  }
+
+  if ('undefined' !== typeof window && window.console && window.console.warn) {
+    window.console.warn.apply(window.console, arguments);
+  }
+} // turns Function.arguments into an array
+
+
+function simpleArguments(args) {
+  return Array.prototype.slice.call(args);
+}
+/**
+ * Coerce the possible arguments and normalize to a single object.
+ *
+ * @param   {any} args - arguments passed in from `translate()`
+ * @returns {object}         - a single object describing translation needs
+ */
+
+
+function normalizeTranslateArguments(args) {
+  var original = args[0]; // warn about older deprecated syntax
+
+  if (typeof original !== 'string' || args.length > 3 || args.length > 2 && typeof args[1] === 'object' && typeof args[2] === 'object') {
+    warn('Deprecated Invocation: `translate()` accepts ( string, [string], [object] ). These arguments passed:', simpleArguments(args), '. See https://github.com/Automattic/i18n-calypso#translate-method');
+  }
+
+  if (args.length === 2 && typeof original === 'string' && typeof args[1] === 'string') {
+    warn('Invalid Invocation: `translate()` requires an options object for plural translations, but passed:', simpleArguments(args));
+  } // options could be in position 0, 1, or 2
+  // sending options as the first object is deprecated and will raise a warning
+
+
+  var options = {};
+
+  for (var i = 0; i < args.length; i++) {
+    if (typeof args[i] === 'object') {
+      options = args[i];
+    }
+  } // `original` can be passed as first parameter or as part of the options object
+  // though passing original as part of the options is a deprecated approach and will be removed
+
+
+  if (typeof original === 'string') {
+    options.original = original;
+  } else if (typeof options.original === 'object') {
+    options.plural = options.original.plural;
+    options.count = options.original.count;
+    options.original = options.original.single;
+  }
+
+  if (typeof args[1] === 'string') {
+    options.plural = args[1];
+  }
+
+  if (typeof options.original === 'undefined') {
+    throw new Error('Translate called without a `string` value as first argument.');
+  }
+
+  return options;
+}
+/**
+ * Takes translate options object and coerces to a Tannin request to retrieve translation.
+ *
+ * @param   {object} tannin  - tannin data object
+ * @param   {object} options - object describing translation
+ * @returns {string}         - the returned translation from Tannin
+ */
+
+
+function getTranslationFromTannin(tannin, options) {
+  return tannin.dcnpgettext(domain_key, options.context, options.original, options.plural, options.count);
+}
+
+function getTranslation(i18n, options) {
+  for (var i = translationLookup.length - 1; i >= 0; i--) {
+    var lookup = translationLookup[i](Object.assign({}, options)); // Only get the translation from tannin if it exists.
+
+    if (i18n.state.locale[lookup.original]) {
+      return getTranslationFromTannin(i18n.state.tannin, lookup);
+    }
+  }
+
+  return null;
+}
+
+function I18N() {
+  if (!(this instanceof I18N)) {
+    return new I18N();
+  }
+
+  this.defaultLocaleSlug = 'en'; // Tannin always needs a plural form definition, or it fails when dealing with plurals.
+
+  this.defaultPluralForms = function (n) {
+    return n === 1 ? 0 : 1;
+  };
+
+  this.state = {
+    numberFormatSettings: {},
+    tannin: undefined,
+    locale: undefined,
+    localeSlug: undefined,
+    textDirection: undefined,
+    translations: lru__WEBPACK_IMPORTED_MODULE_5___default()({
+      max: 100
+    })
+  };
+  this.componentUpdateHooks = [];
+  this.translateHooks = [];
+  this.stateObserver = new events__WEBPACK_IMPORTED_MODULE_7__.EventEmitter(); // Because the higher-order component can wrap a ton of React components,
+  // we need to bump the number of listeners to infinity and beyond
+  // FIXME: still valid?
+
+  this.stateObserver.setMaxListeners(0); // default configuration
+
+  this.configure();
+}
+
+I18N.throwErrors = false;
+
+I18N.prototype.on = function () {
+  var _this$stateObserver;
+
+  (_this$stateObserver = this.stateObserver).on.apply(_this$stateObserver, arguments);
+};
+
+I18N.prototype.off = function () {
+  var _this$stateObserver2;
+
+  (_this$stateObserver2 = this.stateObserver).off.apply(_this$stateObserver2, arguments);
+};
+
+I18N.prototype.emit = function () {
+  var _this$stateObserver3;
+
+  (_this$stateObserver3 = this.stateObserver).emit.apply(_this$stateObserver3, arguments);
+};
+/**
+ * Formats numbers using locale settings and/or passed options.
+ *
+ * @param   {string|number}  number to format (required)
+ * @param   {number|object}  options  Number of decimal places or options object (optional)
+ * @returns {string}         Formatted number as string
+ */
+
+
+I18N.prototype.numberFormat = function (number) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var decimals = typeof options === 'number' ? options : options.decimals || 0;
+  var decPoint = options.decPoint || this.state.numberFormatSettings.decimal_point || '.';
+  var thousandsSep = options.thousandsSep || this.state.numberFormatSettings.thousands_sep || ',';
+  return (0,_number_format__WEBPACK_IMPORTED_MODULE_9__.default)(number, decimals, decPoint, thousandsSep);
+};
+
+I18N.prototype.configure = function (options) {
+  Object.assign(this, options || {});
+  this.setLocale();
+};
+
+I18N.prototype.setLocale = function (localeData) {
+  var _this$state$locale$te, _this$state$locale$, _this$state$locale$$m;
+
+  if (localeData && localeData[''] && localeData['']['key-hash']) {
+    var keyHash = localeData['']['key-hash'];
+
+    var transform = function transform(string, hashLength) {
+      var lookupPrefix = hashLength === false ? '' : String(hashLength);
+
+      if (typeof hashCache[lookupPrefix + string] !== 'undefined') {
+        return hashCache[lookupPrefix + string];
+      }
+
+      var hash = hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_6___default()().update(string).digest('hex');
+
+      if (hashLength) {
+        return hashCache[lookupPrefix + string] = hash.substr(0, hashLength);
+      }
+
+      return hashCache[lookupPrefix + string] = hash;
+    };
+
+    var generateLookup = function generateLookup(hashLength) {
+      return function (options) {
+        if (options.context) {
+          options.original = transform(options.context + String.fromCharCode(4) + options.original, hashLength);
+          delete options.context;
+        } else {
+          options.original = transform(options.original, hashLength);
+        }
+
+        return options;
+      };
+    };
+
+    if (keyHash.substr(0, 4) === 'sha1') {
+      if (keyHash.length === 4) {
+        translationLookup.push(generateLookup(false));
+      } else {
+        var variableHashLengthPos = keyHash.substr(5).indexOf('-');
+
+        if (variableHashLengthPos < 0) {
+          var hashLength = Number(keyHash.substr(5));
+          translationLookup.push(generateLookup(hashLength));
+        } else {
+          var minHashLength = Number(keyHash.substr(5, variableHashLengthPos));
+          var maxHashLength = Number(keyHash.substr(6 + variableHashLengthPos));
+
+          for (var _hashLength = minHashLength; _hashLength <= maxHashLength; _hashLength++) {
+            translationLookup.push(generateLookup(_hashLength));
+          }
+        }
+      }
+    }
+  } // if localeData is not given, assumes default locale and reset
+
+
+  if (!localeData || !localeData[''].localeSlug) {
+    this.state.locale = {
+      '': {
+        localeSlug: this.defaultLocaleSlug,
+        plural_forms: this.defaultPluralForms
+      }
+    };
+  } else if (localeData[''].localeSlug === this.state.localeSlug) {
+    // Exit if same data as current (comparing references only)
+    if (localeData === this.state.locale) {
+      return;
+    } // merge new data into existing one
+
+
+    Object.assign(this.state.locale, localeData);
+  } else {
+    this.state.locale = Object.assign({}, localeData);
+  }
+
+  this.state.localeSlug = this.state.locale[''].localeSlug; // extract the `textDirection` info (LTR or RTL) from either:
+  // - the translation for the special string "ltr" (standard in Core, not present in Calypso)
+  // - or the `momentjs_locale.textDirection` property present in Calypso translation files
+
+  this.state.textDirection = ((_this$state$locale$te = this.state.locale["text direction\x04ltr"]) === null || _this$state$locale$te === void 0 ? void 0 : _this$state$locale$te[0]) || ((_this$state$locale$ = this.state.locale['']) === null || _this$state$locale$ === void 0 ? void 0 : (_this$state$locale$$m = _this$state$locale$.momentjs_locale) === null || _this$state$locale$$m === void 0 ? void 0 : _this$state$locale$$m.textDirection);
+  this.state.tannin = new tannin__WEBPACK_IMPORTED_MODULE_4__.default((0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__.default)({}, domain_key, this.state.locale)); // Updates numberFormat preferences with settings from translations
+
+  this.state.numberFormatSettings.decimal_point = getTranslationFromTannin(this.state.tannin, normalizeTranslateArguments([decimal_point_translation_key]));
+  this.state.numberFormatSettings.thousands_sep = getTranslationFromTannin(this.state.tannin, normalizeTranslateArguments([thousands_sep_translation_key])); // If translation isn't set, define defaults.
+
+  if (this.state.numberFormatSettings.decimal_point === decimal_point_translation_key) {
+    this.state.numberFormatSettings.decimal_point = '.';
+  }
+
+  if (this.state.numberFormatSettings.thousands_sep === thousands_sep_translation_key) {
+    this.state.numberFormatSettings.thousands_sep = ',';
+  }
+
+  this.stateObserver.emit('change');
+};
+
+I18N.prototype.getLocale = function () {
+  return this.state.locale;
+};
+/**
+ * Get the current locale slug.
+ *
+ * @returns {string} The string representing the currently loaded locale
+ **/
+
+
+I18N.prototype.getLocaleSlug = function () {
+  return this.state.localeSlug;
+};
+/**
+ * Get the current text direction, left-to-right (LTR) or right-to-left (RTL).
+ *
+ * @returns {boolean} `true` in case the current locale has RTL text direction
+ */
+
+
+I18N.prototype.isRtl = function () {
+  return this.state.textDirection === 'rtl';
+};
+/**
+ * Adds new translations to the locale data, overwriting any existing translations with a matching key.
+ *
+ * @param {object} localeData Locale data
+ */
+
+
+I18N.prototype.addTranslations = function (localeData) {
+  for (var prop in localeData) {
+    if (prop !== '') {
+      this.state.tannin.data.messages[prop] = localeData[prop];
+    }
+  }
+
+  this.stateObserver.emit('change');
+};
+/**
+ * Checks whether the given original has a translation.
+ *
+ * @returns {boolean} whether a translation exists
+ */
+
+
+I18N.prototype.hasTranslation = function () {
+  return !!getTranslation(this, normalizeTranslateArguments(arguments));
+};
+/**
+ * Exposes single translation method.
+ * See sibling README
+ *
+ * @returns {string|object} translated text or an object containing React children that can be inserted into a parent component
+ */
+
+
+I18N.prototype.translate = function () {
+  var options = normalizeTranslateArguments(arguments);
+  var translation = getTranslation(this, options);
+
+  if (!translation) {
+    // This purposefully calls tannin for a case where there is no translation,
+    // so that tannin gives us the expected object with English text.
+    translation = getTranslationFromTannin(this.state.tannin, options);
+  } // handle any string substitution
+
+
+  if (options.args) {
+    var sprintfArgs = Array.isArray(options.args) ? options.args.slice(0) : [options.args];
+    sprintfArgs.unshift(translation);
+
+    try {
+      translation = _tannin_sprintf__WEBPACK_IMPORTED_MODULE_8__.default.apply(void 0, (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__.default)(sprintfArgs));
+    } catch (error) {
+      if (!window || !window.console) {
+        return;
+      }
+
+      var errorMethod = this.throwErrors ? 'error' : 'warn';
+
+      if (typeof error !== 'string') {
+        window.console[errorMethod](error);
+      } else {
+        window.console[errorMethod]('i18n sprintf error:', sprintfArgs);
+      }
+    }
+  } // interpolate any components
+
+
+  if (options.components) {
+    translation = (0,interpolate_components__WEBPACK_IMPORTED_MODULE_3__.default)({
+      mixedString: translation,
+      components: options.components,
+      throwErrors: this.throwErrors
+    });
+  } // run any necessary hooks
+
+
+  this.translateHooks.forEach(function (hook) {
+    translation = hook(translation, options);
+  });
+  return translation;
+};
+/**
+ * Causes i18n to re-render all translations.
+ *
+ * This can be necessary if an extension makes changes that i18n is unaware of
+ * and needs those changes manifested immediately (e.g. adding an important
+ * translation hook, or modifying the behaviour of an existing hook).
+ *
+ * If at all possible, react components should try to use the more local
+ * updateTranslation() function inherited from the mixin.
+ */
+
+
+I18N.prototype.reRenderTranslations = function () {
+  debug('Re-rendering all translations due to external request');
+  this.stateObserver.emit('change');
+};
+
+I18N.prototype.registerComponentUpdateHook = function (callback) {
+  this.componentUpdateHooks.push(callback);
+};
+
+I18N.prototype.registerTranslateHook = function (callback) {
+  this.translateHooks.push(callback);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (I18N);
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/index.js":
+/*!**************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/index.js ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "I18N": () => (/* reexport safe */ _i18n__WEBPACK_IMPORTED_MODULE_0__.default),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "numberFormat": () => (/* binding */ numberFormat),
+/* harmony export */   "translate": () => (/* binding */ translate),
+/* harmony export */   "configure": () => (/* binding */ configure),
+/* harmony export */   "setLocale": () => (/* binding */ setLocale),
+/* harmony export */   "getLocale": () => (/* binding */ getLocale),
+/* harmony export */   "getLocaleSlug": () => (/* binding */ getLocaleSlug),
+/* harmony export */   "addTranslations": () => (/* binding */ addTranslations),
+/* harmony export */   "reRenderTranslations": () => (/* binding */ reRenderTranslations),
+/* harmony export */   "registerComponentUpdateHook": () => (/* binding */ registerComponentUpdateHook),
+/* harmony export */   "registerTranslateHook": () => (/* binding */ registerTranslateHook),
+/* harmony export */   "state": () => (/* binding */ state),
+/* harmony export */   "stateObserver": () => (/* binding */ stateObserver),
+/* harmony export */   "on": () => (/* binding */ on),
+/* harmony export */   "off": () => (/* binding */ off),
+/* harmony export */   "emit": () => (/* binding */ emit),
+/* harmony export */   "localize": () => (/* binding */ localize),
+/* harmony export */   "useTranslate": () => (/* binding */ useTranslate),
+/* harmony export */   "useRtl": () => (/* binding */ useRtl),
+/* harmony export */   "withRtl": () => (/* binding */ withRtl)
+/* harmony export */ });
+/* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./i18n */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/i18n.js");
+/* harmony import */ var _localize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./localize */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/localize.js");
+/* harmony import */ var _use_translate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./use-translate */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/use-translate.js");
+/* harmony import */ var _rtl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./rtl */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/rtl.js");
+/**
+ * Internal dependencies
+ */
+
+
+
+
+var i18n = new _i18n__WEBPACK_IMPORTED_MODULE_0__.default();
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (i18n);
+var numberFormat = i18n.numberFormat.bind(i18n);
+var translate = i18n.translate.bind(i18n);
+var configure = i18n.configure.bind(i18n);
+var setLocale = i18n.setLocale.bind(i18n);
+var getLocale = i18n.getLocale.bind(i18n);
+var getLocaleSlug = i18n.getLocaleSlug.bind(i18n);
+var addTranslations = i18n.addTranslations.bind(i18n);
+var reRenderTranslations = i18n.reRenderTranslations.bind(i18n);
+var registerComponentUpdateHook = i18n.registerComponentUpdateHook.bind(i18n);
+var registerTranslateHook = i18n.registerTranslateHook.bind(i18n);
+var state = i18n.state;
+var stateObserver = i18n.stateObserver;
+var on = i18n.on.bind(i18n);
+var off = i18n.off.bind(i18n);
+var emit = i18n.emit.bind(i18n);
+var localize = (0,_localize__WEBPACK_IMPORTED_MODULE_1__.default)(i18n);
+var useTranslate = (0,_use_translate__WEBPACK_IMPORTED_MODULE_2__.default)(i18n);
+
+var _rtlFactory = (0,_rtl__WEBPACK_IMPORTED_MODULE_3__.default)(i18n),
+    useRtl = _rtlFactory.useRtl,
+    withRtl = _rtlFactory.withRtl;
+
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/localize.js":
+/*!*****************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/localize.js ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread2 */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
+
+
+
+
+
+
+/**
+ * External dependencies
+ */
+
+/**
+ * Localize a React component
+ *
+ * @param {object} i18n I18N instance to use for localization
+ * @returns {Function} Component localization function
+ */
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(i18n) {
+  var i18nProps = {
+    numberFormat: i18n.numberFormat.bind(i18n),
+    translate: i18n.translate.bind(i18n)
+  };
+  /**
+   * Localize a React component
+   *
+   * @param  {React.Component} ComposedComponent React component to localize
+   * @returns {React.Component}                   The localized component
+   */
+
+  return function (ComposedComponent) {
+    var _class, _temp;
+
+    var componentName = ComposedComponent.displayName || ComposedComponent.name || '';
+    return _temp = _class =
+    /*#__PURE__*/
+    function (_React$Component) {
+      (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__.default)(_class, _React$Component);
+
+      function _class() {
+        var _getPrototypeOf2;
+
+        var _this;
+
+        (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__.default)(this, _class);
+
+        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+
+        _this = (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__.default)(this, (_getPrototypeOf2 = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__.default)(_class)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+        (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__.default)((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__.default)(_this), "boundForceUpdate", _this.forceUpdate.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__.default)(_this)));
+
+        return _this;
+      }
+
+      (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__.default)(_class, [{
+        key: "componentDidMount",
+        value: function componentDidMount() {
+          i18n.on('change', this.boundForceUpdate);
+        }
+      }, {
+        key: "componentWillUnmount",
+        value: function componentWillUnmount() {
+          i18n.off('change', this.boundForceUpdate);
+        }
+      }, {
+        key: "render",
+        value: function render() {
+          var props = (0,_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({
+            locale: i18n.getLocaleSlug()
+          }, this.props, {}, i18nProps);
+
+          return react__WEBPACK_IMPORTED_MODULE_8___default().createElement(ComposedComponent, props);
+        }
+      }]);
+
+      return _class;
+    }((react__WEBPACK_IMPORTED_MODULE_8___default().Component)), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__.default)(_class, "displayName", 'Localized(' + componentName + ')'), _temp;
+  };
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/number-format.js":
+/*!**********************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/number-format.js ***!
+  \**********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ number_format)
+/* harmony export */ });
+/*
+ * Exposes number format capability
+ *
+ * @copyright Copyright (c) 2013 Kevin van Zonneveld (http://kvz.io) and Contributors (http://phpjs.org/authors).
+ * @license See CREDITS.md
+ * @see https://github.com/kvz/phpjs/blob/ffe1356af23a6f2512c84c954dd4e828e92579fa/functions/strings/number_format.js
+ */
+function toFixedFix(n, prec) {
+  var k = Math.pow(10, prec);
+  return '' + (Math.round(n * k) / k).toFixed(prec);
+}
+
+function number_format(number, decimals, dec_point, thousands_sep) {
+  number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
+  var n = !isFinite(+number) ? 0 : +number;
+  var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals);
+  var sep = typeof thousands_sep === 'undefined' ? ',' : thousands_sep;
+  var dec = typeof dec_point === 'undefined' ? '.' : dec_point;
+  var s = ''; // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+
+  s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+
+  if (s[0].length > 3) {
+    s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+  }
+
+  if ((s[1] || '').length < prec) {
+    s[1] = s[1] || '';
+    s[1] += new Array(prec - s[1].length + 1).join('0');
+  }
+
+  return s.join(dec);
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/rtl.js":
+/*!************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/rtl.js ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ rtlFactory)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var use_subscription__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! use-subscription */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/index.js");
+/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
+/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__);
+
+
+/**
+ * External dependencies
+ */
+
+
+
+function rtlFactory(i18n) {
+  // Subscription object (adapter) for the `useSubscription` hook
+  var RtlSubscription = {
+    getCurrentValue: function getCurrentValue() {
+      return i18n.isRtl();
+    },
+    subscribe: function subscribe(callback) {
+      i18n.on('change', callback);
+      return function () {
+        return i18n.off('change', callback);
+      };
+    }
+  };
+
+  function useRtl() {
+    return (0,use_subscription__WEBPACK_IMPORTED_MODULE_2__.useSubscription)(RtlSubscription);
+  }
+
+  var withRtl = (0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__.createHigherOrderComponent)(function (WrappedComponent) {
+    return (0,react__WEBPACK_IMPORTED_MODULE_1__.forwardRef)(function (props, ref) {
+      var isRtl = useRtl();
+      return react__WEBPACK_IMPORTED_MODULE_1___default().createElement(WrappedComponent, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, props, {
+        isRtl: isRtl,
+        ref: ref
+      }));
+    });
+  }, 'WithRTL');
+  return {
+    useRtl: useRtl,
+    withRtl: withRtl
+  };
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/use-translate.js":
+/*!**********************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/use-translate.js ***!
+  \**********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * External dependencies
+ */
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(i18n) {
+  function bindTranslate() {
+    var translate = i18n.translate.bind(i18n);
+    Object.defineProperty(translate, 'localeSlug', {
+      get: i18n.getLocaleSlug.bind(i18n)
+    });
+    return translate;
+  }
+
+  return function useTranslate() {
+    var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default().useState(bindTranslate),
+        _React$useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__.default)(_React$useState, 2),
+        translate = _React$useState2[0],
+        setTranslate = _React$useState2[1];
+
+    react__WEBPACK_IMPORTED_MODULE_1___default().useEffect(function () {
+      var onChange = function onChange() {
+        return setTranslate(bindTranslate);
+      };
+
+      i18n.on('change', onChange);
+      return function () {
+        return i18n.off('change', onChange);
+      };
+    }, []);
+    return translate;
+  };
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/inherits@2.0.4/node_modules/inherits/inherits_browser.js":
+/*!********************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/inherits@2.0.4/node_modules/inherits/inherits_browser.js ***!
+  \********************************************************************************************/
+/***/ ((module) => {
+
+if (typeof Object.create === 'function') {
+  // implementation from standard node.js 'util' module
+  module.exports = function inherits(ctor, superCtor) {
+    if (superCtor) {
+      ctor.super_ = superCtor
+      ctor.prototype = Object.create(superCtor.prototype, {
+        constructor: {
+          value: ctor,
+          enumerable: false,
+          writable: true,
+          configurable: true
+        }
+      })
+    }
+  };
+} else {
+  // old school shim for old browsers
+  module.exports = function inherits(ctor, superCtor) {
+    if (superCtor) {
+      ctor.super_ = superCtor
+      var TempCtor = function () {}
+      TempCtor.prototype = superCtor.prototype
+      ctor.prototype = new TempCtor()
+      ctor.prototype.constructor = ctor
+    }
+  }
+}
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/index.js":
+/*!*****************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/index.js ***!
+  \*****************************************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+	value: true
+}));
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; /**
+                                                                                                                                                                                                                                                                               * External Dependencies
+                                                                                                                                                                                                                                                                               */
+
+
+/**
+ * Internal Dependencies
+ */
+
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactAddonsCreateFragment = __webpack_require__(/*! react-addons-create-fragment */ "../../../node_modules/.pnpm/react-addons-create-fragment@15.6.2/node_modules/react-addons-create-fragment/index.js");
+
+var _reactAddonsCreateFragment2 = _interopRequireDefault(_reactAddonsCreateFragment);
+
+var _tokenize = __webpack_require__(/*! ./tokenize */ "../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/tokenize.js");
+
+var _tokenize2 = _interopRequireDefault(_tokenize);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var currentMixedString = void 0;
+
+function getCloseIndex(openIndex, tokens) {
+	var openToken = tokens[openIndex],
+	    nestLevel = 0,
+	    token,
+	    i;
+	for (i = openIndex + 1; i < tokens.length; i++) {
+		token = tokens[i];
+		if (token.value === openToken.value) {
+			if (token.type === 'componentOpen') {
+				nestLevel++;
+				continue;
+			}
+			if (token.type === 'componentClose') {
+				if (nestLevel === 0) {
+					return i;
+				}
+				nestLevel--;
+			}
+		}
+	}
+	// if we get this far, there was no matching close token
+	throw new Error('Missing closing component token `' + openToken.value + '`');
+}
+
+function buildChildren(tokens, components) {
+	var children = [],
+	    childrenObject = {},
+	    openComponent,
+	    clonedOpenComponent,
+	    openIndex,
+	    closeIndex,
+	    token,
+	    i,
+	    grandChildTokens,
+	    grandChildren,
+	    siblingTokens,
+	    siblings;
+
+	for (i = 0; i < tokens.length; i++) {
+		token = tokens[i];
+		if (token.type === 'string') {
+			children.push(token.value);
+			continue;
+		}
+		// component node should at least be set
+		if (!components.hasOwnProperty(token.value) || typeof components[token.value] === 'undefined') {
+			throw new Error('Invalid interpolation, missing component node: `' + token.value + '`');
+		}
+		// should be either ReactElement or null (both type "object"), all other types deprecated
+		if (_typeof(components[token.value]) !== 'object') {
+			throw new Error('Invalid interpolation, component node must be a ReactElement or null: `' + token.value + '`', '\n> ' + currentMixedString);
+		}
+		// we should never see a componentClose token in this loop
+		if (token.type === 'componentClose') {
+			throw new Error('Missing opening component token: `' + token.value + '`');
+		}
+		if (token.type === 'componentOpen') {
+			openComponent = components[token.value];
+			openIndex = i;
+			break;
+		}
+		// componentSelfClosing token
+		children.push(components[token.value]);
+		continue;
+	}
+
+	if (openComponent) {
+		closeIndex = getCloseIndex(openIndex, tokens);
+		grandChildTokens = tokens.slice(openIndex + 1, closeIndex);
+		grandChildren = buildChildren(grandChildTokens, components);
+		clonedOpenComponent = _react2.default.cloneElement(openComponent, {}, grandChildren);
+		children.push(clonedOpenComponent);
+
+		if (closeIndex < tokens.length - 1) {
+			siblingTokens = tokens.slice(closeIndex + 1);
+			siblings = buildChildren(siblingTokens, components);
+			children = children.concat(siblings);
+		}
+	}
+
+	if (children.length === 1) {
+		return children[0];
+	}
+
+	children.forEach(function (child, index) {
+		if (child) {
+			childrenObject['interpolation-child-' + index] = child;
+		}
+	});
+
+	return (0, _reactAddonsCreateFragment2.default)(childrenObject);
+}
+
+function interpolate(options) {
+	var mixedString = options.mixedString,
+	    components = options.components,
+	    throwErrors = options.throwErrors;
+
+
+	currentMixedString = mixedString;
+
+	if (!components) {
+		return mixedString;
+	}
+
+	if ((typeof components === 'undefined' ? 'undefined' : _typeof(components)) !== 'object') {
+		if (throwErrors) {
+			throw new Error('Interpolation Error: unable to process `' + mixedString + '` because components is not an object');
+		}
+
+		return mixedString;
+	}
+
+	var tokens = (0, _tokenize2.default)(mixedString);
+
+	try {
+		return buildChildren(tokens, components);
+	} catch (error) {
+		if (throwErrors) {
+			throw new Error('Interpolation Error: unable to process `' + mixedString + '` because of error `' + error.message + '`');
+		}
+
+		return mixedString;
+	}
+};
+
+exports.default = interpolate;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/tokenize.js":
+/*!********************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/tokenize.js ***!
+  \********************************************************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+function identifyToken(item) {
+	// {{/example}}
+	if (item.match(/^\{\{\//)) {
+		return {
+			type: 'componentClose',
+			value: item.replace(/\W/g, '')
+		};
+	}
+	// {{example /}}
+	if (item.match(/\/\}\}$/)) {
+		return {
+			type: 'componentSelfClosing',
+			value: item.replace(/\W/g, '')
+		};
+	}
+	// {{example}}
+	if (item.match(/^\{\{/)) {
+		return {
+			type: 'componentOpen',
+			value: item.replace(/\W/g, '')
+		};
+	}
+	return {
+		type: 'string',
+		value: item
+	};
+}
+
+module.exports = function (mixedString) {
+	var tokenStrings = mixedString.split(/(\{\{\/?\s*\w+\s*\/?\}\})/g); // split to components and strings
+	return tokenStrings.map(identifyToken);
+};
+//# sourceMappingURL=tokenize.js.map
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/lru@3.1.0/node_modules/lru/index.js":
+/*!***********************************************************************!*\
+  !*** ../../../node_modules/.pnpm/lru@3.1.0/node_modules/lru/index.js ***!
+  \***********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var events = __webpack_require__(/*! events */ "../../../node_modules/.pnpm/events@3.3.0/node_modules/events/events.js")
+var inherits = __webpack_require__(/*! inherits */ "../../../node_modules/.pnpm/inherits@2.0.4/node_modules/inherits/inherits_browser.js")
+
+module.exports = LRU
+
+function LRU (opts) {
+  if (!(this instanceof LRU)) return new LRU(opts)
+  if (typeof opts === 'number') opts = {max: opts}
+  if (!opts) opts = {}
+  events.EventEmitter.call(this)
+  this.cache = {}
+  this.head = this.tail = null
+  this.length = 0
+  this.max = opts.max || 1000
+  this.maxAge = opts.maxAge || 0
+}
+
+inherits(LRU, events.EventEmitter)
+
+Object.defineProperty(LRU.prototype, 'keys', {
+  get: function () { return Object.keys(this.cache) }
+})
+
+LRU.prototype.clear = function () {
+  this.cache = {}
+  this.head = this.tail = null
+  this.length = 0
+}
+
+LRU.prototype.remove = function (key) {
+  if (typeof key !== 'string') key = '' + key
+  if (!this.cache.hasOwnProperty(key)) return
+
+  var element = this.cache[key]
+  delete this.cache[key]
+  this._unlink(key, element.prev, element.next)
+  return element.value
+}
+
+LRU.prototype._unlink = function (key, prev, next) {
+  this.length--
+
+  if (this.length === 0) {
+    this.head = this.tail = null
+  } else {
+    if (this.head === key) {
+      this.head = prev
+      this.cache[this.head].next = null
+    } else if (this.tail === key) {
+      this.tail = next
+      this.cache[this.tail].prev = null
+    } else {
+      this.cache[prev].next = next
+      this.cache[next].prev = prev
+    }
+  }
+}
+
+LRU.prototype.peek = function (key) {
+  if (!this.cache.hasOwnProperty(key)) return
+
+  var element = this.cache[key]
+
+  if (!this._checkAge(key, element)) return
+  return element.value
+}
+
+LRU.prototype.set = function (key, value) {
+  if (typeof key !== 'string') key = '' + key
+
+  var element
+
+  if (this.cache.hasOwnProperty(key)) {
+    element = this.cache[key]
+    element.value = value
+    if (this.maxAge) element.modified = Date.now()
+
+    // If it's already the head, there's nothing more to do:
+    if (key === this.head) return value
+    this._unlink(key, element.prev, element.next)
+  } else {
+    element = {value: value, modified: 0, next: null, prev: null}
+    if (this.maxAge) element.modified = Date.now()
+    this.cache[key] = element
+
+    // Eviction is only possible if the key didn't already exist:
+    if (this.length === this.max) this.evict()
+  }
+
+  this.length++
+  element.next = null
+  element.prev = this.head
+
+  if (this.head) this.cache[this.head].next = key
+  this.head = key
+
+  if (!this.tail) this.tail = key
+  return value
+}
+
+LRU.prototype._checkAge = function (key, element) {
+  if (this.maxAge && (Date.now() - element.modified) > this.maxAge) {
+    this.remove(key)
+    this.emit('evict', {key: key, value: element.value})
+    return false
+  }
+  return true
+}
+
+LRU.prototype.get = function (key) {
+  if (typeof key !== 'string') key = '' + key
+  if (!this.cache.hasOwnProperty(key)) return
+
+  var element = this.cache[key]
+
+  if (!this._checkAge(key, element)) return
+
+  if (this.head !== key) {
+    if (key === this.tail) {
+      this.tail = element.next
+      this.cache[this.tail].prev = null
+    } else {
+      // Set prev.next -> element.next:
+      this.cache[element.prev].next = element.next
+    }
+
+    // Set element.next.prev -> element.prev:
+    this.cache[element.next].prev = element.prev
+
+    // Element is the new head
+    this.cache[this.head].next = key
+    element.prev = this.head
+    element.next = null
+    this.head = key
+  }
+
+  return element.value
+}
+
+LRU.prototype.evict = function () {
+  if (!this.tail) return
+  var key = this.tail
+  var value = this.remove(this.tail)
+  this.emit('evict', {key: key, value: value})
+}
+
+
+/***/ }),
+
 /***/ "../../js-packages/components/components/action-button/style.scss":
 /*!************************************************************************!*\
   !*** ../../js-packages/components/components/action-button/style.scss ***!
   \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "../../js-packages/components/components/pricing-card/style.scss":
+/*!***********************************************************************!*\
+  !*** ../../js-packages/components/components/pricing-card/style.scss ***!
+  \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -745,10 +4853,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "../../js-packages/connection/components/connect-screen/style.scss":
-/*!*************************************************************************!*\
-  !*** ../../js-packages/connection/components/connect-screen/style.scss ***!
-  \*************************************************************************/
+/***/ "../../js-packages/connection/components/connect-screen/layout/style.scss":
+/*!********************************************************************************!*\
+  !*** ../../js-packages/connection/components/connect-screen/layout/style.scss ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/connect-screen/required-plan/style.scss":
+/*!***************************************************************************************!*\
+  !*** ../../js-packages/connection/components/connect-screen/required-plan/style.scss ***!
+  \***************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -832,6 +4953,199 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/minimalistic-assert@1.0.1/node_modules/minimalistic-assert/index.js":
+/*!*******************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/minimalistic-assert@1.0.1/node_modules/minimalistic-assert/index.js ***!
+  \*******************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = assert;
+
+function assert(val, msg) {
+  if (!val)
+    throw new Error(msg || 'Assertion failed');
+}
+
+assert.equal = function assertEqual(l, r, msg) {
+  if (l != r)
+    throw new Error(msg || ('Assertion failed: ' + l + ' != ' + r));
+};
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/ms@2.1.2/node_modules/ms/index.js":
+/*!*********************************************************************!*\
+  !*** ../../../node_modules/.pnpm/ms@2.1.2/node_modules/ms/index.js ***!
+  \*********************************************************************/
+/***/ ((module) => {
+
+/**
+ * Helpers.
+ */
+
+var s = 1000;
+var m = s * 60;
+var h = m * 60;
+var d = h * 24;
+var w = d * 7;
+var y = d * 365.25;
+
+/**
+ * Parse or format the given `val`.
+ *
+ * Options:
+ *
+ *  - `long` verbose formatting [false]
+ *
+ * @param {String|Number} val
+ * @param {Object} [options]
+ * @throws {Error} throw an error if val is not a non-empty string or a number
+ * @return {String|Number}
+ * @api public
+ */
+
+module.exports = function(val, options) {
+  options = options || {};
+  var type = typeof val;
+  if (type === 'string' && val.length > 0) {
+    return parse(val);
+  } else if (type === 'number' && isFinite(val)) {
+    return options.long ? fmtLong(val) : fmtShort(val);
+  }
+  throw new Error(
+    'val is not a non-empty string or a valid number. val=' +
+      JSON.stringify(val)
+  );
+};
+
+/**
+ * Parse the given `str` and return milliseconds.
+ *
+ * @param {String} str
+ * @return {Number}
+ * @api private
+ */
+
+function parse(str) {
+  str = String(str);
+  if (str.length > 100) {
+    return;
+  }
+  var match = /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
+    str
+  );
+  if (!match) {
+    return;
+  }
+  var n = parseFloat(match[1]);
+  var type = (match[2] || 'ms').toLowerCase();
+  switch (type) {
+    case 'years':
+    case 'year':
+    case 'yrs':
+    case 'yr':
+    case 'y':
+      return n * y;
+    case 'weeks':
+    case 'week':
+    case 'w':
+      return n * w;
+    case 'days':
+    case 'day':
+    case 'd':
+      return n * d;
+    case 'hours':
+    case 'hour':
+    case 'hrs':
+    case 'hr':
+    case 'h':
+      return n * h;
+    case 'minutes':
+    case 'minute':
+    case 'mins':
+    case 'min':
+    case 'm':
+      return n * m;
+    case 'seconds':
+    case 'second':
+    case 'secs':
+    case 'sec':
+    case 's':
+      return n * s;
+    case 'milliseconds':
+    case 'millisecond':
+    case 'msecs':
+    case 'msec':
+    case 'ms':
+      return n;
+    default:
+      return undefined;
+  }
+}
+
+/**
+ * Short format for `ms`.
+ *
+ * @param {Number} ms
+ * @return {String}
+ * @api private
+ */
+
+function fmtShort(ms) {
+  var msAbs = Math.abs(ms);
+  if (msAbs >= d) {
+    return Math.round(ms / d) + 'd';
+  }
+  if (msAbs >= h) {
+    return Math.round(ms / h) + 'h';
+  }
+  if (msAbs >= m) {
+    return Math.round(ms / m) + 'm';
+  }
+  if (msAbs >= s) {
+    return Math.round(ms / s) + 's';
+  }
+  return ms + 'ms';
+}
+
+/**
+ * Long format for `ms`.
+ *
+ * @param {Number} ms
+ * @return {String}
+ * @api private
+ */
+
+function fmtLong(ms) {
+  var msAbs = Math.abs(ms);
+  if (msAbs >= d) {
+    return plural(ms, msAbs, d, 'day');
+  }
+  if (msAbs >= h) {
+    return plural(ms, msAbs, h, 'hour');
+  }
+  if (msAbs >= m) {
+    return plural(ms, msAbs, m, 'minute');
+  }
+  if (msAbs >= s) {
+    return plural(ms, msAbs, s, 'second');
+  }
+  return ms + ' ms';
+}
+
+/**
+ * Pluralization helper.
+ */
+
+function plural(ms, msAbs, n, name) {
+  var isPlural = msAbs >= n * 1.5;
+  return Math.round(ms / n) + ' ' + name + (isPlural ? 's' : '');
+}
 
 
 /***/ }),
@@ -1779,6 +6093,363 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
+/***/ "../../../node_modules/.pnpm/react-addons-create-fragment@15.6.2/node_modules/react-addons-create-fragment/index.js":
+/*!**************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/react-addons-create-fragment@15.6.2/node_modules/react-addons-create-fragment/index.js ***!
+  \**************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var React = __webpack_require__(/*! react */ "react");
+
+var REACT_ELEMENT_TYPE =
+  (typeof Symbol === 'function' && Symbol.for && Symbol.for('react.element')) ||
+  0xeac7;
+
+var emptyFunction = __webpack_require__(/*! fbjs/lib/emptyFunction */ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/emptyFunction.js");
+var invariant = __webpack_require__(/*! fbjs/lib/invariant */ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/invariant.js");
+var warning = __webpack_require__(/*! fbjs/lib/warning */ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/warning.js");
+
+var SEPARATOR = '.';
+var SUBSEPARATOR = ':';
+
+var didWarnAboutMaps = false;
+
+var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
+var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
+
+function getIteratorFn(maybeIterable) {
+  var iteratorFn =
+    maybeIterable &&
+    ((ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL]) ||
+      maybeIterable[FAUX_ITERATOR_SYMBOL]);
+  if (typeof iteratorFn === 'function') {
+    return iteratorFn;
+  }
+}
+
+function escape(key) {
+  var escapeRegex = /[=:]/g;
+  var escaperLookup = {
+    '=': '=0',
+    ':': '=2'
+  };
+  var escapedString = ('' + key).replace(escapeRegex, function(match) {
+    return escaperLookup[match];
+  });
+
+  return '$' + escapedString;
+}
+
+function getComponentKey(component, index) {
+  // Do some typechecking here since we call this blindly. We want to ensure
+  // that we don't block potential future ES APIs.
+  if (component && typeof component === 'object' && component.key != null) {
+    // Explicit key
+    return escape(component.key);
+  }
+  // Implicit key determined by the index in the set
+  return index.toString(36);
+}
+
+function traverseAllChildrenImpl(
+  children,
+  nameSoFar,
+  callback,
+  traverseContext
+) {
+  var type = typeof children;
+
+  if (type === 'undefined' || type === 'boolean') {
+    // All of the above are perceived as null.
+    children = null;
+  }
+
+  if (
+    children === null ||
+    type === 'string' ||
+    type === 'number' ||
+    // The following is inlined from ReactElement. This means we can optimize
+    // some checks. React Fiber also inlines this logic for similar purposes.
+    (type === 'object' && children.$$typeof === REACT_ELEMENT_TYPE)
+  ) {
+    callback(
+      traverseContext,
+      children,
+      // If it's the only child, treat the name as if it was wrapped in an array
+      // so that it's consistent if the number of children grows.
+      nameSoFar === '' ? SEPARATOR + getComponentKey(children, 0) : nameSoFar
+    );
+    return 1;
+  }
+
+  var child;
+  var nextName;
+  var subtreeCount = 0; // Count of children found in the current subtree.
+  var nextNamePrefix = nameSoFar === '' ? SEPARATOR : nameSoFar + SUBSEPARATOR;
+
+  if (Array.isArray(children)) {
+    for (var i = 0; i < children.length; i++) {
+      child = children[i];
+      nextName = nextNamePrefix + getComponentKey(child, i);
+      subtreeCount += traverseAllChildrenImpl(
+        child,
+        nextName,
+        callback,
+        traverseContext
+      );
+    }
+  } else {
+    var iteratorFn = getIteratorFn(children);
+    if (iteratorFn) {
+      if (undefined !== 'production') {
+        // Warn about using Maps as children
+        if (iteratorFn === children.entries) {
+          warning(
+            didWarnAboutMaps,
+            'Using Maps as children is unsupported and will likely yield ' +
+              'unexpected results. Convert it to a sequence/iterable of keyed ' +
+              'ReactElements instead.'
+          );
+          didWarnAboutMaps = true;
+        }
+      }
+
+      var iterator = iteratorFn.call(children);
+      var step;
+      var ii = 0;
+      while (!(step = iterator.next()).done) {
+        child = step.value;
+        nextName = nextNamePrefix + getComponentKey(child, ii++);
+        subtreeCount += traverseAllChildrenImpl(
+          child,
+          nextName,
+          callback,
+          traverseContext
+        );
+      }
+    } else if (type === 'object') {
+      var addendum = '';
+      if (undefined !== 'production') {
+        addendum =
+          ' If you meant to render a collection of children, use an array ' +
+          'instead or wrap the object using createFragment(object) from the ' +
+          'React add-ons.';
+      }
+      var childrenString = '' + children;
+      invariant(
+        false,
+        'Objects are not valid as a React child (found: %s).%s',
+        childrenString === '[object Object]'
+          ? 'object with keys {' + Object.keys(children).join(', ') + '}'
+          : childrenString,
+        addendum
+      );
+    }
+  }
+
+  return subtreeCount;
+}
+
+function traverseAllChildren(children, callback, traverseContext) {
+  if (children == null) {
+    return 0;
+  }
+
+  return traverseAllChildrenImpl(children, '', callback, traverseContext);
+}
+
+var userProvidedKeyEscapeRegex = /\/+/g;
+function escapeUserProvidedKey(text) {
+  return ('' + text).replace(userProvidedKeyEscapeRegex, '$&/');
+}
+
+function cloneAndReplaceKey(oldElement, newKey) {
+  return React.cloneElement(
+    oldElement,
+    {key: newKey},
+    oldElement.props !== undefined ? oldElement.props.children : undefined
+  );
+}
+
+var DEFAULT_POOL_SIZE = 10;
+var DEFAULT_POOLER = oneArgumentPooler;
+
+var oneArgumentPooler = function(copyFieldsFrom) {
+  var Klass = this;
+  if (Klass.instancePool.length) {
+    var instance = Klass.instancePool.pop();
+    Klass.call(instance, copyFieldsFrom);
+    return instance;
+  } else {
+    return new Klass(copyFieldsFrom);
+  }
+};
+
+var addPoolingTo = function addPoolingTo(CopyConstructor, pooler) {
+  // Casting as any so that flow ignores the actual implementation and trusts
+  // it to match the type we declared
+  var NewKlass = CopyConstructor;
+  NewKlass.instancePool = [];
+  NewKlass.getPooled = pooler || DEFAULT_POOLER;
+  if (!NewKlass.poolSize) {
+    NewKlass.poolSize = DEFAULT_POOL_SIZE;
+  }
+  NewKlass.release = standardReleaser;
+  return NewKlass;
+};
+
+var standardReleaser = function standardReleaser(instance) {
+  var Klass = this;
+  invariant(
+    instance instanceof Klass,
+    'Trying to release an instance into a pool of a different type.'
+  );
+  instance.destructor();
+  if (Klass.instancePool.length < Klass.poolSize) {
+    Klass.instancePool.push(instance);
+  }
+};
+
+var fourArgumentPooler = function fourArgumentPooler(a1, a2, a3, a4) {
+  var Klass = this;
+  if (Klass.instancePool.length) {
+    var instance = Klass.instancePool.pop();
+    Klass.call(instance, a1, a2, a3, a4);
+    return instance;
+  } else {
+    return new Klass(a1, a2, a3, a4);
+  }
+};
+
+function MapBookKeeping(mapResult, keyPrefix, mapFunction, mapContext) {
+  this.result = mapResult;
+  this.keyPrefix = keyPrefix;
+  this.func = mapFunction;
+  this.context = mapContext;
+  this.count = 0;
+}
+MapBookKeeping.prototype.destructor = function() {
+  this.result = null;
+  this.keyPrefix = null;
+  this.func = null;
+  this.context = null;
+  this.count = 0;
+};
+addPoolingTo(MapBookKeeping, fourArgumentPooler);
+
+function mapSingleChildIntoContext(bookKeeping, child, childKey) {
+  var result = bookKeeping.result;
+  var keyPrefix = bookKeeping.keyPrefix;
+  var func = bookKeeping.func;
+  var context = bookKeeping.context;
+
+  var mappedChild = func.call(context, child, bookKeeping.count++);
+  if (Array.isArray(mappedChild)) {
+    mapIntoWithKeyPrefixInternal(
+      mappedChild,
+      result,
+      childKey,
+      emptyFunction.thatReturnsArgument
+    );
+  } else if (mappedChild != null) {
+    if (React.isValidElement(mappedChild)) {
+      mappedChild = cloneAndReplaceKey(
+        mappedChild,
+        // Keep both the (mapped) and old keys if they differ, just as
+        // traverseAllChildren used to do for objects as children
+        keyPrefix +
+          (mappedChild.key && (!child || child.key !== mappedChild.key)
+            ? escapeUserProvidedKey(mappedChild.key) + '/'
+            : '') +
+          childKey
+      );
+    }
+    result.push(mappedChild);
+  }
+}
+
+function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
+  var escapedPrefix = '';
+  if (prefix != null) {
+    escapedPrefix = escapeUserProvidedKey(prefix) + '/';
+  }
+  var traverseContext = MapBookKeeping.getPooled(
+    array,
+    escapedPrefix,
+    func,
+    context
+  );
+  traverseAllChildren(children, mapSingleChildIntoContext, traverseContext);
+  MapBookKeeping.release(traverseContext);
+}
+
+var numericPropertyRegex = /^\d+$/;
+
+var warnedAboutNumeric = false;
+
+function createReactFragment(object) {
+  if (typeof object !== 'object' || !object || Array.isArray(object)) {
+    warning(
+      false,
+      'React.addons.createFragment only accepts a single object. Got: %s',
+      object
+    );
+    return object;
+  }
+  if (React.isValidElement(object)) {
+    warning(
+      false,
+      'React.addons.createFragment does not accept a ReactElement ' +
+        'without a wrapper object.'
+    );
+    return object;
+  }
+
+  invariant(
+    object.nodeType !== 1,
+    'React.addons.createFragment(...): Encountered an invalid child; DOM ' +
+      'elements are not valid children of React components.'
+  );
+
+  var result = [];
+
+  for (var key in object) {
+    if (undefined !== 'production') {
+      if (!warnedAboutNumeric && numericPropertyRegex.test(key)) {
+        warning(
+          false,
+          'React.addons.createFragment(...): Child objects should have ' +
+            'non-numeric keys so ordering is preserved.'
+        );
+        warnedAboutNumeric = true;
+      }
+    }
+    mapIntoWithKeyPrefixInternal(
+      object[key],
+      result,
+      key,
+      emptyFunction.thatReturnsArgument
+    );
+  }
+
+  return result;
+}
+
+module.exports = createReactFragment;
+
+
+/***/ }),
+
 /***/ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.development.js":
 /*!******************************************************************************************************!*\
   !*** ../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.development.js ***!
@@ -2011,6 +6682,235 @@ if (undefined === 'production') {
 } else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.development.js");
 }
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/tannin@1.2.0/node_modules/tannin/index.js":
+/*!*****************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/tannin@1.2.0/node_modules/tannin/index.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Tannin)
+/* harmony export */ });
+/* harmony import */ var _tannin_plural_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tannin/plural-forms */ "../../../node_modules/.pnpm/@tannin+plural-forms@1.1.0/node_modules/@tannin/plural-forms/index.js");
+
+
+/**
+ * Tannin constructor options.
+ *
+ * @typedef {Object} TanninOptions
+ *
+ * @property {string}   [contextDelimiter] Joiner in string lookup with context.
+ * @property {Function} [onMissingKey]     Callback to invoke when key missing.
+ */
+
+/**
+ * Domain metadata.
+ *
+ * @typedef {Object} TanninDomainMetadata
+ *
+ * @property {string}            [domain]       Domain name.
+ * @property {string}            [lang]         Language code.
+ * @property {(string|Function)} [plural_forms] Plural forms expression or
+ *                                              function evaluator.
+ */
+
+/**
+ * Domain translation pair respectively representing the singular and plural
+ * translation.
+ *
+ * @typedef {[string,string]} TanninTranslation
+ */
+
+/**
+ * Locale data domain. The key is used as reference for lookup, the value an
+ * array of two string entries respectively representing the singular and plural
+ * translation.
+ *
+ * @typedef {{[key:string]:TanninDomainMetadata|TanninTranslation,'':TanninDomainMetadata|TanninTranslation}} TanninLocaleDomain
+ */
+
+/**
+ * Jed-formatted locale data.
+ *
+ * @see http://messageformat.github.io/Jed/
+ *
+ * @typedef {{[domain:string]:TanninLocaleDomain}} TanninLocaleData
+ */
+
+/**
+ * Default Tannin constructor options.
+ *
+ * @type {TanninOptions}
+ */
+var DEFAULT_OPTIONS = {
+	contextDelimiter: '\u0004',
+	onMissingKey: null,
+};
+
+/**
+ * Given a specific locale data's config `plural_forms` value, returns the
+ * expression.
+ *
+ * @example
+ *
+ * ```
+ * getPluralExpression( 'nplurals=2; plural=(n != 1);' ) === '(n != 1)'
+ * ```
+ *
+ * @param {string} pf Locale data plural forms.
+ *
+ * @return {string} Plural forms expression.
+ */
+function getPluralExpression( pf ) {
+	var parts, i, part;
+
+	parts = pf.split( ';' );
+
+	for ( i = 0; i < parts.length; i++ ) {
+		part = parts[ i ].trim();
+		if ( part.indexOf( 'plural=' ) === 0 ) {
+			return part.substr( 7 );
+		}
+	}
+}
+
+/**
+ * Tannin constructor.
+ *
+ * @class
+ *
+ * @param {TanninLocaleData} data      Jed-formatted locale data.
+ * @param {TanninOptions}    [options] Tannin options.
+ */
+function Tannin( data, options ) {
+	var key;
+
+	/**
+	 * Jed-formatted locale data.
+	 *
+	 * @name Tannin#data
+	 * @type {TanninLocaleData}
+	 */
+	this.data = data;
+
+	/**
+	 * Plural forms function cache, keyed by plural forms string.
+	 *
+	 * @name Tannin#pluralForms
+	 * @type {Object<string,Function>}
+	 */
+	this.pluralForms = {};
+
+	/**
+	 * Effective options for instance, including defaults.
+	 *
+	 * @name Tannin#options
+	 * @type {TanninOptions}
+	 */
+	this.options = {};
+
+	for ( key in DEFAULT_OPTIONS ) {
+		this.options[ key ] = options !== undefined && key in options
+			? options[ key ]
+			: DEFAULT_OPTIONS[ key ];
+	}
+}
+
+/**
+ * Returns the plural form index for the given domain and value.
+ *
+ * @param {string} domain Domain on which to calculate plural form.
+ * @param {number} n      Value for which plural form is to be calculated.
+ *
+ * @return {number} Plural form index.
+ */
+Tannin.prototype.getPluralForm = function( domain, n ) {
+	var getPluralForm = this.pluralForms[ domain ],
+		config, plural, pf;
+
+	if ( ! getPluralForm ) {
+		config = this.data[ domain ][ '' ];
+
+		pf = (
+			config[ 'Plural-Forms' ] ||
+			config[ 'plural-forms' ] ||
+			// Ignore reason: As known, there's no way to document the empty
+			// string property on a key to guarantee this as metadata.
+			// @ts-ignore
+			config.plural_forms
+		);
+
+		if ( typeof pf !== 'function' ) {
+			plural = getPluralExpression(
+				config[ 'Plural-Forms' ] ||
+				config[ 'plural-forms' ] ||
+				// Ignore reason: As known, there's no way to document the empty
+				// string property on a key to guarantee this as metadata.
+				// @ts-ignore
+				config.plural_forms
+			);
+
+			pf = (0,_tannin_plural_forms__WEBPACK_IMPORTED_MODULE_0__.default)( plural );
+		}
+
+		getPluralForm = this.pluralForms[ domain ] = pf;
+	}
+
+	return getPluralForm( n );
+};
+
+/**
+ * Translate a string.
+ *
+ * @param {string}      domain   Translation domain.
+ * @param {string|void} context  Context distinguishing terms of the same name.
+ * @param {string}      singular Primary key for translation lookup.
+ * @param {string=}     plural   Fallback value used for non-zero plural
+ *                               form index.
+ * @param {number=}     n        Value to use in calculating plural form.
+ *
+ * @return {string} Translated string.
+ */
+Tannin.prototype.dcnpgettext = function( domain, context, singular, plural, n ) {
+	var index, key, entry;
+
+	if ( n === undefined ) {
+		// Default to singular.
+		index = 0;
+	} else {
+		// Find index by evaluating plural form for value.
+		index = this.getPluralForm( domain, n );
+	}
+
+	key = singular;
+
+	// If provided, context is prepended to key with delimiter.
+	if ( context ) {
+		key = context + this.options.contextDelimiter + singular;
+	}
+
+	entry = this.data[ domain ][ key ];
+
+	// Verify not only that entry exists, but that the intended index is within
+	// range and non-empty.
+	if ( entry && entry[ index ] ) {
+		return entry[ index ];
+	}
+
+	if ( this.options.onMissingKey ) {
+		this.options.onMissingKey( singular, domain );
+	}
+
+	// If entry not found, fall back to singular vs. plural with zero index
+	// representing the singular value.
+	return index === 0 ? singular : plural;
+};
 
 
 /***/ }),
@@ -2785,6 +7685,146 @@ _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_mo
 
 /***/ }),
 
+/***/ "../../js-packages/components/components/pricing-card/index.jsx":
+/*!**********************************************************************!*\
+  !*** ../../js-packages/components/components/pricing-card/index.jsx ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _automattic_format_currency__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/format-currency */ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/index.js");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/pricing-card/style.scss");
+/**
+ * External dependencies
+ */
+
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
+
+/**
+ * Whether or not to display a price's decimal part in the UI.
+ * Needed as `getCurrencyObject` will always return the decimal part populated even if it
+ * doesn't exist.
+ *
+ * @param {object} currencyObject -- A currency object returned from `getCurrencyObject`.
+ * @returns {boolean} Whether or not to display the price decimal part.
+ */
+
+var showPriceDecimals = function showPriceDecimals(currencyObject) {
+  return currencyObject.fraction.indexOf('00') === -1;
+};
+/**
+ * The Pricing card component.
+ *
+ * @param {object} props -- The properties.
+ * @returns {React.Component} The `PricingCard` component.
+ */
+
+
+var PricingCard = function PricingCard(props) {
+  var currencyObjectBefore = (0,_automattic_format_currency__WEBPACK_IMPORTED_MODULE_5__.getCurrencyObject)(props.priceBefore, props.currencyCode);
+  var currencyObjectAfter = (0,_automattic_format_currency__WEBPACK_IMPORTED_MODULE_5__.getCurrencyObject)(props.priceAfter, props.currencyCode);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__pricing-card"
+  }, props.icon && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__pricing-card__icon"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: props.icon,
+    alt: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.sprintf)(
+    /* translators: placeholder is a product name */
+    __('Icon for the product %s', 'jetpack'), props.title)
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "jp-components__pricing-card__title"
+  }, props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__pricing-card__pricing"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__pricing-card__price-before"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "jp-components__pricing-card__currency"
+  }, currencyObjectBefore.symbol), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "jp-components__pricing-card__price"
+  }, currencyObjectBefore.integer), showPriceDecimals(currencyObjectBefore) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "jp-components__pricing-card__price-decimal"
+  }, ' ', currencyObjectBefore.fraction), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__pricing-card__price-strikethrough"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__pricing-card__price-after"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "jp-components__pricing-card__currency"
+  }, currencyObjectAfter.symbol), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "jp-components__pricing-card__price"
+  }, currencyObjectAfter.integer), showPriceDecimals(currencyObjectAfter) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "jp-components__pricing-card__price-decimal"
+  }, currencyObjectAfter.fraction)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "jp-components__pricing-card__price-details"
+  }, props.priceDetails)), props.children && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__pricing-card__extra-content-wrapper"
+  }, props.children), props.ctaText && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__pricing-card__cta"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+    className: "jp-components__pricing-card__button",
+    label: props.ctaText,
+    onClick: props.onCtaClick
+  }, props.ctaText)), props.infoText && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__pricing-card__info"
+  }, props.infoText));
+};
+
+PricingCard.propTypes = {
+  /** The Title. */
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** The Icon. */
+  icon: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** Price before discount. */
+  priceBefore: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number.isRequired),
+
+  /** Price after discount. */
+  priceAfter: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number.isRequired),
+
+  /** Price details. */
+  priceDetails: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The Currency code, eg 'USD'. */
+  currencyCode: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The CTA copy. */
+  ctaText: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The CTA callback to be called on click. */
+  onCtaClick: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** Optional informative text. */
+  infoText: prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object)])
+};
+PricingCard.defaultProps = {
+  currencyCode: 'USD',
+  priceDetails: __('/month, paid yearly', 'jetpack')
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PricingCard);
+
+/***/ }),
+
 /***/ "../../js-packages/components/components/spinner/index.jsx":
 /*!*****************************************************************!*\
   !*** ../../js-packages/components/components/spinner/index.jsx ***!
@@ -3049,7 +8089,7 @@ var ConnectButton = function ConnectButton(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, connectionStatusIsFetching && "Loading...", (!connectionStatus.isRegistered || !connectionStatus.isUserConnected) && !connectionStatusIsFetching && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__.default, {
     label: connectLabel,
     onClick: registerSite,
-    displayError: registrationError,
+    displayError: registrationError ? true : false,
     isLoading: isRegistering || isUserConnecting
   }), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_6__.default, {
     connectUrl: authorizationUrl,
@@ -3077,10 +8117,10 @@ ConnectButton.defaultProps = {
 
 /***/ }),
 
-/***/ "../../js-packages/connection/components/connect-screen/image-slider.jsx":
-/*!*******************************************************************************!*\
-  !*** ../../js-packages/connection/components/connect-screen/image-slider.jsx ***!
-  \*******************************************************************************/
+/***/ "../../js-packages/connection/components/connect-screen/layout/image-slider.jsx":
+/*!**************************************************************************************!*\
+  !*** ../../js-packages/connection/components/connect-screen/layout/image-slider.jsx ***!
+  \**************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3114,15 +8154,16 @@ var ImageSlider = function ImageSlider(props) {
     return null;
   }
 
-  var imagesHTML = [];
-  images.forEach(function (image) {
-    return imagesHTML.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  var imagesHTML = images.map(function (image, index) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), {
+      key: index
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
       src: assetBaseUrl + image,
       alt: ""
-    })));
+    }));
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-connect-screen--image-slider"
+    className: "jp-connection__connect-screen__image-slider"
   }, imagesHTML);
 };
 
@@ -3137,10 +8178,89 @@ ImageSlider.defaultProps = {
 
 /***/ }),
 
-/***/ "../../js-packages/connection/components/connect-screen/index.jsx":
-/*!************************************************************************!*\
-  !*** ../../js-packages/connection/components/connect-screen/index.jsx ***!
-  \************************************************************************/
+/***/ "../../js-packages/connection/components/connect-screen/layout/index.jsx":
+/*!*******************************************************************************!*\
+  !*** ../../js-packages/connection/components/connect-screen/layout/index.jsx ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
+/* harmony import */ var _image_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./image-slider */ "../../js-packages/connection/components/connect-screen/layout/image-slider.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/connect-screen/layout/style.scss");
+/**
+ * External dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+/**
+ * Internal dependencies
+ */
+
+
+
+/**
+ * The Connection Screen Layout component.
+ *
+ * @param {object} props -- The properties.
+ * @returns {React.Component} The `ConnectScreenLayout` component.
+ */
+
+var ConnectScreenLayout = function ConnectScreenLayout(props) {
+  var title = props.title,
+      children = props.children,
+      className = props.className,
+      assetBaseUrl = props.assetBaseUrl,
+      images = props.images;
+  var showImageSlider = images === null || images === void 0 ? void 0 : images.length;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: 'jp-connection__connect-screen-layout' + (showImageSlider ? ' jp-connection__connect-screen-layout__two-columns' : '') + (className ? ' ' + className : '')
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__connect-screen-layout__left"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, title), children), showImageSlider ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__connect-screen-layout__right"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_image_slider__WEBPACK_IMPORTED_MODULE_4__.default, {
+    images: images,
+    assetBaseUrl: assetBaseUrl
+  })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__connect-screen-layout__clearfix"
+  }));
+};
+
+ConnectScreenLayout.propTypes = {
+  /** The Title. */
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** Class to be added to component. */
+  className: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** Images to display on the right side. */
+  images: prop_types__WEBPACK_IMPORTED_MODULE_1___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)),
+
+  /** The assets base URL. */
+  assetBaseUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConnectScreenLayout);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/connect-screen/required-plan/index.jsx":
+/*!**************************************************************************************!*\
+  !*** ../../js-packages/connection/components/connect-screen/required-plan/index.jsx ***!
+  \**************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3154,13 +8274,146 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
+/* harmony import */ var _connect_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../connect-button */ "../../js-packages/connection/components/connect-button/index.jsx");
+/* harmony import */ var _visual__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./visual */ "../../js-packages/connection/components/connect-screen/required-plan/visual.jsx");
+/**
+ * External dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+
+
+/**
+ * The Connection Screen Visual component for consumers that require a Plan.
+ *
+ * @param {object} props -- The properties.
+ * @returns {React.Component} The `ConnectScreenForRequiredPlan` component.
+ */
+
+var ConnectScreenRequiredPlan = function ConnectScreenRequiredPlan(props) {
+  var title = props.title,
+      autoTrigger = props.autoTrigger,
+      buttonLabel = props.buttonLabel,
+      apiRoot = props.apiRoot,
+      apiNonce = props.apiNonce,
+      registrationNonce = props.registrationNonce,
+      from = props.from,
+      redirectUri = props.redirectUri,
+      children = props.children,
+      connectionStatus = props.connectionStatus,
+      priceBefore = props.priceBefore,
+      priceAfter = props.priceAfter,
+      pricingIcon = props.pricingIcon,
+      pricingTitle = props.pricingTitle,
+      pricingCurrencyCode = props.pricingCurrencyCode;
+  var renderConnectBtn = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (label, trigger) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_button__WEBPACK_IMPORTED_MODULE_3__.default, {
+      autoTrigger: trigger,
+      apiRoot: apiRoot,
+      apiNonce: apiNonce,
+      registrationNonce: registrationNonce,
+      from: from,
+      redirectUri: redirectUri,
+      connectionStatus: connectionStatus,
+      connectLabel: label
+    });
+  }, [apiRoot, apiNonce, registrationNonce, from, redirectUri, connectionStatus]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_visual__WEBPACK_IMPORTED_MODULE_4__.default, {
+    title: title,
+    autoTrigger: autoTrigger,
+    buttonLabel: buttonLabel,
+    priceBefore: priceBefore,
+    priceAfter: priceAfter,
+    pricingIcon: pricingIcon,
+    pricingTitle: pricingTitle,
+    pricingCurrencyCode: pricingCurrencyCode,
+    connectionStatus: connectionStatus,
+    renderConnectBtn: renderConnectBtn
+  }, children);
+};
+
+ConnectScreenRequiredPlan.propTypes = {
+  /** The Title. */
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The Connect Button label. */
+  buttonLabel: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** API root. */
+  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** API nonce. */
+  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** Registration nonce. */
+  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** Where the connection request is coming from. */
+  from: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The redirect admin URI. */
+  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** Connection Status object */
+  connectionStatus: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object.isRequired),
+
+  /** Whether to initiate the connection process automatically upon rendering the component. */
+  autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
+
+  /** The Pricing Card Title. */
+  pricingTitle: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** The Pricing Card Icon. */
+  icon: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** Price before discount. */
+  priceBefore: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number.isRequired),
+
+  /** Price after discount. */
+  priceAfter: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number.isRequired),
+
+  /** The Currency code, eg 'USD'. */
+  pricingCurrencyCode: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)
+};
+ConnectScreenRequiredPlan.defaultProps = {
+  title: __('Over 5 million WordPress sites are faster and more secure', 'jetpack'),
+  buttonLabel: __('Set up Jetpack', 'jetpack'),
+  pricingCurrencyCode: 'USD',
+  autoTrigger: false
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConnectScreenRequiredPlan);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/connect-screen/required-plan/visual.jsx":
+/*!***************************************************************************************!*\
+  !*** ../../js-packages/connection/components/connect-screen/required-plan/visual.jsx ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/pricing-card/index.jsx");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _connect_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../connect-button */ "../../js-packages/connection/components/connect-button/index.jsx");
-/* harmony import */ var _image_slider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./image-slider */ "../../js-packages/connection/components/connect-screen/image-slider.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/connect-screen/style.scss");
+/* harmony import */ var _layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../layout */ "../../js-packages/connection/components/connect-screen/layout/index.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/connect-screen/required-plan/style.scss");
 /**
  * External dependencies
  */
@@ -3176,95 +8429,95 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 
-
 /**
- * The Connection Screen component.
+ * The Connection Screen Visual component for consumers that require a Plan.
  *
  * @param {object} props -- The properties.
- * @param {string} props.apiRoot -- API root URL, required.
- * @param {string} props.apiNonce -- API Nonce, required.
- * @param {string} props.registrationNonce -- Separate registration nonce, required.
- * @param {string} props.redirectUri -- The redirect admin URI.
- * @param {string} props.from -- Where the connection request is coming from.
- * @param {string} props.title -- Page title.
- * @param {Array} props.images -- Images to display on the right side.
- * @param {string} props.assetBaseUrl -- The assets base URL.
- * @param {boolean} props.autoTrigger -- Whether to initiate the connection process automatically upon rendering the component.
- * @returns {React.Component} The `ConnectScreen` component.
+ * @returns {React.Component} The `ConnectScreenRequiredPlanVisual` component.
  */
 
-var ConnectScreen = function ConnectScreen(props) {
+var ConnectScreenRequiredPlanVisual = function ConnectScreenRequiredPlanVisual(props) {
   var title = props.title,
-      buttonLabel = props.buttonLabel,
-      apiRoot = props.apiRoot,
-      apiNonce = props.apiNonce,
-      registrationNonce = props.registrationNonce,
-      from = props.from,
-      redirectUri = props.redirectUri,
-      images = props.images,
-      children = props.children,
-      assetBaseUrl = props.assetBaseUrl,
       autoTrigger = props.autoTrigger,
-      connectionStatus = props.connectionStatus;
-  var showImageSlider = images.length;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: 'jp-connect-screen' + (showImageSlider ? ' jp-connect-screen--two-columns' : '') + (connectionStatus.hasOwnProperty('isRegistered') ? '' : ' jp-connect-screen--loading')
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-connect-screen--left"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, title), children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_button__WEBPACK_IMPORTED_MODULE_6__.default, {
-    apiRoot: apiRoot,
-    apiNonce: apiNonce,
-    registrationNonce: registrationNonce,
-    from: from,
-    redirectUri: redirectUri,
-    connectionStatus: connectionStatus,
-    connectLabel: buttonLabel,
-    autoTrigger: autoTrigger
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-connect-screen--tos"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)(__('By clicking the button above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>share details</shareDetailsLink> with WordPress.com.', 'jetpack'), {
+      buttonLabel = props.buttonLabel,
+      children = props.children,
+      connectionStatus = props.connectionStatus,
+      priceBefore = props.priceBefore,
+      priceAfter = props.priceAfter,
+      pricingIcon = props.pricingIcon,
+      pricingTitle = props.pricingTitle,
+      pricingCurrencyCode = props.pricingCurrencyCode,
+      renderConnectBtn = props.renderConnectBtn;
+  var tos = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)(__('By clicking the button above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>share details</shareDetailsLink> with WordPress.com.', 'jetpack'), {
     tosLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default)('wpcom-tos'),
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__.default)('wpcom-tos'),
       rel: "noopener noreferrer",
       target: "_blank"
     }),
     shareDetailsLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default)('jetpack-support-what-data-does-jetpack-sync'),
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__.default)('jetpack-support-what-data-does-jetpack-sync'),
       rel: "noopener noreferrer",
       target: "_blank"
     })
-  }))), showImageSlider ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-connect-screen--right"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_image_slider__WEBPACK_IMPORTED_MODULE_8__.default, {
-    images: images,
-    assetBaseUrl: assetBaseUrl
-  })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-connect-screen--clearfix"
-  }));
+  });
+  var withSubscription = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)(__('Already have a subscription? <connectButton/> to get started.', 'jetpack'), {
+    connectButton: renderConnectBtn(__('Log in', 'jetpack'), false)
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout__WEBPACK_IMPORTED_MODULE_6__.default, {
+    title: title,
+    className: 'jp-connection__connect-screen-required-plan' + (connectionStatus.hasOwnProperty('isRegistered') ? '' : ' jp-connection__connect-screen-required-plan__loading')
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__connect-screen-required-plan__content"
+  }, children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__connect-screen-required-plan__pricing-card"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default, {
+    title: pricingTitle,
+    icon: pricingIcon,
+    priceBefore: priceBefore,
+    currencyCode: pricingCurrencyCode,
+    priceAfter: priceAfter,
+    infoText: tos
+  }, renderConnectBtn(buttonLabel, autoTrigger))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__connect-screen-required-plan__with-subscription"
+  }, withSubscription)));
 };
 
-ConnectScreen.propTypes = {
+ConnectScreenRequiredPlanVisual.propTypes = {
+  /** The Pricing Card Title. */
+  pricingTitle: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** Price before discount. */
+  priceBefore: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number.isRequired),
+
+  /** Price after discount. */
+  priceAfter: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number.isRequired),
+
+  /** The Currency code, eg 'USD'. */
+  pricingCurrencyCode: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The Title. */
   title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
-  body: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The Connect Button label. */
   buttonLabel: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
-  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-  from: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
-  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-  images: prop_types__WEBPACK_IMPORTED_MODULE_1___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)),
-  assetBaseUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** Connection Status object */
+  connectionStatus: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object.isRequired),
+
+  /** Whether to initiate the connection process automatically upon rendering the component. */
   autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
-  connectionStatus: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object.isRequired)
+
+  /** The Pricing Card Icon. */
+  pricingIcon: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** Connect button render function */
+  renderConnectBtn: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
 };
-ConnectScreen.defaultProps = {
-  title: __('Over 5 million WordPress sites are faster and more secure', 'jetpack'),
-  buttonLabel: __('Set up Jetpack', 'jetpack'),
-  images: [],
-  redirectUri: null,
+ConnectScreenRequiredPlanVisual.defaultProps = {
+  pricingCurrencyCode: 'USD',
   autoTrigger: false
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConnectScreen);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConnectScreenRequiredPlanVisual);
 
 /***/ }),
 
@@ -5116,14 +10369,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/with-connection-status/index.jsx");
-/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/connect-screen/index.jsx");
-/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/connection-status-card/index.jsx");
-/* harmony import */ var _automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @automattic/jetpack-idc */ "../../js-packages/idc/components/idc-screen/index.jsx");
+/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/with-connection-status/index.jsx");
+/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/connect-screen/required-plan/index.jsx");
+/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/connection-status-card/index.jsx");
+/* harmony import */ var _automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-idc */ "../../js-packages/idc/components/idc-screen/index.jsx");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store */ "./_inc/store.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../header */ "./_inc/components/header/index.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./_inc/components/admin/style.scss");
-/* harmony import */ var _assets_connect_right_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/connect-right.png */ "./_inc/components/admin/assets/connect-right.png");
 /**
  * External dependencies
  */
@@ -5140,8 +10392,7 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 
-
-var ConnectScreenWithConnectionStatus = (0,_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__.default)(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_8__.default);
+var ConnectScreenWithConnectionStatus = (0,_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_6__.default)(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__.default);
 /**
  * The Connection IU Admin App.
  *
@@ -5158,9 +10409,6 @@ function Admin() {
   var registrationNonce = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(function (select) {
     return select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getRegistrationNonce();
   }, []);
-  var assetBuildUrl = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(function (select) {
-    return select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getAssetBuildUrl();
-  }, []);
   var connectionStatus = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(function (select) {
     return select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getConnectionStatus();
   }, []);
@@ -5169,7 +10417,7 @@ function Admin() {
       setConnectionStatus = _useDispatch.setConnectionStatus; // Placeholder for testing purposes.
 
 
-  var hasIDC = true;
+  var hasIDC = false;
   var IDCHomeUrl = 'https://site1.local/';
   var currentUrl = 'https://site2.local/';
   var redirectUri = 'tools.php?page=wpcom-connection-manager';
@@ -5185,7 +10433,7 @@ function Admin() {
   }, [setConnectionStatus]);
 
   if (hasIDC) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_9__.default, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_8__.default, {
       wpcomHomeUrl: IDCHomeUrl,
       currentUrl: currentUrl,
       apiRoot: APIRoot,
@@ -5194,7 +10442,7 @@ function Admin() {
     });
   }
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_4__.default, null), connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_10__.default, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_4__.default, null), connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__.default, {
     isRegistered: connectionStatus.isRegistered,
     isUserConnected: connectionStatus.isUserConnected,
     apiRoot: APIRoot,
@@ -5208,8 +10456,11 @@ function Admin() {
     from: "connection-ui",
     redirectUri: "tools.php?page=wpcom-connection-manager",
     statusCallback: statusCallback,
-    images: [_assets_connect_right_png__WEBPACK_IMPORTED_MODULE_6__],
-    assetBaseUrl: assetBuildUrl
+    pricingIcon: "data:image/svg+xml,%3Csvg width='32' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='m21.092 15.164.019-1.703v-.039c0-1.975-1.803-3.866-4.4-3.866-2.17 0-3.828 1.351-4.274 2.943l-.426 1.524-1.581-.065a2.92 2.92 0 0 0-.12-.002c-1.586 0-2.977 1.344-2.977 3.133 0 1.787 1.388 3.13 2.973 3.133H22.399c1.194 0 2.267-1.016 2.267-2.4 0-1.235-.865-2.19-1.897-2.368l-1.677-.29Zm-10.58-3.204a4.944 4.944 0 0 0-.201-.004c-2.75 0-4.978 2.298-4.978 5.133s2.229 5.133 4.978 5.133h12.088c2.357 0 4.267-1.97 4.267-4.4 0-2.18-1.538-3.99-3.556-4.339v-.06c0-3.24-2.865-5.867-6.4-5.867-2.983 0-5.49 1.871-6.199 4.404Z' fill='%23000'/%3E%3C/svg%3E",
+    priceBefore: 9,
+    priceAfter: 4.5,
+    pricingTitle: __('Jetpack Backup', 'jetpack'),
+    buttonLabel: __('Get Jetpack Backup', 'jetpack')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, __("Secure and speed up your site for free with Jetpack's powerful WordPress tools.", 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Measure your impact with beautiful stats', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Speed up your site with optimized images', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Protect your site against bot attacks', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Get notifications if your site goes offline', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Enhance your site with dozens of other features', 'jetpack')))));
 }
 
@@ -5495,14 +10746,647 @@ var storeConfig = {
 
 /***/ }),
 
-/***/ "./_inc/components/admin/assets/connect-right.png":
-/*!********************************************************!*\
-  !*** ./_inc/components/admin/assets/connect-right.png ***!
-  \********************************************************/
-/***/ ((module) => {
+/***/ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js":
+/*!*********************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js ***!
+  \*********************************************************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+/* eslint-env browser */
+
+/**
+ * This is the web browser implementation of `debug()`.
+ */
+exports.formatArgs = formatArgs;
+exports.save = save;
+exports.load = load;
+exports.useColors = useColors;
+exports.storage = localstorage();
+
+exports.destroy = function () {
+  var warned = false;
+  return function () {
+    if (!warned) {
+      warned = true;
+      console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
+    }
+  };
+}();
+/**
+ * Colors.
+ */
+
+
+exports.colors = ['#0000CC', '#0000FF', '#0033CC', '#0033FF', '#0066CC', '#0066FF', '#0099CC', '#0099FF', '#00CC00', '#00CC33', '#00CC66', '#00CC99', '#00CCCC', '#00CCFF', '#3300CC', '#3300FF', '#3333CC', '#3333FF', '#3366CC', '#3366FF', '#3399CC', '#3399FF', '#33CC00', '#33CC33', '#33CC66', '#33CC99', '#33CCCC', '#33CCFF', '#6600CC', '#6600FF', '#6633CC', '#6633FF', '#66CC00', '#66CC33', '#9900CC', '#9900FF', '#9933CC', '#9933FF', '#99CC00', '#99CC33', '#CC0000', '#CC0033', '#CC0066', '#CC0099', '#CC00CC', '#CC00FF', '#CC3300', '#CC3333', '#CC3366', '#CC3399', '#CC33CC', '#CC33FF', '#CC6600', '#CC6633', '#CC9900', '#CC9933', '#CCCC00', '#CCCC33', '#FF0000', '#FF0033', '#FF0066', '#FF0099', '#FF00CC', '#FF00FF', '#FF3300', '#FF3333', '#FF3366', '#FF3399', '#FF33CC', '#FF33FF', '#FF6600', '#FF6633', '#FF9900', '#FF9933', '#FFCC00', '#FFCC33'];
+/**
+ * Currently only WebKit-based Web Inspectors, Firefox >= v31,
+ * and the Firebug extension (any Firefox version) are known
+ * to support "%c" CSS customizations.
+ *
+ * TODO: add a `localStorage` variable to explicitly enable/disable colors
+ */
+// eslint-disable-next-line complexity
+
+function useColors() {
+  // NB: In an Electron preload script, document will be defined but not fully
+  // initialized. Since we know we're in Chrome, we'll just detect this case
+  // explicitly
+  if (typeof window !== 'undefined' && window.process && (window.process.type === 'renderer' || window.process.__nwjs)) {
+    return true;
+  } // Internet Explorer and Edge do not support colors.
+
+
+  if (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/)) {
+    return false;
+  } // Is webkit? http://stackoverflow.com/a/16459606/376773
+  // document is undefined in react-native: https://github.com/facebook/react-native/pull/1632
+
+
+  return typeof document !== 'undefined' && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || typeof window !== 'undefined' && window.console && (window.console.firebug || window.console.exception && window.console.table) || typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31 || typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
+}
+/**
+ * Colorize log arguments if enabled.
+ *
+ * @api public
+ */
+
+
+function formatArgs(args) {
+  args[0] = (this.useColors ? '%c' : '') + this.namespace + (this.useColors ? ' %c' : ' ') + args[0] + (this.useColors ? '%c ' : ' ') + '+' + module.exports.humanize(this.diff);
+
+  if (!this.useColors) {
+    return;
+  }
+
+  var c = 'color: ' + this.color;
+  args.splice(1, 0, c, 'color: inherit'); // The final "%c" is somewhat tricky, because there could be other
+  // arguments passed either before or after the %c, so we need to
+  // figure out the correct index to insert the CSS into
+
+  var index = 0;
+  var lastC = 0;
+  args[0].replace(/%[a-zA-Z%]/g, function (match) {
+    if (match === '%%') {
+      return;
+    }
+
+    index++;
+
+    if (match === '%c') {
+      // We only are interested in the *last* %c
+      // (the user may have provided their own)
+      lastC = index;
+    }
+  });
+  args.splice(lastC, 0, c);
+}
+/**
+ * Invokes `console.debug()` when available.
+ * No-op when `console.debug` is not a "function".
+ * If `console.debug` is not available, falls back
+ * to `console.log`.
+ *
+ * @api public
+ */
+
+
+exports.log = console.debug || console.log || function () {};
+/**
+ * Save `namespaces`.
+ *
+ * @param {String} namespaces
+ * @api private
+ */
+
+
+function save(namespaces) {
+  try {
+    if (namespaces) {
+      exports.storage.setItem('debug', namespaces);
+    } else {
+      exports.storage.removeItem('debug');
+    }
+  } catch (error) {// Swallow
+    // XXX (@Qix-) should we be logging these?
+  }
+}
+/**
+ * Load `namespaces`.
+ *
+ * @return {String} returns the previously persisted debug modes
+ * @api private
+ */
+
+
+function load() {
+  var r;
+
+  try {
+    r = exports.storage.getItem('debug');
+  } catch (error) {// Swallow
+    // XXX (@Qix-) should we be logging these?
+  } // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
+
+
+  if (!r && typeof process !== 'undefined' && 'env' in process) {
+    r = process.env.DEBUG;
+  }
+
+  return r;
+}
+/**
+ * Localstorage attempts to return the localstorage.
+ *
+ * This is necessary because safari throws
+ * when a user disables cookies/localstorage
+ * and you attempt to access it.
+ *
+ * @return {LocalStorage}
+ * @api private
+ */
+
+
+function localstorage() {
+  try {
+    // TVMLKit (Apple TV JS Runtime) does not have a window object, just localStorage in the global context
+    // The Browser also has localStorage in the global context.
+    return localStorage;
+  } catch (error) {// Swallow
+    // XXX (@Qix-) should we be logging these?
+  }
+}
+
+module.exports = __webpack_require__(/*! ./common */ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js")(exports);
+var formatters = module.exports.formatters;
+/**
+ * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
+ */
+
+formatters.j = function (v) {
+  try {
+    return JSON.stringify(v);
+  } catch (error) {
+    return '[UnexpectedJSONParseError]: ' + error.message;
+  }
+};
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js":
+/*!********************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js ***!
+  \********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var _toConsumableArray = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/toConsumableArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/toConsumableArray.js").default;
+
+/**
+ * This is the common logic for both the Node.js and web browser
+ * implementations of `debug()`.
+ */
+function setup(env) {
+  createDebug.debug = createDebug;
+  createDebug["default"] = createDebug;
+  createDebug.coerce = coerce;
+  createDebug.disable = disable;
+  createDebug.enable = enable;
+  createDebug.enabled = enabled;
+  createDebug.humanize = __webpack_require__(/*! ms */ "../../../node_modules/.pnpm/ms@2.1.2/node_modules/ms/index.js");
+  createDebug.destroy = destroy;
+  Object.keys(env).forEach(function (key) {
+    createDebug[key] = env[key];
+  });
+  /**
+  * The currently active debug mode names, and names to skip.
+  */
+
+  createDebug.names = [];
+  createDebug.skips = [];
+  /**
+  * Map of special "%n" handling functions, for the debug "format" argument.
+  *
+  * Valid key names are a single, lower or upper-case letter, i.e. "n" and "N".
+  */
+
+  createDebug.formatters = {};
+  /**
+  * Selects a color for a debug namespace
+  * @param {String} namespace The namespace string for the for the debug instance to be colored
+  * @return {Number|String} An ANSI color code for the given namespace
+  * @api private
+  */
+
+  function selectColor(namespace) {
+    var hash = 0;
+
+    for (var i = 0; i < namespace.length; i++) {
+      hash = (hash << 5) - hash + namespace.charCodeAt(i);
+      hash |= 0; // Convert to 32bit integer
+    }
+
+    return createDebug.colors[Math.abs(hash) % createDebug.colors.length];
+  }
+
+  createDebug.selectColor = selectColor;
+  /**
+  * Create a debugger with the given `namespace`.
+  *
+  * @param {String} namespace
+  * @return {Function}
+  * @api public
+  */
+
+  function createDebug(namespace) {
+    var prevTime;
+    var enableOverride = null;
+    var namespacesCache;
+    var enabledCache;
+
+    function debug() {
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      // Disabled?
+      if (!debug.enabled) {
+        return;
+      }
+
+      var self = debug; // Set `diff` timestamp
+
+      var curr = Number(new Date());
+      var ms = curr - (prevTime || curr);
+      self.diff = ms;
+      self.prev = prevTime;
+      self.curr = curr;
+      prevTime = curr;
+      args[0] = createDebug.coerce(args[0]);
+
+      if (typeof args[0] !== 'string') {
+        // Anything else let's inspect with %O
+        args.unshift('%O');
+      } // Apply any `formatters` transformations
+
+
+      var index = 0;
+      args[0] = args[0].replace(/%([a-zA-Z%])/g, function (match, format) {
+        // If we encounter an escaped % then don't increase the array index
+        if (match === '%%') {
+          return '%';
+        }
+
+        index++;
+        var formatter = createDebug.formatters[format];
+
+        if (typeof formatter === 'function') {
+          var val = args[index];
+          match = formatter.call(self, val); // Now we need to remove `args[index]` since it's inlined in the `format`
+
+          args.splice(index, 1);
+          index--;
+        }
+
+        return match;
+      }); // Apply env-specific formatting (colors, etc.)
+
+      createDebug.formatArgs.call(self, args);
+      var logFn = self.log || createDebug.log;
+      logFn.apply(self, args);
+    }
+
+    debug.namespace = namespace;
+    debug.useColors = createDebug.useColors();
+    debug.color = createDebug.selectColor(namespace);
+    debug.extend = extend;
+    debug.destroy = createDebug.destroy; // XXX Temporary. Will be removed in the next major release.
+
+    Object.defineProperty(debug, 'enabled', {
+      enumerable: true,
+      configurable: false,
+      get: function get() {
+        if (enableOverride !== null) {
+          return enableOverride;
+        }
+
+        if (namespacesCache !== createDebug.namespaces) {
+          namespacesCache = createDebug.namespaces;
+          enabledCache = createDebug.enabled(namespace);
+        }
+
+        return enabledCache;
+      },
+      set: function set(v) {
+        enableOverride = v;
+      }
+    }); // Env-specific initialization logic for debug instances
+
+    if (typeof createDebug.init === 'function') {
+      createDebug.init(debug);
+    }
+
+    return debug;
+  }
+
+  function extend(namespace, delimiter) {
+    var newDebug = createDebug(this.namespace + (typeof delimiter === 'undefined' ? ':' : delimiter) + namespace);
+    newDebug.log = this.log;
+    return newDebug;
+  }
+  /**
+  * Enables a debug mode by namespaces. This can include modes
+  * separated by a colon and wildcards.
+  *
+  * @param {String} namespaces
+  * @api public
+  */
+
+
+  function enable(namespaces) {
+    createDebug.save(namespaces);
+    createDebug.namespaces = namespaces;
+    createDebug.names = [];
+    createDebug.skips = [];
+    var i;
+    var split = (typeof namespaces === 'string' ? namespaces : '').split(/[\s,]+/);
+    var len = split.length;
+
+    for (i = 0; i < len; i++) {
+      if (!split[i]) {
+        // ignore empty strings
+        continue;
+      }
+
+      namespaces = split[i].replace(/\*/g, '.*?');
+
+      if (namespaces[0] === '-') {
+        createDebug.skips.push(new RegExp('^' + namespaces.substr(1) + '$'));
+      } else {
+        createDebug.names.push(new RegExp('^' + namespaces + '$'));
+      }
+    }
+  }
+  /**
+  * Disable debug output.
+  *
+  * @return {String} namespaces
+  * @api public
+  */
+
+
+  function disable() {
+    var namespaces = [].concat(_toConsumableArray(createDebug.names.map(toNamespace)), _toConsumableArray(createDebug.skips.map(toNamespace).map(function (namespace) {
+      return '-' + namespace;
+    }))).join(',');
+    createDebug.enable('');
+    return namespaces;
+  }
+  /**
+  * Returns true if the given mode name is enabled, false otherwise.
+  *
+  * @param {String} name
+  * @return {Boolean}
+  * @api public
+  */
+
+
+  function enabled(name) {
+    if (name[name.length - 1] === '*') {
+      return true;
+    }
+
+    var i;
+    var len;
+
+    for (i = 0, len = createDebug.skips.length; i < len; i++) {
+      if (createDebug.skips[i].test(name)) {
+        return false;
+      }
+    }
+
+    for (i = 0, len = createDebug.names.length; i < len; i++) {
+      if (createDebug.names[i].test(name)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+  /**
+  * Convert regexp to namespace
+  *
+  * @param {RegExp} regxep
+  * @return {String} namespace
+  * @api private
+  */
+
+
+  function toNamespace(regexp) {
+    return regexp.toString().substring(2, regexp.toString().length - 2).replace(/\.\*\?$/, '*');
+  }
+  /**
+  * Coerce `val`.
+  *
+  * @param {Mixed} val
+  * @return {Mixed}
+  * @api private
+  */
+
+
+  function coerce(val) {
+    if (val instanceof Error) {
+      return val.stack || val.message;
+    }
+
+    return val;
+  }
+  /**
+  * XXX DO NOT USE. This is a temporary stub function.
+  * XXX It WILL be removed in the next major release.
+  */
+
+
+  function destroy() {
+    console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
+  }
+
+  createDebug.enable(createDebug.load());
+  return createDebug;
+}
+
+module.exports = setup;
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.development.js":
+/*!******************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.development.js ***!
+  \******************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-module.exports = "/" + "images/connect-right-f27775ac15cf885713c2.png";
+/** @license React vundefined
+ * use-subscription.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+if (undefined !== "production") {
+  (function() {
+'use strict';
+
+var _assign = __webpack_require__(/*! object-assign */ "../../../node_modules/.pnpm/object-assign@4.1.1/node_modules/object-assign/index.js");
+var react = __webpack_require__(/*! react */ "react");
+
+//
+// In order to avoid removing and re-adding subscriptions each time this hook is called,
+// the parameters passed to this hook should be memoized in some way–
+// either by wrapping the entire params object with useMemo()
+// or by wrapping the individual callbacks with useCallback().
+
+function useSubscription(_ref) {
+  var getCurrentValue = _ref.getCurrentValue,
+      subscribe = _ref.subscribe;
+
+  // Read the current value from our subscription.
+  // When this value changes, we'll schedule an update with React.
+  // It's important to also store the hook params so that we can check for staleness.
+  // (See the comment in checkForUpdates() below for more info.)
+  var _useState = react.useState(function () {
+    return {
+      getCurrentValue: getCurrentValue,
+      subscribe: subscribe,
+      value: getCurrentValue()
+    };
+  }),
+      state = _useState[0],
+      setState = _useState[1];
+
+  var valueToReturn = state.value; // If parameters have changed since our last render, schedule an update with its current value.
+
+  if (state.getCurrentValue !== getCurrentValue || state.subscribe !== subscribe) {
+    // If the subscription has been updated, we'll schedule another update with React.
+    // React will process this update immediately, so the old subscription value won't be committed.
+    // It is still nice to avoid returning a mismatched value though, so let's override the return value.
+    valueToReturn = getCurrentValue();
+    setState({
+      getCurrentValue: getCurrentValue,
+      subscribe: subscribe,
+      value: valueToReturn
+    });
+  } // Display the current value for this hook in React DevTools.
+
+
+  react.useDebugValue(valueToReturn); // It is important not to subscribe while rendering because this can lead to memory leaks.
+  // (Learn more at reactjs.org/docs/strict-mode.html#detecting-unexpected-side-effects)
+  // Instead, we wait until the commit phase to attach our handler.
+  //
+  // We intentionally use a passive effect (useEffect) rather than a synchronous one (useLayoutEffect)
+  // so that we don't stretch the commit phase.
+  // This also has an added benefit when multiple components are subscribed to the same source:
+  // It allows each of the event handlers to safely schedule work without potentially removing an another handler.
+  // (Learn more at https://codesandbox.io/s/k0yvr5970o)
+
+  react.useEffect(function () {
+    var didUnsubscribe = false;
+
+    var checkForUpdates = function () {
+      // It's possible that this callback will be invoked even after being unsubscribed,
+      // if it's removed as a result of a subscription event/update.
+      // In this case, React will log a DEV warning about an update from an unmounted component.
+      // We can avoid triggering that warning with this check.
+      if (didUnsubscribe) {
+        return;
+      } // We use a state updater function to avoid scheduling work for a stale source.
+      // However it's important to eagerly read the currently value,
+      // so that all scheduled work shares the same value (in the event of multiple subscriptions).
+      // This avoids visual "tearing" when a mutation happens during a (concurrent) render.
+
+
+      var value = getCurrentValue();
+      setState(function (prevState) {
+        // Ignore values from stale sources!
+        // Since we subscribe an unsubscribe in a passive effect,
+        // it's possible that this callback will be invoked for a stale (previous) subscription.
+        // This check avoids scheduling an update for that stale subscription.
+        if (prevState.getCurrentValue !== getCurrentValue || prevState.subscribe !== subscribe) {
+          return prevState;
+        } // Some subscriptions will auto-invoke the handler, even if the value hasn't changed.
+        // If the value hasn't changed, no update is needed.
+        // Return state as-is so React can bail out and avoid an unnecessary render.
+
+
+        if (prevState.value === value) {
+          return prevState;
+        }
+
+        return _assign({}, prevState, {
+          value: value
+        });
+      });
+    };
+
+    var unsubscribe = subscribe(checkForUpdates); // Because we're subscribing in a passive effect,
+    // it's possible that an update has occurred between render and our effect handler.
+    // Check for this and schedule an update if work has occurred.
+
+    checkForUpdates();
+    return function () {
+      didUnsubscribe = true;
+      unsubscribe();
+    };
+  }, [getCurrentValue, subscribe]); // Return the current value for our caller to use while rendering.
+
+  return valueToReturn;
+}
+
+exports.useSubscription = useSubscription;
+  })();
+}
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.production.min.js":
+/*!*********************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.production.min.js ***!
+  \*********************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+/** @license React vundefined
+ * use-subscription.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var e=__webpack_require__(/*! object-assign */ "../../../node_modules/.pnpm/object-assign@4.1.1/node_modules/object-assign/index.js"),g=__webpack_require__(/*! react */ "react");
+exports.useSubscription=function(a){var c=a.getCurrentValue,d=a.subscribe,b=g.useState(function(){return{getCurrentValue:c,subscribe:d,value:c()}});a=b[0];var f=b[1];b=a.value;if(a.getCurrentValue!==c||a.subscribe!==d)b=c(),f({getCurrentValue:c,subscribe:d,value:b});g.useDebugValue(b);g.useEffect(function(){function b(){if(!a){var b=c();f(function(a){return a.getCurrentValue!==c||a.subscribe!==d||a.value===b?a:e({},a,{value:b})})}}var a=!1,h=d(b);b();return function(){a=!0;h()}},[c,d]);return b};
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/index.js":
+/*!***************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/index.js ***!
+  \***************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+if (undefined === 'production') {
+  module.exports = __webpack_require__(/*! ./cjs/use-subscription.production.min.js */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.production.min.js");
+} else {
+  module.exports = __webpack_require__(/*! ./cjs/use-subscription.development.js */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.development.js");
+}
+
 
 /***/ }),
 
@@ -5591,6 +11475,577 @@ module.exports = window["wp"]["element"];
 
 "use strict";
 module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js":
+/*!*********************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
+  \*********************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _arrayLikeToArray)
+/* harmony export */ });
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js":
+/*!*******************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js ***!
+  \*******************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _arrayWithHoles)
+/* harmony export */ });
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":
+/*!**********************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
+  \**********************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _arrayWithoutHoles)
+/* harmony export */ });
+/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr);
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js":
+/*!**************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
+  \**************************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _assertThisInitialized)
+/* harmony export */ });
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/classCallCheck.js":
+/*!*******************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/classCallCheck.js ***!
+  \*******************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _classCallCheck)
+/* harmony export */ });
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/createClass.js":
+/*!****************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/createClass.js ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _createClass)
+/* harmony export */ });
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js":
+/*!*******************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
+  \*******************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _defineProperty)
+/* harmony export */ });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _extends)
+/* harmony export */ });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js":
+/*!*******************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js ***!
+  \*******************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _getPrototypeOf)
+/* harmony export */ });
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/inherits.js":
+/*!*************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/inherits.js ***!
+  \*************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _inherits)
+/* harmony export */ });
+/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/iterableToArray.js":
+/*!********************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
+  \********************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _iterableToArray)
+/* harmony export */ });
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js":
+/*!*************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js ***!
+  \*************************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _iterableToArrayLimit)
+/* harmony export */ });
+function _iterableToArrayLimit(arr, i) {
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
+
+  if (_i == null) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+
+  var _s, _e;
+
+  try {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/nonIterableRest.js":
+/*!********************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/nonIterableRest.js ***!
+  \********************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _nonIterableRest)
+/* harmony export */ });
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":
+/*!**********************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
+  \**********************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _nonIterableSpread)
+/* harmony export */ });
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/objectSpread.js":
+/*!*****************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/objectSpread.js ***!
+  \*****************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _objectSpread)
+/* harmony export */ });
+/* harmony import */ var _defineProperty_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defineProperty.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? Object(arguments[i]) : {};
+    var ownKeys = Object.keys(source);
+
+    if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
+    }
+
+    ownKeys.forEach(function (key) {
+      (0,_defineProperty_js__WEBPACK_IMPORTED_MODULE_0__.default)(target, key, source[key]);
+    });
+  }
+
+  return target;
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/objectSpread2.js":
+/*!******************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/objectSpread2.js ***!
+  \******************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _objectSpread2)
+/* harmony export */ });
+/* harmony import */ var _defineProperty_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defineProperty.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+
+    if (enumerableOnly) {
+      symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+    }
+
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0,_defineProperty_js__WEBPACK_IMPORTED_MODULE_0__.default)(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js":
+/*!******************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js ***!
+  \******************************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _possibleConstructorReturn)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/typeof.js");
+/* harmony import */ var _assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assertThisInitialized.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+
+
+function _possibleConstructorReturn(self, call) {
+  if (call && ((0,_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__.default)(call) === "object" || typeof call === "function")) {
+    return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
+  }
+
+  return (0,_assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__.default)(self);
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
+/*!*******************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
+  \*******************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _setPrototypeOf)
+/* harmony export */ });
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/slicedToArray.js":
+/*!******************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/slicedToArray.js ***!
+  \******************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _slicedToArray)
+/* harmony export */ });
+/* harmony import */ var _arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithHoles.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js");
+/* harmony import */ var _iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArrayLimit.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js");
+/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js");
+/* harmony import */ var _nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableRest.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/nonIterableRest.js");
+
+
+
+
+function _slicedToArray(arr, i) {
+  return (0,_arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr) || (0,_iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__.default)(arr, i) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__.default)(arr, i) || (0,_nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__.default)();
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":
+/*!**********************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
+  \**********************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _toConsumableArray)
+/* harmony export */ });
+/* harmony import */ var _arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js");
+/* harmony import */ var _iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/iterableToArray.js");
+/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js");
+/* harmony import */ var _nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableSpread.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js");
+
+
+
+
+function _toConsumableArray(arr) {
+  return (0,_arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr) || (0,_iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__.default)(arr) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__.default)(arr) || (0,_nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__.default)();
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/typeof.js":
+/*!***********************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/typeof.js ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _typeof)
+/* harmony export */ });
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js":
+/*!*******************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js ***!
+  \*******************************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _unsupportedIterableToArray)
+/* harmony export */ });
+/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);
+}
 
 /***/ })
 

@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix `@covers` directives in various tests.
 - Set `convertDeprecationsToExceptions` true in PHPUnit config.
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## 10.3-beta - 2021-10-26
 ### Enhancements
