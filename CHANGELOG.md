@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Image CDN: ensure that Wikipedia URLs are not served via our image CDN.
+- Make the default publicize social media message blank
 - Publicize: fix visual issue when the panel shows in the pre publish step of the post
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
