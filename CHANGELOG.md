@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Image CDN: ensure that Wikipedia URLs are not served via our image CDN.
 - Make the default publicize social media message blank
 - Publicize: fix visual issue when the panel shows in the pre publish step of the post
+- Search: hide Calypso Jetpack Search menu item for Atomic sites.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Allow /wp/v2/sites/1234/batch endpoint to process widget updates
