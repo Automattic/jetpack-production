@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Fixes the prices and currencies to be based on user's preferences on the WPA upgrade page.
 - Publicize: fix visual issue when the panel shows in the pre publish step of the post
 
 ## 10.3-beta - 2021-10-26
