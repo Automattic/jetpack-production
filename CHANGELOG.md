@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: show/hide main toggle control depending on post state (published)
 
 ### Bug fixes
+- Fixes the prices and currencies to be based on user's preferences on the WPA upgrade page.
 - Image CDN: ensure that Wikipedia URLs are not served via our image CDN.
 - Make the default publicize social media message blank
 - Publicize: fix visual issue when the panel shows in the pre publish step of the post
