@@ -2,7 +2,7 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 9379:
+/***/ 2832:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49,7 +49,7 @@ const PRODUCT_SORT_OPTIONS = new Map([['price_asc', __('Price: low to high', 'je
 
 /***/ }),
 
-/***/ 4880:
+/***/ 7033:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -58,7 +58,7 @@ const PRODUCT_SORT_OPTIONS = new Map([['price_asc', __('Price: low to high', 'je
 /* harmony export */   "Em": function() { return /* binding */ bindCustomizerMessages; },
 /* harmony export */   "vJ": function() { return /* binding */ bindCustomizerChanges; }
 /* harmony export */ });
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9379);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2832);
 /**
  * Internal dependencies
  */
@@ -133,7 +133,7 @@ function bindCustomizerChanges(callback) {
 
 /***/ }),
 
-/***/ 8959:
+/***/ 5148:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 // NOTE: Setting this free variable allows us to modify Webpack's public path, enabling us to use
@@ -228,7 +228,7 @@ module.exports = window["wp"]["i18n"];
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "jp-search.chunk-" + (chunkId === 161 ? "main-payload" : chunkId) + "." + {"161":"35ff1c0ca3706ba8b5b0","270":"5debd14194f6d84d0307"}[chunkId] + ".min.js";
+/******/ 			return "jp-search.chunk-" + (chunkId === 161 ? "main-payload" : chunkId) + "." + {"161":"09a4e7bf52e46e402eac","513":"edcea5d093314783fea8"}[chunkId] + ".min.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -530,10 +530,10 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 !function() {
 "use strict";
-/* harmony import */ var _set_webpack_public_path__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8959);
+/* harmony import */ var _set_webpack_public_path__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5148);
 /* harmony import */ var _set_webpack_public_path__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_set_webpack_public_path__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _lib_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9379);
-/* harmony import */ var _lib_customize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4880);
+/* harmony import */ var _lib_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2832);
+/* harmony import */ var _lib_customize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7033);
 // NOTE: This must be imported first before any other imports.
 // See: https://github.com/webpack/webpack/issues/2776#issuecomment-233208623
 
@@ -548,7 +548,7 @@ var __webpack_exports__ = {};
  */
 
 function init() {
-  Promise.all(/* import() | main-payload */[__webpack_require__.e(270), __webpack_require__.e(161)]).then(__webpack_require__.bind(__webpack_require__, 5298)).then(instantSearch => instantSearch.initialize());
+  Promise.all(/* import() | main-payload */[__webpack_require__.e(513), __webpack_require__.e(161)]).then(__webpack_require__.bind(__webpack_require__, 6536)).then(instantSearch => instantSearch.initialize());
 } // Bind customizer changes immediately.
 
 
