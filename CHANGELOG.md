@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add the user's profile picture and new styling to the Publicize toggle.
 - E2E tests: update pnpm commands to use new tunnel wrapper script
 - Publicize: check feature chen hitting publicize endpoint
 - Publicize: show/hide main toggle control depending on post state (published)
