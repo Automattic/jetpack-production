@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- E2E tests: update docs
+
 ## 10.4-a.1 - 2021-11-02
 ### Enhancements
 - Publicize: update the interface and include a profile picture for each service.
