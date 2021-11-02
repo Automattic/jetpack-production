@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.4-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 10.4-a.1 - 2021-11-02
 ### Enhancements
 - Publicize: update the interface and include a profile picture for each service.
