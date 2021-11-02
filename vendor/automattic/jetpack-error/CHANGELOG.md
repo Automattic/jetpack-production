@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.10-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.3.10] - 2021-11-02
 ### Changed
 - Set `convertDeprecationsToExceptions` true in PHPUnit config.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
@@ -86,7 +83,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Introduce a jetpack-error package
 
-[1.3.10-alpha]: https://github.com/Automattic/jetpack-error/compare/v1.3.9...v1.3.10-alpha
+[1.3.10]: https://github.com/Automattic/jetpack-error/compare/v1.3.9...v1.3.10
 [1.3.9]: https://github.com/Automattic/jetpack-error/compare/v1.3.8...v1.3.9
 [1.3.8]: https://github.com/Automattic/jetpack-error/compare/v1.3.7...v1.3.8
 [1.3.7]: https://github.com/Automattic/jetpack-error/compare/v1.3.6...v1.3.7

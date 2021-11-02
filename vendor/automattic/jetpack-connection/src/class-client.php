@@ -27,7 +27,7 @@ class Client {
 			/**
 			 * Filters the remote request url.
 			 *
-			 * @since 1.30.12-alpha
+			 * @since 1.30.12
 			 *
 			 * @param string The remote request url.
 			 */

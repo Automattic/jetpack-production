@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.30.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.30.12] - 2021-11-02
 ### Added
 - Client: add IDC query args to remote requests
 
@@ -462,7 +459,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[1.30.12-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.30.11...v1.30.12-alpha
+[1.30.12]: https://github.com/Automattic/jetpack-connection/compare/v1.30.11...v1.30.12
 [1.30.11]: https://github.com/Automattic/jetpack-connection/compare/v1.30.10...v1.30.11
 [1.30.10]: https://github.com/Automattic/jetpack-connection/compare/v1.30.9...v1.30.10
 [1.30.9]: https://github.com/Automattic/jetpack-connection/compare/v1.30.8...v1.30.9
