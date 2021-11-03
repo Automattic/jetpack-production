@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Constants: Now syncing Atomic platform constant
 
+### Fixed
+- Fix PHP 8.1 deprecation warnings.
+
 ## [1.27.1] - 2021-11-02
 ### Changed
 - Set `convertDeprecationsToExceptions` true in PHPUnit config.
