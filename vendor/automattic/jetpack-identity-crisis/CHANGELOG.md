@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add a method to unambiguously determine whether the site is experiencing identity crisis.
+
 ## [0.3.1] - 2021-11-02
 ### Changed
 - Add the idc url query args to remote requests
@@ -76,6 +83,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Use Connection/Urls for home_url and site_url functions migrated from Sync.
 
+[0.4.0-alpha]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.3.1...v0.4.0-alpha
 [0.3.1]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.2.8...v0.3.0
 [0.2.8]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.2.7...v0.2.8

@@ -10293,7 +10293,7 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {string} The hostname extracted from the URL.
  */
 var extractHostname = function extractHostname(url) {
-  return /^https?:\/\//.test(url) ? new URL(url).hostname : url;
+  return /^https?:\/\//.test(url) ? new URL(url).hostname : url.replace(/\/$/, '');
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (extractHostname);
@@ -10409,18 +10409,16 @@ function Admin() {
   var registrationNonce = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(function (select) {
     return select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getRegistrationNonce();
   }, []);
+  var IDCData = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(function (select) {
+    return select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getIDCData();
+  }, []);
   var connectionStatus = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(function (select) {
     return select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getConnectionStatus();
   }, []);
 
   var _useDispatch = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID),
-      setConnectionStatus = _useDispatch.setConnectionStatus; // Placeholder for testing purposes.
+      setConnectionStatus = _useDispatch.setConnectionStatus;
 
-
-  var hasIDC = false;
-  var IDCHomeUrl = 'https://site1.local/';
-  var currentUrl = 'https://site2.local/';
-  var redirectUri = 'tools.php?page=wpcom-connection-manager';
   var statusCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (status) {
     setConnectionStatus(status);
   }, [setConnectionStatus]);
@@ -10432,13 +10430,13 @@ function Admin() {
     });
   }, [setConnectionStatus]);
 
-  if (hasIDC) {
+  if (IDCData.hasIDC) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_8__.default, {
-      wpcomHomeUrl: IDCHomeUrl,
-      currentUrl: currentUrl,
+      wpcomHomeUrl: IDCData.wpcomHomeUrl,
+      currentUrl: IDCData.currentUrl,
       apiRoot: APIRoot,
       apiNonce: APINonce,
-      redirectUri: redirectUri
+      redirectUri: IDCData.redirectUri
     });
   }
 
@@ -10582,6 +10580,26 @@ var connectionStatus = function connectionStatus() {
 
 /***/ }),
 
+/***/ "./_inc/reducers/idc.js":
+/*!******************************!*\
+  !*** ./_inc/reducers/idc.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var IDC = function IDC() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  return state;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IDC);
+
+/***/ }),
+
 /***/ "./_inc/reducers/index.js":
 /*!********************************!*\
   !*** ./_inc/reducers/index.js ***!
@@ -10598,6 +10616,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./connection-status */ "./_inc/reducers/connection-status.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api */ "./_inc/reducers/api.js");
 /* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets */ "./_inc/reducers/assets.js");
+/* harmony import */ var _idc__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./idc */ "./_inc/reducers/idc.js");
 /**
  * External dependencies
  */
@@ -10609,10 +10628,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var reducer = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
   connectionStatus: _connection_status__WEBPACK_IMPORTED_MODULE_1__.default,
   API: _api__WEBPACK_IMPORTED_MODULE_2__.default,
-  assets: _assets__WEBPACK_IMPORTED_MODULE_3__.default
+  assets: _assets__WEBPACK_IMPORTED_MODULE_3__.default,
+  IDC: _idc__WEBPACK_IMPORTED_MODULE_4__.default
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reducer);
 
@@ -10684,6 +10705,26 @@ var connectionSelectors = {
 
 /***/ }),
 
+/***/ "./_inc/selectors/idc.js":
+/*!*******************************!*\
+  !*** ./_inc/selectors/idc.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var IDC = {
+  getIDCData: function getIDCData(state) {
+    return state.IDC || {};
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IDC);
+
+/***/ }),
+
 /***/ "./_inc/selectors/index.js":
 /*!*********************************!*\
   !*** ./_inc/selectors/index.js ***!
@@ -10700,6 +10741,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./connection-status */ "./_inc/selectors/connection-status.js");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api */ "./_inc/selectors/api.js");
 /* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets */ "./_inc/selectors/assets.js");
+/* harmony import */ var _idc__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./idc */ "./_inc/selectors/idc.js");
 
 
 /**
@@ -10709,7 +10751,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var selectors = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, _connection_status__WEBPACK_IMPORTED_MODULE_1__.default), _api__WEBPACK_IMPORTED_MODULE_2__.default), _assets__WEBPACK_IMPORTED_MODULE_3__.default);
+
+var selectors = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, _connection_status__WEBPACK_IMPORTED_MODULE_1__.default), _api__WEBPACK_IMPORTED_MODULE_2__.default), _assets__WEBPACK_IMPORTED_MODULE_3__.default), _idc__WEBPACK_IMPORTED_MODULE_4__.default);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (selectors);
 

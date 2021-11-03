@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Constants: Now syncing Atomic platform constant
 
+### Changed
+- Updated package dependencies.
+
 ### Fixed
 - Fix PHP 8.1 deprecation warnings.
 
