@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress videos in the Media Library will now stop playing in the background when the Media Item modal is closed.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- E2E tests: remove jest setup in favor of e2e-commons setup file
 - E2E tests: update docs
 - Fix PHP 8.1 deprecation warnings.
 - Nav Unification: Replaces the AJAX request for changing the preferred view with a direct server request to bypass security restrictions enforced by some browsers. This fix only affects WP.com sites.
