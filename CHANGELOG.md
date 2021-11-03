@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Remove VideoPress thumbnails from Calypso media list view.
+
 ### Bug fixes
 - The "File Name" will now be set in the Media Library for VideoPress videos.
 
