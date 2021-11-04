@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Publicize: handle plan upgrade considering feature availability, whether the nudge is enable, and post status
+- Publicize now always adds an Open Graph image alt text if an Open Graph image is present
 - Remove VideoPress thumbnails from Calypso media list view.
 
 ### Bug fixes
