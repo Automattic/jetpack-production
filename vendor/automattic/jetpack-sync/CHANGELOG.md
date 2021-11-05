@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Constants: Now syncing Atomic platform constant
 
 ### Changed
+- Full Sync : limit included users to contributors and above (based on wp_user_limit)
 - Updated package dependencies.
 - Updated package dependencies.
 - User Checksums - limit scope to users with wp_user_level > 0

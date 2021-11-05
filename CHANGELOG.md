@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Contact Info and Map widget: Hide widget from the block inserter and Legacy widget block drop-down menu
+- Unit Tests : Update Full Sync tests to align with limitation on users that are synced.
 
 ### Bug fixes
 - The "File Name" will now be set in the Media Library for VideoPress videos.
