@@ -7464,29 +7464,42 @@ __webpack_require__.r(__webpack_exports__);
 
 const Spinner = props => {
   const className = props.className + ' jp-components-spinner';
-  const style = {
+  const styleOuter = {
     width: props.size,
     height: props.size,
-    fontSize: props.size // allows border-width to be specified in em units
-
+    fontSize: props.size,
+    // allows border-width to be specified in em units
+    borderTopColor: props.color
+  };
+  const styleInner = {
+    borderTopColor: props.color,
+    borderRightColor: props.color
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: className
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-components-spinner__outer",
-    style: style
+    style: styleOuter
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-components-spinner__inner"
+    className: "jp-components-spinner__inner",
+    style: styleInner
   })));
 };
 
 Spinner.propTypes = {
+  /** The spinner color. */
+  color: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** CSS class names. */
   className: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The spinner size. */
   size: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number)
 };
 Spinner.defaultProps = {
-  size: 20,
-  className: ''
+  color: '#FFFFFF',
+  className: '',
+  size: 20
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Spinner);
 

@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
 - Update webpack build config. Removes IE 11 support in the JavaScript.
 
 ## [1.6.0] - 2021-11-02

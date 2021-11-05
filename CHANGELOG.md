@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Publicize now always adds an Open Graph image alt text if an Open Graph image is present
 - Remove VideoPress thumbnails from Calypso media list view.
 
+### Improved compatibility
+- Contact Info and Map widget: Hide widget from the block inserter and Legacy widget block drop-down menu
+
 ### Bug fixes
 - The "File Name" will now be set in the Media Library for VideoPress videos.
 - VideoPress Media Items now contain all video meta immediately after upload. A page refresh is no longer needed to view VideoPress specific fields.
