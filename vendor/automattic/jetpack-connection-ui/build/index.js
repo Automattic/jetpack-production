@@ -1112,191 +1112,6 @@ function getCurrencyObject(number, code) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayLikeToArray.js":
-/*!*****************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayLikeToArray.js ***!
-  \*****************************************************************************************************************/
-/***/ ((module) => {
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
-module.exports = _arrayLikeToArray;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayWithHoles.js":
-/*!***************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
-  \***************************************************************************************************************/
-/***/ ((module) => {
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-module.exports = _arrayWithHoles;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayWithoutHoles.js":
-/*!******************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
-  \******************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return arrayLikeToArray(arr);
-}
-
-module.exports = _arrayWithoutHoles;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/assertThisInitialized.js":
-/*!**********************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
-  \**********************************************************************************************************************/
-/***/ ((module) => {
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-module.exports = _assertThisInitialized;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/classCallCheck.js":
-/*!***************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/classCallCheck.js ***!
-  \***************************************************************************************************************/
-/***/ ((module) => {
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/construct.js":
-/*!**********************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/construct.js ***!
-  \**********************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-var isNativeReflectConstruct = __webpack_require__(/*! ./isNativeReflectConstruct.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js");
-
-function _construct(Parent, args, Class) {
-  if (isNativeReflectConstruct()) {
-    module.exports = _construct = Reflect.construct;
-    module.exports.default = module.exports, module.exports.__esModule = true;
-  } else {
-    module.exports = _construct = function _construct(Parent, args, Class) {
-      var a = [null];
-      a.push.apply(a, args);
-      var Constructor = Function.bind.apply(Parent, a);
-      var instance = new Constructor();
-      if (Class) setPrototypeOf(instance, Class.prototype);
-      return instance;
-    };
-
-    module.exports.default = module.exports, module.exports.__esModule = true;
-  }
-
-  return _construct.apply(null, arguments);
-}
-
-module.exports = _construct;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createClass.js":
-/*!************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createClass.js ***!
-  \************************************************************************************************************/
-/***/ ((module) => {
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createSuper.js":
-/*!************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createSuper.js ***!
-  \************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-
-var isNativeReflectConstruct = __webpack_require__(/*! ./isNativeReflectConstruct.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js");
-
-var possibleConstructorReturn = __webpack_require__(/*! ./possibleConstructorReturn.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-
-function _createSuper(Derived) {
-  var hasNativeReflectConstruct = isNativeReflectConstruct();
-  return function _createSuperInternal() {
-    var Super = getPrototypeOf(Derived),
-        result;
-
-    if (hasNativeReflectConstruct) {
-      var NewTarget = getPrototypeOf(this).constructor;
-      result = Reflect.construct(Super, arguments, NewTarget);
-    } else {
-      result = Super.apply(this, arguments);
-    }
-
-    return possibleConstructorReturn(this, result);
-  };
-}
-
-module.exports = _createSuper;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
 /***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty.js":
 /*!***************************************************************************************************************!*\
   !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty.js ***!
@@ -1349,486 +1164,6 @@ function _extends() {
 }
 
 module.exports = _extends;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/getPrototypeOf.js":
-/*!***************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \***************************************************************************************************************/
-/***/ ((module) => {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  module.exports.default = module.exports, module.exports.__esModule = true;
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/inherits.js":
-/*!*********************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/inherits.js ***!
-  \*********************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-
-module.exports = _inherits;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/isNativeFunction.js":
-/*!*****************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/isNativeFunction.js ***!
-  \*****************************************************************************************************************/
-/***/ ((module) => {
-
-function _isNativeFunction(fn) {
-  return Function.toString.call(fn).indexOf("[native code]") !== -1;
-}
-
-module.exports = _isNativeFunction;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js":
-/*!*************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js ***!
-  \*************************************************************************************************************************/
-/***/ ((module) => {
-
-function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-module.exports = _isNativeReflectConstruct;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/iterableToArray.js":
-/*!****************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/iterableToArray.js ***!
-  \****************************************************************************************************************/
-/***/ ((module) => {
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
-}
-
-module.exports = _iterableToArray;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
-/*!*********************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
-  \*********************************************************************************************************************/
-/***/ ((module) => {
-
-function _iterableToArrayLimit(arr, i) {
-  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
-
-  if (_i == null) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-
-  var _s, _e;
-
-  try {
-    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-module.exports = _iterableToArrayLimit;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/nonIterableRest.js":
-/*!****************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/nonIterableRest.js ***!
-  \****************************************************************************************************************/
-/***/ ((module) => {
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-module.exports = _nonIterableRest;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/nonIterableSpread.js":
-/*!******************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/nonIterableSpread.js ***!
-  \******************************************************************************************************************/
-/***/ ((module) => {
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-module.exports = _nonIterableSpread;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2.js":
-/*!**************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2.js ***!
-  \**************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var defineProperty = __webpack_require__(/*! ./defineProperty.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty.js");
-
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-
-    if (enumerableOnly) {
-      symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      });
-    }
-
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
-  }
-
-  return target;
-}
-
-module.exports = _objectSpread2;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectWithoutProperties.js":
-/*!************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectWithoutProperties.js ***!
-  \************************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js");
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-
-module.exports = _objectWithoutProperties;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js":
-/*!*****************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
-  \*****************************************************************************************************************************/
-/***/ ((module) => {
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-module.exports = _objectWithoutPropertiesLoose;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
-/*!**************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
-  \**************************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/typeof.js").default;
-
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  } else if (call !== void 0) {
-    throw new TypeError("Derived constructors may only return object or undefined");
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/setPrototypeOf.js":
-/*!***************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
-  \***************************************************************************************************************/
-/***/ ((module) => {
-
-function _setPrototypeOf(o, p) {
-  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  module.exports.default = module.exports, module.exports.__esModule = true;
-  return _setPrototypeOf(o, p);
-}
-
-module.exports = _setPrototypeOf;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray.js":
-/*!**************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray.js ***!
-  \**************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayWithHoles.js");
-
-var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
-
-var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
-
-var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/nonIterableRest.js");
-
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
-}
-
-module.exports = _slicedToArray;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/toConsumableArray.js":
-/*!******************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/toConsumableArray.js ***!
-  \******************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var arrayWithoutHoles = __webpack_require__(/*! ./arrayWithoutHoles.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
-
-var iterableToArray = __webpack_require__(/*! ./iterableToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/iterableToArray.js");
-
-var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
-
-var nonIterableSpread = __webpack_require__(/*! ./nonIterableSpread.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/nonIterableSpread.js");
-
-function _toConsumableArray(arr) {
-  return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
-}
-
-module.exports = _toConsumableArray;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/typeof.js":
-/*!*******************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/typeof.js ***!
-  \*******************************************************************************************************/
-/***/ ((module) => {
-
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-
-    module.exports.default = module.exports, module.exports.__esModule = true;
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-
-    module.exports.default = module.exports, module.exports.__esModule = true;
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js":
-/*!***************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js ***!
-  \***************************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
-}
-
-module.exports = _unsupportedIterableToArray;
-module.exports.default = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/wrapNativeSuper.js":
-/*!****************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/wrapNativeSuper.js ***!
-  \****************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-var isNativeFunction = __webpack_require__(/*! ./isNativeFunction.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/isNativeFunction.js");
-
-var construct = __webpack_require__(/*! ./construct.js */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/construct.js");
-
-function _wrapNativeSuper(Class) {
-  var _cache = typeof Map === "function" ? new Map() : undefined;
-
-  module.exports = _wrapNativeSuper = function _wrapNativeSuper(Class) {
-    if (Class === null || !isNativeFunction(Class)) return Class;
-
-    if (typeof Class !== "function") {
-      throw new TypeError("Super expression must either be null or a function");
-    }
-
-    if (typeof _cache !== "undefined") {
-      if (_cache.has(Class)) return _cache.get(Class);
-
-      _cache.set(Class, Wrapper);
-    }
-
-    function Wrapper() {
-      return construct(Class, arguments, getPrototypeOf(this).constructor);
-    }
-
-    Wrapper.prototype = Object.create(Class.prototype, {
-      constructor: {
-        value: Wrapper,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-    return setPrototypeOf(Wrapper, Class);
-  };
-
-  module.exports.default = module.exports, module.exports.__esModule = true;
-  return _wrapNativeSuper(Class);
-}
-
-module.exports = _wrapNativeSuper;
 module.exports.default = module.exports, module.exports.__esModule = true;
 
 /***/ }),
@@ -2388,6 +1723,569 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	} else {}
 }());
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js":
+/*!*********************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js ***!
+  \*********************************************************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+/* eslint-env browser */
+
+/**
+ * This is the web browser implementation of `debug()`.
+ */
+
+exports.formatArgs = formatArgs;
+exports.save = save;
+exports.load = load;
+exports.useColors = useColors;
+exports.storage = localstorage();
+exports.destroy = (() => {
+	let warned = false;
+
+	return () => {
+		if (!warned) {
+			warned = true;
+			console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
+		}
+	};
+})();
+
+/**
+ * Colors.
+ */
+
+exports.colors = [
+	'#0000CC',
+	'#0000FF',
+	'#0033CC',
+	'#0033FF',
+	'#0066CC',
+	'#0066FF',
+	'#0099CC',
+	'#0099FF',
+	'#00CC00',
+	'#00CC33',
+	'#00CC66',
+	'#00CC99',
+	'#00CCCC',
+	'#00CCFF',
+	'#3300CC',
+	'#3300FF',
+	'#3333CC',
+	'#3333FF',
+	'#3366CC',
+	'#3366FF',
+	'#3399CC',
+	'#3399FF',
+	'#33CC00',
+	'#33CC33',
+	'#33CC66',
+	'#33CC99',
+	'#33CCCC',
+	'#33CCFF',
+	'#6600CC',
+	'#6600FF',
+	'#6633CC',
+	'#6633FF',
+	'#66CC00',
+	'#66CC33',
+	'#9900CC',
+	'#9900FF',
+	'#9933CC',
+	'#9933FF',
+	'#99CC00',
+	'#99CC33',
+	'#CC0000',
+	'#CC0033',
+	'#CC0066',
+	'#CC0099',
+	'#CC00CC',
+	'#CC00FF',
+	'#CC3300',
+	'#CC3333',
+	'#CC3366',
+	'#CC3399',
+	'#CC33CC',
+	'#CC33FF',
+	'#CC6600',
+	'#CC6633',
+	'#CC9900',
+	'#CC9933',
+	'#CCCC00',
+	'#CCCC33',
+	'#FF0000',
+	'#FF0033',
+	'#FF0066',
+	'#FF0099',
+	'#FF00CC',
+	'#FF00FF',
+	'#FF3300',
+	'#FF3333',
+	'#FF3366',
+	'#FF3399',
+	'#FF33CC',
+	'#FF33FF',
+	'#FF6600',
+	'#FF6633',
+	'#FF9900',
+	'#FF9933',
+	'#FFCC00',
+	'#FFCC33'
+];
+
+/**
+ * Currently only WebKit-based Web Inspectors, Firefox >= v31,
+ * and the Firebug extension (any Firefox version) are known
+ * to support "%c" CSS customizations.
+ *
+ * TODO: add a `localStorage` variable to explicitly enable/disable colors
+ */
+
+// eslint-disable-next-line complexity
+function useColors() {
+	// NB: In an Electron preload script, document will be defined but not fully
+	// initialized. Since we know we're in Chrome, we'll just detect this case
+	// explicitly
+	if (typeof window !== 'undefined' && window.process && (window.process.type === 'renderer' || window.process.__nwjs)) {
+		return true;
+	}
+
+	// Internet Explorer and Edge do not support colors.
+	if (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/)) {
+		return false;
+	}
+
+	// Is webkit? http://stackoverflow.com/a/16459606/376773
+	// document is undefined in react-native: https://github.com/facebook/react-native/pull/1632
+	return (typeof document !== 'undefined' && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance) ||
+		// Is firebug? http://stackoverflow.com/a/398120/376773
+		(typeof window !== 'undefined' && window.console && (window.console.firebug || (window.console.exception && window.console.table))) ||
+		// Is firefox >= v31?
+		// https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
+		(typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
+		// Double check webkit in userAgent just in case we are in a worker
+		(typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
+}
+
+/**
+ * Colorize log arguments if enabled.
+ *
+ * @api public
+ */
+
+function formatArgs(args) {
+	args[0] = (this.useColors ? '%c' : '') +
+		this.namespace +
+		(this.useColors ? ' %c' : ' ') +
+		args[0] +
+		(this.useColors ? '%c ' : ' ') +
+		'+' + module.exports.humanize(this.diff);
+
+	if (!this.useColors) {
+		return;
+	}
+
+	const c = 'color: ' + this.color;
+	args.splice(1, 0, c, 'color: inherit');
+
+	// The final "%c" is somewhat tricky, because there could be other
+	// arguments passed either before or after the %c, so we need to
+	// figure out the correct index to insert the CSS into
+	let index = 0;
+	let lastC = 0;
+	args[0].replace(/%[a-zA-Z%]/g, match => {
+		if (match === '%%') {
+			return;
+		}
+		index++;
+		if (match === '%c') {
+			// We only are interested in the *last* %c
+			// (the user may have provided their own)
+			lastC = index;
+		}
+	});
+
+	args.splice(lastC, 0, c);
+}
+
+/**
+ * Invokes `console.debug()` when available.
+ * No-op when `console.debug` is not a "function".
+ * If `console.debug` is not available, falls back
+ * to `console.log`.
+ *
+ * @api public
+ */
+exports.log = console.debug || console.log || (() => {});
+
+/**
+ * Save `namespaces`.
+ *
+ * @param {String} namespaces
+ * @api private
+ */
+function save(namespaces) {
+	try {
+		if (namespaces) {
+			exports.storage.setItem('debug', namespaces);
+		} else {
+			exports.storage.removeItem('debug');
+		}
+	} catch (error) {
+		// Swallow
+		// XXX (@Qix-) should we be logging these?
+	}
+}
+
+/**
+ * Load `namespaces`.
+ *
+ * @return {String} returns the previously persisted debug modes
+ * @api private
+ */
+function load() {
+	let r;
+	try {
+		r = exports.storage.getItem('debug');
+	} catch (error) {
+		// Swallow
+		// XXX (@Qix-) should we be logging these?
+	}
+
+	// If debug isn't set in LS, and we're in Electron, try to load $DEBUG
+	if (!r && typeof process !== 'undefined' && 'env' in process) {
+		r = process.env.DEBUG;
+	}
+
+	return r;
+}
+
+/**
+ * Localstorage attempts to return the localstorage.
+ *
+ * This is necessary because safari throws
+ * when a user disables cookies/localstorage
+ * and you attempt to access it.
+ *
+ * @return {LocalStorage}
+ * @api private
+ */
+
+function localstorage() {
+	try {
+		// TVMLKit (Apple TV JS Runtime) does not have a window object, just localStorage in the global context
+		// The Browser also has localStorage in the global context.
+		return localStorage;
+	} catch (error) {
+		// Swallow
+		// XXX (@Qix-) should we be logging these?
+	}
+}
+
+module.exports = __webpack_require__(/*! ./common */ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js")(exports);
+
+const {formatters} = module.exports;
+
+/**
+ * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
+ */
+
+formatters.j = function (v) {
+	try {
+		return JSON.stringify(v);
+	} catch (error) {
+		return '[UnexpectedJSONParseError]: ' + error.message;
+	}
+};
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js":
+/*!********************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js ***!
+  \********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+/**
+ * This is the common logic for both the Node.js and web browser
+ * implementations of `debug()`.
+ */
+
+function setup(env) {
+	createDebug.debug = createDebug;
+	createDebug.default = createDebug;
+	createDebug.coerce = coerce;
+	createDebug.disable = disable;
+	createDebug.enable = enable;
+	createDebug.enabled = enabled;
+	createDebug.humanize = __webpack_require__(/*! ms */ "../../../node_modules/.pnpm/ms@2.1.2/node_modules/ms/index.js");
+	createDebug.destroy = destroy;
+
+	Object.keys(env).forEach(key => {
+		createDebug[key] = env[key];
+	});
+
+	/**
+	* The currently active debug mode names, and names to skip.
+	*/
+
+	createDebug.names = [];
+	createDebug.skips = [];
+
+	/**
+	* Map of special "%n" handling functions, for the debug "format" argument.
+	*
+	* Valid key names are a single, lower or upper-case letter, i.e. "n" and "N".
+	*/
+	createDebug.formatters = {};
+
+	/**
+	* Selects a color for a debug namespace
+	* @param {String} namespace The namespace string for the for the debug instance to be colored
+	* @return {Number|String} An ANSI color code for the given namespace
+	* @api private
+	*/
+	function selectColor(namespace) {
+		let hash = 0;
+
+		for (let i = 0; i < namespace.length; i++) {
+			hash = ((hash << 5) - hash) + namespace.charCodeAt(i);
+			hash |= 0; // Convert to 32bit integer
+		}
+
+		return createDebug.colors[Math.abs(hash) % createDebug.colors.length];
+	}
+	createDebug.selectColor = selectColor;
+
+	/**
+	* Create a debugger with the given `namespace`.
+	*
+	* @param {String} namespace
+	* @return {Function}
+	* @api public
+	*/
+	function createDebug(namespace) {
+		let prevTime;
+		let enableOverride = null;
+		let namespacesCache;
+		let enabledCache;
+
+		function debug(...args) {
+			// Disabled?
+			if (!debug.enabled) {
+				return;
+			}
+
+			const self = debug;
+
+			// Set `diff` timestamp
+			const curr = Number(new Date());
+			const ms = curr - (prevTime || curr);
+			self.diff = ms;
+			self.prev = prevTime;
+			self.curr = curr;
+			prevTime = curr;
+
+			args[0] = createDebug.coerce(args[0]);
+
+			if (typeof args[0] !== 'string') {
+				// Anything else let's inspect with %O
+				args.unshift('%O');
+			}
+
+			// Apply any `formatters` transformations
+			let index = 0;
+			args[0] = args[0].replace(/%([a-zA-Z%])/g, (match, format) => {
+				// If we encounter an escaped % then don't increase the array index
+				if (match === '%%') {
+					return '%';
+				}
+				index++;
+				const formatter = createDebug.formatters[format];
+				if (typeof formatter === 'function') {
+					const val = args[index];
+					match = formatter.call(self, val);
+
+					// Now we need to remove `args[index]` since it's inlined in the `format`
+					args.splice(index, 1);
+					index--;
+				}
+				return match;
+			});
+
+			// Apply env-specific formatting (colors, etc.)
+			createDebug.formatArgs.call(self, args);
+
+			const logFn = self.log || createDebug.log;
+			logFn.apply(self, args);
+		}
+
+		debug.namespace = namespace;
+		debug.useColors = createDebug.useColors();
+		debug.color = createDebug.selectColor(namespace);
+		debug.extend = extend;
+		debug.destroy = createDebug.destroy; // XXX Temporary. Will be removed in the next major release.
+
+		Object.defineProperty(debug, 'enabled', {
+			enumerable: true,
+			configurable: false,
+			get: () => {
+				if (enableOverride !== null) {
+					return enableOverride;
+				}
+				if (namespacesCache !== createDebug.namespaces) {
+					namespacesCache = createDebug.namespaces;
+					enabledCache = createDebug.enabled(namespace);
+				}
+
+				return enabledCache;
+			},
+			set: v => {
+				enableOverride = v;
+			}
+		});
+
+		// Env-specific initialization logic for debug instances
+		if (typeof createDebug.init === 'function') {
+			createDebug.init(debug);
+		}
+
+		return debug;
+	}
+
+	function extend(namespace, delimiter) {
+		const newDebug = createDebug(this.namespace + (typeof delimiter === 'undefined' ? ':' : delimiter) + namespace);
+		newDebug.log = this.log;
+		return newDebug;
+	}
+
+	/**
+	* Enables a debug mode by namespaces. This can include modes
+	* separated by a colon and wildcards.
+	*
+	* @param {String} namespaces
+	* @api public
+	*/
+	function enable(namespaces) {
+		createDebug.save(namespaces);
+		createDebug.namespaces = namespaces;
+
+		createDebug.names = [];
+		createDebug.skips = [];
+
+		let i;
+		const split = (typeof namespaces === 'string' ? namespaces : '').split(/[\s,]+/);
+		const len = split.length;
+
+		for (i = 0; i < len; i++) {
+			if (!split[i]) {
+				// ignore empty strings
+				continue;
+			}
+
+			namespaces = split[i].replace(/\*/g, '.*?');
+
+			if (namespaces[0] === '-') {
+				createDebug.skips.push(new RegExp('^' + namespaces.substr(1) + '$'));
+			} else {
+				createDebug.names.push(new RegExp('^' + namespaces + '$'));
+			}
+		}
+	}
+
+	/**
+	* Disable debug output.
+	*
+	* @return {String} namespaces
+	* @api public
+	*/
+	function disable() {
+		const namespaces = [
+			...createDebug.names.map(toNamespace),
+			...createDebug.skips.map(toNamespace).map(namespace => '-' + namespace)
+		].join(',');
+		createDebug.enable('');
+		return namespaces;
+	}
+
+	/**
+	* Returns true if the given mode name is enabled, false otherwise.
+	*
+	* @param {String} name
+	* @return {Boolean}
+	* @api public
+	*/
+	function enabled(name) {
+		if (name[name.length - 1] === '*') {
+			return true;
+		}
+
+		let i;
+		let len;
+
+		for (i = 0, len = createDebug.skips.length; i < len; i++) {
+			if (createDebug.skips[i].test(name)) {
+				return false;
+			}
+		}
+
+		for (i = 0, len = createDebug.names.length; i < len; i++) {
+			if (createDebug.names[i].test(name)) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	* Convert regexp to namespace
+	*
+	* @param {RegExp} regxep
+	* @return {String} namespace
+	* @api private
+	*/
+	function toNamespace(regexp) {
+		return regexp.toString()
+			.substring(2, regexp.toString().length - 2)
+			.replace(/\.\*\?$/, '*');
+	}
+
+	/**
+	* Coerce `val`.
+	*
+	* @param {Mixed} val
+	* @return {Mixed}
+	* @api private
+	*/
+	function coerce(val) {
+		if (val instanceof Error) {
+			return val.stack || val.message;
+		}
+		return val;
+	}
+
+	/**
+	* XXX DO NOT USE. This is a temporary stub function.
+	* XXX It WILL be removed in the next major release.
+	*/
+	function destroy() {
+		console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
+	}
+
+	createDebug.enable(createDebug.load());
+
+	return createDebug;
+}
+
+module.exports = setup;
 
 
 /***/ }),
@@ -2976,7 +2874,7 @@ module.exports = emptyFunction;
 
 var validateFormat = function validateFormat(format) {};
 
-if (undefined !== 'production') {
+if (true) {
   validateFormat = function validateFormat(format) {
     if (format === undefined) {
       throw new Error('invariant requires an error message argument');
@@ -3037,7 +2935,7 @@ var emptyFunction = __webpack_require__(/*! ./emptyFunction */ "../../../node_mo
 
 var warning = emptyFunction;
 
-if (undefined !== 'production') {
+if (true) {
   var printWarning = function printWarning(format) {
     for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
       args[_key - 1] = arguments[_key];
@@ -5269,7 +5167,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 var printWarning = function() {};
 
-if (undefined !== 'production') {
+if (true) {
   var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/lib/ReactPropTypesSecret.js");
   var loggedTypeFailures = {};
   var has = Function.call.bind(Object.prototype.hasOwnProperty);
@@ -5300,7 +5198,7 @@ if (undefined !== 'production') {
  * @private
  */
 function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  if (undefined !== 'production') {
+  if (true) {
     for (var typeSpecName in typeSpecs) {
       if (has(typeSpecs, typeSpecName)) {
         var error;
@@ -5354,87 +5252,12 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
  * @private
  */
 checkPropTypes.resetWarningCache = function() {
-  if (undefined !== 'production') {
+  if (true) {
     loggedTypeFailures = {};
   }
 }
 
 module.exports = checkPropTypes;
-
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/factoryWithThrowingShims.js":
-/*!*********************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/factoryWithThrowingShims.js ***!
-  \*********************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/lib/ReactPropTypesSecret.js");
-
-function emptyFunction() {}
-function emptyFunctionWithReset() {}
-emptyFunctionWithReset.resetWarningCache = emptyFunction;
-
-module.exports = function() {
-  function shim(props, propName, componentName, location, propFullName, secret) {
-    if (secret === ReactPropTypesSecret) {
-      // It is still safe when called from React.
-      return;
-    }
-    var err = new Error(
-      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-      'Use PropTypes.checkPropTypes() to call them. ' +
-      'Read more at http://fb.me/use-check-prop-types'
-    );
-    err.name = 'Invariant Violation';
-    throw err;
-  };
-  shim.isRequired = shim;
-  function getShim() {
-    return shim;
-  };
-  // Important!
-  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
-  var ReactPropTypes = {
-    array: shim,
-    bool: shim,
-    func: shim,
-    number: shim,
-    object: shim,
-    string: shim,
-    symbol: shim,
-
-    any: shim,
-    arrayOf: getShim,
-    element: shim,
-    elementType: shim,
-    instanceOf: getShim,
-    node: shim,
-    objectOf: getShim,
-    oneOf: getShim,
-    oneOfType: getShim,
-    shape: getShim,
-    exact: getShim,
-
-    checkPropTypes: emptyFunctionWithReset,
-    resetWarningCache: emptyFunction
-  };
-
-  ReactPropTypes.PropTypes = ReactPropTypes;
-
-  return ReactPropTypes;
-};
 
 
 /***/ }),
@@ -5464,7 +5287,7 @@ var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "../../../node_
 var has = Function.call.bind(Object.prototype.hasOwnProperty);
 var printWarning = function() {};
 
-if (undefined !== 'production') {
+if (true) {
   printWarning = function(text) {
     var message = 'Warning: ' + text;
     if (typeof console !== 'undefined') {
@@ -5615,7 +5438,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   PropTypeError.prototype = Error.prototype;
 
   function createChainableTypeChecker(validate) {
-    if (undefined !== 'production') {
+    if (true) {
       var manualPropTypeCallCache = {};
       var manualPropTypeWarningCount = 0;
     }
@@ -5633,7 +5456,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
           );
           err.name = 'Invariant Violation';
           throw err;
-        } else if (undefined !== 'production' && typeof console !== 'undefined') {
+        } else if ( true && typeof console !== 'undefined') {
           // Old behavior for people using React.PropTypes
           var cacheKey = componentName + ':' + propName;
           if (
@@ -5752,7 +5575,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
   function createEnumTypeChecker(expectedValues) {
     if (!Array.isArray(expectedValues)) {
-      if (undefined !== 'production') {
+      if (true) {
         if (arguments.length > 1) {
           printWarning(
             'Invalid arguments supplied to oneOf, expected an array, got ' + arguments.length + ' arguments. ' +
@@ -5810,7 +5633,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
   function createUnionTypeChecker(arrayOfTypeCheckers) {
     if (!Array.isArray(arrayOfTypeCheckers)) {
-      undefined !== 'production' ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
+       true ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : 0;
       return emptyFunctionThatReturnsNull;
     }
 
@@ -6054,18 +5877,14 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
  * LICENSE file in the root directory of this source tree.
  */
 
-if (undefined !== 'production') {
+if (true) {
   var ReactIs = __webpack_require__(/*! react-is */ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/index.js");
 
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
   module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/factoryWithTypeCheckers.js")(ReactIs.isElement, throwOnDirectAccess);
-} else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(/*! ./factoryWithThrowingShims */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/factoryWithThrowingShims.js")();
-}
+} else {}
 
 
 /***/ }),
@@ -6211,7 +6030,7 @@ function traverseAllChildrenImpl(
   } else {
     var iteratorFn = getIteratorFn(children);
     if (iteratorFn) {
-      if (undefined !== 'production') {
+      if (true) {
         // Warn about using Maps as children
         if (iteratorFn === children.entries) {
           warning(
@@ -6239,7 +6058,7 @@ function traverseAllChildrenImpl(
       }
     } else if (type === 'object') {
       var addendum = '';
-      if (undefined !== 'production') {
+      if (true) {
         addendum =
           ' If you meant to render a collection of children, use an array ' +
           'instead or wrap the object using createFragment(object) from the ' +
@@ -6424,7 +6243,7 @@ function createReactFragment(object) {
   var result = [];
 
   for (var key in object) {
-    if (undefined !== 'production') {
+    if (true) {
       if (!warnedAboutNumeric && numericPropertyRegex.test(key)) {
         warning(
           false,
@@ -6470,7 +6289,7 @@ module.exports = createReactFragment;
 
 
 
-if (undefined !== "production") {
+if (true) {
   (function() {
 'use strict';
 
@@ -6642,32 +6461,6 @@ exports.typeOf = typeOf;
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.production.min.js":
-/*!*********************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.production.min.js ***!
-  \*********************************************************************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-/** @license React v16.13.1
- * react-is.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?
-Symbol.for("react.suspense_list"):60120,r=b?Symbol.for("react.memo"):60115,t=b?Symbol.for("react.lazy"):60116,v=b?Symbol.for("react.block"):60121,w=b?Symbol.for("react.fundamental"):60117,x=b?Symbol.for("react.responder"):60118,y=b?Symbol.for("react.scope"):60119;
-function z(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case t:case r:case h:return a;default:return u}}case d:return u}}}function A(a){return z(a)===m}exports.AsyncMode=l;exports.ConcurrentMode=m;exports.ContextConsumer=k;exports.ContextProvider=h;exports.Element=c;exports.ForwardRef=n;exports.Fragment=e;exports.Lazy=t;exports.Memo=r;exports.Portal=d;
-exports.Profiler=g;exports.StrictMode=f;exports.Suspense=p;exports.isAsyncMode=function(a){return A(a)||z(a)===l};exports.isConcurrentMode=A;exports.isContextConsumer=function(a){return z(a)===k};exports.isContextProvider=function(a){return z(a)===h};exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===c};exports.isForwardRef=function(a){return z(a)===n};exports.isFragment=function(a){return z(a)===e};exports.isLazy=function(a){return z(a)===t};
-exports.isMemo=function(a){return z(a)===r};exports.isPortal=function(a){return z(a)===d};exports.isProfiler=function(a){return z(a)===g};exports.isStrictMode=function(a){return z(a)===f};exports.isSuspense=function(a){return z(a)===p};
-exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||a===q||"object"===typeof a&&null!==a&&(a.$$typeof===t||a.$$typeof===r||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n||a.$$typeof===w||a.$$typeof===x||a.$$typeof===y||a.$$typeof===v)};exports.typeOf=z;
-
-
-/***/ }),
-
 /***/ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/index.js":
 /*!***********************************************************************************!*\
   !*** ../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/index.js ***!
@@ -6677,9 +6470,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 "use strict";
 
 
-if (undefined === 'production') {
-  module.exports = __webpack_require__(/*! ./cjs/react-is.production.min.js */ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.production.min.js");
-} else {
+if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "../../../node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/cjs/react-is.development.js");
 }
 
@@ -6931,21 +6722,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "FetchNetworkError": () => (/* binding */ FetchNetworkError),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/classCallCheck */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/inherits */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createSuper */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createSuper.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/wrapNativeSuper */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/wrapNativeSuper.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "lodash");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /**
  * External dependencies
  */
@@ -6958,36 +6736,22 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function createCustomError(name) {
-  var CustomError = /*#__PURE__*/function (_Error) {
-    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default()(CustomError, _Error);
-
-    var _super = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_2___default()(CustomError);
-
-    function CustomError() {
-      var _this;
-
-      _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, CustomError);
-
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      _this = _super.call.apply(_super, [this].concat(args));
-      _this.name = name;
-      return _this;
+  class CustomError extends Error {
+    constructor(...args) {
+      super(...args);
+      this.name = name;
     }
 
-    return CustomError;
-  }( /*#__PURE__*/_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_3___default()(Error));
+  }
 
   return CustomError;
 }
 
-var JsonParseError = createCustomError('JsonParseError');
-var JsonParseAfterRedirectError = createCustomError('JsonParseAfterRedirectError');
-var Api404Error = createCustomError('Api404Error');
-var Api404AfterRedirectError = createCustomError('Api404AfterRedirectError');
-var FetchNetworkError = createCustomError('FetchNetworkError');
+const JsonParseError = createCustomError('JsonParseError');
+const JsonParseAfterRedirectError = createCustomError('JsonParseAfterRedirectError');
+const Api404Error = createCustomError('Api404Error');
+const Api404AfterRedirectError = createCustomError('Api404AfterRedirectError');
+const FetchNetworkError = createCustomError('FetchNetworkError');
 /**
  * Create a Jetpack Rest Api Client
  *
@@ -6996,27 +6760,28 @@ var FetchNetworkError = createCustomError('FetchNetworkError');
  */
 
 function JetpackRestApiClient(root, nonce) {
-  var apiRoot = root,
+  let apiRoot = root,
       headers = {
     'X-WP-Nonce': nonce
   },
       getParams = {
     credentials: 'same-origin',
-    headers: headers
+    headers
   },
       postParams = {
     method: 'post',
     credentials: 'same-origin',
-    headers: (0,lodash__WEBPACK_IMPORTED_MODULE_4__.assign)({}, headers, {
+    headers: (0,lodash__WEBPACK_IMPORTED_MODULE_0__.assign)({}, headers, {
       'Content-type': 'application/json'
     })
   },
       cacheBusterCallback = addCacheBuster;
-  var methods = {
-    setApiRoot: function setApiRoot(newRoot) {
+  const methods = {
+    setApiRoot(newRoot) {
       apiRoot = newRoot;
     },
-    setApiNonce: function setApiNonce(newNonce) {
+
+    setApiNonce(newNonce) {
       headers = {
         'X-WP-Nonce': newNonce
       };
@@ -7027,16 +6792,17 @@ function JetpackRestApiClient(root, nonce) {
       postParams = {
         method: 'post',
         credentials: 'same-origin',
-        headers: (0,lodash__WEBPACK_IMPORTED_MODULE_4__.assign)({}, headers, {
+        headers: (0,lodash__WEBPACK_IMPORTED_MODULE_0__.assign)({}, headers, {
           'Content-type': 'application/json'
         })
       };
     },
-    setCacheBusterCallback: function setCacheBusterCallback(callback) {
+
+    setCacheBusterCallback: callback => {
       cacheBusterCallback = callback;
     },
-    registerSite: function registerSite(registrationNonce, redirectUri) {
-      var params = {
+    registerSite: (registrationNonce, redirectUri) => {
+      const params = {
         registration_nonce: registrationNonce,
         no_iframe: true
       };
@@ -7045,110 +6811,66 @@ function JetpackRestApiClient(root, nonce) {
         params.redirect_uri = redirectUri;
       }
 
-      return postRequest("".concat(apiRoot, "jetpack/v4/connection/register"), postParams, {
+      return postRequest(`${apiRoot}jetpack/v4/connection/register`, postParams, {
         body: JSON.stringify(params)
       }).then(checkStatus).then(parseJsonResponse);
     },
-    fetchAuthorizationUrl: function fetchAuthorizationUrl(redirectUri) {
-      return getRequest("".concat(apiRoot, "jetpack/v4/connection/authorize_url?no_iframe=1&redirect_uri=").concat(encodeURIComponent(redirectUri)), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchSiteConnectionData: function fetchSiteConnectionData() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/connection/data"), getParams).then(parseJsonResponse);
-    },
-    fetchSiteConnectionStatus: function fetchSiteConnectionStatus() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/connection"), getParams).then(parseJsonResponse);
-    },
-    fetchSiteConnectionTest: function fetchSiteConnectionTest() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/connection/test"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchUserConnectionData: function fetchUserConnectionData() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/connection/data"), getParams).then(parseJsonResponse);
-    },
-    fetchUserTrackingSettings: function fetchUserTrackingSettings() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/tracking/settings"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    updateUserTrackingSettings: function updateUserTrackingSettings(newSettings) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/tracking/settings"), postParams, {
-        body: JSON.stringify(newSettings)
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    disconnectSite: function disconnectSite() {
-      return postRequest("".concat(apiRoot, "jetpack/v4/connection"), postParams, {
-        body: JSON.stringify({
-          isActive: false
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchConnectUrl: function fetchConnectUrl() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/connection/url"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    unlinkUser: function unlinkUser() {
-      return postRequest("".concat(apiRoot, "jetpack/v4/connection/user"), postParams, {
-        body: JSON.stringify({
-          linked: false
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    reconnect: function reconnect() {
-      return postRequest("".concat(apiRoot, "jetpack/v4/connection/reconnect"), postParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchConnectedPlugins: function fetchConnectedPlugins() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/connection/plugins"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchModules: function fetchModules() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/module/all"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchModule: function fetchModule(slug) {
-      return getRequest("".concat(apiRoot, "jetpack/v4/module/").concat(slug), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    activateModule: function activateModule(slug) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/module/").concat(slug, "/active"), postParams, {
-        body: JSON.stringify({
-          active: true
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    deactivateModule: function deactivateModule(slug) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/module/").concat(slug, "/active"), postParams, {
-        body: JSON.stringify({
-          active: false
-        })
-      });
-    },
-    updateModuleOptions: function updateModuleOptions(slug, newOptionValues) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/module/").concat(slug), postParams, {
-        body: JSON.stringify(newOptionValues)
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    updateSettings: function updateSettings(newOptionValues) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/settings"), postParams, {
-        body: JSON.stringify(newOptionValues)
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    getProtectCount: function getProtectCount() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/module/protect/data"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    resetOptions: function resetOptions(options) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/options/").concat(options), postParams, {
-        body: JSON.stringify({
-          reset: true
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    activateVaultPress: function activateVaultPress() {
-      return postRequest("".concat(apiRoot, "jetpack/v4/plugins"), postParams, {
-        body: JSON.stringify({
-          slug: 'vaultpress',
-          status: 'active'
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    getVaultPressData: function getVaultPressData() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/module/vaultpress/data"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    installPlugin: function installPlugin(slug, source) {
-      var props = {
-        slug: slug,
+    fetchAuthorizationUrl: redirectUri => getRequest(`${apiRoot}jetpack/v4/connection/authorize_url?no_iframe=1&redirect_uri=${encodeURIComponent(redirectUri)}`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchSiteConnectionData: () => getRequest(`${apiRoot}jetpack/v4/connection/data`, getParams).then(parseJsonResponse),
+    fetchSiteConnectionStatus: () => getRequest(`${apiRoot}jetpack/v4/connection`, getParams).then(parseJsonResponse),
+    fetchSiteConnectionTest: () => getRequest(`${apiRoot}jetpack/v4/connection/test`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchUserConnectionData: () => getRequest(`${apiRoot}jetpack/v4/connection/data`, getParams).then(parseJsonResponse),
+    fetchUserTrackingSettings: () => getRequest(`${apiRoot}jetpack/v4/tracking/settings`, getParams).then(checkStatus).then(parseJsonResponse),
+    updateUserTrackingSettings: newSettings => postRequest(`${apiRoot}jetpack/v4/tracking/settings`, postParams, {
+      body: JSON.stringify(newSettings)
+    }).then(checkStatus).then(parseJsonResponse),
+    disconnectSite: () => postRequest(`${apiRoot}jetpack/v4/connection`, postParams, {
+      body: JSON.stringify({
+        isActive: false
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    fetchConnectUrl: () => getRequest(`${apiRoot}jetpack/v4/connection/url`, getParams).then(checkStatus).then(parseJsonResponse),
+    unlinkUser: () => postRequest(`${apiRoot}jetpack/v4/connection/user`, postParams, {
+      body: JSON.stringify({
+        linked: false
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    reconnect: () => postRequest(`${apiRoot}jetpack/v4/connection/reconnect`, postParams).then(checkStatus).then(parseJsonResponse),
+    fetchConnectedPlugins: () => getRequest(`${apiRoot}jetpack/v4/connection/plugins`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchModules: () => getRequest(`${apiRoot}jetpack/v4/module/all`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchModule: slug => getRequest(`${apiRoot}jetpack/v4/module/${slug}`, getParams).then(checkStatus).then(parseJsonResponse),
+    activateModule: slug => postRequest(`${apiRoot}jetpack/v4/module/${slug}/active`, postParams, {
+      body: JSON.stringify({
+        active: true
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    deactivateModule: slug => postRequest(`${apiRoot}jetpack/v4/module/${slug}/active`, postParams, {
+      body: JSON.stringify({
+        active: false
+      })
+    }),
+    updateModuleOptions: (slug, newOptionValues) => postRequest(`${apiRoot}jetpack/v4/module/${slug}`, postParams, {
+      body: JSON.stringify(newOptionValues)
+    }).then(checkStatus).then(parseJsonResponse),
+    updateSettings: newOptionValues => postRequest(`${apiRoot}jetpack/v4/settings`, postParams, {
+      body: JSON.stringify(newOptionValues)
+    }).then(checkStatus).then(parseJsonResponse),
+    getProtectCount: () => getRequest(`${apiRoot}jetpack/v4/module/protect/data`, getParams).then(checkStatus).then(parseJsonResponse),
+    resetOptions: options => postRequest(`${apiRoot}jetpack/v4/options/${options}`, postParams, {
+      body: JSON.stringify({
+        reset: true
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    activateVaultPress: () => postRequest(`${apiRoot}jetpack/v4/plugins`, postParams, {
+      body: JSON.stringify({
+        slug: 'vaultpress',
+        status: 'active'
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    getVaultPressData: () => getRequest(`${apiRoot}jetpack/v4/module/vaultpress/data`, getParams).then(checkStatus).then(parseJsonResponse),
+    installPlugin: (slug, source) => {
+      const props = {
+        slug,
         status: 'active'
       };
 
@@ -7156,169 +6878,89 @@ function JetpackRestApiClient(root, nonce) {
         props.source = source;
       }
 
-      return postRequest("".concat(apiRoot, "jetpack/v4/plugins"), postParams, {
+      return postRequest(`${apiRoot}jetpack/v4/plugins`, postParams, {
         body: JSON.stringify(props)
       }).then(checkStatus).then(parseJsonResponse);
     },
-    activateAkismet: function activateAkismet() {
-      return postRequest("".concat(apiRoot, "jetpack/v4/plugins"), postParams, {
-        body: JSON.stringify({
-          slug: 'akismet',
-          status: 'active'
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    getAkismetData: function getAkismetData() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/module/akismet/data"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    checkAkismetKey: function checkAkismetKey() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/module/akismet/key/check"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    checkAkismetKeyTyped: function checkAkismetKeyTyped(apiKey) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/module/akismet/key/check"), postParams, {
-        body: JSON.stringify({
-          api_key: apiKey
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchStatsData: function fetchStatsData(range) {
-      return getRequest(statsDataUrl(range), getParams).then(checkStatus).then(parseJsonResponse).then(handleStatsResponseError);
-    },
-    getPluginUpdates: function getPluginUpdates() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/updates/plugins"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    getPlans: function getPlans() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/plans"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchSettings: function fetchSettings() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/settings"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    updateSetting: function updateSetting(updatedSetting) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/settings"), postParams, {
-        body: JSON.stringify(updatedSetting)
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchSiteData: function fetchSiteData() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/site"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
-        return JSON.parse(body.data);
-      });
-    },
-    fetchSiteFeatures: function fetchSiteFeatures() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/site/features"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
-        return JSON.parse(body.data);
-      });
-    },
-    fetchSiteProducts: function fetchSiteProducts() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/site/products"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchSitePurchases: function fetchSitePurchases() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/site/purchases"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
-        return JSON.parse(body.data);
-      });
-    },
-    fetchSiteBenefits: function fetchSiteBenefits() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/site/benefits"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
-        return JSON.parse(body.data);
-      });
-    },
-    fetchSetupQuestionnaire: function fetchSetupQuestionnaire() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/setup/questionnaire"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchRecommendationsData: function fetchRecommendationsData() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/recommendations/data"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchRecommendationsProductSuggestions: function fetchRecommendationsProductSuggestions() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/recommendations/product-suggestions"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchRecommendationsUpsell: function fetchRecommendationsUpsell() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/recommendations/upsell"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    saveRecommendationsData: function saveRecommendationsData(data) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/recommendations/data"), postParams, {
-        body: JSON.stringify({
-          data: data
-        })
-      }).then(checkStatus);
-    },
-    fetchProducts: function fetchProducts() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/products"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchRewindStatus: function fetchRewindStatus() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/rewind"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
-        return JSON.parse(body.data);
-      });
-    },
-    fetchScanStatus: function fetchScanStatus() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/scan"), getParams).then(checkStatus).then(parseJsonResponse).then(function (body) {
-        return JSON.parse(body.data);
-      });
-    },
-    dismissJetpackNotice: function dismissJetpackNotice(notice) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/notice/").concat(notice), postParams, {
-        body: JSON.stringify({
-          dismissed: true
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchPluginsData: function fetchPluginsData() {
-      return getRequest("".concat(apiRoot, "jetpack/v4/plugins"), getParams).then(checkStatus).then(parseJsonResponse);
-    },
-    fetchVerifySiteGoogleStatus: function fetchVerifySiteGoogleStatus(keyringId) {
-      var request = keyringId !== null ? getRequest("".concat(apiRoot, "jetpack/v4/verify-site/google/").concat(keyringId), getParams) : getRequest("".concat(apiRoot, "jetpack/v4/verify-site/google"), getParams);
+    activateAkismet: () => postRequest(`${apiRoot}jetpack/v4/plugins`, postParams, {
+      body: JSON.stringify({
+        slug: 'akismet',
+        status: 'active'
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    getAkismetData: () => getRequest(`${apiRoot}jetpack/v4/module/akismet/data`, getParams).then(checkStatus).then(parseJsonResponse),
+    checkAkismetKey: () => getRequest(`${apiRoot}jetpack/v4/module/akismet/key/check`, getParams).then(checkStatus).then(parseJsonResponse),
+    checkAkismetKeyTyped: apiKey => postRequest(`${apiRoot}jetpack/v4/module/akismet/key/check`, postParams, {
+      body: JSON.stringify({
+        api_key: apiKey
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    fetchStatsData: range => getRequest(statsDataUrl(range), getParams).then(checkStatus).then(parseJsonResponse).then(handleStatsResponseError),
+    getPluginUpdates: () => getRequest(`${apiRoot}jetpack/v4/updates/plugins`, getParams).then(checkStatus).then(parseJsonResponse),
+    getPlans: () => getRequest(`${apiRoot}jetpack/v4/plans`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchSettings: () => getRequest(`${apiRoot}jetpack/v4/settings`, getParams).then(checkStatus).then(parseJsonResponse),
+    updateSetting: updatedSetting => postRequest(`${apiRoot}jetpack/v4/settings`, postParams, {
+      body: JSON.stringify(updatedSetting)
+    }).then(checkStatus).then(parseJsonResponse),
+    fetchSiteData: () => getRequest(`${apiRoot}jetpack/v4/site`, getParams).then(checkStatus).then(parseJsonResponse).then(body => JSON.parse(body.data)),
+    fetchSiteFeatures: () => getRequest(`${apiRoot}jetpack/v4/site/features`, getParams).then(checkStatus).then(parseJsonResponse).then(body => JSON.parse(body.data)),
+    fetchSiteProducts: () => getRequest(`${apiRoot}jetpack/v4/site/products`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchSitePurchases: () => getRequest(`${apiRoot}jetpack/v4/site/purchases`, getParams).then(checkStatus).then(parseJsonResponse).then(body => JSON.parse(body.data)),
+    fetchSiteBenefits: () => getRequest(`${apiRoot}jetpack/v4/site/benefits`, getParams).then(checkStatus).then(parseJsonResponse).then(body => JSON.parse(body.data)),
+    fetchSetupQuestionnaire: () => getRequest(`${apiRoot}jetpack/v4/setup/questionnaire`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchRecommendationsData: () => getRequest(`${apiRoot}jetpack/v4/recommendations/data`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchRecommendationsProductSuggestions: () => getRequest(`${apiRoot}jetpack/v4/recommendations/product-suggestions`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchRecommendationsUpsell: () => getRequest(`${apiRoot}jetpack/v4/recommendations/upsell`, getParams).then(checkStatus).then(parseJsonResponse),
+    saveRecommendationsData: data => postRequest(`${apiRoot}jetpack/v4/recommendations/data`, postParams, {
+      body: JSON.stringify({
+        data
+      })
+    }).then(checkStatus),
+    fetchProducts: () => getRequest(`${apiRoot}jetpack/v4/products`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchRewindStatus: () => getRequest(`${apiRoot}jetpack/v4/rewind`, getParams).then(checkStatus).then(parseJsonResponse).then(body => JSON.parse(body.data)),
+    fetchScanStatus: () => getRequest(`${apiRoot}jetpack/v4/scan`, getParams).then(checkStatus).then(parseJsonResponse).then(body => JSON.parse(body.data)),
+    dismissJetpackNotice: notice => postRequest(`${apiRoot}jetpack/v4/notice/${notice}`, postParams, {
+      body: JSON.stringify({
+        dismissed: true
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    fetchPluginsData: () => getRequest(`${apiRoot}jetpack/v4/plugins`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchVerifySiteGoogleStatus: keyringId => {
+      const request = keyringId !== null ? getRequest(`${apiRoot}jetpack/v4/verify-site/google/${keyringId}`, getParams) : getRequest(`${apiRoot}jetpack/v4/verify-site/google`, getParams);
       return request.then(checkStatus).then(parseJsonResponse);
     },
-    verifySiteGoogle: function verifySiteGoogle(keyringId) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/verify-site/google"), postParams, {
-        body: JSON.stringify({
-          keyring_id: keyringId
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    sendMobileLoginEmail: function sendMobileLoginEmail() {
-      return postRequest("".concat(apiRoot, "jetpack/v4/mobile/send-login-email"), postParams).then(checkStatus).then(parseJsonResponse);
-    },
-    submitSurvey: function submitSurvey(surveyResponse) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/marketing/survey"), postParams, {
-        body: JSON.stringify(surveyResponse)
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    saveSetupQuestionnaire: function saveSetupQuestionnaire(props) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/setup/questionnaire"), postParams, {
-        body: JSON.stringify(props)
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    updateLicensingError: function updateLicensingError(props) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/licensing/error"), postParams, {
-        body: JSON.stringify(props)
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    updateLicenseKey: function updateLicenseKey(license) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/licensing/set-license"), postParams, {
-        body: JSON.stringify({
-          license: license
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    updateRecommendationsStep: function updateRecommendationsStep(step) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/recommendations/step"), postParams, {
-        body: JSON.stringify({
-          step: step
-        })
-      }).then(checkStatus);
-    },
-    confirmIDCSafeMode: function confirmIDCSafeMode() {
-      return postRequest("".concat(apiRoot, "jetpack/v4/identity-crisis/confirm-safe-mode"), postParams).then(checkStatus);
-    },
-    startIDCFresh: function startIDCFresh(redirectUri) {
-      return postRequest("".concat(apiRoot, "jetpack/v4/identity-crisis/start-fresh"), postParams, {
-        body: JSON.stringify({
-          redirect_uri: redirectUri
-        })
-      }).then(checkStatus).then(parseJsonResponse);
-    },
-    migrateIDC: function migrateIDC() {
-      return postRequest("".concat(apiRoot, "jetpack/v4/identity-crisis/migrate"), postParams).then(checkStatus);
-    }
+    verifySiteGoogle: keyringId => postRequest(`${apiRoot}jetpack/v4/verify-site/google`, postParams, {
+      body: JSON.stringify({
+        keyring_id: keyringId
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    sendMobileLoginEmail: () => postRequest(`${apiRoot}jetpack/v4/mobile/send-login-email`, postParams).then(checkStatus).then(parseJsonResponse),
+    submitSurvey: surveyResponse => postRequest(`${apiRoot}jetpack/v4/marketing/survey`, postParams, {
+      body: JSON.stringify(surveyResponse)
+    }).then(checkStatus).then(parseJsonResponse),
+    saveSetupQuestionnaire: props => postRequest(`${apiRoot}jetpack/v4/setup/questionnaire`, postParams, {
+      body: JSON.stringify(props)
+    }).then(checkStatus).then(parseJsonResponse),
+    updateLicensingError: props => postRequest(`${apiRoot}jetpack/v4/licensing/error`, postParams, {
+      body: JSON.stringify(props)
+    }).then(checkStatus).then(parseJsonResponse),
+    updateLicenseKey: license => postRequest(`${apiRoot}jetpack/v4/licensing/set-license`, postParams, {
+      body: JSON.stringify({
+        license
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    updateRecommendationsStep: step => postRequest(`${apiRoot}jetpack/v4/recommendations/step`, postParams, {
+      body: JSON.stringify({
+        step
+      })
+    }).then(checkStatus),
+    confirmIDCSafeMode: () => postRequest(`${apiRoot}jetpack/v4/identity-crisis/confirm-safe-mode`, postParams).then(checkStatus),
+    startIDCFresh: redirectUri => postRequest(`${apiRoot}jetpack/v4/identity-crisis/start-fresh`, postParams, {
+      body: JSON.stringify({
+        redirect_uri: redirectUri
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    migrateIDC: () => postRequest(`${apiRoot}jetpack/v4/identity-crisis/migrate`, postParams).then(checkStatus)
   };
   /**
    * The default callback to add a cachebuster parameter to route
@@ -7328,9 +6970,9 @@ function JetpackRestApiClient(root, nonce) {
    */
 
   function addCacheBuster(route) {
-    var parts = route.split('?'),
-        query = parts.length > 1 ? parts[1] : '',
-        args = query.length ? query.split('&') : [];
+    const parts = route.split('?'),
+          query = parts.length > 1 ? parts[1] : '',
+          args = query.length ? query.split('&') : [];
     args.push('_cacheBuster=' + new Date().getTime());
     return parts[0] + '?' + args.join('&');
   }
@@ -7357,7 +6999,7 @@ function JetpackRestApiClient(root, nonce) {
 
 
   function postRequest(route, params, body) {
-    return fetch(route, (0,lodash__WEBPACK_IMPORTED_MODULE_4__.assign)({}, params, body))["catch"](catchNetworkErrors);
+    return fetch(route, (0,lodash__WEBPACK_IMPORTED_MODULE_0__.assign)({}, params, body)).catch(catchNetworkErrors);
   }
   /**
    * Returns the stats data URL for the given date range
@@ -7368,12 +7010,12 @@ function JetpackRestApiClient(root, nonce) {
 
 
   function statsDataUrl(range) {
-    var url = "".concat(apiRoot, "jetpack/v4/module/stats/data");
+    let url = `${apiRoot}jetpack/v4/module/stats/data`;
 
     if (url.indexOf('?') !== -1) {
-      url = url + "&range=".concat(encodeURIComponent(range));
+      url = url + `&range=${encodeURIComponent(range)}`;
     } else {
-      url = url + "?range=".concat(encodeURIComponent(range));
+      url = url + `?range=${encodeURIComponent(range)}`;
     }
 
     return url;
@@ -7389,14 +7031,14 @@ function JetpackRestApiClient(root, nonce) {
   function handleStatsResponseError(statsData) {
     // If we get a .response property, it means that .com's response is errory.
     // Probably because the site does not have stats yet.
-    var responseOk = statsData.general && statsData.general.response === undefined || statsData.week && statsData.week.response === undefined || statsData.month && statsData.month.response === undefined;
+    const responseOk = statsData.general && statsData.general.response === undefined || statsData.week && statsData.week.response === undefined || statsData.month && statsData.month.response === undefined;
     return responseOk ? statsData : {};
   }
 
-  (0,lodash__WEBPACK_IMPORTED_MODULE_4__.assign)(this, methods);
+  (0,lodash__WEBPACK_IMPORTED_MODULE_0__.assign)(this, methods);
 }
 
-var restApi = new JetpackRestApiClient();
+const restApi = new JetpackRestApiClient();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (restApi);
 /**
  * Check the status of the response. Throw an error if it was not OK
@@ -7412,16 +7054,14 @@ function checkStatus(response) {
   }
 
   if (response.status === 404) {
-    return new Promise(function () {
-      var err = response.redirected ? new Api404AfterRedirectError(response.redirected) : new Api404Error();
+    return new Promise(() => {
+      const err = response.redirected ? new Api404AfterRedirectError(response.redirected) : new Api404Error();
       throw err;
     });
   }
 
-  return response.json()["catch"](function (e) {
-    return catchJsonParseError(e);
-  }).then(function (json) {
-    var error = new Error("".concat(json.message, " (Status ").concat(response.status, ")"));
+  return response.json().catch(e => catchJsonParseError(e)).then(json => {
+    const error = new Error(`${json.message} (Status ${response.status})`);
     error.response = json;
     error.name = 'ApiError';
     throw error;
@@ -7436,9 +7076,7 @@ function checkStatus(response) {
 
 
 function parseJsonResponse(response) {
-  return response.json()["catch"](function (e) {
-    return catchJsonParseError(e, response.redirected, response.url);
-  });
+  return response.json().catch(e => catchJsonParseError(e, response.redirected, response.url));
 }
 /**
  * Throw appropriate exception given an API error
@@ -7450,7 +7088,7 @@ function parseJsonResponse(response) {
 
 
 function catchJsonParseError(e, redirected, url) {
-  var err = redirected ? new JsonParseAfterRedirectError(url) : new JsonParseError();
+  const err = redirected ? new JsonParseAfterRedirectError(url) : new JsonParseError();
   throw err;
 }
 /**
@@ -7493,7 +7131,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
 
 
 /**
@@ -7513,12 +7151,14 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
  * @returns {React.Component} The `ActionButton` component.
  */
 
-var ActionButton = function ActionButton(props) {
-  var label = props.label,
-      onClick = props.onClick,
-      isLoading = props.isLoading,
-      displayError = props.displayError,
-      errorMessage = props.errorMessage;
+const ActionButton = props => {
+  const {
+    label,
+    onClick,
+    isLoading,
+    displayError,
+    errorMessage
+  } = props;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-action-button"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
@@ -7570,34 +7210,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/extends */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/extends.js");
 /* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectWithoutProperties */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectWithoutProperties.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/classCallCheck */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createClass */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/inherits */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createSuper */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createSuper.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! classnames */ "../../../node_modules/.pnpm/classnames@2.3.1/node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! classnames */ "../../../node_modules/.pnpm/classnames@2.3.1/node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__);
 
 
-
-
-
-
-
-var _excluded = ["logoColor", "showText", "className"];
 
 /**
  * External dependencies
@@ -7610,71 +7234,57 @@ var _excluded = ["logoColor", "showText", "className"];
  */
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_10__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__;
 
-var JetpackLogo = /*#__PURE__*/function (_React$Component) {
-  _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(JetpackLogo, _React$Component);
-
-  var _super = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5___default()(JetpackLogo);
-
-  function JetpackLogo() {
-    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, JetpackLogo);
-
-    return _super.apply(this, arguments);
+class JetpackLogo extends (react__WEBPACK_IMPORTED_MODULE_3___default().Component) {
+  render() {
+    const {
+      logoColor,
+      showText,
+      className,
+      ...otherProps
+    } = this.props;
+    const viewBox = showText ? '0 0 118 32' : '0 0 32 32';
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("svg", _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
+      xmlns: "http://www.w3.org/2000/svg",
+      x: "0px",
+      y: "0px",
+      viewBox: viewBox,
+      className: classnames__WEBPACK_IMPORTED_MODULE_4___default()('jetpack-logo', className),
+      "aria-labelledby": "jetpack-logo-title"
+    }, otherProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("title", {
+      id: "jetpack-logo-title"
+    }, __('Jetpack Logo', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("path", {
+      fill: logoColor,
+      d: "M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M15,19H7l8-16V19z M17,29V13h8L17,29z"
+    }), showText && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement(react__WEBPACK_IMPORTED_MODULE_3__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("path", {
+      d: "M41.3,26.6c-0.5-0.7-0.9-1.4-1.3-2.1c2.3-1.4,3-2.5,3-4.6V8h-3V6h6v13.4C46,22.8,45,24.8,41.3,26.6z"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("path", {
+      d: "M65,18.4c0,1.1,0.8,1.3,1.4,1.3c0.5,0,2-0.2,2.6-0.4v2.1c-0.9,0.3-2.5,0.5-3.7,0.5c-1.5,0-3.2-0.5-3.2-3.1V12H60v-2h2.1V7.1 H65V10h4v2h-4V18.4z"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("path", {
+      d: "M71,10h3v1.3c1.1-0.8,1.9-1.3,3.3-1.3c2.5,0,4.5,1.8,4.5,5.6s-2.2,6.3-5.8,6.3c-0.9,0-1.3-0.1-2-0.3V28h-3V10z M76.5,12.3 c-0.8,0-1.6,0.4-2.5,1.2v5.9c0.6,0.1,0.9,0.2,1.8,0.2c2,0,3.2-1.3,3.2-3.9C79,13.4,78.1,12.3,76.5,12.3z"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("path", {
+      d: "M93,22h-3v-1.5c-0.9,0.7-1.9,1.5-3.5,1.5c-1.5,0-3.1-1.1-3.1-3.2c0-2.9,2.5-3.4,4.2-3.7l2.4-0.3v-0.3c0-1.5-0.5-2.3-2-2.3 c-0.7,0-2.3,0.5-3.7,1.1L84,11c1.2-0.4,3-1,4.4-1c2.7,0,4.6,1.4,4.6,4.7L93,22z M90,16.4l-2.2,0.4c-0.7,0.1-1.4,0.5-1.4,1.6 c0,0.9,0.5,1.4,1.3,1.4s1.5-0.5,2.3-1V16.4z"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("path", {
+      d: "M104.5,21.3c-1.1,0.4-2.2,0.6-3.5,0.6c-4.2,0-5.9-2.4-5.9-5.9c0-3.7,2.3-6,6.1-6c1.4,0,2.3,0.2,3.2,0.5V13 c-0.8-0.3-2-0.6-3.2-0.6c-1.7,0-3.2,0.9-3.2,3.6c0,2.9,1.5,3.8,3.3,3.8c0.9,0,1.9-0.2,3.2-0.7V21.3z"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("path", {
+      d: "M110,15.2c0.2-0.3,0.2-0.8,3.8-5.2h3.7l-4.6,5.7l5,6.3h-3.7l-4.2-5.8V22h-3V6h3V15.2z"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("path", {
+      d: "M58.5,21.3c-1.5,0.5-2.7,0.6-4.2,0.6c-3.6,0-5.8-1.8-5.8-6c0-3.1,1.9-5.9,5.5-5.9s4.9,2.5,4.9,4.9c0,0.8,0,1.5-0.1,2h-7.3 c0.1,2.5,1.5,2.8,3.6,2.8c1.1,0,2.2-0.3,3.4-0.7C58.5,19,58.5,21.3,58.5,21.3z M56,15c0-1.4-0.5-2.9-2-2.9c-1.4,0-2.3,1.3-2.4,2.9 C51.6,15,56,15,56,15z"
+    })));
   }
 
-  _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(JetpackLogo, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          logoColor = _this$props.logoColor,
-          showText = _this$props.showText,
-          className = _this$props.className,
-          otherProps = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default()(_this$props, _excluded);
+}
 
-      var viewBox = showText ? '0 0 118 32' : '0 0 32 32';
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement("svg", _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
-        xmlns: "http://www.w3.org/2000/svg",
-        x: "0px",
-        y: "0px",
-        viewBox: viewBox,
-        className: classnames__WEBPACK_IMPORTED_MODULE_9___default()('jetpack-logo', className),
-        "aria-labelledby": "jetpack-logo-title"
-      }, otherProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement("title", {
-        id: "jetpack-logo-title"
-      }, __('Jetpack Logo', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement("path", {
-        fill: logoColor,
-        d: "M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M15,19H7l8-16V19z M17,29V13h8L17,29z"
-      }), showText && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement(react__WEBPACK_IMPORTED_MODULE_8__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement("path", {
-        d: "M41.3,26.6c-0.5-0.7-0.9-1.4-1.3-2.1c2.3-1.4,3-2.5,3-4.6V8h-3V6h6v13.4C46,22.8,45,24.8,41.3,26.6z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement("path", {
-        d: "M65,18.4c0,1.1,0.8,1.3,1.4,1.3c0.5,0,2-0.2,2.6-0.4v2.1c-0.9,0.3-2.5,0.5-3.7,0.5c-1.5,0-3.2-0.5-3.2-3.1V12H60v-2h2.1V7.1 H65V10h4v2h-4V18.4z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement("path", {
-        d: "M71,10h3v1.3c1.1-0.8,1.9-1.3,3.3-1.3c2.5,0,4.5,1.8,4.5,5.6s-2.2,6.3-5.8,6.3c-0.9,0-1.3-0.1-2-0.3V28h-3V10z M76.5,12.3 c-0.8,0-1.6,0.4-2.5,1.2v5.9c0.6,0.1,0.9,0.2,1.8,0.2c2,0,3.2-1.3,3.2-3.9C79,13.4,78.1,12.3,76.5,12.3z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement("path", {
-        d: "M93,22h-3v-1.5c-0.9,0.7-1.9,1.5-3.5,1.5c-1.5,0-3.1-1.1-3.1-3.2c0-2.9,2.5-3.4,4.2-3.7l2.4-0.3v-0.3c0-1.5-0.5-2.3-2-2.3 c-0.7,0-2.3,0.5-3.7,1.1L84,11c1.2-0.4,3-1,4.4-1c2.7,0,4.6,1.4,4.6,4.7L93,22z M90,16.4l-2.2,0.4c-0.7,0.1-1.4,0.5-1.4,1.6 c0,0.9,0.5,1.4,1.3,1.4s1.5-0.5,2.3-1V16.4z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement("path", {
-        d: "M104.5,21.3c-1.1,0.4-2.2,0.6-3.5,0.6c-4.2,0-5.9-2.4-5.9-5.9c0-3.7,2.3-6,6.1-6c1.4,0,2.3,0.2,3.2,0.5V13 c-0.8-0.3-2-0.6-3.2-0.6c-1.7,0-3.2,0.9-3.2,3.6c0,2.9,1.5,3.8,3.3,3.8c0.9,0,1.9-0.2,3.2-0.7V21.3z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement("path", {
-        d: "M110,15.2c0.2-0.3,0.2-0.8,3.8-5.2h3.7l-4.6,5.7l5,6.3h-3.7l-4.2-5.8V22h-3V6h3V15.2z"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement("path", {
-        d: "M58.5,21.3c-1.5,0.5-2.7,0.6-4.2,0.6c-3.6,0-5.8-1.8-5.8-6c0-3.1,1.9-5.9,5.5-5.9s4.9,2.5,4.9,4.9c0,0.8,0,1.5-0.1,2h-7.3 c0.1,2.5,1.5,2.8,3.6,2.8c1.1,0,2.2-0.3,3.4-0.7C58.5,19,58.5,21.3,58.5,21.3z M56,15c0-1.4-0.5-2.9-2-2.9c-1.4,0-2.3,1.3-2.4,2.9 C51.6,15,56,15,56,15z"
-      })));
-    }
-  }]);
-
-  return JetpackLogo;
-}((react__WEBPACK_IMPORTED_MODULE_8___default().Component));
-
-_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(JetpackLogo, "propTypes", {
-  className: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().string),
-  width: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),
-  height: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),
-  showText: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
-  logoColor: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().string)
+_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default()(JetpackLogo, "propTypes", {
+  className: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+  width: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().number),
+  height: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().number),
+  showText: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
+  logoColor: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)
 });
 
-_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(JetpackLogo, "defaultProps", {
+_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default()(JetpackLogo, "defaultProps", {
   className: '',
   height: 32,
   showText: true,
@@ -7718,7 +7328,7 @@ __webpack_require__.r(__webpack_exports__);
  * Internal dependencies
  */
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
 
 /**
  * Whether or not to display a price's decimal part in the UI.
@@ -7729,7 +7339,7 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
  * @returns {boolean} Whether or not to display the price decimal part.
  */
 
-var showPriceDecimals = function showPriceDecimals(currencyObject) {
+const showPriceDecimals = currencyObject => {
   return currencyObject.fraction.indexOf('00') === -1;
 };
 /**
@@ -7740,9 +7350,9 @@ var showPriceDecimals = function showPriceDecimals(currencyObject) {
  */
 
 
-var PricingCard = function PricingCard(props) {
-  var currencyObjectBefore = (0,_automattic_format_currency__WEBPACK_IMPORTED_MODULE_5__.getCurrencyObject)(props.priceBefore, props.currencyCode);
-  var currencyObjectAfter = (0,_automattic_format_currency__WEBPACK_IMPORTED_MODULE_5__.getCurrencyObject)(props.priceAfter, props.currencyCode);
+const PricingCard = props => {
+  const currencyObjectBefore = (0,_automattic_format_currency__WEBPACK_IMPORTED_MODULE_5__.getCurrencyObject)(props.priceBefore, props.currencyCode);
+  const currencyObjectAfter = (0,_automattic_format_currency__WEBPACK_IMPORTED_MODULE_5__.getCurrencyObject)(props.priceAfter, props.currencyCode);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-components__pricing-card"
   }, props.icon && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -7852,9 +7462,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Spinner = function Spinner(props) {
-  var className = props.className + ' jp-components-spinner';
-  var style = {
+const Spinner = props => {
+  const className = props.className + ' jp-components-spinner';
+  const style = {
     width: props.size,
     height: props.size,
     fontSize: props.size // allows border-width to be specified in em units
@@ -7913,10 +7523,9 @@ __webpack_require__.r(__webpack_exports__);
  * @param {string} args.anchor - Anchor to be added to the URL. Must be a single string. Example: `section1`.
  * @returns {string} The redirect URL
  */
-function getRedirectUrl(source) {
-  var args = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  var queryVars = {};
-  var calypsoEnv;
+function getRedirectUrl(source, args = {}) {
+  const queryVars = {};
+  let calypsoEnv;
 
   if (typeof window !== 'undefined') {
     var _window$Initial_State;
@@ -7925,15 +7534,15 @@ function getRedirectUrl(source) {
   }
 
   if (source.search('https://') === 0) {
-    var parsedUrl = new URL(source); // discard any query and fragments.
+    const parsedUrl = new URL(source); // discard any query and fragments.
 
-    source = "https://".concat(parsedUrl.host).concat(parsedUrl.pathname);
+    source = `https://${parsedUrl.host}${parsedUrl.pathname}`;
     queryVars.url = encodeURIComponent(source);
   } else {
     queryVars.source = encodeURIComponent(source);
   }
 
-  Object.keys(args).map(function (argName) {
+  Object.keys(args).map(argName => {
     queryVars[argName] = encodeURIComponent(args[argName]);
   });
 
@@ -7945,10 +7554,8 @@ function getRedirectUrl(source) {
     queryVars.calypso_env = calypsoEnv;
   }
 
-  var queryString = Object.keys(queryVars).map(function (key) {
-    return key + '=' + queryVars[key];
-  }).join('&');
-  return "https://jetpack.com/redirect/?" + queryString;
+  const queryString = Object.keys(queryVars).map(key => key + '=' + queryVars[key]).join('&');
+  return `https://jetpack.com/redirect/?` + queryString;
 }
 
 /***/ }),
@@ -7964,25 +7571,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/action-button/index.jsx");
-/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/action-button/index.jsx");
+/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
 /**
  * External dependencies
  */
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
 
 
 
@@ -8008,50 +7611,36 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
  * @returns {React.Component} The RNA connection component.
  */
 
-var ConnectButton = function ConnectButton(props) {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState2 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      isRegistering = _useState2[0],
-      setIsRegistering = _useState2[1];
-
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState4 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState3, 2),
-      isUserConnecting = _useState4[0],
-      setIsUserConnecting = _useState4[1];
-
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState6 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState5, 2),
-      registrationError = _useState6[0],
-      setRegistrationError = _useState6[1];
-
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
-      _useState8 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState7, 2),
-      authorizationUrl = _useState8[0],
-      setAuthorizationUrl = _useState8[1];
-
-  var apiRoot = props.apiRoot,
-      apiNonce = props.apiNonce,
-      connectLabel = props.connectLabel,
-      onRegistered = props.onRegistered,
-      registrationNonce = props.registrationNonce,
-      redirectUri = props.redirectUri,
-      from = props.from,
-      connectionStatus = props.connectionStatus,
-      connectionStatusIsFetching = props.connectionStatusIsFetching,
-      autoTrigger = props.autoTrigger;
+const ConnectButton = props => {
+  const [isRegistering, setIsRegistering] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [isUserConnecting, setIsUserConnecting] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [registrationError, setRegistrationError] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [authorizationUrl, setAuthorizationUrl] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  const {
+    apiRoot,
+    apiNonce,
+    connectLabel,
+    onRegistered,
+    registrationNonce,
+    redirectUri,
+    from,
+    connectionStatus,
+    connectionStatusIsFetching,
+    autoTrigger
+  } = props;
   /**
    * Initialize the REST API.
    */
 
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiNonce(apiNonce);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
    * Initialize the site registration process.
    */
 
-  var registerSite = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function (e) {
+  const registerSite = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
     e && e.preventDefault();
     setRegistrationError(false);
 
@@ -8061,7 +7650,7 @@ var ConnectButton = function ConnectButton(props) {
     }
 
     setIsRegistering(true);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.registerSite(registrationNonce, redirectUri).then(function (response) {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.registerSite(registrationNonce, redirectUri).then(response => {
       setIsRegistering(false);
 
       if (onRegistered) {
@@ -8070,7 +7659,7 @@ var ConnectButton = function ConnectButton(props) {
 
       setAuthorizationUrl(response.authorizeUrl);
       setIsUserConnecting(true);
-    })["catch"](function (error) {
+    }).catch(error => {
       setIsRegistering(false);
       setRegistrationError(error);
       throw error;
@@ -8080,18 +7669,18 @@ var ConnectButton = function ConnectButton(props) {
    * Auto-trigger the flow, only do it once.
    */
 
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (autoTrigger && !isRegistering && !isUserConnecting) {
       registerSite();
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, connectionStatusIsFetching && "Loading...", (!connectionStatus.isRegistered || !connectionStatus.isUserConnected) && !connectionStatusIsFetching && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__.default, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, connectionStatusIsFetching && `Loading...`, (!connectionStatus.isRegistered || !connectionStatus.isUserConnected) && !connectionStatusIsFetching && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__.default, {
     label: connectLabel,
     onClick: registerSite,
     displayError: registrationError ? true : false,
     isLoading: isRegistering || isUserConnecting
-  }), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_6__.default, {
+  }), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_5__.default, {
     connectUrl: authorizationUrl,
     redirectUri: redirectUri,
     from: from
@@ -8099,14 +7688,14 @@ var ConnectButton = function ConnectButton(props) {
 };
 
 ConnectButton.propTypes = {
-  connectLabel: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
-  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
-  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
-  onRegistered: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func),
-  from: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
-  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
-  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
-  autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool)
+  connectLabel: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
+  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
+  onRegistered: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func),
+  from: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
+  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
+  autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool)
 };
 ConnectButton.defaultProps = {
   connectLabel: __('Connect', 'jetpack'),
@@ -8146,22 +7735,22 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {React.Component} The `ImageSlider` component.
  */
 
-var ImageSlider = function ImageSlider(props) {
-  var images = props.images,
-      assetBaseUrl = props.assetBaseUrl;
+const ImageSlider = props => {
+  const {
+    images,
+    assetBaseUrl
+  } = props;
 
   if (!images.length) {
     return null;
   }
 
-  var imagesHTML = images.map(function (image, index) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), {
-      key: index
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-      src: assetBaseUrl + image,
-      alt: ""
-    }));
-  });
+  const imagesHTML = images.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), {
+    key: index
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: assetBaseUrl + image,
+    alt: ""
+  })));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connection__connect-screen__image-slider"
   }, imagesHTML);
@@ -8219,13 +7808,15 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {React.Component} The `ConnectScreenLayout` component.
  */
 
-var ConnectScreenLayout = function ConnectScreenLayout(props) {
-  var title = props.title,
-      children = props.children,
-      className = props.className,
-      assetBaseUrl = props.assetBaseUrl,
-      images = props.images;
-  var showImageSlider = images === null || images === void 0 ? void 0 : images.length;
+const ConnectScreenLayout = props => {
+  const {
+    title,
+    children,
+    className,
+    assetBaseUrl,
+    images
+  } = props;
+  const showImageSlider = images === null || images === void 0 ? void 0 : images.length;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: 'jp-connection__connect-screen-layout' + (showImageSlider ? ' jp-connection__connect-screen-layout__two-columns' : '') + (className ? ' ' + className : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -8286,7 +7877,7 @@ __webpack_require__.r(__webpack_exports__);
  * Internal dependencies
  */
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 /**
@@ -8296,23 +7887,25 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
  * @returns {React.Component} The `ConnectScreenForRequiredPlan` component.
  */
 
-var ConnectScreenRequiredPlan = function ConnectScreenRequiredPlan(props) {
-  var title = props.title,
-      autoTrigger = props.autoTrigger,
-      buttonLabel = props.buttonLabel,
-      apiRoot = props.apiRoot,
-      apiNonce = props.apiNonce,
-      registrationNonce = props.registrationNonce,
-      from = props.from,
-      redirectUri = props.redirectUri,
-      children = props.children,
-      connectionStatus = props.connectionStatus,
-      priceBefore = props.priceBefore,
-      priceAfter = props.priceAfter,
-      pricingIcon = props.pricingIcon,
-      pricingTitle = props.pricingTitle,
-      pricingCurrencyCode = props.pricingCurrencyCode;
-  var renderConnectBtn = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (label, trigger) {
+const ConnectScreenRequiredPlan = props => {
+  const {
+    title,
+    autoTrigger,
+    buttonLabel,
+    apiRoot,
+    apiNonce,
+    registrationNonce,
+    from,
+    redirectUri,
+    children,
+    connectionStatus,
+    priceBefore,
+    priceAfter,
+    pricingIcon,
+    pricingTitle,
+    pricingCurrencyCode
+  } = props;
+  const renderConnectBtn = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((label, trigger) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_button__WEBPACK_IMPORTED_MODULE_3__.default, {
       autoTrigger: trigger,
       apiRoot: apiRoot,
@@ -8420,7 +8013,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 /**
@@ -8436,19 +8029,21 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
  * @returns {React.Component} The `ConnectScreenRequiredPlanVisual` component.
  */
 
-var ConnectScreenRequiredPlanVisual = function ConnectScreenRequiredPlanVisual(props) {
-  var title = props.title,
-      autoTrigger = props.autoTrigger,
-      buttonLabel = props.buttonLabel,
-      children = props.children,
-      connectionStatus = props.connectionStatus,
-      priceBefore = props.priceBefore,
-      priceAfter = props.priceAfter,
-      pricingIcon = props.pricingIcon,
-      pricingTitle = props.pricingTitle,
-      pricingCurrencyCode = props.pricingCurrencyCode,
-      renderConnectBtn = props.renderConnectBtn;
-  var tos = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)(__('By clicking the button above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>share details</shareDetailsLink> with WordPress.com.', 'jetpack'), {
+const ConnectScreenRequiredPlanVisual = props => {
+  const {
+    title,
+    autoTrigger,
+    buttonLabel,
+    children,
+    connectionStatus,
+    priceBefore,
+    priceAfter,
+    pricingIcon,
+    pricingTitle,
+    pricingCurrencyCode,
+    renderConnectBtn
+  } = props;
+  const tos = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)(__('By clicking the button above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>share details</shareDetailsLink> with WordPress.com.', 'jetpack'), {
     tosLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
       href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__.default)('wpcom-tos'),
       rel: "noopener noreferrer",
@@ -8460,7 +8055,7 @@ var ConnectScreenRequiredPlanVisual = function ConnectScreenRequiredPlanVisual(p
       target: "_blank"
     })
   });
-  var withSubscription = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)(__('Already have a subscription? <connectButton/> to get started.', 'jetpack'), {
+  const withSubscription = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)(__('Already have a subscription? <connectButton/> to get started.', 'jetpack'), {
     connectButton: renderConnectBtn(__('Log in', 'jetpack'), false)
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout__WEBPACK_IMPORTED_MODULE_6__.default, {
@@ -8532,15 +8127,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
 /**
  * External dependencies
  */
@@ -8558,16 +8149,14 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {null} -- Nothing to return.
  */
 
-var ConnectUser = function ConnectUser(props) {
-  var redirectFunc = props.redirectFunc,
-      connectUrl = props.connectUrl,
-      redirectUri = props.redirectUri,
-      from = props.from;
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
-      _useState2 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      authorizationUrl = _useState2[0],
-      setAuthorizationUrl = _useState2[1];
+const ConnectUser = props => {
+  const {
+    redirectFunc,
+    connectUrl,
+    redirectUri,
+    from
+  } = props;
+  const [authorizationUrl, setAuthorizationUrl] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
 
   if (connectUrl && connectUrl !== authorizationUrl) {
     setAuthorizationUrl(connectUrl);
@@ -8578,11 +8167,9 @@ var ConnectUser = function ConnectUser(props) {
    */
 
 
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (!authorizationUrl) {
-      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.fetchAuthorizationUrl(redirectUri).then(function (response) {
-        return setAuthorizationUrl(response.authorizeUrl);
-      })["catch"](function (error) {
+      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__.default.fetchAuthorizationUrl(redirectUri).then(response => setAuthorizationUrl(response.authorizeUrl)).catch(error => {
         throw error;
       });
     }
@@ -8597,15 +8184,13 @@ var ConnectUser = function ConnectUser(props) {
 };
 
 ConnectUser.propTypes = {
-  connectUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  from: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  redirectFunc: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func)
+  connectUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  from: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  redirectFunc: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func)
 };
 ConnectUser.defaultProps = {
-  redirectFunc: function redirectFunc(url) {
-    return window.location.assign(url);
-  },
+  redirectFunc: url => window.location.assign(url),
   redirectUri: null
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ConnectUser);
@@ -8623,31 +8208,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
-/* harmony import */ var _disconnect_dialog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../disconnect-dialog */ "../../js-packages/connection/components/disconnect-dialog/index.jsx");
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/connection/state/store.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/connection-status-card/style.scss");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
+/* harmony import */ var _disconnect_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../disconnect-dialog */ "../../js-packages/connection/components/disconnect-dialog/index.jsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/connection/state/store.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/connection-status-card/style.scss");
 /**
  * External dependencies
  */
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
 
 
 
@@ -8675,66 +8256,55 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
  * @returns {React.Component} The `ConnectionStatusCard` component.
  */
 
-var ConnectionStatusCard = function ConnectionStatusCard(props) {
-  var apiRoot = props.apiRoot,
-      apiNonce = props.apiNonce,
-      isRegistered = props.isRegistered,
-      isUserConnected = props.isUserConnected,
-      redirectUri = props.redirectUri,
-      title = props.title,
-      connectionInfoText = props.connectionInfoText,
-      onDisconnected = props.onDisconnected;
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState2 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      isFetchingConnectionData = _useState2[0],
-      setIsFetchingConnectionData = _useState2[1];
-
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({}),
-      _useState4 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState3, 2),
-      connectedUserData = _useState4[0],
-      setConnectedUserData = _useState4[1];
-
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState6 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState5, 2),
-      isUserConnecting = _useState6[0],
-      setIsUserConnecting = _useState6[1];
-
-  var _useDispatch = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_6__.useDispatch)(_state_store__WEBPACK_IMPORTED_MODULE_8__.STORE_ID),
-      setConnectionStatus = _useDispatch.setConnectionStatus;
-
-  var avatarRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)();
+const ConnectionStatusCard = props => {
+  const {
+    apiRoot,
+    apiNonce,
+    isRegistered,
+    isUserConnected,
+    redirectUri,
+    title,
+    connectionInfoText,
+    onDisconnected
+  } = props;
+  const [isFetchingConnectionData, setIsFetchingConnectionData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [connectedUserData, setConnectedUserData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({});
+  const [isUserConnecting, setIsUserConnecting] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const {
+    setConnectionStatus
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.useDispatch)(_state_store__WEBPACK_IMPORTED_MODULE_7__.STORE_ID);
+  const avatarRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
   /**
    * Initialize the REST API.
    */
 
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.setApiNonce(apiNonce);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
    * Fetch the connection data on the first render.
    * To be only run once.
    */
 
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     setIsFetchingConnectionData(true);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.fetchSiteConnectionData().then(function (response) {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.fetchSiteConnectionData().then(response => {
       var _response$currentUser, _response$currentUser2, _response$currentUser3;
 
       setIsFetchingConnectionData(false);
       setConnectedUserData((_response$currentUser = response.currentUser) === null || _response$currentUser === void 0 ? void 0 : _response$currentUser.wpcomUser);
-      var avatar = (_response$currentUser2 = response.currentUser) === null || _response$currentUser2 === void 0 ? void 0 : (_response$currentUser3 = _response$currentUser2.wpcomUser) === null || _response$currentUser3 === void 0 ? void 0 : _response$currentUser3.avatar;
+      const avatar = (_response$currentUser2 = response.currentUser) === null || _response$currentUser2 === void 0 ? void 0 : (_response$currentUser3 = _response$currentUser2.wpcomUser) === null || _response$currentUser3 === void 0 ? void 0 : _response$currentUser3.avatar;
 
       if (avatar) {
-        avatarRef.current.style.backgroundImage = "url('".concat(avatar, "')");
+        avatarRef.current.style.backgroundImage = `url('${avatar}')`;
       }
-    })["catch"](function (error) {
+    }).catch(error => {
       setIsFetchingConnectionData(false);
       throw error;
     });
   }, [setIsFetchingConnectionData, setConnectedUserData]);
-  var onDisconnectedCallback = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function (e) {
+  const onDisconnectedCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
     e && e.preventDefault();
     setConnectionStatus({
       isActive: false,
@@ -8751,50 +8321,50 @@ var ConnectionStatusCard = function ConnectionStatusCard(props) {
     return null;
   }
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connection-status-card"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h3", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, connectionInfoText), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, connectionInfoText), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connection-status-card--status"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connection-status-card--cloud"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: 'jp-connection-status-card--line' + (isUserConnected ? '' : ' jp-connection-status-card--site-only')
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connection-status-card--jetpack-logo"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connection-status-card--avatar",
     ref: avatarRef
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("ul", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: "jp-connection-status-card--list"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("li", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     className: "jp-connection-status-card--list-item-success"
-  }, __('Site connected.', 'jetpack'), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_disconnect_dialog__WEBPACK_IMPORTED_MODULE_9__.default, {
+  }, __('Site connected.', 'jetpack'), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_disconnect_dialog__WEBPACK_IMPORTED_MODULE_8__.default, {
     apiRoot: apiRoot,
     apiNonce: apiNonce,
     onDisconnected: onDisconnectedCallback
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", null, __('Jetpack is currently powering multiple products on your site.', 'jetpack'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("br", null), __('Once you disconnect Jetpack, these will no longer work.', 'jetpack')))), isUserConnected && !isFetchingConnectionData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("li", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, __('Jetpack is currently powering multiple products on your site.', 'jetpack'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), __('Once you disconnect Jetpack, these will no longer work.', 'jetpack')))), isUserConnected && !isFetchingConnectionData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     className: "jp-connection-status-card--list-item-success"
-  }, __('Logged in as', 'jetpack'), " ", connectedUserData === null || connectedUserData === void 0 ? void 0 : connectedUserData.display_name), !isUserConnected && !isFetchingConnectionData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("li", {
+  }, __('Logged in as', 'jetpack'), " ", connectedUserData === null || connectedUserData === void 0 ? void 0 : connectedUserData.display_name), !isUserConnected && !isFetchingConnectionData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     className: "jp-connection-status-card--list-item-error"
-  }, __('Your WordPress.com account is not connected.', 'jetpack'))), !isUserConnected && !isFetchingConnectionData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
+  }, __('Your WordPress.com account is not connected.', 'jetpack'))), !isUserConnected && !isFetchingConnectionData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     isPrimary: true,
     disabled: isUserConnecting,
     onClick: setIsUserConnecting,
     className: "jp-connection-status-card--btn-connect-user"
-  }, __('Connect your WordPress.com account', 'jetpack')), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_10__.default, {
+  }, __('Connect your WordPress.com account', 'jetpack')), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_9__.default, {
     redirectUri: redirectUri
   }));
 };
 
 ConnectionStatusCard.propTypes = {
-  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string.isRequired),
-  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string.isRequired),
-  isRegistered: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool.isRequired),
-  isUserConnected: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool.isRequired),
-  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string.isRequired),
-  title: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
-  connectionInfoText: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
-  onDisconnected: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func)
+  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
+  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
+  isRegistered: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool.isRequired),
+  isUserConnected: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool.isRequired),
+  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
+  connectionInfoText: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
+  onDisconnected: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func)
 };
 ConnectionStatusCard.defaultProps = {
   title: __('Connection', 'jetpack'),
@@ -8815,31 +8385,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/disconnect-dialog/style.scss");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/disconnect-dialog/style.scss");
 /**
  * External dependencies
  */
 
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 
@@ -8862,47 +8428,33 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
  * @returns {React.Component} The `DisconnectDialog` component.
  */
 
-var DisconnectDialog = function DisconnectDialog(props) {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState2 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      isOpen = _useState2[0],
-      setOpen = _useState2[1];
-
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState4 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState3, 2),
-      isDisconnecting = _useState4[0],
-      setIsDisconnecting = _useState4[1];
-
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState6 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState5, 2),
-      isDisconnected = _useState6[0],
-      setIsDisconnected = _useState6[1];
-
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState8 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState7, 2),
-      disconnectError = _useState8[0],
-      setDisconnectError = _useState8[1];
-
-  var apiRoot = props.apiRoot,
-      apiNonce = props.apiNonce,
-      title = props.title,
-      onDisconnected = props.onDisconnected,
-      onError = props.onError,
-      errorMessage = props.errorMessage,
-      children = props.children;
+const DisconnectDialog = props => {
+  const [isOpen, setOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [isDisconnecting, setIsDisconnecting] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [isDisconnected, setIsDisconnected] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [disconnectError, setDisconnectError] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const {
+    apiRoot,
+    apiNonce,
+    title,
+    onDisconnected,
+    onError,
+    errorMessage,
+    children
+  } = props;
   /**
    * Initialize the REST API.
    */
 
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_6__.default.setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_6__.default.setApiNonce(apiNonce);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
    * Open the Disconnect Dialog.
    */
 
-  var openModal = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function (e) {
+  const openModal = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
     e && e.preventDefault();
     setOpen(true);
   }, [setOpen]);
@@ -8910,7 +8462,7 @@ var DisconnectDialog = function DisconnectDialog(props) {
    * Close the Disconnect Dialog.
    */
 
-  var closeModal = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function (e) {
+  const closeModal = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
     e && e.preventDefault();
     setOpen(false);
   }, [setOpen]);
@@ -8918,14 +8470,14 @@ var DisconnectDialog = function DisconnectDialog(props) {
    * Disconnect - Triggered upon clicking the 'Disconnect' button.
    */
 
-  var disconnect = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function (e) {
+  const disconnect = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
     e && e.preventDefault();
     setDisconnectError(false);
     setIsDisconnecting(true);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_6__.default.disconnectSite().then(function () {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.disconnectSite().then(() => {
       setIsDisconnecting(false);
       setIsDisconnected(true);
-    })["catch"](function (error) {
+    }).catch(error => {
       setIsDisconnecting(false);
       setDisconnectError(error);
 
@@ -8939,7 +8491,7 @@ var DisconnectDialog = function DisconnectDialog(props) {
    * Triggered upon clicking the 'Back To WordPress' button.
    */
 
-  var backToWordpress = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function (e) {
+  const backToWordpress = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
     e && e.preventDefault();
 
     if (onDisconnected) {
@@ -8948,11 +8500,11 @@ var DisconnectDialog = function DisconnectDialog(props) {
 
     closeModal();
   }, [onDisconnected, closeModal]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
     variant: "link",
     onClick: openModal,
     className: "jp-disconnect-dialog__link"
-  }, __('Disconnect', 'jetpack')), isOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Modal, {
+  }, __('Disconnect', 'jetpack')), isOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Modal, {
     title: "",
     contentLabel: title,
     aria: {
@@ -8963,47 +8515,47 @@ var DisconnectDialog = function DisconnectDialog(props) {
     shouldCloseOnEsc: false,
     isDismissible: false,
     className: 'jp-disconnect-dialog' + (isDisconnected ? ' jp-disconnect-dialog__success' : '')
-  }, !isDisconnected && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, !isDisconnected && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-disconnect-dialog__content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h1", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
     id: "jp-disconnect-dialog__heading"
-  }, title), children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, title), children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-disconnect-dialog__actions"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-row"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "lg-col-span-8 md-col-span-8 sm-col-span-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.createInterpolateElement)(__('<strong>Need help?</strong> Learn more about the <jpConnectionInfoLink>Jetpack connection</jpConnectionInfoLink> or <jpSupportLink>contact Jetpack support</jpSupportLink>', 'jetpack'), {
-    strong: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("strong", null),
-    jpConnectionInfoLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__.default)('why-the-wordpress-com-connection-is-important-for-jetpack'),
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('<strong>Need help?</strong> Learn more about the <jpConnectionInfoLink>Jetpack connection</jpConnectionInfoLink> or <jpSupportLink>contact Jetpack support</jpSupportLink>', 'jetpack'), {
+    strong: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null),
+    jpConnectionInfoLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default)('why-the-wordpress-com-connection-is-important-for-jetpack'),
       rel: "noopener noreferrer",
       target: "_blank",
       className: "jp-disconnect-dialog__link"
     }),
-    jpSupportLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__.default)('jetpack-support'),
+    jpSupportLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default)('jetpack-support'),
       rel: "noopener noreferrer",
       target: "_blank",
       className: "jp-disconnect-dialog__link"
     })
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-disconnect-dialog__button-wrap lg-col-span-4 md-col-span-8 sm-col-span-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
     isPrimary: true,
     disabled: isDisconnecting,
     onClick: closeModal,
     className: "jp-disconnect-dialog__btn-dismiss"
-  }, __('Stay connected', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+  }, __('Stay connected', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
     isPrimary: true,
     disabled: isDisconnecting,
     onClick: disconnect,
     className: "jp-disconnect-dialog__btn-disconnect"
-  }, __('Disconnect', 'jetpack')))), disconnectError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", {
+  }, __('Disconnect', 'jetpack')))), disconnectError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "jp-disconnect-dialog__error"
-  }, errorMessage))), isDisconnected && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h1", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.createInterpolateElement)(__('Jetpack has been <br/>successfully disconnected.', 'jetpack'), {
-    br: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("br", null)
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+  }, errorMessage))), isDisconnected && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('Jetpack has been <br/>successfully disconnected.', 'jetpack'), {
+    br: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null)
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
     isPrimary: true,
     onClick: backToWordpress,
     className: "jp-disconnect-dialog__btn-back-to-wp"
@@ -9011,12 +8563,12 @@ var DisconnectDialog = function DisconnectDialog(props) {
 };
 
 DisconnectDialog.propTypes = {
-  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  title: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  onDisconnected: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func),
-  onError: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func),
-  errorMessage: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)
+  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  onDisconnected: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+  onError: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+  errorMessage: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)
 };
 DisconnectDialog.defaultProps = {
   title: __('Are you sure you want to disconnect?', 'jetpack'),
@@ -9067,10 +8619,10 @@ __webpack_require__.r(__webpack_exports__);
  * @param {Function} onError - Callback that's called in case of fetching error.
  */
 
-var fetchConnectionStatus = function fetchConnectionStatus(apiRoot, apiNonce, onSuccess, onError) {
+const fetchConnectionStatus = (apiRoot, apiNonce, onSuccess, onError) => {
   _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__.default.setApiRoot(apiRoot);
   _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__.default.setApiNonce(apiNonce);
-  _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__.default.fetchSiteConnectionStatus().then(onSuccess)["catch"](onError);
+  _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__.default.fetchSiteConnectionStatus().then(onSuccess).catch(onError);
 };
 /**
  * Higher order component to fetch connection status and pass it further as a parameter.
@@ -9080,7 +8632,7 @@ var fetchConnectionStatus = function fetchConnectionStatus(apiRoot, apiNonce, on
  */
 
 
-var withConnectionStatus = function withConnectionStatus(WrappedComponent) {
+const withConnectionStatus = WrappedComponent => {
   /**
    * The `WrappedComponent` with connection status passed into it.
    *
@@ -9088,31 +8640,28 @@ var withConnectionStatus = function withConnectionStatus(WrappedComponent) {
    * @param {Function} props.statusCallback -- Callback to pull connection status from the component.
    * @returns {React.Component} The higher order component.
    */
-  return function (props) {
-    var apiRoot = props.apiRoot,
-        apiNonce = props.apiNonce,
-        statusCallback = props.statusCallback;
-    var connectionStatus = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(function (select) {
-      return select(_state_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getConnectionStatus();
-    }, []);
-
-    var _useDispatch = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useDispatch)(_state_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID),
-        setConnectionStatus = _useDispatch.setConnectionStatus,
-        setConnectionStatusIsFetching = _useDispatch.setConnectionStatusIsFetching;
-
-    var connectionStatusIsFetching = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(function (select) {
-      return select(_state_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getConnectionStatusIsFetching();
-    }, []);
-    var hasConnectionStatus = connectionStatus.hasOwnProperty('isActive');
-    var onSuccess = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function (response) {
+  return props => {
+    const {
+      apiRoot,
+      apiNonce,
+      statusCallback
+    } = props;
+    const connectionStatus = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getConnectionStatus(), []);
+    const {
+      setConnectionStatus,
+      setConnectionStatusIsFetching
+    } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useDispatch)(_state_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID);
+    const connectionStatusIsFetching = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getConnectionStatusIsFetching(), []);
+    const hasConnectionStatus = connectionStatus.hasOwnProperty('isActive');
+    const onSuccess = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(response => {
       setConnectionStatus(response);
       setConnectionStatusIsFetching(false);
     }, [setConnectionStatus, setConnectionStatusIsFetching]);
-    var onError = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function (error) {
+    const onError = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(error => {
       setConnectionStatusIsFetching(false);
       throw error;
     }, [setConnectionStatusIsFetching]);
-    var statusCallbackWrapped = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function () {
+    const statusCallbackWrapped = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(() => {
       if (statusCallback && {}.toString.call(statusCallback) === '[object Function]') {
         return statusCallback(connectionStatus);
       }
@@ -9148,19 +8697,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SET_CONNECTION_STATUS_IS_FETCHING": () => (/* binding */ SET_CONNECTION_STATUS_IS_FETCHING),
 /* harmony export */   "default": () => (/* binding */ connectionStatusActions)
 /* harmony export */ });
-var SET_CONNECTION_STATUS = 'SET_CONNECTION_STATUS';
-var SET_CONNECTION_STATUS_IS_FETCHING = 'SET_CONNECTION_STATUS_IS_FETCHING';
-var connectionStatusActions = {
-  setConnectionStatus: function setConnectionStatus(connectionStatus) {
+const SET_CONNECTION_STATUS = 'SET_CONNECTION_STATUS';
+const SET_CONNECTION_STATUS_IS_FETCHING = 'SET_CONNECTION_STATUS_IS_FETCHING';
+const connectionStatusActions = {
+  setConnectionStatus: connectionStatus => {
     return {
       type: SET_CONNECTION_STATUS,
-      connectionStatus: connectionStatus
+      connectionStatus
     };
   },
-  setConnectionStatusIsFetching: function setConnectionStatusIsFetching(isFetching) {
+  setConnectionStatusIsFetching: isFetching => {
     return {
       type: SET_CONNECTION_STATUS_IS_FETCHING,
-      isFetching: isFetching
+      isFetching
     };
   }
 };
@@ -9180,34 +8729,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "connectionStatus": () => (/* binding */ connectionStatus),
 /* harmony export */   "connectionStatusIsFetching": () => (/* binding */ connectionStatusIsFetching)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2 */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions */ "../../js-packages/connection/components/with-connection-status/state/actions.jsx");
-
-
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions */ "../../js-packages/connection/components/with-connection-status/state/actions.jsx");
 /**
  * Internal dependencies
  */
 
 
-var connectionStatus = function connectionStatus() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
+const connectionStatus = (state = {}, action) => {
   switch (action.type) {
-    case _actions__WEBPACK_IMPORTED_MODULE_1__.SET_CONNECTION_STATUS:
-      return _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, state), action.connectionStatus);
+    case _actions__WEBPACK_IMPORTED_MODULE_0__.SET_CONNECTION_STATUS:
+      return { ...state,
+        ...action.connectionStatus
+      };
   }
 
   return state;
 };
 
-var connectionStatusIsFetching = function connectionStatusIsFetching() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
+const connectionStatusIsFetching = (state = false, action) => {
   switch (action.type) {
-    case _actions__WEBPACK_IMPORTED_MODULE_1__.SET_CONNECTION_STATUS_IS_FETCHING:
+    case _actions__WEBPACK_IMPORTED_MODULE_0__.SET_CONNECTION_STATUS_IS_FETCHING:
       return action.isFetching;
   }
 
@@ -9229,13 +8770,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var connectionSelectors = {
-  getConnectionStatus: function getConnectionStatus(state) {
-    return state.connectionStatus || {};
-  },
-  getConnectionStatusIsFetching: function getConnectionStatusIsFetching(state) {
-    return state.connectionStatusIsFetching || false;
-  }
+const connectionSelectors = {
+  getConnectionStatus: state => state.connectionStatus || {},
+  getConnectionStatusIsFetching: state => state.connectionStatusIsFetching || false
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (connectionSelectors);
 
@@ -9252,18 +8789,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2 */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_with_connection_status_state_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/with-connection-status/state/actions */ "../../js-packages/connection/components/with-connection-status/state/actions.jsx");
-
-
+/* harmony import */ var _components_with_connection_status_state_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/with-connection-status/state/actions */ "../../js-packages/connection/components/with-connection-status/state/actions.jsx");
 /**
  * Internal dependencies
  */
 
-
-var actions = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, _components_with_connection_status_state_actions__WEBPACK_IMPORTED_MODULE_1__.default);
-
+const actions = { ..._components_with_connection_status_state_actions__WEBPACK_IMPORTED_MODULE_0__.default
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (actions);
 
 /***/ }),
@@ -9291,7 +8823,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var reducers = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
+const reducers = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
   connectionStatus: _components_with_connection_status_state_reducers__WEBPACK_IMPORTED_MODULE_1__.connectionStatus,
   connectionStatusIsFetching: _components_with_connection_status_state_reducers__WEBPACK_IMPORTED_MODULE_1__.connectionStatusIsFetching
 });
@@ -9310,18 +8842,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2 */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_with_connection_status_state_selectors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/with-connection-status/state/selectors */ "../../js-packages/connection/components/with-connection-status/state/selectors.jsx");
-
-
+/* harmony import */ var _components_with_connection_status_state_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/with-connection-status/state/selectors */ "../../js-packages/connection/components/with-connection-status/state/selectors.jsx");
 /**
  * Internal dependencies
  */
 
-
-var selectors = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, _components_with_connection_status_state_selectors__WEBPACK_IMPORTED_MODULE_1__.default);
-
+const selectors = { ..._components_with_connection_status_state_selectors__WEBPACK_IMPORTED_MODULE_0__.default
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (selectors);
 
 /***/ }),
@@ -9337,16 +8864,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/classCallCheck */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createClass */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
-
-
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
 
 
 /**
@@ -9354,25 +8875,17 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var storeHolder = /*#__PURE__*/function () {
-  function storeHolder() {
-    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, storeHolder);
+class storeHolder {
+  static mayBeInit(storeId, storeConfig) {
+    if (null === storeHolder.store) {
+      storeHolder.store = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.createReduxStore)(storeId, storeConfig);
+      (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.register)(storeHolder.store);
+    }
   }
 
-  _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(storeHolder, null, [{
-    key: "mayBeInit",
-    value: function mayBeInit(storeId, storeConfig) {
-      if (null === storeHolder.store) {
-        storeHolder.store = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.createReduxStore)(storeId, storeConfig);
-        (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.register)(storeHolder.store);
-      }
-    }
-  }]);
+}
 
-  return storeHolder;
-}();
-
-_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(storeHolder, "store", null);
+_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(storeHolder, "store", null);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (storeHolder);
 
@@ -9400,7 +8913,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var STORE_ID = 'jetpack-connection';
+const STORE_ID = 'jetpack-connection';
 _store_holder__WEBPACK_IMPORTED_MODULE_0__.default.mayBeInit(STORE_ID, {
   reducer: _reducers__WEBPACK_IMPORTED_MODULE_1__.default,
   actions: _actions__WEBPACK_IMPORTED_MODULE_2__.default,
@@ -9421,28 +8934,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
-/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
-/* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
+/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
+/* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
 /**
  * External dependencies
  */
@@ -9453,7 +8962,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
 
 
 /**
@@ -9474,19 +8983,18 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__.__;
  * @returns {React.Component} The `ConnectScreen` component.
  */
 
-var CardFresh = function CardFresh(props) {
-  var wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_9__.default)(props.wpcomHomeUrl);
-  var currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_9__.default)(props.currentUrl);
-  var redirectUri = props.redirectUri;
-  var isActionInProgress = props.isActionInProgress,
-      setIsActionInProgress = props.setIsActionInProgress;
+const CardFresh = props => {
+  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__.default)(props.wpcomHomeUrl);
+  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__.default)(props.currentUrl);
+  const redirectUri = props.redirectUri;
+  const {
+    isActionInProgress,
+    setIsActionInProgress
+  } = props;
 
-  var buttonLabel = __('Create a fresh connection', 'jetpack');
+  const buttonLabel = __('Create a fresh connection', 'jetpack');
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState2 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      isStartingFresh = _useState2[0],
-      setIsStartingFresh = _useState2[1];
+  const [isStartingFresh, setIsStartingFresh] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   /**
    * Initiate the migration.
    * Placeholder for now.
@@ -9494,59 +9002,58 @@ var CardFresh = function CardFresh(props) {
    * @todo Add the actual migration functionality.
    */
 
-
-  var doStartFresh = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function () {
+  const doStartFresh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
     if (!isActionInProgress) {
       setIsActionInProgress(true);
       setIsStartingFresh(true);
-      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_8__.default.startIDCFresh(redirectUri).then(function (connectUrl) {
+      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__.default.startIDCFresh(redirectUri).then(connectUrl => {
         window.location.href = connectUrl + '&from=idc-notice';
-      })["catch"](function (error) {
+      }).catch(error => {
         setIsActionInProgress(false);
         setIsStartingFresh(false);
         throw error;
       });
     }
   }, [setIsStartingFresh, isActionInProgress, setIsActionInProgress, redirectUri]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-action-base"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-action-top"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h4", null, __('Treat each site as independent sites', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_6__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__.sprintf)(
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, __('Treat each site as independent sites', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.sprintf)(
   /* translators: %1$s: The current site domain name. %2$s: The original site domain name. */
   __('<hostname>%1$s</hostname> settings, stats, and subscribers will start fresh. <hostname>%2$s</hostname> will keep its data as is.', 'jetpack'), currentHostName, wpcomHostName), {
-    hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("strong", null)
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-action-bottom"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-action-sitename"
-  }, wpcomHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Dashicon, {
+  }, wpcomHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Dashicon, {
     icon: "minus",
     className: "jp-idc-card-action-separator"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-action-sitename"
-  }, currentHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
+  }, currentHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     className: "jp-idc-card-action-button",
     label: buttonLabel,
     onClick: doStartFresh,
     disabled: isActionInProgress
-  }, isStartingFresh ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_10__.default, null) : buttonLabel)));
+  }, isStartingFresh ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__.default, null) : buttonLabel)));
 };
 
 CardFresh.propTypes = {
-  wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  isActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  setIsActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func.isRequired)
+  wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  isActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
+  setIsActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_4__.compose)([(0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.withSelect)(function (select) {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__.compose)([(0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.withSelect)(select => {
   return {
-    isActionInProgress: select(_state_store__WEBPACK_IMPORTED_MODULE_11__.STORE_ID).getIsActionInProgress()
+    isActionInProgress: select(_state_store__WEBPACK_IMPORTED_MODULE_10__.STORE_ID).getIsActionInProgress()
   };
-}), (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.withDispatch)(function (dispatch) {
+}), (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.withDispatch)(dispatch => {
   return {
-    setIsActionInProgress: dispatch(_state_store__WEBPACK_IMPORTED_MODULE_11__.STORE_ID).setIsActionInProgress
+    setIsActionInProgress: dispatch(_state_store__WEBPACK_IMPORTED_MODULE_10__.STORE_ID).setIsActionInProgress
   };
 })])(CardFresh));
 
@@ -9563,28 +9070,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
-/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
-/* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
+/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
+/* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
 /**
  * External dependencies
  */
@@ -9595,7 +9098,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
 
 
 /**
@@ -9616,19 +9119,20 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__.__;
  * @returns {React.Component} The `ConnectScreen` component.
  */
 
-var CardMigrate = function CardMigrate(props) {
-  var wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_9__.default)(props.wpcomHomeUrl);
-  var currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_9__.default)(props.currentUrl);
-  var isActionInProgress = props.isActionInProgress,
-      setIsActionInProgress = props.setIsActionInProgress;
-  var onMigrated = props.onMigrated;
+const CardMigrate = props => {
+  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__.default)(props.wpcomHomeUrl);
+  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__.default)(props.currentUrl);
+  const {
+    isActionInProgress,
+    setIsActionInProgress
+  } = props;
+  const {
+    onMigrated
+  } = props;
 
-  var buttonLabel = __('Move your settings', 'jetpack');
+  const buttonLabel = __('Move your settings', 'jetpack');
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState2 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      isMigrating = _useState2[0],
-      setIsMigrating = _useState2[1];
+  const [isMigrating, setIsMigrating] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   /**
    * Initiate the migration.
    * Placeholder for now.
@@ -9636,63 +9140,62 @@ var CardMigrate = function CardMigrate(props) {
    * @todo Add the actual migration functionality.
    */
 
-
-  var doMigrate = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function () {
+  const doMigrate = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
     if (!isActionInProgress) {
       setIsActionInProgress(true);
       setIsMigrating(true);
-      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_8__.default.migrateIDC().then(function () {
+      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__.default.migrateIDC().then(() => {
         setIsMigrating(false);
 
         if (onMigrated && {}.toString.call(onMigrated) === '[object Function]') {
           onMigrated();
         }
-      })["catch"](function (error) {
+      }).catch(error => {
         setIsActionInProgress(false);
         setIsMigrating(false);
         throw error;
       });
     }
   }, [setIsMigrating, onMigrated, isActionInProgress, setIsActionInProgress]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-action-base"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-action-top"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h4", null, __('Move Jetpack data', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_6__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__.sprintf)(
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, __('Move Jetpack data', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.sprintf)(
   /* translators: %1$s: The current site domain name. %2$s: The original site domain name. */
   __('Move all your settings, stats and subscribers to your other <hostname>%1$s</hostname>. <hostname>%2$s</hostname> will be disconnected from Jetpack.', 'jetpack'), currentHostName, wpcomHostName), {
-    hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("strong", null)
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-action-bottom"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-action-sitename"
-  }, wpcomHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Dashicon, {
+  }, wpcomHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Dashicon, {
     icon: "arrow-down-alt",
     className: "jp-idc-card-action-separator"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-action-sitename"
-  }, currentHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
+  }, currentHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     className: "jp-idc-card-action-button",
     label: buttonLabel,
     onClick: doMigrate,
     disabled: isActionInProgress
-  }, isMigrating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_10__.default, null) : buttonLabel)));
+  }, isMigrating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__.default, null) : buttonLabel)));
 };
 
 CardMigrate.propTypes = {
-  wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  onMigrated: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func),
-  isActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  setIsActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func.isRequired)
+  wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  onMigrated: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+  isActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
+  setIsActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_4__.compose)([(0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.withSelect)(function (select) {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__.compose)([(0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.withSelect)(select => {
   return {
-    isActionInProgress: select(_state_store__WEBPACK_IMPORTED_MODULE_11__.STORE_ID).getIsActionInProgress()
+    isActionInProgress: select(_state_store__WEBPACK_IMPORTED_MODULE_10__.STORE_ID).getIsActionInProgress()
   };
-}), (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.withDispatch)(function (dispatch) {
+}), (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.withDispatch)(dispatch => {
   return {
-    setIsActionInProgress: dispatch(_state_store__WEBPACK_IMPORTED_MODULE_11__.STORE_ID).setIsActionInProgress
+    setIsActionInProgress: dispatch(_state_store__WEBPACK_IMPORTED_MODULE_10__.STORE_ID).setIsActionInProgress
   };
 })])(CardMigrate));
 
@@ -9709,28 +9212,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
-/* harmony import */ var _screen_main__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./screen-main */ "../../js-packages/idc/components/idc-screen/screen-main.jsx");
-/* harmony import */ var _screen_migrated__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./screen-migrated */ "../../js-packages/idc/components/idc-screen/screen-migrated.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/idc/components/idc-screen/style.scss");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
+/* harmony import */ var _screen_main__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./screen-main */ "../../js-packages/idc/components/idc-screen/screen-main.jsx");
+/* harmony import */ var _screen_migrated__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./screen-migrated */ "../../js-packages/idc/components/idc-screen/screen-migrated.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/idc/components/idc-screen/style.scss");
 /**
  * External dependencies
  */
 
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 /**
@@ -9754,43 +9253,40 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
  * @returns {React.Component} The `ConnectScreen` component.
  */
 
-var IDCScreen = function IDCScreen(props) {
-  var logo = props.logo,
-      headerText = props.headerText,
-      wpcomHomeUrl = props.wpcomHomeUrl,
-      currentUrl = props.currentUrl,
-      apiNonce = props.apiNonce,
-      apiRoot = props.apiRoot,
-      redirectUri = props.redirectUri;
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState2 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      isMigrated = _useState2[0],
-      setIsMigrated = _useState2[1];
-
-  var onMigrated = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function () {
+const IDCScreen = props => {
+  const {
+    logo,
+    headerText,
+    wpcomHomeUrl,
+    currentUrl,
+    apiNonce,
+    apiRoot,
+    redirectUri
+  } = props;
+  const [isMigrated, setIsMigrated] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const onMigrated = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
     setIsMigrated(true);
   }, [setIsMigrated]);
   /**
    * Initialize the REST API.
    */
 
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiNonce(apiNonce);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-screen-base"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-header"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-logo"
-  }, logo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, logo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-logo-label"
-  }, headerText)), isMigrated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_screen_migrated__WEBPACK_IMPORTED_MODULE_6__.default, {
+  }, headerText)), isMigrated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_migrated__WEBPACK_IMPORTED_MODULE_5__.default, {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_screen_main__WEBPACK_IMPORTED_MODULE_7__.default, {
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_main__WEBPACK_IMPORTED_MODULE_6__.default, {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
     onMigrated: onMigrated,
@@ -9799,16 +9295,16 @@ var IDCScreen = function IDCScreen(props) {
 };
 
 IDCScreen.propTypes = {
-  logo: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object.isRequired),
-  headerText: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired)
+  logo: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object.isRequired),
+  headerText: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired)
 };
 IDCScreen.defaultProps = {
-  logo: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__.default, {
+  logo: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default, {
     height: 24
   }),
   headerText: __('Safe Mode', 'jetpack')
@@ -9847,7 +9343,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
 
 /**
  * Internal dependencies
@@ -9867,11 +9363,13 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
  * @returns {React.Component} The ScreenMain component.
  */
 
-var ScreenMain = function ScreenMain(props) {
-  var wpcomHomeUrl = props.wpcomHomeUrl,
-      currentUrl = props.currentUrl,
-      onMigrated = props.onMigrated,
-      redirectUri = props.redirectUri;
+const ScreenMain = props => {
+  const {
+    wpcomHomeUrl,
+    currentUrl,
+    onMigrated,
+    redirectUri
+  } = props;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, __('Safe Mode has been activated', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createInterpolateElement)(__('Your site is in Safe Mode because you have 2 Jetpack-powered sites that appear to be duplicates. ' + '2 sites that are telling Jetpack they’re the same site. <safeModeLink>Learn more about safe mode.</safeModeLink>', 'jetpack'), {
     safeModeLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
       href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__.default)('jetpack-support-safe-mode'),
@@ -9914,22 +9412,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
-/* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
+/* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
 /**
  * External dependencies
  */
@@ -9938,7 +9432,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__;
 
 /**
  * Internal dependencies
@@ -9954,53 +9448,49 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__;
  * @returns {React.Component} The ScreenMigrated component.
  */
 
-var ScreenMigrated = function ScreenMigrated(props) {
-  var wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__.default)(props.wpcomHomeUrl);
-  var currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__.default)(props.currentUrl);
+const ScreenMigrated = props => {
+  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__.default)(props.wpcomHomeUrl);
+  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__.default)(props.currentUrl);
 
-  var buttonLabel = __('Got it, thanks', 'jetpack');
+  const buttonLabel = __('Got it, thanks', 'jetpack');
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-      _useState2 = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      isHandlingOk = _useState2[0],
-      setIsHandlingOk = _useState2[1];
+  const [isHandlingOk, setIsHandlingOk] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   /**
    * Handle the "Got It" click after the migration has completed.
    */
 
-
-  var handleOkButton = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(function () {
+  const handleOkButton = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
     if (!isHandlingOk) {
       setIsHandlingOk(true);
       window.location.reload();
     }
   }, [isHandlingOk, setIsHandlingOk]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", null, __('Your Jetpack settings have migrated successfully', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.sprintf)(
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, __('Your Jetpack settings have migrated successfully', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.sprintf)(
   /* translators: %1$s: The current site domain name. */
   __('Safe Mode has been switched off for <hostname>%1$s</hostname> website and Jetpack is fully functional.', 'jetpack'), currentHostName), {
-    hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("strong", null)
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-migrated"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-migrated-hostname"
-  }, wpcomHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Dashicon, {
+  }, wpcomHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Dashicon, {
     icon: "arrow-down-alt",
     className: "jp-idc-card-migrated-separator"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Dashicon, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Dashicon, {
     icon: "arrow-right-alt",
     className: "jp-idc-card-migrated-separator-wide"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc-card-migrated-hostname"
-  }, currentHostName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
+  }, currentHostName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     className: "jp-idc-card-action-button jp-idc-card-action-button-migrated",
     onClick: handleOkButton,
     label: buttonLabel
-  }, isHandlingOk ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default, null) : buttonLabel));
+  }, isHandlingOk ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__.default, null) : buttonLabel));
 };
 
 ScreenMigrated.propTypes = {
-  wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired)
+  wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired)
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ScreenMigrated);
 
@@ -10044,7 +9534,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
 
 /**
  * Internal dependencies
@@ -10061,15 +9551,17 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
  * @returns {React.Component} The `ConnectScreen` component.
  */
 
-var SafeMode = function SafeMode(props) {
-  var isActionInProgress = props.isActionInProgress,
-      setIsActionInProgress = props.setIsActionInProgress;
-  var staySafe = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function () {
+const SafeMode = props => {
+  const {
+    isActionInProgress,
+    setIsActionInProgress
+  } = props;
+  const staySafe = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
     if (!isActionInProgress) {
       setIsActionInProgress(true);
-      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__.default.confirmIDCSafeMode().then(function () {
+      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__.default.confirmIDCSafeMode().then(() => {
         window.location.reload();
-      })["catch"](function (error) {
+      }).catch(error => {
         setIsActionInProgress(false);
         throw error;
       });
@@ -10091,11 +9583,11 @@ SafeMode.propTypes = {
   isActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
   setIsActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_2__.compose)([(0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.withSelect)(function (select) {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_2__.compose)([(0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.withSelect)(select => {
   return {
     isActionInProgress: select(_state_store__WEBPACK_IMPORTED_MODULE_9__.STORE_ID).getIsActionInProgress()
   };
-}), (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.withDispatch)(function (dispatch) {
+}), (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.withDispatch)(dispatch => {
   return {
     setIsActionInProgress: dispatch(_state_store__WEBPACK_IMPORTED_MODULE_9__.STORE_ID).setIsActionInProgress
   };
@@ -10115,12 +9607,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SET_IS_ACTION_IN_PROGRESS": () => (/* binding */ SET_IS_ACTION_IN_PROGRESS),
 /* harmony export */   "default": () => (/* binding */ actions)
 /* harmony export */ });
-var SET_IS_ACTION_IN_PROGRESS = 'SET_IS_ACTION_IN_PROGRESS';
-var actions = {
-  setIsActionInProgress: function setIsActionInProgress(isInProgress) {
+const SET_IS_ACTION_IN_PROGRESS = 'SET_IS_ACTION_IN_PROGRESS';
+const actions = {
+  setIsActionInProgress: isInProgress => {
     return {
       type: SET_IS_ACTION_IN_PROGRESS,
-      isInProgress: isInProgress
+      isInProgress
     };
   }
 };
@@ -10152,10 +9644,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var isActionInProgress = function isActionInProgress() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
+const isActionInProgress = (state = {}, action) => {
   switch (action.type) {
     case _actions__WEBPACK_IMPORTED_MODULE_1__.SET_IS_ACTION_IN_PROGRESS:
       return action.isInProgress;
@@ -10164,8 +9653,8 @@ var isActionInProgress = function isActionInProgress() {
   return state;
 };
 
-var reducers = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
-  isActionInProgress: isActionInProgress
+const reducers = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
+  isActionInProgress
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reducers);
 
@@ -10182,10 +9671,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var selectors = {
-  getIsActionInProgress: function getIsActionInProgress(state) {
-    return state.isActionInProgress | {};
-  }
+const selectors = {
+  getIsActionInProgress: state => state.isActionInProgress | {}
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (selectors);
 
@@ -10202,16 +9689,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/classCallCheck */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createClass */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
-
-
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
 
 
 /**
@@ -10219,25 +9700,17 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var storeHolder = /*#__PURE__*/function () {
-  function storeHolder() {
-    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, storeHolder);
+class storeHolder {
+  static mayBeInit(storeId, storeConfig) {
+    if (null === storeHolder.store) {
+      storeHolder.store = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.createReduxStore)(storeId, storeConfig);
+      (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.register)(storeHolder.store);
+    }
   }
 
-  _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(storeHolder, null, [{
-    key: "mayBeInit",
-    value: function mayBeInit(storeId, storeConfig) {
-      if (null === storeHolder.store) {
-        storeHolder.store = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.createReduxStore)(storeId, storeConfig);
-        (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.register)(storeHolder.store);
-      }
-    }
-  }]);
+}
 
-  return storeHolder;
-}();
-
-_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2___default()(storeHolder, "store", null);
+_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(storeHolder, "store", null);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (storeHolder);
 
@@ -10265,7 +9738,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var STORE_ID = 'jetpack-idc';
+const STORE_ID = 'jetpack-idc';
 _store_holder__WEBPACK_IMPORTED_MODULE_0__.default.mayBeInit(STORE_ID, {
   reducer: _reducers__WEBPACK_IMPORTED_MODULE_1__.default,
   actions: _actions__WEBPACK_IMPORTED_MODULE_2__.default,
@@ -10292,9 +9765,7 @@ __webpack_require__.r(__webpack_exports__);
  * @param {string} url - The URL to extract hostname from.
  * @returns {string} The hostname extracted from the URL.
  */
-var extractHostname = function extractHostname(url) {
-  return /^https?:\/\//.test(url) ? new URL(url).hostname : url.replace(/\/$/, '');
-};
+const extractHostname = url => /^https?:\/\//.test(url) ? new URL(url).hostname : url.replace(/\/$/, '');
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (extractHostname);
 
@@ -10312,12 +9783,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SET_CONNECTION_STATUS": () => (/* binding */ SET_CONNECTION_STATUS),
 /* harmony export */   "default": () => (/* binding */ connectionStatusActions)
 /* harmony export */ });
-var SET_CONNECTION_STATUS = 'SET_CONNECTION_STATUS';
-var connectionStatusActions = {
-  setConnectionStatus: function setConnectionStatus(connectionStatus) {
+const SET_CONNECTION_STATUS = 'SET_CONNECTION_STATUS';
+const connectionStatusActions = {
+  setConnectionStatus: connectionStatus => {
     return {
       type: SET_CONNECTION_STATUS,
-      connectionStatus: connectionStatus
+      connectionStatus
     };
   }
 };
@@ -10336,18 +9807,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2 */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./connection-status */ "./_inc/actions/connection-status.js");
-
-
+/* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./connection-status */ "./_inc/actions/connection-status.js");
 /**
  * Internal dependencies
  */
 
-
-var actions = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, _connection_status__WEBPACK_IMPORTED_MODULE_1__.default);
-
+const actions = { ..._connection_status__WEBPACK_IMPORTED_MODULE_0__.default
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (actions);
 
 /***/ }),
@@ -10382,7 +9848,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 /**
@@ -10392,7 +9858,7 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 
-var ConnectScreenWithConnectionStatus = (0,_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_6__.default)(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__.default);
+const ConnectScreenWithConnectionStatus = (0,_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_6__.default)(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__.default);
 /**
  * The Connection IU Admin App.
  *
@@ -10400,29 +9866,18 @@ var ConnectScreenWithConnectionStatus = (0,_automattic_jetpack_connection__WEBPA
  */
 
 function Admin() {
-  var APINonce = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(function (select) {
-    return select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getAPINonce();
-  }, []);
-  var APIRoot = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(function (select) {
-    return select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getAPIRoot();
-  }, []);
-  var registrationNonce = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(function (select) {
-    return select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getRegistrationNonce();
-  }, []);
-  var IDCData = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(function (select) {
-    return select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getIDCData();
-  }, []);
-  var connectionStatus = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(function (select) {
-    return select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getConnectionStatus();
-  }, []);
-
-  var _useDispatch = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID),
-      setConnectionStatus = _useDispatch.setConnectionStatus;
-
-  var statusCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (status) {
+  const APINonce = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getAPINonce(), []);
+  const APIRoot = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getAPIRoot(), []);
+  const registrationNonce = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getRegistrationNonce(), []);
+  const IDCData = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getIDCData(), []);
+  const connectionStatus = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getConnectionStatus(), []);
+  const {
+    setConnectionStatus
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID);
+  const statusCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(status => {
     setConnectionStatus(status);
   }, [setConnectionStatus]);
-  var onDisconnectedCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function () {
+  const onDisconnectedCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
     setConnectionStatus({
       isActive: false,
       isRegistered: false,
@@ -10489,7 +9944,7 @@ __webpack_require__.r(__webpack_exports__);
  * Internal dependencies
  */
 
-var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
 
 /**
  * The Connection UI header.
@@ -10497,7 +9952,7 @@ var __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
  * @returns {object} The header component.
  */
 
-var Header = function Header() {
+const Header = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jetpack-cui__header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, __('Connection Manager', 'jetpack')));
@@ -10518,8 +9973,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var API = function API() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+const API = (state = {}) => {
   return state;
 };
 
@@ -10538,8 +9992,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var assets = function assets() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+const assets = (state = {}) => {
   return state;
 };
 
@@ -10564,10 +10017,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var connectionStatus = function connectionStatus() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
+const connectionStatus = (state = {}, action) => {
   switch (action.type) {
     case _actions_connection_status__WEBPACK_IMPORTED_MODULE_0__.SET_CONNECTION_STATUS:
       return action.connectionStatus;
@@ -10591,8 +10041,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var IDC = function IDC() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+const IDC = (state = {}) => {
   return state;
 };
 
@@ -10629,7 +10078,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var reducer = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
+const reducer = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
   connectionStatus: _connection_status__WEBPACK_IMPORTED_MODULE_1__.default,
   API: _api__WEBPACK_IMPORTED_MODULE_2__.default,
   assets: _assets__WEBPACK_IMPORTED_MODULE_3__.default,
@@ -10650,16 +10099,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var APISelectors = {
-  getAPIRoot: function getAPIRoot(state) {
-    return state.API.WP_API_root || null;
-  },
-  getAPINonce: function getAPINonce(state) {
-    return state.API.WP_API_nonce || null;
-  },
-  getRegistrationNonce: function getRegistrationNonce(state) {
-    return state.API.registrationNonce || null;
-  }
+const APISelectors = {
+  getAPIRoot: state => state.API.WP_API_root || null,
+  getAPINonce: state => state.API.WP_API_nonce || null,
+  getRegistrationNonce: state => state.API.registrationNonce || null
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (APISelectors);
 
@@ -10676,10 +10119,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var assetsSelectors = {
-  getAssetBuildUrl: function getAssetBuildUrl(state) {
-    return state.assets.buildUrl || null;
-  }
+const assetsSelectors = {
+  getAssetBuildUrl: state => state.assets.buildUrl || null
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (assetsSelectors);
 
@@ -10696,10 +10137,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var connectionSelectors = {
-  getConnectionStatus: function getConnectionStatus(state) {
-    return state.connectionStatus || {};
-  }
+const connectionSelectors = {
+  getConnectionStatus: state => state.connectionStatus || {}
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (connectionSelectors);
 
@@ -10716,10 +10155,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var IDC = {
-  getIDCData: function getIDCData(state) {
-    return state.IDC || {};
-  }
+const IDC = {
+  getIDCData: state => state.IDC || {}
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IDC);
 
@@ -10736,14 +10173,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2 */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/objectSpread2.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./connection-status */ "./_inc/selectors/connection-status.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api */ "./_inc/selectors/api.js");
-/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets */ "./_inc/selectors/assets.js");
-/* harmony import */ var _idc__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./idc */ "./_inc/selectors/idc.js");
-
-
+/* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./connection-status */ "./_inc/selectors/connection-status.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api */ "./_inc/selectors/api.js");
+/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets */ "./_inc/selectors/assets.js");
+/* harmony import */ var _idc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./idc */ "./_inc/selectors/idc.js");
 /**
  * Internal dependencies
  */
@@ -10751,9 +10184,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-var selectors = _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0___default()({}, _connection_status__WEBPACK_IMPORTED_MODULE_1__.default), _api__WEBPACK_IMPORTED_MODULE_2__.default), _assets__WEBPACK_IMPORTED_MODULE_3__.default), _idc__WEBPACK_IMPORTED_MODULE_4__.default);
-
+const selectors = { ..._connection_status__WEBPACK_IMPORTED_MODULE_0__.default,
+  ..._api__WEBPACK_IMPORTED_MODULE_1__.default,
+  ..._assets__WEBPACK_IMPORTED_MODULE_2__.default,
+  ..._idc__WEBPACK_IMPORTED_MODULE_3__.default
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (selectors);
 
 /***/ }),
@@ -10779,484 +10214,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var STORE_ID = 'jetpack-connection-ui';
-var storeConfig = {
+const STORE_ID = 'jetpack-connection-ui';
+const storeConfig = {
   reducer: _reducers__WEBPACK_IMPORTED_MODULE_0__.default,
   actions: _actions__WEBPACK_IMPORTED_MODULE_1__.default,
   selectors: _selectors__WEBPACK_IMPORTED_MODULE_2__.default,
   initialState: window.CUI_INITIAL_STATE || {}
 };
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js":
-/*!*********************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js ***!
-  \*********************************************************************************/
-/***/ ((module, exports, __webpack_require__) => {
-
-/* eslint-env browser */
-
-/**
- * This is the web browser implementation of `debug()`.
- */
-exports.formatArgs = formatArgs;
-exports.save = save;
-exports.load = load;
-exports.useColors = useColors;
-exports.storage = localstorage();
-
-exports.destroy = function () {
-  var warned = false;
-  return function () {
-    if (!warned) {
-      warned = true;
-      console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
-    }
-  };
-}();
-/**
- * Colors.
- */
-
-
-exports.colors = ['#0000CC', '#0000FF', '#0033CC', '#0033FF', '#0066CC', '#0066FF', '#0099CC', '#0099FF', '#00CC00', '#00CC33', '#00CC66', '#00CC99', '#00CCCC', '#00CCFF', '#3300CC', '#3300FF', '#3333CC', '#3333FF', '#3366CC', '#3366FF', '#3399CC', '#3399FF', '#33CC00', '#33CC33', '#33CC66', '#33CC99', '#33CCCC', '#33CCFF', '#6600CC', '#6600FF', '#6633CC', '#6633FF', '#66CC00', '#66CC33', '#9900CC', '#9900FF', '#9933CC', '#9933FF', '#99CC00', '#99CC33', '#CC0000', '#CC0033', '#CC0066', '#CC0099', '#CC00CC', '#CC00FF', '#CC3300', '#CC3333', '#CC3366', '#CC3399', '#CC33CC', '#CC33FF', '#CC6600', '#CC6633', '#CC9900', '#CC9933', '#CCCC00', '#CCCC33', '#FF0000', '#FF0033', '#FF0066', '#FF0099', '#FF00CC', '#FF00FF', '#FF3300', '#FF3333', '#FF3366', '#FF3399', '#FF33CC', '#FF33FF', '#FF6600', '#FF6633', '#FF9900', '#FF9933', '#FFCC00', '#FFCC33'];
-/**
- * Currently only WebKit-based Web Inspectors, Firefox >= v31,
- * and the Firebug extension (any Firefox version) are known
- * to support "%c" CSS customizations.
- *
- * TODO: add a `localStorage` variable to explicitly enable/disable colors
- */
-// eslint-disable-next-line complexity
-
-function useColors() {
-  // NB: In an Electron preload script, document will be defined but not fully
-  // initialized. Since we know we're in Chrome, we'll just detect this case
-  // explicitly
-  if (typeof window !== 'undefined' && window.process && (window.process.type === 'renderer' || window.process.__nwjs)) {
-    return true;
-  } // Internet Explorer and Edge do not support colors.
-
-
-  if (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/)) {
-    return false;
-  } // Is webkit? http://stackoverflow.com/a/16459606/376773
-  // document is undefined in react-native: https://github.com/facebook/react-native/pull/1632
-
-
-  return typeof document !== 'undefined' && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || typeof window !== 'undefined' && window.console && (window.console.firebug || window.console.exception && window.console.table) || typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31 || typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
-}
-/**
- * Colorize log arguments if enabled.
- *
- * @api public
- */
-
-
-function formatArgs(args) {
-  args[0] = (this.useColors ? '%c' : '') + this.namespace + (this.useColors ? ' %c' : ' ') + args[0] + (this.useColors ? '%c ' : ' ') + '+' + module.exports.humanize(this.diff);
-
-  if (!this.useColors) {
-    return;
-  }
-
-  var c = 'color: ' + this.color;
-  args.splice(1, 0, c, 'color: inherit'); // The final "%c" is somewhat tricky, because there could be other
-  // arguments passed either before or after the %c, so we need to
-  // figure out the correct index to insert the CSS into
-
-  var index = 0;
-  var lastC = 0;
-  args[0].replace(/%[a-zA-Z%]/g, function (match) {
-    if (match === '%%') {
-      return;
-    }
-
-    index++;
-
-    if (match === '%c') {
-      // We only are interested in the *last* %c
-      // (the user may have provided their own)
-      lastC = index;
-    }
-  });
-  args.splice(lastC, 0, c);
-}
-/**
- * Invokes `console.debug()` when available.
- * No-op when `console.debug` is not a "function".
- * If `console.debug` is not available, falls back
- * to `console.log`.
- *
- * @api public
- */
-
-
-exports.log = console.debug || console.log || function () {};
-/**
- * Save `namespaces`.
- *
- * @param {String} namespaces
- * @api private
- */
-
-
-function save(namespaces) {
-  try {
-    if (namespaces) {
-      exports.storage.setItem('debug', namespaces);
-    } else {
-      exports.storage.removeItem('debug');
-    }
-  } catch (error) {// Swallow
-    // XXX (@Qix-) should we be logging these?
-  }
-}
-/**
- * Load `namespaces`.
- *
- * @return {String} returns the previously persisted debug modes
- * @api private
- */
-
-
-function load() {
-  var r;
-
-  try {
-    r = exports.storage.getItem('debug');
-  } catch (error) {// Swallow
-    // XXX (@Qix-) should we be logging these?
-  } // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
-
-
-  if (!r && typeof process !== 'undefined' && 'env' in process) {
-    r = process.env.DEBUG;
-  }
-
-  return r;
-}
-/**
- * Localstorage attempts to return the localstorage.
- *
- * This is necessary because safari throws
- * when a user disables cookies/localstorage
- * and you attempt to access it.
- *
- * @return {LocalStorage}
- * @api private
- */
-
-
-function localstorage() {
-  try {
-    // TVMLKit (Apple TV JS Runtime) does not have a window object, just localStorage in the global context
-    // The Browser also has localStorage in the global context.
-    return localStorage;
-  } catch (error) {// Swallow
-    // XXX (@Qix-) should we be logging these?
-  }
-}
-
-module.exports = __webpack_require__(/*! ./common */ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js")(exports);
-var formatters = module.exports.formatters;
-/**
- * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
- */
-
-formatters.j = function (v) {
-  try {
-    return JSON.stringify(v);
-  } catch (error) {
-    return '[UnexpectedJSONParseError]: ' + error.message;
-  }
-};
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js":
-/*!********************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js ***!
-  \********************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var _toConsumableArray = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/toConsumableArray */ "../../../node_modules/.pnpm/@babel+runtime@7.15.3/node_modules/@babel/runtime/helpers/toConsumableArray.js").default;
-
-/**
- * This is the common logic for both the Node.js and web browser
- * implementations of `debug()`.
- */
-function setup(env) {
-  createDebug.debug = createDebug;
-  createDebug["default"] = createDebug;
-  createDebug.coerce = coerce;
-  createDebug.disable = disable;
-  createDebug.enable = enable;
-  createDebug.enabled = enabled;
-  createDebug.humanize = __webpack_require__(/*! ms */ "../../../node_modules/.pnpm/ms@2.1.2/node_modules/ms/index.js");
-  createDebug.destroy = destroy;
-  Object.keys(env).forEach(function (key) {
-    createDebug[key] = env[key];
-  });
-  /**
-  * The currently active debug mode names, and names to skip.
-  */
-
-  createDebug.names = [];
-  createDebug.skips = [];
-  /**
-  * Map of special "%n" handling functions, for the debug "format" argument.
-  *
-  * Valid key names are a single, lower or upper-case letter, i.e. "n" and "N".
-  */
-
-  createDebug.formatters = {};
-  /**
-  * Selects a color for a debug namespace
-  * @param {String} namespace The namespace string for the for the debug instance to be colored
-  * @return {Number|String} An ANSI color code for the given namespace
-  * @api private
-  */
-
-  function selectColor(namespace) {
-    var hash = 0;
-
-    for (var i = 0; i < namespace.length; i++) {
-      hash = (hash << 5) - hash + namespace.charCodeAt(i);
-      hash |= 0; // Convert to 32bit integer
-    }
-
-    return createDebug.colors[Math.abs(hash) % createDebug.colors.length];
-  }
-
-  createDebug.selectColor = selectColor;
-  /**
-  * Create a debugger with the given `namespace`.
-  *
-  * @param {String} namespace
-  * @return {Function}
-  * @api public
-  */
-
-  function createDebug(namespace) {
-    var prevTime;
-    var enableOverride = null;
-    var namespacesCache;
-    var enabledCache;
-
-    function debug() {
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      // Disabled?
-      if (!debug.enabled) {
-        return;
-      }
-
-      var self = debug; // Set `diff` timestamp
-
-      var curr = Number(new Date());
-      var ms = curr - (prevTime || curr);
-      self.diff = ms;
-      self.prev = prevTime;
-      self.curr = curr;
-      prevTime = curr;
-      args[0] = createDebug.coerce(args[0]);
-
-      if (typeof args[0] !== 'string') {
-        // Anything else let's inspect with %O
-        args.unshift('%O');
-      } // Apply any `formatters` transformations
-
-
-      var index = 0;
-      args[0] = args[0].replace(/%([a-zA-Z%])/g, function (match, format) {
-        // If we encounter an escaped % then don't increase the array index
-        if (match === '%%') {
-          return '%';
-        }
-
-        index++;
-        var formatter = createDebug.formatters[format];
-
-        if (typeof formatter === 'function') {
-          var val = args[index];
-          match = formatter.call(self, val); // Now we need to remove `args[index]` since it's inlined in the `format`
-
-          args.splice(index, 1);
-          index--;
-        }
-
-        return match;
-      }); // Apply env-specific formatting (colors, etc.)
-
-      createDebug.formatArgs.call(self, args);
-      var logFn = self.log || createDebug.log;
-      logFn.apply(self, args);
-    }
-
-    debug.namespace = namespace;
-    debug.useColors = createDebug.useColors();
-    debug.color = createDebug.selectColor(namespace);
-    debug.extend = extend;
-    debug.destroy = createDebug.destroy; // XXX Temporary. Will be removed in the next major release.
-
-    Object.defineProperty(debug, 'enabled', {
-      enumerable: true,
-      configurable: false,
-      get: function get() {
-        if (enableOverride !== null) {
-          return enableOverride;
-        }
-
-        if (namespacesCache !== createDebug.namespaces) {
-          namespacesCache = createDebug.namespaces;
-          enabledCache = createDebug.enabled(namespace);
-        }
-
-        return enabledCache;
-      },
-      set: function set(v) {
-        enableOverride = v;
-      }
-    }); // Env-specific initialization logic for debug instances
-
-    if (typeof createDebug.init === 'function') {
-      createDebug.init(debug);
-    }
-
-    return debug;
-  }
-
-  function extend(namespace, delimiter) {
-    var newDebug = createDebug(this.namespace + (typeof delimiter === 'undefined' ? ':' : delimiter) + namespace);
-    newDebug.log = this.log;
-    return newDebug;
-  }
-  /**
-  * Enables a debug mode by namespaces. This can include modes
-  * separated by a colon and wildcards.
-  *
-  * @param {String} namespaces
-  * @api public
-  */
-
-
-  function enable(namespaces) {
-    createDebug.save(namespaces);
-    createDebug.namespaces = namespaces;
-    createDebug.names = [];
-    createDebug.skips = [];
-    var i;
-    var split = (typeof namespaces === 'string' ? namespaces : '').split(/[\s,]+/);
-    var len = split.length;
-
-    for (i = 0; i < len; i++) {
-      if (!split[i]) {
-        // ignore empty strings
-        continue;
-      }
-
-      namespaces = split[i].replace(/\*/g, '.*?');
-
-      if (namespaces[0] === '-') {
-        createDebug.skips.push(new RegExp('^' + namespaces.substr(1) + '$'));
-      } else {
-        createDebug.names.push(new RegExp('^' + namespaces + '$'));
-      }
-    }
-  }
-  /**
-  * Disable debug output.
-  *
-  * @return {String} namespaces
-  * @api public
-  */
-
-
-  function disable() {
-    var namespaces = [].concat(_toConsumableArray(createDebug.names.map(toNamespace)), _toConsumableArray(createDebug.skips.map(toNamespace).map(function (namespace) {
-      return '-' + namespace;
-    }))).join(',');
-    createDebug.enable('');
-    return namespaces;
-  }
-  /**
-  * Returns true if the given mode name is enabled, false otherwise.
-  *
-  * @param {String} name
-  * @return {Boolean}
-  * @api public
-  */
-
-
-  function enabled(name) {
-    if (name[name.length - 1] === '*') {
-      return true;
-    }
-
-    var i;
-    var len;
-
-    for (i = 0, len = createDebug.skips.length; i < len; i++) {
-      if (createDebug.skips[i].test(name)) {
-        return false;
-      }
-    }
-
-    for (i = 0, len = createDebug.names.length; i < len; i++) {
-      if (createDebug.names[i].test(name)) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-  /**
-  * Convert regexp to namespace
-  *
-  * @param {RegExp} regxep
-  * @return {String} namespace
-  * @api private
-  */
-
-
-  function toNamespace(regexp) {
-    return regexp.toString().substring(2, regexp.toString().length - 2).replace(/\.\*\?$/, '*');
-  }
-  /**
-  * Coerce `val`.
-  *
-  * @param {Mixed} val
-  * @return {Mixed}
-  * @api private
-  */
-
-
-  function coerce(val) {
-    if (val instanceof Error) {
-      return val.stack || val.message;
-    }
-
-    return val;
-  }
-  /**
-  * XXX DO NOT USE. This is a temporary stub function.
-  * XXX It WILL be removed in the next major release.
-  */
-
-
-  function destroy() {
-    console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
-  }
-
-  createDebug.enable(createDebug.load());
-  return createDebug;
-}
-
-module.exports = setup;
 
 /***/ }),
 
@@ -11278,7 +10242,7 @@ module.exports = setup;
 
 
 
-if (undefined !== "production") {
+if (true) {
   (function() {
 'use strict';
 
@@ -11394,27 +10358,6 @@ exports.useSubscription = useSubscription;
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.production.min.js":
-/*!*********************************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.production.min.js ***!
-  \*********************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-/** @license React vundefined
- * use-subscription.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-var e=__webpack_require__(/*! object-assign */ "../../../node_modules/.pnpm/object-assign@4.1.1/node_modules/object-assign/index.js"),g=__webpack_require__(/*! react */ "react");
-exports.useSubscription=function(a){var c=a.getCurrentValue,d=a.subscribe,b=g.useState(function(){return{getCurrentValue:c,subscribe:d,value:c()}});a=b[0];var f=b[1];b=a.value;if(a.getCurrentValue!==c||a.subscribe!==d)b=c(),f({getCurrentValue:c,subscribe:d,value:b});g.useDebugValue(b);g.useEffect(function(){function b(){if(!a){var b=c();f(function(a){return a.getCurrentValue!==c||a.subscribe!==d||a.value===b?a:e({},a,{value:b})})}}var a=!1,h=d(b);b();return function(){a=!0;h()}},[c,d]);return b};
-
-
-/***/ }),
-
 /***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/index.js":
 /*!***************************************************************************************************************!*\
   !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/index.js ***!
@@ -11424,9 +10367,7 @@ exports.useSubscription=function(a){var c=a.getCurrentValue,d=a.subscribe,b=g.us
 "use strict";
 
 
-if (undefined === 'production') {
-  module.exports = __webpack_require__(/*! ./cjs/use-subscription.production.min.js */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.production.min.js");
-} else {
+if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/use-subscription.development.js */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.development.js");
 }
 
@@ -12188,14 +11129,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var store = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.createReduxStore)(_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID, _store__WEBPACK_IMPORTED_MODULE_4__.storeConfig);
+const store = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.createReduxStore)(_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID, _store__WEBPACK_IMPORTED_MODULE_4__.storeConfig);
 (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.register)(store);
 /**
  * The initial renderer function.
  */
 
 function render() {
-  var container = document.getElementById('jetpack-connection-ui-container');
+  const container = document.getElementById('jetpack-connection-ui-container');
 
   if (null === container) {
     return;
@@ -12207,9 +11148,6 @@ function render() {
 render();
 })();
 
-var __webpack_export_target__ = window;
-for(var i in __webpack_exports__) __webpack_export_target__[i] = __webpack_exports__[i];
-if(__webpack_exports__.__esModule) Object.defineProperty(__webpack_export_target__, "__esModule", { value: true });
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map
