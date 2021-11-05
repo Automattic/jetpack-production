@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - Updated package dependencies.
+- User Checksums - limit scope to users with wp_user_level > 0
 
 ### Fixed
 - Fix PHP 8.1 deprecation warnings.

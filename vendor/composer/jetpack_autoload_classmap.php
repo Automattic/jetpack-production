@@ -202,6 +202,10 @@ return array(
 		'version' => '1.27.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-sync/src/replicastore/class-table-checksum.php'
 	),
+	'Automattic\\Jetpack\\Sync\\Replicastore\\Table_Checksum_Users' => array(
+		'version' => '1.27.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-sync/src/replicastore/class-table-checksum-users.php'
+	),
 	'Automattic\\Jetpack\\Sync\\Package_Version' => array(
 		'version' => '1.27.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-sync/src/class-package-version.php'
