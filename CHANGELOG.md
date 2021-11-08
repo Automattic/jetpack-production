@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Unit Tests : Update Full Sync tests to align with limitation on users that are synced.
 
 ### Bug fixes
+- Pexels Integration: Fix search query bug
 - The "File Name" will now be set in the Media Library for VideoPress videos.
 - VideoPress Media Items now contain all video meta immediately after upload. A page refresh is no longer needed to view VideoPress specific fields.
 - VideoPress videos in the Media Library will now stop playing in the background when the Media Item modal is closed.
