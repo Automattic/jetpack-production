@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Migrate helper classes to Search package
 - Updated package dependencies
 - Updated package dependencies
+- Updated package dependencies
 - Update webpack build config.
 
 ## 10.4-a.1 - 2021-11-02
