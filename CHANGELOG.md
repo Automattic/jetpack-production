@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Nav Unification: Removes the `preferred-view` param from the URL after changing the preffered view. This fix only affects WP.com sites.
 - Nav Unification: Replaces the AJAX request for changing the preferred view with a direct server request to bypass security restrictions enforced by some browsers. This fix only affects WP.com sites.
 - P2: Hide Inbox admin menu link on all P2s.
+- Search: Migrate helper classes to Search package
 - Updated package dependencies
 - Updated package dependencies
 - Update webpack build config.

@@ -74,6 +74,22 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
+	'Automattic\\Jetpack\\Search\\Helper' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-helper.php'
+	),
+	'Automattic\\Jetpack\\Search\\Options' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-options.php'
+	),
+	'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-search/src/wpes/class-query-parser.php'
+	),
+	'Automattic\\Jetpack\\Search\\WPES\\Query_Builder' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-search/src/wpes/class-query-builder.php'
+	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '1.4.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
