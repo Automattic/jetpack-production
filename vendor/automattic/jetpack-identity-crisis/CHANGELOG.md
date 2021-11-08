@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a method to unambiguously determine whether the site is experiencing identity crisis.
 
 ### Changed
+- Updated package dependencies
 - Update webpack build config. Removes IE 11 support in the JavaScript.
 
 ## [0.3.1] - 2021-11-02
