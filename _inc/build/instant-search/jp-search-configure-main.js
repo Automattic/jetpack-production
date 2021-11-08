@@ -3809,9 +3809,11 @@ const __ = alias__;
  * @returns {Element} component instance
  */
 
-function Header({
-  enableSidebar
-}) {
+function Header(_ref) {
+  let {
+    enableSidebar
+  } = _ref;
+
   // translators: Product name 'Jetpack Search' should not be translated
   const title = __('Customize Jetpack Search', 'jetpack');
 
@@ -3885,7 +3887,10 @@ function Layout() {
 
   const disableSidebar = () => setSidebarName(null);
 
-  const enableSidebar = (name = _lib_constants__WEBPACK_IMPORTED_MODULE_6__/* .OPTIONS_TAB_IDENTIFIER */ .E) => setSidebarName(name);
+  const enableSidebar = function () {
+    let name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _lib_constants__WEBPACK_IMPORTED_MODULE_6__/* .OPTIONS_TAB_IDENTIFIER */ .E;
+    return setSidebarName(name);
+  };
 
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     (0,_lib_analytics__WEBPACK_IMPORTED_MODULE_4__/* .initialize */ .j2)();
@@ -4018,7 +4023,7 @@ function SaveButton() {
     saveRecords
   } = (0,_hooks_use_entity_record_state__WEBPACK_IMPORTED_MODULE_3__/* .default */ .Z)();
 
-  const onClick = (...args) => {
+  const onClick = function () {
     if (isSaving) {
       return;
     }
@@ -4028,7 +4033,7 @@ function SaveButton() {
       changedSettings: JSON.stringify(editedSettings),
       changedSettingNames: Object.keys(editedSettings).join(',')
     });
-    saveRecords(...args);
+    saveRecords(...arguments);
   };
 
   return /*#__PURE__*/React.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.Button, {
@@ -4092,11 +4097,12 @@ const DEFAULT_COLORS = [{
  * @returns {Element} component instance
  */
 
-function ColorControl({
-  disabled,
-  value,
-  onChange
-}) {
+function ColorControl(_ref) {
+  let {
+    disabled,
+    value,
+    onChange
+  } = _ref;
   const colors = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => {
     var _select$getSettings;
 
@@ -4158,12 +4164,13 @@ const VALID_POST_TYPES = window.JetpackInstantSearchOptions.postTypes;
  * @returns {Element} component instance
  */
 
-function ExcludedPostTypesControl({
-  disabled,
-  onChange,
-  validPostTypes = VALID_POST_TYPES,
-  value
-}) {
+function ExcludedPostTypesControl(_ref) {
+  let {
+    disabled,
+    onChange,
+    validPostTypes = VALID_POST_TYPES,
+    value
+  } = _ref;
   const validPostTypeNames = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => Object.keys(validPostTypes), [validPostTypes]);
   const selectedValues = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
     if (!value || !Array.isArray(value)) {
@@ -4529,10 +4536,11 @@ const __ = alias__;
  * @returns {Element} component instance
  */
 
-function Tabs({
-  enabledSidebarName,
-  enableSidebar
-}) {
+function Tabs(_ref) {
+  let {
+    enabledSidebarName,
+    enableSidebar
+  } = _ref;
   return /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Tab, {
     enableSidebar: enableSidebar,
     identifier: _lib_constants__WEBPACK_IMPORTED_MODULE_3__/* .JP_SEARCH_TAB_IDENTIFIER */ .m,
@@ -4556,12 +4564,13 @@ function Tabs({
  * @returns {Element} component instance
  */
 
-function Tab({
-  enableSidebar,
-  identifier,
-  label,
-  isActive
-}) {
+function Tab(_ref2) {
+  let {
+    enableSidebar,
+    identifier,
+    label,
+    isActive
+  } = _ref2;
   // translators: %s: sidebar label e.g: "Options".
   const ariaLabel = isActive ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.sprintf)(__('%s (selected)', 'jetpack'), label) : label;
   return /*#__PURE__*/React.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button // eslint-disable-next-line react/jsx-no-bind
@@ -4620,11 +4629,12 @@ const __ = alias__;
  * @returns {Element} component instance
  */
 
-function ThemeControl({
-  disabled,
-  value,
-  onChange
-}) {
+function ThemeControl(_ref) {
+  let {
+    disabled,
+    value,
+    onChange
+  } = _ref;
   return /*#__PURE__*/React.createElement("div", {
     className: "jp-search-configure-theme-buttons components-base-control"
   }, /*#__PURE__*/React.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
@@ -4668,9 +4678,10 @@ function ThemeControl({
  * @param {string} props.theme - 'dark' or 'light'.
  * @returns {Element} component instance
  */
-function ThemeIcon({
-  theme
-}) {
+function ThemeIcon(_ref) {
+  let {
+    theme
+  } = _ref;
   const fill = theme === 'dark' ? '#000' : '#fff';
   const stroke = theme === 'dark' ? '#4F5861' : '#DDE5EE';
   return /*#__PURE__*/React.createElement("svg", {
@@ -4862,9 +4873,27 @@ function useSearchOptions() {
 
 const eventPrefix = 'jetpack_search_customberg'; // Force enable analytics! Ignore isAnalyticsEnabled flag used by the Instant Search application.
 
-const initialize = (...args) => (0,_instant_search_lib_tracks__WEBPACK_IMPORTED_MODULE_0__/* .initializeTracks */ .tU)(...args, true);
-const identifySite = (...args) => (0,_instant_search_lib_tracks__WEBPACK_IMPORTED_MODULE_0__/* .identifySite */ .AM)(...args, true);
-const recordEvent = (...args) => (0,_instant_search_lib_tracks__WEBPACK_IMPORTED_MODULE_0__/* .recordEvent */ .Ny)(...args, true);
+const initialize = function () {
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return (0,_instant_search_lib_tracks__WEBPACK_IMPORTED_MODULE_0__/* .initializeTracks */ .tU)(...args, true);
+};
+const identifySite = function () {
+  for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    args[_key2] = arguments[_key2];
+  }
+
+  return (0,_instant_search_lib_tracks__WEBPACK_IMPORTED_MODULE_0__/* .identifySite */ .AM)(...args, true);
+};
+const recordEvent = function () {
+  for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+    args[_key3] = arguments[_key3];
+  }
+
+  return (0,_instant_search_lib_tracks__WEBPACK_IMPORTED_MODULE_0__/* .recordEvent */ .Ny)(...args, true);
+};
 
 /***/ }),
 
@@ -4906,8 +4935,8 @@ const OPTIONS_TAB_IDENTIFIER = 'jetpack-customize-search/options';
  // This component is used to bind WordPress Customizer events to the Jetpack Search application.
 
 class CustomizerEventHandler extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
-  constructor(...args) {
-    super(...args);
+  constructor() {
+    super(...arguments);
 
     _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "handleOverlayOptionsUpdate", newOverlayOptions => {
       this.props.updateOverlayOptions(newOverlayOptions, () => this.props.showResults());
@@ -5554,10 +5583,12 @@ const JetpackColophon = props => {
 
 
 
-const Notice = ({
-  type,
-  children
-}) => {
+const Notice = _ref => {
+  let {
+    type,
+    children
+  } = _ref;
+
   if (type !== 'warning') {
     return null;
   }
@@ -5655,11 +5686,12 @@ function splitDomainPath(path) {
   return splits;
 }
 
-const PathBreadcrumbs = ({
-  className,
-  onClick,
-  url
-}) => {
+const PathBreadcrumbs = _ref => {
+  let {
+    className,
+    onClick,
+    url
+  } = _ref;
   const breadcrumbPieces = splitDomainPath(url);
 
   if (breadcrumbPieces.length < 1) {
@@ -5786,11 +5818,13 @@ const POST_TYPE_TO_ICON_MAP = {
   events: 'calendar'
 };
 
-const PostTypeIcon = ({
-  postType,
-  shortcodeTypes,
-  iconSize = 18
-}) => {
+const PostTypeIcon = _ref => {
+  let {
+    postType,
+    shortcodeTypes,
+    iconSize = 18
+  } = _ref;
+
   // Do we have a special icon for this post type?
   if (Object.keys(POST_TYPE_TO_ICON_MAP).includes(postType)) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_gridicon__WEBPACK_IMPORTED_MODULE_1__/* .default */ .Z, {
@@ -5936,11 +5970,12 @@ const _n = alias_n;
  * @returns {object} Product rating component.
  */
 
-function ProductRatings({
-  rating = 0,
-  count = 0,
-  permalink
-}) {
+function ProductRatings(_ref) {
+  let {
+    rating = 0,
+    count = 0,
+    permalink
+  } = _ref;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "jetpack-instant-search__product-rating"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", {
@@ -6001,8 +6036,8 @@ const __ = alias__;
 
 
 class ScrollButton extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
-  constructor(...args) {
-    super(...args);
+  constructor() {
+    super(...arguments);
 
     _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "overlayElement", document.getElementsByClassName(_lib_constants__WEBPACK_IMPORTED_MODULE_4__/* .OVERLAY_CLASS_NAME */ .zg)[0]);
 
@@ -6091,7 +6126,10 @@ class ScrollButton extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
 
 class SearchApp extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
   constructor() {
+    var _this;
+
     super(...arguments);
+    _this = this;
 
     _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "getResultFormat", () => {
       // Override the result format from the query string if result_format= is specified
@@ -6170,23 +6208,25 @@ class SearchApp extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
       });
     });
 
-    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "getResults", ({
-      pageHandle
-    } = {}) => {
-      this.props.makeSearchRequest({
+    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "getResults", function () {
+      let {
+        pageHandle
+      } = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      _this.props.makeSearchRequest({
         // Skip aggregations when requesting for paged results
-        aggregations: pageHandle ? {} : this.props.aggregations,
-        excludedPostTypes: this.state.overlayOptions.excludedPostTypes,
-        filter: this.props.filters,
-        staticFilters: this.props.staticFilters,
+        aggregations: pageHandle ? {} : _this.props.aggregations,
+        excludedPostTypes: _this.state.overlayOptions.excludedPostTypes,
+        filter: _this.props.filters,
+        staticFilters: _this.props.staticFilters,
         pageHandle,
-        query: this.props.searchQuery,
-        resultFormat: this.getResultFormat(),
-        siteId: this.props.options.siteId,
-        sort: this.props.sort,
-        postsPerPage: this.props.options.postsPerPage,
-        adminQueryFilter: this.props.options.adminQueryFilter,
-        isInCustomizer: this.props.isInCustomizer
+        query: _this.props.searchQuery,
+        resultFormat: _this.getResultFormat(),
+        siteId: _this.props.options.siteId,
+        sort: _this.props.sort,
+        postsPerPage: _this.props.options.postsPerPage,
+        adminQueryFilter: _this.props.options.adminQueryFilter,
+        isInCustomizer: _this.props.isInCustomizer
       });
     });
 
@@ -6526,8 +6566,8 @@ const fixDateFormat = dateString => {
   return dateString.split(' ').join('T');
 };
 class SearchFilter extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
-  constructor(...args) {
-    super(...args);
+  constructor() {
+    super(...arguments);
 
     _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "filtersList", /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.createRef)());
 
@@ -6541,10 +6581,11 @@ class SearchFilter extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
       this.props.onChange(this.getIdentifier(), event.target.value);
     });
 
-    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "renderDate", ({
-      key_as_string: key,
-      doc_count: count
-    }) => {
+    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "renderDate", _ref => {
+      let {
+        key_as_string: key,
+        doc_count: count
+      } = _ref;
       const {
         locale = 'en-US'
       } = this.props;
@@ -6562,10 +6603,11 @@ class SearchFilter extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
       }, new Date(fixDateFormat(key)).toLocaleString(locale, getDateOptions(this.props.configuration.interval)), ' ', "(", count, ")"));
     });
 
-    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "renderPostType", ({
-      key,
-      doc_count: count
-    }) => {
+    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "renderPostType", _ref2 => {
+      let {
+        key,
+        doc_count: count
+      } = _ref2;
       const name = key in this.props.postTypes ? this.props.postTypes[key].singular_name : key;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("input", {
         checked: this.isChecked(key),
@@ -6581,10 +6623,11 @@ class SearchFilter extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
       }, strip__WEBPACK_IMPORTED_MODULE_2___default()(name), " (", count, ")"));
     });
 
-    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "renderTaxonomy", ({
-      key,
-      doc_count: count
-    }) => {
+    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "renderTaxonomy", _ref3 => {
+      let {
+        key,
+        doc_count: count
+      } = _ref3;
       // Taxonomy keys contain slug and name separated by a slash
       const [slug, name] = key && key.split(/\/(.+)/);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("input", {
@@ -6706,8 +6749,8 @@ const __ = alias__;
 
 
 class SearchFilters extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
-  constructor(...args) {
-    super(...args);
+  constructor() {
+    super(...arguments);
 
     _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "onChangeFilter", (filterName, filterValue) => {
       this.props.setFilter(filterName, filterValue);
@@ -6732,18 +6775,21 @@ class SearchFilters extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
       }
     });
 
-    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "renderFilterComponent", ({
-      configuration,
-      results
-    }) => results && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_search_filter__WEBPACK_IMPORTED_MODULE_4__/* .default */ .Z, {
-      aggregation: results,
-      configuration: configuration,
-      locale: this.props.locale,
-      onChange: this.onChangeFilter,
-      postTypes: this.props.postTypes,
-      type: (0,_lib_filters__WEBPACK_IMPORTED_MODULE_5__/* .mapFilterToType */ .jc)(configuration),
-      value: this.props.filters[(0,_lib_filters__WEBPACK_IMPORTED_MODULE_5__/* .mapFilterToFilterKey */ .jZ)(configuration)]
-    }));
+    _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "renderFilterComponent", _ref => {
+      let {
+        configuration,
+        results
+      } = _ref;
+      return results && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_search_filter__WEBPACK_IMPORTED_MODULE_4__/* .default */ .Z, {
+        aggregation: results,
+        configuration: configuration,
+        locale: this.props.locale,
+        onChange: this.onChangeFilter,
+        postTypes: this.props.postTypes,
+        type: (0,_lib_filters__WEBPACK_IMPORTED_MODULE_5__/* .mapFilterToType */ .jc)(configuration),
+        value: this.props.filters[(0,_lib_filters__WEBPACK_IMPORTED_MODULE_5__/* .mapFilterToFilterKey */ .jZ)(configuration)]
+      });
+    });
 
     _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "renderStaticFilterComponent", configuration => {
       if (configuration.hasOwnProperty('visible') && !configuration.visible) {
@@ -6789,9 +6835,12 @@ class SearchFilters extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
     }, __('Clear filters', 'jetpack')), ((_this$props$widget = this.props.widget) === null || _this$props$widget === void 0 ? void 0 : _this$props$widget.filters) && this.props.widget.filters.length > 0 && availableStaticFilters.map(this.renderStaticFilterComponent), (_this$props$widget2 = this.props.widget) === null || _this$props$widget2 === void 0 ? void 0 : (_this$props$widget2$f = _this$props$widget2.filters) === null || _this$props$widget2$f === void 0 ? void 0 : _this$props$widget2$f.map(configuration => aggregations ? {
       configuration,
       results: aggregations[configuration.filter_id]
-    } : null).filter(data => !!data).filter(({
-      results
-    }) => !!results && Array.isArray(results.buckets) && results.buckets.length > 0).map(this.renderFilterComponent));
+    } : null).filter(data => !!data).filter(_ref2 => {
+      let {
+        results
+      } = _ref2;
+      return !!results && Array.isArray(results.buckets) && results.buckets.length > 0;
+    }).map(this.renderFilterComponent));
   }
 
 }
@@ -6833,8 +6882,8 @@ _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_mo
 const noop = event => event.preventDefault();
 
 class SearchForm extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
-  constructor(...args) {
-    super(...args);
+  constructor() {
+    super(...arguments);
 
     _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "onClear", () => this.props.onChangeSearch(''));
 
@@ -6882,10 +6931,12 @@ class SearchForm extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
 
 
 
-const SearchResultComments = ({
-  comments,
-  iconSize = 18
-}) => {
+const SearchResultComments = _ref => {
+  let {
+    comments,
+    iconSize = 18
+  } = _ref;
+
   if (!comments) {
     return null;
   }
@@ -7299,8 +7350,8 @@ class SearchResultProduct extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
 
 
 class SearchResult extends react__WEBPACK_IMPORTED_MODULE_2__.Component {
-  constructor(...args) {
-    super(...args);
+  constructor() {
+    super(...arguments);
 
     _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1___default()(this, "onClick", () => {
       // Send out analytics call
@@ -7412,8 +7463,8 @@ const __ = alias__,
 
 
 class SearchResults extends react__WEBPACK_IMPORTED_MODULE_2__.Component {
-  constructor(...args) {
-    super(...args);
+  constructor() {
+    super(...arguments);
 
     _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "state", {
       shouldShowMobileSecondary: false
@@ -7649,8 +7700,8 @@ const __ = alias__;
 
 
 class SearchSort extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
-  constructor(...args) {
-    super(...args);
+  constructor() {
+    super(...arguments);
 
     _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "handleKeyPress", event => {
       if (this.props.value !== event.currentTarget.value && event.key === 'Enter') {
@@ -7686,26 +7737,32 @@ class SearchSort extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
         id: "jetpack-instant-search__search-sort-select",
         onBlur: this.handleSelectChange,
         onChange: this.handleSelectChange
-      }, [...sortOptions.entries()].map(([sortKey, label]) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("option", {
-        value: sortKey,
-        key: sortKey,
-        selected: this.props.value === sortKey ? 'selected' : ''
-      }, label))));
+      }, [...sortOptions.entries()].map(_ref => {
+        let [sortKey, label] = _ref;
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("option", {
+          value: sortKey,
+          key: sortKey,
+          selected: this.props.value === sortKey ? 'selected' : ''
+        }, label);
+      })));
     }
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
       className: "jetpack-instant-search__search-sort jetpack-instant-search__search-sort-with-links"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
       className: "screen-reader-text"
-    }, __('Sort by: ', 'jetpack')), [...sortOptions.entries()].map(([sortKey, label]) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", {
-      className: `jetpack-instant-search__search-sort-option ${this.props.value === sortKey ? 'is-selected' : ''}`,
-      "data-value": sortKey,
-      key: sortKey,
-      onClick: this.handleClick,
-      onKeyPress: this.handleKeyPress,
-      role: "button",
-      tabIndex: 0
-    }, label)));
+    }, __('Sort by: ', 'jetpack')), [...sortOptions.entries()].map(_ref2 => {
+      let [sortKey, label] = _ref2;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", {
+        className: `jetpack-instant-search__search-sort-option ${this.props.value === sortKey ? 'is-selected' : ''}`,
+        "data-value": sortKey,
+        key: sortKey,
+        onClick: this.handleClick,
+        onKeyPress: this.handleKeyPress,
+        role: "button",
+        tabIndex: 0
+      }, label);
+    }));
   }
 
 }
@@ -7802,8 +7859,8 @@ const Sidebar = props => {
 //
 
 class WidgetAreaContainer extends react__WEBPACK_IMPORTED_MODULE_1__.Component {
-  constructor(...args) {
-    super(...args);
+  constructor() {
+    super(...arguments);
 
     _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_15_3_node_modules_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, "container", /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.createRef)());
   }
@@ -7928,13 +7985,17 @@ resetAbortController();
  * @returns {object} filter aggregations
  */
 
-function buildFilterAggregations(widgets = []) {
+function buildFilterAggregations() {
+  let widgets = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   const aggregation = {};
-  widgets.forEach(({
-    filters: widgetFilters
-  }) => widgetFilters.forEach(filter => {
-    aggregation[filter.filter_id] = generateAggregation(filter);
-  }));
+  widgets.forEach(_ref => {
+    let {
+      filters: widgetFilters
+    } = _ref;
+    return widgetFilters.forEach(filter => {
+      aggregation[filter.filter_id] = generateAggregation(filter);
+    });
+  });
   return aggregation;
 }
 /**
@@ -7949,11 +8010,13 @@ function setDocumentCountsToZero(newAggregations) {
   var _newAggregations;
 
   newAggregations = (_newAggregations = newAggregations) !== null && _newAggregations !== void 0 ? _newAggregations : {};
-  return Object.fromEntries(Object.entries(newAggregations).filter(([, aggregation]) => {
+  return Object.fromEntries(Object.entries(newAggregations).filter(_ref2 => {
     var _aggregation$buckets;
 
+    let [, aggregation] = _ref2;
     return (aggregation === null || aggregation === void 0 ? void 0 : (_aggregation$buckets = aggregation.buckets) === null || _aggregation$buckets === void 0 ? void 0 : _aggregation$buckets.length) > 0;
-  }).map(([aggregationKey, aggregation]) => {
+  }).map(_ref3 => {
+    let [aggregationKey, aggregation] = _ref3;
     const buckets = aggregation.buckets.map(bucket => ({ ...bucket,
       doc_count: 0
     }));
@@ -8165,19 +8228,21 @@ function mapSortToApiValue(sort) {
  */
 
 
-function generateApiQueryString({
-  aggregations,
-  excludedPostTypes,
-  filter,
-  staticFilters,
-  pageHandle,
-  query,
-  resultFormat,
-  sort,
-  postsPerPage = 10,
-  adminQueryFilter,
-  isInCustomizer = false
-}) {
+function generateApiQueryString(_ref4) {
+  let {
+    aggregations,
+    excludedPostTypes,
+    filter,
+    staticFilters,
+    pageHandle,
+    query,
+    resultFormat,
+    sort,
+    postsPerPage = 10,
+    adminQueryFilter,
+    isInCustomizer = false
+  } = _ref4;
+
   if (query === null) {
     query = '';
   }
@@ -8604,15 +8669,11 @@ const FILTER_KEYS = Object.freeze([// Post types
  * @returns {string[]} filterKeys
  */
 
-function getFilterKeys(widgets = (() => {
-  var _window$SERVER_OBJECT;
+function getFilterKeys() {
+  var _window$SERVER_OBJECT, _window$SERVER_OBJECT2;
 
-  return (_window$SERVER_OBJECT = window[_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1]) === null || _window$SERVER_OBJECT === void 0 ? void 0 : _window$SERVER_OBJECT.widgets;
-})(), widgetsOutsideOverlay = (() => {
-  var _window$SERVER_OBJECT2;
-
-  return (_window$SERVER_OBJECT2 = window[_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1]) === null || _window$SERVER_OBJECT2 === void 0 ? void 0 : _window$SERVER_OBJECT2.widgetsOutsideOverlay;
-})()) {
+  let widgets = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (_window$SERVER_OBJECT = window[_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1]) === null || _window$SERVER_OBJECT === void 0 ? void 0 : _window$SERVER_OBJECT.widgets;
+  let widgetsOutsideOverlay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (_window$SERVER_OBJECT2 = window[_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1]) === null || _window$SERVER_OBJECT2 === void 0 ? void 0 : _window$SERVER_OBJECT2.widgetsOutsideOverlay;
   // Extract taxonomy names from server widget data
   const keys = new Set(FILTER_KEYS);
   [...(widgets !== null && widgets !== void 0 ? widgets : []), ...(widgetsOutsideOverlay !== null && widgetsOutsideOverlay !== void 0 ? widgetsOutsideOverlay : [])].map(w => w.filters).filter(filters => Array.isArray(filters)).reduce((filtersA, filtersB) => filtersA.concat(filtersB), []).filter(filter => filter.type === 'taxonomy').forEach(filter => keys.add(filter.taxonomy));
@@ -8652,13 +8713,10 @@ function getStaticFilterKeys() {
  * @returns {string[]} filterKeys
  */
 
-function getSelectableFilterKeys(widgets = (() => {
-  var _window$SERVER_OBJECT4;
+function getSelectableFilterKeys() {
+  var _window$SERVER_OBJECT4, _widgets$map$reduce;
 
-  return (_window$SERVER_OBJECT4 = window[_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1]) === null || _window$SERVER_OBJECT4 === void 0 ? void 0 : _window$SERVER_OBJECT4.widgets;
-})()) {
-  var _widgets$map$reduce;
-
+  let widgets = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (_window$SERVER_OBJECT4 = window[_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1]) === null || _window$SERVER_OBJECT4 === void 0 ? void 0 : _window$SERVER_OBJECT4.widgets;
   return (_widgets$map$reduce = widgets === null || widgets === void 0 ? void 0 : widgets.map(extractFilterKeys).reduce((prev, current) => prev.concat(current), [])) !== null && _widgets$map$reduce !== void 0 ? _widgets$map$reduce : [];
 }
 /**
@@ -8669,11 +8727,10 @@ function getSelectableFilterKeys(widgets = (() => {
  * @returns {string[]} filterKeys
  */
 
-function getUnselectableFilterKeys(widgets = (() => {
+function getUnselectableFilterKeys() {
   var _window$SERVER_OBJECT5;
 
-  return (_window$SERVER_OBJECT5 = window[_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1]) === null || _window$SERVER_OBJECT5 === void 0 ? void 0 : _window$SERVER_OBJECT5.widgets;
-})()) {
+  let widgets = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (_window$SERVER_OBJECT5 = window[_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1]) === null || _window$SERVER_OBJECT5 === void 0 ? void 0 : _window$SERVER_OBJECT5.widgets;
   const selectable = getSelectableFilterKeys(widgets);
   return getFilterKeys().filter(key => !selectable.includes(key));
 }
@@ -8805,7 +8862,8 @@ function stripQueryString(url) {
  */
 
 
-function usePhoton(initialSrc, width, height, isPhotonEnabled = true) {
+function usePhoton(initialSrc, width, height) {
+  let isPhotonEnabled = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
   const [src, setSrc] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
   const initialSrcWithoutQueryString = stripQueryString(initialSrc); // Photon only supports GIF, JPG, PNG and WebP images
   // @see https://developer.wordpress.com/docs/photon/
@@ -8865,7 +8923,8 @@ function usePhoton(initialSrc, width, height, isPhotonEnabled = true) {
  * @returns {object} queryObject - a query object.
  */
 
-function getQuery(search = window.location.search) {
+function getQuery() {
+  let search = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window.location.search;
   return (0,_external_query_string_decode__WEBPACK_IMPORTED_MODULE_3__/* .decode */ .J)(search.substring(1), false, false);
 }
 /**
@@ -8925,7 +8984,9 @@ function getResultFormatQuery() {
  * @param {boolean} replaceState - Flag to toggle replaceState or pushState invocation. Useful if this function's being invoked due to history navigation.
  */
 
-function restorePreviousHref(initialHref, callback, replaceState = false) {
+function restorePreviousHref(initialHref, callback) {
+  let replaceState = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
   if (history.pushState && history.replaceState) {
     const url = new URL(initialHref);
     const queryObject = getQuery(url.search);
@@ -8973,7 +9034,9 @@ function restorePreviousHref(initialHref, callback, replaceState = false) {
  * @returns {Map} - Sort options
  */
 
-function getSortOptions(resultFormat = null) {
+function getSortOptions() {
+  let resultFormat = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
   if (resultFormat !== _constants__WEBPACK_IMPORTED_MODULE_0__/* .RESULT_FORMAT_PRODUCT */ .LI) {
     return _constants__WEBPACK_IMPORTED_MODULE_0__/* .SORT_OPTIONS */ .aP;
   } // For product results, add additional product sort options
@@ -9013,7 +9076,9 @@ function disableAnalytics() {
  * @param {boolean} forceEnableAnalytics - Forcibly enable analytics, ignoring the isAnalyticsEnabled flag.
  */
 
-function initializeTracks(forceEnableAnalytics = false) {
+function initializeTracks() {
+  let forceEnableAnalytics = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
   if (forceEnableAnalytics || isAnalyticsEnabled) {
     window._tkq = window._tkq || [];
   }
@@ -9024,7 +9089,8 @@ function initializeTracks(forceEnableAnalytics = false) {
  * @param {boolean} forceEnableAnalytics - Forcibly enable analytics, ignoring the isAnalyticsEnabled flag.
  */
 
-function resetTrackingCookies(forceEnableAnalytics = false) {
+function resetTrackingCookies() {
+  let forceEnableAnalytics = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
   (forceEnableAnalytics || isAnalyticsEnabled) && window._tkq.push(['clearIdentity']);
 }
 /**
@@ -9034,7 +9100,9 @@ function resetTrackingCookies(forceEnableAnalytics = false) {
  * @param {boolean} forceEnableAnalytics - Forcibly enable analytics, ignoring the isAnalyticsEnabled flag.
  */
 
-function identifySite(siteId, forceEnableAnalytics = false) {
+function identifySite(siteId) {
+  let forceEnableAnalytics = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
   if (forceEnableAnalytics || isAnalyticsEnabled) {
     globalProperties.blog_id = siteId;
   }
@@ -9047,7 +9115,8 @@ function identifySite(siteId, forceEnableAnalytics = false) {
  * @param {boolean} forceEnableAnalytics - Forcibly enable analytics, ignoring the isAnalyticsEnabled flag.
  */
 
-function recordEvent(eventName, properties, forceEnableAnalytics = false) {
+function recordEvent(eventName, properties) {
+  let forceEnableAnalytics = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
   (forceEnableAnalytics || isAnalyticsEnabled) && window._tkq.push(['recordEvent', eventName, { ...globalProperties,
     ...properties
   }]);
@@ -9059,7 +9128,8 @@ function recordEvent(eventName, properties, forceEnableAnalytics = false) {
  * @param {boolean} forceEnableAnalytics - Forcibly enable analytics, ignoring the isAnalyticsEnabled flag.
  */
 
-function recordTrainTracksRender(properties, forceEnableAnalytics = false) {
+function recordTrainTracksRender(properties) {
+  let forceEnableAnalytics = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
   recordEvent('jetpack_instant_search_traintracks_render', properties, forceEnableAnalytics);
 }
 /**
@@ -9069,7 +9139,8 @@ function recordTrainTracksRender(properties, forceEnableAnalytics = false) {
  * @param {boolean} forceEnableAnalytics - Forcibly enable analytics, ignoring the isAnalyticsEnabled flag.
  */
 
-function recordTrainTracksInteract(properties, forceEnableAnalytics = false) {
+function recordTrainTracksInteract(properties) {
+  let forceEnableAnalytics = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
   recordEvent('jetpack_instant_search_traintracks_interact', properties, forceEnableAnalytics);
 }
 /**
@@ -9079,7 +9150,8 @@ function recordTrainTracksInteract(properties, forceEnableAnalytics = false) {
  * @param {boolean} forceEnableAnalytics - Forcibly enable analytics, ignoring the isAnalyticsEnabled flag.
  */
 
-function recordStaticFilterSelect(properties, forceEnableAnalytics = false) {
+function recordStaticFilterSelect(properties) {
+  let forceEnableAnalytics = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
   recordEvent('jetpack_instant_search_static_filter_select', properties, forceEnableAnalytics);
 }
 
@@ -9123,10 +9195,11 @@ function makeSearchRequest(options) {
  * @returns {object} Action object.
  */
 
-function recordSuccessfulSearchRequest({
-  options,
-  response
-}) {
+function recordSuccessfulSearchRequest(_ref) {
+  let {
+    options,
+    response
+  } = _ref;
   return {
     type: 'RECORD_SUCCESSFUL_SEARCH_REQUEST',
     options,
@@ -9154,9 +9227,10 @@ function recordFailedSearchRequest(error) {
  * @returns {object} Action object.
  */
 
-function initializeQueryValues({
-  isHistoryNavigation = false
-} = {}) {
+function initializeQueryValues() {
+  let {
+    isHistoryNavigation = false
+  } = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   return {
     type: 'INITIALIZE_QUERY_VALUES',
     isHistoryNavigation
@@ -9170,7 +9244,8 @@ function initializeQueryValues({
  * @returns {object} Action object.
  */
 
-function setSearchQuery(query, propagateToWindow = true) {
+function setSearchQuery(query) {
+  let propagateToWindow = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
   return {
     type: 'SET_SEARCH_QUERY',
     query,
@@ -9185,7 +9260,8 @@ function setSearchQuery(query, propagateToWindow = true) {
  * @returns {object} Action object.
  */
 
-function setSort(sort, propagateToWindow = true) {
+function setSort(sort) {
+  let propagateToWindow = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
   return {
     type: 'SET_SORT',
     sort,
@@ -9201,7 +9277,8 @@ function setSort(sort, propagateToWindow = true) {
  * @returns {object} Action object.
  */
 
-function setFilter(name, value, propagateToWindow = true) {
+function setFilter(name, value) {
+  let propagateToWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
   return {
     type: 'SET_FILTER',
     name,
@@ -9218,7 +9295,8 @@ function setFilter(name, value, propagateToWindow = true) {
  * @returns {object} Action object.
  */
 
-function setStaticFilter(name, value, propagateToWindow = true) {
+function setStaticFilter(name, value) {
+  let propagateToWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
   return {
     type: 'SET_STATIC_FILTER',
     name,
@@ -9233,7 +9311,8 @@ function setStaticFilter(name, value, propagateToWindow = true) {
  * @returns {object} Action object.
  */
 
-function clearFilters(propagateToWindow = true) {
+function clearFilters() {
+  let propagateToWindow = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
   return {
     type: 'CLEAR_FILTERS',
     propagateToWindow
@@ -9528,7 +9607,10 @@ let cachedAggregations = {};
  * @returns {object} Updated state.
  */
 
-function hasError(state = false, action) {
+function hasError() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case 'MAKE_SEARCH_REQUEST':
     case 'RECORD_SUCCESSFUL_SEARCH_REQUEST':
@@ -9548,7 +9630,10 @@ function hasError(state = false, action) {
  * @returns {object} Updated state.
  */
 
-function isLoading(state = false, action) {
+function isLoading() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case 'MAKE_SEARCH_REQUEST':
       return true;
@@ -9568,7 +9653,10 @@ function isLoading(state = false, action) {
  * @returns {object} Updated state.
  */
 
-function response(state = {}, action) {
+function response() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case 'RECORD_SUCCESSFUL_SEARCH_REQUEST':
       {
@@ -9632,7 +9720,10 @@ function response(state = {}, action) {
  * @param {object} action - Dispatched action.
  * @returns {object} Updated state.
  */
-function isHistoryNavigation(state = false, action) {
+function isHistoryNavigation() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case 'INITIALIZE_QUERY_VALUES':
       // Triggered by SearchApp.handleHistoryNavigation.
@@ -9714,7 +9805,10 @@ function isHistoryNavigation(state = false, action) {
  * @returns {object} Updated state.
  */
 
-function searchQuery(state = null, action) {
+function searchQuery() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case 'SET_SEARCH_QUERY':
       return action.query;
@@ -9733,7 +9827,10 @@ function searchQuery(state = null, action) {
  * @returns {object} Updated state.
  */
 
-function sort(state = null, action) {
+function sort() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case 'SET_SORT':
       {
@@ -9758,7 +9855,10 @@ function sort(state = null, action) {
  * @returns {object} Updated state.
  */
 
-function filters(state = {}, action) {
+function filters() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case 'CLEAR_FILTERS':
     case 'CLEAR_QUERY_VALUES':
@@ -9791,7 +9891,10 @@ function filters(state = {}, action) {
  * @returns {object} Updated state.
  */
 
-function staticFilters(state = {}, action) {
+function staticFilters() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case 'CLEAR_QUERY_VALUES':
       return {};
@@ -9830,11 +9933,10 @@ function staticFilters(state = {}, action) {
  * @returns {object} Updated state.
  */
 
-function serverOptions(state = (() => {
+function serverOptions() {
   var _window$SERVER_OBJECT;
 
-  return (_window$SERVER_OBJECT = window[_lib_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1]) !== null && _window$SERVER_OBJECT !== void 0 ? _window$SERVER_OBJECT : {};
-})()) {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (_window$SERVER_OBJECT = window[_lib_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1]) !== null && _window$SERVER_OBJECT !== void 0 ? _window$SERVER_OBJECT : {};
   return state;
 }
 
@@ -10072,7 +10174,11 @@ function useColors() {
   // document is undefined in react-native: https://github.com/facebook/react-native/pull/1632
 
 
-  return typeof document !== 'undefined' && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || typeof window !== 'undefined' && window.console && (window.console.firebug || window.console.exception && window.console.table) || typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31 || typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
+  return typeof document !== 'undefined' && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || // Is firebug? http://stackoverflow.com/a/398120/376773
+  typeof window !== 'undefined' && window.console && (window.console.firebug || window.console.exception && window.console.table) || // Is firefox >= v31?
+  // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
+  typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31 || // Double check webkit in userAgent just in case we are in a worker
+  typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
 }
 /**
  * Colorize log arguments if enabled.
@@ -10267,7 +10373,11 @@ function setup(env) {
     let prevTime;
     let enableOverride = null;
 
-    function debug(...args) {
+    function debug() {
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
       // Disabled?
       if (!debug.enabled) {
         return;
@@ -10472,7 +10582,9 @@ module.exports = setup;
 /* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
 class t {
-  constructor(t = 0, s = 0) {
+  constructor() {
+    let t = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    let s = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
     this.first = null, this.items = Object.create(null), this.last = null, this.max = t, this.size = 0, this.ttl = s;
   }
 
@@ -10513,7 +10625,8 @@ class t {
     return Object.keys(this.items);
   }
 
-  set(t, s, e = !1) {
+  set(t, s) {
+    let e = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : !1;
     let i;
 
     if (e || this.has(t)) {
@@ -10536,7 +10649,9 @@ class t {
 
 }
 
-/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(s = 1e3, e = 0) {
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  let s = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1e3;
+  let e = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
   if (isNaN(s) || s < 0) throw new TypeError("Invalid max value");
   if (isNaN(e) || e < 0) throw new TypeError("Invalid ttl value");
   return new t(s, e);

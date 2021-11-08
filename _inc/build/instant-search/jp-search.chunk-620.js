@@ -3408,7 +3408,9 @@ function symbolObservablePonyfill(root) {
 /* harmony export */   "Z": function() { return /* export default binding */ __WEBPACK_DEFAULT_EXPORT__; }
 /* harmony export */ });
 class t {
-  constructor(t = 0, s = 0) {
+  constructor() {
+    let t = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    let s = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
     this.first = null, this.items = Object.create(null), this.last = null, this.max = t, this.size = 0, this.ttl = s;
   }
 
@@ -3449,7 +3451,8 @@ class t {
     return Object.keys(this.items);
   }
 
-  set(t, s, e = !1) {
+  set(t, s) {
+    let e = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : !1;
     let i;
 
     if (e || this.has(t)) {
@@ -3472,7 +3475,9 @@ class t {
 
 }
 
-/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(s = 1e3, e = 0) {
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  let s = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1e3;
+  let e = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
   if (isNaN(s) || s < 0) throw new TypeError("Invalid max value");
   if (isNaN(e) || e < 0) throw new TypeError("Invalid ttl value");
   return new t(s, e);

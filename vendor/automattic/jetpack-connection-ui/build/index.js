@@ -2798,9 +2798,9 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/emptyFunction.js":
+/***/ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/emptyFunction.js":
 /*!**************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/emptyFunction.js ***!
+  !*** ../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/emptyFunction.js ***!
   \**************************************************************************************/
 /***/ ((module) => {
 
@@ -2844,9 +2844,9 @@ module.exports = emptyFunction;
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/invariant.js":
+/***/ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/invariant.js":
 /*!**********************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/invariant.js ***!
+  !*** ../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/invariant.js ***!
   \**********************************************************************************/
 /***/ ((module) => {
 
@@ -2907,9 +2907,9 @@ module.exports = invariant;
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/warning.js":
+/***/ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/warning.js":
 /*!********************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/warning.js ***!
+  !*** ../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/warning.js ***!
   \********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -2924,7 +2924,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(/*! ./emptyFunction */ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/emptyFunction.js");
+var emptyFunction = __webpack_require__(/*! ./emptyFunction */ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/emptyFunction.js");
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -5934,9 +5934,9 @@ var REACT_ELEMENT_TYPE =
   (typeof Symbol === 'function' && Symbol.for && Symbol.for('react.element')) ||
   0xeac7;
 
-var emptyFunction = __webpack_require__(/*! fbjs/lib/emptyFunction */ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/emptyFunction.js");
-var invariant = __webpack_require__(/*! fbjs/lib/invariant */ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/invariant.js");
-var warning = __webpack_require__(/*! fbjs/lib/warning */ "../../../node_modules/.pnpm/fbjs@0.8.17/node_modules/fbjs/lib/warning.js");
+var emptyFunction = __webpack_require__(/*! fbjs/lib/emptyFunction */ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/emptyFunction.js");
+var invariant = __webpack_require__(/*! fbjs/lib/invariant */ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/invariant.js");
+var warning = __webpack_require__(/*! fbjs/lib/warning */ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/warning.js");
 
 var SEPARATOR = '.';
 var SUBSEPARATOR = ':';
@@ -6737,8 +6737,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function createCustomError(name) {
   class CustomError extends Error {
-    constructor(...args) {
-      super(...args);
+    constructor() {
+      super(...arguments);
       this.name = name;
     }
 
@@ -7536,7 +7536,8 @@ __webpack_require__.r(__webpack_exports__);
  * @param {string} args.anchor - Anchor to be added to the URL. Must be a single string. Example: `section1`.
  * @returns {string} The redirect URL
  */
-function getRedirectUrl(source, args = {}) {
+function getRedirectUrl(source) {
+  let args = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   const queryVars = {};
   let calypsoEnv;
 
@@ -8748,7 +8749,10 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-const connectionStatus = (state = {}, action) => {
+const connectionStatus = function () {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case _actions__WEBPACK_IMPORTED_MODULE_0__.SET_CONNECTION_STATUS:
       return { ...state,
@@ -8759,7 +8763,10 @@ const connectionStatus = (state = {}, action) => {
   return state;
 };
 
-const connectionStatusIsFetching = (state = false, action) => {
+const connectionStatusIsFetching = function () {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case _actions__WEBPACK_IMPORTED_MODULE_0__.SET_CONNECTION_STATUS_IS_FETCHING:
       return action.isFetching;
@@ -9657,7 +9664,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const isActionInProgress = (state = {}, action) => {
+const isActionInProgress = function () {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case _actions__WEBPACK_IMPORTED_MODULE_1__.SET_IS_ACTION_IN_PROGRESS:
       return action.isInProgress;
@@ -9986,7 +9996,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const API = (state = {}) => {
+const API = function () {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   return state;
 };
 
@@ -10005,7 +10016,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const assets = (state = {}) => {
+const assets = function () {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   return state;
 };
 
@@ -10030,7 +10042,10 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-const connectionStatus = (state = {}, action) => {
+const connectionStatus = function () {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
   switch (action.type) {
     case _actions_connection_status__WEBPACK_IMPORTED_MODULE_0__.SET_CONNECTION_STATUS:
       return action.connectionStatus;
@@ -10054,7 +10069,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const IDC = (state = {}) => {
+const IDC = function () {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   return state;
 };
 
