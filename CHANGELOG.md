@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Unit Tests : Update Full Sync tests to align with limitation on users that are synced.
 
 ### Bug fixes
+- Fixed Jetpack Dashboard submenu highlight for the Settings page for sites with Nav unification enabled.
 - Pexels Integration: Fix search query bug
 - The "File Name" will now be set in the Media Library for VideoPress videos.
 - VideoPress Media Items now contain all video meta immediately after upload. A page refresh is no longer needed to view VideoPress specific fields.
