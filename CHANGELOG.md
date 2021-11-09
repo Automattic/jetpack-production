@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Unit Tests : Update Full Sync tests to align with limitation on users that are synced.
 
 ### Bug fixes
+- Contact Form: prevent multiple button clicks from submitting multiple form submissions
 - Display Nav Unification Quick switcher in edit.php?post_type=post page for sites with Nav unification enabled.
 - Fixed Jetpack Dashboard submenu highlight for the Settings page for sites with Nav unification enabled.
 - Pexels Integration: Fix search query bug
