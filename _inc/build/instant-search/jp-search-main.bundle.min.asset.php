@@ -1,2 +1,2 @@
 /* eslint-disable */
-<?php return array('dependencies' => array('wp-i18n', 'wp-polyfill'), 'version' => 'fa73249f15eec1c4527aeec104bc693a');
+<?php return array('dependencies' => array('wp-i18n', 'wp-polyfill'), 'version' => '1a25ea4f736844a944159b96551dfe61');
