@@ -2,39 +2,34 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.4-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.4-a.3 - 2021-11-09
 ### Enhancements
-- Publicize: handle plan upgrade considering feature availability, whether the nudge is enable, and post status
-- Publicize now always adds an Open Graph image alt text if an Open Graph image is present
-- Remove VideoPress thumbnails from Calypso media list view.
+- Publicize: always add an Open Graph image alt text if an Open Graph image is present.
+- VideoPress: do not display thumbnails in the media library, in the WordPress.com dashboard.
 
 ### Improved compatibility
-- Contact Info and Map widget: Hide widget from the block inserter and Legacy widget block drop-down menu
-- Unit Tests : Update Full Sync tests to align with limitation on users that are synced.
+- Contact Info and Map widget: hide widget from the block inserter and Legacy widget block drop-down menu.
 
 ### Bug fixes
-- Contact Form: prevent multiple button clicks from submitting multiple form submissions
-- Display Nav Unification Quick switcher in edit.php?post_type=post page for sites with Nav unification enabled.
-- Fixed Jetpack Dashboard submenu highlight for the Settings page for sites with Nav unification enabled.
-- Pexels Integration: Fix search query bug
-- The "File Name" will now be set in the Media Library for VideoPress videos.
-- VideoPress Media Items now contain all video meta immediately after upload. A page refresh is no longer needed to view VideoPress specific fields.
-- VideoPress videos in the Media Library will now stop playing in the background when the Media Item modal is closed.
+- Block Editor: avoid issues when searching for free Pexels images via Jetpack's External Media feature.
+- Contact Form: prevent multiple button clicks from submitting multiple form submissions.
+- VideoPress: display "File Name" in the Media Library.
+- VideoPress: display all video meta immediately after upload. A page refresh is no longer needed to view VideoPress-specific fields.
+- VideoPress: no longer play videos in the background when the Media Item modal is closed in the media library.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Display Nav Unification Quick switcher in edit.php?post_type=post page for sites with Nav unification enabled.
 - E2E tests: cleaned up some unused dependencies
 - E2E tests: remove jest setup in favor of e2e-commons setup file
 - E2E tests: update docs
+- Fixed Jetpack Dashboard submenu highlight for the Settings page for sites with Nav unification enabled.
 - Fix PHP 8.1 deprecation warnings.
-- Nav Unification: Removes the `preferred-view` param from the URL after changing the preffered view. This fix only affects WP.com sites.
+- Nav Unification: Removes the `preferred-view` param from the URL after changing the preferred view. This fix only affects WP.com sites.
 - Nav Unification: Replaces the AJAX request for changing the preferred view with a direct server request to bypass security restrictions enforced by some browsers. This fix only affects WP.com sites.
 - P2: Hide Inbox admin menu link on all P2s.
+- Publicize: handle plan upgrade considering feature availability, whether the nudge is enable, and post status
 - Search: Migrate helper classes to Search package
-- Updated package dependencies
-- Updated package dependencies
+- Unit Tests : Update Full Sync tests to align with limitation on users that are synced.
 - Updated package dependencies
 - Update webpack build config.
 
