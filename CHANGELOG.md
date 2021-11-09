@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.4-a.4 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 10.4-a.3 - 2021-11-09
 ### Enhancements
 - Publicize: always add an Open Graph image alt text if an Open Graph image is present.
