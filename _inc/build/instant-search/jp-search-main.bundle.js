@@ -228,7 +228,7 @@ module.exports = window["wp"]["i18n"];
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "jp-search.chunk-" + (chunkId === 161 ? "main-payload" : chunkId) + "." + {"161":"b3a48ad78b3620a388d1","650":"d1ecd3b7aae9224f10d9"}[chunkId] + ".min.js";
+/******/ 			return "jp-search.chunk-" + (chunkId === 161 ? "main-payload" : chunkId) + "." + {"161":"4b80f4e47bb9f47b7a53","650":"d1ecd3b7aae9224f10d9"}[chunkId] + ".min.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	

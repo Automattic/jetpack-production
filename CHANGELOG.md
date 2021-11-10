@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - map new Site Editor location from Gutenberg 11.9 to Calypso
 
 ### Bug fixes
+- Search: Restore filter query string functionality
 - The display of Jetpack VideoPress free trial notifications was fixed for Security Daily and Security Realtime plans.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

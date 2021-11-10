@@ -8892,22 +8892,17 @@ function usePhoton(initialSrc, width, height) {
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "pm": function() { return /* binding */ getQuery; },
-/* harmony export */   "_L": function() { return /* binding */ setQueryDebounced; },
+/* harmony export */   "_L": function() { return /* binding */ setQuery; },
 /* harmony export */   "ug": function() { return /* binding */ getResultFormatQuery; },
 /* harmony export */   "Q0": function() { return /* binding */ restorePreviousHref; }
 /* harmony export */ });
-/* harmony import */ var qss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4090);
-/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5034);
-/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4199);
-/* harmony import */ var _filters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9586);
-/* harmony import */ var _external_query_string_decode__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6676);
+/* harmony import */ var qss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4090);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4199);
+/* harmony import */ var _filters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9586);
+/* harmony import */ var _external_query_string_decode__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6676);
 /**
  * External dependencies
  */
-
-/*eslint lodash/import-scope: [2, "method"]*/
-
 
 /**
  * Internal dependencies
@@ -8925,7 +8920,7 @@ function usePhoton(initialSrc, width, height) {
 
 function getQuery() {
   let search = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window.location.search;
-  return (0,_external_query_string_decode__WEBPACK_IMPORTED_MODULE_3__/* .decode */ .J)(search.substring(1), false, false);
+  return (0,_external_query_string_decode__WEBPACK_IMPORTED_MODULE_2__/* .decode */ .J)(search.substring(1), false, false);
 }
 /**
  * Change the query string.
@@ -8934,14 +8929,8 @@ function getQuery() {
  */
 
 function setQuery(queryObject) {
-  pushQueryString((0,qss__WEBPACK_IMPORTED_MODULE_4__/* .encode */ .c)(queryObject));
-} // Create debounced function.
-// Uses a longer delay to ensure we're not filling up the user's browser history with part-typed queries.
-
-
-const setQueryDebounced = lodash_debounce__WEBPACK_IMPORTED_MODULE_0___default()(setQuery, _constants__WEBPACK_IMPORTED_MODULE_1__/* .DEBOUNCED_TIME_TO_SET_QUERY_MILLISECONDS */ .yb); // Export debounced function with original function name.
-
-
+  pushQueryString((0,qss__WEBPACK_IMPORTED_MODULE_3__/* .encode */ .c)(queryObject));
+}
 /**
  * Updates the browser's query string via an encoded query string.
  *
@@ -8952,8 +8941,8 @@ function pushQueryString(queryString) {
   if (history.pushState) {
     const url = new window.URL(window.location.href);
 
-    if (window[_constants__WEBPACK_IMPORTED_MODULE_1__/* .SERVER_OBJECT_NAME */ .W1] && 'homeUrl' in window[_constants__WEBPACK_IMPORTED_MODULE_1__/* .SERVER_OBJECT_NAME */ .W1]) {
-      url.href = window[_constants__WEBPACK_IMPORTED_MODULE_1__/* .SERVER_OBJECT_NAME */ .W1].homeUrl;
+    if (window[_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1] && 'homeUrl' in window[_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1]) {
+      url.href = window[_constants__WEBPACK_IMPORTED_MODULE_0__/* .SERVER_OBJECT_NAME */ .W1].homeUrl;
     }
 
     url.search = queryString;
@@ -8970,7 +8959,7 @@ function pushQueryString(queryString) {
 function getResultFormatQuery() {
   const query = getQuery();
 
-  if (!_constants__WEBPACK_IMPORTED_MODULE_1__/* .VALID_RESULT_FORMAT_KEYS.includes */ .bk.includes(query.result_format)) {
+  if (!_constants__WEBPACK_IMPORTED_MODULE_0__/* .VALID_RESULT_FORMAT_KEYS.includes */ .bk.includes(query.result_format)) {
     return null;
   }
 
@@ -8990,7 +8979,7 @@ function restorePreviousHref(initialHref, callback) {
   if (history.pushState && history.replaceState) {
     const url = new URL(initialHref);
     const queryObject = getQuery(url.search);
-    const keys = [...(0,_filters__WEBPACK_IMPORTED_MODULE_2__/* .getFilterKeys */ .wP)(), ...(0,_filters__WEBPACK_IMPORTED_MODULE_2__/* .getStaticFilterKeys */ .i3)(), 's', 'sort']; // If initialHref has search or filter query values, clear them.
+    const keys = [...(0,_filters__WEBPACK_IMPORTED_MODULE_1__/* .getFilterKeys */ .wP)(), ...(0,_filters__WEBPACK_IMPORTED_MODULE_1__/* .getStaticFilterKeys */ .i3)(), 's', 'sort']; // If initialHref has search or filter query values, clear them.
 
     const initialHasSearchQueries = Object.keys(queryObject).some(key => keys.includes(key));
 
@@ -8998,7 +8987,7 @@ function restorePreviousHref(initialHref, callback) {
       keys.forEach(key => delete queryObject[key]);
     }
 
-    url.search = (0,qss__WEBPACK_IMPORTED_MODULE_4__/* .encode */ .c)(queryObject);
+    url.search = (0,qss__WEBPACK_IMPORTED_MODULE_3__/* .encode */ .c)(queryObject);
     replaceState ? window.history.replaceState(null, null, url.toString()) : window.history.pushState(null, null, url.toString()); // If initialHref had search queries, then the page rendered beneath the search modal is WordPress's default search page.
     // We want to strip these search queries from the URL and direct the user to the root if possible.
 
@@ -9348,11 +9337,19 @@ function disableQueryStringIntegration() {
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _lib_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2966);
-/* harmony import */ var _lib_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4199);
-/* harmony import */ var _lib_filters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9586);
-/* harmony import */ var _lib_query_string__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5793);
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1584);
+/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5034);
+/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _lib_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2966);
+/* harmony import */ var _lib_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4199);
+/* harmony import */ var _lib_filters__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9586);
+/* harmony import */ var _lib_query_string__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5793);
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1584);
+/**
+ * External dependencies
+ */
+
+/*eslint lodash/import-scope: [2, "method"]*/
+
 /**
  * Internal dependencies
  */
@@ -9361,8 +9358,10 @@ function disableQueryStringIntegration() {
 
 
 
+
 let requestCounter = 0;
 let queryStringIntegrationEnabled = true;
+const debouncedSetQuery = lodash_debounce__WEBPACK_IMPORTED_MODULE_0___default()(_lib_query_string__WEBPACK_IMPORTED_MODULE_4__/* .setQuery */ ._L, _lib_constants__WEBPACK_IMPORTED_MODULE_2__/* .DEBOUNCED_TIME_TO_SET_QUERY_MILLISECONDS */ .yb);
 /**
  * Effect handler which will fetch search results from the API.
  *
@@ -9372,20 +9371,20 @@ let queryStringIntegrationEnabled = true;
 
 function makeSearchAPIRequest(action, store) {
   requestCounter++;
-  (0,_lib_api__WEBPACK_IMPORTED_MODULE_0__/* .search */ .yC)(action.options, requestCounter).then(response => {
+  (0,_lib_api__WEBPACK_IMPORTED_MODULE_1__/* .search */ .yC)(action.options, requestCounter).then(response => {
     if (response === null) {
       // Request has been cancelled by a more recent request.
       return;
     }
 
-    store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__/* .recordSuccessfulSearchRequest */ .C0)({
+    store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__/* .recordSuccessfulSearchRequest */ .C0)({
       options: action.options,
       response
     }));
   }).catch(error => {
     // eslint-disable-next-line no-console
     console.error('Jetpack Search encountered an error:', error);
-    store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__/* .recordFailedSearchRequest */ .Y6)(error));
+    store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__/* .recordFailedSearchRequest */ .Y6)(error));
   });
 }
 /**
@@ -9397,14 +9396,14 @@ function makeSearchAPIRequest(action, store) {
 
 
 function initializeQueryValues(action, store) {
-  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_3__/* .getQuery */ .pm)(); //
+  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_4__/* .getQuery */ .pm)(); //
   // Initialize search query value for the reducer.
   //
 
   if ('s' in queryObject) {
-    store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__/* .setSearchQuery */ .ql)(queryObject.s, false));
+    store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__/* .setSearchQuery */ .ql)(queryObject.s, false));
   } else {
-    store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__/* .setSearchQuery */ .ql)(null, false));
+    store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__/* .setSearchQuery */ .ql)(null, false));
   } //
   // Initialize sort value for the reducer.
   //
@@ -9412,27 +9411,27 @@ function initializeQueryValues(action, store) {
 
   let sort;
 
-  if (_lib_constants__WEBPACK_IMPORTED_MODULE_1__/* .VALID_SORT_KEYS.includes */ .kQ.includes(queryObject.sort)) {
+  if (_lib_constants__WEBPACK_IMPORTED_MODULE_2__/* .VALID_SORT_KEYS.includes */ .kQ.includes(queryObject.sort)) {
     // Set sort value from `sort` query value.
     sort = queryObject.sort;
   } else if ('date' === queryObject.orderby) {
     // Set sort value from legacy `orderby` query value.
-    sort = typeof queryObject.order === 'string' && queryObject.order.toUpperCase() === _lib_constants__WEBPACK_IMPORTED_MODULE_1__/* .SORT_DIRECTION_ASC */ .oy ? 'oldest' : 'newest';
+    sort = typeof queryObject.order === 'string' && queryObject.order.toUpperCase() === _lib_constants__WEBPACK_IMPORTED_MODULE_2__/* .SORT_DIRECTION_ASC */ .oy ? 'oldest' : 'newest';
   } else if ('relevance' === queryObject.orderby) {
     // Set sort value from legacy `orderby` query value.
     sort = 'relevance';
   }
 
-  typeof sort === 'string' && store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__/* .setSort */ .HD)(sort, false)); //
+  typeof sort === 'string' && store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__/* .setSort */ .HD)(sort, false)); //
   // Initialize filter value for the reducer.
   //
 
-  store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__/* .clearFilters */ .K5)(false));
-  (0,_lib_filters__WEBPACK_IMPORTED_MODULE_2__/* .getFilterKeys */ .wP)().filter(filterKey => filterKey in queryObject).forEach(filterKey => store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__/* .setFilter */ .Tv)(filterKey, queryObject[filterKey], false))); //
+  store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__/* .clearFilters */ .K5)(false));
+  (0,_lib_filters__WEBPACK_IMPORTED_MODULE_3__/* .getFilterKeys */ .wP)().filter(filterKey => filterKey in queryObject).forEach(filterKey => store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__/* .setFilter */ .Tv)(filterKey, queryObject[filterKey], false))); //
   // Initialize static filters
   //
 
-  (0,_lib_filters__WEBPACK_IMPORTED_MODULE_2__/* .getStaticFilterKeys */ .i3)().filter(filterKey => filterKey in queryObject).forEach(filterKey => store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__/* .setStaticFilter */ .O1)(filterKey, queryObject[filterKey], false)));
+  (0,_lib_filters__WEBPACK_IMPORTED_MODULE_3__/* .getStaticFilterKeys */ .i3)().filter(filterKey => filterKey in queryObject).forEach(filterKey => store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_5__/* .setStaticFilter */ .O1)(filterKey, queryObject[filterKey], false)));
 }
 /**
  * Effect handler which will update the location bar's search query string
@@ -9446,15 +9445,17 @@ function updateSearchQueryString(action) {
     return;
   }
 
-  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_3__/* .getQuery */ .pm)();
+  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_4__/* .getQuery */ .pm)();
 
   if (action.query !== null) {
     queryObject.s = action.query;
   } else {
     delete queryObject.s;
-  }
+  } // Uses a debounced version of the setQuery, which ensures we're not spamming the user's browser history
+  // with partly typed queries.
 
-  (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_3__/* .setQuery */ ._L)(queryObject);
+
+  debouncedSetQuery(queryObject);
 }
 /**
  * Effect handler which will update the location bar's sort query string
@@ -9468,16 +9469,16 @@ function updateSortQueryString(action) {
     return;
   }
 
-  if (!_lib_constants__WEBPACK_IMPORTED_MODULE_1__/* .VALID_SORT_KEYS.includes */ .kQ.includes(action.sort)) {
+  if (!_lib_constants__WEBPACK_IMPORTED_MODULE_2__/* .VALID_SORT_KEYS.includes */ .kQ.includes(action.sort)) {
     return;
   }
 
-  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_3__/* .getQuery */ .pm)();
+  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_4__/* .getQuery */ .pm)();
   queryObject.sort = action.sort; // Removes legacy sort query values, just in case.
 
   delete queryObject.order;
   delete queryObject.orderby;
-  (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_3__/* .setQuery */ ._L)(queryObject);
+  (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_4__/* .setQuery */ ._L)(queryObject);
 }
 /**
  * Effect handler which will update the location bar's filter query string
@@ -9491,13 +9492,13 @@ function updateFilterQueryString(action) {
     return;
   }
 
-  if (!(0,_lib_filters__WEBPACK_IMPORTED_MODULE_2__/* .getFilterKeys */ .wP)().includes(action.name)) {
+  if (!(0,_lib_filters__WEBPACK_IMPORTED_MODULE_3__/* .getFilterKeys */ .wP)().includes(action.name)) {
     return;
   }
 
-  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_3__/* .getQuery */ .pm)();
+  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_4__/* .getQuery */ .pm)();
   queryObject[action.name] = action.value;
-  (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_3__/* .setQuery */ ._L)(queryObject);
+  (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_4__/* .setQuery */ ._L)(queryObject);
 }
 /**
  * Effect handler which will update the location bar's static filter query string
@@ -9511,13 +9512,13 @@ function updateStaticFilterQueryString(action) {
     return;
   }
 
-  if (!(0,_lib_filters__WEBPACK_IMPORTED_MODULE_2__/* .getStaticFilterKeys */ .i3)().includes(action.name)) {
+  if (!(0,_lib_filters__WEBPACK_IMPORTED_MODULE_3__/* .getStaticFilterKeys */ .i3)().includes(action.name)) {
     return;
   }
 
-  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_3__/* .getQuery */ .pm)();
+  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_4__/* .getQuery */ .pm)();
   queryObject[action.name] = action.value;
-  (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_3__/* .setQuery */ ._L)(queryObject);
+  (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_4__/* .setQuery */ ._L)(queryObject);
 }
 /**
  * Effect handler which will clear filter queries from the location bar
@@ -9531,10 +9532,10 @@ function clearFilterQueryString(action) {
     return;
   }
 
-  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_3__/* .getQuery */ .pm)();
-  (0,_lib_filters__WEBPACK_IMPORTED_MODULE_2__/* .getFilterKeys */ .wP)().forEach(key => delete queryObject[key]);
-  (0,_lib_filters__WEBPACK_IMPORTED_MODULE_2__/* .getStaticFilterKeys */ .i3)().forEach(key => delete queryObject[key]);
-  (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_3__/* .setQuery */ ._L)(queryObject);
+  const queryObject = (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_4__/* .getQuery */ .pm)();
+  (0,_lib_filters__WEBPACK_IMPORTED_MODULE_3__/* .getFilterKeys */ .wP)().forEach(key => delete queryObject[key]);
+  (0,_lib_filters__WEBPACK_IMPORTED_MODULE_3__/* .getStaticFilterKeys */ .i3)().forEach(key => delete queryObject[key]);
+  (0,_lib_query_string__WEBPACK_IMPORTED_MODULE_4__/* .setQuery */ ._L)(queryObject);
 }
 /**
  * Effect handler to disable query string integration for all effects.
