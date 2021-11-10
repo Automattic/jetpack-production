@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - map new Site Editor location from Gutenberg 11.9 to Calypso
 
 ### Bug fixes
+- Navigation: make sure correct dropdown item is selected when visiting Recommendation section on mobile
 - Search: Restore filter query string functionality
 - The display of Jetpack VideoPress free trial notifications was fixed for Security Daily and Security Realtime plans.
 
