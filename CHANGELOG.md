@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - The display of Jetpack VideoPress free trial notifications was fixed for Security Daily and Security Realtime plans.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated package dependencies.
 - Update link for Backup and Security product cards to point to checkout for new real-time products
 
 ## 10.4-a.3 - 2021-11-09
