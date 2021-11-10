@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- On the My Plan page, show available backup storage for new Backup and Security plans
+
 ### Improved compatibility
 - map new Site Editor location from Gutenberg 11.9 to Calypso
 
