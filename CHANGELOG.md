@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- map new Site Editor location from Gutenberg 11.9 to Calypso
+
 ### Bug fixes
 - The display of Jetpack VideoPress free trial notifications was fixed for Security Daily and Security Realtime plans.
 
