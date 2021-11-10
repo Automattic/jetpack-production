@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Removed
+- Remove use of `gulp` in build, all it was doing was wrapping `webpack`.
+
 ## [2.0.0] - 2021-11-09
 ### Added
 - Initialize IDC package, properly display the RNA IDC screen.
@@ -118,6 +125,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Connection UI: Building the Framework
 
+[2.0.1-alpha]: https://github.com/Automattic/jetpack-connection-ui/compare/v2.0.0...v2.0.1-alpha
 [2.0.0]: https://github.com/Automattic/jetpack-connection-ui/compare/v1.6.0...v2.0.0
 [1.6.0]: https://github.com/Automattic/jetpack-connection-ui/compare/v1.5.3...v1.6.0
 [1.5.3]: https://github.com/Automattic/jetpack-connection-ui/compare/v1.5.2...v1.5.3
