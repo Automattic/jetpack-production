@@ -7580,20 +7580,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/action-button/index.jsx");
-/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/action-button/index.jsx");
+/* harmony import */ var _connect_user__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../connect-user */ "../../js-packages/connection/components/connect-user/index.jsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/connection/state/store.jsx");
 /**
  * External dependencies
  */
 
 
-const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
 
+
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
 
 
 /**
@@ -7601,28 +7605,27 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
  */
 
 
+
 /**
  * The RNA connection component.
  *
  * @param {object} props -- The properties.
- * @param {string} props.connectLabel -- The "Connect" button label.
- * @param {string} props.apiRoot -- API root URL, required.
- * @param {string} props.apiNonce -- API Nonce, required.
- * @param {string} props.registrationNonce -- Separate registration nonce, required.
- * @param {Function} props.onRegistered -- The callback to be called upon registration success.
- * @param {string} props.redirectUri -- The redirect admin URI.
- * @param {string} props.from -- Where the connection request is coming from.
- * @param {object} props.connectionStatus -- The connection status object.
- * @param {boolean} props.connectionStatusIsFetching -- The flag indicating that connection status is being fetched.
- * @param {boolean} props.autoTrigger -- Whether to initiate the connection process automatically upon rendering the component.
  * @returns {React.Component} The RNA connection component.
  */
 
 const ConnectButton = props => {
-  const [isRegistering, setIsRegistering] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const [isUserConnecting, setIsUserConnecting] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [registrationError, setRegistrationError] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [authorizationUrl, setAuthorizationUrl] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  const {
+    isRegistered,
+    isUserConnected
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_5__.STORE_ID).getConnectionStatus(), []);
+  const siteIsRegistering = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_5__.STORE_ID).getSiteIsRegistering(), []);
+  const userIsConnecting = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_5__.STORE_ID).getUserIsConnecting(), []);
+  const {
+    setSiteIsRegistering,
+    setUserIsConnecting
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useDispatch)(_state_store__WEBPACK_IMPORTED_MODULE_5__.STORE_ID);
   const {
     apiRoot,
     apiNonce,
@@ -7631,8 +7634,6 @@ const ConnectButton = props => {
     registrationNonce,
     redirectUri,
     from,
-    connectionStatus,
-    connectionStatusIsFetching,
     autoTrigger
   } = props;
   /**
@@ -7640,8 +7641,8 @@ const ConnectButton = props => {
    */
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiNonce(apiNonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
    * Initialize the site registration process.
@@ -7651,43 +7652,43 @@ const ConnectButton = props => {
     e && e.preventDefault();
     setRegistrationError(false);
 
-    if (connectionStatus.isRegistered) {
-      setIsUserConnecting(true);
+    if (isRegistered) {
+      setUserIsConnecting(true);
       return;
     }
 
-    setIsRegistering(true);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.registerSite(registrationNonce, redirectUri).then(response => {
-      setIsRegistering(false);
+    setSiteIsRegistering(true);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.registerSite(registrationNonce, redirectUri).then(response => {
+      setSiteIsRegistering(false);
 
       if (onRegistered) {
         onRegistered(response);
       }
 
       setAuthorizationUrl(response.authorizeUrl);
-      setIsUserConnecting(true);
+      setUserIsConnecting(true);
     }).catch(error => {
-      setIsRegistering(false);
+      setSiteIsRegistering(false);
       setRegistrationError(error);
       throw error;
     });
-  }, [setIsRegistering, setAuthorizationUrl, connectionStatus, onRegistered, registrationNonce, redirectUri]);
+  }, [setSiteIsRegistering, setUserIsConnecting, setAuthorizationUrl, isRegistered, onRegistered, registrationNonce, redirectUri]);
   /**
    * Auto-trigger the flow, only do it once.
    */
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    if (autoTrigger && !isRegistering && !isUserConnecting) {
+    if (autoTrigger && !siteIsRegistering && !userIsConnecting) {
       registerSite();
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, connectionStatusIsFetching && `Loading...`, (!connectionStatus.isRegistered || !connectionStatus.isUserConnected) && !connectionStatusIsFetching && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__.default, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, (!isRegistered || !isUserConnected) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__.default, {
     label: connectLabel,
     onClick: registerSite,
     displayError: registrationError ? true : false,
-    isLoading: isRegistering || isUserConnecting
-  }), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_5__.default, {
+    isLoading: siteIsRegistering || userIsConnecting
+  }), userIsConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_7__.default, {
     connectUrl: authorizationUrl,
     redirectUri: redirectUri,
     from: from
@@ -7695,14 +7696,29 @@ const ConnectButton = props => {
 };
 
 ConnectButton.propTypes = {
-  connectLabel: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  onRegistered: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func),
-  from: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
-  autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool)
+  /** The "Connect" button label. */
+  connectLabel: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** API root URL. */
+  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** API Nonce. */
+  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** The callback to be called upon registration success. */
+  onRegistered: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** Where the connection request is coming from. */
+  from: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The redirect admin URI. */
+  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** Registration nonce. */
+  registrationNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** Whether to initiate the connection process automatically upon rendering the component. */
+  autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool)
 };
 ConnectButton.defaultProps = {
   connectLabel: __('Connect', 'jetpack'),
@@ -7870,13 +7886,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _connect_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../connect-button */ "../../js-packages/connection/components/connect-button/index.jsx");
-/* harmony import */ var _visual__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./visual */ "../../js-packages/connection/components/connect-screen/required-plan/visual.jsx");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _connect_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../connect-button */ "../../js-packages/connection/components/connect-button/index.jsx");
+/* harmony import */ var _visual__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./visual */ "../../js-packages/connection/components/connect-screen/required-plan/visual.jsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../state/store */ "../../js-packages/connection/state/store.jsx");
 /**
  * External dependencies
  */
+
 
 
 
@@ -7884,7 +7904,8 @@ __webpack_require__.r(__webpack_exports__);
  * Internal dependencies
  */
 
-const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
+
 
 
 /**
@@ -7905,26 +7926,25 @@ const ConnectScreenRequiredPlan = props => {
     from,
     redirectUri,
     children,
-    connectionStatus,
     priceBefore,
     priceAfter,
     pricingIcon,
     pricingTitle,
     pricingCurrencyCode
   } = props;
+  const connectionStatus = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getConnectionStatus(), []);
   const renderConnectBtn = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((label, trigger) => {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_button__WEBPACK_IMPORTED_MODULE_3__.default, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_button__WEBPACK_IMPORTED_MODULE_5__.default, {
       autoTrigger: trigger,
       apiRoot: apiRoot,
       apiNonce: apiNonce,
       registrationNonce: registrationNonce,
       from: from,
       redirectUri: redirectUri,
-      connectionStatus: connectionStatus,
       connectLabel: label
     });
-  }, [apiRoot, apiNonce, registrationNonce, from, redirectUri, connectionStatus]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_visual__WEBPACK_IMPORTED_MODULE_4__.default, {
+  }, [apiRoot, apiNonce, registrationNonce, from, redirectUri]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_visual__WEBPACK_IMPORTED_MODULE_6__.default, {
     title: title,
     autoTrigger: autoTrigger,
     buttonLabel: buttonLabel,
@@ -7933,7 +7953,7 @@ const ConnectScreenRequiredPlan = props => {
     pricingIcon: pricingIcon,
     pricingTitle: pricingTitle,
     pricingCurrencyCode: pricingCurrencyCode,
-    connectionStatus: connectionStatus,
+    isLoading: !connectionStatus.hasOwnProperty('isRegistered'),
     renderConnectBtn: renderConnectBtn
   }, children);
 };
@@ -7959,9 +7979,6 @@ ConnectScreenRequiredPlan.propTypes = {
 
   /** The redirect admin URI. */
   redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-
-  /** Connection Status object */
-  connectionStatus: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object.isRequired),
 
   /** Whether to initiate the connection process automatically upon rendering the component. */
   autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
@@ -8042,13 +8059,13 @@ const ConnectScreenRequiredPlanVisual = props => {
     autoTrigger,
     buttonLabel,
     children,
-    connectionStatus,
     priceBefore,
     priceAfter,
     pricingIcon,
     pricingTitle,
     pricingCurrencyCode,
-    renderConnectBtn
+    renderConnectBtn,
+    isLoading
   } = props;
   const tos = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)(__('By clicking the button above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>share details</shareDetailsLink> with WordPress.com.', 'jetpack'), {
     tosLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
@@ -8067,7 +8084,7 @@ const ConnectScreenRequiredPlanVisual = props => {
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout__WEBPACK_IMPORTED_MODULE_6__.default, {
     title: title,
-    className: 'jp-connection__connect-screen-required-plan' + (connectionStatus.hasOwnProperty('isRegistered') ? '' : ' jp-connection__connect-screen-required-plan__loading')
+    className: 'jp-connection__connect-screen-required-plan' + (isLoading ? ' jp-connection__connect-screen-required-plan__loading' : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connection__connect-screen-required-plan__content"
   }, children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -8103,9 +8120,6 @@ ConnectScreenRequiredPlanVisual.propTypes = {
   /** The Connect Button label. */
   buttonLabel: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
 
-  /** Connection Status object */
-  connectionStatus: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object.isRequired),
-
   /** Whether to initiate the connection process automatically upon rendering the component. */
   autoTrigger: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
 
@@ -8113,7 +8127,10 @@ ConnectScreenRequiredPlanVisual.propTypes = {
   pricingIcon: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
 
   /** Connect button render function */
-  renderConnectBtn: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
+  renderConnectBtn: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired),
+
+  /** Whether the connection status is still loading. */
+  isLoading: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired)
 };
 ConnectScreenRequiredPlanVisual.defaultProps = {
   pricingCurrencyCode: 'USD',
@@ -8276,9 +8293,10 @@ const ConnectionStatusCard = props => {
   } = props;
   const [isFetchingConnectionData, setIsFetchingConnectionData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [connectedUserData, setConnectedUserData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({});
-  const [isUserConnecting, setIsUserConnecting] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const userIsConnecting = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_7__.STORE_ID).getUserIsConnecting(), []);
   const {
-    setConnectionStatus
+    setConnectionStatus,
+    setUserIsConnecting
   } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.useDispatch)(_state_store__WEBPACK_IMPORTED_MODULE_7__.STORE_ID);
   const avatarRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
   /**
@@ -8355,10 +8373,10 @@ const ConnectionStatusCard = props => {
     className: "jp-connection-status-card--list-item-error"
   }, __('Your WordPress.com account is not connected.', 'jetpack'))), !isUserConnected && !isFetchingConnectionData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     isPrimary: true,
-    disabled: isUserConnecting,
-    onClick: setIsUserConnecting,
+    disabled: userIsConnecting,
+    onClick: setUserIsConnecting,
     className: "jp-connection-status-card--btn-connect-user"
-  }, __('Connect your WordPress.com account', 'jetpack')), isUserConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_9__.default, {
+  }, __('Connect your WordPress.com account', 'jetpack')), userIsConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_9__.default, {
     redirectUri: redirectUri
   }));
 };
@@ -8585,116 +8603,10 @@ DisconnectDialog.defaultProps = {
 
 /***/ }),
 
-/***/ "../../js-packages/connection/components/with-connection-status/index.jsx":
-/*!********************************************************************************!*\
-  !*** ../../js-packages/connection/components/with-connection-status/index.jsx ***!
-  \********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_16_0_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/.pnpm/@babel+runtime@7.16.0/node_modules/@babel/runtime/helpers/extends */ "../../../node_modules/.pnpm/@babel+runtime@7.16.0/node_modules/@babel/runtime/helpers/extends.js");
-/* harmony import */ var _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_16_0_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_16_0_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/connection/state/store.jsx");
-
-
-/**
- * External dependencies
- */
-
-
-
-/**
- * Internal dependencies
- */
-
-
-/**
- * Fetch the connection status and update the state accordingly.
- *
- * @param {string} apiRoot - API root URL.
- * @param {string} apiNonce - API Nonce.
- * @param {Function} onSuccess - Callback that's called upon successfully fetching the connection status.
- * @param {Function} onError - Callback that's called in case of fetching error.
- */
-
-const fetchConnectionStatus = (apiRoot, apiNonce, onSuccess, onError) => {
-  _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__.default.setApiRoot(apiRoot);
-  _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__.default.setApiNonce(apiNonce);
-  _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__.default.fetchSiteConnectionStatus().then(onSuccess).catch(onError);
-};
-/**
- * Higher order component to fetch connection status and pass it further as a parameter.
- *
- * @param {React.Component} WrappedComponent - The component that needs connection status.
- * @returns {React.Component} The higher order component.
- */
-
-
-const withConnectionStatus = WrappedComponent => {
-  /**
-   * The `WrappedComponent` with connection status passed into it.
-   *
-   * @param {object} props -- The properties.
-   * @param {Function} props.statusCallback -- Callback to pull connection status from the component.
-   * @returns {React.Component} The higher order component.
-   */
-  return props => {
-    const {
-      apiRoot,
-      apiNonce,
-      statusCallback
-    } = props;
-    const connectionStatus = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getConnectionStatus(), []);
-    const {
-      setConnectionStatus,
-      setConnectionStatusIsFetching
-    } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useDispatch)(_state_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID);
-    const connectionStatusIsFetching = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getConnectionStatusIsFetching(), []);
-    const hasConnectionStatus = connectionStatus.hasOwnProperty('isActive');
-    const onSuccess = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(response => {
-      setConnectionStatus(response);
-      setConnectionStatusIsFetching(false);
-    }, [setConnectionStatus, setConnectionStatusIsFetching]);
-    const onError = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(error => {
-      setConnectionStatusIsFetching(false);
-      throw error;
-    }, [setConnectionStatusIsFetching]);
-    const statusCallbackWrapped = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(() => {
-      if (statusCallback && {}.toString.call(statusCallback) === '[object Function]') {
-        return statusCallback(connectionStatus);
-      }
-    }, [connectionStatus, statusCallback]);
-
-    if (!hasConnectionStatus && !connectionStatusIsFetching) {
-      setConnectionStatusIsFetching(true);
-      fetchConnectionStatus(apiRoot, apiNonce, onSuccess, onError);
-    }
-
-    hasConnectionStatus && !connectionStatusIsFetching && statusCallbackWrapped();
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(WrappedComponent, _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_16_0_node_modules_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({
-      connectionStatus: connectionStatus,
-      connectionStatusIsFetching: connectionStatusIsFetching
-    }, props));
-  };
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (withConnectionStatus);
-
-/***/ }),
-
-/***/ "../../js-packages/connection/components/with-connection-status/state/actions.jsx":
-/*!****************************************************************************************!*\
-  !*** ../../js-packages/connection/components/with-connection-status/state/actions.jsx ***!
-  \****************************************************************************************/
+/***/ "../../js-packages/connection/state/actions.jsx":
+/*!******************************************************!*\
+  !*** ../../js-packages/connection/state/actions.jsx ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -8702,10 +8614,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SET_CONNECTION_STATUS": () => (/* binding */ SET_CONNECTION_STATUS),
 /* harmony export */   "SET_CONNECTION_STATUS_IS_FETCHING": () => (/* binding */ SET_CONNECTION_STATUS_IS_FETCHING),
-/* harmony export */   "default": () => (/* binding */ connectionStatusActions)
+/* harmony export */   "FETCH_CONNECTION_STATUS": () => (/* binding */ FETCH_CONNECTION_STATUS),
+/* harmony export */   "SET_SITE_IS_REGISTERING": () => (/* binding */ SET_SITE_IS_REGISTERING),
+/* harmony export */   "SET_USER_IS_CONNECTING": () => (/* binding */ SET_USER_IS_CONNECTING),
+/* harmony export */   "default": () => (/* binding */ actions)
 /* harmony export */ });
 const SET_CONNECTION_STATUS = 'SET_CONNECTION_STATUS';
 const SET_CONNECTION_STATUS_IS_FETCHING = 'SET_CONNECTION_STATUS_IS_FETCHING';
+const FETCH_CONNECTION_STATUS = 'FETCH_CONNECTION_STATUS';
+const SET_SITE_IS_REGISTERING = 'SET_SITE_IS_REGISTERING';
+const SET_USER_IS_CONNECTING = 'SET_USER_IS_CONNECTING';
 const connectionStatusActions = {
   setConnectionStatus: connectionStatus => {
     return {
@@ -8718,64 +8636,35 @@ const connectionStatusActions = {
       type: SET_CONNECTION_STATUS_IS_FETCHING,
       isFetching
     };
+  },
+  fetchConnectionStatus: () => {
+    return {
+      type: FETCH_CONNECTION_STATUS
+    };
+  },
+  setSiteIsRegistering: isRegistering => {
+    return {
+      type: SET_SITE_IS_REGISTERING,
+      isRegistering
+    };
+  },
+  setUserIsConnecting: isConnecting => {
+    return {
+      type: SET_USER_IS_CONNECTING,
+      isConnecting
+    };
   }
+};
+const actions = { ...connectionStatusActions
 };
 
 
 /***/ }),
 
-/***/ "../../js-packages/connection/components/with-connection-status/state/reducers.jsx":
-/*!*****************************************************************************************!*\
-  !*** ../../js-packages/connection/components/with-connection-status/state/reducers.jsx ***!
-  \*****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "connectionStatus": () => (/* binding */ connectionStatus),
-/* harmony export */   "connectionStatusIsFetching": () => (/* binding */ connectionStatusIsFetching)
-/* harmony export */ });
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions */ "../../js-packages/connection/components/with-connection-status/state/actions.jsx");
-/**
- * Internal dependencies
- */
-
-
-const connectionStatus = function () {
-  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  let action = arguments.length > 1 ? arguments[1] : undefined;
-
-  switch (action.type) {
-    case _actions__WEBPACK_IMPORTED_MODULE_0__.SET_CONNECTION_STATUS:
-      return { ...state,
-        ...action.connectionStatus
-      };
-  }
-
-  return state;
-};
-
-const connectionStatusIsFetching = function () {
-  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-  let action = arguments.length > 1 ? arguments[1] : undefined;
-
-  switch (action.type) {
-    case _actions__WEBPACK_IMPORTED_MODULE_0__.SET_CONNECTION_STATUS_IS_FETCHING:
-      return action.isFetching;
-  }
-
-  return state;
-};
-
-
-
-/***/ }),
-
-/***/ "../../js-packages/connection/components/with-connection-status/state/selectors.jsx":
-/*!******************************************************************************************!*\
-  !*** ../../js-packages/connection/components/with-connection-status/state/selectors.jsx ***!
-  \******************************************************************************************/
+/***/ "../../js-packages/connection/state/controls.jsx":
+/*!*******************************************************!*\
+  !*** ../../js-packages/connection/state/controls.jsx ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -8783,33 +8672,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const connectionSelectors = {
-  getConnectionStatus: state => state.connectionStatus || {},
-  getConnectionStatusIsFetching: state => state.connectionStatusIsFetching || false
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (connectionSelectors);
-
-/***/ }),
-
-/***/ "../../js-packages/connection/state/actions.jsx":
-/*!******************************************************!*\
-  !*** ../../js-packages/connection/state/actions.jsx ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _components_with_connection_status_state_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/with-connection-status/state/actions */ "../../js-packages/connection/components/with-connection-status/state/actions.jsx");
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
 /**
- * Internal dependencies
+ * External dependencies
  */
 
-const actions = { ..._components_with_connection_status_state_actions__WEBPACK_IMPORTED_MODULE_0__.default
+
+const FETCH_CONNECTION_STATUS = () => {
+  return new Promise((resolve, reject) => {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_0__.default.fetchSiteConnectionStatus().then(result => resolve(result)).catch(error => reject(error));
+  });
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (actions);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  FETCH_CONNECTION_STATUS
+});
 
 /***/ }),
 
@@ -8826,7 +8703,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_with_connection_status_state_reducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/with-connection-status/state/reducers */ "../../js-packages/connection/components/with-connection-status/state/reducers.jsx");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions */ "../../js-packages/connection/state/actions.jsx");
 /**
  * External dependencies
  */
@@ -8836,11 +8713,94 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
+const connectionStatus = function () {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions__WEBPACK_IMPORTED_MODULE_1__.SET_CONNECTION_STATUS:
+      return { ...state,
+        ...action.connectionStatus
+      };
+  }
+
+  return state;
+};
+
+const connectionStatusIsFetching = function () {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions__WEBPACK_IMPORTED_MODULE_1__.SET_CONNECTION_STATUS_IS_FETCHING:
+      return action.isFetching;
+  }
+
+  return state;
+};
+
+const siteIsRegistering = function () {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions__WEBPACK_IMPORTED_MODULE_1__.SET_SITE_IS_REGISTERING:
+      return action.isRegistering;
+  }
+
+  return state;
+};
+
+const userIsConnecting = function () {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions__WEBPACK_IMPORTED_MODULE_1__.SET_USER_IS_CONNECTING:
+      return action.isConnecting;
+  }
+
+  return state;
+};
+
 const reducers = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
-  connectionStatus: _components_with_connection_status_state_reducers__WEBPACK_IMPORTED_MODULE_1__.connectionStatus,
-  connectionStatusIsFetching: _components_with_connection_status_state_reducers__WEBPACK_IMPORTED_MODULE_1__.connectionStatusIsFetching
+  connectionStatus,
+  connectionStatusIsFetching,
+  siteIsRegistering,
+  userIsConnecting
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reducers);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/state/resolvers.jsx":
+/*!********************************************************!*\
+  !*** ../../js-packages/connection/state/resolvers.jsx ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions */ "../../js-packages/connection/state/actions.jsx");
+/**
+ * Internal dependencies
+ */
+
+const connectionResolvers = {
+  *getConnectionStatus() {
+    yield _actions__WEBPACK_IMPORTED_MODULE_0__.default.setConnectionStatusIsFetching(true);
+    const result = yield _actions__WEBPACK_IMPORTED_MODULE_0__.default.fetchConnectionStatus();
+    yield _actions__WEBPACK_IMPORTED_MODULE_0__.default.setConnectionStatusIsFetching(false);
+    return _actions__WEBPACK_IMPORTED_MODULE_0__.default.setConnectionStatus(result);
+  }
+
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({ ...connectionResolvers
+});
 
 /***/ }),
 
@@ -8855,12 +8815,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _components_with_connection_status_state_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/with-connection-status/state/selectors */ "../../js-packages/connection/components/with-connection-status/state/selectors.jsx");
-/**
- * Internal dependencies
- */
-
-const selectors = { ..._components_with_connection_status_state_selectors__WEBPACK_IMPORTED_MODULE_0__.default
+const connectionSelectors = {
+  getConnectionStatus: state => state.connectionStatus || {},
+  getConnectionStatusIsFetching: state => state.connectionStatusIsFetching || false,
+  getSiteIsRegistering: state => state.siteIsRegistering || false,
+  getUserIsConnecting: state => state.userIsConnecting || false
+};
+const selectors = { ...connectionSelectors
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (selectors);
 
@@ -8919,9 +8880,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions */ "../../js-packages/connection/state/actions.jsx");
 /* harmony import */ var _selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./selectors */ "../../js-packages/connection/state/selectors.jsx");
 /* harmony import */ var _store_holder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./store-holder */ "../../js-packages/connection/state/store-holder.jsx");
+/* harmony import */ var _resolvers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./resolvers */ "../../js-packages/connection/state/resolvers.jsx");
+/* harmony import */ var _controls__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./controls */ "../../js-packages/connection/state/controls.jsx");
 /**
  * Internal dependencies
  */
+
+
 
 
 
@@ -8930,7 +8895,9 @@ const STORE_ID = 'jetpack-connection';
 _store_holder__WEBPACK_IMPORTED_MODULE_0__.default.mayBeInit(STORE_ID, {
   reducer: _reducers__WEBPACK_IMPORTED_MODULE_1__.default,
   actions: _actions__WEBPACK_IMPORTED_MODULE_2__.default,
-  selectors: _selectors__WEBPACK_IMPORTED_MODULE_3__.default
+  selectors: _selectors__WEBPACK_IMPORTED_MODULE_3__.default,
+  resolvers: _resolvers__WEBPACK_IMPORTED_MODULE_4__.default,
+  controls: _controls__WEBPACK_IMPORTED_MODULE_5__.default
 });
 
 
@@ -9787,53 +9754,6 @@ const extractHostname = url => /^https?:\/\//.test(url) ? new URL(url).hostname 
 
 /***/ }),
 
-/***/ "./_inc/actions/connection-status.js":
-/*!*******************************************!*\
-  !*** ./_inc/actions/connection-status.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SET_CONNECTION_STATUS": () => (/* binding */ SET_CONNECTION_STATUS),
-/* harmony export */   "default": () => (/* binding */ connectionStatusActions)
-/* harmony export */ });
-const SET_CONNECTION_STATUS = 'SET_CONNECTION_STATUS';
-const connectionStatusActions = {
-  setConnectionStatus: connectionStatus => {
-    return {
-      type: SET_CONNECTION_STATUS,
-      connectionStatus
-    };
-  }
-};
-
-
-/***/ }),
-
-/***/ "./_inc/actions/index.js":
-/*!*******************************!*\
-  !*** ./_inc/actions/index.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./connection-status */ "./_inc/actions/connection-status.js");
-/**
- * Internal dependencies
- */
-
-const actions = { ..._connection_status__WEBPACK_IMPORTED_MODULE_0__.default
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (actions);
-
-/***/ }),
-
 /***/ "./_inc/components/admin/index.jsx":
 /*!*****************************************!*\
   !*** ./_inc/components/admin/index.jsx ***!
@@ -9843,7 +9763,7 @@ const actions = { ..._connection_status__WEBPACK_IMPORTED_MODULE_0__.default
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Admin)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -9851,13 +9771,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/with-connection-status/index.jsx");
-/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/connect-screen/required-plan/index.jsx");
-/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/connection-status-card/index.jsx");
-/* harmony import */ var _automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-idc */ "../../js-packages/idc/components/idc-screen/index.jsx");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store */ "./_inc/store.js");
-/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../header */ "./_inc/components/header/index.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./_inc/components/admin/style.scss");
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/connection-status-card/index.jsx");
+/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/components/connect-screen/required-plan/index.jsx");
+/* harmony import */ var _automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @automattic/jetpack-connection */ "../../js-packages/connection/state/store.jsx");
+/* harmony import */ var _automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-idc */ "../../js-packages/idc/components/idc-screen/index.jsx");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../store */ "./_inc/store.js");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../header */ "./_inc/components/header/index.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "./_inc/components/admin/style.scss");
 /**
  * External dependencies
  */
@@ -9867,6 +9788,7 @@ __webpack_require__.r(__webpack_exports__);
 const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
+
 /**
  * Internal dependencies
  */
@@ -9874,35 +9796,29 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 
-const ConnectScreenWithConnectionStatus = (0,_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_6__.default)(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_7__.default);
 /**
  * The Connection IU Admin App.
  *
+ * @param {object} props - The properties.
+ * @param {object} props.connectionStatus - The connection status object.
  * @returns {object} The Admin component.
  */
 
-function Admin() {
-  const APINonce = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getAPINonce(), []);
-  const APIRoot = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getAPIRoot(), []);
-  const registrationNonce = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getRegistrationNonce(), []);
-  const IDCData = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getIDCData(), []);
-  const connectionStatus = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getConnectionStatus(), []);
+const Admin = props => {
+  const APINonce = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getAPINonce(), []);
+  const APIRoot = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getAPIRoot(), []);
+  const registrationNonce = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getRegistrationNonce(), []);
+  const IDCData = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getIDCData(), []);
   const {
-    setConnectionStatus
-  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID);
-  const statusCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(status => {
-    setConnectionStatus(status);
-  }, [setConnectionStatus]);
-  const onDisconnectedCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    setConnectionStatus({
-      isActive: false,
-      isRegistered: false,
-      isUserConnected: false
-    });
-  }, [setConnectionStatus]);
+    connectionStatus
+  } = props;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiRoot(APIRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiNonce(APINonce);
+  }, [APIRoot, APINonce]);
 
   if (IDCData.hasIDC) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_8__.default, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_7__.default, {
       wpcomHomeUrl: IDCData.wpcomHomeUrl,
       currentUrl: IDCData.currentUrl,
       apiRoot: APIRoot,
@@ -9911,27 +9827,32 @@ function Admin() {
     });
   }
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_4__.default, null), connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__.default, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_5__.default, null), connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_8__.default, {
     isRegistered: connectionStatus.isRegistered,
     isUserConnected: connectionStatus.isUserConnected,
     apiRoot: APIRoot,
     apiNonce: APINonce,
-    onDisconnected: onDisconnectedCallback,
     redirectUri: "tools.php?page=wpcom-connection-manager"
-  }), !connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ConnectScreenWithConnectionStatus, {
+  }), !connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__.default, {
+    connectionStatus: connectionStatus,
     apiRoot: APIRoot,
     apiNonce: APINonce,
     registrationNonce: registrationNonce,
     from: "connection-ui",
     redirectUri: "tools.php?page=wpcom-connection-manager",
-    statusCallback: statusCallback,
     pricingIcon: "data:image/svg+xml,%3Csvg width='32' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='m21.092 15.164.019-1.703v-.039c0-1.975-1.803-3.866-4.4-3.866-2.17 0-3.828 1.351-4.274 2.943l-.426 1.524-1.581-.065a2.92 2.92 0 0 0-.12-.002c-1.586 0-2.977 1.344-2.977 3.133 0 1.787 1.388 3.13 2.973 3.133H22.399c1.194 0 2.267-1.016 2.267-2.4 0-1.235-.865-2.19-1.897-2.368l-1.677-.29Zm-10.58-3.204a4.944 4.944 0 0 0-.201-.004c-2.75 0-4.978 2.298-4.978 5.133s2.229 5.133 4.978 5.133h12.088c2.357 0 4.267-1.97 4.267-4.4 0-2.18-1.538-3.99-3.556-4.339v-.06c0-3.24-2.865-5.867-6.4-5.867-2.983 0-5.49 1.871-6.199 4.404Z' fill='%23000'/%3E%3C/svg%3E",
     priceBefore: 9,
     priceAfter: 4.5,
     pricingTitle: __('Jetpack Backup', 'jetpack'),
     buttonLabel: __('Get Jetpack Backup', 'jetpack')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, __("Secure and speed up your site for free with Jetpack's powerful WordPress tools.", 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Measure your impact with beautiful stats', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Speed up your site with optimized images', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Protect your site against bot attacks', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Get notifications if your site goes offline', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Enhance your site with dozens of other features', 'jetpack')))));
-}
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.withSelect)(select => {
+  return {
+    connectionStatus: select(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_10__.STORE_ID).getConnectionStatus()
+  };
+})(Admin));
 
 /***/ }),
 
@@ -10018,39 +9939,6 @@ const assets = function () {
 
 /***/ }),
 
-/***/ "./_inc/reducers/connection-status.js":
-/*!********************************************!*\
-  !*** ./_inc/reducers/connection-status.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _actions_connection_status__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/connection-status */ "./_inc/actions/connection-status.js");
-/**
- * Internal dependencies
- */
-
-
-const connectionStatus = function () {
-  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  let action = arguments.length > 1 ? arguments[1] : undefined;
-
-  switch (action.type) {
-    case _actions_connection_status__WEBPACK_IMPORTED_MODULE_0__.SET_CONNECTION_STATUS:
-      return action.connectionStatus;
-  }
-
-  return state;
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (connectionStatus);
-
-/***/ }),
-
 /***/ "./_inc/reducers/idc.js":
 /*!******************************!*\
   !*** ./_inc/reducers/idc.js ***!
@@ -10084,10 +9972,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./connection-status */ "./_inc/reducers/connection-status.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api */ "./_inc/reducers/api.js");
-/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets */ "./_inc/reducers/assets.js");
-/* harmony import */ var _idc__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./idc */ "./_inc/reducers/idc.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api */ "./_inc/reducers/api.js");
+/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets */ "./_inc/reducers/assets.js");
+/* harmony import */ var _idc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./idc */ "./_inc/reducers/idc.js");
 /**
  * External dependencies
  */
@@ -10099,12 +9986,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 const reducer = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
-  connectionStatus: _connection_status__WEBPACK_IMPORTED_MODULE_1__.default,
-  API: _api__WEBPACK_IMPORTED_MODULE_2__.default,
-  assets: _assets__WEBPACK_IMPORTED_MODULE_3__.default,
-  IDC: _idc__WEBPACK_IMPORTED_MODULE_4__.default
+  API: _api__WEBPACK_IMPORTED_MODULE_1__.default,
+  assets: _assets__WEBPACK_IMPORTED_MODULE_2__.default,
+  IDC: _idc__WEBPACK_IMPORTED_MODULE_3__.default
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reducer);
 
@@ -10148,24 +10033,6 @@ const assetsSelectors = {
 
 /***/ }),
 
-/***/ "./_inc/selectors/connection-status.js":
-/*!*********************************************!*\
-  !*** ./_inc/selectors/connection-status.js ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-const connectionSelectors = {
-  getConnectionStatus: state => state.connectionStatus || {}
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (connectionSelectors);
-
-/***/ }),
-
 /***/ "./_inc/selectors/idc.js":
 /*!*******************************!*\
   !*** ./_inc/selectors/idc.js ***!
@@ -10195,21 +10062,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _connection_status__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./connection-status */ "./_inc/selectors/connection-status.js");
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api */ "./_inc/selectors/api.js");
-/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets */ "./_inc/selectors/assets.js");
-/* harmony import */ var _idc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./idc */ "./_inc/selectors/idc.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api */ "./_inc/selectors/api.js");
+/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets */ "./_inc/selectors/assets.js");
+/* harmony import */ var _idc__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./idc */ "./_inc/selectors/idc.js");
 /**
  * Internal dependencies
  */
 
 
 
-
-const selectors = { ..._connection_status__WEBPACK_IMPORTED_MODULE_0__.default,
-  ..._api__WEBPACK_IMPORTED_MODULE_1__.default,
-  ..._assets__WEBPACK_IMPORTED_MODULE_2__.default,
-  ..._idc__WEBPACK_IMPORTED_MODULE_3__.default
+const selectors = { ..._api__WEBPACK_IMPORTED_MODULE_0__.default,
+  ..._assets__WEBPACK_IMPORTED_MODULE_1__.default,
+  ..._idc__WEBPACK_IMPORTED_MODULE_2__.default
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (selectors);
 
@@ -10228,19 +10092,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "storeConfig": () => (/* binding */ storeConfig)
 /* harmony export */ });
 /* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reducers */ "./_inc/reducers/index.js");
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions */ "./_inc/actions/index.js");
-/* harmony import */ var _selectors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./selectors */ "./_inc/selectors/index.js");
+/* harmony import */ var _selectors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./selectors */ "./_inc/selectors/index.js");
 /**
  * Internal dependencies
  */
 
 
-
 const STORE_ID = 'jetpack-connection-ui';
 const storeConfig = {
   reducer: _reducers__WEBPACK_IMPORTED_MODULE_0__.default,
-  actions: _actions__WEBPACK_IMPORTED_MODULE_1__.default,
-  selectors: _selectors__WEBPACK_IMPORTED_MODULE_2__.default,
+  selectors: _selectors__WEBPACK_IMPORTED_MODULE_1__.default,
   initialState: window.CUI_INITIAL_STATE || {}
 };
 

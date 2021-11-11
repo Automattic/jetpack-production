@@ -21,7 +21,10 @@ This is an alpha version! The changes listed here are not final.
 - The display of Jetpack VideoPress free trial notifications was fixed for Security Daily and Security Realtime plans.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Change the way we interact with RNA Connection Screen.
 - Nav Unification: Display the stats sparkline on WP Admin for Atomic sites. This fix only affects WP.com sites.
+- Updated package dependencies.
+- Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
