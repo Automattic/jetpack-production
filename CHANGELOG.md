@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Admin: reduce bottom padding of admin footer
+- Likes: replace usage of postmessage.js with native window.postMessage
 - On the My Plan page, show available backup storage for new Backup and Security plans
 
 ### Improved compatibility
