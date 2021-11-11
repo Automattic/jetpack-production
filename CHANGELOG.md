@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Admin: reduce bottom padding of admin footer
+- Display a notice when connection owner has an unactivated product licence key
 - Likes: replace usage of postmessage.js with native window.postMessage
 - On the My Plan page, show available backup storage for new Backup and Security plans
 
@@ -21,6 +22,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Nav Unification: Display the stats sparkline on WP Admin for Atomic sites. This fix only affects WP.com sites.
+- Updated package dependencies.
+- Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
 - Update link for Backup and Security product cards to point to checkout for new real-time products

@@ -1727,9 +1727,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js":
+/***/ "../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/browser.js":
 /*!*********************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js ***!
+  !*** ../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/browser.js ***!
   \*********************************************************************************/
 /***/ ((module, exports, __webpack_require__) => {
 
@@ -1987,7 +1987,7 @@ function localstorage() {
 	}
 }
 
-module.exports = __webpack_require__(/*! ./common */ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js")(exports);
+module.exports = __webpack_require__(/*! ./common */ "../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/common.js")(exports);
 
 const {formatters} = module.exports;
 
@@ -2006,9 +2006,9 @@ formatters.j = function (v) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js":
+/***/ "../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/common.js":
 /*!********************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js ***!
+  !*** ../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/common.js ***!
   \********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -2074,8 +2074,6 @@ function setup(env) {
 	function createDebug(namespace) {
 		let prevTime;
 		let enableOverride = null;
-		let namespacesCache;
-		let enabledCache;
 
 		function debug(...args) {
 			// Disabled?
@@ -2136,17 +2134,7 @@ function setup(env) {
 		Object.defineProperty(debug, 'enabled', {
 			enumerable: true,
 			configurable: false,
-			get: () => {
-				if (enableOverride !== null) {
-					return enableOverride;
-				}
-				if (namespacesCache !== createDebug.namespaces) {
-					namespacesCache = createDebug.namespaces;
-					enabledCache = createDebug.enabled(namespace);
-				}
-
-				return enabledCache;
-			},
+			get: () => enableOverride === null ? createDebug.enabled(namespace) : enableOverride,
 			set: v => {
 				enableOverride = v;
 			}
@@ -2175,7 +2163,6 @@ function setup(env) {
 	*/
 	function enable(namespaces) {
 		createDebug.save(namespaces);
-		createDebug.namespaces = namespaces;
 
 		createDebug.names = [];
 		createDebug.skips = [];
@@ -3529,7 +3516,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "../../../node_modules/.pnpm/@babel+runtime@7.16.0/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.16.0/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! debug */ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js");
+/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! debug */ "../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/browser.js");
 /* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(debug__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var interpolate_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! interpolate-components */ "../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/index.js");
 /* harmony import */ var tannin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tannin */ "../../../node_modules/.pnpm/tannin@1.2.0/node_modules/tannin/index.js");
@@ -6947,6 +6934,12 @@ function JetpackRestApiClient(root, nonce) {
     updateLicenseKey: license => postRequest(`${apiRoot}jetpack/v4/licensing/set-license`, postParams, {
       body: JSON.stringify({
         license
+      })
+    }).then(checkStatus).then(parseJsonResponse),
+    getUserLicensesCounts: () => getRequest(`${apiRoot}jetpack/v4/licensing/user/counts`, getParams).then(checkStatus).then(parseJsonResponse),
+    updateLicensingActivationNoticeDismiss: lastDetachedCount => postRequest(`${apiRoot}jetpack/v4/licensing/user/activation-notice-dismiss`, postParams, {
+      body: JSON.stringify({
+        last_detached_count: lastDetachedCount
       })
     }).then(checkStatus).then(parseJsonResponse),
     updateRecommendationsStep: step => postRequest(`${apiRoot}jetpack/v4/recommendations/step`, postParams, {

@@ -91,7 +91,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/wpes/class-query-builder.php'
 	),
 	'Automattic\\Jetpack\\Licensing' => array(
-		'version' => '1.4.9999999.9999999-dev',
+		'version' => '1.5.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
 	),
 	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
