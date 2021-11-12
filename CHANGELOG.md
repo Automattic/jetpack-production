@@ -24,7 +24,9 @@ This is an alpha version! The changes listed here are not final.
 - Allow /sites/$site/external-media/copy/pexels to insert post meta data
 - Change the way we interact with RNA Connection Screen.
 - Don't set Webpack's `output.pathinfo` in production builds.
+- Fix some code where the minifier loses the translator comments.
 - Nav Unification: Display the stats sparkline on WP Admin for Atomic sites. This fix only affects WP.com sites.
+- Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
