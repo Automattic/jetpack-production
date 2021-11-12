@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Change the way we interact with RNA Connection Screen.
+- Don't set Webpack's `output.pathinfo` in production builds.
 - Nav Unification: Display the stats sparkline on WP Admin for Atomic sites. This fix only affects WP.com sites.
 - Updated package dependencies.
 - Updated package dependencies.
