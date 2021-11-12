@@ -243,13 +243,14 @@ module.exports = window["wp"]["i18n"];
 /******/ 	
 /******/ 	/* webpack/runtime/get mini-css chunk filename with rtl */
 /******/ 	!function() {
+/******/ 		if ( ! __webpack_require__.miniCssF ) throw new Error( 'MiniCSSWithRTLPlugin was loaded before MiniCSSExtractPlugin' );
 /******/ 		__webpack_require__.miniCssF = (
-/******/ 					function(originalFn) { return function(chunkId) {
-/******/ 				var isCssRtlEnabled = document.dir === 'rtl';
-/******/ 				var originalUrl = originalFn(chunkId);
-/******/ 				return isCssRtlEnabled ? originalUrl.replace(".css",".rtl.css") : originalUrl;
-/******/ 		}; }
-/******/ 				)(__webpack_require__.miniCssF)
+/******/ 			function(originalFn) { return function(chunkId) {
+/******/ 				var isRtl = document.dir === 'rtl';
+/******/ 				var originalUrl = originalFn( chunkId );
+/******/ 				return isRtl ? originalUrl.replace( /\.css(?:$|\?)/, '.rtl$&' ) : originalUrl;
+/******/ 			}; }
+/******/ 		)( __webpack_require__.miniCssF );
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
