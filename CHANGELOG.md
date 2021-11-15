@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Navigation: make sure correct dropdown item is selected when visiting Recommendation section on mobile
 - Search: Restore filter query string functionality
 - The display of Jetpack VideoPress free trial notifications was fixed for Security Daily and Security Realtime plans.
+- VideoPress: reload block when updating video rating in Gutenberg and fix rating meta update in API
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Allow /sites/$site/external-media/copy/pexels to insert post meta data
