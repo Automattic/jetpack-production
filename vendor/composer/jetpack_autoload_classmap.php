@@ -511,7 +511,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-tracking/src/class-tracking.php'
 	),
 	'Automattic\\Jetpack\\Assets' => array(
-		'version' => '1.11.9999999.9999999-dev',
+		'version' => '1.12.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-assets/src/class-assets.php'
 	),
 	'Automattic\\Jetpack\\A8c_Mc_Stats' => array(

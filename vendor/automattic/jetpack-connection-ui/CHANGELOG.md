@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Replace the withConnectionStatus HOC with withSelect HOC.
 - Updated package dependencies
+- Use `Assets::register_script()` to load Webpack-built script.
 
 ### Removed
 - Remove use of `gulp` in build, all it was doing was wrapping `webpack`.

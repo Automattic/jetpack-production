@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
+- Use `Assets::register_script()` to load Webpack-built script.
 
 ## [2.0.5] - 2021-11-09
 ### Changed
