@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.4-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 10.4-a.5 - 2021-11-16
 ### Enhancements
 - Dashboard: display a notice when you have unactivated product licence keys linked to your WordPress.com account.
