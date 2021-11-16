@@ -7350,7 +7350,7 @@ const PricingCard = props => {
     className: "jp-components__pricing-card__title"
   }, props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-components__pricing-card__pricing"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, props.priceBefore !== props.priceAfter && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-components__pricing-card__price-before"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "jp-components__pricing-card__currency"
