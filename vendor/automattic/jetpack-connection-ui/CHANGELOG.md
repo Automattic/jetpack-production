@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Remove use of `gulp` in build, all it was doing was wrapping `webpack`.
 
+### Fixed
+- Assets: revert use of the new method added to register scripts
+
 ## [2.0.0] - 2021-11-09
 ### Added
 - Initialize IDC package, properly display the RNA IDC screen.

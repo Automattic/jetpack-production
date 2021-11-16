@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Use `Assets::register_script()` to load Webpack-built script.
 
+### Fixed
+- Assets: revert use of the new method added to register scripts
+
 ## [2.0.5] - 2021-11-09
 ### Changed
 - Update webpack build config.
