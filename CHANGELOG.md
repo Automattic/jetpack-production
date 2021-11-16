@@ -2,50 +2,28 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.4-a.4 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.4-a.5 - 2021-11-16
 ### Enhancements
-- Add new attach-license endpoint
-- Admin: reduce bottom padding of admin footer
-- Display a notice when connection owner has an unactivated product licence key
-- Likes: Reimplemented non-admin portions without jQuery
-- Likes: replace usage of postmessage.js with native window.postMessage
-- Make VideoPress block resizable by adding handles in Gutenberg.
-- On the My Plan page, show available backup storage for new Backup and Security plans
-
-### Improved compatibility
-- map new Site Editor location from Gutenberg 11.9 to Calypso
+- Dashboard: display a notice when you have unactivated product licence keys linked to your WordPress.com account.
+- Likes: refactor Likes in posts to improve performance and avoid loading additional libraries.
+- VideoPress: add handles to resize the Video Block in the editor.
 
 ### Bug fixes
-- Jetpack Assistant: align info icon
-- Jetpack Assistant: hide background image on small viewports
-- Navigation: make sure correct dropdown item is selected when visiting Recommendation section on mobile
-- Search: Restore filter query string functionality
-- The display of Jetpack VideoPress free trial notifications was fixed for Security Daily and Security Realtime plans.
-- VideoPress: reload block when updating video rating in Gutenberg and fix rating meta update in API
+- Dashboard: fix some layout and display issues in the Recommendations panel.
+- Dashboard: ensure plan information is properly displayed when using Backup and Security plans.
+- Instant Search: restore filter query string functionality.
+- VideoPress: reload block when updating video rating in the editor, and ensure rating meta data is updated.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Allow /sites/$site/external-media/copy/pexels to insert post meta data
 - Change the way we interact with RNA Connection Screen.
 - Don't set Webpack's `output.pathinfo` in production builds.
 - Fix some code where the minifier loses the translator comments.
+- Nav Unification: map new Site Editor location from Gutenberg 11.9 to Calypso
 - Nav Unification: Display the stats sparkline on WP Admin for Atomic sites. This fix only affects WP.com sites.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
 - Updated package dependencies.
 - Update link for Backup and Security product cards to point to checkout for new real-time products
 - Use monorepo `validate-es` script to validate Webpack builds.
-- Use `Assets::register_script()` to load (most) Webpack-built scripts.
 
 ## 10.4-a.3 - 2021-11-09
 ### Enhancements

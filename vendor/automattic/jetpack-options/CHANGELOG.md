@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.13.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.13.5] - 2021-11-16
 ### Added
 - Added Jetpack Option 'licensing_activation_notice_dismiss'.
 
@@ -135,7 +132,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Initial release
 
-[1.13.5-alpha]: https://github.com/Automattic/jetpack-options/compare/v1.13.4...v1.13.5-alpha
+[1.13.5]: https://github.com/Automattic/jetpack-options/compare/v1.13.4...v1.13.5
 [1.13.4]: https://github.com/Automattic/jetpack-options/compare/v1.13.3...v1.13.4
 [1.13.3]: https://github.com/Automattic/jetpack-options/compare/v1.13.2...v1.13.3
 [1.13.2]: https://github.com/Automattic/jetpack-options/compare/v1.13.1...v1.13.2
