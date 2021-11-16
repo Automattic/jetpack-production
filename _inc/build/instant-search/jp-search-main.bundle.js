@@ -228,7 +228,7 @@ module.exports = window["wp"]["i18n"];
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "jp-search.chunk-" + (chunkId === 161 ? "main-payload" : chunkId) + "." + {"161":"b3a48ad78b3620a388d1","650":"d1ecd3b7aae9224f10d9"}[chunkId] + ".min.js";
+/******/ 			return "jp-search.chunk-" + (chunkId === 161 ? "main-payload" : chunkId) + "." + {"161":"e9f0dfc37c8a418d3d18","650":"a13798bb032e03564d67"}[chunkId] + ".min.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -243,13 +243,14 @@ module.exports = window["wp"]["i18n"];
 /******/ 	
 /******/ 	/* webpack/runtime/get mini-css chunk filename with rtl */
 /******/ 	!function() {
+/******/ 		if ( ! __webpack_require__.miniCssF ) throw new Error( 'MiniCSSWithRTLPlugin was loaded before MiniCSSExtractPlugin' );
 /******/ 		__webpack_require__.miniCssF = (
-/******/ 					function(originalFn) { return function(chunkId) {
-/******/ 				var isCssRtlEnabled = document.dir === 'rtl';
-/******/ 				var originalUrl = originalFn(chunkId);
-/******/ 				return isCssRtlEnabled ? originalUrl.replace(".css",".rtl.css") : originalUrl;
-/******/ 		}; }
-/******/ 				)(__webpack_require__.miniCssF)
+/******/ 			function(originalFn) { return function(chunkId) {
+/******/ 				var isRtl = document.dir === 'rtl';
+/******/ 				var originalUrl = originalFn( chunkId );
+/******/ 				return isRtl ? originalUrl.replace( /\.css(?:$|\?)/, '.rtl$&' ) : originalUrl;
+/******/ 			}; }
+/******/ 		)( __webpack_require__.miniCssF );
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
