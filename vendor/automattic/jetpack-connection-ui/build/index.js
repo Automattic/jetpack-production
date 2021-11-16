@@ -6948,7 +6948,12 @@ function JetpackRestApiClient(root, nonce) {
         redirect_uri: redirectUri
       })
     }).then(checkStatus).then(parseJsonResponse),
-    migrateIDC: () => postRequest(`${apiRoot}jetpack/v4/identity-crisis/migrate`, postParams).then(checkStatus)
+    migrateIDC: () => postRequest(`${apiRoot}jetpack/v4/identity-crisis/migrate`, postParams).then(checkStatus),
+    attachLicenses: licenses => postRequest(`${apiRoot}jetpack/v4/licensing/attach-licenses`, postParams, {
+      body: JSON.stringify({
+        licenses
+      })
+    }).then(checkStatus).then(parseJsonResponse)
   };
   /**
    * The default callback to add a cachebuster parameter to route

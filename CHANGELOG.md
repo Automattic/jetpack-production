@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add new attach-license endpoint
 - Admin: reduce bottom padding of admin footer
 - Display a notice when connection owner has an unactivated product licence key
 - Likes: Reimplemented non-admin portions without jQuery
@@ -30,6 +31,8 @@ This is an alpha version! The changes listed here are not final.
 - Don't set Webpack's `output.pathinfo` in production builds.
 - Fix some code where the minifier loses the translator comments.
 - Nav Unification: Display the stats sparkline on WP Admin for Atomic sites. This fix only affects WP.com sites.
+- Updated package dependencies.
+- Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.

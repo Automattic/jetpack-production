@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a test for update to WPCOM return change.
 - Added get_license_activation_notice_dismiss() function.
 
 ## [1.4.9] - 2021-11-02
