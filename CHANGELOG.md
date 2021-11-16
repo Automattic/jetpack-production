@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Jetpack Assistant: align info icon
+- Jetpack Assistant: hide background image on small viewports
 - Navigation: make sure correct dropdown item is selected when visiting Recommendation section on mobile
 - Search: Restore filter query string functionality
 - The display of Jetpack VideoPress free trial notifications was fixed for Security Daily and Security Realtime plans.
