@@ -90,6 +90,10 @@ return array(
 		'version' => '0.1.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/wpes/class-query-builder.php'
 	),
+	'Automattic\\Jetpack\\My_Jetpack\\Initializer' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-my-jetpack/src/class-initializer.php'
+	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '1.5.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
@@ -165,6 +169,10 @@ return array(
 	'Automattic\\Jetpack\\Abtest' => array(
 		'version' => '1.9.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php'
+	),
+	'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-admin-ui/src/class-admin-menu.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
 		'version' => '1.5.9999999.9999999-dev',

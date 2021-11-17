@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Automattic\\Jetpack\\A8c_Mc_Stats' => $vendorDir . '/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php',
     'Automattic\\Jetpack\\Abtest' => $vendorDir . '/automattic/jetpack-abtest/src/class-abtest.php',
+    'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => $vendorDir . '/automattic/jetpack-admin-ui/src/class-admin-menu.php',
     'Automattic\\Jetpack\\Assets' => $vendorDir . '/automattic/jetpack-assets/src/class-assets.php',
     'Automattic\\Jetpack\\Assets\\Logo' => $vendorDir . '/automattic/jetpack-logo/src/class-logo.php',
     'Automattic\\Jetpack\\Autoloader\\AutoloadFileWriter' => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadFileWriter.php',
@@ -54,6 +55,7 @@ return array(
     'Automattic\\Jetpack\\JITMS\\Rest_Api_Endpoints' => $vendorDir . '/automattic/jetpack-jitm/src/class-rest-api-endpoints.php',
     'Automattic\\Jetpack\\Jetpack_Lazy_Images' => $vendorDir . '/automattic/jetpack-lazy-images/src/lazy-images.php',
     'Automattic\\Jetpack\\Licensing' => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php',
+    'Automattic\\Jetpack\\My_Jetpack\\Initializer' => $vendorDir . '/automattic/jetpack-my-jetpack/src/class-initializer.php',
     'Automattic\\Jetpack\\Partner' => $vendorDir . '/automattic/jetpack-partner/src/class-partner.php',
     'Automattic\\Jetpack\\Password_Checker' => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php',
     'Automattic\\Jetpack\\Plugin\\Tracking' => $baseDir . '/src/class-tracking.php',

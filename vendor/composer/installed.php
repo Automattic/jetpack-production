@@ -37,6 +37,15 @@
             'reference' => 'd5277d8ed2a8f41c512d045815191c761c448299',
             'dev_requirement' => false,
         ),
+        'automattic/jetpack-admin-ui' => array(
+            'pretty_version' => '0.1.x-dev',
+            'version' => '0.1.9999999.9999999-dev',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../automattic/jetpack-admin-ui',
+            'aliases' => array(),
+            'reference' => '74332c7ef0f9060a2eda111d2d4bd19544545844',
+            'dev_requirement' => false,
+        ),
         'automattic/jetpack-assets' => array(
             'pretty_version' => '1.12.x-dev',
             'version' => '1.12.9999999.9999999-dev',
@@ -188,6 +197,17 @@
             'install_path' => __DIR__ . '/../automattic/jetpack-logo',
             'aliases' => array(),
             'reference' => '508fd54d433a6cb3da2db0ebf1926b0cf2a6debd',
+            'dev_requirement' => false,
+        ),
+        'automattic/jetpack-my-jetpack' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../automattic/jetpack-my-jetpack',
+            'aliases' => array(
+                0 => '0.1.x-dev',
+            ),
+            'reference' => '1bdc7980067947d6ba4ccc6deaf751fb98b0e5ec',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-options' => array(

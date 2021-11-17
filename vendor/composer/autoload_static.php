@@ -38,6 +38,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_4_a_6
     public static $classMap = array (
         'Automattic\\Jetpack\\A8c_Mc_Stats' => __DIR__ . '/..' . '/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php',
         'Automattic\\Jetpack\\Abtest' => __DIR__ . '/..' . '/automattic/jetpack-abtest/src/class-abtest.php',
+        'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => __DIR__ . '/..' . '/automattic/jetpack-admin-ui/src/class-admin-menu.php',
         'Automattic\\Jetpack\\Assets' => __DIR__ . '/..' . '/automattic/jetpack-assets/src/class-assets.php',
         'Automattic\\Jetpack\\Assets\\Logo' => __DIR__ . '/..' . '/automattic/jetpack-logo/src/class-logo.php',
         'Automattic\\Jetpack\\Autoloader\\AutoloadFileWriter' => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src/AutoloadFileWriter.php',
@@ -84,6 +85,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_4_a_6
         'Automattic\\Jetpack\\JITMS\\Rest_Api_Endpoints' => __DIR__ . '/..' . '/automattic/jetpack-jitm/src/class-rest-api-endpoints.php',
         'Automattic\\Jetpack\\Jetpack_Lazy_Images' => __DIR__ . '/..' . '/automattic/jetpack-lazy-images/src/lazy-images.php',
         'Automattic\\Jetpack\\Licensing' => __DIR__ . '/..' . '/automattic/jetpack-licensing/src/class-licensing.php',
+        'Automattic\\Jetpack\\My_Jetpack\\Initializer' => __DIR__ . '/..' . '/automattic/jetpack-my-jetpack/src/class-initializer.php',
         'Automattic\\Jetpack\\Partner' => __DIR__ . '/..' . '/automattic/jetpack-partner/src/class-partner.php',
         'Automattic\\Jetpack\\Password_Checker' => __DIR__ . '/..' . '/automattic/jetpack-password-checker/src/class-password-checker.php',
         'Automattic\\Jetpack\\Plugin\\Tracking' => __DIR__ . '/../..' . '/src/class-tracking.php',
