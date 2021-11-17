@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Podcast Player block: add 'jetpack_podcast_helper_tracks_quantity' filter to control number of tracks fetched. Deprecate the 'jetpack_podcast_helper_list_quantity' filter.
+
 ### Bug fixes
 - SSO: Fixing button content alignment for small screens
 
