@@ -2,16 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.4-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.4-a.7 - 2021-11-17
 ### Enhancements
 - Podcast Player block: add 'jetpack_podcast_helper_tracks_quantity' filter to control number of tracks fetched. Deprecate the 'jetpack_podcast_helper_list_quantity' filter.
 
 ### Bug fixes
-- Fix VideoPress load for old videos in Gutenberg
-- SSO: Fixing button content alignment for small screens
+- VideoPress: fix VideoPress load for old videos in Gutenberg
+- SSO: fix button content alignment for small screens
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adding My Jetpack
