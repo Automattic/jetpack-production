@@ -1519,7 +1519,7 @@ function plural(ms, msAbs, n, name) {
 /* harmony import */ var crc32__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(crc32__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var seed_random__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8211);
 /* harmony import */ var seed_random__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(seed_random__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(658);
+/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8798);
 /* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(debug__WEBPACK_IMPORTED_MODULE_2__);
 /**
  * External dependencies
@@ -10122,7 +10122,7 @@ function isHistoryNavigation(state) {
 
 /***/ }),
 
-/***/ 658:
+/***/ 8798:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* eslint-env browser */
@@ -10293,7 +10293,7 @@ function localstorage() {
   }
 }
 
-module.exports = __webpack_require__(871)(exports);
+module.exports = __webpack_require__(1092)(exports);
 const {
   formatters
 } = module.exports;
@@ -10311,7 +10311,7 @@ formatters.j = function (v) {
 
 /***/ }),
 
-/***/ 871:
+/***/ 1092:
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /**
@@ -10373,6 +10373,8 @@ function setup(env) {
   function createDebug(namespace) {
     let prevTime;
     let enableOverride = null;
+    let namespacesCache;
+    let enabledCache;
 
     function debug() {
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -10435,7 +10437,18 @@ function setup(env) {
     Object.defineProperty(debug, 'enabled', {
       enumerable: true,
       configurable: false,
-      get: () => enableOverride === null ? createDebug.enabled(namespace) : enableOverride,
+      get: () => {
+        if (enableOverride !== null) {
+          return enableOverride;
+        }
+
+        if (namespacesCache !== createDebug.namespaces) {
+          namespacesCache = createDebug.namespaces;
+          enabledCache = createDebug.enabled(namespace);
+        }
+
+        return enabledCache;
+      },
       set: v => {
         enableOverride = v;
       }
@@ -10464,6 +10477,7 @@ function setup(env) {
 
   function enable(namespaces) {
     createDebug.save(namespaces);
+    createDebug.namespaces = namespaces;
     createDebug.names = [];
     createDebug.skips = [];
     let i;
