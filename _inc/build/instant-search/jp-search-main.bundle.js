@@ -234,7 +234,7 @@ module.exports = window["wp"]["i18n"];
 /******/ 	
 /******/ 	/* webpack/runtime/get mini-css chunk filename */
 /******/ 	!function() {
-/******/ 		// This function allow to reference all chunks
+/******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
 /******/ 			return "jp-search.chunk-" + "main-payload" + "." + "ff81368e518f79bc1b4b" + ".min.css";
