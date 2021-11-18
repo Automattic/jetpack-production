@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Ensure that a new object references are created after the API request.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fixed admin menu tests on WP.com
 - Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
