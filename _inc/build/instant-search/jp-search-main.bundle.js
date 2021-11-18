@@ -2,7 +2,7 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 4199:
+/***/ 1242:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@
 /* harmony export */   "rs": function() { return /* binding */ PRODUCT_SORT_OPTIONS; }
 /* harmony export */ });
 /* unused harmony exports SORT_DIRECTION_DESC, RESULT_FORMAT_MINIMAL */
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3163);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5736);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
 /**
  * External dependencies
@@ -49,7 +49,7 @@ const PRODUCT_SORT_OPTIONS = new Map([['price_asc', __('Price: low to high', 'je
 
 /***/ }),
 
-/***/ 4704:
+/***/ 3746:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -58,7 +58,7 @@ const PRODUCT_SORT_OPTIONS = new Map([['price_asc', __('Price: low to high', 'je
 /* harmony export */   "Em": function() { return /* binding */ bindCustomizerMessages; },
 /* harmony export */   "vJ": function() { return /* binding */ bindCustomizerChanges; }
 /* harmony export */ });
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4199);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1242);
 /**
  * Internal dependencies
  */
@@ -133,7 +133,7 @@ function bindCustomizerChanges(callback) {
 
 /***/ }),
 
-/***/ 8911:
+/***/ 3546:
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 // NOTE: Setting this free variable allows us to modify Webpack's public path, enabling us to use
@@ -145,7 +145,7 @@ __webpack_require__.p = window.JetpackInstantSearchOptions.webpackPublicPath;
 
 /***/ }),
 
-/***/ 3163:
+/***/ 5736:
 /***/ (function(module) {
 
 "use strict";
@@ -228,7 +228,7 @@ module.exports = window["wp"]["i18n"];
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "jp-search.chunk-" + (chunkId === 161 ? "main-payload" : chunkId) + "." + {"161":"e9f0dfc37c8a418d3d18","650":"a13798bb032e03564d67"}[chunkId] + ".min.js";
+/******/ 			return "jp-search.chunk-" + (chunkId === 161 ? "main-payload" : chunkId) + "." + {"161":"b4276255300f730ece43","949":"28262eaead7d65d3fde4"}[chunkId] + ".min.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -531,10 +531,10 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 !function() {
 "use strict";
-/* harmony import */ var _set_webpack_public_path__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8911);
+/* harmony import */ var _set_webpack_public_path__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3546);
 /* harmony import */ var _set_webpack_public_path__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_set_webpack_public_path__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _lib_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4199);
-/* harmony import */ var _lib_customize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4704);
+/* harmony import */ var _lib_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1242);
+/* harmony import */ var _lib_customize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3746);
 // NOTE: This must be imported first before any other imports.
 // See: https://github.com/webpack/webpack/issues/2776#issuecomment-233208623
 
@@ -549,7 +549,7 @@ var __webpack_exports__ = {};
  */
 
 function init() {
-  Promise.all(/* import() | main-payload */[__webpack_require__.e(650), __webpack_require__.e(161)]).then(__webpack_require__.bind(__webpack_require__, 6450)).then(instantSearch => instantSearch.initialize());
+  Promise.all(/* import() | main-payload */[__webpack_require__.e(949), __webpack_require__.e(161)]).then(__webpack_require__.bind(__webpack_require__, 1876)).then(instantSearch => instantSearch.initialize());
 } // Bind customizer changes immediately.
 
 

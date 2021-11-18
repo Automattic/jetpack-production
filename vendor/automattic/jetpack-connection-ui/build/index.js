@@ -1049,7 +1049,7 @@ function formatCurrency(number, code) {
     return null;
   }
 
-  var _currencyDefaults$opt = (0,_babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0__.default)({}, currencyDefaults, options),
+  var _currencyDefaults$opt = (0,_babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, currencyDefaults, options),
       decimal = _currencyDefaults$opt.decimal,
       grouping = _currencyDefaults$opt.grouping,
       precision = _currencyDefaults$opt.precision,
@@ -1083,7 +1083,7 @@ function getCurrencyObject(number, code) {
     return null;
   }
 
-  var _currencyDefaults$opt2 = (0,_babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0__.default)({}, currencyDefaults, options),
+  var _currencyDefaults$opt2 = (0,_babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, currencyDefaults, options),
       decimal = _currencyDefaults$opt2.decimal,
       grouping = _currencyDefaults$opt2.grouping,
       precision = _currencyDefaults$opt2.precision,
@@ -1134,7 +1134,7 @@ function _defineProperty(obj, key, value) {
 }
 
 module.exports = _defineProperty;
-module.exports.default = module.exports, module.exports.__esModule = true;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
 
@@ -1159,12 +1159,12 @@ function _extends() {
     return target;
   };
 
-  module.exports.default = module.exports, module.exports.__esModule = true;
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
   return _extends.apply(this, arguments);
 }
 
 module.exports = _extends;
-module.exports.default = module.exports, module.exports.__esModule = true;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
 
@@ -1204,10 +1204,10 @@ __webpack_require__.r(__webpack_exports__);
  * @return {(variables?:{[variable:string]:*})=>*} Compiled evaluator.
  */
 function compile( expression ) {
-	var terms = (0,_tannin_postfix__WEBPACK_IMPORTED_MODULE_0__.default)( expression );
+	var terms = (0,_tannin_postfix__WEBPACK_IMPORTED_MODULE_0__["default"])( expression );
 
 	return function( variables ) {
-		return (0,_tannin_evaluate__WEBPACK_IMPORTED_MODULE_1__.default)( terms, variables );
+		return (0,_tannin_evaluate__WEBPACK_IMPORTED_MODULE_1__["default"])( terms, variables );
 	};
 }
 
@@ -1363,7 +1363,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {Function} Evaluator function.
  */
 function pluralForms( expression ) {
-	var evaluate = (0,_tannin_compile__WEBPACK_IMPORTED_MODULE_0__.default)( expression );
+	var evaluate = (0,_tannin_compile__WEBPACK_IMPORTED_MODULE_0__["default"])( expression );
 
 	return function( n ) {
 		return +evaluate( { n: n } );
@@ -3714,7 +3714,7 @@ I18N.prototype.numberFormat = function (number) {
   var decimals = typeof options === 'number' ? options : options.decimals || 0;
   var decPoint = options.decPoint || this.state.numberFormatSettings.decimal_point || '.';
   var thousandsSep = options.thousandsSep || this.state.numberFormatSettings.thousands_sep || ',';
-  return (0,_number_format__WEBPACK_IMPORTED_MODULE_9__.default)(number, decimals, decPoint, thousandsSep);
+  return (0,_number_format__WEBPACK_IMPORTED_MODULE_9__["default"])(number, decimals, decPoint, thousandsSep);
 };
 
 I18N.prototype.configure = function (options) {
@@ -3803,7 +3803,7 @@ I18N.prototype.setLocale = function (localeData) {
   // - or the `momentjs_locale.textDirection` property present in Calypso translation files
 
   this.state.textDirection = ((_this$state$locale$te = this.state.locale["text direction\x04ltr"]) === null || _this$state$locale$te === void 0 ? void 0 : _this$state$locale$te[0]) || ((_this$state$locale$ = this.state.locale['']) === null || _this$state$locale$ === void 0 ? void 0 : (_this$state$locale$$m = _this$state$locale$.momentjs_locale) === null || _this$state$locale$$m === void 0 ? void 0 : _this$state$locale$$m.textDirection);
-  this.state.tannin = new tannin__WEBPACK_IMPORTED_MODULE_4__.default((0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__.default)({}, domain_key, this.state.locale)); // Updates numberFormat preferences with settings from translations
+  this.state.tannin = new tannin__WEBPACK_IMPORTED_MODULE_4__["default"]((0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])({}, domain_key, this.state.locale)); // Updates numberFormat preferences with settings from translations
 
   this.state.numberFormatSettings.decimal_point = getTranslationFromTannin(this.state.tannin, normalizeTranslateArguments([decimal_point_translation_key]));
   this.state.numberFormatSettings.thousands_sep = getTranslationFromTannin(this.state.tannin, normalizeTranslateArguments([thousands_sep_translation_key])); // If translation isn't set, define defaults.
@@ -3892,7 +3892,7 @@ I18N.prototype.translate = function () {
     sprintfArgs.unshift(translation);
 
     try {
-      translation = _tannin_sprintf__WEBPACK_IMPORTED_MODULE_8__.default.apply(void 0, (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__.default)(sprintfArgs));
+      translation = _tannin_sprintf__WEBPACK_IMPORTED_MODULE_8__["default"].apply(void 0, (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(sprintfArgs));
     } catch (error) {
       if (!window || !window.console) {
         return;
@@ -3910,7 +3910,7 @@ I18N.prototype.translate = function () {
 
 
   if (options.components) {
-    translation = (0,interpolate_components__WEBPACK_IMPORTED_MODULE_3__.default)({
+    translation = (0,interpolate_components__WEBPACK_IMPORTED_MODULE_3__["default"])({
       mixedString: translation,
       components: options.components,
       throwErrors: this.throwErrors
@@ -3961,7 +3961,7 @@ I18N.prototype.registerTranslateHook = function (callback) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "I18N": function() { return /* reexport safe */ _i18n__WEBPACK_IMPORTED_MODULE_0__.default; },
+/* harmony export */   "I18N": function() { return /* reexport safe */ _i18n__WEBPACK_IMPORTED_MODULE_0__["default"]; },
 /* harmony export */   "numberFormat": function() { return /* binding */ numberFormat; },
 /* harmony export */   "translate": function() { return /* binding */ translate; },
 /* harmony export */   "configure": function() { return /* binding */ configure; },
@@ -3993,7 +3993,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var i18n = new _i18n__WEBPACK_IMPORTED_MODULE_0__.default();
+var i18n = new _i18n__WEBPACK_IMPORTED_MODULE_0__["default"]();
 
 /* harmony default export */ __webpack_exports__["default"] = (i18n);
 var numberFormat = i18n.numberFormat.bind(i18n);
@@ -4011,10 +4011,10 @@ var stateObserver = i18n.stateObserver;
 var on = i18n.on.bind(i18n);
 var off = i18n.off.bind(i18n);
 var emit = i18n.emit.bind(i18n);
-var localize = (0,_localize__WEBPACK_IMPORTED_MODULE_1__.default)(i18n);
-var useTranslate = (0,_use_translate__WEBPACK_IMPORTED_MODULE_2__.default)(i18n);
+var localize = (0,_localize__WEBPACK_IMPORTED_MODULE_1__["default"])(i18n);
+var useTranslate = (0,_use_translate__WEBPACK_IMPORTED_MODULE_2__["default"])(i18n);
 
-var _rtlFactory = (0,_rtl__WEBPACK_IMPORTED_MODULE_3__.default)(i18n),
+var _rtlFactory = (0,_rtl__WEBPACK_IMPORTED_MODULE_3__["default"])(i18n),
     useRtl = _rtlFactory.useRtl,
     withRtl = _rtlFactory.withRtl;
 
@@ -4082,27 +4082,27 @@ __webpack_require__.r(__webpack_exports__);
     return _temp = _class =
     /*#__PURE__*/
     function (_React$Component) {
-      (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__.default)(_class, _React$Component);
+      (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(_class, _React$Component);
 
       function _class() {
         var _getPrototypeOf2;
 
         var _this;
 
-        (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__.default)(this, _class);
+        (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, _class);
 
         for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
           args[_key] = arguments[_key];
         }
 
-        _this = (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__.default)(this, (_getPrototypeOf2 = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__.default)(_class)).call.apply(_getPrototypeOf2, [this].concat(args)));
+        _this = (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, (_getPrototypeOf2 = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(_class)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-        (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__.default)((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__.default)(_this), "boundForceUpdate", _this.forceUpdate.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__.default)(_this)));
+        (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "boundForceUpdate", _this.forceUpdate.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this)));
 
         return _this;
       }
 
-      (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__.default)(_class, [{
+      (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(_class, [{
         key: "componentDidMount",
         value: function componentDidMount() {
           i18n.on('change', this.boundForceUpdate);
@@ -4115,7 +4115,7 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         key: "render",
         value: function render() {
-          var props = (0,_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({
+          var props = (0,_babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({
             locale: i18n.getLocaleSlug()
           }, this.props, {}, i18nProps);
 
@@ -4124,7 +4124,7 @@ __webpack_require__.r(__webpack_exports__);
       }]);
 
       return _class;
-    }((react__WEBPACK_IMPORTED_MODULE_8___default().Component)), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__.default)(_class, "displayName", 'Localized(' + componentName + ')'), _temp;
+    }((react__WEBPACK_IMPORTED_MODULE_8___default().Component)), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_class, "displayName", 'Localized(' + componentName + ')'), _temp;
   };
 }
 
@@ -4223,7 +4223,7 @@ function rtlFactory(i18n) {
   var withRtl = (0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__.createHigherOrderComponent)(function (WrappedComponent) {
     return (0,react__WEBPACK_IMPORTED_MODULE_1__.forwardRef)(function (props, ref) {
       var isRtl = useRtl();
-      return react__WEBPACK_IMPORTED_MODULE_1___default().createElement(WrappedComponent, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, props, {
+      return react__WEBPACK_IMPORTED_MODULE_1___default().createElement(WrappedComponent, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
         isRtl: isRtl,
         ref: ref
       }));
@@ -4268,7 +4268,7 @@ __webpack_require__.r(__webpack_exports__);
 
   return function useTranslate() {
     var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default().useState(bindTranslate),
-        _React$useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__.default)(_React$useState, 2),
+        _React$useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$useState, 2),
         translate = _React$useState2[0],
         setTranslate = _React$useState2[1];
 
@@ -4490,7 +4490,7 @@ function interpolate(options) {
 	}
 };
 
-exports.default = interpolate;
+exports["default"] = interpolate;
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -6630,7 +6630,7 @@ Tannin.prototype.getPluralForm = function( domain, n ) {
 				config.plural_forms
 			);
 
-			pf = (0,_tannin_plural_forms__WEBPACK_IMPORTED_MODULE_0__.default)( plural );
+			pf = (0,_tannin_plural_forms__WEBPACK_IMPORTED_MODULE_0__["default"])( plural );
 		}
 
 		getPluralForm = this.pluralForms[ domain ] = pf;
@@ -7157,7 +7157,7 @@ const ActionButton = props => {
     onClick: onClick,
     isPrimary: true,
     disabled: isLoading
-  }, isLoading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_spinner__WEBPACK_IMPORTED_MODULE_5__.default, null) : label), displayError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, isLoading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_spinner__WEBPACK_IMPORTED_MODULE_5__["default"], null) : label), displayError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "jp-action-button__error"
   }, errorMessage));
 };
@@ -7626,8 +7626,8 @@ const ConnectButton = props => {
    */
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiNonce(apiNonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
    * Initialize the site registration process.
@@ -7643,7 +7643,7 @@ const ConnectButton = props => {
     }
 
     setSiteIsRegistering(true);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.registerSite(registrationNonce, redirectUri).then(response => {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].registerSite(registrationNonce, redirectUri).then(response => {
       setSiteIsRegistering(false);
 
       if (onRegistered) {
@@ -7668,12 +7668,12 @@ const ConnectButton = props => {
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, (!isRegistered || !isUserConnected) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__.default, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, (!isRegistered || !isUserConnected) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__["default"], {
     label: connectLabel,
     onClick: registerSite,
     displayError: registrationError ? true : false,
     isLoading: siteIsRegistering || userIsConnecting
-  }), userIsConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_7__.default, {
+  }), userIsConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_7__["default"], {
     connectUrl: authorizationUrl,
     redirectUri: redirectUri,
     from: from
@@ -7823,9 +7823,9 @@ const ConnectScreenLayout = props => {
     className: 'jp-connection__connect-screen-layout' + (showImageSlider ? ' jp-connection__connect-screen-layout__two-columns' : '') + (className ? ' ' + className : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connection__connect-screen-layout__left"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, title), children), showImageSlider ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, title), children), showImageSlider ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connection__connect-screen-layout__right"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_image_slider__WEBPACK_IMPORTED_MODULE_4__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_image_slider__WEBPACK_IMPORTED_MODULE_4__["default"], {
     images: images,
     assetBaseUrl: assetBaseUrl
   })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -7910,7 +7910,7 @@ const ConnectScreenRequiredPlan = props => {
   } = props;
   const connectionStatus = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_4__.STORE_ID).getConnectionStatus(), []);
   const renderConnectBtn = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((label, trigger) => {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_button__WEBPACK_IMPORTED_MODULE_5__.default, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_button__WEBPACK_IMPORTED_MODULE_5__["default"], {
       autoTrigger: trigger,
       apiRoot: apiRoot,
       apiNonce: apiNonce,
@@ -7920,7 +7920,7 @@ const ConnectScreenRequiredPlan = props => {
       connectLabel: label
     });
   }, [apiRoot, apiNonce, registrationNonce, from, redirectUri]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_visual__WEBPACK_IMPORTED_MODULE_6__.default, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_visual__WEBPACK_IMPORTED_MODULE_6__["default"], {
     title: title,
     autoTrigger: autoTrigger,
     buttonLabel: buttonLabel,
@@ -8042,12 +8042,12 @@ const ConnectScreenRequiredPlanVisual = props => {
   } = props;
   const tos = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)(__('By clicking the button above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>share details</shareDetailsLink> with WordPress.com.', 'jetpack'), {
     tosLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__.default)('wpcom-tos'),
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__["default"])('wpcom-tos'),
       rel: "noopener noreferrer",
       target: "_blank"
     }),
     shareDetailsLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__.default)('jetpack-support-what-data-does-jetpack-sync'),
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__["default"])('jetpack-support-what-data-does-jetpack-sync'),
       rel: "noopener noreferrer",
       target: "_blank"
     })
@@ -8055,14 +8055,14 @@ const ConnectScreenRequiredPlanVisual = props => {
   const withSubscription = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)(__('Already have a subscription? <connectButton/> to get started.', 'jetpack'), {
     connectButton: renderConnectBtn(__('Log in', 'jetpack'), false)
   });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout__WEBPACK_IMPORTED_MODULE_6__.default, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
     title: title,
     className: 'jp-connection__connect-screen-required-plan' + (isLoading ? ' jp-connection__connect-screen-required-plan__loading' : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connection__connect-screen-required-plan__content"
   }, children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-connection__connect-screen-required-plan__pricing-card"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__["default"], {
     title: pricingTitle,
     icon: pricingIcon,
     priceBefore: priceBefore,
@@ -8163,7 +8163,7 @@ const ConnectUser = props => {
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (!authorizationUrl) {
-      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__.default.fetchAuthorizationUrl(redirectUri).then(response => setAuthorizationUrl(response.authorizeUrl)).catch(error => {
+      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__["default"].fetchAuthorizationUrl(redirectUri).then(response => setAuthorizationUrl(response.authorizeUrl)).catch(error => {
         throw error;
       });
     }
@@ -8271,8 +8271,8 @@ const ConnectionStatusCard = props => {
    */
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.setApiNonce(apiNonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
    * Fetch the connection data on the first render.
@@ -8281,7 +8281,7 @@ const ConnectionStatusCard = props => {
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     setIsFetchingConnectionData(true);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__.default.fetchSiteConnectionData().then(response => {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].fetchSiteConnectionData().then(response => {
       var _response$currentUser, _response$currentUser2, _response$currentUser3;
 
       setIsFetchingConnectionData(false);
@@ -8330,7 +8330,7 @@ const ConnectionStatusCard = props => {
     className: "jp-connection-status-card--list"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     className: "jp-connection-status-card--list-item-success"
-  }, __('Site connected.', 'jetpack'), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_disconnect_dialog__WEBPACK_IMPORTED_MODULE_8__.default, {
+  }, __('Site connected.', 'jetpack'), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_disconnect_dialog__WEBPACK_IMPORTED_MODULE_8__["default"], {
     apiRoot: apiRoot,
     apiNonce: apiNonce,
     onDisconnected: onDisconnectedCallback
@@ -8343,7 +8343,7 @@ const ConnectionStatusCard = props => {
     disabled: userIsConnecting,
     onClick: setUserIsConnecting,
     className: "jp-connection-status-card--btn-connect-user"
-  }, __('Connect your WordPress.com account', 'jetpack')), userIsConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_9__.default, {
+  }, __('Connect your WordPress.com account', 'jetpack')), userIsConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_9__["default"], {
     redirectUri: redirectUri
   }));
 };
@@ -8436,8 +8436,8 @@ const DisconnectDialog = props => {
    */
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.setApiNonce(apiNonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
    * Open the Disconnect Dialog.
@@ -8463,7 +8463,7 @@ const DisconnectDialog = props => {
     e && e.preventDefault();
     setDisconnectError(false);
     setIsDisconnecting(true);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__.default.disconnectSite().then(() => {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].disconnectSite().then(() => {
       setIsDisconnecting(false);
       setIsDisconnected(true);
     }).catch(error => {
@@ -8517,13 +8517,13 @@ const DisconnectDialog = props => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('<strong>Need help?</strong> Learn more about the <jpConnectionInfoLink>Jetpack connection</jpConnectionInfoLink> or <jpSupportLink>contact Jetpack support</jpSupportLink>', 'jetpack'), {
     strong: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null),
     jpConnectionInfoLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default)('why-the-wordpress-com-connection-is-important-for-jetpack'),
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__["default"])('why-the-wordpress-com-connection-is-important-for-jetpack'),
       rel: "noopener noreferrer",
       target: "_blank",
       className: "jp-disconnect-dialog__link"
     }),
     jpSupportLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default)('jetpack-support'),
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__["default"])('jetpack-support'),
       rel: "noopener noreferrer",
       target: "_blank",
       className: "jp-disconnect-dialog__link"
@@ -8542,7 +8542,7 @@ const DisconnectDialog = props => {
     className: "jp-disconnect-dialog__btn-disconnect"
   }, __('Disconnect', 'jetpack')))), disconnectError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "jp-disconnect-dialog__error"
-  }, errorMessage))), isDisconnected && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('Jetpack has been <br/>successfully disconnected.', 'jetpack'), {
+  }, errorMessage))), isDisconnected && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('Jetpack has been <br/>successfully disconnected.', 'jetpack'), {
     br: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null)
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
     isPrimary: true,
@@ -8641,7 +8641,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const FETCH_CONNECTION_STATUS = () => {
   return new Promise((resolve, reject) => {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_0__.default.fetchSiteConnectionStatus().then(result => resolve(result)).catch(error => reject(error));
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_0__["default"].fetchSiteConnectionStatus().then(result => resolve(result)).catch(error => reject(error));
   });
 };
 
@@ -8747,10 +8747,10 @@ __webpack_require__.r(__webpack_exports__);
 
 const connectionResolvers = {
   *getConnectionStatus() {
-    yield _actions__WEBPACK_IMPORTED_MODULE_0__.default.setConnectionStatusIsFetching(true);
-    const result = yield _actions__WEBPACK_IMPORTED_MODULE_0__.default.fetchConnectionStatus();
-    yield _actions__WEBPACK_IMPORTED_MODULE_0__.default.setConnectionStatusIsFetching(false);
-    return _actions__WEBPACK_IMPORTED_MODULE_0__.default.setConnectionStatus(result);
+    yield _actions__WEBPACK_IMPORTED_MODULE_0__["default"].setConnectionStatusIsFetching(true);
+    const result = yield _actions__WEBPACK_IMPORTED_MODULE_0__["default"].fetchConnectionStatus();
+    yield _actions__WEBPACK_IMPORTED_MODULE_0__["default"].setConnectionStatusIsFetching(false);
+    return _actions__WEBPACK_IMPORTED_MODULE_0__["default"].setConnectionStatus(result);
   }
 
 };
@@ -8841,12 +8841,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const STORE_ID = 'jetpack-connection';
-_store_holder__WEBPACK_IMPORTED_MODULE_0__.default.mayBeInit(STORE_ID, {
-  reducer: _reducers__WEBPACK_IMPORTED_MODULE_1__.default,
-  actions: _actions__WEBPACK_IMPORTED_MODULE_2__.default,
-  selectors: _selectors__WEBPACK_IMPORTED_MODULE_3__.default,
-  resolvers: _resolvers__WEBPACK_IMPORTED_MODULE_4__.default,
-  controls: _controls__WEBPACK_IMPORTED_MODULE_5__.default
+_store_holder__WEBPACK_IMPORTED_MODULE_0__["default"].mayBeInit(STORE_ID, {
+  reducer: _reducers__WEBPACK_IMPORTED_MODULE_1__["default"],
+  actions: _actions__WEBPACK_IMPORTED_MODULE_2__["default"],
+  selectors: _selectors__WEBPACK_IMPORTED_MODULE_3__["default"],
+  resolvers: _resolvers__WEBPACK_IMPORTED_MODULE_4__["default"],
+  controls: _controls__WEBPACK_IMPORTED_MODULE_5__["default"]
 });
 
 
@@ -8910,8 +8910,8 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
  */
 
 const CardFresh = props => {
-  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__.default)(props.wpcomHomeUrl);
-  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__.default)(props.currentUrl);
+  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__["default"])(props.wpcomHomeUrl);
+  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__["default"])(props.currentUrl);
   const redirectUri = props.redirectUri;
   const {
     isActionInProgress,
@@ -8932,7 +8932,7 @@ const CardFresh = props => {
     if (!isActionInProgress) {
       setIsActionInProgress(true);
       setIsStartingFresh(true);
-      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__.default.startIDCFresh(redirectUri).then(connectUrl => {
+      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__["default"].startIDCFresh(redirectUri).then(connectUrl => {
         window.location.href = connectUrl + '&from=idc-notice';
       }).catch(error => {
         setIsActionInProgress(false);
@@ -8963,7 +8963,7 @@ const CardFresh = props => {
     label: buttonLabel,
     onClick: doStartFresh,
     disabled: isActionInProgress
-  }, isStartingFresh ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__.default, null) : buttonLabel)));
+  }, isStartingFresh ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__["default"], null) : buttonLabel)));
 };
 
 CardFresh.propTypes = {
@@ -9043,8 +9043,8 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
  */
 
 const CardMigrate = props => {
-  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__.default)(props.wpcomHomeUrl);
-  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__.default)(props.currentUrl);
+  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__["default"])(props.wpcomHomeUrl);
+  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__["default"])(props.currentUrl);
   const {
     isActionInProgress,
     setIsActionInProgress
@@ -9067,7 +9067,7 @@ const CardMigrate = props => {
     if (!isActionInProgress) {
       setIsActionInProgress(true);
       setIsMigrating(true);
-      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__.default.migrateIDC().then(() => {
+      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__["default"].migrateIDC().then(() => {
         setIsMigrating(false);
 
         if (onMigrated && {}.toString.call(onMigrated) === '[object Function]') {
@@ -9102,7 +9102,7 @@ const CardMigrate = props => {
     label: buttonLabel,
     onClick: doMigrate,
     disabled: isActionInProgress
-  }, isMigrating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__.default, null) : buttonLabel)));
+  }, isMigrating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__["default"], null) : buttonLabel)));
 };
 
 CardMigrate.propTypes = {
@@ -9192,8 +9192,8 @@ const IDCScreen = props => {
    */
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiNonce(apiNonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__["default"].setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__["default"].setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: 'jp-idc__idc-screen' + (isMigrated ? ' jp-idc__idc-screen__success' : '')
@@ -9203,10 +9203,10 @@ const IDCScreen = props => {
     className: "jp-idc__idc-screen__logo"
   }, logo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__logo-label"
-  }, headerText)), isMigrated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_migrated__WEBPACK_IMPORTED_MODULE_5__.default, {
+  }, headerText)), isMigrated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_migrated__WEBPACK_IMPORTED_MODULE_5__["default"], {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_main__WEBPACK_IMPORTED_MODULE_6__.default, {
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_main__WEBPACK_IMPORTED_MODULE_6__["default"], {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
     onMigrated: onMigrated,
@@ -9224,7 +9224,7 @@ IDCScreen.propTypes = {
   apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired)
 };
 IDCScreen.defaultProps = {
-  logo: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__.default, {
+  logo: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__["default"], {
     height: 24
   }),
   headerText: __('Safe Mode', 'jetpack')
@@ -9289,23 +9289,23 @@ const ScreenMain = props => {
   } = props;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, __('Safe Mode has been activated', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createInterpolateElement)(__('Your site is in Safe Mode because you have 2 Jetpack-powered sites that appear to be duplicates. ' + '2 sites that are telling Jetpack they’re the same site. <safeModeLink>Learn more about safe mode.</safeModeLink>', 'jetpack'), {
     safeModeLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__.default)('jetpack-support-safe-mode'),
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__["default"])('jetpack-support-safe-mode'),
       rel: "noopener noreferrer",
       target: "_blank"
     })
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, __('Please select an option', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__cards"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_migrate__WEBPACK_IMPORTED_MODULE_5__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_migrate__WEBPACK_IMPORTED_MODULE_5__["default"], {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
     onMigrated: onMigrated
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__cards-separator"
-  }, "or"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_fresh__WEBPACK_IMPORTED_MODULE_6__.default, {
+  }, "or"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_fresh__WEBPACK_IMPORTED_MODULE_6__["default"], {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
     redirectUri: redirectUri
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_safe_mode__WEBPACK_IMPORTED_MODULE_7__.default, null));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_safe_mode__WEBPACK_IMPORTED_MODULE_7__["default"], null));
 };
 
 ScreenMain.propTypes = {
@@ -9363,8 +9363,8 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__;
  */
 
 const ScreenMigrated = props => {
-  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__.default)(props.wpcomHomeUrl);
-  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__.default)(props.currentUrl);
+  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__["default"])(props.wpcomHomeUrl);
+  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__["default"])(props.currentUrl);
 
   const buttonLabel = __('Got it, thanks', 'jetpack');
 
@@ -9399,7 +9399,7 @@ const ScreenMigrated = props => {
     className: "jp-idc__idc-screen__card-action-button jp-idc__idc-screen__card-action-button-migrated",
     onClick: handleOkButton,
     label: buttonLabel
-  }, isHandlingOk ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__.default, null) : buttonLabel));
+  }, isHandlingOk ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__["default"], null) : buttonLabel));
 };
 
 ScreenMigrated.propTypes = {
@@ -9483,7 +9483,7 @@ const renderStaySafeButton = (callback, isDisabled) => {
 const renderStayingSafe = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__safe-mode__staying-safe"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__["default"], {
     color: "black"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, __('Finishing setting up Safe mode…', 'jetpack')));
 };
@@ -9498,7 +9498,7 @@ const SafeMode = props => {
     if (!isActionInProgress) {
       setIsStayingSafe(true);
       setIsActionInProgress(true);
-      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__.default.confirmIDCSafeMode().then(() => {
+      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__["default"].confirmIDCSafeMode().then(() => {
         window.location.reload();
       }).catch(error => {
         setIsActionInProgress(false);
@@ -9669,10 +9669,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const STORE_ID = 'jetpack-idc';
-_store_holder__WEBPACK_IMPORTED_MODULE_0__.default.mayBeInit(STORE_ID, {
-  reducer: _reducers__WEBPACK_IMPORTED_MODULE_1__.default,
-  actions: _actions__WEBPACK_IMPORTED_MODULE_2__.default,
-  selectors: _selectors__WEBPACK_IMPORTED_MODULE_3__.default
+_store_holder__WEBPACK_IMPORTED_MODULE_0__["default"].mayBeInit(STORE_ID, {
+  reducer: _reducers__WEBPACK_IMPORTED_MODULE_1__["default"],
+  actions: _actions__WEBPACK_IMPORTED_MODULE_2__["default"],
+  selectors: _selectors__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 
 
@@ -9754,12 +9754,12 @@ const Admin = props => {
     connectionStatus
   } = props;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiRoot(APIRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiNonce(APINonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__["default"].setApiRoot(APIRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__["default"].setApiNonce(APINonce);
   }, [APIRoot, APINonce]);
 
   if (IDCData.hasIDC) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_7__.default, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_7__["default"], {
       wpcomHomeUrl: IDCData.wpcomHomeUrl,
       currentUrl: IDCData.currentUrl,
       apiRoot: APIRoot,
@@ -9768,13 +9768,13 @@ const Admin = props => {
     });
   }
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_5__.default, null), connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_8__.default, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_5__["default"], null), connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_8__["default"], {
     isRegistered: connectionStatus.isRegistered,
     isUserConnected: connectionStatus.isUserConnected,
     apiRoot: APIRoot,
     apiNonce: APINonce,
     redirectUri: "tools.php?page=wpcom-connection-manager"
-  }), !connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__.default, {
+  }), !connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__["default"], {
     connectionStatus: connectionStatus,
     apiRoot: APIRoot,
     apiNonce: APINonce,
@@ -9913,9 +9913,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const reducer = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
-  API: _api__WEBPACK_IMPORTED_MODULE_1__.default,
-  assets: _assets__WEBPACK_IMPORTED_MODULE_2__.default,
-  IDC: _idc__WEBPACK_IMPORTED_MODULE_3__.default
+  API: _api__WEBPACK_IMPORTED_MODULE_1__["default"],
+  assets: _assets__WEBPACK_IMPORTED_MODULE_2__["default"],
+  IDC: _idc__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (reducer);
 
@@ -9985,9 +9985,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const selectors = { ..._api__WEBPACK_IMPORTED_MODULE_0__.default,
-  ..._assets__WEBPACK_IMPORTED_MODULE_1__.default,
-  ..._idc__WEBPACK_IMPORTED_MODULE_2__.default
+const selectors = { ..._api__WEBPACK_IMPORTED_MODULE_0__["default"],
+  ..._assets__WEBPACK_IMPORTED_MODULE_1__["default"],
+  ..._idc__WEBPACK_IMPORTED_MODULE_2__["default"]
 };
 /* harmony default export */ __webpack_exports__["default"] = (selectors);
 
@@ -10014,8 +10014,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const STORE_ID = 'jetpack-connection-ui';
 const storeConfig = {
-  reducer: _reducers__WEBPACK_IMPORTED_MODULE_0__.default,
-  selectors: _selectors__WEBPACK_IMPORTED_MODULE_1__.default,
+  reducer: _reducers__WEBPACK_IMPORTED_MODULE_0__["default"],
+  selectors: _selectors__WEBPACK_IMPORTED_MODULE_1__["default"],
   initialState: window.CUI_INITIAL_STATE || {}
 };
 
@@ -10313,7 +10313,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "../../../node_modules/.pnpm/@babel+runtime@7.16.0/node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr);
+  if (Array.isArray(arr)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(arr);
 }
 
 /***/ }),
@@ -10491,7 +10491,7 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
-  if (superClass) (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);
+  if (superClass) (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__["default"])(subClass, superClass);
 }
 
 /***/ }),
@@ -10615,7 +10615,7 @@ function _objectSpread(target) {
     }
 
     ownKeys.forEach(function (key) {
-      (0,_defineProperty_js__WEBPACK_IMPORTED_MODULE_0__.default)(target, key, source[key]);
+      (0,_defineProperty_js__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]);
     });
   }
 
@@ -10662,7 +10662,7 @@ function _objectSpread2(target) {
 
     if (i % 2) {
       ownKeys(Object(source), true).forEach(function (key) {
-        (0,_defineProperty_js__WEBPACK_IMPORTED_MODULE_0__.default)(target, key, source[key]);
+        (0,_defineProperty_js__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]);
       });
     } else if (Object.getOwnPropertyDescriptors) {
       Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
@@ -10694,13 +10694,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _possibleConstructorReturn(self, call) {
-  if (call && ((0,_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__.default)(call) === "object" || typeof call === "function")) {
+  if (call && ((0,_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(call) === "object" || typeof call === "function")) {
     return call;
   } else if (call !== void 0) {
     throw new TypeError("Derived constructors may only return object or undefined");
   }
 
-  return (0,_assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__.default)(self);
+  return (0,_assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__["default"])(self);
 }
 
 /***/ }),
@@ -10747,7 +10747,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _slicedToArray(arr, i) {
-  return (0,_arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr) || (0,_iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__.default)(arr, i) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__.default)(arr, i) || (0,_nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__.default)();
+  return (0,_arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || (0,_iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__["default"])(arr, i) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__["default"])(arr, i) || (0,_nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 }
 
 /***/ }),
@@ -10772,7 +10772,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _toConsumableArray(arr) {
-  return (0,_arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr) || (0,_iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__.default)(arr) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__.default)(arr) || (0,_nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__.default)();
+  return (0,_arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || (0,_iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__["default"])(arr) || (0,_nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 }
 
 /***/ }),
@@ -10821,11 +10821,11 @@ __webpack_require__.r(__webpack_exports__);
 
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
-  if (typeof o === "string") return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);
+  if (typeof o === "string") return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(o, minLen);
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
   if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(o, minLen);
 }
 
 /***/ })
@@ -10939,7 +10939,7 @@ function render() {
     return;
   }
 
-  react_dom__WEBPACK_IMPORTED_MODULE_0___default().render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_components_admin__WEBPACK_IMPORTED_MODULE_3__.default, null), container);
+  react_dom__WEBPACK_IMPORTED_MODULE_0___default().render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_components_admin__WEBPACK_IMPORTED_MODULE_3__["default"], null), container);
 }
 
 render();
