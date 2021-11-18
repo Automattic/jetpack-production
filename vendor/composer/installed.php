@@ -101,12 +101,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection-ui' => array(
-            'pretty_version' => 'v2.1.0',
-            'version' => '2.1.0.0',
+            'pretty_version' => 'v2.1.1',
+            'version' => '2.1.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../automattic/jetpack-connection-ui',
             'aliases' => array(),
-            'reference' => '6c0e79af3f485b7602d1db0f736cfc9361af4b49',
+            'reference' => '7fae158db849d321083154b271dce57bf3eab4b9',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-constants' => array(
@@ -146,12 +146,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-identity-crisis' => array(
-            'pretty_version' => 'v0.4.1',
-            'version' => '0.4.1.0',
+            'pretty_version' => 'v0.4.2',
+            'version' => '0.4.2.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../automattic/jetpack-identity-crisis',
             'aliases' => array(),
-            'reference' => '4b0b80dd4b2460833c5e1c485401c218e4d87be9',
+            'reference' => 'd95fb86396b9394d678e0cf8acc9078c263c2358',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-jitm' => array(
@@ -164,12 +164,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-lazy-images' => array(
-            'pretty_version' => 'v2.0.6',
-            'version' => '2.0.6.0',
+            'pretty_version' => 'v2.0.7',
+            'version' => '2.0.7.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../automattic/jetpack-lazy-images',
             'aliases' => array(),
-            'reference' => '26c556d9acbccd2fd0b26a6663e08856b5f7c68b',
+            'reference' => '55ccfec2b2cb43a6eebcb295ba002819906958cd',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-licensing' => array(
