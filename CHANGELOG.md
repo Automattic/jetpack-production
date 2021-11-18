@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed admin menu tests on WP.com
 - Skips redirect tests for admin menu in wpcom environment.
 - Updated package dependencies
+- Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
