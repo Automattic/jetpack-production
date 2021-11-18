@@ -8942,24 +8942,24 @@ const CardFresh = props => {
     }
   }, [setIsStartingFresh, isActionInProgress, setIsActionInProgress, redirectUri]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-action-base"
+    className: "jp-idc__idc-screen__card-action-base"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-action-top"
+    className: "jp-idc__idc-screen__card-action-top"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, __('Treat each site as independent sites', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.sprintf)(
   /* translators: %1$s: The current site domain name. %2$s: The original site domain name. */
   __('<hostname>%1$s</hostname> settings, stats, and subscribers will start fresh. <hostname>%2$s</hostname> will keep its data as is.', 'jetpack'), currentHostName, wpcomHostName), {
     hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-action-bottom"
+    className: "jp-idc__idc-screen__card-action-bottom"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-action-sitename"
+    className: "jp-idc__idc-screen__card-action-sitename"
   }, wpcomHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Dashicon, {
     icon: "minus",
-    className: "jp-idc-card-action-separator"
+    className: "jp-idc__idc-screen__card-action-separator"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-action-sitename"
+    className: "jp-idc__idc-screen__card-action-sitename"
   }, currentHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-    className: "jp-idc-card-action-button",
+    className: "jp-idc__idc-screen__card-action-button",
     label: buttonLabel,
     onClick: doStartFresh,
     disabled: isActionInProgress
@@ -9081,24 +9081,24 @@ const CardMigrate = props => {
     }
   }, [setIsMigrating, onMigrated, isActionInProgress, setIsActionInProgress]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-action-base"
+    className: "jp-idc__idc-screen__card-action-base"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-action-top"
+    className: "jp-idc__idc-screen__card-action-top"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, __('Move Jetpack data', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.sprintf)(
   /* translators: %1$s: The current site domain name. %2$s: The original site domain name. */
   __('Move all your settings, stats and subscribers to your other <hostname>%1$s</hostname>. <hostname>%2$s</hostname> will be disconnected from Jetpack.', 'jetpack'), currentHostName, wpcomHostName), {
     hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-action-bottom"
+    className: "jp-idc__idc-screen__card-action-bottom"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-action-sitename"
+    className: "jp-idc__idc-screen__card-action-sitename"
   }, wpcomHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Dashicon, {
     icon: "arrow-down-alt",
-    className: "jp-idc-card-action-separator"
+    className: "jp-idc__idc-screen__card-action-separator"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-action-sitename"
+    className: "jp-idc__idc-screen__card-action-sitename"
   }, currentHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-    className: "jp-idc-card-action-button",
+    className: "jp-idc__idc-screen__card-action-button",
     label: buttonLabel,
     onClick: doMigrate,
     disabled: isActionInProgress
@@ -9196,13 +9196,13 @@ const IDCScreen = props => {
     _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__.default.setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-screen-base"
+    className: 'jp-idc__idc-screen' + (isMigrated ? ' jp-idc__idc-screen__success' : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-header"
+    className: "jp-idc__idc-screen__header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-logo"
+    className: "jp-idc__idc-screen__logo"
   }, logo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-logo-label"
+    className: "jp-idc__idc-screen__logo-label"
   }, headerText)), isMigrated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_migrated__WEBPACK_IMPORTED_MODULE_5__.default, {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl
@@ -9294,13 +9294,13 @@ const ScreenMain = props => {
       target: "_blank"
     })
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, __('Please select an option', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-cards"
+    className: "jp-idc__idc-screen__cards"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_migrate__WEBPACK_IMPORTED_MODULE_5__.default, {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
     onMigrated: onMigrated
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-cards-separator"
+    className: "jp-idc__idc-screen__cards-separator"
   }, "or"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_fresh__WEBPACK_IMPORTED_MODULE_6__.default, {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
@@ -9384,19 +9384,19 @@ const ScreenMigrated = props => {
   __('Safe Mode has been switched off for <hostname>%1$s</hostname> website and Jetpack is fully functional.', 'jetpack'), currentHostName), {
     hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-migrated"
+    className: "jp-idc__idc-screen__card-migrated"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-migrated-hostname"
+    className: "jp-idc__idc-screen__card-migrated-hostname"
   }, wpcomHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Dashicon, {
     icon: "arrow-down-alt",
-    className: "jp-idc-card-migrated-separator"
+    className: "jp-idc__idc-screen__card-migrated-separator"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Dashicon, {
     icon: "arrow-right-alt",
-    className: "jp-idc-card-migrated-separator-wide"
+    className: "jp-idc__idc-screen__card-migrated-separator-wide"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-card-migrated-hostname"
+    className: "jp-idc__idc-screen__card-migrated-hostname"
   }, currentHostName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-    className: "jp-idc-card-action-button jp-idc-card-action-button-migrated",
+    className: "jp-idc__idc-screen__card-action-button jp-idc__idc-screen__card-action-button-migrated",
     onClick: handleOkButton,
     label: buttonLabel
   }, isHandlingOk ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__.default, null) : buttonLabel));
@@ -9433,7 +9433,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/idc/components/safe-mode/style.scss");
 /**
  * External dependencies
@@ -9447,6 +9448,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
 
+
 /**
  * Internal dependencies
  */
@@ -9454,53 +9456,76 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
 
 
 /**
- * The safe mode component.
+ * Render the "Stay safe" button.
  *
- * @param {object} props - The properties.
- * @param {boolean} props.isActionInProgress - Whether there's already an action in progress.
- * @param {Function} props.setIsActionInProgress - Function to set the "action in progress" flag.
- * @returns {React.Component} The `ConnectScreen` component.
+ * @param {Function} callback - Button click callback.
+ * @param {boolean} isDisabled - Whether the button should be disabled.
+ * @returns {React.Component} - The rendered output.
  */
+
+const renderStaySafeButton = (callback, isDisabled) => {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('Or decide later and stay in <button>Safe mode</button>', 'jetpack'), {
+    button: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
+      label: __('Safe mode', 'jetpack'),
+      variant: "link",
+      onClick: callback,
+      disabled: isDisabled
+    })
+  });
+};
+/**
+ * Render the "staying safe" line.
+ *
+ * @returns {React.Component} - The rendered output.
+ */
+
+
+const renderStayingSafe = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-idc__safe-mode__staying-safe"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__.default, {
+    color: "black"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, __('Finishing setting up Safe mode…', 'jetpack')));
+};
 
 const SafeMode = props => {
   const {
     isActionInProgress,
     setIsActionInProgress
   } = props;
-  const staySafe = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
+  const [isStayingSafe, setIsStayingSafe] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const staySafeCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
     if (!isActionInProgress) {
+      setIsStayingSafe(true);
       setIsActionInProgress(true);
       _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__.default.confirmIDCSafeMode().then(() => {
         window.location.reload();
       }).catch(error => {
         setIsActionInProgress(false);
+        setIsStayingSafe(false);
         throw error;
       });
     }
   }, [isActionInProgress, setIsActionInProgress]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc-safe-mode"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('Or decide later and stay in <button>Safe mode</button>', 'jetpack'), {
-    button: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Button, {
-      label: __('Safe mode', 'jetpack'),
-      variant: "link",
-      onClick: staySafe,
-      disabled: isActionInProgress
-    })
-  }));
+    className: "jp-idc__safe-mode"
+  }, isStayingSafe ? renderStayingSafe() : renderStaySafeButton(staySafeCallback, isActionInProgress));
 };
 
 SafeMode.propTypes = {
+  /** Whether there's already an action in progress. */
   isActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
+
+  /** Function to set the "action in progress" flag. */
   setIsActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
 };
 /* harmony default export */ __webpack_exports__["default"] = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_2__.compose)([(0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.withSelect)(select => {
   return {
-    isActionInProgress: select(_state_store__WEBPACK_IMPORTED_MODULE_9__.STORE_ID).getIsActionInProgress()
+    isActionInProgress: select(_state_store__WEBPACK_IMPORTED_MODULE_10__.STORE_ID).getIsActionInProgress()
   };
 }), (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.withDispatch)(dispatch => {
   return {
-    setIsActionInProgress: dispatch(_state_store__WEBPACK_IMPORTED_MODULE_9__.STORE_ID).setIsActionInProgress
+    setIsActionInProgress: dispatch(_state_store__WEBPACK_IMPORTED_MODULE_10__.STORE_ID).setIsActionInProgress
   };
 })])(SafeMode));
 

@@ -56,7 +56,7 @@
 /**
  * Reset the WP Admin page styles for Gutenberg-like pages.
  */
-.jp-idc-screen-base {
+.jp-idc__idc-screen {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   background: white;
   padding: 10px;
@@ -67,51 +67,58 @@
   box-sizing: border-box;
   margin: 0 auto;
 }
+.jp-idc__idc-screen.jp-idc__idc-screen__success {
+  border-color: #069e08;
+}
 @media (min-width: 600px) {
-  .jp-idc-screen-base {
+  .jp-idc__idc-screen {
     padding: 48px;
   }
 }
-.jp-idc-screen-base .jp-idc-header {
+.jp-idc__idc-screen .jp-idc__idc-screen__header {
   display: flex;
   align-items: center;
 }
-.jp-idc-screen-base .jp-idc-header .jp-idc-logo-label {
+.jp-idc__idc-screen .jp-idc__idc-screen__header .jp-idc__idc-screen__logo-label {
   font-size: 14px;
   line-height: 22px;
   margin: -7px 8px 0 0;
 }
-.jp-idc-screen-base h2 {
+.jp-idc__idc-screen h2 {
   margin: 32px 0 16px;
   font-weight: 600;
   font-size: 24px;
   line-height: 28px;
 }
-.jp-idc-screen-base h3 {
+.jp-idc__idc-screen h3 {
   margin: 24px 0 0;
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
 }
-.jp-idc-screen-base p {
+.jp-idc__idc-screen p {
   margin: 0;
   max-width: 710px;
   font-size: 16px;
   line-height: 24px;
   color: #2C3338;
 }
-.jp-idc-screen-base .jp-idc-cards {
+.jp-idc__idc-screen a {
+  color: #2C3338;
+}
+.jp-idc__idc-screen .jp-idc__idc-screen__cards {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 }
 @media only screen and (min-width: 1400px) {
-  .jp-idc-screen-base .jp-idc-cards {
+  .jp-idc__idc-screen .jp-idc__idc-screen__cards {
     flex-direction: row;
+    align-items: normal;
   }
 }
-.jp-idc-screen-base .jp-idc-cards .jp-idc-cards-separator {
+.jp-idc__idc-screen .jp-idc__idc-screen__cards .jp-idc__idc-screen__cards-separator {
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
@@ -119,7 +126,7 @@
   margin: 0 24px;
   align-self: center;
 }
-.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base {
+.jp-idc__idc-screen .jp-idc__idc-screen__cards .jp-idc__idc-screen__card-action-base {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -131,20 +138,20 @@
   margin: 24px 0;
 }
 @media (min-width: 600px) {
-  .jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base {
+  .jp-idc__idc-screen .jp-idc__idc-screen__cards .jp-idc__idc-screen__card-action-base {
     padding: 24px;
   }
 }
-.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base h4 {
+.jp-idc__idc-screen .jp-idc__idc-screen__cards .jp-idc__idc-screen__card-action-base h4 {
   margin: 0 0 8px;
   font-weight: normal;
   font-size: 20px;
   line-height: 28px;
 }
-.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base p {
+.jp-idc__idc-screen .jp-idc__idc-screen__cards .jp-idc__idc-screen__card-action-base p {
   margin: 0 0 24px;
 }
-.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base .jp-idc-card-action-sitename {
+.jp-idc__idc-screen .jp-idc__idc-screen__cards .jp-idc__idc-screen__card-action-base .jp-idc__idc-screen__card-action-sitename {
   width: 100%;
   background: #F9F9F6;
   border-radius: 33px;
@@ -156,15 +163,15 @@
   padding: 16px;
   overflow-wrap: anywhere;
 }
-.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base .jp-idc-card-action-separator {
+.jp-idc__idc-screen .jp-idc__idc-screen__cards .jp-idc__idc-screen__card-action-base .jp-idc__idc-screen__card-action-separator {
   margin: 12px auto;
   display: block;
 }
-.jp-idc-screen-base .jp-idc-cards .jp-idc-card-action-base .jp-idc-card-action-button {
+.jp-idc__idc-screen .jp-idc__idc-screen__cards .jp-idc__idc-screen__card-action-base .jp-idc__idc-screen__card-action-button {
   width: 100%;
   padding: 8px 24px;
 }
-.jp-idc-screen-base .jp-idc-card-action-button {
+.jp-idc__idc-screen .jp-idc__idc-screen__card-action-button {
   margin-top: 24px;
   padding: 8px;
   height: auto;
@@ -177,11 +184,11 @@
   color: #FFFFFF;
   justify-content: center;
 }
-.jp-idc-screen-base .jp-idc-card-action-button-migrated {
+.jp-idc__idc-screen .jp-idc__idc-screen__card-action-button-migrated {
   width: 141px;
   margin-top: 64px;
 }
-.jp-idc-screen-base .jp-idc-card-migrated {
+.jp-idc__idc-screen .jp-idc__idc-screen__card-migrated {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -189,7 +196,7 @@
   width: 100%;
   margin-top: 24px;
 }
-.jp-idc-screen-base .jp-idc-card-migrated .jp-idc-card-migrated-hostname {
+.jp-idc__idc-screen .jp-idc__idc-screen__card-migrated .jp-idc__idc-screen__card-migrated-hostname {
   border: 1px solid #C3C4C7;
   border-radius: 4px;
   padding: 24px;
@@ -200,28 +207,28 @@
   flex-grow: 1;
   width: 100%;
 }
-.jp-idc-screen-base .jp-idc-card-migrated .jp-idc-card-migrated-separator-wide {
+.jp-idc__idc-screen .jp-idc__idc-screen__card-migrated .jp-idc__idc-screen__card-migrated-separator-wide {
   display: none;
 }
-.jp-idc-screen-base .jp-idc-card-migrated .jp-idc-card-migrated-separator {
+.jp-idc__idc-screen .jp-idc__idc-screen__card-migrated .jp-idc__idc-screen__card-migrated-separator {
   display: block;
 }
-.jp-idc-screen-base .jp-idc-card-migrated .jp-idc-card-migrated-separator,
-.jp-idc-screen-base .jp-idc-card-migrated .jp-idc-card-migrated-separator-wide {
+.jp-idc__idc-screen .jp-idc__idc-screen__card-migrated .jp-idc__idc-screen__card-migrated-separator,
+.jp-idc__idc-screen .jp-idc__idc-screen__card-migrated .jp-idc__idc-screen__card-migrated-separator-wide {
   margin: 28px;
 }
 @media only screen and (min-width: 1400px) {
-  .jp-idc-screen-base .jp-idc-card-migrated {
+  .jp-idc__idc-screen .jp-idc__idc-screen__card-migrated {
     flex-direction: row;
     width: auto;
   }
-  .jp-idc-screen-base .jp-idc-card-migrated .jp-idc-card-migrated-separator {
+  .jp-idc__idc-screen .jp-idc__idc-screen__card-migrated .jp-idc__idc-screen__card-migrated-separator {
     display: none;
   }
-  .jp-idc-screen-base .jp-idc-card-migrated .jp-idc-card-migrated-separator-wide {
+  .jp-idc__idc-screen .jp-idc__idc-screen__card-migrated .jp-idc__idc-screen__card-migrated-separator-wide {
     display: block;
   }
-  .jp-idc-screen-base .jp-idc-card-migrated .jp-idc-card-migrated-hostname {
+  .jp-idc__idc-screen .jp-idc__idc-screen__card-migrated .jp-idc__idc-screen__card-migrated-hostname {
     width: auto;
   }
 }
@@ -261,15 +268,23 @@
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ../../../node_modules/.pnpm/cache-loader@4.1.0_webpack@5.51.1/node_modules/cache-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/.pnpm/css-loader@6.2.0_webpack@5.51.1/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!../../../node_modules/.pnpm/sass-loader@12.2.0_sass@1.43.3+webpack@5.51.1/node_modules/sass-loader/dist/cjs.js!../../js-packages/idc/components/safe-mode/style.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.jp-idc-screen-base .jp-idc-safe-mode {
+.jp-idc__idc-screen .jp-idc__safe-mode {
   text-align: center;
 }
-.jp-idc-screen-base .jp-idc-safe-mode, .jp-idc-screen-base .jp-idc-safe-mode button {
+.jp-idc__idc-screen .jp-idc__safe-mode .jp-idc__safe-mode__staying-safe {
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+}
+.jp-idc__idc-screen .jp-idc__safe-mode .jp-idc__safe-mode__staying-safe .jp-components-spinner {
+  margin: 0 10px;
+}
+.jp-idc__idc-screen .jp-idc__safe-mode, .jp-idc__idc-screen .jp-idc__safe-mode button {
   font-size: 16px;
   line-height: 24px;
   color: #2C3338;
 }
-.jp-idc-screen-base .jp-idc-safe-mode button {
+.jp-idc__idc-screen .jp-idc__safe-mode button {
   padding: 0;
   text-decoration: underline;
 }
