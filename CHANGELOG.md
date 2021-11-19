@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Ensure that a new object references are created after the API request.
+- Stats: remove ASCII art from the stats pixel alt tag for improved accessibility.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fixed admin menu tests on WP.com
