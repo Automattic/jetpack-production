@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fixed admin menu tests on WP.com
+- REST API Return user ID for comment author if present
 - Skips redirect tests for admin menu in wpcom environment.
 - Updated package dependencies
 - Updated package dependencies
