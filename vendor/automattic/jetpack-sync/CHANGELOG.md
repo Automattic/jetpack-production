@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updated package dependencies.
+
 ## [1.27.3] - 2021-11-16
 ### Changed
 - Actions: add the do_only_first_initial_sync method which starts an initial sync only when one hasn't already been done

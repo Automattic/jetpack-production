@@ -6706,9 +6706,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @automattic/jetpack-config */ "../../js-packages/config/src/index.js");
+/* harmony import */ var _automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_1__);
 /**
  * External dependencies
  */
+
 
 /**
  * Helps create new custom error classes to better notify upper layers.
@@ -6788,6 +6791,10 @@ function JetpackRestApiClient(root, nonce) {
         registration_nonce: registrationNonce,
         no_iframe: true
       };
+
+      if ((0,_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_1__.jetpackConfigHas)('consumer_slug')) {
+        params.plugin_slug = (0,_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_1__.jetpackConfigGet)('consumer_slug');
+      }
 
       if (null !== redirectUri) {
         params.redirect_uri = redirectUri;
@@ -7552,6 +7559,48 @@ function getRedirectUrl(source) {
   const queryString = Object.keys(queryVars).map(key => key + '=' + queryVars[key]).join('&');
   return `https://jetpack.com/redirect/?` + queryString;
 }
+
+/***/ }),
+
+/***/ "../../js-packages/config/src/index.js":
+/*!*********************************************!*\
+  !*** ../../js-packages/config/src/index.js ***!
+  \*********************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+/* eslint-disable no-console */
+let jetpackConfig = {};
+
+try {
+  // Using require allows us to catch the error and provide guidance to developers, as well as test the package.
+  jetpackConfig = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'jetpackConfig'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+} catch {
+  console.error('jetpackConfig is missing in your webpack config file. See @automattic/jetpack-config');
+  jetpackConfig = {
+    missingConfig: true
+  };
+}
+
+const jetpackConfigHas = key => {
+  return jetpackConfig.hasOwnProperty(key);
+};
+
+const jetpackConfigGet = key => {
+  if (!jetpackConfigHas(key)) {
+    throw 'This app requires the "' + key + '" Jetpack Config to be defined in your webpack configuration file. See details in @automattic/jetpack-config package docs.';
+  }
+
+  return jetpackConfig[key];
+}; // Note: For this cjs module to be used with named exports in an mjs context, modules.exports
+// needs to contain only simple variables like `a` or `a: b`. Define anything more complex
+// as a variable above, then use the variable here.
+// @see https://github.com/nodejs/node/blob/master/deps/cjs-module-lexer/README.md#exports-object-assignment
+
+
+module.exports = {
+  jetpackConfigHas,
+  jetpackConfigGet
+};
 
 /***/ }),
 

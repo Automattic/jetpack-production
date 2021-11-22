@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add license activation flow.
 
+### Improved compatibility
+- Add consumer_slug config to webpack
+
 ### Bug fixes
 - Ensure that a new object references are created after the API request.
 - Stats: remove ASCII art from the stats pixel alt tag for improved accessibility.
@@ -24,6 +27,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies
 - Updated package dependencies
+- Updated package dependencies.
+- Updated package dependencies.
+- Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
