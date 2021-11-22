@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added 'View all purchases' and 'Activate a product' buttons in My Plan card footer.
 - Add license activation flow.
 - Verification tools: remove old interface in the Tools menu, in favor of the newer settings in the Jetpack dashboard.
 
