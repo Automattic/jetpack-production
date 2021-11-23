@@ -2,43 +2,23 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.4-a.8 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.4-a.9 - 2021-11-23
 ### Enhancements
-- Added 'View all purchases' and 'Activate a product' buttons in My Plan card footer.
-- Add license activation flow.
+- Dashboard: add option to add a license key via the Jetpack dashboard.
 - Verification tools: remove old interface in the Tools menu, in favor of the newer settings in the Jetpack dashboard.
 
-### Improved compatibility
-- Add consumer_slug config to webpack
-
 ### Bug fixes
-- Ensure that a new object references are created after the API request.
-- Manually dismiss license activation notice when license activated.
-- Stats: remove ASCII art from the stats pixel alt tag for improved accessibility.
+- Stats: remove ASCII art from the tracking pixel's alt attribute, to improve accessibility.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add consumer_slug config to webpack
+- Ensure that a new object references are created after the API request.
 - Fixed admin menu tests on WP.com
 - Gist unit tests: refactor to simplify and make future maintenance easier.
+- Manually dismiss license activation notice when license activated.
 - Remove the Connection UI activation.
 - REST API Return user ID for comment author if present
 - Skips redirect tests for admin menu in wpcom environment.
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
 - Updated package dependencies.
 
 ## 10.4-a.7 - 2021-11-17
