@@ -9,9 +9,6 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Enable the RePublicize UI in the block editor context.
 
-### Bug fixes
-- Apply widget visibility rules inside the customizer preview
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Avoid generating unused assets in the static-site-generator builds.
 - Fixes the URL of JITMs rendered in the unified sidebar when an absolute URL is given. This only affects WP.com sites.
