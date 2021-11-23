@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Enable the RePublicize UI in the block editor context.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fixes the URL of JITMs rendered in the unified sidebar when an absolute URL is given. This only affects WP.com sites.
+
 ## 10.4-a.9 - 2021-11-23
 ### Enhancements
 - Dashboard: add option to add a license key via the Jetpack dashboard.
