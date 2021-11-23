@@ -6706,11 +6706,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @automattic/jetpack-config */ "../../js-packages/config/src/index.js");
-/* harmony import */ var _automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_url__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/url */ "@wordpress/url");
+/* harmony import */ var _wordpress_url__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_url__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @automattic/jetpack-config */ "../../js-packages/config/src/index.js");
+/* harmony import */ var _automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_2__);
 /**
  * External dependencies
  */
+
 
 
 /**
@@ -6792,8 +6795,8 @@ function JetpackRestApiClient(root, nonce) {
         no_iframe: true
       };
 
-      if ((0,_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_1__.jetpackConfigHas)('consumer_slug')) {
-        params.plugin_slug = (0,_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_1__.jetpackConfigGet)('consumer_slug');
+      if ((0,_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_2__.jetpackConfigHas)('consumer_slug')) {
+        params.plugin_slug = (0,_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_2__.jetpackConfigGet)('consumer_slug');
       }
 
       if (null !== redirectUri) {
@@ -6804,7 +6807,10 @@ function JetpackRestApiClient(root, nonce) {
         body: JSON.stringify(params)
       }).then(checkStatus).then(parseJsonResponse);
     },
-    fetchAuthorizationUrl: redirectUri => getRequest(`${apiRoot}jetpack/v4/connection/authorize_url?no_iframe=1&redirect_uri=${encodeURIComponent(redirectUri)}`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchAuthorizationUrl: redirectUri => getRequest((0,_wordpress_url__WEBPACK_IMPORTED_MODULE_1__.addQueryArgs)(`${apiRoot}jetpack/v4/connection/authorize_url`, {
+      no_iframe: '1',
+      redirect_uri: redirectUri
+    }), getParams).then(checkStatus).then(parseJsonResponse),
     fetchSiteConnectionData: () => getRequest(`${apiRoot}jetpack/v4/connection/data`, getParams).then(parseJsonResponse),
     fetchSiteConnectionStatus: () => getRequest(`${apiRoot}jetpack/v4/connection`, getParams).then(parseJsonResponse),
     fetchSiteConnectionTest: () => getRequest(`${apiRoot}jetpack/v4/connection/test`, getParams).then(checkStatus).then(parseJsonResponse),
@@ -10305,6 +10311,17 @@ module.exports = window["wp"]["element"];
 
 "use strict";
 module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "@wordpress/url":
+/*!*****************************!*\
+  !*** external ["wp","url"] ***!
+  \*****************************/
+/***/ (function(module) {
+
+"use strict";
+module.exports = window["wp"]["url"];
 
 /***/ }),
 
