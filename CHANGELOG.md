@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.4-a.10 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 10.4-a.9 - 2021-11-23
 ### Enhancements
 - Dashboard: add option to add a license key via the Jetpack dashboard.
