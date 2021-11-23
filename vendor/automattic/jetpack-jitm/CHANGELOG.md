@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Adds filters to allow sideloading of the Jetpack Backup plugin through JITMs.
+- JITM: Added ability to sideload Jetpack Boost plugin.
 
 ## [2.0.8] - 2021-11-23
 ### Changed
