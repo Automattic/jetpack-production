@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Enable the RePublicize UI in the block editor context.
+
 ## 10.4-a.9 - 2021-11-23
 ### Enhancements
 - Dashboard: add option to add a license key via the Jetpack dashboard.
