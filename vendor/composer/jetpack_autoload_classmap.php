@@ -75,19 +75,19 @@ return array(
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
 	'Automattic\\Jetpack\\Search\\WPES\\Query_Builder' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/wpes/class-query-builder.php'
 	),
 	'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/wpes/class-query-parser.php'
 	),
 	'Automattic\\Jetpack\\Search\\Helper' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-helper.php'
 	),
 	'Automattic\\Jetpack\\Search\\Options' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-options.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Initializer' => array(
