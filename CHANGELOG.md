@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added captions/subtitles support to the VideoPress block.
 - Enable the RePublicize UI in the block editor context.
 - Sharing: update to use Recaptcha's modern key names.
 
