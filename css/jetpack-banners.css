@@ -313,7 +313,7 @@ https://github.com/thoughtbot/bourbon
 
 .jp-wpcom-connect__container-top-text {
   padding: 15px 35px 25px 15px;
-  background-color: #00be28;
+  background-color: #069e08;
   color: white;
   display: flex;
   align-items: baseline;
@@ -346,7 +346,7 @@ https://github.com/thoughtbot/bourbon
   display: block;
   position: relative;
   box-sizing: border-box;
-  background-color: #00be28;
+  background-color: #069e08;
 }
 
 .jp-wpcom-connect__inner-container > a:first-child {
@@ -445,7 +445,7 @@ https://github.com/thoughtbot/bourbon
   margin: 0.3125rem 0;
 }
 .jp-banner__button-container .dops-button.is-primary {
-  background: #00be28;
+  background: #069e08;
   border-color: #00a523;
   padding-left: 1.5rem;
   padding-right: 1.5rem;

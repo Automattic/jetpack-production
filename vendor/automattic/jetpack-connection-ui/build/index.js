@@ -7288,7 +7288,7 @@ _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_16_3_node_mo
   className: '',
   height: 32,
   showText: true,
-  logoColor: '#00BE28'
+  logoColor: '#069e08'
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (JetpackLogo);

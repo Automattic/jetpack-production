@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Adds filters to allow sideloading of the Jetpack Backup plugin through JITMs.
 - JITM: Added ability to sideload Jetpack Boost plugin.
 
+### Changed
+- Colors: update Jetpack Primary color to match latest brand book.
+
 ## [2.0.8] - 2021-11-23
 ### Changed
 - Updated package dependencies.
