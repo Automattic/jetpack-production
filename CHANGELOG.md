@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Avoid generating unused assets in the static-site-generator builds.
+- E2E tests: Migrate from Jest to Playwright test runner
 - Fixes the URL of JITMs rendered in the unified sidebar when an absolute URL is given. This only affects WP.com sites.
 - JITM: Added ability to sideload Jetpack Boost plugin.
 
