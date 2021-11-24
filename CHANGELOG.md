@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Apply widget visibility rules inside the customizer preview
 - Fixed nav-unification on lower resolutions for wp-admin.
 - Fix old VideoPress blocks triggering a validation error by adding some deprecations/migrations.
+- Search: avoid fatal errors when the feature is inactive, but Extra Sidebar Widgets are active.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Avoid generating unused assets in the static-site-generator builds.
