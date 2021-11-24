@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: Migrate from Jest to Playwright test runner
 - Fixes the URL of JITMs rendered in the unified sidebar when an absolute URL is given. This only affects WP.com sites.
 - JITM: Added ability to sideload Jetpack Boost plugin.
+- Switched external media API tests to short-circuit API calls before they're being dispatched.
 
 ## 10.4-a.9 - 2021-11-23
 ### Enhancements
