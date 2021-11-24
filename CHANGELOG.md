@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Enable the RePublicize UI in the block editor context.
+- Sharing: update to use Recaptcha's modern key names.
 
 ### Improved compatibility
 - Jetpack Backup: Add considtions that allow sideloading of Jetpack Backup plugin via JITMs.
