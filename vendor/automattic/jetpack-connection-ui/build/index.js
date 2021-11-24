@@ -7654,23 +7654,22 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
  */
 
 const ConnectButton = props => {
-  const [registrationError, setRegistrationError] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const [authorizationUrl, setAuthorizationUrl] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
   const {
     isRegistered,
     isUserConnected
   } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_5__.STORE_ID).getConnectionStatus(), []);
   const siteIsRegistering = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_5__.STORE_ID).getSiteIsRegistering(), []);
   const userIsConnecting = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_5__.STORE_ID).getUserIsConnecting(), []);
+  const registrationError = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_5__.STORE_ID).getRegistrationError(), []);
+  const authorizationUrl = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_5__.STORE_ID).getAuthorizationUrl(), []);
   const {
-    setSiteIsRegistering,
-    setUserIsConnecting
+    setUserIsConnecting,
+    registerSite
   } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useDispatch)(_state_store__WEBPACK_IMPORTED_MODULE_5__.STORE_ID);
   const {
     apiRoot,
     apiNonce,
     connectLabel,
-    onRegistered,
     registrationNonce,
     redirectUri,
     from,
@@ -7688,44 +7687,29 @@ const ConnectButton = props => {
    * Initialize the site registration process.
    */
 
-  const registerSite = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
+  const handleRegisterSite = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
     e && e.preventDefault();
-    setRegistrationError(false);
 
     if (isRegistered) {
       setUserIsConnecting(true);
       return;
     }
 
-    setSiteIsRegistering(true);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].registerSite(registrationNonce, redirectUri).then(response => {
-      setSiteIsRegistering(false);
-
-      if (onRegistered) {
-        onRegistered(response);
-      }
-
-      setAuthorizationUrl(response.authorizeUrl);
-      setUserIsConnecting(true);
-    }).catch(error => {
-      setSiteIsRegistering(false);
-      setRegistrationError(error);
-      throw error;
-    });
-  }, [setSiteIsRegistering, setUserIsConnecting, setAuthorizationUrl, isRegistered, onRegistered, registrationNonce, redirectUri]);
+    registerSite(registrationNonce, redirectUri);
+  }, [isRegistered, registrationNonce, redirectUri, registerSite, setUserIsConnecting]);
   /**
    * Auto-trigger the flow, only do it once.
    */
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (autoTrigger && !siteIsRegistering && !userIsConnecting) {
-      registerSite();
+      handleRegisterSite();
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, (!isRegistered || !isUserConnected) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__["default"], {
     label: connectLabel,
-    onClick: registerSite,
+    onClick: handleRegisterSite,
     displayError: registrationError ? true : false,
     isLoading: siteIsRegistering || userIsConnecting
   }), userIsConnecting && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connect_user__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -7744,9 +7728,6 @@ ConnectButton.propTypes = {
 
   /** API Nonce. */
   apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-
-  /** The callback to be called upon registration success. */
-  onRegistered: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
 
   /** Where the connection request is coming from. */
   from: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
@@ -8636,13 +8617,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "FETCH_CONNECTION_STATUS": function() { return /* binding */ FETCH_CONNECTION_STATUS; },
 /* harmony export */   "SET_SITE_IS_REGISTERING": function() { return /* binding */ SET_SITE_IS_REGISTERING; },
 /* harmony export */   "SET_USER_IS_CONNECTING": function() { return /* binding */ SET_USER_IS_CONNECTING; },
+/* harmony export */   "SET_REGISTRATION_ERROR": function() { return /* binding */ SET_REGISTRATION_ERROR; },
+/* harmony export */   "CLEAR_REGISTRATION_ERROR": function() { return /* binding */ CLEAR_REGISTRATION_ERROR; },
+/* harmony export */   "REGISTER_SITE": function() { return /* binding */ REGISTER_SITE; },
+/* harmony export */   "SET_AUTHORIZATION_URL": function() { return /* binding */ SET_AUTHORIZATION_URL; },
 /* harmony export */   "default": function() { return /* binding */ actions; }
 /* harmony export */ });
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store */ "../../js-packages/connection/state/store.jsx");
+/**
+ * External dependencies
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
 const SET_CONNECTION_STATUS = 'SET_CONNECTION_STATUS';
 const SET_CONNECTION_STATUS_IS_FETCHING = 'SET_CONNECTION_STATUS_IS_FETCHING';
 const FETCH_CONNECTION_STATUS = 'FETCH_CONNECTION_STATUS';
 const SET_SITE_IS_REGISTERING = 'SET_SITE_IS_REGISTERING';
 const SET_USER_IS_CONNECTING = 'SET_USER_IS_CONNECTING';
+const SET_REGISTRATION_ERROR = 'SET_REGISTRATION_ERROR';
+const CLEAR_REGISTRATION_ERROR = 'CLEAR_REGISTRATION_ERROR';
+const REGISTER_SITE = 'REGISTER_SITE';
+const SET_AUTHORIZATION_URL = 'SET_AUTHORIZATION_URL';
 const connectionStatusActions = {
   setConnectionStatus: connectionStatus => {
     return {
@@ -8672,7 +8675,45 @@ const connectionStatusActions = {
       type: SET_USER_IS_CONNECTING,
       isConnecting
     };
+  },
+  setRegistrationError: registrationError => {
+    return {
+      type: SET_REGISTRATION_ERROR,
+      registrationError
+    };
+  },
+  clearRegistrationError: () => {
+    return {
+      type: CLEAR_REGISTRATION_ERROR
+    };
+  },
+  setAuthorizationUrl: authorizationUrl => {
+    return {
+      type: SET_AUTHORIZATION_URL,
+      authorizationUrl
+    };
+  },
+
+  *registerSite(registrationNonce, redirectUri) {
+    yield (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.dispatch)(_store__WEBPACK_IMPORTED_MODULE_2__.STORE_ID).clearRegistrationError();
+    yield (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.dispatch)(_store__WEBPACK_IMPORTED_MODULE_2__.STORE_ID).setSiteIsRegistering(true);
+    yield _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_1__["default"].registerSite(registrationNonce, redirectUri).then(response => {
+      (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.dispatch)(_store__WEBPACK_IMPORTED_MODULE_2__.STORE_ID).setSiteIsRegistering(false);
+      (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.dispatch)(_store__WEBPACK_IMPORTED_MODULE_2__.STORE_ID).setConnectionStatus({
+        isRegistered: true
+      });
+      (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.dispatch)(_store__WEBPACK_IMPORTED_MODULE_2__.STORE_ID).setAuthorizationUrl(response.authorizeUrl);
+      (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.dispatch)(_store__WEBPACK_IMPORTED_MODULE_2__.STORE_ID).setUserIsConnecting(true);
+    }).catch(error => {
+      (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.dispatch)(_store__WEBPACK_IMPORTED_MODULE_2__.STORE_ID).setSiteIsRegistering(false);
+      (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.dispatch)(_store__WEBPACK_IMPORTED_MODULE_2__.STORE_ID).setRegistrationError(error);
+    }).finally(() => {
+      return {
+        type: REGISTER_SITE
+      };
+    });
   }
+
 };
 const actions = { ...connectionStatusActions
 };
@@ -8777,11 +8818,36 @@ const userIsConnecting = function () {
   return state;
 };
 
+const registrationError = (state, action) => {
+  switch (action.type) {
+    case _actions__WEBPACK_IMPORTED_MODULE_1__.CLEAR_REGISTRATION_ERROR:
+      return false;
+
+    case _actions__WEBPACK_IMPORTED_MODULE_1__.SET_REGISTRATION_ERROR:
+      return action.registrationError;
+
+    default:
+      return state;
+  }
+};
+
+const authorizationUrl = (state, action) => {
+  switch (action.type) {
+    case _actions__WEBPACK_IMPORTED_MODULE_1__.SET_AUTHORIZATION_URL:
+      return action.authorizationUrl;
+
+    default:
+      return state;
+  }
+};
+
 const reducers = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers)({
   connectionStatus,
   connectionStatusIsFetching,
   siteIsRegistering,
-  userIsConnecting
+  userIsConnecting,
+  registrationError,
+  authorizationUrl
 });
 /* harmony default export */ __webpack_exports__["default"] = (reducers);
 
@@ -8826,7 +8892,9 @@ const connectionSelectors = {
   getConnectionStatus: state => state.connectionStatus || {},
   getConnectionStatusIsFetching: state => state.connectionStatusIsFetching || false,
   getSiteIsRegistering: state => state.siteIsRegistering || false,
-  getUserIsConnecting: state => state.userIsConnecting || false
+  getUserIsConnecting: state => state.userIsConnecting || false,
+  getRegistrationError: state => state.registrationError || false,
+  getAuthorizationUrl: state => state.authorizationUrl || false
 };
 const selectors = { ...connectionSelectors
 };
