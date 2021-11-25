@@ -7864,9 +7864,7 @@ const ConnectScreenLayout = props => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_image_slider__WEBPACK_IMPORTED_MODULE_4__["default"], {
     images: images,
     assetBaseUrl: assetBaseUrl
-  })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-connection__connect-screen-layout__clearfix"
-  }));
+  })) : null);
 };
 
 ConnectScreenLayout.propTypes = {
