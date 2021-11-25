@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added essential scaffolding for package.
 
+### Changed
+- Search: migrate/create necessary APIs for the frontend
+
 ## 0.1.0 - 2021-11-09
 ### Added
 - Add a new Search package with Helper and Options classes.

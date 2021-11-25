@@ -74,6 +74,14 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
+	'Automattic\\Jetpack\\Search\\Plan' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-plan.php'
+	),
+	'Automattic\\Jetpack\\Search\\Module_Control' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-module-control.php'
+	),
 	'Automattic\\Jetpack\\Search\\WPES\\Query_Builder' => array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/wpes/class-query-builder.php'
@@ -81,6 +89,10 @@ return array(
 	'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/wpes/class-query-parser.php'
+	),
+	'Automattic\\Jetpack\\Search\\REST_Controller' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Search\\Helper' => array(
 		'version' => '0.2.9999999.9999999-dev',
