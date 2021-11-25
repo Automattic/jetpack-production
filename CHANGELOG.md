@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Jetpack Backup: Add considtions that allow sideloading of Jetpack Backup plugin via JITMs.
+- Uses the Connection Initial State for the React app
 
 ### Bug fixes
 - Apply widget visibility rules inside the customizer preview

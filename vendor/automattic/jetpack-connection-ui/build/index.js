@@ -8924,6 +8924,13 @@ class storeHolder {
     if (null === storeHolder.store) {
       storeHolder.store = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.createReduxStore)(storeId, storeConfig);
       (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.register)(storeHolder.store);
+      storeHolder.resolveResolvers(storeId, storeConfig.initialState);
+    }
+  }
+
+  static resolveResolvers(storeId, initialState) {
+    if (initialState.connectionStatus && initialState.connectionStatus.hasOwnProperty('isRegistered')) {
+      (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.dispatch)(storeId).finishResolution('getConnectionStatus', []);
     }
   }
 
@@ -8967,7 +8974,8 @@ _store_holder__WEBPACK_IMPORTED_MODULE_0__["default"].mayBeInit(STORE_ID, {
   actions: _actions__WEBPACK_IMPORTED_MODULE_2__["default"],
   selectors: _selectors__WEBPACK_IMPORTED_MODULE_3__["default"],
   resolvers: _resolvers__WEBPACK_IMPORTED_MODULE_4__["default"],
-  controls: _controls__WEBPACK_IMPORTED_MODULE_5__["default"]
+  controls: _controls__WEBPACK_IMPORTED_MODULE_5__["default"],
+  initialState: window.JP_CONNECTION_INITIAL_STATE || {}
 });
 
 

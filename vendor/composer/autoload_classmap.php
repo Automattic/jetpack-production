@@ -25,6 +25,7 @@ return array(
     'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php',
     'Automattic\\Jetpack\\Connection\\Client' => $vendorDir . '/automattic/jetpack-connection/src/class-client.php',
     'Automattic\\Jetpack\\Connection\\Error_Handler' => $vendorDir . '/automattic/jetpack-connection/src/class-error-handler.php',
+    'Automattic\\Jetpack\\Connection\\Initial_State' => $vendorDir . '/automattic/jetpack-connection/src/class-initial-state.php',
     'Automattic\\Jetpack\\Connection\\Manager' => $vendorDir . '/automattic/jetpack-connection/src/class-manager.php',
     'Automattic\\Jetpack\\Connection\\Manager_Interface' => $vendorDir . '/automattic/jetpack-connection/src/interface-manager.php',
     'Automattic\\Jetpack\\Connection\\Nonce_Handler' => $vendorDir . '/automattic/jetpack-connection/src/class-nonce-handler.php',
