@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Enable the RePublicize UI in the block editor context.
 - Sharing: update to use Recaptcha's modern key names.
 - Update products copy to better match Jetpack features
+- Update the copy of the license activation banner to make it clear that the user has an available license that can be activated on the site.
 
 ### Improved compatibility
 - Jetpack Backup: Add considtions that allow sideloading of Jetpack Backup plugin via JITMs.
