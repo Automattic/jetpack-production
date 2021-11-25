@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - JITM: Added ability to sideload Jetpack Boost plugin.
 
 ### Changed
+- Add `output.filename` in Webpack config to override changed default.
 - Colors: update Jetpack Primary color to match latest brand book.
 
 ## [2.0.8] - 2021-11-23

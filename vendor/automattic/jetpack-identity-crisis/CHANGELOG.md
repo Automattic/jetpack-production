@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Colors: update Jetpack Primary color to match latest brand book.
+- Remove now-redundant `output.filename` from Webpack config.
 
 ## [0.4.3] - 2021-11-23
 ### Changed

@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: forward wpcom/v2/search request to search package rest controller
 - Search: Migrate more helper classes to package
 - Switched external media API tests to short-circuit API calls before they're being dispatched.
+- Update filenames of Webpack-built files.
 
 ## 10.4-a.9 - 2021-11-23
 ### Enhancements

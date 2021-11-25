@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Janitorial: create mirror repo for the package.
 
+### Changed
+- Remove now-redundant `output.filename` from Webpack config.
+
 ## 0.1.1 - 2021-11-23
 ### Changed
 - Updated package dependencies.
