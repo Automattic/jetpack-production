@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added captions/subtitles support to the VideoPress block.
 - Enable the RePublicize UI in the block editor context.
 - Sharing: update to use Recaptcha's modern key names.
+- Update products copy to better match Jetpack features
 
 ### Improved compatibility
 - Jetpack Backup: Add considtions that allow sideloading of Jetpack Backup plugin via JITMs.
