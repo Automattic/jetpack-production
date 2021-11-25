@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added essential scaffolding for package.
+- Migrate additional helper classes to package
 
 ### Changed
 - Search: migrate/create necessary APIs for the frontend

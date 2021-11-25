@@ -78,6 +78,10 @@ return array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-plan.php'
 	),
+	'Automattic\\Jetpack\\Search\\Template_Tags' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-template-tags.php'
+	),
 	'Automattic\\Jetpack\\Search\\Module_Control' => array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-module-control.php'
@@ -93,6 +97,10 @@ return array(
 	'Automattic\\Jetpack\\Search\\REST_Controller' => array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-rest-controller.php'
+	),
+	'Automattic\\Jetpack\\Search\\Settings' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-settings.php'
 	),
 	'Automattic\\Jetpack\\Search\\Helper' => array(
 		'version' => '0.2.9999999.9999999-dev',

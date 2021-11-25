@@ -67,6 +67,8 @@ return array(
     'Automattic\\Jetpack\\Search\\Options' => $vendorDir . '/automattic/jetpack-search/src/class-options.php',
     'Automattic\\Jetpack\\Search\\Plan' => $vendorDir . '/automattic/jetpack-search/src/class-plan.php',
     'Automattic\\Jetpack\\Search\\REST_Controller' => $vendorDir . '/automattic/jetpack-search/src/class-rest-controller.php',
+    'Automattic\\Jetpack\\Search\\Settings' => $vendorDir . '/automattic/jetpack-search/src/class-settings.php',
+    'Automattic\\Jetpack\\Search\\Template_Tags' => $vendorDir . '/automattic/jetpack-search/src/class-template-tags.php',
     'Automattic\\Jetpack\\Search\\WPES\\Query_Builder' => $vendorDir . '/automattic/jetpack-search/src/wpes/class-query-builder.php',
     'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => $vendorDir . '/automattic/jetpack-search/src/wpes/class-query-parser.php',
     'Automattic\\Jetpack\\Status' => $vendorDir . '/automattic/jetpack-status/src/class-status.php',

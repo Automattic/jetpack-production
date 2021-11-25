@@ -97,6 +97,8 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_4_a_10
         'Automattic\\Jetpack\\Search\\Options' => __DIR__ . '/..' . '/automattic/jetpack-search/src/class-options.php',
         'Automattic\\Jetpack\\Search\\Plan' => __DIR__ . '/..' . '/automattic/jetpack-search/src/class-plan.php',
         'Automattic\\Jetpack\\Search\\REST_Controller' => __DIR__ . '/..' . '/automattic/jetpack-search/src/class-rest-controller.php',
+        'Automattic\\Jetpack\\Search\\Settings' => __DIR__ . '/..' . '/automattic/jetpack-search/src/class-settings.php',
+        'Automattic\\Jetpack\\Search\\Template_Tags' => __DIR__ . '/..' . '/automattic/jetpack-search/src/class-template-tags.php',
         'Automattic\\Jetpack\\Search\\WPES\\Query_Builder' => __DIR__ . '/..' . '/automattic/jetpack-search/src/wpes/class-query-builder.php',
         'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => __DIR__ . '/..' . '/automattic/jetpack-search/src/wpes/class-query-parser.php',
         'Automattic\\Jetpack\\Status' => __DIR__ . '/..' . '/automattic/jetpack-status/src/class-status.php',
