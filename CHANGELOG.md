@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Avoid generating unused assets in the static-site-generator builds.
+- Build: remove obsolete package gulp task.
 - Colors: update Jetpack Primary color reference to match latest brand book.
 - E2E tests: Migrate from Jest to Playwright test runner
 - Expose site intent from get site API to show different content in the future

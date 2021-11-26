@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add proper JS and CSS builder.
 - Adds filters to allow sideloading of the Jetpack Backup plugin through JITMs.
 - JITM: Added ability to sideload Jetpack Boost plugin.
 
