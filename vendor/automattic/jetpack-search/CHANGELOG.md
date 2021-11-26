@@ -12,9 +12,12 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added essential scaffolding for package.
 - Migrate additional helper classes to package
+- Search: added new state store for search dashboard
+- Search package: duplicated search dashboard dependencies to the package
 
 ### Changed
 - Search: migrate/create necessary APIs for the frontend
+- Search: removed other dependencies from copied code
 
 ## 0.1.0 - 2021-11-09
 ### Added

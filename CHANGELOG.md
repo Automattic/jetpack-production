@@ -34,6 +34,8 @@ This is an alpha version! The changes listed here are not final.
 - Made admin menu API tests compatible with WPCOM environment
 - Search: forward wpcom/v2/search request to search package rest controller
 - Search: Migrate more helper classes to package
+- Search: update jetpack-search version
+- Search: update search package version
 - Switched external media API tests to short-circuit API calls before they're being dispatched.
 - Update filenames of Webpack-built files.
 
