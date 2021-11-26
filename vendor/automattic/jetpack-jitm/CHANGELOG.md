@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Add `output.filename` in Webpack config to override changed default.
 - Colors: update Jetpack Primary color to match latest brand book.
 
+### Fixed
+- JITM: wrap CTA below text on small viewports
+
 ## [2.0.8] - 2021-11-23
 ### Changed
 - Updated package dependencies.
