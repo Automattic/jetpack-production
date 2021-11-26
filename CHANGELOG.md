@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Avoid generating unused assets in the static-site-generator builds.
 - Colors: update Jetpack Primary color reference to match latest brand book.
 - E2E tests: Migrate from Jest to Playwright test runner
+- Expose site intent from get site API to show different content in the future
 - Fixes the URL of JITMs rendered in the unified sidebar when an absolute URL is given. This only affects WP.com sites.
 - JITM: Added ability to sideload Jetpack Boost plugin.
 - Made admin menu API tests compatible with WPCOM environment
