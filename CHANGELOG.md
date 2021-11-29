@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added captions/subtitles support to the VideoPress block.
 - Add pre-connection message for unredeemed partner coupons
+- Disconnection Flow: Improve Jetpack disconnection flow on dashboard and plugins page to better highlight the site features Jetpack is powering and ask for feedback.
 - Enable the RePublicize UI in the block editor context.
 - Sharing: update to use Recaptcha's modern key names.
 - Update products copy to better match Jetpack features

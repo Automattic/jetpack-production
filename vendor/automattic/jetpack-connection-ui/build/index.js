@@ -2277,6 +2277,569 @@ module.exports = setup;
 
 /***/ }),
 
+/***/ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js":
+/*!*********************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js ***!
+  \*********************************************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+/* eslint-env browser */
+
+/**
+ * This is the web browser implementation of `debug()`.
+ */
+
+exports.formatArgs = formatArgs;
+exports.save = save;
+exports.load = load;
+exports.useColors = useColors;
+exports.storage = localstorage();
+exports.destroy = (() => {
+	let warned = false;
+
+	return () => {
+		if (!warned) {
+			warned = true;
+			console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
+		}
+	};
+})();
+
+/**
+ * Colors.
+ */
+
+exports.colors = [
+	'#0000CC',
+	'#0000FF',
+	'#0033CC',
+	'#0033FF',
+	'#0066CC',
+	'#0066FF',
+	'#0099CC',
+	'#0099FF',
+	'#00CC00',
+	'#00CC33',
+	'#00CC66',
+	'#00CC99',
+	'#00CCCC',
+	'#00CCFF',
+	'#3300CC',
+	'#3300FF',
+	'#3333CC',
+	'#3333FF',
+	'#3366CC',
+	'#3366FF',
+	'#3399CC',
+	'#3399FF',
+	'#33CC00',
+	'#33CC33',
+	'#33CC66',
+	'#33CC99',
+	'#33CCCC',
+	'#33CCFF',
+	'#6600CC',
+	'#6600FF',
+	'#6633CC',
+	'#6633FF',
+	'#66CC00',
+	'#66CC33',
+	'#9900CC',
+	'#9900FF',
+	'#9933CC',
+	'#9933FF',
+	'#99CC00',
+	'#99CC33',
+	'#CC0000',
+	'#CC0033',
+	'#CC0066',
+	'#CC0099',
+	'#CC00CC',
+	'#CC00FF',
+	'#CC3300',
+	'#CC3333',
+	'#CC3366',
+	'#CC3399',
+	'#CC33CC',
+	'#CC33FF',
+	'#CC6600',
+	'#CC6633',
+	'#CC9900',
+	'#CC9933',
+	'#CCCC00',
+	'#CCCC33',
+	'#FF0000',
+	'#FF0033',
+	'#FF0066',
+	'#FF0099',
+	'#FF00CC',
+	'#FF00FF',
+	'#FF3300',
+	'#FF3333',
+	'#FF3366',
+	'#FF3399',
+	'#FF33CC',
+	'#FF33FF',
+	'#FF6600',
+	'#FF6633',
+	'#FF9900',
+	'#FF9933',
+	'#FFCC00',
+	'#FFCC33'
+];
+
+/**
+ * Currently only WebKit-based Web Inspectors, Firefox >= v31,
+ * and the Firebug extension (any Firefox version) are known
+ * to support "%c" CSS customizations.
+ *
+ * TODO: add a `localStorage` variable to explicitly enable/disable colors
+ */
+
+// eslint-disable-next-line complexity
+function useColors() {
+	// NB: In an Electron preload script, document will be defined but not fully
+	// initialized. Since we know we're in Chrome, we'll just detect this case
+	// explicitly
+	if (typeof window !== 'undefined' && window.process && (window.process.type === 'renderer' || window.process.__nwjs)) {
+		return true;
+	}
+
+	// Internet Explorer and Edge do not support colors.
+	if (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/)) {
+		return false;
+	}
+
+	// Is webkit? http://stackoverflow.com/a/16459606/376773
+	// document is undefined in react-native: https://github.com/facebook/react-native/pull/1632
+	return (typeof document !== 'undefined' && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance) ||
+		// Is firebug? http://stackoverflow.com/a/398120/376773
+		(typeof window !== 'undefined' && window.console && (window.console.firebug || (window.console.exception && window.console.table))) ||
+		// Is firefox >= v31?
+		// https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
+		(typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
+		// Double check webkit in userAgent just in case we are in a worker
+		(typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
+}
+
+/**
+ * Colorize log arguments if enabled.
+ *
+ * @api public
+ */
+
+function formatArgs(args) {
+	args[0] = (this.useColors ? '%c' : '') +
+		this.namespace +
+		(this.useColors ? ' %c' : ' ') +
+		args[0] +
+		(this.useColors ? '%c ' : ' ') +
+		'+' + module.exports.humanize(this.diff);
+
+	if (!this.useColors) {
+		return;
+	}
+
+	const c = 'color: ' + this.color;
+	args.splice(1, 0, c, 'color: inherit');
+
+	// The final "%c" is somewhat tricky, because there could be other
+	// arguments passed either before or after the %c, so we need to
+	// figure out the correct index to insert the CSS into
+	let index = 0;
+	let lastC = 0;
+	args[0].replace(/%[a-zA-Z%]/g, match => {
+		if (match === '%%') {
+			return;
+		}
+		index++;
+		if (match === '%c') {
+			// We only are interested in the *last* %c
+			// (the user may have provided their own)
+			lastC = index;
+		}
+	});
+
+	args.splice(lastC, 0, c);
+}
+
+/**
+ * Invokes `console.debug()` when available.
+ * No-op when `console.debug` is not a "function".
+ * If `console.debug` is not available, falls back
+ * to `console.log`.
+ *
+ * @api public
+ */
+exports.log = console.debug || console.log || (() => {});
+
+/**
+ * Save `namespaces`.
+ *
+ * @param {String} namespaces
+ * @api private
+ */
+function save(namespaces) {
+	try {
+		if (namespaces) {
+			exports.storage.setItem('debug', namespaces);
+		} else {
+			exports.storage.removeItem('debug');
+		}
+	} catch (error) {
+		// Swallow
+		// XXX (@Qix-) should we be logging these?
+	}
+}
+
+/**
+ * Load `namespaces`.
+ *
+ * @return {String} returns the previously persisted debug modes
+ * @api private
+ */
+function load() {
+	let r;
+	try {
+		r = exports.storage.getItem('debug');
+	} catch (error) {
+		// Swallow
+		// XXX (@Qix-) should we be logging these?
+	}
+
+	// If debug isn't set in LS, and we're in Electron, try to load $DEBUG
+	if (!r && typeof process !== 'undefined' && 'env' in process) {
+		r = process.env.DEBUG;
+	}
+
+	return r;
+}
+
+/**
+ * Localstorage attempts to return the localstorage.
+ *
+ * This is necessary because safari throws
+ * when a user disables cookies/localstorage
+ * and you attempt to access it.
+ *
+ * @return {LocalStorage}
+ * @api private
+ */
+
+function localstorage() {
+	try {
+		// TVMLKit (Apple TV JS Runtime) does not have a window object, just localStorage in the global context
+		// The Browser also has localStorage in the global context.
+		return localStorage;
+	} catch (error) {
+		// Swallow
+		// XXX (@Qix-) should we be logging these?
+	}
+}
+
+module.exports = __webpack_require__(/*! ./common */ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js")(exports);
+
+const {formatters} = module.exports;
+
+/**
+ * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
+ */
+
+formatters.j = function (v) {
+	try {
+		return JSON.stringify(v);
+	} catch (error) {
+		return '[UnexpectedJSONParseError]: ' + error.message;
+	}
+};
+
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js":
+/*!********************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/common.js ***!
+  \********************************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+
+/**
+ * This is the common logic for both the Node.js and web browser
+ * implementations of `debug()`.
+ */
+
+function setup(env) {
+	createDebug.debug = createDebug;
+	createDebug.default = createDebug;
+	createDebug.coerce = coerce;
+	createDebug.disable = disable;
+	createDebug.enable = enable;
+	createDebug.enabled = enabled;
+	createDebug.humanize = __webpack_require__(/*! ms */ "../../../node_modules/.pnpm/ms@2.1.2/node_modules/ms/index.js");
+	createDebug.destroy = destroy;
+
+	Object.keys(env).forEach(key => {
+		createDebug[key] = env[key];
+	});
+
+	/**
+	* The currently active debug mode names, and names to skip.
+	*/
+
+	createDebug.names = [];
+	createDebug.skips = [];
+
+	/**
+	* Map of special "%n" handling functions, for the debug "format" argument.
+	*
+	* Valid key names are a single, lower or upper-case letter, i.e. "n" and "N".
+	*/
+	createDebug.formatters = {};
+
+	/**
+	* Selects a color for a debug namespace
+	* @param {String} namespace The namespace string for the for the debug instance to be colored
+	* @return {Number|String} An ANSI color code for the given namespace
+	* @api private
+	*/
+	function selectColor(namespace) {
+		let hash = 0;
+
+		for (let i = 0; i < namespace.length; i++) {
+			hash = ((hash << 5) - hash) + namespace.charCodeAt(i);
+			hash |= 0; // Convert to 32bit integer
+		}
+
+		return createDebug.colors[Math.abs(hash) % createDebug.colors.length];
+	}
+	createDebug.selectColor = selectColor;
+
+	/**
+	* Create a debugger with the given `namespace`.
+	*
+	* @param {String} namespace
+	* @return {Function}
+	* @api public
+	*/
+	function createDebug(namespace) {
+		let prevTime;
+		let enableOverride = null;
+		let namespacesCache;
+		let enabledCache;
+
+		function debug(...args) {
+			// Disabled?
+			if (!debug.enabled) {
+				return;
+			}
+
+			const self = debug;
+
+			// Set `diff` timestamp
+			const curr = Number(new Date());
+			const ms = curr - (prevTime || curr);
+			self.diff = ms;
+			self.prev = prevTime;
+			self.curr = curr;
+			prevTime = curr;
+
+			args[0] = createDebug.coerce(args[0]);
+
+			if (typeof args[0] !== 'string') {
+				// Anything else let's inspect with %O
+				args.unshift('%O');
+			}
+
+			// Apply any `formatters` transformations
+			let index = 0;
+			args[0] = args[0].replace(/%([a-zA-Z%])/g, (match, format) => {
+				// If we encounter an escaped % then don't increase the array index
+				if (match === '%%') {
+					return '%';
+				}
+				index++;
+				const formatter = createDebug.formatters[format];
+				if (typeof formatter === 'function') {
+					const val = args[index];
+					match = formatter.call(self, val);
+
+					// Now we need to remove `args[index]` since it's inlined in the `format`
+					args.splice(index, 1);
+					index--;
+				}
+				return match;
+			});
+
+			// Apply env-specific formatting (colors, etc.)
+			createDebug.formatArgs.call(self, args);
+
+			const logFn = self.log || createDebug.log;
+			logFn.apply(self, args);
+		}
+
+		debug.namespace = namespace;
+		debug.useColors = createDebug.useColors();
+		debug.color = createDebug.selectColor(namespace);
+		debug.extend = extend;
+		debug.destroy = createDebug.destroy; // XXX Temporary. Will be removed in the next major release.
+
+		Object.defineProperty(debug, 'enabled', {
+			enumerable: true,
+			configurable: false,
+			get: () => {
+				if (enableOverride !== null) {
+					return enableOverride;
+				}
+				if (namespacesCache !== createDebug.namespaces) {
+					namespacesCache = createDebug.namespaces;
+					enabledCache = createDebug.enabled(namespace);
+				}
+
+				return enabledCache;
+			},
+			set: v => {
+				enableOverride = v;
+			}
+		});
+
+		// Env-specific initialization logic for debug instances
+		if (typeof createDebug.init === 'function') {
+			createDebug.init(debug);
+		}
+
+		return debug;
+	}
+
+	function extend(namespace, delimiter) {
+		const newDebug = createDebug(this.namespace + (typeof delimiter === 'undefined' ? ':' : delimiter) + namespace);
+		newDebug.log = this.log;
+		return newDebug;
+	}
+
+	/**
+	* Enables a debug mode by namespaces. This can include modes
+	* separated by a colon and wildcards.
+	*
+	* @param {String} namespaces
+	* @api public
+	*/
+	function enable(namespaces) {
+		createDebug.save(namespaces);
+		createDebug.namespaces = namespaces;
+
+		createDebug.names = [];
+		createDebug.skips = [];
+
+		let i;
+		const split = (typeof namespaces === 'string' ? namespaces : '').split(/[\s,]+/);
+		const len = split.length;
+
+		for (i = 0; i < len; i++) {
+			if (!split[i]) {
+				// ignore empty strings
+				continue;
+			}
+
+			namespaces = split[i].replace(/\*/g, '.*?');
+
+			if (namespaces[0] === '-') {
+				createDebug.skips.push(new RegExp('^' + namespaces.substr(1) + '$'));
+			} else {
+				createDebug.names.push(new RegExp('^' + namespaces + '$'));
+			}
+		}
+	}
+
+	/**
+	* Disable debug output.
+	*
+	* @return {String} namespaces
+	* @api public
+	*/
+	function disable() {
+		const namespaces = [
+			...createDebug.names.map(toNamespace),
+			...createDebug.skips.map(toNamespace).map(namespace => '-' + namespace)
+		].join(',');
+		createDebug.enable('');
+		return namespaces;
+	}
+
+	/**
+	* Returns true if the given mode name is enabled, false otherwise.
+	*
+	* @param {String} name
+	* @return {Boolean}
+	* @api public
+	*/
+	function enabled(name) {
+		if (name[name.length - 1] === '*') {
+			return true;
+		}
+
+		let i;
+		let len;
+
+		for (i = 0, len = createDebug.skips.length; i < len; i++) {
+			if (createDebug.skips[i].test(name)) {
+				return false;
+			}
+		}
+
+		for (i = 0, len = createDebug.names.length; i < len; i++) {
+			if (createDebug.names[i].test(name)) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	* Convert regexp to namespace
+	*
+	* @param {RegExp} regxep
+	* @return {String} namespace
+	* @api private
+	*/
+	function toNamespace(regexp) {
+		return regexp.toString()
+			.substring(2, regexp.toString().length - 2)
+			.replace(/\.\*\?$/, '*');
+	}
+
+	/**
+	* Coerce `val`.
+	*
+	* @param {Mixed} val
+	* @return {Mixed}
+	* @api private
+	*/
+	function coerce(val) {
+		if (val instanceof Error) {
+			return val.stack || val.message;
+		}
+		return val;
+	}
+
+	/**
+	* XXX DO NOT USE. This is a temporary stub function.
+	* XXX It WILL be removed in the next major release.
+	*/
+	function destroy() {
+		console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
+	}
+
+	createDebug.enable(createDebug.load());
+
+	return createDebug;
+}
+
+module.exports = setup;
+
+
+/***/ }),
+
 /***/ "../../../node_modules/.pnpm/events@3.3.0/node_modules/events/events.js":
 /*!******************************************************************************!*\
   !*** ../../../node_modules/.pnpm/events@3.3.0/node_modules/events/events.js ***!
@@ -4708,6 +5271,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "../../js-packages/components/components/decorative-card/style.scss":
+/*!**************************************************************************!*\
+  !*** ../../js-packages/components/components/decorative-card/style.scss ***!
+  \**************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "../../js-packages/components/components/pricing-card/style.scss":
 /*!***********************************************************************!*\
   !*** ../../js-packages/components/components/pricing-card/style.scss ***!
@@ -4773,10 +5349,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "../../js-packages/connection/components/disconnect-card/style.scss":
+/*!**************************************************************************!*\
+  !*** ../../js-packages/connection/components/disconnect-card/style.scss ***!
+  \**************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "../../js-packages/connection/components/disconnect-dialog/style.scss":
 /*!****************************************************************************!*\
   !*** ../../js-packages/connection/components/disconnect-dialog/style.scss ***!
   \****************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/disconnect-survey/_jp-connect_disconnect-survey-card.scss":
+/*!*********************************************************************************************************!*\
+  !*** ../../js-packages/connection/components/disconnect-survey/_jp-connect_disconnect-survey-card.scss ***!
+  \*********************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6689,6 +7291,268 @@ Tannin.prototype.dcnpgettext = function( domain, context, singular, plural, n ) 
 
 /***/ }),
 
+/***/ "../../js-packages/analytics/index.jsx":
+/*!*********************************************!*\
+  !*** ../../js-packages/analytics/index.jsx ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! debug */ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js");
+/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(debug__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
+/**
+ * External dependencies
+ */
+
+
+const debug = debug__WEBPACK_IMPORTED_MODULE_0___default()('dops:analytics');
+
+let _superProps, _user; // Load tracking scripts
+
+
+window._tkq = window._tkq || [];
+
+window.ga = window.ga || function () {
+  (window.ga.q = window.ga.q || []).push(arguments);
+};
+
+window.ga.l = +new Date(); // loadScript( '//stats.wp.com/w.js?48' );
+// loadScript( '//www.google-analytics.com/analytics.js' );
+
+/**
+ * Build a query string
+ *
+ * @param {string} group - the group
+ * @param {string} name - the name
+ * @returns {string} - the uricomponent
+ */
+
+function buildQuerystring(group, name) {
+  let uriComponent = '';
+
+  if ('object' === typeof group) {
+    for (const key in group) {
+      uriComponent += '&x_' + encodeURIComponent(key) + '=' + encodeURIComponent(group[key]);
+    }
+
+    debug('Bumping stats %o', group);
+  } else {
+    uriComponent = '&x_' + encodeURIComponent(group) + '=' + encodeURIComponent(name);
+    debug('Bumping stat "%s" in group "%s"', name, group);
+  }
+
+  return uriComponent;
+}
+/**
+ * Build a query string with no prefix
+ *
+ * @param {string} group - the group
+ * @param {string} name - the name
+ * @returns {string} - the uricomponent
+ */
+
+
+function buildQuerystringNoPrefix(group, name) {
+  let uriComponent = '';
+
+  if ('object' === typeof group) {
+    for (const key in group) {
+      uriComponent += '&' + encodeURIComponent(key) + '=' + encodeURIComponent(group[key]);
+    }
+
+    debug('Built stats %o', group);
+  } else {
+    uriComponent = '&' + encodeURIComponent(group) + '=' + encodeURIComponent(name);
+    debug('Built stat "%s" in group "%s"', name, group);
+  }
+
+  return uriComponent;
+}
+
+const analytics = {
+  initialize: function (userId, username, superProps) {
+    analytics.setUser(userId, username);
+    analytics.setSuperProps(superProps);
+    analytics.identifyUser();
+  },
+  setGoogleAnalyticsEnabled: function (googleAnalyticsEnabled) {
+    let googleAnalyticsKey = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    this.googleAnalyticsEnabled = googleAnalyticsEnabled;
+    this.googleAnalyticsKey = googleAnalyticsKey;
+  },
+  setMcAnalyticsEnabled: function (mcAnalyticsEnabled) {
+    this.mcAnalyticsEnabled = mcAnalyticsEnabled;
+  },
+  setUser: function (userId, username) {
+    _user = {
+      ID: userId,
+      username: username
+    };
+  },
+  setSuperProps: function (superProps) {
+    _superProps = superProps;
+  },
+  mc: {
+    bumpStat: function (group, name) {
+      const uriComponent = buildQuerystring(group, name); // prints debug info
+
+      if (this.mcAnalyticsEnabled) {
+        new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + uriComponent + '&t=' + Math.random();
+      }
+    },
+    bumpStatWithPageView: function (group, name) {
+      // this function is fairly dangerous, as it bumps page views for wpcom and should only be called in very specific cases.
+      const uriComponent = buildQuerystringNoPrefix(group, name); // prints debug info
+
+      if (this.mcAnalyticsEnabled) {
+        new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom' + uriComponent + '&t=' + Math.random();
+      }
+    }
+  },
+  // pageView is a wrapper for pageview events across Tracks and GA
+  pageView: {
+    record: function (urlPath, pageTitle) {
+      analytics.tracks.recordPageView(urlPath);
+      analytics.ga.recordPageView(urlPath, pageTitle);
+    }
+  },
+  purchase: {
+    record: function (transactionId, itemName, itemId, revenue, price, qty, currency) {
+      analytics.ga.recordPurchase(transactionId, itemName, itemId, revenue, price, qty, currency);
+    }
+  },
+  tracks: {
+    recordEvent: function (eventName, eventProperties) {
+      eventProperties = eventProperties || {};
+
+      if (eventName.indexOf('akismet_') !== 0 && eventName.indexOf('jetpack_') !== 0) {
+        debug('- Event name must be prefixed by "akismet_" or "jetpack_"');
+        return;
+      }
+
+      if (_superProps) {
+        debug('- Super Props: %o', _superProps);
+        eventProperties = (0,lodash__WEBPACK_IMPORTED_MODULE_1__.assign)(eventProperties, _superProps);
+      }
+
+      debug('Record event "%s" called with props %s', eventName, JSON.stringify(eventProperties));
+
+      window._tkq.push(['recordEvent', eventName, eventProperties]);
+    },
+    recordJetpackClick: function (target) {
+      const props = 'object' === typeof target ? target : {
+        target: target
+      };
+      analytics.tracks.recordEvent('jetpack_wpa_click', props);
+    },
+    recordPageView: function (urlPath) {
+      analytics.tracks.recordEvent('akismet_page_view', {
+        path: urlPath
+      });
+    },
+    setOptOut: function (isOptingOut) {
+      debug('Pushing setOptOut: %o', isOptingOut);
+
+      window._tkq.push(['setOptOut', isOptingOut]);
+    }
+  },
+  // Google Analytics usage and event stat tracking
+  ga: {
+    initialized: false,
+    initialize: function () {
+      let parameters = {};
+
+      if (!analytics.ga.initialized) {
+        if (_user) {
+          parameters = {
+            userId: 'u-' + _user.ID
+          };
+        }
+
+        window.ga('create', this.googleAnalyticsKey, 'auto', parameters);
+        analytics.ga.initialized = true;
+      }
+    },
+    recordPageView: function (urlPath, pageTitle) {
+      analytics.ga.initialize();
+      debug('Recording Page View ~ [URL: ' + urlPath + '] [Title: ' + pageTitle + ']');
+
+      if (this.googleAnalyticsEnabled) {
+        // Set the current page so all GA events are attached to it.
+        window.ga('set', 'page', urlPath);
+        window.ga('send', {
+          hitType: 'pageview',
+          page: urlPath,
+          title: pageTitle
+        });
+      }
+    },
+    recordEvent: function (category, action, label, value) {
+      analytics.ga.initialize();
+      let debugText = 'Recording Event ~ [Category: ' + category + '] [Action: ' + action + ']';
+
+      if ('undefined' !== typeof label) {
+        debugText += ' [Option Label: ' + label + ']';
+      }
+
+      if ('undefined' !== typeof value) {
+        debugText += ' [Option Value: ' + value + ']';
+      }
+
+      debug(debugText);
+
+      if (this.googleAnalyticsEnabled) {
+        window.ga('send', 'event', category, action, label, value);
+      }
+    },
+    recordPurchase: function (transactionId, itemName, itemId, revenue, price, qty, currency) {
+      window.ga('require', 'ecommerce');
+      window.ga('ecommerce:addTransaction', {
+        id: transactionId,
+        // Transaction ID. Required.
+        // 'affiliation': 'Acme Clothing',   // Affiliation or store name.
+        revenue: revenue,
+        // Grand Total.
+        // 'tax': '1.29',                     // Tax.
+        currency: currency // local currency code.
+
+      });
+      window.ga('ecommerce:addItem', {
+        id: transactionId,
+        // Transaction ID. Required.
+        name: itemName,
+        // Product name. Required.
+        sku: itemId,
+        // SKU/code.
+        // 'category': 'Party Toys',         // Category or variation.
+        price: price,
+        // Unit price.
+        quantity: qty // Quantity.
+
+      });
+      window.ga('ecommerce:send');
+    }
+  },
+  identifyUser: function () {
+    // Don't identify the user if we don't have one
+    if (_user) {
+      window._tkq.push(['identifyUser', _user.ID, _user.username]);
+    }
+  },
+  setProperties: function (properties) {
+    window._tkq.push(['setProperties', properties]);
+  },
+  clearedIdentity: function () {
+    window._tkq.push(['clearIdentity']);
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (analytics);
+
+/***/ }),
+
 /***/ "../../js-packages/api/index.jsx":
 /*!***************************************!*\
   !*** ../../js-packages/api/index.jsx ***!
@@ -7202,6 +8066,84 @@ ActionButton.defaultProps = {
   errorMessage: __('An error occurred. Please try again.', 'jetpack')
 };
 /* harmony default export */ __webpack_exports__["default"] = (ActionButton);
+
+/***/ }),
+
+/***/ "../../js-packages/components/components/decorative-card/index.jsx":
+/*!*************************************************************************!*\
+  !*** ../../js-packages/components/components/decorative-card/index.jsx ***!
+  \*************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/decorative-card/style.scss");
+/**
+ * External Dependencies
+ */
+
+
+/**
+ * Internal Dependencies
+ */
+
+
+/**
+ * A decorative card used in the disconnection flow.
+ *
+ * @param {object} props - The properties.
+ * @returns {React.Component} - The DecorativeCard component.
+ */
+
+const DecorativeCard = props => {
+  const {
+    format,
+    icon,
+    imageUrl
+  } = props;
+
+  const renderIcon = () => {
+    if (icon) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "jp-components__decorative-card__icon-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+        className: 'jp-components__decorative-card__icon jp-components__decorative-card__icon--' + icon
+      }));
+    }
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: 'jp-components__decorative-card ' + (format ? 'jp-components__decorative-card--' + format : '')
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__decorative-card__image",
+    style: {
+      backgroundImage: imageUrl ? `url( ${imageUrl} )` : ''
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__decorative-card__content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-components__decorative-card__lines"
+  })), renderIcon());
+};
+
+DecorativeCard.propTypes = {
+  /** The format of the card (horizontal or vertical) */
+  format: prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOf(['horizontal', 'vertical']),
+
+  /** An icon slug that can be used to show an icon (options are limited to what is in the stylesheet) */
+  icon: prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOf(['unlink']),
+
+  /** URL for an image to show in the card. */
+  imageUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)
+};
+DecorativeCard.defaultProps = {
+  format: 'horizontal'
+};
+/* harmony default export */ __webpack_exports__["default"] = (DecorativeCard);
 
 /***/ }),
 
@@ -8230,6 +9172,95 @@ ConnectUser.defaultProps = {
 
 /***/ }),
 
+/***/ "../../js-packages/connection/components/connected-plugins/index.jsx":
+/*!***************************************************************************!*\
+  !*** ../../js-packages/connection/components/connected-plugins/index.jsx ***!
+  \***************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _disconnect_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../disconnect-card */ "../../js-packages/connection/components/disconnect-card/index.jsx");
+/**
+ * External Dependencies
+ */
+
+
+
+/**
+ * Internal Dependencies
+ */
+
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+
+/**
+ * Render a list of connected plugins.
+ *
+ * @param {object} props - The properties
+ * @returns {React.Component} - The ConnectedPlugins React component
+ */
+
+const ConnectedPlugins = props => {
+  const {
+    connectedPlugins,
+    disconnectingPlugin
+  } = props;
+  /**
+   * Add a slug property to each ConnectedPlugins object so they can be converted to an array.
+   * This allows the connected plugins to be iterated over more easily for display.
+   */
+
+  const connectedPluginsArray = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
+    if (connectedPlugins) {
+      const keys = Object.keys(connectedPlugins);
+      return keys.map(key => {
+        return Object.assign({
+          slug: key
+        }, connectedPlugins[key]);
+      }).filter(plugin => {
+        return disconnectingPlugin !== plugin.slug;
+      });
+    } // No connected plugins.
+
+
+    return [];
+  }, [connectedPlugins, disconnectingPlugin]);
+
+  if (connectedPlugins && connectedPluginsArray.length > 0) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "jp-connection__disconnect-dialog__step-copy"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+      className: "jp-connection__disconnect-dialog__large-text"
+    }, __('Jetpack is powering other plugins on your site. If you disconnect, these plugins will no longer work.', 'jetpack'))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "jp-connection__disconnect-card__group"
+    }, connectedPluginsArray.map(plugin => {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_disconnect_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        title: plugin.name
+      });
+    })));
+  } // Default to null if there are no connected plugins passed on the props
+
+
+  return null;
+};
+
+ConnectedPlugins.PropTypes = {
+  /** Plugins that are using the Jetpack connection. */
+  connectedPlugins: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
+
+  /** Slug of the plugin that has initiated the disconnect. */
+  disconnectingPlugin: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)
+};
+/* harmony default export */ __webpack_exports__["default"] = (ConnectedPlugins);
+
+/***/ }),
+
 /***/ "../../js-packages/connection/components/connection-status-card/index.jsx":
 /*!********************************************************************************!*\
   !*** ../../js-packages/connection/components/connection-status-card/index.jsx ***!
@@ -8275,14 +9306,6 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
  * The RNA Connection Status Card component.
  *
  * @param {object}   props -- The properties.
- * @param {string}   props.apiRoot -- API root URL, required.
- * @param {string}   props.apiNonce -- API Nonce, required.
- * @param {boolean}  props.isRegistered -- Whether a site level connection has already been established, required. If not, the component will not render.
- * @param {string}   props.isUserConnected -- Whether the current user has connected their WordPress.com account, required.
- * @param {string}   props.redirectUri -- The redirect admin URI after the user has connected their WordPress.com account.
- * @param {string}   props.title -- The Card title.
- * @param {string}   props.connectionInfoText -- The text that will be displayed under the title, containing info how to leverage the connection.
- * @param {Function} props.onDisconnected -- The callback to be called upon disconnection success.
  * @returns {React.Component} The `ConnectionStatusCard` component.
  */
 
@@ -8295,10 +9318,14 @@ const ConnectionStatusCard = props => {
     redirectUri,
     title,
     connectionInfoText,
-    onDisconnected
+    onDisconnected,
+    connectedPlugins,
+    connectedSiteId,
+    context
   } = props;
   const [isFetchingConnectionData, setIsFetchingConnectionData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [connectedUserData, setConnectedUserData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({});
+  const [isDisconnectDialogOpen, setIsDisconnectDialogOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const userIsConnecting = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_7__.STORE_ID).getUserIsConnecting(), []);
   const {
     setConnectionStatus,
@@ -8335,6 +9362,22 @@ const ConnectionStatusCard = props => {
       throw error;
     });
   }, [setIsFetchingConnectionData, setConnectedUserData]);
+  /**
+   * Open the Disconnect Dialog.
+   */
+
+  const openDisconnectDialog = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
+    e && e.preventDefault();
+    setIsDisconnectDialogOpen(true);
+  }, [setIsDisconnectDialogOpen]);
+  /**
+   * Close the Disconnect Dialog.
+   */
+
+  const closeDisconnectDialog = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
+    e && e.preventDefault();
+    setIsDisconnectDialogOpen(false);
+  }, [setIsDisconnectDialogOpen]);
   const onDisconnectedCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
     e && e.preventDefault();
     setConnectionStatus({
@@ -8369,11 +9412,21 @@ const ConnectionStatusCard = props => {
     className: "jp-connection-status-card--list"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     className: "jp-connection-status-card--list-item-success"
-  }, __('Site connected.', 'jetpack'), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_disconnect_dialog__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, __('Site connected.', 'jetpack'), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+    variant: "link",
+    onClick: openDisconnectDialog,
+    className: "jp-connection__disconnect-dialog__link"
+  }, __('Disconnect', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_disconnect_dialog__WEBPACK_IMPORTED_MODULE_8__["default"], {
     apiRoot: apiRoot,
     apiNonce: apiNonce,
-    onDisconnected: onDisconnectedCallback
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, __('Jetpack is currently powering multiple products on your site.', 'jetpack'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), __('Once you disconnect Jetpack, these will no longer work.', 'jetpack')))), isUserConnected && !isFetchingConnectionData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    onDisconnected: onDisconnectedCallback,
+    connectedPlugins: connectedPlugins,
+    connectedSiteId: connectedSiteId,
+    connectedUser: connectedUserData,
+    isOpen: isDisconnectDialogOpen,
+    onClose: closeDisconnectDialog,
+    context: context
+  })), isUserConnected && !isFetchingConnectionData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     className: "jp-connection-status-card--list-item-success"
   }, __('Logged in as', 'jetpack'), " ", connectedUserData === null || connectedUserData === void 0 ? void 0 : connectedUserData.display_name), !isUserConnected && !isFetchingConnectionData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
     className: "jp-connection-status-card--list-item-error"
@@ -8388,20 +9441,110 @@ const ConnectionStatusCard = props => {
 };
 
 ConnectionStatusCard.propTypes = {
+  /** API root URL, required. */
   apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
+
+  /** API Nonce, required. */
   apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
+
+  /** Whether a site level connection has already been established, required. If not, the component will not render. */
   isRegistered: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool.isRequired),
+
+  /** Whether the current user has connected their WordPress.com account, required. */
   isUserConnected: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool.isRequired),
+
+  /** The redirect admin URI after the user has connected their WordPress.com account. */
   redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
+
+  /** An object of the plugins currently using the Jetpack connection. */
+  connectedPlugins: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object),
+
+  /** ID of the currently connected site. */
+  connectedSiteId: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().number),
+
+  /** The Card title. */
   title: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
+
+  /** The text that will be displayed under the title, containing info how to leverage the connection. */
   connectionInfoText: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
-  onDisconnected: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func)
+
+  /** The callback to be called upon disconnection success. */
+  onDisconnected: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func),
+
+  /** The context in which this component is being used */
+  context: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string)
 };
 ConnectionStatusCard.defaultProps = {
   title: __('Connection', 'jetpack'),
   connectionInfoText: __('Leverages the Jetpack Cloud for more features on your side.', 'jetpack')
 };
 /* harmony default export */ __webpack_exports__["default"] = (ConnectionStatusCard);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/disconnect-card/index.jsx":
+/*!*************************************************************************!*\
+  !*** ../../js-packages/connection/components/disconnect-card/index.jsx ***!
+  \*************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/disconnect-card/style.scss");
+/**
+ * External Dependencies
+ */
+
+
+/**
+ * Internal Dependencies
+ */
+
+
+/**
+ * Show a card with a title, value and description.
+ * Used in the disconnection flow.
+ *
+ * @param {object} props - The Properties.
+ * @returns {React.Component} DisconnectCard - The disconnect card component.
+ */
+
+const DisconnectCard = props => {
+  const {
+    title,
+    value,
+    description
+  } = props;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-card card"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-card__card-content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "jp-connection__disconnect-card__card-headline"
+  }, title), (value || description) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-card__card-stat-block"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "jp-connection__disconnect-card__card-stat"
+  }, value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-card__card-description"
+  }, description))));
+};
+
+DisconnectCard.propTypes = {
+  /** The title to show on the disconnect card. */
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** Optional value/ statistic to show. */
+  value: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string) | (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),
+
+  /** Description to go with the stat value. */
+  description: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number)
+};
+/* harmony default export */ __webpack_exports__["default"] = (DisconnectCard);
 
 /***/ }),
 
@@ -8421,12 +9564,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/disconnect-dialog/style.scss");
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-analytics */ "../../js-packages/analytics/index.jsx");
+/* harmony import */ var _automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @automattic/jetpack-config */ "../../js-packages/config/src/index.js");
+/* harmony import */ var _automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/connection/components/disconnect-dialog/style.scss");
+/* harmony import */ var _steps_step_disconnect__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./steps/step-disconnect */ "../../js-packages/connection/components/disconnect-dialog/steps/step-disconnect.jsx");
+/* harmony import */ var _steps_step_disconnect_confirm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./steps/step-disconnect-confirm */ "../../js-packages/connection/components/disconnect-dialog/steps/step-disconnect-confirm.jsx");
+/* harmony import */ var _steps_step_survey__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./steps/step-survey */ "../../js-packages/connection/components/disconnect-dialog/steps/step-survey.jsx");
+/* harmony import */ var _steps_step_thank_you__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./steps/step-thank-you */ "../../js-packages/connection/components/disconnect-dialog/steps/step-thank-you.jsx");
 /**
  * External dependencies
  */
@@ -8443,66 +9589,113 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
  */
 
 
+
+
+
+
 /**
  * The RNA Disconnect Dialog component.
  *
  * @param {object} props -- The properties.
- * @param {string} props.apiRoot -- API root URL, required.
- * @param {string} props.apiNonce -- API Nonce, required.
- * @param {string} props.title -- The modal title.
- * @param {Function} props.onDisconnected -- The callback to be called upon disconnection success.
- * @param {Function} props.onError -- The callback to be called upon disconnection failure.
- * @param {Function} props.errorMessage -- The error message to display upon disconnection failure.
  * @returns {React.Component} The `DisconnectDialog` component.
  */
 
 const DisconnectDialog = props => {
-  const [isOpen, setOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [isDisconnecting, setIsDisconnecting] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [isDisconnected, setIsDisconnected] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [disconnectError, setDisconnectError] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [isProvidingFeedback, setIsProvidingFeedback] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [isFeedbackProvided, setIsFeedbackProvided] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [isSubmittingFeedback, setIsSubmittingFeedback] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const {
     apiRoot,
     apiNonce,
+    connectedPlugins,
     title,
+    pluginScreenDisconnectCallback,
     onDisconnected,
     onError,
-    errorMessage,
-    children
+    disconnectStepComponent,
+    context,
+    connectedUser,
+    connectedSiteId,
+    isOpen,
+    onClose
   } = props;
+  let disconnectingPlugin = '';
+
+  if ((0,_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_6__.jetpackConfigHas)('consumer_slug')) {
+    disconnectingPlugin = (0,_automattic_jetpack_config__WEBPACK_IMPORTED_MODULE_6__.jetpackConfigGet)('consumer_slug');
+  }
+
+  const defaultTracksArgs = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
+    return {
+      context: context,
+      plugin: disconnectingPlugin
+    };
+  }, [context, disconnectingPlugin]);
   /**
    * Initialize the REST API.
    */
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].setApiNonce(apiNonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
   /**
-   * Open the Disconnect Dialog.
+   * Initialize tracks with user data.
+   * Should run when we have a connected user.
    */
 
-  const openModal = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
-    e && e.preventDefault();
-    setOpen(true);
-  }, [setOpen]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (connectedUser && connectedUser.ID && connectedUser.login) {
+      _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_5__["default"].initialize(connectedUser.ID, connectedUser.login);
+    }
+  }, [connectedUser, connectedUser.ID, connectedUser.login]);
   /**
-   * Close the Disconnect Dialog.
+   * Run when the disconnect dialog is opened
    */
 
-  const closeModal = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
-    e && e.preventDefault();
-    setOpen(false);
-  }, [setOpen]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (isOpen) {
+      _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_5__["default"].tracks.recordEvent('jetpack_disconnect_dialog_open', defaultTracksArgs);
+    }
+  }, [isOpen, defaultTracksArgs]);
   /**
-   * Disconnect - Triggered upon clicking the 'Disconnect' button.
+   * Keep track of the steps that are presented
    */
 
-  const disconnect = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
-    e && e.preventDefault();
-    setDisconnectError(false);
-    setIsDisconnecting(true);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_5__["default"].disconnectSite().then(() => {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    // Don't do anything if the dialog is not open.
+    if (!isOpen) {
+      return;
+    }
+
+    if (!isDisconnected) {
+      _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_5__["default"].tracks.recordEvent('jetpack_disconnect_dialog_step', Object.assign({}, {
+        step: 'disconnect'
+      }, defaultTracksArgs));
+    } else if (isDisconnected && !isProvidingFeedback && !isFeedbackProvided) {
+      _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_5__["default"].tracks.recordEvent('jetpack_disconnect_dialog_step', Object.assign({}, {
+        step: 'disconnect_confirm'
+      }, defaultTracksArgs));
+    } else if (isProvidingFeedback && !isFeedbackProvided) {
+      _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_5__["default"].tracks.recordEvent('jetpack_disconnect_dialog_step', Object.assign({}, {
+        step: 'survey'
+      }, defaultTracksArgs));
+    } else if (isFeedbackProvided) {
+      _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_5__["default"].tracks.recordEvent('jetpack_disconnect_dialog_step', Object.assign({}, {
+        step: 'thank_you'
+      }, defaultTracksArgs));
+    }
+  }, [isOpen, isDisconnected, isProvidingFeedback, isFeedbackProvided, defaultTracksArgs]);
+  /**
+   * Disconnect the site.
+   * Uses the rest API to remove the Jetpack connection.
+   */
+
+  const _disconnect = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].disconnectSite().then(() => {
       setIsDisconnecting(false);
       setIsDisconnected(true);
     }).catch(error => {
@@ -8515,6 +9708,111 @@ const DisconnectDialog = props => {
     });
   }, [setIsDisconnecting, setIsDisconnected, setDisconnectError, onError]);
   /**
+   * Submit the optional survey following disconnection.
+   */
+
+
+  const _submitSurvey = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((surveyData, tracksSurveyData) => {
+    // Send survey response to wpcom
+    const base = 'https://public-api.wordpress.com';
+    const path = '/wpcom/v2/marketing/feedback-survey';
+    const method = 'POST';
+    setIsSubmittingFeedback(true); // We cannot use `@wordpress/api-fetch` here since it unconditionally sends
+    // the `X-WP-Nonce` header, which is disallowed by WordPress.com.
+    // If the submission receives an error, there's not really anything the user is able to do to fix it.
+    // In these cases, just go ahead and show the last survey step.
+
+    fetch(base + path, {
+      method: method,
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify(surveyData)
+    }).then(result => result.json()).then(jsonResponse => {
+      // response received
+      if (true === jsonResponse.success) {
+        // Send a tracks event for survey submission.
+        _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_5__["default"].tracks.recordEvent('jetpack_disconnect_survey_submit', tracksSurveyData);
+        setIsFeedbackProvided(true);
+        setIsSubmittingFeedback(false);
+      } else {
+        throw new Error('Survey endpoint returned error code ' + jsonResponse.code);
+      }
+    }).catch(error => {
+      _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_5__["default"].tracks.recordEvent('jetpack_disconnect_survey_error', Object.assign({}, {
+        error: error.message
+      }, tracksSurveyData));
+      setIsFeedbackProvided(true);
+      setIsSubmittingFeedback(false);
+    });
+  }, [setIsSubmittingFeedback, setIsFeedbackProvided]);
+  /**
+   * Disconnect - Triggered upon clicking the 'Disconnect' button.
+   */
+
+
+  const handleDisconnect = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
+    e && e.preventDefault();
+    setDisconnectError(false);
+    setIsDisconnecting(true); // Detect the plugin context, where the plugin needs to be deactivated.
+
+    if (context === 'plugins') {
+      // Use a callback function to handle deactivating the plugin.
+      // This should effectively short-circuit the disconnect flow by redirecting to deactivate the plugin.
+      if (pluginScreenDisconnectCallback) {
+        pluginScreenDisconnectCallback(e);
+      } // Do not disconnect if context is the plugin screen, the plugin deactivation routine will handle disconnection.
+
+
+      return;
+    } // Default to making the disconnect API call here.
+
+
+    _disconnect();
+  }, [setDisconnectError, setIsDisconnecting, pluginScreenDisconnectCallback, context, _disconnect]);
+  /**
+   * Do we have the necessary data to be able to submit a survey?
+   * Need to have the ID of the connected user and the ID of the connected site.
+   */
+
+  const canProvideFeedback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
+    return connectedUser.ID && connectedSiteId;
+  }, [connectedUser, connectedSiteId]);
+  /**
+   * Submit Survey - triggered by clicking on the "Submit Feedback" button.
+   * Assembles the survey response.
+   */
+
+  const handleSubmitSurvey = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((surveyAnswerId, surveyAnswerText, e) => {
+    e && e.preventDefault(); // We do not have the information needed to record the response.
+    // return early and move to the last step in the flow anyway.
+
+    if (!canProvideFeedback()) {
+      setIsFeedbackProvided(true);
+      return;
+    } // Format the survey data for submission.
+
+
+    const surveyData = {
+      site_id: connectedSiteId,
+      user_id: connectedUser.ID,
+      survey_id: 'jetpack-plugin-disconnect',
+      survey_responses: {
+        'why-cancel': {
+          response: surveyAnswerId,
+          text: surveyAnswerText ? surveyAnswerText : null
+        }
+      }
+    }; // Additional data for analytics to see where disconnections happened from.
+
+    const tracksSurveyData = Object.assign({}, defaultTracksArgs, {
+      disconnect_reason: surveyAnswerId
+    });
+
+    _submitSurvey(surveyData, tracksSurveyData);
+  }, [_submitSurvey, setIsFeedbackProvided, canProvideFeedback, connectedSiteId, connectedUser, defaultTracksArgs]);
+  /**
    * Close modal and fire 'onDisconnected' callback if exists.
    * Triggered upon clicking the 'Back To WordPress' button.
    */
@@ -8526,83 +9824,759 @@ const DisconnectDialog = props => {
       onDisconnected();
     }
 
-    closeModal();
-  }, [onDisconnected, closeModal]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
-    variant: "link",
-    onClick: openModal,
-    className: "jp-disconnect-dialog__link"
-  }, __('Disconnect', 'jetpack')), isOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Modal, {
+    onClose();
+  }, [onDisconnected, onClose]);
+  /**
+   * Update the local state to show the survey step.
+   */
+
+  const handleProvideFeedback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
+    e && e.preventDefault();
+    setIsProvidingFeedback(true);
+  }, [setIsProvidingFeedback]);
+  /**
+   * Determine what step to show based on the current state
+   *
+   * @returns { React.Component } - component for current step
+   */
+
+  const getCurrentStep = () => {
+    if (!isDisconnected) {
+      // Disconnection screen.
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_steps_step_disconnect__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        title: title,
+        connectedPlugins: connectedPlugins // Component that renders as part of the disconnect step, if passed.
+        ,
+        disconnectStepComponent: disconnectStepComponent,
+        isDisconnecting: isDisconnecting,
+        closeModal: onClose,
+        onDisconnect: handleDisconnect,
+        disconnectError: disconnectError,
+        context: context // Where is the modal showing? ( most important for when it loads on the plugins page )
+        ,
+        disconnectingPlugin: disconnectingPlugin // Which plugin is initiating the disconnect.
+
+      });
+    } else if (isDisconnected && !isProvidingFeedback && !isFeedbackProvided) {
+      // Confirm the disconnection, ask user about providing feedback.
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_steps_step_disconnect_confirm__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        canProvideFeedback: canProvideFeedback(),
+        onProvideFeedback: handleProvideFeedback,
+        onExit: backToWordpress
+      });
+    } else if (isProvidingFeedback && !isFeedbackProvided) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_steps_step_survey__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        isSubmittingFeedback: isSubmittingFeedback,
+        onFeedBackProvided: handleSubmitSurvey,
+        onExit: backToWordpress
+      });
+    } else if (isFeedbackProvided) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_steps_step_thank_you__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        onExit: backToWordpress
+      });
+    }
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, isOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Modal, {
     title: "",
     contentLabel: title,
     aria: {
-      labelledby: 'jp-disconnect-dialog__heading'
+      labelledby: 'jp-connection__disconnect-dialog__heading'
     },
-    onRequestClose: closeModal,
+    onRequestClose: onClose,
     shouldCloseOnClickOutside: false,
     shouldCloseOnEsc: false,
     isDismissible: false,
-    className: 'jp-disconnect-dialog' + (isDisconnected ? ' jp-disconnect-dialog__success' : '')
-  }, !isDisconnected && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-disconnect-dialog__content"
+    className: 'jp-connection__disconnect-dialog' + (isDisconnected ? ' jp-connection__disconnect-dialog__success' : '')
+  }, getCurrentStep()));
+};
+
+DisconnectDialog.propTypes = {
+  /** API root URL, required. */
+  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** API Nonce, required. */
+  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** The modal title. */
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The callback to be called upon disconnection success. */
+  onDisconnected: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** The callback to be called upon disconnection failure. */
+  onError: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** The context in which this component is being used. */
+  context: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** Plugins that are using the Jetpack connection. */
+  connectedPlugins: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
+
+  /** Callback function that is called just before the request to disconnect is made when the context is "plugins". */
+  pluginScreenDisconnectCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** A component to render as part of the disconnect step. */
+  disconnectStepComponent: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().element),
+
+  /** An object representing the connected user. */
+  connectedUser: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
+
+  /** ID of the currently connected site. */
+  connectedSiteId: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),
+
+  /** Whether or not the dialog modal should be open. */
+  isOpen: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
+
+  /** Callback function for when the modal closes. */
+  onClose: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func)
+};
+DisconnectDialog.defaultProps = {
+  title: __('Are you sure you want to disconnect?', 'jetpack'),
+  context: 'jetpack-dashboard',
+  connectedUser: {} // Pass empty object to avoid undefined errors.
+
+};
+/* harmony default export */ __webpack_exports__["default"] = (DisconnectDialog);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/disconnect-dialog/steps/step-disconnect-confirm.jsx":
+/*!***************************************************************************************************!*\
+  !*** ../../js-packages/connection/components/disconnect-dialog/steps/step-disconnect-confirm.jsx ***!
+  \***************************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/decorative-card/index.jsx");
+/* harmony import */ var _images_disconnect_confirm_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/disconnect-confirm.jpg */ "../../js-packages/connection/components/disconnect-dialog/images/disconnect-confirm.jpg");
+/**
+ * External Dependencies
+ */
+
+
+/**
+ * Internal Dependencies
+ */
+
+
+
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
+
+
+
+/**
+ * Shows the step that confirms the site has been disconnected, asks if user would like to provide feedback.
+ * Will only show option to provide feedback if the canProvideFeedback prop is true.
+ *
+ * @param {object} props - The properties.
+ * @returns {React.Component} - StepDisconnectConfirm Component
+ */
+
+const StepDisconnectConfirm = props => {
+  const {
+    onExit,
+    canProvideFeedback,
+    onProvideFeedback
+  } = props;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-dialog__content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    icon: "unlink",
+    imageUrl: _images_disconnect_confirm_jpg__WEBPACK_IMPORTED_MODULE_6__
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-dialog__step-copy jp-connection__disconnect-dialog__step-copy--narrow"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createInterpolateElement)(__('Jetpack has been <br/>successfully disconnected.', 'jetpack'), {
+    br: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null)
+  })), canProvideFeedback && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, __('We’re sorry to see you go. Here at Jetpack, we’re always striving to provide the best experience for our customers. Please take our short survey (2 minutes, promise).', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+    isPrimary: true,
+    onClick: onProvideFeedback,
+    className: "jp-connection__disconnect-dialog__btn-back-to-wp"
+  }, __('Help us improve', 'jetpack'))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    className: "jp-connection__disconnect-dialog__link jp-connection__disconnect-dialog__link--bold",
+    href: "#",
+    onClick: onExit
+  }, __('No thank you', 'jetpack'))), !canProvideFeedback && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+    isPrimary: true,
+    onClick: onExit,
+    className: "jp-connection__disconnect-dialog__btn-back-to-wp"
+  }, __('Back to my website', 'jetpack'))))));
+};
+
+StepDisconnectConfirm.PropTypes = {
+  /** Callback used to close the modal. */
+  onExit: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** Callback used to change the state if user would like to provide feedback. */
+  onProvideFeedback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** Does the app have the necessary information to collect a survey response? */
+  canProvideFeedback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool)
+};
+/* harmony default export */ __webpack_exports__["default"] = (StepDisconnectConfirm);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/disconnect-dialog/steps/step-disconnect.jsx":
+/*!*******************************************************************************************!*\
+  !*** ../../js-packages/connection/components/disconnect-dialog/steps/step-disconnect.jsx ***!
+  \*******************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _connected_plugins__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../connected-plugins */ "../../js-packages/connection/components/connected-plugins/index.jsx");
+/**
+ * External Dependencies
+ */
+
+/**
+ * Internal Dependencies
+ */
+
+
+
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+
+
+
+
+/**
+ * Disconnect step in disconnection flow.
+ *
+ * @param {object} props - The properties.
+ * @returns {React.Component} - The StepDisconnect component
+ */
+
+const StepDisconnect = props => {
+  const {
+    title,
+    isDisconnecting,
+    onDisconnect,
+    disconnectError,
+    disconnectStepComponent,
+    connectedPlugins,
+    disconnectingPlugin,
+    closeModal,
+    context
+  } = props;
+  /**
+   * Render the disconnect button, allows for some variance based on context.
+   *
+   * @returns {React.Component} - Button used for disconnect.
+   */
+
+  const renderDisconnectButton = () => {
+    let buttonText = __('Disconnect', 'jetpack'); // When showing on the plugins page, this button should deactivate the plugin as well.
+
+
+    if (isDisconnecting) {
+      buttonText = __('Disconnecting…', 'jetpack');
+    } else if (context === 'plugins') {
+      buttonText = __('Disconnect and Deactivate', 'jetpack');
+    }
+
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
+      isPrimary: true,
+      disabled: isDisconnecting,
+      onClick: onDisconnect,
+      className: "jp-connection__disconnect-dialog__btn-disconnect"
+    }, buttonText);
+  };
+  /**
+   * Show some fallback output if there are no connected plugins to show and no passed disconnect component.
+   * This is a more generic message about disconnecting Jetpack.
+   *
+   * @returns {React.ElementType} - Fallback message for when there are no connected plugins or passed components to show.
+   */
+
+
+  const renderFallbackOutput = () => {
+    if (!connectedPlugins && !disconnectStepComponent) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "jp-connection__disconnect-dialog__step-copy"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+        className: "jp-connection__disconnect-dialog__large-text"
+      }, __('Jetpack is currently powering multiple products on your site.', 'jetpack'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), __('Once you disconnect Jetpack, these will no longer work.', 'jetpack')));
+    }
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-dialog__content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
-    id: "jp-disconnect-dialog__heading"
-  }, title), children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-disconnect-dialog__actions"
+    id: "jp-connection__disconnect-dialog__heading"
+  }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_connected_plugins__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    connectedPlugins: connectedPlugins,
+    disconnectingPlugin: disconnectingPlugin
+  }), disconnectStepComponent, renderFallbackOutput()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-dialog__actions"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-row"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "lg-col-span-8 md-col-span-8 sm-col-span-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('<strong>Need help?</strong> Learn more about the <jpConnectionInfoLink>Jetpack connection</jpConnectionInfoLink> or <jpSupportLink>contact Jetpack support</jpSupportLink>', 'jetpack'), {
+    className: "lg-col-span-7 md-col-span-8 sm-col-span-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createInterpolateElement)(__('<strong>Need help?</strong> Learn more about the <jpConnectionInfoLink>Jetpack connection</jpConnectionInfoLink> or <jpSupportLink>contact Jetpack support</jpSupportLink>.', 'jetpack'), {
     strong: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null),
     jpConnectionInfoLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__["default"])('why-the-wordpress-com-connection-is-important-for-jetpack'),
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__["default"])('why-the-wordpress-com-connection-is-important-for-jetpack'),
       rel: "noopener noreferrer",
       target: "_blank",
-      className: "jp-disconnect-dialog__link"
+      className: "jp-connection__disconnect-dialog__link"
     }),
     jpSupportLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__["default"])('jetpack-support'),
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__["default"])('jetpack-support'),
       rel: "noopener noreferrer",
       target: "_blank",
-      className: "jp-disconnect-dialog__link"
+      className: "jp-connection__disconnect-dialog__link"
     })
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-disconnect-dialog__button-wrap lg-col-span-4 md-col-span-8 sm-col-span-4"
+    className: "jp-connection__disconnect-dialog__button-wrap lg-col-span-5 md-col-span-8 sm-col-span-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
     isPrimary: true,
     disabled: isDisconnecting,
     onClick: closeModal,
-    className: "jp-disconnect-dialog__btn-dismiss"
-  }, __('Stay connected', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
-    isPrimary: true,
-    disabled: isDisconnecting,
-    onClick: disconnect,
-    className: "jp-disconnect-dialog__btn-disconnect"
-  }, __('Disconnect', 'jetpack')))), disconnectError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "jp-disconnect-dialog__error"
-  }, errorMessage))), isDisconnected && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('Jetpack has been <br/>successfully disconnected.', 'jetpack'), {
+    className: "jp-connection__disconnect-dialog__btn-dismiss"
+  }, __('Stay connected', 'jetpack')), renderDisconnectButton())), disconnectError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "jp-connection__disconnect-dialog__error"
+  }, disconnectError)));
+};
+
+StepDisconnect.propTypes = {
+  /** The title to show for this section. */
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
+
+  /** Whether or not a request to disconnect is in progress. */
+  isDisconnecting: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool),
+
+  /** Callback function that is triggered by clicking the "Disconnect" button. */
+  onDisconnect: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func),
+
+  /** An error that occurred during a request to disconnect. */
+  disconnectError: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool),
+
+  /** A component to be rendered as part of this step */
+  disconnectStepComponent: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().elementType),
+
+  /** Plugins that are using the Jetpack connection. */
+  connectedPlugins: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().array),
+
+  /** The slug of the plugin that is initiating the disconnection. */
+  disconnectingPlugin: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
+
+  /** Callback function that closes the modal. */
+  closeModal: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func),
+
+  /** Where this modal is being rendered. */
+  context: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string)
+};
+/* harmony default export */ __webpack_exports__["default"] = (StepDisconnect);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/disconnect-dialog/steps/step-survey.jsx":
+/*!***************************************************************************************!*\
+  !*** ../../js-packages/connection/components/disconnect-dialog/steps/step-survey.jsx ***!
+  \***************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _disconnect_survey_jp_connect_disconnect_survey_card_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../disconnect-survey/_jp-connect_disconnect-survey-card.scss */ "../../js-packages/connection/components/disconnect-survey/_jp-connect_disconnect-survey-card.scss");
+/* harmony import */ var _disconnect_survey__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../disconnect-survey */ "../../js-packages/connection/components/disconnect-survey/index.jsx");
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+
+/**
+ * External Dependencies
+ */
+
+
+/**
+ * Internal Dependencies
+ */
+
+
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+
+
+/**
+ * Show the survey step and allow the user to select a response.
+ *
+ * @param {object} props - The properties.
+ * @returns {React.Component} The StepSurvey Component
+ */
+
+const StepSurvey = props => {
+  const {
+    onExit,
+    onFeedBackProvided,
+    isSubmittingFeedback
+  } = props;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-dialog__content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, __('Before you go, help us improve Jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "jp-connection__disconnect-dialog__large-text"
+  }, __('Let us know what didn‘t work for you', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_disconnect_survey__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    onSubmit: onFeedBackProvided,
+    isSubmittingFeedback: isSubmittingFeedback
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    className: "jp-connection__disconnect-dialog__link jp-connection__disconnect-dialog__link--bold",
+    href: "#",
+    onClick: onExit
+  }, __('Skip for now', 'jetpack')));
+};
+
+StepSurvey.PropTypes = {
+  /** Callback function used to close the modal and leave the disconnect flow. */
+  onExit: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** Callback function to handle submission of survey response. */
+  onFeedBackProvided: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** If the survey feedback is currently being saved/ submitted */
+  isSubmittingFeedback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool)
+};
+/* harmony default export */ __webpack_exports__["default"] = (StepSurvey);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/disconnect-dialog/steps/step-thank-you.jsx":
+/*!******************************************************************************************!*\
+  !*** ../../js-packages/connection/components/disconnect-dialog/steps/step-thank-you.jsx ***!
+  \******************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/decorative-card/index.jsx");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _images_disconnect_thanks_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/disconnect-thanks.jpg */ "../../js-packages/connection/components/disconnect-dialog/images/disconnect-thanks.jpg");
+/**
+ * External Dependencies
+ */
+
+
+/**
+ * Internal Dependencies
+ */
+
+
+
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+
+
+
+/**
+ * Show the "thank you" step following survey submission
+ *
+ * @param {object} props - The properties.
+ * @returns {React.Component} - The StepThankYou Component
+ */
+
+const StepThankYou = props => {
+  const {
+    onExit
+  } = props;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-dialog__content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    format: "vertical",
+    imageUrl: _images_disconnect_thanks_jpg__WEBPACK_IMPORTED_MODULE_6__
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-dialog__copy"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, __('Thank you!', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "jp-connection__disconnect-dialog__large-text"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)(__('Your answer has been submitted. <br/>Thanks for your input on how we can improve Jetpack.', 'jetpack'), {
     br: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null)
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
     isPrimary: true,
-    onClick: backToWordpress,
-    className: "jp-disconnect-dialog__btn-back-to-wp"
-  }, __('Back to WordPress', 'jetpack')))));
+    onClick: onExit,
+    className: "jp-connection__disconnect-dialog__btn-back-to-wp"
+  }, __('Back to my website', 'jetpack'))));
 };
 
-DisconnectDialog.propTypes = {
-  apiRoot: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-  apiNonce: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
-  onDisconnected: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
-  onError: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
-  errorMessage: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)
+StepThankYou.PropTypes = {
+  /** Callback function to close the disconnect modal. */
+  onExit: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** Base URL for where webpack-ed images will be stored for the consumer of this component. */
+  assetBaseUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)
 };
-DisconnectDialog.defaultProps = {
-  title: __('Are you sure you want to disconnect?', 'jetpack'),
-  errorMessage: __('Failed to disconnect. Please try again.', 'jetpack')
+/* harmony default export */ __webpack_exports__["default"] = (StepThankYou);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/disconnect-survey/index.jsx":
+/*!***************************************************************************!*\
+  !*** ../../js-packages/connection/components/disconnect-survey/index.jsx ***!
+  \***************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _survey_choice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./survey-choice */ "../../js-packages/connection/components/disconnect-survey/survey-choice.jsx");
+/**
+ * External Dependencies
+ */
+
+
+/**
+ * Internal Dependencies
+ */
+
+
+
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
+
+/**
+ * Handles showing the disconnect survey.
+ *
+ * @param {object} props - The component props.
+ * @returns {React.Component} - DisconnectSurvey component.
+ */
+
+const DisconnectSurvey = props => {
+  const {
+    onSubmit,
+    isSubmittingFeedback
+  } = props;
+  const [selectedAnswer, setSelectedAnswer] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)();
+  const [customResponse, setCustomResponse] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)();
+  const options = [{
+    id: 'troubleshooting',
+    answerText: __("Troubleshooting - I'll be reconnecting afterwards.", 'jetpack')
+  }, {
+    id: 'not-working',
+    answerText: __("I can't get it to work.", 'jetpack')
+  }, {
+    id: 'slowed-down-site',
+    answerText: __('It slowed down my site.', 'jetpack')
+  }, {
+    id: 'buggy',
+    answerText: __("It's buggy.", 'jetpack')
+  }, {
+    id: 'what-does-it-do',
+    answerText: __("I don't know what it does.", 'jetpack')
+  }];
+  const customOption = {
+    id: 'another-reason'
+  };
+  /**
+   * Handle Submission of the survey.
+   * Will send the survey response to the collection endpoint.
+   */
+
+  const handleSurveySubmit = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
+    const answerText = selectedAnswer === customOption.id ? customResponse : '';
+    onSubmit(selectedAnswer, answerText);
+  }, [onSubmit, customOption.id, customResponse, selectedAnswer]);
+  /**
+   * Handle input into the custom response field.
+   *
+   * @param {object} e - onChange event for the custom input
+   */
+
+  const handleCustomResponse = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
+    const value = e.target.value;
+    e.stopPropagation();
+    setCustomResponse(value);
+  }, [setCustomResponse]);
+  /**
+   * Checks to see if an option is the currently selected option, returns a css class name if it matches.
+   *
+   * @param {string} optionId   - ID of the option to check for.
+   * @returns {string} - The "selected" class if this option is currently selected.
+   */
+
+  const selectedClass = optionId => {
+    if (optionId === selectedAnswer) {
+      return 'jp-connect__disconnect-survey-card--selected';
+    }
+
+    return '';
+  };
+  /**
+   * Event handler for keyboard events on the answer blocks.
+   *
+   * @param {string} answerId - The slug of the answer that has been selected.
+   * @param {object} e - Keydown event.
+   */
+
+
+  const handleAnswerKeyDown = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((answerId, e) => {
+    switch (e.key) {
+      case 'Enter':
+      case 'Space':
+      case 'Spacebar':
+      case ' ':
+        setSelectedAnswer(answerId);
+        break;
+    }
+  }, [setSelectedAnswer]);
+  /**
+   * Show all the survey options from the options array.
+   *
+   * @returns {React.ElementType []} - Mapped array of rendered survey options.
+   */
+
+  const renderOptions = () => {
+    return options.map(option => {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_survey_choice__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        id: option.id,
+        onClick: setSelectedAnswer,
+        onKeyDown: handleAnswerKeyDown,
+        className: 'card jp-connect__disconnect-survey-card ' + selectedClass(option.id)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+        className: "jp-connect__disconnect-survey-card__answer"
+      }, option.answerText));
+    });
+  };
+  /**
+   * Show the custom input survey option.
+   * Contains an input field for a custom response.
+   *
+   * @returns {React.ElementType} - The custom survey option with an input field.
+   */
+
+
+  const renderCustomOption = () => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_survey_choice__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      id: customOption.id,
+      onClick: setSelectedAnswer,
+      onKeyDown: handleAnswerKeyDown,
+      className: 'card jp-connect__disconnect-survey-card ' + selectedClass(customOption.id)
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+      className: "jp-connect__disconnect-survey-card__answer"
+    }, __('Other:', 'jetpack'), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+      placeholder: __('share your experience', 'jetpack'),
+      className: "jp-connect__disconnect-survey-card__input",
+      type: "text",
+      value: customResponse,
+      onChange: handleCustomResponse,
+      maxLength: 1000 // Limit response length.
+
+    })));
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-connection__disconnect-dialog__survey"
+  }, renderOptions(), renderCustomOption()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+    disabled: !selectedAnswer || isSubmittingFeedback,
+    isPrimary: true,
+    onClick: handleSurveySubmit,
+    className: "jp-connection__disconnect-dialog__btn-back-to-wp"
+  }, isSubmittingFeedback ? __('Submitting…', 'jetpack') : __('Submit Feedback', 'jetpack'))));
 };
-/* harmony default export */ __webpack_exports__["default"] = (DisconnectDialog);
+
+DisconnectSurvey.PropTypes = {
+  /** Callback handler function for when the survey response is submitted. */
+  onSubmit: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** If the survey feedback is currently being saved/ submitted */
+  isSubmittingFeedback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool)
+};
+/* harmony default export */ __webpack_exports__["default"] = (DisconnectSurvey);
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/disconnect-survey/survey-choice.jsx":
+/*!***********************************************************************************!*\
+  !*** ../../js-packages/connection/components/disconnect-survey/survey-choice.jsx ***!
+  \***********************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _jp_connect_disconnect_survey_card_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_jp-connect_disconnect-survey-card.scss */ "../../js-packages/connection/components/disconnect-survey/_jp-connect_disconnect-survey-card.scss");
+/**
+ * External Dependencies
+ */
+
+/**
+ * Internal Dependencies
+ */
+
+
+/**
+ * SurveyChoice - Present one choice in the survey.
+ *
+ * @param {string} props.id - The ID/slug string of the survey option
+ * @param {Function} props.onClick - Event handler for clicking on the survey option.
+ * @param {Function} props.onKeydown - Event handler for pressing a key on the survey option.
+ * @param {React.ElementType} props.children - Any passed elements as children to this component.
+ * @param {string} props.className - A class name to apply to the survey choice.
+ * @returns {React.Component} SurveyChoice - The SurveyChoice component.
+ */
+
+const SurveyChoice = props => {
+  const {
+    id,
+    onClick,
+    onKeyDown,
+    children,
+    className
+  } = props;
+  const handleClick = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
+    onClick(id);
+  }, [id, onClick]);
+  const handleKeyDown = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {
+    onKeyDown(id, e);
+  }, [id, onKeyDown]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    tabIndex: "0",
+    role: "button",
+    onClick: handleClick,
+    onKeyDown: handleKeyDown,
+    className: 'card jp-connect__disconnect-survey-card ' + className
+  }, children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SurveyChoice);
 
 /***/ }),
 
@@ -10305,6 +12279,28 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "../../js-packages/connection/components/disconnect-dialog/images/disconnect-confirm.jpg":
+/*!***********************************************************************************************!*\
+  !*** ../../js-packages/connection/components/disconnect-dialog/images/disconnect-confirm.jpg ***!
+  \***********************************************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/disconnect-confirm-dc9fe8f5c68cfd1320e0.jpg";
+
+/***/ }),
+
+/***/ "../../js-packages/connection/components/disconnect-dialog/images/disconnect-thanks.jpg":
+/*!**********************************************************************************************!*\
+  !*** ../../js-packages/connection/components/disconnect-dialog/images/disconnect-thanks.jpg ***!
+  \**********************************************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/disconnect-thanks-5873bfac56a9bd7322cd.jpg";
+
+/***/ }),
+
 /***/ "react":
 /*!************************!*\
   !*** external "React" ***!
@@ -11026,6 +13022,18 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		};
 /******/ 	}();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	!function() {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	}();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	!function() {
 /******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
@@ -11040,6 +13048,26 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	!function() {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	}();
 /******/ 	
 /************************************************************************/
