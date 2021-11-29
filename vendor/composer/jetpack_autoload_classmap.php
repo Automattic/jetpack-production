@@ -194,8 +194,12 @@ return array(
 		'version' => '0.1.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-admin-ui/src/class-admin-menu.php'
 	),
+	'Automattic\\Jetpack\\Partner_Coupon' => array(
+		'version' => '1.6.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-partner/src/class-partner-coupon.php'
+	),
 	'Automattic\\Jetpack\\Partner' => array(
-		'version' => '1.5.9999999.9999999-dev',
+		'version' => '1.6.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-partner/src/class-partner.php'
 	),
 	'Automattic\\Jetpack\\Sync\\Server' => array(
@@ -563,7 +567,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-status/src/class-status.php'
 	),
 	'Jetpack_Options' => array(
-		'version' => '1.13.9999999.9999999-dev',
+		'version' => '1.14.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-options/legacy/class-jetpack-options.php'
 	),
 	'Automattic\\Jetpack\\Constants' => array(

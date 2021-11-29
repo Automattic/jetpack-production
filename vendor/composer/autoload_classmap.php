@@ -58,6 +58,7 @@ return array(
     'Automattic\\Jetpack\\Licensing' => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php',
     'Automattic\\Jetpack\\My_Jetpack\\Initializer' => $vendorDir . '/automattic/jetpack-my-jetpack/src/class-initializer.php',
     'Automattic\\Jetpack\\Partner' => $vendorDir . '/automattic/jetpack-partner/src/class-partner.php',
+    'Automattic\\Jetpack\\Partner_Coupon' => $vendorDir . '/automattic/jetpack-partner/src/class-partner-coupon.php',
     'Automattic\\Jetpack\\Password_Checker' => $vendorDir . '/automattic/jetpack-password-checker/src/class-password-checker.php',
     'Automattic\\Jetpack\\Plugin\\Tracking' => $baseDir . '/src/class-tracking.php',
     'Automattic\\Jetpack\\Redirect' => $vendorDir . '/automattic/jetpack-redirect/src/class-redirect.php',

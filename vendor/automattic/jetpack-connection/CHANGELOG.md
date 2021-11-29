@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Provides an Initial State that can be used by JS packages
 
+### Changed
+- Updated package dependencies.
+
 ## [1.31.0] - 2021-11-22
 ### Added
 - Added plugin_slug parameter to the v4/register endpoint
