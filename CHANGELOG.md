@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom CSS: disable CSSTidy shorthand optimizations to prevent block validation issues.
 - Fixed nav-unification on lower resolutions for wp-admin.
 - Fix old VideoPress blocks triggering a validation error by adding some deprecations/migrations.
+- Refresh the site's modules and settings after successful product activation.
 - Search: avoid fatal errors when the feature is inactive, but Extra Sidebar Widgets are active.
 - Use correct user capability for the Inbox menu item in Nav Unification
 
