@@ -10,9 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added a way to set the has_seen_wc_connection_modal option from the API
 - Provides an Initial State that can be used by JS packages
 
 ### Changed
+- Updated package dependencies.
 - Updated package dependencies.
 
 ## [1.31.0] - 2021-11-22

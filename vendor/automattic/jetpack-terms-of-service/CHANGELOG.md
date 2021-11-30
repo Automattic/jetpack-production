@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## [1.9.15] - 2021-11-22
 ### Changed

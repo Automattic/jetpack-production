@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added a new screen that shows up when users with WooCommerce installed and active visit the Jetpack Dashboard for the first time. This screen shows the users all the benefits from Jetpack
 - Added captions/subtitles support to the VideoPress block.
 - Add pre-connection message for unredeemed partner coupons
 - Disconnection Flow: Improve Jetpack disconnection flow on dashboard and plugins page to better highlight the site features Jetpack is powering and ask for feedback.
