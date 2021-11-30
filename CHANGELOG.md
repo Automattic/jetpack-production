@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix old VideoPress blocks triggering a validation error by adding some deprecations/migrations.
 - Refresh the site's modules and settings after successful product activation.
 - Search: avoid fatal errors when the feature is inactive, but Extra Sidebar Widgets are active.
+- Sharing: ask search engines to not index pages with sharing query string.
 - Use correct user capability for the Inbox menu item in Nav Unification
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
