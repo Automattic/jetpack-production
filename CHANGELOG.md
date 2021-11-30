@@ -2,52 +2,41 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.4-a.10 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.4-beta - 2021-11-30
 ### Enhancements
-- Added a new screen that shows up when users with WooCommerce installed and active visit the Jetpack Dashboard for the first time. This screen shows the users all the benefits from Jetpack
-- Added captions/subtitles support to the VideoPress block.
-- Add pre-connection message for unredeemed partner coupons
-- Disconnection Flow: Improve Jetpack disconnection flow on dashboard and plugins page to better highlight the site features Jetpack is powering and ask for feedback.
-- Enable the RePublicize UI in the block editor context.
-- Sharing: update to use Recaptcha's modern key names.
-- Update products copy to better match Jetpack features
-- Update the copy of the license activation banner to make it clear that the user has an available license that can be activated on the site.
-
-### Improved compatibility
-- Adding a unique connection screen for customers who receive a coupon from a Jetpack partner
-- Jetpack Backup: Add considtions that allow sideloading of Jetpack Backup plugin via JITMs.
-- Uses the Connection Initial State for the React app
+- Connection: additional messaging for both connection and disconnection flows.
+- Dashboard: add option to add Jetpack product using a license key.
+- Publicize: enable the RePublicize UI in the block editor.
+- VideoPress: add captions and subtitle support.
 
 ### Bug fixes
-- Apply widget visibility rules inside the customizer preview
 - Custom CSS: disable CSSTidy shorthand optimizations to prevent block validation issues.
-- Fixed an issue with the mobile nav unification menu caused by fixing the collapse.
-- Fixed nav-unification on lower resolutions for wp-admin.
-- Fix old VideoPress blocks triggering a validation error by adding some deprecations/migrations.
-- Refresh the site's modules and settings after successful product activation.
 - Search: avoid fatal errors when the feature is inactive, but Extra Sidebar Widgets are active.
 - Sharing: ask search engines to not index pages with sharing query string.
-- Use correct user capability for the Inbox menu item in Nav Unification
+- VideoPress: fix various validation errors.
+- Widgets: allow customizer preview to show widget visibility rules properly.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Avoid generating unused assets in the static-site-generator builds.
 - Build: remove obsolete package gulp task.
 - Bump stat on plugin installs.
 - Colors: update Jetpack Primary color reference to match latest brand book.
-- E2E tests: Migrate from Jest to Playwright test runner
-- Expose site intent from get site API to show different content in the future
+- E2E tests: Migrate from Jest to Playwright test runner.
+- Expose site intent from get site API to show different content in the future.
 - Fixes the URL of JITMs rendered in the unified sidebar when an absolute URL is given. This only affects WP.com sites.
-- JITM: Added ability to sideload Jetpack Boost plugin.
-- Made admin menu API tests compatible with WPCOM environment
-- Search: forward wpcom/v2/search request to search package rest controller
-- Search: Migrate more helper classes to package
-- Search: update jetpack-search version
-- Search: update search package version
+- Fixed an issue with the mobile nav unification menu caused by fixing the collapse.
+- Fixed nav-unification on lower resolutions for wp-admin.
+- JITM: Add ability to sideload Jetpack Boost and Backup plugins.
+- Made admin menu API tests compatible with WPCOM environment.
+- Refresh the site's modules and settings after successful product activation.
+- Search: forward wpcom/v2/search request to search package rest controller.
+- Search: Migrate more helper classes to package.
+- Search: update jetpack-search and search package versions
+- Sharing: update to use Recaptcha's modern key names.
 - Switched external media API tests to short-circuit API calls before they're being dispatched.
 - Update filenames of Webpack-built files.
+- Use correct user capability for the Inbox menu item in Nav Unification
+- Uses the Connection Initial State for the React app
 
 ## 10.4-a.9 - 2021-11-23
 ### Enhancements
