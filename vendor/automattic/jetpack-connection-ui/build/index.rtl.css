@@ -136,6 +136,7 @@
   border-radius: 4px;
   padding: 10px;
   margin: 24px 0;
+  box-sizing: border-box;
 }
 @media (min-width: 600px) {
   .jp-idc__idc-screen .jp-idc__idc-screen__cards .jp-idc__idc-screen__card-action-base {
@@ -162,6 +163,7 @@
   text-align: center;
   padding: 16px;
   overflow-wrap: anywhere;
+  box-sizing: border-box;
 }
 .jp-idc__idc-screen .jp-idc__idc-screen__cards .jp-idc__idc-screen__card-action-base .jp-idc__idc-screen__card-action-separator {
   margin: 12px auto;
