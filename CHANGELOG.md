@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Apply widget visibility rules inside the customizer preview
 - Custom CSS: disable CSSTidy shorthand optimizations to prevent block validation issues.
+- Fixed an issue with the mobile nav unification menu caused by fixing the collapse.
 - Fixed nav-unification on lower resolutions for wp-admin.
 - Fix old VideoPress blocks triggering a validation error by adding some deprecations/migrations.
 - Refresh the site's modules and settings after successful product activation.
