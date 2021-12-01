@@ -8,6 +8,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Start new Jetpack cycle 10.5-a.0
+- Updated package dependencies
+- Updated package dependencies.
 
 ## 10.4-beta - 2021-11-30
 ### Enhancements
