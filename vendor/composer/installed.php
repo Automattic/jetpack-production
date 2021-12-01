@@ -259,7 +259,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../automattic/jetpack-search',
             'aliases' => array(),
-            'reference' => '5bf9a02a4a59db61ef55d88bccda5014f032d3df',
+            'reference' => 'b1c9f8b90ad42e42518b4c6196c161d90cb2b7e5',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-status' => array(

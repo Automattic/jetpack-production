@@ -1512,14 +1512,14 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-search",
-                "reference": "5bf9a02a4a59db61ef55d88bccda5014f032d3df"
+                "reference": "b1c9f8b90ad42e42518b4c6196c161d90cb2b7e5"
             },
             "require": {
                 "automattic/jetpack-connection": "^1.32"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.0",
-                "automattic/wordbless": "^0.3.1",
+                "automattic/wordbless": "0.3.1",
                 "yoast/phpunit-polyfills": "1.0.2"
             },
             "type": "library",
