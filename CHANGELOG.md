@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Hide license activation route if user not linked and connection owner.
+
 ## 10.4-beta - 2021-11-30
 ### Enhancements
 - Connection: additional messaging for both connection and disconnection flows.
