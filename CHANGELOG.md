@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added Jetpack Installer package.
 - Build modules with Webpack, so they benefit from our toolchain improvements.
+- Fix the comment block on the `hide_widget_in_block_editor()` to follow the DocBlock standards
 - Rewrote tracks-events.js without jQuery.
 - Start new Jetpack cycle 10.5-a.0
 - Switched Jetpack plugin to always use `s0.wp.com` and `i0.wp.com` for external resources
