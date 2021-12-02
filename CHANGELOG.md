@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Switched Jetpack plugin to always use `s0.wp.com` and `i0.wp.com` for external resources
 - Updated package dependencies
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## 10.4-beta - 2021-11-30
 ### Enhancements
