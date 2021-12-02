@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Twitter Timeline widget: Hide widget from the block inserter and Legacy widget block drop-down menu (WPCOM)
+
 ### Bug fixes
 - Hide license activation route if user not linked and connection owner.
 
