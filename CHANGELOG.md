@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Hide license activation route if user not linked and connection owner.
+- VideoPress: fix copy/paste of empty video blocks not containing the proper attribute set.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added Jetpack Installer package.
