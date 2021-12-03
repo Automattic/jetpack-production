@@ -112,7 +112,7 @@
   flex-direction: column;
   align-items: center;
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1403px) {
   .jp-idc__idc-screen .jp-idc__idc-screen__cards {
     flex-direction: row;
     align-items: normal;

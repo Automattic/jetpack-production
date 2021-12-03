@@ -10975,19 +10975,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
-/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
-/* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
-/* harmony import */ var _tools_tracking__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../tools/tracking */ "../../js-packages/idc/tools/tracking.jsx");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
+/* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
 /**
  * External dependencies
  */
@@ -10997,9 +10993,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
-
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__;
 
 /**
  * Internal dependencies
@@ -11007,52 +11001,29 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
 
 
 
-
 /**
- * The "migrate" card.
+ * The "start fresh" card.
  *
  * @param {object} props - The properties.
  * @returns {React.Component} The `ConnectScreen` component.
  */
 
 const CardFresh = props => {
-  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__["default"])(props.wpcomHomeUrl);
-  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__["default"])(props.currentUrl);
-  const redirectUri = props.redirectUri;
   const {
-    isActionInProgress,
-    setIsActionInProgress
+    isStartingFresh,
+    startFreshCallback
   } = props;
+  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__["default"])(props.wpcomHomeUrl);
+  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__["default"])(props.currentUrl);
+  const isActionInProgress = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_7__.STORE_ID).getIsActionInProgress(), []);
 
   const buttonLabel = __('Create a fresh connection', 'jetpack');
 
-  const [isStartingFresh, setIsStartingFresh] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  /**
-   * Initiate the migration.
-   * Placeholder for now.
-   *
-   * @todo Add the actual migration functionality.
-   */
-
-  const doStartFresh = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    if (!isActionInProgress) {
-      (0,_tools_tracking__WEBPACK_IMPORTED_MODULE_9__["default"])('start_fresh');
-      setIsActionInProgress(true);
-      setIsStartingFresh(true);
-      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__["default"].startIDCFresh(redirectUri).then(connectUrl => {
-        window.location.href = connectUrl + '&from=idc-notice';
-      }).catch(error => {
-        setIsActionInProgress(false);
-        setIsStartingFresh(false);
-        throw error;
-      });
-    }
-  }, [setIsStartingFresh, isActionInProgress, setIsActionInProgress, redirectUri]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__card-action-base"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__card-action-top"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, __('Treat each site as independent sites', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.sprintf)(
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, __('Treat each site as independent sites', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.sprintf)(
   /* translators: %1$s: The current site domain name. %2$s: The original site domain name. */
   __('<hostname>%1$s</hostname> settings, stats, and subscribers will start fresh. <hostname>%2$s</hostname> will keep its data as is.', 'jetpack'), currentHostName, wpcomHostName), {
     hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
@@ -11068,9 +11039,9 @@ const CardFresh = props => {
   }, currentHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     className: "jp-idc__idc-screen__card-action-button",
     label: buttonLabel,
-    onClick: doStartFresh,
+    onClick: startFreshCallback,
     disabled: isActionInProgress
-  }, isStartingFresh ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_10__["default"], null) : buttonLabel)));
+  }, isStartingFresh ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__["default"], null) : buttonLabel)));
 };
 
 CardFresh.propTypes = {
@@ -11080,24 +11051,17 @@ CardFresh.propTypes = {
   /** The current site URL. */
   currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
 
-  /** The redirect URI to redirect users back to after connecting. */
-  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  /** Whether starting fresh is in progress. */
+  isStartingFresh: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
 
-  /** Whether there's already an action in progress. */
-  isActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
-
-  /** Function to set the "action in progress" flag. */
-  setIsActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
+  /** "Start Fresh" callback. */
+  startFreshCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
 };
-/* harmony default export */ __webpack_exports__["default"] = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__.compose)([(0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.withSelect)(select => {
-  return {
-    isActionInProgress: select(_state_store__WEBPACK_IMPORTED_MODULE_11__.STORE_ID).getIsActionInProgress()
-  };
-}), (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.withDispatch)(dispatch => {
-  return {
-    setIsActionInProgress: dispatch(_state_store__WEBPACK_IMPORTED_MODULE_11__.STORE_ID).setIsActionInProgress
-  };
-})])(CardFresh));
+CardFresh.defaultProps = {
+  isStartingFresh: false,
+  startFreshCallback: () => {}
+};
+/* harmony default export */ __webpack_exports__["default"] = (CardFresh);
 
 /***/ }),
 
@@ -11115,19 +11079,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
-/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
-/* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
-/* harmony import */ var _tools_tracking__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../tools/tracking */ "../../js-packages/idc/tools/tracking.jsx");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
+/* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
 /**
  * External dependencies
  */
@@ -11137,14 +11097,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
-
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__;
 
 /**
  * Internal dependencies
  */
-
 
 
 
@@ -11156,49 +11113,21 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.__;
  */
 
 const CardMigrate = props => {
-  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__["default"])(props.wpcomHomeUrl);
-  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_8__["default"])(props.currentUrl);
+  const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__["default"])(props.wpcomHomeUrl);
+  const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__["default"])(props.currentUrl);
+  const isActionInProgress = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_7__.STORE_ID).getIsActionInProgress(), []);
   const {
-    isActionInProgress,
-    setIsActionInProgress
-  } = props;
-  const {
-    onMigrated
+    isMigrating,
+    migrateCallback
   } = props;
 
   const buttonLabel = __('Move your settings', 'jetpack');
 
-  const [isMigrating, setIsMigrating] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  /**
-   * Initiate the migration.
-   * Placeholder for now.
-   *
-   * @todo Add the actual migration functionality.
-   */
-
-  const doMigrate = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    if (!isActionInProgress) {
-      (0,_tools_tracking__WEBPACK_IMPORTED_MODULE_9__["default"])('migrate');
-      setIsActionInProgress(true);
-      setIsMigrating(true);
-      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_7__["default"].migrateIDC().then(() => {
-        setIsMigrating(false);
-
-        if (onMigrated && {}.toString.call(onMigrated) === '[object Function]') {
-          onMigrated();
-        }
-      }).catch(error => {
-        setIsActionInProgress(false);
-        setIsMigrating(false);
-        throw error;
-      });
-    }
-  }, [setIsMigrating, onMigrated, isActionInProgress, setIsActionInProgress]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__card-action-base"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__card-action-top"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, __('Move Jetpack data', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__.sprintf)(
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, __('Move Jetpack data', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.sprintf)(
   /* translators: %1$s: The current site domain name. %2$s: The original site domain name. */
   __('Move all your settings, stats and subscribers to your other <hostname>%1$s</hostname>. <hostname>%2$s</hostname> will be disconnected from Jetpack.', 'jetpack'), currentHostName, wpcomHostName), {
     hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
@@ -11214,9 +11143,9 @@ const CardMigrate = props => {
   }, currentHostName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     className: "jp-idc__idc-screen__card-action-button",
     label: buttonLabel,
-    onClick: doMigrate,
+    onClick: migrateCallback,
     disabled: isActionInProgress
-  }, isMigrating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_10__["default"], null) : buttonLabel)));
+  }, isMigrating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__["default"], null) : buttonLabel)));
 };
 
 CardMigrate.propTypes = {
@@ -11226,24 +11155,17 @@ CardMigrate.propTypes = {
   /** The current site URL. */
   currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
 
-  /** The callback to be called when migration has completed. */
-  onMigrated: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+  /** Whether the migration is in progress. */
+  isMigrating: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
 
-  /** Whether there's already an action in progress. */
-  isActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),
-
-  /** Function to set the "action in progress" flag. */
-  setIsActionInProgress: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
+  /** Migration callback. */
+  migrateCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
 };
-/* harmony default export */ __webpack_exports__["default"] = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__.compose)([(0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.withSelect)(select => {
-  return {
-    isActionInProgress: select(_state_store__WEBPACK_IMPORTED_MODULE_11__.STORE_ID).getIsActionInProgress()
-  };
-}), (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.withDispatch)(dispatch => {
-  return {
-    setIsActionInProgress: dispatch(_state_store__WEBPACK_IMPORTED_MODULE_11__.STORE_ID).setIsActionInProgress
-  };
-})])(CardMigrate));
+CardMigrate.defaultProps = {
+  isMigrating: false,
+  migrateCallback: () => {}
+};
+/* harmony default export */ __webpack_exports__["default"] = (CardMigrate);
 
 /***/ }),
 
@@ -11259,28 +11181,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @automattic/jetpack-analytics */ "../../js-packages/analytics/index.jsx");
-/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
-/* harmony import */ var _screen_main__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./screen-main */ "../../js-packages/idc/components/idc-screen/screen-main.jsx");
-/* harmony import */ var _screen_migrated__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./screen-migrated */ "../../js-packages/idc/components/idc-screen/screen-migrated.jsx");
-/* harmony import */ var _tools_tracking__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../tools/tracking */ "../../js-packages/idc/tools/tracking.jsx");
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/idc/components/idc-screen/style.scss");
+/* harmony import */ var _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @automattic/jetpack-analytics */ "../../js-packages/analytics/index.jsx");
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _visual__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./visual */ "../../js-packages/idc/components/idc-screen/visual.jsx");
+/* harmony import */ var _tools_tracking__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../tools/tracking */ "../../js-packages/idc/tools/tracking.jsx");
+/* harmony import */ var _hooks_use_migration__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/use-migration */ "../../js-packages/idc/hooks/use-migration.jsx");
+/* harmony import */ var _hooks_use_migration_finished__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../hooks/use-migration-finished */ "../../js-packages/idc/hooks/use-migration-finished.jsx");
+/* harmony import */ var _hooks_use_start_fresh__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../hooks/use-start-fresh */ "../../js-packages/idc/hooks/use-start-fresh.jsx");
 /**
  * External dependencies
  */
 
 
 
-const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
-
-
 
 /**
  * Internal dependencies
  */
+
 
 
 
@@ -11306,56 +11224,64 @@ const IDCScreen = props => {
     tracksEventData
   } = props;
   const [isMigrated, setIsMigrated] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const onMigrated = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
+  const {
+    isMigrating,
+    migrateCallback
+  } = (0,_hooks_use_migration__WEBPACK_IMPORTED_MODULE_4__["default"])((0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
     setIsMigrated(true);
-  }, [setIsMigrated]);
+  }, [setIsMigrated]));
+  const {
+    isStartingFresh,
+    startFreshCallback
+  } = (0,_hooks_use_start_fresh__WEBPACK_IMPORTED_MODULE_5__["default"])(redirectUri);
+  const {
+    isFinishingMigration,
+    finishMigrationCallback
+  } = (0,_hooks_use_migration_finished__WEBPACK_IMPORTED_MODULE_6__["default"])();
   /**
    * Initialize the REST API and analytics.
    */
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].setApiRoot(apiRoot);
-    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_4__["default"].setApiNonce(apiNonce);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__["default"].setApiRoot(apiRoot);
+    _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__["default"].setApiNonce(apiNonce);
 
     if (tracksUserData && tracksUserData.hasOwnProperty('userid') && tracksUserData.hasOwnProperty('username')) {
-      _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_3__["default"].initialize(tracksUserData.userid, tracksUserData.username);
+      _automattic_jetpack_analytics__WEBPACK_IMPORTED_MODULE_2__["default"].initialize(tracksUserData.userid, tracksUserData.username);
     }
 
     if (tracksEventData) {
       if (tracksEventData.hasOwnProperty('isAdmin') && tracksEventData.isAdmin) {
-        (0,_tools_tracking__WEBPACK_IMPORTED_MODULE_6__["default"])('notice_view');
+        (0,_tools_tracking__WEBPACK_IMPORTED_MODULE_7__["default"])('notice_view');
       } else {
-        (0,_tools_tracking__WEBPACK_IMPORTED_MODULE_6__["default"])('non_admin_notice_view', {
+        (0,_tools_tracking__WEBPACK_IMPORTED_MODULE_7__["default"])('non_admin_notice_view', {
           page: tracksEventData.hasOwnProperty('currentScreen') ? tracksEventData.currentScreen : false
         });
       }
     }
   }, [apiRoot, apiNonce, tracksUserData, tracksEventData]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: 'jp-idc__idc-screen' + (isMigrated ? ' jp-idc__idc-screen__success' : '')
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc__idc-screen__header"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc__idc-screen__logo"
-  }, logo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-idc__idc-screen__logo-label"
-  }, headerText)), isMigrated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_migrated__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    wpcomHomeUrl: wpcomHomeUrl,
-    currentUrl: currentUrl
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_main__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_visual__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    logo: logo,
+    headerText: headerText,
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
-    onMigrated: onMigrated,
-    redirectUri: redirectUri
-  }));
+    redirectUri: redirectUri,
+    isMigrating: isMigrating,
+    migrateCallback: migrateCallback,
+    isMigrated: isMigrated,
+    finishMigrationCallback: finishMigrationCallback,
+    isFinishingMigration: isFinishingMigration,
+    isStartingFresh: isStartingFresh,
+    startFreshCallback: startFreshCallback
+  });
 };
 
 IDCScreen.propTypes = {
   /** The screen logo. */
-  logo: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object.isRequired),
+  logo: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
 
   /** The header text. */
-  headerText: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  headerText: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
 
   /** The original site URL. */
   wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
@@ -11378,12 +11304,6 @@ IDCScreen.propTypes = {
   /** WordPress.com event tracking information. */
   tracksEventData: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object)
 };
-IDCScreen.defaultProps = {
-  logo: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    height: 24
-  }),
-  headerText: __('Safe Mode', 'jetpack')
-};
 /* harmony default export */ __webpack_exports__["default"] = (IDCScreen);
 
 /***/ }),
@@ -11404,10 +11324,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
-/* harmony import */ var _card_migrate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../card-migrate */ "../../js-packages/idc/components/card-migrate/index.jsx");
-/* harmony import */ var _card_fresh__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../card-fresh */ "../../js-packages/idc/components/card-fresh/index.jsx");
-/* harmony import */ var _safe_mode__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../safe-mode */ "../../js-packages/idc/components/safe-mode/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
+/* harmony import */ var _card_migrate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../card-migrate */ "../../js-packages/idc/components/card-migrate/index.jsx");
+/* harmony import */ var _card_fresh__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../card-fresh */ "../../js-packages/idc/components/card-fresh/index.jsx");
+/* harmony import */ var _safe_mode__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../safe-mode */ "../../js-packages/idc/components/safe-mode/index.jsx");
 /**
  * External dependencies
  */
@@ -11435,28 +11355,28 @@ const ScreenMain = props => {
   const {
     wpcomHomeUrl,
     currentUrl,
-    onMigrated,
-    redirectUri
+    isMigrating,
+    migrateCallback,
+    isStartingFresh,
+    startFreshCallback,
+    title,
+    mainBodyText
   } = props;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, __('Safe Mode has been activated', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createInterpolateElement)(__('Your site is in Safe Mode because you have 2 Jetpack-powered sites that appear to be duplicates. ' + '2 sites that are telling Jetpack they’re the same site. <safeModeLink>Learn more about safe mode.</safeModeLink>', 'jetpack'), {
-    safeModeLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__["default"])('jetpack-support-safe-mode'),
-      rel: "noopener noreferrer",
-      target: "_blank"
-    })
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, __('Please select an option', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, mainBodyText), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, __('Please select an option', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__cards"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_migrate__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_migrate__WEBPACK_IMPORTED_MODULE_4__["default"], {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
-    onMigrated: onMigrated
+    isMigrating: isMigrating,
+    migrateCallback: migrateCallback
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__cards-separator"
-  }, "or"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_fresh__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, "or"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_fresh__WEBPACK_IMPORTED_MODULE_5__["default"], {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
-    redirectUri: redirectUri
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_safe_mode__WEBPACK_IMPORTED_MODULE_7__["default"], null));
+    isStartingFresh: isStartingFresh,
+    startFreshCallback: startFreshCallback
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_safe_mode__WEBPACK_IMPORTED_MODULE_6__["default"], null));
 };
 
 ScreenMain.propTypes = {
@@ -11466,11 +11386,35 @@ ScreenMain.propTypes = {
   /** The current site URL */
   currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
 
-  /** The redirect URI to redirect users back to after connecting. */
-  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  /** Whether the migration is in progress. */
+  isMigrating: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
 
-  /** The callback to be called when migration has completed. */
-  onMigrated: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func)
+  /** Migration callback. */
+  migrateCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** Whether starting fresh is in progress. */
+  isStartingFresh: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
+
+  /** "Start Fresh" callback. */
+  startFreshCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** The main screen title. */
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** The main screen body text. */
+  mainBodyText: prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object)]).isRequired
+};
+ScreenMain.defaultProps = {
+  isMigrating: false,
+  isStartingFresh: false,
+  title: __('Safe Mode has been activated', 'jetpack'),
+  mainBodyText: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createInterpolateElement)(__('Your site is in Safe Mode because you have 2 Jetpack-powered sites that appear to be duplicates. ' + '2 sites that are telling Jetpack they’re the same site. <safeModeLink>Learn more about safe mode.</safeModeLink>', 'jetpack'), {
+    safeModeLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__["default"])('jetpack-support-safe-mode'),
+      rel: "noopener noreferrer",
+      target: "_blank"
+    })
+  })
 };
 /* harmony default export */ __webpack_exports__["default"] = (ScreenMain);
 
@@ -11515,28 +11459,19 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__;
  * Retrieve the migrated screen body.
  *
  * @param {object} props - The properties.
- * @param {string} props.wpcomHomeUrl - The original site URL.
- * @param {string} props.currentUrl - The current site URL.
  * @returns {React.Component} The ScreenMigrated component.
  */
 
 const ScreenMigrated = props => {
+  const {
+    finishCallback,
+    isFinishing
+  } = props;
   const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__["default"])(props.wpcomHomeUrl);
   const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__["default"])(props.currentUrl);
 
   const buttonLabel = __('Got it, thanks', 'jetpack');
 
-  const [isHandlingOk, setIsHandlingOk] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  /**
-   * Handle the "Got It" click after the migration has completed.
-   */
-
-  const handleOkButton = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    if (!isHandlingOk) {
-      setIsHandlingOk(true);
-      window.location.reload();
-    }
-  }, [isHandlingOk, setIsHandlingOk]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, __('Your Jetpack settings have migrated successfully', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.sprintf)(
   /* translators: %1$s: The current site domain name. */
   __('Safe Mode has been switched off for <hostname>%1$s</hostname> website and Jetpack is fully functional.', 'jetpack'), currentHostName), {
@@ -11555,16 +11490,163 @@ const ScreenMigrated = props => {
     className: "jp-idc__idc-screen__card-migrated-hostname"
   }, currentHostName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     className: "jp-idc__idc-screen__card-action-button jp-idc__idc-screen__card-action-button-migrated",
-    onClick: handleOkButton,
+    onClick: finishCallback,
     label: buttonLabel
-  }, isHandlingOk ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__["default"], null) : buttonLabel));
+  }, isFinishing ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__["default"], null) : buttonLabel));
 };
 
 ScreenMigrated.propTypes = {
+  /** The original site URL. */
   wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-  currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired)
+
+  /** The current site URL. */
+  currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** Callback to be called when migration is complete, and user clicks the OK button. */
+  finishCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** Whether the migration finishing process is in progress. */
+  isFinishing: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired)
+};
+ScreenMigrated.defaultProps = {
+  finishCallback: () => {},
+  isFinishing: false
 };
 /* harmony default export */ __webpack_exports__["default"] = (ScreenMigrated);
+
+/***/ }),
+
+/***/ "../../js-packages/idc/components/idc-screen/visual.jsx":
+/*!**************************************************************!*\
+  !*** ../../js-packages/idc/components/idc-screen/visual.jsx ***!
+  \**************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
+/* harmony import */ var _screen_main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./screen-main */ "../../js-packages/idc/components/idc-screen/screen-main.jsx");
+/* harmony import */ var _screen_migrated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./screen-migrated */ "../../js-packages/idc/components/idc-screen/screen-migrated.jsx");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/idc/components/idc-screen/style.scss");
+/**
+ * External dependencies
+ */
+
+
+
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+
+const IDCScreenVisual = props => {
+  const {
+    logo,
+    headerText,
+    title,
+    mainBodyText,
+    wpcomHomeUrl,
+    currentUrl,
+    redirectUri,
+    isMigrating,
+    migrateCallback,
+    isMigrated,
+    finishMigrationCallback,
+    isFinishingMigration,
+    isStartingFresh,
+    startFreshCallback
+  } = props;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: 'jp-idc__idc-screen' + (isMigrated ? ' jp-idc__idc-screen__success' : '')
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-idc__idc-screen__header"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-idc__idc-screen__logo"
+  }, logo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "jp-idc__idc-screen__logo-label"
+  }, headerText)), isMigrated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_migrated__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    wpcomHomeUrl: wpcomHomeUrl,
+    currentUrl: currentUrl,
+    finishCallback: finishMigrationCallback,
+    isFinishing: isFinishingMigration
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_main__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    wpcomHomeUrl: wpcomHomeUrl,
+    currentUrl: currentUrl,
+    redirectUri: redirectUri,
+    title: title,
+    mainBodyText: mainBodyText,
+    isMigrating: isMigrating,
+    migrateCallback: migrateCallback,
+    isStartingFresh: isStartingFresh,
+    startFreshCallback: startFreshCallback
+  }));
+};
+
+IDCScreenVisual.propTypes = {
+  /** The screen logo, Jetpack by default. */
+  logo: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
+
+  /** The header text, 'Safe Mode' by default. */
+  headerText: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The original site URL. */
+  wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** The current site URL. */
+  currentUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** The redirect URI to redirect users back to after connecting. */
+  redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+
+  /** The main screen title. */
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** The main screen body text. */
+  mainBodyText: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+
+  /** Whether the migration is in progress. */
+  isMigrating: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
+
+  /** Migration callback. */
+  migrateCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** Whether the migration has been completed. */
+  isMigrated: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
+
+  /** Callback to be called when migration is complete, and user clicks the OK button. */
+  finishMigrationCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** Whether the migration finishing process is in progress. */
+  isFinishingMigration: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
+
+  /** Whether starting fresh is in progress. */
+  isStartingFresh: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
+
+  /** "Start Fresh" callback. */
+  startFreshCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func)
+};
+IDCScreenVisual.defaultProps = {
+  logo: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    height: 24
+  }),
+  headerText: __('Safe Mode', 'jetpack'),
+  isMigrated: false,
+  isFinishingMigration: false,
+  isMigrating: false,
+  isStartingFresh: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (IDCScreenVisual);
 
 /***/ }),
 
@@ -11692,6 +11774,182 @@ SafeMode.propTypes = {
 
 /***/ }),
 
+/***/ "../../js-packages/idc/hooks/use-migration-finished.jsx":
+/*!**************************************************************!*\
+  !*** ../../js-packages/idc/hooks/use-migration-finished.jsx ***!
+  \**************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * External dependencies
+ */
+
+/**
+ * Custom hook to handle finishing migration action.
+ *
+ * @returns {{isFinishingMigration: boolean, finishMigrationCallback: ((function(): void)|*)}} Hook values.
+ */
+
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  const [isFinishingMigration, setIsFinishingMigration] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  /**
+   * Handle the "Got It" click after the migration has completed.
+   */
+
+  const finishMigrationCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
+    if (!isFinishingMigration) {
+      setIsFinishingMigration(true);
+      window.location.reload();
+    }
+  }, [isFinishingMigration, setIsFinishingMigration]);
+  return {
+    isFinishingMigration,
+    finishMigrationCallback
+  };
+});
+
+/***/ }),
+
+/***/ "../../js-packages/idc/hooks/use-migration.jsx":
+/*!*****************************************************!*\
+  !*** ../../js-packages/idc/hooks/use-migration.jsx ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _tools_tracking__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../tools/tracking */ "../../js-packages/idc/tools/tracking.jsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../state/store */ "../../js-packages/idc/state/store.jsx");
+/**
+ * External dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+/**
+ * Custom hook to handle the migration action.
+ *
+ * @param {Function} onMigrated - The callback to be called when migration has completed.
+ * @returns {{isMigrating: boolean, migrateCallback: ((function(): void)|*)}} Hook values.
+ */
+
+/* harmony default export */ __webpack_exports__["default"] = (onMigrated => {
+  const [isMigrating, setIsMigrating] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const isActionInProgress = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getIsActionInProgress(), []);
+  const {
+    setIsActionInProgress
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(_state_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID);
+  /**
+   * Initiate the migration.
+   */
+
+  const migrateCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
+    if (!isActionInProgress) {
+      (0,_tools_tracking__WEBPACK_IMPORTED_MODULE_4__["default"])('migrate');
+      setIsActionInProgress(true);
+      setIsMigrating(true);
+      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__["default"].migrateIDC().then(() => {
+        setIsMigrating(false);
+
+        if (onMigrated && {}.toString.call(onMigrated) === '[object Function]') {
+          onMigrated();
+        }
+      }).catch(error => {
+        setIsActionInProgress(false);
+        setIsMigrating(false);
+        throw error;
+      });
+    }
+  }, [setIsMigrating, onMigrated, isActionInProgress, setIsActionInProgress]);
+  return {
+    isMigrating,
+    migrateCallback
+  };
+});
+
+/***/ }),
+
+/***/ "../../js-packages/idc/hooks/use-start-fresh.jsx":
+/*!*******************************************************!*\
+  !*** ../../js-packages/idc/hooks/use-start-fresh.jsx ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @automattic/jetpack-api */ "../../js-packages/api/index.jsx");
+/* harmony import */ var _tools_tracking__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../tools/tracking */ "../../js-packages/idc/tools/tracking.jsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../state/store */ "../../js-packages/idc/state/store.jsx");
+/**
+ * External dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+/**
+ * Custom hook to handle the migration action.
+ *
+ * @param {string} redirectUri - WP-admin URI to redirect user to after reconnecting.
+ * @returns {{isStartingFresh: boolean, startFreshCallback: ((function(): void)|*)}} Hook values.
+ */
+
+/* harmony default export */ __webpack_exports__["default"] = (redirectUri => {
+  const [isStartingFresh, setIsStartingFresh] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const isActionInProgress = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID).getIsActionInProgress(), []);
+  const {
+    setIsActionInProgress
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(_state_store__WEBPACK_IMPORTED_MODULE_3__.STORE_ID);
+  /**
+   * Initiate the migration.
+   */
+
+  const startFreshCallback = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
+    if (!isActionInProgress) {
+      (0,_tools_tracking__WEBPACK_IMPORTED_MODULE_4__["default"])('start_fresh');
+      setIsActionInProgress(true);
+      setIsStartingFresh(true);
+      _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_2__["default"].startIDCFresh(redirectUri).then(connectUrl => {
+        window.location.href = connectUrl + '&from=idc-notice';
+      }).catch(error => {
+        setIsActionInProgress(false);
+        setIsStartingFresh(false);
+        throw error;
+      });
+    }
+  }, [setIsStartingFresh, isActionInProgress, setIsActionInProgress, redirectUri]);
+  return {
+    isStartingFresh,
+    startFreshCallback
+  };
+});
+
+/***/ }),
+
 /***/ "../../js-packages/idc/state/actions.jsx":
 /*!***********************************************!*\
   !*** ../../js-packages/idc/state/actions.jsx ***!
@@ -11739,7 +11997,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const isActionInProgress = function () {
-  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
   let action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
@@ -11766,7 +12024,7 @@ const reducers = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_0__.combineReducers
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 const selectors = {
-  getIsActionInProgress: state => state.isActionInProgress | {}
+  getIsActionInProgress: state => state.isActionInProgress || false
 };
 /* harmony default export */ __webpack_exports__["default"] = (selectors);
 

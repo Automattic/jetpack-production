@@ -6,6 +6,10 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Added adaptive progress bar color setting to the VideoPress block.
+- Comment: Print Post View: The share this section should be hidden in the print post view.
+
 ### Improved compatibility
 - Twitter Timeline widget: Hide widget from the block inserter and Legacy widget block drop-down menu (WPCOM)
 
