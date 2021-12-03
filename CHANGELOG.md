@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## 10.4-beta - 2021-11-30
 ### Enhancements
