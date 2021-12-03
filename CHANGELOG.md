@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Twitter Timeline widget: Hide widget from the block inserter and Legacy widget block drop-down menu (WPCOM)
 
 ### Bug fixes
+- Atomic Menu: prevent notice for users without access to the plugins menu item.
 - Hide license activation route if user not linked and connection owner.
 - VideoPress: fix copy/paste of empty video blocks not containing the proper attribute set.
 
