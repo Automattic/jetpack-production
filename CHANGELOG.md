@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added Jetpack Installer package.
+- Blog Subscription widget: Fix the comment block on the `hide_widget_in_block_editor()` to follow the DocBlock standards
 - Build modules with Webpack, so they benefit from our toolchain improvements.
 - DIFM: Conditionally hide admin menu and expose is_difm_lite_in_progress in the get site API
 - Fix the comment block on the `hide_widget_in_block_editor()` to follow the DocBlock standards
