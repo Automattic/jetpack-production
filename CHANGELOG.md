@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - DIFM: Conditionally hide admin menu and expose is_difm_lite_in_progress in the get site API
 - Fix the comment block on the `hide_widget_in_block_editor()` to follow the DocBlock standards
 - Rewrote tracks-events.js without jQuery.
+- Start an initial full sync if the site is connected when Jetpack is activated.
 - Start new Jetpack cycle 10.5-a.0
 - Switched Jetpack plugin to always use `s0.wp.com` and `i0.wp.com` for external resources
 - Updated package dependencies
