@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Hide license activation route if user not linked and connection owner.
+- VideoPress: keep expanded/collapsed state of settings panel when reloading video preview.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updated package dependencies.
