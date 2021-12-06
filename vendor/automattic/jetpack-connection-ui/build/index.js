@@ -1,10 +1,10 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/currencies.js":
-/*!*********************************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/currencies.js ***!
-  \*********************************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/currencies.js":
+/*!**********************************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/currencies.js ***!
+  \**********************************************************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -999,10 +999,10 @@ function getCurrencyDefaults(code) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/index.js":
-/*!****************************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/index.js ***!
-  \****************************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/index.js":
+/*!*****************************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/index.js ***!
+  \*****************************************************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1014,8 +1014,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getCurrencyObject": function() { return /* binding */ getCurrencyObject; }
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/objectSpread.js");
-/* harmony import */ var i18n_calypso__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! i18n-calypso */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/index.js");
-/* harmony import */ var _currencies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./currencies */ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/currencies.js");
+/* harmony import */ var i18n_calypso__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! i18n-calypso */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/index.js");
+/* harmony import */ var _currencies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./currencies */ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/currencies.js");
 
 
 /**
@@ -1108,6 +1108,200 @@ function getCurrencyObject(number, code) {
     integer: integer,
     fraction: fraction
   };
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/index.js":
+/*!***********************************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/index.js ***!
+  \***********************************************************************************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ interpolate; }
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _tokenize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tokenize */ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/tokenize.js");
+
+
+
+function getCloseIndex(openIndex, tokens) {
+  const openToken = tokens[openIndex];
+  let nestLevel = 0;
+
+  for (let i = openIndex + 1; i < tokens.length; i++) {
+    const token = tokens[i];
+
+    if (token.value === openToken.value) {
+      if (token.type === 'componentOpen') {
+        nestLevel++;
+        continue;
+      }
+
+      if (token.type === 'componentClose') {
+        if (nestLevel === 0) {
+          return i;
+        }
+
+        nestLevel--;
+      }
+    }
+  } // if we get this far, there was no matching close token
+
+
+  throw new Error('Missing closing component token `' + openToken.value + '`');
+}
+
+function buildChildren(tokens, components) {
+  let children = [];
+  let openComponent;
+  let openIndex;
+
+  for (let i = 0; i < tokens.length; i++) {
+    const token = tokens[i];
+
+    if (token.type === 'string') {
+      children.push(token.value);
+      continue;
+    } // component node should at least be set
+
+
+    if (components[token.value] === undefined) {
+      throw new Error(`Invalid interpolation, missing component node: \`${token.value}\``);
+    } // should be either ReactElement or null (both type "object"), all other types deprecated
+
+
+    if (typeof components[token.value] !== 'object') {
+      throw new Error(`Invalid interpolation, component node must be a ReactElement or null: \`${token.value}\``);
+    } // we should never see a componentClose token in this loop
+
+
+    if (token.type === 'componentClose') {
+      throw new Error(`Missing opening component token: \`${token.value}\``);
+    }
+
+    if (token.type === 'componentOpen') {
+      openComponent = components[token.value];
+      openIndex = i;
+      break;
+    } // componentSelfClosing token
+
+
+    children.push(components[token.value]);
+    continue;
+  }
+
+  if (openComponent) {
+    const closeIndex = getCloseIndex(openIndex, tokens);
+    const grandChildTokens = tokens.slice(openIndex + 1, closeIndex);
+    const grandChildren = buildChildren(grandChildTokens, components);
+    const clonedOpenComponent = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.cloneElement)(openComponent, {}, grandChildren);
+    children.push(clonedOpenComponent);
+
+    if (closeIndex < tokens.length - 1) {
+      const siblingTokens = tokens.slice(closeIndex + 1);
+      const siblings = buildChildren(siblingTokens, components);
+      children = children.concat(siblings);
+    }
+  }
+
+  children = children.filter(Boolean);
+
+  if (children.length === 0) {
+    return null;
+  }
+
+  if (children.length === 1) {
+    return children[0];
+  }
+
+  return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, ...children);
+}
+
+function interpolate(options) {
+  const {
+    mixedString,
+    components,
+    throwErrors
+  } = options;
+
+  if (!components) {
+    return mixedString;
+  }
+
+  if (typeof components !== 'object') {
+    if (throwErrors) {
+      throw new Error(`Interpolation Error: unable to process \`${mixedString}\` because components is not an object`);
+    }
+
+    return mixedString;
+  }
+
+  const tokens = (0,_tokenize__WEBPACK_IMPORTED_MODULE_1__["default"])(mixedString);
+
+  try {
+    return buildChildren(tokens, components);
+  } catch (error) {
+    if (throwErrors) {
+      throw new Error(`Interpolation Error: unable to process \`${mixedString}\` because of error \`${error.message}\``);
+    }
+
+    return mixedString;
+  }
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/tokenize.js":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/tokenize.js ***!
+  \**************************************************************************************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ tokenize; }
+/* harmony export */ });
+function identifyToken(item) {
+  // {{/example}}
+  if (item.startsWith('{{/')) {
+    return {
+      type: 'componentClose',
+      value: item.replace(/\W/g, '')
+    };
+  } // {{example /}}
+
+
+  if (item.endsWith('/}}')) {
+    return {
+      type: 'componentSelfClosing',
+      value: item.replace(/\W/g, '')
+    };
+  } // {{example}}
+
+
+  if (item.startsWith('{{')) {
+    return {
+      type: 'componentOpen',
+      value: item.replace(/\W/g, '')
+    };
+  }
+
+  return {
+    type: 'string',
+    value: item
+  };
+}
+
+function tokenize(mixedString) {
+  const tokenStrings = mixedString.split(/(\{\{\/?\s*\w+\s*\/?\}\})/g); // split to components and strings
+
+  return tokenStrings.map(identifyToken);
 }
 
 /***/ }),
@@ -1723,556 +1917,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	} else {}
 }());
-
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/browser.js":
-/*!*********************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/browser.js ***!
-  \*********************************************************************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-/* eslint-env browser */
-
-/**
- * This is the web browser implementation of `debug()`.
- */
-
-exports.formatArgs = formatArgs;
-exports.save = save;
-exports.load = load;
-exports.useColors = useColors;
-exports.storage = localstorage();
-exports.destroy = (() => {
-	let warned = false;
-
-	return () => {
-		if (!warned) {
-			warned = true;
-			console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
-		}
-	};
-})();
-
-/**
- * Colors.
- */
-
-exports.colors = [
-	'#0000CC',
-	'#0000FF',
-	'#0033CC',
-	'#0033FF',
-	'#0066CC',
-	'#0066FF',
-	'#0099CC',
-	'#0099FF',
-	'#00CC00',
-	'#00CC33',
-	'#00CC66',
-	'#00CC99',
-	'#00CCCC',
-	'#00CCFF',
-	'#3300CC',
-	'#3300FF',
-	'#3333CC',
-	'#3333FF',
-	'#3366CC',
-	'#3366FF',
-	'#3399CC',
-	'#3399FF',
-	'#33CC00',
-	'#33CC33',
-	'#33CC66',
-	'#33CC99',
-	'#33CCCC',
-	'#33CCFF',
-	'#6600CC',
-	'#6600FF',
-	'#6633CC',
-	'#6633FF',
-	'#66CC00',
-	'#66CC33',
-	'#9900CC',
-	'#9900FF',
-	'#9933CC',
-	'#9933FF',
-	'#99CC00',
-	'#99CC33',
-	'#CC0000',
-	'#CC0033',
-	'#CC0066',
-	'#CC0099',
-	'#CC00CC',
-	'#CC00FF',
-	'#CC3300',
-	'#CC3333',
-	'#CC3366',
-	'#CC3399',
-	'#CC33CC',
-	'#CC33FF',
-	'#CC6600',
-	'#CC6633',
-	'#CC9900',
-	'#CC9933',
-	'#CCCC00',
-	'#CCCC33',
-	'#FF0000',
-	'#FF0033',
-	'#FF0066',
-	'#FF0099',
-	'#FF00CC',
-	'#FF00FF',
-	'#FF3300',
-	'#FF3333',
-	'#FF3366',
-	'#FF3399',
-	'#FF33CC',
-	'#FF33FF',
-	'#FF6600',
-	'#FF6633',
-	'#FF9900',
-	'#FF9933',
-	'#FFCC00',
-	'#FFCC33'
-];
-
-/**
- * Currently only WebKit-based Web Inspectors, Firefox >= v31,
- * and the Firebug extension (any Firefox version) are known
- * to support "%c" CSS customizations.
- *
- * TODO: add a `localStorage` variable to explicitly enable/disable colors
- */
-
-// eslint-disable-next-line complexity
-function useColors() {
-	// NB: In an Electron preload script, document will be defined but not fully
-	// initialized. Since we know we're in Chrome, we'll just detect this case
-	// explicitly
-	if (typeof window !== 'undefined' && window.process && (window.process.type === 'renderer' || window.process.__nwjs)) {
-		return true;
-	}
-
-	// Internet Explorer and Edge do not support colors.
-	if (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/)) {
-		return false;
-	}
-
-	// Is webkit? http://stackoverflow.com/a/16459606/376773
-	// document is undefined in react-native: https://github.com/facebook/react-native/pull/1632
-	return (typeof document !== 'undefined' && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance) ||
-		// Is firebug? http://stackoverflow.com/a/398120/376773
-		(typeof window !== 'undefined' && window.console && (window.console.firebug || (window.console.exception && window.console.table))) ||
-		// Is firefox >= v31?
-		// https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
-		(typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
-		// Double check webkit in userAgent just in case we are in a worker
-		(typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
-}
-
-/**
- * Colorize log arguments if enabled.
- *
- * @api public
- */
-
-function formatArgs(args) {
-	args[0] = (this.useColors ? '%c' : '') +
-		this.namespace +
-		(this.useColors ? ' %c' : ' ') +
-		args[0] +
-		(this.useColors ? '%c ' : ' ') +
-		'+' + module.exports.humanize(this.diff);
-
-	if (!this.useColors) {
-		return;
-	}
-
-	const c = 'color: ' + this.color;
-	args.splice(1, 0, c, 'color: inherit');
-
-	// The final "%c" is somewhat tricky, because there could be other
-	// arguments passed either before or after the %c, so we need to
-	// figure out the correct index to insert the CSS into
-	let index = 0;
-	let lastC = 0;
-	args[0].replace(/%[a-zA-Z%]/g, match => {
-		if (match === '%%') {
-			return;
-		}
-		index++;
-		if (match === '%c') {
-			// We only are interested in the *last* %c
-			// (the user may have provided their own)
-			lastC = index;
-		}
-	});
-
-	args.splice(lastC, 0, c);
-}
-
-/**
- * Invokes `console.debug()` when available.
- * No-op when `console.debug` is not a "function".
- * If `console.debug` is not available, falls back
- * to `console.log`.
- *
- * @api public
- */
-exports.log = console.debug || console.log || (() => {});
-
-/**
- * Save `namespaces`.
- *
- * @param {String} namespaces
- * @api private
- */
-function save(namespaces) {
-	try {
-		if (namespaces) {
-			exports.storage.setItem('debug', namespaces);
-		} else {
-			exports.storage.removeItem('debug');
-		}
-	} catch (error) {
-		// Swallow
-		// XXX (@Qix-) should we be logging these?
-	}
-}
-
-/**
- * Load `namespaces`.
- *
- * @return {String} returns the previously persisted debug modes
- * @api private
- */
-function load() {
-	let r;
-	try {
-		r = exports.storage.getItem('debug');
-	} catch (error) {
-		// Swallow
-		// XXX (@Qix-) should we be logging these?
-	}
-
-	// If debug isn't set in LS, and we're in Electron, try to load $DEBUG
-	if (!r && typeof process !== 'undefined' && 'env' in process) {
-		r = process.env.DEBUG;
-	}
-
-	return r;
-}
-
-/**
- * Localstorage attempts to return the localstorage.
- *
- * This is necessary because safari throws
- * when a user disables cookies/localstorage
- * and you attempt to access it.
- *
- * @return {LocalStorage}
- * @api private
- */
-
-function localstorage() {
-	try {
-		// TVMLKit (Apple TV JS Runtime) does not have a window object, just localStorage in the global context
-		// The Browser also has localStorage in the global context.
-		return localStorage;
-	} catch (error) {
-		// Swallow
-		// XXX (@Qix-) should we be logging these?
-	}
-}
-
-module.exports = __webpack_require__(/*! ./common */ "../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/common.js")(exports);
-
-const {formatters} = module.exports;
-
-/**
- * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
- */
-
-formatters.j = function (v) {
-	try {
-		return JSON.stringify(v);
-	} catch (error) {
-		return '[UnexpectedJSONParseError]: ' + error.message;
-	}
-};
-
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/common.js":
-/*!********************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/common.js ***!
-  \********************************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-
-/**
- * This is the common logic for both the Node.js and web browser
- * implementations of `debug()`.
- */
-
-function setup(env) {
-	createDebug.debug = createDebug;
-	createDebug.default = createDebug;
-	createDebug.coerce = coerce;
-	createDebug.disable = disable;
-	createDebug.enable = enable;
-	createDebug.enabled = enabled;
-	createDebug.humanize = __webpack_require__(/*! ms */ "../../../node_modules/.pnpm/ms@2.1.2/node_modules/ms/index.js");
-	createDebug.destroy = destroy;
-
-	Object.keys(env).forEach(key => {
-		createDebug[key] = env[key];
-	});
-
-	/**
-	* The currently active debug mode names, and names to skip.
-	*/
-
-	createDebug.names = [];
-	createDebug.skips = [];
-
-	/**
-	* Map of special "%n" handling functions, for the debug "format" argument.
-	*
-	* Valid key names are a single, lower or upper-case letter, i.e. "n" and "N".
-	*/
-	createDebug.formatters = {};
-
-	/**
-	* Selects a color for a debug namespace
-	* @param {String} namespace The namespace string for the for the debug instance to be colored
-	* @return {Number|String} An ANSI color code for the given namespace
-	* @api private
-	*/
-	function selectColor(namespace) {
-		let hash = 0;
-
-		for (let i = 0; i < namespace.length; i++) {
-			hash = ((hash << 5) - hash) + namespace.charCodeAt(i);
-			hash |= 0; // Convert to 32bit integer
-		}
-
-		return createDebug.colors[Math.abs(hash) % createDebug.colors.length];
-	}
-	createDebug.selectColor = selectColor;
-
-	/**
-	* Create a debugger with the given `namespace`.
-	*
-	* @param {String} namespace
-	* @return {Function}
-	* @api public
-	*/
-	function createDebug(namespace) {
-		let prevTime;
-		let enableOverride = null;
-
-		function debug(...args) {
-			// Disabled?
-			if (!debug.enabled) {
-				return;
-			}
-
-			const self = debug;
-
-			// Set `diff` timestamp
-			const curr = Number(new Date());
-			const ms = curr - (prevTime || curr);
-			self.diff = ms;
-			self.prev = prevTime;
-			self.curr = curr;
-			prevTime = curr;
-
-			args[0] = createDebug.coerce(args[0]);
-
-			if (typeof args[0] !== 'string') {
-				// Anything else let's inspect with %O
-				args.unshift('%O');
-			}
-
-			// Apply any `formatters` transformations
-			let index = 0;
-			args[0] = args[0].replace(/%([a-zA-Z%])/g, (match, format) => {
-				// If we encounter an escaped % then don't increase the array index
-				if (match === '%%') {
-					return '%';
-				}
-				index++;
-				const formatter = createDebug.formatters[format];
-				if (typeof formatter === 'function') {
-					const val = args[index];
-					match = formatter.call(self, val);
-
-					// Now we need to remove `args[index]` since it's inlined in the `format`
-					args.splice(index, 1);
-					index--;
-				}
-				return match;
-			});
-
-			// Apply env-specific formatting (colors, etc.)
-			createDebug.formatArgs.call(self, args);
-
-			const logFn = self.log || createDebug.log;
-			logFn.apply(self, args);
-		}
-
-		debug.namespace = namespace;
-		debug.useColors = createDebug.useColors();
-		debug.color = createDebug.selectColor(namespace);
-		debug.extend = extend;
-		debug.destroy = createDebug.destroy; // XXX Temporary. Will be removed in the next major release.
-
-		Object.defineProperty(debug, 'enabled', {
-			enumerable: true,
-			configurable: false,
-			get: () => enableOverride === null ? createDebug.enabled(namespace) : enableOverride,
-			set: v => {
-				enableOverride = v;
-			}
-		});
-
-		// Env-specific initialization logic for debug instances
-		if (typeof createDebug.init === 'function') {
-			createDebug.init(debug);
-		}
-
-		return debug;
-	}
-
-	function extend(namespace, delimiter) {
-		const newDebug = createDebug(this.namespace + (typeof delimiter === 'undefined' ? ':' : delimiter) + namespace);
-		newDebug.log = this.log;
-		return newDebug;
-	}
-
-	/**
-	* Enables a debug mode by namespaces. This can include modes
-	* separated by a colon and wildcards.
-	*
-	* @param {String} namespaces
-	* @api public
-	*/
-	function enable(namespaces) {
-		createDebug.save(namespaces);
-
-		createDebug.names = [];
-		createDebug.skips = [];
-
-		let i;
-		const split = (typeof namespaces === 'string' ? namespaces : '').split(/[\s,]+/);
-		const len = split.length;
-
-		for (i = 0; i < len; i++) {
-			if (!split[i]) {
-				// ignore empty strings
-				continue;
-			}
-
-			namespaces = split[i].replace(/\*/g, '.*?');
-
-			if (namespaces[0] === '-') {
-				createDebug.skips.push(new RegExp('^' + namespaces.substr(1) + '$'));
-			} else {
-				createDebug.names.push(new RegExp('^' + namespaces + '$'));
-			}
-		}
-	}
-
-	/**
-	* Disable debug output.
-	*
-	* @return {String} namespaces
-	* @api public
-	*/
-	function disable() {
-		const namespaces = [
-			...createDebug.names.map(toNamespace),
-			...createDebug.skips.map(toNamespace).map(namespace => '-' + namespace)
-		].join(',');
-		createDebug.enable('');
-		return namespaces;
-	}
-
-	/**
-	* Returns true if the given mode name is enabled, false otherwise.
-	*
-	* @param {String} name
-	* @return {Boolean}
-	* @api public
-	*/
-	function enabled(name) {
-		if (name[name.length - 1] === '*') {
-			return true;
-		}
-
-		let i;
-		let len;
-
-		for (i = 0, len = createDebug.skips.length; i < len; i++) {
-			if (createDebug.skips[i].test(name)) {
-				return false;
-			}
-		}
-
-		for (i = 0, len = createDebug.names.length; i < len; i++) {
-			if (createDebug.names[i].test(name)) {
-				return true;
-			}
-		}
-
-		return false;
-	}
-
-	/**
-	* Convert regexp to namespace
-	*
-	* @param {RegExp} regxep
-	* @return {String} namespace
-	* @api private
-	*/
-	function toNamespace(regexp) {
-		return regexp.toString()
-			.substring(2, regexp.toString().length - 2)
-			.replace(/\.\*\?$/, '*');
-	}
-
-	/**
-	* Coerce `val`.
-	*
-	* @param {Mixed} val
-	* @return {Mixed}
-	* @api private
-	*/
-	function coerce(val) {
-		if (val instanceof Error) {
-			return val.stack || val.message;
-		}
-		return val;
-	}
-
-	/**
-	* XXX DO NOT USE. This is a temporary stub function.
-	* XXX It WILL be removed in the next major release.
-	*/
-	function destroy() {
-		console.warn('Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.');
-	}
-
-	createDebug.enable(createDebug.load());
-
-	return createDebug;
-}
-
-module.exports = setup;
 
 
 /***/ }),
@@ -3348,187 +2992,6 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/emptyFunction.js":
-/*!**************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/emptyFunction.js ***!
-  \**************************************************************************************/
-/***/ (function(module) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
-function makeEmptyFunction(arg) {
-  return function () {
-    return arg;
-  };
-}
-
-/**
- * This function accepts and discards inputs; it has no side effects. This is
- * primarily useful idiomatically for overridable function endpoints which
- * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
- */
-var emptyFunction = function emptyFunction() {};
-
-emptyFunction.thatReturns = makeEmptyFunction;
-emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-emptyFunction.thatReturnsThis = function () {
-  return this;
-};
-emptyFunction.thatReturnsArgument = function (arg) {
-  return arg;
-};
-
-module.exports = emptyFunction;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/invariant.js":
-/*!**********************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/invariant.js ***!
-  \**********************************************************************************/
-/***/ (function(module) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-/**
- * Use invariant() to assert state which your program assumes to be true.
- *
- * Provide sprintf-style format (only %s is supported) and arguments
- * to provide information about what broke and what you were
- * expecting.
- *
- * The invariant message will be stripped in production, but the invariant
- * will remain to ensure logic does not differ in production.
- */
-
-var validateFormat = function validateFormat(format) {};
-
-if (true) {
-  validateFormat = function validateFormat(format) {
-    if (format === undefined) {
-      throw new Error('invariant requires an error message argument');
-    }
-  };
-}
-
-function invariant(condition, format, a, b, c, d, e, f) {
-  validateFormat(format);
-
-  if (!condition) {
-    var error;
-    if (format === undefined) {
-      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
-    } else {
-      var args = [a, b, c, d, e, f];
-      var argIndex = 0;
-      error = new Error(format.replace(/%s/g, function () {
-        return args[argIndex++];
-      }));
-      error.name = 'Invariant Violation';
-    }
-
-    error.framesToPop = 1; // we don't care about invariant's own frame
-    throw error;
-  }
-}
-
-module.exports = invariant;
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/warning.js":
-/*!********************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/warning.js ***!
-  \********************************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var emptyFunction = __webpack_require__(/*! ./emptyFunction */ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/emptyFunction.js");
-
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var warning = emptyFunction;
-
-if (true) {
-  var printWarning = function printWarning(format) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    var argIndex = 0;
-    var message = 'Warning: ' + format.replace(/%s/g, function () {
-      return args[argIndex++];
-    });
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-
-  warning = function warning(condition, format) {
-    if (format === undefined) {
-      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-    }
-
-    if (format.indexOf('Failed Composite propType: ') === 0) {
-      return; // Ignore CompositeComponent proptype check.
-    }
-
-    if (!condition) {
-      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-        args[_key2 - 2] = arguments[_key2];
-      }
-
-      printWarning.apply(undefined, [format].concat(args));
-    }
-  };
-}
-
-module.exports = warning;
-
-/***/ }),
-
 /***/ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/common.js":
 /*!*****************************************************************************************!*\
   !*** ../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/common.js ***!
@@ -4066,28 +3529,28 @@ exports.shr64_lo = shr64_lo;
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/i18n.js":
-/*!*************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/i18n.js ***!
-  \*************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/i18n.js":
+/*!**************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/i18n.js ***!
+  \**************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! debug */ "../../../node_modules/.pnpm/debug@4.3.1/node_modules/debug/src/browser.js");
+/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! debug */ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js");
 /* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(debug__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var interpolate_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! interpolate-components */ "../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/index.js");
-/* harmony import */ var tannin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tannin */ "../../../node_modules/.pnpm/tannin@1.2.0/node_modules/tannin/index.js");
-/* harmony import */ var lru__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lru */ "../../../node_modules/.pnpm/lru@3.1.0/node_modules/lru/index.js");
-/* harmony import */ var lru__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lru__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! hash.js/lib/hash/sha/1 */ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/sha/1.js");
-/* harmony import */ var hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var events__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! events */ "../../../node_modules/.pnpm/events@3.3.0/node_modules/events/events.js");
-/* harmony import */ var events__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(events__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _tannin_sprintf__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @tannin/sprintf */ "../../../node_modules/.pnpm/@tannin+sprintf@1.2.0/node_modules/@tannin/sprintf/index.js");
-/* harmony import */ var _number_format__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./number-format */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/number-format.js");
+/* harmony import */ var interpolate_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! interpolate-components */ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/index.js");
+/* harmony import */ var tannin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tannin */ "../../../node_modules/.pnpm/tannin@1.2.0/node_modules/tannin/index.js");
+/* harmony import */ var lru__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lru */ "../../../node_modules/.pnpm/lru@3.1.0/node_modules/lru/index.js");
+/* harmony import */ var lru__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lru__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hash.js/lib/hash/sha/1 */ "../../../node_modules/.pnpm/hash.js@1.1.7/node_modules/hash.js/lib/hash/sha/1.js");
+/* harmony import */ var hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var events__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! events */ "../../../node_modules/.pnpm/events@3.3.0/node_modules/events/events.js");
+/* harmony import */ var events__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(events__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _tannin_sprintf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @tannin/sprintf */ "../../../node_modules/.pnpm/@tannin+sprintf@1.2.0/node_modules/@tannin/sprintf/index.js");
+/* harmony import */ var _number_format__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./number-format */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/number-format.js");
 
 
 
@@ -4202,9 +3665,10 @@ function getTranslationFromTannin(tannin, options) {
 
 function getTranslation(i18n, options) {
   for (var i = translationLookup.length - 1; i >= 0; i--) {
-    var lookup = translationLookup[i](Object.assign({}, options)); // Only get the translation from tannin if it exists.
+    var lookup = translationLookup[i](Object.assign({}, options));
+    var key = lookup.context ? lookup.context + "\x04" + lookup.original : lookup.original; // Only get the translation from tannin if it exists.
 
-    if (i18n.state.locale[lookup.original]) {
+    if (i18n.state.locale[key]) {
       return getTranslationFromTannin(i18n.state.tannin, lookup);
     }
   }
@@ -4229,13 +3693,13 @@ function I18N() {
     locale: undefined,
     localeSlug: undefined,
     textDirection: undefined,
-    translations: lru__WEBPACK_IMPORTED_MODULE_5___default()({
+    translations: lru__WEBPACK_IMPORTED_MODULE_4___default()({
       max: 100
     })
   };
   this.componentUpdateHooks = [];
   this.translateHooks = [];
-  this.stateObserver = new events__WEBPACK_IMPORTED_MODULE_7__.EventEmitter(); // Because the higher-order component can wrap a ton of React components,
+  this.stateObserver = new events__WEBPACK_IMPORTED_MODULE_6__.EventEmitter(); // Because the higher-order component can wrap a ton of React components,
   // we need to bump the number of listeners to infinity and beyond
   // FIXME: still valid?
 
@@ -4277,7 +3741,7 @@ I18N.prototype.numberFormat = function (number) {
   var decimals = typeof options === 'number' ? options : options.decimals || 0;
   var decPoint = options.decPoint || this.state.numberFormatSettings.decimal_point || '.';
   var thousandsSep = options.thousandsSep || this.state.numberFormatSettings.thousands_sep || ',';
-  return (0,_number_format__WEBPACK_IMPORTED_MODULE_9__["default"])(number, decimals, decPoint, thousandsSep);
+  return (0,_number_format__WEBPACK_IMPORTED_MODULE_8__["default"])(number, decimals, decPoint, thousandsSep);
 };
 
 I18N.prototype.configure = function (options) {
@@ -4298,7 +3762,7 @@ I18N.prototype.setLocale = function (localeData) {
         return hashCache[lookupPrefix + string];
       }
 
-      var hash = hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_6___default()().update(string).digest('hex');
+      var hash = hash_js_lib_hash_sha_1__WEBPACK_IMPORTED_MODULE_5___default()().update(string).digest('hex');
 
       if (hashLength) {
         return hashCache[lookupPrefix + string] = hash.substr(0, hashLength);
@@ -4366,7 +3830,7 @@ I18N.prototype.setLocale = function (localeData) {
   // - or the `momentjs_locale.textDirection` property present in Calypso translation files
 
   this.state.textDirection = ((_this$state$locale$te = this.state.locale["text direction\x04ltr"]) === null || _this$state$locale$te === void 0 ? void 0 : _this$state$locale$te[0]) || ((_this$state$locale$ = this.state.locale['']) === null || _this$state$locale$ === void 0 ? void 0 : (_this$state$locale$$m = _this$state$locale$.momentjs_locale) === null || _this$state$locale$$m === void 0 ? void 0 : _this$state$locale$$m.textDirection);
-  this.state.tannin = new tannin__WEBPACK_IMPORTED_MODULE_4__["default"]((0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])({}, domain_key, this.state.locale)); // Updates numberFormat preferences with settings from translations
+  this.state.tannin = new tannin__WEBPACK_IMPORTED_MODULE_3__["default"]((0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])({}, domain_key, this.state.locale)); // Updates numberFormat preferences with settings from translations
 
   this.state.numberFormatSettings.decimal_point = getTranslationFromTannin(this.state.tannin, normalizeTranslateArguments([decimal_point_translation_key]));
   this.state.numberFormatSettings.thousands_sep = getTranslationFromTannin(this.state.tannin, normalizeTranslateArguments([thousands_sep_translation_key])); // If translation isn't set, define defaults.
@@ -4455,7 +3919,7 @@ I18N.prototype.translate = function () {
     sprintfArgs.unshift(translation);
 
     try {
-      translation = _tannin_sprintf__WEBPACK_IMPORTED_MODULE_8__["default"].apply(void 0, (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(sprintfArgs));
+      translation = _tannin_sprintf__WEBPACK_IMPORTED_MODULE_7__["default"].apply(void 0, (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(sprintfArgs));
     } catch (error) {
       if (!window || !window.console) {
         return;
@@ -4473,7 +3937,7 @@ I18N.prototype.translate = function () {
 
 
   if (options.components) {
-    translation = (0,interpolate_components__WEBPACK_IMPORTED_MODULE_3__["default"])({
+    translation = (0,interpolate_components__WEBPACK_IMPORTED_MODULE_9__["default"])({
       mixedString: translation,
       components: options.components,
       throwErrors: this.throwErrors
@@ -4515,10 +3979,10 @@ I18N.prototype.registerTranslateHook = function (callback) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/index.js":
-/*!**************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/index.js ***!
-  \**************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/index.js":
+/*!***************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/index.js ***!
+  \***************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4545,10 +4009,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "useRtl": function() { return /* binding */ useRtl; },
 /* harmony export */   "withRtl": function() { return /* binding */ withRtl; }
 /* harmony export */ });
-/* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./i18n */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/i18n.js");
-/* harmony import */ var _localize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./localize */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/localize.js");
-/* harmony import */ var _use_translate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./use-translate */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/use-translate.js");
-/* harmony import */ var _rtl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./rtl */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/rtl.js");
+/* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./i18n */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/i18n.js");
+/* harmony import */ var _localize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./localize */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/localize.js");
+/* harmony import */ var _use_translate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./use-translate */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/use-translate.js");
+/* harmony import */ var _rtl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./rtl */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/rtl.js");
 /**
  * Internal dependencies
  */
@@ -4585,10 +4049,10 @@ var _rtlFactory = (0,_rtl__WEBPACK_IMPORTED_MODULE_3__["default"])(i18n),
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/localize.js":
-/*!*****************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/localize.js ***!
-  \*****************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/localize.js":
+/*!******************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/localize.js ***!
+  \******************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4599,14 +4063,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread2 */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/createSuper */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/createSuper.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -4642,14 +4104,12 @@ __webpack_require__.r(__webpack_exports__);
     var _class, _temp;
 
     var componentName = ComposedComponent.displayName || ComposedComponent.name || '';
-    return _temp = _class =
-    /*#__PURE__*/
-    function (_React$Component) {
-      (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(_class, _React$Component);
+    return _temp = _class = /*#__PURE__*/function (_React$Component) {
+      (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(_class, _React$Component);
+
+      var _super = (0,_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5__["default"])(_class);
 
       function _class() {
-        var _getPrototypeOf2;
-
         var _this;
 
         (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, _class);
@@ -4658,9 +4118,9 @@ __webpack_require__.r(__webpack_exports__);
           args[_key] = arguments[_key];
         }
 
-        _this = (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, (_getPrototypeOf2 = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(_class)).call.apply(_getPrototypeOf2, [this].concat(args)));
+        _this = _super.call.apply(_super, [this].concat(args));
 
-        (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "boundForceUpdate", _this.forceUpdate.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this)));
+        (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "boundForceUpdate", _this.forceUpdate.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this)));
 
         return _this;
       }
@@ -4682,21 +4142,21 @@ __webpack_require__.r(__webpack_exports__);
             locale: i18n.getLocaleSlug()
           }, this.props, {}, i18nProps);
 
-          return react__WEBPACK_IMPORTED_MODULE_8___default().createElement(ComposedComponent, props);
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(ComposedComponent, props);
         }
       }]);
 
       return _class;
-    }((react__WEBPACK_IMPORTED_MODULE_8___default().Component)), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_class, "displayName", 'Localized(' + componentName + ')'), _temp;
+    }((react__WEBPACK_IMPORTED_MODULE_7___default().Component)), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_class, "displayName", 'Localized(' + componentName + ')'), _temp;
   };
 }
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/number-format.js":
-/*!**********************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/number-format.js ***!
-  \**********************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/number-format.js":
+/*!***********************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/number-format.js ***!
+  \***********************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4740,10 +4200,10 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/rtl.js":
-/*!************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/rtl.js ***!
-  \************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/rtl.js":
+/*!*************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/rtl.js ***!
+  \*************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4754,7 +4214,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var use_subscription__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! use-subscription */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/index.js");
+/* harmony import */ var use_subscription__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! use-subscription */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/index.js");
 /* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
 /* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__);
 
@@ -4786,7 +4246,7 @@ function rtlFactory(i18n) {
   var withRtl = (0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__.createHigherOrderComponent)(function (WrappedComponent) {
     return (0,react__WEBPACK_IMPORTED_MODULE_1__.forwardRef)(function (props, ref) {
       var isRtl = useRtl();
-      return react__WEBPACK_IMPORTED_MODULE_1___default().createElement(WrappedComponent, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(WrappedComponent, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
         isRtl: isRtl,
         ref: ref
       }));
@@ -4800,10 +4260,10 @@ function rtlFactory(i18n) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/use-translate.js":
-/*!**********************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/use-translate.js ***!
-  \**********************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/use-translate.js":
+/*!***********************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/use-translate.js ***!
+  \***********************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4885,221 +4345,6 @@ if (typeof Object.create === 'function') {
   }
 }
 
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/index.js":
-/*!*****************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/index.js ***!
-  \*****************************************************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-	value: true
-}));
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; /**
-                                                                                                                                                                                                                                                                               * External Dependencies
-                                                                                                                                                                                                                                                                               */
-
-
-/**
- * Internal Dependencies
- */
-
-
-var _react = __webpack_require__(/*! react */ "react");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactAddonsCreateFragment = __webpack_require__(/*! react-addons-create-fragment */ "../../../node_modules/.pnpm/react-addons-create-fragment@15.6.2/node_modules/react-addons-create-fragment/index.js");
-
-var _reactAddonsCreateFragment2 = _interopRequireDefault(_reactAddonsCreateFragment);
-
-var _tokenize = __webpack_require__(/*! ./tokenize */ "../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/tokenize.js");
-
-var _tokenize2 = _interopRequireDefault(_tokenize);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var currentMixedString = void 0;
-
-function getCloseIndex(openIndex, tokens) {
-	var openToken = tokens[openIndex],
-	    nestLevel = 0,
-	    token,
-	    i;
-	for (i = openIndex + 1; i < tokens.length; i++) {
-		token = tokens[i];
-		if (token.value === openToken.value) {
-			if (token.type === 'componentOpen') {
-				nestLevel++;
-				continue;
-			}
-			if (token.type === 'componentClose') {
-				if (nestLevel === 0) {
-					return i;
-				}
-				nestLevel--;
-			}
-		}
-	}
-	// if we get this far, there was no matching close token
-	throw new Error('Missing closing component token `' + openToken.value + '`');
-}
-
-function buildChildren(tokens, components) {
-	var children = [],
-	    childrenObject = {},
-	    openComponent,
-	    clonedOpenComponent,
-	    openIndex,
-	    closeIndex,
-	    token,
-	    i,
-	    grandChildTokens,
-	    grandChildren,
-	    siblingTokens,
-	    siblings;
-
-	for (i = 0; i < tokens.length; i++) {
-		token = tokens[i];
-		if (token.type === 'string') {
-			children.push(token.value);
-			continue;
-		}
-		// component node should at least be set
-		if (!components.hasOwnProperty(token.value) || typeof components[token.value] === 'undefined') {
-			throw new Error('Invalid interpolation, missing component node: `' + token.value + '`');
-		}
-		// should be either ReactElement or null (both type "object"), all other types deprecated
-		if (_typeof(components[token.value]) !== 'object') {
-			throw new Error('Invalid interpolation, component node must be a ReactElement or null: `' + token.value + '`', '\n> ' + currentMixedString);
-		}
-		// we should never see a componentClose token in this loop
-		if (token.type === 'componentClose') {
-			throw new Error('Missing opening component token: `' + token.value + '`');
-		}
-		if (token.type === 'componentOpen') {
-			openComponent = components[token.value];
-			openIndex = i;
-			break;
-		}
-		// componentSelfClosing token
-		children.push(components[token.value]);
-		continue;
-	}
-
-	if (openComponent) {
-		closeIndex = getCloseIndex(openIndex, tokens);
-		grandChildTokens = tokens.slice(openIndex + 1, closeIndex);
-		grandChildren = buildChildren(grandChildTokens, components);
-		clonedOpenComponent = _react2.default.cloneElement(openComponent, {}, grandChildren);
-		children.push(clonedOpenComponent);
-
-		if (closeIndex < tokens.length - 1) {
-			siblingTokens = tokens.slice(closeIndex + 1);
-			siblings = buildChildren(siblingTokens, components);
-			children = children.concat(siblings);
-		}
-	}
-
-	if (children.length === 1) {
-		return children[0];
-	}
-
-	children.forEach(function (child, index) {
-		if (child) {
-			childrenObject['interpolation-child-' + index] = child;
-		}
-	});
-
-	return (0, _reactAddonsCreateFragment2.default)(childrenObject);
-}
-
-function interpolate(options) {
-	var mixedString = options.mixedString,
-	    components = options.components,
-	    throwErrors = options.throwErrors;
-
-
-	currentMixedString = mixedString;
-
-	if (!components) {
-		return mixedString;
-	}
-
-	if ((typeof components === 'undefined' ? 'undefined' : _typeof(components)) !== 'object') {
-		if (throwErrors) {
-			throw new Error('Interpolation Error: unable to process `' + mixedString + '` because components is not an object');
-		}
-
-		return mixedString;
-	}
-
-	var tokens = (0, _tokenize2.default)(mixedString);
-
-	try {
-		return buildChildren(tokens, components);
-	} catch (error) {
-		if (throwErrors) {
-			throw new Error('Interpolation Error: unable to process `' + mixedString + '` because of error `' + error.message + '`');
-		}
-
-		return mixedString;
-	}
-};
-
-exports["default"] = interpolate;
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/tokenize.js":
-/*!********************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/interpolate-components@1.1.1/node_modules/interpolate-components/lib/tokenize.js ***!
-  \********************************************************************************************************************/
-/***/ (function(module) {
-
-"use strict";
-
-
-function identifyToken(item) {
-	// {{/example}}
-	if (item.match(/^\{\{\//)) {
-		return {
-			type: 'componentClose',
-			value: item.replace(/\W/g, '')
-		};
-	}
-	// {{example /}}
-	if (item.match(/\/\}\}$/)) {
-		return {
-			type: 'componentSelfClosing',
-			value: item.replace(/\W/g, '')
-		};
-	}
-	// {{example}}
-	if (item.match(/^\{\{/)) {
-		return {
-			type: 'componentOpen',
-			value: item.replace(/\W/g, '')
-		};
-	}
-	return {
-		type: 'string',
-		value: item
-	};
-}
-
-module.exports = function (mixedString) {
-	var tokenStrings = mixedString.split(/(\{\{\/?\s*\w+\s*\/?\}\})/g); // split to components and strings
-	return tokenStrings.map(identifyToken);
-};
-//# sourceMappingURL=tokenize.js.map
 
 /***/ }),
 
@@ -6493,363 +5738,6 @@ if (true) {
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/react-addons-create-fragment@15.6.2/node_modules/react-addons-create-fragment/index.js":
-/*!**************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/react-addons-create-fragment@15.6.2/node_modules/react-addons-create-fragment/index.js ***!
-  \**************************************************************************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var React = __webpack_require__(/*! react */ "react");
-
-var REACT_ELEMENT_TYPE =
-  (typeof Symbol === 'function' && Symbol.for && Symbol.for('react.element')) ||
-  0xeac7;
-
-var emptyFunction = __webpack_require__(/*! fbjs/lib/emptyFunction */ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/emptyFunction.js");
-var invariant = __webpack_require__(/*! fbjs/lib/invariant */ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/invariant.js");
-var warning = __webpack_require__(/*! fbjs/lib/warning */ "../../../node_modules/.pnpm/fbjs@0.8.18/node_modules/fbjs/lib/warning.js");
-
-var SEPARATOR = '.';
-var SUBSEPARATOR = ':';
-
-var didWarnAboutMaps = false;
-
-var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
-var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
-
-function getIteratorFn(maybeIterable) {
-  var iteratorFn =
-    maybeIterable &&
-    ((ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL]) ||
-      maybeIterable[FAUX_ITERATOR_SYMBOL]);
-  if (typeof iteratorFn === 'function') {
-    return iteratorFn;
-  }
-}
-
-function escape(key) {
-  var escapeRegex = /[=:]/g;
-  var escaperLookup = {
-    '=': '=0',
-    ':': '=2'
-  };
-  var escapedString = ('' + key).replace(escapeRegex, function(match) {
-    return escaperLookup[match];
-  });
-
-  return '$' + escapedString;
-}
-
-function getComponentKey(component, index) {
-  // Do some typechecking here since we call this blindly. We want to ensure
-  // that we don't block potential future ES APIs.
-  if (component && typeof component === 'object' && component.key != null) {
-    // Explicit key
-    return escape(component.key);
-  }
-  // Implicit key determined by the index in the set
-  return index.toString(36);
-}
-
-function traverseAllChildrenImpl(
-  children,
-  nameSoFar,
-  callback,
-  traverseContext
-) {
-  var type = typeof children;
-
-  if (type === 'undefined' || type === 'boolean') {
-    // All of the above are perceived as null.
-    children = null;
-  }
-
-  if (
-    children === null ||
-    type === 'string' ||
-    type === 'number' ||
-    // The following is inlined from ReactElement. This means we can optimize
-    // some checks. React Fiber also inlines this logic for similar purposes.
-    (type === 'object' && children.$$typeof === REACT_ELEMENT_TYPE)
-  ) {
-    callback(
-      traverseContext,
-      children,
-      // If it's the only child, treat the name as if it was wrapped in an array
-      // so that it's consistent if the number of children grows.
-      nameSoFar === '' ? SEPARATOR + getComponentKey(children, 0) : nameSoFar
-    );
-    return 1;
-  }
-
-  var child;
-  var nextName;
-  var subtreeCount = 0; // Count of children found in the current subtree.
-  var nextNamePrefix = nameSoFar === '' ? SEPARATOR : nameSoFar + SUBSEPARATOR;
-
-  if (Array.isArray(children)) {
-    for (var i = 0; i < children.length; i++) {
-      child = children[i];
-      nextName = nextNamePrefix + getComponentKey(child, i);
-      subtreeCount += traverseAllChildrenImpl(
-        child,
-        nextName,
-        callback,
-        traverseContext
-      );
-    }
-  } else {
-    var iteratorFn = getIteratorFn(children);
-    if (iteratorFn) {
-      if (true) {
-        // Warn about using Maps as children
-        if (iteratorFn === children.entries) {
-          warning(
-            didWarnAboutMaps,
-            'Using Maps as children is unsupported and will likely yield ' +
-              'unexpected results. Convert it to a sequence/iterable of keyed ' +
-              'ReactElements instead.'
-          );
-          didWarnAboutMaps = true;
-        }
-      }
-
-      var iterator = iteratorFn.call(children);
-      var step;
-      var ii = 0;
-      while (!(step = iterator.next()).done) {
-        child = step.value;
-        nextName = nextNamePrefix + getComponentKey(child, ii++);
-        subtreeCount += traverseAllChildrenImpl(
-          child,
-          nextName,
-          callback,
-          traverseContext
-        );
-      }
-    } else if (type === 'object') {
-      var addendum = '';
-      if (true) {
-        addendum =
-          ' If you meant to render a collection of children, use an array ' +
-          'instead or wrap the object using createFragment(object) from the ' +
-          'React add-ons.';
-      }
-      var childrenString = '' + children;
-      invariant(
-        false,
-        'Objects are not valid as a React child (found: %s).%s',
-        childrenString === '[object Object]'
-          ? 'object with keys {' + Object.keys(children).join(', ') + '}'
-          : childrenString,
-        addendum
-      );
-    }
-  }
-
-  return subtreeCount;
-}
-
-function traverseAllChildren(children, callback, traverseContext) {
-  if (children == null) {
-    return 0;
-  }
-
-  return traverseAllChildrenImpl(children, '', callback, traverseContext);
-}
-
-var userProvidedKeyEscapeRegex = /\/+/g;
-function escapeUserProvidedKey(text) {
-  return ('' + text).replace(userProvidedKeyEscapeRegex, '$&/');
-}
-
-function cloneAndReplaceKey(oldElement, newKey) {
-  return React.cloneElement(
-    oldElement,
-    {key: newKey},
-    oldElement.props !== undefined ? oldElement.props.children : undefined
-  );
-}
-
-var DEFAULT_POOL_SIZE = 10;
-var DEFAULT_POOLER = oneArgumentPooler;
-
-var oneArgumentPooler = function(copyFieldsFrom) {
-  var Klass = this;
-  if (Klass.instancePool.length) {
-    var instance = Klass.instancePool.pop();
-    Klass.call(instance, copyFieldsFrom);
-    return instance;
-  } else {
-    return new Klass(copyFieldsFrom);
-  }
-};
-
-var addPoolingTo = function addPoolingTo(CopyConstructor, pooler) {
-  // Casting as any so that flow ignores the actual implementation and trusts
-  // it to match the type we declared
-  var NewKlass = CopyConstructor;
-  NewKlass.instancePool = [];
-  NewKlass.getPooled = pooler || DEFAULT_POOLER;
-  if (!NewKlass.poolSize) {
-    NewKlass.poolSize = DEFAULT_POOL_SIZE;
-  }
-  NewKlass.release = standardReleaser;
-  return NewKlass;
-};
-
-var standardReleaser = function standardReleaser(instance) {
-  var Klass = this;
-  invariant(
-    instance instanceof Klass,
-    'Trying to release an instance into a pool of a different type.'
-  );
-  instance.destructor();
-  if (Klass.instancePool.length < Klass.poolSize) {
-    Klass.instancePool.push(instance);
-  }
-};
-
-var fourArgumentPooler = function fourArgumentPooler(a1, a2, a3, a4) {
-  var Klass = this;
-  if (Klass.instancePool.length) {
-    var instance = Klass.instancePool.pop();
-    Klass.call(instance, a1, a2, a3, a4);
-    return instance;
-  } else {
-    return new Klass(a1, a2, a3, a4);
-  }
-};
-
-function MapBookKeeping(mapResult, keyPrefix, mapFunction, mapContext) {
-  this.result = mapResult;
-  this.keyPrefix = keyPrefix;
-  this.func = mapFunction;
-  this.context = mapContext;
-  this.count = 0;
-}
-MapBookKeeping.prototype.destructor = function() {
-  this.result = null;
-  this.keyPrefix = null;
-  this.func = null;
-  this.context = null;
-  this.count = 0;
-};
-addPoolingTo(MapBookKeeping, fourArgumentPooler);
-
-function mapSingleChildIntoContext(bookKeeping, child, childKey) {
-  var result = bookKeeping.result;
-  var keyPrefix = bookKeeping.keyPrefix;
-  var func = bookKeeping.func;
-  var context = bookKeeping.context;
-
-  var mappedChild = func.call(context, child, bookKeeping.count++);
-  if (Array.isArray(mappedChild)) {
-    mapIntoWithKeyPrefixInternal(
-      mappedChild,
-      result,
-      childKey,
-      emptyFunction.thatReturnsArgument
-    );
-  } else if (mappedChild != null) {
-    if (React.isValidElement(mappedChild)) {
-      mappedChild = cloneAndReplaceKey(
-        mappedChild,
-        // Keep both the (mapped) and old keys if they differ, just as
-        // traverseAllChildren used to do for objects as children
-        keyPrefix +
-          (mappedChild.key && (!child || child.key !== mappedChild.key)
-            ? escapeUserProvidedKey(mappedChild.key) + '/'
-            : '') +
-          childKey
-      );
-    }
-    result.push(mappedChild);
-  }
-}
-
-function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
-  var escapedPrefix = '';
-  if (prefix != null) {
-    escapedPrefix = escapeUserProvidedKey(prefix) + '/';
-  }
-  var traverseContext = MapBookKeeping.getPooled(
-    array,
-    escapedPrefix,
-    func,
-    context
-  );
-  traverseAllChildren(children, mapSingleChildIntoContext, traverseContext);
-  MapBookKeeping.release(traverseContext);
-}
-
-var numericPropertyRegex = /^\d+$/;
-
-var warnedAboutNumeric = false;
-
-function createReactFragment(object) {
-  if (typeof object !== 'object' || !object || Array.isArray(object)) {
-    warning(
-      false,
-      'React.addons.createFragment only accepts a single object. Got: %s',
-      object
-    );
-    return object;
-  }
-  if (React.isValidElement(object)) {
-    warning(
-      false,
-      'React.addons.createFragment does not accept a ReactElement ' +
-        'without a wrapper object.'
-    );
-    return object;
-  }
-
-  invariant(
-    object.nodeType !== 1,
-    'React.addons.createFragment(...): Encountered an invalid child; DOM ' +
-      'elements are not valid children of React components.'
-  );
-
-  var result = [];
-
-  for (var key in object) {
-    if (true) {
-      if (!warnedAboutNumeric && numericPropertyRegex.test(key)) {
-        warning(
-          false,
-          'React.addons.createFragment(...): Child objects should have ' +
-            'non-numeric keys so ordering is preserved.'
-        );
-        warnedAboutNumeric = true;
-      }
-    }
-    mapIntoWithKeyPrefixInternal(
-      object[key],
-      result,
-      key,
-      emptyFunction.thatReturnsArgument
-    );
-  }
-
-  return result;
-}
-
-module.exports = createReactFragment;
 
 
 /***/ }),
@@ -8257,7 +7145,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _automattic_format_currency__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/format-currency */ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/index.js");
+/* harmony import */ var _automattic_format_currency__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/format-currency */ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/index.js");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/pricing-card/style.scss");
@@ -12494,10 +11382,10 @@ const storeConfig = {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.development.js":
-/*!******************************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.development.js ***!
-  \******************************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/cjs/use-subscription.development.js":
+/*!*****************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/cjs/use-subscription.development.js ***!
+  \*****************************************************************************************************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -12628,17 +11516,17 @@ exports.useSubscription = useSubscription;
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/index.js":
-/*!***************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/index.js ***!
-  \***************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/index.js":
+/*!**************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/index.js ***!
+  \**************************************************************************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
 if (false) {} else {
-  module.exports = __webpack_require__(/*! ./cjs/use-subscription.development.js */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.development.js");
+  module.exports = __webpack_require__(/*! ./cjs/use-subscription.development.js */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/cjs/use-subscription.development.js");
 }
 
 
@@ -12893,6 +11781,42 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 /***/ }),
 
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/createSuper.js":
+/*!****************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/createSuper.js ***!
+  \****************************************************************************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ _createSuper; }
+/* harmony export */ });
+/* harmony import */ var _getPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getPrototypeOf.js */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _isNativeReflectConstruct_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isNativeReflectConstruct.js */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js");
+/* harmony import */ var _possibleConstructorReturn_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./possibleConstructorReturn.js */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+
+
+
+function _createSuper(Derived) {
+  var hasNativeReflectConstruct = (0,_isNativeReflectConstruct_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  return function _createSuperInternal() {
+    var Super = (0,_getPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Derived),
+        result;
+
+    if (hasNativeReflectConstruct) {
+      var NewTarget = (0,_getPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this).constructor;
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return (0,_possibleConstructorReturn_js__WEBPACK_IMPORTED_MODULE_2__["default"])(this, result);
+  };
+}
+
+/***/ }),
+
 /***/ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js":
 /*!*******************************************************************************************************************!*\
   !*** ../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
@@ -12998,6 +11922,32 @@ function _inherits(subClass, superClass) {
     }
   });
   if (superClass) (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__["default"])(subClass, superClass);
+}
+
+/***/ }),
+
+/***/ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js":
+/*!*****************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js ***!
+  \*****************************************************************************************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ _isNativeReflectConstruct; }
+/* harmony export */ });
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 /***/ }),
