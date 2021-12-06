@@ -110,13 +110,21 @@ return array(
 		'version' => '0.2.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-template-tags.php'
 	),
-	'Automattic\\Jetpack\\Licensing' => array(
-		'version' => '1.5.3.0',
-		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
-	),
 	'Automattic\\Jetpack\\My_Jetpack\\Initializer' => array(
 		'version' => '0.1.2.0',
 		'path'    => $vendorDir . '/automattic/jetpack-my-jetpack/src/class-initializer.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
+		'version' => '2.1.3.0',
+		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
+		'version' => '2.1.3.0',
+		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
+	),
+	'Automattic\\Jetpack\\Licensing' => array(
+		'version' => '1.5.3.0',
+		'path'    => $vendorDir . '/automattic/jetpack-licensing/src/class-licensing.php'
 	),
 	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
 		'version' => '2.0.9.0',
@@ -137,14 +145,6 @@ return array(
 	'Automattic\\Jetpack\\JITMS\\Post_Connection_JITM' => array(
 		'version' => '2.1.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-post-connection-jitm.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
-		'version' => '2.1.3.0',
-		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-admin.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
-		'version' => '2.1.3.0',
-		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
 	),
 	'Automattic\\Jetpack\\Config' => array(
 		'version' => '1.5.3.0',
