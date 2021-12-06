@@ -182,12 +182,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-licensing' => array(
-            'pretty_version' => 'v1.5.2',
-            'version' => '1.5.2.0',
+            'pretty_version' => 'v1.5.3',
+            'version' => '1.5.3.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../automattic/jetpack-licensing',
             'aliases' => array(),
-            'reference' => '931a40d2f03b710eab8ec938c54de89ddf43c93b',
+            'reference' => '7dca55d278f0e9ff9c2d455cb6dc6dd021b6d5ec',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-logo' => array(

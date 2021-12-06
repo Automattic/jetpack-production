@@ -942,17 +942,17 @@
         },
         {
             "name": "automattic/jetpack-licensing",
-            "version": "v1.5.2",
-            "version_normalized": "1.5.2.0",
+            "version": "v1.5.3",
+            "version_normalized": "1.5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-licensing.git",
-                "reference": "931a40d2f03b710eab8ec938c54de89ddf43c93b"
+                "reference": "7dca55d278f0e9ff9c2d455cb6dc6dd021b6d5ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-licensing/zipball/931a40d2f03b710eab8ec938c54de89ddf43c93b",
-                "reference": "931a40d2f03b710eab8ec938c54de89ddf43c93b",
+                "url": "https://api.github.com/repos/Automattic/jetpack-licensing/zipball/7dca55d278f0e9ff9c2d455cb6dc6dd021b6d5ec",
+                "reference": "7dca55d278f0e9ff9c2d455cb6dc6dd021b6d5ec",
                 "shasum": ""
             },
             "require": {
@@ -964,7 +964,7 @@
                 "automattic/wordbless": "@dev",
                 "yoast/phpunit-polyfills": "1.0.2"
             },
-            "time": "2021-11-30T16:30:55+00:00",
+            "time": "2021-12-03T18:57:20+00:00",
             "type": "library",
             "extra": {
                 "autotagger": true,
@@ -988,7 +988,7 @@
             ],
             "description": "Everything needed to manage Jetpack licenses client-side.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-licensing/tree/v1.5.2"
+                "source": "https://github.com/Automattic/jetpack-licensing/tree/v1.5.3"
             },
             "install-path": "../automattic/jetpack-licensing"
         },
