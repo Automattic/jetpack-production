@@ -82,6 +82,10 @@ return array(
 		'version' => '2.1.3.0',
 		'path'    => $vendorDir . '/automattic/jetpack-connection-ui/src/class-initial-state.php'
 	),
+	'Automattic\\Jetpack\\Config' => array(
+		'version' => '1.5.3.0',
+		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
+	),
 	'Automattic\\Jetpack\\Search\\Options' => array(
 		'version' => '0.2.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-search/src/class-options.php'
@@ -145,10 +149,6 @@ return array(
 	'Automattic\\Jetpack\\JITMS\\Post_Connection_JITM' => array(
 		'version' => '2.1.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-jitm/src/class-post-connection-jitm.php'
-	),
-	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.5.3.0',
-		'path'    => $vendorDir . '/automattic/jetpack-config/src/class-config.php'
 	),
 	'Jetpack_Sync_Settings' => array(
 		'version' => '1.6.7.0',
