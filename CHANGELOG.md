@@ -2,25 +2,22 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.5-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.5-a.1 - 2021-12-07
 ### Enhancements
-- Added adaptive progress bar color setting to the VideoPress block.
-- Comment: Print Post View: The share this section should be hidden in the print post view.
+- Sharing: hide sharing buttons when printing a post or page.
+- VideoPress Block: add adaptive progress bar color settings
 
 ### Improved compatibility
 - Twitter Timeline widget: Hide widget from the block inserter and Legacy widget block drop-down menu (WPCOM)
 
 ### Bug fixes
-- Atomic Menu: prevent notice for users without access to the plugins menu item.
-- Hide license activation route if user not linked and connection owner.
-- VideoPress: fix copy/paste of empty video blocks not containing the proper attribute set.
-- VideoPress: keep expanded/collapsed state of settings panel when reloading video preview.
+- Dashboard: hide licensing interface from users who did not link their account to WordPress.com yet, or who are not the main Jetpack connection owner.
+- VideoPress: avoid errors when copying and pasting empty video blocks.
+- VideoPress Block: maintain the state of different settings panels when reloading the video preview.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added Jetpack Installer package.
+- Atomic Menu: prevent notice for users without access to the plugins menu item.
 - Blog Subscription widget: Fix the comment block on the `hide_widget_in_block_editor()` to follow the DocBlock standards
 - Build modules with Webpack, so they benefit from our toolchain improvements.
 - DIFM: Conditionally hide admin menu and expose is_difm_lite_in_progress in the get site API
@@ -29,11 +26,6 @@ This is an alpha version! The changes listed here are not final.
 - Start an initial full sync if the site is connected when Jetpack is activated.
 - Start new Jetpack cycle 10.5-a.0
 - Switched Jetpack plugin to always use `s0.wp.com` and `i0.wp.com` for external resources
-- Updated package dependencies
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
 - Updated package dependencies.
 
 ## 10.4-beta - 2021-11-30
