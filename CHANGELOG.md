@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- SSO: added filters for the error text when a local user cannot be found for a given WP.com account and for when SSO is disallowed when on a staging site.
+
 ## 10.5-a.1 - 2021-12-07
 ### Enhancements
 - Sharing: hide sharing buttons when printing a post or page.
