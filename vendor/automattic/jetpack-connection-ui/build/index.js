@@ -9872,6 +9872,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
 /* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
 /* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
+/* harmony import */ var _tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../tools/custom-content-shape */ "../../js-packages/idc/tools/custom-content-shape.jsx");
 /**
  * External dependencies
  */
@@ -9889,6 +9890,7 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__;
 
 
 
+
 /**
  * The "start fresh" card.
  *
@@ -9899,7 +9901,8 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__;
 const CardFresh = props => {
   const {
     isStartingFresh,
-    startFreshCallback
+    startFreshCallback,
+    customContent
   } = props;
   const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__["default"])(props.wpcomHomeUrl);
   const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__["default"])(props.currentUrl);
@@ -9911,7 +9914,7 @@ const CardFresh = props => {
     className: "jp-idc__idc-screen__card-action-base"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__card-action-top"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, __('Treat each site as independent sites', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.sprintf)(
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, customContent.startFreshCardTitle || __('Treat each site as independent sites', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, customContent.startFreshCardBodyText || (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.sprintf)(
   /* translators: %1$s: The current site domain name. %2$s: The original site domain name. */
   __('<hostname>%1$s</hostname> settings, stats, and subscribers will start fresh. <hostname>%2$s</hostname> will keep its data as is.', 'jetpack'), currentHostName, wpcomHostName), {
     hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
@@ -9943,11 +9946,15 @@ CardFresh.propTypes = {
   isStartingFresh: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
 
   /** "Start Fresh" callback. */
-  startFreshCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
+  startFreshCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired),
+
+  /** Custom text content. */
+  customContent: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape(_tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_9__["default"])
 };
 CardFresh.defaultProps = {
   isStartingFresh: false,
-  startFreshCallback: () => {}
+  startFreshCallback: () => {},
+  customContent: {}
 };
 /* harmony default export */ __webpack_exports__["default"] = (CardFresh);
 
@@ -9976,6 +9983,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
 /* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "../../js-packages/idc/state/store.jsx");
 /* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
+/* harmony import */ var _tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../tools/custom-content-shape */ "../../js-packages/idc/tools/custom-content-shape.jsx");
 /**
  * External dependencies
  */
@@ -9993,6 +10001,7 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.__;
 
 
 
+
 /**
  * The "migrate" card.
  *
@@ -10006,7 +10015,8 @@ const CardMigrate = props => {
   const isActionInProgress = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select(_state_store__WEBPACK_IMPORTED_MODULE_7__.STORE_ID).getIsActionInProgress(), []);
   const {
     isMigrating,
-    migrateCallback
+    migrateCallback,
+    customContent
   } = props;
 
   const buttonLabel = __('Move your settings', 'jetpack');
@@ -10015,7 +10025,7 @@ const CardMigrate = props => {
     className: "jp-idc__idc-screen__card-action-base"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__card-action-top"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, __('Move Jetpack data', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.sprintf)(
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, customContent.migrateCardTitle || __('Move Jetpack data', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, customContent.migrateCardBodyText || (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.sprintf)(
   /* translators: %1$s: The current site domain name. %2$s: The original site domain name. */
   __('Move all your settings, stats and subscribers to your other <hostname>%1$s</hostname>. <hostname>%2$s</hostname> will be disconnected from Jetpack.', 'jetpack'), currentHostName, wpcomHostName), {
     hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
@@ -10047,11 +10057,15 @@ CardMigrate.propTypes = {
   isMigrating: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
 
   /** Migration callback. */
-  migrateCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
+  migrateCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired),
+
+  /** Custom text content. */
+  customContent: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape(_tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_9__["default"])
 };
 CardMigrate.defaultProps = {
   isMigrating: false,
-  migrateCallback: () => {}
+  migrateCallback: () => {},
+  customContent: {}
 };
 /* harmony default export */ __webpack_exports__["default"] = (CardMigrate);
 
@@ -10076,6 +10090,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _hooks_use_migration__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/use-migration */ "../../js-packages/idc/hooks/use-migration.jsx");
 /* harmony import */ var _hooks_use_migration_finished__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../hooks/use-migration-finished */ "../../js-packages/idc/hooks/use-migration-finished.jsx");
 /* harmony import */ var _hooks_use_start_fresh__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../hooks/use-start-fresh */ "../../js-packages/idc/hooks/use-start-fresh.jsx");
+/* harmony import */ var _tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../tools/custom-content-shape */ "../../js-packages/idc/tools/custom-content-shape.jsx");
 /**
  * External dependencies
  */
@@ -10092,6 +10107,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * The IDC screen component.
  *
@@ -10102,7 +10118,7 @@ __webpack_require__.r(__webpack_exports__);
 const IDCScreen = props => {
   const {
     logo,
-    headerText,
+    customContent,
     wpcomHomeUrl,
     currentUrl,
     apiNonce,
@@ -10150,7 +10166,7 @@ const IDCScreen = props => {
   }, [apiRoot, apiNonce, tracksUserData, tracksEventData]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_visual__WEBPACK_IMPORTED_MODULE_8__["default"], {
     logo: logo,
-    headerText: headerText,
+    customContent: customContent,
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
     redirectUri: redirectUri,
@@ -10168,8 +10184,8 @@ IDCScreen.propTypes = {
   /** The screen logo. */
   logo: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
 
-  /** The header text. */
-  headerText: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  /** Custom text content. */
+  customContent: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape(_tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_9__["default"]),
 
   /** The original site URL. */
   wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
@@ -10192,6 +10208,9 @@ IDCScreen.propTypes = {
   /** WordPress.com event tracking information. */
   tracksEventData: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object)
 };
+IDCScreen.defaultProps = {
+  customContent: {}
+};
 /* harmony default export */ __webpack_exports__["default"] = (IDCScreen);
 
 /***/ }),
@@ -10212,10 +10231,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
-/* harmony import */ var _card_migrate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../card-migrate */ "../../js-packages/idc/components/card-migrate/index.jsx");
-/* harmony import */ var _card_fresh__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../card-fresh */ "../../js-packages/idc/components/card-fresh/index.jsx");
-/* harmony import */ var _safe_mode__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../safe-mode */ "../../js-packages/idc/components/safe-mode/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
+/* harmony import */ var _card_migrate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../card-migrate */ "../../js-packages/idc/components/card-migrate/index.jsx");
+/* harmony import */ var _card_fresh__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../card-fresh */ "../../js-packages/idc/components/card-fresh/index.jsx");
+/* harmony import */ var _safe_mode__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../safe-mode */ "../../js-packages/idc/components/safe-mode/index.jsx");
+/* harmony import */ var _tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../tools/custom-content-shape */ "../../js-packages/idc/tools/custom-content-shape.jsx");
 /**
  * External dependencies
  */
@@ -10228,6 +10248,7 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
 /**
  * Internal dependencies
  */
+
 
 
 
@@ -10247,24 +10268,31 @@ const ScreenMain = props => {
     migrateCallback,
     isStartingFresh,
     startFreshCallback,
-    title,
-    mainBodyText
+    customContent
   } = props;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, mainBodyText), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, __('Please select an option', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, customContent.mainTitle || __('Safe Mode has been activated', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, customContent.mainBodyText || (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createInterpolateElement)(__('Your site is in Safe Mode because you have 2 Jetpack-powered sites that appear to be duplicates. ' + '2 sites that are telling Jetpack they’re the same site. <safeModeLink>Learn more about safe mode.</safeModeLink>', 'jetpack'), {
+    safeModeLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__["default"])('jetpack-support-safe-mode'),
+      rel: "noopener noreferrer",
+      target: "_blank"
+    })
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, __('Please select an option', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__cards"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_migrate__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_migrate__WEBPACK_IMPORTED_MODULE_5__["default"], {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
     isMigrating: isMigrating,
-    migrateCallback: migrateCallback
+    migrateCallback: migrateCallback,
+    customContent: customContent
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__cards-separator"
-  }, "or"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_fresh__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, "or"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_fresh__WEBPACK_IMPORTED_MODULE_6__["default"], {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
     isStartingFresh: isStartingFresh,
-    startFreshCallback: startFreshCallback
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_safe_mode__WEBPACK_IMPORTED_MODULE_6__["default"], null));
+    startFreshCallback: startFreshCallback,
+    customContent: customContent
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_safe_mode__WEBPACK_IMPORTED_MODULE_7__["default"], null));
 };
 
 ScreenMain.propTypes = {
@@ -10286,23 +10314,13 @@ ScreenMain.propTypes = {
   /** "Start Fresh" callback. */
   startFreshCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
 
-  /** The main screen title. */
-  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-
-  /** The main screen body text. */
-  mainBodyText: prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object)]).isRequired
+  /** Custom text content. */
+  customContent: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape(_tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_8__["default"])
 };
 ScreenMain.defaultProps = {
   isMigrating: false,
   isStartingFresh: false,
-  title: __('Safe Mode has been activated', 'jetpack'),
-  mainBodyText: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createInterpolateElement)(__('Your site is in Safe Mode because you have 2 Jetpack-powered sites that appear to be duplicates. ' + '2 sites that are telling Jetpack they’re the same site. <safeModeLink>Learn more about safe mode.</safeModeLink>', 'jetpack'), {
-    safeModeLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__["default"])('jetpack-support-safe-mode'),
-      rel: "noopener noreferrer",
-      target: "_blank"
-    })
-  })
+  customContent: {}
 };
 /* harmony default export */ __webpack_exports__["default"] = (ScreenMain);
 
@@ -10328,6 +10346,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/spinner/index.jsx");
 /* harmony import */ var _tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../tools/extract-hostname */ "../../js-packages/idc/tools/extract-hostname.jsx");
+/* harmony import */ var _tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../tools/custom-content-shape */ "../../js-packages/idc/tools/custom-content-shape.jsx");
 /**
  * External dependencies
  */
@@ -10343,6 +10362,7 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__;
  */
 
 
+
 /**
  * Retrieve the migrated screen body.
  *
@@ -10353,14 +10373,15 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__;
 const ScreenMigrated = props => {
   const {
     finishCallback,
-    isFinishing
+    isFinishing,
+    customContent
   } = props;
   const wpcomHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__["default"])(props.wpcomHomeUrl);
   const currentHostName = (0,_tools_extract_hostname__WEBPACK_IMPORTED_MODULE_5__["default"])(props.currentUrl);
 
   const buttonLabel = __('Got it, thanks', 'jetpack');
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, __('Your Jetpack settings have migrated successfully', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.sprintf)(
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, customContent.migratedTitle || __('Your Jetpack settings have migrated successfully', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, customContent.migratedBodyText || (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.sprintf)(
   /* translators: %1$s: The current site domain name. */
   __('Safe Mode has been switched off for <hostname>%1$s</hostname> website and Jetpack is fully functional.', 'jetpack'), currentHostName), {
     hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
@@ -10394,11 +10415,15 @@ ScreenMigrated.propTypes = {
   finishCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
 
   /** Whether the migration finishing process is in progress. */
-  isFinishing: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired)
+  isFinishing: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
+
+  /** Custom text content. */
+  customContent: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape(_tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_7__["default"])
 };
 ScreenMigrated.defaultProps = {
   finishCallback: () => {},
-  isFinishing: false
+  isFinishing: false,
+  customContent: {}
 };
 /* harmony default export */ __webpack_exports__["default"] = (ScreenMigrated);
 
@@ -10418,9 +10443,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
 /* harmony import */ var _screen_main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./screen-main */ "../../js-packages/idc/components/idc-screen/screen-main.jsx");
 /* harmony import */ var _screen_migrated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./screen-migrated */ "../../js-packages/idc/components/idc-screen/screen-migrated.jsx");
+/* harmony import */ var _tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../tools/custom-content-shape */ "../../js-packages/idc/tools/custom-content-shape.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/idc/components/idc-screen/style.scss");
 /**
  * External dependencies
@@ -10438,12 +10464,11 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 
 
 
+
 const IDCScreenVisual = props => {
   const {
     logo,
-    headerText,
-    title,
-    mainBodyText,
+    customContent,
     wpcomHomeUrl,
     currentUrl,
     redirectUri,
@@ -10463,17 +10488,17 @@ const IDCScreenVisual = props => {
     className: "jp-idc__idc-screen__logo"
   }, logo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__logo-label"
-  }, headerText)), isMigrated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_migrated__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, customContent.headerText || __('Safe Mode', 'jetpack'))), isMigrated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_migrated__WEBPACK_IMPORTED_MODULE_4__["default"], {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
     finishCallback: finishMigrationCallback,
-    isFinishing: isFinishingMigration
+    isFinishing: isFinishingMigration,
+    customContent: customContent
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_main__WEBPACK_IMPORTED_MODULE_5__["default"], {
     wpcomHomeUrl: wpcomHomeUrl,
     currentUrl: currentUrl,
     redirectUri: redirectUri,
-    title: title,
-    mainBodyText: mainBodyText,
+    customContent: customContent,
     isMigrating: isMigrating,
     migrateCallback: migrateCallback,
     isStartingFresh: isStartingFresh,
@@ -10483,10 +10508,10 @@ const IDCScreenVisual = props => {
 
 IDCScreenVisual.propTypes = {
   /** The screen logo, Jetpack by default. */
-  logo: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
+  logo: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object.isRequired),
 
-  /** The header text, 'Safe Mode' by default. */
-  headerText: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
+  /** Custom text content. */
+  customContent: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape(_tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_6__["default"]),
 
   /** The original site URL. */
   wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
@@ -10496,12 +10521,6 @@ IDCScreenVisual.propTypes = {
 
   /** The redirect URI to redirect users back to after connecting. */
   redirectUri: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-
-  /** The main screen title. */
-  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
-
-  /** The main screen body text. */
-  mainBodyText: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
 
   /** Whether the migration is in progress. */
   isMigrating: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
@@ -10525,14 +10544,14 @@ IDCScreenVisual.propTypes = {
   startFreshCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func)
 };
 IDCScreenVisual.defaultProps = {
-  logo: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  logo: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__["default"], {
     height: 24
   }),
-  headerText: __('Safe Mode', 'jetpack'),
   isMigrated: false,
   isFinishingMigration: false,
   isMigrating: false,
-  isStartingFresh: false
+  isStartingFresh: false,
+  customContent: {}
 };
 /* harmony default export */ __webpack_exports__["default"] = (IDCScreenVisual);
 
@@ -10982,6 +11001,51 @@ _store_holder__WEBPACK_IMPORTED_MODULE_0__["default"].mayBeInit(STORE_ID, {
   selectors: _selectors__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 
+
+/***/ }),
+
+/***/ "../../js-packages/idc/tools/custom-content-shape.jsx":
+/*!************************************************************!*\
+  !*** ../../js-packages/idc/tools/custom-content-shape.jsx ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * External dependencies
+ */
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  /** The header text, 'Safe Mode' by default. */
+  headerText: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
+
+  /** The main screen title. */
+  mainTitle: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
+
+  /** The main screen body text. */
+  mainBodyText: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
+
+  /** The "migration finished" screen title. */
+  migratedTitle: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
+
+  /** The "migration finished" screen body text. */
+  migratedBodyText: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
+
+  /** The migration card title. */
+  migrateCardTitle: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
+
+  /** The migration card body. */
+  migrateCardBodyText: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
+
+  /** The "start fresh" card title. */
+  startFreshCardTitle: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
+
+  /** The "start fresh" card body. */
+  startFreshCardBodyText: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string)
+});
 
 /***/ }),
 
