@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updated package dependencies.
+
 ## [0.4.4] - 2021-11-30
 ### Changed
 - Colors: update Jetpack Primary color to match latest brand book.
