@@ -1,10 +1,10 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/currencies.js":
-/*!**********************************************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/currencies.js ***!
-  \**********************************************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/currencies.js":
+/*!*********************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/currencies.js ***!
+  \*********************************************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -999,10 +999,10 @@ function getCurrencyDefaults(code) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/index.js":
-/*!*****************************************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/index.js ***!
-  \*****************************************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/index.js":
+/*!****************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/index.js ***!
+  \****************************************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1014,8 +1014,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getCurrencyObject": function() { return /* binding */ getCurrencyObject; }
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/objectSpread.js");
-/* harmony import */ var i18n_calypso__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! i18n-calypso */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/index.js");
-/* harmony import */ var _currencies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./currencies */ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/currencies.js");
+/* harmony import */ var i18n_calypso__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! i18n-calypso */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/index.js");
+/* harmony import */ var _currencies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./currencies */ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/currencies.js");
 
 
 /**
@@ -1112,10 +1112,10 @@ function getCurrencyObject(number, code) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/index.js":
-/*!***********************************************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/index.js ***!
-  \***********************************************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@16.14.0/node_modules/@automattic/interpolate-components/dist/esm/index.js":
+/*!************************************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@16.14.0/node_modules/@automattic/interpolate-components/dist/esm/index.js ***!
+  \************************************************************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1125,7 +1125,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _tokenize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tokenize */ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/tokenize.js");
+/* harmony import */ var _tokenize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tokenize */ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@16.14.0/node_modules/@automattic/interpolate-components/dist/esm/tokenize.js");
 
 
 
@@ -1256,10 +1256,10 @@ function interpolate(options) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/tokenize.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/tokenize.js ***!
-  \**************************************************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@16.14.0/node_modules/@automattic/interpolate-components/dist/esm/tokenize.js":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@16.14.0/node_modules/@automattic/interpolate-components/dist/esm/tokenize.js ***!
+  \***************************************************************************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3529,10 +3529,10 @@ exports.shr64_lo = shr64_lo;
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/i18n.js":
-/*!**************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/i18n.js ***!
-  \**************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/i18n.js":
+/*!*************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/i18n.js ***!
+  \*************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3541,7 +3541,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! debug */ "../../../node_modules/.pnpm/debug@4.3.2/node_modules/debug/src/browser.js");
 /* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(debug__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var interpolate_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! interpolate-components */ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@17.0.2/node_modules/@automattic/interpolate-components/dist/esm/index.js");
+/* harmony import */ var interpolate_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! interpolate-components */ "../../../node_modules/.pnpm/@automattic+interpolate-components@1.2.0_react@16.14.0/node_modules/@automattic/interpolate-components/dist/esm/index.js");
 /* harmony import */ var tannin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tannin */ "../../../node_modules/.pnpm/tannin@1.2.0/node_modules/tannin/index.js");
 /* harmony import */ var lru__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lru */ "../../../node_modules/.pnpm/lru@3.1.0/node_modules/lru/index.js");
 /* harmony import */ var lru__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lru__WEBPACK_IMPORTED_MODULE_4__);
@@ -3550,7 +3550,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var events__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! events */ "../../../node_modules/.pnpm/events@3.3.0/node_modules/events/events.js");
 /* harmony import */ var events__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(events__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _tannin_sprintf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @tannin/sprintf */ "../../../node_modules/.pnpm/@tannin+sprintf@1.2.0/node_modules/@tannin/sprintf/index.js");
-/* harmony import */ var _number_format__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./number-format */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/number-format.js");
+/* harmony import */ var _number_format__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./number-format */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/number-format.js");
 
 
 
@@ -3665,10 +3665,9 @@ function getTranslationFromTannin(tannin, options) {
 
 function getTranslation(i18n, options) {
   for (var i = translationLookup.length - 1; i >= 0; i--) {
-    var lookup = translationLookup[i](Object.assign({}, options));
-    var key = lookup.context ? lookup.context + "\x04" + lookup.original : lookup.original; // Only get the translation from tannin if it exists.
+    var lookup = translationLookup[i](Object.assign({}, options)); // Only get the translation from tannin if it exists.
 
-    if (i18n.state.locale[key]) {
+    if (i18n.state.locale[lookup.original]) {
       return getTranslationFromTannin(i18n.state.tannin, lookup);
     }
   }
@@ -3979,10 +3978,10 @@ I18N.prototype.registerTranslateHook = function (callback) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/index.js":
-/*!***************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/index.js ***!
-  \***************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/index.js":
+/*!**************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/index.js ***!
+  \**************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4009,10 +4008,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "useRtl": function() { return /* binding */ useRtl; },
 /* harmony export */   "withRtl": function() { return /* binding */ withRtl; }
 /* harmony export */ });
-/* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./i18n */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/i18n.js");
-/* harmony import */ var _localize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./localize */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/localize.js");
-/* harmony import */ var _use_translate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./use-translate */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/use-translate.js");
-/* harmony import */ var _rtl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./rtl */ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/rtl.js");
+/* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./i18n */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/i18n.js");
+/* harmony import */ var _localize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./localize */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/localize.js");
+/* harmony import */ var _use_translate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./use-translate */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/use-translate.js");
+/* harmony import */ var _rtl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./rtl */ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/rtl.js");
 /**
  * Internal dependencies
  */
@@ -4049,10 +4048,10 @@ var _rtlFactory = (0,_rtl__WEBPACK_IMPORTED_MODULE_3__["default"])(i18n),
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/localize.js":
-/*!******************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/localize.js ***!
-  \******************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/localize.js":
+/*!*****************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/localize.js ***!
+  \*****************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4063,12 +4062,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread2 */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/createSuper */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/createSuper.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
@@ -4104,12 +4105,14 @@ __webpack_require__.r(__webpack_exports__);
     var _class, _temp;
 
     var componentName = ComposedComponent.displayName || ComposedComponent.name || '';
-    return _temp = _class = /*#__PURE__*/function (_React$Component) {
-      (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(_class, _React$Component);
-
-      var _super = (0,_babel_runtime_helpers_createSuper__WEBPACK_IMPORTED_MODULE_5__["default"])(_class);
+    return _temp = _class =
+    /*#__PURE__*/
+    function (_React$Component) {
+      (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(_class, _React$Component);
 
       function _class() {
+        var _getPrototypeOf2;
+
         var _this;
 
         (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, _class);
@@ -4118,9 +4121,9 @@ __webpack_require__.r(__webpack_exports__);
           args[_key] = arguments[_key];
         }
 
-        _this = _super.call.apply(_super, [this].concat(args));
+        _this = (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, (_getPrototypeOf2 = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(_class)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-        (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "boundForceUpdate", _this.forceUpdate.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this)));
+        (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "boundForceUpdate", _this.forceUpdate.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this)));
 
         return _this;
       }
@@ -4142,21 +4145,21 @@ __webpack_require__.r(__webpack_exports__);
             locale: i18n.getLocaleSlug()
           }, this.props, {}, i18nProps);
 
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(ComposedComponent, props);
+          return react__WEBPACK_IMPORTED_MODULE_8___default().createElement(ComposedComponent, props);
         }
       }]);
 
       return _class;
-    }((react__WEBPACK_IMPORTED_MODULE_7___default().Component)), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_class, "displayName", 'Localized(' + componentName + ')'), _temp;
+    }((react__WEBPACK_IMPORTED_MODULE_8___default().Component)), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(_class, "displayName", 'Localized(' + componentName + ')'), _temp;
   };
 }
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/number-format.js":
-/*!***********************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/number-format.js ***!
-  \***********************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/number-format.js":
+/*!**********************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/number-format.js ***!
+  \**********************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4200,10 +4203,10 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/rtl.js":
-/*!*************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/rtl.js ***!
-  \*************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/rtl.js":
+/*!************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/rtl.js ***!
+  \************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4214,7 +4217,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var use_subscription__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! use-subscription */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/index.js");
+/* harmony import */ var use_subscription__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! use-subscription */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/index.js");
 /* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
 /* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__);
 
@@ -4246,7 +4249,7 @@ function rtlFactory(i18n) {
   var withRtl = (0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__.createHigherOrderComponent)(function (WrappedComponent) {
     return (0,react__WEBPACK_IMPORTED_MODULE_1__.forwardRef)(function (props, ref) {
       var isRtl = useRtl();
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(WrappedComponent, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      return react__WEBPACK_IMPORTED_MODULE_1___default().createElement(WrappedComponent, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
         isRtl: isRtl,
         ref: ref
       }));
@@ -4260,10 +4263,10 @@ function rtlFactory(i18n) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/use-translate.js":
-/*!***********************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/i18n-calypso@5.0.0_react@17.0.2/node_modules/i18n-calypso/dist/esm/use-translate.js ***!
-  \***********************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/use-translate.js":
+/*!**********************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/i18n-calypso@4.1.0/node_modules/i18n-calypso/dist/esm/use-translate.js ***!
+  \**********************************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7145,7 +7148,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _automattic_format_currency__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/format-currency */ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0_react@17.0.2/node_modules/@automattic/format-currency/dist/esm/index.js");
+/* harmony import */ var _automattic_format_currency__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/format-currency */ "../../../node_modules/.pnpm/@automattic+format-currency@1.0.0-alpha.0/node_modules/@automattic/format-currency/dist/esm/index.js");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/pricing-card/style.scss");
@@ -10027,7 +10030,7 @@ const CardMigrate = props => {
     className: "jp-idc__idc-screen__card-action-top"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", null, customContent.migrateCardTitle || __('Move Jetpack data', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, customContent.migrateCardBodyText || (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.createInterpolateElement)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__.sprintf)(
   /* translators: %1$s: The current site domain name. %2$s: The original site domain name. */
-  __('Move all your settings, stats and subscribers to your other <hostname>%1$s</hostname>. <hostname>%2$s</hostname> will be disconnected from Jetpack.', 'jetpack'), currentHostName, wpcomHostName), {
+  __('Move all your settings, stats and subscribers to your other URL, <hostname>%1$s</hostname>. <hostname>%2$s</hostname> will be disconnected from Jetpack.', 'jetpack'), currentHostName, wpcomHostName), {
     hostname: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null)
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__card-action-bottom"
@@ -11446,10 +11449,10 @@ const storeConfig = {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/cjs/use-subscription.development.js":
-/*!*****************************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/cjs/use-subscription.development.js ***!
-  \*****************************************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.development.js":
+/*!******************************************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.development.js ***!
+  \******************************************************************************************************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -11580,17 +11583,17 @@ exports.useSubscription = useSubscription;
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/index.js":
-/*!**************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/index.js ***!
-  \**************************************************************************************************************/
+/***/ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/index.js":
+/*!***************************************************************************************************************!*\
+  !*** ../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/index.js ***!
+  \***************************************************************************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
 
 if (false) {} else {
-  module.exports = __webpack_require__(/*! ./cjs/use-subscription.development.js */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@17.0.2/node_modules/use-subscription/cjs/use-subscription.development.js");
+  module.exports = __webpack_require__(/*! ./cjs/use-subscription.development.js */ "../../../node_modules/.pnpm/use-subscription@1.5.1_react@16.14.0/node_modules/use-subscription/cjs/use-subscription.development.js");
 }
 
 
@@ -11845,42 +11848,6 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 /***/ }),
 
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/createSuper.js":
-/*!****************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/createSuper.js ***!
-  \****************************************************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _createSuper; }
-/* harmony export */ });
-/* harmony import */ var _getPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getPrototypeOf.js */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _isNativeReflectConstruct_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isNativeReflectConstruct.js */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js");
-/* harmony import */ var _possibleConstructorReturn_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./possibleConstructorReturn.js */ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
-
-
-
-function _createSuper(Derived) {
-  var hasNativeReflectConstruct = (0,_isNativeReflectConstruct_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  return function _createSuperInternal() {
-    var Super = (0,_getPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Derived),
-        result;
-
-    if (hasNativeReflectConstruct) {
-      var NewTarget = (0,_getPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this).constructor;
-      result = Reflect.construct(Super, arguments, NewTarget);
-    } else {
-      result = Super.apply(this, arguments);
-    }
-
-    return (0,_possibleConstructorReturn_js__WEBPACK_IMPORTED_MODULE_2__["default"])(this, result);
-  };
-}
-
-/***/ }),
-
 /***/ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js":
 /*!*******************************************************************************************************************!*\
   !*** ../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
@@ -11986,32 +11953,6 @@ function _inherits(subClass, superClass) {
     }
   });
   if (superClass) (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__["default"])(subClass, superClass);
-}
-
-/***/ }),
-
-/***/ "../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js":
-/*!*****************************************************************************************************************************!*\
-  !*** ../../../node_modules/.pnpm/@babel+runtime@7.16.3/node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js ***!
-  \*****************************************************************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _isNativeReflectConstruct; }
-/* harmony export */ });
-function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
 }
 
 /***/ }),
