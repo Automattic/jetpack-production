@@ -124,42 +124,51 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ "../../js-packages/components/components/admin-page/style.scss":
-/*!*********************************************************************!*\
-  !*** ../../js-packages/components/components/admin-page/style.scss ***!
-  \*********************************************************************/
+/***/ "../../js-packages/components/components/admin-page/style.module.scss":
+/*!****************************************************************************!*\
+  !*** ../../js-packages/components/components/admin-page/style.module.scss ***!
+  \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 // extracted by mini-css-extract-plugin
-
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"jp-wrap":"O5NYbFTsxmrm4P2SIdOC","jp-row":"rkV4U_hzC04NwXFQcTHl","sm-col-span-1":"G81E6mesnld_OhhOvz_F","sm-col-span-2":"SfCZpjwiu2F0KDjGIXEA","sm-col-span-3":"qPxwbSu_GTDTz_8jFHJD","sm-col-span-4":"xYAWQ0wk6FPfZOZQgFiw","md-col-span-1":"zwZjA7ofpMucaB_UzG48","md-col-span-2":"YfwKGGBEqiINFYy6ZpKM","md-col-span-3":"pcHQbVFRxA_OvNRQ2OwP","md-col-span-4":"U_LJMBlRZ8ItXZuvCXGg","md-col-span-5":"st_7w_Ja1Gp2AgGaTysO","md-col-span-6":"gQsaHmJo6Gp7Yq9IB9Sg","md-col-span-7":"P0a4FWsiJJmR6bySI8QC","md-col-span-8":"UxSHj7jyDp6sGKHILNRc","lg-col-span-1":"TExt5ebNqUrEn2NzeDDh","lg-col-span-2":"cdwvRRac4c2djSpHfOpF","lg-col-span-3":"hvRpxlyFY9BQIDdEGTjg","lg-col-span-4":"Ev9JGJi3yKkBq6cW3Xge","lg-col-span-5":"mhL__tIHFH_tViX5718D","lg-col-span-6":"X1lGIxHHxsFl_39u4Px6","lg-col-span-7":"pc5UnY_DzsSDkyih78Ti","lg-col-span-8":"QCjBtfnG3u20FwoDd59Z","lg-col-span-9":"MX1aL3BeJpoSE0aXghp0","lg-col-span-10":"h_JAcO8a8ClV2LmTWsMz","lg-col-span-11":"gKlDMi0N7LOd9q8uJHi5","lg-col-span-12":"KZWhYB7r6TG75uJu2LsQ","md-col-span-0":"G6NxfG2gGwvEYb0aGdPJ","sm-col-span-0":"aceZPGfrg7IoR0Vu7ZJg","jp-cut":"MZSHJVi991kNJhn_Xnip","jp-admin-page":"EZ590eIMC5y_t1_gWRua","jp-admin-page-section":"BYzOly4G7Gry9wdRH0AY"});
 
 /***/ }),
 
-/***/ "../../js-packages/components/components/admin-section/basic/style.scss":
-/*!******************************************************************************!*\
-  !*** ../../js-packages/components/components/admin-section/basic/style.scss ***!
-  \******************************************************************************/
+/***/ "../../js-packages/components/components/admin-section/basic/style.module.scss":
+/*!*************************************************************************************!*\
+  !*** ../../js-packages/components/components/admin-section/basic/style.module.scss ***!
+  \*************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 // extracted by mini-css-extract-plugin
-
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"jp-admin-section":"_UqttTwRJeajPRpRGZPJ"});
 
 /***/ }),
 
-/***/ "../../js-packages/components/components/admin-section/hero/style.scss":
-/*!*****************************************************************************!*\
-  !*** ../../js-packages/components/components/admin-section/hero/style.scss ***!
-  \*****************************************************************************/
+/***/ "../../js-packages/components/components/admin-section/hero/style.module.scss":
+/*!************************************************************************************!*\
+  !*** ../../js-packages/components/components/admin-section/hero/style.module.scss ***!
+  \************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 // extracted by mini-css-extract-plugin
-
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"jp-wrap":"K6gniZequRm1zBi4xa2G","jp-row":"vickZxEIl6kGZp7KkFYF","sm-col-span-1":"U2ZD1antXfCcQlBdFwyw","sm-col-span-2":"caLSPVQ3JP3b2Ia68Seq","sm-col-span-3":"h6FKJdwoY_zIXh6pEj1U","sm-col-span-4":"GkjDOzh_5n5VxKrqEW_I","md-col-span-1":"V2HSxZHesNOXMBWOmdFG","md-col-span-2":"i3fz9zvErDyXYherb6Ew","md-col-span-3":"_3bKcKfanUgurPMcHEiV","md-col-span-4":"U44hqBGsmVA1lI9R2ZnH","md-col-span-5":"AzaRYYQQYJjKUF9D87mw","md-col-span-6":"sag3QKXTxIQXPPjmbrAl","md-col-span-7":"ifY5fUWFNROS_F7Jys9v","md-col-span-8":"nZFgLvw9LsUJnEViXnJZ","lg-col-span-1":"Tqir6CbiyHOgYmsAgY57","lg-col-span-2":"VeVLz3DEagxiXMMPEOCe","lg-col-span-3":"G3R07cw2eP3D3juW3A3l","lg-col-span-4":"eQ3UseyneBNu_ZLuqSzg","lg-col-span-5":"VlgV8xjgkGoOLJShoyNM","lg-col-span-6":"DJCwqamaIDFQoj0jEgBc","lg-col-span-7":"CxtXPQUYJfNUQVn3y2y_","lg-col-span-8":"BroOgbyuFxoSv48H70B5","lg-col-span-9":"KnUcRFDSsxeb_z46ajNY","lg-col-span-10":"bXiAAxiM2mhcI43ET0pp","lg-col-span-11":"ipYVW2jwG2cFjIHpnQk2","lg-col-span-12":"KcREgfiJ4ix9nAvNAXqQ","md-col-span-0":"qSfEJeFAh4WmcPtmo8qe","sm-col-span-0":"_RxxiRFsUS3nYTZhkprA","jp-cut":"RSw9xhnEr8xpkX3hPPaM","jp-admin-section-hero":"kEBaF5NOHtQsQn5jfOEA"});
 
 /***/ }),
 
@@ -173,6 +182,54 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+
+/***/ }),
+
+/***/ "../../js-packages/components/components/layout/col/style.module.scss":
+/*!****************************************************************************!*\
+  !*** ../../js-packages/components/components/layout/col/style.module.scss ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"jp-wrap":"WcIPVMUrQMdwzisuVSh7","jp-row":"Nxx7T20LwPUQPXCSDMfA","sm-col-span-1":"mmVmo1nZYrRywmnSKQFx","sm-col-span-2":"UrIp26XpdUSMJft8YxdC","sm-col-span-3":"pMXlFWglEDyK6MbwJ8sX","sm-col-span-4":"P5H1ohz9m5_rEqZFAkFm","md-col-span-1":"ofLUn8LwR3LLeWl8tPdU","md-col-span-2":"fq1Z8JYbcrrXavvSfzKk","md-col-span-3":"jq9gui11HqTDfI7tXH1d","md-col-span-4":"mVYkSRC7j44WiWLZHOnM","md-col-span-5":"S3wOGmx7YLTrqz_bcLth","md-col-span-6":"Y3GW3wokLgm9jnX78Uwk","md-col-span-7":"ShMEdZjpjdYj7mCQzrSO","md-col-span-8":"nfBAID75QGC1VZ8t0RfR","lg-col-span-1":"Vr2EQcrmKOPJtFU72Vv2","lg-col-span-2":"CTS6MNweODFo4ZxcT0iV","lg-col-span-3":"XTISRluUo3o5xxnPNu09","lg-col-span-4":"c_EtRaSOJafAl5r9WkBm","lg-col-span-5":"HcpW_q5aO8Bf_ngIjyjv","lg-col-span-6":"XF3r0hMrFrrmxH5TJee0","lg-col-span-7":"Jl9ognyJ9XOZ6g0BTzLf","lg-col-span-8":"_8w8oD2R9CVt9AU4PvUy","lg-col-span-9":"ltOXxurwUtxy7XIR_loo","lg-col-span-10":"bKUzzGEJ3wCoAOZZvVCK","lg-col-span-11":"GltQVCPa1x4tZ7sWFg1v","lg-col-span-12":"UzWicuFiKrGgMEjmRAFA","md-col-span-0":"CDwHAcVQxDeV2mFXS1Dz","sm-col-span-0":"sr1184KrdJ0UtgNsMQnR","jp-cut":"MnTtKIHRyzXYoesgRCgm"});
+
+/***/ }),
+
+/***/ "../../js-packages/components/components/layout/container/style.module.scss":
+/*!**********************************************************************************!*\
+  !*** ../../js-packages/components/components/layout/container/style.module.scss ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"jp-container":"O8YnwnZegI89S2Q3k5Qn"});
+
+/***/ }),
+
+/***/ "../../js-packages/components/components/layout/row/style.module.scss":
+/*!****************************************************************************!*\
+  !*** ../../js-packages/components/components/layout/row/style.module.scss ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"jp-wrap":"iwMEh2CwJ_r23Y9sVcJ1","jp-row":"HwO79godDUI97Xub9ey4","sm-col-span-1":"EC1Yirv2kOgRU77F2XRd","sm-col-span-2":"FHZqFvZXEDJ9mpOm7CeY","sm-col-span-3":"VOmONLKUkcSrIRYmX6YZ","sm-col-span-4":"eECO55N5YGkBB3tKa0If","md-col-span-1":"u3ZB3zRkuglILO6FSIrx","md-col-span-2":"iZnPl6piWO_GqHn16XKi","md-col-span-3":"WWctfqi1wHZDWrue8GIt","md-col-span-4":"p678NN_M0K78Kpprfndu","md-col-span-5":"_6D2TXtGKmepmwrxSf5DW","md-col-span-6":"cWORs5VDjuStXsiVPtiO","md-col-span-7":"yJsc8qt82L9miwDoe2Y2","md-col-span-8":"hD6bXWfNn5elhKCaBFTD","lg-col-span-1":"k9j6XIJdXbQ5YNyU8sNH","lg-col-span-2":"TnVGX0JHm_muRRcmYYwV","lg-col-span-3":"VILIswQXi8XzNJ3BqePc","lg-col-span-4":"h7mXuoRFWMGCiWYH4Ij1","lg-col-span-5":"uHYkk5STnhikqYMIxtE1","lg-col-span-6":"E8zp8nDOvAQ7VHsXKJJw","lg-col-span-7":"jwOhfvvsXGTCtHfB2854","lg-col-span-8":"DmSEZVFn_2XNNKJGgkXw","lg-col-span-9":"RdgOIY1qMZ8eqAeNSGNw","lg-col-span-10":"XBQd6xiLipeHg0O6cf7N","lg-col-span-11":"JyQ6Tbn3FCHfrCEyWrAr","lg-col-span-12":"fzJ_qaXYWs3EWQEupbLD","md-col-span-0":"LE2ZLIt_Y0slsr6TSmqe","sm-col-span-0":"vYxwZbK_covZoLjDe3BM","jp-cut":"fmzqGXmbTSiUblRujgqB"});
 
 /***/ }),
 
@@ -1278,8 +1335,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/admin-page/style.scss");
-/* harmony import */ var _jetpack_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../jetpack-footer */ "../../js-packages/components/components/jetpack-footer/index.jsx");
+/* harmony import */ var _style_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.module.scss */ "../../js-packages/components/components/admin-page/style.module.scss");
+/* harmony import */ var _jetpack_footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../jetpack-footer */ "../../js-packages/components/components/jetpack-footer/index.jsx");
+/* harmony import */ var _layout_row__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../layout/row */ "../../js-packages/components/components/layout/row/index.jsx");
+/* harmony import */ var _layout_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../layout/container */ "../../js-packages/components/components/layout/container/index.jsx");
+/* harmony import */ var _layout_col__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../layout/col */ "../../js-packages/components/components/layout/col/index.jsx");
 /**
  * External dependencies
  */
@@ -1290,6 +1350,9 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__;
 /**
  * Internal dependencies
  */
+
+
+
 
 
 
@@ -1306,14 +1369,12 @@ const AdminPageFooter = props => {
     a8cLogoHref
   } = props;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-admin-page-section"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-wrap"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "jp-row"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "lg-col-span-12 md-col-span-8 sm-col-span-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_jetpack_footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: _style_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]["jp-admin-page-section"]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout_container__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout_row__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout_col__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lg: 12,
+    md: 8,
+    sm: 4
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_jetpack_footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
     moduleName: moduleName,
     a8cLogoHref: a8cLogoHref
   })))));
@@ -1347,8 +1408,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/admin-page/style.scss");
-/* harmony import */ var _jetpack_logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../jetpack-logo */ "../../js-packages/components/components/jetpack-logo/index.jsx");
+/* harmony import */ var _style_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.module.scss */ "../../js-packages/components/components/admin-page/style.module.scss");
+/* harmony import */ var _jetpack_logo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../jetpack-logo */ "../../js-packages/components/components/jetpack-logo/index.jsx");
+/* harmony import */ var _layout_row__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../layout/row */ "../../js-packages/components/components/layout/row/index.jsx");
+/* harmony import */ var _layout_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../layout/container */ "../../js-packages/components/components/layout/container/index.jsx");
+/* harmony import */ var _layout_col__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../layout/col */ "../../js-packages/components/components/layout/col/index.jsx");
 /**
  * External dependencies
  */
@@ -1359,6 +1423,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 /**
  * Header for the AdminPage component
  *
@@ -1366,14 +1433,12 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 const AdminPageHeader = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-  className: "jp-admin-page-section"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-  className: "jp-wrap"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-  class: "jp-row"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-  class: "lg-col-span-12 md-col-span-8 sm-col-span-4"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_jetpack_logo__WEBPACK_IMPORTED_MODULE_2__["default"], null)))));
+  className: _style_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"]["jp-admin-page-section"]
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout_container__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout_row__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout_col__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  lg: 12,
+  md: 8,
+  sm: 4
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_jetpack_logo__WEBPACK_IMPORTED_MODULE_5__["default"], null)))));
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdminPageHeader);
 
@@ -1396,7 +1461,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/admin-page/style.scss");
+/* harmony import */ var _style_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.module.scss */ "../../js-packages/components/components/admin-page/style.module.scss");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header */ "../../js-packages/components/components/admin-page/header.jsx");
 /* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./footer */ "../../js-packages/components/components/admin-page/footer.jsx");
 /**
@@ -1426,11 +1491,13 @@ const AdminPage = props => {
   const {
     children,
     moduleName,
-    a8cLogoHref
+    a8cLogoHref,
+    showHeader,
+    showFooter
   } = props;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "jp-admin-page"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_4__["default"], null), children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    className: _style_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]["jp-admin-page"]
+  }, showHeader && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_4__["default"], null), children, showFooter && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
     moduleName: moduleName,
     a8cLogoHref: a8cLogoHref
   }));
@@ -1438,14 +1505,22 @@ const AdminPage = props => {
 
 AdminPage.defaultProps = {
   a8cLogoHref: 'https://jetpack.com',
-  moduleName: __('Jetpack', 'jetpack')
+  moduleName: __('Jetpack', 'jetpack'),
+  showHeader: true,
+  showFooter: true
 };
 AdminPage.propTypes = {
   /** Link for 'An Automattic Airline' in the footer. */
   a8cLogoHref: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
 
   /** Name of the module, e.g. 'Jetpack Search' that will be displayed in the footer. */
-  moduleName: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)
+  moduleName: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+
+  /** Whether or not to display the Header */
+  showHeader: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
+
+  /** Whether or not to display the Footer */
+  showFooter: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool)
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdminPage);
 
@@ -1464,7 +1539,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/admin-section/basic/style.scss");
+/* harmony import */ var _style_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.module.scss */ "../../js-packages/components/components/admin-section/basic/style.module.scss");
+/* harmony import */ var _layout_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../layout/container */ "../../js-packages/components/components/layout/container/index.jsx");
 /**
  * External dependencies
  */
@@ -1472,6 +1548,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Internal dependencies
  */
+
 
 
 /**
@@ -1486,14 +1563,8 @@ const AdminSection = props => {
     children
   } = props;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-admin-section"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-wrap"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "jp-row"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "lg-col-span-12 md-col-span-8 sm-col-span-4"
-  }, children))));
+    className: _style_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"]["jp-admin-section"]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout_container__WEBPACK_IMPORTED_MODULE_2__["default"], null, children));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdminSection);
@@ -1513,7 +1584,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/components/components/admin-section/hero/style.scss");
+/* harmony import */ var _style_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.module.scss */ "../../js-packages/components/components/admin-section/hero/style.module.scss");
+/* harmony import */ var _layout_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../layout/container */ "../../js-packages/components/components/layout/container/index.jsx");
 /**
  * External dependencies
  */
@@ -1521,6 +1593,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Internal dependencies
  */
+
 
 
 /**
@@ -1535,14 +1608,8 @@ const AdminSectionHero = props => {
     children
   } = props;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-admin-section-hero"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "jp-wrap"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "jp-row"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "lg-col-span-12 md-col-span-8 sm-col-span-4"
-  }, children))));
+    className: _style_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"]["jp-admin-section-hero"]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_layout_container__WEBPACK_IMPORTED_MODULE_2__["default"], null, children));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdminSectionHero);
@@ -1825,6 +1892,159 @@ _home_runner_work_jetpack_jetpack_node_modules_pnpm_babel_runtime_7_16_3_node_mo
 
 /***/ }),
 
+/***/ "../../js-packages/components/components/layout/col/index.jsx":
+/*!********************************************************************!*\
+  !*** ../../js-packages/components/components/layout/col/index.jsx ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "../../../node_modules/.pnpm/classnames@2.3.1/node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.module.scss */ "../../js-packages/components/components/layout/col/style.module.scss");
+/**
+ * External dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+/**
+ * The basic Col component.
+ *
+ * @param {object} props - Component properties.
+ * @returns {React.Component} Col component.
+ */
+
+const Col = props => {
+  const {
+    children,
+    sm,
+    md,
+    lg
+  } = props;
+  const small = Number.isInteger(sm) ? sm : 0;
+  const medium = Number.isInteger(md) ? md : 0;
+  const large = Number.isInteger(lg) ? lg : 0;
+  const minimum = [small, medium, large].reduce((prev, curr) => curr > 0 && curr < prev ? curr : prev);
+  const className = classnames__WEBPACK_IMPORTED_MODULE_1___default()(small > 0 ? _style_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]['sm-col-span-' + small] : _style_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]['sm-col-span-' + minimum], medium > 0 ? _style_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]['md-col-span-' + medium] : _style_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]['md-col-span-' + minimum], large > 0 ? _style_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]['lg-col-span-' + large] : _style_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"]['lg-col-span-' + minimum]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: className
+  }, children);
+};
+
+Col.proptypes = {
+  /** Colspan for small viewport. Needs to be an integer. Defaults to the smallest colspan informed. */
+  sm: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().number),
+
+  /** Colspan for medium viewport. Needs to be an integer. Defaults to the smallest colspan informed. */
+  md: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().number),
+
+  /** Colspan for large viewport. Needs to be an integer. Defaults to the smallest colspan informed. */
+  lg: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().number)
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Col);
+
+/***/ }),
+
+/***/ "../../js-packages/components/components/layout/container/index.jsx":
+/*!**************************************************************************!*\
+  !*** ../../js-packages/components/components/layout/container/index.jsx ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.module.scss */ "../../js-packages/components/components/layout/container/style.module.scss");
+/**
+ * External dependencies
+ */
+
+/**
+ * Internal dependencies
+ */
+
+
+/**
+ * JP Container
+ *
+ * @param {object} props - Component properties.
+ * @returns {React.Component} Container component.
+ */
+
+const Container = props => {
+  const {
+    children
+  } = props;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _style_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"]["jp-container"]
+  }, children);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Container);
+
+/***/ }),
+
+/***/ "../../js-packages/components/components/layout/row/index.jsx":
+/*!********************************************************************!*\
+  !*** ../../js-packages/components/components/layout/row/index.jsx ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.module.scss */ "../../js-packages/components/components/layout/row/style.module.scss");
+/**
+ * External dependencies
+ */
+
+/**
+ * Internal dependencies
+ */
+
+
+/**
+ * JP Row
+ *
+ * @param {object} props - Component properties.
+ * @returns {React.Component} Row component.
+ */
+
+const Row = props => {
+  const {
+    children
+  } = props;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _style_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"]["jp-row"]
+  }, children);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Row);
+
+/***/ }),
+
 /***/ "./_inc/components/my-jetpack-screen/index.jsx":
 /*!*****************************************************!*\
   !*** ./_inc/components/my-jetpack-screen/index.jsx ***!
@@ -1840,7 +2060,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/admin-page/index.jsx");
 /* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/admin-section/hero/index.jsx");
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/admin-section/basic/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/layout/row/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/layout/col/index.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/admin-section/basic/index.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./_inc/components/my-jetpack-screen/style.scss");
 /**
  * External dependencies
@@ -1857,7 +2079,15 @@ __webpack_require__.r(__webpack_exports__);
 function MyJetpackScreen() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-my-jetpack-screen"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_3__["default"], null, "Lorem Ipsum"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__["default"], null, "Lorem Ipsum")));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    lg: 12,
+    md: 8,
+    sm: 4
+  }, "Lorem Ipsum"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    lg: 12,
+    md: 8,
+    sm: 4
+  }, "Lorem Ipsum")))));
 }
 
 /***/ }),
