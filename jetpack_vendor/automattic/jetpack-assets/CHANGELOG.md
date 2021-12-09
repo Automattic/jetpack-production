@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.13.2-alpha] - unreleased
+## [1.14.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Generate `wp-jp-i18n-state` script.
 
 ## [1.13.1] - 2021-11-22
 ### Fixed
@@ -149,7 +152,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Statically access asset tools
 
-[1.13.2-alpha]: https://github.com/Automattic/jetpack-assets/compare/v1.13.1...v1.13.2-alpha
+[1.14.0-alpha]: https://github.com/Automattic/jetpack-assets/compare/v1.13.1...v1.14.0-alpha
 [1.13.1]: https://github.com/Automattic/jetpack-assets/compare/v1.13.0...v1.13.1
 [1.13.0]: https://github.com/Automattic/jetpack-assets/compare/v1.12.0...v1.13.0
 [1.12.0]: https://github.com/Automattic/jetpack-assets/compare/v1.11.10...v1.12.0
