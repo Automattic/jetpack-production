@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: removed legacy code supporting IE versions older than 9
 - Subscription Block: add 'Success Message Text' to the block settings.
 
+### Bug fixes
+- We now add a CSS class to the HTML body when nav-unification is enabled.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Use `automattic/jetpack-composer-plugin` to move Jetpack libraries from `vendor/` to `jetpack_vendor/` for i18n.
 
