@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription Block: add 'Success Message Text' to the block settings.
 
 ### Bug fixes
+- Admin Menu: Added support for WPML menu structure
 - Milestone widget: Fix an issue that prevented styles from loading until the widget is saved
 - We now add a CSS class to the HTML body when nav-unification is enabled.
 
