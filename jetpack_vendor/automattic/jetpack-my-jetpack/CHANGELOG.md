@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Janitorial: add watch command to the plugin.
+
 ### Changed
 - adapt to new layout components
 - Build: do not ship scss and jsx files in production build.
