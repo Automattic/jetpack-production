@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.4-alpha] - unreleased
+## [0.2.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added Connection Status Card to the page
 - Janitorial: add watch command to the plugin.
 
 ### Changed
@@ -35,6 +36,6 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[0.1.4-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.1.3...0.1.4-alpha
+[0.2.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.1.3...0.2.0-alpha
 [0.1.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.1.1...0.1.2
