@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - We now add a CSS class to the HTML body when nav-unification is enabled.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- ConnectionBanner: allow "icon" prop type to be an element.
 - Use `automattic/jetpack-composer-plugin` to move Jetpack libraries from `vendor/` to `jetpack_vendor/` for i18n.
 
 ## 10.5-a.1 - 2021-12-07
