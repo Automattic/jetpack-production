@@ -85,7 +85,7 @@
   margin: -7px 0 0 8px;
 }
 .jp-idc__idc-screen h2 {
-  margin: 32px 0 16px;
+  margin: 32px 0 0 0;
   font-weight: 600;
   font-size: 24px;
   line-height: 28px;
@@ -97,7 +97,7 @@
   line-height: 28px;
 }
 .jp-idc__idc-screen p {
-  margin: 0;
+  margin: 16px 0 0 0;
   max-width: 710px;
   font-size: 16px;
   line-height: 24px;

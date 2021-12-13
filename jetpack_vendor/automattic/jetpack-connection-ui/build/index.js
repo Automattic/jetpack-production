@@ -10125,7 +10125,8 @@ const IDCScreen = props => {
     apiRoot,
     redirectUri,
     tracksUserData,
-    tracksEventData
+    tracksEventData,
+    isAdmin
   } = props;
   const [isMigrated, setIsMigrated] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const {
@@ -10176,7 +10177,8 @@ const IDCScreen = props => {
     finishMigrationCallback: finishMigrationCallback,
     isFinishingMigration: isFinishingMigration,
     isStartingFresh: isStartingFresh,
-    startFreshCallback: startFreshCallback
+    startFreshCallback: startFreshCallback,
+    isAdmin: isAdmin
   });
 };
 
@@ -10206,7 +10208,10 @@ IDCScreen.propTypes = {
   tracksUserData: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
 
   /** WordPress.com event tracking information. */
-  tracksEventData: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object)
+  tracksEventData: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
+
+  /** Whether to display the "admin" or "non-admin" screen. */
+  isAdmin: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired)
 };
 IDCScreen.defaultProps = {
   customContent: {}
@@ -10429,6 +10434,69 @@ ScreenMigrated.defaultProps = {
 
 /***/ }),
 
+/***/ "../../js-packages/idc/components/idc-screen/screen-non-admin.jsx":
+/*!************************************************************************!*\
+  !*** ../../js-packages/idc/components/idc-screen/screen-non-admin.jsx ***!
+  \************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../../../node_modules/.pnpm/prop-types@15.7.2/node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/tools/jp-redirect/index.jsx");
+/* harmony import */ var _tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../tools/custom-content-shape */ "../../js-packages/idc/tools/custom-content-shape.jsx");
+/**
+ * External dependencies
+ */
+
+
+
+
+const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__;
+
+/**
+ * Internal dependencies
+ */
+
+
+/**
+ * Retrieve the main screen body.
+ *
+ * @param {object} props - The properties.
+ * @returns {React.Component} The ScreenMain component.
+ */
+
+const ScreenNonAdmin = props => {
+  const {
+    customContent
+  } = props;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, customContent.nonAdminTitle || __('Safe Mode has been activated', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, customContent.nonAdminBodyText || (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.createInterpolateElement)(__('This site is in Safe Mode because there are 2 Jetpack-powered sites that appear to be duplicates. ' + '2 sites that are telling Jetpack they’re the same site. <safeModeLink>Learn more about safe mode.</safeModeLink>', 'jetpack'), {
+    safeModeLink: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: (0,_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_4__["default"])('jetpack-support-safe-mode'),
+      rel: "noopener noreferrer",
+      target: "_blank"
+    })
+  })), customContent.nonAdminBodyText ? '' : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, __('An administrator of this site can take Jetpack out of Safe Mode.', 'jetpack')));
+};
+
+ScreenNonAdmin.propTypes = {
+  /** Custom text content. */
+  customContent: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape(_tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_5__["default"])
+};
+ScreenNonAdmin.defaultProps = {
+  customContent: {}
+};
+/* harmony default export */ __webpack_exports__["default"] = (ScreenNonAdmin);
+
+/***/ }),
+
 /***/ "../../js-packages/idc/components/idc-screen/visual.jsx":
 /*!**************************************************************!*\
   !*** ../../js-packages/idc/components/idc-screen/visual.jsx ***!
@@ -10443,10 +10511,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
-/* harmony import */ var _screen_main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./screen-main */ "../../js-packages/idc/components/idc-screen/screen-main.jsx");
-/* harmony import */ var _screen_migrated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./screen-migrated */ "../../js-packages/idc/components/idc-screen/screen-migrated.jsx");
-/* harmony import */ var _tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../tools/custom-content-shape */ "../../js-packages/idc/tools/custom-content-shape.jsx");
+/* harmony import */ var _automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @automattic/jetpack-components */ "../../js-packages/components/components/jetpack-logo/index.jsx");
+/* harmony import */ var _screen_main__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./screen-main */ "../../js-packages/idc/components/idc-screen/screen-main.jsx");
+/* harmony import */ var _screen_non_admin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./screen-non-admin */ "../../js-packages/idc/components/idc-screen/screen-non-admin.jsx");
+/* harmony import */ var _screen_migrated__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./screen-migrated */ "../../js-packages/idc/components/idc-screen/screen-migrated.jsx");
+/* harmony import */ var _tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../tools/custom-content-shape */ "../../js-packages/idc/tools/custom-content-shape.jsx");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "../../js-packages/idc/components/idc-screen/style.scss");
 /**
  * External dependencies
@@ -10459,6 +10528,7 @@ const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__;
 /**
  * Internal dependencies
  */
+
 
 
 
@@ -10478,8 +10548,33 @@ const IDCScreenVisual = props => {
     finishMigrationCallback,
     isFinishingMigration,
     isStartingFresh,
-    startFreshCallback
+    startFreshCallback,
+    isAdmin
   } = props;
+  const nonAdminBody = !isAdmin ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_non_admin__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    customContent: customContent
+  }) : '';
+  let adminBody = '';
+
+  if (isAdmin) {
+    adminBody = isMigrated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_migrated__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      wpcomHomeUrl: wpcomHomeUrl,
+      currentUrl: currentUrl,
+      finishCallback: finishMigrationCallback,
+      isFinishing: isFinishingMigration,
+      customContent: customContent
+    }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_main__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      wpcomHomeUrl: wpcomHomeUrl,
+      currentUrl: currentUrl,
+      redirectUri: redirectUri,
+      customContent: customContent,
+      isMigrating: isMigrating,
+      migrateCallback: migrateCallback,
+      isStartingFresh: isStartingFresh,
+      startFreshCallback: startFreshCallback
+    });
+  }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: 'jp-idc__idc-screen' + (isMigrated ? ' jp-idc__idc-screen__success' : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -10488,22 +10583,7 @@ const IDCScreenVisual = props => {
     className: "jp-idc__idc-screen__logo"
   }, logo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "jp-idc__idc-screen__logo-label"
-  }, customContent.headerText || __('Safe Mode', 'jetpack'))), isMigrated ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_migrated__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    wpcomHomeUrl: wpcomHomeUrl,
-    currentUrl: currentUrl,
-    finishCallback: finishMigrationCallback,
-    isFinishing: isFinishingMigration,
-    customContent: customContent
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_screen_main__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    wpcomHomeUrl: wpcomHomeUrl,
-    currentUrl: currentUrl,
-    redirectUri: redirectUri,
-    customContent: customContent,
-    isMigrating: isMigrating,
-    migrateCallback: migrateCallback,
-    isStartingFresh: isStartingFresh,
-    startFreshCallback: startFreshCallback
-  }));
+  }, customContent.headerText || __('Safe Mode', 'jetpack'))), nonAdminBody, adminBody);
 };
 
 IDCScreenVisual.propTypes = {
@@ -10511,7 +10591,7 @@ IDCScreenVisual.propTypes = {
   logo: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object.isRequired),
 
   /** Custom text content. */
-  customContent: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape(_tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_6__["default"]),
+  customContent: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape(_tools_custom_content_shape__WEBPACK_IMPORTED_MODULE_7__["default"]),
 
   /** The original site URL. */
   wpcomHomeUrl: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
@@ -10541,10 +10621,13 @@ IDCScreenVisual.propTypes = {
   isStartingFresh: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired),
 
   /** "Start Fresh" callback. */
-  startFreshCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func)
+  startFreshCallback: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),
+
+  /** Whether to display the "admin" or "non-admin" screen. */
+  isAdmin: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool.isRequired)
 };
 IDCScreenVisual.defaultProps = {
-  logo: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  logo: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_components__WEBPACK_IMPORTED_MODULE_8__["default"], {
     height: 24
   }),
   isMigrated: false,
@@ -11044,7 +11127,13 @@ __webpack_require__.r(__webpack_exports__);
   startFreshCardTitle: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
 
   /** The "start fresh" card body. */
-  startFreshCardBodyText: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string)
+  startFreshCardBodyText: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
+
+  /** The "non admin" screen title. */
+  nonAdminTitle: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
+
+  /** The "non admin" screen body text. */
+  nonAdminBodyText: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string)
 });
 
 /***/ }),
@@ -11174,32 +11263,29 @@ const Admin = props => {
   } = props;
   const {
     tracksUserData,
-    tracksEventData
+    tracksEventData,
+    canManageConnection
   } = window.CUI_INITIAL_STATE;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__["default"].setApiRoot(APIRoot);
     _automattic_jetpack_api__WEBPACK_IMPORTED_MODULE_3__["default"].setApiNonce(APINonce);
   }, [APIRoot, APINonce]);
-
-  if (IDCData.hasIDC) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      wpcomHomeUrl: IDCData.wpcomHomeUrl,
-      currentUrl: IDCData.currentUrl,
-      apiRoot: APIRoot,
-      apiNonce: APINonce,
-      redirectUri: IDCData.redirectUri,
-      tracksUserData: tracksUserData,
-      tracksEventData: tracksEventData
-    });
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_5__["default"], null), connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_5__["default"], null), IDCData.hasIDC && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_idc__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    wpcomHomeUrl: IDCData.wpcomHomeUrl,
+    currentUrl: IDCData.currentUrl,
+    apiRoot: APIRoot,
+    apiNonce: APINonce,
+    redirectUri: IDCData.redirectUri,
+    tracksUserData: tracksUserData,
+    tracksEventData: tracksEventData,
+    isAdmin: IDCData.isAdmin
+  }), !IDCData.hasIDC && canManageConnection && connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_8__["default"], {
     isRegistered: connectionStatus.isRegistered,
     isUserConnected: connectionStatus.isUserConnected,
     apiRoot: APIRoot,
     apiNonce: APINonce,
     redirectUri: "tools.php?page=wpcom-connection-manager"
-  }), !connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }), !IDCData.hasIDC && canManageConnection && !connectionStatus.isRegistered && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_automattic_jetpack_connection__WEBPACK_IMPORTED_MODULE_9__["default"], {
     connectionStatus: connectionStatus,
     apiRoot: APIRoot,
     apiNonce: APINonce,
@@ -11211,7 +11297,7 @@ const Admin = props => {
     priceAfter: 4.5,
     pricingTitle: __('Jetpack Backup', 'jetpack'),
     buttonLabel: __('Get Jetpack Backup', 'jetpack')
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, __("Secure and speed up your site for free with Jetpack's powerful WordPress tools.", 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Measure your impact with beautiful stats', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Speed up your site with optimized images', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Protect your site against bot attacks', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Get notifications if your site goes offline', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Enhance your site with dozens of other features', 'jetpack')))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, __("Secure and speed up your site for free with Jetpack's powerful WordPress tools.", 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Measure your impact with beautiful stats', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Speed up your site with optimized images', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Protect your site against bot attacks', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Get notifications if your site goes offline', 'jetpack')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, __('Enhance your site with dozens of other features', 'jetpack')))), (!IDCData.hasIDC || IDCData.isSafeModeConfirmed) && !canManageConnection && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "You need to be an admin to access this page."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ((0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.withSelect)(select => {
