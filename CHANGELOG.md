@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - ConnectionBanner: allow "icon" prop type to be an element.
+- Update introductory discount percentages from 40% to 50%, to reflect new pricing structure..
 - Use `automattic/jetpack-composer-plugin` to move Jetpack libraries from `vendor/` to `jetpack_vendor/` for i18n.
 - [WP.com sites only) Exposes the My Home menu item to all roles
 
