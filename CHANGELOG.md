@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Allow sidebar JITMs marked as dismissible to be dismissed
+- Media Extractor : add support for alt_text in extract
 - SSO: added filters for the error text when a local user cannot be found for a given WP.com account and for when SSO is disallowed when on a staging site.
 
 ### Improved compatibility
