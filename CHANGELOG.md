@@ -2,6 +2,31 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.5-a.3 - 2021-12-14
+### Enhancements
+- Secure Sign On: add filters for the error text when a local user cannot be found for a given WP.com account and for when SSO is disallowed when on a staging site.
+- Subscription Block: add 'Success Message Text' to the block settings.
+
+### Improved compatibility
+- General: ensure Jetpack options are properly deleted when the plugin is deactivated.
+- Media Extractor: add support for alt_text in extract.
+- Notifications: remove legacy code supporting IE versions older than 9.
+- Pay with PayPal Widget: hide widget from Legacy Widget block.
+
+### Bug fixes
+- Contact Form: avoid PHP notices in submitted forms in some cases.
+- Internationalization: ensure that all text, including text added via JavaScript, can be translated.
+- Milestone widget: fix issue that prevented styles from loading until the widget is saved.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin Menu: add support for WPML menu structure.
+- ConnectionBanner: allow "icon" prop type to be an element.
+- JITM: allow sidebar JITMs marked as dismissible to be dismissed.
+- Nav-unification: add a CSS class to the HTML body when nav-unification is enabled.
+- Update introductory discount percentages from 40% to 50%, to reflect new pricing structure..
+- Use `automattic/jetpack-composer-plugin` to move Jetpack libraries from `vendor/` to `jetpack_vendor/` for i18n.
+- [WP.com sites only) Exposes the My Home menu item to all roles
+
 ## 10.5-a.1 - 2021-12-07
 ### Enhancements
 - Sharing: hide sharing buttons when printing a post or page.
@@ -28,7 +53,7 @@
 - Switched Jetpack plugin to always use `s0.wp.com` and `i0.wp.com` for external resources
 - Updated package dependencies.
 
-## 10.4-beta - 2021-11-30
+## 10.4 - 2021-12-07
 ### Enhancements
 - Connection: additional messaging for both connection and disconnection flows.
 - Dashboard: add option to add Jetpack product using a license key.
@@ -37,9 +62,11 @@
 
 ### Bug fixes
 - Custom CSS: disable CSSTidy shorthand optimizations to prevent block validation issues.
+- Dashboard: hide license activation route if user is not linked and connection owner.
 - Search: avoid fatal errors when the feature is inactive, but Extra Sidebar Widgets are active.
 - Sharing: ask search engines to not index pages with sharing query string.
 - VideoPress: fix various validation errors.
+- VideoPress: keep expanded/collapsed state of settings panel when reloading video preview.
 - Widgets: allow customizer preview to show widget visibility rules properly.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
@@ -49,9 +76,9 @@
 - Colors: update Jetpack Primary color reference to match latest brand book.
 - E2E tests: Migrate from Jest to Playwright test runner.
 - Expose site intent from get site API to show different content in the future.
-- Fixes the URL of JITMs rendered in the unified sidebar when an absolute URL is given. This only affects WP.com sites.
 - Fixed an issue with the mobile nav unification menu caused by fixing the collapse.
 - Fixed nav-unification on lower resolutions for wp-admin.
+- Fixes the URL of JITMs rendered in the unified sidebar when an absolute URL is given. This only affects WP.com sites.
 - JITM: Add ability to sideload Jetpack Boost and Backup plugins.
 - Made admin menu API tests compatible with WPCOM environment.
 - Refresh the site's modules and settings after successful product activation.
@@ -60,6 +87,7 @@
 - Search: update jetpack-search and search package versions
 - Sharing: update to use Recaptcha's modern key names.
 - Switched external media API tests to short-circuit API calls before they're being dispatched.
+- Updated package dependencies.
 - Update filenames of Webpack-built files.
 - Use correct user capability for the Inbox menu item in Nav Unification
 - Uses the Connection Initial State for the React app
