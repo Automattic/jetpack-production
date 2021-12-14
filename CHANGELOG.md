@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Admin Menu: Added support for WPML menu structure
+- Contact Form: avoid PHP notices in submitted forms in some cases.
 - I18n: Ensure many strings in JavaScript UIs are marked for translation.
 - Milestone widget: Fix an issue that prevented styles from loading until the widget is saved
 - We now add a CSS class to the HTML body when nav-unification is enabled.
