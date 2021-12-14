@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - SSO: added filters for the error text when a local user cannot be found for a given WP.com account and for when SSO is disallowed when on a staging site.
 
 ### Improved compatibility
+- Cleanup jetpack version option on plugin deactivation
 - Notifications: removed legacy code supporting IE versions older than 9
 - Pay with PayPal Widget: hide widget from Legacy Widget block
 - Subscription Block: add 'Success Message Text' to the block settings.
