@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Allow non-adimin access to the Connection Manager for proper IDC screen review.
 
+### Fixed
+- Build minimized JS for the production build.
+
 ## [2.1.4] - 2021-12-07
 ### Added
 - Pass tracking data into the RNA IDC package.

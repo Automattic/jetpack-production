@@ -17,6 +17,10 @@ This is an alpha version! The changes listed here are not final.
 - adapt to new layout components
 - Build: do not ship scss and jsx files in production build.
 
+### Fixed
+- Build minimized JS for the production build.
+- Fix JavaScript i18n strings.
+
 ## [0.1.3] - 2021-12-07
 ### Changed
 - Updated package dependencies.
