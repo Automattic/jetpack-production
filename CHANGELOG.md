@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.5-a.4 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 10.5-a.3 - 2021-12-14
 ### Enhancements
 - Secure Sign On: add filters for the error text when a local user cannot be found for a given WP.com account and for when SSO is disallowed when on a staging site.
