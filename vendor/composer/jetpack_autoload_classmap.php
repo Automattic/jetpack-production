@@ -191,11 +191,11 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Automattic\\Jetpack\\Composer\\Plugin' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-plugin.php'
 	),
 	'Automattic\\Jetpack\\Composer\\Manager' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-manager.php'
 	),
 	'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => array(

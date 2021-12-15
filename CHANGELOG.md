@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests renovate: bump dependencies
 - Janitorial: fix phpcs warnings in multiple widget files.
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## 10.5-a.3 - 2021-12-14
 ### Enhancements
