@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Janitorial: fix phpcs warnings in multiple widget files.
+- Updated package dependencies.
 
 ## 10.5-a.3 - 2021-12-14
 ### Enhancements

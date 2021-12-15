@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [0.5.0] - 2021-12-14
 ### Added
 - Add a method to determine the safe mode status.
@@ -109,6 +113,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Use Connection/Urls for home_url and site_url functions migrated from Sync.
 
+[0.5.1-alpha]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.5.0...v0.5.1-alpha
 [0.5.0]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.4.4...v0.5.0
 [0.4.4]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.4.3...v0.4.4
 [0.4.3]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.4.2...v0.4.3
