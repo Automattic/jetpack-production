@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - We now identify admin menu dashicons that won't be rendered in Calypso, and provide a default icon for them.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Janitorial: fix phpcs warnings in multiple widget files.
+
 ## 10.5-a.3 - 2021-12-14
 ### Enhancements
 - Secure Sign On: add filters for the error text when a local user cannot be found for a given WP.com account and for when SSO is disallowed when on a staging site.
