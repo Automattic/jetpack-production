@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- General: update WordPress version requirements to WordPress 5.8.
+
 ### Bug fixes
 - Settings menu: add Jetpack item for sites with Scan product
 - We now identify admin menu dashicons that won't be rendered in Calypso, and provide a default icon for them.
