@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Do not escape widget title value
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## [0.3.0] - 2021-12-14
 ### Changed

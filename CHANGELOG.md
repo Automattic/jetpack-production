@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Sync some E2E deps with the rest of the monorepo to avoid breaking eslint tests.
 - Updated package dependencies.
 - Updated package dependencies.
+- Use `@automattic/i18n-loader-webpack-plugin` to remove the hack for Instant Search's lazy-loaded bundle.
 
 ## 10.5-a.3 - 2021-12-14
 ### Enhancements
