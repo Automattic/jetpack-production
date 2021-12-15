@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - We now identify admin menu dashicons that won't be rendered in Calypso, and provide a default icon for them.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- E2E tests: update readme docs
 - Janitorial: fix phpcs warnings in multiple widget files.
 - Updated package dependencies.
 
