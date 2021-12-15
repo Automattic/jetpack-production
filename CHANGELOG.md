@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Add Jetpack Security Bundle upsell to AAG
+
 ### Improved compatibility
 - General: update WordPress version requirements to WordPress 5.8.
 
