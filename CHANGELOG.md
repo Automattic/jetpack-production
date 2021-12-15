@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: update readme docs
 - E2E tests renovate: bump dependencies
+- Fix a legacy sync test in PHPUnit 9.5.
 - Janitorial: fix phpcs warnings in multiple widget files.
 - Sync some E2E deps with the rest of the monorepo to avoid breaking eslint tests.
 - Updated package dependencies.
