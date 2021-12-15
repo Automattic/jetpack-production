@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: update readme docs
+- E2E tests renovate: bump dependencies
 - Janitorial: fix phpcs warnings in multiple widget files.
 - Updated package dependencies.
 
