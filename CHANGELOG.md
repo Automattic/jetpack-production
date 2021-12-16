@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - General: update WordPress version requirements to WordPress 5.8.
 
 ### Bug fixes
+- Dashboard: fix logic that blocked one from enabling searchable features from the Jetpack settings.
 - Settings menu: add Jetpack item for sites with Scan product
 - Vimeo Embeds: support more URL formats, such as videos in playlists.
 - We now identify admin menu dashicons that won't be rendered in Calypso, and provide a default icon for them.
