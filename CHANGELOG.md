@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add Jetpack Security Bundle upsell to AAG
+- Comment: Print Post View: Likes and list of likers should be hidden in the print post view.
 - Comment: Print Post View: Recommended posts should be hidden in the print post view.
 
 ### Improved compatibility
