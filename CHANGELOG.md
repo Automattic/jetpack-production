@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - We now identify admin menu dashicons that won't be rendered in Calypso, and provide a default icon for them.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add get_current_plan() to the WPcom_Admin_Menu.
 - E2E tests: update readme docs
 - E2E tests renovate: bump dependencies
 - Fix a legacy sync test in PHPUnit 9.5.
