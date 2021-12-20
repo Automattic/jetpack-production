@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix a legacy sync test in PHPUnit 9.5.
 - Instant Search: Add missing translator comments and use ordered placeholders in JS sprintf.
 - Janitorial: fix phpcs warnings in multiple widget files.
+- Load the Composer package assets i18n map.
 - Sync some E2E deps with the rest of the monorepo to avoid breaking eslint tests.
 - Updated package dependencies.
 - Updated package dependencies.
