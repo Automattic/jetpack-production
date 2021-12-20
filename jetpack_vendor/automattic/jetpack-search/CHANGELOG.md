@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 
+### Fixed
+- Add missing textdomains in JS code.
+
 ## [0.3.0] - 2021-12-14
 ### Changed
 - Search package: add new methods and update timing for `Plan` class.
