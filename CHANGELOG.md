@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Comment: The calls to facebook's graph API via SDK has stopped providing us with share counts, at least since 2019. The correct way to display share counts now is to rely on official buttons. 
   This change deals with removing the code that's in place to fetch share counts for non-official buttons. The code is being removed because it's not functional.
 - Dashboard: fix logic that blocked one from enabling searchable features from the Jetpack settings.
+- Do not display recommendations during identity crisis.
 - Instant Search: ensure the hidden overlay doesn't add whitespace to printed pages
 - Prevent an E_NOTICE when running in non-web context
 - Settings menu: add Jetpack item for sites with Scan product
@@ -33,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Janitorial: fix phpcs warnings in multiple widget files.
 - Load the Composer package assets i18n map.
 - Sync some E2E deps with the rest of the monorepo to avoid breaking eslint tests.
+- Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.

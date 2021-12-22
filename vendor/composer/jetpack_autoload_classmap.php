@@ -139,15 +139,15 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jitm/src/class-jitm.php'
 	),
 	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
-		'version' => '2.2.9999999.9999999-dev',
+		'version' => '2.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-initial-state.php'
 	),
 	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
-		'version' => '2.2.9999999.9999999-dev',
+		'version' => '2.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-admin.php'
 	),
 	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.5.9999999.9999999-dev',
+		'version' => '1.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
 	),
 	'Jetpack_Sync_Settings' => array(
@@ -422,12 +422,16 @@ return array(
 		'version' => '0.1.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-password-checker/src/class-password-checker.php'
 	),
+	'Automattic\\Jetpack\\IdentityCrisis\\UI' => array(
+		'version' => '0.6.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-ui.php'
+	),
 	'Automattic\\Jetpack\\IdentityCrisis\\REST_Endpoints' => array(
-		'version' => '0.5.9999999.9999999-dev',
+		'version' => '0.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-rest-endpoints.php'
 	),
 	'Automattic\\Jetpack\\Identity_Crisis' => array(
-		'version' => '0.5.9999999.9999999-dev',
+		'version' => '0.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-identity-crisis.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
