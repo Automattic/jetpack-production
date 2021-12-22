@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Build and display the new RNA IDC banner.
 
+### Changed
+- Updated package textdomain from `jetpack` to `jetpack-idc`.
+
 ## [0.5.0] - 2021-12-14
 ### Added
 - Add a method to determine the safe mode status.

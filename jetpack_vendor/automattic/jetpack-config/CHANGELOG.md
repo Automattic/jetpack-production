@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Accept options for the IDC package.
 
+### Changed
+- Updated package textdomain from `jetpack` to `jetpack-config`.
+
 ## [1.5.4] - 2021-12-14
 ### Changed
 - Updated package dependencies.
