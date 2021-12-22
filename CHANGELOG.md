@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Comment: The calls to facebook's graph API via SDK has stopped providing us with share counts, at least since 2019. The correct way to display share counts now is to rely on official buttons. 
   This change deals with removing the code that's in place to fetch share counts for non-official buttons. The code is being removed because it's not functional.
 - Dashboard: fix logic that blocked one from enabling searchable features from the Jetpack settings.
+- Instant Search: ensure the hidden overlay doesn't add whitespace to printed pages
 - Settings menu: add Jetpack item for sites with Scan product
 - Vimeo Embeds: support more URL formats, such as videos in playlists.
 - We now identify admin menu dashicons that won't be rendered in Calypso, and provide a default icon for them.
