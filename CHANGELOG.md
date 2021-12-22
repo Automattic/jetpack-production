@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
 - Use `@automattic/i18n-loader-webpack-plugin` to remove the hack for Instant Search's lazy-loaded bundle.
 - Vimeo: tweak the regex used to fetch the Vimeo videos.
 - WordPress.com: provide a different support link for sites on the Atomic platform.
