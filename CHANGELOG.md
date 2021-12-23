@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: update readme docs
 - E2E tests renovate: bump dependencies
 - Fix a legacy sync test in PHPUnit 9.5.
+- Hide irrelevant menu items for P2 sites
 - Instant Search: Add missing translator comments and use ordered placeholders in JS sprintf.
 - Janitorial: fix phpcs warnings in multiple widget files.
 - Load the Composer package assets i18n map.
