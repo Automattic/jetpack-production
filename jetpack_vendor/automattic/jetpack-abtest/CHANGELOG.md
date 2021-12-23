@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Switch to pcov for code coverage.
+
 ## [1.9.17] - 2021-12-14
 ### Changed
 - Updated package dependencies.

@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Instant Search: Add missing translator comments and use ordered placeholders in JS sprintf.
 - Janitorial: fix phpcs warnings in multiple widget files.
 - Load the Composer package assets i18n map.
+- Switch to pcov for code coverage.
 - Sync some E2E deps with the rest of the monorepo to avoid breaking eslint tests.
 - Updated package dependencies.
 - Updated package dependencies.

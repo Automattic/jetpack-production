@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Build and display the new RNA IDC banner.
 
 ### Changed
+- Switch to pcov for code coverage.
 - Updated package textdomain from `jetpack` to `jetpack-idc`.
 
 ## [0.5.0] - 2021-12-14
