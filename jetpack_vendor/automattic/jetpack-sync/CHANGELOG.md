@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Switch to pcov for code coverage.
+- Theme deletions: rely on Core WP hook now that the package requires WP 5.8.
 - Updated package textdomain from `jetpack` to `jetpack-sync`.
 
 ## [1.27.6] - 2021-12-14
