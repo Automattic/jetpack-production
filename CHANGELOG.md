@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
   This change deals with removing the code that's in place to fetch share counts for non-official buttons. The code is being removed because it's not functional.
 - Dashboard: fix logic that blocked one from enabling searchable features from the Jetpack settings.
 - Do not display recommendations during identity crisis.
+- Fix country code for cyprus
 - Instant Search: ensure the hidden overlay doesn't add whitespace to printed pages
 - Prevent an E_NOTICE when running in non-web context
 - Settings menu: add Jetpack item for sites with Scan product
