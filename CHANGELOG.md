@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Comment: Print Post View: Recommended posts should be hidden in the print post view.
 
 ### Improved compatibility
+- Cookies & Consents Banner: change output when loaded in preview window
 - General: update WordPress version requirements to WordPress 5.8.
 
 ### Bug fixes
