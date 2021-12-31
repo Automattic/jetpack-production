@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Jetpack Security Bundle upsell to AAG
 - Comment: Print Post View: Likes and list of likers should be hidden in the print post view.
 - Comment: Print Post View: Recommended posts should be hidden in the print post view.
+- Hide VideoPress embed block in favor of Video block.
 - Remove CTAs/buttons from AAG Dashboard
 
 ### Improved compatibility
