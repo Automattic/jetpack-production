@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Jetpack Security Bundle upsell to AAG
 - Comment: Print Post View: Likes and list of likers should be hidden in the print post view.
 - Comment: Print Post View: Recommended posts should be hidden in the print post view.
+- Remove CTAs/buttons from AAG Dashboard
 
 ### Improved compatibility
 - Cookies & Consents Banner: change output when loaded in preview window
