@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Cookies & Consents Banner: change output when loaded in preview window
 - General: update WordPress version requirements to WordPress 5.8.
+- Pay with PayPal: update the name of the script enqueued when using the Pay with PayPal button, to avoid conflicts with other plugins that may use a similar script tag.
 - VideoPress: classic block embeds with old flash URLs can now be properly converted to VideoPress blocks.
 
 ### Bug fixes
@@ -32,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Prevent an E_NOTICE when running in non-web context
 - Search: Fix styling for Blank Canvas theme
 - Settings menu: add Jetpack item for sites with Scan product
+- Stats: do not trigger views when post is embedded into another site.
 - Vimeo Embeds: support more URL formats, such as videos in playlists.
 - We now identify admin menu dashicons that won't be rendered in Calypso, and provide a default icon for them.
 
