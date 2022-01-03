@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Comment: Print Post View: Recommended posts should be hidden in the print post view.
 - Hide VideoPress embed block in favor of Video block.
 - Remove CTAs/buttons from AAG Dashboard
+- Restore HeaderNav component for WoA sites without easy settings option in the menu.
 - Stats: remove legacy option to display the Smiley face used for the tracking pixel.
 - Updates the Apps card on the At a Glance page to display links to the Jetpack mobile apps.
 - VideoPress: add "allow download" option on videos to allow viewers to download the video.
@@ -20,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Cookies & Consents Banner: change output when loaded in preview window
 - General: update WordPress version requirements to WordPress 5.8.
+- Pay with PayPal: update the name of the script enqueued when using the Pay with PayPal button, to avoid conflicts with other plugins that may use a similar script tag.
 - VideoPress: classic block embeds with old flash URLs can now be properly converted to VideoPress blocks.
 
 ### Bug fixes
