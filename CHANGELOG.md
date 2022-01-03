@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix country code for cyprus
 - Instant Search: ensure the hidden overlay doesn't add whitespace to printed pages
 - Prevent an E_NOTICE when running in non-web context
+- Search: Fix styling for Blank Canvas theme
 - Settings menu: add Jetpack item for sites with Scan product
 - Vimeo Embeds: support more URL formats, such as videos in playlists.
 - We now identify admin menu dashicons that won't be rendered in Calypso, and provide a default icon for them.
