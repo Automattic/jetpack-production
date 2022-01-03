@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Comment: Print Post View: Recommended posts should be hidden in the print post view.
 - Hide VideoPress embed block in favor of Video block.
 - Remove CTAs/buttons from AAG Dashboard
+- Stats: remove legacy option to display the Smiley face used for the tracking pixel.
 
 ### Improved compatibility
 - Cookies & Consents Banner: change output when loaded in preview window
