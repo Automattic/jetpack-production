@@ -20,7 +20,6 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Cookies & Consents Banner: change output when loaded in preview window
 - General: update WordPress version requirements to WordPress 5.8.
-- Pay with PayPal: update the name of the script enqueued when using the Pay with PayPal button, to avoid conflicts with other plugins that may use a similar script tag.
 - VideoPress: classic block embeds with old flash URLs can now be properly converted to VideoPress blocks.
 
 ### Bug fixes
