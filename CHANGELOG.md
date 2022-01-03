@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove CTAs/buttons from AAG Dashboard
 - Stats: remove legacy option to display the Smiley face used for the tracking pixel.
 - Updates the Apps card on the At a Glance page to display links to the Jetpack mobile apps.
+- VideoPress: reload embed preview on creation until we know the video size.
 
 ### Improved compatibility
 - Cookies & Consents Banner: change output when loaded in preview window
