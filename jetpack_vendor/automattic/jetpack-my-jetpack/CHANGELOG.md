@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Drop isRegistered and isUserConnected params from ConnectionStatusCard component
 - Switch to pcov for code coverage.
+- Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.

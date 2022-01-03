@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Drop isRegistered and isUserConnected params from ConnectionStatusCard component
 - Replaced IDC screen rendering with site-wide IDC screen.
+- Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
