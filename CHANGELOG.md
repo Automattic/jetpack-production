@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Cookies & Consents Banner: change output when loaded in preview window
 - General: update WordPress version requirements to WordPress 5.8.
+- VideoPress: classic block embeds with old flash URLs can now be properly converted to VideoPress blocks.
 
 ### Bug fixes
 - Comment: The calls to facebook's graph API via SDK has stopped providing us with share counts, at least since 2019. The correct way to display share counts now is to rely on official buttons. 
