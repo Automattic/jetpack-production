@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
 - Updated package textdomain from `jetpack` to `jetpack-connection-ui`.
 
 ## [2.2.0] - 2021-12-14

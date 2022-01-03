@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Hide VideoPress embed block in favor of Video block.
 - Remove CTAs/buttons from AAG Dashboard
 - Stats: remove legacy option to display the Smiley face used for the tracking pixel.
+- Updates the Apps card on the At a Glance page to display links to the Jetpack mobile apps.
 
 ### Improved compatibility
 - Cookies & Consents Banner: change output when loaded in preview window
