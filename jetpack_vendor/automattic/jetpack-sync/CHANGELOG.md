@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Listener: Do not enqueue actions when the site is disconnected
 - Switch to pcov for code coverage.
 - Theme deletions: rely on Core WP hook now that the package requires WP 5.8.
 - Updated package textdomain from `jetpack` to `jetpack-sync`.
