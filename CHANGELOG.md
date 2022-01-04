@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Comment: Print Post View: Likes and list of likers should be hidden in the print post view.
 - Comment: Print Post View: Recommended posts should be hidden in the print post view.
 - Hide VideoPress embed block in favor of Video block.
+- Provide recommendation step parameter to external package and also update package dependencies.
 - Remove CTAs/buttons from AAG Dashboard
 - Restore HeaderNav component for WoA sites without easy settings option in the menu.
 - Stats: remove legacy option to display the Smiley face used for the tracking pixel.
