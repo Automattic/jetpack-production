@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add hook for placing header ad. Allow leaderboard size when displaying ad widget.
 - Add Jetpack Security Bundle upsell to AAG
 - Add new cards to AAG Dashboard for Boost and CRM plugins.
 - Comment: Print Post View: Likes and list of likers should be hidden in the print post view.
