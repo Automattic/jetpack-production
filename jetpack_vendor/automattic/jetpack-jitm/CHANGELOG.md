@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Switch to pcov for code coverage.
 - Updated package dependencies
+- Updated package dependencies
 - Updated package textdomain from `jetpack` to `jetpack-jitm`.
 
 ## [2.1.1] - 2021-12-14

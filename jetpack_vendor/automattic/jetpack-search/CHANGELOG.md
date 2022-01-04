@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Switch to pcov for code coverage.
 - Updated package dependencies
 - Updated package dependencies
+- Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
