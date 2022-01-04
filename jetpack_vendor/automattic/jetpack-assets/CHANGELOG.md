@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Document use of jetpack-assets, jetpack-composer-plugin, and i18n-loader-webpack-plugin together.
+
 ### Changed
 - Switch to pcov for code coverage.
 - Updated package textdomain from `jetpack` to `jetpack-assets`.
