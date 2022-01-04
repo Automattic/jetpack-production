@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Jetpack Connection: Added fallback for keeping `jetpack_connection_active_plugins` consistent on WPCOM when Sync is not present.
+
 ### Changed
 - Switch to pcov for code coverage.
 - Updated package textdomain from `jetpack` to `jetpack-connection`.
