@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.6-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 10.5-beta - 2022-01-04
 ### Enhancements
 - Print Styles: additional interactive elements are now hidden when printing posts (e.g. Likes, Recommended Posts, Share this).
