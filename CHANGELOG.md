@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Do not display recommendations during identity crisis.
 - Fix country code for cyprus
 - Instant Search: ensure the hidden overlay doesn't add whitespace to printed pages
+- Jetpack: activate the default modules when the site has already been connected before plugin activation.
 - Prevent an E_NOTICE when running in non-web context
 - Search: Fix styling for Blank Canvas theme
 - Settings menu: add Jetpack item for sites with Scan product
