@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - Switch to pcov for code coverage.
 - Sync some E2E deps with the rest of the monorepo to avoid breaking eslint tests.
 - Updated package dependencies
+- Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
