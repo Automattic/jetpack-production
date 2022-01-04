@@ -27,6 +27,7 @@ use Automattic\Jetpack\Partner;
 use Automattic\Jetpack\Plugin\Tracking as Plugin_Tracking;
 use Automattic\Jetpack\Redirect;
 use Automattic\Jetpack\Status;
+use Automattic\Jetpack\Status\Host;
 use Automattic\Jetpack\Sync\Actions as Sync_Actions;
 use Automattic\Jetpack\Sync\Health;
 use Automattic\Jetpack\Sync\Sender;
@@ -865,7 +866,6 @@ class Jetpack {
 			array(
 				'sync',
 				'jitm',
-				'identity_crisis',
 			)
 			as $feature
 		) {
@@ -877,6 +877,15 @@ class Jetpack {
 			array(
 				'slug' => 'jetpack',
 				'name' => 'Jetpack',
+			)
+		);
+
+		// Identity crisis package.
+		$config->ensure(
+			'identity_crisis',
+			array(
+				'slug'       => 'jetpack',
+				'admin_page' => '/wp-admin/admin.php?page=jetpack',
 			)
 		);
 
@@ -3165,7 +3174,7 @@ p {
 
 		Health::on_jetpack_activated();
 
-		if ( self::is_connection_ready() ) {
+		if ( self::is_connection_ready() && method_exists( 'Automattic\Jetpack\Sync\Actions', 'do_only_first_initial_sync' ) ) {
 			Sync_Actions::do_only_first_initial_sync();
 		}
 
@@ -3282,10 +3291,41 @@ p {
 			Jetpack_Options::update_options( compact( 'version', 'old_version' ) );
 		}
 
+		if ( self::is_connection_ready() ) {
+			self::handle_default_module_activation( true );
+		}
+
 		self::load_modules();
 
 		Jetpack_Options::delete_option( 'do_activate' );
 		Jetpack_Options::delete_option( 'dismissed_connection_banner' );
+	}
+
+	/**
+	 * Handles the activation of the default modules depending on the current state of the site:
+	 *  - If the site already has the jetpack_active_modules option, activate those.
+	 *  - If the site has a site-only connection, only activate the default modules that require only a site connection.
+	 *  - If the site has a user connection, activate the default modules that require a user connection.
+	 *
+	 * @param bool $should_activate_user_modules Whether the status of the user connection should be checked and the default modules that
+	 *                                           require a user connection activated.
+	 */
+	private static function handle_default_module_activation( $should_activate_user_modules ) {
+		$active_modules = Jetpack_Options::get_option( 'active_modules' );
+		if ( $active_modules ) {
+			self::delete_active_modules();
+
+			// If there was previously activated modules (a reconnection), re-activate them all including those that require a user, and do not re-activate those that have been deactivated.
+			self::activate_default_modules( 999, 1, $active_modules, false );
+		} else {
+			// Check for a user connection.
+			if ( $should_activate_user_modules && ( new Connection_Manager() )->get_connection_owner_id() ) {
+				self::activate_default_modules( false, false, array(), false, null, null, null );
+				Jetpack_Options::update_option( 'active_modules_initialized', true );
+			} else {
+				self::activate_default_modules( false, false, array(), false, null, null, false );
+			}
+		}
 	}
 
 	/**
@@ -4082,12 +4122,13 @@ p {
 	function plugin_action_links( $actions ) {
 
 		$jetpack_home = array( 'jetpack-home' => sprintf( '<a href="%s">%s</a>', self::admin_url( 'page=jetpack' ), __( 'My Jetpack', 'jetpack' ) ) );
+		$support_link = ( new Host() )->is_woa_site() ? 'https://wordpress.com/help/contact/' : self::admin_url( 'page=jetpack-debugger' );
 
 		if ( current_user_can( 'jetpack_manage_modules' ) && ( self::is_connection_ready() || ( new Status() )->is_offline_mode() ) ) {
 			return array_merge(
 				$jetpack_home,
 				array( 'settings' => sprintf( '<a href="%s">%s</a>', self::admin_url( 'page=jetpack#/settings' ), __( 'Settings', 'jetpack' ) ) ),
-				array( 'support' => sprintf( '<a href="%s">%s</a>', self::admin_url( 'page=jetpack-debugger ' ), __( 'Support', 'jetpack' ) ) ),
+				array( 'support' => sprintf( '<a href="%s">%s</a>', $support_link, __( 'Support', 'jetpack' ) ) ),
 				$actions
 			);
 		}
@@ -5082,16 +5123,7 @@ endif;
 	 * Fires on the jetpack_site_registered hook and acitvates default modules
 	 */
 	public static function activate_default_modules_on_site_register() {
-		$active_modules = Jetpack_Options::get_option( 'active_modules' );
-		if ( $active_modules ) {
-			self::delete_active_modules();
-
-			// If there was previously activated modules (a reconnection), re-activate them all including those that require a user, and do not re-activate those that have been deactivated.
-			self::activate_default_modules( 999, 1, $active_modules, false );
-		} else {
-			// On a fresh new connection, at this point we activate only modules that do not require a user connection.
-			self::activate_default_modules( false, false, array(), false, null, null, false );
-		}
+		self::handle_default_module_activation( false );
 
 		// Since this is a fresh connection, be sure to clear out IDC options.
 		Identity_Crisis::clear_all_idc_options();
