@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Replaced IDC screen rendering with site-wide IDC screen.
 - Updated package dependencies
 - Updated package dependencies
+- Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
