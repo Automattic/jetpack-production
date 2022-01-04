@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.16.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.16.0] - 2022-01-04
 ### Added
 - Document use of jetpack-assets, jetpack-composer-plugin, and i18n-loader-webpack-plugin together.
 
@@ -165,7 +162,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Statically access asset tools
 
-[1.16.0-alpha]: https://github.com/Automattic/jetpack-assets/compare/v1.15.0...v1.16.0-alpha
+[1.16.0]: https://github.com/Automattic/jetpack-assets/compare/v1.15.0...v1.16.0
 [1.15.0]: https://github.com/Automattic/jetpack-assets/compare/v1.14.0...v1.15.0
 [1.14.0]: https://github.com/Automattic/jetpack-assets/compare/v1.13.1...v1.14.0
 [1.13.1]: https://github.com/Automattic/jetpack-assets/compare/v1.13.0...v1.13.1

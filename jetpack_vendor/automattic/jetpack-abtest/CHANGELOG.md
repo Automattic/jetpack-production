@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.9.18-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.9.18] - 2022-01-04
 ### Changed
 - Switch to pcov for code coverage.
 - Updated package dependencies
@@ -207,7 +204,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Introduce a simple A/B test package
 
-[1.9.18-alpha]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.17...v1.9.18-alpha
+[1.9.18]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.17...v1.9.18
 [1.9.17]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.16...v1.9.17
 [1.9.16]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.15...v1.9.16
 [1.9.15]: https://github.com/Automattic/jetpack-abtest/compare/v1.9.14...v1.9.15

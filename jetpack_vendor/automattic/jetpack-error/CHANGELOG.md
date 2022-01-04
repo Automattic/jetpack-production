@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.3.12] - 2022-01-04
 ### Changed
 - Switch to pcov for code coverage.
 - Updated package dependencies
@@ -95,7 +92,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Introduce a jetpack-error package
 
-[1.3.12-alpha]: https://github.com/Automattic/jetpack-error/compare/v1.3.11...v1.3.12-alpha
+[1.3.12]: https://github.com/Automattic/jetpack-error/compare/v1.3.11...v1.3.12
 [1.3.11]: https://github.com/Automattic/jetpack-error/compare/v1.3.10...v1.3.11
 [1.3.10]: https://github.com/Automattic/jetpack-error/compare/v1.3.9...v1.3.10
 [1.3.9]: https://github.com/Automattic/jetpack-error/compare/v1.3.8...v1.3.9

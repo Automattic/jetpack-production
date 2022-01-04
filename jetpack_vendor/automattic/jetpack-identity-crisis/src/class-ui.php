@@ -28,7 +28,7 @@ class UI {
 		/**
 		 * Action called after initializing Identity Crisis UI.
 		 *
-		 * @since 0.6.0-alpha
+		 * @since 0.6.0
 		 */
 		do_action( 'jetpack_identity_crisis_ui_init' );
 
