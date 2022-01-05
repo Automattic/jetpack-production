@@ -47,12 +47,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-assets' => array(
-            'pretty_version' => 'v1.16.0',
-            'version' => '1.16.0.0',
+            'pretty_version' => 'v1.16.1',
+            'version' => '1.16.1.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-assets',
             'aliases' => array(),
-            'reference' => '2d96bf2f12279a0551b1d5e9bb9f546bbbd8d1bf',
+            'reference' => '5a6959969bed4559e080269cafbd69d476249822',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-autoloader' => array(
