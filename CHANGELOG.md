@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Add a missing closing div to the front-end rendering of the donations block
+- Don't display the donations block to visitors unless Stripe is connected
 - Donations block: Fixed an issue which was invalidating existing blocks if they were edited by non-plan owners.
 - Fixed math fallback's input accessibility and display
 - Subscription form: adding a default line-height to avoid differences using different font-faces on input and button elements
