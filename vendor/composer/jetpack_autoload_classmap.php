@@ -114,18 +114,6 @@ return array(
 		'version' => '0.3.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-initializer.php'
 	),
-	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
-		'version' => '2.3.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-initial-state.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
-		'version' => '2.3.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-admin.php'
-	),
-	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.6.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
-	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '1.6.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/src/class-licensing.php'
@@ -150,6 +138,18 @@ return array(
 		'version' => '2.2.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jitm/src/class-jitm.php'
 	),
+	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
+		'version' => '2.3.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-initial-state.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
+		'version' => '2.3.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-admin.php'
+	),
+	'Automattic\\Jetpack\\Config' => array(
+		'version' => '1.6.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
+	),
 	'Jetpack_Sync_Settings' => array(
 		'version' => '1.6.8.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-sync-settings.php'
@@ -170,6 +170,10 @@ return array(
 		'version' => '1.6.8.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-sync-modules.php'
 	),
+	'Automattic\\Jetpack\\Abtest' => array(
+		'version' => '1.9.18.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-abtest/src/class-abtest.php'
+	),
 	'Automattic\\Jetpack\\Blocks' => array(
 		'version' => '1.4.9.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blocks/src/class-blocks.php'
@@ -185,10 +189,6 @@ return array(
 	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
 		'version' => '1.2.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-helper-script-manager.php'
-	),
-	'Automattic\\Jetpack\\Abtest' => array(
-		'version' => '1.9.18.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Automattic\\Jetpack\\Composer\\Plugin' => array(
 		'version' => '1.0.1.0',
