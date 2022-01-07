@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies
 
+### Removed
+- Remove use of deprecated `~` in sass-loader imports.
+
 ## [0.3.0] - 2022-01-04
 ### Changed
 - Drop isRegistered and isUserConnected params from ConnectionStatusCard component
