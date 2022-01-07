@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a missing closing div to the front-end rendering of the donations block
 - Fixed math fallback's input accessibility and display
 - Subscription form: adding a default line-height to avoid differences using different font-faces on input and button elements
+- Widget Visibility: Fix "Match All" setting being overwritten on save in the block widget editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AAG upgrade banner: do not display on WoA sites
