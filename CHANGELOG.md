@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Widget Visibility: Fix "Match All" setting being overwritten on save in the block widget editor.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AAG upgrade banner: do not display on WoA sites
 - Admin Page: remove CRM card for now.
