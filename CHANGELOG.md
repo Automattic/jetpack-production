@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Add a missing closing div to the front-end rendering of the donations block
 - Fixed math fallback's input accessibility and display
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
