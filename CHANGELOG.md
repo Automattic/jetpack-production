@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AAG upgrade banner: do not display on WoA sites
 - Admin Page: remove CRM card for now.
 - Fix modules using `this` to mean `window`.
+- Refactor PluginDashItem component to be functional and add README
 - Social Menu: remove role navigation attribute from nav item.
 
 ## 10.5-beta - 2022-01-04
