@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Dashboard: update the links to different Jetpack features in the dashboard.
+
 ### Bug fixes
 - Add a missing closing div to the front-end rendering of the donations block
 - Don't display the donations block to visitors unless Stripe is connected
