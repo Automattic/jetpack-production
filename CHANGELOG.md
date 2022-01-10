@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - AAG upgrade banner: do not display on WoA sites
 - Admin Page: remove CRM card for now.
 - Fix modules using `this` to mean `window`.
+- Moved numberFormat component into components js package
 - Refactor PluginDashItem component to be functional and add README
 - Remove use of deprecated `~` in sass-loader imports.
 - Social Menu: remove role navigation attribute from nav item.
