@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Refactor PluginDashItem component to be functional and add README
 - Remove use of deprecated `~` in sass-loader imports.
 - Social Menu: remove role navigation attribute from nav item.
+- VideoPress: change allow_download data path from API (wpcom compat)
 
 ## 10.5-beta - 2022-01-04
 ### Enhancements
