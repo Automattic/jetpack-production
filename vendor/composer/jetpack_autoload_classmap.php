@@ -82,6 +82,10 @@ return array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-rest-controller.php'
 	),
+	'Automattic\\Jetpack\\Search\\Classic_Search' => array(
+		'version' => '0.5.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/classic-search/class-classic-search.php'
+	),
 	'Automattic\\Jetpack\\Search\\Template_Tags' => array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-template-tags.php'
@@ -102,9 +106,25 @@ return array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-options.php'
 	),
+	'Automattic\\Jetpack\\Search\\Initializer' => array(
+		'version' => '0.5.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/initializers/class-initializer.php'
+	),
+	'Automattic\\Jetpack\\Search\\Jetpack_Initializer' => array(
+		'version' => '0.5.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/initializers/class-jetpack-initializer.php'
+	),
+	'Automattic\\Jetpack\\Search\\Instant_Search' => array(
+		'version' => '0.5.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/instant-search/class-instant-search.php'
+	),
 	'Automattic\\Jetpack\\Search\\Helper' => array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-helper.php'
+	),
+	'Automattic\\Jetpack\\Search\\Customberg2' => array(
+		'version' => '0.5.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customberg/class-customberg2.php'
 	),
 	'Automattic\\Jetpack\\Search\\Module_Control' => array(
 		'version' => '0.5.9999999.9999999-dev',

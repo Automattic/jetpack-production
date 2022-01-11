@@ -1,0 +1,1 @@
+<?php return array('dependencies' => array('wp-i18n', 'wp-jp-i18n-state', 'wp-polyfill'), 'version' => '4bbe770c5737eb7582eebaa2b572b1aa');

@@ -1596,7 +1596,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-search",
-                "reference": "e3d8bb4ec70f69914074e152dafb4b982dbcd645"
+                "reference": "9ce9b4e81bda75d319b3b3e18d7407270ee526f2"
             },
             "require": {
                 "automattic/jetpack-connection": "^1.34"
@@ -1643,6 +1643,10 @@
                 "test-coverage": [
                     "@composer install",
                     "php -dpcov.directory=. ./vendor/bin/phpunit --coverage-clover \"$COVERAGE_DIR/clover.xml\""
+                ],
+                "test-js": [
+                    "Composer\\Config::disableProcessTimeout",
+                    "pnpm run test"
                 ],
                 "test-php": [
                     "@composer install",
