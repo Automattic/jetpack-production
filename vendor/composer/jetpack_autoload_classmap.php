@@ -170,10 +170,6 @@ return array(
 		'version' => '1.6.8.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-sync-modules.php'
 	),
-	'Automattic\\Jetpack\\Abtest' => array(
-		'version' => '1.9.18.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-abtest/src/class-abtest.php'
-	),
 	'Automattic\\Jetpack\\Blocks' => array(
 		'version' => '1.4.9.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blocks/src/class-blocks.php'
@@ -189,6 +185,10 @@ return array(
 	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
 		'version' => '1.2.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-helper-script-manager.php'
+	),
+	'Automattic\\Jetpack\\Abtest' => array(
+		'version' => '1.9.18.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Automattic\\Jetpack\\Composer\\Plugin' => array(
 		'version' => '1.0.1.0',

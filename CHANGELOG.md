@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Security: PDF embeds now only display a link, to avoid issues with malicious PDFss that may run arbitrary code.
 - Widget Visibility: Fix "Match All" setting being overwritten on save in the block widget editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
