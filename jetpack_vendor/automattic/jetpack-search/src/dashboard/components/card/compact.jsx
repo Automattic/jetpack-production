@@ -2,8 +2,7 @@
  * External dependencies
  */
 import React from 'react';
-/*eslint lodash/import-scope: [2, "method"]*/
-import assign from 'lodash/assign';
+import { assign } from 'lodash';
 import classnames from 'classnames';
 
 /**

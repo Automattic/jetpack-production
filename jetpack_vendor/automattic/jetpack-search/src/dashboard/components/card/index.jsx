@@ -4,10 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
-/*eslint lodash/import-scope: [2, "method"]*/
-import assign from 'lodash/assign';
-/*eslint lodash/import-scope: [2, "method"]*/
-import omit from 'lodash/omit';
+import { assign, omit } from 'lodash';
 
 /**
  * Internal dependencies

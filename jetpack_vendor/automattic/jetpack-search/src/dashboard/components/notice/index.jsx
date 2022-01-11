@@ -4,8 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
-/*eslint lodash/import-scope: [2, "method"]*/
-import noop from 'lodash/noop';
+import { noop } from 'lodash';
 
 /**
  * Internal dependencies

@@ -1,12 +1,4 @@
 /**
- * External dependencies
- */
-/*eslint lodash/import-scope: [2, "method"]*/
-import pick from 'lodash/pick';
-import { select } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-
-/**
  * Internal dependencies
  */
 import {
@@ -19,7 +11,7 @@ import {
 	errorNotice,
 	successNotice,
 } from 'components/global-notices/store/actions';
-import { STORE_ID } from '../../store';
+import { __ } from '@wordpress/i18n';
 
 export const SET_JETPACK_SETTINGS = 'SET_JETPACK_SETTINGS';
 export const TOGGLE_SEARCH_MODULE = 'TOGGLE_SEARCH_MODULE';
@@ -28,23 +20,20 @@ export const TOGGLE_SEARCH_MODULE = 'TOGGLE_SEARCH_MODULE';
  * Yield actions to update Search Settings
  *
  * @param {object} settings - settings to apply.
+ * @param {object} oldSettings - Old settings.
  * @yields {object} - an action object.
  * @returns {object} - an action object.
  */
-export function* updateJetpackSettings( settings ) {
+export function* updateJetpackSettings( settings, oldSettings ) {
 	try {
 		yield updatingNotice();
-		yield setUpdatingJetpackSettings();
 		yield setJetpackSettings( settings );
+		yield setUpdatingJetpackSettings();
 		yield updateJetpackSettingsControl( settings );
 		const updatedSettings = yield fetchJetpackSettings();
 		yield setJetpackSettings( updatedSettings );
 		return successNotice( __( 'Updated settings.', 'jetpack-search-pkg' ) );
 	} catch ( e ) {
-		const oldSettings = pick( select( STORE_ID ).getSearchModuleStatus(), [
-			'module_active',
-			'instant_search_enabled',
-		] );
 		yield setJetpackSettings( oldSettings );
 		return errorNotice( __( 'Error Update settings…', 'jetpack-search-pkg' ) );
 	} finally {
