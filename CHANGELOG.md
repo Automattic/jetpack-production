@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Refactor PluginDashItem component to be functional and add README
 - Remove use of deprecated `~` in sass-loader imports.
 - Search: Migrate Classic and Instant Search code to Search package.
+- Search: move search dashboard to the search package
 - Social Menu: remove role navigation attribute from nav item.
 - VideoPress: change allow_download data path from API (wpcom compat)
 

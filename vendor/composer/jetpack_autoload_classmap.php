@@ -130,6 +130,14 @@ return array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-module-control.php'
 	),
+	'Automattic\\Jetpack\\Search\\Initial_State' => array(
+		'version' => '0.5.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/dashboard/class-initial-state.php'
+	),
+	'Automattic\\Jetpack\\Search\\Dashboard' => array(
+		'version' => '0.5.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/dashboard/class-dashboard.php'
+	),
 	'Automattic\\Jetpack\\My_Jetpack\\Initializer' => array(
 		'version' => '0.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-initializer.php'

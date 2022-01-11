@@ -1596,10 +1596,15 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-search",
-                "reference": "9ce9b4e81bda75d319b3b3e18d7407270ee526f2"
+                "reference": "87670e5a7eee640ee331b6c4ab28120d50021ed5"
             },
             "require": {
-                "automattic/jetpack-connection": "^1.34"
+                "automattic/jetpack-assets": "^1.16",
+                "automattic/jetpack-connection": "^1.34",
+                "automattic/jetpack-constants": "^1.6",
+                "automattic/jetpack-options": "^1.14",
+                "automattic/jetpack-status": "^1.9",
+                "automattic/jetpack-tracking": "^1.14"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.0",

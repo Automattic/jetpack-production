@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Search API: activation and deactivation API
 
 ### Changed
+- Search: moved search dashboard to the package
 - Updated package dependencies
 
 ## [0.4.0] - 2022-01-04
