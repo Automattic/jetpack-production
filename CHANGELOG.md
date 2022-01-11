@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.6-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 10.6-a.1 - 2022-01-11
 ### Improved compatibility
 - Subscription form: update the placeholder color to be the same as the text color of the site.
