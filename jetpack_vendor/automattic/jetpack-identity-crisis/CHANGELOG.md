@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies
 
+### Fixed
+- Do not add IDC query args to authenticated request when in offline or staging mode.
+
 ## [0.6.0] - 2022-01-04
 ### Added
 - Build and display the new RNA IDC banner.
