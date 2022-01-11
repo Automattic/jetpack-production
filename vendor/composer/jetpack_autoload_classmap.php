@@ -423,15 +423,15 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-password-checker/src/class-password-checker.php'
 	),
 	'Automattic\\Jetpack\\IdentityCrisis\\UI' => array(
-		'version' => '0.6.0.0',
+		'version' => '0.6.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-ui.php'
 	),
 	'Automattic\\Jetpack\\IdentityCrisis\\REST_Endpoints' => array(
-		'version' => '0.6.0.0',
+		'version' => '0.6.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-rest-endpoints.php'
 	),
 	'Automattic\\Jetpack\\Identity_Crisis' => array(
-		'version' => '0.6.0.0',
+		'version' => '0.6.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-identity-crisis.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
