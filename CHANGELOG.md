@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Dashboard: update the links to different Jetpack features in the dashboard.
+- Tweak Donations block currency display for edit control
 
 ### Improved compatibility
 - Subscription form: Update the placeholder color to be the same as the text color of the site
