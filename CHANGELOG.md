@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds WooCommerce settings to the /v1.4/sites/$site/settings endpoint.
+- Subscription Form block: hide custom success message setting for WordPress.com simple sites.
 
 ## 10.6-a.1 - 2022-01-11
 ### Improved compatibility
