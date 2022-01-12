@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Image Compare block: Add `wide` and `full` alignment options
+
 ## 10.6-a.1 - 2022-01-11
 ### Improved compatibility
 - Subscription form: update the placeholder color to be the same as the text color of the site.
