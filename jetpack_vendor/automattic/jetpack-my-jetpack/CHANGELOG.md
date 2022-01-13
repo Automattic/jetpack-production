@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: add story to `<PlanSection />` component
 - My Jetpack: first PlanSection implementation
 
+### Fixed
+- Rename method enqueue_scritps to enqueue_scripts
+
 ## [0.3.1] - 2022-01-11
 ### Added
 - Add devvelopment testing instructions to doc.
