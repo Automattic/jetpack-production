@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Image Compare block: Add `wide` and `full` alignment options
 
+### Bug fixes
+- Changes the default value of woocommerce_onboarding_profile from array( 0 => false ) to array()
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds WooCommerce settings to the /v1.4/sites/$site/settings endpoint.
 - Subscription Form block: hide custom success message setting for WordPress.com simple sites.
