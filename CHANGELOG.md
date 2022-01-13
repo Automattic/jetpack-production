@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Image Compare block: Add `wide` and `full` alignment options
+- Stats: add new filter allowing site owners to exclude IP addresses from being tracked in stats.
 
 ### Bug fixes
 - Changes the default value of woocommerce_onboarding_profile from array( 0 => false ) to array()
