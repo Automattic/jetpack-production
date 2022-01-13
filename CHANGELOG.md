@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds WooCommerce settings to the /v1.4/sites/$site/settings endpoint.
+- Fix various PHPCS warnings and errors in root classes.
 - Subscription Form block: hide custom success message setting for WordPress.com simple sites.
 - Updated package dependencies
 
