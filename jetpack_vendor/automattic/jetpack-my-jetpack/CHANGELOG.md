@@ -13,7 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Include wordpress components as dep
 
 ### Changed
+- General: update required node version to v16.13.2
 - Properly style the Plans Section according to proposed design
+- Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
 
