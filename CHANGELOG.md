@@ -7,6 +7,10 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- - Implement Descript.com embedding support
+    - Add `[descript]` shortcode
+    - Support embedding descript URLs
+    - Support embedding descript's embed code (iframe)
 - Image Compare block: Add `wide` and `full` alignment options
 - Stats: add new filter allowing site owners to exclude IP addresses from being tracked in stats.
 
