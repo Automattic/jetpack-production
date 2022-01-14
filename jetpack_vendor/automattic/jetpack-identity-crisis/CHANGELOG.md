@@ -131,6 +131,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Use Connection/Urls for home_url and site_url functions migrated from Sync.
 
+[0.6.3]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.6.2...v0.6.3
 [0.6.3-alpha]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.6.2...v0.6.3-alpha
 [0.6.2]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.6.0...v0.6.1

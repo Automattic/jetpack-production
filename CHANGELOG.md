@@ -24,6 +24,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
+- Updated package dependencies.
 
 ## 10.6-a.1 - 2022-01-11
 ### Improved compatibility
