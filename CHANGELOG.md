@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription Form block: hide custom success message setting for WordPress.com simple sites.
 - Updated package dependencies
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## 10.6-a.1 - 2022-01-11
 ### Improved compatibility
