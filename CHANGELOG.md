@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix various PHPCS warnings and errors in root classes.
 - General: update required node version to v16.13.2
 - Subscription Form block: hide custom success message setting for WordPress.com simple sites.
+- Update composer.lock
 - Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
