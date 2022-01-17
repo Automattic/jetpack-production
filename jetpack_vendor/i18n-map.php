@@ -7,7 +7,7 @@ return array(
     'jetpack-assets' => '1.16.9999999-dev',
     'jetpack-tracking' => '1.14.9999999-dev',
     'jetpack-heartbeat' => '1.4.9999999-dev',
-    'jetpack-connection' => '1.35.9999999-dev',
+    'jetpack-connection' => '1.36.9999999-dev',
     'jetpack-password-checker' => '0.2.9999999-dev',
     'jetpack-idc' => '0.6.9999999-dev',
     'jetpack-sync' => '1.28.9999999-dev',
