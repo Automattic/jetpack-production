@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
     - Add `[descript]` shortcode
     - Support embedding descript URLs
     - Support embedding descript's embed code (iframe)
+- Do not render the simple-payments Pay with paypal block on the front-end if it is misconfigured. Previously it would be rendered but anyone trying to use it would run into confusing error messages
 - Image Compare block: Add `wide` and `full` alignment options
 - Stats: add new filter allowing site owners to exclude IP addresses from being tracked in stats.
 
