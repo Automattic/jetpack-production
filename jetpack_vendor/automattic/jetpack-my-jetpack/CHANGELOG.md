@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added redux store specific to my-jetpack
+- Implement plans list properly in the PlansSection
 - My Jetpack: Add scripts for JS tests
 - My Jetpack: Include wordpress components as dep
 
