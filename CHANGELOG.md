@@ -2,37 +2,21 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.6-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.6-a.3 - 2022-01-18
 ### Enhancements
-- - Implement Descript.com embedding support
-    - Add `[descript]` shortcode
-    - Support embedding descript URLs
-    - Support embedding descript's embed code (iframe)
-- Do not render the simple-payments Pay with paypal block on the front-end if it is misconfigured. Previously it would be rendered but anyone trying to use it would run into confusing error messages
-- Image Compare block: Add `wide` and `full` alignment options
+- Embeds: add support for Descript.com embeds.
+- Image Compare Block: Add `wide` and `full` alignment options
+- Pay with PayPal Block: do not display the block on the frontend if PayPal is misconfigured.
 - Stats: add new filter allowing site owners to exclude IP addresses from being tracked in stats.
-
-### Bug fixes
-- Changes the default value of woocommerce_onboarding_profile from array( 0 => false ) to array()
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds WooCommerce settings to the /v1.4/sites/$site/settings endpoint.
+- Changes the default value of woocommerce_onboarding_profile from array( 0 => false ) to array()
 - Fix various PHPCS warnings and errors in root classes.
 - General: update required node version to v16.13.2
 - Subscription Form block: hide custom success message setting for WordPress.com simple sites.
 - Update composer.lock
-- Updated package dependencies
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
+- Update package dependencies
 
 ## 10.6-a.1 - 2022-01-11
 ### Improved compatibility
