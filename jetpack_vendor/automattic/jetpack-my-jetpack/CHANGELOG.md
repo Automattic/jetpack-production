@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add Connections Section wrapping the Connection Status Card to My Jetpack
+- Build: do not ship raw files in production bundle.
 
 ## [0.3.3] - 2022-01-18
 ### Added
