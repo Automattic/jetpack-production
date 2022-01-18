@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Implement plans list properly in the PlansSection
 - My Jetpack: Add scripts for JS tests
 - My Jetpack: Include wordpress components as dep
+- Reduxify purchases data
 
 ### Changed
 - General: update required node version to v16.13.2
