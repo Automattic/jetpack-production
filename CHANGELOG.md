@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Jetpack Tiled Gallery Block: Port part of the block to native mobile (Gutenberg Mobile).
+
 ## 10.6-a.3 - 2022-01-18
 ### Enhancements
 - Embeds: add support for Descript.com embeds.
