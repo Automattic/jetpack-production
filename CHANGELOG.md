@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: update CTAs (wording, layout) in the At A Glance section.
 - Fixed development mode prop type warning in UserLicenseActivationNotice component.
 - Fix PHPCS sniffs in root classes.
+- PHPCS fixes for site verification tools.
 - Updated package dependencies.
 - Updated package dependencies.
 - Use new Visitor class for determining IP address.
