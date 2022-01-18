@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Tiled Gallery Block: Port part of the block to native mobile (Gutenberg Mobile).
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fix PHPCS sniffs in root classes.
 - Updated package dependencies.
 
 ## 10.6-a.3 - 2022-01-18
