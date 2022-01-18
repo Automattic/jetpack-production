@@ -85,6 +85,7 @@ return array(
     'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-parser.php',
     'Automattic\\Jetpack\\Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-status.php',
     'Automattic\\Jetpack\\Status\\Host' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-host.php',
+    'Automattic\\Jetpack\\Status\\Visitor' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-visitor.php',
     'Automattic\\Jetpack\\Sync\\Actions' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-actions.php',
     'Automattic\\Jetpack\\Sync\\Codec_Interface' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/interface-codec.php',
     'Automattic\\Jetpack\\Sync\\Defaults' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-defaults.php',

@@ -14,6 +14,8 @@ This is an alpha version! The changes listed here are not final.
 - Fixed development mode prop type warning in UserLicenseActivationNotice component.
 - Fix PHPCS sniffs in root classes.
 - Updated package dependencies.
+- Updated package dependencies.
+- Use new Visitor class for determining IP address.
 
 ## 10.6-a.3 - 2022-01-18
 ### Enhancements

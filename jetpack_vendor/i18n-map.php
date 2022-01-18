@@ -17,7 +17,7 @@ return array(
     'jetpack-jitm' => '2.2.9999999-dev',
     'jetpack-lazy-images' => '2.1.9999999-dev',
     'jetpack-licensing' => '1.6.9999999-dev',
-    'jetpack-my-jetpack' => '0.3.9999999-dev',
+    'jetpack-my-jetpack' => '0.4.9999999-dev',
     'jetpack-search-pkg' => '0.5.9999999-dev',
   ),
 );

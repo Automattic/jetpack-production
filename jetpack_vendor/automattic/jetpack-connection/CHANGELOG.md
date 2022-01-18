@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updated package dependencies.
+
 ## [1.36.0] - 2022-01-18
 ### Added
 - Debugging: Add a filter to add XDEBUG_PROFILE to requests made to the sandbox.
