@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add a comment to explain the reasoning behind an empty scss file.
 - Jetpack Tiled Gallery Block: Port part of the block to native mobile (Gutenberg Mobile).
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
