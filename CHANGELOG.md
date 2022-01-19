@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add a comment to explain the reasoning behind an empty scss file.
 - Jetpack Tiled Gallery Block: Port part of the block to native mobile (Gutenberg Mobile).
 
+### Bug fixes
+- bugfix Fix warning for non admin users
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update CTAs (wording, layout) in the At A Glance section.
 - Fixed development mode prop type warning in UserLicenseActivationNotice component.
