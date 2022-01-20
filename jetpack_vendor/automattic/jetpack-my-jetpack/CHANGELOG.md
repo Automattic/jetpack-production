@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added Visitor class for status regarding the site visitor.
 - Add Products and REST_Products basic classes
+- My Jetpack: Add Product Card component
 
 ### Changed
 - Add Connections Section wrapping the Connection Status Card to My Jetpack
