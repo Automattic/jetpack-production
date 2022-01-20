@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - bugfix Fix warning for non admin users
+- Connection: correctly request list of active modules so they can be activated on a reconnection
 - Cover block: avoid the block's placeholder rendering on top of other blocks
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
