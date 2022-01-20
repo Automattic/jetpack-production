@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix PHPCS sniffs in root classes.
 - PHPCS fixes for site verification tools.
 - Search: add E2E tests for Customberg
+- Search: added E2E tests for the search dashboard
 - Updated package dependencies.
 - Updated package dependencies.
 - Use new Visitor class for determining IP address.
