@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Tiled Gallery Block: Port part of the block to native mobile (Gutenberg Mobile).
 - Search: Improve accessibility via headings hierarchy and aria roles
 
+### Improved compatibility
+- Sharing / AMP plugin: avoid adding sharing's CSS on AMP pages when the sharing feature is not active.
+
 ### Bug fixes
 - bugfix Fix warning for non admin users
 - Connection: correctly request list of active modules so they can be activated on a reconnection
