@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Search: Improve accessibility via headings hierarchy and aria roles
 - Updated package dependencies.
 
+### Fixed
+- Search widget: changed fetching search result to just before rendering jp search widget
+
 ## [0.5.1] - 2022-01-18
 ### Changed
 - General: update required node version to v16.13.2
