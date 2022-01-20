@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack plugin: hide backup prep message for sites without Backup
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Comment: phpcs linting cleanup.
 - Dashboard: update CTAs (wording, layout) in the At A Glance section.
 - Fixed development mode prop type warning in UserLicenseActivationNotice component.
 - Fix PHPCS sniffs in root classes.
