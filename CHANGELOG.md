@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - bugfix Fix warning for non admin users
 - Connection: correctly request list of active modules so they can be activated on a reconnection
 - Cover block: avoid the block's placeholder rendering on top of other blocks
+- Increased the Pay with Paypal button in Pay with Paypal block in order to properly display the card icons below the button.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update CTAs (wording, layout) in the At A Glance section.
