@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add missing JS peer dependency.
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## [0.6.3] - 2022-01-18
 ### Changed
