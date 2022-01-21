@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a comment to explain the reasoning behind an empty scss file.
 - Add support for Beta Plugins to PluginDashItem
 - Jetpack Tiled Gallery Block: Port part of the block to native mobile (Gutenberg Mobile).
+- Search: adds explicit post meta keys and taxonomies to sync into the index. Particularly important for integrating with third-party plugins.
 - Search: Improve accessibility via headings hierarchy and aria roles
 
 ### Improved compatibility

@@ -114,6 +114,7 @@ return array(
     'Automattic\\Jetpack\\Sync\\Modules\\Plugins' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/modules/class-plugins.php',
     'Automattic\\Jetpack\\Sync\\Modules\\Posts' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/modules/class-posts.php',
     'Automattic\\Jetpack\\Sync\\Modules\\Protect' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/modules/class-protect.php',
+    'Automattic\\Jetpack\\Sync\\Modules\\Search' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/modules/class-search.php',
     'Automattic\\Jetpack\\Sync\\Modules\\Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/modules/class-stats.php',
     'Automattic\\Jetpack\\Sync\\Modules\\Term_Relationships' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/modules/class-term-relationships.php',
     'Automattic\\Jetpack\\Sync\\Modules\\Terms' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/modules/class-terms.php',
