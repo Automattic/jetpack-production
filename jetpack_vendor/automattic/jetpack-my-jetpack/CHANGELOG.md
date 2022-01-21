@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added css module for My Jetpack Plans Section
 - Added Visitor class for status regarding the site visitor.
 - Add Products and REST_Products basic classes
+- Adds very basic product cards section component to my jetpack
 - My Jetpack: Add Product Card component
 - Removed endpoint plans superseded by purchases
 
