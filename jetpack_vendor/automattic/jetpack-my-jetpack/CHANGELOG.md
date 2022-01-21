@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Add Connections Section wrapping the Connection Status Card to My Jetpack
 - Build: do not ship raw files in production bundle.
 
+### Removed
+- Remove unused usePlans() custom react hook
+
 ## [0.3.3] - 2022-01-18
 ### Added
 - Added redux store specific to my-jetpack
