@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added css module for My Jetpack Plans Section
 - Added Visitor class for status regarding the site visitor.
 - Add Products and REST_Products basic classes
 - My Jetpack: Add Product Card component
