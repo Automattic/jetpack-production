@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed development mode prop type warning in UserLicenseActivationNotice component.
 - Fix PHPCS sniffs in root classes.
 - PHPCS fixes for site verification tools.
+- phpcs fixes for the markdown module
 - Search: add E2E tests for Customberg
 - Search: added E2E tests for the search dashboard
 - Updated package dependencies.
