@@ -62,6 +62,7 @@ return array(
     'Automattic\\Jetpack\\Licensing' => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/src/class-licensing.php',
     'Automattic\\Jetpack\\My_Jetpack\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-initializer.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-products.php',
+    'Automattic\\Jetpack\\My_Jetpack\\Products\\Boost' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-boost.php',
     'Automattic\\Jetpack\\My_Jetpack\\REST_Products' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-products.php',
     'Automattic\\Jetpack\\My_Jetpack\\REST_Purchases' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-purchases.php',
     'Automattic\\Jetpack\\Partner' => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner.php',
