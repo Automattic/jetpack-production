@@ -14,9 +14,11 @@ This is an alpha version! The changes listed here are not final.
 - Added css module for My Jetpack Plans Section
 - Added useAnalytics hook
 - Added Visitor class for status regarding the site visitor.
+- Add first data approach
 - Add Products and REST_Products basic classes
 - Adds very basic product cards section component to my jetpack
 - My Jetpack: Add Product Card component
+- My Jetpack: Implement data handling for enable/disable products
 - Removed endpoint plans superseded by purchases
 
 ### Changed
