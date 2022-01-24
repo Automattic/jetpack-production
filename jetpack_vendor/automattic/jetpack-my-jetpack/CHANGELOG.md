@@ -28,6 +28,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Remove unused usePlans() custom react hook
 
+### Fixed
+- Fixed svg attribute strokeWidth for Boost Card
+
 ## [0.3.3] - 2022-01-18
 ### Added
 - Added redux store specific to my-jetpack
