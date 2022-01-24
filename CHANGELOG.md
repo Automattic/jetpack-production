@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add a comment to explain the reasoning behind an empty scss file.
 - Add support for Beta Plugins to PluginDashItem
+- Contact Info block: Add color, typography and spacing features
 - Jetpack Tiled Gallery Block: Port part of the block to native mobile (Gutenberg Mobile).
 - Markdown block: Add Align and Spacing features
 - Search: adds explicit post meta keys and taxonomies to sync into the index. Particularly important for integrating with third-party plugins.
