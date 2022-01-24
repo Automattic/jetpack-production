@@ -214,7 +214,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-my-jetpack',
             'aliases' => array(),
-            'reference' => 'b9f3e0eb223014c511ad63935183cf22124979e4',
+            'reference' => '286d5ee3678385af82cad3425da406f260945a27',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-options' => array(

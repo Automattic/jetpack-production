@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Cover block: avoid the block's placeholder rendering on top of other blocks
 - Increased the Pay with Paypal button in Pay with Paypal block in order to properly display the card icons below the button.
 - Jetpack plugin: hide backup prep message for sites without Backup
+- Update root reqs for Jetpack
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Comment: phpcs linting cleanup.

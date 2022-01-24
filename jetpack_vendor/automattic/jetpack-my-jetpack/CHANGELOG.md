@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - add API endpoints to manipulate products
 - Added css module for My Jetpack Plans Section
+- Added useAnalytics hook
 - Added Visitor class for status regarding the site visitor.
 - Add Products and REST_Products basic classes
 - Adds very basic product cards section component to my jetpack
