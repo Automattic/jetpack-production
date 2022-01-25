@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.7-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 10.6-beta - 2022-01-25
 ### Enhancements
 - Dashboard: support Beta versions of Automattic plugins in plugin cards.
