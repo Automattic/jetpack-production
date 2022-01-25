@@ -2,33 +2,28 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.6-a.4 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.6-beta - 2022-01-25
 ### Enhancements
-- Add a comment to explain the reasoning behind an empty scss file.
-- Add support for Beta Plugins to PluginDashItem
-- Contact Info block: Add color, typography and spacing features
-- Jetpack Tiled Gallery Block: Port part of the block to native mobile (Gutenberg Mobile).
-- Markdown block: Add Align and Spacing features
-- Search: adds explicit post meta keys and taxonomies to sync into the index. Particularly important for integrating with third-party plugins.
-- Search: Improve accessibility via headings hierarchy and aria roles
+- Dashboard: support Beta versions of Automattic plugins in plugin cards.
+- Contact Info and Markdown Blocks: add color, typography and spacing features.
+- Tiled Gallery Block: improve the block so it can be used within the mobile applications.
+- Search: improve accessibility via headings hierarchy and aria roles.
 
 ### Improved compatibility
 - Sharing / AMP plugin: avoid adding sharing's CSS on AMP pages when the sharing feature is not active.
+- Instant Search: synchronize more meta data so the search feature can be used with more third-party plugins.
 
 ### Bug fixes
-- bugfix Fix warning for non admin users
-- Connection: correctly request list of active modules so they can be activated on a reconnection
-- Cover block: avoid the block's placeholder rendering on top of other blocks
-- Increased the Pay with Paypal button in Pay with Paypal block in order to properly display the card icons below the button.
-- Jetpack plugin: hide backup prep message for sites without Backup
-- Update root reqs for Jetpack
+- Backups: hide backup preparation message for sites without backup.
+- Connection: correctly request list of active features so they can be activated on a reconnection.
+- Pay with Paypal Block: properly display the card icons below the button.
+- Scan: avoid PHP notice when non-admin users access the dashboard.
 - Widget Visibility: ensure it remains possible to edit visibility for legacy widgets in the block-based widget editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add a comment to explain the reasoning behind an empty scss file.
 - Comment: phpcs linting cleanup.
+- Cover block: avoid the block's placeholder rendering on top of other blocks.
 - Dashboard: update CTAs (wording, layout) in the At A Glance section.
 - Fixed development mode prop type warning in UserLicenseActivationNotice component.
 - Fix PHPCS sniffs in root classes.
@@ -36,9 +31,6 @@ This is an alpha version! The changes listed here are not final.
 - phpcs fixes for the markdown module
 - Search: add E2E tests for Customberg
 - Search: added E2E tests for the search dashboard
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
 - Updated package dependencies.
 - Use new Visitor class for determining IP address.
 
