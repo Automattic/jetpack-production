@@ -268,7 +268,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-search',
             'aliases' => array(),
-            'reference' => 'e5bee7ec382f0157f7d9d8998de401e38a01cdc8',
+            'reference' => '2a869d8d374cde5c568ea5a32e7bc3e0ab0872f0',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-status' => array(
