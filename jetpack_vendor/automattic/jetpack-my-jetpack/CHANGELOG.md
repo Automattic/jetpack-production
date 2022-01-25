@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Products and REST_Products basic classes
 - Adds very basic product cards section component to my jetpack
 - My Jetpack: Add Product Card component
+- My Jetpack: check user connectivity before to hit wpcom side
 - My Jetpack: Implement data handling for enable/disable products
 - Removed endpoint plans superseded by purchases
 
