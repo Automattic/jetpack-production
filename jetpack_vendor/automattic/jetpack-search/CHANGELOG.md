@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Search: Improve accessibility via headings hierarchy and aria roles
 - Updated package dependencies.
+- Updated package dependencies.
 
 ### Fixed
 - Search widget: changed fetching search result to just before rendering jp search widget

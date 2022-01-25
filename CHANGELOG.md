@@ -38,6 +38,8 @@ This is an alpha version! The changes listed here are not final.
 - Search: added E2E tests for the search dashboard
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
+- Updated package dependencies.
 - Use new Visitor class for determining IP address.
 
 ## 10.6-a.3 - 2022-01-18
