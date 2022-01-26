@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Updated package dependencies.
 - Update plugin absent status consistently
 
 ## [0.4.0] - 2022-01-25
