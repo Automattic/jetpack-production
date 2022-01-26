@@ -244,6 +244,17 @@
             'reference' => 'ab5f8d79ac343d88acffd2a6ddde9df8064eb92e',
             'dev_requirement' => false,
         ),
+        'automattic/jetpack-plugins-installer' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../automattic/jetpack-plugins-installer',
+            'aliases' => array(
+                0 => '0.1.x-dev',
+            ),
+            'reference' => '574d2b6e9475c5e8c8ac4cd9030c43408fd08fe9',
+            'dev_requirement' => false,
+        ),
         'automattic/jetpack-redirect' => array(
             'pretty_version' => '1.7.x-dev',
             'version' => '1.7.9999999.9999999-dev',

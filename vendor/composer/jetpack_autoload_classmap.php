@@ -138,6 +138,14 @@ return array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-module-control.php'
 	),
+	'Automattic\\Jetpack\\Automatic_Install_Skin' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-plugins-installer/src/class-automatic-install-skin.php'
+	),
+	'Automattic\\Jetpack\\Plugins_Installer' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/automattic/jetpack-plugins-installer/src/class-plugins-installer.php'
+	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products' => array(
 		'version' => '0.4.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-products.php'

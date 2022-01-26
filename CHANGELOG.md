@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Reduced the data set for the Search Sync tests to speed up the process.
 
+### Improved compatibility
+- Extract Jetpack_Plugins class to its own package
+
 ## 10.6-beta - 2022-01-25
 ### Enhancements
 - Dashboard: support Beta versions of Automattic plugins in plugin cards.
