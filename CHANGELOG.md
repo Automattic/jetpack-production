@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Extract Jetpack_Plugins class to its own package
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Change usage of filter_var to filter_input in markdown file.
+
 ## 10.6-beta - 2022-01-25
 ### Enhancements
 - Dashboard: support Beta versions of Automattic plugins in plugin cards.
