@@ -44,21 +44,21 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
       'ver' => '2.3.3',
     ),
-    'jetpack-jitm' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-jitm',
-      'ver' => '2.2.3',
-    ),
     'jetpack-lazy-images' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
       'ver' => '2.1.3',
     ),
-    'jetpack-licensing' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-licensing',
-      'ver' => '1.6.2',
-    ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '0.4.0',
+    ),
+    'jetpack-jitm' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-jitm',
+      'ver' => '2.2.3',
+    ),
+    'jetpack-licensing' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-licensing',
+      'ver' => '1.6.2',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
