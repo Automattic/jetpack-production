@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - uses the Plugin Installer package to safely checks plugins statuses
 
 ### Changed
+- Build: remove unneeded files from production build.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
