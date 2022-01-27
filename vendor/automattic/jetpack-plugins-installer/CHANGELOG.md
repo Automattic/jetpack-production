@@ -13,5 +13,8 @@ This is an alpha version! The changes listed here are not final.
 - First version
 - New functions to safely check plugin statuses
 
+### Changed
+- Build: add missing mirror repo details, so package can be deployed.
+
 ### Fixed
 - Fix method logic
