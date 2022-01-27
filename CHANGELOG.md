@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Reduced the data set for the Search Sync tests to speed up the process.
+- Update internal logic for rendering Dashboard sections
 
 ### Improved compatibility
 - Extract Jetpack_Plugins class to its own package
