@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Extract Jetpack_Plugins class to its own package
+- My Community widget: Hide widget from the block inserter and Legacy widget block drop-down menu
 
 ### Bug fixes
 - Fixed several React warnings shown on the console when SCRIPT_DEBUG is active
