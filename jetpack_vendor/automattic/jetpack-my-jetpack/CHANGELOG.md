@@ -25,6 +25,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update plugin absent status consistently
 
+### Fixed
+- added unit test mock for new global variable myJetpackRest
+
 ## [0.4.0] - 2022-01-25
 ### Added
 - add API endpoints to manipulate products
