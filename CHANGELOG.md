@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
   
   Requires gutenberg >= 11.5.0
 - Business Hours: Add support for color & spacing design tool.
+- Changed the plan description for invalid plans and added a Warning message for Premium content blocks with invalid plans.
 - Dashboard: update the links used to purchase plans when in Jetpack settings.
 - Reduced the data set for the Search Sync tests to speed up the process.
 - Update internal logic for rendering Dashboard sections
