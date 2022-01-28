@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds Tracks events for activating and deactivating products from the product cards
 - Handle when site is not connected
 - Initial approach to handle global notice
+- My Jetpack: handle redirect when no connection #22549
 - Update data handling - Implement request status in Product Card
 - uses the Plugin Installer package to safely checks plugins statuses
 
