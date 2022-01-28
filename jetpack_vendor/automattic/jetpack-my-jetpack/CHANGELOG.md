@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added plugin installation functionality
 - Adds Tracks events for activating and deactivating products from the product cards
+- Handle when site is not connected
 - Initial approach to handle global notice
 - Update data handling - Implement request status in Product Card
 - uses the Plugin Installer package to safely checks plugins statuses
