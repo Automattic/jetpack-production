@@ -7,6 +7,9 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add transformation from core/buttons to jetpack/recurring-payments block.
+  
+  Requires gutenberg >= 11.5.0
 - Dashboard: update the links used to purchase plans when in Jetpack settings.
 - Reduced the data set for the Search Sync tests to speed up the process.
 - Update internal logic for rendering Dashboard sections
