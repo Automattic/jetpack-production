@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Build: remove unneeded files from production build.
+- Do not initialize My Jetpack id site is not connected
 - Pick API root and nonce values from a new window var myJetpackRest
 - Updated package dependencies.
 - Updated package dependencies.
