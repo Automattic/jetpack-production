@@ -26,10 +26,12 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
 - Update plugin absent status consistently
 
 ### Fixed
 - added unit test mock for new global variable myJetpackRest
+- Fix tests
 
 ## [0.4.0] - 2022-01-25
 ### Added
