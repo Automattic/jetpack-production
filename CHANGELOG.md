@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add transformation from core/buttons to jetpack/recurring-payments block.
   
   Requires gutenberg >= 11.5.0
+- Business Hours: Add support for color & spacing design tool.
 - Dashboard: update the links used to purchase plans when in Jetpack settings.
 - Reduced the data set for the Search Sync tests to speed up the process.
 - Update internal logic for rendering Dashboard sections
