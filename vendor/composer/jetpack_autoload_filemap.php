@@ -18,4 +18,8 @@ return array(
 		'version' => '1.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/functions.php'
 	),
+	'c41c8291342c1bc5fcb32cf6fda33a14' => array(
+		'version' => '0.6.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/search.php'
+	),
 );
