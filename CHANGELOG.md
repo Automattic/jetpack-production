@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Extract Jetpack_Plugins class to its own package
 
+### Bug fixes
+- Fixed several React warnings shown on the console when SCRIPT_DEBUG is active
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added 'jetpack_related_posts_display_markup' filter to update the output HTML of Related Posts module
 - Blocks: Update block fixture docs for running phpunit tests.
