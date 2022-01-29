@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Build: remove unneeded files from production build.
 - Instant Search: add image alt text from API
+- Updated package dependencies.
 
 ## [0.5.3] - 2022-01-27
 ### Fixed
