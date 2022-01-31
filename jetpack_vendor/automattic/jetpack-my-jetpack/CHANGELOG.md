@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Initial approach to handle global notice
 - My Jetpack: handle redirect when no connection #22549
 - My Jetpack: reorganize stores by project/name
+- Support to Hybrid products
 - Tweak dimms of the Product card status
 - Update data handling - Implement request status in Product Card
 - uses the Plugin Installer package to safely checks plugins statuses
