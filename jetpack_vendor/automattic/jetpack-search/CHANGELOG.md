@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Instant Search: add image alt text from API
 - Updated package dependencies.
 
+## [0.5.4] - 2022-01-31
 ### Fixed
 - Search: Fetch plan info as blog, not as user, to allow nonconnected admins to use dashboard
 
@@ -89,7 +90,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.6.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.5.3...v0.6.0-alpha
+[0.6.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.5.4...v0.6.0-alpha
+[0.5.4]: https://github.com/Automattic/jetpack-search/compare/v0.5.3...v0.5.4
 [0.5.3]: https://github.com/Automattic/jetpack-search/compare/v0.5.2...v0.5.3
 [0.5.2]: https://github.com/Automattic/jetpack-search/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/Automattic/jetpack-search/compare/v0.5.0...v0.5.1
