@@ -16,21 +16,21 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-heartbeat',
       'ver' => '1.4.0',
     ),
-    'jetpack-connection' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '1.36.1',
-    ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
       'ver' => '0.2.2',
     ),
-    'jetpack-idc' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
-      'ver' => '0.6.4',
-    ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
       'ver' => '1.2.3',
+    ),
+    'jetpack-connection' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-connection',
+      'ver' => '1.36.1',
+    ),
+    'jetpack-idc' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
+      'ver' => '0.6.4',
     ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
@@ -62,7 +62,7 @@ return array(
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.5.3',
+      'ver' => '0.5.4',
     ),
   ),
 );

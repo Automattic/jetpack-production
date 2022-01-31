@@ -263,12 +263,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-search' => array(
-            'pretty_version' => 'v0.5.3',
-            'version' => '0.5.3.0',
+            'pretty_version' => 'v0.5.4',
+            'version' => '0.5.4.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-search',
             'aliases' => array(),
-            'reference' => 'eb89ae15916d6f40dbc1310b6decfcb2f3545995',
+            'reference' => 'f1d95d607dfe4bdf0c0c7b7d18cf33b694bc9954',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-status' => array(
