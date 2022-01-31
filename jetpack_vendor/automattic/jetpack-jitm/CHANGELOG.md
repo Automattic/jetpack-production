@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Build: remove unneeded files from production build.
+- Update use of old jQuery interfaces
 
 ## [2.2.3] - 2022-01-25
 ### Changed
