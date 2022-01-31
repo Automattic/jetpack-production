@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Instant Search: add image alt text from API
 - Updated package dependencies.
 
+### Fixed
+- Search: Fetch plan info as blog, not as user, to allow nonconnected admins to use dashboard
+
 ## [0.5.3] - 2022-01-27
 ### Fixed
 - Search package: fixed compatibility issue with plan activation
