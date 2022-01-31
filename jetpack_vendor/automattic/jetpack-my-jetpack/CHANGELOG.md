@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - added unit test mock for new global variable myJetpackRest
 - Fix tests
+- my-jetpack: fix tracking event when activating product
 
 ## [0.4.0] - 2022-01-25
 ### Added
