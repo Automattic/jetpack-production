@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixes stories for ProductCard component
 - Handle when site is not connected
 - Initial approach to handle global notice
+- Module Products
 - My Jetpack: Add route handling
 - My Jetpack: connect all product cards with data provider
 - My Jetpack: connect Backup product class with Product class. Add long description and features fields.
