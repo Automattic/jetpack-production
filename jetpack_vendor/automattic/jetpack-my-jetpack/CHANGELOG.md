@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Handle when site is not connected
 - Initial approach to handle global notice
 - My Jetpack: Add route handling
+- My Jetpack: connect all product cards with data provider
 - My Jetpack: connect Backup product class with Product class. Add long description and features fields.
 - My Jetpack: handle redirect when no connection #22549
 - My Jetpack: reorganize stores by project/name
