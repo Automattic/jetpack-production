@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add an AMP-compatible version of the email share button.
 - Add transformation from core/buttons to jetpack/recurring-payments block.
   
   Requires gutenberg >= 11.5.0
