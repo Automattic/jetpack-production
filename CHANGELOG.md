@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: Update block fixture docs for running phpunit tests.
 - Build: remove unneeded files from production build.
 - Payments Block: remove wrapper around icons.
+- Updated package dependencies
 
 ## 10.6 - 2022-02-01
 ### Enhancements
