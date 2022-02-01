@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - uses the Plugin Installer package to safely checks plugins statuses
 
 ### Changed
+- Added filter for disabling the initialization of the My Jetpack package
 - Build: remove unneeded files from production build.
 - Do not initialize My Jetpack id site is not connected
 - My Jetpack: Refactor styles to use layout components and theme provider
