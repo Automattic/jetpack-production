@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fixed several React warnings shown on the console when SCRIPT_DEBUG is active
+- Search: avoid PHP warning when using Search widget.
 - Search: Initialize debug bar using correct class
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
