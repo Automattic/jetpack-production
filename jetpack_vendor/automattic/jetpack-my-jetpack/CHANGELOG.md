@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Support to Hybrid products
 - Tweak dimms of the Product card status
 - Update data handling - Implement request status in Product Card
+- User connection requirement to product info
 - uses the Plugin Installer package to safely checks plugins statuses
 
 ### Changed
