@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixes stories for ProductCard component
 - Handle when site is not connected
 - Initial approach to handle global notice
+- My Jetpack: Add route handling
 - My Jetpack: handle redirect when no connection #22549
 - My Jetpack: reorganize stores by project/name
 - Support to Hybrid products
