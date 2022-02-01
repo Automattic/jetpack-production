@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix tests
 - Fix unsafe optional chaining.
 - my-jetpack: fix tracking event when activating product
+- Resolved minor code standard violation after implementing a stricter rule.
 
 ## [0.4.0] - 2022-01-25
 ### Added
