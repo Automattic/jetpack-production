@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: Update block fixture docs for running phpunit tests.
 - Build: remove unneeded files from production build.
 - Change usage of filter_var to filter_input in markdown file.
+- Payments Block: remove wrapper around icons.
 
 ## 10.6-beta - 2022-01-25
 ### Enhancements
