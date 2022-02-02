@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- My Jetpack: Add Connection screen
+
 ## [0.5.0] - 2022-02-02
 ### Added
 - Added plugin installation functionality
@@ -136,6 +143,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[0.5.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.5.0...0.5.1-alpha
 [0.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.3.3...0.4.0
 [0.3.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.3.2...0.3.3
