@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: Add Connection screen
 
+### Changed
+- Updated package dependencies
+
 ## [0.5.0] - 2022-02-02
 ### Added
 - Added plugin installation functionality
