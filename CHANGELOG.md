@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Updated the Payment block Upgrade nudge description to include the plan name that's required to use the block
 
+### Improved compatibility
+- WordAds: deprecate the legacy Ad Widget in favor of the Ad Block onwhen adding new Ad Widgets via the block-based widget editor.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix potential use of unexisting "allow_download" property in VideoPress media modal
 - Init Jetpack 10.7-a.2 cycle
