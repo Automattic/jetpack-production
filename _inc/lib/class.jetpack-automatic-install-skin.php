@@ -2,7 +2,7 @@
 /**
  * This file has been moved to the jetpack-plugins-installer package
  *
- * @deprecated 10.7-a.0
+ * @deprecated 10.7
  *
  * @package jetpack
  */
