@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Updated the Payment block Upgrade nudge description to include the plan name that's required to use the block
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init Jetpack 10.7-a.2 cycle
 
