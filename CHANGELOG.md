@@ -13,7 +13,6 @@ This is an alpha version! The changes listed here are not final.
 - WordAds: deprecate the legacy Ad Widget in favor of the Ad Block onwhen adding new Ad Widgets via the block-based widget editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- E2E tests: merged Github workflows
 - Fixed some new PHPCS warnings.
 - Fix potential use of unexisting "allow_download" property in VideoPress media modal
 - Init Jetpack 10.7-a.2 cycle
