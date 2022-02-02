@@ -43,7 +43,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-admin-ui',
             'aliases' => array(),
-            'reference' => '7c9563d54caf9552f03e7c63fc1b4129369072ab',
+            'reference' => '20212404bef8bcd34cc955e078a744d80553c2d7',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-assets' => array(

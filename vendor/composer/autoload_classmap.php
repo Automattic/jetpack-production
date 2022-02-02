@@ -66,6 +66,7 @@ return array(
     'Automattic\\Jetpack\\My_Jetpack\\Module_Product' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-module-product.php',
     'Automattic\\Jetpack\\My_Jetpack\\Product' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-product.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-products.php',
+    'Automattic\\Jetpack\\My_Jetpack\\Products\\Anti_Spam' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-anti-spam.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Backup' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-backup.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Boost' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-boost.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Crm' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-crm.php',
