@@ -98,6 +98,10 @@ return array(
 		'version' => '0.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/classic-search/class-classic-search.php'
 	),
+	'Automattic\\Jetpack\\Search\\Search_Widget' => array(
+		'version' => '0.6.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/widgets/class-search-widget.php'
+	),
 	'Automattic\\Jetpack\\Search\\REST_Controller' => array(
 		'version' => '0.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-rest-controller.php'

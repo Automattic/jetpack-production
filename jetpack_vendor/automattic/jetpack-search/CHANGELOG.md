@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Search: move search widgets to package
 - Updated package dependencies
 
 ## [0.6.0] - 2022-02-02
