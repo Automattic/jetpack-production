@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies
 
+### Fixed
+- Fix My Jetpack's reducer for SET_PRODUCT_STATUS
+
 ## [0.5.0] - 2022-02-02
 ### Added
 - Added plugin installation functionality
