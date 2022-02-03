@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Restore getProduct() resolver
 
 ### Changed
+- My Jetpack: Update notice style and implements redirect for connection route
 - Updated package dependencies
 
 ### Fixed
