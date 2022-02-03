@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Init Jetpack 10.7-a.2 cycle
 - Search: move search widget to the search pacakge
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## 10.7-a.1 - 2022-02-02
 ### Enhancements

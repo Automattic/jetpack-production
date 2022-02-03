@@ -66,7 +66,7 @@ return array(
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.6.9999999-dev',
+      'ver' => '0.7.9999999-dev',
     ),
   ),
 );
