@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Make premium content block be more consistent: Use 'Guest' rather than visitor/Logged-out
 - Updated the Payment block Upgrade nudge description to include the plan name that's required to use the block
 
 ### Improved compatibility
