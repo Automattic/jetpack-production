@@ -142,6 +142,10 @@ return array(
 		'version' => '0.7.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/dashboard/class-initial-state.php'
 	),
+	'Automattic\\Jetpack\\Search\\CLI' => array(
+		'version' => '0.7.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-cli.php'
+	),
 	'Automattic\\Jetpack\\My_Jetpack\\REST_Products' => array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-products.php'

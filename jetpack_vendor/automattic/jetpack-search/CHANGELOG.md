@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Search Dashboard: add scaffolding for new record meter
+- Search package: added auto config CLI
 
 ### Changed
 - Search: move search widgets to package
