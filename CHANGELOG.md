@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated the Payment block Upgrade nudge description to include the plan name that's required to use the block
 
 ### Improved compatibility
+- Internet Defense League widget: Widget deprecation
 - WordAds: deprecate the legacy Ad Widget in favor of the Ad Block onwhen adding new Ad Widgets via the block-based widget editor.
 
 ### Bug fixes
