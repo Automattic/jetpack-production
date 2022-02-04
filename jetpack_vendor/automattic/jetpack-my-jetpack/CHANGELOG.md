@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Boost interstitial cmp.
 - Add has_required_plan to product info and implement method in Search
 - Add Product princign harcoded data
+- Add search product data
 - Add title and features to products data
 - anti spam product class
 - Connect Boost card with the interstitial page via /add-boost root
