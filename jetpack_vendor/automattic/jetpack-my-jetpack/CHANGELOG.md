@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - anti spam product class
 - Connect Boost card with the interstitial page via /add-boost root
 - Fire Tracks event when clickn Add link on My Jetpack product card
+- Fire Tracks event when showing the Interstitial page
 - Introduce ProductDetailCard component
 - My Jetpack: Add Connection screen
 - Restore getProduct() resolver
