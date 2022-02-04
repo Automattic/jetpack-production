@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Fire Tracks event when clicking CTA button on product Interstitial page
 - Fire Tracks event when clickn Add link on My Jetpack product card
 - Fire Tracks event when showing the Interstitial page
+- Introduce basic Layout component. Add GoBackLink component
 - Introduce ProductDetailCard component
 - My Jetpack: Add Connection screen
 - Restore getProduct() resolver
