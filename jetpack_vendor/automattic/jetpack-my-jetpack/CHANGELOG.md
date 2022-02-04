@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Introduce ProductDetailCard component
 - My Jetpack: Add Connection screen
 - Restore getProduct() resolver
+- useCallback for functions that are bound to onEvents
 
 ### Changed
 - My Jetpack: Update notice style and implements redirect for connection route
