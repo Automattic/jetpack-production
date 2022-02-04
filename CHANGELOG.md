@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Internet Defense League widget: Widget deprecation
+- update lock file
 - WordAds: deprecate the legacy Ad Widget in favor of the Ad Block onwhen adding new Ad Widgets via the block-based widget editor.
 
 ### Bug fixes

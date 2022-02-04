@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add Boost interstitial cmp.
+- Add has_required_plan to product info and implement method in Search
 - Add Product princign harcoded data
 - Add title and features to products data
 - anti spam product class

@@ -10,6 +10,10 @@ return array(
 		'version' => '1.17.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-assets/actions.php'
 	),
+	'c41c8291342c1bc5fcb32cf6fda33a14' => array(
+		'version' => '0.7.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/search.php'
+	),
 	'd4eb94df91a729802d18373ee8cdc79f' => array(
 		'version' => '1.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/actions.php'
@@ -17,9 +21,5 @@ return array(
 	'009de6aaa0d497eacea41fab13fc05f1' => array(
 		'version' => '1.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/functions.php'
-	),
-	'c41c8291342c1bc5fcb32cf6fda33a14' => array(
-		'version' => '0.7.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/search.php'
 	),
 );
