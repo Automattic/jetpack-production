@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix My Jetpack's reducer for SET_PRODUCT_STATUS
 - Fix the redirect URL value
+- typo
 
 ## [0.5.0] - 2022-02-02
 ### Added
