@@ -76,7 +76,6 @@
 			"pnpm run watch"
 		]
 	},
-	"repositories": [],
 	"autoload": {
 		"classmap": [
 			"src"
