@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added Jetpack Partner Coupon banner on My Plan page
 - Make premium content block be more consistent: Use 'Guest' rather than visitor/Logged-out
 - The Backup banner CTA on the At-a-Glance page will now be replaced with a "Redeem Coupon" CTA when a partner coupon is detected
 - Updated the Payment block Upgrade nudge description to include the plan name that's required to use the block
