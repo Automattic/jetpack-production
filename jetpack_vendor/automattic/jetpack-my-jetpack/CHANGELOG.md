@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Introduce basic Layout component. Add GoBackLink component
 - Introduce ProductDetailCard component
 - My Jetpack: Add Connection screen
+- Plan verification for Backup and Scan
 - Restore getProduct() resolver
 - useCallback for functions that are bound to onEvents
 
