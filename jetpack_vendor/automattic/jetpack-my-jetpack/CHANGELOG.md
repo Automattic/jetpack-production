@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Fire Tracks event when clickn Add link on My Jetpack product card
 - Fire Tracks event when showing the Interstitial page
 - Implement Free price for Boost product
+- Implement Search product interstitial
 - Introduce basic Layout component. Add GoBackLink component
 - Introduce ProductDetailCard component
 - My Jetpack: Add Connection screen
