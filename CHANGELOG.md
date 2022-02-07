@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated the Payment block Upgrade nudge description to include the plan name that's required to use the block
 
 ### Improved compatibility
+- Added title and aria-label to VideoPress iframe embeds for better screen reader support.
 - Internet Defense League widget: Widget deprecation
 - update lock file
 - WordAds: deprecate the legacy Ad Widget in favor of the Ad Block onwhen adding new Ad Widgets via the block-based widget editor.
