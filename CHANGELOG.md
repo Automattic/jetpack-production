@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added Jetpack Partner Coupon banner on My Plan page
 - Don't offer to transform a premium content block to a premium content block
 - Make premium content block be more consistent: Use 'Guest' rather than visitor/Logged-out
+- Removed duplicate docblock for jetpack_relatedposts_returned_results filter and updated $post_id type to int
 - The Backup banner CTA on the At-a-Glance page will now be replaced with a "Redeem Coupon" CTA when a partner coupon is detected
 - Updated the logic for "Activate a Product" button in "My Plan" to be always visible.
 - Updated the Payment block Upgrade nudge description to include the plan name that's required to use the block
