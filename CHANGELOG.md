@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changes the default for the `Match video` setting to `true` for VideoPress videos.
+- Dashboard: hide the Scan card on Atomic sites.
 - E2E tests: merged Github workflows
 - Fixed some new PHPCS warnings.
 - Fix potential use of unexisting "allow_download" property in VideoPress media modal
