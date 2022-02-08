@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed some new PHPCS warnings.
 - Fix potential use of unexisting "allow_download" property in VideoPress media modal
 - Init Jetpack 10.7-a.2 cycle
+- Moved get-jetpack-data file to js-package/shared-extension-utils and updated imports
 - Search: move search widget to the search pacakge
 - Updated package dependencies.
 - Updated package dependencies.
