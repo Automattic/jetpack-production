@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
+- Widget Visibility: switch to using shared js package utility instead of built-in site type check.
 
 ## 10.7-a.1 - 2022-02-02
 ### Enhancements
