@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Changes the default for the `Match video` setting to `true` for VideoPress videos.
 - Dashboard: hide the Scan card on Atomic sites.
 - E2E tests: merged Github workflows
+- E2E tests: update eslint configuration
 - Fixed some new PHPCS warnings.
 - Fix potential use of unexisting "allow_download" property in VideoPress media modal
 - Init Jetpack 10.7-a.2 cycle
