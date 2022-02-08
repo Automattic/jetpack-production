@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Widget Visibility: update to match new user query parameter introduced in WordPress 5.9.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: move plugin registering utility to standalone package.
 - Blocks: remove BlockIcon wrapper for multiple blocks.
 - Changes the default for the `Match video` setting to `true` for VideoPress videos.
 - Dashboard: hide the Scan card on Atomic sites.
