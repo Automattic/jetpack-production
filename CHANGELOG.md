@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Added title and aria-label to VideoPress iframe embeds for better screen reader support.
 - Internet Defense League widget: Widget deprecation
 - update lock file
+- update lock files
 - WordAds: deprecate the legacy Ad Widget in favor of the Ad Block onwhen adding new Ad Widgets via the block-based widget editor.
 
 ### Bug fixes

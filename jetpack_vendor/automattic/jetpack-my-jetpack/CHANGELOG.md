@@ -35,6 +35,9 @@ This is an alpha version! The changes listed here are not final.
 - Support multiple possible folder for each plugin
 - Updated package dependencies
 
+### Removed
+- dependency from search package
+
 ### Fixed
 - Fix My Jetpack's reducer for SET_PRODUCT_STATUS
 - Fix the redirect URL value
