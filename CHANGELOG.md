@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Moved get-jetpack-extension-availability file to js-package/shared-extension-utils and updated imports
 - Moved get-site-fragment file to js-package/shared-extension-utils and updated imports
 - Moved site-tyoe-utils file to js-package/shared-extension-utils and updated imports
+- Removed separate pnpm workspace for e2e tests.
 - Search: move search widget to the search pacakge
 - Updated package dependencies.
 - Updated package dependencies.
