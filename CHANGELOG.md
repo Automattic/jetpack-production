@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - WordAds: deprecate the legacy Ad Widget in favor of the Ad Block onwhen adding new Ad Widgets via the block-based widget editor.
 
 ### Bug fixes
+- Cast selectedPlanId to boolean to remove a "0" character after block upgrade nudge.
 - Contact Form: ensure form validation uses the correct variable types.
 - Tiled Gallery Block: Fix performance issue affecting page views that use the Tiled Gallery.
 - Unroll Twitter Threads: ensure that only contributors can access the endpoint to unroll threads.
