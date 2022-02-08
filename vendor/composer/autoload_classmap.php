@@ -105,6 +105,8 @@ return array(
     'Automattic\\Jetpack\\Status\\Visitor' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-visitor.php',
     'Automattic\\Jetpack\\Sync\\Actions' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-actions.php',
     'Automattic\\Jetpack\\Sync\\Codec_Interface' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/interface-codec.php',
+    'Automattic\\Jetpack\\Sync\\Data_Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-data-settings.php',
+    'Automattic\\Jetpack\\Sync\\Default_Filter_Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-default-filter-settings.php',
     'Automattic\\Jetpack\\Sync\\Defaults' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-defaults.php',
     'Automattic\\Jetpack\\Sync\\Functions' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-functions.php',
     'Automattic\\Jetpack\\Sync\\Health' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-health.php',

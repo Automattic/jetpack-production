@@ -498,6 +498,10 @@ return array(
 		'version' => '1.29.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-functions.php'
 	),
+	'Automattic\\Jetpack\\Sync\\Data_Settings' => array(
+		'version' => '1.29.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-data-settings.php'
+	),
 	'Automattic\\Jetpack\\Sync\\Replicastore' => array(
 		'version' => '1.29.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-replicastore.php'
@@ -505,6 +509,10 @@ return array(
 	'Automattic\\Jetpack\\Sync\\Modules' => array(
 		'version' => '1.29.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-modules.php'
+	),
+	'Automattic\\Jetpack\\Sync\\Default_Filter_Settings' => array(
+		'version' => '1.29.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-default-filter-settings.php'
 	),
 	'Automattic\\Jetpack\\Error' => array(
 		'version' => '1.3.9999999.9999999-dev',
