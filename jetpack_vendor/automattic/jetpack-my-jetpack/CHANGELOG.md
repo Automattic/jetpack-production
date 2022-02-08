@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: Update notice style and implements redirect for connection route
+- Support multiple possible folder for each plugin
 - Updated package dependencies
 
 ### Fixed
