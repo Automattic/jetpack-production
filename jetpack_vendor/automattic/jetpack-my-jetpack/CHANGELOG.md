@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - useCallback for functions that are bound to onEvents
 
 ### Changed
+- My Jetpack: Implement handler of connection notices
 - My Jetpack: Update notice style and implements redirect for connection route
 - Support multiple possible folder for each plugin
 - Updated package dependencies
