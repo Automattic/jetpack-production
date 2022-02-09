@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add Scan product: interstitial, route, data, etc...
+- Set unlink=1 in the checkout URL when the user is not connected
 
 ## [0.6.0] - 2022-02-09
 ### Added
