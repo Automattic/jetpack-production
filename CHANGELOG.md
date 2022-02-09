@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added a new method to inline styles in the site editor.
 - Added Jetpack Partner Coupon banner on My Plan page
 - Don't offer to transform a premium content block to a premium content block
 - Make premium content block be more consistent: Use 'Guest' rather than visitor/Logged-out
