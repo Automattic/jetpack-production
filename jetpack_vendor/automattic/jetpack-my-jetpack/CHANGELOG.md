@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Add Scan product: interstitial, route, data, etc...
 - Set unlink=1 in the checkout URL when the user is not connected
 
+### Changed
+- Pass slug prop to event firing on product card button actions instead of name
+
 ## [0.6.0] - 2022-02-09
 ### Added
 - Add Boost interstitial cmp.
