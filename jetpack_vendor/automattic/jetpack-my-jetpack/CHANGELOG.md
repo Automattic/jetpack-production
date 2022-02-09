@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Introduce basic Layout component. Add GoBackLink component
 - Introduce ProductDetailCard component
 - My Jetpack: Add Connection screen
+- Pass slug prop to ProductCard'
 - Plan verification for Backup and Scan
 - Restore getProduct() resolver
 - Set the checkout URL for the Product detail component

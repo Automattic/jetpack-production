@@ -25,7 +25,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-a8c-mc-stats',
             'aliases' => array(),
-            'reference' => '2109c547b76cc6ce4c8e83ecafd54b1b55c89049',
+            'reference' => 'b64ff8653d399c58b452e3bebeef8a10fff1c1d5',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-abtest' => array(
@@ -34,7 +34,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-abtest',
             'aliases' => array(),
-            'reference' => 'a97537cbb1ef5ae7d82c8823aa5587e6b02deacd',
+            'reference' => '7739a52961b3841fa116808c308e1a1ef2f2d1f6',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-admin-ui' => array(
@@ -43,7 +43,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-admin-ui',
             'aliases' => array(),
-            'reference' => 'd78cc722226f5263f0cfce3c0aaab631b4674696',
+            'reference' => '08c5e27382d9ca8d55e89a8f38001a50fb329bb9',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-assets' => array(
@@ -52,7 +52,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-assets',
             'aliases' => array(),
-            'reference' => 'e1ec3858223a7dad5304d659ebb12a23146e7a23',
+            'reference' => '8318a1a73a9d6f0e96352b00534732f867920057',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-autoloader' => array(
@@ -61,7 +61,7 @@
             'type' => 'composer-plugin',
             'install_path' => __DIR__ . '/../automattic/jetpack-autoloader',
             'aliases' => array(),
-            'reference' => '6ec32e3296d645bedf816536c5dfc4d9b7edda65',
+            'reference' => 'bbb3fcec1e35c0cb2878b2435994bc983c81c9a3',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-backup' => array(
@@ -70,7 +70,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-backup',
             'aliases' => array(),
-            'reference' => 'ae2e37235f0479173e6b220024d356605b4091d8',
+            'reference' => '13621cef271e62f0763f1581483bbe32b723d861',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-blocks' => array(
@@ -79,7 +79,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-blocks',
             'aliases' => array(),
-            'reference' => '864d9412f34e4632d51e9dd4d307fafa5deb3e24',
+            'reference' => 'a605409f54986855bb74236cc50697fbd53c68e8',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-compat' => array(
@@ -88,7 +88,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-compat',
             'aliases' => array(),
-            'reference' => '3460cad584cf8abb60578248cc0a55fecf61581f',
+            'reference' => 'dd5bacbbc79d3a62beabdf8fb831855a3a8b7318',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-composer-plugin' => array(
@@ -97,7 +97,7 @@
             'type' => 'composer-plugin',
             'install_path' => __DIR__ . '/../automattic/jetpack-composer-plugin',
             'aliases' => array(),
-            'reference' => 'a6759848dfcce9aa33091afa2d5b0e7dbb4452b2',
+            'reference' => '188e9311bd4f2248f5832960f21466ec3d205023',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-config' => array(
@@ -106,7 +106,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-config',
             'aliases' => array(),
-            'reference' => '92fec51721a22fc5bbc28ca4cbcdb9b57b94deab',
+            'reference' => '6ddedf96a14b98f3f8e23fbf92f69a421500d9fe',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection' => array(
@@ -115,7 +115,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-connection',
             'aliases' => array(),
-            'reference' => '2c403c3e6bd5abb30f3ac20cbe644e4ef0b9b094',
+            'reference' => 'ac2b18ce82bb5d8493ea510ef9e4913bb4f0ce8c',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection-ui' => array(
@@ -124,7 +124,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-connection-ui',
             'aliases' => array(),
-            'reference' => '7e294f33133af0fdb8a42f3bced7f7f3cba7df5c',
+            'reference' => 'a5c6b5d6630e6ebeafe4e9e5374f717cccf9d625',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-constants' => array(
@@ -133,7 +133,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-constants',
             'aliases' => array(),
-            'reference' => 'f6aa8065cc3378e7a0b925aba6fac2476cfcc9f4',
+            'reference' => '4d23796aa241923d8d3248cac865bfb1d3b142d8',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-device-detection' => array(
@@ -142,7 +142,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-device-detection',
             'aliases' => array(),
-            'reference' => 'a5670e599d738fb9e6ab210d23f61ddc1c828a37',
+            'reference' => 'fe0663e9fce163520f400fa943da54e95879fb5d',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-error' => array(
@@ -151,7 +151,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-error',
             'aliases' => array(),
-            'reference' => '5b49157ef950c5ca565eda3fc4afa92fb67d2cda',
+            'reference' => '2028ea140c11b7ff5a737145416816ebb9252224',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-heartbeat' => array(
@@ -160,7 +160,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-heartbeat',
             'aliases' => array(),
-            'reference' => '5a4868d600491ed178e8c154d507bc88dc212ecd',
+            'reference' => 'cbfedf409104ca130dc774259ca8e1b9907f3c94',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-identity-crisis' => array(
@@ -169,7 +169,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-identity-crisis',
             'aliases' => array(),
-            'reference' => '15ddf87720cb726acafcd245e9012e83078a38f0',
+            'reference' => '2a631195e3a6db8f9eda1b7252caeb9411767251',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-jitm' => array(
@@ -178,7 +178,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-jitm',
             'aliases' => array(),
-            'reference' => 'fe5dfd7d9046f23a41c31ee76e08c359cecbfc0b',
+            'reference' => '76b358f5c9e3194cea59dee920823f2321912bfa',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-lazy-images' => array(
@@ -187,7 +187,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-lazy-images',
             'aliases' => array(),
-            'reference' => 'cc6bc776ab793bca3ff08d7b88dd73b9e31e18c2',
+            'reference' => '685a86854a1b086bb625a669d75bf00b283bea76',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-licensing' => array(
@@ -196,7 +196,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-licensing',
             'aliases' => array(),
-            'reference' => 'd8db4100a1073330d5fe2d83a84810bfd2736140',
+            'reference' => '275f5c8a1f0fea946b67a42e041af3182fb0559d',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-logo' => array(
@@ -205,7 +205,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-logo',
             'aliases' => array(),
-            'reference' => 'ba7ede6ba49a0e45840267b2fc9b80bf19eeb1dc',
+            'reference' => 'd8dbb77aa7f3ee1b5a9f308b5fd60294939ce7b9',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-my-jetpack' => array(
@@ -214,7 +214,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-my-jetpack',
             'aliases' => array(),
-            'reference' => '2c956f8b7cbb3705f28fb8b62e924916084dfe05',
+            'reference' => 'abb322cdaa28472c10851466dafe409d66ac1c51',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-options' => array(
@@ -223,7 +223,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-options',
             'aliases' => array(),
-            'reference' => '3ec80e0d24123d3253c33f6d595b05fde5a23e5a',
+            'reference' => '513ccfd0e8a12351968f50b691b3712bca4e8d2c',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-partner' => array(
@@ -232,7 +232,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-partner',
             'aliases' => array(),
-            'reference' => 'f65079787ff09ce169835ff72e4817e8a7be09a8',
+            'reference' => '3bd16cd9ffc60f934b45e313f99853d39e222441',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-password-checker' => array(
@@ -241,7 +241,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-password-checker',
             'aliases' => array(),
-            'reference' => '77b36a28931ec32a133117c9880a743bfef88f19',
+            'reference' => '8c7d821d556c76b779a62f8bd29768eaa6dff55e',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-plugins-installer' => array(
@@ -250,7 +250,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../automattic/jetpack-plugins-installer',
             'aliases' => array(),
-            'reference' => '1b36e1cbc48d5d2cad7f4e4e69fe3661d67c8fe0',
+            'reference' => '27b457a92e4c0c552f37b889e745f812714a23fb',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-redirect' => array(
@@ -259,7 +259,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-redirect',
             'aliases' => array(),
-            'reference' => '1f7758d109fd9dad46cef3a033fa74a5297e51ed',
+            'reference' => '5c7ce2e8a7c6e693265a8eaeab77f4a94840afe1',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-roles' => array(
@@ -268,7 +268,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-roles',
             'aliases' => array(),
-            'reference' => 'a4964d84753b2f794d910a1d72dc287bae222d6a',
+            'reference' => '11120d2827ecd91149157c8c0a7660c4cd474f3a',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-search' => array(
@@ -277,7 +277,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-search',
             'aliases' => array(),
-            'reference' => '2cad39ffc41a5f981782a11c9e4cba9fcaf759ce',
+            'reference' => '9871b7974b7535cff76082289ef5ef640cd71640',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-status' => array(
@@ -286,7 +286,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-status',
             'aliases' => array(),
-            'reference' => '4e9eb8791f2cdaca707bc4a5f387c8fa4f6d40a2',
+            'reference' => '8ca21560f87f86dc7457f9e59fa8e98e007923c1',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-sync' => array(
@@ -295,7 +295,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-sync',
             'aliases' => array(),
-            'reference' => '8c29f1d474c37653f4272c99b9e7e2bdd2e35e52',
+            'reference' => '293cdf157e4bd0283c34f7650fea6a96a43fde97',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-terms-of-service' => array(
@@ -304,7 +304,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-terms-of-service',
             'aliases' => array(),
-            'reference' => 'd3d4159075a047245958cf262bf994c3d244888e',
+            'reference' => 'e33c88424c0afcf201acdae895108e4d18096ef2',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-tracking' => array(
@@ -313,7 +313,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-tracking',
             'aliases' => array(),
-            'reference' => 'b8b9ce189cb36452339dc04e9977d50601ebf784',
+            'reference' => '13ab24037a4de451a1165d8bd825d25697d39236',
             'dev_requirement' => false,
         ),
         'nojimage/twitter-text-php' => array(
