@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - anti spam product class
 - Connect Boost card with the interstitial page via /add-boost root
 - Fire Tracks event when clicking CTA button on product Interstitial page
+- Fire Tracks event when clicking Manage button on product card
 - Fire Tracks event when clickn Add link on My Jetpack product card
 - Fire Tracks event when showing the Interstitial page
 - Implement Free price for Boost product
