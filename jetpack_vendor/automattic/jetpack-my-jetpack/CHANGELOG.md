@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added wpcom plan slug to product info
 - Add Scan product: interstitial, route, data, etc...
 - Set unlink=1 in the checkout URL when the user is not connected
+- Tidy Product stories
 
 ### Changed
 - My Jetpack: Update structure with Layout component
