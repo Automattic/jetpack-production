@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Cast selectedPlanId to boolean to remove a "0" character after block upgrade nudge.
 - Contact Form: ensure form validation uses the correct variable types.
+- Fix broken image in plan loading placeholder in "My Plan"
 - Tiled Gallery Block: Fix performance issue affecting page views that use the Tiled Gallery.
 - Unroll Twitter Threads: ensure that only contributors can access the endpoint to unroll threads.
 - Widget Visibility: update to match new user query parameter introduced in WordPress 5.9.
