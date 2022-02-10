@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - When content within a premium-content view is selected in the editor, switch to that view
 
 ### Improved compatibility
+- Adding note for translators
 - Removed the unused can_connect_service method
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
