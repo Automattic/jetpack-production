@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Tidy Product stories
 
 ### Changed
+- My Jetpack: Add global notices for activate/deactivate failures
 - My Jetpack: Apply correct style for CTA buttons on Interstitial
 - My Jetpack: Implement is fulfilled handler for product resolver
 - My Jetpack: Reduce size of boost and search interstitial images
