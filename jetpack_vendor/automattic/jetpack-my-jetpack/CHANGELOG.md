@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Reduce size of boost and search interstitial images
 - My Jetpack: Update structure with Layout component
 - Pass slug prop to event firing on product card button actions instead of name
+- Updated package dependencies.
 
 ## [0.6.0] - 2022-02-09
 ### Added
