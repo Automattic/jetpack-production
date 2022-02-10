@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- When content within a premium-content view is selected in the editor, switch to that view
+
 ### Improved compatibility
 - Removed the unused can_connect_service method
 
