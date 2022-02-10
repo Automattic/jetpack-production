@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Tidy Product stories
 
 ### Changed
+- My Jetpack: Apply correct style for CTA buttons on Interstitial
 - My Jetpack: Implement is fulfilled handler for product resolver
 - My Jetpack: Update structure with Layout component
 - Pass slug prop to event firing on product card button actions instead of name
