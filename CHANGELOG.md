@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - update lock file
 
 ### Bug fixes
+- Fix accidental inversion of the Premium Content block tabs
 - Form block: custom CSS classes added to the block are now applied on the frontend.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
