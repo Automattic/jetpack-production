@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Podcast Player block: Add Align (Wide and Full Width) and Spacing (Padding and Margin) tools
 - Updated the Free plan description to consider the currently active products
 - When content within a premium-content view is selected in the editor, switch to that view
 
