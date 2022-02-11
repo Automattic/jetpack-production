@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Set unlink=1 in the checkout URL when the user is not connected
 - Tidy Product stories
 - Update Backup product data. Tweak Icon.
+- Update mock data for Search product. useMyJetpackNavigate() hook
 
 ### Changed
 - My Jetpack: Add global notices for activate/deactivate failures
