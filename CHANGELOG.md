@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- About page: only fetch a11n data when page is active.
 - Added a "Remove block and keep content" Settings menu item for Premium content blocks and fixed transformations to groups.
 - Don't allow core markup blocks to be transformed to Premium Content block (e.g. core/nextpage, core/spacer)
 - Form block: add support for color and spacing block options.
