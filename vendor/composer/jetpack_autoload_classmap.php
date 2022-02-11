@@ -303,11 +303,11 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-plugins-installer/src/class-automatic-install-skin.php'
 	),
 	'Automattic\\Jetpack\\Partner_Coupon' => array(
-		'version' => '1.6.9999999.9999999-dev',
+		'version' => '1.7.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner-coupon.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
-		'version' => '1.6.9999999.9999999-dev',
+		'version' => '1.7.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner.php'
 	),
 	'Automattic\\Jetpack\\Sync\\Replicastore_Interface' => array(
