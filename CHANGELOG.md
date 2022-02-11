@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Updated the Free plan description to consider the currently active products
 - When content within a premium-content view is selected in the editor, switch to that view
 
 ### Improved compatibility
