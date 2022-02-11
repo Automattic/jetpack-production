@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added a "Remove block and keep content" Settings menu item for Premium content blocks and fixed transformations to groups.
 - Don't allow core markup blocks to be transformed to Premium Content block (e.g. core/nextpage, core/spacer)
+- Form block: add support for color and spacing block options.
 - Podcast Player block: Add Align (Wide and Full Width) and Spacing (Padding and Margin) tools
 - Related Posts block: Add design tools (align, color, typography & spacing)
 - Repeat Visitor block: Add the Align tool (Wide and Full Width)
@@ -20,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Removed the unused can_connect_service method
 - Search: Add deprecated class to prevent third-party integrations from failing after 10.6 updates.
 - update lock file
+
+### Bug fixes
+- Form block: custom CSS classes added to the block are now applied on the frontend.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.7-a.4 cycle
