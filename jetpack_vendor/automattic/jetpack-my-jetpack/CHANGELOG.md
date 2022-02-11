@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Anti-Spam Product detail card
 - Added wpcom plan slug to product info
 - Add Scan product: interstitial, route, data, etc...
+- Add Security Product Bundle
 - consume prices dynamically
 - Fire Tracks Event when user clicks on Product Interstitial Back link
 - Refactoring -> add icons component -> tweak icons for interstitial pages
