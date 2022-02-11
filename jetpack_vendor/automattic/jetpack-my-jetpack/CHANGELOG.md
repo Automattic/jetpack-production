@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Update structure with Layout component
 - Only show the deactivate action when it makes sense
 - Pass slug prop to event firing on product card button actions instead of name
+- Replace renderActionButton function for ActionButton component
 - Updated package dependencies.
 
 ## [0.6.0] - 2022-02-09
