@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a "Remove block and keep content" Settings menu item for Premium content blocks and fixed transformations to groups.
 - Don't allow core markup blocks to be transformed to Premium Content block (e.g. core/nextpage, core/spacer)
 - Form block: add support for color and spacing block options.
+- Mailchimp block: Add align, color and spacing features
 - Podcast Player block: Add Align (Wide and Full Width) and Spacing (Padding and Margin) tools
 - Related Posts block: Add design tools (align, color, typography & spacing)
 - Repeat Visitor block: Add the Align tool (Wide and Full Width)
