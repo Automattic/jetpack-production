@@ -35,6 +35,9 @@ This is an alpha version! The changes listed here are not final.
 - Replace renderActionButton function for ActionButton component
 - Updated package dependencies.
 
+### Fixed
+- Remove duplicted Icon in Product Card story
+
 ## [0.6.0] - 2022-02-09
 ### Added
 - Add Boost interstitial cmp.
