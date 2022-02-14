@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - update lock file
 
 ### Bug fixes
+- Blocks: Cron requests are now considered frontend requests, so blocks will no longer be rendered as fallbacks on those.
 - Fix accidental inversion of the Premium Content block tabs
 - Form block: custom CSS classes added to the block are now applied on the frontend.
 
