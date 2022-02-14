@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Fixed connection check labels and error message
 - Fix upgradability for anti-spam and backup products
 - Remove duplicted Icon in Product Card story
 
