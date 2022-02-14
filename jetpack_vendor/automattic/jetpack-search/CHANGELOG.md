@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Clicking outside overlay now closes overlay
+- Search: add tier maximum records for Record Meter
 
 ### Changed
 - Updated package dependencies.
