@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Fix upgradability for anti-spam and backup products
 - Remove duplicted Icon in Product Card story
 
 ## [0.6.0] - 2022-02-09
