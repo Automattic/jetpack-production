@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Scan product: interstitial, route, data, etc...
 - Add Security Product Bundle
 - consume prices dynamically
+- Finish Backup, Anti-Spam and Scan interstitial pages
 - Fire Tracks Event when user clicks on Product Interstitial Back link
 - Refactoring -> add icons component -> tweak icons for interstitial pages
 - Set unlink=1 in the checkout URL when the user is not connected
