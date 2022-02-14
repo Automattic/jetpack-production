@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Pass slug prop to event firing on product card button actions instead of name
 - Replace renderActionButton function for ActionButton component
 - Updated package dependencies.
+- Use useMyJetpackNavigate when it worths it
 
 ### Fixed
 - Fixed connection check labels and error message
