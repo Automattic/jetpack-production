@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.7-a.4 cycle
+- Update the path to the extension-availability util function on native mobile, after it has been updated for the web.
 
 ## 10.7-a.3 - 2022-02-09
 ### Enhancements
