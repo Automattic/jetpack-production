@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed connection check labels and error message
 - Fix upgradability for anti-spam and backup products
 - Remove duplicted Icon in Product Card story
+- Use key when looping through product detail icons
 
 ## [0.6.0] - 2022-02-09
 ### Added
