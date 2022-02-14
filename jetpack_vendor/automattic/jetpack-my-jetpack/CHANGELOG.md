@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Security Product Bundle
 - Add VideoPress data
 - Add VideoPress interstitial cmp. Story.
+- Add `#/add-videopress` route
 - consume prices dynamically
 - Finish Backup, Anti-Spam and Scan interstitial pages
 - Fire Tracks Event when user clicks on Product Interstitial Back link
