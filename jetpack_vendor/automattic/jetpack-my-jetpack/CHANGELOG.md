@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Apply correct style for CTA buttons on Interstitial
 - My Jetpack: Avoid usage of 100vh on layout
 - My Jetpack: Implement is fulfilled handler for product resolver
+- My Jetpack: Improve global notice layout
 - My Jetpack: Reduce size of boost and search interstitial images
 - My Jetpack: Update structure with Layout component
 - Only pass a productUrl if the product is not free on interstitial pages
