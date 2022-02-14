@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Finish Backup, Anti-Spam and Scan interstitial pages
 - Fire Tracks Event when user clicks on Product Interstitial Back link
 - Refactoring -> add icons component -> tweak icons for interstitial pages
+- Restore Security bundle card in the UI
 - Set default values for product data in the client (custom hook)
 - Set unlink=1 in the checkout URL when the user is not connected
 - Tidy Product stories
