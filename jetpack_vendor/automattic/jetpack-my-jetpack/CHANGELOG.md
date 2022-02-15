@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Restore Security bundle card in the UI
 - Set default values for product data in the client (custom hook)
 - set product status as error if active and requiring a missing user connection
+- Set properly the checkout link for Products
 - Set unlink=1 in the checkout URL when the user is not connected
 - Tidy Product stories
 - Update Backup product data. Tweak Icon.
