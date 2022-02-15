@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Adapt Scan actiavtion behavior as it is not a module
 - Fix setting height of the Product title in the detail component
 - My Jetpack: Add global notices for activate/deactivate failures
+- My Jetpack: Add manage redirect
 - My Jetpack: Apply correct style for CTA buttons on Interstitial
 - My Jetpack: Avoid usage of 100vh on layout
 - My Jetpack: Implement is fulfilled handler for product resolver
