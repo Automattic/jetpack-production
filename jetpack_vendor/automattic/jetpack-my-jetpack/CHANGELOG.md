@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Install proudcts from interstitial pages
 - Make click on Fix connection show connection route
 - package version to main class
+- Pull product discount from wpcom
 - Refactoring -> add icons component -> tweak icons for interstitial pages
 - Register `#/add-anti-spam` route. Connect with interstitial page
 - Restore Security bundle card in the UI
