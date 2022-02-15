@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Anti-Spam Product detail card
 - Add CRM interstitial page
 - Added wpcom plan slug to product info
+- add manage and post activation urls
 - Add Scan product: interstitial, route, data, etc...
 - Add Security Product Bundle
 - Add VideoPress data

@@ -650,13 +650,13 @@ return array(
 		'version' => '1.36.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-rest-authentication.php'
 	),
-	'Automattic\\Jetpack\\Redirect' => array(
-		'version' => '1.7.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php'
-	),
 	'Automattic\\Jetpack\\Heartbeat' => array(
 		'version' => '1.4.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-heartbeat/src/class-heartbeat.php'
+	),
+	'Automattic\\Jetpack\\Redirect' => array(
+		'version' => '1.7.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php'
 	),
 	'Automattic\\Jetpack\\Roles' => array(
 		'version' => '1.4.9999999.9999999-dev',
