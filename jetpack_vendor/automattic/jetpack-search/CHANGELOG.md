@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Search package: fixed undefined index features
+
 ## [0.7.0] - 2022-02-09
 ### Added
 - Search Dashboard: add scaffolding for new record meter
