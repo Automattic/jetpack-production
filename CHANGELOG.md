@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Adding note for translators
+- Image CDN: ensure that SVG images added to posts thanks to the SVG Support plugin can be displayed even when Jetpack's Image CDN is active.
 - Removed the unused can_connect_service method
 - Search: Add deprecated class to prevent third-party integrations from failing after 10.6 updates.
 - update lock file
