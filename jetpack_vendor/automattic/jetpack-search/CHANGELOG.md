@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Search package: fixed undefined index features
+- Search package: should not exclude widget js in package distribution
 
 ## [0.7.0] - 2022-02-09
 ### Added
