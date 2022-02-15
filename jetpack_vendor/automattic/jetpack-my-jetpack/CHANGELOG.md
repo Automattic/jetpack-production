@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - consume prices dynamically
 - Finish Backup, Anti-Spam and Scan interstitial pages
 - Fire Tracks Event when user clicks on Product Interstitial Back link
+- Install proudcts from interstitial pages
 - Make click on Fix connection show connection route
 - Refactoring -> add icons component -> tweak icons for interstitial pages
 - Register `#/add-anti-spam` route. Connect with interstitial page
