@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Make debug bar more reliable
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added executing the WAF as part of the Jetpack plugin.
 - Init 10.7-a.4 cycle
 - PHPCS Changes for the first handful of JSON endpoints.
 - Premium Content Block: restrict registration to WPcom.
