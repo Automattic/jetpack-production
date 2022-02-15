@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: add tier maximum records for Record Meter
 
 ### Changed
+- Change `instance` function for improved compatibility
 - Updated package dependencies.
 
 ### Fixed

@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix accidental inversion of the Premium Content block tabs
 - Form block: custom CSS classes added to the block are now applied on the frontend.
 - Media Buttons: Fix external medial modal cannot be closed
+- Search: Make debug bar more reliable
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.7-a.4 cycle
