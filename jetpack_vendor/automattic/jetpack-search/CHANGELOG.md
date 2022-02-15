@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Form: avoid React warning.
 - Search package: fixed undefined index features
 - Search package: should not exclude widget js in package distribution
 
