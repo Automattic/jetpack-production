@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Removed the unused can_connect_service method
 - Search: Add deprecated class to prevent third-party integrations from failing after 10.6 updates.
 - update lock file
+- update lock file
 
 ### Bug fixes
 - Blocks: Cron requests are now considered frontend requests, so blocks will no longer be rendered as fallbacks on those.
