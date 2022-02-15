@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: Cron requests are now considered frontend requests, so blocks will no longer be rendered as fallbacks on those.
 - Fix accidental inversion of the Premium Content block tabs
 - Form block: custom CSS classes added to the block are now applied on the frontend.
+- Media Buttons: Fix external medial modal cannot be closed
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.7-a.4 cycle
