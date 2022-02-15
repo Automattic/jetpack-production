@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Only pass a productUrl if the product is not free on interstitial pages
 - Only show the deactivate action when it makes sense
 - Pass slug prop to event firing on product card button actions instead of name
+- Remove unnecessary payload from  request to activate or deactivate a product
 - Replace renderActionButton function for ActionButton component
 - Updated package dependencies.
 - Use useMyJetpackNavigate when it worths it
