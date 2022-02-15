@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add Anti-Spam Product detail card
+- Add CRM interstitial page
 - Added wpcom plan slug to product info
 - Add Scan product: interstitial, route, data, etc...
 - Add Security Product Bundle
