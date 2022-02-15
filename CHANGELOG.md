@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.7-a.4 cycle
+- PHPCS Changes for the first handful of JSON endpoints.
 - Premium Content Block: restrict registration to WPcom.
 - Unroll Twitter Threads: revert endpoint to public.
 - Update the path to the extension-availability util function on native mobile, after it has been updated for the web.
