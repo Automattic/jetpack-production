@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Add VideoPress interstitial cmp. Story.
 - Add `#/add-videopress` route
 - consume prices dynamically
+- Do not show Porduct price when plan has required plan
 - Finish Backup, Anti-Spam and Scan interstitial pages
 - Fire Tracks Event when user clicks on Product Interstitial Back link
 - Install proudcts from interstitial pages
