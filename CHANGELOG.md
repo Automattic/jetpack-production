@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 10.7-a.4 cycle
 - PHPCS Changes for the first handful of JSON endpoints.
 - Premium Content Block: restrict registration to WPcom.
+- Reworked the redeem partner coupon component implementation to match latest requirements for post-connection display
 - Unroll Twitter Threads: revert endpoint to public.
 - Update the path to the extension-availability util function on native mobile, after it has been updated for the web.
 

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added the ability to specify a partner logo for each supported partner
 - Remotely check if partner coupon looks valid
 
 ## [1.6.4] - 2022-01-25
