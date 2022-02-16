@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Improve Product detail layout
 
+### Changed
+- My Jetpack: Fix interstitial cta buttons layout
+
 ### Fixed
 - Fix check for plugin installation for hybrid products
 - Fix clicks on VideoPress and CRM cards
