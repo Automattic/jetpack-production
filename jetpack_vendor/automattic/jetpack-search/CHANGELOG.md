@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Form: avoid React warning.
+- Search: improve display of colorpicker in Customberg
 - Search package: fixed undefined index features
 - Search package: should not exclude widget js in package distribution
 
