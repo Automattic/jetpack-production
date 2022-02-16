@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.6.1] - 2022-02-16
 ### Added
 - Add Anti-Spam Product detail card
 - Add CRM interstitial page
@@ -42,22 +39,22 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Adapt Scan actiavtion behavior as it is not a module
+- Add global notices for activate/deactivate failures
+- Add manage redirect
+- Apply correct style for CTA buttons on Interstitial
+- Avoid usage of 100vh on layout
 - Fix setting height of the Product title in the detail component
-- My Jetpack: Add global notices for activate/deactivate failures
-- My Jetpack: Add manage redirect
-- My Jetpack: Apply correct style for CTA buttons on Interstitial
-- My Jetpack: Avoid usage of 100vh on layout
-- My Jetpack: Implement is fulfilled handler for product resolver
-- My Jetpack: Improve global notice layout
-- My Jetpack: Reduce size of boost and search interstitial images
-- My Jetpack: Update structure with Layout component
+- Implement is fulfilled handler for product resolver
+- Improve global notice layout
+- Reduce size of boost and search interstitial images
+- Update structure with Layout component
 - Only pass a productUrl if the product is not free on interstitial pages
 - Only show the deactivate action when it makes sense
 - Pass slug prop to event firing on product card button actions instead of name
 - Remove unnecessary payload from  request to activate or deactivate a product
 - Replace renderActionButton function for ActionButton component
 - Updated package dependencies.
-- Use useMyJetpackNavigate when it worths it
+- Use useMyJetpackNavigate when it's worth it
 
 ### Fixed
 - Fixed connection check labels and error message
@@ -235,7 +232,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[0.6.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.0...0.6.1-alpha
+[0.6.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.0...0.6.1
 [0.6.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.3.3...0.4.0

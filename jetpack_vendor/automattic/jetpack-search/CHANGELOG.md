@@ -5,14 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.8.0] - 2022-02-16
 ### Added
+- Add babel/runtime to dev dependencies
+- Add tier maximum records for Record Meter
 - Clicking outside overlay now closes overlay
-- Search: add babel/runtime to dev dependencies
-- Search: add tier maximum records for Record Meter
 
 ### Changed
 - Change `instance` function for improved compatibility
@@ -20,9 +17,9 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Form: avoid React warning.
-- Search: improve display of colorpicker in Customberg
-- Search package: fixed undefined index features
-- Search package: should not exclude widget js in package distribution
+- Improve display of colorpicker in Customberg
+- Fixed undefined index features
+- Should not exclude widget js in package distribution
 
 ## [0.7.0] - 2022-02-09
 ### Added
@@ -116,7 +113,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.8.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.7.0...v0.8.0-alpha
+[0.8.0]: https://github.com/Automattic/jetpack-search/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/Automattic/jetpack-search/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/Automattic/jetpack-search/compare/v0.5.4...v0.6.0
 [0.5.4]: https://github.com/Automattic/jetpack-search/compare/v0.5.3...v0.5.4

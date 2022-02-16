@@ -653,7 +653,7 @@ class Jetpack_SSO {
 	/**
 	 * Clean up after Jetpack gets disconnected.
 	 *
-	 * @since 10.7-a.4
+	 * @since 10.7
 	 */
 	public static function disconnect() {
 		if ( Jetpack::connection()->is_user_connected() ) {
