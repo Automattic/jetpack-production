@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Improve Product detail layout
 
 ### Fixed
+- Fix check for plugin installation for hybrid products
 - Fix clicks on VideoPress and CRM cards
 
 ## [0.6.1] - 2022-02-16
