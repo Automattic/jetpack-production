@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix check for plugin installation for hybrid products
 - Fix clicks on VideoPress and CRM cards
+- Fix Product prices
 - Make Scan and Search interstitials install the plugin
 
 ## [0.6.1] - 2022-02-16
