@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Improve Product detail layout
 
+### Fixed
+- Fix clicks on VideoPress and CRM cards
+
 ## [0.6.1] - 2022-02-16
 ### Added
 - Add Anti-Spam Product detail card
