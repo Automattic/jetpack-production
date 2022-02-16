@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AhoCorasick\\MultiStringMatcher' => $vendorDir . '/wikimedia/aho-corasick/src/MultiStringMatcher.php',
+    'AhoCorasick\\MultiStringReplacer' => $vendorDir . '/wikimedia/aho-corasick/src/MultiStringReplacer.php',
     'Automattic\\Jetpack\\A8c_Mc_Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php',
     'Automattic\\Jetpack\\Abtest' => $baseDir . '/jetpack_vendor/automattic/jetpack-abtest/src/class-abtest.php',
     'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => $baseDir . '/jetpack_vendor/automattic/jetpack-admin-ui/src/class-admin-menu.php',
@@ -72,9 +74,11 @@ return array(
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Crm' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-crm.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Scan' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-scan.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Search' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-search.php',
+    'Automattic\\Jetpack\\My_Jetpack\\Products\\Security' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-security.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Videopress' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-videopress.php',
     'Automattic\\Jetpack\\My_Jetpack\\REST_Products' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-products.php',
     'Automattic\\Jetpack\\My_Jetpack\\REST_Purchases' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-purchases.php',
+    'Automattic\\Jetpack\\My_Jetpack\\Wpcom_Products' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php',
     'Automattic\\Jetpack\\Partner' => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner.php',
     'Automattic\\Jetpack\\Partner_Coupon' => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner-coupon.php',
     'Automattic\\Jetpack\\Password_Checker' => $baseDir . '/jetpack_vendor/automattic/jetpack-password-checker/src/class-password-checker.php',
@@ -157,6 +161,11 @@ return array(
     'Automattic\\Jetpack\\Sync\\Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-utils.php',
     'Automattic\\Jetpack\\Terms_Of_Service' => $baseDir . '/jetpack_vendor/automattic/jetpack-terms-of-service/src/class-terms-of-service.php',
     'Automattic\\Jetpack\\Tracking' => $baseDir . '/jetpack_vendor/automattic/jetpack-tracking/src/class-tracking.php',
+    'Automattic\\Jetpack\\Waf\\WafOperators' => $vendorDir . '/automattic/jetpack-waf/src/class-waf-operators.php',
+    'Automattic\\Jetpack\\Waf\\WafRuleCompiler' => $vendorDir . '/automattic/jetpack-waf/src/class-waf-rule-compiler.php',
+    'Automattic\\Jetpack\\Waf\\WafRunner' => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runner.php',
+    'Automattic\\Jetpack\\Waf\\WafRuntime' => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runtime.php',
+    'Automattic\\Jetpack\\Waf\\WafTransforms' => $vendorDir . '/automattic/jetpack-waf/src/class-waf-transforms.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'JetpackTracking' => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpacktracking.php',
     'Jetpack_Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-client.php',
