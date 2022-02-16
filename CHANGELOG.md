@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.7-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 10.7-a.6 cycle
+
 ## 10.7-a.5 - 2022-02-16
 ### Enhancements
 - Blocks: add support for color and spacing block options for Form, Mailchimp, Podcast Player, and Related Posts blocks.
