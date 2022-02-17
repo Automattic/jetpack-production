@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: Fix interstitial cta buttons layout
+- Point the link of the Manage button of CRM to its dashboard
 
 ### Fixed
 - Fix check for plugin installation for hybrid products
