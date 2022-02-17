@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- WordPress.com REST API: avoid errors when restoring the previous version of an image from the WordPress.com dashboard.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix PHPCS violations for the Publicize module
 - Init 10.7-a.6 cycle
