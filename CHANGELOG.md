@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - WordPress.com REST API: avoid errors when restoring the previous version of an image from the WordPress.com dashboard.
+- WordPress.com REST API: avoid PHP warnings when accessing videos from the WordPress.com dashboard.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix PHPCS violations for the Publicize module
