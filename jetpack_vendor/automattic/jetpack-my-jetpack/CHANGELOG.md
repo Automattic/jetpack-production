@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add Beta badge for My Jetpack
 - Apply coupon discount to Product price when it exists
 - Improve Product detail layout
 
