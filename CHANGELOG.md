@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix PHPCS violations for the Publicize module
 - Init 10.7-a.6 cycle
 - PHPCS Changes for json-get endpoint files
+- Updated package dependencies
 
 ## 10.7-a.5 - 2022-02-16
 ### Enhancements
