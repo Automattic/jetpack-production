@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix clicks on VideoPress and CRM cards
 - Fix Product prices
 - Make Scan and Search interstitials install the plugin
+- Purchases: ensure we retrieve translated version of active purchases.
 
 ## [0.6.1] - 2022-02-16
 ### Added
