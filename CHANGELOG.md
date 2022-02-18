@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Circumvent CRM Wizard when activating the plugin from the Jetpack dashboard
 
 ### Bug fixes
+- Fix double escaping of connections in Classic Editor
 - WordPress.com REST API: avoid errors when restoring the previous version of an image from the WordPress.com dashboard.
 - WordPress.com REST API: avoid PHP warnings when accessing videos from the WordPress.com dashboard.
 
