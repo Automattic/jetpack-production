@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Beta badge for My Jetpack
 - Apply coupon discount to Product price when it exists
 - Improve Product detail layout
+- prevent calling activation hook when activating backup
 
 ### Changed
 - My Jetpack: Fix interstitial cta buttons layout
