@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Update the layout of interstitial page when it has an upgradable bundle
 
 ### Fixed
+- Check if product is active before checking if requires plan
 - Fix check for plugin installation for hybrid products
 - Fix clicks on VideoPress and CRM cards
 - Fix Product prices
