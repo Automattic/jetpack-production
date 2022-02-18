@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Move from isPressed to CSS vars
 - My Jetpack: Redirect connect user to connection interstitial
 - Point the link of the Manage button of CRM to its dashboard
+- Update the layout of interstitial page when it has an upgradable bundle
 
 ### Fixed
 - Fix check for plugin installation for hybrid products
