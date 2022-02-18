@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add Beta badge for My Jetpack
 - Apply coupon discount to Product price when it exists
+- Filesystem write access to the initial state
 - Improve Product detail layout
 - prevent calling activation hook when activating backup
 
