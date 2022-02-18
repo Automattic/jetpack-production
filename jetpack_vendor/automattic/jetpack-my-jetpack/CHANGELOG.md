@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - My Jetpack: Fix interstitial cta buttons layout
 - My Jetpack: Move from isPressed to CSS vars
+- My Jetpack: Redirect connect user to connection interstitial
 - Point the link of the Manage button of CRM to its dashboard
 
 ### Fixed
