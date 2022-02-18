@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress.com REST API: avoid PHP warnings when accessing videos from the WordPress.com dashboard.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add Sync related unit tests.
 - Fix PHPCS violations for the Publicize module
 - Fix WPCOM-specific linting errors
 - Init 10.7-a.6 cycle
@@ -22,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - PHPCS Changes for json-get endpoint files
 - Re-introduce CRM card on At A Glance page for Jetpack
 - Updated package dependencies
+- Updated package dependencies.
 - Updated package dependencies.
 
 ## 10.7-a.5 - 2022-02-16
