@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix PHPCS violations for the Publicize module
 - Fix WPCOM-specific linting errors
 - Init 10.7-a.6 cycle
+- Memoize calls to store_subscription when setting available features for site in order to reduce duplicate uncached queries
 - PHPCS Changes for json-get endpoint files
 - Re-introduce CRM card on At A Glance page for Jetpack
 - Updated package dependencies
