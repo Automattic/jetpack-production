@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - prevent calling activation hook when activating backup
 
 ### Changed
+- Improve redirect process after installing Product
 - My Jetpack: Fix interstitial cta buttons layout
 - My Jetpack: Move from isPressed to CSS vars
 - My Jetpack: Redirect connect user to connection interstitial
