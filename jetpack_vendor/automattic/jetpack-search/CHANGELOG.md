@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Search package: fix auto config doesn't add search input for block themes
+
 ## [0.8.0] - 2022-02-16
 ### Added
 - Add babel/runtime to dev dependencies
