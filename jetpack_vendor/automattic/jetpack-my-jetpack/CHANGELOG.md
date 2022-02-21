@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Check if product is active before checking if requires plan
 - Fix check for plugin installation for hybrid products
+- Fix click on security add click on My Jetpack interstitial
 - Fix clicks on VideoPress and CRM cards
 - Fix Product prices
 - Make Scan and Search interstitials install the plugin
