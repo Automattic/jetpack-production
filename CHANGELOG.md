@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Remove marketplace related add plugins menu redirect
+- Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
 
 ### Improved compatibility
 - Circumvent CRM Wizard when activating the plugin from the Jetpack dashboard
