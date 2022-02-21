@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Search: add stats endpoint to REST controller
 
+### Changed
+- Search package: refactor `auto_config_search` and run it from activation API
+
 ### Fixed
 - Search package: fix auto config doesn't add search input for block themes
 
