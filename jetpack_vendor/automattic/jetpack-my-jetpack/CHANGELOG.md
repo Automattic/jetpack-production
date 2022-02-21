@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Product prices
 - Make Scan and Search interstitials install the plugin
 - Purchases: ensure we retrieve translated version of active purchases.
+- Return needs purchase status for Module Products
 
 ## [0.6.1] - 2022-02-16
 ### Added
