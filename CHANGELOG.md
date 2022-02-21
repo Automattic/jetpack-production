@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Remove marketplace related add plugins menu redirect
+
 ### Improved compatibility
 - Circumvent CRM Wizard when activating the plugin from the Jetpack dashboard
 
