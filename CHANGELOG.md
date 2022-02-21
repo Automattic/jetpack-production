@@ -10,9 +10,6 @@ This is an alpha version! The changes listed here are not final.
 - Remove marketplace related add plugins menu redirect
 - Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
 
-### Improved compatibility
-- Circumvent CRM Wizard when activating the plugin from the Jetpack dashboard
-
 ### Bug fixes
 - Fix double escaping of connections in Classic Editor
 - Fix Fatal error in the WP.com customizer while in sandbox mode.
