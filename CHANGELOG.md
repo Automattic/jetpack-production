@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Improve plugins page load by moving data feching to asyn inside React
 - Remove marketplace related add plugins menu redirect
 - Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
 
@@ -27,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - PHPCS Changes for json-get endpoint files
 - Re-introduce CRM card on At A Glance page for Jetpack
 - Updated package dependencies
+- Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
