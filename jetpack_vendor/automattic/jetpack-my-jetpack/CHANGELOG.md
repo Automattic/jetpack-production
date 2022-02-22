@@ -14,9 +14,11 @@ This is an alpha version! The changes listed here are not final.
 - Apply coupon discount to Product price when it exists
 - Filesystem write access to the initial state
 - Improve Product detail layout
+- My Jetpack: Implement close link on layout nav
 - prevent calling activation hook when activating backup
 
 ### Changed
+- Improve My Jetpack link styles
 - Improve redirect process after installing Product
 - My Jetpack: Fix interstitial cta buttons layout
 - My Jetpack: Move from isPressed to CSS vars
