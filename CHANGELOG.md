@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
 
 ### Improved compatibility
+- Performance: improve performance for sites without VideoPress enabled.
 - Remove jetpack settings submenu from general settings menu when site doesn't have atomic supported plan.
 
 ### Bug fixes
