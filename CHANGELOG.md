@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.8-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 10.8-a.0 cycle
+
 ## 10.7-beta - 2022-02-22
 ### Enhancements
 - Dashboard: improve performance of plugins page.
