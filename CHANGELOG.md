@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
 
 ### Bug fixes
+- Address front-end rendering on Subscribe Block
 - Fix double escaping of connections in Classic Editor
 - Fix Fatal error in the WP.com customizer while in sandbox mode.
 - Style jetpack stats Screen Options label to show - currently no label text shows
