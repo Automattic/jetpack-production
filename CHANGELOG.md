@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Improve plugins page load by moving data feching to asyn inside React
 - Remove marketplace related add plugins menu redirect
+- Subscribe block: Add sync between button background color and border color
 - Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
 
 ### Improved compatibility
