@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Memoize calls to store_subscription when setting available features for site in order to reduce duplicate uncached queries
 - PHPCS Changes for json-get endpoint files
 - Re-introduce CRM card on At A Glance page for Jetpack
+- Subscribe block: Fix color serialization
 - Updated package dependencies
 - Updated package dependencies.
 - Updated package dependencies.
