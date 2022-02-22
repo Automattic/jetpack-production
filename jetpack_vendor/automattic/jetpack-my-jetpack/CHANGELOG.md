@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - prevent calling activation hook when activating backup
 
 ### Changed
+- Bump package versions.
 - Improve My Jetpack link styles
 - Improve redirect process after installing Product
 - My Jetpack: Fix interstitial cta buttons layout

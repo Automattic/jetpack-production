@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add Sync dedicated request flow.
 
+### Changed
+- Updated package dependencies.
+
 ## [1.29.2] - 2022-02-09
 ### Added
 - Allow sync package consumers to provide custom data settings.

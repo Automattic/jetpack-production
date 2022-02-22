@@ -731,15 +731,15 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-terms-of-service/src/class-terms-of-service.php'
 	),
 	'Automattic\\Jetpack\\Status\\Visitor' => array(
-		'version' => '1.10.9999999.9999999-dev',
+		'version' => '1.11.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-visitor.php'
 	),
 	'Automattic\\Jetpack\\Status' => array(
-		'version' => '1.10.9999999.9999999-dev',
+		'version' => '1.11.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-status.php'
 	),
 	'Automattic\\Jetpack\\Status\\Host' => array(
-		'version' => '1.10.9999999.9999999-dev',
+		'version' => '1.11.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-host.php'
 	),
 	'Jetpack_Options' => array(

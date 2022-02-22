@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Sync related unit tests.
+- Bump package versions.
 - E2E tests: update readme
 - Fix PHPCS violations for the Publicize module
 - Fix WPCOM-specific linting errors
@@ -35,6 +36,9 @@ This is an alpha version! The changes listed here are not final.
 - Re-introduce CRM card on At A Glance page for Jetpack
 - Subscribe block: Fix color serialization
 - Updated package dependencies
+- Updated package dependencies.
+- Updated package dependencies.
+- Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.

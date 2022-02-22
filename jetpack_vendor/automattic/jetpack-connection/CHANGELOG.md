@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updated package dependencies.
+
 ## [1.36.3] - 2022-02-16
 ### Added
 - Add the 'jetpack_site_before_disconnected' action hook.
