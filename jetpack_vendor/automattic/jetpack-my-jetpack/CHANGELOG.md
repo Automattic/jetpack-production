@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Redirect connect user to connection interstitial
 - Point the link of the Manage button of CRM to its dashboard
 - Remove conditional loading depending on constant
+- Send My Jetpack version with fired events.
 - Update the layout of interstitial page when it has an upgradable bundle
 
 ### Fixed
