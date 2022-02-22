@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Remove marketplace related add plugins menu redirect
 - Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
 
+### Improved compatibility
+- Remove jetpack settings submenu from general settings menu when site doesn't have atomic supported plan.
+
 ### Bug fixes
 - Address front-end rendering on Subscribe Block
 - Fix double escaping of connections in Classic Editor
