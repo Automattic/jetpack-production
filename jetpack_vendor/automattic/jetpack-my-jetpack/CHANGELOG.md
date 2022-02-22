@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add Beta badge for My Jetpack
+- Add Extras class
 - Apply coupon discount to Product price when it exists
 - Filesystem write access to the initial state
 - Improve Product detail layout
