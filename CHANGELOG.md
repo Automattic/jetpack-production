@@ -2,50 +2,37 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.7-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.7-beta - 2022-02-22
 ### Enhancements
-- Improve plugins page load by moving data feching to asyn inside React
-- Remove marketplace related add plugins menu redirect
-- Subscribe block: Add sync between button background color and border color
-- Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
+- Dashboard: improve performance of plugins page.
+- Subscribe block: various changes, including a name change, how the display for current subscribers is shown, and new styling options and enhancements.
 
 ### Improved compatibility
-- Performance: improve performance for sites without VideoPress enabled.
-- Remove jetpack settings submenu from general settings menu when site doesn't have atomic supported plan.
+- Performance: improve performance of Jetpack dashboard for sites without VideoPress enabled.
 
 ### Bug fixes
-- Address front-end rendering on Subscribe Block
-- Fix double escaping of connections in Classic Editor
-- Fix Fatal error in the WP.com customizer while in sandbox mode.
-- Style jetpack stats Screen Options label to show - currently no label text shows
-- WordPress.com REST API: avoid errors when restoring the previous version of an image from the WordPress.com dashboard.
-- WordPress.com REST API: avoid PHP warnings when accessing videos from the WordPress.com dashboard.
+- Subscribe block: address front-end rendering issues.
+- Dashboard: show Jetpack stats Screen Options label properly.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Sync related unit tests.
 - Bump package versions.
-- E2E tests: update readme
-- Fix PHPCS violations for the Publicize module
-- Fix WPCOM-specific linting errors
-- Init 10.7-a.6 cycle
-- Memoize calls to store_subscription when setting available features for site in order to reduce duplicate uncached queries
-- PHPCS Changes for json-get endpoint files
-- Re-introduce CRM card on At A Glance page for Jetpack
-- Subscribe block: Fix color serialization
-- Updated package dependencies
+- Dashboard: remove marketplace related add plugins menu redirect.
+- E2E tests: update readme.
+- Fix PHPCS violations for the Publicize module.
+- Fix WPCOM-specific linting errors.
+- Fix double escaping of connections in Classic Editor.
+- Fix fatal error in the WP.com customizer while in sandbox mode.
+- Init 10.7-a.6 cycle.
+- Memoize calls to store_subscription when setting available features for site in order to reduce duplicate uncached queries.
+- PHPCS Changes for json-get endpoint files.
+- Re-introduce CRM card on At A Glance page for Jetpack.
+- Remove Jetpack settings submenu from general settings menu when site doesn't have atomic supported plan.
+- Subscribe block: Fix color serialization.
 - Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Update to-test.md
+- Update to-test.md.
+- WordPress.com REST API: avoid errors when restoring the previous version of an image from the WordPress.com dashboard.
+- WordPress.com REST API: avoid PHP warnings when accessing videos from the WordPress.com dashboard.
 
 ## 10.7-a.5 - 2022-02-16
 ### Enhancements
