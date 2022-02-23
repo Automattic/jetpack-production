@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Update My Jetpack dashboard headline
 
 ### Fixed
+- Handle plugin activating from Hybrid class
 - Products::get_products_names should not load all product information
 
 ## [0.6.3] - 2022-02-22
