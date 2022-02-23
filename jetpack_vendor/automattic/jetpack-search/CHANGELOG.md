@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Search: add chart.js package to dependencies
 
+### Changed
+- Updated package dependencies.
+
 ### Fixed
 - Search package: i18n support for auto added search block label and button
 
