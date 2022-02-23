@@ -74,6 +74,26 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
+	'Automattic\\Jetpack\\Waf\\WafOperators' => array(
+		'version' => '0.1.0.0',
+		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-operators.php'
+	),
+	'Automattic\\Jetpack\\Waf\\WafTransforms' => array(
+		'version' => '0.1.0.0',
+		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-transforms.php'
+	),
+	'Automattic\\Jetpack\\Waf\\WafRunner' => array(
+		'version' => '0.1.0.0',
+		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runner.php'
+	),
+	'Automattic\\Jetpack\\Waf\\WafRuleCompiler' => array(
+		'version' => '0.1.0.0',
+		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-rule-compiler.php'
+	),
+	'Automattic\\Jetpack\\Waf\\WafRuntime' => array(
+		'version' => '0.1.0.0',
+		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runtime.php'
+	),
 	'Automattic\\Jetpack\\Search\\Customberg2' => array(
 		'version' => '0.9.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customberg/class-customberg2.php'
@@ -217,26 +237,6 @@ return array(
 	'Automattic\\Jetpack\\My_Jetpack\\Products' => array(
 		'version' => '0.6.3.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-products.php'
-	),
-	'Automattic\\Jetpack\\Waf\\WafOperators' => array(
-		'version' => '0.1.0.0',
-		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-operators.php'
-	),
-	'Automattic\\Jetpack\\Waf\\WafTransforms' => array(
-		'version' => '0.1.0.0',
-		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-transforms.php'
-	),
-	'Automattic\\Jetpack\\Waf\\WafRunner' => array(
-		'version' => '0.1.0.0',
-		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runner.php'
-	),
-	'Automattic\\Jetpack\\Waf\\WafRuleCompiler' => array(
-		'version' => '0.1.0.0',
-		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-rule-compiler.php'
-	),
-	'Automattic\\Jetpack\\Waf\\WafRuntime' => array(
-		'version' => '0.1.0.0',
-		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runtime.php'
 	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '1.6.2.0',
@@ -694,13 +694,13 @@ return array(
 		'version' => '1.4.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-heartbeat/src/class-heartbeat.php'
 	),
-	'Automattic\\Jetpack\\Roles' => array(
-		'version' => '1.4.14.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php'
-	),
 	'Automattic\\Jetpack\\Redirect' => array(
 		'version' => '1.7.11.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php'
+	),
+	'Automattic\\Jetpack\\Roles' => array(
+		'version' => '1.4.14.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php'
 	),
 	'Jetpack_Tracks_Event' => array(
 		'version' => '1.14.3.0',
