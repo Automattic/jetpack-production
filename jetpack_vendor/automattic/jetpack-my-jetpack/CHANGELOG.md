@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Disable My Jetpack on MS
+- Update My Jetpack dashboard headline
 
 ### Fixed
 - Products::get_products_names should not load all product information
