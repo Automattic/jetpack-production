@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Handle plugin activating from Hybrid class
 - Memoized RecordEvent from usAnalytics hook
 - My Jetpack: Fix post activation url redirect
+- My Jetpack: Move product list that requires user connection to selector
 - Products::get_products_names should not load all product information
 
 ## [0.6.3] - 2022-02-22
