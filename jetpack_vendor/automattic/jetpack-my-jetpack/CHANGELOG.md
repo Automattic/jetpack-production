@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Disable My Jetpack on MS
 - Update My Jetpack dashboard headline
 
+### Removed
+- Remove unnecessary line from My Jetpack Initial state
+
 ### Fixed
 - Handle plugin activating from Hybrid class
 - Memoized RecordEvent from usAnalytics hook
