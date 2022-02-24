@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Disable My Jetpack on MS
 - My Jetpack: compress extras product image
 - Updated package dependencies.
+- Updated package dependencies.
 - Update My Jetpack dashboard headline
 
 ### Removed

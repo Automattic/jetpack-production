@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Bring back the IDC screen in Staging mode.
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## [0.7.4] - 2022-02-22
 ### Added
