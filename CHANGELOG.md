@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Removed wrong sanitation that was causing some Publicize options to not save in the Classic Editor
+
 ## 10.7-beta - 2022-02-22
 ### Enhancements
 - Dashboard: improve performance of plugins page.
