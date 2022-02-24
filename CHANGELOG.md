@@ -10,6 +10,8 @@ This is an alpha version! The changes listed here are not final.
 - Add a unified introduction to payment blocks to make it easier to select the correct one
 - Adds support for resumable uploads in the VideoPress block.
 - Markdown Block: Update the block to include margins design tool.
+- Subscribe Block: Add pre/post-publish notices
+- Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
 - Tiled Gallery: Add background color and spacing (padding and margin) tools.
 
 ### Bug fixes
