@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Search: add chart.js package to dependencies
+- Search: fetch search stats endpoint in wp-admin dashboard
 
 ### Changed
 - Updated package dependencies.
