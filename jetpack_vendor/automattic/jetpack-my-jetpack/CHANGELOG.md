@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Activate Jetpack plugin from Extras product card
 - Add Extras interstitial page
+- My Jetpack: tweak height of Jetpack Logo
 
 ### Changed
 - Disable My Jetpack on MS
