@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add a unified introduction to payment blocks to make it easier to select the correct one
 - Adds support for resumable uploads in the VideoPress block.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
