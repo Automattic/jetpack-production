@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Extras interstitial page
 - My Jetpack: Remove global notices when in my jetpack page
 - My Jetpack: tweak height of Jetpack Logo
+- My Jetpack: update Product logos
 
 ### Changed
 - Disable My Jetpack on MS
