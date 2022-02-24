@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - IDC: add detection for possibly dynamic HTTP_HOST being used in WP_SITEURL or WP_HOME.
 
 ### Changed
+- Bring back the IDC screen in Staging mode.
 - Updated package dependencies.
 - Updated package dependencies.
 

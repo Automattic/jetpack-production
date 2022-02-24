@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add a unified introduction to payment blocks to make it easier to select the correct one
 - Adds support for resumable uploads in the VideoPress block.
+- Markdown Block: Update the block to include margins design tool.
 
 ### Bug fixes
 - Add missing plugins sidebar menu for Atomic site with unsupported plan
