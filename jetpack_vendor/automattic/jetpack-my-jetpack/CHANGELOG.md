@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove unnecessary line from My Jetpack Initial state
 
 ### Fixed
+- Fix beta badge for RTL languages
 - Handle plugin activating from Hybrid class
 - Memoized RecordEvent from usAnalytics hook
 - My Jetpack: Fix post activation url redirect
