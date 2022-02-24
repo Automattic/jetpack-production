@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Disable My Jetpack on MS
+- Updated package dependencies.
 - Update My Jetpack dashboard headline
 
 ### Removed
