@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add a unified introduction to payment blocks to make it easier to select the correct one
 - Adds support for resumable uploads in the VideoPress block.
 
+### Bug fixes
+- Add missing plugins sidebar menu for Atomic site with unsupported plan
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.8-a.0 cycle
 
