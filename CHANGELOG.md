@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Add missing plugins sidebar menu for Atomic site with unsupported plan
+- Removed wrong sanitation that was causing some Publicize options to not save in the Classic Editor
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.8-a.0 cycle
