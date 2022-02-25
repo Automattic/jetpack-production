@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Search: Fixed a regression that prevented modal from being spawned by link clicks
 - Search package: i18n support for auto added search block label and button
 
 ## [0.9.0] - 2022-02-22
