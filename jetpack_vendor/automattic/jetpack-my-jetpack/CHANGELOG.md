@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Use namespace in My Jetpack REST Products class to prevent fatal
+
 ## [0.6.4] - 2022-02-25
 ### Added
 - Activate Jetpack plugin from Extras product card
