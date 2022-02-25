@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Include the dependency of the WAF package in the plugin zip.
 - Init 10.8-a.0 cycle
 - Updated composer.lock.
+- Updates packages.
 
 ## 10.7-beta - 2022-02-22
 ### Enhancements
