@@ -274,6 +274,10 @@ return array(
 		'version' => '1.6.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
 	),
+	'Automattic\\Jetpack\\Blocks' => array(
+		'version' => '1.4.11.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blocks/src/class-blocks.php'
+	),
 	'JetpackTracking' => array(
 		'version' => '1.6.8.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpacktracking.php'
@@ -293,10 +297,6 @@ return array(
 	'Jetpack_Sync_Modules' => array(
 		'version' => '1.6.8.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-sync-modules.php'
-	),
-	'Automattic\\Jetpack\\Blocks' => array(
-		'version' => '1.4.11.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blocks/src/class-blocks.php'
 	),
 	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
 		'version' => '1.2.4.0',
