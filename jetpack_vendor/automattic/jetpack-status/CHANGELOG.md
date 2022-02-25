@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Cache return values (per blog) from various status methods.
 
+### Fixed
+- Remove trailing semicolor form site suffix.
+
 ## [1.11.0] - 2022-02-22
 ### Added
 - Add methods to distinguish Newspack and VIP sites.
