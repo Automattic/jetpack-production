@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Activate Jetpack plugin from Extras product card
 - Added list of connected plugins to Disconnect dialog in My Jetpack
 - Add Extras interstitial page
+- My Jetpack: Handle cosmetic tweaks
 - My Jetpack: Remove global notices when in my jetpack page
 - My Jetpack: set height of Jetpack logo in the footer
 - My Jetpack: tweak height of Jetpack Logo
