@@ -170,6 +170,10 @@ return array(
 		'version' => '0.1.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runtime.php'
 	),
+	'Automattic\\Jetpack\\Licensing' => array(
+		'version' => '1.6.2.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/src/class-licensing.php'
+	),
 	'Automattic\\Jetpack\\My_Jetpack\\REST_Products' => array(
 		'version' => '0.6.3.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-products.php'
@@ -238,9 +242,9 @@ return array(
 		'version' => '0.6.3.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-products.php'
 	),
-	'Automattic\\Jetpack\\Licensing' => array(
-		'version' => '1.6.2.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/src/class-licensing.php'
+	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
+		'version' => '2.1.6.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-lazy-images/src/lazy-images.php'
 	),
 	'Automattic\\Jetpack\\JITMS\\JITM' => array(
 		'version' => '2.2.7.0',
@@ -257,10 +261,6 @@ return array(
 	'Automattic\\Jetpack\\JITMS\\Post_Connection_JITM' => array(
 		'version' => '2.2.7.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jitm/src/class-post-connection-jitm.php'
-	),
-	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
-		'version' => '2.1.6.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-lazy-images/src/lazy-images.php'
 	),
 	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
 		'version' => '2.3.7.0',
@@ -330,18 +330,6 @@ return array(
 		'version' => '1.0.1.0',
 		'path'    => $vendorDir . '/wikimedia/aho-corasick/src/MultiStringMatcher.php'
 	),
-	'Automattic\\Jetpack\\Partner_Coupon' => array(
-		'version' => '1.7.1.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner-coupon.php'
-	),
-	'Automattic\\Jetpack\\Partner' => array(
-		'version' => '1.7.1.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner.php'
-	),
-	'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => array(
-		'version' => '0.2.4.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-admin-ui/src/class-admin-menu.php'
-	),
 	'Automattic\\Jetpack\\Plugins_Installer' => array(
 		'version' => '0.1.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-plugins-installer/src/class-plugins-installer.php'
@@ -349,6 +337,18 @@ return array(
 	'Automattic\\Jetpack\\Automatic_Install_Skin' => array(
 		'version' => '0.1.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-plugins-installer/src/class-automatic-install-skin.php'
+	),
+	'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => array(
+		'version' => '0.2.4.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-admin-ui/src/class-admin-menu.php'
+	),
+	'Automattic\\Jetpack\\Partner_Coupon' => array(
+		'version' => '1.7.1.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner-coupon.php'
+	),
+	'Automattic\\Jetpack\\Partner' => array(
+		'version' => '1.7.1.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner.php'
 	),
 	'Automattic\\Jetpack\\Sync\\Replicastore_Interface' => array(
 		'version' => '1.30.0.0',
