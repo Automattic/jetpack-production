@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - updated composer.lock
 - Updated package dependencies.
 
+### Fixed
+- Disable browser cache for My Jetpack
+
 ## [0.6.6] - 2022-02-28
 ### Fixed
 - Re-doing 0.6.5 to fixup bad release.
