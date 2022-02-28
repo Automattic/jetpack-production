@@ -5,12 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.5-alpha] - unreleased
+## [0.6.6-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- My Jetpack: Handle cosmetic tweaks
+
 ### Changed
-- My Jetpack: tweak product card box model.
+- Updated package dependencies.
+
+## [0.6.5] - 2022-02-28
+### Changed
+- Tweak product card box model.
 
 ### Fixed
 - Use namespace in My Jetpack REST Products class to prevent fatal
@@ -311,7 +318,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[0.6.5-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.4...0.6.5-alpha
+[0.6.6-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.5...0.6.6-alpha
+[0.6.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.4...0.6.5
 [0.6.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.3...0.6.4
 [0.6.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.2...0.6.3
 [0.6.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.1...0.6.2
