@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Markdown Block: Update the block to include margins design tool.
 - Subscribe Block: Add pre/post-publish notices
 - Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
+- Take pre_update_option filter into account when firing active module hooks
 - Tiled Gallery: Add background color and spacing (padding and margin) tools.
 
 ### Bug fixes
