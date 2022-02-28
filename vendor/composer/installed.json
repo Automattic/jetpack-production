@@ -1539,17 +1539,17 @@
         },
         {
             "name": "automattic/jetpack-status",
-            "version": "v1.11.0",
-            "version_normalized": "1.11.0.0",
+            "version": "v1.11.1",
+            "version_normalized": "1.11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-status.git",
-                "reference": "d140b6850ec949c3c92704a3e3231848fd93bfdb"
+                "reference": "43070c181124a7b0c0196415c3afe9bba085e0d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-status/zipball/d140b6850ec949c3c92704a3e3231848fd93bfdb",
-                "reference": "d140b6850ec949c3c92704a3e3231848fd93bfdb",
+                "url": "https://api.github.com/repos/Automattic/jetpack-status/zipball/43070c181124a7b0c0196415c3afe9bba085e0d9",
+                "reference": "43070c181124a7b0c0196415c3afe9bba085e0d9",
                 "shasum": ""
             },
             "require": {
@@ -1560,7 +1560,7 @@
                 "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-02-22T18:42:32+00:00",
+            "time": "2022-02-28T16:55:32+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1569,7 +1569,7 @@
                     "link-template": "https://github.com/Automattic/jetpack-status/compare/v${old}...v${new}"
                 },
                 "branch-alias": {
-                    "dev-master": "1.11.x-dev"
+                    "dev-master": "1.12.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -1584,7 +1584,7 @@
             ],
             "description": "Used to retrieve information about the current status of Jetpack and the site overall.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-status/tree/v1.11.0"
+                "source": "https://github.com/Automattic/jetpack-status/tree/v1.11.1"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-status"
         },
