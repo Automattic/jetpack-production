@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Cache return values (per blog) from various status methods.
 
+## [1.11.2] - 2022-02-28
+### Fixed
+- Re-doing 1.11.1 to fixup a bad release.
+
 ## [1.11.1] - 2022-02-28
 ### Fixed
 - Remove trailing semicolor form site suffix.
@@ -165,7 +169,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Introduce a status package
 
-[1.12.0-alpha]: https://github.com/Automattic/jetpack-status/compare/v1.11.1...v1.12.0-alpha
+[1.12.0-alpha]: https://github.com/Automattic/jetpack-status/compare/v1.11.2...v1.12.0-alpha
+[1.11.2]: https://github.com/Automattic/jetpack-status/compare/v1.11.1...v1.11.2
 [1.11.1]: https://github.com/Automattic/jetpack-status/compare/v1.11.0...v1.11.1
 [1.11.0]: https://github.com/Automattic/jetpack-status/compare/v1.10.0...v1.11.0
 [1.10.0]: https://github.com/Automattic/jetpack-status/compare/v1.9.5...v1.10.0

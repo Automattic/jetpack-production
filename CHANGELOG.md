@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Removed wrong sanitation that was causing some Publicize options to not save in the Classic Editor
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- I don't know why it's asking for a changelog file.
 - Include the dependency of the WAF package in the plugin zip.
 - Init 10.8-a.0 cycle
 - Sync changes added to wpcom to Jetpack
