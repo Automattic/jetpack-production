@@ -281,12 +281,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-status' => array(
-            'pretty_version' => 'v1.11.1',
-            'version' => '1.11.1.0',
+            'pretty_version' => 'v1.11.2',
+            'version' => '1.11.2.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-status',
             'aliases' => array(),
-            'reference' => '43070c181124a7b0c0196415c3afe9bba085e0d9',
+            'reference' => '9cce559650d316e4112d9d3f3accd9be71cdf7d1',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-sync' => array(
