@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Take pre_update_option filter into account when firing active module hooks
+
 ### Bug fixes
 - Corrected the wpas_title form field name to fix Publicize custom messages in the classic editor.
 - Removed wrong sanitation that was causing some Publicize options to not save in the Classic Editor
