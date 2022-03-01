@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Disable browser cache for My Jetpack
+- My Jetpack: fix products card section story
 - My Jetpack: fix stories for the Interstitial pages
 
 ## [0.6.6] - 2022-02-28
