@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Handle cosmetic tweaks
 
 ### Changed
+- Refactor and simplify Products class
 - updated composer.lock
 - Updated package dependencies
 - Updated package dependencies.
