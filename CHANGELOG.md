@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Add missing plugins sidebar menu for Atomic site with unsupported plan
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- E2E tests: restore plugin update test
 - I don't know why it's asking for a changelog file.
 - Include the dependency of the WAF package in the plugin zip.
 - Init 10.8-a.0 cycle
