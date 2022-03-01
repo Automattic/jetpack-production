@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add My Jetpack action link to all Jetpack plugins
 - My Jetpack: Handle cosmetic tweaks
+- My Jetpack: Pass requiresUserConnection to ConnectionStatusCard
 
 ### Changed
 - Refactor and simplify Products class
