@@ -15,6 +15,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Search: Renamed Customberg class file name
+- Updated package dependencies
+- Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
 

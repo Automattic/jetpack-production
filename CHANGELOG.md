@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Sync changes added to wpcom to Jetpack
 - Sync integration tests optimization
 - Updated composer.lock.
+- Updated package dependencies
 - Updates packages.
 
 ## 10.7 - 2022-02-28
