@@ -16,13 +16,10 @@ This is an alpha version! The changes listed here are not final.
 - Markdown Block: Update the block to include margins design tool.
 - Subscribe Block: Add pre/post-publish notices
 - Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
-- Take pre_update_option filter into account when firing active module hooks
 - Tiled Gallery: Add background color and spacing (padding and margin) tools.
 
 ### Bug fixes
 - Add missing plugins sidebar menu for Atomic site with unsupported plan
-- Corrected the wpas_title form field name to fix Publicize custom messages in the classic editor.
-- Removed wrong sanitation that was causing some Publicize options to not save in the Classic Editor
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - I don't know why it's asking for a changelog file.
@@ -34,7 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated composer.lock.
 - Updates packages.
 
-## 10.7-beta - 2022-02-22
+## 10.7 - 2022-02-28
 ### Enhancements
 - Dashboard: improve performance of plugins page.
 - Subscribe block: various changes, including a name change, how the display for current subscribers is shown, and new styling options and enhancements.
@@ -43,24 +40,26 @@ This is an alpha version! The changes listed here are not final.
 - Performance: improve performance of Jetpack dashboard for sites without VideoPress enabled.
 
 ### Bug fixes
-- Subscribe block: address front-end rendering issues.
 - Dashboard: show Jetpack stats Screen Options label properly.
+- Publicize: fixed bugs when using Publicize with the Classic Editor.
+- Subscribe block: address front-end rendering issues.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Sync related unit tests.
 - Bump package versions.
 - Dashboard: remove marketplace related add plugins menu redirect.
 - E2E tests: update readme.
-- Fix PHPCS violations for the Publicize module.
-- Fix WPCOM-specific linting errors.
 - Fix double escaping of connections in Classic Editor.
 - Fix fatal error in the WP.com customizer while in sandbox mode.
+- Fix PHPCS violations for the Publicize module.
+- Fix WPCOM-specific linting errors.
 - Init 10.7-a.6 cycle.
 - Memoize calls to store_subscription when setting available features for site in order to reduce duplicate uncached queries.
 - PHPCS Changes for json-get endpoint files.
 - Re-introduce CRM card on At A Glance page for Jetpack.
 - Remove Jetpack settings submenu from general settings menu when site doesn't have atomic supported plan.
 - Subscribe block: Fix color serialization.
+- Take pre_update_option filter into account when firing active module hooks
 - Updated package dependencies.
 - Update to-test.md.
 - WordPress.com REST API: avoid errors when restoring the previous version of an image from the WordPress.com dashboard.
