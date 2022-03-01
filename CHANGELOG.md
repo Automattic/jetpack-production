@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add a unified introduction to payment blocks to make it easier to select the correct one
+- Add more keywords to payments blocks so they're easier to find
 - Adds support for resumable uploads in the VideoPress block.
 - Add the premium-content block to the payments introducer
 - Contact Info Block: Update the block to include margins design tool
