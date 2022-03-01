@@ -89,7 +89,7 @@ return array(
     'Automattic\\Jetpack\\Roles' => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
     'Automattic\\Jetpack\\Search\\CLI' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-cli.php',
     'Automattic\\Jetpack\\Search\\Classic_Search' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/classic-search/class-classic-search.php',
-    'Automattic\\Jetpack\\Search\\Customberg2' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customberg/class-customberg2.php',
+    'Automattic\\Jetpack\\Search\\Customberg' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customberg/class-customberg.php',
     'Automattic\\Jetpack\\Search\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/dashboard/class-dashboard.php',
     'Automattic\\Jetpack\\Search\\Helper' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-helper.php',
     'Automattic\\Jetpack\\Search\\Initial_State' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/dashboard/class-initial-state.php',
