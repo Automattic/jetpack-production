@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds support for resumable uploads in the VideoPress block.
 - Add the premium-content block to the payments introducer
 - Contact Info Block: Update the block to include margins design tool
+- Do not add My Jetpack action link to plugins page
 - Markdown Block: Update the block to include margins design tool.
 - Subscribe Block: Add pre/post-publish notices
 - Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
