@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Fix various notices shown for Customberg
 - Search package: i18n support for auto added search block label and button
 
 ## [0.9.1] - 2022-02-25
