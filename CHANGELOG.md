@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - I don't know why it's asking for a changelog file.
 - Include the dependency of the WAF package in the plugin zip.
 - Init 10.8-a.0 cycle
+- Moved site benefits request out of PHP to React, and guard against no connected plugins
 - Sync changes added to wpcom to Jetpack
 - Updated composer.lock.
 - Updates packages.
