@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Include the dependency of the WAF package in the plugin zip.
 - Init 10.8-a.0 cycle
 - Moved site benefits request out of PHP to React, and guard against no connected plugins
+- Search E2E: support block themes
 - Sync changes added to wpcom to Jetpack
 - Sync integration tests optimization
 - Updated composer.lock.
