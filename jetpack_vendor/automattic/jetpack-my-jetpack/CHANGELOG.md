@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Only consider Backup product active when the plan is purchased
+
 ### Fixed
 - My Jetpack: align CTA buttons of My Jetpack overview
 - My Jetpack: Fix button height in the Interstitial pages
