@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - My Jetpack: align CTA buttons of My Jetpack overview
+- My Jetpack: Fix button height in the Interstitial pages
 
 ## [0.6.7] - 2022-03-02
 ### Added
