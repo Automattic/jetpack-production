@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.7-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.6.7] - 2022-03-02
 ### Added
 - Add My Jetpack action link to all Jetpack plugins
 - My Jetpack: Handle cosmetic tweaks
@@ -16,10 +13,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Refactor and simplify Products class
-- updated composer.lock
-- Updated package dependencies
-- Updated package dependencies.
-- Updated package dependencies.
 - Updated package dependencies.
 
 ### Fixed
@@ -334,7 +327,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[0.6.7-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.6...0.6.7-alpha
+[0.6.7]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.6...0.6.7
 [0.6.6]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.5...0.6.6
 [0.6.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.4...0.6.5
 [0.6.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.3...0.6.4

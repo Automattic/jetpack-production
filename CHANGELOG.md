@@ -2,38 +2,26 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.8-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.8-a.1 - 2022-03-02
 ### Enhancements
-- Add a unified introduction to payment blocks to make it easier to select the correct one
-- Add more keywords to payments blocks so they're easier to find
-- Adds support for resumable uploads in the VideoPress block.
-- Add the premium-content block to the payments introducer
-- Contact Info Block: Update the block to include margins design tool
-- Do not add My Jetpack action link to plugins page
-- Markdown Block: Update the block to include margins design tool.
-- Subscribe Block: Add pre/post-publish notices
-- Subscribe Block: several updates including name change, display of current subscribers, and a new style option.
-- Tiled Gallery: Add background color and spacing (padding and margin) tools.
-
-### Bug fixes
-- Add missing plugins sidebar menu for Atomic site with unsupported plan
+- Payment Blocks: add a unified introduction to payment blocks to make it easier to select the correct one.
+- Payment Blocks: add more keywords to payments blocks so they're easier to find.
+- Subscribe Block: add pre/post-publish notices.
+- Subscribe Block: block setting updates including name change, display of current subscribers, and a new style option.
+- Tiled Gallery: add background color block setting.
+- Various Blocks: update Contact Info, Markdown, and Tiled Gallery blocks to include margin design tools.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- E2E: add tests for clicking link to open overlay
-- E2E tests: restore plugin update test
-- I don't know why it's asking for a changelog file.
-- Include the dependency of the WAF package in the plugin zip.
-- Init 10.8-a.0 cycle
-- Moved site benefits request out of PHP to React, and guard against no connected plugins
-- Search E2E: support block themes
-- Sync changes added to wpcom to Jetpack
-- Sync integration tests optimization
-- Updated composer.lock.
-- Updated package dependencies
-- Updates packages.
+- E2E: add tests for clicking link to open overlay.
+- E2E: restore plugin update test.
+- WAF: include the dependency of the WAF package in the plugin zip.
+- Moved site benefits request out of PHP to React, and guard against no connected plugins.
+- My Jetpack: do not add My Jetpack action link to plugins page.
+- Search E2E: support block themes.
+- Sync: changes added to wpcom to Jetpack.
+- Sync: integration tests optimization.
+- Updated package dependencies.
+- WoA: add missing plugins sidebar menu for Atomic site with unsupported plan.
 
 ## 10.7 - 2022-02-28
 ### Enhancements
