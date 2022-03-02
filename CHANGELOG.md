@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Markdown block: Add default spacing controls
+
 ### Improved compatibility
 - Ensure WP CLI is present before extending the class.
 
