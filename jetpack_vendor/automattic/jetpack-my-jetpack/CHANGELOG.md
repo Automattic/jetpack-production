@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: clean/tidy Product data
+- My Jetpack: Remove Layout component
 - Only consider Backup product active when the plan is purchased
 
 ### Fixed
