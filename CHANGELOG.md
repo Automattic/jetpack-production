@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Ensure WP CLI is present before extending the class.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Search: Move customizer integration into search package
+
 ## 10.8-a.1 - 2022-03-02
 ### Enhancements
 - Payment Blocks: add a unified introduction to payment blocks to make it easier to select the correct one.
