@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Ensure WP CLI is present before extending the class.
 
+### Bug fixes
+- Remove the duplicated jetpack_relatedposts_returned_results filter
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Search: Move customizer integration into search package
 
