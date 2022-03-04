@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add link to jetpack.com in the footer
 - My Jetpack: Add jetpack features link on connection screen
 - My Jetpack: tidy Product card component
+- My Jetpack: update Spinner in checkout button
 
 ### Changed
 - My Jetpack: clean/tidy Product data
