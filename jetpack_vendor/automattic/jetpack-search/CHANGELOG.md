@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Ensure that WP CLI is present before extending the class.
+- Ensure the Customizer classes are loaded.
 
 ## [0.10.0] - 2022-03-02
 ### Added
