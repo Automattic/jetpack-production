@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: update Spinner in checkout button
 
 ### Changed
+- My Jetpack: Add Connected Product Card stories
 - My Jetpack: clean/tidy Product data
 - My Jetpack: Remove Layout component
 - Only consider Backup product active when the plan is purchased
