@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Refactor ExternalLink to use core package
 - Search: Move customizer integration into search package
+- Update `@size-limit/preset-app` dependency to match `size-limit`.
 
 ## 10.8-a.1 - 2022-03-02
 ### Enhancements
