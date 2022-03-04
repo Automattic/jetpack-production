@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the duplicated jetpack_relatedposts_returned_results filter
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Refactor ExternalLink to use core package
 - Search: Move customizer integration into search package
 
 ## 10.8-a.1 - 2022-03-02
