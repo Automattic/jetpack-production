@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Markdown block: Add default spacing controls
+- Masterbar: Makes Desktop Switcher look the same between Calypso and wp-admin.
 
 ### Improved compatibility
 - Ensure WP CLI is present before extending the class.
