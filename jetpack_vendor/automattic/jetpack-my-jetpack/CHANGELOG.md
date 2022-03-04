@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add link to jetpack.com in the footer
 - My Jetpack: Add jetpack features link on connection screen
+- My Jetpack: tidy Product card component
 
 ### Changed
 - My Jetpack: clean/tidy Product data
