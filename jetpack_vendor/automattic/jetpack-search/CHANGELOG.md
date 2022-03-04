@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Move customizer integration into search package
+- search: move record meter location on dashboard
 
 ### Fixed
 - Ensure that WP CLI is present before extending the class.
