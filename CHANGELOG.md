@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the duplicated jetpack_relatedposts_returned_results filter
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fix newly-detected PHPCS sniffs in some tests. Also fix a test mock that was returning false rather than null like the class it's mocking would.
 - Refactor ExternalLink to use core package
 - Search: Move customizer integration into search package
 - Update `@size-limit/preset-app` dependency to match `size-limit`.
