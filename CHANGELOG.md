@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix newly-detected PHPCS sniffs in some tests. Also fix a test mock that was returning false rather than null like the class it's mocking would.
+- PHPCS errors and notices fixed for admin pages
 - Protect: simplify the transient clean up process preparation.
 - Refactor ExternalLink to use core package
 - Search: Move customizer integration into search package
