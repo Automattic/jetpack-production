@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: update Spinner in checkout button
 
 ### Changed
+- Components: update attributes used within the Button component to match recent deprecations and changes.
 - My Jetpack: Add Connected Product Card stories
 - My Jetpack: Add connection screen footer
 - My Jetpack: clean/tidy Product data

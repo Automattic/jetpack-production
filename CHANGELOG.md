@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Masterbar: Makes Desktop Switcher look the same between Calypso and wp-admin.
 
 ### Improved compatibility
+- Blocks: remove deprecated attributes from Button components.
 - Ensure WP CLI is present before extending the class.
 
 ### Bug fixes
