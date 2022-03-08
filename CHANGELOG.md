@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Remove the duplicated jetpack_relatedposts_returned_results filter
+- The Premium Content login button now redirects to the correct post instead of to a 404 page when the URL contains characters that have been previously encoded
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix newly-detected PHPCS sniffs in some tests. Also fix a test mock that was returning false rather than null like the class it's mocking would.
