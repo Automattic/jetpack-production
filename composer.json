@@ -14,7 +14,7 @@
 		"automattic/jetpack-a8c-mc-stats": "^1.4",
 		"automattic/jetpack-abtest": "^1.9",
 		"automattic/jetpack-assets": "^1.17",
-		"automattic/jetpack-autoloader": "^2.11",
+		"automattic/jetpack-autoloader": "^2.10",
 		"automattic/jetpack-backup": "^1.2",
 		"automattic/jetpack-blocks": "^1.4",
 		"automattic/jetpack-compat": "^1.6",
