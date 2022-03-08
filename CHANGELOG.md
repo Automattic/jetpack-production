@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Markdown block: Add default spacing controls
 - Masterbar: Makes Desktop Switcher look the same between Calypso and wp-admin.
 - The Payments Block now has a link to the support reference page on the block configuration panel
+- Using the new Webfont API in Gutenberg, registers a selection of Google fonts for use with block and Global styles
 - We now share the Payment Button block controls with it's InnerBlocks so that we can connect Stripe from any InnerBlock within the Payment Button block.
 
 ### Improved compatibility

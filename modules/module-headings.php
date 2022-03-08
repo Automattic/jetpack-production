@@ -61,6 +61,11 @@ function jetpack_get_module_i18n( $key ) {
 				'description' => _x( 'Set up Google Analytics without touching a line of code.', 'Module Description', 'jetpack' ),
 			),
 
+			'google-fonts' => array(
+				'name' => _x( 'Google Fonts', 'Module Name', 'jetpack' ),
+				'description' => _x( 'A selection of Google fonts for block enabled themes.', 'Module Description', 'jetpack' ),
+			),
+
 			'gravatar-hovercards' => array(
 				'name' => _x( 'Gravatar Hovercards', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Enable pop-up business cards over commenters’ Gravatars.', 'Module Description', 'jetpack' ),
@@ -298,12 +303,12 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/wordads.php
 			'Appearance' => _x( 'Appearance', 'Module Tag', 'jetpack' ),
 
-			// Modules with `Developers` tag:
-			// - modules/json-api.php
-			// - modules/sso.php
-			'Developers' => _x( 'Developers', 'Module Tag', 'jetpack' ),
+			// Modules with `Fonts` tag:
+			// - modules/google-fonts.php
+			'Fonts' => _x( 'Fonts', 'Module Tag', 'jetpack' ),
 
 			// Modules with `Recommended` tag:
+			// - modules/google-fonts.php
 			// - modules/lazy-images.php
 			// - modules/monitor.php
 			// - modules/photon-cdn.php
@@ -316,6 +321,11 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/stats.php
 			// - modules/woocommerce-analytics.php
 			'Recommended' => _x( 'Recommended', 'Module Tag', 'jetpack' ),
+
+			// Modules with `Developers` tag:
+			// - modules/json-api.php
+			// - modules/sso.php
+			'Developers' => _x( 'Developers', 'Module Tag', 'jetpack' ),
 
 			// Modules with `General` tag:
 			// - modules/masterbar.php
@@ -504,6 +514,24 @@ function jetpack_get_module_info( $key ) {
 	    'feature' => 'Engagement',
 	    'additional_search_queries' => 'webmaster, google, analytics, console',
 	    'plan_classes' => 'business, premium, security, complete',
+	  ),
+	  'google-fonts' => 
+	  array (
+	    'name' => 'Google Fonts',
+	    'description' => 'A selection of Google fonts for block enabled themes.',
+	    'sort' => '1',
+	    'recommendation_order' => '2',
+	    'introduced' => '10.8.0',
+	    'changed' => '',
+	    'deactivate' => '',
+	    'free' => '',
+	    'requires_connection' => 'No',
+	    'requires_user_connection' => '',
+	    'auto_activate' => 'No',
+	    'module_tags' => 'Fonts, Recommended',
+	    'feature' => 'Writing',
+	    'additional_search_queries' => 'fonts, webfonts, typography',
+	    'plan_classes' => '',
 	  ),
 	  'gravatar-hovercards' => 
 	  array (
