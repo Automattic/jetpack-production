@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.8-1.4 cycle.
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## 10.8-a.3 - 2022-03-08
 ### Enhancements
