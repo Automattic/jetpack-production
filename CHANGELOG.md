@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Ensure WP CLI is present before extending the class.
 
 ### Bug fixes
+- Fixed and issue with the upgrade banner being obscured from all payment blocks. Also, now the upgrade lin does not have any text decorations.
 - Remove the duplicated jetpack_relatedposts_returned_results filter
 - The Premium Content login button now redirects to the correct post instead of to a 404 page when the URL contains characters that have been previously encoded
 
