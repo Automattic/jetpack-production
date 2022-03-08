@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Assistant style update and other improvements
+- Don't allow Premium Content Block to be added inside of another Premium Content block.
 - Jetpack: add post-publish-qr-post-panel block editor plugin
 - Jetpack: render QR Code once the post is published
 - Markdown block: Add default spacing controls
