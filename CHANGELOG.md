@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.8-a.4 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 10.8-1.4 cycle.
+
 ## 10.8-a.3 - 2022-03-08
 ### Enhancements
 - Jetpack: assistant style updates and other improvements.
