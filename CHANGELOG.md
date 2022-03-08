@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Assistant style update and other improvements
 - Markdown block: Add default spacing controls
 - Masterbar: Makes Desktop Switcher look the same between Calypso and wp-admin.
 - The Payments Block now has a link to the support reference page on the block configuration panel
