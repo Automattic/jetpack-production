@@ -2,32 +2,27 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.8-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.8-a.3 - 2022-03-08
 ### Enhancements
-- Assistant style update and other improvements
-- Don't allow Premium Content Block to be added inside of another Premium Content block.
-- Jetpack: add post-publish-qr-post-panel block editor plugin
-- Jetpack: render QR Code once the post is published
-- Markdown block: Add default spacing controls
-- Masterbar: Makes Desktop Switcher look the same between Calypso and wp-admin.
-- The Payments Block now has a link to the support reference page on the block configuration panel
-- Using the new Webfont API in Gutenberg, registers a selection of Google fonts for use with block and Global styles
-- We now share the Payment Button block controls with it's InnerBlocks so that we can connect Stripe from any InnerBlock within the Payment Button block.
+- Jetpack: assistant style updates and other improvements.
+- Jetpack: using the new Webfont API in Gutenberg, registers a selection of Google fonts for use with block and Global styles.
+- Markdown block: add default spacing controls.
+- Masterbar: make the Desktop Switcher look the same between Calypso and wp-admin.
+- Payments Block: adds a link to the support reference page on the block configuration panel.
+- Payment Button Block: make Stripe connection button visible from child block elements.
 
 ### Improved compatibility
-- Blocks: remove deprecated attributes from Button components.
-- Ensure WP CLI is present before extending the class.
+- Premium Content Block: prevent block from being nested inside itself.
+- Various Blocks: remove deprecated attributes from Button components.
+- CLI Tools: ensure WP CLI is present before extending the class.
 
 ### Bug fixes
-- Fixed and issue with the upgrade banner being obscured from all payment blocks. Also, now the upgrade lin does not have any text decorations.
-- Remove the duplicated jetpack_relatedposts_returned_results filter
-- The Premium Content login button now redirects to the correct post instead of to a 404 page when the URL contains characters that have been previously encoded
+- Jetpack: remove the duplicated `jetpack_relatedposts_returned_results filter`.
+- Premium Content Block: login button now redirects to the correct post instead of to a 404 page when the URL contains characters that have been previously encoded.
+- Payment Blocks: fixes an issue with the upgrade banner being obscured from all payment blocks.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added jetpack_upload_handler_can_upload filter for blocking specific file uploads
+- Jetpack: added jetpack_upload_handler_can_upload filter for blocking specific file uploads.
 - Admin pages: reverting code added in #23219 to fix a bug.
 - Fix newly-detected PHPCS sniffs in some tests. Also fix a test mock that was returning false rather than null like the class it's mocking would.
 - PHPCS errors and notices fixed for admin pages
@@ -37,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Move customizer integration into search package
 - Stats: improve accessibility and performance for the admin dashboard widget.
 - Update `@size-limit/preset-app` dependency to match `size-limit`.
+- Jetpack: add post-publish-qr-post-panel block editor plugin.
 
 ## 10.8-a.1 - 2022-03-02
 ### Enhancements

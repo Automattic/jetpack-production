@@ -3,7 +3,7 @@
  * WordPress webfonts provider for Google Fonts
  *
  * @package automattic/google-fonts-provider
- * @since 0.1.0-alpha
+ * @since 0.1.0
  */
 
 namespace Automattic\Jetpack\Fonts;
