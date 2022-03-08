@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Only consider Backup product active when the plan is purchased
 
 ### Fixed
+- Fixed Backup flow when Jetpack plugin is active
 - My Jetpack: align CTA buttons of My Jetpack overview
 - My Jetpack: Fix button height in the Interstitial pages
 
