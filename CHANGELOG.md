@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.8-a.4 - unreleased
+## 10.8-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -13,6 +13,10 @@ This is an alpha version! The changes listed here are not final.
 - Init 10.8-1.4 cycle.
 - Updated package dependencies.
 - Updated package dependencies.
+
+## 10.8-a.5 - 2022-03-08
+### Bug Fixes
+- Fixes an issue preventing WooCommerce from upgrading to 6.3.0.
 
 ## 10.8-a.3 - 2022-03-08
 ### Enhancements
