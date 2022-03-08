@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix newly-detected PHPCS sniffs in some tests. Also fix a test mock that was returning false rather than null like the class it's mocking would.
 - PHPCS errors and notices fixed for admin pages
 - Protect: simplify the transient clean up process preparation.
+- QR Plugin: update registration
 - Refactor ExternalLink to use core package
 - Search: Move customizer integration into search package
 - Stats: improve accessibility and performance for the admin dashboard widget.
