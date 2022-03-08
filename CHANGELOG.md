@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - The Premium Content login button now redirects to the correct post instead of to a 404 page when the URL contains characters that have been previously encoded
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added jetpack_upload_handler_can_upload filter for blocking specific file uploads
 - Fix newly-detected PHPCS sniffs in some tests. Also fix a test mock that was returning false rather than null like the class it's mocking would.
 - PHPCS errors and notices fixed for admin pages
 - Protect: simplify the transient clean up process preparation.
