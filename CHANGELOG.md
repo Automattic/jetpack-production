@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Markdown block: Add default spacing controls
 - Masterbar: Makes Desktop Switcher look the same between Calypso and wp-admin.
+- We now share the Payment Button block controls with it's InnerBlocks so that we can connect Stripe from any InnerBlock within the Payment Button block.
 
 ### Improved compatibility
 - Blocks: remove deprecated attributes from Button components.
