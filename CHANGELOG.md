@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Jetpack: Render site logo in the QR Post when it exists
+- Jetpack: reorganize structure of the post-publish-qr-code-panel plugin
 
 ### Improved compatibility
 - PHPCS updates to bring in line with WordPress standards.
