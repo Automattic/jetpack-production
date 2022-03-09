@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Jetpack: Render site logo in the QR Post when it exists
 
+### Improved compatibility
+- PHPCS updates to bring in line with WordPress standards.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.8-1.4 cycle.
 - Updated package dependencies.
