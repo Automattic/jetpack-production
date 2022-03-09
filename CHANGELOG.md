@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.8-1.4 cycle.
+- PHPCS changes for the Pay with Paypal feature
 - Updated package dependencies.
 - Updated package dependencies.
 
