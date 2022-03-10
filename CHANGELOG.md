@@ -23,7 +23,9 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added support links
 - Init 10.8-1.4 cycle.
+- Moved with-has-warning-is-interactive-class-names folder to js-package/shared-extension-utils and updated imports
 - PHPCS changes for the Pay with Paypal feature
+- Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
