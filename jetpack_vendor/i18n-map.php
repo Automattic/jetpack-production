@@ -16,6 +16,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-heartbeat',
       'ver' => '1.4.9999999-dev',
     ),
+    'jetpack-admin-ui' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
+      'ver' => '0.2.9999999-dev',
+    ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
       'ver' => '1.37.9999999-dev',
@@ -55,10 +59,6 @@ return array(
     'jetpack-licensing' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
       'ver' => '1.6.9999999-dev',
-    ),
-    'jetpack-admin-ui' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
-      'ver' => '0.2.9999999-dev',
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',

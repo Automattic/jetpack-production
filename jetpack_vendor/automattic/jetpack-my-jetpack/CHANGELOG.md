@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Make Backup go through the purchase flow after activation
+
 ## [0.6.9] - 2022-03-09
 ### Changed
 - Updated package dependencies.
