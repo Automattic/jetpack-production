@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO Tools: ensure Twitter cards get correct description when a site has a blank tagline.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added support links
 - Init 10.8-1.4 cycle.
 - PHPCS changes for the Pay with Paypal feature
 - Updated package dependencies.
