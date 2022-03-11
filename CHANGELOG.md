@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fix missing "Connect User" button after restoring connection.
 - SEO Tools: ensure Twitter cards get correct description when a site has a blank tagline.
+- Swap JETPACK_VERSION for the correct JETPACK__VERSION
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added support links
