@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: add actions button to QRPost panel
 - Jetpack: add Jetpack logo as QRPost site logo fallback
 - Jetpack: Add QRPost code to Jetpack sidebar
+- Jetpack: Filter image crossOrigin attribute to handle CORS issues
 - Jetpack: Render site logo in the QR Post when it exists
 - Jetpack: reorganize structure of the post-publish-qr-code-panel plugin
 - Jetpack: tweak QR Post code width
