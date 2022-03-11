@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Clean up use of deprecated FILTER_SANITIZE_STRING constant - and mark WPCom_Markdown::get_post_screen_post_type as deprecated due to lack of use
 - PHPCS updates to bring in line with WordPress standards.
 - PHPCS updates to bring in line with WordPress standards.
+- PHPCS updates to bring in line with WordPress standards.
 
 ### Bug fixes
 - Fix missing "Connect User" button after restoring connection.
