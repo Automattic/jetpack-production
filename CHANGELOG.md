@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: Render site logo in the QR Post when it exists
 - Jetpack: reorganize structure of the post-publish-qr-code-panel plugin
 - Jetpack: tweak QR Post code width
+- Premium Content block now uses a drop down menu rather than two buttons to switch between the two views
 
 ### Improved compatibility
 - Clean up use of deprecated FILTER_SANITIZE_STRING constant - and mark WPCom_Markdown::get_post_screen_post_type as deprecated due to lack of use
