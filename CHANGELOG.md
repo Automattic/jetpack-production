@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix missing "Connect User" button after restoring connection.
+- Make the Pay with Paypal widget work in the widget editor
 - SEO Tools: ensure Twitter cards get correct description when a site has a blank tagline.
 - Swap JETPACK_VERSION for the correct JETPACK__VERSION
 
