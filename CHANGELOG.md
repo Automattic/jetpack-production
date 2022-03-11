@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Page: use a dynamic version in cache buster on dev environment.
 - Admin pages: remove wp_kses() as it's not needed for static.html.
 - Fix Sync related flaky test.
+- If the mapbox API call returns a completely invalid response, treat it as a failure rather than a success.
 - Init 10.8-1.4 cycle.
 - Moved with-has-warning-is-interactive-class-names folder to js-package/shared-extension-utils and updated imports
 - PHPCS changes for the Pay with Paypal feature
