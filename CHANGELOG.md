@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added support links
+- Admin Page: use a dynamic version in cache buster on dev environment.
 - Admin pages: remove wp_kses() as it's not needed for static.html.
 - Fix Sync related flaky test.
 - Init 10.8-1.4 cycle.
