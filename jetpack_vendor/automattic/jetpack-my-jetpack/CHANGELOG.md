@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Use ThemeProvider instead base-styles
 - Updated package dependencies
 
+### Removed
+- Removed Beta badge from menu item
+
 ## [0.6.9] - 2022-03-09
 ### Changed
 - Updated package dependencies.
