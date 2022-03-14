@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Make Backup go through the purchase flow after activation
+- My Jetpack: Use ThemeProvider instead base-styles
 - Updated package dependencies
 
 ## [0.6.9] - 2022-03-09
