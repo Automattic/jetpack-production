@@ -274,8 +274,12 @@ return array(
 		'version' => '2.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jitm/src/class-post-connection-jitm.php'
 	),
+	'Automattic\\Jetpack\\Fonts\\Utils' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $vendorDir . '/automattic/jetpack-google-fonts-provider/src/class-utils.php'
+	),
 	'Automattic\\Jetpack\\Fonts\\Google_Fonts_Provider' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-google-fonts-provider/src/class-google-fonts-provider.php'
 	),
 	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
