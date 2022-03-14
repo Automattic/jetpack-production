@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - PHPCS updates to bring in line with WordPress standards.
 
 ### Bug fixes
+- Fixes GA analytics setting showing upgrade button on latest security plans
 - Fix missing "Connect User" button after restoring connection.
 - Make the Pay with Paypal widget work in the widget editor
 - SEO Tools: ensure Twitter cards get correct description when a site has a blank tagline.
