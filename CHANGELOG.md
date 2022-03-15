@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Jetpack: Open QR Post to production.
+
 ## 10.8-a.7 - 2022-03-15
 ### Enhancements
 - Dashboard: add toggle to enable new Google Fonts feature.
