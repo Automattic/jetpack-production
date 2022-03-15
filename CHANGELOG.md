@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Make the Pay with Paypal widget work in the widget editor
 - SEO Tools: ensure Twitter cards get correct description when a site has a blank tagline.
 - Swap JETPACK_VERSION for the correct JETPACK__VERSION
+- When a user subscribes to premium content he now sees the premium content without needing to reload the page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added support links
