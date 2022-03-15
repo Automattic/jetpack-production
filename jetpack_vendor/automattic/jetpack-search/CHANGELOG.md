@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Fixed minor product defects
+- Search: moved globals to a class for sake of autoloading correctly
 - Search package: Updated Gridicon dependancy to use local version
 - Updated package dependencies.
 - Updated package dependencies.

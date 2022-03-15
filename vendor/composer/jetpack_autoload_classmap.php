@@ -178,6 +178,10 @@ return array(
 		'version' => '0.11.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/dashboard/class-initial-state.php'
 	),
+	'Automattic\\Jetpack\\Search\\Package' => array(
+		'version' => '0.11.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-package.php'
+	),
 	'Automattic\\Jetpack\\Search\\CLI' => array(
 		'version' => '0.11.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-cli.php'

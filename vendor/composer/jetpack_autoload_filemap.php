@@ -18,10 +18,6 @@ return array(
 		'version' => '1.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/functions.php'
 	),
-	'c41c8291342c1bc5fcb32cf6fda33a14' => array(
-		'version' => '0.11.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/search.php'
-	),
 	'd7b298d70ab0e8605f5d5b6edeab1bd2' => array(
 		'version' => '0.1.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-waf/actions.php'

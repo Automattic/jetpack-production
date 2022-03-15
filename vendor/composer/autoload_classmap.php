@@ -104,6 +104,7 @@ return array(
     'Automattic\\Jetpack\\Search\\Label_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customizer/customize-controls/class-label-control.php',
     'Automattic\\Jetpack\\Search\\Module_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-module-control.php',
     'Automattic\\Jetpack\\Search\\Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-options.php',
+    'Automattic\\Jetpack\\Search\\Package' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-package.php',
     'Automattic\\Jetpack\\Search\\Plan' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-plan.php',
     'Automattic\\Jetpack\\Search\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Search\\Search_Widget' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/widgets/class-search-widget.php',
