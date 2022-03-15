@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.8-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 10.8-a.7 - 2022-03-15
 ### Enhancements
 - Dashboard: add toggle to enable new Google Fonts feature.
