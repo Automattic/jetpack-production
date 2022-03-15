@@ -22,8 +22,4 @@ return array(
 		'version' => '0.1.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-waf/actions.php'
 	),
-	'c41c8291342c1bc5fcb32cf6fda33a14' => array(
-		'version' => '0.11.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/search.php'
-	),
 );
