@@ -5,17 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.11.1] - 2022-03-15
 ### Changed
 - Fixed minor product defects
 - Search: moved globals to a class for sake of autoloading correctly
 - Search package: Updated Gridicon dependancy to use local version
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
 - Updated package dependencies.
 
 ## [0.11.0] - 2022-03-08
@@ -164,7 +158,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.11.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.11.0...v0.11.1-alpha
+[0.11.1]: https://github.com/Automattic/jetpack-search/compare/v0.11.0...v0.11.1
 [0.11.0]: https://github.com/Automattic/jetpack-search/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/Automattic/jetpack-search/compare/v0.9.1...v0.10.0
 [0.9.1]: https://github.com/Automattic/jetpack-search/compare/v0.9.0...v0.9.1

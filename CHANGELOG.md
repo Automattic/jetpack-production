@@ -2,57 +2,34 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.8-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.8-a.7 - 2022-03-15
 ### Enhancements
 - Dashboard: add toggle to enable new Google Fonts feature.
-- Jepack: Render QRPost into a modal component
-- Jetpack: add actions button to QRPost panel
-- Jetpack: add Jetpack logo as QRPost site logo fallback
-- Jetpack: Add QRPost code to Jetpack sidebar
-- Jetpack: Filter image crossOrigin attribute to handle CORS issues
-- Jetpack: QRPost: use only permalink to generate QR code
-- Jetpack: Render site logo in the QR Post when it exists
-- Jetpack: reorganize structure of the post-publish-qr-code-panel plugin
-- Jetpack: tweak QR Post code width
-- Premium Content block now uses a drop down menu rather than two buttons to switch between the two views
-- Updated design of resumable uploader block.
+- Jetpack: add QRPost feature which generates QR codes for published posts. Currently a JETPACK_BETA_BLOCKS feature.
+- Premium Content block: use a drop down menu rather than two buttons to switch between the guest/subscriber views.
+- VideoPress: updated design of resumable uploader block.
 
 ### Improved compatibility
-- Clean up use of deprecated FILTER_SANITIZE_STRING constant - and mark WPCom_Markdown::get_post_screen_post_type as deprecated due to lack of use
-- PHPCS updates to bring in line with WordPress standards.
-- PHPCS updates to bring in line with WordPress standards.
-- PHPCS updates to bring in line with WordPress standards.
+- General: clean up use of deprecated FILTER_SANITIZE_STRING constant. Also mark WPCom_Markdown::get_post_screen_post_type as deprecated due to lack of use.
 
 ### Bug fixes
-- Fixes GA analytics setting showing upgrade button on latest security plans
-- Fix missing "Connect User" button after restoring connection.
-- Make the Pay with Paypal widget work in the widget editor
+- Google Analytics: fix showing an upgrade button with the latest Jetpack security plans.
+- Jetpack: fix missing "Connect User" button after restoring a connection.
+- Pay with PayPal widget: enable widget to work in block-based widget editor and full site editor.
 - SEO Tools: ensure Twitter cards get correct description when a site has a blank tagline.
-- Swap JETPACK_VERSION for the correct JETPACK__VERSION
-- When a user subscribes to premium content he now sees the premium content without needing to reload the page.
+- Payments: swap JETPACK_VERSION for the correct JETPACK__VERSION.
+- Premium Content block: when a visitor subscribes, they now see the premium content without needing to reload the page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added support links
 - Admin Page: use a dynamic version in cache buster on dev environment.
-- Admin pages: remove wp_kses() as it's not needed for static.html.
+- Admin Page: remove wp_kses() as it's not needed for static.html.
 - Fix Sync related flaky test.
 - Google Fonts: update the method used to preconnect Fonts source domain.
 - If the mapbox API call returns a completely invalid response, treat it as a failure rather than a success.
-- Init 10.8-1.4 cycle.
-- Moved with-has-warning-is-interactive-class-names folder to js-package/shared-extension-utils and updated imports
-- PHPCS changes for the Pay with Paypal feature
-- Search: improve Search E2E tests stability
-- Search: moved globals to a class for sake of autoloading correctly
-- Updated package dependencies
-- Updated package dependencies
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
+- Moved with-has-warning-is-interactive-class-names folder to js-package/shared-extension-utils and updated imports.
+- PHPCS changes for the Pay with Paypal feature.
+- Search: improve Search E2E tests stability.
+- Search: moved globals to a class for sake of autoloading correctly.
 - Updated package dependencies.
 
 ## 10.8-a.5 - 2022-03-08
