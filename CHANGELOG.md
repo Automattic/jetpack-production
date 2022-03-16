@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Hijack feature eligibility checks on WP.com sites, since they use an independent gateway system.
 
+### Bug fixes
+- Calendly Block: ensure it can be displayed inline when using a block enabled theme.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Remove use of `strptime`, which was only used in a branch for compatibility with PHP before 5.3.
 
