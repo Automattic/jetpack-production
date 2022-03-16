@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Admin Menu: Optimize user blog counting
 - Jetpack: Open QR Post to production.
+- Move the Stripe Connect toolbar button into a shared component, and add event tracking on it.
 
 ### Improved compatibility
 - Hijack feature eligibility checks on WP.com sites, since they use an independent gateway system.
