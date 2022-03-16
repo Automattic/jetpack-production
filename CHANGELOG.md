@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Admin Menu: Optimize user blog counting
 - Jetpack: Open QR Post to production.
 
 ## 10.8-a.7 - 2022-03-15
