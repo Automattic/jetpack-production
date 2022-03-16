@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add My Jetpack to the Jetpack plugin nav
 - Admin Menu: Optimize user blog counting
+- Jetpack: improve QR Post code site/Jetpacj logo
 - Jetpack: Open QR Post to production.
 - Move the Stripe Connect toolbar button into a shared component, and add event tracking on it.
 
