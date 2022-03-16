@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Optimize user blog counting
 - Jetpack: Open QR Post to production.
 
+### Improved compatibility
+- Hijack feature eligibility checks on WP.com sites, since they use an independent gateway system.
+
 ## 10.8-a.7 - 2022-03-15
 ### Enhancements
 - Dashboard: add toggle to enable new Google Fonts feature.
