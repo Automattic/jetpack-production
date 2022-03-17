@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Jetpack now relies on Connection Webooks for authorize and authorize_redirect actions
+
 ### Removed
 - Removed a reference to the terms-of-service package.
 

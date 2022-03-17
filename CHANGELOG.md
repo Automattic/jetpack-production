@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Hijack feature eligibility checks on WP.com sites, since they use an independent gateway system.
+- Jetpack now relies on Connection Webooks for authorize and authorize_redirect actions
 
 ### Bug fixes
 - Calendly Block: ensure it can be displayed inline when using a block enabled theme.
