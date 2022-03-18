@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Optimize user blog counting
 - Jetpack: improve QR Post code site/Jetpacj logo
 - Jetpack: Open QR Post to production.
+- Moved plan-utils.js file from jetpack floder to shared-extension-utils. Also moved requiresPaidPlan from register-jetpack-block to plan-utils
 - Move the Stripe Connect toolbar button into a shared component, and add event tracking on it.
 
 ### Improved compatibility
