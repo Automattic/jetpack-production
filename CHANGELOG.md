@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Calendly Block: ensure it can be displayed inline when using a block enabled theme.
 - Fixed broken styles on resumable uploader component.
+- Fixed inconsistent currency formatting in Pay with Paypal block
 - Prevent newlines from being stripped from a custom Publicize message in the classic editor
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
