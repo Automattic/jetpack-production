@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove use of `strptime`, which was only used in a branch for compatibility with PHP before 5.3.
 - Search: use config package to initialize the search package
 - Show product name if there is only one user license to be activated
+- Unit tests: Update Sync related unit test
 
 ## 10.8-a.7 - 2022-03-15
 ### Enhancements
