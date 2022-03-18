@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: Open QR Post to production.
 - Moved plan-utils.js file from jetpack floder to shared-extension-utils. Also moved requiresPaidPlan from register-jetpack-block to plan-utils
 - Move the Stripe Connect toolbar button into a shared component, and add event tracking on it.
+- Now when we click on the payment button from an email, notification, or reader the corresponding payment form will open automatically.
 
 ### Improved compatibility
 - Hijack feature eligibility checks on WP.com sites, since they use an independent gateway system.
