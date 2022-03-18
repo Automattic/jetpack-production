@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Centralized all intializing logic
+- Search dashboard: changed condition to always show dashboard submenu
 
 ### Fixed
 - Search: fixed cli and package version reporting broken in #23435
