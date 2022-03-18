@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Centralized all intializing logic
 - Search dashboard: changed condition to always show dashboard submenu
+- Use Migrated GlotPress locale classes from compat pkg.
 
 ### Fixed
 - Search: fixed cli and package version reporting broken in #23435

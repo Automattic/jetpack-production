@@ -40,6 +40,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
       'ver' => '1.2.9999999-dev',
     ),
+    'jetpack-compat' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-compat',
+      'ver' => '1.7.9999999-dev',
+    ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
       'ver' => '2.3.9999999-dev',
