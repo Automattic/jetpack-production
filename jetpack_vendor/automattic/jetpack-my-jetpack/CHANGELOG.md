@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Changed title
 - Improved should_initialize method
+- My Jetpack: Use Text and CSS vars on ProductCard
 - Updated package dependencies.
 
 ## [0.6.10] - 2022-03-15
