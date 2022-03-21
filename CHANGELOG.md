@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - (WP.com only) Sync class.json-api-endpoints.php changes from D76475
 - Add Backup storage info to At a Glance page.
+- Added tracking for backup storage info bar chart.
 - Remove use of `strptime`, which was only used in a branch for compatibility with PHP before 5.3.
 - Search: use config package to initialize the search package
 - Show product name if there is only one user license to be activated
