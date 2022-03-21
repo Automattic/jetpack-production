@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Introduce Monitor Card
+- My Jetpack: add error styles to the whole Product card component
 - My Jetpack: Make whole Product card clickable
 
 ### Changed
