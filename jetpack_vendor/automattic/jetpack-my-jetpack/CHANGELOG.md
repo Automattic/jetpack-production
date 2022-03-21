@@ -10,9 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Introduce Monitor Card
 - My Jetpack: Make whole Product card clickable
 
 ### Changed
+- Chage opacity of product icons to 40%
 - Changed title
 - Improved should_initialize method
 - My Jetpack: Use Text and CSS vars on ProductCard
