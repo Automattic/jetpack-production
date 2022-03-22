@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Chage opacity of product icons to 40%
 - Changed title
 - Improved should_initialize method
+- My Jetpack: remove dropdown from CTA button in Product cards
 - My Jetpack: Use Text and CSS vars on ProductCard
 - Updated Boost product icon for clarity
 - Updated package dependencies.
