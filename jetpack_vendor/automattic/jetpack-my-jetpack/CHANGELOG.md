@@ -23,6 +23,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update organization and copy of the Plans section
 
+### Fixed
+- Fix Plans section top margin for plan list
+
 ## [0.6.10] - 2022-03-15
 ### Changed
 - Make Backup go through the purchase flow after activation
