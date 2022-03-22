@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add My Jetpack to the Jetpack plugin nav
 - Admin Menu: Optimize user blog counting
+- External Media: Added support for Openverse.
 - Jetpack: improve QR Post code site/Jetpacj logo
 - Jetpack: Open QR Post to production.
 - Moved plan-utils.js file from jetpack floder to shared-extension-utils. Also moved requiresPaidPlan from register-jetpack-block to plan-utils
