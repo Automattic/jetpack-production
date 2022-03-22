@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed inconsistent currency formatting in Pay with Paypal block
 - Fix WordAds defaulting to "house ad" mode for new activations
 - Prevent newlines from being stripped from a custom Publicize message in the classic editor
+- Shortlinks: display the shortlinks interface in the block editor for all post types that support shortlinks.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - (WP.com only) Sync class.json-api-endpoints.php changes from D76475
