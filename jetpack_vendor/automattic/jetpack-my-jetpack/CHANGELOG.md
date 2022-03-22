@@ -24,6 +24,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update organization and copy of the Plans section
 
+### Removed
+- My Jetpack: Remove client code that allows to deactivate a product
+
 ### Fixed
 - Fix Plans section top margin for plan list
 - My Jetpack: jetpack_my_jetpack_should_initialize filter now respected when set to true.
