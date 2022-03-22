@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix Plans section top margin for plan list
+- My Jetpack: jetpack_my_jetpack_should_initialize filter now respected when set to true.
 
 ## [0.6.10] - 2022-03-15
 ### Changed
