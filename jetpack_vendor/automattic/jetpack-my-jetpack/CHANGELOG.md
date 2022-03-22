@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Use Text and CSS vars on ProductCard
 - Updated Boost product icon for clarity
 - Updated package dependencies.
+- Updated package dependencies.
 - Update organization and copy of the Plans section
 
 ### Fixed
