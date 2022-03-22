@@ -238,10 +238,6 @@ return array(
 		'version' => '0.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-extras.php'
 	),
-	'Automattic\\Jetpack\\My_Jetpack\\Products\\Monitor' => array(
-		'version' => '0.6.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-monitor.php'
-	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Crm' => array(
 		'version' => '0.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-crm.php'
