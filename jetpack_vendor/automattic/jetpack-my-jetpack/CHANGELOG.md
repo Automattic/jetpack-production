@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.11-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.6.11] - 2022-03-23
 ### Added
 - My Jetpack: add error styles to the whole Product card component
 - My Jetpack: Make whole Product card clickable
 
 ### Changed
-- Chage opacity of product icons to 40%
+- Changed opacity of product icons to 40%
 - Changed title
 - Improved should_initialize method
 - My Jetpack: remove dropdown from CTA button in Product cards
@@ -388,7 +385,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[0.6.11-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.10...0.6.11-alpha
+[0.6.11]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.10...0.6.11
 [0.6.10]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.9...0.6.10
 [0.6.9]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.8...0.6.9
 [0.6.8]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.7...0.6.8
