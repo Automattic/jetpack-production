@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Enable syncing of dedicated_sync_enabled Sync setting
 
+### Fixed
+- Dedicated Sync: Allow spawning request with expired Retry-After
+
 ## [1.30.3] - 2022-03-15
 ### Changed
 - Search Sync Settings :: Add ETB taxonomy to allow list.
