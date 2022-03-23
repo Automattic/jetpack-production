@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated Boost product icon for clarity
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated styles for each product card status
 - Update organization and copy of the Plans section
 
 ### Removed
