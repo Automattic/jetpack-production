@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed broken styles on resumable uploader component.
 - Fixed inconsistent currency formatting in Pay with Paypal block
 - Fix WordAds defaulting to "house ad" mode for new activations
+- Premium Content Block: fix a Redux store middleware regression on older Gutenberg versions.
 - Prevent newlines from being stripped from a custom Publicize message in the classic editor
 - Shortlinks: display the shortlinks interface in the block editor for all post types that support shortlinks.
 - Top Posts Widget: display a fallback list of posts to admins when there are no  popular posts to display.
