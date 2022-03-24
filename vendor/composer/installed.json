@@ -1526,17 +1526,17 @@
         },
         {
             "name": "automattic/jetpack-search",
-            "version": "v0.11.2",
-            "version_normalized": "0.11.2.0",
+            "version": "v0.11.3",
+            "version_normalized": "0.11.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-search.git",
-                "reference": "836a914698f1fbf414a9d32b8216855b97b4974e"
+                "reference": "ac91f3886bf926b11ec848444c1721307145dc11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-search/zipball/836a914698f1fbf414a9d32b8216855b97b4974e",
-                "reference": "836a914698f1fbf414a9d32b8216855b97b4974e",
+                "url": "https://api.github.com/repos/Automattic/jetpack-search/zipball/ac91f3886bf926b11ec848444c1721307145dc11",
+                "reference": "ac91f3886bf926b11ec848444c1721307145dc11",
                 "shasum": ""
             },
             "require": {
@@ -1553,7 +1553,7 @@
                 "automattic/wordbless": "0.3.1",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-03-23T19:10:36+00:00",
+            "time": "2022-03-24T22:14:15+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1581,7 +1581,7 @@
             ],
             "description": "Tools to assist with enabling cloud search for Jetpack sites.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-search/tree/v0.11.2"
+                "source": "https://github.com/Automattic/jetpack-search/tree/v0.11.3"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-search"
         },
