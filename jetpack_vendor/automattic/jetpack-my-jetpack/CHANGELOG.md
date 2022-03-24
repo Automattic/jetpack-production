@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.12-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add missing JS peer dependencies.
+
+### Changed
+- Use different URLs for manage and purchase links in plans section
+
 ## [0.6.11] - 2022-03-23
 ### Added
 - My Jetpack: add error styles to the whole Product card component
@@ -385,6 +395,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[0.6.12-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.11...0.6.12-alpha
 [0.6.11]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.10...0.6.11
 [0.6.10]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.9...0.6.10
 [0.6.9]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.8...0.6.9
