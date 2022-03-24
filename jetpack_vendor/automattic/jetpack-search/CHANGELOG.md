@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Search: adds a record count above the record meter chart
 
+### Fixed
+- Deactivation: Do not attempt to redirect on a behind-the-scene deactivation.
+
 ## [0.11.2] - 2022-03-23
 ### Added
 - adds basic structure for record meter with dummy data
