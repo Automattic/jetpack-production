@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix ProductManagementControls not being able to open the block settings sidebar on site and widgets editor.
+- Updated Openverse icon to use the right colors
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Documented the `rna` prop of the Button component
