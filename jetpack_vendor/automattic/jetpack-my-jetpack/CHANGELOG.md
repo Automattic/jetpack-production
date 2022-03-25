@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add missing JS peer dependencies.
 
 ### Changed
+- My Jetpack: tweak plan sections styles/sizes
 - Use different URLs for manage and purchase links in plans section
 
 ## [0.6.11] - 2022-03-23
