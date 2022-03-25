@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Documented the `rna` prop of the Button component
 - E2E tests: improve assertions for sync tests
 - phpcs changes for protect module
+- Search: Removed migrated tests
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.

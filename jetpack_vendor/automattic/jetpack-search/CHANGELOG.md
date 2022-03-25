@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Adds notice box component to record meter
+- Search: Migrated tests from Jetpack plugin
 
 ### Changed
 - Updated package dependencies.
