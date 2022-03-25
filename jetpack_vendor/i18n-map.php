@@ -16,6 +16,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-heartbeat',
       'ver' => '1.4.0',
     ),
+    'jetpack-admin-ui' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
+      'ver' => '0.2.5',
+    ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
       'ver' => '1.37.2',
@@ -28,6 +32,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
       'ver' => '0.8.3',
     ),
+    'jetpack-sync' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-sync',
+      'ver' => '1.30.4',
+    ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
       'ver' => '1.2.5',
@@ -35,18 +43,6 @@ return array(
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '1.7.0',
-    ),
-    'jetpack-admin-ui' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
-      'ver' => '0.2.5',
-    ),
-    'jetpack-sync' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-sync',
-      'ver' => '1.30.4',
-    ),
-    'jetpack-licensing' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-licensing',
-      'ver' => '1.6.3',
     ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
@@ -60,13 +56,17 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
       'ver' => '2.1.8',
     ),
-    'jetpack-config' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-config',
-      'ver' => '1.7.0',
+    'jetpack-licensing' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-licensing',
+      'ver' => '1.6.3',
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '0.6.11',
+    ),
+    'jetpack-config' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-config',
+      'ver' => '1.7.0',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
