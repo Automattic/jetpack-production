@@ -276,11 +276,11 @@ return array(
 	),
 	'Automattic\\Jetpack\\Fonts\\Utils' => array(
 		'version' => '0.2.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-google-fonts-provider/src/class-utils.php'
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-utils.php'
 	),
 	'Automattic\\Jetpack\\Fonts\\Google_Fonts_Provider' => array(
 		'version' => '0.2.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-google-fonts-provider/src/class-google-fonts-provider.php'
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-google-fonts-provider.php'
 	),
 	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
 		'version' => '2.3.9999999.9999999-dev',
@@ -352,11 +352,11 @@ return array(
 	),
 	'Automattic\\Jetpack\\Plugins_Installer' => array(
 		'version' => '0.1.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-plugins-installer/src/class-plugins-installer.php'
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php'
 	),
 	'Automattic\\Jetpack\\Automatic_Install_Skin' => array(
 		'version' => '0.1.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-plugins-installer/src/class-automatic-install-skin.php'
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-automatic-install-skin.php'
 	),
 	'Automattic\\Jetpack\\Partner_Coupon' => array(
 		'version' => '1.7.9999999.9999999-dev',
