@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.8-a.10 - unreleased
+## 10.8-a.12 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -22,6 +22,12 @@ This is an alpha version! The changes listed here are not final.
 - Documented the `rna` prop of the Button component
 - E2E tests: improve assertions for sync tests
 - phpcs changes for protect module
+- Updated package dependencies.
+- Updated package dependencies.
+- Updated package dependencies.
+- Updated package dependencies.
+
+## 10.8-a.11 - 2022-03-25
 
 ## 10.8-a.9 - 2022-03-23
 ### Major Enhancements
