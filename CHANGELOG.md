@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Documented the `rna` prop of the Button component
 - E2E tests: improve assertions for sync tests
 - phpcs changes for protect module
 
