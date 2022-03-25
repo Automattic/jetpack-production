@@ -86,10 +86,6 @@ return array(
 		'version' => '0.1.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runner.php'
 	),
-	'Automattic\\Jetpack\\Waf\\WafRuleCompiler' => array(
-		'version' => '0.1.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-rule-compiler.php'
-	),
 	'Automattic\\Jetpack\\Waf\\WafRuntime' => array(
 		'version' => '0.1.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runtime.php'

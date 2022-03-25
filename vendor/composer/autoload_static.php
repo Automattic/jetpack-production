@@ -204,7 +204,6 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_a_10
         'Automattic\\Jetpack\\Terms_Of_Service' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-terms-of-service.php',
         'Automattic\\Jetpack\\Tracking' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-tracking/src/class-tracking.php',
         'Automattic\\Jetpack\\Waf\\WafOperators' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-operators.php',
-        'Automattic\\Jetpack\\Waf\\WafRuleCompiler' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-rule-compiler.php',
         'Automattic\\Jetpack\\Waf\\WafRunner' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-runner.php',
         'Automattic\\Jetpack\\Waf\\WafRuntime' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-runtime.php',
         'Automattic\\Jetpack\\Waf\\WafTransforms' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-transforms.php',

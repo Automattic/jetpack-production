@@ -172,7 +172,6 @@ return array(
     'Automattic\\Jetpack\\Terms_Of_Service' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-terms-of-service.php',
     'Automattic\\Jetpack\\Tracking' => $baseDir . '/jetpack_vendor/automattic/jetpack-tracking/src/class-tracking.php',
     'Automattic\\Jetpack\\Waf\\WafOperators' => $vendorDir . '/automattic/jetpack-waf/src/class-waf-operators.php',
-    'Automattic\\Jetpack\\Waf\\WafRuleCompiler' => $vendorDir . '/automattic/jetpack-waf/src/class-waf-rule-compiler.php',
     'Automattic\\Jetpack\\Waf\\WafRunner' => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runner.php',
     'Automattic\\Jetpack\\Waf\\WafRuntime' => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runtime.php',
     'Automattic\\Jetpack\\Waf\\WafTransforms' => $vendorDir . '/automattic/jetpack-waf/src/class-waf-transforms.php',
