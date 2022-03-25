@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## [0.11.3] - 2022-03-24
 ### Added
