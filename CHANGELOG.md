@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add distinct nomenclature to ProductManagementControls depending on product type
 - Added links to manage subscriptions and fees associated with our payment blocks to the Product Management controls.
+- Dashboard: add highlight of the Jetpack blocks to the settings page.
 
 ### Improved compatibility
 - Added support for the `muted`, `controls` and `playsinline` properties on the wpvideo and videopress shortcodes.
