@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add distinct nomenclature to ProductManagementControls depending on product type
+- Added links to manage subscriptions and fees associated with our payment blocks to the Product Management controls.
 
 ### Bug fixes
 - Fix ProductManagementControls not being able to open the block settings sidebar on site and widgets editor.
