@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add missing JS peer dependencies.
 
 ### Changed
+- Microperformance: Use === null instead of is_null
 - Moved in product icon components from My Jetpack
 - My Jetpack: tweak plan sections styles/sizes
 - My Jetpack: Update ProductDetailCard to use components and theme variables

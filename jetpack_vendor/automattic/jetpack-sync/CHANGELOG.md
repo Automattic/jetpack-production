@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.30.5-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Microperformance: Use === null instead of is_null
+
 ## [1.30.4] - 2022-03-23
 ### Changed
 - Enable syncing of dedicated_sync_enabled Sync setting
@@ -599,6 +606,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[1.30.5-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.30.4...v1.30.5-alpha
 [1.30.4]: https://github.com/Automattic/jetpack-sync/compare/v1.30.3...v1.30.4
 [1.30.3]: https://github.com/Automattic/jetpack-sync/compare/v1.30.2...v1.30.3
 [1.30.2]: https://github.com/Automattic/jetpack-sync/compare/v1.30.1...v1.30.2

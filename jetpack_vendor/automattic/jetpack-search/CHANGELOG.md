@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Migrated tests from Jetpack plugin
 
 ### Changed
+- Microperformance: Use === null instead of is_null
 - Search: connection states
 - Updated package dependencies.
 - Updated package dependencies.
