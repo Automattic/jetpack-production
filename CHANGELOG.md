@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Added support for the `muted`, `controls` and `playsinline` properties on the wpvideo and videopress shortcodes.
 
 ### Bug fixes
+- Assistant: Make call-to-actions point to checkout page
 - Fix ProductManagementControls not being able to open the block settings sidebar on site and widgets editor.
 - Updated Openverse icon to use the right colors
 
