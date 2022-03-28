@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Update ProductDetailCard to use components and theme variables
 - Use different URLs for manage and purchase links in plans section
 
+### Fixed
+- My Jetpack: Connect Screen logos quality
+
 ## [0.6.11] - 2022-03-23
 ### Added
 - My Jetpack: add error styles to the whole Product card component
