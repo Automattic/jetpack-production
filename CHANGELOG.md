@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Blocks: Make settings discoverable and toggleable.
 - Payments block now uses the product management controls to manage subscriptions. Migrated the payments block to a functional component and cleaned up code.
 - Removed unneeded calls to Atomic_Plan_Manager
+- Slideshow shortcode: adds the Jetpack namespace to slideshow shortcode CSS class names.
 
 ### Improved compatibility
 - Added support for the `muted`, `controls` and `playsinline` properties on the wpvideo and videopress shortcodes.
