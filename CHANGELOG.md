@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Added links to manage subscriptions and fees associated with our payment blocks to the Product Management controls.
 - Dashboard: add a card to highlight the blocks available in Jetpack.
 - Dashboard: add highlight of the Jetpack blocks to the settings page.
+- Form Block: offer option to install/activate the Jetpack CRM plugin from the Form Block options.
 
 ### Improved compatibility
 - Added support for the `muted`, `controls` and `playsinline` properties on the wpvideo and videopress shortcodes.
