@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: add highlight of the Jetpack blocks to the settings page.
 - Form Block: offer option to install/activate the Jetpack CRM plugin from the Form Block options.
 - Payments block now uses the product management controls to manage subscriptions. Migrated the payments block to a functional component and cleaned up code.
+- Removed unneeded calls to Atomic_Plan_Manager
 
 ### Improved compatibility
 - Added support for the `muted`, `controls` and `playsinline` properties on the wpvideo and videopress shortcodes.
