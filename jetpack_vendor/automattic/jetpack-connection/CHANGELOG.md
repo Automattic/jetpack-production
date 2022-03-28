@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Microperformance: Use === null instead of is_null
 
+### Fixed
+- Fix regression added to Jetpack webhooks handling
+
 ## [1.37.2] - 2022-03-23
 ### Changed
 - Jetpack now relies on Connection Webooks for authorize and authorize_redirect actions
