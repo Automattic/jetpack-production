@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
+- Updated package dependencies.
 
 ## 10.8-a.11 - 2022-03-25
 
