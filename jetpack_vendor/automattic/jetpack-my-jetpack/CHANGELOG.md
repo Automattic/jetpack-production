@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Moved in product icon components from My Jetpack
 - My Jetpack: tweak plan sections styles/sizes
 - My Jetpack: Update ProductDetailCard to use components and theme variables
+- My Jetpack: Use components to render headers elements
 - Use different URLs for manage and purchase links in plans section
 
 ### Fixed
