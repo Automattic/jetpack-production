@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add back the upgrade nudge to the Payment Button block
 - Add distinct nomenclature to ProductManagementControls depending on product type
 - Added links to manage subscriptions and fees associated with our payment blocks to the Product Management controls.
+- Adding language attributes to code blocks.
 - Dashboard: add a card to highlight the blocks available in Jetpack.
 - Dashboard: add highlight of the Jetpack blocks to the settings page.
 - Form Block: offer option to install/activate the Jetpack CRM plugin from the Form Block options.
