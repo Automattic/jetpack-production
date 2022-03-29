@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix VS Code ESLint and prettier config
 - Search: fix the Search is never returned for benefits API
 - Updated Openverse icon to use the right colors
+- WordPress.com Toolbar: avoid PHP notices when locale is not defined.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add uloggedin parameter for reporting
