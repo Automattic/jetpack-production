@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: add highlight of the Jetpack blocks to the settings page.
 - Form Block: offer option to install/activate the Jetpack CRM plugin from the Form Block options.
 - Jetpack Blocks: Make settings discoverable and toggleable.
+- Payments Block: introduce new Post Publish panel to highlight the options available with Payments blocks.
 - Payments block now uses the product management controls to manage subscriptions. Migrated the payments block to a functional component and cleaned up code.
 - Removed unneeded calls to Atomic_Plan_Manager
 - Slideshow shortcode: adds the Jetpack namespace to slideshow shortcode CSS class names.
