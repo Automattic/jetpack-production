@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated Openverse icon to use the right colors
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add uloggedin parameter for reporting
 - Block Form: update required Jetpack CRM version.
 - Documented the `rna` prop of the Button component
 - E2E tests: improve assertions for sync tests
