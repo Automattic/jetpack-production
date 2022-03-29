@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 - Updated package dependencies.
+- WordPress.com Toolbar: check if function exists before to use it.
 
 ## 10.8-a.11 - 2022-03-25
 
