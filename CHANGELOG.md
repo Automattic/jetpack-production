@@ -2,51 +2,39 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.8-a.12 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.8-beta - 2022-03-29
 ### Enhancements
-- Add back the upgrade nudge to the Payment Button block
-- Add distinct nomenclature to ProductManagementControls depending on product type
-- Added links to manage subscriptions and fees associated with our payment blocks to the Product Management controls.
-- Adding language attributes to code blocks.
-- Dashboard: add a card to highlight the blocks available in Jetpack.
-- Dashboard: add highlight of the Jetpack blocks to the settings page.
-- Form Block: offer option to install/activate the Jetpack CRM plugin from the Form Block options.
-- Jetpack Blocks: Make settings discoverable and toggleable.
-- Payments Block: introduce new Post Publish panel to highlight the options available with Payments blocks.
-- Payments block now uses the product management controls to manage subscriptions. Migrated the payments block to a functional component and cleaned up code.
-- Removed unneeded calls to Atomic_Plan_Manager
-- Slideshow shortcode: adds the Jetpack namespace to slideshow shortcode CSS class names.
-- We now provide a way in which we can propagate the controls to the child blocks.
+
+- Blocks: make settings discoverable and toggleable, and add a card to highlight the blocks available from Jetpack on the dashboard.
+- Form Block: offer option to install/activate the Jetpack CRM plugin from the Form block settings panel.
+- Payments Block: introduce new post-publish panel to highlight the options available with Payments blocks.
+- VideoPress: added support for the `muted`, `controls` and `playsinline` properties on the 'wpvideo' and VideoPress shortcodes.
 
 ### Improved compatibility
-- Added support for the `muted`, `controls` and `playsinline` properties on the wpvideo and videopress shortcodes.
-
-### Bug fixes
-- Assistant: Make call-to-actions point to checkout page
-- Fix ProductManagementControls not being able to open the block settings sidebar on site and widgets editor.
-- Fix VS Code ESLint and prettier config
-- Search: fix the Search is never returned for benefits API
-- Updated Openverse icon to use the right colors
-- WordPress.com Toolbar: avoid PHP notices when locale is not defined.
+- Shortcodes: adds the Jetpack namespace to slideshow shortcode CSS class names.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add uloggedin parameter for reporting
+- Subscriptions Block: make the block messages clearer.
+- Payments Block: we now provide a way in which we can propagate the controls to the child blocks.
+- Payment Blocks: Added links to manage subscriptions and fees to the Product Management controls.
+- Payments Button Block: add back the upgrade nudge.
+- Fix ProductManagementControls not being able to open the block settings sidebar on site and widgets editor.
+- Adding language attributes to code blocks.
+- Search: Add search feature to benefits API.
+- Fix VS Code ESLint and prettier config.
+- Removed unneeded calls to Atomic_Plan_Manager.
+- Add uloggedin parameter for reporting.
 - Block Form: update required Jetpack CRM version.
-- Documented the `rna` prop of the Button component
-- E2E tests: improve assertions for sync tests
+- Documented the `rna` prop of the Button component.
+- E2E tests: improve assertions for sync tests.
 - Jetpack CRM: adjust banner's wording.
-- phpcs changes for protect module
-- Search: Removed migrated tests
+- Various PHPCS updates.
+- Search: removed migrated tests.
 - Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
-- Updated package dependencies.
+- Assistant: make call-to-actions point to checkout page.
 - WordPress.com Toolbar: check if function exists before to use it.
+- WordPress.com Toolbar: avoid PHP notices when locale is not defined.
+- Payments Block: use the product management controls to manage subscriptions. Migrated the Payments Block to a functional component and cleaned up code.
 
 ## 10.8-a.11 - 2022-03-25
 
