@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updated package dependencies.
 
+### Fixed
+- Fixed lints found after fixing ESLint config
+
 ## [0.11.3] - 2022-03-24
 ### Added
 - Search: adds a record count above the record meter chart.
