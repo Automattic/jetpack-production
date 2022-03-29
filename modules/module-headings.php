@@ -235,9 +235,6 @@ function jetpack_get_module_i18n( $key ) {
 	return isset( $modules[ $key ] ) ? $modules[ $key ] : null;
 }
 
-// The lists of filenames below shouldn't be arbitrarily punctuated, but the sniff triggers anyway.
-// phpcs:disable Squiz.Commenting.InlineComment.InvalidEndChar
-
 /**
  * For a given module tag, return its translated version.
  *

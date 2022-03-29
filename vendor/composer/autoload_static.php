@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_a_11
+class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_beta
 {
     public static $files = array (
         '3773ef3f09c37da5478d578e32b03a4b' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-assets/actions.php',
@@ -51,7 +51,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_a_11
         'Automattic\\Jetpack\\Autoloader\\AutoloadProcessor' => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src/AutoloadProcessor.php',
         'Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin' => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src/CustomAutoloaderPlugin.php',
         'Automattic\\Jetpack\\Autoloader\\ManifestGenerator' => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src/ManifestGenerator.php',
-        'Automattic\\Jetpack\\Automatic_Install_Skin' => __DIR__ . '/..' . '/automattic/jetpack-plugins-installer/src/class-automatic-install-skin.php',
+        'Automattic\\Jetpack\\Automatic_Install_Skin' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-automatic-install-skin.php',
         'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-backup/src/class-helper-script-manager.php',
         'Automattic\\Jetpack\\Backup\\Package_Version' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-backup/src/class-package-version.php',
         'Automattic\\Jetpack\\Backup\\REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-backup/src/class-rest-controller.php',
@@ -86,8 +86,8 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_a_11
         'Automattic\\Jetpack\\Device_Detection' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-device-detection/src/class-device-detection.php',
         'Automattic\\Jetpack\\Device_Detection\\User_Agent_Info' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-device-detection/src/class-user-agent-info.php',
         'Automattic\\Jetpack\\Error' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-error/src/class-error.php',
-        'Automattic\\Jetpack\\Fonts\\Google_Fonts_Provider' => __DIR__ . '/..' . '/automattic/jetpack-google-fonts-provider/src/class-google-fonts-provider.php',
-        'Automattic\\Jetpack\\Fonts\\Utils' => __DIR__ . '/..' . '/automattic/jetpack-google-fonts-provider/src/class-utils.php',
+        'Automattic\\Jetpack\\Fonts\\Google_Fonts_Provider' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-google-fonts-provider.php',
+        'Automattic\\Jetpack\\Fonts\\Utils' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-utils.php',
         'Automattic\\Jetpack\\Heartbeat' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-heartbeat/src/class-heartbeat.php',
         'Automattic\\Jetpack\\IdentityCrisis\\REST_Endpoints' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-rest-endpoints.php',
         'Automattic\\Jetpack\\IdentityCrisis\\UI' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-ui.php',
@@ -119,7 +119,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_a_11
         'Automattic\\Jetpack\\Partner_Coupon' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner-coupon.php',
         'Automattic\\Jetpack\\Password_Checker' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-password-checker/src/class-password-checker.php',
         'Automattic\\Jetpack\\Plugin\\Tracking' => __DIR__ . '/../..' . '/src/class-tracking.php',
-        'Automattic\\Jetpack\\Plugins_Installer' => __DIR__ . '/..' . '/automattic/jetpack-plugins-installer/src/class-plugins-installer.php',
+        'Automattic\\Jetpack\\Plugins_Installer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php',
         'Automattic\\Jetpack\\Redirect' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php',
         'Automattic\\Jetpack\\Roles' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
         'Automattic\\Jetpack\\Search\\CLI' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/class-cli.php',
@@ -204,7 +204,6 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_a_11
         'Automattic\\Jetpack\\Terms_Of_Service' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-terms-of-service.php',
         'Automattic\\Jetpack\\Tracking' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-tracking/src/class-tracking.php',
         'Automattic\\Jetpack\\Waf\\WafOperators' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-operators.php',
-        'Automattic\\Jetpack\\Waf\\WafRuleCompiler' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-rule-compiler.php',
         'Automattic\\Jetpack\\Waf\\WafRunner' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-runner.php',
         'Automattic\\Jetpack\\Waf\\WafRuntime' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-runtime.php',
         'Automattic\\Jetpack\\Waf\\WafTransforms' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-transforms.php',
@@ -237,10 +236,10 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_a_11
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_a_11::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_a_11::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_a_11::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_a_11::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_beta::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_beta::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_beta::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_8_beta::$classMap;
 
         }, null, ClassLoader::class);
     }
