@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Assistant: Make call-to-actions point to checkout page
 - Fix ProductManagementControls not being able to open the block settings sidebar on site and widgets editor.
+- Search: fix the Search is never returned for benefits API
 - Updated Openverse icon to use the right colors
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
