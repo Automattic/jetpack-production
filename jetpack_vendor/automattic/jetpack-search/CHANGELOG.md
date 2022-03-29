@@ -23,6 +23,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fixed lints found after fixing ESLint config
+- Search: address feeback for #23477
+- Search: move Jetpack plugin compatibility to the package
 
 ## [0.11.3] - 2022-03-24
 ### Added
