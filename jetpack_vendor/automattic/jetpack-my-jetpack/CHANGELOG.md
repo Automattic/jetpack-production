@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added tracking events to Plans section external links
 
+### Changed
+- Updated package dependencies.
+
 ## [0.6.12] - 2022-03-29
 ### Added
 - Add missing JS peer dependencies.
