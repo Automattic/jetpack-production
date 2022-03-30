@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added tracking events to Plans section external links
 
 ### Changed
+- My Jetpack: tweak plans section typography and descriptive text
 - Updated package dependencies.
 
 ## [0.6.12] - 2022-03-29
