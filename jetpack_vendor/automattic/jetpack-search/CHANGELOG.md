@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Search: fixed search submenu is shown because compatibility file is loaded too late
+
 ## [0.12.0] - 2022-03-29
 ### Added
 - Add selector for retrieving last indexed date
