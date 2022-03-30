@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Form Block: do not display the CRM integration option to non-admins.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Google Fonts: mark the feature as Beta, and remove toggle from dashboard.
 
