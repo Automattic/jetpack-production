@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Use the new feature eligibility checks for WPcom sites in the SEO Tools feature
+
 ### Bug fixes
 - Form Block: do not display the CRM integration option to non-admins.
 
