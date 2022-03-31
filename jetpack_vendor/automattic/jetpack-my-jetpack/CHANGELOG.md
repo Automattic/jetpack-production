@@ -5,16 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.13-alpha] - unreleased
+## [0.6.14-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updated package dependencies.
+
+## [0.6.13] - 2022-03-31
 ### Added
 - Added tracking events to Plans section external links
 
 ### Changed
 - My Jetpack: tweak plans section typography and descriptive text
-- Updated package dependencies.
 
 ## [0.6.12] - 2022-03-29
 ### Added
@@ -411,7 +414,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[0.6.13-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.12...0.6.13-alpha
+[0.6.14-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.13...0.6.14-alpha
+[0.6.13]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.12...0.6.13
 [0.6.12]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.11...0.6.12
 [0.6.11]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.10...0.6.11
 [0.6.10]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.9...0.6.10
