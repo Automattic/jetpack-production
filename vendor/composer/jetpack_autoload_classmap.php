@@ -178,14 +178,6 @@ return array(
 		'version' => '0.1.1.0',
 		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runtime.php'
 	),
-	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
-		'version' => '2.3.12.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-admin.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
-		'version' => '2.3.12.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-initial-state.php'
-	),
 	'Automattic\\Jetpack\\My_Jetpack\\REST_Products' => array(
 		'version' => '0.6.13.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-products.php'
@@ -253,6 +245,14 @@ return array(
 	'Automattic\\Jetpack\\My_Jetpack\\Products' => array(
 		'version' => '0.6.13.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-products.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
+		'version' => '2.3.12.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-admin.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
+		'version' => '2.3.12.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-initial-state.php'
 	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '1.6.3.0',
