@@ -342,6 +342,10 @@ return array(
 		'version' => '1.0.1.0',
 		'path'    => $vendorDir . '/wikimedia/aho-corasick/src/MultiStringMatcher.php'
 	),
+	'Automattic\\Jetpack\\Config' => array(
+		'version' => '1.7.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
+	),
 	'Automattic\\Jetpack\\Plugins_Installer' => array(
 		'version' => '0.1.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php'
@@ -349,10 +353,6 @@ return array(
 	'Automattic\\Jetpack\\Automatic_Install_Skin' => array(
 		'version' => '0.1.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-automatic-install-skin.php'
-	),
-	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.7.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
 	),
 	'Automattic\\Jetpack\\Partner_Coupon' => array(
 		'version' => '1.7.3.0',
