@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Use the new feature eligibility checks for WPcom sites in the SEO Tools feature
 
 ### Bug fixes
+- Fixing carousel comments issue due to nonce check
 - Form Block: do not display the CRM integration option to non-admins.
 - Subscribe Block: ensure subscription panels are not shown in the page editor, or when the site is private.
 
