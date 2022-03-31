@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Form Block: do not display the CRM integration option to non-admins.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add support for WordPress.com Pro plan.
 - Google Fonts: mark the feature as Beta, and remove toggle from dashboard.
 
 ## 10.8-beta - 2022-03-29
