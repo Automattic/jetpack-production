@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
+- Mailchimp Popup widget: Widget deprecation
 - Use the new feature eligibility checks for WPcom sites in the SEO Tools feature
 
 ### Bug fixes
