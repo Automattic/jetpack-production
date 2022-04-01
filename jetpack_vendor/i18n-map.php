@@ -80,5 +80,9 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
       'ver' => '0.12.9999999-dev',
     ),
+    'jetpack-waf' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-waf',
+      'ver' => '0.2.9999999-dev',
+    ),
   ),
 );

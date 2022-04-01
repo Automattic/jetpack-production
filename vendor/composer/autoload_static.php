@@ -10,7 +10,8 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_9_a_0
         '3773ef3f09c37da5478d578e32b03a4b' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-assets/actions.php',
         'd4eb94df91a729802d18373ee8cdc79f' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-backup/actions.php',
         '009de6aaa0d497eacea41fab13fc05f1' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-compat/functions.php',
-        'd7b298d70ab0e8605f5d5b6edeab1bd2' => __DIR__ . '/..' . '/automattic/jetpack-waf/actions.php',
+        'd7b298d70ab0e8605f5d5b6edeab1bd2' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/actions.php',
+        '3d45c7e6a7f0e71849e33afe4b3b3ede' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/cli.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -203,10 +204,12 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ10_9_a_0
         'Automattic\\Jetpack\\Sync\\Utils' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sync/src/class-utils.php',
         'Automattic\\Jetpack\\Terms_Of_Service' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-terms-of-service.php',
         'Automattic\\Jetpack\\Tracking' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-tracking/src/class-tracking.php',
-        'Automattic\\Jetpack\\Waf\\WafOperators' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-operators.php',
-        'Automattic\\Jetpack\\Waf\\WafRunner' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-runner.php',
-        'Automattic\\Jetpack\\Waf\\WafRuntime' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-runtime.php',
-        'Automattic\\Jetpack\\Waf\\WafTransforms' => __DIR__ . '/..' . '/automattic/jetpack-waf/src/class-waf-transforms.php',
+        'Automattic\\Jetpack\\Waf\\CLI' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-cli.php',
+        'Automattic\\Jetpack\\Waf\\WafOperators' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-operators.php',
+        'Automattic\\Jetpack\\Waf\\WafRunner' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runner.php',
+        'Automattic\\Jetpack\\Waf\\WafRuntime' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runtime.php',
+        'Automattic\\Jetpack\\Waf\\WafStandaloneBootstrap' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-standalone-bootstrap.php',
+        'Automattic\\Jetpack\\Waf\\WafTransforms' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'JetpackTracking' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpacktracking.php',
         'Jetpack_Client' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-client.php',

@@ -75,20 +75,28 @@ return array(
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
 	'Automattic\\Jetpack\\Waf\\WafOperators' => array(
-		'version' => '0.1.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-operators.php'
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-operators.php'
 	),
 	'Automattic\\Jetpack\\Waf\\WafTransforms' => array(
-		'version' => '0.1.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-transforms.php'
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php'
+	),
+	'Automattic\\Jetpack\\Waf\\WafStandaloneBootstrap' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-standalone-bootstrap.php'
+	),
+	'Automattic\\Jetpack\\Waf\\CLI' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-cli.php'
 	),
 	'Automattic\\Jetpack\\Waf\\WafRunner' => array(
-		'version' => '0.1.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runner.php'
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runner.php'
 	),
 	'Automattic\\Jetpack\\Waf\\WafRuntime' => array(
-		'version' => '0.1.9999999.9999999-dev',
-		'path'    => $vendorDir . '/automattic/jetpack-waf/src/class-waf-runtime.php'
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runtime.php'
 	),
 	'Automattic\\Jetpack\\Search\\Customberg' => array(
 		'version' => '0.12.9999999.9999999-dev',
