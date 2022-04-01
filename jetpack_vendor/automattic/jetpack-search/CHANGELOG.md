@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Janitorial: Refactor classes into shared package.
+- Updated package dependencies
 - Updated package dependencies.
 
 ## [0.12.1] - 2022-03-31
