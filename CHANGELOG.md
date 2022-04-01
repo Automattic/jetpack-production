@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- We now remove the param that opens the payment form before we open the form
+
 ### Improved compatibility
 - Mailchimp Popup widget: Widget deprecation
 - Use the new feature eligibility checks for WPcom sites in the SEO Tools feature
