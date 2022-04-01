@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Add support for WordPress.com Pro plan.
 - E2E tests - bumped dependencies versions
 - Google Fonts: mark the feature as Beta, and remove toggle from dashboard.
+- Janitorial: Refactor classes into shared package.
 - Re-added the jetpack-waf package to update the autoloader files in the composer.lock. This was necessary after adding the cli.php file.
 
 ## 10.8-beta - 2022-03-29

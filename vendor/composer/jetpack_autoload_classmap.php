@@ -758,21 +758,41 @@ return array(
 		'version' => '1.4.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php'
 	),
+	'Automattic\\Jetpack\\Paths' => array(
+		'version' => '1.13.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-paths.php'
+	),
 	'Automattic\\Jetpack\\Status\\Visitor' => array(
-		'version' => '1.12.9999999.9999999-dev',
+		'version' => '1.13.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-visitor.php'
 	),
 	'Automattic\\Jetpack\\Status' => array(
-		'version' => '1.12.9999999.9999999-dev',
+		'version' => '1.13.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-status.php'
 	),
+	'Automattic\\Jetpack\\Files' => array(
+		'version' => '1.13.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php'
+	),
 	'Automattic\\Jetpack\\Status\\Cache' => array(
-		'version' => '1.12.9999999.9999999-dev',
+		'version' => '1.13.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-cache.php'
 	),
+	'Automattic\\Jetpack\\Errors' => array(
+		'version' => '1.13.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-errors.php'
+	),
+	'Automattic\\Jetpack\\CookieState' => array(
+		'version' => '1.13.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-cookiestate.php'
+	),
 	'Automattic\\Jetpack\\Status\\Host' => array(
-		'version' => '1.12.9999999.9999999-dev',
+		'version' => '1.13.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-host.php'
+	),
+	'Automattic\\Jetpack\\Modules' => array(
+		'version' => '1.13.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-modules.php'
 	),
 	'Jetpack_Options' => array(
 		'version' => '1.14.9999999.9999999-dev',
