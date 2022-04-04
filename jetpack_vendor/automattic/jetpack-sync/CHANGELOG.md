@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Dedicated Sync: Only try to run the sender once if Dedicated Sync is enabled as it has its own requeueing mechanism.
+
 ## [1.30.5] - 2022-03-29
 ### Changed
 - Microperformance: Use === null instead of is_null
