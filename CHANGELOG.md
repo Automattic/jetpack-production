@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests - bumped dependencies versions
 - Google Fonts: mark the feature as Beta, and remove toggle from dashboard.
 - Janitorial: Refactor classes into shared package.
+- PHPCS changes for CSS.
 - phpcs changes for json endpoints.
 - Re-added the jetpack-waf package to update the autoloader files in the composer.lock. This was necessary after adding the cli.php file.
 - Updated package dependencies
