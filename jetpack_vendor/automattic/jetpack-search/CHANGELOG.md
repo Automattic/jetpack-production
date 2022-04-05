@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies.
 
+### Fixed
+- Search: allow Search submenu to be added only once
+
 ## [0.12.1] - 2022-03-31
 ### Fixed
 - Search: fixed search submenu is shown because compatibility file is loaded too late.
