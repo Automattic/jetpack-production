@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - PHPCS changes for CSS.
 - phpcs changes for json endpoints.
 - Re-added the jetpack-waf package to update the autoloader files in the composer.lock. This was necessary after adding the cli.php file.
+- Removed eslint dependency which will now be loaded from root directory
 - Updated package dependencies
 
 ## 10.8-beta - 2022-03-29
