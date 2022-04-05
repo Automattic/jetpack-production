@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests - bumped dependencies versions
 - E2E tests: added custom error messages to the expect functions
 - Janitorial: Refactor classes into shared package.
+- PHPCS: Changed file names to rmeove underscores.
 - PHPCS changes for CSS.
 - phpcs changes for json endpoints.
 - Re-added the jetpack-waf package to update the autoloader files in the composer.lock. This was necessary after adding the cli.php file.
