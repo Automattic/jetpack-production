@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add support for WordPress.com Pro plan.
 - E2E tests - bumped dependencies versions
+- E2E tests: added custom error messages to the expect functions
 - Google Fonts: mark the feature as Beta, and remove toggle from dashboard.
 - Janitorial: Refactor classes into shared package.
 - PHPCS changes for CSS.
