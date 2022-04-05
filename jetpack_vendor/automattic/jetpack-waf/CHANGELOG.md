@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added Jetpack WAF standalone mode. In this mode, the WAF runs in front of WordPress and avoids the request even reaching WordPress if it is determined to be malicious by the WAF.
 
+### Fixed
+- Fix normalizing nested array targets, like with query strings
+
 ## [0.1.1] - 2022-03-29
 ### Fixed
 - Fixed instance of normalizeHeaderName that wasn't renamed; fixed header parsing; removed unused compiler file.
