@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Improve Product and Interstitial components
 
 ### Changed
+- My Jetpack: align price boxes in the interstitial product page
 - Updated package dependencies
 - Updated package dependencies.
 
