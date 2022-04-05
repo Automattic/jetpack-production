@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Use the new feature eligibility checks for WPcom sites in the SEO Tools feature
 
 ### Bug fixes
+- Contact Form: ensure the form's input fields inherit a default font size.
 - Suscribe block: fix default "Styles" block setting selection to "Split"
 - The WordPress.com Personal plan is now legacy, switch to Pro in a file where the personal is hardocded
 
