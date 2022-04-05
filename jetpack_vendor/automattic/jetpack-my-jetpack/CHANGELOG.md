@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.14-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.0.0] - 2022-04-05
 ### Added
-- My Jetpack: Improve Product and Interstitial components
+- My Jetpack: improve Product and Interstitial components.
 
 ### Changed
-- My Jetpack: align price boxes in the interstitial product page
-- Updated package dependencies
+- Bump My Jetpack package to major version 1.0.0.
+- My Jetpack: align price boxes in the interstitial product page.
 - Updated package dependencies.
 
 ## [0.6.13] - 2022-03-31
@@ -419,7 +416,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[0.6.14-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.13...0.6.14-alpha
+[1.0.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.13...1.0.0
 [0.6.13]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.12...0.6.13
 [0.6.12]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.11...0.6.12
 [0.6.11]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.10...0.6.11
