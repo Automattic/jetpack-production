@@ -132,7 +132,7 @@ function jetpack_get_module_i18n( $key ) {
 			),
 
 			'protect' => array(
-				'name' => _x( 'Protect', 'Module Name', 'jetpack' ),
+				'name' => _x( 'Brute force protection', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Enabling brute force protection will prevent bots and hackers from attempting to log in to your website with common username and password combinations.', 'Module Description', 'jetpack' ),
 			),
 
@@ -766,7 +766,7 @@ function jetpack_get_module_info( $key ) {
 	  ),
 	  'protect' => 
 	  array (
-	    'name' => 'Protect',
+	    'name' => 'Brute force protection',
 	    'description' => 'Enabling brute force protection will prevent bots and hackers from attempting to log in to your website with common username and password combinations.',
 	    'sort' => '1',
 	    'recommendation_order' => '4',
