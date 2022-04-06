@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies.
 
+### Removed
+- Removed tracking dependency.
+
 ### Fixed
 - Search: allow Search submenu to be added only once
 

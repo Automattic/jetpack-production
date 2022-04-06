@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies
 
+### Removed
+- Removed tracking dependency.
+
 ## [0.8.4] - 2022-03-29
 ### Changed
 - Microperformance: Use === null instead of is_null

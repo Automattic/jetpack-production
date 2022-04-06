@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies
 
+### Removed
+- Removed tracking dependency.
+
 ## [2.2.10] - 2022-03-29
 ### Changed
 - Updated package dependencies.

@@ -4,14 +4,6 @@ return array(
   'domain' => 'jetpack',
   'type' => 'plugins',
   'packages' => array(
-    'jetpack-assets' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-assets',
-      'ver' => '1.17.9999999-dev',
-    ),
-    'jetpack-tracking' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-tracking',
-      'ver' => '1.14.9999999-dev',
-    ),
     'jetpack-heartbeat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-heartbeat',
       'ver' => '1.4.9999999-dev',
@@ -27,6 +19,10 @@ return array(
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
       'ver' => '0.2.9999999-dev',
+    ),
+    'jetpack-assets' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-assets',
+      'ver' => '1.17.9999999-dev',
     ),
     'jetpack-idc' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
