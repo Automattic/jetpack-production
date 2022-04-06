@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add logic for conditional recommendations
 - Add recommendation for Jetpack VideoPress
 
+### Bug fixes
+- Allow the creation of One-time subscription from inside the product management system available in Payment blocks.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - init 10.9-a.2
 
