@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.9-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- init 10.9-a.2
+
 ## 10.9-a.1 - 2022-04-06
 ### Enhancements
 - Payments Block: Re-loading the page will not cause payment form to open again.
@@ -26,7 +33,6 @@
 - PHPCS updates to bring in line with WordPress standards. Files affected include SAL, lib, Custom CSS, JSON endpoints.
 - SEO Tools: Use the new feature eligibility checks for WordPress.com sites.
 - Made changes updating WordPress.com Personal plans to Pro.
-
 
 ## 10.8 - 2022-04-05
 ### Enhancements
