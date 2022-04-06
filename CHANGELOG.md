@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Allow the creation of One-time subscription from inside the product management system available in Payment blocks.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fix an invalid JavaScript `typeof` check.
 - init 10.9-a.2
 
 ## 10.9-a.1 - 2022-04-06
