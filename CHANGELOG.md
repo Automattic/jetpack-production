@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: Add Pocket Casts dev block (for internal use only)
+- Creating and verifying a nonce for the Jetpack comments form.
 - E2E tests - bumped dependencies versions
 - E2E tests: added custom error messages to the expect functions
 - Janitorial: Refactor classes into shared package.
