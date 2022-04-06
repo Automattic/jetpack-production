@@ -68,6 +68,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '1.0.9999999-dev',
     ),
+    'jetpack-tracking' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-tracking',
+      'ver' => '1.14.9999999-dev',
+    ),
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
       'ver' => '1.7.9999999-dev',

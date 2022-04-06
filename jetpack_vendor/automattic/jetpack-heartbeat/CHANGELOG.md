@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [1.4.0] - 2022-01-04
 ### Changed
 - Updated package textdomain from `jetpack` to `jetpack-heartbeat`.
@@ -100,6 +107,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use new heartbeat package
 - Creates the Jetpack Heartbeat package
 
+[1.4.1-alpha]: https://github.com/Automattic/jetpack-heartbeat/compare/v1.4.0...v1.4.1-alpha
 [1.4.0]: https://github.com/Automattic/jetpack-heartbeat/compare/v1.3.15...v1.4.0
 [1.3.15]: https://github.com/Automattic/jetpack-heartbeat/compare/v1.3.14...v1.3.15
 [1.3.14]: https://github.com/Automattic/jetpack-heartbeat/compare/v1.3.13...v1.3.14

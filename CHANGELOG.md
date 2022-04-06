@@ -6,6 +6,10 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Add logic for conditional recommendations
+- Add recommendation for Jetpack VideoPress
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - init 10.9-a.2
 
