@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.37.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.37.5] - 2022-04-06
 ### Removed
 - Removed tracking dependency.
 
@@ -548,7 +545,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[1.37.5-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.37.4...v1.37.5-alpha
+[1.37.5]: https://github.com/Automattic/jetpack-connection/compare/v1.37.4...v1.37.5
 [1.37.4]: https://github.com/Automattic/jetpack-connection/compare/v1.37.3...v1.37.4
 [1.37.3]: https://github.com/Automattic/jetpack-connection/compare/v1.37.2...v1.37.3
 [1.37.2]: https://github.com/Automattic/jetpack-connection/compare/v1.37.1...v1.37.2

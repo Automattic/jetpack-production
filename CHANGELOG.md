@@ -2,36 +2,31 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.9-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.9-a.1 - 2022-04-06
 ### Enhancements
-- We now remove the param that opens the payment form before we open the form
+- Payments Block: Re-loading the page will not cause payment form to open again.
 
 ### Improved compatibility
-- Dashboard: display block settings even when the Classic Editor plugin is active.
-- Mailchimp Popup widget: Widget deprecation
-- PHPCS updates to bring in line with WordPress standards.
-- Use the new feature eligibility checks for WPcom sites in the SEO Tools feature
+- Dashboard: Display block settings even when the Classic Editor plugin is active.
+- Mailchimp Popup widget: Widget deprecation.
 
 ### Bug fixes
-- Contact Form: ensure the form's input fields inherit a default font size.
-- Suscribe block: fix default "Styles" block setting selection to "Split"
-- The WordPress.com Personal plan is now legacy, switch to Pro in a file where the personal is hardocded
+- Contact Form: Ensure the form's input fields inherit a default font size.
+- Subscribe Block: Fix default styles block setting selection to "Split".
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Blocks: Add Pocket Casts dev block (for internal use only)
+- Blocks: Add Pocket Casts dev block (for internal use only).
 - Creating and verifying a nonce for the Jetpack comments form.
-- E2E tests - bumped dependencies versions
-- E2E tests: added custom error messages to the expect functions
+- E2E tests - bumped dependencies versions.
+- E2E tests: added custom error messages to the expect functions.
 - Janitorial: Refactor classes into shared package.
-- PHPCS: Changed file names to rmeove underscores.
-- PHPCS changes for CSS.
-- phpcs changes for json endpoints.
-- Re-added the jetpack-waf package to update the autoloader files in the composer.lock. This was necessary after adding the cli.php file.
-- Removed eslint dependency which will now be loaded from root directory
-- Updated package dependencies
+- Re-added the jetpack-waf package to update the autoloader files in the composer.lock.
+- Removed eslint dependency which will now be loaded from root directory.
+- Updated package dependencies.
+- PHPCS updates to bring in line with WordPress standards. Files affected include SAL, lib, Custom CSS, JSON endpoints.
+- SEO Tools: Use the new feature eligibility checks for WordPress.com sites.
+- Made changes updating WordPress.com Personal plans to Pro.
+
 
 ## 10.8 - 2022-04-05
 ### Enhancements
