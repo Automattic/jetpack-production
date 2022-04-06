@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix an invalid JavaScript `typeof` check.
+- Fix e2e tests
 - init 10.9-a.2
 - Move and update postcss config.
 
