@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Dashboard: display block settings even when the Classic Editor plugin is active.
 - Mailchimp Popup widget: Widget deprecation
+- PHPCS updates to bring in line with WordPress standards.
 - Use the new feature eligibility checks for WPcom sites in the SEO Tools feature
 
 ### Bug fixes
