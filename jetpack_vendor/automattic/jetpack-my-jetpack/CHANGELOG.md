@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fixed bug in checkout URLs for sites installed in subdirs
+
 ## [1.0.1] - 2022-04-06
 ### Removed
 - Removed tracking dependency.
