@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Search: auto config should not override option if exists
+
 ## [0.12.2] - 2022-04-06
 ### Added
 - Adds API data to record meter chart.
