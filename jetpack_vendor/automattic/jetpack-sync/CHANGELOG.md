@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Adding new site option to be synced.
+
 ## [1.30.6] - 2022-04-06
 ### Changed
 - Updated package dependencies.

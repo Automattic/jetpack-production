@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add logic for conditional recommendations
 - Add recommendation for Jetpack VideoPress
 - Protect: Renamed to "Brute Force Protection" in the UI
+- VideoPress: Introduce the ability to set Video Privacy
 
 ### Bug fixes
 - Allow the creation of One-time subscription from inside the product management system available in Payment blocks.
