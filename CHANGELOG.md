@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Allow the creation of One-time subscription from inside the product management system available in Payment blocks.
 - Avoid creating a new product for payment blocks if the site has no products and the block as an invalid product ID.
+- Pay with PayPal: Save product in Customize > Widgets
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Build sass files with Webpack.
