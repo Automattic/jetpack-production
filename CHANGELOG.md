@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Select the correct payment block before opening its sidebar when adding a new product.
 - VideoPress: Introduce the ability to set Video Privacy
 
+### Improved compatibility
+- Added several removed methods back in order to ensure backwards compatibility with other Jetpack plugins.
+
 ### Bug fixes
 - Allow the creation of One-time subscription from inside the product management system available in Payment blocks.
 - Avoid creating a new product for payment blocks if the site has no products and the block as an invalid product ID.
