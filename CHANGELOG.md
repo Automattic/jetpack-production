@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix an invalid JavaScript `typeof` check.
 - Fix e2e tests
 - init 10.9-a.2
+- Minifiy non-sass css with Webpack.
 - Move and update postcss config.
 
 ## 10.9-a.1 - 2022-04-06
