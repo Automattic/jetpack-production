@@ -74,28 +74,28 @@ return array(
 		'version' => 'dev-master',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
-	'Automattic\\Jetpack\\Waf\\WafTransforms' => array(
-		'version' => '0.2.9999999.9999999-dev',
+	'Automattic\\Jetpack\\Waf\\Waf_Transforms' => array(
+		'version' => '0.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php'
 	),
-	'Automattic\\Jetpack\\Waf\\WafStandaloneBootstrap' => array(
-		'version' => '0.2.9999999.9999999-dev',
+	'Automattic\\Jetpack\\Waf\\Waf_Standalone_Bootstrap' => array(
+		'version' => '0.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-standalone-bootstrap.php'
 	),
 	'Automattic\\Jetpack\\Waf\\CLI' => array(
-		'version' => '0.2.9999999.9999999-dev',
+		'version' => '0.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-cli.php'
 	),
-	'Automattic\\Jetpack\\Waf\\WafOperators' => array(
-		'version' => '0.2.9999999.9999999-dev',
+	'Automattic\\Jetpack\\Waf\\Waf_Operators' => array(
+		'version' => '0.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-operators.php'
 	),
-	'Automattic\\Jetpack\\Waf\\WafRunner' => array(
-		'version' => '0.2.9999999.9999999-dev',
+	'Automattic\\Jetpack\\Waf\\Waf_Runner' => array(
+		'version' => '0.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runner.php'
 	),
-	'Automattic\\Jetpack\\Waf\\WafRuntime' => array(
-		'version' => '0.2.9999999.9999999-dev',
+	'Automattic\\Jetpack\\Waf\\Waf_Runtime' => array(
+		'version' => '0.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runtime.php'
 	),
 	'Automattic\\Jetpack\\Search\\Settings' => array(

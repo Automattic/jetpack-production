@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Minifiy non-sass css with Webpack.
 - Move and update postcss config.
 - Remove use of `gulp` for the build.
+- Updated a composer package version.
 
 ## 10.9-a.1 - 2022-04-06
 ### Enhancements
