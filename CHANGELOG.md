@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Button block: remove default CSS that is overriding core + theme styles.
 - Pay with PayPal: Save product in Customize > Widgets
 - Slideshow block: Fix grid blowout when Slideshow block is inserted inside a Layout Grid Block.
+- Top Posts Widget: ensure hooks retain existing behavior when adding extra data before or after each post.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Build sass files with Webpack.
