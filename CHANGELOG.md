@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Allow the creation of One-time subscription from inside the product management system available in Payment blocks.
 - Avoid creating a new product for payment blocks if the site has no products and the block as an invalid product ID.
+- Button block: remove default CSS that is overriding core + theme styles.
 - Pay with PayPal: Save product in Customize > Widgets
 - Slideshow block: Fix grid blowout when Slideshow block is inserted inside a Layout Grid Block.
 
