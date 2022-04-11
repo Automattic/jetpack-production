@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - init 10.9-a.2
 - Minifiy non-sass css with Webpack.
 - Move and update postcss config.
+- PHPCS changes for JSON endpoint.
 - Remove use of `gulp` for the build.
 - Updated a composer package version.
 - Updated package dependencies
