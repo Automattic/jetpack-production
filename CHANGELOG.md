@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add logic for conditional recommendations
 - Add recommendation for Jetpack VideoPress
 - Assistant: add discount card
+- Enabled resumable uploader for the /video block when VideoPress is enabled
 - Protect: Renamed to "Brute Force Protection" in the UI
 - Refactored the logic that determines the Gutenberg context to its own file, added more context checks and refactored some usages to use the new context resolver.
 - Select the correct payment block before opening its sidebar when adding a new product.
