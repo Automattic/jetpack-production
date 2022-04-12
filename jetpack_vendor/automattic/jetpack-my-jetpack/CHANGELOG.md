@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Turn Search into a Hybrid Product
+- use connected plugin list from the connection store and ask for an update after activating a product
 
 ## [1.0.2] - 2022-04-12
 ### Changed
