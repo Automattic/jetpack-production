@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.9-a.4 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 10.9-a.4
+
 ## 10.9-a.3 - 2022-04-12
 ### Enhancements
 - Dashboard: Various improvements to recommendations.
@@ -13,7 +20,6 @@
 ### Improved compatibility
 - Custom CSS: Improve saving for legacy Custom CSS.
 - Improvements to backwards compatibility with other Jetpack plugins.
-
 
 ### Bug fixes
 - Button block: Removes default CSS that would overwrite core and theme styles.
