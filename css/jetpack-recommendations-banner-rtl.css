@@ -1,6 +1,3 @@
-/*!
-* Do not modify this file directly.  It is compiled SASS code.
-*/
 @charset "UTF-8";
 :root {
   --font-title-large: 36px;
@@ -25,6 +22,7 @@
   --jp-gray-90: #1d2327;
   --jp-gray-100: #101517;
   --jp-gray-off: #e2e2df;
+  --jp-yellow-10: #f2cf75;
   --jp-red-0: #F7EBEC;
   --jp-red-50: #D63638;
   --jp-red-60: #B32D2E;
@@ -493,4 +491,3 @@ body {
   fill: #646970;
   margin-left: 0.25rem;
 }
-/*# sourceMappingURL=jetpack-recommendations-banner-rtl.css.map */
