@@ -2,45 +2,41 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.9-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.9-a.3 - 2022-04-12
 ### Enhancements
-- Add logic for conditional recommendations
-- Add recommendation for Jetpack VideoPress
-- Assistant: add discount card
-- Enabled resumable uploader for the /video block when VideoPress is enabled
-- Protect: Renamed to "Brute Force Protection" in the UI
-- Refactored the logic that determines the Gutenberg context to its own file, added more context checks and refactored some usages to use the new context resolver.
-- Select the correct payment block before opening its sidebar when adding a new product.
-- VideoPress: Introduce the ability to set Video Privacy
+- Dashboard: Various improvements to recommendations.
+- Payments block: Improves block selection behavior.
+- Protect: Renamed to "Brute Force Protection" in the UI.
+- VideoPress: Adds settings for controlling VideoPress video privacy.
+- VideoPress: Enable the resumable uploader.
 
 ### Improved compatibility
-- Added several removed methods back in order to ensure backwards compatibility with other Jetpack plugins.
 - Custom CSS: Improve saving for legacy Custom CSS.
+- Improvements to backwards compatibility with other Jetpack plugins.
+
 
 ### Bug fixes
-- Allow the creation of One-time subscription from inside the product management system available in Payment blocks.
-- Avoid creating a new product for payment blocks if the site has no products and the block as an invalid product ID.
-- Button block: remove default CSS that is overriding core + theme styles.
-- Pay with PayPal: Save product in Customize > Widgets
-- Slideshow block: Fix grid blowout when Slideshow block is inserted inside a Layout Grid Block.
+- Button block: Removes default CSS that would overwrite core and theme styles.
+- Payments block: Makes the ‘one time’ subscription recurrence always available.
+- Payments block: Fixes bug regarding creation of new Payment blocks.
+- Pay with PayPal: Fixes issue with saving widget in Customizer.
+- Slideshow block: Fix grid blowout when Slideshow block is inserted inside a Layout Grid block (in editor).
 - Top Posts Widget: ensure hooks retain existing behavior when adding extra data before or after each post.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Assistant: add timed discount card.
 - Build sass files with Webpack.
 - Customizer messages: adjust messaging for new plan.
 - Fix an invalid JavaScript `typeof` check.
-- Fix e2e tests
-- init 10.9-a.2
+- Fix e2e tests.
+- Init 10.9-a.2
 - Minifiy non-sass css with Webpack.
 - Move and update postcss config.
 - PHPCS changes for JSON endpoint.
 - Remove indirect dependency on an obselete version of the `core-js` package.
 - Remove use of `gulp` for the build.
 - Updated a composer package version.
-- Updated package dependencies
+- Updated package dependencies.
 
 ## 10.9-a.1 - 2022-04-06
 ### Enhancements

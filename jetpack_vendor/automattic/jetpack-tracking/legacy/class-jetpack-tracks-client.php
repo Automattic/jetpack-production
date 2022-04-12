@@ -3,7 +3,7 @@
  * Legacy Tracks client stub file.
  *
  * @package automattic/jetpack-tracking
- * @deprecated 1.14.7-alpha
+ * @deprecated 1.14.7
  * @see automattic/jetpack-connection
  */
 

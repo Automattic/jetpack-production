@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.12.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.12.3] - 2022-04-12
 ### Added
 - Added deprecated methods as a safety.
 
 ### Changed
-- Updated package dependencies
+- Updated package dependencies.
 
 ### Fixed
-- Search: auto config should not override option if exists
+- Search: auto config no longer overrides option if it exists.
 
 ## [0.12.2] - 2022-04-06
 ### Added
@@ -225,7 +222,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.12.3-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.12.2...v0.12.3-alpha
+[0.12.3]: https://github.com/Automattic/jetpack-search/compare/v0.12.2...v0.12.3
 [0.12.2]: https://github.com/Automattic/jetpack-search/compare/v0.12.1...v0.12.2
 [0.12.1]: https://github.com/Automattic/jetpack-search/compare/v0.12.0...v0.12.1
 [0.12.0]: https://github.com/Automattic/jetpack-search/compare/v0.11.3...v0.12.0
