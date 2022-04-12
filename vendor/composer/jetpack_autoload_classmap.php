@@ -138,6 +138,10 @@ return array(
 		'version' => '0.12.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-helper.php'
 	),
+	'Automattic\\Jetpack\\Search\\Product' => array(
+		'version' => '0.12.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-product.php'
+	),
 	'Automattic\\Jetpack\\Search\\Instant_Search' => array(
 		'version' => '0.12.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/instant-search/class-instant-search.php'
