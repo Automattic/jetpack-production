@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Better error handling for when the WPCOM server is unreachable
+- Introduced ConnectedProductOffer component
 
 ### Changed
 - Turn Search into a Hybrid Product
