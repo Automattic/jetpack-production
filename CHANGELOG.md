@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.9-a.4
+- Moved licensing endpoints from the Jetpack plugin to the Licensing package
 - phpcs changes for json endpoints
 - Replace "Jetpack Ads" language with WordAds.
 

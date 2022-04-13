@@ -69,6 +69,7 @@ return array(
     'Automattic\\Jetpack\\JITMS\\Rest_Api_Endpoints' => $baseDir . '/jetpack_vendor/automattic/jetpack-jitm/src/class-rest-api-endpoints.php',
     'Automattic\\Jetpack\\Jetpack_Lazy_Images' => $baseDir . '/jetpack_vendor/automattic/jetpack-lazy-images/src/lazy-images.php',
     'Automattic\\Jetpack\\Licensing' => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/src/class-licensing.php',
+    'Automattic\\Jetpack\\Licensing\\Endpoints' => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/src/class-endpoints.php',
     'Automattic\\Jetpack\\Modules' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-modules.php',
     'Automattic\\Jetpack\\My_Jetpack\\Hybrid_Product' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-hybrid-product.php',
     'Automattic\\Jetpack\\My_Jetpack\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-initializer.php',
