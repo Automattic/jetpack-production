@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Search: add class to retrive search product information
 - Search: Add count estimation function
+- Search: added API support for search product tier pricing
 
 ## [0.12.3] - 2022-04-12
 ### Added
