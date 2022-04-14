@@ -13,4 +13,5 @@ This is an alpha version! The changes listed here are not final.
 - Added WordAds package for new UI work
 
 ### Changed
+- PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
 - Updated package dependencies.

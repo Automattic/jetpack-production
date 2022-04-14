@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added get_themes Callable to sync the list of installed themes on a site
 
+### Changed
+- PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
+
 ## [1.30.7] - 2022-04-12
 ### Added
 - Adding new site option to be synced.

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added list of connected list to the connection initial state
 
+### Changed
+- PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
+
 ## [1.37.6] - 2022-04-12
 ### Changed
 - Updated package dependencies.

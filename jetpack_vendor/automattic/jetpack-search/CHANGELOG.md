@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: added API support for search product tier pricing
 
 ### Changed
+- PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
 - Use new shared Gridicons component and shared Modules library
 
 ## [0.12.3] - 2022-04-12
