@@ -78,11 +78,15 @@ return array(
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.12.9999999-dev',
+      'ver' => '0.13.9999999-dev',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
       'ver' => '0.3.9999999-dev',
+    ),
+    'jetpack-wordads' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-wordads',
+      'ver' => '0.1.9999999-dev',
     ),
   ),
 );
