@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add recommendation for anti-spam
 
+### Improved compatibility
+- update sync tests callables whitelist
+
 ### Bug fixes
 - Comments: Checking that Jetpack comments are supported before requiring nonce verification.
 
