@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.9-a.4 - unreleased
+## 10.9-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -12,9 +12,6 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - update sync tests callables whitelist
 
-### Bug fixes
-- Comments: Checking that Jetpack comments are supported before requiring nonce verification.
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added TypeScript support
 - Init 10.9-a.4
@@ -22,6 +19,11 @@ This is an alpha version! The changes listed here are not final.
 - phpcs changes for json endpoints
 - Refactor Jetpack class to move some functions into Modules and File packages
 - Replace "Jetpack Ads" language with WordAds.
+- Updated package dependencies.
+
+## 10.9-a.5 - 2022-04-14
+### Bug fixes
+- Comments: Checking that Jetpack comments are supported before requiring nonce verification.
 
 ## 10.9-a.3 - 2022-04-12
 ### Enhancements
