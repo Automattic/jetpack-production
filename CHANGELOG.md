@@ -2,10 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.9-a.4 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.9-a.5 - 2022-04-14
 ### Bug fixes
 - Comments: Checking that Jetpack comments are supported before requiring nonce verification.
 
