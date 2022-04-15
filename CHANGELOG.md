@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Moved gutenberg-base-styles.scss file to js-packages/base-styles and updated its imports in the Jetpack plugin directory
 
 ### Improved compatibility
+- Moved licensing images into licensing package to minimize external dependencies.
 - Updated Sync tests
 - update sync tests callables whitelist
 
