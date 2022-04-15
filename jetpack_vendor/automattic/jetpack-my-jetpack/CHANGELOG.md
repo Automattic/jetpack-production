@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.3-alpha] - unreleased
+## [1.1.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Adds a skeleton for the licensing UI along with a feature flag
 - Better error handling for when the WPCOM server is unreachable
 - Introduced ConnectedProductOffer component
 
@@ -440,7 +441,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[1.0.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.0.2...1.0.3-alpha
+[1.1.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.0.2...1.1.0-alpha
 [1.0.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/0.6.13...1.0.0
