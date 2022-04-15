@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - update sync tests callables whitelist
 
+### Bug fixes
+- Fixing issue adding video descriptions and metadata via the WordPress.com dashboard.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added TypeScript support
 - Init 10.9-a.4
