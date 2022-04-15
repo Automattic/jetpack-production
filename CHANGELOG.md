@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add recommendation for anti-spam
+- Connection: when deactivating Jetpack from the Plugins screen, do not disconnect other Jetpack-connected plugins.
 
 ### Improved compatibility
 - update sync tests callables whitelist
