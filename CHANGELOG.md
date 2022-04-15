@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - phpcs changes for json endpoint
 - phpcs changes for json endpoints
 - Refactor Jetpack class to move some functions into Modules and File packages
+- Remaining phpcs changes for custom css
 - Replace "Jetpack Ads" language with WordAds.
 - Updated jetpack-waf package version
 - Updated package dependencies.
