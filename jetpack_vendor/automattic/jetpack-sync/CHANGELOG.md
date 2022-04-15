@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added get_themes Callable to sync the list of installed themes on a site
+- Added get_themes to Sync defaults
 
 ### Changed
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`

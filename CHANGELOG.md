@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: when deactivating Jetpack from the Plugins screen, do not disconnect other Jetpack-connected plugins.
 
 ### Improved compatibility
+- Updated Sync tests
 - update sync tests callables whitelist
 
 ### Bug fixes
