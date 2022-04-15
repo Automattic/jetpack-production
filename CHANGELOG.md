@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add recommendation for anti-spam
 - Connection: when deactivating Jetpack from the Plugins screen, do not disconnect other Jetpack-connected plugins.
+- Moved gutenberg-base-styles.scss file to js-packages/base-styles and updated its imports in the Jetpack plugin directory
 
 ### Improved compatibility
 - Updated Sync tests
