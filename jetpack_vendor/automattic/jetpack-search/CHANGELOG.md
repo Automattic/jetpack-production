@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
+- Search Record Meter updates formatting
 - Use new shared Gridicons component and shared Modules library
 
 ## [0.12.3] - 2022-04-12
