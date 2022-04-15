@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 10.9-a.7 - 2022-04-15
+### Bug fixes
+- Fixing issue adding video descriptions and metadata via the WordPress.com dashboard.
+
 ## 10.9-a.5 - 2022-04-14
 ### Bug fixes
 - Comments: Checking that Jetpack comments are supported before requiring nonce verification.
