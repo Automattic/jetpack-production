@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
+- Record meter: updates noticeboxes to be dismissable & styled
 - Search Record Meter updates formatting
 - Use new shared Gridicons component and shared Modules library
 
