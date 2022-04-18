@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added TypeScript support
 - Init 10.9-a.4
+- Jetpack Connection: Remove any remaining in-place flows.
 - Moved licensing endpoints from the Jetpack plugin to the Licensing package
 - Move enhanced-open-graph.php out of the publicize module.
 - phpcs changes for json endpoint

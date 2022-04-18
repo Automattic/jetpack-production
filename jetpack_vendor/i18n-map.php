@@ -14,7 +14,7 @@ return array(
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '1.37.9999999-dev',
+      'ver' => '1.38.9999999-dev',
     ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
@@ -42,7 +42,7 @@ return array(
     ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
-      'ver' => '2.3.9999999-dev',
+      'ver' => '2.4.9999999-dev',
     ),
     'jetpack-google-fonts-provider' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
