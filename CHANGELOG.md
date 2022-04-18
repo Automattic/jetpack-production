@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Move enhanced-open-graph.php out of the publicize module.
 - phpcs changes for json endpoint
 - phpcs changes for json endpoints
+- PHPCS for custom CSS
 - Refactor Jetpack class to move some functions into Modules and File packages
 - Remaining phpcs changes for custom css
 - Replace "Jetpack Ads" language with WordAds.
