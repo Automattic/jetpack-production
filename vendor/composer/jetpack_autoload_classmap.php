@@ -118,6 +118,10 @@ return array(
 		'version' => '0.4.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runner.php'
 	),
+	'Automattic\\Jetpack\\Waf\\Waf_Constants' => array(
+		'version' => '0.4.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-constants.php'
+	),
 	'Automattic\\Jetpack\\Waf\\Waf_Runtime' => array(
 		'version' => '0.4.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runtime.php'
