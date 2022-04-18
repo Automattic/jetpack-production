@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fixing issue adding video descriptions and metadata via the WordPress.com dashboard.
+- Update copy to reflect the actual plan that's needed
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added TypeScript support
