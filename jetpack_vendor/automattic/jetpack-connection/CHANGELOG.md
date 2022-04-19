@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added list of connected list to the connection initial state
+- Add token lock functionality.
 
 ### Changed
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
