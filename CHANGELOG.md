@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - update sync tests callables whitelist
 
 ### Bug fixes
+- Applied legacy Publicize filters to flag setting for Publicize
 - Fixing issue adding video descriptions and metadata via the WordPress.com dashboard.
 - Random Redirect: Fix functionality on author archives.
 - Update copy to reflect the actual plan that's needed
