@@ -82,7 +82,7 @@ class Dashboard {
 		/**
 		 * The filter allows to ommit adding a submenu item for WordAds.
 		 *
-		 * @since 0.1.0-alpha
+		 * @since 0.1.0
 		 *
 		 * @param boolean $should_add_wordads_submenu Default value is true.
 		 */

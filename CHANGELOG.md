@@ -2,10 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.9-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.9-a.7 - 2022-04-19
 ### Enhancements
 - Add individual filters for JS and AMP stat footer data.
 - Add recommendation for anti-spam
