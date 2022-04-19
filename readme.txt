@@ -242,9 +242,23 @@ Jetpack Backup can do a full website migration to a new host, migrate theme file
 4. Promote your newest posts, pages, and products across your social media channels.
 
 == Changelog ==
-### 10.9-a.7 - 2022-04-15
+### 10.9-a.7 - 2022-04-19
+#### Enhancements
+- Add individual filters for JS and AMP stat footer data.
+- Add recommendation for anti-spam
+- Connection: when deactivating Jetpack from the Plugins screen, do not disconnect other Jetpack-connected plugins.
+- Moved gutenberg-base-styles.scss file to js-packages/base-styles and updated its imports in the Jetpack plugin directory
+
+#### Improved compatibility
+- Moved licensing images into licensing package to minimize external dependencies.
+- Updated Sync tests
+- update sync tests callables whitelist
+
 #### Bug fixes
+- Applied legacy Publicize filters to flag setting for Publicize
 - Fixing issue adding video descriptions and metadata via the WordPress.com dashboard.
+- Random Redirect: Fix functionality on author archives.
+- Update copy to reflect the actual plan that's needed
 
 --------
 
