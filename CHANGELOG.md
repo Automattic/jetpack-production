@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - PHPCS for custom CSS
 - Refactor Jetpack class to move some functions into Modules and File packages
 - Remaining phpcs changes for custom css
+- Remove call to use ad widget - which will be deprecated at some point.
 - Replace "Jetpack Ads" language with WordAds.
 - Security Settings: Updated plan checks to feature checks
 - Updated jetpack-waf package version
