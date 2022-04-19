@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.9-a.8
+- Update package.json metadata.
 
 ## 10.9-a.7 - 2022-04-19
 ### Enhancements
