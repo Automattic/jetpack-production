@@ -44,10 +44,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '1.7.0',
     ),
-    'jetpack-google-fonts-provider' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
-      'ver' => '0.2.2',
-    ),
     'jetpack-jitm' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
       'ver' => '2.2.13',
@@ -68,17 +64,21 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-tracking',
       'ver' => '1.14.8',
     ),
+    'jetpack-config' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-config',
+      'ver' => '1.7.2',
+    ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
       'ver' => '2.4.0',
     ),
+    'jetpack-google-fonts-provider' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
+      'ver' => '0.2.2',
+    ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '1.1.0',
-    ),
-    'jetpack-config' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-config',
-      'ver' => '1.7.2',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',

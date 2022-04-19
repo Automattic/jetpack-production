@@ -262,6 +262,14 @@ return array(
 		'version' => '1.1.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-purchases.php'
 	),
+	'Automattic\\Jetpack\\Fonts\\Utils' => array(
+		'version' => '0.2.2.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-utils.php'
+	),
+	'Automattic\\Jetpack\\Fonts\\Google_Fonts_Provider' => array(
+		'version' => '0.2.2.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-google-fonts-provider.php'
+	),
 	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
 		'version' => '2.4.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-admin.php'
@@ -297,14 +305,6 @@ return array(
 	'Automattic\\Jetpack\\JITMS\\JITM' => array(
 		'version' => '2.2.13.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jitm/src/class-jitm.php'
-	),
-	'Automattic\\Jetpack\\Fonts\\Utils' => array(
-		'version' => '0.2.2.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-utils.php'
-	),
-	'Automattic\\Jetpack\\Fonts\\Google_Fonts_Provider' => array(
-		'version' => '0.2.2.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-google-fonts-provider.php'
 	),
 	'Jetpack_Client' => array(
 		'version' => '1.7.0.0',
