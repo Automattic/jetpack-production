@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add logic to fetch intro offers
 
+### Bug fixes
+- Close the publish sidebar when the user clicks on the Add new subscription from the Payments block and replace the Add new subscription with an external link in context of the Customizer.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 10.9-a.8
 - Update package.json metadata.
