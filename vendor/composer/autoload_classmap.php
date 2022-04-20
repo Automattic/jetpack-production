@@ -181,6 +181,7 @@ return array(
     'Automattic\\Jetpack\\Waf\\CLI' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-cli.php',
     'Automattic\\Jetpack\\Waf\\Waf_Constants' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-constants.php',
     'Automattic\\Jetpack\\Waf\\Waf_Operators' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-operators.php',
+    'Automattic\\Jetpack\\Waf\\Waf_Request' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-request.php',
     'Automattic\\Jetpack\\Waf\\Waf_Runner' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runner.php',
     'Automattic\\Jetpack\\Waf\\Waf_Runtime' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runtime.php',
     'Automattic\\Jetpack\\Waf\\Waf_Standalone_Bootstrap' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-standalone-bootstrap.php',
