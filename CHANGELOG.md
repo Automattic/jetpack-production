@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add logic to fetch intro offers
+- Assistant: Added endpoints for site discount
 - Make the subscribe button for premium-content blocks (wpcom specific) open up the 'checkout' dialog when clicked in emails and notifications
 
 ### Bug fixes
