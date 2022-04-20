@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Make the subscribe button for premium-content blocks (wpcom specific) open up the 'checkout' dialog when clicked in emails and notifications
 
 ### Bug fixes
+- Add checks to eliminate warnings in php log.
 - Close the publish sidebar when the user clicks on the Add new subscription from the Payments block and replace the Add new subscription with an external link in context of the Customizer.
 - Fix failing tests because of an editor type mismatch caused by imported packages side-effects
 
