@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added support for "public" property for membership subscriptions
 - Add logic to fetch intro offers
 - Add Mark subscription as Donation and Enable customers to pick their own amount in Payment management control block.
 - Assistant: Added endpoints for site discount
