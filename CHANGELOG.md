@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 10.9-a.8
 - Move RecordMeterBar to js-packages
 - Nav-unification: Update nudge to support Pro plan.
+- Remove code in native files that was causing the rnmobile build to fail.
 - Updated package dependencies
 - Update package.json metadata.
 - Updating changelog and readme for 10.9-a.7
