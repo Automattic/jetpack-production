@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add logic to fetch intro offers
+- Add Mark subscription as Donation and Enable customers to pick their own amount in Payment management control block.
 - Assistant: Added endpoints for site discount
 - Increased chunk size to 10Mb for VideoPress resumable uploads to reduce request overhead for faster uploads.
 - Make the subscribe button for premium-content blocks (wpcom specific) open up the 'checkout' dialog when clicked in emails and notifications
