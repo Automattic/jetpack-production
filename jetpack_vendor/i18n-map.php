@@ -64,13 +64,17 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '1.1.9999999-dev',
     ),
+    'jetpack-config' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-config',
+      'ver' => '1.8.9999999-dev',
+    ),
+    'jetpack-publicize-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-publicize',
+      'ver' => '0.1.9999999-dev',
+    ),
     'jetpack-tracking' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-tracking',
       'ver' => '1.14.9999999-dev',
-    ),
-    'jetpack-config' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-config',
-      'ver' => '1.7.9999999-dev',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',

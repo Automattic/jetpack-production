@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Added WAF IP allow list and block list functionality.
 
 ### Changed
+- Added comment to ignore failing phpcs check
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
 
 ## [0.4.0] - 2022-04-19
