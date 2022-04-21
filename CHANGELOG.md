@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: improve connection tests
 - Init 10.9-a.8
 - Nav-unification: Update nudge to support Pro plan.
+- Updated package dependencies
 - Update package.json metadata.
 - Updating changelog and readme for 10.9-a.7
 
