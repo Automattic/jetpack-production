@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Add checks to eliminate warnings in php log.
 - Close the publish sidebar when the user clicks on the Add new subscription from the Payments block and replace the Add new subscription with an external link in context of the Customizer.
 - Fix failing tests because of an editor type mismatch caused by imported packages side-effects
+- Fixing issue in apiFetch middleware where request bodies were assumed to always be objects with a "file" property; this is only true for requests to the media endpoint.
 - Load block editor styles inline for iframed editors on Atomic sites.
 - We now don't show a dropdown indication for the product management controls subscription selector.
 
