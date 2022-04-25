@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Make remove_connection a proxy method to ensure all trackings are triggered
+- Updated package dependencies.
 
 ### Deprecated
 - Removed Heartbeat by hoisting it into Connection.

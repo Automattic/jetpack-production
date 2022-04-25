@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add functions for enqueueing fonts used in block and global style settings
 
 ### Changed
+- Updated package dependencies.
 - Update package.json metadata.
 
 ## [0.2.2] - 2022-04-06

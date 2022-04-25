@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added the publicize package to be configured via the config package.
 
+### Changed
+- Updated package dependencies.
+
 ## [1.7.2] - 2022-04-19
 ### Added
 - Enable WordAds from Config class
