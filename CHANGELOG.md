@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Add logic to fetch intro offers
 - Add Mark subscription as Donation and Enable customers to pick their own amount in Payment management control block.
 - Add product cards to recommendation steps
+- Allow individual recommendations to be reached from the recommendations summary screen
 - Assistant: Added endpoints for site discount
 - Created a Stripe connect nudge that is aware of the product management store
 - Increased chunk size to 10Mb for VideoPress resumable uploads to reduce request overhead for faster uploads.
