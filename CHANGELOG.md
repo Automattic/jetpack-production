@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Allow individual recommendations to be reached from the recommendations summary screen
 - Assistant: Added endpoints for site discount
 - Created a Stripe connect nudge that is aware of the product management store
+- Google Fonts module: enqueue fonts used in block and Global Styles settings
 - Increased chunk size to 10Mb for VideoPress resumable uploads to reduce request overhead for faster uploads.
 - Make the subscribe button for premium-content blocks (wpcom specific) open up the 'checkout' dialog when clicked in emails and notifications
 - Updated the Membership endpoints to contain the newly added "public" property.

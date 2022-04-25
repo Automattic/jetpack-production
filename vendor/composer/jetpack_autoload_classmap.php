@@ -330,12 +330,20 @@ return array(
 		'version' => '2.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jitm/src/class-jitm.php'
 	),
+	'Automattic\\Jetpack\\Fonts\\Introspectors\\Blocks' => array(
+		'version' => '0.3.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/introspectors/class-blocks.php'
+	),
+	'Automattic\\Jetpack\\Fonts\\Introspectors\\Global_Styles' => array(
+		'version' => '0.3.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/introspectors/class-global-styles.php'
+	),
 	'Automattic\\Jetpack\\Fonts\\Utils' => array(
-		'version' => '0.2.9999999.9999999-dev',
+		'version' => '0.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-utils.php'
 	),
 	'Automattic\\Jetpack\\Fonts\\Google_Fonts_Provider' => array(
-		'version' => '0.2.9999999.9999999-dev',
+		'version' => '0.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-google-fonts-provider.php'
 	),
 	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
