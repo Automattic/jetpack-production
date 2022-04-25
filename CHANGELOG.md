@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Added activation screen component to My Jetpack licensing page
+- updating lock file
 
 ### Bug fixes
 - Add checks to eliminate warnings in php log.
