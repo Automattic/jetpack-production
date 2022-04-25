@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Removed Heartbeat by hoisting it into Connection.
 
+### Removed
+- Deprecated Soft disconnect
+
 ## [1.38.0] - 2022-04-19
 ### Added
 - Added list of connected list to the connection initial state
