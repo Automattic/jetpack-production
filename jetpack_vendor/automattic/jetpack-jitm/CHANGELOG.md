@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.15-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Deprecated
+- Moved the options class into Connection.
+
 ## [2.2.14] - 2022-04-26
 ### Changed
 - Updated package dependencies.
@@ -422,6 +429,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update Jetpack to use new JITM package
 
+[2.2.15-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.14...v2.2.15-alpha
 [2.2.14]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.13...v2.2.14
 [2.2.13]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.12...v2.2.13
 [2.2.12]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.11...v2.2.12

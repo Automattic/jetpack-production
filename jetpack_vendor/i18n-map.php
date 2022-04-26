@@ -10,7 +10,7 @@ return array(
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '1.39.9999999-dev',
+      'ver' => '1.40.9999999-dev',
     ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
@@ -71,10 +71,6 @@ return array(
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
       'ver' => '0.1.9999999-dev',
-    ),
-    'jetpack-tracking' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-tracking',
-      'ver' => '1.14.9999999-dev',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',

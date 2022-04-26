@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - My Jetpack: remove duplicated site suffix stored on rawUrl. Use siteSuffix instead.
 
+### Deprecated
+- Moved the options class into Connection.
+
 ## [1.2.0] - 2022-04-26
 ### Added
 - Added activation screen component to My Jetpack licensing page

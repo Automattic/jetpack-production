@@ -208,7 +208,7 @@ return array(
     'Jetpack_Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-client.php',
     'Jetpack_IXR_Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-ixr-client.php',
     'Jetpack_IXR_ClientMulticall' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-ixr-clientmulticall.php',
-    'Jetpack_Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-options/legacy/class-jetpack-options.php',
+    'Jetpack_Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-options.php',
     'Jetpack_Signature' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-signature.php',
     'Jetpack_Sync_Actions' => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-sync-actions.php',
     'Jetpack_Sync_Modules' => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-sync-modules.php',
