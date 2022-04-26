@@ -211,6 +211,11 @@ function jetpack_get_module_i18n( $key ) {
 				'description' => _x( 'Save on hosting storage and bandwidth costs by streaming fast, ad-free video from our global network.', 'Module Description', 'jetpack' ),
 			),
 
+			'waf' => array(
+				'name' => _x( 'Firewall', 'Module Name', 'jetpack' ),
+				'description' => _x( 'Protect your site with Jetpack\'s Web Application Firewall', 'Module Description', 'jetpack' ),
+			),
+
 			'widget-visibility' => array(
 				'name' => _x( 'Widget Visibility', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Control where widgets appear on your site.', 'Module Description', 'jetpack' ),
@@ -336,6 +341,14 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// Modules with `Site Stats` tag:
 			// - modules/stats.php
 			'Site Stats' => _x( 'Site Stats', 'Module Tag', 'jetpack' ),
+
+			// Modules with `Firewall` tag:
+			// - modules/waf.php
+			'Firewall' => _x( 'Firewall', 'Module Tag', 'jetpack' ),
+
+			// Modules with `WAF` tag:
+			// - modules/waf.php
+			'WAF' => _x( 'WAF', 'Module Tag', 'jetpack' ),
 		);
 	}
 	return ! empty( $module_tags[ $key ] ) ? $module_tags[ $key ] : '';
@@ -1050,6 +1063,24 @@ function jetpack_get_module_info( $key ) {
 	    'module_tags' => 'Photos and Videos',
 	    'feature' => 'Writing',
 	    'additional_search_queries' => 'video, videos, videopress, video gallery, video player, videoplayer, mobile video, vimeo, youtube, html5 video, stream',
+	    'plan_classes' => '',
+	  ),
+	  'waf' => 
+	  array (
+	    'name' => 'Firewall',
+	    'description' => 'Protect your site with Jetpack\'s Web Application Firewall',
+	    'sort' => '5',
+	    'recommendation_order' => '',
+	    'introduced' => '10.9',
+	    'changed' => '',
+	    'deactivate' => '',
+	    'free' => '',
+	    'requires_connection' => 'Yes',
+	    'requires_user_connection' => '',
+	    'auto_activate' => 'No',
+	    'module_tags' => 'Firewall, WAF',
+	    'feature' => 'Security',
+	    'additional_search_queries' => '',
 	    'plan_classes' => '',
 	  ),
 	  'widget-visibility' => 

@@ -102,6 +102,10 @@ return array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php'
 	),
+	'Automattic\\Jetpack\\Waf\\Waf_Endpoints' => array(
+		'version' => '0.5.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-endpoints.php'
+	),
 	'Automattic\\Jetpack\\Waf\\Waf_Standalone_Bootstrap' => array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-standalone-bootstrap.php'

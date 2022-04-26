@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Added a check to only run the firewall when the Jetpack module is enabled, a method to provide the bootstrap.php path, and a REST API endpoint to provide the firewall settings.
+
 ## [0.5.0] - 2022-04-26
 ### Added
 - added cron to update rules
@@ -43,6 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
+[0.5.1-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.5.0...v0.5.1-alpha
 [0.5.0]: https://github.com/Automattic/jetpack-waf/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-waf/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Automattic/jetpack-waf/compare/v0.2.0...v0.3.0
