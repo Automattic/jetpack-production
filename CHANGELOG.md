@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Add logic to fetch intro offers
 - Add Mark subscription as Donation and Enable customers to pick their own amount in Payment management control block.
 - Add product cards to recommendation steps
+- Add site discount in Jetpack Assistant
 - Allow individual recommendations to be reached from the recommendations summary screen
 - Assistant: Added endpoints for site discount
 - Created a Stripe connect nudge that is aware of the product management store
@@ -35,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - We now don't show a dropdown indication for the product management controls subscription selector.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added analytics events for enabling condtional recommendations and viewing conditional recommendations.
 - Converted BackupUpgrade and BarChart to TypeScript
 - E2E tests: add extra checks in connection tests
 - E2E tests: improve connection tests
