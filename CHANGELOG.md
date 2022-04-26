@@ -2,10 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 10.9-a.8 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.9-beta - 2022-04-26
 ### Enhancements
 - Add a videopress product card to videopress recommendtion
 - Added support for "public" property for membership subscriptions
@@ -36,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - We now don't show a dropdown indication for the product management controls subscription selector.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added analytics events for enabling condtional recommendations and viewing conditional recommendations.
 - Converted BackupUpgrade and BarChart to TypeScript
 - E2E tests: add extra checks in connection tests
 - E2E tests: improve connection tests
