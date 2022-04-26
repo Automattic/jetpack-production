@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Moved the options class into Connection.
 
+### Fixed
+- Search: Bundle vendor assets within the main chunk
+
 ## [0.13.1] - 2022-04-26
 ### Added
 - Search: added upsell page
