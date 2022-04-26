@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 11.0-a.0
 - Moved the Options class to Connection package.
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
+- PHPCS changes for root functions.
 - Replace uses of `create-react-class` with modern syntax.
 - Updating 10.9 beta changelog and readme
 - Updating to-test.md
