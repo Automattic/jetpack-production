@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.0-a.0
+- Updating to-test.md
 
 ## 10.9-beta - 2022-04-26
 ### Enhancements
