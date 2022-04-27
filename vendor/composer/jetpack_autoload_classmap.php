@@ -218,6 +218,30 @@ return array(
 		'version' => '0.1.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-setup.php'
 	),
+	'Jetpack_Backup' => array(
+		'version' => '1.3.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup.php'
+	),
+	'Automattic\\Jetpack\\Backup\\Jetpack_Backup_Upgrades' => array(
+		'version' => '1.3.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup-upgrades.php'
+	),
+	'Automattic\\Jetpack\\Backup\\Package_Version' => array(
+		'version' => '1.3.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-package-version.php'
+	),
+	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
+		'version' => '1.3.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-helper-script-manager.php'
+	),
+	'Automattic\\Jetpack\\Backup\\REST_Controller' => array(
+		'version' => '1.3.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-rest-controller.php'
+	),
+	'Automattic\\Jetpack\\Backup\\Initial_State' => array(
+		'version' => '1.3.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-initial-state.php'
+	),
 	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
 		'version' => '2.1.11.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-lazy-images/src/lazy-images.php'
@@ -277,30 +301,6 @@ return array(
 	'Automattic\\Jetpack\\Blocks' => array(
 		'version' => '1.4.12.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blocks/src/class-blocks.php'
-	),
-	'Jetpack_Backup' => array(
-		'version' => '1.3.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup.php'
-	),
-	'Automattic\\Jetpack\\Backup\\Jetpack_Backup_Upgrades' => array(
-		'version' => '1.3.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup-upgrades.php'
-	),
-	'Automattic\\Jetpack\\Backup\\Package_Version' => array(
-		'version' => '1.3.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-package-version.php'
-	),
-	'Automattic\\Jetpack\\Backup\\Helper_Script_Manager' => array(
-		'version' => '1.3.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-helper-script-manager.php'
-	),
-	'Automattic\\Jetpack\\Backup\\REST_Controller' => array(
-		'version' => '1.3.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-rest-controller.php'
-	),
-	'Automattic\\Jetpack\\Backup\\Initial_State' => array(
-		'version' => '1.3.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-initial-state.php'
 	),
 	'Automattic\\Jetpack\\Abtest' => array(
 		'version' => '1.9.23.0',
@@ -413,14 +413,6 @@ return array(
 	'Automattic\\Jetpack\\My_Jetpack\\REST_Purchases' => array(
 		'version' => '1.2.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-purchases.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
-		'version' => '2.4.1.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-admin.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
-		'version' => '2.4.1.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-initial-state.php'
 	),
 	'Automattic\\Jetpack\\Sync\\Codec_Interface' => array(
 		'version' => '1.31.0.0',
@@ -633,6 +625,14 @@ return array(
 	'Automattic\\Jetpack\\Sync\\Listener' => array(
 		'version' => '1.31.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-listener.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
+		'version' => '2.4.1.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-admin.php'
+	),
+	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
+		'version' => '2.4.1.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-initial-state.php'
 	),
 	'Automattic\\Jetpack\\Error' => array(
 		'version' => '1.3.14.0',
