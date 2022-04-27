@@ -110,12 +110,14 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection' => array(
-            'pretty_version' => 'v1.39.0',
-            'version' => '1.39.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-connection',
-            'aliases' => array(),
-            'reference' => '382337b0de23f88ed0a325b3ee0f02b32d5923b5',
+            'aliases' => array(
+                0 => '1.40.x-dev',
+            ),
+            'reference' => '3e28c47c72afe0f401f0300777c9a8603524fb44',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection-ui' => array(
@@ -333,7 +335,7 @@
             'aliases' => array(
                 0 => '0.1.x-dev',
             ),
-            'reference' => '9fcbd36eb6ac5685634a428d728fc03260a7703a',
+            'reference' => '24294f8241c0bf1b2eecd2d52a3b542dc46b7d26',
             'dev_requirement' => false,
         ),
         'nojimage/twitter-text-php' => array(

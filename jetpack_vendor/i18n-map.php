@@ -4,6 +4,10 @@ return array(
   'domain' => 'jetpack',
   'type' => 'plugins',
   'packages' => array(
+    'jetpack-connection' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-connection',
+      'ver' => '0.0.0',
+    ),
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
       'ver' => '0.0.0',
@@ -11,10 +15,6 @@ return array(
     'jetpack-admin-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
       'ver' => '0.2.7',
-    ),
-    'jetpack-connection' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '1.39.0',
     ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
@@ -52,6 +52,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
       'ver' => '1.8.0',
     ),
+    'jetpack-backup-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-backup',
+      'ver' => '1.3.0',
+    ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '1.7.1',
@@ -67,10 +71,6 @@ return array(
     'jetpack-lazy-images' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
       'ver' => '2.1.11',
-    ),
-    'jetpack-backup-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '1.3.0',
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
