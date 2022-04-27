@@ -4,17 +4,13 @@ return array(
   'domain' => 'jetpack',
   'type' => 'plugins',
   'packages' => array(
-    'jetpack-connection' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '0.0.0',
-    ),
-    'jetpack-wordads' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-wordads',
-      'ver' => '0.0.0',
-    ),
     'jetpack-admin-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
       'ver' => '0.2.7',
+    ),
+    'jetpack-connection' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-connection',
+      'ver' => '1.39.1',
     ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
@@ -83,6 +79,10 @@ return array(
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
       'ver' => '0.5.0',
+    ),
+    'jetpack-wordads' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-wordads',
+      'ver' => '0.1.1',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',

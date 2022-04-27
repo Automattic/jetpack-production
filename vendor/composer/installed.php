@@ -110,14 +110,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
+            'pretty_version' => 'v1.39.1',
+            'version' => '1.39.1.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-connection',
-            'aliases' => array(
-                0 => '1.40.x-dev',
-            ),
-            'reference' => '3e28c47c72afe0f401f0300777c9a8603524fb44',
+            'aliases' => array(),
+            'reference' => 'b08bf488fe983ee902ba212f6d35de4ef6931ecc',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection-ui' => array(
@@ -328,14 +326,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-wordads' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
+            'pretty_version' => 'v0.1.1',
+            'version' => '0.1.1.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-wordads',
-            'aliases' => array(
-                0 => '0.1.x-dev',
-            ),
-            'reference' => '24294f8241c0bf1b2eecd2d52a3b542dc46b7d26',
+            'aliases' => array(),
+            'reference' => '9fcbd36eb6ac5685634a428d728fc03260a7703a',
             'dev_requirement' => false,
         ),
         'nojimage/twitter-text-php' => array(
