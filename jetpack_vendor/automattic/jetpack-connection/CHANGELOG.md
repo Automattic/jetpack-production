@@ -12,8 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Moved the options class into Connection.
 
+## [1.39.1] - 2022-04-27
 ### Fixed
-- Reverts #23991
+- Reverts soft disconnect deprecation
 
 ## [1.39.0] - 2022-04-26
 ### Changed
@@ -581,7 +582,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[1.40.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.39.0...v1.40.0-alpha
+[1.40.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.39.1...v1.40.0-alpha
+[1.39.1]: https://github.com/Automattic/jetpack-connection/compare/v1.39.0...v1.39.1
 [1.39.0]: https://github.com/Automattic/jetpack-connection/compare/v1.38.0...v1.39.0
 [1.38.0]: https://github.com/Automattic/jetpack-connection/compare/v1.37.6...v1.38.0
 [1.37.6]: https://github.com/Automattic/jetpack-connection/compare/v1.37.5...v1.37.6
