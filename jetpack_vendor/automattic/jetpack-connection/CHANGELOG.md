@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Moved the options class into Connection.
 
+### Fixed
+- Reverts #23991
+
 ## [1.39.0] - 2022-04-26
 ### Changed
 - Make remove_connection a proxy method to ensure all trackings are triggered
