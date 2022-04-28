@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
 - PHPCS changes for root functions.
 - Replace uses of `create-react-class` with modern syntax.
+- Rewind: Remove unused sitePlan information
 - Updating 10.9 beta changelog and readme
 - Updating package dependencies
 - Updating to-test.md
