@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - PHPCS changes for root functions.
 - Replace uses of `create-react-class` with modern syntax.
 - Rewind: Remove unused sitePlan information
+- Search: Converted At a Glance search box to using feature checks.
 - Updating 10.9 beta changelog and readme
 - Updating package dependencies
 - Updating to-test.md
