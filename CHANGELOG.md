@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Activity: Removed commented-out code
 - Add missing JavaScript dependencies.
+- Custom Content Types: solve PHPCS errors for Portfolios.
 - Init 11.0-a.0
 - Moved the Options class to Connection package.
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
