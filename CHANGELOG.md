@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Assistant: Hide old background behind discount card
 - Assistant: Show product price if no intro offer
+- Assistant: Update discount card CTA
 - Custom CSS: avoid PHP notice when using the Sass preprocessor on PHP 7.4+.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
