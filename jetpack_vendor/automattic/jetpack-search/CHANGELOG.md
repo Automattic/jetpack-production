@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Moved the options class into Connection.
 
 ### Fixed
+- Adapt Record Meter to change in API response format
 - Search: Bundle vendor assets within the main chunk
 - Search: reset border-radius for search buttons
 
