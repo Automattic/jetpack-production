@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Assistant: Hide old background behind discount card
 - Assistant: Show product price if no intro offer
+- Assistant: Update discount card CTA
 
 ## 10.9-beta - 2022-04-26
 ### Enhancements
