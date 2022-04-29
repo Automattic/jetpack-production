@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add settings UI for Jetpack Firewall
 - Google Fonts: add additional fonts to the list of available fonts.
 
+### Improved compatibility
+- Contact Form: ensure the option to export forms to a csv file works with the upcoming version of WordPress, 6.0.
+
 ### Bug fixes
 - Assistant: Hide old background behind discount card
 - Assistant: Show product price if no intro offer
