@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - One Click Restores: Uses feature checks to determine backup type
 - Performance-Search: Converts plan checks to feature checks
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
+- phpcs changes for endpoints
 - PHPCS changes for root functions.
 - Recommendations: Use feature check for one-click restores
 - Renaming class file to comply with class naming rules in phpcs.
