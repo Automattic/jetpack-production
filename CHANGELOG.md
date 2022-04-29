@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom Content Types: solve PHPCS errors for Portfolios.
 - Init 11.0-a.0
 - Moved the Options class to Connection package.
+- My Plan: Use feature check for search card
 - One Click Restores: Uses feature checks to determine backup type
 - Performance-Search: Converts plan checks to feature checks
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
