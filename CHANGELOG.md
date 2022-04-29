@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Assistant: Show product price if no intro offer
+
 ## 10.9-beta - 2022-04-26
 ### Enhancements
 - Dashboard: update the recommendation flow to include recommendations for VideoPress as well as discounts.
