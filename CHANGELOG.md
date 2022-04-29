@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom Content Types: solve PHPCS errors for Portfolios.
 - Init 11.0-a.0
 - Moved the Options class to Connection package.
+- One Click Restores: Uses feature checks to determine backup type
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
 - PHPCS changes for root functions.
 - Renaming class file to comply with class naming rules in phpcs.
