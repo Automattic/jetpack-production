@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Moved the Options class to Connection package.
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
 - PHPCS changes for root functions.
+- Renaming class file to comply with class naming rules in phpcs.
 - Replace uses of `create-react-class` with modern syntax.
 - Rewind: Remove unused sitePlan information
 - Search: Converted At a Glance search box to using feature checks.
