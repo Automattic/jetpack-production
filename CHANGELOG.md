@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 11.0-a.0
 - Moved the Options class to Connection package.
 - One Click Restores: Uses feature checks to determine backup type
+- Performance-Search: Converts plan checks to feature checks
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
 - PHPCS changes for root functions.
 - Renaming class file to comply with class naming rules in phpcs.
