@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add settings UI for Jetpack Firewall
 - Google Fonts: add additional fonts to the list of available fonts.
 
+### Bug fixes
+- Custom CSS: avoid PHP notice when using the Sass preprocessor on PHP 7.4+.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Activity: Removed commented-out code
 - Add missing JavaScript dependencies.
