@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add missing JavaScript dependencies.
 
+### Changed
+- Update JS sources to modern syntax.
+
 ## [2.1.11] - 2022-04-26
 ### Changed
 - Updated package dependencies.
