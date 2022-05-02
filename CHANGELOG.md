@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Activity: Removed commented-out code
 - Add missing JavaScript dependencies.
 - Custom Content Types: bring changes from WordPress.com to Jetpack to keep the files in sync.
+- Custom Content Types: fix PHPCS linting errors in CPT module files, part 2
 - Custom Content Types: solve PHPCS errors for Portfolios.
 - Init 11.0-a.0
 - Moved the Options class to Connection package.
