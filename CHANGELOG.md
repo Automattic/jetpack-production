@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Assistant: Fix product price without intro offer
 - Assistant: Hide old background behind discount card
 - Assistant: Show product price if no intro offer
 - Assistant: Update discount card CTA

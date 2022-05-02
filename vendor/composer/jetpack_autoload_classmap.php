@@ -98,6 +98,38 @@ return array(
 		'version' => '0.1.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php'
 	),
+	'Automattic\\Jetpack\\Waf\\CLI' => array(
+		'version' => '0.5.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-cli.php'
+	),
+	'Automattic\\Jetpack\\Waf\\Waf_Operators' => array(
+		'version' => '0.5.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-operators.php'
+	),
+	'Automattic\\Jetpack\\Waf\\Waf_Request' => array(
+		'version' => '0.5.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-request.php'
+	),
+	'Automattic\\Jetpack\\Waf\\Waf_Transforms' => array(
+		'version' => '0.5.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php'
+	),
+	'Automattic\\Jetpack\\Waf\\Waf_Runner' => array(
+		'version' => '0.5.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runner.php'
+	),
+	'Automattic\\Jetpack\\Waf\\Waf_Standalone_Bootstrap' => array(
+		'version' => '0.5.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-standalone-bootstrap.php'
+	),
+	'Automattic\\Jetpack\\Waf\\Waf_Constants' => array(
+		'version' => '0.5.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-constants.php'
+	),
+	'Automattic\\Jetpack\\Waf\\Waf_Runtime' => array(
+		'version' => '0.5.0.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runtime.php'
+	),
 	'Automattic\\Jetpack\\Search\\Customizer' => array(
 		'version' => '0.13.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customizer/class-customizer.php'
@@ -189,38 +221,6 @@ return array(
 	'Automattic\\Jetpack\\Search\\REST_Controller' => array(
 		'version' => '0.13.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-rest-controller.php'
-	),
-	'Automattic\\Jetpack\\Waf\\CLI' => array(
-		'version' => '0.5.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-cli.php'
-	),
-	'Automattic\\Jetpack\\Waf\\Waf_Operators' => array(
-		'version' => '0.5.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-operators.php'
-	),
-	'Automattic\\Jetpack\\Waf\\Waf_Request' => array(
-		'version' => '0.5.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-request.php'
-	),
-	'Automattic\\Jetpack\\Waf\\Waf_Transforms' => array(
-		'version' => '0.5.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php'
-	),
-	'Automattic\\Jetpack\\Waf\\Waf_Runner' => array(
-		'version' => '0.5.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runner.php'
-	),
-	'Automattic\\Jetpack\\Waf\\Waf_Standalone_Bootstrap' => array(
-		'version' => '0.5.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-standalone-bootstrap.php'
-	),
-	'Automattic\\Jetpack\\Waf\\Waf_Constants' => array(
-		'version' => '0.5.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-constants.php'
-	),
-	'Automattic\\Jetpack\\Waf\\Waf_Runtime' => array(
-		'version' => '0.5.0.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-runtime.php'
 	),
 	'Automattic\\Jetpack\\Publicize\\Publicize_Setup' => array(
 		'version' => '0.1.0.0',
@@ -646,6 +646,10 @@ return array(
 		'version' => '1.1.2.0',
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-plugin.php'
 	),
+	'Automattic\\Jetpack\\Password_Checker' => array(
+		'version' => '0.2.4.0',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-password-checker/src/class-password-checker.php'
+	),
 	'Automattic\\Jetpack\\Licensing\\Endpoints' => array(
 		'version' => '1.7.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/src/class-endpoints.php'
@@ -661,10 +665,6 @@ return array(
 	'Automattic\\Jetpack\\Plugins_Installer' => array(
 		'version' => '0.1.2.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php'
-	),
-	'Automattic\\Jetpack\\Password_Checker' => array(
-		'version' => '0.2.4.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-password-checker/src/class-password-checker.php'
 	),
 	'Automattic\\Jetpack\\Device_Detection' => array(
 		'version' => '1.4.16.0',
