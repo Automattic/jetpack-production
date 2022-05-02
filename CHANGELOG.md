@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Recommendations: Use feature check for one-click restores
 - Renaming class file to comply with class naming rules in phpcs.
 - Replace uses of `create-react-class` with modern syntax.
+- Revert jetpack not hard disconnecting on deactivation
 - Rewind: Remove unused sitePlan information
 - Search: Converted At a Glance search box to using feature checks.
 - Security Settings: Use feature checks for backup and scan
