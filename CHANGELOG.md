@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - phpcs changes for endpoints
 - PHPCS changes for root functions.
 - Recommendations: Use feature check for one-click restores
+- Remove use of `pnpx` in preparation for pnpm 7.0.
 - Renaming class file to comply with class naming rules in phpcs.
 - Replace uses of `create-react-class` with modern syntax.
 - Revert jetpack not hard disconnecting on deactivation

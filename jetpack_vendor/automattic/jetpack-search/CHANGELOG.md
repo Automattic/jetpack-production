@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add missing JavaScript dependencies.
 
 ### Changed
+- Remove use of `pnpx` in preparation for pnpm 7.0.
 - Updated package dependencies
 
 ### Deprecated

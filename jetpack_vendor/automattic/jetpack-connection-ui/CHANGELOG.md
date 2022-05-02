@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Remove use of `pnpx` in preparation for pnpm 7.0.
 - Updated package dependencies
 
 ## [2.4.1] - 2022-04-26
