@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Rewind: Remove unused sitePlan information
 - Search: Converted At a Glance search box to using feature checks.
 - Security Settings: Use feature checks for backup and scan
+- Settings: Display upsells using feature checks
 - Updated package dependencies
 - Updating 10.9 beta changelog and readme
 - Updating package dependencies
