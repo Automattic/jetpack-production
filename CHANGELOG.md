@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: ensure the option to export forms to a csv file works with the upcoming version of WordPress, 6.0.
 
 ### Bug fixes
+- Assistant: Fix product price without intro offer
 - Assistant: Hide old background behind discount card
 - Assistant: Show product price if no intro offer
 - Assistant: Update discount card CTA
