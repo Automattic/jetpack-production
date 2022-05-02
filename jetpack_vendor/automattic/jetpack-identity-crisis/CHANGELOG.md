@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add missing JavaScript dependencies.
 
+### Changed
+- Updated package dependencies
+
 ### Deprecated
 - Moved the options class into Connection.
 

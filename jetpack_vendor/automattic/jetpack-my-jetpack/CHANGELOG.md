@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: remove duplicated site suffix stored on rawUrl. Use siteSuffix instead.
+- Updated package dependencies
 
 ### Deprecated
 - Moved the options class into Connection.

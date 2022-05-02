@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add missing JavaScript dependencies.
 
 ### Changed
+- Updated package dependencies
 - Updated package dependencies.
 
 ### Deprecated
