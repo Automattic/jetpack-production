@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
 - phpcs changes for endpoints
 - PHPCS changes for root functions.
+- phpcs endpoint change
 - Recommendations: Use feature check for one-click restores
 - Remove use of `pnpx` in preparation for pnpm 7.0.
 - Renaming class file to comply with class naming rules in phpcs.
