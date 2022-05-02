@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Activity: Removed commented-out code
 - Add missing JavaScript dependencies.
+- Client: Removed unused planClass props
 - Custom Content Types: bring changes from WordPress.com to Jetpack to keep the files in sync.
 - Custom Content Types: fix PHPCS linting errors in CPT module files, part 2
 - Custom Content Types: solve PHPCS errors for Portfolios.
