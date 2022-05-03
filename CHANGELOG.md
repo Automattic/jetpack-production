@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add settings UI for Jetpack Firewall
 - Google Fonts: add additional fonts to the list of available fonts.
+- Unified Stripe Nudge component, refactored the donation block so that it uses this version of the block and cleaned some code from the premium content block.
 
 ### Improved compatibility
 - Contact Form: ensure the option to export forms to a csv file works with the upcoming version of WordPress, 6.0.
