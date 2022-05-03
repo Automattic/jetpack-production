@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Assistant: Show product price if no intro offer
 - Assistant: Update discount card CTA
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Revert jetpack not hard disconnecting on deactivation
+
 ## 10.9-beta - 2022-04-26
 ### Enhancements
 - Dashboard: update the recommendation flow to include recommendations for VideoPress as well as discounts.
