@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - phpcs changes for endpoints
 - PHPCS changes for root functions.
 - phpcs endpoint change
+- readme/changelog fix you're going to delete this entry anyway.
 - Recommendations: Use feature check for one-click restores
 - Remove use of `pnpx` in preparation for pnpm 7.0.
 - Renaming class file to comply with class naming rules in phpcs.
@@ -52,7 +53,7 @@ This is an alpha version! The changes listed here are not final.
 - Updating package dependencies
 - Updating to-test.md
 
-## 10.9 - 2022-05-03
+## [10.9] - 2022-05-03
 ### Enhancements
 - Dashboard: update the recommendation flow to include recommendations for VideoPress as well as discounts.
 - Google Fonts: update the Google Fonts module to be compatible with the most recent version of the WP_Webfonts API.
@@ -6546,6 +6547,7 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 
 - Initial release
 
+[10.9]: https://wp.me/p1moTy-EHd
 [10.8]: https://wp.me/p1moTy-CTQ
 [10.7]: https://wp.me/p1moTy-AMD
 [10.6]: https://wp.me/p1moTy-AES
