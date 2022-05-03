@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- WordPress 6.1 Compatibilty
 
 ### Deprecated
 - Moved the options class into Connection.
