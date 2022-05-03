@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Assistant: Show product price if no intro offer
 - Assistant: Update discount card CTA
 - Custom CSS: avoid PHP notice when using the Sass preprocessor on PHP 7.4+.
+- We now lock the execution of get products in a non blocking way for the execution thread.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Activity: Removed commented-out code
