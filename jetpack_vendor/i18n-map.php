@@ -82,7 +82,7 @@ return array(
     ),
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
-      'ver' => '0.1.9999999-dev',
+      'ver' => '0.2.9999999-dev',
     ),
   ),
 );

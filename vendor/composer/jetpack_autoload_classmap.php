@@ -75,27 +75,27 @@ return array(
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
 	'Automattic\\Jetpack\\WordAds\\Helper' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-helper.php'
 	),
 	'Automattic\\Jetpack\\WordAds\\Package' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-package.php'
 	),
 	'Automattic\\Jetpack\\WordAds\\Dashboard' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/dashboard/class-dashboard.php'
 	),
 	'Automattic\\Jetpack\\WordAds\\Initial_State' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/dashboard/class-initial-state.php'
 	),
 	'Automattic\\Jetpack\\WordAds\\Initializer' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/initializers/class-initializer.php'
 	),
 	'Automattic\\Jetpack\\WordAds\\REST_Controller' => array(
-		'version' => '0.1.9999999.9999999-dev',
+		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Waf\\CLI' => array(
