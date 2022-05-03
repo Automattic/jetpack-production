@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Adapt Record Meter to change in API response format
 - Search: Bundle vendor assets within the main chunk
+- Search: Fix search for private WoA sites
 - Search: reset border-radius for search buttons
 
 ## [0.13.1] - 2022-04-26
