@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: ensure the option to export forms to a csv file works with the upcoming version of WordPress, 6.0.
 - General: Jetpack is now fully compatible with the upcoming version of WordPress, 6.0.
 - General: Jetpack now requires a more recent version of WordPress (5.9), since a new version of WordPress (6.0) will be available soon.
+- Updated Backups box in At a Glance to use feature checks
 
 ### Bug fixes
 - Assistant: Fix product price without intro offer
