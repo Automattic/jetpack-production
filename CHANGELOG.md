@@ -18,10 +18,6 @@ This is an alpha version! The changes listed here are not final.
 - Updated Backups box in At a Glance to use feature checks
 
 ### Bug fixes
-- Assistant: Fix product price without intro offer
-- Assistant: Hide old background behind discount card
-- Assistant: Show product price if no intro offer
-- Assistant: Update discount card CTA
 - Custom CSS: avoid PHP notice when using the Sass preprocessor on PHP 7.4+.
 - Fixed a bug that caused certain cards in the Dashboard to flicker in some circumstances when VaultPress is active.
 - We now lock the execution of get products in a non blocking way for the execution thread.
@@ -46,7 +42,6 @@ This is an alpha version! The changes listed here are not final.
 - Remove use of `pnpx` in preparation for pnpm 7.0.
 - Renaming class file to comply with class naming rules in phpcs.
 - Replace uses of `create-react-class` with modern syntax.
-- Revert jetpack not hard disconnecting on deactivation
 - Rewind: Remove unused sitePlan information
 - Search: Converted At a Glance search box to using feature checks.
 - Security Settings: Use feature checks for backup and scan
@@ -56,7 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Updating package dependencies
 - Updating to-test.md
 
-## 10.9-beta - 2022-04-26
+## 10.9 - 2022-05-03
 ### Enhancements
 - Dashboard: update the recommendation flow to include recommendations for VideoPress as well as discounts.
 - Google Fonts: update the Google Fonts module to be compatible with the most recent version of the WP_Webfonts API.
@@ -65,27 +60,29 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: improve upload spreed, by increasing chunk size to 10Mb for resumable uploads.
 
 ### Bug fixes
+- Assistant: style and CTA changes plus introductory offer fixes.
 - Payments Block: change the sidebar display when clicking 'add new subscription', as well as using an external link in the Customizer.
 - Payments Block: remove the dropdown icon from the product management control subscription selector.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add checks to eliminate warnings in PHP log.
 - Added analytics events for enabling condtional recommendations and viewing conditional recommendations.
 - Converted BackupUpgrade and BarChart to TypeScript.
 - E2E tests: add extra checks in connection tests.
 - E2E tests: improve connection tests.
+- Fix failing tests because of an editor type mismatch caused by imported packages side-effects.
 - Init 10.9-a.8
+- Load block editor styles inline for iframed editors on WoA sites.
 - Move RecordMeterBar to js-packages.
+- My Jetpack: Updated to require licensing package when licensing UI enabled.
 - Nav-unification: Update nudge to support Pro plan.
+- Payments Block: Display the product manager on free plan sites connected to Stripe.
+- Premium Content blocks: subscription button from emails and notifications opens the checkout dialog  (WordPress.com specific).
 - Remove code in native files that was causing the rnmobile build to fail.
+- Revert Jetpack not hard disconnecting on deactivation
 - Updated package dependencies.
 - Update package.json metadata.
 - Updating changelog and readme for 10.9-a.7
-- Add checks to eliminate warnings in php log.
-- Fix failing tests because of an editor type mismatch caused by imported packages side-effects.
-- Load block editor styles inline for iframed editors on WoA sites.
-- My Jetpack: Updated to require licensing package when licensing UI enabled.
-- Payments Block: Display the product manager on free plan sites connected to Stripe.
-- Premium Content blocks: subscription button from emails and notifications opens the checkout dialog  (WordPress.com specific).
 - VideoPress: Fixing issue in apiFetch middleware where request bodies were assumed to always be objects with a "file" property; this is only true for requests to the media endpoint.
 
 ## 10.9-a.7 - 2022-04-19
