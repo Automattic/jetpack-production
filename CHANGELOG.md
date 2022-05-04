@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Updates entrypoints in to My Jetpack licensing activation
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix the changelog and readme
 - Init for 11.0-a.1
