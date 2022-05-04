@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.0-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init for 11.0-a.1
+
 ## 11.0-a.1 - 2022-05-04
 ### Enhancements
 - Add settings UI for Jetpack Firewall [#23769]
