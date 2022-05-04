@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.2.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.2.1] - 2022-05-04
 ### Added
-- Add missing JavaScript dependencies.
+- Add missing JavaScript dependencies. [#24096]
 
 ### Changed
-- My Jetpack: remove duplicated site suffix stored on rawUrl. Use siteSuffix instead.
-- Updated package dependencies
+- My Jetpack: remove duplicated site suffix stored on rawUrl. Use siteSuffix instead. [#24094]
+- Updated package dependencies. [#24095] [#24198]
 
 ### Deprecated
-- Moved the options class into Connection.
+- Moved the options class into Connection. [#24095]
 
 ## [1.2.0] - 2022-04-26
 ### Added
@@ -460,7 +457,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[1.2.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.2.0...1.2.1-alpha
+[1.2.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.0.2...1.1.0
 [1.0.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.0.1...1.0.2

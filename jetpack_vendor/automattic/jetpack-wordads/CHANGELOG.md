@@ -5,21 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.2.0] - 2022-05-04
 ### Added
-- Add missing JavaScript dependencies.
+- Add missing JavaScript dependencies. [#24096]
 
 ### Changed
-- Moving from raw HTML tags to Jetpack components with ThemeProvider.
-- Remove use of `pnpx` in preparation for pnpm 7.0.
-- Updated package dependencies
-- Updated package dependencies.
+- Moving from raw HTML tags to Jetpack components with ThemeProvider. [#24109]
+- Remove use of `pnpx` in preparation for pnpm 7.0. [#24210]
+- Updated package dependencies. [#24095] [#24198] [#24199] [#24200] [#24200] [#24230]
 
 ### Deprecated
-- Moved the options class into Connection.
+- Moved the options class into Connection. [#24095]
 
 ## [0.1.1] - 2022-04-26
 ### Changed
@@ -33,5 +29,5 @@ This is an alpha version! The changes listed here are not final.
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
 - Updated package dependencies.
 
-[0.2.0-alpha]: https://github.com/Automattic/jetpack-wordads/compare/v0.1.1...v0.2.0-alpha
+[0.2.0]: https://github.com/Automattic/jetpack-wordads/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/Automattic/jetpack-wordads/compare/v0.1.0...v0.1.1

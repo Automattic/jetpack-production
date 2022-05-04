@@ -5,25 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.13.2] - 2022-05-04
 ### Added
-- Add missing JavaScript dependencies.
+- Add missing JavaScript dependencies. [#24096]
 
 ### Changed
-- Remove use of `pnpx` in preparation for pnpm 7.0.
-- Updated package dependencies
+- Remove use of `pnpx` in preparation for pnpm 7.0. [#24210]
+- Updated package dependencies. [#24095] [#24230] [#24198] [#24228]
 
 ### Deprecated
-- Moved the options class into Connection.
+- Moved the options class into Connection. [#24095]
 
 ### Fixed
-- Adapt Record Meter to change in API response format
-- Search: Bundle vendor assets within the main chunk
-- Search: Fix search for private WoA sites
-- Search: reset border-radius for search buttons
+- Adapt Record Meter to change in API response format [#24107]
+- Search: Bundle vendor assets within the main chunk [#24068]
+- Search: Fix search for private WoA sites [#24099]
+- Search: reset border-radius for search buttons [#24100]
 
 ## [0.13.1] - 2022-04-26
 ### Added
@@ -262,7 +259,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.13.2-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.13.1...v0.13.2-alpha
+[0.13.2]: https://github.com/Automattic/jetpack-search/compare/v0.13.1...v0.13.2
 [0.13.1]: https://github.com/Automattic/jetpack-search/compare/v0.13.0...v0.13.1
 [0.13.0]: https://github.com/Automattic/jetpack-search/compare/v0.12.3...v0.13.0
 [0.12.3]: https://github.com/Automattic/jetpack-search/compare/v0.12.2...v0.12.3
