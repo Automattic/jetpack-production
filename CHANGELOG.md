@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Init for 11.0-a.1
 - Publicize filter comment edited to move the relevant @since tag to the top
 - Remove use of `node-polyfill-webpack-plugin`.
+- Replace Akismet plan check with feature check
 - Updated package dependencies.
 
 ## 11.0-a.1 - 2022-05-04
