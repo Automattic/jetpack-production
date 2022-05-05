@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove use of `node-polyfill-webpack-plugin`.
 - Replace Akismet plan check with feature check
 - Updated package dependencies.
+- Upgrade @types/react to v18
 
 ## 11.0-a.1 - 2022-05-04
 ### Enhancements
