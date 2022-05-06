@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Search: refactored Settings to expose the settings array for sync
+- Updated package dependencies
 - Updated package dependencies.
 
 ## [0.13.2] - 2022-05-04
