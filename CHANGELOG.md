@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added unit tests for membership product store
 - Improve help message of VideoPress Privacy Setting at the block level.
+- Reset form data to default values after creating a subscription.
 - Updates entrypoints in to My Jetpack licensing activation
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
