@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added unit tests for membership product store
 - Assistant: Update illustrations
 - Improve help message of VideoPress Privacy Setting at the block level.
+- Latest Instagram Posts block: lazy load the images.
 - Reset form data to default values after creating a subscription.
 - Updates entrypoints in to My Jetpack licensing activation
 
