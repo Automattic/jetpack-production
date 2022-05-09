@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Do not hard disconnect Jetpack on deactivation
 
+### Bug fixes
+- Subscriptions: fix typo in confirmation message.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix the changelog and readme
 - Init for 11.0-a.1
