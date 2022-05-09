@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Search: Fix left padding for upsell page
+- Search: handle tiers without a record limit in Record Meter
 
 ## [0.13.2] - 2022-05-04
 ### Added
