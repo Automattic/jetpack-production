@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix the changelog and readme
 - Init for 11.0-a.1
+- PHPCS: fix linting errors in the Comic CPT file.
 - Publicize filter comment edited to move the relevant @since tag to the top
 - Remove use of `node-polyfill-webpack-plugin`.
 - Replace Akismet plan check with feature check
