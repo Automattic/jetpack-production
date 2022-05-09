@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add missing JS dep on `core-js`.
+
 ### Changed
 - Search: refactored Settings to expose the settings array for sync
 - Updated package dependencies
