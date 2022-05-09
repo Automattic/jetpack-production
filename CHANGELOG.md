@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies
 - Updated package dependencies.
 - Upgrade @types/react to v18
+- Use browser URL API instead of polyfills.
 
 ## 11.0-a.1 - 2022-05-04
 ### Enhancements
