@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Reset form data to default values after creating a subscription.
 - Updates entrypoints in to My Jetpack licensing activation
 
+### Improved compatibility
+- Do not hard disconnect Jetpack on deactivation
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix the changelog and readme
 - Init for 11.0-a.1
