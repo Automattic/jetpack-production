@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Do not hard disconnect Jetpack on deactivation
 
 ### Bug fixes
+- Better Video Privacy Section Label for the Video Block
 - Subscriptions: fix typo in confirmation message.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
