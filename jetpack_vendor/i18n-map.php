@@ -36,10 +36,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
       'ver' => '1.7.2',
     ),
-    'jetpack-my-jetpack' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '1.3.0',
-    ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
       'ver' => '2.4.3',
@@ -47,6 +43,10 @@ return array(
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
       'ver' => '1.8.0',
+    ),
+    'jetpack-my-jetpack' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
+      'ver' => '1.3.0',
     ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
