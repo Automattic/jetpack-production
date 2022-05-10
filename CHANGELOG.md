@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Update usage of the connection package by Jetpack
+
 ### Bug fixes
 - Add activation/deactivation hooks for proper setup of the waf module
 
