@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: fix typo in confirmation message.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Custom Content Types: fix PHPCS errors with Nova restaurant menu management.
 - Fix the changelog and readme
 - Init for 11.0-a.1
 - PHPCS: fix linting errors in the Comic CPT file.
