@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - handle share data option to decide if we should write to log file
 
+### Fixed
+- Allow the rules API to return 401 responses without throwing an exception.
+- fix bootstrap generation in cases file.php is not required yet
+
 ## [0.5.1] - 2022-05-04
 ### Added
 - Added a check to only run the firewall when the Jetpack module is enabled, a method to provide the bootstrap.php path, and a REST API endpoint to provide the firewall settings. [#23769]
