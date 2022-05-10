@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Adds from arg to connection screen in My Jetpack so that we can begin tracking connections originating from My Jetpack
 - Updated package dependencies
 - Updated package dependencies.
 - Updated references to old licensing activation UI to licensing activation UI in My Jetpack
