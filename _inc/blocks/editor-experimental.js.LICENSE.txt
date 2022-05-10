@@ -16,5 +16,3 @@
  2021 Jason Mulligan <jason.mulligan@avoidwork.com>
  @version 8.0.6
 */
-
-/*! https://mths.be/punycode v1.3.2 by @mathias */

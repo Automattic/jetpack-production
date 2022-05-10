@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('wp-dom-ready', 'wp-polyfill'), 'version' => '8910e31374a04ddb8059368fb5e1540d');
+<?php return array('dependencies' => array('wp-dom-ready', 'wp-polyfill'), 'version' => '861547f3ec5c2440786c3279c78c4b9e');
