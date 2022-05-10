@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Better Video Privacy Section Label for the Video Block
+- Removed keepPlaceholderOnFocus property from donations form and dialogue blocks since the property was removed from Gutenberg.
 - Subscriptions: fix typo in confirmation message.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
