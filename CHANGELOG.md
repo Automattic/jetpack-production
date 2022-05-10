@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added unit tests for membership product store
+- Adding the 'Additional CSS' menu item on Jetpack connection instead of Custom CSS feature enablement, and adding a Customizer link from the Settings page.
 - Assistant: Update illustrations
 - Custom CSS: add support for CSS properties: accent-color, aspect-ratio, gap, text-underline-offset.
 - Improve help message of VideoPress Privacy Setting at the block level.
