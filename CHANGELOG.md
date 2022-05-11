@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Added jetpack v4 publicize end-point.
+
 ### Improved compatibility
 - Update usage of the connection package by Jetpack
 
