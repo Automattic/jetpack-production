@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add checks for a killswitch define
+- Added endpoint to update rules on demand
 - handle share data option to decide if we should write to log file
 
 ### Fixed
