@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- gitignore wordpress directory within the publicize package
+
 ## [0.2.1] - 2022-05-10
 ### Fixed
 - Publicize: Correct bad namespaces
