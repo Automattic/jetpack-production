@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Update usage of the connection package by Jetpack
+- VideoPress: add useAverageColor to wpvideo shortcode to support automatic seekbar color.
 
 ### Bug fixes
 - Add activation/deactivation hooks for proper setup of the waf module
