@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.32.0] - 2022-05-10
+### Added
+- Search: add search options to option whitelist [#24167]
+
+## [1.31.1] - 2022-05-04
+### Changed
+- Updated package dependencies. [#24095]
+- WordPress 6.1 Compatibilty [#24083]
+
+### Deprecated
+- Moved the options class into Connection. [#24095]
+
 ## [1.31.0] - 2022-04-26
 ### Added
 - Adds filter to get_themes callable
@@ -630,6 +642,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[1.32.0]: https://github.com/Automattic/jetpack-sync/compare/v1.31.1...v1.32.0
+[1.31.1]: https://github.com/Automattic/jetpack-sync/compare/v1.31.0...v1.31.1
 [1.31.0]: https://github.com/Automattic/jetpack-sync/compare/v1.30.8...v1.31.0
 [1.30.8]: https://github.com/Automattic/jetpack-sync/compare/v1.30.7...v1.30.8
 [1.30.7]: https://github.com/Automattic/jetpack-sync/compare/v1.30.6...v1.30.7
