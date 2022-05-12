@@ -598,6 +598,10 @@ return array(
 		'version' => '1.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-product.php'
 	),
+	'Automattic\\Jetpack\\My_Jetpack\\Products\\Search_Stats' => array(
+		'version' => '1.3.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-search-stats.php'
+	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Search' => array(
 		'version' => '1.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-search.php'
