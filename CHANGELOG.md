@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added jetpack v4 publicize end-point.
+- Moved SocialServiceIcon component from Jetpack Icons.js file to js-package/components. Updated it's ref in the Jetpack plugin directory
 
 ### Improved compatibility
 - Update usage of the connection package by Jetpack
