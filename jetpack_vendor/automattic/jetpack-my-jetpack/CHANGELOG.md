@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: compute Search plugin price based on price tier
 
 ### Changed
+- Updated package dependencies
 - Updated package dependencies.
 
 ## [1.3.0] - 2022-05-10
