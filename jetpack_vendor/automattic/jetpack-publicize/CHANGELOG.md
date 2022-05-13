@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added new jetpack v4 end-point to list publicize connections.
 
 ### Changed
+- Updated package dependencies
 - Updated package dependencies.
 
 ### Fixed

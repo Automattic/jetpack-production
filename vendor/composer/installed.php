@@ -250,7 +250,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-publicize',
             'aliases' => array(),
-            'reference' => '71367e55bd7af9a4c87223a5fbe39c2ff9ab3947',
+            'reference' => 'b5083fef48ee3b2496e67bcce79d6490298301bd',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-redirect' => array(
