@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Setup lazy-images filters to run on 'the_post' hook not 'wp_head' to fix a variety of issues.
+- Updated package dependencies
 
 ## [2.1.13] - 2022-05-10
 ### Changed
