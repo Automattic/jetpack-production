@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: adapt support message wording based on the platform where it is displayed.
 - Fix changelog and readme
+- Fix new PHPCS sniffs.
 - Init 11.0-a.4
 - Remove unused JS client components.
 - Updated package dependencies

@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Changed method used to disconnect upon deactivation
 - Updated package dependencies.
 
+### Fixed
+- Fix new PHPCS sniffs.
+
 ## [1.3.2] - 2022-05-10
 ### Changed
 - Updated package dependencies. [#24167]
