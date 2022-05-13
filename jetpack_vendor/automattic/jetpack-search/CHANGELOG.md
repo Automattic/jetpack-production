@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Record Meter design updates
 - Search package: search dashboard refactoring
+- Updated package dependencies
 - Updated package dependencies.
 
 ## [0.13.3] - 2022-05-10

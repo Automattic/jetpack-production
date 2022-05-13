@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix changelog and readme
 - Init 11.0-a.4
 - Remove unused JS client components.
+- Updated package dependencies
 - Updated package dependencies.
 
 ## 11.0-a.5 - 2022-05-10
