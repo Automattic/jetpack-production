@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added jetpack v4 publicize end-point.
 - Admin Menu: Refactor upsell nudge to be async
 - Moved SocialServiceIcon component from Jetpack Icons.js file to js-package/components. Updated it's ref in the Jetpack plugin directory
+- Updated Jetpack Scan feature list.
 
 ### Improved compatibility
 - Update usage of the connection package by Jetpack

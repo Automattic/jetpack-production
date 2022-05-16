@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack Hybrid products: Install Jetpack if stand-alone plugin installation fails
+- Updated Jetpack Scan feature list.
 - Updated package dependencies
 - Updated package dependencies.
 
