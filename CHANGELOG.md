@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix new PHPCS sniffs.
 - Init 11.0-a.4
 - PHPCS Fixes for infinite scroll
+- phpcs fixes for tiled gallery
 - Remove unused JS client components.
 - Updated package dependencies
 - Updated package dependencies.
