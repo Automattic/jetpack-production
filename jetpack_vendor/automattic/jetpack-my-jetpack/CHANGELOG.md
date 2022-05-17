@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add tiered pricing copy and update titles for Jetpack Search
+- Hide Activate a license link if there is no user connection since user connection is required
 - My Jetpack Hybrid products: Install Jetpack if stand-alone plugin installation fails
 - Updated Jetpack Scan feature list.
 - Updated package dependencies
