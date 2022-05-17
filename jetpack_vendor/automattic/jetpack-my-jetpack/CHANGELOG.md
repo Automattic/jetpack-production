@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added a filter to allow stand-alone plugins to add product specific activation routines
 - My Jetpack: Add Protect class
 - My Jetpack: compute Search plugin price based on price tier
 
