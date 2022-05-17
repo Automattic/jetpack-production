@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - We now only perform one network request when utilizing any number of premium content and or payment blocks. Refactored the product memberships store to reduce complexity.
 
 ### Improved compatibility
+- JSON API: update the theme endpoint with information concerning pending updates.
 - Update usage of the connection package by Jetpack
 - VideoPress: add useAverageColor to wpvideo shortcode to support automatic seekbar color.
 
