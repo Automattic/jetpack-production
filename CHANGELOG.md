@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Refactor upsell nudge to be async
 - Moved SocialServiceIcon component from Jetpack Icons.js file to js-package/components. Updated it's ref in the Jetpack plugin directory
 - Updated Jetpack Scan feature list.
+- We now only perform one network request when utilizing any number of premium content and or payment blocks. Refactored the product memberships store to reduce complexity.
 
 ### Improved compatibility
 - Update usage of the connection package by Jetpack
