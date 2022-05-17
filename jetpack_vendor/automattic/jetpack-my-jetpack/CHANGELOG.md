@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: compute Search plugin price based on price tier
 
 ### Changed
+- Add tiered pricing copy and update titles for Jetpack Search
 - My Jetpack Hybrid products: Install Jetpack if stand-alone plugin installation fails
 - Updated Jetpack Scan feature list.
 - Updated package dependencies

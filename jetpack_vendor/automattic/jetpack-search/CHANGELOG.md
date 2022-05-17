@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Adjust translatable string
 - Record Meter: switch noticebox persistence storage from localStorage to sessionStorage
 - Record Meter design updates
 - Search package: search dashboard refactoring
