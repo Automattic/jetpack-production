@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.7.9-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.7.9] - 2022-05-18
 ### Fixed
-- Fix new PHPCS sniffs.
+- Fix new PHPCS sniffs. [#24366]
 
 ## [1.7.8] - 2022-05-04
 ### Changed
@@ -163,7 +160,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add partner subsidiary id to upgrade URLs.
 
-[1.7.9-alpha]: https://github.com/Automattic/jetpack-partner/compare/v1.7.8...v1.7.9-alpha
+[1.7.9]: https://github.com/Automattic/jetpack-partner/compare/v1.7.8...v1.7.9
 [1.7.8]: https://github.com/Automattic/jetpack-partner/compare/v1.7.7...v1.7.8
 [1.7.7]: https://github.com/Automattic/jetpack-partner/compare/v1.7.6...v1.7.7
 [1.7.6]: https://github.com/Automattic/jetpack-partner/compare/v1.7.5...v1.7.6
