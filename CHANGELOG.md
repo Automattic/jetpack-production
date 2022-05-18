@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Add activation/deactivation hooks for proper setup of the waf module
+- Remove search widget CTA on uneligible themes
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: adapt support message wording based on the platform where it is displayed.
