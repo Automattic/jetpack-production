@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.0-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 11.0-a,8
+
 ## 11.0-a.7 - 2022-05-18
 ### Enhancements
 - Added jetpack v4 publicize end-point. [#24293]
