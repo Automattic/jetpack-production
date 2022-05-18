@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Add activation/deactivation hooks for proper setup of the waf module
 - Changed the logic in should_submit_post_pre_checks to allow publiscizing via ajax requests.
+- Make sure payment blocks only attempt to auto-select a product if it exists.
 - Remove search widget CTA on uneligible themes
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
