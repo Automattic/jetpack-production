@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added jetpack v4 publicize end-point.
 - Admin Menu: Refactor upsell nudge to be async
+- Email subscriptions: Update the default body of the "Confirmation request" email
 - Moved SocialServiceIcon component from Jetpack Icons.js file to js-package/components. Updated it's ref in the Jetpack plugin directory
 - Updated Jetpack Scan feature list.
 - We now only perform one network request when utilizing any number of premium content and or payment blocks. Refactored the product memberships store to reduce complexity.
