@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Added check for wp_ajax_elementor_ajax to allow publicizing via elementor.
 - gitignore wordpress directory within the publicize package
 
 ## [0.2.1] - 2022-05-10
