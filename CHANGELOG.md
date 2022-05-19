@@ -2,18 +2,16 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.0-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 10.9.1 - 2022-05-19
 ### Improved compatibility
-- Contact Form: ensure the option to export forms to a csv file works with the upcoming version of WordPress, 6.0.
-- General: Jetpack is now fully compatible with the upcoming version of WordPress, 6.0.
-- General: Jetpack now requires a more recent version of WordPress (5.9), since a new version of WordPress (6.0) will be available soon.
-- General: remove backwards compatibility code now that Jetpack requires WordPress 5.9.
+- Contact Form: ensure the option to export forms to a CSV file works with the upcoming version of WordPress, 6.0. [#24173]
+- General: Jetpack is now fully compatible with the upcoming version of WordPress, 6.0. [#24083]
+- General: Jetpack now requires a more recent version of WordPress (5.9). [#24083]
+- General: remove backwards compatibility code now that Jetpack requires WordPress 5.9. [#24086]
 
 ### Bug fixes
-- Changed the logic in should_submit_post_pre_checks to allow publiscizing via ajax requests.
+- Publicize: ensure that Publicize works when publishing posts via AJAX requests, like when using the Elementor plugin. [#24387]
+- Secure Sign On: add the secure and httponly attribute to cookie used to log in. [#24418]
 
 ## 10.9 - 2022-05-03
 ### Enhancements

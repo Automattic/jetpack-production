@@ -246,10 +246,7 @@ class Full_Sync_Immediately extends Module {
 		// Set default configuration, calculate totals, and save configuration if totals > 0.
 		$status = array();
 		foreach ( $full_sync_config as $name => $config ) {
-			$module = Modules::get_module( $name );
-			if ( ! $module ) {
-				continue;
-			}
+			$module          = Modules::get_module( $name );
 			$status[ $name ] = array(
 				'total'    => $module->total( $config ),
 				'sent'     => 0,

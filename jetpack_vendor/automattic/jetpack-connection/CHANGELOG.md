@@ -5,30 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.40.3] - 2022-05-19
+## [1.39.2] - 2022-05-19
 ### Added
-- PHPCS updates. [#24418]
-
-## [1.40.2] - 2022-05-18
-### Changed
-- Updated package dependencies [#24372]
-
-### Fixed
-- Fix new PHPCS sniffs. [#24366]
-
-## [1.40.1] - 2022-05-10
-### Added
-- Bundle and transpile JavaScript with Webpack. [#24216]
-
-### Changed
-- Deprecate soft disconnect [#24105]
-
-## [1.40.0] - 2022-05-04
-### Added
-- Connection: Expose wpVersion and siteSuffix in the global initial state var [#24137]
-
-### Deprecated
-- Moved the options class into Connection. [#24095]
+- PHPCS updates.
 
 ## [1.39.1] - 2022-04-27
 ### Fixed
@@ -600,10 +579,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
-[1.40.3]: https://github.com/Automattic/jetpack-connection/compare/v1.40.2...v1.40.3
-[1.40.2]: https://github.com/Automattic/jetpack-connection/compare/v1.40.1...v1.40.2
-[1.40.1]: https://github.com/Automattic/jetpack-connection/compare/v1.40.0...v1.40.1
-[1.40.0]: https://github.com/Automattic/jetpack-connection/compare/v1.39.1...v1.40.0
+[1.39.2]: https://github.com/Automattic/jetpack-connection/compare/v1.39.1...v1.39.2
 [1.39.1]: https://github.com/Automattic/jetpack-connection/compare/v1.39.0...v1.39.1
 [1.39.0]: https://github.com/Automattic/jetpack-connection/compare/v1.38.0...v1.39.0
 [1.38.0]: https://github.com/Automattic/jetpack-connection/compare/v1.37.6...v1.38.0

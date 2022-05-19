@@ -95,11 +95,12 @@ abstract class Module_Product extends Product {
 	/**
 	 * Activates the product by installing and activating its plugin
 	 *
-	 * @param bool|WP_Error $plugin_activation Is the result of the top level activation actions. You probably won't do anything if it is an WP_Error.
 	 * @return boolean|\WP_Error
 	 */
-	public static function do_product_specific_activation( $plugin_activation ) {
+	public static function activate() {
 		self::check_for_module_name();
+
+		$plugin_activation = parent::activate();
 
 		if ( is_wp_error( $plugin_activation ) ) {
 			return $plugin_activation;
