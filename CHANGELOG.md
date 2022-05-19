@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Stats: remove unnecessary type attribute from style element.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Disable whitespace optimization as it can cause invalidation errors with Gutenberg blocks that use inline CSS.
 - Update changelog and readme files
