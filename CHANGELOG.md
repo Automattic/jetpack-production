@@ -2,6 +2,19 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.0-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Improved compatibility
+- Contact Form: ensure the option to export forms to a csv file works with the upcoming version of WordPress, 6.0.
+- General: Jetpack is now fully compatible with the upcoming version of WordPress, 6.0.
+- General: Jetpack now requires a more recent version of WordPress (5.9), since a new version of WordPress (6.0) will be available soon.
+- General: remove backwards compatibility code now that Jetpack requires WordPress 5.9.
+
+### Bug fixes
+- Changed the logic in should_submit_post_pre_checks to allow publiscizing via ajax requests.
+
 ## 10.9 - 2022-05-03
 ### Enhancements
 - Dashboard: update the recommendation flow to include recommendations for VideoPress as well as discounts.
