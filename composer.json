@@ -37,7 +37,7 @@
 		"automattic/jetpack-publicize": "^0.3.0",
 		"automattic/jetpack-redirect": "^1.7",
 		"automattic/jetpack-roles": "^1.4",
-		"automattic/jetpack-search": "^0.13.4",
+		"automattic/jetpack-search": "^0.14.0",
 		"automattic/jetpack-status": "^1.13",
 		"automattic/jetpack-sync": "^1.33",
 		"automattic/jetpack-waf": "^0.6.0",
@@ -89,7 +89,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ11_0_a_7",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ11_0_a_9",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true
