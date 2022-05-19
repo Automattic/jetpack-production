@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.0-a.10 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 11.0-a.10
+
 ## 11.0-a.9 - 2022-05-19
 ### Improved compatibility
 - Stats: remove unnecessary type attribute from style element. [#24427]
