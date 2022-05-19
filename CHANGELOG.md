@@ -2,19 +2,16 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.0-a.8 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 11.0-a.9 - 2022-05-19
 ### Improved compatibility
-- Stats: remove unnecessary type attribute from style element.
+- Stats: remove unnecessary type attribute from style element. [#24427]
 
 ### Bug fixes
-- VideoPress: avoid validation errors for core video block usage.
+- VideoPress: fix validation errors for core video block usage. [#24422]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Disable whitespace optimization as it can cause invalidation errors with Gutenberg blocks that use inline CSS.
-- Update changelog and readme files
+- Disable whitespace optimization as it can cause invalidation errors with Gutenberg blocks that use inline CSS. [#24069]
+- Update changelog and readme files [#24414] [#24395] [#24419] [#24399]
 
 ## 11.0-a.7 - 2022-05-18
 ### Enhancements
