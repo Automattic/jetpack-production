@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Allow plugins to filter the list of available modules. Only activate and consider active modules that are available
+
 ## [1.13.5] - 2022-05-20
 ### Changed
 - Modules: Make activate() method Jetpack plugin agnostic. Allowing standalone plugins to use it without Jetpack.

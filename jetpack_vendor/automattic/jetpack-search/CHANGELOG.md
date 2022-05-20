@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Allow plugins to filter the list of available modules. Only activate and consider active modules that are available
+
 ### Changed
 - Search: Use Modules methods for activating and deactivating the Search module.
 
