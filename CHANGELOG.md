@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.0-a.10
+- PHPCS: cleanup SAL files.
 
 ## 11.0-a.9 - 2022-05-19
 ### Improved compatibility
