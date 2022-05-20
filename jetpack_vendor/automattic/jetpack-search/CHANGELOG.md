@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Search: Use Modules methods for activating and deactivating the Search module.
+- Updated package dependencies.
 
 ## [0.14.0] - 2022-05-19
 ### Removed

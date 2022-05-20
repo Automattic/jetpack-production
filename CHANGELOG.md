@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 11.0-a.10
 - PHPCS: cleanup SAL files.
 - Unit Tests: fix all PHPCS errors.
+- Updated package dependencies.
 
 ## 11.0-a.9 - 2022-05-19
 ### Improved compatibility
