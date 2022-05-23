@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Moved some of the Publicize editor plugin components to the publicize-components package
 - PHPCS: cleanup SAL files.
 - Sharing: fix all PHPCS errors.
+- Sync callables whitelist: Remove 'active_modules' since Sync adds them anyway.
 - Unit Tests: fix all PHPCS errors.
 - Updated package dependencies.
 

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.34.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Sync: Add 'active_modules' to default whitelisted callables.
+
 ## [1.33.1] - 2022-05-19
 ### Removed
 - Removed dedicated sync custom endpoints pending error investigation [#24419]
@@ -650,6 +657,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[1.34.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.33.1...v1.34.0-alpha
 [1.33.1]: https://github.com/Automattic/jetpack-sync/compare/v1.33.0...v1.33.1
 [1.33.0]: https://github.com/Automattic/jetpack-sync/compare/v1.32.0...v1.33.0
 [1.32.0]: https://github.com/Automattic/jetpack-sync/compare/v1.31.1...v1.32.0
