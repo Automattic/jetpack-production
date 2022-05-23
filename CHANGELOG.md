@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - update test
 
+### Bug fixes
+- Widget Visibility: avoid PHP warnings when loading widgets in some scenarios.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.0-a.10
 - PHPCS: cleanup SAL files.
