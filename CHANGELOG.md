@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Added the post field to the Publicize package
+
 ### Improved compatibility
 - update test
 
