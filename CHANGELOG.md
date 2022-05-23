@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: remove PocketCasts embed block variation.
 - Init 11.0-a.10
 - PHPCS: cleanup SAL files.
+- Sharing: fix all PHPCS errors.
 - Unit Tests: fix all PHPCS errors.
 - Updated package dependencies.
 
