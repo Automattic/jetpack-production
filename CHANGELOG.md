@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix changelog and readme
 - Init 11.0-a.12
 - phpcs changes for likes
+- Updated package dependencies.
 
 ## 11.0-a.11 - 2022-05-24
 ### Bug fixes
