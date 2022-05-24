@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Avoid filter from being added multiple times
+
 ## [0.14.1] - 2022-05-24
 ### Added
 - Allow plugins to filter the list of available modules. Only activate and consider active modules that are available [#24454]
