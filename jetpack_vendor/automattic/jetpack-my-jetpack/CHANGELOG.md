@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.4.2-alpha] - unreleased
+## [1.5.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Default licensing UI in My Jetpack to be enabled
 - Updated package dependencies.
 
 ## [1.4.1] - 2022-05-19
@@ -486,7 +487,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[1.4.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.4.1...1.4.2-alpha
+[1.5.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.4.1...1.5.0-alpha
 [1.4.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.4.0...1.4.1
 [1.4.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.2.1...1.3.0
