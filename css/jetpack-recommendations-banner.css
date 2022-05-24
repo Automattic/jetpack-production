@@ -466,24 +466,36 @@ body {
 }
 
 .jp-recommendations-banner__notice-dismiss {
-  background: 0 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 1rem 1rem;
+  padding: 1rem;
+  background: none;
   border: none;
   color: #646970;
+  font-size: 1rem;
+  line-height: 1;
   cursor: pointer;
-  display: flex;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
-  padding: 2rem 2rem 2rem 0;
-  float: right;
+}
+@media (max-width: 480px) {
+  .jp-recommendations-banner__notice-dismiss {
+    margin-top: 0;
+  }
 }
 .jp-recommendations-banner__notice-dismiss:hover, .jp-recommendations-banner__notice-dismiss:active {
   color: #101517;
 }
 .jp-recommendations-banner__notice-dismiss:hover .jp-recommendations-banner__svg-dismiss, .jp-recommendations-banner__notice-dismiss:active .jp-recommendations-banner__svg-dismiss {
-  fill: #101517;
+  fill: currentColor;
+}
+.jp-recommendations-banner__notice-dismiss:focus {
+  outline-color: #101517;
 }
 .jp-recommendations-banner__notice-dismiss .jp-recommendations-banner__svg-dismiss {
-  fill: #646970;
-  margin-right: 0.25rem;
+  margin-inline-end: 0.25rem;
+  fill: currentColor;
 }

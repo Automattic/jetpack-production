@@ -2,6 +2,27 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.0-a.11 - 2022-05-24
+### Enhancements
+- Added the post field to the Publicize package [#24324]
+
+### Improved compatibility
+- Update test [#24454]
+
+### Bug fixes
+- Assistant: Fix unclickable banner dismiss button [#24459]
+- Widget Visibility: avoid PHP warnings when loading widgets in some scenarios. [#24460]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: remove PocketCasts embed block variation. [#24463]
+- Init 11.0-a.10 [#24431]
+- Moved some of the Publicize editor plugin components to the publicize-components package [#24408]
+- PHPCS: cleanup SAL files. [#23787] [#24388]
+- Sharing: fix all PHPCS errors. [#24412]
+- Sync callables whitelist: Remove 'active_modules' since Sync adds them anyway. [#24453]
+- Unit Tests: fix all PHPCS errors. [#24416]
+- Updated package dependencies. [#24396] [#24449] [#24453] [#24468]
+
 ## 11.0-a.9 - 2022-05-19
 ### Improved compatibility
 - Stats: remove unnecessary type attribute from style element. [#24427]
@@ -116,6 +137,17 @@
 - Updating to-test.md [#24088]
 - Updated Backups box in At a Glance to use feature checks [#24121]
 - We now lock the execution of get products in a non blocking way for the execution thread. [#24140]
+
+## 10.9.1 - 2022-05-19
+### Improved compatibility
+- Contact Form: ensure the option to export forms to a CSV file works with the upcoming version of WordPress, 6.0. [#24173]
+- General: Jetpack is now fully compatible with the upcoming version of WordPress, 6.0. [#24083]
+- General: Jetpack now requires a more recent version of WordPress (5.9). [#24083]
+- General: remove backwards compatibility code now that Jetpack requires WordPress 5.9. [#24086]
+
+### Bug fixes
+- Publicize: ensure that Publicize works when publishing posts via AJAX requests, like when using the Elementor plugin. [#24387]
+- Secure Sign On: add the secure and httponly attribute to cookie used to log in. [#24418]
 
 ## [10.9] - 2022-05-03
 ### Enhancements

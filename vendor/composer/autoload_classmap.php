@@ -100,6 +100,7 @@ return array(
     'Automattic\\Jetpack\\Paths' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-paths.php',
     'Automattic\\Jetpack\\Plugin\\Tracking' => $baseDir . '/src/class-tracking.php',
     'Automattic\\Jetpack\\Plugins_Installer' => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php',
+    'Automattic\\Jetpack\\Publicize\\Connections_Post_Field' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-connections-post-field.php',
     'Automattic\\Jetpack\\Publicize\\Keyring_Helper' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-keyring-helper.php',
     'Automattic\\Jetpack\\Publicize\\Publicize' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize.php',
     'Automattic\\Jetpack\\Publicize\\Publicize_Base' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-base.php',
