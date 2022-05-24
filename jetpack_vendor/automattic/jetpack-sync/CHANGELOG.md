@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Dedicated Sync - Introduce custom endpoint for spawning Sync requests
 - Sync: Add 'active_modules' to default whitelisted callables.
 
 ## [1.33.1] - 2022-05-19
