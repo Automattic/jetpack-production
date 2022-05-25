@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Nonce fix for some phpcs likes cleanup
 - phpcs changes for likes
 - Publicize Components: Move the remaining components and hooks required for Jetpack Social
+- Updated package dependencies
 - Updated package dependencies.
 
 ## 11.0-a.11 - 2022-05-24
