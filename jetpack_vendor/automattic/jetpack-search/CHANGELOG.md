@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Use the Checkout workflow to establish the connection and make the purchase
 
 ### Fixed
 - Avoid filter from being added multiple times
