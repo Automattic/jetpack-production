@@ -606,6 +606,10 @@ return array(
 		'version' => '1.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-search.php'
 	),
+	'Automattic\\Jetpack\\My_Jetpack\\Products\\Social' => array(
+		'version' => '1.6.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-social.php'
+	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Videopress' => array(
 		'version' => '1.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-videopress.php'
