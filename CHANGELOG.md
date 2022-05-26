@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize Components: Move the remaining components and hooks required for Jetpack Social
 - Updated package dependencies
 - Updated package dependencies.
+- Use correct `COOKIEPATH` constant.
 
 ## 11.0-a.11 - 2022-05-24
 ### Bug fixes
