@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Nonce fix for some phpcs likes cleanup
 - phpcs changes for likes
 - Publicize Components: Move the remaining components and hooks required for Jetpack Social
+- Refactor to use hasActiveSiteFeature to centralize the source of truth to WPCOM_Features.
 - Updated package dependencies
 - Updated package dependencies.
 - Use correct `COOKIEPATH` constant.
