@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Changed logic to initialize publicize classes only if the publicize module is active.
 
+### Changed
+- Classic Editor: Replaced the initial settings form with the Jetpack redirect link
+
 ## [0.4.0] - 2022-05-24
 ### Added
 - Added the post field to the Publicize package [#24324]
