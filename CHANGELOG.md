@@ -15,7 +15,6 @@ This is an alpha version! The changes listed here are not final.
 - Check for Google Analytics feature support to track infinite scroll requests
 
 ### Bug fixes
-- Comments: update UI to reflect that Google accounts are no longer a sign-in option.
 - Jetpack: Correct prices in product descriptions
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
