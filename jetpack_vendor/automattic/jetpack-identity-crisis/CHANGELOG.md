@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.8.12] - 2022-05-30
 ### Changed
 - Updated package dependencies
 
@@ -227,7 +224,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Use Connection/Urls for home_url and site_url functions migrated from Sync.
 
-[0.8.12-alpha]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.8.11...v0.8.12-alpha
+[0.8.12]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.8.11...v0.8.12
 [0.8.11]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.8.10...v0.8.11
 [0.8.10]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.8.9...v0.8.10
 [0.8.9]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.8.8...v0.8.9
