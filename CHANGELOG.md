@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Sync: Add '_jetpack_blogging_prompt_key' to rest api public metadata via the rest_api_allowed_public_metadata filter
+- Update Share by Email functionality to use mailto links instead of server submissions
 
 ### Bug fixes
 - Jetpack: Correct prices in product descriptions
