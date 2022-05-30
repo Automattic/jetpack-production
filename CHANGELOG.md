@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Comments: update UI to reflect that Google accounts are no longer a sign-in option.
 - Jetpack: Correct prices in product descriptions
+- Stats: ensure the Stats column can always be displayed, even when the post type does not support comments.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added TS check to build process
