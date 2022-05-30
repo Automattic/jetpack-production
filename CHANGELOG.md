@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add Jetpack Backup 1GB to several lists/components of supported products
 - Number format the number of subscribers in the subscribers panel when publishing a post
 - Sync: Add '_jetpack_blogging_prompt_key' to rest api public metadata via the rest_api_allowed_public_metadata filter
 - Updated products icons
