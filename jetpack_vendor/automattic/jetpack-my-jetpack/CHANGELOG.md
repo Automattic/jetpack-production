@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Make My Jetpack use the new Modules class
 - Replace deprecated external-link variation by using isExternalLink prop
+- Updated package dependencies
 - Updated package dependencies.
 
 ## [1.5.0] - 2022-05-24
