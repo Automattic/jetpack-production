@@ -11,7 +11,11 @@ This is an alpha version! The changes listed here are not final.
 - Sync: Add '_jetpack_blogging_prompt_key' to rest api public metadata via the rest_api_allowed_public_metadata filter
 - Update Share by Email functionality to use mailto links instead of server submissions
 
+### Improved compatibility
+- Check for Google Analytics feature support to track infinite scroll requests
+
 ### Bug fixes
+- Comments: update UI to reflect that Google accounts are no longer a sign-in option.
 - Jetpack: Correct prices in product descriptions
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

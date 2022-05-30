@@ -28,7 +28,7 @@ function jetpack_get_module_i18n( $key ) {
 
 			'comments' => array(
 				'name' => _x( 'Comments', 'Module Name', 'jetpack' ),
-				'description' => _x( 'Let visitors use a WordPress.com, Twitter, Facebook, or Google account to comment', 'Module Description', 'jetpack' ),
+				'description' => _x( 'Let visitors use a WordPress.com, Twitter, or Facebook account to comment', 'Module Description', 'jetpack' ),
 			),
 
 			'contact-form' => array(
@@ -402,7 +402,7 @@ function jetpack_get_module_info( $key ) {
 	  'comments' => 
 	  array (
 	    'name' => 'Comments',
-	    'description' => 'Let visitors use a WordPress.com, Twitter, Facebook, or Google account to comment',
+	    'description' => 'Let visitors use a WordPress.com, Twitter, or Facebook account to comment',
 	    'sort' => '20',
 	    'recommendation_order' => '',
 	    'introduced' => '1.4',
@@ -414,7 +414,7 @@ function jetpack_get_module_info( $key ) {
 	    'auto_activate' => 'No',
 	    'module_tags' => 'Social',
 	    'feature' => 'Engagement',
-	    'additional_search_queries' => 'comments, comment, facebook, twitter, google, social',
+	    'additional_search_queries' => 'comments, comment, facebook, twitter, social',
 	    'plan_classes' => '',
 	  ),
 	  'contact-form' => 
