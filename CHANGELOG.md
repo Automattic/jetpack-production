@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- remaining phpcs fix for class.jetpack.php
+
 ## 11.0-beta - 2022-05-31
 ### Enhancements
 - Sharing: update the email sharing button to use mailto links instead of server submissions. [#24040]
