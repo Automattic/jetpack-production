@@ -8,11 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ## 11.0-beta - 2022-05-31
 ### Enhancements
-- Share by Email: use mailto links instead of server submissions for better performance. [#24040]
-
-### Improved compatibility
-- Infinite scroll: add support for Google Analytics feature to track infinite scroll. [#24533]
-- Admin: update products icons. [#24559]
+- Sharing: update the email sharing button to use mailto links instead of server submissions. [#24040]
 
 ### Bug fixes
 - Comments: update UI to reflect that Google accounts are no longer a sign-in option. [#24528]
@@ -20,11 +16,13 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Jetpack Backup 1GB to several lists/components of supported products [#24541]
+- Admin: update products icons. [#24559]
 - Added TS check to build process [#24329]
 - Changed logic to initialize Publicize classes. [#24451]
 - E2E tests: fix broken Mailchimp test [#24534]
 - Fix changelog and readme [#24488]
 - Init 11.0-a.12 [#24487]
+- Infinite scroll: update support for Google Analytics feature to track infinite scroll. [#24533]
 - Nonce fix for some phpcs likes cleanup [#24490]
 - Number format the number of subscribers in the subscribers panel when publishing a post [#24544]
 - phpcs changes for likes [#24368]
@@ -33,9 +31,6 @@ This is an alpha version! The changes listed here are not final.
 - Sync: Add '_jetpack_blogging_prompt_key' to rest api public metadata via the rest_api_allowed_public_metadata filter [#24515]
 - Jetpack: correct prices in product descriptions [#24461]
 - Updated package dependencies. [#24432]
-- Updated package dependencies. [#24475]
-- Updated package dependencies. [#24505]
-- Updated package dependencies. [#24573]
 - Use correct `COOKIEPATH` constant. [#24516]
 
 ## 11.0-a.11 - 2022-05-24
