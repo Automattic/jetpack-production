@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Reorder JS imports for `import/order` eslint rule.
+
 ## [2.4.5] - 2022-05-31
 ### Changed
 - Updated package dependencies. [#24573]
