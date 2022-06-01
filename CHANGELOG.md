@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Removing strict comparison to fix average color param
+
 ## 11.0-beta - 2022-05-31
 ### Enhancements
 - Sharing: update the email sharing button to use mailto links instead of server submissions. [#24040]
