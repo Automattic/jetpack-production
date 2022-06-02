@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Reorder JS imports for `import/order` eslint rule.
+- Search record meter: changed the notice box to include a header text
 - Search widget: use 'Search (Jetpack)' as wdiget name and remove `jetpack_widget_name`
 
 ### Removed

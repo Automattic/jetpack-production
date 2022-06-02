@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - remaining phpcs fix for class.jetpack.php
 - Reorder JS imports for `import/order` eslint rule.
 - Updated package dependencies.
+- VideoPress: make sure "false" will be casted as false for useaveragecolor
 
 ## 11.0-beta - 2022-05-31
 ### Enhancements
