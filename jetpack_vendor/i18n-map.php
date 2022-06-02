@@ -24,9 +24,21 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
       'ver' => '0.8.12',
     ),
+    'jetpack-sync' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-sync',
+      'ver' => '1.35.0',
+    ),
+    'jetpack-plugins-installer' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
+      'ver' => '0.1.2',
+    ),
     'jetpack-licensing' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
       'ver' => '1.7.2',
+    ),
+    'jetpack-my-jetpack' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
+      'ver' => '1.6.0',
     ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
@@ -35,18 +47,6 @@ return array(
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
       'ver' => '1.9.0',
-    ),
-    'jetpack-plugins-installer' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
-      'ver' => '0.1.2',
-    ),
-    'jetpack-sync' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-sync',
-      'ver' => '1.35.0',
-    ),
-    'jetpack-my-jetpack' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '1.6.0',
     ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
