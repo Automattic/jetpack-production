@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Removing strict comparison to fix average color param
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Dashboard: update link to Protect features in disconnect modal.
 - PHPCS contact form
 - remaining phpcs fix for class.jetpack.php
 - Reorder JS imports for `import/order` eslint rule.
