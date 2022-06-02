@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Search: don't open modal if only sort parameter is set
 
+### Fixed
+- Search: avoid query on component mount when the overlay might not be visible
+
 ## [0.14.2] - 2022-05-30
 ### Changed
 - Updated package dependencies
