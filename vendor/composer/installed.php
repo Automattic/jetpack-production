@@ -299,12 +299,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-waf' => array(
-            'pretty_version' => 'v0.6.0',
-            'version' => '0.6.0.0',
+            'pretty_version' => 'v0.6.1',
+            'version' => '0.6.1.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-waf',
             'aliases' => array(),
-            'reference' => '59d9c6c00ea2fb190dc12bc75477d4337031e717',
+            'reference' => 'da175cc2445863a403cd58ca032235f55f4ff4f8',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-wordads' => array(
