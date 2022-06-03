@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- Blocks: introduce a new Recipe block to display an easy to read recipe anywhere on your site.
+
 ### Enhancements
 - Load publicize only in the publicize module is active.
 
