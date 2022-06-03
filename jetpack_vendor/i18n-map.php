@@ -20,14 +20,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-assets',
       'ver' => '1.17.14',
     ),
-    'jetpack-idc' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
-      'ver' => '0.8.12',
-    ),
-    'jetpack-plugins-installer' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
-      'ver' => '0.1.2',
-    ),
     'jetpack-licensing' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
       'ver' => '1.7.2',
@@ -40,6 +32,14 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
       'ver' => '1.9.0',
     ),
+    'jetpack-idc' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
+      'ver' => '0.8.12',
+    ),
+    'jetpack-plugins-installer' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
+      'ver' => '0.1.2',
+    ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
       'ver' => '1.35.0',
@@ -47,10 +47,6 @@ return array(
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '1.6.0',
-    ),
-    'jetpack-backup-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '1.3.7',
     ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
@@ -63,6 +59,10 @@ return array(
     'jetpack-jitm' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
       'ver' => '2.2.17',
+    ),
+    'jetpack-backup-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-backup',
+      'ver' => '1.3.7',
     ),
     'jetpack-lazy-images' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',

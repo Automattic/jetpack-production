@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Load publicize only in the publicize module is active.
+
 ### Bug fixes
 - Removing strict comparison to fix average color param
 
