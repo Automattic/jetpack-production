@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Contact Form: support saving array of data, such as multiple checkboxes.
+- Custom CSS: Add WoA check to prevent duplicate menu item on plan-less sites.
 - Removing strict comparison to fix average color param
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
