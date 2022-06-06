@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Load publicize only in the publicize module is active.
 
 ### Bug fixes
+- Contact Form: support saving array of data, such as multiple checkboxes.
 - Removing strict comparison to fix average color param
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
