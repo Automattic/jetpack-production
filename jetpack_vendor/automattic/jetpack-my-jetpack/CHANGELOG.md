@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Reorder JS imports for `import/order` eslint rule.
+- Updated package dependencies.
 
 ## [1.6.0] - 2022-05-30
 ### Added
