@@ -36,6 +36,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
       'ver' => '1.7.2',
     ),
+    'jetpack-my-jetpack' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
+      'ver' => '1.6.0',
+    ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
       'ver' => '2.4.5',
@@ -43,10 +47,6 @@ return array(
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
       'ver' => '1.9.0',
-    ),
-    'jetpack-my-jetpack' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '1.6.0',
     ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
@@ -76,13 +76,13 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
       'ver' => '0.14.2',
     ),
+    'jetpack-waf' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-waf',
+      'ver' => '0.6.2',
+    ),
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
       'ver' => '0.2.4',
-    ),
-    'jetpack-waf' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-waf',
-      'ver' => '0.6.1',
     ),
   ),
 );
