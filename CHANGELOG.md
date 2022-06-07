@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add links to waf support documentation.
 - Load publicize only in the publicize module is active.
+- Update messaging around sites without latest firewall rules access.
 
 ### Bug fixes
 - Contact Form: support saving array of data, such as multiple checkboxes.
