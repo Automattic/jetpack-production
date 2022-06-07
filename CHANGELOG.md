@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - remaining phpcs fix for class.jetpack.php
 - Reorder JS imports for `import/order` eslint rule.
 - Updated package dependencies.
+- VideoPress: add "allow='clipboard-write'" in iframe for embed in order to fix the Clipboard API on Chrome
 - VideoPress: make sure "false" will be casted as false for useaveragecolor
 
 ## 11.0-beta - 2022-05-31
