@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Load publicize only in the publicize module is active.
 - Update messaging around sites without latest firewall rules access.
 
+### Improved compatibility
+- Blocks: add Jetpack block elements to WPML configuration, so they can be translated.
+
 ### Bug fixes
 - Contact Form: support saving array of data, such as multiple checkboxes.
 - Custom CSS: Add WoA check to prevent duplicate menu item on plan-less sites.
