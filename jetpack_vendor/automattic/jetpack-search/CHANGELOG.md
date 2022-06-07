@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- record meter: switches from using chartJS to the Jetpack RecordMeterBar component
 - Reorder JS imports for `import/order` eslint rule.
 - Search record meter: changed the notice box to include a header text
 - Search widget: use 'Search (Jetpack)' as wdiget name and remove `jetpack_widget_name`
