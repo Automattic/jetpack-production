@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - VideoPress: add "allow='clipboard-write'" in iframe for embed in order to fix the Clipboard API on Chrome
 - VideoPress: make sure "false" will be casted as false for useaveragecolor
+- WPcom: deprecate jetpack_api_exclude_comment_types_count filter in favor of jetpack_api_include_comment_types_count for more accurate comment counts.
 
 ## 11.0-beta - 2022-05-31
 ### Enhancements
