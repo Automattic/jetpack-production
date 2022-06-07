@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - Search: don't open modal if only sort parameter is set
+- Search: Removed unused chart.js library
 
 ### Fixed
 - Search: avoid query on component mount when the overlay might not be visible
