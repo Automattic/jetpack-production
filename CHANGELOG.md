@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: introduce a new Recipe block to display an easy to read recipe anywhere on your site.
 
 ### Enhancements
+- Add links to waf support documentation.
 - Load publicize only in the publicize module is active.
 
 ### Bug fixes
