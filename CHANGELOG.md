@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add support for WordPress.com Starter plan.
 - Dashboard: update link to Protect features in disconnect modal.
+- Display integration tools menu item for p2 hub sites
 - PHPCS contact form
 - Related Posts: avoid fatal errors when calling related posts with multiple exclusions.
 - Release: update changelog and readme
