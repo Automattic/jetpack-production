@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [1.6.1] - 2022-06-08
 ### Changed
 - Reorder JS imports for `import/order` eslint rule. [#24601]
@@ -498,6 +502,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[1.6.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.6.1...1.6.2-alpha
 [1.6.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.6.0...1.6.1
 [1.6.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.5.0...1.6.0
 [1.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/1.4.1...1.5.0
