@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Search: avoid query on component mount when the overlay might not be visible
+- Search: fix gridicon color in dark mode on Customberg
 
 ## [0.14.2] - 2022-05-30
 ### Changed
