@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
   such as when the button includes an inline image.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add support for WordPress.com Starter plan.
 - Dashboard: update link to Protect features in disconnect modal.
 - PHPCS contact form
 - Related Posts: avoid fatal errors when calling related posts with multiple exclusions.
