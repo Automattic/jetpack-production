@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.1-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 11.1-a.1 - 2022-06-08
 ### Major Enhancements
 - Blocks: introduce a new Recipe block to display an easy to read recipe anywhere on your site. [#24343]
