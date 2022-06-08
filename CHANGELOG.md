@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: update link to Protect features in disconnect modal.
 - PHPCS contact form
 - Related Posts: avoid fatal errors when calling related posts with multiple exclusions.
+- Release: update changelog and readme
 - remaining phpcs fix for class.jetpack.php
 - Reorder JS imports for `import/order` eslint rule.
 - Updated package dependencies.
@@ -37,12 +38,14 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: make sure "false" will be casted as false for useaveragecolor
 - WPcom: deprecate jetpack_api_exclude_comment_types_count filter in favor of jetpack_api_include_comment_types_count for more accurate comment counts.
 
-## 11.0-beta - 2022-05-31
+## [11.0] - 2022-05-31
 ### Enhancements
+- Publicize: load Publicize only if the Publicize module is active. [#24557]
 - Sharing: update the email sharing button to use mailto links instead of server submissions. [#24040]
 
 ### Bug fixes
 - Comments: update UI to reflect that Google accounts are no longer a sign-in option. [#24528]
+- VideoPress: remove strict comparison to fix average color parameter. [#24606]
 - Stats: ensure the Stats column can always be displayed, even when the post type does not support comments. [#24482]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
@@ -6700,6 +6703,7 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 
 - Initial release
 
+[11.0]: https://wp.me/p1moTy-IbF
 [10.9]: https://wp.me/p1moTy-EHd
 [10.8]: https://wp.me/p1moTy-CTQ
 [10.7]: https://wp.me/p1moTy-AMD
