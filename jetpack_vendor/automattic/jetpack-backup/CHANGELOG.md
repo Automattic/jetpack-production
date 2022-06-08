@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.8-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.3.8] - 2022-06-08
 ### Changed
-- Reorder JS imports for `import/order` eslint rule.
-- Updated package dependencies.
+- Reorder JS imports for `import/order` eslint rule. [#24601]
+- Updated package dependencies. [#24510]
 
 ## [1.3.7] - 2022-05-31
 ### Changed
@@ -163,7 +160,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[1.3.8-alpha]: https://github.com/Automattic/jetpack-backup/compare/v1.3.7...v1.3.8-alpha
+[1.3.8]: https://github.com/Automattic/jetpack-backup/compare/v1.3.7...v1.3.8
 [1.3.7]: https://github.com/Automattic/jetpack-backup/compare/v1.3.6...v1.3.7
 [1.3.6]: https://github.com/Automattic/jetpack-backup/compare/v1.3.5...v1.3.6
 [1.3.5]: https://github.com/Automattic/jetpack-backup/compare/v1.3.4...v1.3.5
