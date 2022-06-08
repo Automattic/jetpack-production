@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: support saving array of data, such as multiple checkboxes.
 - Custom CSS: Add WoA check to prevent duplicate menu item on plan-less sites.
 - Removing strict comparison to fix average color param
+- Use an ungreedy regex when substituting the payment URL. This fixes a bug
+  where the button content could be removed if it included a literal " -
+  such as when the button includes an inline image.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update link to Protect features in disconnect modal.
