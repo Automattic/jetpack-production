@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.1-alpha] - unreleased
+## [0.6.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Publicize: Allow users to set the image for their social post even when themes don't support featured images.
 
 ## [0.5.0] - 2022-05-31
 ### Added
@@ -67,7 +70,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.5.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.5.0...v0.5.1-alpha
+[0.6.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.5.0...v0.6.0-alpha
 [0.5.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.2.1...v0.3.0
