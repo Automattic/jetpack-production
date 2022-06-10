@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Dashboard: format anti-spam stats properly, including in languages using a space as Thousands separator.
+- Moved the connection_url_redirect action handling to the connection package.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updated package dependencies.

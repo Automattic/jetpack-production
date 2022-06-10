@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updated package dependencies.
+
 ## [0.15.0] - 2022-06-08
 ### Changed
 - Record Meter: switches from using chartJS to the Jetpack RecordMeterBar component [#24322]

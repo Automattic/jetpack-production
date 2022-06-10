@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Publicize: Allow users to set the image for their social post even when themes don't support featured images.
+- Updated package dependencies.
 
 ## [0.5.0] - 2022-05-31
 ### Added
