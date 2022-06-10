@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Fixed old tk_ai regex to accurately match tk_ai ids.
+
 ## [1.40.5] - 2022-06-08
 ### Changed
 - Reorder JS imports for `import/order` eslint rule. [#24601]
