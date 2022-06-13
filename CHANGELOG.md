@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Moved the connection_url_redirect action handling to the connection package.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Modifying gendered language in code comments to be inclusive
 - Updated package dependencies.
 
 ## 11.1-a.1 - 2022-06-08
