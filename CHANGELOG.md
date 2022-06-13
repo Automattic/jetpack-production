@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- For Mailchimp block center spinner during loading block content.
+
 ### Bug fixes
 - Dashboard: format anti-spam stats properly, including in languages using a space as Thousands separator.
 - Moved the connection_url_redirect action handling to the connection package.
