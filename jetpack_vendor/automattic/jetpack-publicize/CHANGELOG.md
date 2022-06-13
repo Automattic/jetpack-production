@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Made changes to not instantiate the publicize object, if it's already instantiated.
+
 ### Changed
 - Publicize: Allow users to set the image for their social post even when themes don't support featured images.
 - Updated package dependencies.
