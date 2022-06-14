@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated package dependencies.
+
 ## 11.1-a.3 - 2022-06-14
 ### Enhancements
 - For Mailchimp block center spinner during loading block content. [#24694]
