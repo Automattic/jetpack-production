@@ -5303,7 +5303,7 @@ endif;
 	 *
 	 * @param array $domains Allowed WP.com Environments.
 	 *
-	 * @deprecated since 11.1-a.2
+	 * @deprecated since 11.1
 	 */
 	public function allow_wpcom_environments( $domains ) {
 		return Host::allow_wpcom_environments( $domains );
