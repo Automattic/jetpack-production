@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO Tools: allow WooCommerce to use custom SEO description for the shop page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fix a React warning in contact-info/address block.
 - Fix the inconsistent Sync Delays test.
 - Updated package dependencies.
 
