@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added UI to support backup warning state
 
+### Changed
+- Updated package dependencies.
+
 ## [1.3.9] - 2022-06-14
 ### Changed
 - Updated package dependencies. [#24529]
