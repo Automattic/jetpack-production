@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Enable blocks with VideoPress markdown to be previewed within the mobile app.
+
 ### Bug fixes
 - Fixed VideoPress embeds in classic editor when theme has no $content_width set.
 - SEO Tools: allow WooCommerce to use custom SEO description for the shop page.
