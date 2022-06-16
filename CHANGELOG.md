@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fixed VideoPress embeds in classic editor when theme has no $content_width set.
 - SEO Tools: allow WooCommerce to use custom SEO description for the shop page.
+- WPcom: make required plan for memberships conditional.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: bump @playwright/test and allure-playwright versions
