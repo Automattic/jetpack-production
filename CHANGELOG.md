@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fixed VideoPress embeds in classic editor when theme has no $content_width set.
+- Search/Sync: Avoid broken images in search results by preferring the _jetpack_featured_media_url postmeta over the GUID
 - SEO Tools: allow WooCommerce to use custom SEO description for the shop page.
 - WPcom: make required plan for memberships conditional.
 
