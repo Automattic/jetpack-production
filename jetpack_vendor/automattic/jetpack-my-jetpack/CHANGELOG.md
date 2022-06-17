@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - My Jetpack: set products grid to 3x3 for large viewport size
 - Renaming master to trunk.
+- Renaming `master` references to `trunk`
 
 ## [1.6.2] - 2022-06-14
 ### Changed

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Renaming master to trunk.
+- Renaming `master` references to `trunk`
 
 ## [1.41.0] - 2022-06-14
 ### Changed
