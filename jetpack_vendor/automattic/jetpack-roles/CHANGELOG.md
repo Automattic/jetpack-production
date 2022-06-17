@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.16-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Renaming master to trunk.
+
 ## [1.4.15] - 2022-04-26
 ### Changed
 - Updated package dependencies.
@@ -115,6 +122,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Jetpack DNA: Introduce a Roles package
 
+[1.4.16-alpha]: https://github.com/Automattic/jetpack-roles/compare/v1.4.15...v1.4.16-alpha
 [1.4.15]: https://github.com/Automattic/jetpack-roles/compare/v1.4.14...v1.4.15
 [1.4.14]: https://github.com/Automattic/jetpack-roles/compare/v1.4.13...v1.4.14
 [1.4.13]: https://github.com/Automattic/jetpack-roles/compare/v1.4.12...v1.4.13

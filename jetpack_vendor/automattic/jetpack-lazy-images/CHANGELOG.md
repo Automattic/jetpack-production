@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Disable core lazy loading implementation for images that get lazy loaded by Jetpack
+- Renaming master to trunk.
 - Updated package dependencies.
 
 ## [2.1.17] - 2022-06-14

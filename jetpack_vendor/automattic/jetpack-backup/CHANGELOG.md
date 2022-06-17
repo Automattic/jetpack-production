@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added UI to support backup warning state
 
 ### Changed
+- Renaming master to trunk.
 - Updated package dependencies.
 
 ## [1.3.9] - 2022-06-14

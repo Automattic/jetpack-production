@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.9-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Renaming master to trunk.
+
 ## [0.2.8] - 2022-06-14
 ### Changed
 - Updated package dependencies.
@@ -60,6 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing menu visibility issues.
 
+[0.2.9-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.8...0.2.9-alpha
 [0.2.8]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.7...0.2.8
 [0.2.7]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.6...0.2.7
 [0.2.6]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.5...0.2.6

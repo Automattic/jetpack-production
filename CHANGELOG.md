@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: bump @playwright/test and allure-playwright versions
 - Fix a React warning in contact-info/address block.
 - Fix the inconsistent Sync Delays test.
+- Renaming master to trunk
 - Updated package dependencies.
 
 ## 11.1-a.3 - 2022-06-14

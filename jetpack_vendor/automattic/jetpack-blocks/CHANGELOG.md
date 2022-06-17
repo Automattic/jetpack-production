@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.14-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Renaming master to trunk.
+
 ## [1.4.13] - 2022-06-08
 ### Fixed
 - Update method checking for block-based themes to use latest core function. [#24622]
@@ -108,6 +115,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Blocks: introduce new package for block management
 
+[1.4.14-alpha]: https://github.com/Automattic/jetpack-blocks/compare/v1.4.13...v1.4.14-alpha
 [1.4.13]: https://github.com/Automattic/jetpack-blocks/compare/v1.4.12...v1.4.13
 [1.4.12]: https://github.com/Automattic/jetpack-blocks/compare/v1.4.11...v1.4.12
 [1.4.11]: https://github.com/Automattic/jetpack-blocks/compare/v1.4.10...v1.4.11

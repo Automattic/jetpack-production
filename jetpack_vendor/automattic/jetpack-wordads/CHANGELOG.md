@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Renaming master to trunk.
+
 ## [0.2.6] - 2022-06-14
 ### Changed
 - Updated package dependencies. [#24529]

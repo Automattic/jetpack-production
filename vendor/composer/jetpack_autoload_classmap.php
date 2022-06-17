@@ -71,7 +71,7 @@ return array(
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/Extractor.php'
 	),
 	'Automattic\\Jetpack\\Plugin\\Tracking' => array(
-		'version' => 'dev-master',
+		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/class-tracking.php'
 	),
 	'Automattic\\Jetpack\\WordAds\\Dashboard' => array(
