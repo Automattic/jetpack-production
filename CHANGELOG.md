@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Contact Form Block: Displays expected success message when used in FSE header or footer
+- Fix Cancel button on VideoPress block and provided better error message when video foramt is not supported
 - Fixed VideoPress embeds in classic editor when theme has no $content_width set.
 - Photon: Do not return Photonized URLs to the block editor in WordPress 6.0.
 - Search/Sync: Avoid broken images in search results by preferring the _jetpack_featured_media_url postmeta over the GUID
