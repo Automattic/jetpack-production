@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Photon: Do not return Photonized URLs to the block editor in WordPress 6.0.
 - Search/Sync: Avoid broken images in search results by preferring the _jetpack_featured_media_url postmeta over the GUID
 - SEO Tools: allow WooCommerce to use custom SEO description for the shop page.
+- Sharing: avoid Fatal errors when email sharing process is called  without clicking on the button.
 - WPcom: make required plan for memberships conditional.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
