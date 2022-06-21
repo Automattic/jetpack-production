@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.4.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.4.0] - 2022-06-21
 ### Added
-- Added UI to support backup warning state
+- Added UI to support backup warning state [#24680]
 
 ### Changed
-- Renaming master to trunk.
-- Updated package dependencies.
+- Renaming master to trunk. [#24661]
+- Updated package dependencies. [#24679]
 
 ## [1.3.9] - 2022-06-14
 ### Changed
@@ -178,7 +175,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[1.4.0-alpha]: https://github.com/Automattic/jetpack-backup/compare/v1.3.9...v1.4.0-alpha
+[1.4.0]: https://github.com/Automattic/jetpack-backup/compare/v1.3.9...v1.4.0
 [1.3.9]: https://github.com/Automattic/jetpack-backup/compare/v1.3.8...v1.3.9
 [1.3.8]: https://github.com/Automattic/jetpack-backup/compare/v1.3.7...v1.3.8
 [1.3.7]: https://github.com/Automattic/jetpack-backup/compare/v1.3.6...v1.3.7

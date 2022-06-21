@@ -2,30 +2,26 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.1-a.4 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 11.1-a.5 - 2022-06-21
 ### Enhancements
-- Enable blocks with VideoPress markdown to be previewed within the mobile app.
+- VideoPress: enable blocks with VideoPress markdown to be previewed within the mobile app. [#24548]
 
 ### Bug fixes
-- Contact Form Block: Displays expected success message when used in FSE header or footer
-- Fix Cancel button on VideoPress block and provided better error message when video foramt is not supported
-- Fixed VideoPress embeds in classic editor when theme has no $content_width set.
-- Photon: Do not return Photonized URLs to the block editor in WordPress 6.0.
-- Search/Sync: Avoid broken images in search results by preferring the _jetpack_featured_media_url postmeta over the GUID
-- SEO Tools: allow WooCommerce to use custom SEO description for the shop page.
-- Sharing: avoid Fatal errors when email sharing process is called  without clicking on the button.
-- WPcom: make required plan for memberships conditional.
+- Contact Form Block: display expected success message when used in FSE header or footer. [#24727]
+- Photon: do not return Photonized URLs to the block editor in WordPress 6.0. [#24769]
+- Search: avoid broken images in search results by preferring the _jetpack_featured_media_url postmeta over the GUID. [#24718]
+- SEO Tools: allow WooCommerce to use custom SEO description for the shop page. [#24726]
+- Sharing: avoid fatal errors when email sharing process is called  without clicking on the button. [#24776]
+- VideoPress: fix embeds in classic editor when theme has no $content_width set. [#24756]
+- VideoPress Block: fix Cancel button on block and provide better error message when video format is not supported. [#24757]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- E2E tests: bump @playwright/test and allure-playwright versions
-- Fix a React warning in contact-info/address block.
-- Fix the inconsistent Sync Delays test.
-- Renaming master to trunk
-- Renaming `master` references to `trunk` and updating third-party GitHub links
+- E2E tests: bump @playwright/test and allure-playwright versions. [#24749]
+- Fix a React warning in contact-info/address block. [#24700]
+- Fix inconsistent Sync Delays test. [#24746]
+- Renaming master to trunk. [#24661]
 - Updated package dependencies.
+- WPcom: make required plan for memberships conditional. [#24741]
 
 ## 11.1-a.3 - 2022-06-14
 ### Bug fixes
