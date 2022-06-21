@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.1-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 11.1-a.5 - 2022-06-21
 ### Enhancements
 - VideoPress: enable blocks with VideoPress markdown to be previewed within the mobile app. [#24548]
