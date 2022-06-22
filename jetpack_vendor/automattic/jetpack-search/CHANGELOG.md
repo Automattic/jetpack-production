@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Record Meter: updated notice box content when site is not indexed
+- Search: use centralized search pricing API
 
 ## [0.15.2] - 2022-06-21
 ### Changed

@@ -222,10 +222,6 @@ return array(
 		'version' => '0.15.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-module-control.php'
 	),
-	'Automattic\\Jetpack\\Search\\Product' => array(
-		'version' => '0.15.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-product.php'
-	),
 	'Automattic\\Jetpack\\Search\\Package' => array(
 		'version' => '0.15.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-package.php'
