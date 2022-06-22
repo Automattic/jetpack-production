@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated Jetpack connection banner to the Emerald style
 
 ### Bug fixes
+- CLI: avoid PHP notice when running connection tests.
 - Removed hardcoded recurring-payments button color.
   
   Previously this was white. Removing it altogether means  that the outline button style works on white backgrounds.
