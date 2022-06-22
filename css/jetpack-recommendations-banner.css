@@ -233,6 +233,44 @@ body {
   transition: transform 0.15s ease-out;
 }
 
+.jp-banner-cta-button {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  outline: 0;
+  overflow: hidden;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 0.625rem 1.5rem;
+  transition: all 150ms ease-in-out;
+  text-decoration: none;
+}
+@media (max-width: 480px) {
+  .jp-banner-cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+.jp-banner-cta-button:hover, .jp-banner-cta-button:active {
+  background: var(--jp-gray-80);
+  border-color: var(--jp-gray-80);
+  color: var(--jp-white);
+}
+.jp-banner-cta-button:focus {
+  box-shadow: none;
+  outline: solid 1px var(--jp-black);
+  outline-offset: 1px;
+}
+
 .jp-recommendations-banner-main {
   position: relative;
   display: grid;
@@ -385,42 +423,6 @@ body {
 
 .jp-recommendations-banner__form {
   margin-bottom: 2rem;
-}
-
-.jp-recommendations-banner__continue-button {
-  background: #000;
-  border-color: #000;
-  color: #fff;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0;
-  outline: 0;
-  overflow: hidden;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-overflow: ellipsis;
-  vertical-align: top;
-  box-sizing: border-box;
-  padding: 0.625rem 1.5rem;
-  transition: all 150ms ease-in-out;
-}
-@media (max-width: 480px) {
-  .jp-recommendations-banner__continue-button {
-    width: 100%;
-  }
-}
-.jp-recommendations-banner__continue-button:hover, .jp-recommendations-banner__continue-button:active {
-  background: var(--jp-gray-80);
-  border-color: var(--jp-gray-80);
-  color: var(--jp-white);
-}
-.jp-recommendations-banner__continue-button:focus {
-  box-shadow: none;
-  outline: solid 1px var(--jp-black);
-  outline-offset: 1px;
 }
 
 .jp-recommendations-banner__continue-description {

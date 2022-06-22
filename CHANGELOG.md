@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Updated Jetpack connection banner to the Emerald style
+
 ### Bug fixes
 - Removed hardcoded recurring-payments button color.
   
