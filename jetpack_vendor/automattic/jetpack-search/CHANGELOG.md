@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Record meter: format the numbers used in notice.
 - Record Meter: updated notice box content when site is not indexed
 - Search: use centralized search pricing API
 
