@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: retry failing tests
+- Minor phpcs fixes to bring things in sync with dotcom
 
 ## 11.1-a.5 - 2022-06-21
 ### Enhancements
