@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: improve sync tests
 - E2E tests: retry failing tests
 - Minor phpcs fixes to bring things in sync with dotcom
+- WordPress.com REST API: add new action allowing you to trigger an action right before we switch themes via the API.
 
 ## 11.1-a.5 - 2022-06-21
 ### Enhancements
