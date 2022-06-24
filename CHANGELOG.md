@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Removed hardcoded recurring-payments button color.
   
   Previously this was white. Removing it altogether means  that the outline button style works on white backgrounds.
+- Subscribe Block: fix double-quote breaking the Subscribe block button
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: improve sync tests
