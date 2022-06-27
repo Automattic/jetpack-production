@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - CLI: avoid PHP notice when running connection tests.
+- Payments Block: only add PayPal email meta to Payment posts.
 - Removed hardcoded recurring-payments button color.
   
   Previously this was white. Removing it altogether means  that the outline button style works on white backgrounds.
