@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Posts: added a Sync call to make sure post content is up to date before publishing.
 
+### Changed
+- Minimum Sync Config: Update required modules and options
+
 ### Fixed
 - Sync Table Checksums:  Table checksum should be enabled depending on corresponding Sync modulee
 
