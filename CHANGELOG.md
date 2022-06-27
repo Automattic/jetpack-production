@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: introduce VideoPress (beta) block
 - Updated Jetpack connection banner to the Emerald style
 
+### Improved compatibility
+- Updated the non-iframed VideoPress player script url to point to the latest version of the VideoPress player. This only affects sites that implement the `jetpack_videopress_player_use_iframe` filter
+
 ### Bug fixes
 - CLI: avoid PHP notice when running connection tests.
 - Payments Block: only add PayPal email meta to Payment posts.
