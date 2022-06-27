@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribe Block: fix double-quote breaking the Subscribe block button
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add integration tests for Sync checksums.
 - E2E tests: improve sync tests
 - E2E tests: retry failing tests
 - Minor phpcs fixes to bring things in sync with dotcom
