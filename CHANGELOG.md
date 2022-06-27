@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Jetpack: introduce VideoPress (beta) block
 - Updated Jetpack connection banner to the Emerald style
 
 ### Bug fixes
