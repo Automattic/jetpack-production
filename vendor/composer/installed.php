@@ -214,7 +214,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-my-jetpack',
             'aliases' => array(),
-            'reference' => 'eeab05518ce0e0c7eb247da6550311cca45f4e1b',
+            'reference' => 'daac67eebd0315c671fbee70913f14c62a6e9e18',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-partner' => array(
@@ -277,7 +277,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-search',
             'aliases' => array(),
-            'reference' => '3b78ced0eb8c3863e5a809412fe8cf7241bb9227',
+            'reference' => '2b90ac0d6c2360aa928e71f89c7519c450f317b2',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-status' => array(

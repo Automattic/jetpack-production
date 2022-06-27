@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - disambigue redirectUrls vars
 - Search: use centralized search pricing API
+- Updated package dependencies.
+
+### Fixed
+- Search Pricing: fix pricing fetch issue before site is connected
 
 ## [1.7.1] - 2022-06-21
 ### Fixed

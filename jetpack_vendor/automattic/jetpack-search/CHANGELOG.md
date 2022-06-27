@@ -13,6 +13,10 @@ This is an alpha version! The changes listed here are not final.
 - Record meter: format the numbers used in notice.
 - Record Meter: updated notice box content when site is not indexed
 - Search: use centralized search pricing API
+- Updated package dependencies.
+
+### Fixed
+- Added My Jetpack package as dependency
 
 ## [0.15.2] - 2022-06-21
 ### Changed
