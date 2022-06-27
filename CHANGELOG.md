@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add "Getting started with Jetpack Backup" video to Assistant and "At a glance" dashboard
+- Jetpack: implement uploading video to VPBlock
 - Jetpack: introduce VideoPress (beta) block
 - Updated Jetpack connection banner to the Emerald style
 
