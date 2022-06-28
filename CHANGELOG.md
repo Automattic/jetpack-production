@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.2-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 11.1-beta - 2022-06-28
 ### Enhancements
 - Add "Getting started with Jetpack Backup" video to Assistant and "At a glance" dashboard [#24774]
