@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - CLI: avoid PHP notice when running connection tests.
+- Contact Form: ensure the forms are always properly displayed, regardless of how you add them to your site.
 - Payments Block: only add PayPal email meta to Payment posts.
 - Removed hardcoded recurring-payments button color.
   
