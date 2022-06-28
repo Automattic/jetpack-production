@@ -10,7 +10,7 @@ return array(
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '1.41.1',
+      'ver' => '1.41.2',
     ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
@@ -36,17 +36,17 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
       'ver' => '2.4.8',
     ),
-    'jetpack-config' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-config',
-      'ver' => '1.9.1',
-    ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
-      'ver' => '1.35.2',
+      'ver' => '1.36.0',
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '1.7.1',
+    ),
+    'jetpack-config' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-config',
+      'ver' => '1.9.1',
     ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
@@ -64,25 +64,25 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
       'ver' => '2.1.18',
     ),
+    'jetpack-backup-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-backup',
+      'ver' => '1.4.1',
+    ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
       'ver' => '0.7.0',
     ),
-    'jetpack-backup-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '1.4.0',
-    ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.15.2',
-    ),
-    'jetpack-wordads' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-wordads',
-      'ver' => '0.2.7',
+      'ver' => '0.15.3',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
       'ver' => '0.6.3',
+    ),
+    'jetpack-wordads' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-wordads',
+      'ver' => '0.2.7',
     ),
   ),
 );
