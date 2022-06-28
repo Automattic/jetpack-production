@@ -537,7 +537,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-config",
-                "reference": "3bc6c327846e1591c9960da3d0f241280d623c53"
+                "reference": "7b20750822dcd26b71a8f64c7a59a63d1838c75b"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.1"
