@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Jetpack: introduce VideoPressSandbox component (VPBlock)
 - Jetpack: memoize uploading progress handler function
 - Jetpack: re attempt to get the VideoPress video preview
 - Jetpack: save video player attributes of the VPBlock
