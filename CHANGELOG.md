@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: memoize uploading progress handler function
 - Jetpack: re attempt to get the VideoPress video preview
 
+### Bug fixes
+- Dashboard: fix the link to Anti-spam stats.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: improve stability of dedicated sync test
 - Updated package dependencies.
