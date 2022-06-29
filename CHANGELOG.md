@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: memoize uploading progress handler function
 - Jetpack: re attempt to get the VideoPress video preview
 - Jetpack: save video player attributes of the VPBlock
+- VideoPress: Add upload error message
 
 ### Bug fixes
 - Contact Form Block: Prevent error notice when processing submission from 404 page
