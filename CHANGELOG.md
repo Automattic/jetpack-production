@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: save video player attributes of the VPBlock
 
 ### Bug fixes
+- Contact Form Block: Prevent error notice when processing submission from 404 page
 - Dashboard: fix the link to Anti-spam stats.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
