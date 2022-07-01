@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: improve stability of dedicated sync test
 - E2E tests: regroup specs
+- Included private videos URL in VideoPress block (v6) GUID parser
 - Updated package dependencies.
 - WordPress.com tests: mark AMP-related tests as skipped when running in WP.com
 
