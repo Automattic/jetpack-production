@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Jetpack: add an overlay to VPBlock to improve when selecting the video player
+- Jetpack: handle VPBlock caption attribute
 - Jetpack: improve WPBlock video preview UX
 - Jetpack: introduce VideoPressSandbox component (VPBlock)
 - Jetpack: memoize uploading progress handler function
