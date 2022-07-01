@@ -10,6 +10,6 @@ import React from 'react';
 describe( 'Card', function () {
 	it( 'can render', () => {
 		render( <Card title="Title" /> );
-		expect( screen.getByRole( 'heading' ) ).toBeInTheDocument();
+		expect( screen.queryByRole( 'heading' ) ).toBeInTheDocument();
 	} );
 } );

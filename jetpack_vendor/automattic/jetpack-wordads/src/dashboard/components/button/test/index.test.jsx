@@ -13,14 +13,14 @@ describe( 'Button', function () {
 	};
 	it( 'can render', () => {
 		render( <Button /> );
-		expect( screen.getByRole( 'button' ) ).toBeInTheDocument();
+		expect( screen.queryByRole( 'button' ) ).toBeInTheDocument();
 	} );
 	it( 'can render compact button', () => {
 		render( <Button compact={ true } /> );
-		expect( screen.getByRole( 'button' ) ).toHaveClass( 'is-compact' );
+		expect( screen.queryByRole( 'button' ).className ).toContain( 'is-compact' );
 	} );
 	it( 'can render with class name passed in', () => {
 		render( <Button { ...testProps } /> );
-		expect( screen.getByRole( 'button' ) ).toHaveClass( 'test-class' );
+		expect( screen.queryByRole( 'button' ).className ).toContain( 'test-class' );
 	} );
 } );
