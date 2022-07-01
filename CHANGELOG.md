@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form Block: Prevent error notice when processing submission from 404 page
 - Dashboard: fix the link to Anti-spam stats.
 - Form block: radio, select, and multiple checkbox fields can now have option with a value 0.
+- Jetpack: fix bug wen getting the video preview of the VPBlock
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - At-a-glance: Replace obsolete `javascript:void(0)` hrefs.
