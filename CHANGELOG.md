@@ -23,9 +23,11 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: fix the link to Anti-spam stats.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- At-a-glance: Replace obsolete `javascript:void(0)` hrefs.
 - E2E tests: improve stability of dedicated sync test
 - E2E tests: regroup specs
 - Included private videos URL in VideoPress block (v6) GUID parser
+- select-dropdown/item: Fix incorrect React prop type.
 - Updated package dependencies.
 - WordPress.com tests: mark AMP-related tests as skipped when running in WP.com
 
