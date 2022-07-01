@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: re attempt to get the VideoPress video preview
 - Jetpack: save video player attributes of the VPBlock
 - Jetpack: store and apply VPBlock size
+- Prevent users from removing the contact form submit button.
 - VideoPress: Add upload error message
 
 ### Bug fixes
