@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: store and apply VPBlock size
 - Prevent users from removing the contact form submit button.
 - VideoPress: Add upload error message
+- VideoPress: Add VideoPressUploader component
 
 ### Bug fixes
 - Contact Form Block: Prevent error notice when processing submission from 404 page
