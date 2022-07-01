@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Record Meter: adds labels to custom post type breakdown
 
+### Changed
+- Updated package dependencies.
+
 ### Removed
 - Record Meter: Remove dismissable functionality and design from notice boxes
 

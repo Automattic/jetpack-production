@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Display alert when we cant automatically install the plugin
 
+### Changed
+- Updated package dependencies.
+
 ## [1.7.2] - 2022-06-28
 ### Changed
 - Disambiguate redirectUrls vars [#24839]
