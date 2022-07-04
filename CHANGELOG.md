@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Included private videos URL in VideoPress block (v6) GUID parser
 - select-dropdown/item: Fix incorrect React prop type.
 - Updated package dependencies.
+- Update text and add link to the Backup aag card.
 - WordPress.com tests: mark AMP-related tests as skipped when running in WP.com
 
 ## 11.1-beta - 2022-06-28
