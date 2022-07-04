@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: fix the link to Anti-spam stats.
 - Form block: radio, select, and multiple checkbox fields can now have option with a value 0.
 - Jetpack: fix bug wen getting the video preview of the VPBlock
+- Related Posts: avoid PHP warnings when visiting AMP post views.
 - Stats: Allowing custom user role stats settings to be properly recognized and saved.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
