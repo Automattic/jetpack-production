@@ -6,6 +6,10 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Dashboard: fix the link to Anti-spam stats.
+- Form block: radio, select, and multiple checkbox fields can now have option with a value 0.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updated package dependencies.
 
