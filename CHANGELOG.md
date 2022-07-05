@@ -22,8 +22,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Contact Form Block: Prevent error notice when processing submission from 404 page
-- Dashboard: fix the link to Anti-spam stats.
-- Form block: radio, select, and multiple checkbox fields can now have option with a value 0.
 - Jetpack: fix bug wen getting the video preview of the VPBlock
 - Related Posts: avoid PHP warnings when visiting AMP post views.
 - Stats: Allowing custom user role stats settings to be properly recognized and saved.
@@ -39,7 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Update text and add link to the Backup aag card.
 - WordPress.com tests: mark AMP-related tests as skipped when running in WP.com
 
-## 11.1-beta - 2022-06-28
+## [11.1] - 2022-07-05
 ### Enhancements
 - Dashboard: add "Getting started with Jetpack Backup" video to Assistant and "At a glance" dashboard. [#24774]
 - VideoPress: introduce VideoPress block currently in beta status. [#24821, #24844, #24848]
@@ -51,6 +49,8 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - CLI: avoid PHP notice when running connection tests. [#24802]
 - Contact Form: ensure the forms are always properly displayed. [#24857]
+- Dashboard: fix the link to Anti-spam stats. [#24880]
+- Form Block: radio, select, and multiple checkbox fields can now have option with a value of '0'. [#24926]
 - Payments Block: only add PayPal email meta to Payment posts. [#24806]
 - Payments Block: remove hardcoded recurring-payments button color. [#24801]
 - Subscribe Block: fix double-quote breaking the Subscribe block button. [#24763]
@@ -6791,6 +6791,7 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 
 - Initial release
 
+[11.1]: https://wp.me/p1moTy-Juo
 [11.0]: https://wp.me/p1moTy-IbF
 [10.9]: https://wp.me/p1moTy-EHd
 [10.8]: https://wp.me/p1moTy-CTQ
