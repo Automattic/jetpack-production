@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Record Meter: Remove dismissable functionality and design from notice boxes
 
 ### Fixed
+- Reset letter spacing for header tags
 - Restores support for multiple post types in the Jetpack Search Widget.
 
 ## [0.15.3] - 2022-06-28
