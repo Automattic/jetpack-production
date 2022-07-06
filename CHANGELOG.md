@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.2-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 11.2-a.2
+
 ## 11.2-a.1 - 2022-07-06
 ### Enhancements
 - Jetpack: add an overlay to VPBlock to improve when selecting the video player [#24899]
