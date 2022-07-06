@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add upload error message
 - VideoPress: Add VideoPressUploader component
 
+### Improved compatibility
+- Synced changes made to wpcom's admin-plugins/publicize.php file.
+
 ### Bug fixes
 - Contact Form Block: Prevent error notice when processing submission from 404 page
 - Jetpack: fix bug wen getting the video preview of the VPBlock
