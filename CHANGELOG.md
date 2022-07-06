@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Jetpack: replace local Loading by Spinner in VideoPress block v6
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.2-a.2
 - Jetpack 11.2-a.1 changelog editorial
