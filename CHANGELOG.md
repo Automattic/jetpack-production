@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Jetpack: create and update Icon dependency for VPBlock v6
 - Jetpack: replace local Loading by Spinner in VideoPress block v6
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
