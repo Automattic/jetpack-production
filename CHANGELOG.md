@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Contact Form Block: Prevent error notice when processing submission from 404 page
 - Jetpack: fix bug wen getting the video preview of the VPBlock
+- override container display to prevent a gap between slideshow and contents.
 - Product Descriptions: Fix search price on Search Product Description by accounting for sale coupons and ensuring the correct JP Search tier is shown
 - Related Posts: avoid PHP warnings when visiting AMP post views.
 - Stats: Allowing custom user role stats settings to be properly recognized and saved.
