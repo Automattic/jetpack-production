@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: store and apply VPBlock size
 - Jetpack: tweak vpblock layout markup and styles
 - Prevent users from removing the contact form submit button.
+- Updated publicize package version.
 - VideoPress: Add upload error message
 - VideoPress: Add VideoPressUploader component
 
