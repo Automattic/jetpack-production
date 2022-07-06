@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - override container display to prevent a gap between slideshow and contents.
 - Product Descriptions: Fix search price on Search Product Description by accounting for sale coupons and ensuring the correct JP Search tier is shown
 - Related Posts: avoid PHP warnings when visiting AMP post views.
+- Site Stats: Fixes an issue with the traffic page not loading when stats is not enabled.
 - Stats: Allowing custom user role stats settings to be properly recognized and saved.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
