@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: create and update Icon dependency for VPBlock v6
 - Jetpack: improve initial rendering of the VPBlock
 - Jetpack: replace local Loading by Spinner in VideoPress block v6
+- Jetpack: stop re-attempting to get the video preview when it achieves the limit
 - Jetpack: update the VideoPressIcon path for v6
 - VideoPress: Implement upload progress bar
 
