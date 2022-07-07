@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: improve initial rendering of the VPBlock
 - Jetpack: replace local Loading by Spinner in VideoPress block v6
 - Jetpack: update the VideoPressIcon path for v6
+- VideoPress: Implement upload progress bar
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.2-a.2
