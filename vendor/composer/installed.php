@@ -298,6 +298,17 @@
             'reference' => '7cca82e5849d59625be2cb5f8bffc10d297ac8f5',
             'dev_requirement' => false,
         ),
+        'automattic/jetpack-videopress' => array(
+            'pretty_version' => 'dev-trunk',
+            'version' => 'dev-trunk',
+            'type' => 'jetpack-library',
+            'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-videopress',
+            'aliases' => array(
+                0 => '0.1.x-dev',
+            ),
+            'reference' => 'a2e8d606e8e2c474bebbbfe28f1aa158c7a26261',
+            'dev_requirement' => false,
+        ),
         'automattic/jetpack-waf' => array(
             'pretty_version' => '0.6.x-dev',
             'version' => '0.6.9999999.9999999-dev',

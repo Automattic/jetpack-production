@@ -1853,6 +1853,58 @@
             "install-path": "../../jetpack_vendor/automattic/jetpack-sync"
         },
         {
+            "name": "automattic/jetpack-videopress",
+            "version": "dev-trunk",
+            "version_normalized": "dev-trunk",
+            "dist": {
+                "type": "path",
+                "url": "../../packages/videopress",
+                "reference": "a2e8d606e8e2c474bebbbfe28f1aa158c7a26261"
+            },
+            "require-dev": {
+                "automattic/jetpack-changelogger": "^3.1",
+                "yoast/phpunit-polyfills": "1.0.3"
+            },
+            "type": "jetpack-library",
+            "extra": {
+                "branch-alias": {
+                    "dev-trunk": "0.1.x-dev"
+                },
+                "textdomain": "jetpack-videopress"
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "scripts": {
+                "phpunit": [
+                    "./vendor/phpunit/phpunit/phpunit --colors=always"
+                ],
+                "test-coverage": [
+                    "php -dpcov.directory=. ./vendor/bin/phpunit --coverage-clover \"$COVERAGE_DIR/clover.xml\""
+                ],
+                "test-php": [
+                    "@composer phpunit"
+                ],
+                "build-production": [
+                    "echo 'Add your build step to composer.json, please!'"
+                ],
+                "build-development": [
+                    "echo 'Add your build step to composer.json, please!'"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "VideoPress package",
+            "transport-options": {
+                "relative": true
+            },
+            "install-path": "../../jetpack_vendor/automattic/jetpack-videopress"
+        },
+        {
             "name": "automattic/jetpack-waf",
             "version": "0.6.x-dev",
             "version_normalized": "0.6.9999999.9999999-dev",

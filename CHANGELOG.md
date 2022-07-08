@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Implement upload progress bar
 - VideoPress: Improve upload error layout
 
+### Improved compatibility
+- add videopress package as dependency
+
 ### Bug fixes
 - Gathering Twitter Threads: ensure that only contributors can access the endpoint to unroll threads.
 
