@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: stop re-attempting to get the video preview when it achieves the limit
 - Jetpack: update the VideoPressIcon path for v6
 - VideoPress: Implement upload progress bar
+- VideoPress: Improve upload error layout
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.2-a.2
