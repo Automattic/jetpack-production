@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Fix irrelevant widgets in overlay sidebar
 - Hide 'Media' from 'Excluded Post Types' because we don't index them
 - Record Meter: rely less on last_indexed_date from API
 
