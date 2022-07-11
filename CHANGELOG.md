@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add new `jetpack_podcast_pre_fetch` and `jetpack_podcast_post_fetch` actions to make it possible for users to set up code that runs for podcast fetches.
 - Jetpack: create and update Icon dependency for VPBlock v6
 - Jetpack: improve initial rendering of the VPBlock
+- Jetpack: improve VideoPress Block placeholders
 - Jetpack: replace local Loading by Spinner in VideoPress block v6
 - Jetpack: stop re-attempting to get the video preview when it achieves the limit
 - Jetpack: update the VideoPressIcon path for v6
