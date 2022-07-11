@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updated package dependencies.
+
 ### Fixed
 - Fix irrelevant widgets in overlay sidebar
 - Hide 'Media' from 'Excluded Post Types' because we don't index them
