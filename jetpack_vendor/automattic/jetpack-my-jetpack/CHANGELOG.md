@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updated package dependencies.
+
 ## [1.7.3] - 2022-07-06
 ### Added
 - Display alert when we cant automatically install the plugin [#24884]

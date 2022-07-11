@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 11.2-a.2
 - Jetpack 11.2-a.1 changelog editorial
 - Rename hasActiveSiteFeature -> siteHasFeature
+- Updated package dependencies.
 - Use JS built-in `URLSearchParams` instead of `query-string` package.
 
 ## 11.2-a.1 - 2022-07-06
