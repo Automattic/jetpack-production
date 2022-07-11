@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Gathering Twitter Threads: ensure that only contributors can access the endpoint to unroll threads.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- E2E tests: fixed pretest cleanup script not running
 - Init 11.2-a.2
 - Jetpack 11.2-a.1 changelog editorial
 - Rename hasActiveSiteFeature -> siteHasFeature
