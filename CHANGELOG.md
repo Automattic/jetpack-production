@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.2-a.4 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 11.2-a.4
+
 ## 11.2-a.3 - 2022-07-12
 ### Enhancements
 - Add new `jetpack_podcast_pre_fetch` and `jetpack_podcast_post_fetch` actions to make it possible for users to set up code that runs for podcast fetches. [#25046]
