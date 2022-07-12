@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix irrelevant widgets in overlay sidebar
 - Hide 'Media' from 'Excluded Post Types' because we don't index them
 - Record Meter: rely less on last_indexed_date from API
+- Use consistent number formatting in Record Meter
 
 ## [0.15.4] - 2022-07-06
 ### Added
