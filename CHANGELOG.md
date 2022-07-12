@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Form block: preserve line breaks in form submissions.
 - Gathering Twitter Threads: ensure that only contributors can access the endpoint to unroll threads.
 - Stats: Fixing dashboard widget form name to allow form choices to be saved.
+- Subscriptions: format the number of subscribers displayed in the block editor's controls.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: fixed pretest cleanup script not running
