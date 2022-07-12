@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: fixed pretest cleanup script not running
+- Editor: Only add `x-wp-api-fetch-from-editor` header on non-CORS requests.
 - Init 11.2-a.2
 - Jetpack 11.2-a.1 changelog editorial
 - Rename hasActiveSiteFeature -> siteHasFeature
