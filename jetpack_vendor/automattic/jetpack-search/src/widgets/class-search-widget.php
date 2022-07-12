@@ -1067,7 +1067,7 @@ class Search_Widget extends \WP_Widget {
 					/**
 					 * Filters the taxonomies that shows in filter drop downs of the search widget.
 					 *
-					 * @since  0.16.0-alpha
+					 * @since  0.16.0
 					 *
 					 * @param array $taxonomies_to_show List of taxonomies that shown for search widget.
 					 */
