@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Added page-view and link tracking analytics.
+- Updated package dependencies.
 
 ## [1.4.3] - 2022-07-12
 ### Changed
