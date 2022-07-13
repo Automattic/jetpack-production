@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: remove the search package build step
 - Init 11.2-a.4
 - Jetpack 11.2-a.3 changelog editorial
+- Updated package dependencies.
 
 ## 11.2-a.3 - 2022-07-12
 ### Enhancements

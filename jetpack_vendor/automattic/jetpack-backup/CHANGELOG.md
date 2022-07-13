@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Added page-view and link tracking analytics.
+
 ## [1.4.3] - 2022-07-12
 ### Changed
 - Make dashboard text more clear about realtime backups. [#24955]
@@ -187,6 +194,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
+[1.5.0-alpha]: https://github.com/Automattic/jetpack-backup/compare/v1.4.3...v1.5.0-alpha
 [1.4.3]: https://github.com/Automattic/jetpack-backup/compare/v1.4.2...v1.4.3
 [1.4.2]: https://github.com/Automattic/jetpack-backup/compare/v1.4.1...v1.4.2
 [1.4.1]: https://github.com/Automattic/jetpack-backup/compare/v1.4.0...v1.4.1
