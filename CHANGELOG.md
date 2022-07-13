@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Jetpack: iterate over VPBlock UI errors
+- Jetpack: use BlockIcon in Placeholder cmp - vpblock
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: remove the search package build step
