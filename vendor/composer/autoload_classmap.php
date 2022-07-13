@@ -191,7 +191,6 @@ return array(
     'Automattic\\Jetpack\\Sync\\Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-utils.php',
     'Automattic\\Jetpack\\Terms_Of_Service' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-terms-of-service.php',
     'Automattic\\Jetpack\\Tracking' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-tracking.php',
-    'Automattic\\Jetpack\\VideoPress\\XMLRPC' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-xmlrpc.php',
     'Automattic\\Jetpack\\Waf\\CLI' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-cli.php',
     'Automattic\\Jetpack\\Waf\\Waf_Constants' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-constants.php',
     'Automattic\\Jetpack\\Waf\\Waf_Endpoints' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-endpoints.php',

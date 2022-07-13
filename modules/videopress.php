@@ -18,6 +18,7 @@
 require_once __DIR__ . '/videopress/shortcode.php';
 require_once __DIR__ . '/videopress/class.videopress-options.php';
 require_once __DIR__ . '/videopress/class.videopress-scheduler.php';
+require_once __DIR__ . '/videopress/class.videopress-xmlrpc.php';
 require_once __DIR__ . '/videopress/class.videopress-cli.php';
 require_once __DIR__ . '/videopress/class.jetpack-videopress.php';
 
