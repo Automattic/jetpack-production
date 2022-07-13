@@ -138,6 +138,14 @@ return array(
 		'version' => '0.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-constants.php'
 	),
+	'Automattic\\Jetpack\\VideoPress\\Options' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-options.php'
+	),
+	'Automattic\\Jetpack\\VideoPress\\XMLRPC' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-xmlrpc.php'
+	),
 	'Automattic\\Jetpack\\Search\\CLI' => array(
 		'version' => '0.16.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-cli.php'
@@ -561,6 +569,14 @@ return array(
 	'Automattic\\Jetpack\\Sync\\Defaults' => array(
 		'version' => '1.36.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-defaults.php'
+	),
+	'Automattic\\Jetpack\\Plans' => array(
+		'version' => 'dev-trunk',
+		'path'    => $vendorDir . '/automattic/jetpack-plans/src/class-plans.php'
+	),
+	'Automattic\\Jetpack\\Current_Plan' => array(
+		'version' => 'dev-trunk',
+		'path'    => $vendorDir . '/automattic/jetpack-plans/src/class-current-plan.php'
 	),
 	'Automattic\\Jetpack\\Partner_Coupon' => array(
 		'version' => '1.7.9999999.9999999-dev',

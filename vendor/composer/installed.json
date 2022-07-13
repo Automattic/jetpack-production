@@ -1425,6 +1425,65 @@
             "install-path": "../../jetpack_vendor/automattic/jetpack-password-checker"
         },
         {
+            "name": "automattic/jetpack-plans",
+            "version": "dev-trunk",
+            "version_normalized": "dev-trunk",
+            "dist": {
+                "type": "path",
+                "url": "../../packages/plans",
+                "reference": "c5226f0783f1ea19a174af9205b11c02d0acfb19"
+            },
+            "require": {
+                "automattic/jetpack-connection": "^1.41"
+            },
+            "require-dev": {
+                "automattic/jetpack-changelogger": "^3.1",
+                "automattic/jetpack-status": "^1.14",
+                "automattic/wordbless": "@dev",
+                "yoast/phpunit-polyfills": "1.0.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-trunk": "0.1.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "scripts": {
+                "phpunit": [
+                    "./vendor/phpunit/phpunit/phpunit --colors=always"
+                ],
+                "test-coverage": [
+                    "php -dpcov.directory=. ./vendor/bin/phpunit --coverage-clover \"$COVERAGE_DIR/clover.xml\""
+                ],
+                "test-php": [
+                    "@composer phpunit"
+                ],
+                "post-update-cmd": [
+                    "php -r \"copy('vendor/automattic/wordbless/src/dbless-wpdb.php', 'wordpress/wp-content/db.php');\""
+                ],
+                "build-production": [
+                    "echo 'Add your build step to composer.json, please!'"
+                ],
+                "build-development": [
+                    "echo 'Add your build step to composer.json, please!'"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Fetch information about Jetpack Plans from wpcom",
+            "transport-options": {
+                "relative": true
+            },
+            "install-path": "../automattic/jetpack-plans"
+        },
+        {
             "name": "automattic/jetpack-plugins-installer",
             "version": "0.1.x-dev",
             "version_normalized": "0.1.9999999.9999999-dev",
@@ -1859,7 +1918,11 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-videopress",
-                "reference": "e715132a656c3a93e316f021cfde27d6b2474bfd"
+                "reference": "a5712aab736e8710de6e1bf43ae0c8297cbbf8d5"
+            },
+            "require": {
+                "automattic/jetpack-connection": "^1.41",
+                "automattic/jetpack-plans": "^0.1"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.1",
