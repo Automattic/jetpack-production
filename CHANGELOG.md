@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: iterate over VPBlock UI errors
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- E2E tests: remove the search package build step
 - Init 11.2-a.4
 - Jetpack 11.2-a.3 changelog editorial
 
