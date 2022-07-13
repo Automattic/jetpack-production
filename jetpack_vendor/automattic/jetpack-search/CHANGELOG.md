@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Customberg: re-add collapsing wp-admin sidebar to prevent menu overlap issue
+- Fixed the currency code missing issue for the upsell page
 
 ## [0.16.0] - 2022-07-12
 ### Added
