@@ -78,7 +78,7 @@ return array(
     ),
     'jetpack-videopress' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.0.0',
+      'ver' => '0.1.9999999-dev',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
