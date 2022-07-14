@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added default modules to the list of modules to be activated in case of a preexisetting.
+- Jetpack: handle Loading state listeging vp events
 - Jetpack: iterate over VPBlock UI errors
 - Jetpack: replace fallback thumbail by a Loading element
 - Jetpack: show Mediaplceholder errors in the VPBlock
