@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added default modules to the list of modules to be activated in case of a preexisetting.
 - Jetpack: iterate over VPBlock UI errors
 - Jetpack: replace fallback thumbail by a Loading element
+- Jetpack: show Mediaplceholder errors in the VPBlock
 - Jetpack: use BlockIcon in Placeholder cmp - vpblock
 
 ### Improved compatibility
