@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Consume Videopress package. Migrate VideoPress XMLRPC class
 - move VideoPress options to its package
 
+### Bug fixes
+- Form block: Fix Checkbox Group color
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: remove the search package build step
 - Init 11.2-a.4
