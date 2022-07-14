@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: replace fallback thumbail by a Loading element
 - Jetpack: show Mediaplceholder errors in the VPBlock
 - Jetpack: use BlockIcon in Placeholder cmp - vpblock
+- Jetpack: VPBlock. Clean obsolte attr. Janitorial.
 
 ### Improved compatibility
 - Consume Videopress package. Migrate VideoPress XMLRPC class
