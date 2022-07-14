@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 11.2-a.4
 - Jetpack 11.2-a.3 changelog editorial
 - Updated package dependencies.
+- WordPress.com REST API: Allow the endpoint '/sites/%s/themes/mine' to receive the 'dont_change_homepage' argument as part of the POST body.
 
 ## 11.2-a.3 - 2022-07-12
 ### Enhancements
