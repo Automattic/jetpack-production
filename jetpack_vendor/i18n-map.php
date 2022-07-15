@@ -52,10 +52,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '1.7.3',
     ),
-    'jetpack-google-fonts-provider' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
-      'ver' => '0.3.3',
-    ),
     'jetpack-jitm' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
       'ver' => '2.2.21',
@@ -71,6 +67,10 @@ return array(
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
       'ver' => '1.4.3',
+    ),
+    'jetpack-google-fonts-provider' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
+      'ver' => '0.3.3',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
