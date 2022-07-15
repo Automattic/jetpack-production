@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Consume Videopress package. Migrate VideoPress XMLRPC class
+- Custom Post Types: change Nova functions to public to re-allow hooking.
 - move VideoPress options to its package
 
 ### Bug fixes
