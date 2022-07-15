@@ -48,13 +48,17 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '1.7.2',
     ),
-    'jetpack-backup-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '1.4.3',
-    ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '1.7.3',
+    ),
+    'jetpack-lazy-images' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
+      'ver' => '2.1.20',
+    ),
+    'jetpack-backup-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-backup',
+      'ver' => '1.4.3',
     ),
     'jetpack-google-fonts-provider' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
@@ -63,10 +67,6 @@ return array(
     'jetpack-jitm' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
       'ver' => '2.2.21',
-    ),
-    'jetpack-lazy-images' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
-      'ver' => '2.1.20',
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',

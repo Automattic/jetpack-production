@@ -2,15 +2,15 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.2-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 11.1.2 - 2022-07-15
 ### Improved compatibility
-- Custom Post Types: change Nova functions to public to re-allow hooking.
+- Custom Post Types: change Nova functions to public to re-allow hooking. [#25084]
+
+### Bug fixes
+- Dashboard: Fix issues where previous bug fix for URL-related connection issues to WordPress.com wasn't fully addressed.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Editor: Only add `x-wp-api-fetch-from-editor` header on non-CORS requests.
+- Editor: Only add `x-wp-api-fetch-from-editor` header on non-CORS requests. [#25052]
 
 ## 11.1.1 - 2022-07-11
 ### Bug fixes
