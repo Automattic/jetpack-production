@@ -4,10 +4,6 @@ return array(
   'domain' => 'jetpack',
   'type' => 'plugins',
   'packages' => array(
-    'jetpack-admin-ui' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
-      'ver' => '0.2.10',
-    ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
       'ver' => '1.41.4',
@@ -15,6 +11,10 @@ return array(
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
       'ver' => '0.2.5',
+    ),
+    'jetpack-admin-ui' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
+      'ver' => '0.2.10',
     ),
     'jetpack-assets' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-assets',
@@ -24,6 +24,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
       'ver' => '0.8.17',
     ),
+    'jetpack-licensing' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-licensing',
+      'ver' => '1.7.4',
+    ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
       'ver' => '1.36.1',
@@ -31,10 +35,6 @@ return array(
     'jetpack-plugins-installer' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
       'ver' => '0.1.3',
-    ),
-    'jetpack-licensing' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-licensing',
-      'ver' => '1.7.4',
     ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
@@ -48,10 +48,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '1.7.4',
     ),
-    'jetpack-backup-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '1.4.3',
-    ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '1.7.3',
@@ -59,6 +55,10 @@ return array(
     'jetpack-google-fonts-provider' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
       'ver' => '0.3.3',
+    ),
+    'jetpack-backup-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-backup',
+      'ver' => '1.4.3',
     ),
     'jetpack-jitm' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
