@@ -32,10 +32,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
       'ver' => '1.7.4',
     ),
-    'jetpack-connection-ui' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
-      'ver' => '2.4.11',
-    ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
       'ver' => '1.36.1',
@@ -44,9 +40,17 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '1.7.4',
     ),
+    'jetpack-connection-ui' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
+      'ver' => '2.4.11',
+    ),
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
       'ver' => '1.9.2',
+    ),
+    'jetpack-backup-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-backup',
+      'ver' => '1.4.3',
     ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
@@ -63,10 +67,6 @@ return array(
     'jetpack-lazy-images' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
       'ver' => '2.1.20',
-    ),
-    'jetpack-backup-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '1.4.3',
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
