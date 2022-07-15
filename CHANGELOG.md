@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Custom Post Types: change Nova functions to public to re-allow hooking.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Editor: Only add `x-wp-api-fetch-from-editor` header on non-CORS requests.
+
 ## 11.1.1 - 2022-07-11
 ### Bug fixes
 - Dashboard: avoid JavaScript errors and layout problems on sites experiencing URL-related connection issues with WordPress.com. [#25043]
