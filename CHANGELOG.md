@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Form block: Fix Checkbox Group color
+- Masterbar: Store the base path for preferred screen i.e remove query params to prevent the same page being stored twice as page.php and page.php?query_params
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: remove the search package build step
