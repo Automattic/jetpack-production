@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix support for allowed HTML tags in Subscribe block submit button
+- Slideshow Block: Adds a bit of CSS to support align wide and align full
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add last_updated API field to the sites endpoint
