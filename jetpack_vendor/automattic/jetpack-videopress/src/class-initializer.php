@@ -25,7 +25,7 @@ class Initializer {
 		/**
 		 * Fires after the VideoPress package is initialized
 		 *
-		 * @since 0.1.1-alpha
+		 * @since 0.1.1
 		 */
 		do_action( 'videopress_init' );
 	}
