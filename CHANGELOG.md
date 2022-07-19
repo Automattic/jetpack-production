@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.2-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 11.2-a.6 cycle
+
 ## 11.2-a.5 - 2022-07-19
 ### Enhancements
 - Added default modules to the list of modules to be activated in case of a preexisetting. [#24980]
