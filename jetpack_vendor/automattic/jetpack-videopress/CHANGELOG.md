@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add VideoPress Options class
+- VideoPress: move oEmbed registration to VideoPress package.
 - XMLRPC class
 
 ### Changed
