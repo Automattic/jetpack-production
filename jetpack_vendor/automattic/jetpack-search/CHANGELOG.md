@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Instant Search: prevent hidden submit button appearing on focus
+
 ## [0.16.1] - 2022-07-19
 ### Changed
 - Updated package dependencies. [#25086]
