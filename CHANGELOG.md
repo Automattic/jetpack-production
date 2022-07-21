@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 11.2-a.6 cycle
 - Jetpack 11.2-a.5 changelog editorial
 - Updated package dependencies.
+- Updating composer.lock.
 - WordPress.com REST API: Remove default for 'dont_change_homepage' in the '/sites/%s/themes/mine' endpoint.
 
 ## 11.2-a.5 - 2022-07-19
