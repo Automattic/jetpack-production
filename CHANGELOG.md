@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Jetpack: VPBlock: emit events to window where bridge runs
+
 ### Bug fixes
 - Fix support for allowed HTML tags in Subscribe block submit button
 - Slideshow Block: Adds a bit of CSS to support align wide and align full
