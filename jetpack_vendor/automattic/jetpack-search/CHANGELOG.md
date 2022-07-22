@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Instant Search: prevent hidden submit button appearing on focus
+- Search Dashboard: Fixed layout issues when Hello Dolly plugin is active.
 
 ## [0.16.1] - 2022-07-19
 ### Changed
