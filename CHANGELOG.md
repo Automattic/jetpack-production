@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: VPBlock: emit events to window where bridge runs
 
 ### Bug fixes
+- Comments: avoid PHP Notice when using Jetpack's Comment form feature owhen your site is no longer properly connected to WordPress.com.
 - Fix support for allowed HTML tags in Subscribe block submit button
 - Slideshow Block: Adds a bit of CSS to support align wide and align full
 - VideoPress: avoid PHP notices when inserting videos that miss some metadata.
