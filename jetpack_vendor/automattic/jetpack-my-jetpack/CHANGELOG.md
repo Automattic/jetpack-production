@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: changed button used in ProductCard component from WordPress to Jetpack default
+- Updated package dependencies.
 
 ## [1.8.0] - 2022-07-19
 ### Added

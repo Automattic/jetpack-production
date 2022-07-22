@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add plugin review request
 
+### Changed
+- Updated package dependencies.
+
 ## [1.5.0] - 2022-07-19
 ### Changed
 - Added page-view and link tracking analytics. [#24998]

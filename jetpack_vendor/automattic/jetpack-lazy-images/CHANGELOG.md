@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.21-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [2.1.20] - 2022-07-12
 ### Fixed
 - Do not attempt to lazy-load images in embeds. [#24989]
@@ -245,6 +252,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Lazy Images: Move into a package
 
+[2.1.21-alpha]: https://github.com/Automattic/jetpack-lazy-images/compare/v2.1.20...v2.1.21-alpha
 [2.1.20]: https://github.com/Automattic/jetpack-lazy-images/compare/v2.1.19...v2.1.20
 [2.1.19]: https://github.com/Automattic/jetpack-lazy-images/compare/v2.1.18...v2.1.19
 [2.1.18]: https://github.com/Automattic/jetpack-lazy-images/compare/v2.1.17...v2.1.18
