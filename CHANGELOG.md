@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Add last_updated API field to the sites endpoint
 - Init 11.2-a.6 cycle
 - Jetpack 11.2-a.5 changelog editorial
+- Publicize: Remove folder from modules
 - Updated package dependencies.
 - Updating composer.lock.
 - WordPress.com REST API: Remove default for 'dont_change_homepage' in the '/sites/%s/themes/mine' endpoint.
