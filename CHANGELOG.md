@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: VPBlock: emit events to window where bridge runs
 
 ### Bug fixes
+- Admin menu: display the translations for the plan name
 - Comments: avoid PHP Notice when using Jetpack's Comment form feature owhen your site is no longer properly connected to WordPress.com.
 - Ensure that sharing buttons are not displayed for excerpts
 - Fix Jetpack redirect after registration
