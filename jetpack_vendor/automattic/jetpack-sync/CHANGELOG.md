@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.36.2-alpha] - unreleased
+## [1.37.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Jetpack Sync: Add Sync lock related info in Sync debug details.
 - Updated package dependencies.
 
 ## [1.36.1] - 2022-07-06
@@ -691,7 +692,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[1.36.2-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.36.1...v1.36.2-alpha
+[1.37.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.36.1...v1.37.0-alpha
 [1.36.1]: https://github.com/Automattic/jetpack-sync/compare/v1.36.0...v1.36.1
 [1.36.0]: https://github.com/Automattic/jetpack-sync/compare/v1.35.2...v1.36.0
 [1.35.2]: https://github.com/Automattic/jetpack-sync/compare/v1.35.1...v1.35.2
