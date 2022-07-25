@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 11.2-a.6 cycle
 - Jetpack 11.2-a.5 changelog editorial
 - Publicize: Remove folder from modules
+- Search: remove Calypso search page link in admin menu for simple sites
 - Update analytics
 - Updated package dependencies.
 - Updating composer.lock.
