@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 11.2-a.6 cycle
 - Jetpack 11.2-a.5 changelog editorial
 - Publicize: Remove folder from modules
+- Update analytics
 - Updated package dependencies.
 - Updating composer.lock.
 - WordPress.com REST API: Remove default for 'dont_change_homepage' in the '/sites/%s/themes/mine' endpoint.
