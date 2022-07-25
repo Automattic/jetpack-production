@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add last_updated API field to the sites endpoint
+- Cleanup old videopress player code (D75134-code)
 - E2E tests: cancel partner plan when resetting test environment
 - Init 11.2-a.6 cycle
 - Jetpack 11.2-a.5 changelog editorial
