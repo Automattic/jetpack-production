@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Comments: avoid PHP Notice when using Jetpack's Comment form feature owhen your site is no longer properly connected to WordPress.com.
+- Ensure that sharing buttons are not displayed for excerpts
 - Fix Jetpack redirect after registration
 - Fix support for allowed HTML tags in Subscribe block submit button
 - Slideshow Block: Adds a bit of CSS to support align wide and align full
