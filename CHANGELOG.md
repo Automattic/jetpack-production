@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Jetpack: VPBlock: emit events to window where bridge runs
+- Native block inserter: Only display blocks under a Jetpack heading if the host app is WordPress
 - VideoPress Block (beta): add block transforms for the VideoPress block.
 
 ### Improved compatibility
