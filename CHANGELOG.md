@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - SEO Tools: avoid conflicts with SEOPress and SEOKEY plugins.
 
+### Bug fixes
+- Subscriptions Block: fix subscriber count display when padding dimension is added.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack 11.2 changelog editorial
 - Jetpack: init 11.3 cycle
