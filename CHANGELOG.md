@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Jetpack: VPBlock: emit events to window where bridge runs
+- VideoPress Block (beta): add block transforms for the VideoPress block.
 
 ### Improved compatibility
 - Masterbar: ensure that the WordPress.com Add Ons menu item doesn't display on Jetpack-connected sites.
