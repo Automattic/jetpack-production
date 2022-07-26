@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: added support WPCOM simple sites
 
 ### Changed
+- Instant search: updates overlay focus elements for design consistency
 - Updated package dependencies.
 
 ### Fixed
