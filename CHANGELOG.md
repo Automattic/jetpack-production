@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Jetpack: VPBlock: emit events to window where bridge runs
 
+### Improved compatibility
+- Masterbar: ensure that the WordPress.com Add Ons menu item doesn't display on Jetpack-connected sites.
+
 ### Bug fixes
 - Admin menu: display the translations for the plan name
 - Comments: avoid PHP Notice when using Jetpack's Comment form feature owhen your site is no longer properly connected to WordPress.com.
