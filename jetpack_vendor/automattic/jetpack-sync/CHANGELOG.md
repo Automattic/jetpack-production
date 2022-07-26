@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Sync: Add Sync lock related info in Sync debug details.
 - Updated package dependencies.
 
+### Fixed
+- Dedicated Sync: Enable sending of callables outside of admin context, since Dedicated Sync requests always work outside of admin scope.
+
 ## [1.36.1] - 2022-07-06
 ### Added
 - Add new WordPress core `block-templates` theme feature to `Defaults::$default_theme_support_whitelist` [#24960]
