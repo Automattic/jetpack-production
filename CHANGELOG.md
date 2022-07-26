@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.3-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack: init 11.3 cycle
+
 ## 11.2-beta - 2022-07-26
 ### Enhancements
 - Jetpack: VPBlock: emit events to window where bridge runs [#25148]
