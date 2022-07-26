@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Instant Search: Fix keyboard handling of sort options.
 - Instant Search: prevent hidden submit button appearing on focus
 - Search Dashboard: Fixed layout issues when Hello Dolly plugin is active.
 
