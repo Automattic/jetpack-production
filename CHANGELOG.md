@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack 11.2 changelog editorial
 - Jetpack: init 11.3 cycle
+- Updated package dependencies.
 
 ## 11.2-beta - 2022-07-26
 ### Enhancements
