@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Disabled postcss deprecation notices for build
+- E2E tests: only retry failed tests in CI
 - Jetpack 11.2 changelog editorial
 - Jetpack: init 11.3 cycle
 - Updated package dependencies.
