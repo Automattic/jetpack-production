@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack 11.2 changelog editorial
 - Jetpack: init 11.3 cycle
 - Updated package dependencies.
+- Updating the 11.2 testing instructions on trunk
 
 ## 11.2-beta - 2022-07-26
 ### Enhancements
