@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
+- Contact Form Block: Use a less strict comparison for Atomic compat
 - SEO Tools: avoid conflicts with SEOPress and SEOKEY plugins.
 
 ### Bug fixes
