@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Record Meter: make feature available to all users
+- Search: re-add 'Media' to 'Excluded Post Types'
 
 ## [0.16.2] - 2022-07-26
 ### Added
