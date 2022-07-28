@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Blocks: add support for podcast player to have per-feed cache timeouts.
+
 ### Improved compatibility
 - Contact Form Block: Use a less strict comparison for Atomic compat
 - SEO Tools: avoid conflicts with SEOPress and SEOKEY plugins.
