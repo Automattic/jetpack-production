@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: Change package textdomain
 
 ## [0.1.2] - 2022-07-26
 ### Changed

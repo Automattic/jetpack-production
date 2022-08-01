@@ -76,7 +76,7 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
       'ver' => '0.17.9999999-dev',
     ),
-    'jetpack-videopress' => array(
+    'jetpack-videopress-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
       'ver' => '0.1.9999999-dev',
     ),
