@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add blocks for GSuite document embeds.
 - Blocks: add support for podcast player to have per-feed cache timeouts.
 
 ### Improved compatibility
