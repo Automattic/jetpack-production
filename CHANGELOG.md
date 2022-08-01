@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO Tools: avoid conflicts with SEOPress and SEOKEY plugins.
 
 ### Bug fixes
+- Calipsoify the `site-editor.php` route so that it opens the Site Editor from the Gutenframe. Gutenberg 13.7 deprecated the old routes and uses core's `site-editor.php`.
 - Subscriptions Block: fix subscriber count display when padding dimension is added.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
