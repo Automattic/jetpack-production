@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Instant Search: Improve accessibility of seach options controls.
+
 ## [0.17.0] - 2022-07-29
 ### Added
 - Record Meter: make feature available to all users
