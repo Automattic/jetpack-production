@@ -16,17 +16,13 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
       'ver' => '0.2.6',
     ),
+    'jetpack-plugins-installer' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
+      'ver' => '0.1.4',
+    ),
     'jetpack-assets' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-assets',
       'ver' => '1.17.20',
-    ),
-    'jetpack-licensing' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-licensing',
-      'ver' => '1.7.5',
-    ),
-    'jetpack-config' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-config',
-      'ver' => '1.9.3',
     ),
     'jetpack-idc' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
@@ -36,13 +32,21 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
       'ver' => '1.37.0',
     ),
-    'jetpack-plugins-installer' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
-      'ver' => '0.1.4',
+    'jetpack-licensing' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-licensing',
+      'ver' => '1.7.5',
     ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
       'ver' => '2.4.12',
+    ),
+    'jetpack-config' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-config',
+      'ver' => '1.9.3',
+    ),
+    'jetpack-backup-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-backup',
+      'ver' => '1.6.0',
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
@@ -51,10 +55,6 @@ return array(
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '1.7.4',
-    ),
-    'jetpack-backup-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '1.6.0',
     ),
     'jetpack-google-fonts-provider' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
@@ -72,13 +72,13 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
       'ver' => '0.10.0',
     ),
-    'jetpack-videopress' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.1.2',
-    ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
       'ver' => '0.16.2',
+    ),
+    'jetpack-videopress' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-videopress',
+      'ver' => '0.1.2',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
