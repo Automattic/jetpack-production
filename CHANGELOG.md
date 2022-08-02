@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add blocks for GSuite document embeds.
 - Blocks: add support for podcast player to have per-feed cache timeouts.
 - Include 'earn' patterns in the Payment Introducer block UI
+- Jetpack: register VideoPress block from its editor.js file
 
 ### Improved compatibility
 - Contact Form Block: Use a less strict comparison for Atomic compat
