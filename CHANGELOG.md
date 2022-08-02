@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: add support for podcast player to have per-feed cache timeouts.
 - Include 'earn' patterns in the Payment Introducer block UI
 - Jetpack: register VideoPress block from its editor.js file
+- VPBlock: Add support to pause/resume upload
 
 ### Improved compatibility
 - Contact Form Block: Use a less strict comparison for Atomic compat
