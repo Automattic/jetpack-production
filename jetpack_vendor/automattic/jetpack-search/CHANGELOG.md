@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Instant Search: Adds descriptions to post type icons for accessibility purposes
 - Record Meter: add info link to docs
 
 ### Changed
