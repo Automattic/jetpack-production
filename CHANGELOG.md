@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Google Docs Embed block: switch to a stricter check for Google Docs URLs.
 - Jetpack 11.2 changelog editorial
 - Jetpack: init 11.3 cycle
+- Masterbar: bugfix removing empty space between folded adminbar and editor
 - Updated package dependencies.
 - Updating the 11.2 testing instructions on trunk
 
