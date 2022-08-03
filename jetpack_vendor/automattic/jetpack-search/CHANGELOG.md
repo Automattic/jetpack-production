@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Instant Search: Improve accessibility of seach options controls.
+- Search: ensure overlay trigger is consistent for new installs
 
 ## [0.17.0] - 2022-07-29
 ### Added
