@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.17.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.17.1] - 2022-08-03
 ### Added
-- Instant Search: Adds descriptions to post type icons for accessibility purposes
-- Record Meter: add info link to docs
+- Instant Search: Adds descriptions to post type icons for accessibility purposes [#25323]
+- Record Meter: add info link to docs [#25002]
 
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#25300, #25315]
 
 ### Fixed
 - Instant Search: Improve accessibility of seach options controls.
-- Search: ensure overlay trigger is consistent for new installs
+- Search: ensure overlay trigger is consistent for new installs [#25093]
 
 ## [0.17.0] - 2022-07-29
 ### Added
@@ -411,7 +408,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.17.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.17.0...v0.17.1-alpha
+[0.17.1]: https://github.com/Automattic/jetpack-search/compare/v0.17.0...v0.17.1
 [0.17.0]: https://github.com/Automattic/jetpack-search/compare/v0.16.2...v0.17.0
 [0.16.2]: https://github.com/Automattic/jetpack-search/compare/v0.16.1...v0.16.2
 [0.16.1]: https://github.com/Automattic/jetpack-search/compare/v0.16.0...v0.16.1
