@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: do not show a VideoPress upgrade banner on paid WoA sites.
 - Init 11.3-a.1
 - Updated package dependencies.
+- Update Instagram gallery endpoint to use access token id as an integer, since that what it is :)
 
 ## 11.3-a.1 - 2022-08-03
 ### Enhancements
