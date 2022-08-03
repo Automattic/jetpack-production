@@ -6,10 +6,14 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Add disclaimer text and link to the backup product card that links to an FAQ on the Pricing page
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changelog cleanup
 - Dashboard: do not show a VideoPress upgrade banner on paid WoA sites.
 - Init 11.3-a.1
+- Updated package dependencies.
 
 ## 11.3-a.1 - 2022-08-03
 ### Enhancements
