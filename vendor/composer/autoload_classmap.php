@@ -195,6 +195,7 @@ return array(
     'Automattic\\Jetpack\\Tracking' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-tracking.php',
     'Automattic\\Jetpack\\VideoPress\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initializer.php',
     'Automattic\\Jetpack\\VideoPress\\Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-options.php',
+    'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Endpoint_VideoPress' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-endpoint-videopress.php',
     'Automattic\\Jetpack\\VideoPress\\XMLRPC' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-xmlrpc.php',
     'Automattic\\Jetpack\\Waf\\CLI' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-cli.php',
     'Automattic\\Jetpack\\Waf\\Waf_Constants' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-constants.php',
