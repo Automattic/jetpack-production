@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: added proper error messages for search module control
 
 ### Changed
+- Instant Search: Updates dark mode active link color for increased contrast
 - Updated package dependencies.
 
 ## [0.17.1] - 2022-08-03
