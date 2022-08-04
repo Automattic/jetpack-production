@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Instant Search: Updates dark mode active link color for increased contrast
 - Updated package dependencies.
 
+### Fixed
+- Instant Search: Make "Clear filters" button accessible.
+
 ## [0.17.1] - 2022-08-03
 ### Added
 - Instant Search: Adds descriptions to post type icons for accessibility purposes [#25323]
