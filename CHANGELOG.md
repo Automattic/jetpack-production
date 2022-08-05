@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add disclaimer text and link to the backup product card that links to an FAQ on the Pricing page
 - The Payment button block uses now the Block API v2 to simplify the overall markup
+- When adding a payment plan, the plan name field will update according to the other options selected, unless it's already been modified.
 
 ### Bug fixes
 - WordPress.com REST API: add missing site owner id to single site REST API response to fix UI issue in Calypso
