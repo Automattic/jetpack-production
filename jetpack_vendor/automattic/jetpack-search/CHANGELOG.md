@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Search: changed to only require site level connection
 - Updated package dependencies.
 
+### Removed
+- Search: remove 'results' overlay trigger
+
 ### Fixed
 - Dashboard: updated Instant Search description to match changes in default overlay trigger
 - Instant Search: Make "Clear filters" button accessible.
