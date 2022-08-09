@@ -193,6 +193,7 @@ return array(
     'Automattic\\Jetpack\\Sync\\Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-utils.php',
     'Automattic\\Jetpack\\Terms_Of_Service' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-terms-of-service.php',
     'Automattic\\Jetpack\\Tracking' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-tracking.php',
+    'Automattic\\Jetpack\\VideoPress\\AJAX' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-ajax.php',
     'Automattic\\Jetpack\\VideoPress\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initializer.php',
     'Automattic\\Jetpack\\VideoPress\\Module_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-module-control.php',
     'Automattic\\Jetpack\\VideoPress\\Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-options.php',
@@ -240,4 +241,5 @@ return array(
     'Twitter\\Text\\StringUtils' => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/StringUtils.php',
     'Twitter\\Text\\TldLists' => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/TldLists.php',
     'Twitter\\Text\\Validator' => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/Validator.php',
+    'VIDEOPRESS_PRIVACY' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/utility-functions.php',
 );
