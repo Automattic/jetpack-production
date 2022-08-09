@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: updated Instant Search description to match changes in default overlay trigger
+- Instant Search: Constrain tab loop to overlay when visible.
 - Instant Search: Make "Clear filters" button accessible.
 
 ## [0.17.1] - 2022-08-03
