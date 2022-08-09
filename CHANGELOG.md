@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changelog cleanup
 - Init new cycle
+- P2: Hide Jetpack menu for all p2 spaces/hubs
 
 ## 11.3-a.3 - 2022-08-09
 ### Enhancements
