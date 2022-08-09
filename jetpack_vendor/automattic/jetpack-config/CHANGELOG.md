@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.9.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.9.4] - 2022-08-09
 ### Changed
-- Initialize VideoPress package from the Config pkg
+- Initialize VideoPress package from the Config pkg [#25385]
 
 ## [1.9.3] - 2022-07-26
 ### Changed
@@ -139,7 +136,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Trying to add deterministic initialization.
 
-[1.9.4-alpha]: https://github.com/Automattic/jetpack-config/compare/v1.9.3...v1.9.4-alpha
+[1.9.4]: https://github.com/Automattic/jetpack-config/compare/v1.9.3...v1.9.4
 [1.9.3]: https://github.com/Automattic/jetpack-config/compare/v1.9.2...v1.9.3
 [1.9.2]: https://github.com/Automattic/jetpack-config/compare/v1.9.1...v1.9.2
 [1.9.1]: https://github.com/Automattic/jetpack-config/compare/v1.9.0...v1.9.1
