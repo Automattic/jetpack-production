@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Dashboard: add new card to highlight options available to WordPress agencies.
+
 ### Improved compatibility
 - moving videopress dependencies to the package
 
