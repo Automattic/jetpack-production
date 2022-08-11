@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added a new `useWidth` hook to control the width settings of a block
+- Added support for the Google Analytics feature to honor the DNT sent by the browser. It is enabled by filtering `jetpack_honor_dnt_header_for_wga` to true.
 - Dashboard: add new card to highlight options available to WordPress agencies.
 
 ### Improved compatibility
