@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Instant Search: if user prefers reduced motion, always use submit overlay trigger
+
 ### Fixed
 - Instant Search: Fix the display order on mobile to match the tab order.
 
