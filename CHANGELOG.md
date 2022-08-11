@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added a new `useWidth` hook to control the width settings of a block
 - Dashboard: add new card to highlight options available to WordPress agencies.
 
 ### Improved compatibility
