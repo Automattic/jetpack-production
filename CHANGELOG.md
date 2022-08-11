@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Carousel: resolve a PHP warning when non-attachments are processed.
 - Dashboard: avoid displaying a blank dashboard page for editors when the site owner has an unused license.
+- VideoPress: videopress-token-bridge is now minified
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changelog cleanup
