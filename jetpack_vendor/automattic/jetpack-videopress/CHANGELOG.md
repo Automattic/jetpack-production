@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Moving videopress dependencies to the package
+- Updated package dependencies.
 
 ## [0.1.4] - 2022-08-09
 
