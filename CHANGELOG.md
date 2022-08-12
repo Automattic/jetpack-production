@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - moving videopress dependencies to the package
+- Notifications: do not attempt to display the Notifications panel when 3rd-party cookies are disabled in the browser.
 
 ### Bug fixes
 - Carousel: resolve a PHP warning when non-attachments are processed.
