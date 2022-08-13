@@ -138,9 +138,17 @@ return array(
 		'version' => '0.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-endpoints.php'
 	),
+	'Automattic\\Jetpack\\VideoPress\\Jwt_Token_Bridge' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-jwt-token-bridge.php'
+	),
 	'Automattic\\Jetpack\\VideoPress\\Module_Control' => array(
 		'version' => '0.1.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-module-control.php'
+	),
+	'Automattic\\Jetpack\\VideoPress\\Attachment_Handler' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-attachment-handler.php'
 	),
 	'VIDEOPRESS_PRIVACY' => array(
 		'version' => '0.1.9999999.9999999-dev',
@@ -169,6 +177,10 @@ return array(
 	'Automattic\\Jetpack\\VideoPress\\Initializer' => array(
 		'version' => '0.1.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initializer.php'
+	),
+	'Automattic\\Jetpack\\VideoPress\\Package_Version' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-package-version.php'
 	),
 	'Automattic\\Jetpack\\Search\\Customberg' => array(
 		'version' => '0.19.9999999.9999999-dev',

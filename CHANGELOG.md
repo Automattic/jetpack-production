@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: add new card to highlight options available to WordPress agencies.
 
 ### Improved compatibility
+- Migrating VideoPress code from the plugin to the package
 - moving videopress dependencies to the package
 - Notifications: do not attempt to display the Notifications panel when 3rd-party cookies are disabled in the browser.
 
