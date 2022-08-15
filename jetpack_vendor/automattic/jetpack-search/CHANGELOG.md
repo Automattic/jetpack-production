@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Instant Search: Fix the display order on mobile to match the tab order.
+- Instant Search: use classname rather than ID for styling sort select
 
 ## [0.18.0] - 2022-08-09
 ### Added
