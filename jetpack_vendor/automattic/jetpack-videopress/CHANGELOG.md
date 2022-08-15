@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Moving videopress dependencies to the package
 - Updated package dependencies.
 
+### Fixed
+- Fixed missing import for recent VideoPress namespace changes
+
 ## [0.1.4] - 2022-08-09
 
 - Added REST api endpoint [#25042]
