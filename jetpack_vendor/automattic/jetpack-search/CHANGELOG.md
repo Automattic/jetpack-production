@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Instant Search: if user prefers reduced motion, always use submit overlay trigger
+- Instant Search: only show animation to users who have not chosen reduced motion
 - Instant Search: user friendly error messaging
 
 ### Fixed
