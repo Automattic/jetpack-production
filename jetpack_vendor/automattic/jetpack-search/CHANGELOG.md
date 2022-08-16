@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Instant Search: user friendly error messaging
 
 ### Fixed
+- Instant Search: fix button styling in Twenty Twenty One theme
 - Instant Search: Fix the display order on mobile to match the tab order.
 - Instant Search: use classname rather than ID for styling sort select
 
