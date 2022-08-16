@@ -75,7 +75,7 @@ class Jetpack_Google_Analytics_Utils {
 		 * Filter the option which decides honor DNT or not.
 		 *
 		 * @module google-analytics
-		 * @since 11.3-a.4
+		 * @since 11.3
 		 *
 		 * @param bool $honor_dnt Honors DNT for clients who don't want to be tracked. Set to true to enable.
 		 */

@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.2.0] - 2022-08-16
 ### Added
-- Tweaked the supports method of the plans package to refresh the plan data.
+- Tweaked the supports method of the plans package to refresh the plan data. [#25347]
 
 ## [0.1.3] - 2022-08-03
 ### Changed
@@ -37,6 +34,6 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Moved the options class into Connection. [#24095]
 
-[0.2.0-alpha]: https://github.com/Automattic/jetpack-plans/compare/v0.1.3...v0.2.0-alpha
+[0.2.0]: https://github.com/Automattic/jetpack-plans/compare/v0.1.3...v0.2.0
 [0.1.3]: https://github.com/Automattic/jetpack-plans/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/Automattic/jetpack-plans/compare/v0.1.1...v0.1.2
