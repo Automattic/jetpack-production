@@ -1275,17 +1275,17 @@
         },
         {
             "name": "automattic/jetpack-plans",
-            "version": "v0.1.3",
-            "version_normalized": "0.1.3.0",
+            "version": "v0.2.0",
+            "version_normalized": "0.2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-plans.git",
-                "reference": "3b7f01f6ea71b0a1b6268772a30d26cba9007045"
+                "reference": "47626cfbc1eb6080b1cca308e802cb96256ead16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-plans/zipball/3b7f01f6ea71b0a1b6268772a30d26cba9007045",
-                "reference": "3b7f01f6ea71b0a1b6268772a30d26cba9007045",
+                "url": "https://api.github.com/repos/Automattic/jetpack-plans/zipball/47626cfbc1eb6080b1cca308e802cb96256ead16",
+                "reference": "47626cfbc1eb6080b1cca308e802cb96256ead16",
                 "shasum": ""
             },
             "require": {
@@ -1297,7 +1297,7 @@
                 "automattic/wordbless": "@dev",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-08-03T12:03:56+00:00",
+            "time": "2022-08-16T10:29:28+00:00",
             "type": "library",
             "extra": {
                 "autotagger": true,
@@ -1306,7 +1306,7 @@
                     "link-template": "https://github.com/Automattic/jetpack-plans/compare/v${old}...v${new}"
                 },
                 "branch-alias": {
-                    "dev-trunk": "0.1.x-dev"
+                    "dev-trunk": "0.2.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -1321,7 +1321,7 @@
             ],
             "description": "Fetch information about Jetpack Plans from wpcom",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-plans/tree/v0.1.3"
+                "source": "https://github.com/Automattic/jetpack-plans/tree/v0.2.0"
             },
             "install-path": "../automattic/jetpack-plans"
         },
@@ -1531,17 +1531,17 @@
         },
         {
             "name": "automattic/jetpack-search",
-            "version": "v0.18.0",
-            "version_normalized": "0.18.0.0",
+            "version": "v0.19.0",
+            "version_normalized": "0.19.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-search.git",
-                "reference": "f3080cda8648eba73539446f0e3c3b3a73a6fec3"
+                "reference": "e7b3fbbd1bc632a2978a0f4271fb8ef466763599"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-search/zipball/f3080cda8648eba73539446f0e3c3b3a73a6fec3",
-                "reference": "f3080cda8648eba73539446f0e3c3b3a73a6fec3",
+                "url": "https://api.github.com/repos/Automattic/jetpack-search/zipball/e7b3fbbd1bc632a2978a0f4271fb8ef466763599",
+                "reference": "e7b3fbbd1bc632a2978a0f4271fb8ef466763599",
                 "shasum": ""
             },
             "require": {
@@ -1557,7 +1557,7 @@
                 "automattic/wordbless": "0.3.1",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-08-09T11:11:36+00:00",
+            "time": "2022-08-16T10:29:41+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1567,7 +1567,7 @@
                     "link-template": "https://github.com/Automattic/jetpack-search/compare/v${old}...v${new}"
                 },
                 "branch-alias": {
-                    "dev-trunk": "0.18.x-dev"
+                    "dev-trunk": "0.19.x-dev"
                 },
                 "version-constants": {
                     "::VERSION": "src/class-package.php"
@@ -1585,7 +1585,7 @@
             ],
             "description": "Tools to assist with enabling cloud search for Jetpack sites.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-search/tree/v0.18.0"
+                "source": "https://github.com/Automattic/jetpack-search/tree/v0.19.0"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-search"
         },
@@ -1702,28 +1702,29 @@
         },
         {
             "name": "automattic/jetpack-videopress",
-            "version": "v0.1.4",
-            "version_normalized": "0.1.4.0",
+            "version": "v0.1.5",
+            "version_normalized": "0.1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-videopress.git",
-                "reference": "be9888d59c936871874203006340a30b4829105f"
+                "reference": "b50fbdd6cfcf7ec3703bac34384778ea2b4160b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-videopress/zipball/be9888d59c936871874203006340a30b4829105f",
-                "reference": "be9888d59c936871874203006340a30b4829105f",
+                "url": "https://api.github.com/repos/Automattic/jetpack-videopress/zipball/b50fbdd6cfcf7ec3703bac34384778ea2b4160b4",
+                "reference": "b50fbdd6cfcf7ec3703bac34384778ea2b4160b4",
                 "shasum": ""
             },
             "require": {
+                "automattic/jetpack-assets": "^1.17",
                 "automattic/jetpack-connection": "^1.42",
-                "automattic/jetpack-plans": "^0.1"
+                "automattic/jetpack-plans": "^0.2"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-08-09T11:11:16+00:00",
+            "time": "2022-08-16T10:29:29+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1733,6 +1734,9 @@
                 },
                 "branch-alias": {
                     "dev-trunk": "0.1.x-dev"
+                },
+                "version-constants": {
+                    "::PACKAGE_VERSION": "src/class-package-version.php"
                 },
                 "textdomain": "jetpack-videopress-pkg"
             },
@@ -1748,7 +1752,7 @@
             ],
             "description": "VideoPress package",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-videopress/tree/v0.1.4"
+                "source": "https://github.com/Automattic/jetpack-videopress/tree/v0.1.5"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-videopress"
         },

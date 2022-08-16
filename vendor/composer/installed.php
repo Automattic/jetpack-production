@@ -236,12 +236,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-plans' => array(
-            'pretty_version' => 'v0.1.3',
-            'version' => '0.1.3.0',
+            'pretty_version' => 'v0.2.0',
+            'version' => '0.2.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../automattic/jetpack-plans',
             'aliases' => array(),
-            'reference' => '3b7f01f6ea71b0a1b6268772a30d26cba9007045',
+            'reference' => '47626cfbc1eb6080b1cca308e802cb96256ead16',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-plugins-installer' => array(
@@ -281,12 +281,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-search' => array(
-            'pretty_version' => 'v0.18.0',
-            'version' => '0.18.0.0',
+            'pretty_version' => 'v0.19.0',
+            'version' => '0.19.0.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-search',
             'aliases' => array(),
-            'reference' => 'f3080cda8648eba73539446f0e3c3b3a73a6fec3',
+            'reference' => 'e7b3fbbd1bc632a2978a0f4271fb8ef466763599',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-status' => array(
@@ -308,12 +308,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-videopress' => array(
-            'pretty_version' => 'v0.1.4',
-            'version' => '0.1.4.0',
+            'pretty_version' => 'v0.1.5',
+            'version' => '0.1.5.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-videopress',
             'aliases' => array(),
-            'reference' => 'be9888d59c936871874203006340a30b4829105f',
+            'reference' => 'b50fbdd6cfcf7ec3703bac34384778ea2b4160b4',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-waf' => array(

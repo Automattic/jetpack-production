@@ -41,8 +41,16 @@ class Initializer {
 	 * @return void
 	 */
 	private static function unconditional_initialization() {
+		require_once __DIR__ . '/utility-functions.php';
+
+		// Set up package version hook.
+		add_filter( 'jetpack_package_versions', __NAMESPACE__ . '\Package_Version::send_package_version_to_tracker' );
+
 		Module_Control::init();
 		new WPCOM_REST_API_V2_Endpoint_VideoPress();
+		if ( is_admin() ) {
+			AJAX::init();
+		}
 	}
 
 	/**
@@ -51,6 +59,8 @@ class Initializer {
 	 * @return void
 	 */
 	private static function active_initialization() {
+		Attachment_Handler::init();
+		Jwt_Token_Bridge::init();
 		self::register_oembed_providers();
 	}
 
