@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: move client-source files from plugin to package
 - VideoPress: move videopress-token-bridge.js to client/ folder in the VideoPress package
 
 ## [0.1.5] - 2022-08-16
