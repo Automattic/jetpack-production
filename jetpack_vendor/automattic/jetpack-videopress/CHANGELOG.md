@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Migrate VideoPress block to pkg
+- VideoPress: serve a minified token bridge version in production env
 
 ### Changed
 - Updated package dependencies.

@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Dashboard Widget: do not show the Stats configuration links when the feature is inactive
 - Fix issue in the license activation notice banner that appears even after being dismissed.
+- Jetpack: fix VideoPress pkg version
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.3-a.6
