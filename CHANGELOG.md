@@ -2,18 +2,21 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.3-a.6 - unreleased
+## 11.3-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Dashboard Widget: do not show the Stats configuration links when the feature is inactive
 - Fix issue in the license activation notice banner that appears even after being dismissed.
-- Remove inclusion modules/videopress/utility-functions.php from Jetpack shortcodes module
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.3-a.6
 - Updated package dependencies.
+
+## 11.3-a.7 - 2022-08-17
+### Bug fixes
+- VideoPress: remove inclusion of modules/videopress/utility-functions.php from Jetpack shortcodes module to prevent errors. [#25660]
 
 ## 11.3-a.5 - 2022-08-16
 ### Enhancements
