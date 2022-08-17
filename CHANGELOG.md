@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Dashboard Widget: do not show the Stats configuration links when the feature is inactive
 - Fix issue in the license activation notice banner that appears even after being dismissed.
 - Remove inclusion modules/videopress/utility-functions.php from Jetpack shortcodes module
 
