@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Fix issue in the license activation notice banner that appears even after being dismissed.
 - Remove inclusion modules/videopress/utility-functions.php from Jetpack shortcodes module
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
