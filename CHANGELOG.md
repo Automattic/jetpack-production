@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.3-a.6
 - Updated package dependencies.
+- VideoPress: ensure that the player's resources are only loaded when necessary, when a video was added to the page.
 
 ## 11.3-a.7 - 2022-08-17
 ### Bug fixes
