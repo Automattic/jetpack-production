@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: capital P
 - VideoPress: move client-source files from plugin to package
 - VideoPress: move videopress-token-bridge.js to client/ folder in the VideoPress package
 - VideoPress: remove sideEffect from package.json
