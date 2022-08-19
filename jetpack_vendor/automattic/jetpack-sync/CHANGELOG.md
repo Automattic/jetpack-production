@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Search: added product-brand to taxonomy sync list to support WooCommerce Brands plugin
 
+### Changed
+- Updated package dependencies.
+
 ## [1.37.1] - 2022-08-03
 ### Changed
 - Updated package dependencies. [#25300, #25315]
