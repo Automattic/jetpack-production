@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Add Pocket Casts as oEmbed provider.
+
 ### Bug fixes
 - Dashboard Widget: do not show the Stats configuration links when the feature is inactive
 - Fix issue in the license activation notice banner that appears even after being dismissed.
