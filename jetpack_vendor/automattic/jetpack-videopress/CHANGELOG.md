@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: serve a minified token bridge version in production env
 
 ### Changed
+- Initialize VideoPress admin UI from the package
 - Updated package dependencies.
 - VideoPress: capital P
 - VideoPress: move client-source files from plugin to package
