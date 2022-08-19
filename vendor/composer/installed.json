@@ -1923,7 +1923,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-videopress",
-                "reference": "cb07f5e11e472a92e3490944791da0e96082638b"
+                "reference": "7e105767faeac0ffdbc99fcab2d1bc498fb38701"
             },
             "require": {
                 "automattic/jetpack-assets": "^1.17",
@@ -1932,7 +1932,7 @@
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
-                "brain/monkey": "^2.6",
+                "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
             "type": "jetpack-library",

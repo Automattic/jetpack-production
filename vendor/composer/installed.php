@@ -313,7 +313,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-videopress',
             'aliases' => array(),
-            'reference' => 'cb07f5e11e472a92e3490944791da0e96082638b',
+            'reference' => '7e105767faeac0ffdbc99fcab2d1bc498fb38701',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-waf' => array(
