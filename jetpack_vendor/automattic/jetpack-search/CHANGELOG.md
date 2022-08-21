@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Instant Search: Add focus styles for easier keyboard navigation. (a11y)
+
 ## [0.19.0] - 2022-08-16
 ### Added
 - Instant Search: always use submit overlay trigger if user prefers reduced motion. [#25413]
