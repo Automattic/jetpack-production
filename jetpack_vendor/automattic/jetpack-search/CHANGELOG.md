@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Instant Search: Add focus styles for easier keyboard navigation. (a11y)
+- Instant Search: Remove redundant links from search results. (a11y)
 
 ## [0.19.0] - 2022-08-16
 ### Added
