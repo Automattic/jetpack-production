@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add a new recommendation for backups
 - Add a recommendation for Jetpack Boost
 - Added new Payment Buttons block in order to support adding multiple Payment Button blocks inline
 - Add Pocket Casts as oEmbed provider.
