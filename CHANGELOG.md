@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added new Payment Buttons block in order to support adding multiple Payment Button blocks inline
 - Add Pocket Casts as oEmbed provider.
+- Podcast Blocks: Reduce the RSS feed cache timeout for podcasts to 1 hour
 
 ### Bug fixes
 - Dashboard Widget: do not show the Stats configuration links when the feature is inactive
