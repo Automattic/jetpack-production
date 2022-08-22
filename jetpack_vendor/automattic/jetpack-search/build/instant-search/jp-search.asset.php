@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('wp-i18n', 'wp-jp-i18n-loader', 'wp-polyfill'), 'version' => '1d3b055e83a0ffce99a3');
+<?php return array('dependencies' => array('wp-i18n', 'wp-jp-i18n-loader', 'wp-polyfill'), 'version' => 'be85dc3dc22baf7e21dc');

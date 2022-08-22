@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add the VideoUploadArea component without functionality
 - Migrate VideoPress block to pkg
+- VideoPress: add ClipboardButtonInput component
 - VideoPress: serve a minified token bridge version in production env
 - VPBlock: Support edit from upload (V6)
 
