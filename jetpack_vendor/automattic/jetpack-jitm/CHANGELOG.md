@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add custom styling rules for the JITMs displayed in My Jetpack
+- Updated JITM readme
 
 ### Changed
 - Updated package dependencies.
