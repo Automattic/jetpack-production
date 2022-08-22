@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add custom styling rules for the JITMs displayed in My Jetpack
+
 ### Changed
 - Updated package dependencies.
 
