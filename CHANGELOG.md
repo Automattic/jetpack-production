@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: bump dependencies
 - Init 11.3-a.6
+- SAL: Bring Jetpack files in sync with WordPress.com files.
 - sync class-wpcom-admin-menu file
 - Updated package dependencies.
 - VideoPress: ensure that the player's resources are only loaded when necessary, when a video was added to the page.
