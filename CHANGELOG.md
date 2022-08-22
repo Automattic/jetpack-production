@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Pocket Casts as oEmbed provider.
 - JITMs added to My Jetpack
 - Podcast Blocks: Reduce the RSS feed cache timeout for podcasts to 1 hour
+- VPBlock: Add support to pause/resume upload
 
 ### Bug fixes
 - Carousel: ensure that clicks on rounded images in galleries will load a custom URL when it is specified.
