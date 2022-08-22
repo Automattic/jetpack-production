@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added new Payment Buttons block in order to support adding multiple Payment Button blocks inline
 - Add Pocket Casts as oEmbed provider.
 
 ### Bug fixes
