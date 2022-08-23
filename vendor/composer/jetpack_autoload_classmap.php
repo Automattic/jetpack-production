@@ -142,6 +142,34 @@ return array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-package-version.php'
 	),
+	'VideoPressUploader\\Tus_Client' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-client.php'
+	),
+	'VideoPressUploader\\File_Exception' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-file-exception.php'
+	),
+	'VideoPressUploader\\Tus_File' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-file.php'
+	),
+	'VideoPressUploader\\Tus_Date_Utils' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-date-utils.php'
+	),
+	'VideoPressUploader\\Tus_Abstract_Cache' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-abstract-cache.php'
+	),
+	'VideoPressUploader\\Transient_Store' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-transient-store.php'
+	),
+	'VideoPressUploader\\Tus_Exception' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-exception.php'
+	),
 	'Automattic\\Jetpack\\VideoPress\\AJAX' => array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-ajax.php'
@@ -154,6 +182,10 @@ return array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-attachment-handler.php'
 	),
+	'Automattic\\Jetpack\\VideoPress\\Uploader' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader.php'
+	),
 	'Automattic\\Jetpack\\VideoPress\\Options' => array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-options.php'
@@ -161,6 +193,10 @@ return array(
 	'Automattic\\Jetpack\\VideoPress\\Jwt_Token_Bridge' => array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-jwt-token-bridge.php'
+	),
+	'Automattic\\Jetpack\\VideoPress\\Upload_Exception' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-upload-exception.php'
 	),
 	'Automattic\\Jetpack\\VideoPress\\Initializer' => array(
 		'version' => '0.2.9999999.9999999-dev',
