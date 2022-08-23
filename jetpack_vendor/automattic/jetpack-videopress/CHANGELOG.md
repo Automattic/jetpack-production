@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- VideoPress pkg: Add VideoDetailsCard component
+
 ## [0.2.0] - 2022-08-23
 ### Added
 - Add the VideoUploadArea component without functionality [#25432]
