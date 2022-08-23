@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Activate plugins in normal mode to trigger plugin_activated hooks
 
+### Fixed
+- Search: increased search plan/pricing API timeouts to 5s
+
 ## [2.0.1] - 2022-08-23
 ### Added
 - My Jetpack: Add container for JITMs [#22452]
