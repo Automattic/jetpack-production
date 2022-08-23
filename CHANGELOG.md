@@ -2,12 +2,9 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.3-a.10 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Update Jetpack changelog
+## 11.3-a.11 - 2022-08-23
+### Bug fixes
+- Carousel: remove errant '<' character being displayed. [#25795]
 
 ## 11.3-a.9 - 2022-08-23
 ### Enhancements
