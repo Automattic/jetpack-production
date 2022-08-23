@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.2.24-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.2.24] - 2022-08-23
 ### Added
-- Add custom styling rules for the JITMs displayed in My Jetpack
-- Updated JITM readme
+- Add custom styling rules for the JITMs displayed in My Jetpack. [#22452]
+- Updated JITM readme. [#25739]
 
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#25628]
 
 ## [2.2.23] - 2022-08-03
 ### Changed
@@ -473,7 +470,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Update Jetpack to use new JITM package
 
-[2.2.24-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.23...v2.2.24-alpha
+[2.2.24]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.23...v2.2.24
 [2.2.23]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.22...v2.2.23
 [2.2.22]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.21...v2.2.22
 [2.2.21]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.20...v2.2.21
