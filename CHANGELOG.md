@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: fix VideoPress pkg version
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Doc update: add information about block deprecation.
 - E2E tests: bump dependencies
 - Init 11.3-a.6
 - SAL: Bring Jetpack files in sync with WordPress.com files.
