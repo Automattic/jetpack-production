@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard Widget: do not show the Stats configuration links when the feature is inactive
 - Fix issue in the license activation notice banner that appears even after being dismissed.
 - Jetpack: fix VideoPress pkg version
+- Move the logic for adding Jetpack carousel data to a block render filter so we can handle reusable blocks correctly
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Doc update: add information about block deprecation.
