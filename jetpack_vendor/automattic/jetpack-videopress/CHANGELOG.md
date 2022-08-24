@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Upload from Media Library in the block
 - VideoPress: minor ClipboardButtonInput story enhancement
 - VideoPress pkg: Add VideoDetailsCard component
 

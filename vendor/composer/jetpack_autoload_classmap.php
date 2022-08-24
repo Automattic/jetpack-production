@@ -198,6 +198,10 @@ return array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-upload-exception.php'
 	),
+	'Automattic\\Jetpack\\VideoPress\\Uploader_Rest_Endpoints' => array(
+		'version' => '0.2.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader-rest-endpoints.php'
+	),
 	'Automattic\\Jetpack\\VideoPress\\Initializer' => array(
 		'version' => '0.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initializer.php'

@@ -205,6 +205,7 @@ return array(
     'Automattic\\Jetpack\\VideoPress\\Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-status.php',
     'Automattic\\Jetpack\\VideoPress\\Upload_Exception' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-upload-exception.php',
     'Automattic\\Jetpack\\VideoPress\\Uploader' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader.php',
+    'Automattic\\Jetpack\\VideoPress\\Uploader_Rest_Endpoints' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader-rest-endpoints.php',
     'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Endpoint_VideoPress' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-endpoint-videopress.php',
     'Automattic\\Jetpack\\VideoPress\\XMLRPC' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-xmlrpc.php',
     'Automattic\\Jetpack\\Waf\\CLI' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-cli.php',
