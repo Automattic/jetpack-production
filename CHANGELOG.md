@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated management of installing state for recommended features
 
 ### Bug fixes
+- Fix Subscribe block input and submit button coupling for Safari when split style is selected
 - Remove inline styles from subscription notification
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
