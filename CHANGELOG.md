@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Rebrand Publicize to Jetpack Social
+- Updated management of installing state for recommended features
 
 ### Bug fixes
 - Remove inline styles from subscription notification
