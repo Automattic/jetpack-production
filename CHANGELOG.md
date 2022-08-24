@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Compat: wp_startswith should only pass to strpos if string is passed.
+- Fix some linting issues in tiled-gallery and remove files from the linter exclude list
 - Init 11.3-a.10
 
 ## 11.3-a.11 - 2022-08-23
