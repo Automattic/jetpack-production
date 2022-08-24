@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Rebrand Publicize to Jetpack Social
+
 ### Bug fixes
 - Remove inline styles from subscription notification
 
@@ -13,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Compat: wp_startswith should only pass to strpos if string is passed.
 - Fix some linting issues in tiled-gallery and remove files from the linter exclude list
 - Init 11.3-a.10
+- Updated package dependencies.
 
 ## 11.3-a.11 - 2022-08-23
 ### Bug fixes

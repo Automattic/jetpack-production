@@ -137,8 +137,8 @@ function jetpack_get_module_i18n( $key ) {
 			),
 
 			'publicize' => array(
-				'name' => _x( 'Publicize', 'Module Name', 'jetpack' ),
-				'description' => _x( 'Publicize makes it easy to share your site’s posts on several social media networks automatically when you publish a new post.', 'Module Description', 'jetpack' ),
+				'name' => _x( 'Jetpack Social', 'Module Name', 'jetpack' ),
+				'description' => _x( 'Jetpack Social makes it easy to share your site’s posts on several social media networks automatically when you publish a new post.', 'Module Description', 'jetpack' ),
 			),
 
 			'related-posts' => array(
@@ -797,8 +797,8 @@ function jetpack_get_module_info( $key ) {
 	  ),
 	  'publicize' => 
 	  array (
-	    'name' => 'Publicize',
-	    'description' => 'Publicize makes it easy to share your site’s posts on several social media networks automatically when you publish a new post.',
+	    'name' => 'Jetpack Social',
+	    'description' => 'Jetpack Social makes it easy to share your site’s posts on several social media networks automatically when you publish a new post.',
 	    'sort' => '10',
 	    'recommendation_order' => '7',
 	    'introduced' => '2.0',
