@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- General: enable the Post List package in Jetpack, to display extra information alongside each post in your dashboard's Posts screen.
 - Rebrand Publicize to Jetpack Social
 - Updated management of installing state for recommended features
 

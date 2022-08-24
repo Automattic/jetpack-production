@@ -131,6 +131,11 @@ function jetpack_get_module_i18n( $key ) {
 				'description' => _x( 'Publish posts by sending an email', 'Module Description', 'jetpack' ),
 			),
 
+			'post-list' => array(
+				'name' => _x( 'Post List', 'Module Name', 'jetpack' ),
+				'description' => _x( 'Display extra information alongside each post in your dashboard’s Posts screen.', 'Module Description', 'jetpack' ),
+			),
+
 			'protect' => array(
 				'name' => _x( 'Brute force protection', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Enabling brute force protection will prevent bots and hackers from attempting to log in to your website with common username and password combinations.', 'Module Description', 'jetpack' ),
@@ -332,6 +337,10 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// Modules with `General` tag:
 			// - modules/masterbar.php
 			'General' => _x( 'General', 'Module Tag', 'jetpack' ),
+
+			// Modules with `Admin` tag:
+			// - modules/post-list.php
+			'Admin' => _x( 'Admin', 'Module Tag', 'jetpack' ),
 
 			// Modules with `Traffic` tag:
 			// - modules/sitemaps.php
@@ -775,6 +784,24 @@ function jetpack_get_module_info( $key ) {
 	    'module_tags' => 'Writing',
 	    'feature' => 'Writing',
 	    'additional_search_queries' => 'post by email, email',
+	    'plan_classes' => '',
+	  ),
+	  'post-list' => 
+	  array (
+	    'name' => 'Post List',
+	    'description' => 'Display extra information alongside each post in your dashboard’s Posts screen.',
+	    'sort' => '31',
+	    'recommendation_order' => '12',
+	    'introduced' => '11.3',
+	    'changed' => '',
+	    'deactivate' => '',
+	    'free' => '',
+	    'requires_connection' => 'No',
+	    'requires_user_connection' => '',
+	    'auto_activate' => 'No',
+	    'module_tags' => 'Admin',
+	    'feature' => 'Appearance',
+	    'additional_search_queries' => 'post, admin, list',
 	    'plan_classes' => '',
 	  ),
 	  'protect' => 

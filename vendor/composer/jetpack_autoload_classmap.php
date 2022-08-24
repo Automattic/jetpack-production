@@ -334,6 +334,14 @@ return array(
 		'version' => '0.12.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-keyring-helper.php'
 	),
+	'Automattic\\Jetpack\\Post_List\\Post_List' => array(
+		'version' => '0.4.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-list.php'
+	),
+	'Automattic\\Jetpack\\Post_List\\Post_Thumbnail' => array(
+		'version' => '0.4.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-thumbnail.php'
+	),
 	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
 		'version' => '2.1.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-lazy-images/src/lazy-images.php'

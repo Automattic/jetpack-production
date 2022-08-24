@@ -68,6 +68,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
       'ver' => '2.1.9999999-dev',
     ),
+    'jetpack-post-list' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-post-list',
+      'ver' => '0.4.9999999-dev',
+    ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
       'ver' => '0.12.9999999-dev',
