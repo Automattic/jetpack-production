@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: minor ClipboardButtonInput story enhancement
 - VideoPress pkg: Add VideoDetailsCard component
 
+### Changed
+- Updated package dependencies.
+
 ## [0.2.0] - 2022-08-23
 ### Added
 - Add the VideoUploadArea component without functionality [#25432]

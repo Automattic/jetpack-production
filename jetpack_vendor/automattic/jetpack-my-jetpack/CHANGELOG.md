@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Activate plugins in normal mode to trigger plugin_activated hooks
+- Updated package dependencies.
 
 ### Fixed
 - Search: increased search plan/pricing API timeouts to 5s
