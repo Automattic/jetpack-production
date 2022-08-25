@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Upload from Media Library in the block
+- VideoPress: Add edit dropdown menu to the VideoDetailsCard component
 - VideoPress: minor ClipboardButtonInput story enhancement
 - VideoPress pkg: Add VideoDetailsCard component
 
