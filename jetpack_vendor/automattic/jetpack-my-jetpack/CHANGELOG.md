@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Licensing: do not enable the Licensing UI if My Jetpack cannot be enabled.
 - Search: increased search plan/pricing API timeouts to 5s
 
 ## [2.0.1] - 2022-08-23
