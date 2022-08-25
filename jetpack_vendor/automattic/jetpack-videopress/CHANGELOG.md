@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Videopress: Introduce VideoRow component
 - VideoPress: minor ClipboardButtonInput story enhancement
 - VideoPress pkg: Add VideoDetailsCard component
+- VideoPress plugin hijacks video attachment edit page
 
 ### Changed
 - Updated package dependencies.
