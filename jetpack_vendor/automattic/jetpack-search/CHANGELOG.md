@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Instant Search: add focus border to search input field
 
+### Fixed
+- Keep widget preview with settings
+
 ## [0.21.0] - 2022-08-25
 ### Changed
 - Search: revert "Search should not require user connection" [#25802]
