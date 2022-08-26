@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Rebrand Publicize to Jetpack Social
 - Updated management of installing state for recommended features
 
+### Improved compatibility
+- Rely on videopress package for XMLRPC initialization
+
 ### Bug fixes
 - Fixes a js error when closing a non-VideoPress video modal in the Media Library.
 - Fix JS error when installing boost plugin from recommendations

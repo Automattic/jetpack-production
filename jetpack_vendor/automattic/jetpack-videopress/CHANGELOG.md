@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Removed isLoading prop from VideoUploadArea component
 
 ### Fixed
+- Fixing initialization and error handling
 - VideoPress Pkg: Avoiding re-register the VideoPress video
 
 ## [0.2.0] - 2022-08-23
