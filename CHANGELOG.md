@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix JS error when installing boost plugin from recommendations
 - Fix Subscribe block input and submit button coupling for Safari when split style is selected
 - Remove inline styles from subscription notification
+- Tiled Gallery: ensure we link to the original image URL for media links
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Compat: wp_startswith should only pass to strpos if string is passed.
