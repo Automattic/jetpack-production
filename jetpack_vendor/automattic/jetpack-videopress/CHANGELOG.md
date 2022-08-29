@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add Logo component
 - VideoPress: Add minColumns prop to pagination component
 - VideoPress: Add Pagination component
+- VideoPress: Introduce Checkbox component
 - Videopress: Introduce VideoRow component
 - VideoPress: minor ClipboardButtonInput story enhancement
 - VideoPress: Support edit from upload
