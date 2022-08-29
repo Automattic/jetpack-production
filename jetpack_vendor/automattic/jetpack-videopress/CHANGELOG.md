@@ -31,7 +31,6 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing initialization and error handling
 - VideoPress Pkg: Avoiding re-register the VideoPress video
-- When adding video from local library that was previously uploaded to VideoPress, check if videopress attachment still exists
 
 ## [0.2.0] - 2022-08-23
 ### Added
