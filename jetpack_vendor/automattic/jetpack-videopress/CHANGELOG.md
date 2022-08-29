@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - VideoPress: Fix dropdown menu position of the VideoDetailsCard component
+- VideoPress Pkg: apply changes according on the `videopress/video` name convention for the video block
 
 ### Removed
 - VideoPress: Removed isLoading prop from VideoUploadArea component

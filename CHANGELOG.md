@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - General: enable the Post List package in Jetpack, to display extra information alongside each post in your dashboard's Posts screen.
 - Include custom post types items inside the calypso admin menu
 - Jetpack: register VideoPress Video block from Jetpack plugin
+- Jetpack: update to the lastest changes of the VideoPress pkg API
 - Rebrand Publicize to Jetpack Social
 - Updated management of installing state for recommended features
 
