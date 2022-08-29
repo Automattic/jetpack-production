@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Instant Search: add focus border to search input field
 
+### Changed
+- Updated package dependencies.
+
 ### Fixed
 - Keep widget preview with settings
 

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Rebrand Publicize to Jetpack Social
+- Updated package dependencies.
 
 ### Fixed
 - Post field: Allow for the filter which could make the connections default to disabled.

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.38.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [1.38.1] - 2022-08-25
 ### Changed
 - Search Sync Settings :: Add Marketplace related meta fields and taxonomies to allow list [#25376]
@@ -707,6 +714,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[1.38.2-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.38.1...v1.38.2-alpha
 [1.38.1]: https://github.com/Automattic/jetpack-sync/compare/v1.38.0...v1.38.1
 [1.38.0]: https://github.com/Automattic/jetpack-sync/compare/v1.37.1...v1.38.0
 [1.37.1]: https://github.com/Automattic/jetpack-sync/compare/v1.37.0...v1.37.1
