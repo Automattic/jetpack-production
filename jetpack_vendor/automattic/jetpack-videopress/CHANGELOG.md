@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Upload from Media Library in the block
 - VideoPress: Add edit dropdown menu to the VideoDetailsCard component
+- VideoPress: add Logo component
 - VideoPress: Add minColumns prop to pagination component
 - VideoPress: Add Pagination component
 - Videopress: Introduce VideoRow component
