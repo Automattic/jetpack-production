@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.4-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 11.4 cycle
+
 ## 11.3-beta - 2022-08-30
 ### Enhancements
 - Added tracks to record when the new recommendations bubble is visible and when the user clicks on it [#25728]
