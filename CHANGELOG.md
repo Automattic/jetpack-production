@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Deprecated `jetpack_require_lib` and `jetpack_require_lib_dir`. No `_deprecated_function` calls yet, that will come after we've removed internal uses.
 - Fix some linting issues in tiled-gallery and remove files from the linter exclude list
 - Init 11.3-a.10
+- Testing instructions
 - Updated package dependencies.
 
 ## 11.3-a.11 - 2022-08-23
