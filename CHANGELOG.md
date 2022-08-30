@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Jetpack: improve labeling beta extensions in the block editor context
 - Jetpack: remove buttons from the QRPostCode modal
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
