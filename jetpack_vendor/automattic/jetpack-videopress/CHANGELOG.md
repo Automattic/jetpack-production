@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: Add VideoStorageMeter component
 
+### Changed
+- Updated package dependencies.
+
 ## [0.2.1] - 2022-08-30
 ### Added
 - Upload from Media Library in the block [#25792]
