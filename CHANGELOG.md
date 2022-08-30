@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Clening up Jetpack changelog and readme
 - Init 11.4 cycle
+- Jetpack: remove VideoPress v6 block from Jetpack plugin
 - WordPress.com toolbar: allow enabling an "Advertising" menu item via a new filter.
 
 ## 11.3-beta - 2022-08-30
