@@ -5,37 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.2.1] - 2022-08-30
 ### Added
-- Upload from Media Library in the block
-- VideoPress: Add edit dropdown menu to the VideoDetailsCard component
-- VideoPress: add Logo component
-- VideoPress: Add minColumns prop to pagination component
-- VideoPress: Add Pagination component
-- VideoPress: Introduce Checkbox component
-- Videopress: Introduce VideoRow component
-- VideoPress: minor ClipboardButtonInput story enhancement
-- VideoPress: Support edit from upload
-- VideoPress: Wrap app with ThemeProvider
-- VideoPress pkg: Add VideoDetailsCard component
-- VideoPress plugin hijacks video attachment edit page
+- Upload from Media Library in the block [#25792]
+- VideoPress: Add edit dropdown menu to the VideoDetailsCard component [#25817]
+- VideoPress: add Logo component [#25875]
+- VideoPress: Add minColumns prop to pagination component [#25876]
+- VideoPress: Add Pagination component [#25871]
+- VideoPress: Introduce Checkbox component [#25893]
+- Videopress: Introduce VideoRow component [#25798]
+- VideoPress: minor ClipboardButtonInput story enhancement [#25808]
+- VideoPress: Support edit from upload [#25849]
+- VideoPress: Wrap app with ThemeProvider [#25869]
+- VideoPress pkg: Add VideoDetailsCard component [#25731]
+- VideoPress plugin hijacks video attachment edit page [#25732]
 
 ### Changed
-- Updated package dependencies.
-- VideoPress: Fix dropdown menu position of the VideoDetailsCard component
-- VideoPress Pkg: apply changes according on the `videopress/video` name convention for the video block
+- Updated package dependencies. [#25694]
+- Updated package dependencies. [#25814]
+- VideoPress: Fix dropdown menu position of the VideoDetailsCard component [#25860]
+- VideoPress Pkg: apply changes according on the `videopress/video` name convention for the video block [#25844]
 
 ### Removed
-- VideoPress: Removed isLoading prop from VideoUploadArea component
+- VideoPress: Removed isLoading prop from VideoUploadArea component [#25820]
 
 ### Fixed
-- Avoid conflict with old versions of Jetpack plugin
-- Fixing initialization and error handling
-- VideoPress Pkg: Avoiding re-register the VideoPress video
-- When adding video from local library that was previously uploaded to VideoPress, check if videopress attachment still exists
+- Avoid conflict with old versions of Jetpack plugin [#25925]
+- Fixing initialization and error handling [#25863]
+- VideoPress Pkg: Avoiding re-register the VideoPress video [#25841]
+- When adding video from local library that was previously uploaded to VideoPress, check if videopress attachment still exists [#25848]
 
 ## [0.2.0] - 2022-08-23
 ### Added
@@ -96,7 +94,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.2.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.2.0...v0.2.1-alpha
+[0.2.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.1.5...v0.2.0
 [0.1.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.1.3...v0.1.4

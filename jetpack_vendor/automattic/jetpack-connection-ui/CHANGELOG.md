@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.4.15-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.4.15] - 2022-08-30
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#25694, #25814]
 
 ## [2.4.14] - 2022-08-23
 ### Changed
@@ -290,7 +287,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Connection UI: Building the Framework
 
-[2.4.15-alpha]: https://github.com/Automattic/jetpack-connection-ui/compare/v2.4.14...v2.4.15-alpha
+[2.4.15]: https://github.com/Automattic/jetpack-connection-ui/compare/v2.4.14...v2.4.15
 [2.4.14]: https://github.com/Automattic/jetpack-connection-ui/compare/v2.4.13...v2.4.14
 [2.4.13]: https://github.com/Automattic/jetpack-connection-ui/compare/v2.4.12...v2.4.13
 [2.4.12]: https://github.com/Automattic/jetpack-connection-ui/compare/v2.4.11...v2.4.12
