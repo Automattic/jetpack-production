@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Removed isLoading prop from VideoUploadArea component
 
 ### Fixed
+- Avoid conflict with old versions of Jetpack plugin
 - Fixing initialization and error handling
 - VideoPress Pkg: Avoiding re-register the VideoPress video
 - When adding video from local library that was previously uploaded to VideoPress, check if videopress attachment still exists
