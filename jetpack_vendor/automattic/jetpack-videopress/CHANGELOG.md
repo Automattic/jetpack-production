@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Change VideoPress into a Hybrid product in My Jetpack
+- Require user connection to upload video
 - Updated package dependencies.
 - VideoPress: Improve feedback for upload/previewing
 - VideoPress: iterate over VideoThumbnailEdit component
