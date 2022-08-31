@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: improve labeling beta extensions in the block editor context
 - Jetpack: remove buttons from the QRPostCode modal
 
+### Improved compatibility
+- Migrating videopress features to package
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Clening up Jetpack changelog and readme
 - Init 11.4 cycle
