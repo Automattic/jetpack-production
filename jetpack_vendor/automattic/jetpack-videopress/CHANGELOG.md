@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - VideoPress: Improve feedback for upload/previewing
+- VideoPress: iterate over VideoThumbnailEdit component
 - VideoPress: split up VideoDetailsCard into two new components
 
 ## [0.2.1] - 2022-08-30
