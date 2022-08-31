@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Introduce VideoList component
 
 ### Changed
+- Change VideoPress into a Hybrid product in My Jetpack
 - Updated package dependencies.
 - VideoPress: Improve feedback for upload/previewing
 - VideoPress: iterate over VideoThumbnailEdit component
