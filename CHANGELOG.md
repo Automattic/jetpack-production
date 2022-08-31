@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Migrating videopress features to package
 
+### Bug fixes
+- Post Images: avoid PHP notices when fetching images from posts with missing metadata.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Clening up Jetpack changelog and readme
 - Init 11.4 cycle
