@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Migrating Media Library UI snippets to pkg
 - VideoPress: Add register_videopress_blocks() method to register all VideoPress blocks
 - VideoPress: Add VideoStorageMeter component
+- VideoPress: Introduce VideoList component
 
 ### Changed
 - Updated package dependencies.
