@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add support for JITMs to Backup plugin
 
+### Changed
+- Updated package dependencies.
+
 ## [1.7.3] - 2022-08-30
 ### Changed
 - Updated package dependencies. [#25694, #25814]

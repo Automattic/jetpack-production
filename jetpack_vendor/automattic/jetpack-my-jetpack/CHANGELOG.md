@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Change VideoPress into a Hybrid product in My Jetpack
+- Updated package dependencies.
 
 ## [2.0.4] - 2022-08-31
 ### Added
