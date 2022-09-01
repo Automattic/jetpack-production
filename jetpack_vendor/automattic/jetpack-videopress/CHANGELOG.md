@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add register_videopress_blocks() method to register all VideoPress blocks
 - VideoPress: add VideoCard component
 - VideoPress: add VideosGrid component. First approach.
+- VideoPress: Add VideoStatsGroup component
 - VideoPress: Add VideoStorageMeter component
 - VideoPress: Introduce VideoList component
 
