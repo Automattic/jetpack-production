@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated copy and links in recommendations
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added E2E tests for the Jetpack WAF.
 - Clening up Jetpack changelog and readme
 - Init 11.4 cycle
 - Jetpack: implement a temporary solution to register VideoPress block v6 in dotcom
