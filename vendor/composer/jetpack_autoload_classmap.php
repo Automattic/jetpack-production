@@ -418,6 +418,10 @@ return array(
 		'version' => '1.8.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-initial-state.php'
 	),
+	'Automattic\\Jetpack\\Action_Bar' => array(
+		'version' => '0.1.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-action-bar/src/class-action-bar.php'
+	),
 	'Automattic\\Jetpack\\Abtest' => array(
 		'version' => '1.10.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-abtest/src/class-abtest.php'

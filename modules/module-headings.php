@@ -16,6 +16,11 @@ function jetpack_get_module_i18n( $key ) {
 	static $modules;
 	if ( ! isset( $modules ) ) {
 		$modules = array(
+			'action-bar' => array(
+				'name' => _x( 'Action Bar (Experimental)', 'Module Name', 'jetpack' ),
+				'description' => _x( 'An easy to use way for visitors to follow, like, and comment on your site.', 'Module Description', 'jetpack' ),
+			),
+
 			'carousel' => array(
 				'name' => _x( 'Carousel', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Display images and galleries in a gorgeous, full-screen browsing experience', 'Module Description', 'jetpack' ),
@@ -262,16 +267,8 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/woocommerce-analytics.php
 			'Other' => _x( 'Other', 'Module Tag', 'jetpack' ),
 
-			// Modules with `Photos and Videos` tag:
-			// - modules/carousel.php
-			// - modules/photon-cdn.php
-			// - modules/photon.php
-			// - modules/shortcodes.php
-			// - modules/tiled-gallery.php
-			// - modules/videopress.php
-			'Photos and Videos' => _x( 'Photos and Videos', 'Module Tag', 'jetpack' ),
-
 			// Modules with `Social` tag:
+			// - modules/action-bar.php
 			// - modules/comment-likes.php
 			// - modules/comments.php
 			// - modules/gravatar-hovercards.php
@@ -284,6 +281,15 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/subscriptions.php
 			// - modules/widgets.php
 			'Social' => _x( 'Social', 'Module Tag', 'jetpack' ),
+
+			// Modules with `Photos and Videos` tag:
+			// - modules/carousel.php
+			// - modules/photon-cdn.php
+			// - modules/photon.php
+			// - modules/shortcodes.php
+			// - modules/tiled-gallery.php
+			// - modules/videopress.php
+			'Photos and Videos' => _x( 'Photos and Videos', 'Module Tag', 'jetpack' ),
 
 			// Modules with `Writing` tag:
 			// - modules/copy-post.php
@@ -372,6 +378,24 @@ function jetpack_get_module_i18n_tag( $key ) {
  */
 function jetpack_get_module_info( $key ) {
 	static $module_info = array (
+	  'action-bar' => 
+	  array (
+	    'name' => 'Action Bar (Experimental)',
+	    'description' => 'An easy to use way for visitors to follow, like, and comment on your site.',
+	    'sort' => '40',
+	    'recommendation_order' => '18',
+	    'introduced' => '11.4',
+	    'changed' => '',
+	    'deactivate' => '',
+	    'free' => '',
+	    'requires_connection' => 'Yes',
+	    'requires_user_connection' => '',
+	    'auto_activate' => 'No',
+	    'module_tags' => 'Social',
+	    'feature' => 'Engagement',
+	    'additional_search_queries' => 'adminbar, actionbar, comments, likes, follow, sharing',
+	    'plan_classes' => '',
+	  ),
 	  'carousel' => 
 	  array (
 	    'name' => 'Carousel',

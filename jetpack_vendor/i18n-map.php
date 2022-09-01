@@ -12,13 +12,17 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
       'ver' => '1.44.9999999-dev',
     ),
-    'jetpack-password-checker' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
-      'ver' => '0.2.9999999-dev',
-    ),
     'jetpack-assets' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-assets',
       'ver' => '1.17.9999999-dev',
+    ),
+    'jetpack-action-bar' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-action-bar',
+      'ver' => '0.1.9999999-dev',
+    ),
+    'jetpack-password-checker' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
+      'ver' => '0.2.9999999-dev',
     ),
     'jetpack-idc' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
