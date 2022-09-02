@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: improve labeling beta extensions in the block editor context
 - Jetpack: remove buttons from the QRPostCode modal
 - Move Social Previews components to separate package
+- Update 'View Summary' button to 'View recommendations' to clear up where it goes
 
 ### Improved compatibility
 - Migrating videopress features to package
