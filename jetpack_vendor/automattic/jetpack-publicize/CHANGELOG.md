@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fixed wrong permissions check for contributors
+
 ## [0.13.1] - 2022-08-31
 ### Removed
 - Removed errant code change.
