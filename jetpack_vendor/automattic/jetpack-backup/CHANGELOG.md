@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add support for JITMs to Backup plugin
 
 ### Changed
+- Modify review request logic
 - Updated package dependencies.
 
 ## [1.7.3] - 2022-08-30
