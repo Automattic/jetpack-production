@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Require user connection to upload video
 - Updated package dependencies.
 - VideoPress: Improve feedback for upload/previewing
+- VideoPress: Introduce VideoQuickActions
 - VideoPress: iterate over VideoThumbnailEdit component
 - VideoPress: rename VideosGrid component to VideoGrid
 - VideoPress: set VideoThumbnail aspect ratio. Improve stories.
