@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - VideoPress: Improve feedback for upload/previewing
 - VideoPress: iterate over VideoThumbnailEdit component
+- VideoPress: rename VideosGrid component to VideoGrid
 - VideoPress: set VideoThumbnail aspect ratio. Improve stories.
 - VideoPress: split up VideoDetailsCard into two new components
 - VideoPress: Support enable and disable columns and actions at VideoRow/VideoList
