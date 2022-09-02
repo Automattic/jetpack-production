@@ -33,6 +33,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: split up VideoDetailsCard into two new components
 - VideoPress: Support enable and disable columns and actions at VideoRow/VideoList
 
+### Fixed
+- Ensure passed args are integer in TUS File class
+
 ## [0.2.1] - 2022-08-30
 ### Added
 - Upload from Media Library in the block [#25792]
