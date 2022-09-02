@@ -28,10 +28,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
       'ver' => '0.8.22',
     ),
-    'jetpack-sync' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-sync',
-      'ver' => '1.38.2',
-    ),
     'jetpack-plugins-installer' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
       'ver' => '0.2.0',
@@ -44,6 +40,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
       'ver' => '2.2.26',
     ),
+    'jetpack-sync' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-sync',
+      'ver' => '1.38.2',
+    ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
       'ver' => '2.4.15',
@@ -51,6 +51,10 @@ return array(
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
       'ver' => '1.9.6',
+    ),
+    'jetpack-compat' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-compat',
+      'ver' => '1.7.4',
     ),
     'jetpack-google-fonts-provider' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
@@ -64,17 +68,13 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-post-list',
       'ver' => '0.4.0',
     ),
-    'jetpack-publicize-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-publicize',
-      'ver' => '0.12.0',
-    ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
       'ver' => '1.7.3',
     ),
-    'jetpack-compat' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-compat',
-      'ver' => '1.7.4',
+    'jetpack-publicize-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-publicize',
+      'ver' => '0.12.1',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
@@ -84,13 +84,13 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
       'ver' => '0.6.5',
     ),
-    'jetpack-videopress-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.2.1',
-    ),
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
       'ver' => '0.2.13',
+    ),
+    'jetpack-videopress-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-videopress',
+      'ver' => '0.2.1',
     ),
   ),
 );
