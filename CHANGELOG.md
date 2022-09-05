@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Migrating videopress features to package
 
 ### Bug fixes
+- Ensure Carousel still opens when clicking on a gallery image that has a figcaption with a link inside.
 - Post Images: avoid PHP notices when fetching images from posts with missing metadata.
 - Updated copy and links in recommendations
 
