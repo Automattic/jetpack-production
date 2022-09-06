@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added E2E tests for the Jetpack WAF.
 - Clening up Jetpack changelog and readme
+- Fix an undefined array key access in `WPCOM_JSON_API_List_Post_Formats_Endpoint`.
 - Init 11.4 cycle
 - Jetpack: implement a temporary solution to register VideoPress block v6 in dotcom
 - Jetpack: remove VideoPress v6 block from Jetpack plugin
