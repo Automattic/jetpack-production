@@ -6,7 +6,11 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Update 'View Summary' button to 'View recommendations' to clear up where it goes
+
 ### Bug fixes
+- Ensure Carousel still opens when clicking on a gallery image that has a figcaption with a link inside.
 - Updated copy and links in recommendations
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
