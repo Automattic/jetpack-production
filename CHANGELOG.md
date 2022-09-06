@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Moved the permission check for the Tweetstorm endpoint into a helper class.
 - Update 'View Summary' button to 'View recommendations' to clear up where it goes
 
 ### Bug fixes
