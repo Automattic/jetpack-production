@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: Hide BETA label and styles when hovering after a delay of 0.5 sec
 - Jetpack: improve labeling beta extensions in the block editor context
 - Jetpack: remove buttons from the QRPostCode modal
+- Moved the permission check for the Tweetstorm endpoint into a helper class.
 - Move Social Previews components to separate package
 - Update 'View Summary' button to 'View recommendations' to clear up where it goes
 
