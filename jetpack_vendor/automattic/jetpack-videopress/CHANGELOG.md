@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add VideosGrid component. First approach.
 - VideoPress: Add VideoStatsGroup component
 - VideoPress: Add VideoStorageMeter component
+- VideoPress: first approach of data handling
 - VideoPress: implement quick actions in the VideoCard component
 - VideoPress: Introduce VideoList component
 
