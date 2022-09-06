@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Editor Extensions: Brand Jetpack features in publish flows
 - Jetpack: Hide BETA label and styles when hovering after a delay of 0.5 sec
 - Jetpack: improve labeling beta extensions in the block editor context
 - Jetpack: remove buttons from the QRPostCode modal
