@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 11.4 cycle
 - Jetpack: implement a temporary solution to register VideoPress block v6 in dotcom
 - Jetpack: remove VideoPress v6 block from Jetpack plugin
+- Publicize Connections Post Field: Fix the tests
 - Removes usage of jetpack_require_lib() for class-jetpack-mapbox-helper
 - WordPress.com toolbar: allow enabling an "Advertising" menu item via a new filter.
 
