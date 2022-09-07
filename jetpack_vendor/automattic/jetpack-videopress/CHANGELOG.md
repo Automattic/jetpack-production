@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - added for videopress videos in the media selector
 - Migrating Media Library UI snippets to pkg
 - VideoPress: Add Input and SearchInput components
+- VideoPress: add query object to the getVideos() selector
 - VideoPress: Add register_videopress_blocks() method to register all VideoPress blocks
 - VideoPress: add VideoCard component
 - VideoPress: add VideosGrid component. First approach.
