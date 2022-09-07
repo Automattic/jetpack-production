@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Modify review request logic
 - Updated package dependencies.
 
+### Fixed
+- Backup: Fixed Automattic link in admin footer
+
 ## [1.7.3] - 2022-08-30
 ### Changed
 - Updated package dependencies. [#25694, #25814]
