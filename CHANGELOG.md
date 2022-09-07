@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Post Images: avoid PHP notices when fetching images from posts with missing metadata.
+- While we are creating a donation plan for a given currency we disable post saving.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added E2E tests for the Jetpack WAF.
