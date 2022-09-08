@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.22.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.22.0] - 2022-09-08
 ### Added
-- Search: added support to search through multiple sites
+- Search: added support to search through multiple sites [#26046]
 
 ### Changed
 - Updated package dependencies.
 
 ### Fixed
-- Instant Search: Update CSS styles to removes uses of "!important" where possible.
-- Search: Allow non-owner admins to see search dashboard
-- Search: fixed Automattic link in footer when Jetpack plugin does not exist
+- Instant Search: Update CSS styles to removes uses of "!important" where possible. [#25825]
+- Search: Allow non-owner admins to see search dashboard [#26100]
+- Search: fixed Automattic link in footer when Jetpack plugin does not exist [#26045]
 
 ## [0.21.1] - 2022-08-30
 ### Added
@@ -477,7 +474,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.22.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.21.1...v0.22.0-alpha
+[0.22.0]: https://github.com/Automattic/jetpack-search/compare/v0.21.1...v0.22.0
 [0.21.1]: https://github.com/Automattic/jetpack-search/compare/v0.21.0...v0.21.1
 [0.21.0]: https://github.com/Automattic/jetpack-search/compare/v0.20.0...v0.21.0
 [0.20.0]: https://github.com/Automattic/jetpack-search/compare/v0.19.0...v0.20.0
