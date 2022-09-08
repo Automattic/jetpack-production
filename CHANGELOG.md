@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: improve labeling beta extensions in the block editor context
 - Jetpack: remove buttons from the QRPostCode modal
 - Move Social Previews components to separate package
+- Payment Buttons: add the Gutenberg dimensions controls
 - Remove JetpackIcon from InspectorNotice component
 
 ### Improved compatibility
