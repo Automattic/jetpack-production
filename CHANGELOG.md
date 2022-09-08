@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Updated style for Jetpack Logo icon shown in pre-publish panels for Jetpack and Jetpack Social plugins
+
 ## 11.4-a.1 - 2022-09-08
 ### Enhancements
 - Blocks: add "BETA" labels for beta extensions used in the block editor context. [#25852, #25938]
