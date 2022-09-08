@@ -6,95 +6,95 @@ return array(
   'packages' => array(
     'jetpack-admin-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
-      'ver' => '0.2.9999999-dev',
+      'ver' => '0.2.11',
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '1.45.9999999-dev',
+      'ver' => '1.45.0',
     ),
     'jetpack-assets' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-assets',
-      'ver' => '1.17.9999999-dev',
-    ),
-    'jetpack-action-bar' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-action-bar',
-      'ver' => '0.1.9999999-dev',
+      'ver' => '1.17.21',
     ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
-      'ver' => '0.2.9999999-dev',
-    ),
-    'jetpack-idc' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
-      'ver' => '0.8.9999999-dev',
-    ),
-    'jetpack-sync' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-sync',
-      'ver' => '1.38.9999999-dev',
+      'ver' => '0.2.6',
     ),
     'jetpack-plugins-installer' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
-      'ver' => '0.2.9999999-dev',
-    ),
-    'jetpack-licensing' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-licensing',
-      'ver' => '1.7.9999999-dev',
+      'ver' => '0.2.0',
     ),
     'jetpack-jitm' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
-      'ver' => '2.2.9999999-dev',
+      'ver' => '2.2.27',
     ),
-    'jetpack-my-jetpack' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '2.0.9999999-dev',
+    'jetpack-action-bar' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-action-bar',
+      'ver' => '0.1.0',
+    ),
+    'jetpack-idc' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
+      'ver' => '0.8.23',
+    ),
+    'jetpack-sync' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-sync',
+      'ver' => '1.38.3',
+    ),
+    'jetpack-licensing' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-licensing',
+      'ver' => '1.7.9',
     ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
-      'ver' => '2.4.9999999-dev',
+      'ver' => '2.4.16',
     ),
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
-      'ver' => '1.9.9999999-dev',
+      'ver' => '1.9.6',
     ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '1.8.9999999-dev',
+      'ver' => '1.8.0',
     ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
-      'ver' => '1.7.9999999-dev',
+      'ver' => '1.7.4',
+    ),
+    'jetpack-my-jetpack' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
+      'ver' => '2.0.5',
     ),
     'jetpack-google-fonts-provider' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
-      'ver' => '0.3.9999999-dev',
+      'ver' => '0.3.4',
     ),
     'jetpack-lazy-images' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
-      'ver' => '2.1.9999999-dev',
+      'ver' => '2.1.22',
     ),
     'jetpack-post-list' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-post-list',
-      'ver' => '0.4.9999999-dev',
+      'ver' => '0.4.0',
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
-      'ver' => '0.13.9999999-dev',
-    ),
-    'jetpack-search-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.22.9999999-dev',
-    ),
-    'jetpack-videopress-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.3.9999999-dev',
-    ),
-    'jetpack-waf' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-waf',
-      'ver' => '0.6.9999999-dev',
+      'ver' => '0.13.2',
     ),
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
-      'ver' => '0.2.9999999-dev',
+      'ver' => '0.2.14',
+    ),
+    'jetpack-waf' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-waf',
+      'ver' => '0.6.6',
+    ),
+    'jetpack-search-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-search',
+      'ver' => '0.22.0',
+    ),
+    'jetpack-videopress-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-videopress',
+      'ver' => '0.3.0',
     ),
   ),
 );
