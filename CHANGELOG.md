@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Migrating videopress features to package
+- VideoPress: Moved jetpack_videopress_guid REST custom field to VideoPress package.
 
 ### Bug fixes
 - Post Images: avoid PHP notices when fetching images from posts with missing metadata.

@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add VideoStorageMeter component
 - VideoPress: Alpha admin page
 - VideoPress: connect data with the client app
+- VideoPress: extend the media endpoint with the jetpack_videopress_guid field
 - VideoPress: first approach of data handling
 - VideoPress: implement quick actions in the VideoCard component
 - VideoPress: Introduce VideoList component
