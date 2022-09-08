@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.4-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 11.4-a.1 - 2022-09-08
 ### Enhancements
 - Editor Extensions: Brand Jetpack features in publish flows [#26044]
