@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Move Social Previews components to separate package
 - Payment Buttons: add the Gutenberg dimensions controls
 - Remove JetpackIcon from InspectorNotice component
+- VideoPress Block: allow editing of some block settings while uploading.
 
 ### Improved compatibility
 - Migrating videopress features to package
