@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Instant Search: Update CSS styles to removes uses of "!important" where possible.
+- Search: Allow non-owner admins to see search dashboard
 - Search: fixed Automattic link in footer when Jetpack plugin does not exist
 
 ## [0.21.1] - 2022-08-30
