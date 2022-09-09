@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add onSearch() prop to SearchInput component
 - VideoPress: Support type, size and label in input
 
+### Changed
+- VideoPress: handle how the VideoCard looks when no data is provided
+
 ### Fixed
 - VideoPress: Remove white space at VP Logo
 
