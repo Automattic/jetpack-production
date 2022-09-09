@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: add onSearch() prop to SearchInput component
+- VideoPress: Search videos when typing on the Search component
 - VideoPress: Support type, size and label in input
 
 ### Changed
