@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Notifications: Improve third-party cookie check to work with modsecurity rules.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Custom SEO Titles: fix a couple of unique key prop warnings.
+
 ## 11.4-a.1 - 2022-09-08
 ### Enhancements
 - Blocks: add "BETA" labels for beta extensions used in the block editor context. [#25852, #25938]
