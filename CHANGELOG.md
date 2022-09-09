@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Custom SEO Titles: fix a couple of unique key prop warnings.
+- Tests: fix factory method calls
 
 ## 11.4-a.1 - 2022-09-08
 ### Enhancements
