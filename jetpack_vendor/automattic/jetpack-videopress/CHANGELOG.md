@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Support type, size and label in input
 
 ### Changed
+- VideoPress: Extract VideoDetails from VideoCard
 - VideoPress: fix library titles
 - VideoPress: handle how the VideoCard looks when no data is provided
 
