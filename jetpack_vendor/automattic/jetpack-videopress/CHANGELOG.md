@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Extract VideoDetails from VideoCard
 - VideoPress: Extract VideoThumbnail from VideoCard
 - VideoPress: fix library titles
+- VideoPress: Fix styles, add loading state and clear icon to input component
 - VideoPress: handle how the VideoCard looks when no data is provided
 
 ### Fixed
