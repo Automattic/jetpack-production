@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add onSearch() prop to SearchInput component
 - VideoPress: introduce FilterButton component
 - VideoPress: Introduce minimal Edit Details page
+- VideoPress: Moved jetpack_videopress REST custom field to VideoPress package.
 - VideoPress: Search videos when typing on the Search component
 - VideoPress: Support type, size and label in input
 
