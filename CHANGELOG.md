@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: do not load Subscriptions block while under Offline Mode
 - VideoPress: Moved jetpack_videopress_guid REST custom field to VideoPress package.
 
+### Bug fixes
+- Add source check for broken image
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Custom SEO Titles: fix a couple of unique key prop warnings.
 - Tests: fix factory method calls
