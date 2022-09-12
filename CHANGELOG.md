@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update QR post-publish panel to show Jetpack Icon
 
 ### Improved compatibility
+- Subscriptions: do not load Subscriptions block while under Offline Mode
 - VideoPress: Moved jetpack_videopress_guid REST custom field to VideoPress package.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
