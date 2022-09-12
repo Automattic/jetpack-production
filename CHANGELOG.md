@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Pay with PayPal block: The `postLinkUrl` attribute uses now the immutable post GUID to prevent the editor from becoming dirty after publishing a post.
 - Updated style for Jetpack Logo icon shown in pre-publish panels for Jetpack and Jetpack Social plugins
+- Update QR post-publish panel to show Jetpack Icon
 
 ### Improved compatibility
 - VideoPress: Moved jetpack_videopress_guid REST custom field to VideoPress package.
