@@ -10,9 +10,6 @@ This is an alpha version! The changes listed here are not final.
 - Pay with PayPal block: The `postLinkUrl` attribute uses now the immutable post GUID to prevent the editor from becoming dirty after publishing a post.
 - Updated style for Jetpack Logo icon shown in pre-publish panels for Jetpack and Jetpack Social plugins
 
-### Improved compatibility
-- Notifications: Improve third-party cookie check to work with modsecurity rules.
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Custom SEO Titles: fix a couple of unique key prop warnings.
 - Tests: fix factory method calls
@@ -42,6 +39,10 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: migrate pluging features to separate package. [#25877]
 - VideoPress: moved jetpack_videopress_guid REST custom field to VideoPress package. [#26043]
 - WordPress.com toolbar: allow enabling an "Advertising" menu item via a new filter. [#25874]
+
+## 11.3.1 - 2022-09-08
+### Improved compatibility
+- Notifications: improve third-party cookie check to work with modsecurity rules. [#26122]
 
 ## [11.3] - 2022-09-06
 ### Enhancements
