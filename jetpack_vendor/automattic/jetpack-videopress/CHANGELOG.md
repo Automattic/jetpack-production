@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: add onSearch() prop to SearchInput component
+- VideoPress: Add video chapters extraction helper function
 - VideoPress: introduce FilterButton component
 - VideoPress: Introduce minimal Edit Details page
 - VideoPress: Moved jetpack_videopress REST custom field to VideoPress package.
