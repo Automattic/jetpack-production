@@ -272,12 +272,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-publicize' => array(
-            'pretty_version' => 'v0.13.2',
-            'version' => '0.13.2.0',
+            'pretty_version' => 'v0.14.0',
+            'version' => '0.14.0.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-publicize',
             'aliases' => array(),
-            'reference' => '7901c8a274ba550599c88a0bd609001d3f210a01',
+            'reference' => 'adfe34b363ae1b05bbb66a3ef995dc5c653da985',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-redirect' => array(
@@ -299,12 +299,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-search' => array(
-            'pretty_version' => 'v0.22.0',
-            'version' => '0.22.0.0',
+            'pretty_version' => 'v0.22.1',
+            'version' => '0.22.1.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-search',
             'aliases' => array(),
-            'reference' => '1b73fcb8327d6cf91089532527d266ffcfc63bbc',
+            'reference' => 'd41d59fa2afa841e2cdc8e5ee8e5ee615f837f3a',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-status' => array(
@@ -326,12 +326,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-videopress' => array(
-            'pretty_version' => 'v0.3.0',
-            'version' => '0.3.0.0',
+            'pretty_version' => 'v0.3.1',
+            'version' => '0.3.1.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-videopress',
             'aliases' => array(),
-            'reference' => '9761c5e84a4cc1823a7f56b8b0baaeaede14ee48',
+            'reference' => '4ab08d1a6685641a3ce9d1dd8809b83d95e6a253',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-waf' => array(

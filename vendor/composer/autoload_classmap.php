@@ -208,6 +208,7 @@ return array(
     'Automattic\\Jetpack\\VideoPress\\Upload_Exception' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-upload-exception.php',
     'Automattic\\Jetpack\\VideoPress\\Uploader' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader.php',
     'Automattic\\Jetpack\\VideoPress\\Uploader_Rest_Endpoints' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader-rest-endpoints.php',
+    'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Attachment_VideoPress_Data' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-attachment-videopress-data.php',
     'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Attachment_VideoPress_Field' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-attachment-field-videopress.php',
     'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Endpoint_VideoPress' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-endpoint-videopress.php',
     'Automattic\\Jetpack\\VideoPress\\XMLRPC' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-xmlrpc.php',
