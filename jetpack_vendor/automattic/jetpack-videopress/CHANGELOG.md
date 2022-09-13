@@ -5,28 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.3.1] - 2022-09-13
 ### Added
-- VideoPress: add onSearch() prop to SearchInput component
-- VideoPress: Add video chapters extraction helper function
-- VideoPress: introduce FilterButton component
-- VideoPress: Introduce minimal Edit Details page
-- VideoPress: Moved jetpack_videopress REST custom field to VideoPress package.
-- VideoPress: Search videos when typing on the Search component
-- VideoPress: Support type, size and label in input
+- VideoPress: add onSearch() prop to SearchInput component. [#26128]
+- VideoPress: add video chapters extraction helper function. [#26181]
+- VideoPress: introduce FilterButton component. [#26155]
+- VideoPress: introduce minimal Edit Details page. [#26150]
+- VideoPress: moved jetpack_videopress REST custom field to VideoPress package. [#26140]
+- VideoPress: search videos when typing on the Search component. [#26139]
+- VideoPress: support type, size and label in input. [#26127]
 
 ### Changed
-- VideoPress: Extract VideoDetails from VideoCard
-- VideoPress: Extract VideoThumbnail from VideoCard
-- VideoPress: fix library titles
-- VideoPress: Fix styles, add loading state and clear icon to input component
-- VideoPress: handle how the VideoCard looks when no data is provided
+- Updated package dependencies. [#26176]
+- VideoPress: Extract VideoDetails and VideoThumbnail from VideoCard. [#26148, 26149]
+- VideoPress: fix library titles. [#26145]
+- VideoPress: fix styles, add loading state and clear icon to input component. [#26158]
+- VideoPress: handle how the VideoCard looks when no data is provided. [#26124]
 
 ### Fixed
-- VideoPress: Remove white space at VP Logo
+- VideoPress: remove white space in VP Logo. [#26121]
 
 ## [0.3.0] - 2022-09-08
 ### Added
@@ -151,7 +148,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.3.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.3.0...v0.3.1-alpha
+[0.3.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.1.5...v0.2.0
