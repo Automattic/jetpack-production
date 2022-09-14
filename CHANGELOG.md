@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Defusion: changing jetpack_require_lib calls for easy markdown files.
+
 ## 11.4-a.3 - 2022-09-13
 ### Enhancements
 - VideoPress block (beta): register a video-chapters beta feature with basic controls. [#26177]
