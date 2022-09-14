@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- VideoPress: implement filter section UI in the dashboard
+
 ### Changed
 - Updated package dependencies.
 - VideoPress: Support endAdornment in Input
