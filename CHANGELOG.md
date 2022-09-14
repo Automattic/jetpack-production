@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Defusion: changing jetpack_require_lib calls for easy markdown files.
 - E2E tests: removed deprecated Slack notification code
 - Replace `jetpack_require_lib` calls for tonesque.
+- VideoPress: Add webVTT chapter file generator function
 
 ## 11.4-a.3 - 2022-09-13
 ### Enhancements

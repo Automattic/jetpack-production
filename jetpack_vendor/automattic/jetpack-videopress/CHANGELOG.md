@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - VideoPress: Support endAdornment in Input
 
+### Removed
+- VideoPress: Remove chapter extraction helper function
+
 ## [0.3.1] - 2022-09-13
 ### Added
 - VideoPress: add onSearch() prop to SearchInput component. [#26128]
