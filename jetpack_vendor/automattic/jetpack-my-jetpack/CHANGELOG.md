@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Fixed the tests for the Module_Product class by creating and using a sample, test-only module product class as the test subject instead of relying on Videopress or other concrete products.
+
 ## [2.0.5] - 2022-09-08
 ### Changed
 - Change VideoPress into a Hybrid product in My Jetpack [#25954]
