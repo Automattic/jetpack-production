@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Default Theme Support: Add support for new feature added in WP 6.1
 - Theme Supports: updated allowed values list to align with a Core change r54159-core
 
 ## [1.38.3] - 2022-09-08
