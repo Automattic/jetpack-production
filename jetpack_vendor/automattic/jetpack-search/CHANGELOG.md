@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fixes the issue where search results are not loaded in customizer
+
 ## [0.22.1] - 2022-09-13
 ### Changed
 - Updated package dependencies. [#26176]
