@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Extract Restore Connection functionality into the JS package.
 - Jetpack: pull and show title and description in the VideoPress Video sidebar
 - Jetpack: store videopress title and descriptio in the block attributes
+- VideoPress: save title and description when post saves
 
 ### Bug fixes
 - Hide subscribers notification logic for past-published posts
