@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: implement filter section UI in the dashboard
 - VideoPress: Load real data at Edit Details page
+- VideoPress: sync video `description` value
 
 ### Changed
 - Updated package dependencies.
