@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: expose title and description in jetpack_videopress endpoint response body
 - VideoPress: Support endAdornment in Input
 
 ### Removed
