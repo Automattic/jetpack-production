@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Jetpack: pull and show title and description in the VideoPress Video sidebar
+
 ### Bug fixes
 - Hide subscribers notification logic for past-published posts
 - Jetpack: fix a typo when picking the videopress info description field
