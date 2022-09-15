@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Hide subscribers notification logic for past-published posts
+- Jetpack: fix a typo when picking the videopress info description field
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Defusion: changing jetpack_require_lib calls for easy markdown files.
