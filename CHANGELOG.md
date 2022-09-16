@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Show Jetpack icon in post publish panel for audio
 - VideoPress: Add beta style to DetailsControl component
 - VideoPress: save title and description when post saves
+- VideoPress: upload detected .vvt file from videopress block description
 
 ### Bug fixes
 - Hide subscribers notification logic for past-published posts
