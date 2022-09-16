@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: pull and show title and description in the VideoPress Video sidebar
 - Jetpack: store videopress title and descriptio in the block attributes
 - Show Jetpack icon in post publish panel for audio
+- VideoPress: Add beta style to DetailsControl component
 - VideoPress: save title and description when post saves
 
 ### Bug fixes
