@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: implement filter section UI in the dashboard
 - VideoPress: Load real data at Edit Details page
 - VideoPress: sync video `description` value
+- VideoPress: update post title and content via the /videopress/meta endpoint
 - VideoPress: Update title, description and caption at backend
 
 ### Changed
