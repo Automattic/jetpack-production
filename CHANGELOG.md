@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Defusion: changing jetpack_require_lib calls for easy markdown files.
 - E2E tests: removed deprecated Slack notification code
+- Minor WP.com-only bugfix to prevent the upgrade nudge of paid blocks from being visible on the block list view
 - Replace `jetpack_require_lib` calls for tonesque.
 - VideoPress: Add chapter file creation function
 - VideoPress: Add webVTT chapter file generator function
