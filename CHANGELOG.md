@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add beta style to DetailsControl component
 - VideoPress: Add default end time for vtt file generation function
 - VideoPress: Expand description textarea to accomodate text on block load
+- VideoPress: refresh player after changing video chapters
 - VideoPress: save title and description when post saves
 - VideoPress: upload detected .vvt file from videopress block description
 
