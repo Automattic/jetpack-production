@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Allow other non owner admin to see Backup dashboard
+
 ## [1.8.0] - 2022-09-08
 ### Added
 - Add support for JITMs to Backup plugin [#25945]
