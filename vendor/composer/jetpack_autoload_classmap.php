@@ -122,9 +122,9 @@ return array(
 		'version' => '0.6.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-constants.php'
 	),
-	'Automattic\\Jetpack\\Waf\\Waf_Endpoints' => array(
+	'Automattic\\Jetpack\\Waf\\REST_Controller' => array(
 		'version' => '0.6.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-endpoints.php'
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Waf\\Waf_Runner' => array(
 		'version' => '0.6.9999999.9999999-dev',

@@ -340,7 +340,7 @@
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-waf',
             'aliases' => array(),
-            'reference' => '49a5c0291304dc9de529c3d25f61721f0fc2a364',
+            'reference' => '95af8e2d62651babea306cec8c1ecd95501cf0ad',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-wordads' => array(
