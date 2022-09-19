@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Rename the initial state key to ensure compatibility with the JS package.
+
 ## [1.45.0] - 2022-09-08
 ### Changed
 - Add option to JP options [#25979]
