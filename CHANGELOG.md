@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Hide subscribers notification logic for past-published posts
 - Jetpack: fix a typo when picking the videopress info description field
+- VideoPress: check whether the description is defined before to split it up
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add loading of the waf from Jetpack to avoid use of actions.php
