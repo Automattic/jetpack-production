@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Replace `jetpack_require_lib` calls for tonesque.
 - VideoPress: Add chapter file creation function
 - VideoPress: Add webVTT chapter file generator function
+- VideoPress: move beta label in the DetailsControl panel
 
 ## 11.4-a.3 - 2022-09-13
 ### Enhancements
