@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: removed deprecated Slack notification code
 - Minor WP.com-only bugfix to prevent the upgrade nudge of paid blocks from being visible on the block list view
 - Replace `jetpack_require_lib` calls for tonesque.
+- Social Menu: Syncing changes in WordPress.com over to Jetpack.
 - VideoPress: Add chapter file creation function
 - VideoPress: Add webVTT chapter file generator function
 - VideoPress: move beta label in the DetailsControl panel
