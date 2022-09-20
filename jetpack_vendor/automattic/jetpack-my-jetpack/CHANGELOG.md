@@ -5,15 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.1.0] - 2022-09-20
 ### Added
-- Added the ConnectionErrorNotice React component.
+- Added the ConnectionErrorNotice React component. [#26259]
+
+### Changed
+- Updated package dependencies.
 
 ### Fixed
-- Fixed the tests for the Module_Product class by creating and using a sample, test-only module product class as the test subject instead of relying on Videopress or other concrete products.
+- Fixed the tests for the Module_Product class by creating and using a sample, test-only module product class as the test subject instead of relying on Videopress or other concrete products. [#26227]
 
 ## [2.0.5] - 2022-09-08
 ### Changed
@@ -601,7 +601,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.1.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.0.5...2.1.0-alpha
+[2.1.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.0.5...2.1.0
 [2.0.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.0.4...2.0.5
 [2.0.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.0.3...2.0.4
 [2.0.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.0.2...2.0.3
