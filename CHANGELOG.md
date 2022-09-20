@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Hide subscribers notification logic for past-published posts
 - Jetpack: fix a typo when picking the videopress info description field
+- Set the `Automattic\Jetpack\Fonts\Introspectors\Global_Styles::enqueue_global_styles_fonts` callback priority in the `init` hook to 22 to prevent it from causing style issues with sites that have Gutenberg > 13.5 activated.
 - VideoPress: check whether the description is defined before to split it up
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
