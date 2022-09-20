@@ -36,13 +36,13 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
       'ver' => '1.7.10',
     ),
-    'jetpack-sync' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-sync',
-      'ver' => '1.38.4',
-    ),
     'jetpack-jitm' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
       'ver' => '2.2.27',
+    ),
+    'jetpack-sync' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-sync',
+      'ver' => '1.38.4',
     ),
     'jetpack-connection-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection-ui',
@@ -52,6 +52,14 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
       'ver' => '1.9.6',
     ),
+    'jetpack-google-fonts-provider' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
+      'ver' => '0.3.4',
+    ),
+    'jetpack-post-list' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-post-list',
+      'ver' => '0.4.1',
+    ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
       'ver' => '1.8.1',
@@ -60,33 +68,25 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '1.7.4',
     ),
-    'jetpack-my-jetpack' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '2.1.0',
-    ),
-    'jetpack-google-fonts-provider' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
-      'ver' => '0.3.4',
-    ),
     'jetpack-lazy-images' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
       'ver' => '2.1.23',
-    ),
-    'jetpack-post-list' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-post-list',
-      'ver' => '0.4.1',
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
       'ver' => '0.15.0',
     ),
-    'jetpack-waf' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-waf',
-      'ver' => '0.6.7',
+    'jetpack-my-jetpack' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
+      'ver' => '2.1.0',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
       'ver' => '0.22.2',
+    ),
+    'jetpack-waf' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-waf',
+      'ver' => '0.6.7',
     ),
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
