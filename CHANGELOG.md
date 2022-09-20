@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: pull and show title and description in the VideoPress Video sidebar
 - Jetpack: store videopress title and descriptio in the block attributes
 - Show Jetpack icon in post publish panel for audio
+- Sidebar: Add some additional context-sensistive menu items to the domain-only sidebar.
 - VideoPress: Add beta style to DetailsControl component
 - VideoPress: Add default end time for vtt file generation function
 - VideoPress: check title and description before to propagate to block attributes
