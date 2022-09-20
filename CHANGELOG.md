@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Refactor SEO Description panel to share the same code for title and icon on both Pre-Publish panel and Jetpack Plugin Sidebar panel.
+
 ## 11.4-a.5 - 2022-09-20
 ### Enhancements
 - Payment Blocks: add core typography settings to the buttons. [#26108]
