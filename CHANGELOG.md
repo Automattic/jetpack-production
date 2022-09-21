@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Refactor SEO Description panel to share the same code for title and icon on both Pre-Publish panel and Jetpack Plugin Sidebar panel.
 - Update Jetpack Plugin Sidebar icon to be 20px high
 
+### Improved compatibility
+- Applies Calypso 'Add new site' styles to wp-admin
+
 ## 11.4-a.5 - 2022-09-20
 ### Enhancements
 - Payment Blocks: add core typography settings to the buttons. [#26108]
