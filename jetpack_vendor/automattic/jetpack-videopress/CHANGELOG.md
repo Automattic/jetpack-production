@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: Add poster endpoint
 
+### Changed
+- VideoPress: hit wp/v2/media to request videos data
+
 ## [0.4.0] - 2022-09-20
 ### Added
 - VideoPress: implement filter section UI in the dashboard [#26169]
