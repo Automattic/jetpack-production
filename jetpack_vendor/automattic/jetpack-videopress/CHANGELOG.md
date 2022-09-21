@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: Add poster endpoint
+- VideoPress: Support selecting poster by frame
 
 ### Changed
 - VideoPress: hit wp/v2/media to request videos data
