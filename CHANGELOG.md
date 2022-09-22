@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Applies Calypso 'Add new site' styles to wp-admin
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- E2E tests: use CI build artifacts in e2e tests
 - Register `pcast.pocketcasts.net` for oEmbed even with WordPress 6.1, they only register `pca.st`.
 
 ## 11.4-a.5 - 2022-09-20
