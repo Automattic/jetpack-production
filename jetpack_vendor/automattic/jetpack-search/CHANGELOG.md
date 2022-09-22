@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Move JetpackColophon to bottom of SearchResults
 
+### Fixed
+- Fix error message styling in Instant Search overlay.
+
 ## [0.22.2] - 2022-09-20
 ### Changed
 - Updated package dependencies.
