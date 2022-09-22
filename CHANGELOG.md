@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.4-a.6 - unreleased
+## 11.4-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -17,6 +17,15 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: use CI build artifacts in e2e tests
 - Register `pcast.pocketcasts.net` for oEmbed even with WordPress 6.1, they only register `pca.st`.
 - Social: Aligned Jetpack and Social to use the connection-test-results endpoint in the block editor.
+- Updated package dependencies.
+
+## 11.4-a.7 - 2022-09-22
+### Improved compatibility
+- WC Pay: resolves issue for WooCommerce Payments that could result in a fatal for some sites on PHP 8+. [#26304]
+
+## 11.3.2 - 2022-09-22
+### Improved compatibility
+- WC Pay: resolves issue for WooCommerce Payments that could result in a fatal for some sites on PHP 8+. [#26304]
 
 ## 11.4-a.5 - 2022-09-20
 ### Enhancements
