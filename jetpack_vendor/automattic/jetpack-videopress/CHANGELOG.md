@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - VideoPress: hit wp/v2/media to request videos data
 - VideoPress: make Pagination work with trully data
+- VideoPress: resolve addVideo() selector
 
 ## [0.4.0] - 2022-09-20
 ### Added
