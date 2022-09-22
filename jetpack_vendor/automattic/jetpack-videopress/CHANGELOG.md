@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: resolve addVideo() selector
 
 ### Fixed
+- VideoPress: Fix SearchInput clear and initial typing behavior on dashboard
 - VideoPress: fix updating the store when editing video data
 
 ## [0.4.0] - 2022-09-20
