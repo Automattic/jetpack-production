@@ -2,9 +2,9 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.4-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## 11.4-a.7 - 2022-09-22
+### Improved compatibility
+- WC Pay: resolves issue for WooCommerce Payments that could result in a fatal for some sites on PHP 8+. [#26304]
 
 ## 11.4-a.5 - 2022-09-20
 ### Enhancements

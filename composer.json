@@ -21,7 +21,7 @@
 		"automattic/jetpack-compat": "^1.7.4",
 		"automattic/jetpack-composer-plugin": "^1.1.4",
 		"automattic/jetpack-config": "^1.9.6",
-		"automattic/jetpack-connection": "^1.45.1",
+		"automattic/jetpack-connection": "^1.45.2",
 		"automattic/jetpack-connection-ui": "^2.4.17",
 		"automattic/jetpack-constants": "^1.6.18",
 		"automattic/jetpack-device-detection": "^1.4.18",
@@ -92,7 +92,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ11_4_a_5",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ11_4_a_7",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true

@@ -583,17 +583,17 @@
         },
         {
             "name": "automattic/jetpack-connection",
-            "version": "v1.45.1",
-            "version_normalized": "1.45.1.0",
+            "version": "v1.45.2",
+            "version_normalized": "1.45.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-connection.git",
-                "reference": "16174ecc3e763aa43f613e282ed9f6b9c64f60cc"
+                "reference": "01780a39cf8eb6ca75dc35a5cf9fbadfdbe8416d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-connection/zipball/16174ecc3e763aa43f613e282ed9f6b9c64f60cc",
-                "reference": "16174ecc3e763aa43f613e282ed9f6b9c64f60cc",
+                "url": "https://api.github.com/repos/Automattic/jetpack-connection/zipball/01780a39cf8eb6ca75dc35a5cf9fbadfdbe8416d",
+                "reference": "01780a39cf8eb6ca75dc35a5cf9fbadfdbe8416d",
                 "shasum": ""
             },
             "require": {
@@ -610,7 +610,7 @@
                 "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-09-20T17:03:12+00:00",
+            "time": "2022-09-21T20:22:56+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -640,7 +640,7 @@
             ],
             "description": "Everything needed to connect to the Jetpack infrastructure",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-connection/tree/v1.45.1"
+                "source": "https://github.com/Automattic/jetpack-connection/tree/v1.45.2"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-connection"
         },

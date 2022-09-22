@@ -119,12 +119,12 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection' => array(
-            'pretty_version' => 'v1.45.1',
-            'version' => '1.45.1.0',
+            'pretty_version' => 'v1.45.2',
+            'version' => '1.45.2.0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-connection',
             'aliases' => array(),
-            'reference' => '16174ecc3e763aa43f613e282ed9f6b9c64f60cc',
+            'reference' => '01780a39cf8eb6ca75dc35a5cf9fbadfdbe8416d',
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection-ui' => array(
