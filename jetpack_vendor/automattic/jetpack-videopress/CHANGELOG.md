@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: make Pagination work with trully data
 - VideoPress: resolve addVideo() selector
 
+### Fixed
+- VideoPress: fix updating the store when editing video data
+
 ## [0.4.0] - 2022-09-20
 ### Added
 - VideoPress: implement filter section UI in the dashboard [#26169]
