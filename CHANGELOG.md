@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Refactor SEO Description panel to share the same code for title and icon on both Pre-Publish panel and Jetpack Plugin Sidebar panel.
+- Replace image used for site accelerator recommendation as it is being used elsewhere
 - Update Jetpack Plugin Sidebar icon to be 20px high
 
 ### Improved compatibility
