@@ -13,10 +13,12 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add poster endpoint
 - VideoPress: Add uploaded video count fetch functions
 - VideoPress: expose and store more video data
+- VideoPress: Link search input load state to videos fetch state on dashboard
 - VideoPress: Support selecting poster by frame
 
 ### Changed
 - VideoPress: Add VideoUploadArea component for first use screen
+- VideoPress: Hide pagination when there are less than two pages
 - VideoPress: hit wp/v2/media to request videos data
 - VideoPress: make Pagination work with trully data
 - VideoPress: resolve addVideo() selector
