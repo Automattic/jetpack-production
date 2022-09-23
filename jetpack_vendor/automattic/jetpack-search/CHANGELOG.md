@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Search: added free_tier and new_pricing_202208 to gate new pricing features
+
 ### Changed
 - Move JetpackColophon to bottom of SearchResults
 
