@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Removed
+- Removed dependency connection-ui
+
 ## [1.8.1] - 2022-09-20
 ### Changed
 - Updated package dependencies.

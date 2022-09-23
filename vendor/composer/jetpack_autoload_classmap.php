@@ -666,14 +666,6 @@ return array(
 		'version' => '1.3.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-error/src/class-error.php'
 	),
-	'Automattic\\Jetpack\\ConnectionUI\\Admin' => array(
-		'version' => '2.4.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-admin.php'
-	),
-	'Automattic\\Jetpack\\ConnectionUI\\Initial_State' => array(
-		'version' => '2.4.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection-ui/src/class-initial-state.php'
-	),
 	'Automattic\\Jetpack\\Composer\\Manager' => array(
 		'version' => '1.1.9999999.9999999-dev',
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-manager.php'
@@ -798,18 +790,6 @@ return array(
 		'version' => '2.2.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jitm/src/class-post-connection-jitm.php'
 	),
-	'Automattic\\Jetpack\\Partner_Coupon' => array(
-		'version' => '1.7.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner-coupon.php'
-	),
-	'Automattic\\Jetpack\\Partner' => array(
-		'version' => '1.7.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner.php'
-	),
-	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.9.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
-	),
 	'Automattic\\Jetpack\\Identity_Crisis' => array(
 		'version' => '0.8.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-identity-crisis.php'
@@ -822,6 +802,14 @@ return array(
 		'version' => '0.8.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-ui.php'
 	),
+	'Automattic\\Jetpack\\Partner_Coupon' => array(
+		'version' => '1.7.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner-coupon.php'
+	),
+	'Automattic\\Jetpack\\Partner' => array(
+		'version' => '1.7.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-partner/src/class-partner.php'
+	),
 	'Automattic\\Jetpack\\Device_Detection\\User_Agent_Info' => array(
 		'version' => '1.4.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-device-detection/src/class-user-agent-info.php'
@@ -829,6 +817,10 @@ return array(
 	'Automattic\\Jetpack\\Device_Detection' => array(
 		'version' => '1.4.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-device-detection/src/class-device-detection.php'
+	),
+	'Automattic\\Jetpack\\Config' => array(
+		'version' => '1.9.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(
 		'version' => '1.5.9999999.9999999-dev',

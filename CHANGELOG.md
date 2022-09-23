@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Disconnect Dialog: Fixed the prop types to avoid warnings from React
 - E2E tests: use CI build artifacts in e2e tests
 - Register `pcast.pocketcasts.net` for oEmbed even with WordPress 6.1, they only register `pca.st`.
+- Removed connection-ui package dependency
 - Social: Aligned Jetpack and Social to use the connection-test-results endpoint in the block editor.
 - Updated package dependencies.
 
