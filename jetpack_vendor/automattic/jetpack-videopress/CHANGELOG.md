@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: Add poster endpoint
+- VideoPress: Add sub actions to VideoQuickActions component
 - VideoPress: Add uploaded video count fetch functions
 - VideoPress: expose and store more video data
 - VideoPress: Link search input load state to videos fetch state on dashboard
