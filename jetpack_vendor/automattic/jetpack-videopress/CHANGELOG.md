@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: Add poster endpoint
+- VideoPress: expose and store more video data
 - VideoPress: Support selecting poster by frame
 
 ### Changed
