@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Removed dependency connection-ui
 
+### Fixed
+- Replace antippatern where components are returned from non-functionl components called renderSomething
+
 ## [1.8.1] - 2022-09-20
 ### Changed
 - Updated package dependencies.
