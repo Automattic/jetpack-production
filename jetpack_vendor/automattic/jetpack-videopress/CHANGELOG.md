@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Set the right source for the total of videos counter on the VideoPress library page.
+- StoryBook: fix unexistent pkg bug
 - VideoPress: fix printing the upload video date
 - VideoPress: Fix SearchInput clear and initial typing behavior on dashboard
 - VideoPress: fix updating the store when editing video data
