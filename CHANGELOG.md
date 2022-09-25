@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Applies Calypso 'Add new site' styles to wp-admin
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Atomic: always disable WAF
 - Disconnect Dialog: Fixed the prop types to avoid warnings from React
 - E2E tests: use CI build artifacts in e2e tests
 - Register `pcast.pocketcasts.net` for oEmbed even with WordPress 6.1, they only register `pca.st`.
