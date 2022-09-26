@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Register `pcast.pocketcasts.net` for oEmbed even with WordPress 6.1, they only register `pca.st`.
 - Removed connection-ui package dependency
 - Social: Aligned Jetpack and Social to use the connection-test-results endpoint in the block editor.
+- Sync changes to modules/masterbar/nudges/additional-css/ from wpcom.
 - Updated package dependencies.
 - Update the mobile sidebar component to show up under multiple contexts and to change text/styling based on context
 
