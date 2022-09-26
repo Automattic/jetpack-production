@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: resolve addVideo() selector
 
 ### Fixed
+- Set the right mapping for the caption field, relying on the new jetpack_videopress.caption raw information.
 - Set the right source for the total of videos counter on the VideoPress library page.
 - StoryBook: fix unexistent pkg bug
 - VideoPress: fix printing the upload video date
