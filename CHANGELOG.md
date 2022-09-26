@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Removed connection-ui package dependency
 - Social: Aligned Jetpack and Social to use the connection-test-results endpoint in the block editor.
 - Updated package dependencies.
+- Update the mobile sidebar component to show up under multiple contexts and to change text/styling based on context
 
 ## 11.4-a.7 - 2022-09-22
 ### Improved compatibility
