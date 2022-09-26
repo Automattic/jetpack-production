@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Introduce PricingTable to update Upsell page
 - Move JetpackColophon to bottom of SearchResults
+- Updated mentions of "Search" with "Jetpack Search" as part of rebranding project
 
 ### Fixed
 - Fix error message styling in Instant Search overlay.
