@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Removed dependency connection-ui
 
 ### Fixed
+- Do not show header footer on connection screen
 - Replace antippatern where components are returned from non-functionl components called renderSomething
 
 ## [1.8.1] - 2022-09-20
