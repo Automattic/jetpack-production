@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: added free_tier and new_pricing_202208 to gate new pricing features
 
 ### Changed
+- Introduce PricingTable to update Upsell page
 - Move JetpackColophon to bottom of SearchResults
 
 ### Fixed
