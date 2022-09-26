@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: expose and store more video data
 - VideoPress: included raw video caption on the jetpack_videopress field from the media details endpoint
 - VideoPress: Link search input load state to videos fetch state on dashboard
+- VideoPress: set video privacy from Video Grid / dashboard
 - VideoPress: Support selecting poster by frame
 
 ### Changed
