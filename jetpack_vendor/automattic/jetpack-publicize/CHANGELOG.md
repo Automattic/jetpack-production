@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add caching to shares info check
+
 ### Changed
 - Social: Aligned Jetpack and Social to use the connection-test-results endpoint in the block editor
 
