@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Support selecting poster by frame
 
 ### Changed
+- VideoPress: Add file extension filter on file selection
 - VideoPress: Add VideoUploadArea component for first use screen
 - VideoPress: Hide pagination when there are less than two pages
 - VideoPress: hit wp/v2/media to request videos data
