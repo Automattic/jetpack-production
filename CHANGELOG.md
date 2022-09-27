@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Unit Tests: add check for removing the WAF module from sites hosted on the Atomic platform.
+
 ## 11.4-beta - 2022-09-27
 ### Enhancements
 - Account Connection Card: Remove magic mobile link [#26311]
