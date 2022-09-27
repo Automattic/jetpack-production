@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add storage meter to the Admin page
 
+### Changed
+- VideoPress: Mobile layout for VideoCard component
+
 ## [0.4.1] - 2022-09-27
 ### Added
 - VideoPress: add contextual upgrade trigger to dashboard. [#26403]
