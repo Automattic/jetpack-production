@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Applies Calypso 'Add new site' styles to wp-admin
 
+### Bug fixes
+- Plugins page: Fixes JavaScript console errors related to the disconnect button on multisite networks.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Atomic: always disable WAF
 - Disconnect Dialog: Fixed the prop types to avoid warnings from React
