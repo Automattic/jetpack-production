@@ -111,6 +111,7 @@ return array(
     'Automattic\\Jetpack\\Publicize\\Publicize_Setup' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-setup.php',
     'Automattic\\Jetpack\\Publicize\\Publicize_UI' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-ui.php',
     'Automattic\\Jetpack\\Publicize\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-rest-controller.php',
+    'Automattic\\Jetpack\\Publicize\\Share_Limits' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-share-limits.php',
     'Automattic\\Jetpack\\Redirect' => $baseDir . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php',
     'Automattic\\Jetpack\\Roles' => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
     'Automattic\\Jetpack\\Search\\CLI' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-cli.php',

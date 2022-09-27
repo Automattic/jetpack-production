@@ -13,7 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add caching to shares info check
 
 ### Changed
+- Move share limits code to the Publicize package
 - Social: Aligned Jetpack and Social to use the connection-test-results endpoint in the block editor
+- Updated package dependencies.
 
 ## [0.15.0] - 2022-09-20
 ### Added
