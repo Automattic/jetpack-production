@@ -239,6 +239,8 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ11_4_a_8
         'Automattic\\Jetpack\\VideoPress\\Upload_Exception' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-upload-exception.php',
         'Automattic\\Jetpack\\VideoPress\\Uploader' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader.php',
         'Automattic\\Jetpack\\VideoPress\\Uploader_Rest_Endpoints' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader-rest-endpoints.php',
+        'Automattic\\Jetpack\\VideoPress\\VideoPressToken' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopresstoken.php',
+        'Automattic\\Jetpack\\VideoPress\\VideoPress_Rest_Api_V1_Token' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopress-rest-api-v1-token.php',
         'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Attachment_VideoPress_Data' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-attachment-videopress-data.php',
         'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Attachment_VideoPress_Field' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-attachment-field-videopress.php',
         'Automattic\\Jetpack\\VideoPress\\WPCOM_REST_API_V2_Endpoint_VideoPress' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-wpcom-rest-api-v2-endpoint-videopress.php',
