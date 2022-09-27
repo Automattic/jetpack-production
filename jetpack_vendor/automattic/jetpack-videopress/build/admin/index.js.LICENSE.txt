@@ -12,6 +12,11 @@
   http://jedwatson.github.io/classnames
 */
 
+/*!
+ 2021 Jason Mulligan <jason.mulligan@avoidwork.com>
+ @version 8.0.6
+*/
+
 /**
  * React Router v6.3.0
  *
