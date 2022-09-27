@@ -13,14 +13,28 @@ import { STORE_ID } from '../../../state';
  * @returns {object} videos
  */
 export default function useVideos() {
+	// Data
+	const items = useSelect( select => select( STORE_ID ).getVideos() );
+	const search = '';
+	const uploadedVideoCount = useSelect( select => select( STORE_ID ).getUploadedVideoCount() );
+	const isFetching = useSelect( select => select( STORE_ID ).getIsFetching() );
+	const isFetchingUploadedVideoCount = useSelect( select =>
+		select( STORE_ID ).getIsFetchingUploadedVideoCount()
+	);
+	const query = useSelect( select => select( STORE_ID ).getVideosQuery() || {} );
+	const pagination = useSelect( select => select( STORE_ID ).getPagination() );
+
 	return {
-		// Data
-		items: useSelect( select => select( STORE_ID ).getVideos(), [] ),
-		...useSelect( select => select( STORE_ID ).getVideosQuery() || {} ),
-
-		// Setters
+		items,
+		search,
+		uploadedVideoCount,
+		isFetching,
+		isFetchingUploadedVideoCount,
+		...query,
+		...pagination,
+		// Handlers
 		setPage: page => dispatch( STORE_ID ).setVideosQuery( { page } ),
-
-		setSearch: search => dispatch( STORE_ID ).setVideosQuery( { search } ),
+		setSearch: querySearch =>
+			dispatch( STORE_ID ).setVideosQuery( { search: querySearch, page: 1 } ),
 	};
 }
