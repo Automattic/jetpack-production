@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Applies Calypso 'Add new site' styles to wp-admin
 
 ### Bug fixes
+- Payments intro: Make filtering patterns more robust
 - Plugins page: Fixes JavaScript console errors related to the disconnect button on multisite networks.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
