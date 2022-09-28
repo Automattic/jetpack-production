@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add PricingSection component
 - VideoPress: add storage meter to the Admin page
+- VideoPress: connect the user from the Pricing section
 - VideoPress: Loding mode in EditVideoDetails
 - VideoPress: register the deleting video state
 
