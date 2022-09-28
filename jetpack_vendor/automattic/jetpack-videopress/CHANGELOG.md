@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add storage meter to the Admin page
 - VideoPress: Loding mode in EditVideoDetails
+- VideoPress: register the deleting video state
 
 ### Changed
 - VideoPress: Mobile layout for VideoCard component
