@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - VideoPress: Mobile layout for VideoCard component
 
+### Fixed
+- Components: fix the positio of TOS component of the PricingTable cmp
+
 ## [0.4.1] - 2022-09-27
 ### Added
 - VideoPress: add contextual upgrade trigger to dashboard. [#26403]
