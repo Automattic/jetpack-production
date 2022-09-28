@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: register the deleting video state
 
 ### Changed
+- VideoPress: Fix filters mobile layout on dashboard library
 - VideoPress: Fix mobile style on dashboard library
 - VideoPress: Mobile layout for VideoCard component
 
