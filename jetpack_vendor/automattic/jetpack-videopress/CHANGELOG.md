@@ -10,11 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress: add PricingSection component
 - VideoPress: add storage meter to the Admin page
 - VideoPress: Loding mode in EditVideoDetails
 - VideoPress: register the deleting video state
 
 ### Changed
+- VideoPress: Fix mobile style on dashboard library
 - VideoPress: Mobile layout for VideoCard component
 
 ### Fixed
