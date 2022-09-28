@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Unit Tests: add check for removing the WAF module from sites hosted on the Atomic platform.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- masterbar: Remove wpcom-specific references to de-Fusioned stubs.
+
 ## 11.4-beta - 2022-09-27
 ### Enhancements
 - Editor: update icon sizing in the Jetpack sidebar for consistency. [#26281]
