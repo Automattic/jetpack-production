@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - VideoPress: Fix filters mobile layout on dashboard library
 - VideoPress: Fix mobile style on dashboard library
+- VideoPress: Fix video edit header on mobile
 - VideoPress: Mobile layout for VideoCard component
 
 ### Fixed
