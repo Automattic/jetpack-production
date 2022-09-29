@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add a new illustration for WooCommerce recommendation
+- Update text on site type question to conflict less with the agency/developer answer
 
 ### Improved compatibility
 - Unit Tests: add check for removing the WAF module from sites hosted on the Atomic platform.
