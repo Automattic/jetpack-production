@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
     - Use them to show the price in the UI
 - VideoPress: add PricingSection component
 - VideoPress: add storage meter to the Admin page
+- VideoPress: add videos stats endpoint.
 - VideoPress: connect the user from the Pricing section
 - VideoPress: Loding mode in EditVideoDetails
 - VideoPress: register the deleting video state
