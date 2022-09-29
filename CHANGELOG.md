@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add a new illustration for WooCommerce recommendation
+- Update site-type question on wp-admin banner
 - Update text on site type question to conflict less with the agency/developer answer
 
 ### Improved compatibility
