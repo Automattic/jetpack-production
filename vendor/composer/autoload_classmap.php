@@ -203,6 +203,7 @@ return array(
     'Automattic\\Jetpack\\VideoPress\\Module_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-module-control.php',
     'Automattic\\Jetpack\\VideoPress\\Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-options.php',
     'Automattic\\Jetpack\\VideoPress\\Package_Version' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-package-version.php',
+    'Automattic\\Jetpack\\VideoPress\\Plan' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-plan.php',
     'Automattic\\Jetpack\\VideoPress\\Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-status.php',
     'Automattic\\Jetpack\\VideoPress\\Upload_Exception' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-upload-exception.php',
     'Automattic\\Jetpack\\VideoPress\\Uploader' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader.php',

@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress:
+    - Request Product data not tied to the site
+    - Expose that data to the client
+    - Use them to show the price in the UI
 - VideoPress: add PricingSection component
 - VideoPress: add storage meter to the Admin page
 - VideoPress: connect the user from the Pricing section
