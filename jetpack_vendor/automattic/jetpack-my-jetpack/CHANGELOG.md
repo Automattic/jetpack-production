@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Search: add post type breakdown endpoint
+- Trigger restore connection flow.
 
 ## [2.1.1] - 2022-09-27
 ### Changed
