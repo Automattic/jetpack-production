@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
     - Request Product data not tied to the site
     - Expose that data to the client
     - Use them to show the price in the UI
+- VideoPress: Add loading state for dashboard
 - VideoPress: add PricingSection component
 - VideoPress: add storage meter to the Admin page
 - VideoPress: add videos stats endpoint.
