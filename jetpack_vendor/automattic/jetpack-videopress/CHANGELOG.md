@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Loding mode in EditVideoDetails
 - VideoPress: Provide the list of allowed video extensions on the client initial state, fetching it from the site `get_allowed_mime_types()` list.
 - VideoPress: register the deleting video state
+- VideoPress: send initial state to the client
 
 ### Changed
 - VideoPress: Add quick actions on VideoRow for mobile
