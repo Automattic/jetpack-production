@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add a new illustration for WooCommerce recommendation
 - Apps Card: update design and copy to reflect the Jetpack app
+- Make Payment Button blocks support a wider varity of layout options. Essentially the grid + blockGap options, similar to regular buttons.
 - Publicize: Publicize: Make the pre-publish panel initially closed
 - Subscriptions: Display readers number in subscriptions panel bold instead of underlined
 - Update site-type question on wp-admin banner
