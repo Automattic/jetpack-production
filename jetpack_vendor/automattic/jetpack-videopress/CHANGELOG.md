@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: Add quick actions on VideoRow for mobile
+- VideoPress: Adds the caption as a possible field on the video meta update endpoint and set the attachment post_excerpt and meta fields with it's value.
 - VideoPress: Fix filters mobile layout on dashboard library
 - VideoPress: Fix mobile style on dashboard library
 - VideoPress: Fix video edit header on mobile
