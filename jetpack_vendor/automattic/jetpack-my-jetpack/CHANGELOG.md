@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Integrate the new connection error message React component into My Jetpack.
 - Search: add post type breakdown endpoint
 - Trigger restore connection flow.
 
