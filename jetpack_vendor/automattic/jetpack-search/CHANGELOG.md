@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Apply JetpackSearchLogo and replace footer link to upsell page
+- Fix styles of Control components on page side to avoid deprecating component styles affecting.
 
 ## [0.23.0] - 2022-09-27
 ### Added
