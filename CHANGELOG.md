@@ -7,6 +7,9 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add/Initialize Backup UI
+- Apps Card: update design and copy to reflect the Jetpack app
+- Remove Learn More link from agency recommendation
 - Update site-type question on wp-admin banner
 - Update text on site type question to conflict less with the agency/developer answer
 
