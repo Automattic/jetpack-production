@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Components: fix the positio of TOS component of the PricingTable cmp
 - VideoPress: Add a check for video url before rendering VideoPress block
+- VideoPress: Allows empty caption and description values so it's possible to save empty fields from the frontend.
 - VideoPress: fix bug when deleting videos
 
 ## [0.4.1] - 2022-09-27
