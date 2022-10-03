@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Allows empty caption and description values so it's possible to save empty fields from the frontend.
 - VideoPress: fix bug when deleting videos
 - VideoPress: fix Maximum update depth exceeded warning triggered from the useVideoDetails() hook
+- VideoPress: fix showing product price at the very first rendering
 
 ## [0.4.1] - 2022-09-27
 ### Added
