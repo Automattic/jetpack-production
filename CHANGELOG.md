@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add/Initialize Backup UI
 - Add a new illustration for WooCommerce recommendation
 - Anchor FM: Make post-publish panel initially closed
 - Apps Card: update design and copy to reflect the Jetpack app
