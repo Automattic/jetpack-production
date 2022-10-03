@@ -1587,17 +1587,17 @@
         },
         {
             "name": "automattic/jetpack-search",
-            "version": "v0.23.0",
-            "version_normalized": "0.23.0.0",
+            "version": "v0.24.0",
+            "version_normalized": "0.24.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-search.git",
-                "reference": "23e4cccff7e0d1bd1e337d266bcb5142a9473a6b"
+                "reference": "8358fe8ad131223686b0fe349a13a72d8146f069"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-search/zipball/23e4cccff7e0d1bd1e337d266bcb5142a9473a6b",
-                "reference": "23e4cccff7e0d1bd1e337d266bcb5142a9473a6b",
+                "url": "https://api.github.com/repos/Automattic/jetpack-search/zipball/8358fe8ad131223686b0fe349a13a72d8146f069",
+                "reference": "8358fe8ad131223686b0fe349a13a72d8146f069",
                 "shasum": ""
             },
             "require": {
@@ -1613,7 +1613,7 @@
                 "automattic/wordbless": "^0.4.0",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-09-27T17:31:44+00:00",
+            "time": "2022-10-03T21:59:49+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1623,7 +1623,7 @@
                     "link-template": "https://github.com/Automattic/jetpack-search/compare/v${old}...v${new}"
                 },
                 "branch-alias": {
-                    "dev-trunk": "0.23.x-dev"
+                    "dev-trunk": "0.24.x-dev"
                 },
                 "version-constants": {
                     "::VERSION": "src/class-package.php"
@@ -1641,7 +1641,7 @@
             ],
             "description": "Tools to assist with enabling cloud search for Jetpack sites.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-search/tree/v0.23.0"
+                "source": "https://github.com/Automattic/jetpack-search/tree/v0.24.0"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-search"
         },
