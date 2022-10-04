@@ -2,34 +2,20 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.5-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Enhancements
-- Add/Initialize Backup UI
-- Apps Card: update design and copy to reflect the Jetpack app
-- Remove Learn More link from agency recommendation
-- Update site-type question on wp-admin banner
-- Update text on site type question to conflict less with the agency/developer answer
-
-### Bug fixes
-- Social: Prevent the package being initialised without a user connection
-
-### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added a new method for displaying Backup link in the menu
-
-## 11.4-beta - 2022-09-27
+## 11.4 - 2022-10-04
 ### Enhancements
 - Editor: update icon sizing in the Jetpack sidebar for consistency. [#26281]
 - Recommendations: update assistant with question for agency managed sites. [#26302]
 
 ### Bug fixes
 - Admin: fix JavaScript errors related to the Jetpack disconnect option on multisite networks. [#26308]
+- Backup: update initialization of UI menu. [#23532]
 - Payments block: make filtering patterns used for the payments intro more robust. [#26465]
+- Social: prevent the package being initialized without a user connection. [#26543]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Account Connection Card: remove magic mobile link [#26311]
+- Account Connection Card: remove magic mobile link. [#26311]
+- Dashboard: update display of Jetpack app offering. [#26276]
 - Disconnect Dialog: fix prop types to avoid warnings from React. [#26340]
 - E2E tests: use CI build artifacts in e2e tests. [#26278]
 - Masterbar: always load CSS from Jetpack, not Fusioned paths, in preparation for de-Fusioning. [#26444]
@@ -43,7 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Sync changes to modules/masterbar/nudges/additional-css/ from wpcom. [#26362]
 - Updated package dependencies.
 - WPcom: always disable WAF on WoA sites. [#26401]
-- WPcom: apply Calypso 'Add new site' styles to wp-admin [#26290]
+- WPcom: apply Calypso 'Add new site' styles to wp-admin. [#26290]
 
 ## 11.4-a.7 - 2022-09-22
 ### Improved compatibility
