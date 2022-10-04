@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: fix current privavy of the video in the UI
 - VideoPress: fix Maximum update depth exceeded warning triggered from the useVideoDetails() hook
 - VideoPress: fix showing product price at the very first rendering
+- VideoPress: restore pagination section
 
 ## [0.4.1] - 2022-09-27
 ### Added
