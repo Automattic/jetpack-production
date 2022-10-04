@@ -230,10 +230,6 @@ return array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-status.php'
 	),
-	'Automattic\\Jetpack\\VideoPress\\VideoPress_Rest_Api_V1_Token' => array(
-		'version' => '0.5.9999999.9999999-dev',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopress-rest-api-v1-token.php'
-	),
 	'Automattic\\Jetpack\\VideoPress\\Initializer' => array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initializer.php'

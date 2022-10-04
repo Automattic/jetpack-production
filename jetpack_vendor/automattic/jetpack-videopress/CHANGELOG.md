@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix mobile style on dashboard library
 - VideoPress: Fix video edit header on mobile
 - VideoPress: Mobile layout for VideoCard component
+- VideoPress: Move upload-jwt to wpcom/v2 namespace
 - VideoPress: refresh video list right after a video is removed
 
 ### Fixed
