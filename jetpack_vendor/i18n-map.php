@@ -72,13 +72,13 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
       'ver' => '0.16.0',
     ),
-    'jetpack-my-jetpack' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '2.1.1',
-    ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
       'ver' => '0.24.0',
+    ),
+    'jetpack-my-jetpack' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
+      'ver' => '2.1.1',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
