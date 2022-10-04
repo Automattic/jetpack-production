@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Prevent the package being initialised without a user connection
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added a new method for displaying Backup link in the menu
 - masterbar: Remove wpcom-specific references to de-Fusioned stubs.
 - Require components lib directly instead of using deprecated `jetpack_require_lib()`.
 - WordPress.com REST API: Adds difm_lite_site_options key to get site API response.
