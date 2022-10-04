@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update site-type question on wp-admin banner
 - Update text on site type question to conflict less with the agency/developer answer
 
+### Bug fixes
+- Social: Prevent the package being initialised without a user connection
+
 ## 11.4-beta - 2022-09-27
 ### Enhancements
 - Editor: update icon sizing in the Jetpack sidebar for consistency. [#26281]
