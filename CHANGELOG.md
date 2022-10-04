@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Social: Prevent the package being initialised without a user connection
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added a new method for displaying Backup link in the menu
+
 ## 11.4-beta - 2022-09-27
 ### Enhancements
 - Editor: update icon sizing in the Jetpack sidebar for consistency. [#26281]
