@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new method for displaying Backup link in the menu
 - masterbar: Remove wpcom-specific references to de-Fusioned stubs.
 - Require components lib directly instead of using deprecated `jetpack_require_lib()`.
+- Revert previously added Backup UI initialization
 - WordPress.com REST API: Adds difm_lite_site_options key to get site API response.
 
 ## 11.4-beta - 2022-09-27
