@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Search: add connection support for new pricing page
 - Updated package dependencies.
 
+### Fixed
+- Search: fix redirection after purchase
+
 ## [0.24.0] - 2022-10-03
 ### Changed
 - Fix styles of Control components on page side to avoid deprecating component styles affecting. [#26567]
