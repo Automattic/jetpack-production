@@ -24,6 +24,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Unit Tests: add check for removing the WAF module from sites hosted on the Atomic platform.
 
+### Bug fixes
+- Social: Prevent the package being initialised without a user connection
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - masterbar: Remove wpcom-specific references to de-Fusioned stubs.
 - Require components lib directly instead of using deprecated `jetpack_require_lib()`.
