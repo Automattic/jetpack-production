@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix mobile style on dashboard library
 - VideoPress: Fix video edit header on mobile
 - VideoPress: Mobile layout for VideoCard component
+- VideoPress: refresh video list right after a video is removed
 
 ### Fixed
 - Components: fix the positio of TOS component of the PricingTable cmp
