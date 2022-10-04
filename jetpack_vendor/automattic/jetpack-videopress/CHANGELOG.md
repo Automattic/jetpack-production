@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Components: fix the positio of TOS component of the PricingTable cmp
 - VideoPress: Add a check for video url before rendering VideoPress block
 - VideoPress: Allows empty caption and description values so it's possible to save empty fields from the frontend.
+- VideoPress: Allows empty title value so it's possible to save empty fields from the frontend.
 - VideoPress: fix bug when deleting videos
 - VideoPress: fix current privavy of the video in the UI
 - VideoPress: fix Maximum update depth exceeded warning triggered from the useVideoDetails() hook
