@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.25.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [0.25.0] - 2022-10-05
 ### Added
 - Added string translations used for the new pricing table [#26595]
@@ -519,6 +523,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
+[0.25.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.25.0...v0.25.1-alpha
 [0.25.0]: https://github.com/Automattic/jetpack-search/compare/v0.24.0...v0.25.0
 [0.24.0]: https://github.com/Automattic/jetpack-search/compare/v0.23.0...v0.24.0
 [0.23.0]: https://github.com/Automattic/jetpack-search/compare/v0.22.2...v0.23.0
