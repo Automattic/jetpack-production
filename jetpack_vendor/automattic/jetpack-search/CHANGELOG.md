@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Apply JetpackSearchLogo and replace footer link to upsell page
 - Search: add connection support for new pricing page
+- Search Dashboard: Added first run and usage section components.
 - Updated package dependencies.
 
 ### Fixed
