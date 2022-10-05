@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add a new illustration for WooCommerce recommendation
 - Anchor FM: Make post-publish panel initially closed
+- Changed mentions of "Site Stats" with "Jetpack Stats"
 - Changed the toolbar text for the "Edit video" button on the VideoPress block to "Replace" to match the core video block's toolbar.
 - Make Payment Button blocks support a wider varity of layout options. Essentially the grid + blockGap options, similar to regular buttons.
 - Publicize: Publicize: Make the pre-publish panel initially closed
