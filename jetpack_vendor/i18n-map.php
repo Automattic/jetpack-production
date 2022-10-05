@@ -28,10 +28,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
       'ver' => '0.8.25',
     ),
-    'jetpack-sync' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-sync',
-      'ver' => '1.38.4',
-    ),
     'jetpack-plugins-installer' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
       'ver' => '0.2.0',
@@ -43,6 +39,10 @@ return array(
     'jetpack-jitm' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
       'ver' => '2.2.28',
+    ),
+    'jetpack-sync' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-sync',
+      'ver' => '1.38.4',
     ),
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
@@ -72,13 +72,13 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
       'ver' => '0.16.1',
     ),
-    'jetpack-search-pkg' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.25.0',
-    ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '2.2.0',
+    ),
+    'jetpack-search-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-search',
+      'ver' => '0.25.0',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
