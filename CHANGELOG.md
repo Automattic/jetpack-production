@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Bump version to 11.5-a.2
 - Changelog
+- Updated package dependencies.
 
 ## 11.5-a.1 - 2022-10-05
 ### Enhancements
