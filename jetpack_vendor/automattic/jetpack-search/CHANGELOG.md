@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: add connection support for new pricing page
 - Search Dashboard: Added first run and usage section components.
 - Updated package dependencies.
+- Use library method for number formatting.
 
 ### Fixed
 - Search: fix redirection after purchase
