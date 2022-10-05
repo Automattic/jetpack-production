@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: request site purchases to check VideoPress is supported by the site
 
+### Fixed
+- VideoPress: Fix uploaded video count update
+
 ## [0.5.0] - 2022-10-05
 ### Added
 - Add the new connection error message to VideoPress. [#26579]
