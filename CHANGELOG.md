@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.5-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Bump version to 11.5-a.2
+
 ## 11.5-a.1 - 2022-10-05
 ### Enhancements
 - Add a new illustration for WooCommerce recommendation. [#26492]
