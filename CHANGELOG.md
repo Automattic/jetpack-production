@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Bump version to 11.5-a.2
 - Changelog
 - Updated package dependencies.
+- Update js-packages/licensing dependency version
 
 ## 11.5-a.1 - 2022-10-05
 ### Enhancements
