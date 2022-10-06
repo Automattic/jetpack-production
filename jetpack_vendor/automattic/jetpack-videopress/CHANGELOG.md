@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - VideoPress: Fix uploaded video count update
+- VideoPress: Load data when user enter directly on edit page
 
 ## [0.5.0] - 2022-10-05
 ### Added
