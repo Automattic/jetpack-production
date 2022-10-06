@@ -242,6 +242,10 @@ return array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-data.php'
 	),
+	'Automattic\\Jetpack\\VideoPress\\Site' => array(
+		'version' => '0.5.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-site.php'
+	),
 	'VIDEOPRESS_PRIVACY' => array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/utility-functions.php'
@@ -249,6 +253,10 @@ return array(
 	'Automattic\\Jetpack\\VideoPress\\Uploader_Rest_Endpoints' => array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader-rest-endpoints.php'
+	),
+	'Automattic\\Jetpack\\VideoPress\\VideoPress_Rest_Api_V1_Site' => array(
+		'version' => '0.5.9999999.9999999-dev',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopress-rest-api-v1-site.php'
 	),
 	'Automattic\\Jetpack\\VideoPress\\Package_Version' => array(
 		'version' => '0.5.9999999.9999999-dev',
