@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: disable privacy button when updating video privacy
 
 ### Fixed
+- VideoPress: Fix modal layout with core gutenberg version
 - VideoPress: Fix uploaded video count update
 - VideoPress: Load data when user enter directly on edit page
 
