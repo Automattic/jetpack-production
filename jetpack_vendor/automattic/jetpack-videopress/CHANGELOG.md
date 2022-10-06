@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: request site purchases to check VideoPress is supported by the site
+- VideoPress: switch privacy icon according to video privacy
 
 ### Fixed
 - VideoPress: Fix uploaded video count update
