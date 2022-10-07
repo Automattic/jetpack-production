@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Apply ContextualUpgradeTrigger with checkout CTA
+- Updated package dependencies.
 
 ## [0.25.0] - 2022-10-05
 ### Added

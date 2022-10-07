@@ -262,6 +262,26 @@ return array(
 		'version' => '0.5.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-package-version.php'
 	),
+	'Automattic\\Jetpack\\Stats\\Tracking_Pixel' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-tracking-pixel.php'
+	),
+	'Automattic\\Jetpack\\Stats\\WPCOM_Stats' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-wpcom-stats.php'
+	),
+	'Automattic\\Jetpack\\Stats\\Options' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-options.php'
+	),
+	'Automattic\\Jetpack\\Stats\\Main' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-main.php'
+	),
+	'Automattic\\Jetpack\\Stats\\XMLRPC_Provider' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-xmlrpc-provider.php'
+	),
 	'Automattic\\Jetpack\\Search\\Instant_Search' => array(
 		'version' => '0.26.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/instant-search/class-instant-search.php'
@@ -851,7 +871,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-device-detection/src/class-device-detection.php'
 	),
 	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.10.9999999.9999999-dev',
+		'version' => '1.11.9999999.9999999-dev',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
 	),
 	'Automattic\\Jetpack\\Assets\\Logo' => array(

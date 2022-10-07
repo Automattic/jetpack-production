@@ -50,7 +50,7 @@ return array(
     ),
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
-      'ver' => '1.10.9999999-dev',
+      'ver' => '1.11.9999999-dev',
     ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
@@ -79,6 +79,10 @@ return array(
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
       'ver' => '0.26.9999999-dev',
+    ),
+    'jetpack-stats' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-stats',
+      'ver' => '0.0.0',
     ),
     'jetpack-videopress-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
