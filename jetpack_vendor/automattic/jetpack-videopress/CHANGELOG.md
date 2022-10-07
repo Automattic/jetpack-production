@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: disable privacy button when updating video privacy
+- VideoPress: hide spinner in frame selector when video is loaded
 
 ### Fixed
 - VideoPress: Change the endpoint used by the client to fetch the site information, so we request the storage usage from the new VideoPress-specific endpoint.
