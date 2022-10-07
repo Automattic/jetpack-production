@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Apply ContextualUpgradeTrigger with checkout CTA
+- Apply tier and latest month usage to plan summary
 - Updated package dependencies.
 
 ### Fixed
