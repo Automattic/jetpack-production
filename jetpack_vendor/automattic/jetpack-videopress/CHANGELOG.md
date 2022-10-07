@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix modal layout with core gutenberg version
 - VideoPress: Fix uploaded video count update
 - VideoPress: Load data when user enter directly on edit page
+- VideoPress: Wrap the request for connection-dependent initial state data around a connection check, so we only set it when there is actually an active connection.
 
 ## [0.5.0] - 2022-10-05
 ### Added
