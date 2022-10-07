@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Search Dashboard: Add support link for plan limits.
 - Search Dashboard: Rename variables to avoid jargon.
 
 ## [0.25.0] - 2022-10-05
