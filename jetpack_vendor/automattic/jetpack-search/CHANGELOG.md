@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Apply ContextualUpgradeTrigger with checkout CTA
 - Updated package dependencies.
 
+### Fixed
+- Search Dashboard: Rename variables to avoid jargon.
+
 ## [0.25.0] - 2022-10-05
 ### Added
 - Added string translations used for the new pricing table [#26595]
