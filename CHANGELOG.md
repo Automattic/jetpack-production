@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Changelog
 - Integrate Stats package in Jetpack plugin
 - Jetpack_PostImages::get_image now returns null, not empty array, on failure to find an image.
+- shortcodes: Fix wufoo shortcode output
 - Updated package dependencies.
 - Update js-packages/licensing dependency version
 
