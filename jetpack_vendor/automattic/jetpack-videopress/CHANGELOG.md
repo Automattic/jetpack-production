@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: disable privacy button when updating video privacy
 
 ### Fixed
+- VideoPress: Change the endpoint used by the client to fetch the site information, so we request the storage usage from the new VideoPress-specific endpoint.
 - VideoPress: check whether the $site_data is a WP_Error instance before to het the storage used data
 - VideoPress: Fix modal layout with core gutenberg version
 - VideoPress: Fix uploaded video count update
