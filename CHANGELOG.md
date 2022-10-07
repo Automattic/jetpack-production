@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Bump version to 11.5-a.2
 - Changelog
 - Integrate Stats package in Jetpack plugin
+- Jetpack_PostImages::get_image now returns null, not empty array, on failure to find an image.
 - Updated package dependencies.
 - Update js-packages/licensing dependency version
 
