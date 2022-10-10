@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Fixed search dashboard for simple sites.
 - Search Dashboard: Add support link for plan limits.
 - Search Dashboard: Rename variables to avoid jargon.
 
