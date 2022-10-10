@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: Create new videopress/v1/site endpoint to fetch site data regardless of having the Jetpack plugin active on the target site.
+- VideoPress: handle core/oembed videopress block variation
 - VideoPress: improve UI when loading video in the frame selector modal
 - VideoPress: Provide the used storage space on the initial state data, using the site information fetched from the WPCOM API.
 - VideoPress: request site purchases to check VideoPress is supported by the site
