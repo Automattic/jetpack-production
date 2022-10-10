@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixed search dashboard for simple sites.
 - Search Dashboard: Add support link for plan limits.
+- Search Dashboard: Refactoring of new UI components.
 - Search Dashboard: Rename variables to avoid jargon.
 
 ## [0.25.0] - 2022-10-05
