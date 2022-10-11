@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: reorganize and improve URL helpers
 
 ### Fixed
+- VideoPress: Thumbnail z-index
 - VideoPress: Uploading states responsive behavior
 
 ## [0.5.1] - 2022-10-11
