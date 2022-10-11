@@ -17,5 +17,8 @@ This is an alpha version! The changes listed here are not final.
 - Stats package: Manage Stats options
 - Stats Package: Tracking Pixel functionality
 
+### Changed
+- Add mirror repo
+
 ### Fixed
 - Fixing static method which was called without self reference.
