@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add typography controls to the payments-button block
 - Show Publicize pre-publish panel if the site has connections enabled
 
+### Improved compatibility
+- Removed compatibility checks involving automatic deactivation of contact form functionality
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Bump version to 11.5-a.2
 - Changelog
