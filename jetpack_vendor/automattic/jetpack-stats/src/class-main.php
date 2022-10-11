@@ -18,7 +18,7 @@ use WP_User;
  *
  * Entrypoint for Stats.
  *
- * @since 0.1.0-alpha
+ * @since 0.1.0
  */
 class Main {
 
