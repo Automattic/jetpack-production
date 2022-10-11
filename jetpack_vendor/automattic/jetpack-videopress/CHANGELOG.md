@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: Add poster image upload to video quick actions
 - VideoPress: expose local videos in the initial state
+- VideoPress: reorganize and improve URL helpers
 
 ## [0.5.1] - 2022-10-11
 ### Added
