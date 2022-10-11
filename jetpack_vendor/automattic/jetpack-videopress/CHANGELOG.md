@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: reduxify local videos. first approach
 - VideoPress: reorganize and improve URL helpers
 
+### Fixed
+- VideoPress: Uploading states responsive behavior
+
 ## [0.5.1] - 2022-10-11
 ### Added
 - VideoPress: Create new videopress/v1/site endpoint to fetch site data regardless of having the Jetpack plugin active on the target site. [#26652]
