@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add dialog to convert core/video to videopress/video
 - VideoPress: Add poster image upload to video quick actions
 - VideoPress: expose local videos in the initial state
+- VideoPress: implement a custom VideoPress video block recovery
 - VideoPress: reduxify local videos. first approach
 - VideoPress: reorganize and improve URL helpers
 
