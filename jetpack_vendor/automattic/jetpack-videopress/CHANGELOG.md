@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- VideoPress: Make sure the thumbnail var is set before using it to prevent "Undefined variable" notice
 - VideoPress: Thumbnail z-index
 - VideoPress: Uploading states responsive behavior
 
