@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: implement a custom VideoPress video block recovery
 - VideoPress: reduxify local videos. first approach
 - VideoPress: reorganize and improve URL helpers
+- VideoPress: show total videos in the Local videos section
 
 ### Fixed
 - VideoPress: Thumbnail z-index
