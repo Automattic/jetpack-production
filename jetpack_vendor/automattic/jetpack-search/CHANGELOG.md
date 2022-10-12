@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Introduce shadowed IconTooltips to tooltips for highlighting upgraded usage limits.
+
 ### Changed
 - Add upgrade button link with applying upgrade actions.
 - Updated package dependencies.
