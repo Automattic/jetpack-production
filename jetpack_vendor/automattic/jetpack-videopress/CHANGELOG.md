@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: reorganize and improve URL helpers
 - VideoPress: show total videos in the Local videos section
 - VideoPress: start to handle loading state for local videos
+- VideoPress: style checkout button when checking out
 
 ### Changed
 - Updated package dependencies.
