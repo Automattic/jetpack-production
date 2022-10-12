@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: reduxify local videos. first approach
 - VideoPress: reorganize and improve URL helpers
 - VideoPress: show total videos in the Local videos section
+- VideoPress: start to handle loading state for local videos
 
 ### Changed
 - Updated package dependencies.
