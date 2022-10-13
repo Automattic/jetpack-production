@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: show total videos in the Local videos section
 - VideoPress: start to handle loading state for local videos
 - VideoPress: style checkout button when checking out
+- VideoPress: Surface filtering-relevant VideoPress meta keys, copying it from the attachment `videopress` metadata object to searcheable new meta key.
 
 ### Changed
 - Updated package dependencies.
