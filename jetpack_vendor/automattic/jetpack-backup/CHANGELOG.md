@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.8.5-alpha] - unreleased
+## [1.9.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Integrate the new connection error message React component into the Backup plugin.
 
 ### Changed
 - Updated package dependencies.
@@ -260,7 +263,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[1.8.5-alpha]: https://github.com/Automattic/jetpack-backup/compare/v1.8.4...v1.8.5-alpha
+[1.9.0-alpha]: https://github.com/Automattic/jetpack-backup/compare/v1.8.4...v1.9.0-alpha
 [1.8.4]: https://github.com/Automattic/jetpack-backup/compare/v1.8.3...v1.8.4
 [1.8.3]: https://github.com/Automattic/jetpack-backup/compare/v1.8.2...v1.8.3
 [1.8.2]: https://github.com/Automattic/jetpack-backup/compare/v1.8.1...v1.8.2
