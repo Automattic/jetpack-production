@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - init cycle
+- Replace usages of stats_get_from_restapi with corresponding methods from Stats package, WPCOM_Stats
 - Updated package dependencies.
 - Update to Typescript to reap the benefits (such as added safety and automation)
 - Updating changelog and readme
