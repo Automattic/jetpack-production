@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Search Dashboard: Add siteTitle to plugin/package data.
 - Search Dashboard: Remove code duplication for support link.
+- Search Dashboard: Update Plan Usage section to remove info icons.
 
 ## [0.27.0] - 2022-10-13
 ### Added
