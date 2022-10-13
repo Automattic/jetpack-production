@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Search Dashboard: Add siteTitle to plugin/package data.
+- Search Dashboard: Better handling of "Unlimited" requests.
 - Search Dashboard: Fix responsive layouts for usage meters.
 - Search Dashboard: Remove code duplication for support link.
 - Search Dashboard: Update Plan Usage section to remove info icons.
