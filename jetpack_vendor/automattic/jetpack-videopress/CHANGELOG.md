@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add dialog to convert core/video to videopress/video
 - VideoPress: Add poster image upload to video quick actions
+- VideoPress: Add support to `videopress_privacy_setting` and `videopress_rating` query filters to filter media attachments using the respectives meta keys.
 - VideoPress: expose local videos in the initial state
 - VideoPress: first pagination approach for Local videos
 - VideoPress: implement a custom VideoPress video block recovery
