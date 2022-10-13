@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - VideoPress: move v6 core/video transfrom from VideoPress to Jetpack plugin
+- VideoPress: Pagination and search while uploading
 
 ### Fixed
 - VideoPress: Make sure the thumbnail var is set before using it to prevent "Undefined variable" notice
