@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fix dashboard backup link for Atomic sites.
 - Fix unmounted state updates in Form CRM integration
+- Get Apps card: Iterate on link to jetpack.com/apps to ensure backwards compatibility and click-tracking
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - init cycle
