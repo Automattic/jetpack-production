@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- VideoPress: move videopress/video transfrom from VideoPress plugin to Jetpack plugin
+
 ### Bug fixes
 - Fix dashboard backup link for Atomic sites.
 - Fix unmounted state updates in Form CRM integration
