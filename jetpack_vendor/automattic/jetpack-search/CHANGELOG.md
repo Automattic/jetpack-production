@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add upgrade button link with applying upgrade actions.
+- Search Dashboard: Update Plan Usage section to more closely match design.
 - Updated package dependencies.
 
 ## [0.26.0] - 2022-10-11
