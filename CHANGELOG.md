@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.5-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated package dependencies.
+
 ## 11.5-a.5 - 2022-10-13
 ### Enhancements
 - VideoPress: move videopress/video transfrom from VideoPress plugin to Jetpack plugin [#26799]
