@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Apps Card: Ensure card is always displayed, regardless of whether promotions are active.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Search: changed Search CTA link to Search upsell page of the search package
 - Updated package dependencies.
