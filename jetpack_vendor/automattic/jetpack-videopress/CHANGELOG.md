@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: do not block quick actions when uploading poster image
 - VideoPress: Expose the list of blog users on the application initial state var
 - VideoPress: filter videos by Filter Section
+- VideoPress: filter videos by uploader
 - VideoPress: Loading mode for VideoRow
 - VideoPress: Persist library type
 
