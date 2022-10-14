@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Fetch checkoutProductUrl for upgrade flow redirection.
 - Introduce GET param just_upgraded and localStorage upgrade_tooltip_finished to determine the tooltips showing.
 - Search: always add Search Dashboard page even when submenu is hidden
 - Search Dashboard: Add missing CTAs and associated logic.
