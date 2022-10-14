@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: minor FilterSection component refactoring
 
 ### Fixed
+- VideoPress: Add thumbnail and loading state when uploading poster image on video row
 - VideoPress: Extract poster image update to actions with loading meta state
 - VideoPress: fix bug when site contains local videos
 
