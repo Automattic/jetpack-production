@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - VideoPress: Extract poster image update to actions with loading meta state
+- VideoPress: fix bug when site contains local videos
 
 ## [0.6.0] - 2022-10-13
 ### Added
