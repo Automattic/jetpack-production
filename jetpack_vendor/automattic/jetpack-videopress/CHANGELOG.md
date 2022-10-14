@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Allow the use of multiple values on the `videopress_rating` and `videopress_privacy_setting` filters, using comma as the separator for the values.
 - VideoPress: do not block quick actions when uploading poster image
 - VideoPress: Loading mode for VideoRow
+- VideoPress: Persist library type
 
 ### Changed
 - VideoPress: minor FilterSection component refactoring
