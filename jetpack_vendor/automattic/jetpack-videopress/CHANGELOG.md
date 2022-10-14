@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - VideoPress: minor FilterSection component refactoring
 
+### Fixed
+- VideoPress: Extract poster image update to actions with loading meta state
+
 ## [0.6.0] - 2022-10-13
 ### Added
 - VideoPress: add dialog to convert core/video to videopress/video [#26768]
