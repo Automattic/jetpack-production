@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Dashboard: Fix responsive layouts for usage meters.
 - Search Dashboard: Remove code duplication for support link.
 - Search Dashboard: Update Plan Usage section to remove info icons.
+- Use adaptive coloring for donut meters in search dashboard
 
 ## [0.27.0] - 2022-10-13
 ### Added
