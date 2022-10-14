@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Introduce GET param just_upgraded and localStorage upgrade_tooltip_finished to determine the tooltips showing.
 - Search: always add Search Dashboard page even when submenu is hidden
+- Search Dashboard: Add missing CTAs and associated logic.
 - Search Dashboard: Add siteTitle to plugin/package data.
 - Search Dashboard: Better handling of "Unlimited" requests.
 - Search Dashboard: Disable adaptive colors for Unlimited requests state.
