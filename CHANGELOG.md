@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Search: changed Search CTA link to Search upsell page of the search package
 - Updated package dependencies.
 
 ## 11.5-a.5 - 2022-10-13
