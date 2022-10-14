@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Check free plan by product_slug and disable Module Control only on free plan.
 - Fetch checkoutProductUrl for upgrade flow redirection.
 - Introduce GET param just_upgraded and localStorage upgrade_tooltip_finished to determine the tooltips showing.
+- Refactor upgrade tooltips.
 - Search: always add Search Dashboard page even when submenu is hidden
 - Search Dashboard: Add missing CTAs and associated logic.
 - Search Dashboard: Add siteTitle to plugin/package data.
@@ -21,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Dashboard: Fix responsive layouts for usage meters.
 - Search Dashboard: Remove code duplication for support link.
 - Search Dashboard: Update Plan Usage section to remove info icons.
+- Updated package dependencies.
 - Use adaptive coloring for donut meters in search dashboard
 
 ## [0.27.0] - 2022-10-13

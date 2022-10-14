@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Persist library type
 
 ### Changed
+- Updated package dependencies.
 - VideoPress: minor FilterSection component refactoring
 
 ### Fixed
