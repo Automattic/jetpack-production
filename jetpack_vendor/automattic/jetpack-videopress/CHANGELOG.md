@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add an actionable dialog when the site needs connect
 - VideoPress: Allow the use of multiple values on the `videopress_rating` and `videopress_privacy_setting` filters, using comma as the separator for the values.
 - VideoPress: do not block quick actions when uploading poster image
+- VideoPress: Expose the list of blog users on the application initial state var
 - VideoPress: filter videos by Filter Section
 - VideoPress: Loading mode for VideoRow
 - VideoPress: Persist library type
