@@ -27,6 +27,7 @@ import classnames from 'classnames';
  */
 import { STORE_ID } from '../../../state';
 import uid from '../../../utils/uid';
+import { fileInputExtensions } from '../../../utils/video-extensions';
 import { usePlan } from '../../hooks/use-plan';
 import useVideos, { useLocalVideos } from '../../hooks/use-videos';
 import Logo from '../logo';
@@ -82,11 +83,7 @@ const Admin = () => {
 		loading,
 	} = useDashboardVideos();
 
-	const {
-		paidFeatures: { isVideoPress1TBSupported, isVideoPressUnlimitedSupported },
-	} = window.jetpackVideoPressInitialState;
-
-	const hasPaidPlan = isVideoPress1TBSupported || isVideoPressUnlimitedSupported;
+	const { hasVideoPressPurchase } = usePlan();
 
 	const { isUserConnected, isRegistered } = useConnection();
 	const { hasConnectionError } = useConnectionErrorNotice();
@@ -132,20 +129,20 @@ const Admin = () => {
 
 								<FormFileUpload
 									onChange={ evt => handleFilesUpload( evt.currentTarget.files ) }
-									accept="video/*"
+									accept={ fileInputExtensions }
 									render={ ( { openFileDialog } ) => (
 										<Button
 											fullWidth={ isSm }
 											onClick={ openFileDialog }
 											isLoading={ loading }
-											disabled={ ! hasPaidPlan && hasVideos }
+											disabled={ ! hasVideoPressPurchase && hasVideos }
 										>
 											{ addVideoLabel }
 										</Button>
 									) }
 								/>
 
-								{ ! hasPaidPlan && <UpgradeTrigger hasUsedVideo={ hasVideos } /> }
+								{ ! hasVideoPressPurchase && <UpgradeTrigger hasUsedVideo={ hasVideos } /> }
 							</Col>
 						</Container>
 					</AdminSectionHero>

@@ -13,7 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- VideoPress: disable upoading button when site supports paid feature
 - VideoPress: Fix focus style on ClipboardButtonInput component
+- VideoPress: Use allowed video extensions from initial state
 
 ## [0.6.1] - 2022-10-17
 ### Added
