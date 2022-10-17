@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Apps Card: Ensure card is always displayed, regardless of whether promotions are active.
 - Form block selection: improve parent block selection when inner block is already selected
 
+### Bug fixes
+- Fix issue where payment-buttons font sizes could take precedence over the font sizes of contained button blocks
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Manually sync site settings endpoint files with their WPCOM counterparts
 - Search: changed Search CTA link to Search upsell page of the search package
