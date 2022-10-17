@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- VideoPress: Fix focus style on ClipboardButtonInput component
+- VideoPress: Use allowed video extensions from initial state
+
 ## [0.6.1] - 2022-10-17
 ### Added
 - VideoPress: add an actionable dialog when the site needs connect [#26819]
