@@ -27,7 +27,6 @@ import classnames from 'classnames';
  */
 import { STORE_ID } from '../../../state';
 import uid from '../../../utils/uid';
-import { fileInputExtensions } from '../../../utils/video-extensions';
 import { usePlan } from '../../hooks/use-plan';
 import useVideos, { useLocalVideos } from '../../hooks/use-videos';
 import Logo from '../logo';
@@ -133,7 +132,7 @@ const Admin = () => {
 
 								<FormFileUpload
 									onChange={ evt => handleFilesUpload( evt.currentTarget.files ) }
-									accept={ fileInputExtensions }
+									accept="video/*"
 									render={ ( { openFileDialog } ) => (
 										<Button
 											fullWidth={ isSm }

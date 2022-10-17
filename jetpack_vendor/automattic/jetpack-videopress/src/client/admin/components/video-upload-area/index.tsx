@@ -10,9 +10,11 @@ import { DragEvent, useCallback, useState, useRef, ChangeEvent } from 'react';
  * Internal dependencies
  */
 import { ReactNode } from 'react';
-import { allowedVideoExtensions, fileInputExtensions } from '../../../utils/video-extensions';
+import { VIDEO_EXTENSIONS } from '../../../state/constants';
 import styles from './style.module.scss';
 import { VideoUploadAreaProps } from './types';
+
+const inputExtensions = VIDEO_EXTENSIONS.map( extension => `.${ extension }` ).join( ',' );
 
 /**
  * Video Upload Area component
@@ -51,7 +53,7 @@ const VideoUploadArea = ( { className, onSelectFiles }: VideoUploadAreaProps ) =
 			setIsDraggingOver( false );
 
 			const files = Array.from( event.dataTransfer.files ).filter( file => {
-				return allowedVideoExtensions.some( extension => file.name.endsWith( extension ) );
+				return VIDEO_EXTENSIONS.some( extension => file.name.endsWith( extension ) );
 			} );
 
 			onSelectFiles( files );
@@ -72,7 +74,7 @@ const VideoUploadArea = ( { className, onSelectFiles }: VideoUploadAreaProps ) =
 			<input
 				ref={ inputRef }
 				type="file"
-				accept={ fileInputExtensions }
+				accept={ inputExtensions }
 				className={ classnames( styles[ 'file-input' ] ) }
 				onChange={ handleFileInputChangeEvent }
 			/>
