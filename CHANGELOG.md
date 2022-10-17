@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Apps Card: Ensure card is always displayed, regardless of whether promotions are active.
 - Form block selection: improve parent block selection when inner block is already selected
+- Subscription block: don't include Publicize connections in subscriber count.
 
 ### Bug fixes
 - Fix issue where payment-buttons font sizes could take precedence over the font sizes of contained button blocks
