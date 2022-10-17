@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- VideoPress: track page view and checking out events
+
 ### Changed
 - Updated package dependencies.
 - VideoPress: change the videopress redirect value to lead to product page
