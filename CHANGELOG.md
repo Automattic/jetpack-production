@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.5-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 11.5-a.8
+
 ## 11.5-a.7 - 2022-10-17
 ### Enhancements
 - Dashboard: ensure Apps card is always displayed, regardless of whether promotions are active. [#26659]
