@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: change the videopress redirect value to lead to product page
 
 ### Fixed
 - VideoPress: disable upoading button when site supports paid feature
