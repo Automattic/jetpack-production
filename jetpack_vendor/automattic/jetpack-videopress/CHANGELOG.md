@@ -5,28 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.6.1] - 2022-10-17
 ### Added
-- VideoPress: add an actionable dialog when the site needs connect
-- VideoPress: Allow the use of multiple values on the `videopress_rating` and `videopress_privacy_setting` filters, using comma as the separator for the values.
-- VideoPress: do not block quick actions when uploading poster image
-- VideoPress: Expose the list of blog users on the application initial state var
-- VideoPress: filter videos by Filter Section
-- VideoPress: filter videos by uploader
-- VideoPress: Loading mode for VideoRow
-- VideoPress: Persist library type
+- VideoPress: add an actionable dialog when the site needs connect [#26819]
+- VideoPress: Allow the use of multiple values on the `videopress_rating` and `videopress_privacy_setting` filters, using comma as the separator for the values. [#26830]
+- VideoPress: do not block quick actions when uploading poster image [#26853]
+- VideoPress: Expose the list of blog users on the application initial state var [#26857]
+- VideoPress: filter videos by Filter Section [#26845]
+- VideoPress: filter videos by uploader [#26859]
+- VideoPress: Loading mode for VideoRow [#26834]
+- VideoPress: Persist library type [#26836]
 
 ### Changed
-- Updated package dependencies.
-- VideoPress: minor FilterSection component refactoring
+- Updated package dependencies. [#26851]
+- VideoPress: minor FilterSection component refactoring [#26837]
 
 ### Fixed
-- VideoPress: Add thumbnail and loading state when uploading poster image on video row
-- VideoPress: Extract poster image update to actions with loading meta state
-- VideoPress: fix bug when site contains local videos
+- VideoPress: Add thumbnail and loading state when uploading poster image on video row [#26856]
+- VideoPress: Extract poster image update to actions with loading meta state [#26833]
+- VideoPress: fix bug when site contains local videos [#26843]
 
 ## [0.6.0] - 2022-10-13
 ### Added
@@ -316,7 +313,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.6.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.6.0...v0.6.1-alpha
+[0.6.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.4.1...v0.5.0
