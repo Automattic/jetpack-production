@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: Add confirmation before leaving page when upload is in progress
+- VideoPress: Scroll to top on route change
 - VideoPress: track page view and checking out events
 
 ### Changed
