@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Use API values for paid allowance limits shown in the new pricing table
 
 ## [0.28.0] - 2022-10-17
 ### Changed
