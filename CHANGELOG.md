@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Featured image: Add featured_image_email_enabled option to the site settings endpoint
 - Init 11.5-a.8
 - Remove an obsolete hack in class.wpcom-json-api-render-endpoint.php
 - Updated package dependencies.
