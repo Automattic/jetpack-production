@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Consent Form Field: add field to success page, email ,and feedback view.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Featured image: Add featured_image_email_enabled option to the site settings endpoint
 - Init 11.5-a.8
