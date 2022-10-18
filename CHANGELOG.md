@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove contact-form overlay (used to improve form block selection) as it's messing with the inserter hover behavior
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Copy wpcom hack from D17161
 - Featured image: Add featured_image_email_enabled option to the site settings endpoint
 - Init 11.5-a.8
 - Remove an obsolete hack in class.wpcom-json-api-render-endpoint.php
