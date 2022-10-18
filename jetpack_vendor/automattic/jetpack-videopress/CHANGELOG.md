@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix focus style on ClipboardButtonInput component
 - VideoPress: fix the issue when uploading the file by dropping it off on the media placeholder
 - VideoPress: Use allowed video extensions from initial state
+- VideoPress: Use camera icon as thumbnail when the video is private.
 
 ## [0.6.1] - 2022-10-17
 ### Added
