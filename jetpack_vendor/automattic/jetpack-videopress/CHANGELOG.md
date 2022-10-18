@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - VideoPress: disable upoading button when site supports paid feature
 - VideoPress: Fix focus style on ClipboardButtonInput component
+- VideoPress: fix the issue when uploading the file by dropping it off on the media placeholder
 - VideoPress: Use allowed video extensions from initial state
 
 ## [0.6.1] - 2022-10-17
