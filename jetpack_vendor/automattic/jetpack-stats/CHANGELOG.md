@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.3.0] - 2022-10-19
 ### Changed
-- Caching errors when fetching stats and revered cache prefix.
+- Cache errors when fetching stats and reverted cache prefix. [#26922]
 
 ## [0.2.0] - 2022-10-13
 ### Changed
@@ -32,5 +29,5 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
-[0.3.0-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.2.0...v0.3.0-alpha
+[0.3.0]: https://github.com/Automattic/jetpack-stats/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Automattic/jetpack-stats/compare/v0.1.0...v0.2.0

@@ -2,24 +2,21 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.5-a.8 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 11.5-a.9 - 2022-10-19
 ### Bug fixes
-- Consent Form Field: add field to success page, email ,and feedback view.
-- Remove contact-form overlay (used to improve form block selection) as it's messing with the inserter hover behavior
+- Contact Form: display consent form field result in notification emails and feedback views. [#26878]
+- Contact Form: remove overlay causing issues with the block inserter hover behavior. [#26910]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add $all_values param to contact_form_to filter
-- Copy wpcom hack from D17161
-- Featured image: Add featured_image_email_enabled option to the site settings endpoint
-- Init 11.5-a.8
-- Remove an obsolete hack in class.wpcom-json-api-render-endpoint.php
-- Sharing: Add caching for DB queries.
-- Updated package dependencies.
-- Update jetpack_require_lib to require_once
-- WordPress.com REST API: exposed P2 design elements in API response
+- Add $all_values param to contact_form_to filter [#26810]
+- Copy wpcom hack from D17161 [#26891]
+- Featured image: Add featured_image_email_enabled option to the site settings endpoint [#26696]
+- Init 11.5-a.8 [#26879]
+- Remove an obsolete hack in class.wpcom-json-api-render-endpoint.php [#26893]
+- Sharing: Add caching for DB queries. [#26933]
+- Updated package dependencies. [#26808]
+- Update jetpack_require_lib to require_once [#26804]
+- WordPress.com REST API: exposed P2 design elements in API response [#26863]
 
 ## 11.5-a.7 - 2022-10-17
 ### Enhancements
