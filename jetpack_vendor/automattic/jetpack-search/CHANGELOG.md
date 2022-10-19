@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Tweak colophon link to Search upgrade page
 
+### Fixed
+- Hide Jetpack logo toggle, enforce display for free plans
+
 ## [0.29.0] - 2022-10-19
 ### Added
 - Search: enable new pricing if pricing_version is set to 202208 from API [#26900]
