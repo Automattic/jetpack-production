@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.5-a.10 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- init 11.5-a.10 cycle
+
 ## 11.5-a.9 - 2022-10-19
 ### Bug fixes
 - Contact Form: display consent form field result in notification emails and feedback views. [#26878]
