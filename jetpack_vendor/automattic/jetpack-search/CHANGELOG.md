@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Hide Jetpack logo toggle, enforce display for free plans
+- Search: Hide post-purchase tooltips for free plan activation
 
 ## [0.29.0] - 2022-10-19
 ### Added
