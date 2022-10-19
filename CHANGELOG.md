@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 11.5-a.8
 - Remove an obsolete hack in class.wpcom-json-api-render-endpoint.php
 - Updated package dependencies.
+- Update jetpack_require_lib to require_once
 - WordPress.com REST API: exposed P2 design elements in API response
 
 ## 11.5-a.7 - 2022-10-17
