@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.29.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Tweak colophon link to Search upgrade page
+
 ## [0.29.0] - 2022-10-19
 ### Added
 - Search: enable new pricing if pricing_version is set to 202208 from API [#26900]
@@ -574,6 +581,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
+[0.29.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.29.0...v0.29.1-alpha
 [0.29.0]: https://github.com/Automattic/jetpack-search/compare/v0.28.0...v0.29.0
 [0.28.0]: https://github.com/Automattic/jetpack-search/compare/v0.27.0...v0.28.0
 [0.27.0]: https://github.com/Automattic/jetpack-search/compare/v0.26.0...v0.27.0
