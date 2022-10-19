@@ -6,9 +6,6 @@
 
 This is an alpha version! The changes listed here are not final.
 
-### Bug fixes
-- Include spacing between Contact Form blocks to allow the block inserter to be shown on mouse hover
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - init 11.5-a.10 cycle
 
