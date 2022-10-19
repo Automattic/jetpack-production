@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Featured image: Add featured_image_email_enabled option to the site settings endpoint
 - Init 11.5-a.8
 - Remove an obsolete hack in class.wpcom-json-api-render-endpoint.php
+- Sharing: Add caching for DB queries.
 - Updated package dependencies.
 - Update jetpack_require_lib to require_once
 - WordPress.com REST API: exposed P2 design elements in API response
