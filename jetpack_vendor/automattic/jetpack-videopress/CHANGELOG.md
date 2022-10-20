@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add loading state to connect button righ after user clicks on it
 - VideoPress: give access to secondary admins
 
+### Fixed
+- VideoPress: Add check for site connectivity on video details edit page
+
 ## [0.6.2] - 2022-10-19
 ### Added
 - VideoPress: Add confirmation before leaving page when upload is in progress [#26912]
