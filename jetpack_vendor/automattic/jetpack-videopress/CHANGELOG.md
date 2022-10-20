@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: Add component unload prevention on video details edit when there are unsaved changes
+- VideoPress: add loading state to connect button righ after user clicks on it
 
 ## [0.6.2] - 2022-10-19
 ### Added
