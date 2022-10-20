@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Move Contact Forms child blocks to a new category and remove some Core blocks from the child blocks list
+
 ### Bug fixes
 - Include spacing between Contact Form blocks to allow the block inserter to be shown on mouse hover
 
