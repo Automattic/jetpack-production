@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add default spacing attributes on all form variations. This achieves an easier way to select the form (parent) block while retaining wysiwyg capabilities: the user might choose to remove the spacing.
 - Move Contact Forms child blocks to a new category and remove some Core blocks from the child blocks list
 
 ### Bug fixes
