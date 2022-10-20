@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: Add component unload prevention on video details edit when there are unsaved changes
+- VideoPress: add GlobalNotice component
 - VideoPress: add loading state to connect button righ after user clicks on it
 - VideoPress: give access to secondary admins
 - VideoPress: Upload from library
