@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - VideoPress: Add check for site connectivity on video details edit page
+- VideoPress: Fix unsaved changes prompt when updating video thumbnail
 
 ## [0.6.2] - 2022-10-19
 ### Added
