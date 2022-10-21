@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add component unload prevention on video details edit when there are unsaved changes
 - VideoPress: add GlobalNotice component
 - VideoPress: add loading state to connect button righ after user clicks on it
+- VideoPress: Expose VideoPress playback token generation endpoint to enable client display of private videos and thumbnails.
 - VideoPress: give access to secondary admins
 - VideoPress: handle show admin or pricing based on a local state
 - VideoPress: show an actionable notice when user connection is required
