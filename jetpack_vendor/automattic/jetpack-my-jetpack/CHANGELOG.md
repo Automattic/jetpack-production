@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Don't show old price when it's the same as new one
 - Search: check if free plan and new pricing is active using wpcom API
 
 ## [2.3.0] - 2022-10-19
