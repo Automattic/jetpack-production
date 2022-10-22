@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add default spacing attributes on all form variations. This achieves an easier way to select the form (parent) block while retaining wysiwyg capabilities: the user might choose to remove the spacing.
+- Add Jetpack Search Free to my products.
 - Move Contact Forms child blocks to a new category and remove some Core blocks from the child blocks list
 - Remove duplicated contact form settings from the Contact Form block's toolbar in favor of the sidebar
 
