@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Include spacing between Contact Form blocks to allow the block inserter to be shown on mouse hover
+- Search: use search dashboard CTA instead of product page which wasn't detecting if free plan is active correctly
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - CSSTidy: adding margin-block as valid CSS properties
