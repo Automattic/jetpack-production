@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - VideoPress: Add check for site connectivity on video details edit page
 - VideoPress: Check for empty poster image on video polling after upload
+- VideoPress: enqueue token bridge script when `init` action
 - VideoPress: Fix unsaved changes prompt when updating video thumbnail
 - VideoPress: Remove ConnectionErrorNotice component on dashboard when there is no connection issue
 
