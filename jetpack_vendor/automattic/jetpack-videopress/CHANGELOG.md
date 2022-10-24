@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Expose VideoPress playback token generation endpoint to enable client display of private videos and thumbnails.
 - VideoPress: give access to secondary admins
 - VideoPress: handle show admin or pricing based on a local state
+- VideoPress: handle UI when setting private video in the quick actions component
 - VideoPress: show an actionable notice when user connection is required
 - VideoPress: Upload from library
 
