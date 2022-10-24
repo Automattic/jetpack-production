@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a flag to indicate if the pricing is introductory with product price
 - My Jetpack: Support trial
 
 ### Changed
