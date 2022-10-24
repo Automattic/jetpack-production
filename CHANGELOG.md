@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Bring media-v1-1-endpoint in sync with wpcom
+- Comment: Added featured_image_email_enabled for syncing
 - CSSTidy: adding margin-block as valid CSS properties
 - Fix broken `@covers` in tests, and reconfigure coverage directives to not scan ridiculous numbers of files.
 - init 11.5-a.10 cycle
