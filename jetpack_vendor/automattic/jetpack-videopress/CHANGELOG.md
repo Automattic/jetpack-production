@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Upload from library
 
 ### Changed
+- VideoPress: Hide thumbnail actions and open library directly
 - VideoPress: show video thumbnails for private videos in the list view
 
 ### Fixed
