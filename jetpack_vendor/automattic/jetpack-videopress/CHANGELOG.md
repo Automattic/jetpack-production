@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: show an actionable notice when user connection is required
 - VideoPress: Upload from library
 
+### Changed
+- VideoPress: show video thumbnails for private videos in the list view
+
 ### Fixed
 - VideoPress: Add check for site connectivity on video details edit page
 - VideoPress: Check for empty poster image on video polling after upload
