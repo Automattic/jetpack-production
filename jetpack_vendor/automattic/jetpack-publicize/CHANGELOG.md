@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Social: Add the reshare endpoint for proxying the request to WPCOM
 
+### Fixed
+- Display error for broken connections in editor
+
 ## [0.16.2] - 2022-10-11
 ### Changed
 - Updated package dependencies. [#26640]
