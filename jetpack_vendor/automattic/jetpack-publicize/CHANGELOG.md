@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.17.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Social: Add the reshare endpoint for proxying the request to WPCOM
+
 ## [0.16.2] - 2022-10-11
 ### Changed
 - Updated package dependencies. [#26640]
@@ -159,6 +166,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.17.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.16.2...v0.17.0-alpha
 [0.16.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.16.1...v0.16.2
 [0.16.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.16.0...v0.16.1
 [0.16.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.15.0...v0.16.0
