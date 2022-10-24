@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: Support trial
 
+### Changed
+- Search: now support 38 languages
+
 ### Fixed
 - Don't show old price when it's the same as new one
 - Search: check if free plan and new pricing is active using wpcom API
