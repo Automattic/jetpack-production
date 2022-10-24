@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Jetpack Search Free to my products.
 - Add post-purchase onboardings to Recommendation flows
 - Change forms layout flex styles. Remove input's right border (used for spacing). Improve flex directives on 25, 50 and 75 wrappers.
+- Fix visual issues of the Product Price component in the Jetpack plugin
 - Jetpack: Add unconnected site dashboard persistent connection widget
 - Move Contact Forms child blocks to a new category and remove some Core blocks from the child blocks list
 - Remove duplicated contact form settings from the Contact Form block's toolbar in favor of the sidebar
