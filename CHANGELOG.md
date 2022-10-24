@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: use search dashboard CTA instead of product page which wasn't detecting if free plan is active correctly
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Bring media-v1-1-endpoint in sync with wpcom
 - CSSTidy: adding margin-block as valid CSS properties
 - Fix broken `@covers` in tests, and reconfigure coverage directives to not scan ridiculous numbers of files.
 - init 11.5-a.10 cycle
