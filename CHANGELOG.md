@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - CSSTidy: adding margin-block as valid CSS properties
 - Fix broken `@covers` in tests, and reconfigure coverage directives to not scan ridiculous numbers of files.
 - init 11.5-a.10 cycle
+- Updated package dependencies.
 - Update `jetpack_is_mobile()` and `Jetpack_User_Agent_Info` for sync to wpcom.
 
 ## 11.5-a.9 - 2022-10-19
