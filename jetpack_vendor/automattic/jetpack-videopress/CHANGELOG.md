@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Change deprecated prop on VideoQuickActions
 
 ### Fixed
+- VideoPress: fix trying to get token when user is disconnected bug
 - VideoPress: Fix typescript issues
 
 ## [0.6.4] - 2022-10-25
