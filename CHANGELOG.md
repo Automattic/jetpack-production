@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Contact Form child blocks to the Block Library
 - Add default spacing attributes on all form variations. This achieves an easier way to select the form (parent) block while retaining wysiwyg capabilities: the user might choose to remove the spacing.
 - Add Jetpack Search Free to my products.
+- Add Jetpack Social to my products.
 - Add post-purchase onboardings to Recommendation flows
 - Change forms layout flex styles. Remove input's right border (used for spacing). Improve flex directives on 25, 50 and 75 wrappers.
 - Display broken connections to user in editor
