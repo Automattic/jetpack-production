@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Search: now support 38 languages
 - Tweak colophon link to Search upgrade page
+- Updated package dependencies.
 
 ### Fixed
 - Hide Jetpack logo toggle, enforce display for free plans

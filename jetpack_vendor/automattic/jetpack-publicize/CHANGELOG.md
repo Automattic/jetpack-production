@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Cache connection testing results during an HTTP request.
 - Social: Add the reshare endpoint for proxying the request to WPCOM
 
+### Changed
+- Updated package dependencies.
+
 ### Fixed
 - Display error for broken connections in editor
 

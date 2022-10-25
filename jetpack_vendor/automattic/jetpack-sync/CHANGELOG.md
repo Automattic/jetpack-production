@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Search Sync Settings :: Add Marketplace product extra fields meta to allow list
+- Updated package dependencies.
 
 ## [1.40.0] - 2022-10-17
 ### Added

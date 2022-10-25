@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Backup: add a new event to track when a customer dismisses a review request.
+- Updated package dependencies.
 
 ### Fixed
 - Stopped continuous state loading after good backup.
