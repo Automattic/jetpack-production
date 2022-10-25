@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: now supports 38 languages
 - Social: Refactored the resharing UI and moved some additional components to publicize-components
 - Updated package dependencies.
+- Update testing instructions
 - Update `jetpack_is_mobile()` and `Jetpack_User_Agent_Info` for sync to wpcom.
 
 ## 11.5-a.9 - 2022-10-19
