@@ -192,7 +192,7 @@ function jetpack_get_module_i18n( $key ) {
 			),
 
 			'stats' => array(
-				'name' => _x( 'Site Stats', 'Module Name', 'jetpack' ),
+				'name' => _x( 'Jetpack Stats', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Collect valuable traffic stats and insights.', 'Module Description', 'jetpack' ),
 			),
 
@@ -352,6 +352,10 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/sitemaps.php
 			// - modules/wordads.php
 			'Traffic' => _x( 'Traffic', 'Module Tag', 'jetpack' ),
+
+			// Modules with `Jetpack Stats` tag:
+			// - modules/stats.php
+			'Jetpack Stats' => _x( 'Jetpack Stats', 'Module Tag', 'jetpack' ),
 
 			// Modules with `Site Stats` tag:
 			// - modules/stats.php
@@ -1010,7 +1014,7 @@ function jetpack_get_module_info( $key ) {
 	  ),
 	  'stats' => 
 	  array (
-	    'name' => 'Site Stats',
+	    'name' => 'Jetpack Stats',
 	    'description' => 'Collect valuable traffic stats and insights.',
 	    'sort' => '1',
 	    'recommendation_order' => '2',
@@ -1021,7 +1025,7 @@ function jetpack_get_module_info( $key ) {
 	    'requires_connection' => 'Yes',
 	    'requires_user_connection' => '',
 	    'auto_activate' => 'Yes',
-	    'module_tags' => 'Site Stats, Recommended',
+	    'module_tags' => 'Jetpack Stats, Site Stats, Recommended',
 	    'feature' => 'Engagement',
 	    'additional_search_queries' => 'statistics, tracking, analytics, views, traffic, stats',
 	    'plan_classes' => '',
