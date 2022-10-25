@@ -6,9 +6,13 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- WordPress.com REST API: Fix fatal error in the `/sites/$id` endpoint.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init cycle
 - Log and readme cleanup for 11.5-beta
+- Sync sites endpoints from wpcom.
 
 ## 11.5-beta - 2022-10-25
 ### Enhancements
