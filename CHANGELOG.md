@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.6-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init cycle
+
 ## 11.5-beta - 2022-10-25
 ### Enhancements
 - Add Contact Form child blocks to the Block Library [#26937]
