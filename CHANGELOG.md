@@ -2,38 +2,37 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.5-a.10 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 11.5-beta - 2022-10-25
 ### Enhancements
-- Add Contact Form child blocks to the Block Library
-- Add default spacing attributes on all form variations. This achieves an easier way to select the form (parent) block while retaining wysiwyg capabilities: the user might choose to remove the spacing.
-- Add Jetpack Search Free to my products.
-- Add Jetpack Social to my products.
-- Add post-purchase onboardings to Recommendation flows
-- Change forms layout flex styles. Remove input's right border (used for spacing). Improve flex directives on 25, 50 and 75 wrappers.
-- Display broken connections to user in editor
-- Fix visual issues of the Product Price component in the Jetpack plugin
-- Jetpack: Add unconnected site dashboard persistent connection widget
-- Move Contact Forms child blocks to a new category and remove some Core blocks from the child blocks list
-- Remove duplicated contact form settings from the Contact Form block's toolbar in favor of the sidebar
+- Add Contact Form child blocks to the Block Library [#26937]
+- Add default spacing attributes on all form variations. This achieves an easier way to select the form (parent) block while retaining wysiwyg capabilities: the user might choose to remove the spacing. [#26916]
+- Add Jetpack Search Free to my products. [#27007]
+- Add Jetpack Social to my products. [#26990]
+- Add post-purchase onboardings to Recommendation flows [#26484]
+- Change forms layout flex styles. Remove input's right border (used for spacing). Improve flex directives on 25, 50 and 75 wrappers. [#26914]
+- Display broken connections to user in editor [#25803]
+- Fix visual issues of the Product Price component in the Jetpack plugin [#27032]
+- Jetpack: Add unconnected site dashboard persistent connection widget [#26596]
+- Move Contact Forms child blocks to a new category and remove some Core blocks from the child blocks list [#26896]
+- Remove duplicated contact form settings from the Contact Form block's toolbar in favor of the sidebar [#26911]
 
 ### Bug fixes
-- Include spacing between Contact Form blocks to allow the block inserter to be shown on mouse hover
-- Search: use search dashboard CTA instead of product page which wasn't detecting if free plan is active correctly
+- Include spacing between Contact Form blocks to allow the block inserter to be shown on mouse hover [#26818]
+- Search: use search dashboard CTA instead of product page which wasn't detecting if free plan is active correctly [#27016]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Bring media-v1-1-endpoint in sync with wpcom
-- Comment: Added featured_image_email_enabled for syncing
-- CSSTidy: adding margin-block as valid CSS properties
-- Fix broken `@covers` in tests, and reconfigure coverage directives to not scan ridiculous numbers of files.
-- init 11.5-a.10 cycle
-- Search: now supports 38 languages
-- Social: Refactored the resharing UI and moved some additional components to publicize-components
-- Updated package dependencies.
-- Update testing instructions
-- Update `jetpack_is_mobile()` and `Jetpack_User_Agent_Info` for sync to wpcom.
+- Bring media-v1-1-endpoint in sync with wpcom [#27004]
+- Comment: Added featured_image_email_enabled for syncing [#27009]
+- CSSTidy: adding margin-block as valid CSS properties [#26961]
+- Fix broken `@covers` in tests, and reconfigure coverage directives to not scan ridiculous numbers of files. [#26931]
+- init 11.5-a.10 cycle [#26939]
+- Search: now supports 38 languages [#27025]
+- Social: Refactored the resharing UI and moved some additional components to publicize-components [#25993]
+- Updated package dependencies. [#25993]
+- Updated package dependencies. [#26705]
+- Updated package dependencies. [#26980]
+- Update testing instructions [#27027]
+- Update `jetpack_is_mobile()` and `Jetpack_User_Agent_Info` for sync to wpcom. [#26971]
 
 ## 11.5-a.9 - 2022-10-19
 ### Bug fixes
