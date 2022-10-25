@@ -13,11 +13,13 @@ import {
 import { __ } from '@wordpress/i18n';
 import { Icon, chevronRightSmall } from '@wordpress/icons';
 import classnames from 'classnames';
-import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useHistory, Prompt } from 'react-router-dom';
 /**
  * Internal dependencies
  */
 import { VideoPlayer } from '../../../components/video-frame-selector';
+import useUnloadPrevent from '../../hooks/use-unload-prevent';
 import Input from '../input';
 import Logo from '../logo';
 import Placeholder from '../placeholder';
@@ -41,11 +43,11 @@ const Header = ( {
 	onSaveChanges: () => void;
 } ) => {
 	const [ isSm ] = useBreakpointMatch( 'sm' );
-	const navigate = useNavigate();
+	const history = useHistory();
 
 	return (
 		<div className={ classnames( styles[ 'header-wrapper' ], { [ styles.small ]: isSm } ) }>
-			<button onClick={ () => navigate( '/' ) } className={ styles[ 'logo-button' ] }>
+			<button onClick={ () => history.push( '/' ) } className={ styles[ 'logo-button' ] }>
 				<Logo />
 			</button>
 			<div className={ styles[ 'header-content' ] }>
@@ -141,9 +143,13 @@ const EditVideoDetails = () => {
 		title,
 		description,
 		caption,
+		// Playback Token
+		playbackToken,
+		isFetchingPlaybackToken,
 		// Page State/Actions
-		saveDisabled,
+		hasChanges,
 		updating,
+		updated,
 		isFetching,
 		handleSaveChanges,
 		// Metadata
@@ -163,19 +169,45 @@ const EditVideoDetails = () => {
 		libraryAttachment,
 	} = useEditDetails();
 
-	let thumbnail: string | JSX.Element = posterImage;
+	const unsavedChangesMessage = __(
+		'There are unsaved changes. Are you sure you want to exit?',
+		'jetpack-videopress-pkg'
+	);
+
+	useUnloadPrevent( {
+		shouldPrevent: hasChanges && ! updated,
+		message: unsavedChangesMessage,
+	} );
+
+	const history = useHistory();
+
+	useEffect( () => {
+		if ( updated === true ) {
+			history.push( '/' );
+		}
+	}, [ updated ] );
+
+	// We may need the playback token on the video URL as well
+	const videoUrl = playbackToken ? `${ url }?metadata_token=${ playbackToken }` : url;
+
+	let thumbnail = posterImage;
+
 	if ( posterImageSource === 'video' && useVideoAsThumbnail ) {
-		thumbnail = <VideoPlayer src={ url } currentTime={ selectedTime } />;
+		thumbnail = <VideoPlayer src={ videoUrl } currentTime={ selectedTime } />;
 	} else if ( posterImageSource === 'upload' ) {
 		thumbnail = libraryAttachment.url;
 	}
 
+	const isFetchingData = isFetching || isFetchingPlaybackToken;
+
 	return (
 		<>
+			<Prompt when={ hasChanges && ! updated } message={ unsavedChangesMessage } />
+
 			{ frameSelectorIsOpen && (
 				<VideoThumbnailSelectorModal
 					handleCloseSelectFrame={ handleCloseSelectFrame }
-					url={ url }
+					url={ videoUrl }
 					handleVideoFrameSelected={ handleVideoFrameSelected }
 					selectedTime={ selectedTime }
 					handleConfirmFrame={ handleConfirmFrame }
@@ -187,7 +219,7 @@ const EditVideoDetails = () => {
 				header={
 					<Header
 						onSaveChanges={ handleSaveChanges }
-						saveDisabled={ saveDisabled }
+						saveDisabled={ ! hasChanges }
 						saveLoading={ updating }
 					/>
 				}
@@ -202,12 +234,12 @@ const EditVideoDetails = () => {
 								onChangeDescription={ setDescription }
 								caption={ caption ?? '' }
 								onChangeCaption={ setCaption }
-								loading={ isFetching }
+								loading={ isFetchingData }
 							/>
 						</Col>
 						<Col sm={ 4 } md={ 8 } lg={ { start: 9, end: 12 } }>
 							<VideoThumbnail
-								thumbnail={ isFetching ? <Placeholder height={ 200 } /> : thumbnail }
+								thumbnail={ isFetchingData ? <Placeholder height={ 200 } /> : thumbnail }
 								duration={ duration }
 								editable
 								onSelectFromVideo={ handleOpenSelectFrame }
@@ -217,7 +249,7 @@ const EditVideoDetails = () => {
 								filename={ filename ?? '' }
 								uploadDate={ uploadDate ?? '' }
 								src={ url ?? '' }
-								loading={ isFetching }
+								loading={ isFetchingData }
 							/>
 						</Col>
 					</Container>
