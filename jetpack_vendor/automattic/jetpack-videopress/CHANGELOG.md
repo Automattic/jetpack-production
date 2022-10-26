@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - VideoPress: Change deprecated prop on VideoQuickActions
+- VideoPress: fix width of the actionable placeholder of v6
 
 ### Fixed
 - VideoPress: fix trying to get token when user is disconnected bug
