@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Init cycle
 - Log and readme cleanup for 11.5-beta
 - Sync sites endpoints from wpcom.
+- Updated package dependencies.
 
 ## 11.5-beta - 2022-10-25
 ### Enhancements
