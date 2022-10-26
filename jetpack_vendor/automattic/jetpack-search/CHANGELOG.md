@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Search: Fix typo in CTA
 - Search: hide meters etc for Classic Search
 
 ## [0.29.1] - 2022-10-25
