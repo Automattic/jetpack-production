@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress.com REST API: Fix fatal error in the `/sites/$id` endpoint.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Infinite Scroll: Bring in some JS fixes from wpcom.
 - Init cycle
 - Log and readme cleanup for 11.5-beta
 - Sync sites endpoints from wpcom.
