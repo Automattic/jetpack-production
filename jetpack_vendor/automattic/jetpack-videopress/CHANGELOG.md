@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- VideoPress: Add upload progress to VideoThumbnail and correct states on VideoRow
+
 ### Changed
 - Updated package dependencies.
 - VideoPress: Change deprecated prop on VideoQuickActions
