@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Revert the subscription block subscriber count change.
 - Updated mentions of "Site Stats" with "Jetpack Stats"
 
 ### Bug fixes
