@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Revert the subscription block subscriber count change.
 
 ### Bug fixes
+- Publicize Components: Fix the panel component refactor
 - Social: Ensure we have a user connection when loading the module
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
