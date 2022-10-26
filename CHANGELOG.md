@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Infinite Scroll: Bring in some JS fixes from wpcom.
 - Init cycle
 - Log and readme cleanup for 11.5-beta
+- Sync endpoint with wpcom
 - Sync sites endpoints from wpcom.
 - Updated package dependencies.
 
