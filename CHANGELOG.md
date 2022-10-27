@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Form: change contact-form icon
 - Revert the subscription block subscriber count change.
 - Update Contact Form Sidebar to include Manage Responses section and split Form Settings section into more specific sections
+- Update Contact Form Toolbar to include a form settings dropdown
 - Updated mentions of "Site Stats" with "Jetpack Stats"
 
 ### Bug fixes
