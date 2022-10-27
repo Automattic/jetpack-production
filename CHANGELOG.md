@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: Fixed the Related Posts card link to the block editor support doc.
+- E2E tests: disabled update plugin e2e test
 - Infinite Scroll: Bring in some JS fixes from wpcom.
 - Init cycle
 - Log and readme cleanup for 11.5-beta
