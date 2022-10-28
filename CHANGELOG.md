@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: disabled update plugin e2e test
 - Infinite Scroll: Bring in some JS fixes from wpcom.
 - Init cycle
+- Likes: Delete wpcom code paths. Things are just too different to de-Fusion.
 - Log and readme cleanup for 11.5-beta
 - Remove remaining calls to `jetpack_require_lib()`, mainly for non-Fusioned stuff.
 - Sync endpoint with wpcom
