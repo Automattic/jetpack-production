@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated mentions of "Site Stats" with "Jetpack Stats"
 
 ### Bug fixes
+- Prevent grunion contact form from escaping valid URL characters in the redirect URL
 - Publicize Components: Fix the panel component refactor
 - Social: Ensure we have a user connection when loading the module
 - WordPress.com REST API: Fix fatal error in the `/sites/$id` endpoint.
