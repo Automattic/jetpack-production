@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Compatibility: WordPress 6.1 compatibility
 - Dashboard: Fixed the Related Posts card link to the block editor support doc.
 - E2E tests: disabled update plugin e2e test
+- Gifting subscription: Add wpcom_gifting_subscription option to the site settings endpoint
 - Infinite Scroll: Bring in some JS fixes from wpcom.
 - Init cycle
 - Likes: Delete wpcom code paths. Things are just too different to de-Fusion.
