@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress.com REST API: Fix fatal error in the `/sites/$id` endpoint.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Comment: Added wpcom_gifting_subscription for syncing
 - Compatibility: WordPress 6.1 compatibility
 - Dashboard: Fixed the Related Posts card link to the block editor support doc.
 - E2E tests: disabled update plugin e2e test
