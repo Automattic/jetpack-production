@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Revert the subscription block subscriber count change.
 
 ### Bug fixes
+- Prevent grunion contact form from escaping valid URL characters in the redirect URL
 - Publicize Components: Fix the panel component refactor
 - Social: Ensure we have a user connection when loading the module
 
