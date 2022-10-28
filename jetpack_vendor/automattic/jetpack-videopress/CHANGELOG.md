@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: Add upload progress to VideoThumbnail and correct states on VideoRow
+- VideoPress: implement extensions (beta) handling
 
 ### Changed
 - Updated package dependencies.

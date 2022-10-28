@@ -203,6 +203,7 @@ return array(
     'Automattic\\Jetpack\\VideoPress\\AJAX' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-ajax.php',
     'Automattic\\Jetpack\\VideoPress\\Admin_UI' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-admin-ui.php',
     'Automattic\\Jetpack\\VideoPress\\Attachment_Handler' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-attachment-handler.php',
+    'Automattic\\Jetpack\\VideoPress\\Block_Editor_Extensions' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-editor-extensions.php',
     'Automattic\\Jetpack\\VideoPress\\Data' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-data.php',
     'Automattic\\Jetpack\\VideoPress\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initializer.php',
     'Automattic\\Jetpack\\VideoPress\\Jwt_Token_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-jwt-token-bridge.php',
