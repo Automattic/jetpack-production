@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: fix width of the actionable placeholder of v6
 
 ### Fixed
+- VideoPress: Allow actions and stats on VideoCard when processing video and fix styles
 - VideoPress: fix trying to get token when user is disconnected bug
 - VideoPress: Fix typescript issues
 
