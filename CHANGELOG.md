@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Infinite Scroll: Bring in some JS fixes from wpcom.
 - Init cycle
 - Log and readme cleanup for 11.5-beta
+- Remove remaining calls to `jetpack_require_lib()`, mainly for non-Fusioned stuff.
 - Sync endpoint with wpcom
 - Sync sites endpoints from wpcom.
 - Updated package dependencies.
