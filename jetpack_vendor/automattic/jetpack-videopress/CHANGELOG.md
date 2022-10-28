@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - VideoPress: Change deprecated prop on VideoQuickActions
+- VideoPress: Change the playback token handling to expire tokens after 24h.
 - VideoPress: fix width of the actionable placeholder of v6
 
 ### Fixed
