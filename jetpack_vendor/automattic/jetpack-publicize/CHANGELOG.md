@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Classic Editor: Fixed the is_healthy logic that disabled the connections
 - Include built JavaScript bundles in the package.
 
 ## [0.17.0] - 2022-10-25
