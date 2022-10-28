@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Ensure we have a user connection when loading the module
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Compatibility: WordPress 6.1 compatibility
 - Log and readme cleanup for 11.5-beta
 
 ## 11.5-beta - 2022-10-25
