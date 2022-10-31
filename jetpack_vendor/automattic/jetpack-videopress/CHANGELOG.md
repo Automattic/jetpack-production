@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Allow actions and stats on VideoCard when processing video and fix styles
 - VideoPress: fix trying to get token when user is disconnected bug
 - VideoPress: Fix typescript issues
+- VideoPress: Get video title from backend after upload to avoid dirty form while processing
 
 ## [0.6.4] - 2022-10-25
 ### Fixed
