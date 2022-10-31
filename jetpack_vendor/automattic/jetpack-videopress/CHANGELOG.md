@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress: add getMediaToken() async helper
 - VideoPress: add isBetaExtension() helper
 - VideoPress: add isExtensionEnabled() helper"
 - VideoPress: Add upload progress to VideoThumbnail and correct states on VideoRow
