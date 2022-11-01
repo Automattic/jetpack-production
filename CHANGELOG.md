@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.6-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Init 11.6-a.2 cycle
+
 ## 11.6-a.1 - 2022-11-01
 ### Enhancements
 - Form block: update contact-form icon [#27010]
