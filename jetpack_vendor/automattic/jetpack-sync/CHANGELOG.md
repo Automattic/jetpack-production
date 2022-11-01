@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.40.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.40.3] - 2022-11-01
 ### Added
-- Added wpcom_gifting_subscription option for syncing
+- Adds wpcom_gifting_subscription option for syncing [#27116]
 
 ## [1.40.2] - 2022-10-27
 ### Fixed
@@ -750,7 +747,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[1.40.3-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.40.2...v1.40.3-alpha
+[1.40.3]: https://github.com/Automattic/jetpack-sync/compare/v1.40.2...v1.40.3
 [1.40.2]: https://github.com/Automattic/jetpack-sync/compare/v1.40.1...v1.40.2
 [1.40.1]: https://github.com/Automattic/jetpack-sync/compare/v1.40.0...v1.40.1
 [1.40.0]: https://github.com/Automattic/jetpack-sync/compare/v1.39.0...v1.40.0

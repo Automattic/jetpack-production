@@ -2,33 +2,30 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.6-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 11.6-a.1 - 2022-11-01
 ### Enhancements
-- Jetpack Form: change contact-form icon
-- Update Contact Form Sidebar to include Manage Responses section and split Form Settings section into more specific sections
-- Update Contact Form Toolbar to include a form settings dropdown
-- Updated mentions of "Site Stats" with "Jetpack Stats"
+- Form block: update contact-form icon [#27010]
+- Form block: update Contact Form Sidebar to include Manage Responses section and split Form Settings section into more specific sections [#26970]
+- Form block: update Contact Form Toolbar to include a form settings dropdown [#27105]
+- Stats: update mentions of "Site Stats" to "Jetpack Stats" [#27069]
 
 ### Bug fixes
-- SSO: properly disable "match by email" by default.
-- WordPress.com REST API: Fix fatal error in the `/sites/$id` endpoint.
+- SSO: properly disable "match by email" by default. [#27102]
+- WordPress.com REST API: Fix fatal error in site ID endpoint. [#27059]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Comment: Added wpcom_gifting_subscription for syncing
-- Dashboard: Fixed the Related Posts card link to the block editor support doc.
-- E2E tests: disabled update plugin e2e test
-- Gifting subscription: Add wpcom_gifting_subscription option to the site settings endpoint
-- Gifting subscription: Update wpcom_gifting_subscription option default value
-- Infinite Scroll: Bring in some JS fixes from wpcom.
-- Init cycle
-- Likes: Delete wpcom code paths. Things are just too different to de-Fusion.
-- Remove remaining calls to `jetpack_require_lib()`, mainly for non-Fusioned stuff.
-- Sync endpoint with wpcom
-- Sync sites endpoints from wpcom.
-- Updated package dependencies.
+- Added wpcom_gifting_subscription for syncing [#27116]
+- Dashboard: Fixed the Related Posts card link to the block editor support doc. [#27112]
+- E2E tests: disabled update plugin e2e test [#27124]
+- Gifting subscription: Add wpcom_gifting_subscription option to the site settings endpoint [#27137]
+- Gifting subscription: Update wpcom_gifting_subscription option default value [#27204]
+- Infinite Scroll: Bring in some JS fixes from wpcom. [#27065]
+- Init cycle [#27053]
+- Likes: Delete wpcom code paths. Things are just too different to de-Fusion. [#27062]
+- Remove remaining calls to `jetpack_require_lib()`, mainly for non-Fusioned stuff. [#27094]
+- Sync endpoint with wpcom [#27097]
+- Sync sites endpoints from wpcom. [#27059]
+- Updated package dependencies. [#27089]
 
 ## [11.5] - 2022-11-01
 ### Enhancements
