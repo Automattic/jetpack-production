@@ -8,58 +8,58 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Jetpack Form: change contact-form icon
-- Revert the subscription block subscriber count change.
 - Update Contact Form Sidebar to include Manage Responses section and split Form Settings section into more specific sections
 - Update Contact Form Toolbar to include a form settings dropdown
 - Updated mentions of "Site Stats" with "Jetpack Stats"
 
 ### Bug fixes
-- Prevent grunion contact form from escaping valid URL characters in the redirect URL
-- Publicize Components: Fix the panel component refactor
-- Social: Ensure we have a user connection when loading the module
 - WordPress.com REST API: Fix fatal error in the `/sites/$id` endpoint.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Comment: Added wpcom_gifting_subscription for syncing
-- Compatibility: WordPress 6.1 compatibility
 - Dashboard: Fixed the Related Posts card link to the block editor support doc.
 - E2E tests: disabled update plugin e2e test
 - Gifting subscription: Add wpcom_gifting_subscription option to the site settings endpoint
 - Infinite Scroll: Bring in some JS fixes from wpcom.
 - Init cycle
 - Likes: Delete wpcom code paths. Things are just too different to de-Fusion.
-- Log and readme cleanup for 11.5-beta
 - Remove remaining calls to `jetpack_require_lib()`, mainly for non-Fusioned stuff.
 - Sync endpoint with wpcom
 - Sync sites endpoints from wpcom.
 - Updated package dependencies.
 
-## 11.5-beta - 2022-10-25
+## [11.5] - 2022-11-01
 ### Enhancements
 - Dashboard: add connection widget for unconnected sites. [#26596]
 - Dashboard: add Jetpack Search Free  and Jetpack Social to My Products. [#27007, #26990]
 - Form block: add Contact Form child blocks to the Block Library. [#26937]
 - Form block: add default spacing attributes on all form variations. [#26916]
+- Form block: change layout flex styles. [#26914]
 - Form block: move Contact Form child blocks to a new category and remove some Core blocks from the child blocks list. [#26896]
 - Form block: remove duplicated contact form settings from the Contact Form block's toolbar in favor of the sidebar. [#26911]
-- Form block: change layout flex styles. [#26914]
 - Jetpack Social: display broken connections to user in editor. [#25803]
+- Subscription block: revert the subscription block subscriber count change. [#27082]
 
 ### Bug fixes
 - Form block: include spacing between Contact Form blocks to allow the block inserter to be shown on mouse hover. [#26818]
+- Form block: prevent contact form from escaping valid URL characters in the redirect URL [#27141]
+- Publicize Components: Fix the panel component refactor [#27095]
+- Social: Ensure we have a user connection when loading the module [#27061]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add post-purchase onboardings to Recommendation flows [#26484]
 - Bring media-v1-1-endpoint in sync with wpcom [#27004]
 - Comment: Added featured_image_email_enabled for syncing [#27009]
+- Compatibility: WordPress 6.1 compatibility [#27084]
 - CSSTidy: adding margin-block as valid CSS properties [#26961]
 - Fix broken `@covers` in tests, and reconfigure coverage directives to not scan ridiculous numbers of files. [#26931]
+- Fix visual issues of the Product Price component in the Jetpack plugin [#27032]
+- Log and readme cleanup for 11.5-beta [#27055]
 - Search: updated documentation as Search now supports 38 languages [#27025]
+- Search: use search dashboard CTA instead of product page which wasn't detecting if free plan is active correctly. [#27016]
 - Social: Refactored the resharing UI and moved some additional components to publicize-components [#25993]
 - Updated package dependencies. [#25993, #26705, #26980]
 - Update `jetpack_is_mobile()` and `Jetpack_User_Agent_Info` for sync to wpcom. [#26971]
-- Add post-purchase onboardings to Recommendation flows [#26484]
-- Fix visual issues of the Product Price component in the Jetpack plugin [#27032]
-- Search: use search dashboard CTA instead of product page which wasn't detecting if free plan is active correctly. [#27016]
 
 ## 11.5-a.9 - 2022-10-19
 ### Bug fixes
@@ -7236,6 +7236,7 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 
 - Initial release
 
+[11.5]: https://wp.me/p1moTy-Ppq
 [11.4]: https://wp.me/p1moTy-O5I
 [11.3]: https://wp.me/p1moTy-M5i
 [11.2]: https://wp.me/p1moTy-JYL
