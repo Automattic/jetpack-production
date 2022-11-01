@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add upload progress to VideoThumbnail and correct states on VideoRow
 - VideoPress: expose site-type to the client side
 - VideoPress: implement extensions (beta) handling
+- VideoPress: migrate video chapters feature from jetpack to videopress
 
 ### Changed
 - Updated package dependencies.
