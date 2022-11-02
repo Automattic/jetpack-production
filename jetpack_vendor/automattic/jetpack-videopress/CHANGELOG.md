@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: Improve the re-rendering process of the video player when editing video props
+- VideoPress: re-organize hooks to keep video data in sync
 
 ## [0.6.5] - 2022-11-01
 ### Added
