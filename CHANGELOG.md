@@ -2,12 +2,12 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.6-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## 11.5.1 - 2022-11-02
+### Bug fixes
+- Firewall: prevent sites from crashing when updating Jetpack versions due to a missing generated file. 
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Remove include of `functions.is-mobile.php` from `class.jetpack-user-agent.php` to restore status quo.
+- Remove include of `functions.is-mobile.php` from `class.jetpack-user-agent.php` to restore status quo. [#27217]
 
 ## 11.5 - 2022-11-01
 ### Enhancements
