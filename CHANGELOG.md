@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- VideoPress: Include Video Chapters beta block
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.6-a.2 cycle
 - JSON API: Add 1.4 versions to dev in order to browse in https://developer.wordpress.com/docs/api/console/

@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: Add video chapters style selector component
 - VideoPress: Add VideoPress video block select control
+- VideoPress: Scaffolding Video Chapters block
 
 ### Changed
 - VideoPress: Improve the re-rendering process of the video player when editing video props
