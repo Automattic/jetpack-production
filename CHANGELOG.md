@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Update Form block placeholder to include guidance links
 - Update Form child blocks names to be more meaningful
 
 ### Improved compatibility
