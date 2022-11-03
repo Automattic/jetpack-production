@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Update Form child blocks names to be more meaningful
+
 ### Improved compatibility
 - VideoPress: Include Video Chapters beta block
 
