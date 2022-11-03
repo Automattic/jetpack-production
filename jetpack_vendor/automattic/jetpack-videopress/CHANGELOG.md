@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Scaffolding Video Chapters block
 
 ### Changed
+- Modified the VideoPress block's prompt to add a VideoChapters block so that the button functions as expected.
 - VideoPress: Improve the re-rendering process of the video player when editing video props
 - VideoPress: re-organize hooks to keep video data in sync
 
