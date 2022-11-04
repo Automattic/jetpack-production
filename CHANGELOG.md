@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Brings endpoint file in sync with wpcom
 - Comment: Add a missing break statement in the site API endpoint
+- Featured image email template toggle: Add missing 'featured_image_email_enabled' option update
 - Init 11.6-a.2 cycle
 - JSON API: Add 1.4 versions to dev in order to browse in https://developer.wordpress.com/docs/api/console/
 - Remove include of `functions.is-mobile.php` from `class.jetpack-user-agent.php` to restore status quo.
