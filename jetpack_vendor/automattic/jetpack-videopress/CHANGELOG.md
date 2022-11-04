@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add VideoPress video block select control
 - VideoPress: Introduce initial layout for chapters
 - VideoPress: Scaffolding Video Chapters block
+- VideoPress: Show message when there are no search results
 
 ### Changed
 - Modified the VideoPress block's prompt to add a VideoChapters block so that the button functions as expected.
