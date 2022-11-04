@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: re-organize hooks to keep video data in sync
 
 ### Fixed
+- VideoPress: Fix privacy column icon
 - VideoPress: Make sure media details are set before using them.
 
 ## [0.6.5] - 2022-11-01
