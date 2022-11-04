@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Init 11.6-a.2 cycle
 - JSON API: Add 1.4 versions to dev in order to browse in https://developer.wordpress.com/docs/api/console/
 - Remove include of `functions.is-mobile.php` from `class.jetpack-user-agent.php` to restore status quo.
+- Remove nonexistent site editor styles entry point
 - Updated package dependencies.
 
 ## 11.6-a.1 - 2022-11-01
