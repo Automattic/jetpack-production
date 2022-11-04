@@ -23,6 +23,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Improve the re-rendering process of the video player when editing video props
 - VideoPress: re-organize hooks to keep video data in sync
 
+### Fixed
+- VideoPress: Make sure media details are set before using them.
+
 ## [0.6.5] - 2022-11-01
 ### Added
 - VideoPress: add getMediaToken() async helper [#27180]
