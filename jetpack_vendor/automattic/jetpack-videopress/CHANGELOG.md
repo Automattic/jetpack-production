@@ -5,30 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.7.0] - 2022-11-07
 ### Added
-- Adding the new Video Chapter block.
-- Videopress: add a notice and a modal informing the users how they can create chapters
-- VideoPress: Add inspector controls to VideoPress chapters block
-- VideoPress: add Site Settings section
-- VideoPress: Add video chapters style selector component
-- VideoPress: Add VideoPress video block select control
-- VideoPress: Introduce initial layout for chapters
-- VideoPress: Scaffolding Video Chapters block
-- VideoPress: Show message when there are no search results
+- Adding the new Video Chapter block. [#27240]
+- Videopress: add a notice and a modal informing the users how they can create chapters. [#27244]
+- VideoPress: add inspector controls to VideoPress chapters block. [#27242]
+- VideoPress: add Site Settings section. [#27290]
+- VideoPress: add video chapters style selector component. [#27237]
+- VideoPress: add VideoPress video block select control. [#27214]
+- VideoPress: introduce initial layout for chapters. [#27246]
+- VideoPress: scaffolding Video Chapters block. [#27241]
+- VideoPress: show message when there are no search results. [#27275]
 
 ### Changed
-- Modified the VideoPress block's prompt to add a VideoChapters block so that the button functions as expected.
-- VideoPress: Improve the re-rendering process of the video player when editing video props
-- VideoPress: re-organize hooks to keep video data in sync
+- Modified the VideoPress block's prompt to add a VideoChapters block so that the button functions as expected. [#27248]
+- VideoPress: improve the re-rendering process of the video player when editing video props. [#27192]
+- VideoPress: re-organize hooks to keep video data in sync. [#27227]
 
 ### Fixed
-- VideoPress: Change base number to 10 and total space value to 10^12 so we refer to it in terabytes instead of tebibytes, keeping consistency between marketing and product.
-- VideoPress: Fix privacy column icon
-- VideoPress: Make sure media details are set before using them.
+- VideoPress: change base number to 10 and total space value to 10^12 so we refer to it in terabytes instead of tebibytes, keeping consistency between marketing and product. [#27274]
+- VideoPress: fix privacy column icon. [#27277]
+- VideoPress: make sure media details are set before using them. [#27262]
 
 ## [0.6.5] - 2022-11-01
 ### Added
@@ -408,7 +405,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.7.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.6.5...v0.7.0-alpha
+[0.7.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.6.5...v0.7.0
 [0.6.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.6.4...v0.6.5
 [0.6.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.6.3...v0.6.4
 [0.6.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.6.2...v0.6.3
