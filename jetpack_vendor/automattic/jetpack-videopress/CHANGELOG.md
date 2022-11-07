@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: re-organize hooks to keep video data in sync
 
 ### Fixed
+- VideoPress: Change base number to 10 and total space value to 10^12 so we refer to it in terabytes instead of tebibytes, keeping consistency between marketing and product.
 - VideoPress: Fix privacy column icon
 - VideoPress: Make sure media details are set before using them.
 
