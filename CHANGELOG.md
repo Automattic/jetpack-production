@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Include Video Chapters beta block
 
 ### Bug fixes
+- Fix issue where users are not able to edit/crop and restore images.
 - Related Posts Block: when 3 posts are outputted, increase the width to closer to 100%
 - Removing the Customizer link breaks other plugins that rely on it.
 
