@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding the new Video Chapter block.
 - Videopress: add a notice and a modal informing the users how they can create chapters
 - VideoPress: Add inspector controls to VideoPress chapters block
+- VideoPress: add Site Settings section
 - VideoPress: Add video chapters style selector component
 - VideoPress: Add VideoPress video block select control
 - VideoPress: Introduce initial layout for chapters
