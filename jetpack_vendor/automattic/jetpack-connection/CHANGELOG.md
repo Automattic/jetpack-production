@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.46.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [1.46.2] - 2022-11-07
 ### Changed
 - Updated package dependencies. [#27278]
@@ -717,6 +724,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[1.46.3-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.46.2...v1.46.3-alpha
 [1.46.2]: https://github.com/Automattic/jetpack-connection/compare/v1.46.1...v1.46.2
 [1.46.1]: https://github.com/Automattic/jetpack-connection/compare/v1.46.0...v1.46.1
 [1.46.0]: https://github.com/Automattic/jetpack-connection/compare/v1.45.5...v1.46.0
