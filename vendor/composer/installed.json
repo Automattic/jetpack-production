@@ -316,17 +316,17 @@
         },
         {
             "name": "automattic/jetpack-backup",
-            "version": "v1.10.1",
-            "version_normalized": "1.10.1.0",
+            "version": "v1.10.2",
+            "version_normalized": "1.10.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-backup.git",
-                "reference": "cb8967346fbeb327d46acee94a4e6fe5183892a4"
+                "reference": "d2b367b2b1e038fd0be4e43937bdb3cd85d0871b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-backup/zipball/cb8967346fbeb327d46acee94a4e6fe5183892a4",
-                "reference": "cb8967346fbeb327d46acee94a4e6fe5183892a4",
+                "url": "https://api.github.com/repos/Automattic/jetpack-backup/zipball/d2b367b2b1e038fd0be4e43937bdb3cd85d0871b",
+                "reference": "d2b367b2b1e038fd0be4e43937bdb3cd85d0871b",
                 "shasum": ""
             },
             "require": {
@@ -338,15 +338,15 @@
                 "automattic/jetpack-connection": "^1.46",
                 "automattic/jetpack-identity-crisis": "^0.8",
                 "automattic/jetpack-my-jetpack": "^2.3",
-                "automattic/jetpack-status": "^1.14",
-                "automattic/jetpack-sync": "^1.40"
+                "automattic/jetpack-status": "^1.15",
+                "automattic/jetpack-sync": "^1.41"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
                 "automattic/wordbless": "@dev",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-11-01T20:39:10+00:00",
+            "time": "2022-11-07T21:21:41+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -377,7 +377,7 @@
             ],
             "description": "Tools to assist with backing up Jetpack sites.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-backup/tree/v1.10.1"
+                "source": "https://github.com/Automattic/jetpack-backup/tree/v1.10.2"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-backup"
         },
@@ -582,17 +582,17 @@
         },
         {
             "name": "automattic/jetpack-connection",
-            "version": "v1.46.1",
-            "version_normalized": "1.46.1.0",
+            "version": "v1.46.2",
+            "version_normalized": "1.46.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-connection.git",
-                "reference": "07259e2056fe9da834ca1678503455235694528b"
+                "reference": "f9cbd0fcf11393c540d46a7d3639dde1e19fa247"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-connection/zipball/07259e2056fe9da834ca1678503455235694528b",
-                "reference": "07259e2056fe9da834ca1678503455235694528b",
+                "url": "https://api.github.com/repos/Automattic/jetpack-connection/zipball/f9cbd0fcf11393c540d46a7d3639dde1e19fa247",
+                "reference": "f9cbd0fcf11393c540d46a7d3639dde1e19fa247",
                 "shasum": ""
             },
             "require": {
@@ -601,7 +601,7 @@
                 "automattic/jetpack-constants": "^1.6",
                 "automattic/jetpack-redirect": "^1.7",
                 "automattic/jetpack-roles": "^1.4",
-                "automattic/jetpack-status": "^1.14"
+                "automattic/jetpack-status": "^1.15"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
@@ -609,7 +609,7 @@
                 "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-11-01T18:28:11+00:00",
+            "time": "2022-11-07T21:21:08+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -639,7 +639,7 @@
             ],
             "description": "Everything needed to connect to the Jetpack infrastructure",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-connection/tree/v1.46.1"
+                "source": "https://github.com/Automattic/jetpack-connection/tree/v1.46.2"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-connection"
         },
@@ -693,24 +693,24 @@
         },
         {
             "name": "automattic/jetpack-device-detection",
-            "version": "v1.4.19",
-            "version_normalized": "1.4.19.0",
+            "version": "v1.4.20",
+            "version_normalized": "1.4.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-device-detection.git",
-                "reference": "43a2a48db35e365aa3c13c0bd4e7ff3862a949ea"
+                "reference": "b1eefe1420214aa37b3488571ecdba2d885a5cae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-device-detection/zipball/43a2a48db35e365aa3c13c0bd4e7ff3862a949ea",
-                "reference": "43a2a48db35e365aa3c13c0bd4e7ff3862a949ea",
+                "url": "https://api.github.com/repos/Automattic/jetpack-device-detection/zipball/b1eefe1420214aa37b3488571ecdba2d885a5cae",
+                "reference": "b1eefe1420214aa37b3488571ecdba2d885a5cae",
                 "shasum": ""
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-10-25T09:00:53+00:00",
+            "time": "2022-11-07T21:20:40+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -734,7 +734,7 @@
             ],
             "description": "A way to detect device types based on User-Agent header.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-device-detection/tree/v1.4.19"
+                "source": "https://github.com/Automattic/jetpack-device-detection/tree/v1.4.20"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-device-detection"
         },
@@ -836,17 +836,17 @@
         },
         {
             "name": "automattic/jetpack-identity-crisis",
-            "version": "v0.8.28",
-            "version_normalized": "0.8.28.0",
+            "version": "v0.8.29",
+            "version_normalized": "0.8.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-identity-crisis.git",
-                "reference": "f2294923382471f3b5345872e965ca6964435dce"
+                "reference": "0a86f09225c9cb78c6a4fe6732e40156e6ee5d27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-identity-crisis/zipball/f2294923382471f3b5345872e965ca6964435dce",
-                "reference": "f2294923382471f3b5345872e965ca6964435dce",
+                "url": "https://api.github.com/repos/Automattic/jetpack-identity-crisis/zipball/0a86f09225c9cb78c6a4fe6732e40156e6ee5d27",
+                "reference": "0a86f09225c9cb78c6a4fe6732e40156e6ee5d27",
                 "shasum": ""
             },
             "require": {
@@ -854,14 +854,14 @@
                 "automattic/jetpack-connection": "^1.46",
                 "automattic/jetpack-constants": "^1.6",
                 "automattic/jetpack-logo": "^1.5",
-                "automattic/jetpack-status": "^1.14"
+                "automattic/jetpack-status": "^1.15"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
                 "automattic/wordbless": "@dev",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-11-01T20:38:59+00:00",
+            "time": "2022-11-07T21:21:22+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -889,23 +889,23 @@
             ],
             "description": "Identity Crisis.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-identity-crisis/tree/v0.8.28"
+                "source": "https://github.com/Automattic/jetpack-identity-crisis/tree/v0.8.29"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-identity-crisis"
         },
         {
             "name": "automattic/jetpack-jitm",
-            "version": "v2.2.31",
-            "version_normalized": "2.2.31.0",
+            "version": "v2.2.32",
+            "version_normalized": "2.2.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-jitm.git",
-                "reference": "b6acaae3d803a6fa82fe263a16493657851e461e"
+                "reference": "05d0f691b68bc89ad04dcc92fb62a4e40a897d19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-jitm/zipball/b6acaae3d803a6fa82fe263a16493657851e461e",
-                "reference": "b6acaae3d803a6fa82fe263a16493657851e461e",
+                "url": "https://api.github.com/repos/Automattic/jetpack-jitm/zipball/05d0f691b68bc89ad04dcc92fb62a4e40a897d19",
+                "reference": "05d0f691b68bc89ad04dcc92fb62a4e40a897d19",
                 "shasum": ""
             },
             "require": {
@@ -916,14 +916,14 @@
                 "automattic/jetpack-logo": "^1.5",
                 "automattic/jetpack-partner": "^1.7",
                 "automattic/jetpack-redirect": "^1.7",
-                "automattic/jetpack-status": "^1.14"
+                "automattic/jetpack-status": "^1.15"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
                 "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-11-01T20:39:01+00:00",
+            "time": "2022-11-07T21:21:25+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -951,7 +951,7 @@
             ],
             "description": "Just in time messages for Jetpack",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-jitm/tree/v2.2.31"
+                "source": "https://github.com/Automattic/jetpack-jitm/tree/v2.2.32"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-jitm"
         },
@@ -1062,24 +1062,24 @@
         },
         {
             "name": "automattic/jetpack-logo",
-            "version": "v1.5.17",
-            "version_normalized": "1.5.17.0",
+            "version": "v1.5.18",
+            "version_normalized": "1.5.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-logo.git",
-                "reference": "5364da3e13e9d730c3b7570e106f128e310969ff"
+                "reference": "aa36dab5e936eff1ac47617c7ab772839fb29212"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-logo/zipball/5364da3e13e9d730c3b7570e106f128e310969ff",
-                "reference": "5364da3e13e9d730c3b7570e106f128e310969ff",
+                "url": "https://api.github.com/repos/Automattic/jetpack-logo/zipball/aa36dab5e936eff1ac47617c7ab772839fb29212",
+                "reference": "aa36dab5e936eff1ac47617c7ab772839fb29212",
                 "shasum": ""
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-07-26T13:41:07+00:00",
+            "time": "2022-11-07T21:20:38+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1103,7 +1103,7 @@
             ],
             "description": "A logo for Jetpack",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-logo/tree/v1.5.17"
+                "source": "https://github.com/Automattic/jetpack-logo/tree/v1.5.18"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-logo"
         },
@@ -1172,22 +1172,22 @@
         },
         {
             "name": "automattic/jetpack-partner",
-            "version": "v1.7.18",
-            "version_normalized": "1.7.18.0",
+            "version": "v1.7.19",
+            "version_normalized": "1.7.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-partner.git",
-                "reference": "7e486ffd76b544f128ebc5ff2421dcf03997b11c"
+                "reference": "915f75e0fcdecc7aee8d6948a8faa575929f097b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-partner/zipball/7e486ffd76b544f128ebc5ff2421dcf03997b11c",
-                "reference": "7e486ffd76b544f128ebc5ff2421dcf03997b11c",
+                "url": "https://api.github.com/repos/Automattic/jetpack-partner/zipball/915f75e0fcdecc7aee8d6948a8faa575929f097b",
+                "reference": "915f75e0fcdecc7aee8d6948a8faa575929f097b",
                 "shasum": ""
             },
             "require": {
                 "automattic/jetpack-connection": "^1.46",
-                "automattic/jetpack-status": "^1.14"
+                "automattic/jetpack-status": "^1.15"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
@@ -1195,7 +1195,7 @@
                 "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-10-25T11:12:39+00:00",
+            "time": "2022-11-07T21:21:14+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1219,7 +1219,7 @@
             ],
             "description": "Support functions for Jetpack hosting partners.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-partner/tree/v1.7.18"
+                "source": "https://github.com/Automattic/jetpack-partner/tree/v1.7.19"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-partner"
         },
@@ -1274,17 +1274,17 @@
         },
         {
             "name": "automattic/jetpack-plans",
-            "version": "v0.2.5",
-            "version_normalized": "0.2.5.0",
+            "version": "v0.2.6",
+            "version_normalized": "0.2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-plans.git",
-                "reference": "49ae81f9b7ff8e4571650d86acc721c400474ba5"
+                "reference": "838768dbbc4fce7ca58fe451b64c61714b4daf0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-plans/zipball/49ae81f9b7ff8e4571650d86acc721c400474ba5",
-                "reference": "49ae81f9b7ff8e4571650d86acc721c400474ba5",
+                "url": "https://api.github.com/repos/Automattic/jetpack-plans/zipball/838768dbbc4fce7ca58fe451b64c61714b4daf0a",
+                "reference": "838768dbbc4fce7ca58fe451b64c61714b4daf0a",
                 "shasum": ""
             },
             "require": {
@@ -1292,11 +1292,11 @@
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
-                "automattic/jetpack-status": "^1.14",
+                "automattic/jetpack-status": "^1.15",
                 "automattic/wordbless": "@dev",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-10-25T11:12:44+00:00",
+            "time": "2022-11-07T21:21:19+00:00",
             "type": "library",
             "extra": {
                 "autotagger": true,
@@ -1320,7 +1320,7 @@
             ],
             "description": "Fetch information about Jetpack Plans from wpcom",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-plans/tree/v0.2.5"
+                "source": "https://github.com/Automattic/jetpack-plans/tree/v0.2.6"
             },
             "install-path": "../automattic/jetpack-plans"
         },
@@ -1488,28 +1488,28 @@
         },
         {
             "name": "automattic/jetpack-redirect",
-            "version": "v1.7.18",
-            "version_normalized": "1.7.18.0",
+            "version": "v1.7.19",
+            "version_normalized": "1.7.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-redirect.git",
-                "reference": "b65fd37cda2623843dbfb3c2e40673a7aaa30a04"
+                "reference": "b9ebaf3e0f120ff98a39b4265b7b8a58483f2647"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-redirect/zipball/b65fd37cda2623843dbfb3c2e40673a7aaa30a04",
-                "reference": "b65fd37cda2623843dbfb3c2e40673a7aaa30a04",
+                "url": "https://api.github.com/repos/Automattic/jetpack-redirect/zipball/b9ebaf3e0f120ff98a39b4265b7b8a58483f2647",
+                "reference": "b9ebaf3e0f120ff98a39b4265b7b8a58483f2647",
                 "shasum": ""
             },
             "require": {
-                "automattic/jetpack-status": "^1.14"
+                "automattic/jetpack-status": "^1.15"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
                 "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-07-26T13:41:44+00:00",
+            "time": "2022-11-07T21:21:04+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1533,7 +1533,7 @@
             ],
             "description": "Utilities to build URLs to the jetpack.com/redirect/ service",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-redirect/tree/v1.7.18"
+                "source": "https://github.com/Automattic/jetpack-redirect/tree/v1.7.19"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-redirect"
         },
@@ -1587,17 +1587,17 @@
         },
         {
             "name": "automattic/jetpack-search",
-            "version": "v0.30.0",
-            "version_normalized": "0.30.0.0",
+            "version": "v0.30.1",
+            "version_normalized": "0.30.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-search.git",
-                "reference": "660890596ef1c045541582e1b2ac3501b17a9f20"
+                "reference": "24deb2a59349142505bdc2e34ba6401414ede371"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-search/zipball/660890596ef1c045541582e1b2ac3501b17a9f20",
-                "reference": "660890596ef1c045541582e1b2ac3501b17a9f20",
+                "url": "https://api.github.com/repos/Automattic/jetpack-search/zipball/24deb2a59349142505bdc2e34ba6401414ede371",
+                "reference": "24deb2a59349142505bdc2e34ba6401414ede371",
                 "shasum": ""
             },
             "require": {
@@ -1606,14 +1606,14 @@
                 "automattic/jetpack-connection": "^1.46",
                 "automattic/jetpack-constants": "^1.6",
                 "automattic/jetpack-my-jetpack": "^2.3",
-                "automattic/jetpack-status": "^1.14"
+                "automattic/jetpack-status": "^1.15"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
                 "automattic/wordbless": "0.4.0",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-11-01T20:39:15+00:00",
+            "time": "2022-11-07T21:21:48+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1641,36 +1641,36 @@
             ],
             "description": "Tools to assist with enabling cloud search for Jetpack sites.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-search/tree/v0.30.0"
+                "source": "https://github.com/Automattic/jetpack-search/tree/v0.30.1"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-search"
         },
         {
             "name": "automattic/jetpack-stats",
-            "version": "v0.3.1",
-            "version_normalized": "0.3.1.0",
+            "version": "v0.3.2",
+            "version_normalized": "0.3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-stats.git",
-                "reference": "3f2be73b7fb388235fbd62b4323b3e4c9030ebb5"
+                "reference": "ad1af163fff4079e2a65c9958d62d5149a6538f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-stats/zipball/3f2be73b7fb388235fbd62b4323b3e4c9030ebb5",
-                "reference": "3f2be73b7fb388235fbd62b4323b3e4c9030ebb5",
+                "url": "https://api.github.com/repos/Automattic/jetpack-stats/zipball/ad1af163fff4079e2a65c9958d62d5149a6538f8",
+                "reference": "ad1af163fff4079e2a65c9958d62d5149a6538f8",
                 "shasum": ""
             },
             "require": {
                 "automattic/jetpack-connection": "^1.46",
                 "automattic/jetpack-constants": "^1.6",
-                "automattic/jetpack-status": "^1.14"
+                "automattic/jetpack-status": "^1.15"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
                 "automattic/wordbless": "dev-master",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-10-25T11:12:37+00:00",
+            "time": "2022-11-07T21:21:16+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1696,23 +1696,23 @@
             "description": "Collect valuable traffic stats and insights.",
             "support": {
                 "issues": "https://github.com/Automattic/jetpack-stats/issues",
-                "source": "https://github.com/Automattic/jetpack-stats/tree/v0.3.1"
+                "source": "https://github.com/Automattic/jetpack-stats/tree/v0.3.2"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-stats"
         },
         {
             "name": "automattic/jetpack-status",
-            "version": "v1.14.3",
-            "version_normalized": "1.14.3.0",
+            "version": "v1.15.0",
+            "version_normalized": "1.15.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-status.git",
-                "reference": "087dcc5ff3c50ad942a15fc57dd3e4cfca1a63db"
+                "reference": "af3483246f08394380887e35f413ffd21799d570"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-status/zipball/087dcc5ff3c50ad942a15fc57dd3e4cfca1a63db",
-                "reference": "087dcc5ff3c50ad942a15fc57dd3e4cfca1a63db",
+                "url": "https://api.github.com/repos/Automattic/jetpack-status/zipball/af3483246f08394380887e35f413ffd21799d570",
+                "reference": "af3483246f08394380887e35f413ffd21799d570",
                 "shasum": ""
             },
             "require": {
@@ -1723,7 +1723,7 @@
                 "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-07-26T13:41:42+00:00",
+            "time": "2022-11-07T21:21:02+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1732,7 +1732,7 @@
                     "link-template": "https://github.com/Automattic/jetpack-status/compare/v${old}...v${new}"
                 },
                 "branch-alias": {
-                    "dev-trunk": "1.14.x-dev"
+                    "dev-trunk": "1.15.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -1747,23 +1747,23 @@
             ],
             "description": "Used to retrieve information about the current status of Jetpack and the site overall.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-status/tree/v1.14.3"
+                "source": "https://github.com/Automattic/jetpack-status/tree/v1.15.0"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-status"
         },
         {
             "name": "automattic/jetpack-sync",
-            "version": "v1.40.3",
-            "version_normalized": "1.40.3.0",
+            "version": "v1.41.0",
+            "version_normalized": "1.41.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-sync.git",
-                "reference": "2454c8c2404c38abaf0f609482ec16338831924b"
+                "reference": "768af61cc31330711e1e5ccd3b227a824fe50653"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-sync/zipball/2454c8c2404c38abaf0f609482ec16338831924b",
-                "reference": "2454c8c2404c38abaf0f609482ec16338831924b",
+                "url": "https://api.github.com/repos/Automattic/jetpack-sync/zipball/768af61cc31330711e1e5ccd3b227a824fe50653",
+                "reference": "768af61cc31330711e1e5ccd3b227a824fe50653",
                 "shasum": ""
             },
             "require": {
@@ -1772,14 +1772,14 @@
                 "automattic/jetpack-identity-crisis": "^0.8",
                 "automattic/jetpack-password-checker": "^0.2",
                 "automattic/jetpack-roles": "^1.4",
-                "automattic/jetpack-status": "^1.14"
+                "automattic/jetpack-status": "^1.15"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
                 "automattic/wordbless": "@dev",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-11-01T20:39:03+00:00",
+            "time": "2022-11-07T21:21:29+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1792,7 +1792,7 @@
                     "link-template": "https://github.com/Automattic/jetpack-sync/compare/v${old}...v${new}"
                 },
                 "branch-alias": {
-                    "dev-trunk": "1.40.x-dev"
+                    "dev-trunk": "1.41.x-dev"
                 }
             },
             "installation-source": "dist",
@@ -1807,23 +1807,23 @@
             ],
             "description": "Everything needed to allow syncing to the WP.com infrastructure.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-sync/tree/v1.40.3"
+                "source": "https://github.com/Automattic/jetpack-sync/tree/v1.41.0"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-sync"
         },
         {
             "name": "automattic/jetpack-videopress",
-            "version": "v0.6.5",
-            "version_normalized": "0.6.5.0",
+            "version": "v0.7.0",
+            "version_normalized": "0.7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-videopress.git",
-                "reference": "4a72d8708ec59d1a43fa49c0482a15b56d1df99c"
+                "reference": "6b59438061c353539348f6860cbc78ab3feff481"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-videopress/zipball/4a72d8708ec59d1a43fa49c0482a15b56d1df99c",
-                "reference": "4a72d8708ec59d1a43fa49c0482a15b56d1df99c",
+                "url": "https://api.github.com/repos/Automattic/jetpack-videopress/zipball/6b59438061c353539348f6860cbc78ab3feff481",
+                "reference": "6b59438061c353539348f6860cbc78ab3feff481",
                 "shasum": ""
             },
             "require": {
@@ -1838,7 +1838,7 @@
                 "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-11-01T20:39:04+00:00",
+            "time": "2022-11-07T21:21:32+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1847,7 +1847,7 @@
                     "link-template": "https://github.com/Automattic/jetpack-videopress/compare/v${old}...v${new}"
                 },
                 "branch-alias": {
-                    "dev-trunk": "0.6.x-dev"
+                    "dev-trunk": "0.7.x-dev"
                 },
                 "version-constants": {
                     "::PACKAGE_VERSION": "src/class-package-version.php"
@@ -1866,23 +1866,23 @@
             ],
             "description": "VideoPress package",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-videopress/tree/v0.6.5"
+                "source": "https://github.com/Automattic/jetpack-videopress/tree/v0.7.0"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-videopress"
         },
         {
             "name": "automattic/jetpack-waf",
-            "version": "v0.6.8",
-            "version_normalized": "0.6.8.0",
+            "version": "v0.6.9",
+            "version_normalized": "0.6.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-waf.git",
-                "reference": "37a5e24be85516db235fbeea81b3d2cc0bf171cc"
+                "reference": "008d512d298fa120f66877afdbdb61e30a79237d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-waf/zipball/37a5e24be85516db235fbeea81b3d2cc0bf171cc",
-                "reference": "37a5e24be85516db235fbeea81b3d2cc0bf171cc",
+                "url": "https://api.github.com/repos/Automattic/jetpack-waf/zipball/008d512d298fa120f66877afdbdb61e30a79237d",
+                "reference": "008d512d298fa120f66877afdbdb61e30a79237d",
                 "shasum": ""
             },
             "require": {
@@ -1892,7 +1892,7 @@
                 "automattic/jetpack-changelogger": "^3.2",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-10-27T19:26:16+00:00",
+            "time": "2022-11-02T09:46:29+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1920,23 +1920,23 @@
             ],
             "description": "Tools to assist with the Jetpack Web Application Firewall",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-waf/tree/v0.6.8"
+                "source": "https://github.com/Automattic/jetpack-waf/tree/v0.6.9"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-waf"
         },
         {
             "name": "automattic/jetpack-wordads",
-            "version": "v0.2.22",
-            "version_normalized": "0.2.22.0",
+            "version": "v0.2.23",
+            "version_normalized": "0.2.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-wordads.git",
-                "reference": "a6d7c13c8c7f0be1036af52413e7a7d6c73dfc54"
+                "reference": "9de6dff8d990d25454993f1722b40007c74f31b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-wordads/zipball/a6d7c13c8c7f0be1036af52413e7a7d6c73dfc54",
-                "reference": "a6d7c13c8c7f0be1036af52413e7a7d6c73dfc54",
+                "url": "https://api.github.com/repos/Automattic/jetpack-wordads/zipball/9de6dff8d990d25454993f1722b40007c74f31b2",
+                "reference": "9de6dff8d990d25454993f1722b40007c74f31b2",
                 "shasum": ""
             },
             "require": {
@@ -1944,13 +1944,13 @@
                 "automattic/jetpack-config": "^1.11",
                 "automattic/jetpack-connection": "^1.46",
                 "automattic/jetpack-constants": "^1.6",
-                "automattic/jetpack-status": "^1.14"
+                "automattic/jetpack-status": "^1.15"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.2",
                 "yoast/phpunit-polyfills": "1.0.3"
             },
-            "time": "2022-11-01T20:39:00+00:00",
+            "time": "2022-11-07T21:21:23+00:00",
             "type": "jetpack-library",
             "extra": {
                 "mirror-repo": "Automattic/jetpack-wordads",
@@ -1978,7 +1978,7 @@
             ],
             "description": "Earn income by allowing Jetpack to display high quality ads.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-wordads/tree/v0.2.22"
+                "source": "https://github.com/Automattic/jetpack-wordads/tree/v0.2.23"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-wordads"
         },
