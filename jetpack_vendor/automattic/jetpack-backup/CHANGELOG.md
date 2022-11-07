@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Updated how backup determines if the site has a plan.
+
 ## [1.10.1] - 2022-11-01
 ### Changed
 - Updated package dependencies. [#27196]
