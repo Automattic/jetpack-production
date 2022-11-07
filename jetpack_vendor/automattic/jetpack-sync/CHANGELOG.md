@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Jetpack Sync: Add Updates module in required Sync modules
+- Updated package dependencies.
 
 ## [1.40.3] - 2022-11-01
 ### Added
