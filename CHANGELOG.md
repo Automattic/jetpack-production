@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Update Form block placeholder to include guidance links
 - Update Form child blocks names to be more meaningful
+- Update Form child blocks to show the "Manage Responses" section on the Sidebar
 
 ### Improved compatibility
 - VideoPress: Include Video Chapters beta block
