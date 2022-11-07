@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Related Posts Block: when 3 posts are outputted, increase the width to closer to 100%
+- Removing the Customizer link breaks other plugins that rely on it.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Brings endpoint file in sync with wpcom
