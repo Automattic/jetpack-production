@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - VideoPress: introduce PlaybackControl component
+- VideoPress: remove the fallback video
 
 ## [0.7.0] - 2022-11-07
 ### Added
