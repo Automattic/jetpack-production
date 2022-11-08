@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: introduce PlaybackControl component
 - VideoPress: remove the fallback video
 
+### Fixed
+- VideoPress: Fix bug and return with select thumbnail from frame
+
 ## [0.7.0] - 2022-11-07
 ### Added
 - Adding the new Video Chapter block. [#27240]
