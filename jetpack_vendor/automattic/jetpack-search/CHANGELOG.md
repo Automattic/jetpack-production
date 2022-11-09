@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Jetpack Search: Fixed link to language support documentation
+
 ## [0.30.1] - 2022-11-07
 ### Changed
 - Updated package dependencies. [#27278]
