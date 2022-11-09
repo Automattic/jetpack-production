@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: remove the fallback video
 
 ### Fixed
+- VideoPress: Disable automatic re-focus on video quick action popover close
 - VideoPress: Fix bug and return with select thumbnail from frame
 
 ## [0.7.0] - 2022-11-07
