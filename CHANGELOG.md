@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Shortcodes: fix content_width handling for various shortcodes.
+
 ## 11.6-a.3 - 2022-11-07
 ### Enhancements
 - Form block: add support links to form type selector. [#27134]
