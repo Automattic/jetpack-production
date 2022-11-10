@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: connect UI of settings section with the data handling.
 - VideoPress: Create endpoints to fetch and update the VideoPress settings.
 - VideoPress: Create selector/resolver machinery to fetch VideoPress site privacy setting from the backend.
+- VideoPress: Exposed video_is_private flag on each video, taking into account the video privacy setting as well as the VideoPress site-wide privacy setting.
 - VideoPress: mitigate video re-rendering flickr
 
 ### Changed
