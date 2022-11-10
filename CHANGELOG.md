@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Sitemaps: improve compatibility with recent Google Image Sitemap changes.
+
 ### Bug fixes
 - Shortcodes: fix content_width handling for various shortcodes.
 
