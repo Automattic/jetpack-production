@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - VideoPress: introduce PlaybackControl component
 - VideoPress: remove the fallback video
+- VideoPress: Unify file drag and drop UI
 
 ### Fixed
 - VideoPress: Disable automatic re-focus on video quick action popover close
