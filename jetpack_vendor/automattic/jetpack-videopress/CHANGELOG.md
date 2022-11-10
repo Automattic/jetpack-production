@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: Allow selection of multiple files
 - VideoPress: introduce PlaybackControl component
 - VideoPress: remove the fallback video
 - VideoPress: Unify file drag and drop UI
