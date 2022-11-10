@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Remove connection button from the Form block toolbar
+
 ### Improved compatibility
 - Sitemaps: improve compatibility with recent Google Image Sitemap changes.
 
