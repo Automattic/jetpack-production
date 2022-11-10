@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Allow selection of multiple files
 - VideoPress: introduce PlaybackControl component
 - VideoPress: remove the fallback video
+- VideoPress: show Settings only when connected
 - VideoPress: Unify file drag and drop UI
 
 ### Fixed
