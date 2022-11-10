@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: Add file drop support after first video
 - VideoPress: Create endpoints to fetch and update the VideoPress settings.
+- VideoPress: Create selector/resolver machinery to fetch VideoPress site privacy setting from the backend.
 - VideoPress: mitigate video re-rendering flickr
 
 ### Changed
