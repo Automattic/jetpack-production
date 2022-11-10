@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Prevent scrolling to the active menu item on page load.
 - Shortcodes: fix content_width handling for various shortcodes.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Action Bar: disable experimental feature for now until the team returns to work on it.
+
 ## 11.6-a.3 - 2022-11-07
 ### Enhancements
 - Form block: add support links to form type selector. [#27134]
