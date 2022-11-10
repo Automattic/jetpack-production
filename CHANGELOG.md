@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fixes issue with uploading VideoPress videos in the Full Site Editor.
+- Prevent scrolling to the active menu item on page load.
 - Shortcodes: fix content_width handling for various shortcodes.
 
 ## 11.6-a.3 - 2022-11-07
