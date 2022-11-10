@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Sitemaps: improve compatibility with recent Google Image Sitemap changes.
 
 ### Bug fixes
+- Fixes issue with uploading VideoPress videos in the Full Site Editor.
 - Shortcodes: fix content_width handling for various shortcodes.
 
 ## 11.6-a.3 - 2022-11-07
