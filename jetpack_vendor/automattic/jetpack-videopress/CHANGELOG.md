@@ -5,35 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.8.0] - 2022-11-14
 ### Added
-- VideoPress: add Color Panel component
-- VideoPress: Add file drop support after first video
-- VideoPress: connect UI of settings section with the data handling.
-- VideoPress: Create endpoints to fetch and update the VideoPress settings.
-- VideoPress: Create selector/resolver machinery to fetch VideoPress site privacy setting from the backend.
-- VideoPress: Enable thumbnail selection from video frame on quick action
-- VideoPress: Exposed video_is_private flag on each video, taking into account the video privacy setting as well as the VideoPress site-wide privacy setting.
-- VideoPress: mitigate video re-rendering flickr
+- VideoPress: add Color Panel component [#27381]
+- VideoPress: add file drop support after first video [#27297]
+- VideoPress: connect UI of settings section with the data handling. [#27350]
+- VideoPress: create endpoints to fetch and update the VideoPress settings. [#27293]
+- VideoPress: create selector/resolver machinery to fetch VideoPress site privacy setting from the backend. [#27321]
+- VideoPress: enable thumbnail selection from video frame on quick action [#27364]
+- VideoPress: exposed video_is_private flag on each video, taking into account the video privacy setting as well as the VideoPress site-wide privacy setting. [#27349]
+- VideoPress: mitigate video re-rendering flicker [#27305]
 
 ### Changed
-- Updated package dependencies.
-- VideoPress: Allow keyboard navigation on video quick actions
-- VideoPress: Allow selection of multiple files
-- VideoPress: introduce PlaybackControl component
-- VideoPress: remove the fallback video
-- VideoPress: rename Match video title with Dynamic color
-- VideoPress: show Settings only when connected
-- VideoPress: Unify file drag and drop UI
+- Updated package dependencies. [#27289]
+- VideoPress: allow keyboard navigation on video quick actions [#27378]
+- VideoPress: allow selection of multiple files [#27357]
+- VideoPress: introduce PlaybackControl component [#27303]
+- VideoPress: remove the fallback video [#27315]
+- VideoPress: rename Match video title with Dynamic color [#27385]
+- VideoPress: show Settings only when connected [#27361]
+- VideoPress: unify file drag and drop UI [#27348]
 
 ### Fixed
-- Fixes an issue with private VideoPress videos timing out when script loading is delayed.
-- VideoPress: Changed the resolver to rely on the new needsPlaybackToken flag when deciding if a video needs a playback token.
-- VideoPress: Disable automatic re-focus on video quick action popover close
-- VideoPress: Fix bug and return with select thumbnail from frame
+- VideoPress: fix an issue with private VideoPress videos timing out when script loading is delayed. [#27211]
+- VideoPress: change the resolver to rely on the new needsPlaybackToken flag when deciding if a video needs a playback token. [#27380]
+- VideoPress: disable automatic re-focus on video quick action popover close [#27338]
+- VideoPress: fix bug and return with select thumbnail from frame [#27309]
 
 ## [0.7.0] - 2022-11-07
 ### Added
@@ -435,7 +432,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.8.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.7.0...v0.8.0-alpha
+[0.8.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.6.5...v0.7.0
 [0.6.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.6.4...v0.6.5
 [0.6.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.6.3...v0.6.4
