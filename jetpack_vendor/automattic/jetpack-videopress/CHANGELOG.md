@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Unify file drag and drop UI
 
 ### Fixed
+- Fixes an issue with private VideoPress videos timing out when script loading is delayed.
 - VideoPress: Disable automatic re-focus on video quick action popover close
 - VideoPress: Fix bug and return with select thumbnail from frame
 
