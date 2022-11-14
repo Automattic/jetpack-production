@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add block alignment control for the form wrapper: center, wide and full
 - Remove connection button from the Form block toolbar
 
 ### Improved compatibility
