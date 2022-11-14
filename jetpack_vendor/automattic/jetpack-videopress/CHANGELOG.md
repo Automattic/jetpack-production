@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: Allow keyboard navigation on video quick actions
 - VideoPress: Allow selection of multiple files
 - VideoPress: introduce PlaybackControl component
 - VideoPress: remove the fallback video
