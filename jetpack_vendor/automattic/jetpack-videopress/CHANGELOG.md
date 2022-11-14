@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fixes an issue with private VideoPress videos timing out when script loading is delayed.
+- VideoPress: Changed the resolver to rely on the new needsPlaybackToken flag when deciding if a video needs a playback token.
 - VideoPress: Disable automatic re-focus on video quick action popover close
 - VideoPress: Fix bug and return with select thumbnail from frame
 
