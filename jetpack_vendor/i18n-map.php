@@ -80,6 +80,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats',
       'ver' => '0.3.9999999-dev',
     ),
+    'jetpack-stats-admin' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-stats-admin',
+      'ver' => '0.1.9999999-dev',
+    ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
       'ver' => '1.42.9999999-dev',
