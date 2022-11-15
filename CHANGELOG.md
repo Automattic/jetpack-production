@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.6-a.6
+- Updated package dependencies.
 
 ## 11.6-a.5 - 2022-11-14
 ### Enhancements
