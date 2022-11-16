@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: TypeScriptify code
 
 ### Fixed
 - VideoPress: Disable actions when user is not connected or there is no connected site owner
