@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Contact Form Block: adds a new form variation and template for a Salesforce Lead form.
 - Update Form block placeholder to include patterns selection modal
+- Use custom validity text for input type URL on Jetpack Forms
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.6-a.6

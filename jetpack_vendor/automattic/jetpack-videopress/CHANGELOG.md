@@ -9,11 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- VideoPress: implement Privacy control
+
 ### Changed
 - Updated package dependencies.
 
 ### Fixed
 - VideoPress: Disable actions when user is not connected or there is no connected site owner
+- VideoPress: Set the playback token on the video URL and the new poster URL when the video needs it.
 
 ## [0.8.0] - 2022-11-14
 ### Added
