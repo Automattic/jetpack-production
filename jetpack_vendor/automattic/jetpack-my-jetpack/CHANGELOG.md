@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.3.6-alpha] - unreleased
+## [2.4.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Added Jetpack Protect to My Jetpack.
 
 ### Changed
 - Updated package dependencies.
@@ -668,7 +671,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.3.6-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.3.5...2.3.6-alpha
+[2.4.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.3.5...2.4.0-alpha
 [2.3.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.3.4...2.3.5
 [2.3.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.3.3...2.3.4
 [2.3.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.3.2...2.3.3

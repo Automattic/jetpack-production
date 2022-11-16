@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Update Form block placeholder to include patterns selection modal
 - Use custom validity text for input type URL on Jetpack Forms
 
+### Improved compatibility
+- Improved compatibility with the Jetpack Protect standalone plugin.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.6-a.6
 - Updated package dependencies.
