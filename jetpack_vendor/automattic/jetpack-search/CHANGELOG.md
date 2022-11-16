@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add an optional global flag `window.instantSearchSkipPushState` that can be declared to true, that will disable instant search from modifying the url as the search query is being written or modified.
+
 ### Changed
 - Suggest free Jetpack Search plan instead of the paid one to classic search users
 - Updated package dependencies.
