@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add rating control to Details panel
 - VideoPress: fix issue when setting video privacy
+- VideoPress: implement "Allow download" control to v6
 - VideoPress: implement Privacy control
 
 ### Changed
