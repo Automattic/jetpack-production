@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress: add "Details panel" to v6
 - VideoPress: add rating control to Details panel
 - VideoPress: fix issue when setting video privacy
 - VideoPress: implement "Allow download" control to v6
