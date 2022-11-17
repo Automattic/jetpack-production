@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Improved compatibility with the Jetpack Protect standalone plugin.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Dashboard: Fixing React javascscript:void console errors.
 - Init 11.6-a.6
 - Tests: Clean up wpcom-compat functions no longer needed post-de-Fusioning.
 - Updated package dependencies.
