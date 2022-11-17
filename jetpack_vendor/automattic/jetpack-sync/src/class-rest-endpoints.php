@@ -782,7 +782,7 @@ class REST_Endpoints {
 	/**
 	 * Reset Sync locks.
 	 *
-	 * @since 1.43.0-alpha
+	 * @since 1.43.0
 	 *
 	 * @return \WP_REST_Response
 	 */

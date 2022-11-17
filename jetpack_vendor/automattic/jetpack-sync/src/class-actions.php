@@ -1048,7 +1048,7 @@ class Actions {
 	 *
 	 * @access public
 	 * @static
-	 * @since 1.43.0-alpha
+	 * @since 1.43.0
 	 */
 	public static function reset_sync_locks() {
 		// Next sync locks.

@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.43.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.43.0] - 2022-11-17
 ### Added
-- Added new sync option for launch-status
-- Jetpack Sync: Add new endpoint for resetting Sync locks.
+- Added new sync option for launch-status [#27434]
+- Jetpack Sync: Add new endpoint for resetting Sync locks. [#27446]
 
 ## [1.42.0] - 2022-11-14
 ### Changed
@@ -764,7 +761,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[1.43.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.42.0...v1.43.0-alpha
+[1.43.0]: https://github.com/Automattic/jetpack-sync/compare/v1.42.0...v1.43.0
 [1.42.0]: https://github.com/Automattic/jetpack-sync/compare/v1.41.0...v1.42.0
 [1.41.0]: https://github.com/Automattic/jetpack-sync/compare/v1.40.3...v1.41.0
 [1.40.3]: https://github.com/Automattic/jetpack-sync/compare/v1.40.2...v1.40.3
