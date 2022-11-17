@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added VideoPress feedback link to the VideoPress block.
 - VideoPress: add "Details panel" to v6
 - VideoPress: Add "learn how" chapters modal
 - VideoPress: add rating control to Details panel
