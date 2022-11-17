@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - VideoPress: Disable actions when user is not connected or there is no connected site owner
+- VideoPress: Set a static list of allowed video extensions allowed on VideoPress.
 - VideoPress: Set the playback token on the video URL and the new poster URL when the video needs it.
 
 ## [0.8.0] - 2022-11-14
