@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: TypeScriptify code
 
 ### Fixed
+- VideoPress: Add backend verification on update routes when user is disconnected
 - VideoPress: Disable actions when user is not connected or there is no connected site owner
 - VideoPress: Set a static list of allowed video extensions allowed on VideoPress.
 - VideoPress: Set the playback token on the video URL and the new poster URL when the video needs it.
