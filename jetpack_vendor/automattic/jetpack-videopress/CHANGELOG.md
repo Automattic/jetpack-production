@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added VideoPress feedback link to the VideoPress block.
 - VideoPress: add "Details panel" to v6
 - VideoPress: Add "learn how" chapters modal
+- VideoPress: add block editor dependencies
 - VideoPress: add rating control to Details panel
 - VideoPress: fix issue when setting video privacy
 - VideoPress: implement "Allow download" control to v6
