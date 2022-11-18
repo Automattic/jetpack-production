@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: fix issue when setting video privacy
 - VideoPress: implement "Allow download" control to v6
 - VideoPress: implement Privacy control
+- VideoPress: register and sync isPrivate block attribute
 
 ### Changed
 - Updated package dependencies.
