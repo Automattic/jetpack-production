@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: Remove extra resize circle on block
 - VideoPress: TypeScriptify code
 
 ### Fixed
