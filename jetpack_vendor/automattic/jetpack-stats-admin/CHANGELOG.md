@@ -11,3 +11,4 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Stats: added stats-admin package
+- Stats: add stats option `enable_calypso_stats` to allow users to enable the new Calypso Stats experience

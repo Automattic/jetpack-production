@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: update design for Feedback table in WP Admin.
 - Contact Form Block: adds a new form variation and template for a Salesforce Lead form.
 - Removed the 'check for spam' button from the feedback page as all feedback is already ran through Akismet by default.
+- Stats: add stats option `enable_calypso_stats` to allow users to enable the new Calypso Stats experience
 - Update Form block placeholder to include patterns selection modal
 - Use custom validity text for input type URL on Jetpack Forms
 
