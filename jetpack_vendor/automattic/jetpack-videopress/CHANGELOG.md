@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add "Details panel" to v6
 - VideoPress: Add "learn how" chapters modal
 - VideoPress: add block editor dependencies
+- VideoPress: add dimensions panel to video block
 - VideoPress: add rating control to Details panel
 - VideoPress: check $products data before to pick the prices
 - VideoPress: fix issue when setting video privacy
