@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added VideoPress feedback link to the VideoPress block.
+- Adds an experimental editor extension that displays a placeholder blogging prompt when starting a new post
 - Contact Form: update design for Feedback table in WP Admin.
 - Contact Form Block: adds a new form variation and template for a Salesforce Lead form.
 - Enable placeholder edit on input blocks inspector
