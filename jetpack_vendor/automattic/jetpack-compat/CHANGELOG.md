@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.5-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [1.7.4] - 2022-07-26
 ### Changed
 - Updated package dependencies. [#25158]
@@ -117,6 +124,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Jetpack 7.5: Back compatibility package
 
+[1.7.5-alpha]: https://github.com/Automattic/jetpack-compat/compare/v1.7.4...v1.7.5-alpha
 [1.7.4]: https://github.com/Automattic/jetpack-compat/compare/v1.7.3...v1.7.4
 [1.7.3]: https://github.com/Automattic/jetpack-compat/compare/v1.7.2...v1.7.3
 [1.7.2]: https://github.com/Automattic/jetpack-compat/compare/v1.7.1...v1.7.2
