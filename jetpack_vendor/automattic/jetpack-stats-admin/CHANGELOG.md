@@ -15,3 +15,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+
+### Fixed
+- See https://github.com/Automattic/wp-calypso/pull/70122
