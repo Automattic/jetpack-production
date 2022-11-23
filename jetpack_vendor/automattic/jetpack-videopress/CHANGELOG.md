@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: check auto-generated chapters file
 
 ### Changed
+- Updated package dependencies.
 - VideoPress: Improve inline explanation for block panel options
 - VideoPress: video poster control - janitorial - typescriptify
 

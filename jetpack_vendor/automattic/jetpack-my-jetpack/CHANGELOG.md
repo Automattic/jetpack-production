@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: rename Backup and Anti-Spam
+- Updated package dependencies.
 
 ## [2.4.1] - 2022-11-22
 ### Changed
