@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: check auto-generated chapters file
 
+### Changed
+- VideoPress: Improve inline explanation for block panel options
+
 ## [0.8.1] - 2022-11-22
 ### Added
 - Added VideoPress feedback link to the VideoPress block. [#27450]
