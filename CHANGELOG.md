@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Stats: stop stats loading indefinitely when a hashtag exists
+- Widget Visibility: Fix error ocurring for WooCommerce Product Categories block
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Custom CSS: Removing compatibility checks and files for sites running WordPress versions < 4.7.
