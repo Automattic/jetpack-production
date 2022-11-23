@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: add stats option `enable_calypso_stats` to allow users to enable the new Calypso Stats experience
 - Update Form block placeholder to include patterns selection modal
 - Use custom validity text for input type URL on Jetpack Forms
+- VideoPress: detect if the video has a vtt chapters file
 
 ### Improved compatibility
 - Improved compatibility with the Jetpack Protect standalone plugin.
