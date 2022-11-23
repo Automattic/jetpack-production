@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: Improve inline explanation for block panel options
+- VideoPress: video poster control - janitorial - typescriptify
 
 ## [0.8.1] - 2022-11-22
 ### Added
