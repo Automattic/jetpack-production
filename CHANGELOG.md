@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Form block to allow layout blocks
 - Use custom validity text for input type URL on Jetpack Forms
 - VideoPress: detect if the video has a vtt chapters file
+- WordAds: add US Privacy support for additional states (Colorado, Connecticut, Utah, and Virginia).
 
 ### Improved compatibility
 - Improved compatibility with the Jetpack Protect standalone plugin.
