@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress: Add JITM wrapper
 - VideoPress: check auto-generated chapters file
 - VideoPress: first step of the tracks control implementation
 
