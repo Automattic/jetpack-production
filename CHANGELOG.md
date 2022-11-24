@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: update design for Feedback table in WP Admin.
 - Contact Form Block: adds a new form variation and template for a Salesforce Lead form.
 - Enable placeholder edit on input blocks inspector
+- Feedback export function is now integrated with the feedback table filters
 - Improve the styling and formatting of the form submission page after a form block is submitted.
 - Split out the email subscribers & social followers in the pre-publish panel.
 - Stats: add stats option `enable_calypso_stats` to allow users to enable the new Calypso Stats experience
