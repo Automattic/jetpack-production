@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Improved compatibility with the Jetpack Protect standalone plugin.
 
 ### Bug fixes
+- SSO: fix settings toggles inconsistency.
 - Stats: stop stats loading indefinitely when a hashtag exists
 - Widget Visibility: Fix error ocurring for WooCommerce Product Categories block
 
