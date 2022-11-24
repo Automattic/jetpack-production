@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: take off new Stats backend for security concerns
 - Tests: Clean up wpcom-compat functions no longer needed post-de-Fusioning.
 - Updated package dependencies.
+- Update how wpcom_gifting_subscription is saved so an option value of false can be created
 
 ## 11.6-a.5 - 2022-11-14
 ### Enhancements
