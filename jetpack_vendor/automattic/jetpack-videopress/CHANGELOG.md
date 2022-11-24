@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: Add JITM wrapper
 - VideoPress: check auto-generated chapters file
+- VideoPress: Expose the array of VideoPress settings on the client initial state.
 - VideoPress: first step of the tracks control implementation
 - VideoPress: implement delete track from Tracks control
 
