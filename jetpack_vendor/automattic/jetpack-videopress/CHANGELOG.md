@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: check auto-generated chapters file
+- VideoPress: first step of the tracks control implementation
 
 ### Changed
 - Updated package dependencies.
