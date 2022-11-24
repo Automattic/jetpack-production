@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add JITM wrapper
 - VideoPress: check auto-generated chapters file
 - VideoPress: first step of the tracks control implementation
+- VideoPress: implement delete track from Tracks control
 
 ### Changed
 - Updated package dependencies.
