@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Decouple the Jetpack subscription block rendering logic from Jetpack Subscription Widget shortcode
 - Init 11.6-a.6
 - Remove CSS from main plugin file
+- Removes old save() implementation for the subscription block. Doesn't impact user experience as the block is already dynamic.
 - Stats: take off new Stats backend for security concerns
 - Tests: Clean up wpcom-compat functions no longer needed post-de-Fusioning.
 - Updated package dependencies.
