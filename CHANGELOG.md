@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Fixing React javascscript:void console errors.
 - Decouple the Jetpack subscription block rendering logic from Jetpack Subscription Widget shortcode
 - Init 11.6-a.6
+- Stats: take off new Stats backend for security concerns
 - Tests: Clean up wpcom-compat functions no longer needed post-de-Fusioning.
 - Updated package dependencies.
 
