@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove CSS from main plugin file
 - Removes old save() implementation for the subscription block. Doesn't impact user experience as the block is already dynamic.
 - Stats: take off new Stats backend for security concerns
+- Sync: Add unit tests
 - Tests: Clean up wpcom-compat functions no longer needed post-de-Fusioning.
 - Updated package dependencies.
 - Update how wpcom_gifting_subscription is saved so an option value of false can be created

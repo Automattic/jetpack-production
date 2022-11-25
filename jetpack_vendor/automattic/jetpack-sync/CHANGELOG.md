@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Sync: Limit next_sync_time lock to be at most 1 hour in the future
+
 ## [1.43.1] - 2022-11-22
 ### Changed
 - Updated package dependencies. [#27043]
