@@ -23,6 +23,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Use a generic filter message when there are no videos available and a search term is not present.
 - VideoPress: video poster control - janitorial - typescriptify
 
+### Fixed
+- VideoPress: Fix go back link width
+
 ## [0.8.1] - 2022-11-22
 ### Added
 - Added VideoPress feedback link to the VideoPress block. [#27450]
