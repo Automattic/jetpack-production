@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - VideoPress: Improve inline explanation for block panel options
+- VideoPress: Include videos with Site Default privacy setting on the search results, choosing between the public or private filter based on the site default privacy setting.
 - VideoPress: Use a generic filter message when there are no videos available and a search term is not present.
 - VideoPress: video poster control - janitorial - typescriptify
 
