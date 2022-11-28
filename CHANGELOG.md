@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Enable placeholder edit on input blocks inspector
 - Feedback export function is now integrated with the feedback table filters
 - Improve the styling and formatting of the form submission page after a form block is submitted.
+- SEO: add a 'noindex' checkbox for posts and pages.
 - SEO: add a per post/page HTML title option.
 - Split out the email subscribers & social followers in the pre-publish panel.
 - Stats: add stats option `enable_calypso_stats` to allow users to enable the new Calypso Stats experience
