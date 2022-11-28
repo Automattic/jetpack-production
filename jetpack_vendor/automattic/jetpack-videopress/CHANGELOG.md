@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - VideoPress: re-implement track control using ToolbarDropdownMenu
 
+### Fixed
+- VideoPress: Fix the thumbnail selection to allow selecting the last frame of the video.
+
 ## [0.8.2] - 2022-11-28
 ### Added
 - VideoPress: add example image to the dynamic colors panel [#27599]
