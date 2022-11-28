@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: Add example image to the dynamic colors panel
 - VideoPress: Add JITM wrapper
+- VideoPress: add TrackForm component
 - VideoPress: check auto-generated chapters file
 - VideoPress: Expose the array of VideoPress settings on the client initial state.
 - VideoPress: first step of the tracks control implementation
