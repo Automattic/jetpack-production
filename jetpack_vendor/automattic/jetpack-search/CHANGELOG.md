@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add an optional global flag `window.instantSearchSkipPushState` that can be declared to true, that will disable instant search from modifying the url as the search query is being written or modified.
 - Added prompt for Jetpack Search Free plan upgrade for users who exceed limits.
+- Search: Add checkmark icon for resolved topics
 
 ### Changed
 - Suggest free Jetpack Search plan instead of the paid one to classic search users
