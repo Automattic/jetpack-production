@@ -38,6 +38,17 @@ class Data {
 	}
 
 	/**
+	 * Gets the VideoPress Settings.
+	 *
+	 * @return array The settings as an associative array.
+	 */
+	public static function get_videopress_settings() {
+		return array(
+			'videopress_videos_private_for_site' => self::get_videopress_videos_private_for_site(),
+		);
+	}
+
+	/**
 	 * Gets the video data
 	 *
 	 * @param boolean $is_videopress - True when getting VideoPress data.
@@ -171,8 +182,12 @@ class Data {
 	 */
 	public static function get_connected_initial_state() {
 		return array(
-			'videos' => array(
+			'videos'    => array(
 				'storageUsed' => self::get_storage_used(),
+			),
+			'purchases' => array(
+				'items'      => Site::get_purchases(),
+				'isFetching' => false,
 			),
 		);
 	}
@@ -190,6 +205,19 @@ class Data {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Checks if the user is able to perform actions that modify data
+	 */
+	public static function can_perform_action() {
+		$connection = new Connection_Manager();
+
+		return (
+			$connection->is_connected() &&
+			self::has_connected_owner() &&
+			$connection->is_user_connected()
+		);
 	}
 
 	/**
@@ -302,9 +330,14 @@ class Data {
 			$videopress_data['videos']
 		);
 
+		$site_settings = self::get_videopress_settings();
+
 		$initial_state = array(
-			'users'       => self::get_user_data(),
-			'videos'      => array(
+			'users'        => self::get_user_data(),
+			'siteSettings' => array(
+				'videoPressVideosPrivateForSite' => $site_settings['videopress_videos_private_for_site'],
+			),
+			'videos'       => array(
 				'uploadedVideoCount'           => $videopress_data['total'],
 				'items'                        => $videos,
 				'isFetching'                   => false,
@@ -318,7 +351,7 @@ class Data {
 					'relyOnInitialState' => true,
 				),
 			),
-			'localVideos' => array(
+			'localVideos'  => array(
 				'uploadedVideoCount'           => $local_videos_data['total'],
 				'items'                        => $local_videos,
 				'isFetching'                   => false,

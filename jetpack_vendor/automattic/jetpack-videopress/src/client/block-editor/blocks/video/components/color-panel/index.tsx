@@ -9,21 +9,24 @@ import { __ } from '@wordpress/i18n';
 /**
  * Internal dependencies
  */
-import { PlaybackControlProps } from '../../types';
-import { VideoPressPlayerColorProps } from './types';
-import type React from 'react';
+import { VideoBlockColorAttributesProps, VideoControlProps } from '../../types';
+import dynamicColorsImage from './dynamic-colors.png';
 import './style.scss';
+/**
+ * Types
+ */
+import type React from 'react';
 
 /**
  * Sidebar Control component.
  *
- * @param {PlaybackControlProps} props - Component props.
+ * @param {VideoControlProps} props - Component props.
  * @returns {React.ReactElement}    Component template
  */
-export default function ColorPanel( { attributes, setAttributes }: PlaybackControlProps ) {
+export default function ColorPanel( { attributes, setAttributes }: VideoControlProps ) {
 	const { useAverageColor, seekbarColor, seekbarLoadingColor, seekbarPlayedColor } = attributes;
 
-	const initialColorState: VideoPressPlayerColorProps = {
+	const initialColorState: VideoBlockColorAttributesProps = {
 		seekbarPlayedColor,
 		seekbarLoadingColor,
 		seekbarColor,
@@ -44,7 +47,19 @@ export default function ColorPanel( { attributes, setAttributes }: PlaybackContr
 		<PanelBody title={ __( 'Color', 'jetpack-videopress-pkg' ) } initialOpen={ false }>
 			<ToggleControl
 				label={ __( 'Dynamic color', 'jetpack-videopress-pkg' ) }
-				help={ __( 'Colors adapt to the video as it plays', 'jetpack-videopress-pkg' ) }
+				help={
+					<>
+						{ __(
+							'Playback bar colors adapt to the video as it plays.',
+							'jetpack-videopress-pkg'
+						) }
+						<img
+							className="videopress-dynamic-color-example"
+							src={ dynamicColorsImage }
+							alt={ __( 'Dynamic colors example', 'jetpack-videopress-pkg' ) }
+						></img>
+					</>
+				}
 				onChange={ newUseAverageColor => setAttributes( { useAverageColor: newUseAverageColor } ) }
 				checked={ useAverageColor }
 			/>
