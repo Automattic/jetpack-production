@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Expose the array of VideoPress settings on the client initial state.
 - VideoPress: first step of the tracks control implementation
 - VideoPress: implement delete track from Tracks control
+- VideoPress: upload track file to VideoPress server
 
 ### Changed
 - Updated package dependencies.
