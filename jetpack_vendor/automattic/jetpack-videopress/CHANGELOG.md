@@ -5,30 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.2-alpha] - unreleased
+## [0.8.3-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- VideoPress: Add example image to the dynamic colors panel
-- VideoPress: Add JITM wrapper
-- VideoPress: add TrackForm component
-- VideoPress: check auto-generated chapters file
-- VideoPress: Expose the array of VideoPress settings on the client initial state.
-- VideoPress: first step of the tracks control implementation
-- VideoPress: implement delete track from Tracks control
 - VideoPress: upload track file to VideoPress server
 
 ### Changed
-- Updated package dependencies.
-- VideoPress: Improve inline explanation for block panel options
-- VideoPress: Include videos with Site Default privacy setting on the search results, choosing between the public or private filter based on the site default privacy setting.
 - VideoPress: re-implement track control using ToolbarDropdownMenu
-- VideoPress: Use a generic filter message when there are no videos available and a search term is not present.
-- VideoPress: video poster control - janitorial - typescriptify
+
+## [0.8.2] - 2022-11-28
+### Added
+- VideoPress: add example image to the dynamic colors panel [#27599]
+- VideoPress: add JITM wrapper [#27579]
+- VideoPress: add TrackForm component [#27627]
+- VideoPress: check auto-generated chapters file [#27544]
+- VideoPress: expose the array of VideoPress settings on the client initial state. [#27596]
+- VideoPress: implement tracks control implementation [#27578] [#27595]
+
+### Changed
+- Updated package dependencies. [#27575]
+- VideoPress: improve inline explanation for block panel options [#27563]
+- VideoPress: include videos with Site Default privacy setting on the search results, choosing between the public or private filter based on the site default privacy setting. [#27603]
+- VideoPress: use a generic filter message when there are no videos available and a search term is not present. [#27580]
 
 ### Fixed
-- VideoPress: Fix go back link width
+- VideoPress: Fix go back link width [#27602]
 
 ## [0.8.1] - 2022-11-22
 ### Added
@@ -494,7 +497,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.8.2-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.8.1...v0.8.2-alpha
+[0.8.3-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.8.2...v0.8.3-alpha
+[0.8.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.8.1...v0.8.2
 [0.8.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.6.5...v0.7.0

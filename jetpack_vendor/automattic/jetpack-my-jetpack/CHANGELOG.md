@@ -5,14 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.5.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.5.0] - 2022-11-28
 ### Changed
-- My Jetpack: rename Backup and Anti-Spam
-- Show My Jetpack even if site is disconnected
-- Updated package dependencies.
+- My Jetpack: rename Backup and Anti-Spam to new product names [#27377]
+- Show My Jetpack even if site is disconnected [#26967]
+- Updated package dependencies. [#27576]
 
 ## [2.4.1] - 2022-11-22
 ### Changed
@@ -681,7 +678,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.5.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.4.1...2.5.0-alpha
+[2.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.4.1...2.5.0
 [2.4.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.4.0...2.4.1
 [2.4.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.3.5...2.4.0
 [2.3.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.3.4...2.3.5
