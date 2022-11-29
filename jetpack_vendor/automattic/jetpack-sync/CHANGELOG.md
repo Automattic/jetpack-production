@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added full response logging for failed Sync data requests.
 
+### Fixed
+- Make sure Dedicated Sync can revert back to Default Sync if it stops sending events for one reason or another.
+
 ## [1.43.2] - 2022-11-28
 ### Changed
 - Sync: Limit next_sync_time lock to be at most 1 hour in the future [#27606]
