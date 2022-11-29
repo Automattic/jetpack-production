@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: re-implement track control using ToolbarDropdownMenu
+- VideoPress: refresh video player when deleting track
 - VideoPress: update tracks icon
 
 ### Fixed
