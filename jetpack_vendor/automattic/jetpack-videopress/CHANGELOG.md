@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: re-implement track control using ToolbarDropdownMenu
+- VideoPress: update tracks icon
 
 ### Fixed
 - VideoPress: Fix the thumbnail selection to allow selecting the last frame of the video.
