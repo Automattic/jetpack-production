@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Move contact-form/salesforce-lead-form out of beta blocks and into production. Add beta badge on settings.
 
+### Bug fixes
+- Provide a fix for WPA click tracking in Agencies card
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Init 11.7-a.0
 - Updating testing instructions
