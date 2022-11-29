@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: handle overwriting video track file
+- VideoPress: refresh UI when video track deletes
 - VideoPress: upload track file to VideoPress server
 
 ### Changed
