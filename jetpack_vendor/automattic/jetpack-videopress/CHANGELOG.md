@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: upload track file to VideoPress server
 
 ### Changed
+- Updated package dependencies.
 - VideoPress: do not set icon color at SVG markup level
 - VideoPress: fix visual issue in Track list component when no tracks
 - VideoPress: re-implement track control using ToolbarDropdownMenu
