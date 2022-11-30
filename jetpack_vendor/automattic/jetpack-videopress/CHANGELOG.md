@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - VideoPress: Fix the thumbnail selection to allow selecting the last frame of the video.
+- VideoPress: fix video block conversion issue
 
 ## [0.8.2] - 2022-11-28
 ### Added
