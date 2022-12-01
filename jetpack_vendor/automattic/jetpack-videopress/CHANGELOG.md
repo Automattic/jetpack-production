@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: fix visual issue in Track list component when no tracks
 - VideoPress: re-implement track control using ToolbarDropdownMenu
 - VideoPress: refresh video player when deleting track
+- VideoPress: remove Preload playback control from the video block sidebar
 - VideoPress: update tracks icon
 
 ### Fixed
