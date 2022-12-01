@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: Disable delete_posts capability for VideoPress attachments if user is disconnected.
 - VideoPress: do not set icon color at SVG markup level
 - VideoPress: fix visual issue in Track list component when no tracks
 - VideoPress: re-implement track control using ToolbarDropdownMenu
