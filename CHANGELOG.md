@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fix Contact Form patterns modal scrollbar behavior
 - Fix Contact Form view responses URL
+- Form block: Add line breaks back to plain text email submissions.
 - Provide a fix for WPA click tracking in Agencies card
 - Update Form patterns modal filter query
 
