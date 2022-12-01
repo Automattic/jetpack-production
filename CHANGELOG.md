@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix syntax in wordards-ccpa.js causing it to be included in all merge commits
 - Init 11.7-a.0
+- Tweaks to previous PR that already has changelog entry
 - Updated package dependencies.
 - Updating testing instructions
 
