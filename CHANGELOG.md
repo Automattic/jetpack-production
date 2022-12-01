@@ -8,7 +8,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Provide a fix for WPA click tracking in Agencies card
-- Update Form patterns modal filter query
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updating testing instructions
