@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Remove caption field from edit page
 
 ### Fixed
+- Fixes issue where video meta could not be saved on a WP.com simple site.
 - VideoPress: Fix the thumbnail selection to allow selecting the last frame of the video.
 - VideoPress: fix video block conversion issue
 
