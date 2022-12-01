@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add debug() tool. Improve in-sync process
 - VideoPress: handle overwriting video track file
+- VideoPress: re-render player after a new track uploads
 - VideoPress: refresh UI when video track deletes
 - VideoPress: show a static image when the block acts as an example
 - VideoPress: update tracks list once new track uploads
