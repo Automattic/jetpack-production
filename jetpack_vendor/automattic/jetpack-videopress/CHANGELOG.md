@@ -28,6 +28,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: remove Preload playback control from the video block sidebar
 - VideoPress: update tracks icon
 
+### Removed
+- VideoPress: Remove caption field from edit page
+
 ### Fixed
 - VideoPress: Fix the thumbnail selection to allow selecting the last frame of the video.
 - VideoPress: fix video block conversion issue
