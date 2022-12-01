@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: handle overwriting video track file
 - VideoPress: refresh UI when video track deletes
 - VideoPress: show a static image when the block acts as an example
+- VideoPress: update tracks list once new track uploads
 - VideoPress: upload track file to VideoPress server
 
 ### Changed
