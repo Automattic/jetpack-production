@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Move contact-form/salesforce-lead-form out of beta blocks and into production. Add beta badge on settings.
 
 ### Bug fixes
+- Fix Contact Form patterns modal scrollbar behavior
 - Provide a fix for WPA click tracking in Agencies card
 - Update Form patterns modal filter query
 
