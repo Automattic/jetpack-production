@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add a checkbox to include/exclude social followers from subscription block.
 - Move contact-form/salesforce-lead-form out of beta blocks and into production. Add beta badge on settings.
 
+### Improved compatibility
+- Site Editor dashboard link points to wp.com
+
 ### Bug fixes
 - Fix Contact Form patterns modal scrollbar behavior
 - Fix Contact Form view responses URL
