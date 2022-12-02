@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Form patterns modal filter query
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- SEO: exclude posts with meta jetpack_seo_noindex set true from Jetpack news sitemap.
 - Updating testing instructions
 
 ## 11.6-beta - 2022-11-28
