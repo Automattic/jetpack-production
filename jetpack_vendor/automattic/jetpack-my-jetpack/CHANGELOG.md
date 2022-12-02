@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- My Jetpack: Requires connection only if needed
 - Updated package dependencies.
 
 ## [2.5.1] - 2022-11-30
