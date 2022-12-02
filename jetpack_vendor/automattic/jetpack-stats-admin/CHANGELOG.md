@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Stats: explicitly allow only certain API access with blog token to wpcom
 - Updated package dependencies.
 
 ## 0.1.0 - 2022-11-28
