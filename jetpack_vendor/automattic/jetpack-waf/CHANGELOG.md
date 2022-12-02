@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Removed
+- Remove has_rules_access plan check in favor of external alternatives
+
 ## [0.6.10] - 2022-11-28
 ### Changed
 - Updated package dependencies. [#27043]
