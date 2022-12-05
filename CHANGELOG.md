@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: initialize the Stats Admin package
 - Tweaks to previous PR that already has changelog entry
 - Updated package dependencies.
+- Updated waf package version in composer.lock
 - Updating testing instructions
 
 ## 11.6-beta - 2022-11-28
