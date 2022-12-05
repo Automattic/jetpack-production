@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add a checkbox to include/exclude social followers from subscription block.
+- Fix Form placeholder background color
 - Move contact-form/salesforce-lead-form out of beta blocks and into production. Add beta badge on settings.
 - Writing prompts: add a writing setting to disable showing prompts when starting a new post
 
