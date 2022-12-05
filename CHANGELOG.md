@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Form patterns modal filter query
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Decode single-quote HTML entities in various places, and use a Unicode Replacement Character rather than empty string for invalid characters.
 - Fix syntax in wordards-ccpa.js causing it to be included in all merge commits
 - Init 11.7-a.0
 - Remove references to obsolete $include_publicized_followers

@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Prepare package for use in the Jetpack Protect standalone plugin.
 
 ### Changed
+- html_entity_decode filter now decodes single-quotes too, and uses a Unicode Replacement Character instead of returning empty string on invalid characters.
 - Updated package dependencies.
 
 ### Removed
