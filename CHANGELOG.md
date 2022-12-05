@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Fix Form placeholder background color
+
 ### Bug fixes
 - Fix Contact Form patterns modal scrollbar behavior
 - Fix Contact Form view responses URL
