@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix syntax in wordards-ccpa.js causing it to be included in all merge commits
 - Init 11.7-a.0
+- Search: Changed Search menu in Calypso menu link to Search Dashboard in WP Admin
 - SEO: exclude posts with meta jetpack_seo_noindex set true from Jetpack news sitemap.
 - Stats: initialize the Stats Admin package
 - Tweaks to previous PR that already has changelog entry
