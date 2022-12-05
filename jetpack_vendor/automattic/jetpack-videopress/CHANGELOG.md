@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- VideoPress: Use the filter state to check/uncheck the checkboxes associated to each filter value.
+
 ## [0.8.3] - 2022-12-02
 ### Added
 - VideoPress: add debug() tool. Improve in-sync process [#27669]
