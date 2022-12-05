@@ -5,19 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.0-alpha] - unreleased
+## [0.7.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Prepare package for use in the Jetpack Protect standalone plugin.
-
 ### Changed
 - html_entity_decode filter now decodes single-quotes too, and uses a Unicode Replacement Character instead of returning empty string on invalid characters.
-- Updated package dependencies.
+
+## [0.7.0] - 2022-12-05
+### Added
+- Prepare package for use in the Jetpack Protect standalone plugin. [#27528]
+
+### Changed
+- Updated package dependencies. [#27688]
 
 ### Removed
-- Remove has_rules_access plan check in favor of external alternatives
+- Remove has_rules_access plan check in favor of external alternatives [#27600]
 
 ## [0.6.10] - 2022-11-28
 ### Changed
@@ -118,7 +121,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.7.0-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.6.10...v0.7.0-alpha
+[0.7.1-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.7.0...v0.7.1-alpha
+[0.7.0]: https://github.com/Automattic/jetpack-waf/compare/v0.6.10...v0.7.0
 [0.6.10]: https://github.com/Automattic/jetpack-waf/compare/v0.6.9...v0.6.10
 [0.6.9]: https://github.com/Automattic/jetpack-waf/compare/v0.6.8...v0.6.9
 [0.6.8]: https://github.com/Automattic/jetpack-waf/compare/v0.6.7...v0.6.8
