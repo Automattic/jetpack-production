@@ -2,7 +2,7 @@
 /**
  * Blogging prompt settings.
  *
- * @since 11.7-a.0
+ * @since 11.7
  *
  * @package automattic/jetpack
  */

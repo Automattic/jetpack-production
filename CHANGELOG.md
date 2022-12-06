@@ -2,39 +2,36 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.7-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 11.7-a.1 - 2022-12-06
 ### Enhancements
-- Add a checkbox to include/exclude social followers from subscription block.
-- Fix Form placeholder background color
-- Move contact-form/salesforce-lead-form out of beta blocks and into production. Add beta badge on settings.
-- Writing prompts: add a writing setting to disable showing prompts when starting a new post
+- Add a checkbox to include/exclude social followers from subscription block. [#27443]
+- Fix Form placeholder background color [#27629]
+- Move contact-form/salesforce-lead-form out of beta blocks and into production. Add beta badge on settings. [#27613]
+- Writing prompts: add a writing setting to disable showing prompts when starting a new post [#27746]
 
 ### Improved compatibility
-- Site Editor dashboard link points to wp.com
+- Site Editor dashboard link points to wp.com [#27601]
 
 ### Bug fixes
-- Fix Contact Form patterns modal scrollbar behavior
-- Fix Contact Form view responses URL
-- Fix Jetpack Settings WAF module plan check
-- Form block: Add line breaks back to plain text email submissions.
-- Provide a fix for WPA click tracking in Agencies card
-- Update Form patterns modal filter query
+- Fix Contact Form patterns modal scrollbar behavior [#27692]
+- Fix Contact Form view responses URL [#27707]
+- Fix Jetpack Settings WAF module plan check [#27600]
+- Form block: Add line breaks back to plain text email submissions. [#27723]
+- Provide a fix for WPA click tracking in Agencies card [#27503]
+- Update Form patterns modal filter query [#27703]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Decode single-quote HTML entities in various places, and use a Unicode Replacement Character rather than empty string for invalid characters.
-- Fix syntax in wordards-ccpa.js causing it to be included in all merge commits
-- Init 11.7-a.0
-- Remove references to obsolete $include_publicized_followers
-- Search: Changed Search menu in Calypso menu link to Search Dashboard in WP Admin
-- SEO: exclude posts with meta jetpack_seo_noindex set true from Jetpack news sitemap.
-- Stats: initialize the Stats Admin package
-- Tweaks to previous PR that already has changelog entry
-- Updated package dependencies.
-- Updated waf package version in composer.lock
-- Updating testing instructions
+- Decode single-quote HTML entities in various places, and use a Unicode Replacement Character rather than empty string for invalid characters. [#27753]
+- Fix syntax in wordards-ccpa.js causing it to be included in all merge commits [#27667]
+- Init 11.7-a.0 [#27639]
+- Remove references to obsolete $include_publicized_followers [#27749]
+- Search: Changed Search menu in Calypso menu link to Search Dashboard in WP Admin [#27664]
+- SEO: exclude posts with meta jetpack_seo_noindex set true from Jetpack news sitemap. [#27742]
+- Stats: initialize the Stats Admin package [#27604]
+- Tweaks to previous PR that already has changelog entry [#27557]
+- Updated package dependencies. [#27340, #27688, #27696, , #27698]
+- Updated waf package version in composer.lock [#27528]
+- Updating testing instructions [#27642]
 
 ## 11.6-beta - 2022-11-28
 ### Enhancements
