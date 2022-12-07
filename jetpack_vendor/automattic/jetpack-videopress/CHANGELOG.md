@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - VideoPress: fix issue when setting the video block video from the media library
+- VideoPress: set v1.1/videos endpoint as global when requesting video data
 
 ## [0.8.4] - 2022-12-06
 ### Changed
