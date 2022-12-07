@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add "Show video sharing menu" control to VideoPress block
 - VideoPress: Add first video popover
 
+### Fixed
+- VideoPress: fix issue when setting the video block video from the media library
+
 ## [0.8.4] - 2022-12-06
 ### Changed
 - Updated package dependencies. [#27340]
