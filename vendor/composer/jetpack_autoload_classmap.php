@@ -99,7 +99,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-plugin.php'
 	),
 	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Client' => array(
