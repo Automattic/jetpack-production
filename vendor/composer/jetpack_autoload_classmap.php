@@ -14,6 +14,18 @@ return array(
 		'version' => '1.0.1.0',
 		'path'    => $vendorDir . '/wikimedia/aho-corasick/src/MultiStringReplacer.php'
 	),
+	'Autoloader' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader.php'
+	),
+	'Autoloader_Handler' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader-handler.php'
+	),
+	'Autoloader_Locator' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader-locator.php'
+	),
 	'Automattic\\Jetpack\\A8c_Mc_Stats' => array(
 		'version' => '1.4.17.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php'
@@ -962,6 +974,14 @@ return array(
 		'version' => '0.2.26.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php'
 	),
+	'Container' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-container.php'
+	),
+	'Hook_Manager' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-hook-manager.php'
+	),
 	'JetpackTracking' => array(
 		'version' => '1.7.5.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpacktracking.php'
@@ -1014,6 +1034,34 @@ return array(
 		'version' => '1.47.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-xmlrpc-server.php'
 	),
+	'Latest_Autoloader_Guard' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-latest-autoloader-guard.php'
+	),
+	'Manifest_Reader' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-manifest-reader.php'
+	),
+	'PHP_Autoloader' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-php-autoloader.php'
+	),
+	'Path_Processor' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-path-processor.php'
+	),
+	'Plugin_Locator' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-plugin-locator.php'
+	),
+	'Plugins_Handler' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-plugins-handler.php'
+	),
+	'Shutdown_Handler' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-shutdown-handler.php'
+	),
 	'Twitter\\Text\\Autolink' => array(
 		'version' => '3.1.2.0',
 		'path'    => $vendorDir . '/nojimage/twitter-text-php/lib/Twitter/Text/Autolink.php'
@@ -1061,6 +1109,14 @@ return array(
 	'VIDEOPRESS_PRIVACY' => array(
 		'version' => '0.9.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/utility-functions.php'
+	),
+	'Version_Loader' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-version-loader.php'
+	),
+	'Version_Selector' => array(
+		'version' => '2.11.13.0',
+		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-version-selector.php'
 	),
 	'VideoPressUploader\\File_Exception' => array(
 		'version' => '0.9.0.0-alpha',
