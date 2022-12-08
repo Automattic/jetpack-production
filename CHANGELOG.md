@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Writing prompts: add filter for whether prompts are enabled or not
 
+### Improved compatibility
+- Jetpack: convert on-the-fly video block instances on dotcom
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Backport changelog and readme
 - Stats: use config package to init stats admin
