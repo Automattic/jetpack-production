@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Jetpack: remove video block transform to/from videopress/video for Simple sites
 - Update Form blocks descriptions
 - Writing prompts: add filter for whether prompts are enabled or not
 
