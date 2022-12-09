@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Ignore .vscode/ folder
 - VideoPress: Add "Show video sharing menu" control to VideoPress block
 - VideoPress: Add first video popover
+- VideoPress: Handle URL pagination for video list/grid so every page has it's own URL.
 
 ### Changed
 - VideoPress: do not prompt to convert core/embed to videopress/video for Simple sites
