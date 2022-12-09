@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: convert core/embed block, videopress variation, to VideoPress video block, on the fly for Simple sites
 - Jetpack: remove video block transform to/from videopress/video for Simple sites
 - Update Form blocks descriptions
+- Update Form block Sidebar to make it simpler
 - Writing prompts: add filter for whether prompts are enabled or not
 
 ### Improved compatibility
