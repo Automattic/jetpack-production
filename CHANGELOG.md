@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Backport changelog and readme
+- Change the label "email subscribers" to "subscribers", since it also includes followers.
 - Stats: use config package to init stats admin
 - Update composer with latest version of google-fonts-provider package
 - Updating changelog entries
