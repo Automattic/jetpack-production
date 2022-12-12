@@ -2,30 +2,31 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.7-a.2 - unreleased
+## 11.7-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 11.7-a.3 - 2022-12-12
 ### Enhancements
-- Jetpack: convert core/embed block, videopress variation, to VideoPress video block, on the fly for Simple sites
-- Jetpack: remove video block transform to/from videopress/video for Simple sites
-- Update Form blocks descriptions
-- Update Form block Sidebar to make it simpler
-- Writing prompts: add filter for whether prompts are enabled or not
+- Jetpack: convert core/embed block, videopress variation, to VideoPress video block, on the fly for Simple sites [#27857]
+- Jetpack: remove video block transform to/from videopress/video for Simple sites [#27834]
+- Update Form blocks descriptions [#27819]
+- Update Form block Sidebar to make it simpler [#27820]
+- Writing prompts: add filter for whether prompts are enabled or not [#27778]
 
 ### Improved compatibility
-- Jetpack: convert on-the-fly video block instances on dotcom
+- Jetpack: convert on-the-fly video block instances on dotcom [#27831]
 
 ### Bug fixes
-- Admin Page: avoid querying for WAF settings when the feature is not active.
-- Jetpack: fix video player issue in some VideoMaker theme patterns
+- Admin Page: avoid querying for WAF settings when the feature is not active. [#27777]
+- Jetpack: fix video player issue in some VideoMaker theme patterns [#27859]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Backport changelog and readme
-- Change the label "email subscribers" to "subscribers", since it also includes followers.
-- Stats: use config package to init stats admin
-- Update composer with latest version of google-fonts-provider package
-- Updating changelog entries
+- Backport changelog and readme [#27776]
+- Change the label "email subscribers" to "subscribers", since it also includes followers. [#27879]
+- Stats: use config package to init stats admin [#27565]
+- Update composer with latest version of google-fonts-provider package [#27719]
+- Updating changelog entries [#27774]
 
 ## 11.7-a.1 - 2022-12-06
 ### Enhancements
