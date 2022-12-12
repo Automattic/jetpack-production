@@ -31,7 +31,7 @@
 		"automattic/jetpack-lazy-images": "^2.1.29",
 		"automattic/jetpack-licensing": "^1.7.13",
 		"automattic/jetpack-logo": "^1.5.20",
-		"automattic/jetpack-my-jetpack": "^2.6.0",
+		"automattic/jetpack-my-jetpack": "^2.6.1-alpha",
 		"automattic/jetpack-partner": "^1.7.21",
 		"automattic/jetpack-plugins-installer": "^0.2.2",
 		"automattic/jetpack-post-list": "^0.4.3",
@@ -43,7 +43,7 @@
 		"automattic/jetpack-stats-admin": "^0.1.1",
 		"automattic/jetpack-status": "^1.15.2",
 		"automattic/jetpack-sync": "^1.44.2",
-		"automattic/jetpack-videopress": "^0.9.0",
+		"automattic/jetpack-videopress": "^0.9.1-alpha",
 		"automattic/jetpack-waf": "^0.7.1",
 		"automattic/jetpack-wordads": "^0.2.26",
 		"nojimage/twitter-text-php": "3.1.2"
