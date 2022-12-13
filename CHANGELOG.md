@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - add context to blogging prompt placeholder
+- Assistant: update Akismet and Backup names
 - Slideshow block: Update block description
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
