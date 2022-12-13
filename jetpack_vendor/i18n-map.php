@@ -68,6 +68,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-post-list',
       'ver' => '0.4.3',
     ),
+    'jetpack-promote-posts' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-promote-posts',
+      'ver' => '0.1.0-alpha',
+    ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
       'ver' => '0.18.3',
