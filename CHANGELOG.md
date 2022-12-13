@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix PHP Warning on subscription block
 - Jetpack Slideshow: Change the labels for Image Size and Transition Effect options.
 - Remove dead static-site-generator-webpack-plugin dep, copy a cleaned-up version into the repo.
+- Stats: fix stats chart in masterbar when new experience is turned on
 - Updated package dependencies.
 - Updating changelog entries.
 
