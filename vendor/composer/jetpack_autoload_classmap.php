@@ -563,15 +563,15 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-xmlrpc-provider.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\Dashboard' => array(
-		'version' => '0.1.2.0-alpha',
+		'version' => '0.2.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-dashboard.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\Main' => array(
-		'version' => '0.1.2.0-alpha',
+		'version' => '0.2.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-main.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\REST_Controller' => array(
-		'version' => '0.1.2.0-alpha',
+		'version' => '0.2.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Status' => array(
