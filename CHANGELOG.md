@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Assistant: update Akismet and Backup names
 - Slideshow block: Update block description
 - Update Backup, Anti-spam, and VideoPress logos
+- Update Form block placeholder styles
 
 ### Bug fixes
 - Minor Hovercards & AMP compatibility bug
