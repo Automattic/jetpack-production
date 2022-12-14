@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - add context to blogging prompt placeholder
+- Allow Form required field text to be changed
 - Assistant: update Akismet and Backup names
 - Slideshow block: Update block description
 - Update Backup, Anti-spam, and VideoPress logos
