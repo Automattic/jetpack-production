@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Form block placeholder styles
 
 ### Bug fixes
+- Fix the initialization of the firewall.
 - Minor Hovercards & AMP compatibility bug
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
