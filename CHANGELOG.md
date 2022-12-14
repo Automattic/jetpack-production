@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Slideshow block: Update block description
 - Update Backup, Anti-spam, and VideoPress logos
 
+### Bug fixes
+- Minor Hovercards & AMP compatibility bug
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add export to Google Drive feature on form responses table
 - Fix PHP Warning on subscription block
