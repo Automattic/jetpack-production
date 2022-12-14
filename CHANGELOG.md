@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Extensions: use isCurrentUserConnected from package instead of from internally shared function.
 - Fix PHP Warning on subscription block
 - Jetpack Slideshow: Change the labels for Image Size and Transition Effect options.
+- Options: Added new site option of 'wpcom-subscription-emails-use-excerpt'
 - Remove dead static-site-generator-webpack-plugin dep, copy a cleaned-up version into the repo.
 - Stats: fix stats chart in masterbar when new experience is turned on
 - Updated package dependencies.
