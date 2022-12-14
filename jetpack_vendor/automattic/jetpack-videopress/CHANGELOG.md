@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: set fill property of the VideoPress video icons
 
 ### Removed
 - Remove src/client files from final bundle
