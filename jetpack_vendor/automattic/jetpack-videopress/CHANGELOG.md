@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Removed
+- Remove src/client files from final bundle
+
 ## [0.9.0] - 2022-12-12
 ### Added
 - Ignore .vscode/ folder [#27794]
