@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Add translation context to Security product name
+
 ## [2.6.1] - 2022-12-12
 ### Changed
 - Updated package dependencies. [#27888]

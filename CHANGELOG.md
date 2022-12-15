@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Form block placeholder styles
 
 ### Bug fixes
+- Add translation context to Security product name
 - Fix the initialization of the firewall.
 - Minor Hovercards & AMP compatibility bug
 
