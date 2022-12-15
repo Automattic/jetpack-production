@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Block editor: add a new panel allowing you to promote your posts after publishing them.
 - Slideshow block: Update block description
 - Update Backup, Anti-spam, and VideoPress logos
+- Update Form block default labels
 - Update Form block placeholder styles
 
 ### Bug fixes
