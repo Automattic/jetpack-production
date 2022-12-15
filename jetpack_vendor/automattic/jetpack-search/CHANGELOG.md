@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Declare field `REST_Controller->plan`.
+
 ## [0.31.1] - 2022-12-06
 ### Changed
 - Updated package dependencies. [#27340, #27688, #27696, #27697]

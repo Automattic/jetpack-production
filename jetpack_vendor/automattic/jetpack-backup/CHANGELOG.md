@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update Backup logo
 
+### Fixed
+- Update for PHP 8.2 deprecations.
+
 ## [1.10.5] - 2022-12-06
 ### Changed
 - Updated backup layout to improve consistency and remove redundancy. [#27222]
