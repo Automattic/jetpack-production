@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: removed style overriding for Odyssey stats
 
 ### Fixed
+- Stats: added `hostname` and `admin_url` to config
 - Stats Admin: fixed phpunit CI tests
 
 ## 0.1.1 - 2022-12-06
