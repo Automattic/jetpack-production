@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add export to Google Drive feature on form responses table
+- Blocks: enqueue connection data in post editor, to be used by blocks.
 - E2E tests: add a new tests for Form block
 - Extensions: use isCurrentUserConnected from package instead of from internally shared function.
 - Fix PHP Warning on subscription block
