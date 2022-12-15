@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Stats: removed style overriding for Odyssey stats
 
+### Fixed
+- Stats Admin: fixed phpunit CI tests
+
 ## 0.1.1 - 2022-12-06
 ### Changed
 - Stats: explicitly allow only certain API access with blog token to wpcom [#27604]

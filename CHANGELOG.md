@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove dead static-site-generator-webpack-plugin dep, copy a cleaned-up version into the repo.
 - Slideshow block: Change the arrow's style to match the gallery current style.
 - Stats: fix stats chart in masterbar when new experience is turned on
+- Stats Admin: update dependencies
 - Updated package dependencies.
 - Updating changelog entries.
 
