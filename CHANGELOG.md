@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Update Form block default labels
 - Update Form block placeholder styles
 
+### Improved compatibility
+- Sync Launchpad-related options: `launchpad_screen` and `launchpad_checklist_tasks_statuses`
+
 ### Bug fixes
 - Add translation context to Security product name
 - Fix the initialization of the firewall.
