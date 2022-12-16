@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Adding new boolean site option of 'wpcom-subscription-emails-use-excerpt'
 - Sync Launchpad-related options: `launchpad_screen` and `launchpad_checklist_tasks_statuses`
 
+### Changed
+- Option: Update featured_image_email_enabled option name to wpcom_featured_image_in_email
+
 ## [1.44.2] - 2022-12-06
 ### Changed
 - Updated package dependencies.
