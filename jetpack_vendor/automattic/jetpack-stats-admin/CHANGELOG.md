@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Stats: added list posts endpoint
 
+### Changed
+- Stats Admin: changed the time to refresh cache buster to 15 min
+
 ### Removed
 - Stats: removed style overriding for Odyssey stats
 
