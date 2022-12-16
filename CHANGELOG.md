@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Backup, Anti-spam, and VideoPress logos
 - Update Form block default labels
 - Update Form block placeholder styles
+- Update Form fields styles to comply with WYSIWYG
 
 ### Improved compatibility
 - General: Fix deprecation warnings when running with PHP 8.2.
