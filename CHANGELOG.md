@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Form fields styles to comply with WYSIWYG
 
 ### Improved compatibility
+- Blogging prompts: hide placeholder prompts by default
 - CSS: Removed custom maybe_inline_style() with wp_maybe_inline_styles() which is available in WP core since 5.8.0
 - General: Fix deprecation warnings when running with PHP 8.2.
 - Sync Launchpad-related options: `launchpad_screen` and `launchpad_checklist_tasks_statuses`
