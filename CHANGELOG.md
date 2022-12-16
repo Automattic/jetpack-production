@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Form block placeholder styles
 
 ### Improved compatibility
+- General: Fix deprecation warnings when running with PHP 8.2.
 - Sync Launchpad-related options: `launchpad_screen` and `launchpad_checklist_tasks_statuses`
 
 ### Bug fixes

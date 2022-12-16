@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Provide user locale when fetching info about connected WordPress.com user
 - Update for PHP 8.2 compatibility.
 
+### Fixed
+- Declare fields for PHP 8.2 compatibility.
+
 ## [1.47.1] - 2022-12-02
 ### Changed
 - Updated package dependencies. [#27696]

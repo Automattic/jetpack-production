@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Declare field `REST_Controller->plan`.
+- Improve PHP 8.2 compatibility.
 
 ## [0.31.1] - 2022-12-06
 ### Changed

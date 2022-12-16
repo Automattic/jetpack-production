@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Option: Update featured_image_email_enabled option name to wpcom_featured_image_in_email
 
+### Fixed
+- Improve PHP 8.2 compatibility.
+
 ## [1.44.2] - 2022-12-06
 ### Changed
 - Updated package dependencies.
