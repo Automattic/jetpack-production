@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Add translation context to Security product name
+- Fixes email formatting for contact form submissions
 - Fix the initialization of the firewall.
 - Minor Hovercards & AMP compatibility bug
 
