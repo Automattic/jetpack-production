@@ -5,23 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.2.0-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 0.2.0 - 2022-12-19
 ### Added
-- Stats: added list posts endpoint
+- Stats: added list posts endpoint. [#27875]
 
 ### Changed
-- Stats: changed loading assets from odyssey-stats folder and some names
-- Stats Admin: changed the time to refresh cache buster to 15 min
+- Stats: changed loading assets from odyssey-stats folder and some names. [#27971]
+- Stats Admin: changed the time to refresh cache buster to 15 min. [#27969]
 
 ### Removed
-- Stats: removed style overriding for Odyssey stats
+- Stats: removed style overriding for Odyssey stats. [#27896]
 
 ### Fixed
-- Stats: added `hostname` and `admin_url` to config
-- Stats Admin: fixed phpunit CI tests
+- Stats: added `hostname` and `admin_url` to config. [#27922]
+- Stats Admin: fixed phpunit CI tests. [#27948]
 
 ## 0.1.1 - 2022-12-06
 ### Changed
