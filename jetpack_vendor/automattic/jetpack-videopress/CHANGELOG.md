@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: sync video `post_id` with block attribute `id`
 
 ### Changed
+- Updated package dependency.
 - VideoPress: do not convert core/embed to videopress/video on-the-fly
 
 ## [0.9.2] - 2022-12-19
