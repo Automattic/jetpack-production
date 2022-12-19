@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Option: Update featured_image_email_enabled option name to wpcom_featured_image_in_email
 - Options: Added new site option of 'wpcom-subscription-emails-use-excerpt'
 - Remove dead static-site-generator-webpack-plugin dep, copy a cleaned-up version into the repo.
+- Remove last place that uses maybe_inline_styles
 - Slideshow block: Change the arrow's style to match the gallery current style.
 - Stats: fix stats chart in masterbar when new experience is turned on
 - Stats Admin: update dependencies
