@@ -104,6 +104,7 @@ return array(
     'Automattic\\Jetpack\\Plugins_Installer' => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php',
     'Automattic\\Jetpack\\Post_List\\Post_List' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-list.php',
     'Automattic\\Jetpack\\Post_List\\Post_Thumbnail' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-thumbnail.php',
+    'Automattic\\Jetpack\\Promote_Posts' => $baseDir . '/jetpack_vendor/automattic/jetpack-promote-posts/src/class-promote-posts.php',
     'Automattic\\Jetpack\\Publicize\\Connections_Post_Field' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-connections-post-field.php',
     'Automattic\\Jetpack\\Publicize\\Keyring_Helper' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-keyring-helper.php',
     'Automattic\\Jetpack\\Publicize\\Publicize' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize.php',
