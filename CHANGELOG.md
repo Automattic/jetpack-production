@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin page: avoid blank connection screen.
+
 ## 11.7-a.5 - 2022-12-19
 ### Enhancements
 - Activate license key dropdown selector in Jetpack plugin's activation page. [#27974]
