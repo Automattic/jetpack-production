@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - Update Jetpack VideoPress logo
+- VideoPress: filter the video fields that re-renders the player when change
 - VideoPress: set fill property of the VideoPress video icons
 
 ### Removed
