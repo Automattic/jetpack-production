@@ -44,7 +44,7 @@
 		"automattic/jetpack-stats-admin": "^0.2.0",
 		"automattic/jetpack-status": "^1.15.3",
 		"automattic/jetpack-sync": "^1.45.0",
-		"automattic/jetpack-videopress": "^0.9.2-alpha",
+		"automattic/jetpack-videopress": "^0.9.3-alpha",
 		"automattic/jetpack-waf": "^0.7.2",
 		"automattic/jetpack-wordads": "^0.2.27",
 		"nojimage/twitter-text-php": "3.1.2"
@@ -93,7 +93,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ11_7_a_6",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ11_7_a_8",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true

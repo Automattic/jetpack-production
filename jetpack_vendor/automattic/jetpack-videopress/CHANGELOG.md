@@ -5,13 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.2-alpha] - unreleased
+## [0.9.3-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: do not convert core/embed to videopress/video on-the-fly
-- VideoPress: filter the video fields that re-renders the player when change
+
+## [0.9.2] - 2022-12-19
+### Changed
+- VideoPress: filter the video fields that re-renders the player when changed. [#27862]
 
 ## [0.9.1] - 2022-12-19
 ### Changed
@@ -556,7 +559,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.9.2-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.9.1...v0.9.2-alpha
+[0.9.3-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.9.2...v0.9.3-alpha
+[0.9.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.9.1...v0.9.2
 [0.9.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.8.4...v0.9.0
 [0.8.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.8.3...v0.8.4

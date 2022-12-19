@@ -2,16 +2,17 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.7-a.6 - unreleased
+## 11.7-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Jetpack: do not convert core/embed to videopress/video on-the-fly
 
+## 11.7-a.7 - 2022-12-19
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Admin page: avoid blank connection screen.
-- Updating changelog and readme entries for 11.7-a.5
+- Admin page: avoid blank connection screen. [#28001]
+- Updating changelog and readme entries for 11.7-a.5 [#28000]
 
 ## 11.7-a.5 - 2022-12-19
 ### Enhancements
