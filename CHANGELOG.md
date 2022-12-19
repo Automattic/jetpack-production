@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Activate license key dropdown selector in Jetpack plugin's activation page.
 - add context to blogging prompt placeholder
 - Add new fonts to Global Style options.
 - Allow Form required field text to be changed
