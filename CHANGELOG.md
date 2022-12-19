@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: add a new tests for Form block
 - Extensions: use isCurrentUserConnected from package instead of from internally shared function.
 - Fix PHP Warning on subscription block
+- Improve stability of Pay with Paypal test
 - Jetpack Slideshow: Change the labels for Image Size and Transition Effect options.
 - Option: Update featured_image_email_enabled option name to wpcom_featured_image_in_email
 - Options: Added new site option of 'wpcom-subscription-emails-use-excerpt'
