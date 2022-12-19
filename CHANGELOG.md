@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Jetpack: do not convert core/embed to videopress/video on-the-fly
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin page: avoid blank connection screen.
 - Updating changelog and readme entries for 11.7-a.5

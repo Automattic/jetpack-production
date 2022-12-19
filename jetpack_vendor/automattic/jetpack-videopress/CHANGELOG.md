@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- VideoPress: do not convert core/embed to videopress/video on-the-fly
 - VideoPress: filter the video fields that re-renders the player when change
 
 ## [0.9.1] - 2022-12-19
