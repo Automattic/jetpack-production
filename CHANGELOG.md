@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- add launchpad on save modal
+
 ### Enhancements
 - Jetpack: do not convert core/embed to videopress/video on-the-fly
 - Slideshow: Reduce bullet size and move it to flex-start
