@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Jetpack: do not convert core/embed to videopress/video on-the-fly
 - Slideshow: Reduce bullet size and move it to flex-start
+- Slideshow: Replace pencil icon with edit text
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updating changelog entries
