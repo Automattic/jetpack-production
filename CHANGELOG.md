@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - add launchpad on save modal
 
 ### Enhancements
+- Also support git merge strategy for changelog.'
 - Entire posts can now be restricted to either paid subscribers, or email subscribers. This will enable site owners to:
   - reward their paying subscribers with secret Lasagna recipes
   - create paid-only issues of their newsletters
