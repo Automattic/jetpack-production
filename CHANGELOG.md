@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Slideshow: Replace pencil icon with edit text
 
 ### Bug fixes
+- Adjust Form placeholder footer links style
 - Premium-content block is shipped with a JWT lib that had a bug in its encode() method
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
