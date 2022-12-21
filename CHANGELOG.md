@@ -10,9 +10,22 @@ This is an alpha version! The changes listed here are not final.
 - add launchpad on save modal
 
 ### Enhancements
+- Entire posts can now be restricted to either paid subscribers, or email subscribers. This will enable site owners to:
+  - reward their paying subscribers with secret Lasagna recipes
+  - create paid-only issues of their newsletters
+  - create incentives and landing pages to gain subscribers
+  - create paid courses, and pursue other subscriber-only models
+  - support themselves financially without sacrificing creative freedom
+  - buy literal jetpacks from all the money they make on their sites (outcome not guaranteed)
 - Jetpack: do not convert core/embed to videopress/video on-the-fly
+- Paid Newsletter functionality:
+  If the site owner creates one or more "newsletter" paid plans available for purchase, subscribers will be given an option to pay while subscribing through the subscribe block.
+  This change goes together with ./add-post-visibility-setting to create a paid newsletter functionality.
 - Slideshow: Reduce bullet size and move it to flex-start
 - Slideshow: Replace pencil icon with edit text
+
+### Bug fixes
+- Premium-content block is shipped with a JWT lib that had a bug in its encode() method
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updating changelog entries
