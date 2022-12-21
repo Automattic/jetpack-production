@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
   - support themselves financially without sacrificing creative freedom
   - buy literal jetpacks from all the money they make on their sites (outcome not guaranteed)
 - Jetpack: do not convert core/embed to videopress/video on-the-fly
+- Move responses export to a modal triggered by a single "Export" button. This allows for more options to be added there as the listtable page offers very few space for it.
 - Paid Newsletter functionality:
   If the site owner creates one or more "newsletter" paid plans available for purchase, subscribers will be given an option to pay while subscribing through the subscribe block.
   This change goes together with ./add-post-visibility-setting to create a paid newsletter functionality.
