@@ -26,6 +26,9 @@ This is an alpha version! The changes listed here are not final.
 - Slideshow: Reduce bullet size and move it to flex-start
 - Slideshow: Replace pencil icon with edit text
 
+### Improved compatibility
+- VideoPress: Do not register videopress shortcode if standalone VideoPress plugin already registered it
+
 ### Bug fixes
 - Adjust Form placeholder footer links style
 - Internationalization: fix context for translated product name.

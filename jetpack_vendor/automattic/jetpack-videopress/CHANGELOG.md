@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.3-alpha] - unreleased
+## [0.10.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: add core/embed transform from/to video block
+- VideoPress: Add videopress shortcode
 - VideoPress: show error notice when updating data video fails
 - VideoPress: sync video `post_id` with block attribute `id`
 
@@ -565,7 +566,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.9.3-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.9.2...v0.9.3-alpha
+[0.10.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.9.2...v0.10.0-alpha
 [0.9.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.9.1...v0.9.2
 [0.9.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.8.4...v0.9.0
