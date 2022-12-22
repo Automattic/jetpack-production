@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Adjust Form placeholder footer links style
+- Blogging Prompts: Don't display within mobile app
 - Internationalization: fix context for translated product name.
 - Premium-content block is shipped with a JWT lib that had a bug in its encode() method
 
