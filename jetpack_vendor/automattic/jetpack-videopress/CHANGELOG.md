@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependency.
 - VideoPress: do not convert core/embed to videopress/video on-the-fly
 
+### Removed
+- VideoPress: remove video editor.js unused file
+
 ## [0.9.2] - 2022-12-19
 ### Changed
 - VideoPress: filter the video fields that re-renders the player when changed. [#27862]
