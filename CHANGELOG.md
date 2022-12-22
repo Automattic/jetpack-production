@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Form child blocks icons
 
 ### Improved compatibility
+- Revue block: Removed functionality due to Revue shutting down, adding placeholder messaging instead.
 - VideoPress: Do not register videopress shortcode if standalone VideoPress plugin already registered it
 
 ### Bug fixes
