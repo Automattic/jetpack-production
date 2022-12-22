@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
   This change goes together with ./add-post-visibility-setting to create a paid newsletter functionality.
 - Slideshow: Reduce bullet size and move it to flex-start
 - Slideshow: Replace pencil icon with edit text
+- Update Form child blocks icons
 
 ### Improved compatibility
 - VideoPress: Do not register videopress shortcode if standalone VideoPress plugin already registered it
