@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add core/embed transform from/to video block
 - VideoPress: Add videopress shortcode
+- VideoPress: improve blocks building process
 - VideoPress: show error notice when updating data video fails
 - VideoPress: sync video `post_id` with block attribute `id`
 
