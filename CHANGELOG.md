@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Internationalization: fix context for translated product name.
 - Payment blocks: Fixed the upgrade nudge for Payment blocks
 - Premium-content block is shipped with a JWT lib that had a bug in its encode() method
+- Subscribe Block: ensure custom button spacing is correct when the button is on its own line.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: switch to using the new, shared and extracted version of Tracks.
