@@ -16,4 +16,4 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.2.0-alpha]: https://github.com/automattic/jetpack-promote-posts/compare/v0.1.0...v0.2.0-alpha
+[0.2.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.1.0...v0.2.0-alpha

@@ -20,6 +20,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
       'ver' => '1.10.6',
     ),
+    'jetpack-blaze' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-blaze',
+      'ver' => '0.2.0-alpha',
+    ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '1.7.5',
@@ -67,10 +71,6 @@ return array(
     'jetpack-post-list' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-post-list',
       'ver' => '0.4.3',
-    ),
-    'jetpack-promote-posts' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-promote-posts',
-      'ver' => '0.2.0-alpha',
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',

@@ -98,6 +98,10 @@ return array(
 		'version' => '1.10.6.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-rest-controller.php'
 	),
+	'Automattic\\Jetpack\\Blaze' => array(
+		'version' => '0.2.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-blaze.php'
+	),
 	'Automattic\\Jetpack\\Blocks' => array(
 		'version' => '1.4.18.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blocks/src/class-blocks.php'
@@ -409,10 +413,6 @@ return array(
 	'Automattic\\Jetpack\\Post_List\\Post_Thumbnail' => array(
 		'version' => '0.4.3.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-thumbnail.php'
-	),
-	'Automattic\\Jetpack\\Promote_Posts' => array(
-		'version' => '0.2.0.0-alpha',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-promote-posts/src/class-promote-posts.php'
 	),
 	'Automattic\\Jetpack\\Publicize\\Connections_Post_Field' => array(
 		'version' => '0.18.4.0',
