@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add new fonts for better i18n
+- Adjust Form placeholder colors for better consistency
 - Admin: use minimized CSS for the stats widget
 - Also support git merge strategy for changelog.'
 - Entire posts can now be restricted to either paid subscribers, or email subscribers. This will enable site owners to:
