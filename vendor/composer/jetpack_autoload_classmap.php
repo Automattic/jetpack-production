@@ -411,7 +411,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-thumbnail.php'
 	),
 	'Automattic\\Jetpack\\Promote_Posts' => array(
-		'version' => '0.1.0.0',
+		'version' => '0.2.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-promote-posts/src/class-promote-posts.php'
 	),
 	'Automattic\\Jetpack\\Publicize\\Connections_Post_Field' => array(

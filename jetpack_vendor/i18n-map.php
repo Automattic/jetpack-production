@@ -70,7 +70,7 @@ return array(
     ),
     'jetpack-promote-posts' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-promote-posts',
-      'ver' => '0.1.0',
+      'ver' => '0.2.0-alpha',
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',

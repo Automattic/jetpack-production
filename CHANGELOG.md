@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Update the Mixcloud oEmbed API Endpoint to the new version
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blaze: move out of the plugin, and into the Promote Posts package.
 - Blocks: switch to using the new, shared and extracted version of Tracks.
 - Blocks: update the look of the Promote button on the post-publish button.
 - Update wpcom_gifting_subscription default value based on plan expiration
