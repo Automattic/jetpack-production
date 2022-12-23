@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Blaze: move out of the plugin, and into the Promote Posts package.
 - Blocks: switch to using the new, shared and extracted version of Tracks.
 - Blocks: update the look of the Promote button on the post-publish button.
+- Move atomic checks for the WAF to the WAF package.
 - Site Settings API: Exposing `show_on_front` and `page_on_front` options
 - Update Promote Post package reference to new name: Blaze
 - Update wpcom_gifting_subscription default value based on plan expiration
