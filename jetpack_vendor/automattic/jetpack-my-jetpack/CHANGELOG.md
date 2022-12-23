@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Fix layout visual issues
 - My Jetpack: Move Backup out of hybrid product
+- My Jetpack: Move Social out of hybrid product
 
 ## [2.7.0] - 2022-12-19
 ### Added
