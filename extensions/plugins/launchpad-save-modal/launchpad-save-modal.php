@@ -2,7 +2,7 @@
 /**
  * Launchpad Save Modal
  *
- * @since 11.7-a.8
+ * @since 11.7
  *
  * @package automattic/jetpack
  */

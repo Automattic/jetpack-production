@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.46.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.46.0] - 2022-12-27
 ### Added
-- Added woocommerce_cod_settings to the options whitelist.
+- Added woocommerce_cod_settings to the options whitelist. [#27988]
 
 ## [1.45.0] - 2022-12-19
 ### Added
@@ -802,7 +799,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[1.46.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.45.0...v1.46.0-alpha
+[1.46.0]: https://github.com/Automattic/jetpack-sync/compare/v1.45.0...v1.46.0
 [1.45.0]: https://github.com/Automattic/jetpack-sync/compare/v1.44.2...v1.45.0
 [1.44.2]: https://github.com/Automattic/jetpack-sync/compare/v1.44.1...v1.44.2
 [1.44.1]: https://github.com/Automattic/jetpack-sync/compare/v1.44.0...v1.44.1

@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.8.0] - 2022-12-27
 ### Added
-- Add file existance checks before requiring rule files in the WAF.
-- Disable Jetpack Firewall on unsupported environments.
+- Add file existance checks before requiring rule files in the WAF. [#28050]
+- Disable Jetpack Firewall on unsupported environments. [#27939]
 
 ## [0.7.2] - 2022-12-19
 ### Fixed
@@ -130,7 +127,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.8.0-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.7.2...v0.8.0-alpha
+[0.8.0]: https://github.com/Automattic/jetpack-waf/compare/v0.7.2...v0.8.0
 [0.7.2]: https://github.com/Automattic/jetpack-waf/compare/v0.7.1...v0.7.2
 [0.7.1]: https://github.com/Automattic/jetpack-waf/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/Automattic/jetpack-waf/compare/v0.6.10...v0.7.0
