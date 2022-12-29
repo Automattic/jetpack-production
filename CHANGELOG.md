@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Enable Blaze functionality!
+- Stats: Make Odyssey Stats toggle visible for all
 - VideoPress: Fix cover attribute on player and muted attribute on video shortcode override
 
 ## 11.7-a.11 - 2022-12-29
