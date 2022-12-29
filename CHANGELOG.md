@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Enable Blaze functionality!
 - VideoPress: Fix cover attribute on player and muted attribute on video shortcode override
 
 ## 11.7-a.11 - 2022-12-29
