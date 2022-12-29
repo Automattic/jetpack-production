@@ -2,15 +2,12 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.7-a.10 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 11.7-a.11 - 2022-12-29
 ### Bug fixes
-- Premium subscriptions / paid newsletters: Reverting previously merged changes which caused fatal errors in production.
+- Premium subscriptions / paid newsletters: Reverting previously merged changes which caused fatal errors in production. [#28102]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Updating changelog entries for the Jetpack plugin
+- Updating changelog entries for the Jetpack plugin [#28089]
 
 ## 11.7-a.9 - 2022-12-27
 ### Major Enhancements
