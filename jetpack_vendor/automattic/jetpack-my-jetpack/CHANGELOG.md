@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: Move VideoPress from Hybrid
 
+### Changed
+- My Jetpack: Move Search out of hybrid and deprecate Hybrid_Product class
+
 ## [2.7.1] - 2022-12-27
 ### Changed
 - Fix layout visual issues [#28055]
