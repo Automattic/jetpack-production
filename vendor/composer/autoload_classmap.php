@@ -232,6 +232,7 @@ return array(
     'Automattic\\Jetpack\\VideoPress\\XMLRPC' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-xmlrpc.php',
     'Automattic\\Jetpack\\Waf\\CLI' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-cli.php',
     'Automattic\\Jetpack\\Waf\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-rest-controller.php',
+    'Automattic\\Jetpack\\Waf\\Waf_Compatibility' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-compatibility.php',
     'Automattic\\Jetpack\\Waf\\Waf_Constants' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-constants.php',
     'Automattic\\Jetpack\\Waf\\Waf_Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-initializer.php',
     'Automattic\\Jetpack\\Waf\\Waf_Operators' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-operators.php',
