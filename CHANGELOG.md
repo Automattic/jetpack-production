@@ -2,17 +2,18 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.7-a.12 - unreleased
+## 11.8-a.0 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 11.7-beta - 2023-01-02
 ### Enhancements
-- Enable Blaze functionality!
-- Stats: Make Odyssey Stats toggle visible for all
-- VideoPress: Fix cover attribute on player and muted attribute on video shortcode override
+- Blaze: enable functionality within the Jetpack plugin. [#28077]
+- Stats: make the toggle for enabling Odyssey Stats visible for all users. [#28105]
+- VideoPress: fix cover attribute on player and add muted attribute on video shortcode. [#28083]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Updating testing instructions for 11.7
+- Updating testing instructions for 11.7 [#28098]
 
 ## 11.7-a.11 - 2022-12-29
 ### Bug fixes
