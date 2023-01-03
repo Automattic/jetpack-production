@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- VideoPress: re-implemnt useResumableUploader(). 
+  VideoPress: Iterate over resumable file uploader
+    * Re implement useResumableUploader() hook with TS
+    * Update VideoPress uploader to use this hook
+    * Update getMediaToken() to support jwt-upload one
+    * Fixes VideoPress: Editor hits the jwt endpoint unneeded #28131
+    * Move upload to resumableFileUploader()
+    * More TypeScript Changes
+
 ## [0.10.1] - 2023-01-02
 ### Fixed
 - VideoPress: fix plugin presence check and default height. [#28083]
@@ -572,6 +586,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created empty package [#24952]
 
+[0.10.2-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.1...v0.10.2-alpha
 [0.10.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.0...v0.10.1
 [0.10.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.9.2...v0.10.0
 [0.9.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.9.1...v0.9.2
