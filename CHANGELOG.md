@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Use a newly created redirect for "Connect Google Drive" export modal's link. This new redirect will take the user directly to the site's marketing/connections page (bypassing the site selection screen)
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Site Settings API: Exposing `page_for_posts' option
 
