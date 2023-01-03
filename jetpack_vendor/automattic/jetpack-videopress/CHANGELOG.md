@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
     * Move upload to resumableFileUploader()
     * More TypeScript Changes
 
+### Changed
+- VideoPress: TS enhancements in use Video data hooks
+
 ## [0.10.1] - 2023-01-02
 ### Fixed
 - VideoPress: fix plugin presence check and default height. [#28083]
