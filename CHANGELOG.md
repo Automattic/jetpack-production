@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Adding new URL scheme for iCloud Keynote
+- Remove Jetpack Blocks section on At a Glance page
 
 ### Bug fixes
 - Use a newly created redirect for "Connect Google Drive" export modal's link. This new redirect will take the user directly to the site's marketing/connections page (bypassing the site selection screen)
