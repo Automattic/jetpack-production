@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: TS enhancements in use Video data hooks
+- VideoPress: update libs used to upload a video in the dashboard context
 
 ## [0.10.1] - 2023-01-02
 ### Fixed
