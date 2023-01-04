@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
     * More TypeScript Changes
 
 ### Changed
+- Updated package dependencies.
 - VideoPress: TS enhancements in use Video data hooks
 - VideoPress: update libs used to upload a video in the dashboard context
 
