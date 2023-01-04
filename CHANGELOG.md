@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add subscription_options to the site settings endpoint
+- Blaze: remove extension from extension list.
 - Site Settings API: Exposing `page_for_posts' option
 - Updated package dependencies.
 
