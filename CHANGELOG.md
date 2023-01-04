@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Widgets: avoid errors with the Top Posts Widget when activating Offline mode on your site.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add subscription_options to the site settings endpoint
 - Site Settings API: Exposing `page_for_posts' option
 - Updated package dependencies.
 
