@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Do not load the Blaze panel in the site editor or the widget editor.
+
 ## [0.3.2] - 2023-01-04
 ### Changed
 - Editor panel: update Blaze icon and wording. [#28155]
