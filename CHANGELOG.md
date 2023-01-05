@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Add subscription_options to the site settings endpoint
 - Blaze: remove extension from extension list.
 - Site Settings API: Exposing `page_for_posts' option
+- Social Menu Theme Tool: allow specifying a regex instead of a sisimmple host name for services that have logos.
 - Updated package dependencies.
 
 ## 11.7-beta - 2023-01-02
