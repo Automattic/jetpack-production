@@ -382,30 +382,31 @@
         },
         {
             "name": "automattic/jetpack-blaze",
-            "version": "v0.3.0",
-            "version_normalized": "0.3.0.0",
+            "version": "v0.3.2",
+            "version_normalized": "0.3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-blaze.git",
-                "reference": "37be35ba6d35c263bd2dfa4b6bb59fe75b70d801"
+                "reference": "771687fbb301b6186f282e6868f120083c854bae"
             },
             "dist": {
-                "type": "path",
-                "url": "../../packages/blaze",
-                "reference": "bac1bf8e0acf71eaabe4e99f5016b38965c2041d"
+                "type": "zip",
+                "url": "https://api.github.com/repos/Automattic/jetpack-blaze/zipball/771687fbb301b6186f282e6868f120083c854bae",
+                "reference": "771687fbb301b6186f282e6868f120083c854bae",
+                "shasum": ""
             },
             "require": {
                 "automattic/jetpack-connection": "^1.48.1",
                 "automattic/jetpack-sync": "^1.46.0"
             },
             "require-dev": {
-                "automattic/jetpack-assets": "@dev",
-                "automattic/jetpack-changelogger": "@dev",
-                "automattic/jetpack-status": "@dev",
+                "automattic/jetpack-assets": "^1.17.28",
+                "automattic/jetpack-changelogger": "^3.3.0",
+                "automattic/jetpack-status": "^1.15.3",
                 "automattic/wordbless": "@dev",
                 "yoast/phpunit-polyfills": "1.0.4"
             },
-            "time": "2023-01-02T13:47:14+00:00",
+            "time": "2023-01-04T12:17:46+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -433,7 +434,7 @@
             ],
             "description": "Attract high-quality traffic to your site using Blaze.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-blaze/tree/v0.3.0"
+                "source": "https://github.com/Automattic/jetpack-blaze/tree/v0.3.2"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-blaze"
         },
