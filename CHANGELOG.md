@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Disabled Odyssey Stats for Atomic sites
 
 ### Bug fixes
+- Tiled Gallery block: Ensuring localhost and WoA sites with squareish gallery images display those images with correct aspect ratios.
 - Use a newly created redirect for "Connect Google Drive" export modal's link. This new redirect will take the user directly to the site's marketing/connections page (bypassing the site selection screen)
 - Use separate nonce names for export options, wp_nonce_field would use the name also as id of the element, preventing the normal DOM operations when more than one is present.
 - Widgets: avoid errors with the Top Posts Widget when activating Offline mode on your site.
