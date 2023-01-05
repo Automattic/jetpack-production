@@ -76,7 +76,7 @@
         'automattic/jetpack-backup' => array(
             'pretty_version' => '1.10.7-alpha',
             'version' => '1.10.7.0-alpha',
-            'reference' => '665e30c113ff0108f89a9a18dc5ca8f47da38aa0',
+            'reference' => '68fae8d8cf3a524005805ad467bfe06972fddcae',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-backup',
             'aliases' => array(),
