@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress: add Cancel button to uploading file component when replacing file
 - VideoPress: add Replace control to video block
 - VideoPress: re-implemnt useResumableUploader(). 
   VideoPress: Iterate over resumable file uploader
