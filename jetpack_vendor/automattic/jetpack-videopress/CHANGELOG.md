@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - VideoPress: Adjust number of placeholders when loading
+- VideoPress: change the way to detect when the media is a File instance
 
 ## [0.10.1] - 2023-01-02
 ### Fixed
