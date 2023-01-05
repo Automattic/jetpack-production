@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Blaze: Only show post row action to promote if the post is published.
+- Do not load the Blaze panel in the site editor or the widget editor.
 
 ## [0.3.0] - 2023-01-02
 ### Added
