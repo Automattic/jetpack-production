@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Add a polling function on "Connect Google Drive" button. After clicking (opens new tab to connect from Calypso), the polling function will check the connection status every 5 seconds. When successful, the button will change into Export"
+
 ### Bug fixes
 - Use a newly created redirect for "Connect Google Drive" export modal's link. This new redirect will take the user directly to the site's marketing/connections page (bypassing the site selection screen)
 - Use separate nonce names for export options, wp_nonce_field would use the name also as id of the element, preventing the normal DOM operations when more than one is present.
