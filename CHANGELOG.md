@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add a polling function on "Connect Google Drive" button. After clicking (opens new tab to connect from Calypso), the polling function will check the connection status every 5 seconds. When successful, the button will change into Export"
 - Adding new URL scheme for iCloud Keynote
 - Remove Jetpack Blocks section on At a Glance page
 
