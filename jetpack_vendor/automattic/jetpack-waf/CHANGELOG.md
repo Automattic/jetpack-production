@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.8.1] - 2023-01-07
 ### Changed
-- Change directory location that stores firewall rules.
+- Change directory location that stores firewall rules. [#28049]
 
 ## [0.8.0] - 2022-12-27
 ### Added
@@ -134,7 +131,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.8.1-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.8.0...v0.8.1-alpha
+[0.8.1]: https://github.com/Automattic/jetpack-waf/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/Automattic/jetpack-waf/compare/v0.7.2...v0.8.0
 [0.7.2]: https://github.com/Automattic/jetpack-waf/compare/v0.7.1...v0.7.2
 [0.7.1]: https://github.com/Automattic/jetpack-waf/compare/v0.7.0...v0.7.1
