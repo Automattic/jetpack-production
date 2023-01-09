@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - VideoPress: TS enhancements in use Video data hooks
 - VideoPress: update libs used to upload a video in the dashboard context
+- VideoPress: Update no video dashboard UI to have one CTA
 
 ### Removed
 - VideoPress: remove video chapters block
