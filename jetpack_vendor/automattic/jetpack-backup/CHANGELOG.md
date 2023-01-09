@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Use `WP_Filesystem` more consistently in `Helper_Script_Manager`.
 
 ## [1.10.6] - 2022-12-19
 ### Changed

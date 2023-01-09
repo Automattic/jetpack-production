@@ -15,7 +15,7 @@
 		"automattic/jetpack-abtest": "^1.10.11",
 		"automattic/jetpack-action-bar": "^0.1.8-alpha",
 		"automattic/jetpack-assets": "^1.17.29-alpha",
-		"automattic/jetpack-autoloader": "^2.11.14",
+		"automattic/jetpack-autoloader": "^2.11.15-alpha",
 		"automattic/jetpack-backup": "^1.10.7-alpha",
 		"automattic/jetpack-blaze": "^0.3.3-alpha",
 		"automattic/jetpack-blocks": "^1.4.19-alpha",
