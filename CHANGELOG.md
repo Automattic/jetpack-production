@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding new URL scheme for iCloud Keynote
 - Prepare for video validation
 - Remove Jetpack Blocks section on At a Glance page
+- Several UI and UX improvements for the Dropdown block
 
 ### Improved compatibility
 - Disabled Odyssey Stats for Atomic sites
