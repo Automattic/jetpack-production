@@ -26,6 +26,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: TS enhancements in use Video data hooks
 - VideoPress: update libs used to upload a video in the dashboard context
 
+### Removed
+- VideoPress: remove video chapters block
+
 ### Fixed
 - VideoPress: Adjust number of placeholders when loading
 - VideoPress: change the way to detect when the media is a File instance
