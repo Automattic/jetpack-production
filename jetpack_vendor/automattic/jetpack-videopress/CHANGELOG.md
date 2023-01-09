@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
     * Fixes VideoPress: Editor hits the jwt endpoint unneeded #28131
     * Move upload to resumableFileUploader()
     * More TypeScript Changes
+- VideoPress: re-write VideoPress block with TypeScript
 
 ### Changed
 - Updated package dependencies.
