@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Use a newly created redirect for "Connect Google Drive" export modal's link. This new redirect will take the user directly to the site's marketing/connections page (bypassing the site selection screen)
 - Use separate nonce names for export options, wp_nonce_field would use the name also as id of the element, preventing the normal DOM operations when more than one is present.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Comment: Updated the description on the response data export modal under CSV section
+
 ## 11.7-beta - 2023-01-02
 ### Enhancements
 - Blaze: enable functionality within the Jetpack plugin. [#28077]
