@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Disabled Odyssey Stats for Atomic sites
 
 ### Bug fixes
+- Fix extra colon for form fields without label
 - Fix icon allignment on at a glance page
 - Modules: Allow for deactivating multiple plugins when activating a module.
 - Tiled Gallery block: Ensuring localhost and WoA sites with squareish gallery images display those images with correct aspect ratios.
