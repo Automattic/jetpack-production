@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add Cancel button to uploading file component when replacing file
 - VideoPress: add Replace control to video block
+- VideoPress: minor TS enhancement in the useSearchParams() hook
 - VideoPress: re-implemnt useResumableUploader(). 
   VideoPress: Iterate over resumable file uploader
     * Re implement useResumableUploader() hook with TS
