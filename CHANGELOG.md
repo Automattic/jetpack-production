@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Prepare for video validation
 - Remove Jetpack Blocks section on At a Glance page
 - Several UI and UX improvements for the Dropdown block
+- Widgets: add Mastodon to Social Icons Widget and Social Menu
 
 ### Improved compatibility
 - Disabled Odyssey Stats for Atomic sites
