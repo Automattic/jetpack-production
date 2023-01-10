@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a polling function on "Connect Google Drive" button. After clicking (opens new tab to connect from Calypso), the polling function will check the connection status every 5 seconds. When successful, the button will change into Export"
 
 ### Bug fixes
+- Calendar Library: various fixes
 - Fix extra colon for form fields without label
 - Fix icon allignment on at a glance page
 - Use a newly created redirect for "Connect Google Drive" export modal's link. This new redirect will take the user directly to the site's marketing/connections page (bypassing the site selection screen)
