@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
     * Move upload to resumableFileUploader()
     * More TypeScript Changes
 - VideoPress: re-write VideoPress block with TypeScript
+- VideoPress: Route search query parameter so search results can be shared.
 - VideoPress: set block video by providing a GUID value
 - VideoPress: Support replace the video by setting an URL from the replace control
 
