@@ -7,7 +7,6 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Add a polling function on "Connect Google Drive" button. After clicking (opens new tab to connect from Calypso), the polling function will check the connection status every 5 seconds. When successful, the button will change into Export"
 - Adding new URL scheme for iCloud Keynote
 - Prepare for video validation
 - Remove Jetpack Blocks section on At a Glance page
@@ -18,18 +17,13 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Calendar Library: various fixes
-- Fix extra colon for form fields without label
-- Fix icon allignment on at a glance page
 - Modules: Allow for deactivating multiple plugins when activating a module.
 - Tiled Gallery block: Ensuring localhost and WoA sites with squareish gallery images display those images with correct aspect ratios.
-- Use a newly created redirect for "Connect Google Drive" export modal's link. This new redirect will take the user directly to the site's marketing/connections page (bypassing the site selection screen)
-- Use separate nonce names for export options, wp_nonce_field would use the name also as id of the element, preventing the normal DOM operations when more than one is present.
 - Widgets: avoid errors with the Top Posts Widget when activating Offline mode on your site.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add subscription_options to the site settings endpoint
 - Blaze: remove extension from extension list.
-- Comment: Updated the description on the response data export modal under CSV section
 - Jetpack: Do not try to regiter video chapters block
 - Site Settings API: Exposing `page_for_posts' option
 - Social Menu Theme Tool: allow specifying a regex instead of a sisimmple host name for services that have logos.
@@ -37,13 +31,22 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update playwright version
 
-## 11.7-beta - 2023-01-02
+## [11.7] - 2023-01-10
 ### Enhancements
-- Blaze: enable functionality within the Jetpack plugin. [#28077]
+- Contact form: update the description on the response data export modal under CSV section, on the Feedback page. [#28214]
+- Contact form: add a polling function to ensure a successful Google Drive connection, resulting in a usable 'Export' button on the Feedback page. [#28177]
 - Stats: make the toggle for enabling Odyssey Stats visible for all users. [#28105]
 - VideoPress: fix cover attribute on player and add muted attribute on video shortcode. [#28083]
 
+### Bug fixes
+- Form block: fix extra colon for form fields without label. [#28230]
+- Dashboard: fix icon allignment on at a glance page. [#28222]
+- Contact form: fix redirect for "Connect Google Drive" export modal's link on the Feedback page, leading directly to the site's marketing/connections page. [#28147]
+- Contact form: use separate nonce names for export options to ensure modal buttons work as expected.[#28152]
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Calendar Library: cosmetic changes and functional cleanup
+- Tonesque: cosmetic changes and functional cleanup
 - Updating testing instructions for 11.7 [#28098]
 
 ## 11.7-a.11 - 2022-12-29
@@ -7557,6 +7560,7 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 - Initial release
 
 [11.6]: https://wp.me/p1moTy-PLI
+[11.7]: https://wp.me/p1moTy-Q9t
 [11.5]: https://wp.me/p1moTy-Ppq
 [11.4]: https://wp.me/p1moTy-O5I
 [11.3]: https://wp.me/p1moTy-M5i
