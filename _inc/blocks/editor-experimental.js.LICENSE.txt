@@ -30,6 +30,12 @@ object-assign
  @version 8.0.6
 */
 
+/**
+ * @license qrcode.react
+ * Copyright (c) Paul O'Shannessy
+ * SPDX-License-Identifier: ISC
+ */
+
 /** @license React v16.13.1
  * react-is.production.min.js
  *
