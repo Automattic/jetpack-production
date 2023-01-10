@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Disabled Odyssey Stats for Atomic sites
 
 ### Bug fixes
+- Calendar Library: various fixes
 - Fix extra colon for form fields without label
 - Fix icon allignment on at a glance page
 - Modules: Allow for deactivating multiple plugins when activating a module.
