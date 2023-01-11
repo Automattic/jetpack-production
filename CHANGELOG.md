@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add subscription_options to the site settings endpoint
 - Blaze: remove extension from extension list.
+- E2E tests: add test for subscribe block
 - General: switch to shared method for getting a WordPress.com blog ID.
 - Introduce AI-powered blocks for WordPress.com customers.
 - Jetpack: Do not try to regiter video chapters block
