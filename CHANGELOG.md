@@ -20,7 +20,6 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Calendar Library: various fixes
 - Modules: Allow for deactivating multiple plugins when activating a module.
-- Tiled Gallery block: Ensuring localhost and WoA sites with squareish gallery images display those images with correct aspect ratios.
 - Widgets: avoid errors with the Top Posts Widget when activating Offline mode on your site.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
