@@ -32,7 +32,7 @@
 		"automattic/jetpack-lazy-images": "^2.1.29",
 		"automattic/jetpack-licensing": "^1.7.14",
 		"automattic/jetpack-logo": "^1.5.20",
-		"automattic/jetpack-my-jetpack": "^2.7.3",
+		"automattic/jetpack-my-jetpack": "^2.7.4-alpha",
 		"automattic/jetpack-partner": "^1.7.21",
 		"automattic/jetpack-plugins-installer": "^0.2.2",
 		"automattic/jetpack-post-list": "^0.4.3",
