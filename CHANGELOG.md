@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add subscription_options to the site settings endpoint
 - Blaze: remove extension from extension list.
+- General: switch to shared method for getting a WordPress.com blog ID.
 - Jetpack: Do not try to regiter video chapters block
 - Site Settings API: Exposing `page_for_posts' option
 - Social Menu Theme Tool: allow specifying a regex instead of a sisimmple host name for services that have logos.
