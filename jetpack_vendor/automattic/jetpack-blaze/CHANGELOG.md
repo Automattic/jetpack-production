@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.4-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Only display the Blaze UI if the connected user's language is English.
+
 ## [0.3.3] - 2023-01-11
 ### Changed
 - Updated package dependencies. [#28127]
@@ -34,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated package dependencies. [#27906]
 
+[0.3.4-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.3.3...v0.3.4-alpha
 [0.3.3]: https://github.com/automattic/jetpack-blaze/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/automattic/jetpack-blaze/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/automattic/jetpack-blaze/compare/v0.3.0...v0.3.1
