@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Adding new URL scheme for iCloud Keynote
+- Adds a few relevant keywords to the 'Newsletter Sign-up' block
 - Prepare for video validation
 - Remove Jetpack Blocks section on At a Glance page
 - Several UI and UX improvements for the Dropdown block
