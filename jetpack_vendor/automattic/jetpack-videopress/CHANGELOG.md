@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: clean video attributes that are not options when replacing the video file
 - VideoPress: fix duplicating uploaded file when replacing the video
 - VideoPress: Fix local video listed as VideoPress video
+- VideoPress: fix render player once file uploads issue
 
 ## [0.10.1] - 2023-01-02
 ### Fixed
