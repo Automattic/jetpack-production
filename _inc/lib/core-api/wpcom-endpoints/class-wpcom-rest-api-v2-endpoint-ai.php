@@ -3,7 +3,7 @@
  * REST API endpoint for the Jetpack AI blocks.
  *
  * @package automattic/jetpack
- * @since 11.8-a.0
+ * @since 11.8
  */
 
 /**

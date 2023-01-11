@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.7.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.7.3] - 2023-01-11
 ### Changed
 - Updated package dependencies.
 
@@ -724,7 +721,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.7.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.7.2...2.7.3-alpha
+[2.7.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.7.2...2.7.3
 [2.7.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.7.1...2.7.2
 [2.7.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.7.0...2.7.1
 [2.7.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.6.1...2.7.0

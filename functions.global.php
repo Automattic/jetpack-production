@@ -433,7 +433,7 @@ function jetpack_is_frontend() {
  * Build a list of Mastodon instance hosts.
  * That list can be extended via a filter.
  *
- * @since 11.8-a.0
+ * @since 11.8
  *
  * @return array
  */
@@ -455,7 +455,7 @@ function jetpack_mastodon_get_instance_list() {
 	/**
 	 * Filter the list of Mastodon instances.
 	 *
-	 * @since 11.8-a.0
+	 * @since 11.8
 	 *
 	 * @module widgets, theme-tools
 	 *
