@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix exception when deleting last video of page
 
 ### Fixed
+- VideoPress: Enhance behavior when deleting multiple videos
 - VideoPress: fix render player once file uploads issue
 
 ## [0.10.2] - 2023-01-11
