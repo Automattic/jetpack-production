@@ -8,6 +8,9 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: add test for subscribe block
+- For the admin-menus wpcom API endpoint, treat menu urls pointing back to the site as internal URLs rather than blanking them.
+  
+  This means that menu items that previously pointed to the current page due to being blanked, are now more likely to point to an actual page.
 
 ## 11.8-a.1 - 2023-01-11
 ### Enhancements
