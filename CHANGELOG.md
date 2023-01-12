@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add user stories for earn features for ease of testing
 - E2E tests: add test for subscribe block
 - For the admin-menus wpcom API endpoint, treat menu urls pointing back to the site as internal URLs rather than blanking them.
   
