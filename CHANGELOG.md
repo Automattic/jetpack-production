@@ -2,9 +2,9 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.8-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## 11.8-a.3 - 2023-01-12
+### Bug fixes
+- Reverts PR #27958 as it conflicts with the way WooCommerce updates submenus. [#28312]
 
 ## 11.8-a.1 - 2023-01-11
 ### Enhancements
