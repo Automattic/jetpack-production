@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Do not display the Blaze UI on private or unlaunched sites.
 
 ### Changed
+- Do not load the Blaze UI if the JSON API module is inactive.
 - Only display the Blaze UI if the connected user's language is English.
 
 ## [0.3.3] - 2023-01-11
