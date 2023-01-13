@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Jetpack: fix the fullscreen option when using videopress shortcode
+
 ## 11.7 - 2023-01-10
 ### Enhancements
 - Contact form: update the description on the response data export modal under CSV section, on the Feedback page. [#28214]
