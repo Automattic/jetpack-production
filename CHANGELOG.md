@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Paragraph block now is aware of the rest of editor canvas and can work without any input
 - Blaze: Show Advertising in menu for Jetpack sites
 
 ### Bug fixes
