@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- VideoPress: Add rating selector on video details edit page
+
 ### Changed
 - VideoPress: avoid requesting unneeded preview when block mounts
 - VideoPress: Fix exception when deleting last video of page
