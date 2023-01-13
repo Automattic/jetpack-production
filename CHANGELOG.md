@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - For the admin-menus wpcom API endpoint, treat menu urls pointing back to the site as internal URLs rather than blanking them.
   
   This means that menu items that previously pointed to the current page due to being blanked, are now more likely to point to an actual page.
+- JSON Endpoint: Introducing new '/sites/%s/dropdown-pages/' endpoint
 - Updated package dependencies.
 
 ## 11.8-a.3 - 2023-01-12
