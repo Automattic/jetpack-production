@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Blaze: Show Advertising in menu for Jetpack sites
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add user stories for earn features for ease of testing
 - E2E tests: add test for subscribe block
