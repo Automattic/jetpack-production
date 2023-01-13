@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Enhance behavior when deleting multiple videos
 - VideoPress: fix render player once file uploads issue
 - VideoPress: fix setting title when uploading video file
+- VideoPress: Render properly title and description inputs of the video block
 
 ## [0.10.2] - 2023-01-11
 ### Added
