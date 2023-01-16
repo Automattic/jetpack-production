@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
   
   This means that menu items that previously pointed to the current page due to being blanked, are now more likely to point to an actual page.
 - JSON Endpoint: Introducing new '/sites/%s/dropdown-pages/' endpoint
+- Masterbar: update Blaze conditions to rely on the existing method from the package.
 - Mention `jetpack_blocks_variation` filter in Beta Extensions doc
 - Site Settings API: Expose Jetpack's related posts 'show_date' and 'show_context' options
 - Updated package dependencies.
