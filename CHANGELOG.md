@@ -2,12 +2,9 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.8-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 11.7.1 - 2023-01-16
 ### Bug fixes
-- Jetpack: fix the fullscreen option when using videopress shortcode
+- VideoPress: fix the fullscreen control when using VideoPress shortcodes. [#28342]
 
 ## 11.7 - 2023-01-10
 ### Enhancements
