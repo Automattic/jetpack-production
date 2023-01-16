@@ -20,7 +20,7 @@
 		"automattic/jetpack-blaze": "^0.3.4-alpha",
 		"automattic/jetpack-blocks": "^1.4.19",
 		"automattic/jetpack-compat": "^1.7.5",
-		"automattic/jetpack-composer-plugin": "^1.1.8",
+		"automattic/jetpack-composer-plugin": "^1.1.9-alpha",
 		"automattic/jetpack-config": "^1.13.0",
 		"automattic/jetpack-connection": "^1.49.0",
 		"automattic/jetpack-constants": "^1.6.20",
