@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Paragraph block now is aware of the rest of editor canvas and can work without any input
 - Blaze: Show Advertising in menu for Jetpack sites
 
+### Improved compatibility
+- Add support for the 'connection_disabled' error code.
+
 ### Bug fixes
 - Jetpack: fix the fullscreen option when using videopress shortcode
 
