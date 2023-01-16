@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix exception when deleting last video of page
 - VideoPress: skip rating checking when pulling video data for the block
 - VideoPress: tweak the footer of the uploader component
+- VideoPress: use @wordpress/html-entities to handle html entities
 
 ### Fixed
 - VideoPress: Enhance behavior when deleting multiple videos
