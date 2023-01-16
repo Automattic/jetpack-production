@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - VideoPress: avoid requesting unneeded preview when block mounts
 - VideoPress: Fix exception when deleting last video of page
+- VideoPress: skip rating checking when pulling video data for the block
 - VideoPress: tweak the footer of the uploader component
 
 ### Fixed
