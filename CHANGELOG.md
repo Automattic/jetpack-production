@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add a randomized prompt amongst the best prompts to serve as a placeholder for the AI Image block
 - AI Features now have a link to the Forums thread to gather feedback, different icon and simplified way of enabling for testing
 - AI Paragraph block now is aware of the rest of editor canvas and can work without any input
 - Blaze: Show Advertising in menu for Jetpack sites
