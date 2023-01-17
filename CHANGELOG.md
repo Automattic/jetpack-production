@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - More transparent prompt engineering for ai paragraph block
+- Writing prompts: removes placeholder prompt and setting
 
 ## 11.8-a.5 - 2023-01-16
 ### Improved compatibility
