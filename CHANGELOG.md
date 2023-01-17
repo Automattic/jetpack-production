@@ -2,9 +2,9 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.8-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## 11.8-a.7 - 2023-01-17
+### Changed
+- Updated package dependencies.
 
 ## 11.8-a.5 - 2023-01-16
 ### Improved compatibility
