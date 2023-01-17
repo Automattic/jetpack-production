@@ -235,19 +235,19 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php'
 	),
 	'Automattic\\Jetpack\\Fonts\\Google_Fonts_Provider' => array(
-		'version' => '0.4.1.0-alpha',
+		'version' => '0.4.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-google-fonts-provider.php'
 	),
 	'Automattic\\Jetpack\\Fonts\\Introspectors\\Blocks' => array(
-		'version' => '0.4.1.0-alpha',
+		'version' => '0.4.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/introspectors/class-blocks.php'
 	),
 	'Automattic\\Jetpack\\Fonts\\Introspectors\\Global_Styles' => array(
-		'version' => '0.4.1.0-alpha',
+		'version' => '0.4.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/introspectors/class-global-styles.php'
 	),
 	'Automattic\\Jetpack\\Fonts\\Utils' => array(
-		'version' => '0.4.1.0-alpha',
+		'version' => '0.4.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-utils.php'
 	),
 	'Automattic\\Jetpack\\Heartbeat' => array(
