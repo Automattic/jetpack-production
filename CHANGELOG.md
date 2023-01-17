@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - More transparent prompt engineering for ai paragraph block
 - Writing prompts: removes placeholder prompt and setting
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Settings API: Allow to unassign 'page_for_posts' and 'page_on_front' options
+
 ## 11.8-a.5 - 2023-01-16
 ### Improved compatibility
 - Blaze: update logic for showing the Advertising menu on Jetpack sites. [#28088]
