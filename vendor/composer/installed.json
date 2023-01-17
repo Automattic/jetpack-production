@@ -844,25 +844,25 @@
         },
         {
             "name": "automattic/jetpack-google-fonts-provider",
-            "version": "v0.4.0",
-            "version_normalized": "0.4.0.0",
+            "version": "v0.4.1",
+            "version_normalized": "0.4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-google-fonts-provider.git",
-                "reference": "11ba4490dcc96bdbad97cdb4bf7c3d069c7a8209"
+                "reference": "e51c6403a08687fe19a63004be2312e03238d4d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-google-fonts-provider/zipball/11ba4490dcc96bdbad97cdb4bf7c3d069c7a8209",
-                "reference": "11ba4490dcc96bdbad97cdb4bf7c3d069c7a8209",
+                "url": "https://api.github.com/repos/Automattic/jetpack-google-fonts-provider/zipball/e51c6403a08687fe19a63004be2312e03238d4d9",
+                "reference": "e51c6403a08687fe19a63004be2312e03238d4d9",
                 "shasum": ""
             },
             "require-dev": {
-                "automattic/jetpack-changelogger": "^3.2.2",
+                "automattic/jetpack-changelogger": "^3.3.1",
                 "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.0.4"
             },
-            "time": "2022-12-12T13:06:38+00:00",
+            "time": "2023-01-17T18:14:55+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -887,7 +887,7 @@
             ],
             "description": "WordPress Webfonts provider for Google Fonts",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-google-fonts-provider/tree/v0.4.0"
+                "source": "https://github.com/Automattic/jetpack-google-fonts-provider/tree/v0.4.1"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-google-fonts-provider"
         },
