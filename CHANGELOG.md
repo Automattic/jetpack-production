@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.8-a.6 - unreleased
+## 11.8-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -29,6 +29,10 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add default_option_subscription_options filter
 - Settings API: Allow to unassign 'page_for_posts' and 'page_on_front' options
+
+## 11.8-a.7 - 2023-01-17
+### Changed
+- Updated package dependencies.
 
 ## 11.8-a.5 - 2023-01-16
 ### Improved compatibility
