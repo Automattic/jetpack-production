@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- More transparent prompt engineering for ai paragraph block
+
 ## 11.8-a.5 - 2023-01-16
 ### Improved compatibility
 - Blaze: update logic for showing the Advertising menu on Jetpack sites. [#28088]
