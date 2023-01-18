@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Paid Newsletter functionality:
   If the site owner creates one or more "newsletter" paid plans available for purchase, subscribers will be given an option to pay while subscribing through the subscribe block.
   This change goes together with ./add-post-visibility-setting to create a paid newsletter functionality.
+- VideoPress: set video block availability, based on site plan
 - Writing prompts: removes placeholder prompt and setting
 
 ### Improved compatibility
