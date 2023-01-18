@@ -250,6 +250,10 @@ return array(
 		'version' => '0.4.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-utils.php'
 	),
+	'Automattic\\Jetpack\\Forms\\Jetpack_Forms' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-jetpack-forms.php'
+	),
 	'Automattic\\Jetpack\\Heartbeat' => array(
 		'version' => '1.49.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-heartbeat.php'
