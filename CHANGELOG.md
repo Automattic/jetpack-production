@@ -33,8 +33,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add default_option_subscription_options filter
+- Added the dependency on automattic/jetpack-forms
 - Blocks: move away from deprecated methods in multiple blocks.
 - Carousel: verify array to avoid PHP warnings
+- Removing SAL user error writing
 - Settings API: Allow to unassign 'page_for_posts' and 'page_on_front' options
 - Start using utilities from Status package to detect whether a site is private or "coming-soon" (unlaunched).
 - Widget visibility: add missing Jetpack config external.
