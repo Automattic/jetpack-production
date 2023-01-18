@@ -36,10 +36,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
       'ver' => '1.49.0',
     ),
-    'jetpack-forms' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-forms',
-      'ver' => '0.1.0-alpha',
-    ),
     'jetpack-google-fonts-provider' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
       'ver' => '0.4.1',
