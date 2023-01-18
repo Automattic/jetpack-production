@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: check source language length of the video chapters
 
+### Fixed
+- VideoPress: fix replace video by uploading a new file issue
+
 ## [0.10.3] - 2023-01-16
 ### Added
 - VideoPress: add anchor support to VideoPress video block [#28377]
