@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add default_option_subscription_options filter
+- Blocks: move away from deprecated methods in multiple blocks.
 - Settings API: Allow to unassign 'page_for_posts' and 'page_on_front' options
 
 ## 11.8-a.7 - 2023-01-17
