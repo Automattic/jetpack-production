@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
   - create paid courses, and pursue other subscriber-only models
   - support themselves financially without sacrificing creative freedom
   - buy literal jetpacks from all the money they make on their sites (outcome not guaranteed)
+- Improve file/spreadsheet naming when exporting form responses. [Site name] - Jetpack Form Responses - [form source] - [date]
 - More transparent prompt engineering for ai paragraph block
 - Paid Newsletter functionality:
   If the site owner creates one or more "newsletter" paid plans available for purchase, subscribers will be given an option to pay while subscribing through the subscribe block.
