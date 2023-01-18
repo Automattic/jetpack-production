@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Start using utilities from Status package to detect whether a site is private or "coming-soon" (unlaunched).
 
+### Fixed
+- Clean up JavaScript eslint issues.
+
 ## [0.31.3] - 2023-01-11
 ### Changed
 - Updated package dependencies.

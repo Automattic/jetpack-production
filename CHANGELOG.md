@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Added the dependency on automattic/jetpack-forms
 - Blocks: move away from deprecated methods in multiple blocks.
 - Carousel: verify array to avoid PHP warnings
+- Clean up JavaScript eslint issues.
 - Removing SAL user error writing
 - Settings API: Allow to unassign 'page_for_posts' and 'page_on_front' options
 - Start using utilities from Status package to detect whether a site is private or "coming-soon" (unlaunched).
