@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Contact Form: update the name of the columns used when exporting Contact Form responses to CSV. The file will now use clear and detailed column names.
 - Entire posts can now be restricted to either paid subscribers, or email subscribers. This will enable site owners to:
   - reward their paying subscribers with secret Lasagna recipes
   - create paid-only issues of their newsletters
