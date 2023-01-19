@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
   - buy literal jetpacks from all the money they make on their sites (outcome not guaranteed)
 - Fix some styling issues for the AI block
 - Improve file/spreadsheet naming when exporting form responses. [Site name] - Jetpack Form Responses - [form source] - [date]
+- Jetpack: do not add block transform to v6 when video is not a VideoPress video
 - More transparent prompt engineering for ai paragraph block
 - Paid Newsletter functionality:
   If the site owner creates one or more "newsletter" paid plans available for purchase, subscribers will be given an option to pay while subscribing through the subscribe block.
