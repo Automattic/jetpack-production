@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Start using utilities from Status package to detect whether a site is private or "coming-soon" (unlaunched).
 
+### Fixed
+- Always enqueue Jetpack Connnection info when enqueuing Blaze script
+
 ## [0.3.4] - 2023-01-16
 ### Added
 - Do not display the Blaze UI on private or unlaunched sites. [#28315]
