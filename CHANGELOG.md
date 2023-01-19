@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Use `wp_theme_has_theme_json` instead of `WP_Theme_JSON_Resolver::theme_has_support` when available for WordPress 6.2 compat.
 
 ### Bug fixes
+- Fixing AMP related bug
 - Premium-content block is shipped with a JWT lib that had a bug in its encode() method
 - RAPI: Fix Related Posts options saving
 - Sharing: do not include the sharing buttons in REST API responses.
