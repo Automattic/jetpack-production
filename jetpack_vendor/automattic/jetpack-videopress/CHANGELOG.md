@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- VideoPress: do not prompt to convert embed block to VideoPress video block
+- VideoPress: improve buildVideoPressURL(). Add tests.
+
 ### Fixed
 - VideoPress: fix replace video by uploading a new file issue
 
