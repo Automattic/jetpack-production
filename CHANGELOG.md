@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: do not include the sharing buttons in REST API responses.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add a new endpoint, template-loader, to resolve the correct template by its type
 - Add default_option_subscription_options filter
 - Added the dependency on automattic/jetpack-forms
 - Blocks: move away from deprecated methods in multiple blocks.
