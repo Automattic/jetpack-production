@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fixing AMP related bug
+- Include Boost in My Plans
 - Premium-content block is shipped with a JWT lib that had a bug in its encode() method
 - RAPI: Fix Related Posts options saving
 - Sharing: do not include the sharing buttons in REST API responses.
