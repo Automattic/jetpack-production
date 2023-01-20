@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Added the dependency on automattic/jetpack-forms
 - Blocks: move away from deprecated methods in multiple blocks.
 - Carousel: verify array to avoid PHP warnings
+- Cleaning PHP deprecated error notice from the log
 - Clean up JavaScript eslint issues.
 - Fixes a regression introduced when loading saved Jetpack AI block
 - Jetpack VideoPress module: Add test for generated embed code
