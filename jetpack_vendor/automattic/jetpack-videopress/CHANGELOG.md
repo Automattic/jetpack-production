@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: improve buildVideoPressURL(). Add tests.
 
 ### Changed
+- VideoPress: remove undesired border of the video player
 - VideoPress: tweak uploader layout of the VideoPress video block
 
 ### Fixed
