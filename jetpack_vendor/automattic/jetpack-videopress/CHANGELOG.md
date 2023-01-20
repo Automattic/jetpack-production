@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: do not prompt to convert embed block to VideoPress video block
 - VideoPress: improve buildVideoPressURL(). Add tests.
 
+### Changed
+- VideoPress: tweak uploader layout of the VideoPress video block
+
 ### Fixed
 - VideoPress: fix replace video by uploading a new file issue
 
