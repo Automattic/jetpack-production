@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add new method to request eligibility to Blaze from WordPress.com.
+- Add tracking when the post-publish panel is displayed.
 
 ### Changed
 - Start using utilities from Status package to detect whether a site is private or "coming-soon" (unlaunched).
