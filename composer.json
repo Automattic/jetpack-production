@@ -29,7 +29,7 @@
 		"automattic/jetpack-forms": "^0.1.0-alpha",
 		"automattic/jetpack-google-fonts-provider": "^0.4.1",
 		"automattic/jetpack-identity-crisis": "^0.8.34",
-		"automattic/jetpack-jitm": "^2.2.37",
+		"automattic/jetpack-jitm": "^2.2.38-alpha",
 		"automattic/jetpack-lazy-images": "^2.1.29",
 		"automattic/jetpack-licensing": "^1.7.14",
 		"automattic/jetpack-logo": "^1.5.20",

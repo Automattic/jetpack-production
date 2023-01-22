@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.38-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Prevent the activation page from displaying the JP License Activation JITM.
+
 ## [2.2.37] - 2023-01-11
 ### Changed
 - Updated package dependencies.
@@ -522,6 +529,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update Jetpack to use new JITM package
 
+[2.2.38-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.37...v2.2.38-alpha
 [2.2.37]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.36...v2.2.37
 [2.2.36]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.35...v2.2.36
 [2.2.35]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.34...v2.2.35
