@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: improve buildVideoPressURL(). Add tests.
 
 ### Changed
+- Block bundling: sunset existing methods in favor of new `JETPACK_BLOCKS_VARIATION` constant
 - VideoPress: remove undesired border of the video player
 - VideoPress: tweak uploader layout of the VideoPress video block
 

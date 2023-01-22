@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a new endpoint, template-loader, to resolve the correct template by its type
 - Add default_option_subscription_options filter
 - Added the dependency on automattic/jetpack-forms
+- Block bundling: sunset existing methods in favor of new `JETPACK_BLOCKS_VARIATION` constant
 - Blocks: move away from deprecated methods in multiple blocks.
 - Carousel: verify array to avoid PHP warnings
 - Cleaning PHP deprecated error notice from the log
