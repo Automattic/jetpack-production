@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Close PHP Session if it's active when running a Dedicated Sync request.
+
 ### Fixed
 - Jetpack Sync: prevent syncing user update when corresponding flags are not set.
 
