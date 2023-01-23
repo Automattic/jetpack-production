@@ -64,6 +64,7 @@ return array(
     'Automattic\\Jetpack\\Fonts\\Introspectors\\Blocks' => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/introspectors/class-blocks.php',
     'Automattic\\Jetpack\\Fonts\\Introspectors\\Global_Styles' => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/introspectors/class-global-styles.php',
     'Automattic\\Jetpack\\Fonts\\Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-utils.php',
+    'Automattic\\Jetpack\\Forms\\Jetpack_Forms' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-jetpack-forms.php',
     'Automattic\\Jetpack\\Heartbeat' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-heartbeat.php',
     'Automattic\\Jetpack\\IdentityCrisis\\REST_Endpoints' => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-rest-endpoints.php',
     'Automattic\\Jetpack\\IdentityCrisis\\UI' => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-ui.php',
