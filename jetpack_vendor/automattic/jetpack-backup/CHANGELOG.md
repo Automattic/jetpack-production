@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Clean up JavaScript eslint issues.
+- Fixes the price display for products with intro offers for the first month.
 
 ## [1.10.7] - 2023-01-11
 ### Added

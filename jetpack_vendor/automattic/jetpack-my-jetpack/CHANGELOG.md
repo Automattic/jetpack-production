@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Components: Fix usage of box-sizing across the elements
+- Fixes the price display for products with intro offers for the first month.
 
 ## [2.7.4] - 2023-01-16
 ### Changed

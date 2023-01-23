@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fixing AMP related bug
 - Include Boost in My Plans
+- Intro offers: fix the price display and description for products with intro offers for the first month.
 - Premium-content block is shipped with a JWT lib that had a bug in its encode() method
 - RAPI: Fix Related Posts options saving
 - Sharing: do not include the sharing buttons in REST API responses.
