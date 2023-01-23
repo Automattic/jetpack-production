@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress: add connect banner when user is not connected
 - VideoPress: do not prompt to convert embed block to VideoPress video block
 - VideoPress: do not request video data when user is not connected
 - VideoPress: improve buildVideoPressURL(). Add tests.
