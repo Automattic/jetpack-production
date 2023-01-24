@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin Menu: Route to new Reading Settings page (internal ATM - behind a feature flag)
+- e2e tests: update encryption
 
 ## 11.8-a.9 - 2023-01-23
 ### Enhancements
