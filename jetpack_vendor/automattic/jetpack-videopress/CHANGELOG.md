@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- VideoPress: Show site default privacy setting in video block control
+
 ## [0.10.5] - 2023-01-23
 ### Added
 - VideoPress: add connect banner when user is not connected [#28501]
