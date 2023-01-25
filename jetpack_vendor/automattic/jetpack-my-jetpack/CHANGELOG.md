@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Use `flex-start` instead of `start` for better browser compatibility.
+
 ## [2.7.5] - 2023-01-23
 ### Fixed
 - Components: Fix usage of box-sizing across the elements [#28489]

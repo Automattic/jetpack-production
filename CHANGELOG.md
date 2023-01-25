@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Release Jetpack AI to WPCOM Simple and Atomic users
 - Update Form and variations icons
 
+### Improved compatibility
+- Use `flex-start` instead of `start` for better browser compatibility.
+
 ### Bug fixes
 - Fix openAI paragraph. Refactor most of it. Added dynamic error when content length changes.
 
