@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add the ability to toggle automatic and manual firewall rules independantly of each other.
+- Release Jetpack AI to WPCOM Simple and Atomic users
 - Update Form and variations icons
 
 ### Bug fixes
