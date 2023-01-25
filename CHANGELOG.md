@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add the ability to toggle automatic and manual firewall rules independantly of each other.
 - Update Form and variations icons
 
+### Bug fixes
+- Fix openAI paragraph. Refactor most of it. Added dynamic error when content length changes.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin Menu: Route to new Reading Settings page (internal ATM - behind a feature flag)
 - Common Mappings: Add a mapping for `options-reading.php` based on a `calypso_use_modernized_reading_settings` feature flag
