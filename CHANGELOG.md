@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Route to new Reading Settings page (internal ATM - behind a feature flag)
 - Common Mappings: Add a mapping for `options-reading.php` based on a `calypso_use_modernized_reading_settings` feature flag
 - e2e tests: update encryption
+- Mark posts using Jetpack AI features. Introducing the _jetpack_ai_calls meta field to indicate that a post has performed AI calls.
 
 ## 11.8-a.9 - 2023-01-23
 ### Enhancements
