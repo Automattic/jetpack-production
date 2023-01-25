@@ -5,14 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.10.6-alpha] - unreleased
+## [0.10.7-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Use `flex-end` instead of `end` for better browser compatibility.
-- VideoPress: Refactor video data check when populating block attributes
-- VideoPress: Show site default privacy setting in video block control
+
+## [0.10.6] - 2023-01-25
+### Changed
+- VideoPress: Refactor video data check when populating block attributes [#28566]
+- VideoPress: Show site default privacy setting in video block control [#28553]
 
 ## [0.10.5] - 2023-01-23
 ### Added
@@ -659,7 +662,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.10.6-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.5...v0.10.6-alpha
+[0.10.7-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.6...v0.10.7-alpha
+[0.10.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.5...v0.10.6
 [0.10.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.4...v0.10.5
 [0.10.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.3...v0.10.4
 [0.10.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.2...v0.10.3
