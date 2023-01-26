@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- add support for all Launchpad flows for the on save Post Editor modal
+
 ### Enhancements
 - Add the ability to toggle automatic and manual firewall rules independantly of each other.
 - Release Jetpack AI to WPCOM Simple and Atomic users
