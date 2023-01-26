@@ -2,32 +2,35 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.8-a.10 - unreleased
+## 11.8-a.12 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Remove Webpack config for no-longer-used `build-color-schemes-wpcom` script.
+
+## 11.8-a.11 - 2023-01-26
 ### Major Enhancements
-- add support for all Launchpad flows for the on save Post Editor modal
+- add support for all Launchpad flows for the on save Post Editor modal [#28555]
 
 ### Enhancements
-- Add the ability to toggle automatic and manual firewall rules independantly of each other.
-- Release Jetpack AI to WPCOM Simple and Atomic users
-- Sanitize AI endpoints input
-- Update Form and variations icons
+- Add the ability to toggle automatic and manual firewall rules independantly of each other. [#27726]
+- Release Jetpack AI to WPCOM Simple and Atomic users [#28552]
+- Sanitize AI endpoints input [#28583]
+- Update Form and variations icons [#28428]
 
 ### Improved compatibility
-- Use `flex-start` instead of `start` for better browser compatibility.
+- Use `flex-start` instead of `start` for better browser compatibility. [#28530]
 
 ### Bug fixes
-- Fix openAI paragraph. Refactor most of it. Added dynamic error when content length changes.
-- Fix when categories are empty
+- Fix openAI paragraph. Refactor most of it. Added dynamic error when content length changes. [#28483]
+- Fix when categories are empty [#28604]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Admin Menu: Route to new Reading Settings page (internal ATM - behind a feature flag)
-- Common Mappings: Add a mapping for `options-reading.php` based on a `calypso_use_modernized_reading_settings` feature flag
-- e2e tests: update encryption
-- Mark posts using Jetpack AI features. Introducing the _jetpack_ai_calls meta field to indicate that a post has performed AI calls.
-- Remove Webpack config for no-longer-used `build-color-schemes-wpcom` script.
+- Admin Menu: Route to new Reading Settings page (internal ATM - behind a feature flag) [#28430]
+- Common Mappings: Add a mapping for `options-reading.php` based on a `calypso_use_modernized_reading_settings` feature flag [#28549]
+- e2e tests: update encryption [#28537]
+- Mark posts using Jetpack AI features. Introducing the _jetpack_ai_calls meta field to indicate that a post has performed AI calls. [#28487]
 
 ## 11.8-a.9 - 2023-01-23
 ### Enhancements
