@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Use `flex-end` instead of `end` for better browser compatibility.
+- VideoPress: change the logic to enqueue video block scripts
 
 ## [0.10.6] - 2023-01-25
 ### Changed
