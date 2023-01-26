@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Common Mappings: Add a mapping for `options-reading.php` based on a `calypso_use_modernized_reading_settings` feature flag
 - e2e tests: update encryption
 - Mark posts using Jetpack AI features. Introducing the _jetpack_ai_calls meta field to indicate that a post has performed AI calls.
+- Remove Webpack config for no-longer-used `build-color-schemes-wpcom` script.
 
 ## 11.8-a.9 - 2023-01-23
 ### Enhancements
