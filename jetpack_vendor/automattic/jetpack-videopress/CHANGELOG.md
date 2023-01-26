@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- VideoPress: show Connect banner above video player when the site is not connected
+
 ### Changed
 - Use `flex-end` instead of `end` for better browser compatibility.
 - VideoPress: change the logic to enqueue video block scripts
