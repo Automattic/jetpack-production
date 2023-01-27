@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: change how we detect search parameters on the home page to prevent the stuck edit video details page
+- VideoPress: replace the usage of useContext() by local helper function
 
 ### Fixed
 - VideoPress: fix error when uploading tracks in Atomic sites
