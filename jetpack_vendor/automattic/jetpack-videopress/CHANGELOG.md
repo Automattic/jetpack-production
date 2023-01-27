@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- VideoPress: fix error when uploading tracks in Atomic sites
+
 ## [0.10.7] - 2023-01-26
 ### Added
 - VideoPress: show Connect banner above video player when the site is not connected [#28585]
