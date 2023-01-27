@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- VideoPress: change how we detect search parameters on the home page to prevent the stuck edit video details page
+
 ### Fixed
 - VideoPress: fix error when uploading tracks in Atomic sites
 
