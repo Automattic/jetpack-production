@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Revue block: add a direct link to the WordPress.com subscriber import page.
+
 ### Bug fixes
 - Fix slideshow loading excess dependencies on every page view
 
