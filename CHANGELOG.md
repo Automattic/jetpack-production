@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Form Block: add styling of input fields
 - Revue block: add a direct link to the WordPress.com subscriber import page.
 
 ### Bug fixes
