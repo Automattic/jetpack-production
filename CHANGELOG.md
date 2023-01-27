@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.8-a.12 - unreleased
+## 11.8-a.14 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -11,12 +11,15 @@ This is an alpha version! The changes listed here are not final.
 - Revue block: add a direct link to the WordPress.com subscriber import page.
 
 ### Bug fixes
-- Add appropriate fix for the $post being null
 - Fix slideshow loading excess dependencies on every page view
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Json API: Fix the response format for the "/sites/$site/dropdown-pages/". The endpoint is not used in production yet.
 - Remove Webpack config for no-longer-used `build-color-schemes-wpcom` script.
+
+## 11.8-a.13 - 2023-01-27
+### Bug fixes
+- Subscriptions: add a null check to a $post reference. [#28621]
 
 ## 11.8-a.11 - 2023-01-26
 ### Enhancements
