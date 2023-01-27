@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix slideshow loading excess dependencies on every page view
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Json API: Fix the response format for the "/sites/$site/dropdown-pages/". The endpoint is not used in production yet.
 - Remove Webpack config for no-longer-used `build-color-schemes-wpcom` script.
 
 ## 11.8-a.11 - 2023-01-26
