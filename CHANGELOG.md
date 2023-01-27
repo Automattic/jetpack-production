@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix slideshow loading excess dependencies on every page view
+- Masterbar: Avoid PHP fatal on WoA sites due to a bad filter return.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Json API: Fix the response format for the "/sites/$site/dropdown-pages/". The endpoint is not used in production yet.
