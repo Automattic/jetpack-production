@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Masterbar: Avoid PHP fatal on WoA sites due to a bad filter return.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fix warnings from the global reading of $post
 - Json API: Fix the response format for the "/sites/$site/dropdown-pages/". The endpoint is not used in production yet.
 - Making sure array is passed to sidebars_widgets
 - Remove Webpack config for no-longer-used `build-color-schemes-wpcom` script.
