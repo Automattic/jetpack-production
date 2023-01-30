@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Making sure array is passed to sidebars_widgets
 - PHP error warning fix
 - Remove Webpack config for no-longer-used `build-color-schemes-wpcom` script.
+- Shortcodes: fix php warning
 
 ## 11.8-a.13 - 2023-01-27
 ### Bug fixes
