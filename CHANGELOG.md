@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Reading settings: Add link to the menu in Calypso
 - Revue block: add a direct link to the WordPress.com subscriber import page.
 
+### Improved compatibility
+- Migrated to new Web Fonts API from Gutenberg
+
 ### Bug fixes
 - Fix slideshow loading excess dependencies on every page view
 - Masterbar: Avoid PHP fatal on WoA sites due to a bad filter return.
