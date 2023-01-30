@@ -14,7 +14,6 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fix slideshow loading excess dependencies on every page view
 - Masterbar: Avoid PHP fatal on WoA sites due to a bad filter return.
-- Remove the FAB button since it is not being used anymore.
 - Twitter timeline shortcode: remove jQuery dependency for non-admin pages, and add it for admin pages
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
