@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- VideoPress: Add video chapters validation function
+
 ### Changed
 - VideoPress: change how we detect search parameters on the home page to prevent the stuck edit video details page
 - VideoPress: fix loading state bug on VideoPress video library when the query string parameters are `page=1`
