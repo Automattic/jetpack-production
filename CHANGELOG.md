@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Json API: Fix the response format for the "/sites/$site/dropdown-pages/". The endpoint is not used in production yet.
+- Making sure array is passed to sidebars_widgets
 - Remove Webpack config for no-longer-used `build-color-schemes-wpcom` script.
 
 ## 11.8-a.13 - 2023-01-27
