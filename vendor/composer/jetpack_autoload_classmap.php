@@ -250,9 +250,49 @@ return array(
 		'version' => '0.5.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-google-fonts-provider/src/class-utils.php'
 	),
+	'Automattic\\Jetpack\\Forms\\ContactForm\\Admin' => array(
+		'version' => '0.3.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-admin.php'
+	),
+	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form' => array(
+		'version' => '0.3.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form.php'
+	),
+	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Endpoint' => array(
+		'version' => '0.3.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-endpoint.php'
+	),
+	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Field' => array(
+		'version' => '0.3.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-field.php'
+	),
+	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Plugin' => array(
+		'version' => '0.3.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-plugin.php'
+	),
+	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Shortcode' => array(
+		'version' => '0.3.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-shortcode.php'
+	),
+	'Automattic\\Jetpack\\Forms\\ContactForm\\Editor_View' => array(
+		'version' => '0.3.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-editor-view.php'
+	),
+	'Automattic\\Jetpack\\Forms\\ContactForm\\Form_View' => array(
+		'version' => '0.3.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-form-view.php'
+	),
+	'Automattic\\Jetpack\\Forms\\ContactForm\\Util' => array(
+		'version' => '0.3.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-util.php'
+	),
 	'Automattic\\Jetpack\\Forms\\Jetpack_Forms' => array(
-		'version' => '0.2.0.0',
+		'version' => '0.3.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-jetpack-forms.php'
+	),
+	'Automattic\\Jetpack\\Forms\\Service\\Google_Drive' => array(
+		'version' => '0.3.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-google-drive.php'
 	),
 	'Automattic\\Jetpack\\Heartbeat' => array(
 		'version' => '1.49.1.0',
