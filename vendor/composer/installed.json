@@ -316,17 +316,17 @@
         },
         {
             "name": "automattic/jetpack-backup",
-            "version": "v1.12.0",
-            "version_normalized": "1.12.0.0",
+            "version": "v1.12.1",
+            "version_normalized": "1.12.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-backup.git",
-                "reference": "162b569b3ea91fc2801517fb435e7cdea6f60786"
+                "reference": "592c632b5f8e9c0fa602ad3dd160705a626232e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-backup/zipball/162b569b3ea91fc2801517fb435e7cdea6f60786",
-                "reference": "162b569b3ea91fc2801517fb435e7cdea6f60786",
+                "url": "https://api.github.com/repos/Automattic/jetpack-backup/zipball/592c632b5f8e9c0fa602ad3dd160705a626232e7",
+                "reference": "592c632b5f8e9c0fa602ad3dd160705a626232e7",
                 "shasum": ""
             },
             "require": {
@@ -345,7 +345,7 @@
                 "automattic/wordbless": "@dev",
                 "yoast/phpunit-polyfills": "1.0.4"
             },
-            "time": "2023-01-30T21:02:28+00:00",
+            "time": "2023-01-31T14:17:34+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -376,7 +376,7 @@
             ],
             "description": "Tools to assist with backing up Jetpack sites.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-backup/tree/v1.12.0"
+                "source": "https://github.com/Automattic/jetpack-backup/tree/v1.12.1"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-backup"
         },
