@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: do not depend on window.wp.media in getMediaToken() lib
+- VideoPress: improve requesting video data
 
 ## [0.10.8] - 2023-01-30
 ### Added
