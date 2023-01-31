@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- VideoPress: anticipate privacy state of the video
+
 ### Changed
 - VideoPress: do not depend on window.wp.media in getMediaToken() lib
 - VideoPress: improve requesting video data
