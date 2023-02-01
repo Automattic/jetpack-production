@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: anticipate privacy state of the video
 
 ### Changed
+- Updated package dependencies.
 - VideoPress: do not depend on window.wp.media in getMediaToken() lib
 - VideoPress: improve requesting video data
 

@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Build: Check blocks' view scripts for unexpected dependencies.
 - Protect: update wording in error message
 - Social Logos: update dependency
+- Updated package dependencies.
 
 ## 11.8-beta - 2023-01-30
 ### Enhancements
