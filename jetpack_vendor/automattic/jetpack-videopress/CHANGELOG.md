@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: anticipate privacy state of the video
+- VideoPress: re-write token bridge lib
 
 ### Changed
 - Updated package dependencies.
