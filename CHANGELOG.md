@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Protect: update wording in error message
 - Social Logos: update dependency
 
 ## 11.8-beta - 2023-01-30
