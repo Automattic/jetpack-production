@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- VideoPress: Add transform control from video block to videopress/video block
+
 ### Bug fixes
 - Fix Backup submenu item not visible when the site has a VaultPress Backup plan but the VaultPress Backup  plugin is not active.
 
