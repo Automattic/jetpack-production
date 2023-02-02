@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Display "Blaze" links in page list too.
+
 ### Changed
 - Do not require Jetpack's JSON API module to use feature.
 - Updated package dependencies.
