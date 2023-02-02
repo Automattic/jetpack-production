@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Do not require Jetpack's JSON API module to use feature.
 - Updated package dependencies.
 
+### Fixed
+- Do not display Blaze links in non-supported CPT pages.
+
 ## [0.5.0] - 2023-01-26
 ### Changed
 - Move away from Singleton pattern to improve performance [#28587]
