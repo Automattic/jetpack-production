@@ -6,6 +6,10 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Do not register the VaultPress and Scan submenu items if we don't have the backups and scan state yet.
+- Fix Backup submenu item not visible when the site has a VaultPress Backup plan but the VaultPress Backup  plugin is not active.
+
 ## 11.8-beta - 2023-01-30
 ### Enhancements
 - Form block: add styling of input fields. [#27837]
