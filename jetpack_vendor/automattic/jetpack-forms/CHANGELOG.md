@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add "watch" entries for both composer and package .json files. This allows us to run `jetpack watch packages/forms` while working on JS things
 - Moved contact form PHP files to automattic/jetpack-forms
 
 ## [0.2.0] - 2023-01-26

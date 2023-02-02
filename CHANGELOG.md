@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Slideshow block: remove dependency on Lodash
 - VideoPress: Add transform control from video block to videopress/video block
 
+### Improved compatibility
+- Add "watch" entries for both composer and package .json files
+
 ### Bug fixes
 - Do not register the VaultPress and Scan submenu items if we don't have the backups and scan state yet.
 - Fix Backup submenu item not visible when the site has a VaultPress Backup plan but the VaultPress Backup  plugin is not active.

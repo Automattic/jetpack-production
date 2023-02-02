@@ -962,7 +962,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-forms",
-                "reference": "0a91d511f8fa3624f3cd3715a3aaa05ad2cc2fd9"
+                "reference": "8ee21368bf44d95f3fe7a42b5407e96b69cb0514"
             },
             "require": {
                 "automattic/jetpack-assets": "^1.17.30",
@@ -1018,6 +1018,10 @@
                 ],
                 "post-update-cmd": [
                     "WorDBless\\Composer\\InstallDropin::copy"
+                ],
+                "watch": [
+                    "Composer\\Config::disableProcessTimeout",
+                    "pnpm run watch"
                 ]
             },
             "license": [
