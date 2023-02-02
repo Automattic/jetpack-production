@@ -286,6 +286,10 @@ return array(
 		'version' => '0.3.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-util.php'
 	),
+	'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard' => array(
+		'version' => '0.3.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard.php'
+	),
 	'Automattic\\Jetpack\\Forms\\Jetpack_Forms' => array(
 		'version' => '0.3.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-jetpack-forms.php'

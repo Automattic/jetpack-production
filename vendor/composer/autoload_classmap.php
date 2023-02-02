@@ -73,6 +73,7 @@ return array(
     'Automattic\\Jetpack\\Forms\\ContactForm\\Editor_View' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-editor-view.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Form_View' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-form-view.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Util' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-util.php',
+    'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard.php',
     'Automattic\\Jetpack\\Forms\\Jetpack_Forms' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-jetpack-forms.php',
     'Automattic\\Jetpack\\Forms\\Service\\Google_Drive' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-google-drive.php',
     'Automattic\\Jetpack\\Heartbeat' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-heartbeat.php',
