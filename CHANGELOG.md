@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Display backend user error
 - Slideshow block: remove dependency on Lodash
 - VideoPress: Add transform control from video block to videopress/video block
 
