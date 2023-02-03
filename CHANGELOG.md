@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Display backend user error
 - Donations block: remove dependencies on lodash and @wordpress/keycodes
 - Slideshow block: remove dependency on Lodash
+- Update subscribe block description
 - VideoPress: Add transform control from video block to videopress/video block
 
 ### Improved compatibility
