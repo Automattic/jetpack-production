@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: update wording in error message
 - Social Logos: update dependency
 - Updated package dependencies.
+- WordPress.com REST API: fix notice.
 
 ## 11.8-beta - 2023-01-30
 ### Enhancements
