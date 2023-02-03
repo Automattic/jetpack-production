@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add "watch" entries for both composer and package .json files. This allows us to run `jetpack watch packages/forms` while working on JS things
 - Add tooling for building the Jetpack Forms Dashboard
 - Moved contact form PHP files to automattic/jetpack-forms
+- Move Forms blocks to Forms package
 
 ### Changed
 - Reorder export columns in 3 groups: response meta (title, source, date), response field values, response extra (consent, ip address)

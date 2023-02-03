@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Add "watch" entries for both composer and package .json files
+- Put legacy contact-form blocks registration behind a flag
 
 ### Bug fixes
 - Dashboard Admin: remove border around blocked numbers for anti-spam/protect blocks

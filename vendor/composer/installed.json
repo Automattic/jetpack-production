@@ -962,7 +962,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-forms",
-                "reference": "3df4a376714c20d7883b020e55d00bad8add0af2"
+                "reference": "9caae0b794878a37855ce906b22a5c2e1730b0eb"
             },
             "require": {
                 "automattic/jetpack-assets": "^1.17.30",
