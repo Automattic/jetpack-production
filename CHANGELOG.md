@@ -7,8 +7,10 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add a blur effect while the form is loading the styles
 - Display backend user error
 - Donations block: remove dependencies on lodash and @wordpress/keycodes
+- Include style variations for the Form block
 - Slideshow block: remove dependency on Lodash
 - Update subscribe block description
 - VideoPress: Add transform control from video block to videopress/video block
