@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Add tooling for building the Jetpack Forms Dashboard
 - Moved contact form PHP files to automattic/jetpack-forms
 
+### Changed
+- Reorder export columns in 3 groups: response meta (title, source, date), response field values, response extra (consent, ip address)
+
 ## [0.2.0] - 2023-01-26
 ### Added
 - Moved contact form static files into the new forms package [#28417]
