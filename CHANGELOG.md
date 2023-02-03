@@ -7,8 +7,10 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Dashboard Admin: remove border around blocked numbers for anti-spam/protect blocks
 - Do not register the VaultPress and Scan submenu items if we don't have the backups and scan state yet.
 - Fix Backup submenu item not visible when the site has a VaultPress Backup plan but the VaultPress Backup  plugin is not active.
+- Scope Additional CSS submenus to site with a connected owner
 
 ## 11.8-beta - 2023-01-30
 ### Enhancements
