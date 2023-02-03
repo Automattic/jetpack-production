@@ -24,7 +24,6 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard Admin: remove border around blocked numbers for anti-spam/protect blocks
 - Do not register the VaultPress and Scan submenu items if we don't have the backups and scan state yet.
 - Fix Backup submenu item not visible when the site has a VaultPress Backup plan but the VaultPress Backup  plugin is not active.
-- Scope Additional CSS submenus to site with a connected owner
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add tooling for building the Jetpack Forms Dashboard
