@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Enforce chapters restrictions on description parsing
 - VideoPress: handle VideoPress module connection from video block
 - VideoPress: re-write token bridge lib
+- VideoPress: set isPravate attribute based also on private_enabled_for_site
 
 ### Changed
 - Updated package dependencies.
