@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add preload toggle to VideoPress block
 - VideoPress: anticipate privacy state of the video
+- VideoPress: handle VideoPress module connection from video block
 - VideoPress: re-write token bridge lib
 
 ### Changed
