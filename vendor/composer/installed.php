@@ -191,9 +191,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-jitm' => array(
-            'pretty_version' => 'v2.2.40',
-            'version' => '2.2.40.0',
-            'reference' => 'de81993920ea61e8971fab797d7a80f006253788',
+            'pretty_version' => 'v2.2.41',
+            'version' => '2.2.41.0',
+            'reference' => '6b264ee6f98ba04fae676d33e03290d4b41a18c4',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-jitm',
             'aliases' => array(),
