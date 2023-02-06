@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Display backend user error
 - Donations block: remove dependencies on lodash and @wordpress/keycodes
 - Include style variations for the Form block
+- Podcast player block: remove dependency on wp-components from the frontend code
 - Reorder export columns in 3 groups: response meta (title, source, date), response field values, response extra (consent, ip address)
 - Slideshow block: remove dependency on Lodash
 - Update subscribe block description
