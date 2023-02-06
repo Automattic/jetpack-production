@@ -23,6 +23,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: enqueue extensions when registrant plugin is active
 - VideoPress: improve requesting video data
 
+### Fixed
+- VideoPress: Fix token bridge issue in development environment
+
 ## [0.10.8] - 2023-01-30
 ### Added
 - VideoPress: Add video chapters validation function [#28628]
