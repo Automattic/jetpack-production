@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Do not display "Blaze" links in the post list for password-protected posts.
+
 ## [0.5.1] - 2023-02-02
 ### Added
 - Display "Blaze" links in page list too. [#28715]
