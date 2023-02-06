@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.41-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- JITM: Fix broken styles on Safari
+
 ## [2.2.40] - 2023-01-30
 ### Changed
 - Updated styles for Just in Time Messages (notices) [#27515]
@@ -534,6 +541,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update Jetpack to use new JITM package
 
+[2.2.41-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.40...v2.2.41-alpha
 [2.2.40]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.39...v2.2.40
 [2.2.39]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.38...v2.2.39
 [2.2.38]: https://github.com/Automattic/jetpack-jitm/compare/v2.2.37...v2.2.38
