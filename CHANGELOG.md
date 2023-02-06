@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Add tooling for building the Jetpack Forms Dashboard
 - API: Fix PHP warning
 - Build: Check blocks' view scripts for unexpected dependencies.
+- General: update wrong return types
 - Protect: update wording in error message
 - Social Logos: update dependency
 - Updated package dependencies.
