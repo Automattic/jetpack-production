@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Stats: adds new Stats opt out notice
+
 ### Changed
 - Stats: Remove feature lock for Ads page
 

@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - General: update wrong return types
 - Protect: update wording in error message
 - Social Logos: update dependency
+- Update composer lockfile
 - Updated package dependencies.
 - WordPress.com REST API: fix notice.
 

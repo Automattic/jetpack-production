@@ -2188,10 +2188,11 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-stats-admin",
-                "reference": "bc90940fd42f4c0404cd792f70fc398c3ec3d845"
+                "reference": "09716ba7e7922309f624d361a04abcf88827ac3c"
             },
             "require": {
                 "automattic/jetpack-constants": "^1.6.20",
+                "automattic/jetpack-jitm": "^2.2.41",
                 "automattic/jetpack-options": "^1.16.5",
                 "automattic/jetpack-stats": "^0.4.1",
                 "automattic/jetpack-status": "^1.16.1"
