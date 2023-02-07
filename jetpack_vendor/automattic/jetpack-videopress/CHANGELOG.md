@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: improve requesting video data
 
 ### Fixed
+- VideoPress: Fix fatal error when local video cannot be read
 - VideoPress: Fix token bridge issue in development environment
 
 ## [0.10.8] - 2023-01-30
