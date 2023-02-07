@@ -227,9 +227,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-my-jetpack' => array(
-            'pretty_version' => 'v2.7.7',
-            'version' => '2.7.7.0',
-            'reference' => 'b2bbae18b5e7c426f5479bf38fc8c27f2f58828b',
+            'pretty_version' => 'v2.7.8',
+            'version' => '2.7.8.0',
+            'reference' => '0dc729ed7a35fed87d997c8108385b864c9176ef',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-my-jetpack',
             'aliases' => array(),
