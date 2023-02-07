@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Scope Additional CSS submenus to site with a connected owner
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added a new `site_source_slug` option to help resuming on copy site feature
 - Add tooling for building the Jetpack Forms Dashboard
 - API: Fix PHP warning
 - Build: Check blocks' view scripts for unexpected dependencies.
