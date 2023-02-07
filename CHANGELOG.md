@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - API: Fix PHP warning
 - Build: Check blocks' view scripts for unexpected dependencies.
 - General: update wrong return types
+- Masterbar: Fix PHP warning
 - Protect: update wording in error message
 - Social Logos: update dependency
 - Update composer lockfile
