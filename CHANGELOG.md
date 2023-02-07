@@ -23,9 +23,6 @@ This is an alpha version! The changes listed here are not final.
 - Put legacy contact-form blocks registration behind a flag
 
 ### Bug fixes
-- Dashboard Admin: remove border around blocked numbers for anti-spam/protect blocks
-- Do not register the VaultPress and Scan submenu items if we don't have the backups and scan state yet.
-- Fix Backup submenu item not visible when the site has a VaultPress Backup plan but the VaultPress Backup  plugin is not active.
 - Fix rendering of subscriber email in .com as default value for the subscribe block input in wpcom
 - Scope Additional CSS submenus to site with a connected owner
 
@@ -42,7 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - WordPress.com REST API: fix notice.
 
-## 11.8-beta - 2023-01-30
+## [11.8] - 2023-02-07
 ### Enhancements
 - Form block: add styling of input fields. [#27837]
 
@@ -51,13 +48,16 @@ This is an alpha version! The changes listed here are not final.
 - Revue block: add a direct link to the WordPress.com subscriber import page. [#28538]
 
 ### Bug fixes
+- Backup: fix Backup submenu item not visible when the site has a VaultPress Backup plan but the VaultPress Backup plugin is not active. [#28650]
+- Dashboard: do not register the VaultPress and Scan submenu items without having Backups/Scan state. [#28711]
 - Slideshow: fix slideshow loading excessive dependencies on every page view. [#28562]
-- Masterbar: avoid PHP fatal on WoA sites due to a bad filter return. [#28622]
 - Twitter Timeline shortcode: remove jQuery dependency for non-admin pages, and add it for admin pages. [#28643]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Contact Form: fix a PHP warning. [#28640]
+- Dashboard: remove border around counts for anti-spam/protect. [#28746]
 - JSON API: fix the response format for '/sites/$site/dropdown-pages/', the endpoint is not used in production yet. [#28586]
+- Masterbar: avoid PHP fatal on WoA sites due to a bad filter return. [#28622]
 - Reading settings: add 'Reading' link to the menu in Calypso for self-hosted Jetpack sites. [#28616]
 - Shortcodes: fix a PHP warning. [#28644]
 - Subscriptions: fix warnings from the global reading of '$post'. [#28639]
@@ -7709,6 +7709,7 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 - Initial release
 
 [11.6]: https://wp.me/p1moTy-PLI
+[11.8]: https://wp.me/p1moTy-QEM
 [11.7]: https://wp.me/p1moTy-Q9t
 [11.5]: https://wp.me/p1moTy-Ppq
 [11.4]: https://wp.me/p1moTy-O5I
