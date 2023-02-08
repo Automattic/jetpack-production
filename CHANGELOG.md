@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast player block: remove dependency on wp-components from the frontend code
 - Reorder export columns in 3 groups: response meta (title, source, date), response field values, response extra (consent, ip address)
 - Slideshow block: remove dependency on Lodash
+- Update paywall placeholder design for Subscriptions
 - Update subscribe block description
 - VideoPress: Add transform control from video block to videopress/video block
 
