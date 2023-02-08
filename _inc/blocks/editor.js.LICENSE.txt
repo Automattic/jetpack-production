@@ -6,12 +6,6 @@
  * @see https://github.com/kvz/phpjs/blob/ffe1356af23a6f2512c84c954dd4e828e92579fa/functions/strings/number_format.js
  */
 
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
 /*!
   Copyright (c) 2018 Jed Watson.
   Licensed under the MIT License (MIT), see
@@ -31,13 +25,8 @@ object-assign
 */
 
 /**
- * @license qrcode.react
- * Copyright (c) Paul O'Shannessy
- * SPDX-License-Identifier: ISC
- */
-
-/** @license React v16.13.1
- * react-is.production.min.js
+ * @license React
+ * react-jsx-runtime.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -45,8 +34,14 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v17.0.2
- * react-jsx-runtime.production.min.js
+/**
+ * @license qrcode.react
+ * Copyright (c) Paul O'Shannessy
+ * SPDX-License-Identifier: ISC
+ */
+
+/** @license React v16.13.1
+ * react-is.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *

@@ -6,6 +6,10 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Move dialogue and conversation editor extensions back to beta, as they were not released to wordpress.com users
+- Update to React 18.
+
 ## 11.9-a.1 - 2023-02-08
 ### Enhancements
 - Add a blur effect while the form is loading the styles [#28212]
