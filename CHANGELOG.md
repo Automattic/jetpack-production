@@ -9,11 +9,13 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added a notice with a link to a survey when the new stats interface is disabled
 - Map block: reimplemented the frontend in vanilla JS
+- Social Logos: update icon font to remove support for older b browsers (IE11-).
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added new stats options to store the timestamp when Odyssey is enabled and disabled
 - Edited changelog for 11.9-a.1
 - Move dialogue and conversation editor extensions back to beta, as they were not released to wordpress.com users
+- Sharing: update Social Logos with new logos (Google, Link, Mastodon, Medium, Patreon, Tiktok, WooCommerce)
 - Update to React 18.
 
 ## 11.9-a.1 - 2023-02-08
