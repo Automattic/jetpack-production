@@ -591,35 +591,35 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-parser.php'
 	),
 	'Automattic\\Jetpack\\Stats\\Main' => array(
-		'version' => '0.4.2.0',
+		'version' => '0.5.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-main.php'
 	),
 	'Automattic\\Jetpack\\Stats\\Options' => array(
-		'version' => '0.4.2.0',
+		'version' => '0.5.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-options.php'
 	),
 	'Automattic\\Jetpack\\Stats\\Tracking_Pixel' => array(
-		'version' => '0.4.2.0',
+		'version' => '0.5.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-tracking-pixel.php'
 	),
 	'Automattic\\Jetpack\\Stats\\WPCOM_Stats' => array(
-		'version' => '0.4.2.0',
+		'version' => '0.5.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-wpcom-stats.php'
 	),
 	'Automattic\\Jetpack\\Stats\\XMLRPC_Provider' => array(
-		'version' => '0.4.2.0',
+		'version' => '0.5.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-xmlrpc-provider.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\Dashboard' => array(
-		'version' => '0.5.0.0',
+		'version' => '0.5.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-dashboard.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\Main' => array(
-		'version' => '0.5.0.0',
+		'version' => '0.5.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-main.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\REST_Controller' => array(
-		'version' => '0.5.0.0',
+		'version' => '0.5.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Status' => array(
