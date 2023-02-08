@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add allow download option to VideoPress videos in VP dashboard
 - Add preload toggle to VideoPress block
 - VideoPress: anticipate privacy state of the video
 - VideoPress: Enforce chapters restrictions on description parsing
