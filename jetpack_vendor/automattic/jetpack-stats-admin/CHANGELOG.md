@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.5.0-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 0.5.0 - 2023-02-08
 ### Added
-- Stats: adds new Stats opt out notice
+- Stats: adds new Stats opt out notice [#28733]
 
 ### Changed
-- Stats: Remove feature lock for Ads page
+- Stats: Remove feature lock for Ads page [#28657]
 
 ## 0.4.1 - 2023-01-26
 ### Fixed
