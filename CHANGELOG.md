@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added a notice with a link to a survey when the new stats interface is disabled
 - Map block: reimplemented the frontend in vanilla JS
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
