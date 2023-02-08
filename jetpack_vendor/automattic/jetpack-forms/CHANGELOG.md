@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Move Forms blocks to Forms package
 
 ### Changed
+- Forms: Update Form package with latest contact-form changes from trunk
 - Reorder export columns in 3 groups: response meta (title, source, date), response field values, response extra (consent, ip address)
 
 ## [0.2.0] - 2023-01-26
