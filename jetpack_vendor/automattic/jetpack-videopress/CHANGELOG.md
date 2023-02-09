@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update to React 18.
 
+### Fixed
+- VideoPress: Fix custom CSS classes removal
+
 ## [0.10.9] - 2023-02-08
 ### Added
 - Add allow download option to VideoPress videos in VP dashboard [#28804]
