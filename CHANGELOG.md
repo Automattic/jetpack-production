@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added a notice with a link to a survey when the new stats interface is disabled
+- Make the Stats dashboard widget link to Odyssey stats if enabled
 - Map block: reimplemented the frontend in vanilla JS
 - Social Logos: update icon font to remove support for older b browsers (IE11-).
 
