@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added new stats options to store the timestamp when Odyssey is enabled and disabled
 - Edited changelog for 11.9-a.1
+- General: update wording in plugin's readme.
 - Move dialogue and conversation editor extensions back to beta, as they were not released to wordpress.com users
 - Sharing: update Social Logos with new logos (Google, Link, Mastodon, Medium, Patreon, Tiktok, WooCommerce)
 - Update to React 18.
