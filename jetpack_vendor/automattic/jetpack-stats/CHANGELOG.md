@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added new options to store the timestamp when Odyssey is enabled and disabled
+- Stats: Adds support for Notice control
 
 ## [0.4.2] - 2023-02-08
 ### Changed
