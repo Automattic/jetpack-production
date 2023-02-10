@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - VideoPress: Fix custom CSS classes removal
+- VideoPress: Fix image URLs in the block editor
 
 ## [0.10.9] - 2023-02-08
 ### Added
