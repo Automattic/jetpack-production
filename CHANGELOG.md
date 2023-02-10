@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - General: update wording in plugin's readme.
 - Move dialogue and conversation editor extensions back to beta, as they were not released to wordpress.com users
 - Sharing: update Social Logos with new logos (Google, Link, Mastodon, Medium, Patreon, Tiktok, WooCommerce)
+- This change doesn't affect the plugin.
 - Update to React 18.
 
 ## 11.9-a.1 - 2023-02-08

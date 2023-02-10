@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added response list table to the new feedback dashboard
+- Added the template for the response view in the new feedback dashboard
 - Add new method to reverse print_r output as stored on the feedback posts. Use it to try and parse the form fields, fallback to old method.
 
 ### Changed
