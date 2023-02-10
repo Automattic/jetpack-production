@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update to React 18.
 
+### Fixed
+- Do not load the Blaze script in the classic editor.
+
 ## [0.5.2] - 2023-02-08
 ### Changed
 - Only display the Blaze UI to admins on a site. [#28748]
