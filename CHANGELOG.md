@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Map block: reimplemented the frontend in vanilla JS
 - Social Logos: update icon font to remove support for older b browsers (IE11-).
 
+### Bug fixes
+- Add new method to reverse print_r output as stored on the feedback posts. Use it to try and parse the form fields, fallback to old method.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added new stats options to store the timestamp when Odyssey is enabled and disabled
 - Edited changelog for 11.9-a.1
