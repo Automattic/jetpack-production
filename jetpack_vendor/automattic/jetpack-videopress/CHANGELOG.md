@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update to React 18.
+- VideoPress: do not use JS template to build queryString of the chapter file to avoid concat_js=no issues
 
 ### Fixed
 - VideoPress: Fix custom CSS classes removal
