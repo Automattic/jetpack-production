@@ -6,6 +6,11 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Add filter to prevent contact-form-styles script from being concatenated
+- Fix premium content block where it would only allow access to site subscribers
+- Prevent Forms blur effect on AMP pages
+
 ## 11.8 - 2023-02-07
 ### Enhancements
 - Form block: add styling of input fields. [#27837]
