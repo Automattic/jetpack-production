@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Add filter to prevent contact-form-styles script from being concatenated
+- Prevent Forms blur effect on AMP pages
 
 ## [0.3.0] - 2023-02-08
 ### Added

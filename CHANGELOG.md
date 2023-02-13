@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Add filter to prevent contact-form-styles script from being concatenated
 - Add new method to reverse print_r output as stored on the feedback posts. Use it to try and parse the form fields, fallback to old method.
 - Fix premium content block where it would only allow access to site subscribers
+- Prevent Forms blur effect on AMP pages
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added new stats options to store the timestamp when Odyssey is enabled and disabled
