@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update to React 18.
 
+### Fixed
+- Configure with standard `@wordpress/browserslist-config` config.
+
 ## [0.19.3] - 2023-02-08
 ### Changed
 - Minor internal updates.

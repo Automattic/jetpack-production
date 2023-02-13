@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove `jetpack_require_lib` and `jetpack_require_lib_dir`, which has been issuing deprecation warnings since 11.6.
 - Sharing: update Social Logos with new logos (Google, Link, Mastodon, Medium, Patreon, Tiktok, WooCommerce)
 - This change doesn't affect the plugin.
+- Updated package dependencies.
 - Update to React 18.
 
 ## 11.9-a.1 - 2023-02-08
