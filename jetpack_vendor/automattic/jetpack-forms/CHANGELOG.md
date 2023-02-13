@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update to React 18.
 
+### Fixed
+- Add filter to prevent contact-form-styles script from being concatenated
+
 ## [0.3.0] - 2023-02-08
 ### Added
 - Add "watch" entries for both composer and package .json files. This allows us to run `jetpack watch packages/forms` while working on JS things [#28704]

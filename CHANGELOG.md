@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Social Logos: update icon font to remove support for older b browsers (IE11-).
 
 ### Bug fixes
+- Add filter to prevent contact-form-styles script from being concatenated
 - Add new method to reverse print_r output as stored on the feedback posts. Use it to try and parse the form fields, fallback to old method.
 - Fix premium content block where it would only allow access to site subscribers
 
