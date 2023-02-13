@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added new stats options to store the timestamp when Odyssey is enabled and disabled
 - Edited changelog for 11.9-a.1
+- Fix a bug where comments would be open under pages
 - General: update wording in plugin's readme.
 - Move dialogue and conversation editor extensions back to beta, as they were not released to wordpress.com users
 - Remove `jetpack_require_lib` and `jetpack_require_lib_dir`, which has been issuing deprecation warnings since 11.6.
