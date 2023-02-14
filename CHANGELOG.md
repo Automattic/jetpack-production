@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added a notice with a link to a survey when the new stats interface is disabled
+- Admin: make the links under the Reccommendation section more apparent (black+underline)
 - Display location-aware snackbar upon loading the site editor
 - Jetpack stats dashboard widget: Adds filter to hide stats widget based on user capability.
 - Make the Stats dashboard widget link to Odyssey stats if enabled
