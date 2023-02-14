@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Make the Stats dashboard widget link to Odyssey stats if enabled
 - Map block: reimplemented the frontend in vanilla JS
 - Social Logos: update icon font to remove support for older b browsers (IE11-).
+- Visual update to social buttons which haven't been updated in like 10 years.
 
 ### Bug fixes
 - Add filter to prevent contact-form-styles script from being concatenated
