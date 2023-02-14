@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Social Logos: update icon font to remove support for older b browsers (IE11-).
 - Visual update to social buttons which haven't been updated in like 10 years.
 
+### Improved compatibility
+- Theme Compatiblity: ensure redesigned sharing buttons look good in  default themes as well (Twenty Nineteen, Twenty Sixteen)
+
 ### Bug fixes
 - Add filter to prevent contact-form-styles script from being concatenated
 - Add new method to reverse print_r output as stored on the feedback posts. Use it to try and parse the form fields, fallback to old method.
