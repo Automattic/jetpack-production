@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Rename stats option enable_calypso_stats to enable_odyssey_stats
 
+### Fixed
+- Stats: remove unnecessary params that breaks wpcom API
+
 ## 0.5.0 - 2023-02-08
 ### Added
 - Stats: adds new Stats opt out notice [#28733]
