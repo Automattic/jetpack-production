@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Edited changelog for 11.9-a.1
 - Fix a bug where comments would be open under pages
 - General: update wording in plugin's readme.
+- Jetpack: convert v6 to v5 in case it is not registered
 - Membership: user_can_view_post: Memoize results
 - Move dialogue and conversation editor extensions back to beta, as they were not released to wordpress.com users
 - Remove `jetpack_require_lib` and `jetpack_require_lib_dir`, which has been issuing deprecation warnings since 11.6.
