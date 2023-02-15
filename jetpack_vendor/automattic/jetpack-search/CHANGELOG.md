@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Adds a "show post date" selector to Search customberg, allows non-multisite sites to show the post date in the "expanded" search result format.
 
+### Fixed
+- Fixed unit tests without internet
+
 ## [0.32.0] - 2023-02-15
 ### Added
 - Search: Adds assigned post categories as classnames to search results [#28816]

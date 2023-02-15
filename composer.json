@@ -42,7 +42,7 @@
 		"automattic/jetpack-roles": "^1.4.21",
 		"automattic/jetpack-search": "^0.33.0-alpha",
 		"automattic/jetpack-stats": "^0.5.0",
-		"automattic/jetpack-stats-admin": "^0.6.0",
+		"automattic/jetpack-stats-admin": "^0.6.1-alpha",
 		"automattic/jetpack-status": "^1.16.1",
 		"automattic/jetpack-sync": "^1.47.1",
 		"automattic/jetpack-videopress": "^0.10.12-alpha",
