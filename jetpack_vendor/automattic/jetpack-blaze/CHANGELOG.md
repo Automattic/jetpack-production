@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update to React 18.
 
 ### Fixed
+- Blaze: prevent fatals on frontend-loaded Gutenberg + bail early if Jetpack is not connected
 - Do not load the Blaze script in the classic editor.
 
 ## [0.5.2] - 2023-02-08
