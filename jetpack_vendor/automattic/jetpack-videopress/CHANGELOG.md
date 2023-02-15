@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: improve requesting data for private videos
 
 ### Changed
+- Auto-formatting of some files.
 - VideoPress: enqueue video block assets by using the Assets class
 
 ## [0.10.11] - 2023-02-15

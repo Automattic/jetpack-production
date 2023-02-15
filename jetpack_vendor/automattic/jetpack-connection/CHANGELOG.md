@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.50.2-alpha] - unreleased
+## [1.51.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Moving deleting connection owner notice from JITM to Connection package.
 
 ## [1.50.1] - 2023-02-15
 ### Changed
@@ -765,7 +768,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[1.50.2-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.50.1...v1.50.2-alpha
+[1.51.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.50.1...v1.51.0-alpha
 [1.50.1]: https://github.com/Automattic/jetpack-connection/compare/v1.50.0...v1.50.1
 [1.50.0]: https://github.com/Automattic/jetpack-connection/compare/v1.49.1...v1.50.0
 [1.49.1]: https://github.com/Automattic/jetpack-connection/compare/v1.49.0...v1.49.1

@@ -32,6 +32,7 @@ return array(
     'Automattic\\Jetpack\\Composer\\Plugin' => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-plugin.php',
     'Automattic\\Jetpack\\Config' => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php',
     'Automattic\\Jetpack\\Connection\\Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-client.php',
+    'Automattic\\Jetpack\\Connection\\Connection_Notice' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-connection-notice.php',
     'Automattic\\Jetpack\\Connection\\Error_Handler' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-error-handler.php',
     'Automattic\\Jetpack\\Connection\\Initial_State' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-initial-state.php',
     'Automattic\\Jetpack\\Connection\\Manager' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-manager.php',
