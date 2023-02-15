@@ -62,7 +62,6 @@ input[type=email],
 input[type=url] {
   border-radius: 0;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   box-sizing: border-box;
   margin: 0;
@@ -75,10 +74,6 @@ input[type=url] {
   background-color: #fff;
   transition: all 0.15s ease-in-out;
   box-shadow: none;
-}
-
-input[type=text]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=url]::-moz-placeholder {
-  color: #87a6bc;
 }
 
 input[type=text]::placeholder,
@@ -128,10 +123,6 @@ input[type=url]:disabled:hover {
   cursor: default;
 }
 
-input[type=text]:disabled::-moz-placeholder, input[type=tel]:disabled::-moz-placeholder, input[type=email]:disabled::-moz-placeholder, input[type=url]:disabled::-moz-placeholder {
-  color: #a8bece;
-}
-
 input[type=text]:disabled::placeholder,
 input[type=tel]:disabled::placeholder,
 input[type=email]:disabled::placeholder,
@@ -145,7 +136,6 @@ input[type=url]:disabled::placeholder {
 textarea {
   border-radius: 0;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   box-sizing: border-box;
   margin: 0;
@@ -159,10 +149,6 @@ textarea {
   background-color: #fff;
   transition: all 0.15s ease-in-out;
   box-shadow: none;
-}
-
-textarea::-moz-placeholder {
-  color: #87a6bc;
 }
 
 textarea::placeholder {
@@ -194,10 +180,6 @@ textarea:disabled:hover {
   cursor: default;
 }
 
-textarea:disabled::-moz-placeholder {
-  color: #a8bece;
-}
-
 textarea:disabled::placeholder {
   color: #a8bece;
 }
@@ -224,8 +206,7 @@ input[type=checkbox] {
   line-height: 0;
   text-align: center;
   vertical-align: middle;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   transition: all 0.15s ease-in-out;
   clear: none;
   cursor: pointer;
@@ -302,8 +283,7 @@ input[type=radio] {
   vertical-align: middle;
   width: 16px;
   min-width: 16px;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   border-radius: 50%;
   line-height: 10px;
 }
@@ -346,10 +326,6 @@ input[type=radio]:disabled {
 
 input[type=radio]:disabled:hover {
   cursor: default;
-}
-
-input[type=radio]:disabled::-moz-placeholder {
-  color: #a8bece;
 }
 
 input[type=radio]:disabled::placeholder {
@@ -414,7 +390,6 @@ select {
   /* Aligns the text to the 8px baseline grid and adds padding on right to allow for the arrow. */
   padding: 7px 14px 9px 32px;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -481,7 +456,6 @@ input[type=submit] {
   padding: 0;
   font-size: 14px;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   vertical-align: baseline;
   background: white;
@@ -504,7 +478,6 @@ input[type=submit] {
   border-radius: 4px;
   padding: 7px 14px 9px;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
