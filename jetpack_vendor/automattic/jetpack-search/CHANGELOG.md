@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.32.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.32.0] - 2023-02-15
 ### Added
-- Search: Adds assigned post categories as classnames to search results
+- Search: Adds assigned post categories as classnames to search results [#28816]
 
 ### Changed
-- Update to React 18.
+- Update to React 18. [#28710]
 
 ## [0.31.7] - 2023-02-08
 ### Changed
@@ -665,7 +662,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.32.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.31.7...v0.32.0-alpha
+[0.32.0]: https://github.com/Automattic/jetpack-search/compare/v0.31.7...v0.32.0
 [0.31.7]: https://github.com/Automattic/jetpack-search/compare/v0.31.6...v0.31.7
 [0.31.6]: https://github.com/Automattic/jetpack-search/compare/v0.31.5...v0.31.6
 [0.31.5]: https://github.com/Automattic/jetpack-search/compare/v0.31.4...v0.31.5
