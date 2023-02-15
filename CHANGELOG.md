@@ -7,10 +7,12 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Set left-margin to 16px for View on WordPress.com stats link in Jetpack dashboard
 - Update form-styles script to prevent blurred forms on slow loading pages
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Edited changelog
+- Remove `ci.targets` from package.json. Better scoping of e2e tests.
 
 ## 11.9-a.3 - 2023-02-15
 ### Enhancements
