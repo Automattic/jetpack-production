@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added the Import package.
 - Set left-margin to 16px for View on WordPress.com stats link in Jetpack dashboard
+- Story block: remove dependency on wp-components from the frontend code
 - Update form-styles script to prevent blurred forms on slow loading pages
 - VideoPress: restore v5/v6 transform for all platforms
 
