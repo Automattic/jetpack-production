@@ -115,7 +115,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-plugin.php'
 	),
 	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.13.0.0',
+		'version' => '1.14.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Client' => array(
@@ -317,6 +317,34 @@ return array(
 	'Automattic\\Jetpack\\Identity_Crisis' => array(
 		'version' => '0.8.37.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-identity-crisis.php'
+	),
+	'Automattic\\Jetpack\\Import\\Endpoints\\Category' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-category.php'
+	),
+	'Automattic\\Jetpack\\Import\\Endpoints\\Comment' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-comment.php'
+	),
+	'Automattic\\Jetpack\\Import\\Endpoints\\Import' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/trait-import.php'
+	),
+	'Automattic\\Jetpack\\Import\\Endpoints\\Page' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-page.php'
+	),
+	'Automattic\\Jetpack\\Import\\Endpoints\\Post' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-post.php'
+	),
+	'Automattic\\Jetpack\\Import\\Endpoints\\Tag' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-tag.php'
+	),
+	'Automattic\\Jetpack\\Import\\Main' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/class-main.php'
 	),
 	'Automattic\\Jetpack\\JITMS\\JITM' => array(
 		'version' => '2.3.0.0-alpha',

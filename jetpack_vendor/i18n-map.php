@@ -30,7 +30,7 @@ return array(
     ),
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
-      'ver' => '1.13.0',
+      'ver' => '1.14.0-alpha',
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
@@ -47,6 +47,10 @@ return array(
     'jetpack-idc' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
       'ver' => '0.8.37',
+    ),
+    'jetpack-import' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-import',
+      'ver' => '0.1.0-alpha',
     ),
     'jetpack-jitm' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
