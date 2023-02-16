@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fixed unit tests without internet
+- Stats: fix broken request_as_blog_cached
 
 ## 0.6.0 - 2023-02-15
 ### Added
