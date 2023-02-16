@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fixed unit tests without internet
+- Separated authors by comments if there are multiple authors in a search result
 
 ## [0.32.0] - 2023-02-15
 ### Added
