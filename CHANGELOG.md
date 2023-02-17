@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added the Import package.
 - createPrompt will now create a prompt for every case except when the post is totally empty
+- Jetpack: tweak MediaButton component
 - Set left-margin to 16px for View on WordPress.com stats link in Jetpack dashboard
 - Story block: remove dependency on wp-components from the frontend code
 - Update form-styles script to prevent blurred forms on slow loading pages
