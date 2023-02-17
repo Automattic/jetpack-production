@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Auto-formatting of some files.
 - VideoPress: enqueue video block assets by using the Assets class
 - VideoPress: fix detecting auto-generated issue
+- VideoPress: tweak poster control styles
 
 ### Fixed
 - VideoPress: Fix dashboard fatal mistake when reading malformed local video
