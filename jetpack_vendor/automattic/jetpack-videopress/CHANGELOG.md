@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: enqueue video block assets by using the Assets class
 - VideoPress: fix detecting auto-generated issue
 
+### Fixed
+- VideoPress: Fix dashboard fatal mistake when reading malformed local video
+
 ## [0.10.11] - 2023-02-15
 ### Fixed
 - VideoPress: Disable local library upload button when video is already uploaded (mobile) [#28958]
