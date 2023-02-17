@@ -12,3 +12,6 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added import REST endpoints.
 - Add new Jetpack Import package.
+
+### Fixed
+- Fixed various imported resources hierarchies
