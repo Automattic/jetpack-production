@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: flush token when the requester retries
 - VideoPress: improve requesting data for private videos
+- VideoPress: propagate custom CSS from VideoPress video block to core/embed when transforming block
 
 ### Changed
 - Auto-formatting of some files.
