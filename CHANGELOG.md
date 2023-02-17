@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Update form-styles script to prevent blurred forms on slow loading pages
 - VideoPress: restore v5/v6 transform for all platforms
 
+### Improved compatibility
+- Jetpack: extend media button for VideoPress video block
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Edited changelog
 - Remove `ci.targets` from package.json. Better scoping of e2e tests.
