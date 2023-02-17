@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Auto-formatting of some files.
 - VideoPress: enqueue video block assets by using the Assets class
+- VideoPress: fix detecting auto-generated issue
 
 ## [0.10.11] - 2023-02-15
 ### Fixed
