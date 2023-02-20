@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Edited changelog
+- General: use external link icons for external links
 - Remove `ci.targets` from package.json. Better scoping of e2e tests.
 - Tests for paid-newsletters regressions
 - Writing prompts: adds initial scaffolding for block
