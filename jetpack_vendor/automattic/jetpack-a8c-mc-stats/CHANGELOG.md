@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.4.19-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [1.4.19] - 2023-02-20
+### Changed
+- Minor internal updates.
 
 ## [1.4.18] - 2023-01-11
 ### Changed
@@ -115,7 +115,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Creates the MC Stats package
 
-[1.4.19-alpha]: https://github.com/Automattic/jetpack-a8c-mc-stats/compare/v1.4.18...v1.4.19-alpha
+[1.4.19]: https://github.com/Automattic/jetpack-a8c-mc-stats/compare/v1.4.18...v1.4.19
 [1.4.18]: https://github.com/Automattic/jetpack-a8c-mc-stats/compare/v1.4.17...v1.4.18
 [1.4.17]: https://github.com/Automattic/jetpack-a8c-mc-stats/compare/v1.4.16...v1.4.17
 [1.4.16]: https://github.com/Automattic/jetpack-a8c-mc-stats/compare/v1.4.15...v1.4.16

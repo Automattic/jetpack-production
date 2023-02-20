@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.4.20-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [1.4.20] - 2023-02-20
+### Changed
+- Minor internal updates.
 
 ## [1.4.19] - 2023-01-11
 ### Changed
@@ -136,7 +136,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Blocks: introduce new package for block management
 
-[1.4.20-alpha]: https://github.com/Automattic/jetpack-blocks/compare/v1.4.19...v1.4.20-alpha
+[1.4.20]: https://github.com/Automattic/jetpack-blocks/compare/v1.4.19...v1.4.20
 [1.4.19]: https://github.com/Automattic/jetpack-blocks/compare/v1.4.18...v1.4.19
 [1.4.18]: https://github.com/Automattic/jetpack-blocks/compare/v1.4.17...v1.4.18
 [1.4.17]: https://github.com/Automattic/jetpack-blocks/compare/v1.4.16...v1.4.17

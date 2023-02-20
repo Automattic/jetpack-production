@@ -2,30 +2,31 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.9-a.4 - unreleased
+## 11.9-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 11.9-a.5 - 2023-02-20
 ### Enhancements
-- Added the Import package.
-- createPrompt will now create a prompt for every case except when the post is totally empty
-- Harmonize UI with stock Gutenberg menu
-- Jetpack: tweak MediaButton component
-- Set left-margin to 16px for View on WordPress.com stats link in Jetpack dashboard
-- Story block: remove dependency on wp-components from the frontend code
-- Update form-styles script to prevent blurred forms on slow loading pages
-- Updating look and feel of sharing buttons when in "official" mode
-- VideoPress: restore v5/v6 transform for all platforms
+- Import: add new `automattic/jetpack-import` package. [#28824]
+- Jetpack: improve design of MediaButton component. [#29027]
+- Sharing: update look and feel of sharing buttons when in "official" mode. [#28961]
 
 ### Improved compatibility
-- Jetpack: extend media button for VideoPress video block
+- Stats: adjust margin for WordPress.com stats link in Jetpack dashboard. [#28976]
+- VideoPress: extend media button for VideoPress video block. [#29032]
+- VideoPress: restore v5/v6 transform for all platforms. [#28986]
+
+### Bug fixes
+- Form block: update form-styles script to prevent blurred forms on slow loading pages. [#28973]
+- Story block: remove dependency on wp-components from the frontend code. [#28743]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Edited changelog
-- General: use external link icons for external links
-- Remove `ci.targets` from package.json. Better scoping of e2e tests.
-- Tests for paid-newsletters regressions
-- Writing prompts: adds initial scaffolding for block
+- General: use external link icons for external links. [#28922]
+- Remove `ci.targets` from package.json. Better scoping of e2e tests. [#28913]
+- Writing Prompts (beta): adds initial scaffolding for block. [#29013]
+- WPcom: adjust paid-newsletters UI, add regression tests. [#28690, #28966]
+- WPcom: adjust prompt for AI paragraph block. [#28565]
 
 ## 11.9-a.3 - 2023-02-15
 ### Enhancements
