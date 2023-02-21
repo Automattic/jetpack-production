@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- Jetpack: log event when converting video block to the new VideoPress video block
+
 ### Enhancements
 - Add Social Image Generator feature flag to Jetpack Social
 
