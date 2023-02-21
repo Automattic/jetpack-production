@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin Page: use external icons for external links in support card.
+
 ## 11.9-a.5 - 2023-02-20
 ### Enhancements
 - Import: add new `automattic/jetpack-import` package. [#28824]
