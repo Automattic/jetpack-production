@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Prevent launchpad modal from rendering on top of the first post published modal
 
+### Bug fixes
+- WPCOM Only: Make sure the email field in the subscribe block is required
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin Page: update link in Jetpack App card to include external link icon.
 - Admin Page: use external icons for external links in support card.
