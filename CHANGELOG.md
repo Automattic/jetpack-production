@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add Social Image Generator feature flag to Jetpack Social
 - Jetpack: log when transforming from video block v5 to v6
+- Sharing: add Mastodon sharing button.
 
 ### Improved compatibility
 - Prevent launchpad modal from rendering on top of the first post published modal
