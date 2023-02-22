@@ -46,7 +46,7 @@
 		"automattic/jetpack-stats-admin": "^0.6.2-alpha",
 		"automattic/jetpack-status": "^1.16.2",
 		"automattic/jetpack-sync": "^1.47.2",
-		"automattic/jetpack-videopress": "^0.10.12",
+		"automattic/jetpack-videopress": "^0.10.13-alpha",
 		"automattic/jetpack-waf": "^0.9.3",
 		"automattic/jetpack-wordads": "^0.2.33-alpha",
 		"nojimage/twitter-text-php": "3.1.2"
