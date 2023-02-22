@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add Social Image Generator feature flag to Jetpack Social
 - Jetpack: log when transforming from video block v5 to v6
 
+### Improved compatibility
+- Prevent launchpad modal from rendering on top of the first post published modal
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin Page: update link in Jetpack App card to include external link icon.
 - Admin Page: use external icons for external links in support card.
