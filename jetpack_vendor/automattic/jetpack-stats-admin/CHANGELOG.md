@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Stats: moved New Stats toggling logic to stats-admin
 
+### Fixed
+- Stats Admin: Opt-in notice should be shown a month after the customer has opted out of Odyssey Stats.
+
 ## 0.6.1 - 2023-02-20
 ### Fixed
 - Fixed unit tests without internet [#28985]
