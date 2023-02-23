@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Prevent launchpad modal from rendering on top of the first post published modal
 
 ### Bug fixes
+- Fix a bug in list user endpoint when include_viewers is true
 - WPCOM Only: Make sure the email field in the subscribe block is required
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
