@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add an upgrade nudge for Odyssey Stats
 - Add block support for font family in Related Posts block
+- Add options panel for Social Image Generator to Jetpack Social sidebar.
 - Add Social Image Generator feature flag to Jetpack Social
 - Jetpack: log when transforming from video block v5 to v6
 - Jetpack: tidy registering VideoPress video block

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add options panel for Social Image Generator to Jetpack Social sidebar.
 - Add Social Image Generator feature flag to Jetpack Social
 
 ## [0.19.5] - 2023-02-20

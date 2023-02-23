@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add player-bridge. Update player loading state
 
+### Removed
+- VideoPress: removed deprecated wp-block-bridge lib
+
 ## [0.10.12] - 2023-02-20
 ### Added
 - VideoPress: flush token when the requester retries [#28930]
