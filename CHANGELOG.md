@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Page: update link in Jetpack App card to include external link icon.
 - Admin Page: use external icons for external links in support card.
 - Stats: moved New Stats toggling logic to stats-admin
+- Updated package dependencies.
 
 ## 11.9-a.5 - 2023-02-20
 ### Enhancements

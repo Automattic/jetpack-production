@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add player-bridge. Update player loading state
 
+### Changed
+- Updated package dependencies.
+
 ### Removed
 - VideoPress: removed deprecated wp-block-bridge lib
 
