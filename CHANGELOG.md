@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 11.9-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Sharing: fix display issues when choosing the Icon-only option.
+
 ## 11.9-a.5 - 2023-02-20
 ### Enhancements
 - Import: add new `automattic/jetpack-import` package. [#28824]
