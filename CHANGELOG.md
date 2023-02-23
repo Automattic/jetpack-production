@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: log event when converting video block to the new VideoPress video block
 
 ### Enhancements
+- Add an upgrade nudge for Odyssey Stats
 - Add block support for font family in Related Posts block
 - Add Social Image Generator feature flag to Jetpack Social
 - Jetpack: log when transforming from video block v5 to v6
