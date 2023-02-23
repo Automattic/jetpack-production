@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Add options panel for Social Image Generator to Jetpack Social sidebar.
 - Add Social Image Generator feature flag to Jetpack Social
 - Allow Form fields style synchronization
+- Assistant: added a new card to highlight the advantages of VaultPress Backup
 - Jetpack: log when transforming from video block v5 to v6
 - Jetpack: tidy registering VideoPress video block
 - Sharing: add Mastodon sharing button.
