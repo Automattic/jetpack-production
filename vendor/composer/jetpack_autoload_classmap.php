@@ -302,6 +302,10 @@ return array(
 		'version' => '0.6.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-google-drive.php'
 	),
+	'Automattic\\Jetpack\\Forms\\WPCOM_REST_API_V2_Endpoint_Forms' => array(
+		'version' => '0.6.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-wpcom-rest-api-v2-endpoint-forms.php'
+	),
 	'Automattic\\Jetpack\\Heartbeat' => array(
 		'version' => '1.51.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-heartbeat.php'

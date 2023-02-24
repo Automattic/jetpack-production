@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - WPCOM Only: Make sure the email field in the subscribe block is required
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add wpcom/v2/form-responses endpoint, mapped from .com
 - Admin Page: update link in Jetpack App card to include external link icon.
 - Admin Page: use external icons for external links in support card.
 - Stats: moved New Stats toggling logic to stats-admin
