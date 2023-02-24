@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Update billing language
 - Update days of saved backups link to use external link instead of plain link.
 
 ## [1.12.4] - 2023-02-20
