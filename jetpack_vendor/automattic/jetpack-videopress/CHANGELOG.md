@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: add player-bridge. Update player loading state
+- VideoPress: move the Playback Bar color panel into the colors panel group
 
 ### Changed
 - Updated package dependencies.
