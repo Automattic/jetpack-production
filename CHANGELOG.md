@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: add Mastodon sharing button.
 
 ### Improved compatibility
+- Added support for the `preload` or `preloadcontent` attribute to the VideoPress shortcode.
 - Prevent launchpad modal from rendering on top of the first post published modal
 
 ### Bug fixes
