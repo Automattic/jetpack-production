@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: tweak Remove poster button
 
 ### Removed
 - VideoPress: removed deprecated wp-block-bridge lib
