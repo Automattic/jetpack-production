@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add player-bridge. Update player loading state
 - VideoPress: add Poster panel to video block sidebar
 - VideoPress: move the Playback Bar color panel into the colors panel group
+- VideoPress: set poster height in block sidebar based on video ratio
 
 ### Changed
 - Updated package dependencies.
