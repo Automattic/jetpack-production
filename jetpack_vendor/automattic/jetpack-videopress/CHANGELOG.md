@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added support for the `preload` or `preloadcontent` attribute to the VideoPress shortcode.
 - VideoPress: add a note about __experimentalGroup InspectorControls property
 - VideoPress: add player-bridge. Update player loading state
+- VideoPress: add Poster panel to video block sidebar
 - VideoPress: move the Playback Bar color panel into the colors panel group
 
 ### Changed
