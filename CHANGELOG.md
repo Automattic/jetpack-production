@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Increase form fields padding based on user-defined border-radius
 - Jetpack: log when transforming from video block v5 to v6
 - Jetpack: tidy registering VideoPress video block
+- Remove NewDash nudges in legacy stats
 - Sharing: add Mastodon sharing button.
 
 ### Improved compatibility
