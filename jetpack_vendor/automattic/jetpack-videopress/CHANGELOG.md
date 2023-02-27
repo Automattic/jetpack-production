@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - VideoPress: removed deprecated wp-block-bridge lib
+- VideoPress: remove uploading image for video poster when uploading video
 
 ## [0.10.12] - 2023-02-20
 ### Added
