@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a page navigation component for the new feedback dashboard
 - Add v2/v4 endpoint for form responses inbox
 - Allow Form fields style synchronization
+- Increase form fields padding based on user-defined border-radius
 
 ## [0.5.1] - 2023-02-20
 ### Changed
