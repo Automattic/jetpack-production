@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added a page navigation component for the new feedback dashboard
 - Add v2/v4 endpoint for form responses inbox
 - Allow Form fields style synchronization
 

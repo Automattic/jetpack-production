@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Page: use external icons for external links in support card.
 - Consolidates selector logic in the launchpad save modal
 - Stats: moved New Stats toggling logic to stats-admin
+- This change doesn't affect the plugin.
 - Updated package dependencies.
 
 ## 11.9-a.5 - 2023-02-20
