@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Add wpcom/v2/form-responses endpoint, mapped from .com
 - Admin Page: update link in Jetpack App card to include external link icon.
 - Admin Page: use external icons for external links in support card.
+- Consolidates selector logic in the launchpad save modal
 - Stats: moved New Stats toggling logic to stats-admin
 - Updated package dependencies.
 
