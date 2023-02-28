@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Add options panel for Social Image Generator to Jetpack Social sidebar.
 - Add Social Image Generator feature flag to Jetpack Social
 - Allow Form fields style synchronization
+- Allowing getting posts by ids in GET /posts response using include array
 - Assistant: added a new card to highlight the advantages of VaultPress Backup
 - Increase form fields padding based on user-defined border-radius
 - Jetpack: log when transforming from video block v5 to v6
