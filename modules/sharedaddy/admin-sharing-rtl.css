@@ -180,6 +180,10 @@ li.service.share-skype span:before {
   content: "\f220";
 }
 
+li.service.share-mastodon span:before {
+  content: "\f10a";
+}
+
 /**
  * Preview section
  */
