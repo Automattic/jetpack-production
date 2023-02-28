@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Allow Form fields style synchronization
 - Increase form fields padding based on user-defined border-radius
 
+### Changed
+- Jetpack Forms dashboard now replaces the "Feedback" menu entry in WP Admin.
+
 ## [0.5.1] - 2023-02-20
 ### Changed
 - Minor internal updates.
