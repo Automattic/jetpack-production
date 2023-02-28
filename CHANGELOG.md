@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Prevent launchpad modal from rendering on top of the first post published modal
 
 ### Bug fixes
+- Custom CSS: ensure the link to enable Custom CSS works in all languages.
 - Fix a bug in list user endpoint when include_viewers is true
 - Presentation shortcode: always add presentation container
 - Recommendations: avoid applying the coupon code from the Assistant on product with trial prices.
