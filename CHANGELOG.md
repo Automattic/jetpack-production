@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix a bug in list user endpoint when include_viewers is true
 - Presentation shortcode: always add presentation container
 - Recommendations: avoid applying the coupon code from the Assistant on product with trial prices.
+- Remove body font normalization for on contact-form module and package
 - Revise Jetpack connection agreement text to comply with our User Agreement
 - Sharing: fix display issues when choosing the Icon-only option.
 - Test fix: adapted the Sync test to WordPress Core changes in post deletion mechanics.

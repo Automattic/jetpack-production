@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Jetpack Forms dashboard now replaces the "Feedback" menu entry in WP Admin.
 
+### Fixed
+- Remove body font normalization for on contact-form module and package
+
 ## [0.5.1] - 2023-02-20
 ### Changed
 - Minor internal updates.
