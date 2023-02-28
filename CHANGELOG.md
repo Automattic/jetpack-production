@@ -2,54 +2,57 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 11.9-a.6 - unreleased
+## 12.0-a.0 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Allowing getting posts by ids in GET /posts response using include array
+
+## 11.9-beta - 2023-02-28
 ### Major Enhancements
-- Jetpack: log event when converting video block to the new VideoPress video block
+- Jetpack: log event when converting video block to the new VideoPress video block [#29071]
 
 ### Enhancements
-- Add an upgrade nudge for Odyssey Stats
-- Add block support for font family in Related Posts block
-- Add block support for font family in Related Posts block server block renderer
-- Add options panel for Social Image Generator to Jetpack Social sidebar.
-- Add Social Image Generator feature flag to Jetpack Social
-- Allow Form fields style synchronization
-- Allowing getting posts by ids in GET /posts response using include array
-- Assistant: added a new card to highlight the advantages of VaultPress Backup
-- Increase form fields padding based on user-defined border-radius
-- Jetpack: log when transforming from video block v5 to v6
-- Jetpack: tidy registering VideoPress video block
-- Remove NewDash nudges in legacy stats
-- Sharing: add Mastodon sharing button.
+- Add an upgrade nudge for Odyssey Stats [#28828]
+- Add block support for font family in Related Posts block server block renderer [#29135]
+- Add block support for font family in Related Posts block [#29097]
+- Add options panel for Social Image Generator to Jetpack Social sidebar. [#28737]
+- Add Social Image Generator feature flag to Jetpack Social [#29001]
+- Allow Form fields style synchronization [#28988]
+- Assistant: added a new card to highlight the advantages of VaultPress Backup [#28741]
+- Increase form fields padding based on user-defined border-radius [#28820]
+- Jetpack: log when transforming from video block v5 to v6 [#29076]
+- Jetpack: tidy registering VideoPress video block [#29084]
+- Remove NewDash nudges in legacy stats [#29115]
+- Sharing: add Mastodon sharing button. [#28694]
 
 ### Improved compatibility
-- Added support for the `preload` or `preloadcontent` attribute to the VideoPress shortcode.
-- Prevent launchpad modal from rendering on top of the first post published modal
+- Added support for the `preload` or `preloadcontent` attribute to the VideoPress shortcode. [#28865]
+- Prevent launchpad modal from rendering on top of the first post published modal [#28989]
 
 ### Bug fixes
-- Custom CSS: ensure the link to enable Custom CSS works in all languages.
-- Fix a bug in list user endpoint when include_viewers is true
-- Presentation shortcode: always add presentation container
-- Recommendations: avoid applying the coupon code from the Assistant on product with trial prices.
-- Remove body font normalization for on contact-form module and package
-- Revise Jetpack connection agreement text to comply with our User Agreement
-- Sharing: fix display issues when choosing the Icon-only option.
-- Test fix: adapted the Sync test to WordPress Core changes in post deletion mechanics.
-- WPCOM Only: Make sure the email field in the subscribe block is required
+- Custom CSS: ensure the link to enable Custom CSS works in all languages. [#29202]
+- Fix a bug in list user endpoint when include_viewers is true [#29068]
+- Presentation shortcode: always add presentation container [#29073]
+- Recommendations: avoid applying the coupon code from the Assistant on product with trial prices. [#29139]
+- Remove body font normalization for on contact-form module and package [#29166]
+- Revise Jetpack connection agreement text to comply with our User Agreement [#28403]
+- Sharing: fix display issues when choosing the Icon-only option. [#29090]
+- Test fix: adapted the Sync test to WordPress Core changes in post deletion mechanics. [#29154]
+- WPCOM Only: Make sure the email field in the subscribe block is required [#28995]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Adds `is_wpcom_staging_site`, `wpcom_production_blog_id`, and `wpcom_staging_blog_ids` attributes to the site object
-- Add wpcom/v2/form-responses endpoint, mapped from .com
-- Admin Page: update link in Jetpack App card to include external link icon.
-- Admin Page: use external icons for external links in support card.
-- Blocks: update scaffolding.
-- Consolidates selector logic in the launchpad save modal
-- Stats: moved New Stats toggling logic to stats-admin
-- This change doesn't affect the plugin.
-- Updated package dependencies.
-- Widget Visibility: switch to shared Analytics implementation.
+- Adds `is_wpcom_staging_site`, `wpcom_production_blog_id`, and `wpcom_staging_blog_ids` attributes to the site object [#29192]
+- Add wpcom/v2/form-responses endpoint, mapped from .com [#29043]
+- Admin Page: update link in Jetpack App card to include external link icon. [#29048]
+- Admin Page: use external icons for external links in support card. [#29050]
+- Blocks: update scaffolding. [#29201]
+- Consolidates selector logic in the launchpad save modal [#29134]
+- Stats: moved New Stats toggling logic to stats-admin [#29064]
+- This change doesn't affect the plugin. [#28826]
+- Updated package dependencies. [#29117]
+- Widget Visibility: switch to shared Analytics implementation. [#29181]
 
 ## 11.9-a.5 - 2023-02-20
 ### Enhancements
