@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added space bar as an option to open "More" button overlay
 - Adds wpcom/v3/blogging-prompts endpoint to support the upcoming writing prompts block
 - Allowing getting posts by ids in GET /posts response using include array
 - Fix submenus from being out of bounds
