@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress: Add chapters generation from description to dashboard
 - VideoPress: add support to "private" as site default privacy on public Atomic sites.
 - VideoPress: Add video delete action to details page
 - VideoPress: Disable the video's privacy toggle on the VideoPress dashboard for private Atomic sites.
