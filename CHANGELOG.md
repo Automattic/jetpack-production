@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Allowing getting posts by ids in GET /posts response using include array
+- Fix submenus from being out of bounds
 - Jetpack: register VideoPress video block based on the filtered extensions
 
 ## 11.9-beta - 2023-02-28
