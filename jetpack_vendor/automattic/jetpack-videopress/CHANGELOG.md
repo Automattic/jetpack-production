@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add video delete action to details page
 - VideoPress: Disable the video's privacy toggle on the VideoPress dashboard for private Atomic sites.
 
+### Changed
+- Updated package dependencies.
+
 ## [0.11.0] - 2023-02-28
 ### Added
 - Added support for the `preload` or `preloadcontent` attribute to the VideoPress shortcode. [#28865]

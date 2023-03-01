@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Removes unused conversation and dialogue blocks that never left beta
+- Updated package dependencies.
 
 ## 11.9-beta - 2023-02-28
 ### Enhancements
