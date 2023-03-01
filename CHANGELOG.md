@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: register VideoPress video block based on the filtered extensions
 
 ### Bug fixes
+- Fix broken Tumblr button inside "More" button overlay
 - Removing awkward spacer after every second button within the sharing more button overlay
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
