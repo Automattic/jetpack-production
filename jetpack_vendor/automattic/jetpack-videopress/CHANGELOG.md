@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add support to "private" as site default privacy on public Atomic sites.
 - VideoPress: Add video delete action to details page
+- VideoPress: Disable the video's privacy toggle on the VideoPress dashboard for private Atomic sites.
 
 ## [0.11.0] - 2023-02-28
 ### Added
