@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Fix submenus from being out of bounds
 - Jetpack: register VideoPress video block based on the filtered extensions
 
+### Bug fixes
+- Removing awkward spacer after every second button within the sharing more button overlay
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Removes unused conversation and dialogue blocks that never left beta
 
