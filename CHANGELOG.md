@@ -6,6 +6,13 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Added space bar as an option to open "More" button overlay
+
+### Bug fixes
+- Fix broken Tumblr button inside "More" button overlay
+- Removing awkward spacer after every second button within the sharing more button overlay
+
 ## 11.9-beta - 2023-02-28
 ### Enhancements
 - Assistant: add new card to highlight VaultPress Backup. [#28741]
