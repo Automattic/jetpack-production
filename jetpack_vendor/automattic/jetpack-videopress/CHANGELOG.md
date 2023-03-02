@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: rewrite player by using TypeScript
 
 ## [0.11.0] - 2023-02-28
 ### Added
