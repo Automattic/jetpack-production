@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added space bar as an option to open "More" button overlay
+- Add form responses app and state into package (out of plugin)
 - Adds wpcom/v3/blogging-prompts endpoint to support the upcoming writing prompts block
 - Allowing getting posts by ids in GET /posts response using include array
 - Blocks: add a new Cookie Consent block. Display a GDPR-compliant cookie consent widget on your site for your visitors.
