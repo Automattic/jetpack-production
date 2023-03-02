@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Removing awkward spacer after every second button within the sharing more button overlay
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adds basic ui to beta blogging-prompt block
 - Removes unused conversation and dialogue blocks that never left beta
 - Updated package dependencies.
 
