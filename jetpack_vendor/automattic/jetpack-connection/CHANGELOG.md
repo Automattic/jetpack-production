@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Improve JS code in the connection owner removal notice.
 - Updated package dependencies.
 
 ## [1.51.0] - 2023-02-20
