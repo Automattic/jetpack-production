@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Forms Responses endpoint: fix permission check.
+
 ## [0.6.0] - 2023-02-28
 ### Added
 - Added a page navigation component for the new feedback dashboard [#28826]
