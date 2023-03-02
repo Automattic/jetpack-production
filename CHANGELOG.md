@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added space bar as an option to open "More" button overlay
 - Adds wpcom/v3/blogging-prompts endpoint to support the upcoming writing prompts block
 - Allowing getting posts by ids in GET /posts response using include array
+- Blocks: add a new Cookie Consent block. Display a GDPR-compliant cookie consent widget on your site for your visitors.
 - Fix submenus from being out of bounds
 - Jetpack: register VideoPress video block based on the filtered extensions
 - Updates the layout of the loading and "no JS" sections on the legacy Stats page.
