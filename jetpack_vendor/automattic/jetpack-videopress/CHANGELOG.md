@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - VideoPress: rewrite player by using TypeScript
 
+### Fixed
+- VideoPress: fix requesting video data on Simple sites
+
 ## [0.11.0] - 2023-02-28
 ### Added
 - Added support for the `preload` or `preloadcontent` attribute to the VideoPress shortcode. [#28865]
