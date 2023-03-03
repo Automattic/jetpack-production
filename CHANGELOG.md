@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds basic ui to beta blogging-prompt block
+- Jetpack Forms: Added week/monthly props to sent message tracking
 - Removes unused conversation and dialogue blocks that never left beta
 - Updated package dependencies.
 
