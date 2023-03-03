@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add form responses app and state into package (out of plugin)
 
 ### Changed
+- Forms: Move field width settings and remove placeholder field from MC/SC fields
 - Updated package dependencies.
 
 ### Fixed
