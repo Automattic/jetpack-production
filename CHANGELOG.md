@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - This change makes Jetpack Social Advanced products to be shown under my plans.
 - Updates the layout of the loading and "no JS" sections on the legacy Stats page.
 
+### Improved compatibility
+- Update sharing button height from 34px to 32px
+
 ### Bug fixes
 - Added defaults for Jetpack Forms CSS variables.
 - Fix broken Tumblr button inside "More" button overlay
