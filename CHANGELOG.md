@@ -9,12 +9,14 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added space bar as an option to open "More" button overlay
 - Adds wpcom/v3/blogging-prompts endpoint to support the upcoming writing prompts block
+- Forms: Move field width settings and remove placeholder field from MC/SC fields
 - Forms: Update form-styles script to run in the context of the Form block
 
 ### Improved compatibility
 - Update sharing button height from 34px to 32px
 
 ### Bug fixes
+- Added defaults for Jetpack Forms CSS variables.
 - Fix broken Tumblr button inside "More" button overlay
 - Fix JS Error and adjust marginRight of Pinterest official button instead of width
 - Removing awkward spacer after every second button within the sharing more button overlay
