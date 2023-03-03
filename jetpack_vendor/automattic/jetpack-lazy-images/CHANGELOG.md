@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fix lazy-load images in Safari
+
 ## [2.1.32] - 2023-02-20
 ### Changed
 - Minor internal updates.
