@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix submenus from being out of bounds
 - Jetpack: register VideoPress video block based on the filtered extensions
 - SSO: Add message to logout notice when SSO is enabled that gives a heads up to also log out of wpcom if they are on a shared computer.
+- This change makes Jetpack Social Advanced products to be shown under my plans.
 - Updates the layout of the loading and "no JS" sections on the legacy Stats page.
 
 ### Bug fixes
