@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds basic ui to beta blogging-prompt block
 - Jetpack Forms: Added week/monthly props to sent message tracking
 - Removes unused conversation and dialogue blocks that never left beta
+- Temp disable Gutenberg subscribe block test until #29113 is fixed
 - Updated package dependencies.
 
 ## 11.9-beta - 2023-02-28
