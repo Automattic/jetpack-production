@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds wpcom/v3/blogging-prompts endpoint to support the upcoming writing prompts block
 - Forms: Move field width settings and remove placeholder field from MC/SC fields
 - Forms: Update form-styles script to run in the context of the Form block
+- This change makes Jetpack Social Advanced products to be shown under my plans.
 
 ### Improved compatibility
 - Update sharing button height from 34px to 32px
