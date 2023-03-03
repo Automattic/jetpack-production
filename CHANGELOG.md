@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added space bar as an option to open "More" button overlay
 - Adds wpcom/v3/blogging-prompts endpoint to support the upcoming writing prompts block
+- Forms: Update form-styles script to run in the context of the Form block
 
 ### Bug fixes
 - Fix broken Tumblr button inside "More" button overlay
