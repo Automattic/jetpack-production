@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Switch to use tracking check from connection package
 - Updated package dependencies.
 
 ## [1.12.5] - 2023-02-28
