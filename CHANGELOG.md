@@ -11,8 +11,12 @@ This is an alpha version! The changes listed here are not final.
 - Adds wpcom/v3/blogging-prompts endpoint to support the upcoming writing prompts block
 - Forms: Update form-styles script to run in the context of the Form block
 
+### Improved compatibility
+- Update sharing button height from 34px to 32px
+
 ### Bug fixes
 - Fix broken Tumblr button inside "More" button overlay
+- Fix JS Error and adjust marginRight of Pinterest official button instead of width
 - Removing awkward spacer after every second button within the sharing more button overlay
 
 ## 11.9-beta - 2023-02-28
