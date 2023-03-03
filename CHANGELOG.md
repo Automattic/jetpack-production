@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Allowing getting posts by ids in GET /posts response using include array
 - Blocks: add a new Cookie Consent block. Display a GDPR-compliant cookie consent widget on your site for your visitors.
 - Fix submenus from being out of bounds
+- Forms: Update form-styles script to run in the context of the Form block
 - Jetpack: register VideoPress video block based on the filtered extensions
 - SSO: Add message to logout notice when SSO is enabled that gives a heads up to also log out of wpcom if they are on a shared computer.
 - This change makes Jetpack Social Advanced products to be shown under my plans.
