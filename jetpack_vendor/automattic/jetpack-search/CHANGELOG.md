@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Fixes bad check against isMultiSite resulting in extended search format not showing expected additional post details.
+
 ## [0.33.1] - 2023-02-28
 ### Added
 - Search: Add JITM container [#29106]
