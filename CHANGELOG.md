@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: add a new Cookie Consent block. Display a GDPR-compliant cookie consent widget on your site for your visitors.
 - Fix submenus from being out of bounds
 - Jetpack: register VideoPress video block based on the filtered extensions
+- SSO: Add message to logout notice when SSO is enabled that gives a heads up to also log out of wpcom if they are on a shared computer.
 - Updates the layout of the loading and "no JS" sections on the legacy Stats page.
 
 ### Bug fixes
