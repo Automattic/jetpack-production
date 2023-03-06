@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Added defaults for Jetpack Forms CSS variables.
+- Fix table interactions for feedback dashboard
 - Forms Responses endpoint: fix permission check.
 
 ## [0.6.0] - 2023-02-28
