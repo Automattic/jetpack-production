@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: remove unused variable
 - Temp disable Gutenberg subscribe block test until #29113 is fixed
 - Updated package dependencies.
+- Writing prompts: marks prompt as answered when using a writing prompt block
 
 ## 11.9-beta - 2023-02-28
 ### Enhancements
