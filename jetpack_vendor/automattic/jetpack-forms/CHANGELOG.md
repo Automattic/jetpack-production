@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added week/monthly props to sent message tracking
 - Add form responses app and state into package (out of plugin)
+- Fix search by invalidating resolution on the selector
 
 ### Changed
 - Forms: Move field width settings and remove placeholder field from MC/SC fields
