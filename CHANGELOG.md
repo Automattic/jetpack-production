@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds basic ui to beta blogging-prompt block
 - Jetpack Forms: Added week/monthly props to sent message tracking
+- media summary: write to memo when no images found
 - Paid newsletters access panel would disappear on posts that have been previously published. This fixes the issue.
 - Removes unused conversation and dialogue blocks that never left beta
 - Sharing: remove unused variable
