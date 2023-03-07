@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.1-alpha] - unreleased
+## [0.12.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Disable the video's privacy toggle on the VideoPress dashboard for private Atomic sites.
 
 ### Changed
+- Add usePreview hook
 - Updated package dependencies.
 - VideoPress: rewrite player by using TypeScript
 
@@ -763,7 +764,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.11.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.11.0...v0.11.1-alpha
+[0.12.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.11.0...v0.12.0-alpha
 [0.11.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.12...v0.11.0
 [0.10.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.11...v0.10.12
 [0.10.11]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.10...v0.10.11
