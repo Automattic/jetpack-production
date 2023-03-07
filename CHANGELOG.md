@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Added defaults for Jetpack Forms CSS variables.
 - Fix broken Tumblr button inside "More" button overlay
 - Fix JS Error and adjust marginRight of Pinterest official button instead of width
+- Improve Multiple Choice Field styles
 - Pre-escape the ampersand in the default content of the cookie consent block
 - Removing awkward spacer after every second button within the sharing more button overlay
 
