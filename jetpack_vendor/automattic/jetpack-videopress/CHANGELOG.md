@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: first approach of TimestampControl component
 
+### Changed
+- VideoPress: Separate loading states in video details page and disable redirect on save
+
 ### Fixed
 - VideoPress: Fix video URL available to copying in video details page
 
