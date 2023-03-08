@@ -2,7 +2,7 @@
 /**
  * Base custom exception for the WAF package.
  *
- * @since 0.10.1-alpha
+ * @since 0.10.1
  *
  * @package automattic/jetpack-waf
  */
