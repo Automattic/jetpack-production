@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Add additonal valid param to membership status endpoint for paid newsletters
+
 ## 12.0-a.1 - 2023-03-08
 ### Enhancements
 - Add form responses app and state into package (out of plugin) [#29007]
