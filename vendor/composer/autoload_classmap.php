@@ -83,6 +83,7 @@ return array(
     'Automattic\\Jetpack\\IdentityCrisis\\REST_Endpoints' => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-rest-endpoints.php',
     'Automattic\\Jetpack\\IdentityCrisis\\UI' => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-ui.php',
     'Automattic\\Jetpack\\Identity_Crisis' => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-identity-crisis.php',
+    'Automattic\\Jetpack\\Import\\Endpoints\\Attachment' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-attachment.php',
     'Automattic\\Jetpack\\Import\\Endpoints\\Category' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-category.php',
     'Automattic\\Jetpack\\Import\\Endpoints\\Comment' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-comment.php',
     'Automattic\\Jetpack\\Import\\Endpoints\\Import' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/trait-import.php',
