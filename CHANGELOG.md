@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: pick and convert core/video VideoPress instances also from inner blocks
 
 ### Bug fixes
+- Move search into state, fix double fetch on search and paging
 - Pre-escape the ampersand in the default content of the cookie consent block
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

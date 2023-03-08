@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Added defaults for Jetpack Forms CSS variables.
 - Fix table interactions for feedback dashboard
 - Forms Responses endpoint: fix permission check.
+- Move search into state, fix double fetch on search and paging
 
 ## [0.6.0] - 2023-02-28
 ### Added
