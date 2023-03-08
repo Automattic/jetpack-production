@@ -5,26 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.12.0-alpha] - unreleased
+## [0.12.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- VideoPress: add caption control to vidfeo block toolbar
-- VideoPress: Add chapters generation from description to dashboard
-- VideoPress: add story for the Banner component
-- VideoPress: add support to "private" as site default privacy on public Atomic sites.
-- VideoPress: Add video delete action to details page
-- VideoPress: Disable the video's privacy toggle on the VideoPress dashboard for private Atomic sites.
 - VideoPress: first approach of TimestampControl component
 
+## [0.12.0] - 2023-03-08
+### Added
+- VideoPress: add caption control to video block toolbar [#29233]
+- VideoPress: add chapters generation from description to dashboard [#29155]
+- VideoPress: add story for the Banner component [#29296]
+- VideoPress: add support to "private" as site default privacy on public Atomic sites. [#29104]
+- VideoPress: Add video delete action to details page [#29161]
+- VideoPress: Disable the video's privacy toggle on the VideoPress dashboard for private Atomic sites. [#29169]
+
 ### Changed
-- Add usePreview hook
-- Updated package dependencies.
-- VideoPress: rewrite player by using TypeScript
+- Add usePreview hook [#29164]
+- Updated package dependencies. [#29216]
+- VideoPress: rewrite player by using TypeScript [#29226]
 
 ### Fixed
-- VideoPress: fix requesting video data on Simple sites
+- VideoPress: fix requesting video data on Simple sites [#29261]
 
 ## [0.11.0] - 2023-02-28
 ### Added
@@ -765,7 +768,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.12.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.11.0...v0.12.0-alpha
+[0.12.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.12.0...v0.12.1-alpha
+[0.12.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.11.0...v0.12.0
 [0.11.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.12...v0.11.0
 [0.10.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.11...v0.10.12
 [0.10.11]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.10...v0.10.11

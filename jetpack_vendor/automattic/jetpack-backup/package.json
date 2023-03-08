@@ -41,7 +41,7 @@
 		"react-dom": "18.2.0"
 	},
 	"devDependencies": {
-		"@automattic/jetpack-base-styles": "^0.3.20-alpha",
+		"@automattic/jetpack-base-styles": "^0.3.20",
 		"@automattic/jetpack-webpack-config": "workspace:*",
 		"@babel/core": "7.20.12",
 		"@babel/preset-env": "7.20.2",
