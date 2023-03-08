@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added a 'view' toggle for switching between the new and old feedback views.
 
+### Changed
+- Move action bar components out of inbox
+
 ## [0.7.0] - 2023-03-08
 ### Added
 - Add weekly/monthly props to sent message tracking [#28999]
