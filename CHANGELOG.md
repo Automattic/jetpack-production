@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add additonal valid param to membership status endpoint for paid newsletters
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adding better error handling to Writing Prompt block
 - Move action bar components out of inbox
 - Readme fixup.
 
