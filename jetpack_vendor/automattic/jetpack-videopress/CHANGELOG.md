@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: first approach of TimestampControl component
 
+### Fixed
+- VideoPress: Fix video URL available to copying in video details page
+
 ## [0.12.0] - 2023-03-08
 ### Added
 - VideoPress: add caption control to video block toolbar [#29233]
