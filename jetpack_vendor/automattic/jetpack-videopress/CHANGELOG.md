@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add support to "private" as site default privacy on public Atomic sites.
 - VideoPress: Add video delete action to details page
 - VideoPress: Disable the video's privacy toggle on the VideoPress dashboard for private Atomic sites.
+- VideoPress: first approach of TimestampControl component
 
 ### Changed
 - Add usePreview hook
