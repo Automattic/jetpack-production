@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress block: Add settings toggle to native block.
 
 ### Fixed
+- VideoPress: Fix filename with token
 - VideoPress: Fix video URL available to copying in video details page
 
 ## [0.12.0] - 2023-03-08
