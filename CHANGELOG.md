@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Blogging Prompts: avoid PHP notices with non-existing REST query paarameters.
+- Make slideshow block's play and pause icons visible.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added tracking of Jetpack Forms exports to CSV files.
