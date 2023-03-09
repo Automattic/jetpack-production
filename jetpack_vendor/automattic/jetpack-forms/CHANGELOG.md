@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Move action bar components out of inbox
 - Move BulkActionsMenu component inside Inbox, too tailored to be reused
+- Multiple Choice and Single Choice fields redesign
 
 ### Fixed
 - Avoid Fatal errors by calling method from the right class in the paackage.

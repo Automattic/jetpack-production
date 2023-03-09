@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add additonal valid param to membership status endpoint for paid newsletters
 - Add some UI to to prevent user to be confused when changing post visibility regarding Newsletter settings.
   Add an intro for users.
+- Forms: Multiple Choice and Single Choice fields redesign
 
 ### Improved compatibility
 - General: indicate full compatibility with the latest version of WordPress, 6.2.
