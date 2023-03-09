@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Added tracking of Jetpack Forms exports to CSV files.
 - Adding better error handling to Writing Prompt block
 - Better handling for loading state and empty results
+- Fix writing prompt post meta not saving when post immediately published
 - Move action bar components out of inbox
 - Move BulkActionsMenu component inside Inbox, too tailored to be reused
 - Readme fixup.
