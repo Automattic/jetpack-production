@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: first approach of TimestampControl component
 
 ### Changed
+- VideoPress: add Range control to the Timestamp control component
 - VideoPress: Separate loading states in video details page and disable redirect on save
 
 ### Fixed
