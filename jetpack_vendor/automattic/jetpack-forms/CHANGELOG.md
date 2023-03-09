@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added a 'view' toggle for switching between the new and old feedback views.
+- Added tracking of Jetpack Forms exports to CSV files.
 
 ### Changed
 - Move action bar components out of inbox

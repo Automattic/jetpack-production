@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - General: indicate full compatibility with the latest version of WordPress, 6.2.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added tracking of Jetpack Forms exports to CSV files.
 - Adding better error handling to Writing Prompt block
 - Move action bar components out of inbox
 - Readme fixup.
