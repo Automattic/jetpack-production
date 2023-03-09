@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - General: indicate full compatibility with the latest version of WordPress, 6.2.
 
+### Bug fixes
+- Blogging Prompts: avoid PHP notices with non-existing REST query paarameters.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added tracking of Jetpack Forms exports to CSV files.
 - Adding better error handling to Writing Prompt block
