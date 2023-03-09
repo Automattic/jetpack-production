@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add additonal valid param to membership status endpoint for paid newsletters
 
+### Improved compatibility
+- General: indicate full compatibility with the latest version of WordPress, 6.2.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adding better error handling to Writing Prompt block
 - Move action bar components out of inbox
