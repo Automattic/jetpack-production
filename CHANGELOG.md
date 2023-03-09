@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add additonal valid param to membership status endpoint for paid newsletters
+- Add image to Odyssey upgrade notice on larger layouts
 - Add some UI to to prevent user to be confused when changing post visibility regarding Newsletter settings.
   Add an intro for users.
 - Forms: Multiple Choice and Single Choice fields redesign
