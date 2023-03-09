@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Move action bar components out of inbox
+- Move BulkActionsMenu component inside Inbox, too tailored to be reused
 
 ## [0.7.0] - 2023-03-08
 ### Added
