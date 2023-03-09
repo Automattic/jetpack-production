@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add Range control to the Timestamp control component
 - VideoPress: Separate loading states in video details page and disable redirect on save
 - VideoPress: set video URL based on the video privacy
+- VideoPress block: Add settings toggle to native block.
 
 ### Fixed
 - VideoPress: Fix video URL available to copying in video details page
