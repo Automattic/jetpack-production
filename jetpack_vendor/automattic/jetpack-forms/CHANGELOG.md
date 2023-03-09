@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Added tracking of Jetpack Forms exports to CSV files.
 
 ### Changed
+- Better handling for loading state and empty results
 - Move action bar components out of inbox
 - Move BulkActionsMenu component inside Inbox, too tailored to be reused
 - Multiple Choice and Single Choice fields redesign
