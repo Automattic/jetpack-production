@@ -6,54 +6,31 @@
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- Add additonal valid param to membership status endpoint for paid newsletters
-- Add some UI to to prevent user to be confused when changing post visibility regarding Newsletter settings.
-  Add an intro for users.
-- Forms: Multiple Choice and Single Choice fields redesign
-- USe chat GPT API
-
-### Improved compatibility
-- General: indicate full compatibility with the latest version of WordPress, 6.2.
-
-### Bug fixes
-- Blogging Prompts: avoid PHP notices with non-existing REST query paarameters.
-- Don't show "Include social followers in count" when showSubscribersTotal is not toggled or isPublicizeEnabled is false
-- Make slideshow block's play and pause icons visible.
-
-### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added tracking of Jetpack Forms exports to CSV files.
-- Adding better error handling to Writing Prompt block
-- Better handling for loading state and empty results
-- Fix writing prompt post meta not saving when post immediately published
-- Move action bar components out of inbox
-- Move BulkActionsMenu component inside Inbox, too tailored to be reused
-- Readme fixup.
-- Writing Prompt block: prevent multiple requests when fetching prompt or tags
-
 ## 12.0-a.1 - 2023-03-08
 ### Enhancements
-- Admin: fix submenu positioning in admin menu. [#28355]
-- Blocks (beta): add a new beta Cookie Consent block to display a GDPR-compliant cookie consent widget on your site for your visitors. [#29197]
-- SSO: add message to logout notice when SSO is enabled that gives a heads up to also log out of WordPress.com if they are on a shared computer. [#29235]
-- Stats: updates the layout of the loading and some sections on the Stats page. [#29221]
+- Add form responses app and state into package (out of plugin) [#29007]
+- Allowing getting posts by ids in GET /posts response using include array [#29149]
+- Blocks: add a new Cookie Consent block. Display a GDPR-compliant cookie consent widget on your site for your visitors. [#29197]
+- Fix submenus from being out of bounds [#28355]
+- Jetpack: register VideoPress video block based on the filtered extensions [#29207]
+- Shortcodes: removed jQuery dependency from Crowdsignal shortcodes [#29307]
+- SSO: Add message to logout notice when SSO is enabled that gives a heads up to also log out of wpcom if they are on a shared computer. [#29235]
+- Updates the layout of the loading and "no JS" sections on the legacy Stats page. [#29221]
+- VideoPress: pick and convert core/video VideoPress instances also from inner blocks [#29339]
+
+### Bug fixes
+- Move search into state, fix double fetch on search and paging [#29336]
+- Pre-escape the ampersand in the default content of the cookie consent block [#29251]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Allow getting posts by ids in GET /posts response using include array [#29149]
-- Blocks: register VideoPress video block based on the filtered extensions [#29207]
-- Forms: move search into state, fix double fetch on search and paging [#29336]
-- Forms: add form responses app and state into package [#29007]
-- Pre-escape the ampersand in the default content of the cookie consent block [#29251]
 - Adds basic ui to beta blogging-prompt block [#29189]
 - Jetpack Forms: Added week/monthly props to sent message tracking [#28999]
 - media summary: write to memo when no images found [#29326]
 - Paid newsletters access panel would disappear on posts that have been previously published. This fixes the issue. [#29247]
 - Removes unused conversation and dialogue blocks that never left beta [#29210]
 - Sharing: remove unused variable [#29275]
-- Shortcodes: removed jQuery dependency from Crowdsignal shortcodes [#29307]
 - Temp disable Gutenberg subscribe block test until #29113 is fixed [#29280]
 - Updated package dependencies. [#29216]
-- VideoPress: pick and convert core/video VideoPress instances also from inner blocks [#29339]
 - Writing prompts: marks prompt as answered when using a writing prompt block [#29214]
 
 ## [11.9] - 2023-03-07

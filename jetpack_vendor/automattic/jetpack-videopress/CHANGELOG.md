@@ -10,18 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- VideoPress: add story for PosterPanel component
 - VideoPress: first approach of TimestampControl component
-
-### Changed
-- VideoPress: add Range control to the Timestamp control component
-- VideoPress: Separate loading states in video details page and disable redirect on save
-- VideoPress: set video URL based on the video privacy
-- VideoPress block: Add settings toggle to native block.
-
-### Fixed
-- VideoPress: Fix filename with token
-- VideoPress: Fix video URL available to copying in video details page
 
 ## [0.12.0] - 2023-03-08
 ### Added

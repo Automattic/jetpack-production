@@ -21,7 +21,7 @@ class Jetpack_AI_Helper {
 	 *
 	 * @var int
 	 */
-	public static $text_completion_cooldown_seconds = 15;
+	public static $text_completion_cooldown_seconds = 60;
 
 	/**
 	 * Cache images for a prompt for a month.
@@ -154,26 +154,14 @@ class Jetpack_AI_Helper {
 				\require_lib( 'openai' );
 			}
 
-			// Set the content for chatGPT endpoint
-			$data = array(
-				array(
-					'role'    => 'user',
-					'content' => $content,
-				),
-			);
-
-			$result = ( new OpenAI( 'openai', array( 'post_id' => $post_id ) ) )->request_chat_completion( $data );
-
+			$result = ( new OpenAI( 'openai', array( 'post_id' => $post_id ) ) )->request_gpt_completion( $content );
 			if ( is_wp_error( $result ) ) {
 				return $result;
 			}
-
-			$response = $result->choices[0]->message->content;
-
 			// In case of Jetpack we are setting a transient on the WPCOM and not the remote site. I think the 'get_current_user_id' may default for the connection owner at this point but we'll deal with this later.
-			set_transient( self::transient_name_for_completion(), $response, self::$text_completion_cooldown_seconds );
+			set_transient( self::transient_name_for_completion(), $result, self::$text_completion_cooldown_seconds );
 			self::mark_post_as_ai_assisted( $post_id );
-			return $response;
+			return $result;
 		}
 
 		$response = Client::wpcom_json_api_request_as_user(

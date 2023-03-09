@@ -99,14 +99,14 @@
 	font-weight: normal;
 	display: inline-flex;
 	align-items: center;
-	line-height: 1;
+	line-height: 1.5;
 }
 
 .contact-form .grunion-checkbox-multiple-options,
 .contact-form .grunion-radio-options {
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
+	gap: 0.25em
 }
 
 .contact-form label span {

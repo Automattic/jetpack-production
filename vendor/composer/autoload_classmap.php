@@ -75,7 +75,6 @@ return array(
     'Automattic\\Jetpack\\Forms\\ContactForm\\Form_View' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-form-view.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Util' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-util.php',
     'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard.php',
-    'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard_View_Switch' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard-view-switch.php',
     'Automattic\\Jetpack\\Forms\\Jetpack_Forms' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-jetpack-forms.php',
     'Automattic\\Jetpack\\Forms\\Service\\Google_Drive' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-google-drive.php',
     'Automattic\\Jetpack\\Forms\\WPCOM_REST_API_V2_Endpoint_Forms' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-wpcom-rest-api-v2-endpoint-forms.php',

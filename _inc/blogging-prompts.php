@@ -50,29 +50,13 @@ add_action( 'wp_insert_post', 'jetpack_setup_blogging_prompt_response' );
 /**
  * When a published posts answers a blogging prompt, store the prompt id in the post meta.
  *
- * @param int          $post_id     Post ID.
- * @param WP_Post      $post        Post object.
- * @param bool         $update      Whether this is an existing post being updated.
- * @param null|WP_Post $post_before Null for new posts, the WP_Post object prior
- *                                  to the update for updated posts.
+ * @param string  $new_status New post status.
+ * @param string  $old_status Old post status.
+ * @param WP_Post $post       Post object.
  */
-function jetpack_mark_if_post_answers_blogging_prompt( $post_id, $post, $update, $post_before ) {
-	if ( ! $post instanceof WP_Post ) {
-		return;
-	}
-
-	$post_type    = isset( $post->post_type ) ? $post->post_type : null;
-	$post_content = isset( $post->post_content ) ? $post->post_content : null;
-
-	if ( 'post' !== $post_type || ! $post_content ) {
-		return;
-	}
-
-	$new_status = isset( $post->post_status ) ? $post->post_status : null;
-	$old_status = $post_before && isset( $post_before->post_status ) ? $post_before->post_status : null;
-
+function jetpack_mark_if_post_answers_blogging_prompt( $new_status, $old_status, $post ) {
 	// Make sure we are publishing a post, and it's not already published.
-	if ( 'publish' !== $new_status || 'publish' === $old_status ) {
+	if ( 'post' !== $post->post_type || 'publish' !== $new_status || 'publish' === $old_status ) {
 		return;
 	}
 
@@ -90,8 +74,7 @@ function jetpack_mark_if_post_answers_blogging_prompt( $post_id, $post, $update,
 		}
 	}
 }
-
-add_action( 'wp_after_insert_post', 'jetpack_mark_if_post_answers_blogging_prompt', 10, 4 );
+add_action( 'transition_post_status', 'jetpack_mark_if_post_answers_blogging_prompt', 10, 3 );
 
 /**
  * Utility functions.
