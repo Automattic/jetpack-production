@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Move action bar components out of inbox
 - Move BulkActionsMenu component inside Inbox, too tailored to be reused
 
+### Fixed
+- Avoid Fatal errors by calling method from the right class in the paackage.
+
 ## [0.7.0] - 2023-03-08
 ### Added
 - Add weekly/monthly props to sent message tracking [#28999]
