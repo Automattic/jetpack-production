@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Add some UI to to prevent user to be confused when changing post visibility regarding Newsletter settings.
   Add an intro for users.
 - Forms: Multiple Choice and Single Choice fields redesign
+- Post-purchase recommendations for customizing search now points to the search customizer instead of Jetpack Cloud
 - USe chat GPT API
 
 ### Improved compatibility
