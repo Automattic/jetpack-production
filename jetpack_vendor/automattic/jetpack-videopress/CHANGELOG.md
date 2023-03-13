@@ -5,27 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.12.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.12.1] - 2023-03-13
 ### Added
-- VideoPress: Add download button to video details page
-- VideoPress: add fineAdjusment to TimestampControl component
-- VideoPress: add story for PosterPanel component
-- VideoPress: first approach of TimestampControl component
+- VideoPress: Add download button to video details page [#29403]
+- VideoPress: add fineAdjusment to TimestampControl component [#29439]
+- VideoPress: add story for PosterPanel component [#29398]
+- VideoPress: first approach of TimestampControl component [#29358]
 
 ### Changed
-- VideoPress: add Range control to the Timestamp control component
-- VideoPress: Move is_private and private_enabled_for_site fields to the jetpack_videopress property on the media endpoint response.
-- VideoPress: Separate loading states in video details page and disable redirect on save
-- VideoPress: set video URL based on the video privacy
-- VideoPress: Update isPrivate video property on state after privacy changes.
-- VideoPress block: Add settings toggle to native block.
+- VideoPress: add Range control to the Timestamp control component [#29368]
+- VideoPress: Move is_private and private_enabled_for_site fields to the jetpack_videopress property on the media endpoint response. [#29404]
+- VideoPress: Separate loading states in video details page and disable redirect on save [#29369]
+- VideoPress: set video URL based on the video privacy [#29389]
+- VideoPress: Update isPrivate video property on state after privacy changes. [#29421]
+- VideoPress block: Add settings toggle to native block. [#29248]
 
 ### Fixed
-- VideoPress: Fix filename with token
-- VideoPress: Fix video URL available to copying in video details page
+- VideoPress: Fix filename with token [#29395]
+- VideoPress: Fix video URL available to copying in video details page [#29370]
 
 ## [0.12.0] - 2023-03-08
 ### Added
@@ -783,7 +780,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.12.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.12.0...v0.12.1-alpha
+[0.12.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.12.0...v0.12.1
 [0.12.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.11.0...v0.12.0
 [0.11.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.12...v0.11.0
 [0.10.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.10.11...v0.10.12
