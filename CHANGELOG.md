@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Forms: Fix fatal error on sites using old AMP versions
+
 ## 12.0-a.3 - 2023-03-13
 ### Enhancements
 - Add additonal valid param to membership status endpoint for paid newsletters [#29351]
