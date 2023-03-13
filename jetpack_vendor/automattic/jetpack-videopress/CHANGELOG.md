@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: Add download button to video details page
+- VideoPress: add fineAdjusment to TimestampControl component
 - VideoPress: add story for PosterPanel component
 - VideoPress: first approach of TimestampControl component
 
