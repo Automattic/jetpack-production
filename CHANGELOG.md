@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Move action bar components out of inbox
 - Move BulkActionsMenu component inside Inbox, too tailored to be reused
 - Readme fixup.
+- Updated package dependencies.
 - Writing Prompt block: prevent multiple requests when fetching prompt or tags
 
 ## 12.0-a.1 - 2023-03-08
