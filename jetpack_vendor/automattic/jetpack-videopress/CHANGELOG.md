@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Move is_private and private_enabled_for_site fields to the jetpack_videopress property on the media endpoint response.
 - VideoPress: Separate loading states in video details page and disable redirect on save
 - VideoPress: set video URL based on the video privacy
+- VideoPress: Update isPrivate video property on state after privacy changes.
 - VideoPress block: Add settings toggle to native block.
 
 ### Fixed
