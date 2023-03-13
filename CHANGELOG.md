@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Forms: Fix fatal error on sites using old AMP versions
+
 ## 11.9 - 2023-03-07
 ### Enhancements
 - Assistant: add new card to highlight VaultPress Backup. [#28741]
