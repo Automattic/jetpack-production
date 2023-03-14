@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add label and help properties support for the TimestampControl component
 
 ### Changed
+- Consolidate VideoPreview type
 - Replace placeholder with loading placeholder component from js-packages
 
 ### Removed
