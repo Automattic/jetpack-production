@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: ensure the sharing icons can appear when using a CDN to serve static assets on your site.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adds the `is_wpcom_staging_site` attribute in a few more contexts
 - Changelog edits.
 - Jetpack Forms: Add tracking of Google Sheets exports
 
