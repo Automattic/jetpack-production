@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: add disabled and autoHideTimeInput props to TimestampControl component
+- VideoPress: add label and help properties support for the TimestampControl component
 
 ### Changed
 - Replace placeholder with loading placeholder component from js-packages
