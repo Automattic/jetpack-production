@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changelog edits.
+- Jetpack Forms: Add tracking of Google Sheets exports
 
 ## 12.0-a.3 - 2023-03-13
 ### Enhancements
