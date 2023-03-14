@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: Fix fatal error on sites using old AMP versions
+- Rollback rename of columns/fields on export
 - Sharing: ensure the sharing icons can appear when using a CDN to serve static assets on your site.
 
 ## 11.9 - 2023-03-07
