@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Consolidate VideoPreview type
 - Replace placeholder with loading placeholder component from js-packages
+- VideoPress: get rid of script const / component prop
 
 ### Removed
 - VideoPress: Remove storage meter for atomic sites
