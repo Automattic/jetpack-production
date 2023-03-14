@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Improve gating logic for paid-newsletter
+
 ### Bug fixes
 - Forms: Fix fatal error on sites using old AMP versions
 - Sharing: ensure the sharing icons can appear when using a CDN to serve static assets on your site.
