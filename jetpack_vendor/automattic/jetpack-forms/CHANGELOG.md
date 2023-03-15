@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Rollback rename of columns/fields on export
 
+### Fixed
+- Fix Forms previews on Forms package
+
 ## [0.8.0] - 2023-03-13
 ### Added
 - Added a 'view' toggle for switching between the new and old feedback views. [#29246]
