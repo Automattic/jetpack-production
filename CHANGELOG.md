@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Improve gating logic for paid-newsletter
+- Jetpack: Move VideoPress video block to production (videopress/video extension)
 
 ### Bug fixes
 - Forms: Fix fatal error on sites using old AMP versions
