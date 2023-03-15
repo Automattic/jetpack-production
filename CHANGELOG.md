@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds the `is_wpcom_staging_site` attribute in a few more contexts
+- Blocks: update deprecated component prop.
 - Changelog edits.
 - Jetpack Forms: Add tracking of Google Sheets exports
 
