@@ -2,12 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.0-a.4 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 12.0-a.5 - 2023-03-15
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Changelog edits.
+- Changelog edits. [#29445]
+- Updated package dependencies.
 
 ## 12.0-a.3 - 2023-03-13
 ### Enhancements
