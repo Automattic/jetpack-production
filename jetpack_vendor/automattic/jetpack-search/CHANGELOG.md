@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.33.4-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [0.33.3] - 2023-03-13
 ### Fixed
 - Search Dashboard: fix wrong return URL when site already has a valid subscription [#29409]
@@ -691,6 +698,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
+[0.33.4-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.33.3...v0.33.4-alpha
 [0.33.3]: https://github.com/Automattic/jetpack-search/compare/v0.33.2...v0.33.3
 [0.33.2]: https://github.com/Automattic/jetpack-search/compare/v0.33.1...v0.33.2
 [0.33.1]: https://github.com/Automattic/jetpack-search/compare/v0.33.0...v0.33.1

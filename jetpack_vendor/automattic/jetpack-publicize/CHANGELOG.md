@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added SIG image to the post media array if it's enabled
 
+### Changed
+- Updated package dependencies.
+
 ### Fixed
 - Prevent metadata updates during autosave.
 

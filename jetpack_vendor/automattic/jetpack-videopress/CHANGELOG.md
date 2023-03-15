@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Consolidate VideoPreview type
 - General: update deprecated core prop
 - Replace placeholder with loading placeholder component from js-packages
+- Updated package dependencies.
 - VideoPress: get rid of script const / component prop
 
 ### Removed

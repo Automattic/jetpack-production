@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Rollback rename of columns/fields on export
+- Updated package dependencies.
 
 ### Fixed
 - Fix Forms previews on Forms package
