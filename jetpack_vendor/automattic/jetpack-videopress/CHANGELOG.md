@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - General: update deprecated core prop
 - Replace placeholder with loading placeholder component from js-packages
 - Updated package dependencies.
+- VideoPress: delay Done button activation to mitigate the chance of a race condition when saving the post too fast.
 - VideoPress: get rid of script const / component prop
 - VideoPress block: Add details panel to native block's settings.
 
