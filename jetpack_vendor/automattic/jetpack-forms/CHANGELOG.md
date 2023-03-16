@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Avoid PHP notices when using a form with a dropdown field.
 - Fix Forms previews on Forms package
 
 ## [0.8.0] - 2023-03-13

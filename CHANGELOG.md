@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Sites API: add was_ecommerce_trial flag to data returned for site details
 
 ### Bug fixes
+- Forms: avoid PHP notices when using a form with a dropdown field
 - Forms: Fix fatal error on sites using old AMP versions
 - Rollback rename of columns/fields on export
 - Sharing: ensure the sharing icons can appear when using a CDN to serve static assets on your site.
