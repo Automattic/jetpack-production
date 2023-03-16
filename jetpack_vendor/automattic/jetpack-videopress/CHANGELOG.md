@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add disabled and autoHideTimeInput props to TimestampControl component
 - VideoPress: add helper function to request update the VideoPress video poster
 - VideoPress: add label and help properties support for the TimestampControl component
+- VideoPress block: Adds basic upload functionality to native version.
 
 ### Changed
 - Consolidate VideoPreview type
