@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - VideoPress: Add check to remove tracks from previous video after replacement on block
+- VideoPress: Fix video details form change detection
 - VideoPress: Fix video library displaying arbitrary video in first page
 
 ## [0.12.1] - 2023-03-13
