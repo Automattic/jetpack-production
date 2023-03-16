@@ -25,6 +25,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - VideoPress: Remove storage meter for atomic sites
 
+### Fixed
+- VideoPress: Add check to remove tracks from previous video after replacement on block
+
 ## [0.12.1] - 2023-03-13
 ### Added
 - VideoPress: Add download button to video details page [#29403]
