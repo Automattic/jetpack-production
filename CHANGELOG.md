@@ -15,9 +15,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: avoid PHP notices when using a form with a dropdown field
-- Forms: Fix fatal error on sites using old AMP versions
-- Rollback rename of columns/fields on export
-- Sharing: ensure the sharing icons can appear when using a CDN to serve static assets on your site.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds the `is_wpcom_staging_site` attribute in a few more contexts
@@ -83,6 +80,12 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies. [#29216]
 - VideoPress: pick and convert core/video VideoPress instances also from inner blocks [#29339]
 - Writing prompts: marks prompt as answered when using a writing prompt block [#29214]
+
+## 11.9.1 - 2023-03-14
+### Bug fixes
+- Forms: fix fatal error on sites using old AMP versions [#29444]
+- Forms: fix issue with exported form data column and fields being incorrect [#29448]
+- Sharing: ensure the sharing icons can appear when using a CDN to serve static assets on your site. [#29441]
 
 ## [11.9] - 2023-03-07
 ### Enhancements
