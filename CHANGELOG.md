@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: avoid PHP notices when using a form with a dropdown field
+- Stats Widget: minor cleanup of Akismet section
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds the `is_wpcom_staging_site` attribute in a few more contexts
