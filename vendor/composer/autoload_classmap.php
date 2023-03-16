@@ -88,6 +88,8 @@ return array(
     'Automattic\\Jetpack\\Import\\Endpoints\\Category' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-category.php',
     'Automattic\\Jetpack\\Import\\Endpoints\\Comment' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-comment.php',
     'Automattic\\Jetpack\\Import\\Endpoints\\Import' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/trait-import.php',
+    'Automattic\\Jetpack\\Import\\Endpoints\\Menu' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-menu.php',
+    'Automattic\\Jetpack\\Import\\Endpoints\\Menu_Item' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-menu-item.php',
     'Automattic\\Jetpack\\Import\\Endpoints\\Page' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-page.php',
     'Automattic\\Jetpack\\Import\\Endpoints\\Post' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-post.php',
     'Automattic\\Jetpack\\Import\\Endpoints\\Tag' => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-tag.php',

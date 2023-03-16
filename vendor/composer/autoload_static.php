@@ -121,6 +121,8 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_0_a_6
         'Automattic\\Jetpack\\Import\\Endpoints\\Category' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-category.php',
         'Automattic\\Jetpack\\Import\\Endpoints\\Comment' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-comment.php',
         'Automattic\\Jetpack\\Import\\Endpoints\\Import' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/trait-import.php',
+        'Automattic\\Jetpack\\Import\\Endpoints\\Menu' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-menu.php',
+        'Automattic\\Jetpack\\Import\\Endpoints\\Menu_Item' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-menu-item.php',
         'Automattic\\Jetpack\\Import\\Endpoints\\Page' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-page.php',
         'Automattic\\Jetpack\\Import\\Endpoints\\Post' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-post.php',
         'Automattic\\Jetpack\\Import\\Endpoints\\Tag' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-tag.php',
