@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.0-a.4 - unreleased
+## 12.0-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -21,9 +21,12 @@ This is an alpha version! The changes listed here are not final.
 - Adds the `is_wpcom_staging_site` attribute in a few more contexts
 - Blocks: update deprecated block editor selector
 - Blocks: update deprecated component prop.
-- Changelog edits.
 - Jetpack Forms: Add tracking of Google Sheets exports
 - Send individual plugin upgrade buttons to My Jetpack insterstitial
+
+## 12.0-a.5 - 2023-03-15
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Changelog edits. [#29445]
 - Updated package dependencies.
 
 ## 12.0-a.3 - 2023-03-13
