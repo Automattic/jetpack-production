@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Replace placeholder with loading placeholder component from js-packages
 - Updated package dependencies.
 - VideoPress: get rid of script const / component prop
+- VideoPress block: Add details panel to native block's settings.
 
 ### Removed
 - VideoPress: Remove storage meter for atomic sites
