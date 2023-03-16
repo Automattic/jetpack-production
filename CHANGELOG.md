@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added updateWafSettings method.
 - Add the launchpad source to memberships status endpoint.
 - Improve gating logic for paid-newsletter
 - Jetpack: Move VideoPress video block to production (videopress/video extension)
