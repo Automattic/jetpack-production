@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress: add async helper fn to request video poster
 - VideoPress: add disabled and autoHideTimeInput props to TimestampControl component
 - VideoPress: add helper function to request update the VideoPress video poster
 - VideoPress: add label and help properties support for the TimestampControl component
