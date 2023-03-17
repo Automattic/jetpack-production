@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: update deprecated component prop.
 - Jetpack Forms: Add tracking of Google Sheets exports
 - Send individual plugin upgrade buttons to My Jetpack insterstitial
+- Small change to unreleased block
 
 ## 12.0-a.5 - 2023-03-15
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
