@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add check to remove tracks from previous video after replacement on block
 - VideoPress: Fix video details form change detection
 - VideoPress: Fix video library displaying arbitrary video in first page
+- VideoPress block: Only open upload options automatically when the block is inserted from the block inserter menu.
 
 ## [0.12.1] - 2023-03-13
 ### Added
