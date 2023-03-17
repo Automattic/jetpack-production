@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: remove all library dependencies.
 - Sites API: add was_ecommerce_trial flag to data returned for site details
 
+### Improved compatibility
+- Pinterest Block: ensure the block does not trigger errors when using WordPress 6.2.
+
 ### Bug fixes
 - Forms: avoid PHP notices when using a form with a dropdown field
 - Stats Widget: minor cleanup of Akismet section
