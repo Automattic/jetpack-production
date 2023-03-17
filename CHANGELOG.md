@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Improve gating logic for paid-newsletter
 - Jetpack: Move VideoPress video block to production (videopress/video extension)
 - Move cookie-consent block from beta to production
+- Notifications: remove all library dependencies.
 - Sites API: add was_ecommerce_trial flag to data returned for site details
 
 ### Bug fixes
