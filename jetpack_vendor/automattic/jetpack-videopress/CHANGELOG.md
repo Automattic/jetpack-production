@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: get rid of script const / component prop
 - VideoPress: Update comment on deprecated prop to mark it for later change
 - VideoPress block: Add details panel to native block's settings.
+- VideoPress block: Handle failed uploads.
 
 ### Removed
 - VideoPress: Remove storage meter for atomic sites
