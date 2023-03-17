@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - VideoPress: delay Done button activation to mitigate the chance of a race condition when saving the post too fast.
 - VideoPress: get rid of script const / component prop
+- VideoPress: Update comment on deprecated prop to mark it for later change
 - VideoPress block: Add details panel to native block's settings.
 
 ### Removed
