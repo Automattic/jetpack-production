@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Pinterest Block: ensure the block does not trigger errors when using WordPress 6.2.
 
 ### Bug fixes
+- Blocks: avoid warnings in the block editor because of invalid categories for some blocks.
 - Forms: avoid PHP notices when using a form with a dropdown field
 - Stats Widget: minor cleanup of Akismet section
 
