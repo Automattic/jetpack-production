@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Blocks: avoid warnings in the block editor because of invalid categories for some blocks.
+- Fix preload behavior when none is chosen
 - Forms: avoid PHP notices when using a form with a dropdown field
 - Stats Widget: minor cleanup of Akismet section
 
