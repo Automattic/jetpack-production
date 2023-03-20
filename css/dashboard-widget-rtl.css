@@ -252,6 +252,9 @@ https://github.com/thoughtbot/bourbon
 #jetpack_summary_widget footer .footer-links span {
   float: left;
 }
+#jetpack_summary_widget footer .button-jetpack {
+  margin-top: 8px;
+}
 
 /* Hide the widget title's SVG in the Screen Options tab */
 .metabox-prefs label[for=jetpack_summary_widget-hide] span svg {
