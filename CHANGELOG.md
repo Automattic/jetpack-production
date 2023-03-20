@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Move cookie-consent block from beta to production
 - Notifications: remove all library dependencies.
 - Sites API: add was_ecommerce_trial flag to data returned for site details
+- Writing prompts: move block to experimental and use for answering external prompts
 
 ### Improved compatibility
 - Connection: switch the "plugin activated" banner to the common connection flow.
