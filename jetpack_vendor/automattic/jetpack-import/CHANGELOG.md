@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix attachments path for import media endpoint
+- Fixed post meta imports issue
 
 ## [0.2.0] - 2023-03-08
 ### Added
