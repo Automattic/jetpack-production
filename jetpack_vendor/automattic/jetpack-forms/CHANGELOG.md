@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a check for array on $attributes before trying to set an item on it
 - Add search input and styles
 - Change default entries per page on responses inbox
+- Feedback responses endpoint now allows filtering by post status and returns all totals.
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 
 ## [0.9.0] - 2023-03-20
