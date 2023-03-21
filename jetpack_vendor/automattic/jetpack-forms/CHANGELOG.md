@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Add a check for array on $attributes before trying to set an item on it
 - Add search input and styles
 - Change default entries per page on responses inbox
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
