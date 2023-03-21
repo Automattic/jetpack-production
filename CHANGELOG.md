@@ -2,39 +2,43 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.0-a.6 - unreleased
+## 12.0-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- Added updateWafSettings method.
-- Add the launchpad source to memberships status endpoint.
-- Improve gating logic for paid-newsletter
-- Jetpack: Move VideoPress video block to production (videopress/video extension)
-- Move cookie-consent block from beta to production
-- Notifications: remove all library dependencies.
-- Sites API: add was_ecommerce_trial flag to data returned for site details
-- Writing prompts: move block to experimental and use for answering external prompts
-
-### Improved compatibility
-- Connection: switch the "plugin activated" banner to the common connection flow.
-- Pinterest Block: ensure the block does not trigger errors when using WordPress 6.2.
-
-### Bug fixes
-- Blocks: avoid warnings in the block editor because of invalid categories for some blocks.
-- Fix preload behavior when none is chosen
-- Forms: avoid PHP notices when using a form with a dropdown field
-- Stats Widget: minor cleanup of Akismet section
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Adds the `is_wpcom_staging_site` attribute in a few more contexts
-- Blocks: update deprecated block editor selector
-- Blocks: update deprecated component prop.
-- Jetpack Forms: Add tracking of Google Sheets exports
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 - Remove Upgrades and Inbox menus for staging sites
-- Send individual plugin upgrade buttons to My Jetpack insterstitial
-- Small change to unreleased block
+
+## 12.0-a.7 - 2023-03-20
+### Enhancements
+- Added updateWafSettings method. [#29299]
+- Add the launchpad source to memberships status endpoint. [#29468]
+- Improve gating logic for paid-newsletter [#29262]
+- Jetpack: Move VideoPress video block to production (videopress/video extension) [#29459]
+- Move cookie-consent block from beta to production [#29462]
+- Notifications: remove all library dependencies. [#29510]
+- Sites API: add was_ecommerce_trial flag to data returned for site details [#29423]
+- Writing prompts: move block to experimental and use for answering external prompts [#29433]
+
+### Improved compatibility
+- Connection: switch the "plugin activated" banner to the common connection flow. [#29526]
+- Pinterest Block: ensure the block does not trigger errors when using WordPress 6.2. [#29505]
+
+### Bug fixes
+- Blocks: avoid warnings in the block editor because of invalid categories for some blocks. [#29513]
+- Fix preload behavior when none is chosen [#29563]
+- Forms: avoid PHP notices when using a form with a dropdown field [#29512]
+- Stats Widget: minor cleanup of Akismet section [#29347]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adds the `is_wpcom_staging_site` attribute in a few more contexts [#29453]
+- Blocks: update deprecated block editor selector [#29420]
+- Blocks: update deprecated component prop. [#29463]
+- Jetpack Forms: Add tracking of Google Sheets exports [#29225]
+- Send individual plugin upgrade buttons to My Jetpack insterstitial [#29138]
+- Small change to unreleased block [#29501]
+- Updated package dependencies. [#29471]
 
 ## 12.0-a.5 - 2023-03-15
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

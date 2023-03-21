@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.22.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.22.0] - 2023-03-20
 ### Added
-- Added SIG image to the post media array if it's enabled
+- Added SIG image to the post media array if it's enabled [#29093]
 
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#29471]
 
 ### Fixed
-- Prevent metadata updates during autosave.
+- Prevent metadata updates during autosave. [#29263]
 
 ## [0.21.0] - 2023-03-13
 ### Added
@@ -256,7 +253,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.22.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.21.0...v0.22.0-alpha
+[0.22.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.21.0...v0.22.0
 [0.21.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.20.1...v0.21.0
 [0.20.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.20.0...v0.20.1
 [0.20.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.19.5...v0.20.0
