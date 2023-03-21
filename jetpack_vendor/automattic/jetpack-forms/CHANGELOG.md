@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Forms: Add tracking of Google Sheets exports
 
 ### Changed
+- Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 - Rollback rename of columns/fields on export
 - Updated package dependencies.
 

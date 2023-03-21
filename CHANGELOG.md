@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: update deprecated block editor selector
 - Blocks: update deprecated component prop.
 - Jetpack Forms: Add tracking of Google Sheets exports
+- Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 - Remove Upgrades and Inbox menus for staging sites
 - Send individual plugin upgrade buttons to My Jetpack insterstitial
 - Small change to unreleased block
