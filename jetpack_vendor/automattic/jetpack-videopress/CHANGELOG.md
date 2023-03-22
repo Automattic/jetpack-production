@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - VideoPress: polish TimestampControl component styles
 
+### Fixed
+- VideoPress block: Fix inserting item from media library.
+
 ## [0.13.0] - 2023-03-20
 ### Added
 - VideoPress: add async helper fn to request video poster [#29494]
