@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add basic native supported player
 
+### Changed
+- VideoPress: trigger video events to client via player-bridge
+
 ### Fixed
 - VideoPress: fix computing decimal part in the TimestampControl component
 - VideoPress block: Get VideoPress GUID from a different metadata property in iOS.
