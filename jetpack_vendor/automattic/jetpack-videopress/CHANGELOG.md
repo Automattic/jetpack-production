@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add basic native supported player
 
 ### Fixed
+- VideoPress: fix computing decimal part in the TimestampControl component
 - VideoPress block: Get VideoPress GUID from a different metadata property in iOS.
 
 ## [0.13.1] - 2023-03-22
