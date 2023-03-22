@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: add decimalPlaces to the TimestampControl component
+- VideoPress block: Add playback bar color settings to native settings.
 - VideoPress block: Add playback panel to native block's settings.
 
 ### Changed
