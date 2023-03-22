@@ -342,6 +342,10 @@ return array(
 		'version' => '0.4.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-comment.php'
 	),
+	'Automattic\\Jetpack\\Import\\Endpoints\\Custom_CSS' => array(
+		'version' => '0.4.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-custom-css.php'
+	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Import' => array(
 		'version' => '0.4.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/trait-import.php'
