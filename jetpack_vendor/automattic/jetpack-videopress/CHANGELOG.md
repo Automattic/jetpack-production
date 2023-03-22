@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add decimalPlaces to the TimestampControl component
 - VideoPress block: Add playback panel to native block's settings.
 
+### Changed
+- VideoPress: polish TimestampControl component styles
+
 ## [0.13.0] - 2023-03-20
 ### Added
 - VideoPress: add async helper fn to request video poster [#29494]
