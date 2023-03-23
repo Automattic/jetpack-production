@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add all source post IDs on forms/responses endpoint
+- Forms: Add Tabs to Forms dashboard inbox view
 
 ### Changed
 - Add a check for array on $attributes before trying to set an item on it
