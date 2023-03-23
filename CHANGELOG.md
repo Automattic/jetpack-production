@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added can_blaze property to /sites/{siteId} endpoint (inside options attribute)
 - Initialize yoast promo package in jetpack plugin
 - Updated visuals for the wp-admin dashboard Stats widget
 - WordPress.com Toolbar: gate Site Logs menu item behind constant
