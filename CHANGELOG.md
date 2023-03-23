@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- WordPress.com Toolbar: gate Site Logs menu item behind constant
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a check for array on $attributes before trying to set an item on it
 - Add search input and styles
