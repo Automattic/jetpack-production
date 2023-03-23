@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a check for array on $attributes before trying to set an item on it
+- Add all source post IDs on forms/responses endpoint
 - Add search input and styles
 - Change default entries per page on responses inbox
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
