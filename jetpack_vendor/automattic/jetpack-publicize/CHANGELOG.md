@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add new endpoint to Social Image Generator to get and update SIG-specific options
+
 ### Changed
 - Use TemplatePicker to save selected template and send it to our token generation endpoint
 

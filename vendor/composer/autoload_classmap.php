@@ -141,6 +141,8 @@ return array(
     'Automattic\\Jetpack\\Publicize\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Publicize\\Share_Limits' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-share-limits.php',
     'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Post_Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-post-settings.php',
+    'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\REST_Settings_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-rest-settings-controller.php',
+    'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-settings.php',
     'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Setup' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-setup.php',
     'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Templates' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-templates.php',
     'Automattic\\Jetpack\\Redirect' => $baseDir . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php',

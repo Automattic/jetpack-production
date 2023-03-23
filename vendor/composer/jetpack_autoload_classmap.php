@@ -558,6 +558,14 @@ return array(
 		'version' => '0.23.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-post-settings.php'
 	),
+	'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\REST_Settings_Controller' => array(
+		'version' => '0.23.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-rest-settings-controller.php'
+	),
+	'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Settings' => array(
+		'version' => '0.23.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-settings.php'
+	),
 	'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Setup' => array(
 		'version' => '0.23.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-setup.php'
