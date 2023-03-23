@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Add all source post IDs on forms/responses endpoint
 - Add search input and styles
 - Change default entries per page on responses inbox
+- General: remove deprecated core function in favor of direct WP Query.
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 - Remove Upgrades and Inbox menus for staging sites
 
