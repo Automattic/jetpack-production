@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: trigger video events to client via player-bridge
+- VideoPress block: Tweak the label for the "Playback Bar Color" setting for clarity
 
 ### Fixed
 - VideoPress: fix computing decimal part in the TimestampControl component
