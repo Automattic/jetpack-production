@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 - Upgrade package number
 
+### Fixed
+- Use Contact_Form_Plugin::init instead of requiring the old module file
+
 ## [0.9.0] - 2023-03-20
 ### Added
 - Jetpack Forms: Add tracking of Google Sheets exports [#29225]
