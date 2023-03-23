@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - WordPress.com Toolbar: gate Site Logs menu item behind constant
 
+### Improved compatibility
+- Image CDN: do not process Flickr-hosted images with Jetpack's Image CDN.
+
 ### Bug fixes
 - Use Contact_Form_Plugin::init instead of requiring the old module file
 
