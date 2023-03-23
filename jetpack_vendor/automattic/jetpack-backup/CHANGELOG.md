@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Backup: validate if storage details has loaded before attempting to fetch it again.
+
 ## [1.12.7] - 2023-03-20
 ### Changed
 - Updated package dependencies. [#29471]
