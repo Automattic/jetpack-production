@@ -30,7 +30,7 @@ return array(
     ),
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
-      'ver' => '1.14.0',
+      'ver' => '1.15.0-alpha',
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
@@ -115,6 +115,10 @@ return array(
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
       'ver' => '0.2.36-alpha',
+    ),
+    'jetpack-yoast-promo' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-yoast-promo',
+      'ver' => '0.1.0-alpha',
     ),
   ),
 );

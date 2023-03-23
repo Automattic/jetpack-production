@@ -21,7 +21,7 @@
 		"automattic/jetpack-blocks": "^1.4.20",
 		"automattic/jetpack-compat": "^1.7.5",
 		"automattic/jetpack-composer-plugin": "^1.1.10",
-		"automattic/jetpack-config": "^1.14.0",
+		"automattic/jetpack-config": "^1.15.0-alpha",
 		"automattic/jetpack-connection": "^1.51.2",
 		"automattic/jetpack-constants": "^1.6.21",
 		"automattic/jetpack-device-detection": "^1.4.24",
@@ -49,6 +49,7 @@
 		"automattic/jetpack-videopress": "^0.13.2-alpha",
 		"automattic/jetpack-waf": "^0.10.2",
 		"automattic/jetpack-wordads": "^0.2.36-alpha",
+		"automattic/jetpack-yoast-promo": "^0.1.0-alpha",
 		"nojimage/twitter-text-php": "3.1.2"
 	},
 	"require-dev": {

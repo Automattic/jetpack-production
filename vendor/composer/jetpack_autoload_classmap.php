@@ -115,7 +115,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-plugin.php'
 	),
 	'Automattic\\Jetpack\\Config' => array(
-		'version' => '1.14.0.0',
+		'version' => '1.15.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Client' => array(
@@ -1133,6 +1133,10 @@ return array(
 	'Automattic\\Jetpack\\WordAds\\REST_Controller' => array(
 		'version' => '0.2.36.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php'
+	),
+	'Automattic\\Jetpack\\Yoast_Promo' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-yoast-promo/src/class-yoast-promo.php'
 	),
 	'Container' => array(
 		'version' => '2.11.16.0',

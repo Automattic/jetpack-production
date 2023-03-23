@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Initialize yoast promo package in jetpack plugin
 - WordPress.com Toolbar: gate Site Logs menu item behind constant
 
 ### Improved compatibility
