@@ -566,6 +566,10 @@ return array(
 		'version' => '0.23.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-rest-settings-controller.php'
 	),
+	'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\REST_Token_Controller' => array(
+		'version' => '0.23.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-rest-token-controller.php'
+	),
 	'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Settings' => array(
 		'version' => '0.23.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-settings.php'

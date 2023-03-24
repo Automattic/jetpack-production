@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add new endpoint to Social Image Generator to get and update SIG-specific options
+- Social: Added an endpoint to generate a token for use as the preview of the social image.
 
 ### Changed
 - Use TemplatePicker to save selected template and send it to our token generation endpoint
