@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Add search input and styles
 - Change default entries per page on responses inbox
 - Feedback responses endpoint now allows filtering by post status and returns all totals.
+- Forms: Adjust Forms inbox view columns responsiveness
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 - Upgrade package number
 
