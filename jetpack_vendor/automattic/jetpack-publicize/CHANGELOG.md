@@ -14,6 +14,8 @@ This is an alpha version! The changes listed here are not final.
 - Social: Added an endpoint to generate a token for use as the preview of the social image.
 
 ### Changed
+- Moved SIG initilization to the admin_init hooks and updated the check to find out whether SIG is enabled to use the current plans package and added code to refresh plan data on every jetpack heartbeat."
+- Updated package dependencies.
 - Use TemplatePicker to save selected template and send it to our token generation endpoint
 
 ## [0.22.0] - 2023-03-20

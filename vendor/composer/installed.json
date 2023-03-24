@@ -1898,13 +1898,14 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-publicize",
-                "reference": "e16b4d6e47bffeb3feac2b4d3b8d9a11e9bf0364"
+                "reference": "af7067bc69cc32312602cb4ec9348f8016ff107a"
             },
             "require": {
                 "automattic/jetpack-assets": "^1.17.34",
                 "automattic/jetpack-autoloader": "^2.11.16",
                 "automattic/jetpack-config": "^1.15.0-alpha",
                 "automattic/jetpack-connection": "^1.51.3-alpha",
+                "automattic/jetpack-plans": "^0.2.10",
                 "automattic/jetpack-redirect": "^1.7.24"
             },
             "require-dev": {
