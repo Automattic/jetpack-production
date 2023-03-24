@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added can_blaze property to /sites/{siteId} endpoint (inside options attribute)
 - Initialize yoast promo package in jetpack plugin
+- Jetpack: register v6-video-frame-poster beta extension
 - Updated visuals for the wp-admin dashboard Stats widget
 - WordPress.com Toolbar: gate Site Logs menu item behind constant
 
