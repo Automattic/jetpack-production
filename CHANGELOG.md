@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: register v6-video-frame-poster beta extension
 - Subscriptions: Makes the Subscribe Block available, even when the Subscriptions module is off, so Subscriptions can be easily enabled.
 - Updated visuals for the wp-admin dashboard Stats widget
+- update modal content for newsletter flow
 - WordPress.com Toolbar: gate Site Logs menu item behind constant
 
 ### Improved compatibility
