@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add all source post IDs on forms/responses endpoint
+- Added an endpoint for performing bulk actions on feedback responses.
 - Forms: Add Tabs to Forms dashboard inbox view
 
 ### Changed
