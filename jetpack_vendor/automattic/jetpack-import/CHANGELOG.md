@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fixed post meta imports issue
+- Fix wp_global_styles issue
 
 ## [0.3.0] - 2023-03-20
 ### Added
