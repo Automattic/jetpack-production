@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add basic native supported player
 - VideoPress: Added Stats module to the list of enabled modules for the standalone VP plugin.
+- VideoPress: add frame selector to Poster panel
 
 ### Changed
 - VideoPress: trigger video events to client via player-bridge
