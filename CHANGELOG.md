@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added can_blaze property to /sites/{siteId} endpoint (inside options attribute)
 - Add yoast promo in seo settings banner
 - Initialize yoast promo package in jetpack plugin
+- Jetpack: enable the video frame poster extension without concerning the site plan
 - Jetpack: register v6-video-frame-poster beta extension
 - Stats: change Calypso Stats to Odyssey Stats
 - Subscriptions: Makes the Subscribe Block available, even when the Subscriptions module is off, so Subscriptions can be easily enabled.
