@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Image CDN: do not process Flickr-hosted images with Jetpack's Image CDN.
 
 ### Bug fixes
+- Jetpack Forms: fix a PHP warning on Feedback->Response Forms when looking at old responses.
 - Use Contact_Form_Plugin::init instead of requiring the old module file
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
