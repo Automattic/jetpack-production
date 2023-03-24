@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Adjust Forms inbox view columns responsiveness
 - Forms: Update Forms inbox view responses styles
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
+- Jetpack Forms: json_encode form responses instead of using print_r.
 - Upgrade package number
 
 ### Fixed
