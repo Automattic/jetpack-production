@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Upgrade package number
 
 ### Fixed
+- Refactored state management for forms dashboard
 - Use Contact_Form_Plugin::init instead of requiring the old module file
 
 ## [0.9.0] - 2023-03-20
