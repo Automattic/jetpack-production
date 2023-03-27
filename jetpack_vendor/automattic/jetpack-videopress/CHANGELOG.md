@@ -18,7 +18,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: trigger video events to client via player-bridge
-- VideoPress: tweak and rename poster panel title
 - VideoPress block: Tweak the label for the "Playback Bar Color" setting for clarity
 
 ### Fixed
