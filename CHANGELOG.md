@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: enable the video frame poster extension without concerning the site plan
 - Jetpack: register v6-video-frame-poster beta extension
 - Jetpack Forms: display carriage returns in responses in the Feedback->Form Responses page.
+- refactor redirect url
 - Stats: change Calypso Stats to Odyssey Stats
 - Subscriptions: Makes the Subscribe Block available, even when the Subscriptions module is off, so Subscriptions can be easily enabled.
 - Updated visuals for the wp-admin dashboard Stats widget
