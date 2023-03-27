@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO Tools: add message to settings screen when The SEO Framework plugin is active.
 
 ### Bug fixes
+- Consolidate stats widget code while enforcing nonce on form submission
 - Jetpack Forms: fix a PHP warning on Feedback->Response Forms when looking at old responses.
 - Subscriptions: ensure the block's settings are displayed properly, even when using a block theme.
 - Use Contact_Form_Plugin::init instead of requiring the old module file
