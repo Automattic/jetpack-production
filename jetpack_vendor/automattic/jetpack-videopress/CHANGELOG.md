@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress block: Tweak the label for the "Playback Bar Color" setting for clarity
 
 ### Fixed
+- Avoid conflicts with Better Click To Tweet plugin
 - VideoPress: fix computing decimal part in the TimestampControl component
 - VideoPress: Fix TimestampControl input width and mobile UI
 - VideoPress block: Fix for the case when video upload finishes outside the editor (iOS only).

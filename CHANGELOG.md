@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress.com Toolbar: gate Site Logs menu item behind constant
 
 ### Improved compatibility
+- Blocks: avoid conflicts with Better Click To Tweet plugin.
 - Image CDN: do not process Flickr-hosted images with Jetpack's Image CDN.
 - SEO Tools: add message to settings screen when The SEO Framework plugin is active.
 
