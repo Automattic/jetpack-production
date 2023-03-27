@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update Forms inbox view responses styles
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 - Jetpack Forms: Change default entries per page on responses inbox
+- Jetpack Forms: display carriage returns in responses in the Feedback->Form Responses page.
 - Jetpack Forms: json_encode form responses instead of using print_r.
 - Upgrade package number
 
