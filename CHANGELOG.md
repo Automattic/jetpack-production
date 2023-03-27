@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a check for array on $attributes before trying to set an item on it
 - Add all source post IDs on forms/responses endpoint
+- Add Golden Ticket plan support for the My Plan page.
 - Add search input and styles
 - Change default entries per page on responses inbox
 - General: remove deprecated core function in favor of direct WP Query.
