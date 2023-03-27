@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - General: remove deprecated core function in favor of direct WP Query.
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 - Jetpack Forms: json_encode form responses instead of using print_r.
+- Protect: update documentation for filter.
 - Remove Upgrades and Inbox menus for staging sites
 
 ## 12.0-a.7 - 2023-03-20
