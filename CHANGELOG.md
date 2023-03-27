@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Golden Ticket plan support for the My Plan page.
 - Add search input and styles
 - Change default entries per page on responses inbox
+- General: do not load the Yoast banner.
 - General: remove deprecated core function in favor of direct WP Query.
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 - Jetpack Forms: json_encode form responses instead of using print_r.

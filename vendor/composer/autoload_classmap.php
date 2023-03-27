@@ -287,7 +287,6 @@ return array(
     'Automattic\\Jetpack\\WordAds\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/initializers/class-initializer.php',
     'Automattic\\Jetpack\\WordAds\\Package' => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-package.php',
     'Automattic\\Jetpack\\WordAds\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php',
-    'Automattic\\Jetpack\\Yoast_Promo' => $baseDir . '/jetpack_vendor/automattic/jetpack-yoast-promo/src/class-yoast-promo.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'JetpackTracking' => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpacktracking.php',
     'Jetpack_Backup' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup.php',

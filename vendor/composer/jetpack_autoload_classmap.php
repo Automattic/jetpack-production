@@ -1142,10 +1142,6 @@ return array(
 		'version' => '0.2.36.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php'
 	),
-	'Automattic\\Jetpack\\Yoast_Promo' => array(
-		'version' => '0.1.0.0-alpha',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-yoast-promo/src/class-yoast-promo.php'
-	),
 	'Container' => array(
 		'version' => '2.11.16.0',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-container.php'

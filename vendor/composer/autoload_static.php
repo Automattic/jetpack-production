@@ -320,7 +320,6 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_0_a_8
         'Automattic\\Jetpack\\WordAds\\Initializer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-wordads/src/initializers/class-initializer.php',
         'Automattic\\Jetpack\\WordAds\\Package' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-wordads/src/class-package.php',
         'Automattic\\Jetpack\\WordAds\\REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php',
-        'Automattic\\Jetpack\\Yoast_Promo' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-yoast-promo/src/class-yoast-promo.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'JetpackTracking' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpacktracking.php',
         'Jetpack_Backup' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup.php',

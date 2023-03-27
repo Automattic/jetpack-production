@@ -116,9 +116,5 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
       'ver' => '0.2.36-alpha',
     ),
-    'jetpack-yoast-promo' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-yoast-promo',
-      'ver' => '0.1.0-alpha',
-    ),
   ),
 );
