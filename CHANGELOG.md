@@ -14,6 +14,8 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: register v6-video-frame-poster beta extension
 - Jetpack Forms: display carriage returns in responses in the Feedback->Form Responses page.
 - refactor redirect url
+- Remove account connection requirement to use the brute force protection feature.
+- Share IP allow list between the Jetpack Firewall and Brute Force Protection modules.
 - Stats: change Calypso Stats to Odyssey Stats
 - Subscriptions: Makes the Subscribe Block available, even when the Subscriptions module is off, so Subscriptions can be easily enabled.
 - Updated visuals for the wp-admin dashboard Stats widget
@@ -41,6 +43,8 @@ This is an alpha version! The changes listed here are not final.
 - General: remove deprecated core function in favor of direct WP Query.
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 - Jetpack Forms: json_encode form responses instead of using print_r.
+- Move brute force protection logic into the WAF package.
+- Move the brute force protection transient cleanup and shared functions to dedicated namespaced classes.
 - Protect: update documentation for filter.
 - Remove Upgrades and Inbox menus for staging sites
 
