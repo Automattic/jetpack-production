@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Added an endpoint to generate a token for use as the preview of the social image.
 
 ### Changed
+- Jetpack Social: Enable Social Image Generator by default when it's available.
 - Moved SIG initilization to the admin_init hooks and updated the check to find out whether SIG is enabled to use the current plans package and added code to refresh plan data on every jetpack heartbeat."
 - Updated package dependencies.
 - Use picked default template for Social Image Generator

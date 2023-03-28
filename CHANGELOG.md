@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - General: remove deprecated core function in favor of direct WP Query.
 - Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
 - Jetpack Forms: json_encode form responses instead of using print_r.
+- Jetpack Social: Enable Social Image Generator by default when it is available
 - Move brute force protection logic into the WAF package.
 - Move the brute force protection transient cleanup and shared functions to dedicated namespaced classes.
 - Protect: update documentation for filter.
