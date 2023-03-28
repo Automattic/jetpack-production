@@ -5,31 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.10.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.10.0] - 2023-03-27
 ### Added
-- Add all source post IDs on forms/responses endpoint
-- Added an endpoint for performing bulk actions on feedback responses.
-- Forms: Add Tabs to Forms dashboard inbox view
+- Add all source post IDs on forms/responses endpoint [#29428]
+- Added an endpoint for performing bulk actions on feedback responses. [#29682]
+- Forms: Add Tabs to Forms dashboard inbox view [#29652]
 
 ### Changed
-- Add a check for array on $attributes before trying to set an item on it
-- Add search input and styles
-- Change default entries per page on responses inbox
-- Feedback responses endpoint now allows filtering by post status and returns all totals.
-- Forms: Adjust Forms inbox view columns responsiveness
-- Forms: Update Forms inbox view responses styles
-- Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
-- Jetpack Forms: Change default entries per page on responses inbox
-- Jetpack Forms: display carriage returns in responses in the Feedback->Form Responses page.
-- Jetpack Forms: json_encode form responses instead of using print_r.
-- Upgrade package number
+- Add a check for array on $attributes before trying to set an item on it [#29557]
+- Add search input and styles [#29397]
+- Change default entries per page on responses inbox [#29406]
+- Feedback responses endpoint now allows filtering by post status and returns all totals. [#29589]
+- Forms: Adjust Forms inbox view columns responsiveness [#29666]
+- Forms: Update Forms inbox view responses styles [#29660]
+- Jetpack Forms: changed "message sent" tracking from Tracks to bump stat. [#29383]
+- Jetpack Forms: Change default entries per page on responses inbox [#29701]
+- Jetpack Forms: display carriage returns in responses in the Feedback->Form Responses page. [#29698]
+- Jetpack Forms: json_encode form responses instead of using print_r. [#29664]
+- Upgrade package number [#29457]
 
 ### Fixed
-- Refactored state management for forms dashboard
-- Use Contact_Form_Plugin::init instead of requiring the old module file
+- Refactored state management for forms dashboard [#29684]
+- Use Contact_Form_Plugin::init instead of requiring the old module file [#29648]
 
 ## [0.9.0] - 2023-03-20
 ### Added
@@ -129,7 +126,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.10.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.9.0...v0.10.0-alpha
+[0.10.0]: https://github.com/automattic/jetpack-forms/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/automattic/jetpack-forms/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/automattic/jetpack-forms/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/automattic/jetpack-forms/compare/v0.6.0...v0.7.0

@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.34.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.34.1] - 2023-03-27
 ### Added
-- (Backup, Boost, Search, Social) Add links on upgrade pages to activate a license key, if you already have one.
+- (Backup, Boost, Search, Social) Add links on upgrade pages to activate a license key, if you already have one. [#29443]
 
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#29632]
 
 ## [0.34.0] - 2023-03-20
 ### Changed
@@ -708,7 +705,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.34.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.34.0...v0.34.1-alpha
+[0.34.1]: https://github.com/Automattic/jetpack-search/compare/v0.34.0...v0.34.1
 [0.34.0]: https://github.com/Automattic/jetpack-search/compare/v0.33.3...v0.34.0
 [0.33.3]: https://github.com/Automattic/jetpack-search/compare/v0.33.2...v0.33.3
 [0.33.2]: https://github.com/Automattic/jetpack-search/compare/v0.33.1...v0.33.2

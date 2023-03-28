@@ -5,31 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.2-alpha] - unreleased
+## [0.13.3-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Add basic native supported player
-- VideoPress: Added Stats module to the list of enabled modules for the standalone VP plugin.
-- VideoPress: add frame selector to Poster panel
 - VideoPress: generate video image when selecting poster from frame
 - VideoPress: handle poster image generation state
-- VideoPress: store poster data into video block attribute
-- VideoPress block: Add Privacy and Rating panel to native block's settings.
-- VideoPress block: Add replace functionality for the native version of the block.
+
+## [0.13.2] - 2023-03-27
+### Added
+- Add basic native supported player [#29478]
+- VideoPress: Added Stats module to the list of enabled modules for the standalone VP plugin. [#29668]
+- VideoPress: add frame selector to Poster panel [#29688]
+- VideoPress: store poster data into video block attribute [#29718]
+- VideoPress block: Add Privacy and Rating panel to native block's settings. [#29477]
+- VideoPress block: Add replace functionality for the native version of the block. [#29662]
 
 ### Changed
-- VideoPress: trigger video events to client via player-bridge
-- VideoPress: tweak and rename poster panel title
-- VideoPress block: Tweak the label for the "Playback Bar Color" setting for clarity
+- VideoPress: trigger video events to client via player-bridge [#29617]
+- VideoPress: tweak and rename poster panel title [#29711]
+- VideoPress block: Tweak the label for the "Playback Bar Color" setting for clarity [#29625]
 
 ### Fixed
-- Avoid conflicts with Better Click To Tweet plugin
-- VideoPress: fix computing decimal part in the TimestampControl component
-- VideoPress: Fix TimestampControl input width and mobile UI
-- VideoPress block: Fix for the case when video upload finishes outside the editor (iOS only).
-- VideoPress block: Get VideoPress GUID from a different metadata property in iOS.
+- Avoid conflicts with Better Click To Tweet plugin [#29681]
+- VideoPress: fix computing decimal part in the TimestampControl component [#29629]
+- VideoPress: Fix TimestampControl input width and mobile UI [#29639]
+- VideoPress block: Fix for the case when video upload finishes outside the editor (iOS only). [#29620]
+- VideoPress block: Get VideoPress GUID from a different metadata property in iOS. [#29612]
 
 ## [0.13.1] - 2023-03-22
 ### Added
@@ -847,7 +850,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.13.2-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.1...v0.13.2-alpha
+[0.13.3-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.2...v0.13.3-alpha
+[0.13.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.1...v0.13.2
 [0.13.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.0...v0.13.1
 [0.13.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.12.1...v0.13.0
 [0.12.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.12.0...v0.12.1

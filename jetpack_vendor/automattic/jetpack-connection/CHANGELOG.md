@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.51.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.51.3] - 2023-03-27
 ### Fixed
-- Fix redirect allow-list for Calypso domain names.
+- Fix redirect allow-list for Calypso domain names. [#29671]
 
 ## [1.51.2] - 2023-03-20
 ### Changed
@@ -781,7 +778,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[1.51.3-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.51.2...v1.51.3-alpha
+[1.51.3]: https://github.com/Automattic/jetpack-connection/compare/v1.51.2...v1.51.3
 [1.51.2]: https://github.com/Automattic/jetpack-connection/compare/v1.51.1...v1.51.2
 [1.51.1]: https://github.com/Automattic/jetpack-connection/compare/v1.51.0...v1.51.1
 [1.51.0]: https://github.com/Automattic/jetpack-connection/compare/v1.50.1...v1.51.0
