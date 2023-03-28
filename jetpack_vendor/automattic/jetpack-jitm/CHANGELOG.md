@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - JITM: Update styles
 
+### Fixed
+- JITM: Fix button overflow when text length is too big
+
 ## [2.3.2] - 2023-03-20
 ### Changed
 - Updated package dependencies. [#29471]
