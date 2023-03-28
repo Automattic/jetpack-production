@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: avoid conflicts with Better Click To Tweet plugin.
 - Image CDN: do not process Flickr-hosted images with Jetpack's Image CDN.
 - SEO Tools: add message to settings screen when The SEO Framework plugin is active.
+- WordPress 6.2 compatibility: ensure that the block editor's External Media functionality and Jetpack's Twitter features in the block editor stay compatible with the upcoming version of WordPress.
 
 ### Bug fixes
 - Consolidate stats widget code while enforcing nonce on form submission
