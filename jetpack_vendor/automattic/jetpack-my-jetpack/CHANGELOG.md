@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Adds new route for Golden Token. Also the experience of redeeming one
 - Clarified when license activation fails that a user connection is required, added a link to complete the connection, and added functionality to redirect back to license activation when the connection is done.
 
+### Changed
+- Move GoldenTokenModal component to licensing package.
+
 ## [2.8.1] - 2023-03-20
 ### Changed
 - Product Interstitial: Use browser history to go back, in case they're coming from somewhere outside of the app. [#29138]
