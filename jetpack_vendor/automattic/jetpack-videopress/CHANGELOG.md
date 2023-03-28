@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: generate video image when selecting poster from frame
 - VideoPress: handle poster image generation state
 
+### Changed
+- VideoPress: use WP COM API to generate poster image for simple sites
+
 ## [0.13.2] - 2023-03-27
 ### Added
 - Add basic native supported player [#29478]
