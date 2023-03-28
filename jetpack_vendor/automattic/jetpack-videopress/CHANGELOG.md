@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Added Stats module to the list of enabled modules for the standalone VP plugin.
 - VideoPress: add frame selector to Poster panel
 - VideoPress: generate video image when selecting poster from frame
+- VideoPress: handle poster image generation state
 - VideoPress: store poster data into video block attribute
 - VideoPress block: Add Privacy and Rating panel to native block's settings.
 - VideoPress block: Add replace functionality for the native version of the block.
