@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added global style import.
 - Added import of custom CSS
 - Adding functionality to create term on the fly
+- Prevent media duplication when it's already existed
 
 ### Changed
 - Updated package version
