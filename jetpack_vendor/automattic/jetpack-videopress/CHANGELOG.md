@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: Add video preview on hover options to poster and preview panel
 
+### Changed
+- VideoPress: extract, create and expose usePlayerReady() hook
+
 ## [0.13.3] - 2023-03-29
 ### Added
 - VideoPress: generate video image when selecting poster from frame [#29738]
