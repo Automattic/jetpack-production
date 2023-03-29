@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Stats Widget: Fix incorrect invocation of module-restricted functions
+
 ## 12.0-beta - 2023-03-28
 ### Enhancements
 - Added can_blaze property to /sites/{siteId} endpoint (inside options attribute) [#29614]
