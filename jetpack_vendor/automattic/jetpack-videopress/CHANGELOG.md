@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.13.3] - 2023-03-29
 ### Added
-- VideoPress: generate video image when selecting poster from frame
-- VideoPress: handle poster image generation state
+- VideoPress: generate video image when selecting poster from frame [#29738]
+- VideoPress: handle poster image generation state [#29746]
 
 ### Changed
-- VideoPress: use WP COM API to generate poster image for simple sites
+- VideoPress: use WP COM API to generate poster image for simple sites [#29761]
 
 ## [0.13.2] - 2023-03-27
 ### Added
@@ -853,7 +850,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.13.3-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.2...v0.13.3-alpha
+[0.13.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.2...v0.13.3
 [0.13.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.1...v0.13.2
 [0.13.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.0...v0.13.1
 [0.13.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.12.1...v0.13.0

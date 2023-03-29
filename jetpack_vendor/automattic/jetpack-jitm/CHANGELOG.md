@@ -5,15 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.3.4-alpha] - unreleased
+## [2.3.5-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add external link icons in JITM
 
+## [2.3.4] - 2023-03-28
 ### Fixed
-- JITM: Fix button overflow when text length is too big
+- JITM: Fix button overflow when text length is too big [#29749]
 
 ## [2.3.3] - 2023-03-27
 ### Changed
@@ -568,7 +569,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Update Jetpack to use new JITM package
 
-[2.3.4-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.3...v2.3.4-alpha
+[2.3.5-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.4...v2.3.5-alpha
+[2.3.4]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.3...v2.3.4
 [2.3.3]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.2...v2.3.3
 [2.3.2]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.1...v2.3.2
 [2.3.1]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.0...v2.3.1

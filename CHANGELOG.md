@@ -2,54 +2,56 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.0-a.8 - unreleased
+## 12.1-a.0 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 12.0-beta - 2023-03-28
 ### Enhancements
-- Added can_blaze property to /sites/{siteId} endpoint (inside options attribute)
-- Add yoast promo in seo settings banner
-- Initialize yoast promo package in jetpack plugin
-- Jetpack: enable the video frame poster extension without concerning the site plan
-- Jetpack: register v6-video-frame-poster beta extension
-- Jetpack Forms: display carriage returns in responses in the Feedback->Form Responses page.
-- Prevent SIG from running when it is disabled
-- refactor redirect url
-- Remove account connection requirement to use the brute force protection feature.
-- Share IP allow list between the Jetpack Firewall and Brute Force Protection modules.
-- Stats: change Calypso Stats to Odyssey Stats
-- Subscriptions: Makes the Subscribe Block available, even when the Subscriptions module is off, so Subscriptions can be easily enabled.
-- Updated visuals for the wp-admin dashboard Stats widget
-- update modal content for newsletter flow
-- WordPress.com Toolbar: gate Site Logs menu item behind constant
+- Added can_blaze property to /sites/{siteId} endpoint (inside options attribute) [#29614]
+- Add yoast promo in seo settings banner [#29643]
+- Initialize yoast promo package in jetpack plugin [#29641]
+- Jetpack: enable the video frame poster extension without concerning the site plan [#29692]
+- Jetpack: register v6-video-frame-poster beta extension [#29678]
+- Jetpack Forms: display carriage returns in responses in the Feedback->Form Responses page. [#29698]
+- Prevent SIG from running when it is disabled [#29722]
+- refactor redirect url [#29422]
+- Remove account connection requirement to use the brute force protection feature. [#28401]
+- Share IP allow list between the Jetpack Firewall and Brute Force Protection modules. [#28401]
+- Stats: change Calypso Stats to Odyssey Stats [#29679]
+- Subscriptions: Makes the Subscribe Block available, even when the Subscriptions module is off, so Subscriptions can be easily enabled. [#29044]
+- Updated visuals for the wp-admin dashboard Stats widget [#29600]
+- update modal content for newsletter flow [#29484]
+- WordPress.com Toolbar: gate Site Logs menu item behind constant [#29606]
 
 ### Improved compatibility
-- Blocks: avoid conflicts with Better Click To Tweet plugin.
-- Image CDN: do not process Flickr-hosted images with Jetpack's Image CDN.
-- SEO Tools: add message to settings screen when The SEO Framework plugin is active.
-- WordPress 6.2 compatibility: ensure that the block editor's External Media functionality and Jetpack's Twitter features in the block editor stay compatible with the upcoming version of WordPress.
+- Blocks: avoid conflicts with Better Click To Tweet plugin. [#29681]
+- Image CDN: do not process Flickr-hosted images with Jetpack's Image CDN. [#29649]
+- SEO Tools: add message to settings screen when The SEO Framework plugin is active. [#29728]
+- WordPress 6.2 compatibility: ensure that the block editor's External Media functionality and Jetpack's Twitter features in the block editor stay compatible with the upcoming version of WordPress. [#29542]
 
 ### Bug fixes
-- Consolidate stats widget code while enforcing nonce on form submission
-- Jetpack Forms: fix a PHP warning on Feedback->Response Forms when looking at old responses.
-- Subscriptions: ensure the block's settings are displayed properly, even when using a block theme.
-- Use Contact_Form_Plugin::init instead of requiring the old module file
+- Consolidate stats widget code while enforcing nonce on form submission [#29524]
+- Jetpack Forms: fix a PHP warning on Feedback->Response Forms when looking at old responses. [#29699]
+- Subscriptions: ensure the block's settings are displayed properly, even when using a block theme. [#29631]
+- Use Contact_Form_Plugin::init instead of requiring the old module file [#29648]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add a check for array on $attributes before trying to set an item on it
-- Add all source post IDs on forms/responses endpoint
-- Add Golden Ticket plan support for the My Plan page.
-- Add search input and styles
-- Change default entries per page on responses inbox
-- General: do not load the Yoast banner.
-- General: remove deprecated core function in favor of direct WP Query.
-- Jetpack Forms: changed "message sent" tracking from Tracks to bump stat.
-- Jetpack Forms: json_encode form responses instead of using print_r.
-- Jetpack Social: Enable Social Image Generator by default when it is available
-- Move brute force protection logic into the WAF package.
-- Move the brute force protection transient cleanup and shared functions to dedicated namespaced classes.
-- Protect: update documentation for filter.
-- Remove Upgrades and Inbox menus for staging sites
+- Add a check for array on $attributes before trying to set an item on it [#29557]
+- Add all source post IDs on forms/responses endpoint [#29428]
+- Add Golden Ticket plan support for the My Plan page. [#29673]
+- Add search input and styles [#29397]
+- Change default entries per page on responses inbox [#29406]
+- General: do not load the Yoast banner. [#29725]
+- General: remove deprecated core function in favor of direct WP Query. [#29460]
+- Jetpack Forms: changed "message sent" tracking from Tracks to bump stat. [#29383]
+- Jetpack Forms: json_encode form responses instead of using print_r. [#29664]
+- Jetpack Social: Enable Social Image Generator by default when it is available [#29742]
+- Move brute force protection logic into the WAF package. [#28401]
+- Move the brute force protection transient cleanup and shared functions to dedicated namespaced classes. [#28401]
+- Protect: update documentation for filter. [#29731]
+- Remove Upgrades and Inbox menus for staging sites [#29355]
+- Updated composer.lock. [#29762]
 
 ## 12.0-a.7 - 2023-03-20
 ### Enhancements

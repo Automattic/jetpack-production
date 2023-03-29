@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.9.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.9.1] - 2023-03-28
 ### Changed
-- Move GoldenTokenModal component to licensing package.
+- Move GoldenTokenModal component to licensing package. [#29748]
 
 ## [2.9.0] - 2023-03-27
 ### Added
@@ -784,7 +781,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.9.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.9.0...2.9.1-alpha
+[2.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.9.0...2.9.1
 [2.9.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.8.1...2.9.0
 [2.8.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.8.0...2.8.1
 [2.8.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.7.13...2.8.0
