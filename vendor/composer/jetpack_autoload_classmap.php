@@ -334,6 +334,10 @@ return array(
 		'version' => '0.5.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-attachment.php'
 	),
+	'Automattic\\Jetpack\\Import\\Endpoints\\Block' => array(
+		'version' => '0.5.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-block.php'
+	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Category' => array(
 		'version' => '0.5.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-category.php'
@@ -362,6 +366,10 @@ return array(
 		'version' => '0.5.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-menu-item.php'
 	),
+	'Automattic\\Jetpack\\Import\\Endpoints\\Navigation' => array(
+		'version' => '0.5.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-navigation.php'
+	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Page' => array(
 		'version' => '0.5.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-page.php'
@@ -373,6 +381,14 @@ return array(
 	'Automattic\\Jetpack\\Import\\Endpoints\\Tag' => array(
 		'version' => '0.5.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-tag.php'
+	),
+	'Automattic\\Jetpack\\Import\\Endpoints\\Template' => array(
+		'version' => '0.5.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-template.php'
+	),
+	'Automattic\\Jetpack\\Import\\Endpoints\\Template_Part' => array(
+		'version' => '0.5.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-template-part.php'
 	),
 	'Automattic\\Jetpack\\Import\\Main' => array(
 		'version' => '0.5.0.0-alpha',

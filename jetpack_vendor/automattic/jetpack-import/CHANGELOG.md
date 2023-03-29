@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add support for wp_block, wp_navigation, wp_template, wp_template_part import.
 - Prevent media duplication when it's already existed
 
 ### Fixed
