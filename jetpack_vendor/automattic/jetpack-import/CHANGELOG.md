@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Prevent media duplication when it's already existed
 
+### Fixed
+- Remove process post meta function outside of hook
+
 ## [0.4.0] - 2023-03-27
 ### Added
 - Added global style import. [#29622]
