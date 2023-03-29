@@ -843,7 +843,7 @@ function jetpack_get_module_info( $key ) {
 	    'deactivate' => '',
 	    'free' => '',
 	    'requires_connection' => 'Yes',
-	    'requires_user_connection' => 'Yes',
+	    'requires_user_connection' => 'No',
 	    'auto_activate' => 'Yes',
 	    'module_tags' => 'Recommended',
 	    'feature' => 'Security',
