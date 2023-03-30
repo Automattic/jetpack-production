@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Dashboard finetunings
+- Forms: Include bulk actions menu
 
 ## [0.10.1] - 2023-03-28
 ### Changed
