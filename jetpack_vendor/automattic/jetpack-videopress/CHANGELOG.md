@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: support autoplay playback option when previewOnHover is enabled
 
 ### Changed
+- VideoPress: Change hover preview loop duration component to Timestamp control and fix default values
 - VideoPress: extract, create and expose usePlayerReady() hook
 
 ### Fixed
