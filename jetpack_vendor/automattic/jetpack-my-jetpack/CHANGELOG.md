@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- My Jetpack: Enhance Product Card
+
 ### Changed
 - * Updated add-anti-spam path to add-akismet to match the product key
   * Updated product interstitial component to accept an existingLicenseKeyUrl
