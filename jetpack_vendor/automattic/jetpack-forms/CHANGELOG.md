@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Disregard post_status when calculating available filters for form responses.
 - Forms: Dashboard finetunings
 - Forms: Include bulk actions menu
 - Updated form responses endpoint to embed available filter data.
