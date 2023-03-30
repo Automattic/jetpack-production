@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress: Add video duration to block attributes
 - VideoPress: Add video preview on hover options to poster and preview panel
 
 ### Changed
