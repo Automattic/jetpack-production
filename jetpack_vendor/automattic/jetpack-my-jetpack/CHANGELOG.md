@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: Adds a selector, reducer and resolver machinery to fetch product stats.
 - My Jetpack: Enhance Product Card
+- My Jetpack: Introduce menu in Product Card
 
 ### Changed
 - * Updated add-anti-spam path to add-akismet to match the product key
