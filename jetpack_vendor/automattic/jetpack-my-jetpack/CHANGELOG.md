@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
   * Updated product interstitial component to accept an existingLicenseKeyUrl
   * Updated product interstitial component to display a product name instead of a title where preferProductName is set
   * Make is_plugin_active available from the API
+- My Jetpack: Change the bottom of My Jetpack screen to use single-column rows on small viewports.
 
 ## [2.9.1] - 2023-03-28
 ### Changed
