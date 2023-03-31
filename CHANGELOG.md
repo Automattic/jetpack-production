@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Admin menu: use the latest version of the Jetpack logo.
+
 ### Bug fixes
 - Stats Widget: Fix incorrect invocation of module-restricted functions
 
