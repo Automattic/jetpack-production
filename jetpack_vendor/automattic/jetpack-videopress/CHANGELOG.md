@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: store and control TimestampControl value externally
 
 ### Fixed
+- Disable autoplay in the native editor
 - VideoPress block: Address the case of closing/re-opening post with an ongoing video upload.
 
 ## [0.13.3] - 2023-03-29
