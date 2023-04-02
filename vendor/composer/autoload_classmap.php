@@ -183,6 +183,7 @@ return array(
     'Automattic\\Jetpack\\Stats_Admin\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-dashboard.php',
     'Automattic\\Jetpack\\Stats_Admin\\Main' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-main.php',
     'Automattic\\Jetpack\\Stats_Admin\\Notices' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-notices.php',
+    'Automattic\\Jetpack\\Stats_Admin\\Odyssey_Config_Data' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-odyssey-config-data.php',
     'Automattic\\Jetpack\\Stats_Admin\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-status.php',
     'Automattic\\Jetpack\\Status\\Cache' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-cache.php',
