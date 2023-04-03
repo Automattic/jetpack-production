@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Dashboard: avoid errors in the Recommendations dashboard.
+- Dashboard: improve upgrade description for users with Akismet already installed and active
 - Stats Widget: Fix incorrect invocation of module-restricted functions
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
