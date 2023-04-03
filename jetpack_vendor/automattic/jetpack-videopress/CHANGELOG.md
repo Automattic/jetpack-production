@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: extract, create and expose usePlayerReady() hook
 - VideoPress: Fix the permission check for the VideoPress stats APIs, to check for manage_options capability.
 - VideoPress: handle max value of the TimestampControl component
+- VideoPress: pause player when previewOnHover enables
 - VideoPress: pick duration from block attribute instead of listening player client
 - VideoPress: store and control TimestampControl value externally
 
