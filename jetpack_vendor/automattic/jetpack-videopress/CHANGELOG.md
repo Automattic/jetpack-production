@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Change hover preview loop duration component to Timestamp control and fix default values
 - VideoPress: extract, create and expose usePlayerReady() hook
 - VideoPress: Fix the permission check for the VideoPress stats APIs, to check for manage_options capability.
+- VideoPress: handle limit-loop duration of the previewOn based on starting point
 - VideoPress: handle max value of the TimestampControl component
 - VideoPress: pause player when previewOnHover enables
 - VideoPress: pick duration from block attribute instead of listening player client
