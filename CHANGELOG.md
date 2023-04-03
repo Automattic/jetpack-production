@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: avoid errors in the Recommendations dashboard.
 - Dashboard: improve upgrade description for users with Akismet already installed and active
 - Fix an issue where Subscribe block on homepage would return as paid if the first blog post was a paid blog (because it is looping)
+- Fix fatal error with Token_Subscription_Service
 - Properly gate the Newsletter feature based on newsletter configuration on the site
 - Return fresh HTML when the users revists after accepting cookies
 - Stats Widget: Fix incorrect invocation of module-restricted functions
