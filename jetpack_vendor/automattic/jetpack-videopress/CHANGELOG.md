@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add video caption to native player
 - VideoPress: Added stats endpoint to fetch the data to be featured on the My Jetpack screen.
 - VideoPress: Add video duration to block attributes
 - VideoPress: Add video preview on hover options to poster and preview panel
