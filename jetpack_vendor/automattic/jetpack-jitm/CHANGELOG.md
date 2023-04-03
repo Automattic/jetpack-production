@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add external link icons in JITM
 
+### Changed
+- Updated package dependencies.
+
 ## [2.3.4] - 2023-03-28
 ### Fixed
 - JITM: Fix button overflow when text length is too big [#29749]

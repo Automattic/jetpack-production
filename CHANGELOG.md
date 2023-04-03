@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Akismet: use product interstitial for upgrades
 - Amended the to-test.md file for non-a11n testers.
 - Stats: remove deprecated Stats functions.
+- Updated package dependencies.
 - Updated the changelog and readme.txt
 
 ## 12.0-beta - 2023-03-28

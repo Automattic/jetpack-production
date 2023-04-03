@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Dashboard finetunings
 - Forms: Include bulk actions menu
 - Updated form responses endpoint to embed available filter data.
+- Updated package dependencies.
 
 ## [0.10.1] - 2023-03-28
 ### Changed

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Async script enqueuing: switch to static method.
+- Updated package dependencies.
 
 ## [1.17.34] - 2023-03-20
 ### Changed
