@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Removed
+- Do not attempt to load non minified files since they are not shipped with the package anymore.
+
 ## [1.51.5] - 2023-03-29
 ### Changed
 - Minor internal updates.
