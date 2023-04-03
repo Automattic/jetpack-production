@@ -8,10 +8,13 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Admin menu: use the latest version of the Jetpack logo.
+- Display the correct newsletter locked content text for paid newsletters
 
 ### Bug fixes
 - Dashboard: avoid errors in the Recommendations dashboard.
 - Dashboard: improve upgrade description for users with Akismet already installed and active
+- Fix an issue where Subscribe block on homepage would return as paid if the first blog post was a paid blog (because it is looping)
+- Properly gate the Newsletter feature based on newsletter configuration on the site
 - Stats Widget: Fix incorrect invocation of module-restricted functions
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
