@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats Widget: Fix incorrect invocation of module-restricted functions
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin Page: simplify Akismet logic to fix display issue.
 - Akismet: use product interstitial for upgrades
 - Amended the to-test.md file for non-a11n testers.
 - Stats: remove deprecated Stats functions.
