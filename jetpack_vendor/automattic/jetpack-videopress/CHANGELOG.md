@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.4-alpha] - unreleased
+## [0.13.5-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -35,6 +35,10 @@ This is an alpha version! The changes listed here are not final.
 - Disable autoplay in the native editor
 - VideoPress: fix debounced callback TimestampControl issue
 - VideoPress block: Address the case of closing/re-opening post with an ongoing video upload.
+
+## [0.13.4] - 2023-04-03
+### Changed
+- Internal updates.
 
 ## [0.13.3] - 2023-03-29
 ### Added
@@ -881,7 +885,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.13.4-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.3...v0.13.4-alpha
+[0.13.5-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.4...v0.13.5-alpha
+[0.13.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.3...v0.13.4
 [0.13.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.2...v0.13.3
 [0.13.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.1...v0.13.2
 [0.13.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.0...v0.13.1

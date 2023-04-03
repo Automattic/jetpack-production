@@ -20,6 +20,10 @@ This is an alpha version! The changes listed here are not final.
 - Updated form responses endpoint to embed available filter data.
 - Updated package dependencies.
 
+## [0.10.2] - 2023-04-03
+### Changed
+- Internal updates.
+
 ## [0.10.1] - 2023-03-28
 ### Changed
 - Minor internal updates.
@@ -145,7 +149,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.11.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.10.1...v0.11.0-alpha
+[0.11.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.10.2...v0.11.0-alpha
+[0.10.2]: https://github.com/automattic/jetpack-forms/compare/v0.10.1...v0.10.2
 [0.10.1]: https://github.com/automattic/jetpack-forms/compare/v0.10.0...v0.10.1
 [0.10.0]: https://github.com/automattic/jetpack-forms/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/automattic/jetpack-forms/compare/v0.8.0...v0.9.0

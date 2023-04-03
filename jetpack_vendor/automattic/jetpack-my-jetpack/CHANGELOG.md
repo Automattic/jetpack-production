@@ -22,6 +22,10 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Change the bottom of My Jetpack screen to use single-column rows on small viewports.
 - Updated package dependencies.
 
+## [2.9.2] - 2023-04-03
+### Changed
+- Internal updates.
+
 ## [2.9.1] - 2023-03-28
 ### Changed
 - Move GoldenTokenModal component to licensing package. [#29748]
@@ -798,7 +802,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.10.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.9.1...2.10.0-alpha
+[2.10.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.9.2...2.10.0-alpha
+[2.9.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.9.1...2.9.2
 [2.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.9.0...2.9.1
 [2.9.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.8.1...2.9.0
 [2.8.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.8.0...2.8.1
