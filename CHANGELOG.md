@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: improve upgrade description for users with Akismet already installed and active
 - Fix an issue where Subscribe block on homepage would return as paid if the first blog post was a paid blog (because it is looping)
 - Properly gate the Newsletter feature based on newsletter configuration on the site
+- Return fresh HTML when the users revists after accepting cookies
 - Stats Widget: Fix incorrect invocation of module-restricted functions
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
