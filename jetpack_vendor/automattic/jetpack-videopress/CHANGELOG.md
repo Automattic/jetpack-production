@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Added stats endpoint to fetch the data to be featured on the My Jetpack screen.
 - VideoPress: Add video duration to block attributes
 - VideoPress: Add video preview on hover options to poster and preview panel
+- VideoPress: change the way to propagate the Preview On Hover data
+- VideoPress: enqueue the VideoPress IFrame API asset file
+- VideoPress: first previewOnHover implementation in the front-end
 - VideoPress: Persist hover preview values on markup for video block
 - VideoPress: play/pause video when previewOnHover is enabled
 - VideoPress: replace local state by using block attributes for the PreviewOnHover feature
