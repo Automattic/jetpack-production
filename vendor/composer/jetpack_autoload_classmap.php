@@ -726,6 +726,10 @@ return array(
 		'version' => '0.6.4.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-notices.php'
 	),
+	'Automattic\\Jetpack\\Stats_Admin\\Odyssey_Assets' => array(
+		'version' => '0.6.4.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-odyssey-assets.php'
+	),
 	'Automattic\\Jetpack\\Stats_Admin\\Odyssey_Config_Data' => array(
 		'version' => '0.6.4.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-odyssey-config-data.php'

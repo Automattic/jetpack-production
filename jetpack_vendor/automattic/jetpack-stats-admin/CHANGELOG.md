@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Stats Admin: moved Odyssey assets loading to separate class
 - Stats Admin: refactoring config data code to Odyssey_Config_Data
 
 ## 0.6.3 - 2023-03-20
