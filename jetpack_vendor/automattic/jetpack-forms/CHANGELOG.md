@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated form responses endpoint to embed available filter data.
 - Updated package dependencies.
 
+### Fixed
+- Made feedback bulk actions more explicit and easier to work with.
+
 ## [0.10.2] - 2023-04-03
 ### Changed
 - Internal updates.
