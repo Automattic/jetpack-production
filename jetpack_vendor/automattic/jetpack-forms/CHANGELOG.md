@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Disregard post_status when calculating available filters for form responses.
 - Forms: Dashboard finetunings
 - Forms: Include bulk actions menu
+- Forms: Update Dashboard inbox columns responsiveness and sticky items style
 - Updated form responses endpoint to embed available filter data.
 - Updated package dependencies.
 
