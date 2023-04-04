@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Admin menu: use the latest version of the Jetpack logo.
+- Display the correct gated text for newsletters when Stripe is disconnected
 - Display the correct newsletter locked content text for paid newsletters
 
 ### Bug fixes
