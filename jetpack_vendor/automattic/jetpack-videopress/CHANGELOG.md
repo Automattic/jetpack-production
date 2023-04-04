@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: pick duration from block attribute instead of listening player client
 - VideoPress: playback video into the boundaries defined the previewOnHover
 - VideoPress: store and control TimestampControl value externally
+- VideoPress block: Refactor useSyncMedia hook
 
 ### Fixed
 - Disable autoplay in the native editor
