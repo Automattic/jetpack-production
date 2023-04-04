@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add support for wp_block, wp_navigation, wp_template, wp_template_part import.
+- Align all HTTP codes to a standard 409.
 
 ## [0.5.0] - 2023-03-29
 ### Added
