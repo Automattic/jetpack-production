@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: handle max value of the TimestampControl component
 - VideoPress: pause player when previewOnHover enables
 - VideoPress: pick duration from block attribute instead of listening player client
+- VideoPress: playback video into the boundaries defined the previewOnHover
 - VideoPress: store and control TimestampControl value externally
 
 ### Fixed
