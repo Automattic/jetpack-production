@@ -5,22 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.10.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.10.0] - 2023-04-04
 ### Added
-- My Jetpack: Adds a selector, reducer and resolver machinery to fetch product stats.
-- My Jetpack: Enhance Product Card
-- My Jetpack: Introduce menu in Product Card
+- My Jetpack: Adds a selector, reducer and resolver machinery to fetch product stats. [#29764]
+- My Jetpack: Enhance Product Card [#29787]
+- My Jetpack: Introduce menu in Product Card [#29815]
 
 ### Changed
 - * Updated add-anti-spam path to add-akismet to match the product key
   * Updated product interstitial component to accept an existingLicenseKeyUrl
   * Updated product interstitial component to display a product name instead of a title where preferProductName is set
-  * Make is_plugin_active available from the API
-- My Jetpack: Change the bottom of My Jetpack screen to use single-column rows on small viewports.
-- Updated package dependencies.
+  * Make is_plugin_active available from the API [#29598]
+- My Jetpack: Change the bottom of My Jetpack screen to use single-column rows on small viewports. [#29844]
+- Updated package dependencies. [#29854]
 
 ## [2.9.2] - 2023-04-03
 ### Changed
@@ -802,7 +799,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.10.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.9.2...2.10.0-alpha
+[2.10.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.9.2...2.10.0
 [2.9.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.9.1...2.9.2
 [2.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.9.0...2.9.1
 [2.9.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.8.1...2.9.0
