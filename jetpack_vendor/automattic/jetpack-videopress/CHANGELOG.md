@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: check if beta extensions are enabled when saving VideoPress video block
 - VideoPress: enqueue the VideoPress IFrame API asset file
 - VideoPress: first previewOnHover implementation in the front-end
+- VideoPress block: Add native version of `getMediaToken` function to fetch the VideoPress token.
 
 ### Changed
 - VideoPress: update URL and add version when enqueuing VideoPress IFrame API file
