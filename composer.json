@@ -43,11 +43,11 @@
 		"automattic/jetpack-redirect": "^1.7.24",
 		"automattic/jetpack-roles": "^1.4.22",
 		"automattic/jetpack-search": "^0.34.4",
-		"automattic/jetpack-stats": "^0.6.1-alpha",
+		"automattic/jetpack-stats": "^0.6.1",
 		"automattic/jetpack-stats-admin": "^0.6.4",
 		"automattic/jetpack-status": "^1.16.3",
 		"automattic/jetpack-sync": "^1.47.6",
-		"automattic/jetpack-videopress": "^0.13.6-alpha",
+		"automattic/jetpack-videopress": "^0.13.7-alpha",
 		"automattic/jetpack-waf": "^0.11.1",
 		"automattic/jetpack-wordads": "^0.2.38",
 		"nojimage/twitter-text-php": "3.1.2"
@@ -92,7 +92,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_1_a_2",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_1_a_4",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true

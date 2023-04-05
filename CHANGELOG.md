@@ -2,9 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.1-a.2 - unreleased
+## 12.1-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+## 12.1-a.3 - 2023-04-05
+### Bug fixes
+- Assets: avoid fatal error with outdated package versions. [#29947]
 
 ## 12.1-a.1 - 2023-04-04
 ### Enhancements
