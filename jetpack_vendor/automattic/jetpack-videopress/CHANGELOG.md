@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: update URL and add version when enqueuing VideoPress IFrame API file
 
 ### Fixed
+- VideoPress: Add empty native version of `PosterPanel` component.
 - VideoPress: Fix minimum loop duration and default hover values
 
 ## [0.13.5] - 2023-04-04
