@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: enqueue the VideoPress IFrame API asset file
 - VideoPress: first previewOnHover implementation in the front-end
 
+### Changed
+- VideoPress: update URL and add version when enqueuing VideoPress IFrame API file
+
 ## [0.13.5] - 2023-04-04
 ### Added
 - Add video caption to native player [#29765]
