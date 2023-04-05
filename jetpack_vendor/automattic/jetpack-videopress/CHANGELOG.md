@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: change the way to propagate the Preview On Hover data
+- VideoPress: check if beta extensions are enabled when saving VideoPress video block
 - VideoPress: enqueue the VideoPress IFrame API asset file
 - VideoPress: first previewOnHover implementation in the front-end
 
