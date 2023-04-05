@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress block: Add native version of `getMediaToken` function to fetch the VideoPress token.
 
 ### Changed
+- VideoPress: turn playback "controls" off when pOH feature is enabled
 - VideoPress: update URL and add version when enqueuing VideoPress IFrame API file
 
 ### Fixed
