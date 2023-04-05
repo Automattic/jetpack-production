@@ -1926,17 +1926,17 @@
         },
         {
             "name": "automattic/jetpack-stats",
-            "version": "v0.6.0",
-            "version_normalized": "0.6.0.0",
+            "version": "v0.6.1",
+            "version_normalized": "0.6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-stats.git",
-                "reference": "82b800ad7643e53f55d7288331821040e7468751"
+                "reference": "8a9532bbc14266d3de6a73408834e9fed51afc2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-stats/zipball/82b800ad7643e53f55d7288331821040e7468751",
-                "reference": "82b800ad7643e53f55d7288331821040e7468751",
+                "url": "https://api.github.com/repos/Automattic/jetpack-stats/zipball/8a9532bbc14266d3de6a73408834e9fed51afc2d",
+                "reference": "8a9532bbc14266d3de6a73408834e9fed51afc2d",
                 "shasum": ""
             },
             "require": {
@@ -1950,7 +1950,7 @@
                 "automattic/wordbless": "dev-master",
                 "yoast/phpunit-polyfills": "1.0.4"
             },
-            "time": "2023-04-04T21:33:32+00:00",
+            "time": "2023-04-05T19:25:21+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1975,7 +1975,7 @@
             ],
             "description": "Collect valuable traffic stats and insights.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-stats/tree/v0.6.0"
+                "source": "https://github.com/Automattic/jetpack-stats/tree/v0.6.1"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-stats"
         },
@@ -2150,17 +2150,17 @@
         },
         {
             "name": "automattic/jetpack-videopress",
-            "version": "v0.13.5",
-            "version_normalized": "0.13.5.0",
+            "version": "v0.13.6",
+            "version_normalized": "0.13.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-videopress.git",
-                "reference": "07c8b23b33c756004990b8a426bec1584daaf84c"
+                "reference": "27baec8982f8b110395433368441fcd697ce1367"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-videopress/zipball/07c8b23b33c756004990b8a426bec1584daaf84c",
-                "reference": "07c8b23b33c756004990b8a426bec1584daaf84c",
+                "url": "https://api.github.com/repos/Automattic/jetpack-videopress/zipball/27baec8982f8b110395433368441fcd697ce1367",
+                "reference": "27baec8982f8b110395433368441fcd697ce1367",
                 "shasum": ""
             },
             "require": {
@@ -2175,7 +2175,7 @@
                 "brain/monkey": "2.6.1",
                 "yoast/phpunit-polyfills": "1.0.4"
             },
-            "time": "2023-04-04T21:33:52+00:00",
+            "time": "2023-04-05T19:25:39+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -2203,7 +2203,7 @@
             ],
             "description": "VideoPress package",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-videopress/tree/v0.13.5"
+                "source": "https://github.com/Automattic/jetpack-videopress/tree/v0.13.6"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-videopress"
         },
