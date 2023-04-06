@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - VideoPress: expose the Preview On Hover data dynamically
 - VideoPress: set video player position according to "starting point" and "duration"
+- VideoPress: support tooltip in TimestampControl component
 - VideoPress: turn playback "controls" off when pOH feature is enabled
 
 ## [0.13.6] - 2023-04-05
