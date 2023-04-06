@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: Introduce absent_with_plan status
 
+### Changed
+- My Jetpack: Turn VideoPress into a Hybrid product to handle it as module and as standalone plugin.
+
 ## [2.10.0] - 2023-04-04
 ### Added
 - My Jetpack: Adds a selector, reducer and resolver machinery to fetch product stats. [#29764]
