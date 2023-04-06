@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add help to the "Starting point" range control
 
 ### Changed
+- VideoPress: expose the Preview On Hover data dynamically
 - VideoPress: set video player position according to "starting point" and "duration"
 - VideoPress: turn playback "controls" off when pOH feature is enabled
 
