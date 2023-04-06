@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Implemented a "tabbed" variation for static filters. This adds tabs on top of the results for each filter group.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds Odyssey Widget behind odyssey_widget=1 for WP Dashboard
 
