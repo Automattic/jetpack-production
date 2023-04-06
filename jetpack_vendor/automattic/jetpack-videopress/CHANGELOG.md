@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: add help to the "Starting point" range control
+- VideoPress block: Add token to play private videos.
 
 ### Changed
 - VideoPress: expose the Preview On Hover data dynamically
