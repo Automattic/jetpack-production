@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Add line on top of the response list when the actions menu is sticky
 - Forms: Dashboard finetunings round 2
+- Forms: Update source column styles and trash action label
 
 ## [0.11.0] - 2023-04-04
 ### Added
