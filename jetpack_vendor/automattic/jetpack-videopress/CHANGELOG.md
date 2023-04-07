@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress: Add fallback for experimental features for hover preview
 - VideoPress: add help to the "Starting point" range control
 - VideoPress: add marksEvery to the TimestampControl component
 - VideoPress block: Add token to play private videos.
