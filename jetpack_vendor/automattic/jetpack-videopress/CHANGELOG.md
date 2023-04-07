@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress block: Add token to play private videos.
 
 ### Changed
+- VideoPress: Do not force-enable the Stats module inside the VideoPress plugin.
 - VideoPress: expose the Preview On Hover data dynamically
 - VideoPress: set video player position according to "starting point" and "duration"
 - VideoPress: support tooltip in TimestampControl component
