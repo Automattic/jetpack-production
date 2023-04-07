@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: Turn Search into a hybrid product to handle it as module and as standalone plugin.
+- My Jetpack: Turn Social into a hybrid product to handle it as module and as standalone plugin.
 - My Jetpack: Turn VideoPress into a Hybrid product to handle it as module and as standalone plugin.
 
 ## [2.10.0] - 2023-04-04
