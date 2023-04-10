@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Remove the Anchor.fm component on the post-publish sidebar
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated package dependencies.
+
 ## 12.1-a.5 - 2023-04-10
 ### Enhancements
 - Implemented a "tabbed" variation for static filters. This adds tabs on top of the results for each filter group. [#29811]
