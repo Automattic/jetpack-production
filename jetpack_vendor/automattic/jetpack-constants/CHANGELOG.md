@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.22-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add Jetpack Autoloader package suggestion.
+
 ## [1.6.21] - 2023-02-20
 ### Changed
 - Minor internal updates.
@@ -146,6 +153,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Finish the constants package
 
+[1.6.22-alpha]: https://github.com/Automattic/jetpack-constants/compare/v1.6.21...v1.6.22-alpha
 [1.6.21]: https://github.com/Automattic/jetpack-constants/compare/v1.6.20...v1.6.21
 [1.6.20]: https://github.com/Automattic/jetpack-constants/compare/v1.6.19...v1.6.20
 [1.6.19]: https://github.com/Automattic/jetpack-constants/compare/v1.6.18...v1.6.19

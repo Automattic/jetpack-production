@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add Jetpack Autoloader package suggestion.
+
 ### Changed
 - Forms: Add line on top of the response list when the actions menu is sticky
 - Forms: Dashboard finetunings round 2

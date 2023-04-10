@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add Jetpack Autoloader package suggestion.
 - Implemented a "tabbed" variation for static filters. This adds tabs on top of the results for each filter group.
 
 ## [0.34.4] - 2023-04-04
