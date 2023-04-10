@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: remove duplicated code when saving video block
 
+### Fixed
+- VideoPress: Fix minimum starting point for preview on hover feature with very short videos
+
 ## [0.13.7] - 2023-04-10
 ### Added
 - Add Jetpack Autoloader package suggestion. [#29988]
