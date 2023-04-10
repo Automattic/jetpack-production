@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - VideoPress: Fix minimum starting point for preview on hover feature with very short videos
+- VideoPress: fix setting front-end css file issue for the VideoPress video block
 
 ## [0.13.7] - 2023-04-10
 ### Added
