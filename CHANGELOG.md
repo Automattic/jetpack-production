@@ -14,7 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ## 12.1-a.5 - 2023-04-10
 ### Enhancements
-- Implemented a "tabbed" variation for static filters. This adds tabs on top of the results for each filter group. [#29811]
+- Search: implemented a "tabbed" variation for static filters, adding tabs on top of the results for each filter group. [#29811]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds Odyssey Widget behind odyssey_widget=1 for WP Dashboard [#29929]
