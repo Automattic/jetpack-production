@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.5.2] - 2023-04-10
 ### Added
-- Add Jetpack Autoloader package suggestion.
+- Add Jetpack Autoloader package suggestion. [#29988]
 
 ## [0.5.1] - 2023-02-20
 ### Changed
@@ -81,7 +78,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Adds a provider for Google Fonts using the new Webfonts API in Gutenberg
 
-[0.5.2-alpha]: https://github.com/Automattic/jetpack-google-fonts-provider/compare/v0.5.1...v0.5.2-alpha
+[0.5.2]: https://github.com/Automattic/jetpack-google-fonts-provider/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/Automattic/jetpack-google-fonts-provider/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/Automattic/jetpack-google-fonts-provider/compare/v0.4.2...v0.5.0
 [0.4.2]: https://github.com/Automattic/jetpack-google-fonts-provider/compare/v0.4.1...v0.4.2

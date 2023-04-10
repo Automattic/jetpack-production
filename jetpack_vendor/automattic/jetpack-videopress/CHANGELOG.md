@@ -5,25 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.7-alpha] - unreleased
+## [0.13.8-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Add Jetpack Autoloader package suggestion.
-- VideoPress: Add fallback for experimental features for hover preview
-- VideoPress: add help to the "Starting point" range control
-- VideoPress: add marksEvery to the TimestampControl component
 - VideoPress: remove duplicated code when saving video block
-- VideoPress block: Add token to play private videos.
+
+## [0.13.7] - 2023-04-10
+### Added
+- Add Jetpack Autoloader package suggestion. [#29988]
+- VideoPress: Add fallback for experimental features for hover preview [#29974]
+- VideoPress: add help to the "Starting point" range control [#29950]
+- VideoPress: add marksEvery to the TimestampControl component [#29955]
+- VideoPress block: Add token to play private videos. [#29933]
 
 ### Changed
-- VideoPress: Do not force-enable the Stats module inside the VideoPress plugin.
-- VideoPress: expose the Preview On Hover data dynamically
-- VideoPress: set video player position according to "starting point" and "duration"
-- VideoPress: support tooltip in TimestampControl component
-- VideoPress: turn playback "controls" off when pOH feature is enabled
-- VideoPress block: Divide poster functionality from the useSyncMedia hook into a smaller hook.
+- VideoPress: Do not force-enable the Stats module inside the VideoPress plugin. [#29966]
+- VideoPress: expose the Preview On Hover data dynamically [#29939]
+- VideoPress: set video player position according to "starting point" and "duration" [#29954]
+- VideoPress: support tooltip in TimestampControl component [#29967]
+- VideoPress: turn playback "controls" off when pOH feature is enabled [#29949]
+- VideoPress block: Divide poster functionality from the useSyncMedia hook into a smaller hook. [#29973]
 
 ## [0.13.6] - 2023-04-05
 ### Added
@@ -920,7 +923,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.13.7-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.6...v0.13.7-alpha
+[0.13.8-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.7...v0.13.8-alpha
+[0.13.7]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.6...v0.13.7
 [0.13.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.5...v0.13.6
 [0.13.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.4...v0.13.5
 [0.13.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.3...v0.13.4

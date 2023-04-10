@@ -2,15 +2,16 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.1-a.4 - unreleased
+## 12.1-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 12.1-a.5 - 2023-04-10
 ### Enhancements
-- Implemented a "tabbed" variation for static filters. This adds tabs on top of the results for each filter group.
+- Implemented a "tabbed" variation for static filters. This adds tabs on top of the results for each filter group. [#29811]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Adds Odyssey Widget behind odyssey_widget=1 for WP Dashboard
+- Adds Odyssey Widget behind odyssey_widget=1 for WP Dashboard [#29929]
 
 ## 12.1-a.3 - 2023-04-05
 ### Bug fixes
