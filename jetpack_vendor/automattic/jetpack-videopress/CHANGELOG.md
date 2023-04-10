@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add fallback for experimental features for hover preview
 - VideoPress: add help to the "Starting point" range control
 - VideoPress: add marksEvery to the TimestampControl component
+- VideoPress: remove duplicated code when saving video block
 - VideoPress block: Add token to play private videos.
 
 ### Changed
