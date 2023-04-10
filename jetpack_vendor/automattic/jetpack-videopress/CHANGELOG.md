@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: remove duplicated code when saving video block
 
+### Changed
+- VideoPress block: Migrate native TS files to JS files.
+
 ### Fixed
 - VideoPress: Fix minimum starting point for preview on hover feature with very short videos
 
