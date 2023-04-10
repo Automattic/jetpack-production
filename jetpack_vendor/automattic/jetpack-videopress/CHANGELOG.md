@@ -5,16 +5,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.8-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Added
-- VideoPress: remove duplicated code when saving video block
-
-### Fixed
-- VideoPress: Fix minimum starting point for preview on hover feature with very short videos
-
 ## [0.13.7] - 2023-04-10
 ### Added
 - Add Jetpack Autoloader package suggestion. [#29988]
@@ -926,7 +916,6 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.13.8-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.7...v0.13.8-alpha
 [0.13.7]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.6...v0.13.7
 [0.13.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.5...v0.13.6
 [0.13.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.4...v0.13.5
