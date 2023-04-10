@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: remove duplicated code when saving video block
 
 ### Changed
+- Updated package dependencies.
 - VideoPress block: Migrate native TS files to JS files.
 
 ### Fixed

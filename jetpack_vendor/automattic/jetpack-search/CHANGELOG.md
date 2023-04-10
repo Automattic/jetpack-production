@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.35.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [0.35.0] - 2023-04-10
 ### Added
 - Add Jetpack Autoloader package suggestion. [#29988]
@@ -722,6 +729,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
+[0.35.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.35.0...v0.35.1-alpha
 [0.35.0]: https://github.com/Automattic/jetpack-search/compare/v0.34.4...v0.35.0
 [0.34.4]: https://github.com/Automattic/jetpack-search/compare/v0.34.3...v0.34.4
 [0.34.3]: https://github.com/Automattic/jetpack-search/compare/v0.34.2...v0.34.3
