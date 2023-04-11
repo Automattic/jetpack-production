@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Added a 'Check for spam' button to the new feedback dashboard.
+
 ### Changed
 - Forms: Update Forms child blocks to allow any transformation between the blocks
 - Updated package dependencies.
