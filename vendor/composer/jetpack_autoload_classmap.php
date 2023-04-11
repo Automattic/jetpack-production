@@ -1050,6 +1050,10 @@ return array(
 		'version' => '0.13.8.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader-rest-endpoints.php'
 	),
+	'Automattic\\Jetpack\\VideoPress\\Utils' => array(
+		'version' => '0.13.8.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-utils.php'
+	),
 	'Automattic\\Jetpack\\VideoPress\\VideoPressToken' => array(
 		'version' => '0.13.8.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopresstoken.php'
