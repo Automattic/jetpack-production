@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Ad missing TOS in Jetpack interstitial.
 - My Jetpack: Expose information about standalone plugin status on My Jetpack product initial state.
 
 ### Changed

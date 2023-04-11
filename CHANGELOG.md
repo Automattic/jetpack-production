@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update Forms child blocks to allow any transformation between the blocks
 - Remove the Anchor.fm component on the post-publish sidebar
 
+### Bug fixes
+- Add missing TOS in Jetpack interstitial.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updated package dependencies.
 
