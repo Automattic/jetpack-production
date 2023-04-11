@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Expose information about standalone plugin status on My Jetpack product initial state.
 
 ### Changed
+- My Jetpack: Adjustments in Product Card
 - Updated package dependencies.
 
 ## [2.10.1] - 2023-04-10
