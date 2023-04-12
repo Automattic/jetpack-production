@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Ad missing TOS in Jetpack interstitial.
+- My Jetpack: Add endpoint to install the standalone plugin for hybrid products.
 - My Jetpack: Expose information about standalone plugin status on My Jetpack product initial state.
 
 ### Changed
