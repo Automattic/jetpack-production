@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Site Settings API: Fixed being able to update `subscription_options` for non-standard cases where the object contains more than 2 keys
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- In `Jetpack::configure()`, only check `is_connection_ready()` once.
 - Updated package dependencies.
 
 ## 12.1-a.5 - 2023-04-10
