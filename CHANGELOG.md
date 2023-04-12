@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Add missing TOS in Jetpack interstitial.
 - Button Block: ensure no borders are added by default browser styles.
+- Site Settings API: Fixed being able to update `subscription_options` for non-standard cases where the object contains more than 2 keys
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updated package dependencies.
