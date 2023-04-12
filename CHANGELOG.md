@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - In `Jetpack::configure()`, only check `is_connection_ready()` once.
+- Jetpack_debugger_enqueue_site_health_scripts(): Only load full-sync Module on site-health.php
 - Updated package dependencies.
 
 ## 12.1-a.5 - 2023-04-10
