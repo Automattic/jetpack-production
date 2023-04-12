@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Update Forms child blocks to allow any transformation between the blocks
+- Forms: Update forms dashboard body font-size to 14px
 - Updated package dependencies.
 
 ### Fixed
