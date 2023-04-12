@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add Utils PHP class
 - VideoPress: remove duplicated code when saving video block
+- VideoPress block: Add support for fetching VideoPress metadata on native.
 
 ### Changed
 - Updated package dependencies.
