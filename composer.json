@@ -30,7 +30,7 @@
 		"automattic/jetpack-google-fonts-provider": "^0.5.2",
 		"automattic/jetpack-identity-crisis": "^0.8.44-alpha",
 		"automattic/jetpack-ip": "^0.1.2",
-		"automattic/jetpack-import": "^0.6.1",
+		"automattic/jetpack-import": "^0.7.0-alpha",
 		"automattic/jetpack-jitm": "^2.3.6",
 		"automattic/jetpack-lazy-images": "^2.1.36",
 		"automattic/jetpack-licensing": "^1.8.2",
