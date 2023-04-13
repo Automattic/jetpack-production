@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: render VideoPress video block 100% dynamically
 - VideoPress block: Migrate native TS files to JS files.
 
 ### Fixed
