@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Expose information about standalone plugin status on My Jetpack product initial state.
 
 ### Changed
+- Backup and Scan: redirect after checkout to Jetpack recommendations page if Jetpack plugin is active. Otherwise, redirect back to plugin admin page.
 - My Jetpack: Adjustments in Product Card
 - Updated package dependencies.
 
