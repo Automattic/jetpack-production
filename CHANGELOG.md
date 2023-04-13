@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - In `Jetpack::configure()`, only check `is_connection_ready()` once.
 - Jetpack_debugger_enqueue_site_health_scripts(): Only load full-sync Module on site-health.php
 - Updated package dependencies.
+- Update Jetpack code to use WPCOM trait for handling production-staging relation
 
 ## 12.1-a.5 - 2023-04-10
 ### Enhancements
