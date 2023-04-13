@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: add Utils PHP class
 - VideoPress: remove duplicated code when saving video block
 - VideoPress block: Add support for fetching VideoPress metadata on native.
+- VideoPress block: Implement metadata syncing on native
 
 ### Changed
 - Refactor native Player component to handle the embed preview
