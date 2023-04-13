@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Forms: Fix Forms styles when inside Cover blocks
 - Forms: Prevent response details meta values line breaking
 
 ## [0.12.0] - 2023-04-10
