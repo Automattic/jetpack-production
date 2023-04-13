@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Refactor native Player component to handle the embed preview
 - Updated package dependencies.
+- VideoPress: do not save video block representation
 - VideoPress: render VideoPress video block 100% dynamically
 - VideoPress block: Migrate native TS files to JS files.
 
