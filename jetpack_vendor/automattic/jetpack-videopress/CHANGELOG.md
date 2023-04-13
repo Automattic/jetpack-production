@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress block: Migrate native TS files to JS files.
 
 ### Fixed
+- VideoPress: check guid attribute before to get the VideoPress video url
 - VideoPress: fix helper VideoPress function when generating URL
 - VideoPress: Fix minimum starting point for preview on hover feature with very short videos
 - VideoPress: fix setting front-end css file issue for the VideoPress video block
