@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add Utils PHP class
 - VideoPress: remove duplicated code when saving video block
+- VideoPress: Update poster frame by playing preview video
 - VideoPress block: Add support for fetching VideoPress metadata on native.
 - VideoPress block: Implement metadata syncing on native
 
