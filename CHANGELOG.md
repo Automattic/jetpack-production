@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Site Settings API: Fixed being able to update `subscription_options` for non-standard cases where the object contains more than 2 keys
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: update block cli structure to only use strings in descriptions
 - In `Jetpack::configure()`, only check `is_connection_ready()` once.
 - Jetpack_debugger_enqueue_site_health_scripts(): Only load full-sync Module on site-health.php
 - Move i18n of module tags closer to the output.
