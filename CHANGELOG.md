@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Dashboard: update the links to the Mobile apps to allow opening   links in the appropriate app store right away.
 - Forms: Update Forms child blocks to allow any transformation between the blocks
+- Header and navigation visual refresh.
 
 ### Bug fixes
 - Add missing TOS in Jetpack interstitial.
