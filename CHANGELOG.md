@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack_debugger_enqueue_site_health_scripts(): Only load full-sync Module on site-health.php
 - Move i18n of module tags closer to the output.
 - Only shows convert to audio cta after publishing a post in blogs that are connected to Anchor.fm.
+- Switches `is_wpcom_staging_site()` to our custom function instead of a blog sticker.
 - Updated package dependencies.
 - Update Jetpack code to use WPCOM trait for handling production-staging relation
 
