@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added a 'Check for spam' button to the new feedback dashboard.
+- Added style overrides for the forms dashboard on WP.com
 
 ### Changed
 - Forms: Update Forms child blocks to allow any transformation between the blocks
