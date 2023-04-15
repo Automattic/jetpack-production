@@ -122,6 +122,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_1_a_6
         'Automattic\\Jetpack\\Import\\Endpoints\\Category' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-category.php',
         'Automattic\\Jetpack\\Import\\Endpoints\\Comment' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-comment.php',
         'Automattic\\Jetpack\\Import\\Endpoints\\Custom_CSS' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-custom-css.php',
+        'Automattic\\Jetpack\\Import\\Endpoints\\End' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-end.php',
         'Automattic\\Jetpack\\Import\\Endpoints\\Global_Style' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-global-style.php',
         'Automattic\\Jetpack\\Import\\Endpoints\\Import' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/trait-import.php',
         'Automattic\\Jetpack\\Import\\Endpoints\\Import_ID' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/trait-import-id.php',
