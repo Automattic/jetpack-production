@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update Forms child blocks to allow any transformation between the blocks
 - Header and navigation visual refresh.
 
+### Improved compatibility
+- General: Jetpack now requires WordPress version 6.1.
+
 ### Bug fixes
 - Add missing TOS in Jetpack interstitial.
 - Button Block: ensure no borders are added by default browser styles.
