@@ -5,30 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.8-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.13.8] - 2023-04-17
 ### Added
-- VideoPress: add Utils PHP class
-- VideoPress: remove duplicated code when saving video block
-- VideoPress: Update poster frame by playing preview video
-- VideoPress block: Add support for fetching VideoPress metadata on native.
-- VideoPress block: Implement metadata syncing on native
+- VideoPress: add Utils PHP class [#30033]
+- VideoPress: remove duplicated code when saving video block [#29993]
+- VideoPress: Update poster frame by playing preview video [#30022]
+- VideoPress block: Add support for fetching VideoPress metadata on native. [#29997]
+- VideoPress block: Implement metadata syncing on native [#29996]
 
 ### Changed
-- Refactor native Player component to handle the embed preview
-- Updated package dependencies.
-- VideoPress: do not save video block representation
-- VideoPress: render VideoPress video block 100% dynamically
-- VideoPress block: Migrate native TS files to JS files.
+- Refactor native Player component to handle the embed preview [#30062]
+- Updated package dependencies. [#30019]
+- VideoPress: do not save video block representation [#30081]
+- VideoPress: render VideoPress video block 100% dynamically [#30036]
+- VideoPress block: Migrate native TS files to JS files. [#29894]
 
 ### Fixed
-- Disable zoom on native player
-- VideoPress: check guid attribute before to get the VideoPress video url
-- VideoPress: fix helper VideoPress function when generating URL
-- VideoPress: Fix minimum starting point for preview on hover feature with very short videos
-- VideoPress: fix setting front-end css file issue for the VideoPress video block
+- Disable zoom on native player [#30020]
+- VideoPress: check guid attribute before to get the VideoPress video url [#30090]
+- VideoPress: fix helper VideoPress function when generating URL [#30035]
+- VideoPress: Fix minimum starting point for preview on hover feature with very short videos [#29994]
+- VideoPress: fix setting front-end css file issue for the VideoPress video block [#30016]
 
 ## [0.13.7] - 2023-04-10
 ### Added
@@ -941,7 +938,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.13.8-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.7...v0.13.8-alpha
+[0.13.8]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.7...v0.13.8
 [0.13.7]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.6...v0.13.7
 [0.13.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.5...v0.13.6
 [0.13.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.4...v0.13.5

@@ -2,7 +2,7 @@
 /**
  * Jetpack AI Chat.
  *
- * @since 12.1-a.6
+ * @since 12.1
  *
  * @package automattic/jetpack
  */
