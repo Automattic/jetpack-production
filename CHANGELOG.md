@@ -2,34 +2,36 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.1-a.6 - unreleased
+## 12.1-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 12.1-a.7 - 2023-04-17
 ### Enhancements
-- Added an experimental AI chat block
-- Dashboard: update the links to the Mobile apps to allow opening   links in the appropriate app store right away.
-- Forms: Update Forms child blocks to allow any transformation between the blocks
-- Header and navigation visual refresh.
+- Added an experimental AI chat block [#30077]
+- Dashboard: update the links to the Mobile apps to allow opening   links in the appropriate app store right away. [#30063]
+- Forms: Update Forms child blocks to allow any transformation between the blocks [#29978]
+- Header and navigation visual refresh. [#29980]
 
 ### Improved compatibility
-- General: Jetpack now requires WordPress version 6.1.
+- General: Jetpack now requires WordPress version 6.1. [#30120]
 
 ### Bug fixes
-- Add missing TOS in Jetpack interstitial.
-- Button Block: ensure no borders are added by default browser styles.
-- Forms: Fix Forms styles when inside Cover blocks
-- Site Settings API: Fixed being able to update `subscription_options` for non-standard cases where the object contains more than 2 keys
+- Add missing TOS in Jetpack interstitial. [#29683]
+- Button Block: ensure no borders are added by default browser styles. [#24646]
+- Forms: Fix Forms styles when inside Cover blocks [#30075]
+- Site Settings API: Fixed being able to update `subscription_options` for non-standard cases where the object contains more than 2 keys [#30026]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Blocks: update block cli structure to only use strings in descriptions
-- In `Jetpack::configure()`, only check `is_connection_ready()` once.
-- Jetpack_debugger_enqueue_site_health_scripts(): Only load full-sync Module on site-health.php
-- Move i18n of module tags closer to the output.
-- Only shows convert to audio cta after publishing a post in blogs that are connected to Anchor.fm.
-- Switches `is_wpcom_staging_site()` to our custom function instead of a blog sticker.
-- Updated package dependencies.
-- Update Jetpack code to use WPCOM trait for handling production-staging relation
+- Blocks: update block cli structure to only use strings in descriptions [#30079]
+- In `Jetpack::configure()`, only check `is_connection_ready()` once. [#30068]
+- Jetpack_debugger_enqueue_site_health_scripts(): Only load full-sync Module on site-health.php [#30070]
+- Move i18n of module tags closer to the output. [#30067]
+- Only shows convert to audio cta after publishing a post in blogs that are connected to Anchor.fm. [#30084]
+- Switches `is_wpcom_staging_site()` to our custom function instead of a blog sticker. [#30093]
+- Updated package dependencies. [#30002]
+- Updated package dependencies. [#30019]
+- Update Jetpack code to use WPCOM trait for handling production-staging relation [#29981]
 
 ## 12.1-a.5 - 2023-04-10
 ### Enhancements
