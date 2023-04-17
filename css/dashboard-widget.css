@@ -152,7 +152,10 @@ https://github.com/thoughtbot/bourbon
 }
 #jetpack_summary_widget .inside #dashboard_stats #stats-info p {
   margin: 0 0 0.25em;
-  color: #999;
+  color: var(--jp-gray-40);
+}
+#jetpack_summary_widget .inside #dashboard_stats #stats-info p.nothing {
+  color: var(--jp-gray-60);
 }
 #jetpack_summary_widget .inside #dashboard_stats #stats-info p.widget-loading {
   margin: 1em 0 0;
@@ -176,10 +179,19 @@ https://github.com/thoughtbot/bourbon
   padding: 1em 1.5em 1em 1.5em;
   overflow: hidden;
   display: grid;
-  gap: 1em 1em;
-  grid-template-areas: "header header" "posts searches";
-  grid-template-columns: 1fr 1fr;
+  row-gap: 1em;
+  grid-template-areas: "header" "content";
   grid-template-rows: min-content min-content;
+}
+#jetpack_summary_widget .stats-info-content {
+  grid-area: content;
+  display: grid;
+  grid-template-areas: "posts searches";
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+}
+#jetpack_summary_widget .stats-info-content .stats-section {
+  min-width: 0;
 }
 #jetpack_summary_widget #stats-info .stats-info-header {
   grid-area: header;
