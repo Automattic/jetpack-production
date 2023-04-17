@@ -422,6 +422,10 @@ return array(
 		'version' => '2.3.6.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jitm/src/class-rest-api-endpoints.php'
 	),
+	'Automattic\\Jetpack\\Jetpack_CRM_Data' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/class-jetpack-crm-data.php'
+	),
 	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
 		'version' => '2.1.36.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-lazy-images/src/lazy-images.php'
@@ -1218,6 +1222,10 @@ return array(
 		'version' => '1.7.6.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpacktracking.php'
 	),
+	'Jetpack_AMP_Support' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/class.jetpack-amp-support.php'
+	),
 	'Jetpack_Backup' => array(
 		'version' => '1.12.13.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup.php'
@@ -1233,6 +1241,10 @@ return array(
 	'Jetpack_IXR_ClientMulticall' => array(
 		'version' => '1.51.7.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-ixr-clientmulticall.php'
+	),
+	'Jetpack_Modules_Overrides' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/class-jetpack-modules-overrides.php'
 	),
 	'Jetpack_Options' => array(
 		'version' => '1.51.7.0',
