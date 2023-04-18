@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: enqueue IFrame API file based on the embed_oembed_html filter
 
 ### Fixed
 - VideoPress: Pause poster preview video when necessary
