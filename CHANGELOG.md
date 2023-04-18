@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - 3rd-party shims: improve loading performance
+- Update the visibility setting of the Payment block inner blocks on click to ensure that the inner block renders
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changelog editoria
