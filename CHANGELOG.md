@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Make Stats Widget frame sections balanced with long titles.
 
+### Improved compatibility
+- General: remove WordPress 6.0 backwards-compatibility code, now that Jetpack requires WordPress 6.1
+
 ### Bug fixes
 - 3rd-party shims: improve loading performance
 
