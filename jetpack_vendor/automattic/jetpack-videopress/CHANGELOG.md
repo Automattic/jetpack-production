@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add is_videopress_url() helper function
 
+### Changed
+- Updated package dependencies.
+
 ### Fixed
 - VideoPress: Pause poster preview video when necessary
 - VideoPress block: Cover case of GUID being empty after upload finish.

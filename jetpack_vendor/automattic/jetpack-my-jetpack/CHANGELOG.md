@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Add Install/Activate menu actions based on the standalone plugin status.
 - My Jetpack: Add side-effect action to request the standalone plugin installation on the backend.
 
+### Changed
+- Updated package dependencies.
+
 ## [2.10.2] - 2023-04-17
 ### Added
 - Ad missing TOS in Jetpack interstitial. [#29683]
