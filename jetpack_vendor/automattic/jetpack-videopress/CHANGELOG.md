@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: add is_videopress_url() helper function
+- VideoPress: return the player control after user interaction
 
 ### Changed
 - Updated package dependencies.
