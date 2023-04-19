@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: change max duration of the Preview On Hover effect to ten seconds
 - VideoPress: enqueue IFrame API file based on the embed_oembed_html filter
 
 ### Fixed
