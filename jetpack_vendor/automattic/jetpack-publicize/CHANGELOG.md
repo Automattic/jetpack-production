@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Added new option for flagging a post as social post
+
 ### Changed
 - Added dynamic pricing to Social admin page
 - Use attached media for the OpenGraph image
