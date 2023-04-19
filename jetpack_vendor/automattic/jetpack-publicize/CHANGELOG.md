@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Added dynamic pricing to Social admin page
+- Use attached media for the OpenGraph image
 
 ## [0.24.2] - 2023-04-10
 ### Added
