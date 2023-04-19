@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - VideoPress: change max duration of the Preview On Hover effect to ten seconds
 - VideoPress: enqueue IFrame API file based on the embed_oembed_html filter
+- VideoPress: Move out from Stats class
 
 ### Fixed
 - VideoPress: Pause poster preview video when necessary
