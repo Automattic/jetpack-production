@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Add is_block_theme field to the wp/v2/themes endpoint to indicate it the theme is a block-based theme.
 - Make Stats Widget frame sections balanced with long titles.
 - Publicize: Use attached media for the OpenGraph image
+- Stats widget: improve appearance of footer buttons
 
 ### Improved compatibility
 - General: remove WordPress 6.0 backwards-compatibility code, now that Jetpack requires WordPress 6.1
