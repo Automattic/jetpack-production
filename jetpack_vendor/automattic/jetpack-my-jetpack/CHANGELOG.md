@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Add side-effect action to request the standalone plugin installation on the backend.
 
 ### Changed
+- My Jetpack: Connect the standalone plugin menu options so they trigger the installation and activation when clicked.
 - MyJetpack: set the Social standalone page as the default admin one
 - Updated package dependencies.
 
