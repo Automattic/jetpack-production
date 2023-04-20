@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: autoplay video also when Preview On Hover is enabled
 - VideoPress: integrate video poster with Preview On Hover effect
 - VideoPress: return the player control after user interaction
+- VideoPress block: Sync metadata when post is manually saved on native
 
 ### Changed
 - Updated package dependencies.
