@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: add is_videopress_url() helper function
+- VideoPress: add play button when the video block show controls and Preview On Hovwer is enabled
 - VideoPress: autoplay video also when Preview On Hover is enabled
 - VideoPress: integrate video poster with Preview On Hover effect
 - VideoPress: return the player control after user interaction
