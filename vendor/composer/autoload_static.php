@@ -339,7 +339,6 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_1_a_8
         'Automattic\\Jetpack\\WordAds\\REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'JetpackTracking' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpacktracking.php',
-        'Jetpack_AMP_Support' => __DIR__ . '/../..' . '/src/class.jetpack-amp-support.php',
         'Jetpack_Backup' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup.php',
         'Jetpack_Client' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-client.php',
         'Jetpack_IXR_Client' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-ixr-client.php',

@@ -306,7 +306,6 @@ return array(
     'Automattic\\Jetpack\\WordAds\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'JetpackTracking' => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpacktracking.php',
-    'Jetpack_AMP_Support' => $baseDir . '/src/class.jetpack-amp-support.php',
     'Jetpack_Backup' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup.php',
     'Jetpack_Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-client.php',
     'Jetpack_IXR_Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-ixr-client.php',

@@ -1222,10 +1222,6 @@ return array(
 		'version' => '1.7.6.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpacktracking.php'
 	),
-	'Jetpack_AMP_Support' => array(
-		'version' => 'dev-trunk',
-		'path'    => $baseDir . '/src/class.jetpack-amp-support.php'
-	),
 	'Jetpack_Backup' => array(
 		'version' => '1.12.14.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup.php'
