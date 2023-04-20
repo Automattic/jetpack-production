@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Move out from Stats class
 
 ### Fixed
+- Fix native player aspect ratio after uploading a video
 - VideoPress: Pause poster preview video when necessary
 - VideoPress block: Cover case of GUID being empty after upload finish.
 - VideoPress block: Stop saving HTML markup representation.
