@@ -23,6 +23,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: fix visual issue in the poster integration with Preview On Hover
 - VideoPress: Move out from Stats class
 
+### Removed
+- VideoPress: Remove poster frame update on preview play
+
 ### Fixed
 - Fix native player aspect ratio after uploading a video
 - VideoPress: Pause poster preview video when necessary
