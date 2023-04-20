@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: Add Install/Activate menu actions based on the standalone plugin status.
 - My Jetpack: Add side-effect action to request the standalone plugin installation on the backend.
+- My Jetpack: Reload page after standalone action
 
 ### Changed
 - My Jetpack: Connect the standalone plugin menu options so they trigger the installation and activation when clicked.
