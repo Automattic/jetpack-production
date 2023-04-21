@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix firefox not detecting the collapsed state of the sidebar properly
 - Make sure the hook receives an array before attempting any process
 - SEO: update panel name in block editor.
+- Shows convert to audio CTA based on the value of a filter that defaults to the current sunsetting date.
 
 ## 12.1-a.7 - 2023-04-17
 ### Enhancements
