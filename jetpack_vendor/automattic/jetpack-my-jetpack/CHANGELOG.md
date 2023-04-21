@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: Add flags field in initial state
 - My Jetpack: Add Install/Activate menu actions based on the standalone plugin status.
+- My Jetpack: Add neutral color in contextual card
 - My Jetpack: Add side-effect action to request the standalone plugin installation on the backend.
 - My Jetpack: Add stats to VideoPress card
 - My Jetpack: Enable menu for all hybrid products
