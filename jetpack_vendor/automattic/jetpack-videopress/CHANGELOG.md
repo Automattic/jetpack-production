@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix native player aspect ratio after uploading a video
 - VideoPress: Pause poster preview video when necessary
 - VideoPress block: Cover case of GUID being empty after upload finish.
+- VideoPress block: Fix blocking state when stopping an upload
 - VideoPress block: Stop saving HTML markup representation.
 
 ## [0.13.8] - 2023-04-17
