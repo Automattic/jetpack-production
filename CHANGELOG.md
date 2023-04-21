@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Make Stats Widget frame sections balanced with long titles.
 - Markdown Block: add support for footnotes
 - Publicize: Use attached media for the OpenGraph image
+- Remove rewriting the Site Editor to Calypso's iframed `/site-editor/SITE_SLUG` route
 - Stats widget: improve appearance of footer buttons
 
 ### Improved compatibility
