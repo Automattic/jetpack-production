@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: fix visual issue in the poster integration with Preview On Hover
 - VideoPress: iterated over autoplay + PreviewOnHover effect
 - VideoPress: Move out from Stats class
+- VideoPress: playback at beginning when Preview On Hover is enabled
 
 ### Removed
 - VideoPress: Remove poster frame update on preview play
