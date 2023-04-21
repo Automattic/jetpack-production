@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - My Jetpack: Connect the standalone plugin menu options so they trigger the installation and activation when clicked.
 - MyJetpack: set the Social standalone page as the default admin one
+- MyJetpack: Try to activate the product module after installing the standalone plugin
 - Updated package dependencies.
 
 ## [2.10.2] - 2023-04-17
