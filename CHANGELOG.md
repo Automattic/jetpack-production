@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Add is_block_theme field to the wp/v2/themes endpoint to indicate it the theme is a block-based theme.
 - Block editor: collapse Jetpack feature panels by default.
 - Make Stats Widget frame sections balanced with long titles.
+- Markdown Block: add support for footnotes
 - Publicize: Use attached media for the OpenGraph image
 - Stats widget: improve appearance of footer buttons
 
