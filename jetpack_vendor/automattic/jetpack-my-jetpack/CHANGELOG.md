@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- My Jetpack: Add flags field in initial state
 - My Jetpack: Add Install/Activate menu actions based on the standalone plugin status.
 - My Jetpack: Add side-effect action to request the standalone plugin installation on the backend.
 - My Jetpack: Reload page after standalone action
