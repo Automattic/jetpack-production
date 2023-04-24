@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added an animation for the responses tab on the forms dashboard.
+- Added counters on the tabs in the Jetpack Forms dashboard
 
 ## [0.13.0] - 2023-04-17
 ### Added
