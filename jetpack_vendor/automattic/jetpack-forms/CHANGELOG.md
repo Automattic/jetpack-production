@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Added counters on the tabs in the Jetpack Forms dashboard
 - Reinstate salesforce integration with a generic post-to-url hook
 
+### Fixed
+- Fixed html entities not displaying correctly in the forms dashboard
+
 ## [0.13.0] - 2023-04-17
 ### Added
 - Added a 'Check for spam' button to the new feedback dashboard. [#29963]
