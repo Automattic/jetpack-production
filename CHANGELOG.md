@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Changelog editoria
+- Connection: update the full-screen connection banner to the new design.
 - Fix firefox not detecting the collapsed state of the sidebar properly
 - Make sure the hook receives an array before attempting any process
 - SEO: update panel name in block editor.
