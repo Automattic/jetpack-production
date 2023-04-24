@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.7.2-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Stats Admin: changed to use custom config data variable name to avoid conflicts with `configData`
+
 ## 0.7.1 - 2023-04-17
 ### Changed
 - Stats Admin: change site locale format from only language code to real locale e.g. `en-us` [#29958]
