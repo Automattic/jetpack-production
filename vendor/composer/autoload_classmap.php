@@ -78,6 +78,7 @@ return array(
     'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard_View_Switch' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard-view-switch.php',
     'Automattic\\Jetpack\\Forms\\Jetpack_Forms' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-jetpack-forms.php',
     'Automattic\\Jetpack\\Forms\\Service\\Google_Drive' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-google-drive.php',
+    'Automattic\\Jetpack\\Forms\\Service\\Post_To_Url' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-post-to-url.php',
     'Automattic\\Jetpack\\Forms\\WPCOM_REST_API_V2_Endpoint_Forms' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-wpcom-rest-api-v2-endpoint-forms.php',
     'Automattic\\Jetpack\\Heartbeat' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-heartbeat.php',
     'Automattic\\Jetpack\\IP\\Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-ip/src/class-utils.php',
