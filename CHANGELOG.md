@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add counts in the newsletter panel to show the newsletter reach
 - Add is_block_theme field to the wp/v2/themes endpoint to indicate it the theme is a block-based theme.
+- Align protect option value logic with Akismet.
 - Block editor: collapse Jetpack feature panels by default.
 - Debug page redesign.
 - Improve the appearance.
