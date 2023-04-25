@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Publicize: Use attached media for the OpenGraph image
 - Remove rewriting the Site Editor to Calypso's iframed `/site-editor/SITE_SLUG` route
 - Stats widget: improve appearance of footer buttons
+- Stats Widget: remove feature gating
 
 ### Improved compatibility
 - General: remove WordPress 6.0 backwards-compatibility code, now that Jetpack requires WordPress 6.1

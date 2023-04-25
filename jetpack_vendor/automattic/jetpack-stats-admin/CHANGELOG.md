@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Stats Admin: add minify=false to avoid JS minified by WP.com
 - Stats Admin: changed to use custom config data variable name to avoid conflicts with `configData`
 
 ## 0.7.1 - 2023-04-17
