@@ -5,24 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.10.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.10.3] - 2023-04-25
 ### Added
-- My Jetpack: Add flags field in initial state
-- My Jetpack: Add Install/Activate menu actions based on the standalone plugin status.
-- My Jetpack: Add neutral color in contextual card
-- My Jetpack: Add side-effect action to request the standalone plugin installation on the backend.
-- My Jetpack: Add stats to VideoPress card
-- My Jetpack: Enable menu for all hybrid products
-- My Jetpack: Reload page after standalone action
+- My Jetpack: Add flags field in initial state [#30241]
+- My Jetpack: Add Install/Activate menu actions based on the standalone plugin status. [#30153]
+- My Jetpack: Add neutral color in contextual card [#30250]
+- My Jetpack: Add side-effect action to request the standalone plugin installation on the backend. [#30143]
+- My Jetpack: Add stats to VideoPress card [#30197]
+- My Jetpack: Enable menu for all hybrid products [#30247]
+- My Jetpack: Reload page after standalone action [#30221]
 
 ### Changed
-- My Jetpack: Connect the standalone plugin menu options so they trigger the installation and activation when clicked.
-- MyJetpack: set the Social standalone page as the default admin one
-- MyJetpack: Try to activate the product module after installing the standalone plugin
-- Updated package dependencies.
+- My Jetpack: Connect the standalone plugin menu options so they trigger the installation and activation when clicked. [#30168]
+- MyJetpack: set the Social standalone page as the default admin one [#30193]
+- MyJetpack: Try to activate the product module after installing the standalone plugin [#30215]
+- Updated package dependencies. [#30015]
 
 ## [2.10.2] - 2023-04-17
 ### Added
@@ -840,7 +837,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.10.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.10.2...2.10.3-alpha
+[2.10.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.10.2...2.10.3
 [2.10.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.10.1...2.10.2
 [2.10.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.10.0...2.10.1
 [2.10.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.9.2...2.10.0
