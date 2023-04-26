@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the special treatment for wpcom sites in Tweet shortcode. This removes the need for Twitter API access when using this shortcode.
 - Show error message when fetching Mapkit API key fails
 - Support latitude & longitude next to lat/lng
+- Updated package dependencies.
 
 ## 12.1-beta - 2023-04-25
 ### Enhancements
