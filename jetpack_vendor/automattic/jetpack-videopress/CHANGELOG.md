@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: enqueue token bridge file in the front-end only when required
 
 ## [0.13.9] - 2023-04-25
 ### Added
