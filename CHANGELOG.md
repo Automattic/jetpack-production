@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Adds a 'Staging' badge to the wp-admin nav menu when the site is a WordPress.com staging site.
+
 ## 12.1-beta - 2023-04-25
 ### Enhancements
 - Block editor: collapse Jetpack feature panels by default. [#30140]
