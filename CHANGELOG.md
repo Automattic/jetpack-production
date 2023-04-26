@@ -7,7 +7,22 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add Mapkit maps
 - Adds a 'Staging' badge to the wp-admin nav menu when the site is a WordPress.com staging site.
+- Editor support for Mapkit in the Map block
+- Hide Mapbox specific options when using Mapkit
+- Remove the Mapbox API key box, when the mapping provider isn't Mapbox
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add Mapkit geocoder for use on WPCOM.
+- Adds useMapkitSetup hook
+- Adds util functions for mapkit that allow converting zoom levels to camera distance, and back
+- Mapkit support for the address attribute
+- Move logic to getMapProvider
+- Only add mapkit.js once
+- Recenter map after closing marker.
+- Show error message when fetching Mapkit API key fails
+- Support latitude & longitude next to lat/lng
 
 ## 12.1-beta - 2023-04-25
 ### Enhancements
