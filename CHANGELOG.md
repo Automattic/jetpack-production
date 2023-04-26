@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Move logic to getMapProvider
 - Only add mapkit.js once
 - Recenter map after closing marker.
+- Remove conditional rendering from zendesk chat widget component due to it being handled by an api endpoint now
 - Remove the special treatment for wpcom sites in Tweet shortcode. This removes the need for Twitter API access when using this shortcode.
 - Show error message when fetching Mapkit API key fails
 - Support latitude & longitude next to lat/lng
