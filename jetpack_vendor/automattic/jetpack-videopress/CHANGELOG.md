@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - VideoPress: enqueue token bridge file in the front-end only when required
 
+### Fixed
+- Update the embed loading styles and usage
+
 ## [0.13.9] - 2023-04-25
 ### Added
 - VideoPress: add is_videopress_url() helper function [#30142]
