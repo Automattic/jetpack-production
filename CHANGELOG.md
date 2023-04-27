@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add Mapkit maps
 - Adds a 'Staging' badge to the wp-admin nav menu when the site is a WordPress.com staging site.
+- Dashboard: Remove confusing "Click to view" stats CTA
 - Editor support for Mapkit in the Map block
 - Hide Mapbox specific options when using Mapkit
 - Remove the Mapbox API key box, when the mapping provider isn't Mapbox
