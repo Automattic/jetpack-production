@@ -9,8 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Added a 'Copy' button for emails on the jetpack forms dashboard response tab.
+
 ### Changed
 - Updated package dependencies.
+
+### Fixed
+- Fixed an issue causing the forms dashboard view setting not to be saved on WP.com
 
 ## [0.14.0] - 2023-04-25
 ### Added
