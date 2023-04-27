@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the Mapbox API key box, when the mapping provider isn't Mapbox
 
 ### Bug fixes
+- Dashboard: improved contrast for Stats chart tooltip
 - Dashboard: link user to Calypso for atomic sites
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
