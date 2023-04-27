@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add API to query Zendesk chat availability and use it to conditionally display zendesk chat
+- My Jetpack: Add product detail table component for comparing product tiers.
 
 ### Changed
 - My Jetpack: Move logic out of Product Card component
