@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 - VideoPress: enqueue token bridge file in the front-end only when required
+- VideoPress: update Preview On Hover to the IFrame API updates
 
 ### Fixed
 - Update the embed loading styles and usage
