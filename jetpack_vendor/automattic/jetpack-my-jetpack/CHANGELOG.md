@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add API to query Zendesk chat availability and use it to conditionally display zendesk chat
 
 ### Changed
+- My Jetpack: Move logic out of Product Card component
 - Updated package dependencies.
 
 ## [2.10.3] - 2023-04-25
