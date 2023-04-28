@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix CSS styles for visual refresh project
 - Mapkit support for the address attribute
 - Minor changes on the Jetpack debugger page content.
+- Minor CSS updates for visual refresh project
 - Move logic to getMapProvider
 - Only add mapkit.js once
 - Recenter map after closing marker.
