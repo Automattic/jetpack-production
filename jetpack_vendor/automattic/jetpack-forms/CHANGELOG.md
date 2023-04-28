@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a 'Copy' button for emails on the jetpack forms dashboard response tab.
 
 ### Changed
+- Rows in the forms dashboard will now be dynamically removed and appended when performing bulk actions.
 - Updated package dependencies.
 
 ### Fixed
