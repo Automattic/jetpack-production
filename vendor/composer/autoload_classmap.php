@@ -257,6 +257,7 @@ return array(
     'Automattic\\Jetpack\\VideoPress\\Block_Editor_Content' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-editor-content.php',
     'Automattic\\Jetpack\\VideoPress\\Block_Editor_Extensions' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-editor-extensions.php',
     'Automattic\\Jetpack\\VideoPress\\Data' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-data.php',
+    'Automattic\\Jetpack\\VideoPress\\Divi' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-divi.php',
     'Automattic\\Jetpack\\VideoPress\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initializer.php',
     'Automattic\\Jetpack\\VideoPress\\Jwt_Token_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-jwt-token-bridge.php',
     'Automattic\\Jetpack\\VideoPress\\Module_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-module-control.php',
@@ -339,4 +340,6 @@ return array(
     'VideoPressUploader\\Tus_Date_Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-date-utils.php',
     'VideoPressUploader\\Tus_Exception' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-exception.php',
     'VideoPressUploader\\Tus_File' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-file.php',
+    'VideoPress_Divi_Extension' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/videopress-divi/class-videopress-divi-extension.php',
+    'VideoPress_Divi_Module' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/videopress-divi/class-videopress-divi-module.php',
 );
