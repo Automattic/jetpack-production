@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Remove confusing "Click to view" stats CTA
 - Editor support for Mapkit in the Map block
 - Hide Mapbox specific options when using Mapkit
+- Jetpack Visual Refresh: "At A Glance" Dashboard adjustments.
 - Remove the Mapbox API key box, when the mapping provider isn't Mapbox
 
 ### Bug fixes
