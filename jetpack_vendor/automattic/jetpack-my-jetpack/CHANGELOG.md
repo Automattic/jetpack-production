@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Move logic out of Product Card component
 - Updated package dependencies.
 
+### Fixed
+- My Jetpack: Keep product card action button disabled while installing standalone plugin
+
 ## [2.10.3] - 2023-04-25
 ### Added
 - My Jetpack: Add flags field in initial state [#30241]
