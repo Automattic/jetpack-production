@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Mapkit geocoder for use on WPCOM.
 - Adds useMapkitSetup hook
 - Adds util functions for mapkit that allow converting zoom levels to camera distance, and back
+- Connection banner: support existing filter to disable dismisasals.
 - Fix CSS styles for visual refresh project
 - Mapkit support for the address attribute
 - Move logic to getMapProvider
