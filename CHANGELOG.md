@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Fix href for stats chart clicks for all sites
 - Dashboard: improved contrast for Stats chart tooltip
 - Dashboard: link user to Calypso for atomic sites
+- Make the Donation block "Connect" link the primary color
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Mapkit geocoder for use on WPCOM.
