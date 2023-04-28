@@ -290,6 +290,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_2_a_0
         'Automattic\\Jetpack\\VideoPress\\Block_Editor_Content' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-editor-content.php',
         'Automattic\\Jetpack\\VideoPress\\Block_Editor_Extensions' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-editor-extensions.php',
         'Automattic\\Jetpack\\VideoPress\\Data' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-data.php',
+        'Automattic\\Jetpack\\VideoPress\\Divi' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-divi.php',
         'Automattic\\Jetpack\\VideoPress\\Initializer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initializer.php',
         'Automattic\\Jetpack\\VideoPress\\Jwt_Token_Bridge' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-jwt-token-bridge.php',
         'Automattic\\Jetpack\\VideoPress\\Module_Control' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-module-control.php',
@@ -372,6 +373,8 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_2_a_0
         'VideoPressUploader\\Tus_Date_Utils' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-date-utils.php',
         'VideoPressUploader\\Tus_Exception' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-exception.php',
         'VideoPressUploader\\Tus_File' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-file.php',
+        'VideoPress_Divi_Extension' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/videopress-divi/class-videopress-divi-extension.php',
+        'VideoPress_Divi_Module' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/videopress-divi/class-videopress-divi-module.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
