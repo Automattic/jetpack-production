@@ -31,7 +31,6 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: update styles in At A Glance cards.
 - Fix CSS styles for visual refresh project
 - Mapkit support for the address attribute
-- Minor changes on the Jetpack debugger page content.
 - Move logic to getMapProvider
 - Only add mapkit.js once
 - Recenter map after closing marker.
