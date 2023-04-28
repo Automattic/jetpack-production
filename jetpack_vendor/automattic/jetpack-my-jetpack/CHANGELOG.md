@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Fix activation and layout on Protect interstatial page
 - My Jetpack: Keep product card action button disabled while installing standalone plugin
 
 ## [2.10.3] - 2023-04-25
