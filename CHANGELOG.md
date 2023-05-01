@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Make the Donation block "Connect" link the primary color
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add initial scaffold for new blogroll block
 - Add Mapkit geocoder for use on WPCOM.
 - Adds useMapkitSetup hook
 - Adds util functions for mapkit that allow converting zoom levels to camera distance, and back
