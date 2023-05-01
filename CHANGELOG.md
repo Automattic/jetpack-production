@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Editor support for Mapkit in the Map block
 - Hide Mapbox specific options when using Mapkit
 - Jetpack Visual Refresh: "At A Glance" Dashboard adjustments.
+- Modules list: Update to current styles. Visual refresh, if you will..
 - Remove the Mapbox API key box, when the mapping provider isn't Mapbox
 - Whitelist the '_jetpack_newsletter_access' post meta
 
