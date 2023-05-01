@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Hide Mapbox specific options when using Mapkit
 - Jetpack Visual Refresh: "At A Glance" Dashboard adjustments.
 - Remove the Mapbox API key box, when the mapping provider isn't Mapbox
+- Whitelist the '_jetpack_newsletter_access' post meta
 
 ### Bug fixes
 - Dashboard: Fix href for stats chart clicks for all sites
