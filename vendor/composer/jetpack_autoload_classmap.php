@@ -510,6 +510,10 @@ return array(
 		'version' => '2.11.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-social.php'
 	),
+	'Automattic\\Jetpack\\My_Jetpack\\Products\\Starter' => array(
+		'version' => '2.11.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-starter.php'
+	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Videopress' => array(
 		'version' => '2.11.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-videopress.php'

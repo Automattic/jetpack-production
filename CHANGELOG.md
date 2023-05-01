@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added Jetpack Starter bundle post-activation screen and plan header
 - Add Mapkit maps
 - Adds a 'Staging' badge to the wp-admin nav menu when the site is a WordPress.com staging site.
 - Admin dashboard: add link to renew expired subscription.
