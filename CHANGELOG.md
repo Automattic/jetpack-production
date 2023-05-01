@@ -7,24 +7,15 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Added Jetpack Starter bundle post-activation screen and plan header
 - Add Mapkit maps
 - Adds a 'Staging' badge to the wp-admin nav menu when the site is a WordPress.com staging site.
-- Admin dashboard: add link to renew expired subscription.
-- Dashboard: hide Akismet 'learn more' link for Atomic sites
-- Dashboard: Remove confusing "Click to view" stats CTA
 - Editor support for Mapkit in the Map block
 - Hide Mapbox specific options when using Mapkit
-- Jetpack Visual Refresh: "At A Glance" Dashboard adjustments.
 - Modules list: Update to current styles. Visual refresh, if you will..
 - Remove the Mapbox API key box, when the mapping provider isn't Mapbox
 - Whitelist the '_jetpack_newsletter_access' post meta
 
 ### Bug fixes
-- Dashboard: Fix href for stats chart clicks for all sites
-- Dashboard: improved contrast for Stats chart tooltip
-- Dashboard: link user to Calypso for atomic sites
-- Jetpack Social: Render Social Image Ge nerator panel even when SIG's default is disabled
 - Make the Donation block "Connect" link the primary color
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
@@ -32,12 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Mapkit geocoder for use on WPCOM.
 - Adds useMapkitSetup hook
 - Adds util functions for mapkit that allow converting zoom levels to camera distance, and back
-- Connection banner: support existing filter to disable dismisasals.
-- Dashboard: update styles in At A Glance cards.
-- Fix CSS styles for visual refresh project
 - Mapkit support for the address attribute
-- Minor changes on the Jetpack debugger page content.
-- Minor CSS updates for visual refresh project
 - Move logic to getMapProvider
 - Only add mapkit.js once
 - Recenter map after closing marker.
@@ -47,6 +33,27 @@ This is an alpha version! The changes listed here are not final.
 - Show error message when fetching Mapkit API key fails
 - Support latitude & longitude next to lat/lng
 - Updated package dependencies.
+
+## 12.1-beta2 - 2023-05-01
+### Enhancements
+- Dashboard: added Jetpack Starter bundle post-activation screen and plan header. [#30368]
+- Dashboard: add link to renew expired subscription. [#30357]
+- Dashboard: Remove a confusing "Click to view" link from the stats call to action screen. [#30343]
+- Jetpack Visual Refresh: "At A Glance" Dashboard adjustments. [#30324]
+
+### Bug fixes
+- Dashboard: fix a link on the stats chart. [#30341]
+- Dashboard: improve contrast for the Stats chart tooltip. [#30321]
+- Jetpack Social: Render Social Image Generator panel even when its default one is disabled. [#30358]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Connection banner: support existing filter to disable dismisasals. [#30334]
+- Dashboard: fix CSS styles for visual refresh project. [#30293]
+- Dashboard: hide Akismet 'learn more' link for Atomic sites. [#30326]
+- Dashboard: link user to Calypso for atomic sites. [#30322]
+- Dashboard: update styles in At A Glance cards. [#30336]
+- Minor changes on the Jetpack debugger page content. [#30360]
+- Minor CSS updates for visual refresh project. [#30359]
 
 ## 12.1-beta - 2023-04-25
 ### Enhancements
