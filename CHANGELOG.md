@@ -2,29 +2,26 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.2-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 12.1-beta2 - 2023-05-01
 ### Enhancements
-- Added Jetpack Starter bundle post-activation screen and plan header
-- Admin dashboard: add link to renew expired subscription.
-- Dashboard: hide Akismet 'learn more' link for Atomic sites
-- Dashboard: Remove confusing "Click to view" stats CTA
-- Jetpack Visual Refresh: "At A Glance" Dashboard adjustments.
+- Dashboard: added Jetpack Starter bundle post-activation screen and plan header. [#30368]
+- Dashboard: add link to renew expired subscription. [#30357]
+- Dashboard: Remove a confusing "Click to view" link from the stats call to action screen. [#30343]
+- Jetpack Visual Refresh: "At A Glance" Dashboard adjustments. [#30324]
 
 ### Bug fixes
-- Dashboard: Fix href for stats chart clicks for all sites
-- Dashboard: improved contrast for Stats chart tooltip
-- Dashboard: link user to Calypso for atomic sites
-- Jetpack Social: Render Social Image Ge nerator panel even when SIG's default is disabled
+- Dashboard: fix a link on the stats chart. [#30341]
+- Dashboard: improve contrast for the Stats chart tooltip. [#30321]
+- Jetpack Social: Render Social Image Generator panel even when its default one is disabled. [#30358]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Connection banner: support existing filter to disable dismisasals.
-- Dashboard: update styles in At A Glance cards.
-- Fix CSS styles for visual refresh project
-- Minor changes on the Jetpack debugger page content.
-- Minor CSS updates for visual refresh project
+- Connection banner: support existing filter to disable dismisasals. [#30334]
+- Dashboard: fix CSS styles for visual refresh project. [#30293]
+- Dashboard: hide Akismet 'learn more' link for Atomic sites. [#30326]
+- Dashboard: link user to Calypso for atomic sites. [#30322]
+- Dashboard: update styles in At A Glance cards. [#30336]
+- Minor changes on the Jetpack debugger page content. [#30360]
+- Minor CSS updates for visual refresh project. [#30359]
 
 ## 12.1-beta - 2023-04-25
 ### Enhancements
