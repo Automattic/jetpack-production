@@ -2,6 +2,29 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 12.2-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Admin dashboard: add link to renew expired subscription.
+- Dashboard: hide Akismet 'learn more' link for Atomic sites
+- Dashboard: Remove confusing "Click to view" stats CTA
+- Jetpack Visual Refresh: "At A Glance" Dashboard adjustments.
+
+### Bug fixes
+- Dashboard: Fix href for stats chart clicks for all sites
+- Dashboard: improved contrast for Stats chart tooltip
+- Dashboard: link user to Calypso for atomic sites
+- Jetpack Social: Render Social Image Ge nerator panel even when SIG's default is disabled
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Connection banner: support existing filter to disable dismisasals.
+- Dashboard: update styles in At A Glance cards.
+- Fix CSS styles for visual refresh project
+- Minor changes on the Jetpack debugger page content.
+- Minor CSS updates for visual refresh project
+
 ## 12.1-beta - 2023-04-25
 ### Enhancements
 - Block editor: collapse Jetpack feature panels by default. [#30140]
