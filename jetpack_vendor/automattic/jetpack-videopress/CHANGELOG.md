@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Update the embed loading styles and usage
+- VideoPress: set Preview On Hover player initial state only when it's enabled
 
 ## [0.13.9] - 2023-04-25
 ### Added
