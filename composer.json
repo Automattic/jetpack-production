@@ -42,14 +42,14 @@
 		"automattic/jetpack-publicize": "^0.25.1-alpha",
 		"automattic/jetpack-redirect": "^1.7.25",
 		"automattic/jetpack-roles": "^1.4.23",
-		"automattic/jetpack-search": "^0.36.1",
+		"automattic/jetpack-search": "^0.36.2-alpha",
 		"automattic/jetpack-stats": "^0.6.2",
 		"automattic/jetpack-stats-admin": "^0.7.3-alpha",
 		"automattic/jetpack-status": "^1.17.0",
 		"automattic/jetpack-sync": "^1.47.7",
 		"automattic/jetpack-videopress": "^0.14.0-alpha",
 		"automattic/jetpack-waf": "^0.11.4",
-		"automattic/jetpack-wordads": "^0.2.40",
+		"automattic/jetpack-wordads": "^0.2.41-alpha",
 		"nojimage/twitter-text-php": "3.1.2"
 	},
 	"require-dev": {
