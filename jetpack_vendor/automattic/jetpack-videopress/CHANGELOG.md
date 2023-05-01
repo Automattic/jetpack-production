@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: change the connection message when the Jetpack VideoPress module is not active
 - VideoPress: enqueue token bridge file in the front-end only when required
 - VideoPress: fix playing state of poster mini-player
+- VideoPress: move video frame poster to production
 - VideoPress: update Preview On Hover to the IFrame API updates
 
 ### Fixed
