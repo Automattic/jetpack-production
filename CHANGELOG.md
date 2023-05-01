@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added Jetpack Starter bundle post-activation screen and plan header
 - Admin dashboard: add link to renew expired subscription.
 - Dashboard: hide Akismet 'learn more' link for Atomic sites
 - Dashboard: Remove confusing "Click to view" stats CTA
