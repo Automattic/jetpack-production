@@ -717,7 +717,7 @@ class Admin {
 
 		if ( empty( $response_fields ) ) {
 			$chunks = explode( "\nArray", $content );
-			if ( ! empty( $chunks[1] ) ) {
+			if ( $chunks[1] ) {
 				// re-construct the array string
 				$array = 'Array' . $chunks[1];
 				// re-construct the array
