@@ -5,13 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.11.0-alpha] - unreleased
+## [2.12.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add API to query Zendesk chat availability and use it to conditionally display zendesk chat
-- Added Jetpack Starter bundle post-activation screen and plan header
 - Add pricing table interstitial view for Jetpack Protect.
 - My Jetpack: Add product detail table component for comparing product tiers.
 
@@ -22,6 +21,10 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix activation and layout on Protect interstatial page
 - My Jetpack: Keep product card action button disabled while installing standalone plugin
+
+## [2.11.0] - 2023-05-01
+### Added
+- Added Jetpack Starter bundle post-activation screen and plan header [#30368]
 
 ## [2.10.3] - 2023-04-25
 ### Added
@@ -855,7 +858,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.11.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.10.3...2.11.0-alpha
+[2.12.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.11.0...2.12.0-alpha
+[2.11.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.10.3...2.11.0
 [2.10.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.10.2...2.10.3
 [2.10.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.10.1...2.10.2
 [2.10.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.10.0...2.10.1

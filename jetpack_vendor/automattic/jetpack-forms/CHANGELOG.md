@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.14.1-alpha] - unreleased
+## [0.14.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -21,6 +21,10 @@ This is an alpha version! The changes listed here are not final.
 - Fixed an issue causing the forms dashboard view setting not to be saved on WP.com
 - Fixed buggy behavior of loading placeholders in the forms dashboard.
 - Fixed invalid totals being reported for different tabs in the forms dashboard.
+
+## [0.14.1] - 2023-05-01
+### Changed
+- Internal updates.
 
 ## [0.14.0] - 2023-04-25
 ### Added
@@ -201,7 +205,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.14.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.14.0...v0.14.1-alpha
+[0.14.2-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.14.1...v0.14.2-alpha
+[0.14.1]: https://github.com/automattic/jetpack-forms/compare/v0.14.0...v0.14.1
 [0.14.0]: https://github.com/automattic/jetpack-forms/compare/v0.13.0...v0.14.0
 [0.13.0]: https://github.com/automattic/jetpack-forms/compare/v0.12.0...v0.13.0
 [0.12.0]: https://github.com/automattic/jetpack-forms/compare/v0.11.0...v0.12.0

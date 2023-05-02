@@ -24,6 +24,10 @@ This is an alpha version! The changes listed here are not final.
 - Update the embed loading styles and usage
 - VideoPress: set Preview On Hover player initial state only when it's enabled
 
+## [0.13.10] - 2023-05-01
+### Changed
+- Internal updates.
+
 ## [0.13.9] - 2023-04-25
 ### Added
 - VideoPress: add is_videopress_url() helper function [#30142]
@@ -985,7 +989,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.14.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.9...v0.14.0-alpha
+[0.14.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.10...v0.14.0-alpha
+[0.13.10]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.9...v0.13.10
 [0.13.9]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.8...v0.13.9
 [0.13.8]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.7...v0.13.8
 [0.13.7]: https://github.com/Automattic/jetpack-videopress/compare/v0.13.6...v0.13.7
