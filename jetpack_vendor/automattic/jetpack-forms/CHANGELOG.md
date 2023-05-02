@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Ensure IP address can be properly displayed for all form submissions.
 - Fixed an issue causing the forms dashboard view setting not to be saved on WP.com
+- Fixed buggy behavior of loading placeholders in the forms dashboard.
 
 ## [0.14.0] - 2023-04-25
 ### Added
