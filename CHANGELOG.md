@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Hide Mapbox specific options when using Mapkit
 - Modules list: Update to current styles. Visual refresh, if you will..
 - Remove the Mapbox API key box, when the mapping provider isn't Mapbox
+- Update Forms pattern modal default view to Grid
 - Whitelist the '_jetpack_newsletter_access' post meta
 
 ### Bug fixes

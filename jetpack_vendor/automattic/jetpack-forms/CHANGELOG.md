@@ -11,10 +11,12 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added a 'Copy' button for emails on the jetpack forms dashboard response tab.
+- Added URL-based navigation support for the new forms dashboard
 
 ### Changed
 - Rows in the forms dashboard will now be dynamically removed and appended when performing bulk actions.
 - Updated package dependencies.
+- Update Forms pattern modal default view to Grid
 
 ### Fixed
 - Ensure array is provided to array_diff_key to avoid warnings
