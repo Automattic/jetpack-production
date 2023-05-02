@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 12.2-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Improved compatibility
+- Security: ensure blocks are always fully displayed on your site, even when using a caching plugin.
+
 ## 12.1-beta2 - 2023-05-01
 ### Enhancements
 - Dashboard: added Jetpack Starter bundle post-activation screen and plan header. [#30368]
