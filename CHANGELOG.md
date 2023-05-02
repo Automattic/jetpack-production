@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Make the Donation block "Connect" link the primary color
+- Minor styling fixes for the At-a-Glance page on WooExpress.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add initial scaffold for new blogroll block
