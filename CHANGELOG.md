@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds useMapkitSetup hook
 - Adds util functions for mapkit that allow converting zoom levels to camera distance, and back
 - Admin dashboard: fixing typo in file path
+- Amended changelogs.
 - Mapkit support for the address attribute
 - Move logic to getMapProvider
 - Only add mapkit.js once
@@ -36,12 +37,15 @@ This is an alpha version! The changes listed here are not final.
 - Support latitude & longitude next to lat/lng
 - Updated package dependencies.
 
-## 12.1-beta2 - 2023-05-01
+## 12.1 - 2023-05-02
 ### Enhancements
 - Dashboard: added Jetpack Starter bundle post-activation screen and plan header. [#30368]
 - Dashboard: add link to renew expired subscription. [#30357]
 - Dashboard: Remove a confusing "Click to view" link from the stats call to action screen. [#30343]
 - Jetpack Visual Refresh: "At A Glance" Dashboard adjustments. [#30324]
+
+### Improved compatibility
+- Security: ensure blocks are always fully displayed on your site, even when using a caching plugin.
 
 ### Bug fixes
 - Dashboard: fix a link on the stats chart. [#30341]
