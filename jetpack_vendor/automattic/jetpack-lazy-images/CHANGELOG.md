@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.37-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [2.1.36] - 2023-04-10
 ### Added
 - Add Jetpack Autoloader package suggestion. [#29988]
@@ -312,6 +319,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Lazy Images: Move into a package
 
+[2.1.37-alpha]: https://github.com/Automattic/jetpack-lazy-images/compare/v2.1.36...v2.1.37-alpha
 [2.1.36]: https://github.com/Automattic/jetpack-lazy-images/compare/v2.1.35...v2.1.36
 [2.1.35]: https://github.com/Automattic/jetpack-lazy-images/compare/v2.1.34...v2.1.35
 [2.1.34]: https://github.com/Automattic/jetpack-lazy-images/compare/v2.1.33...v2.1.34
