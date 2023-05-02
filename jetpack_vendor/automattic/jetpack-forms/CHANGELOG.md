@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed buggy behavior of loading placeholders in the forms dashboard.
 - Fixed invalid totals being reported for different tabs in the forms dashboard.
 - Forms: Fix Forms dashboard Multiple Choice response format
+- Forms: Fix Forms response meta date value
 
 ## [0.14.1] - 2023-05-01
 ### Changed
