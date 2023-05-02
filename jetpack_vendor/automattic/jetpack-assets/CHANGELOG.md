@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.18.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.18.2] - 2023-05-02
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#30375]
 
 ## [1.18.1] - 2023-04-10
 ### Added
@@ -328,7 +325,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Statically access asset tools
 
-[1.18.2-alpha]: https://github.com/Automattic/jetpack-assets/compare/v1.18.1...v1.18.2-alpha
+[1.18.2]: https://github.com/Automattic/jetpack-assets/compare/v1.18.1...v1.18.2
 [1.18.1]: https://github.com/Automattic/jetpack-assets/compare/v1.18.0...v1.18.1
 [1.18.0]: https://github.com/Automattic/jetpack-assets/compare/v1.17.34...v1.18.0
 [1.17.34]: https://github.com/Automattic/jetpack-assets/compare/v1.17.33...v1.17.34
