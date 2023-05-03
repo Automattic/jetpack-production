@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Ensure array is provided to array_diff_key to avoid warnings
+- Fix dropdown menu not working due to some CSS issues
 - Forms: Fix Forms response meta date value
 
 ## [0.15.0] - 2023-05-02
