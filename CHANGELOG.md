@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Introduce Multiple Choice and Single Choice style variations
 - Update Forms pattern modal default view to Grid
 
+### Improved compatibility
+- Security: ensure blocks are always fully displayed on your site, even when using a caching plugin.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - wpcom/v3/blogging-prompts endpoint: add param to force prompt dates to be a specific year
 
