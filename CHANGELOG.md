@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Introduce Multiple Choice and Single Choice style variations
 - Update Forms pattern modal default view to Grid
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- wpcom/v3/blogging-prompts endpoint: add param to force prompt dates to be a specific year
+
 ## 12.2-a.1 - 2023-05-02
 ### Enhancements
 - Add Mapkit maps [#29098]
