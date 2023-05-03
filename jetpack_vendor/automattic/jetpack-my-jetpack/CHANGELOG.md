@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- My Jetpack: Reload page after successful license activation
 - My Jetpack: Use a single column for the page title section
 
 ## [2.12.0] - 2023-05-02
