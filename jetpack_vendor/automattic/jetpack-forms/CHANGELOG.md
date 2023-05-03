@@ -5,28 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.15.0-alpha] - unreleased
+## [0.16.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Added a 'Copy' button for emails on the jetpack forms dashboard response tab.
 - Added URL-based navigation support for the new forms dashboard
 
 ### Changed
 - Forms: Introduce Multiple Choice and Single Choice style variations
-- Rows in the forms dashboard will now be dynamically removed and appended when performing bulk actions.
-- Updated package dependencies.
 - Update Forms pattern modal default view to Grid
 
 ### Fixed
 - Ensure array is provided to array_diff_key to avoid warnings
-- Ensure IP address can be properly displayed for all form submissions.
-- Fixed an issue causing the forms dashboard view setting not to be saved on WP.com
-- Fixed buggy behavior of loading placeholders in the forms dashboard.
-- Fixed invalid totals being reported for different tabs in the forms dashboard.
-- Forms: Fix Forms dashboard Multiple Choice response format
 - Forms: Fix Forms response meta date value
+
+## [0.15.0] - 2023-05-02
+### Added
+- Added a 'Copy' button for emails on the Jetpack forms dashboard response tab. [#30256]
+
+### Changed
+- Rows in the forms dashboard will now be dynamically removed and appended when performing bulk actions. [#30213]
+- Updated package dependencies.
+
+### Fixed
+- Ensure IP address can be properly displayed for all form submissions. [#29491]
+- Fixed an issue causing the forms dashboard view setting not to be saved on WP.com. [#30258]
+- Fixed buggy behavior of loading placeholders in the forms dashboard. [#30353]
+- Fixed invalid totals being reported for different tabs in the forms dashboard. [#30354]
+- Forms: Fix Forms dashboard Multiple Choice response format. [#30370]
 
 ## [0.14.1] - 2023-05-01
 ### Changed
@@ -211,7 +218,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.15.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.14.1...v0.15.0-alpha
+[0.16.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.15.0...v0.16.0-alpha
+[0.15.0]: https://github.com/automattic/jetpack-forms/compare/v0.14.1...v0.15.0
 [0.14.1]: https://github.com/automattic/jetpack-forms/compare/v0.14.0...v0.14.1
 [0.14.0]: https://github.com/automattic/jetpack-forms/compare/v0.13.0...v0.14.0
 [0.13.0]: https://github.com/automattic/jetpack-forms/compare/v0.12.0...v0.13.0
