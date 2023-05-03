@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: Introduce Multiple Choice and Single Choice style variations
+- Remove upgrade nudge for premium block
 - Update Forms pattern modal default view to Grid
 
 ### Improved compatibility

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.12-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Make Premium Content accessible on Free plans.
+
 ## [0.2.11] - 2023-04-10
 ### Added
 - Add Jetpack Autoloader package suggestion. [#29988]
@@ -78,6 +85,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 - Moved the options class into Connection. [#24095]
 
+[0.2.12-alpha]: https://github.com/Automattic/jetpack-plans/compare/v0.2.11...v0.2.12-alpha
 [0.2.11]: https://github.com/Automattic/jetpack-plans/compare/v0.2.10...v0.2.11
 [0.2.10]: https://github.com/Automattic/jetpack-plans/compare/v0.2.9...v0.2.10
 [0.2.9]: https://github.com/Automattic/jetpack-plans/compare/v0.2.8...v0.2.9
