@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Introduce Multiple Choice and Single Choice style variations
 - Update Forms pattern modal default view to Grid
+- We will not be re-sending emails when marking items as not-spam in the new forms dashboard.
 
 ### Fixed
 - Ensure array is provided to array_diff_key to avoid warnings
