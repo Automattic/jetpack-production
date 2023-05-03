@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add newsletter access level to the post edit page
 - Forms: Introduce Multiple Choice and Single Choice style variations
 - Remove upgrade nudge for premium block
 - Update Forms pattern modal default view to Grid
