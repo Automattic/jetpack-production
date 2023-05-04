@@ -12,12 +12,14 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add a Notice when trying to edit a video that doesn't belong to the site
 - VideoPress: Add a wpcom/v2/videopress `check-ownership` endpoint
+- VideoPress: create VideoPress video block when pasting URLs
 - VideoPress: dont allow editing video data when the video doesn't belong to the site
 
 ### Changed
 - VideoPress: hide core/embed core, VideoPress variation, when video block is available
 
 ### Fixed
+- VideoPress: fix disabling Privacy and rating panel
 - VideoPress: Fix JITM layout on video edit page
 
 ## [0.14.0] - 2023-05-02
