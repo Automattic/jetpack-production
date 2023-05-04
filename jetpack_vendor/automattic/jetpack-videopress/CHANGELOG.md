@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - VideoPress: Add a wpcom/v2/videopress `check-ownership` endpoint
+- VideoPress: dont allow editing video data when the video doesn't belong to the site
 
 ## [0.14.0] - 2023-05-02
 ### Added
