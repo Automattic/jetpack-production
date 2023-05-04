@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add newsletter access level to the post edit page
 - Forms: Introduce Multiple Choice and Single Choice style variations
+- Make Donation block free for all and charge a 10% commission for free plans
 - Remove upgrade nudge for premium block
 - Replace photon implementation with the image-cdn package
 - Update Forms pattern modal default view to Grid
