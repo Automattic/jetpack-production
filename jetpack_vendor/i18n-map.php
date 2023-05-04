@@ -48,6 +48,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
       'ver' => '0.8.46',
     ),
+    'jetpack-image-cdn' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
+      'ver' => '0.2.0-alpha',
+    ),
     'jetpack-import' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-import',
       'ver' => '0.7.0',

@@ -2,13 +2,15 @@
 /**
  * The Image Class.
  *
- * @package automattic/jetpack
+ * @package automattic/jetpack-image-cdn
  */
+
+namespace Automattic\Jetpack\Image_CDN;
 
 /**
  * Represents a resizable image, exposing properties necessary for properly generating srcset.
  */
-class Jetpack_Photon_Image {
+class Image_CDN_Image {
 
 	/**
 	 * Attachment's Filename.
@@ -182,7 +184,7 @@ class Jetpack_Photon_Image {
 	/**
 	 * Returns image mime type.
 	 *
-	 * @return string|WP_Error Image's mime type or WP_Error if it was not determined.
+	 * @return string|\WP_Error Image's mime type or WP_Error if it was not determined.
 	 */
 	public function get_mime_type() {
 		return $this->mime_type;
@@ -232,7 +234,7 @@ class Jetpack_Photon_Image {
 	protected function image_resize_dimensions( $max_width, $max_height, $crop ) {
 		$dimensions = image_resize_dimensions( $this->original_width, $this->original_height, $max_width, $max_height, $crop );
 		if ( ! $dimensions ) {
-			return new WP_Error( 'error_getting_dimensions', __( 'Could not calculate resized image dimensions', 'jetpack' ), $this->filename );
+			return new \WP_Error( 'error_getting_dimensions', __( 'Could not calculate resized image dimensions', 'jetpack-image-cdn' ), $this->filename );
 		}
 
 		return array_combine(

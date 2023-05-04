@@ -2,17 +2,17 @@
 /**
  * The Image Sizes library.
  *
- * @package automattic/jetpack
+ * @package automattic/jetpack-image-cdn
  */
 
-require_once JETPACK__PLUGIN_DIR . '_inc/lib/class.jetpack-photon-image.php';
+namespace Automattic\Jetpack\Image_CDN;
 
 /**
- * Class Jetpack_Photon_ImageSizes
+ * Class Image_CDN_Image_Sizes
  *
  * Manages image resizing via Jetpack CDN Service.
  */
-class Jetpack_Photon_ImageSizes {
+class Image_CDN_Image_Sizes {
 
 	/**
 	 * Attachment metadata.
@@ -43,7 +43,7 @@ class Jetpack_Photon_ImageSizes {
 	 */
 	public function __construct( $attachment_id, $data ) {
 		$this->data  = $data;
-		$this->image = new Jetpack_Photon_Image( $data, get_post_mime_type( $attachment_id ) );
+		$this->image = new Image_CDN_Image( $data, get_post_mime_type( $attachment_id ) );
 		$this->generate_sizes();
 	}
 
@@ -54,7 +54,7 @@ class Jetpack_Photon_ImageSizes {
 	 */
 	protected function generate_sizes() {
 
-		// There is no need to generate the sizes a new for every single image.
+		// There is no need to generate the sizes anew for every single image.
 		if ( null !== self::$sizes ) {
 			return self::$sizes;
 		}
@@ -113,6 +113,14 @@ class Jetpack_Photon_ImageSizes {
 		// Remove filter preventing the creation of advanced sizes.
 		remove_filter(
 			'intermediate_image_sizes_advanced',
+			array( Image_CDN::class, 'filter_photon_noresize_intermediate_sizes' )
+		);
+
+		// Compatibility fix: Ensure that Jetpack's inbuilt Photon does not get in the way.
+		// No need to re-enable this filter if present, as its functionality will be handled
+		// by the Image_CDN filter added below.
+		remove_filter(
+			'intermediate_image_sizes_advanced',
 			array( 'Jetpack_Photon', 'filter_photon_noresize_intermediate_sizes' )
 		);
 
@@ -122,7 +130,7 @@ class Jetpack_Photon_ImageSizes {
 		// Re-add the filter removed above.
 		add_filter(
 			'intermediate_image_sizes_advanced',
-			array( 'Jetpack_Photon', 'filter_photon_noresize_intermediate_sizes' )
+			array( Image_CDN::class, 'filter_photon_noresize_intermediate_sizes' )
 		);
 
 		return (array) $sizes;

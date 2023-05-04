@@ -1,17 +1,21 @@
+/* eslint-disable */
 ( function () {
+	/**
+	 *
+	 */
 	function recalculate() {
 		if ( this.complete ) {
 			// Support for lazy loading: if there is a lazy-src attribute and it's value
 			// is not the same as the current src we should wait until the image load event
-			var lazySrc = this.getAttribute( 'data-lazy-src' );
+			const lazySrc = this.getAttribute( 'data-lazy-src' );
 			if ( lazySrc && this.src !== lazySrc ) {
 				this.addEventListener( 'onload', recalculate );
 				return;
 			}
 
 			// Copying CSS width/height into element attributes.
-			var width = this.width;
-			var height = this.height;
+			const width = this.width;
+			const height = this.height;
 			if ( width && width > 0 && height && height > 0 ) {
 				this.setAttribute( 'width', width );
 				this.setAttribute( 'height', height );
@@ -28,13 +32,15 @@
 	 * For images lacking explicit dimensions and needing them, try to add them.
 	 */
 	var restore_dims = function () {
-			var elements = document.querySelectorAll( 'img[data-recalc-dims]' );
-			for ( var i = 0; i < elements.length; i++ ) {
+			const elements = document.querySelectorAll( 'img[data-recalc-dims]' );
+			for ( let i = 0; i < elements.length; i++ ) {
 				recalculate.call( elements[ i ] );
 			}
 		},
 		/**
 		 * Modify given image's markup so that devicepx-jetpack.js will act on the image and it won't be reprocessed by this script.
+		 *
+		 * @param img
 		 */
 		reset_for_retina = function ( img ) {
 			img.removeAttribute( 'data-recalc-dims' );
