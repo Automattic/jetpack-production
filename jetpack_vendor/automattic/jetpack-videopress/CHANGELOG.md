@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- VideoPress: add a Notice when trying to edit a video that doesn't belong to the site
 - VideoPress: Add a wpcom/v2/videopress `check-ownership` endpoint
 - VideoPress: dont allow editing video data when the video doesn't belong to the site
 
