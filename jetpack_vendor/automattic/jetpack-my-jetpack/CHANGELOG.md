@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- My Jetpack: Remove icon from plugin activation action in product card
 - My Jetpack: Remove manage option from menu
 - My Jetpack: Remove product card icon
 - My Jetpack: Set a post-checkout redirect destination on the "Purchase a plan" link.
