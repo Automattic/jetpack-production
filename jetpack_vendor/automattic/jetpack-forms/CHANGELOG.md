@@ -23,7 +23,6 @@ This is an alpha version! The changes listed here are not final.
 - Ensure array is provided to array_diff_key to avoid warnings
 - Fix dropdown menu not working due to some CSS issues
 - Fixed class names for the response on the JP Forms dashboard.
-- Fixed the hitbox for the source link on the forms dashboard response list.
 - Forms: Fix Forms response meta date value
 
 ## [0.15.0] - 2023-05-02
