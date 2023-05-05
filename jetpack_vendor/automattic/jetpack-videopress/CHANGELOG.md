@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a wpcom/v2/videopress `check-ownership` endpoint
 - VideoPress: create VideoPress video block when pasting URLs
 - VideoPress: dont allow editing video data when the video doesn't belong to the site
+- VideoPress: introduce helper function to get VideoPress video block attributes from URL
 
 ### Changed
 - VideoPress: hide core/embed core, VideoPress variation, when video block is available
