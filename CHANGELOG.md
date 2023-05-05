@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Security: ensure blocks are always fully displayed on your site, even when using a caching plugin.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fixes a bug on WP.com Simple, which is not fully updated to 6.2 yet.
 - Fixes to integration with image-cdn
 - Hotfix for a typo in the map provider code
 - wpcom/v3/blogging-prompts endpoint: add param to force prompt dates to be a specific year
