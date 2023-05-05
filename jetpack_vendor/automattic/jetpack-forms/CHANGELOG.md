@@ -14,7 +14,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Introduce Multiple Choice and Single Choice style variations
-- Forms: Update Multiple Choice and Single Choice fields Sidebar style settings
 - Updated border radius on forms dashboard cards
 - Update Forms pattern modal default view to Grid
 - We will not be re-sending emails when marking items as not-spam in the new forms dashboard.
