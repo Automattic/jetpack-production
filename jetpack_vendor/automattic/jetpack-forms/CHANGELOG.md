@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added URL-based navigation support for the new forms dashboard
+- Add inspector ID/name settings for form fields
 
 ### Changed
 - Forms: Introduce Multiple Choice and Single Choice style variations
