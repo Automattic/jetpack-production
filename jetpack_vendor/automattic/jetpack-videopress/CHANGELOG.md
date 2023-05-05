@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - VideoPress: hide core/embed core, VideoPress variation, when video block is available
+- VideoPress: pick video block attrs from URL when pasting/inserting
 
 ### Fixed
 - VideoPress: fix disabling Privacy and rating panel
