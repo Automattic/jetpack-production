@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add inspector ID/name settings for form fields
 
 ### Changed
+- Do not normalize feedback posts main comment when possible, allowing fexports to not guess which is the Comment and simply adding a column with the input's label
 - Forms: Introduce Multiple Choice and Single Choice style variations
 - Forms: Update Multiple Choice and Single Choice fields Sidebar style settings
 - Updated border radius on forms dashboard cards
