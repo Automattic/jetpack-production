@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Make Donation block free for all and charge a 10% commission for free plans
 - Remove upgrade nudge for premium block
 - Replace photon implementation with the image-cdn package
+- theme-tools: Removed jQuery dependency from responsive-videos script.
 - Update Forms pattern modal default view to Grid
 
 ### Improved compatibility
