@@ -5,23 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.12.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.12.1] - 2023-05-08
 ### Added
-- My Jetpack: Add deactivate plugin menu action on product card
+- My Jetpack: Add deactivate plugin menu action on product card [#30489]
 
 ### Changed
-- My Jetpack: Remove icon from plugin activation action in product card
-- My Jetpack: Remove manage option from menu
-- My Jetpack: Remove product card icon
-- My Jetpack: Set a post-checkout redirect destination on the "Purchase a plan" link.
+- My Jetpack: Remove icon from plugin activation action in product card [#30458]
+- My Jetpack: Remove manage option from menu [#30440]
+- My Jetpack: Remove product card icon [#30441]
+- My Jetpack: Set a post-checkout redirect destination on the "Purchase a plan" link. [#27693]
 
 ### Fixed
-- My Jetpack: Add check for product status before requesting stats
-- My Jetpack: Reload page after successful license activation
-- My Jetpack: Use a single column for the page title section
+- My Jetpack: Add check for product status before requesting stats [#30430]
+- My Jetpack: Reload page after successful license activation [#30364]
+- My Jetpack: Use a single column for the page title section [#30406]
 
 ## [2.12.0] - 2023-05-02
 ### Added
@@ -873,7 +870,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.12.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.12.0...2.12.1-alpha
+[2.12.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.12.0...2.12.1
 [2.12.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.11.0...2.12.0
 [2.11.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.10.3...2.11.0
 [2.10.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.10.2...2.10.3
