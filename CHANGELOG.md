@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Forms pattern modal default view to Grid
 
 ### Improved compatibility
+- Added support for flagging unsupported connections in the editor UI
 - Bit.ly: avoid errors when using non-official Bit.ly  plugins alongside Jetpack.
 - Security: ensure blocks are always fully displayed on your site, even when using a caching plugin.
 
