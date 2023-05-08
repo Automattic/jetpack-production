@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.17.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- The new Jetpack Forms feedback WP Admin page is now enabled. The old page remains the default for the time being and all users can opt-in to see the new interface by using the 'view' swtich in the top right corner.
+
 ## [0.16.0] - 2023-05-08
 ### Added
 - Added URL-based navigation support for the new forms dashboard [#30367]
@@ -225,6 +232,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[0.17.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.16.0...v0.17.0-alpha
 [0.16.0]: https://github.com/automattic/jetpack-forms/compare/v0.15.0...v0.16.0
 [0.15.0]: https://github.com/automattic/jetpack-forms/compare/v0.14.1...v0.15.0
 [0.14.1]: https://github.com/automattic/jetpack-forms/compare/v0.14.0...v0.14.1
