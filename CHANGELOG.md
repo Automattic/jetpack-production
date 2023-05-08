@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixes a bug on WP.com Simple, which is not fully updated to 6.2 yet.
 - Fixes to integration with image-cdn
 - Hotfix for a typo in the map provider code
+- Use contact form implementation from automattic/jetpack-forms by default
 - wpcom/v3/blogging-prompts endpoint: add param to force prompt dates to be a specific year
 
 ## 12.2-a.1 - 2023-05-02
