@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Adds a new AI Assistant block as a proposed replacement for the AI Paragraph and AI Image blocks.
+
 ## 12.2-a.3 - 2023-05-08
 ### Enhancements
 - Add newsletter access level to the post edit page [#30172]
