@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - We will not be re-sending emails when marking items as not-spam in the new forms dashboard.
 
 ### Fixed
+- Add necessary context to the word "Trash".
 - Change post_type comparison on untrash filter to only affect feedback posts
 - Ensure array is provided to array_diff_key to avoid warnings
 - Fix dropdown menu not working due to some CSS issues
