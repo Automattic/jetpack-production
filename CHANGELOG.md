@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixes issue with missing "Super Admin" in edit user form
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Remove title summary option when there is no title on the post
 - Delete implementation of is_wpcom_staging_site() as we are moving it to trait
 - Make chat AI block visible on editor
 
