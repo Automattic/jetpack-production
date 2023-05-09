@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Adds a new AI Assistant block as a proposed replacement for the AI Paragraph and AI Image blocks.
+- Jetpack AI: Update UX from ai assistant block
 
 ## 12.2-a.3 - 2023-05-08
 ### Enhancements
