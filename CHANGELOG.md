@@ -13,7 +13,11 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: iterate over createPrompt() function
 - Jetpack AI: Update UX from ai assistant block
 
+### Bug fixes
+- Fixes issue with missing "Super Admin" in edit user form
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Delete implementation of is_wpcom_staging_site() as we are moving it to trait
 - Make chat AI block visible on editor
 
 ## 12.2-a.5 - 2023-05-08
