@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Adds a new AI Assistant block as a proposed replacement for the AI Paragraph and AI Image blocks.
 - AI Assistance: swtich default option depending on previous-block content
+- AI Assistant: Disable request button when not user prompt provided
 - Jetpack AI: Add try again option
 - Jetpack AI: iterate over createPrompt() function
 - Jetpack AI: Update UX from ai assistant block
