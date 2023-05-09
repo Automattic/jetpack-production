@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Remove Forms landing page redirection logic
 - Provide default data sets for responses data to avoid PHP warnings on undefined array keys
 
+### Fixed
+- Add salesforce form variation alongside default variations for better discoverability. Fix private method for action trigger
+
 ## [0.16.0] - 2023-05-08
 ### Added
 - Added URL-based navigation support for the new forms dashboard [#30367]
