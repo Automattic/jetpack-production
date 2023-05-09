@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Create dashboard landing page
 - The new Jetpack Forms feedback WP Admin page is now enabled. The old page remains the default for the time being and all users can opt-in to see the new interface by using the 'view' swtich in the top right corner.
 
+### Changed
+- Provide default data sets for responses data to avoid PHP warnings on undefined array keys
+
 ## [0.16.0] - 2023-05-08
 ### Added
 - Added URL-based navigation support for the new forms dashboard [#30367]
