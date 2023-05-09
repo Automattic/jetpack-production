@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Adds a new AI Assistant block as a proposed replacement for the AI Paragraph and AI Image blocks.
+- Jetpack AI: iterate over createPrompt() function
 - Jetpack AI: Update UX from ai assistant block
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
