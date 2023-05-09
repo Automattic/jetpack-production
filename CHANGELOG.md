@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.2-a.4 - unreleased
+## 12.2-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Make chat AI block visible on editor
+
+## 12.2-a.5 - 2023-05-08
+
+- Extends release `12.2-a.3` with a fix for the Payments block. [#30524]
 
 ## 12.2-a.3 - 2023-05-08
 ### Enhancements
