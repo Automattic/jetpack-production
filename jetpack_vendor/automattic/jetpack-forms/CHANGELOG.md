@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: Create dashboard landing page
 - The new Jetpack Forms feedback WP Admin page is now enabled. The old page remains the default for the time being and all users can opt-in to see the new interface by using the 'view' swtich in the top right corner.
 
 ## [0.16.0] - 2023-05-08
