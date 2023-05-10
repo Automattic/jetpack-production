@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: iterate over createPrompt() function
 - Jetpack AI: Update UX from ai assistant block
 
+### Improved compatibility
+- PHP8 compatibility updates.
+
 ### Bug fixes
 - AI Assistant: store last prompt to be able to retry the request
 - Fix compatibility issue in simple sites due to image CDN package
