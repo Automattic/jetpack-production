@@ -438,10 +438,6 @@ class Helper {
 					}
 
 					if ( 'filters' === $k ) {
-						if ( ! is_countable( $new_instance['filters'] ) || ! is_countable( $old_instance['filters'] ) ) {
-							continue;
-						}
-
 						if ( count( $new_instance['filters'] ) !== count( $old_instance['filters'] ) ) {
 							$widget = $new_instance;
 							break;
@@ -840,7 +836,7 @@ class Helper {
 		);
 		$unexcluded_post_types = array_diff( $post_types, $excluded_post_types );
 		// NOTE: If all post types are being excluded, ignore the option value.
-		if ( array() === $unexcluded_post_types ) {
+		if ( count( $unexcluded_post_types ) === 0 ) {
 			$excluded_post_types = array();
 		}
 
@@ -881,7 +877,7 @@ class Helper {
 			'isWpcom'               => $is_wpcom,
 
 			// widget info.
-			'hasOverlayWidgets'     => is_countable( $overlay_widget_ids ) && count( $overlay_widget_ids ) > 0,
+			'hasOverlayWidgets'     => count( $overlay_widget_ids ) > 0,
 			'widgets'               => array_values( $widgets ),
 			'widgetsOutsideOverlay' => array_values( $widgets_outside_overlay ),
 			'hasNonSearchWidgets'   => $has_non_search_widgets,
