@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Remove title summary option when there is no title on the post
 - Delete implementation of is_wpcom_staging_site() as we are moving it to trait
 - Make chat AI block visible on editor
+- Make Earn products free for all Jetpack plans
 
 ## 12.2-a.5 - 2023-05-08
 
