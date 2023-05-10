@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: store last prompt to be able to retry the request
 - Fixes issue with missing "Super Admin" in edit user form
+- Load wpcom block editor styles
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Remove title summary option when there is no title on the post
