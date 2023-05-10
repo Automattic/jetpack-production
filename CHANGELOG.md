@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds a new AI Assistant block as a proposed replacement for the AI Paragraph and AI Image blocks.
 - AI Assistance: swtich default option depending on previous-block content
 - AI Assistant: Disable request button when not user prompt provided
+- AI Assistant: disable `Summarize` when no content
 - Changed the way we skip a post from being publicized.
 - Jetpack AI: Add try again option
 - Jetpack AI: iterate over createPrompt() function
@@ -21,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Load wpcom block editor styles
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Disable content expansion when there is no previous content
 - AI Assistant: Remove title summary option when there is no title on the post
 - Delete implementation of is_wpcom_staging_site() as we are moving it to trait
 - Make chat AI block visible on editor
