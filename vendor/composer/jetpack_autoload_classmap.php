@@ -335,23 +335,23 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-identity-crisis/src/class-identity-crisis.php'
 	),
 	'Automattic\\Jetpack\\Image_CDN\\Image_CDN' => array(
-		'version' => '0.2.0.0',
+		'version' => '0.2.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-image-cdn/src/class-image-cdn.php'
 	),
 	'Automattic\\Jetpack\\Image_CDN\\Image_CDN_Core' => array(
-		'version' => '0.2.0.0',
+		'version' => '0.2.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-image-cdn/src/class-image-cdn-core.php'
 	),
 	'Automattic\\Jetpack\\Image_CDN\\Image_CDN_Image' => array(
-		'version' => '0.2.0.0',
+		'version' => '0.2.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-image-cdn/src/class-image-cdn-image.php'
 	),
 	'Automattic\\Jetpack\\Image_CDN\\Image_CDN_Image_Sizes' => array(
-		'version' => '0.2.0.0',
+		'version' => '0.2.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-image-cdn/src/class-image-cdn-image-sizes.php'
 	),
 	'Automattic\\Jetpack\\Image_CDN\\Image_CDN_Setup' => array(
-		'version' => '0.2.0.0',
+		'version' => '0.2.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-image-cdn/src/class-image-cdn-setup.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Attachment' => array(
