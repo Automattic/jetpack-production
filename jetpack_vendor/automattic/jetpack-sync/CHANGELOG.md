@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.48.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- PHP8.1 compatibility updates
+
 ## [1.48.0] - 2023-05-08
 ### Changed
 - Use Jetpack Constants to check the value of REST_API_REQUEST in Settings:is_syncing function so we're able to overwrite the value and render some jetpack blocks via the rest api endpoint [#30400]
@@ -850,6 +857,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[1.48.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.48.0...v1.48.1-alpha
 [1.48.0]: https://github.com/Automattic/jetpack-sync/compare/v1.47.9...v1.48.0
 [1.47.9]: https://github.com/Automattic/jetpack-sync/compare/v1.47.8...v1.47.9
 [1.47.8]: https://github.com/Automattic/jetpack-sync/compare/v1.47.7...v1.47.8
