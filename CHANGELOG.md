@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Update UX from ai assistant block
 
 ### Bug fixes
+- AI Assistant: store last prompt to be able to retry the request
 - Fixes issue with missing "Super Admin" in edit user form
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
