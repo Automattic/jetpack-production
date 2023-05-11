@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts: Updated labels for consistency with core
 
 ### Improved compatibility
+- ActivityPub: allow disabling Jetpack's Image CDN in requests made for the ActivityPub plugin.
 - PHP8 compatibility updates.
 
 ### Bug fixes
@@ -41,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Delete implementation of is_wpcom_staging_site() as we are moving it to trait
 - Make chat AI block visible on editor
 - Make Earn products free for all Jetpack plans
+- QR Code panel: remove Jetpack logo.
 - Story Block: remove custom spinner styles.
 
 ## 12.2-a.5 - 2023-05-08
