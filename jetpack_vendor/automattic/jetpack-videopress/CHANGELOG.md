@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix player loading screen on Android
+- Use native embed WebView for the VideoPress editor preview on Android
 
 ## [0.14.1] - 2023-05-08
 ### Added
