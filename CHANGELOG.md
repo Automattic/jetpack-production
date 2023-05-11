@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add option to correct previous content
 - AI Assistant: Add option to simplify preceding content.
 - AI Assistant: Disable content expansion when there is no previous content
+- AI Assistant: Fix generated title
 - AI Assistant: make the block content persistent
 - AI Assistant: Remove title summary option when there is no title on the post
 - Blocks: remove unused files
