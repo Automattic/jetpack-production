@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: store last prompt to be able to retry the request
 - Fix compatibility issue in simple sites due to image CDN package
 - Fixes issue with missing "Super Admin" in edit user form
+- Fixes the Plugins_Modify endpoint to correct declare $args
 - Load wpcom block editor styles
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
