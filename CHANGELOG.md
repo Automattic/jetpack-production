@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds a new AI Assistant block as a proposed replacement for the AI Paragraph and AI Image blocks.
 - AI Assistance: edit generated content before to accept it
 - AI Assistance: swtich default option depending on previous-block content
+- AI Assistant: allow change the `tone` when generating content
 - AI Assistant: Disable request button when not user prompt provided
 - AI Assistant: disable `Summarize` when no content
 - AI Assistant: remove icons from toolbar buttons
@@ -42,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Delete implementation of is_wpcom_staging_site() as we are moving it to trait
 - Make chat AI block visible on editor
 - Make Earn products free for all Jetpack plans
+- QR Code panel: remove Jetpack logo.
 - Story Block: remove custom spinner styles.
 
 ## 12.2-a.5 - 2023-05-08
