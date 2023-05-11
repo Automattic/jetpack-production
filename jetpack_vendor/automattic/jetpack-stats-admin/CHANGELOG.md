@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Stats Admin: adds versions and platform info to Odyssey config data
 
+### Fixed
+- Stats Admin: align is_automated_transfer with other places
+
 ## 0.7.3 - 2023-05-01
 ### Fixed
 - Stats Admin: Cache bust the cache buster [#30374]
