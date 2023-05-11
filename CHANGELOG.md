@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix compatibility issue in simple sites due to image CDN package
 - Fixes issue with missing "Super Admin" in edit user form
 - Fixes the Plugins_Modify endpoint to correct declare $args
+- Fix zoom being reset when changing map marker color
 - Load wpcom block editor styles
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
