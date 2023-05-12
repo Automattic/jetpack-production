@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Disable content expansion when there is no previous content
 - AI Assistant: Fix generated title
 - AI Assistant: make the block content persistent
+- AI Assistant: Remove createPrompt temporary function
 - AI Assistant: Remove title summary option when there is no title on the post
 - Blocks: remove unused files
 - Delete implementation of is_wpcom_staging_site() as we are moving it to trait
