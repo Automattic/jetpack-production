@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add misconfiguration warning functionnality. Also added various design fixes.
 - Adds a new AI Assistant block as a proposed replacement for the AI Paragraph and AI Image blocks.
 - AI Assistance: add some predef options when generating content
 - AI Assistance: edit generated content before to accept it
@@ -21,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Add try again option
 - Jetpack AI: iterate over createPrompt() function
 - Jetpack AI: Update UX from ai assistant block
+- Refactor and update Paid Newsletter user experience
 - Related Posts: Updated labels for consistency with core
 
 ### Improved compatibility
