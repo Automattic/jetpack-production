@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: allow change the `tone` when generating content
 - AI Assistant: Disable request button when not user prompt provided
 - AI Assistant: disable `Summarize` when no content
+- AI Assistant: move and improve prompt types
 - AI Assistant: remove icons from toolbar buttons
 - AI Assistant: update input placeholder text depending on the type of request
 - Changed the way we skip a post from being publicized.
