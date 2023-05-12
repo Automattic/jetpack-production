@@ -128,6 +128,7 @@ return array(
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Boost' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-boost.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Crm' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-crm.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Extras' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-extras.php',
+    'Automattic\\Jetpack\\My_Jetpack\\Products\\Jetpack_Ai' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-jetpack-ai.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Protect' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-protect.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Scan' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-scan.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Search' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-search.php',
