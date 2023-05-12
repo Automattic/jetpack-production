@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: disable `Summarize` when no content
 - AI Assistant: introduce internationalization dropdown when generating content
 - AI Assistant: move and improve prompt types
+- AI Assistant: reduce tones list
 - AI Assistant: remove icons from toolbar buttons
 - AI Assistant: update input placeholder text depending on the type of request
 - Changed the way we skip a post from being publicized.
