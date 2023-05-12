@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress block: Disable debug logs when running unit tests
 
 ### Fixed
+- RNMobile: Turn off autoplay if poster hover effect's active
 - Use native embed WebView for the VideoPress editor preview on Android
 
 ## [0.14.2] - 2023-05-11
