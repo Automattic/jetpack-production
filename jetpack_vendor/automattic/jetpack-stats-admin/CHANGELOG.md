@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Stats Admin: adds rest api for marking and unmarking referrers as spam
 - Stats Admin: adds versions and platform info to Odyssey config data
 
 ### Fixed
