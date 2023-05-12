@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixes the Plugins_Modify endpoint to correct declare $args
 - Fix zoom being reset when changing map marker color
 - Load wpcom block editor styles
+- Show labels on Mapkit markers
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add option to correct previous content
