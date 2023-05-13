@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: remove icons from toolbar buttons
 - AI Assistant: update input placeholder text depending on the type of request
 - Changed the way we skip a post from being publicized.
+- Golden token styling in My Plan.
 - Jetpack AI: Add try again option
 - Jetpack AI: iterate over createPrompt() function
 - Jetpack AI: Update UX from ai assistant block
