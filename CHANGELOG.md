@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI Assistant: Fix prompt content based on action context
+- Dashboard: use the correct file path for all images in the "My Plan" screen.
 
 ## 12.2-a.7 - 2023-05-15
 ### Enhancements
