@@ -3,7 +3,7 @@ Contributors: automattic, alternatekev, andy, apeatling, azaozz, barry, beaulebe
 Tags: WordPress.com, statistics, stats, views, tweets, twitter, widget, gravatar, hovercards, profile, equations, latex, math, maths, youtube, shortcode, archives, audio, blip, bliptv, dailymotion, digg, flickr, googlevideo, google, googlemaps, kyte, kytetv, livevideo, redlasso, rockyou, rss, scribd, slide, slideshare, soundcloud, vimeo, shortlinks, wp.me, subscriptions, notifications, notes, json, api, rest, mosaic, gallery, slideshow
 Requires at least: 3.5
 Tested up to: 3.7.1
-Stable tag: 2.6.1
+Stable tag: 2.6.4
 
 Supercharge your WordPress site with powerful features previously only available to WordPress.com users.
 
@@ -81,7 +81,25 @@ Learn more (and get detailed instructions) in our [contribute guide](http://jetp
 7. CSS Editor
 8. Mobile Theme
 
+== Upgrade Notice ==
+
+= 2.6.3 =
+Jetpack 2.6.2 fixes a security bug, and 2.6.3 fixes a rare fatal error. Please upgrade immediately.
+
+= 2.6.2 =
+Jetpack 2.6.2 fixes a security bug. Please upgrade immediately.
+
 == Changelog ==
+= 2.6.4 =
+Release Date: May 26, 2016
+
+* Important security update. Please upgrade immediately.
+
+= 2.6.3 =
+* Bug Fix: Avoid function which isn't always defined.
+
+= 2.6.2 =
+* Important security update. CVE-2014-0173
 
 = 2.6.1 =
 * Bug Fix: minor styling fix in pre- and post-MP6/3.8 UI changes.
