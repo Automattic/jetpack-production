@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Disable request button when not user prompt provided
 - AI Assistant: disable `Summarize` when no content
 - AI Assistant: introduce internationalization dropdown when generating content
+- AI Assistant: Janitorial PR - clean unused test. Re-organize the prompt generation.
 - AI Assistant: move and improve prompt types
 - AI Assistant: reduce tones list
 - AI Assistant: remove icons from toolbar buttons
