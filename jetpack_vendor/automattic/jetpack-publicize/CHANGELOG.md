@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Changed how we update the publicize skip meta.
+- Get Jetpack to use connection_id as the uninque identifier of the editor elements on the sidebar
 - PHP 8 Compatibility fixes
 
 ## [0.27.0] - 2023-05-08
