@@ -3,7 +3,7 @@ Contributors: automattic, apeatling, beaulebens, hugobaeta, Joen, mdawaffe, andy
 Tags: WordPress.com, statistics, stats, views, tweets, twitter, widget, gravatar, hovercards, profile, equations, latex, math, maths, youtube, shortcode, archives, audio, blip, bliptv, dailymotion, digg, flickr, googlevideo, google, googlemaps, kyte, kytetv, livevideo, redlasso, rockyou, rss, scribd, slide, slideshare, soundcloud, vimeo, shortlinks, wp.me, subscriptions, notifications, notes, json, api, rest
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 2.0.4
+Stable tag: 2.0.7
 
 Supercharge your WordPress site with powerful features previously only available to WordPress.com users.
 
@@ -88,6 +88,16 @@ Use [shortcodes](http://support.wordpress.com/shortcodes/) to embed your media. 
 8. Mobile Theme
 
 == Changelog ==
+= 2.0.7 =
+Release Date: May 26, 2016
+
+* Important security update. Please upgrade immediately.
+
+= 2.0.6 =
+* Bug Fix: Avoid function which isn't always defined.
+
+= 2.0.5 =
+* Important security update. CVE-2014-0173
 
 = 2.0.4 =
 * Bug Fix: Open Graph: Correct a bug that prevents Jetpack from being activated if the SharePress plugin isn't installed.
