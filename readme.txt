@@ -3,7 +3,7 @@ Contributors: automattic, alternatekev, andy, apeatling, azaozz, barry, beaulebe
 Tags: WordPress.com, statistics, stats, views, tweets, twitter, widget, gravatar, hovercards, profile, equations, latex, math, maths, youtube, shortcode, archives, audio, blip, bliptv, dailymotion, digg, flickr, googlevideo, google, googlemaps, kyte, kytetv, livevideo, redlasso, rockyou, rss, scribd, slide, slideshare, soundcloud, vimeo, shortlinks, wp.me, subscriptions, notifications, notes, json, api, rest, mosaic, gallery, slideshow
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 2.4.2
+Stable tag: 2.4.5
 
 Supercharge your WordPress site with powerful features previously only available to WordPress.com users.
 
@@ -82,6 +82,17 @@ Learn more (and get detailed instructions) in our [contribute guide](http://jetp
 8. Mobile Theme
 
 == Changelog ==
+
+= 2.4.5 =
+Release Date: May 26, 2016
+
+* Important security update. Please upgrade immediately.
+
+= 2.4.4 =
+* Bug Fix: Avoid function which isn't always defined.
+
+= 2.4.3 =
+* Important security update. CVE-2014-0173
 
 = 2.4.2 =
 * Enhancement: Converted to module headers to detect Auto-Activating modules.
