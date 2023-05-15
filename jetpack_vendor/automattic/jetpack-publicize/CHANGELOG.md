@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Changed how we update the publicize skip meta.
+- PHP 8 Compatibility fixes
 
 ## [0.27.0] - 2023-05-08
 ### Added

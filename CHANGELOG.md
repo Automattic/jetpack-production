@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI Assistant: store last prompt to be able to retry the request
+- Change the "Add payments" to "Set up a paid plan"
 - Fix compatibility issue in simple sites due to image CDN package
 - Fixes issue with missing "Super Admin" in edit user form
 - Fixes the Plugins_Modify endpoint to correct declare $args
