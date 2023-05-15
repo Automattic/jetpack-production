@@ -3,7 +3,7 @@ Contributors: automattic, alternatekev, andy, apeatling, azaozz, barry, beaulebe
 Tags: WordPress.com, statistics, stats, views, tweets, twitter, widget, gravatar, hovercards, profile, equations, latex, math, maths, youtube, shortcode, archives, audio, blip, bliptv, dailymotion, digg, flickr, googlevideo, google, googlemaps, kyte, kytetv, livevideo, redlasso, rockyou, rss, scribd, slide, slideshare, soundcloud, vimeo, shortlinks, wp.me, subscriptions, notifications, notes, json, api, rest, mosaic, gallery, slideshow
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 2.3.5
+Stable tag: 2.3.8
 
 Supercharge your WordPress site with powerful features previously only available to WordPress.com users.
 
@@ -79,6 +79,16 @@ Easy! There are a couple of ways (more coming soon):
 8. Mobile Theme
 
 == Changelog ==
+= 2.3.8 =
+Release Date: May 26, 2016
+
+* Important security update. Please upgrade immediately.
+
+= 2.3.7 =
+* Bug Fix: Avoid function which isn't always defined.
+
+= 2.3.6 =
+* Important security update. CVE-2014-0173
 
 = 2.3.5 =
 * Enhancement: Added Path support to Publicize.
