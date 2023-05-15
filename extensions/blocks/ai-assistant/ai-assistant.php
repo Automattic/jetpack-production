@@ -2,7 +2,7 @@
 /**
  * Jetpack AI Assistant Block.
  *
- * @since 12.2-a.6
+ * @since 12.2
  *
  * @package automattic/jetpack
  */
