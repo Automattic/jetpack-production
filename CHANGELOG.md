@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - ActivityPub: allow disabling Jetpack's Image CDN in requests made for the ActivityPub plugin.
+- PHP8 compatibility updates, mostly focusing on Jetpack.
 - PHP8 compatibility updates.
 
 ### Bug fixes
