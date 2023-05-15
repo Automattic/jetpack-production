@@ -172,7 +172,7 @@ add_filter( 'pre_kses', 'vimeo_embed_to_shortcode' );
  * @return string The content with embeds instead of URLs
  */
 function vimeo_link( $content ) {
-	return preg_replace_callback( '#https://vimeo.com/\d*#', 'vimeo_link_callback', $content );
+	return jetpack_preg_replace_callback_outside_tags( '#https://vimeo.com/\d*#', 'vimeo_link_callback', $content, 'vimeo' );
 }
 
 /**
