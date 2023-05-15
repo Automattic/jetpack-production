@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI: Add translate option
 
+### Bug fixes
+- AI Assistant: Fix prompt content based on action context
+
 ## 12.2-a.7 - 2023-05-15
 ### Enhancements
 - Add misconfiguration warning functionality. Also added various design fixes. [#30446]
