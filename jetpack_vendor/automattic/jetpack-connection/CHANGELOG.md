@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.51.10-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- PHP8 compatibility updates, mostly focusing on Jetpack.
+
 ## [1.51.9] - 2023-05-15
 ### Changed
 - Internal updates.
@@ -805,6 +812,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[1.51.10-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.51.9...v1.51.10-alpha
 [1.51.9]: https://github.com/Automattic/jetpack-connection/compare/v1.51.8...v1.51.9
 [1.51.8]: https://github.com/Automattic/jetpack-connection/compare/v1.51.7...v1.51.8
 [1.51.7]: https://github.com/Automattic/jetpack-connection/compare/v1.51.6...v1.51.7
