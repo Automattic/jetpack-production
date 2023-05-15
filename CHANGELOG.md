@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add misconfiguration warning functionnality. Also added various design fixes.
 - Adds a new AI Assistant block as a proposed replacement for the AI Paragraph and AI Image blocks.
+- AI: Add translate option
 - AI Assistance: add some predef options when generating content
 - AI Assistance: edit generated content before to accept it
 - AI Assistance: swtich default option depending on previous-block content
