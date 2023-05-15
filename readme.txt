@@ -1,7 +1,7 @@
 === Jetpack by WordPress.com ===
 Contributors: automattic, alternatekev, andy, apeatling, azaozz, barry, beaulebens, blobaugh, cfinke, chellycat, danielbachhuber, daniloercoli, designsimply, eoigal, ethitter, gibrown, georgestephanis, hew, hugobaeta, iammattthomas, jblz, jeherve, jkudish, Joen, johnjamesjacoby, jshreve, kraftbj, lancewillett, martinremy, matt, matveb, mcsf, mdawaffe, migueluy, nickmomrik, obenland, pento, richardmtl, stephdau, tmoorewp, Viper007Bond, westi, yoavf
 Tags: WordPress.com, statistics, stats, views, tweets, twitter, widget, gravatar, hovercards, profile, equations, latex, math, maths, youtube, shortcode, archives, audio, blip, bliptv, dailymotion, digg, flickr, googlevideo, google, googlemaps, kyte, kytetv, livevideo, redlasso, rockyou, rss, scribd, slide, slideshare, soundcloud, vimeo, shortlinks, wp.me, subscriptions, notifications, notes, json, api, rest, mosaic, gallery, slideshow, videopress, monitor, search, omnisearch, sso, jet pack
-Stable tag: 3.0.2
+Stable tag: 3.0.4
 Requires at least: 3.8
 Tested up to: 3.9.1
 
@@ -84,32 +84,33 @@ Learn more (and get detailed instructions) in our [contribute guide](http://jetp
 7. CSS Editor
 8. Mobile Theme
 
-== Upgrade Notice ==
-
-= 3.0 =
-Jetpack 3.0 is full of enhancements and bug fixes, including a new Administrative User Interface. Upgrade today!
-
 == Changelog ==
+= 3.0.4 =
+Release Date: May 26, 2016
+
+* Important security update. Please upgrade immediately.
+
+= 3.0.3 =
+* Security hardening.
 
 = 3.0.2 =
-* Bug Fix: RTL Jetpack Admin UI
-* Bug Fix: Related Posts link for more info working
-* Bug Fix: Likes button styling
-* Bug Fix: Removed PHP warning when deactivating plugins
-* Bug Fix: Removed un neccesery description
-* Bug Fix: Removed the SSL error on Jetpack Admin UI
-* Bug Fix: WP Engine oauth error
-* Bug Fix: Removed PHP warning on open graph gallery pages
-* Bug Fix: Depreciated Akismet function called
-* Bug Fix: Removed PHP scrict error on the mobile menu
-* Bug Fix: Calling developer mode is easier to do 
-* Bug Fix: Categories tab works in languages other then English
-* Bug Fix: Contact form sends email that is not marked as spam
-* Bug Fix: Remove UI for Reblog settings. 
-* Enhancement: Updated Languages Files. 
-* Enhancement: Better settings link
-* Enhancement: Make module categories filter more visible when active
-* Enhancement: Link to the contact form
+* Enhancement: General: Make module categories filter more visible when active.
+* Enhancement: General: Updated translation files with more strings added since the last release.
+* Enhancement: General: Allow deep-linking to the Contact Support form.
+* Bug Fix: General: RTL Jetpack Admin UI looks better.
+* Bug Fix: General: Fixed PHP warning when bulk deactivating modules.
+* Bug Fix: General: Removed an unnecessary description.
+* Bug Fix: General: Resolved an SSL error on Jetpack Admin UI.
+* Bug Fix: General: Fix error comparing signatures when the WordPress installation is using site_url filters (applied mostly to WPEngine sites).
+* Bug Fix: General: Resolved PHP strict error on the mobile menu.
+* Bug Fix: General: Fix timing of conditional checks, so that calling developer mode via a plugin works again.
+* Bug Fix: General: Main page categories tab now properly translates module names.
+* Bug Fix: Related Posts: Fix a typo, the "more info" link now works.
+* Bug Fix: Likes: Improve button styling.
+* Bug Fix: Likes: Remove unused UI for Reblog settings on social settings page.
+* Bug Fix: Contact Form: Updated to no longer use a deprecated Akismet function.
+* Bug Fix: Contact Form: Sends email to the administrator that is not marked as spam again.
+* Bug Fix: Open Graph: Resolved PHP warning on open graph gallery pages when the gallery is empty.
 
 = 3.0.1 =
 * Bugfix: AtD: A wpcom-only function got synced by mistake and caused a few errors. Fixed.
