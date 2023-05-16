@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI: Add translate option
+- AI Assistant: request for basic formatted content
 - Contact Form: improved spam filtering
 
 ### Improved compatibility
