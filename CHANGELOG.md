@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI: Add translate option
+- Contact Form: improved spam filtering
 
 ### Improved compatibility
 - PHP8 compatibility updates.
@@ -16,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Add loading indicator when fetching rewind state on Jetpack settings page
 - AI Assistant: Fix prompt content based on action context
 - Dashboard: use the correct file path for all images in the "My Plan" screen.
+- Previous implementation would remove buklk-edition checkbox from the posts list. This is now fixed.
 
 ## 12.2-a.7 - 2023-05-15
 ### Enhancements
