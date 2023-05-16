@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.12.17-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Added backup storage help popover with forecast info
+
 ## [1.12.16] - 2023-05-02
 ### Changed
 - Updated package dependencies.
@@ -404,6 +411,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
+[1.12.17-alpha]: https://github.com/Automattic/jetpack-backup/compare/v1.12.16...v1.12.17-alpha
 [1.12.16]: https://github.com/Automattic/jetpack-backup/compare/v1.12.15...v1.12.16
 [1.12.15]: https://github.com/Automattic/jetpack-backup/compare/v1.12.14...v1.12.15
 [1.12.14]: https://github.com/Automattic/jetpack-backup/compare/v1.12.13...v1.12.14
