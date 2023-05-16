@@ -8,7 +8,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI: Add translate option
-- Contact Form: improved spam filtering
 
 ### Improved compatibility
 - PHP8 compatibility updates.
