@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI: Add translate option
 
+### Improved compatibility
+- PHP8 compatibility updates.
+
 ### Bug fixes
 - AI Assistant: Fix prompt content based on action context
 - Dashboard: use the correct file path for all images in the "My Plan" screen.
