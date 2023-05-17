@@ -1,7 +1,7 @@
 === Jetpack by WordPress.com ===
 Contributors: automattic, alternatekev, andy, apeatling, azaozz, barry, beaulebens, blobaugh, cfinke, chellycat, danielbachhuber, daniloercoli, designsimply, dsmart, eoigal, ethitter, gibrown, georgestephanis, hew, hugobaeta, iammattthomas, jblz, jeherve, jkudish, Joen, johnjamesjacoby, jshreve, kraftbj, lancewillett, martinremy, matt, matveb, maverick3x6, mcsf, mdawaffe, migueluy, nickmomrik, obenland, pento, professor44, richardmtl, roccotripaldi, samhotchkiss, sdquirk, stephdau, tmoorewp, Viper007Bond, westi, yoavf, zinigor
 Tags: WordPress.com, jet pack, comments, contact, gallery, performance, sharing, security, shortcodes, stats, subscriptions, widgets
-Stable tag: 3.6.3
+Stable tag: 3.6.4
 Requires at least: 4.1.1
 Tested up to: 4.2.3
 
@@ -99,6 +99,13 @@ Learn more (and get detailed instructions) in our [contribute guide](http://jetp
 8. Mobile Theme
 
 == Changelog ==
+
+= 3.6.4 =
+Release date: May 30, 2023
+
+Security:
+
+* WordPress.com REST API: Ensure that files uploaded via the API are properly validated.
 = 3.6.3 =
 Release date: June 2, 2021
 
