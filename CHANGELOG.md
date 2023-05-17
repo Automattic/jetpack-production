@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Add loading indicator when fetching rewind state on Jetpack settings page
 - AI Assistant: Fix prompt content based on action context
 - Dashboard: use the correct file path for all images in the "My Plan" screen.
+- Fix IP allow list updates on Atomic sites.
 - Previous implementation would remove buklk-edition checkbox from the posts list. This is now fixed.
 - VideoPress: Add tracks to attributes definition
 
