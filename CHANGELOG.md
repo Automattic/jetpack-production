@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add Jetpack Starter post-purchase flow to recommendations
 - AI: Add translate option
 - AI Assistant: request for basic formatted content
 - AI Assistant: Send the post ID on every text completion so it can be logger and tracked on the backend.
