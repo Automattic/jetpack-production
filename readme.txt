@@ -3,7 +3,7 @@ Contributors: automattic, alternatekev, andy, apeatling, azaozz, barry, beaulebe
 Tags: WordPress.com, statistics, stats, views, tweets, twitter, widget, gravatar, hovercards, profile, equations, latex, math, maths, youtube, shortcode, archives, audio, blip, bliptv, dailymotion, digg, flickr, googlevideo, google, googlemaps, kyte, kytetv, livevideo, redlasso, rockyou, rss, scribd, slide, slideshare, soundcloud, vimeo, shortlinks, wp.me, subscriptions, notifications, notes, json, api, rest, mosaic, gallery, slideshow
 Requires at least: 3.5
 Tested up to: 3.7.1
-Stable tag: 2.6.5
+Stable tag: 2.6.6
 
 Supercharge your WordPress site with powerful features previously only available to WordPress.com users.
 
@@ -90,6 +90,13 @@ Jetpack 2.6.2 fixes a security bug, and 2.6.3 fixes a rare fatal error. Please u
 Jetpack 2.6.2 fixes a security bug. Please upgrade immediately.
 
 == Changelog ==
+
+= 2.6.6 =
+Release date: May 30, 2023
+
+Security:
+
+* WordPress.com REST API: Ensure that files uploaded via the API are properly validated.
 
 = 2.6.5 =
 Release date: June 2, 2021
