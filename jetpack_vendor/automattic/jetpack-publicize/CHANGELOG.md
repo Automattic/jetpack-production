@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.28.1-alpha] - unreleased
+## [0.29.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Added validation of featured image for instagram connections
 
 ### Fixed
 - Publicize: Update the UI logic to properly cope with broken connections
@@ -315,7 +318,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.28.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.28.0...v0.28.1-alpha
+[0.29.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.28.0...v0.29.0-alpha
 [0.28.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.27.0...v0.28.0
 [0.27.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.26.0...v0.27.0
 [0.26.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.25.1...v0.26.0
