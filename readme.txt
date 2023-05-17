@@ -3,7 +3,7 @@ Contributors: automattic, apeatling, beaulebens, hugobaeta, Joen, mdawaffe, andy
 Tags: WordPress.com, statistics, stats, views, tweets, twitter, widget, gravatar, hovercards, profile, equations, latex, math, maths, youtube, shortcode, archives, audio, blip, bliptv, dailymotion, digg, flickr, googlevideo, google, googlemaps, kyte, kytetv, livevideo, redlasso, rockyou, rss, scribd, slide, slideshare, soundcloud, vimeo, shortlinks, wp.me, subscriptions, notifications, notes, json, api, rest, mosaic, gallery, slideshow
 Requires at least: 3.3
 Tested up to: 3.5
-Stable tag: 2.1.6
+Stable tag: 2.1.7
 
 Supercharge your WordPress site with powerful features previously only available to WordPress.com users.
 
@@ -89,6 +89,13 @@ Use [shortcodes](http://support.wordpress.com/shortcodes/) to embed your media. 
 8. Mobile Theme
 
 == Changelog ==
+
+= 2.1.7 =
+Release date: May 30, 2023
+
+Security:
+
+* WordPress.com REST API: Ensure that files uploaded via the API are properly validated.
 
 = 2.1.6 =
 Release date: June 2, 2021
