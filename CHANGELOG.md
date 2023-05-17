@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.2-a.8 - unreleased
+## 12.2-a.10 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -20,6 +20,10 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Fix prompt content based on action context
 - Dashboard: use the correct file path for all images in the "My Plan" screen.
 - Previous implementation would remove buklk-edition checkbox from the posts list. This is now fixed.
+
+## 12.2-a.9 - 2023-05-17
+### Bug fixes
+- Correctly enable AI Assistant block on WordPress.com.
 
 ## 12.2-a.7 - 2023-05-15
 ### Enhancements
