@@ -1,7 +1,7 @@
 === Jetpack by WordPress.com ===
 Contributors: automattic, adamkheckler, aduth, akirk, allendav, alternatekev, andy, apeatling, azaozz, batmoo, barry, beaulebens, blobaugh, cainm, cfinke, chaselivingston, chellycat, csonnek, danielbachhuber, davoraltman, daniloercoli, designsimply, dllh, drawmyface, dsmart, dzver, ebinnion, eliorivero, enej, eoigal, ethitter, gcorne, georgestephanis, gibrown, goldsounds, hew, hugobaeta, hypertextranch, iammattthomas, iandunn, jacobshere, jblz, jeherve, jenhooks, jenia, jkudish, jmdodd, Joen, johnjamesjacoby, jshreve, koke, kraftbj, lamdayap, lancewillett, lschuyler, macmanx, martinremy, matt, matveb, mattwiebe, maverick3x6, mcsf, mdawaffe, michael-arestad, migueluy, mikeyarce, mkaz, nancythanki, nickmomrik, obenland, pento, professor44, ryancowles, richardmuscat, richardmtl, roccotripaldi, samhotchkiss, sdquirk, stephdau, tmoorewp, Viper007Bond, westi, yoavf, zinigor
 Tags: WordPress.com, jet pack, comments, contact, gallery, performance, sharing, security, shortcodes, stats, subscriptions, widgets
-Stable tag: 4.0.5
+Stable tag: 4.0.6
 Requires at least: 4.4
 Tested up to: 4.5.2
 
@@ -74,6 +74,13 @@ There are opportunities for developers at all levels to contribute. [Learn more 
 5. Related Posts.
 
 == Changelog ==
+
+= 4.0.6 =
+Release date: May 30, 2023
+
+Security:
+
+* WordPress.com REST API: Ensure that files uploaded via the API are properly validated.
 
 = 4.0.5 =
 Release date: June 2, 2021
