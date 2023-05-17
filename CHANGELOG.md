@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Add translate option
 - AI Assistant: request for basic formatted content
 - AI Assistant: Send the post ID on every text completion so it can be logger and tracked on the backend.
+- Change "Premium Content" block to "Paid Content" block
 - Contact Form: improved spam filtering
 
 ### Improved compatibility
@@ -20,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Fix prompt content based on action context
 - Dashboard: use the correct file path for all images in the "My Plan" screen.
 - Previous implementation would remove buklk-edition checkbox from the posts list. This is now fixed.
+- VideoPress: Add tracks to attributes definition
 
 ## 12.2-a.9 - 2023-05-17
 ### Bug fixes
