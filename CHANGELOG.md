@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Add loading indicator when fetching rewind state on Jetpack settings page
 - AI Assistant: Fix prompt content based on action context
 - AI Assistant: Use site-independent completion endpoint to prevent request failures for private WPCOM sites.
+- Attempt to fix Forms hash generation. This has been ported from package on #30764
 - Dashboard: use the correct file path for all images in the "My Plan" screen.
 - Fix IP allow list updates on Atomic sites.
 - Fix race condition bug in the Plugin update endpoint.
