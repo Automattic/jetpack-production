@@ -15,12 +15,12 @@
 		"automattic/jetpack-abtest": "^1.10.13",
 		"automattic/jetpack-action-bar": "^0.1.18",
 		"automattic/jetpack-assets": "^1.18.3",
-		"automattic/jetpack-autoloader": "^2.11.20",
+		"automattic/jetpack-autoloader": "^2.11.21-alpha",
 		"automattic/jetpack-backup": "^1.12.17-alpha",
 		"automattic/jetpack-blaze": "^0.5.12",
 		"automattic/jetpack-blocks": "^1.4.21",
 		"automattic/jetpack-compat": "^1.7.6",
-		"automattic/jetpack-composer-plugin": "^1.1.10",
+		"automattic/jetpack-composer-plugin": "^1.1.11-alpha",
 		"automattic/jetpack-config": "^1.15.2",
 		"automattic/jetpack-connection": "^1.51.10-alpha",
 		"automattic/jetpack-constants": "^1.6.22",
@@ -55,7 +55,7 @@
 	},
 	"require-dev": {
 		"antecedent/patchwork": "2.1.25",
-		"automattic/jetpack-changelogger": "^3.3.3",
+		"automattic/jetpack-changelogger": "^3.3.4-alpha",
 		"johnkary/phpunit-speedtrap": "^4.0.0 || ^2.0.0 || ^1.1.0",
 		"yoast/phpunit-polyfills": "1.0.4"
 	},
