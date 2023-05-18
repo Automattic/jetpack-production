@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: request for basic formatted content
 - AI Assistant: Send the post ID on every text completion so it can be logger and tracked on the backend.
 - Change "Premium Content" block to "Paid Content" block
+- Changed icon for AI Assistant block
 - Contact Form: improved spam filtering
 - Jetpack Forms: improved styling of response emails
 
@@ -25,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Fix prompt content based on action context
 - Dashboard: use the correct file path for all images in the "My Plan" screen.
 - Fix IP allow list updates on Atomic sites.
+- Fix race condition bug in the Plugin update endpoint.
 - Previous implementation would remove buklk-edition checkbox from the posts list. This is now fixed.
 - VideoPress: Add tracks to attributes definition
 
