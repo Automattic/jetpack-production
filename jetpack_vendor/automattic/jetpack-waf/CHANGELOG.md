@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix unavailable endpoint when WAF module is disabled
+- Multisite: avoid errors when the package is used in the Protect plugin instead of the Jetpack plugin.
 
 ## [0.11.5] - 2023-05-15
 ### Changed
