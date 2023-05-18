@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added ability to purchase Jetpack AI monthly product
 - Added tier data to the Boost product to support a pricing table interstitial page.
 
 ## [2.13.0] - 2023-05-15
