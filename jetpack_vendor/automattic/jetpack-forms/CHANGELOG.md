@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Akismet: include current gmt time to assist in spam detection
+- Jetpack Forms: improving the styling of response emails
 
 ### Fixed
 - Change hook parameter to what it was before (fields collection). Modify Post_To_Url hook to handle such collection instead of a form instance

@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Send the post ID on every text completion so it can be logger and tracked on the backend.
 - Change "Premium Content" block to "Paid Content" block
 - Contact Form: improved spam filtering
+- Jetpack Forms: improved styling of response emails
 
 ### Improved compatibility
 - PHP8 compatibility updates.
