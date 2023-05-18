@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added validation of featured image for instagram connections
 
 ### Fixed
+- Added a failsafe check for error codes
 - Publicize: Update the UI logic to properly cope with broken connections
 
 ## [0.28.0] - 2023-05-15
