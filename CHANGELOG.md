@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add Jetpack Starter post-purchase flow to recommendations
+- AI-Assistant: introduce multiple blocks content edition
 - AI: Add translate option
 - AI Assistant: Add treatment for error when prompt is not understood
 - AI Assistant: implement JWT token storing layer
