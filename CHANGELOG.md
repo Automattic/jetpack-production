@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Change "Premium Content" block to "Paid Content" block
 - Changed icon for AI Assistant block
 - Contact Form: improved spam filtering
+- Hides the "My Plan" on My Plan page if user has a paid project and a free plan. This way, users won't have much or conflicting information on that page.
 - Jetpack Forms: improved styling of response emails
 - Updates tracks event name for AI Assistant block
 
