@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix IP allow list updates on Atomic sites.
 - Fix race condition bug in the Plugin update endpoint.
 - Previous implementation would remove buklk-edition checkbox from the posts list. This is now fixed.
+- Return early when possible to prevent spamming DB
 - VideoPress: Add tracks to attributes definition
 
 ## 12.2-a.9 - 2023-05-17
