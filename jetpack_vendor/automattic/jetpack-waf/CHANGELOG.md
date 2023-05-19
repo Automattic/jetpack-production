@@ -9,7 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add integration tests for unsupported environments
+
 ### Fixed
+- Fix Brute force protection activation when WAF unset
 - Fix unavailable endpoint when WAF module is disabled
 - Multisite: avoid errors when the package is used in the Protect plugin instead of the Jetpack plugin.
 
