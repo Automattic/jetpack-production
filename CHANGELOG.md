@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Changed icon for AI Assistant block
 - Contact Form: improved spam filtering
 - Jetpack Forms: improved styling of response emails
+- Updates tracks event name for AI Assistant block
 
 ### Improved compatibility
 - PHP8 compatibility updates.
