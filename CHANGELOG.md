@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add tracks to attributes definition
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add Offline Mode flag into Site Health debugging info.
 - Publicize: avoid PHP warning
 
 ## 12.2-a.9 - 2023-05-17
