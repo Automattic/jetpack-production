@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - PHP8 compatibility updates.
+- PHP Compatibility: fix dynamic property deprecation notices.
 
 ### Bug fixes
 - Add loading indicator when fetching rewind state on Jetpack settings page
