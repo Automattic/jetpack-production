@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Hides the "My Plan" on My Plan page if user has a paid project and a free plan. This way, users won't have much or conflicting information on that page.
 - Jetpack Forms: improved styling of response emails
 - Updates tracks event name for AI Assistant block
+- Upgrade upgrade prompt for AI Assistant block
 
 ### Improved compatibility
 - PHP8 compatibility updates.
