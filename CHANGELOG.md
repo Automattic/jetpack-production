@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: fix bug when competion and multiple blocks selected
 - AI Assistant: Ignore first chunk on unclear prompt check
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updating readme for features and new wordings
+
 ## 12.2-a.11 - 2023-05-22
 ### Enhancements
 - Add Jetpack Starter post-purchase flow to recommendations [#30680]
