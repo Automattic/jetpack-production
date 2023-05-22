@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI Assistant: fix bug when competion and multiple blocks selected
+- AI Assistant: Ignore first chunk on unclear prompt check
 
 ## 12.2-a.11 - 2023-05-22
 ### Enhancements
