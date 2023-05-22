@@ -9,6 +9,12 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: set fade effect when just requested completion
 
+### Improved compatibility
+- WooCommerce: avoid Fatal errors when other plugins make changes to WooCommerce Products or Orders.
+
+### Bug fixes
+- AI Assistant: fix bug when competion and multiple blocks selected
+
 ## 12.2-a.11 - 2023-05-22
 ### Enhancements
 - Add Jetpack Starter post-purchase flow to recommendations [#30680]
