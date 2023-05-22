@@ -409,33 +409,33 @@
         },
         {
             "name": "automattic/jetpack-blaze",
-            "version": "v0.5.12",
-            "version_normalized": "0.5.12.0",
+            "version": "v0.5.13",
+            "version_normalized": "0.5.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-blaze.git",
-                "reference": "a1ff436cf9c974ce9bbe1d942ce4ea225d4f7c62"
+                "reference": "805bc58500a46b44226bead9ab2780628fa3b666"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-blaze/zipball/a1ff436cf9c974ce9bbe1d942ce4ea225d4f7c62",
-                "reference": "a1ff436cf9c974ce9bbe1d942ce4ea225d4f7c62",
+                "url": "https://api.github.com/repos/Automattic/jetpack-blaze/zipball/805bc58500a46b44226bead9ab2780628fa3b666",
+                "reference": "805bc58500a46b44226bead9ab2780628fa3b666",
                 "shasum": ""
             },
             "require": {
-                "automattic/jetpack-connection": "^1.51.8",
-                "automattic/jetpack-sync": "^1.47.9"
+                "automattic/jetpack-connection": "^1.52.0",
+                "automattic/jetpack-sync": "^1.48.1"
             },
             "require-dev": {
-                "automattic/jetpack-assets": "^1.18.2",
-                "automattic/jetpack-changelogger": "^3.3.2",
+                "automattic/jetpack-assets": "^1.18.3",
+                "automattic/jetpack-changelogger": "^3.3.4",
                 "automattic/wordbless": "@dev",
                 "yoast/phpunit-polyfills": "1.0.4"
             },
             "suggest": {
                 "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
             },
-            "time": "2023-05-02T19:39:37+00:00",
+            "time": "2023-05-22T18:30:12+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -463,7 +463,7 @@
             ],
             "description": "Attract high-quality traffic to your site using Blaze.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-blaze/tree/v0.5.12"
+                "source": "https://github.com/Automattic/jetpack-blaze/tree/v0.5.13"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-blaze"
         },
