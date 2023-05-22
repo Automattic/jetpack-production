@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: implement JWT token storing layer
 - AI Assistant: request for basic formatted content
 - AI Assistant: Send the post ID on every text completion so it can be logger and tracked on the backend.
+- AI Assistant: set fade effect when just requested completion
 - Change "Premium Content" block to "Paid Content" block
 - Changed icon for AI Assistant block
 - Contact Form: improved spam filtering
