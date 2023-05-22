@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: add Jetpack logo to multiple blocks edition panel
 - AI Assistant: restore the multiple blocks edition feature
 - AI Assistant: set fade effect when just requested completion
+- AI Assistant: use AI icon in the block panels
 
 ### Improved compatibility
 - Sharing / Likes / Related Posts: do not display them in JSON requests available when using the ActivityPub plugin.
