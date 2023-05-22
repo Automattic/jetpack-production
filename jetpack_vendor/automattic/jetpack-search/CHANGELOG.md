@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.37.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.37.1] - 2023-05-22
 ### Changed
-- PHP Compatibility: fix dynamic property deprecation notices
+- PHP Compatibility: fix dynamic property deprecation notices [#30786]
 
 ## [0.37.0] - 2023-05-15
 ### Added
@@ -755,7 +752,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.37.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.37.0...v0.37.1-alpha
+[0.37.1]: https://github.com/Automattic/jetpack-search/compare/v0.37.0...v0.37.1
 [0.37.0]: https://github.com/Automattic/jetpack-search/compare/v0.36.3...v0.37.0
 [0.36.3]: https://github.com/Automattic/jetpack-search/compare/v0.36.2...v0.36.3
 [0.36.2]: https://github.com/Automattic/jetpack-search/compare/v0.36.1...v0.36.2

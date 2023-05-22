@@ -2,45 +2,42 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.2-a.10 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 12.2-a.11 - 2023-05-22
 ### Enhancements
-- Add Jetpack Starter post-purchase flow to recommendations
-- AI-Assistant: introduce multiple blocks content edition
-- AI: Add translate option
-- AI Assistant: Add treatment for error when prompt is not understood
-- AI Assistant: implement JWT token storing layer
-- AI Assistant: request for basic formatted content
-- AI Assistant: Send the post ID on every text completion so it can be logger and tracked on the backend.
-- Change "Premium Content" block to "Paid Content" block
-- Changed icon for AI Assistant block
-- Contact Form: improved spam filtering
-- Hides the "My Plan" on My Plan page if user has a paid project and a free plan. This way, users won't have much or conflicting information on that page.
-- Jetpack Forms: improved styling of response emails
-- Updates tracks event name for AI Assistant block
-- Upgrade upgrade prompt for AI Assistant block
+- Add Jetpack Starter post-purchase flow to recommendations [#30680]
+- AI-Assistant: introduce multiple blocks content edition [#30735]
+- AI: Add translate option [#30730]
+- AI Assistant: Add treatment for error when prompt is not understood [#30778]
+- AI Assistant: implement JWT token storing layer [#30782]
+- AI Assistant: request for basic formatted content [#30757]
+- AI Assistant: Send the post ID on every text completion so it can be logger and tracked on the backend. [#30765]
+- Change "Premium Content" block to "Paid Content" block [#30775]
+- Changed icon for AI Assistant block [#30801]
+- Contact Form: improved spam filtering [#30755]
+- Hides the "My Plan" on My Plan page if user has a paid project and a free plan. This way, users won't have much or conflicting information on that page. [#30804]
+- Jetpack Forms: improved styling of response emails [#30088]
+- Updates tracks event name for AI Assistant block [#30816]
+- Upgrade upgrade prompt for AI Assistant block [#30821]
 
 ### Improved compatibility
-- PHP8 compatibility updates.
-- PHP Compatibility: fix dynamic property deprecation notices.
+- PHP8 compatibility updates. [#30729]
+- PHP Compatibility: fix dynamic property deprecation notices. [#30786]
 
 ### Bug fixes
-- Add loading indicator when fetching rewind state on Jetpack settings page
-- AI Assistant: Fix prompt content based on action context
-- AI Assistant: Use site-independent completion endpoint to prevent request failures for private WPCOM sites.
-- Attempt to fix Forms hash generation. This has been ported from package on #30764
-- Dashboard: use the correct file path for all images in the "My Plan" screen.
-- Fix IP allow list updates on Atomic sites.
-- Fix race condition bug in the Plugin update endpoint.
-- Previous implementation would remove buklk-edition checkbox from the posts list. This is now fixed.
-- Return early when possible to prevent spamming DB
-- VideoPress: Add tracks to attributes definition
+- Add loading indicator when fetching rewind state on Jetpack settings page [#30702]
+- AI Assistant: Fix prompt content based on action context [#30734]
+- AI Assistant: Use site-independent completion endpoint to prevent request failures for private WPCOM sites. [#30799]
+- Attempt to fix Forms hash generation. This has been ported from package on #30764 [#30764]
+- Dashboard: use the correct file path for all images in the "My Plan" screen. [#30685]
+- Fix IP allow list updates on Atomic sites. [#30487]
+- Fix race condition bug in the Plugin update endpoint. [#30770]
+- Previous implementation would remove buklk-edition checkbox from the posts list. This is now fixed. [#30747]
+- Return early when possible to prevent spamming DB [#30355]
+- VideoPress: Add tracks to attributes definition [#30743]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add Offline Mode flag into Site Health debugging info.
-- Publicize: avoid PHP warning
+- Add Offline Mode flag into Site Health debugging info. [#30570]
+- Publicize: avoid PHP warning [#30795]
 
 ## 12.2-a.9 - 2023-05-17
 ### Bug fixes

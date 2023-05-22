@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.52.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.52.0] - 2023-05-22
 ### Added
-- Add Offline Mode flag into initial state.
+- Add Offline Mode flag into initial state. [#30570]
 
 ## [1.51.10] - 2023-05-18
 ### Changed
@@ -816,7 +813,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[1.52.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.51.10...v1.52.0-alpha
+[1.52.0]: https://github.com/Automattic/jetpack-connection/compare/v1.51.10...v1.52.0
 [1.51.10]: https://github.com/Automattic/jetpack-connection/compare/v1.51.9...v1.51.10
 [1.51.9]: https://github.com/Automattic/jetpack-connection/compare/v1.51.8...v1.51.9
 [1.51.8]: https://github.com/Automattic/jetpack-connection/compare/v1.51.7...v1.51.8
