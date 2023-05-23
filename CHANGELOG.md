@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: set fade effect when just requested completion
 - AI Assistant: use AI icon in the block panels
 - Make the AI Assistant image generation button generate the image right awways instead of being a toggle
+- Related Posts: Add "Display author" toggle to block.
 
 ### Improved compatibility
 - Sharing / Likes / Related Posts: do not display them in JSON requests available when using the ActivityPub plugin.
