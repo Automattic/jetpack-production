@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Post Publish Panel for Newsletters
 - AI Assistant: Add icon to input and fix loader colors
 - AI Assistant: add Jetpack logo to multiple blocks edition panel
+- AI Assistant: convert HTML to markdown in the request content
 - AI Assistant: Fix notice and action button colors
 - AI Assistant: handle stream_cache query endpoint param
 - AI Assistant: restore the multiple blocks edition feature
