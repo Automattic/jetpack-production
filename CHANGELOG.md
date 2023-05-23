@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: fix bug when competion and multiple blocks selected
 - AI Assistant: Ignore first chunk on unclear prompt check
+- Donations Block: ensure the tab colors are correct in all themes.
 - Fix donations block crash on currency change.
 - Related Posts: Fix context for use in block editor.
 
