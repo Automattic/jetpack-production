@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add Post Publish Panel for Newsletters
 - AI Assistant: add Jetpack logo to multiple blocks edition panel
 - AI Assistant: Fix notice and action button colors
 - AI Assistant: handle stream_cache query endpoint param
