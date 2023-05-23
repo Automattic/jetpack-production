@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: convert HTML to markdown in the request content
 - AI Assistant: Fix notice and action button colors
 - AI Assistant: handle stream_cache query endpoint param
+- AI Assistant: Import base Jetpack styles
 - AI Assistant: rename controls tooltips text
 - AI Assistant: restore the multiple blocks edition feature
 - AI Assistant: set fade effect when just requested completion
