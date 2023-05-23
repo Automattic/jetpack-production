@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts: Add "Display author" toggle to block.
 
 ### Improved compatibility
+- Allow Premium content block to production and prevent potential issue on self-hosted installations
 - Sharing / Likes / Related Posts: do not display them in JSON requests available when using the ActivityPub plugin.
 - WooCommerce: avoid Fatal errors when other plugins make changes to WooCommerce Products or Orders.
 
