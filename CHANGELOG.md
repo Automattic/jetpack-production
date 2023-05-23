@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: use AI icon in the block panels
 - Make the AI Assistant image generation button generate the image right awways instead of being a toggle
 - Related Posts: Add "Display author" toggle to block.
+- Updates the enhanced publishing feature check
 
 ### Improved compatibility
 - Allow Premium content block to production and prevent potential issue on self-hosted installations

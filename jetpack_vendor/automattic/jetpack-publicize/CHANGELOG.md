@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.30.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Changed the enhanced publishing feature check to use Current_Plan
+
 ## [0.29.0] - 2023-05-22
 ### Added
 - Added validation of featured image for Instagram connections [#30724]
@@ -316,6 +323,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.30.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.29.0...v0.30.0-alpha
 [0.29.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.28.0...v0.29.0
 [0.28.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.27.0...v0.28.0
 [0.27.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.26.0...v0.27.0
