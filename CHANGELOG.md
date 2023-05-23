@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: add Jetpack logo to multiple blocks edition panel
 - AI Assistant: Fix notice and action button colors
+- AI Assistant: handle stream_cache query endpoint param
 - AI Assistant: restore the multiple blocks edition feature
 - AI Assistant: set fade effect when just requested completion
 - AI Assistant: use AI icon in the block panels
