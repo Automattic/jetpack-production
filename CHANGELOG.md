@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: fix bug when competion and multiple blocks selected
 - AI Assistant: Ignore first chunk on unclear prompt check
+- Related Posts: Fix context for use in block editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updating readme for features and new wordings
