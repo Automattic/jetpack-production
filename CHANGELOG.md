@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: restore prompt rules removed by mistake
 - AI Assistant: restore the multiple blocks edition feature
 - AI Assistant: set fade effect when just requested completion
+- AI Assistant: tweak assistant send button
 - AI Assistant: use AI icon in the block panels
 - Connected block with backend and added remove_user_blogs option
 - Jetpack Social: Add a notice to let users know Instagram is available
