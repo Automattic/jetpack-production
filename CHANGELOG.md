@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Allow Premium content block to production and prevent potential issue on self-hosted installations
+- FSE: use modern wp_is_block_theme instead of gutenberg_is_fse_theme
 - Sharing / Likes / Related Posts: do not display them in JSON requests available when using the ActivityPub plugin.
 - WooCommerce: avoid Fatal errors when other plugins make changes to WooCommerce Products or Orders.
 
