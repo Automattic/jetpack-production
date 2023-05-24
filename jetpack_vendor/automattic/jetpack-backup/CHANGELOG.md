@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add connection screen for secondary admins
 
+### Fixed
+- Fix "Over storage space" message for sites with plans that have no storage limit
+
 ## [1.12.17] - 2023-05-22
 ### Added
 - Added backup storage help popover with forecast info [#30731]
