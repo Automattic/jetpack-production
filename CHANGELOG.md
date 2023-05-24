@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add stop button
 - AI Assistant: Change loading icon with Spinner component
 - AI Assistant: convert HTML to markdown in the request content
+- AI Assistant: Enhance color of disabled button
 - AI Assistant: Fix notice and action button colors
 - AI Assistant: handle stream_cache query endpoint param
 - AI Assistant: hide image generation part
