@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Updates the enhanced publishing feature check
 
 ### Improved compatibility
+- Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp
 - Allow Premium content block to production and prevent potential issue on self-hosted installations
 - FSE: use modern wp_is_block_theme instead of gutenberg_is_fse_theme
 - Sharing / Likes / Related Posts: do not display them in JSON requests available when using the ActivityPub plugin.
