@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: Add new Jetpack AI card
 
+### Changed
+- My Jetpack: Update AI class to be product and not module
+
 ## [2.14.0] - 2023-05-22
 ### Added
 - Added ability to purchase Jetpack AI monthly product [#30793]
