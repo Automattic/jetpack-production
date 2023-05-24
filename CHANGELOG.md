@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Donations Block: ensure the tab colors are correct in all themes.
 - Fix donations block crash on currency change.
 - Related Posts: Fix context for use in block editor.
+- SEO Tools: suggest a specific SEO description maximum length.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fixed Social Previews modal styling
