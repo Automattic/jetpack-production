@@ -21,7 +21,6 @@ This is an alpha version! The changes listed here are not final.
 - Connected block with backend and added remove_user_blogs option
 - Make the AI Assistant image generation button generate the image right awways instead of being a toggle
 - Related Posts: Add "Display author" toggle to block.
-- Updates the enhanced publishing feature check
 
 ### Improved compatibility
 - Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp
@@ -38,7 +37,12 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts: Fix context for use in block editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fixed Social Previews modal styling
+- fix version
+- Updated icons from social-link block from @wordpress/block-library
+- Updated the social previews to use the updated calypso components
 - Updating readme for features and new wordings
+- Use correct image in Social Previews
 
 ## 12.2-a.13 - 2023-05-22
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
