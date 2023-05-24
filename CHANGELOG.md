@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: handle stream_cache query endpoint param
 - AI Assistant: Import base Jetpack styles
 - AI Assistant: rename controls tooltips text
+- AI Assistant: restore prompt rules removed by mistake
 - AI Assistant: restore the multiple blocks edition feature
 - AI Assistant: set fade effect when just requested completion
 - AI Assistant: use AI icon in the block panels
