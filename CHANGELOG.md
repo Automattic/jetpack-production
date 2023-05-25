@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add Post Publish Panel for Newsletters
+- AI: Add label in prompt templates
 - AI Assistant: Add /wpcom/v2/jetpack-ai/requests endpoint
 - AI Assistant: Add icon to input and fix loader colors
 - AI Assistant: add Jetpack logo to multiple blocks edition panel
@@ -16,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Change loading icon with Spinner component
 - AI Assistant: convert HTML to markdown in the request content
 - AI Assistant: Enhance color of disabled button
+- AI Assistant: Enhance input for mobile
 - AI Assistant: Fix notice and action button colors
 - AI Assistant: Fix toolbar action menu position on mobile
 - AI Assistant: Handle network errors to show a message and the retry option.
