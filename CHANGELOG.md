@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: tweak assistant send button
 - AI Assistant: use AI icon in the block panels
 - Connected block with backend and added remove_user_blogs option
+- Enable Newsletters on self-hosred environments
 - Jetpack Social: Add a notice to let users know Instagram is available
 - Make the AI Assistant image generation button generate the image right awways instead of being a toggle
 - Related Posts: Add "Display author" toggle to block.
