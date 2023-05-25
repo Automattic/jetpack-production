@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add /wpcom/v2/jetpack-ai/requests endpoint
 - AI Assistant: Add icon to input and fix loader colors
 - AI Assistant: add Jetpack logo to multiple blocks edition panel
+- AI Assistant: add skip_cache param to get_gpt_completion()
 - AI Assistant: Add stop button
 - AI Assistant: Change loading icon with Spinner component
 - AI Assistant: convert HTML to markdown in the request content
