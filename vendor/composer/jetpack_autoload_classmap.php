@@ -319,7 +319,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-heartbeat.php'
 	),
 	'Automattic\\Jetpack\\IP\\Utils' => array(
-		'version' => '0.1.3.0',
+		'version' => '0.1.4.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-ip/src/class-utils.php'
 	),
 	'Automattic\\Jetpack\\IdentityCrisis\\REST_Endpoints' => array(
@@ -355,79 +355,79 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-image-cdn/src/class-image-cdn-setup.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Attachment' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-attachment.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Block' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-block.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Category' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-category.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Comment' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-comment.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Custom_CSS' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-custom-css.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\End' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-end.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Global_Style' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-global-style.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Import' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/trait-import.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Import_ID' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/trait-import-id.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Menu' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-menu.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Menu_Item' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-menu-item.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Navigation' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-navigation.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Page' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-page.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Post' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-post.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Start' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-start.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Tag' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-tag.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Template' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-template.php'
 	),
 	'Automattic\\Jetpack\\Import\\Endpoints\\Template_Part' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/endpoints/class-template-part.php'
 	),
 	'Automattic\\Jetpack\\Import\\Main' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-import/src/class-main.php'
 	),
 	'Automattic\\Jetpack\\JITMS\\JITM' => array(
