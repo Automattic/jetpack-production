@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Social: Add a notice to let users know Instagram is available
 - Make the AI Assistant image generation button generate the image right awways instead of being a toggle
 - Related Posts: Add "Display author" toggle to block.
+- Related Posts: Add per-block header support.
 
 ### Improved compatibility
 - Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp
