@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated the social previews to use the updated calypso components
 - Updating readme for features and new wordings
 - Use correct image in Social Previews
+- Various updates around Twitter functionality changes
 
 ## 12.2-a.13 - 2023-05-22
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
