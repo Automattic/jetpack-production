@@ -55,6 +55,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix donations block crash on currency change.
 - Related Posts: Fix context for use in block editor.
 - SEO Tools: suggest a specific SEO description maximum length.
+- The link to setup a paid plan (in the newsletter post settings) was getting set incorrectly.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fixed Social Previews modal styling
