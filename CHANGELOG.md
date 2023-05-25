@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: handle stream_cache query endpoint param
 - AI Assistant: hide image generation part
 - AI Assistant: Import base Jetpack styles
+- AI Assistant: introduce first approach of default prompt templates
 - AI Assistant: rename controls tooltips text
 - AI Assistant: restore prompt rules removed by mistake
 - AI Assistant: restore the multiple blocks edition feature
