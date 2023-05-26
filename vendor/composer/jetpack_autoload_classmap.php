@@ -106,6 +106,50 @@ return array(
 		'version' => '1.4.22.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blocks/src/class-blocks.php'
 	),
+	'Automattic\\Jetpack\\Boost_Speed_Score' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-boost-speed-score.php'
+	),
+	'Automattic\\Jetpack\\Boost_Speed_Score\\Contracts\\Boost_API_Client' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/contracts/boost-api-client.php'
+	),
+	'Automattic\\Jetpack\\Boost_Speed_Score\\Lib\\Boost_API' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/lib/class-boost-api.php'
+	),
+	'Automattic\\Jetpack\\Boost_Speed_Score\\Lib\\Cacheable' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/lib/class-cacheable.php'
+	),
+	'Automattic\\Jetpack\\Boost_Speed_Score\\Lib\\Transient' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/lib/class-transient.php'
+	),
+	'Automattic\\Jetpack\\Boost_Speed_Score\\Lib\\Url' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/lib/class-url.php'
+	),
+	'Automattic\\Jetpack\\Boost_Speed_Score\\Lib\\Utils' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/lib/class-utils.php'
+	),
+	'Automattic\\Jetpack\\Boost_Speed_Score\\Lib\\WPCOM_Boost_API_Client' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/lib/class-wpcom-boost-api-client.php'
+	),
+	'Automattic\\Jetpack\\Boost_Speed_Score\\Speed_Score' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score.php'
+	),
+	'Automattic\\Jetpack\\Boost_Speed_Score\\Speed_Score_History' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score-history.php'
+	),
+	'Automattic\\Jetpack\\Boost_Speed_Score\\Speed_Score_Request' => array(
+		'version' => '0.1.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score-request.php'
+	),
 	'Automattic\\Jetpack\\Composer\\Manager' => array(
 		'version' => '1.1.11.0',
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-manager.php'

@@ -24,6 +24,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-blaze',
       'ver' => '0.5.13',
     ),
+    'jetpack-boost-speed-score' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-boost-speed-score',
+      'ver' => '0.1.0-alpha',
+    ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '1.7.6',

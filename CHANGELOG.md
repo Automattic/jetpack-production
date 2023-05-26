@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Make the AI Assistant image generation button generate the image right awways instead of being a toggle
 - Related Posts: Add "Display author" toggle to block.
 - Related Posts: Add per-block header support.
+- Update boost dash item to include scorebars
 
 ### Improved compatibility
 - Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp
