@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add connection screen for secondary admins
 
+### Changed
+- Add a loading placeholder while fetching backup plan when a secondary admin (not connected) is accessing the backup page.
+
 ### Fixed
 - Fix "Over storage space" message for sites with plans that have no storage limit
 
