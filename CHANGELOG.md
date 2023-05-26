@@ -53,6 +53,7 @@ This is an alpha version! The changes listed here are not final.
 - WooCommerce: avoid Fatal errors when other plugins make changes to WooCommerce Products or Orders.
 
 ### Bug fixes
+- Add username to publicize connection test results.
 - AI Assistant: fix bug when competion and multiple blocks selected
 - AI Assistant: Ignore first chunk on unclear prompt check
 - Donations Block: ensure the tab colors are correct in all themes.
