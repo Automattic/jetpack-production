@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Added Instagram preview to Social Previews
 - Add Post Publish Panel for Newsletters
 - AI: Add label in prompt templates
+- AI: Update prompt preset toolbar option
 - AI Assistant: Add /wpcom/v2/jetpack-ai/requests endpoint
 - AI Assistant: Add icon to input and fix loader colors
 - AI Assistant: add Jetpack logo to multiple blocks edition panel
