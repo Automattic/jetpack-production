@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: restore the multiple blocks edition feature
 - AI Assistant: set fade effect when just requested completion
 - AI Assistant: show the upgrade banner when the feature requires it
+- AI Assistant: show upgrade banner when ai query endpoint responses with quota exceeded error
 - AI Assistant: tweak assistant send button
 - AI Assistant: use AI icon in the block panels
 - Change CTA on backup recommendation card to inform about first year discount
