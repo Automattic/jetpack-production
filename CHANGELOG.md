@@ -53,6 +53,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Ignore first chunk on unclear prompt check
 - Donations Block: ensure the tab colors are correct in all themes.
 - Fix donations block crash on currency change.
+- Fixed the site preview in SEO settings.
 - Related Posts: Fix context for use in block editor.
 - SEO Tools: suggest a specific SEO description maximum length.
 - The link to setup a paid plan (in the newsletter post settings) was getting set incorrectly.
