@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add connection screen for secondary admins
+- Add loading placeholder in backup dashboard while fetching capabilities and backup state.
 
 ### Changed
 - Add a loading placeholder while fetching backup plan when a secondary admin (not connected) is accessing the backup page.
