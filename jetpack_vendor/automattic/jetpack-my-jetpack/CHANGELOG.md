@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Add new Jetpack AI card
 
 ### Changed
+- My Jetpack: Enable Jetpack AI card
 - My Jetpack: Update AI class to be product and not module
 
 ## [2.14.0] - 2023-05-22
