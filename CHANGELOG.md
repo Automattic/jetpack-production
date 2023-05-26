@@ -72,6 +72,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed Social Previews modal styling
 - fix version
 - Optimize Jetpack_Gutenberg initialization, remove deprecated filters: `jetpack_set_available_blocks`, `jetpack_set_available_plugins`.
+- Remove icon of unused menu item
 - Updated icons from social-link block from @wordpress/block-library
 - Updated the social previews to use the updated calypso components
 - Updating readme for features and new wordings
