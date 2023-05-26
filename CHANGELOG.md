@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: set fade effect when just requested completion
 - AI Assistant: tweak assistant send button
 - AI Assistant: use AI icon in the block panels
+- Change CTA on backup recommendation card to inform about first year discount
 - Connected block with backend and added remove_user_blogs option
 - Enable Newsletters on self-hosred environments
 - Jetpack AI: Remove check at AI Assistant block registration
