@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: fix bug when competion and multiple blocks selected
 - AI Assistant: Ignore first chunk on unclear prompt check
 - Donations Block: ensure the tab colors are correct in all themes.
+- Feature Hints: avoid PHP warnings when used in combination with other plugins.
 - Fix donations block crash on currency change.
 - Fixed the site preview in SEO settings.
 - Related Posts: Fix context for use in block editor.
