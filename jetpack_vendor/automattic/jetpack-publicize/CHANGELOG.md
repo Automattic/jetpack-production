@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added account_name field to the publicize connections object.
 - Added the Instagram service
 - Jetpack Social: Add a notice to let users know Instagram is available
 

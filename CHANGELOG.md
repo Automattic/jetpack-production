@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added account_name field to the connections post field
 - Add Post Publish Panel for Newsletters
 - AI: Add label in prompt templates
 - AI Assistant: Add /wpcom/v2/jetpack-ai/requests endpoint
