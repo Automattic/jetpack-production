@@ -2074,7 +2074,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-publicize",
-                "reference": "fbe47d69bad5fedcd4287e8de6bde5c9629d2388"
+                "reference": "82911dce24f8a7683c232729a4946e05d48a24c9"
             },
             "require": {
                 "automattic/jetpack-assets": "^1.18.3",
@@ -2128,6 +2128,10 @@
                 ],
                 "build-development": [
                     "pnpm run build"
+                ],
+                "watch": [
+                    "Composer\\Config::disableProcessTimeout",
+                    "pnpm run watch"
                 ],
                 "build-production": [
                     "pnpm run build-production-concurrently"
