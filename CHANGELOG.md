@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: convert HTML to markdown in the request content
 - AI Assistant: Enhance color of disabled button
 - AI Assistant: Enhance input for mobile
+- AI Assistant: fix nesting block controls component issue
 - AI Assistant: Fix notice and action button colors
 - AI Assistant: Fix toolbar action menu position on mobile
 - AI Assistant: Handle network errors to show a message and the retry option.
