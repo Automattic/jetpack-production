@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.49.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.49.0] - 2023-05-29
 ### Added
-- Added wpcom_reader_views_enabled option to default sync list
+- Added `wpcom_reader_views_enabled` option to default sync list [#30800]
 
 ### Changed
-- FSE: remove usage of gutenberg_is_fse_theme for modern wp_is_block_theme
+- FSE: remove usage of `gutenberg_is_fse_theme` for modern `wp_is_block_theme` [#30806]
 
 ## [1.48.1] - 2023-05-15
 ### Changed
@@ -865,7 +862,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[1.49.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.48.1...v1.49.0-alpha
+[1.49.0]: https://github.com/Automattic/jetpack-sync/compare/v1.48.1...v1.49.0
 [1.48.1]: https://github.com/Automattic/jetpack-sync/compare/v1.48.0...v1.48.1
 [1.48.0]: https://github.com/Automattic/jetpack-sync/compare/v1.47.9...v1.48.0
 [1.47.9]: https://github.com/Automattic/jetpack-sync/compare/v1.47.8...v1.47.9

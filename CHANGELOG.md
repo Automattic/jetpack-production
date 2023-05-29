@@ -2,100 +2,103 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.2-a.14 - unreleased
+## 12.3-a.0 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Added account_name field to the connections post field
-- Added Instagram preview to Social Previews
-- Add Post Publish Panel for Newsletters
-- AI: Add label in prompt templates
-- AI: Update prompt preset toolbar option
-- AI Assistant: Add /wpcom/v2/jetpack-ai/requests endpoint
-- AI Assistant: Add connection prompt when user is not connected to Jetpack
-- AI Assistant: Add icon to input and fix loader colors
-- AI Assistant: add Jetpack logo to multiple blocks edition panel
-- AI Assistant: add skip_cache param to get_gpt_completion()
-- AI Assistant: Add stop button
-- AI Assistant: Change loading icon with Spinner component
-- AI Assistant: check whether the site requires upgrade in the ai-assistant-feature endpoint
-- AI Assistant: convert HTML to markdown in the request content
-- AI Assistant: Enhance color of disabled button
-- AI Assistant: Enhance input for mobile
-- AI Assistant: fix nesting block controls component issue
-- AI Assistant: Fix notice and action button colors
-- AI Assistant: Fix toolbar action menu position on mobile
-- AI Assistant: Handle network errors to show a message and the retry option.
-- AI Assistant: handle stream_cache query endpoint param
-- AI Assistant: hide image generation part
-- AI Assistant: Import base Jetpack styles
 - AI Assistant: introduce a new error_service_unavailable custom error
-- AI Assistant: introduce first approach of default prompt templates
-- AI Assistant: Keep the option to accept title after asking for changes
-- AI Assistant: rely on ai-assistant-feature to show upgrade banner
-- AI Assistant: Remove correct spelling option in interactive mode
-- AI Assistant: rename controls tooltips text
-- AI Assistant: restore prompt rules removed by mistake
-- AI Assistant: restore the multiple blocks edition feature
-- AI Assistant: set fade effect when just requested completion
-- AI Assistant: show the upgrade banner when the feature requires it
-- AI Assistant: show upgrade banner when ai query endpoint responses with quota exceeded error
-- AI Assistant: tweak assistant send button
-- AI Assistant: tweak the upgrade banner
-- AI Assistant: use AI icon in the block panels
-- Change agency discount value on WPA
-- Change CTA on backup recommendation card to inform about first year discount
-- Connected block with backend and added remove_user_blogs option
-- Enable Newsletters on self-hosred environments
-- Handle panel changes when subscription module is inactive
-- Jetpack AI: Remove check at AI Assistant block registration
-- Jetpack Social: Add a notice to let users know Instagram is available
-- Make the AI Assistant image generation button generate the image right awways instead of being a toggle
-- Mastodon post preview
-- Reading Settings: added a toggle for showing post views in the WordPress.com Reader
-- Related Posts: Add "Display author" toggle to block.
-- Related Posts: Add per-block header support.
-- Related Posts: Reorganized sidebar into layout and metadata.
-- Update boost dash item to include scorebars
-- Update My Plan component to display the correct plan for Jetpack Security and Backup 2-year plans
+
+## 12.2-beta - 2023-05-29
+### Enhancements
+- Added account_name field to the connections post field [#30937]
+- Added Instagram preview to Social Previews [#30929]
+- Add Post Publish Panel for Newsletters [#30668]
+- AI: Add label in prompt templates [#30965]
+- AI: Update prompt preset toolbar option [#30996]
+- AI Assistant: Add /wpcom/v2/jetpack-ai/requests endpoint [#30926]
+- AI Assistant: Add connection prompt when user is not connected to Jetpack [#31001]
+- AI Assistant: Add icon to input and fix loader colors [#30873]
+- AI Assistant: add Jetpack logo to multiple blocks edition panel [#30851]
+- AI Assistant: add skip_cache param to get_gpt_completion() [#30938]
+- AI Assistant: Add stop button [#30910]
+- AI Assistant: Change loading icon with Spinner component [#30909]
+- AI Assistant: check whether the site requires upgrade in the ai-assistant-feature endpoint [#31018]
+- AI Assistant: convert HTML to markdown in the request content [#30741]
+- AI Assistant: Enhance color of disabled button [#30912]
+- AI Assistant: Enhance input for mobile [#30962]
+- AI Assistant: fix nesting block controls component issue [#31005]
+- AI Assistant: Fix notice and action button colors [#30857]
+- AI Assistant: Fix toolbar action menu position on mobile [#30920]
+- AI Assistant: Handle network errors to show a message and the retry option. [#30911]
+- AI Assistant: handle stream_cache query endpoint param [#30831]
+- AI Assistant: hide image generation part [#30900]
+- AI Assistant: Import base Jetpack styles [#30881]
+- AI Assistant: introduce first approach of default prompt templates [#30941]
+- AI Assistant: Keep the option to accept title after asking for changes [#30942]
+- AI Assistant: rely on ai-assistant-feature to show upgrade banner [#31019]
+- AI Assistant: Remove correct spelling option in interactive mode [#30956]
+- AI Assistant: rename controls tooltips text [#30880]
+- AI Assistant: restore prompt rules removed by mistake [#30901]
+- AI Assistant: restore the multiple blocks edition feature [#30849]
+- AI Assistant: set fade effect when just requested completion [#30834]
+- AI Assistant: show the upgrade banner when the feature requires it [#30936]
+- AI Assistant: show upgrade banner when ai query endpoint responses with quota exceeded error [#30989]
+- AI Assistant: tweak assistant send button [#30896]
+- AI Assistant: tweak the upgrade banner [#31004]
+- AI Assistant: use AI icon in the block panels [#30853]
+- Change agency discount value on WPA [#30991]
+- Change CTA on backup recommendation card to inform about first year discount [#30895]
+- Connected block with backend and added remove_user_blogs option [#30639]
+- Enable Newsletters on self-hosred environments [#30952]
+- Handle panel changes when subscription module is inactive [#30958]
+- Jetpack AI: Remove check at AI Assistant block registration [#30960]
+- Jetpack Social: Add a notice to let users know Instagram is available [#30777]
+- Make the AI Assistant image generation button generate the image right awways instead of being a toggle [#30859]
+- Mastodon post preview [#30919]
+- Reading Settings: added a toggle for showing post views in the WordPress.com Reader [#30800]
+- Related Posts: Add "Display author" toggle to block. [#30750]
+- Related Posts: Add per-block header support. [#30897]
+- Related Posts: Reorganized sidebar into layout and metadata. [#31024]
+- Update boost dash item to include scorebars [#30877]
+- Update My Plan component to display the correct plan for Jetpack Security and Backup 2-year plans [#31013]
 
 ### Improved compatibility
-- Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp
-- Allow Premium content block to production and prevent potential issue on self-hosted installations
-- FSE: use modern wp_is_block_theme instead of gutenberg_is_fse_theme
-- Sharing / Likes / Related Posts: do not display them in JSON requests available when using the ActivityPub plugin.
-- WooCommerce: avoid Fatal errors when other plugins make changes to WooCommerce Products or Orders.
+- Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp [#30825]
+- Allow Premium content block to production and prevent potential issue on self-hosted installations [#30868]
+- FSE: use modern wp_is_block_theme instead of gutenberg_is_fse_theme [#30806]
+- Sharing / Likes / Related Posts: do not display them in JSON requests available when using the ActivityPub plugin. [#29452]
+- WooCommerce: avoid Fatal errors when other plugins make changes to WooCommerce Products or Orders. [#30712]
 
 ### Bug fixes
-- Add a WP_User check in get_author method.
-- Add username to publicize connection test results.
-- AI Assistant: fix bug when competion and multiple blocks selected
-- AI Assistant: Ignore first chunk on unclear prompt check
-- Donations Block: ensure the tab colors are correct in all themes.
-- Feature Hints: avoid PHP warnings when used in combination with other plugins.
-- Fix donations block crash on currency change.
-- Fixed the site preview in SEO settings.
-- Related Posts: Fix context for use in block editor.
-- SEO Tools: suggest a specific SEO description maximum length.
-- The link to setup a paid plan (in the newsletter post settings) was getting set incorrectly.
+- Add a WP_User check in get_author method. [#30902]
+- Add username to publicize connection test results. [#30987]
+- AI Assistant: fix bug when competion and multiple blocks selected [#30846]
+- AI Assistant: Ignore first chunk on unclear prompt check [#30820]
+- Donations Block: ensure the tab colors are correct in all themes. [#30864]
+- Feature Hints: avoid PHP warnings when used in combination with other plugins. [#30928]
+- Fix donations block crash on currency change. [#30530]
+- Fixed the site preview in SEO settings. [#30973]
+- Related Posts: Fix context for use in block editor. [#30682]
+- SEO Tools: suggest a specific SEO description maximum length. [#30890]
+- The link to setup a paid plan (in the newsletter post settings) was getting set incorrectly. [#30924]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add some documention to getPaidPlanLink()
-- Block Editor: add current connected user's email address to the data available in the editor.
-- Bump social-previews version
-- Call Speed_Score identifying where the request was made from, using the new $client argument in the Speed_Score class
-- Carousel: stop auto-scrolling to top when advancing slides.
-- Changing menu of AI assistant, not yet available
-- Fixed Social Previews modal styling
-- fix version
-- Optimize Jetpack_Gutenberg initialization, remove deprecated filters: `jetpack_set_available_blocks`, `jetpack_set_available_plugins`.
-- Remove icon of unused menu item
-- Updated icons from social-link block from @wordpress/block-library
-- Updated the social previews to use the updated calypso components
-- Updating readme for features and new wordings
-- Use correct image in Social Previews
-- Various updates around Twitter functionality changes
+- Add some documention to getPaidPlanLink() [#31027]
+- Block Editor: add current connected user's email address to the data available in the editor. [#30990]
+- Bump social-previews version [#31034]
+- Call Speed_Score identifying where the request was made from, using the new $client argument in the Speed_Score class [#31012]
+- Carousel: stop auto-scrolling to top when advancing slides. [#30964]
+- Changing menu of AI assistant, not yet available [#30999]
+- Fixed Social Previews modal styling [#29803]
+- fix version [#29803]
+- Optimize Jetpack_Gutenberg initialization, remove deprecated filters: `jetpack_set_available_blocks`, `jetpack_set_available_plugins`. [#30875]
+- Remove icon of unused menu item [#31003]
+- Updated icons from social-link block from @wordpress/block-library [#29803]
+- Updated the social previews to use the updated calypso components [#29803]
+- Updating readme for features and new wordings [#30845]
+- Use correct image in Social Previews [#29803]
+- Various updates around Twitter functionality changes [#30272]
 
 ## 12.2-a.13 - 2023-05-22
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

@@ -3,7 +3,7 @@
  * REST API endpoint for the Jetpack author recommendations block.
  *
  * @package automattic/jetpack
- * @since 12.2-a.14
+ * @since 12.2
  */
 
 use Automattic\Jetpack\Connection\Client;
