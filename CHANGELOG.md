@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: tweak assistant send button
 - AI Assistant: tweak the upgrade banner
 - AI Assistant: use AI icon in the block panels
+- Change agency discount value on WPA
 - Change CTA on backup recommendation card to inform about first year discount
 - Connected block with backend and added remove_user_blogs option
 - Enable Newsletters on self-hosred environments
