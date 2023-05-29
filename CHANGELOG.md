@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: introduce a new error_service_unavailable custom error
+- Jetpack AI: iterate over top level actions of the block toolbar
 
 ## 12.2-beta - 2023-05-29
 ### Major Enhancements
