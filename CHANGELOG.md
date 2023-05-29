@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Change CTA on backup recommendation card to inform about first year discount
 - Connected block with backend and added remove_user_blogs option
 - Enable Newsletters on self-hosred environments
+- Handle panel changes when subscription module is inactive
 - Jetpack AI: Remove check at AI Assistant block registration
 - Jetpack Social: Add a notice to let users know Instagram is available
 - Make the AI Assistant image generation button generate the image right awways instead of being a toggle
