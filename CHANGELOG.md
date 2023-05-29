@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Make the AI Assistant image generation button generate the image right awways instead of being a toggle
 - Related Posts: Add "Display author" toggle to block.
 - Related Posts: Add per-block header support.
+- Related Posts: Reorganized sidebar into layout and metadata.
 - Update boost dash item to include scorebars
 - Update My Plan component to display the correct plan for Jetpack Security and Backup 2-year plans
 
