@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.14.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.14.1] - 2023-05-29
 ### Added
-- My Jetpack: Add new Jetpack AI card
+- My Jetpack: Add new Jetpack AI card [#30904]
 
 ### Changed
-- My Jetpack: Enable Jetpack AI card
-- My Jetpack: Update AI class to be product and not module
-- My Jetpack: Update AI interstitial background
+- My Jetpack: Enable Jetpack AI card [#30988]
+- My Jetpack: Update AI class to be product and not module [#30905]
+- My Jetpack: Update AI interstitial background [#30992]
 
 ## [2.14.0] - 2023-05-22
 ### Added
@@ -895,7 +892,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.14.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.0...2.14.1-alpha
+[2.14.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.0...2.14.1
 [2.14.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.13.0...2.14.0
 [2.13.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.12.2...2.13.0
 [2.12.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.12.1...2.12.2

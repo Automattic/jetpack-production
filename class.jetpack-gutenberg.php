@@ -213,10 +213,10 @@ class Jetpack_Gutenberg {
 	 * Used to initialize the class, no longer in use.
 	 *
 	 * @return void
-	 * @deprecated 12.2-a.14 No longer needed.
+	 * @deprecated 12.2 No longer needed.
 	 */
 	public static function init() {
-		_deprecated_function( __METHOD__, '12.2-a.14' );
+		_deprecated_function( __METHOD__, '12.2' );
 	}
 
 	/**
