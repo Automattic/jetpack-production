@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: add skip_cache param to get_gpt_completion()
 - AI Assistant: Add stop button
 - AI Assistant: Change loading icon with Spinner component
+- AI Assistant: check whether the site requires upgrade in the ai-assistant-feature endpoint
 - AI Assistant: convert HTML to markdown in the request content
 - AI Assistant: Enhance color of disabled button
 - AI Assistant: Enhance input for mobile
