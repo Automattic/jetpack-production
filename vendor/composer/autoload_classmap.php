@@ -28,7 +28,6 @@ return array(
     'Automattic\\Jetpack\\Backup\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Blaze' => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-blaze.php',
     'Automattic\\Jetpack\\Blocks' => $baseDir . '/jetpack_vendor/automattic/jetpack-blocks/src/class-blocks.php',
-    'Automattic\\Jetpack\\Boost_Speed_Score' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-boost-speed-score.php',
     'Automattic\\Jetpack\\Boost_Speed_Score\\Contracts\\Boost_API_Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/contracts/boost-api-client.php',
     'Automattic\\Jetpack\\Boost_Speed_Score\\Lib\\Boost_API' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/lib/class-boost-api.php',
     'Automattic\\Jetpack\\Boost_Speed_Score\\Lib\\Cacheable' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/lib/class-cacheable.php',

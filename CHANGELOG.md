@@ -71,6 +71,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Block Editor: add current connected user's email address to the data available in the editor.
+- Call Speed_Score identifying where the request was made from, using the new $client argument in the Speed_Score class
 - Changing menu of AI assistant, not yet available
 - Fixed Social Previews modal styling
 - fix version

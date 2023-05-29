@@ -106,10 +106,6 @@ return array(
 		'version' => '1.4.22.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blocks/src/class-blocks.php'
 	),
-	'Automattic\\Jetpack\\Boost_Speed_Score' => array(
-		'version' => '0.1.0.0-alpha',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-boost-speed-score.php'
-	),
 	'Automattic\\Jetpack\\Boost_Speed_Score\\Contracts\\Boost_API_Client' => array(
 		'version' => '0.1.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/contracts/boost-api-client.php'

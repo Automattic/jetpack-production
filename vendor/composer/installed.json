@@ -600,7 +600,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-boost-speed-score",
-                "reference": "d6d1832b0351bfc1739bc1c02968f63daf17d41a"
+                "reference": "5721fea07ae15dcd4c1a8e01815bd0c0c820098c"
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "^3.3.4",
@@ -622,7 +622,7 @@
                 },
                 "textdomain": "jetpack-boost-speed-score",
                 "version-constants": {
-                    "::PACKAGE_VERSION": "src/class-boost-speed-score.php"
+                    "::PACKAGE_VERSION": "src/class-speed-score.php"
                 }
             },
             "installation-source": "dist",
