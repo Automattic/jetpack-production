@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Added the Instagram service
 - Check for featured image in the classic editor
 - Jetpack Social: Add a notice to let users know Instagram is available
+- Mastodon post preview
 
 ### Changed
 - Changed the enhanced publishing feature check to use Current_Plan

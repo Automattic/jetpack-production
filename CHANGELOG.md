@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Remove check at AI Assistant block registration
 - Jetpack Social: Add a notice to let users know Instagram is available
 - Make the AI Assistant image generation button generate the image right awways instead of being a toggle
+- Mastodon post preview
 - Reading Settings: added a toggle for showing post views in the WordPress.com Reader
 - Related Posts: Add "Display author" toggle to block.
 - Related Posts: Add per-block header support.
