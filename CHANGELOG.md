@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: handle stream_cache query endpoint param
 - AI Assistant: hide image generation part
 - AI Assistant: Import base Jetpack styles
+- AI Assistant: introduce a new error_service_unavailable custom error
 - AI Assistant: introduce first approach of default prompt templates
 - AI Assistant: Keep the option to accept title after asking for changes
 - AI Assistant: rely on ai-assistant-feature to show upgrade banner
