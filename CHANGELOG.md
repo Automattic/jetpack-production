@@ -81,6 +81,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add some documention to getPaidPlanLink()
 - Block Editor: add current connected user's email address to the data available in the editor.
+- Bump social-previews version
 - Call Speed_Score identifying where the request was made from, using the new $client argument in the Speed_Score class
 - Carousel: stop auto-scrolling to top when advancing slides.
 - Changing menu of AI assistant, not yet available
