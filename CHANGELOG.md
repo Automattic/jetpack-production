@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts: Add "Display author" toggle to block.
 - Related Posts: Add per-block header support.
 - Update boost dash item to include scorebars
+- Update My Plan component to display the correct plan for Jetpack Security and Backup 2-year plans
 
 ### Improved compatibility
 - Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp
