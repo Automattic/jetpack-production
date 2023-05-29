@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Import base Jetpack styles
 - AI Assistant: introduce first approach of default prompt templates
 - AI Assistant: Keep the option to accept title after asking for changes
+- AI Assistant: rely on ai-assistant-feature to show upgrade banner
 - AI Assistant: Remove correct spelling option in interactive mode
 - AI Assistant: rename controls tooltips text
 - AI Assistant: restore prompt rules removed by mistake
