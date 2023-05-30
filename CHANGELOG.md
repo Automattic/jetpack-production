@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: ignore double asterisks when checking unclear prompt message
 - AI Assistant: introduce a new error_service_unavailable custom error
+- AI Assistant: introduce blog post relevant data block into the prompt
 - Jetpack AI: iterate over top level actions of the block toolbar
 - Stats: display the links to a post's stats in the Posts list as soon as  the user has access to stats.
 
