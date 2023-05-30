@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: do not extend blocks with the AI Assistant feature
 - AI Assistant: introduce a new error_service_unavailable custom error
 - AI Assistant: reduce the predef prompt options
 - Jetpack AI: iterate over top level actions of the block toolbar
