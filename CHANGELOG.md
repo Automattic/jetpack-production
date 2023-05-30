@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 12.3-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Security: WordPress.com REST API: Ensure that files uploaded via the API are properly validated.
+
 ## 12.2-beta - 2023-05-29
 ### Major Enhancements
 - Add an AI Assistant block, replacing the previous experimental AI Paragraph and AI Image blocks.
