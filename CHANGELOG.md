@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: iterate over top level actions of the block toolbar
 - Stats: display the links to a post's stats in the Posts list as soon as  the user has access to stats.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- change menu of block
+
 ## 12.2-beta - 2023-05-29
 ### Major Enhancements
 - Add an AI Assistant block, replacing the previous experimental AI Paragraph and AI Image blocks.
