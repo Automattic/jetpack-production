@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Show Paid Newsletter subscriber reach numbers in the past tense when the post has been already been published
 - Stats: display the links to a post's stats in the Posts list as soon as  the user has access to stats.
 
+### Bug fixes
+- AI Assistant: Fix try again not resetting prompt type
+
 ## 12.2-beta - 2023-05-30
 ### Major Enhancements
 - Add an AI Assistant block, replacing the previous experimental AI Paragraph and AI Image blocks.
