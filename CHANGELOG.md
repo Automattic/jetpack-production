@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: iterate over top level actions of the block toolbar
 - Stats: display the links to a post's stats in the Posts list as soon as  the user has access to stats.
 
+### Bug fixes
+- Security: WordPress.com REST API: Ensure that files uploaded via the API are properly validated.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - change menu of block
 
