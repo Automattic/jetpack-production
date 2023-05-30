@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI Assistant: Fix try again not resetting prompt type
+- Verify the access level should be gated before checking subscriptions
 
 ## 12.2-beta - 2023-05-30
 ### Major Enhancements
