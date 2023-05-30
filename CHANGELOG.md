@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: introduce a new error_service_unavailable custom error
 - AI Assistant: introduce blog post relevant data block into the prompt
 - Jetpack AI: iterate over top level actions of the block toolbar
+- Make free subscribers confirm email before viewing content
 - Show Paid Newsletter subscriber reach numbers in the past tense when the post has been already been published
 - Stats: display the links to a post's stats in the Posts list as soon as  the user has access to stats.
 
