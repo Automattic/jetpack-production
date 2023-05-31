@@ -241,6 +241,8 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_3_a_0
         'Automattic\\Jetpack\\Stats_Admin\\Odyssey_Assets' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-odyssey-assets.php',
         'Automattic\\Jetpack\\Stats_Admin\\Odyssey_Config_Data' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-odyssey-config-data.php',
         'Automattic\\Jetpack\\Stats_Admin\\REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-rest-controller.php',
+        'Automattic\\Jetpack\\Stats_Admin\\Stats_Base_REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-stats-base-rest-controller.php',
+        'Automattic\\Jetpack\\Stats_Admin\\WPCOM_REST_API_V2_Endpoint_Stats_Admin_Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-wpcom-rest-api-v2-endpoint-stats-admin-settings.php',
         'Automattic\\Jetpack\\Stats_Admin\\WP_Dashboard_Odyssey_Widget' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-wp-dashboard-odyssey-widget.php',
         'Automattic\\Jetpack\\Status' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-status.php',
         'Automattic\\Jetpack\\Status\\Cache' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-cache.php',
