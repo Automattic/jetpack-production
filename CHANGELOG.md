@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Fix partial AI error string check
 - AI Assistant: Fix text color when focused
 - AI Assistant: Fix try again not resetting prompt type
+- Jetpack API Settings: use default values, when set
 - Verify the access level should be gated before checking subscriptions
 
 ## 12.2-beta - 2023-05-30
