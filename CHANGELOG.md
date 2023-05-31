@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Add "Read me" links to Stripe connection banners in blocks.
 
+### Bug fixes
+- Jetpack API Settings: use default values, when set
+
 ## 12.2-beta - 2023-05-30
 ### Major Enhancements
 - Add an AI Assistant block, replacing the previous experimental AI Paragraph and AI Image blocks.
