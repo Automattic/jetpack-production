@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: Add Accept button so the user can accept a partially generated content.
+- AI Assistant: add a Done button to the main-area of the block
 - AI Assistant: do not extend when site requires upgrading
 - AI Assistant: Group all options in Write With AI
 - AI Assistant: ignore double asterisks when checking unclear prompt message
