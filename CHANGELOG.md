@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Show Paid Newsletter subscriber reach numbers in the past tense when the post has been already been published
 - Stats: display the links to a post's stats in the Posts list as soon as  the user has access to stats.
 
+### Improved compatibility
+- Add "Read me" links to Stripe connection banners in blocks.
+
 ### Bug fixes
 - AI Assistant: Fix partial AI error string check
 - AI Assistant: Fix text color when focused
