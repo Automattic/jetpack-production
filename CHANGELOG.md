@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: display the links to a post's stats in the Posts list as soon as  the user has access to stats.
 
 ### Bug fixes
+- AI Assistant: Fix partial AI error string check
 - AI Assistant: Fix try again not resetting prompt type
 - Verify the access level should be gated before checking subscriptions
 
