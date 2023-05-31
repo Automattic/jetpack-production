@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: Add Accept button so the user can accept a partially generated content.
 - AI Assistant: Group all options in Write With AI
 - AI Assistant: ignore double asterisks when checking unclear prompt message
 - AI Assistant: introduce a new error_service_unavailable custom error
