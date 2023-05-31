@@ -208,8 +208,6 @@ return array(
     'Automattic\\Jetpack\\Stats_Admin\\Odyssey_Assets' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-odyssey-assets.php',
     'Automattic\\Jetpack\\Stats_Admin\\Odyssey_Config_Data' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-odyssey-config-data.php',
     'Automattic\\Jetpack\\Stats_Admin\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-rest-controller.php',
-    'Automattic\\Jetpack\\Stats_Admin\\Stats_Base_REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-stats-base-rest-controller.php',
-    'Automattic\\Jetpack\\Stats_Admin\\WPCOM_REST_API_V2_Endpoint_Stats_Admin_Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-wpcom-rest-api-v2-endpoint-stats-admin-settings.php',
     'Automattic\\Jetpack\\Stats_Admin\\WP_Dashboard_Odyssey_Widget' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-wp-dashboard-odyssey-widget.php',
     'Automattic\\Jetpack\\Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-status.php',
     'Automattic\\Jetpack\\Status\\Cache' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-cache.php',
