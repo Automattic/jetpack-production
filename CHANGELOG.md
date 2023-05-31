@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI Assistant: Fix partial AI error string check
+- AI Assistant: Fix text color when focused
 - AI Assistant: Fix try again not resetting prompt type
 - Verify the access level should be gated before checking subscriptions
 
