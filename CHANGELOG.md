@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Make free subscribers confirm email before viewing content
 - Show Paid Newsletter subscriber reach numbers in the past tense when the post has been already been published
 - Stats: display the links to a post's stats in the Posts list as soon as  the user has access to stats.
+- Switch ai assistant block to send an array of messages and not a question
 
 ### Improved compatibility
 - Add "Read me" links to Stripe connection banners in blocks.
