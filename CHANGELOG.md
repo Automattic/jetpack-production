@@ -8,12 +8,30 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add track for speed score API errors
+- AI Assistant: Add Accept button so the user can accept a partially generated content.
+- AI Assistant: add a Done button to the main-area of the block
+- AI Assistant: check whether the site requires upgrade in the ai-assistant-feature endpoint
+- AI Assistant: do not extend when site requires upgrading
+- AI Assistant: Focus on done or unclear prompt
+- AI Assistant: Group all options in Write With AI
+- AI Assistant: ignore double asterisks when checking unclear prompt message
+- AI Assistant: introduce a new error_service_unavailable custom error
+- AI Assistant: introduce blog post relevant data block into the prompt
+- AI Assistant: register endpoint also for Jetpack sites
+- AI Assistant: rely on ai-assistant-feature to show upgrade banner
+- AI Assistant: track 'Write with AI...' button events
+- AI Assistant: tweak box layout and styles
+- Jetpack AI: iterate over top level actions of the block toolbar
 - Make free subscribers confirm email before viewing content
+- Switch ai assistant block to send an array of messages and not a question
 
 ### Improved compatibility
 - Add "Read me" links to Stripe connection banners in blocks.
 
 ### Bug fixes
+- AI Assistant: Fix partial AI error string check
+- AI Assistant: Fix text color when focused
+- AI Assistant: Fix try again not resetting prompt type
 - Jetpack API Settings: use default values, when set
 
 ## 12.2-beta - 2023-05-30
