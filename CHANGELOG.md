@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Add "Read me" links to Stripe connection banners in blocks.
+- Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp
 
 ### Bug fixes
 - AI Assistant: Fix partial AI error string check
