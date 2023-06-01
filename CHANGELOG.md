@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add track for speed score API errors
 - AI Assistant: Add Accept button so the user can accept a partially generated content.
 - AI Assistant: add a Done button to the main-area of the block
 - AI Assistant: do not extend when site requires upgrading
