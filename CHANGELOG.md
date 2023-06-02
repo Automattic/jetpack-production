@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: add a Done button to the main-area of the block
 - AI Assistant: Add different message for requests with moderation issues
 - AI Assistant: do not extend when site requires upgrading
+- AI Assistant: Focus input on moderation error
 - AI Assistant: Focus on done or unclear prompt
 - AI Assistant: Group all options in Write With AI
 - AI Assistant: ignore double asterisks when checking unclear prompt message
