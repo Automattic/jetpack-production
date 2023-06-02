@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Fix partial AI error string check
 - AI Assistant: Fix text color when focused
 - AI Assistant: Fix try again not resetting prompt type
+- AI Assistant: Up font-size for small screens
 - Fixes the check for falsy values in the `getReachForAccessLevelKey` function,
   removing the `socialFollowers` and updating the subscription count API endpoints
   to return paid-subscribers.
