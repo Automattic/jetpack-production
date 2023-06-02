@@ -10,8 +10,10 @@ This is an alpha version! The changes listed here are not final.
 - Add track for speed score API errors
 - AI Assistant: Add Accept button so the user can accept a partially generated content.
 - AI Assistant: add a Done button to the main-area of the block
+- AI Assistant: Add different message for requests with moderation issues
 - AI Assistant: check whether the site requires upgrade in the ai-assistant-feature endpoint
 - AI Assistant: do not extend when site requires upgrading
+- AI Assistant: Focus input on moderation error
 - AI Assistant: Focus on done or unclear prompt
 - AI Assistant: Group all options in Write With AI
 - AI Assistant: ignore double asterisks when checking unclear prompt message
@@ -33,6 +35,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Fix text color when focused
 - AI Assistant: Fix try again not resetting prompt type
 - Jetpack API Settings: use default values, when set
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- prompt change for AI Assistant
 
 ## 12.2-beta - 2023-05-30
 ### Major Enhancements
