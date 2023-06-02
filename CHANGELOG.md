@@ -34,6 +34,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Fix partial AI error string check
 - AI Assistant: Fix text color when focused
 - AI Assistant: Fix try again not resetting prompt type
+- Fixes the check for falsy values in the `getReachForAccessLevelKey` function,
+  removing the `socialFollowers` and updating the subscription count API endpoints
+  to return paid-subscribers.
 - Jetpack API Settings: use default values, when set
 - Verify the access level should be gated before checking subscriptions
 
