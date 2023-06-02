@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Verify the access level should be gated before checking subscriptions
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added comments to the LaunchpadSaveModal code for future reference.
 - Removes Anchor.fm extension.
 
 ## 12.2-beta - 2023-05-30
