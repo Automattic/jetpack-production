@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp
 
 ### Bug fixes
+- AI Assistant: Check if request reference has a current value
 - AI Assistant: Fix partial AI error string check
 - AI Assistant: Fix text color when focused
 - AI Assistant: Fix try again not resetting prompt type
