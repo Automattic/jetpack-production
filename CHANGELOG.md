@@ -37,6 +37,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack API Settings: use default values, when set
 - Verify the access level should be gated before checking subscriptions
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Removes Anchor.fm extension.
+
 ## 12.2-beta - 2023-05-30
 ### Major Enhancements
 - New AI Assistant block: harness AI power directly from your editor.
