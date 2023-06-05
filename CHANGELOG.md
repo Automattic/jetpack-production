@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add send email preview endpoint
+- AI Assistant: replace tone icon
 - Show Paid Newsletter subscriber reach numbers in the past tense when the post has been already been published
 - Stats: display the links to a post's stats in the Posts list as soon as  the user has access to stats.
 
