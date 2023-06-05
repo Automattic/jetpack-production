@@ -2,53 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.3-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Enhancements
-- Add track for speed score API errors
-- AI Assistant: Add Accept button so the user can accept a partially generated content.
-- AI Assistant: add a Done button to the main-area of the block
-- AI Assistant: Add AI guidelines link to sidebar
-- AI Assistant: Add different message for requests with moderation issues
-- AI Assistant: check whether the site requires upgrade in the ai-assistant-feature endpoint
-- AI Assistant: do not extend when site requires upgrading
-- AI Assistant: Focus input on moderation error
-- AI Assistant: Focus on done or unclear prompt
-- AI Assistant: Group all options in Write With AI
-- AI Assistant: ignore double asterisks when checking unclear prompt message
-- AI Assistant: introduce a new error_service_unavailable custom error
-- AI Assistant: introduce blog post relevant data block into the prompt
-- AI Assistant: register endpoint also for Jetpack sites
-- AI Assistant: rely on ai-assistant-feature to show upgrade banner
-- AI Assistant: track 'Write with AI...' button events
-- AI Assistant: tweak box layout and styles
-- Jetpack AI: iterate over top level actions of the block toolbar
-- Make free subscribers confirm email before viewing content
-- Switch ai assistant block to send an array of messages and not a question
-
-### Improved compatibility
-- Add "Read me" links to Stripe connection banners in blocks.
-
-### Bug fixes
-- AI Assistant: Check if request reference has a current value
-- AI Assistant: Fix partial AI error string check
-- AI Assistant: Fix text color when focused
-- AI Assistant: Fix try again not resetting prompt type
-- AI Assistant: Set title as empty in create prompt
-- AI Assistant: Up font-size for small screens
-- Fixes the check for falsy values in the `getReachForAccessLevelKey` function,
-  removing the `socialFollowers` and updating the subscription count API endpoints
-  to return paid-subscribers.
-- IDC: fix Jetpack Dashboard for broken connection.
-- Jetpack API Settings: use default values, when set
-- Revert gating removal for simple payments
-
-### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- prompt change for AI Assistant
-
-## 12.2-beta - 2023-05-30
+## 12.2-beta - 2023-06-05
 ### Major Enhancements
 - New AI Assistant block: harness AI power directly from your editor.
 - Donations, Paid Content and Payment Buttons blocks are now available with all Jetpack plans. A commission is charged for free plans.
@@ -85,12 +39,14 @@ This is an alpha version! The changes listed here are not final.
 - Social Previews: Add Instagram preview. [#30929]
 - Social Previews: Add Mastodon post preview. [#30919]
 - Starter: Add post-purchase flow to recommendations. [#30680]
+- Subscriptions: Make free subscribers confirm email before viewing content. [#31054]
 - Theme Tools: Remove jQuery dependency from responsive-videos script. [#30420]
 - WordPress.com: Adds a 'Staging' badge to the wp-admin nav menu when the site is a WordPress.com staging site. [#30296]
 
 ### Improved compatibility
 - ActivityPub: Allow disabling Jetpack's Image CDN in requests made for the ActivityPub plugin. [#30298]
 - Bit.ly: Avoid errors when using non-official Bit.ly plugins alongside Jetpack. [#30415]
+- Earn: Add "Read me" links to Stripe connection banners in blocks. [#31099]
 - Filters: `jetpack_set_available_blocks` and `jetpack_set_available_plugins`, deprecated since Jetpack 7.0, have been removed. [#30875]
 - Full-Site Editing: Use modern `wp_is_block_theme` instead of `gutenberg_is_fse_theme`. [#30806]
 - General: PHP 8 compatibility updates.
@@ -103,13 +59,15 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - API: Add a `WP_User` check in `get_author` method. [#30902]
 - API: Fix race condition bug in the Plugin update endpoint. [#30770]
+- API: Use default values in settings API, when set. [#31123]
 - At-a-Glance: Fix styling for Stats banner. [#30403]
 - Carousel: Stop auto-scrolling to top when advancing slides. [#30964]
 - Dashboard: Use the correct file path for all images in the "My Plan" screen. [#30685]
 - Donations Block: Ensure the tab colors are correct in all themes. [#30864]
 - Donations Block: Fix crash on currency change. [#30530]
-- Donations Block: Make the "Connect" link the primary color [#30320]
+- Donations Block: Make the "Connect" link the primary color. [#30320]
 - Forms: Fix Forms hash generation. [#30764]
+- Identity Crisis: Fix Jetpack Dashboard for broken connection. [#31183]
 - Maps: Fix zoom being reset when changing map marker color. [#30482]
 - Newsletters: Return early when possible to prevent spamming the database. [#30355]
 - Related Posts: Fix context for use in block editor. [#30682]
@@ -119,6 +77,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Fixed the site preview in SEO settings. [#30973]
 - Social: Add username to publicize connection test results. [#30987]
 - Subscriptions: Change the "Add payments" text to "Set up a paid plan". [#30671]
+- Subscriptions: Fix display of number of paid subscribers. [#31141]
 - Subscriptions: Do not remove bulk-editing checkboxes from the posts list. [#30747]
 - Users: Display "Super Admin" badge in edit user form. [#30496]
 - VideoPress: Add tracks to attributes definition. [#30743]
