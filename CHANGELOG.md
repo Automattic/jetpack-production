@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixes the check for falsy values in the `getReachForAccessLevelKey` function,
   removing the `socialFollowers` and updating the subscription count API endpoints
   to return paid-subscribers.
+- IDC: fix Jetpack Dashboard for broken connection.
 - Jetpack API Settings: use default values, when set
 - Revert gating removal for simple payments
 
