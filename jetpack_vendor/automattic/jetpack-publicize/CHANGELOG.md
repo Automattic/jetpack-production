@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Simplified i18n strings
+
 ## [0.30.0] - 2023-05-29
 ### Added
 - Added account_name field to the publicize connections object. [#30937]
