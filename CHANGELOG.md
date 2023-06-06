@@ -2,28 +2,29 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.3-a.0 - unreleased
+## 12.3-a.2 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- Add send email preview endpoint
-- AI Assistant: improve the process of getting post content
-- AI Assistant: replace tone icon
-- Show Paid Newsletter subscriber reach numbers in the past tense when the post has been already been published
-- Stats: display the links to a post's stats in the Posts list as soon as  the user has access to stats.
-- Update connection module to have an RNA option that updates the design
-
-### Improved compatibility
-- Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp
-
 ### Bug fixes
 - Connection: redirecting users who click back button before approving connection to Jetpack Dashboard
-- Verify the access level should be gated before checking subscriptions
+
+## 12.3-a.1 - 2023-06-06
+### Enhancements
+- AI Assistant: improve the process of getting post content. [#31211]
+- AI Assistant: replace tone button icon for clarity. [#31152]
+- Stats: display the links to a post's stats in the Posts list as soon as the user has access to stats. [#31025]
+
+### Bug fixes
+- Newsletters: verify the access level should be gated before checking subscriptions. [#30807]
+- Newsletters: show paid subscriber reach numbers in the past tense when the post has been already been published. [#30883]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added comments to the LaunchpadSaveModal code for future reference.
-- Removes Anchor.fm extension.
+- Added comments to the LaunchpadSaveModal code for future reference. [#31149]
+- Remove Anchor.fm extension. [#31117]
+- RNA: update connection module to have an RNA option that updates the design [#31201]
+- Updated package dependencies.
+- WPcom: add send email preview endpoint. [#31028]
 
 ## [12.2] - 2023-06-06
 ### Major Enhancements
