@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- AI Assistant: tidy some block components
+
 ### Bug fixes
 - Connection: redirecting users who click back button before approving connection to Jetpack Dashboard
 
