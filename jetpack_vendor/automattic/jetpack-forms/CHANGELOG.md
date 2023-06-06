@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Editor view: remove duplicated Add Contact Form button.
+
 ## [0.19.2] - 2023-05-30
 ### Changed
 - Jetpack Forms: added basic email template [#31026]
