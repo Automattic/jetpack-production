@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp
 
 ### Bug fixes
+- Connection: redirecting users who click back button before approving connection to Jetpack Dashboard
 - Verify the access level should be gated before checking subscriptions
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
