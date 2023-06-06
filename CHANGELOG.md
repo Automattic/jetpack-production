@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: replace tone icon
 - Show Paid Newsletter subscriber reach numbers in the past tense when the post has been already been published
 - Stats: display the links to a post's stats in the Posts list as soon as  the user has access to stats.
+- Update connection module to have an RNA option that updates the design
 
 ### Improved compatibility
 - Added Page-Optimize-compatible PHP endpoint for loading concatenated files without loading wp
