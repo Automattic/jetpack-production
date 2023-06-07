@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - PHP8 compatibility updates.
 
 ### Bug fixes
+- AI Assistant: Check if the block is in the block editor context before enabling Accept title action
 - Connection: redirecting users who click back button before approving connection to Jetpack Dashboard
 - Fix an issue where Jetpack_Memberships::user_can_view_post would cachethe wrong value
 
