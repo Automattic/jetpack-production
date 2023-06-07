@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: tidy some block components
+- Blocks: load block stylesheets inline when possible, for improved performance.
 
 ### Bug fixes
 - Connection: redirecting users who click back button before approving connection to Jetpack Dashboard
