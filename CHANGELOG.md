@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Connection: redirecting users who click back button before approving connection to Jetpack Dashboard
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: update documentation.
+
 ## 12.3-a.1 - 2023-06-06
 ### Enhancements
 - AI Assistant: improve the process of getting post content. [#31211]
