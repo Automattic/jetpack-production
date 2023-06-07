@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.14.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- My Jetpack: populate the Jetpack AI product with feature data
+
 ## [2.14.2] - 2023-06-06
 ### Changed
 - Filter out revoked licenses from the license activation options. [#31088]
@@ -897,6 +904,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[2.14.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.2...2.14.3-alpha
 [2.14.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.1...2.14.2
 [2.14.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.0...2.14.1
 [2.14.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.13.0...2.14.0
