@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: tidy some block components
 - Blocks: load block stylesheets inline when possible, for improved performance.
 
+### Improved compatibility
+- PHP8 compatibility updates.
+
 ### Bug fixes
 - Connection: redirecting users who click back button before approving connection to Jetpack Dashboard
 - Fix an issue where Jetpack_Memberships::user_can_view_post would cachethe wrong value
