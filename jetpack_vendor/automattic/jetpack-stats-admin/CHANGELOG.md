@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Stats Admin: added modules toggling API support
 - Stats Admin: Add module settings API
 
+### Changed
+- Stats Admin: use WPCOM notices API
+
 ## 0.8.0 - 2023-05-15
 ### Added
 - Stats Admin: adds rest api for marking and unmarking referrers as spam [#30625]

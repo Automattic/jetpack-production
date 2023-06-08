@@ -826,6 +826,10 @@ return array(
 		'version' => '0.9.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-rest-controller.php'
 	),
+	'Automattic\\Jetpack\\Stats_Admin\\WPCOM_Client' => array(
+		'version' => '0.9.0.0-alpha',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-wpcom-client.php'
+	),
 	'Automattic\\Jetpack\\Stats_Admin\\WP_Dashboard_Odyssey_Widget' => array(
 		'version' => '0.9.0.0-alpha',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-wp-dashboard-odyssey-widget.php'
