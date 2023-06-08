@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: tidy some block components
 - Blocks: load block stylesheets inline when possible, for improved performance.
 - Do not display newsletter plans in the Premium content and Recurring payment blocks
+- Make newsletter subscribers reach sentence future-tense for scheduled posts
 
 ### Improved compatibility
 - PHP8 compatibility updates.
