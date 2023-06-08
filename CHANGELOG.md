@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: redirecting users who click back button before approving connection to Jetpack Dashboard
 - Dashboard: display an external icon next to the link to the Subscribers list.
 - Fix an issue where Jetpack_Memberships::user_can_view_post would cachethe wrong value
+- Fix potential bug in subscription widget on WoA
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: update documentation.
