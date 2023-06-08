@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.3-a.2 - unreleased
+## 12.3-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -21,10 +21,13 @@ This is an alpha version! The changes listed here are not final.
 - Connection: redirecting users who click back button before approving connection to Jetpack Dashboard
 - Dashboard: display an external icon next to the link to the Subscribers list.
 - Fix an issue where Jetpack_Memberships::user_can_view_post would cachethe wrong value
-- Fix potential bug in subscription widget on WoA
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: update documentation.
+
+## 12.3-a.3 - 2023-06-08
+### Bug fixes
+- Memberships: fix potential class not found error. [#31268]
 
 ## 12.3-a.1 - 2023-06-06
 ### Enhancements
