@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add video section to backup connect page
 - AI Assistant: Add keyboard shortcuts
+- AI Assistant: remove shortcuts labels from block area
 - AI Assistant: Request completion JWT token as the user, not the blog.
 - AI Assistant: tidy some block components
 - Blocks: load block stylesheets inline when possible, for improved performance.
