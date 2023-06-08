@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Stats Admin: use WPCOM notices API
 
+### Fixed
+- Replace dependency on deprecated `automattic/jetpack-options` package.
+
 ## 0.8.0 - 2023-05-15
 ### Added
 - Stats Admin: adds rest api for marking and unmarking referrers as spam [#30625]
