@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Stats Admin: added modules toggling API support
+- Stats Admin: Add module settings API
 
 ## 0.8.0 - 2023-05-15
 ### Added
