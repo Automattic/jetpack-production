@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: Check if the block is in the block editor context before enabling Accept title action
 - Connection: redirecting users who click back button before approving connection to Jetpack Dashboard
+- Correctly gate posts rendered on pages
 - Dashboard: display an external icon next to the link to the Subscribers list.
 - Fix an issue where Jetpack_Memberships::user_can_view_post would cachethe wrong value
 
