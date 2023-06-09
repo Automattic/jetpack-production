@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: load block stylesheets inline when possible, for improved performance.
 - Do not display newsletter plans in the Premium content and Recurring payment blocks
 - Jetpack: jsdoc improvements in reduder file
+- Jetpack: show Jetpack AI product in the plan products list
 - Make newsletter subscribers reach sentence future-tense for scheduled posts
 
 ### Improved compatibility
