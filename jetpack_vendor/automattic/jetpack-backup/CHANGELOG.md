@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add "Why I need VaultPress Backup" section to connect page
 - Add video section to backup connect page
 
 ## [1.14.0] - 2023-06-06
