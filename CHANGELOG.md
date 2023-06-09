@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Request completion JWT token as the user, not the blog.
 - AI Assistant: show message when content generated
 - AI Assistant: tidy some block components
+- AI Assistant: tweak content generated message
 - Blocks: load block stylesheets inline when possible, for improved performance.
 - Do not display newsletter plans in the Premium content and Recurring payment blocks
 - Jetpack: jsdoc improvements in reduder file
