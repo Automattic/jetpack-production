@@ -2,43 +2,46 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.3-a.4 - unreleased
+## 12.3-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Add video section to backup connect page
-- AI Assistant: Add keyboard shortcuts
-- AI Assistant: block query requests when required upgrade
-- AI Assistant: Change icon on AI disclaimer message
-- AI Assistant: Move caret to end of generated content when accepting
 - AI Assistant: register ai-assistant-support beta extension.
-- AI Assistant: remove shortcuts labels from block area
-- AI Assistant: Request completion JWT token as the user, not the blog.
-- AI Assistant: show message when content generated
-- AI Assistant: tidy some block components
-- AI Assistant: tweak content generated message
-- Blocks: Add a Tock block
-- Blocks: load block stylesheets inline when possible, for improved performance.
-- Do not display newsletter plans in the Premium content and Recurring payment blocks
-- Jetpack: jsdoc improvements in reduder file
-- Jetpack: show Jetpack AI product in the plan products list
-- Make newsletter subscribers reach sentence future-tense for scheduled posts
+
+## 12.3-a.5 - 2023-06-12
+### Enhancements
+- AI Assistant: add keyboard shortcuts. [#31264]
+- AI Assistant: change icon on AI disclaimer message. [#31320]
+- AI Assistant: move caret to end of generated content when accepting. [#31286]
+- AI Assistant: show message when content generated. [#31271]
+- AI Assistant: tidy some block components. [#31222]
+- AI Assistant: tweak content generated message. [#31298]
+- AI Assistant: remove shortcuts labels from block area. [#31278]
+- Backup: add video section to Backup connect page. [#31260]
+- Blocks: add new Tock block to beta blocks. [#31303]
+- Blocks: load block stylesheets inline when possible for improved performance. [#31214]
 
 ### Improved compatibility
-- PHP8 compatibility updates.
+- PHP8 compatibility updates. [#31240, #31242, #31243, #31250]
 
 ### Bug fixes
-- AI Assistant: Check if the block is in the block editor context before enabling Accept title action
-- AI Assistant: Fix translation feature
-- Connection: redirecting users who click back button before approving connection to Jetpack Dashboard
-- Correctly gate posts rendered on pages
-- Dashboard: display an external icon next to the link to the Subscribers list.
-- Fix an issue where Jetpack_Memberships::user_can_view_post would cachethe wrong value
-- Markdown Block: render single and double quotes as smart quotes.
+- AI Assistant: block query requests when upgrade required. [#31282]
+- AI Assistant: check if the block is in the block editor context before enabling accept title action. [#31255]
+- AI Assistant: fix translation feature. [#31300]
+- AI Assistant: request completion JWT token as the user, not the blog. [#31262]
+- AI Assistant: show Jetpack AI product in the plan products list. [#31291]
+- Connection: fix redirecting users who click back button before approving connection to Jetpack Dashboard. [#31212]
+- Dashboard: display an external icon next to the link to the Subscribers list. [#31159]
+- Memberships: correctly gate posts rendered on pages. [#31254]
+- Memberships: fix an issue where Jetpack_Memberships::user_can_view_post would cache the wrong value. [#31249]
+- Markdown Block: render single and double quotes as smart quotes. [#31187]
+- Newsletters: do not display Newsletter plans in the Premium Content and Recurring Payment blocks. [#31200]
+- Newsletters: make the subscribers reach sentence future-tense for scheduled posts. [#31215]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Blocks: update documentation.
+- Blocks: update documentation. [#31206]
+- Jetpack: jsdoc improvements in reducer file. [#31290]
 
 ## 12.3-a.3 - 2023-06-08
 ### Bug fixes

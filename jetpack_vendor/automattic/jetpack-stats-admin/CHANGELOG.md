@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.9.0-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 0.9.0 - 2023-06-12
 ### Added
-- Stats Admin: added modules toggling API support
-- Stats Admin: Add module settings API
+- Stats Admin: added modules toggling API support [#31230]
+- Stats Admin: Add module settings API [#31231]
 
 ### Changed
-- Stats Admin: use WPCOM notices API
+- Stats Admin: use WPCOM notices API [#31261]
 
 ### Fixed
-- Replace dependency on deprecated `automattic/jetpack-options` package.
+- Replace dependency on deprecated `automattic/jetpack-options` package. [#31280]
 
 ## 0.8.0 - 2023-05-15
 ### Added
