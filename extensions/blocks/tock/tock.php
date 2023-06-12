@@ -2,7 +2,7 @@
 /**
  * Tock Block.
  *
- * @since 12.3-a.4
+ * @since 12.3
  *
  * @package automattic/jetpack
  */
