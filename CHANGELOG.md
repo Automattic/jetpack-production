@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add video section to backup connect page
 - AI Assistant: Add keyboard shortcuts
 - AI Assistant: block query requests when required upgrade
+- AI Assistant: Change icon on AI disclaimer message
 - AI Assistant: Move caret to end of generated content when accepting
 - AI Assistant: remove shortcuts labels from block area
 - AI Assistant: Request completion JWT token as the user, not the blog.
