@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: block query requests when required upgrade
 - AI Assistant: Change icon on AI disclaimer message
 - AI Assistant: Move caret to end of generated content when accepting
+- AI Assistant: register ai-assistant-support beta extension.
 - AI Assistant: remove shortcuts labels from block area
 - AI Assistant: Request completion JWT token as the user, not the blog.
 - AI Assistant: show message when content generated
