@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: Add and use ImproveToolbarDropdownMenu in block toolbar
 - AI Assistant: Add Expand option into AI Assistant dropdown menu.
 - AI Assistant: Add Summarize option to the AI Assistant dropdown menu
 - AI Assistant: add tone into AI Assistant dropdown menu
