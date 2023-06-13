@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: introduce jetpack/ai supports
 - AI Assistant: register ai-assistant-support beta extension.
+- AI Feature: Do not extend if the AI Assistant block is not registered
 
 ## 12.3-a.5 - 2023-06-12
 ### Enhancements
