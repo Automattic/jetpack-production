@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: extend blocks toolbar
 - AI Assistant: introduce jetpack/ai supports
 - AI Assistant: register ai-assistant-support beta extension.
 - AI Feature: Do not extend if the AI Assistant block is not registered
