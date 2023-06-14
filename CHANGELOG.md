@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add Expand option into AI Assistant dropdown menu.
 - AI Assistant: Add Summarize option to the AI Assistant dropdown menu
 - AI Assistant: add tone into AI Assistant dropdown menu
+- AI Assistant: build prompt from AI Assistant toolbar menu
 - AI Assistant: extend blocks toolbar
 - AI Assistant: introduce jetpack/ai supports
 - AI Assistant: register ai-assistant-support beta extension.
