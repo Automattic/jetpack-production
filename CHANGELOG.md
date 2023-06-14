@@ -20,9 +20,6 @@ This is an alpha version! The changes listed here are not final.
 - Customizer: the customizer submenu is now hidden for block based themes
 - Tock Block: Updated the block settings interface
 
-### Bug fixes
-- Newsletters: Fix sidebar panel in WordPress 6.1.
-
 ## 12.3-a.5 - 2023-06-12
 ### Enhancements
 - AI Assistant: add keyboard shortcuts. [#31264]
@@ -77,6 +74,11 @@ This is an alpha version! The changes listed here are not final.
 - RNA: update connection module to have an RNA option that updates the design [#31201]
 - Updated package dependencies.
 - WPcom: add send email preview endpoint. [#31028]
+
+## 12.2.1 - 2023-06-14
+### Bug fixes
+- Newsletters: fix sidebar panel in WordPress 6.1. [#31386]
+- Newsletters: show paid Newsletter subscriber reach numbers in the past tense when the post has already been published. [#30883]
 
 ## [12.2] - 2023-06-06
 ### Major Enhancements
