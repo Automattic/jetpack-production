@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: build prompt from AI Assistant toolbar menu
 - AI Assistant: extend blocks toolbar
 - AI Assistant: introduce jetpack/ai supports
+- AI Assistant: iterate over custom hook to request suggestions
 - AI Assistant: register ai-assistant-support beta extension.
 - AI Feature: Do not extend if the AI Assistant block is not registered
 - AI Feature: fix generating prompt when requesting suggestion
