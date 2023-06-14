@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: introduce jetpack/ai supports
 - AI Assistant: register ai-assistant-support beta extension.
 - AI Feature: Do not extend if the AI Assistant block is not registered
+- AI Feature: fix generating prompt when requesting suggestion
 - AI Feature: update block content once AI response is ready
 - Customizer: the customizer submenu is now hidden for block based themes
 - Tock Block: Updated the block settings interface
