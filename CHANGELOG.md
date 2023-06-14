@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 - Customizer: the customizer submenu is now hidden for block based themes
 - Tock Block: Updated the block settings interface
 
+### Bug fixes
+- Newsletters: Fix sidebar panel in WordPress 6.1.
+
 ## 12.3-a.5 - 2023-06-12
 ### Enhancements
 - AI Assistant: add keyboard shortcuts. [#31264]
