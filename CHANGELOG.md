@@ -26,6 +26,9 @@ This is an alpha version! The changes listed here are not final.
 - Tock Block: Updated the block settings interface
 - Update Paid newsletter panel designs
 
+### Improved compatibility
+- Tiled Galleries: avoid PHP deprecation notices on sites using PHP 8.2.
+
 ### Bug fixes
 - Tock block: Fix the embed rendering on WordPress.com
 
