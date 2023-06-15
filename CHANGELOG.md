@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Feature: fix generating prompt when requesting suggestion
 - AI Feature: update block content once AI response is ready
 - Customizer: the customizer submenu is now hidden for block based themes
+- Removed the "Appearance > Customize" entry from the WordPress.com menu when the site uses a block-based theme.
 - Tock Block: Updated the block settings interface
 - Update Paid newsletter panel designs
 
