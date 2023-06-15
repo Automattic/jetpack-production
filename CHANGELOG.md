@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add translate option in extensions
 - AI Assistant: build prompt from AI Assistant toolbar menu
 - AI Assistant: extend blocks toolbar
+- AI Assistant: introduce function to create the initial system prompt
 - AI Assistant: introduce jetpack/ai supports
 - AI Assistant: iterate over custom hook to request suggestions
 - AI Assistant: register ai-assistant-support beta extension.
