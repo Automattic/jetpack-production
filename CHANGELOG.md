@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Tiled Galleries: avoid PHP deprecation notices on sites using PHP 8.2.
 
 ### Bug fixes
+- Fixes output of staticized script path on wordpress.com
 - Tock block: Fix the embed rendering on WordPress.com
 
 ## 12.3-a.5 - 2023-06-12
