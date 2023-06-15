@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Feature: update block content once AI response is ready
 - Customizer: the customizer submenu is now hidden for block based themes
 - Tock Block: Updated the block settings interface
+- Update Paid newsletter panel designs
 
 ### Bug fixes
 - Tock block: Fix the embed rendering on WordPress.com
