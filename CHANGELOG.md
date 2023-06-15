@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: build prompt from AI Assistant toolbar menu
 - AI Assistant: create function to build the post data prompt
 - AI Assistant: extend blocks toolbar
+- AI Assistant: extract and use block content utils
 - AI Assistant: introduce function to create the initial system prompt
 - AI Assistant: introduce jetpack/ai supports
 - AI Assistant: iterate over custom hook to request suggestions
