@@ -37,6 +37,9 @@ This is an alpha version! The changes listed here are not final.
 - Fixes output of staticized script path on wordpress.com
 - Tock block: Fix the embed rendering on WordPress.com
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Plans: switch to using the Plans package to detect feature support.
+
 ## 12.3-a.5 - 2023-06-12
 ### Enhancements
 - AI Assistant: add keyboard shortcuts. [#31264]
