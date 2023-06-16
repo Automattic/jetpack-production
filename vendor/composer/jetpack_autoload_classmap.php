@@ -99,7 +99,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Blaze' => array(
-		'version' => '0.5.14.0',
+		'version' => '0.6.0.0-alpha1686920327',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-blaze.php'
 	),
 	'Automattic\\Jetpack\\Blocks' => array(
