@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: add tone into AI Assistant dropdown menu
 - AI Assistant: Add translate option in extensions
 - AI Assistant: build prompt from AI Assistant toolbar menu
+- AI Assistant: collect, store and send prompt history
 - AI Assistant: create function to build the post data prompt
 - AI Assistant: extend blocks toolbar
 - AI Assistant: extract and use block content utils
