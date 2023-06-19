@@ -2,49 +2,45 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.3-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 12.3-a.7 - 2023-06-19
 ### Enhancements
-- AI Assistant: Add and use ImproveToolbarDropdownMenu in block toolbar
-- AI Assistant: Add Expand option into AI Assistant dropdown menu.
-- AI Assistant: Add Summarize option to the AI Assistant dropdown menu
-- AI Assistant: add tone into AI Assistant dropdown menu
-- AI Assistant: Add translate option in extensions
-- AI Assistant: build prompt from AI Assistant toolbar menu
-- AI Assistant: collect, store and send prompt history
-- AI Assistant: create function to build the post data prompt
-- AI Assistant: extend blocks toolbar
-- AI Assistant: extract and use block content utils
-- AI Assistant: introduce function to create the initial system prompt
-- AI Assistant: introduce jetpack/ai supports
-- AI Assistant: iterate over custom hook to request suggestions
-- AI Assistant: register ai-assistant-support beta extension.
-- AI Assistant: Separate prompt text from relevant content for extensions
-- AI Feature: Do not extend if the AI Assistant block is not registered
-- AI Feature: fix generating prompt when requesting suggestion
-- AI Feature: update block content once AI response is ready
-- Customizer: the customizer submenu is now hidden for block based themes
-- Related posts: added srcset to thumbnails
-- Removed the "Appearance > Customize" entry from the WordPress.com menu when the site uses a block-based theme.
-- Silence creation of the default membership product in a newsletter context
-- Social Logos: update to include a Nextdoor and a Fediverse logo.
-- Subscribers Page: Add menu item to Calypso
-- Tock Block: Updated the block settings interface
-- Update Paid newsletter panel designs
+- AI Assistant: add and use ImproveToolbarDropdownMenu in block toolbar. [#31346]
+- AI Assistant: add Expand option into AI Assistant dropdown menu. [#31363]
+- AI Assistant: add Summarize option to the AI Assistant dropdown menu. [#31364]
+- AI Assistant: add tone into AI Assistant dropdown menu. [#31359]
+- AI Assistant: add translate option in extensions. [#31384]
+- AI Assistant: build prompt from AI Assistant toolbar menu. [#31366]
+- AI Assistant: collect, store and send prompt history. [#31416]
+- AI Assistant: create function to build the post data prompt. [#31403]
+- AI Assistant: extend blocks toolbar. [#31354]
+- AI Assistant: extract and use block content utils. [#31409]
+- AI Assistant: introduce function to create the initial system prompt. [#31398]
+- AI Assistant: introduce jetpack/ai supports. [#30908]
+- AI Assistant: iterate over custom hook to request suggestions. [#31389]
+- AI Assistant: register ai-assistant-support beta extension. [#31335]
+- AI Assistant: separate prompt text from relevant content for extensions. [#31401]
+- AI Assistant: do not extend if the AI Assistant block is not registered. [#31350]
+- AI Assistant: fix generating prompt when requesting suggestion. [#31387]
+- AI Assistant: update block content once AI response is ready. [#31378]
+- Customizer: hide the customizer submenu for block based themes. [#31353, #31376]
+- Newsletters: silence creation of the default membership product in a newsletter context. [#30940]
+- Newsletters: update Paid newsletter panel designs. [#31224]
+- Related Posts: add srcset for the thumbnails. [#31432]
+- Social Logos: update to include a Nextdoor and a Fediverse logo. [#31404]
+- Subscribers: add menu item to Calypso interface. [#31170]
+- Tock Block: update the block settings interface. [#31355]
 
 ### Improved compatibility
-- Tiled Galleries: avoid PHP deprecation notices on sites using PHP 8.2.
-- WordPress.com Toolbar: avoid PHP warnings with PHP 8.2.
+- Tiled Galleries: avoid PHP deprecation notices on sites using PHP 8.2. [#31296]
+- WordPress.com Toolbar: avoid PHP warnings with PHP 8.2. [#31438]
 
 ### Bug fixes
-- Fixes output of staticized script path on wordpress.com
-- Remove Newsletter column on products
-- Tock block: Fix the embed rendering on WordPress.com
+- Newsletters: remove Newsletter column on products post type. [#31374]
+- Tock Block: fix the embed rendering on WordPress.com sites. [#31385]
+- WPcom: fix output of static script path on WordPress.com sites. [#31402]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Plans: switch to using the Plans package to detect feature support.
+- Plans: switch to using the Plans package to detect feature support. [#31213]
 
 ## 12.3-a.5 - 2023-06-12
 ### Enhancements
