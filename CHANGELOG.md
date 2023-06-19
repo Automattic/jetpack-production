@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Customizer: the customizer submenu is now hidden for block based themes
 - Related posts: added srcset to thumbnails
 - Removed the "Appearance > Customize" entry from the WordPress.com menu when the site uses a block-based theme.
+- Silence creation of the default membership product in a newsletter context
 - Social Logos: update to include a Nextdoor and a Fediverse logo.
 - Subscribers Page: Add menu item to Calypso
 - Tock Block: Updated the block settings interface
