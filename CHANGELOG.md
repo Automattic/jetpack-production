@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Feature: update block content once AI response is ready
 - Customizer: the customizer submenu is now hidden for block based themes
 - Removed the "Appearance > Customize" entry from the WordPress.com menu when the site uses a block-based theme.
+- Social Logos: update to include a Nextdoor and a Fediverse logo.
 - Subscribers Page: Add menu item to Calypso
 - Tock Block: Updated the block settings interface
 - Update Paid newsletter panel designs
