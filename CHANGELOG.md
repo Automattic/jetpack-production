@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Tiled Galleries: avoid PHP deprecation notices on sites using PHP 8.2.
+- WordPress.com Toolbar: avoid PHP warnings with PHP 8.2.
 
 ### Bug fixes
 - Fixes output of staticized script path on wordpress.com
