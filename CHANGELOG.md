@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- AI Extension: dispatch action to update extended block attributes
+
 ## 12.3-a.7 - 2023-06-19
 ### Enhancements
 - AI Assistant: add and use ImproveToolbarDropdownMenu in block toolbar. [#31346]
