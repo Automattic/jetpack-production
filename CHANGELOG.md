@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fixes output of staticized script path on wordpress.com
+- Remove Newsletter column on products
 - Tock block: Fix the embed rendering on WordPress.com
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
