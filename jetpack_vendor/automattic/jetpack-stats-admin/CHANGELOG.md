@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.10.0-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 0.10.0 - 2023-06-19
 ### Added
-- Add new dependency: Jetpack Plans package.
+- Add new dependency: Jetpack Plans package. [#31213]
 
 ### Changed
-- Switch to relying on the Plans package instead of a class available in the Jetpack plugin only.
+- Switch to relying on the Plans package instead of a class available in the Jetpack plugin only. [#31213]
 
 ## 0.9.0 - 2023-06-12
 ### Added
