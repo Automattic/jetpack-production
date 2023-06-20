@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: dispatch action to update extended block attributes
 - AI Extension: improve prompt when using the AI Assistant in extended blocks
 
+### Bug fixes
+- AI Assistant: Close event stream of completions when the block gets deleted.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Connection banner: update visual used.
 - dependency update
