@@ -34,25 +34,18 @@ class ComposerAutoloaderInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_3_a_8
         $loader->setClassMapAuthoritative(true);
         $loader->register(true);
 
-        $includeFiles = \Composer\Autoload\ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_3_a_8::$files;
-        foreach ($includeFiles as $fileIdentifier => $file) {
-            composerRequiref11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_3_a_8($fileIdentifier, $file);
+        $filesToLoad = \Composer\Autoload\ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_3_a_8::$files;
+        $requireFile = \Closure::bind(static function ($fileIdentifier, $file) {
+            if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
+                $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
+
+                require $file;
+            }
+        }, null, null);
+        foreach ($filesToLoad as $fileIdentifier => $file) {
+            $requireFile($fileIdentifier, $file);
         }
 
         return $loader;
-    }
-}
-
-/**
- * @param string $fileIdentifier
- * @param string $file
- * @return void
- */
-function composerRequiref11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_3_a_8($fileIdentifier, $file)
-{
-    if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
-        $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
-
-        require $file;
     }
 }
