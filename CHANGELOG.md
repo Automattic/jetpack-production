@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Extension: dispatch action to update extended block attributes
+- AI Extension: improve prompt when using the AI Assistant in extended blocks
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Connection banner: update visual used.
