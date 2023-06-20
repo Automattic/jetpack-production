@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: dispatch action to update extended block attributes
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Connection banner: update visual used.
 - dependency update
 
 ## 12.3-a.7 - 2023-06-19
