@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: add transform from core to AI Assistant block
 - AI Assistant: Remove page content from prompt
 - AI Extension: dispatch action to update extended block attributes
+- AI Extension: improve block transform process
 - AI Extension: improve prompt when using the AI Assistant in extended blocks
 - AI Extension: populate the prompt with previous messages
 - AI Extension: tweak the tone prompt
