@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: dispatch action to update extended block attributes
 - AI Extension: improve prompt when using the AI Assistant in extended blocks
 - AI Extension: tweak the tone prompt
+- AU Extension: do not extend block sidebar
 
 ### Bug fixes
 - AI Assistant: Close event stream of completions when the block gets deleted.
