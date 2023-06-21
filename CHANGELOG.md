@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: populate the prompt with previous messages
 - AI Extension: tweak the tone prompt
 - AU Extension: do not extend block sidebar
+- enhancement Add Email Preview Feature
 
 ### Bug fixes
 - AI Assistant: Close event stream of completions when the block gets deleted.
