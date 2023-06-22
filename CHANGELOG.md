@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Remove page content from prompt
 - AI Extension: dispatch action to update extended block attributes
 - AI Extension: extend core list item core block
+- AI Extension: Handle errors from extended blocks actions.
 - AI Extension: handle multiple blocks editing
 - AI Extension: improve block transform process
 - AI Extension: improve prompt when using the AI Assistant in extended blocks
