@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: iterate over prompt to try to keep the lang of the content
 - AI Extension: iterate over spelling and grammar prompt item
 - AI Extension: populate the prompt with previous messages
+- AI Extension: reorganize prompt items for the AI extension
 - AI Extension: tweak the tone prompt
 - AU Extension: do not extend block sidebar
 - enhancement Add Email Preview Feature
