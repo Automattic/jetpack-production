@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: Close event stream of completions when the block gets deleted.
 - Fixed an issue which was preventing the Customize menu from appearing for plugins that still require it to be present
+- Properly gate newsletters based on the correct subscription product
 - Social Review Prompt: Fix the state so it is shown when Jetpack is also active
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
