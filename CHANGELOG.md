@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Connection banner: update visual used.
 - dependency update
+- Tests for newsletter loop
 - Updated package dependencies.
 
 ## 12.3-a.7 - 2023-06-19
