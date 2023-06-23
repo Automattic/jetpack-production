@@ -99,8 +99,20 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Blaze' => array(
-		'version' => '0.6.1.0-alpha1687288287',
+		'version' => '0.7.0.0-alpha1687504227',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-blaze.php'
+	),
+	'Automattic\\Jetpack\\Blaze\\Dashboard' => array(
+		'version' => '0.7.0.0-alpha1687504227',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-dashboard.php'
+	),
+	'Automattic\\Jetpack\\Blaze\\Dashboard_Config_Data' => array(
+		'version' => '0.7.0.0-alpha1687504227',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-dashboard-config-data.php'
+	),
+	'Automattic\\Jetpack\\Blaze\\Dashboard_REST_Controller' => array(
+		'version' => '0.7.0.0-alpha1687504227',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-dashboard-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Blocks' => array(
 		'version' => '1.4.22.0',
