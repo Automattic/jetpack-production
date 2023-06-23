@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: add transform from core to AI Assistant block
 - AI Assistant: Change delimiter and remove it from responses
 - AI Assistant: Remove page content from prompt
+- AI Extension: disable the AI toolbar button when the block doesn't have content
 - AI Extension: dispatch action to update extended block attributes
 - AI Extension: Do not extend core blocks when the user decided to hide the AI Assistant block.
 - AI Extension: extend core list item core block
