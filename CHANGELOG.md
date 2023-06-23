@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - AU Extension: do not extend block sidebar
 - Blocks: remove retired Revue Block.
 - enhancement Add Email Preview Feature
+- Share buttons: Add a Nextdoor sharing button
 
 ### Improved compatibility
 - Blocks: introduce standardized messaging system to display notices when a block is no longer supported on a site.
