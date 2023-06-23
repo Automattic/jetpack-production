@@ -23,7 +23,11 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: reorganize prompt items for the AI extension
 - AI Extension: tweak the tone prompt
 - AU Extension: do not extend block sidebar
+- Blocks: remove retired Revue Block.
 - enhancement Add Email Preview Feature
+
+### Improved compatibility
+- Blocks: introduce standardized messaging system to display notices when a block is no longer supported on a site.
 
 ### Bug fixes
 - AI Assistant: Close event stream of completions when the block gets deleted.
