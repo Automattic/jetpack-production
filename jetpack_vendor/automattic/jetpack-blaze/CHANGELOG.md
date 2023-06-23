@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Ensure we use the translated post type name in Post-publish prompt.
+
 ## [0.6.0] - 2023-06-19
 ### Fixed
 - Removed the extra margin in the Blaze panel [#31411]
