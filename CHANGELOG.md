@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: populate the prompt with previous messages
 - AI Extension: reorganize prompt items for the AI extension
 - AI Extension: tweak the tone prompt
+- AI Extension: winking toolbar color when requesting
 - AU Extension: do not extend block sidebar
 - Blocks: remove retired Revue Block.
 - enhancement Add Email Preview Feature
