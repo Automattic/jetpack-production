@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- CPT Exclusion: do not sync Jetpack Inspect Log entries.
+
 ### Fixed
 - Initialize dedicated hook endpoint earlier in the 'init' hook to avoid cookie conflicts.
 
