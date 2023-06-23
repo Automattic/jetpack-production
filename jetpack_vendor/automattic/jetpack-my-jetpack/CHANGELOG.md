@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - My Jetpack: add Stats product
+- Stats: add stats card to my jetpack
 
 ### Changed
 - Updated package dependencies.
