@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add new Blaze Dashboard menu item.
+- Add new endpoints to access general Blaze site information via the API.
 
 ### Changed
 - Updated package dependencies.
