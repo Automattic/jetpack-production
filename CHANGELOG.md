@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Fix empty content on P2
 - AI Extension: extend the block when the edit post store is undefined (P2)
 - Fixed an issue which was preventing the Customize menu from appearing for plugins that still require it to be present
+- Fix Visibility misalignment
 - Properly gate newsletters based on the correct subscription product
 - Social Review Prompt: Fix the state so it is shown when Jetpack is also active
 
