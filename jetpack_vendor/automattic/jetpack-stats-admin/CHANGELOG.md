@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Stats Admin: add subscribers endpoints
 
+### Removed
+- Stats: removed notices from initial state for better performance
+
 ## 0.10.0 - 2023-06-19
 ### Added
 - Add new dependency: Jetpack Plans package. [#31213]
