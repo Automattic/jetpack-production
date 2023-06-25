@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.15.0-alpha] - unreleased
+## [3.0.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add authentication to zendesk chat
 - My Jetpack: add Stats product
 - Stats: add stats card to my jetpack
 
@@ -912,7 +913,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[2.15.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.3...2.15.0-alpha
+[3.0.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.3...3.0.0-alpha
 [2.14.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.2...2.14.3
 [2.14.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.1...2.14.2
 [2.14.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.0...2.14.1

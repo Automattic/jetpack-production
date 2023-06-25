@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add authentication to zendesk chat widget
 - AI Assistant: Add a specific delimiter for content in the prompts
 - AI Assistant: add transform from core to AI Assistant block
 - AI Assistant: Change delimiter and remove it from responses
