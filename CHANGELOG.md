@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Close event stream of completions when the block gets deleted.
 - AI Assistant: Fix empty content on P2
 - AI Extension: extend the block when the edit post store is undefined (P2)
+- AI Extension: Use ID on error notices to prevent stacking multiple notices.
 - Fixed an issue which was preventing the Customize menu from appearing for plugins that still require it to be present
 - Fix Visibility misalignment
 - Properly gate newsletters based on the correct subscription product
