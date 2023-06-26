@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Social Review Prompt: Fix the state so it is shown when Jetpack is also active
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added a new callable to a list of default callables.
 - Connection banner: update visual used.
 - dependency update
 - Tests for newsletter loop
