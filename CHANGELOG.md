@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Handle errors from extended blocks actions.
 - AI Extension: handle multiple blocks editing
 - AI Extension: improve block transform process
+- AI Extension: improve block transform process for Heading core block type
 - AI Extension: improve prompt when using the AI Assistant in extended blocks
 - AI Extension: iterate over prompt to try to keep the lang of the content
 - AI Extension: iterate over spelling and grammar prompt item
