@@ -11,11 +11,14 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add authentication to zendesk chat
-- My Jetpack: add Stats product
 - Stats: add stats card to my jetpack
 
+## [2.15.0] - 2023-06-23
+### Added
+- My Jetpack: add Stats product [#31368]
+
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#31468]
 
 ## [2.14.3] - 2023-06-12
 ### Added
@@ -913,7 +916,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[3.0.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.3...3.0.0-alpha
+[3.0.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.15.0...3.0.0-alpha
+[2.15.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.3...2.15.0
 [2.14.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.2...2.14.3
 [2.14.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.1...2.14.2
 [2.14.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.0...2.14.1
