@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add authentication to zendesk chat
+- Added Jetpack Stats card to My Jetpack
 - Stats: add stats card to my jetpack
 
 ## [2.15.0] - 2023-06-23
