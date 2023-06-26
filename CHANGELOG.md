@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection banner: update visual used.
 - dependency update
 - Tests for newsletter loop
+- Tock Block: avoid PHP warning when restaurant name isn't set.
 - Updated package dependencies.
 
 ## 12.3-a.7 - 2023-06-19
