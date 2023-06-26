@@ -22,7 +22,7 @@
 		"automattic/jetpack-boost-speed-score": "^0.2.0",
 		"automattic/jetpack-compat": "^1.7.6",
 		"automattic/jetpack-composer-plugin": "^1.1.11",
-		"automattic/jetpack-config": "^1.15.2",
+		"automattic/jetpack-config": "^1.15.3-alpha",
 		"automattic/jetpack-connection": "^1.53.1",
 		"automattic/jetpack-constants": "^1.6.22",
 		"automattic/jetpack-device-detection": "^1.4.26",

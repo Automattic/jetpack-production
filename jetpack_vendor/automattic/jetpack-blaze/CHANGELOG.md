@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add new endpoints to access general Blaze site information via the API.
 
 ### Changed
+- Blaze can now be loaded as a module, instead of relying on the Config package.
 - Updated package dependencies.
 
 ### Fixed
