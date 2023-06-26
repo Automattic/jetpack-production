@@ -2,62 +2,59 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.3-a.8 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 12.3-beta - 2023-06-26
 ### Enhancements
-- Add authentication to zendesk chat widget
-- AI Assistant: Add a specific delimiter for content in the prompts
-- AI Assistant: add transform from core to AI Assistant block
-- AI Assistant: Change delimiter and remove it from responses
-- AI Assistant: Disable toolbar tooltip when streaming suggestion
-- AI Assistant: Remove page content from prompt
-- AI Extension: add ask to assistant menu option
-- AI Extension: disable the AI toolbar button when the block doesn't have content
-- AI Extension: dispatch action to update extended block attributes
-- AI Extension: Do not extend core blocks when the user decided to hide the AI Assistant block.
-- AI Extension: extend core list item core block
-- AI Extension: Handle errors from extended blocks actions.
-- AI Extension: handle multiple blocks editing
-- AI Extension: improve block transform process
-- AI Extension: improve block transform process for Heading core block type
-- AI Extension: improve prompt when using the AI Assistant in extended blocks
-- AI Extension: iterate over prompt to try to keep the lang of the content
-- AI Extension: iterate over spelling and grammar prompt item
-- AI extension: move feature from beta to production
-- AI Extension: populate the prompt with previous messages
-- AI Extension: reorganize prompt items for the AI extension
-- AI Extension: tweak the tone prompt
-- AI Extension: winking toolbar color when requesting
-- AU Extension: do not extend block sidebar
-- Blocks: remove retired Revue Block.
-- enhancement Add Email Preview Feature
-- Share buttons: Add a Nextdoor sharing button
+- AI Assistant: add a specific delimiter for content in the prompts. [#31515]
+- AI Assistant: add transform from core to AI Assistant block. [#31442]
+- AI Assistant: change delimiter and remove it from responses. [#31518]
+- AI Assistant: disable toolbar tooltip when streaming suggestion. [#31581]
+- AI Assistant: remove page content from prompt. [#31465]
+- AI Extension: add ask assistant menu option. [#31568]
+- AI Extension: disable the AI toolbar button when the block doesn't have content. [#31559]
+- AI Extension: dispatch action to update extended block attributes. [#31437]
+- AI Extension: do not extend core blocks when the user decided to hide the AI Assistant block. [#31557]
+- AI Extension: extend core list item core block. [#31496]
+- AI Extension: handle errors from extended blocks actions. [#31497]
+- AI Extension: handle multiple blocks editing. [#31491]
+- AI Extension: improve block transform process for Heading core block type. [#31571]
+- AI Extension: improve block transform process. [#31481]
+- AI Extension: improve prompt when using the AI Assistant in extended blocks. [#31449]
+- AI Extension: iterate over prompt to try to keep the lang of the content. [#31482]
+- AI Extension: iterate over spelling and grammar prompt item. [#31509]
+- AI Extension: move feature from beta to production. [#31574]
+- AI Extension: populate the prompt with previous messages. [#31470]
+- AI Extension: reorganize prompt items for the AI extension. [#31514]
+- AI Extension: tweak the tone prompt. [#31466]
+- AI Extension: winking toolbar color when requesting. [#31474]
+- AI Extension: do not extend block sidebar. [#31476]
+- Blocks: remove retired Revue Block. [#31463]
+- Newsletters: add an Email Preview feature. [#31021]
+- Sharing Buttons: add a Nextdoor sharing button. [#31537]
 
 ### Improved compatibility
-- Blocks: introduce standardized messaging system to display notices when a block is no longer supported on a site.
+- Blocks: introduce standardized messaging system to display notices when a block is no longer supported on a site. [#31463]
 
 ### Bug fixes
-- AI Assistant: Close event stream of completions when the block gets deleted.
-- AI Assistant: Fix empty content on P2
-- AI Extension: extend the block when the edit post store is undefined (P2)
-- AI Extension: Use ID on error notices to prevent stacking multiple notices.
-- Fixed an issue which was preventing the Customize menu from appearing for plugins that still require it to be present
-- Fix Visibility misalignment
-- Properly gate newsletters based on the correct subscription product
-- Social Review Prompt: Fix the state so it is shown when Jetpack is also active
+- AI Assistant: close event stream of completions when the block gets deleted. [#31447]
+- AI Assistant: fix empty content on P2. [#31561]
+- AI Extension: extend the block when the edit post store is undefined (P2). [#31563]
+- AI Extension: use ID on error notices to prevent stacking multiple notices. [#31584]
+- Customizer: fix an issue which was preventing the Customize menu from appearing for plugins that still require it to be present. [#31452]
+- Newsletters: properly gate newsletters based on the correct subscription product. [#31450]
+- Social Review Prompt: fix the state so it is shown when Jetpack is also active. [#31456]
+- Subscriptions: fix visibility misalignment. [#31544]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added a new callable to a list of default callables.
-- Add tracks to email preview feature
-- AI Assistant: Replace imported store constants with strings
-- Blaze: introduce module, instead of automatically initializing the feature.
-- Connection banner: update visual used.
-- dependency update
-- Tests for newsletter loop
-- Tock Block: avoid PHP warning when restaurant name isn't set.
+- AI Assistant: replace imported store constants with strings. [#31585]
+- Blaze: introduce module, instead of automatically initializing the feature. [#31479]
+- Connection: update visual used in banner. [#31440]
+- Dependency update. [#31394]
+- General: added a new callable to a list of default callables. [#31333]
+- Newsletters: add tests for newsletter loop. [#31483]
+- Newsletters: add tracks to email preview feature. [#31566]
+- Tock Block: avoid PHP warning when restaurant name isn't set. [#31577]
 - Updated package dependencies.
+- Zendesk Chat Widget: add authentication to the widget. [#31339]
 
 ## 12.3-a.7 - 2023-06-19
 ### Enhancements

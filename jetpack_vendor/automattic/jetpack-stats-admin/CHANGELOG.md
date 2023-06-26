@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.11.0-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 0.11.0 - 2023-06-26
 ### Added
-- Stats Admin: add subscribers endpoints
+- Stats Admin: add subscribers endpoints. [#31394]
 
 ### Removed
-- Stats: removed notices from initial state for better performance
+- Stats: removed notices from initial state for better performance. [#31475]
 
 ### Fixed
-- Stats Admin: fix user capatibilities data especially for view_stats
+- Stats Admin: fix user capabilities data especially for view_stats. [#31448]
 
 ## 0.10.0 - 2023-06-19
 ### Added
