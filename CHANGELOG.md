@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added a new callable to a list of default callables.
 - Add tracks to email preview feature
+- AI Assistant: Replace imported store constants with strings
 - Blaze: introduce module, instead of automatically initializing the feature.
 - Connection banner: update visual used.
 - dependency update
