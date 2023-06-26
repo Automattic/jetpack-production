@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add a specific delimiter for content in the prompts
 - AI Assistant: add transform from core to AI Assistant block
 - AI Assistant: Change delimiter and remove it from responses
+- AI Assistant: Disable toolbar tooltip when streaming suggestion
 - AI Assistant: Remove page content from prompt
 - AI Extension: add ask to assistant menu option
 - AI Extension: disable the AI toolbar button when the block doesn't have content
