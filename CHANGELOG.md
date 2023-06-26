@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: improve prompt when using the AI Assistant in extended blocks
 - AI Extension: iterate over prompt to try to keep the lang of the content
 - AI Extension: iterate over spelling and grammar prompt item
+- AI extension: move feature from beta to production
 - AI Extension: populate the prompt with previous messages
 - AI Extension: reorganize prompt items for the AI extension
 - AI Extension: tweak the tone prompt
