@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.7.1] - 2023-06-27
 ### Fixed
-- Avoid errors when the post type label is not defined.
+- Avoid errors when the post type label is not defined. [#31595]
 
 ## [0.7.0] - 2023-06-26
 ### Added
@@ -153,7 +150,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.7.1-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.7.0...v0.7.1-alpha
+[0.7.1]: https://github.com/automattic/jetpack-blaze/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/automattic/jetpack-blaze/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/automattic/jetpack-blaze/compare/v0.5.14...v0.6.0
 [0.5.14]: https://github.com/automattic/jetpack-blaze/compare/v0.5.13...v0.5.14
