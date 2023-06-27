@@ -83,9 +83,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-blaze' => array(
-            'pretty_version' => 'v0.7.0',
-            'version' => '0.7.0.0',
-            'reference' => '7502c83f4206647214e3d331383c54ddacbbcd80',
+            'pretty_version' => 'v0.7.1',
+            'version' => '0.7.1.0',
+            'reference' => '4341cffbcdb65acf620316f8ab84db33f5dce848',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-blaze',
             'aliases' => array(),

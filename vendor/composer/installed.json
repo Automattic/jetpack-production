@@ -409,17 +409,17 @@
         },
         {
             "name": "automattic/jetpack-blaze",
-            "version": "v0.7.0",
-            "version_normalized": "0.7.0.0",
+            "version": "v0.7.1",
+            "version_normalized": "0.7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-blaze.git",
-                "reference": "7502c83f4206647214e3d331383c54ddacbbcd80"
+                "reference": "4341cffbcdb65acf620316f8ab84db33f5dce848"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-blaze/zipball/7502c83f4206647214e3d331383c54ddacbbcd80",
-                "reference": "7502c83f4206647214e3d331383c54ddacbbcd80",
+                "url": "https://api.github.com/repos/Automattic/jetpack-blaze/zipball/4341cffbcdb65acf620316f8ab84db33f5dce848",
+                "reference": "4341cffbcdb65acf620316f8ab84db33f5dce848",
                 "shasum": ""
             },
             "require": {
@@ -438,7 +438,7 @@
             "suggest": {
                 "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
             },
-            "time": "2023-06-26T22:27:17+00:00",
+            "time": "2023-06-27T15:31:04+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -466,7 +466,7 @@
             ],
             "description": "Attract high-quality traffic to your site using Blaze.",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-blaze/tree/v0.7.0"
+                "source": "https://github.com/Automattic/jetpack-blaze/tree/v0.7.1"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-blaze"
         },
