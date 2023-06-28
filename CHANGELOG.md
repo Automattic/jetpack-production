@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: Keep original content if try again from transform block
 
+### Bug fixes
+- Search: when using a block theme, display a link to add a Search Block instead of a Search Widget in the Jetpack dashboard.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Upudate to-test.md for 12.3
 
