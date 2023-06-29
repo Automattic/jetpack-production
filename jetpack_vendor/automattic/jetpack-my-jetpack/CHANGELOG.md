@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added Jetpack Stats card to My Jetpack
 
+### Changed
+- Jetpack Stats: Enable skipping interstitial page
+
 ## [3.0.0] - 2023-06-26
 ### Added
 - Add authentication to Zendesk chat. [#31339]
