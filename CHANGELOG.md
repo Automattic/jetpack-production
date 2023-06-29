@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fix Jetpack footer accessibility issues
 - Search: when using a block theme, display a link to add a Search Block instead of a Search Widget in the Jetpack dashboard.
+- Subscriptions: avoid Fatal Error when site is connected to WordPress.com, but user is not.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update wording for Custom CSS section when using a Block theme.
