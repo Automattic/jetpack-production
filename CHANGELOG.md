@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: Keep original content if try again from transform block
 - Custom CSS: display a notice to recommend the use of Global Styles when you use a Block theme on your site.
+- Persist block markup and ensure it is rendered in the footer
 - Subscribers page: add subscribers page to menu
 
 ### Bug fixes
