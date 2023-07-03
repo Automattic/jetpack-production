@@ -168,7 +168,6 @@
 							! $( this ).hasClass( 'preview-mastodon' ) &&
 							! $( this ).hasClass( 'preview-nextdoor' ) &&
 							! $( this ).hasClass( 'preview-print' ) &&
-							! $( this ).hasClass( 'preview-reddit' ) &&
 							! $( this ).hasClass( 'preview-telegram' ) &&
 							! $( this ).hasClass( 'preview-jetpack-whatsapp' ) &&
 							! $( this ).hasClass( 'share-custom' ) &&
