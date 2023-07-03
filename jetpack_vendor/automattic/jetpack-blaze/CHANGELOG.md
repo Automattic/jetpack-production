@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Change Dashboard: Change to return connected user information to use for analytics
+- Updated package dependencies.
 
 ### Fixed
 - Fixes missing controller for DSP blaze/posts request

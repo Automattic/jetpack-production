@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Jetpack Stats: Enable skipping interstitial page
+- Updated package dependencies.
 
 ### Fixed
 - Organize product cards in list
