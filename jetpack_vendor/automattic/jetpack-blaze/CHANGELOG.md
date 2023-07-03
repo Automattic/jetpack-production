@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Change Dashboard: Change to return connected user information to use for analytics
 
+### Fixed
+- Fixes missing controller for DSP blaze/posts request
+
 ## [0.7.1] - 2023-06-27
 ### Fixed
 - Avoid errors when the post type label is not defined. [#31595]
