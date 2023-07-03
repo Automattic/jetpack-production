@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Jetpack Stats: Enable skipping interstitial page
 
+### Fixed
+- Organize product cards in list
+
 ## [3.0.0] - 2023-06-26
 ### Added
 - Add authentication to Zendesk chat. [#31339]
