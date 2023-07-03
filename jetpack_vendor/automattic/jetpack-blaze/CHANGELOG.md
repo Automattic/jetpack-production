@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Change Dashboard: Change to return connected user information to use for analytics
+- Dashboard Menu: change priority.
 - Updated package dependencies.
 
 ### Fixed
