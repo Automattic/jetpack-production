@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Remove the default title ("You got a new response!") added to emails sent for new feedback received.
+
 ## [0.19.5] - 2023-06-26
 ### Changed
 - Updated package dependencies.
