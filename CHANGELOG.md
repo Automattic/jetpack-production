@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update wording for Custom CSS section when using a Block theme.
+- Sync wpcom_site_setup site option
 - Upudate to-test.md for 12.3
 - WordPress.com Toolbar: only add Blaze Dashboard link once.
 
