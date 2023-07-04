@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Sync wpcom_site_setup site option
 
+### Changed
+- Revert dedicated hook endpoint to later in the 'init' hook, as it broke existing code that registers post statuses and such during 'init'.
+
 ## [1.50.0] - 2023-06-26
 ### Added
 - Added a new callable to the whitelist for get_loaded_extensions(). [#31333]
