@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: avoid Fatal Error when site is connected to WordPress.com, but user is not.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add wpcom_site_setup property to /sites/{siteId} endpoint
 - Dashboard: update wording for Custom CSS section when using a Block theme.
 - Sync wpcom_site_setup site option
 - Upudate to-test.md for 12.3
