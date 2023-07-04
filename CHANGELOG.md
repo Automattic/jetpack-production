@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Sharing: remove Reddit's Oofficial iFramed sharing button, it is no longer working. Use icon+text sharing button instead.
 - Subscriptions: avoid Fatal Error when site is connected to WordPress.com, but user is not.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
