@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.1.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.1.0] - 2023-07-05
 ### Added
-- Added Jetpack Stats card to My Jetpack
+- Added Jetpack Stats card to My Jetpack [#31589]
 
 ### Changed
-- Jetpack Stats: Enable skipping interstitial page
-- Updated package dependencies.
+- Jetpack Stats: Enable skipping interstitial page [#31629]
+- Updated package dependencies. [#31659]
 
 ### Fixed
-- My Jetpack: hide Stats card for standalone plugins
-- Organize product cards in list
+- My Jetpack: hide Stats card for standalone plugins [#31689]
+- Organize product cards in list [#31606]
 
 ## [3.0.0] - 2023-06-26
 ### Added
@@ -928,7 +925,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[3.1.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.0.0...3.1.0-alpha
+[3.1.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.0.0...3.1.0
 [3.0.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.15.0...3.0.0
 [2.15.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.3...2.15.0
 [2.14.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/2.14.2...2.14.3
