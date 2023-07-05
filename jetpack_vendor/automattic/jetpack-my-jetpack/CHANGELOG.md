@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- My Jetpack: hide Stats card for standalone plugins
 - Organize product cards in list
 
 ## [3.0.0] - 2023-06-26
