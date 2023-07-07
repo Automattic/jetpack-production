@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Sharing: deprecate the Skype sharing button, as Skype ddoes not support those buttons anymore.
+
 ### Bug fixes
 - Fixed users menu item pointing to wp-admin on Atomic sites.
 
