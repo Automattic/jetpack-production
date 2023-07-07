@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fixed users menu item pointing to wp-admin on Atomic sites.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Add playground flag in initial state
+
 ## 12.4-a.1 - 2023-07-05
 ### Enhancements
 - AI Assistant: Keep original content when trying again after transforming a paragraph using the "Ask AI Assistant" button. [#31597]
