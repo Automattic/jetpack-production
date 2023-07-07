@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- AI Assistant: add dev playground panel
+
 ### Improved compatibility
 - Sharing: deprecate the Skype sharing button, as Skype ddoes not support those buttons anymore.
 
