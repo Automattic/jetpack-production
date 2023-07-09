@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: add dev playground panel
 - AI Assistant: Add GPT4 endpoint parameter
 - AI Assistant: Enable custom prompt if provided
+- Akismet: use Akismet logo instead of Jetpack logo in masthead
 
 ### Improved compatibility
 - Sharing: deprecate the Skype sharing button, as Skype ddoes not support those buttons anymore.
