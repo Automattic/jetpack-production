@@ -2,25 +2,26 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.4-a.2 - unreleased
+## 12.4-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 12.4-a.3 - 2023-07-10
 ### Enhancements
-- AI Assistant: add dev playground panel
-- AI Assistant: Add GPT4 endpoint parameter
-- AI Assistant: Enable custom prompt if provided
-- Akismet: use Akismet logo instead of Jetpack logo in masthead
+- AI Assistant: add dev playground panel [#31762]
+- AI Assistant: Add GPT4 endpoint parameter [#31763]
+- AI Assistant: Enable custom prompt if provided [#31764]
+- Akismet: use Akismet logo instead of Jetpack logo in masthead [#31464]
 
 ### Improved compatibility
-- Sharing: deprecate the Skype sharing button, as Skype ddoes not support those buttons anymore.
+- Sharing: deprecate the Skype sharing button, as Skype ddoes not support those buttons anymore. [#31636]
 
 ### Bug fixes
-- AI Assistant: Only append flag if no error
-- Fixed users menu item pointing to wp-admin on Atomic sites.
+- AI Assistant: Only append flag if no error [#31767]
+- Fixed users menu item pointing to wp-admin on Atomic sites. [#31699]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- AI Assistant: Add playground flag in initial state
+- AI Assistant: Add playground flag in initial state [#31757]
 
 ## 12.4-a.1 - 2023-07-05
 ### Enhancements
