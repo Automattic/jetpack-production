@@ -2,25 +2,22 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.4-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 12.4-a.3 - 2023-07-10
 ### Enhancements
-- AI Assistant: add dev playground panel
-- AI Assistant: Add GPT4 endpoint parameter
-- AI Assistant: Enable custom prompt if provided
-- Akismet: use Akismet logo instead of Jetpack logo in masthead
+- AI Assistant: add dev playground panel [#31762]
+- AI Assistant: Add GPT4 endpoint parameter [#31763]
+- AI Assistant: Enable custom prompt if provided [#31764]
+- Akismet: use Akismet logo instead of Jetpack logo in masthead [#31464]
 
 ### Improved compatibility
-- Sharing: deprecate the Skype sharing button, as Skype ddoes not support those buttons anymore.
+- Sharing: deprecate the Skype sharing button, as Skype ddoes not support those buttons anymore. [#31636]
 
 ### Bug fixes
-- AI Assistant: Only append flag if no error
-- Fixed users menu item pointing to wp-admin on Atomic sites.
+- AI Assistant: Only append flag if no error [#31767]
+- Fixed users menu item pointing to wp-admin on Atomic sites. [#31699]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- AI Assistant: Add playground flag in initial state
+- AI Assistant: Add playground flag in initial state [#31757]
 
 ## 12.4-a.1 - 2023-07-05
 ### Enhancements
@@ -8376,7 +8373,6 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 
 - Initial release
 
-[11.6]: https://wp.me/p1moTy-PLI
 [12.3]: https://wp.me/p1moTy-Uk3
 [12.2]: https://wp.me/p1moTy-Tzw
 [12.1]: https://wp.me/p1moTy-TA2
@@ -8384,6 +8380,7 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 [11.9]: https://wp.me/p1moTy-RdX
 [11.8]: https://wp.me/p1moTy-QEM
 [11.7]: https://wp.me/p1moTy-Q9t
+[11.6]: https://wp.me/p1moTy-PLI
 [11.5]: https://wp.me/p1moTy-Ppq
 [11.4]: https://wp.me/p1moTy-O5I
 [11.3]: https://wp.me/p1moTy-M5i
