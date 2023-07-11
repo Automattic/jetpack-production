@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Dashboard: Fixed compatibility with the checkout endpoint
+
 ## [0.8.0] - 2023-07-10
 ### Added
 - Added compatibility to new logs endpoint in DSP [#31694]
