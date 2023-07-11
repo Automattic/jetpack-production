@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- Stats: show stats products in My Plan
+
 ### Enhancements
 - AI Assistant: Add Gutenberg syntax parsing
 - AI Assistant: Extend blocks when upgrade is required
