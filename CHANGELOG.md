@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: fix transform issue when content has formatted text
 - AI Assistant: Introduce `ghostwriter` into AI Assistant block prompt
 
+### Bug fixes
+- AI Assistant: Fix crash when transforming to AI Assistant
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updated package dependencies.
 
