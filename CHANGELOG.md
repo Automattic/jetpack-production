@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: Add Gutenberg syntax parsing
+- AI Assistant: Extend blocks when upgrade is required
 - AI Assistant: fix transform issue when content has formatted text
 - AI Assistant: Introduce `ghostwriter` into AI Assistant block prompt
 
