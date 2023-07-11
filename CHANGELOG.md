@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Makes the testimonials customizer section be shown only if current theme is not a block theme
+- Make the portfolios customizer extension only be shown if current theme is not a block theme
 
 ### Bug fixes
 - AI Assistant: Fix crash when transforming to AI Assistant
