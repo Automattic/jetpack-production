@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Extend blocks when upgrade is required
 - AI Assistant: fix transform issue when content has formatted text
 - AI Assistant: Introduce `ghostwriter` into AI Assistant block prompt
+- AI Extension: fix transform issue when Ask AI Assistant option
 
 ### Improved compatibility
 - Makes the testimonials customizer section be shown only if current theme is not a block theme
