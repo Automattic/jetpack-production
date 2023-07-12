@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Make the Featured content customizer extension only be shown if current theme is not a block theme
 - Make the portfolios customizer extension only be shown if current theme is not a block theme
 - Make the Related Posts customizer extension only be shown if current theme is not a block theme
+- Social Links: Prevent their use in block themes
 
 ### Bug fixes
 - AI Assistant: Fix crash when transforming to AI Assistant
