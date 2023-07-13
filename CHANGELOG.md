@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Introduce `ghostwriter` into AI Assistant block prompt
 - AI Extension: fix transform issue when Ask AI Assistant option
 - AI Extension: transform to AI Assistant block when requesting suggestion
+- Newsletters: Add frontend subscriber modal.
 
 ### Improved compatibility
 - Makes the testimonials customizer section be shown only if current theme is not a block theme
