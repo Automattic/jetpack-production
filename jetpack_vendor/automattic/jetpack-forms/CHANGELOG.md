@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Avoid Fatal errors when exporting fields that were not saved with the correct value.
+
 ## [0.19.6] - 2023-07-05
 ### Changed
 - Remove the default title ("You got a new response!") added to emails sent for new feedback received. [#31667]

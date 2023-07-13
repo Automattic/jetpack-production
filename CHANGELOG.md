@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: Fix crash when transforming to AI Assistant
 - API: Fix PHP warning in list posts endpoint.
+- Contact Form: avoid Fatal errors when exporting form data to CSV.
 - Related Posts: do not display them in emails and outside of WordPress context.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
