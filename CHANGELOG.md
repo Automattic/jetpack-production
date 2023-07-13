@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts: do not display them in emails and outside of WordPress context.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Follow-up fix for Automattic/jetpack/pull/31861
 - Updated package dependencies.
 
 ## 12.4-a.3 - 2023-07-10
