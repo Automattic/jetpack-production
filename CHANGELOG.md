@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI Assistant: Fix crash when transforming to AI Assistant
+- Related Posts: do not display them in emails and outside of WordPress context.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updated package dependencies.
