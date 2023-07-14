@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Introduce `ghostwriter` into AI Assistant block prompt
 - AI Extension: fix transform issue when Ask AI Assistant option
 - AI Extension: transform to AI Assistant block when requesting suggestion
+- Dashboard: add a new "Earn" section to the settings.
 - Jetpack & Jetpack Sync: Added cache check when trying to spawn dedicated sync or update JETPACK__VERSION to avoid additional requests to the DB if external ca
 - Newsletters: Add frontend subscriber modal.
 - Subscriptions: link to new Subscription management page from the Jetpack dashboard.
