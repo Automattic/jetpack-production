@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Avoid Fatal errors when exporting fields that were not saved with the correct value.
+- Fix Forms dropdown required validation
 
 ## [0.19.6] - 2023-07-05
 ### Changed
