@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: fix transform issue when Ask AI Assistant option
 - AI Extension: transform to AI Assistant block when requesting suggestion
 - Newsletters: Add frontend subscriber modal.
+- Subscriptions: link to new Subscription management page from the Jetpack dashboard.
 
 ### Improved compatibility
 - Makes the testimonials customizer section be shown only if current theme is not a block theme
