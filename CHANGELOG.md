@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Display upgrade prompt for Simple and Atomic sites
 - AI Assistant: do not pre-populate inner blocks if Gutenberg syntax is not enabled
 - AI Assistant: Extend blocks when upgrade is required
+- AI Assistant: Extend list block and enhance content parsing
 - AI Assistant: fix transform issue when content has formatted text
 - AI Assistant: Introduce `ghostwriter` into AI Assistant block prompt
 - AI Assistant: Update AI Assistant request to be POST based
