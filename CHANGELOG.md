@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Update AI Assistant request to be POST based
 - AI Extension: fix transform issue when Ask AI Assistant option
 - AI Extension: transform to AI Assistant block when requesting suggestion
+- Akismet: show correct logo for all Jetpack plans that include Akismet
 - Dashboard: add a new "Earn" section to the settings.
 - Jetpack & Jetpack Sync: Added cache check when trying to spawn dedicated sync or update JETPACK__VERSION to avoid additional requests to the DB if external ca
 - Newsletters: Add frontend subscriber modal.
