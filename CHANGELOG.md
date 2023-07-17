@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: transform to AI Assistant block when requesting suggestion
 - Akismet: show correct logo for all Jetpack plans that include Akismet
 - Dashboard: add a new "Earn" section to the settings.
+- Dashboard: update link to configure Related Posts when you use a Block theme on your site.
 - Jetpack & Jetpack Sync: Added cache check when trying to spawn dedicated sync or update JETPACK__VERSION to avoid additional requests to the DB if external ca
 - Newsletters: Add frontend subscriber modal.
 - Social Menu & Social Media Icons: Add support for the Threads service.
