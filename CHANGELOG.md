@@ -2,51 +2,54 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.4-a.4 - unreleased
+## 12.4-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Dashboard: update link to configure Related Posts when you use a Block theme on your site.
+
+## 12.4-a.5 - 2023-07-17
 ### Major Enhancements
-- Stats: show stats products in My Plan
+- Stats: show stats products in My Plan [#31732]
 
 ### Enhancements
-- AI Assistant: Add Gutenberg syntax parsing
-- AI Assistant: Display upgrade prompt for Simple and Atomic sites
-- AI Assistant: do not pre-populate inner blocks if Gutenberg syntax is not enabled
-- AI Assistant: Extend blocks when upgrade is required
-- AI Assistant: Extend list block and enhance content parsing
-- AI Assistant: fix transform issue when content has formatted text
-- AI Assistant: Introduce `ghostwriter` into AI Assistant block prompt
-- AI Assistant: Update AI Assistant request to be POST based
-- AI Extension: fix transform issue when Ask AI Assistant option
-- AI Extension: transform to AI Assistant block when requesting suggestion
-- Akismet: show correct logo for all Jetpack plans that include Akismet
-- Dashboard: add a new "Earn" section to the settings.
-- Dashboard: update link to configure Related Posts when you use a Block theme on your site.
-- Jetpack & Jetpack Sync: Added cache check when trying to spawn dedicated sync or update JETPACK__VERSION to avoid additional requests to the DB if external ca
-- Newsletters: Add frontend subscriber modal.
-- Social Menu & Social Media Icons: Add support for the Threads service.
-- Subscriptions: link to new Subscription management page from the Jetpack dashboard.
-- Top posts widget: added srcset to thumbnails
+- AI Assistant: Add Gutenberg syntax parsing [#31766]
+- AI Assistant: Display upgrade prompt for Simple and Atomic sites [#31643]
+- AI Assistant: do not pre-populate inner blocks if Gutenberg syntax is not enabled [#31822]
+- AI Assistant: Extend blocks when upgrade is required [#31814]
+- AI Assistant: Extend list block and enhance content parsing [#31901]
+- AI Assistant: fix transform issue when content has formatted text [#31790]
+- AI Assistant: Introduce `ghostwriter` into AI Assistant block prompt [#31806]
+- AI Assistant: Update AI Assistant request to be POST based [#31128]
+- AI Extension: fix transform issue when Ask AI Assistant option [#31842]
+- AI Extension: transform to AI Assistant block when requesting suggestion [#31603]
+- Akismet: show correct logo for all Jetpack plans that include Akismet [#31826]
+- Dashboard: add a new "Earn" section to the settings. [#31696]
+- Jetpack & Jetpack Sync: Added cache check when trying to spawn dedicated sync or update JETPACK__VERSION to avoid additional requests to the DB if external ca [#31645]
+- Newsletters: Add frontend subscriber modal. [#31393]
+- Social Menu & Social Media Icons: Add support for the Threads service. [#31873]
+- Subscriptions: link to new Subscription management page from the Jetpack dashboard. [#31720]
+- Top posts widget: added srcset to thumbnails [#31869]
 
 ### Improved compatibility
-- Makes the testimonials customizer section be shown only if current theme is not a block theme
-- Make the Featured content customizer extension only be shown if current theme is not a block theme
-- Make the portfolios customizer extension only be shown if current theme is not a block theme
-- Make the Related Posts customizer extension only be shown if current theme is not a block theme
-- Social Links: Prevent their use in block themes
-- WordPress.com REST API: avoid PHP notice when using PHP 8.2
+- Makes the testimonials customizer section be shown only if current theme is not a block theme [#31730]
+- Make the Featured content customizer extension only be shown if current theme is not a block theme [#31779]
+- Make the portfolios customizer extension only be shown if current theme is not a block theme [#31754]
+- Make the Related Posts customizer extension only be shown if current theme is not a block theme [#31755]
+- Social Links: Prevent their use in block themes [#31838]
+- WordPress.com REST API: avoid PHP notice when using PHP 8.2 [#31909]
 
 ### Bug fixes
-- AI Assistant: Fix crash when transforming to AI Assistant
-- API: Fix PHP warning in list posts endpoint.
-- Contact Form: avoid Fatal errors when exporting form data to CSV.
-- Forms: Fix Forms dropdown required validation
-- Related Posts: do not display them in emails and outside of WordPress context.
+- AI Assistant: Fix crash when transforming to AI Assistant [#31813]
+- API: Fix PHP warning in list posts endpoint. [#31837]
+- Contact Form: avoid Fatal errors when exporting form data to CSV. [#31858]
+- Forms: Fix Forms dropdown required validation [#31894]
+- Related Posts: do not display them in emails and outside of WordPress context. [#31861]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Follow-up fix for Automattic/jetpack/pull/31861
-- Updated package dependencies.
+- Follow-up fix for Automattic/jetpack/pull/31861 [#31871]
+- Updated package dependencies. [#31769]
 
 ## 12.4-a.3 - 2023-07-10
 ### Enhancements
