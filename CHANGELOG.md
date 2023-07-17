@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Dashboard: update link to configure Related Posts when you use a Block theme on your site.
 
+### Improved compatibility
+- General: indicate full compatibility with the latest version of WordPress, 6.3.
+
 ## 12.4-a.5 - 2023-07-17
 ### Enhancements
 - AI Assistant: various improvements to syntax parsing, formatting, and other backend enhancements.
