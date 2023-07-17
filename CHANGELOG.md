@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - General: indicate full compatibility with the latest version of WordPress, 6.3.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated package dependencies.
+
 ## 12.4-a.5 - 2023-07-17
 ### Enhancements
 - AI Assistant: various improvements to syntax parsing, formatting, and other backend enhancements.
