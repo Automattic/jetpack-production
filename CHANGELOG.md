@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: add a new "Earn" section to the settings.
 - Jetpack & Jetpack Sync: Added cache check when trying to spawn dedicated sync or update JETPACK__VERSION to avoid additional requests to the DB if external ca
 - Newsletters: Add frontend subscriber modal.
+- Social Menu & Social Media Icons: Add support for the Threads service.
 - Subscriptions: link to new Subscription management page from the Jetpack dashboard.
 - Top posts widget: added srcset to thumbnails
 
