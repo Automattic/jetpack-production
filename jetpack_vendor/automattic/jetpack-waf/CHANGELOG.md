@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.7-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.11.7] - 2023-07-17
 ### Changed
-- Add support for non-empty server https values.
+- Add support for non-empty server https values. [#31688]
 
 ## [0.11.6] - 2023-05-22
 ### Added
@@ -213,7 +210,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.11.7-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.11.6...v0.11.7-alpha
+[0.11.7]: https://github.com/Automattic/jetpack-waf/compare/v0.11.6...v0.11.7
 [0.11.6]: https://github.com/Automattic/jetpack-waf/compare/v0.11.5...v0.11.6
 [0.11.5]: https://github.com/Automattic/jetpack-waf/compare/v0.11.4...v0.11.5
 [0.11.4]: https://github.com/Automattic/jetpack-waf/compare/v0.11.3...v0.11.4
