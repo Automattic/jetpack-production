@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack & Jetpack Sync: Added cache check when trying to spawn dedicated sync or update JETPACK__VERSION to avoid additional requests to the DB if external ca
 - Newsletters: Add frontend subscriber modal.
 - Subscriptions: link to new Subscription management page from the Jetpack dashboard.
+- Top posts widget: added srcset to thumbnails
 
 ### Improved compatibility
 - Makes the testimonials customizer section be shown only if current theme is not a block theme
