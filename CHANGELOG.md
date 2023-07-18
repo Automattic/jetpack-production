@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Dashboard: update link to configure Related Posts when you use a Block theme on your site.
+- SSites API: add was_migration_trial flag to data returned for site details
 
 ### Improved compatibility
 - General: indicate full compatibility with the latest version of WordPress, 6.3.
