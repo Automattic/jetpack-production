@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.8-alpha] - unreleased
+## [0.12.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add brute force protection access for particular environments that do not support the WAF
 
 ### Fixed
 - Fix some minor issues in Jetpack plugin codebase
@@ -217,7 +220,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.11.8-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.11.7...v0.11.8-alpha
+[0.12.0-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.11.7...v0.12.0-alpha
 [0.11.7]: https://github.com/Automattic/jetpack-waf/compare/v0.11.6...v0.11.7
 [0.11.6]: https://github.com/Automattic/jetpack-waf/compare/v0.11.5...v0.11.6
 [0.11.5]: https://github.com/Automattic/jetpack-waf/compare/v0.11.4...v0.11.5
