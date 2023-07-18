@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - General: indicate full compatibility with the latest version of WordPress, 6.3.
 
+### Bug fixes
+- Sharing: fix icon font display following the addition of the Threads icon.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Transferred 'get_calypso_env()' method from Jetpack class to the Status package.
 - Updated package dependencies.
