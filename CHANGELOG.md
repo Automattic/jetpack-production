@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: improve require upgrade handling when requesting suggestions
 - AI Assistant: use AI Client package to get jwt token
 - Dashboard: update link to configure Related Posts when you use a Block theme on your site.
 - SSites API: add was_migration_trial flag to data returned for site details
