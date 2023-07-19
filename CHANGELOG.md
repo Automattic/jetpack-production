@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: improve require upgrade handling when requesting suggestions
 - AI Assistant: Introduce plugin sidebar
+- AI Assistant: Introduce Proofread component
 - AI Assistant: use AI Client package to get jwt token
 - Dashboard: update link to configure Related Posts when you use a Block theme on your site.
 - Only display the "NL access" column if we have published one paid-newsletter
