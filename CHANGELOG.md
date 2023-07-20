@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: import and use SuggestionsEventSource() from AI Client package
 - AI Assistant: improve require upgrade handling when requesting suggestions
 - AI Assistant: use AI Client package to get jwt token
 - Comments: add filter allowing customizing the heading tag used in comment  treply title.
