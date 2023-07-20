@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Make Jetpack logo in footer smaller
+- My Jetpack: enabled Stats purchase flow returning to Stats Dashboard
 
 ## [3.1.3] - 2023-07-17
 ### Changed
