@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: use AI Client package to get jwt token
 - Comments: add filter allowing customizing the heading tag used in comment  treply title.
 - Dashboard: update link to configure Related Posts when you use a Block theme on your site.
+- Highlight Jetpack Newsletter in recommendations flow
 - Only display the "NL access" column if we have published one paid-newsletter
 - SSites API: add was_migration_trial flag to data returned for site details
 
