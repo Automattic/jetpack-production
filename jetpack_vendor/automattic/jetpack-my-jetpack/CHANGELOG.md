@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: register jetpack-ai-jwt endpoint
 
+### Fixed
+- Make Jetpack logo in footer smaller
+
 ## [3.1.3] - 2023-07-17
 ### Changed
 - Updated package dependencies. [#31872]

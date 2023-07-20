@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Update props passed to JetpackFooter
 
 ## [0.38.1] - 2023-07-17
 ### Changed

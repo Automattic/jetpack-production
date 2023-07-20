@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: only display Earn section in search results when appropriate.
 - Transferred 'get_calypso_env()' method from Jetpack class to the Status package.
 - Updated package dependencies.
+- Update props passed to JetpackFooter
 
 ## 12.4-a.7 - 2023-07-18
 ### Bug fixes
