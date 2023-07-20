@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: only display Earn section in search results when appropriate.
+- Fix some `require` paths to not uselessly call `plugin_basename()`.
 - Fix typo
 - Transferred 'get_calypso_env()' method from Jetpack class to the Status package.
 - Updated package dependencies.
