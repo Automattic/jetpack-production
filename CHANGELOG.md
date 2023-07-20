@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - General: indicate full compatibility with the latest version of WordPress, 6.3.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Dashboard: only display Earn section in search results when appropriate.
 - Transferred 'get_calypso_env()' method from Jetpack class to the Status package.
 - Updated package dependencies.
 
