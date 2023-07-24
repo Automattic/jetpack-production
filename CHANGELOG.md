@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - General: indicate full compatibility with the latest version of WordPress, 6.3.
+- Widget Visibility: add new filter to allow third-parties to add Widget Visibility support to their own blocks.
 
 ### Bug fixes
 - Whitelist jetpack_memberships_site_subscriber post meta to allow for syncing to WordPress.com
