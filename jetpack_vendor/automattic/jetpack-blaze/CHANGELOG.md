@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Enable the new Blaze Dashboard page by default.
+- Updated package dependencies.
 
 ## [0.8.1] - 2023-07-17
 ### Changed
