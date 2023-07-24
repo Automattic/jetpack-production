@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added Pexels integrations to the Media Sidebar of the block editor
 - AI Assistant: import and use askQuestion() from AI Client pkg
 - AI Assistant: import and use SuggestionsEventSource() from AI Client package
 - AI Assistant: improve require upgrade handling when requesting suggestions
