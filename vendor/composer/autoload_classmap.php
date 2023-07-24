@@ -61,6 +61,7 @@ return array(
     'Automattic\\Jetpack\\Connection\\Secrets' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-secrets.php',
     'Automattic\\Jetpack\\Connection\\Server_Sandbox' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-server-sandbox.php',
     'Automattic\\Jetpack\\Connection\\Tokens' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-tokens.php',
+    'Automattic\\Jetpack\\Connection\\Tokens_Locks' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-tokens-locks.php',
     'Automattic\\Jetpack\\Connection\\Urls' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-urls.php',
     'Automattic\\Jetpack\\Connection\\Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-utils.php',
     'Automattic\\Jetpack\\Connection\\Webhooks' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-webhooks.php',
