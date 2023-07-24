@@ -21,7 +21,7 @@
 		"automattic/jetpack-blocks": "^1.4.22",
 		"automattic/jetpack-boost-speed-score": "^0.2.0",
 		"automattic/jetpack-compat": "^1.7.6",
-		"automattic/jetpack-composer-plugin": "^1.1.12-alpha",
+		"automattic/jetpack-composer-plugin": "^1.1.12",
 		"automattic/jetpack-config": "^1.15.3",
 		"automattic/jetpack-connection": "^1.54.1",
 		"automattic/jetpack-constants": "^1.6.22",
