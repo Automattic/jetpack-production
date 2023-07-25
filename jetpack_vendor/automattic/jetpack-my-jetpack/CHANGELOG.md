@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: release Paid Stats to the public
 
 ### Changed
+- My Jetpack: changed Stats features wording
 - Updated package dependencies.
 
 ### Fixed
