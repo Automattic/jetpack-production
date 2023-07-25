@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Widget Visibility: add new filter to allow third-parties to add Widget Visibility support to their own blocks.
 
 ### Bug fixes
+- Payments Block: update link to support documentation
 - Whitelist jetpack_memberships_site_subscriber post meta to allow for syncing to WordPress.com
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
