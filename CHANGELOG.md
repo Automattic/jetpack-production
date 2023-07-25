@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Whitelist jetpack_memberships_site_subscriber post meta to allow for syncing to WordPress.com
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added a "to test" draft for Jetpack 12.4.
 - Dashboard: only display Earn section in search results when appropriate.
 - Fix some `require` paths to not uselessly call `plugin_basename()`.
 - Fix typo
