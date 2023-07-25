@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.19.8-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.19.8] - 2023-07-25
 ### Changed
-- Updated package dependencies.
-- Update the name of the Newsletter Sign-up Variation.
+- Updated package dependencies. [#32040]
+- Update the name of the Newsletter Sign-up Variation. [#31998]
 
 ## [0.19.7] - 2023-07-17
 ### Changed
@@ -295,7 +292,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.19.8-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.19.7...v0.19.8-alpha
+[0.19.8]: https://github.com/automattic/jetpack-forms/compare/v0.19.7...v0.19.8
 [0.19.7]: https://github.com/automattic/jetpack-forms/compare/v0.19.6...v0.19.7
 [0.19.6]: https://github.com/automattic/jetpack-forms/compare/v0.19.5...v0.19.6
 [0.19.5]: https://github.com/automattic/jetpack-forms/compare/v0.19.4...v0.19.5

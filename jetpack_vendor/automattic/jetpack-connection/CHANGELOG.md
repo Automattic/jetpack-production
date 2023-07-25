@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.55.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.55.0] - 2023-07-25
 ### Added
-- Connection: lock tokens to prevent IDC during AIOWPM export.
+- Connection: lock tokens to prevent IDC during AIOWPM export. [#31883]
 
 ## [1.54.1] - 2023-07-18
 ### Fixed
@@ -852,7 +849,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[1.55.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.54.1...v1.55.0-alpha
+[1.55.0]: https://github.com/Automattic/jetpack-connection/compare/v1.54.1...v1.55.0
 [1.54.1]: https://github.com/Automattic/jetpack-connection/compare/v1.54.0...v1.54.1
 [1.54.0]: https://github.com/Automattic/jetpack-connection/compare/v1.53.3...v1.54.0
 [1.53.3]: https://github.com/Automattic/jetpack-connection/compare/v1.53.2...v1.53.3
