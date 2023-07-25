@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Added Google Photos integration to Gutenberg's Media Sidebar for Jetpack connected sites.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added things to the to-test file to amend for the latest release.
 
