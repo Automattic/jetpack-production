@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added Google Photos integration to Gutenberg's Media Sidebar for Jetpack connected sites.
 - Display the default Stripe currency in the Donation block on mount and add a "check" icon next to the selected currency in the currency dropdown
+- WooCommerce Analytics events: Introduce 'jetpack_woocommerce_analytics_event_props' filter
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added things to the to-test file to amend for the latest release.
