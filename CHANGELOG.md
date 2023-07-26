@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: remove unused code from AI Extension
 - Display the default Stripe currency in the Donation block on mount and add a "check" icon next to the selected currency in the currency dropdown
 - Related posts block: add srcset to thumbnails
+- Update SEO tools textarea in editor plugin container to be 100% wide
 - WooCommerce Analytics events: Introduce 'jetpack_woocommerce_analytics_event_props' filter
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
