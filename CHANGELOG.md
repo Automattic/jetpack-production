@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Make the likes and sharing buttons controls in the Jetpack sidebar be toggles
 - Related posts block: add srcset to thumbnails
 - Subcribe modal: add conditions for display.
+- Subscriptions: Remove subscribe modal feature flag.
 - Update SEO hide page control from checkbox to toggle
 - Update SEO tools textarea in editor plugin container to be 100% wide
 - WooCommerce Analytics events: Introduce 'jetpack_woocommerce_analytics_event_props' filter
