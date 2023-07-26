@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added things to the to-test file to amend for the latest release.
+- Remove feature flag for subscriptions newsletter.
 
 ## 12.4-beta - 2023-07-25
 ### Enhancements
