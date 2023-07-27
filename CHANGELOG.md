@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added Google Photos integration to Gutenberg's Media Sidebar for Jetpack connected sites.
 - Add Paywall block scaffold
+- AI Assistance plugin: do not pass postId to suggestions hook. It isn't required.
 - AI Assistant: remove unused code from AI Extension
 - AI Assistant: use AI Client suggestion hook. Clean the internal hook.
 - Display the default Stripe currency in the Donation block on mount and add a "check" icon next to the selected currency in the currency dropdown
