@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: handle uploading video files when dropping in the editor canvas
 
+### Removed
+- VideoPress: Remove HTML support
+
 ## [0.14.11] - 2023-07-25
 ### Changed
 - Updated package dependencies. [#31923]
