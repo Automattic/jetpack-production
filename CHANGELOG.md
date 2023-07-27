@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Display the default Stripe currency in the Donation block on mount and add a "check" icon next to the selected currency in the currency dropdown
 - Make the likes and sharing buttons controls in the Jetpack sidebar be toggles
 - Related posts block: add srcset to thumbnails
+- Social: Added upsell links in the sharing section of the Jetpack plugin.
 - Subcribe modal: add conditions for display.
 - Subscriptions: Remove subscribe modal feature flag.
 - update paywall block styles
