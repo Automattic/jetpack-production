@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Added upsell links in the sharing section of the Jetpack plugin.
 - Subcribe modal: add conditions for display.
 - Subscriptions: Remove subscribe modal feature flag.
+- The media inserter Google Photos service is now aware of the connection status of the service
 - update paywall block styles
 - Update SEO hide page control from checkbox to toggle
 - Update SEO tools textarea in editor plugin container to be 100% wide
