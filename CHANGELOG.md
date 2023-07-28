@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added Google Photos integration to Gutenberg's Media Sidebar for Jetpack connected sites.
 - Added track events to monitor which media sources get inserted through the Media Inserter
 - Add Paywall block scaffold
+- Add paywall logic to newsletters
 - AI Assistance plugin: do not pass postId to suggestions hook. It isn't required.
 - AI Assistant: Disable feedback button if empty post
 - AI Assistant: remove unused code from AI Extension
