@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - update paywall block styles
 - Update SEO hide page control from checkbox to toggle
 - Update SEO tools textarea in editor plugin container to be 100% wide
+- We hide the search input for the Google Photos Sidebar Media integration since it is not searchable
 - WooCommerce Analytics events: Introduce 'jetpack_woocommerce_analytics_event_props' filter
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
