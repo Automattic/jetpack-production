@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add support for a custom database table for Sync Queue.
 - Extract Sync Queue storage handling to an external class to prepare for Custom Table migration
 - Sync: Add feature flag for enabling custom queue table.
 

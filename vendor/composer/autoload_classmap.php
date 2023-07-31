@@ -264,6 +264,7 @@ return array(
     'Automattic\\Jetpack\\Sync\\Package_Version' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-package-version.php',
     'Automattic\\Jetpack\\Sync\\Queue' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-queue.php',
     'Automattic\\Jetpack\\Sync\\Queue\\Queue_Storage_Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/sync-queue/class-queue-storage-options.php',
+    'Automattic\\Jetpack\\Sync\\Queue\\Queue_Storage_Table' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/sync-queue/class-queue-storage-table.php',
     'Automattic\\Jetpack\\Sync\\Queue_Buffer' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-queue-buffer.php',
     'Automattic\\Jetpack\\Sync\\REST_Endpoints' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-rest-endpoints.php',
     'Automattic\\Jetpack\\Sync\\REST_Sender' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-rest-sender.php',
