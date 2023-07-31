@@ -30,6 +30,9 @@ This is an alpha version! The changes listed here are not final.
 - We hide the search input for the Google Photos Sidebar Media integration since it is not searchable
 - WooCommerce Analytics events: Introduce 'jetpack_woocommerce_analytics_event_props' filter
 
+### Bug fixes
+- Fix tab switching by adding a value handler for the Amount component.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added things to the to-test file to amend for the latest release.
 - Blaze: add missing Advertising menu in Calypso, for self-hosted sites.
