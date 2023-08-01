@@ -37,7 +37,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Dashboard: do not allow toggling the Subscriptions feature on or off when the user is not connected.
-- Ficx issue with Paid-content block on self-hosted env by enabling sub-blocks
 - Fix tab switching by adding a value handler for the Amount component.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
