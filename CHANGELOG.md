@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Ficx issue with Paid-content block on self-hosted env by enabling sub-blocks
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added things to the to-test file to amend for the latest release.
 - Blaze: add missing Advertising menu in Calypso, for self-hosted sites.
