@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Paywall block scaffold
 - Add paywall logic to newsletters
 - AI Assistance plugin: do not pass postId to suggestions hook. It isn't required.
+- AI Assistant: Add custom form prompt
 - AI Assistant: Disable feedback button if empty post
 - AI Assistant: remove unused code from AI Extension
 - AI Assistant: use AI Client suggestion hook. Clean the internal hook.
