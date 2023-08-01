@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - WooCommerce Analytics events: Introduce 'jetpack_woocommerce_analytics_event_props' filter
 
 ### Bug fixes
+- Dashboard: do not allow toggling the Subscriptions feature on or off when the user is not connected.
 - Fix tab switching by adding a value handler for the Amount component.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
