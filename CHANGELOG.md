@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: remove unused code from AI Extension
 - AI Assistant: use AI Client suggestion hook. Clean the internal hook.
 - Display the default Stripe currency in the Donation block on mount and add a "check" icon next to the selected currency in the currency dropdown
+- Jetpack AI: Add support for different limits of free requests and different upgrade prompts.
 - Make the likes and sharing buttons controls in the Jetpack sidebar be toggles
 - Paywall block: limit to post level, add icon
 - Performance settings: update position in wpcom menu
