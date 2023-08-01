@@ -148,7 +148,7 @@ class Jetpack_WooCommerce_Analytics_Universal {
 		 *
 		 * @module woocommerce-analytics
 		 *
-		 * @since 12.5-a.0
+		 * @since 12.5
 		 *
 		 * @param array $all_props Array of event props to be filtered.
 		 */
