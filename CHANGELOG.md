@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: import Icons from AI Client pkg
 - AI Assistant: Register ai-assistant-form-support beta flag to control the form extension we are working on.
 - AI Assistant: remove unused code from AI Extension
+- AI Assistant: show/hide assistant container for Jetpack Form block
 - AI Assistant: use AI Client suggestion hook. Clean the internal hook.
 - AI Extension: introduce UI Handler context for the Jetpack Form AI Assistant feature
 - AI Extension: start to extend Jetpack From block
