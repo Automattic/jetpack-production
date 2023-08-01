@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistance plugin: do not pass postId to suggestions hook. It isn't required.
 - AI Assistant: Add custom form prompt
 - AI Assistant: Disable feedback button if empty post
+- AI Assistant: import Icons from AI Client pkg
 - AI Assistant: Register ai-assistant-form-support beta flag to control the form extension we are working on.
 - AI Assistant: remove unused code from AI Extension
 - AI Assistant: use AI Client suggestion hook. Clean the internal hook.
