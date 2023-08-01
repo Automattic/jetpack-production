@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add transient caching for zendesk jwt auth token
+
 ### Changed
 - My Jetpack: Rename the namespace of the JWT endpoint, and register it only when it isn't already registered
 
