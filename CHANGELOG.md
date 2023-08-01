@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Register ai-assistant-form-support beta flag to control the form extension we are working on.
 - AI Assistant: remove unused code from AI Extension
 - AI Assistant: use AI Client suggestion hook. Clean the internal hook.
+- AI Extension: start to extend Jetpack From block
 - Display the default Stripe currency in the Donation block on mount and add a "check" icon next to the selected currency in the currency dropdown
 - Jetpack AI: Add support for different limits of free requests and different upgrade prompts.
 - Make the likes and sharing buttons controls in the Jetpack sidebar be toggles
@@ -36,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Dashboard: do not allow toggling the Subscriptions feature on or off when the user is not connected.
+- Ficx issue with Paid-content block on self-hosted env by enabling sub-blocks
 - Fix tab switching by adding a value handler for the Amount component.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
