@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.14.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.14.12] - 2023-08-01
 ### Added
-- VideoPress: handle uploading video files when dropping in the editor canvas
+- VideoPress: handle uploading video files when dropping in the editor canvas. [#32084]
 
 ### Removed
-- VideoPress: Remove HTML support
+- VideoPress: Remove HTML support. [#32123]
 
 ## [0.14.11] - 2023-07-25
 ### Changed
@@ -1073,7 +1070,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.14.12-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.14.11...v0.14.12-alpha
+[0.14.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.14.11...v0.14.12
 [0.14.11]: https://github.com/Automattic/jetpack-videopress/compare/v0.14.10...v0.14.11
 [0.14.10]: https://github.com/Automattic/jetpack-videopress/compare/v0.14.9...v0.14.10
 [0.14.9]: https://github.com/Automattic/jetpack-videopress/compare/v0.14.8...v0.14.9
