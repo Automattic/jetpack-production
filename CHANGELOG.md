@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Connect AI Data context with components
 - AI Extension: relocate the Assistant component for the Jetpack From block
 - AI Extension: select Form when selecting child block
+- Newsletters: update the appearance of "subscribers only" and "paid subscribers only" content wall
 
 ## 12.5-a.1 - 2023-08-01
 ### Enhancements
