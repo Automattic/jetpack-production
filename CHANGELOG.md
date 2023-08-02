@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added SIG modal ui
 - AI Assistant: Render response from the AI
+- AI Extension: Connect AI Control component on popover placement.
 - AI Extension: Connect AI Data context with components
 - AI Extension: relocate the Assistant component for the Jetpack From block
 - AI Extension: select Form when selecting child block
