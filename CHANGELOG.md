@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: Render response from the AI
 - AI Extension: Connect AI Data context with components
 
 ## 12.5-a.1 - 2023-08-01
