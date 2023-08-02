@@ -59,7 +59,7 @@ This is an alpha version! The changes listed here are not final.
 - We hide the search input for the Google Photos Sidebar Media integration since it is not searchable [#32108]
 - WooCommerce Analytics events: Introduce 'jetpack_woocommerce_analytics_event_props' filter [#32052]
 
-## 12.4 - 2023-08-01
+## [12.4] - 2023-08-01
 ### Enhancements
 - Added Pexels integrations to the Media Sidebar of the block editor. [#31914]
 - AI Assistant: improved the upgrade prompt logic when requesting suggestions. [#31949]
@@ -74,7 +74,7 @@ This is an alpha version! The changes listed here are not final.
 - General: indicate full compatibility with the latest version of WordPress, 6.3. [#31910]
 
 ### Bug fixes
-- Ficx issue with Paid-content block on self-hosted env by enabling sub-blocks [#32180]
+- Fix issue with Paid-content block on self-hosted env by enabling sub-blocks [#32180]
 - Payments Block: update link to support documentation. [#31986]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
@@ -8512,6 +8512,7 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 - Initial release
 
 [11.6]: https://wp.me/p1moTy-PLI
+[12.4]: https://wp.me/p1moTy-UQY
 [12.3]: https://wp.me/p1moTy-Uk3
 [12.2]: https://wp.me/p1moTy-Tzw
 [12.1]: https://wp.me/p1moTy-TA2
