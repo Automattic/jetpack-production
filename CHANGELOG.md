@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Render response from the AI
 - AI Extension: Connect AI Control component on popover placement.
 - AI Extension: Connect AI Data context with components
+- AI Extension: handle AI assistant component in mobile
 - AI Extension: relocate the Assistant component for the Jetpack From block
 - AI Extension: select Form when selecting child block
 - AI Extension: show a Notice when AI needs to provide feedback
