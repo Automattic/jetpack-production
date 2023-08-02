@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: use assistant to edit Jetpack Format content
 - Newsletters: update the appearance of "subscribers only" and "paid subscribers only" content wall
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Refactored subscriber count data to come from store instead of props.
+
 ## 12.5-a.1 - 2023-08-01
 ### Enhancements
 - AI Assistant: various backend improvements.
