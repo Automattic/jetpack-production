@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added SIG modal ui
+- AI Assistant: Add requirement for one button in forms
 - AI Assistant: Render response from the AI
 - AI Extension: Connect AI Control component on popover placement.
 - AI Extension: Connect AI Data context with components
