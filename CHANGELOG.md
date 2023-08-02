@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Newsletters: update the appearance of "subscribers only" and "paid subscribers only" content wall
 - Subscription modal: adjust modal template markup and styles for easier modification and mobile friendliness.
 
+### Bug fixes
+- AI Extension: Stop handling popover close event to prevent the AI Control from hiding when it loses focus.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Refactored subscriber count data to come from store instead of props.
 
