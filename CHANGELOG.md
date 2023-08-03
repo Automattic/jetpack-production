@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Stop handling popover close event to prevent the AI Control from hiding when it loses focus.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- minor copy change
 - Refactored subscriber count data to come from store instead of props.
 
 ## 12.5-a.1 - 2023-08-01
