@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added SIG modal ui
 - AI Assistant: Add requirement for one button in forms
+- AI Assistant: Auto open AI control in form assistant
 - AI Assistant: Fix form popover after changing viewport
 - AI Assistant: Render response from the AI
 - AI Extension: Connect AI Control component on popover placement.
