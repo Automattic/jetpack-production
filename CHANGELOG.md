@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: stop suggestion when form block is deleted
 - AI Extension: use assistant to edit Jetpack Format content
 - Newsletters: update the appearance of "subscribers only" and "paid subscribers only" content wall
+- paywall dynamic copy
 - Subscription modal: adjust modal template markup and styles for easier modification and mobile friendliness.
 
 ### Bug fixes
