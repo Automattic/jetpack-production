@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added admin-page upsell notice
 - Added new nudge in the editor to upgrade to the Advanced plan. Appears every 3 months
 
 ## [0.32.0] - 2023-08-01
