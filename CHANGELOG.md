@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Connect AI Control component on popover placement.
 - AI Extension: Connect AI Data context with components
 - AI Extension: handle AI assistant component in mobile
+- AI Extension: Improve undo action behavior by controlling the way received valid blocks are rendered.
 - AI Extension: increase the page height when AI Assistant bar is visible
 - AI Extension: relocate the Assistant component for the Jetpack From block
 - AI Extension: select Form when selecting child block
