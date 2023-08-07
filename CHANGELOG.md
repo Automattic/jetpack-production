@@ -2,48 +2,37 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.5-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 12.5-a.3 - 2023-08-07
 ### Enhancements
-- Added SIG modal ui
-- Add Inspector Panel with Newsletter visibility options to Paywall Block
-- AI Assistant: Add requirement for one button in forms
-- AI Assistant: Auto open AI control in form assistant
-- AI Assistant: Fix form popover after changing viewport
-- AI Assistant: Fix incomplete HTML tags and allow columns on forms
-- AI Assistant: Render response from the AI
-- AI Extension: Connect AI Control component on popover placement.
-- AI Extension: Connect AI Data context with components
-- AI Extension: handle AI assistant component in mobile
-- AI Extension: Improve undo action behavior by controlling the way received valid blocks are rendered.
-- AI Extension: increase the page height when AI Assistant bar is visible
-- AI Extension: relocate the Assistant component for the Jetpack From block
-- AI Extension: select Form when selecting child block
-- AI Extension: Send custom feature name for requesting form completions so they can be handled differently on the backend.
-- AI Extension: show AiStatusIndicator into the assistant bar
-- AI Extension: show a Notice when AI needs to provide feedback
-- AI Extension: stop suggestion when form block is deleted
-- AI Extension: Update placeholder copyright
-- AI Extension: use assistant to edit Jetpack Format content
-- AI Plugin: Add track for get feedback feature
-- Better Paywall Block styles
-- Fix small regression on Newsletter panels
-- Jetpack editor extensions: use shared component for the logo.
-- Make 'My Jetpack' the first sub-menu item, above 'Dashboard'.
-- Memberships: Ensure endpoint handles source param
-- Newsletters: update the appearance of "subscribers only" and "paid subscribers only" content wall
-- paywall dynamic copy
-- Subscription modal: adjust modal template markup and styles for easier modification and mobile friendliness.
+- AI Assistant: add requirement for there to be at least one button in forms. [#32234]
+- AI Assistant: various form assistant improvements. [#32271] [#32247] [#32276] [#32194] [#32212] [#32303] [#32241]
+- AI Assistant: render response from the AI [#32209]
+- AI Extension: increase the page height when AI Assistant bar is visible. [#32252]
+- AI Extension: show AiStatusIndicator in the assistant bar. [#32272]
+- AI Extension: show a notice when AI needs to provide feedback. [#32222]
+- AI Extension: use assistant to edit Jetpack Format content. [#32217]
+- Dashboard: make 'My Jetpack' the first sub-menu item, above 'Dashboard'. [#32240]
+- Paywall Block: improve Paywall Block styles. [#32308]
+- Newsletters: add Inspector Panel with Newsletter visibility options to Paywall Block. [#32263]
+- Newsletters: update the appearance of "subscribers only" and "paid subscribers only" content wall. [#31880]
+- Paywall Block: make sure paywall block depend on Newsletter visibility. [#32201]
+- Social: move settings from modal to editor sidebar. [#31665]
+- Subscription modal: adjust modal template markup and styles for easier modification and mobile friendliness. [#32230]
 
 ### Bug fixes
-- AI Extension: Stop handling popover close event to prevent the AI Control from hiding when it loses focus.
-- Social: Fix race condition in mobile app's post request
+- AI Extension: stop handling popover close event to prevent the AI Control from hiding when it loses focus. [#32246]
+- Newsletters: fix small regression on Newsletter panels. [#32270]
+- Social: fix race condition in mobile app's post request. [#32287]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- minor copy change
-- Refactored subscriber count data to come from store instead of props.
+- AI Extension: connect AI Control component on popover placement. [#32210]
+- AI Extension: connect AI Data context with components [#32197]
+- AI Extension: handle AI assistant component in mobile [#32242]
+- AI Extension: improve undo action behavior by controlling the way received valid blocks are rendered. [#32277]
+- AI Extension: Update placeholder copyright [#32300]
+- Jetpack editor extensions: use shared component for the logo. [#32257]
+- Refactored subscriber count data to come from store instead of props. [#32095]
+- Subscribe Block: minor copy change [#32261]
 
 ## 12.5-a.1 - 2023-08-01
 ### Enhancements
