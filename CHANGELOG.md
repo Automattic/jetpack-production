@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI Extension: Stop handling popover close event to prevent the AI Control from hiding when it loses focus.
+- Social: Fix race condition in mobile app's post request
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - minor copy change
