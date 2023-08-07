@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added SIG modal ui
+- Add Inspector Panel with Newsletter visibility options to Paywall Block
 - AI Assistant: Add requirement for one button in forms
 - AI Assistant: Auto open AI control in form assistant
 - AI Assistant: Fix form popover after changing viewport
