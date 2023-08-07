@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: show a Notice when AI needs to provide feedback
 - AI Extension: stop suggestion when form block is deleted
 - AI Extension: use assistant to edit Jetpack Format content
+- Better Paywall Block styles
 - Fix small regression on Newsletter panels
 - Make 'My Jetpack' the first sub-menu item, above 'Dashboard'.
 - Newsletters: update the appearance of "subscribers only" and "paid subscribers only" content wall
