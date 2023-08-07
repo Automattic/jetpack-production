@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix small regression on Newsletter panels
 - Jetpack editor extensions: use shared component for the logo.
 - Make 'My Jetpack' the first sub-menu item, above 'Dashboard'.
+- Memberships: Ensure endpoint handles source param
 - Newsletters: update the appearance of "subscribers only" and "paid subscribers only" content wall
 - paywall dynamic copy
 - Subscription modal: adjust modal template markup and styles for easier modification and mobile friendliness.
