@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Move 'My Jetpack' sub-menu item to first position.
 
+### Fixed
+- Fix IDC modal height issue.
+
 ## [3.2.1] - 2023-08-01
 ### Added
 - Add transient caching for zendesk jwt auth token. [#32140]
