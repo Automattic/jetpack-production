@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Move 'My Jetpack' sub-menu item to first position.
+- Updated package dependencies.
 
 ### Fixed
 - Fix IDC modal height issue.

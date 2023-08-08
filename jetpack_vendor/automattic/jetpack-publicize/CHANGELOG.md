@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Added admin-page upsell notice
 - Added new nudge in the editor to upgrade to the Advanced plan. Appears every 3 months
 
+### Changed
+- Updated package dependencies.
+
 ## [0.32.0] - 2023-08-01
 ### Changed
 - Change dismiss notice so it can be dismissed for a given time. [#32033]

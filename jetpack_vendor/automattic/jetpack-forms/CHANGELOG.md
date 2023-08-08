@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added SIG modal ui
 
+### Changed
+- Updated package dependencies.
+
 ## [0.19.8] - 2023-07-25
 ### Changed
 - Updated package dependencies. [#32040]

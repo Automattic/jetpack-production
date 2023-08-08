@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added comment note about IS_WPCOM.
 
+### Changed
+- Updated package dependencies.
+
 ## [0.14.12] - 2023-08-01
 ### Added
 - VideoPress: handle uploading video files when dropping in the editor canvas. [#32084]

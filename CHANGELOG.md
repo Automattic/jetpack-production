@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - minor copy change
 - Refactored subscriber count data to come from store instead of props.
+- Updated package dependencies.
 
 ## 12.5-a.1 - 2023-08-01
 ### Enhancements
