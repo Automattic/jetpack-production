@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Inspector Panel with Newsletter visibility options to Paywall Block
 - AI Assistant: Add requirement for one button in forms
 - AI Assistant: Auto open AI control in form assistant
+- AI Assistant: Change tracked event to English instead of translated value and track language and tone change
 - AI Assistant: Fix form popover after changing viewport
 - AI Assistant: Fix grammar and typos on Proofread feature
 - AI Assistant: Fix incomplete HTML tags and allow columns on forms
