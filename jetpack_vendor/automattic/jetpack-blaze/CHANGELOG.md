@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Update wording in the Blaze CTA link appearing in the post list.
 
 ### Fixed
 - Fixes missing controller for DSP /woo/wpcom-payment-methods request
