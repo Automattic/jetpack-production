@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription modal: adjust modal template markup and styles for easier modification and mobile friendliness.
 
 ### Bug fixes
+- Add subscribe button on premium content block on self-hosted
 - AI Extension: Stop handling popover close event to prevent the AI Control from hiding when it loses focus.
 - Social: Fix race condition in mobile app's post request
 
