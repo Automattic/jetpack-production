@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Fix race condition in mobile app's post request
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: avoid hardcoding the version number when creating a new block via the CLI command
 - minor copy change
 - Refactored subscriber count data to come from store instead of props.
 - Updated package dependencies.
