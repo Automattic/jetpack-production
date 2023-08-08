@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Update placeholder copyright
 - AI Extension: use assistant to edit Jetpack Format content
 - AI Plugin: Add track for get feedback feature
+- AI Plugin: Add upgrade path
 - Better Paywall Block styles
 - Fix small regression on Newsletter panels
 - Jetpack editor extensions: use shared component for the logo.
