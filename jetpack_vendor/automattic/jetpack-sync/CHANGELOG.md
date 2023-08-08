@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Jetpack Sync: Custom table initialization and migration functionality
+- Jetpack Sync: Drop custom table on sender uninstall
 
 ## [1.52.0] - 2023-08-01
 ### Added
