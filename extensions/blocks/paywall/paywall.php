@@ -2,7 +2,7 @@
 /**
  * Paywall Block.
  *
- * @since 12.5-a.2
+ * @since 12.5-a.4
  *
  * @package automattic/jetpack
  */

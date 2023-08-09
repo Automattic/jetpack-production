@@ -5,16 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.33.0-alpha] - unreleased
+## [0.33.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Added admin-page upsell notice
-- Added new nudge in the editor to upgrade to the Advanced plan. Appears every 3 months
-
 ### Changed
 - Updated package dependencies.
+
+## [0.33.0] - 2023-08-07
+### Added
+- Added admin-page upsell notice [#32128]
+- Added new nudge in the editor to upgrade to the Advanced plan. Appears every 3 months [#32087]
 
 ## [0.32.0] - 2023-08-01
 ### Changed
@@ -365,7 +366,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.33.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.32.0...v0.33.0-alpha
+[0.33.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.33.0...v0.33.1-alpha
+[0.33.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.32.0...v0.33.0
 [0.32.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.31.0...v0.32.0
 [0.31.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.30.4...v0.31.0
 [0.30.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.30.3...v0.30.4

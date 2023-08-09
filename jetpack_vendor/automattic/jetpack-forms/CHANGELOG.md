@@ -5,15 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.19.9-alpha] - unreleased
+## [0.19.10-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Added SIG modal ui
-
 ### Changed
 - Updated package dependencies.
+
+## [0.19.9] - 2023-08-07
+### Added
+- Added SIG modal ui [#31665]
 
 ## [0.19.8] - 2023-07-25
 ### Changed
@@ -302,7 +303,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.19.9-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.19.8...v0.19.9-alpha
+[0.19.10-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.19.9...v0.19.10-alpha
+[0.19.9]: https://github.com/automattic/jetpack-forms/compare/v0.19.8...v0.19.9
 [0.19.8]: https://github.com/automattic/jetpack-forms/compare/v0.19.7...v0.19.8
 [0.19.7]: https://github.com/automattic/jetpack-forms/compare/v0.19.6...v0.19.7
 [0.19.6]: https://github.com/automattic/jetpack-forms/compare/v0.19.5...v0.19.6
