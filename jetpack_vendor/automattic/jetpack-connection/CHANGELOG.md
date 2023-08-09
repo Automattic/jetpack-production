@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Removed
+- Tests: remove invalid tests for WP 6.3
+
 ## [1.56.0] - 2023-08-01
 ### Added
 - Add a filter to modify response for the `jetpack.idcUrlValidation` endpoint, add unit test. [#32005]
