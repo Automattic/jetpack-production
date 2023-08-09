@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Fix grammar and typos on Proofread feature
 - AI Assistant: Fix incomplete HTML tags and allow columns on forms
 - AI Assistant: Render response from the AI
+- AI Control: Clean up props
 - AI Extension: Add UpgradePrompt if require upgrade
 - AI Extension: Connect AI Control component on popover placement.
 - AI Extension: Connect AI Data context with components
