@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Extension: fix AI Assistant bar position in the Top toolbar mode
+- SSO: enable "Match by Email" by default.
 
 ## 12.5-a.5 - 2023-08-09
 ### Enhancements
