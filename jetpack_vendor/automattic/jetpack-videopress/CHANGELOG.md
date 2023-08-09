@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.14.13-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.14.13] - 2023-08-09
 ### Added
-- Added comment note about IS_WPCOM.
+- Added comment note about IS_WPCOM. [#32136]
 
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#32166]
 
 ## [0.14.12] - 2023-08-01
 ### Added
@@ -1080,7 +1077,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.14.13-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.14.12...v0.14.13-alpha
+[0.14.13]: https://github.com/Automattic/jetpack-videopress/compare/v0.14.12...v0.14.13
 [0.14.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.14.11...v0.14.12
 [0.14.11]: https://github.com/Automattic/jetpack-videopress/compare/v0.14.10...v0.14.11
 [0.14.10]: https://github.com/Automattic/jetpack-videopress/compare/v0.14.9...v0.14.10
