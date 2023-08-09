@@ -13,7 +13,6 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Add UpgradePrompt if require upgrade
 - AI Extension: fix visual issue in Assistant bar when switching viewport size
 - AI Extension: fix visual on the AI Assistant bar when switching viewport size
-- AI Extension: Update fields based on previous
 - AI Plugin: Add upgrade path
 - Move out of api.js
 - Paywall block: add transforms for "more" and "nextpage" core blocks
