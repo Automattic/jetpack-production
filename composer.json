@@ -37,7 +37,7 @@
 		"automattic/jetpack-lazy-images": "^2.1.43",
 		"automattic/jetpack-licensing": "^1.8.2",
 		"automattic/jetpack-logo": "^1.6.1",
-		"automattic/jetpack-my-jetpack": "^3.3.2-alpha",
+		"automattic/jetpack-my-jetpack": "^3.3.2",
 		"automattic/jetpack-partner": "^1.7.23",
 		"automattic/jetpack-plugins-installer": "^0.2.4",
 		"automattic/jetpack-post-list": "^0.4.5",
@@ -82,6 +82,7 @@
 			"pnpm run watch"
 		]
 	},
+	"repositories": [],
 	"autoload": {
 		"classmap": [
 			"src"
@@ -94,7 +95,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_5_a_6",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_5_a_7",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true
