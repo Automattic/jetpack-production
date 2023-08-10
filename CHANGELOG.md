@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Subscriptions: Add check when showing subscribe modal
+
 ## 12.5-a.7 - 2023-08-09
 ### Enhancements
 - AI Extension: fix AI Assistant bar position in the Top toolbar mode. [#32374]
