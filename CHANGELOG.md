@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Extension: Handle stop action on the AI Control component.
+- AI Extension: Move out of popover in large screens
 - Newsletter: move settings to their own section
 
 ### Bug fixes
