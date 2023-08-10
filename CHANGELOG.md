@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Extension: fix visual issue of AI toolbar when editor sidebar is opened
 - AI Extension: Handle stop action on the AI Control component.
 - AI Extension: Move out of popover in large screens
 - Newsletter: move settings to their own section
