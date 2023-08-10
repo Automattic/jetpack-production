@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Newsletter: move settings to their own section
+
 ### Bug fixes
 - Subscriptions: Add check when showing subscribe modal
 
