@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Extension: clean up unusable remnant code
 - AI Extension: fix visual issue of AI toolbar when editor sidebar is opened
 - AI Extension: Focus on input after suggestions
 - AI Extension: Handle stop action on the AI Control component.
