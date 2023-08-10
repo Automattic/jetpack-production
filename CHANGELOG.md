@@ -2,14 +2,15 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.5-a.6 - unreleased
+## 12.5-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 12.5-a.7 - 2023-08-09
 ### Enhancements
-- AI Extension: fix AI Assistant bar position in the Top toolbar mode
-- AI Extension: update view of AI assistant bar on mobile
-- SSO: enable "Match by Email" by default.
+- AI Extension: fix AI Assistant bar position in the Top toolbar mode. [#32374]
+- AI Extension: update view of AI assistant bar on mobile. [#32377]
+- SSO: enable "Match by Email" by default. [#32370]
 
 ## 12.5-a.5 - 2023-08-09
 ### Enhancements
