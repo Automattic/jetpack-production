@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Extension: Handle stop action on the AI Control component.
 - Newsletter: move settings to their own section
 
 ### Bug fixes
