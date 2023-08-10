@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Handle stop action on the AI Control component.
 - AI Extension: Move out of popover in large screens
 - AI Extension: remove unneeded AI component styles
+- AI Extension: update proofread with the AI Status Indicator component
 - Newsletter: move settings to their own section
 
 ### Bug fixes
