@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Focus on input after suggestions
 - AI Extension: Handle stop action on the AI Control component.
 - AI Extension: improve show/hide assistant bar when fixed
+- AI Extension: Move from popover to portal
 - AI Extension: Move out of popover in large screens
 - AI Extension: remove unneeded AI component styles
 - AI Extension: update proofread with the AI Status Indicator component
