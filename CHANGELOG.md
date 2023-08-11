@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: remove unneeded AI component styles
 - AI Extension: update proofread with the AI Status Indicator component
 - AI Form Extension: Remove error notice on new request
+- Jetpack AI: tweaks assistant bar in narrow spaces
 - Newsletter: move settings to their own section
 
 ### Bug fixes
