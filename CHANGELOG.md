@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: Move to arrowUp icon at send button
+- AI Extension" check the AI quota exceeded from the AI context
 - AI Extension: clean up unusable remnant code
 - AI Extension: consolidate assistant bar implementation
 - AI Extension: fix visual issue of AI toolbar when editor sidebar is opened
