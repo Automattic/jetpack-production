@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.19.11-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.19.11] - 2023-08-14
 ### Changed
-- Add a unified/consistent visual aid for focused elements
+- Add a unified/consistent visual aid for focused elements. [#30219]
 
 ## [0.19.10] - 2023-08-09
 ### Changed
@@ -307,7 +304,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.19.11-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.19.10...v0.19.11-alpha
+[0.19.11]: https://github.com/automattic/jetpack-forms/compare/v0.19.10...v0.19.11
 [0.19.10]: https://github.com/automattic/jetpack-forms/compare/v0.19.9...v0.19.10
 [0.19.9]: https://github.com/automattic/jetpack-forms/compare/v0.19.8...v0.19.9
 [0.19.8]: https://github.com/automattic/jetpack-forms/compare/v0.19.7...v0.19.8
