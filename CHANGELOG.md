@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: tweak the AI assistant message text styles
 - AI Extension: update proofread with the AI Status Indicator component
 - AI Form Extension: Remove error notice on new request
+- A Membership product can be created without prior connected account
 - Jetpack AI: tweaks assistant bar in narrow spaces
 - My Jetpack is now the default Jetpack admin page
 - Newsletter: move settings to their own section
