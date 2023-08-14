@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add backup undo feature
 - AI Assistant: Move to arrowUp icon at send button
 - AI Extension" check the AI quota exceeded from the AI context
 - AI Extension: clean up unusable remnant code

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.17.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add backup undo feature
+
 ## [1.16.6] - 2023-08-09
 ### Changed
 - Updated package dependencies. [#32166]
@@ -457,6 +464,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
+[1.17.0-alpha]: https://github.com/Automattic/jetpack-backup/compare/v1.16.6...v1.17.0-alpha
 [1.16.6]: https://github.com/Automattic/jetpack-backup/compare/v1.16.5...v1.16.6
 [1.16.5]: https://github.com/Automattic/jetpack-backup/compare/v1.16.4...v1.16.5
 [1.16.4]: https://github.com/Automattic/jetpack-backup/compare/v1.16.3...v1.16.4
