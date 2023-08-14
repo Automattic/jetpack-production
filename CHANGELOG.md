@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update link to Subscribers to always point to WordPress.com.
 - Internet Defense League Widget: remove campaign management and load images locally.
+- Make the AI Assistant input to receive focus on first render for forms variations
 - Remove extensions/blocks/contact-form directory, it is now handled by packages/forms
 
 ## 12.5-a.7 - 2023-08-09
