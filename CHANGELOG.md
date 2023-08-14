@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Handle stop action on the AI Control component.
 - AI Extension: improve show/hide assistant bar when fixed
 - AI Extension: Move from popover to portal
+- AI Extension: move isFixed logic to AI Assistant bar component
 - AI Extension: Move out of popover in large screens
 - AI Extension: remove unneeded AI component styles
 - AI Extension: Tweak styles in AI Assistant Anchor
