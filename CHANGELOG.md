@@ -27,7 +27,6 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: tweaks assistant bar in narrow spaces
 - My Jetpack is now the default Jetpack admin page
 - Newsletter: move settings to their own section
-- Subscribe modal: allow non-Lettre themed sites on WP.com use the modal.
 
 ### Bug fixes
 - Subscriptions: Add check when showing subscribe modal
