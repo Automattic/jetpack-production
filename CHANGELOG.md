@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Move out of popover in large screens
 - AI Extension: remove unneeded AI component styles
 - AI Extension: Tweak styles in AI Assistant Anchor
+- AI Extension: tweak the AI assistant message text styles
 - AI Extension: update proofread with the AI Status Indicator component
 - AI Form Extension: Remove error notice on new request
 - Jetpack AI: tweaks assistant bar in narrow spaces
