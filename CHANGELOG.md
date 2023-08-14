@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: update proofread with the AI Status Indicator component
 - AI Form Extension: Remove error notice on new request
 - A Membership product can be created without prior connected account
+- Copy block.json files in Jetpack extensions build
 - Jetpack AI: tweaks assistant bar in narrow spaces
 - My Jetpack is now the default Jetpack admin page
 - Newsletter: move settings to their own section
