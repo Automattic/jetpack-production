@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Internet Defense League Widget: remove campaign management and load images locally.
 - Make the AI Assistant input to receive focus on first render for forms variations
 - Remove extensions/blocks/contact-form directory, it is now handled by packages/forms
+- Remove unused blocks from block index
 - Update testing instructions
 
 ## 12.5-a.7 - 2023-08-09
