@@ -31,6 +31,9 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: move settings to their own section
 - Subscriptions: add a Subscribers menu to the Jetpack dashboard navigation.
 
+### Improved compatibility
+- Infinite Scroll: avoid PHP notices when using the latest version of WordPress, 6.3.
+
 ### Bug fixes
 - Subscriptions: Add check when showing subscribe modal
 
