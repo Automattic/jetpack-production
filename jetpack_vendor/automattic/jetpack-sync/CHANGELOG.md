@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.54.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Extract Sync Queue storage handling to an external class to prepare for Custom Table migration
+
 ## [1.53.0] - 2023-08-09
 ### Added
 - Jetpack Sync: Custom table initialization and migration functionality [#32135]
@@ -895,6 +902,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[1.54.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.53.0...v1.54.0-alpha
 [1.53.0]: https://github.com/Automattic/jetpack-sync/compare/v1.52.0...v1.53.0
 [1.52.0]: https://github.com/Automattic/jetpack-sync/compare/v1.51.0...v1.52.0
 [1.51.0]: https://github.com/Automattic/jetpack-sync/compare/v1.50.2...v1.51.0
