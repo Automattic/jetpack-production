@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- AI Extension: Add extension toolbar click event
+
 ## 12.5-a.11 - 2023-08-15
 ### Enhancements
 - Subscriptions: add a Subscribers menu to the Jetpack dashboard navigation. [#31718]
