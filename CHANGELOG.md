@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add paywall block notice to newsletter panel
 - AI Assistant: Update example copyright
 - AI Extension: Add extension toolbar click event
+- AI Extension: Change event parameter name
 
 ## 12.5-a.11 - 2023-08-15
 ### Enhancements
