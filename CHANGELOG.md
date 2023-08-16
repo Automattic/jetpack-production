@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Add extension toolbar click event
 - AI Extension: Change event parameter name
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Cookie Consent Block: avoid PHP notice
+
 ## 12.5-a.11 - 2023-08-15
 ### Enhancements
 - Subscriptions: add a Subscribers menu to the Jetpack dashboard navigation. [#31718]
