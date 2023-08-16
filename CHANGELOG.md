@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Settings menu in WP.com: add newsletter and podcasting sections
 - Use the new method to render Connection initial state.
 
+### Bug fixes
+- Publicize: Prevent metadata updates for published posts
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Cookie Consent Block: avoid PHP notice
 
