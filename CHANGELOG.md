@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Improved paywall rendering on emails
 - Mailchimp block: allow transforming to subscribe block
 - Settings menu in WP.com: add newsletter and podcasting sections
+- Subscribe modal: update toggle copy
 - Use the new method to render Connection initial state.
 
 ### Bug fixes
