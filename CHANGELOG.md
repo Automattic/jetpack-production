@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Add extension toolbar click event
 - AI Extension: Change event parameter name
 - Mailchimp block: allow transforming to subscribe block
+- Settings menu in WP.com: add newsletter and podcasting sections
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Cookie Consent Block: avoid PHP notice
