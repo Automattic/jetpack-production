@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Use the new method to render Connection initial state.
+
 ## [3.3.3] - 2023-08-14
 ### Added
 - Make My Jetpack the default WP-Admin page for Jetpack. [#32385]
