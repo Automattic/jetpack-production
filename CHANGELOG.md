@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Use the new method to render Connection initial state.
 
 ### Bug fixes
+- Blocks: ensure the Markdown and Repeat Visitor blocks use clear contrasting colors when using a dark theme.
 - Publicize: Prevent metadata updates for published posts
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
