@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add block.json metadata file to beta blocks
 - Add block.json metadata file to experimental blocks
+- Add block.json metadata file to part of production blocks
 - Add paywall block notice to newsletter panel
 - AI Assistant: Update example copyright
 - AI Extension: Add extension toolbar click event
