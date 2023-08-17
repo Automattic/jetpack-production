@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Add block.json metadata file to experimental blocks
 - Add block.json metadata file to part of production blocks
 - Add paywall block notice to newsletter panel
+- AI Assistant: Specify input background color
 - AI Assistant: Update example copyright
 - AI Extension: Add extension toolbar click event
 - AI Extension: Change event parameter name
