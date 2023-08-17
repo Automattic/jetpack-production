@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall block: add description and cleanup code
 - Paywall block: update icon
 - Settings menu in WP.com: add newsletter and podcasting sections
+- Subscribe Modal: Make it editable
 - Subscribe modal: update toggle copy
 - Use the new method to render Connection initial state.
 
