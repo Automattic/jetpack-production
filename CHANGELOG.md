@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Update example copyright
 - AI Extension: Add extension toolbar click event
 - AI Extension: Change event parameter name
+- AI Extension: clean the AI Assistant bar input once the suggestion is done
 - AI Extension: Move extension to production.
 - Dashboard: add Social Image Generator options to Jetpack Social settings.
 - Improved paywall rendering on emails
