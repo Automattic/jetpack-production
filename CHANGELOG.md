@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Blocks: ensure the Markdown and Repeat Visitor blocks use clear contrasting colors when using a dark theme.
 - Publicize: Prevent metadata updates for published posts
+- Shortcode embeds: avoid errors when a request to Flickr fails.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Cookie Consent Block: avoid PHP notice
