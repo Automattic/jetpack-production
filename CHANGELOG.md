@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: add Social Image Generator options to Jetpack Social settings.
 - Improved paywall rendering on emails
 - Mailchimp block: allow transforming to subscribe block
+- Paywall block: add description and cleanup code
 - Paywall block: update icon
 - Settings menu in WP.com: add newsletter and podcasting sections
 - Subscribe modal: update toggle copy
