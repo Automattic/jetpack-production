@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms block - allow transforming to a subscribe block.
 
+### Changed
+- Forms block: rename "Newsletter Connection" to "Creative Mail" to avoid confusing with "Jetpack Newsletters" and subscription block. Call the block a "Lead Capture" block (not sign up).
+
 ## [0.19.11] - 2023-08-14
 ### Changed
 - Add a unified/consistent visual aid for focused elements. [#30219]
