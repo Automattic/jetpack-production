@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Cookie Consent Block: avoid PHP notice
+- Created V2 edit and delete endpoints for memberships products.
 - Subscribe modal: don't use template parts
 
 ## 12.5-a.11 - 2023-08-15
