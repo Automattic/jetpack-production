@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Use the new method to render Connection initial state.
 
+### Fixed
+- Fix false values not working on shortcodes
+
 ## [0.14.13] - 2023-08-09
 ### Added
 - Added comment note about IS_WPCOM. [#32136]
