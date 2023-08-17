@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Update example copyright
 - AI Extension: Add extension toolbar click event
 - AI Extension: Change event parameter name
+- Dashboard: add Social Image Generator options to Jetpack Social settings.
 - Improved paywall rendering on emails
 - Mailchimp block: allow transforming to subscribe block
 - Settings menu in WP.com: add newsletter and podcasting sections
