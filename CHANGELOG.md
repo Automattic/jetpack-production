@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Specify input background color
 - AI Assistant: Update example copyright
 - AI Extension: Add extension toolbar click event
+- AI Extension: be able to show AI Assistant from children Jetpack Form blocks
 - AI Extension: Change event parameter name
 - AI Extension: clean the AI Assistant bar input once the suggestion is done
 - AI Extension: Move extension to production.
