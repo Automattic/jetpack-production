@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Shortcode embeds: avoid errors when a request to Flickr fails.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: add "Beta" suffix to Beta blocks' descriptions in block.json file.
 - Cookie Consent Block: avoid PHP notice
 - Created V2 edit and delete endpoints for memberships products.
 - Subscribe modal: don't use template parts
