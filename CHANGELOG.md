@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings menu in WP.com: add newsletter and podcasting sections
 - Subscribe Modal: Make it editable
 - Subscribe modal: update toggle copy
+- Update icons of Jetpack blocks
 - Use the new method to render Connection initial state.
 
 ### Bug fixes
