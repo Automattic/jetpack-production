@@ -37,6 +37,9 @@ This is an alpha version! The changes listed here are not final.
 - Update icons of Jetpack blocks
 - Use the new method to render Connection initial state.
 
+### Improved compatibility
+- Add Woocommerce product post type to sitemaps if WooCommerce is present
+
 ### Bug fixes
 - Blocks: ensure the Markdown and Repeat Visitor blocks use clear contrasting colors when using a dark theme.
 - Publicize: Prevent metadata updates for published posts
