@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added key for auto-conversion settings.
 - Social: Added endpoint for media auto-conversion settings.
 
 ### Fixed
