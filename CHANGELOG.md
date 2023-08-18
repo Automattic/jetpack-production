@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Improved paywall rendering on emails
 - Mailchimp block: allow transforming to subscribe block
 - Paywall block: add description and cleanup code
+- Paywall block: Improved UX
 - Paywall block: update icon
 - Settings menu in WP.com: add newsletter and podcasting sections
 - Subscribe Modal: Make it editable
