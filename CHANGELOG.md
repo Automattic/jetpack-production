@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall block: add description and cleanup code
 - Paywall block: Improved UX
 - Paywall block: update icon
+- remove jetpack option jetpack-memberships-connected-account-id
 - Settings menu in WP.com: add newsletter and podcasting sections
 - Subscribe Modal: Make it editable
 - Subscribe modal: update toggle copy
