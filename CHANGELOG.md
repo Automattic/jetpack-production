@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Change event parameter name
 - AI Extension: clean the AI Assistant bar input once the suggestion is done
 - AI Extension: do not extend Jetpack Form when it's inside of a query loop
+- AI Extension: fix bug when focusing on the input element when component mount
 - AI Extension: Move extension to production.
 - Dashboard: add Social Image Generator options to Jetpack Social settings.
 - Improved paywall rendering on emails
