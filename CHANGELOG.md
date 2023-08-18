@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: do not extend Jetpack Form when it's inside of a query loop
 - AI Extension: do not send request when AI assistant input is empty
 - AI Extension: fix bug when focusing on the input element when component mount
+- AI Extension: handle Jetpack Form button instances when composing via AI assistant
 - AI Extension: Move extension to production.
 - Dashboard: add Social Image Generator options to Jetpack Social settings.
 - Improved paywall rendering on emails
