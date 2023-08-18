@@ -28,10 +28,10 @@
 	"dependencies": {
 		"@automattic/components": "2.0.1",
 		"@automattic/format-currency": "1.0.1",
-		"@automattic/jetpack-analytics": "workspace:*",
-		"@automattic/jetpack-api": "workspace:*",
+		"@automattic/jetpack-analytics": "^0.1.26-alpha",
+		"@automattic/jetpack-api": "^0.16.1-alpha",
 		"@automattic/jetpack-components": "^0.41.1",
-		"@automattic/jetpack-connection": "workspace:*",
+		"@automattic/jetpack-connection": "^0.29.8-alpha",
 		"@wordpress/api-fetch": "6.35.0",
 		"@wordpress/data": "9.8.0",
 		"@wordpress/date": "4.38.0",
