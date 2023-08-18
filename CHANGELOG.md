@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Add extension toolbar click event
 - AI Extension: be able to show AI Assistant from children Jetpack Form blocks
 - AI Extension: Change event parameter name
+- AI Extension: check missing blocks when parsing Jetpack Form blocks in the AI generation process
 - AI Extension: clean the AI Assistant bar input once the suggestion is done
 - AI Extension: do not extend Jetpack Form when it's inside of a query loop
 - AI Extension: fix bug when focusing on the input element when component mount
