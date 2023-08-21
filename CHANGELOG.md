@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Add Woocommerce product post type to sitemaps if WooCommerce is present
+- Theme fields: only add is_block_theme to theme response when WordPress version is < 6.3
 
 ### Bug fixes
 - Blocks: ensure the Markdown and Repeat Visitor blocks use clear contrasting colors when using a dark theme.
