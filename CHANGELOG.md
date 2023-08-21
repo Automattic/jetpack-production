@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Implement the new design for the connection toggles
 - Subscribe Modal: Make it editable
 - Subscribe modal: update toggle copy
+- Supports Jetpack AI Yearly offering
 - Update icons of Jetpack blocks
 - Use the new method to render Connection initial state.
 
