@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Blocks: ensure the Markdown and Repeat Visitor blocks use clear contrasting colors when using a dark theme.
+- Paywall block: avoid undefined variable warning
 - Publicize: Prevent metadata updates for published posts
 - Shortcode embeds: avoid errors when a request to Flickr fails.
 
