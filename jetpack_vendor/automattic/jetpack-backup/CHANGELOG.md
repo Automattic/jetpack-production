@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.17.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.17.1] - 2023-08-21
 ### Changed
-- Use the new method to render Connection initial state.
+- Use the new method to render Connection initial state. [#32499]
 
 ## [1.17.0] - 2023-08-14
 ### Added
@@ -468,7 +465,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[1.17.1-alpha]: https://github.com/Automattic/jetpack-backup/compare/v1.17.0...v1.17.1-alpha
+[1.17.1]: https://github.com/Automattic/jetpack-backup/compare/v1.17.0...v1.17.1
 [1.17.0]: https://github.com/Automattic/jetpack-backup/compare/v1.16.6...v1.17.0
 [1.16.6]: https://github.com/Automattic/jetpack-backup/compare/v1.16.5...v1.16.6
 [1.16.5]: https://github.com/Automattic/jetpack-backup/compare/v1.16.4...v1.16.5
