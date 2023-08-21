@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Added key for auto-conversion settings.
 - Social: Added endpoint for media auto-conversion settings.
 
+### Changed
+- Updated package dependencies.
+
 ### Fixed
 - Publicize: Prevent metadata updates for published posts
 

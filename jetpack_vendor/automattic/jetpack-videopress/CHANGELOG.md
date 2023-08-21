@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Updated package dependencies.
 - Update icons of Jetpack blocks
 - Use the new method to render Connection initial state.
 

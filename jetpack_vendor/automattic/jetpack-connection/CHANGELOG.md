@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Better way to render initial state.
 
+### Changed
+- Updated package dependencies.
+
 ## [1.56.1] - 2023-08-09
 ### Changed
 - Updated package dependencies. [#32166]

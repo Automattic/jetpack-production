@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Supports Jetpack AI Yearly offering
 
 ### Changed
+- Updated package dependencies.
 - Use the new method to render Connection initial state.
 
 ## [3.3.3] - 2023-08-14
