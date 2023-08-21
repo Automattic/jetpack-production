@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: fix bug when focusing on the input element when component mount
 - AI Extension: handle Jetpack Form button instances when composing via AI assistant
 - AI Extension: Move extension to production.
+- AI Extension: Start sending ai-assistant as the default feature name for the AI Assistant on the completion request
 - Dashboard: add Social Image Generator options to Jetpack Social settings.
 - Improved paywall rendering on emails
 - Mailchimp block: allow transforming to subscribe block
