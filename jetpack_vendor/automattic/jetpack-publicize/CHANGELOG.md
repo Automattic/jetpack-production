@@ -5,19 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.34.0-alpha] - unreleased
+## [0.34.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
-
-### Added
-- Added key for auto-conversion settings.
-- Social: Added endpoint for media auto-conversion settings.
 
 ### Changed
 - Updated package dependencies.
 
+## [0.34.0] - 2023-08-21
+### Added
+- Added key for auto-conversion settings. [#32577]
+- Social: Added endpoint for media auto-conversion settings. [#32342]
+
 ### Fixed
-- Publicize: Prevent metadata updates for published posts
+- Publicize: Prevent metadata updates for published posts [#32301]
 
 ## [0.33.1] - 2023-08-09
 ### Changed
@@ -377,7 +378,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.34.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.33.1...v0.34.0-alpha
+[0.34.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.34.0...v0.34.1-alpha
+[0.34.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.33.1...v0.34.0
 [0.33.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.33.0...v0.33.1
 [0.33.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.32.0...v0.33.0
 [0.32.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.31.0...v0.32.0
