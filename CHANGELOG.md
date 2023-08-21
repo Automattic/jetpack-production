@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 12.6-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Improved compatibility
+- Theme fields: only add is_block_theme to theme response when WordPress version is < 6.3
+
 ## 12.5-beta - 2023-08-21
 ### Enhancements
 - AI Assistant: various backend improvements.
