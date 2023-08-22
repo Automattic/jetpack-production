@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Subscriptions: Remove newsletter flow+theme and FSE theme check for the subscribe modal. Leave WP.com check.
+
 ### Improved compatibility
 - Theme fields: only add is_block_theme to theme response when WordPress version is < 6.3
 
