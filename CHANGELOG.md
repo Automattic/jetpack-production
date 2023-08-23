@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added the new auto-conversion toggle for social
+- Add number formatting for subscriber count in newsletter module
 - Connection UI: use Redux state to pass the "from" property.
 - Newsletters: Improve flows around access and paywall
 - Subscribe modal: bump modal Z-index up
