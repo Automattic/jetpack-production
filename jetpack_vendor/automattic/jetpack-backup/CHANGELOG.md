@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Backup Admin: add backup file browser reference in the backup admin page
+
 ### Changed
 - Updated package dependencies.
 
