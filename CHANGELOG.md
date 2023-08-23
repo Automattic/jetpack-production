@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Add number formatting for subscriber count in newsletter module
+
 ## 12.5 - 2023-08-23
 ### Enhancements
 - AI Assistant: various backend improvements.
