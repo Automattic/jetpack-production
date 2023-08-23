@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Rename Author Recommendations to Blogroll
+- Site endpoint: added is_commercial to site options
 - Updated package dependencies.
 
 ## 12.5-beta - 2023-08-21
