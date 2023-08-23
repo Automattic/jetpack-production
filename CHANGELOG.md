@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove use of Jetpack_Membership::get_connected_account_id()
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Register Paywall block for native mobile editor behind the dev flag.
 - Remove fill properties from Paywall block SVG icon
 - Rename Author Recommendations to Blogroll
 - Site endpoint: added is_commercial to site options
