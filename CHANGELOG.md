@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added the new auto-conversion toggle for social
 - Connection UI: use Redux state to pass the "from" property.
+- Newsletters: Improve flows around access and paywall
 - Subscribe modal: bump modal Z-index up
 - Subscriptions: Remove newsletter flow+theme and FSE theme check for the subscribe modal. Leave WP.com check.
 
