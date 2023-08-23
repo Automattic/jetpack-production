@@ -27,7 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Site endpoint: added is_commercial to site options
 - Updated package dependencies.
 
-## 12.5-beta - 2023-08-21
+## 12.5 - 2023-08-23
 ### Enhancements
 - AI Assistant: various backend improvements.
 - AI Extension: various improvements AI Assistant, update styles, and bug fixes.
@@ -8679,6 +8679,7 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 
 - Initial release
 
+[12.5]: https://wp.me/p1moTy-Vab
 [11.6]: https://wp.me/p1moTy-PLI
 [12.4]: https://wp.me/p1moTy-UQY
 [12.3]: https://wp.me/p1moTy-Uk3
