@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Theme fields: only add is_block_theme to theme response when WordPress version is < 6.3
 
 ### Bug fixes
+- Fix default plan being selected in payment block
 - Paywall block: avoid undefined variable warning
 - Remove use of Jetpack_Membership::get_connected_account_id()
 
