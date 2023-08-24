@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall block: release to WP.com and Jetpack
 - Subscribe modal: bump modal Z-index up
 - Subscriptions: Remove newsletter flow+theme and FSE theme check for the subscribe modal. Leave WP.com check.
+- Tiled gallery module: add srcset to images
 
 ### Improved compatibility
 - Shortcodes: exclude images with broken URL from galleries.
