@@ -40,6 +40,7 @@ return array(
     'Automattic\\Jetpack\\Boost_Core\\Lib\\Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-core/src/lib/class-utils.php',
     'Automattic\\Jetpack\\Boost_Core\\Lib\\WPCOM_Boost_API_Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-core/src/lib/class-wpcom-boost-api-client.php',
     'Automattic\\Jetpack\\Boost_Speed_Score\\Speed_Score' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score.php',
+    'Automattic\\Jetpack\\Boost_Speed_Score\\Speed_Score_Graph_History_Request' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score-graph-history-request.php',
     'Automattic\\Jetpack\\Boost_Speed_Score\\Speed_Score_History' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score-history.php',
     'Automattic\\Jetpack\\Boost_Speed_Score\\Speed_Score_Request' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score-request.php',
     'Automattic\\Jetpack\\Composer\\Manager' => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-manager.php',

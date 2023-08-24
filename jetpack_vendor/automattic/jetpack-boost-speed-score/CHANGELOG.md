@@ -9,8 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add boost speed score history endpoint
+
 ### Changed
 - Updated package dependencies.
+- Updated package version
 
 ## [0.2.0] - 2023-06-06
 ### Changed
