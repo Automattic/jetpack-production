@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Remove newsletter flow+theme and FSE theme check for the subscribe modal. Leave WP.com check.
 
 ### Improved compatibility
+- Shortcodes: exclude images with broken URL from galleries.
 - Theme fields: only add is_block_theme to theme response when WordPress version is < 6.3
 
 ### Bug fixes
