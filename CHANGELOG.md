@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection UI: use Redux state to pass the "from" property.
 - Newsletters: Improve flows around access and paywall
 - Nicer subscribers number
+- Paywall Block: Add toolbar options
 - Paywall block: release to WP.com and Jetpack
 - Subscribe modal: bump modal Z-index up
 - Subscriptions: Remove newsletter flow+theme and FSE theme check for the subscribe modal. Leave WP.com check.
