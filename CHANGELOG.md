@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Add number formatting for subscriber count in newsletter module
 - AI Assistant: Proof-of-concept for server-side prompts, starting with form generation prompts.
 - Connection UI: use Redux state to pass the "from" property.
+- Gravatar profile widget: add srcset
 - Newsletters: Improve flows around access and paywall
 - Nicer subscribers number
 - Paywall Block: Add toolbar options
