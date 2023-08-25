@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added the new auto-conversion toggle for social
 - Add number formatting for subscriber count in newsletter module
 - AI Assistant: Proof-of-concept for server-side prompts, starting with form generation prompts.
+- AI Extension: Use new AIControl component from AI package and remove local implementation
 - Connection UI: use Redux state to pass the "from" property.
 - Gravatar profile widget: add srcset
 - Newsletters: Improve flows around access and paywall
