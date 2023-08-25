@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Nicer subscribers number
 - Paywall Block: Add toolbar options
 - Paywall block: Disable Paid subscribers button if plans are not set up.
+- Paywall block: redesign visuals for the mobile editor.
 - Paywall block: release to WP.com and Jetpack
 - Subscribe modal: bump modal Z-index up
 - Subscriptions: Remove newsletter flow+theme and FSE theme check for the subscribe modal. Leave WP.com check.
