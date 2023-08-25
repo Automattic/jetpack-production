@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - adding test for default whitelist option.
 - Email subscribers now receive full posts
 - Fix default plan being selected in payment block
+- Fixed a Global Styles UI performance issue in the Site Editor
 - Paywall block: avoid undefined variable warning
 - Remove use of Jetpack_Membership::get_connected_account_id()
 
