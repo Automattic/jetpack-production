@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - add META_NAME_FOR_POST_TIER_ID_SETTINGS const for later developments
+- Cleans up the memberships class to make it more DRY.
 - Register Paywall block for native mobile editor behind the dev flag.
 - Remove fill properties from Paywall block SVG icon
 - Rename Author Recommendations to Blogroll
