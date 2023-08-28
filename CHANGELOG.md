@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- AI Assistant: Proof-of-concept for expandable messages on the backend using form generation prompt.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Paywall: Add tracks to emails
 
