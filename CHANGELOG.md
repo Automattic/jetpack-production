@@ -2,48 +2,49 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.6-a.0 - unreleased
+## 12.6-a.2 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 12.6-a.1 - 2023-08-28
 ### Enhancements
-- Added the new auto-conversion toggle for social
-- Add number formatting for subscriber count in newsletter module
-- AI Assistant: Proof-of-concept for server-side prompts, starting with form generation prompts.
-- AI Extension: Use new AIControl component from AI package and remove local implementation
-- Connection UI: use Redux state to pass the "from" property.
-- Gravatar profile widget: add srcset
-- Newsletters: Improve flows around access and paywall
-- Nicer subscribers number
-- Paywall Block: Add toolbar options
-- Paywall block: Disable Paid subscribers button if plans are not set up.
-- Paywall block: redesign visuals for the mobile editor.
-- Paywall block: release to WP.com and Jetpack
-- Subscribe modal: bump modal Z-index up
-- Subscriptions: Remove newsletter flow+theme and FSE theme check for the subscribe modal. Leave WP.com check.
-- Tiled gallery module: add srcset to images
+- Added the new auto-conversion toggle for social. [#32597]
+- Add number formatting for subscriber count in newsletter module. [#32646]
+- AI Assistant: proof-of-concept for server-side prompts, starting with form generation prompts. [#32495]
+- AI Extension: use new AIControl component from AI package and remove local implementation. [#32682]
+- Connection UI: use Redux state to pass the "from" property. [#32600]
+- Gravatar profile widget: add srcset. [#32662]
+- Newsletters: improve flows around access and paywall. [#32615]
+- Nicer subscribers number. [#32651]
+- Paywall Block: add toolbar options. [#32659]
+- Paywall block: disable Paid subscribers button if plans are not set up. [#32663]
+- Paywall block: redesign visuals for the mobile editor. [#32672]
+- Paywall block: release to WP.com and Jetpack. [#32625]
+- Subscribe modal: bump modal Z-index up. [#32621]
+- Subscriptions: remove newsletter flow+theme and FSE theme check for the subscribe modal. Leave WP.com check. [#32607]
+- Tiled gallery module: add srcset to images. [#32598]
 
 ### Improved compatibility
-- Shortcodes: exclude images with broken URL from galleries.
-- Theme fields: only add is_block_theme to theme response when WordPress version is < 6.3
+- Shortcodes: exclude images with broken URL from galleries. [#32556]
+- Theme fields: only add is_block_theme to theme response when WordPress version is < 6.3 [#31660]
 
 ### Bug fixes
-- adding test for default whitelist option.
-- Email subscribers now receive full posts
-- Fix default plan being selected in payment block
-- Fixed a Global Styles UI performance issue in the Site Editor
-- Load the Jetpack block assets in the iframe directly in WP-Admin and keep the existing behavior on the front-end, for compatibility reasons.
-- Paywall block: avoid undefined variable warning
-- Remove use of Jetpack_Membership::get_connected_account_id()
+- Adding test for default whitelist option. [#32632]
+- Email subscribers now receive full posts. [#32647]
+- Fix default plan being selected in payment block. [#32640]
+- Fixed a Global Styles UI performance issue in the Site Editor. [#32641]
+- Load the Jetpack block assets in the iframe directly in WP-Admin and keep the existing behavior on the front-end, for compatibility reasons. [#32706]
+- Paywall block: avoid undefined variable warning. [#32578]
+- Remove use of Jetpack_Membership::get_connected_account_id(). [#32620]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- add META_NAME_FOR_POST_TIER_ID_SETTINGS const for later developments
-- Cleans up the memberships class to make it more DRY.
-- Register Paywall block for native mobile editor behind the dev flag.
-- Remove fill properties from Paywall block SVG icon
-- Rename Author Recommendations to Blogroll
-- Site endpoint: added is_commercial to site options
-- Updated package dependencies.
+- Add META_NAME_FOR_POST_TIER_ID_SETTINGS const for later developments. [#32677]
+- Cleans up the memberships class to make it more DRY. [#32571]
+- Register Paywall block for native mobile editor behind the dev flag. [#32553]
+- Remove fill properties from Paywall block SVG icon. [#32638]
+- Rename Author Recommendations to Blogroll. [#32624]
+- Site endpoint: added is_commercial to site options. [#32595]
+- Updated package dependencies. [#32605]
 
 ## 12.5 - 2023-08-23
 ### Enhancements
