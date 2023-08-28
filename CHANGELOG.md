@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Email subscribers now receive full posts
 - Fix default plan being selected in payment block
 - Fixed a Global Styles UI performance issue in the Site Editor
+- Load the Jetpack block assets in the iframe directly in WP-Admin and keep the existing behavior on the front-end, for compatibility reasons.
 - Paywall block: avoid undefined variable warning
 - Remove use of Jetpack_Membership::get_connected_account_id()
 
