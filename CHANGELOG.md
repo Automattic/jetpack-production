@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Paywall: Add tracks to emails
+
 ## 12.6-a.1 - 2023-08-28
 ### Enhancements
 - Added the new auto-conversion toggle for social. [#32597]
