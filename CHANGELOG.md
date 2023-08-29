@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add wpcom_newsletter_categories_enabled site option
 - AI Assistant: Proof-of-concept for expandable messages on the backend using form generation prompt.
 
+### Bug fixes
+- Nav Unification: flips order of tags and categories submenu of posts.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Paywall: Add tracks to emails
 
