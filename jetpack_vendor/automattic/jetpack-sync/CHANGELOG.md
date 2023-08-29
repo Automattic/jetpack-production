@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.55.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add wpcom_newsletter_categories_enabled site option
+
 ## [1.55.2] - 2023-08-28
 ### Fixed
 - Re-adds the jetpack-memberships-connected-account-id option to whitelist. [#32632]
@@ -911,6 +918,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[1.55.3-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.55.2...v1.55.3-alpha
 [1.55.2]: https://github.com/Automattic/jetpack-sync/compare/v1.55.1...v1.55.2
 [1.55.1]: https://github.com/Automattic/jetpack-sync/compare/v1.55.0...v1.55.1
 [1.55.0]: https://github.com/Automattic/jetpack-sync/compare/v1.54.0...v1.55.0
