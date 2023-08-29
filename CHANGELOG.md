@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Nav Unification: flips order of tags and categories submenu of posts.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Payment Button Block: remove "Mark this payment plan as a donation" toggle.
 - Paywall: Add tracks to emails
 
 ## 12.6-a.1 - 2023-08-28
