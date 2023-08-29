@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add wpcom_newsletter_categories_enabled site option
 - AI Assistant: Proof-of-concept for expandable messages on the backend using form generation prompt.
 - Launchpad save modal: persist the user option when they opt to hide the modal
+- Link styles and scripts to block.json automatically
 - Subscribers: Add edit link for subscribe modal.
 
 ### Bug fixes
