@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add wpcom_newsletter_categories_enabled site option
 - AI Assistant: Proof-of-concept for expandable messages on the backend using form generation prompt.
+- Subscribers: Add edit link for subscribe modal.
 
 ### Bug fixes
 - Comments: remove mention of Twitter as a log in option since it is no longer available.
