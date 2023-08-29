@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Proof-of-concept for expandable messages on the backend using form generation prompt.
 
 ### Bug fixes
+- Comments: remove mention of Twitter as a log in option since it is no longer available.
 - Nav Unification: flips order of tags and categories submenu of posts.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
