@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: add create-with-voice beta extension
 - Launchpad save modal: persist the user option when they opt to hide the modal
 - Link styles and scripts to block.json automatically
+- Render Subscriptions block on emails
 - Subscribers: Add edit link for subscribe modal.
 - WordPress.com Toolbar: Add Site Monitoring menu and remove Site Logs
 
