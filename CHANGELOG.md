@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Comments: remove mention of Twitter as a log in option since it is no longer available.
 - Launchpad modal: reduce API calls for modal dismiss flag
 - Nav Unification: flips order of tags and categories submenu of posts.
+- Subscriptions: Hide modal if paywall block exists.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update the way we fetch the current theme's stylesheet to build site editor link.
