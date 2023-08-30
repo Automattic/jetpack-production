@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Nav Unification: flips order of tags and categories submenu of posts.
 - Subscriptions: Add subscribe modal mobile padding.
 - Subscriptions: Hide modal if paywall block exists.
+- Subscriptions: Tweak subscribe modal text/spacing.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update the way we fetch the current theme's stylesheet to build site editor link.
