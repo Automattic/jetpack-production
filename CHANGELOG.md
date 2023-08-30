@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribers: Add edit link for subscribe modal.
 
 ### Bug fixes
+- Blocks: use custom Facebook and Instagram icons in Jetpack's Facebook and Instagram blocks to avoid issues in accessibility inspector.
 - Comments: remove mention of Twitter as a log in option since it is no longer available.
 - Nav Unification: flips order of tags and categories submenu of posts.
 
