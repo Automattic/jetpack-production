@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add wpcom_newsletter_categories_enabled site option
 - AI Assistant: Proof-of-concept for expandable messages on the backend using form generation prompt.
 - AI Extension: add create-with-voice beta extension
+- AI Extension: Enhance blocks parsing flickering with child blocks
 - Launchpad save modal: persist the user option when they opt to hide the modal
 - Link styles and scripts to block.json automatically
 - Render Subscriptions block on emails
@@ -26,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update the way we fetch the current theme's stylesheet to build site editor link.
+- Only allow administrators the ability to modify products.
 - Payment Button Block: remove "Mark this payment plan as a donation" toggle.
 - Paywall: Add tracks to emails
 - Stats: add sticker tests to override `is_commercial`
