@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Launchpad save modal: persist the user option when they opt to hide the modal
 - Link styles and scripts to block.json automatically
 - Subscribers: Add edit link for subscribe modal.
+- WordPress.com Toolbar: Add Site Monitoring menu and remove Site Logs
 
 ### Bug fixes
 - Blocks: use custom Facebook and Instagram icons in Jetpack's Facebook and Instagram blocks to avoid issues in accessibility inspector.
