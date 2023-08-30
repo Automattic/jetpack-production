@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix block icons for display on wp.org
 - Launchpad modal: reduce API calls for modal dismiss flag
 - Nav Unification: flips order of tags and categories submenu of posts.
+- Subscriptions: Add subscribe modal mobile padding.
 - Subscriptions: Hide modal if paywall block exists.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
