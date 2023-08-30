@@ -10,11 +10,15 @@ This is an alpha version! The changes listed here are not final.
 - Add wpcom_newsletter_categories_enabled site option
 - AI Assistant: Proof-of-concept for expandable messages on the backend using form generation prompt.
 - AI Extension: add create-with-voice beta extension
+- AI Extension: Enhance blocks parsing flickering with child blocks
 - Launchpad save modal: persist the user option when they opt to hide the modal
 - Link styles and scripts to block.json automatically
 - Render Subscriptions block on emails
 - Subscribers: Add edit link for subscribe modal.
 - WordPress.com Toolbar: Add Site Monitoring menu and remove Site Logs
+
+### Improved compatibility
+- General: Jetpack now requires WordPress version 6.2.
 
 ### Bug fixes
 - Blocks: use custom Facebook and Instagram icons in Jetpack's Facebook and Instagram blocks to avoid issues in accessibility inspector.
