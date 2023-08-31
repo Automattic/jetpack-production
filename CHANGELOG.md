@@ -35,6 +35,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update the way we fetch the current theme's stylesheet to build site editor link.
+- Masterbar: removes submenu items of Reader link in the masterbar. This makes the Reader link
+  directly to the WordPress.com reader instead of opening a popout menu
 - Only allow administrators the ability to modify products.
 - Payment Button Block: remove "Mark this payment plan as a donation" toggle.
 - Paywall: Add tracks to emails
