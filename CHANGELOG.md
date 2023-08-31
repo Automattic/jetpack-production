@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Tweak subscribe modal text/spacing.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Connected Account: Update membership product type comment
 - Dashboard: update the way we fetch the current theme's stylesheet to build site editor link.
 - Masterbar: removes submenu items of Reader link in the masterbar. This makes the Reader link
   directly to the WordPress.com reader instead of opening a popout menu
