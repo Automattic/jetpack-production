@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Enhance blocks parsing flickering with child blocks
 - AI Extension: introduce Create with voice jetpack block - initial implementation
 - Create with voice: connect block with useMediaRecording() hook
+- Create with voice: introduce Done button
 - Create with voice: set block properties by using useBlockProps() custom hook
 - Launchpad save modal: persist the user option when they opt to hide the modal
 - Link styles and scripts to block.json automatically
