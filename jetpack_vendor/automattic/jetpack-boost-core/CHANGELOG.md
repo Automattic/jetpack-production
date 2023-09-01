@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Fix showing default error message and code when parsing cloud response.
+
 ## [0.1.1] - 2023-08-28
 ### Changed
 - Updated package dependencies. [#32605]
@@ -13,4 +20,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Introduce new package. [#31163]
 
+[0.1.2-alpha]: https://github.com/Automattic/jetpack-boost-core/compare/v0.1.1...v0.1.2-alpha
 [0.1.1]: https://github.com/Automattic/jetpack-boost-core/compare/v0.1.0...v0.1.1
