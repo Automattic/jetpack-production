@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Launchpad save modal: persist the user option when they opt to hide the modal
 - Link styles and scripts to block.json automatically
 - Paywall: Better content for when waiting for email validation.
+- Paywall block: Improved settings panel
 - Paywall Block: Improved toolbar
 - Render Subscriptions block on emails
 - Subscribers: Add edit link for subscribe modal.
