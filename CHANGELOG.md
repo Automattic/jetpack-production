@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Create with voice: connect block with useMediaRecording() hook
 - Create with voice: introduce Done button
 - Create with voice: set block properties by using useBlockProps() custom hook
+- Fix a potential bug.
 - Launchpad save modal: persist the user option when they opt to hide the modal
 - Link styles and scripts to block.json automatically
 - Paywall: Better content for when waiting for email validation.
