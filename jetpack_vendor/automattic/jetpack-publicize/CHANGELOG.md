@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Changed logic that disables the connections based on the auto-conversion feature
 - Updated option name
 
 ## [0.35.0] - 2023-08-23
