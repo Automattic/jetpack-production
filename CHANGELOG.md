@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - General: Jetpack now requires WordPress version 6.2.
 
 ### Bug fixes
+- AI Extension: Remove HTML fragments from AI-generated forms on site editor
 - Blocks: use custom Facebook and Instagram icons in Jetpack's Facebook and Instagram blocks to avoid issues in accessibility inspector.
 - Comments: remove mention of Twitter as a log in option since it is no longer available.
 - Fix block icons for display on wp.org
