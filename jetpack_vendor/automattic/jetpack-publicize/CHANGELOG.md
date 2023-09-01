@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Changed logic that disables the connections based on the auto-conversion feature
 - Updated option name
+- Updated package dependencies.
 
 ## [0.35.0] - 2023-08-23
 ### Added

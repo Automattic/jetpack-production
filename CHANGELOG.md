@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Payment Button Block: remove "Mark this payment plan as a donation" toggle.
 - Paywall: Add tracks to emails
 - Stats: add sticker tests to override `is_commercial`
+- Updated package dependencies.
 
 ## 12.6-a.1 - 2023-08-28
 ### Enhancements
