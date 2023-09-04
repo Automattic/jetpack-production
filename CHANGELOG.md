@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Paywall Block: better excerpts handling
+
 ### Bug fixes
 - Fix cookie consent block positioning in the editor
 
