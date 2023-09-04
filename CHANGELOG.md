@@ -2,57 +2,62 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.6-a.2 - unreleased
+## 12.6-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- Add blogroll item block
-- Add wpcom_newsletter_categories_enabled site option
-- AI Assistant: Proof-of-concept for expandable messages on the backend using form generation prompt.
-- AI Extension: add create-with-voice beta extension
-- AI Extension: Enhance blocks parsing flickering with child blocks
-- AI Extension: introduce Create with voice jetpack block - initial implementation
-- Create with voice: connect block with useMediaRecording() hook
-- Create with voice: introduce Done button
-- Create with voice: set block properties by using useBlockProps() custom hook
-- Fix a potential bug.
-- Launchpad save modal: persist the user option when they opt to hide the modal
-- Link styles and scripts to block.json automatically
-- Paywall: Better content for when waiting for email validation.
-- Paywall block: Improved settings panel
-- Paywall Block: Improved toolbar
-- Render Subscriptions block on emails
-- Subscribers: Add edit link for subscribe modal.
-- WordPress.com Toolbar: Add Site Monitoring menu and remove Site Logs
-
-### Improved compatibility
-- General: Jetpack now requires WordPress version 6.2.
-
 ### Bug fixes
-- AI Extension: Remove HTML fragments from AI-generated forms on site editor
-- Blocks: use custom Facebook and Instagram icons in Jetpack's Facebook and Instagram blocks to avoid issues in accessibility inspector.
-- Comments: remove mention of Twitter as a log in option since it is no longer available.
-- Fix block icons for display on wp.org
 - Fix cookie consent block positioning in the editor
-- Launchpad modal: reduce API calls for modal dismiss flag
-- Nav Unification: flips order of tags and categories submenu of posts.
-- Subscriptions: Add subscribe modal mobile padding.
-- Subscriptions: Hide modal if paywall block exists.
-- Subscriptions: Tweak subscribe modal text/spacing.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Connected Account: Update membership product type comment
-- Dashboard: update the way we fetch the current theme's stylesheet to build site editor link.
 - fix copy
+
+## 12.6-a.3 - 2023-09-04
+### Enhancements
+- Add blogroll item block. [#32746]
+- Add wpcom_newsletter_categories_enabled site option. [#32569]
+- AI Assistant: proof-of-concept for expandable messages on the backend using form generation prompt. [#32679]
+- AI Extension: add create-with-voice beta extension. [#32742]
+- AI Extension: enhance blocks parsing flickering with child blocks. [#32635]
+- AI Extension: introduce Create with voice jetpack block - initial implementation. [#32750]
+- Create with voice: connect block with useMediaRecording() hook. [#32769]
+- Create with voice: introduce Done button. [#32792]
+- Create with voice: set block properties by using useBlockProps() custom hook. [#32782]
+- Fix a potential bug. [#32768]
+- Launchpad save modal: persist the user option when they opt to hide the modal. [#32567]
+- Link styles and scripts to block.json automatically. [#32720]
+- Paywall: better content for when waiting for email validation. [#32800]
+- Paywall block: improved settings panel. [#32801]
+- Paywall Block: improved toolbar. [#32765]
+- Render Subscriptions block on emails. [#32409]
+- Subscribers: add edit link for subscribe modal. [#32722]
+- WordPress.com Toolbar: add site monitoring menu and remove site logs. [#32458]
+
+### Improved compatibility
+- General: Jetpack now requires WordPress version 6.2. [#32762]
+
+### Bug fixes
+- AI Extension: remove HTML fragments from AI-generated forms on site editor. [#32798]
+- Blocks: use custom Facebook and Instagram icons in Jetpack's Facebook and Instagram blocks to avoid issues in accessibility inspector. [#32705]
+- Comments: remove mention of Twitter as a log in option since it is no longer available. [#32717]
+- Fix block icons for display on wp.org. [#32754]
+- Launchpad modal: reduce API calls for modal dismiss flag. [#32751]
+- Nav Unification: flips order of tags and categories submenu of posts. [#32619]
+- Subscriptions: add subscribe modal mobile padding. [#32725]
+- Subscriptions: hide modal if paywall block exists. [#32757]
+- Subscriptions: tweak subscribe modal text/spacing. [#32724]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Connected Account: update membership product type comment. [#32678]
+- Dashboard: update the way we fetch the current theme's stylesheet to build site editor link. [#32744]
 - Masterbar: removes submenu items of Reader link in the masterbar. This makes the Reader link
-  directly to the WordPress.com reader instead of opening a popout menu
-- minor copy change
-- Only allow administrators the ability to modify products.
-- Payment Button Block: remove "Mark this payment plan as a donation" toggle.
-- Paywall: Add tracks to emails
-- Stats: add sticker tests to override `is_commercial`
-- Updated package dependencies.
+  directly to the WordPress.com reader instead of opening a popout menu. [#32763]
+- Minor copy change. [#32797]
+- Only allow administrators the ability to modify products. [#32699]
+- Payment Button Block: remove "Mark this payment plan as a donation" toggle. [#32529]
+- Paywall: Add tracks to emails. [#32713]
+- Stats: add sticker tests to override `is_commercial`. [#32758]
+- Updated package dependencies. [#32803, #32804]
 
 ## 12.6-a.1 - 2023-08-28
 ### Enhancements
