@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: use custom Facebook and Instagram icons in Jetpack's Facebook and Instagram blocks to avoid issues in accessibility inspector.
 - Comments: remove mention of Twitter as a log in option since it is no longer available.
 - Fix block icons for display on wp.org
+- Fix cookie consent block positioning in the editor
 - Launchpad modal: reduce API calls for modal dismiss flag
 - Nav Unification: flips order of tags and categories submenu of posts.
 - Subscriptions: Add subscribe modal mobile padding.
