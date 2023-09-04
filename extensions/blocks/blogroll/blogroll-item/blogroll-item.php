@@ -2,7 +2,7 @@
 /**
  * Blogroll Item Block.
  *
- * @since 12.6-a.2
+ * @since 12.6
  *
  * @package automattic/jetpack
  */
