@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix cookie consent block positioning in the editor
+- Subscriptions: Hide modal if post is subscribers-onnl
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - fix copy
