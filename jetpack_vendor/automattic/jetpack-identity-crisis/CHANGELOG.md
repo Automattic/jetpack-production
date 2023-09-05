@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.4-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- General: remove WP 6.1 backwards compatibility checks
+
 ## [0.10.3] - 2023-09-04
 ### Changed
 - Updated package dependencies. [#32803]
@@ -405,6 +412,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Use Connection/Urls for home_url and site_url functions migrated from Sync.
 
+[0.10.4-alpha]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.10.3...v0.10.4-alpha
 [0.10.3]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.10.2...v0.10.3
 [0.10.2]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.10.1...v0.10.2
 [0.10.1]: https://github.com/Automattic/jetpack-identity-crisis/compare/v0.10.0...v0.10.1

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.17.5-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- General: remove WP 6.1 backwards compatibility checks
+
 ## [1.17.4] - 2023-09-04
 ### Changed
 - Updated package dependencies. [#32803]
@@ -478,6 +485,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
+[1.17.5-alpha]: https://github.com/Automattic/jetpack-backup/compare/v1.17.4...v1.17.5-alpha
 [1.17.4]: https://github.com/Automattic/jetpack-backup/compare/v1.17.3...v1.17.4
 [1.17.3]: https://github.com/Automattic/jetpack-backup/compare/v1.17.2...v1.17.3
 [1.17.2]: https://github.com/Automattic/jetpack-backup/compare/v1.17.1...v1.17.2
