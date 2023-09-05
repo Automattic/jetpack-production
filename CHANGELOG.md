@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- ContentLens: add `ai-content-lens` beta extension
 - Create with voice: show audio duration when recording audio
 - Paywall Block: better excerpts handling
 
