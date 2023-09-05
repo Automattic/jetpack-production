@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - ContentLens: add `ai-content-lens` beta extension
+- Content Lens: replace core post excerpt with AI Post Excerpt
 - Create with voice: show audio duration when recording audio
 - Paywall Block: better excerpts handling
 
