@@ -31,7 +31,7 @@
 		"automattic/jetpack-google-fonts-provider": "^0.5.4-alpha",
 		"automattic/jetpack-identity-crisis": "^0.10.4-alpha",
 		"automattic/jetpack-image-cdn": "^0.2.4",
-		"automattic/jetpack-import": "^0.7.2",
+		"automattic/jetpack-import": "^0.7.3-alpha",
 		"automattic/jetpack-ip": "^0.1.5",
 		"automattic/jetpack-jitm": "^2.3.18",
 		"automattic/jetpack-lazy-images": "^2.1.45",
