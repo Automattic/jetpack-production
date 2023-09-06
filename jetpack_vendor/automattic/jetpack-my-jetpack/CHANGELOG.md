@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - General: remove WP 6.1 backwards compatibility checks
 
+### Fixed
+- Stats: stop showing upgrade button for sites with Complete plan
+
 ## [3.4.3] - 2023-09-04
 ### Changed
 - Updated package dependencies. [#32803]
