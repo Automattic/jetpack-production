@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - General: remove WP 6.1 backwards compatibility checks
 
+### Fixed
+- Ensures the appropriate scripts are enqueued to support private VideoPress videos rendered by the VideoPress Divi module
+
 ## [0.15.2] - 2023-09-04
 ### Changed
 - Updated package dependencies. [#32803]
