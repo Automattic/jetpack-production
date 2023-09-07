@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: show notice when request fails
 - ContentLens: add `ai-content-lens` beta extension
 - Content Lens: connect excerpt panel with AI Assistant
+- Content Lens: pass post content when requesting post excerpt
 - Content Lens: replace core post excerpt with AI Post Excerpt
 - Create with voice: show audio duration when recording audio
 - Enable block registration by specifying block.json path
