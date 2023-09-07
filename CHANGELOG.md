@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: add Diacard button to the panel
 - AI Excerpt: add `Accept` button
 - AI Excerpt: connect UI with data layer
+- AI Excerpt: disable Generate button
 - AI Excerpt: show excerpt number of words
 - AI Excerpt: show notice when request fails
 - ContentLens: add `ai-content-lens` beta extension
