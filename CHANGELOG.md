@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - fix copy
 - fix link
 - Restore some Requests library v1 back-compat code, apparently WordPress.com Simple skipped that part of their update to WP 6.2.
+- Updated spelling of the Akismet product
 
 ## 12.6-a.3 - 2023-09-04
 ### Enhancements
