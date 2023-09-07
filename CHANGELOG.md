@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: add `Accept` button
 - AI Excerpt: connect UI with data layer
 - AI Excerpt: show excerpt number of words
+- AI Excerpt: show notice when request fails
 - ContentLens: add `ai-content-lens` beta extension
 - Content Lens: connect excerpt panel with AI Assistant
 - Content Lens: replace core post excerpt with AI Post Excerpt
