@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Enable block registration by specifying block.json path
 - Paywall: Add login link
 - Paywall Block: better excerpts handling
+- Utilize the Jetpack Admin UI package for handling the Akismet menu
 
 ### Improved compatibility
 - General: remove WP 6.1 backwards compatibility checks.
