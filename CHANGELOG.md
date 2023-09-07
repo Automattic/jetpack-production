@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - General: remove WP 6.1 backwards compatibility checks.
 
 ### Bug fixes
+- Allow two year plans to show on the My Plan page
 - Fix cookie consent block positioning in the editor
 - Subscriptions: Hide modal if post is subscribers-onnl
 
