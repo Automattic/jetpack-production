@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Excerpt: connect UI with data layer
 - AI Excerpt: show excerpt number of words
 - ContentLens: add `ai-content-lens` beta extension
 - Content Lens: connect excerpt panel with AI Assistant
