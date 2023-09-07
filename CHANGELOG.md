@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: show excerpt number of words
 - AI Excerpt: show notice when request fails
 - AI Excerpt: show upgrade banner when site achieves requests limit
+- Blogroll Beta block under construction
 - ContentLens: add `ai-content-lens` beta extension
 - Content Lens: connect excerpt panel with AI Assistant
 - Content Lens: pass post content when requesting post excerpt
