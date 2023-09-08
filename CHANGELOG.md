@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Content Lens: replace core post excerpt with AI Post Excerpt
 - Create with voice: show audio duration when recording audio
 - Enable block registration by specifying block.json path
+- Featured images fallback: add srcset
 - Paywall: Add login link
 - Paywall Block: better excerpts handling
 - Utilize the Jetpack Admin UI package for handling the Akismet menu
