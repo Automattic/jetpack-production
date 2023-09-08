@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added the change setting feature in Social for the auto conversion feature
 - Adds support for newsletter categories
 - AI Excerpt: add Diacard button to the panel
 - AI Excerpt: add `Accept` button
