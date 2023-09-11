@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: the extension isn't properly supported by P2 sites. Disable for now.
 - Check if VideoPress module is active in order to register the VideoPress video block
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added to-test.md entries for 12.6.
+
 ## 12.6-a.5 - 2023-09-11
 ### Enhancements
 - Added the change setting feature in Social for the auto conversion feature. [#32712]
