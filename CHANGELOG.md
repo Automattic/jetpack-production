@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Allow two year plans to show on the My Plan page
+- Calypsoify module: remove styles that conflict with WordPress.com
 - Fix cookie consent block positioning in the editor
 - Fixed an issue that caused the notice displayed when updating widgets to overlap the admin menu
 - Revert change where newsletter plans could not be used on Premium content
