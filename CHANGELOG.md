@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - General: remove WP 6.1 backwards compatibility checks.
+- SAL: prevent a potential undefined function error
 
 ### Bug fixes
 - Allow two year plans to show on the My Plan page
