@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: disable Generate button
 - AI Excerpt: do not disable Genertate button when there is a request error
 - AI Excerpt: ensure to save the post before to ask a suggestion
+- AI Excerpt: pick and pass raw post content to the server side
 - AI Excerpt: show excerpt number of words
 - AI Excerpt: show notice when request fails
 - AI Excerpt: show upgrade banner when site achieves requests limit
