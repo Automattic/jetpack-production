@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - SAL: prevent a potential undefined function error
 
 ### Bug fixes
+- AI Excerpt: the extension isn't properly supported by P2 sites. Disable for now.
 - Allow two year plans to show on the My Plan page
 - Calypsoify module: remove styles that conflict with WordPress.com
 - Fix cookie consent block positioning in the editor
