@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added the change setting feature in Social for the auto conversion feature
+- Add newsletter categories to the subscription block content view.
 - Adds support for newsletter categories
 - ai-chat block: Ability to chat with the site.
 - AI Excerpt: add Diacard button to the panel
