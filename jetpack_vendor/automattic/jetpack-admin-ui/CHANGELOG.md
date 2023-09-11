@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.22-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.2.22] - 2023-09-11
 ### Fixed
-- Akismet: update naming to common form
+- Akismet: update naming to common form [#32908]
 
 ## [0.2.21] - 2023-08-23
 ### Changed
@@ -119,7 +116,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing menu visibility issues.
 
-[0.2.22-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.21...0.2.22-alpha
+[0.2.22]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.21...0.2.22
 [0.2.21]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.20...0.2.21
 [0.2.20]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.19...0.2.20
 [0.2.19]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.18...0.2.19

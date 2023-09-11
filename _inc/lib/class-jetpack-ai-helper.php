@@ -106,7 +106,7 @@ class Jetpack_AI_Helper {
 		/**
 		 * Filter whether the AI chat feature is enabled in the Jetpack plugin.
 		 *
-		 * @since 12.6-a.4
+		 * @since 12.6
 		 *
 		 * @param bool $default Is AI chat enabled? Defaults to false.
 		 */

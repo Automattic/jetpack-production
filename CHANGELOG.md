@@ -2,59 +2,64 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.6-a.4 - unreleased
+## 12.6-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Added the change setting feature in Social for the auto conversion feature
 - Add newsletter categories to the subscription block content view.
-- Adds support for newsletter categories
-- ai-chat block: Ability to chat with the site.
-- AI Excerpt: add Diacard button to the panel
-- AI Excerpt: add `Accept` button
-- AI Excerpt: connect UI with data layer
-- AI Excerpt: disable Generate button
-- AI Excerpt: do not disable Genertate button when there is a request error
-- AI Excerpt: ensure to save the post before to ask a suggestion
-- AI Excerpt: pick and pass raw post content to the server side
-- AI Excerpt: re enable generate button when options change
-- AI Excerpt: show excerpt number of words
-- AI Excerpt: show notice when request fails
-- AI Excerpt: show upgrade banner when site achieves requests limit
-- Blogroll Beta block under construction
-- ContentLens: add `ai-content-lens` beta extension
-- Content Lens: connect excerpt panel with AI Assistant
-- Content Lens: pass post content when requesting post excerpt
-- Content Lens: replace core post excerpt with AI Post Excerpt
-- Create with voice: show audio duration when recording audio
-- Enable block registration by specifying block.json path
-- Featured images fallback: add srcset
-- Paywall: Add login link
-- Paywall Block: better excerpts handling
-- Utilize the Jetpack Admin UI package for handling the Akismet menu
-
-### Improved compatibility
-- General: remove WP 6.1 backwards compatibility checks.
-- SAL: prevent a potential undefined function error
 
 ### Bug fixes
 - AI Excerpt: the extension isn't properly supported by P2 sites. Disable for now.
-- Allow two year plans to show on the My Plan page
-- Calypsoify module: remove styles that conflict with WordPress.com
-- Fix cookie consent block positioning in the editor
-- Fixed an issue that caused the notice displayed when updating widgets to overlap the admin menu
-- Revert change where newsletter plans could not be used on Premium content
-- Subscriptions: Hide modal if post is subscribers-onnl
+
+## 12.6-a.5 - 2023-09-11
+### Enhancements
+- Added the change setting feature in Social for the auto conversion feature. [#32712]
+- Adds support for newsletter categories. [#32666]
+- ai-chat block: Ability to chat with the site. [#32741]
+- AI Excerpt: add Diacard button to the panel. [#32890]
+- AI Excerpt: add `Accept` button. [#32889]
+- AI Excerpt: connect UI with data layer. [#32875]
+- AI Excerpt: disable Generate button. [#32924]
+- AI Excerpt: do not disable Genertate button when there is a request error. [#32927]
+- AI Excerpt: ensure to save the post before to ask a suggestion. [#32891]
+- AI Excerpt: pick and pass raw post content to the server side. [#32939]
+- AI Excerpt: re enable generate button when options change. [#32943]
+- AI Excerpt: show excerpt number of words. [#32881]
+- AI Excerpt: show notice when request fails. [#32917]
+- AI Excerpt: show upgrade banner when site achieves requests limit. [#32895]
+- Blogroll Beta block under construction. [#32848]
+- ContentLens: add `ai-content-lens` beta extension. [#32847]
+- Content Lens: connect excerpt panel with AI Assistant. [#32846]
+- Content Lens: pass post content when requesting post excerpt. [#32920]
+- Content Lens: replace core post excerpt with AI Post Excerpt. [#32845]
+- Create with voice: show audio duration when recording audio. [#32827]
+- Enable block registration by specifying block.json path. [#32697]
+- Featured images fallback: add srcset. [#32824]
+- Paywall: Add login link. [#32849]
+- Paywall Block: better excerpts handling. [#32809]
+- Utilize the Jetpack Admin UI package for handling the Akismet menu. [#32911]
+
+### Improved compatibility
+- General: remove WP 6.1 backwards compatibility checks. [#32772]
+- SAL: prevent a potential undefined function error. [#32962]
+
+### Bug fixes
+- Allow two year plans to show on the My Plan page. [#32904]
+- Calypsoify module: remove styles that conflict with WordPress.com. [#32919]
+- Fix cookie consent block positioning in the editor. [#32622]
+- Fixed an issue that caused the notice displayed when updating widgets to overlap the admin menu. [#32921]
+- Revert change where newsletter plans could not be used on Premium content. [#32850]
+- Subscriptions: Hide modal if post is subscribers-only. [#32867]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- fix copy
-- fix link
-- Paywall: magic link to all users
-- Resolves an undefined key error on sites with uploaded media without file extensions.
-- Restore some Requests library v1 back-compat code, apparently WordPress.com Simple skipped that part of their update to WP 6.2.
-- Updated package dependencies.
-- Updated spelling of the Akismet product
+- Fix copy. [#32813]
+- Fix link. [#32887]
+- Paywall: magic link to all users. [#32941]
+- Resolves an undefined key error on sites with uploaded media without file extensions. [#32961]
+- Restore some Requests library v1 back-compat code, apparently WordPress.com Simple skipped that part of their update to WP 6.2. [#32894]
+- Updated package dependencies. [#32966]
+- Updated spelling of the Akismet product. [#32908]
 
 ## 12.6-a.3 - 2023-09-04
 ### Enhancements
