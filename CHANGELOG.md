@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI Excerpt: the extension isn't properly supported by P2 sites. Disable for now.
+- Check if VideoPress module is active in order to register the VideoPress video block
 
 ## 12.6-a.5 - 2023-09-11
 ### Enhancements
