@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall: magic link to all users
 - Resolves an undefined key error on sites with uploaded media without file extensions.
 - Restore some Requests library v1 back-compat code, apparently WordPress.com Simple skipped that part of their update to WP 6.2.
+- Updated package dependencies.
 - Updated spelling of the Akismet product
 
 ## 12.6-a.3 - 2023-09-04
