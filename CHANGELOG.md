@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add newsletter categories to the subscription block content view.
 
+### Improved compatibility
+- Introduce WPCOM compatibility for AI-Chat
+
 ### Bug fixes
 - AI Excerpt: the extension isn't properly supported by P2 sites. Disable for now.
 
