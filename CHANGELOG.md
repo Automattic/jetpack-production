@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add newsletter categories to the subscription block content view.
+- AI Extension: Only show input automatically for empty forms
 
 ### Improved compatibility
 - Introduce WPCOM compatibility for AI-Chat
