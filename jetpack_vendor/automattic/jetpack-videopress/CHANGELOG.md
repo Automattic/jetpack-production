@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Defer assets enqueuing for non block themes as those seem to be loading the assets on every page
 - Updated package dependencies.
 
+### Fixed
+- Add bi-yearly constants for complete and videopress in config
+
 ## [0.15.3] - 2023-09-11
 ### Changed
 - General: remove WP 6.1 backwards compatibility checks [#32772]
