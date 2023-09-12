@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Defer assets enqueuing for non block themes as those seem to be loading the assets on every page
+- Updated package dependencies.
 
 ## [0.15.3] - 2023-09-11
 ### Changed
