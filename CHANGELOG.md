@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add newsletter categories to the subscription block content view.
 - AI Assistant: register ai-assistant-backend-prompts beta extension.
+- AI Assistant: Remove upgrade button when user is not administrator
 - AI Excerpt: re-enable AI Excerpt panel
 - AI Excerpt: remove core Excerpt panel when registering the AI Excerpt one
 - AI Extension: import libraries from @wordpress/element package
