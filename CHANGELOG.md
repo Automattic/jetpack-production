@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: re-enable AI Excerpt panel
 - AI Excerpt: remove core Excerpt panel when registering the AI Excerpt one
 - AI Excerpt: stop and reset suggestions request once the panel gets hidden
+- AI Extension: extened only Jetpack Form blocks with AI Data
 - AI Extension: import libraries from @wordpress/element package
 - AI Extension: Only show input automatically for empty forms
 - Point the Site Editor's `<` link to the theme showcase when previewing a theme.
