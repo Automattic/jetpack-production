@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add newsletter categories to the subscription block content view.
 - AI Excerpt: re-enable AI Excerpt panel
 - AI Extension: Only show input automatically for empty forms
+- Point the Site Editor's `<` link to the theme showcase when previewing a theme.
 
 ### Improved compatibility
 - Introduce WPCOM compatibility for AI-Chat
