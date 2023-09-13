@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Point the Site Editor's `<` link to the theme showcase when previewing a theme.
 
 ### Improved compatibility
+- Carousel: add new hook allowing third-parties to customize the metadata displayed within the Carousel modal.
 - Introduce WPCOM compatibility for AI-Chat
 
 ### Bug fixes
