@@ -35,7 +35,7 @@
 		"automattic/jetpack-import": "^0.7.3",
 		"automattic/jetpack-ip": "^0.1.5",
 		"automattic/jetpack-jitm": "^2.3.18",
-		"automattic/jetpack-lazy-images": "^2.1.45",
+		"automattic/jetpack-lazy-images": "^2.2.0-alpha",
 		"automattic/jetpack-licensing": "^1.8.3",
 		"automattic/jetpack-logo": "^1.6.2",
 		"automattic/jetpack-my-jetpack": "^3.4.5",
