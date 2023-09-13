@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add newsletter categories to the subscription block content view.
 - AI Assistant: register ai-assistant-backend-prompts beta extension.
 - AI Excerpt: re-enable AI Excerpt panel
+- AI Excerpt: remove core Excerpt panel when registering the AI Excerpt one
 - AI Extension: import libraries from @wordpress/element package
 - AI Extension: Only show input automatically for empty forms
 - Point the Site Editor's `<` link to the theme showcase when previewing a theme.
