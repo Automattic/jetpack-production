@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: import libraries from @wordpress/element package
 - AI Extension: Only show input automatically for empty forms
 - Classic Editor Markdown: add support for double-tilde strikethrough, e.g. ~~strikethrough~~
+- Jetpack Assistant: Add fancy placeholder UX for the prompt input.
 - Move the feature of changing backlink into mu-wpcom
 - Point the Site Editor's `<` link to the theme showcase when previewing a theme.
 - Refactor Business Hours block registration to avoid duplication
