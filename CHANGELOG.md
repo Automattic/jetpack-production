@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add language reminder to action prompts
 - AI Assistant: register ai-assistant-backend-prompts beta extension.
 - AI Assistant: Remove upgrade button when user is not administrator
+- AI Assistant: Use backend prompts for the "Generate feedback" feature.
 - AI Excerpt: re-enable AI Excerpt panel
 - AI Excerpt: remove core Excerpt panel when registering the AI Excerpt one
 - AI Excerpt: stop and reset suggestions request once the panel gets hidden
