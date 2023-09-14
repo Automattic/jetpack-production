@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: extened only Jetpack Form blocks with AI Data
 - AI Extension: import libraries from @wordpress/element package
 - AI Extension: Only show input automatically for empty forms
+- Move the feature of changing backlink into mu-wpcom
 - Point the Site Editor's `<` link to the theme showcase when previewing a theme.
 
 ### Improved compatibility
