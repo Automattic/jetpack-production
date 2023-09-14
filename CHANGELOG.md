@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added prompt override for the chat-with-a-blog feature
 - Add newsletter categories to the subscription block content view.
 - AI Assistant: Add language reminder to action prompts
+- AI Assistant: Change conditions to show AI guidelines on input
 - AI Assistant: register ai-assistant-backend-prompts beta extension.
 - AI Assistant: Remove upgrade button when user is not administrator
 - AI Assistant: Use backend prompts for the "Generate feedback" feature.
