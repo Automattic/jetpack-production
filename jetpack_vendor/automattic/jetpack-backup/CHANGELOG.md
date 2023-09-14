@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Updated Jetpack submenu sort order so individual features are alpha-sorted.
 - Updated package dependencies.
 
 ## [1.17.5] - 2023-09-11

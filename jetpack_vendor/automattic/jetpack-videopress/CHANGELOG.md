@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - This reverts changes introduced by d5ca47d8de53df832e67ac8b9d6bda3663c3e8df as we discovered an issue with P2s
+- Updated Jetpack submenu sort order so individual features are alpha-sorted.
 
 ## [0.16.0] - 2023-09-13
 ### Changed

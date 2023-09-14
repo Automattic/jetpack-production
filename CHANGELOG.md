@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: add new hook allowing third-parties to customize the metadata displayed within the Carousel modal.
 - Discourage enabling of Lazy loading images as now 90% of browser support the feature natively and this version in Jetpack can conflict with the upcoming WordPress interactivity API'
 - Introduce WPCOM compatibility for AI-Chat
+- Stats: utilize the modern Admin_UI package so the Jetpack submenu can be alpha-sorted.
 
 ### Bug fixes
 - AI Excerpt: the extension isn't properly supported by P2 sites. Disable for now.
