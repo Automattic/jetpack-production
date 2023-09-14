@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: the extension isn't properly supported by P2 sites. Disable for now.
 - Check if VideoPress module is active in order to register the VideoPress video block
 - Fix AI Chat block styles not loading
+- Fix Blogroll block icon
 - Fix issue with Danish Krone in donation block
 - Paywall Block: fix autosave
 
