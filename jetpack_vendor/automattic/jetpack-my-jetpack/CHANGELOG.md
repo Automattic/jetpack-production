@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Added support for upgradable products. Updated the Stats card  to handle upgradeable products.
 - Updated Jetpack submenu sort order so individual features are alpha-sorted.
 
+### Fixed
+- My Jetpack: Add AI Assistant Monthly to required plan check
+
 ## [3.4.5] - 2023-09-13
 ### Changed
 - Updated package dependencies. [#33001]
