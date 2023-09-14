@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add function to get path to block metadata file
+- Helper to get a block's feature name
 
 ## [1.5.0] - 2023-09-11
 ### Added

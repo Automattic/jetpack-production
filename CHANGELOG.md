@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Move the feature of changing backlink into mu-wpcom
 - Point the Site Editor's `<` link to the theme showcase when previewing a theme.
 - Refactor Business Hours block registration to avoid duplication
+- Register beta blocks by specifying path to block.json
 
 ### Improved compatibility
 - Carousel: add new hook allowing third-parties to customize the metadata displayed within the Carousel modal.
