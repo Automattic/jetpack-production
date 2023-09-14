@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Fixed deprecation notice in PHP 8.2.
+
 ## [0.2.1] - 2023-08-28
 ### Added
 - Add boost speed score history endpoint [#32016]
