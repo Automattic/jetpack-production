@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: register ai-assistant-backend-prompts beta extension.
 - AI Assistant: Remove upgrade button when user is not administrator
 - AI Assistant: Use backend prompts for the "Generate feedback" feature.
+- AI Excerpt: add a fallback for ToggleGroupControl components
 - AI excerpt: add AI Settings toggle button to control
 - AI Excerpt: add language and tone to AI setting toggle control
 - AI Excerpt: re-enable AI Excerpt panel
