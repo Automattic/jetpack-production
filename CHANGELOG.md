@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Carousel: add new hook allowing third-parties to customize the metadata displayed within the Carousel modal.
+- Change the text color of selected newsletter categories to be more easily readable.
 - Discourage enabling of Lazy loading images as now 90% of browser support the feature natively and this version in Jetpack can conflict with the upcoming WordPress interactivity API'
 - Introduce WPCOM compatibility for AI-Chat
 - Stats: utilize the modern Admin_UI package so the Jetpack submenu can be alpha-sorted.
