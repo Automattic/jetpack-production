@@ -32,13 +32,6 @@
         }
     },
     "attributes": {
-        "recommendations": {
-            "type": "array",
-            "items": {
-                "type": "object"
-            },
-            "default": []
-        },
         "show_avatar": {
             "type": "boolean",
             "default": true
@@ -63,6 +56,12 @@
             "type": "boolean",
             "default": true
         }
+    },
+    "providesContext": {
+        "showAvatar": "show_avatar",
+        "showDescription": "show_description",
+        "showSubscribeButton": "show_subscribe_button",
+        "openLinksNewWindow": "open_links_new_window"
     },
     "editorScript": "file:../editor-beta.js",
     "editorStyle": "file:../editor-beta.css",
