@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Classic Editor Notices: do not display Twitter in post-publish message.
+- Publicize: Ensure that the auto-conversion setting is enabled by default
 
 ## [0.36.0] - 2023-09-04
 ### Changed
