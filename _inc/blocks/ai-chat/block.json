@@ -27,6 +27,10 @@
         "askButtonLabel": {
             "type": "string",
             "default": "Ask"
+        },
+        "placeholder": {
+            "type": "string",
+            "default": "Ask a question about this site"
         }
     },
     "editorScript": "file:../editor-beta.js",
