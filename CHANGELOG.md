@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Point the Site Editor's `<` link to the theme showcase when previewing a theme.
 - Refactor Business Hours block registration to avoid duplication
 - Register beta blocks by specifying path to block.json
+- Sidebar: Rename the "Inbox" menu to "My Mailboxes".
 - WIP Blogroll block
 
 ### Improved compatibility
