@@ -264,6 +264,7 @@ return array(
     'Automattic\\Jetpack\\Sync\\Modules\\Users' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/modules/class-users.php',
     'Automattic\\Jetpack\\Sync\\Modules\\WP_Super_Cache' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/modules/class-wp-super-cache.php',
     'Automattic\\Jetpack\\Sync\\Modules\\WooCommerce' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/modules/class-woocommerce.php',
+    'Automattic\\Jetpack\\Sync\\Modules\\WooCommerce_HPOS_Orders' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/modules/class-woocommerce-hpos-orders.php',
     'Automattic\\Jetpack\\Sync\\Package_Version' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-package-version.php',
     'Automattic\\Jetpack\\Sync\\Queue' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-queue.php',
     'Automattic\\Jetpack\\Sync\\Queue\\Queue_Storage_Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/sync-queue/class-queue-storage-options.php',

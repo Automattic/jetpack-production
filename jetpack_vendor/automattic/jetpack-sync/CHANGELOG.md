@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Jetpack Sync: Drop Sync custom queue table when Jetpack is disconnected
+- Woo: add HPOS (custom order tables) events to sync module.
 
 ## [1.56.0] - 2023-09-04
 ### Added
