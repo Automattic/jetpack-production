@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: Only show input automatically for empty forms
 - Classic Editor Markdown: add support for double-tilde strikethrough, e.g. ~~strikethrough~~
 - Jetpack Assistant: Add fancy placeholder UX for the prompt input.
+- Jetpack Social: display the Social editor panel with an invitation to activate the feature when it is disabled.
 - Move the feature of changing backlink into mu-wpcom
 - Moving block registration when plugin activated
 - Point the Site Editor's `<` link to the theme showcase when previewing a theme.
