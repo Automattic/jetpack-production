@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Blogroll: Add blog appender site searching
+
 ### Bug fixes
 - AI Chat: Remove extra request in $search->is_active() and only load initial state in editor
 
