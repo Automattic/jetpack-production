@@ -2,76 +2,80 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.6-a.6 - unreleased
+## 12.7-a.0 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adds legacy contact and locked mode options for 100-year plan
+
+## 12.6 - 2023-09-19
 ### Enhancements
-- Added prompt override for the chat-with-a-blog feature
-- Add newsletter categories to the subscription block content view.
-- Add nudges so jetpack ai feature is properly configured
-- Adjust styling and UX of changing the block label. Stop triggering the search from gutenberg
-- AI Assistant: Add error handling when request is too long
-- AI Assistant: Add language reminder to action prompts
-- AI Assistant: Change conditions to show AI guidelines on input
-- AI Assistant: register ai-assistant-backend-prompts beta extension.
-- AI Assistant: Remove upgrade button when user is not administrator
-- AI Assistant: Use backend prompts for the "Generate feedback" feature.
-- AI Excerpt: add a fallback for ToggleGroupControl components
-- AI excerpt: add AI Settings toggle button to control
-- AI Excerpt: add language and tone to AI setting toggle control
-- AI Excerpt: re-enable AI Excerpt panel
-- AI Excerpt: remove core Excerpt panel when registering the AI Excerpt one
-- AI Excerpt: stop and reset suggestions request once the panel gets hidden
-- AI Extension: Avoid empty form state after AI request
-- AI Extension: extened only Jetpack Form blocks with AI Data
-- AI Extension: import libraries from @wordpress/element package
-- AI Extension: Only show input automatically for empty forms
-- Classic Editor Markdown: add support for double-tilde strikethrough, e.g. ~~strikethrough~~
-- Jetpack Assistant: Add fancy placeholder UX for the prompt input.
-- Jetpack Social: display the Social editor panel with an invitation to activate the feature when it is disabled.
-- Move the feature of changing backlink into mu-wpcom
-- Moving block registration when plugin activated
-- Point the Site Editor's `<` link to the theme showcase when previewing a theme.
-- Refactor Business Hours block registration to avoid duplication
-- Register beta blocks by specifying path to block.json
-- Related Posts: make the block available even when the feature has not been activated yet.
-- Security: Blocks: avoid saving invalid block attributes that may appear to other editors on the site.
-- Sidebar: Rename the "Inbox" menu to "My Mailboxes".
-- WIP Blogroll block
+- Added prompt override for the chat-with-a-blog feature [#32994]
+- Add newsletter categories to the subscription block content view. [#32756]
+- Add nudges so jetpack ai feature is properly configured [#33064]
+- Adjust styling and UX of changing the block label. Stop triggering the search from gutenberg [#33178]
+- AI Assistant: Add error handling when request is too long [#33157]
+- AI Assistant: Add language reminder to action prompts [#32814]
+- AI Assistant: Change conditions to show AI guidelines on input [#33084]
+- AI Assistant: register ai-assistant-backend-prompts beta extension. [#33017]
+- AI Assistant: Remove upgrade button when user is not administrator [#33015]
+- AI Assistant: Use backend prompts for the "Generate feedback" feature. [#33052]
+- AI Excerpt: add a fallback for ToggleGroupControl components [#33115]
+- AI excerpt: add AI Settings toggle button to control [#32970]
+- AI Excerpt: add language and tone to AI setting toggle control [#33111]
+- AI Excerpt: re-enable AI Excerpt panel [#32993]
+- AI Excerpt: remove core Excerpt panel when registering the AI Excerpt one [#32997]
+- AI Excerpt: stop and reset suggestions request once the panel gets hidden [#33008]
+- AI Extension: Avoid empty form state after AI request [#33183]
+- AI Extension: extened only Jetpack Form blocks with AI Data [#33026]
+- AI Extension: import libraries from @wordpress/element package [#33005]
+- AI Extension: Only show input automatically for empty forms [#32986]
+- Classic Editor Markdown: add support for double-tilde strikethrough, e.g. ~~strikethrough~~ [#33057]
+- Jetpack Assistant: Add fancy placeholder UX for the prompt input. [#33080]
+- Jetpack Social: display the Social editor panel with an invitation to activate the feature when it is disabled. [#33149]
+- Move the feature of changing backlink into mu-wpcom [#33024]
+- Moving block registration when plugin activated [#33050]
+- Point the Site Editor's `<` link to the theme showcase when previewing a theme. [#32913]
+- Refactor Business Hours block registration to avoid duplication [#32698]
+- Register beta blocks by specifying path to block.json [#32815]
+- Related Posts: make the block available even when the feature has not been activated yet. [#32930]
+- Security: Blocks: avoid saving invalid block attributes that may appear to other editors on the site. [#33184]
+- Sidebar: Rename the "Inbox" menu to "My Mailboxes". [#32992]
+- WIP Blogroll block [#32967]
 
 ### Improved compatibility
-- Carousel: add new hook allowing third-parties to customize the metadata displayed within the Carousel modal.
-- Change the text color of selected newsletter categories to be more easily readable.
-- Discourage enabling of Lazy loading images as now 90% of browser support the feature natively and this version in Jetpack can conflict with the upcoming WordPress interactivity API'
-- Ensure correct values are tracked for cart/checkout block/template tracking when using WC Blocks cart and checkout templates
-- Introduce WPCOM compatibility for AI-Chat
-- Stats: utilize the modern Admin_UI package so the Jetpack submenu can be alpha-sorted.
+- Carousel: add new hook allowing third-parties to customize the metadata displayed within the Carousel modal. [#32749]
+- Change the text color of selected newsletter categories to be more easily readable. [#33104]
+- Discourage enabling of Lazy loading images as now 90% of browser support the feature natively and this version in Jetpack can conflict with the upcoming WordPress interactivity API' [#33030]
+- Ensure correct values are tracked for cart/checkout block/template tracking when using WC Blocks cart and checkout templates [#32715]
+- Introduce WPCOM compatibility for AI-Chat [#32972]
+- Stats: utilize the modern Admin_UI package so the Jetpack submenu can be alpha-sorted. [#32958]
 
 ### Bug fixes
-- Admin Menu: Display Newsletter settings submenu item for jetpack connected sites
-- AI Excerpt: the extension isn't properly supported by P2 sites. Disable for now.
-- Check if VideoPress module is active in order to register the VideoPress video block
-- Comments: remove the Twitter service as a login provider.
-- Featured images fallback: fix undefined variable warnings.
-- Fix AI Chat block styles not loading
-- Fix AI Chat styles not loading in the editor
-- Fix Blogroll block icon
-- Fix issue with Danish Krone in donation block
-- Fix Subscribe blog appearance
-- Paywall Block: fix autosave
+- Admin Menu: Display Newsletter settings submenu item for jetpack connected sites [#33065]
+- AI Excerpt: the extension isn't properly supported by P2 sites. Disable for now. [#32977]
+- Check if VideoPress module is active in order to register the VideoPress video block [#32680]
+- Comments: remove the Twitter service as a login provider. [#30273]
+- Featured images fallback: fix undefined variable warnings. [#33179]
+- Fix AI Chat block styles not loading [#33090]
+- Fix AI Chat styles not loading in the editor [#33120]
+- Fix Blogroll block icon [#33076]
+- Fix issue with Danish Krone in donation block [#33072]
+- Fix Subscribe blog appearance [#33144]
+- Paywall Block: fix autosave [#33033]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added a test for the WooCommerce HPOS option that is now synced.
-- Added to-test.md entries for 12.6.
-- Adds legacy contact and locked mode options for 100-year plan
-- Add tracking to my account page in WooCommerce
-- AI Chat: Add customizable placeholder text
-- AI Chat: Basic error handling and minor refactor into components.
-- Fixed video previews for Social Previews
-- Refactor experimental blocks registration
-- Track store admin actions in WooCommerce analytics. Add a store_admin property to all WooCommerce analytics events.
-- Updated package dependencies.
+- Added a test for the WooCommerce HPOS option that is now synced. [#32530]
+- Added to-test.md entries for 12.6. [#32987]
+- Add tracking to my account page in WooCommerce [#33145]
+- AI Chat: Add customizable placeholder text [#33087]
+- AI Chat: Basic error handling and minor refactor into components. [#32989]
+- Fixed video previews for Social Previews [#33132]
+- Refactor experimental blocks registration [#33073]
+- Track store admin actions in WooCommerce analytics. Add a store_admin property to all WooCommerce analytics events. [#32692]
+- Updated package dependencies. [#33001]
+- Updated package dependencies. [#33043]
 
 ## 12.6-a.5 - 2023-09-11
 ### Enhancements

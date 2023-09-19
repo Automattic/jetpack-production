@@ -5,9 +5,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [0.7.4] - 2023-09-19
+- Minor internal updates.
 
 ## [0.7.3] - 2023-09-11
 ### Fixed
@@ -74,7 +73,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixed various imported resources hierarchies [#29012]
 
-[0.7.4-alpha]: https://github.com/Automattic/jetpack-import/compare/v0.7.3...v0.7.4-alpha
+[0.7.4]: https://github.com/Automattic/jetpack-import/compare/v0.7.3...v0.7.4
 [0.7.3]: https://github.com/Automattic/jetpack-import/compare/v0.7.2...v0.7.3
 [0.7.2]: https://github.com/Automattic/jetpack-import/compare/v0.7.1...v0.7.2
 [0.7.1]: https://github.com/Automattic/jetpack-import/compare/v0.7.0...v0.7.1
