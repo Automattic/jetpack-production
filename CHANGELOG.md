@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Display Newsletter settings submenu item for jetpack connected sites
 - AI Excerpt: the extension isn't properly supported by P2 sites. Disable for now.
 - Check if VideoPress module is active in order to register the VideoPress video block
+- Comments: remove the Twitter service as a login provider.
 - Fix AI Chat block styles not loading
 - Fix AI Chat styles not loading in the editor
 - Fix Blogroll block icon
