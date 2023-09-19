@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added a definition of a WooCommerce HPOS table to Jetpack Sync.
+- Adds legacy contact and locked mode options for 100-year plan
 - Jetpack Sync: Drop Sync custom queue table when Jetpack is disconnected
 - Woo: add HPOS (custom order tables) events to sync module.
 
