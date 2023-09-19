@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix AI Chat styles not loading in the editor
 - Fix Blogroll block icon
 - Fix issue with Danish Krone in donation block
+- Fix Subscribe blog appearance
 - Paywall Block: fix autosave
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
