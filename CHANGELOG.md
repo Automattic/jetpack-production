@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added a test for the WooCommerce HPOS option that is now synced.
 - Added to-test.md entries for 12.6.
+- Add tracking to my account page in WooCommerce
 - AI Chat: Add customizable placeholder text
 - AI Chat: Basic error handling and minor refactor into components.
 - Fixed video previews for Social Previews
