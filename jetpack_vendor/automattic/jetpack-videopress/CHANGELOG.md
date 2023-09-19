@@ -5,14 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.17.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.17.0] - 2023-09-19
 ### Changed
-- Add VideoPress assets enqueuing logic after the revert c9fa94de7886af75b65b8c75e642fb529144eb31 (reverted d5ca47d8de53df832e67ac8b9d6bda3663c3e8df). This time P2s should not be affected.
-- This reverts changes introduced by d5ca47d8de53df832e67ac8b9d6bda3663c3e8df as we discovered an issue with P2s
-- Updated Jetpack submenu sort order so individual features are alpha-sorted.
+- Add VideoPress assets enqueuing logic after the revert c9fa94de7886af75b65b8c75e642fb529144eb31 (reverted d5ca47d8de53df832e67ac8b9d6bda3663c3e8df). This time P2s should not be affected. [#33042]
+- This reverts changes introduced by d5ca47d8de53df832e67ac8b9d6bda3663c3e8df as we discovered an issue with P2s [#33038]
+- Updated Jetpack submenu sort order so individual features are alpha-sorted. [#32958]
 
 ## [0.16.0] - 2023-09-13
 ### Changed
@@ -1118,7 +1115,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.17.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.16.0...v0.17.0-alpha
+[0.17.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.16.0...v0.17.0
 [0.16.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.15.3...v0.16.0
 [0.15.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.15.2...v0.15.3
 [0.15.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.15.1...v0.15.2
