@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Classic Editor Markdown: add support for double-tilde strikethrough, e.g. ~~strikethrough~~
 - Jetpack Assistant: Add fancy placeholder UX for the prompt input.
 - Move the feature of changing backlink into mu-wpcom
+- Moving block registration when plugin activated
 - Point the Site Editor's `<` link to the theme showcase when previewing a theme.
 - Refactor Business Hours block registration to avoid duplication
 - Register beta blocks by specifying path to block.json
