@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: utilize the modern Admin_UI package so the Jetpack submenu can be alpha-sorted.
 
 ### Bug fixes
+- Admin Menu: Display Newsletter settings submenu item for jetpack connected sites
 - AI Excerpt: the extension isn't properly supported by P2 sites. Disable for now.
 - Check if VideoPress module is active in order to register the VideoPress video block
 - Fix AI Chat block styles not loading
