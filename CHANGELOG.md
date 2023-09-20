@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: Modify language reminder for toolbar options
 - AI Assistant: start using backend to generate the prompts.
+- AI Assistant: Update block description
 - AI Chat: Fix feedback section styles and include svg for icons.
 - AI Chat: Show guideline message
 - Blogroll: Add blog appender site searching
