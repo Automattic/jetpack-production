@@ -24,7 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - adjust styling in ai chat button
 - Subscriptions Block: Do not append newsletter category exclusions to subscribe url, when none categories were checked
 
-## 12.6 - 2023-09-19
+## [12.6] - 2023-09-19
 ### Enhancements
 - AI Assistant: add prompts for correct feature configuration. [#33064]
 - AI Assistant: proof-of-concept for expandable messages on the backend using form generation prompt. [#32679]
@@ -197,7 +197,7 @@ This is an alpha version! The changes listed here are not final.
 - Track store admin actions in WooCommerce analytics. Add a store_admin property to all WooCommerce analytics events. [#32692]
 - WooCommerce: only allow administrators the ability to modify products. [#32699]
 
-## 12.5 - 2023-08-23
+## [12.5] - 2023-08-23
 ### Enhancements
 - AI Assistant: various backend improvements.
 - AI Extension: various improvements AI Assistant, update styles, and bug fixes.
@@ -8849,8 +8849,9 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 
 - Initial release
 
-[12.5]: https://wp.me/p1moTy-Vab
 [11.6]: https://wp.me/p1moTy-PLI
+[12.6]: https://wp.me/p1moTy-VLL
+[12.5]: https://wp.me/p1moTy-Vab
 [12.4]: https://wp.me/p1moTy-UQY
 [12.3]: https://wp.me/p1moTy-Uk3
 [12.2]: https://wp.me/p1moTy-Tzw
