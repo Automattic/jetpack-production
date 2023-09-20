@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: start using backend to generate the prompts.
 - AI Chat: Fix feedback section styles and include svg for icons.
 - AI Chat: Show guideline message
 - Blogroll: Add blog appender site searching
