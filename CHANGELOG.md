@@ -6,18 +6,8 @@
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- AI Chat: Fix feedback section styles and include svg for icons.
-- AI Chat: Show guideline message
-- Blogroll: Add blog appender site searching
-- Blogroll Block: add the ability to subscribe to recommended blogs
-
-### Bug fixes
-- AI Chat: Remove extra request in $search->is_active() and only load initial state in editor
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds legacy contact and locked mode options for 100-year plan
-- Subscriptions Block: Do not append newsletter category exclusions to subscribe url, when none categories were checked
 
 ## 12.6 - 2023-09-19
 ### Enhancements
