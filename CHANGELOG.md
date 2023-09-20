@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Chat: Fix feedback section styles and include svg for icons.
 - Blogroll: Add blog appender site searching
 - Blogroll Block: add the ability to subscribe to recommended blogs
 
