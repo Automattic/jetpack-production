@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Chat: Fix feedback section styles and include svg for icons.
 - AI Chat: Show guideline message
 - Blogroll: Add blog appender site searching
+- Blogroll: Fix blogroll block typography editor styling
 - Blogroll Block: add the ability to subscribe to recommended blogs
 
 ### Bug fixes
