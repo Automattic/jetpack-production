@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds legacy contact and locked mode options for 100-year plan
 - adjust styling in ai chat button
+- Site Settings Endpoint: Allow for updating and retrieving of the wpcom_newsletter_categories site option via the endpoint
 - Subscriptions Block: Do not append newsletter category exclusions to subscribe url, when none categories were checked
 
 ## [12.6] - 2023-09-19
