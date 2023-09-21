@@ -33,6 +33,10 @@ This is an alpha version! The changes listed here are not final.
 - Site Settings Endpoint: Allow for updating and retrieving of the wpcom_newsletter_categories site option via the endpoint
 - Subscriptions Block: Do not append newsletter category exclusions to subscribe url, when none categories were checked
 
+## 12.6.1 - 2023-09-21
+### Bug Fixes
+- WooCommerce Analytics: fix a fatal error that can occur with WooCommerce enabled.
+
 ## [12.6] - 2023-09-19
 ### Enhancements
 - AI Assistant: add prompts for correct feature configuration. [#33064]
