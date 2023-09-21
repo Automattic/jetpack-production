@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Blogroll: Update CSS styling to allow blogroll block color styling customizations
 - Blogroll Block: add the ability to subscribe to recommended blogs
 
+### Improved compatibility
+- Improve color handling for the newsletter categories
+
 ### Bug fixes
 - AI Chat: Remove extra request in $search->is_active() and only load initial state in editor
 - AI Extension: Revert PR causing stream rendering issue on Firefox
