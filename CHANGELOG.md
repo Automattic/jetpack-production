@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Chat: Show guideline message
 - Blogroll: Add blog appender site searching
 - Blogroll: Fix blogroll block typography editor styling
+- Blogroll: Update blogroll appender height, max lines of text, and container scrolling
 - Blogroll: Update CSS styling to allow blogroll block color styling customizations
 - Blogroll Block: add the ability to subscribe to recommended blogs
 - Sidebar: Rename the "Inbox" menu to "My Mailboxes" for domain-only sites.
