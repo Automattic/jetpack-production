@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Add 127.0.0.1 into the list of known local domains.
 - WP.com Compatibility: abort out early checking if Protect is active. WP.com's protection is not site option based.
 
 ## [1.18.4] - 2023-09-19
