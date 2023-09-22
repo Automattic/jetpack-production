@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Chat: Remove extra request in $search->is_active() and only load initial state in editor
 - AI Extension: Revert PR causing stream rendering issue on Firefox
+- Fix menu focus state without My Jetpack
 - Fix subscribe block button not showing on newline.
 - hide launchpad modal on first post for bloggers
 - Skip video file addition to upload queue if it fails the space/allowance check
