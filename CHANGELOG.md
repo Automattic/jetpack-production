@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Update block description
 - AI Chat: Fix feedback section styles and include svg for icons.
 - AI Chat: Show guideline message
+- AI Extension: Show AI Form extension with connection nudge for disconnected users
 - Blogroll: Add blog appender site searching
 - Blogroll: Fix blogroll block typography editor styling
 - Blogroll: Update blogroll appender height, max lines of text, and container scrolling
