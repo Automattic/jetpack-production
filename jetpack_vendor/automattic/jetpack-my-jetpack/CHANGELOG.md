@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add barebones infrastructure for querying jetpack product data
 
+### Changed
+- Stats: link to purchase page within wp-admin
+
 ## [3.5.0] - 2023-09-19
 ### Changed
 - Added support for upgradable products. Updated the Stats card  to handle upgradeable products. [#33058]
