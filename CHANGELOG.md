@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Blogroll: Update blogroll appender height, max lines of text, and container scrolling
 - Blogroll: Update CSS styling to allow blogroll block color styling customizations
 - Blogroll Block: add the ability to subscribe to recommended blogs
+- Paywall block: update description
 - Sidebar: Rename the "Inbox" menu to "My Mailboxes" for domain-only sites.
 - Update blogroll appender accessibility
 
