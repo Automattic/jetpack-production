@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.6.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.6.0] - 2023-09-25
 ### Added
-- Add barebones infrastructure for querying jetpack product data
+- Add barebones infrastructure for querying jetpack product data. [#33095]
 
 ### Changed
-- Stats: link to purchase page within wp-admin
+- Stats: link to purchase page within WP Admin. [#33227]
 
 ## [3.5.0] - 2023-09-19
 ### Changed
@@ -1036,7 +1033,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[3.6.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.5.0...3.6.0-alpha
+[3.6.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.5.0...3.6.0
 [3.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.4.5...3.5.0
 [3.4.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.4.4...3.4.5
 [3.4.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.4.3...3.4.4

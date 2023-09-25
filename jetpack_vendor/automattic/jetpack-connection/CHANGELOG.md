@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.58.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.58.0] - 2023-09-25
 ### Added
-- Disallow private IP addresses for site connection.
+- Disallow private IP addresses for site connection. [#32898]
 
 ## [1.57.5] - 2023-09-19
 
@@ -891,7 +888,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[1.58.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.57.5...v1.58.0-alpha
+[1.58.0]: https://github.com/Automattic/jetpack-connection/compare/v1.57.5...v1.58.0
 [1.57.5]: https://github.com/Automattic/jetpack-connection/compare/v1.57.4...v1.57.5
 [1.57.4]: https://github.com/Automattic/jetpack-connection/compare/v1.57.3...v1.57.4
 [1.57.3]: https://github.com/Automattic/jetpack-connection/compare/v1.57.2...v1.57.3
