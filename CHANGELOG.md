@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added a new post publish panel for quick sharing
 - AI Assistant: Modify language reminder for toolbar options
 - AI Assistant: start using backend to generate the prompts.
 - AI Assistant: Update block description
