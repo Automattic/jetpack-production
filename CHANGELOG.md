@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Subscriptions: Fix conditions for showing modal.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add an action to facilitate tracking paywalled post views by subscribers
+
 ## 12.7-a.1 - 2023-09-25
 ### Enhancements
 - Added a new post publish panel for quick sharing. [#33231]
