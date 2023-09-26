@@ -18,6 +18,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add an action to facilitate tracking paywalled post views by subscribers
+- Remove some left-over PHP 5.2 compatibility code.
+- Use WordPress `str_starts_with`, `str_ends_with`, and `str_contains` polyfills.
 
 ## 12.7-a.1 - 2023-09-25
 ### Enhancements

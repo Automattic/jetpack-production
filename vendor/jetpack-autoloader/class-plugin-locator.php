@@ -75,8 +75,6 @@ class Plugin_Locator {
 	 * @return array $plugin_paths The list of absolute paths we've found.
 	 */
 	public function find_using_request_action( $allowed_actions ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
-
 		/**
 		 * Note: we're not actually checking the nonce here because it's too early
 		 * in the execution. The pluggable functions are not yet loaded to give
@@ -117,7 +115,6 @@ class Plugin_Locator {
 				break;
 		}
 
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
 		return $this->convert_plugins_to_paths( $plugin_slugs );
 	}
 
