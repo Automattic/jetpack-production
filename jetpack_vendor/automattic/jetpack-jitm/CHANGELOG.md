@@ -5,7 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Moved tracking for JITM buttons into JITM script, added message_path property
+
 ## [2.3.19] - 2023-09-19
+
 - Minor internal updates.
 
 ## [2.3.18] - 2023-09-04
@@ -624,6 +632,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update Jetpack to use new JITM package
 
+[2.4.0-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.19...v2.4.0-alpha
 [2.3.19]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.18...v2.3.19
 [2.3.18]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.17...v2.3.18
 [2.3.17]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.16...v2.3.17
