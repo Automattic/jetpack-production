@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: Add `Beta` label to sidebar panel
 - AI Excerpt: disable `Generate` button when no post content
 - Paywall: Add a filter to define a custom paywall
+- Subscribe modal: enable for Jetpack sites
 
 ### Bug fixes
 - Subscriptions: Fix conditions for showing modal.
