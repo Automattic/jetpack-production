@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Excerpt: Add `Beta` label to sidebar panel
+- AI Excerpt: disable `Generate` button when no post content
 - Paywall: Add a filter to define a custom paywall
 
 ## 12.7-a.1 - 2023-09-25
