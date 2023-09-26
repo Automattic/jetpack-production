@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: disable `Generate` button when no post content
 - Paywall: Add a filter to define a custom paywall
 
+### Bug fixes
+- Subscriptions: Fix conditions for showing modal.
+
 ## 12.7-a.1 - 2023-09-25
 ### Enhancements
 - Added a new post publish panel for quick sharing. [#33231]
