@@ -9,9 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Excerpt: Add `Beta` label to sidebar panel
 - AI Excerpt: disable `Generate` button when no post content
-- Jetpack Likes: display the Likes editor panel with an invitation to activate the feature when it is disabled.
 - Paywall: Add a filter to define a custom paywall
-- Subscribe modal: enable for Jetpack sites
 
 ### Bug fixes
 - Subscriptions: Fix conditions for showing modal.
