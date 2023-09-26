@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 12.7-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- AI Excerpt: Add `Beta` label to sidebar panel
+
 ## 12.7-a.1 - 2023-09-25
 ### Enhancements
 - Added a new post publish panel for quick sharing. [#33231]
