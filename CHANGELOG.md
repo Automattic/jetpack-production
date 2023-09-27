@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribe modal: enable for Jetpack sites
 
 ### Improved compatibility
+- Admin menu: Updated view capabilities for Home & Stats to be independant from edit_posts.
 - Lazy Images: prepare feature for its deprecation, coming in November. You will be able to rely on Lazy loading features provided by WordPress itself.
 
 ### Bug fixes
