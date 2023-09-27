@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix erroneous path check in Jetpack_Gutenberg class
+- Fix warning about Dashboard being unset in WooCommerce analytics class
 
 ## 12.6.1 - 2023-09-21
 ### Bug Fixes
