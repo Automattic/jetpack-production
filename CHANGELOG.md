@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix erroneous path check in Jetpack_Gutenberg class
+- Fix warning about Dashboard being unset in WooCommerce analytics class
 - Subscriptions: Fix conditions for showing modal.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
