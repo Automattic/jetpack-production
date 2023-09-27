@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Paywall: Add a filter to define a custom paywall
 - Subscribe modal: enable for Jetpack sites
 
+### Improved compatibility
+- Lazy Images: prepare feature for its deprecation, coming in November. You will be able to rely on Lazy loading features provided by WordPress itself.
+
 ### Bug fixes
 - Fix erroneous path check in Jetpack_Gutenberg class
 - Fix warning about Dashboard being unset in WooCommerce analytics class
@@ -23,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add an action to facilitate tracking paywalled post views by subscribers
+- Jetpack Sync: fix unit tests to be compatible with the new WordPress Core revision saving mechanism.
 - Remove some left-over PHP 5.2 compatibility code.
 - Use WordPress `str_starts_with`, `str_ends_with`, and `str_contains` polyfills.
 

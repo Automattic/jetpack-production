@@ -98,7 +98,7 @@ function jetpack_get_module_i18n( $key ) {
 
 			'lazy-images' => array(
 				'name' => _x( 'Lazy Images', 'Module Name', 'jetpack' ),
-				'description' => _x( 'Most modern browsers already support lazy loading. With over 90% of current browsers offering native support, enabling this feature may be unnecessary.', 'Module Description', 'jetpack' ),
+				'description' => _x( 'Improve your site\'s speed by only loading images visible on the screen. Modern browsers now support lazy loading, and WordPress itself bundles lazy loading features for images and videos. This feature will consequently be removed from Jetpack in November 2023.', 'Module Description', 'jetpack' ),
 			),
 
 			'likes' => array(
@@ -680,7 +680,7 @@ function jetpack_get_module_info( $key ) {
 	  'lazy-images' => 
 	  array (
 	    'name' => 'Lazy Images',
-	    'description' => 'Most modern browsers already support lazy loading. With over 90% of current browsers offering native support, enabling this feature may be unnecessary.',
+	    'description' => 'Improve your site\'s speed by only loading images visible on the screen. Modern browsers now support lazy loading, and WordPress itself bundles lazy loading features for images and videos. This feature will consequently be removed from Jetpack in November 2023.',
 	    'sort' => '24',
 	    'recommendation_order' => '14',
 	    'introduced' => '5.6.0',

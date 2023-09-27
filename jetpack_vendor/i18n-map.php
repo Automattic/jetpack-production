@@ -74,7 +74,7 @@ return array(
     ),
     'jetpack-lazy-images' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
-      'ver' => '2.2.0',
+      'ver' => '2.3.0-alpha1695840140',
     ),
     'jetpack-licensing' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',

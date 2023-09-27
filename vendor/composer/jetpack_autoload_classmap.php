@@ -527,7 +527,7 @@ return array(
 		'path'    => $baseDir . '/src/class-jetpack-crm-data.php'
 	),
 	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
-		'version' => '2.2.0.0',
+		'version' => '2.3.0.0-alpha1695840140',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-lazy-images/src/lazy-images.php'
 	),
 	'Automattic\\Jetpack\\Licensing' => array(
