@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Excerpt: Add `Beta` label to sidebar panel
 - AI Excerpt: disable `Generate` button when no post content
+- AI Excerpt: update label and help of "words" control
 - AI Extension: Add keyboard shortcut for stop action on forms
 - Jetpack Likes: display the Likes editor panel with an invitation to activate the feature when it is disabled.
 - Paywall: Add a filter to define a custom paywall
