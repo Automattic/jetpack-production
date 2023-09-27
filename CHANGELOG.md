@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Chat: delegate adding the beta suffix to filter
 - AI Excerpt: Add `Beta` label to sidebar panel
 - AI Excerpt: disable `Generate` button when no post content
 - AI Excerpt: update label and help of "words" control
