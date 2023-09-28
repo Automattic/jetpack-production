@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: avoid errors when dashboard is accessed by WordPress users with a custom non-admin role.
 - Dashboard: do not display Apps and Support cards to users who do not need that information.
 - Fix block exception throw in Site Editor
+- Fix missing block translations
 - Subscriptions: Fix conditions for showing modal.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
