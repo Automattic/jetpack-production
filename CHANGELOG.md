@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Lazy Images: prepare feature for its deprecation, coming in November. You will be able to rely on Lazy loading features provided by WordPress itself.
 
 ### Bug fixes
+- Fix block exception throw in Site Editor
 - Fix erroneous path check in Jetpack_Gutenberg class
 - Fix warning about Dashboard being unset in WooCommerce analytics class
 - Subscriptions: Fix conditions for showing modal.
