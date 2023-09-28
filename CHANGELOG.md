@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: update label and help of "words" control
 - AI Extension: Add keyboard shortcut for stop action on forms
 - Blogroll: Disable blogroll appender sites that have been added to blogroll block
+- Enhanced error presentation for ai chat
 - Fix styling of multiple elements in the ai-chat block
 - Improves the blogroll subscribe form alignment
 - Jetpack Likes: display the Likes editor panel with an invitation to activate the feature when it is disabled.
