@@ -26,6 +26,8 @@ This is an alpha version! The changes listed here are not final.
 - Lazy Images: prepare feature for its deprecation, coming in November. You will be able to rely on Lazy loading features provided by WordPress itself.
 
 ### Bug fixes
+- Dashboard: avoid errors when dashboard is accessed by WordPress users with a custom non-admin role.
+- Dashboard: do not display Apps and Support cards to users who do not need that information.
 - Fix block exception throw in Site Editor
 - Subscriptions: Fix conditions for showing modal.
 
