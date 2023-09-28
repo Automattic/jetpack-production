@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: move content-lens feature to prod
 - AI Excerpt: update label and help of "words" control
 - AI Extension: Add keyboard shortcut for stop action on forms
+- Blogroll: Disable blogroll appender sites that have been added to blogroll block
 - Jetpack Likes: display the Likes editor panel with an invitation to activate the feature when it is disabled.
 - Paywall: Add a filter to define a custom paywall
 - Subscribe modal: enable for Jetpack sites
