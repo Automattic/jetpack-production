@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Chat: delegate adding the beta suffix to filter
 - AI Excerpt: Add `Beta` label to sidebar panel
 - AI Excerpt: disable `Generate` button when no post content
+- AI Excerpt: do not extend when the AI Assistant feature is not supported
 - AI Excerpt: do not save the post before tp request the excerpt
 - AI Excerpt: update label and help of "words" control
 - AI Extension: Add keyboard shortcut for stop action on forms
