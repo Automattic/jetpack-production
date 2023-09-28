@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: disable `Generate` button when no post content
 - AI Excerpt: do not extend when the AI Assistant feature is not supported
 - AI Excerpt: do not save the post before tp request the excerpt
+- AI Excerpt: move content-lens feature to prod
 - AI Excerpt: update label and help of "words" control
 - AI Extension: Add keyboard shortcut for stop action on forms
 - Jetpack Likes: display the Likes editor panel with an invitation to activate the feature when it is disabled.
