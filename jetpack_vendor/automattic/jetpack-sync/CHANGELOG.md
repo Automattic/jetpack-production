@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.57.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.57.3] - 2023-09-28
 ### Removed
-- Remove compatibility code for PHP <5.5.
+- Remove compatibility code for PHP <5.5. [#33288]
 
 ## [1.57.2] - 2023-09-25
 ### Added
@@ -937,7 +934,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[1.57.3-alpha]: https://github.com/Automattic/jetpack-sync/compare/v1.57.2...v1.57.3-alpha
+[1.57.3]: https://github.com/Automattic/jetpack-sync/compare/v1.57.2...v1.57.3
 [1.57.2]: https://github.com/Automattic/jetpack-sync/compare/v1.57.1...v1.57.2
 [1.57.1]: https://github.com/Automattic/jetpack-sync/compare/v1.57.0...v1.57.1
 [1.57.0]: https://github.com/Automattic/jetpack-sync/compare/v1.56.0...v1.57.0
