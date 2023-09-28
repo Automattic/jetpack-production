@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a section to display stats from Jetpack Stats in My Jetpack
+- Display a new section on My Jetpack to display the stats of the site.
 
 ### Changed
 - Redirect to a proper upgrade page for free license owners
