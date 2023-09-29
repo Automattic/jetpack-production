@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Added user content link tracking and redirection for links coming from emails.
 - AI Assistant: Enable backend prompts for 10% of production sites.
 - Enhanced error presentation for ai chat
+- Jetpack Seo: display the Seo editor panel with an invitation to activate the feature when it is disabled.
 - Social Menu & Social Media Icons: Add support for the X icon.
 
 ### Bug fixes
