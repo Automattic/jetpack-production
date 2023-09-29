@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed description for jetpack_sitemap_video_skip_post
 - fix link
 - Subscriptions: added a PHPCS rule to avoid problems with Simple WordPress.com deployments.
+- this is how it use to work two hours ago
 
 ## 12.7-a.3 - 2023-09-28
 ### Enhancements
