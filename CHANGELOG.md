@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Improves the blogroll subscribe form alignment
 - Jetpack Likes: display the Likes editor panel with an invitation to activate the feature when it is disabled.
 - Paywall: Add a filter to define a custom paywall
+- Social Menu & Social Media Icons: Add support for the X icon.
 - Subscribe modal: enable for Jetpack sites
 
 ### Improved compatibility
