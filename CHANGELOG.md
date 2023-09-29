@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix missing block translations
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: change the way Social Previews are registered, from a block to a plugin.
 - Fixed description for jetpack_sitemap_video_skip_post
 - fix link
 
