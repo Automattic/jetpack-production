@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: change the way Social Previews are registered, from a block to a plugin.
 - Fixed description for jetpack_sitemap_video_skip_post
 - fix link
+- Subscriptions: added a PHPCS rule to avoid problems with Simple WordPress.com deployments.
 
 ## 12.7-a.3 - 2023-09-28
 ### Enhancements
