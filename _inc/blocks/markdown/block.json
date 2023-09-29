@@ -33,6 +33,5 @@
             "type": "string"
         }
     },
-    "editorScript": "file:../editor.js",
-    "editorStyle": "file:../editor.css"
+    "editorScript": "file:../editor.js"
 }

@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Social Menu & Social Media Icons: Add support for the X icon.
 
 ### Bug fixes
+- Fix block view scripts being loaded twice
 - Fix missing block translations
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
