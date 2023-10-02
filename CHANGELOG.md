@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - SSO: offer ability to force a site to use Jetpack SSO with Two-Factor Authentication for certain roles.
 
 ### Bug fixes
+- Carousel: avoid invalid markup notices in Google Pagespeed insights.
 - Fix block view scripts being loaded twice
 - Fix missing block translations
 
