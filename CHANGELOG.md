@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Enable backend prompts for 10% of production sites.
 - Blogroll: Update blogroll appender styling and functionality
 - Enhanced error presentation for ai chat
+- Improve UX of the AI CHat block
 - Jetpack Seo: display the Seo editor panel with an invitation to activate the feature when it is disabled.
 - Jetpack Sharing: display the Sharing editor panel with an invitation to activate the feature when it is disabled.
 - Social Menu & Social Media Icons: Add support for the X icon.
