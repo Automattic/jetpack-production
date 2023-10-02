@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - fix link
 - Likes: move editor plugin to the plugins' directory.
 - Plugin assets: add spanish version of our banners.
+- SEO Tools: move editor plugin to the plugins' directory, since this is not a block.
 - Standardize block description phrasing
 - Subscriptions: added a PHPCS rule to avoid problems with Simple WordPress.com deployments.
 - this is how it use to work two hours ago
