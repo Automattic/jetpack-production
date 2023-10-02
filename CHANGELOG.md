@@ -19,7 +19,6 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Carousel: avoid invalid markup notices in Google Pagespeed insights.
 - Fix block view scripts being loaded twice
-- Fix missing block translations
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: change the way Social Previews are registered, from a block to a plugin.
