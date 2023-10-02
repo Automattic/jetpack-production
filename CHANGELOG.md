@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Release the Jetpack AI Search Block
 - Social Menu & Social Media Icons: Add support for the X icon.
 - SSO: offer ability to force a site to use Jetpack SSO with Two-Factor Authentication for certain roles.
+- Subscription block: drop unnecessary .0 from big subscriber counts
 
 ### Bug fixes
 - AI Excerpts: avoid errors on Custom Post Types that do not support excerpts.
