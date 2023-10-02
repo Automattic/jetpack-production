@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new post publish panel for quick sharing
 - Added user content link tracking and redirection for links coming from emails.
 - AI Assistant: Enable backend prompts for 10% of production sites.
+- Blogroll: Update blogroll appender styling and functionality
 - Enhanced error presentation for ai chat
 - Jetpack Seo: display the Seo editor panel with an invitation to activate the feature when it is disabled.
 - Social Menu & Social Media Icons: Add support for the X icon.
