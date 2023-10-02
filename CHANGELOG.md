@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - SSO: offer ability to force a site to use Jetpack SSO with Two-Factor Authentication for certain roles.
 
 ### Bug fixes
+- AI Excerpts: avoid errors on Custom Post Types that do not support excerpts.
 - Carousel: avoid invalid markup notices in Google Pagespeed insights.
 - Fix block view scripts being loaded twice
 - Fix Google Doc blocks not rendering in the editor
