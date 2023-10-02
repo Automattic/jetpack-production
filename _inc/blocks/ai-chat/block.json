@@ -45,5 +45,5 @@
             "default": true
         }
     },
-    "editorScript": "file:../editor-beta.js"
+    "editorScript": "file:../editor.js"
 }
