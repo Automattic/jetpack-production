@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Excerpts: avoid errors on Custom Post Types that do not support excerpts.
 - Carousel: avoid invalid markup notices in Google Pagespeed insights.
+- External Media: do not surface the endpoint to contributors, who do not need athe feature since they cannot upload media.
 - Fix block view scripts being loaded twice
 - Fix Google Doc blocks not rendering in the editor
 - Shortcodes: improve validation of attributes dislayed with the Crowdsignal shhortcode.
