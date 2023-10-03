@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Seo: display the Seo editor panel with an invitation to activate the feature when it is disabled.
 - Jetpack Sharing: display the Sharing editor panel with an invitation to activate the feature when it is disabled.
 - Release the Jetpack AI Search Block
+- Sharing: add X sharing button.
 - Social Menu & Social Media Icons: Add support for the X icon.
 - SSO: offer ability to force a site to use Jetpack SSO with Two-Factor Authentication for certain roles.
 - Subscription block: drop unnecessary .0 from big subscriber counts

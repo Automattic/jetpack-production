@@ -173,7 +173,7 @@ function jetpack_get_module_i18n( $key ) {
 
 			'sharedaddy' => array(
 				'name' => _x( 'Sharing', 'Module Name', 'jetpack' ),
-				'description' => _x( 'Add Twitter and Facebook buttons at the bottom of each post, making it easy for visitors to share your content.', 'Module Description', 'jetpack' ),
+				'description' => _x( 'Add sharing buttons at the bottom of each post, making it easy for visitors to share your content.', 'Module Description', 'jetpack' ),
 			),
 
 			'shortcodes' => array(
@@ -950,7 +950,7 @@ function jetpack_get_module_info( $key ) {
 	  'sharedaddy' => 
 	  array (
 	    'name' => 'Sharing',
-	    'description' => 'Add Twitter and Facebook buttons at the bottom of each post, making it easy for visitors to share your content.',
+	    'description' => 'Add sharing buttons at the bottom of each post, making it easy for visitors to share your content.',
 	    'sort' => '7',
 	    'recommendation_order' => '6',
 	    'introduced' => '1.1',
