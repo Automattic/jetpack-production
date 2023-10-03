@@ -2,43 +2,40 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.7-a.4 - unreleased
+## 12.7-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 12.7-a.5 - 2023-10-03
 ### Enhancements
-- Added a new post publish panel for quick sharing
-- Added user content link tracking and redirection for links coming from emails.
-- AI Assistant: Enable backend prompts for 10% of production sites.
-- Blogroll: Update blogroll appender styling and functionality
-- Enhanced error presentation for ai chat
-- Improve UX of the AI CHat block
-- Jetpack Seo: display the Seo editor panel with an invitation to activate the feature when it is disabled.
-- Jetpack Sharing: display the Sharing editor panel with an invitation to activate the feature when it is disabled.
-- Release the Jetpack AI Search Block
-- Sharing: add X sharing button.
-- Social Menu & Social Media Icons: Add support for the X icon.
-- SSO: offer ability to force a site to use Jetpack SSO with Two-Factor Authentication for certain roles.
-- Subscription block: drop unnecessary .0 from big subscriber counts
+- AI Chat: Enhanced error presentation and UX improvements. [#33387] [#33401]
+- AI Search Block: release the Jetpack AI Search Block. [#33432]
+- Block Editor: add a new post publish panel for quick sharing. [#33244]
+- Block Editor: display the SEO and Sharing editor panels in the block editor under the Jetpack side menu. [#33258] [#33226]
+- Blogroll Block: Update blogroll appender styling and functionality. [#33328]
+- Sharing: add X sharing button. [#33134]
+- Social Menu & Social Media Icons: Add support for the X icon. [#33118]
+- SSO: offer ability to force a site to use Jetpack SSO with Two-Factor Authentication for certain roles. [#33259]
+- Subscription block: drop unnecessary .0 from big subscriber counts. [#33430]
 
 ### Bug fixes
-- AI Excerpts: avoid errors on Custom Post Types that do not support excerpts.
-- Carousel: avoid invalid markup notices in Google Pagespeed insights.
-- External Media: do not surface the endpoint to contributors, who do not need athe feature since they cannot upload media.
-- Fix block view scripts being loaded twice
-- Fix Google Doc blocks not rendering in the editor
-- Shortcodes: improve validation of attributes dislayed with the Crowdsignal shhortcode.
+- AI Excerpts: avoid errors on Custom Post Types that do not support excerpts. [#33439]
+- Carousel: avoid invalid markup notices in Google Pagespeed insights. [#33413]
+- External Media: do not surface the endpoint to contributors, are unable to upload media anyway. [#33451]
+- Google Doc block: fix Google Doc blocks not rendering in the editor. [#33441]
+- Shortcodes: improve validation of attributes dislayed with the Crowdsignal shortcode. [#33450]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Blocks: change the way Social Previews are registered, from a block to a plugin.
-- Fixed description for jetpack_sitemap_video_skip_post
-- fix link
-- Likes: move editor plugin to the plugins' directory.
-- Plugin assets: add spanish version of our banners.
-- SEO Tools: move editor plugin to the plugins' directory, since this is not a block.
-- Standardize block description phrasing
-- Subscriptions: added a PHPCS rule to avoid problems with Simple WordPress.com deployments.
-- this is how it use to work two hours ago
+- AI Assistant: Enable backend prompts for 10% of production sites. [#33356]
+- Add user content link tracking and redirection for links coming from emails. [#32832]
+- Blocks: change the way Social Previews are registered, from a block to a plugin. [#33238]
+- Fix block view scripts being loaded twice. [#33406]
+- Fix description for jetpack_sitemap_video_skip_post. [#33379]
+- Subscriptions: fix broken Paywall login link for custom domains [#33363]
+- Likes: move editor plugin to the plugins' directory. [#33241]
+- Plugin assets: add spanish version of our banners. [#33436]
+- SEO Tools: move editor plugin to the plugins' directory, since this is not a block. [#33240]
+- Standardize block description phrasing. [#33382]
 
 ## 12.7-a.3 - 2023-09-28
 ### Enhancements
