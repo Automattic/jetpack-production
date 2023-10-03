@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.8.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.8.0] - 2023-10-03
 ### Added
-- Display a new section on My Jetpack to display the stats of the site.
+- Display a new section on My Jetpack to display the stats of the site. [#33283]
 
 ## [3.7.0] - 2023-09-28
 ### Added
@@ -1047,7 +1044,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[3.8.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.7.0...3.8.0-alpha
+[3.8.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.7.0...3.8.0
 [3.7.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.6.0...3.7.0
 [3.6.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.5.0...3.6.0
 [3.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.4.5...3.5.0
