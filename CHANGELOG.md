@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Notifications: temporarily disable the notifications admin bar menu on any block editor page to allow for Gutenberg 16.7 compat
+
 ## 12.7-a.5 - 2023-10-03
 ### Enhancements
 - AI Chat: Enhanced error presentation and UX improvements. [#33387] [#33401]
