@@ -2,12 +2,9 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.7-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 12.7-a.7 - 2023-10-04
 ### Improved compatibility
-- Notifications: temporarily disable the notifications admin bar menu on any block editor page to allow for Gutenberg 16.7 compat
+- Notifications: temporarily disable the notifications admin bar menu on any block editor page to allow for Gutenberg 16.7 compatability. [#33458]
 
 ## 12.7-a.5 - 2023-10-03
 ### Enhancements
