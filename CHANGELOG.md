@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Blogroll: Move blogroll and blogroll-items blocks from beta to production
+
 ### Improved compatibility
 - Notifications: temporarily disable the notifications admin bar menu on any block editor page to allow for Gutenberg 16.7 compat
 
