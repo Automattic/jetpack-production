@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fix error on Subscribe Modal
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Removed WPCOM-specific references from site settings endpoint.
+
 ## 12.7-a.5 - 2023-10-03
 ### Enhancements
 - AI Chat: Enhanced error presentation and UX improvements. [#33387] [#33401]
