@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Blogroll: Move blogroll and blogroll-items blocks from beta to production
+- Blogroll improvements
 
 ### Improved compatibility
 - AI Chat block: Fix icon color
