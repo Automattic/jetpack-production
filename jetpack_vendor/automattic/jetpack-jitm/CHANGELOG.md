@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - JITMs can now redirect to a specific Jetpack settings page
 
+### Changed
+- Update color of WooCommerce logo
+
 ## [2.4.0] - 2023-09-28
 ### Changed
 - Moved tracking for JITM buttons into JITM script, added message_path property [#33252]
