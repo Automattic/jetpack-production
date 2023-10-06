@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: temporarily disable the notifications admin bar menu on any block editor page to allow for Gutenberg 16.7 compat
 
 ### Bug fixes
+- Add jetpack_memberships_product_id to the list of post meta to sync.
 - Fix error on Subscribe Modal
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
