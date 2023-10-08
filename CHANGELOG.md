@@ -6,9 +6,17 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- New feature: gate access depending on Newsletter tier
+
 ### Enhancements
+- Adds newsletter tier upgrade detection
+- Add tier parameter for Membership product endpoints
 - Blogroll: Move blogroll and blogroll-items blocks from beta to production
 - Blogroll improvements
+- Create a TierSelector component and add to post paid newsletter access selector
+- Newsletter tiers are added
+- Use tier logic to get premium content block
 - [Subscriptions] Hide the token from the URL
 
 ### Improved compatibility
