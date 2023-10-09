@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Adds newsletter tier upgrade detection
 - Add tier parameter for Membership product endpoints
+- AI Excerpt: set docs link depending on site type
 - Blogroll: Move blogroll and blogroll-items blocks from beta to production
 - Blogroll improvements
 - Create a TierSelector component and add to post paid newsletter access selector
