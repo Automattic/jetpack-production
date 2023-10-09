@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Add jetpack_memberships_product_id to the list of post meta to sync.
 - Fix error on Subscribe Modal
+- Incorrect typing for a meta field
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add conditional rendering for newsletter categories based on the wpcom_newsletter_categories_location filter
