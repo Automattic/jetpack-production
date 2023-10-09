@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Add jetpack_memberships_product_id to the list of post meta to sync.
+- AI Chat block: Fix text wrapping in botton for Firefox.
 - Fix error on Subscribe Modal
 - Incorrect typing for a meta field
 
