@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Add conditional rendering for newsletter categories based on the wpcom_newsletter_categories_location filter
 - refactor
 - Removed WPCOM-specific references from site settings endpoint.
+- Updated package dependencies.
 
 ## 12.7-a.7 - 2023-10-04
 ### Improved compatibility
