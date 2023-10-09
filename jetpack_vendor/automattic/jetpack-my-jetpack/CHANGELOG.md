@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Changed title of the my-jetpack page to "My Jetpack"
+- Updated package dependencies.
 
 ## [3.8.0] - 2023-10-03
 ### Added

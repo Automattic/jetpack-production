@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update color of WooCommerce logo
+- Updated package dependencies.
 
 ## [2.4.0] - 2023-09-28
 ### Changed
