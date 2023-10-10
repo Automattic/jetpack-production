@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds newsletter tier upgrade detection
 - Add tier parameter for Membership product endpoints
 - AI Excerpt: set docs link depending on site type
+- Block Editor: Update the Likes and Sharing copy in the Jetpack menu to address grammatical mistake.
 - Blogroll: Move blogroll and blogroll-items blocks from beta to production
 - Blogroll improvements
 - Create a TierSelector component and add to post paid newsletter access selector
