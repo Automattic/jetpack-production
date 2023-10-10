@@ -20,7 +20,6 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter tiers are added
 - Paywall: login paragraph to use theme text colour
 - Use tier logic to get premium content block
-- [Subscriptions] Hide the token from the URL
 
 ### Improved compatibility
 - AI Chat block: Fix icon color
