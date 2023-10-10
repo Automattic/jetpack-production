@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Pass `false`, not `null`, to `WP_Scripts->add()`.
+
 ## [1.18.11] - 2023-09-19
 
 - Minor internal updates.
