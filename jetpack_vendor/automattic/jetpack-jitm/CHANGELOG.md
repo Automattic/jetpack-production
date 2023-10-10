@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.5.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.5.0] - 2023-10-10
 ### Added
-- JITMs can now redirect to a specific Jetpack settings page
+- JITMs can now redirect to a specific Jetpack settings page. [#32826]
 
 ### Changed
-- Update color of WooCommerce logo
-- Updated package dependencies.
+- Update color of WooCommerce logo. [#33491]
+- Updated package dependencies. [#33428]
 
 ## [2.4.0] - 2023-09-28
 ### Changed
@@ -640,7 +637,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Update Jetpack to use new JITM package
 
-[2.5.0-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v2.4.0...v2.5.0-alpha
+[2.5.0]: https://github.com/Automattic/jetpack-jitm/compare/v2.4.0...v2.5.0
 [2.4.0]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.19...v2.4.0
 [2.3.19]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.18...v2.3.19
 [2.3.18]: https://github.com/Automattic/jetpack-jitm/compare/v2.3.17...v2.3.18
