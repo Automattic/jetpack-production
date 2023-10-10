@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Changed title of the my-jetpack page to "My Jetpack"
 - Updated package dependencies.
 
+### Fixed
+- My Jetpack: fix Stats card status when not connected
+
 ## [3.8.0] - 2023-10-03
 ### Added
 - Display a new section on My Jetpack to display the stats of the site. [#33283]
