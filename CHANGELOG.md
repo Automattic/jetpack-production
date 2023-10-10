@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall block: remove "beta" from the name in block.json
 - refactor
 - Removed WPCOM-specific references from site settings endpoint.
+- Shairng: improve the display of the official X button.
 - Updated package dependencies.
 
 ## 12.7-a.7 - 2023-10-04
