@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Blogroll improvements
 - Create a TierSelector component and add to post paid newsletter access selector
 - Newsletter tiers are added
+- Paywall: login paragraph to use theme text colour
 - Use tier logic to get premium content block
 - [Subscriptions] Hide the token from the URL
 
