@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.13-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.11.13] - 2023-10-10
 ### Fixed
-- Escape email address when output in HTML.
+- Escape email address when output in HTML. [#33536]
 
 ## [0.11.12] - 2023-09-28
 ### Changed
@@ -238,7 +235,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.11.13-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.11.12...v0.11.13-alpha
+[0.11.13]: https://github.com/Automattic/jetpack-waf/compare/v0.11.12...v0.11.13
 [0.11.12]: https://github.com/Automattic/jetpack-waf/compare/v0.11.11...v0.11.12
 [0.11.11]: https://github.com/Automattic/jetpack-waf/compare/v0.11.10...v0.11.11
 [0.11.10]: https://github.com/Automattic/jetpack-waf/compare/v0.11.9...v0.11.10

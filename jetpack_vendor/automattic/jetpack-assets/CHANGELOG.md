@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.18.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.18.12] - 2023-10-10
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#33428]
 
 ### Fixed
-- Pass `false`, not `null`, to `WP_Scripts->add()`.
+- Pass `false`, not `null`, to `WP_Scripts->add()`. [#33513]
 
 ## [1.18.11] - 2023-09-19
 
@@ -371,7 +368,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Statically access asset tools
 
-[1.18.12-alpha]: https://github.com/Automattic/jetpack-assets/compare/v1.18.11...v1.18.12-alpha
+[1.18.12]: https://github.com/Automattic/jetpack-assets/compare/v1.18.11...v1.18.12
 [1.18.11]: https://github.com/Automattic/jetpack-assets/compare/v1.18.10...v1.18.11
 [1.18.10]: https://github.com/Automattic/jetpack-assets/compare/v1.18.9...v1.18.10
 [1.18.9]: https://github.com/Automattic/jetpack-assets/compare/v1.18.8...v1.18.9
