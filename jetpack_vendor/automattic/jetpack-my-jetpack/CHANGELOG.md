@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- My Jetpack: Fix fatal error
 - My Jetpack: fix Stats card status when not connected
 
 ## [3.8.0] - 2023-10-03
