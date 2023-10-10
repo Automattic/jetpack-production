@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - 527 - Sites API: add was_hosting_trial flag to data returned for site details.
 - Add conditional rendering for newsletter categories based on the wpcom_newsletter_categories_location filter
+- Paywall block: remove "beta" from the name in block.json
 - refactor
 - Removed WPCOM-specific references from site settings endpoint.
 - Updated package dependencies.
