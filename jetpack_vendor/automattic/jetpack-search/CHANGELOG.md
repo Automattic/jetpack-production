@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Search: fixed excluded types option is not available under certain circumstances
+
 ## [0.39.1] - 2023-10-10
 ### Changed
 - Updated package dependencies. [#33428]
