@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Blogging prompts block: add default gravatar attribute to prevent js error
 - Reverts Admin UI package usage for Jetpack"
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
