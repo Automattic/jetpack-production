@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 12.8-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Reverts Admin UI package usage for Jetpack"
+
 ## 12.7-beta - 2023-10-10
 ### Enhancements
 - Newsletter: launch the ability to create tiered newsletter plans. [#32710]
@@ -13,7 +20,7 @@
 ### Bug fixes
 - AI Assistant: do not register the editor plugin if the site is not connected to WordPress.com. [#33408]
 - AI Chat block: fix text wrapping in button for Firefox. [#33519]
-- Block Editor: update the Likes and Sharing copy in the Jetpack menu to address grammatical mistake. [#33509] 
+- Block Editor: update the Likes and Sharing copy in the Jetpack menu to address grammatical mistake. [#33509]
 - Subscriptions module: fix fatal error caused by undefined constant. [#33473]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
