@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Reverts Admin UI package usage for Jetpack"
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- refactor
 - Sync unit test: Fixes sync unit test to Aaccount for new post type properties
 - Updated package dependencies.
 
