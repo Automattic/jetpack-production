@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added HEIC (`*.heic`) to list of images types allowed to be passed through Photon during instant search
 
+### Changed
+- Updated package dependencies.
+
 ## [0.39.1] - 2023-10-10
 ### Changed
 - Updated package dependencies. [#33428]

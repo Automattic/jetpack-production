@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.8.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [3.8.1] - 2023-10-10
 ### Changed
 - Changes title of the my-jetpack page to "My Jetpack" [#33486]
@@ -1053,6 +1060,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[3.8.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.8.1...3.8.2-alpha
 [3.8.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.8.0...3.8.1
 [3.8.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.7.0...3.8.0
 [3.7.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.6.0...3.7.0
