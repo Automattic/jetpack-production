@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- AI Assistant: Enable backend prompts for 50% of production sites.
+
 ### Bug fixes
 - Blogging prompts block: add default gravatar attribute to prevent js error
 - Reverts Admin UI package usage for Jetpack"
