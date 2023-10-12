@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- VideoPress: handle block registration in the REST API request context
+
 ## [0.17.4] - 2023-10-10
 ### Changed
 - Updated package dependencies. [#33428]
