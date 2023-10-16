@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Blogging prompts block: add default gravatar attribute to prevent js error
+- Fix Map block not rendering
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Convert Twitter to X
