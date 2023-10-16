@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: Enable backend prompts for 50% of production sites.
 - Sitemaps: update the colors used on the sitemap page to match updated Jetpack branding colors.
+- Subscriptions: Do not display token in URL
 
 ### Bug fixes
 - Blogging prompts block: add default gravatar attribute to prevent js error
