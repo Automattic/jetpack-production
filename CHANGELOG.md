@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove newsletter categories from the subscriber block.
 - Sync unit test: Fixes sync unit test to Aaccount for new post type properties
 - Unit tests: Updated Sync related unit tests
+- Update "social-logos" to the latest version
 - Updated package dependencies.
 
 ## [12.7] - 2023-10-12
