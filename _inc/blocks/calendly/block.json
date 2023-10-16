@@ -20,5 +20,5 @@
         "alignWide": false,
         "html": false
     },
-    "editorScript": "file:../editor.js"
+    "editorScript": "jetpack-blocks-editor"
 }

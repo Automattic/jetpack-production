@@ -23,5 +23,5 @@
             "type": "string"
         }
     },
-    "editorScript": "file:../editor.js"
+    "editorScript": "jetpack-blocks-editor"
 }

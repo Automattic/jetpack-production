@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix Map block not rendering
+- Fix missing block translations
 
 ## 12.8-a.1 - 2023-10-16
 ### Enhancements

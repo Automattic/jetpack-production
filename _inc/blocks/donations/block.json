@@ -36,5 +36,5 @@
     "supports": {
         "html": false
     },
-    "editorScript": "file:../editor.js"
+    "editorScript": "jetpack-blocks-editor"
 }

@@ -27,5 +27,5 @@
             "url": "https://pinterest.com/anapinskywalker/"
         }
     },
-    "editorScript": "file:../editor.js"
+    "editorScript": "jetpack-blocks-editor"
 }

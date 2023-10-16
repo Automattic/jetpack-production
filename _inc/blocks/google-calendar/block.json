@@ -28,5 +28,5 @@
             "default": 600
         }
     },
-    "editorScript": "file:../editor.js"
+    "editorScript": "jetpack-blocks-editor"
 }
