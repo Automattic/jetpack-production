@@ -2,28 +2,29 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.8-a.0 - unreleased
+## 12.8-a.2 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- AI Assistant: Enable backend prompts for 50% of production sites.
-- Sitemaps: update the colors used on the sitemap page to match updated Jetpack branding colors.
-- Subscriptions: Do not display token in URL
-
 ### Bug fixes
-- Blogging prompts block: add default gravatar attribute to prevent js error
 - Fix Map block not rendering
 
+## 12.8-a.1 - 2023-10-16
+### Enhancements
+- AI Assistant: Enable backend prompts for 50% of production sites. [#33514]
+- Sitemaps: Update the colors used on the sitemap page to match updated Jetpack branding colors. [#33582]
+- Subscriptions: Do not display token in URL. [#33561]
+
+### Bug fixes
+- Blogging prompts block: Add default gravatar attribute to prevent js error. [#33572]
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Convert Twitter to X
-- refactor
-- refactoring
-- Remove newsletter categories from the subscriber block.
-- Sync unit test: Fixes sync unit test to Aaccount for new post type properties
-- Unit tests: Updated Sync related unit tests
-- Update "social-logos" to the latest version
-- Updated package dependencies.
+- Convert Twitter to X. [#33574]
+- Remove newsletter categories from the subscriber block. [#33579]
+- Sync unit test: Fixes sync unit test to Aaccount for new post type properties. [#33553]
+- Unit tests: Updated Sync related unit tests. [#33384]
+- Update "social-logos" to the latest version. [#33613]
+- Updated package dependencies. [#33429, #33498]
 
 ## [12.7] - 2023-10-12
 ### Enhancements
