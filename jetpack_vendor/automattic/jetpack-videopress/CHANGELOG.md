@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Security
 - Escape VideoPress attributes
 
+### Changed
+- Updated package dependencies.
+
 ## [0.17.5] - 2023-10-16
 ### Changed
 - Updated package dependencies. [#33429, #33584]

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add has_required_plan method for VideoPress product class, check plan purchase exists for site
 
+### Changed
+- Updated package dependencies.
+
 ## [3.8.2] - 2023-10-16
 ### Changed
 - Updated package dependencies. [#33429, #33584]

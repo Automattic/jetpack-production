@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - General: update Facebook color code to match newer brand colors.
 - General: update mentions of the old Jetpack color code.
 - Social Logos: update logos with the most recent version of the package, including bug fixes for the Threads and X logos, as well as an updated X logo to match updated X branding guidelines.
+- Updated package dependencies.
 
 ## 12.8-a.1 - 2023-10-16
 ### Enhancements

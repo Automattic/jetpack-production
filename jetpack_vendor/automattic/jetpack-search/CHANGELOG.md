@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.39.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [0.39.2] - 2023-10-16
 ### Added
 - Added HEIC (`*.heic`) to list of images types allowed to be passed through Photon during instant search. [#33494]
@@ -822,6 +829,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
+[0.39.3-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.39.2...v0.39.3-alpha
 [0.39.2]: https://github.com/Automattic/jetpack-search/compare/v0.39.1...v0.39.2
 [0.39.1]: https://github.com/Automattic/jetpack-search/compare/v0.39.0...v0.39.1
 [0.39.0]: https://github.com/Automattic/jetpack-search/compare/v0.38.8...v0.39.0
