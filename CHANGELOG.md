@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Extension: do not skip React hook instances
 - SEO Title & Description - Display the current nucount of characters, even when over the suggested limit..
+- Subscribers: Allow admins to see subscribe modal.
 
 ### Improved compatibility
 - Connection: added protection for wpcom urls stored in the database during identity crisis.
