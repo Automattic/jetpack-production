@@ -54,7 +54,7 @@ return array(
     ),
     'jetpack-idc' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
-      'ver' => '0.10.7',
+      'ver' => '0.11.0-alpha1697517507',
     ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
