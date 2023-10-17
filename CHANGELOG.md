@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- AI Extension: do not skip React hook instances
+
 ### Improved compatibility
 - Connection: added protection for wpcom urls stored in the database during identity crisis.
 - Make the jetpack_ai_enabled filter decide whether to register AI editor extensions
