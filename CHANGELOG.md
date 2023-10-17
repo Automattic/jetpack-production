@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Map block not rendering
 - Fix missing block translations
 - Subscribe modal: match block markup with params
+- YouTube embeds: avoid errors when opening YouTube in a new window from a YouTube embed.
 
 ## 12.8-a.1 - 2023-10-16
 ### Enhancements
