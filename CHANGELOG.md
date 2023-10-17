@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - YouTube embeds: avoid errors when opening YouTube in a new window from a YouTube embed.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Check for post access first then do tracking action.
 - Social Logos: update logos with the most recent version of the package, including bug fixes for the Threads and X logos, as well as an updated X logo to match updated X branding guidelines.
 
 ## 12.8-a.1 - 2023-10-16
