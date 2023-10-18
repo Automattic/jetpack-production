@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: Add strikethrough Markdown syntax to Markdown generator
 - AI Assistant: Enable backend prompts for 100% of production sites.
+- AI Assistant: register ai-assistant-usage-panel beta extension.
 - AI Extension: change the filter to populate the Jetpack Form block with AI components
 - AI Extension: do not skip React hook instances
 - AI Extension: use registerBlockType filter to extend Jetpack Form / children block instances
