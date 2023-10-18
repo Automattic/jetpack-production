@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Block Editor: disable some of Twitter's Thread publishing tools since the feature is no longer accessible.
+- Fix issue when email was double encoded
 - Fix Map block not rendering
 - Fix missing block translations
 - Subscribe modal: match block markup with params
