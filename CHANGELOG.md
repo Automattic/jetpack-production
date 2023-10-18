@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - YouTube embeds: avoid errors when opening YouTube in a new window from a YouTube embed.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- add parameter to method
 - Add support for welcome message in subscription_options
 - Check for post access first then do tracking action.
 - General: update Facebook color code to match newer brand colors.
