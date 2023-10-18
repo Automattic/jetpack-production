@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: Add strikethrough Markdown syntax to Markdown generator
 - AI Extension: change the filter to populate the Jetpack Form block with AI components
 - AI Extension: do not skip React hook instances
 - SEO Title & Description - Display the current nucount of characters, even when over the suggested limit..
