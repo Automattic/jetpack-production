@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Make the jetpack_ai_enabled filter decide whether to register AI editor extensions
 
 ### Bug fixes
+- Block Editor: disable some of Twitter's Thread publishing tools since the feature is no longer accessible.
 - Fix Map block not rendering
 - Fix missing block translations
 - Subscribe modal: match block markup with params
