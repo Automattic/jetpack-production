@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - [Memberships] Prevent data to be retrieved from cache sites on WPCOM
 
 ### Bug fixes
+- AI Assistant: fix issue when getting AI assistant block instance
 - Block Editor: disable some of Twitter's Thread publishing tools since the feature is no longer accessible.
 - Fix issue when email was double encoded
 - Fix Map block not rendering
