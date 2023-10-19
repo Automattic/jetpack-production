@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix some possible undefined variable warnings.
 - General: update Facebook color code to match newer brand colors.
 - General: update mentions of the old Jetpack color code.
+- Google Fonts: Integrate the google fonts with the new font library
 - Social Logos: update logos with the most recent version of the package, including bug fixes for the Threads and X logos, as well as an updated X logo to match updated X branding guidelines.
 - Subscribe modal: simplify URL construction
 - Updated package dependencies.
