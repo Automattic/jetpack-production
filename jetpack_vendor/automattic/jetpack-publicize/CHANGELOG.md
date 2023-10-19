@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Social: Add the Nextdoor connection toggle
 
+### Changed
+- Updated package dependencies.
+
 ## [0.36.3] - 2023-10-16
 ### Changed
 - Added type prop to custom media for social posts. [#33504]

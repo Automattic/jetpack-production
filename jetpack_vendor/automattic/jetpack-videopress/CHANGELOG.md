@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Move ProgressBar component to the shared `@automattic/jetpack-components` package.
 - Revert changes on #33394 #33036 and #33042 - Those changes won't properly handle VP block assets on feeds/query loops
+- Updated package dependencies.
 
 ## [0.17.6] - 2023-10-17
 ### Security
