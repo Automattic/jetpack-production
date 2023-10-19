@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Adds new modifications for the admin menu on Atomic sites that ensures that all links go to wp-admin except those that are only available in Calypso.
+- Add support for welcome message inside wp-admin
 - AI Assistant: Add strikethrough Markdown syntax to Markdown generator
 - AI Assistant: Enable backend prompts for 100% of production sites.
 - AI Assistant: register ai-assistant-usage-panel beta extension.
