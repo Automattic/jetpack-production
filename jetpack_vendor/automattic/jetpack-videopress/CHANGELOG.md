@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.17.7-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Move ProgressBar component to the shared `@automattic/jetpack-components` package.
+
 ## [0.17.6] - 2023-10-17
 ### Security
 - Escape VideoPress attributes [#33637]
@@ -1148,6 +1155,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created empty package [#24952]
 
+[0.17.7-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.17.6...v0.17.7-alpha
 [0.17.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.17.5...v0.17.6
 [0.17.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.17.4...v0.17.5
 [0.17.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.17.3...v0.17.4
