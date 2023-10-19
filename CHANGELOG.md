@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - add parameter to method
 - Add support for welcome message in subscription_options
 - Check for post access first then do tracking action.
+- css fix
 - Fix some possible undefined variable warnings.
 - General: update Facebook color code to match newer brand colors.
 - General: update mentions of the old Jetpack color code.
