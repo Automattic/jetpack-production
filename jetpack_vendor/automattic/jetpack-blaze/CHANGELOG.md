@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fix unsetting `'sub_path'` in `Dashboard_REST_Controller`.
+
 ## [0.10.4] - 2023-10-16
 ### Changed
 - Updated package dependencies. [#33429]
