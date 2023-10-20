@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Map block not rendering
 - Fix missing block translations
 - Subscribe modal: match block markup with params
+- The Google Photos media inserter only checks for the connection status when needed.
 - YouTube embeds: avoid errors when opening YouTube in a new window from a YouTube embed.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
