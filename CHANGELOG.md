@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - Social Logos: update logos with the most recent version of the package, including bug fixes for the Threads and X logos, as well as an updated X logo to match updated X branding guidelines.
 - Subscribe modal: simplify URL construction
 - Updated package dependencies.
+- WordPress.com Navigation: ensure that the stats menu is properly registered.
 
 ## 12.8-a.1 - 2023-10-16
 ### Enhancements
