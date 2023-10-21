@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix issue when email was double encoded
 - Fix Map block not rendering
 - Fix missing block translations
+- Jetpack: fix performance issues by not calling useAnalytics hook for all paragraphs
 - Subscribe modal: match block markup with params
 - The Google Photos media inserter only checks for the connection status when needed.
 - YouTube embeds: avoid errors when opening YouTube in a new window from a YouTube embed.
