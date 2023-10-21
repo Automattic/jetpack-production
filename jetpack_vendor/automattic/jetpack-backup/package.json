@@ -30,7 +30,7 @@
 		"@automattic/jetpack-analytics": "^0.1.27",
 		"@automattic/jetpack-api": "^0.16.4",
 		"@automattic/jetpack-components": "^0.44.0",
-		"@automattic/jetpack-connection": "^0.30.4",
+		"@automattic/jetpack-connection": "^0.30.5-alpha",
 		"@wordpress/api-fetch": "6.41.0",
 		"@wordpress/data": "9.14.0",
 		"@wordpress/date": "4.44.0",
