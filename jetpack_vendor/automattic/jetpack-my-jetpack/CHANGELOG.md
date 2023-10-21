@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update checkout flow to connect "After" checkout vs before (if not connected).
 
+### Fixed
+- Use Current_Plan to check/return from has_required_plan on VP product class
+
 ## [3.9.1] - 2023-10-19
 ### Changed
 - Make has_required_plan return true (as it was before #33410) as a way to revert the change. [#33697]
