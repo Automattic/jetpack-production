@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Connection: added protection for wpcom urls stored in the database during identity crisis.
 - Make the jetpack_ai_enabled filter decide whether to register AI editor extensions
+- Social: Remove the tweetstorm editor components
 - [Memberships] Prevent data to be retrieved from cache sites on WPCOM
 
 ### Bug fixes
