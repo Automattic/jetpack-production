@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.17.9-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.17.9] - 2023-10-23
 ### Changed
-- Replace Calypso progress bar with one from VideoPress.
-- Updated package dependencies.
+- Replace Calypso progress bar with one from VideoPress. [#33054]
+- Updated package dependencies. [#33646] [#33687]
 
 ## [1.17.8] - 2023-10-16
 ### Changed
@@ -503,7 +500,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[1.17.9-alpha]: https://github.com/Automattic/jetpack-backup/compare/v1.17.8...v1.17.9-alpha
+[1.17.9]: https://github.com/Automattic/jetpack-backup/compare/v1.17.8...v1.17.9
 [1.17.8]: https://github.com/Automattic/jetpack-backup/compare/v1.17.7...v1.17.8
 [1.17.7]: https://github.com/Automattic/jetpack-backup/compare/v1.17.6...v1.17.7
 [1.17.6]: https://github.com/Automattic/jetpack-backup/compare/v1.17.5...v1.17.6
