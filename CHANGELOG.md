@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Map block not rendering
 - Fix missing block translations
 - Jetpack: fix performance issues by not calling useAnalytics hook for all paragraphs
+- REST API settings endpoint: Fix google analytics option handling for Jetpack sites.
 - Subscribe modal: match block markup with params
 - The Google Photos media inserter only checks for the connection status when needed.
 - VideoPress: avoid performance issues by calling useEffect for every block on typing
