@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Sync: Add missing support for supplying additional columns to do checksum on.
+
 ### Changed
 - Dedicated Sync: Update 'init' hook priority on Dedicated Sync requests to 0, in order to start sending Sync actions to WPCOM and exit as early as possible.
 
