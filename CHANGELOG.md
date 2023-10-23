@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add strikethrough Markdown syntax to Markdown generator
 - AI Assistant: add UsageBar component and add a sample of it to the Usage Panel.
 - AI Assistant: Enable backend prompts for 100% of production sites.
+- AI Assistant: Enhance toolbar UX
 - AI Assistant: register ai-assistant-usage-panel beta extension.
 - AI Extension: change the filter to populate the Jetpack Form block with AI components
 - AI Extension: do not skip React hook instances
