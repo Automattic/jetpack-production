@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Add additional properties to WooCommerce analytics events
 - add parameter to method
 - Add support for welcome message in subscription_options
+- Add WooCommerce to env setup for CI tests.
 - Check for post access first then do tracking action.
 - css fix
 - Fix some possible undefined variable warnings.
