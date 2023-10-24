@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: add @wordpress/wordcount dependency
 
 ### Bug fixes
+- Carousel: resolve warning with AMP plugin.
 - Do not list one-time interval payment plans as newsletter plans.
 - REST API: Fix GA settings field, wga, for settings endpoints on API version 1.3 and 1.4
 
