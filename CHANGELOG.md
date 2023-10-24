@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: fix undefined 'disabled' I18nMenuDropdown prop bug
 - AI Extension: improve performance bug when extending blocks with AI Assistant
 - Block Editor: disable some of Twitter's Thread publishing tools since the feature is no longer accessible.
+- Do not list one-time interval payment plans as newsletter plans.
 - Fixed a bug that prevent customers from downloading invoices from the my account page in WooCommerce
 - Fix issue when email was double encoded
 - Fix Map block not rendering
