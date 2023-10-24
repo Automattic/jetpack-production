@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Do not list one-time interval payment plans as newsletter plans.
 - REST API: Fix GA settings field, wga, for settings endpoints on API version 1.3 and 1.4
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Refactor blocks registration
+
 ## 12.8-a.3 - 2023-10-23
 ### Enhancements
 - Adds new modifications for the admin menu on Atomic sites that ensures that all links go to wp-admin except those that are only available in Calypso. [#33631]
