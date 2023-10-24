@@ -2,18 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.8-a.4 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 12.8-a.5 - 2023-10-24
 ### Enhancements
-- Jetpack: add @wordpress/wordcount dependency
-- Jetpack: improve process to extend paid blocks with upgrade banner
+- Jetpack: Add @wordpress/wordcount dependency. [#33745]
 
 ### Bug fixes
-- Carousel: resolve warning with AMP plugin.
-- Do not list one-time interval payment plans as newsletter plans.
-- REST API: Fix GA settings field, wga, for settings endpoints on API version 1.3 and 1.4
+- Do not list one-time interval payment plans as newsletter plans. [#33716]
+- REST API: Fix GA settings field, wga, for settings endpoints on API version 1.3 and 1.4. [#33753]
 
 ## 12.8-a.3 - 2023-10-23
 ### Enhancements
