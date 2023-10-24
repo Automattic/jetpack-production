@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Map block not rendering
 - Fix missing block translations
 - Jetpack: fix performance issues by not calling useAnalytics hook for all paragraphs
+- REST API: Fix GA settings field, wga, for settings endpoints on API version 1.3 and 1.4
 - REST API settings endpoint: Fix google analytics option handling for Jetpack sites.
 - Subscribe modal: match block markup with params
 - The Google Photos media inserter only checks for the connection status when needed.
