@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: add @wordpress/wordcount dependency
 - Jetpack: improve process to extend paid blocks with upgrade banner
 - Register wordads block earlier to make it more discoverable.
+- remove jetpack option jetpack-memberships-connected-account-id
 
 ### Bug fixes
 - Carousel: resolve warning with AMP plugin.
