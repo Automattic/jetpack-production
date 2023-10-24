@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: Connect real usage data on the UsagePanel.
 - Jetpack: add @wordpress/wordcount dependency
 - Jetpack: improve process to extend paid blocks with upgrade banner
 - Register wordads block earlier to make it more discoverable.
