@@ -1,6 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 3,
+    "apiVersion": 1,
     "name": "jetpack/markdown",
     "title": "Markdown",
     "description": "Add headings, lists, or links to plain text with ease.",
@@ -31,6 +31,11 @@
     "attributes": {
         "source": {
             "type": "string"
+        }
+    },
+    "example": {
+        "attributes": {
+            "source": "## ## Try Markdown\n\nMarkdown is a text formatting syntax that is converted into HTML. You can _emphasize_ text or **make it strong** with just a few characters."
         }
     },
     "editorScript": "jetpack-blocks-editor"

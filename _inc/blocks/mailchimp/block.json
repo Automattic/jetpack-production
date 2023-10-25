@@ -1,6 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 3,
+    "apiVersion": 1,
     "name": "jetpack/mailchimp",
     "title": "Mailchimp",
     "description": "Allow readers to join a Mailchimp audience.",
@@ -61,6 +61,21 @@
             "type": "boolean",
             "default": false
         }
+    },
+    "example": {
+        "attributes": {
+            "preview": true
+        },
+        "innerBlocks": [
+            {
+                "name": "jetpack/button",
+                "attributes": {
+                    "element": "button",
+                    "text": "Join my Mailchimp audience",
+                    "uniqueId": "mailchimp-widget-id"
+                }
+            }
+        ]
     },
     "editorScript": "jetpack-blocks-editor"
 }
