@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add filter that allows disabling Scan module
 - AI Assistant: add Upgrade button component on the UsagePanel.
 - AI Assistant: Connect real usage data on the UsagePanel.
+- Change links for Appearance > Themes on Atomic sites with wpcom_admin_interface option set to wp-admin to point to WPCOM Marketplace
 - Jetpack: add @wordpress/wordcount dependency
 - Jetpack: add UsagePanel story
 - Jetpack: improve process to extend paid blocks with upgrade banner
