@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: add @wordpress/wordcount dependency
 - Jetpack: add UsagePanel story
 - Jetpack: improve process to extend paid blocks with upgrade banner
+- Jetpack AI: expose current period usage data on feature endpoint.
 - Link plugins to WPCOM Marketplace on Atomic sites
 - Register wordads block earlier to make it more discoverable.
 - remove jetpack option jetpack-memberships-connected-account-id
