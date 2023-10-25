@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: add Upgrade button component on the UsagePanel.
 - AI Assistant: Connect real usage data on the UsagePanel.
 - Jetpack: add @wordpress/wordcount dependency
+- Jetpack: add UsagePanel story
 - Jetpack: improve process to extend paid blocks with upgrade banner
 - Link plugins to WPCOM Marketplace on Atomic sites
 - Register wordads block earlier to make it more discoverable.
