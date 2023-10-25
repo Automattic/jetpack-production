@@ -166,7 +166,6 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_8_a_4
         'Automattic\\Jetpack\\JITMS\\Pre_Connection_JITM' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-jitm/src/class-pre-connection-jitm.php',
         'Automattic\\Jetpack\\JITMS\\Rest_Api_Endpoints' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-jitm/src/class-rest-api-endpoints.php',
         'Automattic\\Jetpack\\Jetpack_CRM_Data' => __DIR__ . '/../..' . '/src/class-jetpack-crm-data.php',
-        'Automattic\\Jetpack\\Jetpack_Lazy_Images' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-lazy-images/src/lazy-images.php',
         'Automattic\\Jetpack\\Licensing' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-licensing/src/class-licensing.php',
         'Automattic\\Jetpack\\Licensing\\Endpoints' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-licensing/src/class-endpoints.php',
         'Automattic\\Jetpack\\Modules' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-modules.php',

@@ -72,10 +72,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
       'ver' => '2.5.1',
     ),
-    'jetpack-lazy-images' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-lazy-images',
-      'ver' => '2.3.2',
-    ),
     'jetpack-licensing' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
       'ver' => '1.8.4',

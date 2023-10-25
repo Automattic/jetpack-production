@@ -526,10 +526,6 @@ return array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/class-jetpack-crm-data.php'
 	),
-	'Automattic\\Jetpack\\Jetpack_Lazy_Images' => array(
-		'version' => '2.3.2.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-lazy-images/src/lazy-images.php'
-	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '1.8.4.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/src/class-licensing.php'
