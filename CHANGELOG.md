@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: improve process to extend paid blocks with upgrade banner
 - Jetpack AI: expose current period usage data on feature endpoint.
 - Link plugins to WPCOM Marketplace on Atomic sites
+- Metered billing: hide usage bar when site has AI plan
 - Register wordads block earlier to make it more discoverable.
 - remove jetpack option jetpack-memberships-connected-account-id
 
