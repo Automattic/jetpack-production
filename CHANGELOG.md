@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Donations Block: update to be compatible with the upcoming version of WordPress, 6.4.
+- General: indicate full compatibility with the latest version of WordPress, 6.4.
 
 ### Bug fixes
 - Carousel: resolve warning with AMP plugin.
