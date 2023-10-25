@@ -1,6 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 3,
+    "apiVersion": 1,
     "name": "jetpack/eventbrite",
     "title": "Eventbrite Checkout",
     "description": "Embed Eventbrite event details and ticket checkout.",
@@ -15,6 +15,35 @@
     "supports": {
         "html": false,
         "align": true
+    },
+    "attributes": {
+        "url": {
+            "type": "string"
+        },
+        "eventId": {
+            "type": "number"
+        },
+        "style": {
+            "type": "string",
+            "default": "inline"
+        }
+    },
+    "example": {
+        "attributes": {
+            "url": "https://www.eventbrite.com/e/test-event-tickets-123456789",
+            "eventId": 123456789,
+            "style": "modal"
+        },
+        "innerBlocks": [
+            {
+                "name": "jetpack/button",
+                "attributes": {
+                    "element": "a",
+                    "text": "Register",
+                    "uniqueId": "eventbrite-widget-id"
+                }
+            }
+        ]
     },
     "editorScript": "jetpack-blocks-editor"
 }
