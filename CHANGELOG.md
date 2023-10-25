@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Register wordads block earlier to make it more discoverable.
 - remove jetpack option jetpack-memberships-connected-account-id
 
+### Improved compatibility
+- Donations Block: update to be compatible with the upcoming version of WordPress, 6.4.
+
 ### Bug fixes
 - Carousel: resolve warning with AMP plugin.
 - Do not list one-time interval payment plans as newsletter plans.
