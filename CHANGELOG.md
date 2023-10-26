@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Carousel: resolve warning with AMP plugin.
 - Do not list one-time interval payment plans as newsletter plans.
+- Prevent issue on jetpack proxy when tier is added
 - Require login on wpcom for paid content access without cookie or token.
 - REST API: Fix GA settings field, wga, for settings endpoints on API version 1.3 and 1.4
 
