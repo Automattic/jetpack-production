@@ -47,7 +47,7 @@
 		"automattic/jetpack-stats": "^0.6.6",
 		"automattic/jetpack-stats-admin": "^0.12.2",
 		"automattic/jetpack-status": "^1.18.5",
-		"automattic/jetpack-sync": "^1.60.0-alpha",
+		"automattic/jetpack-sync": "^1.60.0",
 		"automattic/jetpack-videopress": "^0.19.1",
 		"automattic/jetpack-waf": "^0.11.13",
 		"automattic/jetpack-wordads": "^0.2.55",
@@ -81,6 +81,7 @@
 			"pnpm run watch"
 		]
 	},
+	"repositories": [],
 	"autoload": {
 		"classmap": [
 			"src"
@@ -93,7 +94,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_8_a_6",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ12_8_a_7",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true

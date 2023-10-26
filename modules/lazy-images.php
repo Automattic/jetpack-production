@@ -21,10 +21,10 @@
 /**
  * Deactivate module if it is still active.
  *
- * @since 12.8-a.6
+ * @since 12.8
  */
 if ( Jetpack::is_module_active( 'lazy-images' ) ) {
 	Jetpack::deactivate_module( 'lazy-images' );
 }
 
-_deprecated_file( basename( __FILE__ ), 'jetpack-12.8-a.6' );
+_deprecated_file( basename( __FILE__ ), 'jetpack-12.8' );
