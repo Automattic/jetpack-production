@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: expose current plan tier information on feature endpoint.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add subscribers auth endpoint
 - Dashboard: remove link to "My Jetpack"
 - Updated package dependencies.
 
