@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Carousel: resolve warning with AMP plugin.
+- Fix block paid icon rendering error on simple sites
 - Fix the google fonts module is not loaded after the late initialization
 - Newsletter: if site has no plan, downgrade post access to subscribers-only
 - Prevent issue on jetpack proxy when tier is added
