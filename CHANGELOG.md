@@ -2,7 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.8-a.4 - unreleased
+## 12.8-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -12,7 +12,6 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Connect real usage data on the UsagePanel.
 - Alter the admin toolbar when the wpcom-admin-interface setting is set to wp-admin (fall back to the original WordPress menu)
 - Change links for Appearance > Themes on Atomic sites with wpcom_admin_interface option set to wp-admin to point to WPCOM Marketplace
-- Jetpack: add @wordpress/wordcount dependency
 - Jetpack: add UsagePanel story
 - Jetpack: improve process to extend paid blocks with upgrade banner
 - Jetpack AI: expose current period usage data on feature endpoint.
@@ -28,14 +27,20 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Carousel: resolve warning with AMP plugin.
-- Do not list one-time interval payment plans as newsletter plans.
 - Newsletter: if site has no plan, downgrade post access to subscribers-only
 - Prevent issue on jetpack proxy when tier is added
 - Require login on wpcom for paid content access without cookie or token.
-- REST API: Fix GA settings field, wga, for settings endpoints on API version 1.3 and 1.4
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Refactor blocks registration
+
+## 12.8-a.5 - 2023-10-24
+### Enhancements
+- Jetpack: Add @wordpress/wordcount dependency. [#33745]
+
+### Bug fixes
+- Do not list one-time interval payment plans as newsletter plans. [#33716]
+- REST API: Fix GA settings field, wga, for settings endpoints on API version 1.3 and 1.4. [#33753]
 
 ## 12.8-a.3 - 2023-10-23
 ### Enhancements
