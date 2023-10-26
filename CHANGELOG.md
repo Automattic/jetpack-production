@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Extension: implement usage message in the UsageBar component
 - Alter the admin toolbar when the wpcom-admin-interface setting is set to wp-admin (fall back to the original WordPress menu)
 - Change links for Appearance > Themes on Atomic sites with wpcom_admin_interface option set to wp-admin to point to WPCOM Marketplace
+- Earn: Rename Earn to Monetize
 - Jetpack: add UsagePanel story
 - Jetpack: improve process to extend paid blocks with upgrade banner
 - Jetpack AI: expose current period usage data on feature endpoint.
