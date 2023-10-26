@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Require login on wpcom for paid content access without cookie or token.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Dashboard: remove link to "My Jetpack"
 - Refactor blocks registration
 
 ## 12.8-a.5 - 2023-10-24
