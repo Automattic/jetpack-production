@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add filter that allows disabling Scan module
 - AI Assistant: add Upgrade button component on the UsagePanel.
 - AI Assistant: Connect real usage data on the UsagePanel.
+- AI Extension: implement usage message in the UsageBar component
 - Alter the admin toolbar when the wpcom-admin-interface setting is set to wp-admin (fall back to the original WordPress menu)
 - Change links for Appearance > Themes on Atomic sites with wpcom_admin_interface option set to wp-admin to point to WPCOM Marketplace
 - Jetpack: add UsagePanel story
