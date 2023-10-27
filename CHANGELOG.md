@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard / My Plan: update the link to licensing management for a better UX in the My Plan header.
 - Dashboard: remove link to "My Jetpack"
 - Updated package dependencies.
+- Update lockfile
 
 ## 12.8-a.7 - 2023-10-26
 ### Enhancements
