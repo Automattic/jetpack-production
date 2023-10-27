@@ -10,7 +10,6 @@ This is an alpha version! The changes listed here are not final.
 - Earn: Rename Earn to Monetize
 - Jetpack AI: expose current plan tier information on feature endpoint.
 - Paywall: improve already subscriber experience
-- Refactor blocks registration
 - scssphp: Upgrade from 0.0.9 to 0.0.12
 - Utilize the Jetpack Admin UI package for handling the Akismet menu
 
