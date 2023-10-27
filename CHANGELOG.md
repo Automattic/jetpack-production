@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Add subscribers auth endpoint
 - Dashboard / My Plan: update the link to licensing management for a better UX in the My Plan header.
 - Dashboard: remove link to "My Jetpack"
+- fix bug tier selector
 - Updated package dependencies.
 - Update lockfile
 
