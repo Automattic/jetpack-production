@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Earn: Rename Earn to Monetize
 - Jetpack AI: expose current plan tier information on feature endpoint.
+- Paywall: improve already subscriber experience
 - scssphp: Upgrade from 0.0.9 to 0.0.12
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
