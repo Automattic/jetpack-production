@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Earn: Rename Earn to Monetize
+- Jetpack AI: cache the AI assistant feature data for Jetpack sites
 - Jetpack AI: expose current plan tier information on feature endpoint.
 - Paywall: improve already subscriber experience
 - scssphp: Upgrade from 0.0.9 to 0.0.12
