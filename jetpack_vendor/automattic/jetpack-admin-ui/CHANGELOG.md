@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.24-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Handle Akismet submenu even if Jetpack is present, as Jetpack now relies on this package to do so.
+
 ## [0.2.23] - 2023-09-19
 ### Changed
 - Updated Jetpack submenu sort order so individual features are alpha-sorted. [#32958]
@@ -120,6 +127,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing menu visibility issues.
 
+[0.2.24-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.23...0.2.24-alpha
 [0.2.23]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.22...0.2.23
 [0.2.22]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.21...0.2.22
 [0.2.21]: https://github.com/Automattic/jetpack-admin-ui/compare/0.2.20...0.2.21

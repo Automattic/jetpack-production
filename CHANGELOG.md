@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall: improve already subscriber experience
 - Refactor blocks registration
 - scssphp: Upgrade from 0.0.9 to 0.0.12
+- Utilize the Jetpack Admin UI package for handling the Akismet menu
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add subscribers auth endpoint
