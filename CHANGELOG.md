@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: expose current plan tier information on feature endpoint.
 - Jetpack Dashboard: improve Akismet tooltip
 - Paywall: improve already subscriber experience
+- Refactor blocks registration
 - scssphp: Upgrade from 0.0.9 to 0.0.12
 - Subscription block. Improve wording to get access to content.
 - Utilize the Jetpack Admin UI package for handling the Akismet menu
