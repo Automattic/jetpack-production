@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall: improve already subscriber experience
 - Refactor blocks registration
 - scssphp: Upgrade from 0.0.9 to 0.0.12
+- Subscribe block: change "followers" term to "subscribers"
 - Subscription block. Improve wording to get access to content.
 - Utilize the Jetpack Admin UI package for handling the Akismet menu
 
