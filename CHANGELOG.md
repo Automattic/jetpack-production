@@ -19,9 +19,6 @@ This is an alpha version! The changes listed here are not final.
 - Subscription block. Improve wording to get access to content.
 - Utilize the Jetpack Admin UI package for handling the Akismet menu
 
-### Improved compatibility
-- Add NL tier type
-
 ### Bug fixes
 - Fixes style for multiple choice checkbox in Froms block
 
