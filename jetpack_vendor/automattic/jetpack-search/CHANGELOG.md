@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.39.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.39.4] - 2023-10-30
 ### Changed
-- Instant Search: rely on browsers' native lazy loading functionality when we want to lazy load images.
+- Instant Search: rely on browsers' native lazy loading functionality when we want to lazy load images. [#33817]
 
 ## [0.39.3] - 2023-10-23
 ### Changed
@@ -833,7 +830,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.39.4-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.39.3...v0.39.4-alpha
+[0.39.4]: https://github.com/Automattic/jetpack-search/compare/v0.39.3...v0.39.4
 [0.39.3]: https://github.com/Automattic/jetpack-search/compare/v0.39.2...v0.39.3
 [0.39.2]: https://github.com/Automattic/jetpack-search/compare/v0.39.1...v0.39.2
 [0.39.1]: https://github.com/Automattic/jetpack-search/compare/v0.39.0...v0.39.1
