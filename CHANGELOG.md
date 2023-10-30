@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: expose current period start in the ai-assistant-feature endpoint
 - Earn: Rename Earn to Monetize
 - Jetpack AI: cache the AI assistant feature data for Jetpack sites
 - Jetpack AI: expose current plan tier information on feature endpoint.
