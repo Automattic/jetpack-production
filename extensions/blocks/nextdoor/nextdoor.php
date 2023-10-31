@@ -2,7 +2,7 @@
 /**
  * Nextdoor Block.
  *
- * @since 12.8-a.10
+ * @since 12.8
  *
  * @package automattic/jetpack
  */
