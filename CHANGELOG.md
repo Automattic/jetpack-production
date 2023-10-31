@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: cache the AI assistant feature data for Jetpack sites
 - Jetpack AI: expose current plan tier information on feature endpoint.
 - Jetpack Dashboard: improve Akismet tooltip
+- Newsletters: Add level for all paid subscribers
 - Paywall: improve already subscriber experience
 - Refactor blocks registration
 - Refactor payment-related blocks registration
