@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Add NL tier type
 
 ### Bug fixes
+- Fix Cookie Consent block icon
 - Fixes style for multiple choice checkbox in Froms block
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
