@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 12.8-a.12 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Jetpack AI: Use Jetpack AI Usage Helper to set current plan tier information on feature endpoint.
+
 ## 12.8-a.11 - 2023-10-31
 ### Enhancements
 - Add a new block for supporting Nextdoor embeds. [#33751]
