@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Cookie Consent block icon
 - Fixes style for multiple choice checkbox in Froms block
 - Fix issue in tier selector when tier is null
+- Fix unresponsive Simple Payment block
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add subscribers auth endpoint
