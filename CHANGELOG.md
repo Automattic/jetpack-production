@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Tiered Plans: pick and expose tier plan data
 - Jetpack AI: Temporarely remove performance sensitive function calls to solve loading issue.
 - Jetpack AI: Use Jetpack AI Usage Helper to set current plan tier information on feature endpoint.
+- Subscriptions: Add blog_id param to login link.
 - Update classic Jetpack widget to not show up if user is subscribed
 
 ### Bug fixes
