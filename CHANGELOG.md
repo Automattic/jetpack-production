@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Jetpack AI: Temporarely remove performance sensitive function calls to solve loading issue.
 - Jetpack AI: Use Jetpack AI Usage Helper to set current plan tier information on feature endpoint.
 - Update classic Jetpack widget to not show up if user is subscribed
 
