@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Use Jetpack AI Usage Helper to set current plan tier information on feature endpoint.
 - Update classic Jetpack widget to not show up if user is subscribed
 
+### Bug fixes
+- Fix Assistant not showing Jetpack header on some Assistant routes.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Subscribe block: refactor block rendering into a single function
 - Updated package dependencies.
