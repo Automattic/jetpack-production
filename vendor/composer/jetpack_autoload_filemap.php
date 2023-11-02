@@ -19,7 +19,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/functions.php'
 	),
 	'e6f7f640a6586216432b53e5c9d1b472' => array(
-		'version' => '0.36.5.0-alpha1698918897',
+		'version' => '0.36.5.0-alpha1698931920',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/utilities.php'
 	),
 	'3d45c7e6a7f0e71849e33afe4b3b3ede' => array(

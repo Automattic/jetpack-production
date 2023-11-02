@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Assistant not showing Jetpack header on some Assistant routes.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added Nextdoor to Social Previews
 - Subscribe block: refactor block rendering into a single function
 - Updated package dependencies.
 
