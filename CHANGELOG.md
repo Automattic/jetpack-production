@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix Assistant not showing Jetpack header on some Assistant routes.
+- Respect the user's view setting when wpcom_admin_interface is wp-admin
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added Nextdoor to Social Previews
