@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Add blog_id param to login link.
 - Update classic Jetpack widget to not show up if user is subscribed
 
+### Improved compatibility
+- Nextdoor: Fix the embed resizing
+
 ### Bug fixes
 - Fix Assistant not showing Jetpack header on some Assistant routes.
 - Respect the user's view setting when wpcom_admin_interface is wp-admin
