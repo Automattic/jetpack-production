@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Tiered Plans: pick and expose tier plan data
 - Cache the remote google fonts JSON data
 - Change WordAds and Simple Payments upsell CTAs to JP Creator redirect
+- Display SSO form for user who has wpcom-admin-interface setting set to wp-admin (fall back to the original WordPress menu)
 - Jetpack AI: Temporarely remove performance sensitive function calls to solve loading issue.
 - Jetpack AI: Use Jetpack AI Usage Helper to set current plan tier information on feature endpoint.
 - Subscribe Block: Add Subscribed status
