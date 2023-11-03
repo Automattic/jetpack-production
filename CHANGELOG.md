@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added Nextdoor to Social Previews
 - Add tier-plans on ai-assistant-feature endpoint payload containing the collection of available tiered plans
+- Remove scssc 0.0.12, replace with ScssPhp 1.1.11
 - Subscribe block: refactor block rendering into a single function
 - Updated package dependencies.
 

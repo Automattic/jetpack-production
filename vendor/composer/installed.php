@@ -424,6 +424,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'scssphp/scssphp' => array(
+            'pretty_version' => 'v1.11.1',
+            'version' => '1.11.1.0',
+            'reference' => 'ace2503684bab0dcc817d7614c8a54b865122414',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../scssphp/scssphp',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'wikimedia/aho-corasick' => array(
             'pretty_version' => 'v1.0.1',
             'version' => '1.0.1.0',
