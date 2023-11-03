@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Nextdoor: Fix the embed resizing
 
 ### Bug fixes
+- Comments: improve compatibility with WordPress 6.4 and drop IE support.
 - Fix Assistant not showing Jetpack header on some Assistant routes.
 - Respect the user's view setting when wpcom_admin_interface is wp-admin
 
