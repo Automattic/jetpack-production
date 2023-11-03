@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Update classic Jetpack widget to not show up if user is subscribed
 
 ### Improved compatibility
+- Do not cleanup options on plugin uninstall if there are other connected plugins to let them stay connected.
 - Nextdoor: Fix the embed resizing
 
 ### Bug fixes
