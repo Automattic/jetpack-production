@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a notice for wp-admin settings pages when the wpcom_admin_interface option is set to wp-admin
 - Added nextdoor block to production blocks
 - AI Tiered Plans: pick and expose tier plan data
+- Always links 'My Sites' to the Sites page when 'wp-admin' is the admin interface.
 - Cache the remote google fonts JSON data
 - Change WordAds and Simple Payments upsell CTAs to JP Creator redirect
 - Display SSO form for user who has wpcom-admin-interface setting set to wp-admin (fall back to the original WordPress menu)
