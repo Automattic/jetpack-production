@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.8-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update dependencies.
+
 ## [0.2.7] - 2023-10-16
 ### Added
 - Added HEIC (`*.heic`) to list of images types allowed to be passed through Photon. [#33494]
@@ -47,6 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add image CDN package. [#29561]
 
+[0.2.8-alpha]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.2.7...v0.2.8-alpha
 [0.2.7]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.2.6...v0.2.7
 [0.2.6]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.2.4...v0.2.5
