@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added a notice for wp-admin settings pages when the wpcom_admin_interface option is set to wp-admin
 - Added nextdoor block to production blocks
+- AI Assistant: Add loading state to usage panel
 - AI Tiered Plans: pick and expose tier plan data
 - Always links 'My Sites' to the Sites page when 'wp-admin' is the admin interface.
 - Cache the remote google fonts JSON data
