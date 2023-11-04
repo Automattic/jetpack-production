@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Comments: improve compatibility with WordPress 6.4 and drop IE support.
 - Fix Assistant not showing Jetpack header on some Assistant routes.
+- Fix the issue where the VaultPress submenu is not being registered when the standalone plugin is inactive and the product is active
 - Respect the user's view setting when wpcom_admin_interface is wp-admin
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
