@@ -18,14 +18,12 @@ This is an alpha version! The changes listed here are not final.
 - Do not cleanup options on plugin uninstall if there are other connected plugins to let them stay connected.
 
 ### Bug fixes
-- Fixed an issue where initial state is not in sync
 - Fix the issue where the VaultPress submenu is not being registered when the standalone plugin is inactive and the product is active
-- Prevent a PHP Warning when accessing inner blocks on cart and checkout pages.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Remove scssc 0.0.12, replace with ScssPhp 1.1.11
 
-## 12.8-beta - 2023-11-03
+## 12.8 - 2023-11-06
 ### Enhancements
 - Added a notice for wp-admin settings pages when the wpcom_admin_interface option is set to wp-admin. [#33933]
 - Added nextdoor block to production blocks. [#33950]
@@ -46,6 +44,8 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Comments: Improve compatibility with WordPress 6.4 and drop IE support. [#33709]
 - Fix Assistant not showing Jetpack header on some Assistant routes. [#33896]
+- Fixed an issue where initial state is not in sync
+- Prevent a PHP Warning when accessing inner blocks on cart and checkout pages.
 - Respect the user's view setting when wpcom_admin_interface is wp-admin. [#33945]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
@@ -59,7 +59,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a new block for supporting Nextdoor embeds. [#33751]
 - AI Assistant: Expose current period start in the ai-assistant-feature endpoint. [#33843]
 - Newsletters: Add level for all paid subscribers. [#33841]
-- Refactor blocks registration. [#33682] [#33689] [#33694] [#33840]
+- Refactor blocks registration [#33682] [#33689] [#33694] [#33840]
 - Subscribe block: Change "followers" term to "subscribers". [#33860]
 
 ### Improved compatibility
