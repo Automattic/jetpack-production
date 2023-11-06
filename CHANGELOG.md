@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Comments: improve compatibility with WordPress 6.4 and drop IE support.
 - Fix Assistant not showing Jetpack header on some Assistant routes.
+- Fixed an issue where initial state is not in sync
 - Fix the issue where the VaultPress submenu is not being registered when the standalone plugin is inactive and the product is active
 - Prevent a PHP Warning when accessing inner blocks on cart and checkout pages.
 - Respect the user's view setting when wpcom_admin_interface is wp-admin
