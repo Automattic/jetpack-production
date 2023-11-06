@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Display SSO form for user who has wpcom-admin-interface setting set to wp-admin (fall back to the original WordPress menu)
 - Jetpack AI: Temporarely remove performance sensitive function calls to solve loading issue.
 - Jetpack AI: Use Jetpack AI Usage Helper to set current plan tier information on feature endpoint.
+- Plans: introduce `plans` prop to plans store
 - Plans: minor code refactoring for wordpress-com/plans store
 - Subscribe Block: Add Subscribed status
 - Subscribe modal: don't show when previewing post or theme
