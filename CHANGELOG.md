@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Temporarely remove performance sensitive function calls to solve loading issue.
 - Jetpack AI: Use Jetpack AI Usage Helper to set current plan tier information on feature endpoint.
 - Subscribe Block: Add Subscribed status
+- Subscribe modal: don't show when previewing post or theme
 - Subscriptions: Add blog_id param to login link.
 - Update classic Jetpack widget to not show up if user is subscribed
 
