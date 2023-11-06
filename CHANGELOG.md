@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Plans: introduce `plans` prop to plans store
 - Plans: minor code refactoring for wordpress-com/plans store
 - Subscribe modal: don't show when previewing post or theme
+- Two minor changes to the Profile menu for WoA sites using 'Classic style'
 
 ### Improved compatibility
 - Do not cleanup options on plugin uninstall if there are other connected plugins to let them stay connected.
