@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add back the Calypso stats menu item for WoA sites
 - Adding VideoPress content gating support.
 - AI Assistant: Add loading state to usage panel
 - Decouple tiers from subscribe_as_site_subscriber parameter
