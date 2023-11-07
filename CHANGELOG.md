@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Dashboard: fix the display of the settings for Markdown for comments.
+- Fix misspelled var
 - Fix the issue where the VaultPress submenu is not being registered when the standalone plugin is inactive and the product is active
 - RNMobile: Update block registration code to allow registration using metadata
 
