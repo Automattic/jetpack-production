@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Dashboard: fix the display of the settings for Markdown for comments.
 - Fix the issue where the VaultPress submenu is not being registered when the standalone plugin is inactive and the product is active
+- RNMobile: Update block registration code to allow registration using metadata
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Remove scssc 0.0.12, replace with ScssPhp 1.1.11
