@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding VideoPress content gating support.
 - AI Assistant: Add loading state to usage panel
 - AI Assistant: map the AI Assistant feature data
+- AI Assistant: register isFetching state in the plans store
 - Decouple tiers from subscribe_as_site_subscriber parameter
 - Jetpack: reduxify AI Assistant feature
 - Jetpack Plans: address TS issues
