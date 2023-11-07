@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Do not cleanup options on plugin uninstall if there are other connected plugins to let them stay connected.
 
 ### Bug fixes
+- Dashboard: fix the display of the settings for Markdown for comments.
 - Fix the issue where the VaultPress submenu is not being registered when the standalone plugin is inactive and the product is active
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
