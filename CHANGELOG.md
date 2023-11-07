@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding VideoPress content gating support.
 - AI Assistant: Add loading state to usage panel
 - Decouple tiers from subscribe_as_site_subscriber parameter
+- Jetpack: reduxify AI Assistant feature
 - Plans: introduce `plans` prop to plans store
 - Plans: minor code refactoring for wordpress-com/plans store
 - Subscribe modal: don't show when previewing post or theme
