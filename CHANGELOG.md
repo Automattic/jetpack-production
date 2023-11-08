@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Do not cleanup options on plugin uninstall if there are other connected plugins to let them stay connected.
 
 ### Bug fixes
+- Add duration for videopress and media files that might have it set
 - Custom-CSS: do not attempt to load `@import` from the filesystem. `@import` of CSS from URLs can still be done.
 - Dashboard: fix the display of the settings for Markdown for comments.
 - Fix misspelled var
