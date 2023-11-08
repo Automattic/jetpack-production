@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: introduce action to increase requests counter
 - Refactor payment-related blocks registration
 
 ### Improved compatibility
