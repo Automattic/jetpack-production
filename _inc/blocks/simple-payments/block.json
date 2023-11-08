@@ -34,7 +34,7 @@
     "attributes": {
         "currency": {
             "type": "string",
-            "default": "USD"
+            "default": "DEFAULT_CURRENCY"
         },
         "content": {
             "type": "string",

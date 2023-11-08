@@ -18,7 +18,6 @@ This is an alpha version! The changes listed here are not final.
 - Plans: introduce `plans` prop to plans store
 - Plans: minor code refactoring for wordpress-com/plans store
 - Refactor Instagram Gallery block registration
-- Refactor payment-related blocks registration
 - Subscribe modal: don't show when previewing post or theme
 - Two minor changes to the Profile menu for WoA sites using 'Classic style'
 

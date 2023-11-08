@@ -1,6 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 2,
+    "apiVersion": 3,
     "name": "jetpack/recurring-payments",
     "title": "Payment Button",
     "description": "Button allowing you to sell products and subscriptions.",
@@ -67,8 +67,5 @@
             "type": "string"
         }
     },
-    "parent": [
-        "jetpack/payment-buttons"
-    ],
     "editorScript": "jetpack-blocks-editor"
 }
