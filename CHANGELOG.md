@@ -16,8 +16,10 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Add duration for videopress and media files that might have it set
 - Custom-CSS: do not attempt to load `@import` from the filesystem. `@import` of CSS from URLs can still be done.
+- Subscribe Block: Fix display in the editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- fix to previous PR
 - get_author: wpcom: Add a new wpcom_api_pre_get_active_blog_author filter
 - Use the new methods on WPCOM helper to build the AI assistant feature payload
 
