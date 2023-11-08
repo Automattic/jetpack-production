@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom-CSS: do not attempt to load `@import` from the filesystem. `@import` of CSS from URLs can still be done.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- get_author: wpcom: Add a new wpcom_api_pre_get_active_blog_author filter
 - Use the new methods on WPCOM helper to build the AI assistant feature payload
 
 ## 12.9-a.1 - 2023-11-08
