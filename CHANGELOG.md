@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Refactor payment-related blocks registration
 
+### Improved compatibility
+- Added tier hash
+
 ### Bug fixes
 - Add duration for videopress and media files that might have it set
 - Custom-CSS: do not attempt to load `@import` from the filesystem. `@import` of CSS from URLs can still be done.
