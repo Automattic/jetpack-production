@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: connect useAiFeature() hook with the plans store
 - AI Assistant: introduce action to increase requests counter
 - Refactor payment-related blocks registration
 
