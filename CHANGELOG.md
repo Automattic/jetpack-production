@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: fix the display of the settings for Markdown for comments.
 - Fix misspelled var
 - Fix the issue where the VaultPress submenu is not being registered when the standalone plugin is inactive and the product is active
+- Fix the PHP warning that happens when the font name is not defined.
 - Related Posts: ensure the Related Posts Block can be displayed properly.
 - RNMobile: Update block registration code to allow registration using metadata
 
