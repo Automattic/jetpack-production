@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - fix subscribe block alignment
 - fix to previous PR
 - get_author: wpcom: Add a new wpcom_api_pre_get_active_blog_author filter
+- Passes block type attribute along to memberships checkout form.
 - Use the new methods on WPCOM helper to build the AI assistant feature payload
 
 ## 12.9-a.1 - 2023-11-08
