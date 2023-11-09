@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: introduce action to increase requests counter
 - AI Assistant: polish TS types for the AI Assistant Feature data
 - Refactor payment-related blocks registration
+- Update the pre-publish and post-publish panels to display the newsletter categories that the post will be sent to
 
 ### Improved compatibility
 - Added tier hash
