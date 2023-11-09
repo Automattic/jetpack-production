@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add next-tier prop to the AI assistant feature endpoint response. Add the prop to hooks and statee
+- fix subscribe block alignment
 - fix to previous PR
 - get_author: wpcom: Add a new wpcom_api_pre_get_active_blog_author filter
 - Use the new methods on WPCOM helper to build the AI assistant feature payload
