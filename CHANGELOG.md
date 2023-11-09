@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: introduce action to increase requests counter
 - AI Assistant: polish TS types for the AI Assistant Feature data
 - AI Excerpt: increases the AI requests counter optimistically
+- Calypso for Jetpack: add "Subscribers" and "My profile" under Users menu
 - Jetpack Form: increases AI request counter optimistically
 - Jetpack form: memoize the onDone and onError callbacks passed to the hook
 - Refactor payment-related blocks registration
