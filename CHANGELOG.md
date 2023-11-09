@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add bloganuary date field to blogging prompts api. This field will be used for the bloganuary promotion.
 - AI Assistant: connect useAiFeature() hook with the plans store
 - AI Assistant: introduce action to increase requests counter
 - Refactor payment-related blocks registration
