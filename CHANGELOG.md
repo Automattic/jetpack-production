@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix a PHP Warning when WooCommerce templates were not found due to a name change
 - Subscribe Block: Fix display in the editor.
 - Subscribe block: only redirect to post when inside a post context
+- Subscribe Modal: don't show to subscribers
 - Subscribe modal: fix lack of spacing in some themes
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
