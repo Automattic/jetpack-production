@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Add duration for videopress and media files that might have it set
+- Change the paths used to require OpenAI classes
 - Custom-CSS: do not attempt to load `@import` from the filesystem. `@import` of CSS from URLs can still be done.
 - Fix a PHP Warning when WooCommerce templates were not found due to a name change
 - Subscribe Block: Fix display in the editor.
