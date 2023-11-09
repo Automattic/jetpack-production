@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: connect useAiFeature() hook with the plans store
 - AI Assistant: introduce action to increase requests counter
 - AI Assistant: polish TS types for the AI Assistant Feature data
+- AI Excerpt: increases the AI requests counter optimistically
 - Jetpack Form: increases AI request counter optimistically
 - Refactor payment-related blocks registration
 - Update the pre-publish and post-publish panels to display the newsletter categories that the post will be sent to
