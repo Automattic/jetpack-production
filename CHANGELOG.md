@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom-CSS: do not attempt to load `@import` from the filesystem. `@import` of CSS from URLs can still be done.
 - Fix a PHP Warning when WooCommerce templates were not found due to a name change
 - fix fatal from not checking get_product_list() result correctly.
+- Shortcode embeds: fix and refactor the display of Gravatars and Gravatar profiless.
 - Subscribe Block: Fix display in the editor.
 - Subscribe block: only redirect to post when inside a post context
 - Subscribe Modal: don't show to subscribers
