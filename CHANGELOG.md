@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: perform async AI Assistant feature data from the store
 - AI Assistant: polish TS types for the AI Assistant Feature data
 - AI Assistant: set initial state of AI Assistant feature data at store level
+- AI Assistant: show upgrade banner only when the AI Assistant block is selected
 - AI Assistant: simplify how to render upgrade banner for AI Assistant block
 - AI Excerpt: increases the AI requests counter optimistically
 - Calypso for Jetpack: add "Subscribers" and "My profile" under Users menu
