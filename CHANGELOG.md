@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add bloganuary date field to blogging prompts api. This field will be used for the bloganuary promotion.
+- Add Jetpack Sharing Buttons block.
 - AI Assistant: connect useAiFeature() hook with the plans store
 - AI Assistant: increase the requests counter from the AI Assistant block
 - AI Assistant: introduce action to increase requests counter
