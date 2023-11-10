@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Jetpack Sharing Buttons block.
 - AI Assistant: connect useAiFeature() hook with the plans store
 - AI Assistant: dispatch upgrade action when getting 429 from streaming
+- AI Assistant: increases the requests count of the usage period of the plans store
 - AI Assistant: increase the requests counter from the AI Assistant block
 - AI Assistant: introduce action to increase requests counter
 - AI Assistant: perform async AI Assistant feature data from the store
