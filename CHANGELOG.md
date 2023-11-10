@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Added tier hash
 - Paywall: Improve styles
+- Rename "Profile" submenu to "My Profile". Ensure correct order of "Subscribers" submenu on Atomic.
 
 ### Bug fixes
 - Add duration for videopress and media files that might have it set
