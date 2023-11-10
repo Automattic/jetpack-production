@@ -6,6 +6,21 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Paywall: Improve styles
+
+### Bug fixes
+- Fix a PHP Warning when WooCommerce templates were not found due to a name change
+- Fix the PHP warning that happens when the font name is not defined.
+- Related Posts: ensure the Related Posts Block can be displayed properly.
+- Subscribe Block: Fix display in the editor.
+- Subscribe Modal: don't show to subscribers
+- Subscribe modal: fix lack of spacing in some themes
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- fix subscribe block alignment
+- rollback change
+
 ## 12.8 - 2023-11-06
 ### Enhancements
 - Added a notice for wp-admin settings pages when the wpcom_admin_interface option is set to wp-admin. [#33933]
