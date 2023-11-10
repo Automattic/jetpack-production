@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - AI Assistant: Change image and text for interstitial based on tiers
+- AI Assistant: Remove TOS notice from interstitial page
 
 ## [3.12.0] - 2023-11-08
 ### Added
