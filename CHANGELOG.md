@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: connect useAiFeature() hook with the plans store
 - AI Assistant: increase the requests counter from the AI Assistant block
 - AI Assistant: introduce action to increase requests counter
+- AI Assistant: perform async AI Assistant feature data from the store
 - AI Assistant: polish TS types for the AI Assistant Feature data
 - AI Excerpt: increases the AI requests counter optimistically
 - Calypso for Jetpack: add "Subscribers" and "My profile" under Users menu
