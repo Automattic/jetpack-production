@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Calypso for Jetpack: add "Subscribers" and "My profile" under Users menu
 - Jetpack Form: increases AI request counter optimistically
 - Jetpack form: memoize the onDone and onError callbacks passed to the hook
+- Proofread: compute AI requests counter from here too
 - Refactor payment-related blocks registration
 - Switching useModuleStatus to new Jetpack modules store.
 - Update the pre-publish and post-publish panels to display the newsletter categories that the post will be sent to
