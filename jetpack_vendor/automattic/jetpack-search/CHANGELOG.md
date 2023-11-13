@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Search: use classic search for iOS<16
+
 ## [0.39.5] - 2023-11-03
 
 ## [0.39.4] - 2023-10-30
