@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack form: memoize the onDone and onError callbacks passed to the hook
 - Proofread: compute AI requests counter from here too
 - Refactor payment-related blocks registration
+- Sharing block: code & copy polish
 - Subscribe block: return to correct page even when not subscribing from a post
 - Switching useModuleStatus to new Jetpack modules store.
 - Update the pre-publish and post-publish panels to display the newsletter categories that the post will be sent to
