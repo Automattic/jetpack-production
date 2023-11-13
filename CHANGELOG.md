@@ -2,24 +2,18 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.9-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 12.8.1 - 2023-11-13
 ### Improved compatibility
-- Paywall: Improve styles
+- Paywall: Improved styles. [#34040]
 
 ### Bug fixes
-- Fix a PHP Warning when WooCommerce templates were not found due to a name change
-- Fix the PHP warning that happens when the font name is not defined.
-- Related Posts: ensure the Related Posts Block can be displayed properly.
-- Subscribe Block: Fix display in the editor.
-- Subscribe Modal: don't show to subscribers
-- Subscribe modal: fix lack of spacing in some themes
+- Fixed a PHP Warning when WooCommerce templates were not found due to a name change. [#34030]
+- Fixed the PHP warning that happens when the font name is not defined. [#34005]
+- Related Posts: Ensured the Related Posts Block can be properly displayed. [#33994]
+- Subscribe Block: Fixed the block not rendering correctly in the editor. [#34023]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- fix subscribe block alignment
-- rollback change
+- Fixed Subscribe Block alignment. [#34003]
 
 ## 12.8 - 2023-11-06
 ### Enhancements
