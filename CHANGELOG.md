@@ -2,65 +2,67 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.9-a.2 - unreleased
+## 12.9-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Add bloganuary date field to blogging prompts api. This field will be used for the bloganuary promotion.
-- Add Jetpack Sharing Buttons block.
-- AI Assistant: connect useAiFeature() hook with the plans store
-- AI Assistant: dispatch upgrade action when getting 429 from streaming
-- AI Assistant: increases the requests count of the usage period of the plans store
-- AI Assistant: increase the requests counter from the AI Assistant block
-- AI Assistant: introduce action to increase requests counter
-- AI Assistant: perform async AI Assistant feature data from the store
-- AI Assistant: polish TS types for the AI Assistant Feature data
-- AI Assistant: set initial state of AI Assistant feature data at store level
-- AI Assistant: show upgrade banner only when the AI Assistant block is selected
-- AI Assistant: simplify how to render upgrade banner for AI Assistant block
-- AI Excerpt: increases the AI requests counter optimistically
-- Allow edition of Subscription block placeholder text and button label
-- Calypso for Jetpack: add "Subscribers" and "My profile" under Users menu
-- Jetpack Form: increases AI request counter optimistically
-- Jetpack form: memoize the onDone and onError callbacks passed to the hook
-- Proofread: compute AI requests counter from here too
-- Refactor payment-related blocks registration
 - Sharing block: code & copy polish
 - Subscribe block: return to correct page even when not subscribing from a post
-- Switching useModuleStatus to new Jetpack modules store.
-- Update the pre-publish and post-publish panels to display the newsletter categories that the post will be sent to
-
-### Improved compatibility
-- Added tier hash
-- Paywall: Improve styles
-- Rename "Profile" submenu to "My Profile". Ensure correct order of "Subscribers" submenu on Atomic.
 
 ### Bug fixes
-- Add duration for videopress and media files that might have it set
-- Change the paths used to require OpenAI classes
-- Custom-CSS: do not attempt to load `@import` from the filesystem. `@import` of CSS from URLs can still be done.
-- Fix a PHP Warning when WooCommerce templates were not found due to a name change
-- fix fatal from not checking get_product_list() result correctly.
-- RNMobile: Prevent converted video blocks from displaying empty thumbnails on mobile.
-- Shortcode embeds: fix and refactor the display of Gravatars and Gravatar profiless.
 - Subscribe Block: Fix button in new line
-- Subscribe Block: Fix display in the editor.
-- Subscribe block: only redirect to post when inside a post context
-- Subscribe Modal: don't show to subscribers
-- Subscribe modal: fix lack of spacing in some themes
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add next-tier prop to the AI assistant feature endpoint response. Add the prop to hooks and statee
-- Change Creator product constants to be a product rather than a plan.
 - CLI Tools: update block scaffolding CLI tool to use block.json to register blocks.
-- fix subscribe block alignment
-- fix to previous PR
-- get_author: wpcom: Add a new wpcom_api_pre_get_active_blog_author filter
-- improve subscribe block on simple sites
-- Introduce tier types and props for current and next tier
-- Passes block type attribute along to memberships checkout form.
-- Use the new methods on WPCOM helper to build the AI assistant feature payload
+
+## 12.9-a.3 - 2023-11-13
+### Enhancements
+- Blocks: Added the Jetpack Sharing Buttons block. [#27243]
+- AI Assistant: Updated AI Assistant to display an upgrade banner when the feature endpoint returns with 'quota exceeded'. [#34057]
+- AI Assistant: Updated the AI Assistant block to display the upgrade banner only once a block is selected. [#34081]
+- Blocks: Added capability for editing Subscription block placeholder text and button label. [#33938]
+- WoA: Added "Subscribers" and "My profile" under the "Users" menu in the Calypso sidebar. [#33988]
+- Newsletters: Updated the pre-publish and post-publish panels to display the newsletter categories that the post will be sent to. [#33917]
+
+### Improved compatibility
+- Blocks: Fixed lack of spacing for the Paywall block in some themes. [#34040]
+- Improved the consistency of the "Users" admin menu across all environments. [#34008]
+- Subscribe Modal: Fixed lack of spacing in the modal for some themes. [#34032]
+
+### Bug fixes
+- AI Assistant: Fixed an AI error sometimes being rendered for prompts marked unclear. [#34051]
+- Media: Fixed VideoPress videos and media length not being displayed when available. [#34002]
+- Custom-CSS: Disabled loading `@import` directives from the filesystem. `@import` of CSS from URLs can still be done. [#33959]
+- Fixed a PHP Warning triggered when WooCommerce templates were not found due to a name change. [#34030]
+- Fixed fatal error triggered by not checking get_product_list() result correctly. [#34059]
+- Mobile: Prevented converted video blocks from displaying empty thumbnails on mobile. [#34073]
+- Shortcode embeds: Fixed and updated the display of Gravatars and Gravatar profiles. [#34012]
+- Subscribe Block: Fix display in the editor. [#34023]
+- Subscribe Block: Fixed incorrect redirects from the block when shown outside of a post page. [#33932]
+- Subscribe Modal: Fixed the issue with the block being shown to subscribers. [#34039]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated 'useModuleStatus' to use the new Jetpack modules store. [#33397]
+- Added a Bloganuary date field to blogging prompts API. This field will be used for the Bloganuary promotion. [#33852]
+- AI Assistant: Connected the 'useAiFeature' hook with the plans store. [#34001]
+- AI Assistant: Updated the requests counter to optimistically increase the request count for the usage period. [#34029] [#34048] [#34082]
+- AI Assistant: Added an action for increasing the requests counter value. [#34019]
+- AI Assistant: Updated the way in which AI feature data is fetched from the API in order to prevent unnecessary requests. [#34060]
+- AI Assistant: Updated TS types for the AI Assistant feature data. [#34038]
+- AI Assistant: Moved the initial state from 'useAiFeature' hook to the 'wordpress-com/plans' store. [#34080]
+- AI Assistant: Simplified the code for rendering the upgrade banner inside the AI Assistant block. [#34069]
+- Blocks: Imporved Contact Form block performance. [#34049]
+- Blocks: Refactored payment-related blocks registration. [#33941]
+- AI Assistant: Updated the paths used to require OpenAI classes. [#34056]
+- Add next-tier prop to the AI assistant feature endpoint response. Add the prop to hooks and state. [#34028]
+- Change Creator product constants to be a product rather than a plan. [#33998]
+- Fixed Subscribe block alignment. [#34003]
+- Added a new wpcom_api_pre_get_active_blog_author filter. [#33980]
+- Improved the Subscribe block on simple sites. [#34070]
+- Introduced tier types and props for current and next tier. [#34046]
+- Passed block type attributes along to the memberships checkout form. [#33963]
+- Switched to the new methods on the WPCOM helper to build the AI assistant feature payload. [#33990]
 
 ## 12.9-a.1 - 2023-11-08
 ### Enhancements
