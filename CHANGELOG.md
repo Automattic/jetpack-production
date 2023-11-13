@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - fix fatal from not checking get_product_list() result correctly.
 - RNMobile: Prevent converted video blocks from displaying empty thumbnails on mobile.
 - Shortcode embeds: fix and refactor the display of Gravatars and Gravatar profiless.
+- Subscribe Block: Fix button in new line
 - Subscribe Block: Fix display in the editor.
 - Subscribe block: only redirect to post when inside a post context
 - Subscribe Modal: don't show to subscribers
