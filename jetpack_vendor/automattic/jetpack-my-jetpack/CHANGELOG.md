@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.12.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- My Jetpack: Fix bug when the Jetpack AI feature information is not available.
+
 ## [3.12.1] - 2023-11-13
 ### Changed
 - AI Assistant: Updated the text and image for the interstitial based on AI plan tiers. [#33981]
@@ -1094,6 +1101,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[3.12.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.12.1...3.12.2-alpha
 [3.12.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.12.0...3.12.1
 [3.12.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.11.1...3.12.0
 [3.11.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/3.11.0...3.11.1
