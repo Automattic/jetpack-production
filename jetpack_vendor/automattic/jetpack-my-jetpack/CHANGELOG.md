@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: Fix bug when the Jetpack AI feature information is not available.
+- Updated package dependencies.
 
 ## [3.12.1] - 2023-11-13
 ### Changed

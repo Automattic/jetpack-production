@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - CLI Tools: update block scaffolding CLI tool to use block.json to register blocks.
 - e2e tests: remove block tests.
+- Updated package dependencies.
 
 ## 12.9-a.3 - 2023-11-13
 ### Enhancements

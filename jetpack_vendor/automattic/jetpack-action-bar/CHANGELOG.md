@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.32-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [0.1.31] - 2023-11-03
 ### Changed
 - Update dependencies. [#33946]
@@ -134,6 +141,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Adds the Action Bar package and Jetpack plugin module for follows, likes, and comments. Just a scaffold to build on, for now. [#25447]
 
+[0.1.32-alpha]: https://github.com/Automattic/jetpack-action-bar/compare/v0.1.31...v0.1.32-alpha
 [0.1.31]: https://github.com/Automattic/jetpack-action-bar/compare/v0.1.30...v0.1.31
 [0.1.30]: https://github.com/Automattic/jetpack-action-bar/compare/v0.1.29...v0.1.30
 [0.1.29]: https://github.com/Automattic/jetpack-action-bar/compare/v0.1.28...v0.1.29
