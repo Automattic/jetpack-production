@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: show upgrade banner only when the AI Assistant block is selected
 - AI Assistant: simplify how to render upgrade banner for AI Assistant block
 - AI Excerpt: increases the AI requests counter optimistically
+- Allow edition of Subscription block placeholder text and button label
 - Calypso for Jetpack: add "Subscribers" and "My profile" under Users menu
 - Jetpack Form: increases AI request counter optimistically
 - Jetpack form: memoize the onDone and onError callbacks passed to the hook
