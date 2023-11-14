@@ -425,9 +425,9 @@
             'dev_requirement' => false,
         ),
         'scssphp/scssphp' => array(
-            'pretty_version' => 'v1.11.1',
-            'version' => '1.11.1.0',
-            'reference' => 'ace2503684bab0dcc817d7614c8a54b865122414',
+            'pretty_version' => 'v1.12.0',
+            'version' => '1.12.0.0',
+            'reference' => 'a6b20c170ddb95f116b3d148a466a7bed1e85c35',
             'type' => 'library',
             'install_path' => __DIR__ . '/../scssphp/scssphp',
             'aliases' => array(),

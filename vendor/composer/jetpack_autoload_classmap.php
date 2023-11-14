@@ -1451,203 +1451,203 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-plugins-handler.php'
 	),
 	'ScssPhp\\ScssPhp\\Base\\Range' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Base/Range.php'
 	),
 	'ScssPhp\\ScssPhp\\Block' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\AtRootBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/AtRootBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\CallableBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/CallableBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\ContentBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/ContentBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\DirectiveBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/DirectiveBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\EachBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/EachBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\ElseBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/ElseBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\ElseifBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/ElseifBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\ForBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/ForBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\IfBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/IfBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\MediaBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/MediaBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\NestedPropertyBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/NestedPropertyBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Block\\WhileBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Block/WhileBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Cache' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Cache.php'
 	),
 	'ScssPhp\\ScssPhp\\Colors' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Colors.php'
 	),
 	'ScssPhp\\ScssPhp\\CompilationResult' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/CompilationResult.php'
 	),
 	'ScssPhp\\ScssPhp\\Compiler' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Compiler.php'
 	),
 	'ScssPhp\\ScssPhp\\Compiler\\CachedResult' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Compiler/CachedResult.php'
 	),
 	'ScssPhp\\ScssPhp\\Compiler\\Environment' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Compiler/Environment.php'
 	),
 	'ScssPhp\\ScssPhp\\Exception\\CompilerException' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Exception/CompilerException.php'
 	),
 	'ScssPhp\\ScssPhp\\Exception\\ParserException' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Exception/ParserException.php'
 	),
 	'ScssPhp\\ScssPhp\\Exception\\RangeException' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Exception/RangeException.php'
 	),
 	'ScssPhp\\ScssPhp\\Exception\\SassException' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Exception/SassException.php'
 	),
 	'ScssPhp\\ScssPhp\\Exception\\SassScriptException' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Exception/SassScriptException.php'
 	),
 	'ScssPhp\\ScssPhp\\Exception\\ServerException' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Exception/ServerException.php'
 	),
 	'ScssPhp\\ScssPhp\\Formatter' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Formatter.php'
 	),
 	'ScssPhp\\ScssPhp\\Formatter\\Compact' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Formatter/Compact.php'
 	),
 	'ScssPhp\\ScssPhp\\Formatter\\Compressed' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Formatter/Compressed.php'
 	),
 	'ScssPhp\\ScssPhp\\Formatter\\Crunched' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Formatter/Crunched.php'
 	),
 	'ScssPhp\\ScssPhp\\Formatter\\Debug' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Formatter/Debug.php'
 	),
 	'ScssPhp\\ScssPhp\\Formatter\\Expanded' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Formatter/Expanded.php'
 	),
 	'ScssPhp\\ScssPhp\\Formatter\\Nested' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Formatter/Nested.php'
 	),
 	'ScssPhp\\ScssPhp\\Formatter\\OutputBlock' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Formatter/OutputBlock.php'
 	),
 	'ScssPhp\\ScssPhp\\Logger\\LoggerInterface' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Logger/LoggerInterface.php'
 	),
 	'ScssPhp\\ScssPhp\\Logger\\QuietLogger' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Logger/QuietLogger.php'
 	),
 	'ScssPhp\\ScssPhp\\Logger\\StreamLogger' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Logger/StreamLogger.php'
 	),
 	'ScssPhp\\ScssPhp\\Node' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Node.php'
 	),
 	'ScssPhp\\ScssPhp\\Node\\Number' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Node/Number.php'
 	),
 	'ScssPhp\\ScssPhp\\OutputStyle' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/OutputStyle.php'
 	),
 	'ScssPhp\\ScssPhp\\Parser' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Parser.php'
 	),
 	'ScssPhp\\ScssPhp\\SourceMap\\Base64' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/SourceMap/Base64.php'
 	),
 	'ScssPhp\\ScssPhp\\SourceMap\\Base64VLQ' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/SourceMap/Base64VLQ.php'
 	),
 	'ScssPhp\\ScssPhp\\SourceMap\\SourceMapGenerator' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/SourceMap/SourceMapGenerator.php'
 	),
 	'ScssPhp\\ScssPhp\\Type' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Type.php'
 	),
 	'ScssPhp\\ScssPhp\\Util' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Util.php'
 	),
 	'ScssPhp\\ScssPhp\\Util\\Path' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Util/Path.php'
 	),
 	'ScssPhp\\ScssPhp\\ValueConverter' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/ValueConverter.php'
 	),
 	'ScssPhp\\ScssPhp\\Version' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Version.php'
 	),
 	'ScssPhp\\ScssPhp\\Warn' => array(
-		'version' => '1.11.1.0',
+		'version' => '1.12.0.0',
 		'path'    => $vendorDir . '/scssphp/scssphp/src/Warn.php'
 	),
 	'Shutdown_Handler' => array(
