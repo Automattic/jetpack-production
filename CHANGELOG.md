@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Excerpt: dequeue AI feature async request when asking a new suggestion
+- Jetpack Form: handle AI requests counter when asking AI suggestions
 - Sharing block: code & copy polish
 - Subscribe block: return to correct page even when not subscribing from a post
 
