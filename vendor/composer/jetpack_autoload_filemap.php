@@ -7,23 +7,23 @@ $baseDir   = dirname($vendorDir);
 
 return array(
 	'3773ef3f09c37da5478d578e32b03a4b' => array(
-		'version' => '1.18.15.0-alpha1699978088',
+		'version' => '1.18.15.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-assets/actions.php'
 	),
 	'd4eb94df91a729802d18373ee8cdc79f' => array(
-		'version' => '1.17.12.0-alpha1699978088',
+		'version' => '1.17.12.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/actions.php'
 	),
 	'009de6aaa0d497eacea41fab13fc05f1' => array(
-		'version' => '1.7.8.0-alpha1699970051',
+		'version' => '1.7.8.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/functions.php'
 	),
 	'e6f7f640a6586216432b53e5c9d1b472' => array(
-		'version' => '0.36.6.0-alpha1699978088',
+		'version' => '0.36.6.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/utilities.php'
 	),
 	'3d45c7e6a7f0e71849e33afe4b3b3ede' => array(
-		'version' => '0.11.15.0-alpha1699970051',
+		'version' => '0.11.15.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/cli.php'
 	),
 );
