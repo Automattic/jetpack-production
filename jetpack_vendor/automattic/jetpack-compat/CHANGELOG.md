@@ -5,9 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.7.8-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [1.7.8] - 2023-11-14
 
 ## [1.7.7] - 2023-09-19
 
@@ -133,7 +131,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Jetpack 7.5: Back compatibility package
 
-[1.7.8-alpha]: https://github.com/Automattic/jetpack-compat/compare/v1.7.7...v1.7.8-alpha
+[1.7.8]: https://github.com/Automattic/jetpack-compat/compare/v1.7.7...v1.7.8
 [1.7.7]: https://github.com/Automattic/jetpack-compat/compare/v1.7.6...v1.7.7
 [1.7.6]: https://github.com/Automattic/jetpack-compat/compare/v1.7.5...v1.7.6
 [1.7.5]: https://github.com/Automattic/jetpack-compat/compare/v1.7.4...v1.7.5

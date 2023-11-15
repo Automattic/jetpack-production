@@ -2,30 +2,36 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.9-a.4 - unreleased
+## 12.9-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: ensure the client performs AI data feature request at least once
-- AI Excerpt: dequeue AI feature async request when asking a new suggestion
 - CSS Concatenation: avoid optimizing CSS loading when less than 2 modules that require it are active.
-- Jetpack Form: handle AI requests counter when asking AI suggestions
-- Sharing block: code & copy polish
-- Subscribe block: return to correct page even when not subscribing from a post
 
 ### Improved compatibility
 - General: update WordPress version requirements to WordPress 6.3.
 
-### Bug fixes
-- Subscribe Block: Fix button in new line
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: update block support from __experimentalLayout to layout.
 - change wording
-- CLI Tools: update block scaffolding CLI tool to use block.json to register blocks.
-- e2e tests: remove block tests.
 - Updated package dependencies.
+
+## 12.9-a.5 - 2023-11-14
+### Enhancements
+- Subscribe Block: Improved the redirect logic after confirming a subscriptions. [#34086]
+
+### Bug fixes
+- Subscribe Block: Fixed the button in a new line option not working. [#34075]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- CLI Tools: Updated block scaffolding CLI tool to use block.json to register blocks. [#33883]
+- E2E Tests: Removed block tests. [#34016]
+- Updated package dependencies. [#34093] [#34087]
+- Sharing Block: Cleaned up code & copy. [#34085]
+- Jetpack Form: Updated handling of AI requests counter when asking AI for suggestions. [#34096]
+- AI Excerpt: Added dequeueing for AI feature async requests when asking for new suggestions. [#34094]
 
 ## 12.9-a.3 - 2023-11-13
 ### Enhancements

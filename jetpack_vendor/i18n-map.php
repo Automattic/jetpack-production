@@ -6,23 +6,23 @@ return array(
   'packages' => array(
     'jetpack-action-bar' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-action-bar',
-      'ver' => '0.1.32-alpha1699978088',
+      'ver' => '0.1.33-alpha1700072541',
     ),
     'jetpack-admin-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
-      'ver' => '0.2.25-alpha1699978088',
+      'ver' => '0.2.26-alpha1700072541',
     ),
     'jetpack-assets' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-assets',
-      'ver' => '1.18.15-alpha1699978088',
+      'ver' => '1.18.16-alpha1700072541',
     ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '1.17.12-alpha1699978088',
+      'ver' => '1.17.13-alpha1700072541',
     ),
     'jetpack-blaze' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-blaze',
-      'ver' => '0.12.3-alpha1699978088',
+      'ver' => '0.12.4-alpha1700072541',
     ),
     'jetpack-boost-core' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-boost-core',
@@ -34,7 +34,7 @@ return array(
     ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
-      'ver' => '1.7.8-alpha1699970051',
+      'ver' => '1.7.8',
     ),
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
@@ -42,11 +42,11 @@ return array(
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '1.60.1-alpha1699978088',
+      'ver' => '1.60.2-alpha1700072541',
     ),
     'jetpack-forms' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
-      'ver' => '0.23.1-alpha1699978088',
+      'ver' => '0.23.2-alpha1700072541',
     ),
     'jetpack-google-fonts-provider' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
@@ -54,7 +54,7 @@ return array(
     ),
     'jetpack-idc' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
-      'ver' => '0.11.3-alpha1699978088',
+      'ver' => '0.11.4-alpha1700072541',
     ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
@@ -70,7 +70,7 @@ return array(
     ),
     'jetpack-jitm' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
-      'ver' => '2.5.3-alpha1699978088',
+      'ver' => '2.5.4-alpha1700072541',
     ),
     'jetpack-licensing' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
@@ -78,7 +78,7 @@ return array(
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '3.12.2-alpha1699978088',
+      'ver' => '3.12.3-alpha1700072541',
     ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
@@ -86,7 +86,7 @@ return array(
     ),
     'jetpack-plugins-installer' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
-      'ver' => '0.2.6-alpha1699970051',
+      'ver' => '0.2.6',
     ),
     'jetpack-post-list' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-post-list',
@@ -94,11 +94,11 @@ return array(
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
-      'ver' => '0.36.6-alpha1699978088',
+      'ver' => '0.36.7-alpha1700072541',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.39.7-alpha1699978088',
+      'ver' => '0.39.8-alpha1700072541',
     ),
     'jetpack-stats' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats',
@@ -114,15 +114,15 @@ return array(
     ),
     'jetpack-videopress-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.20.2-alpha1699978088',
+      'ver' => '0.20.3-alpha1700072541',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
-      'ver' => '0.11.15-alpha1699970051',
+      'ver' => '0.11.15',
     ),
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
-      'ver' => '0.2.58-alpha1699978088',
+      'ver' => '0.2.59-alpha1700072541',
     ),
   ),
 );
