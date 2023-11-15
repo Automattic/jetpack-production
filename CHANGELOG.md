@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribe Block: Fix button in new line
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: update block support from __experimentalLayout to layout.
 - CLI Tools: update block scaffolding CLI tool to use block.json to register blocks.
 - e2e tests: remove block tests.
 - Updated package dependencies.
