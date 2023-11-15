@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: ensure the client performs AI data feature request at least once
 - AI Excerpt: dequeue AI feature async request when asking a new suggestion
 - Jetpack Form: handle AI requests counter when asking AI suggestions
 - Sharing block: code & copy polish
