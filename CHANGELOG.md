@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: ensure the client performs AI data feature request at least once
 - AI Excerpt: dequeue AI feature async request when asking a new suggestion
+- CSS Concatenation: avoid optimizing CSS loading when less than 2 modules that require it are active.
 - Jetpack Form: handle AI requests counter when asking AI suggestions
 - Sharing block: code & copy polish
 - Subscribe block: return to correct page even when not subscribing from a post
