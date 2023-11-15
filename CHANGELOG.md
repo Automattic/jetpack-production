@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Sharing block: code & copy polish
 - Subscribe block: return to correct page even when not subscribing from a post
 
+### Improved compatibility
+- General: update WordPress version requirements to WordPress 6.3.
+
 ### Bug fixes
 - Subscribe Block: Fix button in new line
 
