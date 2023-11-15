@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: update block support from __experimentalLayout to layout.
+- change wording
 - CLI Tools: update block scaffolding CLI tool to use block.json to register blocks.
 - e2e tests: remove block tests.
 - Updated package dependencies.
