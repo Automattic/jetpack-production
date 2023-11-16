@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add subscribe modal to Newsletter settings
 - AI Assistant: compute if the site requires an upgrade depending on on the current tier too
 - AI Assistant: do not perform AI Assistant feature request from the backend
 - AI Assistant: ensure the client performs AI data feature request at least once
