@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: ensure the client performs AI data feature request at least once
 - CSS Concatenation: avoid optimizing CSS loading when less than 2 modules that require it are active.
 - Jetpack AI: Open usage panel to production users.
+- Jetpack AI: Update logic for the require upgrade field to also work for tiered sites.
 - Jetpack AI: use the Usage Helper to set fields on the ai-assistant-feature endpoint.
 - Use new async flow to get isOverLimit from useAiFeature. Fix wee typos on excerpt term"
 
