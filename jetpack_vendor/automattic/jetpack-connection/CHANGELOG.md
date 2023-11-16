@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Confirm blog ID and access token were saved before proceeding with connection flow.
+
 ### Fixed
 - Connection: ensure that partner partners are passed on during the connection process, regardless of the plugin you use to connect.
 
