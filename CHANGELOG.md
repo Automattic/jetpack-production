@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - General: update WordPress version requirements to WordPress 6.3.
 
+### Bug fixes
+- Add missing BLOCK_NAME constant to SimplePayments block
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: update block support from __experimentalLayout to layout.
 - change wording
