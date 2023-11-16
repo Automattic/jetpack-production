@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: do not perform AI Assistant feature request from the backend
 - AI Assistant: ensure the client performs AI data feature request at least once
 - CSS Concatenation: avoid optimizing CSS loading when less than 2 modules that require it are active.
+- Jetpack AI: Open usage panel to production users.
 
 ### Improved compatibility
 - General: update WordPress version requirements to WordPress 6.3.
