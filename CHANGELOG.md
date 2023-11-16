@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - change wording
 - Partnerships: stop initializing the Partner package in the Jetpack plugin, it is now done directly in the Connection package.
 - Removed jetpack/publicize store
+- Subscribe Block: link to https://wordpress.com/email-subscriptions when Subscribed
 - Updated package dependencies.
 
 ## 12.9-a.5 - 2023-11-14
