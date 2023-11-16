@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - CSS Concatenation: avoid optimizing CSS loading when less than 2 modules that require it are active.
 - Jetpack AI: Open usage panel to production users.
 - Jetpack AI: use the Usage Helper to set fields on the ai-assistant-feature endpoint.
+- Use new async flow to get isOverLimit from useAiFeature. Fix wee typos on excerpt term"
 
 ### Improved compatibility
 - General: update WordPress version requirements to WordPress 6.3.
