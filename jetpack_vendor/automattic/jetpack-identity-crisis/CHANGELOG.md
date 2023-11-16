@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Connection: add idc query argument to url for tracking multisite idcs.
+
 ## [0.11.3] - 2023-11-14
 ### Changed
 - Updated package dependencies. [#34093]
