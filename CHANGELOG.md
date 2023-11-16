@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: update block support from __experimentalLayout to layout.
 - change wording
+- Removed jetpack/publicize store
 - Updated package dependencies.
 
 ## 12.9-a.5 - 2023-11-14
