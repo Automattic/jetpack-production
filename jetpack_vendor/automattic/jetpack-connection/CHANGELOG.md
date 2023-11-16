@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Connection: ensure that partner partners are passed on during the connection process, regardless of the plugin you use to connect.
+
 ## [1.60.1] - 2023-11-14
 ### Changed
 - Updated package dependencies. [#34093]
