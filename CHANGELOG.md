@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: update block support from __experimentalLayout to layout.
 - change wording
+- Dashboard: ensure the menu item focus supports the new "activity log" menu item.
 - Partnerships: stop initializing the Partner package in the Jetpack plugin, it is now done directly in the Connection package.
 - Removed jetpack/publicize store
 - Subscribe Block: link to https://wordpress.com/email-subscriptions when Subscribed
