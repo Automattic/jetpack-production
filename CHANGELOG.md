@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Use new async flow to get isOverLimit from useAiFeature. Fix wee typos on excerpt term"
 
 ### Improved compatibility
+- General: the plugin now requires PHP 7.0 and above.
 - General: update WordPress version requirements to WordPress 6.3.
 
 ### Bug fixes

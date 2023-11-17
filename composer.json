@@ -37,7 +37,7 @@
 		"automattic/jetpack-jitm": "^2.6.0-alpha",
 		"automattic/jetpack-licensing": "^1.8.4",
 		"automattic/jetpack-logo": "^1.6.3",
-		"automattic/jetpack-my-jetpack": "^3.13.0-alpha",
+		"automattic/jetpack-my-jetpack": "^4.0.0-alpha",
 		"automattic/jetpack-plugins-installer": "^0.2.6",
 		"automattic/jetpack-post-list": "^0.4.6",
 		"automattic/jetpack-publicize": "^0.36.7-alpha",
@@ -56,7 +56,7 @@
 	},
 	"require-dev": {
 		"antecedent/patchwork": "2.1.25",
-		"automattic/jetpack-changelogger": "^3.3.11",
+		"automattic/jetpack-changelogger": "^4.0.0-alpha",
 		"johnkary/phpunit-speedtrap": "^4.0.0 || ^2.0.0 || ^1.1.0",
 		"yoast/phpunit-polyfills": "1.1.0"
 	},
