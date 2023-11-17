@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Display an "Activity Log" menu item to connected users.
+- My Jetpack: Add direct checkout support for products with quantity-based plans
 
 ### Changed
 - Remove condition from the backup undoable event call, this datapoint will be removed
