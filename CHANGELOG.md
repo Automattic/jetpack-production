@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - change wording
 - Dashboard: ensure the menu item focus supports the new "activity log" menu item.
 - Partnerships: stop initializing the Partner package in the Jetpack plugin, it is now done directly in the Connection package.
+- Rearrange the code for readability and make use of specific calls on different contexts. Leave comments behind for the future
 - Removed jetpack/publicize store
 - Subscribe Block: link to https://wordpress.com/email-subscriptions when Subscribed
 - Updated package dependencies.
