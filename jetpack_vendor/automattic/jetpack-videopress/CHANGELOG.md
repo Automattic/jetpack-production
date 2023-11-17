@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Enqueue token-bridge script when processing videopress shortcode
+- Fix interaction with memberships and VideoPress privacy.
 
 ## [0.20.2] - 2023-11-14
 ### Changed
