@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Add missing BLOCK_NAME constant to SimplePayments block
 - Contact Form: avoid errors when a saved submitted contact form is requested but does not exist anymore.
+- Restores Woo Express free trial upgrade JITM
 - RNMobile: Ensure text is always visible in Contact Info block.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
