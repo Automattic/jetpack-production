@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Rearrange the code for readability and make use of specific calls on different contexts. Leave comments behind for the future
 - Removed jetpack/publicize store
 - Subscribe Block: link to https://wordpress.com/email-subscriptions when Subscribed
+- Subscriber button: pointer cursor on hover
 - Updated package dependencies.
 - Use the same value as in backend for unlimited plan limit (needed for int comparisons), 999.999.999 (almost a billion), as a constant. Replace literal value usage.
 
