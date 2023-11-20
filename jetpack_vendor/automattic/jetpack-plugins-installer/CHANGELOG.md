@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.3.0] - 2023-11-20
 ### Changed
-- The package now requires PHP >= 7.0.
+- Updated required PHP version to >= 7.0. [#34192]
 
 ## [0.2.6] - 2023-11-14
 
@@ -65,7 +62,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix method logic
 
-[0.3.0-alpha]: https://github.com/Automattic/jetpack-plugins-installer/compare/v0.2.6...v0.3.0-alpha
+[0.3.0]: https://github.com/Automattic/jetpack-plugins-installer/compare/v0.2.6...v0.3.0
 [0.2.6]: https://github.com/Automattic/jetpack-plugins-installer/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/Automattic/jetpack-plugins-installer/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/Automattic/jetpack-plugins-installer/compare/v0.2.3...v0.2.4

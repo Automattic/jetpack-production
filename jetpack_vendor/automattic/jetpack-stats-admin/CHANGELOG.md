@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.13.0-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 0.13.0 - 2023-11-20
 ### Changed
-- The package now requires PHP >= 7.0.
+- Updated required PHP version to >= 7.0. [#34192]
 
 ## 0.12.2 - 2023-09-19
 ### Changed

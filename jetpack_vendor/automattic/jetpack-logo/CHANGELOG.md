@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.0.0] - 2023-11-20
 ### Changed
-- The package now requires PHP >= 7.0.
+- Updated required PHP version to >= 7.0. [#34192]
 
 ## [1.6.3] - 2023-09-19
 
@@ -169,7 +166,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Add a basic Jetpack Logo package
 
-[2.0.0-alpha]: https://github.com/Automattic/jetpack-logo/compare/v1.6.3...v2.0.0-alpha
+[2.0.0]: https://github.com/Automattic/jetpack-logo/compare/v1.6.3...v2.0.0
 [1.6.3]: https://github.com/Automattic/jetpack-logo/compare/v1.6.2...v1.6.3
 [1.6.2]: https://github.com/Automattic/jetpack-logo/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/Automattic/jetpack-logo/compare/v1.6.0...v1.6.1
