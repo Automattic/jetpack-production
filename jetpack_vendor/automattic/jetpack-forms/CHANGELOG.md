@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - The package now requires PHP >= 7.0.
 
 ### Fixed
+- Add an accessible name to the Contact Form dropdown rendered in the front-end
 - Avoid errors when a saved feedback form does not have the expected WP_Post format.
 
 ## [0.23.1] - 2023-11-14
