@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: add idc query argument to url for tracking multisite idcs.
 
 ### Changed
+- Code Modernization: Replace usage of strpos() with str_starts_with().
 - The package now requires PHP >= 7.0.
 
 ## [0.11.3] - 2023-11-14

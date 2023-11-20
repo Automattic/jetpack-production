@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Add Jetpack AI prices by tier to the interstitial page
 
 ### Changed
+- Code Modernization: Replace usage of strpos() with str_starts_with().
 - General: updated PHP requirement to PHP 7.0+
 - Remove condition from the backup undoable event call, this datapoint will be removed
 

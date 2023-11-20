@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: update block support from __experimentalLayout to layout.
 - change wording
+- Code Modernization: Replace usage of strpos() with str_starts_with().
 - Dashboard: ensure the menu item focus supports the new "activity log" menu item.
 - Partnerships: stop initializing the Partner package in the Jetpack plugin, it is now done directly in the Connection package.
 - Rearrange the code for readability and make use of specific calls on different contexts. Leave comments behind for the future

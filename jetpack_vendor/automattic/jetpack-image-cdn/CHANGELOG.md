@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Code Modernization: Replace usage of strpos() with str_starts_with().
 - The package now requires PHP >= 7.0.
 
 ## [0.2.8] - 2023-11-03

@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Confirm blog ID and access token were saved before proceeding with connection flow.
 
 ### Changed
+- Code Modernization: Replace usage of strpos() with str_starts_with().
 - The package now requires PHP >= 7.0.
 
 ### Fixed
