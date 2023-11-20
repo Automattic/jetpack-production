@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.36.7-alpha] - unreleased
+## [0.37.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Removed jetpack/publicize store
+- The package now requires PHP >= 7.0.
 
 ## [0.36.6] - 2023-11-14
 ### Changed
@@ -419,7 +420,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.36.7-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.36.6...v0.36.7-alpha
+[0.37.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.36.6...v0.37.0-alpha
 [0.36.6]: https://github.com/Automattic/jetpack-publicize/compare/v0.36.5...v0.36.6
 [0.36.5]: https://github.com/Automattic/jetpack-publicize/compare/v0.36.4...v0.36.5
 [0.36.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.36.3...v0.36.4

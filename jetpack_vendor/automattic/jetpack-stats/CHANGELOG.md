@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- The package now requires PHP >= 7.0.
+
 ## [0.6.6] - 2023-10-23
 ### Fixed
 - Stats: Increase timeout to 20s. [#33549]
@@ -100,6 +107,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
+[0.7.0-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.6.6...v0.7.0-alpha
 [0.6.6]: https://github.com/Automattic/jetpack-stats/compare/v0.6.5...v0.6.6
 [0.6.5]: https://github.com/Automattic/jetpack-stats/compare/v0.6.4...v0.6.5
 [0.6.4]: https://github.com/Automattic/jetpack-stats/compare/v0.6.3...v0.6.4

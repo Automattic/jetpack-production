@@ -5,12 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.60.2-alpha] - unreleased
+## [2.0.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Confirm blog ID and access token were saved before proceeding with connection flow.
+
+### Changed
+- The package now requires PHP >= 7.0.
 
 ### Fixed
 - Connection: ensure that partner partners are passed on during the connection process, regardless of the plugin you use to connect.
@@ -922,7 +925,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[1.60.2-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.60.1...v1.60.2-alpha
+[2.0.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v1.60.1...v2.0.0-alpha
 [1.60.1]: https://github.com/Automattic/jetpack-connection/compare/v1.60.0...v1.60.1
 [1.60.0]: https://github.com/Automattic/jetpack-connection/compare/v1.59.0...v1.60.0
 [1.59.0]: https://github.com/Automattic/jetpack-connection/compare/v1.58.3...v1.59.0

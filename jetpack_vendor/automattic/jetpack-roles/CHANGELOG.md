@@ -5,7 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- The package now requires PHP >= 7.0.
+
 ## [1.4.25] - 2023-09-19
+
 - Minor internal updates.
 
 ## [1.4.24] - 2023-08-23
@@ -154,6 +162,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Jetpack DNA: Introduce a Roles package
 
+[2.0.0-alpha]: https://github.com/Automattic/jetpack-roles/compare/v1.4.25...v2.0.0-alpha
 [1.4.25]: https://github.com/Automattic/jetpack-roles/compare/v1.4.24...v1.4.25
 [1.4.24]: https://github.com/Automattic/jetpack-roles/compare/v1.4.23...v1.4.24
 [1.4.23]: https://github.com/Automattic/jetpack-roles/compare/v1.4.22...v1.4.23

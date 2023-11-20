@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.18.16-alpha] - unreleased
+## [2.0.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Changed
+- The package now requires PHP >= 7.0.
 
 ## [1.18.15] - 2023-11-14
 ### Changed
@@ -382,7 +385,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Statically access asset tools
 
-[1.18.16-alpha]: https://github.com/Automattic/jetpack-assets/compare/v1.18.15...v1.18.16-alpha
+[2.0.0-alpha]: https://github.com/Automattic/jetpack-assets/compare/v1.18.15...v2.0.0-alpha
 [1.18.15]: https://github.com/Automattic/jetpack-assets/compare/v1.18.14...v1.18.15
 [1.18.14]: https://github.com/Automattic/jetpack-assets/compare/v1.18.13...v1.18.14
 [1.18.13]: https://github.com/Automattic/jetpack-assets/compare/v1.18.12...v1.18.13

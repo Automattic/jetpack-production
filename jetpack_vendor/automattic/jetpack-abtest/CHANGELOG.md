@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- The package now requires PHP >= 7.0.
+
 ## [1.10.14] - 2023-08-28
 ### Changed
 - Updated package dependencies. [#32605]
@@ -284,6 +291,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Introduce a simple A/B test package
 
+[2.0.0-alpha]: https://github.com/Automattic/jetpack-abtest/compare/v1.10.14...v2.0.0-alpha
 [1.10.14]: https://github.com/Automattic/jetpack-abtest/compare/v1.10.13...v1.10.14
 [1.10.13]: https://github.com/Automattic/jetpack-abtest/compare/v1.10.12...v1.10.13
 [1.10.12]: https://github.com/Automattic/jetpack-abtest/compare/v1.10.11...v1.10.12

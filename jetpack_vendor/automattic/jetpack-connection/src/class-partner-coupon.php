@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class Jetpack_Partner_Coupon
  *
  * @since partner-1.6.0
- * @since 1.60.2-alpha
+ * @since 2.0.0-alpha
  */
 class Partner_Coupon {
 
@@ -438,7 +438,7 @@ class Partner_Coupon {
 		 * Allow external code to add additional supported partners.
 		 *
 		 * @since partner-1.6.0
-		 * @since 1.60.2-alpha
+		 * @since 2.0.0-alpha
 		 *
 		 * @param array $supported_partners A list of supported partners.
 		 * @return array
@@ -456,7 +456,7 @@ class Partner_Coupon {
 		 * Allow external code to add additional supported presets.
 		 *
 		 * @since partner-1.6.0
-		 * @since 1.60.2-alpha
+		 * @since 2.0.0-alpha
 		 *
 		 * @param array $supported_presets A list of supported presets.
 		 * @return array
