@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Display an "Activity Log" menu item to connected users.
 - My Jetpack: Add direct checkout support for products with quantity-based plans
+- My Jetpack: Add Jetpack AI prices by tier to the interstitial page
 
 ### Changed
 - General: updated PHP requirement to PHP 7.0+
