@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: Mark Jetpack AI as upgradable in interstitial page
 
+### Changed
+- Code Modernization: Replace usage of strpos() with str_contains()
+
 ## [4.0.0] - 2023-11-20
 ### Added
 - Display an "Activity Log" menu item to connected users. [#34174]
