@@ -2,21 +2,22 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.9-a.8 - unreleased
+## 12.9-a.10 - unreleased
 
 This is an alpha version! The changes listed here are not final.
-
-### Major Enhancements
-- Generate and print the fonts that are used in global styles or block-level settings if the Jetpack Google Fonts module is enabled to avoid printing all google fonts definition in the head
-
-### Enhancements
-- Jetpack AI: add support for tiered plans on the usage panel.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Code Modernization: Replace usage of strpos() with str_contains()
 - Code modernization: Replace usage of substr() with str_starts_with() and str_ends_with().
-- Replace nested `dirname` with use of the php 7.0+ `$levels` parameter. No change in functionality.
-- Subscriber button: pointer cursor on hover
+
+## 12.9-a.9 - 2023-11-21
+### Bug fixes
+- Fixed all Google font definitions being printed in the head, instead only printing fonts that are used in global styles or required by block settings. [#34157]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Replaced nested `dirname` with use of the php 7.0+ `$levels` parameter. No change in functionality. [#34218]
+- Subscriber Button: Added pointer cursor on hover. [#34190]
+- Jetpack AI: Added support for tiered plans on the usage panel. [#34195]
 
 ## 12.9-a.7 - 2023-11-20
 ### Enhancements
