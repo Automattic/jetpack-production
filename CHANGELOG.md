@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- Generate and print the fonts that are used in global styles or block-level settings if the Jetpack Google Fonts module is enabled to avoid printing all google fonts definition in the head
+
 ### Enhancements
 - Jetpack AI: add support for tiered plans on the usage panel.
 
