@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.14.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Added whitelisting for payments endpoint
+
 ## [0.13.0] - 2023-11-20
 ### Changed
 - Updated required PHP version to >= 7.0. [#34192]
@@ -245,6 +252,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated package dependencies. [#27906]
 
+[0.14.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.13.0...v0.14.0-alpha
 [0.13.0]: https://github.com/automattic/jetpack-blaze/compare/v0.12.3...v0.13.0
 [0.12.3]: https://github.com/automattic/jetpack-blaze/compare/v0.12.2...v0.12.3
 [0.12.2]: https://github.com/automattic/jetpack-blaze/compare/v0.12.1...v0.12.2
