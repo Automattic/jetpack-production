@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Code Modernization: Replace usage of strpos() with str_contains()
 - Code modernization: Replace usage of substr() with str_starts_with() and str_ends_with().
+- Introduce enable-tier-plans-ui beta flag
 
 ## 12.9-a.9 - 2023-11-21
 ### Bug fixes
