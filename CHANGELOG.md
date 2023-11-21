@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: add support for tiered plans on the usage panel.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Replace nested `dirname` with use of the php 7.0+ `$levels` parameter. No change in functionality.
 - Subscriber button: pointer cursor on hover
 
 ## 12.9-a.7 - 2023-11-20
