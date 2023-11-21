@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Allow non wpcom sites to be suggested
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Code Modernization: Replace usage of strpos() with str_contains()
 - Code modernization: Replace usage of substr() with str_starts_with() and str_ends_with().
