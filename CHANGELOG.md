@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Allow non wpcom sites to be suggested
+- Subscribe modal: apply dismissal cookie domain wide
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: remove Beta Amazon block.
