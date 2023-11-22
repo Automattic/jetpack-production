@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Adjust UpgradeNudge for tier plans
 - Allow non wpcom sites to be suggested
 - Subscribe modal: apply dismissal cookie domain wide
 
