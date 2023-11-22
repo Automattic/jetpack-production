@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Code Modernization: Replace usage of strpos() with str_contains()
 - Code modernization: Replace usage of substr() with str_starts_with() and str_ends_with().
 - Introduce enable-tier-plans-ui beta flag
+- Jetpack AI: Fix the Usage Panel upgrade button text to change depending on the next tier available.
 - Reuse email on memberships checkout form when recently subscribed but not logged in.
 
 ## 12.9-a.9 - 2023-11-21
