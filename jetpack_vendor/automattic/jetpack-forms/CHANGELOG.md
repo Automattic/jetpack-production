@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Improved Contact Form required label contrast
+- Use correct sorting function in `Admin::grunion_ajax_shortcode()`
 
 ## [0.24.0] - 2023-11-20
 ### Changed
