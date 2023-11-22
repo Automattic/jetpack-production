@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Code Modernization: Replace usage of substr() with str_starts_with() and str_ends_with().
 - Fix Contact Form single and multiple choice inputs markup accessibility
 
+### Fixed
+- Improved Contact Form required label contrast
+
 ## [0.24.0] - 2023-11-20
 ### Changed
 - Replaced usage of strpos() with str_starts_with(). [#34135]
