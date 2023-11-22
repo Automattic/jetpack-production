@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Code Modernization: Replace usage of strpos() with str_contains()
+- My Jetpack: Link Jetpack AI Contact Us button to support email on interstitial page
 
 ## [4.0.1] - 2023-11-21
 ### Added
