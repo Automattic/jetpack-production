@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: remove Beta Amazon block.
 - Code Modernization: Replace usage of strpos() with str_contains()
 - Code modernization: Replace usage of substr() with str_starts_with() and str_ends_with().
+- fix paywall switch account on simple sites
 - Introduce enable-tier-plans-ui beta flag
 - Jetpack AI: Fix the Usage Panel upgrade button text to change depending on the next tier available.
 - Reuse email on memberships checkout form when recently subscribed but not logged in.
