@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - My Jetpack: Change Jetpack AI insterstitial contact link to Jetpack Redirect
 - My Jetpack: Link Jetpack AI Contact Us button to support email on interstitial page
+- My Jetpack: Remove hardcoded tiers from Jetpack AI interstitial
 - My Jetpack: Trust next tier provided by the Jetpack AI feature endpoint.
 
 ## [4.0.2] - 2023-11-21
