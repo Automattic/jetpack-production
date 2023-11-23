@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - fix paywall switch account on simple sites
 - Introduce enable-tier-plans-ui beta flag
 - Jetpack AI: Fix the Usage Panel upgrade button text to change depending on the next tier available.
+- Odyssey Stats widget: only load scripts when the widget is visible
 - Reuse email on memberships checkout form when recently subscribed but not logged in.
 
 ## 12.9-a.9 - 2023-11-21
