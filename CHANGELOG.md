@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribe modal: apply dismissal cookie domain wide
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add tier enabled filter status to the ai-feature payload. Include on the ai-assistant data store.
 - Blocks: remove Beta Amazon block.
 - Code Modernization: Replace usage of strpos() with str_contains()
 - Code modernization: Replace usage of substr() with str_starts_with() and str_ends_with().
