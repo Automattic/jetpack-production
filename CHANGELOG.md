@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add feature flag for new like widget layout.
+- Add jetpack_verbum_subscription_modal setting to manage subscription modal show/hide on Verbum
 - Add the latest tier plans for 750 and 1000 requests
 - Add tier enabled filter status to the ai-feature payload. Include on the ai-assistant data store.
 - Blocks: remove Beta Amazon block.
