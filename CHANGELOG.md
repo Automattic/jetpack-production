@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribe modal: apply dismissal cookie domain wide
 
 ### Bug fixes
+- Fix block name usage when unregistering Paywall block
 - RNMobile: Revert setting default for video blocks added on mobile.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
