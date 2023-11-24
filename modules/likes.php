@@ -436,7 +436,7 @@ class Jetpack_Likes {
 		/**
 		 * Enable an alternate Likes layout.
 		 *
-		 * @since 12.9-a.10
+		 * @since 12.9
 		 *
 		 * @module likes
 		 *
