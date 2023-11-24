@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add jetpack_verbum_subscription_modal setting to manage subscription modal show/hide on Verbum
 
+### Fixed
+- Silence the call to `gzinflate` to avoid a few PHP warnings.
+
 ## [2.0.2] - 2023-11-21
 ### Changed
 - Replaced usage of strpos() with str_contains(). [#34137]
