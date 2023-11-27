@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Remove hardcoded tiers from Jetpack AI interstitial
 - My Jetpack: Trust next tier provided by the Jetpack AI feature endpoint.
 
+### Fixed
+- My Jetpack: Fix product card menus
+
 ## [4.0.2] - 2023-11-21
 ### Changed
 - Replace usage of strpos() with str_contains(). [#34137]
