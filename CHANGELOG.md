@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Fix the Usage Panel upgrade button text to change depending on the next tier available.
 - Jetpack AI: Handle Contact Us button on the Usage Panel when the site is a Simple or Atomic site.
 - Odyssey Stats widget: only load scripts when the widget is visible
+- Rename hasNewsletterPlans to hasTierPlans for memberships.
 - Reuse email on memberships checkout form when recently subscribed but not logged in.
 
 ## 12.9-a.9 - 2023-11-21
