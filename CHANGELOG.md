@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Adjust UpgradeNudge for tier plans
 - Allow non wpcom sites to be suggested
 - Display subscribers count on pre/post publish panels
+- Gutenberg: Dequeue editor assets when they aren't in use
 - Prevent caching paywalled content
 - Subscribe modal: apply dismissal cookie domain wide
 
