@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix block name usage when unregistering Paywall block
+- Fixed console errors being thrown for Jetpack blocks inside the Full Site Editor.
 - Membership products resolver would not filter tiers
 - RNMobile: Revert setting default for video blocks added on mobile.
 
