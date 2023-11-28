@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Dashboard: display the Auto-sharing feature toggle even when your user is not connected to WordPress.com yet.
+- Earn: Update link to plans page.
 - Fixed console errors being thrown for Jetpack blocks inside the Full Site Editor.
 - Membership products resolver would not filter tiers
 
