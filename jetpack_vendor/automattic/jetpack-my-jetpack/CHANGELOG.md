@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- My Jetpack: Fix checkout error while selling the unlimited Jetpack AI plan.
 - My Jetpack: Fix Jetpack AI bi-yearly plan on product card
 - My Jetpack: Fix product card menus
 
