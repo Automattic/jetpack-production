@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Enhance Sharing Buttons UI to match Social Icons behavior
 - Gutenberg: Dequeue editor assets when they aren't in use
 
 ### Bug fixes
