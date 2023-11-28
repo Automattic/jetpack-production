@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Membership products resolver would not filter tiers
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fixed the issue of publicize remaining ON after the post is published
 - Refactor isOverLimit and how to reduce requireUpgrade
 - Rename hasNewsletterPlans to hasTierPlans for memberships.
 
