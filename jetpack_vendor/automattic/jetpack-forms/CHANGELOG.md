@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Contact Form: fix styling issues for Outlined and Animated styles
+- Make Contact Form error fixing accessible
 
 ## [0.24.1] - 2023-11-24
 ### Changed
