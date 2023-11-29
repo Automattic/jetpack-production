@@ -14,7 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: display the Auto-sharing feature toggle even when your user is not connected to WordPress.com yet.
 - Earn: Update link to plans page.
 - Fixed console errors being thrown for Jetpack blocks inside the Full Site Editor.
-- Jetpack Google Fonts: Filter out the old google fonts data from user global styles
+- Jetpack Google Fonts: Filter out the old google fonts data from the user's global styles
 - Membership products resolver would not filter tiers
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
