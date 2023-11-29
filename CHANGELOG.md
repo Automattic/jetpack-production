@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Adds a product upsell for Creator to the Newsletter recommendation card
+- Changing paid content block to allow selecting multiple plans.
 - Enhance Sharing Buttons UI to match Social Icons behavior
 - Gutenberg: Dequeue editor assets when they aren't in use
 
