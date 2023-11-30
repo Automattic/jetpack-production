@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update the CTAs in My Jetpack for more clarity and to avoid inconsistencies
 
 ### Fixed
+- Dashboard: do not display any notices from third-party services.
 - My Jetpack: Fix checkout error while selling the unlimited Jetpack AI plan.
 - My Jetpack: Fix Jetpack AI bi-yearly plan on product card
 - My Jetpack: Fix product card menus
