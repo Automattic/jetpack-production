@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Like button block (beta)
 - Adds a product upsell for Creator to the Newsletter recommendation card
 - Changing paid content block to allow selecting multiple plans.
+- Enable new like widget layout.
 - Enhance Sharing Buttons UI to match Social Icons behavior
 - Expose post retrieval from WPCOM_JSON_API_Get_Post_v1_1_Endpoint via a code API
 - Gutenberg: Dequeue editor assets when they aren't in use
