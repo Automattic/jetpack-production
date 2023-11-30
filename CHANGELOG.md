@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix wrong like count in dialog after liking
 - Jetpack Google Fonts module: Filter out the old google fonts data from the user's global styles
 - Membership products resolver would not filter tiers
+- Subscribe Widget: Fix nonce validation
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fixed the issue of publicize remaining ON after the post is published
