@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.0.4-alpha] - unreleased
+## [4.1.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update the CTAs in My Jetpack for more clarity and to avoid inconsistencies
 
 ### Fixed
 - My Jetpack: Fix checkout error while selling the unlimited Jetpack AI plan.
@@ -1134,7 +1137,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.0.4-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.3...4.0.4-alpha
+[4.1.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.3...4.1.0-alpha
 [4.0.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.2...4.0.3
 [4.0.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.1...4.0.2
 [4.0.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.0...4.0.1
