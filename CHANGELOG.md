@@ -11,6 +11,8 @@ This is an alpha version! The changes listed here are not final.
 - Changing paid content block to allow selecting multiple plans.
 - Enhance Sharing Buttons UI to match Social Icons behavior
 - Gutenberg: Dequeue editor assets when they aren't in use
+- Improving likes: add RTL support to likes popover
+- Update Like button "likers" dialog design
 
 ### Bug fixes
 - Dashboard: display the Auto-sharing feature toggle even when your user is not connected to WordPress.com yet.
