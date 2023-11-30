@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Improving likes: add RTL support to likes popover
 - Update Like button "likers" dialog design
 
+### Improved compatibility
+- Google Fonts: resolve occasional bug resulting in PHP 8 with latest Gutenberg.
+
 ### Bug fixes
 - Dashboard: display the Auto-sharing feature toggle even when your user is not connected to WordPress.com yet.
 - Dashboard: display the Subscriptions and WordPress.com Toolbar controls even when your user is not connected to WordPress.com yet.
