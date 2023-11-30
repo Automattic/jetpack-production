@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add Like button block (beta)
 - Adds a product upsell for Creator to the Newsletter recommendation card
 - Changing paid content block to allow selecting multiple plans.
 - Enhance Sharing Buttons UI to match Social Icons behavior
