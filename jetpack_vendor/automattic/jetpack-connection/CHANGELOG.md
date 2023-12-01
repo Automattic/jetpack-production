@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add Welcome banner to My Jetpack
 - XMLRPC endpoint 'jetpack.idcUrlValidation' now accepts an argument to specify whether we should try to reuse existing URL secret.
 
+### Changed
+- Updated package dependencies.
+
 ## [2.0.3] - 2023-11-24
 
 ## [2.0.2] - 2023-11-21

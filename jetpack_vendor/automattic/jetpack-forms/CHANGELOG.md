@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Contact Form: improved checkbox field design
+- Updated package dependencies.
 
 ### Fixed
 - Avoid PHP warnings when form has to process malformed data.

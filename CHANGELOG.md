@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Refactor isOverLimit and how to reduce requireUpgrade
 - Rename hasNewsletterPlans to hasTierPlans for memberships.
 - Tonesque: avoid errors when called against a non-image.
+- Updated package dependencies.
 
 ## 12.9-a.11 - 2023-11-24
 ### Enhancements

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Store persistent blog ID for multi-URL purposes.
 
+### Changed
+- Updated package dependencies.
+
 ## [0.12.1] - 2023-11-24
 
 ## [0.12.0] - 2023-11-20

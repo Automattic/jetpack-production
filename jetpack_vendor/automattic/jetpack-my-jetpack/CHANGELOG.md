@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Display a "Jetpack Manage" menu item to connected users.
 
 ### Changed
+- Updated package dependencies.
 - Update the API calls used for My Jetpack backup card
 - Update the CTAs in My Jetpack for more clarity and to avoid inconsistencies
 
