@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Avoid PHP warnings when form has to process malformed data.
+- Contact Form: add focus state to radio buttons and checkboxes
 - Contact Form: fix styling issues for Outlined and Animated styles
 - Make Contact Form error fixing accessible
 
