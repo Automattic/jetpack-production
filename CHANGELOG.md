@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Ensures an array key is set before usage.
 - Fixed the issue of publicize remaining ON after the post is published
+- Jetpack AI: Add Usage Panel to the block settings sidebar.
 - Moves the REST request `source` escaping from WPCOM to the Jetpack Memberships plugin for clarity.
 - Refactor isOverLimit and how to reduce requireUpgrade
 - Rename hasNewsletterPlans to hasTierPlans for memberships.
