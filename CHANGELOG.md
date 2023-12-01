@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Earn: Update link to plans page.
 - EU Cookie Widget: move away from deprecated jQuery method
 - Fixed console errors being thrown for Jetpack blocks inside the Full Site Editor.
+- Fix sending email preview if content in the editor is different from latest in the database.
 - Fix wrong like count in dialog after liking
 - Jetpack Google Fonts module: Filter out the old google fonts data from the user's global styles
 - Membership products resolver would not filter tiers
