@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add Welcome banner to My Jetpack
 - XMLRPC endpoint 'jetpack.idcUrlValidation' now accepts an argument to specify whether we should try to reuse existing URL secret.
 
 ## [2.0.3] - 2023-11-24
