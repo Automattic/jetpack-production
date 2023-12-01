@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Display a "Jetpack Manage" menu item to connected users.
+
 ### Changed
 - Update the API calls used for My Jetpack backup card
 - Update the CTAs in My Jetpack for more clarity and to avoid inconsistencies
