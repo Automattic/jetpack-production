@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding Jetpack Creator to My Jetpack
 - Add Welcome banner to My Jetpack
 - Display a "Jetpack Manage" menu item to connected users.
+- To avoid overwhelming users with information, now that we have the welcome banner, we only display the connection message if the welcome banner has been dismissed, either by clicking on any CTA or the close button. We also updated some CTAs to be more consistent and clear for new users.
 
 ### Changed
 - Updated package dependencies.
