@@ -5,26 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.1.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.1.0] - 2023-12-03
 ### Added
-- Adding Jetpack Creator to My Jetpack
-- Add Welcome banner to My Jetpack
-- Display a "Jetpack Manage" menu item to connected users.
-- To avoid overwhelming users with information, now that we have the welcome banner, we only display the connection message if the welcome banner has been dismissed, either by clicking on any CTA or the close button. We also updated some CTAs to be more consistent and clear for new users.
+- Added Jetpack Creator to My Jetpack. [#34307]
+- Added the welcome banner to My Jetpack. [#34384]
+- Display a "Jetpack Manage" menu item to connected users. [#34353]
+- Updated connection message to only display if the welcome banner has been dismissed. [#34420]
 
 ### Changed
-- Updated package dependencies.
-- Update the API calls used for My Jetpack backup card
-- Update the CTAs in My Jetpack for more clarity and to avoid inconsistencies
+- Updated package dependencies. [#34411] [#34427]
+- Updated the API calls used for My Jetpack backup card. [#34197]
+- Updated the CTAs in My Jetpack for more clarity and to avoid inconsistencies. [#34300]
 
 ### Fixed
-- Dashboard: do not display any notices from third-party services.
-- My Jetpack: Fix checkout error while selling the unlimited Jetpack AI plan.
-- My Jetpack: Fix Jetpack AI bi-yearly plan on product card
-- My Jetpack: Fix product card menus
+- Dashboard: Prevented display of any notices from third-party services. [#34364]
+- Fixed checkout error while selling the unlimited Jetpack AI plan. [#34339]
+- Fixed Jetpack AI bi-yearly plan on product card. [#34276]
+- Fixed product card menus. [#34285]
 
 ## [4.0.3] - 2023-11-24
 ### Changed
@@ -1146,7 +1143,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.1.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.3...4.1.0-alpha
+[4.1.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.3...4.1.0
 [4.0.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.2...4.0.3
 [4.0.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.1...4.0.2
 [4.0.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.0...4.0.1
