@@ -2,47 +2,44 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 12.9-a.12 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 12.9-beta - 2023-12-03
 ### Enhancements
-- adding Creator to my jetpack
-- Add Like button block (beta)
-- Adds a product upsell for Creator to the Newsletter recommendation card
-- Changing paid content block to allow selecting multiple plans.
-- Enable new like widget layout.
-- Enhance Sharing Buttons UI to match Social Icons behavior
-- Expose post retrieval from WPCOM_JSON_API_Get_Post_v1_1_Endpoint via a code API
-- Gutenberg: Dequeue editor assets when they aren't in use
-- Improving likes: add RTL support to likes popover
-- Update Like button "likers" dialog design
+- My Jetpack: Added Creator to My Jetpack overview. [#34307]
+- Paid Content Block: Added support for selecting multiple plans. [#33903]
+- Likes: Updated the likes popover design and added RTL support. [#34396]
 
 ### Improved compatibility
-- Google Fonts: resolve occasional bug resulting in PHP 8 with latest Gutenberg.
+- Google Fonts: Resolved occasional bug resulting in fatal errors on PHP 8 with latest Gutenberg. [#34382]
+- Block Editor: Dequeued editor assets when they aren't in use. [#34268]
 
 ### Bug fixes
-- Dashboard: display the Auto-sharing feature toggle even when your user is not connected to WordPress.com yet.
-- Dashboard: display the Subscriptions and WordPress.com Toolbar controls even when your user is not connected to WordPress.com yet.
-- Earn: Update link to plans page.
-- EU Cookie Widget: move away from deprecated jQuery method
-- Fixed console errors being thrown for Jetpack blocks inside the Full Site Editor.
-- Fix sending email preview if content in the editor is different from latest in the database.
-- Fix wrong like count in dialog after liking
-- Jetpack Google Fonts module: Filter out the old google fonts data from the user's global styles
-- Membership products resolver would not filter tiers
-- Related Posts block: fix thumbnails opening in the same tab.
-- Subscribe Widget: Fix nonce validation
+- Dashboard: Fixed the display of the Auto-sharing feature toggle when the user is not connected to WordPress.com. [#34203]
+- Dashboard: Fixed the display of Subscriptions and WordPress.com Toolbar controls when the user is not connected to WordPress.com. [#34358]
+- Monetize: Updated the link to the plans page. [#34316]
+- EU Cookie Widget: Moved away from deprecated jQuery methods. [#34363]
+- Block Editor: Fixed console errors being thrown for Jetpack blocks inside the Full Site Editor. [#34305]
+- Fixed sending email preview when content in the editor is different from the latest version in the database. [#34419]
+- Fixed wrong like count in the like dialog after liking. [#34393]
+- Google Fonts: Added filtering for old google fonts data in the user's global styles. [#34388]
+- Monetize: Fixed membership products resolver not filtering tiers correctly. [#34107]
+- Related Posts Block: Fixed thumbnails opening in the same tab. [#34410]
+- Subscribe Widget: Fixed nonce validation. [#34369]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Ensures an array key is set before usage.
-- Fixed the issue of publicize remaining ON after the post is published
-- Jetpack AI: Add Usage Panel to the block settings sidebar.
-- Moves the REST request `source` escaping from WPCOM to the Jetpack Memberships plugin for clarity.
-- Refactor isOverLimit and how to reduce requireUpgrade
-- Rename hasNewsletterPlans to hasTierPlans for memberships.
-- Tonesque: avoid errors when called against a non-image.
-- Updated package dependencies.
+- Added the Like Button Block (Beta). [#34340]
+- Added a product upsell for Creator to the Newsletter recommendation card. [#34350]
+- Enhanced Sharing Buttons UI to match Social Icons behavior. [#34181]
+- Exposed post retrieval from WPCOM_JSON_API_Get_Post_v1_1_Endpoint via a code API. [#34290]
+- Likes: Added RTL support to the likes popover. [#34308]
+- Likes: Updated the likes popover design. [#34308]
+- Ensures an array key is set before usage. [#34402]
+- Fixed the issue of publicize remaining ON after the post is published. [#34289]
+- Jetpack AI: Add Usage Panel to the block settings sidebar. [#34341]
+- Moves the REST request `source` escaping from WPCOM to the Jetpack Memberships plugin for clarity. [#34349]
+- Refactor isOverLimit and how to reduce requireUpgrade. [#34287]
+- Rename hasNewsletterPlans to hasTierPlans for memberships. [#34286]
+- Tonesque: Avoid errors when called against a non-image. [#34164]
+- Updated package dependencies. [#34411] [#34427]
 
 ## 12.9-a.11 - 2023-11-24
 ### Enhancements
