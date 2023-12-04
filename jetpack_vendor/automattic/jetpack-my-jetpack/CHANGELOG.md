@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.1.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- My Jetpack: Fix outdated product cache issue when enabling tiers.
+
 ## [4.1.0] - 2023-12-03
 ### Added
 - Added Jetpack Creator to My Jetpack. [#34307]
@@ -1143,6 +1150,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[4.1.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.1.0...4.1.1-alpha
 [4.1.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.3...4.1.0
 [4.0.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.2...4.0.3
 [4.0.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.0.1...4.0.2
