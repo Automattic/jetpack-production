@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated package dependencies.
+
 ## 12.9-beta - 2023-12-03
 ### Enhancements
 - My Jetpack: Added Creator to My Jetpack overview. [#34307]
