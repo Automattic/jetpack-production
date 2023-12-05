@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Contact Form: fix checkbox field layout in editor
+
 ## [0.24.2] - 2023-12-03
 ### Added
 - Made forms a screen reader region. [#34344]
