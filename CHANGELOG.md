@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Improving likes: fix popover closing area
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Consolidate WPCOM/Jetpack Token Subscription Service classes.
 - Updated package dependencies.
 
 ## 12.9-beta - 2023-12-03
