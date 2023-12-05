@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: added submitting state
 
 ### Changed
+- Contact Form: align checkbox and radio button baselines
 - Updated package dependencies.
 
 ### Fixed
