@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Contact Form: ensure warning icons are visible
 - Contact Form: fix checkbox field layout in editor
+- Contact Form: specify version for accessible-form script
 
 ## [0.24.2] - 2023-12-03
 ### Added
