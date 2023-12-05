@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Jetpack AI: Add event tracking on the usage panel button.
+
 ### Bug fixes
 - Improving likes: fix popover closing area
 
