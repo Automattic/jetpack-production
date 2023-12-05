@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Contact Form: ensure warning icons are visible
 - Contact Form: fix checkbox field layout in editor
 
 ## [0.24.2] - 2023-12-03
