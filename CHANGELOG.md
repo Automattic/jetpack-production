@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Add event tracking on the usage panel button.
 
 ### Bug fixes
+- Dashboard: disable VideoPress card in offline mode.
 - Improving likes: fix popover closing area
 - Launchpad: Fix the Save modal doesn't show after saving changes in the editor
 
