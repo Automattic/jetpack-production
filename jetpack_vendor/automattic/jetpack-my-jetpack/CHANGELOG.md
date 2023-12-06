@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Creator Card: fix typo.
+
 ## [4.1.1] - 2023-12-05
 ### Fixed
 - My Jetpack: Fix outdated product cache issue when enabling tiers. [#34428]
