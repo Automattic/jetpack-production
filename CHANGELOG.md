@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Consolidate WPCOM/Jetpack Token Subscription Service classes.
+- Remove Blogroll block "beta" text
 - Removed like avatar border inside the popup
 - Updated package dependencies.
 
