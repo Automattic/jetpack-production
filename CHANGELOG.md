@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Gutenberg: Add Top Posts & Pages block.
 - Jetpack AI: Add event tracking on the usage panel button.
 - Like: Add iframe to the new Like block (beta)
+- Top Posts and Pages block: refactor endpoint to use helper.
 
 ### Bug fixes
 - Dashboard: disable VideoPress card in offline mode.
