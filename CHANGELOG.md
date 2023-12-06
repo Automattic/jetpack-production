@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Gutenberg: Add Top Posts & Pages block.
 - Jetpack AI: Add event tracking on the usage panel button.
 
 ### Bug fixes
