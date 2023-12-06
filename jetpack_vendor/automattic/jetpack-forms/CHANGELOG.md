@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Contact Form: add margin below global error message
 - Contact Form: ensure warning icons are visible
 - Contact Form: fix checkbox field layout in editor
 - Contact Form: specify version for accessible-form script
