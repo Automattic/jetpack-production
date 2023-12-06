@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.24.3-alpha] - unreleased
+## [0.25.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Contact Form: added submitting state
+- Contact Form: revalidate fields on focus out
 
 ### Changed
 - Contact Form: align checkbox and radio button baselines
@@ -414,7 +415,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.24.3-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.24.2...v0.24.3-alpha
+[0.25.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.24.2...v0.25.0-alpha
 [0.24.2]: https://github.com/automattic/jetpack-forms/compare/v0.24.1...v0.24.2
 [0.24.1]: https://github.com/automattic/jetpack-forms/compare/v0.24.0...v0.24.1
 [0.24.0]: https://github.com/automattic/jetpack-forms/compare/v0.23.1...v0.24.0
