@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Improving likes: fix popover closing area
+- Launchpad: Fix the Save modal doesn't show after saving changes in the editor
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Consolidate WPCOM/Jetpack Token Subscription Service classes.
