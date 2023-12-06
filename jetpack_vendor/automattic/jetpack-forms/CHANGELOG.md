@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Contact Form: align checkbox and radio button baselines
+- Contact Form: refactored accessible-form.js
 - Updated package dependencies.
 
 ### Fixed
