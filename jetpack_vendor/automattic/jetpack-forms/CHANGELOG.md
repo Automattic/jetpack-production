@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: add margin below global error message
 - Contact Form: ensure warning icons are visible
 - Contact Form: fix checkbox field layout in editor
+- Contact Form: replace jQuery UI select by native element
 - Contact Form: specify version for accessible-form script
 
 ## [0.24.2] - 2023-12-03
