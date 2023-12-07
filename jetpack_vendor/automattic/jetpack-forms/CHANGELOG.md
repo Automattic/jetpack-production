@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: fix checkbox field layout in editor
 - Contact Form: replace jQuery UI select by native element
 - Contact Form: specify version for accessible-form script
+- Fix potential undefined variable access in `Contact_Form_Plugin`.
 
 ## [0.24.2] - 2023-12-03
 ### Added
