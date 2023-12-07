@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Top Posts and Pages block: refactor endpoint to use helper.
 
 ### Bug fixes
+- Calendly block: fix custom colours being stripped.
 - Dashboard: disable VideoPress card in offline mode.
 - Improving likes: fix popover closing area
 - Launchpad: Fix the Save modal doesn't show after saving changes in the editor
