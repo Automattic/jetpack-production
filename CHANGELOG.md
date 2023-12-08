@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Add feedback control to display a feedback request on the AI Assistant block inspector.
 - Jetpack AI: Change line splitting on upgrade prompt to reduce the chance of orphan words.
 - Jetpack AI: fix element spacing on usage panel when it's on the block inspector.
+- Jetpack AI: Force button from upgrade nudge to use black and white styles.
 - Like block (beta): Escape block output attributes
 - Remove Blogroll block "beta" text
 - Removed like avatar border inside the popup
