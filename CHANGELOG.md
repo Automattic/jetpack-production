@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Social: Refactored storing of feature options to use core functions
 - Top Posts and Pages block: refactor endpoint to use helper.
 
+### Improved compatibility
+- Moving rendering of Sharing Buttons block to backend to have better consistency and avoid issue with `unfiltered_html`
+
 ### Bug fixes
 - Added limit for full sync uploads
 - Calendly block: fix custom colours being stripped.
