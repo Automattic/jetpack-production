@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: disable VideoPress card in offline mode.
 - Improving likes: fix popover closing area
 - Launchpad: Fix the Save modal doesn't show after saving changes in the editor
+- Show Seo tools on atomic sites only for Business plan and higher
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Consolidate WPCOM/Jetpack Token Subscription Service classes.
