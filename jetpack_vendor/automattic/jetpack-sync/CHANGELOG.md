@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Social: Add auto-conversion option to sync to WPCOM
 
+### Fixed
+- Sync:Update Full Sync to limit max amount of data sent in one request.
+
 ## [2.1.2] - 2023-12-06
 ### Changed
 - Update dependencies.

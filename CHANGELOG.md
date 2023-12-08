@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Top Posts and Pages block: refactor endpoint to use helper.
 
 ### Bug fixes
+- Added limit for full sync uploads
 - Calendly block: fix custom colours being stripped.
 - Dashboard: disable VideoPress card in offline mode.
 - Improving likes: fix popover closing area
