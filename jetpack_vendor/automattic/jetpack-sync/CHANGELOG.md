@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Add auto-conversion option to sync to WPCOM
 
 ### Fixed
+- Fixed a missing sanity check in Sync Posts handler logic that created failed builds.
 - Sync:Update Full Sync to limit max amount of data sent in one request.
 
 ## [2.1.2] - 2023-12-06
