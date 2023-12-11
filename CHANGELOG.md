@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Like: Add iframe to the new Like block (beta)
 - Social: Refactored storing of feature options to use core functions
 - Top Posts and Pages block: refactor endpoint to use helper.
+- Top Posts and Pages block: tidy up display of titles.
 
 ### Improved compatibility
 - Moving rendering of Sharing Buttons block to backend to have better consistency and avoid issue with `unfiltered_html`
