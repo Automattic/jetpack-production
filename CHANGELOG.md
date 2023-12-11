@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Consolidate WPCOM/Jetpack Token Subscription Service classes.
+- Google Fonts Module: Fix the error when parsing a font family that has a reference to a path
 - Jetpack AI: Add feedback control to display a feedback request on the AI Assistant block inspector.
 - Jetpack AI: Change line splitting on upgrade prompt to reduce the chance of orphan words.
 - Jetpack AI: fix element spacing on usage panel when it's on the block inspector.
