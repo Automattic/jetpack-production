@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - add force_year param to individual get for blogging prompt. Add bloganuary tags for prompts in january.
 - Adding controls for Sharing Buttons Block
+- AI Usage panel: use a yellowish color for usage panel over soft limit
 - Gutenberg: Add Top Posts & Pages block.
 - Jetpack AI: Add event tracking on the usage panel button.
 - Like: Add iframe to the new Like block (beta)
