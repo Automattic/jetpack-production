@@ -2,7 +2,7 @@
 /**
  * Top Posts Block.
  *
- * @since 13.0-a.0
+ * @since 13.0
  *
  * @package automattic/jetpack
  */
