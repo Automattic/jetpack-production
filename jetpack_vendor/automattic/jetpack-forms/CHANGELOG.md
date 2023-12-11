@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Contact Form: added submitting state
+- Contact Form: improve form error message
 - Contact Form: revalidate fields on focus out
 - Contact Form: revalidate missing value as user types
 
