@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: update post-publish panel copy for scheduled posts
 - Social: Refactored storing of feature options to use core functions
 - Top Posts and Pages block: refactor endpoint to use helper.
+- Top Posts and Pages block: set aspect ratio for thumbnail images.
 - Top Posts and Pages block: tidy up display of titles.
 
 ### Improved compatibility
