@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Moving rendering of Sharing Buttons block to backend to have better consistency and avoid issue with `unfiltered_html`
+- Patreon: update icon to match the update Patreon branding guidelines.
 
 ### Bug fixes
 - Added limit for full sync uploads
