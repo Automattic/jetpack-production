@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 13.0-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated package dependencies.
+
 ## 13.0-a.1 - 2023-12-11
 ### Enhancements
 - AI Usage panel: Added yellow color to indicate going over the soft limit. [#34555]
