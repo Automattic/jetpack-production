@@ -10,9 +10,11 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: avoid PHP warnings in the WordPress dashboard when used alongside other plugins making changes to admin pages.
 
 ### Bug fixes
+- Ensure block use, shortcode use, and additional blocks in use are tracked correctly on classic themes
 - Paywall: Fix pending subscription state
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add page view tracking for WooCommerce Checkout Flow
 - Updated package dependencies.
 
 ## 13.0-a.1 - 2023-12-11
