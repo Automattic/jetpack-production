@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Contact Form: avoid PHP warnings in the WordPress dashboard when used alongside other plugins making changes to admin pages.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Updated package dependencies.
 
