@@ -55,7 +55,7 @@ _n("Join %s other subscriber","Join %s other subscribers",r,"jetpack"),r)}})),ee
 // translators: %1s is the post name, %2s is the list of categories with subscriptions count
 __("<postPublishedLink>%1$s</postPublishedLink> will be sent to everyone subscribed to %2$s.","jetpack"),s,r);if(e)return(0,d.sprintf)(
 // translators: %1s is the post name, %2s is the list of categories with subscriptions count
-__("<postPublishedLink>%1$s</postPublishedLink>was sent to everyone subscribed to %2$s.","jetpack"),s,r)}const l=e===h.So.paid_subscribers.key;return t&&l?(0,d.sprintf)(/* translators: %1s is the post name, %2s is the number of subscribers in numerical format */
+__("<postPublishedLink>%1$s</postPublishedLink> was sent to everyone subscribed to %2$s.","jetpack"),s,r)}const l=e===h.So.paid_subscribers.key;return t&&l?(0,d.sprintf)(/* translators: %1s is the post name, %2s is the number of subscribers in numerical format */
 __("<postPublishedLink>%1$s</postPublishedLink> will be sent to <strong>%2$s paid subscribers</strong>.","jetpack"),s,o):l?(0,d.sprintf)(/* translators: %1s is the post name, %2s is the number of subscribers in numerical format */
 __("<postPublishedLink>%1$s</postPublishedLink> was sent to <strong>%2$s paid subscribers</strong>.","jetpack"),s,o):t?(0,d.sprintf)(/* translators: %1s is the post name, %2s is the number of subscribers in numerical format */
 __("<postPublishedLink>%1$s</postPublishedLink> will be sent to <strong>%2$s subscribers</strong>.","jetpack"),s,o):(0,d.sprintf)(/* translators: %1s is the post name, %2s is the number of subscribers in numerical format */
