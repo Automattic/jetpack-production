@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add page view tracking for WooCommerce Checkout Flow
+- Backup: Bug fixes in helper script installation class.
 - Fix fatal in Simple
 - Like block (beta): Handle Reblog toggle change
 - Updated package dependencies.
