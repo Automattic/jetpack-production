@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Bug fixes in helper script installation class.
 - Fix fatal in Simple
 - Like block (beta): Handle Reblog toggle change
+- Subscriptions: consolidate pre/post panel copy to a component
 - Updated package dependencies.
 
 ## 13.0-a.1 - 2023-12-11
