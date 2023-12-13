@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.38.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Fixed Jetpack Social scheduled post messaging
+- Updated version
+
 ## [0.38.0] - 2023-12-11
 ### Changed
 - Social: Refactored storing of feature options to use core functions. [#34113]
@@ -433,6 +441,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.38.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.38.0...v0.38.1-alpha
 [0.38.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.37.2...v0.38.0
 [0.37.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.37.1...v0.37.2
 [0.37.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.37.0...v0.37.1
