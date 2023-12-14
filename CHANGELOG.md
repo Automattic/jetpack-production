@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Like block (beta): Handle Reblog toggle change
 - Like block (beta): Temporarily hide the Reblog setting toggle
 - Like block: Add Learn more link to the Like block inspector
+- OpenTable: Keep input form at a constant width so button doesn't jump out from under the cursor.
 - Subscriptions: consolidate pre/post panel copy to a component
 - Updated package dependencies.
 
