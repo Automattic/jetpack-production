@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribers: pre/post-publish panel, correct subs count with paywall
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add a flag for sites that have upgraded from the ecommerce trial
 - Add page view tracking for WooCommerce Checkout Flow
 - AI Assistant: Register ai-logo-generator beta flag
 - Backup: Bug fixes in helper script installation class.
