@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix fatal in Simple
 - Like block (beta): Handle Reblog toggle change
 - Like block: Add Learn more link to the Like block inspector
+- Subscriptions: consolidate pre/post panel copy to a component
 - Updated package dependencies.
 
 ## 13.0-a.1 - 2023-12-11
