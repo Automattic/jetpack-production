@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fixed Jetpack Social scheduled post messaging
+- Social: Fixed bug with PHP conversion error
 - Updated version
 
 ## [0.38.0] - 2023-12-11
