@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Bug fixes in helper script installation class.
 - Fix fatal in Simple
 - Like block (beta): Handle Reblog toggle change
+- Like block (beta): Temporarily hide the Reblog setting toggle
 - Like block: Add Learn more link to the Like block inspector
 - Subscriptions: consolidate pre/post panel copy to a component
 - Updated package dependencies.
