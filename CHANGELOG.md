@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Subscriptions: adds toggle to disable email sending
+
 ### Bug fixes
 - Subscribers: pre/post-publish panel, correct subs count with paywall
 
