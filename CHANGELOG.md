@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a flag for sites that have upgraded from the ecommerce trial
+- Like block (beta): Make sure the block is not available when the Likes module or Likes / Reblog site options are disabled
 - Refactor checkout modal to be more performant.
 
 ## 13.0-a.3 - 2023-12-14
