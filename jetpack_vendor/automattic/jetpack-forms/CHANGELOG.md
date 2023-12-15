@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Contact Form: add missing Required toolbar button to Checkbox field
+- Contact Form: align half-width fields on same row
 
 ## [0.26.0] - 2023-12-14
 ### Added
