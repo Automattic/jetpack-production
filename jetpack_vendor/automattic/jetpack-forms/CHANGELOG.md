@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Form block: hide 'lead capture' variation for WP.com Atomic sites
 
+### Fixed
+- Contact Form: add missing Required toolbar button to Checkbox field
+
 ## [0.26.0] - 2023-12-14
 ### Added
 - Contact Form: build JS assets [#34622]
