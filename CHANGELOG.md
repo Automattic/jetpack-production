@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: handle new AI Control UI/UX improvements, fix DOM manipulation, remove "Try Again" toolbar button
 - Carousel: fix unresponsive navigation
 - Remove like block dependency on Like module and insert iframe once.
+- Small refactor Subscription services
 - Subscriptions: localize number format in access panel
 - Updated package dependencies.
 
