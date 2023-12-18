@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: fix unresponsive navigation
 - Remove like block dependency on Like module and insert iframe once.
 - Subscriptions: localize number format in access panel
+- Updated package dependencies.
 
 ## 13.0-a.5 - 2023-12-15
 ### Enhancements
