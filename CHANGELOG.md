@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Jetpack Google Fonts: Don't print font definition if the font is provided by the active theme
+- Subscribers: fix the reach count above 1000
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Carousel: fix unresponsive navigation
