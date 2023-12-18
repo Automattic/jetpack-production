@@ -94,19 +94,16 @@ class Editor_View {
 
 		wp_enqueue_style( 'grunion-editor-ui', plugins_url( 'css/editor-ui.css', __FILE__ ), array(), \JETPACK__VERSION );
 		wp_style_add_data( 'grunion-editor-ui', 'rtl', 'replace' );
-
-		Assets::register_script(
+		wp_enqueue_script(
 			'grunion-editor-view',
-			'../../dist/contact-form/js/editor-view.js',
-			__FILE__,
-			array(
-				'enqueue'      => true,
-				'dependencies' => array( 'wp-util', 'jquery', 'quicktags' ),
-				'version'      => \JETPACK__VERSION,
-				'in_footer'    => true,
-			)
+			Assets::get_file_url_for_environment(
+				'_inc/build/contact-form/js/editor-view.min.js',
+				'modules/contact-form/js/editor-view.js'
+			),
+			array( 'wp-util', 'jquery', 'quicktags' ),
+			\JETPACK__VERSION,
+			true
 		);
-
 		wp_localize_script(
 			'grunion-editor-view',
 			'grunionEditorView',

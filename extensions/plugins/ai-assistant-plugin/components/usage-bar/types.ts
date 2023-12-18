@@ -8,11 +8,6 @@ export type UsageBarProps = {
 	 * True if the usage is over the limit.
 	 */
 	limitReached: boolean;
-
-	/**
-	 * True if an upgrade is required.
-	 */
-	requireUpgrade: boolean;
 };
 
 export type UsageControlProps = {
@@ -21,7 +16,6 @@ export type UsageControlProps = {
 	isOverLimit: boolean;
 	planType: PlanType;
 	daysUntilReset: number;
-	requireUpgrade: boolean;
 };
 
 export const PLAN_TYPE_FREE = 'free';

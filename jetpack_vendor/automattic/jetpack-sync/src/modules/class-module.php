@@ -309,28 +309,6 @@ SQL
 	}
 
 	/**
-	 * Return last_item to send for Module Full Sync Configuration.
-	 *
-	 * @param array $config This module Full Sync configuration.
-	 *
-	 * @return array|object|null
-	 */
-	public function get_last_item( $config ) {
-		global $wpdb;
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.DirectDatabaseQuery.DirectQuery
-		return $wpdb->get_var(
-			<<<SQL
-SELECT {$this->id_field()}
-FROM {$wpdb->{$this->table_name()}}
-WHERE {$this->get_where_sql( $config )}
-ORDER BY {$this->id_field()}
-LIMIT 1
-SQL
-		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.DirectDatabaseQuery.DirectQuery
-	}
-
-	/**
 	 * Return the initial last sent object.
 	 *
 	 * @return string|array initial status.
@@ -360,51 +338,27 @@ SQL
 		$limits = Settings::get_setting( 'full_sync_limits' )[ $this->name() ];
 
 		$chunks_sent = 0;
-
-		$last_item = $this->get_last_item( $config );
-
-		while ( $chunks_sent < $limits['max_chunks'] && microtime( true ) < $send_until ) {
-			$objects = $this->get_next_chunk( $config, $status, $limits['chunk_size'] );
-
-			if ( $wpdb->last_error ) {
-				$status['error'] = true;
+		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
+		while ( $objects = $this->get_next_chunk( $config, $status, $limits['chunk_size'] ) ) {
+			if ( $chunks_sent++ === $limits['max_chunks'] || microtime( true ) >= $send_until ) {
 				return $status;
 			}
 
-			if ( empty( $objects ) ) {
-				$status['finished'] = true;
-				return $status;
-			}
 			$result = $this->send_action( 'jetpack_full_sync_' . $this->name(), array( $objects, $status['last_sent'] ) );
+
 			if ( is_wp_error( $result ) || $wpdb->last_error ) {
 				$status['error'] = true;
 				return $status;
 			}
-			// Updated the sent and last_sent status.
-			$status = $this->set_send_full_sync_actions_status( $status, $objects );
-			if ( $last_item === $status['last_sent'] ) {
-				$status['finished'] = true;
-				return $status;
-			}
-			++$chunks_sent;
+			// The $ids are ordered in descending order.
+			$status['last_sent'] = end( $objects );
+			$status['sent']     += count( $objects );
 		}
 
-		return $status;
-	}
+		if ( ! $wpdb->last_error ) {
+			$status['finished'] = true;
+		}
 
-	/**
-	 * Set the status of the full sync action based on the objects that were sent.
-	 *
-	 * @access protected
-	 *
-	 * @param array $status This module Full Sync status.
-	 * @param array $objects This module Full Sync objects.
-	 *
-	 * @return array The updated status.
-	 */
-	protected function set_send_full_sync_actions_status( $status, $objects ) {
-		$status['last_sent'] = end( $objects );
-		$status['sent']     += count( $objects );
 		return $status;
 	}
 

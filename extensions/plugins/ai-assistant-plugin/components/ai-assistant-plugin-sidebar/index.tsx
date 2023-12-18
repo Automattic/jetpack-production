@@ -18,7 +18,6 @@ import useAiFeature, {
 import JetpackPluginSidebar from '../../../../shared/jetpack-plugin-sidebar';
 import Proofread from '../proofread';
 import UsagePanel from '../usage-panel';
-import { USAGE_PANEL_PLACEMENT_JETPACK_SIDEBAR } from '../usage-panel/types';
 
 // Determine if the usage panel is enabled or not
 const isUsagePanelAvailable =
@@ -91,7 +90,7 @@ export default function AiAssistantPluginSidebar() {
 					) }
 					{ isUsagePanelAvailable && (
 						<PanelRow>
-							<UsagePanel placement={ USAGE_PANEL_PLACEMENT_JETPACK_SIDEBAR } />
+							<UsagePanel />
 						</PanelRow>
 					) }
 				</PanelBody>
