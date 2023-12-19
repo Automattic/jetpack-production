@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: handle new AI Control UI/UX improvements, fix DOM manipulation, remove "Try Again" toolbar button
 - Carousel: fix unresponsive navigation
+- Dashboard: avoid React warning when loading the VideoPress card.
 - Remove like block dependency on Like module and insert iframe once.
 - Small refactor Subscription services
 - Subscriptions: localize number format in access panel
