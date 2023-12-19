@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Jetpack Google Fonts: Don't print font definition if the font is provided by the active theme
+- My Plan: Fix JS errors due to nested anchor tags
 - Show an error message when unable to render payment button.
 - Subscribers: fix the reach count above 1000
 
