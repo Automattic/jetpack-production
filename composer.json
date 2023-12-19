@@ -28,7 +28,7 @@
 		"automattic/jetpack-constants": "^2.0.0",
 		"automattic/jetpack-device-detection": "^2.0.1",
 		"automattic/jetpack-error": "^2.0.0",
-		"automattic/jetpack-forms": "^0.27.0",
+		"automattic/jetpack-forms": "^0.28.0-alpha",
 		"automattic/jetpack-google-fonts-provider": "^0.7.1",
 		"automattic/jetpack-identity-crisis": "^0.14.0",
 		"automattic/jetpack-image-cdn": "^0.3.2",
