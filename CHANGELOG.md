@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove like block dependency on Like module and insert iframe once.
 - Small refactor Subscription services
 - Subscriptions: localize number format in access panel
+- Subscriptions: update "verify your email" wall copy
 - Updated package dependencies.
 
 ## 13.0-a.5 - 2023-12-15
