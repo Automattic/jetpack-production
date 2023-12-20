@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- When using Sharing Buttons block we will show different settings screen
+
 ### Improved compatibility
 - Sharing Buttons: add the official X button to the list of supported X services.
 
