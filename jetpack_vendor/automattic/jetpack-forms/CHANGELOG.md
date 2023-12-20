@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.28.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.28.0] - 2023-12-20
 ### Added
-- Contact Form: add extra field settings to base field
+- Contact Form: add extra field settings to base field. [#34704]
 
 ### Changed
-- Contact Form: minify stylesheets in prod
+- Contact Form: minify stylesheets in prod. [#34672]
 
 ## [0.27.0] - 2023-12-15
 ### Added
@@ -444,7 +441,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.28.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.27.0...v0.28.0-alpha
+[0.28.0]: https://github.com/automattic/jetpack-forms/compare/v0.27.0...v0.28.0
 [0.27.0]: https://github.com/automattic/jetpack-forms/compare/v0.26.0...v0.27.0
 [0.26.0]: https://github.com/automattic/jetpack-forms/compare/v0.25.0...v0.26.0
 [0.25.0]: https://github.com/automattic/jetpack-forms/compare/v0.24.2...v0.25.0
