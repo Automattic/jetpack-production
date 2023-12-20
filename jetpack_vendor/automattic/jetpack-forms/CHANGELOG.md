@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Contact Form: add extra field settings to base field
 
+### Changed
+- Contact Form: minify stylesheets in prod
+
 ## [0.27.0] - 2023-12-15
 ### Added
 - Contact Form: improve form error message [#34629]
