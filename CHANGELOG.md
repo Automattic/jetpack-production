@@ -2,33 +2,34 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.0-a.6 - unreleased
+## 13.0-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 13.0-a.7 - 2023-12-20
 ### Enhancements
-- When using Sharing Buttons block we will show different settings screen
+- Sharing Buttons Block: update the admin's setting screen when the sharing block is available. [#34673]
 
 ### Improved compatibility
-- Sharing Buttons: add the official X button to the list of supported X services.
+- Sharing Buttons: add the official X button to the list of supported services. [#34719]
 
 ### Bug fixes
-- Jetpack Google Fonts: Don't print font definition if the font is provided by the active theme
-- My Plan: Fix JS errors due to nested anchor tags
-- Show an error message when unable to render payment button.
-- Subscribers: fix the reach count above 1000
+- My Plan: Fix JS errors due to nested anchor tags. [#34707]
+- Payments Block: show an error message when unable to render payment button. [#34380]
+- Subscribers: fix the subscriber count display if above 1000 subscribers. [#34689]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add wpcom_ai_site_prompt option to the site settings endpoint
-- AI Assistant: handle new AI Control UI/UX improvements, fix DOM manipulation, remove "Try Again" toolbar button
-- Carousel: fix unresponsive navigation
-- Dashboard: avoid React warning when loading the VideoPress card.
-- Remove like block dependency on Like module and insert iframe once.
-- Small refactor Subscription services
-- Subscriptions: localize number format in access panel
-- Subscriptions: update "verify your email" wall copy
-- Updated package dependencies.
-- update feature not released yet
+- Add wpcom_ai_site_prompt option to the site settings endpoint [#34709]
+- AI Assistant: handle new AI Control UI/UX improvements, fix DOM manipulation, remove "Try Again" toolbar button [#34383]
+- Carousel: fix unresponsive navigation [#34678]
+- Dashboard: avoid React warning when loading the VideoPress card. [#34713]
+- Jetpack Google Fonts: Don't print font definition if the font is provided by the active theme. [#34608]
+- Remove like block dependency on Like module and insert iframe once. [#34664]
+- Small refactor Subscription services [#34635]
+- Subscriptions: localize number format in access panel [#34691]
+- Subscriptions: update "verify your email" wall copy [#34716]
+- Updated package dependencies. [#34694]
+- update feature not released yet [#34724]
 
 ## 13.0-a.5 - 2023-12-15
 ### Enhancements
