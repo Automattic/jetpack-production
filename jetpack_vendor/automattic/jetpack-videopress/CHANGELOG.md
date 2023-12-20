@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Updated name of Abstract_Token_Subscription_Service
+
 ## [0.21.4] - 2023-12-06
 ### Changed
 - Updated package dependencies. [#34416]
