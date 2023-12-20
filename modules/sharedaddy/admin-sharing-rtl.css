@@ -328,8 +328,9 @@ body.settings_page_sharing .advanced input[type=submit] {
   margin-right: -4px;
 }
 
-.preview-twitter .option-smart-on {
-  background: url(../../modules/sharedaddy/images/smart-twitter.png) no-repeat top right;
+.preview-twitter .option-smart-on,
+.preview-x .option-smart-on {
+  background: url(../../modules/sharedaddy/images/smart-x.png) no-repeat top right;
   background-size: 60px 20px;
   width: 60px;
   height: 20px;
@@ -378,8 +379,9 @@ body.settings_page_sharing .advanced input[type=submit] {
   .preview-facebook .option-smart-on {
     background-image: url(../../modules/sharedaddy/images/smart-like@2x.png);
   }
-  .preview-twitter .option-smart-on {
-    background-image: url(../../modules/sharedaddy/images/smart-twitter@2x.png);
+  .preview-twitter .option-smart-on,
+  .preview-x .option-smart-on {
+    background-image: url(../../modules/sharedaddy/images/smart-x@2x.png);
   }
   .preview-linkedin .option-smart-on {
     background-image: url(../../modules/sharedaddy/images/linkedin-smart@2x.png);

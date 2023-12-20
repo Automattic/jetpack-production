@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Sharing Buttons: add the official X button to the list of supported X services.
+
 ### Bug fixes
 - Jetpack Google Fonts: Don't print font definition if the font is provided by the active theme
 - My Plan: Fix JS errors due to nested anchor tags
