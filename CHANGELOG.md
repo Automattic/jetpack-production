@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin Page: remove alt attribute from decorative icon.
+
 ## 13.0-a.7 - 2023-12-20
 ### Enhancements
 - Sharing Buttons Block: update the admin's setting screen when the sharing block is available. [#34673]
