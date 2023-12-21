@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Contact Form: add accessible name to form
 
+### Fixed
+- Contact Form: suppress PHP warning
+
 ## [0.28.0] - 2023-12-20
 ### Added
 - Contact Form: add extra field settings to base field. [#34704]
