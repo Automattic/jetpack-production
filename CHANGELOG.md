@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added description and link inviting to disable legacy sharing module if block is available
 - Social Menu & Social Media Icons: Add support for the Bluesky service.
 
 ### Bug fixes
