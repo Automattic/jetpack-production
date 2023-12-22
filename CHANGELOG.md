@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin Page: remove alt attribute from decorative icon.
+- On wpcom sites if SEO tools not supported by current plan we show upsell message.
 
 ## 13.0-a.7 - 2023-12-20
 ### Enhancements
