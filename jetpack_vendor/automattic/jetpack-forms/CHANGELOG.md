@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Contact Form: add accessible name to form
+- Contact Form: add date format to date picker
 
 ### Fixed
 - Contact Form: suppress PHP warning
