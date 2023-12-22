@@ -2,6 +2,14 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 13.0-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Consolidate WPCOM/Jetpack Token Subscription Service classes.
+- Small refactor Subscription services
+
 ## 12.9.2 - 2023-12-20
 ### Bug fixes
 - VideoPress: fix an issue when using VideoPress inside a subscription block. [#34723]
