@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adjustment to how cookies are set for the subscribe block.
+- Updated the design for Quick Share buttons and fixed its a11y
 
 ## 13.0-a.9 - 2023-12-25
 ### Enhancements
