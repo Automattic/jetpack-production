@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Use default store value pased from backend
+
 ### Bug fixes
 - Editor: Fix missing fonts issue in Gutenberg editor
 
