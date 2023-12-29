@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Editor: Fix missing fonts issue in Gutenberg editor
+- Subscriptions block: make it compatible with latest Gutenberg
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adjustment to how cookies are set for the subscribe block.
