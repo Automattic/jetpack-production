@@ -1378,7 +1378,10 @@ class Identity_Crisis {
 		$persistent_blog_id = get_option( static::PERSISTENT_BLOG_ID_OPTION_NAME );
 		if ( $persistent_blog_id ) {
 			$params['persistent_blog_id'] = $persistent_blog_id;
-			$params['url_secret']         = URL_Secret::create_secret( 'registration_request_url_secret_failed' );
+			// If URL is IP, add secret to the request.
+			if ( self::url_is_ip() ) {
+				$params['url_secret'] = URL_Secret::create_secret( 'registration_request_url_secret_failed' );
+			}
 		}
 
 		return $params;
