@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - In modules store we make module updating  more precise
+- Updated package dependencies.
 
 ## [0.29.0] - 2023-12-25
 ### Added

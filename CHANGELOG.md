@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Blogroll: Use blogroll item url as name if name does not exist
 - In editor view, the Like block now shows or hides the reblog button according to sidebar config
 - Remove Jetpack connection banners from WP dashboard and plugins page
+- Updated package dependencies.
 - Updated the design for Quick Share buttons and fixed its a11y
 
 ## 13.0-a.9 - 2023-12-25
