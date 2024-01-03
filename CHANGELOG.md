@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adjustment to how cookies are set for the subscribe block.
 - Blogroll: Use blogroll item url as name if name does not exist
+- In editor view, the Like block now shows or hides the reblog button according to sidebar config
 - Remove Jetpack connection banners from WP dashboard and plugins page
 - Updated the design for Quick Share buttons and fixed its a11y
 

@@ -16,5 +16,11 @@
     "usesContext": [
         "postId"
     ],
+    "attributes": {
+        "showReblogButton": {
+            "type": "boolean",
+            "default": false
+        }
+    },
     "editorScript": "jetpack-blocks-editor"
 }
