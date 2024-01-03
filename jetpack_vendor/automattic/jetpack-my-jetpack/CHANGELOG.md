@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- My Jetpack: Jetpack footer links are now consistent with footers in rest of Jetpack screens.
+
 ## [4.2.0] - 2024-01-02
 ### Fixed
 - Show JP Creator as active when JP Complete is purchased. [#34806]
