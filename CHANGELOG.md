@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions block: make it compatible with latest Gutenberg
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added the "reblog" query param to the iframe in the Like Block when the reblog button is enabled in the block.
 - Adjustment to how cookies are set for the subscribe block.
 - Blogroll: Use blogroll item url as name if name does not exist
 - In editor view, the Like block now shows or hides the reblog button according to sidebar config
