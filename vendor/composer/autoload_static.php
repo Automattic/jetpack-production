@@ -36,16 +36,6 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ13_0_a_12
         ),
     );
 
-    public static $prefixesPsr0 = array (
-        'T' => 
-        array (
-            'Twitter\\Text\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib',
-            ),
-        ),
-    );
-
     public static $classMap = array (
         'AhoCorasick\\MultiStringMatcher' => __DIR__ . '/..' . '/wikimedia/aho-corasick/src/MultiStringMatcher.php',
         'AhoCorasick\\MultiStringReplacer' => __DIR__ . '/..' . '/wikimedia/aho-corasick/src/MultiStringReplacer.php',
@@ -454,17 +444,6 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ13_0_a_12
         'ScssPhp\\ScssPhp\\ValueConverter' => __DIR__ . '/..' . '/scssphp/scssphp/src/ValueConverter.php',
         'ScssPhp\\ScssPhp\\Version' => __DIR__ . '/..' . '/scssphp/scssphp/src/Version.php',
         'ScssPhp\\ScssPhp\\Warn' => __DIR__ . '/..' . '/scssphp/scssphp/src/Warn.php',
-        'Twitter\\Text\\Autolink' => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib/Twitter/Text/Autolink.php',
-        'Twitter\\Text\\Configuration' => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib/Twitter/Text/Configuration.php',
-        'Twitter\\Text\\EmojiRegex' => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib/Twitter/Text/EmojiRegex.php',
-        'Twitter\\Text\\Extractor' => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib/Twitter/Text/Extractor.php',
-        'Twitter\\Text\\HitHighlighter' => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib/Twitter/Text/HitHighlighter.php',
-        'Twitter\\Text\\ParseResults' => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib/Twitter/Text/ParseResults.php',
-        'Twitter\\Text\\Parser' => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib/Twitter/Text/Parser.php',
-        'Twitter\\Text\\Regex' => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib/Twitter/Text/Regex.php',
-        'Twitter\\Text\\StringUtils' => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib/Twitter/Text/StringUtils.php',
-        'Twitter\\Text\\TldLists' => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib/Twitter/Text/TldLists.php',
-        'Twitter\\Text\\Validator' => __DIR__ . '/..' . '/nojimage/twitter-text-php/lib/Twitter/Text/Validator.php',
         'VIDEOPRESS_PRIVACY' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/utility-functions.php',
         'VideoPressUploader\\File_Exception' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-file-exception.php',
         'VideoPressUploader\\Transient_Store' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-transient-store.php',
@@ -482,7 +461,6 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ13_0_a_12
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ13_0_a_12::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ13_0_a_12::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ13_0_a_12::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ13_0_a_12::$classMap;
 
         }, null, ClassLoader::class);
