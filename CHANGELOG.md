@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added the "reblog" query param to the iframe in the Like Block when the reblog button is enabled in the block.
+- Fix failing E2E tests
 - In editor view, the Like block now shows or hides the reblog button according to sidebar config
 - Social: Removed obsolete code for Tweetstorms
 - Updated package dependencies.
