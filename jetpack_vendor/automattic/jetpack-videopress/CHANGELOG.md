@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - In modules_store we remove unused logic. This changelog is to make sure package is re-built.
+- Updated use-module-status hook to use module_status redux store. This changelog to make sure videopress package is re-built.
 
 ## [0.21.7] - 2024-01-04
 ### Changed
