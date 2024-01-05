@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Promote Subscription: Add subscription modal when user comment
+- Use useModuleStatus hook instead of direct call of store selectors
 
 ### Bug fixes
 - Likes Widget: Fix accessibility on likes popover
