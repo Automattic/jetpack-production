@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Promote Subscription: Add subscription modal when user comment
+
 ### Bug fixes
 - Likes Widget: Fix accessibility on likes popover
 - Likes Widget: Make likes widget accessibility compatible across themes
