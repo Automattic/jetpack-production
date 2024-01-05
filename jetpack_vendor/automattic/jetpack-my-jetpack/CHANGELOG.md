@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - add a check to determine if a user is "new" to Jetpack
 
+### Changed
+- update Akismet card on My Jetpack to go to interstitial screen when there is no API key
+
 ## [4.2.1] - 2024-01-04
 ### Changed
 - Updated package dependencies. [#34815] [#34816]
