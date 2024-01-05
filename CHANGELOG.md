@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Likes Widget: Fix accessibility on likes popover
+- Likes Widget: Make likes widget accessibility compatible across themes
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Excerpt: remove GPT model selector since it's not possible to change models anymore.
