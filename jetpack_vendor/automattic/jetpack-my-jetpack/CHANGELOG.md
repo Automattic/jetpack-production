@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - add a check to determine if a user is "new" to Jetpack
 
 ### Changed
+- Add a product interstiail in My Jetpack for stats
 - update Akismet card on My Jetpack to go to interstitial screen when there is no API key
 
 ## [4.2.1] - 2024-01-04
