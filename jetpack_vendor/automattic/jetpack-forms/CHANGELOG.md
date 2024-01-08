@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.30.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.30.0] - 2024-01-08
 ### Changed
-- Updated use-module-status hook to use module_status redux store. This one is to make sure that package is re-built.
-- Use useModuleStatus hook instead of direct call of store selectors
+- Updated useModuleStatus hook to use module_status redux store. [#34845]
+- Use useModuleStatus hook instead of direct call of store selectors. [#34856]
 
 ### Fixed
-- Avoid PHP warnings when post is not set.
+- Avoid PHP warnings when post is not set. [#34886]
 
 ## [0.29.2] - 2024-01-04
 ### Changed
@@ -468,7 +465,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.30.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.29.2...v0.30.0-alpha
+[0.30.0]: https://github.com/automattic/jetpack-forms/compare/v0.29.2...v0.30.0
 [0.29.2]: https://github.com/automattic/jetpack-forms/compare/v0.29.1...v0.29.2
 [0.29.1]: https://github.com/automattic/jetpack-forms/compare/v0.29.0...v0.29.1
 [0.29.0]: https://github.com/automattic/jetpack-forms/compare/v0.28.0...v0.29.0
