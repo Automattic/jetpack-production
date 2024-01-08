@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated use-module-status hook to use module_status redux store. This one is to make sure that package is re-built.
 - Use useModuleStatus hook instead of direct call of store selectors
 
+### Fixed
+- Avoid PHP warnings when post is not set.
+
 ## [0.29.2] - 2024-01-04
 ### Changed
 - Updated package dependencies. [#34815]
