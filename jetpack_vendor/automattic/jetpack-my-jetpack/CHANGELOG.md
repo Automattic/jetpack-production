@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- add plan check to My Jetpack Akismet product card
 - To avoid displaying the Welcome banner to every user, now we only display it to new users.
 
 ## [4.3.0] - 2024-01-08
