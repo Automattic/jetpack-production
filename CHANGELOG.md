@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Add namespace versioning to Helper_Script_Manager and other classes
 - Fixes the sidebar toggle on mobile displays.
 - Like widget: Fix caching issue
+- Updated package dependencies.
 
 ## 13.0-a.13 - 2024-01-04
 ### Bug fixes
