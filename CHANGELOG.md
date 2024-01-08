@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Excerpt: remove GPT model selector since it's not possible to change models anymore.
 - Backup: Add namespace versioning to Helper_Script_Manager and other classes
+- Fixes the sidebar toggle on mobile displays.
 - Like widget: Fix caching issue
 
 ## 13.0-a.13 - 2024-01-04
