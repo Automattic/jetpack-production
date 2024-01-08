@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - add a check to determine if a user is "new" to Jetpack
+- Add to the Welcome banner in My Jetpack a button that links to the connection screen. Making it easier for user to find that page.
 
 ### Changed
 - Add a product interstiail in My Jetpack for stats
