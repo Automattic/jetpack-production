@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Spotify shortcode: Prevent a fatal error in PHP 8.1 if no attributes are passed.
+
 ## 13.0-beta - 2024-01-08
 ### Enhancements
 - Subscription Modal: Display thesubscription modal when a user makes a comment. [#34659]
