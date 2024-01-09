@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Recommendations: update link in summary upsell
 - Spotify shortcode: Prevent a fatal error in PHP 8.1 if no attributes are passed.
 - Subscriptions: Format subscribers reach numbers
 - Track store managers actions in WooCommerce analytics.
