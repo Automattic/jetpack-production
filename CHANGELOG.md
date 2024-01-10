@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Spotify shortcode: Prevent a fatal error in PHP 8.1 if no attributes are passed.
 - Subscriptions: Fix subscriber pop-up button text color
 - Subscriptions: Format subscribers reach numbers
+- Subscriptions: Show subscription numbers more elegantly
 - Track store managers actions in WooCommerce analytics.
 
 ## 13.0-beta - 2024-01-08
