@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- GIF Block: Accept Giphy shortlinks as a valid embed.
 - GIF Block: fix styling of the search bar input.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
