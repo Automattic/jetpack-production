@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - add plan check to My Jetpack Akismet product card
+- Prevent new users from seeing JITMs
 - To avoid displaying the Welcome banner to every user, now we only display it to new users.
 
 ## [4.3.0] - 2024-01-08
