@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: do not attempt to display the AI Excerpt assistant in the site editor and the widget editor.
 - Fixes recurring payments buttons multiple plan support.
 - Subscribe modal: Don't show in Elementor editor
+- Subscriptions: do not display subscription checkboxes in comment forms displayed on Custom Post Type pages.
 - Subscriptions: Fix page scrolling up after the subscription modal is dismissed
 - Theme Tools: Ensure that Content Options does not override the Featured Images options set within blocks.
 
