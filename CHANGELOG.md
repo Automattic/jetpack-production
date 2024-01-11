@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI Assistant: avoid deprecation notices when using a development version of WordPress.
+- AI Assistant: do not attempt to display the AI Excerpt assistant in the site editor and the widget editor.
 - Fixes recurring payments buttons multiple plan support.
 - Subscribe modal: Don't show in Elementor editor
 - Subscriptions: Fix page scrolling up after the subscription modal is dismissed
