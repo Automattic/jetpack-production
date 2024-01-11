@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Post Images: avoid PHP warnings on sites using PHP 8.1+, when a post image has a malformed URL.
 
 ### Bug fixes
+- AI Assistant: avoid deprecation notices when using a development version of WordPress.
 - Fixes recurring payments buttons multiple plan support.
 - Subscribe modal: Don't show in Elementor editor
 - Theme Tools: Ensure that Content Options does not override the Featured Images options set within blocks.
