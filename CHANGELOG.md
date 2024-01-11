@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - GIF Block: Accept Giphy shortlinks as a valid embed.
 - GIF Block: fix styling of the search bar input.
 
+### Improved compatibility
+- Post Images: avoid PHP warnings on sites using PHP 8.1+, when a post image has a malformed URL.
+
 ### Bug fixes
 - Fixes recurring payments buttons multiple plan support.
 - Subscribe modal: Don't show in Elementor editor
