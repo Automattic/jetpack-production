@@ -4,10 +4,6 @@ return array(
   'domain' => 'jetpack',
   'type' => 'plugins',
   'packages' => array(
-    'jetpack-action-bar' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-action-bar',
-      'ver' => '0.2.3',
-    ),
     'jetpack-admin-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
       'ver' => '0.3.1',

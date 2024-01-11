@@ -10,7 +10,6 @@ return array(
     'AhoCorasick\\MultiStringReplacer' => $vendorDir . '/wikimedia/aho-corasick/src/MultiStringReplacer.php',
     'Automattic\\Jetpack\\A8c_Mc_Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php',
     'Automattic\\Jetpack\\Abtest' => $baseDir . '/jetpack_vendor/automattic/jetpack-abtest/src/class-abtest.php',
-    'Automattic\\Jetpack\\Action_Bar' => $baseDir . '/jetpack_vendor/automattic/jetpack-action-bar/src/class-action-bar.php',
     'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => $baseDir . '/jetpack_vendor/automattic/jetpack-admin-ui/src/class-admin-menu.php',
     'Automattic\\Jetpack\\Assets' => $baseDir . '/jetpack_vendor/automattic/jetpack-assets/src/class-assets.php',
     'Automattic\\Jetpack\\Assets\\Logo' => $baseDir . '/jetpack_vendor/automattic/jetpack-logo/src/class-logo.php',
