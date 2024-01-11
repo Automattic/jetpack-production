@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Sync: Dedicated sync now disabled for high queue lags only if test request fails.
 
+### Fixed
+- Added `is_array` check to `get_items_to_send` to make sure no fatals are thrown on non-array values.
+
 ## [2.4.0] - 2024-01-04
 ### Removed
 - Social: Removed sync option for tweetstorm. [#34330]
