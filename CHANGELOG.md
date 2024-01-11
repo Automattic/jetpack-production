@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Recommendations: update link in summary upsell
 - Spotify shortcode: Prevent a fatal error in PHP 8.1 if no attributes are passed.
 - Subscriptions: Fix subscriber pop-up button text color
+- Subscriptions: Fix subscriber popup background scrolling
 - Subscriptions: Format subscribers reach numbers
 - Subscriptions: Show subscription numbers more elegantly
 - Track store managers actions in WooCommerce analytics.
