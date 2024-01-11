@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Extensions: auto-generate public path
 - External media: provide default numerical post id for uploads.
 - Like block: Set index.html version based on the current Jetpack version
+- Newsletter settings: update copy for subscription pop-up toggle
 - Recommendations: update link in summary upsell
 - Spotify shortcode: Prevent a fatal error in PHP 8.1 if no attributes are passed.
 - Subscriptions: Fix subscriber pop-up button text color
