@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: compose ConnectPrompt and UpgradePrompt and pass it as bannerComponent prop to AI Client
 - cast_and_filter_item: Do not cast an array to a string
 - Extensions: auto-generate public path
+- Extensions: Don't auto-generate public path after all. But improve the way the manual path is being set.
 - External media: provide default numerical post id for uploads.
 - Like block: Set index.html version based on the current Jetpack version
 - Newsletter settings: update copy for subscription pop-up toggle
