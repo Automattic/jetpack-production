@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fixes recurring payments buttons multiple plan support.
+- Subscribe modal: Don't show in Elementor editor
 - Theme Tools: Ensure that Content Options does not override the Featured Images options set within blocks.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
