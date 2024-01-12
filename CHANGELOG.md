@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - GIF Block: Accept Giphy shortlinks as a valid embed.
 - GIF Block: fix styling of the search bar input.
+- Subscribe block: don't allow editing the email for subscribing for logged-in members.
 
 ### Improved compatibility
 - Post Images: avoid PHP warnings on sites using PHP 8.1+, when a post image has a malformed URL.
