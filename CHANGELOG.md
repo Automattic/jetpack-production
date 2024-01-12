@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Like block: Set index.html version based on the current Jetpack version
 - Newsletter settings: update copy for subscription pop-up toggle
 - Recommendations: update link in summary upsell
+- Sharing: be more defensive when fetching sharing service to avoid errors.
 - Spotify shortcode: Prevent a fatal error in PHP 8.1 if no attributes are passed.
 - Subscriptions: Fix subscriber pop-up button text color
 - Subscriptions: Fix subscriber popup background scrolling
