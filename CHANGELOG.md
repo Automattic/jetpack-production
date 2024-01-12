@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Fix subscriber popup background scrolling
 - Subscriptions: Format subscribers reach numbers
 - Subscriptions: Show subscription numbers more elegantly
+- Sync: synchronize block status option.
 - Track store managers actions in WooCommerce analytics.
 
 ## 13.0-beta - 2024-01-08
