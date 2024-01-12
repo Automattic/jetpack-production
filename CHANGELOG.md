@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixes recurring payments buttons multiple plan support.
 - Subscribe modal: Don't show in Elementor editor
 - Subscriptions: do not display subscription checkboxes in comment forms displayed on Custom Post Type pages.
+- Subscriptions: Fix broken subscribe button in email
 - Subscriptions: Fix page scrolling up after the subscription modal is dismissed
 - Theme Tools: Ensure that Content Options does not override the Featured Images options set within blocks.
 
