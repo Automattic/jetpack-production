@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Added `is_array` check to `get_items_to_send` to make sure no fatals are thrown on non-array values.
+- Jetpack Sync: Fixed buffer sanitization in Sync close endpoint
 
 ## [2.4.0] - 2024-01-04
 ### Removed
