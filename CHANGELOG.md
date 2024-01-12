@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Action Bar: remove experimental module.
+- add label to prompt blog for bloganuary
 - AI Assistant: compose ConnectPrompt and UpgradePrompt and pass it as bannerComponent prop to AI Client
 - cast_and_filter_item: Do not cast an array to a string
 - Extensions: auto-generate public path
