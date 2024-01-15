@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Extensions: Don't auto-generate public path after all. But improve the way the manual path is being set.
 - External media: provide default numerical post id for uploads.
 - Jetpack AI: include feature name as a parameter on the content feedback tool.
+- Jetpack plugin: Add 5-star review link in the Jetpack Plugin meta, in the plugins list table (on the plugins page).
 - Like block: Set index.html version based on the current Jetpack version
 - Newsletter settings: update copy for subscription pop-up toggle
 - Recommendations: update link in summary upsell
