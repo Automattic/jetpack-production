@@ -16,6 +16,8 @@ This is an alpha version! The changes listed here are not final.
 - iCalendarReader: Support BYDAY recurrence rules for last, second-to-last, or third-to-last weekdays
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Content Options: Add new class to post when using the featured images fallback.
+- Content Options: Allow themes to hide the default avatar (when author has no custom Gravatar) via `'avatar-default' => false`.
 - Filters out deprecated jetpack-google-fonts provider when reading the theme's theme.json.
 - Jetpack Debug: Update Sync related debugging info
 - Jetpack plugin: Add 5-star review link in the Jetpack Plugin meta, in the plugins list table (on the plugins page).
