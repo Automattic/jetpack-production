@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack plugin: Add 5-star review link in the Jetpack Plugin meta, in the plugins list table (on the plugins page).
+- Payment blocks: Fix cover block alignments on free sites
 
 ## 13.1-a.1 - 2024-01-15
 ### Enhancements
