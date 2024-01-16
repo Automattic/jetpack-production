@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Related Posts: Get the related posts only when the option is turned on and the current post contains a Related Posts block
 
+### Improved compatibility
+- Likes: Flip likers popup when overflowing viewport.
+
 ### Bug fixes
 - iCalendarReader: Support BYDAY recurrence rules for last, second-to-last, or third-to-last weekdays
 
