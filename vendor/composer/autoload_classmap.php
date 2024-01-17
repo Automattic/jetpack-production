@@ -179,6 +179,7 @@ return array(
     'Automattic\\Jetpack\\Publicize\\Auto_Conversion\\REST_Settings_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/auto-conversion-settings/class-rest-settings-controller.php',
     'Automattic\\Jetpack\\Publicize\\Auto_Conversion\\Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/auto-conversion-settings/class-settings.php',
     'Automattic\\Jetpack\\Publicize\\Connections_Post_Field' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-connections-post-field.php',
+    'Automattic\\Jetpack\\Publicize\\Jetpack_Social_Settings\\Dismissed_Notices' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/jetpack-social-settings/class-dismissed-notices.php',
     'Automattic\\Jetpack\\Publicize\\Jetpack_Social_Settings\\Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/jetpack-social-settings/class-settings.php',
     'Automattic\\Jetpack\\Publicize\\Keyring_Helper' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-keyring-helper.php',
     'Automattic\\Jetpack\\Publicize\\Publicize' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize.php',

@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Changed dismissed notices endpoint to be a core endpoint
 - Related Posts: Get the related posts only when the option is turned on and the current post contains a Related Posts block
 
 ### Improved compatibility
