@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack_Upcoming_Events_Widget: Return early if no feed url set
 - Payment blocks: Fix cover block alignments on free sites
 - Related Posts: fix accessibility issues
+- Subscriptions: Add Subscriber Login block
 
 ## 13.1-a.1 - 2024-01-15
 ### Enhancements
