@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - iCalendarReader: Support BYDAY recurrence rules for last, second-to-last, or third-to-last weekdays
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: move usePlanType to shared directory
 - Contact Form: add frontend tests
 - Content Options: Add new class to post when using the featured images fallback.
 - Content Options: Allow themes to hide the default avatar (when author has no custom Gravatar) via `'avatar-default' => false`.
