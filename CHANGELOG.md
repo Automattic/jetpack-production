@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Debug: Update Sync related debugging info
 - Jetpack plugin: Add 5-star review link in the Jetpack Plugin meta, in the plugins list table (on the plugins page).
 - Jetpack_Upcoming_Events_Widget: Return early if no feed url set
+- Memberships: Adds translation to paid content modal.
 - Payment blocks: Fix cover block alignments on free sites
 - Recreate purchase form dialog on openModal().
 - Related Posts: fix accessibility issues
