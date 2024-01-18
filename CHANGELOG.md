@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Recreate purchase form dialog on openModal().
 - Related Posts: fix accessibility issues
 - Subscriptions: Add Subscriber Login block
+- Subscriptions: Fix Newsletter column width
 
 ## 13.1-a.1 - 2024-01-15
 ### Enhancements
