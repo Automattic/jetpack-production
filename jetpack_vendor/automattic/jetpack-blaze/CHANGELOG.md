@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.15.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update dependencies.
+
 ## [0.15.0] - 2024-01-15
 ### Changed
 - Changes the Blaze Dashboard paths to use the new format [#34896]
@@ -265,6 +272,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated package dependencies. [#27906]
 
+[0.15.1-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.15.0...v0.15.1-alpha
 [0.15.0]: https://github.com/automattic/jetpack-blaze/compare/v0.14.3...v0.15.0
 [0.14.3]: https://github.com/automattic/jetpack-blaze/compare/v0.14.2...v0.14.3
 [0.14.2]: https://github.com/automattic/jetpack-blaze/compare/v0.14.1...v0.14.2
