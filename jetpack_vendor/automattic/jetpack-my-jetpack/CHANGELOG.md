@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- My Jetpack Hosting Provider check
 - Show a Jetpack Manage banner into My Jetpack section.
 
 ## [4.5.0] - 2024-01-18
