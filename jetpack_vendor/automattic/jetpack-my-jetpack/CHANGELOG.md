@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.6.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.6.0] - 2024-01-18
 ### Added
-- My Jetpack Hosting Provider check
-- Show a Jetpack Manage banner into My Jetpack section.
+- Add hosting provider check. [#34864]
+- Add Jetpack Manage banner. [#35078]
 
 ## [4.5.0] - 2024-01-18
 ### Changed
@@ -1201,7 +1198,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.6.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.5.0...4.6.0-alpha
+[4.6.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.5.0...4.6.0
 [4.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.4.0...4.5.0
 [4.4.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.3.0...4.4.0
 [4.3.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.2.1...4.3.0
