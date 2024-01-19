@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add support for WooCommerce HPOS to the Google Analytics module.
 - Changed dismissed notices endpoint to be a core endpoint
+- Like block: Move the block from beta to production
 - Related Posts: Get the related posts only when the option is turned on and the current post contains a Related Posts block
 - Subscribe block: add buttons transform
 
