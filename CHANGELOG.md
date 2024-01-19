@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: rename upgrade event name, provide placement prop for metrics
 - AI Assistant: trigger event on panel uncollapse
 - Contact Form: add frontend tests
+- Contact Form: fix source for concatenated stylesheet
 - Content Options: Add new class to post when using the featured images fallback.
 - Content Options: Allow themes to hide the default avatar (when author has no custom Gravatar) via `'avatar-default' => false`.
 - Filters out deprecated jetpack-google-fonts provider when reading the theme's theme.json.
