@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Display Jetpack Protect product card for all users.
 - Ensure that interstitial tables go straight to checkout just like insterstitial cards
 
 ## [4.6.0] - 2024-01-18
