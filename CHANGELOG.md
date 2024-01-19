@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts: fix accessibility issues
 - Subscriptions: Add Subscriber Login block
 - Subscriptions: Fix Newsletter column width
+- Update Subscription Modal on comment to use Subscribe Block
 
 ## 13.1-a.1 - 2024-01-15
 ### Enhancements
