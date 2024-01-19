@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: move usePlanType to shared directory
 - AI Assistant: rename upgrade event name, provide placement prop for metrics
 - AI Assistant: trigger event on panel uncollapse
+- Blogroll block: avoid PHP notices on specific sites.
 - Contact Form: add frontend tests
 - Contact Form: fix source for concatenated stylesheet
 - Content Options: Add new class to post when using the featured images fallback.
