@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Payment blocks: Fix cover block alignments on free sites
 - Recreate purchase form dialog on openModal().
 - Related Posts: fix accessibility issues
+- Subscriber Login: Check also the premium content cookie to determine if user is logged in or not
 - Subscriptions: Add Subscriber Login block
 - Subscriptions: Fix Newsletter column width
 - Update Subscription Modal on comment to use Subscribe Block
