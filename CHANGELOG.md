@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Enhanced WordPress.com API compatibility with third party plugin data.
 - iCalendarReader: Support BYDAY recurrence rules for last, second-to-last, or third-to-last weekdays
+- Subscribe block: fix spacing of "pending email confirmation" message in some themes
 - Subscriptions: Fix subscribtion modal appear right after subscribing
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
