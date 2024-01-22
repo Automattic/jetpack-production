@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack AI: Expose Jetpack AI cost of features on the feature endpoint.
+
 ## 13.1-a.3 - 2024-01-22
 ### Enhancements
 - Add support for WooCommerce HPOS to the Google Analytics module. [#33152]
