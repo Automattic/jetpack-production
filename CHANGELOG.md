@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Content Options: Add new class to post when using the featured images fallback.
 - Content Options: Allow themes to hide the default avatar (when author has no custom Gravatar) via `'avatar-default' => false`.
 - Filters out deprecated jetpack-google-fonts provider when reading the theme's theme.json.
+- In the tracking user link url, the parent of the iframe only listens one redirection post message from its child
 - Jetpack Debug: Update Sync related debugging info
 - Jetpack plugin: Add 5-star review link in the Jetpack Plugin meta, in the plugins list table (on the plugins page).
 - Jetpack_Upcoming_Events_Widget: Return early if no feed url set
