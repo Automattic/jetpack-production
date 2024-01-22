@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Fix subscribtion modal appear right after subscribing
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: add contact us event for upgrades over 1000
 - AI Assistant: move usePlanType to shared directory
 - AI Assistant: rename upgrade event name, provide placement prop for metrics
 - AI Assistant: trigger event on panel uncollapse
