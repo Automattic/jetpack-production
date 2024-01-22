@@ -16,8 +16,8 @@
 		"automattic/jetpack-admin-ui": "^0.3.1",
 		"automattic/jetpack-assets": "^2.0.4",
 		"automattic/jetpack-autoloader": "^3.0.2",
-		"automattic/jetpack-backup": "^3.1.0-alpha",
-		"automattic/jetpack-blaze": "^0.15.1-alpha",
+		"automattic/jetpack-backup": "^3.1.0",
+		"automattic/jetpack-blaze": "^0.15.1",
 		"automattic/jetpack-blocks": "^2.0.0",
 		"automattic/jetpack-boost-speed-score": "^0.3.3",
 		"automattic/jetpack-compat": "^2.0.0",
@@ -27,7 +27,7 @@
 		"automattic/jetpack-constants": "^2.0.0",
 		"automattic/jetpack-device-detection": "^2.0.1",
 		"automattic/jetpack-error": "^2.0.0",
-		"automattic/jetpack-forms": "^0.30.1-alpha",
+		"automattic/jetpack-forms": "^0.30.1",
 		"automattic/jetpack-google-fonts-provider": "^0.7.1",
 		"automattic/jetpack-identity-crisis": "^0.15.0",
 		"automattic/jetpack-image-cdn": "^0.3.2",
@@ -36,25 +36,25 @@
 		"automattic/jetpack-jitm": "^3.0.2",
 		"automattic/jetpack-licensing": "^2.0.1",
 		"automattic/jetpack-logo": "^2.0.0",
-		"automattic/jetpack-my-jetpack": "^4.6.2-alpha",
+		"automattic/jetpack-my-jetpack": "^4.6.2",
 		"automattic/jetpack-plugins-installer": "^0.3.1",
 		"automattic/jetpack-post-list": "^0.5.1",
 		"automattic/jetpack-publicize": "^0.40.0",
 		"automattic/jetpack-redirect": "^2.0.0",
 		"automattic/jetpack-roles": "^2.0.0",
-		"automattic/jetpack-search": "^0.41.1-alpha",
+		"automattic/jetpack-search": "^0.41.1",
 		"automattic/jetpack-stats": "^0.9.0",
 		"automattic/jetpack-stats-admin": "^0.15.1",
 		"automattic/jetpack-status": "^2.1.0",
 		"automattic/jetpack-sync": "^2.4.2",
 		"automattic/jetpack-videopress": "^0.22.3",
 		"automattic/jetpack-waf": "^0.12.4",
-		"automattic/jetpack-wordads": "^0.3.5-alpha",
+		"automattic/jetpack-wordads": "^0.3.5",
 		"scssphp/scssphp": "1.12.0"
 	},
 	"require-dev": {
 		"antecedent/patchwork": "2.1.25",
-		"automattic/jetpack-changelogger": "^4.1.0-alpha",
+		"automattic/jetpack-changelogger": "^4.1.0",
 		"johnkary/phpunit-speedtrap": "^4.0.0 || ^2.0.0",
 		"yoast/phpunit-polyfills": "1.1.0"
 	},
@@ -80,6 +80,7 @@
 			"pnpm run watch"
 		]
 	},
+	"repositories": [],
 	"autoload": {
 		"classmap": [
 			"src"
@@ -92,7 +93,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ13_1_a_2",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ13_1_a_3",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true

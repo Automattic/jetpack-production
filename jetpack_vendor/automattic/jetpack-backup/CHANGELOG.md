@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.1.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.1.0] - 2024-01-22
 ### Changed
-- Use blog ID instead site slug for checkout and WPCOM links.
+- Use blog ID instead site slug for checkout and WPCOM links. [#35020]
 
 ## [3.0.0] - 2024-01-04
 ### Fixed
@@ -545,7 +542,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[3.1.0-alpha]: https://github.com/Automattic/jetpack-backup/compare/v3.0.0...v3.1.0-alpha
+[3.1.0]: https://github.com/Automattic/jetpack-backup/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/Automattic/jetpack-backup/compare/v2.0.5...v3.0.0
 [2.0.5]: https://github.com/Automattic/jetpack-backup/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/Automattic/jetpack-backup/compare/v2.0.3...v2.0.4
