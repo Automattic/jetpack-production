@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Recreate purchase form dialog on openModal().
 - Related Posts: fix accessibility issues
 - Subscriber Login: Add styling support to the Subscriber Login block
+- Subscriber Login: Allow to transform it to/from core Login/out block
 - Subscriber Login: Check also the premium content cookie to determine if user is logged in or not
 - Subscriptions: Add Subscriber Login block
 - Subscriptions: Fix Newsletter column width
