@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack AI: Expose Jetpack AI cost of features on the feature endpoint.
 - Subscribe block: simplify access panel CSS
+- There was a problem with likers without avatar images not appearing in the likers popup. Now they appear with their default avatar images.
 - WPCOM_JSON_API_Endpoint document(): Prevent warning when fetching the rest_api_documentation row returns no results
 
 ## 13.1-a.3 - 2024-01-22
