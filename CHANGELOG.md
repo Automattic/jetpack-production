@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: add UI events when menus are displayed
+- AI Assistant: fix discard handler so we don't need to call discard + accept
 - Not showing sharing buttons in notifications, emails, etc.
 - Subscriber Login: Add icon, description and redirect to home page by default
 - Subscriber Login: Allow custom link labels
