@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: fix discard handler so we don't need to call discard + accept
 - Like block: Remove block rendering in contexts different from front-end
 - Not showing sharing buttons in notifications, emails, etc.
+- REST API: fixed the way we treat 0 and 1 integers in boolean context.
 - Subscriber Login: Add icon, description and redirect to home page by default
 - Subscriber Login: Allow custom link labels
 - Untangle Calypso from Themes & new sub-menu to Marketplace
