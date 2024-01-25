@@ -22,7 +22,7 @@ return array(
     ),
     'jetpack-boost-core' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-boost-core',
-      'ver' => '0.2.3',
+      'ver' => '0.2.4-alpha1706176905',
     ),
     'jetpack-boost-speed-score' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-boost-speed-score',
