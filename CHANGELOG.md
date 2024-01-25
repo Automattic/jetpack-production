@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Subject: A new way to upload media via the Jetpack App
+
 ### Improved compatibility
 - RNMobile: Disable Story block
 
