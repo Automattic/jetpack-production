@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: add events on block control
 - AI Assistant: add menu show events on both control and extension (form)
 - AI Content Lens (excerpt): add events on generate, discard and accept
+- AI Forms Extension: add events on ai actions
 
 ## 13.1-a.7 - 2024-01-25
 ### Enhancements
