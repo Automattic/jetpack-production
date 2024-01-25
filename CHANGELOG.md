@@ -2,23 +2,20 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.1-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.1-a.7 - 2024-01-25
 ### Enhancements
-- Jetpack Search: Added price as default sorting option
-- Subscribe block: by default, don't include social followers on counts
+- Jetpack Search: Add 'price' as the default sorting option. [#35167]
+- Subscribe Block: Don't include social followers on counts by default. [#34617]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- AI Assistant: add UI events when menus are displayed
-- AI Assistant: fix discard handler so we don't need to call discard + accept
-- Like block: Remove block rendering in contexts different from front-end
-- Not showing sharing buttons in notifications, emails, etc.
-- REST API: fixed the way we treat 0 and 1 integers in boolean context.
-- Subscriber Login: Add icon, description and redirect to home page by default
-- Subscriber Login: Allow custom link labels
-- Untangle Calypso from Themes & new sub-menu to Marketplace
+- AI Assistant: add UI events when menus are displayed [#35203]
+- AI Assistant: fix discard handler so we don't need to call discard + accept [#35236]
+- Like block: Remove block rendering in contexts different from front-end [#35226]
+- Not showing sharing buttons in notifications, emails, etc. [#35206]
+- REST API: fixed the way we treat 0 and 1 integers in boolean context. [#35190]
+- Subscriber Login: Add icon, description and redirect to home page by default [#35221]
+- Subscriber Login: Allow custom link labels [#35179]
+- Untangle Calypso from Themes & new sub-menu to Marketplace [#35145]
 
 ## 13.1-a.5 - 2024-01-23
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
