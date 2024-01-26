@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: add menu show events on both control and extension (form)
 - AI Content Lens (excerpt): add events on generate, discard and accept
 - AI Forms Extension: add events on ai actions
+- Remove the dashboard swither for the wp-admin interface.
 - Remove the dotcom warning for wp-admin in Writing and Discussion settings page
 
 ## 13.1-a.7 - 2024-01-25
