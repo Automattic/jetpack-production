@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: add accept event on title suggestion request
 - AI Assistant: add events on block control
 - AI Assistant: add menu show events on both control and extension (form)
+- AI Assistant: change tool property on event
 - AI Content Lens (excerpt): add events on generate, discard and accept
 - AI Forms Extension: add events on ai actions
 - Move Jetpack to the same menu position as standalone Jetpack site.
