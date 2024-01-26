@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update the UpsellBanner to use the Card component from WP components.
 
+### Removed
+- UpsellBanner component moved to js-packages/components
+
 ## [4.6.2] - 2024-01-22
 ### Added
 - My Jetpack: add contact us event for Jetpack AI [#35136]
