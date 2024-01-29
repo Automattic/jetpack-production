@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - RNMobile: Disable Story block
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adding serivce to a feature which is not live for the users yet.
 - AI Assistant: add accept event on title suggestion request
 - AI Assistant: add events on block control
 - AI Assistant: add menu show events on both control and extension (form)
