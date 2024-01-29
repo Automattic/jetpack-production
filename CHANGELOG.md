@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Move Jetpack to the same menu position as standalone Jetpack site.
 - Remove the dashboard swither for the wp-admin interface.
 - Remove the dotcom warning for wp-admin in Writing and Discussion settings page
+- Sharing Buttons Block: Add size controls to the block
 - youtube-shortcode: Handle being given an array with a 'url' key insteadad of the URL as a string
 
 ## 13.1-a.7 - 2024-01-25
