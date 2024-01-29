@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: change tool property on event
 - AI Content Lens (excerpt): add events on generate, discard and accept
 - AI Forms Extension: add events on ai actions
+- Feature is not yet released.
 - Jetpack_PostImages::from_attachment: Prevent warning when $thumb_post_data cannot be found
 - Move Jetpack to the same menu position as standalone Jetpack site.
 - Remove the dashboard swither for the wp-admin interface.
