@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack AI: Use the editor URL as the redirect destination for after-purchase redirect.
+
 ## 13.1-a.9 - 2024-01-29
 ### Enhancements
 - Subject: A new way to upload media via the Jetpack App [#34179]

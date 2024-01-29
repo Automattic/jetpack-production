@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.7.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- My Jetpack: support redirect_to parameter on the product interstitial.
+
 ## [4.7.0] - 2024-01-29
 ### Changed
 - Update the UpsellBanner to use the Card component from WP components. [#35223]
@@ -1214,6 +1221,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[4.7.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.7.0...4.7.1-alpha
 [4.7.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.6.2...4.7.0
 [4.6.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.6.1...4.6.2
 [4.6.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.6.0...4.6.1
