@@ -48,7 +48,7 @@
 		"automattic/jetpack-status": "^2.1.0",
 		"automattic/jetpack-sync": "^2.4.2",
 		"automattic/jetpack-videopress": "^0.22.4",
-		"automattic/jetpack-waf": "^0.12.4",
+		"automattic/jetpack-waf": "^0.13.0-alpha",
 		"automattic/jetpack-wordads": "^0.3.6",
 		"scssphp/scssphp": "1.12.0"
 	},
