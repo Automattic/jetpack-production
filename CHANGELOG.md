@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: move error handling from top of block to closer the AI Control input.
 - Jetpack AI: Use the editor URL as the redirect destination for after-purchase redirect.
 - Revert the Tools menu to the one in core for the wp-admin interface.
+- tiled gallery: carousel-image-args.php: Fix PHP warnings from nested arrays in image meta
 
 ## 13.1-a.9 - 2024-01-29
 ### Enhancements
