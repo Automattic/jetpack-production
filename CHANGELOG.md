@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Social: Added recommendation card for the advanced plan
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Jetpack Manage banner in the Dashboard
 - Jetpack AI: move error handling from top of block to closer the AI Control input.
