@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Social: Added recommendation card for the advanced plan
 
+### Bug fixes
+- Dashboard: update the Support card to display the right contents depending on the plan or product used on the site.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Jetpack Manage banner in the Dashboard
 - Jetpack AI: add loading state to the usage panel.
