@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add Jetpack Manage banner in the Dashboard
 - Jetpack AI: move error handling from top of block to closer the AI Control input.
 - Jetpack AI: Use the editor URL as the redirect destination for after-purchase redirect.
 - Revert the Tools menu to the one in core for the wp-admin interface.
