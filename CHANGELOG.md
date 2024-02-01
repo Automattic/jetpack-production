@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Jetpack Manage banner in the Dashboard
+- Fix issue where there are two Jetpack menu items that link users to Jetpack Backup
 - Jetpack AI: add loading state to the usage panel.
 - Jetpack AI: Build a Calypso URL as the redirect destination for Simple sites after upgrade.
 - Jetpack AI: move error handling from top of block to closer the AI Control input.
