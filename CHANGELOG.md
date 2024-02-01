@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Social: Added recommendation card for the advanced plan
 
+### Improved compatibility
+- Performance: improve script enqueuing strategies to rely on methods introduced in WordPress 6.3.
+
 ### Bug fixes
 - Dashboard: update the Support card to display the right contents depending on the plan or product used on the site.
 - WordPress.com REST API: avoid fatal error when receiving error in API response.

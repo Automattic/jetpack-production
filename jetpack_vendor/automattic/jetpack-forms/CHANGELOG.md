@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Asset enqueuing: switch to enqueuing strategy introduced in WordPress 6.3.
+
 ### Fixed
 - Center submit button content horizontally
 
