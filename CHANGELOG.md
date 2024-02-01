@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriber Login: Fix log in URL for simple sites
 - tiled gallery: carousel-image-args.php: Fix PHP warnings from nested arrays in image meta
 - Wordpress.com Tools Menu: Add Github Deployments submenu and gate behind a constant
+- wpcom_restapi_copy_theme_plugin_actions: Fix PHP 8.1 fatals related to static calls on non-static
 
 ## 13.1-a.9 - 2024-01-29
 ### Enhancements
