@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: support redirect_to parameter on the product interstitial.
 
+### Changed
+- Updated package dependencies.
+
 ## [4.7.0] - 2024-01-29
 ### Changed
 - Update the UpsellBanner to use the Card component from WP components. [#35223]

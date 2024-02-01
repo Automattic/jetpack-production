@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add support for script enqueuing strategies implemented in WordPress 6.3
 
+### Changed
+- Updated package dependencies.
+
 ## [2.0.4] - 2024-01-04
 ### Changed
 - Updated package dependencies. [#34815]

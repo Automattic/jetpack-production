@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Updated package dependencies.
 - Use blog ID instead of site slug in checkout URL.
 
 ## [0.22.4] - 2024-01-29

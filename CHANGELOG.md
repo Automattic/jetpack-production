@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: update block markup to simplify output and escape as late as possible.
 - Subscriber Login: Fix log in URL for simple sites
 - tiled gallery: carousel-image-args.php: Fix PHP warnings from nested arrays in image meta
+- Updated package dependencies.
 - Updating sharing buttons control with color styles settings
 - Wordpress.com Tools Menu: Add Github Deployments submenu and gate behind a constant
 - wpcom_restapi_copy_theme_plugin_actions: Fix PHP 8.1 fatals related to static calls on non-static

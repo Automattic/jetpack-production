@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Adjust 'get_site_id()' method to return null if there's no blog ID.
+- Updated package dependencies.
 
 ## [2.2.0] - 2024-01-18
 ### Added

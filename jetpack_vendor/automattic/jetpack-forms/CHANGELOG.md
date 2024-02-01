@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Asset enqueuing: switch to enqueuing strategy introduced in WordPress 6.3.
+- Updated package dependencies.
 
 ### Fixed
 - Center submit button content horizontally
