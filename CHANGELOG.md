@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Revert the Tools menu to the one in core for the wp-admin interface.
 - Subscriber Login: Fix log in URL for simple sites
 - tiled gallery: carousel-image-args.php: Fix PHP warnings from nested arrays in image meta
+- Updating sharing buttons control with color styles settings
 - Wordpress.com Tools Menu: Add Github Deployments submenu and gate behind a constant
 - wpcom_restapi_copy_theme_plugin_actions: Fix PHP 8.1 fatals related to static calls on non-static
 
