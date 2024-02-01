@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Revert the Tools menu to the one in core for the wp-admin interface.
 - Subscriber Login: Fix log in URL for simple sites
 - tiled gallery: carousel-image-args.php: Fix PHP warnings from nested arrays in image meta
+- Wordpress.com Tools Menu: Add Github Deployments submenu and gate behind a constant
 
 ## 13.1-a.9 - 2024-01-29
 ### Enhancements
