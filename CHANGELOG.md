@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Making sharing buttons block visible to all users
 - Social: Added recommendation card for the advanced plan
 
 ### Improved compatibility
