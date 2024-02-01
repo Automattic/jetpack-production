@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Dashboard: update the Support card to display the right contents depending on the plan or product used on the site.
+- WordPress.com REST API: avoid fatal error when receiving error in API response.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Jetpack Manage banner in the Dashboard
