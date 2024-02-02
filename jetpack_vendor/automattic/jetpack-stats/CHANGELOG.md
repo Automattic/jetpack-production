@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Stats fetching mechanism: add filter allowing one to customize how long we cache results.
+
 ### Changed
 - Permit overriding cache when retrieving post views.
 - Remove pre-6.3 asset enqueuing method, and relying on WordPress Core method instead.
