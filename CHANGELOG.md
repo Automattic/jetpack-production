@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove sharing buttons on Print view. If multiple sharing buttons on the page they all should work.
 - Revert the Tools menu to the one in core for the wp-admin interface.
 - Sharing: update block markup to simplify output and escape as late as possible.
+- Subscriber Login: Allow to add it to the Navigation block
 - Subscriber Login: Fix log in URL for simple sites
 - Subscriber Login: Move Subscriber Login block to production
 - tiled gallery: carousel-image-args.php: Fix PHP warnings from nested arrays in image meta
