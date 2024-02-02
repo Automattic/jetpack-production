@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.7.1-alpha] - unreleased
+## [4.8.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Update product cards on My Jetpack to always display the status indidicator.
 
 ## [4.7.0] - 2024-01-29
 ### Changed
@@ -1224,7 +1225,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.7.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.7.0...4.7.1-alpha
+[4.8.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.7.0...4.8.0-alpha
 [4.7.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.6.2...4.7.0
 [4.6.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.6.1...4.6.2
 [4.6.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.6.0...4.6.1
