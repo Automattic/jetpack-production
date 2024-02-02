@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: support redirect_to parameter on the product interstitial.
 
 ### Changed
+- Update CTA copy on the connection banner to make it clear which type of connection we are going to request
 - Updated package dependencies.
 - Update product cards on My Jetpack to always display the status indidicator.
 
