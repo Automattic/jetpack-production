@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriber Login: Move Subscriber Login block to production
 - tiled gallery: carousel-image-args.php: Fix PHP warnings from nested arrays in image meta
 - Updated package dependencies.
+- Update the Jetpack Manage Banner trackEvent target name
 - Updating sharing buttons control with color styles settings
 - Wordpress.com Tools Menu: Add Github Deployments submenu and gate behind a constant
 - wpcom_restapi_copy_theme_plugin_actions: Fix PHP 8.1 fatals related to static calls on non-static
