@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update product cards on My Jetpack to always display the status indidicator.
 
+### Fixed
+- Fix issue where most products are not installing their standalone product upon purchase
+
 ## [4.7.0] - 2024-01-29
 ### Changed
 - Update the UpsellBanner to use the Card component from WP components. [#35223]
