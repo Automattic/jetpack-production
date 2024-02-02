@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Build a Calypso URL as the redirect destination for Simple sites after upgrade.
 - Jetpack AI: move error handling from top of block to closer the AI Control input.
 - Jetpack AI: Use the editor URL as the redirect destination for after-purchase redirect.
+- Jetpack Sync: Make media extraction more consistent with regards to getting alt text and image size information
 - Remove sharing buttons on Print view. If multiple sharing buttons on the page they all should work.
 - Revert the Tools menu to the one in core for the wp-admin interface.
 - Sharing: update block markup to simplify output and escape as late as possible.
