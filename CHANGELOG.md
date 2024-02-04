@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Gutenberg: Add Blog Stats block.
 - Making sharing buttons block visible to all users
 - Social: Added recommendation card for the advanced plan
+- Top Posts & Pages block: allow transforming the Legacy Widget into the new block.
 
 ### Improved compatibility
 - Performance: improve script enqueuing strategies to rely on methods introduced in WordPress 6.3.
