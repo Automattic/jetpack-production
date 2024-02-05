@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Jetpack Connection: Add jetpack_package_versions to Sync
 - Jetpack Sync: Disable Sync sending while a Pull is in progress
 
 ## [2.4.2] - 2024-01-18
