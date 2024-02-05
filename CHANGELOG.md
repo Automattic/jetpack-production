@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Jetpack Manage banner in the Dashboard
+- Admin Interface: remove exception for Import screen on Classic style
 - AI Proofread plugin: add feature to the event props
 - Fix issue where there are two Jetpack menu items that link users to Jetpack Backup
 - Jetpack AI: add loading state to the usage panel.
