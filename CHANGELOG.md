@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Plugin activation: redirect to My Jetpack once activated.
+
 ## 13.1-beta - 2024-02-05
 ### Enhancements
 - Like block: the existing Jetpack Like & Reblog button features are now available as a block! With the new Like block, users are be able to add the Like & Reblog features not just to posts and pages, but also to block templates and block patterns. You can give the new Like block a try by adding it from within the editor just like any other block.
