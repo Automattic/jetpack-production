@@ -5,21 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.8.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.8.0] - 2024-02-05
 ### Added
-- Add tracking info to the Jetpack Manage Banner CTA
-- My Jetpack: support redirect_to parameter on the product interstitial.
+- Add tracking info to the Jetpack Manage Banner CTA [#35378]
+- My Jetpack: support redirect_to parameter on the product interstitial. [#35263]
 
 ### Changed
-- Update CTA copy on the connection banner to make it clear which type of connection we are going to request
+- Update CTA copy on the connection banner to make it clear which type of connection we are going to request [#35401]
 - Updated package dependencies.
-- Update product cards on My Jetpack to always display the status indidicator.
+- Update product cards on My Jetpack to always display the status indidicator. [#35377]
 
 ### Fixed
-- Fix issue where most products are not installing their standalone product upon purchase
+- Fix issue where most products are not installing their standalone product upon purchase [#35399]
 
 ## [4.7.0] - 2024-01-29
 ### Changed
@@ -1230,7 +1227,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.8.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.7.0...4.8.0-alpha
+[4.8.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.7.0...4.8.0
 [4.7.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.6.2...4.7.0
 [4.6.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.6.1...4.6.2
 [4.6.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.6.0...4.6.1
