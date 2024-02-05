@@ -404,7 +404,7 @@ class WPCOM_Stats {
 		 *
 		 * @module stats
 		 *
-		 * @since 0.10.0-alpha
+		 * @since 0.10.0
 		 *
 		 * @param int $expiration The expiration time in minutes.
 		 */
