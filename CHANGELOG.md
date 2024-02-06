@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Don't include Dash cards on Admin UI if module is not available, which fixes positioning.
+- WooCommerce Analytics: Resolve warning when enqueuing analytics script.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Related Posts: fix SVG notice in block.
