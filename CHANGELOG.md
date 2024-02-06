@@ -2,24 +2,11 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.2-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Enhancements
-- Admin Bar: link Stats item to WordPress.com.
-- Remove the My Mailboxes menu from the classic view
-
+## 13.1.1 - 2024-02-06
 ### Bug fixes
-- Don't include Dash cards on Admin UI if module is not available, which fixes positioning.
-- WooCommerce Analytics: Resolve warning when enqueuing analytics script.
+- WooCommerce Analytics: resolve warning when enqueuing analytics script. [#35471]
 
-### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Related Posts: fix SVG notice in block.
-- Remove Settings > Performance for the classic admin interface, and added Page Optimizer link in Jetpack > Settings > Performance for Atomic sites.
-- Updated package dependencies.
-
-## [13.1] - 2024-02-06
+## 13.1 - 2024-02-06
 ### Enhancements
 - Like block: the existing Jetpack Like & Reblog button features are now available as a block! With the new Like block, users are be able to add the Like & Reblog features not just to posts and pages, but also to block templates and block patterns. You can give the new Like block a try by adding it from within the editor just like any other block.
 - Sharing Buttons block: similar to the Like block mentioned above, the existing Jetpack Sharing Buttons feature is now available as a block.
@@ -9716,7 +9703,6 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 
 - Initial release
 
-[13.1]: https://wp.me/p1moTy-12e0
 [13.0]: https://wp.me/p1moTy-10Xp
 [12.9]: https://wp.me/p1moTy-YJA
 [12.8]: https://wp.me/p1moTy-Xdz
