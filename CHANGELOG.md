@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Admin Bar: link Stats item to WordPress.com.
+- Like block: Remove the "Like this:" heading
 - Remove the My Mailboxes menu from the classic view
 
 ### Bug fixes
