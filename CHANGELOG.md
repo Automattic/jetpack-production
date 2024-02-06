@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Related Posts: fix SVG notice in block.
 - Remove Settings > Performance for the classic admin interface, and added Page Optimizer link in Jetpack > Settings > Performance for Atomic sites.
+- Untangle Calypso: Users > My Profile to default wp-admin users profile.
 - Updated package dependencies.
 
 ## [13.1] - 2024-02-06
