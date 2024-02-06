@@ -8,18 +8,16 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Admin Bar: link Stats item to WordPress.com.
-- Like block: Remove the "Like this:" heading
 - Remove the My Mailboxes menu from the classic view
 
 ### Bug fixes
 - Don't include Dash cards on Admin UI if module is not available, which fixes positioning.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Plugin activation: redirect to My Jetpack once activated.
 - Related Posts: fix SVG notice in block.
 - Remove Settings > Performance for the classic admin interface, and added Page Optimizer link in Jetpack > Settings > Performance for Atomic sites.
 
-## 13.1-beta - 2024-02-05
+## [13.1] - 2024-02-06
 ### Enhancements
 - Like block: the existing Jetpack Like & Reblog button features are now available as a block! With the new Like block, users are be able to add the Like & Reblog features not just to posts and pages, but also to block templates and block patterns. You can give the new Like block a try by adding it from within the editor just like any other block.
 - Sharing Buttons block: similar to the Like block mentioned above, the existing Jetpack Sharing Buttons feature is now available as a block.
@@ -47,11 +45,11 @@ This is an alpha version! The changes listed here are not final.
 - Subscriber Login block: add new block to beta blocks.
 - Subscriptions: various fixes and improvements.
 - Sync: make media extraction more consistent with regards to getting alt text and image size information. [#35369]
+- Tiled gallery: fix PHP warnings from nested arrays in image meta. [#35317]
 - Top Posts & Pages block: add new block to beta blocks.
 - Woo: add support for WooCommerce HPOS to the Google Analytics module. [#33152]
 - WPcom: avoid fatal error when receiving error in WPcom API response. [#35389]
 - WPcom: enhanced WordPress.com API compatibility with third party plugin data. [#34770]
-- Tiled gallery: fix PHP warnings from nested arrays in image meta. [#35317]
 - YouTube shortcode: handle being given an array with a 'url' key insteadad of the URL as a string. [#35181]
 
 ## 13.1-a.9 - 2024-01-29
@@ -9716,6 +9714,7 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 
 - Initial release
 
+[13.1]: https://wp.me/p1moTy-12e0
 [13.0]: https://wp.me/p1moTy-10Xp
 [12.9]: https://wp.me/p1moTy-YJA
 [12.8]: https://wp.me/p1moTy-Xdz
