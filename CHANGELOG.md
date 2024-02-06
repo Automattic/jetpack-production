@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Plugin activation: redirect to My Jetpack once activated.
+- Remove Settings > Performance for the classic admin interface, and added Page Optimizer link in Jetpack > Settings > Performance for Atomic sites.
 
 ## 13.1-beta - 2024-02-05
 ### Enhancements
