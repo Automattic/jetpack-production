@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Admin Bar: link Stats item to WordPress.com.
+- Blog Stats Block: allow displaying site's number of visitors.
 - Remove the My Mailboxes menu from the classic view
 
 ### Bug fixes
