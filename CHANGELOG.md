@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Admin Bar: link Stats item to WordPress.com.
 - Remove the My Mailboxes menu from the classic view
 
+### Bug fixes
+- Don't include Dash cards on Admin UI if module is not available, which fixes positioning.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Plugin activation: redirect to My Jetpack once activated.
 - Remove Settings > Performance for the classic admin interface, and added Page Optimizer link in Jetpack > Settings > Performance for Atomic sites.
