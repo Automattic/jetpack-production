@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add pricing info for AI and CRM on My Jetpack
 - Update the description of some cards to better describe the product on My Jetpack page
 
+### Fixed
+- Fixes issue on My Jetpack interstitials where some prices are 1 cent off
+
 ## [4.8.0] - 2024-02-05
 ### Added
 - Add tracking info to the Jetpack Manage Banner CTA [#35378]
