@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Additional CSS: Use the correct plan name in the WordPress.com nudge.
 - Admin Bar: link Stats item to WordPress.com.
 - Blog Stats Block: allow displaying site's number of visitors.
 - Remove the My Mailboxes menu from the classic view
