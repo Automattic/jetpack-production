@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Shortcodes: Get rid of warnings when given invalid input to parsing youtube urls
 - Untangle Calypso: Users > My Profile to default wp-admin users profile.
 - Updated package dependencies.
+- Write helper script to ABSPATH by default, just like we did before
 
 ## 13.1.1 - 2024-02-06
 ### Bug fixes
