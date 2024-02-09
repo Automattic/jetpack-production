@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Bar: link Stats item to WordPress.com.
 - Blog Stats Block: allow displaying site's number of visitors.
 - Change editor layout for social notes
+- Remove Support link from Jetpack on plugins page
 - Remove the My Mailboxes menu from the classic view
 
 ### Bug fixes
