@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - WooCommerce Analytics: avoid error when trying to pay for a deleted product.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fix blogroll item image size and fix blogroll appender result image placeholder
 - Related Posts: fix SVG notice in block.
 - Remove Settings > Performance for the classic admin interface, and added Page Optimizer link in Jetpack > Settings > Performance for Atomic sites.
 - Revert: Untangle: Do not add the dashboard switcher for the wp-admin interface
