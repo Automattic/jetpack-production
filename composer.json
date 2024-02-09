@@ -39,7 +39,7 @@
 		"automattic/jetpack-my-jetpack": "^4.9.0",
 		"automattic/jetpack-plugins-installer": "^0.3.1",
 		"automattic/jetpack-post-list": "^0.5.1",
-		"automattic/jetpack-publicize": "^0.41.0",
+		"automattic/jetpack-publicize": "^0.42.0-alpha",
 		"automattic/jetpack-redirect": "^2.0.0",
 		"automattic/jetpack-roles": "^2.0.0",
 		"automattic/jetpack-search": "^0.43.0",
