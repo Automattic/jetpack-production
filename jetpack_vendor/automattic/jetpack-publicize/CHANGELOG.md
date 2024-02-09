@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Change editor layout for social notes
 - Hid the custom message box for social notes in the classic editor
+- OG image will be converted to match platform requirements even if its inside the body
 
 ## [0.41.0] - 2024-02-05
 ### Changed
