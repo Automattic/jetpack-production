@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - WooCommerce Analytics: avoid error when trying to pay for a deleted product.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Allowing multiple Sharing Buttons blocks on a page.
 - Feature Hints: add the sharing block to the list of suggested features when the site uses a block-based theme.
 - Fix blogroll item image size and fix blogroll appender result image placeholder
 - Fixed various PHP warnings for PHP 8.1+
