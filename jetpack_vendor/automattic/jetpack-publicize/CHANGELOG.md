@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.42.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.42.0] - 2024-02-12
 ### Changed
-- Change editor layout for social notes
-- Hid the custom message box for social notes in the classic editor
-- OG image will be converted to match platform requirements even if its inside the body
+- Change editor layout for social notes [#35536]
+- Hid the custom message box for social notes in the classic editor [#35540]
+- OG image will be converted to match platform requirements even if its inside the body [#35038]
 
 ### Fixed
-- Fixed a bug where a parameter is missing
+- Fixed a bug where a parameter is missing [#35601]
 
 ## [0.41.0] - 2024-02-05
 ### Changed
@@ -475,7 +472,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.42.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.41.0...v0.42.0-alpha
+[0.42.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.41.0...v0.42.0
 [0.41.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.40.0...v0.41.0
 [0.40.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.39.0...v0.40.0
 [0.39.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.38.3...v0.39.0
