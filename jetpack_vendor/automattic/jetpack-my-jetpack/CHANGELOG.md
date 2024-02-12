@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: various improvements to the Stats card.
+- Updated package dependencies.
 
 ## [4.9.0] - 2024-02-07
 ### Changed
