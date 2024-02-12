@@ -5,16 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.9.1-alpha] - unreleased
+## [4.9.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
-
-### Added
-- Add My Jetpack link to standalone plugins missing it
 
 ### Changed
 - My Jetpack: various improvements to the Stats card.
 - Updated package dependencies.
+
+## [4.9.1] - 2024-02-12
+### Added
+- Add My Jetpack link to standalone plugins missing it [#35523]
 
 ## [4.9.0] - 2024-02-07
 ### Changed
@@ -1246,7 +1247,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.9.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.0...4.9.1-alpha
+[4.9.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.1...4.9.2-alpha
+[4.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.0...4.9.1
 [4.9.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.8.0...4.9.0
 [4.8.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.7.0...4.8.0
 [4.7.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.6.2...4.7.0

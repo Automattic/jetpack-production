@@ -5,16 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.30.4-alpha] - unreleased
+## [0.30.5-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
 
+## [0.30.4] - 2024-02-12
 ### Fixed
-- Dashboard: improve the display of the dashboard to non-admins.
-- Forms: fix multiple and single choice fields button style
+- Dashboard: improve the display of the dashboard to non-admins. [#35571]
+- Forms: fix multiple and single choice fields button style [#35456]
 
 ## [0.30.3] - 2024-02-05
 ### Changed
@@ -492,7 +493,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.30.4-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.30.3...v0.30.4-alpha
+[0.30.5-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.30.4...v0.30.5-alpha
+[0.30.4]: https://github.com/automattic/jetpack-forms/compare/v0.30.3...v0.30.4
 [0.30.3]: https://github.com/automattic/jetpack-forms/compare/v0.30.2...v0.30.3
 [0.30.2]: https://github.com/automattic/jetpack-forms/compare/v0.30.1...v0.30.2
 [0.30.1]: https://github.com/automattic/jetpack-forms/compare/v0.30.0...v0.30.1
