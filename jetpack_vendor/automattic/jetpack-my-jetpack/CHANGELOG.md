@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add My Jetpack link to standalone plugins missing it
 
+### Changed
+- My Jetpack: various improvements to the Stats card.
+
 ## [4.9.0] - 2024-02-07
 ### Changed
 - Add pricing info for AI and CRM on My Jetpack [#35457]
