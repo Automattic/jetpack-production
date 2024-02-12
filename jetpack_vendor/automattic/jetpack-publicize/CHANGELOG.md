@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Hid the custom message box for social notes in the classic editor
 - OG image will be converted to match platform requirements even if its inside the body
 
+### Fixed
+- Fixed a bug where a parameter is missing
+
 ## [0.41.0] - 2024-02-05
 ### Changed
 - Updated package dependencies. [#35384]
