@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Blaze: Whiteliste /media/new WPCOM REST API call for image uploading
+- Quick Action Links: introduce new filter allowing to disable quick links in the Posts screen.
 
 ### Changed
 - Updated package dependencies.
