@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.16.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.16.0] - 2024-02-13
 ### Added
-- Blaze: Whiteliste /media/new WPCOM REST API call for image uploading
-- Quick Action Links: introduce new filter allowing to disable quick links in the Posts screen.
+- Blaze: Whiteliste /media/new WPCOM REST API call for image uploading [#34790]
+- Quick Action Links: introduce new filter allowing to disable quick links in the Posts screen. [#35586]
 
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#35608]
 
 ## [0.15.3] - 2024-02-05
 ### Changed
@@ -288,7 +285,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.16.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.15.3...v0.16.0-alpha
+[0.16.0]: https://github.com/automattic/jetpack-blaze/compare/v0.15.3...v0.16.0
 [0.15.3]: https://github.com/automattic/jetpack-blaze/compare/v0.15.2...v0.15.3
 [0.15.2]: https://github.com/automattic/jetpack-blaze/compare/v0.15.1...v0.15.2
 [0.15.1]: https://github.com/automattic/jetpack-blaze/compare/v0.15.0...v0.15.1
