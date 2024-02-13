@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adds error messaging to endpoint when connected account for memberships cannot be loaeded.
+
 ## 13.2-a.3 - 2024-02-13
 ### Enhancements
 - Blaze: remove "Promote with Blaze" links appearing in the Posts list when the Blaze feature is enabled. You can still go to Tools > Advertising to create and manage Blaze campaigns on your site. [#35586]
