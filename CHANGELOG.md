@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Disable scroll to top when memberships subscribe popup is opened.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Create with voice: Rename feature to Voice to content
 - Update "Earn" to "Monetize" navigation item  on Jetpack sites managed in Calypso/WP.com.
 - Updated package dependencies.
 
