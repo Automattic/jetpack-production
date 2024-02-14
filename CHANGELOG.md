@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds error messaging to endpoint when connected account for memberships cannot be loaeded.
 - Like block: Update block's Learn more link logic
+- Make Jetpack redirect to the Jetpack page after multisite activation.
 
 ## 13.2-a.3 - 2024-02-13
 ### Enhancements
