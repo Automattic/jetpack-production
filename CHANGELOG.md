@@ -2,14 +2,15 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.2-a.4 - unreleased
+## 13.2-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 13.2-a.5 - 2024-02-14
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Adds error messaging to endpoint when connected account for memberships cannot be loaeded.
-- Like block: Update block's Learn more link logic
-- Make Jetpack redirect to the Jetpack page after multisite activation.
+- Adds error messaging to endpoint when connected account for memberships cannot be loaded. [#35564]
+- Like block: Update block's Learn more link logic [#35641]
+- Make Jetpack redirect to the Jetpack page after multisite activation. [#35559]
 
 ## 13.2-a.3 - 2024-02-13
 ### Enhancements
