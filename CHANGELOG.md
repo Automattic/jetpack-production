@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Related Posts: remove duplicated HTML attributes
+
 ## 13.2-a.5 - 2024-02-14
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds error messaging to endpoint when connected account for memberships cannot be loaded. [#35564]
