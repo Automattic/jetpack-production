@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Boost Speed Score into My Jetpack Boost product card
 
 ### Fixed
+- Improved accessibility of Dismiss button in Connection Banner
 - My Jeptack Connection: Make footer logos a list for better screen readers interpretation.
 
 ## [4.9.2] - 2024-02-13
