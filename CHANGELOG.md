@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Add support for Email stats
+
 ### Improved compatibility
 - Add support for WP Super Cache and Boost Cache
 
