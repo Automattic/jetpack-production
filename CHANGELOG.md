@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds a standalone mode indicator to the Firewall settings
+- Jetpack AI: include audio transcription usage example to Voice-to-Content block.
 - Jetpack AI Voice to content: Update to modal UI
 - Related Posts: remove duplicated HTML attributes
 - update readme
