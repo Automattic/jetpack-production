@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds a standalone mode indicator to the Firewall settings
 - Jetpack AI Voice to content: Update to modal UI
 - Related Posts: remove duplicated HTML attributes
+- update readme
 
 ## 13.2-a.5 - 2024-02-14
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
