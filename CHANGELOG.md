@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Add support for WP Super Cache and Boost Cache
+
 ### Bug fixes
 - Jetpack Google Fonts: Fix some Google fonts aren't displayed correctly on front end
 
