@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - SSO: When creating a new users, mail the users with an invitation to WPCom.
 
 ### Improved compatibility
+- Add 'if_not_modified_since' to the update post endpoints this will help clients fails if the post has been updated since last retrieved
 - Add support for WP Super Cache and Boost Cache
 
 ### Bug fixes
