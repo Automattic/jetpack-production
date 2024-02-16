@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add images while publishing on the web via the jetpack app
 - Add support for Email stats
 
 ### Improved compatibility
