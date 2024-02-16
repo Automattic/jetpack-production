@@ -7,8 +7,13 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added custom message textarea to send a message via email when adding new users
 - Add images while publishing on the web via the jetpack app
 - Add support for Email stats
+- SSO: Add user invite revoke row action in users table
+- SSO: improve messaging and account binding between local and wp.com users
+- SSO: Updated column heading and row background color when invitation is pending.
+- SSO: When creating a new users, mail the users with an invitation to WPCom.
 
 ### Improved compatibility
 - Add support for WP Super Cache and Boost Cache
@@ -17,11 +22,21 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Google Fonts: Fix some Google fonts aren't displayed correctly on front end
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add caching for user invites
 - Adds a standalone mode indicator to the Firewall settings
+- Fix message translation content
+- Improve column by renaming and adding icon
 - Jetpack AI: include audio transcription usage example to Voice-to-Content block.
 - Jetpack AI Voice to content: Update to modal UI
+- Move user customization to seperate file
+- Persist user-new.php custom message form field after submission with errors
 - Related Posts: remove duplicated HTML attributes
+- Rename status column to sso status and add tooltip
+- Replace question mark icon
+- SSO: revoke invites sent to users upon users deletion
+- Trigger user invitation for new users
 - update readme
+- Update users table ssorow background colors
 
 ## 13.2-a.5 - 2024-02-14
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
