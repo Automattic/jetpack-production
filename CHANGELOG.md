@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Trigger user invitation for new users
 - update readme
 - Update users table ssorow background colors
+- Voice to Content: Add states and refactor duration calculation
 
 ## 13.2-a.5 - 2024-02-14
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
