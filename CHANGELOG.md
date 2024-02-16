@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI Voice to content: Update to modal UI
 - Move user customization to seperate file
 - Persist user-new.php custom message form field after submission with errors
+- readme tweaks
 - Related Posts: remove duplicated HTML attributes
 - Rename status column to sso status and add tooltip
 - Replace question mark icon
