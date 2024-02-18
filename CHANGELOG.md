@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added custom message textarea to send a message via email when adding new users
 - Add images while publishing on the web via the jetpack app
+- Add some extra margin around Stats settings toggles
 - Add support for Email stats
 - SSO: Add user invite revoke row action in users table
 - SSO: improve messaging and account binding between local and wp.com users
