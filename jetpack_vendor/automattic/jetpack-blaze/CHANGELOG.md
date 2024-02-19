@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Added price in blaze/posts endpoint
+
 ### Changed
 - Changes the Blaze Dashboard entry points to be compatible with Woo Blaze
 - Post Links: allow third-parties to toggle them depending on post type.

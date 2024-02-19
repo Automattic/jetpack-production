@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add caching for user invites
+- Added price in blaze/posts endpoint
 - Add jetpack_newsletters_publishing_default_frequency to Sync
 - Adds a standalone mode indicator to the Firewall settings
 - Blaze: display post links for products.
