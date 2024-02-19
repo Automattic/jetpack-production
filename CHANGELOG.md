@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Add jetpack_newsletters_publishing_default_frequency to Sync
 - Adds a standalone mode indicator to the Firewall settings
 - Blaze: display post links for products.
+- Email notifications: update from "follows" to "subscribes"
 - Fix message translation content
 - Improve column by renaming and adding icon
 - Jetpack AI: Add transcription post-processing example to Voice-to-Content block.
