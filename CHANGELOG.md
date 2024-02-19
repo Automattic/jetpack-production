@@ -24,7 +24,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Jetpack Google Fonts: Fix some Google fonts aren't displayed correctly on front end
-- Like block: Encode Avatar URLs
 - Scan: ensure the Admin notice resources are always properly loaded.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
@@ -41,7 +40,6 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI Voice to content: Update to modal UI
 - Move user customization to seperate file
 - Persist user-new.php custom message form field after submission with errors
-- readme tweaks
 - Related Posts: remove duplicated HTML attributes
 - Rename status column to sso status and add tooltip
 - Replace question mark icon
@@ -56,6 +54,14 @@ This is an alpha version! The changes listed here are not final.
 - Adds error messaging to endpoint when connected account for memberships cannot be loaded. [#35564]
 - Like block: Update block's Learn more link logic [#35641]
 - Make Jetpack redirect to the Jetpack page after multisite activation. [#35559]
+
+## 13.1.2 - 2024-02-19
+### Security Improvements
+- Like block: fix XSS vulnerability in avatar URL encoding. [#35747]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack: readme.txt tweaks. [#35727]
+- Jetpack: redirect to the Jetpack page after multisite activation. [#35559]
 
 ## 13.2-a.3 - 2024-02-13
 ### Enhancements
