@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Jetpack Google Fonts: Fix some Google fonts aren't displayed correctly on front end
 - Like block: Encode Avatar URLs
+- Scan: ensure the Admin notice resources are always properly loaded.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add caching for user invites
