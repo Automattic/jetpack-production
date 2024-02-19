@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Add images while publishing on the web via the jetpack app
 - Add some extra margin around Stats settings toggles
 - Add support for Email stats
+- Comment: Add Goodreads embed block in Gutenberg.
 - SSO: Add user invite revoke row action in users table
 - SSO: improve messaging and account binding between local and wp.com users
 - SSO: Updated column heading and row background color when invitation is pending.
