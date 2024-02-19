@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - SSO: improve messaging and account binding between local and wp.com users
 - SSO: Updated column heading and row background color when invitation is pending.
 - SSO: When creating a new users, mail the users with an invitation to WPCom.
+- We added the Welcome Email Message setting to Newsletter settings
 
 ### Improved compatibility
 - Add 'if_not_modified_since' to the update post endpoints this will help clients fails if the post has been updated since last retrieved
