@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add Boost Speed Score into My Jetpack Boost product card
+- Add connection indicator for screen readers
 
 ### Fixed
 - Improved accessibility of Dismiss button in Connection Banner
