@@ -45,7 +45,6 @@ class Current_Plan {
 				'opentable',
 				'calendly',
 				'send-a-message',
-				'sharing-block',
 				'whatsapp-button',
 				'social-previews',
 				'videopress',

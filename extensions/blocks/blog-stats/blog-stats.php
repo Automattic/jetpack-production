@@ -44,7 +44,7 @@ add_action( 'init', __NAMESPACE__ . '\register_block' );
 function load_assets( $attributes ) {
 	Jetpack_Gutenberg::load_assets_as_required( __DIR__ );
 
-	$stats = 0;
+	$views = 0;
 
 	// For when there's no post ID - eg. search pages.
 	if ( $attributes['statsOption'] === 'post' && ! get_the_ID() ) {
@@ -71,31 +71,27 @@ function load_assets( $attributes ) {
 		);
 
 		if ( isset( $data->views ) ) {
-			$stats = $data->views;
+			$views = $data->views;
 		}
 	} else {
 		$data = convert_stats_array_to_object(
 			( new WPCOM_Stats() )->get_stats( array( 'fields' => 'stats' ) )
 		);
 
-		if ( $attributes['statsData'] === 'views' && isset( $data->stats->views ) ) {
-			$stats = $data->stats->views;
-		}
-
-		if ( $attributes['statsData'] === 'visitors' && isset( $data->stats->visitors ) ) {
-			$stats = $data->stats->visitors;
+		if ( isset( $data->stats->views ) ) {
+			$views = $data->stats->views;
 		}
 	}
 
-	$fallback_label = $attributes['statsData'] === 'visitors' ? esc_html(
-		/* Translators: Number of visitors */
-		_n( 'visitor', 'visitors', $stats, 'jetpack' )
-	) : esc_html(
+	$label = $attributes['label'] ? $attributes['label'] : esc_html(
 		/* Translators: Number of views */
-		_n( 'hit', 'hits', $stats, 'jetpack' )
+		_n(
+			'hit',
+			'hits',
+			$views,
+			'jetpack'
+		)
 	);
-
-	$label = empty( $attributes['label'] ) ? $fallback_label : $attributes['label'];
 
 	$wrapper_attributes = \WP_Block_Supports::get_instance()->apply_block_supports();
 
@@ -104,7 +100,7 @@ function load_assets( $attributes ) {
 		! empty( $attributes['className'] ) ? ' ' . esc_attr( $attributes['className'] ) : '',
 		! empty( $wrapper_attributes['class'] ) ? ' ' . esc_attr( $wrapper_attributes['class'] ) : '',
 		! empty( $wrapper_attributes['style'] ) ? ' style="' . esc_attr( $wrapper_attributes['style'] ) . '"' : '',
-		esc_html( number_format_i18n( $stats ) ),
+		esc_html( number_format_i18n( $views ) ),
 		wp_kses_post( $label )
 	);
 }
