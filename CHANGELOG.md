@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Privacy: Add preliminary support for WordAds Consent Management Provider
+
 ## 13.2-a.7 - 2024-02-19
 ### Enhancements
 - Added custom message textarea to send a message via email when adding new users [#35277]
