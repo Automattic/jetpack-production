@@ -2,7 +2,7 @@
 /**
  * Goodreads Block.
  *
- * @since 13.2-a.6
+ * @since 13.2
  *
  * @package automattic/jetpack
  */

@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.10.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.10.0] - 2024-02-19
 ### Added
-- Add Boost Speed Score into My Jetpack Boost product card
-- Add connection indicator for screen readers
+- Add Boost Speed Score into My Jetpack Boost product card [#35606]
+- Add connection indicator for screen readers [#35714]
 
 ### Fixed
-- Improved accessibility of Dismiss button in Connection Banner
-- My Jeptack Connection: Make footer logos a list for better screen readers interpretation.
-- My Jetpack: add label for screen readers to connect page close button
+- Improved accessibility of Dismiss button in Connection Banner [#35694]
+- My Jeptack Connection: Make footer logos a list for better screen readers interpretation. [#35667]
+- My Jetpack: add label for screen readers to connect page close button [#35712]
 
 ## [4.9.2] - 2024-02-13
 ### Changed
@@ -1257,7 +1254,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.10.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.2...4.10.0-alpha
+[4.10.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.2...4.10.0
 [4.9.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.1...4.9.2
 [4.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.0...4.9.1
 [4.9.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.8.0...4.9.0

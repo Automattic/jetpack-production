@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.17.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.17.0] - 2024-02-19
 ### Added
-- Added price in blaze/posts endpoint
+- Added price in blaze/posts endpoint [#35066]
 
 ### Changed
-- Changes the Blaze Dashboard entry points to be compatible with Woo Blaze
-- Post Links: allow third-parties to toggle them depending on post type.
+- Changes the Blaze Dashboard entry points to be compatible with Woo Blaze [#34964]
+- Post Links: allow third-parties to toggle them depending on post type. [#35730]
 
 ## [0.16.0] - 2024-02-13
 ### Added
@@ -296,7 +293,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.17.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.16.0...v0.17.0-alpha
+[0.17.0]: https://github.com/automattic/jetpack-blaze/compare/v0.16.0...v0.17.0
 [0.16.0]: https://github.com/automattic/jetpack-blaze/compare/v0.15.3...v0.16.0
 [0.15.3]: https://github.com/automattic/jetpack-blaze/compare/v0.15.2...v0.15.3
 [0.15.2]: https://github.com/automattic/jetpack-blaze/compare/v0.15.1...v0.15.2
