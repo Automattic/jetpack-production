@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Changes the Blaze Dashboard entry points to be compatible with Woo Blaze
+- Post Links: allow third-parties to toggle them depending on post type.
 
 ## [0.16.0] - 2024-02-13
 ### Added
