@@ -2,12 +2,9 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.2-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Write helper script to ABSPATH by default, just like we did before
+## 13.1.3 - 2024-02-20
+### Bug fixes
+- Backup: write helper script to ABSPATH by default to avoid backup failures. [#35508]
 
 ## 13.1.2 - 2024-02-19
 ### Security Improvements
