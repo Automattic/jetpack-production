@@ -174,17 +174,8 @@ class Products {
 			'backup',
 			'boost',
 			'crm',
-			'videopress',
-			'social',
-			'protect',
-			'crm',
-			'search',
+			'videopress', // we use videopress here to add the plugin action to the Jetpack plugin itself
 		);
-
-		// Add plugin action links for the core Jetpack plugin.
-		Product::extend_core_plugin_action_links();
-
-		// Add plugin action links to standalone products.
 		foreach ( $products as $product ) {
 			$class_name = self::get_product_class( $product );
 			$class_name::extend_plugin_action_links();

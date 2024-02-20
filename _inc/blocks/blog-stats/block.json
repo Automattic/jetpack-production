@@ -8,8 +8,7 @@
         "views",
         "hits",
         "analytics",
-        "counter",
-        "visitors"
+        "counter"
     ],
     "version": "1.0",
     "textdomain": "jetpack",
@@ -36,10 +35,6 @@
     "attributes": {
         "label": {
             "type": "string"
-        },
-        "statsData": {
-            "type": "string",
-            "default": "views"
         },
         "statsOption": {
             "type": "string",

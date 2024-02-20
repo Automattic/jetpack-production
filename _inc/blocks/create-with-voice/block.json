@@ -1,9 +1,9 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
-    "name": "jetpack/voice-to-content",
-    "title": "Voice to content",
-    "description": "Transform your spoken words into a post ready to publish with AI.",
+    "name": "jetpack/create-with-voice",
+    "title": "Create with voice",
+    "description": "Transform your spoken words into publish-ready blocks with AI effortlessly.",
     "keywords": [
         "AI",
         "GPT",

@@ -94,8 +94,7 @@ class Setup {
 			! $update &&
 			'auto-draft' === $post->post_status &&
 			$settings->get_settings()['socialImageGeneratorSettings']['enabled'] &&
-			empty( $post_settings->get_settings( true ) ) &&
-			'jetpack-social-note' !== $post->post_type
+			empty( $post_settings->get_settings( true ) )
 		) {
 			$post_settings->update_setting( 'enabled', true );
 			return;

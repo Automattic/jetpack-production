@@ -8,6 +8,7 @@
  */
 
 use Automattic\Jetpack\Assets;
+use Automattic\Jetpack\Assets\Logo as Jetpack_Logo;
 use Automattic\Jetpack\Boost_Speed_Score\Speed_Score;
 use Automattic\Jetpack\Config;
 use Automattic\Jetpack\Connection\Client;
@@ -3362,6 +3363,11 @@ p {
 			// Artificially throw errors in certain specific cases during plugin activation.
 			add_action( 'activate_plugin', array( $this, 'throw_error_on_activate_plugin' ) );
 		}
+
+		// Add custom column in wp-admin/users.php to show whether user is linked.
+		add_filter( 'manage_users_columns', array( $this, 'jetpack_icon_user_connected' ) );
+		add_action( 'manage_users_custom_column', array( $this, 'jetpack_show_user_connected_icon' ), 10, 3 );
+		add_action( 'admin_print_styles', array( $this, 'jetpack_user_col_style' ) );
 	}
 
 	/**
@@ -3766,9 +3772,12 @@ p {
 	 * @return array
 	 */
 	public function plugin_action_links( $actions ) {
+		$support_link = ( new Host() )->is_woa_site() ? 'https://wordpress.com/help/contact/' : self::admin_url( 'page=jetpack-debugger' );
+
 		if ( current_user_can( 'jetpack_manage_modules' ) && ( self::is_connection_ready() || ( new Status() )->is_offline_mode() ) ) {
 			return array_merge(
 				array( 'settings' => sprintf( '<a href="%s">%s</a>', esc_url( self::admin_url( 'page=jetpack#/settings' ) ), __( 'Settings', 'jetpack' ) ) ),
+				array( 'support' => sprintf( '<a href="%s">%s</a>', esc_url( $support_link ), __( 'Support', 'jetpack' ) ) ),
 				$actions
 			);
 		}
@@ -5669,6 +5678,19 @@ endif;
 	}
 
 	/**
+	 * Checks whether the sync_error_idc option is valid or not, and if not, will do cleanup.
+	 *
+	 * @since 4.4.0
+	 * @since 5.4.0 Do not call get_sync_error_idc_option() unless site is in IDC
+	 *
+	 * @return bool
+	 */
+	public static function validate_sync_error_idc_option() {
+		_deprecated_function( __METHOD__, 'jetpack-9.8', '\\Automattic\\Jetpack\\Identity_Crisis::validate_sync_error_idc_option' );
+		return Identity_Crisis::validate_sync_error_idc_option();
+	}
+
+	/**
 	 * Normalizes a url by doing three things:
 	 *  - Strips protocol
 	 *  - Strips www
@@ -5688,6 +5710,33 @@ endif;
 		// Strip www and protocols.
 		$url = preg_replace( '/^www\./i', '', $parsed_url['host'] . $parsed_url['path'] );
 		return $url;
+	}
+
+	/**
+	 * Gets the value that is to be saved in the jetpack_sync_error_idc option.
+	 *
+	 * @since 4.4.0
+	 * @since 5.4.0 Add transient since home/siteurl retrieved directly from DB
+	 * @deprecated 9.8.0 Use \\Automattic\\Jetpack\\Identity_Crisis::get_sync_error_idc_option
+	 *
+	 * @param array $response HTTP response.
+	 * @return array Array of the local urls, wpcom urls, and error code
+	 */
+	public static function get_sync_error_idc_option( $response = array() ) {
+		_deprecated_function( __METHOD__, 'jetpack-9.8', '\\Automattic\\Jetpack\\Identity_Crisis::get_sync_error_idc_option' );
+		return Identity_Crisis::get_sync_error_idc_option( $response );
+	}
+
+	/**
+	 * Returns the value of the jetpack_sync_idc_optin filter, or constant.
+	 * If set to true, the site will be put into staging mode.
+	 *
+	 * @since 4.3.2
+	 * @return bool
+	 */
+	public static function sync_idc_optin() {
+		_deprecated_function( __METHOD__, 'jetpack-9.8', '\\Automattic\\Jetpack\\Identity_Crisis::sync_idc_optin' );
+		return Identity_Crisis::sync_idc_optin();
 	}
 
 	/**
@@ -6404,6 +6453,65 @@ endif;
 
 		return $sorted;
 	}
+
+	/**
+	 * Adds a "blank" column in the user admin table to display indication of user connection.
+	 *
+	 * @param array $columns User list table columns.
+	 *
+	 * @return array
+	 */
+	public function jetpack_icon_user_connected( $columns ) {
+		$columns['user_jetpack'] = '';
+		return $columns;
+	}
+
+	/**
+	 * Show Jetpack icon if the user is linked.
+	 *
+	 * @param string $val HTML for the icon.
+	 * @param string $col User list table column.
+	 * @param int    $user_id User ID.
+	 *
+	 * @return string
+	 */
+	public function jetpack_show_user_connected_icon( $val, $col, $user_id ) {
+		if ( 'user_jetpack' === $col && self::connection()->is_user_connected( $user_id ) ) {
+			$jetpack_logo = new Jetpack_Logo();
+			$emblem_html  = sprintf(
+				'<a title="%1$s" class="jp-emblem-user-admin">%2$s</a>',
+				esc_attr__( 'This user is linked and ready to fly with Jetpack.', 'jetpack' ),
+				$jetpack_logo->get_jp_emblem()
+			);
+			return $emblem_html;
+		}
+
+		return $val;
+	}
+
+	/**
+	 * Style the Jetpack user column
+	 */
+	public function jetpack_user_col_style() {
+		global $current_screen;
+		if ( ! empty( $current_screen->base ) && 'users' === $current_screen->base ) {
+			?>
+			<style>
+				.fixed .column-user_jetpack {
+					width: 21px;
+				}
+				.jp-emblem-user-admin svg {
+					width: 20px;
+					height: 20px;
+				}
+				.jp-emblem-user-admin path {
+					fill: #069e08;
+				}
+			</style>
+			<?php
+		}
+	}
+
 	/**
 	 * Checks if Akismet is active and working.
 	 *
