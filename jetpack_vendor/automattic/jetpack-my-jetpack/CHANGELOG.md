@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.10.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Connection Screen: make VoiceOver announce lists as such
+
 ## [4.10.0] - 2024-02-19
 ### Added
 - Add Boost Speed Score into My Jetpack Boost product card [#35606]
@@ -1254,6 +1261,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[4.10.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.10.0...4.10.1-alpha
 [4.10.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.2...4.10.0
 [4.9.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.1...4.9.2
 [4.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.0...4.9.1

@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Privacy: Add preliminary support for WordAds Consent Management Provider
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Connection Screen: make VoiceOver announce lists as such
 - Contact Form: deprecate temporary tmp_grunion_allow_editor_view filter.
 - Security Monitor: remove link to notifications and add link to wordpress account
 - TreeSelector: Added tree selector component.
