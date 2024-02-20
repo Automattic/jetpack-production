@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Privacy: Add preliminary support for WordAds Consent Management Provider
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Wordpress.com Tools Menu: Update Github Deployments submenu copy
+
 ## 13.2-a.7 - 2024-02-19
 ### Enhancements
 - Added custom message textarea to send a message via email when adding new users [#35277]
