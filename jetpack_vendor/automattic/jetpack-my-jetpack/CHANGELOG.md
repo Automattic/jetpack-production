@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updated package dependencies.
+
 ### Fixed
 - Connection Screen: make VoiceOver announce lists as such
 - Fix wrong prop type passed to ConnectedProductCard
