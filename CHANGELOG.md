@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Privacy: Add preliminary support for WordAds Consent Management Provider
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Contact Form: deprecate temporary tmp_grunion_allow_editor_view filter.
 - Wordpress.com Tools Menu: Update Github Deployments submenu copy
 
 ## 13.2-a.7 - 2024-02-19
