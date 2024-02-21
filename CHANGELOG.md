@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Connection Screen: make VoiceOver announce lists as such
 - Contact Form: deprecate temporary tmp_grunion_allow_editor_view filter.
+- Remove Settings > Sharing menu item registered by Publicize, Sharedaddy, and Likes.
 - Security Monitor: remove link to notifications and add link to wordpress account
 - TreeSelector: Added tree selector component.
 - Voice to Content: Add hook to handle transcription insertion into the editor.
