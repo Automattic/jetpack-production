@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Blaze: Enable the Dashboard behind the feature flag
 - Privacy: Add preliminary support for WordAds Consent Management Provider
 - WordAds: Add additional states to US Privacy law opt-out
 
