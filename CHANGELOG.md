@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Privacy: Add preliminary support for WordAds Consent Management Provider
+- WordAds: Add additional states to US Privacy law opt-out
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Connection Screen: make VoiceOver announce lists as such
