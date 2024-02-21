@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding accesible text for external links on connection page and footer
 
 ### Changed
+- change status and action of My Jetpack cards when plugin is missing
 - ESlint: disabled redundant role rule
 - My Jetpack: add product slugs to click events on interstitials
 - My Jetpack: let tier data pass on quantity data to checkout process for proper checkout URL crafting
