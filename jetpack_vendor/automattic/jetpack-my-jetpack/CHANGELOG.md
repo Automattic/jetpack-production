@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.10.1-alpha] - unreleased
+## [4.11.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding accesible text for external links on connection page and footer
 
 ### Changed
+- My Jetpack: add product slugs to click events on interstitials
 - Updated package dependencies.
 
 ### Fixed
@@ -1268,7 +1269,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.10.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.10.0...4.10.1-alpha
+[4.11.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.10.0...4.11.0-alpha
 [4.10.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.2...4.10.0
 [4.9.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.1...4.9.2
 [4.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.0...4.9.1
