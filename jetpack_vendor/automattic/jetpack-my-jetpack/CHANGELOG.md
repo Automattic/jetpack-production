@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Connection Screen: make VoiceOver announce lists as such
+- Do not initialize My Jetpack when in Offline mode.
 - Fix wrong prop type passed to ConnectedProductCard
 
 ## [4.10.0] - 2024-02-19
