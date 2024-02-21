@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Backup Card: made stats readable by screen readers
 - Connection Screen: make VoiceOver announce lists as such
 - Do not initialize My Jetpack when in Offline mode.
 - Fix wrong prop type passed to ConnectedProductCard
