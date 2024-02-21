@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - TreeSelector: Added tree selector component.
 - Voice to Content: Add hook to handle transcription insertion into the editor.
 - Voice to Content: avoid replacing blocks when inserting transcription into editor.
+- Voice to Content: Make transcriptions cancelable and link upload button to processing state
 - WordAds: ensure the new CMP banner can be loaded in production environments.
 - Wordpress.com Tools Menu: Update Github Deployments submenu copy
 
