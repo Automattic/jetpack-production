@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Privacy: Add preliminary support for WordAds Consent Management Provider
 - WordAds: Add additional states to US Privacy law opt-out
 
+### Improved compatibility
+- General: the plugin is now compatible with the upcoming WordPress release, version 6.5.
+
 ### Bug fixes
 - Carousel: don't open if no images are found in the gallery.
 
