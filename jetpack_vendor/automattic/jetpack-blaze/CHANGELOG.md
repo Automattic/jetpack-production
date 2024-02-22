@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Blaze: Enable the Dashboard behind the feature flag
 
 ### Fixed
+- added a "use WC_Product" to include this in the post fetching endpoint for blaze
 - Changes to use the user's locale to render the dashboard
 
 ## [0.17.0] - 2024-02-19
