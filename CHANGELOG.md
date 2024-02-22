@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Interaction on newsletter categories. Work in progress under feature flag.
 - Remove Settings > Sharing menu item registered by Publicize, and Likes.
 - Security Monitor: remove link to notifications and add link to wordpress account
+- Social: Changed name of the social settings card
 - TreeSelector: Added tree selector component.
 - Voice to Content: Add hook to handle transcription insertion into the editor.
 - Voice to Content: avoid replacing blocks when inserting transcription into editor.
