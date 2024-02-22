@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: deprecate temporary tmp_grunion_allow_editor_view filter.
 - ESlint: disable redundant role rule
 - Extracted Subscription Welcome Email into its own component
+- Fix a bug in showing custom columns in the users table
 - Improve SSO invite user error handling
 - Interaction on newsletter categories. Work in progress under feature flag.
 - Remove Settings > Sharing menu item registered by Publicize, and Likes.
