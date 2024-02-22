@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Carousel: don't open if no images are found in the gallery.
+- Subscribe block: improve disabled placeholder state theme colour compatibility
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add link to newsletter settings, still under feature flag.
