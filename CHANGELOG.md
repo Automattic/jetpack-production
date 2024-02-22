@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Ads Settings: Include option to toggle GDPR Consent Banner
 - Blaze: Enable the Dashboard behind the feature flag
 - Privacy: Add preliminary support for WordAds Consent Management Provider
+- Sharing: automatically add the Sharing Buttons block to the single post and page templates on sites using a block-based theme.
 - WordAds: Add additional states to US Privacy law opt-out
 
 ### Improved compatibility
