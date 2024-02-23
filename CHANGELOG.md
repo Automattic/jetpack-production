@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Voice to Content: Add hook to handle transcription insertion into the editor.
 - Voice to Content: avoid replacing blocks when inserting transcription into editor.
 - Voice to Content: Make transcriptions cancelable and link upload button to processing state
+- Voice to Content: refactor ActionButtons component to not handle logic on it, relying just on state and events
 - Voice to Content: Update oscilloscope component
 - WordAds: ensure the new CMP banner can be loaded in production environments.
 - Wordpress.com Tools Menu: Update Github Deployments submenu copy
