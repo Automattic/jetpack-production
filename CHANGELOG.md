@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Prevents the HTTP 301 redirection in Paywall block
 - Top Posts Block: make available on WordPress.com Simple.
 - TreeSelector: Added tree selector component.
+- Update SSO users table pending invite icon styling
 - Voice to Content: Add hook to handle transcription insertion into the editor.
 - Voice to Content: avoid replacing blocks when inserting transcription into editor.
 - Voice to Content: Make transcriptions cancelable and link upload button to processing state
