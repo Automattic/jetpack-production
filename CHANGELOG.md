@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Add save button to newsletter settings. Still under feature flag.
 - Add upgrade message for free tier
 - Changes newsletter paid subscriber label to nowrap
+- Connection flow: remove deprecated files, functions, and images that are not needed anymore now that we do not display connection banners outside of the Jetpack connection screen.
 - Connection Screen: make VoiceOver announce lists as such
 - Contact Form: deprecate temporary tmp_grunion_allow_editor_view filter.
 - ESlint: disable redundant role rule
