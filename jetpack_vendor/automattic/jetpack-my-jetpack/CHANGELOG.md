@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - My Jetpack: decouple Jetpack AI insterstitial component
 - Remove translation of product names
+- Updating purchases state to use data query instead of redux
 
 ### Removed
 - Remove kebab menu on My Jetpack cards
