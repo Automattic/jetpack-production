@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Security Monitor: remove link to notifications and add link to wordpress account
 - Sharing Block: only hook block on WordPress 6.5+
 - Social: Changed name of the social settings card
+- SSO user invitation checkbox css change
 - Stats: switch our stats fetching methods to use data conversion method from package.
 - Subscriptions: Prevents the HTTP 301 redirection in Paywall block
 - Top Posts Block: make available on WordPress.com Simple.
