@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Improve SSO invite user error handling
 - Interaction on newsletter categories. Work in progress under feature flag.
 - Remove Settings > Sharing menu item registered by Publicize, and Likes.
+- Remove unstable post editor check in AI Excerpt
 - Security Monitor: remove link to notifications and add link to wordpress account
 - Social: Changed name of the social settings card
 - Stats: switch our stats fetching methods to use data conversion method from package.
