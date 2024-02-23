@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Interaction on newsletter categories. Work in progress under feature flag.
 - Remove Settings > Sharing menu item registered by Publicize, and Likes.
 - Remove unstable post editor check in AI Excerpt
+- RNMobile: Enable support for editing v5 of the VideoPress block in the Jetpack app.
 - Security Monitor: remove link to notifications and add link to wordpress account
 - Sharing Block: only hook block on WordPress 6.5+
 - Social: Changed name of the social settings card
