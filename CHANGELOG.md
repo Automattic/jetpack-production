@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Extracted Subscription Welcome Email into its own component
 - Fix a bug in showing custom columns in the users table
 - Fix spelling error on validation message.
+- Google Fonts: Update the implement of print_font_faces as the value of WP_Font_Face_Resolver::get_fonts_from_theme_json may be an indexed array
 - Improve SSO invite user error handling
 - Interaction on newsletter categories. Work in progress under feature flag.
 - Remove Settings > Sharing menu item registered by Publicize, and Likes.
