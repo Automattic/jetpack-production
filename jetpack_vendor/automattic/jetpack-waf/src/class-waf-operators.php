@@ -279,7 +279,7 @@ class Waf_Operators {
 			return false;
 		}
 
-		return strpos( $test, $input ) !== false
+		return stripos( $test, $input ) !== false
 		? $input
 		: false;
 	}
