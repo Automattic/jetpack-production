@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Copy Post: Add Jetpack Logo to row action link
+
 ## 13.2-a.9 - 2024-02-26
 ### Enhancements
 - Ads Settings: Include option to toggle GDPR Consent Banner [#35205]
