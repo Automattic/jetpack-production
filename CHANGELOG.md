@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Real time backups: Add endpoints orders to be used in real-time backups jetpack
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Copy Post: Add Jetpack Logo to row action link
 
