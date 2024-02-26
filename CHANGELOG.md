@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribe block: improve disabled placeholder state theme colour compatibility
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add a button to allow admins to re-send invites
 - Add checkbox for opting out of inviting users to WordPress
 - Add link to newsletter settings, still under feature flag.
 - Add save button to newsletter settings. Still under feature flag.
