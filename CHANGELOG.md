@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Ads Settings: Include option to toggle GDPR Consent Banner
 - Blaze: Enable the Dashboard behind the feature flag
 - Blog Stats Block: Remove check that prevented testing on WP.com sites.
+- Improve SSO send invite hover copy
 - Privacy: Add preliminary support for WordAds Consent Management Provider
 - Sharing: automatically add the Sharing Buttons block to the single post and page templates on sites using a block-based theme.
 - WordAds: Add additional states to US Privacy law opt-out
