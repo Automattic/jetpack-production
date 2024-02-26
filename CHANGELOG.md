@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Add link to newsletter settings, still under feature flag.
 - Add save button to newsletter settings. Still under feature flag.
 - Add upgrade message for free tier
+- Changed SSO heading tooltip
 - Changes newsletter paid subscriber label to nowrap
 - Connection flow: remove deprecated files, functions, and images that are not needed anymore now that we do not display connection banners outside of the Jetpack connection screen.
 - Connection Screen: make VoiceOver announce lists as such
