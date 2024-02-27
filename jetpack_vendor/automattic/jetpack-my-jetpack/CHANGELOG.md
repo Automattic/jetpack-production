@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add site lifecycle status guess to My Jetpack
 - My Jetpack: Add an info popover in the Boost product card.
 
+### Changed
+- Refactor react-query to reduce code repetition
+
 ## [4.12.0] - 2024-02-26
 ### Changed
 - My Jetpack: decouple Jetpack AI insterstitial component [#35836]
