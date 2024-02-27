@@ -14,7 +14,11 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Add an info popover in the Boost product card.
 
 ### Changed
+- Display different Boost card tooltip content based on score letter grade.
 - Refactor react-query to reduce code repetition
+
+### Fixed
+- fixed the purchase query for the boost card
 
 ## [4.12.0] - 2024-02-26
 ### Changed
