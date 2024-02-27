@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Copy Post: Add Jetpack Logo to row action link
 - RNMobile: Detect and avoid invalid media URLs in VideoPress v5 block
+- RNMobile: Fix edge case where block could sometimes mistakenly appear empty.
 
 ## 13.2-a.9 - 2024-02-26
 ### Enhancements
