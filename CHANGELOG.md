@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Goodreads Block: fix error when adding multiple blocks to the same page.
+- Revert 35890 to resolve the font display issue
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add slide up/down animation to categories.
