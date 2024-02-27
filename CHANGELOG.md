@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Real time backups: Add endpoints orders to be used in real-time backups jetpack
 
 ### Bug fixes
+- Atomic i18n: Fix mixed translations after WordPress.com user locale switch
 - Goodreads Block: fix error when adding multiple blocks to the same page.
 - Revert 35890 to resolve the font display issue
 - Sharing: only enqueue extra JavaScript when a Sharing Block is inserted on the page.
