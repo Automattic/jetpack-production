@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.12.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.12.1] - 2024-02-27
 ### Added
-- My Jetpack: Add an info popover in the Boost product card.
+- My Jetpack: Add an info popover in the Boost product card. [#35731]
 
 ## [4.12.0] - 2024-02-26
 ### Changed
@@ -1287,7 +1284,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.12.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.12.0...4.12.1-alpha
+[4.12.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.12.0...4.12.1
 [4.12.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.11.0...4.12.0
 [4.11.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.10.0...4.11.0
 [4.10.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.2...4.10.0
