@@ -30,7 +30,7 @@
             "default": "My Bookshelf"
         },
         "goodreadsId": {
-            "type": "string"
+            "type": "number"
         },
         "id": {
             "type": "string"
@@ -40,7 +40,7 @@
         },
         "orderOption": {
             "type": "string",
-            "default": "a"
+            "default": "d"
         },
         "shelfOption": {
             "type": "string",

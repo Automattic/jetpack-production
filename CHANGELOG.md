@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Real time backups: Add endpoints orders to be used in real-time backups jetpack
 
+### Bug fixes
+- Goodreads Block: fix error when adding multiple blocks to the same page.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Copy Post: Add Jetpack Logo to row action link
 - RNMobile: Detect and avoid invalid media URLs in VideoPress v5 block
