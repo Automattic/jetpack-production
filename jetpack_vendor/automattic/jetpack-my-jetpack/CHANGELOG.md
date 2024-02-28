@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Display different Boost card tooltip content based on score letter grade.
+- My Jetpack: add Tracks events to connection section
 - Refactor react-query to reduce code repetition
 
 ### Fixed
