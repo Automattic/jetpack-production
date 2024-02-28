@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Update VideoPress card styles.
 - Voice to Content: change the way the processing and error states are handled, and ensure proper error handling.
 - Voice to Content: Fix transcription check on post-processing failure
+- Voice to Content: move transcription to a dedicated hook so the block code becomes more simple
 - Voice to Content: refactor hook usage and handle request canceling
 
 ## 13.2-a.9 - 2024-02-26
