@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Copy Post: Add Jetpack Logo to row action link
 - RNMobile: Detect and avoid invalid media URLs in VideoPress v5 block
 - RNMobile: Fix edge case where block could sometimes mistakenly appear empty.
+- Sal: add is_commercial_reasons to options
 - Voice to Content: refactor hook usage and handle request canceling
 
 ## 13.2-a.9 - 2024-02-26
