@@ -11,7 +11,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add site lifecycle status guess to My Jetpack
-- My Jetpack: Add an info popover in the Boost product card.
 
 ### Changed
 - Display different Boost card tooltip content based on score letter grade.
@@ -21,6 +20,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - fixed the purchase query for the boost card
+
+## [4.12.1] - 2024-02-27
+### Added
+- My Jetpack: Add an info popover in the Boost product card. [#35731]
 
 ## [4.12.0] - 2024-02-26
 ### Changed
@@ -1297,7 +1300,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.13.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.12.0...4.13.0-alpha
+[4.13.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.12.1...4.13.0-alpha
+[4.12.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.12.0...4.12.1
 [4.12.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.11.0...4.12.0
 [4.11.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.10.0...4.11.0
 [4.10.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.9.2...4.10.0
