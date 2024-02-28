@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - RNMobile: Ensure playsInline setting always conforms to Video block schema.
 - RNMobile: Fix edge case where block could sometimes mistakenly appear empty.
 - Sal: add is_commercial_reasons to options
+- Stats: enable Odyssey Stats for WoA sites
 - Subscription Site: Allow to add add Subscribe block at the end of each post
 - Update VideoPress card styles.
 - Voice to Content: change the way the processing and error states are handled, and ensure proper error handling.
