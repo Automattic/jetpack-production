@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Add slide up/down animation to categories.
 - Copy Post: Add Jetpack Logo to row action link
 - RNMobile: Detect and avoid invalid media URLs in VideoPress v5 block
+- RNMobile: Ensure playsInline setting always conforms to Video block schema.
 - RNMobile: Fix edge case where block could sometimes mistakenly appear empty.
 - Sal: add is_commercial_reasons to options
 - Subscription Site: Allow to add add Subscribe block at the end of each post
