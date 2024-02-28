@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add endpoint to query backup preflight checks
 - Real time backups: Add endpoints orders to be used in real-time backups jetpack
 
 ## [3.1.5] - 2024-02-13
