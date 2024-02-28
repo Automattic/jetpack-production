@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: only enqueue extra JavaScript when a Sharing Block is inserted on the page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adding tracking for user management events
 - Add slide up/down animation to categories.
 - Copy Post: Add Jetpack Logo to row action link
 - RNMobile: Detect and avoid invalid media URLs in VideoPress v5 block
