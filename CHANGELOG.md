@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Sal: add is_commercial_reasons to options
 - Subscription Site: Allow to add add Subscribe block at the end of each post
 - Update VideoPress card styles.
+- Voice to Content: change the way the processing and error states are handled, and ensure proper error handling.
 - Voice to Content: refactor hook usage and handle request canceling
 
 ## 13.2-a.9 - 2024-02-26
