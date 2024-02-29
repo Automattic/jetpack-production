@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adding tracking for user management events
+- Better handle categories input click/focus.
 - Hides the Customizer menu items for block themes
 - RNMobile: Ensure playsInline setting always conforms to Video block schema.
 - RNMobile: Revert change to the way playsInline attribute is saved, prevent regression on web.
