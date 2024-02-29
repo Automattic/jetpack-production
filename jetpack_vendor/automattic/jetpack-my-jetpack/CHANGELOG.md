@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Display different Boost card tooltip content based on score letter grade.
 - Improve consistency and fix bugs in product start and checkout flows
+- Instanciate the Boost Score API (new Speed_Score()) in My Jetpack.
 - My Jetpack: add Tracks events to connection section
 - Refactor react-query to reduce code repetition
 

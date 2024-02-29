@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding tracking for user management events
 - Better handle categories input click/focus.
 - Hides the Customizer menu items for block themes
+- Move Jetpack_Boost_Modules class to the boost-score-api package.
 - RNMobile: Ensure playsInline setting always conforms to Video block schema.
 - RNMobile: Revert change to the way playsInline attribute is saved, prevent regression on web.
 - Sal: add is_commercial_reasons to options
