@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding tracking for user management events
 - Hides the Customizer menu items for block themes
 - RNMobile: Ensure playsInline setting always conforms to Video block schema.
+- RNMobile: Revert change to the way playsInline attribute is saved, prevent regression on web.
 - Sal: add is_commercial_reasons to options
 - Scheduled updates: Introduced a new body parameter `scheduled_update` to the `POST /sites/%s/plugins/%s` endpoint.
   
