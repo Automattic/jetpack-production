@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add site lifecycle status guess to My Jetpack
 
 ### Changed
+- Changed product plan checks on My Jetpack cards
 - Display different Boost card tooltip content based on score letter grade.
 - Improve consistency and fix bugs in product start and checkout flows
 - Instanciate the Boost Score API (new Speed_Score()) in My Jetpack.
