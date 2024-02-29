@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Hides the Customizer menu items for block themes
 - RNMobile: Ensure playsInline setting always conforms to Video block schema.
 - Sal: add is_commercial_reasons to options
+- Scheduled updates: Introduced a new body parameter `scheduled_update` to the `POST /sites/%s/plugins/%s` endpoint.
+  
+  When `POST /sites/%s/plugins/%s` endpoint is called with the `scheduled_update` parameter, we validate the request and modify the auto update plugins allowed list to include the ones in the scheduled updates option.
 - Stats: enable Odyssey Stats for WoA sites
 - Subscription Site: Allow to add add Subscribe block at the end of each post
 - Update VideoPress card styles.
