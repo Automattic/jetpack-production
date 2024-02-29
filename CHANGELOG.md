@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription Site: Allow to add add Subscribe block at the end of each post
 - Subscription Site: Prevent the Subscribe block from rendering when the Paywall block is visible
 - Update VideoPress card styles.
+- Voice to Content: Cancel transcription on modal close and disable close on click outside
 - Voice to Content: change the way the processing and error states are handled, and ensure proper error handling.
 - Voice to Content: Fix transcription check on post-processing failure
 - Voice to Content: include validation and validation state when an audio is recorded or uploaded.
