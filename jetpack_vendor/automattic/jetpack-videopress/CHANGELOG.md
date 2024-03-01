@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.23.6-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.23.6] - 2024-03-01
 ### Fixed
-- Block: display the right message when user is not connected on a site using the standalone plugin.
+- Block: display the right message when user is not connected on a site using the standalone plugin. [#35995]
 
 ## [0.23.5] - 2024-02-27
 ### Changed
@@ -1278,7 +1275,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.23.6-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.5...v0.23.6-alpha
+[0.23.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.5...v0.23.6
 [0.23.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.4...v0.23.5
 [0.23.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.3...v0.23.4
 [0.23.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.2...v0.23.3
