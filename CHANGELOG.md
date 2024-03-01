@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Voice to Content: Fix transcription check on post-processing failure
 - Voice to Content: include validation and validation state when an audio is recorded or uploaded.
 - Voice to Content: move transcription to a dedicated hook so the block code becomes more simple
+- Voice to Content: Track transcription started event.
 
 ## 13.2-a.11 - 2024-02-27
 ### Enhancements
