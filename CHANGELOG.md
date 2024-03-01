@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Blog Stats block: Add message on the frontend when the Stats module is disabled.
 - Dashboard: link to Odyssey Stats for Atomic sites
 - Goodreads Block: Add transform from Legacy Widget.
+- No changelog needed - already included in changelog/update-blog-stats-disabled
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adding tracking for user management events
