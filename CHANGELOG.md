@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Blog Stats block: Add message on the frontend when the Stats module is disabled.
+- Goodreads Block: Add transform from Legacy Widget.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adding tracking for user management events
