@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add endpoint to query backup preflight checks
 
+### Fixed
+- Real time backups: Fix getting more than one row in the related orders table
+
 ## [3.2.0] - 2024-02-27
 ### Added
 - Real time backups: Add endpoints orders to be used in real-time backups jetpack [#35649]
