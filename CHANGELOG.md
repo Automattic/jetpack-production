@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Update VideoPress card styles.
 - Voice to Content: Cancel transcription on modal close and disable close on click outside
 - Voice to Content: change the way the processing and error states are handled, and ensure proper error handling.
+- Voice to Content: Clear preceding empty paragraph when transcription is ready
 - Voice to Content: Fix transcription check on post-processing failure
 - Voice to Content: include validation and validation state when an audio is recorded or uploaded.
 - Voice to Content: move transcription to a dedicated hook so the block code becomes more simple
