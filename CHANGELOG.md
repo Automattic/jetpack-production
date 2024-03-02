@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Goodreads Block: Fix block inheriting styles from Legacy Widget.
 - Hides the Customizer menu items for block themes
 - Jetpack Comments: Wrap iframe related script in IIFE to prevent declaration of global variables
+- Move blocks from beta to production: blog-stats, top-posts, goodreads
 - Move Jetpack_Boost_Modules class to the boost-score-api package.
 - RNMobile: Ensure playsInline setting always conforms to Video block schema.
 - RNMobile: Revert change to the way playsInline attribute is saved, prevent regression on web.
