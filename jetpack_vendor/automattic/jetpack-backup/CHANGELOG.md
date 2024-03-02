@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add endpoint to query backup preflight checks
 
+### Changed
+- Updated package dependencies.
+
 ### Fixed
 - Real time backups: Fix getting more than one row in the related orders table
 

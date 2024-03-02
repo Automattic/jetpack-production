@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add support for running DSP Campaign Creation API endpoint v1.1 from DSP widget
 
+### Changed
+- Updated package dependencies.
+
 ## [0.18.1] - 2024-02-27
 ### Changed
 - Update dependencies. [#35170]

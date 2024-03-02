@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Security
 - Added new tests for the OG image optimization logic
 
+### Changed
+- Updated package dependencies.
+
 ## [0.42.3] - 2024-02-26
 ### Fixed
 - Deprecate the sharing_menu method of the Publicize_UI class. [#35810]
