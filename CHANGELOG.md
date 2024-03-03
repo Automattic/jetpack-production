@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
   When `POST /sites/%s/plugins/%s` endpoint is called with the `scheduled_update` parameter, we validate the request and modify the auto update plugins allowed list to include the ones in the scheduled updates option.
 - Setup state for handling backup preflight checks
 - Stats: enable Odyssey Stats for WoA sites
+- Stats: link to Odyssey Stats from admin bar
 - Subscription Site: Allow to add add Subscribe block at the end of each post
 - Subscription Site: Prevent the Subscribe block from rendering when the Paywall block is visible
 - Updated package dependencies.
