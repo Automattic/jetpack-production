@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription Site: Allow to add add Subscribe block at the end of each post
 - Subscription Site: Prevent the Subscribe block from rendering when the Paywall block is visible
 - The features in Customizer should appear when users directly visit the Customizer link
+- Untangle: add site option wpcom_classic_early_release
 - Untangle: always use the wpcom_is_nav_redesign_enabled() function as release toggle
 - Updated package dependencies.
 - Update VideoPress card styles.
