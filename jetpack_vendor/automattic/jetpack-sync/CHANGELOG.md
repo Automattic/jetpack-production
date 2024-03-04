@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Sync: Add feature flag for enabling the use of rest api for sending the sync data
 - Whitelist the new wpcom_classic_early_release site option
 
 ## [2.8.1] - 2024-03-01
