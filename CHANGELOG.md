@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- RNMobile: Remove code associated with Story block for the mobile native version.
+
 ## 13.2-beta - 2024-03-04
 ### Enhancements
 - Blog Stats block: Add message on the frontend when the Stats module is disabled. [#36108]
