@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Google Fonts: Update the implement of print_font_faces as the value of WP_Font_Face_Resolver::get_fonts_from_theme_json may be an indexed array
 - Hides the Customizer menu items for block themes
 - Jetpack Comments: Wrap iframe related script in IIFE to prevent declaration of global variables
+- Lazy Images: remove module now that it has been deprecated for a few releases.
 - Move blocks from beta to production: blog-stats, top-posts, goodreads
 - Move Jetpack_Boost_Modules class to the boost-score-api package.
 - RNMobile: Ensure playsInline setting always conforms to Video block schema.
