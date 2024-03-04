@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adding tracking for user management events
 - Better handle categories input click/focus.
+- Comment: No changelog needed - already included in changelog/update-blog-stats-disabled
 - Goodreads Block: Fix block inheriting styles from Legacy Widget.
 - Google Fonts: Update the implement of print_font_faces as the value of WP_Font_Face_Resolver::get_fonts_from_theme_json may be an indexed array
 - Hides the Customizer menu items for block themes
