@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Refactor My Jetpack's backup related redux state to react query.
 
+### Fixed
+- fix a few My Jetpack bugs when main plugin is not installed
+
 ## [4.14.0] - 2024-03-04
 ### Changed
 - Migrate My Jetpack zendesk state to react-query [#36028]
