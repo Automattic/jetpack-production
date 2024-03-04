@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding tracking for user management events
 - Better handle categories input click/focus.
 - Goodreads Block: Fix block inheriting styles from Legacy Widget.
+- Google Fonts: Update the implement of print_font_faces as the value of WP_Font_Face_Resolver::get_fonts_from_theme_json may be an indexed array
 - Hides the Customizer menu items for block themes
 - Jetpack Comments: Wrap iframe related script in IIFE to prevent declaration of global variables
 - Move blocks from beta to production: blog-stats, top-posts, goodreads
