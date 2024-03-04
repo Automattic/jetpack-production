@@ -5,19 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.14.0-alpha] - unreleased
+## [4.15.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Refactor My Jetpack's backup related redux state to react query.
 
+## [4.14.0] - 2024-03-04
 ### Changed
-- Migrate My Jetpack zendesk state to react-query
+- Migrate My Jetpack zendesk state to react-query [#36028]
 - Updated package dependencies.
 
 ### Fixed
-- Add registration nonce to connect screen in My Jetpack
+- Add registration nonce to connect screen in My Jetpack [#36133]
 
 ## [4.13.0] - 2024-03-01
 ### Added
@@ -1313,7 +1314,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.14.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.13.0...4.14.0-alpha
+[4.15.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.14.0...4.15.0-alpha
+[4.14.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.13.0...4.14.0
 [4.13.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.12.1...4.13.0
 [4.12.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.12.0...4.12.1
 [4.12.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.11.0...4.12.0

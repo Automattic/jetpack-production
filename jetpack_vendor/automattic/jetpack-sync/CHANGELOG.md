@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.9.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.9.0] - 2024-03-04
 ### Added
-- Sync: Add feature flag for enabling the use of rest api for sending the sync data
-- Whitelist the new wpcom_classic_early_release site option
+- Sync: Add feature flag for enabling the use of rest api for sending the sync data [#36118]
+- Whitelist the new wpcom_classic_early_release site option [#36111]
 
 ## [2.8.1] - 2024-03-01
 ### Fixed
@@ -1067,7 +1064,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[2.9.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v2.8.1...v2.9.0-alpha
+[2.9.0]: https://github.com/Automattic/jetpack-sync/compare/v2.8.1...v2.9.0
 [2.8.1]: https://github.com/Automattic/jetpack-sync/compare/v2.8.0...v2.8.1
 [2.8.0]: https://github.com/Automattic/jetpack-sync/compare/v2.7.0...v2.8.0
 [2.7.0]: https://github.com/Automattic/jetpack-sync/compare/v2.6.1...v2.7.0
