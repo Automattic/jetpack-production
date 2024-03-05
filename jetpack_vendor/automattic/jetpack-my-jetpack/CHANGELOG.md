@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Refactor My Jetpack's backup related redux state to react query.
 
+### Changed
+- Updating purchase related redux data to tanstack/react
+
 ### Fixed
 - fix a few My Jetpack bugs when main plugin is not installed
 
