@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Login block: Link to subscription management page with site URL as search query.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Compile typescript extensions in Jetpack
 - RNMobile: Remove code associated with Story block for the mobile native version.
