@@ -9,7 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - RNMobile: Remove code associated with Story block for the mobile native version.
 
-## 13.2-beta - 2024-03-04
+## 13.2 - 2024-03-05
 ### Enhancements
 - Blog Stats block: Add message on the frontend when the Stats module is disabled. [#36108]
 - Dashboard: link to Odyssey Stats for Atomic sites [#36049]
@@ -19,7 +19,6 @@ This is an alpha version! The changes listed here are not final.
 - Adding tracking for user management events [#35773]
 - Better handle categories input click/focus. [#35916]
 - Blog Stats block: fix translation string format. [#36127]
-- Comment: No changelog needed - already included in changelog/update-blog-stats-disabled [#36154]
 - Goodreads Block: Fix block inheriting styles from Legacy Widget. [#36059]
 - Google Fonts: Update the implement of print_font_faces as the value of WP_Font_Face_Resolver::get_fonts_from_theme_json may be an indexed array [#35986]
 - Hides the Customizer menu items for block themes [#36017]
@@ -31,7 +30,6 @@ This is an alpha version! The changes listed here are not final.
 - RNMobile: Revert change to the way playsInline attribute is saved, prevent regression on web. [#36030]
 - Sal: add is_commercial_reasons to options [#36006]
 - Scheduled updates: Introduced a new body parameter `scheduled_update` to the `POST /sites/%s/plugins/%s` endpoint.
-- When `POST /sites/%s/plugins/%s` endpoint is called with the `scheduled_update` parameter, we validate the request and modify the auto update plugins allowed list to include the ones in the scheduled updates option. [#35941]
 - Setup state for handling backup preflight checks [#36044]
 - Stats: enable Odyssey Stats for WoA sites [#35528]
 - Stats: link to Odyssey Stats from admin bar [#36050]
@@ -50,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Voice to Content: include validation and validation state when an audio is recorded or uploaded. [#36043]
 - Voice to Content: move transcription to a dedicated hook so the block code becomes more simple [#36033]
 - Voice to Content: Track transcription started event. [#36094]
+- When `POST /sites/%s/plugins/%s` endpoint is called with the `scheduled_update` parameter, we validate the request and modify the auto update plugins allowed list to include the ones in the scheduled updates option. [#35941]
 
 ## 13.2-a.11 - 2024-02-27
 ### Enhancements
