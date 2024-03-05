@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Refactor My Jetpack's backup related redux state to react query.
 
 ### Changed
+- Migrate My Jetpack's licenses query and state to react-query
 - Updating purchase related redux data to tanstack/react
 
 ### Fixed
