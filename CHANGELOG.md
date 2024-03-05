@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Compile typescript extensions in Jetpack
 - RNMobile: Remove code associated with Story block for the mobile native version.
 - Subscription Site: Polishing the Subscribe block toggle
+- Voice to Content: Fix file upload file type selection for iOS devices, listing all the extensions allowed.
 - Voice to Content: restrict block to internal P2 sites and open it to non-proxied connections.
 
 ## [13.2] - 2024-03-05
