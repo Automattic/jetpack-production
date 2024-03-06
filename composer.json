@@ -42,14 +42,14 @@
 		"automattic/jetpack-publicize": "^0.42.4",
 		"automattic/jetpack-redirect": "^2.0.0",
 		"automattic/jetpack-roles": "^2.0.0",
-		"automattic/jetpack-search": "^0.43.4",
+		"automattic/jetpack-search": "^0.43.5-alpha",
 		"automattic/jetpack-stats": "^0.11.0",
 		"automattic/jetpack-stats-admin": "^0.16.2",
 		"automattic/jetpack-status": "^2.1.1",
 		"automattic/jetpack-sync": "^2.9.0",
-		"automattic/jetpack-videopress": "^0.23.7",
+		"automattic/jetpack-videopress": "^0.23.8-alpha",
 		"automattic/jetpack-waf": "^0.14.2",
-		"automattic/jetpack-wordads": "^0.3.10",
+		"automattic/jetpack-wordads": "^0.3.11-alpha",
 		"scssphp/scssphp": "1.12.0"
 	},
 	"require-dev": {
