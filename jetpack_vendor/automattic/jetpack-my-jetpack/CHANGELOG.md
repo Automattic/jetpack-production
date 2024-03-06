@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - fix a few My Jetpack bugs when main plugin is not installed
+- Intersitital tables were not visibly loading when pressed
 
 ## [4.14.0] - 2024-03-04
 ### Changed
