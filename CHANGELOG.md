@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Show Browse sites when wp-admin interface is selected and using nav unification
 - Subscriber Login: Remove the premium content cookie specified for the blog on logging out
 - Subscription Site: Polishing the Subscribe block toggle
+- Subscription Site: Update Subscribe block after the post nudge
 - Voice to Content: Fix file upload file type selection for iOS devices, listing all the extensions allowed.
 - Voice to Content: restrict block to internal P2 sites and open it to non-proxied connections.
 
