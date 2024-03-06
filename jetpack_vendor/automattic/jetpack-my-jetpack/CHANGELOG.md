@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Migrate My Jetpack's licenses query and state to react-query
+- Moved lifecycle stats function out of redux
 - Updating purchase related redux data to tanstack/react
 
 ### Removed
