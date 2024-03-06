@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Refactor My Jetpack's backup related redux state to react query.
 
 ### Changed
+- Migrate dismiss welcome banner to tanstack
 - Migrate global notices to context
 - Migrate My Jetpack's licenses query and state to react-query
 - Moved lifecycle stats function out of redux
