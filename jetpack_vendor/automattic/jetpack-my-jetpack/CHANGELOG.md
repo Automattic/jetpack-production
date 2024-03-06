@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Migrate My Jetpack's licenses query and state to react-query
 - Updating purchase related redux data to tanstack/react
 
+### Removed
+- Connected Product offer is not being used, removing it to clean up a bit
+
 ### Fixed
 - fix a few My Jetpack bugs when main plugin is not installed
 
