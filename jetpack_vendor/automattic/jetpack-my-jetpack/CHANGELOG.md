@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Migrate Stats counts out of redux and into tanstack queries
 
+### Removed
+- Removing redux store
+
 ## [4.15.0] - 2024-03-07
 ### Added
 - Refactor My Jetpack's backup related redux state to react query. [#35982]
