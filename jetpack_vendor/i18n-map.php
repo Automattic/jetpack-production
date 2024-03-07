@@ -94,7 +94,7 @@ return array(
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.43.5-alpha1709735947',
+      'ver' => '0.43.5-alpha1709825071',
     ),
     'jetpack-stats' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats',
@@ -118,7 +118,7 @@ return array(
     ),
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
-      'ver' => '0.3.11-alpha1709735947',
+      'ver' => '0.3.11-alpha1709825071',
     ),
   ),
 );

@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Compile typescript extensions in Jetpack
 - Contact Form: add deprecation warnings to Contact Form module codebase
+- Editor: Update to the most recent version of the @automattic/calypso-color-schemes package.
 - General: update to the most recent version of @automattic/calypso-color-schemes
 - Refactor user_is_paid_subscriber to compare against tiers
 - RNMobile: Remove code associated with Story block for the mobile native version.
