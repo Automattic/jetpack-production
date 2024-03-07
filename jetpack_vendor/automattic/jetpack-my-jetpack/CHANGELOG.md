@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Migrate Stats counts out of redux and into tanstack queries
+- Update query hooks for my-jetpack data"
 
 ### Removed
 - Removing redux store
