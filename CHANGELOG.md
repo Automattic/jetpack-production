@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Update lockfiles
 - Voice to Content: Fix file upload file type selection for iOS devices, listing all the extensions allowed.
 - Voice to Content: restrict block to internal P2 sites and open it to non-proxied connections.
+- WooCommerce Anlytics: require package instead of using the classes that ship with the Jetpack plugin.
 
 ## [13.2] - 2024-03-05
 ### Enhancements

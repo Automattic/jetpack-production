@@ -120,5 +120,9 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
       'ver' => '0.3.11-alpha1709825071',
     ),
+    'woocommerce-analytics' => array(
+      'path' => 'jetpack_vendor/automattic/woocommerce-analytics',
+      'ver' => '0.1.0-alpha1708594426',
+    ),
   ),
 );

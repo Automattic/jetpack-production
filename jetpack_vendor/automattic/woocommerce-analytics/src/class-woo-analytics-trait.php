@@ -1,28 +1,22 @@
 <?php
 /**
- * Jetpack_WooCommerce_Analytics_Trait
+ * Woo_Analytics_Trait
  *
- * @deprecated 13.3-a.0
- *
- * @package automattic/jetpack
- * @author  Automattic
+ * @package automattic/woocommerce-analytics
  */
 
-/**
- * Bail if accessed directly
- */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+namespace Automattic\Woocommerce_Analytics;
+
+use Automattic\Jetpack\Connection\Manager as Jetpack_Connection;
+use WC_Order_Item;
+use WC_Order_Item_Product;
+use WC_Payment_Gateway;
+use WC_Product;
 
 /**
- * Jetpack_WooCommerce_Analytics_Trait
  * Common functionality for WooCommerce Analytics classes.
- *
- * @deprecated 13.3-a.0
  */
-trait Jetpack_WooCommerce_Analytics_Trait {
-
+trait Woo_Analytics_Trait {
 	/**
 	 * Saves whether the cart/checkout templates are in use based on WC Blocks version.
 	 *
@@ -61,8 +55,6 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 	/**
 	 * Format Cart Items or Order Items to an array
 	 *
-	 * @deprecated 13.3-a.0
-	 *
 	 * @param array|WC_Order_Item[] $items Cart Items or Order Items.
 	 */
 	protected function format_items_to_json( $items ) {
@@ -94,8 +86,6 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 
 	/**
 	 * Get Cart/Checkout page view shared data
-	 *
-	 * @deprecated 13.3-a.0
 	 */
 	protected function get_cart_checkout_shared_data() {
 		$cart = WC()->cart;
@@ -141,8 +131,6 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 	 * Gets the content of the cart/checkout page or where the cart/checkout page is ultimately derived from if using a template.
 	 * This method sets the class properties $checkout_content_source and $cart_content_source.
 	 *
-	 * @deprecated 13.3-a.0
-	 *
 	 * @return void Does not return, but sets class properties.
 	 */
 	public function find_cart_checkout_content_sources() {
@@ -174,7 +162,9 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 			return;
 		}
 
-		$this->cart_checkout_templates_in_use = wp_is_block_theme() && class_exists( 'Automattic\WooCommerce\Blocks\Package' ) && version_compare( Automattic\WooCommerce\Blocks\Package::get_version(), '10.6.0', '>=' );
+		$this->cart_checkout_templates_in_use = wp_is_block_theme()
+			&& class_exists( '\Automattic\WooCommerce\Blocks\Package' )
+			&& version_compare( \Automattic\WooCommerce\Blocks\Package::get_version(), '10.6.0', '>=' );
 
 		// Cart/Checkout *pages* are in use if the templates are not in use. Return their content and do nothing else.
 		if ( ! $this->cart_checkout_templates_in_use ) {
@@ -270,13 +260,11 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 	/**
 	 * Default event properties which should be included with all events.
 	 *
-	 * @deprecated 13.3-a.0
-	 *
 	 * @return array Array of standard event props.
 	 */
 	public function get_common_properties() {
 		$site_info          = array(
-			'blog_id'                            => Jetpack::get_option( 'id' ),
+			'blog_id'                            => Jetpack_Connection::get_site_id(),
 			'ui'                                 => $this->get_user_id(),
 			'url'                                => home_url(),
 			'woo_version'                        => WC()->version,
@@ -294,8 +282,6 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 	/**
 	 * Render tracks event properties as string of JavaScript object props.
 	 *
-	 * @deprecated 13.3-a.0
-	 *
 	 * @param  array $properties Array of key/value pairs.
 	 * @return string String of the form "key1: value1, key2: value2, " (etc).
 	 */
@@ -311,30 +297,26 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 		return $js_args_string;
 	}
 
-		/**
-		 * Record an event with optional product and custom properties.
-		 *
-		 * @deprecated 13.3-a.0
-		 *
-		 * @param string  $event_name The name of the event to record.
-		 * @param array   $properties Optional array of (key => value) event properties.
-		 * @param integer $product_id The id of the product relating to the event.
-		 *
-		 * @return string|void
-		 */
+	/**
+	 * Record an event with optional product and custom properties.
+	 *
+	 * @param string  $event_name The name of the event to record.
+	 * @param array   $properties Optional array of (key => value) event properties.
+	 * @param integer $product_id The id of the product relating to the event.
+	 *
+	 * @return string|void
+	 */
 	public function record_event( $event_name, $properties = array(), $product_id = null ) {
 		$js = $this->process_event_properties( $event_name, $properties, $product_id );
 		wc_enqueue_js( "_wca.push({$js});" );
 	}
 
-		/**
-		 * Gather relevant product information
-		 *
-		 * @deprecated 13.3-a.0
-		 *
-		 * @param \WC_Product $product product.
-		 * @return array
-		 */
+	/**
+	 * Gather relevant product information
+	 *
+	 * @param \WC_Product $product product.
+	 * @return array
+	 */
 	public function get_product_details( $product ) {
 		return array(
 			'pi' => $product->get_id(),
@@ -345,14 +327,12 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 		);
 	}
 
-		/**
-		 * Gets product categories or varation attributes as a formatted concatenated string
-		 *
-		 * @deprecated 13.3-a.0
-		 *
-		 * @param object $product WC_Product.
-		 * @return string
-		 */
+	/**
+	 * Gets product categories or varation attributes as a formatted concatenated string
+	 *
+	 * @param object $product WC_Product.
+	 * @return string
+	 */
 	public function get_product_categories_concatenated( $product ) {
 
 		if ( ! $product instanceof WC_Product ) {
@@ -377,8 +357,6 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 
 	/**
 	 * Compose event properties.
-	 *
-	 * @deprecated 13.3-a.0
 	 *
 	 * @param string  $event_name The name of the event to record.
 	 * @param array   $properties Optional array of (key => value) event properties.
@@ -428,13 +406,11 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 	/**
 	 * Get the current user id
 	 *
-	 * @deprecated 13.3-a.0
-	 *
 	 * @return int
 	 */
 	public function get_user_id() {
 		if ( is_user_logged_in() ) {
-			$blogid = Jetpack::get_option( 'id' );
+			$blogid = Jetpack_Connection::get_site_id();
 			$userid = get_current_user_id();
 			return $blogid . ':' . $userid;
 		}
@@ -443,8 +419,6 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 
 	/**
 	 * Gets the IDs of additional blocks on the Cart/Checkout pages or templates.
-	 *
-	 * @deprecated 13.3-a.0
 	 *
 	 * @param string $cart_or_checkout Whether to get blocks on the cart or checkout page.
 	 * @return array All inner blocks on the page.
@@ -517,8 +491,6 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 	/**
 	 * Gets an array containing the block or shortcode use properties for the Cart page.
 	 *
-	 * @deprecated 13.3-a.0
-	 *
 	 * @return array            An array containing the block or shortcode use properties for the Cart page.
 	 */
 	public function get_cart_page_block_usage() {
@@ -536,8 +508,6 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 
 	/**
 	 * Gets an array containing the block or shortcode use properties for the Checkout page.
-	 *
-	 * @deprecated 13.3-a.0
 	 *
 	 * @return array                An array containing the block or shortcode use properties for the Checkout page.
 	 */
@@ -562,8 +532,6 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 	 * Note: similar code is in a WooCommerce core PR:
 	 * https://github.com/woocommerce/woocommerce/pull/25932
 	 *
-	 * @deprecated 13.3-a.0
-	 *
 	 * @return array
 	 */
 	public function get_cart_checkout_info() {
@@ -579,8 +547,6 @@ trait Jetpack_WooCommerce_Analytics_Trait {
 		 *
 		 * Note: similar code is in a WooCommerce core PR:
 		 * https://github.com/woocommerce/woocommerce/pull/25932
-		 *
-		 * @deprecated 13.3-a.0
 		 *
 		 * @param integer $post_id The id of the post to search.
 		 * @param string  $text    The text to search for.

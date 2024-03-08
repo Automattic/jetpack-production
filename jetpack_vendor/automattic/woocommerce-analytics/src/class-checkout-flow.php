@@ -1,36 +1,26 @@
 <?php
 /**
- * Jetpack_WooCommerce_Analytics_Checkout_Flow
+ * Checkout_Flow
  *
- * @deprecated 13.3-a.0
- *
- * @package automattic/jetpack
- * @author Automattic
+ * @package automattic/woocommerce-analytics
  */
 
-/**
- * Bail if accessed directly
- */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+namespace Automattic\Woocommerce_Analytics;
+
+use Automattic\Jetpack\Constants;
+use WC_Product;
 
 /**
- * Class Jetpack_WooCommerce_Analytics_Checkout_Flow
  * Class that handles all page view events for the checkout flow (from product view to order confirmation view)
- *
- * @deprecated 13.3-a.0
  */
-class Jetpack_WooCommerce_Analytics_Checkout_Flow {
+class Checkout_Flow {
 
-	use Jetpack_WooCommerce_Analytics_Trait;
+	use Woo_Analytics_Trait;
 
 	/**
-	 * Jetpack_WooCommerce_Analytics_Checkout_Flow constructor.
-	 *
-	 * @deprecated 13.3-a.0
+	 * Constructor.
 	 */
-	public function __construct() {
+	public function init_hooks() {
 		$this->find_cart_checkout_content_sources();
 		$this->additional_blocks_on_cart_page     = $this->get_additional_blocks_on_page( 'cart' );
 		$this->additional_blocks_on_checkout_page = $this->get_additional_blocks_on_page( 'checkout' );
@@ -48,11 +38,9 @@ class Jetpack_WooCommerce_Analytics_Checkout_Flow {
 		add_action( 'wp_footer', array( $this, 'capture_checkout_view' ) );
 	}
 
-		/**
-		 * Track a product page view
-		 *
-		 * @deprecated 13.3-a.0
-		 */
+	/**
+	 * Track a product page view
+	 */
 	public function capture_product_view() {
 		global $product;
 		if ( ! $product instanceof WC_Product ) {
@@ -68,8 +56,6 @@ class Jetpack_WooCommerce_Analytics_Checkout_Flow {
 
 	/**
 	 * Track the order confirmation page view
-	 *
-	 * @deprecated 13.3-a.0
 	 */
 	public function capture_order_confirmation_view() {
 		$order_id = absint( get_query_var( 'order-received' ) );
@@ -132,8 +118,6 @@ class Jetpack_WooCommerce_Analytics_Checkout_Flow {
 
 	/**
 	 * Track the cart page view
-	 *
-	 * @deprecated 13.3-a.0
 	 */
 	public function capture_cart_view() {
 		if ( ! is_cart() ) {
@@ -151,8 +135,6 @@ class Jetpack_WooCommerce_Analytics_Checkout_Flow {
 
 	/**
 	 * Track the checkout page view
-	 *
-	 * @deprecated 13.3-a.0
 	 */
 	public function capture_checkout_view() {
 		global $post;
@@ -163,7 +145,7 @@ class Jetpack_WooCommerce_Analytics_Checkout_Flow {
 		|| has_block( 'woocommerce/checkout', $post )
 		|| has_block( 'woocommerce/classic-shortcode', $post )
 		|| apply_filters( 'woocommerce_is_checkout', false )
-		|| \Automattic\Jetpack\Constants::is_defined( 'WOOCOMMERCE_CHECKOUT' );
+		|| Constants::is_defined( 'WOOCOMMERCE_CHECKOUT' );
 
 		if ( ! $is_checkout ) {
 			return;
