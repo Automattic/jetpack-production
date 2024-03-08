@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Voice to Content: Fix file upload file type selection for iOS devices, listing all the extensions allowed.
 - Voice to Content: restrict block to internal P2 sites and open it to non-proxied connections.
 - WooCommerce Anlytics: require package instead of using the classes that ship with the Jetpack plugin.
+- WPCOM_JSON_API_Upload_Media_v1_1_Endpoint: Fix errors on invalid post data
 
 ## [13.2] - 2024-03-05
 ### Enhancements
