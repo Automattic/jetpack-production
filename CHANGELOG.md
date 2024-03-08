@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Social Menu & Social Media Icons: Add support for an SMS button.
 - Uncheck users-new.php Invite user on load if WooCommerce plugin is activated
 
+### Improved compatibility
+- Add metadata to the post to better diagnose need for Reader and Firehose
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add site migration endpoint
 - Compile typescript extensions in Jetpack
