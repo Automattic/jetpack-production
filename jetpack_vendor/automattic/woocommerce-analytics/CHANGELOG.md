@@ -15,3 +15,4 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix namespace issue with WooCommerce class reference.
+- General: bail early when WooCommerce is not active.
