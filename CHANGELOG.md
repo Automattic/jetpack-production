@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Display Email settings on Newsletter settings page
 - Login block: Link to subscription management page with site URL as search query.
 - Member login block: link to individual subscription management page
 - Social Menu & Social Media Icons: Add support for an SMS button.
