@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: add deprecation warnings to Contact Form module codebase
 - Editor: Update to the most recent version of the @automattic/calypso-color-schemes package.
 - General: update to the most recent version of @automattic/calypso-color-schemes
+- Pinterest Block: deprecate in favor of the Core Pinterest embed block.
 - Refactor user_is_paid_subscriber to compare against tiers
 - RNMobile: Remove code associated with Story block for the mobile native version.
 - Show Browse sites when wp-admin interface is selected and using nav unification
