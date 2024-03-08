@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Uncheck users-new.php Invite user on load if WooCommerce plugin is activated
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add site migration endpoint
 - Compile typescript extensions in Jetpack
 - Contact Form: add deprecation warnings to Contact Form module codebase
 - Editor: Update to the most recent version of the @automattic/calypso-color-schemes package.
