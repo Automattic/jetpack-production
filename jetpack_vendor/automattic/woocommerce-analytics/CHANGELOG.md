@@ -14,5 +14,6 @@ This is an alpha version! The changes listed here are not final.
 - Initial version.
 
 ### Fixed
+- Avoid any issues when the package is loaded in an mu-plugin.
 - Fix namespace issue with WooCommerce class reference.
 - General: bail early when WooCommerce is not active.
