@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Performance: only enqueue the JITM JavaScript on pages where it will be used.
+- Updated package dependencies.
 
 ## [3.0.5] - 2024-03-04
 ### Changed

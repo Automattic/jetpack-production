@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Updated package dependencies.
 - Update to the most recent version of the @automattic/calypso-color-schemes package.
 
 ## [0.43.4] - 2024-03-04

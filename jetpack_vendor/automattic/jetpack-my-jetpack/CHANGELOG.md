@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Migrate Stats counts out of redux and into tanstack queries
 - Replace window state calls with util function
 - Show small stats card in table if large stats card isn't showing
+- Updated package dependencies.
 - Update query hooks for my-jetpack data"
 
 ### Removed

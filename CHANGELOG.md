@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription Site: Polishing Newsletter settings
 - Subscription Site: Polishing the Subscribe block toggle
 - Subscription Site: Update Subscribe block after the post nudge
+- Updated package dependencies.
 - Update lockfiles
 - Use JS and CSS tooltips instead of HTML title.
 - Voice to Content: Fix file upload file type selection for iOS devices, listing all the extensions allowed.
