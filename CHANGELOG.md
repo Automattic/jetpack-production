@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Display Email settings on Newsletter settings page
 - Login block: Link to subscription management page with site URL as search query.
 - Member login block: link to individual subscription management page
+- Pass API parameter to indicate when deleting a memberships product should cancel subscriptions
 - Social Menu & Social Media Icons: Add support for an SMS button.
 - Uncheck users-new.php Invite user on load if WooCommerce plugin is activated
 
