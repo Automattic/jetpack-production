@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: fix the display of the sharing block in some classic themes.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add share debug data toggle on WAF settings
 - Add site migration endpoint
 - Compile typescript extensions in Jetpack
 - Contact Form: add deprecation warnings to Contact Form module codebase
