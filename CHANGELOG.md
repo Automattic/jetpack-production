@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Add site migration endpoint
 - Compile typescript extensions in Jetpack
 - Contact Form: add deprecation warnings to Contact Form module codebase
+- Contact Form: refactor endpoints to use forms package
 - Editor: Update to the most recent version of the @automattic/calypso-color-schemes package.
 - General: update to the most recent version of @automattic/calypso-color-schemes
 - Pinterest Block: deprecate in favor of the Core Pinterest embed block.
