@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a red bubble notification that shows if the site is disconnected
+- Add README to data directory
 - Add whitelist to show errors only for certain queries
 
 ### Changed
