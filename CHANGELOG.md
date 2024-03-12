@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription Site: Polishing Newsletter settings
 - Subscription Site: Polishing the Subscribe block toggle
 - Subscription Site: Update Subscribe block after the post nudge
+- This fixes a minor bug in a recently shipped feature that makes it work more like expected
 - Update code references in docs and comments
 - Updated package dependencies.
 - Update lockfiles
