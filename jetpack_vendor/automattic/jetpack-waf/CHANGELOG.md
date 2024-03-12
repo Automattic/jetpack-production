@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.15.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.15.0] - 2024-03-12
 ### Added
-- Add JSON parameter support to the Web Application Firewall.
+- Add JSON parameter support to the Web Application Firewall. [#36169]
 
 ## [0.14.2] - 2024-03-04
 ### Fixed
@@ -280,7 +277,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.15.0-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.14.2...v0.15.0-alpha
+[0.15.0]: https://github.com/Automattic/jetpack-waf/compare/v0.14.2...v0.15.0
 [0.14.2]: https://github.com/Automattic/jetpack-waf/compare/v0.14.1...v0.14.2
 [0.14.1]: https://github.com/Automattic/jetpack-waf/compare/v0.14.0...v0.14.1
 [0.14.0]: https://github.com/Automattic/jetpack-waf/compare/v0.13.0...v0.14.0
