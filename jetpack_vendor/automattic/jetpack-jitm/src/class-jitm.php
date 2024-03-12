@@ -20,7 +20,7 @@ use Automattic\Jetpack\Status;
  */
 class JITM {
 
-	const PACKAGE_VERSION = '3.1.0-alpha';
+	const PACKAGE_VERSION = '3.0.5';
 
 	/**
 	 * The configuration method that is called from the jetpack-config package.
@@ -131,41 +131,10 @@ class JITM {
 	}
 
 	/**
-	 * Check if the current page is a Jetpack or WooCommerce admin page.
-	 * Noting that this is a very basic check, and pages from other plugins may also match.
-	 *
-	 * @since 3.1.0-alpha
-	 *
-	 * @return bool True if the current page is a Jetpack or WooCommerce admin page, else false.
-	 */
-	public function is_a8c_admin_page() {
-		if ( ! function_exists( 'get_current_screen' ) ) {
-			return false;
-		}
-
-		$current_screen = get_current_screen();
-
-		// We never want to show JITMs on the block editor.
-		if (
-			method_exists( $current_screen, 'is_block_editor' )
-			&& $current_screen->is_block_editor()
-		) {
-			return false;
-		}
-
-		return (
-			$current_screen
-			&& $current_screen->id
-			&& (bool) preg_match( '/jetpack|woo|shop|product/', $current_screen->id )
-		);
-	}
-
-	/**
 	 * Function to enqueue jitm css and js
 	 */
 	public function jitm_enqueue_files() {
-		// Only load those files on the Jetpack or Woo admin pages.
-		if ( ! $this->is_a8c_admin_page() ) {
+		if ( $this->is_gutenberg_page() ) {
 			return;
 		}
 
@@ -176,9 +145,9 @@ class JITM {
 			array(
 				'in_footer'    => true,
 				'dependencies' => array( 'jquery' ),
-				'enqueue'      => true,
 			)
 		);
+		Assets::enqueue_script( 'jetpack-jitm' );
 		wp_localize_script(
 			'jetpack-jitm',
 			'jitm_config',
@@ -198,11 +167,8 @@ class JITM {
 	 *
 	 * @since 1.1.0
 	 * @since-jetpack 8.0.0
-	 *
-	 * @deprecated 3.1.0-alpha
 	 */
 	public function is_gutenberg_page() {
-		_deprecated_function( __METHOD__, '3.1.0-alpha' );
 		$current_screen = get_current_screen();
 		return ( method_exists( $current_screen, 'is_block_editor' ) && $current_screen->is_block_editor() );
 	}
@@ -226,8 +192,8 @@ class JITM {
 			return;
 		}
 
-		// Only add this to Jetpack or Woo admin pages.
-		if ( ! $this->is_a8c_admin_page() ) {
+		// do not display on Gutenberg pages.
+		if ( $this->is_gutenberg_page() ) {
 			return;
 		}
 

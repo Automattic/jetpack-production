@@ -48,7 +48,7 @@ export default function ActionButtons( {
 			) }
 			{ [ 'inactive', 'error', 'validating' ].includes( state ) && (
 				<FormFileUpload
-					accept=".mp3,.mpeg,.mpga,.ogg,.flac,.m4a,.mp4,.wav,.wave,.webm"
+					accept="audio/*"
 					onChange={ onUpload }
 					variant="secondary"
 					className="jetpack-ai-voice-to-content__button"

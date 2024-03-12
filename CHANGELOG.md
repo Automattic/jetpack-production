@@ -6,56 +6,11 @@
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- Display Email settings on Newsletter settings page
-- Login block: Link to subscription management page with site URL as search query.
-- Member login block: link to individual subscription management page
-- Pass API parameter to indicate when deleting a memberships product should cancel subscriptions
-- Sharing: add a Threads sharing button and a Threads sharing button block.
-- Social Menu & Social Media Icons: Add support for an SMS button.
-- Uncheck users-new.php Invite user on load if WooCommerce plugin is activated
-
-### Improved compatibility
-- Add metadata to the post to better diagnose need for Reader and Firehose
-
-### Bug fixes
-- Sharing: fix the display of the sharing block in some classic themes.
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add site migration endpoint
-- Compile typescript extensions in Jetpack
-- Contact Form: add deprecation warnings to Contact Form module codebase
-- Contact Form: refactor editor to use forms package
-- Contact Form: refactor endpoints to use forms package
-- Editor: Update to the most recent version of the @automattic/calypso-color-schemes package.
-- General: update to the most recent version of @automattic/calypso-color-schemes
-- Newsletter settings: update section title to "subscriptions"
-- Paywall: Use Subscriber Login block for the login link
-- Pinterest Block: deprecate in favor of the Core Pinterest embed block.
-- Refactor user_is_paid_subscriber to compare against tiers
-- Removed the feature flag for newsletter categories settings.
-- RNMobile: Remove code associated with Story block for the mobile native version.
-- Show Browse sites when wp-admin interface is selected and using nav unification
-- Subscriber Login: Prevent the HTTP 301 redirection for Atomic sites
-- Subscriber Login: Remove the premium content cookie specified for the blog on logging out
-- Subscriptions: fix empty email for pending confirm paywall on .com
 - Subscriptions: improve security by better checks when displaying a Subscription form via a shortcode.
-- Subscriptions: Track newsletter category creation.
-- Subscriptions: update the settings screen URL.
-- Subscription Site: Polishing Newsletter settings
-- Subscription Site: Polishing the Subscribe block toggle
-- Subscription Site: Update Subscribe block after the post nudge
 - This fixes a minor bug in a recently shipped feature that makes it work more like expected
-- Update code references in docs and comments
-- Updated package dependencies.
-- Update lockfiles
-- Use JS and CSS tooltips instead of HTML title.
-- Voice to Content: Fix file upload file type selection for iOS devices, listing all the extensions allowed.
-- Voice to Content: restrict block to internal P2 sites and open it to non-proxied connections.
-- WooCommerce Anlytics: require package instead of using the classes that ship with the Jetpack plugin.
-- WPCOM_JSON_API_Upload_Media_v1_1_Endpoint: Fix errors on invalid post data
 
-## [13.2] - 2024-03-05
+## 13.2 - 2024-03-05
 ### Enhancements
 - Blog Stats block: Add message on the frontend when the Stats module is disabled. [#36108]
 - Dashboard: link to Odyssey Stats for Atomic sites [#36049]
@@ -9975,7 +9930,6 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 
 - Initial release
 
-[13.2]: https://wp.me/p1moTy-15UC
 [13.1]: https://wp.me/p1moTy-12e0
 [13.0]: https://wp.me/p1moTy-10Xp
 [12.9]: https://wp.me/p1moTy-YJA

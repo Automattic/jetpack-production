@@ -2,13 +2,11 @@
  * External dependencies
  */
 import { useDispatch, useSelect } from '@wordpress/data';
-import type { WordPressPlansSelectors } from 'extensions/store/wordpress-com';
 
 export default function useAiFeature() {
 	const { data, loading } = useSelect( select => {
-		const { getAiAssistantFeature, getIsRequestingAiAssistantFeature } = select(
-			'wordpress-com/plans'
-		) as WordPressPlansSelectors;
+		const { getAiAssistantFeature, getIsRequestingAiAssistantFeature } =
+			select( 'wordpress-com/plans' );
 
 		return {
 			data: getAiAssistantFeature(),

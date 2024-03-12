@@ -165,7 +165,7 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 							<?php
 							printf(
 								'<a href="%1$s" %2$s>',
-								esc_url( $icon['url'], array( 'http', 'https', 'mailto', 'skype', 'sms' ) ),
+								esc_url( $icon['url'], array( 'http', 'https', 'mailto', 'skype' ) ),
 								true === $instance['new-tab'] ?
 									'target="_blank" rel="noopener noreferrer"' :
 									'target="_self"'
@@ -378,7 +378,7 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 							esc_attr( $args['url-icon-id'] ),
 							esc_attr( $args['url-icon-name'] ),
 							esc_attr__( 'Account URL', 'jetpack' ),
-							esc_url( $args['url-value'], array( 'http', 'https', 'mailto', 'skype', 'sms' ) )
+							esc_url( $args['url-value'], array( 'http', 'https', 'mailto', 'skype' ) )
 						);
 					?>
 				</p>
@@ -644,11 +644,6 @@ class Jetpack_Widget_Social_Icons extends WP_Widget {
 				'url'   => array( 'slideshare.net' ),
 				'icon'  => 'slideshare',
 				'label' => 'SlideShare',
-			),
-			array(
-				'url'   => array( 'sms:' ),
-				'icon'  => 'sms',
-				'label' => 'SMS',
 			),
 			array(
 				'url'   => array( 'snapchat.com' ),

@@ -105,7 +105,6 @@ class Sharing_Service {
 			'pinterest'        => 'Share_Pinterest',
 			'pocket'           => 'Share_Pocket',
 			'telegram'         => 'Share_Telegram',
-			'threads'          => 'Share_Threads',
 			'jetpack-whatsapp' => 'Jetpack_Share_WhatsApp',
 			'mastodon'         => 'Share_Mastodon',
 			'nextdoor'         => 'Share_Nextdoor',

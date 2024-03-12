@@ -11,6 +11,6 @@ const storeConfig = {
 	selectors,
 };
 
-export const store = createReduxStore( JETPACK_MEDIA_STORE, storeConfig );
+const store = createReduxStore( JETPACK_MEDIA_STORE, storeConfig );
 
 register( store );

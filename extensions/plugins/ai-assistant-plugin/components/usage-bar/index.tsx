@@ -26,11 +26,11 @@ import type { UsageBarProps, UsageControlProps } from './types';
  * @param {UsageBarProps} props - Component props.
  * @returns {React.ReactNode}     UsageBar react component.
  */
-export const UsageBar = ( {
+export const UsageBar: React.FC< UsageBarProps > = ( {
 	usage,
 	limitReached,
 	requireUpgrade = false,
-}: UsageBarProps ): React.JSX.Element => {
+}: UsageBarProps ): React.ReactNode => {
 	if ( usage == null ) {
 		return null;
 	}

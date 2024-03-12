@@ -2,8 +2,6 @@
 /**
  * Jetpack_WooCommerce_Analytics_Checkout_Flow
  *
- * @deprecated 13.3-a.0
- *
  * @package automattic/jetpack
  * @author Automattic
  */
@@ -18,8 +16,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Class Jetpack_WooCommerce_Analytics_Checkout_Flow
  * Class that handles all page view events for the checkout flow (from product view to order confirmation view)
- *
- * @deprecated 13.3-a.0
  */
 class Jetpack_WooCommerce_Analytics_Checkout_Flow {
 
@@ -27,8 +23,6 @@ class Jetpack_WooCommerce_Analytics_Checkout_Flow {
 
 	/**
 	 * Jetpack_WooCommerce_Analytics_Checkout_Flow constructor.
-	 *
-	 * @deprecated 13.3-a.0
 	 */
 	public function __construct() {
 		$this->find_cart_checkout_content_sources();
@@ -50,8 +44,6 @@ class Jetpack_WooCommerce_Analytics_Checkout_Flow {
 
 		/**
 		 * Track a product page view
-		 *
-		 * @deprecated 13.3-a.0
 		 */
 	public function capture_product_view() {
 		global $product;
@@ -68,8 +60,6 @@ class Jetpack_WooCommerce_Analytics_Checkout_Flow {
 
 	/**
 	 * Track the order confirmation page view
-	 *
-	 * @deprecated 13.3-a.0
 	 */
 	public function capture_order_confirmation_view() {
 		$order_id = absint( get_query_var( 'order-received' ) );
@@ -132,8 +122,6 @@ class Jetpack_WooCommerce_Analytics_Checkout_Flow {
 
 	/**
 	 * Track the cart page view
-	 *
-	 * @deprecated 13.3-a.0
 	 */
 	public function capture_cart_view() {
 		if ( ! is_cart() ) {
@@ -151,8 +139,6 @@ class Jetpack_WooCommerce_Analytics_Checkout_Flow {
 
 	/**
 	 * Track the checkout page view
-	 *
-	 * @deprecated 13.3-a.0
 	 */
 	public function capture_checkout_view() {
 		global $post;

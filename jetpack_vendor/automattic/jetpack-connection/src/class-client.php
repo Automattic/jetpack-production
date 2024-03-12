@@ -88,7 +88,6 @@ class Client {
 			'blog_id'       => 0,
 			'auth_location' => Constants::get_constant( 'JETPACK_CLIENT__AUTH_LOCATION' ),
 			'method'        => 'POST',
-			'format'        => 'json',
 			'timeout'       => 10,
 			'redirection'   => 0,
 			'headers'       => array(),
@@ -152,14 +151,11 @@ class Client {
 			// Allow arrays to be used in passing data.
 			$body_to_hash = $body;
 
-			if ( $args['format'] === 'jsonl' ) {
-				parse_str( $body, $body_to_hash );
-			}
-			if ( is_array( $body_to_hash ) ) {
+			if ( is_array( $body ) ) {
 				// We cast this to a new variable, because the array form of $body needs to be
 				// maintained so it can be passed into the request later on in the code.
-				if ( array() !== $body_to_hash ) {
-					$body_to_hash = wp_json_encode( self::_stringify_data( $body_to_hash ) );
+				if ( array() !== $body ) {
+					$body_to_hash = wp_json_encode( self::_stringify_data( $body ) );
 				} else {
 					$body_to_hash = '';
 				}
@@ -168,6 +164,7 @@ class Client {
 			if ( ! is_string( $body_to_hash ) ) {
 				return new \WP_Error( 'invalid_body', 'Body is malformed.' );
 			}
+
 			$body_hash = base64_encode( sha1( $body_to_hash, true ) ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
 		}
 
@@ -373,7 +370,6 @@ class Client {
 			array(
 				'headers'     => 'array',
 				'method'      => 'string',
-				'format'      => 'string',
 				'timeout'     => 'int',
 				'redirection' => 'int',
 				'stream'      => 'boolean',
