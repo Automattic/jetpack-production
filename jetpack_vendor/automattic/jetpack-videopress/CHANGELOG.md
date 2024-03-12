@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- REST requests: avoid potential warnings with custom objects.
+
 ## [0.23.8] - 2024-03-07
 ### Changed
 - Update to the most recent version of the @automattic/calypso-color-schemes package. [#36187]

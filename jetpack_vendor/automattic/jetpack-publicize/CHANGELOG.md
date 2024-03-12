@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- REST requests: avoid potential warnings with custom objects.
+
 ## [0.42.4] - 2024-03-04
 ### Security
 - Added new tests for the OG image optimization logic [#35987]

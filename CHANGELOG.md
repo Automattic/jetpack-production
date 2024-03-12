@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Add metadata to the post to better diagnose need for Reader and Firehose
 
 ### Bug fixes
+- Sharing: avoid PHP warnings when using custom post types.
 - Sharing: fix the display of the sharing block in some classic themes.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
