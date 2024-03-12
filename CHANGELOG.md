@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriber Login: Prevent the HTTP 301 redirection for Atomic sites
 - Subscriber Login: Remove the premium content cookie specified for the blog on logging out
 - Subscriptions: fix empty email for pending confirm paywall on .com
+- Subscriptions: improve security by better checks when displaying a Subscription form via a shortcode.
 - Subscriptions: Track newsletter category creation.
 - Subscriptions: update the settings screen URL.
 - Subscription Site: Polishing Newsletter settings
