@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.4.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.4.0] - 2024-03-12
 ### Added
-- Sync:Now Sync uses rest api endpoint for enabled sites
+- Sync:Now Sync uses rest api endpoint for enabled sites [#36210]
 
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#36325]
 
 ## [2.3.4] - 2024-03-04
 ### Changed
@@ -986,7 +983,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[2.4.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v2.3.4...v2.4.0-alpha
+[2.4.0]: https://github.com/Automattic/jetpack-connection/compare/v2.3.4...v2.4.0
 [2.3.4]: https://github.com/Automattic/jetpack-connection/compare/v2.3.3...v2.3.4
 [2.3.3]: https://github.com/Automattic/jetpack-connection/compare/v2.3.2...v2.3.3
 [2.3.2]: https://github.com/Automattic/jetpack-connection/compare/v2.3.1...v2.3.2

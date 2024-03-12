@@ -2,57 +2,55 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.3-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.3-a.1 - 2024-03-12
 ### Enhancements
-- Display Email settings on Newsletter settings page
+- Display Email settings on Newsletter settings page [#36290]
 - Login block: Link to subscription management page with site URL as search query.
-- Member login block: link to individual subscription management page
-- Pass API parameter to indicate when deleting a memberships product should cancel subscriptions
-- Sharing: add a Threads sharing button and a Threads sharing button block.
-- Social Menu & Social Media Icons: Add support for an SMS button.
-- Uncheck users-new.php Invite user on load if WooCommerce plugin is activated
+- Member login block: link to individual subscription management page [#36200]
+- Pass API parameter to indicate when deleting a memberships product should cancel subscriptions [#35735]
+- Sharing: add a Threads sharing button and a Threads sharing button block. [#36220]
+- Social Menu & Social Media Icons: Add support for an SMS button. [#36176]
+- Uncheck users-new.php Invite user on load if WooCommerce plugin is activated [#36140]
 
 ### Improved compatibility
-- Add metadata to the post to better diagnose need for Reader and Firehose
+- Add metadata to the post to better diagnose need for Reader and Firehose [#36254]
 
 ### Bug fixes
-- Sharing: avoid PHP warnings when using custom post types.
-- Sharing: fix the display of the sharing block in some classic themes.
+- Sharing: avoid PHP warnings when using custom post types. [#36315]
+- Sharing: fix the display of the sharing block in some classic themes. [#36283]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add site migration endpoint
-- Compile typescript extensions in Jetpack
-- Contact Form: add deprecation warnings to Contact Form module codebase
-- Contact Form: refactor editor to use forms package
-- Contact Form: refactor endpoints to use forms package
-- Editor: Update to the most recent version of the @automattic/calypso-color-schemes package.
-- General: update to the most recent version of @automattic/calypso-color-schemes
-- Newsletter settings: update section title to "subscriptions"
-- Paywall: Use Subscriber Login block for the login link
-- Pinterest Block: deprecate in favor of the Core Pinterest embed block.
-- Refactor user_is_paid_subscriber to compare against tiers
-- Removed the feature flag for newsletter categories settings.
-- RNMobile: Remove code associated with Story block for the mobile native version.
-- Show Browse sites when wp-admin interface is selected and using nav unification
-- Subscriber Login: Prevent the HTTP 301 redirection for Atomic sites
-- Subscriber Login: Remove the premium content cookie specified for the blog on logging out
-- Subscriptions: fix empty email for pending confirm paywall on .com
-- Subscriptions: Track newsletter category creation.
-- Subscriptions: update the settings screen URL.
-- Subscription Site: Polishing Newsletter settings
-- Subscription Site: Polishing the Subscribe block toggle
-- Subscription Site: Update Subscribe block after the post nudge
-- Update code references in docs and comments
-- Updated package dependencies.
-- Update lockfiles
-- Use JS and CSS tooltips instead of HTML title.
-- Voice to Content: Fix file upload file type selection for iOS devices, listing all the extensions allowed.
-- Voice to Content: restrict block to internal P2 sites and open it to non-proxied connections.
-- WooCommerce Anlytics: require package instead of using the classes that ship with the Jetpack plugin.
-- WPCOM_JSON_API_Upload_Media_v1_1_Endpoint: Fix errors on invalid post data
+- Add site migration endpoint [#36253]
+- Compile typescript extensions in Jetpack [#35904]
+- Contact Form: add deprecation warnings to Contact Form module codebase [#36040]
+- Contact Form: refactor editor to use forms package [#36089]
+- Contact Form: refactor endpoints to use forms package [#36087]
+- Editor: Update to the most recent version of the @automattic/calypso-color-schemes package. [#36227]
+- General: update to the most recent version of @automattic/calypso-color-schemes [#36187]
+- Newsletter settings: update section title to "subscriptions" [#36343]
+- Paywall: Use Subscriber Login block for the login link [#36308]
+- Pinterest Block: deprecate in favor of the Core Pinterest embed block. [#36075]
+- Refactor user_is_paid_subscriber to compare against tiers [#35587]
+- Removed the feature flag for newsletter categories settings. [#36073]
+- RNMobile: Remove code associated with Story block for the mobile native version. [#36151]
+- Show Browse sites when wp-admin interface is selected and using nav unification [#36198]
+- Subscriber Login: Prevent the HTTP 301 redirection for Atomic sites [#36311]
+- Subscriber Login: Remove the premium content cookie specified for the blog on logging out [#35441]
+- Subscriptions: fix empty email for pending confirm paywall on .com [#36321]
+- Subscriptions: Track newsletter category creation. [#36326]
+- Subscriptions: update the settings screen URL. [#36323]
+- Subscription Site: Polishing Newsletter settings [#36218]
+- Subscription Site: Polishing the Subscribe block toggle [#36177]
+- Subscription Site: Update Subscribe block after the post nudge [#36107]
+- Update code references in docs and comments [#36234]
+- Updated package dependencies. [#36309]
+- Updated package dependencies. [#36325]
+- Update lockfiles [#36195]
+- Use JS and CSS tooltips instead of HTML title. [#36222]
+- Voice to Content: Fix file upload file type selection for iOS devices, listing all the extensions allowed. [#36165]
+- Voice to Content: restrict block to internal P2 sites and open it to non-proxied connections. [#36163]
+- WooCommerce Anlytics: require package instead of using the classes that ship with the Jetpack plugin. [#35758]
+- WPCOM_JSON_API_Upload_Media_v1_1_Endpoint: Fix errors on invalid post data [#36291]
 
 ## 13.2.1 - 2024-03-12
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
