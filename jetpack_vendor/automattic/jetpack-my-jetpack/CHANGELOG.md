@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Show small stats card in table if large stats card isn't showing
 - Updated package dependencies.
 - Update query hooks for my-jetpack data"
+- Update useMyJetpackConnection hook to TypeScript
 
 ### Removed
 - Removing redux store
