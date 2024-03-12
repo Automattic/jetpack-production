@@ -40,13 +40,11 @@ This is an alpha version! The changes listed here are not final.
 - Subscriber Login: Prevent the HTTP 301 redirection for Atomic sites
 - Subscriber Login: Remove the premium content cookie specified for the blog on logging out
 - Subscriptions: fix empty email for pending confirm paywall on .com
-- Subscriptions: improve security by better checks when displaying a Subscription form via a shortcode.
 - Subscriptions: Track newsletter category creation.
 - Subscriptions: update the settings screen URL.
 - Subscription Site: Polishing Newsletter settings
 - Subscription Site: Polishing the Subscribe block toggle
 - Subscription Site: Update Subscribe block after the post nudge
-- This fixes a minor bug in a recently shipped feature that makes it work more like expected
 - Update code references in docs and comments
 - Updated package dependencies.
 - Update lockfiles
@@ -55,6 +53,11 @@ This is an alpha version! The changes listed here are not final.
 - Voice to Content: restrict block to internal P2 sites and open it to non-proxied connections.
 - WooCommerce Anlytics: require package instead of using the classes that ship with the Jetpack plugin.
 - WPCOM_JSON_API_Upload_Media_v1_1_Endpoint: Fix errors on invalid post data
+
+## 13.2.1 - 2024-03-12
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Subscriptions: improve security checks when displaying a Subscription form via a shortcode. [#36347]
+- WPcom API: fixes a minor bug in a recently shipped endpoint that makes it work more like expected. [#36262]
 
 ## [13.2] - 2024-03-05
 ### Enhancements
