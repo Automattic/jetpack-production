@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: refactor endpoints to use forms package
 - Editor: Update to the most recent version of the @automattic/calypso-color-schemes package.
 - General: update to the most recent version of @automattic/calypso-color-schemes
+- Newsletter settings: update section title to "subscriptions"
 - Paywall: Use Subscriber Login block for the login link
 - Pinterest Block: deprecate in favor of the Core Pinterest embed block.
 - Refactor user_is_paid_subscriber to compare against tiers
