@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- WPCOM_JSON_API_List_Comments_Endpoint: Remove update_comment_cache() that is no longer needed
+
 ## 13.3-a.1 - 2024-03-12
 ### Enhancements
 - Display Email settings on Newsletter settings page [#36290]
