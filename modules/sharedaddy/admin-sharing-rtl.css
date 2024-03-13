@@ -191,6 +191,10 @@ li.service.share-x span:before {
   content: "\f10e";
 }
 
+li.service.share-bluesky span:before {
+  content: "\f10f";
+}
+
 /**
  * Preview section
  */
