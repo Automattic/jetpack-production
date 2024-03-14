@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Fix the Subscribe block insertion toggle label
 - Subscription Site: Polishing stuff before the release
 - Untangle: explicitly use Core admin bar color in Calypso color schemes
+- Updated package dependencies.
 - WPCOM_JSON_API_List_Comments_Endpoint: Remove update_comment_cache() that is no longer needed
 
 ## 13.3-a.1 - 2024-03-12
