@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add tracking to Jetpack review link on plugins page
 - Publicize: prevent panel from jumping after activation
+- Subscriptions: Fix the Subscribe block insertion toggle label
 - Subscription Site: Polishing stuff before the release
 - Untangle: explicitly use Core admin bar color in Calypso color schemes
 - WPCOM_JSON_API_List_Comments_Endpoint: Remove update_comment_cache() that is no longer needed
