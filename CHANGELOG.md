@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Share buttons: Add a Bluesky sharing button
+- Update sso copy when inviting users
 
 ### Improved compatibility
 - Subscriptions: Remove subscription settings from reading options page.
