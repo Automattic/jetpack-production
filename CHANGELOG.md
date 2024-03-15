@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add tracking to Jetpack review link on plugins page
+- AI Assistant: Register ai-assistant-form-support beta flag to control the form extension we are working on.
 - Contact Form: refactor admin to use forms package
 - Contact Form: refactor plugin to use forms package
 - Publicize: prevent panel from jumping after activation
