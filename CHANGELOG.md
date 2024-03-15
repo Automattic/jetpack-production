@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add error log on ssh invite
 - Adding Native (Web Share) button to Sharing Buttons block
 - AI Assistant: provide per block quick actions
 - Only show installation errors on plugins page
