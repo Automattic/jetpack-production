@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Featured Image: Add sidebar entry
 - Contact Form: refactor admin to use forms package
 - Contact Form: refactor plugin to use forms package
+- Contact Form: refactor shortcode to use forms package
 - Fix minor UI issues in premium-content block editor
 - Publicize: prevent panel from jumping after activation
 - Subscriptions: Add Subscribe block post end placement setting to Sync
