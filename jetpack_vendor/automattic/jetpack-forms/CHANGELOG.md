@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Dashboard: add missing Connection state to the page.
+- Dashboard: avoid JS errors when content disposition is not set.
+
 ## [0.30.10] - 2024-03-12
 ### Changed
 - Update code references in docs and comments [#36234]
