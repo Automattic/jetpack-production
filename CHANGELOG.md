@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: refactor admin to use forms package
 - Contact Form: refactor plugin to use forms package
 - Publicize: prevent panel from jumping after activation
+- Subscriptions: Add Subscribe block post end placement setting to Sync
 - Subscriptions: Fix the Subscribe block insertion toggle label
 - Subscription Site: Polishing stuff before the release
 - Untangle: explicitly use Core admin bar color in Calypso color schemes
