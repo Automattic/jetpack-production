@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.17.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.17.0] - 2024-03-14
 ### Changed
-- Rewrite My Jetpack hooks to Typescript
+- Rewrite My Jetpack hooks to Typescript [#36288]
 
 ## [4.16.0] - 2024-03-12
 ### Added
@@ -1350,7 +1347,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.17.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.16.0...4.17.0-alpha
+[4.17.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.16.0...4.17.0
 [4.16.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.15.0...4.16.0
 [4.15.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.14.0...4.15.0
 [4.14.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.13.0...4.14.0
