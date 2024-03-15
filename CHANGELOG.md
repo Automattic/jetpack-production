@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Adding Native (Web Share) button to Sharing Buttons block
+- AI Assistant: provide per block quick actions
 - Share buttons: Add a Bluesky sharing button
 - Update sso copy when inviting users
 
