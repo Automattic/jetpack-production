@@ -2,41 +2,42 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.3-a.2 - unreleased
+## 13.3-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 13.3-a.3 - 2024-03-18
 ### Enhancements
-- Add error log on ssh invite
-- Adding Native (Web Share) button to Sharing Buttons block
-- AI Assistant: provide per block quick actions
-- Blog Stats and Top Posts & Pages block: ensure blocks do not render in email newsletters.
-- Only show installation errors on plugins page
-- Share buttons: Add a Bluesky sharing button
-- Update sso copy when inviting users
+- Add error log on ssh invite [#36416]
+- Adding Native (Web Share) button to Sharing Buttons block [#35967]
+- AI Assistant: provide per block quick actions [#36393]
+- Blog Stats and Top Posts & Pages block: ensure blocks do not render in email newsletters. [#36372]
+- Only show installation errors on plugins page [#36390]
+- Share buttons: Add a Bluesky sharing button [#36181]
+- Update sso copy when inviting users [#36385]
 
 ### Improved compatibility
-- Subscriptions: Remove subscription settings from reading options page.
+- Subscriptions: Remove subscription settings from reading options page. [#36314]
 
 ### Bug fixes
-- Sharing Block: remove extra margin previously added to the first button.
+- Sharing Block: remove extra margin previously added to the first button. [#36386]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add tracking to Jetpack review link on plugins page
-- AI Assistant: Register ai-assistant-form-support beta flag to control the form extension we are working on.
-- AI Featured Image: Add sidebar entry
-- Contact Form: refactor admin to use forms package
-- Contact Form: refactor plugin to use forms package
-- Contact Form: refactor shortcode to use forms package
-- Fix minor UI issues in premium-content block editor
-- Jetpack_Portfolio: Prevent a division by 0 fatal when a user uses the shortcode with columns=0
-- Publicize: prevent panel from jumping after activation
-- Subscriptions: Add Subscribe block post end placement setting to Sync
-- Subscriptions: Fix the Subscribe block insertion toggle label
-- Subscription Site: Polishing stuff before the release
-- Untangle: explicitly use Core admin bar color in Calypso color schemes
-- Updated package dependencies.
-- WPCOM_JSON_API_List_Comments_Endpoint: Remove update_comment_cache() that is no longer needed
+- Add tracking to Jetpack review link on plugins page [#36348]
+- AI Assistant: Register ai-assistant-form-support beta flag to control the form extension we are working on. [#36413]
+- AI Featured Image: Add sidebar entry [#36414]
+- Contact Form: refactor admin to use forms package [#36224]
+- Contact Form: refactor plugin to use forms package [#36092]
+- Contact Form: refactor shortcode to use forms package [#36135]
+- Fix minor UI issues in premium-content block editor [#36398]
+- Jetpack_Portfolio: Prevent a division by 0 fatal when a user uses the shortcode with columns=0 [#36433]
+- Publicize: prevent panel from jumping after activation [#36362]
+- Subscriptions: Add Subscribe block post end placement setting to Sync [#36381]
+- Subscriptions: Fix the Subscribe block insertion toggle label [#36384]
+- Subscription Site: Polishing stuff before the release [#36240]
+- Untangle: explicitly use Core admin bar color in Calypso color schemes [#36341]
+- Updated package dependencies. [#36401]
+- WPCOM_JSON_API_List_Comments_Endpoint: Remove update_comment_cache() that is no longer needed [#36363]
 
 ## 13.3-a.1 - 2024-03-12
 ### Enhancements
