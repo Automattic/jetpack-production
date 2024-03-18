@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add the 'remote_connect' REST endpoint.
 - Add the 'remote_provision' REST endpoint.
 - Add the 'remote_register' REST endpoint.
 
