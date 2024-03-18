@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add error log on ssh invite
 - Adding Native (Web Share) button to Sharing Buttons block
 - AI Assistant: provide per block quick actions
+- Blog Stats and Top Posts & Pages block: ensure blocks do not render in email newsletters.
 - Only show installation errors on plugins page
 - Share buttons: Add a Bluesky sharing button
 - Update sso copy when inviting users
