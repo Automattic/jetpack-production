@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: refactor plugin to use forms package
 - Contact Form: refactor shortcode to use forms package
 - Fix minor UI issues in premium-content block editor
+- Jetpack_Portfolio: Prevent a division by 0 fatal when a user uses the shortcode with columns=0
 - Publicize: prevent panel from jumping after activation
 - Subscriptions: Add Subscribe block post end placement setting to Sync
 - Subscriptions: Fix the Subscribe block insertion toggle label
