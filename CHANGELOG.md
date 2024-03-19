@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Contact Form: refactor form to use forms package
+- minor change the the menu for selecting images
 
 ## 13.3-a.3 - 2024-03-18
 ### Enhancements
