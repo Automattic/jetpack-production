@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: refactor form to use forms package
 - minor change the the menu for selecting images
 - WPCOM API: avoid PHP warnings when variables are not set.
+- WPCOM_JSON_API_List_Comments_Endpoint: Do not prefetch comment meta for large hierarchical threads
 
 ## 13.3-a.3 - 2024-03-18
 ### Enhancements
