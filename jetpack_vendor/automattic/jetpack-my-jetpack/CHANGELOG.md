@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.18.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Jetpack AI: add notices on product page for exhausted requests
+- Jetpack AI: add plans/tier information on product page and corresponding CTAs
+- Jetpack AI: add support and create post links on product page
+- My Jetpack: add feedback link on Jetpack AI product page
+- My Jetpack: AI pricing table is skipped once the user has opted for the free version
+- My Jetpack: change AI product for tiered pricing table display
+
+### Changed
+- Jetpack AI: address responsive issues on the styles
+- My Jetpack: AI product page styles update and responsive fixes
+- My Jetpack: change AI card action button target for upgraded users, point to product page
+
+### Removed
+- My Jetpack: remove Jetpack AI code added throughout the new product page project
+
+### Fixed
+- My Jetpack: fix AI interstitial "remain free" flow
+- My Jetpack: fix spacing issues on the new product page
+- My Jetpack: new AI interstitial margin on admin page was messing with correct top spacing
+
 ## [4.17.1] - 2024-03-18
 ### Added
 - Add a loaded event for My Jetpack product cards [#36397]
@@ -1351,6 +1376,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[4.18.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.17.1...4.18.0-alpha
 [4.17.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.17.0...4.17.1
 [4.17.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.16.0...4.17.0
 [4.16.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.15.0...4.16.0
