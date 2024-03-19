@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Reorder newsletter settings cards to improve hierarchy
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add my home menu to atomic sites in classic view using nav unification.
 - Contact Form: refactor form to use forms package
