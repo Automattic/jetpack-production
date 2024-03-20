@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - My Jetpack: fix AI interstitial "remain free" flow
+- My Jetpack: fix interstitial event property malformed name productSlug -> product_slug
 - My Jetpack: fix spacing issues on the new product page
 - My Jetpack: new AI interstitial margin on admin page was messing with correct top spacing
 
