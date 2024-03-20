@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: refactor form to use forms package
 - GitHub Deployments: remove feature flag
 - minor change the the menu for selecting images
+- Subscriptions: Apply the subscriber logout function globally
 - Update notification icon in top bar
 - WPCOM API: avoid PHP warnings when variables are not set.
 - WPCOM_JSON_API_List_Comments_Endpoint: Do not prefetch comment meta for large hierarchical threads
