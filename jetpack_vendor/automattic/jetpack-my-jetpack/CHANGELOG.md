@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: change AI product for tiered pricing table display
 
 ### Changed
+- Add notice priorities to My Jetpack
 - Jetpack AI: address responsive issues on the styles
 - My Jetpack: AI product page styles update and responsive fixes
 - My Jetpack: change AI card action button target for upgraded users, point to product page
