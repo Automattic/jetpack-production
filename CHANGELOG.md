@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add my home menu to atomic sites in classic view using nav unification.
+- Add share debug data toggle on WAF settings
 - Contact Form: refactor form to use forms package
 - GitHub Deployments: remove feature flag
 - minor change the the menu for selecting images
