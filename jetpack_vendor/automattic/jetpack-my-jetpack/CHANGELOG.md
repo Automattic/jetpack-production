@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: add notices on product page for exhausted requests
 - Jetpack AI: add plans/tier information on product page and corresponding CTAs
 - Jetpack AI: add support and create post links on product page
+- My Jetpack: add AI product page view event
 - My Jetpack: add feedback link on Jetpack AI product page
 - My Jetpack: AI pricing table is skipped once the user has opted for the free version
 - My Jetpack: change AI product for tiered pricing table display
