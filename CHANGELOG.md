@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - minor change the the menu for selecting images
 - Subscriptions: Apply the subscriber logout function globally
 - Update notification icon in top bar
+- Use correct links in Settings -> Traffic -> GA when admin interface is wp-admin
 - WPCOM API: avoid PHP warnings when variables are not set.
 - WPCOM_JSON_API_List_Comments_Endpoint: Do not prefetch comment meta for large hierarchical threads
 
