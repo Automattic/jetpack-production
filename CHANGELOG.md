@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Block category "Earn" renamed to "Monetize"
 - Removed Like button from master bar
 - Reorder newsletter settings cards to improve hierarchy
+- Trigger red bubble notifiction on My Jetpack when bad install is detected
 
 ### Bug fixes
 - Dashboard: update the sharing button settings to clarify the available options (block or legacy sharing buttons).

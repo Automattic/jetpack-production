@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Hook into red bubble notification when bad installation is detected
 - Jetpack AI: add notices on product page for exhausted requests
 - Jetpack AI: add plans/tier information on product page and corresponding CTAs
 - Jetpack AI: add support and create post links on product page
