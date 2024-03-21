@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Block category "Earn" renamed to "Monetize"
+- Jetpack AI: when response includes a title and post title is empty, use provided title as post title
 - Removed Like button from master bar
 - Reorder newsletter settings cards to improve hierarchy
 - Trigger red bubble notifiction on My Jetpack when bad install is detected
