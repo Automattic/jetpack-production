@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Block category "Earn" renamed to "Monetize"
 - Removed Like button from master bar
 - Reorder newsletter settings cards to improve hierarchy
 
