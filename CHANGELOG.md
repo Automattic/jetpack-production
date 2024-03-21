@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: refactor form to use forms package
 - GitHub Deployments: remove feature flag
 - minor change the the menu for selecting images
+- Paywall: Switching accounts URL fix
 - Subscriptions: Apply the subscriber logout function globally
 - Update notification icon in top bar
 - Use correct links in Settings -> Traffic -> GA when admin interface is wp-admin
