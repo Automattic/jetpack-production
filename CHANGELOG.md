@@ -2,12 +2,9 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.3-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.2.2 - 2024-03-22
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add function exists check for wp_admin_notice
+- Add function exists check for wp_admin_notice [#36511]
 
 ## 13.2.1 - 2024-03-12
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
