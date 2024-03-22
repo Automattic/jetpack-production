@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Dashboard: update the sharing button settings to clarify the available options (block or legacy sharing buttons).
+- Enhanced Distribution: begin deprecation process as the Firehose is winding down
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added the possibility of stating if a new invited user is a contractor.

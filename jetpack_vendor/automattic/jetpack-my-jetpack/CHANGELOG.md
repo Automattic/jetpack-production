@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - My Jetpack: remove Jetpack AI code added throughout the new product page project
+- Removed reference to Creator Network, which is being deprecated.
 
 ### Fixed
 - My Jetpack: fix AI interstitial "remain free" flow
