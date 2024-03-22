@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Removed reference to Creator Network, which is being deprecated.
 
 ### Fixed
+- Boost tooltips: fix typo in string.
 - My Jetpack: fix AI interstitial "remain free" flow
 - My Jetpack: fix interstitial event property malformed name productSlug -> product_slug
 - My Jetpack: fix spacing issues on the new product page
