@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: update the sharing button settings to clarify the available options (block or legacy sharing buttons).
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added the possibility of stating if a new invited user is a contractor.
 - Add function exists check for wp_admin_notice
 - Add my home menu to atomic sites in classic view using nav unification.
 - Add share debug data toggle on WAF settings
