@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.2.0] - 2024-03-22
 ### Added
-- Add support for A8C for Agencies source parameter.
+- Add support for A8C for Agencies source parameter. [#36491]
 
 ## [2.1.3] - 2024-03-20
 ### Changed
@@ -325,7 +322,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Introduce a status package
 
-[2.2.0-alpha]: https://github.com/Automattic/jetpack-status/compare/v2.1.3...v2.2.0-alpha
+[2.2.0]: https://github.com/Automattic/jetpack-status/compare/v2.1.3...v2.2.0
 [2.1.3]: https://github.com/Automattic/jetpack-status/compare/v2.1.2...v2.1.3
 [2.1.2]: https://github.com/Automattic/jetpack-status/compare/v2.1.1...v2.1.2
 [2.1.1]: https://github.com/Automattic/jetpack-status/compare/v2.1.0...v2.1.1
