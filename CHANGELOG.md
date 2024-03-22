@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - GitHub Deployments: remove feature flag
 - minor change the the menu for selecting images
 - Paywall: Switching accounts URL fix
+- Register Sharing settings menu page in offline mode or when Classic wp-admin is enabled.
 - Subscriptions: Apply the subscriber logout function globally
 - Update notification icon in top bar
 - Use correct links in Settings -> Traffic -> GA when admin interface is wp-admin
