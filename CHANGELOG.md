@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Reorder newsletter settings cards to improve hierarchy
 - Trigger red bubble notifiction on My Jetpack when bad install is detected
 
+### Improved compatibility
+- General: remove methods that were deprecated before the release of Jetpack 10.0, in 2021.
+
 ### Bug fixes
 - Dashboard: update the sharing button settings to clarify the available options (block or legacy sharing buttons).
 - Enhanced Distribution: begin deprecation process as the Firehose is winding down

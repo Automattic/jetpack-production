@@ -1426,14 +1426,6 @@ return array(
 		'version' => '3.0.4',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-hook-manager.php'
 	),
-	'JetpackTracking' => array(
-		'version' => '2.0.1.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpacktracking.php'
-	),
-	'Jetpack_Client' => array(
-		'version' => '2.0.1.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-client.php'
-	),
 	'Jetpack_IXR_Client' => array(
 		'version' => '2.6.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-ixr-client.php'
@@ -1453,18 +1445,6 @@ return array(
 	'Jetpack_Signature' => array(
 		'version' => '2.6.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-signature.php'
-	),
-	'Jetpack_Sync_Actions' => array(
-		'version' => '2.0.1.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-sync-actions.php'
-	),
-	'Jetpack_Sync_Modules' => array(
-		'version' => '2.0.1.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-sync-modules.php'
-	),
-	'Jetpack_Sync_Settings' => array(
-		'version' => '2.0.1.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/legacy/class-jetpack-sync-settings.php'
 	),
 	'Jetpack_Tracks_Client' => array(
 		'version' => '2.6.1.0',

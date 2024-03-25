@@ -14,10 +14,6 @@ return array(
 		'version' => '3.3.3.0-alpha1711041519',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/actions.php'
 	),
-	'009de6aaa0d497eacea41fab13fc05f1' => array(
-		'version' => '2.0.1.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-compat/functions.php'
-	),
 	'e6f7f640a6586216432b53e5c9d1b472' => array(
 		'version' => '0.42.7.0-alpha1710939962',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/utilities.php'
