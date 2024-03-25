@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.18.1-alpha] - unreleased
+## [4.19.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- My Jetpack: add a version of WordPress' Notice component to My Jetpack considering the context of how we use notices on that screen
 
 ### Changed
 - Updated package dependencies.
@@ -1386,7 +1389,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.18.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.18.0...4.18.1-alpha
+[4.19.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.18.0...4.19.0-alpha
 [4.18.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.17.1...4.18.0
 [4.17.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.17.0...4.17.1
 [4.17.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.16.0...4.17.0
