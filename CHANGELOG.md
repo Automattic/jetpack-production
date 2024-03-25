@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: change some error messages to not trigger security scanners
 - Contact Form: refactor field to use forms package
 - Contact Form: refactor form to use forms package
+- Display Subscribers menu on wp-admin and update links to Jetpack Manage
 - GitHub Deployments: remove feature flag
 - minor change the the menu for selecting images
 - Paywall: Switching accounts URL fix
