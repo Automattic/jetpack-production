@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall: Switching accounts URL fix
 - Register Sharing settings menu page in offline mode or when Classic wp-admin is enabled.
 - Subscriptions: Apply the subscriber logout function globally
+- Subscription Site: Release the Subscribe block after the post placement toggle
 - Update notification icon in top bar
 - Use correct links in Settings -> Traffic -> GA when admin interface is wp-admin
 - WPCOM API: avoid PHP warnings when variables are not set.
