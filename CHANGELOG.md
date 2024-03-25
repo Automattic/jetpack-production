@@ -2,47 +2,44 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.3-a.4 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.3-a.7 - 2024-03-25
 ### Enhancements
-- Block category "Earn" renamed to "Monetize"
-- Jetpack AI: when response includes a title and post title is empty, use provided title as post title
-- Removed Like button from master bar
-- Reorder newsletter settings cards to improve hierarchy
-- Trigger red bubble notifiction on My Jetpack when bad install is detected
-- Use radio controls instead of toggles on Email Settings
+- Block category "Earn" renamed to "Monetize" [#36480]
+- Jetpack AI: when response includes a title and post title is empty, use provided title as post title [#36500]
+- Removed Like button from master bar [#36456]
+- Reorder newsletter settings cards to improve hierarchy [#36465]
+- Trigger red bubble notifiction on My Jetpack when bad install is detected [#36449]
+- Use radio controls instead of toggles on Email Settings [#36532]
 
 ### Improved compatibility
-- General: remove methods that were deprecated before the release of Jetpack 10.0, in 2021.
+- General: remove methods that were deprecated before the release of Jetpack 10.0, in 2021. [#36157]
 
 ### Bug fixes
-- Dashboard: update the sharing button settings to clarify the available options (block or legacy sharing buttons).
-- Enhanced Distribution: begin deprecation process as the Firehose is winding down
+- Dashboard: update the sharing button settings to clarify the available options (block or legacy sharing buttons). [#36473]
+- Enhanced Distribution: begin deprecation process as the Firehose is winding down [#36168]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added the possibility of stating if a new invited user is a contractor.
-- Add function exists check for wp_admin_notice
-- Add my home menu to atomic sites in classic view using nav unification.
-- Add share debug data toggle on WAF settings
-- Add sso survey modal for users that disable the module
-- Backup: change some error messages to not trigger security scanners
-- Contact Form: refactor field to use forms package
-- Contact Form: refactor form to use forms package
-- Display Subscribers menu on wp-admin and update links to Jetpack Manage
-- GitHub Deployments: remove feature flag
-- minor change the the menu for selecting images
-- Paywall: Switching accounts URL fix
-- Register Sharing settings menu page in offline mode or when Classic wp-admin is enabled.
-- SSO: only enable WordPress.com invite emails by default on the WordPress.com platform.
-- SSO: simplify the logic when inviting new users to WordPress.com.
-- Subscriptions: Apply the subscriber logout function globally
-- Subscription Site: Release the Subscribe block after the post placement toggle
-- Update notification icon in top bar
-- Use correct links in Settings -> Traffic -> GA when admin interface is wp-admin
-- WPCOM API: avoid PHP warnings when variables are not set.
-- WPCOM_JSON_API_List_Comments_Endpoint: Do not prefetch comment meta for large hierarchical threads
+- Added the possibility of stating if a new invited user is a contractor. [#36479]
+- Add function exists check for wp_admin_notice [#36511]
+- Add my home menu to atomic sites in classic view using nav unification. [#36431]
+- Add share debug data toggle on WAF settings [#36377]
+- Add sso survey modal for users that disable the module [#36387]
+- Backup: change some error messages to not trigger security scanners [#36496]
+- Contact Form: refactor field to use forms package [#36138]
+- Contact Form: refactor form to use forms package [#36137]
+- Display Subscribers menu on wp-admin and update links to Jetpack Manage [#36510]
+- GitHub Deployments: remove feature flag [#36469]
+- minor change the the menu for selecting images [#36293]
+- Paywall: Switching accounts URL fix [#36337]
+- Register Sharing settings menu page in offline mode or when Classic wp-admin is enabled. [#36490]
+- SSO: only enable WordPress.com invite emails by default on the WordPress.com platform. [#36558]
+- SSO: simplify the logic when inviting new users to WordPress.com. [#36498]
+- Subscriptions: Apply the subscriber logout function globally [#36441]
+- Subscription Site: Release the Subscribe block after the post placement toggle [#36368]
+- Update notification icon in top bar [#36297]
+- Use correct links in Settings -> Traffic -> GA when admin interface is wp-admin [#36493]
+- WPCOM API: avoid PHP warnings when variables are not set. [#36455]
+- WPCOM_JSON_API_List_Comments_Endpoint: Do not prefetch comment meta for large hierarchical threads [#36460]
 
 ## 13.3-a.3 - 2024-03-18
 ### Enhancements

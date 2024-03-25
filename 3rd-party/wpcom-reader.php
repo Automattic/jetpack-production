@@ -8,7 +8,7 @@
  *
  * These hooks were originally part of the now-deprecated Enhanced Distribution.
  *
- * @since 13.3-a.4
+ * @since 13.3
  * @package Automattic/jetpack
  */
 
