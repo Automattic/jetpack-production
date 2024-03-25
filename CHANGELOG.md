@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Removed Like button from master bar
 - Reorder newsletter settings cards to improve hierarchy
 - Trigger red bubble notifiction on My Jetpack when bad install is detected
+- Use radio controls instead of toggles on Email Settings
 
 ### Improved compatibility
 - General: remove methods that were deprecated before the release of Jetpack 10.0, in 2021.
