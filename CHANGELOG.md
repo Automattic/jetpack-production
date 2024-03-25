@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - minor change the the menu for selecting images
 - Paywall: Switching accounts URL fix
 - Register Sharing settings menu page in offline mode or when Classic wp-admin is enabled.
+- SSO: simplify the logic when inviting new users to WordPress.com.
 - Subscriptions: Apply the subscriber logout function globally
 - Subscription Site: Release the Subscribe block after the post placement toggle
 - Update notification icon in top bar
