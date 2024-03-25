@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: remove "Experimental" label on block name
+
 ## 13.3-a.7 - 2024-03-25
 ### Enhancements
 - Block category "Earn" renamed to "Monetize" [#36480]
