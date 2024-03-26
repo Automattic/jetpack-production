@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: remove "Experimental" label on block name
 - AI Assistant: store function typo fix Aync -> Async
 - AI Proofread: improve upgrade prompt format and translation according to current tier
+- Fixed Jetpack Creator going to the wrong screen when the free version is selected
 - Map Block: Fix styling in Row and Stack layout
 - Updated package dependencies.
 

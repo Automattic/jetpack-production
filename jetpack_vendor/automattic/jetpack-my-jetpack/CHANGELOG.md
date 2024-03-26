@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Fixed Jetpack Creator going to the wrong screen when the free version is selected"
 - Fixes some pricing showing twice by connecting sites that select a free option
 
 ## [4.18.0] - 2024-03-25
