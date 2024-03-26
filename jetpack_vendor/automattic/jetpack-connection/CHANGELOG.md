@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add 'test_connection' endpoint to check for blog token validity.
 - Add the 'get_heartbeat_data' REST endpoint.
 
+### Changed
+- Updated package dependencies.
+
 ## [2.6.2] - 2024-03-25
 ### Changed
 - Internal updates.

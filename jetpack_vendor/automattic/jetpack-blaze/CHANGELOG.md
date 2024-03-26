@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Adds the atomic flag to the Jetpack Blaze base site's configuration
 
+### Changed
+- Updated package dependencies.
+
 ## [0.19.3] - 2024-03-25
 ### Changed
 - Internal updates.
