@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a function to clear the static cache for Jetpack_Memberships.
 - Add instructions to test the new AI interstitial and product page
+- Add Verbum options to site settings endpoint
 - AI Assistant: remove "Experimental" label on block name
 - AI Assistant: store function typo fix Aync -> Async
 - AI Proofread: improve upgrade prompt format and translation according to current tier
