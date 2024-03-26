@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add 'test_connection' endpoint to check for blog token validity.
 - Add the 'get_heartbeat_data' REST endpoint.
 
 ## [2.6.2] - 2024-03-25
