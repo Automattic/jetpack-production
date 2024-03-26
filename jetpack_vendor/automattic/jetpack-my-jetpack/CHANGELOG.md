@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fixes some pricing showing twice by connecting sites that select a free option
+
 ## [4.18.0] - 2024-03-25
 ### Added
 - Hook into red bubble notification when bad installation is detected [#36449]
