@@ -23,7 +23,7 @@
 		"automattic/jetpack-compat": "^3.0.0",
 		"automattic/jetpack-composer-plugin": "^2.0.1",
 		"automattic/jetpack-config": "^2.0.1",
-		"automattic/jetpack-connection": "^2.6.2",
+		"automattic/jetpack-connection": "^2.7.0-alpha",
 		"automattic/jetpack-constants": "^2.0.1",
 		"automattic/jetpack-device-detection": "^2.1.2",
 		"automattic/jetpack-error": "^2.0.2",
