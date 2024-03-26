@@ -111,23 +111,23 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup-helper-script-manager/src/class-throw-on-errors.php'
 	),
 	'Automattic\\Jetpack\\Blaze' => array(
-		'version' => '0.19.3.0',
+		'version' => '0.20.0.0-alpha1711458871',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-blaze.php'
 	),
 	'Automattic\\Jetpack\\Blaze\\Dashboard' => array(
-		'version' => '0.19.3.0',
+		'version' => '0.20.0.0-alpha1711458871',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-dashboard.php'
 	),
 	'Automattic\\Jetpack\\Blaze\\Dashboard_Config_Data' => array(
-		'version' => '0.19.3.0',
+		'version' => '0.20.0.0-alpha1711458871',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-dashboard-config-data.php'
 	),
 	'Automattic\\Jetpack\\Blaze\\Dashboard_REST_Controller' => array(
-		'version' => '0.19.3.0',
+		'version' => '0.20.0.0-alpha1711458871',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-dashboard-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Blaze\\REST_Controller' => array(
-		'version' => '0.19.3.0',
+		'version' => '0.20.0.0-alpha1711458871',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Blocks' => array(
