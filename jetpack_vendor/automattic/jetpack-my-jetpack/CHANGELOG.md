@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add red bubble to notices tied to red bubble notifications
 - My Jetpack: add a version of WordPress' Notice component to My Jetpack considering the context of how we use notices on that screen
 
 ### Changed
