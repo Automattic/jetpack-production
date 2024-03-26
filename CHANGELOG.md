@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: remove "Experimental" label on block name
 - AI Assistant: store function typo fix Aync -> Async
 - AI Proofread: improve upgrade prompt format and translation according to current tier
+- Map Block: Fix styling in Row and Stack layout
 
 ## 13.3-a.7 - 2024-03-25
 ### Enhancements
