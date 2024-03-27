@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Speed Score: More accurately detect which modules are active when a speed score is requested.
 
+### Fixed
+- Updated Jetpack_Boost_Modules placeholder class to match Boost interface
+
 ## [0.3.8] - 2024-03-25
 ### Changed
 - Internal updates.
