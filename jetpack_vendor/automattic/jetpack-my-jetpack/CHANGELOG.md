@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.19.1-alpha] - unreleased
+## [4.20.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Track active red bubble slugs on My Jetpack page view
 
 ### Fixed
+- Better handling on product interstitial pages if the site already has a paid product
 - Shows Jetpack CRM card as active on My Jetpack if the plugin is installed and active
 
 ## [4.19.0] - 2024-03-27
@@ -1401,7 +1402,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.19.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.19.0...4.19.1-alpha
+[4.20.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.19.0...4.20.0-alpha
 [4.19.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.18.0...4.19.0
 [4.18.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.17.1...4.18.0
 [4.17.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.17.0...4.17.1
