@@ -991,7 +991,7 @@ class REST_Connector {
 	/**
 	 * The endpoint verifies blog connection and blog token validity.
 	 *
-	 * @since 2.7.0-alpha
+	 * @since 2.7.0
 	 *
 	 * @return mixed|null
 	 */
