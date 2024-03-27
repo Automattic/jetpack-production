@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Shows Jetpack CRM card as active on My Jetpack if the plugin is installed and active
+
 ## [4.19.0] - 2024-03-27
 ### Added
 - Add red bubble to notices tied to red bubble notifications [#36543]
