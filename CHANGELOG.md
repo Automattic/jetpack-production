@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Plugin: Add modal and featured image usage
 - SSO: remove jQuery dependency for improved performance.
 - Subscription login block: switch to singular "manage subscription"
+- Subscriptions: Fix Subscribe block invalid content
 
 ## 13.3-a.9 - 2024-03-27
 ### Bug fixes
