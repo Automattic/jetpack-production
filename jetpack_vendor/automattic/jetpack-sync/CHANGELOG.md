@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix handling of error message when sync wpcom rest api could not be enabled
+- Jetpack Sync: Prevent Fatal on send upon failing to enable WPCOM REST API feature
 
 ## [2.10.3] - 2024-03-25
 ### Changed
