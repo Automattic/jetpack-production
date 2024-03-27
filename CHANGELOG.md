@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Map Block: Fix styling in Row and Stack layout
 - SSO: add filter allowing one to disable the WordPress.com invite interface.
 - SSO: fix PHP notices and remove unnecessary PHPCS ignores.
+- Subscription login block: switch to singular "manage subscription"
 - Updated package dependencies.
 
 ## 13.3-a.7 - 2024-03-25
