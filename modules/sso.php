@@ -102,7 +102,7 @@ class Jetpack_SSO {
 			 *
 			 * @module sso
 			 *
-			 * @since 13.3-a.8
+			 * @since 13.3
 			 *
 			 * @param bool true Whether to allow admins to invite new users to create a WordPress.com account.
 			 */
