@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.19.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [4.19.0] - 2024-03-27
 ### Added
 - Add red bubble to notices tied to red bubble notifications [#36543]
@@ -1391,6 +1395,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[4.19.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.19.0...4.19.1-alpha
 [4.19.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.18.0...4.19.0
 [4.18.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.17.1...4.18.0
 [4.17.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.17.0...4.17.1
