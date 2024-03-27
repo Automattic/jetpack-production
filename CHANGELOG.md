@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed Jetpack Creator going to the wrong screen when the free version is selected
 - Map Block: Fix styling in Row and Stack layout
 - SSO: add filter allowing one to disable the WordPress.com invite interface.
+- SSO: fix PHP notices and remove unnecessary PHPCS ignores.
 - Updated package dependencies.
 
 ## 13.3-a.7 - 2024-03-25
