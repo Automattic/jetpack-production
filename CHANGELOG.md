@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Disable WPCOM invitation functionality for non-connected users.
 - Fix paid content block subscriber view content not rendering in WordPress.com reader.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
@@ -18,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Proofread: improve upgrade prompt format and translation according to current tier
 - Fixed Jetpack Creator going to the wrong screen when the free version is selected
 - Map Block: Fix styling in Row and Stack layout
+- SSO: add filter allowing one to disable the WordPress.com invite interface.
 - Updated package dependencies.
 
 ## 13.3-a.7 - 2024-03-25
