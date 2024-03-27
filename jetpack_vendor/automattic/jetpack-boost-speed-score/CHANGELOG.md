@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Use `jetpack_boost_critical_css_environment_changed` hook instead of `handle_environment_change`
+
 ### Changed
 - Speed Score: More accurately detect which modules are active when a speed score is requested.
 
