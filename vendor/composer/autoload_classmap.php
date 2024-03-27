@@ -222,6 +222,8 @@ return array(
     'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-parser.php',
     'Automattic\\Jetpack\\Stats\\Main' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-main.php',
     'Automattic\\Jetpack\\Stats\\Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-options.php',
+    'Automattic\\Jetpack\\Stats\\Package_Version' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-package-version.php',
+    'Automattic\\Jetpack\\Stats\\REST_Provider' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-rest-provider.php',
     'Automattic\\Jetpack\\Stats\\Tracking_Pixel' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-tracking-pixel.php',
     'Automattic\\Jetpack\\Stats\\WPCOM_Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-wpcom-stats.php',
     'Automattic\\Jetpack\\Stats\\XMLRPC_Provider' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-xmlrpc-provider.php',
