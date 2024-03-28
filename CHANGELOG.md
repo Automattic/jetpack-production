@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Remove unused code
 - AI Featured Image: connect the image generation hook to the UI.
 - AI Plugin: Add modal and featured image usage
+- Recipe Block: make default texts translatable
 - SSO: remove jQuery dependency for improved performance.
 - Subscription login block: switch to singular "manage subscription"
 - Subscriptions: Add missing padding param to the Subscriber popup markup
