@@ -866,7 +866,7 @@ function jetpack_get_module_info( $key ) {
 	    'changed' => '',
 	    'deactivate' => '',
 	    'free' => '',
-	    'requires_connection' => 'Yes',
+	    'requires_connection' => 'No',
 	    'requires_user_connection' => 'No',
 	    'auto_activate' => 'No',
 	    'module_tags' => 'Social, Appearance',

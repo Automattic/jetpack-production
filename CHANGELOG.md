@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Member login block: add ability to hide manage subscription -link.
 
+### Improved compatibility
+- SEO Tools: make the feature available on non-connected sites.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Remove unused code
 - AI Featured Image: connect the image generation hook to the UI.
