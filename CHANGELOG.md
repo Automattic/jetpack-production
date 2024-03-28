@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Featured Image: track events for generating, regenerating and using images
 - AI Plugin: Add modal and featured image usage
 - Google Embed blocks: make proportion values translatable
+- Improve UX when setting AI Featured Image
 - Recipe Block: make default texts translatable
 - Save generated AI image to library and set as featured image
 - SSO: remove jQuery dependency for improved performance.
