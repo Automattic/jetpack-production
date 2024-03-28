@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription login block: switch to singular "manage subscription"
 - Subscriptions: Add missing padding param to the Subscriber popup markup
 - Subscriptions: Fix Subscribe block invalid content
+- Subscription Site: Hook Subscriber Login block into the navigation
 - Untangling: return untangled admin menu from wpcom/v2/admin-menu endpoint for early classic view
 
 ## 13.3-a.9 - 2024-03-27
