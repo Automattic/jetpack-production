@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO Tools: make the feature available on non-connected sites.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: remove dead code from the suggestions hook
 - AI Assistant: Remove unused code
 - AI Featured Image: connect the image generation hook to the UI.
 - AI Featured Image: track events for generating, regenerating and using images
