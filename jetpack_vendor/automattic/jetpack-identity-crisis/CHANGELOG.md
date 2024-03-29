@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Packages: added version tracking for identity-crisis.
 - REST: added endpoint for IDC validation.
 
+### Changed
+- Tests: moved tests from a separate files to the main tests file.
+
 ## [0.17.6] - 2024-03-27
 ### Changed
 - Updated package dependencies. [#36585]
