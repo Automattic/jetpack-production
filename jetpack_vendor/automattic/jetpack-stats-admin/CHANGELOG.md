@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Change Phan baselines.
 - Stats: Add commercial classification endpoint
 
 ## 0.17.1 - 2024-03-25
