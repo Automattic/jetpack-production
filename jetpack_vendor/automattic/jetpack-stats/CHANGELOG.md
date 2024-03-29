@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add the 'stats/blog' REST endpoint.
+- Composer: added version constant for ststs package.
 
 ## [0.11.2] - 2024-03-25
 ### Changed
