@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Packages: added version tracking for identity-crisis.
 - REST: added endpoint for IDC validation.
 
 ## [0.17.6] - 2024-03-27
