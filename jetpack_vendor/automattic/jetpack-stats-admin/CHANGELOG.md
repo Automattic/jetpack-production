@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Change Phan baselines.
 - Stats: Add commercial classification endpoint
 
+### Changed
+- Add config fields for odyssey stats to be loaded in Simple Site Classic.
+
 ## 0.17.1 - 2024-03-25
 ### Changed
 - Internal updates.
