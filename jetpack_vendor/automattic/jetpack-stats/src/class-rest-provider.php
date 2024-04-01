@@ -15,7 +15,7 @@ use WP_REST_Server;
 /**
  * The REST API provider class.
  *
- * @since 0.12.0-alpha
+ * @since 0.12.0
  */
 class REST_Provider {
 	/**
@@ -69,7 +69,7 @@ class REST_Provider {
 	/**
 	 * Get the stats blog data.
 	 *
-	 * @since 0.12.0-alpha
+	 * @since 0.12.0
 	 *
 	 * @return array
 	 */
