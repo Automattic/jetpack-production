@@ -2,36 +2,33 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.3-a.10 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.3-beta - 2024-04-01
 ### Enhancements
-- Member login block: add ability to hide manage subscription -link.
+- Member login block: add ability to hide manage subscription -link. [#36602]
 
 ### Improved compatibility
-- Carousel: disable WordPress' lightbox option when Jetpack's Carousel feature is activated.
-- SEO Tools: make the feature available on non-connected sites.
+- Carousel: disable WordPress' lightbox option when Jetpack's Carousel feature is activated. [#36565]
+- SEO Tools: make the feature available on non-connected sites. [#36528]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add Phan stub for wordpress functions.
-- AI Assistant: remove dead code from the suggestions hook
-- AI Assistant: Remove unused code
-- AI Featured Image: connect the image generation hook to the UI.
-- AI Featured Image: track events for generating, regenerating and using images
-- AI Plugin: Add modal and featured image usage
-- Disable AI Featured Image button if requires upgrade or no post content
-- Google Embed blocks: make proportion values translatable
-- Improve UX when setting AI Featured Image
-- Packages: add version tracking for identity-crisis package.
-- Recipe Block: make default texts translatable
-- Save generated AI image to library and set as featured image
-- SSO: remove jQuery dependency for improved performance.
-- Subscription login block: switch to singular "manage subscription"
-- Subscriptions: Add missing padding param to the Subscriber popup markup
-- Subscriptions: Fix Subscribe block invalid content
-- Subscription Site: Hook Subscriber Login block into the navigation
-- Untangling: return untangled admin menu from wpcom/v2/admin-menu endpoint for early classic view
+- Add Phan stub for wordpress functions. [#36627]
+- AI Assistant: remove dead code from the suggestions hook [#36625]
+- AI Assistant: Remove unused code [#36621]
+- AI Featured Image: connect the image generation hook to the UI. [#36620]
+- AI Featured Image: track events for generating, regenerating and using images [#36638]
+- AI Plugin: Add modal and featured image usage [#36613]
+- Disable AI Featured Image button if requires upgrade or no post content [#36653]
+- Google Embed blocks: make proportion values translatable [#36641]
+- Improve UX when setting AI Featured Image [#36643]
+- Packages: add version tracking for identity-crisis package. [#36635]
+- Recipe Block: make default texts translatable [#36624]
+- Save generated AI image to library and set as featured image [#36626]
+- SSO: remove jQuery dependency for improved performance. [#36605]
+- Subscription login block: switch to singular "manage subscription" [#36603]
+- Subscriptions: Add missing padding param to the Subscriber popup markup [#36619]
+- Subscriptions: Fix Subscribe block invalid content [#36617]
+- Subscription Site: Hook Subscriber Login block into the navigation [#36487]
+- Untangling: return untangled admin menu from wpcom/v2/admin-menu endpoint for early classic view [#36601]
 
 ## 13.3-a.9 - 2024-03-27
 ### Bug fixes
