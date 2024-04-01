@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: scroll to bottom of current block as suggestions keep coming
+
 ## 13.3-beta - 2024-04-01
 ### Enhancements
 - AI Assistant: Provide per-block quick actions to make them more relevant. [#36393]
