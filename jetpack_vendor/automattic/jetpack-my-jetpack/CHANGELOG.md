@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Fix Boost score inconsistency
+
 ## [4.20.1] - 2024-04-01
 ### Added
 - Change Phan baselines. [#36627]
