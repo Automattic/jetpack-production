@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix cache on front end request for boost speed scores
+- fix tier upgrades in my Jetpack
 
 ## [4.20.2] - 2024-04-02
 ### Fixed
