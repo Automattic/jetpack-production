@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Secure Sign-On: disable the WordPress.com invitation setup on Multisite.
 - Social: Ensure the settings panel is rendered during pre/post publish
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
