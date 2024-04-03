@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: update Notice component to allow adding a loading text when an action is in a loading state. Add a new resetNotice action to NoticeContext
 
+### Changed
+- My Jetpack: Show Boost score increase in Boost product card.
+
 ### Fixed
 - Fix cache on front end request for boost speed scores
 - fix tier upgrades in my Jetpack
