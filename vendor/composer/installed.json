@@ -1576,17 +1576,17 @@
         },
         {
             "name": "automattic/jetpack-my-jetpack",
-            "version": "v4.20.1",
-            "version_normalized": "4.20.1.0",
+            "version": "v4.20.1.1",
+            "version_normalized": "4.20.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-my-jetpack.git",
-                "reference": "5aacc48295c6b9ec8c833818efe9c1cc45fde610"
+                "reference": "3ba4d8b722a42894f92ce28a0abce3d41447c0a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-my-jetpack/zipball/5aacc48295c6b9ec8c833818efe9c1cc45fde610",
-                "reference": "5aacc48295c6b9ec8c833818efe9c1cc45fde610",
+                "url": "https://api.github.com/repos/Automattic/jetpack-my-jetpack/zipball/3ba4d8b722a42894f92ce28a0abce3d41447c0a5",
+                "reference": "3ba4d8b722a42894f92ce28a0abce3d41447c0a5",
                 "shasum": ""
             },
             "require": {
@@ -1612,7 +1612,7 @@
             "suggest": {
                 "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
             },
-            "time": "2024-04-01T13:20:25+00:00",
+            "time": "2024-04-03T13:29:47+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1641,7 +1641,7 @@
             ],
             "description": "WP Admin page with information and configuration shared among all Jetpack stand-alone plugins",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-my-jetpack/tree/v4.20.1"
+                "source": "https://github.com/Automattic/jetpack-my-jetpack/tree/v4.20.1.1"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-my-jetpack"
         },
