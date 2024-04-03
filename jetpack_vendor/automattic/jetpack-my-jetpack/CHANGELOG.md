@@ -5,21 +5,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.20.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Added
-- My Jetpack: update Notice component to allow adding a loading text when an action is in a loading state. Add a new resetNotice action to NoticeContext
-
-### Fixed
-- Fix cache on front end request for boost speed scores
-- fix tier upgrades in my Jetpack
-
-## [4.20.2] - 2024-04-02
-### Fixed
-- Fix Boost score inconsistency [#36679]
-
 ## [4.20.1] - 2024-04-01
 ### Added
 - Change Phan baselines. [#36627]
@@ -1418,8 +1403,6 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.20.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.20.2...4.20.3-alpha
-[4.20.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.20.1...4.20.2
 [4.20.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.20.0...4.20.1
 [4.20.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.19.0...4.20.0
 [4.19.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.18.0...4.19.0

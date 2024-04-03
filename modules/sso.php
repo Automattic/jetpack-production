@@ -97,7 +97,6 @@ class Jetpack_SSO {
 		 */
 		if (
 			Jetpack_SSO_Helpers::is_user_connected() &&
-			! is_multisite() &&
 			/**
 			 * Toggle the ability to invite new users to create a WordPress.com account.
 			 *

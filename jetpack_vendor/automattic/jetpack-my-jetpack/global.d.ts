@@ -6,7 +6,6 @@ declare module '*.scss';
 interface Window {
 	myJetpackInitialState?: {
 		siteSuffix: string;
-		siteUrl: string;
 		latestBoostSpeedScores: {
 			scores: {
 				desktop: number;
