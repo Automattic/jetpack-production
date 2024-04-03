@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Newsletters: Add filter that enables user to control the timing at which the Subscribe Modal loads.
+
 ### Bug fixes
 - Secure Sign-On: disable the WordPress.com invitation setup on Multisite.
 - Social: Ensure the settings panel is rendered during pre/post publish
