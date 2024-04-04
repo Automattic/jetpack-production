@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add error handling in image generation
 - AI Assistant: scroll to bottom of current block as suggestions keep coming
+- Blocks: move localizable strings out of the metadata attributes field
 - Carousel: Add extra isset check to avoid warnings.
 - Fix translation issues for default attributes
 - Jetpack AI Assistant: Remove old deadcode from image modal
