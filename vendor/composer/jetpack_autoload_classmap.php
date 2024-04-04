@@ -299,11 +299,11 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-plans/src/class-current-plan.php'
 	),
 	'Automattic\\Jetpack\\Device_Detection' => array(
-		'version' => '2.1.3.0-alpha1712142201',
+		'version' => '2.1.3.0-alpha1712265966',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-device-detection/src/class-device-detection.php'
 	),
 	'Automattic\\Jetpack\\Device_Detection\\User_Agent_Info' => array(
-		'version' => '2.1.3.0-alpha1712142201',
+		'version' => '2.1.3.0-alpha1712265966',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-device-detection/src/class-user-agent-info.php'
 	),
 	'Automattic\\Jetpack\\Error' => array(
