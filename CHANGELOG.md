@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: scroll to bottom of current block as suggestions keep coming
 - Blocks: move localizable strings out of the metadata attributes field
 - Carousel: Add extra isset check to avoid warnings.
+- Eventbrite Block: refactor Edit component to function
 - Fix translation issues for default attributes
 - Jetpack AI Assistant: Remove old deadcode from image modal
 - PHP 8.1: Fix error trying to run preg_split on array
