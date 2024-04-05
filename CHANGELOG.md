@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription Site: Release the Subscriber Login navigation placement toggle
 - Theme tools: Use integer casting method that doesn't cause deprecation notices.
 - Update blocks to use API version 3
+- Updated package dependencies.
 
 ## [13.3] - 2024-04-03
 ### Enhancements
