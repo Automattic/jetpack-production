@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: Show Boost score increase in Boost product card.
+- Updated package dependencies.
 - Update My Jetpack to use the Notice component from @automattic/jetpack-components and be more consistent with the other notices in Jetpack
 
 ### Fixed
