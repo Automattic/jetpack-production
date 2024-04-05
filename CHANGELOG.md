@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Eventbrite Block: refactor Edit component to function
 - Fix translation issues for default attributes
 - Jetpack AI Assistant: Remove old deadcode from image modal
+- MailChimp block: refactor Edit component to function
 - PHP 8.1: Fix error trying to run preg_split on array
 - Sharing block: make sharing options translatable
 - Theme tools: Use integer casting method that doesn't cause deprecation notices.
