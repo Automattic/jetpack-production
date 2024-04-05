@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix translation issues for default attributes
 - Jetpack AI Assistant: Remove old deadcode from image modal
 - MailChimp block: refactor Edit component to function
+- Markdown block: refactor Edit component to function
 - PHP 8.1: Fix error trying to run preg_split on array
 - Sharing block: make sharing options translatable
 - Simplified social network selection for post sharing
