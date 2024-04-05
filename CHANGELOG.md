@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - PHP 8.1: Fix error trying to run preg_split on array
 - Sharing block: make sharing options translatable
 - Simplified social network selection for post sharing
+- Subscriptions: Add Subscriber Login block navigation placement setting to Sync and Dotcom API
 - Theme tools: Use integer casting method that doesn't cause deprecation notices.
 - Update blocks to use API version 3
 
