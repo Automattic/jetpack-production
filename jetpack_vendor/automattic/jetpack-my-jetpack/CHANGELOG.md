@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update My Jetpack to use the Notice component from @automattic/jetpack-components and be more consistent with the other notices in Jetpack
 
+### Removed
+- My Jetpack: remove red bubble from connection notice in favor of using the status of the Notice component
+
 ### Fixed
 - Fix cache on front end request for boost speed scores
 - fix tier upgrades in my Jetpack
