@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add from property to connection call to wpcom
 - My Jetpack: update Notice component to allow adding a loading text when an action is in a loading state. Add a new resetNotice action to NoticeContext
 
 ### Changed
