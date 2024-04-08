@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - MailChimp block: refactor Edit component to function
 - Markdown block: refactor Edit component to function
 - PHP 8.1: Fix error trying to run preg_split on array
+- Repeat Visitor Block: refactor Edit component to function
 - Sharing block: make sharing options translatable
 - Simplified social network selection for post sharing
 - Subscriptions: Add Subscriber Login block navigation placement setting to Sync and Dotcom API
