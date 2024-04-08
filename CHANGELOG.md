@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: Add extra isset check to avoid warnings.
 - Create endpoint /wpcom/v2/admin-color that returns admin color scheme
 - Eventbrite Block: refactor Edit component to function
+- Fix auto scroll on iframe editor
 - Fix translation issues for default attributes
 - Jetpack AI Assistant: Remove old deadcode from image modal
 - MailChimp block: refactor Edit component to function
