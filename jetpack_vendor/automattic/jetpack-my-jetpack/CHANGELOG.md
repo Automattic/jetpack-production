@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add from property to connection call to wpcom
+- Add new tracking event for product activations made through My Jetpack
 - My Jetpack: update Notice component to allow adding a loading text when an action is in a loading state. Add a new resetNotice action to NoticeContext
 
 ### Changed
