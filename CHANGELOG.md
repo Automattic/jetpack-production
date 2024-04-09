@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix translation issues for default attributes
 - Jetpack AI Assistant: Remove old deadcode from image modal
 - MailChimp block: refactor Edit component to function
+- Map Block: refactor Edit component to function
 - Markdown block: refactor Edit component to function
 - PHP 8.1: Fix error trying to run preg_split on array
 - Post endpoint: return a 404 if a post is being trashed but does not exist
