@@ -28,9 +28,9 @@
 	"dependencies": {
 		"@automattic/format-currency": "1.0.1",
 		"@automattic/jetpack-analytics": "^0.1.29",
-		"@automattic/jetpack-api": "^0.17.5-alpha",
+		"@automattic/jetpack-api": "^0.17.5",
 		"@automattic/jetpack-components": "^0.52.0-alpha",
-		"@automattic/jetpack-connection": "^0.33.7-alpha",
+		"@automattic/jetpack-connection": "^0.33.7",
 		"@wordpress/api-fetch": "6.52.0",
 		"@wordpress/data": "9.25.0",
 		"@wordpress/date": "4.55.0",

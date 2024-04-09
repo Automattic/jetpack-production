@@ -68,7 +68,7 @@ class Jetpack_Subscribe_Modal {
 			 *
 			 * @module subscriptions
 			 *
-			 * @since 13.4-a.0
+			 * @since 13.4
 			 *
 			 * @param int 300 Time in milliseconds for the Subscribe Modal to appear upon scrolling.
 			 */

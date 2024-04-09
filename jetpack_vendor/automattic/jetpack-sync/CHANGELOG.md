@@ -5,15 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.11.0-alpha] - unreleased
+## [2.11.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## [2.11.0] - 2024-04-08
 ### Added
-- Added social_notes_config option to sync
+- Added social_notes_config option to sync. [#36671]
 
 ### Changed
-- Sync: Sending queue size for pull jobs.
+- Sync: Sending queue size for pull jobs. [#36693]
 
 ## [2.10.5] - 2024-03-29
 ### Changed
@@ -1099,7 +1100,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[2.11.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v2.10.5...v2.11.0-alpha
+[2.11.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v2.11.0...v2.11.1-alpha
+[2.11.0]: https://github.com/Automattic/jetpack-sync/compare/v2.10.5...v2.11.0
 [2.10.5]: https://github.com/Automattic/jetpack-sync/compare/v2.10.4...v2.10.5
 [2.10.4]: https://github.com/Automattic/jetpack-sync/compare/v2.10.3...v2.10.4
 [2.10.3]: https://github.com/Automattic/jetpack-sync/compare/v2.10.2...v2.10.3

@@ -2,45 +2,48 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.4-a.0 - unreleased
+## 13.4-a.2 - unreleased
 
 This is an alpha version! The changes listed here are not final.
-
-### Enhancements
-- Newsletters: Add filter that enables user to control the timing at which the Subscribe Modal loads.
 
 ### Improved compatibility
 - WordPress.com Toolbar: avoid Fatal errors when using other menu management plugins and the WordPress.com Toolbar feature.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Business Hours Block: refactor Edit component to function
+- Fix auto scroll on iframe editor
+- Map Block: refactor Edit component to function
+- Post endpoint: return a 404 if a post is being trashed but does not exist
+
+## 13.4-a.1 - 2024-04-08
+### Enhancements
+- Newsletters: Add a filter that enables the user to control the timing at which the Subscribe Modal loads. [#36374]
+
 ### Bug fixes
-- Secure Sign-On: disable the WordPress.com invitation setup on Multisite.
-- Theme Tools: fix deprecation notices in the color management library.
+- Secure Sign-On: Disable the WordPress.com invitation setup on Multisite. [#36690]
+- Theme Tools: Fix deprecation notices in the color management library. [#36789]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add error handling in image generation
-- AI Assistant: scroll to bottom of current block as suggestions keep coming
-- AI Featured Image: add request counter to UI.
-- Blocks: move localizable strings out of the metadata attributes field
-- Business Hours Block: refactor Edit component to function
-- Carousel: Add extra isset check to avoid warnings.
-- Create endpoint /wpcom/v2/admin-color that returns admin color scheme
-- Eventbrite Block: refactor Edit component to function
-- Fix auto scroll on iframe editor
-- Fix translation issues for default attributes
-- Jetpack AI Assistant: Remove old deadcode from image modal
-- MailChimp block: refactor Edit component to function
-- Map Block: refactor Edit component to function
-- Markdown block: refactor Edit component to function
-- PHP 8.1: Fix error trying to run preg_split on array
-- Post endpoint: return a 404 if a post is being trashed but does not exist
-- Repeat Visitor Block: refactor Edit component to function
-- Sharing block: make sharing options translatable
-- Simplified social network selection for post sharing
-- Subscriptions: Add Subscriber Login block navigation placement setting to Sync and Dotcom API
-- Subscription Site: Release the Subscriber Login navigation placement toggle
-- Theme tools: Use integer casting method that doesn't cause deprecation notices.
-- Update blocks to use API version 3
-- Updated package dependencies.
+- Add error handling in image generation. [#36709]
+- AI Assistant: Scroll to bottom of current block as suggestions keep coming. [#36569]
+- AI Featured Image: Add request counter to UI. [#36744]
+- Blocks: Move localizable strings out of the metadata attributes field. [#36724]
+- Carousel: Add extra isset check to avoid warnings. [#36681]
+- Create /wpcom/v2/admin-color endpoint that returns admin color scheme. [#36749]
+- Eventbrite Block: Refactor Edit component to function. [#36739]
+- Fix translation issues for default attributes. [#36695]
+- Jetpack AI Assistant: Remove old deadcode from image modal. [#36683]
+- MailChimp Block: Refactor Edit component to function. [#36746]
+- Markdown Block: Refactor Edit component to function. [#36758]
+- PHP 8.1: Fix error trying to run preg_split on array. [#36699]
+- Repeat Visitor Block: Refactor Edit component to function. [#36762]
+- Sharing block: Make sharing options translatable. [#36642]
+- Simplified social network selection for post sharing. [#36734]
+- Subscriptions: Add Subscriber Login block navigation placement setting to Sync and Dotcom API. [#36737]
+- Subscription Site: Release the Subscriber Login navigation placement toggle. [#36717]
+- Theme tools: Use integer casting method that doesn't cause deprecation notices. [#36680]
+- Update blocks to use API version 3. [#36701] [#36742]
+- Updated package dependencies. [#36760] [#36761] [#36775] [#36788]
 
 ## [13.3] - 2024-04-03
 ### Enhancements

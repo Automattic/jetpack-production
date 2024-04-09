@@ -5,27 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.21.0-alpha] - unreleased
+## [4.21.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Add from property to connection call to wpcom
 - Add new tracking event for product activations made through My Jetpack
-- My Jetpack: update Notice component to allow adding a loading text when an action is in a loading state. Add a new resetNotice action to NoticeContext
+
+## [4.21.0] - 2024-04-08
+### Added
+- Add 'from' property to connection call to WP.com. [#36741]
+- My Jetpack: Update Notice component to allow adding a loading text when an action is in a loading state. Add a new resetNotice action to NoticeContext. [#36614]
 
 ### Changed
-- My Jetpack: Show Boost score increase in Boost product card.
-- Updated package dependencies.
-- Update My Jetpack to use the Notice component from @automattic/jetpack-components and be more consistent with the other notices in Jetpack
+- My Jetpack: Show Boost score increase in Boost product card. [#36072]
+- Updated package dependencies. [#36756] [#36760] [#36761]
+- Update My Jetpack to use the Notice component from @automattic/jetpack-components and be more consistent with the other notices in Jetpack. [#36711]
 
 ### Removed
-- My Jetpack: removed custom Notice component from My Jetpack
-- My Jetpack: remove red bubble from connection notice in favor of using the status of the Notice component
+- My Jetpack: Removed custom Notice component from My Jetpack. [#36772]
+- My Jetpack: Remove red bubble from connection notice in favor of using the status of the Notice component. [#36773]
 
 ### Fixed
-- Fix cache on front end request for boost speed scores
-- fix tier upgrades in my Jetpack
+- Fix cache on front end request for boost speed scores [#36700]
+- fix tier upgrades in my Jetpack [#36705]
 
 ## [4.20.2] - 2024-04-02
 ### Fixed
@@ -1429,7 +1432,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.21.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.20.2...4.21.0-alpha
+[4.21.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.21.0...4.21.1-alpha
+[4.21.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.20.2...4.21.0
 [4.20.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.20.1...4.20.2
 [4.20.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.20.0...4.20.1
 [4.20.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.19.0...4.20.0
