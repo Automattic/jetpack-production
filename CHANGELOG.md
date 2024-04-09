@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Newsletters: Add filter that enables user to control the timing at which the Subscribe Modal loads.
 
+### Improved compatibility
+- WordPress.com Toolbar: avoid Fatal errors when using other menu management plugins and the WordPress.com Toolbar feature.
+
 ### Bug fixes
 - Secure Sign-On: disable the WordPress.com invitation setup on Multisite.
 - Theme Tools: fix deprecation notices in the color management library.
