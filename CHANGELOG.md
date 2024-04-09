@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: scroll to bottom of current block as suggestions keep coming
 - AI Featured Image: add request counter to UI.
 - Blocks: move localizable strings out of the metadata attributes field
+- Business Hours Block: refactor Edit component to function
 - Carousel: Add extra isset check to avoid warnings.
 - Create endpoint /wpcom/v2/admin-color that returns admin color scheme
 - Eventbrite Block: refactor Edit component to function
