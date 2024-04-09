@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add new tracking event for product activations made through My Jetpack
 
+### Fixed
+- Ensure page_view gets loaded before product_card_loaded
+
 ## [4.21.0] - 2024-04-08
 ### Added
 - Add 'from' property to connection call to WP.com. [#36741]
