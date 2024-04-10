@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add upgrade prompt in featured image
 - AI Assistant: Remove AI Playground
 - AI Featured Image: update copy and UI alignments
+- Auto-save image from featured image feature
 - Business Hours: fix time formatting in preview mode
 - Business Hours Block: refactor Edit component to function
 - Fix auto scroll on iframe editor
