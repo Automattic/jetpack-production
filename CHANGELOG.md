@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add All Sites menu
+- Add Carrousel in Featured Image
 - Add upgrade prompt in featured image
 - AI Assistant: Remove AI Playground
 - AI Featured Image: update copy and UI alignments
