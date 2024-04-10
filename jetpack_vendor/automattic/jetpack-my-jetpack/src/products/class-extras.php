@@ -8,7 +8,6 @@
 namespace Automattic\Jetpack\My_Jetpack\Products;
 
 use Automattic\Jetpack\My_Jetpack\Product;
-use WP_Error;
 
 /**
  * Class responsible for handling the Extras product.

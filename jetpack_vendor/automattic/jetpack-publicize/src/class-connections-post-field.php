@@ -7,10 +7,6 @@
 
 namespace Automattic\Jetpack\Publicize;
 
-use WP_Error;
-use WP_Post;
-use WP_REST_Request;
-
 /**
  * The class to register the field and augment requests
  * to Publicize supported post types.
@@ -147,7 +143,7 @@ class Connections_Post_Field {
 		global $publicize;
 
 		if ( ! $publicize ) {
-			return new WP_Error(
+			return new \WP_Error(
 				'publicize_not_available',
 				__( 'Sorry, Jetpack Social is not available on your site right now.', 'jetpack-publicize-pkg' ),
 				array( 'status' => rest_authorization_required_code() )
@@ -158,7 +154,7 @@ class Connections_Post_Field {
 			return true;
 		}
 
-		return new WP_Error(
+		return new \WP_Error(
 			'invalid_user_permission_publicize',
 			__( 'Sorry, you are not allowed to access Jetpack Social data for this post.', 'jetpack-publicize-pkg' ),
 			array( 'status' => rest_authorization_required_code() )
@@ -420,7 +416,7 @@ class Connections_Post_Field {
 			// If we return this for the top level object, Core
 			// correctly remove the top level object from the response
 			// for us.
-			return new WP_Error( '__wrong-context__' );
+			return new \WP_Error( '__wrong-context__' );
 		}
 
 		switch ( $schema['type'] ) {

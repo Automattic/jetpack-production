@@ -7,8 +7,6 @@
 
 namespace Automattic\Jetpack\Connection;
 
-use WP_Error;
-
 /**
  * The Jetpack Connection Rest Authentication class.
  */
@@ -120,7 +118,7 @@ class Rest_Authentication {
 			}
 
 			if ( ! isset( $_SERVER['REQUEST_METHOD'] ) ) {
-				$this->rest_authentication_status = new WP_Error(
+				$this->rest_authentication_status = new \WP_Error(
 					'rest_invalid_request',
 					__( 'The request method is missing.', 'jetpack-connection' ),
 					array( 'status' => 400 )
@@ -133,7 +131,7 @@ class Rest_Authentication {
 			// can be passed to the WP REST API via the '?_method=' parameter if
 			// needed.
 			if ( 'GET' !== $_SERVER['REQUEST_METHOD'] && 'POST' !== $_SERVER['REQUEST_METHOD'] ) {
-				$this->rest_authentication_status = new WP_Error(
+				$this->rest_authentication_status = new \WP_Error(
 					'rest_invalid_request',
 					__( 'This request method is not supported.', 'jetpack-connection' ),
 					array( 'status' => 400 )
@@ -141,7 +139,7 @@ class Rest_Authentication {
 				return null;
 			}
 			if ( 'POST' !== $_SERVER['REQUEST_METHOD'] && ! empty( file_get_contents( 'php://input' ) ) ) {
-				$this->rest_authentication_status = new WP_Error(
+				$this->rest_authentication_status = new \WP_Error(
 					'rest_invalid_request',
 					__( 'This request method does not support body parameters.', 'jetpack-connection' ),
 					array( 'status' => 400 )
@@ -175,7 +173,7 @@ class Rest_Authentication {
 			}
 
 			// Something else went wrong.  Probably a signature error.
-			$this->rest_authentication_status = new WP_Error(
+			$this->rest_authentication_status = new \WP_Error(
 				'rest_invalid_signature',
 				__( 'The request is not signed correctly.', 'jetpack-connection' ),
 				array( 'status' => 400 )

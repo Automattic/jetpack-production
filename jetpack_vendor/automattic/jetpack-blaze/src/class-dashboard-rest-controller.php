@@ -13,7 +13,6 @@ use Automattic\Jetpack\Connection\Manager as Connection_Manager;
 use Automattic\Jetpack\Status\Host;
 use WC_Product;
 use WP_Error;
-use WP_REST_Request;
 use WP_REST_Server;
 
 /**

@@ -8,9 +8,6 @@
 namespace Automattic\Jetpack\Import\Endpoints;
 
 use Automattic\Jetpack\Import\Main;
-use WP_Error;
-use WP_REST_Request;
-use WP_REST_Response;
 
 /**
  * Class Start

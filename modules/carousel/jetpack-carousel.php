@@ -882,11 +882,7 @@ class Jetpack_Carousel {
 			 * This is meant as a relatively quick fix, as a better fix is likely to update the get_posts call above to only
 			 * include attachments.
 			 */
-			if (
-				! isset( $attachment->ID )
-				|| ! wp_attachment_is_image( $attachment->ID )
-				|| ! isset( $selected_images[ $attachment->ID ] )
-			) {
+			if ( ! isset( $attachment->ID ) || ! wp_attachment_is_image( $attachment->ID ) ) {
 				continue;
 			}
 			$image_elements = $selected_images[ $attachment->ID ];
@@ -1460,7 +1456,7 @@ class Jetpack_Carousel {
 	 *
 	 * @param mixed $value User input setting value.
 	 *
-	 * @return int Sanitized value, only 1 or 0.
+	 * @return number Sanitized value, only 1 or 0.
 	 */
 	public function carousel_display_exif_sanitize( $value ) {
 		return $this->sanitize_1or0_option( $value );
@@ -1469,9 +1465,9 @@ class Jetpack_Carousel {
 	/**
 	 * Return sanitized option for value that controls whether comments will be hidden or not.
 	 *
-	 * @param mixed $value Value to sanitize.
+	 * @param number $value Value to sanitize.
 	 *
-	 * @return int Sanitized value, only 1 or 0.
+	 * @return number Sanitized value, only 1 or 0.
 	 */
 	public function carousel_display_comments_sanitize( $value ) {
 		return $this->sanitize_1or0_option( $value );
@@ -1513,7 +1509,7 @@ class Jetpack_Carousel {
 	 *
 	 * @param mixed $value User input.
 	 *
-	 * @return int Sanitized value, only 1 or 0.
+	 * @return number Sanitized value, only 1 or 0.
 	 */
 	public function carousel_enable_it_sanitize( $value ) {
 		return $this->sanitize_1or0_option( $value );

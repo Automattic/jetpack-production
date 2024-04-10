@@ -2,59 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.4-a.2 - unreleased
+## 13.3.1 - 2024-04-10
+- Protect: Improved handling of request URLs. [#36833]
 
-This is an alpha version! The changes listed here are not final.
-
-### Improved compatibility
-- WordPress.com Toolbar: avoid Fatal errors when using other menu management plugins and the WordPress.com Toolbar feature.
-
-### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add All Sites menu
-- Add upgrade prompt in featured image
-- AI Assistant: Remove AI Playground
-- AI Featured Image: update copy and UI alignments
-- Auto-save image from featured image feature
-- Business Hours: fix time formatting in preview mode
-- Business Hours Block: refactor Edit component to function
-- Fix auto scroll on iframe editor
-- Improve performance of memberships checks
-- Map Block: refactor Edit component to function
-- Post endpoint: return a 404 if a post is being trashed but does not exist
-- Slideshow Block: refactor Edit component to function
-- Tiled Gallery Block: refactor Edit component to function
-
-## 13.4-a.1 - 2024-04-08
-### Enhancements
-- Newsletters: Add a filter that enables the user to control the timing at which the Subscribe Modal loads. [#36374]
-
-### Bug fixes
-- Secure Sign-On: Disable the WordPress.com invitation setup on Multisite. [#36690]
-- Theme Tools: Fix deprecation notices in the color management library. [#36789]
-
-### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add error handling in image generation. [#36709]
-- AI Assistant: Scroll to bottom of current block as suggestions keep coming. [#36569]
-- AI Featured Image: Add request counter to UI. [#36744]
-- Blocks: Move localizable strings out of the metadata attributes field. [#36724]
-- Carousel: Add extra isset check to avoid warnings. [#36681]
-- Create /wpcom/v2/admin-color endpoint that returns admin color scheme. [#36749]
-- Eventbrite Block: Refactor Edit component to function. [#36739]
-- Fix translation issues for default attributes. [#36695]
-- Jetpack AI Assistant: Remove old deadcode from image modal. [#36683]
-- MailChimp Block: Refactor Edit component to function. [#36746]
-- Markdown Block: Refactor Edit component to function. [#36758]
-- PHP 8.1: Fix error trying to run preg_split on array. [#36699]
-- Repeat Visitor Block: Refactor Edit component to function. [#36762]
-- Sharing block: Make sharing options translatable. [#36642]
-- Simplified social network selection for post sharing. [#36734]
-- Subscriptions: Add Subscriber Login block navigation placement setting to Sync and Dotcom API. [#36737]
-- Subscription Site: Release the Subscriber Login navigation placement toggle. [#36717]
-- Theme tools: Use integer casting method that doesn't cause deprecation notices. [#36680]
-- Update blocks to use API version 3. [#36701] [#36742]
-- Updated package dependencies. [#36760] [#36761] [#36775] [#36788]
-
-## [13.3] - 2024-04-03
+## 13.3 - 2024-04-03
 ### Enhancements
 - AI Assistant: Provide per-block quick actions to make them more relevant. [#36393]
 - Blocks: "Earn" category renamed to "Monetize". [#36480]
@@ -191,10 +142,6 @@ This is an alpha version! The changes listed here are not final.
 - WPCOM_JSON_API_List_Comments_Endpoint: Do not prefetch comment meta for large hierarchical threads [#36460]
 - WPCOM_JSON_API_List_Comments_Endpoint: Remove update_comment_cache() that is no longer needed [#36363]
 - WPCOM_JSON_API_Upload_Media_v1_1_Endpoint: Fix errors on invalid post data. [#36291]
-
-## 13.2.2 - 2024-03-22
-### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add function exists check for wp_admin_notice [#36511]
 
 ## 13.2.1 - 2024-03-12
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
@@ -10121,7 +10068,6 @@ Other bugfixes and enhancements at https://github.com/Automattic/jetpack/commits
 
 - Initial release
 
-[13.3]: https://wp.me/p1moTy-19qu
 [13.2]: https://wp.me/p1moTy-15UC
 [13.1]: https://wp.me/p1moTy-12e0
 [13.0]: https://wp.me/p1moTy-10Xp

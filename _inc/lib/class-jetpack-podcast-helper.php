@@ -496,7 +496,7 @@ class Jetpack_Podcast_Helper {
 	/**
 	 * Returns the track duration as a formatted string.
 	 *
-	 * @param int|float $duration of the track in seconds.
+	 * @param number $duration of the track in seconds.
 	 * @return string
 	 */
 	protected function format_track_duration( $duration ) {

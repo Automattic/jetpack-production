@@ -1,6 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 3,
+    "apiVersion": 1,
     "name": "jetpack/instagram-gallery",
     "title": "Latest Instagram Posts",
     "description": "Display an automatically updating list of the latest posts from your Instagram feed.",

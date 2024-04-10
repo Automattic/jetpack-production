@@ -1,4 +1,3 @@
-/* global Jetpack_Subscriptions */
 const { domReady } = wp;
 
 domReady( function () {
@@ -22,7 +21,7 @@ domReady( function () {
 			if ( ! hasLoaded ) {
 				openModal();
 			}
-		}, Jetpack_Subscriptions.modalLoadTime );
+		}, 300 );
 	};
 
 	// User can edit modal, and could remove close link.

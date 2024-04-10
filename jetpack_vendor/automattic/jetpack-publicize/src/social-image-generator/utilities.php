@@ -10,7 +10,6 @@ namespace Automattic\Jetpack\Publicize\Social_Image_Generator;
 use Automattic\Jetpack\Connection\Client;
 use Automattic\Jetpack\Publicize\REST_Controller;
 use Automattic\Jetpack\Redirect;
-use WP_Error;
 
 /**
  * Given a post ID, returns the image URL for the generated image.

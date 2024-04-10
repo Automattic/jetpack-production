@@ -92,10 +92,12 @@
             "default": true
         },
         "chooseAmountText": {
-            "type": "string"
+            "type": "string",
+            "default": "Choose an amount"
         },
         "customAmountText": {
-            "type": "string"
+            "type": "string",
+            "default": "Or enter a custom amount"
         },
         "fallbackLinkUrl": {
             "type": "string"

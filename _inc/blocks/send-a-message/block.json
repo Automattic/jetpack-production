@@ -1,6 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 3,
+    "apiVersion": 1,
     "name": "jetpack/send-a-message",
     "title": "Send A Message",
     "description": "Let your visitors send you messages with the tap of a button.",

@@ -28,17 +28,20 @@
     },
     "attributes": {
         "emailPlaceholder": {
-            "type": "string"
+            "type": "string",
+            "default": "Enter your email"
         },
         "consentText": {
-            "type": "string"
+            "type": "string",
+            "default": "By clicking submit, you agree to share your email address with the site owner and Mailchimp to receive marketing, updates, and other emails from the site owner. Use the unsubscribe link in those emails to opt out at any time."
         },
         "interests": {
             "type": "array",
             "default": []
         },
         "processingLabel": {
-            "type": "string"
+            "type": "string",
+            "default": "Processing…"
         },
         "signupFieldTag": {
             "type": "string"
@@ -47,10 +50,12 @@
             "type": "string"
         },
         "successLabel": {
-            "type": "string"
+            "type": "string",
+            "default": "Success! You're on the list."
         },
         "errorLabel": {
-            "type": "string"
+            "type": "string",
+            "default": "Whoops! There was an error and we couldn't process your subscription. Please reload the page and try again."
         },
         "preview": {
             "type": "boolean",

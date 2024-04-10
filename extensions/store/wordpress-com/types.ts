@@ -100,11 +100,6 @@ export type AiFeatureProps = {
 	};
 	nextTier?: TierProp | null;
 	tierPlansEnabled?: boolean;
-	costs?: {
-		[ key: string ]: {
-			[ key: string ]: number;
-		};
-	};
 };
 
 // Type used in the `wordpress-com/plans` store.

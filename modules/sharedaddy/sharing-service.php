@@ -501,7 +501,7 @@ class Sharing_Service {
 			}
 		}
 
-		if ( false === $this->global['sharing_label'] || $this->global['sharing_label'] === 'Share this:' ) {
+		if ( false === $this->global['sharing_label'] ) {
 			$this->global['sharing_label'] = $this->default_sharing_label;
 		}
 

@@ -39,7 +39,7 @@ class WPCOM_JSON_API_GET_Post_Counts_V1_1_Endpoint extends WPCOM_JSON_API_Endpoi
 	/**
 	 * Whitelist array.
 	 *
-	 * @var string[]
+	 * @var allowlist
 	 */
 	private $allowlist = array( 'publish' );
 

@@ -244,16 +244,14 @@ class Universal {
 						if ( true === cartItem_{$cart_item_key}_logged ) {
 							return;
 						}
-						if ( typeof wp !== 'undefined' && typeof wp.hooks !== 'undefined' && typeof wp.hooks.addAction === 'function' ) {
-							wp.hooks.addAction( 'wcpay.payment-request.availability', 'wcpay', function ( args ) {
-								properties.express_checkout = args.paymentRequestType;
-							} );
-						}
-						properties.checkout_page_contains_checkout_block = '0';
-						properties.checkout_page_contains_checkout_shortcode = '1';
+						wp.hooks.addAction( 'wcpay.payment-request.availability', 'wcpay', function ( args ) {
+							properties.express_checkout = args.paymentRequestType;
+						} );
+							properties.checkout_page_contains_checkout_block = '0';
+							properties.checkout_page_contains_checkout_shortcode = '1';
 
-						_wca.push( properties );
-						cartItem_{$cart_item_key}_logged = true;
+							_wca.push( properties );
+							cartItem_{$cart_item_key}_logged = true;
 
 					} );
 				}

@@ -134,7 +134,7 @@ class WordAds {
 	 *
 	 * @param  string $option the option to grab.
 	 * @param  mixed  $default (optional).
-	 * @return mixed option or $default if not set
+	 * @return option or $default if not set
 	 *
 	 * @since 4.5.0
 	 */

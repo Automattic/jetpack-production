@@ -36,7 +36,8 @@
     ],
     "attributes": {
         "subscribePlaceholder": {
-            "type": "string"
+            "type": "string",
+            "default": "Type your email…"
         },
         "showSubscribersTotal": {
             "type": "boolean",
@@ -53,7 +54,8 @@
             "type": "string"
         },
         "submitButtonText": {
-            "type": "string"
+            "type": "string",
+            "default": "Subscribe"
         },
         "emailFieldBackgroundColor": {
             "type": "string"

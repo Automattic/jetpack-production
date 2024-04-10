@@ -1,6 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 3,
+    "apiVersion": 1,
     "name": "jetpack/blog-stats",
     "title": "Blog Stats",
     "description": "Show a stats counter for your blog.",

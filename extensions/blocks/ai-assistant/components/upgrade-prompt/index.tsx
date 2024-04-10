@@ -19,7 +19,6 @@ import './style.scss';
 
 type UpgradePromptProps = {
 	placement?: string;
-	description?: string;
 };
 
 const debug = debugFactory( 'jetpack-ai-assistant:upgrade-prompt' );
@@ -30,10 +29,7 @@ const debug = debugFactory( 'jetpack-ai-assistant:upgrade-prompt' );
  * @param {UpgradePromptProps} props - Component props.
  * @returns {React.ReactNode} the Nudge component with the prompt.
  */
-const DefaultUpgradePrompt = ( {
-	placement = null,
-	description = null,
-}: UpgradePromptProps ): React.JSX.Element => {
+const DefaultUpgradePrompt = ( { placement = null }: UpgradePromptProps ): React.JSX.Element => {
 	const { checkoutUrl, autosaveAndRedirect, isRedirecting } = useAICheckout();
 	const canUpgrade = canUserPurchasePlan();
 	const {
@@ -71,21 +67,19 @@ const DefaultUpgradePrompt = ( {
 	}, [ tracks, placement ] );
 
 	if ( ! canUpgrade ) {
-		const cantUpgradeDescription = createInterpolateElement(
-			__(
-				'Congratulations on exploring Jetpack AI and reaching the free requests limit! <strong>Reach out to the site administrator to upgrade and keep using Jetpack AI.</strong>',
-				'jetpack'
-			),
-			{
-				strong: <strong />,
-			}
-		);
-
 		return (
 			<Nudge
 				showButton={ false }
 				className={ 'jetpack-ai-upgrade-banner' }
-				description={ description || cantUpgradeDescription }
+				description={ createInterpolateElement(
+					__(
+						'Congratulations on exploring Jetpack AI and reaching the free requests limit! <strong>Reach out to the site administrator to upgrade and keep using Jetpack AI.</strong>',
+						'jetpack'
+					),
+					{
+						strong: <strong />,
+					}
+				) }
 				visible={ true }
 				align={ null }
 				title={ null }
@@ -97,15 +91,13 @@ const DefaultUpgradePrompt = ( {
 	if ( tierPlansEnabled ) {
 		if ( ! nextTier ) {
 			const contactHref = getRedirectUrl( 'jetpack-ai-tiers-more-requests-contact' );
-			const contactUsDescription = __(
-				'You have reached the request limit for your current plan.',
-				'jetpack'
-			);
-
 			return (
 				<Nudge
 					buttonText={ __( 'Contact Us', 'jetpack' ) }
-					description={ description || contactUsDescription }
+					description={ __(
+						'You have reached the request limit for your current plan.',
+						'jetpack'
+					) }
 					className={ 'jetpack-ai-upgrade-banner' }
 					checkoutUrl={ contactHref }
 					visible={ true }
@@ -116,21 +108,6 @@ const DefaultUpgradePrompt = ( {
 				/>
 			);
 		}
-
-		const upgradeDescription = createInterpolateElement(
-			sprintf(
-				/* Translators: number of requests */
-				__(
-					'You have reached the requests limit for your current plan. <strong>Upgrade now to increase your requests limit to %d.</strong>',
-					'jetpack'
-				),
-				nextTier.limit
-			),
-			{
-				strong: <strong />,
-			}
-		);
-
 		return (
 			<Nudge
 				buttonText={ sprintf(
@@ -140,7 +117,19 @@ const DefaultUpgradePrompt = ( {
 				) }
 				checkoutUrl={ checkoutUrl }
 				className={ 'jetpack-ai-upgrade-banner' }
-				description={ description || upgradeDescription }
+				description={ createInterpolateElement(
+					sprintf(
+						/* Translators: number of requests */
+						__(
+							'You have reached the requests limit for your current plan. <strong>Upgrade now to increase your requests limit to %d.</strong>',
+							'jetpack'
+						),
+						nextTier.limit
+					),
+					{
+						strong: <strong />,
+					}
+				) }
 				goToCheckoutPage={ handleUpgradeClick }
 				isRedirecting={ isRedirecting }
 				visible={ true }
@@ -179,31 +168,23 @@ const DefaultUpgradePrompt = ( {
  * The VIP upgrade prompt, with a single text message recommending that the user reach
  * out to their VIP account team.
  *
- * @param {object} props - Component props.
- * @param {string} props.description - The description to display in the prompt.
  * @returns {React.ReactNode} the Nudge component with the prompt.
  */
-const VIPUpgradePrompt = ( {
-	description = null,
-}: {
-	description?: string;
-} ): React.JSX.Element => {
-	const vipDescription = createInterpolateElement(
-		__(
-			"You've reached the Jetpack AI rate limit. <strong>Please reach out to your VIP account team.</strong>",
-			'jetpack'
-		),
-		{
-			strong: <strong />,
-		}
-	);
-
+const VIPUpgradePrompt = (): React.JSX.Element => {
 	return (
 		<Nudge
 			buttonText={ null }
 			checkoutUrl={ null }
 			className={ 'jetpack-ai-upgrade-banner' }
-			description={ description || vipDescription }
+			description={ createInterpolateElement(
+				__(
+					"You've reached the Jetpack AI rate limit. <strong>Please reach out to your VIP account team.</strong>",
+					'jetpack'
+				),
+				{
+					strong: <strong />,
+				}
+			) }
 			goToCheckoutPage={ null }
 			isRedirecting={ null }
 			visible={ true }
@@ -219,7 +200,7 @@ const UpgradePrompt = props => {
 
 	// If the user is on a VIP site, show the VIP upgrade prompt.
 	if ( upgradeType === 'vip' ) {
-		return VIPUpgradePrompt( { description: props.description } );
+		return VIPUpgradePrompt();
 	}
 
 	return DefaultUpgradePrompt( props );

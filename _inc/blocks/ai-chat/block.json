@@ -25,10 +25,12 @@
     },
     "attributes": {
         "askButtonLabel": {
-            "type": "string"
+            "type": "string",
+            "default": "Ask"
         },
         "placeholder": {
-            "type": "string"
+            "type": "string",
+            "default": "Ask a question about this site"
         },
         "showCopy": {
             "type": "boolean",

@@ -7,8 +7,6 @@
 
 namespace Automattic\Jetpack\VideoPress;
 
-use WP_User;
-
 /**
  * VideoPress playback module markup generator.
  *

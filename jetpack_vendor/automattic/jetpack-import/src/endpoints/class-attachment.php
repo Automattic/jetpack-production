@@ -7,10 +7,6 @@
 
 namespace Automattic\Jetpack\Import\Endpoints;
 
-use WP_Error;
-use WP_REST_Request;
-use WP_REST_Response;
-
 /**
  * Class Attachment
  */
@@ -114,7 +110,7 @@ class Attachment extends \WP_REST_Attachments_Controller {
 				return $response;
 			}
 
-			return new WP_Error(
+			return new \WP_Error(
 				'attachment_exists',
 				__( 'The attachment already exists.', 'jetpack-import' ),
 				array(
@@ -182,7 +178,7 @@ class Attachment extends \WP_REST_Attachments_Controller {
 	/**
 	 * Add a filter that rewrites the upload path.
 	 *
-	 * @param WP_REST_Request $request Full details about the request.
+	 * @param \WP_REST_Request $request Full details about the request.
 	 *
 	 * @return void
 	 * @throws \Exception If the date is invalid.

@@ -25,7 +25,6 @@ use Automattic\Jetpack\Status\Host as Status_Host;
 use Automattic\Jetpack\Terms_Of_Service;
 use Automattic\Jetpack\Tracking;
 use Jetpack;
-use WP_Error;
 
 /**
  * The main Initializer class that registers the admin menu and eneuque the assets.
@@ -37,7 +36,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '4.22.0-alpha';
+	const PACKAGE_VERSION = '4.20.1.1';
 
 	/**
 	 * HTML container ID for the IDC screen on My Jetpack page.
@@ -199,14 +198,7 @@ class Initializer {
 		);
 		$modules             = new Modules();
 		$connection          = new Connection_Manager();
-		$speed_score_history = new Speed_Score_History( get_site_url() );
-		$latest_score        = $speed_score_history->latest();
-		$previous_score      = array();
-		if ( $speed_score_history->count() > 1 ) {
-			$previous_score = $speed_score_history->latest( 1 );
-		}
-		$latest_score['previousScores'] = $previous_score['scores'] ?? array();
-
+		$speed_score_history = new Speed_Score_History( wp_parse_url( get_site_url(), PHP_URL_HOST ) );
 		wp_localize_script(
 			'my_jetpack_main_app',
 			'myJetpackInitialState',
@@ -222,7 +214,6 @@ class Initializer {
 				'myJetpackCheckoutUri'   => admin_url( 'admin.php?page=my-jetpack' ),
 				'topJetpackMenuItemUrl'  => Admin_Menu::get_top_level_menu_item_url(),
 				'siteSuffix'             => ( new Status() )->get_site_suffix(),
-				'siteUrl'                => esc_url( get_site_url() ),
 				'blogID'                 => Connection_Manager::get_site_id( true ),
 				'myJetpackVersion'       => self::PACKAGE_VERSION,
 				'myJetpackFlags'         => self::get_my_jetpack_flags(),
@@ -248,7 +239,7 @@ class Initializer {
 					'isEnabled'       => Jetpack_Manage::could_use_jp_manage(),
 					'isAgencyAccount' => Jetpack_Manage::is_agency_account(),
 				),
-				'latestBoostSpeedScores' => $latest_score,
+				'latestBoostSpeedScores' => $speed_score_history->latest(),
 			)
 		);
 
@@ -500,7 +491,7 @@ class Initializer {
 		$body              = json_decode( wp_remote_retrieve_body( $response ) );
 
 		if ( is_wp_error( $response ) || empty( $response['body'] ) ) {
-			return new WP_Error( 'site_data_fetch_failed', 'Site data fetch failed', array( 'status' => $response_code ) );
+			return new \WP_Error( 'site_data_fetch_failed', 'Site data fetch failed', array( 'status' => $response_code ) );
 		}
 
 		return rest_ensure_response( $body, 200 );

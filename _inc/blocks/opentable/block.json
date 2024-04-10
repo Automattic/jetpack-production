@@ -1,6 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 3,
+    "apiVersion": 1,
     "name": "jetpack/opentable",
     "title": "OpenTable",
     "description": "Book a reservation with OpenTable.",

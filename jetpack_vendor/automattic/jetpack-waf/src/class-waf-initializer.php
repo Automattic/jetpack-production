@@ -9,7 +9,6 @@ namespace Automattic\Jetpack\Waf;
 
 use Automattic\Jetpack\Waf\Brute_Force_Protection\Brute_Force_Protection;
 use WP_Error;
-use WP_Upgrader;
 
 /**
  * Initializes the module
