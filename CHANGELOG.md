@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress.com Toolbar: avoid Fatal errors when using other menu management plugins and the WordPress.com Toolbar feature.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add All Sites menu
 - Business Hours: fix time formatting in preview mode
 - Business Hours Block: refactor Edit component to function
 - Fix auto scroll on iframe editor
