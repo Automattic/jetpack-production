@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add All Sites menu
+- Add upgrade prompt in featured image
 - Business Hours: fix time formatting in preview mode
 - Business Hours Block: refactor Edit component to function
 - Fix auto scroll on iframe editor
