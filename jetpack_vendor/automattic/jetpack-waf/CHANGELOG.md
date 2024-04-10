@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.16.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Security
+- Improves handling of REQUEST_URI
+
 ## [0.16.2] - 2024-04-08
 ### Changed
 - Internal updates.
@@ -297,6 +304,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
+[0.16.3-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.16.2...v0.16.3-alpha
 [0.16.2]: https://github.com/Automattic/jetpack-waf/compare/v0.16.1...v0.16.2
 [0.16.1]: https://github.com/Automattic/jetpack-waf/compare/v0.16.0...v0.16.1
 [0.16.0]: https://github.com/Automattic/jetpack-waf/compare/v0.15.1...v0.16.0
