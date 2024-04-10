@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Improve performance of memberships checks
 - Map Block: refactor Edit component to function
 - Post endpoint: return a 404 if a post is being trashed but does not exist
+- Tiled Gallery Block: refactor Edit component to function
 
 ## 13.4-a.1 - 2024-04-08
 ### Enhancements
