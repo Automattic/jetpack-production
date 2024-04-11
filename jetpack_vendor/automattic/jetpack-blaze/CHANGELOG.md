@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Update configs to accomodate for Simple Classic for Blaze
+
 ## [0.20.2] - 2024-04-08
 ### Changed
 - Updated package dependencies. [#36760]
