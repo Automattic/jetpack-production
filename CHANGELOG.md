@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Auto-save image from featured image feature
 - Business Hours: fix time formatting in preview mode
 - Business Hours Block: refactor Edit component to function
+- Dontains Form block: show Stripe nudge if not connected.
 - Fix auto scroll on iframe editor
 - Improve performance of memberships checks
 - Map Block: refactor Edit component to function
