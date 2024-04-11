@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Slideshow Block: refactor Edit component to function
 - Tiled Gallery Block: refactor Edit component to function
 - Update blocks to use API version 3
+- Update UX on Featured Image
 
 ## 13.4-a.1 - 2024-04-08
 ### Enhancements
