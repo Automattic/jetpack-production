@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Slideshow Block: refactor Edit component to function
 - Tiled Gallery Block: refactor Edit component to function
 - Update blocks to use API version 3
+- Updated social previews package
 - Update Testimonials CPT priority so it always appears below Portfolio Projects
 - Update UX on Featured Image
 
