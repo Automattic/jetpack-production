@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add All Sites menu
 - Add Carrousel in Featured Image
 - Add upgrade prompt in featured image
+- Admin menu: Moved "Theme showcase" menu registration to jetpack-mu-wpcom package
 - AI Assistant: Remove AI Playground
 - AI Featured Image: fix bug on automatic transition to featured image panel
 - AI Featured Image: include link to provide feedback on the footer of the modal.
