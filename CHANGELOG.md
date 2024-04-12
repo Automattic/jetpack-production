@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Add upgrade prompt in featured image
 - Admin menu: Moved "Theme showcase" menu registration to jetpack-mu-wpcom package
 - AI Assistant: Remove AI Playground
+- AI Assistant: Rename useSuggestionsFromOpenAI to useAIAssistant and deduplicate suggestion logic
 - AI Featured Image: fix bug on automatic transition to featured image panel
 - AI Featured Image: include link to provide feedback on the footer of the modal.
 - AI Featured Image: incorporate i3  updates on style and UI
