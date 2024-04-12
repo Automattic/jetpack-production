@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Remove AI Playground
 - AI Featured Image: fix bug on automatic transition to featured image panel
 - AI Featured Image: include link to provide feedback on the footer of the modal.
+- AI Featured Image: incorporate i3  updates on style and UI
 - AI Featured Image: update copy and UI alignments
 - a minor performance improvement on memberships
 - Auto-save image from featured image feature
