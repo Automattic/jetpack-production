@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Dontains Form block: show Stripe nudge if not connected.
 - Fix auto scroll on iframe editor
 - Improve performance of memberships checks
+- Make the representation of the end date consistent in membership subscription abbreviation.
 - Map Block: refactor Edit component to function
 - Post endpoint: return a 404 if a post is being trashed but does not exist
 - Simple Payments Block: refactor Edit component to function
