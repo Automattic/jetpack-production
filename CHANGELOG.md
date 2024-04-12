@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Improve performance of memberships checks
 - Map Block: refactor Edit component to function
 - Post endpoint: return a 404 if a post is being trashed but does not exist
+- Simple Payments Block: refactor Edit component to function
 - Slideshow Block: refactor Edit component to function
 - Tiled Gallery Block: refactor Edit component to function
 - Update blocks to use API version 3
