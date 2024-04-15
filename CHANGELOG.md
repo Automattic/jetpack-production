@@ -2,43 +2,40 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.4-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.4-a.3 - 2024-04-15
 ### Improved compatibility
-- WordPress.com Toolbar: avoid Fatal errors when using other menu management plugins and the WordPress.com Toolbar feature.
+- WordPress.com Toolbar: Avoid fatal errors when using other menu management plugins and the WordPress.com Toolbar feature. [#36783]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add All Sites menu
-- Add Carrousel in Featured Image
-- Add upgrade prompt in featured image
-- Admin menu: Moved "Theme showcase" menu registration to jetpack-mu-wpcom package
-- AI Assistant: Remove AI Playground
-- AI Assistant: Rename useSuggestionsFromOpenAI to useAIAssistant and deduplicate suggestion logic
-- AI Featured Image: fix bug on automatic transition to featured image panel
-- AI Featured Image: include link to provide feedback on the footer of the modal.
-- AI Featured Image: incorporate i3  updates on style and UI
-- AI Featured Image: update copy and UI alignments
-- a minor performance improvement on memberships
-- Auto-save image from featured image feature
-- Avoid showing featured image upgrade prompt on generating
-- Business Hours: fix time formatting in preview mode
-- Business Hours Block: refactor Edit component to function
-- Dontains Form block: show Stripe nudge if not connected.
-- Fix auto scroll on iframe editor
-- Fixed SIG not visible in Jetpack sidebar
-- Improve performance of memberships checks
-- Make the representation of the end date consistent in membership subscription abbreviation.
-- Map Block: refactor Edit component to function
-- Post endpoint: return a 404 if a post is being trashed but does not exist
-- Simple Payments Block: refactor Edit component to function
-- Slideshow Block: refactor Edit component to function
-- Tiled Gallery Block: refactor Edit component to function
-- Update blocks to use API version 3
-- Updated social previews package
-- Update Testimonials CPT priority so it always appears below Portfolio Projects
-- Update UX on Featured Image
+- Add the 'All Sites' menu. [#36632]
+- Add 'Carrousel' in 'Featured Image'. [#36834]
+- Add upgrade prompt in 'Featured Image'. [#36806]
+- Admin Menu: Moved "Theme Showcase" menu registration to jetpack-mu-wpcom package. [#36851]
+- AI Assistant: Remove AI Playground. [#36808]
+- AI Assistant: Rename useSuggestionsFromOpenAI to useAIAssistant and deduplicate suggestion logic. [#36869]
+- AI Featured Image: Fix bug on automatic transition to featured image panel. [#36863]
+- AI Featured Image: Include link to provide feedback on the footer of the modal. [#36831]
+- AI Featured Image: Incorporate i3  updates on style and UI. [#36868]
+- AI Featured Image: Update copy and UI alignments. [#36812]
+- A minor performance improvement on memberships. [#36821]
+- Auto-save image from featured image feature. [#36822]
+- Avoid showing featured image upgrade prompt on generating. [#36899]
+- Business Hours: Fix time formatting in preview mode. [#36786]
+- Business Hours Block: Refactor Edit component to a function. [#36785]
+- Dontains Form block: Show Stripe nudge if not connected. [#36841]
+- Fix auto scroll on iframe editor. [#36726]
+- Fixed SIG not visible in Jetpack sidebar. [#36895]
+- Improve performance of memberships checks. [#36798]
+- Make the representation of the end date consistent in membership subscription abbreviation. [#36838]
+- Map Block: Refactor Edit component to function. [#36795]
+- Post endpoint: Return a 404 if a post is being trashed but does not exist. [#36768]
+- Simple Payments Block: Refactor Edit component to a function. [#36809]
+- Slideshow Block: Refactor Edit component to a function. [#36805]
+- Tiled Gallery Block: Refactor Edit component to a function. [#36804]
+- Update blocks to use API version 3. [#36827] [#36852] [#36854]
+- Updated social previews package. [#36874]
+- Update Testimonials CPT priority so it always appears below Portfolio Projects. [#36866]
+- Update UX on Featured Image. [#36865]
 
 ## 13.4-a.1 - 2024-04-08
 ### Enhancements
