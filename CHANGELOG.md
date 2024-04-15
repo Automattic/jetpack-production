@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Featured Image: update copy and UI alignments
 - a minor performance improvement on memberships
 - Auto-save image from featured image feature
+- Avoid showing featured image upgrade prompt on generating
 - Business Hours: fix time formatting in preview mode
 - Business Hours Block: refactor Edit component to function
 - Dontains Form block: show Stripe nudge if not connected.
