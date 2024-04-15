@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.42.10-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Fixed 403 error for SIG for non-admin authors
+
 ## [0.42.9] - 2024-04-08
 ### Changed
 - Updated package dependencies. [#36760]
@@ -517,6 +524,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.42.10-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.42.9...v0.42.10-alpha
 [0.42.9]: https://github.com/Automattic/jetpack-publicize/compare/v0.42.8...v0.42.9
 [0.42.8]: https://github.com/Automattic/jetpack-publicize/compare/v0.42.7...v0.42.8
 [0.42.7]: https://github.com/Automattic/jetpack-publicize/compare/v0.42.6...v0.42.7
