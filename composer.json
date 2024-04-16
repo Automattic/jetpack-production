@@ -30,7 +30,7 @@
 		"automattic/jetpack-forms": "^0.30.16-alpha",
 		"automattic/jetpack-google-fonts-provider": "^0.7.2",
 		"automattic/jetpack-identity-crisis": "^0.18.3",
-		"automattic/jetpack-image-cdn": "^0.3.4",
+		"automattic/jetpack-image-cdn": "^0.3.5-alpha",
 		"automattic/jetpack-import": "^0.8.3",
 		"automattic/jetpack-ip": "^0.2.2",
 		"automattic/jetpack-jitm": "^3.1.6",
