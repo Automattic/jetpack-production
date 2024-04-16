@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds the ability to filter users in the WPCOM_JSON_API_List_Users_Endpoint endpoint by capability
+- AI Assistant: Extract Markdown and HTML conversions to AI Client
 - Enabled SIG even if publicize is disabled
 - Remove unnecessary react imports
 - Tiled Gallery Block: do not use image CDN on private WordPress.com Simple sites.
