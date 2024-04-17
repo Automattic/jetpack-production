@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - SSO: add SSO feature to the package.
 
+### Fixed
+- Jetpack Connection: Prevent unnecessary jetpack_connection_active_plugins option updates
+
 ## [2.7.1] - 2024-04-08
 ### Changed
 - Updated package dependencies. [#36760]
