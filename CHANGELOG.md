@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added scheduled updates sync option.
+- Subscription: Add Filter to Allow Newsletter Block Meta to Capability to be Changed.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds the ability to filter users in the WPCOM_JSON_API_List_Users_Endpoint endpoint by capability
