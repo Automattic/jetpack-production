@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: ensure that disabling the feature on WordPress.com Simple brings back Core's Lightbox back.
 - Enabled SIG even if publicize is disabled
 - Remove unnecessary react imports
+- Subscriptions Block: Only check newsletter plans if on the wp-admin side
 - Tiled Gallery Block: do not use image CDN on private WordPress.com Simple sites.
 - Update blocks to use API version 3
 - Update UX of featured image usage counter
