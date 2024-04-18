@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Enabled SIG even if publicize is disabled
 - Remove unnecessary react imports
 - Subscriptions Block: Only check newsletter plans if on the wp-admin side
+- Tiled Gallery: fix round corners style
 - Tiled Gallery Block: do not use image CDN on private WordPress.com Simple sites.
 - Update blocks to use API version 3
 - Update UX of featured image usage counter
