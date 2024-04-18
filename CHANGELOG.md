@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Extract Markdown and HTML conversions to AI Client
 - AI Featured Image: move tool from beta to production, to make it available to everyone.
 - AI Featured Image: remove scrollbar on smaller screens.
+- Block Scaffolding: update API version in template
 - Carousel: ensure that disabling the feature on WordPress.com Simple brings back Core's Lightbox back.
 - Enabled SIG even if publicize is disabled
 - Remove unnecessary react imports
