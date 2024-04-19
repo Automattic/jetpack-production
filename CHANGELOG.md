@@ -18,10 +18,13 @@ This is an alpha version! The changes listed here are not final.
 - AI Featured Image: remove scrollbar on smaller screens.
 - Block Scaffolding: update API version in template
 - Carousel: ensure that disabling the feature on WordPress.com Simple brings back Core's Lightbox back.
+- CLI: Make `wp jetpack publicize` work again.
 - Donations Block: fix non localized strings
 - Enabled SIG even if publicize is disabled
+- Fix phpdoc types, and update phan config and baseline for wpcom stubs. No change to functionality.
 - Jetpack Google Fonts: Add filter to conditionally skip loading
 - Remove unnecessary react imports
+- REST API: Correctly report Publicize when applicable in `/jetpack/v4/site/benefits` endpoint.
 - Subscriptions Block: Only check newsletter plans if on the wp-admin side
 - Tiled Gallery: fix round corners style
 - Tiled Gallery Block: do not use image CDN on private WordPress.com Simple sites.
