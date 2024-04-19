@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: ensure that disabling the feature on WordPress.com Simple brings back Core's Lightbox back.
 - Donations Block: fix non localized strings
 - Enabled SIG even if publicize is disabled
+- Jetpack Google Fonts: Add filter to conditionally skip loading
 - Remove unnecessary react imports
 - Subscriptions Block: Only check newsletter plans if on the wp-admin side
 - Tiled Gallery: fix round corners style
