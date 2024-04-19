@@ -51,10 +51,7 @@
                     5,
                     15,
                     100
-                ],
-                "heading": "Make a one-time donation",
-                "extraText": "Your contribution is appreciated.",
-                "buttonText": "Donate"
+                ]
             }
         },
         "monthlyDonation": {
@@ -66,10 +63,7 @@
                     5,
                     15,
                     100
-                ],
-                "heading": "Make a monthly donation",
-                "extraText": "Your contribution is appreciated.",
-                "buttonText": "Donate monthly"
+                ]
             }
         },
         "annualDonation": {
@@ -81,10 +75,7 @@
                     5,
                     15,
                     100
-                ],
-                "heading": "Make a yearly donation",
-                "extraText": "Your contribution is appreciated.",
-                "buttonText": "Donate yearly"
+                ]
             }
         },
         "showCustomAmount": {

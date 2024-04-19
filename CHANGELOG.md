@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Featured Image: remove scrollbar on smaller screens.
 - Block Scaffolding: update API version in template
 - Carousel: ensure that disabling the feature on WordPress.com Simple brings back Core's Lightbox back.
+- Donations Block: fix non localized strings
 - Enabled SIG even if publicize is disabled
 - Remove unnecessary react imports
 - Subscriptions Block: Only check newsletter plans if on the wp-admin side
