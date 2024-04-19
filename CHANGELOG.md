@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Google Fonts: Add filter to conditionally skip loading
 - Remove unnecessary react imports
 - REST API: Correctly report Publicize when applicable in `/jetpack/v4/site/benefits` endpoint.
+- Sitemaps: Ensured that the last modification date from the jetpack_page_sitemap_other_urls filter is considered for the last modification date of the generated sitemap.
 - Subscriptions Block: Only check newsletter plans if on the wp-admin side
 - Tiled Gallery: fix round corners style
 - Tiled Gallery Block: do not use image CDN on private WordPress.com Simple sites.
