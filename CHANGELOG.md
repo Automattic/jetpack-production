@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Enabled SIG even if publicize is disabled
 - Fix phpdoc types, and update phan config and baseline for wpcom stubs. No change to functionality.
 - Jetpack Google Fonts: Add filter to conditionally skip loading
+- Monetize: Move menu item under Jetpack menu for all Classic interface users
 - Remove unnecessary react imports
 - REST API: Correctly report Publicize when applicable in `/jetpack/v4/site/benefits` endpoint.
 - Sitemaps: Ensured that the last modification date from the jetpack_page_sitemap_other_urls filter is considered for the last modification date of the generated sitemap.
