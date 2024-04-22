@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [2.0.5] - 2024-04-22
+### Changed
+- Internal updates.
 
 ## [2.0.4] - 2024-04-08
 ### Changed
@@ -272,7 +272,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Licensing: Add support for Jetpack licenses
 
-[2.0.5-alpha]: https://github.com/Automattic/jetpack-licensing/compare/v2.0.4...v2.0.5-alpha
+[2.0.5]: https://github.com/Automattic/jetpack-licensing/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/Automattic/jetpack-licensing/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/Automattic/jetpack-licensing/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/Automattic/jetpack-licensing/compare/v2.0.1...v2.0.2
