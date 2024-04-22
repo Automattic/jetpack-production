@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription: Add Filter to Allow Newsletter Block Meta to Capability to be Changed.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add in_site_migration_flow to the list of available site options to update and retrieve. This will be used as part of the Site Migration on-boarding flow.
 - Adds the ability to filter users in the WPCOM_JSON_API_List_Users_Endpoint endpoint by capability
 - Add the userConnectionUrl to initial state to use in Social sidebar
 - AI Assistant: Extract Markdown and HTML conversions to AI Client
