@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Donations Block: fix non localized strings
 - Enabled SIG even if publicize is disabled
 - Fix phpdoc types, and update phan config and baseline for wpcom stubs. No change to functionality.
+- Google Docs Embed: fix non localized strings
 - Jetpack Google Fonts: Add filter to conditionally skip loading
 - Monetize: Move menu item under Jetpack menu for all Classic interface users
 - Remove unnecessary react imports
