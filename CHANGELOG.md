@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the userConnectionUrl to initial state to use in Social sidebar
 - Add title optimization as beta
 - AI Assistant: Extract Markdown and HTML conversions to AI Client
+- AI Assistant: Update AIControl imports
 - AI Featured Image: move tool from beta to production, to make it available to everyone.
 - AI Featured Image: remove scrollbar on smaller screens.
 - Block Scaffolding: update API version in template
