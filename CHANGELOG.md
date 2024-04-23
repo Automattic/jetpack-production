@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Block Scaffolding: update API version in template
 - Carousel: ensure that disabling the feature on WordPress.com Simple brings back Core's Lightbox back.
 - CLI: Make `wp jetpack publicize` work again.
+- Cookie Consent: localize default text
 - Donations Block: fix non localized strings
 - Enabled SIG even if publicize is disabled
 - Fix phpdoc types, and update phan config and baseline for wpcom stubs. No change to functionality.
