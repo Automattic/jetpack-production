@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix phpdoc types, and update phan config and baseline for wpcom stubs. No change to functionality.
 - Google Docs Embed: fix non localized strings
 - Jetpack Google Fonts: Add filter to conditionally skip loading
+- Masterbar: Specific styles for sidebar upsells are now maintained in separate files for each color scheme
 - Monetize: Move menu item under Jetpack menu for all Classic interface users
 - Remove unnecessary react imports
 - REST API: Correctly report Publicize when applicable in `/jetpack/v4/site/benefits` endpoint.
