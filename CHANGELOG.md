@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds the ability to filter users in the WPCOM_JSON_API_List_Users_Endpoint endpoint by capability
 - Add the userConnectionUrl to initial state to use in Social sidebar
 - Add title optimization as beta
+- Add title optimization jetpack sidebar entry
 - AI Assistant: Extract Markdown and HTML conversions to AI Client
 - AI Assistant: Update AIControl imports
 - AI Featured Image: move tool from beta to production, to make it available to everyone.
