@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Removed methods deprecated long ago
 
+## [2.2.2] - 2024-04-22
+### Changed
+- Internal updates.
+
 ## [2.2.1] - 2024-04-08
 ### Changed
 - Internal updates.
@@ -333,7 +337,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Introduce a status package
 
-[3.0.0-alpha]: https://github.com/Automattic/jetpack-status/compare/v2.2.1...v3.0.0-alpha
+[3.0.0-alpha]: https://github.com/Automattic/jetpack-status/compare/v2.2.2...v3.0.0-alpha
+[2.2.2]: https://github.com/Automattic/jetpack-status/compare/v2.2.1...v2.2.2
 [2.2.1]: https://github.com/Automattic/jetpack-status/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/Automattic/jetpack-status/compare/v2.1.3...v2.2.0
 [2.1.3]: https://github.com/Automattic/jetpack-status/compare/v2.1.2...v2.1.3

@@ -3005,7 +3005,7 @@ p {
 	/**
 	 * Disconnects the user.
 	 *
-	 * @deprecated 13.4-a.4
+	 * @deprecated 13.4-a.6
 	 * @see \Automattic\Jetpack\Connection\Manager::disconnect_user()
 	 *
 	 * @param int $user_id The user ID to disconnect.

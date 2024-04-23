@@ -2,45 +2,48 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.4-a.4 - unreleased
+## 13.4-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- Added scheduled updates sync option.
-- Subscription: Add Filter to Allow Newsletter Block Meta to Capability to be Changed.
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add in_site_migration_flow to the list of available site options to update and retrieve. This will be used as part of the Site Migration on-boarding flow.
-- Adds the ability to filter users in the WPCOM_JSON_API_List_Users_Endpoint endpoint by capability
-- Add the userConnectionUrl to initial state to use in Social sidebar
 - Add title optimization as beta
 - Add title optimization jetpack sidebar entry
-- AI Assistant: Extract Markdown and HTML conversions to AI Client
 - AI Assistant: Update AIControl imports
-- AI Featured Image: move tool from beta to production, to make it available to everyone.
-- AI Featured Image: remove scrollbar on smaller screens.
-- Block Scaffolding: update API version in template
-- Carousel: ensure that disabling the feature on WordPress.com Simple brings back Core's Lightbox back.
-- CLI: Make `wp jetpack publicize` work again.
 - Cookie Consent: localize default text
-- Donations Block: fix non localized strings
-- Enabled SIG even if publicize is disabled
-- Fix phpdoc types, and update phan config and baseline for wpcom stubs. No change to functionality.
-- Google Docs Embed: fix non localized strings
-- Jetpack Google Fonts: Add filter to conditionally skip loading
 - Masterbar: Specific styles for sidebar upsells are now maintained in separate files for each color scheme
-- Monetize: Move menu item under Jetpack menu for all Classic interface users
-- Remove unnecessary react imports
-- REST API: Correctly report Publicize when applicable in `/jetpack/v4/site/benefits` endpoint.
-- Sitemaps: Ensured that the last modification date from the jetpack_page_sitemap_other_urls filter is considered for the last modification date of the generated sitemap.
 - Subscriptions: Add "Paid newsletter" section to the Newsletter settings
-- Subscriptions: Add Subscriber Login block navigation placement setting to Dotcom Site Settings API
-- Subscriptions Block: Only check newsletter plans if on the wp-admin side
-- Tiled Gallery: fix round corners style
-- Tiled Gallery Block: do not use image CDN on private WordPress.com Simple sites.
-- Update blocks to use API version 3
-- Update UX of featured image usage counter
+
+## 13.4-a.5 - 2024-04-22
+### Enhancements
+- Subscription: Add a filter to Allow Newsletter Block Meta Capability to be Changed. [#36909]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add scheduled updates sync option. [#36877]
+- Add in_site_migration_flow to the list of available site options to update and retrieve. This will be used as part of the Site Migration on-boarding flow. [#36974]
+- Adds the ability to filter users in the WPCOM_JSON_API_List_Users_Endpoint endpoint by capability. [#36893]
+- Add the userConnectionUrl to initial state to use in Social sidebar. [#36976]
+- AI Assistant: Extract Markdown and HTML conversions to AI Client. [#36906]
+- AI Featured Image: move tool from beta to production, to make it available to everyone. [#36965]
+- AI Featured Image: remove scrollbar on smaller screens. [#36963]
+- Block Scaffolding: update API version in template [#36955]
+- Carousel: Ensure that disabling the feature on WordPress.com Simple brings back Core's Lightbox back. [#36914]
+- CLI: Make `wp jetpack publicize` work again. [#36988]
+- Donations Block: Fix non localized strings. [#36951]
+- Enabled SIG even if publicize is disabled. [#36911]
+- Fix phpdoc types, and update phan config and baseline for wpcom stubs. No change to functionality. [#36988]
+- Google Docs Embed: Fix non localized strings. [#36993]
+- Jetpack Google Fonts: Add filter to conditionally skip loading. [#36980]
+- Monetize: Move menu item under Jetpack menu for all Classic interface users. [#36995]
+- Remove unnecessary react imports. [#36904]
+- REST API: Correctly report Publicize when applicable in `/jetpack/v4/site/benefits` endpoint. [#36988]
+- Sitemaps: Ensured that the last modification date from the jetpack_page_sitemap_other_urls filter is considered for the last modification date of the generated sitemap. [#36991]
+- Subscriptions: Add Subscriber Login block navigation placement setting to Dotcom Site Settings API. [#37000]
+- Subscriptions Block: Only check newsletter plans when inside WP Admin. [#36928]
+- Tiled Gallery: Fix round corners style. [#36952]
+- Tiled Gallery Block: Don't use image CDN on private WordPress.com simple sites. [#36876]
+- Update blocks to use API version 3. [#36858] [#36859] [#36864]
+- Update UX of featured image usage counter. [#36926]
 
 ## 13.4-a.3 - 2024-04-15
 ### Improved compatibility
