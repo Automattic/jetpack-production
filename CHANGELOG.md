@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
+- General: remove code that was added to remain compatible with versions of WordPress lower than 6.4.
 - General: update WordPress version requirements to WordPress 6.4.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

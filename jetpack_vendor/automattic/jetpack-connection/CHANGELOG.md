@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- General: remove code that was added to remain compatible with versions of WordPress lower than 6.4.
+
 ### Fixed
 - Disconnect connection owner on removal.
 
