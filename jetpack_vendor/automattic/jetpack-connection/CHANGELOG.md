@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Disconnect connection owner on removal.
+- Improve phpdoc comments in Client class, and remove some unnecessary boolean checks.
 
 ## [2.7.2] - 2024-04-22
 ### Added
