@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- General: update WordPress version requirements to WordPress 6.4.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add title optimization as beta
 - Add title optimization jetpack sidebar entry

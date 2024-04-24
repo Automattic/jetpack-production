@@ -30,7 +30,7 @@ return array(
     ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
-      'ver' => '3.0.1',
+      'ver' => '3.0.2-alpha1713953918',
     ),
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
