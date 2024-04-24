@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add title optimization as beta
 - Add title optimization jetpack sidebar entry
 - Add update_plugins capability to the /sites/%s endpoint.
+- AI Assistant: Separate toolbar dropdown logic and UI
 - AI Assistant: Update AIControl imports
 - Cookie Consent: localize default text
 - Enhanced Distribution: remove deprecated module file.
