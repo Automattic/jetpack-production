@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Add title optimization jetpack sidebar entry
 - AI Assistant: Update AIControl imports
 - Cookie Consent: localize default text
+- Enhanced Distribution: remove deprecated module file.
 - Masterbar: Specific styles for sidebar upsells are now maintained in separate files for each color scheme
 - Subscriptions: Add "Paid newsletter" section to the Newsletter settings
 - Subscriptions: Link "Subscribed" button to individual subscription page
