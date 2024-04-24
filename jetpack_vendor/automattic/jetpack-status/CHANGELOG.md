@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Added is_automattician_feature_flags_only on Jetpack sites as an alternative to is_automattician present on simple sites.
+
 ### Removed
 - Removed methods deprecated long ago
 
