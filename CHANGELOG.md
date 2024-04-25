@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Masterbar: Specific styles for sidebar upsells are now maintained in separate files for each color scheme
 - Subscriptions: Add "Paid newsletter" section to the Newsletter settings
 - Subscriptions: Link "Subscribed" button to individual subscription page
+- Untangling: fix sidebar upsells on Default color scheme to follow Core's
 
 ## 13.4-a.5 - 2024-04-22
 ### Enhancements
