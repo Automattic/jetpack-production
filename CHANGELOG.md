@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add aceptance for title optimization
+- Add cancel action for Title Optimization
 - API Docs: Fix example request for media add and update endpoints.
 - CloudFlare Analytics: deprecate feature and move to mu-wpcom.
 - Janitorial: use wp_admin_notice function introduced in WP 6.4 to display notices.
