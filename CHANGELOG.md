@@ -2,30 +2,26 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.4-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.4-a.7 - 2024-04-25
 ### Improved compatibility
-- General: remove code that was added to remain compatible with versions of WordPress lower than 6.4.
-- General: update WordPress version requirements to WordPress 6.4.
+- General: Update WordPress version requirements to WordPress 6.4 and remove compatibility code for lower versions. [#37047] [#37049]
 
 ### Bug fixes
-- Google Fonts: Avoid theme fonts overriding the default fonts so fonts with a specific font weight that are not supported by the provided theme can be rendered correctly
+- Google Fonts: Avoid theme fonts overriding the default fonts so fonts with a specific font weight that are not supported by the provided theme can be rendered correctly. [#37050]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add migration_source_site_domain to the list of available site options to update and retrieve. This will be used as part of the Site Migration on-boarding flow.
-- Add title optimization as beta
-- Add title optimization jetpack sidebar entry
-- Add title optimization modal content
-- Add update_plugins capability to the /sites/%s endpoint.
-- AI Assistant: Separate toolbar dropdown logic and UI
-- AI Assistant: Update AIControl imports
-- Cookie Consent: localize default text
-- Enhanced Distribution: remove deprecated module file.
-- Masterbar: Specific styles for sidebar upsells are now maintained in separate files for each color scheme
-- Subscriptions: Add "Paid newsletter" section to the Newsletter settings
-- Subscriptions: Link "Subscribed" button to individual subscription page
+- Add migration_source_site_domain to the list of available site options to update and retrieve. This will be used as part of the Site Migration on-boarding flow. [#37060]
+- Add title optimization as beta [#37001]
+- Add title optimization jetpack sidebar entry [#37002]
+- Add title optimization modal content [#37003]
+- Add update_plugins capability to the /sites/%s endpoint. [#36280]
+- AI Assistant: Separate toolbar dropdown logic and UI [#37016]
+- AI Assistant: Update AIControl imports [#36967]
+- Cookie Consent: localize default text [#37012]
+- Enhanced Distribution: remove deprecated module file. [#37032]
+- Masterbar: Specific styles for sidebar upsells are now maintained in separate files for each color scheme [#37022]
+- Subscriptions: Add "Paid newsletter" section to the Newsletter settings [#36975]
+- Subscriptions: Link "Subscribed" button to individual subscription page [#37021]
 
 ## 13.4-a.5 - 2024-04-22
 ### Enhancements
