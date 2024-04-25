@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Separate toolbar dropdown logic and UI
 - AI Assistant: Update AIControl imports
 - API Docs: Fix example request for media add and update endpoints.
+- CloudFlare Analytics: deprecate feature and move to mu-wpcom.
 - Cookie Consent: localize default text
 - Enhanced Distribution: remove deprecated module file.
 - Janitorial: use wp_admin_notice function introduced in WP 6.4 to display notices.
