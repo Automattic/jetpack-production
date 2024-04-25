@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - General: remove code that was added to remain compatible with versions of WordPress lower than 6.4.
+- General: use wp_admin_notice function introduced in WP 6.4 to display notices.
 
 ### Fixed
 - Disconnect connection owner on removal.

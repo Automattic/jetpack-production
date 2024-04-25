@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- General: use wp_admin_notice function introduced in WP 6.4 to display notices.
+
 ### Fixed
 - Set correct `textdomain` in `block.json`.
 
