@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Google Fonts: Avoid theme fonts overriding the default fonts so fonts with a specific font weight that are not supported by the provided theme can be rendered correctly
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add aceptance for title optimization
 - Add migration_source_site_domain to the list of available site options to update and retrieve. This will be used as part of the Site Migration on-boarding flow.
 - Add title optimization as beta
 - Add title optimization jetpack sidebar entry
