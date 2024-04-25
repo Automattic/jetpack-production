@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Fix connection flow for new sites.
+
 ## [0.44.3] - 2024-04-25
 ### Changed
 - Internal updates.
