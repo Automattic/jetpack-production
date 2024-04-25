@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Janitorial: use wp_admin_notice function introduced in WP 6.4 to display notices.
 - Masterbar: Specific styles for sidebar upsells are now maintained in separate files for each color scheme
 - Subscriptions: Add "Paid newsletter" section to the Newsletter settings
+- Subscriptions: Hide subscriber count for already subscribed users
 - Subscriptions: Link "Subscribed" button to individual subscription page
 - Subscriptions: Track "Set up" button clicks
 - Untangling: fix sidebar upsells on Default color scheme to follow Core's
