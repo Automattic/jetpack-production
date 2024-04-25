@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.23.18-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [0.23.17] - 2024-04-25
 ### Fixed
 - Set correct `textdomain` in `block.json`. [#37057]
@@ -1322,6 +1326,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created empty package [#24952]
 
+[0.23.18-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.17...v0.23.18-alpha
 [0.23.17]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.16...v0.23.17
 [0.23.16]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.15...v0.23.16
 [0.23.15]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.14...v0.23.15
