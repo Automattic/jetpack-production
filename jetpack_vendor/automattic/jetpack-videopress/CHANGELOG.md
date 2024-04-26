@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Update button's prop to match latest changes in WordPress 6.5.
+
 ## [0.23.17] - 2024-04-25
 ### Fixed
 - Set correct `textdomain` in `block.json`. [#37057]
