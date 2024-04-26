@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Add cancel action for Title Optimization
 - Adds a jp_memberships_is_sandboxed item for sync.
 - AI Assistant: Add inline extensions feature flag
+- AI Assistant: Add partial heading inline extension
 - API Docs: Fix example request for media add and update endpoints.
 - Block Editor: update button props to match latest changes in WordPress 6.5.
 - CloudFlare Analytics: deprecate feature and move to mu-wpcom.
