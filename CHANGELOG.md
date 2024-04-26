@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Newsletter: Add subscrition reply to behaviour
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add aceptance for title optimization
 - Add cancel action for Title Optimization

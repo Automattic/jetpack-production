@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Newsletters: Add reply to behaviour setting
+
 ### Changed
 - Sync: When publishing post, sending the actual post in the jetpack_published_post action to avoid sending unnecessary extra action.
 
