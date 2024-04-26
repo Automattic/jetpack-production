@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add aceptance for title optimization
 - Add cancel action for Title Optimization
+- Adds a jp_memberships_is_sandboxed item for sync.
 - API Docs: Fix example request for media add and update endpoints.
 - CloudFlare Analytics: deprecate feature and move to mu-wpcom.
 - Ensure that the paid subscriber cache is unique to the parameters it consumes.
