@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.13.2-alpha] - unreleased
+## [2.14.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Sync: When publishing post, sending the actual post in the jetpack_published_post action to avoid sending unnecessary extra action.
 
 ## [2.13.1] - 2024-04-25
 ### Changed
@@ -1116,7 +1119,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[2.13.2-alpha]: https://github.com/Automattic/jetpack-sync/compare/v2.13.1...v2.13.2-alpha
+[2.14.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v2.13.1...v2.14.0-alpha
 [2.13.1]: https://github.com/Automattic/jetpack-sync/compare/v2.13.0...v2.13.1
 [2.13.0]: https://github.com/Automattic/jetpack-sync/compare/v2.12.0...v2.13.0
 [2.12.0]: https://github.com/Automattic/jetpack-sync/compare/v2.11.1...v2.12.0
