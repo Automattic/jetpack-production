@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Sync: When publishing post, sending the actual post in the jetpack_published_post action to avoid sending unnecessary extra action.
 
+### Fixed
+- Jetpack Sync: Prevent enqueueing invalid Woo HPOS order data
+
 ## [2.13.1] - 2024-04-25
 ### Changed
 - Update dependencies.
