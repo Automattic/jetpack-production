@@ -106,7 +106,7 @@ return array(
     ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
-      'ver' => '2.14.1-alpha1714405190',
+      'ver' => '2.15.0-alpha1714422600',
     ),
     'jetpack-videopress-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
