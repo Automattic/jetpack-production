@@ -2,29 +2,26 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.4-a.8 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.4-a.9 - 2024-04-29
 ### Enhancements
-- Newsletter: Add subscrition reply to behaviour
+- Newsletter: Add subscrition 'reply to' behaviour. [#37011]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add aceptance for title optimization
-- Add cancel action for Title Optimization
-- Adds a jp_memberships_is_sandboxed item for sync.
-- AI Assistant: Add inline extensions feature flag
-- AI Assistant: Add partial heading inline extension
-- API Docs: Fix example request for media add and update endpoints.
-- Block Editor: update button props to match latest changes in WordPress 6.5.
-- CloudFlare Analytics: deprecate feature and move to mu-wpcom.
-- Ensure that the paid subscriber cache is unique to the parameters it consumes.
-- Janitorial: use wp_admin_notice function introduced in WP 6.4 to display notices.
-- Subscriptions: Hide subscriber count for already subscribed users
-- Subscriptions: The in_site_migration_flow show be a string to allow us to redirect to various flows
-- Subscriptions: Track "Set up" button clicks
-- Untangling: fix sidebar upsells on Default color scheme to follow Core's
-- WordPress.com Block Editor: avoid relying on the Jetpack class.
+- Add aceptance for title optimization. [#37078]
+- Add cancel action for title optimization. [#37080]
+- Adds a jp_memberships_is_sandboxed item for sync. [#37088]
+- AI Assistant: Add inline extensions feature flag. [#37082]
+- AI Assistant: Add partial heading inline extension. [#37087]
+- API Docs: Fix example request for media add and update endpoints. [#37072]
+- Block Editor: Update button props to match latest changes in WordPress 6.5. [#36318]
+- CloudFlare Analytics: deprecate feature and move to mu-wpcom. [#37061]
+- Ensure that the paid subscriber cache is unique to the parameters it consumes. [#36925]
+- Janitorial: Use wp_admin_notice function introduced in WP 6.4 to display notices. [#37051]
+- Subscriptions: Hide subscriber count for already subscribed users. [#37073]
+- Subscriptions: The in_site_migration_flow show be a string to allow us to redirect to various flows. [#37099]
+- Subscriptions: Track "Set up" button clicks. [#37053]
+- Untangling: Fix sidebar upsells on Default color scheme to follow Core's. [#37064]
+- WordPress.com Block Editor: Avoid relying on the Jetpack class. [#37074]
 
 ## 13.4-a.7 - 2024-04-25
 ### Improved compatibility
