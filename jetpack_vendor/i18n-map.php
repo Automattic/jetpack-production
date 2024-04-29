@@ -42,7 +42,7 @@ return array(
     ),
     'jetpack-forms' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
-      'ver' => '0.30.18-alpha1714401957',
+      'ver' => '0.30.19-alpha1714405190',
     ),
     'jetpack-google-fonts-provider' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
@@ -50,15 +50,15 @@ return array(
     ),
     'jetpack-idc' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-identity-crisis',
-      'ver' => '0.18.5-alpha1714066953',
+      'ver' => '0.18.5',
     ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
-      'ver' => '0.4.0-alpha1714397940',
+      'ver' => '0.4.0-alpha1714405190',
     ),
     'jetpack-import' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-import',
-      'ver' => '0.8.4-alpha1714066953',
+      'ver' => '0.8.4',
     ),
     'jetpack-ip' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-ip',
@@ -74,7 +74,7 @@ return array(
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '4.22.3-alpha1714401957',
+      'ver' => '4.22.4-alpha1714405190',
     ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
@@ -90,11 +90,11 @@ return array(
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
-      'ver' => '0.42.13-alpha1714401957',
+      'ver' => '0.42.14-alpha1714405190',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.44.4-alpha1714401957',
+      'ver' => '0.44.5-alpha1714405190',
     ),
     'jetpack-stats' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats',
@@ -106,15 +106,15 @@ return array(
     ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
-      'ver' => '2.14.0-alpha1714401957',
+      'ver' => '2.14.1-alpha1714405190',
     ),
     'jetpack-videopress-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.23.18-alpha1714401957',
+      'ver' => '0.23.19-alpha1714405190',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
-      'ver' => '0.16.6-alpha1714401957',
+      'ver' => '0.16.7-alpha1714405190',
     ),
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
