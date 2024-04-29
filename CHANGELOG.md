@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Ensure that the paid subscriber cache is unique to the parameters it consumes.
 - Janitorial: use wp_admin_notice function introduced in WP 6.4 to display notices.
 - Subscriptions: Hide subscriber count for already subscribed users
+- Subscriptions: The in_site_migration_flow show be a string to allow us to redirect to various flows
 - Subscriptions: Track "Set up" button clicks
 - Untangling: fix sidebar upsells on Default color scheme to follow Core's
 - WordPress.com Block Editor: avoid relying on the Jetpack class.
