@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add handler for the migration_source_site_domain option
 - Subscriptions: add back missing HTML for paywall in emails
 
 ## 13.4-a.9 - 2024-04-29
