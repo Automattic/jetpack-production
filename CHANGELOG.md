@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - WordAds: ensure that ads.txt works on subdirectory websites.
 
 ### Improved compatibility
+- Theme tools: deprecated devicepx functionality
 - Theme tools: deprecated site-logo functionality in favour of core supported custom-logo.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
