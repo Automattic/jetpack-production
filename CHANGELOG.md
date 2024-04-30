@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Sync: Add Woocommerce event remove_order_items to Jetpack Sync
 - Subscriptions: add back missing HTML for paywall in emails
 - Subscriptions: Fix registering block hooks for REST API calls
+- Subscriptions: Fix Subscribed button alignment
 
 ## 13.4-a.9 - 2024-04-29
 ### Enhancements
