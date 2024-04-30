@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.22.4-alpha] - unreleased
+## [4.23.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- My Jetpack: add errors from the connection package to the new notice component
 
 ## [4.22.3] - 2024-04-29
 ### Changed
@@ -1449,7 +1452,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.22.4-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.3...4.22.4-alpha
+[4.23.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.3...4.23.0-alpha
 [4.22.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.2...4.22.3
 [4.22.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.1...4.22.2
 [4.22.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.0...4.22.1
