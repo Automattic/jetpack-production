@@ -100,7 +100,7 @@ class Authorize_Redirect {
 	/**
 	 * Create the Jetpack authorization URL.
 	 *
-	 * @since 2.7.5-alpha Added optional $from and $raw parameters.
+	 * @since 2.7.6-alpha Added optional $from and $raw parameters.
 	 *
 	 * @param bool|string $redirect URL to redirect to.
 	 * @param bool|string $from     If not false, adds 'from=$from' param to the connect URL.
@@ -124,7 +124,7 @@ class Authorize_Redirect {
 		 * Filter the URL used when authorizing a user to a WordPress.com account.
 		 *
 		 * @since jetpack-8.9.0
-		 * @since 2.7.5-alpha Added $raw parameter.
+		 * @since 2.7.6-alpha Added $raw parameter.
 		 *
 		 * @param string $url Connection URL.
 		 * @param bool   $raw If true, URL will not be escaped.
@@ -197,14 +197,14 @@ class Authorize_Redirect {
 	 * it with different Calypso enrionments, such as localhost.
 	 * Copied from Jetpack class.
 	 *
-	 * @deprecated 2.7.5-alpha
+	 * @deprecated 2.7.6-alpha
 	 *
 	 * @since 1.37.1
 	 *
 	 * @return string Calypso environment
 	 */
 	public static function get_calypso_env() {
-		_deprecated_function( __METHOD__, '2.7.5-alpha', 'Automattic\\Jetpack\\Status\\Host::get_calypso_env' );
+		_deprecated_function( __METHOD__, '2.7.6-alpha', 'Automattic\\Jetpack\\Status\\Host::get_calypso_env' );
 
 		return ( new Host() )->get_calypso_env();
 	}

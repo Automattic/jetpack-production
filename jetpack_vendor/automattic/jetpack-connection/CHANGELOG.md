@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.7.5-alpha] - unreleased
+## [2.7.6-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -14,6 +14,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - SSO: rely on Connection methods instead of relying on methods from the Jetpack plugin.
+
+## [2.7.5] - 2024-04-30
+### Changed
+- Internal updates.
 
 ## [2.7.4] - 2024-04-26
 ### Changed
@@ -1045,7 +1049,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[2.7.5-alpha]: https://github.com/Automattic/jetpack-connection/compare/v2.7.4...v2.7.5-alpha
+[2.7.6-alpha]: https://github.com/Automattic/jetpack-connection/compare/v2.7.5...v2.7.6-alpha
+[2.7.5]: https://github.com/Automattic/jetpack-connection/compare/v2.7.4...v2.7.5
 [2.7.4]: https://github.com/Automattic/jetpack-connection/compare/v2.7.3...v2.7.4
 [2.7.3]: https://github.com/Automattic/jetpack-connection/compare/v2.7.2...v2.7.3
 [2.7.2]: https://github.com/Automattic/jetpack-connection/compare/v2.7.1...v2.7.2
