@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add handler for the migration_source_site_domain option
 - Jetpack Sync: Add Woocommerce event remove_order_items to Jetpack Sync
 - Subscriptions: add back missing HTML for paywall in emails
+- Subscriptions: Fix registering block hooks for REST API calls
 
 ## 13.4-a.9 - 2024-04-29
 ### Enhancements
