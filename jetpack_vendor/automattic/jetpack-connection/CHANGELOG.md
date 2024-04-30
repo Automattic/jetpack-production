@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- SSO: rely on Connection methods instead of relying on methods from the Jetpack plugin.
+
 ## [2.7.4] - 2024-04-26
 ### Changed
 - General: use wp_admin_notice function introduced in WP 6.4 to display notices. [#37051]
