@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add a method to find all plans that are valid for a given newsletter tier.
+- Subscription widget: remove "follow" term from confirmation message
 - WordAds: ensure that ads.txt works on subdirectory websites.
 
 ### Improved compatibility
