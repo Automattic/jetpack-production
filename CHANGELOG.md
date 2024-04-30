@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Featured Image: allow users to write prompts for the image generation.
 - Janitorial: deprecate methods in Jetpack class in favor of methods from the Connection package.
 - Jetpack Sync: Add Woocommerce event remove_order_items to Jetpack Sync
+- SSO: deprecate in-plugin methods in favor of methods from the Connection package.
 - Subscriptions: add back missing HTML for paywall in emails
 - Subscriptions: Fix registering block hooks for REST API calls
 - Subscriptions: Fix Subscribed button alignment
