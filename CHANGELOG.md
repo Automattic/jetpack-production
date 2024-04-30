@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Add a method to find all plans that are valid for a given newsletter tier.
 - WordAds: ensure that ads.txt works on subdirectory websites.
 
+### Improved compatibility
+- Theme tools: deprecated site-logo functionality in favour of core supported custom-logo.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add handler for the migration_source_site_domain option
 - Jetpack Sync: Add Woocommerce event remove_order_items to Jetpack Sync
