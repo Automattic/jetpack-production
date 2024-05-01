@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.15.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [2.15.0] - 2024-04-30
 ### Added
 - Add Woocommerce event remove_order_items to Jetpack Sync [#33748]
@@ -1126,6 +1130,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[2.15.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v2.15.0...v2.15.1-alpha
 [2.15.0]: https://github.com/Automattic/jetpack-sync/compare/v2.14.0...v2.15.0
 [2.14.0]: https://github.com/Automattic/jetpack-sync/compare/v2.13.1...v2.14.0
 [2.13.1]: https://github.com/Automattic/jetpack-sync/compare/v2.13.0...v2.13.1
