@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Disable Paid Newsletter settings section when user is not connected to wp.com
 - Subscriptions: Fix registering block hooks for REST API calls
 - Subscriptions: Fix Subscribed button alignment
+- Subscriptions: Move the Newsletter module main toggle to separate section in Newsletter settings
 
 ## 13.4-a.9 - 2024-04-29
 ### Enhancements
