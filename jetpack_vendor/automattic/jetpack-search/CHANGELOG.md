@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add missing package dependencies.
 
+### Changed
+- Updated package dependencies.
+
 ## [0.44.4] - 2024-04-29
 ### Fixed
 - Fix connection flow for new sites. [#37085]

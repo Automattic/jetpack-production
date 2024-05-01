@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added feature flag for new social admin ui
 
+### Changed
+- Updated package dependencies.
+
 ## [0.42.13] - 2024-04-29
 ### Changed
 - Internal updates.

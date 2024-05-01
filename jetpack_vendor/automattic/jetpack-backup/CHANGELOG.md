@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add missing package dependencies.
 
+### Changed
+- Updated package dependencies.
+
 ## [3.3.9] - 2024-04-25
 ### Changed
 - Internal updates.

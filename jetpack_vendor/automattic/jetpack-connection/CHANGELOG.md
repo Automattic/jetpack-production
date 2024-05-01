@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - SSO: rely on Connection methods instead of relying on methods from the Jetpack plugin.
+- Updated package dependencies.
 
 ## [2.7.5] - 2024-04-30
 ### Changed
