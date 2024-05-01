@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Sync: Add Woocommerce event remove_order_items to Jetpack Sync
 - SSO: deprecate in-plugin methods in favor of methods from the Connection package.
 - Subscriptions: add back missing HTML for paywall in emails
+- Subscriptions: Disable Paid Newsletter settings section when user is not connected to wp.com
 - Subscriptions: Fix registering block hooks for REST API calls
 - Subscriptions: Fix Subscribed button alignment
 
