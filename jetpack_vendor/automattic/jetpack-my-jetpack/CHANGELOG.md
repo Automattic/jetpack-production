@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: add errors from the connection package to the new notice component
 
+### Changed
+- Updated package dependencies.
+
 ## [4.22.3] - 2024-04-29
 ### Changed
 - Internal updates.
