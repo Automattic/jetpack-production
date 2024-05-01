@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Theme tools: deprecated site-logo functionality in favour of core supported custom-logo.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added feature flag for social admin ui
 - Add handler for the migration_source_site_domain option
 - AI Featured Image: allow users to write prompts for the image generation.
 - Janitorial: deprecate methods in Jetpack class in favor of methods from the Connection package.
