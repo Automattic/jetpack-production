@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added feature flag for social admin ui
 - Add handler for the migration_source_site_domain option
+- AI Assistant: Fix AI Control positioning on inline extension
 - AI Featured Image: allow users to write prompts for the image generation.
 - Janitorial: deprecate methods in Jetpack class in favor of methods from the Connection package.
 - Jetpack Sync: Add Woocommerce event remove_order_items to Jetpack Sync
