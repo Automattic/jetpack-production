@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Add handler for the migration_source_site_domain option
 - Add tracks and new entries for title optimization
 - AI Assistant: Fix AI Control positioning on inline extension
+- AI Assistant: Link toolbar actions to requests on inline extensions
 - AI Featured Image: add entry point on the media source dropdown menu.
 - AI Featured Image: allow users to write prompts for the image generation.
 - Janitorial: deprecate methods in Jetpack class in favor of methods from the Connection package.
