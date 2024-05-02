@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: add errors from the connection package to the new notice component
 
 ### Changed
+- change "go back" in My Jetpack interstitials to always return to the My Jetpack page
 - Updated package dependencies.
 
 ## [4.22.3] - 2024-04-29
