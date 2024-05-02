@@ -15,7 +15,7 @@
 		"automattic/jetpack-abtest": "^2.0.3",
 		"automattic/jetpack-admin-ui": "^0.4.2",
 		"automattic/jetpack-assets": "^2.1.9-alpha",
-		"automattic/jetpack-autoloader": "^3.0.6",
+		"automattic/jetpack-autoloader": "^3.0.7-alpha",
 		"automattic/jetpack-backup": "^3.3.10-alpha",
 		"automattic/jetpack-blaze": "^0.21.2-alpha",
 		"automattic/jetpack-blocks": "^2.0.3",
