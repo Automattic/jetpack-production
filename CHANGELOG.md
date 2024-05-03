@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added feature flag for social admin ui
+- Add error handling on Title Optimization
 - Add handler for the migration_source_site_domain option
 - Add tracks and new entries for title optimization
 - AI Assistant: Add undo functionality and fix input with iframe
