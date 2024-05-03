@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Theme tools: deprecated devicepx functionality
 - Theme tools: deprecated site-logo functionality in favour of core supported custom-logo.
 
+### Bug fixes
+- Sidebar: Fix showing the double arrow on active menu when RTL
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added feature flag for social admin ui
 - Add error handling on Title Optimization
