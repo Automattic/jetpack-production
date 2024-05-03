@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fix reference to `Jetpack_Options` class in `Contact_Form_Plugin::record_tracks_event()`.
+
 ## [0.30.18] - 2024-04-29
 ### Changed
 - General: Use wp_admin_notice function introduced in WP 6.4 to display notices. [#37051]

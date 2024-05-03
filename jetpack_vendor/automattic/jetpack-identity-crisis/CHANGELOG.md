@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fix class references in `URL_Secret::create_secret()` exception handler.
+
 ## [0.18.5] - 2024-04-29
 ### Changed
 - Internal updates.

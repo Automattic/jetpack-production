@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - add a has_free_offering boolean on My Jetpack products
+- Define `$module_name` static property on `Hybrid_Product` (defaulting to null).
 - Jetpack AI: add new badge to Featured Image video on the product page.
 - My Jetpack: add errors from the connection package to the new notice component
 

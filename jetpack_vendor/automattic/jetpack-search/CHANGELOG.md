@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Deprecated
+- Deprecate `jetpack_search` property on `Search_Widget`. It has never been set to a non-null value since the package was created.
+
 ## [0.44.4] - 2024-04-29
 ### Fixed
 - Fix connection flow for new sites. [#37085]
