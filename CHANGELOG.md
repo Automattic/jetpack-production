@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Link toolbar actions to requests on inline extensions
 - AI Featured Image: add entry point on the media source dropdown menu.
 - AI Featured Image: allow users to write prompts for the image generation.
+- AI Featured Image: start tracking error messages.
 - Janitorial: deprecate methods in Jetpack class in favor of methods from the Connection package.
 - Jetpack Sync: Add Woocommerce event remove_order_items to Jetpack Sync
 - SSO: deprecate in-plugin methods in favor of methods from the Connection package.
