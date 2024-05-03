@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Fix Subscribed button alignment
 - Subscriptions: Move the Newsletter module main toggle to separate section in Newsletter settings
 - Updated package dependencies.
+- Update interface of Usage Counter on Jetpack Plugin
 - WordPress.com REST API: exposed is_deleted attribute with sites API response
 
 ## 13.4-a.9 - 2024-04-29
