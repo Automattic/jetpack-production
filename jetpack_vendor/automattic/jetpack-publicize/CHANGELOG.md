@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added feature flag for new social admin ui
+- Added new endpoint to delete publicize connection
 - Social Admin page: Added connection management component
 
 ### Changed
