@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - change "go back" in My Jetpack interstitials to always return to the My Jetpack page
 - Fix z-index issue and close action button dropdown when clicked outside
+- Jetpack AI: Add featured image generation as a feature on the product interstitial
 - Jetpack AI: include video about featured image generation on the product page.
 - Updated package dependencies.
 
