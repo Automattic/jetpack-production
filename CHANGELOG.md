@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add a method to find all plans that are valid for a given newsletter tier.
+- Paid content block: swap out the login flow
 - Subscriptions: manage subscribers in Jetpack cloud instead of WP.com.
 - Subscription widget: remove "follow" term from confirmation message
 - WordAds: ensure that ads.txt works on subdirectory websites.
