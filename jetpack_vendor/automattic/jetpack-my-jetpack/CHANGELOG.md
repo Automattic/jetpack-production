@@ -5,23 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.23.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.23.0] - 2024-05-06
 ### Added
-- add a has_free_offering boolean on My Jetpack products
-- Add copy for AI features on connection screen
-- Define `$module_name` static property on `Hybrid_Product` (defaulting to null).
-- Jetpack AI: add new badge to Featured Image video on the product page.
-- My Jetpack: add errors from the connection package to the new notice component
+- Add a has_free_offering boolean on My Jetpack products. [#36710]
+- Add copy for AI features on connection screen. [#37218]
+- Define `$module_name` static property on `Hybrid_Product` (defaulting to null). [#37201]
+- Jetpack AI: Add new badge to Featured Image video on the product page. [#37197]
+- My Jetpack: Add errors from the connection package to the new notice component. [#36840]
 
 ### Changed
-- change "go back" in My Jetpack interstitials to always return to the My Jetpack page
-- Fix z-index issue and close action button dropdown when clicked outside
-- Jetpack AI: Add featured image generation as a feature on the product interstitial
-- Jetpack AI: include video about featured image generation on the product page.
-- Updated package dependencies.
+- Change "go back" in My Jetpack interstitials to always return to the My Jetpack page. [#36685]
+- Fix z-index issue and close action button dropdown when clicked outside. [#37169]
+- Jetpack AI: Add featured image generation as a feature on the product interstitial. [#37199]
+- Jetpack AI: Include video about featured image generation on the product page. [#37192]
+- Updated package dependencies. [#37147] [#37148] [#37160]
 
 ## [4.22.3] - 2024-04-29
 ### Changed
@@ -1463,7 +1460,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.23.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.3...4.23.0-alpha
+[4.23.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.3...4.23.0
 [4.22.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.2...4.22.3
 [4.22.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.1...4.22.2
 [4.22.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.0...4.22.1

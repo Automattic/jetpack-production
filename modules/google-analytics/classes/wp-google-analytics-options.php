@@ -3,7 +3,7 @@
  * Class exists exclusively for backward compatibility.
  * Do not use.
  *
- * @deprecated 13.4-a.10
+ * @deprecated 13.5-a.0
  * @package automattic/jetpack
  */
 
@@ -19,7 +19,7 @@ if ( ! class_exists( 'Jetpack_Google_Analytics_Options' ) ) {
 	 * Class exists exclusively for backward compatibility.
 	 * Do not use.
 	 *
-	 * @deprecated 13.4-a.10
+	 * @deprecated 13.5-a.0
 	 */
 	class Jetpack_Google_Analytics_Options extends Automattic\Jetpack\Google_Analytics\Options {
 	}
