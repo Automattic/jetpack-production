@@ -44,6 +44,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
       'ver' => '0.31.0-alpha1715012262',
     ),
+    'jetpack-google-analytics' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-google-analytics',
+      'ver' => '0.1.0-alpha1714729457',
+    ),
     'jetpack-google-fonts-provider' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
       'ver' => '0.7.2',
