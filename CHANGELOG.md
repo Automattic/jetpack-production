@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Add error handling on Title Optimization
 - Add handler for the migration_source_site_domain option
 - Add tracks and new entries for title optimization
+- AI Assistant: Add messages to inline extensions
 - AI Assistant: Add undo functionality and fix input with iframe
 - AI Assistant: Fix AI Control positioning on inline extension
 - AI Assistant: Link toolbar actions to requests on inline extensions
