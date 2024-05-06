@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Google Analytics: switch the module to use the package.
 - Janitorial: deprecate methods in Jetpack class in favor of methods from the Connection package.
 - Jetpack Sync: Add Woocommerce event remove_order_items to Jetpack Sync
+- Remove wp-windows8 gallery shortcode special case in WPCOM API post endpoint.
 - SSO: deprecate in-plugin methods in favor of methods from the Connection package.
 - Subscription: add comment as a subscription reply to type only availave for simple sites now.
 - Subscriptions: add back missing HTML for paywall in emails
