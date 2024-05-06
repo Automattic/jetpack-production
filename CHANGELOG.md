@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Featured Image: change upgrade prompt layout and fix UI issues.
 - AI Featured Image: start tracking error messages.
 - Contact Form: Removing code and renaming relevant references to ensure we use the package version of the contact form.
+- External Media: support editor changes in WordPress 6.5.
 - Janitorial: deprecate methods in Jetpack class in favor of methods from the Connection package.
 - Jetpack Sync: Add Woocommerce event remove_order_items to Jetpack Sync
 - SSO: deprecate in-plugin methods in favor of methods from the Connection package.
