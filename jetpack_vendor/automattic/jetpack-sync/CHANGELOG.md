@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.15.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.15.1] - 2024-05-06
 ### Fixed
-- Reimplement `Replicastore::get_user()` to not try to call a nonexistent method.
-- Sync:Disable jetpack_sync_queue custom table in case feature is enabled, but table does not exist in the DB.
+- Reimplement `Replicastore::get_user()` to not try to call a nonexistent method. [#37201]
+- Sync:Disable jetpack_sync_queue custom table in case feature is enabled, but table does not exist in the DB. [#37108]
 
 ## [2.15.0] - 2024-04-30
 ### Added
@@ -1134,7 +1131,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[2.15.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v2.15.0...v2.15.1-alpha
+[2.15.1]: https://github.com/Automattic/jetpack-sync/compare/v2.15.0...v2.15.1
 [2.15.0]: https://github.com/Automattic/jetpack-sync/compare/v2.14.0...v2.15.0
 [2.14.0]: https://github.com/Automattic/jetpack-sync/compare/v2.13.1...v2.14.0
 [2.13.1]: https://github.com/Automattic/jetpack-sync/compare/v2.13.0...v2.13.1

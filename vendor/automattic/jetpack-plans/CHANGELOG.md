@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.7-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.4.7] - 2024-05-06
 ### Fixed
-- Correctly reference `Store_Product_List` class in `Plans::get_plans()`.
+- Correctly reference `Store_Product_List` class in `Plans::get_plans()`. [#37201]
 
 ## [0.4.6] - 2024-04-25
 ### Changed
@@ -141,7 +138,7 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Moved the options class into Connection. [#24095]
 
-[0.4.7-alpha]: https://github.com/Automattic/jetpack-plans/compare/v0.4.6...v0.4.7-alpha
+[0.4.7]: https://github.com/Automattic/jetpack-plans/compare/v0.4.6...v0.4.7
 [0.4.6]: https://github.com/Automattic/jetpack-plans/compare/v0.4.5...v0.4.6
 [0.4.5]: https://github.com/Automattic/jetpack-plans/compare/v0.4.4...v0.4.5
 [0.4.4]: https://github.com/Automattic/jetpack-plans/compare/v0.4.3...v0.4.4

@@ -2,49 +2,46 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.4-a.10 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.4-beta - 2024-05-06
 ### Enhancements
-- Add a method to find all plans that are valid for a given newsletter tier.
-- Paid content block: swap out the login flow
-- Subscriptions: manage subscribers in Jetpack cloud instead of WP.com.
-- Subscription widget: remove "follow" term from confirmation message
-- WordAds: ensure that ads.txt works on subdirectory websites.
+- Paid Content Block: Swap out the login flow. [#37178]
+- Subscriptions: Manage subscribers in Jetpack Cloud instead of WP.com. [#37155]
+- Subscription widget: Remove "follow" term from confirmation message [#37135]
+- WordAds: Ensure that ads.txt works on subdirectory websites. [#36887]
 
 ### Improved compatibility
-- Theme tools: deprecated devicepx functionality
-- Theme tools: deprecated site-logo functionality in favour of core supported custom-logo.
+- Theme tools: Devicepx functionality is deprecated. [#37116]
+- Theme tools: Site-logo functionality is deprecated in favour of core supported custom-logo. [#37109]
 
 ### Bug fixes
-- Sidebar: Fix showing the double arrow on active menu when RTL
+- Sidebar: Fix showing the double arrow on active menu when RTL [#37204]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added feature flag for social admin ui
-- Add error handling on Title Optimization
-- Add handler for the migration_source_site_domain option
-- Add tracks and new entries for title optimization
-- AI Assistant: Add undo functionality and fix input with iframe
-- AI Assistant: Fix AI Control positioning on inline extension
-- AI Assistant: Link toolbar actions to requests on inline extensions
-- AI Featured Image: add entry point on the media source dropdown menu.
-- AI Featured Image: allow users to write prompts for the image generation.
-- AI Featured Image: change upgrade prompt layout and fix UI issues.
-- AI Featured Image: start tracking error messages.
-- Contact Form: Removing code and renaming relevant references to ensure we use the package version of the contact form.
-- Janitorial: deprecate methods in Jetpack class in favor of methods from the Connection package.
-- Jetpack Sync: Add Woocommerce event remove_order_items to Jetpack Sync
-- SSO: deprecate in-plugin methods in favor of methods from the Connection package.
-- Subscriptions: add back missing HTML for paywall in emails
-- Subscriptions: Disable Paid Newsletter settings section when user is not connected to wp.com
-- Subscriptions: Fix registering block hooks for REST API calls
-- Subscriptions: Fix Subscribed button alignment
-- Subscriptions: Move the Newsletter module main toggle to separate section in Newsletter settings
-- Sync ai plugin content across settings and jetpack sidebar
-- Updated package dependencies.
-- Update interface of Usage Counter on Jetpack Plugin
-- WordPress.com REST API: exposed is_deleted attribute with sites API response
+- Add a method to find all plans that are valid for a given newsletter tier. [#37084]
+- Added feature flag for social admin UI. [#37134]
+- Add error handling on Title Optimization. [#37195]
+- Add handler for the migration_source_site_domain option. [#37100]
+- Add tracks and new entries for title optimization. [#37180]
+- AI Assistant: Add undo functionality and fix input with iframe. [#37200]
+- AI Assistant: Fix AI Control positioning on inline extension. [#37145]
+- AI Assistant: Link toolbar actions to requests on inline extensions. [#37168]
+- AI Featured Image: Add entry point on the media source dropdown menu. [#37166]
+- AI Featured Image: Allow users to write prompts for the image generation. [#37086]
+- AI Featured Image: Change upgrade prompt layout and fix UI issues. [#37219]
+- AI Featured Image: Start tracking error messages. [#37209]
+- Contact Form: Removing code and renaming relevant references to ensure we use the package version of the contact form. [#37157]
+- Janitorial: Deprecate methods in Jetpack class in favor of methods from the Connection package. [#36989]
+- Jetpack Sync: Add Woocommerce event remove_order_items to Jetpack Sync. [#33748]
+- SSO: Deprecate in-plugin methods in favor of methods from the Connection package. [#36924]
+- Subscriptions: Add back missing HTML for paywall in emails. [#37117]
+- Subscriptions: Disable Paid Newsletter settings section when user is not connected to WP.com. [#37149]
+- Subscriptions: Fix registering block hooks for REST API calls. [#37123]
+- Subscriptions: Fix Subscribed button alignment. [#37066]
+- Subscriptions: Move the Newsletter module main toggle to separate section in Newsletter settings. [#37152]
+- Sync AI plugin content across settings and jetpack sidebar. [#37220]
+- Updated package dependencies. [#37147] [#37148]
+- Update interface of Usage Counter on Jetpack Plugin. [#37216]
+- WordPress.com REST API: Exposed is_deleted attribute with sites API response. [#37142]
 
 ## 13.4-a.9 - 2024-04-29
 ### Enhancements

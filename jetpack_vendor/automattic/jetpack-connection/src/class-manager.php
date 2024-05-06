@@ -1878,7 +1878,7 @@ class Manager {
 	/**
 	 * Builds a URL to the Jetpack connection auth page.
 	 *
-	 * @since 2.7.6-alpha Added optional $from and $raw parameters.
+	 * @since 2.7.6 Added optional $from and $raw parameters.
 	 *
 	 * @param WP_User     $user     (optional) defaults to the current logged in user.
 	 * @param string      $redirect (optional) a redirect URL to use instead of the default.
@@ -1996,7 +1996,7 @@ class Manager {
 		 * Filter the URL used when connecting a user to a WordPress.com account.
 		 *
 		 * @since 2.0.0
-		 * @since 2.7.6-alpha Added $raw parameter.
+		 * @since 2.7.6 Added $raw parameter.
 		 *
 		 * @param string $url Connection URL.
 		 * @param bool   $raw If true, URL will not be escaped.
