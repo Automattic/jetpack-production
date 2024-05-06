@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Reimplement `Replicastore::get_user()` to not try to call a nonexistent method.
+- Sync:Disable jetpack_sync_queue custom table in case feature is enabled, but table does not exist in the DB.
 
 ## [2.15.0] - 2024-04-30
 ### Added
