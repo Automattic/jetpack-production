@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add messages to inline extensions
 - AI Assistant: Change way messages are built for inline extensions
+- Custom CSS: add deprecation warning in codebase
 - External Media: support editor changes in WordPress 6.5.
 - Google Analytics: switch the module to use the package.
 - Remove wp-windows8 gallery shortcode special case in WPCOM API post endpoint.
