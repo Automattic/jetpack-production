@@ -2,13 +2,6 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.5-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Sanitize the preload value for video shortcodes and blocks
-
 ## 13.4 - 2024-05-07
 ### Enhancements
 - Jetpack AI: Add an AI Featured Image Generator. [#36709] [#36806] [#36812] [#36822] [#36831] [#36863] [#36865] [#36868] [#36899] [#36926] [#36963] [#36965] [#37086] [#37166] [#37209] [#37219]
