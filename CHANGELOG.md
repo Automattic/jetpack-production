@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Google Analytics: switch the module to use the package.
 - Remove wp-windows8 gallery shortcode special case in WPCOM API post endpoint.
 - Subscription: add comment as a subscription reply to type only availave for simple sites now.
+- Tiled Gallery: fix view rendering issues
 
 ## 13.4-beta - 2024-05-06
 ### Enhancements
