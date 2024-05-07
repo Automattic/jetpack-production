@@ -1088,17 +1088,17 @@
         },
         {
             "name": "automattic/jetpack-forms",
-            "version": "v0.31.0",
-            "version_normalized": "0.31.0.0",
+            "version": "v0.31.1",
+            "version_normalized": "0.31.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-forms.git",
-                "reference": "dbc40b7c3f76fc1d81cb0ec251da1933fc00aaca"
+                "reference": "78b45c6f7e23d2a39d9b4f1e78a500aa62d69f5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-forms/zipball/dbc40b7c3f76fc1d81cb0ec251da1933fc00aaca",
-                "reference": "dbc40b7c3f76fc1d81cb0ec251da1933fc00aaca",
+                "url": "https://api.github.com/repos/Automattic/jetpack-forms/zipball/78b45c6f7e23d2a39d9b4f1e78a500aa62d69f5b",
+                "reference": "78b45c6f7e23d2a39d9b4f1e78a500aa62d69f5b",
                 "shasum": ""
             },
             "require": {
@@ -1119,7 +1119,7 @@
             "suggest": {
                 "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
             },
-            "time": "2024-05-06T17:34:41+00:00",
+            "time": "2024-05-07T19:42:31+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -1147,7 +1147,7 @@
             ],
             "description": "Jetpack Forms",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-forms/tree/v0.31.0"
+                "source": "https://github.com/Automattic/jetpack-forms/tree/v0.31.1"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-forms"
         },
@@ -2425,17 +2425,17 @@
         },
         {
             "name": "automattic/jetpack-videopress",
-            "version": "v0.23.19",
-            "version_normalized": "0.23.19.0",
+            "version": "v0.23.20",
+            "version_normalized": "0.23.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-videopress.git",
-                "reference": "23747cb1835bccae84316454e194411b87167fc2"
+                "reference": "3b7b61fa538cd1781949284f443ad7b39aea9fbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-videopress/zipball/23747cb1835bccae84316454e194411b87167fc2",
-                "reference": "23747cb1835bccae84316454e194411b87167fc2",
+                "url": "https://api.github.com/repos/Automattic/jetpack-videopress/zipball/3b7b61fa538cd1781949284f443ad7b39aea9fbb",
+                "reference": "3b7b61fa538cd1781949284f443ad7b39aea9fbb",
                 "shasum": ""
             },
             "require": {
@@ -2455,7 +2455,7 @@
             "suggest": {
                 "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
             },
-            "time": "2024-05-06T17:34:45+00:00",
+            "time": "2024-05-07T19:42:35+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
@@ -2483,7 +2483,7 @@
             ],
             "description": "VideoPress package",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-videopress/tree/v0.23.19"
+                "source": "https://github.com/Automattic/jetpack-videopress/tree/v0.23.20"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-videopress"
         },
