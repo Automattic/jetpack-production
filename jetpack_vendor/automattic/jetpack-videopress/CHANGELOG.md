@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.23.20-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Sanitize the preload value for video shortcodes and blocks
+
 ## [0.23.19] - 2024-05-06
 ### Added
 - Add missing package dependencies. [#37141]
@@ -1333,6 +1340,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created empty package [#24952]
 
+[0.23.20-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.19...v0.23.20-alpha
 [0.23.19]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.18...v0.23.19
 [0.23.18]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.17...v0.23.18
 [0.23.17]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.16...v0.23.17

@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - External Media: support editor changes in WordPress 6.5.
 - Google Analytics: switch the module to use the package.
 - Remove wp-windows8 gallery shortcode special case in WPCOM API post endpoint.
+- Sanitize the preload value for video shortcodes and blocks
 - Subscription: add comment as a subscription reply to type only availave for simple sites now.
 - Tiled Gallery: fix view rendering issues
 

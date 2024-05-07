@@ -48,7 +48,7 @@
 		"automattic/jetpack-stats-admin": "^0.19.1",
 		"automattic/jetpack-status": "^3.0.2",
 		"automattic/jetpack-sync": "^2.15.1",
-		"automattic/jetpack-videopress": "^0.23.19",
+		"automattic/jetpack-videopress": "^0.23.20-alpha",
 		"automattic/jetpack-waf": "^0.16.7",
 		"automattic/jetpack-wordads": "^0.3.17",
 		"automattic/woocommerce-analytics": "^0.1.5",
