@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove wp-windows8 gallery shortcode special case in WPCOM API post endpoint.
 - Sanitize the preload value for video shortcodes and blocks
 - Subscription: add comment as a subscription reply to type only availave for simple sites now.
+- Subscription settings: remove extraneus "support info" bubble
 - Tiled Gallery: fix view rendering issues
 
 ## 13.4-beta - 2024-05-06
