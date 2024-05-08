@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Change way messages are built for inline extensions
 - AI Assistant: Fix try again behavior on inline extensions
 - Custom CSS: add deprecation warning in codebase
+- ensures notifications cache buster is available for wpcom-notes-admin-bar script
 - External Media: support editor changes in WordPress 6.5.
 - Fixed TS compile error for image imports in js-packages
 - Google Analytics: switch the module to use the package.
