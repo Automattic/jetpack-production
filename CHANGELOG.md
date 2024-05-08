@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: Unhook the jetpack_form_register_pattern function to prevent most deprecation notices.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add: tracks for email settings
 - AI Assistant: Add messages to inline extensions
 - AI Assistant: Change way messages are built for inline extensions
 - AI Assistant: Fix try again behavior on inline extensions
