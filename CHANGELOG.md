@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Fix try again behavior on inline extensions
 - Custom CSS: add deprecation warning in codebase
 - External Media: support editor changes in WordPress 6.5.
+- Fixed TS compile error for image imports in js-packages
 - Google Analytics: switch the module to use the package.
 - Remove wp-windows8 gallery shortcode special case in WPCOM API post endpoint.
 - Sanitize the preload value for video shortcodes and blocks
