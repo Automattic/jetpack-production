@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom CSS: add deprecation warning in codebase
 - ensures notifications cache buster is available for wpcom-notes-admin-bar script
 - External Media: support editor changes in WordPress 6.5.
+- Extract Google Analytics tests into the package.
 - Fixed TS compile error for image imports in js-packages
 - Google Analytics: switch the module to use the package.
 - Remove wp-windows8 gallery shortcode special case in WPCOM API post endpoint.

@@ -12,3 +12,4 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Copy the code from the Jetpack module into the package.
 - Initial version.
+- Migrate unit tests from the Jetpack module.
