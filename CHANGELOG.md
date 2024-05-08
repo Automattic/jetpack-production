@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - WordAds: add inline ads within post content.
 
+### Bug fixes
+- Contact Form: Unhook the jetpack_form_register_pattern function to prevent most deprecation notices.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add messages to inline extensions
 - AI Assistant: Change way messages are built for inline extensions
