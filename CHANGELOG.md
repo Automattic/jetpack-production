@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription settings: remove extraneus "support info" bubble
 - Tiled Gallery: fix view rendering issues
 - Updated phan baseline files
+- WordPress.com Toolbar: Remove "My Sites" text and only display icon
 
 ## 13.4-beta - 2024-05-06
 ### Enhancements
