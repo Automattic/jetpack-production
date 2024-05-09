@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add: tracks for email settings
+- AI Assistant: Add events to inline extensions
 - AI Assistant: Add messages to inline extensions
 - AI Assistant: Change way messages are built for inline extensions
 - AI Assistant: Fix try again behavior on inline extensions
