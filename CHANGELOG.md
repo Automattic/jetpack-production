@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Contact Form: Unhook the jetpack_form_register_pattern function to prevent most deprecation notices.
+- SSO: Fix tooltip display on view all users page
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add: tracks for email settings
