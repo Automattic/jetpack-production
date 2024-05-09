@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Google Analytics: switch the module to use the package.
 - Newsletters: improvements to prepublish panel.
 - Remove wp-windows8 gallery shortcode special case in WPCOM API post endpoint.
+- Rendered GlobalNotices component
 - Sanitize the preload value for video shortcodes and blocks
 - Subscription: add comment as a subscription reply to type only availave for simple sites now.
 - Subscription settings: remove extraneus "support info" bubble
