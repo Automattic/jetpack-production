@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - ensures notifications cache buster is available for wpcom-notes-admin-bar script
 - External Media: support editor changes in WordPress 6.5.
 - Extract Google Analytics tests into the package.
+- Fixed a warning thrown by the gravatar profile widget.
 - Fixed TS compile error for image imports in js-packages
 - Google Analytics: switch the module to use the package.
 - Newsletters: improvements to prepublish panel.
