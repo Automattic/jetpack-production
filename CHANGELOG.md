@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add events to inline extensions
 - AI Assistant: Add messages to inline extensions
 - AI Assistant: Change way messages are built for inline extensions
+- AI Assistant: Fix input z-index on moving block with inline extension
 - AI Assistant: Fix try again behavior on inline extensions
 - Blocks: When outputting JSON data in inline script tags, only use `JSON_UNESCAPED_UNICODE` when the blog charset is UTF-8.
 - Custom CSS: add deprecation warning in codebase
