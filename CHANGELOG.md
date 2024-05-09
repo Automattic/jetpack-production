@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Rendered GlobalNotices component
 - Sanitize the preload value for video shortcodes and blocks
 - Subscription: add comment as a subscription reply to type only availave for simple sites now.
+- Subscriptions: Fix class Abstract_Token_Subscription_Service not tound error
 - Subscription settings: remove extraneus "support info" bubble
 - Tiled Gallery: fix view rendering issues
 - Updated phan baseline files
