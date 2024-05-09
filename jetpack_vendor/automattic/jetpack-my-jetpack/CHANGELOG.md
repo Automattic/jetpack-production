@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - My Jetpack Agency banner copy change.
 
+### Fixed
+- Fix typo
+
 ## [4.23.1] - 2024-05-08
 ### Changed
 - Update dependencies.
