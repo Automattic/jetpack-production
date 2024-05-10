@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- SSO: Ensuring tooltips are accessible
 - WordAds: add inline ads within post content.
 
 ### Bug fixes
