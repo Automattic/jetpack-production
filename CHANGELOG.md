@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed a warning thrown by the gravatar profile widget.
 - Fixed TS compile error for image imports in js-packages
 - Google Analytics: switch the module to use the package.
+- Move title optimization to production
 - Newsletters: improvements to prepublish panel.
 - Remove wp-windows8 gallery shortcode special case in WPCOM API post endpoint.
 - Rendered GlobalNotices component
