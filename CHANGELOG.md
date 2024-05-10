@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription settings: remove extraneus "support info" bubble
 - Tiled Gallery: fix view rendering issues
 - Updated phan baseline files
+- Update invite user error response logging
 - Update sizes and spacings on Title Optimization
 - WordPress.com Toolbar: Remove "My Sites" text and only display icon
 
