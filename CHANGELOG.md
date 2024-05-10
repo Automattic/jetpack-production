@@ -11,7 +11,6 @@ This is an alpha version! The changes listed here are not final.
 - WordAds: add inline ads within post content.
 
 ### Bug fixes
-- Contact Form: Unhook the jetpack_form_register_pattern function to prevent most deprecation notices.
 - SSO: Fix tooltip display on view all users page
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
@@ -44,6 +43,10 @@ This is an alpha version! The changes listed here are not final.
 - Update invite user error response logging
 - Update sizes and spacings on Title Optimization
 - WordPress.com Toolbar: Remove "My Sites" text and only display icon
+
+## 13.4.1 - 2024-05-10
+### Bug fixes
+- Contact Form: Unhook the jetpack_form_register_pattern function to prevent unwanted deprecation notices. [#37278]
 
 ## 13.4 - 2024-05-07
 ### Enhancements
