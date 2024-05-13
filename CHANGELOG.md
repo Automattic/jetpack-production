@@ -2,47 +2,42 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.5-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.5-a.1 - 2024-05-13
 ### Enhancements
-- SSO: Ensuring tooltips are accessible
-- WordAds: add inline ads within post content.
-
-### Bug fixes
-- SSO: Fix tooltip display on view all users page
+- SSO: Improve accessibility of tooltips on WP Admin users page. [#37302]
+- WordAds: Add inline ads within post content. [#37170]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add: tracks for email settings
-- AI Assistant: Add events to inline extensions
-- AI Assistant: Add messages to inline extensions
-- AI Assistant: Change way messages are built for inline extensions
-- AI Assistant: Fix inline extension styles on P2 and some themes
-- AI Assistant: Fix input z-index on moving block with inline extension
-- AI Assistant: Fix try again behavior on inline extensions
-- Blocks: When outputting JSON data in inline script tags, only use `JSON_UNESCAPED_UNICODE` when the blog charset is UTF-8.
-- Custom CSS: add deprecation warning in codebase
-- ensures notifications cache buster is available for wpcom-notes-admin-bar script
-- External Media: support editor changes in WordPress 6.5.
-- Extract Google Analytics tests into the package.
-- Fix an occasional PHP warning when iterating over menu items in the masterbar module.
-- Fixed a warning thrown by the gravatar profile widget.
-- Fixed TS compile error for image imports in js-packages
-- Google Analytics: switch the module to use the package.
-- Move title optimization to production
-- Newsletters: improvements to prepublish panel.
-- Remove wp-windows8 gallery shortcode special case in WPCOM API post endpoint.
-- Rendered GlobalNotices component
-- Sanitize the preload value for video shortcodes and blocks
-- Subscription: add comment as a subscription reply to type only availave for simple sites now.
-- Subscriptions: Fix class Abstract_Token_Subscription_Service not tound error
-- Subscription settings: remove extraneus "support info" bubble
-- Tiled Gallery: fix view rendering issues
-- Updated phan baseline files
-- Update invite user error response logging
-- Update sizes and spacings on Title Optimization
-- WordPress.com Toolbar: Remove "My Sites" text and only display icon
+- AI Assistant: Add events to inline extensions. [#37297]
+- AI Assistant: Add messages to inline extensions. [#37224]
+- AI Assistant: Change way messages are built for inline extensions. [#37245]
+- AI Assistant: Fix inline extension styles on P2 and some themes. [#37336]
+- AI Assistant: Fix input z-index on moving block with inline extension. [#37322]
+- AI Assistant: Fix try again behavior on inline extensions. [#37250]
+- Blocks: When outputting JSON data in inline script tags, only use `JSON_UNESCAPED_UNICODE` when the blog charset is UTF-8. [#37285]
+- Custom CSS: Add deprecation warning in codebase. [#37163]
+- External Media: support editor changes in WordPress 6.5. [#36188]
+- Extract Google Analytics tests into the package. [#37246]
+- Fix an occasional PHP warning when iterating over menu items in the masterbar module. [#37315]
+- Fixed a warning thrown by the gravatar profile widget. [#37313]
+- Fixed TS compile error for image imports in js-packages. [#37211]
+- Google Analytics: switch the module to use the package. [#37189]
+- Move title optimization to production. [#37334]
+- Newsletters: Improvements to prepublish panel. [#37247]
+- Newsletters: Add tracks to email settings. [#37121]
+- Notifications: Ensures cache buster is available for wpcom-notes-admin-bar script. [#37215]
+- Remove wp-windows8 gallery shortcode special case in WPCOM API post endpoint. [#37243]
+- Rendered GlobalNotices component. [#37237]
+- Sanitize the preload value for video shortcodes and blocks. [#37271]
+- SSO: Fix tooltip display on view all users page. [#37257]
+- Subscriptions: Add comment as a subscription reply to type only availave for simple sites now. [#37244]
+- Subscriptions: Fix class Abstract_Token_Subscription_Service not found error. [#37206]
+- Subscriptions: Remove extraneous "support info" bubble in settings. [#37281]
+- Tiled Gallery: Fix view rendering issues. [#37213]
+- Updated phan baseline files. [#37151]
+- Update invite user error response logging. [#37144]
+- Update sizes and spacings on Title Optimization. [#37333]
+- WordPress.com Toolbar: Remove "My Sites" text and only display icon. [#37314]
 
 ## 13.4.1 - 2024-05-10
 ### Bug fixes
