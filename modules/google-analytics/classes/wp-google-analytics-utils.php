@@ -3,7 +3,7 @@
  * Class exists exclusively for backward compatibility.
  * Do not use.
  *
- * @deprecated 13.5-a.0
+ * @deprecated 13.5
  */
 
 /**
@@ -18,7 +18,7 @@ if ( ! class_exists( 'Jetpack_Google_Analytics_Utils' ) ) {
 	 * Class exists exclusively for backward compatibility.
 	 * Do not use.
 	 *
-	 * @deprecated 13.5-a.0
+	 * @deprecated 13.5
 	 */
 	class Jetpack_Google_Analytics_Utils extends Automattic\Jetpack\Google_Analytics\Utils {
 	}

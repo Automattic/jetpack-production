@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.23.21-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.23.21] - 2024-05-13
 ### Changed
-- Update dependencies.
+- Update dependencies. [#37280]
 
 ## [0.23.20] - 2024-05-07
 ### Fixed
@@ -1344,7 +1341,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.23.21-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.20...v0.23.21-alpha
+[0.23.21]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.20...v0.23.21
 [0.23.20]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.19...v0.23.20
 [0.23.19]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.18...v0.23.19
 [0.23.18]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.17...v0.23.18
