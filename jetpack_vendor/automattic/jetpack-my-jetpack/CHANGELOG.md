@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.23.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add tracks events for dropdown on action buttons
+
 ## [4.23.2] - 2024-05-09
 ### Changed
 - My Jetpack Agency banner copy change. [#37248]
@@ -1471,6 +1478,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[4.23.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.23.2...4.23.3-alpha
 [4.23.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.23.1...4.23.2
 [4.23.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.23.0...4.23.1
 [4.23.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.3...4.23.0
