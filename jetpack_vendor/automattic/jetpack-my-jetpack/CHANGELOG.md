@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add tracks events for dropdown on action buttons
 
+### Changed
+- Updated package dependencies.
+
 ## [4.23.2] - 2024-05-09
 ### Changed
 - My Jetpack Agency banner copy change. [#37248]
