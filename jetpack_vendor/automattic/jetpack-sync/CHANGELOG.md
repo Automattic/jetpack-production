@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Fix phpdoc type on `Replicastore_Interface::get_term()` `$taxonomy` arg.
 - Jetpack Sync: Ensure 'jetpack_sync_callable_whitelist' filter is respected when added late
 
 ## [2.16.1] - 2024-05-09
