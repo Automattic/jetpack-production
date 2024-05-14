@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Forms: Ensuring non minified JS file location is also an option when loading the tiny-mce-plugin-form-button script file.
 - Updated package dependencies.
 
 ## [0.31.2] - 2024-05-13
