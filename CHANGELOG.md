@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add some missing abstract methods to SAL_Site, and implement in Jetpack_Site.
+- AI Assistant: Inline extension testing feedback changes
 - Fix `SAL_Token::is_global()`.
 - Remove `jetpack_server_sandbox()` and `jetpack_server_sandbox_request_parameters()`. They'd have thrown fatals since October 2021.
 - Remove `Jetpack_User_Agent_Info::is_OperaMobile()`, it would have thrown fatals since October 2021.
