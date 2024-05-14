@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- WordAds: Prevent fatal when post content is null.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add some missing abstract methods to SAL_Site, and implement in Jetpack_Site.
 - AI Assistant: Inline extension testing feedback changes
