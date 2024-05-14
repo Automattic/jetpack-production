@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.8.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- SSO: do not rely on the Jetpack class anymore.
+
 ## [2.8.0] - 2024-05-13
 ### Added
 - SSO: Ensuring tooltips are accessible [#37302]
@@ -1058,6 +1065,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[2.8.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v2.8.0...v2.8.1-alpha
 [2.8.0]: https://github.com/Automattic/jetpack-connection/compare/v2.7.7...v2.8.0
 [2.7.7]: https://github.com/Automattic/jetpack-connection/compare/v2.7.6...v2.7.7
 [2.7.6]: https://github.com/Automattic/jetpack-connection/compare/v2.7.5...v2.7.6
