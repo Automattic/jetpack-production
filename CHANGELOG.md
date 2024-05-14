@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 13.5-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 13.5-a.1 - 2024-05-13
 ### Enhancements
 - SSO: Improve accessibility of tooltips on WP Admin users page. [#37302]
