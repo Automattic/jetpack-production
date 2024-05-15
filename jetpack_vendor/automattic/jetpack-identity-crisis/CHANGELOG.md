@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - IDC: Added escapes to echo statements
 
+### Changed
+- Updated package dependencies.
+
 ## [0.18.6] - 2024-05-06
 ### Changed
 - Updated package dependencies. [#37147]
