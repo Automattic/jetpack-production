@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- VideoPress: Fix localization of block text
+
 ## [0.23.21] - 2024-05-13
 ### Changed
 - Update dependencies. [#37280]
