@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Assets: Adding comments to explain why we use variables within translation functions
 
+### Changed
+- Updated package dependencies.
+
 ## [2.1.9] - 2024-05-06
 ### Changed
 - Updated package dependencies. [#37147]
