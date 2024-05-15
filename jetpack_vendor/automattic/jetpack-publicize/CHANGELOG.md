@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Added back the previous OpenGraph filter function
+- Fixed the typo in the Open Graph hook
 
 ## [0.44.0] - 2024-05-13
 ### Added
