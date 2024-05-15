@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Block Editor: remove External Link icon styling fix, now that the change has been made in WordPress itself.
+
 ### Bug fixes
 - WordAds: Prevent fatal when post content is null.
 
