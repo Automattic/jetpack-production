@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Jetpack Sync: Fixed undefined array key Warnings in HPOS orders module
+
 ## [2.16.2] - 2024-05-14
 ### Fixed
 - Fix phpdoc type on `Replicastore_Interface::get_term()` `$taxonomy` arg. [#37344]
