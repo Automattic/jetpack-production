@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Inline extension testing feedback changes
 - Fix `SAL_Token::is_global()`.
 - Minor typos
+- Monetize: correctly updates and delete paid content meta.
 - Prevent JS error when subscription module is not enabled.
 - Remove `jetpack_server_sandbox()` and `jetpack_server_sandbox_request_parameters()`. They'd have thrown fatals since October 2021.
 - Remove `Jetpack_User_Agent_Info::is_OperaMobile()`, it would have thrown fatals since October 2021.
