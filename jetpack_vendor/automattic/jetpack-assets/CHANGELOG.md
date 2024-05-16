@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.10-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.1.10] - 2024-05-16
 ### Added
-- Assets: Adding comments to explain why we use variables within translation functions
+- Assets: Adding comments to explain why we use variables within translation functions [#37397]
 
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#37379]
 
 ## [2.1.9] - 2024-05-06
 ### Changed
@@ -449,7 +446,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Statically access asset tools
 
-[2.1.10-alpha]: https://github.com/Automattic/jetpack-assets/compare/v2.1.9...v2.1.10-alpha
+[2.1.10]: https://github.com/Automattic/jetpack-assets/compare/v2.1.9...v2.1.10
 [2.1.9]: https://github.com/Automattic/jetpack-assets/compare/v2.1.8...v2.1.9
 [2.1.8]: https://github.com/Automattic/jetpack-assets/compare/v2.1.7...v2.1.8
 [2.1.7]: https://github.com/Automattic/jetpack-assets/compare/v2.1.6...v2.1.7
