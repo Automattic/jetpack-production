@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Block Editor: remove External Link icon styling fix, now that the change has been made in WordPress itself.
 
 ### Bug fixes
+- Slideshow: Fix className issue on frontend - ensures autoplay works properly.
 - WordAds: Prevent fatal when post content is null.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
