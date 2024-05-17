@@ -46,10 +46,10 @@
 		"automattic/jetpack-search": "^0.44.7-alpha",
 		"automattic/jetpack-stats": "^0.12.5",
 		"automattic/jetpack-stats-admin": "^0.19.2-alpha",
-		"automattic/jetpack-status": "^3.0.3",
-		"automattic/jetpack-sync": "^2.16.3",
+		"automattic/jetpack-status": "^3.0.4-alpha",
+		"automattic/jetpack-sync": "^2.16.4-alpha",
 		"automattic/jetpack-videopress": "^0.23.22-alpha",
-		"automattic/jetpack-waf": "^0.16.7",
+		"automattic/jetpack-waf": "^0.16.8-alpha",
 		"automattic/jetpack-wordads": "^0.3.19-alpha",
 		"automattic/woocommerce-analytics": "^0.1.5",
 		"scssphp/scssphp": "1.12.0"
