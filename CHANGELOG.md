@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove `jetpack_server_sandbox()` and `jetpack_server_sandbox_request_parameters()`. They'd have thrown fatals since October 2021.
 - Remove `Jetpack_User_Agent_Info::is_OperaMobile()`, it would have thrown fatals since October 2021.
 - SSO: switch to loading feature from the Connection package.
+- Subscriptions: Add Welcome Overlay behind the feature flag
 - Updated package dependencies.
 
 ## 13.5-a.1 - 2024-05-13
