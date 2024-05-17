@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Deprecated
+- Jetpack Connection Manager: Deprecate `request_params` arg in setup_xmlrpc_handlers method
+
 ## [2.8.2] - 2024-05-16
 ### Added
 - Connection: Ensuring direct file access is disabled in class-jetpack-ixr-client.php [#37398]
