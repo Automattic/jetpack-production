@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: Enable inline Heading extension
+- Subscription block: allow adding inside navigation block
 
 ### Improved compatibility
 - Block Editor: remove External Link icon styling fix, now that the change has been made in WordPress itself.
