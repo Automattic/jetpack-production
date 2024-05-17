@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add some missing abstract methods to SAL_Site, and implement in Jetpack_Site.
+- AI Assistant: Add chat history to inline extension
 - AI Assistant: Inline extension testing feedback changes
 - AI Featured Image: add support to Stable Diffusion image generation.
 - Fix `SAL_Token::is_global()`.
