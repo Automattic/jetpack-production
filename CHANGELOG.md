@@ -2,39 +2,36 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.5-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.5-a.3 - 2024-05-20
 ### Enhancements
-- AI Assistant: Enable inline Heading extension
-- Subscribe block: adds button-only style
-- Subscription block: allow adding inside navigation block
+- AI Assistant: Enable inline Heading extension. [#37386]
+- Subscribe block: Add button-only style. [#37341]
+- Subscribe block: Allow in the Navigation block. [#37439]
 
 ### Improved compatibility
-- Block Editor: remove External Link icon styling fix, now that the change has been made in WordPress itself.
+- Block Editor: Remove External Link icon styling fix now that the change has been made in WordPress itself. [#37394]
 
 ### Bug fixes
-- Slideshow: Fix className issue on frontend - ensures autoplay works properly.
-- WordAds: Prevent fatal when post content is null.
+- Slideshow: Ensures autoplay works properly. [#37378]
+- WordAds: Prevent fatal error when post content is null. [#37384]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add some missing abstract methods to SAL_Site, and implement in Jetpack_Site.
-- AI Assistant: Add chat history to inline extension
-- AI Assistant: Inline extension testing feedback changes
-- AI Featured Image: add support to Stable Diffusion image generation.
-- Fix `SAL_Token::is_global()`.
-- Minor typos
-- Monetize: correctly updates and delete paid content meta.
-- Prevent JS error when subscription module is not enabled.
-- Remove `jetpack_server_sandbox()` and `jetpack_server_sandbox_request_parameters()`. They'd have thrown fatals since October 2021.
-- Remove `Jetpack_User_Agent_Info::is_OperaMobile()`, it would have thrown fatals since October 2021.
-- SSO: switch to loading feature from the Connection package.
-- Subscription paywall: simplify paid access question for logged out subscribers
-- Subscriptions: Add Subscribe Overlay toggle
-- Subscriptions: Add Welcome Overlay behind the feature flag
-- Subscriptions: Subscribe Overlay default tagline
-- Updated package dependencies.
+- Add some missing abstract methods to SAL_Site, and implement in Jetpack_Site. [#37344]
+- AI Assistant: Add chat history to inline extension [#37429]
+- AI Assistant: Inline extension testing feedback changes [#37365]
+- AI Featured Image: add support to Stable Diffusion image generation. [#37413]
+- Fix `SAL_Token::is_global()`. [#37344]
+- Minor typos [#37387]
+- Monetize: correctly updates and delete paid content meta. [#37346]
+- Prevent JS error when subscription module is not enabled. [#36276]
+- Remove `jetpack_server_sandbox()` and `jetpack_server_sandbox_request_parameters()`. [#37344]
+- Remove `Jetpack_User_Agent_Info::is_OperaMobile()`. [#37344]
+- SSO: Switch to loading feature from the Connection package. [#37153]
+- Subscription paywall: Simplify paid access question for logged out subscribers. [#37434]
+- Subscriptions: Add Subscribe Overlay toggle. [#37433]
+- Subscriptions: Add Welcome Overlay behind the feature flag. [#37372]
+- Subscriptions: Subscribe Overlay default tagline. [#37446]
+- Updated package dependencies. [#37348] [#37379] [#37380] [#37382]
 
 ## 13.5-a.1 - 2024-05-13
 ### Enhancements

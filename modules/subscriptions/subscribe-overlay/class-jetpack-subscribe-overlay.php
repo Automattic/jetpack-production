@@ -3,7 +3,7 @@
  * Adds support for Jetpack Subscribe Overlay feature
  *
  * @package automattic/jetpack-subscriptions
- * @since 13.5-a.2
+ * @since 13.5
  */
 
 /**
