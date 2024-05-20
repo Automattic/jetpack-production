@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Changed the connections management feature flag check to include the WPCOM plan feature
+- Social | Updated connection modal UI
 - Updated package dependencies.
 
 ### Fixed
