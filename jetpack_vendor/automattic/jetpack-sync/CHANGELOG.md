@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Replaced heredoc syntax with strings.
+
 ## [2.16.3] - 2024-05-16
 ### Fixed
 - Jetpack Sync: Fixed undefined array key Warnings in HPOS orders module [#37401]
