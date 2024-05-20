@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.19-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.3.19] - 2024-05-20
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#37379] [#37380] [#37382]
 
 ## [0.3.18] - 2024-05-13
 ### Changed
@@ -44,8 +41,7 @@ This is an alpha version! The changes listed here are not final.
 ## [0.3.11] - 2024-03-12
 ### Changed
 - Updated package dependencies. [#36325]
-- Update to the most recent version of the @automattic/calypso-color-schemes package. [#36187]
-- Update to the most recent version of the @automattic/calypso-color-schemes package. [#36227]
+- Update to the most recent version of the @automattic/calypso-color-schemes package. [#36187] [#36227]
 
 ## [0.3.10] - 2024-03-04
 ### Changed
@@ -358,7 +354,7 @@ This is an alpha version! The changes listed here are not final.
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
 - Updated package dependencies.
 
-[0.3.19-alpha]: https://github.com/Automattic/jetpack-wordads/compare/v0.3.18...v0.3.19-alpha
+[0.3.19]: https://github.com/Automattic/jetpack-wordads/compare/v0.3.18...v0.3.19
 [0.3.18]: https://github.com/Automattic/jetpack-wordads/compare/v0.3.17...v0.3.18
 [0.3.17]: https://github.com/Automattic/jetpack-wordads/compare/v0.3.16...v0.3.17
 [0.3.16]: https://github.com/Automattic/jetpack-wordads/compare/v0.3.15...v0.3.16

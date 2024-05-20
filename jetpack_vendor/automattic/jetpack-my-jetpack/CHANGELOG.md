@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.23.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.23.3] - 2024-05-20
 ### Added
-- Add tracks events for dropdown on action buttons
+- Add tracks events for dropdown on action buttons. [#37292]
 
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#37379] [#37380] [#37382]
 
 ## [4.23.2] - 2024-05-09
 ### Changed
@@ -1481,7 +1478,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.23.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.23.2...4.23.3-alpha
+[4.23.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.23.2...4.23.3
 [4.23.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.23.1...4.23.2
 [4.23.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.23.0...4.23.1
 [4.23.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.22.3...4.23.0

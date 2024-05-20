@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.44.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.44.1] - 2024-05-20
 ### Changed
-- Changed the connections management feature flag check to include the WPCOM plan feature
-- Social | Updated connection modal UI
-- Updated package dependencies.
+- Changed the connections management feature flag check to include the WP.com plan feature. [#37425]
+- Social: Updated connection modal UI. [#37420]
+- Updated package dependencies. [#37379]
 
 ### Fixed
-- Added back the previous OpenGraph filter function
-- Fixed the typo in the Open Graph hook
+- Added back the previous Open Graph filter function. [#37368]
+- Fixed the typo in the Open Graph hook. [#37411]
 
 ## [0.44.0] - 2024-05-13
 ### Added
@@ -561,7 +558,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.44.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.44.0...v0.44.1-alpha
+[0.44.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.44.0...v0.44.1
 [0.44.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.43.0...v0.44.0
 [0.43.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.42.13...v0.43.0
 [0.42.13]: https://github.com/Automattic/jetpack-publicize/compare/v0.42.12...v0.42.13
