@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription paywall: simplify paid access question for logged out subscribers
 - Subscriptions: Add Subscribe Overlay toggle
 - Subscriptions: Add Welcome Overlay behind the feature flag
+- Subscriptions: Subscribe Overlay default tagline
 - Updated package dependencies.
 
 ## 13.5-a.1 - 2024-05-13
