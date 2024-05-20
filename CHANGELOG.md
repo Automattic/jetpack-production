@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: Enable inline Heading extension
+- Subscribe block: adds button-only style
 - Subscription block: allow adding inside navigation block
 
 ### Improved compatibility
