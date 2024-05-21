@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 13.5-a.4 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack AI: open upgrade paths on a new tab, on every upgrade entrypoint
+
 ## 13.5-a.3 - 2024-05-20
 ### Enhancements
 - AI Assistant: Enable inline Heading extension. [#37386]
