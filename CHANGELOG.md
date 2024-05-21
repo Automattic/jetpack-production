@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Add paragraph inline extension
 - Jetpack AI: open upgrade paths on a new tab, on every upgrade entrypoint
 
 ## 13.5-a.3 - 2024-05-20
