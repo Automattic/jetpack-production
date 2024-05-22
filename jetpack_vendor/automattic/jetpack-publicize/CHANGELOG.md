@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.45.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Added external_id to connections field
+
 ## [0.44.1] - 2024-05-20
 ### Changed
 - Changed the connections management feature flag check to include the WP.com plan feature. [#37425]
@@ -558,6 +565,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.45.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.44.1...v0.45.0-alpha
 [0.44.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.44.0...v0.44.1
 [0.44.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.43.0...v0.44.0
 [0.43.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.42.13...v0.43.0
