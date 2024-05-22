@@ -14,16 +14,20 @@ namespace Automattic\Jetpack;
 
 /**
  * Erros class.
+ *
+ * @deprecated since 3.2.0-alpha
  */
 class Errors {
 	/**
 	 * Catches PHP errors.  Must be used in conjunction with output buffering.
 	 *
+	 * @deprecated since 3.2.0-alpha
 	 * @param bool $catch True to start catching, False to stop.
 	 *
 	 * @static
 	 */
 	public function catch_errors( $catch ) {
+		_deprecated_function( __METHOD__, '3.2.0-alpha' );
 		static $display_errors, $error_reporting;
 
 		if ( $catch ) {
