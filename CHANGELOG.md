@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add reply to name setting for newsletters
 - AI Assistant: Move Paragraph extension to production
 - Social: Added connection management to editor
 
