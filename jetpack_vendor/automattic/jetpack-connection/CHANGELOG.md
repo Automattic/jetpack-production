@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Jetpack Connection Manager: Deprecate `request_params` arg in setup_xmlrpc_handlers method
 
+### Fixed
+- SSO: ensure the dist files are generated properly, without overwriting each other.
+
 ## [2.8.3] - 2024-05-20
 ### Changed
 - Internal updates.
