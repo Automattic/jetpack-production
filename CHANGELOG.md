@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add paragraph inline extension
 - Jetpack: Deprecated Errors class.
 - Jetpack AI: open upgrade paths on a new tab, on every upgrade entrypoint
+- Subscriptions: Do not clear the subscriber email when current user is empty
 
 ## 13.5-a.3 - 2024-05-20
 ### Enhancements
