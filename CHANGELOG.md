@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: open upgrade paths on a new tab, on every upgrade entrypoint
 - sharing-button: Increased performance on p2020 theme
 - Subscriptions: Do not clear the subscriber email when current user is empty
+- Subscriptions: Subscription Overlay fixes
 - Toggle inline AI input on Ask Ai Assistant button
 
 ## 13.5-a.3 - 2024-05-20
