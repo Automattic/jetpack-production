@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add auto-scroll on inline extension
 - AI Assistant: Add paragraph inline extension
+- AI Featured Image: add site type and image model to events being tracked on the tool.
 - Fix settings endpoint when subscription_options is not modified
 - Jetpack: Deprecated Errors class.
 - Jetpack AI: open upgrade paths on a new tab, on every upgrade entrypoint
