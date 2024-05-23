@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Social: Added connection management to editor
 - Social: Added width for connectiion management container
 
+### Improved compatibility
+- Changed how jetpack social connections are stored on the local site.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add auto-scroll on inline extension
 - AI Assistant: Add paragraph inline extension
