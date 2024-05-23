@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Added external_id to connections field
 
+### Fixed
+- Fixed Disconnect button not shown for connections in the editor
+
 ## [0.44.1] - 2024-05-20
 ### Changed
 - Changed the connections management feature flag check to include the WP.com plan feature. [#37425]
