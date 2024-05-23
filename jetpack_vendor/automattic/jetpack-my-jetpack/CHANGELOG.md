@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Improving the active/ inactive statuses on My Jetpack
+- Update Search to require user connection
 
 ## [4.23.3] - 2024-05-20
 ### Added
