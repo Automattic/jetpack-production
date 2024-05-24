@@ -20,6 +20,7 @@
 		"automattic/jetpack-blaze": "^0.21.4",
 		"automattic/jetpack-blocks": "^2.0.4",
 		"automattic/jetpack-boost-speed-score": "^0.3.11",
+		"automattic/jetpack-calypsoify": "^0.1.0-alpha",
 		"automattic/jetpack-compat": "^3.0.2",
 		"automattic/jetpack-composer-plugin": "^2.0.1",
 		"automattic/jetpack-config": "^2.0.2",

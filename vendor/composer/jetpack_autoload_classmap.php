@@ -182,6 +182,10 @@ return array(
 		'version' => '0.3.11.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score-request.php'
 	),
+	'Automattic\\Jetpack\\Calypsoify\\Jetpack_Calypsoify' => array(
+		'version' => '0.1.0.0-alpha1716555537',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-calypsoify/src/class-jetpack-calypsoify.php'
+	),
 	'Automattic\\Jetpack\\Composer\\Manager' => array(
 		'version' => '2.0.1.0',
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-manager.php'

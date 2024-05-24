@@ -2,10 +2,12 @@
 /**
  * This is Calypso skin of the wp-admin interface that is conditionally triggered via the ?calypsoify=1 param.
  *
- * @package automattic/jetpack
+ * @package automattic/jetpack-calypsoify
  */
 
-use Automattic\Jetpack\Calypsoify\Jetpack_Calypsoify as Calypsoify;
+namespace Automattic\Jetpack\Calypsoify;
+
+use Automattic\Jetpack\Assets;
 use Automattic\Jetpack\Status;
 
 /**
@@ -13,10 +15,12 @@ use Automattic\Jetpack\Status;
  */
 class Jetpack_Calypsoify {
 
+	const PACKAGE_VERSION = '0.1.0-alpha';
+
 	/**
 	 * Singleton instance of `Jetpack_Calypsoify`.
 	 *
-	 * @var object
+	 * @var self|false
 	 */
 	public static $instance = false;
 
@@ -65,11 +69,16 @@ class Jetpack_Calypsoify {
 	 */
 	public function enqueue_for_gutenberg() {
 		$site_suffix = ( new Status() )->get_site_suffix();
-		wp_enqueue_style( 'calypsoify_wpadminmods_css', plugin_dir_url( __FILE__ ) . 'style-gutenberg.min.css', false, JETPACK__VERSION );
-		wp_style_add_data( 'calypsoify_wpadminmods_css', 'rtl', 'replace' );
-		wp_style_add_data( 'calypsoify_wpadminmods_css', 'suffix', '.min' );
 
-		wp_enqueue_script( 'calypsoify_wpadminmods_js', plugin_dir_url( __FILE__ ) . 'mods-gutenberg.js', array( 'jquery' ), JETPACK__VERSION, false );
+		Assets::register_script(
+			'calypsoify_wpadminmods_js',
+			'../dist/index.js',
+			__FILE__,
+			array(
+				'enqueue' => true,
+			)
+		);
+
 		wp_localize_script(
 			'calypsoify_wpadminmods_js',
 			'calypsoifyGutenberg',
@@ -163,7 +172,7 @@ class Jetpack_Calypsoify {
 	/**
 	 * Return whether a post type should display the Gutenberg/block editor.
 	 *
-	 * @since 6.7.0
+	 * @since jetpack-6.7.0
 	 *
 	 * @param string $post_type Post type.
 	 */
@@ -208,5 +217,3 @@ class Jetpack_Calypsoify {
 		// phpcs:enable
 	}
 }
-
-Calypsoify::get_instance();

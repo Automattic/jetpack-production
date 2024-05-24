@@ -28,6 +28,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-boost-speed-score',
       'ver' => '0.3.11',
     ),
+    'jetpack-calypsoify' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-calypsoify',
+      'ver' => '0.1.0-alpha1716555537',
+    ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '3.0.2',
