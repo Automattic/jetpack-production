@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Removed
+- Jetpack Sync: Remove 'admin_action_update' hook from Sync Plugins module
+
 ## [2.16.6] - 2024-05-23
 ### Added
 - Add reply to name setting for newsletters. [#37362]
@@ -1160,6 +1167,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[3.0.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v2.16.6...v3.0.0-alpha
 [2.16.6]: https://github.com/Automattic/jetpack-sync/compare/v2.16.5...v2.16.6
 [2.16.5]: https://github.com/Automattic/jetpack-sync/compare/v2.16.4...v2.16.5
 [2.16.4]: https://github.com/Automattic/jetpack-sync/compare/v2.16.3...v2.16.4
