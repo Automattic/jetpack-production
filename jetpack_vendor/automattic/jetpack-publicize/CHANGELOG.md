@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Added external_id to connections field
 - Changed how social connections are cached by moving to using transients.
+- Standardized the rest endpoint structure for jetpack social connections.
 
 ### Fixed
 - Fixed Disconnect button not shown for connections in the editor
