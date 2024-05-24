@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix settings endpoint when subscription_options is not modified
 - Jetpack: Deprecated Errors class.
 - Jetpack AI: open upgrade paths on a new tab, on every upgrade entrypoint
+- Jetpack_Currencies: Fix PHP8 Fatal in format_price when passing a string in number_format
 - sharing-button: Increased performance on p2020 theme
 - Subscriptions: Do not clear the subscriber email when current user is empty
 - Subscriptions: Subscription Overlay fixes
