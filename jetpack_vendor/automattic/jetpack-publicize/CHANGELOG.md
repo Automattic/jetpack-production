@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Added external_id to connections field
 - Changed how social connections are cached by moving to using transients.
+- Moved "can_manage_connection" method to Publicize_Base class
 - Social | Updated the connection test results endpoint for front-end
 - Standardized the rest endpoint structure for jetpack social connections.
 

@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack_Currencies: Fix PHP8 Fatal in format_price when passing a string in number_format
 - Pay with PayPal: ensure prices are correctly formatted.
 - sharing-button: Increased performance on p2020 theme
+- Social | Updated the initial state fields for WPCOM
 - Subscriptions: Do not clear the subscriber email when current user is empty
 - Subscriptions: Subscription Overlay fixes
 - Toggle inline AI input on Ask Ai Assistant button
