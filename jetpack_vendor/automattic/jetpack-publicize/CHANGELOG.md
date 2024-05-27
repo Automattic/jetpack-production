@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.45.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.45.0] - 2024-05-27
 ### Changed
-- Added external_id to connections field
-- Changed how social connections are cached by moving to using transients.
-- Moved "can_manage_connection" method to Publicize_Base class
-- Social | Fixed no connections UI for editor
-- Social | Updated the connection test results endpoint for front-end
-- Standardized the rest endpoint structure for jetpack social connections.
+- Added external_id to connections field. [#37405]
+- Changed how social connections are cached by moving to using transients. [#37500]
+- Moved "can_manage_connection" method to Publicize_Base class. [#37532]
+- Fixed no connections UI for editor. [#37571]
+- Updated the connection test results endpoint for front-end. [#37531]
+- Standardized the rest endpoint structure for Jetpack social connections. [#37510]
 
 ### Fixed
-- Fixed Disconnect button not shown for connections in the editor
+- Disconnect button was not showing for connections in the editor. [#37501]
 
 ## [0.44.1] - 2024-05-20
 ### Changed
@@ -573,7 +570,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.45.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.44.1...v0.45.0-alpha
+[0.45.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.44.1...v0.45.0
 [0.44.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.44.0...v0.44.1
 [0.44.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.43.0...v0.44.0
 [0.43.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.42.13...v0.43.0
