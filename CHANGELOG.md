@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 13.5-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Subscriptions: adds a toggle to add subscribe block automatically to site's navigation
+
 ## 13.5-a.5 - 2024-05-27
 ### Enhancements
 - AI Assistant: Move Paragraph extension to production. [#37495]
