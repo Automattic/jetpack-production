@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add List and List Item inline extensions
 - Carousel: be more defensive when fetching info about attachment.
+- Correctly highlight Dashboard and Settings submenu when active, in WoA sites that show My Jetpack
 - Jetpack AI: change upgrade prompt click target to new tab
 - Jetpack Menu: Add Scan submenu to jetpack to show history scans
 - Subscriptions: Release Subscription Overlay and Subscribe block navigation placement
