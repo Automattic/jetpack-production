@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Correctly highlight Dashboard and Settings submenu when active, in WoA sites that show My Jetpack
 - Jetpack AI: change upgrade prompt click target to new tab
 - Jetpack Menu: Add Scan submenu to jetpack to show history scans
+- Remove the 'jetpack-identity-crisis' dependency.
 - Subscriptions: Release Subscription Overlay and Subscribe block navigation placement
 - Subscription settings: add headings to divide toggles into groups
 

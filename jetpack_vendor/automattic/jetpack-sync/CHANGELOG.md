@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Remove the 'jetpack-identity-crisis' dependency.
+
 ## [3.0.0] - 2024-05-27
 ### Removed
 - Jetpack Sync: Remove 'admin_action_update' hook from Sync Plugins module. [#37488]
@@ -1164,6 +1171,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[3.0.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v3.0.0...v3.0.1-alpha
 [3.0.0]: https://github.com/Automattic/jetpack-sync/compare/v2.16.6...v3.0.0
 [2.16.6]: https://github.com/Automattic/jetpack-sync/compare/v2.16.5...v2.16.6
 [2.16.5]: https://github.com/Automattic/jetpack-sync/compare/v2.16.4...v2.16.5

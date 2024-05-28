@@ -1,8 +1,8 @@
 <?php
 /**
- * Identity_Crisis package.
+ * Identity_Crisis class of the Connection package.
  *
- * @package  automattic/jetpack-identity-crisis
+ * @package  automattic/jetpack-connection
  */
 
 namespace Automattic\Jetpack;
@@ -18,21 +18,11 @@ use WP_Error;
 /**
  * This class will handle everything involved with fixing an Identity Crisis.
  *
- * @since 0.2.0
+ * @since automattic/jetpack-identity-crisis:0.2.0
  * @since-jetpack 4.4.0
+ * @since 2.9.0-alpha
  */
 class Identity_Crisis {
-
-	/**
-	 * Package Version
-	 */
-	const PACKAGE_VERSION = '0.20.0';
-
-	/**
-	 * Package Slug
-	 */
-	const PACKAGE_SLUG = 'identity-crisis';
-
 	/**
 	 * Persistent WPCOM blog ID that stays in the options after disconnect.
 	 */
@@ -103,9 +93,6 @@ class Identity_Crisis {
 		add_filter( 'jetpack_register_request_body', array( static::class, 'register_request_body' ) );
 		add_action( 'jetpack_site_registered', array( static::class, 'site_registered' ) );
 
-		// Set up package version hook.
-		add_filter( 'jetpack_package_versions', array( static::class, 'send_package_version_to_tracker' ) );
-
 		$urls_in_crisis = self::check_identity_crisis();
 		if ( false === $urls_in_crisis ) {
 			return;
@@ -113,19 +100,6 @@ class Identity_Crisis {
 
 		self::$wpcom_home_url = $urls_in_crisis['wpcom_home'];
 		add_action( 'init', array( $this, 'wordpress_init' ) );
-	}
-
-	/**
-	 * Adds the package slug and version to the package version tracker's data.
-	 *
-	 * @param array $package_versions The package version array.
-	 *
-	 * @return array The package version array.
-	 */
-	public static function send_package_version_to_tracker( $package_versions ) {
-		$package_versions[ self::PACKAGE_SLUG ] = self::PACKAGE_VERSION;
-
-		return $package_versions;
 	}
 
 	/**
@@ -193,8 +167,8 @@ class Identity_Crisis {
 	public function wordpress_init() {
 		if ( current_user_can( 'jetpack_disconnect' ) ) {
 			if (
-					isset( $_GET['jetpack_idc_clear_confirmation'] ) && isset( $_GET['_wpnonce'] ) &&
-					wp_verify_nonce( $_GET['_wpnonce'], 'jetpack_idc_clear_confirmation' ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput -- WordPress core doesn't unslash or verify nonces either.
+				isset( $_GET['jetpack_idc_clear_confirmation'] ) && isset( $_GET['_wpnonce'] ) &&
+				wp_verify_nonce( $_GET['_wpnonce'], 'jetpack_idc_clear_confirmation' ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput -- WordPress core doesn't unslash or verify nonces either.
 			) {
 				Jetpack_Options::delete_option( 'safe_mode_confirmed' );
 				self::$is_safe_mode_confirmed = false;
@@ -339,10 +313,6 @@ class Identity_Crisis {
 	 * @return bool Whether the site is in an identity crisis.
 	 */
 	public function check_response_for_idc( $response ) {
-		if ( ! is_array( $response ) ) {
-			return false;
-		}
-
 		if ( is_array( $response ) && isset( $response['error_code'] ) ) {
 			$error_code              = $response['error_code'];
 			$allowed_idc_error_codes = array(
@@ -415,7 +385,6 @@ class Identity_Crisis {
 					$sync_error['wpcom_home'] === $local_options['home'] &&
 					$sync_error['wpcom_siteurl'] === $local_options['siteurl']
 				) {
-					$is_valid = false;
 					// Enable migrate_for_idc so that sync actions are accepted.
 					Jetpack_Options::update_option( 'migrate_for_idc', true );
 				} elseif ( $sync_error['home'] === $local_options['home'] && $sync_error['siteurl'] === $local_options['siteurl'] ) {
@@ -605,7 +574,7 @@ class Identity_Crisis {
 			! isset( $data['home'] ) ||
 			! isset( $data['wpcom_siteurl'] ) ||
 			! isset( $data['siteurl'] )
-			) {
+		) {
 			// The jetpack_sync_error_idc option is missing a key.
 			return false;
 		}
