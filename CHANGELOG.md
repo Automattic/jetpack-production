@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: change upgrade prompt click target to new tab
 - Jetpack Menu: Add Scan submenu to jetpack to show history scans
 - Subscriptions: Release Subscription Overlay and Subscribe block navigation placement
+- Subscription settings: add headings to divide toggles into groups
 
 ## 13.5-a.5 - 2024-05-27
 ### Enhancements
