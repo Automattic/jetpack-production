@@ -20,7 +20,7 @@ use WP_Error;
  *
  * @since automattic/jetpack-identity-crisis:0.2.0
  * @since-jetpack 4.4.0
- * @since 2.9.0-alpha
+ * @since 2.9.0
  */
 class Identity_Crisis {
 	/**
