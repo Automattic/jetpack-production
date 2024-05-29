@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Social: Added the new V1 Jetpack Social plan
 - Stats: Deprecating old Stats experience
 - Subscriptions: adds a toggle to add subscribe block automatically to site's navigation
 
