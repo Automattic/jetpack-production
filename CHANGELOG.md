@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: adds a toggle to add subscribe block automatically to site's navigation
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add behavior support on AI Inline Extensions
 - AI Assistant: Add List and List Item inline extensions
 - Carousel: be more defensive when fetching info about attachment.
 - Correctly highlight Dashboard and Settings submenu when active, in WoA sites that show My Jetpack
