@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Update connection ToS messaging slightly
 - Correctly highlight Dashboard and Settings submenu when active, in WoA sites that show My Jetpack
 - Fix looping API bug on Posts page
+- Improve performance of get_revisions function
 - Jetpack AI: change upgrade prompt click target to new tab
 - Jetpack AI: open AI Control upgrade links on a new tab.
 - Jetpack AI: open upgrade prompt from pre-publish on a new tab.
