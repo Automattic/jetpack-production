@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: be more defensive when fetching info about attachment.
 - Correctly highlight Dashboard and Settings submenu when active, in WoA sites that show My Jetpack
 - Jetpack AI: change upgrade prompt click target to new tab
+- Jetpack AI: open upgrade prompt from pre-publish on a new tab.
 - Jetpack AI: update copy of the proofread/feedback tool.
 - Jetpack Menu: Add Scan submenu to jetpack to show history scans
 - Remove the 'jetpack-identity-crisis' dependency.
