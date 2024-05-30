@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Update/improve ToS wording slightly.
 - Update CTA on a4a banner in My Jetpack
 
 ## [4.24.1] - 2024-05-24

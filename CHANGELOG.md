@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Add behavior support on AI Inline Extensions
 - AI Assistant: Add List and List Item inline extensions
 - Carousel: be more defensive when fetching info about attachment.
+- Connection: Update connection ToS messaging slightly
 - Correctly highlight Dashboard and Settings submenu when active, in WoA sites that show My Jetpack
 - Jetpack AI: change upgrade prompt click target to new tab
 - Jetpack AI: open AI Control upgrade links on a new tab.
