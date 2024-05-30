@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: update copy of the proofread/feedback tool.
 - Jetpack Menu: Add Scan submenu to jetpack to show history scans
 - Remove the 'jetpack-identity-crisis' dependency.
+- Social | Updates upgrade nudges to use the new plan
 - Stats: Deprecated old stats experience
 - Subscriptions: Release Subscription Overlay and Subscribe block navigation placement
 - Subscription settings: add headings to divide toggles into groups
