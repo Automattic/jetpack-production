@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: open upgrade prompt from pre-publish on a new tab.
 - Jetpack AI: update copy of the proofread/feedback tool.
 - Jetpack Menu: Add Scan submenu to jetpack to show history scans
+- Pass suggestion to onBlockDone at AI Inline Extensions
 - Remove the 'jetpack-identity-crisis' dependency.
 - Social | Updates upgrade nudges to use the new plan
 - Stats: Deprecated old stats experience
