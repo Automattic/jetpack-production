@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Deprecated old stats experience
 - Subscriptions: Release Subscription Overlay and Subscribe block navigation placement
 - Subscription settings: add headings to divide toggles into groups
+- Tiled Gallery: force image aspect ratio for square and circle styles
 
 ## 13.5-a.5 - 2024-05-27
 ### Enhancements
