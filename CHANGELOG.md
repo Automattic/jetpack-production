@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: Fallback to transformation when multiple blocks are selected
 - AI Assistant: Move List and List Item extensions to production
+- Notifications: Change Icon
 - Social: Added the new V1 Jetpack Social plan
 - Stats: Deprecating old Stats experience
 - Subscriptions: adds a toggle to add subscribe block automatically to site's navigation
