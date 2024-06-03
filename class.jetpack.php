@@ -2403,7 +2403,7 @@ class Jetpack {
 	 * @param bool $catch True to start catching, False to stop.
 	 *
 	 * @static
-	 * @deprecated 13.5-a.6
+	 * @deprecated 13.5
 	 * @see \Automattic\Jetpack\Errors
 	 */
 	public static function catch_errors( $catch ) {
