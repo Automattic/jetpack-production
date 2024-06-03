@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Move List and List Item extensions to production
 - Notifications: Change Icon
 - Social: Added the new V1 Jetpack Social plan
+- Social: Mofidien initial state
 - Stats: Deprecating old Stats experience
 - Subscriptions: adds a toggle to add subscribe block automatically to site's navigation
 
