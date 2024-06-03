@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 13.6-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Featured Image: let the backend decide the model for the image generation.
+
 ## 13.5-beta - 2024-06-03
 ### Enhancements
 - AI Assistant: Fallback to transformation when multiple blocks are selected. [#37632]
