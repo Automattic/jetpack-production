@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Comics CPT: add deprecation warning
 - External Media: Remove unneeded return value
 - Random Redirect: add deprecation warning
+- Updated package dependencies.
 - Updated recommendations section links for Social
 
 ## 13.5-beta - 2024-06-03

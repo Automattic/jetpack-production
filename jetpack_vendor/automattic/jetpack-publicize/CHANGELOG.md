@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Publicize: Package version update
 
+### Changed
+- Updated package dependencies.
+
 ## [0.45.1] - 2024-06-03
 ### Changed
 - Social: Update upgrade nudges to use the new plan. [#37638]
