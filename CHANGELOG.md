@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Featured Image: let the backend decide the model for the image generation.
 - Comics CPT: add deprecation warning
 - External Media: Remove unneeded return value
+- Payments Block: localize block variations
 - Random Redirect: add deprecation warning
 - Updated package dependencies.
 - Updated recommendations section links for Social
