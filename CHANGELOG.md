@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Slideshow: Ensure whole block is selectable in the editor
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Featured Image: let the backend decide the model for the image generation.
 - Updated recommendations section links for Social
