@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Featured Image: let the backend decide the model for the image generation.
 - Comics CPT: add deprecation warning
+- External Media: Remove unneeded return value
 - Random Redirect: add deprecation warning
 - Updated recommendations section links for Social
 
