@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- External media: Ensured the connect URL has the correct blog ID and verification values.
 - Slideshow: Ensure whole block is selectable in the editor
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
