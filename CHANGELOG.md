@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Move AI Form to inline extension
 - Payments Block: localize block variations
 - Random Redirect: add deprecation warning
+- Subscribe overlay: use home URL in skip link
 - Updated package dependencies.
 - Updated recommendations section links for Social
 
