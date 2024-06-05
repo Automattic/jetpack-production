@@ -2,10 +2,6 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.6-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
 ## 13.5 - 2024-06-04
 ### Enhancements
 - AI Assistant: Add AI Assistant to Paragraph, Heading, List, and List Item blocks. [#37495] [#37386] [#37613]
