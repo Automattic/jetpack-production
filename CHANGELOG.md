@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add support for custom behavior on AI Inline Extensions
 - AI Featured Image: let the backend decide the model for the image generation.
+- Calypsoify: Deprecating functions and the class
 - Comics CPT: add deprecation warning
 - External Media: Remove unneeded return value
 - Move AI Form to inline extension
