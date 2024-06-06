@@ -76,6 +76,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
       'ver' => '2.0.5',
     ),
+    'jetpack-masterbar' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-masterbar',
+      'ver' => '0.1.0-alpha1717681825',
+    ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '4.24.4-alpha1717608333',
