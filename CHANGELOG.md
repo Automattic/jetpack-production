@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribe overlay: use home URL in skip link
 - Updated package dependencies.
 - Updated recommendations section links for Social
+- Wordpress.com: Make jetpack scan link visible on atomic sites that defaults to wp-admin
 
 ## 13.5 - 2024-06-04
 ### Enhancements
