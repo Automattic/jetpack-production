@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Calypsoify: Deprecating functions and the class
 - Comics CPT: add deprecation warning
 - External Media: Remove unneeded return value
+- Jetpack AI: expose the upgrade URL on the feature endpoint, considering current plan and site type.
 - Move AI Form to inline extension
 - Payments Block: localize block variations
 - Random Redirect: add deprecation warning
