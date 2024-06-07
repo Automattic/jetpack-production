@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add support for custom behavior on AI Inline Extensions
 - AI Featured Image: let the backend decide the model for the image generation.
 - Calypsoify: Deprecating functions and the class
+- Classic Theme Helper: Move code from module to package
 - Comics CPT: add deprecation warning
 - External Media: Remove unneeded return value
 - Jetpack AI: expose the upgrade URL on the feature endpoint, considering current plan and site type.

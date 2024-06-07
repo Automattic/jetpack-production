@@ -186,6 +186,14 @@ return array(
 		'version' => '0.1.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-calypsoify/src/class-jetpack-calypsoify.php'
 	),
+	'Automattic\\Jetpack\\Classic_Theme_Helper\\Featured_Content' => array(
+		'version' => '0.3.0.0-alpha1717756466',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-featured-content.php'
+	),
+	'Automattic\\Jetpack\\Classic_Theme_Helper\\Main' => array(
+		'version' => '0.3.0.0-alpha1717756466',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-main.php'
+	),
 	'Automattic\\Jetpack\\Composer\\Manager' => array(
 		'version' => '2.0.2.0',
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-manager.php'

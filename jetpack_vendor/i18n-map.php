@@ -32,6 +32,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-calypsoify',
       'ver' => '0.1.1',
     ),
+    'jetpack-classic-theme-helper' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-classic-theme-helper',
+      'ver' => '0.3.0-alpha1717756466',
+    ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
       'ver' => '3.0.2',

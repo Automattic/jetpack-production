@@ -78,6 +78,8 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ13_6_a_0
         'Automattic\\Jetpack\\Boost_Speed_Score\\Speed_Score_History' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score-history.php',
         'Automattic\\Jetpack\\Boost_Speed_Score\\Speed_Score_Request' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score-request.php',
         'Automattic\\Jetpack\\Calypsoify\\Jetpack_Calypsoify' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-calypsoify/src/class-jetpack-calypsoify.php',
+        'Automattic\\Jetpack\\Classic_Theme_Helper\\Featured_Content' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-featured-content.php',
+        'Automattic\\Jetpack\\Classic_Theme_Helper\\Main' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-main.php',
         'Automattic\\Jetpack\\Composer\\Manager' => __DIR__ . '/..' . '/automattic/jetpack-composer-plugin/src/class-manager.php',
         'Automattic\\Jetpack\\Composer\\Plugin' => __DIR__ . '/..' . '/automattic/jetpack-composer-plugin/src/class-plugin.php',
         'Automattic\\Jetpack\\Config' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php',
