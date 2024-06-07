@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Random Redirect: add deprecation warning
 - Subscribe overlay: use home URL in skip link
 - Updated package dependencies.
+- Updated recommendation links for Social
 - Updated recommendations section links for Social
 - Wordpress.com: Make jetpack scan link visible on atomic sites that defaults to wp-admin
 
