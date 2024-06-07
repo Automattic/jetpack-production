@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add mechanism to track previously working plugins
 
 ### Changed
+- Move PRODUCT_STATUSES to constants file
 - Send user to siteless pricing page if site is not connected
 
 ## [4.24.3] - 2024-06-05
