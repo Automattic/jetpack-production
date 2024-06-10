@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add onboarding_segment to site endpoint
+- Add placement on Proofread tracking
 - Add support for custom behavior on AI Inline Extensions
 - Admin menu: add link to Customizer in sites with block-based theme and custom CSS
 - AI Featured Image: let the backend decide the model for the image generation.
