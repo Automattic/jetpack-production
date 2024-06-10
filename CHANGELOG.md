@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated recommendations section links for Social
 - Use correct const to check for inline extensions availability
 - Wordpress.com: Make jetpack scan link visible on atomic sites that defaults to wp-admin
+- WPCOM Block Editor: Deprecated functionality and moved it to mu-wpcom
 
 ## 13.5 - 2024-06-04
 ### Enhancements
