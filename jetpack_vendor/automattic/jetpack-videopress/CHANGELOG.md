@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.23.24-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.23.24] - 2024-06-10
 ### Changed
-- Change codebase to use clsx instead of classnames.
-- Updated package dependencies.
+- Change codebase to use clsx instead of classnames. [#37708]
+- Updated package dependencies. [#37669]
 
 ## [0.23.23] - 2024-06-03
 ### Changed
@@ -1360,7 +1357,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.23.24-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.23...v0.23.24-alpha
+[0.23.24]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.23...v0.23.24
 [0.23.23]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.22...v0.23.23
 [0.23.22]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.21...v0.23.22
 [0.23.21]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.20...v0.23.21
