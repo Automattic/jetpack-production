@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Change codebase to use clsx instead of classnames.
+- Conditionally show connection banner as error or info
 - Updated package dependencies.
 
 ## [4.24.4] - 2024-06-10
