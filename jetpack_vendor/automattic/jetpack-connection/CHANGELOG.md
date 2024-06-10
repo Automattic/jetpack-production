@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Staging: deprecating staging mode and separating the logic into is_development_site and in_safe_mode
 
+### Fixed
+- Jetpack Connection: Add stricter check before updating 'jetpack_connection_active_plugins' option
+
 ## [2.9.3] - 2024-06-06
 ### Added
 - Add mechanism to track previously working plugins [#37537]
