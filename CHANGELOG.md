@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fixed PHP Unit tests for WP trunk
+- Jetpack AI: register ai-general-purpose-image-generator beta flag to control the changes we are doing to the image generation tool.
 - Updated package dependencies.
 
 ## 13.6-a.1 - 2024-06-10
