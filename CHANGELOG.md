@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Classic Theme Helper: Move code from module to package
 - Comics CPT: add deprecation warning
 - External Media: Remove unneeded return value
+- Fixed PHP Unit tests for WP trunk
 - Fix scroll on typing inside inline extensions
 - Jetpack AI: expose the upgrade URL on the feature endpoint, considering current plan and site type.
 - Memberships: fixes paid content access in some cases of mixed products
