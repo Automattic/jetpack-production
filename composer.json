@@ -32,7 +32,7 @@
 		"automattic/jetpack-forms": "^0.32.0-alpha",
 		"automattic/jetpack-google-analytics": "^0.1.0",
 		"automattic/jetpack-google-fonts-provider": "^0.7.2",
-		"automattic/jetpack-image-cdn": "^0.4.1",
+		"automattic/jetpack-image-cdn": "^0.4.2-alpha",
 		"automattic/jetpack-import": "^0.8.6",
 		"automattic/jetpack-ip": "^0.2.2",
 		"automattic/jetpack-jitm": "^3.1.12",
