@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fixed PHP Unit tests for WP trunk
+- Fixed Uncaught TypeError in for recommendations CTA
 - Jetpack AI: register ai-general-purpose-image-generator beta flag to control the changes we are doing to the image generation tool.
 - Jetpack AI Image: create first draft of the General Purpose image generator.
 - Updated package dependencies.
