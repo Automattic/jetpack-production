@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Color Schemes: Fix Sakura color issues on masterbar
+
 ## 0.1.0 - 2024-06-10
 ### Added
 - Initial version. [#37277]
