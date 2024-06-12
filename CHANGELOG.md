@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added ability to test Jetpack together with wpcomsh.
 - Color Schemes: Fix Sakura color issues on masterbar
 - Fixed PHP Unit tests for WP trunk
 - Fixed Uncaught TypeError in for recommendations CTA
