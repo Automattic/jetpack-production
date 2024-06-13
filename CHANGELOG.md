@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed Uncaught TypeError in for recommendations CTA
 - Jetpack AI: register ai-general-purpose-image-generator beta flag to control the changes we are doing to the image generation tool.
 - Jetpack AI Image: create first draft of the General Purpose image generator.
+- Jetpack AI Image: make the general purpose generator set the image on the image block.
 - Return site_goals option for a site
 - Top Posts & Pages Block: Require that one content type is always set to display.
 - Updated package dependencies.
