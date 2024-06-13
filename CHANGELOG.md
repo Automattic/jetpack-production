@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- AI Assistant: Hide input when user types on extended block
+
 ### Bug fixes
 - Like block: Fix editor styling
 
