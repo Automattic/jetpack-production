@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: register ai-general-purpose-image-generator beta flag to control the changes we are doing to the image generation tool.
 - Jetpack AI Image: create first draft of the General Purpose image generator.
 - Return site_goals option for a site
+- Top Posts & Pages Block: Require that one content type is always set to display.
 - Updated package dependencies.
 
 ## 13.6-a.1 - 2024-06-10
