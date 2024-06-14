@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Added ability to test Jetpack together with wpcomsh.
 - Color Schemes: Fix Sakura color issues on masterbar
 - EU Cookie Law widget: add id attribute to consent form
+- Fixed E2E tests navigating to block editor
 - Fixed PHP Unit tests for WP trunk
 - Fixed Uncaught TypeError in for recommendations CTA
 - Jetpack AI: register ai-general-purpose-image-generator beta flag to control the changes we are doing to the image generation tool.
