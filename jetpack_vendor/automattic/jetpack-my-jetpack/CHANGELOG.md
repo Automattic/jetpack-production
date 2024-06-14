@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.25.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update connection footer to conditionally render warnings or errors
+
 ## [4.24.7] - 2024-06-13
 ### Changed
 - Updated package dependencies. [#37796]
@@ -1516,6 +1523,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[4.25.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.24.7...4.25.0-alpha
 [4.24.7]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.24.6...4.24.7
 [4.24.6]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.24.5...4.24.6
 [4.24.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.24.4...4.24.5
