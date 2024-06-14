@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Show tooltip on card hover instead of letter hover
 - Update connection footer to conditionally render warnings or errors
+- Update connection status card tests to TS
 
 ## [4.24.7] - 2024-06-13
 ### Changed
