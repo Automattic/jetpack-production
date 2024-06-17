@@ -2,32 +2,35 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.6-a.2 - unreleased
+## 13.6-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- AI Assistant: Hide input when user types on extended block
-
 ### Bug fixes
-- Like block: Fix editor styling
 - User Content Link Tracking: check domain before redirecting to subscribe.wordpress.com
 
+## 13.6-a.3 - 2024-06-17
+### Enhancements
+- AI Assistant: Hide input when user types on extended block. [#37801]
+
+### Bug fixes
+- Like block: Fix editor styling. [#37719]
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added ability to test Jetpack together with wpcomsh.
-- Color Schemes: Fix Sakura color issues on masterbar
-- EU Cookie Law widget: add id attribute to consent form
-- Fixed E2E tests navigating to block editor
-- Fixed PHP Unit tests for WP trunk
-- Fixed Uncaught TypeError in for recommendations CTA
-- Jetpack admin-menu endpoint: Require masterbar menu load file only on self-hosted sites
-- Jetpack AI: register ai-general-purpose-image-generator beta flag to control the changes we are doing to the image generation tool.
-- Jetpack AI Image: create first draft of the General Purpose image generator.
-- Jetpack AI Image: make the general purpose generator set the image on the image block.
-- Return site_goals option for a site
-- Social: Fixed broken connections reconnect link to point it to new connections UI
-- Top Posts & Pages Block: Require that one content type is always set to display.
-- Updated package dependencies.
+- Added ability to test Jetpack together with wpcomsh. [#37737]
+- Color Schemes: Fix Sakura color issues on masterbar. [#37806]
+- EU Cookie Law widget: add id attribute to consent form. [#37839]
+- Fixed E2E tests navigating to block editor. [#37875]
+- Fixed PHP Unit tests for WP trunk. [#37785]
+- Fixed Uncaught TypeError in for recommendations CTA. [#37808]
+- Jetpack admin-menu endpoint: Require masterbar menu load file only on self-hosted sites. [#37891]
+- Jetpack AI: register ai-general-purpose-image-generator beta flag to control the changes we are doing to the image generation tool. [#37749]
+- Jetpack AI Image: create first draft of the General Purpose image generator. [#37782]
+- Jetpack AI Image: make the general purpose generator set the image on the image block. [#37834]
+- Return site_goals option for a site. [#37809]
+- Social: Fixed broken connections reconnect link to point it to new connections UI. [#37869]
+- Top Posts & Pages Block: Require that one content type is always set to display. [#36305]
+- Updated package dependencies. [#37767] [#37776] [#37795] [#37796]
 
 ## 13.6-a.1 - 2024-06-10
 ### Bug fixes

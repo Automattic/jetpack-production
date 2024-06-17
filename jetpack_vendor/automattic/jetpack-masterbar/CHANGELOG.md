@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.1.1] - 2024-06-17
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#37796]
 
 ### Fixed
-- Color Schemes: Fix Sakura color issues on masterbar
+- Color Schemes: Fix Sakura color issues on masterbar [#37806]
 
 ## 0.1.0 - 2024-06-10
 ### Added
@@ -26,4 +23,4 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies. [#37669]
 - Updated package dependencies. [#37706]
 
-[0.1.1-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.1.0...v0.1.1-alpha
+[0.1.1]: https://github.com/Automattic/jetpack-masterbar/compare/v0.1.0...v0.1.1
