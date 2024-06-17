@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Like block: Fix editor styling
+- User Content Link Tracking: check domain before redirecting to subscribe.wordpress.com
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added ability to test Jetpack together with wpcomsh.
