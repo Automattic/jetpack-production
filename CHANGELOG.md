@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI Image: create first draft of the General Purpose image generator.
 - Jetpack AI Image: make the general purpose generator set the image on the image block.
 - Return site_goals option for a site
+- Social: Fixed broken connections reconnect link to point it to new connections UI
 - Top Posts & Pages Block: Require that one content type is always set to display.
 - Updated package dependencies.
 
