@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Bump Jetpack lock file.
+- Fixed missing css vars for sso modal
 
 ## 13.6-a.3 - 2024-06-17
 ### Enhancements
