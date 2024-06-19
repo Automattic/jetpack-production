@@ -17,7 +17,7 @@
 		"automattic/jetpack-assets": "^2.1.12",
 		"automattic/jetpack-autoloader": "^3.0.8",
 		"automattic/jetpack-backup": "^3.3.16",
-		"automattic/jetpack-blaze": "^0.21.8-alpha",
+		"automattic/jetpack-blaze": "^0.21.8",
 		"automattic/jetpack-blocks": "^2.0.4",
 		"automattic/jetpack-boost-speed-score": "^0.3.11",
 		"automattic/jetpack-calypsoify": "^0.1.1",
