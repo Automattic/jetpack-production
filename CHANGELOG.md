@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Tiled Gallery: Increase accessibility of Tiled Gallery carousel images.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Extract AI Image logic to own hook
 - Extract the Google Analytics API into the package.
 - Masterbar: Remove old fly panel
 
