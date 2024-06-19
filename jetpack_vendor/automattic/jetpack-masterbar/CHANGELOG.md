@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Masterbar: Require and use 'jetpack-masterbar' package in jetpack-mu-wpcom
 
+### Fixed
+- Masterbar: Remove old fly panel
+
 ## [0.1.1] - 2024-06-17
 ### Changed
 - Updated package dependencies. [#37796]

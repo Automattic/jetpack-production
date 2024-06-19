@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Goodreads Block: provide support for additional profile URLs.
 - Tiled Gallery: Increase accessibility of Tiled Gallery carousel images.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Masterbar: Remove old fly panel
+
 ## 13.6-a.5 - 2024-06-18
 ### Bug fixes
 - User Content Link Tracking: Check domain before redirecting to subscribe.wordpress.com. [#37798]
