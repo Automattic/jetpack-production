@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Goodreads Block: provide support for additional profile URLs.
+- Tiled Gallery: Increase accessibility of Tiled Gallery carousel images.
 
 ## 13.6-a.5 - 2024-06-18
 ### Bug fixes
