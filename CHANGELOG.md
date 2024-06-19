@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Goodreads Block: provide support for additional profile URLs.
+
 ## 13.6-a.5 - 2024-06-18
 ### Bug fixes
 - User Content Link Tracking: Check domain before redirecting to subscribe.wordpress.com. [#37798]
