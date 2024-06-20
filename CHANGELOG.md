@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Extract AI Image logic to own hook
 - Extract the Google Analytics API into the package.
+- Map Block: Handle React's Strict Mode correctly for Mapbox maps
 - Masterbar: Remove old fly panel
 
 ## 13.6-a.5 - 2024-06-18
