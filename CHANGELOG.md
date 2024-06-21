@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: Ensure event listeners target relevant Tiled Gallery classes for accessibility fixes.
 - Extract AI Image logic to own hook
 - Extract the Google Analytics API into the package.
+- Introduce AI Image Modal
 - Map Block: Handle React's Strict Mode correctly for Mapbox maps
 - Masterbar: Remove old fly panel
 
