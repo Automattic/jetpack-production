@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Image CDN: Added support for query strings in image URLs
 - More closely match core behaviour while downsizing images
 
 ## [0.4.2] - 2024-06-11
