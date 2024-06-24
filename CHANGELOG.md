@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Adding a new toggles to control the newsletter byline
 - Goodreads Block: provide support for additional profile URLs.
+- Newsletter: now newsletter email replies can become comments on your blog
 - Tiled Gallery: Increase accessibility of Tiled Gallery carousel images.
 
 ### Improved compatibility
