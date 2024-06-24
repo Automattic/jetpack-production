@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Map Block: Handle React's Strict Mode correctly for Mapbox maps
 - Masterbar: Remove old fly panel
 - Newsletters: make the welcome form more editable
+- Specific placeholder instruction for featured and general image
 - Update General Image to reuse modal and hooks with expected behavior
 
 ## 13.6-a.5 - 2024-06-18
