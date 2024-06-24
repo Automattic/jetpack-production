@@ -2,31 +2,32 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.6-a.6 - unreleased
+## 13.6-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 13.6-a.7 - 2024-06-24
 ### Enhancements
-- Adding a new toggles to control the newsletter byline
-- Goodreads Block: provide support for additional profile URLs.
-- Newsletter: now newsletter email replies can become comments on your blog
-- Tiled Gallery: Increase accessibility of Tiled Gallery carousel images.
+- Goodreads Block: provide support for additional profile URLs. [#37939]
+- Newsletter: Adding a new toggle to control the newsletter author line. [#37916]
+- Newsletter: Email replies can become comments on your blog. [#37995]
+- Tiled Gallery: Increase accessibility of Tiled Gallery carousel images. [#37792]
 
 ### Improved compatibility
-- General: indicate compatibility with the upcoming version of WordPress - 6.6.
+- General: indicate compatibility with the upcoming version of WordPress - 6.6. [#37962]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- AI Assistant: Add Breve proofread feature flag
-- Carousel: Ensure event listeners target relevant Tiled Gallery classes for accessibility fixes.
-- Empty state for AI Image carrousel
-- Extract AI Image logic to own hook
-- Extract the Google Analytics API into the package.
-- Introduce AI Image Modal
-- Map Block: Handle React's Strict Mode correctly for Mapbox maps
-- Masterbar: Remove old fly panel
-- Newsletters: make the welcome form more editable
-- Specific placeholder instruction for featured and general image
-- Update General Image to reuse modal and hooks with expected behavior
+- AI Assistant: Add Breve proofread feature flag. [#37986]
+- AI Assistant: Extract AI Image logic to its own hook. [#37956]
+- AI Assistant: Extract the Google Analytics API into a package. [#37358]
+- AI Assistant: Introduce AI Image Modal. [#37959]
+- AI Assistant: Specific placeholder instruction for featured and general image. [#38008]
+- AI Assistant: Update General Image to reuse modal and hooks with expected behavior. [#37991]
+- Carousel: Ensure event listeners target relevant Tiled Gallery classes for accessibility fixes. [#37978]
+- Carousel: Add empty state for AI Image carousel. [#38004]
+- Map Block: Handle React's Strict Mode correctly for Mapbox maps. [#37918]
+- Masterbar: Remove the old fly panel. [#37764]
+- Newsletters: Make the welcome form more editable. [#37996]
 
 ## 13.6-a.5 - 2024-06-18
 ### Bug fixes

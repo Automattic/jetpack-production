@@ -515,7 +515,7 @@ class WPCOM_JSON_API_Site_Settings_Endpoint extends WPCOM_JSON_API_Endpoint {
 					 * @module json-api
 					 *
 					 * @since 3.9.3
-					 * @since 13.6-a.6 Added the API object parameter.
+					 * @since 13.6 Added the API object parameter.
 					 *
 					 * @param mixed $response_item A single site setting.
 					 * @param WPCOM_JSON_API_Site_Settings_Endpoint $this The API object.
@@ -598,7 +598,7 @@ class WPCOM_JSON_API_Site_Settings_Endpoint extends WPCOM_JSON_API_Endpoint {
 	/**
 	 * Get GA tracking code.
 	 *
-	 * @deprecated 13.6-a.6
+	 * @deprecated 13.6
 	 */
 	protected function get_google_analytics() {
 		if ( class_exists( GA_Manager::class ) ) {
@@ -613,7 +613,7 @@ class WPCOM_JSON_API_Site_Settings_Endpoint extends WPCOM_JSON_API_Endpoint {
 	/**
 	 * Get GA tracking code option name.
 	 *
-	 * @deprecated 13.6-a.6
+	 * @deprecated 13.6
 	 */
 	protected function get_google_analytics_option_name() {
 		if ( class_exists( GA_Manager::class ) ) {
@@ -1195,7 +1195,7 @@ class WPCOM_JSON_API_Site_Settings_Endpoint extends WPCOM_JSON_API_Endpoint {
 						 * @module json-api
 						 *
 						 * @since 3.9.3
-						 * @since 13.6-a.6 Added the API object parameter.
+						 * @since 13.6 Added the API object parameter.
 						 *
 						 * @param mixed $response_item A single site setting value.
 						 * @param WPCOM_JSON_API_Site_Settings_Endpoint The API object parameter.

@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.3.17-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.3.17] - 2024-06-24
 ### Changed
-- Update backup header cards layout for responsive design
+- Update backup header cards layout for responsive design [#37944]
 
 ## [3.3.16] - 2024-06-17
 ### Changed
@@ -651,7 +648,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[3.3.17-alpha]: https://github.com/Automattic/jetpack-backup/compare/v3.3.16...v3.3.17-alpha
+[3.3.17]: https://github.com/Automattic/jetpack-backup/compare/v3.3.16...v3.3.17
 [3.3.16]: https://github.com/Automattic/jetpack-backup/compare/v3.3.15...v3.3.16
 [3.3.15]: https://github.com/Automattic/jetpack-backup/compare/v3.3.14...v3.3.15
 [3.3.14]: https://github.com/Automattic/jetpack-backup/compare/v3.3.13...v3.3.14
