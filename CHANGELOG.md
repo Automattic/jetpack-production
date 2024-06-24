@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add Breve proofread feature flag
 - Carousel: Ensure event listeners target relevant Tiled Gallery classes for accessibility fixes.
+- Empty state for AI Image carrousel
 - Extract AI Image logic to own hook
 - Extract the Google Analytics API into the package.
 - Introduce AI Image Modal
