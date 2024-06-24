@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Removed unneeded check for connection management wpcom
 
+### Fixed
+- Added support for Threads for Social connections
+
 ## [0.46.1] - 2024-06-17
 ### Fixed
 - Fixed connections management links for classic editor [#37681]
