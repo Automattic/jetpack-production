@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Block Editor: ensure that no Jetpack features are displayed in the site editor's sidebar when not necessary.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Remove use of `gutenberg_can_edit_post_type()`. Its replacement has been in WP Core since 6.1.
+- Remove use of `gutenberg_get_block_template()`. Its replacement has been in WP Core since 5.8.
+
 ## 13.6-a.7 - 2024-06-24
 ### Enhancements
 - Goodreads Block: provide support for additional profile URLs. [#37939]
