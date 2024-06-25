@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Add Threads preview to Social Previews
+
 ### Improved compatibility
 - Block Editor: ensure that no Jetpack features are displayed in the site editor's sidebar when not necessary.
 
