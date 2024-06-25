@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Block Editor: ensure that no Jetpack features are displayed in the site editor's sidebar when not necessary.
+
 ## 13.6-a.7 - 2024-06-24
 ### Enhancements
 - Goodreads Block: provide support for additional profile URLs. [#37939]
