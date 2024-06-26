@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - External Media: do not display External Media options in the Caption edit field.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Custom CSS: add deprecation warning for Start Fresh option
 - Jetpack 'admin-menu' endpoint: Load dashicon list from 'jetpack-masterbar' package
 - Jetpack AI Image: use error notice instead of warning for the upgrade nudge.
 - Minor copy change based on user feedback
