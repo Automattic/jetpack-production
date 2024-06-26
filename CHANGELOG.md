@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom CSS: add deprecation warning for Start Fresh option
 - Jetpack AI Image: use error notice instead of warning for the upgrade nudge.
 - Minor copy change based on user feedback
+- Newsletters: Adds tracks to subscription source
 
 ## 13.6-a.9 - 2024-06-26
 ### Enhancements
