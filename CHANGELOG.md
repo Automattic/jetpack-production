@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add general image type, cost and feature
+- AI Assistant: Add Breve under feature flag
 - Custom CSS: add deprecation warning for Start Fresh option
 - Jetpack 'admin-menu' endpoint: Load dashicon list from 'jetpack-masterbar' package
 - Jetpack AI Image: use error notice instead of warning for the upgrade nudge.
