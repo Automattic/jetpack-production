@@ -31,7 +31,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php'
 	),
 	'Automattic\\Jetpack\\Abtest' => array(
-		'version' => '2.0.3.0',
+		'version' => '2.1.0.0-alpha1719436770',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-abtest/src/class-abtest.php'
 	),
 	'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => array(
