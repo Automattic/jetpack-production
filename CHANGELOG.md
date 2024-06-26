@@ -2,30 +2,35 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.6-a.8 - unreleased
+## 13.6-a.10 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Add Threads preview to Social Previews
 - Newsletter: Now you can manage how your newsletter byline appears to your users
-
-### Improved compatibility
-- Block Editor: ensure that no Jetpack features are displayed in the site editor's sidebar when not necessary.
-
-### Bug fixes
-- External Media: do not display External Media options in the Caption edit field.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add general image type, cost and feature
 - AI Assistant: Add Breve under feature flag
 - Custom CSS: add deprecation warning for Start Fresh option
-- Jetpack 'admin-menu' endpoint: Load dashicon list from 'jetpack-masterbar' package
 - Jetpack AI Image: use error notice instead of warning for the upgrade nudge.
 - Minor copy change based on user feedback
-- Point posts stats icon to wp-admin
-- Remove use of `gutenberg_can_edit_post_type()`. Its replacement has been in WP Core since 6.1.
-- Remove use of `gutenberg_get_block_template()`. Its replacement has been in WP Core since 5.8.
+
+## 13.6-a.9 - 2024-06-26
+### Enhancements
+- Social: Add Threads preview to Social Previews. [#38003]
+
+### Improved compatibility
+- Block Editor: Ensure that no Jetpack features are displayed in the site editor's sidebar when not necessary. [#37949]
+
+### Bug fixes
+- External Media: Do not display External Media options in the Caption edit field. [#37987]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- General: Load dashicon list from 'jetpack-masterbar' package for the admin-menu API endpoint. [#38025]
+- General: Remove use of `gutenberg_can_edit_post_type()`. Its replacement has been in WP Core since 6.1. [#38015]
+- General: Remove use of `gutenberg_get_block_template()`. Its replacement has been in WP Core since 5.8. [#38015]
+- Stats: Point post stats icon to wp-admin. [#38013]
 
 ## 13.6-a.7 - 2024-06-24
 ### Enhancements
