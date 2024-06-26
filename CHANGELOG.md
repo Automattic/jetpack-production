@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add Threads preview to Social Previews
+- Newsletter: Now you can manage how your newsletter byline appears to your users
 
 ### Improved compatibility
 - Block Editor: ensure that no Jetpack features are displayed in the site editor's sidebar when not necessary.
