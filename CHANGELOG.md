@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack 'admin-menu' endpoint: Load dashicon list from 'jetpack-masterbar' package
+- Minor copy change based on user feedback
 - Point posts stats icon to wp-admin
 - Remove use of `gutenberg_can_edit_post_type()`. Its replacement has been in WP Core since 6.1.
 - Remove use of `gutenberg_get_block_template()`. Its replacement has been in WP Core since 5.8.
