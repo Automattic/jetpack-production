@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom CSS: add deprecation warning for Start Fresh option
 - Custom CSS: prevent loading module multiple times
 - Deprecate jetpack-abtest
+- Jetpack AI Image: show notice when image gets saved to media library.
 - Jetpack AI Image: use error notice instead of warning for the upgrade nudge.
 - Minor copy change based on user feedback
 - Newsletters: Adds tracks to subscription source
