@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add general image type, cost and feature
 - AI Assistant: Add Breve under feature flag
+- Avoid auto-starting featured image creation
 - Custom CSS: add deprecation warning for Start Fresh option
 - Custom CSS: prevent loading module multiple times
 - Deprecate jetpack-abtest
