@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.21.10-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Eligibility checks: when a request to the WordPress.com API fails, store the response for an hour to avoid spamming the API.
+
+### Fixed
+- Eligibility checks: shortcircuit Blaze feature earlier when a site is not properly connected to WordPress.com.
+
 ## [0.21.9] - 2024-06-21
 ### Changed
 - Update dependencies. [#37356]
@@ -389,6 +399,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated package dependencies. [#27906]
 
+[0.21.10-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.21.9...v0.21.10-alpha
 [0.21.9]: https://github.com/automattic/jetpack-blaze/compare/v0.21.8...v0.21.9
 [0.21.8]: https://github.com/automattic/jetpack-blaze/compare/v0.21.7...v0.21.8
 [0.21.7]: https://github.com/automattic/jetpack-blaze/compare/v0.21.6...v0.21.7
