@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Fix the 'missing array key' notice.
+
 ## [0.2.1] - 2024-06-27
 ### Changed
 - Only activate if enabled. [#37984]
@@ -19,5 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Copy the code from the Jetpack module into the package. [#37184]
 - Migrate unit tests from the Jetpack module. [#37246]
 
+[0.2.2-alpha]: https://github.com/Automattic/jetpack-google-analytics/compare/v0.2.1...v0.2.2-alpha
 [0.2.1]: https://github.com/Automattic/jetpack-google-analytics/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/Automattic/jetpack-google-analytics/compare/v0.1.0...v0.2.0
