@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom CSS: prevent loading module multiple times
 - Deprecate jetpack-abtest
 - Jetpack AI Image: show notice when image gets saved to media library.
+- Jetpack AI Image: trigger an image generation when user hits enter on the custom user prompt field.
 - Jetpack AI Image: use error notice instead of warning for the upgrade nudge.
 - Minor copy change based on user feedback
 - Newsletters: Adds tracks to subscription source
