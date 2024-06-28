@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Offline Mode: do not display Jetpack's outbound SSL notice when in Offline mode.
 
 ### Bug fixes
+- AI Assistant: Disable extensions when AI Assistant block is hidden
 - AI Assistant: Do not extend Form twice
 - Publicize: Fix a race condition with refreshing the active social connections
 
