@@ -208,6 +208,7 @@ return array(
     'Automattic\\Jetpack\\Password_Checker' => $baseDir . '/jetpack_vendor/automattic/jetpack-password-checker/src/class-password-checker.php',
     'Automattic\\Jetpack\\Paths' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-paths.php',
     'Automattic\\Jetpack\\Plans' => $vendorDir . '/automattic/jetpack-plans/src/class-plans.php',
+    'Automattic\\Jetpack\\Plugin\\Deprecate' => $baseDir . '/src/class-deprecate.php',
     'Automattic\\Jetpack\\Plugin\\Tracking' => $baseDir . '/src/class-tracking.php',
     'Automattic\\Jetpack\\Plugins_Installer' => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php',
     'Automattic\\Jetpack\\Post_List\\Post_List' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-list.php',

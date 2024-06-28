@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom CSS: add deprecation warning for Start Fresh option
 - Custom CSS: prevent loading module multiple times
 - Deprecate jetpack-abtest
+- Google Analytics: add deprecation notice for non-Jetpack admin pages."
 - Infinite Scroll: ensure missing assets are loaded
 - Infinite Scroll: fixed a fatal error from uninitialized Sharing module.
 - Jetpack AI Image: show notice when image gets saved to media library.
