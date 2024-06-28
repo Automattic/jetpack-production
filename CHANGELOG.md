@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Now you can manage how your newsletter byline appears to your users
 - WordPress.com API: add the export and import capabilities to the sites endpoint response
 
+### Improved compatibility
+- Offline Mode: do not display Jetpack's outbound SSL notice when in Offline mode.
+
 ### Bug fixes
 - AI Assistant: Do not extend Form twice
 - Publicize: Fix a race condition with refreshing the active social connections
