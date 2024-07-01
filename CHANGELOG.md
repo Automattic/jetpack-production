@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Minor copy change based on user feedback
 - Newsletters: Adds tracks to subscription source
 - SSO: Disabled Two-Step checkbox when jetpack_sso_require_two_step filter is on
+- Updated dependencies
 - Update loading state of AI Image
 
 ## 13.6-a.9 - 2024-06-26
