@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Newsletter: Now you can manage how your newsletter byline appears to your users
+- Subscriptions: added command palette commands for quickly changing post access.
 - WordPress.com API: add the export and import capabilities to the sites endpoint response
 
 ### Improved compatibility
