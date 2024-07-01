@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Reduce amount of historically active modules updates by only triggering on activation of plugin is a jetpack plugin
 
+### Fixed
+- Fix an issue where the connection error hook was always resetting the notice
+
 ## [4.26.0] - 2024-06-27
 ### Changed
 - Jetpack AI: Add Title Optimization section on the product page. [#38072]
