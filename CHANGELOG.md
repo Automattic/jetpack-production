@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: added command palette commands for quickly changing post access.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Update Breve implementation to React
 - Jetpack AI Image: include new entrypoint as a button on the image/gallery/slideshow block.
 
 ## 13.6-beta - 2024-07-01
