@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Subscriptions: added command palette commands for quickly changing post access.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack AI Image: include new entrypoint as a button on the image/gallery/slideshow block.
+
 ## 13.6-beta - 2024-07-01
 ### Enhancements
 - Newsletter: Add ability to manage the newsletter byline appearance. [#37997]
