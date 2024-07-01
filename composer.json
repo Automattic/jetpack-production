@@ -31,7 +31,6 @@
 		"automattic/jetpack-error": "^2.0.2",
 		"automattic/jetpack-forms": "^0.32.2",
 		"automattic/jetpack-google-analytics": "^0.2.2",
-		"automattic/jetpack-google-fonts-provider": "^0.7.2",
 		"automattic/jetpack-image-cdn": "^0.4.3",
 		"automattic/jetpack-import": "^0.8.6",
 		"automattic/jetpack-ip": "^0.2.2",

@@ -56,10 +56,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-google-analytics',
       'ver' => '0.2.2',
     ),
-    'jetpack-google-fonts-provider' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-google-fonts-provider',
-      'ver' => '0.7.2',
-    ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
       'ver' => '0.4.3',
