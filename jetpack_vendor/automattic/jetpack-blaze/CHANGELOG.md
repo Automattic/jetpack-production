@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fixes a bug in the Blaze endpoint blaze/posts that happens when we get a non-200 from WPCOM
+
 ## [0.21.10] - 2024-06-28
 ### Changed
 - Eligibility checks: when a request to the WordPress.com API fails, store the response for an hour to avoid spamming the API. [#38066]
