@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Update Breve implementation to React
 - AI Proofread: Change Breve request endpoint
 - Carousel: Updating event listener to remove unnecessary default event prevention function call
+- Jetpack AI Breve: fix popover font and css classnames
 - Jetpack AI Image: include new entrypoint as a button on the image/gallery/slideshow block.
 - Newsletter settings: fix reply to example email when comment reply chosen
 - Updated package dependencies.
