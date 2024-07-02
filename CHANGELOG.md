@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI Breve: fix popover font and css classnames
 - Jetpack AI Image: include new entrypoint as a button on the image/gallery/slideshow block.
 - Newsletter settings: fix reply to example email when comment reply chosen
+- Update Breve toggle location
 - Updated package dependencies.
 
 ## 13.6 - 2024-07-02
