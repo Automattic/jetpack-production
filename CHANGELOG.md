@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: Updating event listener to remove unnecessary default event prevention function call
 - Jetpack AI Breve: fix popover font and css classnames
 - Jetpack AI Image: include new entrypoint as a button on the image/gallery/slideshow block.
+- Jetpack AI Image: use better names when saving images.
 - Newsletter settings: fix reply to example email when comment reply chosen
 - Update Breve toggle location
 - Updated package dependencies.
