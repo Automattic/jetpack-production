@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Jetpack Sync: Ensure we always sync heartbeat data and active plugins no matter the consumer config
 
+### Fixed
+- Sync: Fix bug in WooCommerce_HPOS_Orders::get_objects_by_id method
+
 ## [3.1.4] - 2024-07-01
 ### Fixed
 - Sync Checksum:Use postmeta table name from wpdb to compare so we don't filter by whitelist due to performance reasons. [#38084]
