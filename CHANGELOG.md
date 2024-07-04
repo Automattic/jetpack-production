@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Jetpack AI Image: move general purpose image generator to production.
 - Subscriptions: added command palette commands for quickly changing post access.
 
 ### Bug fixes
