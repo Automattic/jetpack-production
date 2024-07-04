@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Proofread: Change Breve request endpoint
 - AI Proofread: Move prompts to the backend
 - Carousel: Updating event listener to remove unnecessary default event prevention function call
+- Classic Theme Helper - Requiring Responsive Videos and Featured Content files.
 - Jetpack AI Breve: fix popover font and css classnames
 - Jetpack AI Image: include new entrypoint as a button on the image/gallery/slideshow block.
 - Jetpack AI Image: use better names when saving images.
