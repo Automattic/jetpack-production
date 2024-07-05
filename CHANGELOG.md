@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter settings: fix reply to example email when comment reply chosen
 - Update Breve toggle location
 - Updated package dependencies.
+- Update search close button behaviour
 
 ## 13.6 - 2024-07-02
 ### Enhancements
