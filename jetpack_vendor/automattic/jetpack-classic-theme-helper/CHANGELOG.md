@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Classic Theme Helper - Featured Content: Moved check for plugins page to init since setup is used now externally
 - Classic Theme Helper - Requiring Responsive Videos and Featured Content files.
 - Updated package dependencies.
 

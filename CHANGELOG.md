@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Proofread: Move prompts to the backend
 - Carousel: Updating event listener to remove unnecessary default event prevention function call
 - Classic Theme Helper - Requiring Responsive Videos and Featured Content files.
+- Featured Content: Don't call setup for wpcom platform since jetpack-mu-wpcom already takes care of that.
 - Jetpack AI Breve: fix popover font and css classnames
 - Jetpack AI Image: include new entrypoint as a button on the image/gallery/slideshow block.
 - Jetpack AI Image: use better names when saving images.
