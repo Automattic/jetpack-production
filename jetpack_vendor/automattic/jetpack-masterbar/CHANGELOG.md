@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fixes scrollbar issue if upsell nudge is loaded in specific viewport.
+
 ## [0.2.5] - 2024-06-28
 ### Changed
 - Internal updates.
