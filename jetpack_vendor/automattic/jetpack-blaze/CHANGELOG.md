@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.22.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.22.0] - 2024-07-08
 ### Changed
-- As we've launched untangling & nav redesign, the wpcom_is_nav_redesign_enabled() function name is not relevant anymore and can be confusing for future developers, so we replace it with the equivalent get_option call.
-- Updated package dependencies.
+- As we've launched untangling & nav redesign, the wpcom_is_nav_redesign_enabled() function name is not relevant anymore and can be confusing for future developers, so we replace it with the equivalent get_option call. [#38197]
+- Updated package dependencies. [#38132]
 
 ### Fixed
-- Fixes a bug in the Blaze endpoint blaze/posts that happens when we get a non-200 from WPCOM
+- Fixes a bug in the Blaze endpoint blaze/posts that happens when we get a non-200 from WPCOM [#38070]
 
 ## [0.21.10] - 2024-06-28
 ### Changed
@@ -407,7 +404,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.22.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.21.10...v0.22.0-alpha
+[0.22.0]: https://github.com/automattic/jetpack-blaze/compare/v0.21.10...v0.22.0
 [0.21.10]: https://github.com/automattic/jetpack-blaze/compare/v0.21.9...v0.21.10
 [0.21.9]: https://github.com/automattic/jetpack-blaze/compare/v0.21.8...v0.21.9
 [0.21.8]: https://github.com/automattic/jetpack-blaze/compare/v0.21.7...v0.21.8
