@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.2.0] - 2024-07-08
 ### Changed
-- Jetpack Sync: Ensure we always sync heartbeat data and active plugins no matter the consumer config
+- Jetpack Sync: Ensure we always sync heartbeat data and active plugins no matter the consumer config [#38135]
 
 ### Fixed
-- Jetpack Sync: Fix HPOS checksum support for wc_order_operational_data
-- Sync: Fix bug in WooCommerce_HPOS_Orders::get_objects_by_id method
+- Jetpack Sync: Fix HPOS checksum support for wc_order_operational_data [#38191]
+- Sync: Fix bug in WooCommerce_HPOS_Orders::get_objects_by_id method [#38192]
 
 ## [3.1.4] - 2024-07-01
 ### Fixed
@@ -1203,7 +1200,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[3.2.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v3.1.4...v3.2.0-alpha
+[3.2.0]: https://github.com/Automattic/jetpack-sync/compare/v3.1.4...v3.2.0
 [3.1.4]: https://github.com/Automattic/jetpack-sync/compare/v3.1.3...v3.1.4
 [3.1.3]: https://github.com/Automattic/jetpack-sync/compare/v3.1.2...v3.1.3
 [3.1.2]: https://github.com/Automattic/jetpack-sync/compare/v3.1.1...v3.1.2
