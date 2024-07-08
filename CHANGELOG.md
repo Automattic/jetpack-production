@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update highlight on AI Breve
+
 ## 13.7-a.1 - 2024-07-08
 ### Enhancements
 - AI Assistant: The general purpose image generator is now available to all users. [#38203]
