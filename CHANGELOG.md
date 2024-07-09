@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update AI Proofread hover events
 - Update highlight on AI Breve
 - WooCommerce Analytics: Initialize the module only if is not initialized in WooCommerce core.
 
