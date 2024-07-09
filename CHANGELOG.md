@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack AI Image: trigger featured image auto generation when there is content on the post.
 - Newsletter Settings: Fix default value for Full text vs Excerpt
 - Update AI Proofread hover events
 - Update highlight on AI Breve
