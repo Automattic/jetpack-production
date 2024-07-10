@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI Image: trigger featured image auto generation when there is content on the post.
 - Newsletter Settings: Fix default value for Full text vs Excerpt
 - Theme tools: Add social menu to Classic Theme Helper package
+- Toggle specific feature on AI Proofread
 - Update AI Proofread hover events
 - Update highlight on AI Breve
 - WooCommerce Analytics: Initialize the module only if is not initialized in WooCommerce core.
