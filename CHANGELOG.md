@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Calypsoify: Removing functionality from Jetpack
+- Map block: Changed defaultProp usage to make use of default parameters, for React 19 compatibility.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack AI Image: trigger featured image auto generation when there is content on the post.
