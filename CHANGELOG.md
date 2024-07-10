@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Implemented a more dynamic approach to displaying the subscription modal
 - Jetpack Blocks: Migrate the EventCoutdown block from ETK
 - Jetpack Blocks: Migrate the Timeline block from ETK
 
