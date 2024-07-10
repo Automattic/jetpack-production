@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.47.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Social: Removed unnecessary feature checks for social connections
+
 ## [0.47.2] - 2024-07-08
 ### Fixed
 - Social | Fixed the permissions for update and disconnection connections endpoints [#38187]
@@ -618,6 +625,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.47.3-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.47.2...v0.47.3-alpha
 [0.47.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.47.1...v0.47.2
 [0.47.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.47.0...v0.47.1
 [0.47.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.46.3...v0.47.0
