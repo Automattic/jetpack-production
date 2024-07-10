@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Toggle specific feature on AI Proofread
 - Update AI Proofread hover events
 - Update highlight on AI Breve
+- Update sidebar layout on Proofread
 - WooCommerce Analytics: Initialize the module only if is not initialized in WooCommerce core.
 
 ## 13.7-a.1 - 2024-07-08
