@@ -15,11 +15,15 @@ This is an alpha version! The changes listed here are not final.
 - Calypsoify: Removing functionality from Jetpack
 - Map block: Changed defaultProp usage to make use of default parameters, for React 19 compatibility.
 
+### Bug fixes
+- Donations Block: Fix undefined array key warnings with old/malformed blocks.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Popover content for AI Proofread
 - AI Assistant: Fix blocks content definition
 - Integrate AI Proofread toggle with code
 - Jetpack AI Image: trigger featured image auto generation when there is content on the post.
+- Jetpack_Currencies: Honor the `$symbol` arg when passed an unknown currency.
 - Newsletter Settings: Fix default value for Full text vs Excerpt
 - Theme tools: Add social menu to Classic Theme Helper package
 - Toggle specific feature on AI Proofread
