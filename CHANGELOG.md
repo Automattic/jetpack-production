@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Calypsoify: Removing functionality from Jetpack
 - Map block: Changed defaultProp usage to make use of default parameters, for React 19 compatibility.
+- WPCOM Block Editor: Removing functionality from Jetpack
 
 ### Bug fixes
 - Donations Block: Fix undefined array key warnings with old/malformed blocks.
