@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add Popover content for AI Proofread
+- AI Assistant: Add ambiguous words to proofread features list
 - AI Assistant: Fix blocks content definition
 - Integrate AI Proofread toggle with code
 - Jetpack AI Image: trigger featured image auto generation when there is content on the post.
