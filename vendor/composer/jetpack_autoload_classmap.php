@@ -667,119 +667,119 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-modules.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Activitylog' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-activitylog.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Hybrid_Product' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-hybrid-product.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Initializer' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-initializer.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Jetpack_Manage' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-jetpack-manage.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Module_Product' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-module-product.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Product' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-product.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-products.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Anti_Spam' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-anti-spam.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Backup' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-backup.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Boost' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-boost.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Creator' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-creator.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Crm' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-crm.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Extras' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-extras.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Jetpack_Ai' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-jetpack-ai.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Protect' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-protect.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Scan' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-scan.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Search' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-search.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Search_Stats' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-search-stats.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Security' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-security.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Social' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-social.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Starter' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-starter.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Stats' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-stats.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Products\\Videopress' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-videopress.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\REST_AI' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-ai.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\REST_Product_Data' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-product-data.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\REST_Products' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-products.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\REST_Purchases' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-purchases.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\REST_Zendesk_Chat' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-zendesk-chat.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Wpcom_Products' => array(
-		'version' => '4.27.3.0-alpha1720620686',
+		'version' => '4.28.0.0-alpha1720794633',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
@@ -821,6 +821,42 @@ return array(
 	'Automattic\\Jetpack\\Post_List\\Post_Thumbnail' => array(
 		'version' => '0.6.2.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-thumbnail.php'
+	),
+	'Automattic\\Jetpack\\Protect_Models' => array(
+		'version' => '0.1.0.0-alpha1718401685',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-protect-models.php'
+	),
+	'Automattic\\Jetpack\\Protect_Models\\Extension_Model' => array(
+		'version' => '0.1.0.0-alpha1718401685',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-extension-model.php'
+	),
+	'Automattic\\Jetpack\\Protect_Models\\Status_Model' => array(
+		'version' => '0.1.0.0-alpha1718401685',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-status-model.php'
+	),
+	'Automattic\\Jetpack\\Protect_Models\\Threat_Model' => array(
+		'version' => '0.1.0.0-alpha1718401685',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-threat-model.php'
+	),
+	'Automattic\\Jetpack\\Protect_Status\\Plan' => array(
+		'version' => '0.1.0.0-alpha1719323747',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-plan.php'
+	),
+	'Automattic\\Jetpack\\Protect_Status\\Protect_Status' => array(
+		'version' => '0.1.0.0-alpha1719323747',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-protect-status.php'
+	),
+	'Automattic\\Jetpack\\Protect_Status\\REST_Controller' => array(
+		'version' => '0.1.0.0-alpha1719323747',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-rest-controller.php'
+	),
+	'Automattic\\Jetpack\\Protect_Status\\Scan_Status' => array(
+		'version' => '0.1.0.0-alpha1719323747',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-scan-status.php'
+	),
+	'Automattic\\Jetpack\\Protect_Status\\Status' => array(
+		'version' => '0.1.0.0-alpha1719323747',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-status.php'
 	),
 	'Automattic\\Jetpack\\Publicize\\Auto_Conversion\\REST_Settings_Controller' => array(
 		'version' => '0.47.3.0-alpha1720603287',
