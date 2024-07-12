@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add scan/threat info to the Protect card in My Jetpack.
+
 ### Changed
 - Protect card: Add the Last scan time (with tooltip) based on product state.
 - Updated package dependencies.
