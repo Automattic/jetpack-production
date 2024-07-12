@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add ambiguous words to proofread features list
 - AI Assistant: Fix blocks content definition
 - Integrate AI Proofread toggle with code
+- Jetpack AI: add beta flag to control logo generator extension.
 - Jetpack AI Image: trigger featured image auto generation when there is content on the post.
 - Jetpack_Currencies: Honor the `$symbol` arg when passed an unknown currency.
 - Newsletter Settings: Fix default value for Full text vs Excerpt
