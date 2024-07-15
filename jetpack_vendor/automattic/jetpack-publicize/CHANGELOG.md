@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Mastodon: display a Fediverse Creator tag when the post author has connected their account to a Mastodon account.
+
 ### Changed
 - Social: Removed unnecessary feature checks for social connections
 
