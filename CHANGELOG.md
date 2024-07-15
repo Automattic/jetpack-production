@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Popover content for AI Proofread
 - Admin: redirect jetpack pages
 - AI Assistant: Add ambiguous words to proofread features list
+- AI Assistant: Add long sentences feature to proofread
 - AI Assistant: Fix blocks content definition
 - Fix redirect for comments pending approval
 - Integrate AI Proofread toggle with code
