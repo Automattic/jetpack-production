@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add ambiguous words to proofread features list
 - AI Assistant: Add long sentences feature to proofread
 - AI Assistant: Fix blocks content definition
+- Custom Post Types: remove Comic post type
 - Fix redirect for comments pending approval
 - Integrate AI Proofread toggle with code
 - Jetpack AI: add beta flag to control logo generator extension.
