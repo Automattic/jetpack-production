@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI Image: trigger featured image auto generation when there is content on the post.
 - Jetpack_Currencies: Honor the `$symbol` arg when passed an unknown currency.
 - Newsletter Settings: Fix default value for Full text vs Excerpt
+- Random Redirect: remove module
 - Theme tools: Add social menu to Classic Theme Helper package
 - Toggle specific feature on AI Proofread
 - Update AI Proofread hover events
