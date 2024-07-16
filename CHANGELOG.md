@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Connection Screen: remove mention of Stats from the list of available free features
 - Custom Post Types: remove Comic post type
+- jetpack_get_google_fonts_data: Added an optional filter to short circuit fetching google font data
 
 ## 13.7-a.3 - 2024-07-15
 ### Enhancements
