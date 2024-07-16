@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Connection Screen: remove mention of Stats from the list of available free features.
+- Display My Jetpack products segemented by ownership
 
 ## [4.28.0] - 2024-07-15
 ### Added
