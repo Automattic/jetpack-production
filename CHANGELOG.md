@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom Post Types: remove Comic post type
 - Improve Popover UX on AI Proofread
 - Jetpack Color and Tonesque: add existence guard
+- Jetpack Dashboard: use flex-start alignment for dash item cards for more consistent header-content spacing
 - Jetpack plugin - JSON API: Fix Warnings in post endpoints
 - jetpack_get_google_fonts_data: Added an optional filter to short circuit fetching google font data
 
