@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection Screen: remove mention of Stats from the list of available free features
 - Custom Post Types: remove Comic post type
 - Improve Popover UX on AI Proofread
+- Jetpack Color and Tonesque: add existence guard
 - jetpack_get_google_fonts_data: Added an optional filter to short circuit fetching google font data
 
 ## 13.7-a.3 - 2024-07-15
