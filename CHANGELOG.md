@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- General: update WordPress version requirements to WordPress 6.5.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Connection Screen: remove mention of Stats from the list of available free features
 - Custom Post Types: remove Comic post type
