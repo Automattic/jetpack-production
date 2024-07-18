@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
+- Contact Form: ensure checkboxes are properly displayed when using the Twenty Twenty or the Twenty Twenty One theme.
 - General: update WordPress version requirements to WordPress 6.5.
 
 ### Bug fixes
