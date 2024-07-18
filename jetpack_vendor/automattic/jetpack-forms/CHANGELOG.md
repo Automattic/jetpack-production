@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Block Picker: fix display of the picker in the block editor following changes in WordPress 6.6.
 - Form submissions table: ensure the IP address is displayed for each submission, when available.
 
 ## [0.32.4] - 2024-07-15
