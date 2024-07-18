@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - General: update WordPress version requirements to WordPress 6.5.
 
+### Bug fixes
+- Check if the fontFamily block attribute is a string before trying to format.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add suggestions handling on AI Proofread
 - Connection Screen: remove mention of Stats from the list of available free features
