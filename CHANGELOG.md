@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add suggestions handling on AI Proofread
 - Connection Screen: remove mention of Stats from the list of available free features
 - Custom Post Types: remove Comic post type
+- Ensure Jetpack posts stats link points to wp-admin stats
 - Improve Popover UX on AI Proofread
 - Jetpack Color and Tonesque: add existence guard
 - Jetpack Dashboard: use flex-start alignment for dash item cards for more consistent header-content spacing
