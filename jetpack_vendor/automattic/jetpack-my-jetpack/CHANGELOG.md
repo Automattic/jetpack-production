@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added the auto-firewall status to the Protect product  card in My Jetpack
+- Add the number of logins blocked to the Protect card in My Jetpack.
 
 ### Changed
 - Connection Screen: remove mention of Stats from the list of available free features.
