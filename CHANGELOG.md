@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Adds dedicated WAF allow and block list toggles
 - Jetpack Dashboard: add AI Assistant card
 
 ### Improved compatibility
