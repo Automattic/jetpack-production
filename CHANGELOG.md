@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom Post Types: remove Comic post type
 - Ensure Jetpack posts stats link points to wp-admin stats
 - Improve Popover UX on AI Proofread
+- Invalidate suggestions on AI Proofread based on actions
 - Jetpack AI: add logo generator codebase to ai-client package and solve issues.
 - Jetpack Color and Tonesque: add existence guard
 - Jetpack Dashboard: use flex-start alignment for dash item cards for more consistent header-content spacing
