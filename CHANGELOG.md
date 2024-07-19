@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add suggestions handling on AI Proofread
 - AI Proofread: Target specific term occurrence
+- AI Proofread: Wrap suggestion text
 - Connection Screen: remove mention of Stats from the list of available free features
 - Custom Post Types: remove Comic post type
 - Ensure Jetpack posts stats link points to wp-admin stats
