@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - jetpack_get_google_fonts_data: Added an optional filter to short circuit fetching google font data
 - Remove "new" badge from Jetpack Firewall settings card.
 - Subscriptions: Update Newsletter module toggle label
+- WordPress.com REST API: exposed is_a4a_client attribute with sites API response
 
 ## 13.7-a.3 - 2024-07-15
 ### Enhancements
