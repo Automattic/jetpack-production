@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add suggestions handling on AI Proofread
+- AI Logo Generator: extend the site logo block to include an AI button on the toolbar.
 - AI Proofread: Add long sentences and unconfident word checks
 - AI Proofread: Target specific term occurrence
 - AI Proofread: Wrap suggestion text
