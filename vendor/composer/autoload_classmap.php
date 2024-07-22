@@ -87,6 +87,8 @@ return array(
     'Automattic\\Jetpack\\Device_Detection\\User_Agent_Info' => $baseDir . '/jetpack_vendor/automattic/jetpack-device-detection/src/class-user-agent-info.php',
     'Automattic\\Jetpack\\Error' => $baseDir . '/jetpack_vendor/automattic/jetpack-error/src/class-error.php',
     'Automattic\\Jetpack\\Errors' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-errors.php',
+    'Automattic\\Jetpack\\ExPlat' => $baseDir . '/jetpack_vendor/automattic/jetpack-explat/src/class-explat.php',
+    'Automattic\\Jetpack\\ExPlat\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-explat/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Extensions\\Contact_Form\\Contact_Form_Block' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/blocks/contact-form/class-contact-form-block.php',
     'Automattic\\Jetpack\\Files' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Admin' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-admin.php',
