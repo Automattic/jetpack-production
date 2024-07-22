@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds dedicated WAF allow and block list toggles
 - Jetpack Dashboard: add AI Assistant card
 - Jetpack Settings: add link to AI assistant product page
+- Site Editor: remove extra site editor notices in favor of the ones provided by WordPress directly.
 
 ### Improved compatibility
 - Contact Form: ensure checkboxes are properly displayed when using the Twenty Twenty or the Twenty Twenty One theme.
