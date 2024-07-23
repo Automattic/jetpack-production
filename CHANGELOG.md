@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Dashboard: use flex-start alignment for dash item cards for more consistent header-content spacing
 - Jetpack plugin - JSON API: Fix Warnings in post endpoints
 - jetpack_get_google_fonts_data: Added an optional filter to short circuit fetching google font data
+- Newsletter: byline settings return the correct default value
 - Remove "new" badge from Jetpack Firewall settings card.
 - Subscriptions: Update Newsletter module toggle label
 - Tests: Skipping test_sync_maybe_update_core test due to core bug.
