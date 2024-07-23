@@ -5,20 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.29.0-alpha] - unreleased
+## [4.30.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Added the auto-firewall status to the Protect product  card in My Jetpack
-- Add the number of logins blocked to the Protect card in My Jetpack.
 - My Jetpack: add A/A experiment to test for correct random assignment and prevent bias in metric performance.
 
+## [4.29.0] - 2024-07-22
+### Added
+- Added the auto-firewall status to the Protect product  card in My Jetpack. [#38332]
+- Added the number of logins blocked to the Protect card in My Jetpack. [#38396]
+
 ### Changed
-- Connection Screen: remove mention of Stats from the list of available free features.
-- Display My Jetpack products segemented by ownership
-- My Jetpack: update social icons in the connection screen.
-- Update statuses to make more sense in relation to ownership
+- Connection Screen: Removed mention of Stats from the list of available free features. [#38328]
+- Display My Jetpack products segemented by ownership. [#38283]
+- My Jetpack: Updated social icons in the connection screen. [#38334]
+- Updated statuses to make more sense in relation to ownership. [#38390]
 
 ## [4.28.0] - 2024-07-15
 ### Added
@@ -1586,7 +1589,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.29.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.28.0...4.29.0-alpha
+[4.30.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.29.0...4.30.0-alpha
+[4.29.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.28.0...4.29.0
 [4.28.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.27.2...4.28.0
 [4.27.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.27.1...4.27.2
 [4.27.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.27.0...4.27.1

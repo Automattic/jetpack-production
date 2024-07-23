@@ -2,48 +2,53 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.7-a.4 - unreleased
+## 13.7-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Adds dedicated WAF allow and block list toggles
-- Jetpack Dashboard: add AI Assistant card
-- Jetpack Settings: add link to AI assistant product page
 - Site Editor: remove extra site editor notices in favor of the ones provided by WordPress directly.
 
-### Improved compatibility
-- Contact Form: ensure checkboxes are properly displayed when using the Twenty Twenty or the Twenty Twenty One theme.
-- General: remove code for compatibility with WordPress versions before 6.5.
-- General: update WordPress version requirements to WordPress 6.5.
-
-### Bug fixes
-- Check if the fontFamily block attribute is a string before trying to format.
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add suggestions handling on AI Proofread
 - AI Assistant: Display AI sidebar on first highlight hover
 - AI Assistant: Rename Breve and proofread entries on sidebar
-- AI Logo Generator: extend the site logo block to include an AI button on the toolbar.
-- AI Proofread: Add long sentences and unconfident word checks
-- AI Proofread: Target specific term occurrence
-- AI Proofread: Wrap suggestion text
-- Connection Screen: remove mention of Stats from the list of available free features
-- Custom Post Types: remove Comic post type
-- Ensure Jetpack posts stats link points to wp-admin stats
-- Improve Popover UX on AI Proofread
-- Invalidate suggestions on AI Proofread based on actions
-- Jetpack AI: add logo generator codebase to ai-client package and solve issues.
-- Jetpack Color and Tonesque: add existence guard
-- Jetpack Dashboard: use flex-start alignment for dash item cards for more consistent header-content spacing
-- Jetpack plugin - JSON API: Fix Warnings in post endpoints
-- jetpack_get_google_fonts_data: Added an optional filter to short circuit fetching google font data
 - Newsletter: byline settings return the correct default value
-- Remove "new" badge from Jetpack Firewall settings card.
-- Subscriptions: Update Newsletter module toggle label
 - Tests: Skipping test_sync_maybe_update_core test due to core bug.
-- WordPress.com REST API: exposed is_a4a_client attribute with sites API response
 - WPCOM Connection test: use better ciphers than RC4, which is no longer available on many hosts.
+
+## 13.7-a.5 - 2024-07-22
+### Enhancements
+- Dashboard: Add a dashboard card for AI Assistant. [#38413]
+- Security: Add separate IP allow and block list toggles in Web Application Firewall settings. [#38267]
+- Settings: Add a link to the AI assistant product page. [#38414]
+
+### Improved compatibility
+- Contact Form: Ensure checkboxes are properly displayed when using the Twenty Twenty or the Twenty Twenty One theme. [#38407]
+- General: Remove code for compatibility with WordPress versions before 6.5. [#38386]
+- General: Update WordPress version requirements to WordPress 6.5. [#38382]
+
+### Bug fixes
+- Blocks: Check if the fontFamily block attribute is a string before trying to format. [#38321]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Logo Generator: Extend the site logo block to include an AI button on the toolbar. [#38439]
+- AI Proofread: Add long sentences and unconfident word checks. [#38443]
+- AI Proofread: Add suggestions handling on AI Proofread. [#38344]
+- AI Proofread: Improve Popover UX on AI Proofread. [#38342]
+- AI Proofread: Invalidate Suggestions on AI Proofread based on actions. [#38434]
+- AI Proofread: Target specific term occurrence. [#38397]
+- AI Proofread: Wrap suggestion text. [#38431]
+- Connection Screen: Remove mention of Stats from the list of available free features. [#38328]
+- Custom Post Types: Remove Comic post type. [#38307]
+- Google Fonts: Added an optional filter to short circuit fetching google font data. [#38343]
+- Jetpack AI: Add logo generator codebase to ai-client package and solve issues. [#38391]
+- Jetpack Color and Tonesque: Add existence guard. [#38341]
+- Jetpack Dashboard: use flex-start alignment for dash item cards for more consistent header-content spacing. [#38371]
+- JSON API: Fix Warnings in post endpoints. [#38365]
+- Security: Remove "new" badge from Jetpack Firewall settings card. [#38415]
+- Subscriptions: Update Newsletter module toggle label. [#38373]
+- Stats: Ensure Jetpack posts stats link points to WP Admin stats. [#38376]
+- WordPress.com REST API: Expose is_a4a_client attribute with sites API response. [#38403]
 
 ## 13.7-a.3 - 2024-07-15
 ### Enhancements

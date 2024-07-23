@@ -27,7 +27,7 @@ function jetpack_get_google_fonts_data() {
 	 *
 	 * @module google-fonts
 	 *
-	 * @since 13.7-a.4
+	 * @since 13.7
 	 *
 	 * @param null|array $pre The pre-filtered Google Fonts data, default null.
 	 */
