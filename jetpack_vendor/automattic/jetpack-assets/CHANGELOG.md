@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Assets: Add JSX runtime polyfill `react-jsx-runtime` for WordPress < 6.6.
+
 ## [2.1.13] - 2024-07-03
 ### Changed
 - Updated package dependencies. [#38132]
@@ -458,6 +465,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Statically access asset tools
 
+[2.2.0-alpha]: https://github.com/Automattic/jetpack-assets/compare/v2.1.13...v2.2.0-alpha
 [2.1.13]: https://github.com/Automattic/jetpack-assets/compare/v2.1.12...v2.1.13
 [2.1.12]: https://github.com/Automattic/jetpack-assets/compare/v2.1.11...v2.1.12
 [2.1.11]: https://github.com/Automattic/jetpack-assets/compare/v2.1.10...v2.1.11
