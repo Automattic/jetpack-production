@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add events for Breve
 - AI Assistant: Display AI sidebar on first highlight hover
+- AI Assistant: Fix block inserter behavior when Breve is enabled
 - AI Assistant: Rename Breve and proofread entries on sidebar
 - Newsletter: byline settings return the correct default value
 - Tests: Skipping test_sync_maybe_update_core test due to core bug.
