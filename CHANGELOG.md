@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Site Editor: remove extra site editor notices in favor of the ones provided by WordPress directly.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Add events for Breve
 - AI Assistant: Display AI sidebar on first highlight hover
 - AI Assistant: Rename Breve and proofread entries on sidebar
 - Newsletter: byline settings return the correct default value
