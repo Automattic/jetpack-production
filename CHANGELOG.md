@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Update Newsletter module toggle label
 - Tests: Skipping test_sync_maybe_update_core test due to core bug.
 - WordPress.com REST API: exposed is_a4a_client attribute with sites API response
+- WPCOM Connection test: use better ciphers than RC4, which is no longer available on many hosts.
 
 ## 13.7-a.3 - 2024-07-15
 ### Enhancements
