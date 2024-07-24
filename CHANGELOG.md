@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Rename Breve and proofread entries on sidebar
 - Newsletter: byline settings return the correct default value
 - Popover: Refactor some code to use refs, adding in tests to future proof.
+- Social Menus: Requiring the feature from the Classic Theme Helper package.
 - Tests: Skipping test_sync_maybe_update_core test due to core bug.
 - WPCOM Connection test: use better ciphers than RC4, which is no longer available on many hosts.
 
