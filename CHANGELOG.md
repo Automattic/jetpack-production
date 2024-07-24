@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Enable Breve for 10% of production sites
 - Site Editor: remove extra site editor notices in favor of the ones provided by WordPress directly.
 
+### Improved compatibility
+- Show the notification bell always
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add events for Breve
 - AI Assistant: Display AI sidebar on first highlight hover
