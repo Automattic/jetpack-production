@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Display AI sidebar on first highlight hover
 - AI Assistant: Fix block inserter behavior when Breve is enabled
 - AI Assistant: Rename Breve and proofread entries on sidebar
+- Jetpack AI: connect the site logo block extension to AI Logo Generator modal.
 - Jetpack AI: remove unused ai-assistant-panel component
 - Jetpack Editor State: add is_my_jetpack_available to initial state
 - Newsletter: byline settings return the correct default value
