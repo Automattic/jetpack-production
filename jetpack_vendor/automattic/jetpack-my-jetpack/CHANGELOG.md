@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - My Jetpack: add A/A experiment to test for correct random assignment and prevent bias in metric performance.
 
+### Changed
+- Final minor enhancements to the Protect product card in My Jetpack.
+
 ### Removed
 - Remove functionality that hid 1 value on the backup card for mid-sized screens
 
