@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Popover: Refactor some code to use refs, adding in tests to future proof.
 - Social Menus: Requiring the feature from the Classic Theme Helper package.
 - Tests: Skipping test_sync_maybe_update_core test due to core bug.
+- WPCOM API: Return actual value instead of bool for some settings after update
 - WPCOM Connection test: use better ciphers than RC4, which is no longer available on many hosts.
 
 ## 13.7-a.5 - 2024-07-22
