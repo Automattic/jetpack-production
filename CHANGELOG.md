@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: Disable first Breve hover on mobile
 - AI Assistant: Disable long sentences Breve feature by default
 - AI Assistant: Enable Breve for 10% of production sites
 - AI Assistant: Remove Breve readability star
