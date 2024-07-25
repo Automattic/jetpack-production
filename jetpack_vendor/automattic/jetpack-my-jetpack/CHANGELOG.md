@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Remove functionality that hid 1 value on the backup card for mid-sized screens
 
+### Fixed
+- Include Jetpack Legacy plans when checking if user has social included with plan
+
 ## [4.29.0] - 2024-07-22
 ### Added
 - Added the auto-firewall status to the Protect product  card in My Jetpack. [#38332]
