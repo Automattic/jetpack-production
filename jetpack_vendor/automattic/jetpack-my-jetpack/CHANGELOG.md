@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Async card update after async site connection
 - My Jetpack: add A/A experiment to test for correct random assignment and prevent bias in metric performance.
 
 ### Changed
