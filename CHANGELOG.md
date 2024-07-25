@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Disable long sentences Breve feature by default
 - AI Assistant: Enable Breve for 10% of production sites
 - AI Assistant: Remove Breve readability star
+- Lossless optimization of PNGs in plugins/jetpack.
 - Site Editor: remove extra site editor notices in favor of the ones provided by WordPress directly.
 
 ### Improved compatibility
