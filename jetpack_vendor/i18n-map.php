@@ -52,10 +52,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
       'ver' => '0.32.5',
     ),
-    'jetpack-google-analytics' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-google-analytics',
-      'ver' => '0.2.2',
-    ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
       'ver' => '0.4.3',
