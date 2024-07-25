@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: Add feedback link to the sidebar
+- AI Assistant: Breve UI enhancements
 - AI Assistant: Disable first Breve hover on mobile
 - AI Assistant: Disable long sentences Breve feature by default
 - AI Assistant: Enable Breve for 10% of production sites
