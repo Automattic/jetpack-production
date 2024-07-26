@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Tests: Skipping test_sync_maybe_update_core test due to core bug.
 - WPCOM API: Return actual value instead of bool for some settings after update
 - WPCOM Connection test: use better ciphers than RC4, which is no longer available on many hosts.
+- WPCOM Settings API: Add synced options from Jetpack WAF.
 
 ## 13.7-a.5 - 2024-07-22
 ### Enhancements
