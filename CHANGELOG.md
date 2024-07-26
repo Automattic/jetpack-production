@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Display AI sidebar on first highlight hover
 - AI Assistant: Fix block inserter behavior when Breve is enabled
 - AI Assistant: Rename Breve and proofread entries on sidebar
+- AI Logo Generator: support saving the logo and the icon when an image is ready.
 - Fix highlight not working on formatted texts
 - Google Analytics: remove the module and its remnants.
 - Jetpack AI: add action links on sidebar for feature discoverability
