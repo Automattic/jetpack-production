@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Async card update after async site connection
 - My Jetpack: add A/A experiment to test for correct random assignment and prevent bias in metric performance.
+- Show View button on product card along with upgrade cta
 
 ### Changed
 - Final minor enhancements to the Protect product card in My Jetpack.
