@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Add animation on loading for AI Proofread
 - Admin page: Remove propTypes and defaultProps from code due to React legacy code warnings.
 - AI Assistant: Add events for Breve
+- AI Assistant: Breve UI and text enhancements
 - AI Assistant: Display AI sidebar on first highlight hover
 - AI Assistant: Fix block inserter behavior when Breve is enabled
 - AI Assistant: Rename Breve and proofread entries on sidebar
