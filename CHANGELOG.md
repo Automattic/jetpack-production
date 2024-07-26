@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Google Analytics: remove the module and its remnants.
 - Jetpack AI: add action links on sidebar for feature discoverability
 - Jetpack AI: connect the site logo block extension to AI Logo Generator modal.
+- Jetpack AI: fix event tracking of logo generator to inform the proper placement.
 - Jetpack AI: remove unused ai-assistant-panel component
 - Jetpack Editor State: add is_my_jetpack_available to initial state
 - Newsletter: byline settings return the correct default value
