@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Enable Breve for 10% of production sites
 - AI Assistant: Remove Breve readability star
 - Lossless optimization of PNGs in plugins/jetpack.
+- Premium Content Block: Only show it as a transformation option if group or columns blocks are selected or if multiple blocks are selected.
 - Site Editor: remove extra site editor notices in favor of the ones provided by WordPress directly.
 
 ### Improved compatibility
