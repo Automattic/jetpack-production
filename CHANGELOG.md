@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Social Menus: Requiring the feature from the Classic Theme Helper package.
 - Tests: Skipping test_sync_maybe_update_core test due to core bug.
 - WPCOM API: Return actual value instead of bool for some settings after update
+- WPCOM API: Return list of newsletter category IDs after saving
 - WPCOM Connection test: use better ciphers than RC4, which is no longer available on many hosts.
 - WPCOM Settings API: Add synced options from Jetpack WAF.
 
