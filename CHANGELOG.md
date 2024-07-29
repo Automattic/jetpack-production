@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Show the notification bell always
 
+### Bug fixes
+- Jetpack Comments: fix replying to comments in chrome when logged in to both wordpress.com and the jetpack site
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add animation on loading for AI Proofread
 - Admin page: Remove propTypes and defaultProps from code due to React legacy code warnings.
