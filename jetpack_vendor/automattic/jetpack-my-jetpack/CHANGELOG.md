@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Include Jetpack Legacy plans when checking if user has social included with plan
+- Update all tracks to snake case, camel case is not supported
 
 ## [4.29.0] - 2024-07-22
 ### Added
