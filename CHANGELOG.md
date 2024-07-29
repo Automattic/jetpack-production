@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Editor State: add is_my_jetpack_available to initial state
 - Newsletter: byline settings return the correct default value
 - Popover: Refactor some code to use refs, adding in tests to future proof.
+- Shortcode: Fix the test-class.gravatar.php tests
 - Social Menus: Requiring the feature from the Classic Theme Helper package.
 - Tests: Skipping test_sync_maybe_update_core test due to core bug.
 - WPCOM API: Return actual value instead of bool for some settings after update
