@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Popover: Refactor some code to use refs, adding in tests to future proof.
 - Shortcode: Fix the test-class.gravatar.php tests
 - Social Menus: Requiring the feature from the Classic Theme Helper package.
+- Tests: Removing test_sync_maybe_update_core test skip as core bug now fixed.
 - Tests: Skipping test_sync_maybe_update_core test due to core bug.
 - WPCOM API: Return actual value instead of bool for some settings after update
 - WPCOM API: Return list of newsletter category IDs after saving
