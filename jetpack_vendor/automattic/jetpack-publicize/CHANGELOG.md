@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Removed
+- Removed Fediverse og filters to fix fatals
+
 ### Fixed
 - Fixed Threads connections not having a profile_url
 
