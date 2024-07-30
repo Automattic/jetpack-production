@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add ignore button for AI Proofread
 - AI Assistant: Change Breve readability score text
 - AI Assistant: Release Breve for 50% of sites
+- AI Logo Generator: Fix the retry button when a feature request fails.
 - AI Logo Generator: only extend the logo block when the AI Assistant is available and not hidden on the editor.
 - Disable blog stats block for simple sites
 - Fix suggestion invalidation on different features
