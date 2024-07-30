@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Editor State: add is_my_jetpack_available to initial state
 - Newsletter: byline settings return the correct default value
 - Popover: Refactor some code to use refs, adding in tests to future proof.
+- React: Changing global JSX namespace to React.JSX
 - Remove Browse sites from sidebar as it's on WordPress logo in masterbar
 - Shortcode: Fix the test-class.gravatar.php tests
 - Social Menus: Requiring the feature from the Classic Theme Helper package.

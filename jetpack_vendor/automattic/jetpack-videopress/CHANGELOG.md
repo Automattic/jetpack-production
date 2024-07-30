@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- React: Changing global JSX namespace to React.JSX
 - Update dependencies.
 
 ## [0.23.28] - 2024-07-22

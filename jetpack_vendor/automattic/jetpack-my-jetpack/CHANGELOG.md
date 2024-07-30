@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Final minor enhancements to the Protect product card in My Jetpack.
+- React: Changing global JSX namespace to React.JSX
 
 ### Removed
 - Remove functionality that hid 1 value on the backup card for mid-sized screens
