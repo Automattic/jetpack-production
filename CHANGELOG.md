@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Comments: fix replying to comments in chrome when logged in to both wordpress.com and the jetpack site
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Release Breve for 50% of sites
 - Disable blog stats block for simple sites
 - React: Changing global JSX namespace to React.JSX
 - Social | Removed the media auto-conversion UI
