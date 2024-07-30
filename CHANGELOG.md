@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Release Breve for 50% of sites
 - AI Logo Generator: only extend the logo block when the AI Assistant is available and not hidden on the editor.
 - Disable blog stats block for simple sites
+- Fix suggestion invalidation on different features
 - React: Changing global JSX namespace to React.JSX
 - Social | Removed the media auto-conversion UI
 
