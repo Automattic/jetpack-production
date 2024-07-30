@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove Browse sites from sidebar as it's on WordPress logo in masterbar
 - Shortcode: Fix the test-class.gravatar.php tests
 - Social Menus: Requiring the feature from the Classic Theme Helper package.
+- Social | Removed the media auto-conversion UI
 - Tests: Removing test_sync_maybe_update_core test skip as core bug now fixed.
 - Tests: Skipping test_sync_maybe_update_core test due to core bug.
 - WPCOM API: Return actual value instead of bool for some settings after update
