@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Adds global statistics
 
+### Fixed
+- Fix global stats type check
+
 ## [0.17.0] - 2024-07-22
 ### Added
 - Added the ability to toggle IP block and allow lists individually. [#38184]
