@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Logo Generator: only extend the logo block when the AI Assistant is available and not hidden on the editor.
 - Disable blog stats block for simple sites
 - Fix suggestion invalidation on different features
+- Jetpack AI: useExperiment note
 - React: Changing global JSX namespace to React.JSX
 - Social | Removed the media auto-conversion UI
 
