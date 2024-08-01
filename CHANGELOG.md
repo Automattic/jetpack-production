@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix suggestion invalidation on different features
 - Jetpack AI: apply text-wrap: pretty to AI assistant sidebar sections
 - Jetpack AI: useExperiment note
+- Podcast Player Block: Update component unmount method to be compatible with React 19.
 - React: Changing global JSX namespace to React.JSX
 - Social Links: Adding a function_exists check within the social-links.php file, to preventconflicts with package version.
 - Social | Removed the media auto-conversion UI
