@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add ignore button for AI Proofread
+- Admin bar: help center and notification icons now follow color scheme
 - AI Assistant: Change Breve readability score text
 - AI Assistant: Release Breve for 50% of sites
 - AI Logo Generator: Fix the retry button when a feature request fails.
