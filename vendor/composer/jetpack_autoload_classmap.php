@@ -179,12 +179,16 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score-request.php'
 	),
 	'Automattic\\Jetpack\\Classic_Theme_Helper\\Featured_Content' => array(
-		'version' => '0.4.3.0',
+		'version' => '0.4.4.0-alpha1722497050',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-featured-content.php'
 	),
 	'Automattic\\Jetpack\\Classic_Theme_Helper\\Main' => array(
-		'version' => '0.4.3.0',
+		'version' => '0.4.4.0-alpha1722497050',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-main.php'
+	),
+	'Automattic\\Jetpack\\Classic_Theme_Helper\\Social_Links' => array(
+		'version' => '0.4.4.0-alpha1722497050',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/social-links.php'
 	),
 	'Automattic\\Jetpack\\Composer\\Manager' => array(
 		'version' => '2.0.2.0',
