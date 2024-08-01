@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.31.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.31.0] - 2024-08-01
 ### Added
-- Update Welcome Banner and set async site-only connection
+- Update Welcome Banner and set async site-only connection [#38534]
 
 ### Changed
-- Fixup versions
-- My Jetpack: modify Jetpack AI product class and interstitial links
-- React: Changing global JSX namespace to React.JSX
+- Fixup versions [#38612]
+- My Jetpack: modify Jetpack AI product class and interstitial links [#38602]
+- React: Changing global JSX namespace to React.JSX [#38585]
 
 ## [4.30.0] - 2024-07-29
 ### Added
@@ -1610,7 +1607,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.31.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.30.0...4.31.0-alpha
+[4.31.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.30.0...4.31.0
 [4.30.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.29.0...4.30.0
 [4.29.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.28.0...4.29.0
 [4.28.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.27.2...4.28.0
