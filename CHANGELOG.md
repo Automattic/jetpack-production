@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Comments: fix replying to comments in chrome when logged in to both wordpress.com and the jetpack site
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added feature flag management for Social
 - Add ignore button for AI Proofread
 - Admin bar: help center and notification icons now follow color scheme
 - AI Assistant: Change Breve readability score text
