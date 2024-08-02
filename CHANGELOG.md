@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: add source for the paid importer
 - Podcast Player Block: Update component unmount method to be compatible with React 19.
 - React: Changing global JSX namespace to React.JSX
+- React Compatibility: Changing ReactDOM.render usage to be via ReactDOM.createRoot.
 - Social Links: Adding a function_exists check within the social-links.php file, to preventconflicts with package version.
 - Social | Removed the media auto-conversion UI
 - WP.com API: Include errors listed for broken themes.
