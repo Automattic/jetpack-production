@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Jetpack: Port FSE feature from ETK
+- Jetpack AI: enable the logo block AI logo generator extension in production.
 
 ### Bug fixes
 - Jetpack Comments: fix replying to comments in chrome when logged in to both wordpress.com and the jetpack site
