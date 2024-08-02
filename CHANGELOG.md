@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: Release Breve to production
 - Jetpack: Port FSE feature from ETK
 - Jetpack AI: enable the logo block AI logo generator extension in production.
 
