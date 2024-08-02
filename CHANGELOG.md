@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: apply text-wrap: pretty to AI assistant sidebar sections
 - Jetpack AI: useExperiment note
 - Jetpack AI Breve: disable feature toggles on main toggle
+- Newsletter: add source for the paid importer
 - Podcast Player Block: Update component unmount method to be compatible with React 19.
 - React: Changing global JSX namespace to React.JSX
 - Social Links: Adding a function_exists check within the social-links.php file, to preventconflicts with package version.
