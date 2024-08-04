@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added endpoint to sync shares post meta back to the self-hosted site.
 - Added feature flag management for social
 
 ## [0.47.4] - 2024-08-01
