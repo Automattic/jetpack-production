@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.32.7-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.32.7] - 2024-08-05
 ### Changed
-- React compatibility: Changing ReactDOM.render usage to be via ReactDOM.createRoot.
+- React compatibility: Changing ReactDOM.render usage to be via ReactDOM.createRoot. [#38649]
 
 ## [0.32.6] - 2024-07-29
 ### Changed
@@ -622,7 +619,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.32.7-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.32.6...v0.32.7-alpha
+[0.32.7]: https://github.com/automattic/jetpack-forms/compare/v0.32.6...v0.32.7
 [0.32.6]: https://github.com/automattic/jetpack-forms/compare/v0.32.5...v0.32.6
 [0.32.5]: https://github.com/automattic/jetpack-forms/compare/v0.32.4...v0.32.5
 [0.32.4]: https://github.com/automattic/jetpack-forms/compare/v0.32.3...v0.32.4
