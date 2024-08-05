@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: useExperiment note
 - Jetpack AI Breve: disable feature toggles on main toggle
 - Newsletter: add source for the paid importer
+- Newsletter settings: set all settings on the page disabled when module is disabled.
 - Podcast Player Block: Update component unmount method to be compatible with React 19.
 - React: Changing global JSX namespace to React.JSX
 - React Compatibility: Changing ReactDOM.render usage to be via ReactDOM.createRoot.
