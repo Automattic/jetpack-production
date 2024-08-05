@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - change Jetpack AI product page link redirect
 - copy updates
+- Modify the Google Analytics notice to notify of the feature removal.
 
 ## [4.31.0] - 2024-08-01
 ### Added

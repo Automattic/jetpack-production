@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: apply text-wrap: pretty to AI assistant sidebar sections
 - Jetpack AI: useExperiment note
 - Jetpack AI Breve: disable feature toggles on main toggle
+- Modify the Google Analytics notice to notify of the feature removal.
 - Newsletter: add source for the paid importer
 - Newsletter settings: set all settings on the page disabled when module is disabled.
 - Podcast Player Block: Update component unmount method to be compatible with React 19.
