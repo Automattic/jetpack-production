@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Logo Generator: Fix the retry button when a feature request fails.
 - AI Logo Generator: only extend the logo block when the AI Assistant is available and not hidden on the editor.
 - AI Logo Generator: Release site logo extension to 10% of sites.
+- Disable AI Proofread by default
 - Disable blog stats block for simple sites
 - Fix suggestion invalidation on different features
 - Jetpack AI: apply text-wrap: pretty to AI assistant sidebar sections
