@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Release Breve to production
 - Jetpack: Port FSE feature from ETK
 - Jetpack AI: enable the logo block AI logo generator extension in production.
+- Jetpack Newsletter: Adds Jetpack Newsletter menu with preview option.
 
 ### Bug fixes
 - Jetpack Comments: fix replying to comments in chrome when logged in to both wordpress.com and the jetpack site
