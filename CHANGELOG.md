@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Jetpack Comments: fix replying to comments in chrome when logged in to both wordpress.com and the jetpack site
+- Sharing: do not include Gravatar images in Open Graph Meta tags.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added feature flag management for Social
