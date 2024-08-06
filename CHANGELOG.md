@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 13.8-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 13.7-beta - 2024-08-05
 ### Enhancements
 - AI Assistant: Make Jetpack Breve available to general public. [#38697]
