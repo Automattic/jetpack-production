@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Lossless image optimization of most images in projects/plugins [a through social]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Security Settings: Redirect to Protect dashboard for Firewall settings, when available.
 - there's already a changelog for this feature
 
 ## 13.7-beta2 - 2024-08-06
