@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Security
 - Parse request body when method used is not POST
 
+### Added
+- Brute Force Protection: Add `jetpack_has_login_ability` hook.
+
 ## [0.18.0] - 2024-08-01
 ### Added
 - Adds global statistics [#38388]
