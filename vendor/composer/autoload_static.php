@@ -264,6 +264,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ13_8_a_0
         'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Templates' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-templates.php',
         'Automattic\\Jetpack\\Redirect' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php',
         'Automattic\\Jetpack\\Roles' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
+        'Automattic\\Jetpack\\Script_Data' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-assets/src/class-script-data.php',
         'Automattic\\Jetpack\\Search\\CLI' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/class-cli.php',
         'Automattic\\Jetpack\\Search\\Classic_Search' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/classic-search/class-classic-search.php',
         'Automattic\\Jetpack\\Search\\Customberg' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/customberg/class-customberg.php',
