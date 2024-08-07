@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Lossless image optimization of most images in projects/plugins [a through social]
 
+### Bug fixes
+- AI Assistant: Disable Breve when AI Assistant block is disabled or on free plan
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Security Settings: Redirect to Protect dashboard for Firewall settings, when available.
 - there's already a changelog for this feature
