@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - feature flaged feature
 - feature flag feature, not yet released
 - Fixed a warning with undefined variables
+- Fixed CSSTidy loading in tests.
 - Likes Block: add keywords
 - Security Settings: Redirect to Protect dashboard for Firewall settings, when available.
 - Support video and audio shortcodes in Media Extractor
