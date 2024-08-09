@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update uses of useConnection to useMyJetpackConnection and improve typing in a few places
 
+### Removed
+- Tests: Removed react-test-renderer.
+
 ## [4.32.0] - 2024-08-05
 ### Added
 - Add Tracks events for Welcome Flow [#38641]
