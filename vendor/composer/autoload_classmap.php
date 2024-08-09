@@ -207,6 +207,7 @@ return array(
     'Automattic\\Jetpack\\Post_List\\Post_Thumbnail' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-thumbnail.php',
     'Automattic\\Jetpack\\Protect_Models' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-protect-models.php',
     'Automattic\\Jetpack\\Protect_Models\\Extension_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-extension-model.php',
+    'Automattic\\Jetpack\\Protect_Models\\History_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-history-model.php',
     'Automattic\\Jetpack\\Protect_Models\\Status_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-status-model.php',
     'Automattic\\Jetpack\\Protect_Models\\Threat_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-threat-model.php',
     'Automattic\\Jetpack\\Protect_Status\\Plan' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-plan.php',
