@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed a warning with undefined variables
 - Likes Block: add keywords
 - Security Settings: Redirect to Protect dashboard for Firewall settings, when available.
+- Support video and audio shortcodes in Media Extractor
 - there's already a changelog for this feature
 
 ## 13.7-beta2 - 2024-08-06
