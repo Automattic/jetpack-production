@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed a warning with undefined variables
 - Fixed CSSTidy loading in tests.
 - Likes Block: add keywords
+- React 19 compatibility: Making sure useRef includes an argument.
 - Security Settings: Redirect to Protect dashboard for Firewall settings, when available.
 - Support video and audio shortcodes in Media Extractor
 - Tests: Removed react-test-renderer as not in use.
