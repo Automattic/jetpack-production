@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Tests: Removed react-test-renderer.
 
+### Fixed
+- My Jetpack: fix a bug where a user would see and infinite loading spinner when trying to connect Jetpack with one click in the Welcome flow.
+
 ## [4.32.0] - 2024-08-05
 ### Added
 - Add Tracks events for Welcome Flow [#38641]
