@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - feature flag feature, not yet released
 - Fixed a warning with undefined variables
 - Fixed CSSTidy loading in tests.
+- Javascript: Cleaning up usage of javascript: in URLs
 - Likes Block: add keywords
 - React 19 compatibility: Making sure useRef includes an argument.
 - Security Settings: Redirect to Protect dashboard for Firewall settings, when available.
