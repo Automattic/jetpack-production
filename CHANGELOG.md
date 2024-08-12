@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed CSSTidy loading in tests.
 - Javascript: Cleaning up usage of javascript: in URLs
 - Likes Block: add keywords
+- Paywall Block: improve styles
 - React 19 compatibility: Making sure useRef includes an argument.
 - Security Settings: Redirect to Protect dashboard for Firewall settings, when available.
 - Social: Updated intial state logic to use the new consolidated initial state
