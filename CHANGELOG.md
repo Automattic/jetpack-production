@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Jetpack Social: display Fediverse creator meta tag when a post has an active Mastodon connection.
 - Lossless image optimization of most images in projects/plugins [a through social]
 
 ### Bug fixes

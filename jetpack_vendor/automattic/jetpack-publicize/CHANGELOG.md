@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Open Graph Meta Tags: do not handle Fediverse tags from Publicize package.
 - Social: Updated intial state logic to use the new consolidated initial state
 
 ## [0.48.0] - 2024-08-05
