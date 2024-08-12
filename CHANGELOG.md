@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add namespace to Breve CSS classes
+- AI Assistant: Remove Breve highlight popover when feature is disabled
 - Already in a previous changelog entry
 - Components: React cleanup, removing implicit returns from ref callbacks, to ensure compatibility with React 19.
 - Contact Form: Removing deprecated functionality
