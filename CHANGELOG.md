@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Likes Block: add keywords
 - React 19 compatibility: Making sure useRef includes an argument.
 - Security Settings: Redirect to Protect dashboard for Firewall settings, when available.
+- Social: Updated intial state logic to use the new consolidated initial state
 - Support video and audio shortcodes in Media Extractor
 - Tests: Removed react-test-renderer as not in use.
 - there's already a changelog for this feature
