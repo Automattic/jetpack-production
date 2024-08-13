@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.3.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.3.1] - 2024-08-12
 ### Fixed
-- Fixed variable names
+- Fixed variable names. [#38606]
 
 ## [2.3.0] - 2024-08-08
 ### Added
-- Added jetpack-initial-state package to consolidate the logic for Initial state [#38430]
+- Added jetpack-initial-state package to consolidate the logic for Initial state. [#38430]
 
 ## [2.2.0] - 2024-07-23
 ### Added
@@ -473,7 +470,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Statically access asset tools
 
-[2.3.1-alpha]: https://github.com/Automattic/jetpack-assets/compare/v2.3.0...v2.3.1-alpha
+[2.3.1]: https://github.com/Automattic/jetpack-assets/compare/v2.3.0...v2.3.1
 [2.3.0]: https://github.com/Automattic/jetpack-assets/compare/v2.2.0...v2.3.0
 [2.2.0]: https://github.com/Automattic/jetpack-assets/compare/v2.1.13...v2.2.0
 [2.1.13]: https://github.com/Automattic/jetpack-assets/compare/v2.1.12...v2.1.13

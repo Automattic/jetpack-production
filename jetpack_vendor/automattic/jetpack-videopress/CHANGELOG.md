@@ -9,14 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- React 19 compatibility: Making sure useRef includes an argument.
-
 ### Changed
 - VideoPress: update tus client library to 4.1.0
 
+## [0.23.31] - 2024-08-12
+### Added
+- React 19 compatibility: Making sure useRef includes an argument. [#38765]
+
 ### Removed
-- Tests: Removed react-test-renderer.
+- Tests: Removed react-test-renderer. [#38755]
 
 ## [0.23.30] - 2024-08-05
 ### Changed
@@ -1395,7 +1396,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.24.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.30...v0.24.0-alpha
+[0.24.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.31...v0.24.0-alpha
+[0.23.31]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.30...v0.23.31
 [0.23.30]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.29...v0.23.30
 [0.23.29]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.28...v0.23.29
 [0.23.28]: https://github.com/Automattic/jetpack-videopress/compare/v0.23.27...v0.23.28
