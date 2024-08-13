@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Hide the Customizer link on Simple site
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add general improvements in Breve UX
 - AI Assistant: Remove Breve highlight popover when feature is disabled
 - Paywall Block: improve styles
 
