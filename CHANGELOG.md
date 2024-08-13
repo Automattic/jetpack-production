@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Remove Breve highlight popover when feature is disabled
 - Allow dismiss suggestion in all states
 - Paywall Block: improve styles
+- small change under feature flag
 
 ## 13.8-a.1 - 2024-08-12
 ### Enhancements
