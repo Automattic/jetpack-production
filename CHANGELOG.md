@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: Disable Breve when AI Assistant block is disabled or on free plan
 - Fix: Saving discussion settings shouldn't turn on subscribe modal.
+- Hide the Customizer link on Simple site
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add namespace to Breve CSS classes
