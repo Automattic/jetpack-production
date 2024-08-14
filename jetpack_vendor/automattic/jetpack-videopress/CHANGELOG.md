@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- VideoPress: fix upload error handler to be able to hint the user something's gone wrong
 - VideoPress: update tus client library to 4.1.0
 
 ## [0.23.31] - 2024-08-12
