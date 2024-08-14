@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Open Graph Meta Tags: do not display Fediverse tag on WordPress.com Simple.
 - Paywall Block: improve styles
 - small change under feature flag
+- Subscribe block: p tag styles leaking in from theme
 
 ## 13.8-a.1 - 2024-08-12
 ### Enhancements
