@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.44.15-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update dependencies.
+
 ## [0.44.14] - 2024-08-05
 ### Changed
 - React compatibility: Changing ReactDOM.render usage to be via ReactDOM.createRoot. [#38649]
@@ -996,6 +1003,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
+[0.44.15-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.44.14...v0.44.15-alpha
 [0.44.14]: https://github.com/Automattic/jetpack-search/compare/v0.44.13...v0.44.14
 [0.44.13]: https://github.com/Automattic/jetpack-search/compare/v0.44.12...v0.44.13
 [0.44.12]: https://github.com/Automattic/jetpack-search/compare/v0.44.11...v0.44.12
