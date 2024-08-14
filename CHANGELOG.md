@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Change Breve type markup and restrict types
 - AI Assistant: Remove Breve highlight popover when feature is disabled
 - Allow dismiss suggestion in all states
+- featured flagged feature
 - Open Graph Meta Tags: do not display Fediverse tag on WordPress.com Simple.
 - Paywall Block: improve styles
 - small change under feature flag
