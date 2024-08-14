@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add general improvements in Breve UX
+- AI Assistant: Add flag for Breve typo detection support
 - AI Assistant: Change Breve type markup and restrict types
 - AI Assistant: Remove Breve highlight popover when feature is disabled
 - Allow dismiss suggestion in all states
