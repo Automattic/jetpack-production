@@ -31,16 +31,6 @@
 */
 
 /**
- * @license React
- * react-jsx-runtime.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-/**
  * This test is for touch events.
  * It may not accurately detect a touch screen, but may be close enough depending on the use case.
  *

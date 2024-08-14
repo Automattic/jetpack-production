@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update dependencies.
+- Updated package dependencies.
 
 ### Fixed
 - Fix incorrect next-version tokens in php `@since` and/or `@deprecated` docs.
