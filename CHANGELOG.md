@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Remove Breve highlight popover when feature is disabled
 - Allow dismiss suggestion in all states
 - featured flagged feature
+- Jetpack AI: register the ai-title-optimization-keywords-support beta flag.
 - Open Graph Meta Tags: do not display Fediverse tag on WordPress.com Simple.
 - Paywall Block: improve styles
 - small change under feature flag
