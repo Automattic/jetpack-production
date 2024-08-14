@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Fix incorrect next-version tokens in php `@since` and/or `@deprecated` docs.
+
 ## [0.44.14] - 2024-08-05
 ### Changed
 - React compatibility: Changing ReactDOM.render usage to be via ReactDOM.createRoot. [#38649]
