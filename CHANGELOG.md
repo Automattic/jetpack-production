@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add flag for Breve typo detection support
 - AI Assistant: Change Breve type markup and restrict types
 - AI Assistant: Remove Breve highlight popover when feature is disabled
+- AI Assistant: Remove unique-id sass function call from animation name
 - AI Title Optimization: change UI labels when keywords beta flag is enabled.
 - Allow dismiss suggestion in all states
 - featured flagged feature
