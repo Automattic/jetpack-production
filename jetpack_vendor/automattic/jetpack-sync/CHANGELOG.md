@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix incorrect next-version tokens in php `@since` and/or `@deprecated` docs.
+- Sync: update WooCommerce Post Meta whitelist.
 
 ## [3.5.1] - 2024-08-08
 ### Fixed
