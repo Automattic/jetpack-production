@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall Block: improve styles
 - Site Breadcrumbs: Wrapping functions in function_exists as part of functionality move to package
 - small change under feature flag
+- Social Links: Requiring feature from Classic Theme Helper package instead of Jetpack module.
 - Subscribe block: p tag styles leaking in from theme
 - Sync: Add a new callable for Sync Active Modules
 - Updated package dependencies.
