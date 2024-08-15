@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Makes allow list settings always accessible
 - Open Graph Meta Tags: do not display Fediverse tag on WordPress.com Simple.
 - Paywall Block: improve styles
+- Site Breadcrumbs: Wrapping functions in function_exists as part of functionality move to package
 - small change under feature flag
 - Subscribe block: p tag styles leaking in from theme
 - Sync: Add a new callable for Sync Active Modules

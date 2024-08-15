@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Site Breadcrumbs: Copying functionality file into Classic Theme Helper package.
+
 ### Changed
 - Updated package dependencies.
 
