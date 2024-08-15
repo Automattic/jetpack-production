@@ -725,7 +725,7 @@ class Functions {
 	/**
 	 * Return the list of active sync modules.
 	 *
-	 * @since 3.6.0-alpha
+	 * @since 3.6.0
 	 *
 	 * @return array
 	 */
