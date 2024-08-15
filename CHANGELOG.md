@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall Block: improve styles
 - small change under feature flag
 - Subscribe block: p tag styles leaking in from theme
+- Sync: Add a new callable for Sync Active Modules
 - Updated package dependencies.
 
 ## 13.8-a.1 - 2024-08-12
