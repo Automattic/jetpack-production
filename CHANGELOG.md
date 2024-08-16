@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: register the ai-title-optimization-keywords-support beta flag.
 - just refactoring code
 - Makes allow list settings always accessible
+- OG Tags: check if the Open Graph integration in the ActivityPub plugin is active instead of checking for the class.
 - Open Graph Meta Tags: do not display Fediverse tag on WordPress.com Simple.
 - Paywall Block: improve styles
 - Site Breadcrumbs: Wrapping functions in function_exists as part of functionality move to package
