@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Social Links: Requiring feature from Classic Theme Helper package instead of Jetpack module.
 - Subscribe block: p tag styles leaking in from theme
 - Sync: Add a new callable for Sync Active Modules
+- Title Optimization: Add keywords section to UI and make it send the keywords on the request.
 - Updated package dependencies.
 
 ## 13.8-a.1 - 2024-08-12
