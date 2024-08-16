@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Tiled Galleries: defer loading of the Tiled Gallery script for improved performance.
+
 ### Bug fixes
 - Hide the Customizer link on Simple site
 
