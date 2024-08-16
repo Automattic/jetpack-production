@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - featured flagged feature
 - feature flagged
 - Jetpack AI: register the ai-title-optimization-keywords-support beta flag.
+- just refactoring code
 - Makes allow list settings always accessible
 - Open Graph Meta Tags: do not display Fediverse tag on WordPress.com Simple.
 - Paywall Block: improve styles
