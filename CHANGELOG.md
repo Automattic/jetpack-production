@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Remove unique-id sass function call from animation name
 - AI Title Optimization: change UI labels when keywords beta flag is enabled.
 - Allow dismiss suggestion in all states
+- Email preview: ensure the email is visible
 - featured flagged feature
 - feature flagged
 - Jetpack AI: register the ai-title-optimization-keywords-support beta flag.
