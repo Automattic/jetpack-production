@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - featured flagged feature
 - feature flagged
 - Jetpack AI: register the ai-title-optimization-keywords-support beta flag.
+- Jetpack Color & Tonesque: add deprecation warning in codebase
 - just refactoring code
 - Makes allow list settings always accessible
 - OG Tags: check if the Open Graph integration in the ActivityPub plugin is active instead of checking for the class.
