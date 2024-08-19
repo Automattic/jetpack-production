@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add stat trends for videopress card
 - Add tooltip to VideoPress card
 - Add value to active card state on VideoPress My Jetpack card
 
