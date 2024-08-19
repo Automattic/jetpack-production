@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.1.17-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Lossless image optimization for images (should improve performance with no visible changes).
+
 ## [3.1.16] - 2024-08-15
 ### Changed
 - Updated package dependencies. [#38662]
@@ -743,6 +750,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update Jetpack to use new JITM package
 
+[3.1.17-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v3.1.16...v3.1.17-alpha
 [3.1.16]: https://github.com/Automattic/jetpack-jitm/compare/v3.1.15...v3.1.16
 [3.1.15]: https://github.com/Automattic/jetpack-jitm/compare/v3.1.14...v3.1.15
 [3.1.14]: https://github.com/Automattic/jetpack-jitm/compare/v3.1.13...v3.1.14

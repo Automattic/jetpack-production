@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Lossless image optimization for images (should improve performance with no visible changes).
+
 ## [0.6.0] - 2024-07-29
 ### Changed
 - Remove Browse sites from sidebar as it's on WordPress logo in masterbar [#38547]

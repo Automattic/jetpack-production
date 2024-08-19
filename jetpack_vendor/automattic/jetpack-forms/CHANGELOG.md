@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Lossless image optimization for images (should improve performance with no visible changes).
+
 ## [0.32.8] - 2024-08-12
 ### Added
 - React 19 compatibility: Making sure useRef includes an argument. [#38765]

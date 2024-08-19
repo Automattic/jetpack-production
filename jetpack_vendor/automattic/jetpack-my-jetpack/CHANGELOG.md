@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Lossless image optimization for images (should improve performance with no visible changes).
 - My Jetpack: ensure product screens redirect to the correct post-checkout URLs.
 
 ## [4.32.2] - 2024-08-15
