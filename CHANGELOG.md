@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Tiled Galleries: defer loading of the Tiled Gallery script for improved performance.
 
+### Improved compatibility
+- AMP: avoid errors when using Jetpack's classic slideshows on a site where Jetpack blocks are disabled.
+
 ### Bug fixes
 - Hide the Customizer link on Simple site
 
