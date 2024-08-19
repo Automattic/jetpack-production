@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix incorrect next-version tokens in php `@since` and/or `@deprecated` docs.
+- Social: Fixed connection services list crash on simple sites
 
 ## [0.49.0] - 2024-08-12
 ### Changed
