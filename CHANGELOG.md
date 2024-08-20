@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - AMP: avoid errors when using Jetpack's classic slideshows on a site where Jetpack blocks are disabled.
 - Sharing Block: improve performance when hooking the block into single post templates.
+- WordPress.com Toolbar: Removed feature from Jetpack self-hosted sites.
 
 ### Bug fixes
 - Hide the Customizer link on Simple site
