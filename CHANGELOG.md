@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Title Optimization: Add keywords section to UI and make it send the keywords on the request.
 - Title Optimization: Include feedback link on the footer.
 - Updated package dependencies.
+- Update lock file
 
 ## 13.8-a.1 - 2024-08-12
 ### Enhancements

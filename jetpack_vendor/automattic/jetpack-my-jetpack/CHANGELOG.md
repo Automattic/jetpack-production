@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Add value to active card state on VideoPress My Jetpack card
 
 ### Changed
+- Removed unnecessary WAF dependency in My Jetpack.
 - Updated package dependencies.
 
 ### Fixed
