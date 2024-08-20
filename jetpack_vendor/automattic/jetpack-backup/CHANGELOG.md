@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Decoupled backup connection screens from useConnection hook to avoid unnecessary loading and prevent duplicated API calls.
 - Lossless image optimization for images (should improve performance with no visible changes).
 - Revert recent SVG image optimizations.
 
