@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add /wpcom/v2/profile endpoint that returns user profile: admin color and locale
+- Add a4a_is_dev_site attribute to Sites API response.
 - Add general improvements in Breve UX
 - AI Assistant: Add flag for Breve typo detection support
 - AI Assistant: Add spelling mistake detection to Breve
