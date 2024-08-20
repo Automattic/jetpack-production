@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - OG Tags: check if the Open Graph integration in the ActivityPub plugin is active instead of checking for the class.
 - Open Graph Meta Tags: do not display Fediverse tag on WordPress.com Simple.
 - Paywall Block: improve styles
+- Revert recent SVG image optimizations.
 - Security Settings: Redirect to Protect dashboard for Firewall settings, when available.
 - Site Breadcrumbs: Wrapping functions in function_exists as part of functionality move to package
 - small change under feature flag
