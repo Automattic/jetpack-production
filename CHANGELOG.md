@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Hide the Customizer link on Simple site
 - Social Icons Widget: ensure the social network icons are displayed properly.
+- Social Menus: ensure the SVG can be displayed properly.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add /wpcom/v2/profile endpoint that returns user profile: admin color and locale

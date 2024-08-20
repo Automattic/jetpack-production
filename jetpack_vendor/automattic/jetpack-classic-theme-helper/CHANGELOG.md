@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Lossless image optimization for images (should improve performance with no visible changes).
+- Social Menus: fix SVG format.
 
 ## [0.4.5] - 2024-08-12
 ### Changed
