@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Social: Migrated shares data to the new script data
 - Social; Migrated the API paths from initial state to the new script data
 
 ## [0.49.1] - 2024-08-19
