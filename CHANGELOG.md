@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a4a_is_dev_site attribute to Sites API response.
+- AI Assistant: Load dictionaries from CDN
 - Contact Form: Prevent direct file access.
 - Delete the Google Analytics removal notices.
 - Revert recent SVG image optimizations.
