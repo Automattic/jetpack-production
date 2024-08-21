@@ -2,26 +2,28 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.8-a.4 - unreleased
+## 13.8-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Load dictionaries from CDN
+
+## 13.8-a.5 - 2024-08-21
 ### Improved compatibility
-- Sharing Block: improve performance when hooking the block into single post templates.
-- WordPress.com Toolbar: Removed feature from Jetpack self-hosted sites.
+- Sharing Block: Improve performance when hooking the block into single post templates. [#38727]
+- WordPress.com Toolbar: Removed feature from self-hosted Jetpack sites. [#38804]
 
 ### Bug fixes
-- Social Icons Widget: ensure the social network icons are displayed properly.
-- Social Menus: ensure the SVG can be displayed properly.
+- Social Icons Widget: Ensure the social network icons are displayed properly. [#38965]
+- Social Menus: Ensure the SVG can be displayed properly. [#38966]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add a4a_is_dev_site attribute to Sites API response.
-- AI Assistant: Load dictionaries from CDN
-- Contact Form: Prevent direct file access.
-- Delete the Google Analytics removal notices.
-- Revert recent SVG image optimizations.
-- Security Settings: Redirect to Protect dashboard for Firewall settings, when available.
-- Update lock file
+- A4A: Add a4a_is_dev_site attribute to Sites API response. [#38964]
+- Contact Form: Prevent direct file access. [#38982]
+- Google Analytics: Delete the Google Analytics removal notices. [#38882]
+- Security Settings: Redirect to Protect dashboard for Firewall settings, when available. [#38741]
+- SVG Optimizations: Revert recent SVG image optimizations. [#38981]
 
 ## 13.8-a.3 - 2024-08-19
 ### Improved compatibility

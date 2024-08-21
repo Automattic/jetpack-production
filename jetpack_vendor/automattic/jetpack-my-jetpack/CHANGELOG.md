@@ -9,13 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
-### Changed
-- Removed unnecessary WAF dependency in My Jetpack.
-
 ### Fixed
 - allow user currency in My Jetpack pricing
-- Notification bubbles: avoid PHP warning when information is missing.
-- Revert recent SVG image optimizations.
+
+## [4.32.4] - 2024-08-21
+### Changed
+- Removed unnecessary WAF dependency in My Jetpack. [#38942]
+
+### Fixed
+- Notification bubbles: avoid PHP warning when information is missing. [#38963]
+- Revert recent SVG image optimizations. [#38981]
 
 ## [4.32.3] - 2024-08-19
 ### Added
@@ -1661,7 +1664,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.33.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.3...4.33.0-alpha
+[4.33.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.4...4.33.0-alpha
+[4.32.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.3...4.32.4
 [4.32.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.2...4.32.3
 [4.32.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.1...4.32.2
 [4.32.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.0...4.32.1
