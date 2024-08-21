@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Title Optimization: change UI labels when keywords beta flag is enabled.
 - Allow dismiss suggestion in all states
 - Contact Form: Prevent direct file access.
+- Delete the Google Analytics removal notices.
 - Email preview: ensure the email is visible
 - featured flagged feature
 - feature flagged
