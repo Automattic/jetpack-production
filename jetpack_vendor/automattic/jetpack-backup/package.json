@@ -27,7 +27,7 @@
 	],
 	"dependencies": {
 		"@automattic/format-currency": "1.0.1",
-		"@automattic/jetpack-analytics": "^0.1.30",
+		"@automattic/jetpack-analytics": "^0.1.31-alpha",
 		"@automattic/jetpack-api": "^0.17.11",
 		"@automattic/jetpack-components": "^0.55.9",
 		"@automattic/jetpack-connection": "^0.35.3",
@@ -42,7 +42,7 @@
 		"react-dom": "18.3.1"
 	},
 	"devDependencies": {
-		"@automattic/jetpack-base-styles": "^0.6.29",
+		"@automattic/jetpack-base-styles": "^0.6.30-alpha",
 		"@automattic/jetpack-webpack-config": "workspace:*",
 		"@babel/core": "7.24.7",
 		"@babel/preset-env": "7.24.7",

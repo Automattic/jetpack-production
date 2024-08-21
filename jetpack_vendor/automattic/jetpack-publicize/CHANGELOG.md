@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Social: Migrated shares data to the new script data
+- Updated package dependencies.
 
 ## [0.49.2] - 2024-08-21
 ### Changed
