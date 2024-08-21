@@ -2,57 +2,57 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.8-a.2 - unreleased
+## 13.8-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- Tiled Galleries: defer loading of the Tiled Gallery script for improved performance.
-
 ### Improved compatibility
-- AMP: avoid errors when using Jetpack's classic slideshows on a site where Jetpack blocks are disabled.
 - Sharing Block: improve performance when hooking the block into single post templates.
 - WordPress.com Toolbar: Removed feature from Jetpack self-hosted sites.
 
 ### Bug fixes
-- Hide the Customizer link on Simple site
 - Social Icons Widget: ensure the social network icons are displayed properly.
 - Social Menus: ensure the SVG can be displayed properly.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add /wpcom/v2/profile endpoint that returns user profile: admin color and locale
 - Add a4a_is_dev_site attribute to Sites API response.
-- Add general improvements in Breve UX
-- AI Assistant: Add flag for Breve typo detection support
-- AI Assistant: Add spelling mistake detection to Breve
-- AI Assistant: Change Breve type markup and restrict types
-- AI Assistant: Remove Breve highlight popover when feature is disabled
-- AI Assistant: Remove unique-id sass function call from animation name
-- AI Title Optimization: change UI labels when keywords beta flag is enabled.
-- Allow dismiss suggestion in all states
 - Contact Form: Prevent direct file access.
 - Delete the Google Analytics removal notices.
-- Email preview: ensure the email is visible
-- featured flagged feature
-- feature flagged
-- Jetpack AI: register the ai-title-optimization-keywords-support beta flag.
-- Jetpack Color & Tonesque: add deprecation warning in codebase
-- just refactoring code
-- Makes allow list settings always accessible
-- OG Tags: check if the Open Graph integration in the ActivityPub plugin is active instead of checking for the class.
-- Open Graph Meta Tags: do not display Fediverse tag on WordPress.com Simple.
-- Paywall Block: improve styles
 - Revert recent SVG image optimizations.
 - Security Settings: Redirect to Protect dashboard for Firewall settings, when available.
-- Site Breadcrumbs: Wrapping functions in function_exists as part of functionality move to package
-- small change under feature flag
-- Social Links: Requiring feature from Classic Theme Helper package instead of Jetpack module.
-- Subscribe block: p tag styles leaking in from theme
-- Sync: Add a new callable for Sync Active Modules
-- Title Optimization: Add keywords section to UI and make it send the keywords on the request.
-- Title Optimization: Include feedback link on the footer.
-- Updated package dependencies.
 - Update lock file
+
+## 13.8-a.3 - 2024-08-19
+### Improved compatibility
+- AMP: Avoid errors when using Jetpack's classic slideshows on a site where Jetpack blocks are disabled. [#38744]
+- Tiled Galleries: Defer loading of the Tiled Gallery script for improved performance. [#38928]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Add flag for Breve typo detection support. [#38895]
+- AI Assistant: Add general improvements in Breve UX. [#38856]
+- AI Assistant: Add spelling mistake detection to Breve. [#38923]
+- AI Assistant: Allow dismiss suggestion in all states [#38848]
+- AI Assistant: Change Breve type markup and restrict types. [#38867]
+- AI Assistant: Remove Breve highlight popover when feature is disabled. [#38814]
+- AI Assistant: Remove unique-id sass function call from animation name. [#38922]
+- Email preview: ensure the email is visible [#38934]
+- Jetpack AI: Register the ai-title-optimization-keywords-support beta flag. [#38891]
+- Jetpack Color & Tonesque: Add deprecation warning in the codebase. [#38338]
+- Open Graph Meta Tags: Check if the Open Graph integration in the ActivityPub plugin is active instead of checking for the class. [#38875]
+- Open Graph Meta Tags: Do not display Fediverse tag on WordPress.com Simple. [#38874]
+- Paywall Block: Improve styles. [#38837]
+- Protect: Make allow list settings always accessible [#38886]
+- REST API: Add a /wpcom/v2/profile endpoint that returns user profile, admin color and locale. [#38879]
+- Site Breadcrumbs: Wrapping functions in function_exists as part of functionality move to package. [#38880]
+- Small change under feature flag. [#38862]
+- Social Links: Requiring feature from Classic Theme Helper package instead of Jetpack module. [#38730]
+- Subscribe Block: p tag styles leaking in from theme. [#38840]
+- Sync: Add a new callable for Sync Active Modules. [#38831]
+- Title Optimization: Add keywords section to UI and make it send the keywords on the request. [#38921]
+- Title Optimization: Change UI labels when keywords beta flag is enabled. [#38911]
+- Title Optimization: Include feedback link on the footer. [#38940]
+- Updated package dependencies. [#38662] [#38665] [#38822]
+- WP.com: Hide the Customizer link on WP.com sites. [#38852]
 
 ## 13.8-a.1 - 2024-08-12
 ### Enhancements

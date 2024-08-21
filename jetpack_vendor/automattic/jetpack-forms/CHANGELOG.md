@@ -5,15 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.32.9-alpha] - unreleased
+## [0.32.10-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## [0.32.9] - 2024-08-19
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#38662]
 
 ### Fixed
-- Lossless image optimization for images (should improve performance with no visible changes).
+- Lossless image optimization for images (should improve performance with no visible changes). [#38750]
 
 ## [0.32.8] - 2024-08-12
 ### Added
@@ -633,7 +634,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.32.9-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.32.8...v0.32.9-alpha
+[0.32.10-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.32.9...v0.32.10-alpha
+[0.32.9]: https://github.com/automattic/jetpack-forms/compare/v0.32.8...v0.32.9
 [0.32.8]: https://github.com/automattic/jetpack-forms/compare/v0.32.7...v0.32.8
 [0.32.7]: https://github.com/automattic/jetpack-forms/compare/v0.32.6...v0.32.7
 [0.32.6]: https://github.com/automattic/jetpack-forms/compare/v0.32.5...v0.32.6

@@ -5,24 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.32.3-alpha] - unreleased
+## [4.32.4-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Add stat trends for videopress card
-- Add tooltip to VideoPress card
-- Add value to active card state on VideoPress My Jetpack card
-
 ### Changed
 - Removed unnecessary WAF dependency in My Jetpack.
-- Updated package dependencies.
 
 ### Fixed
-- Lossless image optimization for images (should improve performance with no visible changes).
-- My Jetpack: ensure product screens redirect to the correct post-checkout URLs.
 - Notification bubbles: avoid PHP warning when information is missing.
 - Revert recent SVG image optimizations.
+
+## [4.32.3] - 2024-08-19
+### Added
+- Add stat trends for videopress card. [#38868]
+- Add tooltip to VideoPress card. [#38842]
+- Add value to active card state on VideoPress My Jetpack card. [#38812]
+
+### Changed
+- Updated package dependencies. [#38893]
+
+### Fixed
+- Lossless image optimization for images (should improve performance with no visible changes). [#38750]
+- My Jetpack: ensure product screens redirect to the correct post-checkout URLs. [#38704]
 
 ## [4.32.2] - 2024-08-15
 ### Changed
@@ -1655,7 +1660,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.32.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.2...4.32.3-alpha
+[4.32.4-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.3...4.32.4-alpha
+[4.32.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.2...4.32.3
 [4.32.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.1...4.32.2
 [4.32.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.0...4.32.1
 [4.32.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.31.0...4.32.0

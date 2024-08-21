@@ -14,11 +14,11 @@ return array(
     ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '3.4.3-alpha1724193718',
+      'ver' => '3.4.4-alpha1724252288',
     ),
     'jetpack-blaze' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-blaze',
-      'ver' => '0.22.5-alpha1724171952',
+      'ver' => '0.22.6-alpha1724252288',
     ),
     'jetpack-boost-core' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-boost-core',
@@ -30,7 +30,7 @@ return array(
     ),
     'jetpack-classic-theme-helper' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-classic-theme-helper',
-      'ver' => '0.5.0-alpha1724187847',
+      'ver' => '0.5.1-alpha1724252288',
     ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
@@ -42,7 +42,7 @@ return array(
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '2.12.2-alpha1724171952',
+      'ver' => '2.12.3-alpha1724252288',
     ),
     'jetpack-explat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-explat',
@@ -50,11 +50,11 @@ return array(
     ),
     'jetpack-forms' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
-      'ver' => '0.32.9-alpha1724171952',
+      'ver' => '0.32.10-alpha1724252288',
     ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
-      'ver' => '0.4.5-alpha1724091434',
+      'ver' => '0.4.5',
     ),
     'jetpack-import' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-import',
@@ -66,19 +66,19 @@ return array(
     ),
     'jetpack-jitm' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-jitm',
-      'ver' => '3.1.17-alpha1724091434',
+      'ver' => '3.1.17',
     ),
     'jetpack-licensing' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
-      'ver' => '2.0.6-alpha1723753243',
+      'ver' => '2.0.6',
     ),
     'jetpack-masterbar' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-masterbar',
-      'ver' => '0.7.0-alpha1724187847',
+      'ver' => '0.7.0-alpha1724252288',
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '4.32.3-alpha1724187847',
+      'ver' => '4.32.4-alpha1724252288',
     ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
@@ -98,15 +98,15 @@ return array(
     ),
     'jetpack-protect-status' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect-status',
-      'ver' => '0.1.2-alpha1723753243',
+      'ver' => '0.1.2',
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
-      'ver' => '0.49.1-alpha1724231836',
+      'ver' => '0.49.2-alpha1724252288',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.44.15-alpha1724171952',
+      'ver' => '0.44.16-alpha1724252288',
     ),
     'jetpack-stats' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats',
@@ -122,15 +122,15 @@ return array(
     ),
     'jetpack-videopress-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.24.1-alpha1724171952',
+      'ver' => '0.24.2-alpha1724252288',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
-      'ver' => '0.18.3-alpha1723753243',
+      'ver' => '0.18.3',
     ),
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
-      'ver' => '0.3.26-alpha1724171952',
+      'ver' => '0.3.27-alpha1724252288',
     ),
     'woocommerce-analytics' => array(
       'path' => 'jetpack_vendor/automattic/woocommerce-analytics',

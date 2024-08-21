@@ -11,11 +11,16 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Site Level User Profile: expose all relevant fields on profile.php
-- Updated package dependencies.
 
 ### Fixed
-- Lossless image optimization for images (should improve performance with no visible changes).
 - Revert recent SVG image optimizations.
+
+## [0.6.1] - 2024-08-19
+### Changed
+- Updated package dependencies. [#38662]
+
+### Fixed
+- Lossless image optimization for images (should improve performance with no visible changes). [#38750]
 
 ## [0.6.0] - 2024-07-29
 ### Changed
@@ -92,7 +97,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies. [#37669]
 - Updated package dependencies. [#37706]
 
-[0.7.0-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.6.0...v0.7.0-alpha
+[0.7.0-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.6.1...v0.7.0-alpha
+[0.6.1]: https://github.com/Automattic/jetpack-masterbar/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.3.1...v0.4.0
