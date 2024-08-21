@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add retry for Write Brief
 - AI Assistant: Load dictionaries from CDN
+- AI Assistant: Recompute Breve highlights when dictionary is loaded
 
 ## 13.8-a.5 - 2024-08-21
 ### Improved compatibility
