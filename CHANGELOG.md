@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add retry for Write Brief
+- adds tracks to featured flagged feature
 - AI Assistant: Accept Breve typo suggestions
 - AI Assistant: Load dictionaries from CDN
 - AI Assistant: Recompute Breve highlights when dictionary is loaded
