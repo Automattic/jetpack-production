@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Adds Gutenberg Newsletter plugin icon to the header, with a plugin sidebar with email preview feature.
+
 ### Bug fixes
 - Donations Block: Fix the editor got stuck after inserting a pattern with the donations block
 
