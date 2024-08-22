@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix incorrect case fall-through in `_inc/client/state/site/reducer.js`.
 - Legacy Widgets: ensure Blog Stats and Top Posts and Pages widgets are still available for Simple sites until the block API is fixed.
 - Sharing: remove functions that were deprecated in Jetpack 11.0.
+- Top Posts & Pages Block: ensure deleted content does not display.
 - Updated package dependencies.
 
 ## 13.8-a.5 - 2024-08-21
