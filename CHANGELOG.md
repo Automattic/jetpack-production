@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add retry for Write Brief
 - AI Assistant: Load dictionaries from CDN
 - AI Assistant: Recompute Breve highlights when dictionary is loaded
+- Dashboard: remove extra link in banner to invite admins to activate stats.
 - Fix incorrect case fall-through in `_inc/client/state/site/reducer.js`.
 - Legacy Widgets: ensure Blog Stats and Top Posts and Pages widgets are still available for Simple sites until the block API is fixed.
 - Sharing: remove functions that were deprecated in Jetpack 11.0.
