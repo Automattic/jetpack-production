@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add context switching to videopress card from yearly views to monthly views
 
 ### Changed
+- My Jetpack: AI product class to handle better disabling tiers
 - Updated package dependencies.
 
 ### Fixed
