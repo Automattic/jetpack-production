@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Removed
+- SSO: Removed the ability to skip the automatic login if site uses the WP.com classic interface
+
 ## [2.12.3] - 2024-08-21
 ### Changed
 - Internal updates.
