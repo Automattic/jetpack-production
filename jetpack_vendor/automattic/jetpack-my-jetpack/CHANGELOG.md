@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - allow user currency in My Jetpack pricing
+- Fix tooltip title for videopress card
 
 ## [4.32.4] - 2024-08-21
 ### Changed
