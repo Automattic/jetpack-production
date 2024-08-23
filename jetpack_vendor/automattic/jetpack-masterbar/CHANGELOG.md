@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Remove locale sync
 - Updated package dependencies.
 
+### Fixed
+- Inconsistent Color Scheme when previewing on Simple Default
+
 ## [0.7.0] - 2024-08-21
 ### Changed
 - Site Level User Profile: expose all relevant fields on profile.php [#38949]
