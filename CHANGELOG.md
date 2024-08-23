@@ -10,7 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Adds Gutenberg Newsletter plugin icon to the header, with a plugin sidebar with email preview feature.
 
 ### Bug fixes
+- Contact Info Block: ensure that the buttons' stylesheet is properly loaded on the frontend.
 - Donations Block: Fix the editor got stuck after inserting a pattern with the donations block
+- Payment Button Blocks: ensure that the buttons' stylesheet is properly loaded on the frontend.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add retry for Write Brief
