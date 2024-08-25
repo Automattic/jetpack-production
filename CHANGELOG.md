@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Newsletter Settings: Improve Sender Name and Reply-to IA
 - Legacy Widgets: ensure Blog Stats and Top Posts and Pages widgets are still available for Simple sites until the block API is fixed.
 - Moved PostPublishPanels component to publicize-coomponents package
+- moves stats to the top of the Jetpack menu
 - Sharing: remove functions that were deprecated in Jetpack 11.0.
 - Top Posts & Pages Block: ensure deleted content does not display.
 - Updated package dependencies.
