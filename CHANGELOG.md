@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: remove functions that were deprecated in Jetpack 11.0.
 - Top Posts & Pages Block: ensure deleted content does not display.
 - Updated package dependencies.
+- wpcom only
 
 ## 13.8-a.5 - 2024-08-21
 ### Improved compatibility
