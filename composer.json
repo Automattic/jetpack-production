@@ -35,7 +35,7 @@
 		"automattic/jetpack-licensing": "^2.0.7",
 		"automattic/jetpack-logo": "^2.0.4",
 		"automattic/jetpack-masterbar": "^0.8.1-alpha",
-		"automattic/jetpack-my-jetpack": "^4.33.0",
+		"automattic/jetpack-my-jetpack": "^4.33.1-alpha",
 		"automattic/jetpack-plugins-installer": "^0.4.2",
 		"automattic/jetpack-post-list": "^0.6.3",
 		"automattic/jetpack-publicize": "^0.50.0",
