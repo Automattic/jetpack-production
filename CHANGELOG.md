@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Custom CSS: remove feature in favor of WordPress core implementation
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add retry event for Brief
 - Fix redirecting after comment when subscription modal is disabled
 - Jetpack AI: handle fair usage limit messaging on the UI.
 - Updated versions.
