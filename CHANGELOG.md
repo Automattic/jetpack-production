@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: remove extra link in banner to invite admins to activate stats.
 - feature flagged
 - Fix incorrect case fall-through in `_inc/client/state/site/reducer.js`.
+- Jetpack AI: handle fair usage limit messaging on the UI.
 - Jetpack Newsletter Settings: Improve Sender Name and Reply-to IA
 - Legacy Widgets: ensure Blog Stats and Top Posts and Pages widgets are still available for Simple sites until the block API is fixed.
 - Moved PostPublishPanels component to publicize-coomponents package
