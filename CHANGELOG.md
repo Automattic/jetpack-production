@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Payment Button Blocks: ensure that the buttons' stylesheet is properly loaded on the frontend.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added to-test.md contents for Jetpack 13.8.
 - Add retry for Write Brief
 - adds tracks to featured flagged feature
 - AI Assistant: Accept Breve typo suggestions
