@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Moved PostPublishPanels component to publicize-coomponents package
 - moves stats to the top of the Jetpack menu
 - Sharing: remove functions that were deprecated in Jetpack 11.0.
+- Site Breadcrumbs: Requiring the feature from the Classic Theme Helper package.
 - Subscriptions: Render the Close button lower than the Marketing bar
 - Top Posts & Pages Block: ensure deleted content does not display.
 - Updated package dependencies.
