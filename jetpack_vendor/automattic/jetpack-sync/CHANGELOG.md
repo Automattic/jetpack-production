@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Sync: Updated allowed order types in HPOS Module
 
+### Fixed
+- Sync: Ensure filtering orders by status when doing HPOS Checksums
+
 ## [3.7.1] - 2024-08-23
 ### Changed
 - Updated package dependencies. [#39004]
