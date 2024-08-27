@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Search: Use the user's locale when formatting request limits.
+
 ## [0.44.17] - 2024-08-26
 ### Changed
 - Updated package dependencies. [#39004]
