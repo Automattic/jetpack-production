@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix redirecting after comment when subscription modal is disabled
 - Jetpack AI: add usage policy link and renewal date to fair usage messaging.
 - Jetpack AI: handle fair usage limit messaging on the UI.
+- Jetpack AI: support fair usage messaging on the Extension AI Control component.
 - Updated versions.
 - Update Quick Start instructions
 
