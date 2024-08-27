@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add retry event for Brief
+- AI Assistant: add AI Guidelines link to the AI Assistant sidebar panel
 - AI Assistant: Add option to add word to spelling dictionary
 - AI Assistant: Do not mark words starting with special characters as spelling mistakes
 - Button Block: update to Block API v3
