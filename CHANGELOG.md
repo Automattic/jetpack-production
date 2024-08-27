@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Do not mark words starting with special characters as spelling mistakes
 - Button Block: update to Block API v3
 - Fix redirecting after comment when subscription modal is disabled
+- Jetpack AI: add usage policy link and renewal date to fair usage messaging.
 - Jetpack AI: handle fair usage limit messaging on the UI.
 - Updated versions.
 - Update Quick Start instructions
