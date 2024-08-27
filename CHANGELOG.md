@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix redirecting after comment when subscription modal is disabled
 - Jetpack AI: handle fair usage limit messaging on the UI.
 - Updated versions.
+- Update Quick Start instructions
 
 ## 13.8-a.7 - 2024-08-26
 ### Enhancements
