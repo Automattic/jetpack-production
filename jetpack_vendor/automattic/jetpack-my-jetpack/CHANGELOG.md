@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - My Jetpack: reflect tier filters properly on product class and UI. Fix little nuances with date constructor
 
+### Fixed
+- My Jetpack: Fix the popover and active button of the Bboost card are overlapping
+
 ## [4.33.0] - 2024-08-26
 ### Added
 - Add context switching to videopress card from yearly views to monthly views [#38979]
