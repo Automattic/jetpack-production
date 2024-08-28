@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: handle fair usage limit messaging on the UI.
 - Jetpack AI: support fair usage messaging on the Extension AI Control component.
 - Notifications: Use profile locale to match menu language
+- Slideshow shortcode: Remove deprecated JS functionality and remove majority of jQuery.
 - Updated versions.
 - Update Quick Start instructions
 
