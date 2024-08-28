@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add option to add word to spelling dictionary
 - AI Assistant: Do not mark words starting with special characters as spelling mistakes
 - AI Assistant: Fix flickering when adding word to Breve dictionary
+- AI Assistant: Limit popover height and fix anchorless popover
 - AI Assistant: Remove dead Breve code
 - Blocks: Ensure function is loaded even if blocks aren't enabled
 - Button Block: update to Block API v3
