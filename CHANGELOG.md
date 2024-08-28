@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Major Enhancements
 - Jetpack Custom CSS: remove feature in favor of WordPress core implementation
 
+### Enhancements
+- Map block: Allow maps on WordPress.com to be selectable.
+
 ### Bug fixes
 - Mailchimp block: do not attempt to fetch groups when a site is not connected to Mailchimp yet.
 - REST API: Avoid PHP warnings in comment endpoint when the parent comment does not exist.
