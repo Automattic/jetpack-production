@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Custom CSS: remove feature in favor of WordPress core implementation
 
 ### Enhancements
+- Admin menu: Change order of Jetpack sub-menu items
 - Map block: Allow maps on WordPress.com to be selectable.
 
 ### Bug fixes
