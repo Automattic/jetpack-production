@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: add usage policy link and renewal date to fair usage messaging.
 - Jetpack AI: handle fair usage limit messaging on the UI.
 - Jetpack AI: support fair usage messaging on the Extension AI Control component.
+- Monetize: support more currencies
 - Notifications: Use profile locale to match menu language
 - Slideshow shortcode: Remove deprecated JS functionality and remove majority of jQuery.
 - Social: Updated the share status modal to render it globally
