@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add option to add word to spelling dictionary
 - AI Assistant: Do not mark words starting with special characters as spelling mistakes
 - AI Assistant: Fix flickering when adding word to Breve dictionary
+- AI Assistant: Remove dead Breve code
 - Button Block: update to Block API v3
 - Content Options: Moving content to Classic Theme Helper package.
 - Fix redirecting after comment when subscription modal is disabled
