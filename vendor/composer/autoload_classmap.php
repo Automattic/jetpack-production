@@ -400,6 +400,7 @@ return array(
     'Automattic\\Woocommerce_Analytics\\Universal' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-universal.php',
     'Automattic\\Woocommerce_Analytics\\Woo_Analytics_Trait' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woo-analytics-trait.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Jetpack_Customize_Control_Title' => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/content-options/customizer.php',
     'Jetpack_IXR_Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-ixr-client.php',
     'Jetpack_IXR_ClientMulticall' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-ixr-clientmulticall.php',
     'Jetpack_Modules_Overrides' => $baseDir . '/src/class-jetpack-modules-overrides.php',
