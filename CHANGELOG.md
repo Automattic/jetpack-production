@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Major Enhancements
 - Jetpack Custom CSS: remove feature in favor of WordPress core implementation
 
+### Bug fixes
+- REST API: Avoid PHP warnings in comment endpoint when the parent comment does not exist.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add retry event for Brief
 - AI Assistant: Add A8c dictionary
