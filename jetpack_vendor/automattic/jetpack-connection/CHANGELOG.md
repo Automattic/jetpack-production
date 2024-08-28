@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Sync: Remove the checksum for active plugins if present when sync is not active, so it gets recalculated when sync gets activated
 - Updated package dependencies.
 
 ## [2.12.4] - 2024-08-23
