@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: handle fair usage limit messaging on the UI.
 - Jetpack AI: hide usagepanel when tier plans are disabled. Show QuotaExceededMessage instead of nudges
 - Jetpack AI: support fair usage messaging on the Extension AI Control component.
+- Jetpack AI: update fair usage messaging on the sidebar.
 - Monetize: support more currencies
 - Notifications: Use profile locale to match menu language
 - Slideshow shortcode: Remove deprecated JS functionality and remove majority of jQuery.
