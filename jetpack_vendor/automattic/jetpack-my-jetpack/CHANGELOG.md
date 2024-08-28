@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: reflect tier filters properly on product class and UI. Fix little nuances with date constructor
+- Updated package dependencies.
 
 ### Fixed
 - My Jetpack: Fix the popover and active button of the Bboost card are overlapping

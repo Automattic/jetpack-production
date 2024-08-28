@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added share status info to Jetpack sidebar
 
+### Changed
+- Updated package dependencies.
+
 ## [0.50.0] - 2024-08-26
 ### Added
 - Added the new feature flag for the social share status [#39015]

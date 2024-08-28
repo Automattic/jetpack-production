@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Content Options: Moving content to Classic Theme Helper package.
 
+### Changed
+- Updated package dependencies.
+
 ## [0.5.3] - 2024-08-26
 ### Changed
 - Site Breadcrumbs: Requiring the feature from the Classic Theme Helper package [#38931]

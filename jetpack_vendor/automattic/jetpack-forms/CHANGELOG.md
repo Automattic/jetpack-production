@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: update child blocks to Block API v3
+- Updated package dependencies.
 
 ## [0.32.11] - 2024-08-26
 ### Changed
