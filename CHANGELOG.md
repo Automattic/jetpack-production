@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Custom CSS: remove feature in favor of WordPress core implementation
 
 ### Bug fixes
+- Mailchimp block: do not attempt to fetch groups when a site is not connected to Mailchimp yet.
 - REST API: Avoid PHP warnings in comment endpoint when the parent comment does not exist.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
