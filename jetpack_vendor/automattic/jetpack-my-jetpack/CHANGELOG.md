@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Don't consider user lifecycle status when repeating evaluation
 - My Jetpack: Fix the popover and active button of the Bboost card are overlapping
 
 ## [4.33.0] - 2024-08-26
