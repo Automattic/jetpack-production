@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Content Options: Moving content to Classic Theme Helper package.
 - Fix redirecting after comment when subscription modal is disabled
 - Jetpack AI: add usage policy link and renewal date to fair usage messaging.
+- Jetpack AI: fix bug that showed extra spacing on the AI Assistant block inspector area.
 - Jetpack AI: handle fair usage limit messaging on the UI.
 - Jetpack AI: hide usagepanel when tier plans are disabled. Show QuotaExceededMessage instead of nudges
 - Jetpack AI: remove hardcoded limit on image generation, it's handled by backend
