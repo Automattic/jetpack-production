@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Use profile locale to match menu language
 - Slideshow shortcode: Remove deprecated JS functionality and remove majority of jQuery.
 - Social: Updated the share status modal to render it globally
+- Social Menus: Switch to more appropriate method of calling the SVG icon file.
 - Updated package dependencies.
 - Updated versions.
 - Update Quick Start instructions

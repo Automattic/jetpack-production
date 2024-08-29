@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Security
+- Social Menu: Switch to more appropriate method of calling the SVG icon file.
+
 ### Added
 - Classic Theme Helper: Adding Portfolio custom post type content
 - Content Options: Moving content to Classic Theme Helper package.
