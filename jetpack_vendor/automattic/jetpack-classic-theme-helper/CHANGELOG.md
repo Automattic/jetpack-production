@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Classic Theme Helper: Adding Portfolio custom post type content
 - Content Options: Moving content to Classic Theme Helper package.
 
 ### Changed

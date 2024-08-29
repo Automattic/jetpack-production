@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Remove dead Breve code
 - Blocks: Ensure function is loaded even if blocks aren't enabled
 - Button Block: update to Block API v3
+- Classic Theme Helper: Adding Portfolio custom post type content
 - Content Options: Moving content to Classic Theme Helper package.
 - Fix redirecting after comment when subscription modal is disabled
 - Jetpack AI: add usage policy link and renewal date to fair usage messaging.

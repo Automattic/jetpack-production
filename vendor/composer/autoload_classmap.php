@@ -48,6 +48,7 @@ return array(
     'Automattic\\Jetpack\\Boost_Speed_Score\\Speed_Score_History' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score-history.php',
     'Automattic\\Jetpack\\Boost_Speed_Score\\Speed_Score_Request' => $baseDir . '/jetpack_vendor/automattic/jetpack-boost-speed-score/src/class-speed-score-request.php',
     'Automattic\\Jetpack\\Classic_Theme_Helper\\Featured_Content' => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-featured-content.php',
+    'Automattic\\Jetpack\\Classic_Theme_Helper\\Jetpack_Portfolio' => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/custom-post-types/class-jetpack-portfolio.php',
     'Automattic\\Jetpack\\Classic_Theme_Helper\\Main' => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-main.php',
     'Automattic\\Jetpack\\Classic_Theme_Helper\\Social_Links' => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-social-links.php',
     'Automattic\\Jetpack\\Composer\\Manager' => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-manager.php',
