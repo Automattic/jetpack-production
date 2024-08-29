@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.7-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.4.7] - 2024-08-29
 ### Changed
-- Rely on WordPress HTML API to parse HTML instead of Regex
+- Rely on WordPress HTML API to parse HTML instead of Regex [#32700]
 
 ## [0.4.6] - 2024-08-26
 ### Changed
@@ -121,7 +118,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add image CDN package. [#29561]
 
-[0.4.7-alpha]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.4.6...v0.4.7-alpha
+[0.4.7]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.4.6...v0.4.7
 [0.4.6]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.4.5...v0.4.6
 [0.4.5]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.4.4...v0.4.5
 [0.4.4]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.4.3...v0.4.4

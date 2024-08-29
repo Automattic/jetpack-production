@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.12.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.12.5] - 2024-08-29
 ### Changed
-- Sync: Remove the checksum for active plugins if present when sync is not active, so it gets recalculated when sync gets activated
-- Updated package dependencies.
+- Sync: Remove the checksum for active plugins if present when sync is not active, so it gets recalculated when sync gets activated [#39098]
+- Updated package dependencies. [#39111]
 
 ## [2.12.4] - 2024-08-23
 ### Changed
@@ -1170,7 +1167,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[2.12.5-alpha]: https://github.com/Automattic/jetpack-connection/compare/v2.12.4...v2.12.5-alpha
+[2.12.5]: https://github.com/Automattic/jetpack-connection/compare/v2.12.4...v2.12.5
 [2.12.4]: https://github.com/Automattic/jetpack-connection/compare/v2.12.3...v2.12.4
 [2.12.3]: https://github.com/Automattic/jetpack-connection/compare/v2.12.2...v2.12.3
 [2.12.2]: https://github.com/Automattic/jetpack-connection/compare/v2.12.1...v2.12.2

@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.33.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.33.1] - 2024-08-29
 ### Changed
-- Admin menu: change order of Jetpack sub-menu items
-- My Jetpack: reflect tier filters properly on product class and UI. Fix little nuances with date constructor
-- Updated package dependencies.
+- Admin menu: change order of Jetpack sub-menu items [#39095]
+- My Jetpack: reflect tier filters properly on product class and UI. Fix little nuances with date constructor [#39074]
+- Updated package dependencies. [#39111]
 
 ### Fixed
-- Don't consider user lifecycle status when repeating evaluation
-- My Jetpack: Fix the popover and active button of the Bboost card are overlapping
+- Don't consider user lifecycle status when repeating evaluation [#39069]
+- My Jetpack: Fix the popover and active button of the Bboost card are overlapping [#39067]
 
 ## [4.33.0] - 2024-08-26
 ### Added
@@ -1682,7 +1679,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.33.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.33.0...4.33.1-alpha
+[4.33.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.33.0...4.33.1
 [4.33.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.4...4.33.0
 [4.32.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.3...4.32.4
 [4.32.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.2...4.32.3
