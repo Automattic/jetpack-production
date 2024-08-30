@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: show over quota notice and period usage counter for unlimited plans
+- We update Welcome Flow A/B experiment to test other things
 
 ## [4.33.1] - 2024-08-29
 ### Changed
