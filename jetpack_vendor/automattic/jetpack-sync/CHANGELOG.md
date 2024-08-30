@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.9.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.9.0] - 2024-08-30
 ### Added
-- Add share status log modal to published posts
+- Add share status log modal to published posts [#39051]
 
 ## [3.8.1] - 2024-08-29
 ### Changed
@@ -1265,7 +1262,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[3.9.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v3.8.1...v3.9.0-alpha
+[3.9.0]: https://github.com/Automattic/jetpack-sync/compare/v3.8.1...v3.9.0
 [3.8.1]: https://github.com/Automattic/jetpack-sync/compare/v3.8.0...v3.8.1
 [3.8.0]: https://github.com/Automattic/jetpack-sync/compare/v3.7.1...v3.8.0
 [3.7.1]: https://github.com/Automattic/jetpack-sync/compare/v3.7.0...v3.7.1
