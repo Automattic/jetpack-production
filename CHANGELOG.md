@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Add retry event for Brief
 - AI Assistant: Add A8c dictionary
 - AI Assistant: add AI Guidelines link to the AI Assistant sidebar panel
+- AI Assistant: Add FeatureControl to Write Brief
 - AI Assistant: Add option to add word to spelling dictionary
 - AI Assistant: Do not mark words starting with special characters as spelling mistakes
 - AI Assistant: Fix flickering when adding word to Breve dictionary
