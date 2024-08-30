@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Admin menu: Change order of Jetpack sub-menu items
 - Map block: Allow maps on WordPress.com to be selectable.
 
+### Improved compatibility
+- Embeds: prioritize YouTube and Vimeo embeds provided by WordPress itself, over Jetpack's embedding solution.
+
 ### Bug fixes
 - Mailchimp block: do not attempt to fetch groups when a site is not connected to Mailchimp yet.
 - REST API: Avoid PHP warnings in comment endpoint when the parent comment does not exist.
