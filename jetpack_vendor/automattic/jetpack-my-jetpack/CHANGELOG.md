@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: show over quota notice and period usage counter for unlimited plans
 - We update Welcome Flow A/B experiment to test other things
 
+### Fixed
+- My Jetpack: change Jetpack AI post checkout URL so the redirect works
+
 ## [4.33.1] - 2024-08-29
 ### Changed
 - Admin menu: change order of Jetpack sub-menu items [#39095]
