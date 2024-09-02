@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Custom CSS: remove outdated link from admin menu
 - Replace a `trigger_error( ..., E_USER_ERROR )` with a thrown exception for PHP 8.4 compatibility.
 
 ## 13.8-beta - 2024-09-02
