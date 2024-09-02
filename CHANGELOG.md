@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: update fair usage messaging on the sidebar.
 - Monetize: support more currencies
 - Notifications: Use profile locale to match menu language
+- Replace a `trigger_error( ..., E_USER_ERROR )` with a thrown exception for PHP 8.4 compatibility.
 - Slideshow shortcode: Remove deprecated JS functionality and remove majority of jQuery.
 - Social: Updated the share status modal to render it globally
 - Social Menus: Switch to more appropriate method of calling the SVG icon file.
