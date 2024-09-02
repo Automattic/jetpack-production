@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Admin menu: Change order of Jetpack sub-menu items
+- AI Assistant: Add spelling mistakes check for English language
 - Map block: Allow maps on WordPress.com to be selectable.
 
 ### Improved compatibility
