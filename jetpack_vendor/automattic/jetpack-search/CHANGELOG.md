@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.45.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.45.0] - 2024-09-02
 ### Added
-- Search: allow customizing highlighted fields
+- Search: allow customizing highlighted fields [#39053]
 
 ### Changed
-- Admin menu: change order of Jetpack sub-menu items
-- Updated package dependencies.
+- Admin menu: change order of Jetpack sub-menu items [#39095]
+- Updated package dependencies. [#39111]
 
 ### Fixed
-- Search: Use the user's locale when formatting request limits.
+- Search: Use the user's locale when formatting request limits. [#38946]
 
 ## [0.44.17] - 2024-08-26
 ### Changed
@@ -1025,7 +1022,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.45.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.44.17...v0.45.0-alpha
+[0.45.0]: https://github.com/Automattic/jetpack-search/compare/v0.44.17...v0.45.0
 [0.44.17]: https://github.com/Automattic/jetpack-search/compare/v0.44.16...v0.44.17
 [0.44.16]: https://github.com/Automattic/jetpack-search/compare/v0.44.15...v0.44.16
 [0.44.15]: https://github.com/Automattic/jetpack-search/compare/v0.44.14...v0.44.15
