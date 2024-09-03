@@ -56,6 +56,7 @@ return array(
     'Automattic\\Jetpack\\Config' => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php',
     'Automattic\\Jetpack\\Connection\\Authorize_Json_Api' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-authorize-json-api.php',
     'Automattic\\Jetpack\\Connection\\Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-client.php',
+    'Automattic\\Jetpack\\Connection\\Connection_Assets' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-connection-assets.php',
     'Automattic\\Jetpack\\Connection\\Connection_Notice' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-connection-notice.php',
     'Automattic\\Jetpack\\Connection\\Error_Handler' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-error-handler.php',
     'Automattic\\Jetpack\\Connection\\Initial_State' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-initial-state.php',

@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Akismet/Anti-spam: always use Akismet logo in plugin header
 - Custom CSS: remove outdated link from admin menu
 - Replace a `trigger_error( ..., E_USER_ERROR )` with a thrown exception for PHP 8.4 compatibility.
+- Updated connection js to load its bundle via connection package
 
 ## 13.8-beta - 2024-09-02
 ### Major Enhancements
