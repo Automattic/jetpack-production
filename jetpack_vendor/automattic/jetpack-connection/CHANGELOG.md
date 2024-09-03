@@ -5,12 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.13.0-alpha] - unreleased
+## [3.0.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated connection js to load its bundle via connection package
+
+### Removed
+- Removed registering of Jetpack option edit_links_calypso_redirect
 
 ### Fixed
 - Fixed connection assets for wpcom simple sites
@@ -1177,7 +1180,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[2.13.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v2.12.5...v2.13.0-alpha
+[3.0.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v2.12.5...v3.0.0-alpha
 [2.12.5]: https://github.com/Automattic/jetpack-connection/compare/v2.12.4...v2.12.5
 [2.12.4]: https://github.com/Automattic/jetpack-connection/compare/v2.12.3...v2.12.4
 [2.12.3]: https://github.com/Automattic/jetpack-connection/compare/v2.12.2...v2.12.3
