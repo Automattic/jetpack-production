@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.34.1-alpha] - unreleased
+## [4.35.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- My Jetpack: add support for feature-specific handling to product interstitials.
 
 ### Changed
 - Jetpack AI product page: add fair usage link on over quota notice
@@ -1695,7 +1698,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.34.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.34.0...4.34.1-alpha
+[4.35.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.34.0...4.35.0-alpha
 [4.34.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.33.1...4.34.0
 [4.33.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.33.0...4.33.1
 [4.33.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.32.4...4.33.0
