@@ -10,6 +10,10 @@ return array(
 		'version' => '2.3.5.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-assets/actions.php'
 	),
+	'7372b7fb88a9723cf5b76d456eb0b738' => array(
+		'version' => '2.13.0.0-alpha1725369288',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/actions.php'
+	),
 	'd4eb94df91a729802d18373ee8cdc79f' => array(
 		'version' => '3.4.6.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/actions.php'

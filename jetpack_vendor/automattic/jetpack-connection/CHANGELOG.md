@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated connection js to load its bundle via connection package
 
+### Fixed
+- Fixed connection assets for wpcom simple sites
+
 ## [2.12.5] - 2024-08-29
 ### Changed
 - Sync: Remove the checksum for active plugins if present when sync is not active, so it gets recalculated when sync gets activated [#39098]
