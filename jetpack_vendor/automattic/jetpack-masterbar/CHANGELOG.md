@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Enable Users -> Profile (profile.php) on all sites
+- Updated package dependencies.
 
 ### Fixed
 - Hosting Configuration: Make the menu title under the settings the same as the destination

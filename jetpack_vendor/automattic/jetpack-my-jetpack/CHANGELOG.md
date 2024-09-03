@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Jetpack AI product page: add fair usage link on over quota notice
+- Updated package dependencies.
 
 ## [4.34.0] - 2024-09-02
 ### Changed

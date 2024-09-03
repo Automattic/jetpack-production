@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.30-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [0.3.29] - 2024-09-02
 ### Changed
 - Admin menu: change order of Jetpack sub-menu items [#39095]
@@ -396,6 +403,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PHPCS: Fix `WordPress.Security.ValidatedSanitizedInput`
 - Updated package dependencies.
 
+[0.3.30-alpha]: https://github.com/Automattic/jetpack-wordads/compare/v0.3.29...v0.3.30-alpha
 [0.3.29]: https://github.com/Automattic/jetpack-wordads/compare/v0.3.28...v0.3.29
 [0.3.28]: https://github.com/Automattic/jetpack-wordads/compare/v0.3.27...v0.3.28
 [0.3.27]: https://github.com/Automattic/jetpack-wordads/compare/v0.3.26...v0.3.27

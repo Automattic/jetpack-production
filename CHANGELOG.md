@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Fix Subscribe Modal spacing
 - Subscriptions: Hook the Subscribe block only after single post content
 - Updated connection js to load its bundle via connection package
+- Updated package dependencies.
 
 ## 13.8-beta - 2024-09-02
 ### Major Enhancements

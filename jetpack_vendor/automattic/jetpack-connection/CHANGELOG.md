@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated connection js to load its bundle via connection package
+- Updated package dependencies.
 
 ### Removed
 - Removed registering of Jetpack option edit_links_calypso_redirect

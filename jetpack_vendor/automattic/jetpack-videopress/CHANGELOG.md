@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.24.5-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [0.24.4] - 2024-09-02
 ### Changed
 - Admin menu: change order of Jetpack sub-menu items [#39095]
@@ -1421,6 +1428,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created empty package [#24952]
 
+[0.24.5-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.4...v0.24.5-alpha
 [0.24.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.3...v0.24.4
 [0.24.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.2...v0.24.3
 [0.24.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.1...v0.24.2
