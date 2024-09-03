@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Hosting Configuration: Make the menu title under the settings the same as the destination
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Akismet/Anti-spam: always use Akismet logo in plugin header
 - Custom CSS: remove outdated link from admin menu
