@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Akismet/Anti-spam: always use Akismet logo in plugin header
 - Custom CSS: remove outdated link from admin menu
+- Enable Users -> Profile (profile.php) on all sites
 - Replace a `trigger_error( ..., E_USER_ERROR )` with a thrown exception for PHP 8.4 compatibility.
 - Updated connection js to load its bundle via connection package
 
