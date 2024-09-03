@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Hook the Subscribe block only after single post content
 - Updated connection js to load its bundle via connection package
 - Updated package dependencies.
+- Update empty help text for Brief
 
 ## 13.8-beta - 2024-09-02
 ### Major Enhancements
