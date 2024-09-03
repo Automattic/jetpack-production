@@ -49,7 +49,7 @@
 		"automattic/jetpack-videopress": "^0.24.4",
 		"automattic/jetpack-waf": "^0.18.4",
 		"automattic/jetpack-wordads": "^0.3.29",
-		"automattic/woocommerce-analytics": "^0.1.8",
+		"automattic/woocommerce-analytics": "^0.1.9-alpha",
 		"scssphp/scssphp": "1.12.0"
 	},
 	"require-dev": {
