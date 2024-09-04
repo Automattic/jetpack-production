@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI product page: add fair usage link on over quota notice
 - Updated package dependencies.
 
+### Fixed
+- Gracefully fail when user data fetch failed.
+
 ## [4.34.0] - 2024-09-02
 ### Changed
 - My Jetpack: show over quota notice and period usage counter for unlimited plans [#39129]
