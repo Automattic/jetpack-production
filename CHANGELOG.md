@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: only display the Jetpack menu for contributor roles and above.
 - Enable Users -> Profile (profile.php) on all sites
 - Replace a `trigger_error( ..., E_USER_ERROR )` with a thrown exception for PHP 8.4 compatibility.
+- Site Settings API: Include is_fully_managed_agency_site site option in the response, and allow for its modification
 - Subscriptions: Fix Subscribe Modal spacing
 - Subscriptions: Hook the Subscribe block only after single post content
 - Subscriptions: Make Subscription overlay dismiss cookie a session cookie
