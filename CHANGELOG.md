@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Replace a `trigger_error( ..., E_USER_ERROR )` with a thrown exception for PHP 8.4 compatibility.
 - Subscriptions: Fix Subscribe Modal spacing
 - Subscriptions: Hook the Subscribe block only after single post content
+- Subscriptions: Make Subscription overlay dismiss cookie a session cookie
 - Updated connection js to load its bundle via connection package
 - Updated package dependencies.
 - Update empty help text for Brief
