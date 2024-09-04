@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom CSS: remove outdated link from admin menu
 - Dashboard: only display the Jetpack menu for contributor roles and above.
 - Enable Users -> Profile (profile.php) on all sites
+- Jetpack sync: Gutenberg footnotes meta
 - Make dashboard gracefully fail when user data fetch failed.
 - Not yet released feature
 - Replace a `trigger_error( ..., E_USER_ERROR )` with a thrown exception for PHP 8.4 compatibility.

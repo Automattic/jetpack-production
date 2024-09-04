@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Optimized performance by moving the IDC safe mode check after the connection check, reducing unnecessary get_option() requests for jetpack_sync_error_idc
 
+### Fixed
+- Jetpack sync: Gutenberg footnotes meta
+
 ## [3.9.0] - 2024-08-30
 ### Added
 - Add share status log modal to published posts [#39051]
