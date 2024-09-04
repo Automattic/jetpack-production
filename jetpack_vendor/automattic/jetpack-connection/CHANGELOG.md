@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Jetpack Connection: Restrict handling verified errors on admin pages only
 - Updated connection js to load its bundle via connection package
 - Updated package dependencies.
 
