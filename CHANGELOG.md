@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- AI Assistant: Remove autofocus on extended blocks while previewing
 - Hosting Configuration: Make the menu title under the settings the same as the destination
 - Sidebar: Show correct product name for "VaultPress Backup".
 
