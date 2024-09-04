@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Akismet/Anti-spam: always use Akismet logo in plugin header
 - Custom CSS: remove outdated link from admin menu
+- Dashboard: only display the Jetpack menu for contributor roles and above.
 - Enable Users -> Profile (profile.php) on all sites
 - Replace a `trigger_error( ..., E_USER_ERROR )` with a thrown exception for PHP 8.4 compatibility.
 - Subscriptions: Fix Subscribe Modal spacing
