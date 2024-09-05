@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: Remove autofocus on extended blocks while previewing
 - Hosting Configuration: Make the menu title under the settings the same as the destination
+- Jetpack REST API: Fix missing requirement in admin-menu endpoint
 - Sidebar: Show correct product name for "VaultPress Backup".
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
