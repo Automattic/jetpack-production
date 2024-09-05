@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Address React usage errors found by eslint.
+
 ## [0.22.8] - 2024-08-30
 ### Changed
 - Updated package dependencies. [#39111]
