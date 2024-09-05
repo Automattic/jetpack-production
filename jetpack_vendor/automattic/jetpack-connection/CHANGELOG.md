@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.0.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.0.0] - 2024-09-05
 ### Deprecated
-- Deprecated Jetpack Onboarding system
+- Deprecated Jetpack Onboarding system. [#39229]
 
 ## [3.0.0] - 2024-09-05
 ### Changed
@@ -1186,7 +1183,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[4.0.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v3.0.0...v4.0.0-alpha
+[4.0.0]: https://github.com/Automattic/jetpack-connection/compare/v3.0.0...v4.0.0
 [3.0.0]: https://github.com/Automattic/jetpack-connection/compare/v2.12.5...v3.0.0
 [2.12.5]: https://github.com/Automattic/jetpack-connection/compare/v2.12.4...v2.12.5
 [2.12.4]: https://github.com/Automattic/jetpack-connection/compare/v2.12.3...v2.12.4
