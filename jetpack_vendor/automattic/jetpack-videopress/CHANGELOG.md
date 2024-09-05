@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fix translation issue with VideoPress data
+
 ## [0.24.4] - 2024-09-02
 ### Changed
 - Admin menu: change order of Jetpack sub-menu items [#39095]
