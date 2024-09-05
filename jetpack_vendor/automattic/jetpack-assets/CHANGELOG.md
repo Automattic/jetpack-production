@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fixed script data not available in block editor iframe
+
 ## [2.3.5] - 2024-08-29
 ### Changed
 - Updated package dependencies. [#39111]
