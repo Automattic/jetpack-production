@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Make Subscription overlay dismiss cookie a session cookie
 - Updated connection js to load its bundle via connection package
 - Updated package dependencies.
+- Updated to not check for onboarding option from the frontend
 - Update empty help text for Brief
 
 ## 13.8 - 2024-09-02
