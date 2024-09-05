@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Akismet/Anti-spam: always use Akismet logo in plugin header
 - Custom CSS: remove outdated link from admin menu
 - Dashboard: only display the Jetpack menu for contributor roles and above.
+- Deprecated Jetpack Onboarding system
 - Enable Users -> Profile (profile.php) on all sites
 - Jetpack sync: Gutenberg footnotes meta
 - Make dashboard gracefully fail when user data fetch failed.
