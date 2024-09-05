@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Admin menu: Add text-overflow ellipsis for the site title and domain.
+
 ### Changed
 - Enable Users -> Profile (profile.php) on all sites
 - Updated package dependencies.
