@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Contact Forms: added checks for unexpected contents of textarea elements.
+
 ## [0.32.13] - 2024-09-04
 ### Changed
 - Check for private and password-protected posts when handling the contact form submissions. [#39238]
