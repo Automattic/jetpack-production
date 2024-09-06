@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI Assistant: Remove autofocus on extended blocks while previewing
+- Fix: Do not show Jetpack AI excerpt UI on patterns, templates, and template parts where it does not make sense.
 - Hosting Configuration: Make the menu title under the settings the same as the destination
 - Jetpack REST API: Fix missing requirement in admin-menu endpoint
 - Sidebar: Show correct product name for "VaultPress Backup".
