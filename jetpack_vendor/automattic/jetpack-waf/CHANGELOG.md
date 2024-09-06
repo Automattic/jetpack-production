@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Waf: Ensure that request body is parsed correctly
+
 ## [0.18.4] - 2024-08-26
 ### Changed
 - Updated package dependencies. [#39004]
