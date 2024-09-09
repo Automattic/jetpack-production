@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Hosting Configuration: Make the menu title under the settings the same as the destination
 - Jetpack REST API: Fix missing requirement in admin-menu endpoint
 - Sidebar: Show correct product name for "VaultPress Backup".
+- Write Brief: Fix highlight position on spelling mistake following ignored special word
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added a way to reshare in async way
