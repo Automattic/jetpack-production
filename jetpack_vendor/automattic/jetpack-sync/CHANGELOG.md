@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Sync: Enable Full Sync Immediately for woocommerce module
 
+### Removed
+- Jetpack Sync: Stop syncing 'automatic_updates_complete' actions
+
 ## [3.10.0] - 2024-09-05
 ### Added
 - Sync: Add a filter that allows modification of the default modules list used for full sync procedure. [#39117]
