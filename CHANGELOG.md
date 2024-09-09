@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: only display the Jetpack menu for contributor roles and above.
 - Deprecated Jetpack Onboarding system
 - Enable Users -> Profile (profile.php) on all sites
+- Fix the 'invalid date' error on new site stats.
 - Jetpack sync: Gutenberg footnotes meta
 - Make dashboard gracefully fail when user data fetch failed.
 - Not yet released feature
