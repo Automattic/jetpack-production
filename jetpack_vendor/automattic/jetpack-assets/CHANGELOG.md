@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.8-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [2.3.7] - 2024-09-05
 ### Changed
 - Internal updates.
@@ -497,6 +504,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Statically access asset tools
 
+[2.3.8-alpha]: https://github.com/Automattic/jetpack-assets/compare/v2.3.7...v2.3.8-alpha
 [2.3.7]: https://github.com/Automattic/jetpack-assets/compare/v2.3.6...v2.3.7
 [2.3.6]: https://github.com/Automattic/jetpack-assets/compare/v2.3.5...v2.3.6
 [2.3.5]: https://github.com/Automattic/jetpack-assets/compare/v2.3.4...v2.3.5

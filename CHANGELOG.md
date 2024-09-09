@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 13.9-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated package dependencies.
+
 ## 13.9-a.1 - 2024-09-09
 ### Bug fixes
 - AI Assistant: Remove autofocus on extended blocks while previewing. [#39216]
