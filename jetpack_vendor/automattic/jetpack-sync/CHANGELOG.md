@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.11.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.11.0] - 2024-09-09
 ### Added
-- Sync: Enable Full Sync Immediately for woocommerce module
+- Sync: Enable Full Sync Immediately for woocommerce module [#39254]
 
 ### Removed
-- Jetpack Sync: Stop syncing 'automatic_updates_complete' actions
+- Jetpack Sync: Stop syncing 'automatic_updates_complete' actions [#39296]
 
 ## [3.10.0] - 2024-09-05
 ### Added
@@ -1283,7 +1280,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[3.11.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v3.10.0...v3.11.0-alpha
+[3.11.0]: https://github.com/Automattic/jetpack-sync/compare/v3.10.0...v3.11.0
 [3.10.0]: https://github.com/Automattic/jetpack-sync/compare/v3.9.1...v3.10.0
 [3.9.1]: https://github.com/Automattic/jetpack-sync/compare/v3.9.0...v3.9.1
 [3.9.0]: https://github.com/Automattic/jetpack-sync/compare/v3.8.1...v3.9.0
