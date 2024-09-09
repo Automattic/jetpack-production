@@ -55,10 +55,10 @@ abstract class Module {
 	 * @access public
 	 *
 	 * @return string|bool
-	 * @deprecated since 3.11.0-alpha Use table() instead.
+	 * @deprecated since 3.11.0 Use table() instead.
 	 */
 	public function table_name() {
-		_deprecated_function( __METHOD__, '3.11.0-alpha', 'Automattic\\Jetpack\\Sync\\Module->table' );
+		_deprecated_function( __METHOD__, '3.11.0', 'Automattic\\Jetpack\\Sync\\Module->table' );
 		return false;
 	}
 

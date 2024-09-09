@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.35.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.35.4] - 2024-09-09
 ### Added
-- Jetpack AI: add fair usage policy link to the Jetpack AI product interstitial.
+- Jetpack AI: add fair usage policy link to the Jetpack AI product interstitial. [#39281]
 
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#39278]
 
 ### Fixed
-- Jetpack AI: fix default_content filter so it doesn't enforce parameter type
+- Jetpack AI: fix default_content filter so it doesn't enforce parameter type [#39276]
 
 ## [4.35.3] - 2024-09-06
 ### Fixed
@@ -1723,7 +1720,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.35.4-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.35.3...4.35.4-alpha
+[4.35.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.35.3...4.35.4
 [4.35.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.35.2...4.35.3
 [4.35.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.35.1...4.35.2
 [4.35.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.35.0...4.35.1
