@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: fix checkout URL redirect to the right yearly product
 - Jetpack AI: remove ai-image and ai-paragraph block code since they are not used and never made it to an actual functional block
 - Terms of Service: optimize initialization.
+- Updated package dependencies.
 
 ## 13.9-a.3 - 2024-09-10
 ### Bug fixes
