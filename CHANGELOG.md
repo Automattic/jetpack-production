@@ -2,14 +2,20 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.9-a.2 - unreleased
+## 13.9-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack AI: remove ai-image and ai-paragraph block code since they are not used and never made it to an actual functional block
-- Remove checks for deprecated function
-- Updated package dependencies.
+
+## 13.9-a.3 - 2024-09-10
+### Bug fixes
+- WooCommerce Analytics: Check whether a constant is defined before attempting to use it, for compatibility with WooCommerce <8.4.0. [#39306]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Premium Content: Remove checks for deprecated function. [#39319]
+- Updated package dependencies. [#39302]
 
 ## 13.9-a.1 - 2024-09-09
 ### Bug fixes
