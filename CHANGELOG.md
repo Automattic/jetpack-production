@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack AI: remove ai-image and ai-paragraph block code since they are not used and never made it to an actual functional block
 - Remove checks for deprecated function
 - Updated package dependencies.
 
