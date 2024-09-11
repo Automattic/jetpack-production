@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - SSO: remove legacy codebase in favor of the newer SSO codebase introduced in Jetpack 13.5
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Content Options: Ensure the feature is loaded via the Classic Theme Helper package instead of Jetpack module.
 - Jetpack AI: fix checkout URL redirect to the right yearly product
 - Jetpack AI: remove ai-image and ai-paragraph block code since they are not used and never made it to an actual functional block
 - Social: Cleaned up media auto-conversion backend logic
