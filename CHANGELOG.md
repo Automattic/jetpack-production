@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - SSO: remove legacy codebase in favor of the newer SSO codebase introduced in Jetpack 13.5
 
+### Bug fixes
+- Shortcode: Fix the youtube url cannot be embeded due to the trailing question mark of the youtube id
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Content Options: Ensure the feature is loaded via the Classic Theme Helper package instead of Jetpack module.
 - Jetpack AI: fix checkout URL redirect to the right yearly product
