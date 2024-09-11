@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Move trailing spaces out of i18n messages.
+
 ## [0.45.3] - 2024-09-10
 ### Changed
 - Updated package dependencies. [#39302]

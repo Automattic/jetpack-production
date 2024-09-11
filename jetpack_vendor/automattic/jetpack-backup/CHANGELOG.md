@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Remove unnecessary leading space from i18n message.
+
 ## [3.4.9] - 2024-09-10
 ### Changed
 - Updated package dependencies. [#39302]
