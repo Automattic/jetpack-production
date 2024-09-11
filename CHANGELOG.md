@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - SSO: remove legacy codebase in favor of the newer SSO codebase introduced in Jetpack 13.5
 
+### Improved compatibility
+- Improved compatibiliy with modern block themes by not checking whether we should use legacy sharing buttons mechanism
+
 ### Bug fixes
 - Shortcode: Fix the youtube url cannot be embeded due to the trailing question mark of the youtube id
 
