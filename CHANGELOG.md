@@ -14,7 +14,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Dashboard: display the yearly Stats plan in the Jetpack dashboard immediately after you've purchased the plan.
-- Do not register Memberships blocks when the site is not connected to Jetpack
 - Shortcode: Fix the youtube url cannot be embeded due to the trailing question mark of the youtube id
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
