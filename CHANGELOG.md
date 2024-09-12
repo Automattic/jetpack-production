@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Cleaned up media auto-conversion backend logic
 - Styles: update styling for external links
 - Terms of Service: optimize initialization.
+- Title Optimization: properly handle errors and show the correct UI for each.
 - Updated package dependencies.
 
 ## 13.9-a.3 - 2024-09-10
