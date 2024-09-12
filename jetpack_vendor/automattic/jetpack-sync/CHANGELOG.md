@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Social: Cleaned up media auto-conversion backend logic
 
+### Fixed
+- Sync: Ensure is_plugin_active exists when loading Table Checksums
+
 ## [3.12.0] - 2024-09-10
 ### Added
 - Sync: Enable Full Sync for woocommerce_hpos_orders module [#39297]
