@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Content Options: Ensure the feature is loaded via the Classic Theme Helper package instead of Jetpack module.
 - Jetpack AI: fix checkout URL redirect to the right yearly product
 - Jetpack AI: remove ai-image and ai-paragraph block code since they are not used and never made it to an actual functional block
+- LaunchpadSaveModal: support launchpad experiment
 - Move leading and trailing spaces out of i18n messages. Use en-dash for numeric ranges in i18n messages.
 - Open SEO upsell post in help center
 - Social: Cleaned up media auto-conversion backend logic
