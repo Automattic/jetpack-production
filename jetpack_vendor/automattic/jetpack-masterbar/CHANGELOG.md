@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Admin bar: align colors with Calypso's
+- Help Center: Fix the icon color when previewing color scheme
 
 ## [0.9.1] - 2024-09-10
 ### Changed
