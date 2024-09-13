@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Remove unnecessary leading space from i18n message.
+- Stop considering discarded backups as successful backups on the admin page
 
 ## [3.4.9] - 2024-09-10
 ### Changed
