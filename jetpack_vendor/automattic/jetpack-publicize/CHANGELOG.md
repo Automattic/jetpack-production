@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Social: Cleaned up media auto-conversion backend logic
 
+### Fixed
+- Hide share logs not belonging to current admin.
+
 ## [0.52.3] - 2024-09-10
 ### Changed
 - Updated package dependencies. [#39302]
