@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add new action myjetpack_enqueue_scripts
 
 ### Changed
+- My Jetpack: Always show the purchase link regardless of the number of plans owned.
 - Updated package dependencies.
 
 ## [4.35.5] - 2024-09-10
