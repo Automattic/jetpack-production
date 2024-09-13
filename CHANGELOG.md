@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Cleaned up media auto-conversion backend logic
 - Styles: update styling for external links
 - Terms of Service: optimize initialization.
+- Title Optimization: handle enter/return key to trigger a generation when they are pressed.
 - Title Optimization: properly handle errors and show the correct UI for each.
 - Updated package dependencies.
 
