@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Do not check for capabilities if the user is not signed in when deciding whether to show the admin bar widget
 - SSO: remove legacy codebase in favor of the newer SSO codebase introduced in Jetpack 13.5
 
 ### Bug fixes
