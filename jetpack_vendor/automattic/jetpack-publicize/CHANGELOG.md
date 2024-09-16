@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Moved initialization of Publicize UI from init action to admin_init action
+- Social: Migrated useAdminUiV1 feature flag to new script data
 
 ### Removed
 - Social: Cleaned up media auto-conversion backend logic

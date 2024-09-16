@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Move leading and trailing spaces out of i18n messages. Use en-dash for numeric ranges in i18n messages.
 - Open SEO upsell post in help center
 - Social: Cleaned up media auto-conversion backend logic
+- Social: Migrated useAdminUiV1 feature flag to new script data
 - Styles: update styling for external links
 - Terms of Service: optimize initialization.
 - Title Optimization: handle enter/return key to trigger a generation when they are pressed.
