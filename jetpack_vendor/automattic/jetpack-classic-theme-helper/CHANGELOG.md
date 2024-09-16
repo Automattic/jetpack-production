@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Content Options: Ensuring feature is now required.
 
+### Changed
+- Custom Content Types: Require feature along with portfolios from the package
+
 ## [0.5.6] - 2024-09-10
 ### Changed
 - Updated package dependencies. [#39302]
