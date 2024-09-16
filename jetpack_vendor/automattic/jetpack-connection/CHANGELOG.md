@@ -5,18 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.0.3-alpha] - unreleased
+## [4.0.4-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - SSO tooltip: Use anchor element's document instead of the global `document`.
 
+## [4.0.3] - 2024-09-16
 ### Removed
-- Remove deprecated code from connected plugins component.
+- Remove deprecated code from connected plugins component. [#39375]
 
 ### Fixed
-- Fix the connected plugins option on multisites.
+- Fix the connected plugins option on multisites. [#39355]
 
 ## [4.0.2] - 2024-09-10
 ### Changed
@@ -1204,7 +1205,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[4.0.3-alpha]: https://github.com/Automattic/jetpack-connection/compare/v4.0.2...v4.0.3-alpha
+[4.0.4-alpha]: https://github.com/Automattic/jetpack-connection/compare/v4.0.3...v4.0.4-alpha
+[4.0.3]: https://github.com/Automattic/jetpack-connection/compare/v4.0.2...v4.0.3
 [4.0.2]: https://github.com/Automattic/jetpack-connection/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/Automattic/jetpack-connection/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/Automattic/jetpack-connection/compare/v3.0.0...v4.0.0

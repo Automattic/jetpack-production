@@ -5,16 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.45.4-alpha] - unreleased
+## [0.45.5-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Instant search: Use triggering element's document instead of the global `document`.
-- Updated package dependencies.
+
+## [0.45.4] - 2024-09-16
+### Changed
+- Updated package dependencies. [#39332]
 
 ### Fixed
-- Move trailing spaces out of i18n messages.
+- Move trailing spaces out of i18n messages. [#39305]
 
 ## [0.45.3] - 2024-09-10
 ### Changed
@@ -1045,7 +1048,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.45.4-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.45.3...v0.45.4-alpha
+[0.45.5-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.45.4...v0.45.5-alpha
+[0.45.4]: https://github.com/Automattic/jetpack-search/compare/v0.45.3...v0.45.4
 [0.45.3]: https://github.com/Automattic/jetpack-search/compare/v0.45.2...v0.45.3
 [0.45.2]: https://github.com/Automattic/jetpack-search/compare/v0.45.1...v0.45.2
 [0.45.1]: https://github.com/Automattic/jetpack-search/compare/v0.45.0...v0.45.1
