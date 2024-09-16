@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add `is_a4a_dev_site` to `jetpack_response_field_additions`.
+- Blocks: Get active element or selection from target element's document instead of the global `document`.
 - Content Options: Ensure the feature is loaded via the Classic Theme Helper package instead of Jetpack module.
 - Custom Content Types: Require feature along with portfolios from the Classic Theme Helper package
 - Jetpack AI: fix checkout URL redirect to the right yearly product

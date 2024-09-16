@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Email submissions: on sites using www., ensure that the sending email address does not use the www. prefix.
+- Options: Get selection from the element's document instead of the global `window`.
 - Refactor Choice fields
 
 ### Fixed

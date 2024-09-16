@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add new action myjetpack_enqueue_scripts
 
 ### Changed
+- Get active element from tooltip button's document rather than the global `document`.
 - My Jetpack: Always show the purchase link regardless of the number of plans owned.
 - Updated package dependencies.
 
