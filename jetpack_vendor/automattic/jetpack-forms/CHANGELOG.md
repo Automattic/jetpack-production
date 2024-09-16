@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Email submissions: on sites using www., ensure that the sending email address does not use the www. prefix.
+- Refactor Choice fields
 
 ### Fixed
 - Use en-dash in numeric range in i18n message to conform to guidelines.
