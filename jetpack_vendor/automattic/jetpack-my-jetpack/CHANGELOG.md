@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Get active element from tooltip button's document rather than the global `document`.
 
+### Fixed
+- Fix issue on interstitials show both buttons loading when only one is pressed
+
 ## [4.35.6] - 2024-09-16
 ### Added
 - Add new action myjetpack_enqueue_scripts [#39380]
