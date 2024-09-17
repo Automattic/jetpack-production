@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added tracking for the resharing action
 
+### Changed
+- Social: Migrated useShareStatus feature flag to new script data
+
 ## [0.53.0] - 2024-09-16
 ### Added
 - Social: adds hook for plugin developers to be able to pull social share URLs on save. [#39398]
