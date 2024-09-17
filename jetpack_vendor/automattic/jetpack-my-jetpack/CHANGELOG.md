@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix issue on interstitials show both buttons loading when only one is pressed
+- Fix issue where recommendations are showing slightly before the welcome banner dismisses
 
 ## [4.35.6] - 2024-09-16
 ### Added
