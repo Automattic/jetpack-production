@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Instant search: Use triggering element's document instead of the global `document`.
 
+### Fixed
+- Use React properties rather than pass-throughs (e.g. `className` rather than `class`).
+
 ## [0.45.4] - 2024-09-16
 ### Changed
 - Updated package dependencies. [#39332]
