@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.54.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Added tracking for the resharing action
+
 ## [0.53.0] - 2024-09-16
 ### Added
 - Social: adds hook for plugin developers to be able to pull social share URLs on save. [#39398]
@@ -708,6 +715,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.54.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.53.0...v0.54.0-alpha
 [0.53.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.52.3...v0.53.0
 [0.52.3]: https://github.com/Automattic/jetpack-publicize/compare/v0.52.2...v0.52.3
 [0.52.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.52.1...v0.52.2
