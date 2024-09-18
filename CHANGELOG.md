@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: add keywords support to AI Assistant SEO title feature
 
 ### Bug fixes
+- Portfolios: Ensure these are enabled and working properly on themes that support portfolios
 - Social: Updated social previews button styles to fit the translated string
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
