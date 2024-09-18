@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: Get active element or selection from target element's document instead of the global `document`.
+- Build: do not ship TypeScript files in the production version of Jetpack.
 - Use React properties rather than pass-throughs (e.g. `className` rather than `class`).
 
 ## 13.9-a.5 - 2024-09-16
