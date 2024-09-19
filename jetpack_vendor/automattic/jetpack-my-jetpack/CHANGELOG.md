@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Get active element from tooltip button's document rather than the global `document`.
+- My Jetpack product interstitial: Don't show intro offer price if user is not eligible for the offer.
 - Send non-connected users to a "connect after checkout" flow
 
 ### Fixed
