@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Build: do not ship TypeScript files in the production version of Jetpack.
 - Email preview: fix disabling pointer events preventing scroll in Firefox
 - Send non-connected users to a "connect after checkout" flow
+- Subscription widget: fix PHP warnings
 - Use React properties rather than pass-throughs (e.g. `className` rather than `class`).
 
 ## 13.9-a.5 - 2024-09-16
