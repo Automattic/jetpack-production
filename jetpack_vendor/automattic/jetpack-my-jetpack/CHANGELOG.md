@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Get active element from tooltip button's document rather than the global `document`.
+- Send non-connected users to a "connect after checkout" flow
 
 ### Fixed
 - Fix issue on interstitials show both buttons loading when only one is pressed
