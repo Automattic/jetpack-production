@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Instant search: Use triggering element's document instead of the global `document`.
+- Search: reduce database calls by ensuring plan support before checking options
 
 ### Fixed
 - Use React properties rather than pass-throughs (e.g. `className` rather than `class`).
