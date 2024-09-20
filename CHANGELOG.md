@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: point upgrade links and buttons to checkout instead of product interstitial.
 - Removed launchpad-save-modal.
 - Send non-connected users to a "connect after checkout" flow
+- SubscribeBlock: fix white-space issues
 - Subscription widget: fix PHP warnings
 - Use React properties rather than pass-throughs (e.g. `className` rather than `class`).
 
