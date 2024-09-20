@@ -9,9 +9,6 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Jetpack AI: add keywords support to AI Assistant SEO title feature
 
-### Improved compatibility
-- Add video ids to the html
-
 ### Bug fixes
 - Portfolios: Ensure these are enabled and working properly on themes that support portfolios
 - Social: Updated social previews button styles to fit the translated string
