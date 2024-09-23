@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 13.9-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 13.9-a.7 - 2024-09-23
 ### Enhancements
 - Jetpack AI: Add AI SEO title optimization. [#39363]
