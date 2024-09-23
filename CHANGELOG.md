@@ -2,34 +2,31 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.9-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 13.9-a.7 - 2024-09-23
 ### Enhancements
-- Adding features enabled rest endpoint
-- Jetpack AI: add keywords support to AI Assistant SEO title feature
+- Jetpack AI: Add AI SEO title optimization. [#39363]
 
 ### Bug fixes
-- Portfolios: Ensure these are enabled and working properly on themes that support portfolios
-- Shortcode: Fix the YouTube URL for the private video
-- Social: Updated social previews button styles to fit the translated string
-- [In administration] Do not register Memberships blocks when the site is not connected to Jetpack
+- Shortcode: Fix the YouTube URL for the private videos. [#39454]
+- Social: Fix social previews button sometimes not fitting all the text. [#39430]
+- Blocks: Prevent Memberships blocks from being registered when the site is not connected to Jetpack. [#39390]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added social share status endpoint for WPCOM
-- Blocks: Get active element or selection from target element's document instead of the global `document`.
-- Build: do not ship TypeScript files in the production version of Jetpack.
-- Create the 'features/available' REST endpoint.
-- Email preview: fix disabling pointer events preventing scroll in Firefox
-- Jetpack AI: point upgrade links and buttons to checkout instead of product interstitial.
-- Jetpack AI: remove style parameter from image generation requests until we mean it
-- Jetpack AI: use custom placeholders on the Jetpack Form AI extension input component.
-- Removed launchpad-save-modal.
-- Send non-connected users to a "connect after checkout" flow
-- SubscribeBlock: fix white-space issues
-- Subscription widget: fix PHP warnings
-- Use React properties rather than pass-throughs (e.g. `className` rather than `class`).
+- Blocks: Get active element or selection from target element's document instead of the global `document`. [#39364]
+- Build: Do not ship TypeScript files in the production version of Jetpack. [#39428]
+- Connection: Move features enabled rest endpoint into the Jetpack plugin. [#39475]
+- Email preview: Fix disabling pointer events preventing scroll in Firefox. [#39457]
+- General: Create the 'features/available' REST endpoint. [#39442]
+- General: Send non-connected users to a "connect after checkout" flow. [#39444]
+- General: Use React properties rather than pass-throughs (e.g. `className` rather than `class`). [#39414]
+- Jetpack AI: Point upgrade links and buttons to checkout instead of product interstitial. [#39469]
+- Jetpack AI: Remove style parameter from image generation requests until we mean it. [#39494]
+- Jetpack AI: Use custom placeholders on the Jetpack Form AI extension input component. [#39482]
+- Removed launchpad-save-modal. [#39429]
+- REST API: Added social share status endpoint for WPCOM. [#39490]
+- SubscribeBlock: Fix white-space issues. [#39478]
+- Subscription widget: Fix PHP warnings. [#39458]
+- WP.com: Ensure portfolios are enabled and working properly on themes that support portfolios. [#39431]
 
 ## 13.9-a.5 - 2024-09-16
 ### Enhancements

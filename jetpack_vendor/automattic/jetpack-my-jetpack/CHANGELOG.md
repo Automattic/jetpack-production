@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.35.7-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.35.7] - 2024-09-23
 ### Changed
-- Get active element from tooltip button's document rather than the global `document`.
-- My Jetpack product interstitial: Don't show intro offer price if user is not eligible for the offer.
-- Send non-connected users to a "connect after checkout" flow
+- Get active element from tooltip button's document rather than the global `document`. [#39364]
+- My Jetpack product interstitial: Don't show intro offer price if user is not eligible for the offer. [#39403]
+- Send non-connected users to a "connect after checkout" flow [#39444]
 
 ### Fixed
-- Fix issue on interstitials show both buttons loading when only one is pressed
-- Fix issue where recommendations are showing slightly before the welcome banner dismisses
+- Fix issue on interstitials show both buttons loading when only one is pressed [#39356]
+- Fix issue where recommendations are showing slightly before the welcome banner dismisses [#39383]
 
 ## [4.35.6] - 2024-09-16
 ### Added
@@ -1745,7 +1742,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[4.35.7-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.35.6...4.35.7-alpha
+[4.35.7]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.35.6...4.35.7
 [4.35.6]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.35.5...4.35.6
 [4.35.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.35.4...4.35.5
 [4.35.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/4.35.3...4.35.4
