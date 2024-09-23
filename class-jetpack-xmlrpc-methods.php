@@ -44,6 +44,8 @@ class Jetpack_XMLRPC_Methods {
 	/**
 	 * Returns what features are available. Uses the slug of the module files.
 	 *
+	 * @deprecated 13.9-a.6
+	 * @see Jetpack_Core_Json_Api_Endpoints::get_features_available()
 	 * @return array
 	 */
 	public static function features_available() {

@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Added social share status endpoint for WPCOM
 - Blocks: Get active element or selection from target element's document instead of the global `document`.
 - Build: do not ship TypeScript files in the production version of Jetpack.
+- Create the 'features/available' REST endpoint.
 - Email preview: fix disabling pointer events preventing scroll in Firefox
 - Jetpack AI: point upgrade links and buttons to checkout instead of product interstitial.
 - Removed launchpad-save-modal.
