@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Adding features enabled rest endpoint
 - Jetpack AI: add keywords support to AI Assistant SEO title feature
 
 ### Bug fixes

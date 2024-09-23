@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Removed
+- Connection: Removed deprecated features_enabled method
 - Connection: Removed deprecated method features_available
 
 ## [4.0.4] - 2024-09-18
