@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Portfolios: Ensure these are enabled and working properly on themes that support portfolios
 - Shortcode: Fix the YouTube URL for the private video
 - Social: Updated social previews button styles to fit the translated string
+- [In administration] Do not register Memberships blocks when the site is not connected to Jetpack
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added social share status endpoint for WPCOM
