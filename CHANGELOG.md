@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Performance: set the concatenated CSS to false by default. The era where this was helpful is passing.
+
 ## 13.9-a.7 - 2024-09-23
 ### Enhancements
 - Jetpack AI: Add AI SEO title optimization. [#39363]
