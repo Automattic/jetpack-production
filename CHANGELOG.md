@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Create the 'features/available' REST endpoint.
 - Email preview: fix disabling pointer events preventing scroll in Firefox
 - Jetpack AI: point upgrade links and buttons to checkout instead of product interstitial.
+- Jetpack AI: remove style parameter from image generation requests until we mean it
 - Jetpack AI: use custom placeholders on the Jetpack Form AI extension input component.
 - Removed launchpad-save-modal.
 - Send non-connected users to a "connect after checkout" flow
