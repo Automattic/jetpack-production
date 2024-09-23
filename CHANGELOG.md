@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Updated social previews button styles to fit the translated string
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added social share status endpoint for WPCOM
 - Blocks: Get active element or selection from target element's document instead of the global `document`.
 - Build: do not ship TypeScript files in the production version of Jetpack.
 - Email preview: fix disabling pointer events preventing scroll in Firefox
