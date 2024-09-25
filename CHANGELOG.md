@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added test instructions for Jetpack 13.9.
 - Jetpack AI: add beta flag to support styles dropdown on logo generator
+- Remove deprecated IDC flag from admin pages.
 - Remove user connection nudge from Stats module on the dashboard
 - Write Brief: turn spelling mistakes and long sentences on by default when tool is enabled.
 
