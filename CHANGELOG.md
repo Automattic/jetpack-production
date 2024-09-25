@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Performance: set the concatenated CSS to false by default. The era where this was helpful is passing.
 
+### Improved compatibility
+- Admin dashboard: Disable portfolio toggle if theme supports portfolio and site is WoA
+
 ### Bug fixes
 - Shortcode: Fix the YouTube URL for the /embed one
 
