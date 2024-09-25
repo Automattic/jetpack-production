@@ -86,11 +86,6 @@ function jetpack_get_module_i18n( $key ) {
 				'description' => _x( 'Write posts or pages in plain-text Markdown syntax', 'Module Description', 'jetpack' ),
 			),
 
-			'masterbar' => array(
-				'name' => _x( 'WordPress.com Toolbar and Dashboard customizations', 'Module Name', 'jetpack' ),
-				'description' => _x( 'Replaces the admin bar with a useful toolbar to quickly manage your site via WordPress.com. Also adds additional customizations to the WPAdmin dashboard experience for better compatibility with WP.com.', 'Module Description', 'jetpack' ),
-			),
-
 			'monitor' => array(
 				'name' => _x( 'Monitor', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Jetpack’s downtime monitoring will continuously watch your site and alert you the moment that downtime is detected.', 'Module Description', 'jetpack' ),
@@ -321,10 +316,6 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/json-api.php
 			// - modules/sso.php
 			'Developers' => _x( 'Developers', 'Module Tag', 'jetpack' ),
-
-			// Modules with `General` tag:
-			// - modules/masterbar.php
-			'General' => _x( 'General', 'Module Tag', 'jetpack' ),
 
 			// Modules with `Admin` tag:
 			// - modules/post-list.php
@@ -609,24 +600,6 @@ function jetpack_get_module_info( $key ) {
 	    'module_tags' => 'Writing',
 	    'feature' => 'Writing',
 	    'additional_search_queries' => 'md, markdown',
-	    'plan_classes' => '',
-	  ),
-	  'masterbar' => 
-	  array (
-	    'name' => 'WordPress.com Toolbar and Dashboard customizations',
-	    'description' => 'Replaces the admin bar with a useful toolbar to quickly manage your site via WordPress.com. Also adds additional customizations to the WPAdmin dashboard experience for better compatibility with WP.com.',
-	    'sort' => '38',
-	    'recommendation_order' => '16',
-	    'introduced' => '4.8',
-	    'changed' => '',
-	    'deactivate' => '',
-	    'free' => '',
-	    'requires_connection' => 'Yes',
-	    'requires_user_connection' => 'Yes',
-	    'auto_activate' => 'No',
-	    'module_tags' => 'General',
-	    'feature' => '',
-	    'additional_search_queries' => 'adminbar, masterbar, colorschemes, profile-edit',
 	    'plan_classes' => '',
 	  ),
 	  'monitor' => 
@@ -1154,10 +1127,11 @@ function jetpack_get_all_module_header_names() {
 function jetpack_has_no_module_info( $slug ) {
 	$no_info_slugs = array (
 	  0 => 'geo-location',
-	  1 => 'module-extras',
-	  2 => 'module-info',
-	  3 => 'plugin-search',
-	  4 => 'theme-tools',
+	  1 => 'masterbar',
+	  2 => 'module-extras',
+	  3 => 'module-info',
+	  4 => 'plugin-search',
+	  5 => 'theme-tools',
 	);
 
 	return in_array( $slug, $no_info_slugs, true );
