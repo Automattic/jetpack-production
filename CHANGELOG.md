@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove deprecated IDC flag from admin pages.
 - Remove user connection nudge from Stats module on the dashboard
 - Remove user connection nudges where they aren't needed. Add user connection nudges where needed
+- Title Optimization: improve button behaviors when handling errors.
 - Write Brief: turn spelling mistakes and long sentences on by default when tool is enabled.
 
 ## 13.9-a.7 - 2024-09-23
