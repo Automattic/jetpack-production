@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Remove user connection nudges where they aren't needed. Add user connection nudges where needed
 - Update dependencies.
 
 ## [0.22.11] - 2024-09-23
