@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack plugin: Remove 'WordPress.com Toolbar' module
 
 ### Enhancements
+- Blocks: transition from an option to a module to improve caching
 - Performance: set the concatenated CSS to false by default. The era where this was helpful is passing.
 
 ### Improved compatibility

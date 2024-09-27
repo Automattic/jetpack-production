@@ -21,6 +21,11 @@ function jetpack_get_module_i18n( $key ) {
 				'description' => _x( 'Grow your audience by promoting your content across Tumblr and WordPress.com.', 'Module Description', 'jetpack' ),
 			),
 
+			'blocks' => array(
+				'name' => _x( 'Blocks', 'Module Name', 'jetpack' ),
+				'description' => _x( 'Add additional blocks to your site and post editors.', 'Module Description', 'jetpack' ),
+			),
+
 			'carousel' => array(
 				'name' => _x( 'Carousel', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Display images and galleries in a gorgeous, full-screen browsing experience', 'Module Description', 'jetpack' ),
@@ -263,6 +268,10 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/widgets.php
 			'Social' => _x( 'Social', 'Module Tag', 'jetpack' ),
 
+			// Modules with `blocks` tag:
+			// - modules/blocks.php
+			'blocks' => _x( 'blocks', 'Module Tag', 'jetpack' ),
+
 			// Modules with `Photos and Videos` tag:
 			// - modules/carousel.php
 			// - modules/photon-cdn.php
@@ -366,6 +375,24 @@ function jetpack_get_module_info( $key ) {
 	    'module_tags' => 'Traffic, Social',
 	    'feature' => '',
 	    'additional_search_queries' => 'advertising, ads',
+	    'plan_classes' => '',
+	  ),
+	  'blocks' => 
+	  array (
+	    'name' => 'Blocks',
+	    'description' => 'Add additional blocks to your site and post editors.',
+	    'sort' => '5',
+	    'recommendation_order' => '',
+	    'introduced' => '13.9-a.8',
+	    'changed' => '',
+	    'deactivate' => '',
+	    'free' => '',
+	    'requires_connection' => 'No',
+	    'requires_user_connection' => '',
+	    'auto_activate' => 'Yes',
+	    'module_tags' => 'blocks',
+	    'feature' => 'Writing',
+	    'additional_search_queries' => '',
 	    'plan_classes' => '',
 	  ),
 	  'carousel' => 
