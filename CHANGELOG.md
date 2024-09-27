@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Added test instructions for Jetpack 13.9.
 - Add icons for all product cards on dashboard
 - Clean and deprecate unused functionality on Jetpack admin pages.
+- Infinite scroll: remove unused code.
 - Jetpack AI: add beta flag to support styles dropdown on logo generator
 - Jetpack AI: pass prop/flag to showStyleSelector on logo generator modal
 - Jetpack AI: show button label on logo block toolbar if site's logo is empty
