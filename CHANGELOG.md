@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Clean and deprecate unused functionality on Jetpack admin pages.
 - Jetpack AI: add beta flag to support styles dropdown on logo generator
 - Jetpack AI: pass prop/flag to showStyleSelector on logo generator modal
+- Removed deprecation notice as the firewall feature will not be removed in the next release.
 - Remove deprecated IDC flag from admin pages.
 - Remove user connection nudge from Stats module on the dashboard
 - Remove user connection nudges where they aren't needed. Add user connection nudges where needed
