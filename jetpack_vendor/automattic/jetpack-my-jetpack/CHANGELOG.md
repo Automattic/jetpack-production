@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- My Jetpack Welcome Flow: Display default recommendations upfront first, then offer optional survey for customized recommendations.
+
 ### Fixed
 - Fixed a bug where the purchases and highlights APIs were being called without a valid Jetpack connection
 - My Jetpack: visual update to make the GlobalNotice component look better on mobile.

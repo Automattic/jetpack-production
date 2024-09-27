@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.1.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- My Jetpack Welcome Flow: Display default recommendations upfront first, then offer optional survey for customized recommendations.
+
 ## [5.1.0] - 2024-09-25
 ### Changed
 - Jetpack Connection - REST API: Allow site-level authentication on POST requests to 'jetpack/v4/connection' [#39503]
@@ -1211,6 +1218,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[5.1.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v5.1.0...v5.1.1-alpha
 [5.1.0]: https://github.com/Automattic/jetpack-connection/compare/v5.0.0...v5.1.0
 [5.0.0]: https://github.com/Automattic/jetpack-connection/compare/v4.0.4...v5.0.0
 [4.0.4]: https://github.com/Automattic/jetpack-connection/compare/v4.0.3...v4.0.4
