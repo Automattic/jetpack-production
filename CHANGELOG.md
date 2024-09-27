@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Clean and deprecate unused functionality on Jetpack admin pages.
 - Jetpack AI: add beta flag to support styles dropdown on logo generator
 - Jetpack AI: pass prop/flag to showStyleSelector on logo generator modal
+- Jetpack AI: show button label on logo block toolbar if site's logo is empty
 - Removed deprecation notice as the firewall feature will not be removed in the next release.
 - Remove deprecated IDC flag from admin pages.
 - Remove excessive hook from social logos and genericons.
