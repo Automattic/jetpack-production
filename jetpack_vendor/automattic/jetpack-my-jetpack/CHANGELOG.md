@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fixed a bug where the purchases and highlights APIs were being called without a valid Jetpack connection
+- My Jetpack: visual update to make the GlobalNotice component look better on mobile.
 
 ## [4.35.8] - 2024-09-25
 ### Changed
