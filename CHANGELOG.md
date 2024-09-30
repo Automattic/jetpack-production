@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Shortcode: Fix the YouTube URL for the /embed one
+- Subscriptions: fix added slashes to the Follow Blog widget.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added test instructions for Jetpack 13.9.
