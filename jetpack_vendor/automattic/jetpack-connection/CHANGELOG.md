@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- In 'connect_url_redirect' hook, redirect to 'redirect_after_auth` url if already connected (for connect_after_checkout flow).
 - My Jetpack Welcome Flow: Display default recommendations upfront first, then offer optional survey for customized recommendations.
 
 ## [5.1.0] - 2024-09-25
