@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Remove user connection nudges where they aren't needed. Add user connection nudges where needed
 
+### Removed
+- Masterbar: Remove User Info side-panel
+
 ### Fixed
 - Admin bar: don't enqueue obsolete Core CSS overrides for Default scheme
 
