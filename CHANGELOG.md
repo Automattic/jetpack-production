@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: transition from an option to a module to improve caching
 - My Jetpack: visual update to the GlobalNotice component look better on mobile.
 - Performance: set the concatenated CSS to false by default. The era where this was helpful is passing.
+- Social: Added support for Bluesky 🎉
 
 ### Improved compatibility
 - Admin dashboard: Disable portfolio toggle if theme supports portfolio and site is WoA
