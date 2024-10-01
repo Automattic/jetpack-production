@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Social: Added support for Bluesky 🎉
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Email preview modal: visually improved error state
+
 ## 13.9-beta - 2024-09-30
 ### Major Enhancements
 - Jetpack plugin: Remove the 'WordPress.com Toolbar' module. [#39406]
