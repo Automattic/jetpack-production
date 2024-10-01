@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.4.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.4.12] - 2024-09-30
 ### Changed
-- Update dependencies.
+- Update dependencies. [#39528]
 
 ## [3.4.11] - 2024-09-23
 ### Changed
@@ -712,7 +709,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[3.4.12-alpha]: https://github.com/Automattic/jetpack-backup/compare/v3.4.11...v3.4.12-alpha
+[3.4.12]: https://github.com/Automattic/jetpack-backup/compare/v3.4.11...v3.4.12
 [3.4.11]: https://github.com/Automattic/jetpack-backup/compare/v3.4.10...v3.4.11
 [3.4.10]: https://github.com/Automattic/jetpack-backup/compare/v3.4.9...v3.4.10
 [3.4.9]: https://github.com/Automattic/jetpack-backup/compare/v3.4.8...v3.4.9

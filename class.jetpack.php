@@ -3569,7 +3569,7 @@ p {
 	/**
 	 * Doesn't do anything anymore.
 	 *
-	 * @deprecated 13.9-a.8 We no longer show the "Help" button.
+	 * @deprecated 13.9 We no longer show the "Help" button.
 	 *
 	 * @since Jetpack (1.2.3)
 	 * @return void
@@ -5657,7 +5657,7 @@ endif;
 	 * @param bool $travis_test Is this a test run.
 	 *
 	 * @since 3.2
-	 * @since 13.9-a.8 Default to not imploding. Requires a filter to enable. This may be temporary before dropping completely.
+	 * @since 13.9 Default to not imploding. Requires a filter to enable. This may be temporary before dropping completely.
 	 */
 	public function implode_frontend_css( $travis_test = false ) {
 		$do_implode = false;

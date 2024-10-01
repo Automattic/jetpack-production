@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.20.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.20.0] - 2024-09-30
 ### Added
-- Added Waf_Blocklog_Manager class
+- Added Waf_Blocklog_Manager class [#35739]
 
 ## [0.19.0] - 2024-09-23
 ### Added
@@ -377,7 +374,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.20.0-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.19.0...v0.20.0-alpha
+[0.20.0]: https://github.com/Automattic/jetpack-waf/compare/v0.19.0...v0.20.0
 [0.19.0]: https://github.com/Automattic/jetpack-waf/compare/v0.18.5...v0.19.0
 [0.18.5]: https://github.com/Automattic/jetpack-waf/compare/v0.18.4...v0.18.5
 [0.18.4]: https://github.com/Automattic/jetpack-waf/compare/v0.18.3...v0.18.4

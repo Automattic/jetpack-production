@@ -2,42 +2,45 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 13.9-a.8 - unreleased
+## 14.0-a.0 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Major Enhancements
-- Jetpack plugin: Remove 'WordPress.com Toolbar' module
-
 ### Enhancements
-- Blocks: transition from an option to a module to improve caching
-- My Jetpack: visual update to the GlobalNotice component look better on mobile.
-- Performance: set the concatenated CSS to false by default. The era where this was helpful is passing.
 - Social: Added support for Bluesky 🎉
 
+## 13.9-beta - 2024-09-30
+### Major Enhancements
+- Jetpack plugin: Remove the 'WordPress.com Toolbar' module. [#39406]
+
+### Enhancements
+- Blocks: Transition from an option to a module to improve caching. [#39449]
+- My Jetpack: Visual update to the GlobalNotice component for better mobile presentation. [#39537]
+- Performance: Set the concatenated CSS to off by default. The era where this was helpful is passing. [#39486]
+
 ### Improved compatibility
-- Admin dashboard: Disable portfolio toggle if theme supports portfolio and site is WoA
+- Dashboard: Disable portfolio toggle if theme supports portfolio for specific environments. [#39508]
 
 ### Bug fixes
-- Shortcode: Fix the YouTube URL for the /embed one
-- Subscriptions: fix added slashes to the Follow Blog widget.
+- Shortcode: Fix the YouTube URL for the `/embed` type. [#39502]
+- Subscriptions: Fix added slashes in the Follow Blog widget. [#39433]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added test instructions for Jetpack 13.9.
-- Add icons for all product cards on dashboard
-- Clean and deprecate unused functionality on Jetpack admin pages.
-- Infinite scroll: remove unused code.
-- Jetpack AI: add beta flag to support styles dropdown on logo generator
-- Jetpack AI: pass prop/flag to showStyleSelector on logo generator modal
-- Jetpack AI: show button label on logo block toolbar if site's logo is empty
-- Jetpack plugin - Story Block: Fix 'Division by zero' Fatal
-- Removed deprecation notice as the firewall feature will not be removed in the next release.
-- Remove deprecated IDC flag from admin pages.
-- Remove excessive hook from social logos and genericons.
-- Remove user connection nudge from Stats module on the dashboard
-- Remove user connection nudges where they aren't needed. Add user connection nudges where needed
-- Title Optimization: improve button behaviors when handling errors.
-- Write Brief: turn spelling mistakes and long sentences on by default when tool is enabled.
+- Blocks: Fix 'Division by zero' fatal error in the Story block. [#39577]
+- Dashboard: Add icons for all product cards. [#39513]
+- Dashboard: Clean and deprecate unused functionality on Jetpack admin pages. [#39547]
+- Dashboard: Remove deprecated IDC flag from admin pages. [#39531]
+- Dashboard: Remove user connection nudges where they aren't needed. Add user connection nudges where needed. [#39533]
+- General: Added test instructions for Jetpack 13.9. [#39481]
+- Infinite scroll: Remove unused code. [#39570]
+- Jetpack AI: Add the beta flag to support styles dropdown on the logo generator. [#39510]
+- Jetpack AI: Pass prop/flag to `showStyleSelector` on the logo generator modal. [#39530]
+- Jetpack AI: Show button label on logo block toolbar if site's logo is empty. [#39550]
+- Jetpack WAF: Removed deprecation notice as the firewall feature will not be removed in the next release. [#39568]
+- Social: Remove excessive hook from social logos and genericons. [#39564]
+- Stats: Remove user connection nudge from Stats module on the dashboard. [#39496]
+- Title Optimization: improve button behaviors when handling errors. [#39554]
+- Write Brief: Turn spelling mistakes and long sentences on by default when the tool is enabled. [#39495]
 
 ## 13.9-a.7 - 2024-09-23
 ### Enhancements
