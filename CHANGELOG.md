@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Social: Added support for Bluesky 🎉
+- Update Jetpack Scan link
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin menu: Adding tests to check for 'current' class when menu item selected.
