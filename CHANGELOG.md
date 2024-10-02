@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Email preview modal: visually improved error state
 - Unify connection nudge design on Jetpack Settings
 - Unify connection related CTAs on At A Glance
+- Updated package dependencies.
 
 ## 13.9 - 2024-10-01
 ### Major Enhancements

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Changes the error Blaze shows during sync to be a warning
+- Updated package dependencies.
 
 ## [0.22.12] - 2024-09-30
 ### Changed

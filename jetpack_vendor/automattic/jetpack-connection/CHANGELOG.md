@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Initialize assets in wp-admin only.
+- Updated package dependencies.
 
 ## [5.1.1] - 2024-09-30
 ### Changed
