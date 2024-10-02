@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.1.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Initialize assets in wp-admin only.
+
 ## [5.1.1] - 2024-09-30
 ### Changed
 - In 'connect_url_redirect' hook, redirect to 'redirect_after_auth` url if already connected (for connect_after_checkout flow). [#39573]
@@ -1216,6 +1223,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[5.1.2-alpha]: https://github.com/Automattic/jetpack-connection/compare/v5.1.1...v5.1.2-alpha
 [5.1.1]: https://github.com/Automattic/jetpack-connection/compare/v5.1.0...v5.1.1
 [5.1.0]: https://github.com/Automattic/jetpack-connection/compare/v5.0.0...v5.1.0
 [5.0.0]: https://github.com/Automattic/jetpack-connection/compare/v4.0.4...v5.0.0
