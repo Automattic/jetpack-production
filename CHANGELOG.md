@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Removed the option to use a combined CSS file for Jetpack features. Previous to Jetpack 13.9, this was the default behavior. In Jetpack 13.9, it was made optional to rely on individual CSS files for the features used on each page to improve page loading.
 - Social: Added support for Bluesky 🎉
 - Update Jetpack Scan link
 
