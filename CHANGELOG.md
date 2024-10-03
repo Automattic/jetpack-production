@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin menu: Adding tests to check for 'current' class when menu item selected.
+- Change done to avoid fatal in wpcom when using v1 endpoint with force wpcom param
 - Email preview modal: visually improved error state
 - Unify connection nudge design on Jetpack Settings
 - Unify connection related CTAs on At A Glance
