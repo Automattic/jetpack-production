@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Social: Added support for Bluesky 🎉
 - Update Jetpack Scan link
 
+### Bug fixes
+- Social: Fixed share status tooltip text overflow
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin menu: Adding tests to check for 'current' class when menu item selected.
 - Blogging Prompt: preserve language on answers link
