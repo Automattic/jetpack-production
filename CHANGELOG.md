@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin menu: Adding tests to check for 'current' class when menu item selected.
 - Blogging Prompt: preserve language on answers link
 - Change done to avoid fatal in wpcom when using v1 endpoint with force wpcom param
+- e2e tests: update encryption key.
 - Email preview modal: visually improved error state
 - Unify connection nudge design on Jetpack Settings
 - Unify connection related CTAs on At A Glance
