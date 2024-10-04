@@ -28,7 +28,7 @@
 		"automattic/jetpack-device-detection": "^2.1.5",
 		"automattic/jetpack-error": "^2.0.3",
 		"automattic/jetpack-forms": "^0.33.2-alpha",
-		"automattic/jetpack-image-cdn": "^0.4.9",
+		"automattic/jetpack-image-cdn": "^0.5.0-alpha",
 		"automattic/jetpack-import": "^0.8.9",
 		"automattic/jetpack-ip": "^0.3.0",
 		"automattic/jetpack-jitm": "^3.1.24-alpha",
