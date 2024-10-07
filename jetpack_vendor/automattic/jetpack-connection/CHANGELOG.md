@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Adjust conditions to optimize admin notices callback.
 - Initialize assets in wp-admin only.
 - Updated package dependencies.
 
