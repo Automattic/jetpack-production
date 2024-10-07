@@ -41,7 +41,7 @@ class Waf_Runtime {
 	/**
 	 * The version of this runtime class. Used by rule files to ensure compatibility.
 	 *
-	 * @since 0.21.0-alpha
+	 * @since 0.21.0
 	 *
 	 * @var int
 	 */

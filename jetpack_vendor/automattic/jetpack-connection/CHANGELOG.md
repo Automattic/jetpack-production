@@ -5,14 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.1.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.1.2] - 2024-10-07
 ### Changed
-- Adjust conditions to optimize admin notices callback.
-- Initialize assets in wp-admin only.
-- Updated package dependencies.
+- Adjust conditions to optimize admin notices callback. [#39650]
+- Initialize assets in wp-admin only. [#39604]
+- Updated package dependencies. [#39594]
 
 ## [5.1.1] - 2024-09-30
 ### Changed
@@ -1225,7 +1222,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[5.1.2-alpha]: https://github.com/Automattic/jetpack-connection/compare/v5.1.1...v5.1.2-alpha
+[5.1.2]: https://github.com/Automattic/jetpack-connection/compare/v5.1.1...v5.1.2
 [5.1.1]: https://github.com/Automattic/jetpack-connection/compare/v5.1.0...v5.1.1
 [5.1.0]: https://github.com/Automattic/jetpack-connection/compare/v5.0.0...v5.1.0
 [5.0.0]: https://github.com/Automattic/jetpack-connection/compare/v4.0.4...v5.0.0
