@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Change done to avoid fatal in wpcom when using v1 endpoint with force wpcom param
 - e2e tests: update encryption key.
 - Email preview modal: visually improved error state
+- Janitorial: add siteFragment to JP initial state definition, avoid linter warnings
 - Unify connection nudge design on Jetpack Settings
 - Unify connection related CTAs on At A Glance
 - Updated package dependencies.
