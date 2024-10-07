@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Firewall Runtime: Added support for rule files to specify body parser type.
+- WAF: Add new properties to the WAF feature's REST API endpoint.
 
 ## [0.20.1] - 2024-10-01
 ### Deprecated
