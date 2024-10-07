@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update connection nudge for VideoPress connection banner in blocks
 - Updated package dependencies.
 
+### Fixed
+- VideoPress: fix thumbnail update bug that showed the old thumbnail for a couple seconds on the details page.
+
 ## [0.24.10] - 2024-09-30
 ### Changed
 - Update dependencies. [#39528]
