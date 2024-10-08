@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fix bug where connection banner was showing in P2s and other atomic/simple sites
+
 ## [0.24.11] - 2024-10-07
 ### Changed
 - Update connection nudge for VideoPress connection banner in blocks. [#39628]
