@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fixed My Jetpack recommendations VideoPress product card not showing Purchase and Learn more buttons.
+
 ## [4.35.11] - 2024-10-07
 ### Changed
 - Updated package dependencies. [#39594]
