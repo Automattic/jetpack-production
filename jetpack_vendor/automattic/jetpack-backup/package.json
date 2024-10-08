@@ -28,9 +28,9 @@
 	"dependencies": {
 		"@automattic/format-currency": "1.0.1",
 		"@automattic/jetpack-analytics": "^0.1.31",
-		"@automattic/jetpack-api": "^0.17.14-alpha",
-		"@automattic/jetpack-components": "^0.56.2-alpha",
-		"@automattic/jetpack-connection": "^0.35.11-alpha",
+		"@automattic/jetpack-api": "^0.17.14",
+		"@automattic/jetpack-components": "^0.56.3-alpha",
+		"@automattic/jetpack-connection": "^0.35.12-alpha",
 		"@wordpress/api-fetch": "7.8.2",
 		"@wordpress/components": "28.8.4",
 		"@wordpress/data": "10.8.3",
@@ -42,7 +42,7 @@
 		"react-dom": "18.3.1"
 	},
 	"devDependencies": {
-		"@automattic/jetpack-base-styles": "^0.6.33-alpha",
+		"@automattic/jetpack-base-styles": "^0.6.33",
 		"@automattic/jetpack-webpack-config": "workspace:*",
 		"@babel/core": "7.24.7",
 		"@babel/preset-env": "7.24.7",

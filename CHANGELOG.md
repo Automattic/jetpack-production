@@ -2,33 +2,37 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.0-a.0 - unreleased
+## 14.0-a.2 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Make sitemap storing more efficient but not querying the full post content when storing the updated sitemap
 - Newsletter: change default reply-to option from "no reply" to "comments"
-- Removed the option to use a combined CSS file for Jetpack features. Previous to Jetpack 13.9, this was the default behavior. In Jetpack 13.9, it was made optional to rely on individual CSS files for the features used on each page to improve page loading.
-- Social: Added support for Bluesky 🎉
-- Update Jetpack Scan link
 
 ### Improved compatibility
 - Image CDN: URL encode image path parts for RSS feed compatibility
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Janitorial: add siteFragment to JP initial state definition, avoid linter warnings
+- Updated package dependencies.
+
+## 14.0-a.1 - 2024-10-07
+### Enhancements
+- Sitemap: Improve sitemap write efficienty. [#39572]
+- CSS: Rely esclusively on individual CSS files instead of a combined one for the features used on each page to improve page loading. [#39518]
+- Social: Add support for Bluesky 🎉. [#39561]
+- Scan: Update Jetpack Scan link in the WP Admin menu. [#39619]
+
 ### Bug fixes
-- Social: Fixed share status tooltip text overflow
+- Social: Prevent text overflow in the share status tooltip. [#39599]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Admin menu: Adding tests to check for 'current' class when menu item selected.
-- Blogging Prompt: preserve language on answers link
-- Change done to avoid fatal in wpcom when using v1 endpoint with force wpcom param
-- e2e tests: update encryption key.
-- Email preview modal: visually improved error state
-- Janitorial: add siteFragment to JP initial state definition, avoid linter warnings
-- Unify connection nudge design on Jetpack Settings
-- Unify connection related CTAs on At A Glance
-- Updated package dependencies.
+- Admin menu: Adding tests to check for 'current' class when menu item selected. [#39374]
+- Blogging Prompt: Preserve language on answers link. [#36730]
+- Email preview modal: Improve error state visuals. [#39476]
+- Unify connection nudge design on Jetpack Settings. [#39591]
+- Unify connection related CTAs on At A Glance. [#39585]
+- Updated package dependencies. [#39594] [#39639]
 
 ## 13.9 - 2024-10-01
 ### Major Enhancements

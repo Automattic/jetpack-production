@@ -5,16 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.24.11-alpha] - unreleased
+## [0.24.12-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Update connection nudge for VideoPress connection banner in blocks
 - Updated package dependencies.
 
+## [0.24.11] - 2024-10-07
+### Changed
+- Update connection nudge for VideoPress connection banner in blocks. [#39628]
+- Updated package dependencies. [#39594]
+
 ### Fixed
-- VideoPress: fix thumbnail update bug that showed the old thumbnail for a couple seconds on the details page.
+- VideoPress: fix thumbnail update bug that showed the old thumbnail for a couple seconds on the details page. [#39631]
 
 ## [0.24.10] - 2024-09-30
 ### Changed
@@ -1459,7 +1463,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.24.11-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.10...v0.24.11-alpha
+[0.24.12-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.11...v0.24.12-alpha
+[0.24.11]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.10...v0.24.11
 [0.24.10]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.9...v0.24.10
 [0.24.9]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.8...v0.24.9
 [0.24.8]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.7...v0.24.8
