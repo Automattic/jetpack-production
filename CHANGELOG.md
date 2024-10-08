@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Make sitemap storing more efficient but not querying the full post content when storing the updated sitemap
+- Newsletter: change default reply-to option from "no reply" to "comments"
 - Removed the option to use a combined CSS file for Jetpack features. Previous to Jetpack 13.9, this was the default behavior. In Jetpack 13.9, it was made optional to rely on individual CSS files for the features used on each page to improve page loading.
 - Social: Added support for Bluesky 🎉
 - Update Jetpack Scan link
