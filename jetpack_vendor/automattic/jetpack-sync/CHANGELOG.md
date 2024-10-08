@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Jetpack Sync: Add 'woocommerce_analytics_first_activation' in options' whitelist
 
+### Changed
+- Sync: Ensure we don't sync set_object_terms action for terms with blacklisted taxonomies
+
 ## [3.13.2] - 2024-09-30
 ### Fixed
 - Jetpack Sync: Fix a bug in syncing HPOS 'woocommerce_delete_order' actions [#39562]
