@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Image CDN: URL encode image path parts for RSS feed compatibility
 
+### Bug fixes
+- Sharing: ensure the sharing settings can be accessed even when a user is not connected to WordPress.com.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Janitorial: add siteFragment to JP initial state definition, avoid linter warnings
 - Updated package dependencies.
