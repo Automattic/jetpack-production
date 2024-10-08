@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Social: Added support for Bluesky 🎉
 - Update Jetpack Scan link
 
+### Improved compatibility
+- Image CDN: URL encode image path parts for RSS feed compatibility
+
 ### Bug fixes
 - Social: Fixed share status tooltip text overflow
 

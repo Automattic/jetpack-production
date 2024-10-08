@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added a public method to check if a URL is CDN url
 
+### Fixed
+- URL encode path parts of an image
+
 ## [0.4.9] - 2024-09-09
 ### Changed
 - Update dependencies. [#39260]
