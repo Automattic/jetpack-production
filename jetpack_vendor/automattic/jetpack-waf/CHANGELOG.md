@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - WAF: Add new properties to the WAF feature's REST API endpoint.
 
+### Fixed
+- WAF: reduce amount of classes autoloaded during standalone mode execution
+
 ## [0.21.0] - 2024-10-07
 ### Added
 - Firewall Runtime: Added support for rule files to specify body parser type. [#39516]
