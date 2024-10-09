@@ -18,11 +18,13 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add connection nudge for blocks that are missing it
+- Add missing deps in calls to the `useSelect` React hook.
 - Fix issue where connection banner was showing for simple sites
 - Janitorial: add siteFragment to JP initial state definition, avoid linter warnings
 - JSON Endpoints: Handle null input for update post endpoint
 - Show connection nudge instead of error if user is not connected on blogroll block
 - Updated package dependencies.
+- Use React `setState` instead of directly modifying `state`.
 
 ## 14.0-a.1 - 2024-10-07
 ### Enhancements
