@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Add connection nudge for blocks that are missing it
 - Add missing deps in calls to the `useSelect` React hook.
 - Fix issue where connection banner was showing for simple sites
+- Infinite-scroll: Added isset checks to validate input data
 - Janitorial: add siteFragment to JP initial state definition, avoid linter warnings
 - JSON Endpoints: Handle null input for update post endpoint
 - Show connection nudge instead of error if user is not connected on blogroll block
