@@ -404,10 +404,10 @@ abstract class WPCOM_JSON_API_Endpoint {
 						}
 					}
 					if ( $files ) {
-						$return[ $key ] = $files;
+						$return[$key] = $files;
 					}
 				} elseif ( isset( $value['tmp_name'] ) && is_string( $value['tmp_name'] ) && is_uploaded_file( $value['tmp_name'] ) ) {
-						$return[ $key ] = $value;
+					$return[ $key ] = $value;
 				}
 			}
 			break;
