@@ -18,6 +18,9 @@ if ( class_exists( 'WP_REST_Posts_Controller' ) ) {
 		 * @return WP_Error|boolean
 		 */
 		public function get_items_permissions_check( $request ) {
+			if ( ! current_user_can( 'edit_pages' ) ) {
+				return false;
+			}
 			if ( ! is_user_member_of_blog( get_current_user_id(), get_current_blog_id() ) ) {
 				return new WP_Error(
 					'rest_cannot_view',
@@ -36,6 +39,9 @@ if ( class_exists( 'WP_REST_Posts_Controller' ) ) {
 		 * @return WP_Error|boolean
 		 */
 		public function get_item_permissions_check( $request ) {
+			if ( ! current_user_can( 'edit_pages' ) ) {
+				return false;
+			}
 			if ( ! is_user_member_of_blog( get_current_user_id(), get_current_blog_id() ) ) {
 				return new WP_Error(
 					'rest_cannot_view',
