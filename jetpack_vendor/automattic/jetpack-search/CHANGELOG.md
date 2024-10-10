@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Add `key` to tag and cat lists in `SearchResultMinimal` to improve behavior if lists change at runtime.
+
 ## [0.45.7] - 2024-10-07
 ### Changed
 - Updated package dependencies. [#39592]
