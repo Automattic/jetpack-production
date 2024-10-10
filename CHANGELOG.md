@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Infinite-scroll: Added isset checks to validate input data
 - Janitorial: add siteFragment to JP initial state definition, avoid linter warnings
 - JSON Endpoints: Handle null input for update post endpoint
+- SAL_Site class: Added null check to posts_status_obj to avoid Warnings
 - Show connection nudge instead of error if user is not connected on blogroll block
 - Updated package dependencies.
 - Use React `setState` instead of directly modifying `state`.
