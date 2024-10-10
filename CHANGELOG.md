@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Image CDN: URL encode image path parts for RSS feed compatibility
 
 ### Bug fixes
+- Fixed rendering of goodreads block when there is not id attribute so to not result in a PHP warning
 - Sharing: ensure the sharing settings can be accessed even when a user is not connected to WordPress.com.
 - Slideshow block: Render correctly in iframed editor.
 - Stats: Fix top post card on the Insight page
