@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Avoid deprecation notice when an image URL does not have an expected format.
 - URL encode path parts of an image
 
 ## [0.5.0] - 2024-10-07
