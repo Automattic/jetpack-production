@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Only include `wp-polyfill` as a script dependency when needed.
+
 ## [4.35.12] - 2024-10-10
 ### Changed
 - Update Boost's pricing table to include latest feature list. [#39130]
