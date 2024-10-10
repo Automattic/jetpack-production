@@ -239,7 +239,7 @@ Our Cookie and Consent Banner can help you comply with GDPR. The European Unionâ
 
 == Changelog ==
 ### 9.6.3 - 2023-05-30
-#### Security:
+#### Security
 - WordPress.com REST API: Ensure that files uploaded via the API are properly validated.
 
 ### 9.6.2 - 2021-06-02
