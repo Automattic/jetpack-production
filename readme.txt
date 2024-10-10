@@ -100,13 +100,6 @@ There are opportunities for developers at all levels to contribute. [Learn more 
 
 == Changelog ==
 
-= 6.8.4 =
-Release date: May 30, 2023
-
-Security:
-
-* WordPress.com REST API: Ensure that files uploaded via the API are properly validated.
-
 = 6.8.3 =
 Release date: June 2, 2021
 
