@@ -633,6 +633,7 @@ abstract class WPCOM_JSON_API_Endpoint {
 								$files[ $k ][ $file_key ] = $value[ $file_key ][ $k ];
 							}
 						}
+
 						foreach ( $files as $k => $file ) {
 							if ( ! isset( $file['tmp_name'] ) || ! is_string( $file['tmp_name'] ) || ! is_uploaded_file( $file['tmp_name'] ) ) {
 								unset( $files[ $k ] );
@@ -642,7 +643,7 @@ abstract class WPCOM_JSON_API_Endpoint {
 							$return[ $key ] = $files;
 						}
 					} elseif ( isset( $value['tmp_name'] ) && is_string( $value['tmp_name'] ) && is_uploaded_file( $value['tmp_name'] ) ) {
-							$return[ $key ] = $value;
+						$return[ $key ] = $value;
 					}
 				}
 				break;
