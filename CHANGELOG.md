@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Newsletter: change default reply-to option from "no reply" to "comments"
+- Social: Added Bluesky to social previews
 
 ### Improved compatibility
 - Image CDN: URL encode image path parts for RSS feed compatibility

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Admin bar: clean up WPCOM_ADMIN_BAR_UNIFICATION feature flag
+
 ## [0.9.5] - 2024-10-07
 ### Changed
 - Updated package dependencies. [#39594]
