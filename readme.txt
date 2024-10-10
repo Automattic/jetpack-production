@@ -239,13 +239,6 @@ Our Cookie and Consent Banner can help you comply with GDPR. The European Unionâ
 
 == Changelog ==
 
-= 9.5.4 =
-Release date: May 30, 2023
-
-Security:
-
-* WordPress.com REST API: Ensure that files uploaded via the API are properly validated.
-
 = 9.5.3 =
 Release date: June 2, 2021
 
