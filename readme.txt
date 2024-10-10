@@ -243,7 +243,7 @@ Jetpack Backup can do a full website migration to a new host, migrate theme file
 
 == Changelog ==
 ### 11.3.3 - 2023-05-30
-#### Security:
+#### Security
 - WordPress.com REST API: Ensure that files uploaded via the API are properly validated.
 
 ### 11.3.2 - 2022-09-22
