@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix issue where connection banner was showing for simple sites
 - Infinite-scroll: Added isset checks to validate input data
 - Janitorial: add siteFragment to JP initial state definition, avoid linter warnings
+- Jetpack AI: change constant value for fair usage, accept both values on type definitions
 - JSON Endpoints: Handle null input for update post endpoint
 - SAL_Site class: Added null check to posts_status_obj to avoid Warnings
 - Show connection nudge instead of error if user is not connected on blogroll block
