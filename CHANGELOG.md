@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add connection nudge for blocks that are missing it
 - Add missing deps in calls to the `useSelect` React hook.
+- AI Assistant: Make Breve no longer flag single quotes as spelling errors
 - Fix issue where connection banner was showing for simple sites
 - Infinite-scroll: Added isset checks to validate input data
 - Janitorial: add siteFragment to JP initial state definition, avoid linter warnings
