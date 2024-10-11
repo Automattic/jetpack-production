@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Janitorial: add siteFragment to JP initial state definition, avoid linter warnings
 - Jetpack AI: change constant value for fair usage, accept both values on type definitions
 - JSON Endpoints: Handle null input for update post endpoint
+- Optimize the 'admin_init' hook callback for Sharing module.
 - SAL_Site class: Added null check to posts_status_obj to avoid Warnings
 - Show connection nudge instead of error if user is not connected on blogroll block
 - Updated package dependencies.
