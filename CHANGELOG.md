@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Show connection nudge instead of error if user is not connected on blogroll block
 - Updated package dependencies.
 - Use React `setState` instead of directly modifying `state`.
+- Widget Visibility. Added check to ensure post exists before accesing post_author
 
 ## 14.0-a.1 - 2024-10-07
 ### Enhancements
