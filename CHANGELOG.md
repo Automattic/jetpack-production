@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Image CDN: URL encode image path parts for RSS feed compatibility
+- Related Posts: allow Related Posts on non-post CPTs where the block is already able to be used.
 
 ### Bug fixes
 - Fixed rendering of goodreads block when there is not id attribute so to not result in a PHP warning
