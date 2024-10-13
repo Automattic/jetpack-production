@@ -29,7 +29,7 @@
 		"@automattic/format-currency": "1.0.1",
 		"@automattic/jetpack-analytics": "^0.1.31",
 		"@automattic/jetpack-api": "^0.17.15",
-		"@automattic/jetpack-components": "^0.56.4-alpha",
+		"@automattic/jetpack-components": "^0.57.0-alpha",
 		"@automattic/jetpack-connection": "^0.35.13-alpha",
 		"@wordpress/api-fetch": "7.9.0",
 		"@wordpress/components": "28.9.0",
