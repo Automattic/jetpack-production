@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Jetpack Sync: Ensure Full Sync is only triggered on backend admin POST requests
+
 ## [3.14.0] - 2024-10-10
 ### Added
 - Jetpack Sync: Add 'woocommerce_analytics_first_activation' in options' whitelist
