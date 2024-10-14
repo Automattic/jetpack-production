@@ -2,43 +2,40 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.0-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 14.0-a.3 - 2024-10-14
 ### Enhancements
-- Newsletter: change default reply-to option from "no reply" to "comments"
-- Social: Added Bluesky to social previews
+- Newsletter: Update the default "reply to" setting value from not allowed to replies being posted as public comments. [#39657]
+- Social: Add Bluesky to social previews. [#39659]
 
 ### Improved compatibility
-- Image CDN: URL encode image path parts for RSS feed compatibility
-- Related Posts: allow Related Posts on non-post CPTs where the block is already able to be used.
+- Image CDN: URL encode image path parts for RSS feed compatibility. [#39560]
+- Related Posts: Allow Related Posts on non-post CPTs where the block is already able to be used. [#39730]
 
 ### Bug fixes
-- Contact Form: ensure that submitted forms can only be accessed by logged in users allowed to view form submissions.
-- Fixed rendering of goodreads block when there is not id attribute so to not result in a PHP warning
-- General: Only include `wp-polyfill` as a script dependency when needed.
-- Newsletter: ensure `Enable featured image on your new post emails` setting displays the right value.
-- Sharing: ensure the sharing settings can be accessed even when a user is not connected to WordPress.com.
-- Slideshow block: Render correctly in iframed editor.
-- Stats: Fix top post card on the Insight page
+- Blocks: Fix rendering of the goodreads block to avoid PHP warnings caused by missing attributes. [#39713]
+- Blocks: Render the slideshow block correctly inside an iframe editor. [#39551]
+- Contact Form: Ensure that submitted forms can only be accessed by logged in users allowed to view form submissions. [#39759]
+- General: Only include `wp-polyfill` as a script dependency when needed. [#39629]
+- Newsletter: Ensure `Enable featured image on your new post emails` setting displays the right value. [#39700]
+- Sharing: Ensure the sharing settings can be accessed even when a user is not connected to WordPress.com. [#39677]
+- Stats: Fix top post card on the Insight page. [#39691]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add connection nudge for blocks that are missing it
-- Add missing deps in calls to the `useSelect` React hook.
-- Add tracks to connection banner
-- AI Assistant: Make Breve no longer flag single quotes as spelling errors
-- Fix issue where connection banner was showing for simple sites
-- Infinite-scroll: Added isset checks to validate input data
-- Janitorial: add siteFragment to JP initial state definition, avoid linter warnings
-- Jetpack AI: change constant value for fair usage, accept both values on type definitions
-- JSON Endpoints: Handle null input for update post endpoint
-- Optimize the 'admin_init' hook callback for Sharing module.
-- SAL_Site class: Added null check to posts_status_obj to avoid Warnings
-- Show connection nudge instead of error if user is not connected on blogroll block
-- Updated package dependencies.
-- Use React `setState` instead of directly modifying `state`.
-- Widget Visibility. Added check to ensure post exists before accesing post_author
+- Add connection nudge for blocks that are missing it. [#39647]
+- Add missing deps in calls to the `useSelect` React hook. [#39421]
+- Add tracks to connection banner. [#39732]
+- AI Assistant: Make Breve no longer flag single quotes as spelling errors. [#39735]
+- Fix issue where connection banner was showing for simple sites. [#39687]
+- Infinite-scroll: Add isset checks to validate input data. [#39618]
+- Janitorial: Add siteFragment to JP initial state definition, avoid linter warnings. [#39589]
+- Jetpack AI: Change constant value for fair usage, accept both values on type definitions. [#39705]
+- JSON Endpoints: Handle null input for update post endpoint. [#39676]
+- Optimize the 'admin_init' hook callback for Sharing module. [#39737]
+- SAL_Site class: Add null check to posts_status_obj to avoid warnings. [#39727]
+- Show connection nudge instead of error if user is not connected on blogroll block. [#39638]
+- Update package dependencies. [#39649] [#39653] [#39707]
+- Use React setState instead of directly modifying state. [#39421]
+- Widget Visibility: Add check to ensure post exists before accesing post_author. [#39746]
 
 ## 14.0-a.1 - 2024-10-07
 ### Enhancements
@@ -57,6 +54,10 @@ This is an alpha version! The changes listed here are not final.
 - Unify connection nudge design on Jetpack Settings. [#39591]
 - Unify connection related CTAs on At A Glance. [#39585]
 - Updated package dependencies. [#39594] [#39639]
+
+## 13.9.1 - 2024-10-14
+### Bug fixes
+- Contact Form: Ensure that submitted forms can only be accessed by logged in users allowed to view form submissions. [#39759]
 
 ## 13.9 - 2024-10-01
 ### Major Enhancements

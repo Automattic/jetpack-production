@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.24.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.24.12] - 2024-10-14
 ### Added
-- Add tracks to connection banner
+- Add tracks to connection banner. [#39732]
 
 ### Changed
-- Only include `wp-polyfill` as a script dependency when needed.
-- Updated package dependencies.
+- Only include `wp-polyfill` as a script dependency when needed. [#39629]
+- Updated package dependencies. [#39669] [#39707]
 
 ### Fixed
-- Fix bug where connection banner was showing in P2s and other atomic/simple sites
+- Fix bug where connection banner was showing in P2s and other atomic/simple sites [#39667]
 
 ## [0.24.11] - 2024-10-07
 ### Changed
@@ -1470,7 +1467,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.24.12-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.11...v0.24.12-alpha
+[0.24.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.11...v0.24.12
 [0.24.11]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.10...v0.24.11
 [0.24.10]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.9...v0.24.10
 [0.24.9]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.8...v0.24.9

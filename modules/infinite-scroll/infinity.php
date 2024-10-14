@@ -772,7 +772,7 @@ class The_Neverending_Home_Page {
 			 * will always return results prior to (descending sort)
 			 * or before (ascending sort) the last post date.
 			 *
-			 * @deprecated 14.0-a.2
+			 * @deprecated 14.0
 			 *
 			 * @module infinite-scroll
 			 *
@@ -783,7 +783,7 @@ class The_Neverending_Home_Page {
 			 */
 			$operator       = '<';
 			$last_post_date = isset( $_REQUEST['last_post_date'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['last_post_date'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- no changes to the site
-			$where         .= apply_filters_deprecated( 'infinite_scroll_posts_where', array( $clause, $query, $operator, $last_post_date ), '14.0-a.2', '' );
+			$where         .= apply_filters_deprecated( 'infinite_scroll_posts_where', array( $clause, $query, $operator, $last_post_date ), '14.0', '' );
 		}
 
 		return $where;

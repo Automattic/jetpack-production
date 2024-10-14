@@ -1883,7 +1883,7 @@ EOT;
 	/**
 	 * Determines if the current post is able to use related posts.
 	 *
-	 * @since 14.0-a.2 Checks for singular instead of single to allow usage on non-posts CPTs.
+	 * @since 14.0 Checks for singular instead of single to allow usage on non-posts CPTs.
 	 * @uses self::get_options, is_admin, is_singular, apply_filters
 	 * @return bool
 	 */

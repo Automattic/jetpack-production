@@ -46,7 +46,7 @@ class Waf_Rules_Manager {
 	/**
 	 * Rules Entrypoint File
 	 *
-	 * @deprecated 0.22.0-alpha Use JETPACK_WAF_ENTRYPOINT instead.
+	 * @deprecated 0.22.0 Use JETPACK_WAF_ENTRYPOINT instead.
 	 */
 	const RULES_ENTRYPOINT_FILE = '/rules/rules.php';
 
