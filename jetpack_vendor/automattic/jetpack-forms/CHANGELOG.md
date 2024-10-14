@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Only include `wp-polyfill` as a script dependency when needed.
 - Updated package dependencies.
 
+### Fixed
+- Improve security of the form endpoint
+
 ## [0.33.2] - 2024-10-07
 ### Changed
 - Updated package dependencies. [#39594]

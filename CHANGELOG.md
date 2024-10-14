@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts: allow Related Posts on non-post CPTs where the block is already able to be used.
 
 ### Bug fixes
+- Contact Form: ensure that submitted forms can only be accessed by logged in users allowed to view form submissions.
 - Fixed rendering of goodreads block when there is not id attribute so to not result in a PHP warning
 - General: Only include `wp-polyfill` as a script dependency when needed.
 - Newsletter: ensure `Enable featured image on your new post emails` setting displays the right value.
