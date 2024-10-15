@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Jetpack Sync: Ensure Full Sync is only triggered on backend admin POST requests
+- Update plugin action links filter parameter to avoid conflicts with other plugins.
 
 ## [3.14.1] - 2024-10-14
 ### Changed

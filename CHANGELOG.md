@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Plugin action links filters: update parameter to avoid any conflicts with other plugins.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix Fatal Error: Class 'Jetpack_Subscriptions_Widget' not found during REST API
 - Update VideoPress notice URL on Media Library
