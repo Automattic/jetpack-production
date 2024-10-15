@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Newsletters: allow skipping modals with URL query param
+
 ### Improved compatibility
 - Plugin action links filters: update parameter to avoid any conflicts with other plugins.
 
