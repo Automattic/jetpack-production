@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Fatal Error: Class 'Jetpack_Subscriptions_Widget' not found during REST API
 - Map: remove preview attribute. The mechanism to determine if the block is in preview mode changed internally.
 - Map block: Display a static map image when the block is rendered in a pattern preview
+- Related Posts: refine how related posts are made available on singular views in block themes.
 - Update VideoPress notice URL on Media Library
 
 ## 14.0-a.3 - 2024-10-14
