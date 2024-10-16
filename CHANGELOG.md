@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Newsletter: Add Preview Email to the Preview Menu
 - Newsletters: allow skipping modals with URL query param
 
 ### Improved compatibility
