@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.14.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.14.2] - 2024-10-15
 ### Changed
-- Jetpack Sync: Update default Post Type Blacklist
+- Jetpack Sync: Update default Post Type Blacklist [#39770]
 
 ### Fixed
-- Jetpack Sync: Ensure Full Sync is only triggered on backend admin POST requests
-- Update plugin action links filter parameter to avoid conflicts with other plugins.
+- Jetpack Sync: Ensure Full Sync is only triggered on backend admin POST requests [#39747]
+- Update plugin action links filter parameter to avoid conflicts with other plugins. [#39681]
 
 ## [3.14.1] - 2024-10-14
 ### Changed
@@ -1321,7 +1318,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[3.14.2-alpha]: https://github.com/Automattic/jetpack-sync/compare/v3.14.1...v3.14.2-alpha
+[3.14.2]: https://github.com/Automattic/jetpack-sync/compare/v3.14.1...v3.14.2
 [3.14.1]: https://github.com/Automattic/jetpack-sync/compare/v3.14.0...v3.14.1
 [3.14.0]: https://github.com/Automattic/jetpack-sync/compare/v3.13.2...v3.14.0
 [3.13.2]: https://github.com/Automattic/jetpack-sync/compare/v3.13.1...v3.13.2
