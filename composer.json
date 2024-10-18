@@ -38,7 +38,7 @@
 		"automattic/jetpack-my-jetpack": "^4.35.15-alpha",
 		"automattic/jetpack-plugins-installer": "^0.4.3",
 		"automattic/jetpack-post-list": "^0.6.3",
-		"automattic/jetpack-publicize": "^0.54.3",
+		"automattic/jetpack-publicize": "^0.54.4-alpha",
 		"automattic/jetpack-redirect": "^2.0.4",
 		"automattic/jetpack-roles": "^2.0.3",
 		"automattic/jetpack-search": "^0.45.9-alpha",
