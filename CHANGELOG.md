@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Fix use excerpt setting.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fixed unit tests
 - Fix Fatal Error: Class 'Jetpack_Subscriptions_Widget' not found during REST API
 - Map: remove preview attribute. The mechanism to determine if the block is in preview mode changed internally.
 - Map block: Display a static map image when the block is rendered in a pattern preview
