@@ -35,7 +35,7 @@
 		"automattic/jetpack-licensing": "^2.0.10",
 		"automattic/jetpack-logo": "^2.0.4",
 		"automattic/jetpack-masterbar": "^0.9.6",
-		"automattic/jetpack-my-jetpack": "^4.35.15-alpha",
+		"automattic/jetpack-my-jetpack": "^4.35.15",
 		"automattic/jetpack-plugins-installer": "^0.4.3",
 		"automattic/jetpack-post-list": "^0.6.3",
 		"automattic/jetpack-publicize": "^0.54.4-alpha",
@@ -47,7 +47,7 @@
 		"automattic/jetpack-status": "^4.0.2",
 		"automattic/jetpack-sync": "^3.14.2",
 		"automattic/jetpack-videopress": "^0.24.13-alpha",
-		"automattic/jetpack-waf": "^0.22.1-alpha",
+		"automattic/jetpack-waf": "^0.22.1",
 		"automattic/jetpack-wordads": "^0.3.37-alpha",
 		"automattic/woocommerce-analytics": "^0.1.11",
 		"scssphp/scssphp": "1.12.0"
