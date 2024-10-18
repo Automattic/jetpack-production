@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletters: allow skipping modals with URL query param
 
 ### Improved compatibility
+- General: ensure the notice displayed when running an old version of WordPress can always be displayed without errors.
 - Plugin action links filters: update parameter to avoid any conflicts with other plugins.
 
 ### Bug fixes
