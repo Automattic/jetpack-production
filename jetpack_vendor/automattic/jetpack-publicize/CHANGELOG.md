@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Initial State: Migrated URLs to script data
 
+### Fixed
+- Fixed the site features for Simple sites
+
 ## [0.54.3] - 2024-10-14
 ### Changed
 - Updated package dependencies. [#39707]
