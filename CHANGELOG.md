@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Newsletter: Add Preview Email to the Preview Menu
 - Newsletters: allow skipping modals with URL query param
+- Subscriptions: add a floating subscribe button
 
 ### Improved compatibility
 - General: ensure the notice displayed when running an old version of WordPress can always be displayed without errors.
