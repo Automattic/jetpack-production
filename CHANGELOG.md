@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: remove reload handler for logo generator modal call
 - Map: remove preview attribute. The mechanism to determine if the block is in preview mode changed internally.
 - Map block: Display a static map image when the block is rendered in a pattern preview
+- Optimize the Stats Admin Bar hook by narrowing down the callback.
 - Slideshow block: fix console warning related to images with the same key.
 - Story Block: avoid error when previewing block styles in development version of the Gutenberg plugin.
 - Story block: fix console warning related to 'key' not being a prop.
