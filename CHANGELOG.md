@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Story Block: avoid error when previewing block styles in development version of the Gutenberg plugin.
 - Story block: fix console warning related to 'key' not being a prop.
 - Update VideoPress notice URL on Media Library
+- WPCOM_JSON_API_Upload_Media_v1_1_Endpoint: Fix Fatals from uploads with invalid media type
 
 ## 14.0-a.5 - 2024-10-16
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
