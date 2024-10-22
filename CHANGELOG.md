@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed unit tests
 - Fix Fatal Error: Class 'Jetpack_Subscriptions_Widget' not found during REST API
 - Floating subscribe button: add source attribute for stats
+- Jetpack AI: remove reload handler for logo generator modal call
 - Map: remove preview attribute. The mechanism to determine if the block is in preview mode changed internally.
 - Map block: Display a static map image when the block is rendered in a pattern preview
 - Slideshow block: fix console warning related to images with the same key.
