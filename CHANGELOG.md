@@ -2,37 +2,42 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.0-a.6 - unreleased
+## 14.0-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Newsletter: Add Preview Email to the Preview Menu
-- Newsletters: allow skipping modals with URL query param
 - Subscriptions: add a floating subscribe button
 
-### Improved compatibility
-- General: ensure the notice displayed when running an old version of WordPress can always be displayed without errors.
-- Plugin action links filters: update parameter to avoid any conflicts with other plugins.
-
-### Bug fixes
-- Map block: Fix issue where blocks placed underneath would overlap with the map block.
-- Newsletter: Fix use excerpt setting.
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Fixed unit tests
-- Fix Fatal Error: Class 'Jetpack_Subscriptions_Widget' not found during REST API
 - Floating subscribe button: add source attribute for stats
 - Jetpack AI: add instructions on to-test file
 - Jetpack AI: remove reload handler for logo generator modal call
-- Map: remove preview attribute. The mechanism to determine if the block is in preview mode changed internally.
-- Map block: Display a static map image when the block is rendered in a pattern preview
 - Optimize the Stats Admin Bar hook by narrowing down the callback.
-- Slideshow block: fix console warning related to images with the same key.
-- Story Block: avoid error when previewing block styles in development version of the Gutenberg plugin.
-- Story block: fix console warning related to 'key' not being a prop.
-- Update VideoPress notice URL on Media Library
 - WPCOM_JSON_API_Upload_Media_v1_1_Endpoint: Fix Fatals from uploads with invalid media type
+
+## 14.0-a.7 - 2024-10-21
+### Enhancements
+- Newsletters: Add an email preview option to the preview menu. [#39782]
+- Newsletters: Allow skipping newsletter modals with a URL query param. [#39644]
+
+### Improved compatibility
+- General: Ensure notice displays without errors when running an old version of WordPress. [#39745]
+- Plugin action links filters: Update parameter to avoid conflicts with other plugins. [#39681]
+
+### Bug fixes
+- Map Block: Fix issue where blocks placed underneath would overlap with the map block. [#39744]
+- Newsletters: Fix "Use excerpt" setting. [#39815]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Map Block: Display a static map image when the block is rendered in a pattern preview. [#39768]
+- Map: Remove preview attribute. [#39768]
+- Newsletters: Fix 'class Jetpack_Subscriptions_Widget not found' fatal error during REST API. [#39765]
+- Slideshow Block: Fix console warning related to images with the same key. [#39821]
+- Story Block: Avoid error when previewing block styles in development version of the Gutenberg plugin. [#39807]
+- Story Block: Fix console warning related to 'key' not being a prop. [#39822]
+- Tests: Fix unit tests. [#39799]
+- Update VideoPress notice URL on Media Library. [#39731]
 
 ## 14.0-a.5 - 2024-10-16
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

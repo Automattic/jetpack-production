@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.4.12] - 2024-10-21
 ### Fixed
-- Fixed the site features for Simple sites
+- Fixed the site features for Simple sites. [#39817]
 
 ## [0.4.11] - 2024-09-23
 ### Changed
@@ -161,7 +158,7 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Moved the options class into Connection. [#24095]
 
-[0.4.12-alpha]: https://github.com/Automattic/jetpack-plans/compare/v0.4.11...v0.4.12-alpha
+[0.4.12]: https://github.com/Automattic/jetpack-plans/compare/v0.4.11...v0.4.12
 [0.4.11]: https://github.com/Automattic/jetpack-plans/compare/v0.4.10...v0.4.11
 [0.4.10]: https://github.com/Automattic/jetpack-plans/compare/v0.4.9...v0.4.10
 [0.4.9]: https://github.com/Automattic/jetpack-plans/compare/v0.4.8...v0.4.9
