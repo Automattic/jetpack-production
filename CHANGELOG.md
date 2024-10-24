@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: add a floating subscribe button
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Write Brief should not flag words like '2nd' and '100th' as spelling errors.
 - Blocks: initialize connection assets in Story block.
 - Contact Info: Change block registration code - move back to two files.
 - Floating subscribe button: add source attribute for stats
