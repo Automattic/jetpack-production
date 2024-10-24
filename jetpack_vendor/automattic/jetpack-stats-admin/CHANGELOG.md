@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.22.4-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Odyssey Stats cache busting: use optioin instead of transient
+
 ## 0.22.3 - 2024-10-21
 ### Changed
 - JITM: Expose function to render message. [#39714]
