@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: add instructions on to-test file
 - Jetpack AI: remove reload handler for logo generator modal call
 - Optimize the Stats Admin Bar hook by narrowing down the callback.
+- Update Verbum Comments resize logic
 - WPCOM_JSON_API_Upload_Media_v1_1_Endpoint: Fix Fatals from uploads with invalid media type
 
 ## 14.0-a.7 - 2024-10-21
