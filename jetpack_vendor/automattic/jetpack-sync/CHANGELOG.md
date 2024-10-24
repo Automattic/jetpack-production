@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Hooks: Hook init_sync_cron_jobs into init to ensure translation loading within the function is not triggered too early.
+
 ## [3.14.2] - 2024-10-15
 ### Changed
 - Jetpack Sync: Update default Post Type Blacklist [#39770]

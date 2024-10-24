@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Floating subscribe button: add source attribute for stats
+- Hooks: Change several action priorities to ensure translation loading is not triggered too early.
 - Jetpack AI: add instructions on to-test file
 - Jetpack AI: remove reload handler for logo generator modal call
 - Optimize the Stats Admin Bar hook by narrowing down the callback.
