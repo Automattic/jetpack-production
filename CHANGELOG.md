@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: initialize connection assets in Story block.
+- Contact Info: Change block registration code - move back to two files.
 - Floating subscribe button: add source attribute for stats
 - General: indicate compatibility with the upcoming version of WordPress - 6.7.
 - Hooks: Change several action priorities to ensure translation loading is not triggered too early.
