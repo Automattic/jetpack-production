@@ -3,7 +3,7 @@
  * Adds support for Jetpack floating Subscribe button feature
  *
  * @package automattic/jetpack-subscriptions
- * @since 14.0-a.8
+ * @since 14.0
  */
 
 /**

@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.24.14-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.24.14] - 2024-10-28
 ### Changed
-- Admin: Changed initialization load order for menu items to prevent translation error.
-- Updated package dependencies.
+- Admin: Changed initialization load order for menu items to prevent translation error. [#39841]
+- Updated package dependencies. [#39910]
 
 ## [0.24.13] - 2024-10-21
 ### Changed
@@ -1479,7 +1476,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.24.14-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.13...v0.24.14-alpha
+[0.24.14]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.13...v0.24.14
 [0.24.13]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.12...v0.24.13
 [0.24.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.11...v0.24.12
 [0.24.11]: https://github.com/Automattic/jetpack-videopress/compare/v0.24.10...v0.24.11
