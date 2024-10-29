@@ -326,12 +326,12 @@ Jetpack Backup can do a full website migration to a new host, migrate theme file
 
 
 == Changelog ==
-### 14.0-a.9 - 2024-10-28
-#### Enhancements
-- Subscriptions: Add a floating subscribe button.
+### 14.0-a.11 - 2024-10-29
+#### Improved compatibility
+- Post Editor: Prevent deprecation notices with WordPress 6.7.
 
-#### Improved Compatibility
-- General: Indicate compatibility with WordPress 6.7.
+#### Bug fixes
+- Carousel: Further improve accessibility by being more selective over which images to apply attributes to.
 
 --------
 

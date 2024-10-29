@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.33.6] - 2024-10-29
+### Changed
+- Components: Add __nextHasNoMarginBottom to BaseControl-based components, preventing deprecation notices. [#39877]
+
 ## [0.33.5] - 2024-10-28
 ### Changed
 - Updated package dependencies. [#39910]
@@ -697,6 +701,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[0.33.6]: https://github.com/automattic/jetpack-forms/compare/v0.33.5...v0.33.6
 [0.33.5]: https://github.com/automattic/jetpack-forms/compare/v0.33.4...v0.33.5
 [0.33.4]: https://github.com/automattic/jetpack-forms/compare/v0.33.3...v0.33.4
 [0.33.3]: https://github.com/automattic/jetpack-forms/compare/v0.33.2...v0.33.3

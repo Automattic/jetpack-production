@@ -2,6 +2,17 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.0-a.11 - 2024-10-29
+### Improved compatibility
+- Post Editor: Prevent deprecation notices with WordPress 6.7. [#39877]
+
+### Bug fixes
+- Carousel: Further improve accessibility by being more selective over which images to apply attributes to. [#39913]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add site_partner_bundle option to Sites API response. [#39905]
+- Jetpack AI: add styles dropdown on AI image generator modal. [#39917]
+
 ## 14.0-a.9 - 2024-10-28
 ### Enhancements
 - Subscriptions: Add a floating subscribe button. [#37722]
