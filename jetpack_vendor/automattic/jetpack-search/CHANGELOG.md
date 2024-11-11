@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.46.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.46.0] - 2024-11-11
 ### Added
-- Search: Add ability to customize results
+- Search: Add ability to customize results [#36378]
 
 ### Changed
-- Classic Widget: update assets' enqueuing strategy to ensure compatibility with the Elementor plugin.
-- Exclude corejs `exnext.iterator.` polyfills to avoid bloating the bundle.
-- Updated package dependencies.
+- Classic Widget: update asset enqueuing strategy to ensure compatibility with the Elementor plugin. [#39820]
+- Exclude corejs `exnext.iterator.` polyfills to avoid bloating the bundle. [#40060]
+- Updated package dependencies. [#39999] [#40060]
 
 ## [0.45.12] - 2024-11-04
 ### Added
@@ -1095,7 +1092,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.46.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.45.12...v0.46.0-alpha
+[0.46.0]: https://github.com/Automattic/jetpack-search/compare/v0.45.12...v0.46.0
 [0.45.12]: https://github.com/Automattic/jetpack-search/compare/v0.45.11...v0.45.12
 [0.45.11]: https://github.com/Automattic/jetpack-search/compare/v0.45.10...v0.45.11
 [0.45.10]: https://github.com/Automattic/jetpack-search/compare/v0.45.9...v0.45.10

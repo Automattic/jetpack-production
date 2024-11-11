@@ -5,14 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.55.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.55.2] - 2024-11-11
 ### Changed
-- Migrated social plugins settings to new script data
-- Social: Migrated the last bits of social store to new script data
-- Updated package dependencies.
+- Social: Migrated social plugins settings to new script data. [#40032] [#40081]
+- Updated package dependencies. [#39999]
 
 ## [0.55.1] - 2024-11-04
 ### Added
@@ -756,7 +752,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.55.2-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.55.1...v0.55.2-alpha
+[0.55.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.55.1...v0.55.2
 [0.55.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.55.0...v0.55.1
 [0.55.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.54.4...v0.55.0
 [0.54.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.54.3...v0.54.4

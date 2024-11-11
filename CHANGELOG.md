@@ -2,38 +2,35 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.1-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 14.1-a.1 - 2024-11-11
 ### Enhancements
-- My Jetpack: update the recommendations section in My Jetpack to include a slider interaction for the cards.
-- Use preconnect resource hints, instead of dns-prefetch, to improve performance
+- My Jetpack: Update the recommendations section in My Jetpack to include a slider interaction for the cards. [#39850]
+- Image CDN: Use preconnect resource hints instead of dns-prefetch to improve performance. [#39883]
 
 ### Improved compatibility
-- Components: Shortlink and Toolbar related components have been updated to ensure compatibility.
-- Extra Sidebar Widgets: update assets' enqueuing strategy to ensure compatibility with the Elementor plugin.
+- Components: Shortlink and Toolbar related components have been updated to ensure compatibility. [#39960]
+- Extra Sidebar Widgets: update asset enqueuing strategy to ensure compatibility with the Elementor plugin. [#39820]
 
 ### Bug fixes
-- Fixed bug with scheduled resharing when sharing another admin's posts.
+- Fixed bug with scheduled resharing when sharing another admin's posts. [#40048]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Actions: Ensure Deprecations class loads after translations to prevent errors
-- Admin: Updating deprecation notices.
-- AI Assistant: Add feature flag for list to table transform
-- Deprecation notices: Ensure URLs are correctly generated.
-- Fixed the inifite reload issue on Jetpack Sharing settings
-- Fix Slideshow block width when used inside a Row block
-- Jetpack AI: fix image generation modals jumpiness by fitting boththe image sizes and the placeholder/empty image
-- Opengraph: minor bug fixing.
-- Optimize the Sharing module hook callback.
-- Remove old widget migration code.
-- Search: add ability to customize order of results
-- Subscriptions: ensure that we correct detect the site URL when handling the Subscription modal appearing leaving a comment.
-- Sync: Added test for Full Sync sending modules in the order config is set
-- Themes: Fix race condition when loading theme compatibility files.
-- Updated composer.lock
-- Updated package dependencies.
+- Actions: Ensure Deprecations class loads after translations to prevent errors. [#40085]
+- Admin: Update deprecation notices. [#39567]
+- AI Assistant: Add feature flag for list-to-table transform. [#40078]
+- AI Assistant: Fix image generation modal issues. [#40094]
+- Deprecation notices: Ensure URLs are correctly generated. [#40093]
+- Opengraph: minor bug fixing. [#39749]
+- Search: Add ability to customize order of results. [#36378]
+- Sharing: Fix infinite reload issue on Jetpack Sharing settings. [#40089]
+- Sharing: Optimize the Sharing module hook callback. [#40128]
+- Slideshow Block: Fix width when used inside a Row block. [#40041]
+- Subscriptions: Ensure site URL is correctly detected when handling the comment subscription modal. [#40129]
+- Sync: Add test to ensure Full Sync order  matches config. [#40100]
+- Themes: Fix race condition when loading theme compatibility files. [#40075]
+- Updated composer.lock file. [#40032]
+- Updated package dependencies. [#39999] [#40000] [#40060] [#40116]
+- Widgets: Remove old migration code. [#40073]
 
 ## 14.0 - 2024-11-07
 ### Major enhancements
