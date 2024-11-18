@@ -981,11 +981,28 @@ class Admin {
 			}
 		}
 
-		if ( isset( $_POST['fields'] ) && is_array( $_POST['fields'] ) ) {
-			$fields = sanitize_text_field( stripslashes_deep( $_POST['fields'] ) );
-			usort( $fields, array( $this, 'grunion_sort_objects' ) );
+		$field_shortcodes = array();
 
-			$field_shortcodes = array();
+		if ( isset( $_POST['fields'] ) && is_array( $_POST['fields'] ) ) {
+			$fields = array_map(
+				function ( $field ) {
+					if ( is_array( $field ) ) {
+
+						foreach ( array( 'label', 'type', 'required' ) as $key ) {
+							if ( isset( $field[ $key ] ) ) {
+								$field[ $key ] = sanitize_text_field( wp_unslash( $field[ $key ] ) );
+							}
+						}
+
+						if ( isset( $field['options'] ) && is_array( $field['options'] ) ) {
+							$field['options'] = array_map( 'sanitize_text_field', array_map( 'wp_unslash', $field['options'] ) );
+						}
+					}
+					return $field;
+				},
+				$_POST['fields'] // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- each item sanitized above.
+			);
+			usort( $fields, array( $this, 'grunion_sort_objects' ) );
 
 			foreach ( $fields as $field ) {
 				$field_attributes = array();
