@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.25.4-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [0.25.3] - 2024-12-02
 ### Changed
 - Updated @wordpress/editor to the latest version. [#40373]
@@ -1493,6 +1500,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created empty package [#24952]
 
+[0.25.4-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.3...v0.25.4-alpha
 [0.25.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.2...v0.25.3
 [0.25.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.1...v0.25.2
 [0.25.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.0...v0.25.1

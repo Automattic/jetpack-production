@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated package dependencies.
+
 ## 14.1-beta - 2024-12-02
 ### Enhancements
 - Likes Block: Allow hiding avatars. [#40282]
