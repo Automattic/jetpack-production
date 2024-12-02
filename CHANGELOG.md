@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack AI: remove dead and deprecated code
 - Updated package dependencies.
 
 ## 14.1-beta - 2024-12-02
