@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: add animation during site connection to make it less confusing to users connecting their site for the first time.
 - My Jetpack: add loading animation to recommendations step.
 
+### Changed
+- My Jetpack: fix usage of random() in animation to prevent build step from generating a different CSS file every time.
+
 ### Removed
 - My Jetpack: remove experiment code.
 
