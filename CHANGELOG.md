@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Likes block: allow hiding avatars
 - Social | Improved My Jetpack CTA for Social Activate the module instead of Learn More
 
 ### Improved compatibility
