@@ -1345,7 +1345,7 @@ class Jetpack_Gutenberg {
 	 * blocks register themselves on init.
 	 *
 	 * @static
-	 * @since 14.1-a.2
+	 * @since 14.1
 	 * @return void
 	 */
 	public static function register_block_metadata_collection() {
