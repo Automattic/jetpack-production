@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- External media: Google Photos Picker: Update UX opening picker right after pressing "change selection" CTA
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - External media: Add logic to persist session in cookie
 - Jetpack AI: remove dead and deprecated code
