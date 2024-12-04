@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - External media: Google Photos Picker: Update UX opening picker right after pressing "change selection" CTA
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Add disclaimer to image generation modals
 - AI Assistant: Add feature flag for AI feedback feature
 - External media: Add logic to persist session in cookie
 - Jetpack AI: remove dead and deprecated code
