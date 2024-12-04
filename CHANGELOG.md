@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add feature flag for AI feedback feature
 - External media: Add logic to persist session in cookie
 - Jetpack AI: remove dead and deprecated code
+- Testing: Remove old instructions.
 - Updated package dependencies.
 
 ## 14.1 - 2024-12-03
