@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Stats: drop Legacy Stats experience
+
 ### Improved compatibility
 - External media: Google Photos Picker: Update UX opening picker right after pressing "change selection" CTA
 
