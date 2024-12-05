@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - External media: Google Photos Picker: Update UX opening picker right after pressing "change selection" CTA
 
+### Bug fixes
+- Google Fonts: Clean up the google fonts data if either google fonts module is disabled or Jetpack is disabled
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add disclaimer to image generation modals
 - AI Assistant: Add feature flag for AI feedback feature
