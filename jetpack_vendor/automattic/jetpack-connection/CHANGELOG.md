@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.2.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- REST user provisioning with an app password.
+
 ## [6.1.1] - 2024-12-04
 ### Changed
 - Updated package dependencies. [#40363]
@@ -1262,6 +1269,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[6.2.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.1.1...v6.2.0-alpha
 [6.1.1]: https://github.com/Automattic/jetpack-connection/compare/v6.1.0...v6.1.1
 [6.1.0]: https://github.com/Automattic/jetpack-connection/compare/v6.0.1...v6.1.0
 [6.0.1]: https://github.com/Automattic/jetpack-connection/compare/v6.0.0...v6.0.1
