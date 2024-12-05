@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Stats: drop Legacy Stats experience
+- Stats: enable sparkline chart in the WP Admin bar
 
 ### Improved compatibility
 - External media: Google Photos Picker: Update UX opening picker right after pressing "change selection" CTA
