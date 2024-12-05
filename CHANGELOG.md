@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add disclaimer to image generation modals
 - AI Assistant: Add feature flag for AI feedback feature
+- Cover case with connection transition from Google Photos to Google Photos Picker
 - External media: Add logic to persist session in cookie
 - Jetpack AI: remove dead and deprecated code
 - Newsletter sidebar: fix no space under toggle
