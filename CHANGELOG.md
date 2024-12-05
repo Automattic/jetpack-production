@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: remove dead and deprecated code
 - Newsletter sidebar: fix no space under toggle
 - register_block_metadata_collection: Silence path validation notices
+- Remove deprecated hooks and methods on Jetpack admin pages.
 - Testing: Remove old instructions.
 - Updated package dependencies.
 
