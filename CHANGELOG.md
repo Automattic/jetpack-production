@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add feature flag for AI feedback feature
 - External media: Add logic to persist session in cookie
 - Jetpack AI: remove dead and deprecated code
+- Newsletter sidebar: fix no space under toggle
 - register_block_metadata_collection: Silence path validation notices
 - Testing: Remove old instructions.
 - Updated package dependencies.
