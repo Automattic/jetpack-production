@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter sidebar: fix no space under toggle
 - register_block_metadata_collection: Silence path validation notices
 - Remove deprecated hooks and methods on Jetpack admin pages.
+- Sync: synchronize Holiday snow option.
 - Testing: Remove old instructions.
 - Updated package dependencies.
 
