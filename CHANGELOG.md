@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Stats: allow fetching stats for specific sites when programatically fetching stats using Jetpack's tools.
 - Stats: drop Legacy Stats experience
 - Stats: enable sparkline chart in the WP Admin bar
 
