@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add feature flag for AI feedback feature
 - Cover case with connection transition from Google Photos to Google Photos Picker
 - External media: Add logic to persist session in cookie
+- Jetpack AI: Adding AI feedback component and implementing it on the image carousel
 - Jetpack AI: remove dead and deprecated code
 - Newsletter sidebar: fix no space under toggle
 - register_block_metadata_collection: Silence path validation notices
