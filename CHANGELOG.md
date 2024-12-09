@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blogging prompts endpoint: disable bloganuary for 2025 and beyond.
+- Infinite scroll: remove deprecated code.
 - Jetpack AI: Adding tooltips to AI feedback component
 
 ## 14.2-a.1 - 2024-12-09
