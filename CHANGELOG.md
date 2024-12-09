@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress 6.7 Compatibility: Fixed notices caused by translation calls happening too early in the load order.
 
 ### Bug fixes
+- Form Block: fixed validation of URL input types to allow query strings.
 - Google Fonts: Clean up the google fonts data if either google fonts module is disabled or Jetpack is disabled
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

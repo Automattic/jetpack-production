@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Form Block: fixed validation of URL input types to allow query strings.
+
 ## [0.34.2] - 2024-11-26
 ### Changed
 - Update dependencies. [#39855]
