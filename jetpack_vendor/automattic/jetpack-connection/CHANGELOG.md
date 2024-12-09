@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added a mechanism to use callbacks for package options.
 - REST user provisioning with an app password.
 
 ## [6.1.1] - 2024-12-04

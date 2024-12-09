@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - External media: Google Photos Picker: Update UX opening picker right after pressing "change selection" CTA
 - Jetpack SEO: Ensures we now support adding an SEO title and description for custom post types.
+- WordPress 6.7 Compatibility: Fixed notices caused by translation calls happening too early in the load order.
 
 ### Bug fixes
 - Google Fonts: Clean up the google fonts data if either google fonts module is disabled or Jetpack is disabled
