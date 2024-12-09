@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Form Block: fixed validation of URL input types to allow query strings.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blogging prompts endpoint: disable bloganuary for 2025 and beyond.
+
 ## 14.2-a.1 - 2024-12-09
 ### Enhancements
 - Stats: Allow fetching stats for specific sites when programatically fetching stats using Jetpack's tools. [#40441]
