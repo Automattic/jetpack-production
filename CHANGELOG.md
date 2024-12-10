@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Comments: Make list of allowable comment types filterable so custom types can be returned if needed.
 - Infinite scroll: remove deprecated code.
 - Jetpack AI: Adding tooltips to AI feedback component
+- Updated package dependencies.
 
 ## 14.2-a.1 - 2024-12-09
 ### Enhancements
