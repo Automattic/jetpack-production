@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Facebook Embeds: add a white background to embeds to avoid transparent background interfering with readability.
 - Form Block: fixed validation of URL input types to allow query strings.
+- Import: setting WP_IMPORTING when doing an import
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blogging prompts endpoint: disable bloganuary for 2025 and beyond.
