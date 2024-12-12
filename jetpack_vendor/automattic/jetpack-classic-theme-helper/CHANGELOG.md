@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Jetpack Testimonials: Ensuring functionality runs via the Classic Theme Helper package.
 
+### Changed
+- Updated package dependencies.
+
 ## [0.7.4] - 2024-12-09
 ### Fixed
 - Content Options: Ensure excerpt_length is cast to an int if it is not already, to prevent fatal errors. [#40389]

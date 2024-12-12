@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Remove purchase related elements when Complete is on site
+- Updated package dependencies.
 
 ## [5.1.1] - 2024-12-04
 ### Changed
