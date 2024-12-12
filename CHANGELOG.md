@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Adding tooltips to AI feedback component
 - Jetpack AI: Add tracking to the thumbs up/down component, saving the component and rating to Tracks
 - Updated package dependencies.
+- We now trigger an error in cases where the media property does not exist so that the editor does not crash under some circumstances
 
 ## 14.2-a.1 - 2024-12-09
 ### Enhancements
