@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Remove purchase related elements when Complete is on site
 - Updated package dependencies.
 
+### Fixed
+- My Jetpack: fix animation flick on connection screen in My Jetpack.
+
 ## [5.1.1] - 2024-12-04
 ### Changed
 - Updated package dependencies. [#40363]
