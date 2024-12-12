@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Testimonials: Include shortcode CSS file.
+
 ## [0.7.4] - 2024-12-09
 ### Fixed
 - Content Options: Ensure excerpt_length is cast to an int if it is not already, to prevent fatal errors. [#40389]
