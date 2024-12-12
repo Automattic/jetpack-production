@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Added a `liked` class to the Jetpack likes iFrame wrapper DIV based on if the post has any likes.
+
 ### Improved compatibility
 - Jetpack Testimonials: Ensure feature loads via the Classic Theme Helper package instead of the module.
 
