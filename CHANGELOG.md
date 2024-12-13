@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Ensure that SEO fields are not visible when another SEO plugin is active.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- API Endpoints: make sure manual plugin updates applied when auto update is disabled
 - Blogging prompts endpoint: disable bloganuary for 2025 and beyond.
 - Carousel: Under rare circumstances, the carousel will make null requests when loading an image
 - Comments: Make list of allowable comment types filterable so custom types can be returned if needed.
