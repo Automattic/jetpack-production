@@ -234,6 +234,7 @@ return array(
     'Automattic\\Jetpack\\Publicize\\Publicize_UI' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-ui.php',
     'Automattic\\Jetpack\\Publicize\\Publicize_Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-utils.php',
     'Automattic\\Jetpack\\Publicize\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-rest-controller.php',
+    'Automattic\\Jetpack\\Publicize\\Services' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-services.php',
     'Automattic\\Jetpack\\Publicize\\Share_Limits' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-share-limits.php',
     'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Post_Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-post-settings.php',
     'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\REST_Settings_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-rest-settings-controller.php',
