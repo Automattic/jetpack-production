@@ -1473,6 +1473,11 @@ To start using the **Jetpack AI Assistant**, type `/AI` in the block editor.',
         'type' => 'boolean',
         'default' => false,
       ),
+      'showAvatars' => 
+      array (
+        'type' => 'boolean',
+        'default' => true,
+      ),
     ),
     'editorScript' => 'jetpack-blocks-editor',
   ),
