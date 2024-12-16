@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Blogging prompts endpoint: disable bloganuary for 2025 and beyond.
 - Carousel: Under rare circumstances, the carousel will make null requests when loading an image
 - Comments: Make list of allowable comment types filterable so custom types can be returned if needed.
+- Fixed lints following ESLint rule changes for TS
 - Infinite scroll: remove deprecated code.
 - Jetpack AI: Adding tooltips to AI feedback component
 - Jetpack AI: Add tracking to the thumbs up/down component, saving the component and rating to Tracks

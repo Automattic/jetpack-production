@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Fixed lints following ESLint rule changes for TS
 - My Jetpack: fix animation flick on connection screen in My Jetpack.
 
 ## [5.1.1] - 2024-12-04

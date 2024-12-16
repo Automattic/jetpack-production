@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fixed lints following ESLint rule changes for TS
+
 ## [0.25.4] - 2024-12-09
 ### Changed
 - Updated package dependencies. [#40363]
