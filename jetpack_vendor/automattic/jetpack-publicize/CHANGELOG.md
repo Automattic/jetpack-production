@@ -11,7 +11,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Script data: Don't call service endpoint on wpcom
-- Updated package dependencies.
+
+## [0.56.5] - 2024-12-16
+### Changed
+- Updated package dependencies. [#40564]
 
 ## [0.56.4] - 2024-12-09
 ### Changed
@@ -791,7 +794,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.57.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.56.4...v0.57.0-alpha
+[0.57.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.56.5...v0.57.0-alpha
+[0.56.5]: https://github.com/Automattic/jetpack-publicize/compare/v0.56.4...v0.56.5
 [0.56.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.56.3...v0.56.4
 [0.56.3]: https://github.com/Automattic/jetpack-publicize/compare/v0.56.2...v0.56.3
 [0.56.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.56.1...v0.56.2
