@@ -1595,23 +1595,23 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php'
 	),
 	'Automattic\\Woocommerce_Analytics' => array(
-		'version' => '0.2.0.0',
+		'version' => '0.3.0.0-alpha1734421742',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woocommerce-analytics.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\Checkout_Flow' => array(
-		'version' => '0.2.0.0',
+		'version' => '0.3.0.0-alpha1734421742',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-checkout-flow.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\My_Account' => array(
-		'version' => '0.2.0.0',
+		'version' => '0.3.0.0-alpha1734421742',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-my-account.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\Universal' => array(
-		'version' => '0.2.0.0',
+		'version' => '0.3.0.0-alpha1734421742',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-universal.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\Woo_Analytics_Trait' => array(
-		'version' => '0.2.0.0',
+		'version' => '0.3.0.0-alpha1734421742',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woo-analytics-trait.php'
 	),
 	'Container' => array(
