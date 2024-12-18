@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.1.3-alpha] - unreleased
+## [5.2.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- My Jetpack: add features as possible modules to the recommendations list.
 
 ### Changed
 - My Jetpack: Plans section: Improvements to how we display plan expiration date.
@@ -1875,7 +1878,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.1.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.1.2...5.1.3-alpha
+[5.2.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.1.2...5.2.0-alpha
 [5.1.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.1.1...5.1.2
 [5.1.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.1.0...5.1.1
 [5.1.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.0.4...5.1.0
