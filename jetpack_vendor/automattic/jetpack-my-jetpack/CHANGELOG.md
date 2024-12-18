@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- My Jetpack: Plans section: Improvements to how we display plan expiration date.
+
 ## [5.1.2] - 2024-12-16
 ### Added
 - Add AI to Complete feature copy. [#40577]
