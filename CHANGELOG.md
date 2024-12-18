@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fixes editor and display CSS for Premium Content buttons.
+- Photon: Ensure VIP sites are correctly identified, to prevent unnecessary early Photonization of URLs.
 
 ## 14.2-a.3 - 2024-12-16
 ### Enhancements
