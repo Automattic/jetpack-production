@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Exclude the wpcom_admin_interface from the admin_menu action
+
 ## [0.10.3] - 2024-12-16
 ### Changed
 - Updated package dependencies. [#40564]
