@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Unify connection flows in My Jetpack
 
 ### Fixed
+- Fix an issue where high posts counts would cause backend issues for the get_raw_post_type_breakdown function used in My Jetpack. Sites with over 100,000 posts can now have this query managed remotely.
 - Fix issue where backup card was not updating after site connection in some situations
 
 ## [5.1.2] - 2024-12-16
