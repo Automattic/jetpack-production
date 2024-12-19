@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 /**
  * Manage restaurant menus from your WordPress site,
  * via a new "nova" CPT.
@@ -22,13 +22,17 @@
  * - Bulk/Quick edit response of Menu Item rows is broken.
  * - Drag and Drop reordering.
  *
- * @package automattic/jetpack
+ * @package automattic/jetpack-classic-theme-helper
  */
+
+namespace Automattic\Jetpack\Classic_Theme_Helper;
 
 use Automattic\Jetpack\Assets;
 use Automattic\Jetpack\Roles;
+use WP_Post;
+use WP_Query;
 
-if ( ! class_exists( '\Nova_Restaurant' ) ) {
+if ( ! class_exists( __NAMESPACE__ . '\Nova_Restaurant' ) ) {
 
 	/**
 	 * Create the new Nova CPT.
@@ -78,7 +82,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		/**
 		 * Current term ID of a loop of menu items.
 		 *
-		 * @var bool|int
+		 * @var bool|int|\WP_Term
 		 */
 		protected $menu_item_loop_current_term = false;
 
@@ -141,7 +145,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		 */
 		public function site_supports_nova() {
 			// If we're on WordPress.com, and it has the menu site vertical.
-			if ( function_exists( 'site_vertical' ) && 'nova_menu' === site_vertical() ) {
+			if ( function_exists( 'site_vertical' ) && 'nova_menu' === site_vertical() ) { // @phan-suppress-current-line PhanUndeclaredFunction -- only calling if it exists.
 				return true;
 			}
 
@@ -177,31 +181,31 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 					array(
 						'labels'       => array(
 							/* translators: this is about a food menu */
-							'name'                       => __( 'Menu Item Labels', 'jetpack' ),
+							'name'                       => __( 'Menu Item Labels', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'singular_name'              => __( 'Menu Item Label', 'jetpack' ),
+							'singular_name'              => __( 'Menu Item Label', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'search_items'               => __( 'Search Menu Item Labels', 'jetpack' ),
-							'popular_items'              => __( 'Popular Labels', 'jetpack' ),
+							'search_items'               => __( 'Search Menu Item Labels', 'jetpack-classic-theme-helper' ),
+							'popular_items'              => __( 'Popular Labels', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'all_items'                  => __( 'All Menu Item Labels', 'jetpack' ),
+							'all_items'                  => __( 'All Menu Item Labels', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'edit_item'                  => __( 'Edit Menu Item Label', 'jetpack' ),
+							'edit_item'                  => __( 'Edit Menu Item Label', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'view_item'                  => __( 'View Menu Item Label', 'jetpack' ),
+							'view_item'                  => __( 'View Menu Item Label', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'update_item'                => __( 'Update Menu Item Label', 'jetpack' ),
+							'update_item'                => __( 'Update Menu Item Label', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'add_new_item'               => __( 'Add New Menu Item Label', 'jetpack' ),
+							'add_new_item'               => __( 'Add New Menu Item Label', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'new_item_name'              => __( 'New Menu Item Label Name', 'jetpack' ),
-							'separate_items_with_commas' => __( 'For example, spicy, favorite, etc. <br /> Separate Labels with commas', 'jetpack' ),
-							'add_or_remove_items'        => __( 'Add or remove Labels', 'jetpack' ),
-							'choose_from_most_used'      => __( 'Choose from the most used Labels', 'jetpack' ),
-							'items_list_navigation'      => __( 'Menu item label list navigation', 'jetpack' ),
-							'items_list'                 => __( 'Menu item labels list', 'jetpack' ),
+							'new_item_name'              => __( 'New Menu Item Label Name', 'jetpack-classic-theme-helper' ),
+							'separate_items_with_commas' => __( 'For example, spicy, favorite, etc. <br /> Separate Labels with commas', 'jetpack-classic-theme-helper' ),
+							'add_or_remove_items'        => __( 'Add or remove Labels', 'jetpack-classic-theme-helper' ),
+							'choose_from_most_used'      => __( 'Choose from the most used Labels', 'jetpack-classic-theme-helper' ),
+							'items_list_navigation'      => __( 'Menu item label list navigation', 'jetpack-classic-theme-helper' ),
+							'items_list'                 => __( 'Menu item labels list', 'jetpack-classic-theme-helper' ),
 						),
-						'no_tagcloud'  => __( 'No Labels found', 'jetpack' ),
+						'no_tagcloud'  => __( 'No Labels found', 'jetpack-classic-theme-helper' ),
 						'hierarchical' => false,
 					)
 				);
@@ -214,29 +218,29 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 					array(
 						'labels'        => array(
 							/* translators: this is about a food menu */
-							'name'                  => __( 'Menu Sections', 'jetpack' ),
+							'name'                  => __( 'Menu Sections', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'singular_name'         => __( 'Menu Section', 'jetpack' ),
+							'singular_name'         => __( 'Menu Section', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'search_items'          => __( 'Search Menu Sections', 'jetpack' ),
+							'search_items'          => __( 'Search Menu Sections', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'all_items'             => __( 'All Menu Sections', 'jetpack' ),
+							'all_items'             => __( 'All Menu Sections', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'parent_item'           => __( 'Parent Menu Section', 'jetpack' ),
+							'parent_item'           => __( 'Parent Menu Section', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'parent_item_colon'     => __( 'Parent Menu Section:', 'jetpack' ),
+							'parent_item_colon'     => __( 'Parent Menu Section:', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'edit_item'             => __( 'Edit Menu Section', 'jetpack' ),
+							'edit_item'             => __( 'Edit Menu Section', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'view_item'             => __( 'View Menu Section', 'jetpack' ),
+							'view_item'             => __( 'View Menu Section', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'update_item'           => __( 'Update Menu Section', 'jetpack' ),
+							'update_item'           => __( 'Update Menu Section', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'add_new_item'          => __( 'Add New Menu Section', 'jetpack' ),
+							'add_new_item'          => __( 'Add New Menu Section', 'jetpack-classic-theme-helper' ),
 							/* translators: this is about a food menu */
-							'new_item_name'         => __( 'New Menu Sections Name', 'jetpack' ),
-							'items_list_navigation' => __( 'Menu section list navigation', 'jetpack' ),
-							'items_list'            => __( 'Menu section list', 'jetpack' ),
+							'new_item_name'         => __( 'New Menu Sections Name', 'jetpack-classic-theme-helper' ),
+							'items_list_navigation' => __( 'Menu section list navigation', 'jetpack-classic-theme-helper' ),
+							'items_list'            => __( 'Menu section list', 'jetpack-classic-theme-helper' ),
 						),
 						'rewrite'       => array(
 							'slug'         => 'menu',
@@ -262,36 +266,36 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 			register_post_type(
 				self::MENU_ITEM_POST_TYPE,
 				array(
-					'description'          => __( "Items on your restaurant's menu", 'jetpack' ),
+					'description'          => __( "Items on your restaurant's menu", 'jetpack-classic-theme-helper' ),
 
 					'labels'               => array(
 						/* translators: this is about a food menu */
-						'name'                  => __( 'Menu Items', 'jetpack' ),
+						'name'                  => __( 'Menu Items', 'jetpack-classic-theme-helper' ),
 						/* translators: this is about a food menu */
-						'singular_name'         => __( 'Menu Item', 'jetpack' ),
+						'singular_name'         => __( 'Menu Item', 'jetpack-classic-theme-helper' ),
 						/* translators: this is about a food menu */
-						'menu_name'             => __( 'Food Menus', 'jetpack' ),
+						'menu_name'             => __( 'Food Menus', 'jetpack-classic-theme-helper' ),
 						/* translators: this is about a food menu */
-						'all_items'             => __( 'Menu Items', 'jetpack' ),
+						'all_items'             => __( 'Menu Items', 'jetpack-classic-theme-helper' ),
 						/* translators: this is about a food menu */
-						'add_new'               => __( 'Add One Item', 'jetpack' ),
+						'add_new'               => __( 'Add One Item', 'jetpack-classic-theme-helper' ),
 						/* translators: this is about a food menu */
-						'add_new_item'          => __( 'Add Menu Item', 'jetpack' ),
+						'add_new_item'          => __( 'Add Menu Item', 'jetpack-classic-theme-helper' ),
 						/* translators: this is about a food menu */
-						'edit_item'             => __( 'Edit Menu Item', 'jetpack' ),
+						'edit_item'             => __( 'Edit Menu Item', 'jetpack-classic-theme-helper' ),
 						/* translators: this is about a food menu */
-						'new_item'              => __( 'New Menu Item', 'jetpack' ),
+						'new_item'              => __( 'New Menu Item', 'jetpack-classic-theme-helper' ),
 						/* translators: this is about a food menu */
-						'view_item'             => __( 'View Menu Item', 'jetpack' ),
+						'view_item'             => __( 'View Menu Item', 'jetpack-classic-theme-helper' ),
 						/* translators: this is about a food menu */
-						'search_items'          => __( 'Search Menu Items', 'jetpack' ),
+						'search_items'          => __( 'Search Menu Items', 'jetpack-classic-theme-helper' ),
 						/* translators: this is about a food menu */
-						'not_found'             => __( 'No Menu Items found', 'jetpack' ),
+						'not_found'             => __( 'No Menu Items found', 'jetpack-classic-theme-helper' ),
 						/* translators: this is about a food menu */
-						'not_found_in_trash'    => __( 'No Menu Items found in Trash', 'jetpack' ),
-						'filter_items_list'     => __( 'Filter menu items list', 'jetpack' ),
-						'items_list_navigation' => __( 'Menu item list navigation', 'jetpack' ),
-						'items_list'            => __( 'Menu items list', 'jetpack' ),
+						'not_found_in_trash'    => __( 'No Menu Items found in Trash', 'jetpack-classic-theme-helper' ),
+						'filter_items_list'     => __( 'Filter menu items list', 'jetpack-classic-theme-helper' ),
+						'items_list_navigation' => __( 'Menu item list navigation', 'jetpack-classic-theme-helper' ),
+						'items_list'            => __( 'Menu items list', 'jetpack-classic-theme-helper' ),
 					),
 					'supports'             => array(
 						'title',
@@ -332,42 +336,42 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 				0  => '', // Unused. Messages start at index 1.
 				1  => sprintf(
 					/* translators: this is about a food menu. Placeholder is a link to the food menu. */
-					__( 'Menu item updated. <a href="%s">View item</a>', 'jetpack' ),
+					__( 'Menu item updated. <a href="%s">View item</a>', 'jetpack-classic-theme-helper' ),
 					esc_url( get_permalink( $post->ID ) )
 				),
-				2  => esc_html__( 'Custom field updated.', 'jetpack' ),
-				3  => esc_html__( 'Custom field deleted.', 'jetpack' ),
+				2  => esc_html__( 'Custom field updated.', 'jetpack-classic-theme-helper' ),
+				3  => esc_html__( 'Custom field deleted.', 'jetpack-classic-theme-helper' ),
 				/* translators: this is about a food menu */
-				4  => esc_html__( 'Menu item updated.', 'jetpack' ),
+				4  => esc_html__( 'Menu item updated.', 'jetpack-classic-theme-helper' ),
 				5  => isset( $_GET['revision'] ) // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Copying core message handling.
 					? sprintf(
 						/* translators: %s: date and time of the revision */
-						esc_html__( 'Menu item restored to revision from %s', 'jetpack' ),
+						esc_html__( 'Menu item restored to revision from %s', 'jetpack-classic-theme-helper' ),
 						wp_post_revision_title( (int) $_GET['revision'], false ) // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Copying core message handling.
 					)
 					: false,
 				6  => sprintf(
 					/* translators: this is about a food menu. Placeholder is a link to the food menu. */
-					__( 'Menu item published. <a href="%s">View item</a>', 'jetpack' ),
+					__( 'Menu item published. <a href="%s">View item</a>', 'jetpack-classic-theme-helper' ),
 					esc_url( get_permalink( $post->ID ) )
 				),
 				/* translators: this is about a food menu */
-				7  => esc_html__( 'Menu item saved.', 'jetpack' ),
+				7  => esc_html__( 'Menu item saved.', 'jetpack-classic-theme-helper' ),
 				8  => sprintf(
 					/* translators: this is about a food menu */
-					__( 'Menu item submitted. <a target="_blank" href="%s">Preview item</a>', 'jetpack' ),
+					__( 'Menu item submitted. <a target="_blank" href="%s">Preview item</a>', 'jetpack-classic-theme-helper' ),
 					esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) )
 				),
 				9  => sprintf(
 					/* translators: this is about a food menu. 1. Publish box date format, see https://php.net/date 2. link to the food menu. */
-					__( 'Menu item scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview item</a>', 'jetpack' ),
+					__( 'Menu item scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview item</a>', 'jetpack-classic-theme-helper' ),
 					/* translators: Publish box date format, see https://php.net/date */
-					date_i18n( __( 'M j, Y @ G:i', 'jetpack' ), strtotime( $post->post_date ) ),
+					date_i18n( __( 'M j, Y @ G:i', 'jetpack-classic-theme-helper' ), strtotime( $post->post_date ) ),
 					esc_url( get_permalink( $post->ID ) )
 				),
 				10 => sprintf(
 					/* translators: this is about a food menu. Placeholder is a link to the food menu. */
-					__( 'Menu item draft updated. <a target="_blank" href="%s">Preview item</a>', 'jetpack' ),
+					__( 'Menu item draft updated. <a target="_blank" href="%s">Preview item</a>', 'jetpack-classic-theme-helper' ),
 					esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) )
 				),
 			);
@@ -403,7 +407,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		public function change_default_title( $title ) {
 			if ( self::MENU_ITEM_POST_TYPE === get_post_type() ) {
 				/* translators: this is about a food menu */
-				$title = esc_html__( "Enter the menu item's name here", 'jetpack' );
+				$title = esc_html__( "Enter the menu item's name here", 'jetpack-classic-theme-helper' );
 			}
 
 			return $title;
@@ -417,8 +421,8 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		public function add_to_dashboard() {
 			$number_menu_items = wp_count_posts( self::MENU_ITEM_POST_TYPE );
 
-			$roles = new Roles();
-			if ( current_user_can( $roles->translate_role_to_cap( 'administrator' ) ) ) {
+			$roles = new Roles(); // @phan-suppress-current-line PhanUndeclaredClassMethod -- declared at top of file.
+			if ( current_user_can( $roles->translate_role_to_cap( 'administrator' ) ) ) { // @phan-suppress-current-line PhanUndeclaredClassMethod
 				$number_menu_items_published = sprintf(
 					'<a href="%1$s">%2$s</a>',
 					esc_url(
@@ -433,7 +437,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 							'%1$d Food Menu Item',
 							'%1$d Food Menu Items',
 							(int) $number_menu_items->publish,
-							'jetpack'
+							'jetpack-classic-theme-helper'
 						),
 						number_format_i18n( $number_menu_items->publish )
 					)
@@ -447,7 +451,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 							'%1$d Food Menu Item',
 							'%1$d Food Menu Items',
 							(int) $number_menu_items->publish,
-							'jetpack'
+							'jetpack-classic-theme-helper'
 						),
 						number_format_i18n( $number_menu_items->publish )
 					)
@@ -555,8 +559,8 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		public function add_admin_menus() {
 			$hook = add_submenu_page(
 				'edit.php?post_type=' . self::MENU_ITEM_POST_TYPE,
-				__( 'Add Many Items', 'jetpack' ),
-				__( 'Add Many Items', 'jetpack' ),
+				__( 'Add Many Items', 'jetpack-classic-theme-helper' ),
+				__( 'Add Many Items', 'jetpack-classic-theme-helper' ),
 				'edit_pages',
 				'add_many_nova_items',
 				array( $this, 'add_many_new_items_page' )
@@ -580,15 +584,15 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 
 			$this->setup_menu_item_columns();
 
-			wp_register_script(
+			Assets::register_script(
 				'nova-menu-checkboxes',
-				Assets::get_file_url_for_environment(
-					'_inc/build/custom-post-types/js/menu-checkboxes.min.js',
-					'modules/custom-post-types/js/menu-checkboxes.js'
-				),
-				array(),
-				$this->version,
-				true
+				'../../dist/custom-post-types/js/menu-checkboxes.js',
+				__FILE__,
+				array(
+					'in_footer'  => true,
+					'enqueue'    => false,
+					'textdomain' => 'jetpack-classic-theme-helper',
+				)
 			);
 		}
 
@@ -635,7 +639,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 				printf(
 					'<div class="updated"><p>%s</p></div>',
 					/* translators: this is about a food menu */
-					esc_html__( 'Menu Items re-ordered.', 'jetpack' )
+					esc_html__( 'Menu Items re-ordered.', 'jetpack-classic-theme-helper' )
 				);
 			}
 		}
@@ -676,10 +680,10 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		public function menu_item_columns( $columns ) {
 			unset( $columns['date'], $columns['likes'] );
 
-			$columns['thumbnail'] = __( 'Thumbnail', 'jetpack' );
-			$columns['labels']    = __( 'Labels', 'jetpack' );
-			$columns['price']     = __( 'Price', 'jetpack' );
-			$columns['order']     = __( 'Order', 'jetpack' );
+			$columns['thumbnail'] = __( 'Thumbnail', 'jetpack-classic-theme-helper' );
+			$columns['labels']    = __( 'Labels', 'jetpack-classic-theme-helper' );
+			$columns['price']     = __( 'Price', 'jetpack-classic-theme-helper' );
+			$columns['order']     = __( 'Order', 'jetpack-classic-theme-helper' );
 
 			return $columns;
 		}
@@ -724,14 +728,11 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 						wp_nonce_url( $url, 'nova_move_item_down_' . $post_id )
 					);
 					$menu_item = get_post( $post_id );
-					$this->get_menu_by_post_id( $post_id );
-					$term_id = $this->get_menu_by_post_id( $post_id );
-					if ( $term_id ) {
-						$term_id = $term_id->term_id;
-					}
+					$menu      = $this->get_menu_by_post_id( $post_id );
+					$term_id   = is_object( $menu ) ? $menu->term_id : '';
 					?>
-					<input type="hidden" class="menu-order-value" name="nova_order[<?php echo (int) $post_id; ?>]" value="<?php echo esc_attr( $menu_item->menu_order ); ?>" />
-					<input type="hidden" class='nova-menu-term' name="nova_menu_term[<?php echo (int) $post_id; ?>]" value="<?php echo esc_attr( $term_id ); ?>">
+					<input type="hidden" class="menu-order-value" name="nova_order[<?php echo (int) $post_id; ?>]" value="<?php echo esc_attr( (string) $menu_item->menu_order ); ?>" />
+					<input type="hidden" class='nova-menu-term' name="nova_menu_term[<?php echo (int) $post_id; ?>]" value="<?php echo esc_attr( (string) $term_id ); ?>">
 
 					<span class="hide-if-js">
 					&nbsp; &nbsp; &mdash; <a class="nova-move-item-up" data-post-id="<?php echo (int) $post_id; ?>" href="<?php echo esc_url( $up_url ); ?>">up</a>
@@ -748,7 +749,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		 *
 		 * @param int $post_id Post ID.
 		 *
-		 * @return bool|WP_Term
+		 * @return bool|\WP_Term
 		 */
 		public function get_menu_by_post_id( $post_id = null ) {
 			if ( ! $post_id ) {
@@ -771,7 +772,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 			// make sure we clicked our button.
 			if (
 				empty( $_REQUEST['menu_reorder_submit'] )
-				|| __( 'Save New Order', 'jetpack' ) !== $_REQUEST['menu_reorder_submit']
+				|| __( 'Save New Order', 'jetpack-classic-theme-helper' ) !== $_REQUEST['menu_reorder_submit']
 			) {
 				return;
 			}
@@ -814,7 +815,10 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 				}
 
 				// save a write if the term hasn't changed
-				if ( (int) $term_pairs[ $id ] !== $this->get_menu_by_post_id( $id )->term_id ) {
+				if (
+					is_object( $this->get_menu_by_post_id( $id ) ) &&
+					(int) $term_pairs[ $id ] !== $this->get_menu_by_post_id( $id )->term_id
+				) {
 					wp_set_object_terms( $id, $term_pairs[ $id ], self::MENU_TAX );
 				}
 			}
@@ -843,15 +847,19 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 
 			$this->maybe_reorder_menu_items();
 
-			wp_enqueue_script(
+			Assets::register_script(
 				'nova-drag-drop',
-				Assets::get_file_url_for_environment(
-					'_inc/build/custom-post-types/js/nova-drag-drop.min.js',
-					'modules/custom-post-types/js/nova-drag-drop.js'
-				),
-				array( 'jquery', 'jquery-ui-sortable' ),
-				$this->version,
-				true
+				'../../dist/custom-post-types/js/nova-drag-drop.js',
+				__FILE__,
+				array(
+					'dependencies' => array(
+						'jquery',
+						'jquery-ui-sortable',
+					),
+					'in_footer'    => true,
+					'enqueue'      => true,
+					'textdomain'   => 'jetpack-classic-theme-helper',
+				)
 			);
 
 			wp_localize_script(
@@ -860,7 +868,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 				array(
 					'nonce'       => wp_create_nonce( 'drag-drop-reorder' ),
 					'nonceName'   => 'drag-drop-reorder',
-					'reorder'     => __( 'Save New Order', 'jetpack' ),
+					'reorder'     => __( 'Save New Order', 'jetpack-classic-theme-helper' ),
 					'reorderName' => 'menu_reorder_submit',
 				)
 			);
@@ -1034,7 +1042,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		/**
 		 * Add menu title rows to the list table
 		 *
-		 * @param WP_Post $post The Post object.
+		 * @param \WP_Post $post The Post object.
 		 *
 		 * @return void
 		 */
@@ -1045,7 +1053,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 
 			$term = $this->get_menu_item_menu_leaf( $post->ID );
 
-			$term_id = $term instanceof WP_Term ? $term->term_id : null;
+			$term_id = $term instanceof \WP_Term ? $term->term_id : null;
 
 			if ( false !== $last_term_id && $last_term_id === $term_id ) {
 				return;
@@ -1089,27 +1097,27 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 			);
 
 			?>
-			<tr class="no-items menu-label-row" data-term_id="<?php echo esc_attr( $term_id ); ?>">
+			<tr class="no-items menu-label-row" data-term_id="<?php echo esc_attr( (string) $term_id ); ?>">
 				<td class="colspanchange" colspan="<?php echo (int) $non_order_column_count; ?>">
 					<h3>
 					<?php
 						echo str_repeat( ' &mdash; ', (int) $parent_count ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- nothing to escape here.
 
-					if ( $term instanceof WP_Term ) {
-						echo esc_html( sanitize_term_field( 'name', $term_name, $term_id, self::MENU_TAX, 'display' ) );
-						edit_term_link( __( 'edit', 'jetpack' ), '<span class="edit-nova-section"><span class="dashicon dashicon-edit"></span>', '</span>', $term );
+					if ( $term instanceof \WP_Term ) {
+						echo esc_html( sanitize_term_field( 'name', $term_name, (int) $term_id, self::MENU_TAX, 'display' ) );
+						edit_term_link( __( 'edit', 'jetpack-classic-theme-helper' ), '<span class="edit-nova-section"><span class="dashicon dashicon-edit"></span>', '</span>', $term );
 
 					} else {
-						esc_html_e( 'Uncategorized', 'jetpack' );
+						esc_html_e( 'Uncategorized', 'jetpack-classic-theme-helper' );
 					}
 					?>
 					</h3>
 				</td>
 				<td>
-					<?php if ( $term instanceof WP_Term ) { ?>
-					<a class="nova-move-menu-up" title="<?php esc_attr_e( 'Move menu section up', 'jetpack' ); ?>" href="<?php echo esc_url( $up_url ); ?>"><?php echo esc_html_x( 'UP', 'indicates movement (up or down)', 'jetpack' ); ?></a>
+					<?php if ( $term instanceof \WP_Term ) { ?>
+					<a class="nova-move-menu-up" title="<?php esc_attr_e( 'Move menu section up', 'jetpack-classic-theme-helper' ); ?>" href="<?php echo esc_url( $up_url ); ?>"><?php echo esc_html_x( 'UP', 'indicates movement (up or down)', 'jetpack-classic-theme-helper' ); ?></a>
 					<br />
-					<a class="nova-move-menu-down" title="<?php esc_attr_e( 'Move menu section down', 'jetpack' ); ?>" href="<?php echo esc_url( $down_url ); ?>"><?php echo esc_html_x( 'DOWN', 'indicates movement (up or down)', 'jetpack' ); ?></a>
+					<a class="nova-move-menu-down" title="<?php esc_attr_e( 'Move menu section down', 'jetpack-classic-theme-helper' ); ?>" href="<?php echo esc_url( $down_url ); ?>"><?php echo esc_html_x( 'DOWN', 'indicates movement (up or down)', 'jetpack-classic-theme-helper' ); ?></a>
 					<?php } ?>
 				</td>
 			</tr>
@@ -1142,15 +1150,16 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		 * @return void
 		 */
 		public function enqueue_many_items_scripts() {
-			wp_enqueue_script(
+
+			Assets::register_script(
 				'nova-many-items',
-				Assets::get_file_url_for_environment(
-					'_inc/build/custom-post-types/js/many-items.min.js',
-					'modules/custom-post-types/js/many-items.js'
-				),
-				array(),
-				$this->version,
-				true
+				'../../dist/custom-post-types/js/many-items.js',
+				__FILE__,
+				array(
+					'in_footer'  => true,
+					'enqueue'    => true,
+					'textdomain' => 'jetpack-classic-theme-helper',
+				)
 			);
 		}
 
@@ -1240,12 +1249,12 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		public function add_many_new_items_page() {
 			?>
 		<div class="wrap">
-			<h2><?php esc_html_e( 'Add Many Items', 'jetpack' ); ?></h2>
+			<h2><?php esc_html_e( 'Add Many Items', 'jetpack-classic-theme-helper' ); ?></h2>
 
 			<p>
 			<?php
 			echo wp_kses(
-				__( 'Use the <kbd>TAB</kbd> key on your keyboard to move between colums and the <kbd>ENTER</kbd> or <kbd>RETURN</kbd> key to save each row and move on to the next.', 'jetpack' ),
+				__( 'Use the <kbd>TAB</kbd> key on your keyboard to move between colums and the <kbd>ENTER</kbd> or <kbd>RETURN</kbd> key to save each row and move on to the next.', 'jetpack-classic-theme-helper' ),
 				array(
 					'kbd' => array(),
 				)
@@ -1255,7 +1264,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 
 			<form method="post" action="" enctype="multipart/form-data">
 				<p>
-					<h3><?php esc_html_e( 'Add to section:', 'jetpack' ); ?>
+					<h3><?php esc_html_e( 'Add to section:', 'jetpack-classic-theme-helper' ); ?>
 					<?php
 					wp_dropdown_categories(
 						array(
@@ -1272,12 +1281,12 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 				<table class="many-items-table wp-list-table widefat">
 					<thead>
 						<tr>
-							<th scope="col"><?php esc_html_e( 'Name', 'jetpack' ); ?></th>
-							<th scope="col" class="nova-price"><?php esc_html_e( 'Price', 'jetpack' ); ?></th>
+							<th scope="col"><?php esc_html_e( 'Name', 'jetpack-classic-theme-helper' ); ?></th>
+							<th scope="col" class="nova-price"><?php esc_html_e( 'Price', 'jetpack-classic-theme-helper' ); ?></th>
 							<th scope="col">
 								<?php
 								echo wp_kses(
-									__( 'Labels: <small>spicy, favorite, etc. <em>Separate Labels with commas</em></small>', 'jetpack' ),
+									__( 'Labels: <small>spicy, favorite, etc. <em>Separate Labels with commas</em></small>', 'jetpack-classic-theme-helper' ),
 									array(
 										'small' => array(),
 										'em'    => array(),
@@ -1285,7 +1294,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 								);
 								?>
 							</th>
-							<th scope="col"><?php esc_html_e( 'Description', 'jetpack' ); ?></th>
+							<th scope="col"><?php esc_html_e( 'Description', 'jetpack-classic-theme-helper' ); ?></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -1306,7 +1315,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 					</tbody>
 					<tfoot>
 						<tr>
-							<th><a class="button button-secondary nova-new-row"><span class="dashicon dashicon-plus"></span> <?php esc_html_e( 'New Row', 'jetpack' ); ?></a></th>
+							<th><a class="button button-secondary nova-new-row"><span class="dashicon dashicon-plus"></span> <?php esc_html_e( 'New Row', 'jetpack-classic-theme-helper' ); ?></a></th>
 							<th class="nova-price"></th>
 							<th></th>
 							<th></th>
@@ -1315,7 +1324,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 				</table>
 
 				<p class="submit">
-					<input type="submit" class="button-primary" value="<?php esc_attr_e( 'Add These New Menu Items', 'jetpack' ); ?>" />
+					<input type="submit" class="button-primary" value="<?php esc_attr_e( 'Add These New Menu Items', 'jetpack-classic-theme-helper' ); ?>" />
 					<?php wp_nonce_field( 'nova_many_items' ); ?>
 				</p>
 			</form>
@@ -1336,9 +1345,9 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 
 			add_meta_box(
 				'menu_item_price',
-				__( 'Price', 'jetpack' ),
+				__( 'Price', 'jetpack-classic-theme-helper' ),
 				array( $this, 'menu_item_price_meta_box' ),
-				null,
+				array(),
 				'side',
 				'high'
 			);
@@ -1355,7 +1364,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 			printf(
 				'<label for="nova-price-%1$s" class="screen-reader-text">%2$s</label><input type="text" id="nova-price-%1$s" class="widefat" name="nova_price[%1$s]" value="%3$s" />',
 				(int) $post->ID,
-				esc_html__( 'Price', 'jetpack' ),
+				esc_html__( 'Price', 'jetpack-classic-theme-helper' ),
 				esc_attr( $this->get_price( (int) $post->ID ) )
 			);
 		}
@@ -1394,7 +1403,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 			);
 			$args['taxonomy'] = self::MENU_TAX;
 
-			$terms = get_terms( $args );
+			$terms = get_terms( $args ); // @phan-suppress-current-line PhanAccessMethodInternal
 			if ( ! $terms || is_wp_error( $terms ) ) {
 				return array();
 			}
@@ -1426,13 +1435,13 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		 *
 		 * @param int $post_id Post ID.
 		 *
-		 * @return bool|WP_Term|WP_Error|null
+		 * @return bool|\WP_Term|\WP_Error|null
 		 */
 		public function get_menu_item_menu_leaf( $post_id ) {
 			// Get first menu taxonomy "leaf".
 			$term_ids = wp_get_object_terms( $post_id, self::MENU_TAX, array( 'fields' => 'ids' ) );
 
-			foreach ( $term_ids as $term_id ) {
+			foreach ( $term_ids as $term_id ) { // possibly ignore PhanTypeSuspiciousNonTraversableForeach
 				$children = get_term_children( $term_id, self::MENU_TAX );
 				if ( ! $children ) {
 					break;
@@ -1455,7 +1464,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		 */
 		public function list_labels( $post_id = 0 ) {
 			$post = get_post( $post_id );
-			echo get_the_term_list( $post->ID, self::MENU_ITEM_LABEL_TAX, '', _x( ', ', 'Nova label separator', 'jetpack' ), '' );
+			echo get_the_term_list( $post->ID, self::MENU_ITEM_LABEL_TAX, '', _x( ', ', 'Nova label separator', 'jetpack-classic-theme-helper' ), '' );
 		}
 
 		/**
@@ -1470,7 +1479,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 			$labels = get_the_terms( $post->ID, self::MENU_ITEM_LABEL_TAX );
 			if ( ! empty( $labels ) ) {
 				$out = array();
-				foreach ( $labels as $label ) {
+				foreach ( $labels as $label ) { // possibly ignore PhanTypeSuspiciousNonTraversableForeach
 					$out[] = sprintf(
 						'<a href="%s">%s</a>',
 						esc_url(
@@ -1489,9 +1498,9 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 					);
 				}
 
-				echo implode( _x( ', ', 'Nova label separator', 'jetpack' ), $out ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- we build $out ourselves and escape things there.
+				echo implode( _x( ', ', 'Nova label separator', 'jetpack-classic-theme-helper' ), $out ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- we build $out ourselves and escape things there.
 			} else {
-				esc_html_e( 'No Labels', 'jetpack' );
+				esc_html_e( 'No Labels', 'jetpack-classic-theme-helper' );
 			}
 		}
 
@@ -1579,7 +1588,7 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 		}
 
 		/**
-		 * Outputs the Menu Item Loop Marku
+		 * Outputs the Menu Item Loop Markup
 		 * Attached to the 'the_post' action.
 		 *
 		 * @param WP_Post $post Post object.
@@ -1602,15 +1611,20 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 
 				$this->menu_item_loop_open_element( 'menu' ); // Start a new menu section
 				$this->menu_item_loop_header(); // Output the menu's header
-			} elseif ( $this->menu_item_loop_last_term_id !== $this->menu_item_loop_current_term->term_id ) {
+			} elseif (
+				is_object( $this->menu_item_loop_current_term ) &&
+				$this->menu_item_loop_last_term_id !== $this->menu_item_loop_current_term->term_id
+			) {
 				// We're not at the very beginning but still need to start a new menu section.  End the previous menu section first.
 
 				$this->menu_item_loop_close_element( 'menu' ); // End the previous menu section
 				$this->menu_item_loop_open_element( 'menu' ); // Start a new menu section
 				$this->menu_item_loop_header(); // Output the menu's header
 			}
+			if ( is_object( $this->menu_item_loop_current_term ) ) {
 
-			$this->menu_item_loop_last_term_id = $this->menu_item_loop_current_term->term_id;
+				$this->menu_item_loop_last_term_id = $this->menu_item_loop_current_term->term_id;
+			}
 		}
 
 		/**
@@ -1742,7 +1756,5 @@ if ( ! class_exists( '\Nova_Restaurant' ) ) {
 			);
 		}
 	}
-
-	add_action( 'init', array( 'Nova_Restaurant', 'init' ) );
 
 }

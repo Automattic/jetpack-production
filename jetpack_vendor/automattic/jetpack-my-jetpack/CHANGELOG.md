@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Add 'Needs attention' status to Backup product card when Backups are failing.
 - My Jetpack: Add red bubble and notice/banner when Backup has 'needs-attention' status.
 - My Jetpack: Plans section: Improvements to how we display plan expiration date.
+- Unify connection flows in My Jetpack
 
 ### Fixed
 - Fix issue where backup card was not updating after site connection in some situations

@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Slideshow block: Fix block display when added within a Stack block.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Custom Post Types: Ensuring Restaurant Menu mail class will not conflict with newly moved files in Classic Theme Helper package.
 - Fixes editor and display CSS for Premium Content buttons.
 - Moved wpcom/v2/publicize/connections endpoint to publicize package
 - Photon: Ensure VIP sites are correctly identified, to prevent unnecessary early Photonization of URLs.
