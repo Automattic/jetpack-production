@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: add features as possible modules to the recommendations list.
 
 ### Changed
+- My Jetpack: Add 'Needs attention' status to Backup product card when Backups are failing.
 - My Jetpack: Plans section: Improvements to how we display plan expiration date.
 
 ## [5.1.2] - 2024-12-16
