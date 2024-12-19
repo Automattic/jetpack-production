@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Moved wpcom/v2/publicize/connections endpoint to publicize package
 - Photon: Ensure VIP sites are correctly identified, to prevent unnecessary early Photonization of URLs.
 - Restaurant Menu CPT: Convert much of the jQuery usage to JavaScript
+- Tests: Use updated theme in tests.
 
 ## 14.2-a.3 - 2024-12-16
 ### Enhancements
