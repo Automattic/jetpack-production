@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Add red bubble and notice/banner when Backup has 'needs-attention' status.
 - My Jetpack: Plans section: Improvements to how we display plan expiration date.
 
+### Fixed
+- Fix issue where backup card was not updating after site connection in some situations
+
 ## [5.1.2] - 2024-12-16
 ### Added
 - Add AI to Complete feature copy. [#40577]
