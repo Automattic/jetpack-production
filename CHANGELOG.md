@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fixes editor and display CSS for Premium Content buttons.
+- Moved wpcom/v2/publicize/connections endpoint to publicize package
 - Photon: Ensure VIP sites are correctly identified, to prevent unnecessary early Photonization of URLs.
 - Restaurant Menu CPT: Convert much of the jQuery usage to JavaScript
 

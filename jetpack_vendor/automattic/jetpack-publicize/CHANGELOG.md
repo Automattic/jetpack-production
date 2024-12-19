@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Moved wpcom/v2/publicize/connections endpoint to publicize package
 - Script data: Don't call service endpoint on wpcom
 
 ## [0.56.5] - 2024-12-16

@@ -268,6 +268,8 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_2_a_4
         'Automattic\\Jetpack\\Publicize\\Publicize_Setup' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-setup.php',
         'Automattic\\Jetpack\\Publicize\\Publicize_UI' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-ui.php',
         'Automattic\\Jetpack\\Publicize\\Publicize_Utils' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-utils.php',
+        'Automattic\\Jetpack\\Publicize\\REST_API\\Base_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-base-controller.php',
+        'Automattic\\Jetpack\\Publicize\\REST_API\\Connections_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-connections-controller.php',
         'Automattic\\Jetpack\\Publicize\\REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/class-rest-controller.php',
         'Automattic\\Jetpack\\Publicize\\Services' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/class-services.php',
         'Automattic\\Jetpack\\Publicize\\Share_Limits' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/class-share-limits.php',

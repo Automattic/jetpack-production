@@ -236,6 +236,8 @@ return array(
     'Automattic\\Jetpack\\Publicize\\Publicize_Setup' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-setup.php',
     'Automattic\\Jetpack\\Publicize\\Publicize_UI' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-ui.php',
     'Automattic\\Jetpack\\Publicize\\Publicize_Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-publicize-utils.php',
+    'Automattic\\Jetpack\\Publicize\\REST_API\\Base_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-base-controller.php',
+    'Automattic\\Jetpack\\Publicize\\REST_API\\Connections_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-connections-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Publicize\\Services' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-services.php',
     'Automattic\\Jetpack\\Publicize\\Share_Limits' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-share-limits.php',
