@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Custom Post Types: Ensuring Restaurant Menu mail class will not conflict with newly moved files in Classic Theme Helper package.
 - Fixes editor and display CSS for Premium Content buttons.
+- Jetpack AI: Add thumbs up/down component to AI logo generator
 - Moved wpcom/v2/publicize/connections endpoint to publicize package
 - Photon: Ensure VIP sites are correctly identified, to prevent unnecessary early Photonization of URLs.
 - Restaurant Menu CPT: Convert much of the jQuery usage to JavaScript
