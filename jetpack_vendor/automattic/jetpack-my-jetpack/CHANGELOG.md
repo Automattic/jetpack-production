@@ -5,23 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.2.0] - 2024-12-23
 ### Added
-- My Jetpack: add features as possible modules to the recommendations list.
+- My Jetpack: add features as possible modules to the recommendations list. [#40492]
 
 ### Changed
-- My Jetpack: Add 'Needs attention' status to Backup product card when Backups are failing.
-- My Jetpack: Add red bubble and notice/banner when Backup has 'needs-attention' status.
-- My Jetpack: Plans section: Improvements to how we display plan expiration date.
-- My Jetpack: Protect card- Fixed Tooltip placement & content issues.
-- Unify connection flows in My Jetpack
+- My Jetpack: Add 'Needs attention' status to Backup product card when Backups are failing. [#40454]
+- My Jetpack: Add red bubble and notice/banner when Backup has 'needs-attention' status. [#40512]
+- My Jetpack: Plans section: Improvements to how we display plan expiration date. [#40575]
+- My Jetpack: Protect card- Fixed Tooltip placement & content issues. [#40691]
+- Unify connection flows in My Jetpack. [#40632]
 
 ### Fixed
-- Fix an issue where high posts counts would cause backend issues for the get_raw_post_type_breakdown function used in My Jetpack. Sites with over 100,000 posts can now have this query managed remotely.
-- Fix issue where backup card was not updating after site connection in some situations
+- Fix an issue where high posts counts would cause backend issues for the get_raw_post_type_breakdown function used in My Jetpack. Sites with over 100,000 posts can now have this query managed remotely. [#40635]
+- Fix issue where backup card was not updating after site connection in some situations. [#40653]
 
 ## [5.1.2] - 2024-12-16
 ### Added
@@ -1886,7 +1883,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.2.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.1.2...5.2.0-alpha
+[5.2.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.1.2...5.2.0
 [5.1.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.1.1...5.1.2
 [5.1.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.1.0...5.1.1
 [5.1.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.0.4...5.1.0

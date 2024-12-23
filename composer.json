@@ -19,7 +19,7 @@
 		"automattic/jetpack-blaze": "^0.25.4",
 		"automattic/jetpack-blocks": "^3.0.1",
 		"automattic/jetpack-boost-speed-score": "^0.4.0",
-		"automattic/jetpack-classic-theme-helper": "^0.8.1-alpha",
+		"automattic/jetpack-classic-theme-helper": "^0.8.1",
 		"automattic/jetpack-compat": "^4.0.0",
 		"automattic/jetpack-composer-plugin": "^4.0.0",
 		"automattic/jetpack-config": "^3.0.0",
@@ -34,22 +34,22 @@
 		"automattic/jetpack-jitm": "^4.0.3",
 		"automattic/jetpack-licensing": "^3.0.2",
 		"automattic/jetpack-logo": "^3.0.0",
-		"automattic/jetpack-masterbar": "^0.10.4-alpha",
-		"automattic/jetpack-my-jetpack": "^5.2.0-alpha",
+		"automattic/jetpack-masterbar": "^0.10.4",
+		"automattic/jetpack-my-jetpack": "^5.2.0",
 		"automattic/jetpack-plugins-installer": "^0.5.0",
 		"automattic/jetpack-post-list": "^0.7.2",
-		"automattic/jetpack-publicize": "^0.57.0-alpha",
+		"automattic/jetpack-publicize": "^0.57.0",
 		"automattic/jetpack-redirect": "^3.0.1",
 		"automattic/jetpack-roles": "^3.0.1",
 		"automattic/jetpack-search": "^0.47.4",
 		"automattic/jetpack-stats": "^0.14.1",
 		"automattic/jetpack-stats-admin": "^0.23.1",
 		"automattic/jetpack-status": "^5.0.1",
-		"automattic/jetpack-sync": "^4.2.0-alpha",
+		"automattic/jetpack-sync": "^4.2.0",
 		"automattic/jetpack-videopress": "^0.25.5",
 		"automattic/jetpack-waf": "^0.23.1",
 		"automattic/jetpack-wordads": "^0.4.4",
-		"automattic/woocommerce-analytics": "^0.3.0-alpha",
+		"automattic/woocommerce-analytics": "^0.3.0",
 		"scssphp/scssphp": "1.12.0"
 	},
 	"require-dev": {
@@ -97,7 +97,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_2_a_4",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_2_a_6",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true
