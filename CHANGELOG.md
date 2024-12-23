@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack AI: featured image generator modal noww shows current featured image if present
 - Metadata: always return internal '_jetpack_dont_email_post_to_subs' meta
 
 ## 14.2-a.5 - 2024-12-23
