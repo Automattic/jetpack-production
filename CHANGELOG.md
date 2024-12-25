@@ -2,13 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.2-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## 14.2-a.7 - 2024-12-25
+### Bug fixes
+- WooCommerce Analytics: Fix fatal error when WooCommerce cart object is not available. [#40729]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Jetpack AI: featured image generator modal noww shows current featured image if present
-- Metadata: always return internal '_jetpack_dont_email_post_to_subs' meta
+- Jetpack AI: featured image generator modal now shows current featured image if present. [#40631]
+- Metadata: always return internal '_jetpack_dont_email_post_to_subs' meta. [#40723]
 
 ## 14.2-a.5 - 2024-12-23
 ### Bug fixes
