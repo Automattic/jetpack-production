@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.2-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack AI: introduce new beta feature ai-seo-assistant
+
 ## 14.2-a.7 - 2024-12-25
 ### Bug fixes
 - WooCommerce Analytics: Fix fatal error when WooCommerce cart object is not available. [#40729]
