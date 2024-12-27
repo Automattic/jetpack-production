@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Enhance thumbs feedback on AI Assistant and extensions
 - Jetpack AI: introduce new beta feature ai-seo-assistant
 
 ## 14.2-a.7 - 2024-12-25
