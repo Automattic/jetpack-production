@@ -69,6 +69,11 @@ return array (
         'type' => 'string',
         'default' => 'init',
       ),
+      'preTransformAction' => 
+      array (
+        'type' => 'string',
+        'default' => NULL,
+      ),
     ),
     'example' => 
     array (
