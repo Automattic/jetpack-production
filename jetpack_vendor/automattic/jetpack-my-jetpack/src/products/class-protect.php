@@ -8,15 +8,16 @@
 namespace Automattic\Jetpack\My_Jetpack\Products;
 
 use Automattic\Jetpack\Connection\Client;
-use Automattic\Jetpack\My_Jetpack\Product;
+use Automattic\Jetpack\My_Jetpack\Hybrid_Product;
 use Automattic\Jetpack\My_Jetpack\Wpcom_Products;
+use Automattic\Jetpack\Redirect;
 use Jetpack_Options;
 use WP_Error;
 
 /**
  * Class responsible for handling the Protect product
  */
-class Protect extends Product {
+class Protect extends Hybrid_Product {
 
 	const FREE_TIER_SLUG             = 'free';
 	const UPGRADED_TIER_SLUG         = 'upgraded';
@@ -70,6 +71,13 @@ class Protect extends Product {
 	 * @var bool
 	 */
 	public static $has_standalone_plugin = true;
+
+	/**
+	 * The feature slug that identifies the paid plan
+	 *
+	 * @var string
+	 */
+	public static $feature_identifying_paid_plan = 'scan';
 
 	/**
 	 * Get the product name
@@ -265,33 +273,17 @@ class Protect extends Product {
 	}
 
 	/**
-	 * Checks whether the current plan (or purchases) of the site already supports the product
+	 * Get the product-slugs of the paid plans for this product.
+	 * (Do not include bundle plans, unless it's a bundle plan itself).
 	 *
-	 * @return boolean
+	 * @return array
 	 */
-	public static function has_paid_plan_for_product() {
-		$plans_with_scan = array(
+	public static function get_paid_plan_product_slugs() {
+		return array(
 			'jetpack_scan',
-			'jetpack_security',
-			'jetpack_complete',
-			'jetpack_premium',
-			'jetpack_business',
+			'jetpack_scan_monthly',
+			'jetpack_scan_bi_yearly',
 		);
-
-		$purchases_data = Wpcom_Products::get_site_current_purchases();
-		if ( is_wp_error( $purchases_data ) ) {
-			return false;
-		}
-		if ( is_array( $purchases_data ) && ! empty( $purchases_data ) ) {
-			foreach ( $purchases_data as $purchase ) {
-				foreach ( $plans_with_scan as $plan ) {
-					if ( strpos( $purchase->product_slug, $plan ) !== false ) {
-						return true;
-					}
-				}
-			}
-		}
-		return false;
 	}
 
 	/**
@@ -330,7 +322,13 @@ class Protect extends Product {
 	 * @return ?string
 	 */
 	public static function get_manage_url() {
-		return admin_url( 'admin.php?page=jetpack-protect' );
+		// check standalone first
+		if ( static::is_standalone_plugin_active() ) {
+			return admin_url( 'admin.php?page=jetpack-protect' );
+			// otherwise, check for the main Jetpack plugin
+		} elseif ( static::is_jetpack_plugin_active() ) {
+			return Redirect::get_url( 'my-jetpack-manage-scan' );
+		}
 	}
 
 	/**
