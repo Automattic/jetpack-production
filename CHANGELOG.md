@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added testing instructions for Jetpack 14.2.
 - Jetpack AI: Adding AI feedback to Write Brief features
 
 ## 14.2-a.9 - 2024-12-30
