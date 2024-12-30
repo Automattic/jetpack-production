@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.57.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.57.1] - 2024-12-30
 ### Fixed
-- Social: Ensure that broken connection notices work fine on WoA sites
+- Social: Ensure that broken connection notices work fine on WoA sites. [#40732]
 
 ## [0.57.0] - 2024-12-23
 ### Changed
@@ -799,7 +796,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.57.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.0...v0.57.1-alpha
+[0.57.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.0...v0.57.1
 [0.57.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.56.5...v0.57.0
 [0.56.5]: https://github.com/Automattic/jetpack-publicize/compare/v0.56.4...v0.56.5
 [0.56.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.56.3...v0.56.4
