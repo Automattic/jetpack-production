@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated dependencies.
+- Updated package dependencies.
 
 ## [0.25.5] - 2024-12-16
 ### Changed
