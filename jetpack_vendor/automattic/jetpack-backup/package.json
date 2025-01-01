@@ -28,7 +28,7 @@
 	],
 	"dependencies": {
 		"@automattic/format-currency": "1.0.1",
-		"@automattic/jetpack-analytics": "^0.1.33",
+		"@automattic/jetpack-analytics": "^0.1.34-alpha",
 		"@automattic/jetpack-api": "^0.17.21",
 		"@automattic/jetpack-components": "^0.65.2-alpha",
 		"@automattic/jetpack-connection": "^0.36.3-alpha",
