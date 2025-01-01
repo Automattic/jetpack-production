@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Adding AI feedback to Write Brief features
 - Jetpack API: Fixed a bug where invalid upload input caused a fatal error.
 - Updated package dependencies.
+- VideoPress: Catch TypeError when theme specifies $content_width as a string.
 
 ## 14.2-a.9 - 2024-12-30
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
