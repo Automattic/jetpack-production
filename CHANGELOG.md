@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added testing instructions for Jetpack 14.2.
+- Filters: Prevent error when `http_request_timeout` filter is used incorrectly.
 - Jetpack AI: Adding AI feedback to Write Brief features
 - Jetpack API: Fixed a bug where invalid upload input caused a fatal error.
 - Updated package dependencies.
