@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Form block: Fix submit button styles when there are errors
+
 ## [0.34.4] - 2024-12-16
 ### Changed
 - Updated package dependencies. [#40564]
