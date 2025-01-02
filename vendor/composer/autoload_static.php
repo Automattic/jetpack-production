@@ -439,7 +439,6 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_2_a_10
         'Automattic\\Jetpack\\WordAds\\Package' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-wordads/src/class-package.php',
         'Automattic\\Jetpack\\WordAds\\REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php',
         'Automattic\\Woocommerce_Analytics' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woocommerce-analytics.php',
-        'Automattic\\Woocommerce_Analytics\\Checkout_Flow' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-checkout-flow.php',
         'Automattic\\Woocommerce_Analytics\\My_Account' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-my-account.php',
         'Automattic\\Woocommerce_Analytics\\Universal' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-universal.php',
         'Automattic\\Woocommerce_Analytics\\Woo_Analytics_Trait' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woo-analytics-trait.php',
