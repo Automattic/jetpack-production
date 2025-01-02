@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added tests to increase code coverage.
 
+### Changed
+- Updated package dependencies.
+
 ## [6.2.1] - 2024-12-16
 ### Changed
 - Updated package dependencies. [#40564]
