@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- My Jetpack: Added a new status for when Protect detects threats on the site.
 - My Jetpack: introduce feature cards for recommendations in My Jetpack.
 
 ### Changed

@@ -393,9 +393,12 @@ interface Window {
 				};
 			};
 			backup_failure?: {
-				source: 'rewind' | 'last_backup';
-				status: RewindStatus | BackupStatus;
-				last_updated: string;
+				type: 'warning' | 'error';
+				data: {
+					source: 'rewind' | 'last_backup';
+					status: RewindStatus | BackupStatus;
+					last_updated: string;
+				};
 			};
 			[ key: `${ string }--plan_expired` ]: {
 				product_slug: string;
