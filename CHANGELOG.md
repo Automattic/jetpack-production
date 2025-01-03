@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Filters: Prevent error when `http_request_timeout` filter is used incorrectly.
 - Jetpack AI: Adding AI feedback to Write Brief features
 - Jetpack API: Fixed a bug where invalid upload input caused a fatal error.
+- Map block: Inspector controls UI improvements
 - Updated package dependencies.
 - VideoPress: Catch TypeError when theme specifies $content_width as a string.
 
