@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - My Jetpack: Added a new status for when Protect detects threats on the site.
+- My Jetpack: Adds a red bubble and notice when Protect threats are detected.
 - My Jetpack: introduce feature cards for recommendations in My Jetpack.
 
 ### Changed
