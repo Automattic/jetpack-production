@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added testing instructions for Jetpack 14.2.
+- Add new option to site options api
 - AI Assistant: Fix block inserter position for Form block with AI extension
 - E2E Tests: Only install single browser used by Playwright.
 - Filters: Prevent error when `http_request_timeout` filter is used incorrectly.
