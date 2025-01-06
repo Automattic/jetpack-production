@@ -5,22 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.34.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.34.5] - 2025-01-06
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#40705] [#40784] [#40792] [#40800] [#40831]
 
 ### Fixed
-- Form block: Fix submit button styles when there are errors
+- Form block: Fix submit button styles when there are errors. [#40762]
 
 ## [0.34.4] - 2024-12-16
 ### Changed
 - Updated package dependencies. [#40564]
 
 ### Fixed
-- Form Block: fixed validation of URL input types to allow query strings. [#40490]
+- Form Block: Fix validation of URL input types to allow query strings. [#40490]
 
 ## [0.34.3] - 2024-12-09
 ### Changed
@@ -750,7 +747,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.34.5-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.34.4...v0.34.5-alpha
+[0.34.5]: https://github.com/automattic/jetpack-forms/compare/v0.34.4...v0.34.5
 [0.34.4]: https://github.com/automattic/jetpack-forms/compare/v0.34.3...v0.34.4
 [0.34.3]: https://github.com/automattic/jetpack-forms/compare/v0.34.2...v0.34.3
 [0.34.2]: https://github.com/automattic/jetpack-forms/compare/v0.34.1...v0.34.2
