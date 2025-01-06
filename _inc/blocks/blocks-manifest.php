@@ -69,6 +69,11 @@ return array (
         'type' => 'string',
         'default' => 'init',
       ),
+      'preTransformAction' => 
+      array (
+        'type' => 'string',
+        'default' => NULL,
+      ),
     ),
     'example' => 
     array (
@@ -1472,6 +1477,11 @@ To start using the **Jetpack AI Assistant**, type `/AI` in the block editor.',
       array (
         'type' => 'boolean',
         'default' => false,
+      ),
+      'showAvatars' => 
+      array (
+        'type' => 'boolean',
+        'default' => true,
       ),
     ),
     'editorScript' => 'jetpack-blocks-editor',
