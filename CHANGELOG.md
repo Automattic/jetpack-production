@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.3-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Fix custom roles settings are not sticking for Jetpack Stats
+
 ## 14.2-beta - 2025-01-06
 ### Bug fixes
 - Shortcodes: Prevent conflict with third-party SoundCloud shortcodes. [#40789]
