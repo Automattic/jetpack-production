@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fix custom roles settings are not sticking for Jetpack Stats
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated social-logos import from default to named
+
 ## 14.2-beta - 2025-01-06
 ### Bug fixes
 - Shortcodes: Prevent conflict with third-party SoundCloud shortcodes. [#40789]
