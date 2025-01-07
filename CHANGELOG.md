@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Remove legacy Stats widget loader
 - Updated social-logos import from default to named
+- Update newsletter category settings to clarify that you need to choose one or more categories to allow people to subscribe to.
 
 ## 14.2-beta - 2025-01-06
 ### Bug fixes
