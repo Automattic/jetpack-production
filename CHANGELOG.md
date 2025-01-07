@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix custom roles settings are not sticking for Jetpack Stats
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack AI: Enable ratings feedback thumbs for all
 - Remove legacy Stats widget loader
 - Updated social-logos import from default to named
 - Update newsletter category settings to clarify that you need to choose one or more categories to allow people to subscribe to.
