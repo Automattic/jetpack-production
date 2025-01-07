@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Authors widget: Fix saving of unchecked "Display all authors" checkbox in the legacy widget editor.
 - Fix custom roles settings are not sticking for Jetpack Stats
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
