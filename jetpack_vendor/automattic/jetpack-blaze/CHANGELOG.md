@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Blaze: ensure post list quick link is added after quick edit
 - Blaze: Fix external icon alignment on "Blaze this Post" button
 
 ## [0.25.4] - 2024-12-16
