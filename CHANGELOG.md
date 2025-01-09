@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Authors widget: Fix saving of unchecked "Display all authors" checkbox in the legacy widget editor.
 - Fix custom roles settings are not sticking for Jetpack Stats
+- Page & Post: Fix the layout on mobile when details are open
 - Testimonials: fix a shortcode related bug which ccurs if the column attribute is added and set to 0
 - Tiled Gallery block: ensure movement and close icons are visible when selecting image in editor, by changing focusable element.
 
