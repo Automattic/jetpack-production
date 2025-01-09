@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Add webpack plugin to rename RTL files to match core WP expectations.
+
 ## [0.34.5] - 2025-01-06
 ### Changed
 - Updated package dependencies. [#40705] [#40784] [#40792] [#40800] [#40831]
