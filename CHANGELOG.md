@@ -23,6 +23,10 @@ This is an alpha version! The changes listed here are not final.
 - Updated social-logos import from default to named
 - Update newsletter category settings to clarify that you need to choose one or more categories to allow people to subscribe to.
 
+## 14.2.1 - 2025-01-09
+### Bug fixes
+- WC Analytics: Temporarily disable setcookie to avoid caching issues. [#40937]
+
 ## 14.2 - 2025-01-07
 ### Enhancements
 - Social: Improve Jetpack Likes behavior for better theme integration if the post has likes. [#40544]
