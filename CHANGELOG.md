@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Authors widget: Fix saving of unchecked "Display all authors" checkbox in the legacy widget editor.
 - Fix custom roles settings are not sticking for Jetpack Stats
 - Testimonials: fix a shortcode related bug which ccurs if the column attribute is added and set to 0
+- Tiled Gallery block: ensure movement and close icons are visible when selecting image in editor, by changing focusable element.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack AI: Enable ratings feedback thumbs for all
