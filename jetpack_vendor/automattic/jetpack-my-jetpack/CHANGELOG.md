@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add new WAF status on Protect card for when WAF is unsupported
 
+### Changed
+- Show an upgrade CTA anytime a product has an available upgrade
+
 ## [5.3.0] - 2025-01-06
 ### Added
 - My Jetpack: Added a new status for when Protect detects threats on the site. [#40628]
