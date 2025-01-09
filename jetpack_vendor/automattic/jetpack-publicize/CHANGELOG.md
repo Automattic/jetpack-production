@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Publicize: Allow filtering of connections in publicize rest endpoint
 
+### Changed
+- Updated connections post field rest endpoint to use the updated schema
+
 ## [0.57.1] - 2024-12-30
 ### Fixed
 - Social: Ensure that broken connection notices work fine on WoA sites. [#40732]
