@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.10.6-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.10.6] - 2025-01-10
 ### Changed
-- Fixes the self-hosted link when WooCommerce is installed alongside with the SSO.
+- Fixes the self-hosted link when WooCommerce is installed alongside SSO. [#40840]
 
 ## [0.10.5] - 2025-01-06
 ### Changed
@@ -201,7 +198,7 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
-[0.10.6-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.5...v0.10.6-alpha
+[0.10.6]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.5...v0.10.6
 [0.10.5]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.4...v0.10.5
 [0.10.4]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.3...v0.10.4
 [0.10.3]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.2...v0.10.3
