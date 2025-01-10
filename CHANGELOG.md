@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - WC Analytics: Temporarily disable setcookie to avoid caching issues.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adding extra html to be allowed in the welcome message
 - Jetpack AI: Enable ratings feedback thumbs for all
 - Load the adminbar stats graph lazily"
 - Post list: Ensure copy quick link is added after quick edit
