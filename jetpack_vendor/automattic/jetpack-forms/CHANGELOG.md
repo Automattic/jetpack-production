@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Add webpack plugin to rename RTL files to match core WP expectations.
+- Forms: Fix success message color inside a dark Cover block
 
 ## [0.34.5] - 2025-01-06
 ### Changed
