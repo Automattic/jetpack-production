@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Nova Restaurant: ensure that the custom post type is now loaded via the Classic Theme Helper package.
+
 ### Bug fixes
 - Authors widget: Fix saving of unchecked "Display all authors" checkbox in the legacy widget editor.
 - Fix custom roles settings are not sticking for Jetpack Stats
