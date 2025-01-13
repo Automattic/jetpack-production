@@ -2,32 +2,33 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.3-a.0 - unreleased
+## 14.3-a.2 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated package dependencies.
+
+## 14.3-a.1 - 2025-01-13
 ### Improved compatibility
-- Nova Restaurant: ensure that the custom post type is now loaded via the Classic Theme Helper package.
+- Nova Restaurant: ensure that the custom post type is now loaded via the Classic Theme Helper package. [#40782]
 
 ### Bug fixes
-- Authors widget: Fix saving of unchecked "Display all authors" checkbox in the legacy widget editor.
-- Fix custom roles settings are not sticking for Jetpack Stats
-- Page & Post: Fix the layout on mobile when details are open
-- Testimonials: fix a shortcode related bug which ccurs if the column attribute is added and set to 0
-- Tiled Gallery block: ensure movement and close icons are visible when selecting image in editor, by changing focusable element.
-- WC Analytics: Temporarily disable setcookie to avoid caching issues.
+- Authors widget: Fix saving of unchecked "Display all authors" checkbox in the legacy widget editor. [#40878]
+- Stats: Fix saving of custom roles settings. [#40853]
+- Pages and Posts: Fix the layout on mobile when details are open. [#40872]
+- Testimonials: Fix shortcode-related bug. [#40896]
+- Tiled Gallery block: Ensure icons are visible when selecting image in editor. [#40779]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Adding extra html to be allowed in the welcome message
-- Jetpack AI: Enable ratings feedback thumbs for all
-- Load the adminbar stats graph lazily"
-- Notifications: Support three-letter language code translations.
-- Post list: Ensure copy quick link is added after quick edit
-- Remove legacy Stats widget loader
-- Updated dependencies.
-- Updated package dependencies.
-- Updated social-logos import from default to named
-- Update newsletter category settings to clarify that you need to choose one or more categories to allow people to subscribe to.
+- Jetpack AI: Enable ratings feedback thumbs for all. [#40772]
+- Newsletter: Update category settings to clarify that one or more categories must be selected to allow people to subscribe. [#40727]
+- Notifications: Support three-letter language code translations. [#40973]
+- Post list: Ensure copy quick link is added after quick edit. [#40889]
+- Stats: Load the adminbar stats graph lazily. [#40865]
+- Stats: Remove legacy Stats widget loader. [#40839]
+- Updated dependencies. [#40773]
+- Update social-logos import from default to named. [#40816]
 
 ## 14.2.1 - 2025-01-09
 ### Bug fixes

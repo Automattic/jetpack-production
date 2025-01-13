@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.34.6-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.34.6] - 2025-01-13
 ### Fixed
-- Add webpack plugin to rename RTL files to match core WP expectations.
-- Fix form submission view if name field kept empty, email entry shows in name field
-- Forms: Fix success message color inside a dark Cover block
-- Forms: Update default URL field label to match front-end
+- Add webpack plugin to rename RTL files to match core WP expectations. [#40881]
+- Show email only in form submission view if name is empty. [#40898]
+- Forms: Fix success message color inside a dark Cover block. [#40917]
+- Forms: Update default URL field label to match front-end. [#40921]
 
 ## [0.34.5] - 2025-01-06
 ### Changed
@@ -757,7 +754,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.34.6-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.34.5...v0.34.6-alpha
+[0.34.6]: https://github.com/automattic/jetpack-forms/compare/v0.34.5...v0.34.6
 [0.34.5]: https://github.com/automattic/jetpack-forms/compare/v0.34.4...v0.34.5
 [0.34.4]: https://github.com/automattic/jetpack-forms/compare/v0.34.3...v0.34.4
 [0.34.3]: https://github.com/automattic/jetpack-forms/compare/v0.34.2...v0.34.3
