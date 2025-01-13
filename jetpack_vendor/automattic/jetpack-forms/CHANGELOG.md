@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Add webpack plugin to rename RTL files to match core WP expectations.
+- Fix form submission view if name field kept empty, email entry shows in name field
 - Forms: Fix success message color inside a dark Cover block
 - Forms: Update default URL field label to match front-end
 
