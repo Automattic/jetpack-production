@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding extra html to be allowed in the welcome message
 - Jetpack AI: Enable ratings feedback thumbs for all
 - Load the adminbar stats graph lazily"
+- Notifications: Support three-letter language code translations.
 - Post list: Ensure copy quick link is added after quick edit
 - Remove legacy Stats widget loader
 - Updated dependencies.
