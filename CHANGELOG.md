@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Post list: Ensure copy quick link is added after quick edit
 - Remove legacy Stats widget loader
 - Updated dependencies.
+- Updated package dependencies.
 - Updated social-logos import from default to named
 - Update newsletter category settings to clarify that you need to choose one or more categories to allow people to subscribe to.
 
