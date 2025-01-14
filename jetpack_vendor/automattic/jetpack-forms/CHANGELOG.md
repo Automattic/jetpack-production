@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: rename "URL" field to "Website"
+- Forms: use core icons for phone and email fields
 
 ### Fixed
 - Forms: Fix redirect field styles
