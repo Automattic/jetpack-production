@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Photon: Fix double encoding image urls.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- SIG: Changed description for togle
 - Updated package dependencies.
 
 ## 14.3-a.1 - 2025-01-13
