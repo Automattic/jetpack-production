@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: allow HTML block within forms
+
 ### Changed
 - Forms: rename "URL" field to "Website"
 - Forms: use core icons for phone and email fields
