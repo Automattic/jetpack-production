@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.35.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Forms: rename "URL" field to "Website"
+
 ## [0.34.6] - 2025-01-13
 ### Fixed
 - Add webpack plugin to rename RTL files to match core WP expectations. [#40881]
@@ -754,6 +761,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[0.35.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.34.6...v0.35.0-alpha
 [0.34.6]: https://github.com/automattic/jetpack-forms/compare/v0.34.5...v0.34.6
 [0.34.5]: https://github.com/automattic/jetpack-forms/compare/v0.34.4...v0.34.5
 [0.34.4]: https://github.com/automattic/jetpack-forms/compare/v0.34.3...v0.34.4
