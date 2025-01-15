@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: Fix the location of the sharing dialog, so it is not always the first sharing element on the page
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Block nudges: ensure clicking on a banner button leads to Plans page in Safari.
 - Embeds: fix the Descript block variation icon svg path.
 - Moved WPCOM_REST_API_Proxy_Request trait to the connection package
 - SIG: Changed description for togle

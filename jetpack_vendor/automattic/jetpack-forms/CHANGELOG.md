@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Fix redirect field styles
+- Upsell nudge: fix click in Safari
 
 ## [0.34.6] - 2025-01-13
 ### Fixed
