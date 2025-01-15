@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Embeds: fix the Descript block variation icon svg path.
 - Moved WPCOM_REST_API_Proxy_Request trait to the connection package
 - SIG: Changed description for togle
+- update composer.lock files
 - Updated package dependencies.
 - Update title of "Pexels Free Photos" to be sentence case to match adjacent options.
 
