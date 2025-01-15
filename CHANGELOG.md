@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Photon: Fix double encoding image urls.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Embeds: fix the Descript block variation icon svg path.
 - SIG: Changed description for togle
 - Updated package dependencies.
 
