@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Embeds: fix the Descript block variation icon svg path.
 - SIG: Changed description for togle
 - Updated package dependencies.
+- Update title of "Pexels Free Photos" to be sentence case to match adjacent options.
 
 ## 14.3-a.1 - 2025-01-13
 ### Improved compatibility
