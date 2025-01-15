@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Photon: Fix double encoding image urls.
+- Sharing: Fix the location of the sharing dialog, so it is not always the first sharing element on the page
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Embeds: fix the Descript block variation icon svg path.
