@@ -30,7 +30,7 @@
 		"@automattic/format-currency": "1.0.1",
 		"@automattic/jetpack-analytics": "^0.1.34",
 		"@automattic/jetpack-api": "^0.17.21",
-		"@automattic/jetpack-components": "^0.65.3",
+		"@automattic/jetpack-components": "^0.65.4-alpha",
 		"@automattic/jetpack-connection": "^0.36.3",
 		"@tanstack/react-query": "5.20.5",
 		"@wordpress/api-fetch": "7.14.0",
