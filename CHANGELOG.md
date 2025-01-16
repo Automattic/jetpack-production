@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix: newsletter toggle in editor sidebar has a visually broken active state.
+- Forms: Fix dropdown icon style
 - Photon: Fix double encoding image urls.
 - Sharing: Fix the location of the sharing dialog, so it is not always the first sharing element on the page
 

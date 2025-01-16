@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: use core icons for phone and email fields
 
 ### Fixed
+- Forms: Fix dropdown icon styling.
 - Forms: Fix redirect field styles
 - Upsell nudge: fix click in Safari
 
