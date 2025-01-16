@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- add caching for the red bubble alerts for My Jetpack
 - Add option for devs to reset jetpack options from My Jetpack footer
 - Add sandboxed tag to My Jetpack
 
