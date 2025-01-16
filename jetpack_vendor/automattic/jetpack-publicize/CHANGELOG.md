@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - License: Social admin page header hides license link on WoA sites.
 
+### Fixed
+- Social | Fixed the status field for connections to allow null
+
 ## [0.57.3] - 2025-01-14
 ### Fixed
 - Social: Fix failure on post save with LinkedIn connection enabled. [#41000]
