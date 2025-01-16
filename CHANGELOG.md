@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: allow HTML block within forms
 
 ### Bug fixes
+- Fix: newsletter toggle in editor sidebar has a visually broken active state.
 - Photon: Fix double encoding image urls.
 - Sharing: Fix the location of the sharing dialog, so it is not always the first sharing element on the page
 
