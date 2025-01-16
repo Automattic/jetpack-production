@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Block nudges: ensure clicking on a banner button leads to Plans page in Safari.
 - Embeds: fix the Descript block variation icon svg path.
+- Full Sync: Added context
 - Hide related posts options for block themes
 - Moved WPCOM_REST_API_Proxy_Request trait to the connection package
 - SIG: Changed description for togle
