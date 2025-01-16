@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Embeds: fix the Descript block variation icon svg path.
 - Full Sync: Added context
 - Hide related posts options for block themes
+- Jetpack AI: add PoC for SEO assistant, hardcoded and no actionables yet
 - Moved WPCOM_REST_API_Proxy_Request trait to the connection package
 - SIG: Changed description for togle
 - update composer.lock files
