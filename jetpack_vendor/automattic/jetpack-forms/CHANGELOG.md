@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: rename "URL" field to "Website"
 - Forms: settings, opt-in for default 40px size in gutenberg
+- Forms: update width control to use more modern ToggleGroupControl
 - Forms: use core icons for phone and email fields
 
 ### Fixed
