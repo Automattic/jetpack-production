@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix dropdown icon styling.
 - Forms: Fix redirect field styles
 - Forms: fix spacing issue in sidebar settings
+- Forms: Properly support formatting options for labels and required text
 - Upsell nudge: fix click in Safari
 
 ## [0.34.6] - 2025-01-13
