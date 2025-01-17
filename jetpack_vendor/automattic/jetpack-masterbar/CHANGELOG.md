@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add watch command in the masterbar package
 
+### Removed
+- Removed Settings > Security menu item from wpcom atomic sites in the hold out experiment.
+
 ## [0.10.6] - 2025-01-10
 ### Changed
 - Fixes the self-hosted link when WooCommerce is installed alongside SSO. [#40840]
