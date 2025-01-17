@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix dropdown icon style
 - Photon: Fix double encoding image urls.
 - Sharing: Fix the location of the sharing dialog, so it is not always the first sharing element on the page
+- Social | Fix wordpress.com log in error when connecting Social accounts
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Block nudges: ensure clicking on a banner button leads to Plans page in Safari.

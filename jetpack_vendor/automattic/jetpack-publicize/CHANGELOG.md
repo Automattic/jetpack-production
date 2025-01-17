@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - License: Social admin page header hides license link on WoA sites.
 
 ### Fixed
+- Social Disable caching for publicize services list to avoid stale nonces
 - Social | Fixed the status field for connections to allow null
 
 ## [0.57.3] - 2025-01-14
