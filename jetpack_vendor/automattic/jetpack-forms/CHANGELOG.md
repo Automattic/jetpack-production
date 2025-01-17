@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: allow HTML block within forms
+- Forms: Handle `Enter` on empty radio/checkbox input
 
 ### Changed
 - Forms: rename "URL" field to "Website"
