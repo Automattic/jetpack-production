@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: allow HTML block within forms
+- Show Infinite Scroll options in Simple Classic
 
 ### Bug fixes
 - Fix: newsletter toggle in editor sidebar has a visually broken active state.
