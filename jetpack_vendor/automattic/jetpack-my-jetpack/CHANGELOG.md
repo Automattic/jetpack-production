@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.4.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Adding new modal based interstitial component.
+
 ## [5.3.3] - 2025-01-20
 ### Added
 - Add caching for the red bubble alerts for My Jetpack. [#41131]
@@ -1915,6 +1922,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.4.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.3.3...5.4.0-alpha
 [5.3.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.3.2...5.3.3
 [5.3.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.3.1...5.3.2
 [5.3.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.3.0...5.3.1
