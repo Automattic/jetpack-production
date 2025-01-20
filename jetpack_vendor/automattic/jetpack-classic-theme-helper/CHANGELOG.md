@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Code: Use function-style exit() and die() with a default status code of 0.
+- Updated package dependencies.
 
 ## [0.9.0] - 2025-01-13
 ### Added

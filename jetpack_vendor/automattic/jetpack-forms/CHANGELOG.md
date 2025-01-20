@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: settings, opt-in for default 40px size in gutenberg
 - Forms: update width control to use more modern ToggleGroupControl
 - Forms: use core icons for phone and email fields
+- Updated package dependencies.
 
 ### Fixed
 - Forms: Fix dropdown icon styling.

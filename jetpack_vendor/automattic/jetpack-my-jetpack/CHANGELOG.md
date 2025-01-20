@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Add option for devs to reset jetpack options from My Jetpack footer
 - Add sandboxed tag to My Jetpack
 
+### Changed
+- Updated package dependencies.
+
 ## [5.3.2] - 2025-01-14
 ### Fixed
 - Fix bug where description doesn't show up on backup card in specific scenarios. [#40904]
