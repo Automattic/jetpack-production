@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Moved WPCOM_REST_API_Proxy_Request trait to the connection package
 
+### Fixed
+- Add heartbeat deactivation on site disconnection.
+
 ## [6.2.2] - 2025-01-06
 ### Added
 - Added tests to increase code coverage. [#39963]
