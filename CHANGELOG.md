@@ -22,6 +22,13 @@ This is an alpha version! The changes listed here are not final.
 - Full Sync: Added context
 - Hide related posts options for block themes
 - Jetpack AI: add PoC for SEO assistant, hardcoded and no actionables yet
+- Jetpack AI: Updates / clean up to Jetpack AI assistant sidebar
+  * Buttons now have 100% width and are 40px tall
+  * Updated text in various places
+  * Added message that displays when a post has no content
+  * Cleaned up spacing in a few places
+  * Changed color of some text
+  * Write Brief checkboxes are hidden by toggle now
 - Moved WPCOM_REST_API_Proxy_Request trait to the connection package
 - SIG: Changed description for togle
 - update composer.lock files
