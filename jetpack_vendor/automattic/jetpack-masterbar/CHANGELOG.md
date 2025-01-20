@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.11.0] - 2025-01-20
 ### Changed
-- Add watch command in the masterbar package
-- Code: Use function-style exit() and die() with a default status code of 0.
-- Updated package dependencies.
+- Add watch command in the masterbar package. [#41066]
+- Code: Use function-style exit() and die() with a default status code of 0. [#41167]
+- Updated package dependencies. [#41099]
 
 ### Removed
-- Removed Settings > Security menu item from wpcom atomic sites in the hold out experiment.
+- Removed Settings > Security menu item from wpcom atomic sites in the hold out experiment. [#41112]
 
 ## [0.10.6] - 2025-01-10
 ### Changed
@@ -210,7 +207,7 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
-[0.11.0-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.6...v0.11.0-alpha
+[0.11.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.6...v0.11.0
 [0.10.6]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.5...v0.10.6
 [0.10.5]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.4...v0.10.5
 [0.10.4]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.3...v0.10.4

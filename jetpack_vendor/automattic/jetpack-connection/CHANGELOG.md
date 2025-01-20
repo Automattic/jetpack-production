@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.3.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.3.0] - 2025-01-20
 ### Changed
-- Code: Use function-style exit() and die() with a default status code of 0.
-- Moved WPCOM_REST_API_Proxy_Request trait to the connection package
-- Updated package dependencies.
+- Code: Use function-style exit() and die() with a default status code of 0. [#41167]
+- Move WPCOM_REST_API_Proxy_Request trait to the connection package. [#41023]
+- Updated package dependencies. [#41099]
 
 ### Fixed
-- Add heartbeat deactivation on site disconnection.
+- Add heartbeat deactivation on site disconnection. [#41117]
 
 ## [6.2.2] - 2025-01-06
 ### Added
@@ -1290,7 +1287,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.3.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.2.2...v6.3.0-alpha
+[6.3.0]: https://github.com/Automattic/jetpack-connection/compare/v6.2.2...v6.3.0
 [6.2.2]: https://github.com/Automattic/jetpack-connection/compare/v6.2.1...v6.2.2
 [6.2.1]: https://github.com/Automattic/jetpack-connection/compare/v6.2.0...v6.2.1
 [6.2.0]: https://github.com/Automattic/jetpack-connection/compare/v6.1.1...v6.2.0
