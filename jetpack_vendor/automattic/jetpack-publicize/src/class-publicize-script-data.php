@@ -7,11 +7,11 @@
 
 namespace Automattic\Jetpack\Publicize;
 
-use Automattic\Jetpack\Connection\Client;
 use Automattic\Jetpack\Connection\Manager;
 use Automattic\Jetpack\Current_Plan;
 use Automattic\Jetpack\Publicize\Jetpack_Social_Settings\Settings;
 use Automattic\Jetpack\Publicize\Publicize_Utils as Utils;
+use Automattic\Jetpack\Publicize\Services as Publicize_Services;
 use Automattic\Jetpack\Status;
 use Automattic\Jetpack\Status\Host;
 use Jetpack_Options;
@@ -20,6 +20,8 @@ use Jetpack_Options;
  * Publicize_Script_Data class.
  */
 class Publicize_Script_Data {
+
+	const SERVICES_TRANSIENT = 'jetpack_social_services_list';
 
 	/**
 	 * Get the publicize instance - properly typed
@@ -69,6 +71,9 @@ class Publicize_Script_Data {
 
 		$data['site']['wpcom']['blog_id'] = Manager::get_site_id( true );
 		$data['site']['suffix']           = ( new Status() )->get_site_suffix();
+		if ( ! isset( $data['site']['host'] ) ) {
+			$data['site']['host'] = ( new Host() )->get_known_host_guess();
+		}
 
 		return $data;
 	}
@@ -134,6 +139,7 @@ class Publicize_Script_Data {
 
 		return array(
 			'socialImageGenerator' => $settings->get_image_generator_settings(),
+			'utmSettings'          => $settings->get_utm_settings(),
 		);
 	}
 
@@ -146,14 +152,21 @@ class Publicize_Script_Data {
 
 		$is_wpcom = ( new Host() )->is_wpcom_platform();
 
+		$post = get_post();
+
+		$share_status = array();
+
+		// get_post_share_status is not available on WPCOM yet.
+		if ( Utils::should_block_editor_have_social() && $post && ! $is_wpcom ) {
+			$share_status[ $post->ID ] = self::publicize()->get_post_share_status( $post->ID );
+		}
+
 		return array(
 			'connectionData' => array(
 				// We do not have this method on WPCOM Publicize class yet.
 				'connections' => ! $is_wpcom ? self::publicize()->get_all_connections_for_user() : array(),
 			),
-			'shareStatus'    => array(
-				// Here goes the share status data for posts with key as post ID.
-			),
+			'shareStatus'    => $share_status,
 		);
 	}
 
@@ -216,27 +229,13 @@ class Publicize_Script_Data {
 	 * @return array List of external services and their settings.
 	 */
 	public static function get_supported_services() {
-		$site_id = Manager::get_site_id();
-		if ( is_wp_error( $site_id ) ) {
-			return array();
-		}
-		$path     = sprintf( '/sites/%d/external-services', $site_id );
-		$response = Client::wpcom_json_api_request_as_user( $path );
-		if ( is_wp_error( $response ) ) {
-			return array();
-		}
-		$body = json_decode( wp_remote_retrieve_body( $response ) );
-
-		$services = $body->services ?? array();
-
-		return array_values(
-			array_filter(
-				(array) $services,
-				function ( $service ) {
-					return isset( $service->type ) && 'publicize' === $service->type;
-				}
-			)
-		);
+		/**
+		 * Disable caching for now to avoid nonce errors
+		 * for secondary users trying to connect an account
+		 *
+		 * @link https://github.com/Automattic/jetpack/pull/41149
+		 */
+		return Publicize_Services::get_all( true /* Ignore cache */ );
 	}
 
 	/**
@@ -246,9 +245,9 @@ class Publicize_Script_Data {
 	 */
 	public static function get_api_paths() {
 
-		$is_simple_site = ( new Host() )->is_wpcom_simple();
+		$is_wpcom = ( new Host() )->is_wpcom_platform();
 
-		if ( $is_simple_site ) {
+		if ( $is_wpcom ) {
 			return array(
 				'refreshConnections' => '/wpcom/v2/publicize/connection-test-results',
 				'resharePost'        => '/wpcom/v2/posts/{postId}/publicize',

@@ -227,6 +227,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 		switch ( $field_type ) {
 			case 'url':
 				if ( ! is_string( $field_value ) || empty( $field_value ) || ! preg_match(
+					// Changes to this regex should be synced with the regex in the render_url_field method of this class as both validate the same input. Note that this regex is in PCRE format.
 					'%^(?:(?:https?|ftp)://)?(?:\S+(?::\S*)?@|\d{1,3}(?:\.\d{1,3}){3}|(?:(?:[a-z\d\x{00a1}-\x{ffff}]+-?)*[a-z\d\x{00a1}-\x{ffff}]+)(?:\.(?:[a-z\d\x{00a1}-\x{ffff}]+-?)*[a-z\d\x{00a1}-\x{ffff}]+)*(?:\.[a-z\x{00a1}-\x{ffff}]{2,6}))(?::\d+)?(?:[^\s]*)?$%iu',
 					$field_value
 				) ) {
@@ -454,7 +455,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 				class='grunion-field-label{$type_class}" . ( $this->is_error() ? ' form-error' : '' ) . "'"
 				. $extra_attrs_string
 				. '>'
-				. esc_html( $label )
+				. wp_kses_post( $label )
 				. ( $required ? '<span class="grunion-label-required" aria-hidden="true">' . $required_field_text . '</span>' : '' )
 				. "</label>\n";
 	}
@@ -590,7 +591,8 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 			'title'              => $custom_validation_message,
 			'oninvalid'          => 'setCustomValidity("' . $custom_validation_message . '")',
 			'oninput'            => 'setCustomValidity("")',
-			'pattern'            => '(([:\/a-zA-Z0-9_\-]+)?(\.[a-zA-Z0-9_\-\/]+)+)',
+			// Changes to this regex should be synced with the regex in the URL validation of the validate method of this class as both validate the same input. Note that this regex is in ECMAScript (JS) format.
+			'pattern'            => '(?:(?:[Hh][Tt][Tt][Pp][Ss]?|[Ff][Tt][Pp]):\/\/)?(?:\S+(?::\S*)?@|\d{1,3}(?:\.\d{1,3}){3}|(?:(?:[a-zA-Z\d\u00a1-\uffff]+-?)*[a-zA-Z\d\u00a1-\uffff]+)(?:\.(?:[a-zA-Z\d\u00a1-\uffff]+-?)*[a-zA-Z\d\u00a1-\uffff]+)*(?:\.[a-zA-Z\u00a1-\uffff]{2,6}))(?::\d+)?(?:[^\s]*)?',
 			'data-type-override' => 'url',
 		);
 
@@ -691,7 +693,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 		$field  = "<div class='contact-form__checkbox-wrap'>";
 		$field .= "<input id='" . esc_attr( $id ) . "' type='checkbox' name='" . esc_attr( $id ) . "' value='" . esc_attr__( 'Yes', 'jetpack-forms' ) . "' " . $class . checked( (bool) $value, true, false ) . ' ' . ( $required ? "required aria-required='true'" : '' ) . "/> \n";
 		$field .= "<label for='" . esc_attr( $id ) . "' class='grunion-field-label checkbox" . ( $this->is_error() ? ' form-error' : '' ) . "' style='" . $this->label_styles . "'>";
-		$field .= esc_html( $label ) . ( $required ? '<span class="grunion-label-required" aria-hidden="true">' . $required_field_text . '</span>' : '' );
+		$field .= wp_kses_post( $label ) . ( $required ? '<span class="grunion-label-required" aria-hidden="true">' . $required_field_text . '</span>' : '' );
 		$field .= "</label>\n";
 		$field .= "<div class='clear-form'></div>\n";
 		$field .= '</div>';
@@ -715,7 +717,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 		} else {
 			$field .= "\t\t<input type='checkbox' name='" . esc_attr( $id ) . "' value='" . esc_attr__( 'Yes', 'jetpack-forms' ) . "' " . $class . "/> \n";
 		}
-		$field .= "\t\t" . esc_html( $consent_message );
+		$field .= "\t\t" . wp_kses_post( $consent_message );
 		$field .= "</label>\n";
 		$field .= "<div class='clear-form'></div>\n";
 		return $field;
@@ -1010,7 +1012,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 		 *
 		 * @param string $var Required field text. Default is "(required)".
 		 */
-		$required_field_text = esc_html( apply_filters( 'jetpack_required_field_text', $required_field_text ) );
+		$required_field_text = wp_kses_post( apply_filters( 'jetpack_required_field_text', $required_field_text ) );
 
 		$block_style = 'style="' . $this->block_styles . '"';
 

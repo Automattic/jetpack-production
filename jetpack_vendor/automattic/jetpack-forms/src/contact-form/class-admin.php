@@ -439,7 +439,7 @@ class Admin {
 		if ( current_user_can( 'edit_posts' ) ) {
 			Form_View::display();
 		}
-		exit;
+		exit( 0 );
 	}
 
 	/**
@@ -549,7 +549,7 @@ class Admin {
 
 		if ( empty( $_REQUEST['post'] ) ) {
 			wp_safe_redirect( wp_get_referer() );
-			exit;
+			exit( 0 );
 		}
 
 		$post_ids = array_map( 'intval', $_REQUEST['post'] );
@@ -583,7 +583,7 @@ class Admin {
 
 		$redirect_url = add_query_arg( 'message', 'marked-spam', wp_get_referer() );
 		wp_safe_redirect( $redirect_url );
-		exit;
+		exit( 0 );
 	}
 
 	/**
@@ -981,11 +981,28 @@ class Admin {
 			}
 		}
 
-		if ( isset( $_POST['fields'] ) && is_array( $_POST['fields'] ) ) {
-			$fields = sanitize_text_field( stripslashes_deep( $_POST['fields'] ) );
-			usort( $fields, array( $this, 'grunion_sort_objects' ) );
+		$field_shortcodes = array();
 
-			$field_shortcodes = array();
+		if ( isset( $_POST['fields'] ) && is_array( $_POST['fields'] ) ) {
+			$fields = array_map(
+				function ( $field ) {
+					if ( is_array( $field ) ) {
+
+						foreach ( array( 'label', 'type', 'required' ) as $key ) {
+							if ( isset( $field[ $key ] ) ) {
+								$field[ $key ] = sanitize_text_field( wp_unslash( $field[ $key ] ) );
+							}
+						}
+
+						if ( isset( $field['options'] ) && is_array( $field['options'] ) ) {
+							$field['options'] = array_map( 'sanitize_text_field', array_map( 'wp_unslash', $field['options'] ) );
+						}
+					}
+					return $field;
+				},
+				$_POST['fields'] // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- each item sanitized above.
+			);
+			usort( $fields, array( $this, 'grunion_sort_objects' ) );
 
 			foreach ( $fields as $field ) {
 				$field_attributes = array();
@@ -1238,7 +1255,7 @@ class Admin {
 		}
 
 		echo $status_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- we're building the html to echo.
-		exit;
+		exit( 0 );
 	}
 
 	/**
@@ -1411,8 +1428,7 @@ class Admin {
 		$query = 'post_type=feedback&post_status=publish';
 
 		if ( isset( $_POST['limit'] ) && isset( $_POST['offset'] ) ) {
-			// phpcs:ignore Generic.Strings.UnnecessaryStringConcat.Found -- Avoiding https://github.com/WordPress/WordPress-Coding-Standards/issues/2390
-			$query .= '&posts_per' . '_page=' . (int) $_POST['limit'] . '&offset=' . (int) $_POST['offset'];
+			$query .= '&posts_per_page=' . (int) $_POST['limit'] . '&offset=' . (int) $_POST['offset'];
 		}
 
 		$approved_feedbacks = get_posts( $query );

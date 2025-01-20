@@ -2010,7 +2010,7 @@ class Jetpack {
 				$page = sanitize_text_field( wp_unslash( $_GET['page'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- we're not changing the site.
 			}
 			wp_safe_redirect( self::admin_url( 'page=' . rawurlencode( $page ) ) );
-			exit;
+			exit( 0 );
 		}
 	}
 
@@ -2401,7 +2401,7 @@ class Jetpack {
 					add_query_arg( compact( 'min_version', 'max_version', 'other_modules' ), self::admin_url( 'page=jetpack' ) )
 				);
 				wp_safe_redirect( $url );
-				exit;
+				exit( 0 );
 			}
 		}
 
@@ -2609,7 +2609,7 @@ p {
 				update_option( 'active_plugins', array_filter( $plugins ) );
 			}
 		}
-		exit;
+		exit( 0 );
 	}
 
 	/**
@@ -3324,7 +3324,7 @@ p {
 
 		status_header( 200 );
 		if ( true === $response ) {
-			exit;
+			exit( 0 );
 		}
 
 		die( wp_json_encode( (object) $response ) );
@@ -3488,16 +3488,6 @@ p {
 	}
 
 	/**
-	 * Doesn't do anything anymore.
-	 *
-	 * @deprecated 13.9 We no longer show the "Help" button.
-	 *
-	 * @since Jetpack (1.2.3)
-	 * @return void
-	 */
-	public function admin_help() {}
-
-	/**
 	 * Add action links for the Jetpack plugin.
 	 *
 	 * @param array $actions Plugin actions.
@@ -3596,7 +3586,7 @@ p {
 					self::get_calypso_host() . 'jetpack/connect'
 				)
 			);
-			exit;
+			exit( 0 );
 		}
 	}
 
@@ -3703,7 +3693,7 @@ p {
 
 					add_filter( 'allowed_redirect_hosts', array( Host::class, 'allow_wpcom_environments' ) );
 					wp_safe_redirect( $url );
-					exit;
+					exit( 0 );
 				case 'activate':
 					if ( ! current_user_can( 'jetpack_activate_modules' ) ) {
 						$error = 'cheatin';
@@ -3719,7 +3709,7 @@ p {
 					}
 					// The following two lines will rarely happen, as Jetpack::activate_module normally exits at the end.
 					wp_safe_redirect( self::admin_url( 'page=jetpack' ) );
-					exit;
+					exit( 0 );
 				case 'activate_default_modules':
 					check_admin_referer( 'activate_default_modules' );
 					self::log( 'activate_default_modules' );
@@ -3729,7 +3719,7 @@ p {
 					$other_modules = isset( $_GET['other_modules'] ) && is_array( $_GET['other_modules'] ) ? array_map( 'sanitize_text_field', wp_unslash( $_GET['other_modules'] ) ) : array();
 					self::activate_default_modules( $min_version, $max_version, $other_modules );
 					wp_safe_redirect( self::admin_url( 'page=jetpack' ) );
-					exit;
+					exit( 0 );
 				case 'disconnect':
 					if ( ! current_user_can( 'jetpack_disconnect' ) ) {
 						$error = 'cheatin';
@@ -3740,7 +3730,7 @@ p {
 					self::log( 'disconnect' );
 					self::disconnect();
 					wp_safe_redirect( self::admin_url( 'disconnected=true' ) );
-					exit;
+					exit( 0 );
 				case 'reconnect':
 					if ( ! current_user_can( 'jetpack_reconnect' ) ) {
 						$error = 'cheatin';
@@ -3753,7 +3743,7 @@ p {
 
 					add_filter( 'allowed_redirect_hosts', array( Host::class, 'allow_wpcom_environments' ) );
 					wp_safe_redirect( $this->build_connect_url( true, false, 'reconnect' ) );
-					exit;
+					exit( 0 );
 				case 'deactivate':
 					if ( ! current_user_can( 'jetpack_deactivate_modules' ) ) {
 						$error = 'cheatin';
@@ -3769,7 +3759,7 @@ p {
 					}
 					self::state( 'module', $modules );
 					wp_safe_redirect( self::admin_url( 'page=jetpack' ) );
-					exit;
+					exit( 0 );
 				case 'unlink':
 					$redirect = isset( $_GET['redirect'] ) ? sanitize_text_field( wp_unslash( $_GET['redirect'] ) ) : '';
 					check_admin_referer( 'jetpack-unlink' );
@@ -3781,7 +3771,7 @@ p {
 					} else {
 						wp_safe_redirect( self::admin_url( array( 'page' => rawurlencode( $redirect ) ) ) );
 					}
-					exit;
+					exit( 0 );
 				default:
 					/**
 					 * Fires when a Jetpack admin page is loaded with an unrecognized parameter.
@@ -4512,6 +4502,7 @@ endif;
 				if ( is_a( $jp_user, 'WP_User' ) ) {
 					wp_set_current_user( $jp_user->ID );
 					$user_can = is_multisite()
+						// @phan-suppress-next-line PhanDeprecatedFunction -- @todo Switch to current_user_can_for_site when we drop support for WP 6.6.
 						? current_user_can_for_blog( get_current_blog_id(), 'manage_options' )
 						: current_user_can( 'manage_options' );
 					if ( $user_can ) {
@@ -5925,6 +5916,23 @@ endif;
 				_x( 'Earn more from your content', 'Creator Product Feature', 'jetpack' ),
 				_x( 'Accept payments with PayPal', 'Creator Product Feature', 'jetpack' ),
 				_x( 'Increase earnings with WordAds', 'Creator Product Feature', 'jetpack' ),
+			),
+		);
+
+		$products['growth'] = array(
+			'title'             => __( 'Jetpack Growth', 'jetpack' ),
+			'slug'              => 'jetpack_growth_yearly',
+			'description'       => __( 'Essential tools to help you grow your audience, track visitor engagement, and turn leads into loyal customers and advocates.', 'jetpack' ),
+			'show_promotion'    => true,
+			'discount_percent'  => 50,
+			'included_in_plans' => array( 'complete' ),
+			'features'          => array(
+				_x( 'Jetpack Social', 'Growth Product Feature', 'jetpack' ),
+				_x( 'Jetpack Stats (10K site views, upgradeable)', 'Growth Product Feature', 'jetpack' ),
+				_x( 'Unlimited subscriber imports', 'Growth Product Feature', 'jetpack' ),
+				_x( 'Earn more from your content', 'Growth Product Feature', 'jetpack' ),
+				_x( 'Accept payments with PayPal', 'Growth Product Feature', 'jetpack' ),
+				_x( 'Increase earnings with WordAds', 'Growth Product Feature', 'jetpack' ),
 			),
 		);
 
