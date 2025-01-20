@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Code: Use function-style exit() and die() with a default status code of 0.
 - Moved WPCOM_REST_API_Proxy_Request trait to the connection package
 
 ### Fixed

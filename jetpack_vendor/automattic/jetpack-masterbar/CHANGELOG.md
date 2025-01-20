@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add watch command in the masterbar package
+- Code: Use function-style exit() and die() with a default status code of 0.
 
 ### Removed
 - Removed Settings > Security menu item from wpcom atomic sites in the hold out experiment.

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Full Sync: Added context
 
+### Changed
+- Code: Use function-style exit() and die() with a default status code of 0.
+
 ## [4.3.0] - 2025-01-09
 ### Added
 - Instant Search: add taxonomies for a8c-support-theme kb_article cpt. [#38660]

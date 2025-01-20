@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Handle `Enter` on empty radio/checkbox input
 
 ### Changed
+- Code: Use function-style exit() and die() with a default status code of 0.
 - Forms: rename "URL" field to "Website"
 - Forms: settings, opt-in for default 40px size in gutenberg
 - Forms: update width control to use more modern ToggleGroupControl

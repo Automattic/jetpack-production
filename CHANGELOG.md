@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Social | Fix wordpress.com log in error when connecting Social accounts
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Code: Use function-style exit() and die() with a default status code of 0.
 - Embeds: fix the Descript block variation icon svg path.
 - Full Sync: Added context
 - Hide related posts options for block themes
