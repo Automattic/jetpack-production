@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Create new default block when pressing Enter on text inputs
 
 ### Fixed
+- Adds missing deprecation for checkboxes and radio fields
 - Forms: Add unique ids to each form
 
 ## [0.35.0] - 2025-01-20
