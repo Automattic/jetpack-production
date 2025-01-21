@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Adding new modal based interstitial component.
 
+### Fixed
+- Fix bug where My Jetpack would throw critical error if only a standalone plugin is not installed
+
 ## [5.3.3] - 2025-01-20
 ### Added
 - Add caching for the red bubble alerts for My Jetpack. [#41131]
