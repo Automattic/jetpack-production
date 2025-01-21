@@ -56,6 +56,11 @@ function jetpack_get_module_i18n( $key ) {
 				'description' => _x( 'Display different types of content on your site with custom content types.', 'Module Description', 'jetpack' ),
 			),
 
+			'geo-location' => array(
+				'name' => _x( 'Geo Location', 'Module Name', 'jetpack' ),
+				'description' => _x( 'Add location data to your posts.', 'Module Description', 'jetpack' ),
+			),
+
 			'google-fonts' => array(
 				'name' => _x( 'Google Fonts (Beta)', 'Module Name', 'jetpack' ),
 				'description' => _x( 'A selection of Google fonts for block enabled themes. This feature is still being developed.', 'Module Description', 'jetpack' ),
@@ -501,6 +506,24 @@ function jetpack_get_module_info( $key ) {
 	    'module_tags' => 'Writing',
 	    'feature' => 'Writing',
 	    'additional_search_queries' => 'cpt, custom post types, portfolio, portfolios, testimonial, testimonials',
+	    'plan_classes' => '',
+	  ),
+	  'geo-location' => 
+	  array (
+	    'name' => 'Geo Location',
+	    'description' => 'Add location data to your posts.',
+	    'sort' => '',
+	    'recommendation_order' => '',
+	    'introduced' => '',
+	    'changed' => '',
+	    'deactivate' => '',
+	    'free' => '',
+	    'requires_connection' => '',
+	    'requires_user_connection' => '',
+	    'auto_activate' => '',
+	    'module_tags' => '',
+	    'feature' => '',
+	    'additional_search_queries' => '',
 	    'plan_classes' => '',
 	  ),
 	  'google-fonts' => 
@@ -1153,12 +1176,11 @@ function jetpack_get_all_module_header_names() {
  */
 function jetpack_has_no_module_info( $slug ) {
 	$no_info_slugs = array (
-	  0 => 'geo-location',
-	  1 => 'masterbar',
-	  2 => 'module-extras',
-	  3 => 'module-info',
-	  4 => 'plugin-search',
-	  5 => 'theme-tools',
+	  0 => 'masterbar',
+	  1 => 'module-extras',
+	  2 => 'module-info',
+	  3 => 'plugin-search',
+	  4 => 'theme-tools',
 	);
 
 	return in_array( $slug, $no_info_slugs, true );
