@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Deprecate Jetpack geo location module
 - Fix the rendering of jetpack google fonts font faces for classic themes.
+- Forms: fixed default editor stying for textarea
 
 ## 14.3-a.3 - 2025-01-20
 ### Enhancements
