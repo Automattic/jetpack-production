@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Social | Fix publicize error in the editor due to malformed connections data
+
 ## 14.3-a.3 - 2025-01-20
 ### Enhancements
 - Forms: Allow HTML block within forms. [#41040]

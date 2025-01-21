@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.58.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Social | Unify connections management API schema
+
+### Fixed
+- Social | Fix feature check for social connections list initial state
+
 ## [0.57.4] - 2025-01-20
 ### Changed
 - Code: Use function-style exit() and die() with a default status code of 0. [#41167]
@@ -817,6 +827,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.58.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.4...v0.58.0-alpha
 [0.57.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.3...v0.57.4
 [0.57.3]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.2...v0.57.3
 [0.57.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.1...v0.57.2
