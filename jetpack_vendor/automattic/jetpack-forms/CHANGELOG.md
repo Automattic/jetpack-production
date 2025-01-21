@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.35.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Forms: Add unique ids to each form
+
 ## [0.35.0] - 2025-01-20
 ### Added
 - Forms: Allow HTML block within forms. [#41040]
@@ -773,6 +780,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[0.35.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.35.0...v0.35.1-alpha
 [0.35.0]: https://github.com/automattic/jetpack-forms/compare/v0.34.6...v0.35.0
 [0.34.6]: https://github.com/automattic/jetpack-forms/compare/v0.34.5...v0.34.6
 [0.34.5]: https://github.com/automattic/jetpack-forms/compare/v0.34.4...v0.34.5
