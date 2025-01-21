@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: Create new default block when pressing Enter on text inputs
+
 ### Fixed
 - Forms: Add unique ids to each form
 
