@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Deprecate Jetpack geo location module
 - Fix the rendering of jetpack google fonts font faces for classic themes.
 - Forms: fixed default editor stying for textarea
+- Revert "Related Posts: Hide settings in block themes"
 
 ## 14.3-a.3 - 2025-01-20
 ### Enhancements
