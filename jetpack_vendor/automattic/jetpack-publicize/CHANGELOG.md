@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Social | Unify connections management API schema
 
 ### Fixed
+- Social | Fix editor invalid parameters error for old Jetpack versions.
 - Social | Fix feature check for social connections list initial state
 
 ## [0.57.4] - 2025-01-20
