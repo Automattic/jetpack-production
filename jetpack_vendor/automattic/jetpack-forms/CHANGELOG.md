@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Adds missing deprecation for checkboxes and radio fields
+- Form: fix the default checkstate for admins
 - Forms: Add unique ids to each form
 - Updates the icon colours to the new standard
 
