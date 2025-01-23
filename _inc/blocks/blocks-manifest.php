@@ -825,6 +825,7 @@ To start using the **Jetpack AI Assistant**, type `/AI` in the block editor.',
       array (
         'gradients' => true,
         'link' => true,
+        'background' => true,
       ),
       'spacing' => 
       array (
@@ -884,6 +885,7 @@ To start using the **Jetpack AI Assistant**, type `/AI` in the block editor.',
         'default' => false,
       ),
     ),
+    'viewScript' => 'file:./view.js',
     'editorScript' => 'jetpack-blocks-editor',
   ),
   'donations' => 
