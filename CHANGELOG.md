@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Social: Fix profile links for LinkedIn connections
 - Social | Fix publicize error in the editor due to malformed connections data
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
