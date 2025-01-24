@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Deprecate Jetpack geo location module
 - Fix the rendering of jetpack google fonts font faces for classic themes.
 - Forms: fixed default editor stying for textarea
+- Forms: Remove wrapping <div> element from form block.
 - Jetpack AI: excerpt panel now uses PluginDocumentSettingPanel slotfill for compatibility with site and post editor
 - Jetpack button: implement outline style
 - Revert "Related Posts: Hide settings in block themes"

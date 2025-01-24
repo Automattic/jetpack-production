@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Create new default block when pressing Enter on text inputs
 
+### Changed
+- Forms: Remove wrapping <div> element from form block.
+
 ### Fixed
 - Adds missing deprecation for checkboxes and radio fields
 - Form: fix the default checkstate for admins
