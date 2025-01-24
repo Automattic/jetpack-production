@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Sitemaps: ensures a valid news sitemap is present even if no posts are eligible.
 - Social: Fix profile links for LinkedIn connections
 - Social | Fix publicize error in the editor due to malformed connections data
+- VideoPress: Fix issue with VideoPress block with 0 height and width
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Comments API: Add wpcom_id and wpcom_login fields to comment author responses when requested via author_wpcom_data parameter.
