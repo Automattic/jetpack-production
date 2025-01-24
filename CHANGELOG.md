@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: Add Checkbox and Consent field enter action to create a new block
+
 ### Bug fixes
 - Make the icons show up as expected in the style editor
 - Sitemaps: ensures a valid news sitemap is present even if no posts are eligible.
