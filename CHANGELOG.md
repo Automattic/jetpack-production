@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Social | Fix publicize error in the editor due to malformed connections data
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Comments API: Add wpcom_id and wpcom_login fields to comment author responses when requested via author_wpcom_data parameter.
 - Deprecate Jetpack geo location module
 - Fix the rendering of jetpack google fonts font faces for classic themes.
 - Forms: fixed default editor stying for textarea
