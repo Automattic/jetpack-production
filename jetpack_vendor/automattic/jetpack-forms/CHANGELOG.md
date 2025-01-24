@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Form: fix the default checkstate for admins
 - Forms: Add unique ids to each form
 - Forms: fix send to settings for multiple authors
+- Forms: Make the icons show up as expected in the style editor
 - Updates the icon colours to the new standard
 
 ## [0.35.0] - 2025-01-20

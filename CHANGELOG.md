@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Make the icons show up as expected in the style editor
 - Sitemaps: ensures a valid news sitemap is present even if no posts are eligible.
 - Social: Fix profile links for LinkedIn connections
 - Social | Fix publicize error in the editor due to malformed connections data
