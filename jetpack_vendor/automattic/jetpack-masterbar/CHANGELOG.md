@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.12.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.12.0] - 2025-01-27
 ### Added
-- Hides the calypso based Performance menu item on wordpress.com, shows page-optimize based Performance menu item on Atomic sites.
+- Hide the calypso based Performance menu item on wordpress.com, show page-optimize based Performance menu item on Atomic sites. [#41145]
 
 ### Removed
-- removed classic view admin notice from general settings (for atomic sites)
+- Remove classic view admin notice from general settings (for Atomic sites). [#41155]
 
 ## [0.11.0] - 2025-01-20
 ### Changed
@@ -217,7 +214,7 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
-[0.12.0-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.11.0...v0.12.0-alpha
+[0.12.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.11.0...v0.12.0
 [0.11.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.6...v0.11.0
 [0.10.6]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.5...v0.10.6
 [0.10.5]: https://github.com/Automattic/jetpack-masterbar/compare/v0.10.4...v0.10.5
