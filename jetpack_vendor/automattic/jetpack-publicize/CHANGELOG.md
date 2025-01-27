@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Refactored Social Note settings to use core
 - Social | Unify connections management API schema
+- Social | Use feature flag for share status data
 
 ### Fixed
 - Social: Fix profile links for LinkedIn connections
