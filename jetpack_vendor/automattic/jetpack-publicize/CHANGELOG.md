@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.58.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.58.0] - 2025-01-27
 ### Changed
-- Refactored Social Note settings to use core
-- Social | Unify connections management API schema
-- Social | Use feature flag for share status data
+- Refactored Social Note settings to use core [#41153]
+- Social | Unify connections management API schema [#40679]
+- Social | Use feature flag for share status data [#41218]
 
 ### Fixed
-- Social: Fix profile links for LinkedIn connections
-- Social | Fix editor invalid parameters error for old Jetpack versions.
-- Social | Fix feature check for social connections list initial state
+- Social: Fix profile links for LinkedIn connections [#40873]
+- Social | Fix editor invalid parameters error for old Jetpack versions. [#41199]
+- Social | Fix feature check for social connections list initial state [#40679]
 
 ## [0.57.4] - 2025-01-20
 ### Changed
@@ -831,7 +828,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.58.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.4...v0.58.0-alpha
+[0.58.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.4...v0.58.0
 [0.57.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.3...v0.57.4
 [0.57.3]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.2...v0.57.3
 [0.57.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.1...v0.57.2
