@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Blaze: Ensure Blaze still available after quick edit in post list
+
 ## [0.25.6] - 2025-01-20
 ### Changed
 - Updated package dependencies. [#41099]

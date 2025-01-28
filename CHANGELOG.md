@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Social | Enable Social post UI for WPCOM sites
 
 ### Bug fixes
+- Copy Post: Ensure Copy still available after quick edit in post list on all CPTs
 - Forms: Fixed datepicker appearance on dark themes
 - Forms: Fix permently deleting form reponses via the quicklinks
 
