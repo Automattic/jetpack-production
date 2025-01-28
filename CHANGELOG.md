@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Forms: Fixed datepicker appearance on dark themes
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack SEO: assistant wizard changes to achieve desired step flow
 - Updated package dependencies.

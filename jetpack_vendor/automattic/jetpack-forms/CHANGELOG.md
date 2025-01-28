@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Forms: fix dark themes date picker styles
 - Forms: Prevent empty style values within form field block attributes
 
 ## [0.35.1] - 2025-01-27
