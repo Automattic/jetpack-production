@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix permently deleting form reponses via the quicklinks
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Bug fix for Subscriptions block button
 - Jetpack SEO: assistant wizard changes to achieve desired step flow
 - Updated package dependencies.
 
