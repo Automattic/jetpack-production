@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Updating My Jetpack interstitial modal with new styles and layout.
 
 ## [5.4.0] - 2025-01-23
 ### Added
