@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Social | Enable Social post UI for WPCOM sites
+
 ### Bug fixes
 - Forms: Fixed datepicker appearance on dark themes
 - Forms: Fix permently deleting form reponses via the quicklinks
