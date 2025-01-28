@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix dark themes date picker styles
 - Forms: Fix permently deleting form reponses via the quicklinks
 - Forms: Prevent empty style values within form field block attributes
+- Translations: Fix spam % character.
 
 ## [0.35.1] - 2025-01-27
 ### Added
