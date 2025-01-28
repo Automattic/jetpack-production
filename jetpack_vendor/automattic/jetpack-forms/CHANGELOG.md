@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Form: Add wrapping div to the core html block when inserted inside the form block
 - Form: Fix encoding when going from spam to regular type
 - Forms: fix dark themes date picker styles
 - Forms: fixed missing spacing bug in the feedback list view
