@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Forms: Prevent empty style values within form field block attributes
+
 ## [0.35.1] - 2025-01-27
 ### Added
 - Add Checkbox and Consent field enter action to create a new block. [#41297]
