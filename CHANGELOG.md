@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Open Graph Meta Tags: do not display Jetpack's tags when the SEOPress plugin is active.
+- Social Previews | Remove "Your post" section in favour of Social Post UI
 
 ### Bug fixes
 - Copy Post: Ensure Copy still available after quick edit in post list on all CPTs
