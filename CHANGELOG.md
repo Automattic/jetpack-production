@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Copy Post: Ensure Copy still available after quick edit in post list on all CPTs
 - Forms: Fixed datepicker appearance on dark themes
 - Forms: Fix permently deleting form reponses via the quicklinks
+- Forms: Fix the block placeholder throwing an error when the Forms module is disabled.
 - Forms: keep content as is when going from spam to publish and from publish to spam feedback.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
