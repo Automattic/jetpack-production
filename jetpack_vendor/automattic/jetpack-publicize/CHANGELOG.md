@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Move initial state from Social plugin to publicize package
 - Updated package dependencies.
 
+### Fixed
+- Fix the default value for UTM settings schema
+
 ## [0.58.0] - 2025-01-27
 ### Changed
 - Refactored Social Note settings to use core [#41153]
