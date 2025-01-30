@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO Assistant: improve assistant flow by letting steps depend on previous steps
 - Testing: Add manual testing instructions.
 - Updated package dependencies.
+- Updated text copies based on whether the site is public.
 
 ## 14.3-a.5 - 2025-01-27
 ### Enhancements
