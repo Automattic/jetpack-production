@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Moved Social admin page code and assets logic to publicize package
 - Move initial state from Social plugin to publicize package
+- Social | Use feature flag for social admin page
 - Updated package dependencies.
 - Use Admin_Menu::remove_menu to handle old Social menu item
 
