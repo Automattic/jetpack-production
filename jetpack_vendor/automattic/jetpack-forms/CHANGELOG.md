@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Form: Fix encoding when going from spam to regular type
 - Forms: fix dark themes date picker styles
 - Forms: fixed missing spacing bug in the feedback list view
+- Forms: Fix field spacing and widths.
 - Forms: Fix permently deleting form reponses via the quicklinks
 - Forms: Fix the block placeholder throwing an error when the Forms module is disabled.
 - Forms: Prevent empty style values within form field block attributes
