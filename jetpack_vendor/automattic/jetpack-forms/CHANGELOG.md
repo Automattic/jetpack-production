@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix field spacing and widths.
 - Forms: Fix permently deleting form reponses via the quicklinks
 - Forms: Fix the block placeholder throwing an error when the Forms module is disabled.
+- Forms: Hide empty radio fields.
 - Forms: Prevent empty style values within form field block attributes
 - Translations: Fix spam % character.
 
