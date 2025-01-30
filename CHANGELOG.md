@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Blocks: improved performance.
 - Social | Enable Social post UI for WPCOM sites
 
 ### Improved compatibility
