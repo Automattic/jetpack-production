@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Updates the WooCommerce Logo in Woo JITM's
 
 ## [4.0.4] - 2025-01-20
 ### Changed
