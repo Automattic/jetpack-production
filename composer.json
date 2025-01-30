@@ -12,7 +12,7 @@
 		"ext-json": "*",
 		"ext-openssl": "*",
 		"automattic/jetpack-a8c-mc-stats": "^3.0.0",
-		"automattic/jetpack-admin-ui": "^0.5.1",
+		"automattic/jetpack-admin-ui": "^0.5.2-alpha",
 		"automattic/jetpack-assets": "^4.0.4-alpha",
 		"automattic/jetpack-autoloader": "^5.0.1",
 		"automattic/jetpack-backup": "^4.0.8-alpha",

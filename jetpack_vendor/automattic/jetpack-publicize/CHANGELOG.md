@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Moved Social admin page code and assets logic to publicize package
 - Move initial state from Social plugin to publicize package
 - Updated package dependencies.
+- Use Admin_Menu::remove_menu to handle old Social menu item
 
 ### Fixed
 - Fix the default value for UTM settings schema
