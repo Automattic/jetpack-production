@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Add red bubble and notice when pain plan is missing plugin.
 
 ### Changed
+- Make Action Button component more reusable
 - Updated package dependencies.
 - Updating My Jetpack interstitial modal with new styles and layout.
 
