@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Jetpack Sync: Checksum performance optimizations for Meta Sync Module
+
 ## [4.5.0] - 2025-01-23
 ### Changed
 - Sync: Full sync doesn't send actions for posts and comments with no items [#41183]
