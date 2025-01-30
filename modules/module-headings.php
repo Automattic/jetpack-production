@@ -42,8 +42,8 @@ function jetpack_get_module_i18n( $key ) {
 			),
 
 			'contact-form' => array(
-				'name' => _x( 'Contact Form', 'Module Name', 'jetpack' ),
-				'description' => _x( 'Add a customizable contact form to any post or page using the Jetpack Form Block.', 'Module Description', 'jetpack' ),
+				'name' => _x( 'Forms', 'Module Name', 'jetpack' ),
+				'description' => _x( 'Add a customizable form to any post or page using the Jetpack Form block.', 'Module Description', 'jetpack' ),
 			),
 
 			'copy-post' => array(
@@ -456,8 +456,8 @@ function jetpack_get_module_info( $key ) {
 	  ),
 	  'contact-form' => 
 	  array (
-	    'name' => 'Contact Form',
-	    'description' => 'Add a customizable contact form to any post or page using the Jetpack Form Block.',
+	    'name' => 'Forms',
+	    'description' => 'Add a customizable form to any post or page using the Jetpack Form block.',
 	    'sort' => '15',
 	    'recommendation_order' => '14',
 	    'introduced' => '1.3',

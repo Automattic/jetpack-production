@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Bug fix for Subscriptions block button
+- Forms: rename contact form module to just 'forms'
 - Jetpack SEO: assistant wizard changes to achieve desired step flow
 - Jetpack SEO Assistant: improve assistant flow by letting steps depend on previous steps
 - Sync: Full Sync comments now send dynamic chunks if chunk size default is too big
