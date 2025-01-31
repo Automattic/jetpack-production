@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Thee compat: Wrapping relevant functions in a function_exists check, as functionality is duplicated in the Classic Theme Helper package
 - Updated package dependencies.
 - Updated text copies based on whether the site is public.
+- Update the settings endpoint to return the updated toggle state in the success response
 
 ## 14.3-a.5 - 2025-01-27
 ### Enhancements

@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Social | Move settings endpoint to publicize package
 - Social | Use feature flag for social admin page
 - Updated package dependencies.
+- Update the settings endppoint to use existing endpoints
 - Use Admin_Menu::remove_menu to handle old Social menu item
 
 ### Fixed
