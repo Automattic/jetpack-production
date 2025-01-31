@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Make Action Button component more reusable
+- Replacing Jetpack AI upgrade page with a modal.
 - Updated package dependencies.
 - Updating My Jetpack interstitial modal with new styles and layout.
 
