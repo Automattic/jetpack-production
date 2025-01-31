@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Blocks: improved performance.
+- Social post character limits are now dynamic based on selected connections
 - Social | Enable Social post UI for WPCOM sites
 
 ### Improved compatibility
