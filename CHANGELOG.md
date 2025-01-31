@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO Assistant: improve assistant flow by letting steps depend on previous steps
 - Sync: Full Sync comments now send dynamic chunks if chunk size default is too big
 - Testing: Add manual testing instructions.
+- Thee compat: Wrapping relevant functions in a function_exists check, as functionality is duplicated in the Classic Theme Helper package
 - Updated package dependencies.
 - Updated text copies based on whether the site is public.
 
