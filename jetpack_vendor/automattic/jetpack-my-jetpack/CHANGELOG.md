@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Updating My Jetpack interstitial modal with new styles and layout.
 
+### Fixed
+- AI: avoid using relative URLs in admin URLs, to support sites where WordPress is installed in a subdirectory.
+
 ## [5.4.0] - 2025-01-23
 ### Added
 - Adding new modal based interstitial component. [#40945]
