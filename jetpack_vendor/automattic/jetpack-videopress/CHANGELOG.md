@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Code: Remove extra params on function calls.
+
 ## [0.25.8] - 2025-01-27
 ### Fixed
 - VideoPress: Fix issue with VideoPress block with 0 height and width [#41319]

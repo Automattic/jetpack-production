@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Bug fix for Subscriptions block button
+- Code: Remove extra params on function calls.
 - Forms: rename contact form module to just 'forms'
 - Jetpack SEO: assistant wizard changes to achieve desired step flow
 - Jetpack SEO assistant: fine tune css to address designs

@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Code: Remove extra params on function calls.
+
 ## [0.23.2] - 2025-01-20
 ### Changed
 - Code: Use function-style exit() and die() with a default status code of 0. [#41167]

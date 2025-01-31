@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Code: Remove extra params on function calls.
+
 ## [0.4.2] - 2025-01-20
 ### Fixed
 - Fix Current_Plan::supports() call from breaking cache on every call. [#41010]

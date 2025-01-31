@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Code: Remove extra params on function calls.
+
 ## [6.3.1] - 2025-01-27
 ### Changed
 - Internal updates.
