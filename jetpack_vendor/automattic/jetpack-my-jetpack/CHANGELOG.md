@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - AI: avoid using relative URLs in admin URLs, to support sites where WordPress is installed in a subdirectory.
 - Code: Remove extra params on function calls.
+- My Jetpack: fix secondary action of Protect card when plugin is not installed.
 
 ## [5.4.0] - 2025-01-23
 ### Added
