@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix the default value for UTM settings schema
+- Social | Fix connections cache when WPCOM API call fails
 - Social | Fix the API calls on WPCOM for options
 
 ## [0.58.0] - 2025-01-27
