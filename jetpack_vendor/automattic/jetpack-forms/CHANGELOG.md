@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fixed missing spacing bug in the feedback list view
 - Forms: Fix field spacing and widths.
 - Forms: Fix permently deleting form reponses via the quicklinks
+- Forms: Fix submission if date field had errored
 - Forms: Fix the block placeholder throwing an error when the Forms module is disabled.
 - Forms: Hide empty radio fields.
 - Forms: Prevent empty style values within form field block attributes
