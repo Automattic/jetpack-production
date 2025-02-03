@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Code: Remove extra params on function calls.
+- Protect Status: Fixed a bug where it can happen that the core version data is not interpreted correctly from the report data response.
 
 ## [0.4.2] - 2025-01-20
 ### Fixed
