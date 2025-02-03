@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Code: Remove extra params on function calls.
 - Forms: rename contact form module to just 'forms'
 - Jetpack SEO: assistant wizard changes to achieve desired step flow
+- Jetpack SEO assistant: address design css
 - Jetpack SEO assistant: fine tune css to address designs
 - Jetpack SEO Assistant: implement completion step and review copy edits
 - Jetpack SEO Assistant: improve assistant flow by letting steps depend on previous steps
