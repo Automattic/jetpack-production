@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.25.9-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.25.9] - 2025-02-03
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#41286]
 
 ### Fixed
-- Code: Remove extra params on function calls.
+- Code: Remove extra params on function calls. [#41263]
 
 ## [0.25.8] - 2025-01-27
 ### Fixed
-- VideoPress: Fix issue with VideoPress block with 0 height and width [#41319]
+- VideoPress: Fix issue with VideoPress block with 0 height and width. [#41319]
 
 ## [0.25.7] - 2025-01-20
 ### Changed
@@ -1531,7 +1528,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.25.9-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.8...v0.25.9-alpha
+[0.25.9]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.8...v0.25.9
 [0.25.8]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.7...v0.25.8
 [0.25.7]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.6...v0.25.7
 [0.25.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.5...v0.25.6
