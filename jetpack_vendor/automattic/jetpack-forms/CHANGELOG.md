@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix submission if date field had errored
 - Forms: Fix the block placeholder throwing an error when the Forms module is disabled.
 - Forms: Hide empty radio fields.
+- Forms: Hide fields without options.
 - Forms: Prevent empty style values within form field block attributes
 - Translations: Fix spam % character.
 

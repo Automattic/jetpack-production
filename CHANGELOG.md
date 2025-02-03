@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix permently deleting form reponses via the quicklinks
 - Forms: Fix the block placeholder throwing an error when the Forms module is disabled.
 - Forms: Hide empty radio fields.
+- Forms: Hide fields without options.
 - Forms: keep content as is when going from spam to publish and from publish to spam feedback.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
