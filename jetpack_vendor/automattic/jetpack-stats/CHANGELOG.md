@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.15.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.15.1] - 2025-02-03
 ### Fixed
-- Code: Remove extra params on function calls.
+- Code: Remove extra params on function calls. [#41263]
 
 ## [0.15.0] - 2025-01-06
 ### Added
@@ -213,7 +210,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
-[0.15.1-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.15.0...v0.15.1-alpha
+[0.15.1]: https://github.com/Automattic/jetpack-stats/compare/v0.15.0...v0.15.1
 [0.15.0]: https://github.com/Automattic/jetpack-stats/compare/v0.14.1...v0.15.0
 [0.14.1]: https://github.com/Automattic/jetpack-stats/compare/v0.14.0...v0.14.1
 [0.14.0]: https://github.com/Automattic/jetpack-stats/compare/v0.13.5...v0.14.0

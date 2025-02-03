@@ -5,31 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.36.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.36.0] - 2025-02-03
 ### Added
-- Forms: Prevent empty form submission client side
+- Prevent empty client-side form submission. [#41464]
 
 ### Changed
-- Forms: Remove old back compat code and improve code quality
-- Forms: rename contact form block placeholder to just "Forms".
-- Updated package dependencies.
+- Remove legacy code and improve code quality. [#41348]
+- Rename contact form block placeholder to "Forms". [#41384]
+- Updated package dependencies. [#41286]
 
 ### Fixed
-- Code: Remove extra params on function calls.
-- Form: Add wrapping div to the core html block when inserted inside the form block
-- Form: Fix encoding when going from spam to regular type
-- Forms: fix dark themes date picker styles
-- Forms: fixed missing spacing bug in the feedback list view
-- Forms: Fix field spacing and widths.
-- Forms: Fix permently deleting form reponses via the quicklinks
-- Forms: Fix submission if date field had errored
-- Forms: Fix the block placeholder throwing an error when the Forms module is disabled.
-- Forms: Hide empty radio fields.
-- Forms: Prevent empty style values within form field block attributes
-- Translations: Fix spam % character.
+- Add wrapping div to the core HTML block when inserted inside the form block. [#41269]
+- Code: Remove extra params on function calls. [#41263]
+- Feedback: Fix encoding when going from spam to regular type. [#41359]
+- Feedback: Fix missing spacing bug in list view. [#41367]
+- Fix date picker styles in dark themes. [#41342]
+- Fix field spacing and widths. [#41415]
+- Fix permanent deletion of form reponses via quicklinks. [#41321]
+- Fix submission when date field errored. [#41511]
+- Hide empty radio fields. [#41379]
+- Prevent empty style values within form field block attributes. [#41206]
+- Prevent error in block placeholder when the Forms module is disabled. [#41382]
+- Translations: Fix spam % character. [#41345]
 
 ## [0.35.1] - 2025-01-27
 ### Added
@@ -815,7 +812,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.36.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.35.1...v0.36.0-alpha
+[0.36.0]: https://github.com/automattic/jetpack-forms/compare/v0.35.1...v0.36.0
 [0.35.1]: https://github.com/automattic/jetpack-forms/compare/v0.35.0...v0.35.1
 [0.35.0]: https://github.com/automattic/jetpack-forms/compare/v0.34.6...v0.35.0
 [0.34.6]: https://github.com/automattic/jetpack-forms/compare/v0.34.5...v0.34.6
