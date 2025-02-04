@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom Content Types: Ensure feature works on Jetpack settings page without using module functionality.
 
 ### Bug fixes
+- Fix count roles not able to be updated
 - Forms: Hide fields without options.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
