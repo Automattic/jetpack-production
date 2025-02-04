@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Fix submit button width and alignment
 - Forms: Hide fields without options.
 
 ## [0.36.0] - 2025-02-03
