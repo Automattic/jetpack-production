@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update fields and button blocks to support contentOnly editing.
 
 ### Changed
+- Forms: tracks forms submissions in orden to improve the product.
 - Updated package dependencies.
 
 ### Fixed
