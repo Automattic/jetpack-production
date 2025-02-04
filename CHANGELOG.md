@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Code Quality: Update deprecated block editor APU usage.
 - Jetpack button: fix width and alignment
 - Jetpack SEO: fix state inconsistencies, change effects and use global isBusy suspense flag
+- Jetpack Sync: Fixed extracting UTF-8 characters from image alt-text
 - Updated package dependencies.
 
 ## 14.3 - 2025-02-04
