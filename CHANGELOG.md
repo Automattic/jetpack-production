@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Code Quality: Update deprecated block editor APU usage.
+- Jetpack SEO: fix state inconsistencies, change effects and use global isBusy suspense flag
 - Updated package dependencies.
 
 ## 14.3-beta - 2025-02-03
