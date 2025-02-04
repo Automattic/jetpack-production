@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: Update field and button blocks to support contentOnly editing.
 
+### Improved compatibility
+- Custom Content Types: Ensure feature works on Jetpack settings page without using module functionality.
+
 ### Bug fixes
 - Forms: Hide fields without options.
 
