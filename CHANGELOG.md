@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Hide fields without options.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Code Quality: Update deprecated block editor APU usage.
 - Updated package dependencies.
 
 ## 14.3-beta - 2025-02-03
