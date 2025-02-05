@@ -390,6 +390,10 @@ return array(
 		'version' => '0.37.0.0-alpha1738695443',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/blocks/contact-form/class-contact-form-block.php'
 	),
+	'Automattic\\Jetpack\\External_Media' => array(
+		'version' => '0.1.0.0-alpha1738736365',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-external-media/src/class-external-media.php'
+	),
 	'Automattic\\Jetpack\\Files' => array(
 		'version' => '5.0.3.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php'

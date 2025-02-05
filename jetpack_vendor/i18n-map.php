@@ -48,6 +48,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-explat',
       'ver' => '0.2.6-alpha1738615561',
     ),
+    'jetpack-external-media' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-external-media',
+      'ver' => '0.1.0-alpha1738736365',
+    ),
     'jetpack-forms' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
       'ver' => '0.37.0-alpha1738695443',
