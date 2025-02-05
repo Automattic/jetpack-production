@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: Add a new file upload field block to allow visitors to upload files through contact forms.
 - Forms: Update fields and button blocks to support contentOnly editing.
 
 ### Changed
