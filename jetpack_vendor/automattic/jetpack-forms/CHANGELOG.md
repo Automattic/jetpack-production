@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update fields and button blocks to support contentOnly editing.
 
 ### Changed
+- Forms: Refine file upload field block to use WordPress upload icon and follow consistent field patterns. Make the block available in beta.
 - Forms: tracks forms submissions in orden to improve the product.
 - Updated package dependencies.
 

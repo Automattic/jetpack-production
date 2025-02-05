@@ -162,15 +162,15 @@ class Contact_Form_Block {
 		);
 
 		$blocks_variation = apply_filters( 'jetpack_blocks_variation', \Automattic\Jetpack\Constants::get_constant( 'JETPACK_BLOCKS_VARIATION' ) );
-		if ( 'experimental' === $blocks_variation ) {
-			self::register_experimental_blocks();
+		if ( 'beta' === $blocks_variation ) {
+			self::register_beta_blocks();
 		}
 	}
 
 	/**
-	 * Register experimental blocks
+	 * Register beta blocks
 	 */
-	private static function register_experimental_blocks() {
+	private static function register_beta_blocks() {
 		Blocks::jetpack_register_block(
 			'jetpack/field-file',
 			array(
