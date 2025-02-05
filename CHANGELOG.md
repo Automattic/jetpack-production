@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack button: fix width and alignment
 - Jetpack SEO: fix state inconsistencies, change effects and use global isBusy suspense flag
 - Jetpack Sync: Fixed extracting UTF-8 characters from image alt-text
+- Reset to-test.md for Jetpack 14.4 release cycle.
 - Updated package dependencies.
 
 ## 14.3 - 2025-02-04
