@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fix count roles not able to be updated
+- Forms: Fix block style variations not showing in the editor.
 - Forms: Hide fields without options.
 - Temporarily show the widget to administrators for Simple sites
 
