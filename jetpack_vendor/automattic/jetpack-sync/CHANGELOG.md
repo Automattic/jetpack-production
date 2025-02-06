@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add setting to hide newsletter category modal
 
+### Changed
+- Sync: Full-sync chunking logic dynamic for Woo modules
+
 ## [4.6.0] - 2025-02-03
 ### Added
 - Sync: Full Sync comments now send dynamic chunks if chunk size default is too big. [#41350]
