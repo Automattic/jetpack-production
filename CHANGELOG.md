@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - External Media: Add external media modal on the Media Import page
 - External Media: Move the GooglePhotosMedia, OpenverseMedia, PexelsMedia to @automattic/jetpack-shared-extension-utils
+- External Media: Update styles of the external media modal
 - Forms: Update field and button blocks to support contentOnly editing.
 - Newsletter: add setting to hide category selection modal
 

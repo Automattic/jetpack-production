@@ -131,7 +131,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_a_0
         'Automattic\\Jetpack\\ExPlat' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-explat/src/class-explat.php',
         'Automattic\\Jetpack\\ExPlat\\REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-explat/src/class-rest-controller.php',
         'Automattic\\Jetpack\\Extensions\\Contact_Form\\Contact_Form_Block' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/blocks/contact-form/class-contact-form-block.php',
-        'Automattic\\Jetpack\\External_Media' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-external-media/src/class-external-media.php',
+        'Automattic\\Jetpack\\External_Media\\External_Media' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-external-media/src/class-external-media.php',
         'Automattic\\Jetpack\\Files' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php',
         'Automattic\\Jetpack\\Forms\\ContactForm\\Admin' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-admin.php',
         'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form.php',

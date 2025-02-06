@@ -99,7 +99,7 @@ return array(
     'Automattic\\Jetpack\\ExPlat' => $baseDir . '/jetpack_vendor/automattic/jetpack-explat/src/class-explat.php',
     'Automattic\\Jetpack\\ExPlat\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-explat/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Extensions\\Contact_Form\\Contact_Form_Block' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/blocks/contact-form/class-contact-form-block.php',
-    'Automattic\\Jetpack\\External_Media' => $baseDir . '/jetpack_vendor/automattic/jetpack-external-media/src/class-external-media.php',
+    'Automattic\\Jetpack\\External_Media\\External_Media' => $baseDir . '/jetpack_vendor/automattic/jetpack-external-media/src/class-external-media.php',
     'Automattic\\Jetpack\\Files' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Admin' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-admin.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form.php',

@@ -4,10 +4,12 @@ import { JetpackAppIcon } from '@automattic/jetpack-shared-extension-utils/icons
 import { useSelect } from '@wordpress/data';
 import { useCallback, useEffect, useState } from '@wordpress/element';
 import { __, sprintf, _n } from '@wordpress/i18n';
+import clsx from 'clsx';
 import React from 'react';
-import MediaBrowser from '../media-browser';
-import { MediaSource } from '../media-service/types';
-import withMedia from './with-media';
+import MediaBrowser from '../../media-browser';
+import { MediaSource } from '../../media-service/types';
+import withMedia from '../with-media';
+import './style.scss';
 
 const getWpcomBlogId = () =>
 	window?.Jetpack_Editor_Initial_State?.wpcomBlogId ||
@@ -31,7 +33,7 @@ const getImagePath = () => {
  * @return {React.ReactElement} The `JetpackAppMedia` component.
  */
 function JetpackAppMedia( props ) {
-	const { media, insertMedia, isCopying, multiple, getMedia } = props;
+	const { className, media, insertMedia, isCopying, multiple, getMedia } = props;
 
 	const wpcomBlogId = getWpcomBlogId();
 	const imagePath = getImagePath();
@@ -72,6 +74,19 @@ function JetpackAppMedia( props ) {
 		: 'jetpack-external-media-wrapper__jetpack_app_media-wrapper has-no-image-uploaded';
 
 	const selectButtonText = selectedImages => {
+		if ( isCopying ) {
+			return sprintf(
+				/* translators: %1$d is the number of images that were selected. */
+				_n(
+					'Inserting %1$d image…',
+					'Inserting %1$d images…',
+					selectedImages,
+					'jetpack-external-media'
+				),
+				selectedImages
+			);
+		}
+
 		return selectedImages
 			? sprintf(
 					/* translators: %1$d is the number of images that were selected. */
@@ -81,7 +96,7 @@ function JetpackAppMedia( props ) {
 			: __( 'Add images', 'jetpack-external-media' );
 	};
 	return (
-		<div className={ wrapperClassname }>
+		<div className={ clsx( className, wrapperClassname ) }>
 			<JetpackAppIcon />
 			<h2 className="jetpack-external-media-wrapper__jetpack_app_media-title">
 				{ hasImageUploaded && __( 'Select images to be added', 'jetpack-external-media' ) }
@@ -134,4 +149,4 @@ function JetpackAppMedia( props ) {
 	);
 }
 
-export default withMedia( MediaSource.JetpackAppMedia )( JetpackAppMedia );
+export default withMedia( MediaSource.JetpackAppMedia, { modalSize: 'large' } )( JetpackAppMedia );
