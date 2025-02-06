@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add support for having multiple forms accross paginated pages.
 - Forms: Update field and button blocks to support contentOnly editing.
 - Newsletter: add setting to hide category selection modal
+- Post actions: rename Copy action to Duplicate, which is clearer
 
 ### Improved compatibility
 - Custom Content Types: Ensure feature works on Jetpack settings page without using module functionality.
