@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Code Quality: Update deprecated block editor APU usage.
+- Ensure Viewers are searchable by username and email.
 - Jetpack button: fix width and alignment
 - Jetpack SEO: assistant option bubbles border design
 - Jetpack SEO: fix state inconsistencies, change effects and use global isBusy suspense flag
