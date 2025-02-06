@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO: assistant option bubbles border design
 - Jetpack SEO: fix state inconsistencies, change effects and use global isBusy suspense flag
 - Jetpack Sync: Fixed extracting UTF-8 characters from image alt-text
+- Reader: Update url from /read to /reader
 - Reset to-test.md for Jetpack 14.4 release cycle.
 - Updated package dependencies.
 
