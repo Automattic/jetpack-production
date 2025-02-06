@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- Fix bug where firewall was displayed as active if automatic rules were enabled but firewall was off
+
 ## [5.4.1] - 2025-02-03
 ### Added
 - My Jetpack: Add red bubble and notice when pain plan is missing plugin. [#41013]
