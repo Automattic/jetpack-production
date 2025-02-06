@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix block style variations not showing in the editor.
 - Forms: Fix invalid html IDs.
 - Forms: Hide fields without options.
+- Improves the styling options of the separator block when placed inside the form block
 
 ## [0.36.0] - 2025-02-03
 ### Added

@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix block style variations not showing in the editor.
 - Forms: Fix invalid html IDs.
 - Forms: Hide fields without options.
+- Forms: Improve the styling of the separator block when placed inside the form block
 - Temporarily show the widget to administrators for Simple sites
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
