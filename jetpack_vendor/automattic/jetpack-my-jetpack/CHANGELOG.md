@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add filter to unowned list of products
 
 ### Changed
+- Cache calls to backup API in My Jetpack
 - Updated package dependencies.
 - Update the unowned section from a product grid to a product list
 
