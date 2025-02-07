@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO: assistant option bubbles border design
 - Jetpack SEO: fix gap/spacing between chat bubbles and options
 - Jetpack SEO: fix state inconsistencies, change effects and use global isBusy suspense flag
+- Jetpack SEO assistant: persist selected options if they haven't changed
 - Jetpack Sync: Fixed extracting UTF-8 characters from image alt-text
 - Just a copy change.
 - Map block: Catch error if content is empty.
