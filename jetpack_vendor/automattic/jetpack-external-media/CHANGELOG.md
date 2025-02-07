@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - External Media: Add track events to the Import page and modal
 - Initial version.
 - Media Library: add track events for upload from URL feature
+- Media Library: add track event to the Import Media button
 
 ### Changed
 - External Media: Update styles of the external media modal
