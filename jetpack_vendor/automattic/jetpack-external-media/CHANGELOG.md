@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - External Media: Add external media modal on the Media Import page
+- External Media: Add Import button in Media Library
 - Initial version.
 
 ### Changed
