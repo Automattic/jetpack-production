@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Ensure Viewers are searchable by username and email.
 - Jetpack button: fix width and alignment
 - Jetpack SEO: add completion summary  step
+- Jetpack SEO: add request mocking function for development
 - Jetpack SEO: assistant option bubbles border design
 - Jetpack SEO: fix gap/spacing between chat bubbles and options
 - Jetpack SEO: fix state inconsistencies, change effects and use global isBusy suspense flag
