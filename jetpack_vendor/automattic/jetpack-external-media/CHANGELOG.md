@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - External Media: Add external media modal on the Media Import page
 - External Media: Add Import button in Media Library
+- External Media: Add track events to the Import page and modal
 - Initial version.
 
 ### Changed
