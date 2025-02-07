@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Hide fields without options.
 - Forms: Improve the styling of the separator block when placed inside the form block
 - Sharing: Fix possible warnings related to plugin compatibility.
+- Sitemaps: include line breaks for easier debugging
 - Temporarily show the widget to administrators for Simple sites
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
