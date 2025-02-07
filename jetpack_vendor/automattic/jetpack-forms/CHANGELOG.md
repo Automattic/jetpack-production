@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Add a new file upload field block to allow visitors to upload files through contact forms.
 - Forms: Add support for having multiple forms accross paginated pages
+- Forms: Tests: An empty form shouldn't submit test
 - Forms: Update fields and button blocks to support contentOnly editing.
 
 ### Changed
