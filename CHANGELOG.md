@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Reader: Update url from /read to /reader
 - Reset to-test.md for Jetpack 14.4 release cycle.
 - Sync: Full-sync chunking logic dynamic for Woo modules
+- Sync: Full sync for posts not sending term relationships
 - Updated package dependencies.
 
 ## 14.3 - 2025-02-04
