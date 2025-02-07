@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add filter to unowned list of products
+- Add mobile CTA to DataViews table
 
 ### Changed
 - Cache calls to backup API in My Jetpack
