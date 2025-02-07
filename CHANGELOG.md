@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update field and button blocks to support contentOnly editing.
 - Newsletter: add setting to hide category selection modal
 - Post actions: rename Copy action to Duplicate, which is clearer
+- Update the unowned section from a product grid to a product list
 
 ### Improved compatibility
 - Custom Content Types: Ensure feature works on Jetpack settings page without using module functionality.

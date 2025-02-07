@@ -9,8 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add filter to unowned list of products
+
 ### Changed
 - Updated package dependencies.
+- Update the unowned section from a product grid to a product list
 
 ### Fixed
 - Fix bug where firewall was displayed as active if automatic rules were enabled but firewall was off
