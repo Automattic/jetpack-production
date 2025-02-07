@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Dashboard: Display connection owner to all users.
 - External Media: Add external media modal on the Media Import page
 - External Media: Move the GooglePhotosMedia, OpenverseMedia, PexelsMedia to @automattic/jetpack-shared-extension-utils
 - External Media: Update styles of the external media modal
