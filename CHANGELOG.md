@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Sync: Fixed extracting UTF-8 characters from image alt-text
 - Just a copy change.
 - Map block: Catch error if content is empty.
+- Prevent PHP error when error log retrieved from database is an unexpected type.
 - Reader: Update url from /read to /reader
 - Reset to-test.md for Jetpack 14.4 release cycle.
 - Sync: Full-sync chunking logic dynamic for Woo modules
