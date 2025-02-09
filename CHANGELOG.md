@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO Assistant: Add actual requests
 - Sync: Full-sync chunking logic dynamic for Woo modules
 - Sync: Full sync for posts not sending term relationships
+- Update composer.lock
 - Updated package dependencies.
 
 ## 14.3 - 2025-02-04

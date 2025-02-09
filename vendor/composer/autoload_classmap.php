@@ -223,6 +223,7 @@ return array(
     'Automattic\\Jetpack\\Protect_Models\\History_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-history-model.php',
     'Automattic\\Jetpack\\Protect_Models\\Status_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-status-model.php',
     'Automattic\\Jetpack\\Protect_Models\\Threat_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-threat-model.php',
+    'Automattic\\Jetpack\\Protect_Models\\Vulnerability_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-vulnerability-model.php',
     'Automattic\\Jetpack\\Protect_Status\\Plan' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-plan.php',
     'Automattic\\Jetpack\\Protect_Status\\Protect_Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-protect-status.php',
     'Automattic\\Jetpack\\Protect_Status\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-rest-controller.php',
