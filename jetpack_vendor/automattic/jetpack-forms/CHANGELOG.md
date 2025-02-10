@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix block style variations not showing in the editor.
 - Forms: fixes the date format input if multiple date pickers are used with different date formats.
 - Forms: Fix invalid html IDs.
+- Forms: fix missing translations
 - Forms: Hide fields without options.
 - Improves the styling options of the separator block when placed inside the form block
 
