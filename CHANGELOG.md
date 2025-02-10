@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO: add assisstant flow state to better handle navigation transitions and effects
 - Jetpack SEO: add completion summary  step
 - Jetpack SEO: add request mocking function for development
+- Jetpack SEO: allow editLastMessage to append new content instead of replacing. Simplifies message flow editing
 - Jetpack SEO: assistant option bubbles border design
 - Jetpack SEO: fix gap/spacing between chat bubbles and options
 - Jetpack SEO: fix state inconsistencies, change effects and use global isBusy suspense flag
