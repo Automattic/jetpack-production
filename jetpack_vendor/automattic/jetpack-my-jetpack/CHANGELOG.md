@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Cache calls to backup API in My Jetpack
+- Make entire row of dataview clickable when on mobile
 - Updated package dependencies.
 - Update the unowned section from a product grid to a product list
 
