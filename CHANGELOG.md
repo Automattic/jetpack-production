@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - External Media: Fix the button size in the editor for GB 18 or below
+- Fix: Jetpack show excerpt on Content options does not includes theme filters.
 - Fix count roles not able to be updated
 - Forms: Fix block style variations not showing in the editor.
 - Forms: Fix invalid html IDs.

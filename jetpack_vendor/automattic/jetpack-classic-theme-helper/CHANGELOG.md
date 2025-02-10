@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Custom Content Types: Ensure feature works on Jetpack settings page without using module functionality.
 - Updated package dependencies.
 
+### Fixed
+- Fix: Jetpack show excerpt on Content options does not includes theme filters.
+
 ## [0.9.3] - 2025-02-03
 ### Added
 - Theme compat: Move relevant functionality to the package. [#41394]
