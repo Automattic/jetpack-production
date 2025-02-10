@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies.
 
+### Fixed
+- VideoPress: Fix warnnings for videos with no prior metadata.
+
 ## [0.25.9] - 2025-02-03
 ### Changed
 - Updated package dependencies. [#41286]
