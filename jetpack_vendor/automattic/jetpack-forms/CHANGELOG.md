@@ -5,28 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.37.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.37.0] - 2025-02-10
 ### Added
-- Forms: Add a new file upload field block to allow visitors to upload files through contact forms.
-- Forms: Add support for having multiple forms accross paginated pages
-- Forms: Tests: An empty form shouldn't submit test
-- Forms: Update fields and button blocks to support contentOnly editing.
+- Forms: Add a new file upload field block to allow visitors to upload files through contact forms. [#41582]
+- Forms: Add support for having multiple forms accross paginated pages [#41407]
+- Forms: Tests: An empty form shouldn't submit test [#41504]
+- Forms: Update fields and button blocks to support contentOnly editing. [#41411]
 
 ### Changed
-- Forms: Refine file upload field block to use WordPress upload icon and follow consistent field patterns. Make the block available in beta.
-- Forms: tracks forms submissions in orden to improve the product.
-- Updated package dependencies.
+- Forms: Refine file upload field block to use WordPress upload icon and follow consistent field patterns. Make the block available in beta. [#41586]
+- Forms: tracks forms submissions in orden to improve the product. [#41307]
+- Updated package dependencies. [#41491]
 
 ### Fixed
-- Fix submit button width and alignment
-- Forms: Fix block style variations not showing in the editor.
-- Forms: fixes the date format input if multiple date pickers are used with different date formats.
-- Forms: Fix invalid html IDs.
-- Forms: Hide fields without options.
-- Improves the styling options of the separator block when placed inside the form block
+- Fix submit button width and alignment [#41139]
+- Forms: Fix block style variations not showing in the editor. [#41457]
+- Forms: fixes the date format input if multiple date pickers are used with different date formats. [#41611]
+- Forms: Fix invalid html IDs. [#41564]
+- Forms: Hide fields without options. [#41443]
+- Improves the styling options of the separator block when placed inside the form block [#40967]
 
 ## [0.36.0] - 2025-02-03
 ### Added
@@ -835,7 +832,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.37.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.36.0...v0.37.0-alpha
+[0.37.0]: https://github.com/automattic/jetpack-forms/compare/v0.36.0...v0.37.0
 [0.36.0]: https://github.com/automattic/jetpack-forms/compare/v0.35.1...v0.36.0
 [0.35.1]: https://github.com/automattic/jetpack-forms/compare/v0.35.0...v0.35.1
 [0.35.0]: https://github.com/automattic/jetpack-forms/compare/v0.34.6...v0.35.0

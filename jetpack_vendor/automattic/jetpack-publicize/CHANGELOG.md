@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.59.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.59.1] - 2025-02-10
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#41491]
 
 ## [0.59.0] - 2025-02-03
 ### Added
@@ -854,7 +851,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.59.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.59.0...v0.59.1-alpha
+[0.59.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.59.0...v0.59.1
 [0.59.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.58.0...v0.59.0
 [0.58.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.4...v0.58.0
 [0.57.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.57.3...v0.57.4

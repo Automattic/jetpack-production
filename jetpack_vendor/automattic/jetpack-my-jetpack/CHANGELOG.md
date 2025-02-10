@@ -5,21 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.4.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.4.2] - 2025-02-10
 ### Added
-- Add filter to unowned list of products
-- Add mobile CTA to DataViews table
+- Add filter to unowned list of products. [#41312]
+- Add mobile CTA to DataViews table. [#41554]
 
 ### Changed
-- Cache calls to backup API in My Jetpack
-- Updated package dependencies.
-- Update the unowned section from a product grid to a product list
+- Cache calls to backup API in My Jetpack. [#41608]
+- Updated package dependencies. [#41491] [#41577]
+- Update the unowned section from a product grid to a product list. [#41312]
 
 ### Fixed
-- Fix bug where firewall was displayed as active if automatic rules were enabled but firewall was off
+- Fix bug where firewall was displayed as active if automatic rules were enabled but firewall was off. [#41560]
 
 ## [5.4.1] - 2025-02-03
 ### Added
@@ -1953,7 +1950,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.4.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.1...5.4.2-alpha
+[5.4.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.1...5.4.2
 [5.4.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.0...5.4.1
 [5.4.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.3.3...5.4.0
 [5.3.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.3.2...5.3.3

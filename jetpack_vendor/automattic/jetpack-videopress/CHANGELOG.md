@@ -5,15 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.25.10-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.25.10] - 2025-02-10
 ### Changed
-- Updated package dependencies.
+- Updated package dependencies. [#41491]
+- Updated package dependencies. [#41577]
 
 ### Fixed
-- VideoPress: Fix warnnings for videos with no prior metadata.
+- VideoPress: Fix warnnings for videos with no prior metadata. [#41639]
 
 ## [0.25.9] - 2025-02-03
 ### Changed
@@ -1538,7 +1536,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.25.10-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.9...v0.25.10-alpha
+[0.25.10]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.9...v0.25.10
 [0.25.9]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.8...v0.25.9
 [0.25.8]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.7...v0.25.8
 [0.25.7]: https://github.com/Automattic/jetpack-videopress/compare/v0.25.6...v0.25.7
