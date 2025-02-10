@@ -22,3 +22,4 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - External Media: Fix the button size in the editor for GB 18 or below
+- Media Library: fix the Import Media button color in some color schemes
