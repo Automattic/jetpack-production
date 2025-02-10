@@ -3590,6 +3590,12 @@ Markdown is a text formatting syntax that is converted into HTML. You can _empha
             'selector' => 'img',
             'source' => 'attribute',
           ),
+          'customLink' => 
+          array (
+            'attribute' => 'data-custom-link',
+            'selector' => 'img',
+            'source' => 'attribute',
+          ),
           'url' => 
           array (
             'attribute' => 'data-url',
