@@ -19,3 +19,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - External Media: Update styles of the external media modal
+
+### Fixed
+- External Media: Fix the button size in the editor for GB 18 or below

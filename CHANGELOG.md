@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom Content Types: Ensure feature works on Jetpack settings page without using module functionality.
 
 ### Bug fixes
+- External Media: Fix the button size in the editor for GB 18 or below
 - Fix count roles not able to be updated
 - Forms: Fix block style variations not showing in the editor.
 - Forms: Fix invalid html IDs.
