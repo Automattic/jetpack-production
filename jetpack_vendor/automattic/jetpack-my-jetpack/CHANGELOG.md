@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Allow product notices to be closed with persistence.
 
 ### Changed
+- Cache scan calls if no threats are found to improve performance
 - Make entire row of dataview clickable when on mobile
 
 ## [5.4.2] - 2025-02-10
