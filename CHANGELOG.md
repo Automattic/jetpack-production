@@ -2,65 +2,71 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.4-a.0 - unreleased
+## 14.4-a.2 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Dashboard: Display connection owner to all users.
-- External Media: Add external media modal on the Media Import page
-- External Media: Move the GooglePhotosMedia, OpenverseMedia, PexelsMedia to @automattic/jetpack-shared-extension-utils
-- External Media: Update styles of the external media modal
-- Forms: Add support for having multiple forms accross paginated pages.
-- Forms: Update field and button blocks to support contentOnly editing.
-- Newsletter: add setting to hide category selection modal
-- Post actions: rename Copy action to Duplicate, which is clearer
-- Tiled Gallery block: Add ability to link to custom URLs from each image.
 - Untangle Calypso Media Page: Enable the feature
-- Update the unowned section from a product grid to a product list
-
-### Improved compatibility
-- Custom Content Types: Ensure feature works on Jetpack settings page without using module functionality.
-
-### Bug fixes
-- External Media: Fix the button size in the editor for GB 18 or below
-- Fix count roles not able to be updated
-- Forms: Fix block style variations not showing in the editor.
-- Forms: Fix invalid html IDs.
-- Forms: Hide fields without options.
-- Forms: Improve the styling of the separator block when placed inside the form block
-- Sharing: Fix possible warnings related to plugin compatibility.
-- Sitemaps: include line breaks for easier debugging
-- Temporarily show the widget to administrators for Simple sites
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - API: Added caching to JSON API requests for comments.
-- Code Quality: Update deprecated block editor APU usage.
-- Ensure Viewers are searchable by username and email.
-- Jetpack button: fix width and alignment
 - Jetpack SEO: add assisstant flow state to better handle navigation transitions and effects
-- Jetpack SEO: add completion summary  step
-- Jetpack SEO: add request mocking function for development
 - Jetpack SEO: allow editLastMessage to append new content instead of replacing. Simplifies message flow editing
-- Jetpack SEO: assistant option bubbles border design
-- Jetpack SEO: fix gap/spacing between chat bubbles and options
-- Jetpack SEO: fix state inconsistencies, change effects and use global isBusy suspense flag
 - Jetpack SEO: remove code from the first attempt of the trigger, placed on AI panel of the Jetpack sidebar
-- Jetpack SEO: switch mockRequests flag to false so it defaults to make requests to backend
 - Jetpack SEO: wee CSS fix on message width
-- Jetpack SEO Assistant: keep both raw and formatted value on keywords step, thus allowing for consistency on messages but also on provided value for later steps
-- Jetpack SEO assistant: persist selected options if they haven't changed
-- Jetpack Sync: Fixed extracting UTF-8 characters from image alt-text
-- Just a copy change.
-- Map block: Catch error if content is empty.
-- Prevent PHP error when error log retrieved from database is an unexpected type.
-- Reader: Update url from /read to /reader
-- Reset to-test.md for Jetpack 14.4 release cycle.
-- SEO Assistant: Add actual requests
-- Sync: Full-sync chunking logic dynamic for Woo modules
-- Sync: Full sync for posts not sending term relationships
-- Update composer.lock
 - Updated package dependencies.
+
+## 14.4-a.1 - 2025-02-10
+### Enhancements
+- Dashboard: Display connection owner to all users. [#41606]
+- External Media: Add external media modal on the Media Import page. [#41282]
+- Forms: Add support for having multiple forms accross paginated pages. [#41407]
+- Forms: Update field and button blocks to support contentOnly editing. [#41411]
+- Newsletter: Add setting to hide category selection modal. [#41552]
+- Post actions: Rename Copy action to Duplicate, which is clearer. [#34844]
+- Tiled Gallery block: Add ability to link to custom URLs from each image. [#41471]
+- My Jetpack: Update the unowned section from a product grid to a product list. [#41312]
+
+### Improved compatibility
+- Custom Content Types: Ensure feature works on Jetpack settings page without using module functionality. [#41349]
+
+### Bug fixes
+- External Media: Fix the button size in the editor for Gutenberg 18 or below. [#41619]
+- Forms: Fix block style variations not showing in the editor. [#41457]
+- Forms: Fix invalid html IDs. [#41564]
+- Forms: Hide fields without options. [#41443]
+- Forms: Improve the styling of the separator block when placed inside the form block. [#40967]
+- Sharing: Fix possible warnings related to plugin compatibility. [#41600]
+- Stats: Fix a problem where count roles weren't able to be updated. [#41530]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Code Quality: Update deprecated block editor APU usage. [#41176]
+- Ensure Viewers are searchable by username and email. [#41447]
+- External Media: Move the GooglePhotosMedia, OpenverseMedia, PexelsMedia to @automattic/jetpack-shared-extension-utils. [#41078]
+- External Media: Update styles of the external media modal. [#41303]
+- Jetpack button: fix width and alignment. [#41139]
+- Jetpack SEO: add completion summary step. [#41585]
+- Jetpack SEO: add request mocking function for development. [#41640]
+- Jetpack SEO: assistant option bubbles border design. [#41557]
+- Jetpack SEO: fix gap/spacing between chat bubbles and options. [#41616]
+- Jetpack SEO: fix state inconsistencies, change effects and use global isBusy suspense flag. [#41546]
+- Jetpack SEO: switch mockRequests flag to false so it defaults to make requests to backend. [#41645]
+- Jetpack SEO Assistant: keep both raw and formatted value on keywords step, thus allowing for consistency on messages but also on provided value for later steps. [#41641]
+- Jetpack SEO assistant: persist selected options if they haven't changed. [#41637]
+- Jetpack Sync: Fixed extracting UTF-8 characters from image alt-text. [#41451]
+- Just a copy change. [#39882]
+- Map block: Catch error if content is empty. [#41583]
+- Prevent PHP error when error log retrieved from database is an unexpected type. [#41584]
+- Reader: Update url from /read to /reader. [#41477]
+- Reset to-test.md for Jetpack 14.4 release cycle. [#41555]
+- SEO Assistant: Add actual requests. [#41612]
+- Sitemaps: Include line breaks for easier debugging. [#33962]
+- Stats: Temporarily show the widget to administrators for Simple sites. [#41549]
+- Sync: Full-sync chunking logic dynamic for Woo modules. [#41433]
+- Sync: Full sync for posts not sending term relationships. [#41597]
+- Update composer.lock. [#40863]
+- Updated package dependencies. [#41491] [#41577]
 
 ## 14.3 - 2025-02-04
 ### Enhancements

@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.7.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.7.0] - 2025-02-10
 ### Added
-- Add setting to hide newsletter category modal
+- Add setting to hide newsletter category modal [#41552]
 
 ### Changed
-- Sync: Full-sync chunking logic dynamic for Woo modules
+- Sync: Full-sync chunking logic dynamic for Woo modules [#41433]
 
 ### Deprecated
-- Sync: Full sync for posts not sending term relationships
+- Sync: Full sync for posts not sending term relationships [#41597]
 
 ## [4.6.0] - 2025-02-03
 ### Added
@@ -1401,7 +1398,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.7.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.6.0...v4.7.0-alpha
+[4.7.0]: https://github.com/Automattic/jetpack-sync/compare/v4.6.0...v4.7.0
 [4.6.0]: https://github.com/Automattic/jetpack-sync/compare/v4.5.0...v4.6.0
 [4.5.0]: https://github.com/Automattic/jetpack-sync/compare/v4.4.0...v4.5.0
 [4.4.0]: https://github.com/Automattic/jetpack-sync/compare/v4.3.0...v4.4.0
