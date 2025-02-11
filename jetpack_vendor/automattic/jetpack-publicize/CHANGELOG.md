@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Only register social/settings endpoint if Jetpack version does not have it
 - Updated package dependencies.
+- Use social admin for connections URL
 
 ## [0.59.0] - 2025-02-03
 ### Added
