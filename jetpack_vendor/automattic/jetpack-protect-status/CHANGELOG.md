@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Combine multiple vulnerability results for the same extension into a single vulnerable extension threat result.
 
+### Fixed
+- Protect Status: ensure vulnerabilities property is always an array.
+
 ## [0.4.3] - 2025-02-03
 ### Fixed
 - Code: Remove extra params on function calls. [#41263]
