@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: add setting to hide category selection modal
 - Post actions: rename Copy action to Duplicate, which is clearer
 - Tiled Gallery block: Add ability to link to custom URLs from each image.
+- Untangle Calypso Media Page: Enable the feature
 - Update the unowned section from a product grid to a product list
 
 ### Improved compatibility
