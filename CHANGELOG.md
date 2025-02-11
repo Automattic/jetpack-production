@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.4-a.4 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- SEO Assistant: Add initial error handling to title generation
+
 ## 14.4-a.3 - 2025-02-11
 ### Enhancements
 - Media Page: Enable the "Untangle Calypso" feature. [#41628]
