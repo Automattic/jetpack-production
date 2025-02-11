@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Temporarily show the widget to administrators for Simple sites
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- API: Added caching to JSON API requests for comments.
 - Code Quality: Update deprecated block editor APU usage.
 - Ensure Viewers are searchable by username and email.
 - Jetpack button: fix width and alignment
