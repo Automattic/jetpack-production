@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO: assistant option bubbles border design
 - Jetpack SEO: fix gap/spacing between chat bubbles and options
 - Jetpack SEO: fix state inconsistencies, change effects and use global isBusy suspense flag
+- Jetpack SEO: remove code from the first attempt of the trigger, placed on AI panel of the Jetpack sidebar
 - Jetpack SEO: switch mockRequests flag to false so it defaults to make requests to backend
 - Jetpack SEO: wee CSS fix on message width
 - Jetpack SEO Assistant: keep both raw and formatted value on keywords step, thus allowing for consistency on messages but also on provided value for later steps
