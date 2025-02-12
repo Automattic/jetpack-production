@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add missing pre-defined prompt value to the tracking event
 - Jetpack SEO: add tracking events on significant actions
 - Jetpack SEO: change AI feature request name, see https://github.a8c.com/Automattic/wpcom/pull/173244
+- Jetpack SEO: turn default filter value to true so to enable the SEO assistant by default. It remains as BETA though
 - Remove unused setting
 - SEO Assistant: Add error handling to meta description step
 - SEO Assistant: Add initial error handling to title generation
