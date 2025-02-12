@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Subscriptions: pre-select newsletter categories
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add missing pre-defined prompt value to the tracking event
 - Jetpack SEO: change AI feature request name, see https://github.a8c.com/Automattic/wpcom/pull/173244
