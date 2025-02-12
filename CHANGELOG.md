@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Remove unused setting
 - SEO Assistant: Add initial error handling to title generation
 
 ## 14.4-a.3 - 2025-02-11
