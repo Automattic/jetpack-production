@@ -41,7 +41,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '5.4.4';
+	const PACKAGE_VERSION = '5.4.5-alpha';
 
 	/**
 	 * HTML container ID for the IDC screen on My Jetpack page.
@@ -1102,6 +1102,10 @@ class Initializer {
 	 * @return array
 	 */
 	public static function alert_if_last_backup_failed( array $red_bubble_slugs ) {
+		// Make sure the Notice wasn't previously dismissed.
+		if ( ! empty( $_COOKIE['backup_failure_dismissed'] ) ) {
+			return $red_bubble_slugs;
+		}
 		// Make sure there's a Backup paid plan
 		if ( ! Products\Backup::is_plugin_active() || ! Products\Backup::has_paid_plan_for_product() ) {
 			return $red_bubble_slugs;

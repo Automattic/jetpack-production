@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.4.5-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [5.4.4] - 2025-02-12
 ### Changed
 - Performance: Cache scan calls if no threats are found. [#41614]
@@ -1961,6 +1965,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.4.5-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.4...5.4.5-alpha
 [5.4.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.3...5.4.4
 [5.4.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.2...5.4.3
 [5.4.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.1...5.4.2
