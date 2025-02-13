@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: fix error setting for field
 - Forms: fix missing translations in choice field settings
+- Vertically align submit button in single row
 
 ## [0.37.1] - 2025-02-11
 ### Fixed
