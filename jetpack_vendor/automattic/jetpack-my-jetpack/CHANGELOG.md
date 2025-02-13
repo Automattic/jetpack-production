@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Social | Updated manage module link to point to the new Social admin page
+
 ## [5.4.4] - 2025-02-12
 ### Changed
 - Performance: Cache scan calls if no threats are found. [#41614]
