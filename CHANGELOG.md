@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: pre-select newsletter categories
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add a new site setting to hide the Action Bar in the REST API endpoint
 - AI Assistant: Add missing pre-defined prompt value to the tracking event
 - Jetpack SEO: add tracking events on significant actions
 - Jetpack SEO: change AI feature request name, see https://github.a8c.com/Automattic/wpcom/pull/173244
