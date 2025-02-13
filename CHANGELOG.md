@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms block: add number input
 - Subscriptions: pre-select newsletter categories
 
 ### Bug fixes
