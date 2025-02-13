@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Subscriptions: pre-select newsletter categories
 
+### Bug fixes
+- Geo Location: remove support from default themes to prevent deprecation notice.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a new site setting to hide the Action Bar in the REST API endpoint
 - AI Assistant: Add missing pre-defined prompt value to the tracking event
