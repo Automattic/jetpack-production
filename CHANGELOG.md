@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a new site setting to hide the Action Bar in the REST API endpoint
 - AI Assistant: Add missing pre-defined prompt value to the tracking event
 - Jetpack AI: Adding translation support using Chrome's Gemini AI mini
+- Jetpack AI: fix some styles and deprecation props
 - Jetpack SEO: add box-shadow as in bigsky
 - Jetpack SEO: add tracking events on significant actions
 - Jetpack SEO: change AI feature request name, see https://github.a8c.com/Automattic/wpcom/pull/173244
