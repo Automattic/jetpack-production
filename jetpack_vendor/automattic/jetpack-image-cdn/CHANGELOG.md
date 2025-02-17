@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Do not serve images using unsupported extensions with the cdn_url method.
+
 ## [0.7.4] - 2025-02-03
 ### Fixed
 - Code: Remove extra params on function calls. [#41263]
