@@ -356,13 +356,13 @@ class Terms extends Module {
 	 *
 	 * @access public
 	 *
-	 * @deprecated since 4.8.1-alpha
+	 * @deprecated since 4.8.1
 	 *
 	 * @param object $relationship A row object from the term_relationships table.
 	 * @return object|bool A term object, or false if term taxonomy doesn't exist.
 	 */
 	public function expand_terms_for_relationship( $relationship ) {
-		_deprecated_function( __METHOD__, '4.8.1-alpha' );
+		_deprecated_function( __METHOD__, '4.8.1' );
 
 		return get_term_by( 'term_taxonomy_id', $relationship->term_taxonomy_id );
 	}
