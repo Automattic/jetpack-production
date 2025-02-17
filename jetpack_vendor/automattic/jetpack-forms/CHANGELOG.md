@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Fix `empty form` check for select elements
+- Forms: Update block editor tracks events."
 
 ## [0.38.0] - 2025-02-17
 ### Added
