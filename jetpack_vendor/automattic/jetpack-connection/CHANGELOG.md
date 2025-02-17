@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.5.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.5.0] - 2025-02-17
 ### Changed
-- Connection: Display connection status on Users page independent of the SSO module.
+- Connection: Display connection status on Users page independent of the SSO module. [#41794]
 
 ### Fixed
-- Make sure wpcom_id is a string before passing it over as _ui
+- Make sure wpcom_id is a string before passing it over as _ui. [#41787]
 
 ## [6.4.1] - 2025-02-11
 ### Changed
@@ -1317,7 +1314,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.5.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.4.1...v6.5.0-alpha
+[6.5.0]: https://github.com/Automattic/jetpack-connection/compare/v6.4.1...v6.5.0
 [6.4.1]: https://github.com/Automattic/jetpack-connection/compare/v6.4.0...v6.4.1
 [6.4.0]: https://github.com/Automattic/jetpack-connection/compare/v6.3.2...v6.4.0
 [6.3.2]: https://github.com/Automattic/jetpack-connection/compare/v6.3.1...v6.3.2
