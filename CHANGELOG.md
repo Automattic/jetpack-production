@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO Assistant: Add initial error handling to title generation
 - SEO Assistant: Add store to keep assistant open when sidebar is closed
 - Social | Update social activation link in the editor to point to the new social admin page
+- Subscribe Block: Fix double border on "Set up a paid plan" toolbar button
 
 ## 14.4-a.3 - 2025-02-11
 ### Enhancements
