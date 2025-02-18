@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.11.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Custom post types: do not display testimonials and portfolios on block themes where they are not in use.
+
 ## [0.10.1] - 2025-02-17
 ### Changed
 - Update dependencies.
@@ -218,6 +225,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Add wordpress folder on gitignore. [#37177]
 
+[0.11.0-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.10.1...v0.11.0-alpha
 [0.10.1]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.10.0...v0.10.1
 [0.10.0]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.9.3...v0.10.0
 [0.9.3]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.9.2...v0.9.3

@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added a newsletter widget
+- Custom post types: do not display testimonials and portfolios on block themes where they are not in use.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack button: prevent vertical stretch
