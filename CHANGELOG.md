@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack button: prevent vertical stretch
 - Recipe Block: switch to strings for all block descriptions
+- Social | Update classic editor logic to use the new connections schema
 
 ## 14.4-a.5 - 2025-02-17
 ### Enhancements
