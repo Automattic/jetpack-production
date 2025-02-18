@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Jetpack button: prevent vertical stretch
 - Recipe Block: switch to strings for all block descriptions
+- SEO Assistant: UX tweaks
 - Social | Fix PHP warnings on WPCOM
 - Social | Update classic editor logic to use the new connections schema
 - Subscriptions block: unset invalid newsletter categories from attributes
