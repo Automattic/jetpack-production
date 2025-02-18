@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Recipe Block: switch to strings for all block descriptions
 - Social | Fix PHP warnings on WPCOM
 - Social | Update classic editor logic to use the new connections schema
+- Subscriptions block: unset invalid newsletter categories from attributes
 - Theme tools: Load theme compat functionality relevant to features in Classic Theme Helper package, from this package.
 
 ## 14.4-a.5 - 2025-02-17
