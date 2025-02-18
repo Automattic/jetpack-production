@@ -41,14 +41,14 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '5.4.5';
+	const PACKAGE_VERSION = '5.4.6-alpha';
 
 	/**
 	 * HTML container ID for the IDC screen on My Jetpack page.
 	 */
-	const IDC_CONTAINER_ID = 'my-jetpack-identity-crisis-container';
+	private const IDC_CONTAINER_ID = 'my-jetpack-identity-crisis-container';
 
-	const JETPACK_PLUGIN_SLUGS = array(
+	private const JETPACK_PLUGIN_SLUGS = array(
 		'jetpack-backup',
 		'jetpack-boost',
 		'zerobscrm',
@@ -59,12 +59,12 @@ class Initializer {
 		'jetpack-search',
 	);
 
-	const MY_JETPACK_SITE_INFO_TRANSIENT_KEY             = 'my-jetpack-site-info';
-	const UPDATE_HISTORICALLY_ACTIVE_JETPACK_MODULES_KEY = 'update-historically-active-jetpack-modules';
-	const MISSING_CONNECTION_NOTIFICATION_KEY            = 'missing-connection';
-	const VIDEOPRESS_STATS_KEY                           = 'my-jetpack-videopress-stats';
-	const VIDEOPRESS_PERIOD_KEY                          = 'my-jetpack-videopress-period';
-	const MY_JETPACK_RED_BUBBLE_TRANSIENT_KEY            = 'my-jetpack-red-bubble-transient';
+	private const MY_JETPACK_SITE_INFO_TRANSIENT_KEY             = 'my-jetpack-site-info';
+	private const UPDATE_HISTORICALLY_ACTIVE_JETPACK_MODULES_KEY = 'update-historically-active-jetpack-modules';
+	private const MISSING_CONNECTION_NOTIFICATION_KEY            = 'missing-connection';
+	private const VIDEOPRESS_STATS_KEY                           = 'my-jetpack-videopress-stats';
+	private const VIDEOPRESS_PERIOD_KEY                          = 'my-jetpack-videopress-period';
+	private const MY_JETPACK_RED_BUBBLE_TRANSIENT_KEY            = 'my-jetpack-red-bubble-transient';
 
 	/**
 	 * Holds info/data about the site (from the /sites/%d endpoint)
@@ -235,7 +235,7 @@ class Initializer {
 		}
 		$latest_score['previousScores'] = $previous_score['scores'] ?? array();
 
-		Products\Protect::initialize();
+		Products::initialize_products();
 		$scan_data = Products\Protect::get_protect_data();
 
 		self::update_historically_active_jetpack_modules();
@@ -556,9 +556,10 @@ class Initializer {
 		new REST_Products();
 		new REST_Purchases();
 		new REST_Zendesk_Chat();
-		new REST_Product_Data();
 		new REST_AI();
 		new REST_Recommendations_Evaluation();
+
+		Products::register_product_endpoints();
 
 		register_rest_route(
 			'my-jetpack/v1',

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.4.6-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Move backup endpoint to product class
+
 ## [5.4.5] - 2025-02-17
 ### Changed
 - Social | Updated manage module link to point to the new Social admin page. [#41741]
@@ -1965,6 +1972,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.4.6-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.5...5.4.6-alpha
 [5.4.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.4...5.4.5
 [5.4.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.3...5.4.4
 [5.4.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.2...5.4.3
