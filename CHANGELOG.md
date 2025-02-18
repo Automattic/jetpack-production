@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack button: prevent vertical stretch
 - Recipe Block: switch to strings for all block descriptions
 - Social | Update classic editor logic to use the new connections schema
+- Theme tools: Load theme compat functionality relevant to features in Classic Theme Helper package, from this package.
 
 ## 14.4-a.5 - 2025-02-17
 ### Enhancements

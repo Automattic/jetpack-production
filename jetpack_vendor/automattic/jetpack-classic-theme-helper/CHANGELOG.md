@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Theme tools: Load theme compat functionality relevant to features in Classic Theme Helper package, from this package.
+
 ### Changed
 - Custom post types: do not display testimonials and portfolios on block themes where they are not in use.
 
