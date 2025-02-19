@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack button: prevent vertical stretch
 - moved endpoint for unlinking user to connection package
 - Recipe Block: switch to strings for all block descriptions
+- Remove feature flag for new like widget layout and code for old layout avatars popup.
 - SEO Assistant: UX tweaks
 - Social | Fix PHP warnings on WPCOM
 - Social | Update classic editor logic to use the new connections schema
