@@ -41,7 +41,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '5.4.6-alpha';
+	const PACKAGE_VERSION = '5.5.0-alpha';
 
 	/**
 	 * HTML container ID for the IDC screen on My Jetpack page.
@@ -302,6 +302,7 @@ class Initializer {
 					'dismissed'  => \Jetpack_Options::get_option( 'dismissed_recommendations', false ),
 				),
 				'isStatsModuleActive'    => $modules->is_active( 'stats' ),
+				'canUserViewStats'       => current_user_can( 'manage_options' ) || current_user_can( 'view_stats' ),
 				'isUserFromKnownHost'    => self::is_user_from_known_host(),
 				'isCommercial'           => self::is_commercial_site(),
 				'sandboxedDomain'        => $sandboxed_domain,
@@ -867,6 +868,13 @@ class Initializer {
 	 */
 	public static function maybe_show_red_bubble() {
 		global $menu;
+
+		// Don't show red bubble alerts for non-admin users
+		// These alerts are generally only actionable for admins
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
 		// filters for the items in this file
 		add_filter( 'my_jetpack_red_bubble_notification_slugs', array( __CLASS__, 'add_red_bubble_alerts' ) );
 		$red_bubble_alerts = array_filter(
