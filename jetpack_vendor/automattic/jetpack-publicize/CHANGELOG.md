@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated the connections schema for classic editor
 - Update Keyring_Helper class and enable publicize services caching
 
+### Fixed
+- Fixed social connection toggle not working
+
 ## [0.60.1] - 2025-02-17
 ### Changed
 - Internal updates.

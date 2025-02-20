@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom post types: do not display testimonials and portfolios on block themes where they are not in use.
 
 ### Bug fixes
+- Fixed Social toggles not working
 - Newsletter: Fixed post placement not displaying on certain block themes
 - Social Previews | Fixed distorted image for Tumblr preview
 
