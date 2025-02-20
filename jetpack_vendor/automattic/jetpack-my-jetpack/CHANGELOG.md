@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Code: Prevent dynamic class properties.
 - fix My Jetpack display for non-admin users
+- Improve accessibility for product card actions with ARIA labelling
+- Increase product card status contrast ratio
+- Move product card status before action for screen readers
 
 ## [5.4.5] - 2025-02-17
 ### Changed
