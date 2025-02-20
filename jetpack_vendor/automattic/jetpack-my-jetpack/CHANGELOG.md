@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - allow users to manage user connection in My Jetpack
 - Move backup endpoint to product class
 
+### Removed
+- Script data: remove unused property.
+
 ### Fixed
 - fix My Jetpack display for non-admin users
 
