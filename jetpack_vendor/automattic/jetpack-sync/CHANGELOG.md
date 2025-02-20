@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.8.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Code: Prevent dynamic class properties.
+
 ## [4.8.1] - 2025-02-17
 ### Changed
 - Jetpack Sync: Performance optimizations for the 'terms' module. [#41809]
@@ -1406,6 +1413,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.8.2-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.8.1...v4.8.2-alpha
 [4.8.1]: https://github.com/Automattic/jetpack-sync/compare/v4.8.0...v4.8.1
 [4.8.0]: https://github.com/Automattic/jetpack-sync/compare/v4.7.0...v4.8.0
 [4.7.0]: https://github.com/Automattic/jetpack-sync/compare/v4.6.0...v4.7.0

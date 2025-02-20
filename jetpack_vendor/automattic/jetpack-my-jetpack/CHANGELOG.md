@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Script data: remove unused property.
 
 ### Fixed
+- Code: Prevent dynamic class properties.
 - fix My Jetpack display for non-admin users
 
 ## [5.4.5] - 2025-02-17

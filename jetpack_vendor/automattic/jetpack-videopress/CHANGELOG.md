@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Code: Prevent dynamic class properties.
 - Fix flex position for videos inside row blocks.
 
 ## [0.25.12] - 2025-02-17
