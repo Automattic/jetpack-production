@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Code: Prevent dynamic class properties.
 - Jetpack button: prevent vertical stretch
+- Jetpack SEO: Add image alt text step
 - moved endpoint for unlinking user to connection package
 - Recipe Block: switch to strings for all block descriptions
 - Removed the Jetpack_Keyring_Service_Helper class in favour of the one on publicize
