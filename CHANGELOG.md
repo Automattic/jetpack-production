@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Code: Prevent dynamic class properties.
+- Jetpack AI: Requests that use Chrome AI should not cause front-end to show a request has been used
 - Jetpack button: prevent vertical stretch
 - Jetpack SEO: Add image alt text step
 - moved endpoint for unlinking user to connection package
