@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack button: prevent vertical stretch
 - Jetpack SEO: Add image alt text step
 - moved endpoint for unlinking user to connection package
+- Newsletter settings: update copy
 - Recipe Block: switch to strings for all block descriptions
 - Removed the Jetpack_Keyring_Service_Helper class in favour of the one on publicize
 - Remove feature flag for new like widget layout and code for old layout avatars popup.
