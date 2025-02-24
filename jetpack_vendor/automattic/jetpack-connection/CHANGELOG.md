@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Connection: Disconnection connection ower will disconnect all other users first.
+
 ### Changed
 - moved endpoint for unlinking user to connection package
 

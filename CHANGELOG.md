@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added a newsletter widget
+- Connection: Disconnecting a connection owner account will disconnect all other users first.
 - Custom post types: do not display testimonials and portfolios on block themes where they are not in use.
 
 ### Bug fixes
