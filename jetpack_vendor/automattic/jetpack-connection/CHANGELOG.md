@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.6.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.6.0] - 2025-02-24
 ### Added
-- Connection: Disconnection connection ower will disconnect all other users first.
+- Warn that disconnecting owner account will disconnect all other users first. [#41923]
 
 ### Changed
-- moved endpoint for unlinking user to connection package
+- Move the API endpoint for unlinking the user to the automattic/jetpack-connection package. [#41398]
 
 ## [6.5.0] - 2025-02-17
 ### Changed
-- Connection: Display connection status on Users page independent of the SSO module. [#41794]
+- Display connection status on Users page independent of the SSO module. [#41794]
 
 ### Fixed
 - Make sure wpcom_id is a string before passing it over as _ui. [#41787]
@@ -1324,7 +1321,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.6.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.5.0...v6.6.0-alpha
+[6.6.0]: https://github.com/Automattic/jetpack-connection/compare/v6.5.0...v6.6.0
 [6.5.0]: https://github.com/Automattic/jetpack-connection/compare/v6.4.1...v6.5.0
 [6.4.1]: https://github.com/Automattic/jetpack-connection/compare/v6.4.0...v6.4.1
 [6.4.0]: https://github.com/Automattic/jetpack-connection/compare/v6.3.2...v6.4.0
