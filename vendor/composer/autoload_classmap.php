@@ -244,6 +244,7 @@ return array(
     'Automattic\\Jetpack\\Publicize\\REST_API\\Connections_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-connections-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_API\\Connections_Post_Field' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-connections-post-field.php',
     'Automattic\\Jetpack\\Publicize\\REST_API\\Proxy_Requests' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-proxy-requests.php',
+    'Automattic\\Jetpack\\Publicize\\REST_API\\Services_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-services-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Publicize\\Services' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-services.php',
     'Automattic\\Jetpack\\Publicize\\Share_Limits' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-share-limits.php',

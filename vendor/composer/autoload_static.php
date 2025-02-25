@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_a_7
+class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_a_8
 {
     public static $files = array (
         '3773ef3f09c37da5478d578e32b03a4b' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-assets/actions.php',
@@ -276,6 +276,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_a_7
         'Automattic\\Jetpack\\Publicize\\REST_API\\Connections_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-connections-controller.php',
         'Automattic\\Jetpack\\Publicize\\REST_API\\Connections_Post_Field' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-connections-post-field.php',
         'Automattic\\Jetpack\\Publicize\\REST_API\\Proxy_Requests' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-proxy-requests.php',
+        'Automattic\\Jetpack\\Publicize\\REST_API\\Services_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-services-controller.php',
         'Automattic\\Jetpack\\Publicize\\REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/class-rest-controller.php',
         'Automattic\\Jetpack\\Publicize\\Services' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/class-services.php',
         'Automattic\\Jetpack\\Publicize\\Share_Limits' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/class-share-limits.php',
@@ -523,9 +524,9 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_a_7
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_a_7::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_a_7::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_a_7::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_a_8::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_a_8::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_a_8::$classMap;
 
         }, null, ClassLoader::class);
     }
