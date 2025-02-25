@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.5.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [5.5.0] - 2025-02-24
 ### Changed
 - Allow users to manage user connection in My Jetpack. [#41398]
@@ -1981,6 +1985,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.5.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.0...5.5.1-alpha
 [5.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.5...5.5.0
 [5.4.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.4...5.4.5
 [5.4.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.3...5.4.4
