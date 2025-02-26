@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Newsletter Dashboard widget: add widget footer section
+
 ### Bug fixes
 - Forms: Ensure fields that skip rendering (like empty options fields) do not trigger validation or show value in form submission response.
 - Forms: Fix 404 error when a user submits an invalid form with JavaScript disabled.
