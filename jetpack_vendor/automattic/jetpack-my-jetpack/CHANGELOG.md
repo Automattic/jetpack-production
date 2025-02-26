@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Fix skip to main content feature
+
 ## [5.5.0] - 2025-02-24
 ### Changed
 - Allow users to manage user connection in My Jetpack. [#41398]
