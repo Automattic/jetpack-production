@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Forms: Fix 404 error when a user submits an invalid form with JavaScript disabled.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add alt text generation to image extension
 - AI Assistant: Add image extension with feature flag
