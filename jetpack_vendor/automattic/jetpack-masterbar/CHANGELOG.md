@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Admin Color Schemes: Update color schemes to match Calypso
 
+### Fixed
+- Admin menu: do not display the dashboard switcher button twice.
+
 ## [0.12.4] - 2025-02-24
 ### Changed
 - Internal updates.
