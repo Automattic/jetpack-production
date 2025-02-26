@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Newsletter Dashboard widget: add widget footer section
+- VideoPress: Add title to the attachment details view
 
 ### Bug fixes
 - Forms: Ensure fields that skip rendering (like empty options fields) do not trigger validation or show value in form submission response.
