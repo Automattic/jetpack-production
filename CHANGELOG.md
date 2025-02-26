@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add alt text generation to image extension
 - AI Assistant: Add image extension with feature flag
 - AI Assistant: Adding support to use Chrome AI bult-in API.
+- Social | Deprecate unused publicize endpoints
 - Social | Move the publicize/services endpoint to publicize package
 
 ## 14.4-a.7 - 2025-02-24
