@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Load product data requiring an http request async on the frontend
+- Update package dependencies.
 
 ### Fixed
 - Fix skip to main content feature
