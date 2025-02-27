@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added newsletter widget header row behind a feature flag.
 - Newsletter Dashboard widget: add widget footer section
 - VideoPress: Add title to the attachment details view
 
