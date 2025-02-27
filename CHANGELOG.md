@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Adding support to use Chrome AI bult-in API.
 - Fix subscribe button width in editor
 - Move Subscribe button to new line if width set to 100%
+- Reduce width of Likes column on posts page to better accommodate other columns.
 - Social | Deprecate unused publicize endpoints
 - Social | Move the publicize/services endpoint to publicize package
 
