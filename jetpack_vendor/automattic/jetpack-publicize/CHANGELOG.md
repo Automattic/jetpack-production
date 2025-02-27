@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Deprecated jetpack/v4 connection endpoints
 
+### Fixed
+- Social | Fix Social post UI not showing connections
+
 ## [0.61.0] - 2025-02-24
 ### Added
 - Social: Update the admin page for use by Editors and Authors. [#41859]
