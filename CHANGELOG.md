@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add image extension with feature flag
 - AI Assistant: Adding support to use Chrome AI bult-in API.
 - Fix subscribe button width in editor
+- Fix the user connection link in Post-by-Email module.
 - Move Subscribe button to new line if width set to 100%
 - Newsletter Dashboard Widget: update footer links behind feature flag
 - Reduce width of Likes column on posts page to better accommodate other columns.
