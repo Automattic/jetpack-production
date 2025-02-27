@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Deprecated jetpack/v4 connection endpoints
 
 ### Fixed
+- Social | Fix PHP warnings on WPCOM
 - Social | Fix Social post UI not showing connections
 
 ## [0.61.0] - 2025-02-24
