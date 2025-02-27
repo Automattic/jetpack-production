@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Forms: Ensure fields that skip rendering (like empty options fields) do not trigger validation or show value in form submission response.
 - Forms: Fix 404 error when a user submits an invalid form with JavaScript disabled.
+- Gravatar Widget: Fix linked accounts not showing
 - Publicize | Fix jetpack publicize disconnect command not working
 - Widget Visibility: Fix possible fatal errors for widgets using anonymous functions as callbacks.
 
