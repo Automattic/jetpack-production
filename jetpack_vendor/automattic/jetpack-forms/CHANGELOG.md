@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: Ensure fields that skip rendering (like empty options fields) do not trigger validation or show value in form submission response.
 - Forms: Fix 404 error when a user submits an invalid form with JavaScript disabled.
+- Forms: fix field name set as label when trying to empty label
 - Forms: Show plugin integrations on Atomic.
 
 ## [0.39.0] - 2025-02-24
