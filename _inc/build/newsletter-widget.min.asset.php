@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('react', 'react-jsx-runtime', 'wp-components', 'wp-element', 'wp-primitives'), 'version' => '65b2b3a3cd28f108e99c');
+<?php return array('dependencies' => array('jetpack-script-data', 'react-jsx-runtime', 'wp-components', 'wp-element', 'wp-polyfill', 'wp-primitives'), 'version' => '496c6cb5d8e5939534a9');
