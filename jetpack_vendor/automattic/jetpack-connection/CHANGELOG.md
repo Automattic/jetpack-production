@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Allow cookie auth for user provisioning.
 
 ### Removed
+- Remove excessive check in fetching current user ID in user provisioning.
 - Remove register_nonce from site connection.
 
 ## [6.6.0] - 2025-02-24
