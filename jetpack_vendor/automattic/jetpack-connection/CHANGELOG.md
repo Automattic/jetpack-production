@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add 'isRegistered' flag to connection data endpoint.
+- Add the 'is_signed_with_user_token()' method for REST authentication.
 - Allow cookie auth for user provisioning.
 
 ### Removed

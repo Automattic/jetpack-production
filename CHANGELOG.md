@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Widget Visibility: Fix possible fatal errors for widgets using anonymous functions as callbacks.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add REST support for jsonAPI endpoints.
 - AI Assistant: Add alt text generation to image extension
 - AI Assistant: Add image extension with feature flag
 - AI Assistant: Adding support to use Chrome AI bult-in API.
