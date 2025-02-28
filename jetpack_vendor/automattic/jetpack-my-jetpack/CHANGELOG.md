@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Load product data requiring an http request async on the frontend
 - Move the getting of product ownership data entirely to the frontend
+- Move update to historically active modules to frontend
 - Update package dependencies.
 
 ### Fixed
