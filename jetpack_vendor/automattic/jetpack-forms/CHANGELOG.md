@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: add min/max options to number field
+
 ### Changed
 - Contact Form: Updated editor styles for improved UI consistency and better alignment of form elements.
 - Forms: add accessible name field to advanced settings
