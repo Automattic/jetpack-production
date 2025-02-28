@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Update usage of usePostContent for only when necessary
 - Fix subscribe button width in editor
 - Fix the user connection link in Post-by-Email module.
+- Gravatar Widget: Fix PHP warning for some linked accounts
 - Move Subscribe button to new line if width set to 100%
 - Newsletter Dashboard Widget: update footer links behind feature flag
 - Reduce width of Likes column on posts page to better accommodate other columns.
