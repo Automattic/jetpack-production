@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Contact Form: Updated editor styles for improved UI consistency and better alignment of form elements.
 - Forms: add accessible name field to advanced settings
+- Forms: simplify placeholder block
 - Forms: use placeholder attribute in editor instead of value
 
 ### Fixed
