@@ -19,7 +19,7 @@
 		"automattic/jetpack-blaze": "^0.25.11",
 		"automattic/jetpack-blocks": "^3.0.3",
 		"automattic/jetpack-boost-speed-score": "^0.4.2",
-		"automattic/jetpack-classic-theme-helper": "^0.11.0",
+		"automattic/jetpack-classic-theme-helper": "^0.11.1-alpha",
 		"automattic/jetpack-compat": "^4.0.1",
 		"automattic/jetpack-composer-plugin": "^4.0.1",
 		"automattic/jetpack-config": "^3.0.1",
