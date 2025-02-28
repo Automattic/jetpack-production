@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add image caption generation to image extension
 - AI Assistant: Add image extension with feature flag
 - AI Assistant: Adding support to use Chrome AI bult-in API.
+- AI Assistant: Count request for image extension features
 - AI Assistant: Update usage of usePostContent for only when necessary
 - Fix subscribe button width in editor
 - Fix the user connection link in Post-by-Email module.
