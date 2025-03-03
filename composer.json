@@ -43,7 +43,7 @@
 		"automattic/jetpack-redirect": "^3.0.2",
 		"automattic/jetpack-roles": "^3.0.2",
 		"automattic/jetpack-search": "^0.47.12",
-		"automattic/jetpack-stats": "^0.15.2",
+		"automattic/jetpack-stats": "^0.15.3-alpha",
 		"automattic/jetpack-stats-admin": "^0.24.2",
 		"automattic/jetpack-status": "^5.0.5-alpha",
 		"automattic/jetpack-sync": "^4.8.2",
