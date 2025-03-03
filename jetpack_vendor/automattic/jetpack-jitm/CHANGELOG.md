@@ -5,13 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.2.0-alpha] - unreleased
+## [4.2.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## [4.2.0] - 2025-03-03
 ### Changed
-- Replace more JITM jQuery Ajax calls with @wordpress/api-fetch
-- Update package dependencies.
+- Replace more JITM jQuery Ajax calls with @wordpress/api-fetch [#41990]
+- Update package dependencies. [#42163]
 
 ## [4.1.1] - 2025-02-24
 ### Changed
@@ -844,7 +845,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Update Jetpack to use new JITM package
 
-[4.2.0-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v4.1.1...v4.2.0-alpha
+[4.2.1-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v4.2.0...v4.2.1-alpha
+[4.2.0]: https://github.com/Automattic/jetpack-jitm/compare/v4.1.1...v4.2.0
 [4.1.1]: https://github.com/Automattic/jetpack-jitm/compare/v4.1.0...v4.1.1
 [4.1.0]: https://github.com/Automattic/jetpack-jitm/compare/v4.0.7...v4.1.0
 [4.0.7]: https://github.com/Automattic/jetpack-jitm/compare/v4.0.6...v4.0.7

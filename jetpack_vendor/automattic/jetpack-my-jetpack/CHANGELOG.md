@@ -5,22 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.5.1-alpha] - unreleased
+## [5.5.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Remove purchases from window state and query entirely using state query on front end
+
+## [5.5.1] - 2025-03-03
 ### Added
-- Updated interstitial modal to accept custom trigger.
+- Updated interstitial modal to accept custom trigger. [#41621]
 
 ### Changed
-- Load product data requiring an http request async on the frontend
-- Move the getting of product ownership data entirely to the frontend
-- Move update to historically active modules to frontend
-- Remove purchases from window state and query entirely using state query on front end
-- Update package dependencies.
+- Load product data requiring an http request async on the frontend. [#41965]
+- Move the getting of product ownership data entirely to the frontend. [#42080]
+- Move update to historically active modules to frontend. [#42133]
+- Update package dependencies. [#42081] [#42163]
 
 ### Fixed
-- Fix skip to main content feature
+- Fix skip to main content feature [#42042]
 
 ## [5.5.0] - 2025-02-24
 ### Changed
@@ -1998,7 +2001,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.5.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.0...5.5.1-alpha
+[5.5.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.1...5.5.2-alpha
+[5.5.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.0...5.5.1
 [5.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.5...5.5.0
 [5.4.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.4...5.4.5
 [5.4.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.3...5.4.4

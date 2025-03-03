@@ -5,15 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.1-alpha] - unreleased
+## [0.11.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## [0.11.1] - 2025-03-03
 ### Added
-- Custom Content Types: Ensure script with initial state value is only added on Jetpack admin pages
+- Custom Content Types: Ensure script with initial state value is only added on Jetpack admin pages. [#42138]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#42163]
 
 ## [0.11.0] - 2025-02-24
 ### Added
@@ -235,7 +236,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add wordpress folder on gitignore. [#37177]
 
-[0.11.1-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.0...v0.11.1-alpha
+[0.11.2-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.1...v0.11.2-alpha
+[0.11.1]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.0...v0.11.1
 [0.11.0]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.10.1...v0.11.0
 [0.10.1]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.10.0...v0.10.1
 [0.10.0]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.9.3...v0.10.0
