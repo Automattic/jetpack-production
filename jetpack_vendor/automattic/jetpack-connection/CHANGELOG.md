@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Add the 'is_signed_with_user_token()' method for REST authentication.
 - Allow cookie auth for user provisioning.
 
+### Changed
+- Update package dependencies.
+
 ### Removed
 - Remove excessive check in fetching current user ID in user provisioning.
 - Remove register_nonce from site connection.

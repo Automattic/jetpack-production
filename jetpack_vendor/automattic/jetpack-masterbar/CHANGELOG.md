@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin Color Schemes: Update color schemes to match Calypso
+- Update package dependencies.
 
 ### Removed
 - Masterbar: Remove My Mailboxes admin link

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: Add title to the attachment details view
 
+### Changed
+- Update package dependencies.
+
 ## [0.26.0] - 2025-02-24
 ### Changed
 - Update package dependencies. [#41955]

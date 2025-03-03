@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Social | Improve connect URL generation
+- Update package dependencies.
 
 ### Deprecated
 - Deprecated jetpack/v4 connection endpoints

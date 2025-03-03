@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Custom Content Types: Ensure script with initial state value is only added on Jetpack admin pages
 
+### Changed
+- Update package dependencies.
+
 ## [0.11.0] - 2025-02-24
 ### Added
 - Theme tools: Load theme compat functionality relevant to features in Classic Theme Helper package from this package. [#41598]

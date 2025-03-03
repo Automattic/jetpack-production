@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add accessible name field to advanced settings
 - Forms: simplify placeholder block
 - Forms: use placeholder attribute in editor instead of value
+- Update package dependencies.
 
 ### Fixed
 - Fix warnings when post author is not available.

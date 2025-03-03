@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.9-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [4.0.8] - 2025-02-24
 ### Added
 - User data: Add permissions to the current user object [#41859]
@@ -568,6 +575,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Statically access asset tools
 
+[4.0.9-alpha]: https://github.com/Automattic/jetpack-assets/compare/v4.0.8...v4.0.9-alpha
 [4.0.8]: https://github.com/Automattic/jetpack-assets/compare/v4.0.7...v4.0.8
 [4.0.7]: https://github.com/Automattic/jetpack-assets/compare/v4.0.6...v4.0.7
 [4.0.6]: https://github.com/Automattic/jetpack-assets/compare/v4.0.5...v4.0.6

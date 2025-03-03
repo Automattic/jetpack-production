@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Replace more JITM jQuery Ajax calls with @wordpress/api-fetch
+- Update package dependencies.
 
 ## [4.1.1] - 2025-02-24
 ### Changed
