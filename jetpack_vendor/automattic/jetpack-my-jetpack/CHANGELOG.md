@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Load product data requiring an http request async on the frontend
 - Move the getting of product ownership data entirely to the frontend
 - Move update to historically active modules to frontend
+- Remove purchases from window state and query entirely using state query on front end
 - Update package dependencies.
 
 ### Fixed
