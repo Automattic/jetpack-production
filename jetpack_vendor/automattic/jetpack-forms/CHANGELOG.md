@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: use placeholder attribute in editor instead of value
 
 ### Fixed
+- Fix warnings when post author is not available.
 - Forms: Ensure fields that skip rendering (like empty options fields) do not trigger validation or show value in form submission response.
 - Forms: Fix 404 error when a user submits an invalid form with JavaScript disabled.
 - Forms: fix field name set as label when trying to empty label
