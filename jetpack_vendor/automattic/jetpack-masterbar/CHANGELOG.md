@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.13.0] - 2025-03-03
 ### Changed
-- Admin Color Schemes: Update color schemes to match Calypso
-- Update package dependencies.
+- Admin Color Schemes: Update color schemes to match Calypso. [#40908]
+- Update package dependencies. [#42163]
 
 ### Removed
-- Masterbar: Remove My Mailboxes admin link
+- Masterbar: Remove My Mailboxes admin link. [#40885]
 
 ### Fixed
-- Admin menu: do not display the dashboard switcher button twice.
+- Admin menu: do not display the dashboard switcher button twice. [#42068]
 
 ## [0.12.4] - 2025-02-24
 ### Changed
@@ -245,7 +242,7 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
-[0.13.0-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.12.4...v0.13.0-alpha
+[0.13.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.12.4...v0.13.0
 [0.12.4]: https://github.com/Automattic/jetpack-masterbar/compare/v0.12.3...v0.12.4
 [0.12.3]: https://github.com/Automattic/jetpack-masterbar/compare/v0.12.2...v0.12.3
 [0.12.2]: https://github.com/Automattic/jetpack-masterbar/compare/v0.12.1...v0.12.2
