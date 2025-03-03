@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Check for user currency when getting currency code in dashboard products
+- Jetpack AI: handle image URL errors on AI vision requests to notify the user about the issue
 
 ## 14.4-beta - 2025-03-03
 ### Enhancements
