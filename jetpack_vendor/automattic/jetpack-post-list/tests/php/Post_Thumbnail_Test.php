@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 /**
  * This file contains PHPUnit tests for the Post_Thumbnail class.
  * To run the package unit tests:
@@ -16,7 +16,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @package automattic/jetpack-post-list
  */
-class Test_Post_Thumbnail extends TestCase {
+class Post_Thumbnail_Test extends TestCase {
 
 	/**
 	 * Test that we get a null image attachment ID from invalid post content.

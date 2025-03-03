@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 /**
  * This file contains PHPUnit tests for the Post_List class.
  * To run the package unit tests:
@@ -17,7 +17,7 @@ use WorDBless\BaseTestCase;
  *
  * @package automattic/jetpack-post-list
  */
-class Test_Post_List extends BaseTestCase {
+class Post_List_Test extends BaseTestCase {
 
 	/**
 	 * Post_List::configure() should return and instance of the Post_List class.
