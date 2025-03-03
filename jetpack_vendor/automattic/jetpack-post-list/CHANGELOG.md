@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Exclude unit tests from published package.
+
 ## [0.8.4] - 2025-03-03
 ### Changed
 - Update package dependencies. [#42163]
