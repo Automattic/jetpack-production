@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Social | Deprecate unused publicize endpoints
 - Social | Move the publicize/services endpoint to publicize package
 - The page-optimize plugin link shown to Atomic sites only is no longer required and has been removed.
+- Update package dependencies.
 
 ## 14.4-a.7 - 2025-02-24
 ### Enhancements
