@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Remove purchases from window state and query entirely using state query on front end
+- Update package dependencies.
 
 ## [5.5.1] - 2025-03-03
 ### Added
