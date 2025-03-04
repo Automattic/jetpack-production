@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Ensures check_valid_blocked_user handles error outcomes
+
 ## [0.23.4] - 2025-02-24
 ### Changed
 - Update dependencies. [#39263]
