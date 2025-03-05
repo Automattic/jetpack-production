@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Carousel: Enable core lightbox on single image blocks
 
+### Bug fixes
+- VideoPress Block: Fix critical error in the core Video block.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Check for user currency when getting currency code in dashboard products
 - Jetpack AI: handle image URL errors on AI vision requests to notify the user about the issue
