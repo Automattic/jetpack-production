@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: Add image block extension with alt text and caption generation
+- AI Assistant: Use base64 on image extension requests
 - Enabled connection owner disconnection in dashboard.
 - Forms: Added Akismet panel to form block.
 
