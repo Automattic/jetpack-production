@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Moved share post endpoint from Jetpack to publicize package
 - Social | Moved JS editor code from Jetpack and Social to Publicize package
 
+### Fixed
+- Social | Fix the share date schema for scheduled actions endpoint
+
 ## [0.61.1] - 2025-03-03
 ### Added
 - Moved publicize/scheduled-actions enpoint from WPCOM to publicize. [#42136]
