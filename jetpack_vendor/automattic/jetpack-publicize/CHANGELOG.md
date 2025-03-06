@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Moved share post endpoint from Jetpack to publicize package
+- Social | Moved JS editor code from Jetpack and Social to Publicize package
 
 ## [0.61.1] - 2025-03-03
 ### Added
