@@ -269,6 +269,7 @@ return array(
     'Automattic\\Jetpack\\Search\\Helper' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-helper.php',
     'Automattic\\Jetpack\\Search\\Initial_State' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/dashboard/class-initial-state.php',
     'Automattic\\Jetpack\\Search\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/initializers/class-initializer.php',
+    'Automattic\\Jetpack\\Search\\Inline_Search' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/inline-search/class-inline-search.php',
     'Automattic\\Jetpack\\Search\\Instant_Search' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/instant-search/class-instant-search.php',
     'Automattic\\Jetpack\\Search\\Label_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customizer/customize-controls/class-label-control.php',
     'Automattic\\Jetpack\\Search\\Module_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-module-control.php',
