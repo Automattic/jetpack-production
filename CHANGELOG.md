@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix bug where subscription was showing incorrectly as expired in certain timezones
 - Jetpack AI: handle image URL errors on AI vision requests to notify the user about the issue
 - Jetpack SEO: reverting filter default back to false
+- JSON API: activate REST for posts fetching endpoint.
 - Moved useUpgradeFlow hook to shared-extension-utils package
 - Newsletter Dashboard Widget: update href to import subscribers
 - Newsletter Widget: fix type imports
