@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter Dashboard Widget: update href to import subscribers
 - Social | Moved JS editor code from Jetpack and Social to Publicize package
 - Social | Moved share post endpoint from Jetpack to publicize package
+- Tweaked subscribers counts endpoint to return aggregated data based on a query param.
 
 ## 14.4 - 2025-03-04
 ### Enhancements
