@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress Block: Fix critical error in the core Video block.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Add image index information on caption generation request
 - AI Assistant: Remove image data from contextual content for image extension features
 - Check for user currency when getting currency code in dashboard products
 - Fix bug where subscription was showing incorrectly as expired in certain timezones
