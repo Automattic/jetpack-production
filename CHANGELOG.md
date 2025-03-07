@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO: reverting filter default back to false
 - Moved useUpgradeFlow hook to shared-extension-utils package
 - Newsletter Dashboard Widget: update href to import subscribers
+- Newsletter Widget: fix type imports
 - Social | Moved JS editor code from Jetpack and Social to Publicize package
 - Social | Moved share post endpoint from Jetpack to publicize package
 - Tweaked subscribers counts endpoint to return aggregated data based on a query param.
