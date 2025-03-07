@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Social | Moved JS editor code from Jetpack and Social to Publicize package
 
 ### Fixed
+- Social | Fix stylesheets loaded on the front-end when not needed.
 - Social | Fix the share date schema for scheduled actions endpoint
 
 ## [0.61.1] - 2025-03-03
