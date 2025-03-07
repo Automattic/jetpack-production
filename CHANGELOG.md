@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Use base64 on image extension requests
 - Enabled connection owner disconnection in dashboard.
 - Forms: Added Akismet panel to form block.
+- Newsletter Dashboard Widget: remove feature flag and enable widget
 
 ### Improved compatibility
 - Carousel: Enable core lightbox on single image blocks
