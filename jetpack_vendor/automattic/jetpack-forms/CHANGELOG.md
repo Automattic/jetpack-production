@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Added Akismet panel to form block.
 
+### Changed
+- Forms: Update responses management with DataViews
+
 ## [0.40.0] - 2025-03-03
 ### Added
 - Forms: Add min/max options to number field. [#41783]
