@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter Dashboard Widget: update href to import subscribers
 - Newsletter Widget: fix type imports
 - Newsletter Widget: hint dashboard placement for widget to be 2nd column, near the top
+- Notifications: update link URL to wordpress.com
 - Social | Moved JS editor code from Jetpack and Social to Publicize package
 - Social | Moved share post endpoint from Jetpack to publicize package
 - Tweaked subscribers counts endpoint to return aggregated data based on a query param.
