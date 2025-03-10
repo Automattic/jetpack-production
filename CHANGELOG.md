@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add image block extension with alt text and caption generation
 - AI Assistant: Use base64 on image extension requests
 - Enabled connection owner disconnection in dashboard.
+- Feature suggestions: improve the design of the cards to better match WordPress Core's design.
 - Forms: Added Akismet panel to form block.
 - Moved the Social resharing into the Social post modal
 - Newsletter Dashboard Widget: remove feature flag and enable widget
