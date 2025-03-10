@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Components: Adding margins to elements who had spacing issues due to the __nextHasNoMarginBottom property.
 - Fix bug where subscription was showing incorrectly as expired in certain timezones
 - Jetpack AI: handle image URL errors on AI vision requests to notify the user about the issue
+- Jetpack SEO: add action trigger when toggle is off
 - Jetpack SEO: add first draft for SEO enhancer on JP sidebar and PrePublish
 - Jetpack SEO: reverting filter default back to false
 - JSON API: activate REST for posts fetching endpoint.
