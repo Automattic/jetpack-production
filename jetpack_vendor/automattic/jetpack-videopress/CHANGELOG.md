@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- - Handle case when the URL doesn't contain VideoPress GUID
+  - CSS: Add missing space between CTAs
 - VideoPress: Added margins within tracks control modal to ensure space between elements.
 
 ## [0.27.0] - 2025-03-03
