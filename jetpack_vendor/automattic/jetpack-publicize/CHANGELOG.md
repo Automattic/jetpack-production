@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Moved share post endpoint from Jetpack to publicize package
 - Social | Moved JS editor code from Jetpack and Social to Publicize package
+- Updated the scheduled-actions endpoint making compatible with getEntityRecords
 
 ### Fixed
 - Social | Fix stylesheets loaded on the front-end when not needed.
