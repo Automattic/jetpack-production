@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- VideoPress: Added margins within tracks control modal to ensure space between elements.
+
 ## [0.27.0] - 2025-03-03
 ### Added
 - VideoPress: Add title to the attachment details view. [#42023]

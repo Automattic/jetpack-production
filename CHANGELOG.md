@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add image index information on caption generation request
 - AI Assistant: Remove image data from contextual content for image extension features
 - Check for user currency when getting currency code in dashboard products
+- Components: Adding margins to elements who had spacing issues due to the __nextHasNoMarginBottom property.
 - Fix bug where subscription was showing incorrectly as expired in certain timezones
 - Jetpack AI: handle image URL errors on AI vision requests to notify the user about the issue
 - Jetpack SEO: reverting filter default back to false
