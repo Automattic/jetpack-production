@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Use base64 on image extension requests
 - Enabled connection owner disconnection in dashboard.
 - Forms: Added Akismet panel to form block.
+- Moved the Social resharing into the Social post modal
 - Newsletter Dashboard Widget: remove feature flag and enable widget
 
 ### Improved compatibility
