@@ -2,43 +2,40 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.5-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 14.5-a.1 - 2025-03-10
 ### Enhancements
-- AI Assistant: Add image block extension with alt text and caption generation
-- AI Assistant: Use base64 on image extension requests
-- Enabled connection owner disconnection in dashboard.
-- Feature suggestions: improve the design of the cards to better match WordPress Core's design.
-- Forms: Added Akismet panel to form block.
-- Moved the Social resharing into the Social post modal
-- Newsletter Dashboard Widget: remove feature flag and enable widget
+- AI Assistant: Add image block extension with alt text and caption generation. [#42160]
+- AI Assistant: Use base64 on image extension requests. [#42211]
+- Connection: Add modal for disconnecting owner account in Dashboard. [#42074]
+- Feature suggestions: Improve the design of cards to better match WordPress Core's design. [#42301]
+- Forms: Add Akismet panel to Form Block. [#41826]
+- Social: Move resharing into the Share Post modal. [#42224]
+- Newsletter Dashboard Widget: Remove feature flag and enable widget. [#42276]
 
 ### Improved compatibility
-- Carousel: Enable core lightbox on single image blocks
+- Carousel: Enable core lightbox on single image blocks. [#42089]
 
 ### Bug fixes
-- VideoPress Block: Fix critical error in the core Video block.
+- VideoPress Block: Fix error in the core Video block. [#42216]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- AI Assistant: Add image index information on caption generation request
-- AI Assistant: Remove image data from contextual content for image extension features
-- Check for user currency when getting currency code in dashboard products
-- Components: Adding margins to elements who had spacing issues due to the __nextHasNoMarginBottom property.
-- Fix bug where subscription was showing incorrectly as expired in certain timezones
-- Jetpack AI: handle image URL errors on AI vision requests to notify the user about the issue
-- Jetpack SEO: add first draft for SEO enhancer on JP sidebar and PrePublish
-- Jetpack SEO: reverting filter default back to false
-- JSON API: activate REST for posts fetching endpoint.
-- Moved useUpgradeFlow hook to shared-extension-utils package
-- Newsletter Dashboard Widget: update href to import subscribers
-- Newsletter Widget: fix type imports
-- Newsletter Widget: hint dashboard placement for widget to be 2nd column, near the top
-- Notifications: update link URL to wordpress.com
-- Social | Moved JS editor code from Jetpack and Social to Publicize package
-- Social | Moved share post endpoint from Jetpack to publicize package
-- Tweaked subscribers counts endpoint to return aggregated data based on a query param.
+- AI Assistant: Add image index information on caption generation request. [#42274]
+- AI Assistant: Remove image data from contextual content for image extension features. [#42269]
+- Check for user currency when getting currency code in Dashboard products. [#42189]
+- Components: Add margins to elements which had spacing issues due to the __nextHasNoMarginBottom property. [#42075]
+- Fix bug where subscription was showing incorrectly as expired in certain timezones. [#42240]
+- Jetpack AI: Handle image URL errors on AI vision requests and notify the user about the error. [#42191]
+- Jetpack SEO: Add first draft for SEO enhancer on Jetpack sidebar and pre-publish. [#42310]
+- Jetpack SEO: Revert filter `ai_seo_assistant_enabled` default state back to false. [#42238]
+- JSON API: Activate REST for posts fetching endpoint. [#42311]
+- Move `useUpgradeFlow` hook to shared-extension-utils package. [#41836]
+- Newsletter Dashboard Widget: Update href to import subscribers. [#42239]
+- Newsletter Widget: Fix type imports. [#42277]
+- Newsletter Widget: Update newsletter widget default placement in Dashboard. [#42304]
+- Notifications: Update link URL to wordpress.com. [#42295]
+- Social: Move JS editor code from Jetpack and Social to Publicize package. [#41836]
+- Social: Move share post endpoint from Jetpack to Publicize package. [#42179]
+- Tweak subscribers counts endpoint to return aggregated data based on a query param. [#42103]
 
 ## 14.4 - 2025-03-04
 ### Enhancements
