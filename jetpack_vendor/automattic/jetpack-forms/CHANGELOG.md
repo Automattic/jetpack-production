@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update responses management with DataViews
 
 ### Fixed
+- Forms: Adjust spacing around DataViews table.
 - Forms: Fix issue where multiple contact forms on the same page would fail to submit correctly. Ensures consistent form IDs between page load and form submission.
 
 ## [0.41.0] - 2025-03-10
