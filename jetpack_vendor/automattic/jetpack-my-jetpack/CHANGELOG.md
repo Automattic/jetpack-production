@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.5.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.5.3] - 2025-03-10
 ### Changed
-- Persist cookies for dismissable banners longer than session
+- Persist cookies for dismissable banners longer than session. [#42305]
 
 ## [5.5.2] - 2025-03-05
 ### Changed
-- Remove purchases from window state and query entirely using state query on front end [#42154]
+- Remove purchases from window state and query entirely using state query on front end. [#42154]
 - Update package dependencies. [#42162]
 
 ## [5.5.1] - 2025-03-03
@@ -2006,7 +2003,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.5.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.2...5.5.3-alpha
+[5.5.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.2...5.5.3
 [5.5.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.1...5.5.2
 [5.5.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.0...5.5.1
 [5.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.4.5...5.5.0
