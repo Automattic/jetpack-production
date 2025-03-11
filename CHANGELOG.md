@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Handled singular/plural forms of labels
 - Jetpack SEO: add action trigger when toggle is off
 - Jetpack SEO: add settings toggle for automated SEO props generation
+- Jetpack SEO Enhancer: add global setting toggle on the sidebar
 - not useful since it doesn't completly remove jquery from the front end
 - Provide connection data to footer component.
 - SEO Enhancer: Update UI
