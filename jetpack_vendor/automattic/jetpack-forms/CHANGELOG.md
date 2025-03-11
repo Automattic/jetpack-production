@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Adjust spacing around DataViews table.
 - Forms: Fix issue where multiple contact forms on the same page would fail to submit correctly. Ensures consistent form IDs between page load and form submission.
 - Forms: updates the way that we valdate date info by removing jquery
+- Forms: update the preview for the different block variations
 
 ## [0.41.0] - 2025-03-10
 ### Added

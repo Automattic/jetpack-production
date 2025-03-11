@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: Remove default padding around form block.
+- Forms: update the variation previews to match the current inputs structure
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Handled singular/plural forms of labels
