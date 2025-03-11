@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Handled singular/plural forms of labels
 - Jetpack SEO: add action trigger when toggle is off
+- Jetpack SEO: add settings toggle for automated SEO props generation
 - not useful since it doesn't completly remove jquery from the front end
 - SEO Enhancer: Update UI
 
