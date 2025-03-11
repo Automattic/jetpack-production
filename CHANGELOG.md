@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Publicize Components: Add the schedule button
+- Sharing block: improve the description of the Native sharing option.
 
 ### Bug fixes
 - Forms: Remove default padding around form block.
