@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Publicize Components: Add the schedule button
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Handled singular/plural forms of labels
 - Jetpack SEO: add action trigger when toggle is off
