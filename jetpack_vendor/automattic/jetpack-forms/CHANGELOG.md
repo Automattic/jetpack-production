@@ -5,24 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.42.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.42.0] - 2025-03-12
 ### Added
-- Provide connection data to footer component.
+- Provide connection data to footer component. [#42000]
 
 ### Changed
-- Forms: Remove default padding around forms.
-- Forms: Remove the jetpack footer on the modal
-- Forms: Update responses management with DataViews
-- Update package dependencies.
+- Remove default padding around forms. [#42340]
+- Remove the Jetpack footer on modal. [#42341]
+- Update response management with DataViews. [#41602]
+- Update package dependencies. [#42384]
 
 ### Fixed
-- Forms: Adjust spacing around DataViews table.
-- Forms: Fix issue where multiple contact forms on the same page would fail to submit correctly. Ensures consistent form IDs between page load and form submission.
-- Forms: updates the way that we valdate date info by removing jquery
-- Forms: update the preview for the different block variations
+- Adjust spacing around DataViews table. [#42348]
+- Fix issue where multiple contact forms on the same page would fail to submit correctly. [#42345]
+- Update date validation method by removing jQuery. [#41698]
+- Update the preview for the different block variations. [#42366]
 
 ## [0.41.0] - 2025-03-10
 ### Added
@@ -898,7 +895,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.42.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.41.0...v0.42.0-alpha
+[0.42.0]: https://github.com/automattic/jetpack-forms/compare/v0.41.0...v0.42.0
 [0.41.0]: https://github.com/automattic/jetpack-forms/compare/v0.40.0...v0.41.0
 [0.40.0]: https://github.com/automattic/jetpack-forms/compare/v0.39.0...v0.40.0
 [0.39.0]: https://github.com/automattic/jetpack-forms/compare/v0.38.0...v0.39.0
