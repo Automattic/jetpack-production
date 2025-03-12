@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Provide connection data to footer component.
 - SEO Enhancer: Add SEO requests
 - SEO Enhancer: Update UI
+- Tiled Gallery: Ensure custom links aren't restricted to just URLs - allows anchor links as well.
 - Update package dependencies.
 - We can now use user Jetpack token for authorizing API calls.
 
