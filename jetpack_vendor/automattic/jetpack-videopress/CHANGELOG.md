@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Provide connection data to footer component.
 
+### Fixed
+- VideoPress: Fixed other files not getting uploaded when video files are in dragged files
+
 ## [0.27.1] - 2025-03-10
 ### Fixed
 - Handle case when the URL doesn't contain VideoPress GUID. [#42237]
