@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Feature suggestions: do not automatically load when a site is connected to WordPress.com.
 - Publicize Components: Add the schedule button
 - Sharing block: improve the description of the Native sharing option.
 
