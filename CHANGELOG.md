@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix error with videos uploaded through the Video block
 - Forms: Remove default padding around form block.
 - Forms: update the variation previews to match the current inputs structure
+- Twitter Timeline Widget: Will no longer render a broken link when using twitter's deprecated data-widget-id approach without a type set.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Donation block: add additional information about accepting donations.
