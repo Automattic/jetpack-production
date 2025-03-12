@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO: add action trigger when toggle is off
 - Jetpack SEO: add settings toggle for automated SEO props generation
 - Jetpack SEO Enhancer: add global setting toggle on the sidebar
+- JSON API: add REST support for "get site" endpoint.
 - JSON API: fix posts encoding.
 - not useful since it doesn't completly remove jquery from the front end
 - Provide connection data to footer component.
