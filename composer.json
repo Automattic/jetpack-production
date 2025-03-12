@@ -36,7 +36,7 @@
 		"automattic/jetpack-licensing": "^3.0.5",
 		"automattic/jetpack-logo": "^3.0.1",
 		"automattic/jetpack-masterbar": "^0.13.0",
-		"automattic/jetpack-my-jetpack": "^5.5.1",
+		"automattic/jetpack-my-jetpack": "^5.5.3",
 		"automattic/jetpack-plugins-installer": "^0.5.1",
 		"automattic/jetpack-post-list": "^0.8.4",
 		"automattic/jetpack-publicize": "^0.61.1",
@@ -99,7 +99,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_4_1",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true
