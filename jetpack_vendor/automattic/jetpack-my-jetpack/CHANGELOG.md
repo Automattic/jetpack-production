@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.5.4-alpha] - unreleased
+## [5.6.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- My Jetpack: add QueryProvider to ProductInterstitialModal for extendability
 - Provide connection data to footer component.
 - Stats: add highlights heading level as prop
 
@@ -2014,7 +2015,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.5.4-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.3...5.5.4-alpha
+[5.6.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.3...5.6.0-alpha
 [5.5.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.2...5.5.3
 [5.5.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.1...5.5.2
 [5.5.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.5.0...5.5.1
