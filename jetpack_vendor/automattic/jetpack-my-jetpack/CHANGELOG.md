@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Provide connection data to footer component.
 - Stats: add highlights heading level as prop
 
+### Changed
+- Load agency data from frontend instead of backend
+
 ## [5.5.3] - 2025-03-10
 ### Changed
 - Persist cookies for dismissable banners longer than session. [#42305]
