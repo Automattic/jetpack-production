@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Button: Fix contrast checker when comparing a user specified color with a css provided color.
+- Fix error with videos uploaded through the Video block
 - Forms: Remove default padding around form block.
 - Forms: update the variation previews to match the current inputs structure
 
