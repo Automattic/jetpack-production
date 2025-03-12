@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing block: improve the description of the Native sharing option.
 
 ### Bug fixes
+- Button: Fix contrast checker when comparing a user specified color with a css provided color.
 - Forms: Remove default padding around form block.
 - Forms: update the variation previews to match the current inputs structure
 
