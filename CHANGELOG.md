@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Twitter Timeline Widget: Will no longer render a broken link when using twitter's deprecated data-widget-id approach without a type set.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- add spacing to newsletter settings
 - Donation block: add additional information about accepting donations.
 - Handled singular/plural forms of labels
 - Jetpack SEO: add action trigger when toggle is off
