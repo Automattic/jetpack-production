@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - not useful since it doesn't completly remove jquery from the front end
 - Provide connection data to footer component.
 - SEO Enhancer: Update UI
+- Update package dependencies.
 - We can now use user Jetpack token for authorizing API calls.
 
 ## 14.5-a.1 - 2025-03-10

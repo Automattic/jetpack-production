@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Remove default padding around forms.
 - Forms: Remove the jetpack footer on the modal
 - Forms: Update responses management with DataViews
+- Update package dependencies.
 
 ### Fixed
 - Forms: Adjust spacing around DataViews table.

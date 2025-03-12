@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Provide connection data to footer component.
 
+### Changed
+- Update package dependencies.
+
 ## [0.47.14] - 2025-03-10
 ### Changed
 - Internal updates.
