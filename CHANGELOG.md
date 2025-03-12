@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - not useful since it doesn't completly remove jquery from the front end
 - Provide connection data to footer component.
 - SEO Enhancer: Add SEO requests
+- SEO Enhancer: Auto-run on pre-publish if enabled
 - SEO Enhancer: Update UI
 - Tiled Gallery: Ensure custom links aren't restricted to just URLs - allows anchor links as well.
 - Update package dependencies.
