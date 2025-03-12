@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Load agency data from frontend instead of backend
 
+### Fixed
+- My Jetpack: fix interstitial modal that was displaying the discounted price when user had already used up the discount
+
 ## [5.5.3] - 2025-03-10
 ### Changed
 - Persist cookies for dismissable banners longer than session. [#42305]
