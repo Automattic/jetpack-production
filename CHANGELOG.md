@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added the schedule share functionality to the share post modal
 - Feature suggestions: do not automatically load when a site is connected to WordPress.com.
 - Publicize Components: Add the schedule button
 - Sharing block: improve the description of the Native sharing option.
