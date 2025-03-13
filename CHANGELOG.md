@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Remove default padding around form block.
 - Forms: update the variation previews to match the current inputs structure
 - Twitter Timeline Widget: Will no longer render a broken link when using twitter's deprecated data-widget-id approach without a type set.
+- VideoPress Block: Fix undo not working
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - add spacing to newsletter settings
