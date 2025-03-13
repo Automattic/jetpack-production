@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Improved scheduled-actions endpoint permission checks
 - Update package dependencies.
 
+### Removed
+- Social | Remove unused scheduled-actions endpoint routes
+
 ## [0.61.2] - 2025-03-10
 ### Changed
 - Move share post endpoint from Jetpack to publicize package. [#42179]
