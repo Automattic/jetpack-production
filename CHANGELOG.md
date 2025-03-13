@@ -2,41 +2,47 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.5-a.2 - unreleased
+## 14.5-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Added the schedule share functionality to the share post modal
-- Feature suggestions: do not automatically load when a site is connected to WordPress.com.
-- Publicize Components: Add the schedule button
-- Sharing block: improve the description of the Native sharing option.
 
 ### Bug fixes
-- Button: Fix contrast checker when comparing a user specified color with a css provided color.
-- Fix error with videos uploaded through the Video block
-- Forms: Remove default padding around form block.
-- Forms: update the variation previews to match the current inputs structure
 - Twitter Timeline Widget: Will no longer render a broken link when using twitter's deprecated data-widget-id approach without a type set.
 - VideoPress Block: Fix undo not working
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - add spacing to newsletter settings
-- Donation block: add additional information about accepting donations.
-- Handled singular/plural forms of labels
-- Jetpack SEO: add action trigger when toggle is off
-- Jetpack SEO: add settings toggle for automated SEO props generation
-- Jetpack SEO Enhancer: add global setting toggle on the sidebar
-- JSON API: add REST support for "get site" endpoint.
-- JSON API: fix posts encoding.
-- not useful since it doesn't completly remove jquery from the front end
-- Provide connection data to footer component.
-- SEO Enhancer: Add SEO requests
 - SEO Enhancer: Auto-run on pre-publish if enabled
-- SEO Enhancer: Update UI
-- Tiled Gallery: Ensure custom links aren't restricted to just URLs - allows anchor links as well.
-- Update package dependencies.
-- We can now use user Jetpack token for authorizing API calls.
+
+## 14.5-a.3 - 2025-03-12
+### Enhancements
+- Feature suggestions: Do not automatically load when a site is connected to WordPress.com. [#42337]
+- Publicize Components: Add a schedule button. [#42313]
+- Sharing block: Improve the description of the "Native Share" feature. [#42336]
+
+### Bug fixes
+- Button: Fix contrast checker for user-specified colors. [#41294]
+- Fix error with videos uploaded through the Video block. [#42400]
+- Forms: Remove default padding around form block. [#42340]
+- Forms: Update the variation previews to match the current structures. [#42366]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Donation block: Add additional information about accepting donations. [#42214]
+- Handle singular/plural forms of labels. [#42319]
+- Jetpack SEO: Add action trigger when toggle is off. [#42331]
+- Jetpack SEO: Add settings toggle for automated SEO props generation. [#42350]
+- Jetpack SEO Enhancer: Add global setting toggle on the sidebar.
+- JSON API: Add REST support to `site` endpoint. [#42382]
+- JSON API: Fix post encoding. [#42377]
+- Provide connection data to footer component. [#42000]
+- SEO Enhancer: Add SEO requests. [#42383]
+- SEO Enhancer: Update UI. [#42347]
+- Tiled Gallery: Ensure custom links aren't restricted to just URLs - allows anchor links as well. [#42363]
+- Update package dependencies. [#42384]
+- Allow API authorization with Jetpack token. [#42300]
 
 ## 14.5-a.1 - 2025-03-10
 ### Enhancements
