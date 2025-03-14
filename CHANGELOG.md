@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - add spacing to newsletter settings
 - Fixed publicize unit test
 - Like block: Fix layout shift when loading
+- SEO Enhancer: Auto-generate alt text for images if enabled
 - SEO Enhancer: Auto-run on pre-publish if enabled
 - SEO Enhancer: Fix function call on P2
 - Social | Moved the URL query param handling for opening sidebar to publicize
