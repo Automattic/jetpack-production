@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.3-alpha] - unreleased
+## [0.14.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- The Additional CSS customizer menu now upsells to the correct plan when running the Global Styles experiment.
 
 ## [0.13.2] - 2025-03-12
 ### Changed
@@ -254,7 +257,7 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
-[0.13.3-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.13.2...v0.13.3-alpha
+[0.14.0-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.13.2...v0.14.0-alpha
 [0.13.2]: https://github.com/Automattic/jetpack-masterbar/compare/v0.13.1...v0.13.2
 [0.13.1]: https://github.com/Automattic/jetpack-masterbar/compare/v0.13.0...v0.13.1
 [0.13.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.12.4...v0.13.0
