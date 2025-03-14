@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress Block: Fix undo not working
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adds new endpoint as a consistent way to fetch JITMs from the WPCOm Public API via the existing Jetpack JITM classes
 - add spacing to newsletter settings
 - SEO Enhancer: Auto-run on pre-publish if enabled
 - SEO Enhancer: Fix function call on P2
