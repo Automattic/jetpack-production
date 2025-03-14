@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - Remove the useAdminUiV1 feature flag
+- Social : Connections schema: Remove the deprecated fields
 - Social | Removed the old unused initial state
 - Social | Remove unused scheduled-actions endpoint routes
 
