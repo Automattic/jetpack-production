@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds new endpoint as a consistent way to fetch JITMs from the WPCOm Public API via the existing Jetpack JITM classes
 - add spacing to newsletter settings
+- Fixed publicize unit test
 - SEO Enhancer: Auto-run on pre-publish if enabled
 - SEO Enhancer: Fix function call on P2
 - Social | Removed the old unused initial state
