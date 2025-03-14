@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Improved scheduled-actions endpoint permission checks
+- Social | Change the query parameter to open Jetpack sidebar on editor load
 
 ### Removed
 - Remove the useAdminUiV1 feature flag

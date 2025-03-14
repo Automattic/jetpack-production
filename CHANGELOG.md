@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed publicize unit test
 - SEO Enhancer: Auto-run on pre-publish if enabled
 - SEO Enhancer: Fix function call on P2
+- Social | Moved the URL query param handling for opening sidebar to publicize
 - Social | Removed the old unused initial state
 
 ## 14.5-a.3 - 2025-03-12
