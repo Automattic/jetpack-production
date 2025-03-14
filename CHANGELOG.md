@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds new endpoint as a consistent way to fetch JITMs from the WPCOm Public API via the existing Jetpack JITM classes
 - add spacing to newsletter settings
 - Fixed publicize unit test
+- JSON API: add REST support for users fetching endpoint.
 - Like block: Fix layout shift when loading
 - SEO Enhancer: Auto-generate alt text for images if enabled
 - SEO Enhancer: Auto-run on pre-publish if enabled
