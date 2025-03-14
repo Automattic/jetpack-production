@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Improved scheduled-actions endpoint permission checks
 
 ### Removed
+- Social | Removed the old unused initial state
 - Social | Remove unused scheduled-actions endpoint routes
 
 ## [0.61.3] - 2025-03-12

@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - add spacing to newsletter settings
 - SEO Enhancer: Auto-run on pre-publish if enabled
 - SEO Enhancer: Fix function call on P2
+- Social | Removed the old unused initial state
 
 ## 14.5-a.3 - 2025-03-12
 ### Enhancements
