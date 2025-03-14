@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.8.5-alpha] - unreleased
+## [4.9.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- add _wp_old_date to meta sync
 
 ### Changed
 - Sync: Don't send any old full sync actions if full sync has been restarted.
@@ -1428,7 +1431,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.8.5-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.8.4...v4.8.5-alpha
+[4.9.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.8.4...v4.9.0-alpha
 [4.8.4]: https://github.com/Automattic/jetpack-sync/compare/v4.8.3...v4.8.4
 [4.8.3]: https://github.com/Automattic/jetpack-sync/compare/v4.8.2...v4.8.3
 [4.8.2]: https://github.com/Automattic/jetpack-sync/compare/v4.8.1...v4.8.2
