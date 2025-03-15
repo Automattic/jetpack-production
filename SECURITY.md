@@ -43,5 +43,6 @@ We're committed to working with security researchers to resolve the vulnerabilit
     *   **_Don't_ automate form submissions!** That's very annoying for us, because it adds extra work for the volunteers who manage those systems, and reduces the signal/noise ratio in our communication channels.
     *   To be eligible for a bounty, all of these guidelines must be followed.
 *   Be Patient - Give us a reasonable time to correct the issue before you disclose the vulnerability.
+*   Don't Disclose Vulnerabilies Publicly - This will create a bigger issue for us
 
 We also expect you to comply with all applicable laws. You're responsible to pay any taxes associated with your bounties.
