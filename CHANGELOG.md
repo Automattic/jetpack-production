@@ -8,11 +8,13 @@
 
 ### Bug fixes
 - Forms: Fix core list bullets not showing. [#42440]
+- Slideshow: Fix misaligned controls in site editor. [#42370]
 - Social: Resolve connection issues with LinkedIn company pages and Tumblr additional blogs. [#42352]
-- Twitter Timeline Widget: Prevent broken link when using Twitter's deprecated data-widget-id approach. [#42398]
+- Twitter Timeline Widget: Prevent broken links when using Twitter's deprecated data-widget-id approach. [#42398]
 - VideoPress Block: Fix broken undo functionality. [#42332]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add subscribers in WP Admin starting page. [#42066]
 - Fix Publicize unit test. [#42451]
 - JSON API: Add REST support for `/users` endpoint. [#42475]
 - Like Block: Fix layout shift when loading. [#42361]
