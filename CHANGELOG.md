@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adds new endpoint as a consistent way to fetch JITMs from the WPCOm Public API via the existing Jetpack JITM classes
 - add spacing to newsletter settings
+- Add subscribers in wp-admin starting page
 - Fixed publicize unit test
 - JSON API: add REST support for users fetching endpoint.
 - Like block: Fix layout shift when loading

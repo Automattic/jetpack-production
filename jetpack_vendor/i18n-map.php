@@ -78,7 +78,7 @@ return array(
     ),
     'jetpack-masterbar' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-masterbar',
-      'ver' => '0.14.0-alpha1742222219',
+      'ver' => '0.14.0-alpha1742222296',
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
@@ -119,6 +119,10 @@ return array(
     'jetpack-stats-admin' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats-admin',
       'ver' => '0.24.4',
+    ),
+    'jetpack-subscribers-dashboard' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-subscribers-dashboard',
+      'ver' => '0.1.0-alpha1742222296',
     ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
