@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - SEO Enhancer: Persist features on store and update UI
+- SEO Enhancer: Respect alt text feature toggle and only request alt text on URL change
 - Update package dependencies.
 
 ## 14.5-a.5 - 2025-03-17
