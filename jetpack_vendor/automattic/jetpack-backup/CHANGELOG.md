@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.17-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [4.0.16] - 2025-03-17
 ### Changed
 - Update dependencies. [#42498]
@@ -805,6 +812,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
+[4.0.17-alpha]: https://github.com/Automattic/jetpack-backup/compare/v4.0.16...v4.0.17-alpha
 [4.0.16]: https://github.com/Automattic/jetpack-backup/compare/v4.0.15...v4.0.16
 [4.0.15]: https://github.com/Automattic/jetpack-backup/compare/v4.0.14...v4.0.15
 [4.0.14]: https://github.com/Automattic/jetpack-backup/compare/v4.0.13...v4.0.14
