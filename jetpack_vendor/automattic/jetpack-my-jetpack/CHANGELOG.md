@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Enable screen readers to read stats
+
 ## [5.7.0] - 2025-03-17
 ### Changed
 - Call Protect and VideoPress product data on the frontend and remove from window state [#42411]
