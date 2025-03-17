@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.5-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 14.5-a.5 - 2025-03-17
 ### Enhancements
 - Social: Add "Schedule" functionality to the Share Post modal. [#42376]
