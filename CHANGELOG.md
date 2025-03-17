@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: Fix core list bullets not showing.
+- Slideshow: fix misaligned controls in site editor
 - Social | Fix connecting LinkedIn company pages and Tumblr additional blogs
 - Twitter Timeline Widget: Will no longer render a broken link when using twitter's deprecated data-widget-id approach without a type set.
 - VideoPress Block: Fix undo not working
