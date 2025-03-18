@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: Add quick link in the admin bar for form entries
+
 ### Bug fixes
 - Forms: add a default label for multi text field
 - Forms: removes the salesforce beta badge
