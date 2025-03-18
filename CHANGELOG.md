@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Forms: add a default label for multi text field
 - Forms: removes the salesforce beta badge
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
