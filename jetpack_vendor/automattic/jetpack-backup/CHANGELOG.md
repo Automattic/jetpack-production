@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.0.17-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.0.17] - 2025-03-18
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#42511]
 
 ### Fixed
-- Admin menu: Move backup admin menu addition to a function hooked into admin_menu, preventing PHP warnings.
+- Admin menu: Prevent PHP warnings by moving backup admin menu addition to a function hooked into `admin_menu`. [#42396]
 
 ## [4.0.16] - 2025-03-17
 ### Changed
@@ -815,7 +812,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[4.0.17-alpha]: https://github.com/Automattic/jetpack-backup/compare/v4.0.16...v4.0.17-alpha
+[4.0.17]: https://github.com/Automattic/jetpack-backup/compare/v4.0.16...v4.0.17
 [4.0.16]: https://github.com/Automattic/jetpack-backup/compare/v4.0.15...v4.0.16
 [4.0.15]: https://github.com/Automattic/jetpack-backup/compare/v4.0.14...v4.0.15
 [4.0.14]: https://github.com/Automattic/jetpack-backup/compare/v4.0.13...v4.0.14
