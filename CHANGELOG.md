@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Forms: removes the salesforce beta badge
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Backup: Move admin menu addition to a function hooked into admin_menu, preventing PHP warnings.
 - OpenTable block: removed the ability to search restaurants by name
