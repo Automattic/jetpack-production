@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- My Jetpack: Add back legacy properties to get_info() function
 - Product Interstitial Modal: Fix not running custom onClick events if a customModalTrigger was used.
 
 ## [5.7.1] - 2025-03-17
