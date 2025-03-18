@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fixed fatal with newer version of publicize
+
 ## [0.61.5] - 2025-03-17
 ### Changed
 - Internal updates.
