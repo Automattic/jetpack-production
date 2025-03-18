@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Product Interstitial Modal: Fix not running custom onClick events if a customModalTrigger was used.
+
 ## [5.7.1] - 2025-03-17
 ### Fixed
 - Allow screen readers to read stats. [#42275]
