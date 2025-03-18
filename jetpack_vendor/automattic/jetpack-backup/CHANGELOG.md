@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Admin menu: Move backup admin menu addition to a function hooked into admin_menu, preventing PHP warnings.
+
 ## [4.0.16] - 2025-03-17
 ### Changed
 - Update dependencies. [#42498]

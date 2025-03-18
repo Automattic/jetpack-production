@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Backup: Move admin menu addition to a function hooked into admin_menu, preventing PHP warnings.
 - OpenTable block: removed the ability to search restaurants by name
 - SEO Enhancer: Persist features on store and update UI
 - SEO Enhancer: Respect alt text feature toggle and only request alt text on URL change
