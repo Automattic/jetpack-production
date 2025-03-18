@@ -248,6 +248,7 @@ return array(
     'Automattic\\Jetpack\\Publicize\\REST_API\\Scheduled_Actions_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-scheduled-actions-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_API\\Services_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-services-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_API\\Share_Post_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-share-post-controller.php',
+    'Automattic\\Jetpack\\Publicize\\REST_API\\Shares_Data_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-shares-data-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Publicize\\Services' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-services.php',
     'Automattic\\Jetpack\\Publicize\\Share_Limits' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-share-limits.php',

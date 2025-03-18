@@ -317,7 +317,7 @@ class Settings {
 	 * Get the initial state.
 	 * Deprecated method, stub left here to avoid fatal.
 	 *
-	 * @deprecated 0.61.6-alpha
+	 * @deprecated 0.62.0-alpha
 	 */
 	public function get_initial_state() {
 		return array();
