@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Site Badge: Update styles of the Coming Soon badge
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Renaming the endpoint from v2, which already exists, to v3 which is new
 - Update dependencies
 
 ## 14.5-a.7 - 2025-03-18
