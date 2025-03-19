@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.62.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update dependencies
+
 ## [0.62.0] - 2025-03-18
 ### Changed
 - Move the `jetpack-social` endpoint to the Publicize package. [#42187]
@@ -929,6 +936,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.62.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.62.0...v0.62.1-alpha
 [0.62.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.61.5...v0.62.0
 [0.61.5]: https://github.com/Automattic/jetpack-publicize/compare/v0.61.4...v0.61.5
 [0.61.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.61.3...v0.61.4

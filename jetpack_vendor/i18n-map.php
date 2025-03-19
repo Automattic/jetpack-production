@@ -54,7 +54,7 @@ return array(
     ),
     'jetpack-forms' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
-      'ver' => '0.43.0',
+      'ver' => '0.43.1-alpha1742365669',
     ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
@@ -78,7 +78,7 @@ return array(
     ),
     'jetpack-masterbar' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-masterbar',
-      'ver' => '0.14.1',
+      'ver' => '0.14.2-alpha1742365669',
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
@@ -106,11 +106,11 @@ return array(
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
-      'ver' => '0.62.0',
+      'ver' => '0.62.1-alpha1742365669',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.47.17',
+      'ver' => '0.47.18-alpha1742365669',
     ),
     'jetpack-stats' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats',
@@ -122,7 +122,7 @@ return array(
     ),
     'jetpack-subscribers-dashboard' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-subscribers-dashboard',
-      'ver' => '0.1.1',
+      'ver' => '0.1.2-alpha1742365669',
     ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
@@ -130,7 +130,7 @@ return array(
     ),
     'jetpack-videopress-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.27.4',
+      'ver' => '0.27.5-alpha1742365669',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
@@ -138,7 +138,7 @@ return array(
     ),
     'jetpack-wordads' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wordads',
-      'ver' => '0.4.16',
+      'ver' => '0.4.17-alpha1742365669',
     ),
     'woocommerce-analytics' => array(
       'path' => 'jetpack_vendor/automattic/woocommerce-analytics',

@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.5-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update dependencies
+
 ## 14.5-a.7 - 2025-03-18
 ### Enhancements
 - Forms: Add quick link in the admin bar for form entries. [#42474]
