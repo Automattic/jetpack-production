@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies
 
+### Fixed
+- Site Badge: Update styles of the Coming Soon badge
+
 ## [0.14.1] - 2025-03-18
 ### Changed
 - Update package dependencies. [#42511]
