@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Add embed block sidebar notice to transform it to a VideoPress block
+
 ### Bug fixes
 - Site Badge: Update styles of the Coming Soon badge
 - Site verification: Fix Auto verify with Google when Social is OFF
