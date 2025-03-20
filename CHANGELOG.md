@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- My Jetpack: An onboarding screen has been implemented to provide clear, step-by-step instructions for new users connecting to Jetpack.
+
 ### Improved compatibility
 - Add embed block sidebar notice to transform it to a VideoPress block
 - Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
