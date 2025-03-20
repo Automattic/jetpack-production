@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Social | Add wpcom/v2 endpoint for Social Image Generator token generation
 
+### Deprecated
+- Social: Deprecate jetpack/v4 endpoint for SIG token
+
 ### Fixed
 - Keyring Helper: Moved the initialization to pre_initialization to let it work even when Publicize is off.
 
