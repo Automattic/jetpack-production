@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Enable screen readers to read Boost score
+
 ## [5.7.3] - 2025-03-19
 ### Changed
 - Update dependencies. [#38910]
