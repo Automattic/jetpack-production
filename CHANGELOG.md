@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Add embed block sidebar notice to transform it to a VideoPress block
+- Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
 
 ### Bug fixes
 - Site Badge: Update styles of the Coming Soon badge

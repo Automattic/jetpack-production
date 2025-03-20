@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies
 
+### Fixed
+- Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
+
 ## [0.43.0] - 2025-03-18
 ### Added
 - Forms: Add a quick link to the admin bar to form entries [#42474]
