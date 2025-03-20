@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Social | Add wpcom/v2 endpoint for Social Image Generator token generation
 
+### Fixed
+- Keyring Helper: Moved the initialization to pre_initialization to let it work even when Publicize is off.
+
 ## [0.62.1] - 2025-03-19
 ### Changed
 - Update dependencies [#42564]

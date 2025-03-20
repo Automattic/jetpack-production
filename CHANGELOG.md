@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Site Badge: Update styles of the Coming Soon badge
+- Site verification: Fix Auto verify with Google when Social is OFF
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Renaming the endpoint from v2, which already exists, to v3 which is new
