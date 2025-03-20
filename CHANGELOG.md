@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Site verification: Fix Auto verify with Google when Social is OFF
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Likes: make module compatible with WP.com Simple sites
 - Renaming the endpoint from v2, which already exists, to v3 which is new
 - SEO Enhancer: Add post-publish summary
 - SEO Enhancer: Disable auto-enhance and toggle on simple sites
