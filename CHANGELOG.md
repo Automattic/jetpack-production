@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Admin Color Scheme: Fix the color of the Aquatic color scheme
+- Newsletters: ensure external links are marked as so in the Newsletter widget.
 - Site Badge: Update styles of the Coming Soon badge
 - Site verification: Fix Auto verify with Google when Social is OFF
 
