@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Sync: Consider blacklisted taxonomies when doing full sync for term relationships
+
 ## [4.9.1] - 2025-03-17
 ### Changed
 - Internal updates.
