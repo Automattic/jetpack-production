@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Keyring Helper: Moved the initialization to pre_initialization to let it work even when Publicize is off.
+- Social: Fix permission check for connection url
 
 ## [0.62.1] - 2025-03-19
 ### Changed
