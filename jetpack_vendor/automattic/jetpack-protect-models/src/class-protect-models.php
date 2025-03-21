@@ -12,5 +12,5 @@ namespace Automattic\Jetpack;
  */
 class Protect_Models {
 
-	const PACKAGE_VERSION = '0.5.4-alpha';
+	const PACKAGE_VERSION = '0.5.4';
 }
