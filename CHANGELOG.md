@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - - add reader reopost functionality to jetpack editor extension, fix bug with blogging prompt.
 - AI Controls: Increase compatibility of buttons, preventing console warnings.
 - Compatibility: Ensuring performance best practices and reducing console warnings.
+- Jetpack SEO Enhancer: hide trigger button when auto-generate toggle is on
 - Likes: make module compatible with WP.com Simple sites
 - Renaming the endpoint from v2, which already exists, to v3 which is new
 - SEO Enhancer: Add post-publish summary
