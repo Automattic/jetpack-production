@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Renaming the endpoint from v2, which already exists, to v3 which is new
 - SEO Enhancer: Add post-publish summary
 - SEO Enhancer: Disable auto-enhance and toggle on simple sites
+- SEO Enhancer: Do not request Jetpack modules data on Simple sites
 - Update dependencies
 
 ## 14.5-a.7 - 2025-03-18
