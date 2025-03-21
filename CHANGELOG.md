@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Add embed block sidebar notice to transform it to a VideoPress block
+- AI Assistant: Improved performance by optimizing state management in the AI feature hook to prevent unnecessary re-renders
 - Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
 
 ### Bug fixes
