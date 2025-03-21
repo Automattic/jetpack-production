@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies
 
 ### Fixed
+- Admin Color Scheme: Fix the color of the Aquatic color scheme
 - Site Badge: Update styles of the Coming Soon badge
 
 ## [0.14.1] - 2025-03-18

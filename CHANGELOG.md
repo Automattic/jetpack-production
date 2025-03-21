@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
 
 ### Bug fixes
+- Admin Color Scheme: Fix the color of the Aquatic color scheme
 - Site Badge: Update styles of the Coming Soon badge
 - Site verification: Fix Auto verify with Google when Social is OFF
 
