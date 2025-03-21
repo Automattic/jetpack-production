@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- An email input has been added to the social login form for connections on the onboarding screen. This input will help users log into Jetpack seamlessly through a magic link.
 - My Jetpack: add a new social login form for connecting Jetpack for the first time on the onboardin screen.
 
 ## [5.8.0] - 2025-03-21
