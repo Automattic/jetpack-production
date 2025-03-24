@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
+- Forms: Prevent custom label font sizes preventing animated label font size reduction
 - Placeholder should always display if it's a non-empty string
 
 ## [0.43.0] - 2025-03-18
