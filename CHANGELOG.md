@@ -6,12 +6,18 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Adds the Account Protection module toggle
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Autofill logged in email'
+- E2E Tests: added test coverage for account protection features
 - Likes: fix compatibility with WP.com locales
 - Newsletter Widget: add Tracks events
 - SEO Enhancer: Count requests for image alt text
 - Testing: Add instructions prior to Jetpack 14.5 release.
+- Uses jetpack-config package for Account Protection initialization
+- Uses jetpack-logo package for Account Protection logos
 
 ## 14.5-a.9 - 2025-03-24
 ### Enhancements
