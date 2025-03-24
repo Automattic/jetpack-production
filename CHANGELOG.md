@@ -2,37 +2,35 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.5-a.8 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 14.5-a.9 - 2025-03-24
 ### Enhancements
-- My Jetpack: An onboarding screen has been implemented to provide clear, step-by-step instructions for new users connecting to Jetpack.
+- My Jetpack: Introduce a new onboarding screen to provide clear, step-by-step instructions for new users connecting to Jetpack. [#42523]
 
 ### Improved compatibility
-- Add embed block sidebar notice to transform it to a VideoPress block
-- AI Assistant: Improved performance by optimizing state management in the AI feature hook to prevent unnecessary re-renders
-- Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
+- VideoPress: Add block sidebar notice to transform embed into a block. [#42443]
+- AI Assistant: Improve performance by optimizing state management in the AI feature hook. [#42536]
+- Components: Prevent deprecation notices by adding `__next40pxDefaultSize` to controls. [#42576]
 
 ### Bug fixes
-- Admin Color Scheme: Fix the color of the Aquatic color scheme
-- Newsletters: ensure external links are marked as so in the Newsletter widget.
-- Search: Ensure the count of returned results is shown after searching, i.e., "Found 3 results for...", "Found 1 result for...".
-- Site Badge: Update styles of the Coming Soon badge
-- Site verification: Fix Auto verify with Google when Social is OFF
-- Stats: Ensure the Stats widget is automatically disabled when the Stats module is disabled.
+- Admin Color Scheme: Fix colors in the Aquatic color scheme. [#42632]
+- Newsletter: Ensure external links are marked as such in the Newsletter widget. [#42571]
+- Search: Ensure the count of returned results is shown after searching. [#42570]
+- Site Badge: Update styles of the Coming Soon badge. [#42496]
+- Site Verification: Fix auto-verification via Google when Social is disabled. [#42604]
+- Stats: Ensure the Stats widget is automatically disabled when the Stats module is disabled. [#42603]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- - add reader reopost functionality to jetpack editor extension, fix bug with blogging prompt.
-- AI Controls: Increase compatibility of buttons, preventing console warnings.
-- Compatibility: Ensuring performance best practices and reducing console warnings.
-- Jetpack SEO Enhancer: hide trigger button when auto-generate toggle is on
-- Likes: make module compatible with WP.com Simple sites
-- Renaming the endpoint from v2, which already exists, to v3 which is new
-- SEO Enhancer: Add post-publish summary
-- SEO Enhancer: Disable auto-enhance and toggle on simple sites
-- SEO Enhancer: Do not request Jetpack modules data on Simple sites
-- Update dependencies
+- AI Controls: Prevent console warnings by increasing compatibility of buttons. [#42636]
+- Compatibility: Ensuring performance best practices and reducing console warnings. [#42435]
+- Fix bug with blogging prompt. [#42539]
+- Jetpack SEO Enhancer: Hide trigger button when auto-generate toggle is on. [#42653]
+- Likes: Make module compatible with WordPress.com Simple sites. [#42515]
+- Reader: Add repost functionality to Jetpack editor extension.
+- Rename the JITM endpoint from v2, which already exists, to v3, which is new. [#42568]
+- SEO Enhancer: Add post-publish summary. [#42557]
+- SEO Enhancer: Disable auto-enhance and toggle on WordPress.com Simple sites. [#42597]
+- SEO Enhancer: Do not request Jetpack modules data on WordPress.com Simple sites. [#42650]
+- Update dependencies. [#42564]
 
 ## 14.5-a.7 - 2025-03-18
 ### Enhancements
