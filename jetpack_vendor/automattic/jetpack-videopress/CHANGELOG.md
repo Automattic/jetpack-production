@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
+- Preserve search query when navigating back from video details page.
 
 ## [0.27.4] - 2025-03-18
 ### Changed
