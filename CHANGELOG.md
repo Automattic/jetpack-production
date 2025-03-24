@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Likes: fix compatibility with WP.com locales
 - Newsletter Widget: add Tracks events
 - SEO Enhancer: Count requests for image alt text
+- Testing: Add instructions prior to Jetpack 14.5 release.
 
 ## 14.5-a.9 - 2025-03-24
 ### Enhancements
