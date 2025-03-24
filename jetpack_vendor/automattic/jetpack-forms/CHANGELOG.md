@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
+- Placeholder should always display if it's a non-empty string
 
 ## [0.43.0] - 2025-03-18
 ### Added
