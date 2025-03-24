@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.9.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.9.0] - 2025-03-24
 ### Added
-- An email input has been added to the social login form for connections on the onboarding screen. This input will help users log into Jetpack seamlessly through a magic link.
-- My Jetpack: add a new social login form for connecting Jetpack for the first time on the onboardin screen.
+- Add an email input to the social login form, allowing users to log into Jetpack seamlessly through a magic link. [#42600]
+- Add a new social login form to the onboarding screen for first-time Jetpack connections. [#42561]
 
 ## [5.8.0] - 2025-03-21
 ### Added
-- My Jetpack: An onboarding screen has been implemented to provide clear, step-by-step instructions for new users connecting to Jetpack. [#42523]
+- Introduce a new onboarding screen to provide clear, step-by-step instructions for new users connecting to Jetpack. [#42523]
 
 ### Fixed
-- Enable screen readers to read Boost score [#42306]
+- Enable screen readers to read Boost score. [#42306]
 
 ## [5.7.3] - 2025-03-19
 ### Changed
@@ -2052,7 +2049,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.9.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.8.0...5.9.0-alpha
+[5.9.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.8.0...5.9.0
 [5.8.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.7.3...5.8.0
 [5.7.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.7.2...5.7.3
 [5.7.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.7.1...5.7.2
