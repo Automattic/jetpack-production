@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletters: ensure external links are marked as so in the Newsletter widget.
 - Site Badge: Update styles of the Coming Soon badge
 - Site verification: Fix Auto verify with Google when Social is OFF
+- Stats: Ensure the Stats widget is automatically disabled when the Stats module is disabled.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - - add reader reopost functionality to jetpack editor extension, fix bug with blogging prompt.
