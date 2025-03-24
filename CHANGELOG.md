@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Admin Color Scheme: Fix the color of the Aquatic color scheme
 - Newsletters: ensure external links are marked as so in the Newsletter widget.
+- Search: Ensure the count of returned results is shown after searching, i.e., "Found 3 results for...", "Found 1 result for...".
 - Site Badge: Update styles of the Coming Soon badge
 - Site verification: Fix Auto verify with Google when Social is OFF
 - Stats: Ensure the Stats widget is automatically disabled when the Stats module is disabled.

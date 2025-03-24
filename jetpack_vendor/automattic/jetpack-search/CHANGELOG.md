@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies
 
+### Fixed
+- Search: Ensure the count of returned results is shown after searching, i.e., "Found 3 results for...", "Found 1 result for...".
+
 ## [0.47.17] - 2025-03-18
 ### Changed
 - Update package dependencies. [#42511]
