@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Likes: fix compatibility with WP.com locales
+- Newsletter Widget: add Tracks events
 - SEO Enhancer: Count requests for image alt text
 
 ## 14.5-a.9 - 2025-03-24
