@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Forms: Fix WordPress useSelect warning.
+
 ## [0.44.0] - 2025-03-24
 ### Changed
 - Update editor sidebar copy. [#42642]
