@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Adds the Account Protection module toggle
 
 ### Bug fixes
+- Map block: Increase compatibility of components, preventing console warnings.
 - Video upload: fix video upload reload
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
