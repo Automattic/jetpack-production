@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Autofill logged in email'
 - Clean up the remnants of the registration nonce we no longer use.
+- Display proper Offline Mode notices if enabled via DB option.
 - E2E Tests: added test coverage for account protection features
 - Likes: fix compatibility with WP.com locales
 - Newsletter Widget: add Tracks events
