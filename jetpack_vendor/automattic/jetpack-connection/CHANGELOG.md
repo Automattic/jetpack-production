@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Indicate when Offline Mode is enabled via DB option.
 
+### Changed
+- Connection: register assets absolutely
+
 ## [6.8.1] - 2025-03-24
 ### Changed
 - Update dependencies.
