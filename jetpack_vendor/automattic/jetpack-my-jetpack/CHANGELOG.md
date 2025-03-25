@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Connect the frontend of the magic link input with the backend. This functionality is used on the new onboarding screen.
+
 ### Changed
 - Adds Account Protection to Protect product details
 

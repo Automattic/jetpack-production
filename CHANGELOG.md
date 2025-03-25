@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Adds the Account Protection module toggle
+- Connection: Allow pre-selected login providers
 
 ### Bug fixes
 - Map block: Increase compatibility of components, preventing console warnings.
