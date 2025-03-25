@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Adds the Account Protection module toggle
 
+### Bug fixes
+- Video upload: fix video upload reload
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Autofill logged in email'
 - E2E Tests: added test coverage for account protection features
