@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Utilities: Changing from Post Editor to Site Editor for better compatibility and preventing console warnings.
+
 ## [0.25.17] - 2025-03-24
 ### Changed
 - Update dependencies. [#42565]

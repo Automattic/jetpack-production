@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Testing: Add instructions prior to Jetpack 14.5 release.
 - Uses jetpack-config package for Account Protection initialization
 - Uses jetpack-logo package for Account Protection logos
+- Utilities: Changing from Post Editor to Site Editor for better compatibility and preventing console warnings.
 
 ## 14.5-a.9 - 2025-03-24
 ### Enhancements
