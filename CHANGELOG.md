@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E Tests: added test coverage for account protection features
 - General: indicate compatibility with the upcoming version of WordPress - 6.8.
 - Jetpack SEO Enhancer: normalize vertical spacing throughout Jetpack sidebar, pre and post publish panels
+- Jetpack SEO Enhancer: track settings change and triggers
 - Likes: fix compatibility with WP.com locales
 - Newsletter Widget: add Tracks events
 - SEO Enhancer: Count requests for image alt text
