@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Clean up the remnants of the registration nonce we no longer use.
 - Display proper Offline Mode notices if enabled via DB option.
 - E2E Tests: added test coverage for account protection features
+- General: indicate compatibility with the upcoming version of WordPress - 6.8.
 - Jetpack SEO Enhancer: normalize vertical spacing throughout Jetpack sidebar, pre and post publish panels
 - Likes: fix compatibility with WP.com locales
 - Newsletter Widget: add Tracks events
