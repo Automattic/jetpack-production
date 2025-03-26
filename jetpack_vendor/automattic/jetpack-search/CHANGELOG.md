@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
+
 ## [0.47.18] - 2025-03-24
 ### Changed
 - Update dependencies. [#42564]

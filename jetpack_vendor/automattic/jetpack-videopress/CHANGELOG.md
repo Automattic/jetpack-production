@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
 - Fixes admin panel header component layout
 - Preserve search query when navigating back from video details page.
 

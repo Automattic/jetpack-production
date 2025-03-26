@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Adds the Account Protection module toggle
 - Connection: Allow pre-selected login providers
 
+### Improved compatibility
+- Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
+
 ### Bug fixes
 - Map block: Increase compatibility of components, preventing console warnings.
 - Video upload: fix video upload reload
