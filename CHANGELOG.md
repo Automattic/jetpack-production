@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Likes: fix compatibility with WP.com locales
 - Newsletter Widget: add Tracks events
 - SEO Enhancer: Count requests for image alt text
+- SEO Enhancer: Enable SEO summary when auto-enhance is disabled
 - Testing: Add instructions prior to Jetpack 14.5 release.
 - Uses jetpack-config package for Account Protection initialization
 - Uses jetpack-logo package for Account Protection logos
