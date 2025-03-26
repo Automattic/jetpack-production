@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.9.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.9.2] - 2025-03-26
 ### Added
-- Add support for oauth social login
-- Connect the frontend of the magic link input with the backend. This functionality is used on the new onboarding screen.
+- Add support for oauth social login [#42700]
+- Connect the frontend of the magic link input with the backend. This functionality is used on the new onboarding screen. [#42662]
 
 ### Changed
-- Adds Account Protection to Protect product details
+- Adds Account Protection to Protect product details [#40925]
 
 ## [5.9.1] - 2025-03-24
 ### Changed
@@ -2064,7 +2061,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.9.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.9.1...5.9.2-alpha
+[5.9.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.9.1...5.9.2
 [5.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.9.0...5.9.1
 [5.9.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.8.0...5.9.0
 [5.8.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.7.3...5.8.0
