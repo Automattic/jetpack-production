@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.9.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [4.9.2] - 2025-03-21
 ### Added
 - Sync: Consider blacklisted taxonomies when doing full sync for term relationships [#42618]
@@ -1436,6 +1440,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.9.3-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.9.2...v4.9.3-alpha
 [4.9.2]: https://github.com/Automattic/jetpack-sync/compare/v4.9.1...v4.9.2
 [4.9.1]: https://github.com/Automattic/jetpack-sync/compare/v4.9.0...v4.9.1
 [4.9.0]: https://github.com/Automattic/jetpack-sync/compare/v4.8.4...v4.9.0
