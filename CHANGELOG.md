@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO Enhancer: normalize vertical spacing throughout Jetpack sidebar, pre and post publish panels
 - Jetpack SEO Enhancer: track settings change and triggers
 - Likes: fix compatibility with WP.com locales
+- Likes: when unloading, don't set display:block style on the placeholder
 - Newsletter Widget: add Tracks events
 - SEO Enhancer: Count requests for image alt text
 - SEO Enhancer: Enable SEO summary when auto-enhance is disabled
