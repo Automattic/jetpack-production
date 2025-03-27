@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.9.3-alpha] - unreleased
+## [5.10.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Adding a Testimonials component for my-jetpack uc
 
 ## [5.9.2] - 2025-03-26
 ### Added
@@ -2065,7 +2068,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.9.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.9.2...5.9.3-alpha
+[5.10.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.9.2...5.10.0-alpha
 [5.9.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.9.1...5.9.2
 [5.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.9.0...5.9.1
 [5.9.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.8.0...5.9.0
