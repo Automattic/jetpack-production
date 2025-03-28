@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add error handling to onboarding form
 - Adding an option for the new onboarding tour.
 - Adding a Testimonials component for my-jetpack uc
+- My Jetpack: disconnected users will now be shown an onboarding screen to ease their understanding of Jetpack.
 
 ## [5.9.2] - 2025-03-26
 ### Added

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Allow pre-selected login providers
 - Forms: Added block integrations modal with feature flag.
 - Forms: Added third party integration endpoint.
+- Improve the onboarding experience of Jetpack guiding the users through a new onboarding process.
 
 ### Improved compatibility
 - Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
