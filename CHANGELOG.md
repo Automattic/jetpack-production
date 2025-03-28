@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Adds the Account Protection module toggle
 - Connection: Allow pre-selected login providers
+- Forms: Added block integrations modal with feature flag.
 - Forms: Added third party integration endpoint.
 
 ### Improved compatibility

@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Make File upload filed prototype work
 
 ### Changed
+- Forms: Added block integrations modal with feature flag.
 - Update dependencies.
 
 ### Fixed
