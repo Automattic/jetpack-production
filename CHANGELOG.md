@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Replace the Social UI in Sharing settings with a link to the Social admin page
 - Social: Update recommedation CTAs to point to social admin page
 - Testing: Add instructions prior to Jetpack 14.5 release.
+- under feature flag
 - Uses jetpack-config package for Account Protection initialization
 - Uses jetpack-logo package for Account Protection logos
 - Utilities: Changing from Post Editor to Site Editor for better compatibility and preventing console warnings.
