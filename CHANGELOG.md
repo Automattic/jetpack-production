@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Adds the Account Protection module toggle
 - Connection: Allow pre-selected login providers
+- Forms: Added third party integration endpoint.
 
 ### Improved compatibility
 - Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
