@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO Enhancer: Count requests for image alt text
 - SEO Enhancer: Enable SEO summary when auto-enhance is disabled
 - Shortcodes: Proxies Twitter/X oEmbed through WordPress.com to minimize 404 errors
+- Social: Replace the Social UI in Sharing settings with a link to the Social admin page
 - Social: Update recommedation CTAs to point to social admin page
 - Testing: Add instructions prior to Jetpack 14.5 release.
 - Uses jetpack-config package for Account Protection initialization
