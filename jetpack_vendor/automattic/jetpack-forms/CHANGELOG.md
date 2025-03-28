@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Added block integrations modal with feature flag.
 - Forms: Create IntegrationCard component.
 - Forms: Update button styles in inspector controls.
+- Forms: Update IntegrationCard header markup and style.
 - under feature flag
 - Update dependencies.
 
