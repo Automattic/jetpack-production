@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 
 ### Fixed
+- Admin Menu: Ensure Akismet menu item display alongside standalone.
 - Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
 
 ## [0.47.18] - 2025-03-24
