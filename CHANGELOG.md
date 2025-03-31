@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Map block: Increase compatibility of components, preventing console warnings.
 - Stats: Fix date processing for At a Glance chart.
+- Story Block: avoid PHP warnings with specific media files.
 - Video upload: fix video upload reload
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
