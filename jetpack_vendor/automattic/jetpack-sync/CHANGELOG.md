@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.10.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.10.0] - 2025-03-31
 ### Changed
-- Full Sync: Calculate ranges for all chunked modules.
-- Full Sync: Ensure we take comment type whitelisting when full syncing
-- Full Sync: Use term_id to determine ranges in terms module
+- Full Sync: Calculate ranges for all chunked modules. [#42692]
+- Full Sync: Ensure comment type whitelisting is used when full syncing. [#42777]
+- Full Sync: Use term_id to determine ranges in terms module. [#42740]
 
 ## [4.9.2] - 2025-03-21
 ### Added
-- Sync: Consider blacklisted taxonomies when doing full sync for term relationships [#42618]
+- Sync: Consider blacklisted taxonomies when doing full sync for term relationships. [#42618]
 
 ## [4.9.1] - 2025-03-17
 ### Changed
@@ -1445,7 +1442,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.10.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.9.2...v4.10.0-alpha
+[4.10.0]: https://github.com/Automattic/jetpack-sync/compare/v4.9.2...v4.10.0
 [4.9.2]: https://github.com/Automattic/jetpack-sync/compare/v4.9.1...v4.9.2
 [4.9.1]: https://github.com/Automattic/jetpack-sync/compare/v4.9.0...v4.9.1
 [4.9.0]: https://github.com/Automattic/jetpack-sync/compare/v4.8.4...v4.9.0

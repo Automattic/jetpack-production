@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.27.6-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.27.6] - 2025-03-31
 ### Fixed
-- Admin Menu: Ensure Akismet menu item display alongside standalone.
-- Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
-- Fixes admin panel header component layout
-- Preserve search query when navigating back from video details page.
+- Admin Menu: Ensure Akismet menu item shows alongside standalone plugin menus. [#42776]
+- Components: Update controls to prevent more deprecation notices. [#42677]
+- Fix admin panel header component layout. [#42614]
+- Preserve search query when navigating back from video details page. [#42612]
 
 ## [0.27.5] - 2025-03-24
 ### Changed
@@ -1597,7 +1594,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.27.6-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.27.5...v0.27.6-alpha
+[0.27.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.27.5...v0.27.6
 [0.27.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.27.4...v0.27.5
 [0.27.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.27.3...v0.27.4
 [0.27.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.27.2...v0.27.3
