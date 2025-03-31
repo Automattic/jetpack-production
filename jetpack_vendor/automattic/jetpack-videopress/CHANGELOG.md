@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.28.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- For Media & Text block, replace video with VideoPress block
+
 ## [0.27.6] - 2025-03-31
 ### Fixed
 - Admin Menu: Ensure Akismet menu item shows alongside standalone plugin menus. [#42776]
@@ -1594,6 +1601,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created empty package [#24952]
 
+[0.28.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.27.6...v0.28.0-alpha
 [0.27.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.27.5...v0.27.6
 [0.27.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.27.4...v0.27.5
 [0.27.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.27.3...v0.27.4

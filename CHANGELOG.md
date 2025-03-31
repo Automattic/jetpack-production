@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.6-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- For Media & Text block, replace video with VideoPress block
+
 ## 14.5-beta - 2025-03-31
 ### Enhancements
 - Add page view count in the post and page list. [#42218]
