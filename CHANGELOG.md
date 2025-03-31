@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add page view count in the post and page list and updated the icon
 - Adds the Account Protection module toggle
 - Connection: Allow pre-selected login providers
 - Forms: Added block integrations modal with feature flag.

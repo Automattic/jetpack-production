@@ -300,6 +300,7 @@ return array(
     'Automattic\\Jetpack\\Stats\\Tracking_Pixel' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-tracking-pixel.php',
     'Automattic\\Jetpack\\Stats\\WPCOM_Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-wpcom-stats.php',
     'Automattic\\Jetpack\\Stats\\XMLRPC_Provider' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-xmlrpc-provider.php',
+    'Automattic\\Jetpack\\Stats_Admin\\Admin_Post_List_Column' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-admin-post-list-column.php',
     'Automattic\\Jetpack\\Stats_Admin\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-dashboard.php',
     'Automattic\\Jetpack\\Stats_Admin\\Main' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-main.php',
     'Automattic\\Jetpack\\Stats_Admin\\Notices' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-notices.php',
