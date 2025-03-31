@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.47.19-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.47.19] - 2025-03-31
 ### Changed
-- Update dependencies.
+- Update dependencies. [#42678]
 
 ### Fixed
-- Admin Menu: Ensure Akismet menu item display alongside standalone.
-- Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
+- Admin Menu: Ensure Akismet menu item shows alongside standalone plugin menus. [#42776]
+- Components: Prevent deprecation notices by adding `__next40pxDefaultSize` to controls. [#42677]
 
 ## [0.47.18] - 2025-03-24
 ### Changed
@@ -1177,7 +1174,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.47.19-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.47.18...v0.47.19-alpha
+[0.47.19]: https://github.com/Automattic/jetpack-search/compare/v0.47.18...v0.47.19
 [0.47.18]: https://github.com/Automattic/jetpack-search/compare/v0.47.17...v0.47.18
 [0.47.17]: https://github.com/Automattic/jetpack-search/compare/v0.47.16...v0.47.17
 [0.47.16]: https://github.com/Automattic/jetpack-search/compare/v0.47.15...v0.47.16
