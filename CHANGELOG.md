@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Map block: Increase compatibility of components, preventing console warnings.
+- Newsletter: Ensure aria-label attribute on dashboard welcome message section is correctly spelled.
 - Stats: Fix date processing for At a Glance chart.
 - Story Block: avoid PHP warnings with specific media files.
 - Video upload: fix video upload reload
