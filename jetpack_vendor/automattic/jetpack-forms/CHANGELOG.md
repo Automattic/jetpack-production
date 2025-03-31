@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Components: Add __next40pxDefaultSize and __nextHasNoMarginBottom to controls, preventing deprecation notices.
+- Forms: Fix sorting of responses in classic view
 - Forms: Fix WordPress useSelect warning.
 
 ## [0.44.0] - 2025-03-24
