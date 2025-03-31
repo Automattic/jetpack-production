@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Components: Add __next40pxDefaultSize to controls, preventing deprecation notices.
 
 ### Bug fixes
+- Fix display name when listing gravatar accounts
 - Map block: Increase compatibility of components, preventing console warnings.
 - Newsletter: Ensure aria-label attribute on dashboard welcome message section is correctly spelled.
 - Stats: Fix date processing for At a Glance chart.
