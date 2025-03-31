@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Full Sync: Calculate ranges for all chunked modules.
+- Full Sync: Use term_id to determine ranges in terms module
 
 ## [4.9.2] - 2025-03-21
 ### Added
