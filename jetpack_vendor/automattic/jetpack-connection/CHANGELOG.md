@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.9.1-alpha] - unreleased
+## [6.10.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- IDC: add "Offliine Mode" flag to secret check endpoint.
 
 ## [6.9.0] - 2025-03-26
 ### Added
@@ -1382,7 +1385,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.9.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.9.0...v6.9.1-alpha
+[6.10.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.9.0...v6.10.0-alpha
 [6.9.0]: https://github.com/Automattic/jetpack-connection/compare/v6.8.1...v6.9.0
 [6.8.1]: https://github.com/Automattic/jetpack-connection/compare/v6.8.0...v6.8.1
 [6.8.0]: https://github.com/Automattic/jetpack-connection/compare/v6.7.7...v6.8.0
