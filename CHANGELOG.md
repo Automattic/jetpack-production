@@ -18,6 +18,11 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO Enhancer: enabling the toggle on PrePublish sidebar triggers the auto-generation process
 - Update package dependencies.
 
+## 14.5-beta.2 - 2025-04-01
+### Bug fixes
+- Add a default value for the error param in the `wp_login_failed` action callback. [#42819]
+- Fix potential `wp_login_failed` action conflicts. [#42825]
+
 ## 14.5-beta - 2025-03-31
 ### Enhancements
 - Add page view count in the post and page list. [#42218]
