@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Add default file label"
 - Forms: Change default submissions view to dataviews.
 - Forms: Change path and return for form integrations endpoint.
+- Forms: Update Creative Mail integration to hooks.
 - Update package dependencies.
 
 ## [0.45.0] - 2025-03-31
