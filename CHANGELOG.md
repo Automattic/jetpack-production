@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - For Media & Text block, replace video with VideoPress block
+- Newsletter Widget: improve the display of links in the Newsletter widget.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update WordPress logo color.
