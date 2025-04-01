@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - For Media & Text block, replace video with VideoPress block
 
+### Changed
+- Update package dependencies.
+
 ## [0.27.6] - 2025-03-31
 ### Fixed
 - Admin Menu: Ensure Akismet menu item shows alongside standalone plugin menus. [#42776]

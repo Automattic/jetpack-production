@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add default file label"
+- Update package dependencies.
 
 ## [0.45.0] - 2025-03-31
 ### Added
