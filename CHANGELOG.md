@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - For Media & Text block, replace video with VideoPress block
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Dashboard: update WordPress logo color.
 - Jetpack SEO Enhancer: enabling the toggle on PrePublish sidebar triggers the auto-generation process
 
 ## 14.5-beta - 2025-03-31
