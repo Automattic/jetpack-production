@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.24.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Add a default value for the error param in the wp_login_failed action callback
+
 ## [0.24.0] - 2025-03-31
 ### Changed
 - Ensures Brute Force Protection does not log failed attempts on password validation failure. [#40925]
@@ -442,6 +449,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
+[0.24.1-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.24.0...v0.24.1-alpha
 [0.24.0]: https://github.com/Automattic/jetpack-waf/compare/v0.23.8...v0.24.0
 [0.23.8]: https://github.com/Automattic/jetpack-waf/compare/v0.23.7...v0.23.8
 [0.23.7]: https://github.com/Automattic/jetpack-waf/compare/v0.23.6...v0.23.7
