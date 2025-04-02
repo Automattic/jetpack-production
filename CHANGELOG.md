@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: update WordPress logo color.
 - Forms: Change path and return for form integrations endpoint.
 - Jetpack SEO Enhancer: enabling the toggle on PrePublish sidebar triggers the auto-generation process
+- Reset to-test.md for Jetpack 14.6.
 - State: fix newsletter selector name typo
 - Update package dependencies.
 
