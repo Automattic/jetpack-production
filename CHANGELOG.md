@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO Enhancer: enabling the toggle on PrePublish sidebar triggers the auto-generation process
 - Reset to-test.md for Jetpack 14.6.
 - State: fix newsletter selector name typo
+- Tests: Prevent warning when asset file doesn't exist.
 - Update package dependencies.
 
 ## 14.5 - 2025-04-02
