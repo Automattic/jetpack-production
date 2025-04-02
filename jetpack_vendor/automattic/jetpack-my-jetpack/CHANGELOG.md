@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Replace generic testimonial CSS class to prevent collisions and set font-family
 - Update package dependencies.
 
+### Fixed
+- Fix several copy issues on onboarding testimonials
+
 ## [5.10.1] - 2025-04-01
 ### Changed
 - Update package dependencies. [#42762]
