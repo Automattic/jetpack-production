@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add default file label"
+- Forms: Added brand icons for integrations modal.
 - Forms: Change default submissions view to dataviews.
 - Forms: Change path and return for form integrations endpoint.
 - Forms: Update Creative Mail integration to hooks.
