@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Star Rating: Fix padding and improve panel copy.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Block editor: Add REST API endpoint for retrieving editor scripts and stylesheets.
 - Dashboard: update WordPress logo color.
 - Forms: Change path and return for form integrations endpoint.
 - Jetpack SEO Enhancer: enabling the toggle on PrePublish sidebar triggers the auto-generation process
