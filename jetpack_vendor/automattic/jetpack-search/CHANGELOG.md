@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 - Update package dependencies.
 
+### Fixed
+- Admin menu registration: allow child classes to overwrite priority.
+
 ## [0.47.19] - 2025-03-31
 ### Changed
 - Update dependencies. [#42678]
