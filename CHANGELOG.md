@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update default forms view to dataviews.
 - Newsletter Widget: improve the display of links in the Newsletter widget.
 
+### Bug fixes
+- Reset access level of  the post to everyone when a paywall is removed.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: update WordPress logo color.
 - Forms: Change path and return for form integrations endpoint.
