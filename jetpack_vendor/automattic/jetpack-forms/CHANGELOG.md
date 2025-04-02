@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Add custom hooks for integrations.
+- Forms: Update CRM integration to hooks.
 
 ### Changed
 - Add default file label"

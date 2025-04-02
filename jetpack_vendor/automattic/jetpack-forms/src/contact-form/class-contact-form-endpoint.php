@@ -567,8 +567,10 @@ class Contact_Form_Endpoint extends \WP_REST_Posts_Controller {
 				return $this->get_akismet_status();
 
 			case 'creative-mail':
-			case 'jetpack-crm':
 				return $this->get_plugin_status( $slug );
+
+			case 'jetpack-crm':
+				return $this->get_jetpack_crm_status();
 
 			default:
 				return new WP_Error(
@@ -580,10 +582,10 @@ class Contact_Form_Endpoint extends \WP_REST_Posts_Controller {
 	}
 
 	/**
-	 * Get basic plugin status (installed/active).
+	 * Get plugin status.
 	 *
-	 * @param string $plugin_slug The plugin slug (e.g. 'akismet' or 'creative-mail').
-	 * @return WP_REST_Response Plugin status data.
+	 * @param string $plugin_slug Plugin slug.
+	 * @return WP_REST_Response Response object.
 	 */
 	private function get_plugin_status( $plugin_slug ) {
 		if ( ! function_exists( 'get_plugins' ) ) {
@@ -628,6 +630,10 @@ class Contact_Form_Endpoint extends \WP_REST_Posts_Controller {
 			'isActive'    => $is_active,
 		);
 
+		if ( $is_installed ) {
+			$response['version'] = $installed_plugins[ $plugin_config['file'] ]['Version'];
+		}
+
 		if ( $is_active ) {
 			$response['settingsUrl'] = admin_url( $plugin_config['settings_url'] );
 		}
@@ -652,5 +658,31 @@ class Contact_Form_Endpoint extends \WP_REST_Posts_Controller {
 				)
 			)
 		);
+	}
+
+	/**
+	 * Get Jetpack CRM plugin status and extension data.
+	 *
+	 * @return WP_REST_Response Plugin status data.
+	 */
+	public function get_jetpack_crm_status() {
+		$plugin_status = $this->get_plugin_status( 'jetpack-crm' );
+		$status_data   = $plugin_status->get_data();
+
+		if ( $status_data['isActive'] ) {
+			$has_extension = function_exists( 'zeroBSCRM_isExtensionInstalled' ) && zeroBSCRM_isExtensionInstalled( 'jetpackforms' ); // @phan-suppress-current-line PhanUndeclaredFunction -- We're checking the function exists first
+
+			return rest_ensure_response(
+				array_merge(
+					$status_data,
+					array(
+						'hasExtension'         => $has_extension,
+						'canActivateExtension' => current_user_can( 'manage_options' ),
+					)
+				)
+			);
+		}
+
+		return $plugin_status;
 	}
 }
