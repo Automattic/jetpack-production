@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Block editor: Add REST API endpoint for retrieving editor scripts and stylesheets.
 - Dashboard: update WordPress logo color.
 - Forms: Change path and return for form integrations endpoint.
+- Jetpack SEO Enhancer: change the to-do list for the auto-generation feature, it now only lists what's missing
 - Jetpack SEO Enhancer: enabling the toggle on PrePublish sidebar triggers the auto-generation process
 - Reset to-test.md for Jetpack 14.6.
 - State: fix newsletter selector name typo
