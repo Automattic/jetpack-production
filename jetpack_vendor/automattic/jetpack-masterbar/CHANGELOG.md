@@ -11,8 +11,11 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated code to avoid using RDV experiment assignment since treat has won.
-- Update dependencies.
-- Update package dependencies.
+
+## [0.14.4] - 2025-04-02
+### Changed
+- Update dependencies. [#42820]
+- Update package dependencies. [#42809]
 
 ## [0.14.3] - 2025-03-31
 ### Changed
@@ -282,7 +285,8 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
-[0.15.0-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.14.3...v0.15.0-alpha
+[0.15.0-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.14.4...v0.15.0-alpha
+[0.14.4]: https://github.com/Automattic/jetpack-masterbar/compare/v0.14.3...v0.14.4
 [0.14.3]: https://github.com/Automattic/jetpack-masterbar/compare/v0.14.2...v0.14.3
 [0.14.2]: https://github.com/Automattic/jetpack-masterbar/compare/v0.14.1...v0.14.2
 [0.14.1]: https://github.com/Automattic/jetpack-masterbar/compare/v0.14.0...v0.14.1
