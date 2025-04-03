@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - State: fix newsletter selector name typo
 - Tests: Prevent warning when asset file doesn't exist.
 - Update package dependencies.
+- Write Brief: Initial Harper linting
 
 ## 14.5 - 2025-04-02
 ### Enhancements
