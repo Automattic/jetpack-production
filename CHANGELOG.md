@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Block editor: Add REST API endpoint for retrieving editor scripts and stylesheets.
 - Dashboard: update WordPress logo color.
 - Forms: Change path and return for form integrations endpoint.
+- Jetpack SEO: fix bug where auto generation would only trigger the last enabled features set by user on manual mode
 - Jetpack SEO Enhancer: cancel metas/alt-text updates if the post has been published
 - Jetpack SEO Enhancer: change the to-do list for the auto-generation feature, it now only lists what's missing
 - Jetpack SEO Enhancer: enabling the toggle on PrePublish sidebar triggers the auto-generation process
