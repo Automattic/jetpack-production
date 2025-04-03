@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add default file label"
+- Forms: Add consent toggle to Creative Mail card.
 - Forms: Added brand icons for integrations modal.
 - Forms: Change default submissions view to dataviews.
 - Forms: Change path and return for form integrations endpoint.
