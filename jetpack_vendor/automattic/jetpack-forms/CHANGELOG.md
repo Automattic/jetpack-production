@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update Creative Mail integration to hooks.
 - Update package dependencies.
 
+### Fixed
+- Forms: Fix responses management compatibility with 6.6
+
 ## [0.45.0] - 2025-03-31
 ### Added
 - Add third-party integration endpoint. [#42730]
