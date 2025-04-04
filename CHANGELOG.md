@@ -13,9 +13,6 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update default forms view to dataviews.
 - Newsletter Widget: improve the display of links in the Newsletter widget.
 
-### Improved compatibility
-- Blocks: ensure all child blocks use the latest version of the Blocks API.
-
 ### Bug fixes
 - Reset access level of  the post to everyone when a paywall is removed.
 - Slideshow: On block based themes, prevent images appearing stuck to the mouse.
