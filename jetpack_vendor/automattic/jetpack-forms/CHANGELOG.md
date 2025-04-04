@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add custom hooks for integrations.
 - Forms: Added integration header, body, button components.
 - Forms: Add endpoint for all integrations.
+- Forms: add progress and errors to the form upload field
 - Forms: Update CRM integration to hooks.
 
 ### Changed
