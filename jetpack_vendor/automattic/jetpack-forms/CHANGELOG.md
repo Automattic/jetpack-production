@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Added brand icons for integrations modal.
 - Forms: Change default submissions view to dataviews.
 - Forms: Change path and return for form integrations endpoint.
+- Forms: Move shared integration card logic.
 - Forms: Update Creative Mail integration to hooks.
 - Update package dependencies.
 
