@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO Enhancer: remove post publish panel loading status and fix summaries and styles
 - Reset to-test.md for Jetpack 14.6.
 - State: fix newsletter selector name typo
+- Subscribe block: match the frontend wrapping behavior when editing.
 - Tests: Prevent warning when asset file doesn't exist.
 - Update package dependencies.
 - Write Brief: Initial Harper linting
