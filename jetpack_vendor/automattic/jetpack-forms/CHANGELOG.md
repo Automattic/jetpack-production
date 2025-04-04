@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: Add controls to IntegrationCard header.
 - Forms: Add custom hooks for integrations.
 - Forms: Added integration header, body, button components.
 - Forms: Add endpoint for all integrations.
