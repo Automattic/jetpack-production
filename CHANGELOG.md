@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO Enhancer: cancel metas/alt-text updates if the post has been published
 - Jetpack SEO Enhancer: change the to-do list for the auto-generation feature, it now only lists what's missing
 - Jetpack SEO Enhancer: enabling the toggle on PrePublish sidebar triggers the auto-generation process
+- Jetpack SEO Enhancer: remove post publish panel loading status and fix summaries and styles
 - Reset to-test.md for Jetpack 14.6.
 - State: fix newsletter selector name typo
 - Tests: Prevent warning when asset file doesn't exist.
