@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - For Media & Text block, replace video with VideoPress block
 
 ### Changed
+- Code: First pass of style coding standards.
 - Update package dependencies.
 
 ## [0.27.6] - 2025-03-31

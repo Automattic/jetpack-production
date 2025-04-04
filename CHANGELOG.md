@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Block editor: Add REST API endpoint for retrieving editor scripts and stylesheets.
+- Code: First pass of style coding standards.
 - Dashboard: update WordPress logo color.
 - Forms: Change path and return for form integrations endpoint.
 - Jetpack SEO: change title and description textareas placeholder and over-limit message

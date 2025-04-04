@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.10.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Code: First pass of style coding standards.
+
 ## [6.10.2] - 2025-04-01
 ### Changed
 - Update package dependencies. [#42809]
@@ -1390,6 +1397,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[6.10.3-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.10.2...v6.10.3-alpha
 [6.10.2]: https://github.com/Automattic/jetpack-connection/compare/v6.10.1...v6.10.2
 [6.10.1]: https://github.com/Automattic/jetpack-connection/compare/v6.10.0...v6.10.1
 [6.10.0]: https://github.com/Automattic/jetpack-connection/compare/v6.9.0...v6.10.0
