@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Fixed IntegrationCardHeader toggle styles
+- Forms: Fix integration modal tracks events.
 
 ## [0.46.0] - 2025-04-07
 ### Added
