@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Code: First pass of style coding standards.
 - Improve Jetpack Onboarding styles
 
+### Fixed
+- Code: Clean up style rule violations that made it in before requiring Stylelint.
+
 ## [5.11.0] - 2025-04-03
 ### Changed
 - Replace generic testimonial CSS class to prevent collisions and set font-family. [#42793]
