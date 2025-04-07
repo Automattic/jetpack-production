@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Block editor: Add REST API endpoint for retrieving editor scripts and stylesheets.
 - Code: First pass of style coding standards.
 - Dashboard: update WordPress logo color.
+- Fixed type checking in the monorepo
 - Forms: Change path and return for form integrations endpoint.
 - Jetpack SEO: change title and description textareas placeholder and over-limit message
 - Jetpack SEO: fix bug where auto generation would only trigger the last enabled features set by user on manual mode
