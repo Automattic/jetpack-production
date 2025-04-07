@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Forms: Fixed IntegrationCardHeader toggle styles
 - Forms: Fix responses management compatibility with 6.6
 
 ## [0.45.0] - 2025-03-31
