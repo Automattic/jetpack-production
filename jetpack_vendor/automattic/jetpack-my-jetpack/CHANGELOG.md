@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Code: First pass of style coding standards.
+- Improve Jetpack Onboarding styles
 
 ## [5.11.0] - 2025-04-03
 ### Changed
