@@ -5,16 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.11.1-alpha] - unreleased
+## [5.11.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Changed
-- Code: First pass of style coding standards.
-- Improve Jetpack Onboarding styles
-
 ### Fixed
 - Code: Clean up style rule violations that made it in before requiring Stylelint.
+
+## [5.11.1] - 2025-04-07
+### Changed
+- Code: First pass of style coding standards. [#42734]
+- Improve Jetpack onboarding styles. [#42910]
 
 ## [5.11.0] - 2025-04-03
 ### Changed
@@ -22,7 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies. [#42806] [#42809]
 
 ### Fixed
-- Fix several copy issues on onboarding testimonials [#42827]
+- Fix several copy issues on onboarding testimonials. [#42827]
 
 ## [5.10.1] - 2025-04-01
 ### Changed
@@ -2091,7 +2092,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.11.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.11.0...5.11.1-alpha
+[5.11.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.11.1...5.11.2-alpha
+[5.11.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.11.0...5.11.1
 [5.11.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.10.1...5.11.0
 [5.10.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.10.0...5.10.1
 [5.10.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.9.2...5.10.0
