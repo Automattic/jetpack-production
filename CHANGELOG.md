@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO Enhancer: change the to-do list for the auto-generation feature, it now only lists what's missing
 - Jetpack SEO Enhancer: enabling the toggle on PrePublish sidebar triggers the auto-generation process
 - Jetpack SEO Enhancer: remove post publish panel loading status and fix summaries and styles
+- Likes: remove unused liked/like CSS class
 - Likes: unify likes-master rendering between wpcom and Jetpack
 - Reset to-test.md for Jetpack 14.6.
 - State: fix newsletter selector name typo
