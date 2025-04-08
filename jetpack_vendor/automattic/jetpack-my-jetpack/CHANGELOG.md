@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added more error logging
 
+### Fixed
+- Code: Update stylesheets to use WordPress font styles.
+
 ## [5.11.2] - 2025-04-07
 ### Fixed
 - Code: Clean up style rule violations that made it in before requiring Stylelint. [#42944]

@@ -102,7 +102,7 @@
   position: relative;
   padding: 0.7692307692em 1.4615384615em;
   color: #efefef;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 0.9285714286em;
   line-height: 1;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -243,10 +243,10 @@
 }
 
 @font-face {
-  font-family: "automatticons";
+  font-family: automatticons;
   src: url(../_inc/fonts/automatticons/automatticons.eot);
   src: url(../_inc/fonts/automatticons/automatticons.eot?#iefix) format("embedded-opentype"), url(../_inc/fonts/automatticons/automatticons.woff) format("woff"), url(../_inc/fonts/automatticons/automatticons.ttf) format("truetype"), url(../_inc/fonts/automatticons/automatticons.svg#automatticonsregular) format("svg");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 .nav-horizontal:after {
@@ -347,7 +347,7 @@
   background-size: 183px auto;
   color: #fff;
   line-height: 60px;
-  font-weight: normal;
+  font-weight: 400;
 }
 .header-nav .jetpack-logo a span {
   text-indent: -9999px;
@@ -417,7 +417,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  font: 300 1.7142857143em "genericons" !important;
+  font: 300 1.7142857143em Genericons !important;
   color: #777;
   content: "\f405";
   display: inline-block;
@@ -783,7 +783,7 @@
 .jetpack-message .squeezer:before {
   color: #fff;
   content: "\f418";
-  font-family: "Genericons";
+  font-family: Genericons;
   font-size: 33px;
   height: 33px;
   left: 25px;
@@ -1341,7 +1341,7 @@ tr.jetpack-module .row-actions span.configure {
   opacity: 0.5;
 }
 .configure-module input.button-primary {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* whitelist table */
@@ -1387,7 +1387,7 @@ tr.jetpack-module .row-actions span.configure {
   padding: 0 20px;
   height: 40px;
   line-height: 40px;
-  font-weight: normal;
+  font-weight: 400;
 }
 .manage__link .genericon {
   font-size: 28px;

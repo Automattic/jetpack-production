@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Code: Update stylesheets to use WordPress font styles.
+
 ## [6.10.3] - 2025-04-07
 ### Changed
 - Code: First pass of style coding standards. [#42734]

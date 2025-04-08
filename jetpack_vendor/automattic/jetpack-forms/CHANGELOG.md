@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Close block panels by default.
 
 ### Fixed
+- Code: Update stylesheets to use WordPress font styles.
 - Forms: Fixed IntegrationCardHeader toggle styles
 - Forms: Fix integration modal tracks events.
 
