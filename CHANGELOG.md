@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: Close block panels by default.
+
 ### Improved compatibility
 - Added Share status support for WPCOM sites
 
