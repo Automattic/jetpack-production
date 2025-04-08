@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added Share status support for WPCOM sites
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added more error logging.
 - Jetpack SEO Enhancer: cancel meta and alt-text edits if auto generation requests come back and the post status is publish(ed)
 - Likes: remove unused liked/like CSS class
 - Likes: unify likes-master rendering between wpcom and Jetpack
