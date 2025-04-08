@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO Enhancer: cancel meta and alt-text edits if auto generation requests come back and the post status is publish(ed)
 - Likes: remove unused liked/like CSS class
 - Likes: unify likes-master rendering between wpcom and Jetpack
+- Social: Remove the unused share status endpoint
 
 ## 14.6-a.1 - 2025-04-07
 ### Enhancements
