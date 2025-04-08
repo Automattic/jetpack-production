@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added more error logging.
+- Code: Update stylesheets to use hex instead of named colors.
 - Code: Update stylesheets to use WordPress font styles.
 - Jetpack SEO Enhancer: cancel meta and alt-text edits if auto generation requests come back and the post status is publish(ed)
 - Jetpack SEO Enhancer: move feature to production
