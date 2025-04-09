@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Social Menus: update the Twitter sharing button to use the X logo.
+
 ### Fixed
 - Code: Update stylesheets to use WordPress font styles.
 

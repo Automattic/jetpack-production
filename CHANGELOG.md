@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added support for border width, style and color to Button block.
 - Forms: Close block panels by default.
+- Sharing buttons: update legacy Twitter logos to use the X logo.
 
 ### Improved compatibility
 - Added Share status support for WPCOM sites
