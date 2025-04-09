@@ -92,6 +92,7 @@ return array(
     'Automattic\\Jetpack\\Connection\\Tokens_Locks' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-tokens-locks.php',
     'Automattic\\Jetpack\\Connection\\Traits\\WPCOM_REST_API_Proxy_Request' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/traits/trait-wpcom-rest-api-proxy-request.php',
     'Automattic\\Jetpack\\Connection\\Urls' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-urls.php',
+    'Automattic\\Jetpack\\Connection\\User_Account_Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-user-account-status.php',
     'Automattic\\Jetpack\\Connection\\Users_Connection_Admin' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-users-connection-admin.php',
     'Automattic\\Jetpack\\Connection\\Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-utils.php',
     'Automattic\\Jetpack\\Connection\\Webhooks' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-webhooks.php',
