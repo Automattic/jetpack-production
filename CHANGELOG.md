@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Likes: unify likes-master rendering between wpcom and Jetpack
 - Social: Remove the unused share status endpoint
 - Subscriptions: Set the featured image in email option to true on module activation
+- Write Brief: Fix Harper integration for complex blocks
 
 ## 14.6-a.1 - 2025-04-07
 ### Enhancements
