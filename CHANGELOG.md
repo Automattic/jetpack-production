@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Added more error logging.
 - Code: Update stylesheets to use hex instead of named colors.
 - Code: Update stylesheets to use WordPress font styles.
+- Color Scheme: Clean up *-rgb css variables
 - Jetpack SEO Enhancer: cancel meta and alt-text edits if auto generation requests come back and the post status is publish(ed)
 - Jetpack SEO Enhancer: move feature to production
 - Likes: remove unused liked/like CSS class
