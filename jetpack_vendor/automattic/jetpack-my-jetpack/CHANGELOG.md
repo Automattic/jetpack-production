@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added more error logging
+- Adding My Jetpack tour.
 - Connection: Added check for mismatching WP and WPcom user email.
 
 ### Fixed
