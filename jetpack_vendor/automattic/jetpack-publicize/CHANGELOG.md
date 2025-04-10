@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Social: Always regester the product info endpoint regardless of Publicize being active
+- Social: Do not load in the editor if module is off
 
 ## [0.62.5] - 2025-04-07
 ### Changed

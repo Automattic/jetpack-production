@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Added Share status support for WPCOM sites
 
 ### Bug fixes
+- Do not load in the editor if module is off
 - Subscriptions: only display the dashboard widget to site admins.
 - Subscriptions: only display the dashboard widget when the Subscriptions feature is active.
 
