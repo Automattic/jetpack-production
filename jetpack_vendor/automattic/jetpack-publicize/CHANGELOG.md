@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Improved the logic for share status
 
+### Fixed
+- Social: Always regester the product info endpoint regardless of Publicize being active
+
 ## [0.62.5] - 2025-04-07
 ### Changed
 - Update dependencies. [#42820]
