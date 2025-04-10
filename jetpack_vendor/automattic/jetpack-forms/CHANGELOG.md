@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Close block panels by default.
+- Forms: Update IntegrationCard markup and styles.
 
 ### Fixed
 - Code: Update stylesheets to use hex instead of named colors.
