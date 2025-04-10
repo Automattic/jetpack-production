@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO Enhancer: move feature to production
 - Likes: remove unused liked/like CSS class
 - Likes: unify likes-master rendering between wpcom and Jetpack
+- Linting: Clean up various Styleline violations.
 - Social: Remove the unused share status endpoint
 - Subscriptions: Set the featured image in email option to true on module activation
 - Subscriptions block: improve check for email-specific context to render the email version when actually in an email.

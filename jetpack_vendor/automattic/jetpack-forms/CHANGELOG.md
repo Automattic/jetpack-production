@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: center pattern button in form block placeholder
 - Forms: Fixed IntegrationCardHeader toggle styles
 - Forms: Fix integration modal tracks events.
+- Linting: Clean up various Styleline violations.
 
 ## [0.46.0] - 2025-04-07
 ### Added
