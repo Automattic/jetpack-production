@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Close block panels by default.
+- Forms: Simplify IntegrationCardBody content.
 - Forms: Update IntegrationCard markup and styles.
 
 ### Fixed
