@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Code: Update stylesheets to use hex instead of named colors.
 - Code: Update stylesheets to use WordPress font styles.
 - Color Scheme: Clean up *-rgb css variables
+- Fix accessibility of sharing buttons
 - Jetpack SEO: remove all SEO Assistant Wizard code and feature filters
 - Jetpack SEO Enhancer: cancel meta and alt-text edits if auto generation requests come back and the post status is publish(ed)
 - Jetpack SEO Enhancer: move feature to production
