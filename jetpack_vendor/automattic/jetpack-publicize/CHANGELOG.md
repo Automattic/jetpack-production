@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added share status support for WPCOM sites
 
+### Changed
+- Improved the logic for share status
+
 ## [0.62.5] - 2025-04-07
 ### Changed
 - Update dependencies. [#42820]

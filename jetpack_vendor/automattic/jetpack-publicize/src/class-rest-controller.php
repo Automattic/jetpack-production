@@ -34,8 +34,6 @@ class REST_Controller {
 	 */
 	const JETPACK_SOCIAL_V1_YEARLY = 'jetpack_social_v1_yearly';
 
-	const SOCIAL_SHARES_POST_META_KEY = '_publicize_shares';
-
 	/**
 	 * Constructor
 	 *
@@ -537,16 +535,24 @@ class REST_Controller {
 	 * @param WP_REST_Request $request Full details about the request.
 	 */
 	public function update_post_shares( $request ) {
+
+		Publicize_Utils::endpoint_deprecated_warning(
+			__METHOD__,
+			'jetpack-14.6, jetpack-social-6.4.0',
+			'jetpack/v4/social/sync-shares/post/:id',
+			'wpcom/v2/publicize/share-status/sync'
+		);
+
 		$request_body = $request->get_json_params();
 
 		$post_id   = $request->get_param( 'id' );
 		$post_meta = $request_body['meta'];
 		$post      = get_post( $post_id );
 
-		if ( $post && 'publish' === $post->post_status && isset( $post_meta[ self::SOCIAL_SHARES_POST_META_KEY ] ) ) {
-			update_post_meta( $post_id, self::SOCIAL_SHARES_POST_META_KEY, $post_meta[ self::SOCIAL_SHARES_POST_META_KEY ] );
+		if ( $post && 'publish' === $post->post_status && isset( $post_meta[ Share_Status::SHARES_META_KEY ] ) ) {
+			update_post_meta( $post_id, Share_Status::SHARES_META_KEY, $post_meta[ Share_Status::SHARES_META_KEY ] );
 			$urls = array();
-			foreach ( $post_meta[ self::SOCIAL_SHARES_POST_META_KEY ] as $share ) {
+			foreach ( $post_meta[ Share_Status::SHARES_META_KEY ] as $share ) {
 				if ( isset( $share['status'] ) && 'success' === $share['status'] ) {
 					$urls[] = array(
 						'url'     => $share['message'],
@@ -579,11 +585,20 @@ class REST_Controller {
 	 *
 	 * GET `jetpack/v4/social/share-status/<post_id>`
 	 *
+	 * @deprecated 0.63.0-alpha
+	 *
 	 * @param WP_REST_Request $request The request object.
 	 */
 	public function get_post_share_status( WP_REST_Request $request ) {
 		$post_id = $request->get_param( 'post_id' );
 
-		return rest_ensure_response( SHare_Status::get_post_share_status( $post_id ) );
+		Publicize_Utils::endpoint_deprecated_warning(
+			__METHOD__,
+			'jetpack-14.6, jetpack-social-6.4.0',
+			'jetpack/v4/social/share-status/:postId',
+			'wpcom/v2/publicize/share-status'
+		);
+
+		return rest_ensure_response( Share_Status::get_post_share_status( $post_id ) );
 	}
 }
