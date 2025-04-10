@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Do not load in the editor if module is off
+- Forms: Ensure render_field returns string.
 - Subscriptions: only display the dashboard widget to site admins.
 - Subscriptions: only display the dashboard widget when the Subscriptions feature is active.
 

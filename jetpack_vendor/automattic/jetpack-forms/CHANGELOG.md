@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Code: Update stylesheets to use hex instead of named colors.
 - Code: Update stylesheets to use WordPress font styles.
 - Forms: center pattern button in form block placeholder
+- Forms: Ensure form field hook returns string.
 - Forms: Fixed IntegrationCardHeader toggle styles
 - Forms: Fix integration modal tracks events.
 - Linting: Clean up various Styleline violations.
