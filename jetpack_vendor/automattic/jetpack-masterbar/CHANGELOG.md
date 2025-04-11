@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Admin Menu: Update the icon of WooCommerce for the woo installation
+
 ### Removed
 - Color Scheme: Clean up *-rgb css variables
 - Remove the site card from the admin sidebar

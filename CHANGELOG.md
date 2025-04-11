@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Added support for border width, style and color to Button block.
 - Adding My Jetpack tour.
+- Admin Menu: Update the icon of WooCommerce for the woo installation
 - Forms: Close block panels by default.
 - Sharing buttons: update legacy Twitter logos to use the X logo.
 
