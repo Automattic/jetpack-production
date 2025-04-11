@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Code: Update stylesheets to use hex instead of named colors.
 - Code: Update stylesheets to use WordPress font styles.
+- Fix: improved compatibility with code using stdClass objects in profile_update hook.
 
 ## [0.2.1] - 2025-04-07
 ### Changed
