@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Support tracking of archived pages and searches in tracking pixel.
 
+### Changed
+- Update home tracking pixel to match archive ones.
+
 ## [0.15.9] - 2025-03-31
 ### Changed
 - Internal updates.
