@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Code: Update stylesheets to use hex instead of named colors.
 - Linting: Clean up various Styleline violations.
+- Linting: Format SCSS imports consistently.
 
 ## [0.28.0] - 2025-04-07
 ### Added

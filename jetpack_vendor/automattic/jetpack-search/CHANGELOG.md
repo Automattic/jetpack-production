@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Code: Update stylesheets to use hex instead of named colors.
 - Code: Update stylesheets to use WordPress font styles.
 - Jetpack Search: fix errors caused by malformed order arguments
+- Linting: Format SCSS imports consistently.
 - Linting: Use double colon notation for pseudo-element selectors.
 
 ## [0.47.21] - 2025-04-07

@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Likes: remove unused liked/like CSS class
 - Likes: unify likes-master rendering between wpcom and Jetpack
 - Linting: Clean up various Styleline violations.
+- Linting: Format SCSS imports consistently.
 - Linting: Use double colon notation for pseudo-element selectors.
 - Removed the Jetpack submenu item as it's not needed
 - Social: Remove the unused share status endpoint
