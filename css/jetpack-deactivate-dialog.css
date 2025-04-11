@@ -84,7 +84,7 @@ https://github.com/thoughtbot/bourbon
   color: #50575e;
   top: 22px;
 }
-#TB_window.jetpack-disconnect-modal #TB_closeWindowButton:after {
+#TB_window.jetpack-disconnect-modal #TB_closeWindowButton::after {
   content: "\f335";
   font: 400 32px/29px dashicons;
   -webkit-font-smoothing: antialiased;

@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Code: Update stylesheets to use hex instead of named colors.
 - Code: Update stylesheets to use WordPress font styles.
+- Linting: Use double colon notation for pseudo-element selectors.
 
 ## [6.10.3] - 2025-04-07
 ### Changed

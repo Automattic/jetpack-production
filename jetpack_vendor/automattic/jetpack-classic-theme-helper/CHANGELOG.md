@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Code: Update stylesheets to use WordPress font styles.
+- Linting: Use double colon notation for pseudo-element selectors.
 
 ## [0.11.7] - 2025-04-07
 ### Changed

@@ -2,11 +2,11 @@
   width: 100%;
   margin: 0 auto;
 }
-.j-row:before, .j-row:after {
+.j-row::before, .j-row::after {
   content: " ";
   display: table;
 }
-.j-row:after {
+.j-row::after {
   clear: both;
 }
 
@@ -163,10 +163,10 @@
   top: 6px;
   box-shadow: 0 0px 0 #3e6c20, 0 0 0 rgba(0, 0, 0, 0.4);
 }
-.download-jetpack:active:after {
+.download-jetpack:active::after {
   top: -6px;
 }
-.download-jetpack:before {
+.download-jetpack::before {
   content: "";
   display: inline-block;
   position: relative;
@@ -178,7 +178,7 @@
   background: url(../images/connect-plug.svg) center center no-repeat;
   background-size: 100%;
 }
-.download-jetpack:after {
+.download-jetpack::after {
   content: "";
   position: absolute;
   top: 0;
@@ -190,7 +190,7 @@
   .download-jetpack {
     font-size: 1.2857142857em;
   }
-  .download-jetpack:before {
+  .download-jetpack::before {
     top: -1px;
     width: 23px;
     height: 23px;
@@ -206,7 +206,7 @@
     font-size: 1.2142857143em;
     font-weight: 600;
   }
-  .download-jetpack:before {
+  .download-jetpack::before {
     width: 19px;
     height: 19px;
     margin-right: 9px;
@@ -249,7 +249,7 @@
   font-weight: 400;
   font-style: normal;
 }
-.nav-horizontal:after {
+.nav-horizontal::after {
   content: ".";
   display: block;
   height: 0;
@@ -353,7 +353,7 @@
   text-indent: -9999px;
   visibility: hidden;
 }
-.header-nav .jetpack-logo a:before {
+.header-nav .jetpack-logo a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -553,19 +553,19 @@
   padding: 10em 0 4.2857142857em;
   text-align: center;
 }
-.footer:before, .footer:after {
+.footer::before, .footer::after {
   content: "";
   position: absolute;
   left: 0;
   pointer-events: none;
 }
-.footer:before {
+.footer::before {
   top: 0;
   margin-top: -1px;
   width: 100%;
   height: 195px;
 }
-.footer:after {
+.footer::after {
   display: none;
 }
 .footer .download-jetpack {
@@ -581,7 +581,7 @@
     padding-top: 165px;
     padding-bottom: 0;
   }
-  .footer:before {
+  .footer::before {
     background-size: 160% auto;
   }
   .footer ul {
@@ -701,7 +701,7 @@
   right: 9999px;
   outline: 0;
 }
-.footer .a8c-attribution a:after {
+.footer .a8c-attribution a::after {
   content: "A";
   position: absolute;
   top: 2px;
@@ -712,7 +712,7 @@
   font-family: "automatticons";
   text-align: center;
 }
-.footer .a8c-attribution a:hover:after {
+.footer .a8c-attribution a:hover::after {
   animation: jetpack-candy 0.4s ease-in-out;
 }
 
@@ -780,7 +780,7 @@
   position: relative;
   text-align: left;
 }
-.jetpack-message .squeezer:before {
+.jetpack-message .squeezer::before {
   color: #fff;
   content: "\f418";
   font-family: Genericons;
@@ -796,7 +796,7 @@
   .jetpack-message .squeezer {
     padding: 23px;
   }
-  .jetpack-message .squeezer:before {
+  .jetpack-message .squeezer::before {
     display: none;
   }
 }
@@ -807,7 +807,7 @@
 .jetpack-message .squeezer a:hover {
   border-bottom: 1px solid #F1F6E9;
 }
-.jetpack-message.error .squeezer:before, .jetpack-message.jetpack-err .squeezer:before {
+.jetpack-message.error .squeezer::before, .jetpack-message.jetpack-err .squeezer::before {
   content: "\f414";
 }
 
@@ -1419,10 +1419,10 @@ tr.jetpack-module .row-actions span.configure {
   margin-top: 0;
   background-image: none;
 }
-.jp-content .footer:before {
+.jp-content .footer::before {
   height: inherit;
 }
-.jp-content .more-info:before {
+.jp-content .more-info::before {
   content: none;
 }
 

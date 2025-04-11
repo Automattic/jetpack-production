@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Improved the logic for share status
 
 ### Fixed
+- Linting: Use double colon notation for pseudo-element selectors.
 - Social: Always regester the product info endpoint regardless of Publicize being active
 - Social: Do not load in the editor if module is off
 

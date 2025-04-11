@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fixed IntegrationCardHeader toggle styles
 - Forms: Fix integration modal tracks events.
 - Linting: Clean up various Styleline violations.
+- Linting: Use double colon notation for pseudo-element selectors.
 
 ## [0.46.0] - 2025-04-07
 ### Added
