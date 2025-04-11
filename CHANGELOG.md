@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added more error logging.
+- Block editor: Assets endpoint can control the allowed blocks types and assets enqueued via an allow list.
 - Blog Stats block: support WPCOM simple sites
 - Code: Update stylesheets to use hex instead of named colors.
 - Code: Update stylesheets to use WordPress font styles.
