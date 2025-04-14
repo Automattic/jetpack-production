@@ -5,24 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.11.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.11.0] - 2025-04-14
 ### Added
-- Connection: Added check for mismatching WP and WPcom user email.
+- Add check for mismatched WordPress/WordPress.com user email. [#42674]
 
 ### Changed
-- Jetpack Connection: Add Jetpack package versions' info to Heartbeat
+- Add Jetpack package version info to Heartbeat. [#43060]
 
 ### Fixed
-- Code: Update stylesheets to use hex instead of named colors.
-- Code: Update stylesheets to use WordPress font styles.
-- Linting: Use double colon notation for pseudo-element selectors.
+- Linting: Update stylesheets to use WordPress rules for fonts and colors. [#42920] [#42928]
+- Linting: Use double colon notation for pseudo-element selectors. [#43019]
 
 ## [6.10.3] - 2025-04-07
 ### Changed
-- Code: First pass of style coding standards. [#42734]
+- Linting: First pass of style coding standards. [#42734]
 
 ## [6.10.2] - 2025-04-01
 ### Changed
@@ -1409,7 +1405,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.11.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.10.3...v6.11.0-alpha
+[6.11.0]: https://github.com/Automattic/jetpack-connection/compare/v6.10.3...v6.11.0
 [6.10.3]: https://github.com/Automattic/jetpack-connection/compare/v6.10.2...v6.10.3
 [6.10.2]: https://github.com/Automattic/jetpack-connection/compare/v6.10.1...v6.10.2
 [6.10.1]: https://github.com/Automattic/jetpack-connection/compare/v6.10.0...v6.10.1

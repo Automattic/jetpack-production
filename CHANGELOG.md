@@ -2,49 +2,44 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.6-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 14.6-a.3 - 2025-04-14
 ### Enhancements
-- Added support for border width, style and color to Button block.
-- Adding My Jetpack tour.
-- Admin Menu: Update the icon of WooCommerce for the woo installation
-- Forms: Close block panels by default.
-- Sharing buttons: update legacy Twitter logos to use the X logo.
+- Add My Jetpack tour. [#42880]
+- Admin Menu: Update the icon of WooCommerce for the Woo installation. [#43029]
+- Button block: Add support for border width, style, and color. [#41147]
+- Forms: Close block panels by default. [#42953]
+- Sharing buttons: Update legacy Twitter logos to use the X logo. [#42813]
 
 ### Improved compatibility
-- Added Share status support for WPCOM sites
+- Add Share status support for WordPress.com sites. [#42593]
 
 ### Bug fixes
-- Do not load in the editor if module is off
-- Forms: Ensure render_field returns string.
-- Subscriptions: only display the dashboard widget to site admins.
-- Subscriptions: only display the dashboard widget when the Subscriptions feature is active.
+- Forms: Ensure `render_field` returns string. [#43011]
+- Social: Do not load in the Classic editor if module is off. [#43006]
+- Subscriptions: Only display the dashboard widget to site admins when the Subscriptions feature is active. [#42951] [#42964]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added more error logging.
-- Block editor: Assets endpoint can control the allowed blocks types and assets enqueued via an allow list.
-- Blog Stats block: support WPCOM simple sites
-- Code: Update stylesheets to use hex instead of named colors.
-- Code: Update stylesheets to use WordPress font styles.
-- Color Scheme: Clean up *-rgb css variables
-- Fix accessibility of sharing buttons
-- Infinite Scroll: Catch an obscure PHP error when AMP is enabled.
-- Jetpack SEO: remove all SEO Assistant Wizard code and feature filters
-- Jetpack SEO Enhancer: cancel meta and alt-text edits if auto generation requests come back and the post status is publish(ed)
-- Jetpack SEO Enhancer: Ensure more performant practices when getting enabled features.
-- Jetpack SEO Enhancer: move feature to production
-- Likes: remove unused liked/like CSS class
-- Likes: unify likes-master rendering between wpcom and Jetpack
-- Linting: Clean up various Styleline violations.
-- Linting: Format SCSS imports consistently.
-- Linting: Use double colon notation for pseudo-element selectors.
-- Removed the Jetpack submenu item as it's not needed
-- Social: Remove the unused share status endpoint
-- Subscriptions: Set the featured image in email option to true on module activation
-- Subscriptions block: improve check for email-specific context to render the email version when actually in an email.
-- Write Brief: Fix Harper integration for complex blocks
+- Add more error logging. [#42959]
+- Block Editor: Use allow list in assets endpoint to control the allowed blocks types and assets enqueued. [#42835]
+- Blog Stats block: Support WordPress.com simple sites. [#43000]
+- Color Scheme: Clean up `*-rgb` CSS variables. [#42960]
+- Fix accessibility of sharing buttons. [#42824]
+- Infinite Scroll: Catch an obscure PHP error when AMP is enabled. [#43022]
+- Jetpack SEO: Remove all SEO Assistant Wizard code and feature filters. [#42991]
+- Jetpack SEO Enhancer: Cancel meta and alt-text edits if auto-generation requests come back and the post status is publish(ed). [#42955]
+- Jetpack SEO Enhancer: Ensure more performant practices when getting enabled features. [#43031]
+- Jetpack SEO Enhancer: Move feature to production. [#42947]
+- Likes: Remove unused liked/like CSS class. [#42936]
+- Likes: Unify `likes-master` rendering between WordPress.com and Jetpack. [#42912]
+- Linting: Clean up various Styleline violations. [#43010]
+- Linting: Format SCSS imports consistently. [#43018]
+- Linting: Update stylesheets to use WordPress rules for fonts and colors. [#42920] [#42928]
+- Linting: Use double colon notation for pseudo-element selectors. [#43019]
+- Remove the Jetpack submenu item. [#43012]
+- Social: Remove the unused share status endpoint. [#42963]
+- Subscriptions: Set the featured image in email option to true on module activation. [#42844]
+- Subscriptions block: Improve check for email-specific context to render the email version when actually in an email. [#42989]
+- Write Brief: Fix Harper integration for complex blocks. [#42975]
 
 ## 14.6-a.1 - 2025-04-07
 ### Enhancements
@@ -64,7 +59,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Block editor: Add REST API endpoint for retrieving editor scripts and stylesheets. [#42314]
-- Code: First pass of style coding standards. [#42734]
 - Dashboard: Update WordPress logo color. [#42811]
 - Fix type checking in the monorepo. [#42817]
 - Forms: Change path and return for form integrations endpoint. [#42826]
@@ -74,6 +68,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack SEO Enhancer: List only remaining tasks in the to-do list for the auto-generation feature. [#42805]
 - Jetpack SEO Enhancer: Trigger the auto-generation process when enabling the toggle on PrePublish sidebar. [#42797]
 - Jetpack SEO Enhancer: Remove post publish panel loading status and fix summaries and styles. [#42899]
+- Linting: First pass of style coding standards. [#42734]
 - Newsletters: Fix selector name typo. [#42841]
 - Reset to-test.md for Jetpack 14.6. [#42871]
 - Subscribe block: Match the frontend wrapping behavior when editing. [#42869]

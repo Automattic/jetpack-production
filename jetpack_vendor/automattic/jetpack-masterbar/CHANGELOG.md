@@ -5,23 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.16.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.16.0] - 2025-04-14
 ### Changed
-- Admin Menu: Update the icon of WooCommerce for the woo installation
+- Admin Menu: Update the icon of WooCommerce for the Woo installation. [#43029]
 
 ### Removed
-- Color Scheme: Clean up *-rgb css variables
-- Remove the site card from the admin sidebar
+- Color Scheme: Clean up `*-rgb` CSS variables. [#42960]
+- Remove the site card from the admin sidebar. [#42499]
 
 ### Fixed
-- Code: Update stylesheets to use hex instead of named colors.
-- Code: Update stylesheets to use WordPress font styles.
-- Linting: Clean up various Styleline violations.
-- Linting: Format SCSS imports consistently.
-- Linting: Use double colon notation for pseudo-element selectors.
+- Linting: Clean up various Styleline violations. [#43010]
+- Linting: Format SCSS imports consistently. [#43018]
+- Linting: Update stylesheets to use WordPress rules for fonts and colors. [#42920] [#42928]
+- Linting: Use double colon notation for pseudo-element selectors. [#43019]
 
 ## [0.15.1] - 2025-04-07
 ### Changed
@@ -304,7 +300,7 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
-[0.16.0-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.15.1...v0.16.0-alpha
+[0.16.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.15.1...v0.16.0
 [0.15.1]: https://github.com/Automattic/jetpack-masterbar/compare/v0.15.0...v0.15.1
 [0.15.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.14.4...v0.15.0
 [0.14.4]: https://github.com/Automattic/jetpack-masterbar/compare/v0.14.3...v0.14.4
