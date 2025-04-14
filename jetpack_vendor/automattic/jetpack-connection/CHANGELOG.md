@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Connection: Added check for mismatching WP and WPcom user email.
 
+### Changed
+- Jetpack Connection: Add Jetpack package versions' info to Heartbeat
+
 ### Fixed
 - Code: Update stylesheets to use hex instead of named colors.
 - Code: Update stylesheets to use WordPress font styles.
