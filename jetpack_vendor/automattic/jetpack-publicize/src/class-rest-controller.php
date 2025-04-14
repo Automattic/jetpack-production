@@ -447,7 +447,7 @@ class REST_Controller {
 	/**
 	 * Gets information about the current social product plans.
 	 *
-	 * @deprecated 0.63.0-alpha Swapped to using the /my-jetpack/v1/site/products endpoint instead.
+	 * @deprecated 0.63.0 Swapped to using the /my-jetpack/v1/site/products endpoint instead.
 	 *
 	 * @return string|WP_Error A JSON object of the current social product being if the request was successful, or a WP_Error otherwise.
 	 */
@@ -594,7 +594,7 @@ class REST_Controller {
 	 *
 	 * GET `jetpack/v4/social/share-status/<post_id>`
 	 *
-	 * @deprecated 0.63.0-alpha
+	 * @deprecated 0.63.0
 	 *
 	 * @param WP_REST_Request $request The request object.
 	 */

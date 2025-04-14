@@ -5,18 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.0.22-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.0.22] - 2025-04-14
 ### Fixed
-- Code: Update stylesheets to use hex instead of named colors.
-- Code: Update stylesheets to use WordPress font styles.
-- Linting: Use double colon notation for pseudo-element selectors.
+- Linting: Update stylesheets to use WordPress rules for fonts and colors. [#42920] [#42928]
+- Linting: Use double colon notation for pseudo-element selectors. [#43019]
 
 ## [4.0.21] - 2025-04-07
 ### Changed
-- Code: First pass of style coding standards. [#42734]
+- Linting: First pass of style coding standards. [#42734]
 
 ## [4.0.20] - 2025-04-03
 ### Changed
@@ -837,7 +833,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[4.0.22-alpha]: https://github.com/Automattic/jetpack-backup/compare/v4.0.21...v4.0.22-alpha
+[4.0.22]: https://github.com/Automattic/jetpack-backup/compare/v4.0.21...v4.0.22
 [4.0.21]: https://github.com/Automattic/jetpack-backup/compare/v4.0.20...v4.0.21
 [4.0.20]: https://github.com/Automattic/jetpack-backup/compare/v4.0.19...v4.0.20
 [4.0.19]: https://github.com/Automattic/jetpack-backup/compare/v4.0.18...v4.0.19
