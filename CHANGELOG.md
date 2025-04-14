@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Infinite Scroll: Catch an obscure PHP error when AMP is enabled.
 - Jetpack SEO: remove all SEO Assistant Wizard code and feature filters
 - Jetpack SEO Enhancer: cancel meta and alt-text edits if auto generation requests come back and the post status is publish(ed)
+- Jetpack SEO Enhancer: Ensure more performant practices when getting enabled features.
 - Jetpack SEO Enhancer: move feature to production
 - Likes: remove unused liked/like CSS class
 - Likes: unify likes-master rendering between wpcom and Jetpack
