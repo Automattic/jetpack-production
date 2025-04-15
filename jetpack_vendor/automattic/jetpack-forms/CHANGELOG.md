@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: new integrations setup modal
 
 ### Changed
+- Forms: hide integrations modal CTA in the sidebar for simple sites
 - Forms: integrations modal polish
 
 ## [0.47.0] - 2025-04-14
