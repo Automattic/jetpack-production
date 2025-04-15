@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.64.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Publicize: Improve package initialization
+
 ## [0.63.0] - 2025-04-14
 ### Added
 - Add share status support for WordPress.com sites. [#42593]
@@ -969,6 +976,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.64.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.63.0...v0.64.0-alpha
 [0.63.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.62.5...v0.63.0
 [0.62.5]: https://github.com/Automattic/jetpack-publicize/compare/v0.62.4...v0.62.5
 [0.62.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.62.3...v0.62.4
