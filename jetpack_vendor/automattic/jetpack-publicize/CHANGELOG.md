@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Publicize: Improve package initialization
 
+### Fixed
+- Do not load the module on private WPCOM sites
+
 ## [0.63.0] - 2025-04-14
 ### Added
 - Add share status support for WordPress.com sites. [#42593]
