@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Story block will use a placeholder if used outside the loop
 - Theme compat: Removing duplicated code where it is now served by the Classic Theme Helper package
+- Update package dependencies.
 
 ## 14.6-a.3 - 2025-04-14
 ### Enhancements
