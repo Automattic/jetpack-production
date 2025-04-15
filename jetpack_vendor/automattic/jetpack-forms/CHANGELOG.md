@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.48.0-alpha] - unreleased
+## [0.49.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -14,7 +14,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: hide integrations modal CTA in the sidebar for simple sites
-- Forms: integrations modal polish
+
+## [0.48.0] - 2025-04-15
+### Changed
+- Polish integrations modal. [#43064]
 
 ## [0.47.0] - 2025-04-14
 ### Changed
@@ -985,7 +988,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.48.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.47.0...v0.48.0-alpha
+[0.49.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.48.0...v0.49.0-alpha
+[0.48.0]: https://github.com/automattic/jetpack-forms/compare/v0.47.0...v0.48.0
 [0.47.0]: https://github.com/automattic/jetpack-forms/compare/v0.46.0...v0.47.0
 [0.46.0]: https://github.com/automattic/jetpack-forms/compare/v0.45.0...v0.46.0
 [0.45.0]: https://github.com/automattic/jetpack-forms/compare/v0.44.0...v0.45.0
