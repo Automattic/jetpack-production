@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Blogroll block: Prevent console warnings and block validation issues when adding new items to the blogroll.
 - Open Graph tags: ensure scaled images are used when specific registered image files exist on a site
+- Slideshow block: Ensure block preview doesn't generate an invalid API request
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Button Block: Prevent TypeError when handling border attributes.
