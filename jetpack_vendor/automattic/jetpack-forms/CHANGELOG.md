@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: add tooltips to the toggle in integrations modal
 - Forms: hide integrations modal CTA in the sidebar for simple sites
+- Forms: Update modal to use VStack and WP icons
 
 ## [0.48.0] - 2025-04-15
 ### Changed
