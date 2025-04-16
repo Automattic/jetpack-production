@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Publicize: Improve package initialization
+- Re-enabled unit tests for share status
 
 ### Fixed
 - Do not load the module on private WPCOM sites
