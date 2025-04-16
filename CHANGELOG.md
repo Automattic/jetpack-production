@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Resolves php warnings when the thumbnail is really close to 1200, e.g. 1201
 - Theme compat: Removing duplicated code where it is now served by the Classic Theme Helper package
 - Update package dependencies.
+- Write Brief: Remove partial Harper integration
 
 ## 14.6-a.5 - 2025-04-15
 ### Bug fixes
