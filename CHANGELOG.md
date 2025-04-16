@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Block editor: do not display blocks to non-admins when a feature is not active.
 - Blogroll block: Prevent console warnings and block validation issues when adding new items to the blogroll.
+- Dashboard: avoid layout issues with "Apply" button on sites using a localized version of WordPress.
 - Open Graph tags: ensure scaled images are used when specific registered image files exist on a site
 - Slideshow block: Ensure block preview doesn't generate an invalid API request
 
