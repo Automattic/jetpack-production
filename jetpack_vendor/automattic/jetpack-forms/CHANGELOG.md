@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: hide integrations modal CTA in the sidebar for simple sites
 - Forms: Update modal to use VStack and WP icons
 
+### Fixed
+- Forms: Fixed Creative Mail SVG issue.
+
 ## [0.48.0] - 2025-04-15
 ### Changed
 - Polish integrations modal. [#43064]
