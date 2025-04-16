@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: new integrations setup modal
 
 ### Changed
+- Forms: add tooltips to the toggle in integrations modal
 - Forms: hide integrations modal CTA in the sidebar for simple sites
 
 ## [0.48.0] - 2025-04-15
