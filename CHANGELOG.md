@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Open Graph tags: ensure scaled images are used when specific registered image files exist on a site
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Button Block: Prevent TypeError when handling border attributes.
 - Resolves php warnings when the thumbnail is really close to 1200, e.g. 1201
 - Theme compat: Removing duplicated code where it is now served by the Classic Theme Helper package
 - Update package dependencies.
