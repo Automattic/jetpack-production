@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Block registration: do not display the block in the editor for non-admins, when the feature is not active.
+- Forms: add tooltips to integration modal plugin CTAs
 - Forms: add tooltips to the toggle in integrations modal
 - Forms: hide integrations modal CTA in the sidebar for simple sites
 - Forms: Update modal to use VStack and WP icons
