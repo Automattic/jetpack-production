@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: new integrations setup modal
 
 ### Bug fixes
+- Blogroll block: Prevent console warnings and block validation issues when adding new items to the blogroll.
 - Open Graph tags: ensure scaled images are used when specific registered image files exist on a site
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
