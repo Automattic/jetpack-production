@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Button Block: Prevent TypeError when handling border attributes.
 - E2E: Fixed Jetpack editor smoke test
 - E2E: Fix tests following WP 6.8 release
+- feature flagged feature
 - Jetpack_Upcoming_Events_Widget: Fix warning when `$event['SUMMARY']` does not exist
 - Newsletters: Fix editor crash for contributors when using categories for newsletters
 - Resolves php warnings when the thumbnail is really close to 1200, e.g. 1201
