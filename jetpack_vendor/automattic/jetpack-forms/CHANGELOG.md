@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Fixed Creative Mail SVG issue.
+- Forms: Prevent Google Drive connection attempt without Jetpack user account connection
 
 ## [0.48.0] - 2025-04-15
 ### Changed
