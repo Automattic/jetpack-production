@@ -50,7 +50,7 @@
 		"automattic/jetpack-subscribers-dashboard": "^0.1.7",
 		"automattic/jetpack-sync": "^4.10.1",
 		"automattic/jetpack-videopress": "^0.28.2-alpha",
-		"automattic/jetpack-waf": "^0.24.1",
+		"automattic/jetpack-waf": "^0.24.2-alpha",
 		"automattic/jetpack-wordads": "^0.4.20",
 		"automattic/woocommerce-analytics": "^0.4.5",
 		"scssphp/scssphp": "1.12.0"
