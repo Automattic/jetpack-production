@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: new integrations setup modal
 
+### Improved compatibility
+- Forms: Ensure styles are loaded when expected, preventing console warnings
+
 ### Bug fixes
 - Block editor: do not display blocks to non-admins when a feature is not active.
 - Blogroll block: Prevent console warnings and block validation issues when adding new items to the blogroll.

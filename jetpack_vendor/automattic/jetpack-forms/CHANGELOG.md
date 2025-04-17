@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add tooltips to the toggle in integrations modal
 - Forms: hide integrations modal CTA in the sidebar for simple sites
 - Forms: Update modal to use VStack and WP icons
+- Load editor styles from metadata file
 
 ### Fixed
 - Forms: Fixed Creative Mail SVG issue.
