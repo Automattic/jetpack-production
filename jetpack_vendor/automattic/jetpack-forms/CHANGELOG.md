@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Block registration: do not display the block in the editor for non-admins, when the feature is not active.
 - Forms: add tooltips to integration modal plugin CTAs
 - Forms: add tooltips to the toggle in integrations modal
+- Forms: don't show colon after question mark for form labels
 - Forms: hide integrations modal CTA in the sidebar for simple sites
 - Forms: remove 16px default padding in form patterns
 - Forms: Update modal to use VStack and WP icons
