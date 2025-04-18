@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: new integrations setup modal
 - Forms: remove 16px default padding in form patterns
 - User: Allow user to delete themselves through the endpoint
+- Widgets: deprecate the Flickr widget. Flickr no longer supports fetching recent images from an RSS feed.
 
 ### Improved compatibility
 - Forms: Ensure styles are loaded when expected, preventing console warnings
