@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Resolves php warnings when the thumbnail is really close to 1200, e.g. 1201
 - SAL: Cast gmt_offset to float when retrieving offset from option to prevent type errors
 - Theme compat: Removing duplicated code where it is now served by the Classic Theme Helper package
+- unreleased feature
 - Update package dependencies.
 - Write Brief: Remove partial Harper integration
 
