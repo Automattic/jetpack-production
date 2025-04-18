@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: new integrations setup modal
 - Forms: remove 16px default padding in form patterns
+- User: Allow user to delete themselves through the endpoint
 
 ### Improved compatibility
 - Forms: Ensure styles are loaded when expected, preventing console warnings
