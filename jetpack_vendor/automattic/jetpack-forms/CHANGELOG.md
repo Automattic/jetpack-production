@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: avoid overwriting form values when field names are repeated
+- Forms: Fix empty file filed error case
 - Forms: fix max file size upload check
 
 ## [0.49.0] - 2025-04-21
