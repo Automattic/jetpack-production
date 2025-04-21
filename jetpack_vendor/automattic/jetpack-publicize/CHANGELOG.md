@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.64.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Removed a stale comment in connections post field
+
 ## [0.64.0] - 2025-04-17
 ### Changed
 - Publicize: Improve package initialization [#42737]
@@ -977,6 +984,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.64.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.64.0...v0.64.1-alpha
 [0.64.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.63.0...v0.64.0
 [0.63.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.62.5...v0.63.0
 [0.62.5]: https://github.com/Automattic/jetpack-publicize/compare/v0.62.4...v0.62.5
