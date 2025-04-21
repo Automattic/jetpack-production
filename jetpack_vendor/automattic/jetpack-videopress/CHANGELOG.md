@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.28.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.28.2] - 2025-04-21
 ### Changed
-- Editor extensions: handle status of the VideoPress module when the Jetpack plugin is active.
+- Editor extensions: Handle status of the VideoPress module when the Jetpack plugin is active. [#40209]
 
 ## [0.28.1] - 2025-04-14
 ### Fixed
-- Linting: Clean up various Styleline violations. [#43010]
+- Linting: Clean up various Stylelint violations. [#43010]
 - Linting: Format SCSS imports consistently. [#43018]
 - Linting: Update stylesheets to use WordPress rules for colors. [#42920]
 
@@ -1615,7 +1612,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.28.2-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.28.1...v0.28.2-alpha
+[0.28.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.28.1...v0.28.2
 [0.28.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.28.0...v0.28.1
 [0.28.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.27.6...v0.28.0
 [0.27.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.27.5...v0.27.6
