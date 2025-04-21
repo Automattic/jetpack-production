@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Removed a stale comment in connections post field
+- Social: Re-enable resharing in classic editor on simple sites
 
 ## [0.64.0] - 2025-04-17
 ### Changed
