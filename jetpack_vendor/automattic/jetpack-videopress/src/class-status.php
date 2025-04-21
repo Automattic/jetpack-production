@@ -45,7 +45,7 @@ class Status {
 	 * Checks whether the Jetpack plugin is active
 	 * but the VideoPress module is not active.
 	 *
-	 * @since 0.28.2-alpha
+	 * @since 0.28.2
 	 *
 	 * @return boolean
 	 */

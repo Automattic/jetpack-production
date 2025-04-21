@@ -5,21 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.64.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.64.1] - 2025-04-21
 ### Changed
-- Removed a stale comment in connections post field
-- Social: Re-enable resharing in classic editor on simple sites
+- Remove a stale comment in connections post field. [#43061]
+- Social: Re-enable resharing in classic editor on Simple sites. [#43005]
 
 ## [0.64.0] - 2025-04-17
 ### Changed
-- Publicize: Improve package initialization [#42737]
-- Re-enabled unit tests for share status [#43099]
+- Publicize: Improve package initialization. [#42737]
+- Re-enable unit tests for share status. [#43099]
 
 ### Fixed
-- Do not load the module on private WPCOM sites [#43078]
+- Do not load the module on private WordPress.com sites. [#43078]
 
 ## [0.63.0] - 2025-04-14
 ### Added
@@ -985,7 +982,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.64.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.64.0...v0.64.1-alpha
+[0.64.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.64.0...v0.64.1
 [0.64.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.63.0...v0.64.0
 [0.63.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.62.5...v0.63.0
 [0.62.5]: https://github.com/Automattic/jetpack-publicize/compare/v0.62.4...v0.62.5
