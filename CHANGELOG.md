@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Ensure styles are loaded when expected, preventing console warnings
 
 ### Bug fixes
+- Add translation context to Search menu item
 - Block editor: do not display blocks to non-admins when a feature is not active.
 - Blogroll block: Prevent console warnings and block validation issues when adding new items to the blogroll.
 - Dashboard: avoid layout issues with "Apply" button on sites using a localized version of WordPress.
