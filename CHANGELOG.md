@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: avoid layout issues with "Apply" button on sites using a localized version of WordPress.
 - Forms: Update form responses link on editor sidebar
 - Open Graph tags: ensure scaled images are used when specific registered image files exist on a site
+- Related Posts: ensure the block is properly displayed in the editor, regardless of your user role.
 - Slideshow block: Ensure block preview doesn't generate an invalid API request
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
