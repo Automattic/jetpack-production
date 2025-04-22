@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Add Tracks for block modal.
 
+### Changed
+- Forms: Integrations endpoint returns array.
+
 ### Fixed
 - Forms: avoid overwriting form values when field names are repeated
 - Forms: Fix empty file filed error case
