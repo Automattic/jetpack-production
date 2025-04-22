@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Featured Content: Add messaging to clarify that the tag name is case sensitive.
 - Shortcode: Convert an embed code from Facebook.com to an oEmbeddable URL
 
+### Bug fixes
+- My Jetpack: Fix social login getting stuck when email input not empty
+
 ## 14.6-a.7 - 2025-04-21
 ### Enhancements
 - Forms: Add new integrations setup modal. [#43057]
