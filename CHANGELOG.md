@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Featured Content: Add messaging to clarify that the tag name is case sensitive.
 - Shortcode: Convert an embed code from Facebook.com to an oEmbeddable URL
+- Sitemaps: when available, use XMLWriter for a more performant sitemap generation.
 
 ### Bug fixes
 - My Jetpack: Fix social login getting stuck when email input not empty
