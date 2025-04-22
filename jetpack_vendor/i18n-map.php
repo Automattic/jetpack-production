@@ -82,7 +82,7 @@ return array(
     ),
     'jetpack-masterbar' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-masterbar',
-      'ver' => '0.16.1',
+      'ver' => '0.17.0-alpha1745313064',
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
