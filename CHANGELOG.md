@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.6-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Shortcode: Convert an embed code from Facebook.com to an oEmbeddable URL
+
 ## 14.6-a.7 - 2025-04-21
 ### Enhancements
 - Forms: Add new integrations setup modal. [#43057]
