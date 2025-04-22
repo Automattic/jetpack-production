@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.12.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Featured Content: Add messaging to clarify that the tag name is case sensitive.
+
 ## [0.11.8] - 2025-04-14
 ### Changed
 - Social Menus: Update the Twitter sharing button to use the X logo. [#42813]
@@ -265,6 +272,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Add wordpress folder on gitignore. [#37177]
 
+[0.12.0-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.8...v0.12.0-alpha
 [0.11.8]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.7...v0.11.8
 [0.11.7]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.6...v0.11.7
 [0.11.6]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.5...v0.11.6
