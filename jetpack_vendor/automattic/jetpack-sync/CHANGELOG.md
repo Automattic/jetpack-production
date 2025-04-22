@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.11.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [4.11.0] - 2025-04-21
 ### Added
 - Sync: Add `jetpack_sync_active_modules` callable to whitelist of must-sync callables. [#43134]
@@ -1450,6 +1454,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.11.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.11.0...v4.11.1-alpha
 [4.11.0]: https://github.com/Automattic/jetpack-sync/compare/v4.10.1...v4.11.0
 [4.10.1]: https://github.com/Automattic/jetpack-sync/compare/v4.10.0...v4.10.1
 [4.10.0]: https://github.com/Automattic/jetpack-sync/compare/v4.9.2...v4.10.0

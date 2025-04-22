@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.8-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [0.5.7] - 2025-03-21
 ### Changed
 - Internal updates.
@@ -196,6 +200,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing menu visibility issues.
 
+[0.5.8-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.7...0.5.8-alpha
 [0.5.7]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.6...0.5.7
 [0.5.6]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.5...0.5.6
 [0.5.5]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.4...0.5.5

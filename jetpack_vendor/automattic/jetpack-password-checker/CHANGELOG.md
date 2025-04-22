@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.8-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [0.4.7] - 2025-03-21
 ### Changed
 - Internal updates.
@@ -156,6 +160,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Use `composer update` rather than `install` in scripts, as composer.lock isn't checked in.
 
+[0.4.8-alpha]: https://github.com/Automattic/jetpack-password-checker/compare/v0.4.7...v0.4.8-alpha
 [0.4.7]: https://github.com/Automattic/jetpack-password-checker/compare/v0.4.6...v0.4.7
 [0.4.6]: https://github.com/Automattic/jetpack-password-checker/compare/v0.4.5...v0.4.6
 [0.4.5]: https://github.com/Automattic/jetpack-password-checker/compare/v0.4.4...v0.4.5
