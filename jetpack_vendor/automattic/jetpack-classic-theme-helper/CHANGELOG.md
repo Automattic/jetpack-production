@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Featured Content: Add messaging to clarify that the tag name is case sensitive.
 
+### Fixed
+- Social Menus: re-order SVGs to be alphabetic.
+
 ## [0.11.8] - 2025-04-14
 ### Changed
 - Social Menus: Update the Twitter sharing button to use the X logo. [#42813]
