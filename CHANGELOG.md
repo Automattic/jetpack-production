@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- General: Update minimum WordPress version to 6.7.
+
 ### Enhancements
 - Featured Content: Add messaging to clarify that the tag name is case sensitive.
 - Shortcode: Convert an embed code from Facebook.com to an oEmbeddable URL
