@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Image Compare block: ensure sticky menus hide the compare line
 - My Jetpack: Fix social login getting stuck when email input not empty
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- WPCOM_JSON_API_Update_Post_v1_1_Endpoint: Fix warning when `$input['type']` does not exist
+
 ## 14.6-a.7 - 2025-04-21
 ### Enhancements
 - Forms: Add new integrations setup modal. [#43057]
