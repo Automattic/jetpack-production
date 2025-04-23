@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Sitemaps: when available, use XMLWriter for a more performant sitemap generation.
 
 ### Bug fixes
+- Image Compare block: ensure sticky menus hide the compare line
 - My Jetpack: Fix social login getting stuck when email input not empty
 
 ## 14.6-a.7 - 2025-04-21
