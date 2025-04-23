@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Jetpack Sync: Switch 'jetpack_package_version' to a callable
 
+### Fixed
+- Linting: Fix more Stylelint violations.
+
 ## [6.11.0] - 2025-04-14
 ### Added
 - Add check for mismatched WordPress/WordPress.com user email. [#42674]

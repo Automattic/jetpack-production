@@ -161,7 +161,7 @@
 }
 .download-jetpack:active {
   top: 6px;
-  box-shadow: 0 0px 0 #3e6c20, 0 0 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 #3e6c20, 0 0 0 rgba(0, 0, 0, 0.4);
 }
 .download-jetpack:active::after {
   top: -6px;

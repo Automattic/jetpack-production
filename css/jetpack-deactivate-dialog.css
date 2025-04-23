@@ -37,12 +37,12 @@ https://github.com/thoughtbot/bourbon
   color: #1d2327;
 }
 #TB_window.jetpack-disconnect-modal #TB_ajaxWindowTitle {
-  padding-left: 0px;
+  padding-left: 0;
   margin-top: -2px;
 }
 #TB_window.jetpack-disconnect-modal #TB_ajaxContent {
   width: auto !important;
-  padding: 0px;
+  padding: 0;
   max-height: 435px;
 }
 @media screen and (min-width: 661px) {
@@ -53,7 +53,7 @@ https://github.com/thoughtbot/bourbon
 #TB_window.jetpack-disconnect-modal #TB_ajaxContent .jetpack_deactivation_dialog_content {
   padding: 24px;
   padding-bottom: 80px;
-  margin-top: 0px;
+  margin-top: 0;
 }
 @media screen and (min-width: 661px) {
   #TB_window.jetpack-disconnect-modal #TB_ajaxContent .jetpack_deactivation_dialog_content {
@@ -63,7 +63,7 @@ https://github.com/thoughtbot/bourbon
 #TB_window.jetpack-disconnect-modal #TB_ajaxContent .jetpack_deactivation_dialog_content p {
   font-size: 16px;
   line-height: 24px;
-  margin-top: 0px;
+  margin-top: 0;
 }
 #TB_window.jetpack-disconnect-modal #TB_ajaxContent .jetpack_deactivation_dialog_content ul {
   font-size: 16px;
@@ -100,7 +100,7 @@ https://github.com/thoughtbot/bourbon
 }
 #TB_window.jetpack-disconnect-modal .jetpack_deactivation_dialog_content__buttons-row-container {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   border-top: 1px solid #c3c4c7;
   background-color: rgb(255, 255, 255);
@@ -121,10 +121,9 @@ https://github.com/thoughtbot/bourbon
 #TB_window.jetpack-disconnect-modal .jetpack_deactivation_dialog_content__buttons-row p {
   font-size: 13px;
   line-height: 1.5;
-  margin-top: auto;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  padding-top: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 @media screen and (min-width: 661px) {
   #TB_window.jetpack-disconnect-modal .jetpack_deactivation_dialog_content__buttons-row p {
@@ -142,7 +141,6 @@ https://github.com/thoughtbot/bourbon
   margin: 0;
   outline: 0;
   overflow: hidden;
-  font-size: 14px;
   text-overflow: ellipsis;
   text-decoration: none;
   vertical-align: top;
@@ -156,7 +154,7 @@ https://github.com/thoughtbot/bourbon
 }
 @media screen and (min-width: 661px) {
   #TB_window.jetpack-disconnect-modal .jetpack_deactivation_dialog_content__buttons-row .jetpack_deactivation_dialog_content__buttons button {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-left: 18px;
     width: auto;
   }
@@ -165,7 +163,7 @@ https://github.com/thoughtbot/bourbon
   background: #d94f4f;
   border-color: #a02222;
   color: rgb(255, 255, 255);
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 #TB_window.jetpack-disconnect-modal .jetpack_deactivation_dialog_content__buttons-row .jetpack_deactivation_dialog_content__buttons button#jetpack_deactivation_dialog_content__button-deactivate[disabled], #TB_window.jetpack-disconnect-modal .jetpack_deactivation_dialog_content__buttons-row .jetpack_deactivation_dialog_content__buttons button#jetpack_deactivation_dialog_content__button-deactivate:disabled {
   background: #eba3a3;

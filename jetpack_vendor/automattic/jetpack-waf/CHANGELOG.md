@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Linting: Fix more Stylelint violations.
+
 ## [0.24.2] - 2025-04-21
 ### Fixed
 - Brute Force Protection: Handle unexpected parameter types from third-party plugins during login failure processing. [#43119]

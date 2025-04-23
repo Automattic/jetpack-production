@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Linting: Fix more Stylelint violations.
+
 ## [0.28.2] - 2025-04-21
 ### Changed
 - Editor extensions: Handle status of the VideoPress module when the Jetpack plugin is active. [#40209]

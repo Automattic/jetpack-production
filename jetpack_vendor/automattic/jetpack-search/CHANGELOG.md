@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Linting: Fix more Stylelint violations.
+
 ## [0.47.22] - 2025-04-14
 ### Fixed
 - Fix errors caused by malformed order arguments. [#42897]

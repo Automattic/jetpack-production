@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Removed un-used phan exception
 
+### Fixed
+- Linting: Fix more Stylelint violations.
+
 ## [0.16.1] - 2025-04-21
 ### Fixed
 - Add translation context to Search menu item. [#43094]

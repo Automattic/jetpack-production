@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Featured Content: Add messaging to clarify that the tag name is case sensitive.
 
 ### Fixed
+- Linting: Fix more Stylelint violations.
 - Social Menus: re-order SVGs to be alphabetic.
 
 ## [0.11.8] - 2025-04-14
