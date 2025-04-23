@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Jetpack Sync: Switch 'jetpack_package_version' to a callable
+
 ## [4.11.0] - 2025-04-21
 ### Added
 - Sync: Add `jetpack_sync_active_modules` callable to whitelist of must-sync callables. [#43134]
