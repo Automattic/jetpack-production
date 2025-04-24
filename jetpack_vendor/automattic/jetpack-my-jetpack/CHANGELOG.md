@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Onboarding: Changed the connection UI to a single button
 
 ### Fixed
+- Fix TS type checking and the corresponding errors
 - Linting: Fix more Stylelint violations.
 - Onboarding: Avoid sending invalid email along with social login request
 

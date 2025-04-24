@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- My Jetpack: Fix TS type checking and the corresponding errors
+
 ## 0.1.7 - 2025-04-14
 ### Changed
 - Update dependencies. [#43001]
