@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: always show view action in inbox
 - Forms: Integrations endpoint returns array.
+- Forms: use componentry instead of CSS for some elements in integrations modal.
 
 ### Fixed
 - File Field: Fixes to the interactivity layer with code style improvement
