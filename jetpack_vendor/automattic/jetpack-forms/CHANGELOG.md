@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add Tracks for block modal.
 
 ### Changed
+- Forms: always show view action in inbox
 - Forms: Integrations endpoint returns array.
 
 ### Fixed
