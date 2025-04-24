@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Featured Content: Add messaging to clarify that the tag name is case sensitive.
+- My Jetpack: Updated the onboarding UI, changing it to a single button
 - Shortcode: Convert an embed code from Facebook.com to an oEmbeddable URL
 - Sitemaps: when available, use XMLWriter for a more performant sitemap generation.
 
