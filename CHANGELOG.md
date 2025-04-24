@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Linting: Fix more Stylelint violations.
+- Newsletter: Update learn more link for self hosted websites.
 - WPCOM_JSON_API_Update_Post_v1_1_Endpoint: Fix warning when `$input['type']` does not exist
 
 ## 14.6-a.7 - 2025-04-21
