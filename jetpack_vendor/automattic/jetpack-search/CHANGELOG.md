@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Linting: Fix more Stylelint violations.
+- Linting: Remove outdated vendor prefixes in stylesheets.
 
 ## [0.47.22] - 2025-04-14
 ### Fixed

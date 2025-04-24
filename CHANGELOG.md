@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Geolocation: Remove module requirement
 - Linting: Fix more Stylelint violations.
+- Linting: Remove outdated vendor prefixes in stylesheets.
 - Newsletter: Update learn more link for self hosted websites.
 - WPCOM_JSON_API_Update_Post_v1_1_Endpoint: Fix warning when `$input['type']` does not exist
 

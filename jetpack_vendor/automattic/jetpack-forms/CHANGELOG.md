@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix max file size upload check
 - Forms: Fix toggle deprecation warning.
 - Linting: Fix more Stylelint violations.
+- Linting: Remove outdated vendor prefixes in stylesheets.
 
 ## [0.49.0] - 2025-04-21
 ### Added
