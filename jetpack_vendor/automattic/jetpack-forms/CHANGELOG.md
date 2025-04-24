@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Integrations endpoint returns array.
 - Forms: use componentry instead of CSS for some elements in integrations modal.
 
+### Removed
+- Forms: Remove unused integrations code.
+
 ### Fixed
 - File Field: Fixes to the interactivity layer with code style improvement
 - Forms: avoid overwriting form values when field names are repeated
