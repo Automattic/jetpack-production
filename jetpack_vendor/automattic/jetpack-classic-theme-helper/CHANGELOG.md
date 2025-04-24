@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Featured Content: Add messaging to clarify that the tag name is case sensitive.
 
 ### Fixed
+- Code: Remove unneeded `data:` URI components.
 - Linting: Fix more Stylelint violations.
 - Linting: Remove outdated vendor prefixes in stylesheets.
 - Social Menus: re-order SVGs to be alphabetic.

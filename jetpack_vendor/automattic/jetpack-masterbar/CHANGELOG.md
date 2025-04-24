@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Removed un-used phan exception
 
 ### Fixed
+- Code: Remove unneeded `data:` URI components.
 - Linting: Fix more Stylelint violations.
 
 ## [0.16.1] - 2025-04-21
