@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Linting: Remove outdated vendor prefixes in stylesheets.
 - Newsletter: Remove extra `admin_init` function from `Jetpack_Newsletter_Dashboard_Widget` class.
 - Newsletter: Update learn more link for self hosted websites.
+- SAL_Site: Remove sites[].capabilities.view_hosting field (no longer used by Calypso)
 - Show the Google Analytics settings form inline under Jetpack -> Settings -> Traffic -> Google Analytics,
   instead of showing a link to WordPress.com Marketing Connections page.
 - WPCOM_JSON_API_Update_Post_v1_1_Endpoint: Fix warning when `$input['type']` does not exist
