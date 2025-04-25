@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Added integration status to block sidebar.
 - Forms: Add tests for integrations endpoint.
 - Forms: Add Tracks for block modal.
+- Updated: email template that gets sent out
 
 ### Changed
 - Forms: always show view action in inbox
