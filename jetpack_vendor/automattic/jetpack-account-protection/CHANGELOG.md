@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Fixed an issue where authentication could fail with a fatal error when other authentication plugins are active.
 - Linting: Fix more Stylelint violations.
 
 ## [0.2.2] - 2025-04-14
