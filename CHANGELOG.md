@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Geolocation: Remove module requirement
 - Linting: Fix more Stylelint violations.
 - Linting: Remove outdated vendor prefixes in stylesheets.
+- Newsletter: Remove extra `admin_init` function from `Jetpack_Newsletter_Dashboard_Widget` class.
 - Newsletter: Update learn more link for self hosted websites.
 - Show the Google Analytics settings form inline under Jetpack -> Settings -> Traffic -> Google Analytics,
   instead of showing a link to WordPress.com Marketing Connections page.

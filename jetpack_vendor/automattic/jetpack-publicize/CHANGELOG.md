@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Newsletters: Show newsletter widget on P2s
+
 ## [0.64.1] - 2025-04-21
 ### Changed
 - Remove a stale comment in connections post field. [#43061]
