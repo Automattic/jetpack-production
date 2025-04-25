@@ -26,6 +26,8 @@ This is an alpha version! The changes listed here are not final.
 - Linting: Fix more Stylelint violations.
 - Linting: Remove outdated vendor prefixes in stylesheets.
 - Newsletter: Update learn more link for self hosted websites.
+- Show the Google Analytics settings form inline under Jetpack -> Settings -> Traffic -> Google Analytics,
+  instead of showing a link to WordPress.com Marketing Connections page.
 - WPCOM_JSON_API_Update_Post_v1_1_Endpoint: Fix warning when `$input['type']` does not exist
 
 ## 14.6-a.7 - 2025-04-21
