@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Blocks: added get_variation method
 - Forms: Added integration status to block sidebar.
 - Forms: Add tests for integrations endpoint.
 - Forms: Add Tracks for block modal.
