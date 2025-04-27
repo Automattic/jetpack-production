@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Fix social login getting stuck when email input not empty
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Avoid a PHP8 fatal error on some invalid REST API requests.
 - Code: Remove unneeded `data:` URI components.
 - Compatibility: Replace a deprecated function to check user capabilities, with the currently expected function.
 - Forms: Remove unused integrations code.

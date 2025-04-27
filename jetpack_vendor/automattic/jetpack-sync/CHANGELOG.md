@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Posts: Prevent deprecation warning when updating post meta with null values.
+- Sync: Avoid a PHP8 fatal error on some invalid REST API requests.
 
 ## [4.11.0] - 2025-04-21
 ### Added
