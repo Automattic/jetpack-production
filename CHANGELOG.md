@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - SAL_Site: Remove sites[].capabilities.view_hosting field (no longer used by Calypso)
 - Show the Google Analytics settings form inline under Jetpack -> Settings -> Traffic -> Google Analytics,
   instead of showing a link to WordPress.com Marketing Connections page.
+- Testing: Add testing instructions prior to 14.6 release.
 - WPCOM_JSON_API_Update_Post_v1_1_Endpoint: Fix warning when `$input['type']` does not exist
 
 ## 14.6-a.7 - 2025-04-21
