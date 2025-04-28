@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.11.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.11.1] - 2025-04-28
 ### Changed
-- Jetpack Sync: Switch 'jetpack_package_version' to a callable
+- Jetpack Sync: Switch `jetpack_package_version` to a callable. [#43188]
 
 ### Fixed
-- Linting: Fix more Stylelint violations.
+- Linting: Fix more Stylelint violations. [#43213]
 
 ## [6.11.0] - 2025-04-14
 ### Added
@@ -1415,7 +1412,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.11.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.11.0...v6.11.1-alpha
+[6.11.1]: https://github.com/Automattic/jetpack-connection/compare/v6.11.0...v6.11.1
 [6.11.0]: https://github.com/Automattic/jetpack-connection/compare/v6.10.3...v6.11.0
 [6.10.3]: https://github.com/Automattic/jetpack-connection/compare/v6.10.2...v6.10.3
 [6.10.2]: https://github.com/Automattic/jetpack-connection/compare/v6.10.1...v6.10.2

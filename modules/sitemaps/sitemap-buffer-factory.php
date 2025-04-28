@@ -2,21 +2,21 @@
 /**
  * Factory class for creating sitemap buffers.
  *
- * @since 14.6-a.8
+ * @since 14.6
  * @package automattic/jetpack
  */
 
 /**
  * Creates the appropriate sitemap buffer based on available PHP extensions.
  *
- * @since 14.6-a.8
+ * @since 14.6
  */
 class Jetpack_Sitemap_Buffer_Factory {
 
 	/**
 	 * Create a new sitemap buffer instance.
 	 *
-	 * @since 14.6-a.8
+	 * @since 14.6
 	 *
 	 * @param string $type       The type of sitemap buffer ('page', 'image', 'video', etc.).
 	 * @param int    $item_limit The maximum number of items in the buffer.

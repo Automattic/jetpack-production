@@ -5,21 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.12.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.12.0] - 2025-04-28
 ### Added
-- Featured Content: Add messaging to clarify that the tag name is case sensitive.
+- Featured Content: Add messaging to clarify that the tag name is case sensitive. [#43165]
 
-### Removed
-- Removed "src/site-breadcrumbs.php" from phan file suppressions.
+### Changed
+- Update Phan baseline. [#43085]
 
 ### Fixed
-- Code: Remove unneeded `data:` URI components.
-- Linting: Fix more Stylelint violations.
-- Linting: Remove outdated vendor prefixes in stylesheets.
-- Social Menus: re-order SVGs to be alphabetic.
+- Code: Remove unneeded `data:` URI components. [#43227]
+- Linting: Fix more Stylelint violations. [#43213]
+- Linting: Remove outdated vendor prefixes in stylesheets. [#43219]
+- Social Menus: Reorder SVGs to be alphabetic. [#41134]
 
 ## [0.11.8] - 2025-04-14
 ### Changed
@@ -281,7 +278,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add wordpress folder on gitignore. [#37177]
 
-[0.12.0-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.8...v0.12.0-alpha
+[0.12.0]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.8...v0.12.0
 [0.11.8]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.7...v0.11.8
 [0.11.7]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.6...v0.11.7
 [0.11.6]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.11.5...v0.11.6
