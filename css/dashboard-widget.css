@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/**
+ * Rem function
+ *
+ * Convert px to rem in a readable fashion.
+ *
+ * Example: font-size: rem( 21px );
+ */
 /*
 The MIT License (MIT)
 
@@ -19,6 +26,24 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 https://github.com/thoughtbot/bourbon
 */
+/**
+ * $gray color functions:
+ *
+ *   lighten( $gray, 10% )
+ *   lighten( $gray, 20% )
+ *   lighten( $gray, 30% )
+ *   darken( $gray, 10% )
+ *   darken( $gray, 20% )
+ *   darken( $gray, 30% )
+ *
+ * See wordpress.com/design-handbook/colors/ for more info.
+ */
+/**
+ * Long content fade mixin
+ *
+ * Creates a fading overlay to signify that the content is longer
+ * than the space allows.
+ */
 :root {
   --font-title-large: 36px;
   --font-title-small: 24px;

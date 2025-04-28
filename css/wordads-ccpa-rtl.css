@@ -567,18 +567,6 @@
   justify-content: space-between !important;
   align-items: center !important;
 }
-.cleanslate .components-button {
-  display: inline-flex !important;
-  text-decoration: none !important;
-  font-size: 13px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  cursor: pointer !important;
-  -webkit-appearance: none !important;
-  background: none !important;
-  /* Buttons that look like links, for a cross of good semantics with the visual */
-  /* Link buttons that are red to indicate destructive behavior. */
-}
 .cleanslate .components-icon-button {
   display: flex !important;
   align-items: center !important;
@@ -651,6 +639,10 @@
 .cleanslate .components-form-toggle .components-form-toggle__on {
   right: 8px !important;
   display: none !important;
+  outline: 1px solid transparent !important;
+  outline-offset: -1px !important;
+  border: 1px solid #000 !important;
+  filter: invert(100%) contrast(500%) !important;
 }
 .cleanslate .components-form-toggle .components-form-toggle__track {
   content: "" !important;
@@ -739,12 +731,6 @@
 }
 .cleanslate .components-form-toggle input.components-form-toggle__input[type=checkbox]::before {
   content: "" !important;
-}
-.cleanslate .components-form-toggle .components-form-toggle__on {
-  outline: 1px solid transparent !important;
-  outline-offset: -1px !important;
-  border: 1px solid #000 !important;
-  filter: invert(100%) contrast(500%) !important;
 }
 .cleanslate .components-button {
   display: inline-flex !important;

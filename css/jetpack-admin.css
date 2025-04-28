@@ -1,3 +1,27 @@
+/**
+ * em()
+ *
+ * Convert px to em in a readable fashion.
+ * ==========================================================================
+
+ * Examples:
+ * 1. font-size: em(14px);
+ * 2. font-size: em(30px/14px);
+ */
+/**
+ * Breakpoint Mixin
+ *
+ * Uses Sass Maps which requires Sass v3.3.0 or newer
+ *
+ *
+ * EXAMPLE
+ *
+ * body {
+ * 	@include breakpoint(tablet){
+ * 		font-size: 14px;
+ * 	};
+ * }
+ */
 .j-row {
   width: 100%;
   margin: 0 auto;
@@ -112,7 +136,7 @@
 .jp-button:visited, .jp-button--settings:visited {
   color: #efefef;
 }
-.jp-button:hover, .jp-button--settings:hover, .jp-button:focus, .jp-button--settings:focus {
+.jp-button:hover, .jp-button:focus, .jp-button--settings:hover, .jp-button--settings:focus {
   color: #fff;
   background: #57972d;
 }
@@ -242,6 +266,11 @@
   opacity: 0.4;
 }
 
+/**
+ * Automatticons
+ *
+ * A quick reference
+ */
 @font-face {
   font-family: automatticons;
   src: url(../_inc/fonts/automatticons/automatticons.eot);
@@ -753,18 +782,15 @@
   background: transparent;
   box-shadow: none;
 }
-.subhead .jetpack-message.is-opt-in .jp-button, .subhead .jetpack-message.is-opt-in .jp-button--settings {
+.subhead .jetpack-message.is-opt-in .jp-button {
   display: inline-block;
 }
 .jetpack-message.is-opt-in p {
   color: #3c4549;
 }
-.jetpack-message.is-opt-in .jp-button, .jetpack-message.is-opt-in .jp-button--settings {
+.jetpack-message.is-opt-in .jp-button {
   margin-top: 15px;
   display: none;
-}
-.jetpack-message .squeezer h2 {
-  font-size: 1em;
 }
 .jetpack-message h2 {
   color: #fff;
@@ -791,6 +817,9 @@
   position: absolute;
   top: 23px;
   top: calc(50% - 22px);
+}
+.jetpack-message .squeezer h2 {
+  font-size: 1em;
 }
 @media (max-width: 530px) {
   .jetpack-message .squeezer {
@@ -861,6 +890,25 @@
   margin-left: 10px;
 }
 
+/**
+ * $gray color functions:
+ *
+ *   lighten( $gray, 10% )
+ *   lighten( $gray, 20% )
+ *   lighten( $gray, 30% )
+ *   darken( $gray, 10% )
+ *   darken( $gray, 20% )
+ *   darken( $gray, 30% )
+ *
+ * See wordpress.com/design-handbook/colors/ for more info.
+ */
+/**
+ * Rem function
+ *
+ * Convert px to rem in a readable fashion.
+ *
+ * Example: font-size: rem( 21px );
+ */
 .page-content.configure {
   margin-top: 0;
 }

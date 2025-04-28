@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.6-a.10 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Linting: Do additional stylesheet cleanup.
+
 ## 14.6-a.9 - 2025-04-28
 ### Major Enhancements
 - General: Update minimum WordPress version to 6.7. [#43192]

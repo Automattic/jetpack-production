@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Fix Google Drive connection button style and streamline connection
+- Linting: Do additional stylesheet cleanup.
 
 ## [0.50.0] - 2025-04-28
 ### Added
