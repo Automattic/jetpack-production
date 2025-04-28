@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - File Field: Fixes to the interactivity layer with code style improvement
 - Forms: avoid overwriting form values when field names are repeated
 - Forms: Fix empty file filed error case
+- Forms: Fix Google Drive connection button style and streamline connection
 - Forms: fix max file size upload check
 - Forms: Fix toggle deprecation warning.
 - Linting: Fix more Stylelint violations.
