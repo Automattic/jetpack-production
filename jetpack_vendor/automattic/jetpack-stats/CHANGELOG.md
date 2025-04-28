@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.16.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [0.16.2] - 2025-04-28
+### Changed
+- Internal updates.
 
 ## [0.16.1] - 2025-04-15
 ### Fixed
@@ -257,7 +257,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
-[0.16.2-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.16.1...v0.16.2-alpha
+[0.16.2]: https://github.com/Automattic/jetpack-stats/compare/v0.16.1...v0.16.2
 [0.16.1]: https://github.com/Automattic/jetpack-stats/compare/v0.16.0...v0.16.1
 [0.16.0]: https://github.com/Automattic/jetpack-stats/compare/v0.15.9...v0.16.0
 [0.15.9]: https://github.com/Automattic/jetpack-stats/compare/v0.15.8...v0.15.9

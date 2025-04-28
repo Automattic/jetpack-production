@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.2.14-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.2.14] - 2025-04-28
 ### Fixed
-- Linting: Fix more Stylelint violations.
+- Linting: Fix more Stylelint violations. [#43213]
 
 ## [4.2.13] - 2025-04-14
 ### Fixed
@@ -900,7 +897,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Update Jetpack to use new JITM package
 
-[4.2.14-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v4.2.13...v4.2.14-alpha
+[4.2.14]: https://github.com/Automattic/jetpack-jitm/compare/v4.2.13...v4.2.14
 [4.2.13]: https://github.com/Automattic/jetpack-jitm/compare/v4.2.12...v4.2.13
 [4.2.12]: https://github.com/Automattic/jetpack-jitm/compare/v4.2.11...v4.2.12
 [4.2.11]: https://github.com/Automattic/jetpack-jitm/compare/v4.2.10...v4.2.11
