@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: always show view action in inbox
 - Forms: Integrations endpoint returns array.
+- Forms: Polish integration modal style and copy
 - Forms: Redirect to /responses from /landing if there are form responses
 - Forms: use componentry instead of CSS for some elements in integrations modal.
 
