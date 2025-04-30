@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Linting: Do additional stylesheet cleanup.
 - Only remove the Jetpack submenu if My-Jetpack is present
 - Sitemaps: reduce default limit of items per sitemap to 1000, previously 2000.
+- Update package dependencies.
 
 ## 14.6-a.9 - 2025-04-28
 ### Major Enhancements

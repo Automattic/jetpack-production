@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Polish integration modal style and copy
+- Update package dependencies.
 
 ### Fixed
 - Forms: Fix Google Drive connection button style and streamline connection
