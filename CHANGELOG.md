@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Linting: Do additional stylesheet cleanup.
+- Only remove the Jetpack submenu if My-Jetpack is present
 
 ## 14.6-a.9 - 2025-04-28
 ### Major Enhancements
