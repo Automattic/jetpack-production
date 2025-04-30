@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Linting: Do additional stylesheet cleanup.
+- Prevent PHP warnings when post is invalid.
 
 ## [0.28.3] - 2025-04-28
 ### Fixed
