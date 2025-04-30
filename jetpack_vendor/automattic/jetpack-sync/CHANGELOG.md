@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Full Sync: Update status properly when sending non-chunked full sync actions, and ensure response is not an error before marking the module as finished
 
+### Fixed
+- Jetpack Sync: Fix checksum support for 'woocommerce_order_itemeta' table
+
 ## [4.11.1] - 2025-04-28
 ### Changed
 - Jetpack Sync: Switch `jetpack_package_version` to a callable. [#43188]
