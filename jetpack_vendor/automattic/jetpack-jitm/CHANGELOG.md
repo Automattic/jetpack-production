@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Linting: Address final rules in WordPress Stylelint config.
 - Linting: Do additional stylesheet cleanup.
 
 ## [4.2.14] - 2025-04-28

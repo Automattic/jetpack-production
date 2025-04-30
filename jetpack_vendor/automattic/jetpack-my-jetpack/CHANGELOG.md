@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove unused code
 
 ### Fixed
+- Linting: Address final rules in WordPress Stylelint config.
 - Linting: Do additional stylesheet cleanup.
 
 ## [5.13.0] - 2025-04-28
