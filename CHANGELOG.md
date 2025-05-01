@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Enable the Top-Posts block for Simple sites WP-Admin
+
 ### Bug fixes
 - Image Compare block: Ensure block does not overlap navigation submenu items.
 
