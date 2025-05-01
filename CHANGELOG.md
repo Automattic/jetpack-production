@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: Add tabs to forms dashboard.
+
 ### Improved compatibility
 - Enable the Top-Posts block for Simple sites WP-Admin
 

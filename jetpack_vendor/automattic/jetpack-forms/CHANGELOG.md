@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - File Upload field: add registration with plan check
+- Forms: Add tabs to forms dashbaord.
 
 ### Changed
 - Forms: Polish integration modal style and copy
