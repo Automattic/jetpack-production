@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Forms: Ensure forms modal handles services.
 - Forms: Fix Google Drive connection button style and streamline connection
 - Forms: Reverts Update email notification template
 - Linting: Address final rules in WordPress Stylelint config.
