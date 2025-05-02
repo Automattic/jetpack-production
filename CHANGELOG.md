@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter settings: default featured image in email to true for new sites.
 - Only remove the Jetpack submenu if My-Jetpack is present
 - Returns site slug in the REST /sites/%s endpoint
+- Shortcodes: Prevent redeclared function names with YouTube shortcode.
 - Sitemaps: reduce default limit of items per sitemap to 1000, previously 2000.
 - Update package dependencies.
 
