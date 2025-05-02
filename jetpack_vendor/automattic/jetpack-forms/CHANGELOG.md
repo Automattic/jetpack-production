@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Polish integration modal style and copy
 - Update package dependencies.
 
+### Deprecated
+- Forms: drop WP 6.6 support in Inbox by using new format for useResizeObserver
+
 ### Fixed
 - Forms: Ensure forms modal handles services.
 - Forms: Fix Google Drive connection button style and streamline connection
