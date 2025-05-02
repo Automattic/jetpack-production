@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Linting: Do additional stylesheet cleanup.
+- Prevent PHP error from errant third-party hook params.
 
 ## [0.2.3] - 2025-04-28
 ### Fixed
