@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Enable the Top-Posts block for Simple sites WP-Admin
+- Sharing: remove deprecated Skype sharing button.
 
 ### Bug fixes
 - Image Compare block: Ensure block does not overlap navigation submenu items.
