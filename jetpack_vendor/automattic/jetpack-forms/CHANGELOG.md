@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Polish integration modal style and copy
 - Forms: remove default spacing from variations
+- Forms: use WP.com specific URLs at about page
 - Update package dependencies.
 
 ### Deprecated
