@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Full Sync: Ensure procesing of start end and cancelled actions
+
 ### Changed
 - Full Sync: Update status properly when sending non-chunked full sync actions, and ensure response is not an error before marking the module as finished
 

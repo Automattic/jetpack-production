@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Image Compare block: Ensure block does not overlap navigation submenu items.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Full Sync: updated tests related to changes in the Sync package
 - Jetpack Forms: add field-file to beta blocks variation
 - Linting: Address final rules in WordPress Stylelint config.
 - Linting: Do additional stylesheet cleanup.
