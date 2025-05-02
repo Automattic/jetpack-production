@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Linting: Address final rules in WordPress Stylelint config.
 - Linting: Do additional stylesheet cleanup.
+- Onboarding: Ensure that the CTA has a label when it's disabled
 
 ## [5.13.0] - 2025-04-28
 ### Added

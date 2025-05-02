@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Forms: add field-file to beta blocks variation
 - Linting: Address final rules in WordPress Stylelint config.
 - Linting: Do additional stylesheet cleanup.
+- My Jetpack: Add E2E tests for onboarding
 - Only remove the Jetpack submenu if My-Jetpack is present
 - Returns site slug in the REST /sites/%s endpoint
 - Sitemaps: reduce default limit of items per sitemap to 1000, previously 2000.
