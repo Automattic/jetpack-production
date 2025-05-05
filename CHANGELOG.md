@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: Update form responses tabs.
+
 ### Bug fixes
 - Forms: Preserve responses query parameters.
 
