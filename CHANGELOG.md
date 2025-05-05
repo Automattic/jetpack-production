@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Only remove the Jetpack submenu if My-Jetpack is present
 - Returns site slug in the REST /sites/%s endpoint
 - Shortcodes: Prevent redeclared function names with YouTube shortcode.
+- Sitemap: Prevent PHP notice when generating sitemaps for videos.
 - Sitemaps: reduce default limit of items per sitemap to 1000, previously 2000.
 - Update package dependencies.
 
