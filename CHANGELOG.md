@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Fix "Start for free" not working when module is OFF
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fix My Jetpack onbaording E2E tests
 - Full Sync: updated tests related to changes in the Sync package
 - Jetpack Forms: add field-file to beta blocks variation
 - Linting: Address final rules in WordPress Stylelint config.
