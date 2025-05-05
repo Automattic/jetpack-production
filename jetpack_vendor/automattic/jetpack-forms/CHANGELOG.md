@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add tabs to forms dashbaord.
 
 ### Changed
+- Forms: don't show colon after question mark for form labels
 - Forms: Polish integration modal style and copy
 - Forms: remove default spacing from variations
 - Forms: use WP.com specific URLs at about page
