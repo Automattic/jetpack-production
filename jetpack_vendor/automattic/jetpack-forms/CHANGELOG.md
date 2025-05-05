@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Preserve responses query parameters.
+- Forms: Show export button only on responses tab.
 
 ## [0.51.0] - 2025-05-05
 ### Added
