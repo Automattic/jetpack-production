@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: Update form responses tabs.
+- Forms: update the email template for feedback responses
 
 ### Bug fixes
 - Carousel: do not display comment form when comments are closed for a specific media attachment.
