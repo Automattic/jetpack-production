@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix My Jetpack onbaording E2E tests
+- Forms: Improve Success and Email messages
 - Number-formatters: update formatCurrency() and getCurrencyObejct() calls to go through number-formatters package
 
 ## 14.6 - 2025-05-06

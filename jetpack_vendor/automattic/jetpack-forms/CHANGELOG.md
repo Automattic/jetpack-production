@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix responses toggle background.
 - Forms: Preserve responses query parameters.
 - Forms: Show export button only on responses tab.
+- Improve Success and Email messages
 
 ## [0.51.0] - 2025-05-05
 ### Added
