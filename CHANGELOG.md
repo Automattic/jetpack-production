@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update form responses tabs.
 
 ### Bug fixes
+- Carousel: do not display comment form when comments are closed for a specific media attachment.
 - Forms: Preserve responses query parameters.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
