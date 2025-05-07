@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update form responses tabs.
 
 ### Fixed
+- Forms: Adjust export button mobile styles.
 - Forms: Fix responses toggle background.
 - Forms: Preserve responses query parameters.
 - Forms: Show export button only on responses tab.
