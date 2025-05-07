@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Preserve responses query parameters.
 - Forms: Show export button only on responses tab.
 - Improve Success and Email messages
+- Removes the file since it generates an entry in wordpress.org blocks list
 
 ## [0.51.0] - 2025-05-05
 ### Added
