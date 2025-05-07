@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Adjust export button mobile styles.
 - Forms: Fix responses toggle background.
 - Forms: Preserve responses query parameters.
+- Forms: prevent submenu manipulation to mess with Crowdsignal/Polldaddy submenu items
 - Forms: Show export button only on responses tab.
 - Improve Success and Email messages
 - Removes the file since it generates an entry in wordpress.org blocks list
