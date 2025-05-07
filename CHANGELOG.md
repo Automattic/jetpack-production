@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update form responses tabs.
 - Forms: update the email template for feedback responses
 
+### Improved compatibility
+- Sitemaps: disable XMLWriter by default unless enabled by a filter pending memory usage investigation.
+
 ### Bug fixes
 - Carousel: do not display comment form when comments are closed for a specific media attachment.
 - Forms: Preserve responses query parameters.
