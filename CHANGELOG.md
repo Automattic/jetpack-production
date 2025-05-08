@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Endpoints: Preventing warnings in error logs when using the update post endpoint without keys.
 - Fix My Jetpack onbaording E2E tests
 - Forms: Improve Success and Email messages
+- Migrate numberFormat to number-formatters package
 - Number-formatters: update formatCurrency() and getCurrencyObejct() calls to go through number-formatters package
 - Stable release management: do not ship source files.
 

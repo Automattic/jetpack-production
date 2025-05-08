@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.28.5-alpha] - unreleased
+## [0.29.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- refactored numberFormat use from jetpack-components package to formatNumber from number-formatters package
 - Stable release management: do not ship source files.
 
 ## [0.28.4] - 2025-05-05
@@ -1633,7 +1634,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.28.5-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.28.4...v0.28.5-alpha
+[0.29.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.28.4...v0.29.0-alpha
 [0.28.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.28.3...v0.28.4
 [0.28.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.28.2...v0.28.3
 [0.28.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.28.1...v0.28.2

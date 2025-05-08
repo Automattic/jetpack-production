@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Surface search corrections when correcting search terms
 
 ### Changed
+- Migrate numberFormat to number-formatters package
 - Number-formatters: update formatCurrency() and getCurrencyObejct() calls to go through number-formatters package
 
 ## [0.47.24] - 2025-05-05
