@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update the email template for feedback responses
 
 ### Improved compatibility
+- Blocks: Update useResizeObserver hook usage to meet new API expectations.
 - Sitemaps: disable XMLWriter by default unless enabled by a filter pending memory usage investigation.
 
 ### Bug fixes
