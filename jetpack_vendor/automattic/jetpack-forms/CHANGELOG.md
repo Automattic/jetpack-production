@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Add Typescript support
+- Forms: Unify icons and add Creative Mail to about page
 - Forms: update the email template for feedback responses
 
 ### Changed
