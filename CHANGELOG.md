@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Added getCurrencyDefaults method to JP to allow upgrading the format-currency NPM dependency
 - Blocks: Ensure there is enough time for styles to load, preventing console warnings
 - Bring back format-currency on donations block
+- Donations Block: ensure links in modal use the External Link indicator
 - Fix My Jetpack onbaording E2E tests
 - Forms: Improve Success and Email messages
 - Number-formatters: update formatCurrency() and getCurrencyObejct() calls to go through number-formatters package
