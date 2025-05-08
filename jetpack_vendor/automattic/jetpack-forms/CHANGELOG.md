@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Update form responses tabs.
+- Update list of files distributed in stable version of the package
 
 ### Fixed
 - Forms: Adjust export button mobile styles.
