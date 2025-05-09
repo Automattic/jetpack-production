@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Carousel: do not display comment form when comments are closed for a specific media attachment.
 - Forms: Preserve responses query parameters.
+- Load translations for JS files in jetpack-mu-wpcom
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added getCurrencyDefaults method to JP to allow upgrading the format-currency NPM dependency
