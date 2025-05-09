@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Blocks: Update useResizeObserver hook usage to meet new API expectations.
+- Removed Skype as the service is no longer existing.
 - Sitemaps: disable XMLWriter by default unless enabled by a filter pending memory usage investigation.
 
 ### Bug fixes
