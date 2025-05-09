@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: Move Salesforce to block modal.
 - Forms: Update form responses tabs.
 - Forms: Update Landing page to About page
 - Forms: update the email template for feedback responses

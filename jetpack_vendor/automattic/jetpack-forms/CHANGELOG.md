@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update the email template for feedback responses
 
 ### Changed
+- Forms: Move Salesforce to block modal.
 - Forms: Update form responses tabs.
 - Forms: Update Landing page to About page
 - Update list of files distributed in stable version of the package
