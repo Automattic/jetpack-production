@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update Landing page to About page
 - Update list of files distributed in stable version of the package
 
+### Removed
+- Forms: remove Salesforce Form variation
+
 ### Fixed
 - Forms: Adjust export button mobile styles.
 - Forms: Fix responses toggle background.
