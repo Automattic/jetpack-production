@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Adjust export button mobile styles.
+- Forms: Fix block modal mobile styling.
 - Forms: Fix responses toggle background.
 - Forms: Preserve responses query parameters.
 - Forms: prevent submenu manipulation to mess with Crowdsignal/Polldaddy submenu items
