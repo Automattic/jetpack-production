@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Migrate numberFormat to number-formatters package
 - Number-formatters: update formatCurrency() and getCurrencyObejct() calls to go through number-formatters package
 - Stable release management: do not ship source files.
+- Subscription Module: Fix Newsletter JS string extraction.
 - Update color on Upsell button to WordPress blue
 
 ## 14.6 - 2025-05-06
