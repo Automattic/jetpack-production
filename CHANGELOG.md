@@ -2,45 +2,41 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.7-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 14.7-a.1 - 2025-05-12
 ### Enhancements
-- Forms: Move Salesforce to block modal.
-- Forms: remove Salesforce Form variation
-- Forms: Update form responses tabs.
-- Forms: Update Landing page to About page
-- Forms: update the email template for feedback responses
+- Forms: Move Salesforce to block modal. [#43297]
+- Forms: Remove Salesforce Form variation. [#43419]
+- Forms: Update form responses tabs. [#43358]
+- Forms: Replace Landing page with About page. [#43361]
+- Forms: Update the email template for feedback responses. [#43323]
 
 ### Improved compatibility
-- Blocks: Update useResizeObserver hook usage to meet new API expectations.
-- Removed Skype as the service is no longer existing.
-- Sitemaps: disable XMLWriter by default unless enabled by a filter pending memory usage investigation.
+- Blocks: Update `useResizeObserver` hook usage to meet new API expectations. [#43334]
+- Remove Skype since the service no longer exists. [#43375]
+- Sitemaps: Disable XMLWriter by default unless enabled by a filter. [#43384]
 
 ### Bug fixes
-- Carousel: do not display comment form when comments are closed for a specific media attachment.
-- Forms: Preserve responses query parameters.
-- Load translations for JS files in jetpack-mu-wpcom
+- Carousel: Do not display comment form when comments are closed for a specific media attachment. [#43379]
+- Forms: Preserve responses query parameters. [#43372]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added getCurrencyDefaults method to JP to allow upgrading the format-currency NPM dependency
-- AI Assistant: Added tracking events to know when we're using built-in AI models in some requests and adapted to Chrome AI API changes
-- Blank to-test.md for 14.7 release cycle.
-- Blocks: Ensure there is enough time for styles to load, preventing console warnings
-- Bring back format-currency on donations block
-- Donations Block: ensure links in modal use the External Link indicator
-- Endpoints: Preventing warnings in error logs when using the update post endpoint without keys.
-- Fix My Jetpack onbaording E2E tests
-- Forms: Improve Success and Email messages
-- Migrate numberFormat to number-formatters package
-- Number-formatters: update formatCurrency() and getCurrencyObejct() calls to go through number-formatters package
-- Site Logo: Prevent PHP fatal when third-party code passes unexpected content to `option_site_logo` filter.
-- Stable release management: do not ship source files.
-- Subscription Module: Fix Newsletter JS string extraction.
-- Subscriptions: load newsletter JS translations
-- Update color on Upsell button to WordPress blue
-- Update package dependencies.
+- Add `getCurrencyDefaults()` method to allow removal of the `@automattic/format-currency` dependency. [#42456]
+- AI Assistant: Track model used in toolbar extension and AI excerpt features. [#43390]
+- Blank to-test.md for 14.7 release cycle. [#43436]
+- Blocks: Ensure there is enough time for styles to load, preventing console warnings. [#43003]
+- Donations block: Bring back `@automattic/format-currency` temporarily. [#43405]
+- Donations block: Ensure links in modal use the External Link indicator. [#43402]
+- Endpoints: Prevent PHP warnings when using the update post endpoint without keys. [#43404]
+- Fix My Jetpack onboarding E2E tests. [#43370]
+- Forms: Improve Success and Email messages. [#43380]
+- Migrate `numberFormat()` to `number-formatters` package. [#42864]
+- Site Logo: Prevent PHP fatal when third-party code passes unexpected content to `option_site_logo` filter. [#43432]
+- Stable release management: Do not ship source files. [#43310]
+- Subscriptions: Fix newsletter JavaScript string extraction. [#43403]
+- Subscriptions: Load newsletter JavaScript translations. [#43423]
+- Update color on Upsell button to WordPress Blue. [#43406]
+- Update package dependencies. [#43400]
+- Use `formatCurrency()` and `getCurrencyObject()` functions from the `@automattic/number-formatters` package. [#42796]
 
 ## 14.6 - 2025-05-06
 ### Major Enhancements

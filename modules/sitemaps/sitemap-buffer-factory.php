@@ -32,7 +32,7 @@ class Jetpack_Sitemap_Buffer_Factory {
 		 *
 		 * Temporary filter to disallow XMLWriter usage.
 		 *
-		 * @since 14.7-a.0
+		 * @since 14.7
 		 * @module sitemaps
 		 *
 		 * @param bool $use_xmlwriter Whether to use XMLWriter. Current default is false.
