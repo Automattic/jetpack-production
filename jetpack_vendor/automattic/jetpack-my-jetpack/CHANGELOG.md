@@ -5,15 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.14.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.14.0] - 2025-05-12
 ### Changed
-- Migrate numberFormat to number-formatters package
-- Number-formatters: update formatCurrency() and getCurrencyObejct() calls to go through number-formatters package
-- Stable release management: do not ship source files.
-- Update package dependencies.
+- Stable release management: Do not ship source files. [#43310]
+- Update package dependencies. [#43400]
+- Use functions from the `@automattic/number-formatters` package. [#42796]
 
 ## [5.13.1] - 2025-05-05
 ### Changed
@@ -2134,7 +2130,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.14.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.13.1...5.14.0-alpha
+[5.14.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.13.1...5.14.0
 [5.13.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.13.0...5.13.1
 [5.13.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.12.0...5.13.0
 [5.12.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.11.2...5.12.0
