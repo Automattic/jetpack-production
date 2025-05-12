@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added getCurrencyDefaults method to JP to allow upgrading the format-currency NPM dependency
+- AI Assistant: Added tracking events to know when we're using built-in AI models in some requests and adapted to Chrome AI API changes
 - Blocks: Ensure there is enough time for styles to load, preventing console warnings
 - Bring back format-currency on donations block
 - Donations Block: ensure links in modal use the External Link indicator
