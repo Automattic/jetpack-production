@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Improve Success and Email messages
 - Migrate numberFormat to number-formatters package
 - Number-formatters: update formatCurrency() and getCurrencyObejct() calls to go through number-formatters package
+- Site Logo: Prevent PHP fatal when third-party code passes unexpected content to `option_site_logo` filter.
 - Stable release management: do not ship source files.
 - Subscription Module: Fix Newsletter JS string extraction.
 - Subscriptions: load newsletter JS translations
