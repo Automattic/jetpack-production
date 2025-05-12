@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Stable release management: do not ship source files.
+- Update package dependencies.
 
 ### Deprecated
 - Migrate format-currency to number-formatters package

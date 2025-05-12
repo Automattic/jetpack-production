@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Migrate numberFormat to number-formatters package
 - Number-formatters: update formatCurrency() and getCurrencyObejct() calls to go through number-formatters package
+- Update package dependencies.
 
 ## [0.47.24] - 2025-05-05
 ### Changed

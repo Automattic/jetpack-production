@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - refactored numberFormat use from jetpack-components package to formatNumber from number-formatters package
 - Stable release management: do not ship source files.
+- Update package dependencies.
 
 ## [0.28.4] - 2025-05-05
 ### Changed

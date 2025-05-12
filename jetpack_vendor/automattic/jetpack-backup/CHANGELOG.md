@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Number-formatters: update formatCurrency() and getCurrencyObejct() calls to go through number-formatters package
 - Stable release management: do not ship source files.
+- Update package dependencies.
 
 ## [4.1.2] - 2025-05-05
 ### Changed

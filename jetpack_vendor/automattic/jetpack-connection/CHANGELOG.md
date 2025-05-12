@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Stable release management: do not ship source files.
+- Update package dependencies.
 
 ## [6.11.2] - 2025-05-05
 ### Changed

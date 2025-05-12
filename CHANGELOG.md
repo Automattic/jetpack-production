@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscription Module: Fix Newsletter JS string extraction.
 - Subscriptions: load newsletter JS translations
 - Update color on Upsell button to WordPress blue
+- Update package dependencies.
 
 ## 14.6 - 2025-05-06
 ### Major Enhancements
