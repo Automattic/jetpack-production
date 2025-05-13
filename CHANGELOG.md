@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.7-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 14.7-a.1 - 2025-05-12
 ### Enhancements
 - Forms: Move Salesforce to block modal. [#43297]
