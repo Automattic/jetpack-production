@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 14.7-a.1 - 2025-05-12
 ### Enhancements
 - Forms: Move Salesforce to block modal. [#43297]
