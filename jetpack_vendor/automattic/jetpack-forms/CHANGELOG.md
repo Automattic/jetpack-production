@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Fix google connect button styling.
+- Jetpack Forms: fix a bug preventing responses dashboard to load (blank screen)
 
 ## [0.52.0] - 2025-05-12
 ### Added
