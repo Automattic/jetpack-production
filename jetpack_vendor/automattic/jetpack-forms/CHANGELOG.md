@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: add 33% width option to fields and button
 
+### Changed
+- Forms: Add Google to form integrations endpoint.
+
 ### Fixed
 - Forms: Fix google connect button styling.
 
