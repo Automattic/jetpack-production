@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Full Sync: Calculate metadata based on all item, not just value
+- Sync: Add support for 'sandbox' environment type
 
 ## [4.12.0] - 2025-05-05
 ### Added
