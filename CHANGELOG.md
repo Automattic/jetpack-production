@@ -2,19 +2,24 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.7-a.2 - unreleased
+## 14.7-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- Forms: Add Google to form integrations endpoint.
-- Forms: adds 33% width option to fields and buttons
-
-### Bug fixes
-- Forms: Fix double scrollbars for responses.
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Update package dependencies.
+
+## 14.7-a.3 - 2025-05-15
+### Enhancements
+- Forms: Add Google to form integrations endpoint. [#43453]
+- Forms: Add 33% width option to fields and buttons. [#43417]
+
+### Bug fixes
+- Forms: Fix a bug preventing responses dashboard from loading (blank screen). [#43460]
+- Forms: Fix double scrollbars for responses. [#43462]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies. [#43425]
 
 ## 14.7-a.1 - 2025-05-12
 ### Enhancements
