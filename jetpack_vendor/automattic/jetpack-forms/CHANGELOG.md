@@ -5,22 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.53.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.53.0] - 2025-05-15
 ### Added
-- Forms: add 33% width option to fields and button
+- Add 33% width option to fields and button. [#43417]
 
 ### Changed
-- Forms: Add Google to form integrations endpoint.
-- Forms: change copy of upsell banner for file upload block
-- Forms: simplify dropzone area and settings for file upload field
+- Add Google to form integrations endpoint. [#43453]
+- Change copy of upsell banner for File Upload block. [#43395]
+- Simplify dropzone area and settings for File Upload field. [#43471]
 
 ### Fixed
-- Forms: Fix double scrollbars for responses.
-- Forms: Fix google connect button styling.
-- Jetpack Forms: fix a bug preventing responses dashboard to load (blank screen)
+- Fix a bug preventing responses dashboard from loading (blank screen). [#43460]
+- Fix double scrollbars for responses. [#43462]
+- Fix Google Connect button styling. [#43440]
 
 ## [0.52.0] - 2025-05-12
 ### Added
@@ -1088,7 +1085,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.53.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.52.0...v0.53.0-alpha
+[0.53.0]: https://github.com/automattic/jetpack-forms/compare/v0.52.0...v0.53.0
 [0.52.0]: https://github.com/automattic/jetpack-forms/compare/v0.51.0...v0.52.0
 [0.51.0]: https://github.com/automattic/jetpack-forms/compare/v0.50.0...v0.51.0
 [0.50.0]: https://github.com/automattic/jetpack-forms/compare/v0.49.0...v0.50.0
