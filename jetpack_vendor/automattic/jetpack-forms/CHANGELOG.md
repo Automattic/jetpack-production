@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Add Google to form integrations endpoint.
+- Forms: change copy of upsell banner for file upload block
 - Forms: simplify dropzone area and settings for file upload field
 
 ### Fixed
