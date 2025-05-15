@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Jetpack Search: add query filters support to Inline Search
 
+### Changed
+- Update package dependencies.
+
 ## [0.48.0] - 2025-05-12
 ### Added
 - Surface search corrections when correcting search terms. [#42473]

@@ -759,8 +759,8 @@
 }
 
 .jetpack-message {
-  background: #00a113;
-  border: 1px solid #006e0d;
+  background: rgb(0, 160.5, 19.0222222222);
+  border: 1px solid rgb(0, 109.5, 12.9777777778);
   margin: 33px auto 0;
   max-width: 90%;
   position: relative;
