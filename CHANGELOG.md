@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Open Graph: Prevent PHP warnings when embedding some Vimeo videos.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: retrieve Chrome AI tokens from the backend
 - Repeat Visitor block: Use stabilized role attribute in test file
 - Update package dependencies.
 
