@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Get Google status with new useIntegrationStatus hook.
+- Forms: Update Salesforce icons.
 - Update package dependencies.
 
 ## [0.53.0] - 2025-05-15
