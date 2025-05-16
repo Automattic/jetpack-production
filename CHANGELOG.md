@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Optimize the images for onboarding slider for faster page load.
 
 ### Bug fixes
+- Mitigate bug with certain P2 theme
 - Open Graph: Prevent PHP warnings when embedding some Vimeo videos.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

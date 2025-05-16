@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Mitigate bug with certain P2 theme
+
 ## [0.49.0] - 2025-05-15
 ### Added
 - Add query filters support to Inline Search. [#43441]
