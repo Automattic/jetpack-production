@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Get Google status with new useIntegrationStatus hook.
+- Forms: Update Google Sheets icon.
 - Forms: Update Salesforce icons.
 - Forms Dashboard: fix containers height to consistently fit on view, single scrollbar on dataviews
 - Update package dependencies.
