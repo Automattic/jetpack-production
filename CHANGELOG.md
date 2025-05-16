@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add highlighting of search term in returned search results.
 - My Jetpack: Optimize the images for onboarding slider for faster page load.
 
 ### Bug fixes
