@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add highlighting of search term in returned search results.
+- Jetpack Search: allow enabling new Inline Search
 
 ### Changed
 - Update package dependencies.
