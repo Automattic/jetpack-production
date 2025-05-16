@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Optimize the images for onboarding slider for faster page load.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Repeat Visitor block: Use stabilized role attribute in test file
 - Update package dependencies.
 
 ## 14.7-a.3 - 2025-05-15
