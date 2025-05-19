@@ -431,7 +431,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/blocks/contact-form/class-contact-form-block.php'
 	),
 	'Automattic\\Jetpack\\External_Media\\External_Media' => array(
-		'version' => '0.3.10.0-alpha1747327477',
+		'version' => '0.3.10.0-alpha1747666816',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-external-media/src/class-external-media.php'
 	),
 	'Automattic\\Jetpack\\Files' => array(
