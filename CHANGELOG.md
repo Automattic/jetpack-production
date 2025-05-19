@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Added tracking events to know when we're using built-in AI models in some requests and adapted to Chrome AI API changes
+- E2E Tests: Update config file encryption algorithm.
 - Update package dependencies.
 
 ## 14.7-a.5 - 2025-05-19
