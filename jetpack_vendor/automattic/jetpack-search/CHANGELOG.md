@@ -5,19 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.50.0-alpha] - unreleased
+## [0.50.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
-
-### Added
-- Add highlighting of search term in returned search results.
-- Jetpack Search: allow enabling new Inline Search
 
 ### Changed
 - Update package dependencies.
 
+## [0.50.0] - 2025-05-19
+### Added
+- Add highlighting of search term in returned search results. [#43110]
+- Allow new Inline Search to be enabled. [#43457]
+
+### Changed
+- Update package dependencies. [#43398]
+
 ### Fixed
-- Mitigate bug with certain P2 theme
+- Mitigate bug with certain P2 theme [#43503]
 
 ## [0.49.0] - 2025-05-15
 ### Added
@@ -1232,7 +1236,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.50.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.49.0...v0.50.0-alpha
+[0.50.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.50.0...v0.50.1-alpha
+[0.50.0]: https://github.com/Automattic/jetpack-search/compare/v0.49.0...v0.50.0
 [0.49.0]: https://github.com/Automattic/jetpack-search/compare/v0.48.0...v0.49.0
 [0.48.0]: https://github.com/Automattic/jetpack-search/compare/v0.47.24...v0.48.0
 [0.47.24]: https://github.com/Automattic/jetpack-search/compare/v0.47.23...v0.47.24
