@@ -2,24 +2,21 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.7-a.4 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 14.7-a.5 - 2025-05-19
 ### Enhancements
-- Add highlighting of search term in returned search results.
-- Forms: Add Google Drive to integrations modal.
-- My Jetpack: Optimize the images for onboarding slider for faster page load.
+- Forms: Add Google Drive to integrations modal. [#43479]
+- My Jetpack: Optimize the images for onboarding slider for faster page load. [#43473]
+- Search: Highlight search term in returned search results. [#43110]
 
 ### Bug fixes
-- Mitigate bug with certain P2 theme
-- Open Graph: Prevent PHP warnings when embedding some Vimeo videos.
+- Open Graph: Prevent PHP warnings when embedding some Vimeo videos. [#43458]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- AI Assistant: retrieve Chrome AI tokens from the backend
-- Repeat Visitor block: Use stabilized role attribute in test file
-- Stats: Remove old deprecated method
-- Update package dependencies.
+- AI Assistant: Retrieve Chrome AI tokens from the backend. [#43442]
+- Mitigate bug with certain P2 themes. [#43503]
+- Repeat Visitor block: Use stabilized role attribute in test file. [#43472]
+- Stats: Remove deprecated `stats_update_blog` method. [#43493]
+- Update package dependencies. [#43398]
 
 ## 14.7-a.3 - 2025-05-15
 ### Enhancements
