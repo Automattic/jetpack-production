@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- My Jetpack: Remove Zendesk chat script from DOM
 - Opmitized images for onbaording slider.
 
 ## [5.14.2] - 2025-05-15
