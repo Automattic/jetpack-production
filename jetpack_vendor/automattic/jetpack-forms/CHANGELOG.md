@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Forms: Apply max-width on Salesforce ID input.
+
 ## [0.54.0] - 2025-05-19
 ### Added
 - Add Google Drive to integrations modal. [#43479]
