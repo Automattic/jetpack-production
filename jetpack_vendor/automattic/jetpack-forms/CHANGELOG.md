@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Add Create Form button to dashboard header
+- Forms: add feature filter flags and code for moving submenu item from Feedback > Forms responses to Jetpack > Forms
 - Forms: Add Integration screen content.
 - Forms: Add integration tab with feature flag.
 
