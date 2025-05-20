@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: Add Integration screen content.
+
 ### Bug fixes
 - AI Chat & Donations blocks: ensure all metadata is properly attached to the blocks in the block editor.
 
