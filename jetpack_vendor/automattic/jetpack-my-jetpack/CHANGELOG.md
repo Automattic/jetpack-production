@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.14.4-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Add missing variables to Tanstack queryKey.
+
 ## [5.14.3] - 2025-05-19
 ### Changed
 - Optimize images for onboarding slider. [#43473]
@@ -2143,6 +2150,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.14.4-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.14.3...5.14.4-alpha
 [5.14.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.14.2...5.14.3
 [5.14.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.14.1...5.14.2
 [5.14.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.14.0...5.14.1
