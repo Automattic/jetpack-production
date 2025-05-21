@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Added option to add default image to Social Image Generator.
 - Forms: Add Integration screen content.
 
+### Improved compatibility
+- Endpoints: Adding checks within the v1.1 post update endpoint to ensure values are defined.
+
 ### Bug fixes
 - AI Chat & Donations blocks: ensure all metadata is properly attached to the blocks in the block editor.
 - Forms: Fix Akismet spam URL.
