@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Endpoints: Adding checks within the v1.1 post update endpoint to ensure values are defined.
+- Sharing buttons: Prevent PHP warnings in some scenarios, ensuring we only check the post tle and id if posts exist.
 
 ### Bug fixes
 - AI Chat & Donations blocks: ensure all metadata is properly attached to the blocks in the block editor.
