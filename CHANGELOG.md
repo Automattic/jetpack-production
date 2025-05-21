@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Added tracking events to know when we're using built-in AI models in some requests and adapted to Chrome AI API changes
 - E2E Tests: Update config file encryption algorithm.
 - Forms: update dependency on packages/admin_ui, composer.lock update
+- Post Images: Prevent undefined variable and key warnings
 - Theme Compatibility: Prevent warning when custom color value isn't set.
 - Update package dependencies.
 
