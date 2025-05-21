@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Featured Content: Prevent error if invalid taxonomy data is provided.
+
 ## [0.13.1] - 2025-05-19
 ### Changed
 - Update package dependencies. [#43398]
