@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Added option to add default image to Social Image Generator.
 - Forms: Add Integration screen content.
 
 ### Bug fixes
