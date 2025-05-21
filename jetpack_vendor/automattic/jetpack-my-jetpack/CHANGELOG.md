@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Add missing variables to Tanstack queryKey.
+- Fixed Onboarding UI responsiveness at 600px
 
 ## [5.14.3] - 2025-05-19
 ### Changed

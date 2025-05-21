@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Chat & Donations blocks: ensure all metadata is properly attached to the blocks in the block editor.
 - Forms: Fix Akismet spam URL.
+- My Jetpack: Fixed Onboarding UI responsiveness at 600px.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Added tracking events to know when we're using built-in AI models in some requests and adapted to Chrome AI API changes
