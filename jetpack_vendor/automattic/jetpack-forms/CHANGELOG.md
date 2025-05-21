@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: Apply max-width on Salesforce ID input.
 - Forms: Fix Akismet spam URL.
+- Forms: remove the ability to upload multiple file at using the same file upload field. This field is not yet released.
 
 ## [0.54.0] - 2025-05-19
 ### Added
