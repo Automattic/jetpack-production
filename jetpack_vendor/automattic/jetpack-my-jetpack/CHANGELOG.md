@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updated the typography for onboarding slider text.
+
 ### Fixed
 - Add missing variables to Tanstack queryKey.
 - Fixed Onboarding UI responsiveness at 600px
