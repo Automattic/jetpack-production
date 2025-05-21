@@ -419,11 +419,11 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-errors.php'
 	),
 	'Automattic\\Jetpack\\ExPlat' => array(
-		'version' => '0.2.19.0',
+		'version' => '0.2.20.0-alpha1747860421',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-explat/src/class-explat.php'
 	),
 	'Automattic\\Jetpack\\ExPlat\\REST_Controller' => array(
-		'version' => '0.2.19.0',
+		'version' => '0.2.20.0-alpha1747860421',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-explat/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Extensions\\Contact_Form\\Contact_Form_Block' => array(

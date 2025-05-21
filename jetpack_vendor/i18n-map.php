@@ -50,7 +50,7 @@ return array(
     ),
     'jetpack-explat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-explat',
-      'ver' => '0.2.19',
+      'ver' => '0.2.20-alpha1747860421',
     ),
     'jetpack-external-media' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-external-media',
