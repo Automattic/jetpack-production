@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Fix readability of license activation button on hover.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add wordpress/base-styles dependency
 - AI Assistant: Added tracking events to know when we're using built-in AI models in some requests and adapted to Chrome AI API changes
 - E2E Tests: Update config file encryption algorithm.
 - Featured Content: Prevent error if invalid taxonomy data is provided.

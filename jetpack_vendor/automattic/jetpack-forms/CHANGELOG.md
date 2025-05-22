@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add integration tab with feature flag.
 
 ### Changed
+- Forms: address styles design on integrations tabs and modal
 - Update package dependencies.
 
 ### Fixed
