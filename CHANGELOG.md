@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E Tests: Update config file encryption algorithm.
 - Featured Content: Prevent error if invalid taxonomy data is provided.
 - Forms: update dependency on packages/admin_ui, composer.lock update
+- Janitorial: Ensure functionality related to WoA site checking is clearer.
 - Post Images: Prevent undefined variable and key warnings
 - Theme Compatibility: Prevent warning when custom color value isn't set.
 - Update package dependencies.

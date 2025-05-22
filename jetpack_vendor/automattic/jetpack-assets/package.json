@@ -12,7 +12,7 @@
 		"validate": "pnpm exec validate-es build/"
 	},
 	"dependencies": {
-		"@automattic/jetpack-script-data": "^0.4.1",
+		"@automattic/jetpack-script-data": "^0.4.2-alpha",
 		"react": "18.3.1"
 	},
 	"devDependencies": {
