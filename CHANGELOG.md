@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Chat & Donations blocks: ensure all metadata is properly attached to the blocks in the block editor.
 - Forms: Fix Akismet spam URL.
+- Jetpack: Fix redirect_to URL encoding on frontend for upgrade nudge
 - My Jetpack: Fixed Onboarding UI responsiveness at 600px.
 - My Jetpack: Fix readability of license activation button on hover.
 
