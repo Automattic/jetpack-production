@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix admin notice showing on all screens instead of only forms classic view
 - Forms: Apply max-width on Salesforce ID input.
 - Forms: Fix Akismet spam URL.
 - Forms: remove the ability to upload multiple file at using the same file upload field. This field is not yet released.
