@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Remove packages/forms dependency from jetpack-mu-wpcom-plugin, change submenu registration
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Update to-test.md for Jetpack 14.7.
 

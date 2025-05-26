@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Create form patterns from About page
 
+### Fixed
+- Remove packages/forms dependency from jetpack-mu-wpcom-plugin, change submenu registration
+
 ## [0.55.0] - 2025-05-26
 ### Added
 - Forms: Add Create Form button to dashboard header. [#43529]
