@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: Fix redirect_to URL encoding on frontend for upgrade nudge
 - My Jetpack: Fixed Onboarding UI responsiveness at 600px.
 - My Jetpack: Fix readability of license activation button on hover.
+- My Jetpack: Hide backup failure notice when backups are deactivated.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add wordpress/base-styles dependency

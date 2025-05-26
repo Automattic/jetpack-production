@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Hide Backup failure notice when backups are deactivated.
+
 ## [5.14.4] - 2025-05-22
 ### Changed
 - Updated the typography for onboarding slider text. [#43512]
