@@ -28,10 +28,10 @@
 	],
 	"dependencies": {
 		"@automattic/jetpack-analytics": "^0.1.36",
-		"@automattic/jetpack-api": "^0.20.3-alpha",
-		"@automattic/jetpack-components": "^0.73.3-alpha",
-		"@automattic/jetpack-connection": "^0.39.17-alpha",
-		"@automattic/jetpack-shared-extension-utils": "^0.20.2-alpha",
+		"@automattic/jetpack-api": "^0.20.3",
+		"@automattic/jetpack-components": "^0.73.3",
+		"@automattic/jetpack-connection": "^0.39.17",
+		"@automattic/jetpack-shared-extension-utils": "^0.20.2",
 		"@automattic/number-formatters": "^1.0.2",
 		"@tanstack/react-query": "5.75.1",
 		"@wordpress/api-fetch": "7.24.0",
@@ -46,7 +46,7 @@
 		"react-dom": "18.3.1"
 	},
 	"devDependencies": {
-		"@automattic/jetpack-base-styles": "^0.7.5-alpha",
+		"@automattic/jetpack-base-styles": "^0.7.5",
 		"@automattic/jetpack-webpack-config": "workspace:*",
 		"@babel/core": "7.26.10",
 		"@babel/preset-env": "7.26.9",
