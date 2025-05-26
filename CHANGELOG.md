@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Fixed wrapping on the stats column heading in non-English languages
 - Remove packages/forms dependency from jetpack-mu-wpcom-plugin, change submenu registration
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

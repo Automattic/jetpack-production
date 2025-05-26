@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.26.3-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Fixed wrapping on the stats column heading in non-English languages
+
 ## 0.26.2 - 2025-05-12
 ### Fixed
 - Stats column: Avoid PHP error when a locale is not available. [#43396]
