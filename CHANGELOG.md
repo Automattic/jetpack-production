@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fixed wrapping on the stats column heading in non-English languages
+- Forms: file upload field make it work for reduce motion case
 - Protect against improper calls to the_title() filter.
 - Remove packages/forms dependency from jetpack-mu-wpcom-plugin, change submenu registration
 

@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Contact Form: Use wp_kses_post instead of esc_html for legend rendering to allow safe HTML in fieldset legends.
+- Forms: file upload field make it work for reduce motion case
 - Remove packages/forms dependency from jetpack-mu-wpcom-plugin, change submenu registration
 
 ## [0.55.0] - 2025-05-26
