@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Protect against improper calls to the_title() filter.
+
 ## [0.50.1] - 2025-05-26
 ### Changed
 - Update package dependencies. [#43516] [#43578]
