@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: added tracking pixel to form submission emails to know if emails are being open. No user information is being sent, just the tracking event.
 - Forms: add page to announce forms mvoed to Jetpack > Forms menu
 
 ### Changed
