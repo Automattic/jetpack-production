@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add page to announce forms mvoed to Jetpack > Forms menu
 
 ### Changed
+- Forms: Change action buttons placement on mobile
 - Forms: Create form patterns from About page
 
 ### Fixed
