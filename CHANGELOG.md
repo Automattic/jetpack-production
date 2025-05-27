@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Crowdsignal: Prevent warnings in error logs when viewing ratings via legacy shortcodes on archive pages.
+
 ### Bug fixes
 - Fixed wrapping on the stats column heading in non-English languages
 - Protect against improper calls to the_title() filter.
