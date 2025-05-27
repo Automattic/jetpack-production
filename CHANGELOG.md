@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Crowdsignal: Prevent warnings in error logs when viewing ratings via legacy shortcodes on archive pages.
+- Sharing service: Prevent warnings in error logs when certain keys are not set."
 
 ### Bug fixes
 - Fixed wrapping on the stats column heading in non-English languages
