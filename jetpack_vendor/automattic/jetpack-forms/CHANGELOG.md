@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Create form patterns from About page
 
 ### Fixed
+- Contact Form: Use wp_kses_post instead of esc_html for legend rendering to allow safe HTML in fieldset legends.
 - Remove packages/forms dependency from jetpack-mu-wpcom-plugin, change submenu registration
 
 ## [0.55.0] - 2025-05-26
