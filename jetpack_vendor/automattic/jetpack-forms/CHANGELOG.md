@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: reinstate sending submission email when user moves response from spam to inbox
 
 ### Changed
+- Add mobile friendly styles and screenshot for Forms migration page
 - Forms: Change action buttons placement on mobile
 - Forms: Create form patterns from About page
 - Forms: indicate in sidebar if no integrations enabled
