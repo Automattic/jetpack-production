@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Change action buttons placement on mobile
 - Forms: Create form patterns from About page
+- Forms: indicate in sidebar if no integrations enabled
 
 ### Fixed
 - Contact Form: Use wp_kses_post instead of esc_html for legend rendering to allow safe HTML in fieldset legends.
