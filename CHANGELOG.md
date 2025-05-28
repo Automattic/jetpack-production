@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Fix images in connections management not loading when concatenating JS.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blogging prompts: Fix for Simple sites.
 - Endpoints: Prevent warnings in error logs due to undefined values
 - Update to-test.md for Jetpack 14.7.
 
