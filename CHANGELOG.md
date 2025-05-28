@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: file upload field make it work for reduce motion case
 - Protect against improper calls to the_title() filter.
 - Remove packages/forms dependency from jetpack-mu-wpcom-plugin, change submenu registration
+- Social: Fix images in connections management not loading when concatenating JS.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Endpoints: Prevent warnings in error logs due to undefined values
