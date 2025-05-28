@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Create form patterns from About page
 - Forms: indicate in sidebar if no integrations enabled
 
+### Removed
+- Forms: disable default listing UI for post_type=feedback if the menu item is removed. Remove admin notices about page being moved.
+
 ### Fixed
 - Contact Form: Use wp_kses_post instead of esc_html for legend rendering to allow safe HTML in fieldset legends.
 - Forms: file upload field make it work for reduce motion case
