@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Change action buttons placement on mobile
 - Forms: Create form patterns from About page
 - Forms: indicate in sidebar if no integrations enabled
+- Forms: styles, labels and copy edits for integrations modal and tab
 
 ### Removed
 - Forms: disable default listing UI for post_type=feedback if the menu item is removed. Remove admin notices about page being moved.
