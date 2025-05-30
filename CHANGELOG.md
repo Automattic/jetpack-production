@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blogging prompts: Fix for Simple sites.
+- Dashboard: Ensure links labeled as external links open in a new tab.
 - Endpoints: Prevent warnings in error logs due to undefined values
 - Load a script that injects the tokens needed to enable Chrome's built-in AI API
 - Update to-test.md for Jetpack 14.7.
