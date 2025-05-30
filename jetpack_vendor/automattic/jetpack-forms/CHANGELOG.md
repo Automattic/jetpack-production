@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: added tracking pixel to form submission emails to know if emails are being open. No user information is being sent, just the tracking event.
 - Forms: add page to announce forms mvoed to Jetpack > Forms menu
 - Forms: reinstate sending submission email when user moves response from spam to inbox
+- Forms: use translated screenshot on dashboard migration page
 
 ### Changed
 - Add mobile friendly styles and screenshot for Forms migration page
