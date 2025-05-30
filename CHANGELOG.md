@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Ensure links labeled as external links open in a new tab.
 - Endpoints: Prevent warnings in error logs due to undefined values
 - Load a script that injects the tokens needed to enable Chrome's built-in AI API
+- Reader: Fix paywall styling on Reader and improve few other styles
 - Update to-test.md for Jetpack 14.7.
 
 ## 14.7-a.7 - 2025-05-26
