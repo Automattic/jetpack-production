@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Catch PHP notices when handling unexpected data types.
+
 ## [0.29.2] - 2025-05-26
 ### Changed
 - Update package dependencies. [#43516] [#43578]
