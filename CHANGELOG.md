@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Load a script that injects the tokens needed to enable Chrome's built-in AI API
 - Newsletter:Update "Set Up" button to show "Add Plans" or "Manage Plans" depending on the plans configuration.
 - Reader: Fix paywall styling on Reader and improve few other styles
+- Reader: Update paywall messages for the restricted content.
 - Update package dependencies.
 - Update to-test.md for Jetpack 14.7.
 
