@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.25.28-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [0.25.27] - 2025-06-02
 ### Changed
 - Update dependencies. [#43617]
@@ -601,6 +608,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated package dependencies. [#27906]
 
+[0.25.28-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.25.27...v0.25.28-alpha
 [0.25.27]: https://github.com/automattic/jetpack-blaze/compare/v0.25.26...v0.25.27
 [0.25.26]: https://github.com/automattic/jetpack-blaze/compare/v0.25.25...v0.25.26
 [0.25.25]: https://github.com/automattic/jetpack-blaze/compare/v0.25.24...v0.25.25
