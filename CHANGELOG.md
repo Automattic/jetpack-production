@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.8-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 14.7-beta - 2025-06-02
 ### Enhancements
 - Forms: Move responses menu item from Feedback > Forms to Jetpack > Forms. [#43705]

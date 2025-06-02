@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.15.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [5.15.0] - 2025-06-02
 ### Added
 - My Jetpack: Add comprehensive analytics tracking for tab interactions including tab switching, page views with tab context, and help request tracking. [#43592]
@@ -2170,6 +2177,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.15.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.15.0...5.15.1-alpha
 [5.15.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.14.5...5.15.0
 [5.14.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.14.4...5.14.5
 [5.14.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.14.3...5.14.4

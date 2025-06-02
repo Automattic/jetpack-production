@@ -16,7 +16,7 @@
 		"automattic/jetpack-admin-ui": "^0.5.9",
 		"automattic/jetpack-assets": "^4.0.23",
 		"automattic/jetpack-autoloader": "^5.0.7",
-		"automattic/jetpack-backup": "^4.2.3",
+		"automattic/jetpack-backup": "^4.2.4-alpha",
 		"automattic/jetpack-blaze": "^0.25.27",
 		"automattic/jetpack-blocks": "^3.1.0",
 		"automattic/jetpack-boost-speed-score": "^0.4.9",
@@ -29,7 +29,7 @@
 		"automattic/jetpack-device-detection": "^3.0.6",
 		"automattic/jetpack-error": "^3.0.5",
 		"automattic/jetpack-external-media": "^0.3.12",
-		"automattic/jetpack-forms": "^0.56.0",
+		"automattic/jetpack-forms": "^0.56.1-alpha",
 		"automattic/jetpack-image-cdn": "^0.7.13",
 		"automattic/jetpack-import": "^0.9.8",
 		"automattic/jetpack-ip": "^0.4.9",
@@ -37,7 +37,7 @@
 		"automattic/jetpack-licensing": "^3.0.9",
 		"automattic/jetpack-logo": "^3.0.5",
 		"automattic/jetpack-masterbar": "^0.17.5",
-		"automattic/jetpack-my-jetpack": "^5.15.0",
+		"automattic/jetpack-my-jetpack": "^5.15.1-alpha",
 		"automattic/jetpack-plugins-installer": "^0.5.5",
 		"automattic/jetpack-post-list": "^0.8.17",
 		"automattic/jetpack-publicize": "^0.65.2",
@@ -47,9 +47,9 @@
 		"automattic/jetpack-stats": "^0.16.2",
 		"automattic/jetpack-stats-admin": "^0.26.3",
 		"automattic/jetpack-status": "^5.1.4",
-		"automattic/jetpack-subscribers-dashboard": "^0.1.13",
+		"automattic/jetpack-subscribers-dashboard": "^0.1.14-alpha",
 		"automattic/jetpack-sync": "^4.14.0",
-		"automattic/jetpack-videopress": "^0.29.3",
+		"automattic/jetpack-videopress": "^0.29.4-alpha",
 		"automattic/jetpack-waf": "^0.24.3",
 		"automattic/jetpack-wordads": "^0.4.26",
 		"automattic/woocommerce-analytics": "^0.4.7",
@@ -100,7 +100,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_7_beta",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ14_8_a_0",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true
