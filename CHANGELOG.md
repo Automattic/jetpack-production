@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter:Update "Set Up" button to show "Add Plans" or "Manage Plans" depending on the plans configuration.
 - Reader: Fix paywall styling on Reader and improve few other styles
 - Reader: Update paywall messages for the restricted content.
+- Updated default cookie expiration from 30000000 to YEAR_IN_SECONDS to match recent WordPress Core changes
 - Update package dependencies.
 - Update to-test.md for Jetpack 14.7.
 
