@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: indicate in sidebar if no integrations enabled
 - Forms: opt-in inbox toggle to latest component features
 - Forms: styles, labels and copy edits for integrations modal and tab
+- Forms: update translated screenshot on dashboard migration page
 
 ### Removed
 - Forms: disable default listing UI for post_type=feedback if the menu item is removed. Remove admin notices about page being moved.
