@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: clarify Trash filtere as noun, not verb
 - Forms: Create a new page instead of post when creating a new form from dashboard
 - Forms: Create form patterns from About page
+- Forms: enable feature filters by default to migrate forms dashboard page and menu
 - Forms: indicate in sidebar if no integrations enabled
 - Forms: opt-in inbox toggle to latest component features
 - Forms: styles, labels and copy edits for integrations modal and tab

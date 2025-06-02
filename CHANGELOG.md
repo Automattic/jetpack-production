@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- Jetpack Forms: Feedback > Forms responses menu is being moved to Jetpack > Forms. The old menu now shows an announcement page with a link to the new location for forms responses.
+
 ### Improved compatibility
 - Crowdsignal: Prevent warnings in error logs when viewing ratings via legacy shortcodes on archive pages.
 - Sharing service: Prevent warnings in error logs when certain keys are not set."
