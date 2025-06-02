@@ -5,55 +5,51 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.56.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.56.0] - 2025-06-02
 ### Added
-- Forms: added tracking pixel to form submission emails to know if emails are being open. No user information is being sent, just the tracking event.
-- Forms: Add events to Forms dashboard pages
-- Forms: add page to announce forms mvoed to Jetpack > Forms menu
-- Forms: reinstate sending submission email when user moves response from spam to inbox
-- Forms: use translated screenshot on dashboard migration page
+- Add tracking pixel to form submission emails to know if emails are being opened (no user info is sent). [#43629]
+- Add events to Forms dashboard pages. [#43686]
+- Add page to announce that forms moved to Jetpack > Forms menu. [#43620]
+- Reinstate sending submission email when user moves response from spam to inbox. [#43559]
+- Use translated screenshot on dashboard migration page. [#43693] [#43707]
 
 ### Changed
-- Add mobile friendly styles and screenshot for Forms migration page
-- Forms: add context to About tab translation
-- Forms: Change action buttons placement on mobile
-- Forms: clarify Trash filtere as noun, not verb
-- Forms: Create a new page instead of post when creating a new form from dashboard
-- Forms: Create form patterns from About page
-- Forms: enable feature filters by default to migrate forms dashboard page and menu
-- Forms: indicate in sidebar if no integrations enabled
-- Forms: opt-in inbox toggle to latest component features
-- Forms: styles, labels and copy edits for integrations modal and tab
-- Forms: update translated screenshot on dashboard migration page
-- Update package dependencies.
+- Add mobile-friendly styles and screenshot on Forms migration page. [#43664]
+- Add context to About tab translation. [#43708]
+- Add translation hint for Trash terminology. [#43704]
+- Change action button placement on mobile. [#43605]
+- Create a new page instead of post when creating a new form from dashboard. [#43668]
+- Create form patterns from About page. [#43608]
+- Enable feature filters by default to migrate forms dashboard page and menu. [#43705]
+- Indicate in sidebar if no integrations enabled. [#43547]
+- Update inbox header to use latest component features. [#43680]
+- Update styles, labels and copy edits for integrations modal and tab. [#43666]
+- Update package dependencies. [#43712]
 
 ### Removed
-- Forms: disable default listing UI for post_type=feedback if the menu item is removed. Remove admin notices about page being moved.
+- Disable default listing UI for Feedback post types if the menu item is removed. [#43657]
 
 ### Fixed
-- Contact Form: Use wp_kses_post instead of esc_html for legend rendering to allow safe HTML in fieldset legends.
-- Forms: file upload field make it work for reduce motion case
-- Remove packages/forms dependency from jetpack-mu-wpcom-plugin, change submenu registration
+- Contact Form: Use `wp_kses_post` instead of `esc_html` when rendering legend to allow safe HTML in fieldset legends. [#43639]
+- File Upload field: Show upload progress when reduced motion is enabled. [#43628]
+- Remove dependency from `jetpack-mu-wpcom-plugin`. [#43627]
 
 ## [0.55.0] - 2025-05-26
 ### Added
-- Forms: Add Create Form button to dashboard header. [#43529]
-- Forms: Add feature filter flags and code for moving submenu item from Feedback > Forms responses to Jetpack > Forms. [#43295]
-- Forms: Add Integration screen content. [#43530]
-- Forms: Add integration tab with feature flag. [#43502]
+- Add "Create Form" button to dashboard header. [#43529]
+- Add feature filter flags and code for moving submenu item from Feedback > Forms responses to Jetpack > Forms. [#43295]
+- Add Integration screen content. [#43530]
+- Add integration tab with feature flag. [#43502]
 
 ### Changed
-- Forms: Address styles design on integrations tabs and modal. [#43576]
+- Address styles design on integrations tabs and modal. [#43576]
 - Update package dependencies. [#43516] [#43578]
 
 ### Fixed
-- Fixed admin notice showing on all screens instead of only forms classic view. [#43582]
-- Forms: Apply max-width on Salesforce ID input. [#43543]
-- Forms: Fix Akismet spam URL. [#43542]
-- Forms: Remove the ability to upload multiple files at using the same file upload field. This field is not yet released. [#43555]
+- Apply maximum width on Salesforce ID input. [#43543]
+- Ensure admin notice on classic view does not show on all screens. [#43582]
+- Fix Akismet spam URL. [#43542]
+- Remove the ability to upload multiple files at using the same file upload field. This field is not yet released. [#43555]
 
 ## [0.54.0] - 2025-05-19
 ### Added
@@ -1146,7 +1142,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[0.56.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v0.55.0...v0.56.0-alpha
+[0.56.0]: https://github.com/automattic/jetpack-forms/compare/v0.55.0...v0.56.0
 [0.55.0]: https://github.com/automattic/jetpack-forms/compare/v0.54.0...v0.55.0
 [0.54.0]: https://github.com/automattic/jetpack-forms/compare/v0.53.0...v0.54.0
 [0.53.0]: https://github.com/automattic/jetpack-forms/compare/v0.52.0...v0.53.0
