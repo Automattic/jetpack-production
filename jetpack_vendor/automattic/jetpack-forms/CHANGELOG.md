@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add mobile friendly styles and screenshot for Forms migration page
+- Forms: add context to About tab translation
 - Forms: Change action buttons placement on mobile
 - Forms: clarify Trash filtere as noun, not verb
 - Forms: Create a new page instead of post when creating a new form from dashboard
