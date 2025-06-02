@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fixed products dataviews settings icon visibility on re-render.
+
 ## [5.14.5] - 2025-05-26
 ### Changed
 - Update package dependencies. [#43578]
