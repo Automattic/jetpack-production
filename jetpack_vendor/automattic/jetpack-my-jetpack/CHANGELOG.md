@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fixed products dataviews settings icon visibility on re-render.
+- Styling: prevent styling leaking outside of the onboarding screen
 
 ## [5.14.5] - 2025-05-26
 ### Changed
