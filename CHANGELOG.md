@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Media Library: Prevent PHP warnings related to unexpected array offsets and undefined array keys in some cases.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Shortcodes: Prevent malformed gist URLs.
 - Update package dependencies.
 
 ## 14.7-beta - 2025-06-02
