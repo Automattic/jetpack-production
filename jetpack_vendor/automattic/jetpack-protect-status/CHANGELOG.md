@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Added functionalty to correctly display database threats in the Protect UI.
+
 ## [0.5.11] - 2025-05-05
 ### Changed
 - Update dependencies.
@@ -120,6 +127,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated package dependencies. [#37894]
 
+[0.6.0-alpha]: https://github.com/Automattic/jetpack-protect-status/compare/v0.5.11...v0.6.0-alpha
 [0.5.11]: https://github.com/Automattic/jetpack-protect-status/compare/v0.5.10...v0.5.11
 [0.5.10]: https://github.com/Automattic/jetpack-protect-status/compare/v0.5.9...v0.5.10
 [0.5.9]: https://github.com/Automattic/jetpack-protect-status/compare/v0.5.8...v0.5.9
