@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: render clickable email at inbox
 
+### Improved compatibility
+- Search & Classic Themes: no longer add a Jetpack Search widget to the best guess on the main sidebar, instead only replaces the Core Search Widget.
+
 ### Bug fixes
 - Jetpack Media Library: Prevent PHP warnings related to unexpected array offsets and undefined array keys in some cases.
 - Slideshow block: reduce layout shifts during page load.
