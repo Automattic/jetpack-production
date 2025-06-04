@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: render clickable email at inbox
+
 ### Bug fixes
 - Jetpack Media Library: Prevent PHP warnings related to unexpected array offsets and undefined array keys in some cases.
 - Slideshow block: reduce layout shifts during page load.

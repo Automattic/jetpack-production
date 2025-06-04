@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: remove is_admin fencing for menu registration. Move Forms down on submenu order.
+- Forms: render clickable email at inbox
 - Forms: show - when no files were uploaded to field
 - Update package dependencies.
 
