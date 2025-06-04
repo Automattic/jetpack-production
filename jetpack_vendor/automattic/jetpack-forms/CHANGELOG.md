@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Migrate form field blocks to use new inner label, input, option, and options blocks
+
 ## [1.0.0] - 2025-06-03
 ### Added
 - Forms: Add events for integrations toggling and card expansion. [#43716]
@@ -1149,6 +1156,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[1.1.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v1.0.0...v1.1.0-alpha
 [1.0.0]: https://github.com/automattic/jetpack-forms/compare/v0.56.0...v1.0.0
 [0.56.0]: https://github.com/automattic/jetpack-forms/compare/v0.55.0...v0.56.0
 [0.55.0]: https://github.com/automattic/jetpack-forms/compare/v0.54.0...v0.55.0

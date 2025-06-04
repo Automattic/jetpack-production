@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Media Library: Prevent PHP warnings related to unexpected array offsets and undefined array keys in some cases.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add label, input, option, and options blocks for improving form fields
 - Update package dependencies.
 
 ## 14.7 - 2025-06-03
