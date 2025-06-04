@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: remove is_admin fencing for menu registration. Move Forms down on submenu order.
+- Update package dependencies.
 
 ## [1.0.0] - 2025-06-03
 ### Added
