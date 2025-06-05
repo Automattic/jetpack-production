@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add label, input, option, and options blocks for improving form fields
+- Clear out to-test.md in preparation for Jetpack 14.8 release cycle.
 - Connection: error handling for protected owner on WPcom.
 - Update package dependencies.
 
