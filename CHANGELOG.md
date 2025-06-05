@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Add label, input, option, and options blocks for improving form fields
 - Clear out to-test.md in preparation for Jetpack 14.8 release cycle.
 - Connection: error handling for protected owner on WPcom.
+- Forms: update redirect URL when Creative Mail installation fails
 - Update package dependencies.
 
 ## 14.7 - 2025-06-03
