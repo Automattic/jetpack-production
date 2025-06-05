@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Slideshow block: reduce layout shifts during page load.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add label, input, option, and options blocks for improving form fields
 - Connection: error handling for protected owner on WPcom.
 - Update package dependencies.
 
