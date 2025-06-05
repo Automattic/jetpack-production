@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: error handling for protected owner on WPcom.
 
 ### Changed
+- Connection: Display connection info on WoA sites
 - Update package dependencies.
 
 ## [5.15.0] - 2025-06-02

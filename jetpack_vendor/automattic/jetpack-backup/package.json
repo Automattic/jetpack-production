@@ -30,7 +30,7 @@
 		"@automattic/jetpack-analytics": "^1.0.0",
 		"@automattic/jetpack-api": "^1.0.0",
 		"@automattic/jetpack-components": "^1.1.0",
-		"@automattic/jetpack-connection": "^1.1.0",
+		"@automattic/jetpack-connection": "^1.2.0-alpha",
 		"@automattic/jetpack-shared-extension-utils": "^1.0.1-alpha",
 		"@automattic/number-formatters": "^1.0.4",
 		"@tanstack/react-query": "5.75.1",
