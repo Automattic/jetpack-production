@@ -2,27 +2,33 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.8-a.0 - unreleased
+## 14.8-a.2 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Forms: add "undo" to all action snackbars at Inbox
-- Forms: render clickable email at inbox
-
-### Improved compatibility
-- Search & Classic Themes: no longer add a Jetpack Search widget to the best guess on the main sidebar, instead only replaces the Core Search Widget.
-
-### Bug fixes
-- Jetpack Media Library: Prevent PHP warnings related to unexpected array offsets and undefined array keys in some cases.
-- Slideshow block: reduce layout shifts during page load.
+- Sharing: improve the performance of Open Graph Meta Image tags.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add label, input, option, and options blocks for improving form fields
-- Clear out to-test.md in preparation for Jetpack 14.8 release cycle.
-- Connection: error handling for protected owner on WPcom.
 - Forms: update redirect URL when Creative Mail installation fails
-- Update package dependencies.
+
+## 14.8-a.1 - 2025-06-05
+### Enhancements
+- Forms: Add "undo" to all post-action alerts in Inbox. [#43787]
+- Forms: Make emails clickable in Inbox. [#43771]
+
+### Improved compatibility
+- Search: Replace the Core Search widget instead of adding a new widget to the main sidebar in classic themes. [#43450]
+
+### Bug fixes
+- Jetpack Media Library: Prevent PHP warnings related to unexpected array offsets and undefined array keys in some cases. [#43641]
+- Slideshow block: Reduce layout shifts during page load. [#43689]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add label, input, option, and options blocks for improving form fields. [#43765]
+- Clear out to-test.md in preparation for Jetpack 14.8 release cycle. [#43786]
+- Connection: Improve error handling for protected owner on WordPress.com. [#43593]
+- Update package dependencies. [#43718] [#43734] [#43766]
 
 ## 14.7 - 2025-06-03
 ### Enhancements

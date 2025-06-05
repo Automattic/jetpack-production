@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'AhoCorasick\\MultiStringMatcher' => $vendorDir . '/wikimedia/aho-corasick/src/MultiStringMatcher.php',
     'AhoCorasick\\MultiStringReplacer' => $vendorDir . '/wikimedia/aho-corasick/src/MultiStringReplacer.php',
+    'Automattic\\Block_Delimiter' => $baseDir . '/jetpack_vendor/automattic/block-delimiter/src/class-block-delimiter.php',
     'Automattic\\Jetpack\\A8c_Mc_Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php',
     'Automattic\\Jetpack\\Account_Protection\\Account_Protection' => $baseDir . '/jetpack_vendor/automattic/jetpack-account-protection/src/class-account-protection.php',
     'Automattic\\Jetpack\\Account_Protection\\Config' => $baseDir . '/jetpack_vendor/automattic/jetpack-account-protection/src/class-config.php',
