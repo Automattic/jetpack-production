@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: add "undo" to all action snackbars at Inbox
+
 ### Changed
 - Forms: remove is_admin fencing for menu registration. Move Forms down on submenu order.
 - Forms: render clickable email at inbox

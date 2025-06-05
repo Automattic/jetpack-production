@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: add "undo" to all action snackbars at Inbox
 - Forms: render clickable email at inbox
 
 ### Improved compatibility
