@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.16.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.16.0] - 2025-06-05
 ### Added
-- Connection: error handling for protected owner on WPcom.
+- Connection: error handling for protected owner on WPcom. [#43593]
 
 ### Changed
-- Connection: Display connection info on WoA sites
-- Update package dependencies.
+- Connection: Display connection info on WoA sites. [#43777]
+- Update package dependencies. [#43718] [#43734] [#43766]
 
 ## [5.15.0] - 2025-06-02
 ### Added
@@ -2181,7 +2178,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.16.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.15.0...5.16.0-alpha
+[5.16.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.15.0...5.16.0
 [5.15.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.14.5...5.15.0
 [5.14.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.14.4...5.14.5
 [5.14.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.14.3...5.14.4
