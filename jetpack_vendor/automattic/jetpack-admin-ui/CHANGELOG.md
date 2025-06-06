@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.10-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Fix the Jetpack submenu order for WPCOM sites that use NavUnification
+
 ## [0.5.9] - 2025-05-05
 ### Fixed
 - Remove the Jetpack submenu only if My-Jetpack is present. [#43282]
@@ -204,6 +211,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing menu visibility issues.
 
+[0.5.10-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.9...0.5.10-alpha
 [0.5.9]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.8...0.5.9
 [0.5.8]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.7...0.5.8
 [0.5.7]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.6...0.5.7
