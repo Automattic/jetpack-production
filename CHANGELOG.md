@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: improve the performance of Open Graph Meta Image tags.
 
 ### Bug fixes
+- Complete: correctly display Critical CSS status for customers with the Complete plan
 - Connection: Connect banner in blocks redirects you to proper place for Multisites
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
