@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: update inbox fallback and redirect URLs
 
+### Fixed
+- Forms: migration page heading needs line-height for when it wraps
+
 ## [1.1.0] - 2025-06-05
 ### Added
 - Add "undo" to all action snackbars in Inbox. [#43787]
