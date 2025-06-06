@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Sharing: improve the performance of Open Graph Meta Image tags.
 
+### Bug fixes
+- Connection: Connect banner in blocks redirects you to proper place for Multisites
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Forms: update redirect URL when Creative Mail installation fails
 
