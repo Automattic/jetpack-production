@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.13.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.13.1] - 2025-06-06
 ### Fixed
-- Resolve PHPUnit "has more arguments..." warnings
+- Tests: Resolve warnings in PHPUnit 12.2. [#43815]
 
 ## [6.13.0] - 2025-06-05
 ### Changed
@@ -1463,7 +1460,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.13.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.13.0...v6.13.1-alpha
+[6.13.1]: https://github.com/Automattic/jetpack-connection/compare/v6.13.0...v6.13.1
 [6.13.0]: https://github.com/Automattic/jetpack-connection/compare/v6.12.0...v6.13.0
 [6.12.0]: https://github.com/Automattic/jetpack-connection/compare/v6.11.9...v6.12.0
 [6.11.9]: https://github.com/Automattic/jetpack-connection/compare/v6.11.8...v6.11.9
