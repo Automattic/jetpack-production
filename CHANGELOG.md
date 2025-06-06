@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update redirect URL when Creative Mail installation fails
 - Newsletters:  Use total_subscribers field while displaying all subscribers.
 - PHPUnit: resolve tests warnings
+- Subscriptions: adjust display of the number of subscribers in the Newsletter panels of the block editor for better usability.
 
 ## 14.8-a.1 - 2025-06-05
 ### Enhancements
