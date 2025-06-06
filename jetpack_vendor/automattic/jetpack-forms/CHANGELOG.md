@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: add remove button for dropdown options and prevent dropdowns with no options
+- Forms: show unread count on Jetpack > Forms submenu
 
 ### Changed
 - Forms: update inbox fallback and redirect URLs
