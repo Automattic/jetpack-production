@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update inbox fallback and redirect URLs
 
 ### Fixed
+- Forms: Fix routing on new integrations tab.
 - Forms: migration page heading needs line-height for when it wraps
 
 ## [1.1.0] - 2025-06-05
