@@ -12,7 +12,6 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Complete: correctly display Critical CSS status for customers with the Complete plan
 - Connection: Connect banner in blocks redirects you to proper place for Multisites
-- Newsletters: avoid errors in the post editor when editors are not connected to WordPress.com.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Forms: update redirect URL when Creative Mail installation fails
