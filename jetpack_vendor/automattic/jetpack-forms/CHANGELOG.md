@@ -16,7 +16,11 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: update inbox fallback and redirect URLs
 
+### Removed
+- Forms: Remove unused code.
+
 ### Fixed
+- fix import
 - Forms: fixes an error when we show return post data that is badly formated
 - Forms: Fix routing on new integrations tab.
 - Forms: migration page heading needs line-height for when it wraps
