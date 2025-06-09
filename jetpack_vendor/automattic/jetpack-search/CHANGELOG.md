@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Addresses body_class filter fatal in older versions of the Blaskan theme.
 - Resolve PHPUnit "has more arguments..." warnings
+- Tests: Ensure method param count matches PHPUnit data providers.
 
 ## [0.51.0] - 2025-06-05
 ### Changed
