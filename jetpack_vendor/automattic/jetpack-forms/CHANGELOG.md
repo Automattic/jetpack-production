@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Consolidated TypeScript types.
 
 ### Fixed
+- Catch PHP warning when parsed block data is malformed.
 - Forms: Fix plugin connection badges.
 
 ## [1.2.0] - 2025-06-09
