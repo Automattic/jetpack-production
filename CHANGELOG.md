@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletters:  Use total_subscribers field while displaying all subscribers.
 - PHPUnit: resolve tests warnings
 - Subscriptions: adjust display of the number of subscribers in the Newsletter panels of the block editor for better usability.
+- Update package dependencies.
 
 ## 14.8-a.1 - 2025-06-05
 ### Enhancements
