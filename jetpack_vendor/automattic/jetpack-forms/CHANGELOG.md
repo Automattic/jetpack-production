@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: add section about developre documentation to FAQ
+- Forms: move get_export_filename method from Admin to Util
 - Forms: sentence case field names
 - Forms: sentence case UI instead of Title Case
 - Forms: update feedback pattern screenshot not to contain plus
