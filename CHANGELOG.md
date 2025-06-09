@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Complete: correctly display Critical CSS status for customers with the Complete plan
 - Connection: Connect banner in blocks redirects you to proper place for Multisites
+- Forms: Fix dropdown field background color on Windows.
 - Forms: fixes a bug where form data might be badly formated
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - fix import
+- Forms: Fix dropdown field background color on Windows.
 - Forms: fixes an error when we show return post data that is badly formated
 - Forms: Fix routing on new integrations tab.
 - Forms: migration page heading needs line-height for when it wraps
