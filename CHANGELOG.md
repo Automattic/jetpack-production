@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Make it possible to preview file by just visitng the url.
+
 ## 14.8-a.3 - 2025-06-09
 ### Enhancements
 - Forms: Release new file uploads field. [#43846]
