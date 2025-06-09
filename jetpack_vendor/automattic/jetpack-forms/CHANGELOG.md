@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - fix import
 - Forms: Fix dropdown field background color on Windows.
 - Forms: fixes an error when we show return post data that is badly formated
+- Forms: Fix plugin connection badges.
 - Forms: Fix routing on new integrations tab.
 - Forms: migration page heading needs line-height for when it wraps
 - Forms: remove all admin notices from the jetpack forms admin
