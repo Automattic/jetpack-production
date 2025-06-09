@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: sentence case field names
 - Forms: sentence case UI instead of Title Case
+- Forms: update feedback pattern screenshot not to contain plus
 - Forms: update inbox fallback and redirect URLs
 
 ### Removed
