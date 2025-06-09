@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: show unread count on Jetpack > Forms submenu
 
 ### Changed
+- Forms: sentence case UI instead of Title Case
 - Forms: update inbox fallback and redirect URLs
 
 ### Removed
