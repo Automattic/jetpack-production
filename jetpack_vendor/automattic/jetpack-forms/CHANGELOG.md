@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fixes an error when we show return post data that is badly formated
 - Forms: Fix routing on new integrations tab.
 - Forms: migration page heading needs line-height for when it wraps
+- Forms: remove all admin notices from the jetpack forms admin
 
 ## [1.1.0] - 2025-06-05
 ### Added
