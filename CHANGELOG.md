@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: improve the performance of Open Graph Meta Image tags.
 
 ### Bug fixes
+- Addresses body_class filter fatal in older versions of the Blaskan theme.
 - Complete: correctly display Critical CSS status for customers with the Complete plan
 - Connection: Connect banner in blocks redirects you to proper place for Multisites
 - Forms: Fix dropdown field background color on Windows.
