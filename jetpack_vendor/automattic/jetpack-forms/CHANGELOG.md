@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: add remove button for dropdown options and prevent dropdowns with no options
+- Forms: new file uploads field released
 - Forms: show unread count on Jetpack > Forms submenu
 
 ### Changed

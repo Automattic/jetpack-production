@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: new file uploads field released
 - Sharing: improve the performance of Open Graph Meta Image tags.
 
 ### Bug fixes
