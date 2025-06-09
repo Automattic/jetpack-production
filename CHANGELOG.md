@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fixes a bug where form data might be badly formated
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Comments: Prevent PHP error on malformed submissions.
 - Forms: update redirect URL when Creative Mail installation fails
 - Newsletters:  Use total_subscribers field while displaying all subscribers.
 - PHPUnit: resolve tests warnings
