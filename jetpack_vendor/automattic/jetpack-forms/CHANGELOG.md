@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: show unread count on Jetpack > Forms submenu
 
 ### Changed
+- Forms: add section about developre documentation to FAQ
 - Forms: sentence case field names
 - Forms: sentence case UI instead of Title Case
 - Forms: update feedback pattern screenshot not to contain plus
