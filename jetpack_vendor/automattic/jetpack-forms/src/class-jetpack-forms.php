@@ -14,7 +14,7 @@ use Automattic\Jetpack\Forms\Dashboard\Dashboard;
  */
 class Jetpack_Forms {
 
-	const PACKAGE_VERSION = '1.2.0-alpha';
+	const PACKAGE_VERSION = '1.2.1-alpha';
 
 	/**
 	 * Load the contact form module.

@@ -5,34 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.2.0-alpha] - unreleased
+## [1.2.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Forms: Fix plugin connection badges.
+
+## [1.2.0] - 2025-06-09
 ### Added
-- Forms: add remove button for dropdown options and prevent dropdowns with no options
-- Forms: new file uploads field released
-- Forms: show unread count on Jetpack > Forms submenu
+- Add "Remove" button for dropdown options and prevent dropdowns with no options. [#43616]
+- New file uploads field released. [#43846]
+- Show unread count on Jetpack > Forms submenu. [#43758]
 
 ### Changed
-- Forms: add section about developre documentation to FAQ
-- Forms: move get_export_filename method from Admin to Util
-- Forms: sentence case field names
-- Forms: sentence case UI instead of Title Case
-- Forms: update feedback pattern screenshot not to contain plus
-- Forms: update inbox fallback and redirect URLs
+- Add section about developer documentation to FAQ. [#43654]
+- Move `get_export_filename` method from Admin to Util. [#43823]
+- Use sentence case where appropriate in UI. [#43818] [#43847]
+- Update feedback pattern screenshot. [#43849]
+- Update inbox fallback and redirect URLs. [#43757]
 
 ### Removed
-- Forms: Remove unused code.
+- Remove unused code. [#43816] [#43838]
 
 ### Fixed
-- fix import
-- Forms: Fix dropdown field background color on Windows.
-- Forms: fixes an error when we show return post data that is badly formated
-- Forms: Fix plugin connection badges.
-- Forms: Fix routing on new integrations tab.
-- Forms: migration page heading needs line-height for when it wraps
-- Forms: remove all admin notices from the jetpack forms admin
+- Add line-height to migration page heading when it wraps. [#43827]
+- Fix dropdown field background color on Windows. [#43848]
+- Fix an error with poorly-formatted POST data. [#43835]
+- Fix routing on new integrations tab. [#43822]
+- Remove all admin notices from the Jetpack Forms admin. [#43776]
 
 ## [1.1.0] - 2025-06-05
 ### Added
@@ -1189,7 +1190,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[1.2.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v1.1.0...v1.2.0-alpha
+[1.2.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v1.2.0...v1.2.1-alpha
+[1.2.0]: https://github.com/automattic/jetpack-forms/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/automattic/jetpack-forms/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/automattic/jetpack-forms/compare/v0.56.0...v1.0.0
 [0.56.0]: https://github.com/automattic/jetpack-forms/compare/v0.55.0...v0.56.0
