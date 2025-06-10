@@ -47,7 +47,7 @@
 		"automattic/jetpack-search": "^0.52.0",
 		"automattic/jetpack-stats": "^0.16.2",
 		"automattic/jetpack-stats-admin": "^0.26.3",
-		"automattic/jetpack-status": "^5.1.4",
+		"automattic/jetpack-status": "^5.2.0-alpha",
 		"automattic/jetpack-subscribers-dashboard": "^0.1.16",
 		"automattic/jetpack-sync": "^4.14.1",
 		"automattic/jetpack-videopress": "^0.29.4",
