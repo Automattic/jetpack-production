@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added a preview link to the response view for files
+- Added TS type checking for the package.
 
 ### Changed
 - Forms: Consolidated TypeScript types.
