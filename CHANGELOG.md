@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Make it possible to preview file by just visitng the url.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Dashboard: Added connection infor on WoA sites.
 - Frontend vs. email detection: switch to method from Jetpack Status package.
 - Jetpack Admin dashboard: Updating host function checks.
 
