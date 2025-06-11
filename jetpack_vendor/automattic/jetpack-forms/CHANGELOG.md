@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Added TS type checking for the package.
 
 ### Changed
+- Forms: Add inline docs for Salesforce.
 - Forms: Consolidated TypeScript types.
 - Frontend vs. email detection: switch to method from Jetpack Status package.
 
