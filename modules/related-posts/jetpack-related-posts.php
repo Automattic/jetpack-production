@@ -7,7 +7,6 @@
 
 use Automattic\Jetpack\Assets;
 use Automattic\Jetpack\Blocks;
-use Automattic\Jetpack\Status\Request;
 use Automattic\Jetpack\Sync\Settings;
 
 /**
@@ -455,7 +454,7 @@ EOT;
 	 * @return string
 	 */
 	public function render_block( $attributes, $content, $block = null ) {
-		if ( ! Request::is_frontend() ) {
+		if ( ! jetpack_is_frontend() ) {
 			return $content;
 		}
 

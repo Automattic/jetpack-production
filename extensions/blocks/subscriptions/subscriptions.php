@@ -12,7 +12,6 @@ use Automattic\Jetpack\Extensions\Premium_Content\Subscription_Service\Abstract_
 use Automattic\Jetpack\Extensions\Premium_Content\Subscription_Service\Jetpack_Token_Subscription_Service;
 use Automattic\Jetpack\Modules;
 use Automattic\Jetpack\Status\Host;
-use Automattic\Jetpack\Status\Request;
 use Jetpack_Gutenberg;
 use Jetpack_Memberships;
 use Jetpack_Subscriptions_Widget;
@@ -174,7 +173,7 @@ function register_block() {
 	);
 
 	// If called via REST API, we need to register later in the lifecycle
-	if ( ( new Host() )->is_wpcom_platform() && ! Request::is_frontend() ) {
+	if ( ( new Host() )->is_wpcom_platform() && ! jetpack_is_frontend() ) {
 		add_action(
 			'restapi_theme_init',
 			function () {
@@ -533,7 +532,7 @@ function get_element_styles_from_attributes( $attributes ) {
 		$email_field_styles   .= $style;
 	}
 
-	if ( ! Request::is_frontend() ) {
+	if ( ! jetpack_is_frontend() ) {
 		$background_color_style = get_attribute_color( 'buttonBackgroundColor', $attributes, '#113AF5' /* default lettre theme color */ );
 		$text_color_style       = get_attribute_color( 'textColor', $attributes, '#FFFFFF' );
 		$submit_button_styles  .= sprintf( ' background-color: %s; color: %s;', $background_color_style, $text_color_style );
@@ -1152,7 +1151,7 @@ function get_paywall_blocks() {
 		return $custom_paywall;
 	}
 
-	if ( ! Request::is_frontend() ) { // emails
+	if ( ! jetpack_is_frontend() ) { // emails
 		return get_paywall_simple();
 	}
 

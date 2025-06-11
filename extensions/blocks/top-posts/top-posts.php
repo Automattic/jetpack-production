@@ -14,7 +14,6 @@ use Automattic\Jetpack\Connection\Manager as Connection_Manager;
 use Automattic\Jetpack\Modules;
 use Automattic\Jetpack\Status;
 use Automattic\Jetpack\Status\Host;
-use Automattic\Jetpack\Status\Request;
 use Jetpack_Gutenberg;
 use Jetpack_Top_Posts_Helper;
 
@@ -60,7 +59,7 @@ function load_assets( $attributes ) {
 	}
 
 	// Do not render in contexts outside the front-end (eg. emails, API).
-	if ( ! Request::is_frontend() ) {
+	if ( ! jetpack_is_frontend() ) {
 		return;
 	}
 

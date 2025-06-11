@@ -10,7 +10,6 @@
 namespace Automattic\Jetpack\Extensions\Donations;
 
 use Automattic\Jetpack\Blocks;
-use Automattic\Jetpack\Status\Request;
 use Jetpack_Gutenberg;
 use WP_Post;
 
@@ -54,7 +53,7 @@ add_action( 'init', __NAMESPACE__ . '\register_block' );
  */
 function render_block( $attr, $content ) {
 	// Keep content as-is if rendered in other contexts than frontend (i.e. feed, emails, API, etc.).
-	if ( ! Request::is_frontend() ) {
+	if ( ! jetpack_is_frontend() ) {
 		$parsed = parse_blocks( $content );
 		if ( ! empty( $parsed[0] ) ) {
 			// Inject the link of the current post from the server side as the fallback link to make sure the donations block

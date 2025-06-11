@@ -14,7 +14,6 @@
 namespace Automattic\Jetpack\Extensions\Pinterest;
 
 use Automattic\Jetpack\Blocks;
-use Automattic\Jetpack\Status\Request;
 use WP_Error;
 
 const URL_PATTERN = '#^https?://(?:www\.)?(?:[a-z]{2}\.)?pinterest\.[a-z.]+/pin/(?P<pin_id>[^/]+)/?#i'; // Taken from AMP plugin, originally from Jetpack.
@@ -221,7 +220,7 @@ function render_amp_pin( $attr ) {
  * @return string
  */
 function load_assets( $attr, $content ) {
-	if ( ! Request::is_frontend() ) {
+	if ( ! jetpack_is_frontend() ) {
 		return $content;
 	}
 	if ( Blocks::is_amp_request() ) {
