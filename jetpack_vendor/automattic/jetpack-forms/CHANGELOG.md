@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Consolidated TypeScript types.
+- Frontend vs. email detection: switch to method from Jetpack Status package.
 
 ### Fixed
 - Catch PHP warning when parsed block data is malformed.
