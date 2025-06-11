@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Catch PHP warning when parsed block data is malformed.
 - Forms: Fix plugin connection badges.
 - Forms: Fix Saleforce badge.
+- Forms: Fix Salesforce form fields.
 - Forms: fix the animated styles for the forms
 - Prevent PHP warning when rendering blocks.
 
