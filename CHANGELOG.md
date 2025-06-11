@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Admin dashboard: Updating host function checks.
 - Prevent PHP warning in Gallery block..
 - Prevent PHP warning when block content is malformed.
+- Update package dependencies.
 
 ## 14.8-a.3 - 2025-06-09
 ### Enhancements
