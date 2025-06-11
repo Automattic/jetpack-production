@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Catch PHP warning when parsed block data is malformed.
 - Forms: Fix plugin connection badges.
 - Forms: Fix Saleforce badge.
+- Prevent PHP warning when rendering blocks.
 
 ## [1.2.0] - 2025-06-09
 ### Added

@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Added connection infor on WoA sites.
 - Frontend vs. email detection: switch to method from Jetpack Status package.
 - Jetpack Admin dashboard: Updating host function checks.
+- Prevent PHP warning in Gallery block..
 - Prevent PHP warning when block content is malformed.
 
 ## 14.8-a.3 - 2025-06-09

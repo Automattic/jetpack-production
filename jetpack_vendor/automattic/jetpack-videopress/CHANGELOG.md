@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Prevent PHP warning when rendering blocks.
+
 ## [0.29.5] - 2025-06-10
 ### Changed
 - Update dependencies. [#43878]
