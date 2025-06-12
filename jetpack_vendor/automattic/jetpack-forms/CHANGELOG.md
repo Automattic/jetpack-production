@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a preview link to the response view for files
 - Added TS type checking for the package.
 - Forms: Add button to create Salesforce form.
+- Forms: Show central integrations dashboard.
 
 ### Changed
 - Forms: Add inline docs for Salesforce.
