@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Catch PHP warning when parsed block data is malformed.
+- Forms: ensure that the select control uses the correct padding for top, left, bottom, right
 - Forms: Fix plugin connection badges.
 - Forms: Fix Saleforce badge.
 - Forms: Fix Salesforce form fields.
