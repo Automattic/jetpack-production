@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Added connection infor on WoA sites.
 - Frontend vs. email detection: switch to method from Jetpack Status package.
 - Jetpack Admin dashboard: Updating host function checks.
+- Post editor: Open WP.com support articles in Help Center
 - Prevent PHP warning in Gallery block..
 - Prevent PHP warning when block content is malformed.
 - Update package dependencies.
