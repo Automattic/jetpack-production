@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Make it possible to preview file by just visitng the url.
 
+### Bug fixes
+- Recipe shortcode: Prevent errors in logs due to checking for theme color properties that may not exist.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Dashboard: Added connection infor on WoA sites.
 - Frontend vs. email detection: switch to method from Jetpack Status package.
