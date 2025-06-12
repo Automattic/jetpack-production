@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Assistant: Add support for file upload field on Forms extension
 - Forms: don't translate Forms product name in the sidebar
 - Forms: Show central integrations dashboard.
 - Forms: use interactivity api for form validation
