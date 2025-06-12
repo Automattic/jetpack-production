@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add inline docs for Salesforce.
 - Forms: Consolidated TypeScript types.
 - Forms: don't translate Forms product name in the sidebar
+- Forms: Use interactivity API for form validation
 - Frontend vs. email detection: switch to method from Jetpack Status package.
 - Update package dependencies.
 

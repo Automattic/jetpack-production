@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: don't translate Forms product name in the sidebar
+- Forms: use interactivity api for form validation
 - Make it possible to preview file by just visitng the url.
 
 ### Bug fixes
