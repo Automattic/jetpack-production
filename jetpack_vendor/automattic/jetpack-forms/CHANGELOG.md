@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Add inline docs for Salesforce.
+- Forms: Change form creation method
 - Forms: Consolidated TypeScript types.
 - Forms: don't translate Forms product name in the sidebar
 - Forms: Use interactivity API for form validation
