@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Settings: Open support links in Help Center
 - Update package dependencies.
 
 ## [0.13.5] - 2025-06-05
