@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Catch PHP warning when parsed block data is malformed.
 - Forms: Adjust About page layout to fit any text on feature cards
 - Forms: ensure that the select control uses the correct padding for top, left, bottom, right
+- Forms: fixes a PHP warning
 - Forms: fix interactivity bug where the field is not registed yet
 - Forms: Fix plugin connection badges.
 - Forms: Fix Saleforce badge.
