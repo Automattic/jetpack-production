@@ -33,7 +33,6 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix Saleforce badge.
 - Forms: Fix Salesforce form fields.
 - Forms: fix styling of the select input in animated styles.
-- Forms: fix the animated styles for the forms
 - Prevent PHP warning when rendering blocks.
 
 ## [1.2.0] - 2025-06-09
