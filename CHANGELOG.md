@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Make it possible to preview file by just visitng the url.
 
 ### Bug fixes
+- Endpoints: Prevents warnings in logs when attempting to add external media from some sources
 - Recipe shortcode: Prevent errors in logs due to checking for theme color properties that may not exist.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
