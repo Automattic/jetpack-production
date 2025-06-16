@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.8-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 14.8-a.5 - 2025-06-16
 ### Enhancements
 - AI Assistant: Add support for file upload field on Forms extension. [#43916]
