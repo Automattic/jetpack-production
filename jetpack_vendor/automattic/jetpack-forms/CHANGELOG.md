@@ -5,41 +5,39 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.3.0] - 2025-06-16
 ### Added
-- Added a preview link to the response view for files
-- Added TS type checking for the package.
-- Forms: Add Akismet refresh status button.
-- Forms: Add button to create Salesforce form.
-- Forms: adding variables to be translated
-- Forms: Show central integrations dashboard.
+- Add a preview link to the response view for files. [#43730]
+- Add TypeScript type checking to the package. [#43867]
+- Add Akismet refresh status button. [#43937]
+- Add button to create Salesforce form. [#43911]
+- Add variables to be translated. [#43957]
+- Show central integrations dashboard. [#43936]
 
 ### Changed
-- Forms: Add inline docs for Salesforce.
-- Forms: Change form creation method
-- Forms: Consolidated TypeScript types.
-- Forms: don't translate Forms product name in the sidebar
-- Forms: Use interactivity API for form validation
-- Frontend vs. email detection: switch to method from Jetpack Status package.
-- Update package dependencies.
+- Add inline docs for Salesforce. [#43909]
+- Change form creation method. [#43944]
+- Consolidate TypeScript types. [#43733]
+- Move components that are shared across blocks from the contact-form block folder to the shared folder. [#43895]
+- Stop translating Forms product name in the sidebar. [#43925]
+- Switch to `Request::is_frontend()` method from Jetpack Status package. [#43873]
+- Update package dependencies. [#43892] [#43914] [#43951]
+- Use interactivity API for form validation. [#43893]
 
 ### Removed
-- Forms: Remove old duplicated components, and move components that are shared across blocks from the contact-form block folder to the shared folder.
+- Remove old duplicated components. [#43895]
 
 ### Fixed
-- Catch PHP warning when parsed block data is malformed.
-- Forms: Adjust About page layout to fit any text on feature cards
-- Forms: ensure that the select control uses the correct padding for top, left, bottom, right
-- Forms: fixes a PHP warning
-- Forms: fix interactivity bug where the field is not registed yet
-- Forms: Fix plugin connection badges.
-- Forms: Fix Saleforce badge.
-- Forms: Fix Salesforce form fields.
-- Forms: fix styling of the select input in animated styles.
-- Prevent PHP warning when rendering blocks.
+- Adjust "About" page layout to fit any text on feature cards. [#43943]
+- Catch PHP warning when parsed block data is malformed. [#43865]
+- Ensure that the select control uses the correct padding. [#43919]
+- Fix a PHP warning. [#43960]
+- Fix interactivity bug where the field is not registed yet. [#43959]
+- Fix plugin connection badges. [#43856]
+- Fix Saleforce badge. [#43862]
+- Fix Salesforce form fields. [#43915]
+- Fix styling of the select input in animated styles. [#43938]
+- Prevent PHP warning when rendering blocks. [#43890]
 
 ## [1.2.0] - 2025-06-09
 ### Added
@@ -1219,7 +1217,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[1.3.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v1.2.0...v1.3.0-alpha
+[1.3.0]: https://github.com/automattic/jetpack-forms/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/automattic/jetpack-forms/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/automattic/jetpack-forms/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/automattic/jetpack-forms/compare/v0.56.0...v1.0.0
