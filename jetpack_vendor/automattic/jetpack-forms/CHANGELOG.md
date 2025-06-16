@@ -25,6 +25,9 @@ This is an alpha version! The changes listed here are not final.
 - Frontend vs. email detection: switch to method from Jetpack Status package.
 - Update package dependencies.
 
+### Removed
+- Forms: Remove old duplicated components, and move components that are shared across blocks from the contact-form block folder to the shared folder.
+
 ### Fixed
 - Catch PHP warning when parsed block data is malformed.
 - Forms: Adjust About page layout to fit any text on feature cards
