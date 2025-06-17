@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Use compact number notation in the Protect card
+
 ## [5.16.3] - 2025-06-16
 ### Changed
 - Update package dependencies. [#43892] [#43951]
