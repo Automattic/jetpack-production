@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Update type handling for integrations.
 
+### Fixed
+- Form: fixes the overlay z-index for date picker
+
 ## [1.3.0] - 2025-06-16
 ### Added
 - Add a preview link to the response view for files. [#43730]
