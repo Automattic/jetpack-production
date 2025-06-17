@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Tiled Gallery: Ensure accessibility properties are added only when needed, as well as preventing block validation errors.
 
+### Bug fixes
+- Update Jetpack_Newsletter_Dashboard_Widget to not be added with an anonymous function
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - WordAds: Support Gutenberg Ad block for Aditude
 
