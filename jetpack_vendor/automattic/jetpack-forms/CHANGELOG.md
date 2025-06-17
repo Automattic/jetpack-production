@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Form: fixes the overlay z-index for date picker
 - Forms: elevate outline style notched labels with z-index so they are more easily selectable
 - Forms: labels in animated style support html
+- Forms: Update integration card to TypeScript.
 
 ## [1.3.0] - 2025-06-16
 ### Added
