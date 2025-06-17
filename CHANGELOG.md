@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Tiled Gallery: Ensure accessibility properties are added only when needed, as well as preventing block validation errors.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- WordAds: Support Gutenberg Ad block for Aditude
+
 ## 14.8-a.5 - 2025-06-16
 ### Enhancements
 - AI Assistant: Add support for file upload field on Forms extension. [#43916]
