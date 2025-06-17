@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Tiled Gallery: Ensure accessibility properties are added only when needed, as well as preventing block validation errors.
+
 ## 14.8-a.5 - 2025-06-16
 ### Enhancements
 - AI Assistant: Add support for file upload field on Forms extension. [#43916]
