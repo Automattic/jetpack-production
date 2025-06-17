@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Form: fixes the overlay z-index for date picker
+- Forms: labels in animated style support html
 
 ## [1.3.0] - 2025-06-16
 ### Added
