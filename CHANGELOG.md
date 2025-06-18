@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Tiled Gallery: Ensure accessibility properties are added only when needed, as well as preventing block validation errors.
 
 ### Bug fixes
+- Security: Fixed issue where array-type email parameters could cause errors in carousel comment submissions
 - Update Jetpack_Newsletter_Dashboard_Widget to not be added with an anonymous function
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
