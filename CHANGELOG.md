@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Tiled Gallery: Ensure accessibility properties are added only when needed, as well as preventing block validation errors.
 
 ### Bug fixes
+- Fixed issue where non-string currentday parameters could cause errors in infinite scroll AJAX requests
 - Security: Fixed issue where array-type email parameters could cause errors in carousel comment submissions
 - Update Jetpack_Newsletter_Dashboard_Widget to not be added with an anonymous function
 
