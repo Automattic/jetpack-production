@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fixed issue where non-string currentday parameters could cause errors in infinite scroll AJAX requests
 - Security: Fixed issue where array-type email parameters could cause errors in carousel comment submissions
+- Security: Fixed issue where array-type url parameters could cause errors in carousel comment submissions
 - Update Jetpack_Newsletter_Dashboard_Widget to not be added with an anonymous function
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
