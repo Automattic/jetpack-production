@@ -1,38 +1,45 @@
-/**
- * External dependencies
- */
 import colorStudio from '@automattic/color-studio';
 import { JetpackIcon } from '@automattic/jetpack-components';
 import { Button } from '@wordpress/components';
 import { createInterpolateElement } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 import semver from 'semver';
-/**
- * Internal dependencies
- */
-import IntegrationCard from '../../blocks/contact-form/components/jetpack-integrations-modal/integration-card';
-/**
- * Types
- */
-import type { SingleIntegrationCardProps, IntegrationCardData } from '../../types';
+import IntegrationCard from './integration-card';
+import type { SingleIntegrationCardProps } from '../../../../types';
 
 const COLOR_JETPACK = colorStudio.colors[ 'Jetpack Green 40' ];
 
-const JetpackCRMDashboardCard = ( {
+type JetpackCRMCardProps = SingleIntegrationCardProps & {
+	jetpackCRM: boolean;
+	setAttributes: ( attrs: { jetpackCRM: boolean } ) => void;
+};
+
+const JetpackCRMCard = ( {
 	isExpanded,
 	onToggle,
+	jetpackCRM,
+	setAttributes,
 	data,
 	refreshStatus,
-}: SingleIntegrationCardProps ) => {
+}: JetpackCRMCardProps ) => {
 	const { settingsUrl = '', version = '', details = {} } = data || {};
 	const { hasExtension = false, canActivateExtension = false } = details;
 
 	const crmVersion = semver.coerce( version );
 	const isRecentVersion = crmVersion && semver.gte( crmVersion, '4.9.1' );
 
-	const cardData: IntegrationCardData = {
+	const connectedMessage = __( 'This form is connected to Jetpack CRM.', 'jetpack-forms' );
+	const disconnectedMessage = __(
+		'To connect this form to Jetpack CRM, enable the toggle above.',
+		'jetpack-forms'
+	);
+
+	const cardData = {
 		...data,
-		showHeaderToggle: false, // Always off for dashboard
+		showHeaderToggle: true,
+		headerToggleValue: jetpackCRM,
+		isHeaderToggleEnabled: true,
+		onHeaderToggleChange: ( value: boolean ) => setAttributes( { jetpackCRM: value } ),
 		isLoading: ! data || typeof data.isInstalled === 'undefined',
 		refreshStatus,
 		trackEventName: 'jetpack_forms_upsell_crm_click',
@@ -77,7 +84,7 @@ const JetpackCRMDashboardCard = ( {
 					<p className="integration-card__description">
 						{ createInterpolateElement(
 							__(
-								"You can integrate Jetpack CRM by enabling Jetpack CRM's <a>Jetpack Forms extension</a>.",
+								"You can integrate this contact form with Jetpack CRM by enabling Jetpack CRM's <a>Jetpack Forms extension</a>.",
 								'jetpack-forms'
 							),
 							{
@@ -118,7 +125,7 @@ const JetpackCRMDashboardCard = ( {
 		// All conditions met, show Jetpack CRM connected message
 		return (
 			<div>
-				<p>{ __( 'Jetpack CRM is connected.', 'jetpack-forms' ) }</p>
+				<p>{ jetpackCRM ? connectedMessage : disconnectedMessage }</p>
 				<Button variant="link" href={ settingsUrl } target="_blank" rel="noopener noreferrer">
 					{ __( 'Open Jetpack CRM settings', 'jetpack-forms' ) }
 				</Button>
@@ -140,4 +147,4 @@ const JetpackCRMDashboardCard = ( {
 	);
 };
 
-export default JetpackCRMDashboardCard;
+export default JetpackCRMCard;

@@ -1,33 +1,26 @@
-/**
- * External dependencies
- */
 import { getRedirectUrl } from '@automattic/jetpack-components';
-import { Button, ExternalLink, __experimentalHStack as HStack } from '@wordpress/components'; // eslint-disable-line @wordpress/no-unsafe-wp-apis
-import { createInterpolateElement, useCallback } from '@wordpress/element';
+import { Button, ExternalLink } from '@wordpress/components';
+import { createInterpolateElement } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
-import { useNavigate } from 'react-router';
-/**
- * Internal dependencies
- */
-import IntegrationCard from '../../blocks/contact-form/components/jetpack-integrations-modal/integration-card';
-import AkismetIcon from '../../icons/akismet';
-/**
- * Types
- */
-import type { SingleIntegrationCardProps, IntegrationCardData } from '../../types';
+import AkismetIcon from '../../../../icons/akismet';
+import IntegrationCard from './integration-card';
+import type { SingleIntegrationCardProps } from '../../../../types';
 
-const AkismetDashboardCard = ( {
+const AkismetCard = ( {
 	isExpanded,
 	onToggle,
 	data,
 	refreshStatus,
 }: SingleIntegrationCardProps ) => {
-	const { isConnected: akismetActiveWithKey = false, settingsUrl = '' } = data || {};
-	const navigate = useNavigate();
+	const formSubmissionsUrl = data?.details?.formSubmissionsSpamUrl || '';
 
-	const cardData: IntegrationCardData = {
+	const { isConnected: akismetActiveWithKey = false, settingsUrl = '' } = data || {};
+
+	const cardData = {
 		...data,
-		showHeaderToggle: false, // Always off for dashboard
+		showHeaderToggle: true,
+		headerToggleValue: akismetActiveWithKey,
+		isHeaderToggleEnabled: false,
 		isLoading: ! data || typeof data.isInstalled === 'undefined',
 		refreshStatus,
 		trackEventName: 'jetpack_forms_upsell_akismet_click',
@@ -45,10 +38,6 @@ const AkismetDashboardCard = ( {
 			'jetpack-forms'
 		),
 	};
-
-	const handleViewSpamClick = useCallback( () => {
-		navigate( '/responses?status=spam' );
-	}, [ navigate ] );
 
 	return (
 		<IntegrationCard
@@ -73,20 +62,15 @@ const AkismetDashboardCard = ( {
 							}
 						) }
 					</p>
-					<HStack spacing="3" justify="start">
-						<Button
-							variant="secondary"
-							href={ settingsUrl }
-							target="_blank"
-							rel="noopener noreferrer"
-							__next40pxDefaultSize={ true }
-						>
-							{ __( 'Add Akismet key', 'jetpack-forms' ) }
-						</Button>
-						<Button variant="tertiary" onClick={ refreshStatus } __next40pxDefaultSize={ true }>
-							{ __( 'Refresh status', 'jetpack-forms' ) }
-						</Button>
-					</HStack>
+					<Button
+						variant="secondary"
+						href={ settingsUrl }
+						target="_blank"
+						rel="noopener noreferrer"
+						__next40pxDefaultSize={ true }
+					>
+						{ __( 'Add Akismet key', 'jetpack-forms' ) }
+					</Button>
 				</div>
 			) : (
 				<div>
@@ -94,7 +78,12 @@ const AkismetDashboardCard = ( {
 						{ __( 'Your forms are automatically protected with Akismet.', 'jetpack-forms' ) }
 					</p>
 					<div className="integration-card__links">
-						<Button variant="link" onClick={ handleViewSpamClick }>
+						<Button
+							variant="link"
+							href={ formSubmissionsUrl }
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							{ __( 'View spam', 'jetpack-forms' ) }
 						</Button>
 						<span>|</span>
@@ -112,4 +101,4 @@ const AkismetDashboardCard = ( {
 	);
 };
 
-export default AkismetDashboardCard;
+export default AkismetCard;
