@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Form: fixes the overlay z-index for date picker
+- Forms: Convert components and icons from dashboard to Typescript
 - Forms: elevate outline style notched labels with z-index so they are more easily selectable
 - Forms: labels in animated style support html
 - Forms: Update integration card to TypeScript.
