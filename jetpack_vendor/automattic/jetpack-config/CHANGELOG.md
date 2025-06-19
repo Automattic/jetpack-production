@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.1.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [3.1.1] - 2025-06-19
+### Changed
+- Internal updates.
 
 ## [3.1.0] - 2025-03-26
 ### Added
@@ -224,7 +224,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Trying to add deterministic initialization.
 
-[3.1.1-alpha]: https://github.com/Automattic/jetpack-config/compare/v3.1.0...v3.1.1-alpha
+[3.1.1]: https://github.com/Automattic/jetpack-config/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/Automattic/jetpack-config/compare/v3.0.1...v3.1.0
 [3.0.1]: https://github.com/Automattic/jetpack-config/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/Automattic/jetpack-config/compare/v2.0.4...v3.0.0
