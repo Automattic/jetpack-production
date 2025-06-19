@@ -259,7 +259,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-plugin.php'
 	),
 	'Automattic\\Jetpack\\Config' => array(
-		'version' => '3.1.0.0',
+		'version' => '3.1.1.0-alpha1750336055',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-config/src/class-config.php'
 	),
 	'Automattic\\Jetpack\\Connection\\Authorize_Json_Api' => array(
@@ -1717,30 +1717,6 @@ return array(
 	'Automattic\\Jetpack\\Waf\\Waf_Transforms' => array(
 		'version' => '0.24.5.0-alpha1750265420',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php'
-	),
-	'Automattic\\Jetpack\\WordAds\\Dashboard' => array(
-		'version' => '0.4.29.0-alpha1750107007',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/dashboard/class-dashboard.php'
-	),
-	'Automattic\\Jetpack\\WordAds\\Helper' => array(
-		'version' => '0.4.29.0-alpha1750107007',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-helper.php'
-	),
-	'Automattic\\Jetpack\\WordAds\\Initial_State' => array(
-		'version' => '0.4.29.0-alpha1750107007',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/dashboard/class-initial-state.php'
-	),
-	'Automattic\\Jetpack\\WordAds\\Initializer' => array(
-		'version' => '0.4.29.0-alpha1750107007',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/initializers/class-initializer.php'
-	),
-	'Automattic\\Jetpack\\WordAds\\Package' => array(
-		'version' => '0.4.29.0-alpha1750107007',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-package.php'
-	),
-	'Automattic\\Jetpack\\WordAds\\REST_Controller' => array(
-		'version' => '0.4.29.0-alpha1750107007',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wordads/src/class-rest-controller.php'
 	),
 	'Automattic\\Woocommerce_Analytics' => array(
 		'version' => '0.4.8.0',

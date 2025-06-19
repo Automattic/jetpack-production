@@ -46,7 +46,7 @@ return array(
     ),
     'jetpack-config' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-config',
-      'ver' => '3.1.0',
+      'ver' => '3.1.1-alpha1750336055',
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
@@ -143,10 +143,6 @@ return array(
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
       'ver' => '0.24.5-alpha1750265420',
-    ),
-    'jetpack-wordads' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-wordads',
-      'ver' => '0.4.29-alpha1750107007',
     ),
     'woocommerce-analytics' => array(
       'path' => 'jetpack_vendor/automattic/woocommerce-analytics',
