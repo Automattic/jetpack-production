@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Write Brief: Enhance local custom dictionary with more known terms
+- Write Brief: Enhance typo detection dictionary
 
 ### Improved compatibility
 - Tiled Gallery: Ensure accessibility properties are added only when needed, as well as preventing block validation errors.
