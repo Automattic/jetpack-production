@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Admin Menu: Consolidate "Dashboard" and "My Home" menus
 - Update dependencies.
+- Update package dependencies.
 
 ## [0.17.10] - 2025-06-16
 ### Changed

@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Update type handling for integrations.
+- Update package dependencies.
 
 ### Fixed
 - Form: fixes the overlay z-index for date picker

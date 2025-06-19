@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Chrome experiment assignment group
 - Fix inverted flag check on Chrome experiment
 - Move chrome gemini tests flag to production
+- Update package dependencies.
 - WordAds: Support Gutenberg Ad block for Aditude
 
 ## 14.8-a.5 - 2025-06-16
