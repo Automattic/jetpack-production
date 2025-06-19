@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Update Jetpack_Newsletter_Dashboard_Widget to not be added with an anonymous function
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fix chrome ai experimient async call
 - Fix Chrome experiment assignment group
 - Fix inverted flag check on Chrome experiment
 - Move chrome gemini tests flag to production
