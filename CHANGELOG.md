@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Fixed issue where non-string currentday parameters could cause errors in infinite scroll AJAX requests
+- Flickr shortcode: Prevent errors in logs when requested data does not exist.
 - Security: Fixed issue where array-type email parameters could cause errors in carousel comment submissions
 - Security: Fixed issue where array-type url parameters could cause errors in carousel comment submissions
 - Update Jetpack_Newsletter_Dashboard_Widget to not be added with an anonymous function
