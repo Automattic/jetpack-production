@@ -11,7 +11,7 @@
 		"ext-fileinfo": "*",
 		"ext-json": "*",
 		"ext-openssl": "*",
-		"automattic/block-delimiter": "^0.2.0",
+		"automattic/block-delimiter": "^0.2.1-alpha",
 		"automattic/jetpack-a8c-mc-stats": "^3.0.5",
 		"automattic/jetpack-account-protection": "^0.2.4",
 		"automattic/jetpack-admin-ui": "^0.5.10",
