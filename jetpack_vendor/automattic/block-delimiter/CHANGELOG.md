@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Performance improvement: extract anonymous function into static method
+
 ## [0.2.0] - 2025-06-09
 ### Changed
 - Update PHPCS and Phan configuration to be more permissive, and update main class accordingly. [#43683]
