@@ -5,28 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.0.0] - 2025-06-23
 ### Added
-- Forms: add track event for upsell nudge on file upload block
-- Forms: Multistep capabilities
+- File Uploads block: Add Tracks event to upsell nudge. [#43860]
+- Introduce multi-step forms. [#43918]
 
 ### Changed
-- Forms: allow super admins see form submissions
-- Forms: hide feedback menu from new site
-- Forms: Update type handling for integrations.
-- Scripts: Changed imports for hosting checks.
-- Update package dependencies.
+- Allow super admins see form submissions. [#43998]
+- Convert various cards and components to TypeScript. [#43986] [#43992] [#43993]
+- Hide legacy Feedback menu on new sites. [#44060]
+- Scripts: Change imports for hosting checks. [#43972]
+- Update type handling for integrations. [#43969]
+- Update package dependencies. [#44020] [#44040]
 
 ### Fixed
-- Form: fixes the overlay z-index for date picker
-- Forms: Convert components and icons from dashboard to Typescript
-- Forms: elevate outline style notched labels with z-index so they are more easily selectable
-- Forms: labels in animated style support html
-- Forms: Update integration card to TypeScript.
-- Forms: Update single modal cards to TypeScript.
+- Fix HTML support to labels in animated style. [#43966]
+- Fix the overlay z-index for date picker. [#43967]
+- Make outline style notched labels more selectable. [#43956]
 
 ## [1.3.0] - 2025-06-16
 ### Added
@@ -1240,7 +1235,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[2.0.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v1.3.0...v2.0.0-alpha
+[2.0.0]: https://github.com/automattic/jetpack-forms/compare/v1.3.0...v2.0.0
 [1.3.0]: https://github.com/automattic/jetpack-forms/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/automattic/jetpack-forms/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/automattic/jetpack-forms/compare/v1.0.0...v1.1.0

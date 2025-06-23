@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.13.8-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.13.8] - 2025-06-23
 ### Fixed
-- Autoloader: Prevent double slash in autoloader path.
+- Autoloader: Prevent double slash in autoloader path. [#44030]
 
 ## [6.13.7] - 2025-06-23
 ### Changed
@@ -1491,7 +1488,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.13.8-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.13.7...v6.13.8-alpha
+[6.13.8]: https://github.com/Automattic/jetpack-connection/compare/v6.13.7...v6.13.8
 [6.13.7]: https://github.com/Automattic/jetpack-connection/compare/v6.13.6...v6.13.7
 [6.13.6]: https://github.com/Automattic/jetpack-connection/compare/v6.13.5...v6.13.6
 [6.13.5]: https://github.com/Automattic/jetpack-connection/compare/v6.13.4...v6.13.5
