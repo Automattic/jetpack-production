@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: Add dashboard link to response email
 - Forms: add track event for upsell nudge on file upload block
 - Forms: Multistep capabilities
 

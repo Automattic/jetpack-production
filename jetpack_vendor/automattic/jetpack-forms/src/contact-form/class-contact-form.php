@@ -1714,6 +1714,38 @@ class Contact_Form extends Contact_Form_Shortcode {
 			)
 		);
 
+		$actions = '';
+		// TODO: Update this once we have a way to enable/disable email actions.
+		$are_email_actions_enabled = true;
+
+		if ( $are_email_actions_enabled ) {
+			// Get the status of the feedback
+			$status = $is_spam ? 'spam' : 'inbox';
+
+			// Build the dashboard URL with the status and the feedback's post id
+			$dashboard_url = ( new Dashboard_View_Switch() )->get_forms_admin_url( $status, true ) . '&r=' . $post_id;
+
+			$actions = sprintf(
+				'<table class="button_block" border="0" cellpadding="0" cellspacing="0" role="presentation">
+					<tr>
+						<td class="pad" align="center">
+							<a rel="noopener" target="_blank" href="%1$s" data-tracks-link-desc="">
+								<!--[if mso]>
+								<i style="mso-text-raise: 30pt;">&nbsp;</i>
+								<![endif]-->
+								<span>%2$s</span>
+								<!--[if mso]>
+								<i>&nbsp;</i>
+								<![endif]-->
+							</a>
+						</td>
+					</tr>
+				</table>',
+				esc_url( $dashboard_url ),
+				__( 'View in dashboard', 'jetpack-forms' )
+			);
+		}
+
 		/**
 		 * Filters the message sent via email after a successful form submission.
 		 *
@@ -1727,7 +1759,7 @@ class Contact_Form extends Contact_Form_Shortcode {
 		$message = apply_filters( 'contact_form_message', implode( '', $message ), $message );
 
 		// This is called after `contact_form_message`, in order to preserve back-compat
-		$message = self::wrap_message_in_html_tags( $title, $message, $footer );
+		$message = self::wrap_message_in_html_tags( $title, $message, $footer, $actions );
 
 		update_post_meta( $post_id, '_feedback_email', $this->addslashes_deep( compact( 'to', 'message' ) ) );
 
@@ -1934,10 +1966,11 @@ class Contact_Form extends Contact_Form_Shortcode {
 	 * @param string $title - title of the email.
 	 * @param string $body - the message body.
 	 * @param string $footer - the footer containing meta information.
+	 * @param string $actions - HTML for actions displayed in the email.
 	 *
 	 * @return string
 	 */
-	public static function wrap_message_in_html_tags( $title, $body, $footer ) {
+	public static function wrap_message_in_html_tags( $title, $body, $footer, $actions = '' ) {
 		// Don't do anything if the message was already wrapped in HTML tags
 		// That could have be done by a plugin via filters
 		if ( str_contains( $body, '<html' ) ) {
@@ -1983,7 +2016,8 @@ class Contact_Form extends Contact_Form_Shortcode {
 			'',
 			$footer,
 			$style,
-			$tracking_pixel
+			$tracking_pixel,
+			$actions
 		);
 
 		return $html_message;
