@@ -26,6 +26,24 @@
 	opacity: 0.3;
 }
 
+.jetpack-form-step {
+	display: none;
+}
+
+.jetpack-form-step.is-current-step {
+	position: relative;
+	visibility: visible;
+	opacity: 1;
+	height: auto;
+	overflow: visible;
+	z-index: 2;
+	display: block;
+}
+
+.contact-form .wp-block-jetpack-button:has( button.is-hidden ) {
+	display: none;
+}
+
 /*
 	Using :where we will keep a lower CSS specificity,
 	allowing themes to easily override these styles
@@ -246,6 +264,20 @@
 .jetpack-check-feedback-spam-spinner {
 	display: inline-block;
 	margin-top: 7px;
+}
+
+.wp-block-jetpack-form-step {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	flex-direction: row;
+	flex-grow: 1;
+	gap: var(--wp--style--block-gap, 1.5rem);
+}
+
+.wp-block-jetpack-form-step > * {
+	flex: 0 0 100%;
+	box-sizing: border-box;
 }
 
 .wp-block-jetpack-contact-form {
@@ -1043,6 +1075,8 @@ on production builds, the attributes are being reordered, causing side-effects
 
 .contact-form__error.show-errors {
 	display: inline;
+	min-width: 100%;
+	box-sizing: inherit;
 }
 
 .contact-form__error ul {
@@ -1119,6 +1153,7 @@ on production builds, the attributes are being reordered, causing side-effects
 	justify-content: center;
 	align-items: center;
 	gap: 0.5em;
+	width: 100%;
 }
 
 .contact-form .contact-form__spinner {

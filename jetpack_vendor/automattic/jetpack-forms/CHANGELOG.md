@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: add track event for upsell nudge on file upload block
+- Forms: Multistep capabilities
 
 ### Changed
 - Forms: allow super admins see form submissions

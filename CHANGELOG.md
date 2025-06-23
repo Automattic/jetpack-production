@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Tiled Gallery: Ensure accessibility properties are added only when needed, as well as preventing block validation errors.
 
 ### Bug fixes
+- Add Button block customVariant
 - Fixed issue where non-string currentday parameters could cause errors in infinite scroll AJAX requests
 - Flickr shortcode: Prevent errors in logs when requested data does not exist.
 - Newsletter: ensure the subscriber stats links are correct in the dashboard widget, even when you do not use Stats feature.
