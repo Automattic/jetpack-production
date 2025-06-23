@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Chrome experiment assignment group
 - Fix inverted flag check on Chrome experiment
 - Move chrome gemini tests flag to production
+- Sharing: add ability to count sharing events on sharing buttons blocks.
 - Update package dependencies.
 - WordAds: Support Gutenberg Ad block for Aditude
 
