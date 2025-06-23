@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Multistep capabilities
 
 ### Changed
+- Form: improve the error validation animation
 - Forms: allow super admins see form submissions
 - Forms: hide feedback menu from new site
 - Forms: Update type handling for integrations.

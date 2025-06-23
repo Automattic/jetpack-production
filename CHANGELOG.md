@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add archives endpoint support
 
 ### Enhancements
+- Form: improve the error validation animation
 - Write Brief: Enhance local custom dictionary with more known terms
 - Write Brief: Enhance typo detection dictionary
 
