@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- Add archives endpoint support
+
 ### Enhancements
 - Write Brief: Enhance local custom dictionary with more known terms
 - Write Brief: Enhance typo detection dictionary
