@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Button block customVariant
 - Fixed issue where non-string currentday parameters could cause errors in infinite scroll AJAX requests
 - Flickr shortcode: Prevent errors in logs when requested data does not exist.
+- Forms: hide feedback menu from newly connected sites
 - Newsletter: ensure the subscriber stats links are correct in the dashboard widget, even when you do not use Stats feature.
 - Security: Fixed issue where array-type email parameters could cause errors in carousel comment submissions
 - Security: Fixed issue where array-type url parameters could cause errors in carousel comment submissions
