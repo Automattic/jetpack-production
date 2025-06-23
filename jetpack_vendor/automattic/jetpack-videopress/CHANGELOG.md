@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Scripts: Changed imports for hosting checks.
 - Update package dependencies.
 
+### Fixed
+- Autoloader: Prevent double slash in autoloader path.
+
 ## [0.29.6] - 2025-06-16
 ### Changed
 - Update package dependencies. [#43892] [#43951]
