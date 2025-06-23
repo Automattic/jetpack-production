@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.15-alpha] - unreleased
+## [0.4.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Scripts: Changed imports for hosting checks.
 - Update package dependencies.
 
 ## [0.3.14] - 2025-06-16
@@ -128,7 +129,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix the button size in the editor for Gutenberg 18 or below. [#41619]
 - Media Library: Fix the Import Media button color in some color schemes. [#41664]
 
-[0.3.15-alpha]: https://github.com/Automattic/jetpack-external-media/compare/v0.3.14...v0.3.15-alpha
+[0.4.0-alpha]: https://github.com/Automattic/jetpack-external-media/compare/v0.3.14...v0.4.0-alpha
 [0.3.14]: https://github.com/Automattic/jetpack-external-media/compare/v0.3.13...v0.3.14
 [0.3.13]: https://github.com/Automattic/jetpack-external-media/compare/v0.3.12...v0.3.13
 [0.3.12]: https://github.com/Automattic/jetpack-external-media/compare/v0.3.11...v0.3.12

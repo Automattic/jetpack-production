@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: allow super admins see form submissions
 - Forms: Update type handling for integrations.
+- Scripts: Changed imports for hosting checks.
 - Update package dependencies.
 
 ### Fixed
