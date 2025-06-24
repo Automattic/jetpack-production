@@ -2,43 +2,46 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.8-a.6 - unreleased
+## 14.8-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Major Enhancements
-- Add archives endpoint support
-
 ### Enhancements
 - Form: improve the error validation animation
-- Write Brief: Enhance local custom dictionary with more known terms
-- Write Brief: Enhance typo detection dictionary
-
-### Improved compatibility
-- Tiled Gallery: Ensure accessibility properties are added only when needed, as well as preventing block validation errors.
-
-### Bug fixes
-- Add Button block customVariant
-- Fixed issue where non-string currentday parameters could cause errors in infinite scroll AJAX requests
-- Flickr shortcode: Prevent errors in logs when requested data does not exist.
-- Forms: hide feedback menu from newly connected sites
-- Newsletter: ensure the subscriber stats links are correct in the dashboard widget, even when you do not use Stats feature.
-- Security: Fixed issue where array-type email parameters could cause errors in carousel comment submissions
-- Security: Fixed issue where array-type url parameters could cause errors in carousel comment submissions
-- Social Previews: Fixed a bug with text overflowing with Mastodon.
-- Update Jetpack_Newsletter_Dashboard_Widget to not be added with an anonymous function
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- AI Assistant: Change sidebar title and remove helper text
-- Fix chrome ai experimient async call
-- Fix Chrome experiment assignment group
-- Fix inverted flag check on Chrome experiment
-- Move chrome gemini tests flag to production
-- Scripts: Changed imports for hosting checks.
-- Sharing: add ability to count sharing events on sharing buttons blocks.
 - Tests: Add instructions for Jetpack 14.8.
-- Update package dependencies.
-- WordAds: Support Gutenberg Ad block for Aditude
+
+## 14.8-a.7 - 2025-06-23
+### Major Enhancements
+- Add archives endpoint support. [#44028]
+
+### Enhancements
+- Sharing: Add ability to count sharing events on sharing buttons blocks. [#44039]
+- Write Brief: Enhance local custom dictionary with more known terms. [#44017]
+- Write Brief: Enhance typo detection dictionary. [#44034]
+
+### Improved compatibility
+- Tiled Gallery: Ensure accessibility properties are added only when needed, as well as preventing block validation errors. [#43345]
+
+### Bug fixes
+- Prevent non-string currentday parameters from causing errors in infinite scroll AJAX requests. [#44008]
+- Flickr shortcode: Prevent errors in logs when requested data does not exist. [#43927]
+- Forms: Hide legacy Feedback menu from newly-connected sites. [#44060]
+- Newsletter: Ensure subscriber stats links are correct in the dashboard widget, even when you do not use Stats feature. [#44037]
+- Security: Prevent errors with array-type parameters in carousel comment submissions. [#43991] [#44015]
+- Social Previews: Prevent text overflow issues with Mastodon. [#44019]
+- Update `Jetpack_Newsletter_Dashboard_Widget` to not be added with an anonymous function. [#43973]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Change sidebar title and remove helper text. [#44035]
+- Fix Chrome ai experiment async call. [#44026]
+- Fix Chrome experiment assignment group. [#44018]
+- Invert flag check on Chrome experiment. [#44011]
+- Move Chrome Gemini tests flag to production. [#44006]
+- Scripts: Change imports for hosting checks. [#43972]
+- Update package dependencies. [#44020] [#44040]
+- WordAds: Support Gutenberg Ad block for Aditude. [#43476]
 
 ## 14.8-a.5 - 2025-06-16
 ### Enhancements
