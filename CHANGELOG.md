@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Move chrome gemini tests flag to production
 - Scripts: Changed imports for hosting checks.
 - Sharing: add ability to count sharing events on sharing buttons blocks.
+- Tests: Add instructions for Jetpack 14.8.
 - Update package dependencies.
 - WordAds: Support Gutenberg Ad block for Aditude
 
