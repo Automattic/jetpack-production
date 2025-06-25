@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Forms: remove the broken step transformation
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Block editor: repair editor assets endpoint for Atomic sites
+
 ## 14.8-a.9 - 2025-06-24
 ### Enhancements
 - Form: Improve the error validation animation. [#43968]
