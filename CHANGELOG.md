@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.8-a.10 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Forms: remove the broken step transformation
+
 ## 14.8-a.9 - 2025-06-24
 ### Enhancements
 - Form: Improve the error validation animation. [#43968]

@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Contact Form: simplify multistep form detection and improve error wrapper placement for multistep navigation blocks.
 
+### Fixed
+- Forms: Remove the broken tranformation
+
 ## [2.0.1] - 2025-06-24
 ### Added
 - Add dashboard link to response email. [#43834]
