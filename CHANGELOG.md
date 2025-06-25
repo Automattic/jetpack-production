@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove the broken step transformation
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Block editor: refactor editor assets endpoint for readability
 - Block editor: repair editor assets endpoint for Atomic sites
 
 ## 14.8-a.9 - 2025-06-24
