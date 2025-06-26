@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Sync: Added taxonomies as empty array whne using get_terms for better support of plugins/themes
 - Updates: Prevent fatals when data is not in expected array format
 
 ## [4.14.1] - 2025-06-03
