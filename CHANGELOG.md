@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: remove the broken step transformation
+- Settings: avoid showing Backup and Account Protection modules with any search terms
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Block editor: refactor editor assets endpoint for readability
