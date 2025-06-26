@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Refactored connection error handling so all prompts have same messages.
+
 ## [6.13.9] - 2025-06-24
 ### Changed
 - Update dependencies.
