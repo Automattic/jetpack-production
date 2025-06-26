@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Updates: Prevent fatals when data is not in expected array format
+
 ## [4.14.1] - 2025-06-03
 ### Fixed
 - Sync: Ensure HPOS Orders are retrieved in Descending Order [#43744]
