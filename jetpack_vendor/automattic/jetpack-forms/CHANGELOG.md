@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Security
+- Forms: don't allow form element attribute names to be set as field names
+
 ### Added
 - Forms: Add items count to export button labels
 
