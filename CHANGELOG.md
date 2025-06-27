@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: Add MailPoet integrations nudge.
+
 ### Bug fixes
 - Forms: remove the broken step transformation
 - Likes: do not register the Like block when a site is not connected to WordPress.com.

@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Add items count to export button labels
 - Forms: Add JSON response to form submission and ajax request under feature flag
+- Forms: Add MailPoet integrations nudge.
 
 ### Changed
 - Contact Form: simplify multistep form detection and improve error wrapper placement for multistep navigation blocks.
