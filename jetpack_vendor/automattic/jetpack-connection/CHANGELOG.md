@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.13.10-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.13.10] - 2025-06-27
 ### Changed
-- Refactored connection error handling so all prompts have same messages.
+- Refactor connection error handling so all prompts have the same messages. [#44042]
 
 ## [6.13.9] - 2025-06-24
 ### Changed
@@ -1499,7 +1496,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.13.10-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.13.9...v6.13.10-alpha
+[6.13.10]: https://github.com/Automattic/jetpack-connection/compare/v6.13.9...v6.13.10
 [6.13.9]: https://github.com/Automattic/jetpack-connection/compare/v6.13.8...v6.13.9
 [6.13.8]: https://github.com/Automattic/jetpack-connection/compare/v6.13.7...v6.13.8
 [6.13.7]: https://github.com/Automattic/jetpack-connection/compare/v6.13.6...v6.13.7
