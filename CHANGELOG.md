@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: remove the broken step transformation
+- JITM: Fix ineffective caching due to expired plugin sync transient
 - Likes: do not register the Like block when a site is not connected to WordPress.com.
 - Settings: avoid showing Backup and Account Protection modules with any search terms
 
