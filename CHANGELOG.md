@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: Add MailPoet integrations nudge.
+- My Jetpack: Updating Stats card to include a chart for better analytics.
 
 ### Bug fixes
 - Forms: remove the broken step transformation
