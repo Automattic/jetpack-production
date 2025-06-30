@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Admin Menu: Add back JITM upsells to default admin interface
 - Phan: Clean up error due to errant file reference.
 
 ## [0.17.11] - 2025-06-23
