@@ -5,15 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.17.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.17.0] - 2025-06-30
 ### Changed
-- My Jetpack: Updating stats card to better align with Jetpack Stats.
-- My Jetpack: Updating Stats card to include a chart for better analytics.
-- Onboarding: Improve product discovery.
-- Update package dependencies.
+- Stats: Update card to include a chart and better align with Jetpack Stats. [#43870]
+- Onboarding: Improve product discovery. [#43870]
+- Update package dependencies. [#43870]
 
 ## [5.16.8] - 2025-06-27
 ### Changed
@@ -2220,7 +2216,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.17.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.16.8...5.17.0-alpha
+[5.17.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.16.8...5.17.0
 [5.16.8]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.16.7...5.16.8
 [5.16.7]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.16.6...5.16.7
 [5.16.6]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.16.5...5.16.6
