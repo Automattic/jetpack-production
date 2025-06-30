@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: simplify multistep form detection and improve error wrapper placement for multistep navigation blocks.
 
 ### Fixed
+- Forms: dedupe unread count when there's another badge number on Jetpack menu item
 - Forms: Load the initial steps as if the form has more than one step in it.
 - Forms: Remove the broken tranformation
 
