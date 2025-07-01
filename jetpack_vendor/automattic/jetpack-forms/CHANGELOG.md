@@ -5,26 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.0-alpha] - unreleased
+## [2.1.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Security
-- Forms: don't allow form element attribute names to be set as field names
-
-### Added
-- Forms: Add items count to export button labels
-- Forms: Add JSON response to form submission and ajax request under feature flag
-- Forms: Add MailPoet integrations nudge.
-
-### Changed
-- Contact Form: simplify multistep form detection and improve error wrapper placement for multistep navigation blocks.
-
 ### Fixed
 - Accessibility: Update screen reader 'clip' property usage to 'clip-path'.
-- Forms: dedupe unread count when there's another badge number on Jetpack menu item
-- Forms: Load the initial steps as if the form has more than one step in it.
-- Forms: Remove the broken tranformation
+
+## [2.1.0] - 2025-06-30
+### Security
+- Prevent form element attribute names from being set as field names. [#44113]
+
+### Added
+- Add items count to export button labels. [#44064]
+- Add JSON response to form submission and AJAX request under feature flag. [#44118]
+- Add MailPoet integrations nudge. [#44115]
+
+### Changed
+- Contact Form: Simplify multistep form detection and improve error wrapper placement for multistep navigation blocks. [#44076]
+
+### Fixed
+- Set correct unread count when there's another badge number on Jetpack menu item. [#44108]
+- Load the initial steps as if the form has more than one step in it. [#44098]
+- Remove broken group block tranformation. [#44083]
 
 ## [2.0.1] - 2025-06-24
 ### Added
@@ -1264,7 +1267,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[2.1.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v2.0.1...v2.1.0-alpha
+[2.1.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v2.1.0...v2.1.1-alpha
+[2.1.0]: https://github.com/automattic/jetpack-forms/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/automattic/jetpack-forms/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/automattic/jetpack-forms/compare/v1.3.0...v2.0.0
 [1.3.0]: https://github.com/automattic/jetpack-forms/compare/v1.2.0...v1.3.0
