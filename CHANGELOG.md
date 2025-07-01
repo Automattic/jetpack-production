@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Block editor: repair editor assets endpoint for Atomic sites
 - Compatibility: Use modern JSX transform when building React interfaces.
 - Scripts: Adding host information to front-end JetpackScriptData script
+- Update the name for Downtime Monitor module.
 
 ## 14.8-a.9 - 2025-06-24
 ### Enhancements
