@@ -97,7 +97,7 @@ function jetpack_get_module_i18n( $key ) {
 			),
 
 			'monitor' => array(
-				'name' => _x( 'Monitor', 'Module Name', 'jetpack' ),
+				'name' => _x( 'Downtime Monitor', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Get instant alerts if your site goes down and know when it’s back online.', 'Module Description', 'jetpack' ),
 			),
 
@@ -658,7 +658,7 @@ function jetpack_get_module_info( $key ) {
 	  ),
 	  'monitor' => 
 	  array (
-	    'name' => 'Monitor',
+	    'name' => 'Downtime Monitor',
 	    'description' => 'Get instant alerts if your site goes down and know when it’s back online.',
 	    'sort' => '28',
 	    'recommendation_order' => '10',
