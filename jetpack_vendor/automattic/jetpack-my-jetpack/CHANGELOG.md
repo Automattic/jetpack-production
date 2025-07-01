@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Onboarding: Improve product discovery.
 - Update package dependencies.
 
+### Fixed
+- Products: Fix the alignment and responsiveness of product cards.
+
 ## [5.16.8] - 2025-06-27
 ### Changed
 - Internal updates.
