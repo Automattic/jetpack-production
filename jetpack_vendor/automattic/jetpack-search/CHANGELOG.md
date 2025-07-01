@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Accessibility: Update screen reader 'clip' property usage to 'clip-path'.
+
 ## [0.52.4] - 2025-06-24
 ### Changed
 - Update dependencies. [#42919]

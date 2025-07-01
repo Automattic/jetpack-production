@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Updating Stats card to include a chart for better analytics.
 
 ### Bug fixes
+- Accessibility: Remove deprecated clip property from screen reader text, updating with clip-path.
 - Forms: remove the broken step transformation
 - JITM: Fix ineffective caching due to expired plugin sync transient
 - Likes: do not register the Like block when a site is not connected to WordPress.com.
