@@ -5,18 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.17.1-alpha] - unreleased
+## [5.17.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
-
-### Added
-- My Jetpack: Implmented analytics.
 
 ### Changed
 - Update package dependencies.
 
+## [5.17.1] - 2025-07-01
+### Added
+- My Jetpack: Implemented analytics. [#44153]
+
 ### Fixed
-- Products: Fix the alignment and responsiveness of product cards.
+- Products: Fix the alignment and responsiveness of product cards. [#44154]
 
 ## [5.17.0] - 2025-06-30
 ### Changed
@@ -2229,7 +2230,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.17.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.17.0...5.17.1-alpha
+[5.17.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.17.1...5.17.2-alpha
+[5.17.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.17.0...5.17.1
 [5.17.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.16.8...5.17.0
 [5.16.8]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.16.7...5.16.8
 [5.16.7]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.16.6...5.16.7

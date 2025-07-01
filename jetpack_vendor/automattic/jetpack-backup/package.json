@@ -27,11 +27,11 @@
 		"extends @wordpress/browserslist-config"
 	],
 	"dependencies": {
-		"@automattic/jetpack-analytics": "^1.0.2-alpha",
-		"@automattic/jetpack-api": "^1.0.3-alpha",
-		"@automattic/jetpack-components": "^1.1.8-alpha",
-		"@automattic/jetpack-connection": "^1.2.8-alpha",
-		"@automattic/jetpack-shared-extension-utils": "^1.2.3-alpha",
+		"@automattic/jetpack-analytics": "^1.0.2",
+		"@automattic/jetpack-api": "^1.0.3",
+		"@automattic/jetpack-components": "^1.1.9-alpha",
+		"@automattic/jetpack-connection": "^1.2.9-alpha",
+		"@automattic/jetpack-shared-extension-utils": "^1.2.4-alpha",
 		"@automattic/number-formatters": "^1.0.7-alpha",
 		"@tanstack/react-query": "5.75.1",
 		"@wordpress/api-fetch": "7.25.0",
@@ -46,7 +46,7 @@
 		"react-dom": "18.3.1"
 	},
 	"devDependencies": {
-		"@automattic/jetpack-base-styles": "^1.0.2-alpha",
+		"@automattic/jetpack-base-styles": "^1.0.2",
 		"@automattic/jetpack-webpack-config": "workspace:*",
 		"@babel/core": "7.27.7",
 		"@babel/preset-env": "7.27.2",
