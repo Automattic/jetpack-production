@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: update the date picker to remove jquery and add keyboard navigation. We now use a more performant date picker.
+
 ### Bug fixes
 - Accessibility: Remove deprecated clip property from screen reader text, updating with clip-path.
 - Blocks: return an error when a filter returns a non-array
