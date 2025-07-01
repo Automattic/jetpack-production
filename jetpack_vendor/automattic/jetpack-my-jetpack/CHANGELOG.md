@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- My Jetpack: Implmented analytics.
+
 ### Changed
 - My Jetpack: Updating stats card to better align with Jetpack Stats.
 - My Jetpack: Updating Stats card to include a chart for better analytics.
