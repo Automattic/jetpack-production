@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Improves JITM caching and minimizes multiple wpcom sidebar jitm requests.
 - Update package dependencies.
 
 ## [4.2.26] - 2025-06-30
