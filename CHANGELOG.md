@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Accessibility: Remove deprecated clip property from screen reader text, updating with clip-path.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
 - Update the name for Downtime Monitor module.
 
 ## 14.8-beta - 2025-06-30
