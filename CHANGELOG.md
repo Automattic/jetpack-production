@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Accessibility: Remove deprecated clip property from screen reader text, updating with clip-path.
 - Blocks: return an error when a filter returns a non-array
+- VideoPress: Fix video row action button clickability by properly hiding stats on hover
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Update composer.lock

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- VideoPress: Fix video row action button clickability by properly hiding stats on hover
+
 ## [0.30.2] - 2025-06-30
 ### Changed
 - Internal updates.
