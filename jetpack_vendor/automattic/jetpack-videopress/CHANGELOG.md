@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- VideoPress: Fix PHP fatals in class-initializer.php
 - VideoPress: Fix video row action button clickability by properly hiding stats on hover
 
 ## [0.30.2] - 2025-06-30
