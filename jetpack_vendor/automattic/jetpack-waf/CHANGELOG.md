@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.25.1-alpha] - unreleased
+## [0.26.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Adds account recovery flow for blocklisted IPs
 
 ### Fixed
 - Fix PHP warnings for Brute_Force_Protection->get_local_host()
@@ -469,7 +472,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.25.1-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.25.0...v0.25.1-alpha
+[0.26.0-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.25.0...v0.26.0-alpha
 [0.25.0]: https://github.com/Automattic/jetpack-waf/compare/v0.24.4...v0.25.0
 [0.24.4]: https://github.com/Automattic/jetpack-waf/compare/v0.24.3...v0.24.4
 [0.24.3]: https://github.com/Automattic/jetpack-waf/compare/v0.24.2...v0.24.3
