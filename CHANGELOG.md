@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: return an error when a filter returns a non-array
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update composer.lock
 - Update package dependencies.
 
 ## 14.8 - 2025-07-01
