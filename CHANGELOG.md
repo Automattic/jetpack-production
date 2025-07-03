@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix video row action button clickability by properly hiding stats on hover
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Dashboard: Remove hosting information from initial state, now retrieved via site utils
 - SEO tags: do not use Open Graph util function to strip query blocks when Open Graph functions are not availabe
 - Update composer.lock
 - Update package dependencies.
