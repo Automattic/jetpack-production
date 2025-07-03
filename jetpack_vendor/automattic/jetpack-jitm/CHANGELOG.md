@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.2.27-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.2.27] - 2025-07-03
 ### Changed
-- Improves JITM caching and minimizes multiple wpcom sidebar jitm requests.
-- Update package dependencies.
+- Improve JITM caching and minimize multiple wpcom sidebar jitm requests. [#44130]
+- Update package dependencies. [#44148]
 
 ## [4.2.26] - 2025-06-30
 ### Fixed
@@ -957,7 +954,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Update Jetpack to use new JITM package
 
-[4.2.27-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v4.2.26...v4.2.27-alpha
+[4.2.27]: https://github.com/Automattic/jetpack-jitm/compare/v4.2.26...v4.2.27
 [4.2.26]: https://github.com/Automattic/jetpack-jitm/compare/v4.2.25...v4.2.26
 [4.2.25]: https://github.com/Automattic/jetpack-jitm/compare/v4.2.24...v4.2.25
 [4.2.24]: https://github.com/Automattic/jetpack-jitm/compare/v4.2.23...v4.2.24
