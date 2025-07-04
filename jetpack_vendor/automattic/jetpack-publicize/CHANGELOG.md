@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Scripts: Ensuring host related checks and functionality are only added via Assets
+- Social: Hide admin page in Jetpack plugin if site not connected
 - Update dependencies.
 - Update package dependencies.
 

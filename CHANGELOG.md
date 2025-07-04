@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Remove hosting information from initial state, now retrieved via site utils
 - Open the Jetpack Dashboard support link in the Help Center instead of taking users out with a link
 - SEO tags: do not use Open Graph util function to strip query blocks when Open Graph functions are not availabe
+- Social: Hide Social admin page if the site is not connected.
 - Update composer.lock
 - Update package dependencies.
 
