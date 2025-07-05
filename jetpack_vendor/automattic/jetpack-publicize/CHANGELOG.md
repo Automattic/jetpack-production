@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 - Update package dependencies.
 
+### Fixed
+- get_current_screen(): Check for the existence before trying to call it
+
 ## [0.65.7] - 2025-06-30
 ### Changed
 - Update dependencies. [#44061]
