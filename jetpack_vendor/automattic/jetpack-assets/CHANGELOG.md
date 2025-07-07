@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.1.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [4.1.0] - 2025-07-07
 ### Changed
 - Scripts: Ensure host-related checks and functionality are only added via Assets. [#44133]
@@ -668,6 +675,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Statically access asset tools
 
+[4.1.1-alpha]: https://github.com/Automattic/jetpack-assets/compare/v4.1.0...v4.1.1-alpha
 [4.1.0]: https://github.com/Automattic/jetpack-assets/compare/v4.0.32...v4.1.0
 [4.0.32]: https://github.com/Automattic/jetpack-assets/compare/v4.0.31...v4.0.32
 [4.0.31]: https://github.com/Automattic/jetpack-assets/compare/v4.0.30...v4.0.31
