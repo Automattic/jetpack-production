@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix video row action button clickability by properly hiding stats on hover
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Compatibility: Removing utility and selector import fallbacks as we no longer need to ensure compatibiilty in those cases.
 - Dashboard: Remove hosting information from initial state, now retrieved via site utils
 - Newsletter: fix bug in settings
 - Open the Jetpack Dashboard support link in the Help Center instead of taking users out with a link
