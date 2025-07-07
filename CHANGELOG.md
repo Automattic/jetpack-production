@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Remove hosting information from initial state, now retrieved via site utils
 - Newsletter: fix bug in settings
 - Open the Jetpack Dashboard support link in the Help Center instead of taking users out with a link
+- Previously we started using is_singular_post to highlight that current page is available for inline ads. Since we have solved the issue with JavaScript, we don't need this query param any more.
 - SAL: Ensurethat we don't check for properties on null.
 - SEO tags: do not use Open Graph util function to strip query blocks when Open Graph functions are not availabe
 - Social: Hide Social admin page if the site is not connected.
