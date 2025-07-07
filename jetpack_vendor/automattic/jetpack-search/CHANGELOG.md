@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.52.6-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.52.6] - 2025-07-07
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#44148] [#44151]
 
 ### Fixed
-- Accessibility: Update screen reader 'clip' property usage to 'clip-path'.
+- Accessibility: Update screen reader 'clip' property usage to 'clip-path'. [#44027]
 
 ## [0.52.5] - 2025-06-30
 ### Changed
@@ -1282,7 +1279,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.52.6-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.52.5...v0.52.6-alpha
+[0.52.6]: https://github.com/Automattic/jetpack-search/compare/v0.52.5...v0.52.6
 [0.52.5]: https://github.com/Automattic/jetpack-search/compare/v0.52.4...v0.52.5
 [0.52.4]: https://github.com/Automattic/jetpack-search/compare/v0.52.3...v0.52.4
 [0.52.3]: https://github.com/Automattic/jetpack-search/compare/v0.52.2...v0.52.3

@@ -2,34 +2,38 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.9-a.0 - unreleased
+## 14.9-a.2 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
+## 14.9-a.1 - 2025-07-07
 ### Enhancements
-- Forms: update the date picker to remove jquery and add keyboard navigation. We now use a more performant date picker.
+- Forms: Update the date picker to remove jQuery and add a more performant version with keyboard navigation. [#43939]
 
 ### Improved compatibility
-- Blocks: defensive coding to prevent errors from plugins malforming extensions.
+- Blocks: Prevent PHP errors when `jetpack_set_available_extensions` filter returns an unexpected data type. [#44166]
 
 ### Bug fixes
-- Accessibility: Remove deprecated clip property from screen reader text, updating with clip-path.
-- Blocks: return an error when a filter returns a non-array
-- Sharing: display correct Open Graph Meta tags when a page uses a Query Loop block.
-- VideoPress: Fix video row action button clickability by properly hiding stats on hover
+- Accessibility: Remove deprecated `clip` property from screen reader text with `clip-path`. [#44027]
+- Blocks: Return an error when a filter returns a non-array. [#44144]
+- Sharing: Display correct Open Graph meta tags when a page uses a Query Loop block. [#44155]
+- VideoPress: Fix video row action button clickability by properly hiding stats on hover. [#44167]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Compatibility: Removing utility and selector import fallbacks as we no longer need to ensure compatibiilty in those cases.
-- Dashboard: Remove hosting information from initial state, now retrieved via site utils
-- Newsletter: fix bug in settings
-- Open the Jetpack Dashboard support link in the Help Center instead of taking users out with a link
-- Previously we started using is_singular_post to highlight that current page is available for inline ads. Since we have solved the issue with JavaScript, we don't need this query param any more.
-- SAL: Ensurethat we don't check for properties on null.
-- SEO tags: do not use Open Graph util function to strip query blocks when Open Graph functions are not availabe
-- Social: Hide Social admin page if the site is not connected.
-- Subscriptions: disable option to add featured image to emails on private sites.
-- Update composer.lock
-- Update package dependencies.
+- Compatibility: Remove utility and selector import fallbacks as we no longer need to ensure compatibility in those cases. [#44164]
+- Dashboard: Remove hosting information from initial state, as it is now retrieved via site utility functions. [#44133]
+- Newsletter: Fix bug in settings. [#44152]
+- SAL: Ensure that we don't check for properties on null. [#44195]
+- SEO tags: Do not use Open Graph utility function to strip query blocks when Open Graph functions are not availabe. [#44178]
+- Social: Hide Social admin page if the site is not connected. [#44168]
+- Subscriptions: Disable option to add featured image to emails on private sites. [#44182]
+- Support: Open the Jetpack Dashboard support link in the Help Center instead of redirecting to a new page. [#44172]
+- Update composer.lock [#44170]
+- Update package dependencies. [#44148] [#44151]
+- WordAds: Remove usage of `is_singular_post` to highlight that current page is available for inline ads. [#44186]
 
 ## 14.8 - 2025-07-01
 ### Enhancements

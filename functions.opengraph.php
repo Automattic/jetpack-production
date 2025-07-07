@@ -546,7 +546,7 @@ function jetpack_og_get_description( $description = '', $data = null ) {
 /**
  * Remove content within wp:query blocks from the description.
  *
- * @since 14.9-a.0
+ * @since 14.9
  *
  * @param string $description The description text that may contain block markup.
  * @return string The description with wp:query blocks removed.
