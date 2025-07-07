@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: introduce a new "Rating" field block allowing site owners to collect star/heart/smiley/emoji ratings from visitors.
 
 ### Changed
+- Forms: don't allow rich text formats in multi step form divider label
 - Forms: update the date picker to remove the jquery depenency. We now use a new more modern date picker that allows for keyboard navigation
 - Update package dependencies.
 
