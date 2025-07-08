@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add tip about spam auto-clearance every 15 days.
 
 ### Changed
+- Forms: remove the redundant "Manage responses" inspector panel from individual field blocks so it now only appears on the main Contact Form block.
 - Update package dependencies.
 
 ## [3.0.0] - 2025-07-07
