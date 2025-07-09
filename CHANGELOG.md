@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: add tip about spam auto-clearance every 15 days.
+- Use the view_stats cap for the Jetpack Stats menu item instead of manage_options.
 
 ### Improved compatibility
 - Sync: ignore the ActivityPub Outbox CPT
