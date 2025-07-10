@@ -27,8 +27,12 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader-locator.php'
 	),
 	'Automattic\\Block_Delimiter' => array(
-		'version' => '0.2.2.0-alpha1751904629',
+		'version' => '0.3.0.0-alpha1752164193',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/block-delimiter/src/class-block-delimiter.php'
+	),
+	'Automattic\\Block_Scanner' => array(
+		'version' => '0.3.0.0-alpha1752164193',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/block-delimiter/src/class-block-scanner.php'
 	),
 	'Automattic\\Jetpack\\A8c_Mc_Stats' => array(
 		'version' => '3.0.5.0',
