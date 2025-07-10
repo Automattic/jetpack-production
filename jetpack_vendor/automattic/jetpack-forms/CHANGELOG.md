@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: remove the redundant "Manage responses" inspector panel from individual field blocks so it now only appears on the main Contact Form block.
+- Forms: set max width for integrations panel
 - Update package dependencies.
 
 ### Removed
