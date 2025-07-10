@@ -96,6 +96,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
       'ver' => '0.4.8',
     ),
+    'jetpack-paypal-payments' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-paypal-payments',
+      'ver' => '0.1.0-alpha1752133448',
+    ),
     'jetpack-plugins-installer' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
       'ver' => '0.5.5',

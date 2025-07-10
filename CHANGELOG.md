@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Block editor: ensure editor assets endpoint excludes disallowed plugin assets
 - Catch PHP warnings if theme font definitions are in non-standard format.
+- Simple Payments: Move Simple Payments block to PayPal Payments package.
 - Update package dependencies.
 
 ## 14.9-a.1 - 2025-07-07
