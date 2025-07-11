@@ -22,6 +22,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Forms: cleanup code from dashboard
 
+### Fixed
+- Forms: fix React error with key for listed files.
+
 ## [3.0.0] - 2025-07-07
 ### Added
 - Contact Form: Introduce a new "Rating" field block that allows site owners to collect star/heart/smiley/emoji ratings from visitors. [#44094]
