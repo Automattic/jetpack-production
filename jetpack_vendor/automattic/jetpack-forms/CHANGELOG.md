@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add tests on component
+- Forms: add 'empty trash' button
 - Forms: Add link to disconnect Google.
 - Forms: add tip about spam auto-clearance every 15 days.
 

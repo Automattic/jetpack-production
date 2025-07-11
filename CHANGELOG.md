@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: add 'empty trash' button
 - Forms: Add link to disconnect Google.
 - Forms: add tip about spam auto-clearance every 15 days.
 - Forms: responses at dashboard got new refreshed look
@@ -20,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Block editor: ensure editor assets endpoint excludes disallowed plugin assets
 - Catch PHP warnings if theme font definitions are in non-standard format.
 - Comment Subscription Popup Modal: fix php warning
+- Forms: change test script, add components tests
 - Media: Prevent warnings in logs by checking for a directory before attempting to create a newfile.
 - Simple Payments: Move Simple Payments block to PayPal Payments package.
 - Update package dependencies.
