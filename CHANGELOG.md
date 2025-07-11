@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add link to disconnect Google.
 - Forms: add tip about spam auto-clearance every 15 days.
 - Forms: responses at dashboard got new refreshed look
+- Forms: Update integration links.
 - Use the view_stats cap for the Jetpack Stats menu item instead of manage_options.
 
 ### Improved compatibility
