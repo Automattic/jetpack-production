@@ -31,7 +31,7 @@
 		"@automattic/jetpack-api": "^1.0.5",
 		"@automattic/jetpack-components": "^1.1.13",
 		"@automattic/jetpack-connection": "^1.2.13",
-		"@automattic/jetpack-shared-extension-utils": "^1.3.3",
+		"@automattic/jetpack-shared-extension-utils": "^1.3.4-alpha",
 		"@automattic/number-formatters": "^1.0.8",
 		"@tanstack/react-query": "5.75.1",
 		"@wordpress/api-fetch": "7.26.0",
