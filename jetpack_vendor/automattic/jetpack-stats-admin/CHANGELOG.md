@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.28.0-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 0.28.0 - 2025-07-14
 ### Changed
-- Use the view_stats cap for the Jetpack Stats menu item instead of manage_options.
+- Use the `view_stats` capability for the Jetpack Stats menu item instead of `manage_options`. [#44194]
 
 ## 0.27.0 - 2025-06-23
 ### Added

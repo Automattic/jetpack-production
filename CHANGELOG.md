@@ -2,30 +2,27 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.9-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 14.9-a.3 - 2025-07-14
 ### Enhancements
-- Forms: add 'empty trash' button
-- Forms: Add link to disconnect Google.
-- Forms: add tip about spam auto-clearance every 15 days.
-- Forms: improve email copy-to-clipboard visually and make it less hidden.
-- Forms: responses at dashboard got new refreshed look
-- Forms: Update integration links.
-- Use the view_stats cap for the Jetpack Stats menu item instead of manage_options.
+- Forms: Add "Empty trash" button. [#44225]
+- Forms: Add link to disconnect Google. [#44253]
+- Forms: Add tip that spam will automatically be deleted after 15 days. [#44226]
+- Forms: Improve email copy-to-clipboard visually and make it less hidden. [#44264]
+- Forms: Refresh look of responses in dashboard. [#44262]
+- Forms: Update integration links. [#44255]
+- Use the `view_stats` cap for the Jetpack Stats menu item instead of `manage_options`. [#44194]
 
 ### Improved compatibility
-- Sync: ignore the ActivityPub Outbox CPT
+- Sync: Ignore the ActivityPub Outbox CPT. [#44222]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Block editor: ensure editor assets endpoint excludes disallowed plugin assets
-- Catch PHP warnings if theme font definitions are in non-standard format.
-- Comment Subscription Popup Modal: fix php warning
-- Forms: change test script, add components tests
-- Media: Prevent warnings in logs by checking for a directory before attempting to create a newfile.
-- Simple Payments: Move Simple Payments block to PayPal Payments package.
-- Update package dependencies.
+- Block editor: Ensure editor assets endpoint excludes disallowed plugin assets. [#44093]
+- Catch PHP warnings if theme font definitions are in non-standard format. [#44235]
+- Comment Subscription Popup Modal: Fix PHP warning. [#44278]
+- Forms: Change test script and add component tests. [#44225]
+- Media: Prevent warnings in logs by checking for a directory before attempting to create a new file. [#44231]
+- Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
+- Update package dependencies. [#44206] [#44217]
 
 ## 14.9-a.1 - 2025-07-07
 ### Enhancements
