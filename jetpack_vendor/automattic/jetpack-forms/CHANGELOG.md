@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add tip about spam auto-clearance every 15 days.
 
 ### Changed
+- Forms: Make default consent test sentence case.
 - Forms: remove the redundant "Manage responses" inspector panel from individual field blocks so it now only appears on the main Contact Form block.
 - Forms: set max width for integrations panel
 - Forms: update email copy-to-clipboard visually
