@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Forms: consolidate a single hook for all inbox data, making it easier to share the store props and dispatches and removing the need to invalidate the entire store to get fresh listings after emptying trash
 - Forms: Make default consent test sentence case.
 
 ## [3.1.0] - 2025-07-14
