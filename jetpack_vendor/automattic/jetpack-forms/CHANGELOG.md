@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: consolidate a single hook for all inbox data, making it easier to share the store props and dispatches and removing the need to invalidate the entire store to get fresh listings after emptying trash
 - Forms: Make default consent test sentence case.
 
+### Fixed
+- Forms: Fix integration card headers on mobile.
+
 ## [3.1.0] - 2025-07-14
 ### Added
 - Add "Empty trash" button. [#44225]
