@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: consolidate a single hook for all inbox data, making it easier to share the store props and dispatches and removing the need to invalidate the entire store to get fresh listings after emptying trash
 - Forms: Make default consent test sentence case.
+- Forms: make phone fields clickable
 
 ### Fixed
 - Forms: Fix integration card headers on mobile.
