@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Tests: Generate block test files with tab indents.
+
 ## 0.1.0 - 2025-07-14
 ### Added
 - Initial version. [#43315]

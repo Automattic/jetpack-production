@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.23-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Tests: Update class used in Slideshow block.
+
 ## [0.8.22] - 2025-07-14
 ### Changed
 - Update dependencies. [#44229]
@@ -229,6 +236,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated the default columns displayed on the post and page list screens
 - Refactored thumbnail preview to function server side. All javascript removed.
 
+[0.8.23-alpha]: https://github.com/automattic/jetpack-post-list/compare/v0.8.22...v0.8.23-alpha
 [0.8.22]: https://github.com/automattic/jetpack-post-list/compare/v0.8.21...v0.8.22
 [0.8.21]: https://github.com/automattic/jetpack-post-list/compare/v0.8.20...v0.8.21
 [0.8.20]: https://github.com/automattic/jetpack-post-list/compare/v0.8.19...v0.8.20
