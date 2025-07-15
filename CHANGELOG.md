@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Editor assets endpoint: reinstate missing Jetpack assets via handle-based exclusion logic
 - Update dependencies.
+- Widgets: Prevent PHP warning on legacy Twitter Timeline widget.
 
 ## 14.9-a.3 - 2025-07-14
 ### Enhancements
