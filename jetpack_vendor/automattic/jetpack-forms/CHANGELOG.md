@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: add empty spam to delete all responses marked as spam
 - Forms: add Gravatars in form responses
 - Forms: once the migration page is shown and the user clicks on the new dashboard URL, update user option and not render the old menu entry anymore
 
