@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: add Gravatars in form responses
+- Forms: once the migration page is shown and the user clicks on the new dashboard URL, update user option and not render the old menu entry anymore
 
 ### Changed
 - Forms: consolidate a single hook for all inbox data, making it easier to share the store props and dispatches and removing the need to invalidate the entire store to get fresh listings after emptying trash
