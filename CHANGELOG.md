@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: add Gravatars in form responses
 - Forms: Make default consent test sentence case.
 
 ## 14.9-a.3 - 2025-07-14
