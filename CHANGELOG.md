@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Make default consent test sentence case.
 - Forms: make phone fields clickable
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Editor assets endpoint: reinstate missing Jetpack assets via handle-based exclusion logic
+
 ## 14.9-a.3 - 2025-07-14
 ### Enhancements
 - Forms: Add "Empty trash" button. [#44225]
