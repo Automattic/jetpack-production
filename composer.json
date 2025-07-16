@@ -15,7 +15,7 @@
 		"automattic/jetpack-a8c-mc-stats": "^3.0.5",
 		"automattic/jetpack-account-protection": "^0.2.4",
 		"automattic/jetpack-admin-ui": "^0.5.10",
-		"automattic/jetpack-assets": "^4.1.2",
+		"automattic/jetpack-assets": "^4.2.0-alpha",
 		"automattic/jetpack-autoloader": "^5.0.8",
 		"automattic/jetpack-backup": "^4.2.11",
 		"automattic/jetpack-blaze": "^0.25.36",
