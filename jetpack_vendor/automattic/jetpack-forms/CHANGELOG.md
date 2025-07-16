@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: invert default disabled state on empty buttons for a cleaner transition to being available, they will only become enabled when it makes sense (not loading data, total items be a truthy value)
 - Forms: Make default consent test sentence case.
 - Forms: make phone fields clickable
+- Update package dependencies.
 
 ### Fixed
 - Forms: Fix integration card headers on mobile.
