@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add new PayPal payment block.
 - Forms: add Gravatars in form responses
 - Forms: Make default consent test sentence case.
 - Forms: make phone fields clickable

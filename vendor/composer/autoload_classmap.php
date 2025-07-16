@@ -225,6 +225,7 @@ return array(
     'Automattic\\Jetpack\\Password_Checker' => $baseDir . '/jetpack_vendor/automattic/jetpack-password-checker/src/class-password-checker.php',
     'Automattic\\Jetpack\\Paths' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-paths.php',
     'Automattic\\Jetpack\\PayPal_Payments' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/class-paypal-payments.php',
+    'Automattic\\Jetpack\\PaypalPayments\\PayPal_Payment_Buttons' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/paypal-payment-buttons/class-paypal-payment-buttons.php',
     'Automattic\\Jetpack\\PaypalPayments\\SimplePayments\\Block' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/block/class-block.php',
     'Automattic\\Jetpack\\Paypal_Payments\\Simple_Payments' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/legacy/class-simple-payments.php',
     'Automattic\\Jetpack\\Paypal_Payments\\Widgets\\Simple_Payments_Widget' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/widget/class-simple-payments-widget.php',
