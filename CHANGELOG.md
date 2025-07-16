@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add Gravatars in form responses
 - Forms: Make default consent test sentence case.
 - Forms: make phone fields clickable
+- My Jetpack: Enabled access to My Jetpack on WP Multisite.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Editor assets endpoint: reinstate missing Jetpack assets via handle-based exclusion logic
