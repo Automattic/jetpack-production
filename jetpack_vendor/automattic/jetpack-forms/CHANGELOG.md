@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Fix integration card headers on mobile.
+- Forms: prevent post_meta from being created
 - Forms: Remove manual DependencyExtractionWebpackPlugin instantiation.
 
 ## [3.1.0] - 2025-07-14
