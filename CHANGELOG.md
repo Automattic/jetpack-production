@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Enabled access to My Jetpack on WP Multisite.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- E2E tests: remove redundant logic in test fixture and converted the fixture to Typscript
 - Editor assets endpoint: reinstate missing Jetpack assets via handle-based exclusion logic
 - Update dependencies.
 - Widgets: Prevent PHP warning on legacy Twitter Timeline widget.
