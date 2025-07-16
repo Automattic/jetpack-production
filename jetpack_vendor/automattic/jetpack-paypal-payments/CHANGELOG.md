@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Tests: Generate block test files with tab indents.
+- Update package dependencies.
 
 ## 0.1.0 - 2025-07-14
 ### Added
