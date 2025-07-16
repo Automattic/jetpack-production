@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add empty spam to delete all responses marked as spam
 - Forms: add Gravatars in form responses
 - Forms: add tests for feedback endpoint
+- Forms: Display success info after form submission without reload
 - Forms: Include multistep form in Jetpack and WPCOM plans.
 - Forms: once the migration page is shown and the user clicks on the new dashboard URL, update user option and not render the old menu entry anymore
 
