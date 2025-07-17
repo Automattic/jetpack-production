@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Admin Menu: Deprecate "Tools > Monetize" menu
 
+### Deprecated
+- Admin Menu: Deprecate "Users > Subscribers" menu
+
 ## [0.18.2] - 2025-07-14
 ### Changed
 - Update dependencies. [#44229]
