@@ -12,6 +12,8 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Make default consent test sentence case.
 - Forms: make phone fields clickable
 - My Jetpack: Enabled access to My Jetpack on WP Multisite.
+- Podcast player block: improve page load performance by removing use of `lodash`.
+- Story block: improve page load performance by removing use of `lodash`.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: remove redundant logic in test fixture and converted the fixture to Typscript
