@@ -37,7 +37,7 @@
 		"automattic/jetpack-jitm": "^4.2.28",
 		"automattic/jetpack-licensing": "^3.0.9",
 		"automattic/jetpack-logo": "^3.0.5",
-		"automattic/jetpack-masterbar": "^0.18.2",
+		"automattic/jetpack-masterbar": "^0.19.0-alpha",
 		"automattic/jetpack-my-jetpack": "^5.19.0-alpha",
 		"automattic/jetpack-paypal-payments": "^0.2.0-alpha",
 		"automattic/jetpack-plugins-installer": "^0.5.5",
