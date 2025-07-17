@@ -25,6 +25,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: make phone fields clickable
 - Update package dependencies.
 
+### Removed
+- Forms: remove unused editor CSS
+
 ### Fixed
 - Forms: Fix integration card headers on mobile.
 - Forms: prevent post_meta from being created
