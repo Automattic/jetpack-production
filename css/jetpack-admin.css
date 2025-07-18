@@ -121,7 +121,8 @@
   transition: all 0.1s ease-in-out;
 }
 
-.jp-button, .jp-button--settings {
+.jp-button,
+.jp-button--settings {
   display: inline-block;
   position: relative;
   padding: 0.7692307692em 1.4615384615em;
@@ -133,14 +134,18 @@
   background: #6f7476;
   border-radius: 3px;
 }
-.jp-button:visited, .jp-button--settings:visited {
+.jp-button:visited,
+.jp-button--settings:visited {
   color: #efefef;
 }
-.jp-button:hover, .jp-button:focus, .jp-button--settings:hover, .jp-button--settings:focus {
+.jp-button:hover, .jp-button:focus,
+.jp-button--settings:hover,
+.jp-button--settings:focus {
   color: #fff;
   background: #57972d;
 }
-.jp-button:active, .jp-button--settings:active {
+.jp-button:active,
+.jp-button--settings:active {
   background: #57972d;
   opacity: 0.8;
 }
@@ -413,7 +418,8 @@
 .jetpack-pagestyles #screen-meta-links .screen-meta-toggle {
   z-index: 2;
 }
-.jetpack-pagestyles #screen-options-link-wrap, .jetpack-pagestyles #contextual-help-link-wrap {
+.jetpack-pagestyles #screen-options-link-wrap,
+.jetpack-pagestyles #contextual-help-link-wrap {
   border: none;
 }
 .jetpack-pagestyles .update-nag {
@@ -1216,7 +1222,8 @@
   background: rgb(0, 0, 0);
   padding: 2px 6px;
 }
-.wrap .manage-right .subsubsub li.current a, .wrap .manage-right .subsubsub li.current .count {
+.wrap .manage-right .subsubsub li.current a,
+.wrap .manage-right .subsubsub li.current .count {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
@@ -1309,7 +1316,8 @@ tr.jetpack-module th.check-column {
   padding-top: 0;
   width: auto;
 }
-tr.jetpack-module a, tr.jetpack-module p {
+tr.jetpack-module a,
+tr.jetpack-module p {
   text-decoration: none;
 }
 
