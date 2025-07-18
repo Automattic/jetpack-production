@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove unused editor CSS
 
 ### Fixed
+- Forms: Fix export hooks error on mobile.
 - Forms: Fix integration card headers on mobile.
 - Forms: prevent post_meta from being created
 - Forms: Remove manual DependencyExtractionWebpackPlugin instantiation.
