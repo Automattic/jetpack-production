@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Podcast player block: improve page load performance by removing use of `lodash`.
 - Story block: improve page load performance by removing use of `lodash`.
 
+### Bug fixes
+- Social: Fix image validation when images sizes are customised.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Code Modernization: Replace usage of certain preg_match() checks with str_contains().
 - E2E tests: remove redundant logic in test fixture and converted the fixture to Typscript
