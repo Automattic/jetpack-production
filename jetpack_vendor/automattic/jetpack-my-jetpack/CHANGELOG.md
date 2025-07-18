@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Enabled My Jetpack access on WP Multisite.
 - Show warning for products and modules not available for multisite.
+- Update package dependencies.
 
 ## [5.18.0] - 2025-07-14
 ### Added

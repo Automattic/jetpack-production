@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add memoization for connection owner ID to prevent excessive database calls.
 
+### Changed
+- Update package dependencies.
+
 ## [6.14.2] - 2025-07-14
 ### Changed
 - Update dependencies. [#44271]

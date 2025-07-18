@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: remove redundant logic in test fixture and converted the fixture to Typscript
 - Editor assets endpoint: reinstate missing Jetpack assets via handle-based exclusion logic
 - Update dependencies.
+- Update package dependencies.
 - Widgets: Prevent PHP warning on legacy Twitter Timeline widget.
 
 ## 14.9-a.3 - 2025-07-14

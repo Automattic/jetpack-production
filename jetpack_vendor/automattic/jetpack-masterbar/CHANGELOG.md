@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin Menu: Deprecate "Tools > Monetize" menu
+- Update package dependencies.
 
 ### Deprecated
 - Admin Menu: Deprecate "Settings > Podcasting" menu
