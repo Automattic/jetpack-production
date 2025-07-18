@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Deprecate "Tools > Monetize" menu
 
 ### Deprecated
+- Admin Menu: Deprecate "Settings > Podcasting" menu
 - Admin Menu: Deprecate "Users > Subscribers" menu
 
 ## [0.18.2] - 2025-07-14
