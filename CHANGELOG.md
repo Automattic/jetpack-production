@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Enabled access to My Jetpack on WP Multisite.
 - Podcast player block: improve page load performance by removing use of `lodash`.
 - Story block: improve page load performance by removing use of `lodash`.
+- Update PayPal Payment Buttons block to support rendering previews
 
 ### Bug fixes
 - Social: Fix image validation when images sizes are customised.
