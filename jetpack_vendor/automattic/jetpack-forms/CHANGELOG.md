@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: Add error message on network request failure for ajax submission
+
 ### Changed
 - Remove all height hacks, attend to some style issues and fix the footer to the bottom. Works on mobile.
 
