@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Social: Fix image validation when images sizes are customised.
+- Use UTC for Jetpack Stats chart on Dashboard.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Code Modernization: Replace usage of certain preg_match() checks with str_contains().
