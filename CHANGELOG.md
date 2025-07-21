@@ -17,7 +17,6 @@ This is an alpha version! The changes listed here are not final.
 - Update PayPal Payment Buttons block to support rendering previews
 
 ### Bug fixes
-- Forms: fix the way forms are submitted
 - Social: Fix image validation when images sizes are customised.
 - Use UTC for Jetpack Stats chart on Dashboard.
 
