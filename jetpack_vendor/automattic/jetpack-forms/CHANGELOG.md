@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Remove all height hacks, attend to some style issues and fix the footer to the bottom. Works on mobile.
 
+### Fixed
+- Fix padding on input and textarea fields.
+
 ## [4.0.1] - 2025-07-21
 ### Changed
 - Revert forms JWT usage for forms reconstruction from responses. [#44397]

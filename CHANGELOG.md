@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.9-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Forms: Fix padding on input and textarea fields.
+
 ## 14.9-a.5 - 2025-07-21
 ### Enhancements
 - Add new PayPal Payment block (beta). [#43932]
