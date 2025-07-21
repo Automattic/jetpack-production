@@ -2,32 +2,30 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.9-a.4 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 14.9-a.5 - 2025-07-21
 ### Enhancements
-- Add new PayPal payment block.
-- Forms: add Gravatars in form responses
-- Forms: Make default consent test sentence case.
-- Forms: make phone fields clickable
-- My Jetpack: Enabled access to My Jetpack on WP Multisite.
-- Podcast player block: improve page load performance by removing use of `lodash`.
-- Story block: improve page load performance by removing use of `lodash`.
-- Update PayPal Payment Buttons block to support rendering previews
+- Add new PayPal Payment block (beta). [#43932]
+- Forms: Add Gravatars in form responses. [#44270]
+- Forms: Make phone fields clickable [#44291]
+- Forms: Use sentence case in default consent text. [#44078]
+- My Jetpack: Enable access to My Jetpack on WP Multisite. [#44260]
+- Podcast player block: Improve page load performance by removing use of `lodash`. [#44319]
+- Story block: Improve page load performance by removing use of `lodash`. [#44319]
+- Update PayPal Payment Buttons block to support rendering previews. [#44359]
 
 ### Bug fixes
-- Social: Fix image validation when images sizes are customised.
-- Use UTC for Jetpack Stats chart on Dashboard.
+- Dashboard: Use UTC for Jetpack Stats chart. [#44380]
+- Forms: Fix the way forms are submitted. [#44360]
+- Social: Fix image validation when images sizes are customised. [#44368]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Code Modernization: Replace usage of certain preg_match() checks with str_contains().
-- E2E tests: remove redundant logic in test fixture and converted the fixture to Typscript
-- Editor assets endpoint: reinstate missing Jetpack assets via handle-based exclusion logic
-- Subscriptions Widget: Adding fallback values.
-- Update dependencies.
-- Update package dependencies.
-- Widgets: Prevent PHP warning on legacy Twitter Timeline widget.
+- Code Modernization: Replace usage of certain `preg_match()` checks with `str_contains()`. [#44324]
+- E2E tests: Remove redundant logic in test fixture and converted the fixture to Typscript. [#44327]
+- Editor assets endpoint: Reinstate missing Jetpack assets via handle-based exclusion logic. [#44274]
+- Subscriptions Widget: Add fallback values. [#44265]
+- Update dependencies. [#44099]
+- Update package dependencies. [#44356]
+- Widgets: Prevent PHP warning on legacy Twitter Timeline widget. [#44317]
 
 ## 14.9-a.3 - 2025-07-14
 ### Enhancements
