@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - Update PayPal Payment Buttons block to support rendering previews
 - Updates code entry inputs to mirror the PayPal.com UI for clarity
+- Updates PayPal Payment Buttons block copy to be simpler.
 
 ## 0.1.0 - 2025-07-14
 ### Added
