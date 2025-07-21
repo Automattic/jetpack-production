@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Code Modernization: Replace usage of certain preg_match() checks with str_contains().
 - E2E tests: remove redundant logic in test fixture and converted the fixture to Typscript
 - Editor assets endpoint: reinstate missing Jetpack assets via handle-based exclusion logic
+- Subscriptions Widget: Adding fallback values.
 - Update dependencies.
 - Update package dependencies.
 - Widgets: Prevent PHP warning on legacy Twitter Timeline widget.
