@@ -5,19 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.2.0] - 2025-07-21
 ### Added
-- Add new PayPal payment block.
+- Add new PayPal Payment block. [#43932]
 
 ### Changed
-- Tests: Generate block test files with tab indents.
-- Update package dependencies.
-- Update PayPal Payment Buttons block to support rendering previews
-- Updates code entry inputs to mirror the PayPal.com UI for clarity
-- Updates PayPal Payment Buttons block copy to be simpler.
+- Tests: Generate block test files with tab indents. [#44099]
+- Update package dependencies. [#44337] [#44338] [#44356]
+- Update PayPal Payment Buttons block to support rendering previews. [#44359]
 
 ## 0.1.0 - 2025-07-14
 ### Added
@@ -26,4 +21,4 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.2.0-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.1.0...v0.2.0-alpha
+[0.2.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.1.0...v0.2.0

@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.2.0] - 2025-07-21
 ### Changed
-- Script Data: Ensure we only add host information on the front-end for P2 and sites using Verbum Comments.
+- Script Data: Ensure we only add host information on the front-end for P2 and sites using Verbum Comments. [#44241]
 
 ## [4.1.2] - 2025-07-08
 ### Changed
@@ -683,7 +680,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Statically access asset tools
 
-[4.2.0-alpha]: https://github.com/Automattic/jetpack-assets/compare/v4.1.2...v4.2.0-alpha
+[4.2.0]: https://github.com/Automattic/jetpack-assets/compare/v4.1.2...v4.2.0
 [4.1.2]: https://github.com/Automattic/jetpack-assets/compare/v4.1.1...v4.1.2
 [4.1.1]: https://github.com/Automattic/jetpack-assets/compare/v4.1.0...v4.1.1
 [4.1.0]: https://github.com/Automattic/jetpack-assets/compare/v4.0.32...v4.1.0
