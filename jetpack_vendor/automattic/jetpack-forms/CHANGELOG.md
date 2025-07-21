@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.2.0-alpha] - unreleased
+## [4.0.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove unused editor CSS
 
 ### Fixed
+- Forms: add a JWT token when submitting the form so that we are able to instantiate on submit
 - Forms: Fix export hooks error on mobile.
 - Forms: Fix integration card headers on mobile.
 - Forms: fix no padding next to Gravatar on mobile
@@ -1324,7 +1325,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[3.2.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v3.1.0...v3.2.0-alpha
+[4.0.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v3.1.0...v4.0.0-alpha
 [3.1.0]: https://github.com/automattic/jetpack-forms/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/automattic/jetpack-forms/compare/v2.1.0...v3.0.0
 [2.1.0]: https://github.com/automattic/jetpack-forms/compare/v2.0.1...v2.1.0
