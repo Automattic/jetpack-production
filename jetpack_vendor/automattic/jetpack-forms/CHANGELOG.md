@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Move integration badge on mobile.
+- Forms: Update integration modal links.
 - Forms: use Badge component for badges in Forms
 - Remove all height hacks, attend to some style issues and fix the footer to the bottom. Works on mobile.
 
