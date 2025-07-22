@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Removed
+- Removed old onboarding global notice.
+
 ## [5.19.0] - 2025-07-21
 ### Changed
 - Enable My Jetpack access on WP Multisite. [#44260]
