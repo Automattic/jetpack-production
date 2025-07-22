@@ -42,7 +42,7 @@
 		"automattic/jetpack-paypal-payments": "^0.3.0-alpha",
 		"automattic/jetpack-plugins-installer": "^0.5.6",
 		"automattic/jetpack-post-list": "^0.8.23",
-		"automattic/jetpack-publicize": "^0.66.2",
+		"automattic/jetpack-publicize": "^0.66.3-alpha",
 		"automattic/jetpack-redirect": "^3.0.8",
 		"automattic/jetpack-roles": "^3.0.8",
 		"automattic/jetpack-search": "^0.52.8",
