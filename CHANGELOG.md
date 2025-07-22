@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Clears PayPal Payment buttons block parameters when changing block type
+- Floating subscription button: display on mobile devices as well when enabled.
 - Forms: Fix padding on input and textarea fields.
 - Forms: fix the way forms are submitted
 - Social Image Generator: do not use the latest post's Social Image as Open Graph Image tag on the home page.
