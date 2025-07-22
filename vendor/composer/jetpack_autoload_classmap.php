@@ -150,6 +150,10 @@ return array(
 		'version' => '0.3.7.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup-helper-script-manager/src/class-throw-on-errors.php'
 	),
+	'Automattic\\Jetpack\\BeforeValidException' => array(
+		'version' => '0.2.0.0-alpha1753195246',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jwt/src/class-jwt.php'
+	),
 	'Automattic\\Jetpack\\Blaze' => array(
 		'version' => '0.25.37.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-blaze/src/class-blaze.php'
@@ -434,8 +438,12 @@ return array(
 		'version' => '0.3.4.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-explat/src/class-rest-controller.php'
 	),
+	'Automattic\\Jetpack\\ExpiredException' => array(
+		'version' => '0.2.0.0-alpha1753195246',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jwt/src/class-jwt.php'
+	),
 	'Automattic\\Jetpack\\Extensions\\Contact_Form\\Contact_Form_Block' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/blocks/contact-form/class-contact-form-block.php'
 	),
 	'Automattic\\Jetpack\\External_Media\\External_Media' => array(
@@ -447,59 +455,59 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Admin' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-admin.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Endpoint' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-endpoint.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Field' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-field.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Plugin' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-plugin.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Shortcode' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-shortcode.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Editor_View' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-editor-view.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Form_View' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-form-view.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Util' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-util.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard_View_Switch' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard-view-switch.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Jetpack_Forms' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-jetpack-forms.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Service\\Google_Drive' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-google-drive.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Service\\Post_To_Url' => array(
-		'version' => '4.1.0.0-alpha1753158775',
+		'version' => '5.0.0.0-alpha1753195246',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-post-to-url.php'
 	),
 	'Automattic\\Jetpack\\Heartbeat' => array(
@@ -641,6 +649,10 @@ return array(
 	'Automattic\\Jetpack\\JITMS\\Rest_Api_Endpoints' => array(
 		'version' => '4.2.29.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jitm/src/class-rest-api-endpoints.php'
+	),
+	'Automattic\\Jetpack\\JWT' => array(
+		'version' => '0.2.0.0-alpha1753195246',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jwt/src/class-jwt.php'
 	),
 	'Automattic\\Jetpack\\Jetpack_CRM_Data' => array(
 		'version' => 'dev-trunk',
@@ -1213,6 +1225,10 @@ return array(
 	'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => array(
 		'version' => '0.52.8.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-parser.php'
+	),
+	'Automattic\\Jetpack\\SignatureInvalidException' => array(
+		'version' => '0.2.0.0-alpha1753195246',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jwt/src/class-jwt.php'
 	),
 	'Automattic\\Jetpack\\Stats\\Main' => array(
 		'version' => '0.17.2.0',

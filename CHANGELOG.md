@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Clears PayPal Payment buttons block parameters when changing block type
 - Forms: Fix padding on input and textarea fields.
+- Forms: fix the way forms are submitted
 - Social Image Generator: do not use the latest post's Social Image as Open Graph Image tag on the home page.
 
 ## 14.9-a.5 - 2025-07-21
