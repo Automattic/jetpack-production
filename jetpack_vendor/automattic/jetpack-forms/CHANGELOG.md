@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.0.2-alpha] - unreleased
+## [4.1.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add error message on network request failure for ajax submission
 
 ### Changed
+- Forms: Move integration badge on mobile.
 - Remove all height hacks, attend to some style issues and fix the footer to the bottom. Works on mobile.
 
 ### Fixed
@@ -1339,7 +1340,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[4.0.2-alpha]: https://github.com/automattic/jetpack-forms/compare/v4.0.1...v4.0.2-alpha
+[4.1.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v4.0.1...v4.1.0-alpha
 [4.0.1]: https://github.com/automattic/jetpack-forms/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/automattic/jetpack-forms/compare/v3.1.0...v4.0.0
 [3.1.0]: https://github.com/automattic/jetpack-forms/compare/v3.0.0...v3.1.0
