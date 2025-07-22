@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Clears PayPal Payment buttons block parameters when changing block type
 - Updates code entry inputs to mirror the PayPal.com UI for clarity
 - Updates PayPal Payment Buttons block copy to be simpler.
 

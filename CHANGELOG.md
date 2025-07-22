@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Clears PayPal Payment buttons block parameters when changing block type
 - Forms: Fix padding on input and textarea fields.
 
 ## 14.9-a.5 - 2025-07-21
