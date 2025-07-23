@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix the way forms are submitted
 - Related Posts: Ensure results are available via REST API directly.
 - Social Image Generator: do not use the latest post's Social Image as Open Graph Image tag on the home page.
+- Update JITMs to remove jQuery dependency
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Autoupdate: Prevent warnings when data is malformed.
