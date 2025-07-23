@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Carousel: Fix disabling all photon args when opening an image in a lightbox.
 - Clears PayPal Payment buttons block parameters when changing block type
 - Floating subscription button: display on mobile devices as well when enabled.
 - Forms: Fix padding on input and textarea fields.
