@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Social Image Generator: do not use the latest post's Social Image as Open Graph Image tag on the home page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Autoupdate: Prevent warnings when data is malformed.
 - Connection: removed hardcoded custom errors and added support for dynamic errors.
 - Dashboard: Prevent failure if stats endpoint returns an error.
 
