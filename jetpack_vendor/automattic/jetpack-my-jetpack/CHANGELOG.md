@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Connection: removed hardcoded custom errors and added support for dynamic errors.
+- Replace static mobile app text with direct link to download page
 - Update dependencies.
 
 ### Removed
