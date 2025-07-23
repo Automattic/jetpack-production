@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Add error message on network request failure for ajax submission
+- Forms: Add MailPoet to integration modal.
 
 ### Changed
 - Forms: Move integration badge on mobile.
