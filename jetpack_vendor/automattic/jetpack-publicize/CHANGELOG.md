@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Social Image Generator: do not use the latest post's Social Image as Open Graph Image tag on the home page.
+- Social Image Generator: ensure token generation is limited on WordPress.com simple sites.
 
 ## [0.66.2] - 2025-07-21
 ### Changed
