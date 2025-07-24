@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix padding on input and textarea fields.
 - Forms: add a JWT token when submitting the form so that we are able to instantiate on submit
+- Forms: Adds a new Feedback and Feedback_Field class that keeps consistency between DB form response and the one before we submit it.
 - Forms: Fix form id collision check
 
 ## [4.0.1] - 2025-07-21
