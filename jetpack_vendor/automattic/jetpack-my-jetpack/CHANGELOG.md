@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.20.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Removed
+- Admin: remove references to deprecated feature.
+
 ## [5.20.0] - 2025-07-23
 ### Changed
 - Connection: removed hardcoded custom errors and added support for dynamic errors. [#44281]
@@ -2258,6 +2265,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.20.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.20.0...5.20.1-alpha
 [5.20.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.19.0...5.20.0
 [5.19.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.18.0...5.19.0
 [5.18.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.17.4...5.18.0
