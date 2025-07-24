@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add MailPoet to integration modal.
 
 ### Changed
+- Forms: fix Sass warning in inbox
 - Forms: Move integration badge on mobile.
 - Forms: Update integration modal links.
 - Forms: use Badge component for badges in Forms
