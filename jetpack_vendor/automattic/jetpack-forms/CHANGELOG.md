@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Add error message on network request failure for ajax submission
 - Forms: Add MailPoet to integration modal.
+- Forms: Add toggle to enable MailPoet integration.
 
 ### Changed
 - Forms: fix Sass warning in inbox
