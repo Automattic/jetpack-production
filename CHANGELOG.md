@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update JITMs to remove jQuery dependency
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Fix Jetpack AI links on block editor
 - Autoupdate: Prevent warnings when data is malformed.
 - Connection: removed hardcoded custom errors and added support for dynamic errors.
 - Dashboard: Prevent failure if stats endpoint returns an error.
