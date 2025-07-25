@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add a JWT token when submitting the form so that we are able to instantiate on submit
 - Forms: allow About page to grow width so content remains centered even on oversized screens
 - Forms: Fix form id collision check
+- Forms: minor css fixes for the admin side
 - Forms: only enqueue view script when the form is rendered
 
 ## [4.0.1] - 2025-07-21
