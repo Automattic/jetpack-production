@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.25.38-alpha] - unreleased
+## [0.26.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Added whitelisting for payments endpoint
 
 ### Changed
 - Update dependencies.
@@ -653,7 +656,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.25.38-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.25.37...v0.25.38-alpha
+[0.26.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.25.37...v0.26.0-alpha
 [0.25.37]: https://github.com/automattic/jetpack-blaze/compare/v0.25.36...v0.25.37
 [0.25.36]: https://github.com/automattic/jetpack-blaze/compare/v0.25.35...v0.25.36
 [0.25.35]: https://github.com/automattic/jetpack-blaze/compare/v0.25.34...v0.25.35
