@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add toggle to enable MailPoet integration.
 
 ### Changed
+- Forms: clean up old unused CSS for inbox"
 - Forms: fix Sass warning in inbox
 - Forms: Move integration badge on mobile.
 - Forms: Update integration modal links.
