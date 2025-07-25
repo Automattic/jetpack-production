@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Deprecated
+- Social Image Generator: deprecate unused methods.
+
 ### Fixed
 - Social Image Generator: do not use the latest post's Social Image as Open Graph Image tag on the home page.
 - Social Image Generator: ensure token generation is limited on WordPress.com simple sites.
