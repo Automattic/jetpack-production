@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Open Graph Meta tags: add a new fallback image to display on the home page.
+
 ### Bug fixes
 - Carousel: Fix disabling all photon args when opening an image in a lightbox.
 - Clears PayPal Payment buttons block parameters when changing block type
