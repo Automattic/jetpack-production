@@ -50,7 +50,7 @@
 		"automattic/jetpack-stats-admin": "^0.28.1",
 		"automattic/jetpack-status": "^6.0.0",
 		"automattic/jetpack-subscribers-dashboard": "^0.1.24-alpha",
-		"automattic/jetpack-sync": "^4.15.2",
+		"automattic/jetpack-sync": "^4.15.3-alpha",
 		"automattic/jetpack-videopress": "^0.30.6-alpha",
 		"automattic/jetpack-waf": "^0.27.1",
 		"automattic/woocommerce-analytics": "^0.4.8",
