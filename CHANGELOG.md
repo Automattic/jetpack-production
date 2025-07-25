@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Open Graph Meta tags: add a new fallback image to display on the home page.
+- Open Graph meta tags: support site logos when generating fallback Image Meta tags.
 
 ### Bug fixes
 - Carousel: Fix disabling all photon args when opening an image in a lightbox.
