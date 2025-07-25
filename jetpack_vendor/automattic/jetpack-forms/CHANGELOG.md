@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix Sass warning in inbox
 - Forms: Move integration badge on mobile.
 - Forms: Update integration modal links.
+- Forms: update step divider to look more like UI element
 - Forms: use Badge component for badges in Forms
 - Remove all height hacks, attend to some style issues and fix the footer to the bottom. Works on mobile.
 
