@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- My Jetpack: Fixing footer alignment for diconnected accounts.
+
 ## [5.20.1] - 2025-07-24
 ### Removed
 - Admin: remove references to deprecated feature.

@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix the way forms are submitted
 - Forms: only enqueue view script when the form is rendered
 - Mailchimp block: fix links to accommodate for a bug in Gutenberg
+- My Jetpack: Fixing footer alignment for diconnected accounts.
 - Related Posts: Ensure results are available via REST API directly.
 - Social Image Generator: do not use the latest post's Social Image as Open Graph Image tag on the home page.
 - Update JITMs to remove jQuery dependency
