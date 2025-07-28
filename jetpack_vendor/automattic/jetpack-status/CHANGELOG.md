@@ -5,13 +5,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.1.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
-### Added
-- P2: Added a helper function in the Host package and ensured any P2 check uses this.
-
 ## [6.0.0] - 2025-07-21
 ### Removed
 - Remove host guess based on DNS. [#44325]
@@ -500,7 +493,6 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Introduce a status package
 
-[6.1.0-alpha]: https://github.com/Automattic/jetpack-status/compare/v6.0.0...v6.1.0-alpha
 [6.0.0]: https://github.com/Automattic/jetpack-status/compare/v5.4.0...v6.0.0
 [5.4.0]: https://github.com/Automattic/jetpack-status/compare/v5.3.1...v5.4.0
 [5.3.1]: https://github.com/Automattic/jetpack-status/compare/v5.3.0...v5.3.1
