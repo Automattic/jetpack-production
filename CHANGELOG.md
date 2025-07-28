@@ -2,35 +2,32 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 14.9-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 14.9-a.7 - 2025-07-28
 ### Enhancements
-- Open Graph Meta tags: add a new fallback image to display on the home page.
-- Open Graph meta tags: support site logos when generating fallback Image Meta tags.
+- Open Graph Meta tags: Add a new fallback image to display on the home page. [#44336]
+- Open Graph meta tags: Support site logos when generating fallback Image Meta tags. [#44473]
 
 ### Bug fixes
-- Carousel: Fix disabling all photon args when opening an image in a lightbox.
-- Clears PayPal Payment buttons block parameters when changing block type
-- Floating subscription button: display on mobile devices as well when enabled.
-- Forms: Fix padding on input and textarea fields.
-- Forms: fix the way forms are submitted
-- Forms: only enqueue view script when the form is rendered
-- Mailchimp block: fix links to accommodate for a bug in Gutenberg
-- My Jetpack: Fixing footer alignment for diconnected accounts.
-- Related Posts: Ensure results are available via REST API directly.
-- Site Abstraction Layer: Minor cleanup to ensure we use variables in the correct format, preventing PHP warnings.
-- Social Image Generator: do not use the latest post's Social Image as Open Graph Image tag on the home page.
-- Update JITMs to remove jQuery dependency
+- Carousel: Fix disabling all photon args when opening an image in a lightbox. [#44396]
+- Clear PayPal Payment button block parameters when changing block type. [#44388]
+- Forms: Fix padding on input and textarea fields. [#44401]
+- Forms: Fix the way forms are submitted. [#44399]
+- Forms: Enqueue view script only when the form is rendered. [#44460]
+- JITM: Remove jQuery dependency. [#43783]
+- Mailchimp block: Fix links to accommodate for a bug in Gutenberg. [#44474]
+- My Jetpack: Fix footer alignment for disconnected accounts. [#44468]
+- Related Posts: Ensure results are available via REST API directly. [#44371]
+- Social Image Generator: Do not use the latest post's Social Image as Open Graph Image tag on the home page. [#44377]
+- Subscriptions: Display floating subscription button on mobile devices as well when enabled. [#44415]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- AI Assistant: Fix Jetpack AI links on block editor
-- Autoupdate: Prevent warnings when data is malformed.
-- Connection: removed hardcoded custom errors and added support for dynamic errors.
-- Dashboard: Prevent failure if stats endpoint returns an error.
-- Slideshow block: Ensure image shows in editor when only one image is present.
-- Testing: Add instructions for Jetpack 14.9.
+- AI Assistant: Fix Jetpack AI links on block editor. [#44405]
+- Autoupdate: Prevent warnings when data is malformed. [#44420]
+- Connection: Remove hard-coded custom errors and added support for dynamic errors. [#44281]
+- Dashboard: Prevent failure if stats endpoint returns an error. [#44417]
+- Site Abstraction Layer: Prevent PHP warnings by ensuring we use variables in the correct format. [#44413]
+- Slideshow block: Ensure image shows in editor when only one image is present. [#44457]
+- Testing: Add instructions for Jetpack 14.9. [#44497]
 
 ## 14.9-a.5 - 2025-07-21
 ### Enhancements

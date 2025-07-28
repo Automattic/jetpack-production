@@ -5,35 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.0.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.0.0] - 2025-07-28
 ### Added
-- Forms: Add error message on network request failure for ajax submission
-- Forms: Adding new classes for the Feedback refactor
-- Forms: Add MailPoet backend integration.
-- Forms: Add MailPoet to integration modal.
-- Forms: Add toggle to enable MailPoet integration.
+- Add error message on network request failure for AJAX submission. [#44386]
+- Add MailPoet integration. [#44425] [#44431] [#44439]
+- Add new classes for the Feedback refactor. [#44483]
 
 ### Changed
-- Forms: clean up old unused CSS for inbox"
-- Forms: fix Sass warning in inbox
-- Forms: Move integration badge on mobile.
-- Forms: Update integration modal links.
-- Forms: update step divider to look more like UI element
-- Forms: use Badge component for badges in Forms
-- Remove all height hacks, attend to some style issues and fix the footer to the bottom. Works on mobile.
+- Clean up unused CSS. [#44471]
+- Improve mobile interface. [#44381] [#44391]
+- Remove all height hacks, clean up some style issues, and fix the footer to the bottom.
+- Update integration modal links. [#44409]
+- Update step divider to look more like UI element. [#44402]
+- Use Badge component for badges. [#44347]
 
 ### Fixed
-- Fix padding on input and textarea fields.
-- Forms: add a JWT token when submitting the form so that we are able to instantiate on submit
-- Forms: allow About page to grow width so content remains centered even on oversized screens
-- Forms: Fix field order on success message
-- Forms: Fix form id collision check
-- Forms: minor css fixes for the admin side
-- Forms: only enqueue view script when the form is rendered
-- Forms: use a core variable to account for admin bar and CSS to account for folded sidebar.
+- Add a JWT token when submitting the form so that we are able to instantiate on submit. [#44399]
+- Allow About page to grow width so content remains centered even on oversized screens. [#44477]
+- Enqueue view script only when the form is rendered. [#44460]
+- Fix Sass warning in inbox. [#44442]
+- Fix padding on input and textarea fields. [#44401]
+- Fix field order on success message. [#44482]
+- Fix form ID collision check. [#44406]
+- Improve CSS on the admin side. [#44478]
+- Use a core variable to account for admin bar and CSS to account for folded sidebar. [#44470]
 
 ## [4.0.1] - 2025-07-21
 ### Changed
@@ -1356,7 +1351,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[5.0.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v4.0.1...v5.0.0-alpha
+[5.0.0]: https://github.com/automattic/jetpack-forms/compare/v4.0.1...v5.0.0
 [4.0.1]: https://github.com/automattic/jetpack-forms/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/automattic/jetpack-forms/compare/v3.1.0...v4.0.0
 [3.1.0]: https://github.com/automattic/jetpack-forms/compare/v3.0.0...v3.1.0
