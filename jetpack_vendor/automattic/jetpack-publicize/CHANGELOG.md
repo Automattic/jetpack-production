@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.66.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.66.3] - 2025-07-28
 ### Deprecated
-- Social Image Generator: deprecate unused methods.
+- Social Image Generator: Deprecate unused methods. [#44378]
 
 ### Fixed
-- Social Image Generator: do not use the latest post's Social Image as Open Graph Image tag on the home page.
-- Social Image Generator: ensure token generation is limited on WordPress.com simple sites.
+- Social Image Generator: Do not use the latest post's Social Image as Open Graph Image tag on the home page. [#44377]
+- Social Image Generator: Ensure token generation is limited on WordPress.com Simple sites. [#44350]
 
 ## [0.66.2] - 2025-07-21
 ### Changed
@@ -1066,7 +1063,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.66.3-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.2...v0.66.3-alpha
+[0.66.3]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.2...v0.66.3
 [0.66.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.1...v0.66.2
 [0.66.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.0...v0.66.1
 [0.66.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.65.7...v0.66.0
