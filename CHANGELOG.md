@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: removed hardcoded custom errors and added support for dynamic errors.
 - Dashboard: Prevent failure if stats endpoint returns an error.
 - Slideshow block: Ensure image shows in editor when only one image is present.
+- Testing: Add instructions for Jetpack 14.9.
 
 ## 14.9-a.5 - 2025-07-21
 ### Enhancements
