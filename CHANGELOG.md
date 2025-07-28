@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Autoupdate: Prevent warnings when data is malformed.
 - Connection: removed hardcoded custom errors and added support for dynamic errors.
 - Dashboard: Prevent failure if stats endpoint returns an error.
+- P2: Added a helper function in the Host package and ensured any P2 check uses this.
 - Slideshow block: Ensure image shows in editor when only one image is present.
 
 ## 14.9-a.5 - 2025-07-21
