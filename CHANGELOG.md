@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: Submit forms without page reload
+- Sitemap: Reduce memory usage when generating sitemaps.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Forms: Enable Jetpack AI to generate multistep forms.
