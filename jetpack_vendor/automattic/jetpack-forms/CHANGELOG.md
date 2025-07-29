@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.1.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Forms: Submit forms without page reload
+
 ## [5.0.0] - 2025-07-28
 ### Added
 - Add error message on network request failure for AJAX submission. [#44386]
@@ -1351,6 +1358,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[5.1.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v5.0.0...v5.1.0-alpha
 [5.0.0]: https://github.com/automattic/jetpack-forms/compare/v4.0.1...v5.0.0
 [4.0.1]: https://github.com/automattic/jetpack-forms/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/automattic/jetpack-forms/compare/v3.1.0...v4.0.0
