@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 14.9-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Forms: Enable Jetpack AI to generate multistep forms.
+
 ## 14.9-a.7 - 2025-07-28
 ### Enhancements
 - Open Graph Meta tags: Add a new fallback image to display on the home page. [#44336]
