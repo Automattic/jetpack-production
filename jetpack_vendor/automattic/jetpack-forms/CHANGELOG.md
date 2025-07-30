@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Form: fix flaky csv export test
+- Forms: Fix PHP warnings in Contact_Form_Plugin class.
 - Forms: remove a PHP notice when non string is passed in
 
 ## [5.0.0] - 2025-07-28
