@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Performance: improve processing of blocks with the Blogging Prompt feature.
 - Sitemap: Reduce memory usage when generating sitemaps.
 
+### Bug fixes
+- My Jetpack: Restoring plan purchase link.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add promotional sticker to the get site endpoint
 - Forms: Enable Jetpack AI to generate multistep forms.

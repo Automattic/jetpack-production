@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Remove redundant sending on "nocache" headers on the My Jetpack admin screen, as these are already sent by WordPress
 
+### Fixed
+- My Jetpack: Restoring plan purchase link.
+
 ## [5.20.2] - 2025-07-28
 ### Changed
 - Update dependencies. [#44463]
