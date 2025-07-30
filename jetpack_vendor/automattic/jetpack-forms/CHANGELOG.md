@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Fix how form id is calcualted
 - Forms: Submit forms without page reload
+- Forms: use the new Feedback Class when downloading a csv file
 
 ### Fixed
 - Forms: remove a PHP notice when non string is passed in
