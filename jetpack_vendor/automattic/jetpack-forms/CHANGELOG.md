@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: use the new Feedback Class when downloading a csv file
 
 ### Fixed
+- Form: fix flaky csv export test
 - Forms: remove a PHP notice when non string is passed in
 
 ## [5.0.0] - 2025-07-28
