@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Form: fix flaky csv export test
 - Forms: Add safeguards when getting post properties during AJAX calls
+- Forms: Do not send AJAX submission if form has custom redirect
 - Forms: Fix PHP warning in forms admin class.
 - Forms: Fix PHP warnings in Contact_Form_Plugin class.
 - Forms: remove a PHP notice when non string is passed in
