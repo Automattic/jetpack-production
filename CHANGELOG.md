@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Sitemap: Reduce memory usage when generating sitemaps.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add promotional sticker to the get site endpoint
 - Forms: Enable Jetpack AI to generate multistep forms.
 - Forms: update the way that the form id is being created for consistancy and fix bugs
 - Infinite Scroll: Prevent PHP warnings when settings are malformed.
