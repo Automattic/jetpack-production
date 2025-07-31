@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.30.7-alpha] - unreleased
+## [0.31.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- My Jetpack: Unify the user connection flow with a unified screen.
 - Update dependencies.
 
 ## [0.30.6] - 2025-07-28
@@ -1705,7 +1706,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.30.7-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.30.6...v0.30.7-alpha
+[0.31.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.30.6...v0.31.0-alpha
 [0.30.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.30.5...v0.30.6
 [0.30.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.30.4...v0.30.5
 [0.30.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.30.3...v0.30.4

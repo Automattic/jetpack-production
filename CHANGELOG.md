@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: Submit forms without page reload
+- My Jetpack: Unify the user connection flow with a unified screen.
 - Performance: improve processing of blocks with the Blogging Prompt feature.
 - Sitemap: Reduce memory usage when generating sitemaps.
 
