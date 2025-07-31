@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add helper to clear all custom transients at the same time.
+
 ## [0.3.11] - 2025-06-23
 ### Fixed
 - General: ensure the correct home page is checked when sites are using WP in a subfolder. [#44007]
