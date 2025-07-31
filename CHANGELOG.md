@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - My Jetpack: Restoring plan purchase link.
 - Newsletter: fix bug in category settings
+- Subscriptions: avoid enqueuing the legacy widget's stylesheet in block-based themes.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add promotional sticker to the get site endpoint
