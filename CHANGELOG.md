@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Enable Jetpack AI to generate multistep forms.
 - Forms: update the way that the form id is being created for consistancy and fix bugs
 - Infinite Scroll: Prevent PHP warnings when settings are malformed.
+- Memberships: Add validation for newsletter plan tiers.
 - Prevent PHP errors when directly accessing various files.
 - Remove redundant setting of no-store directive on Cache-Control response header on Jetpack admin screen
 
