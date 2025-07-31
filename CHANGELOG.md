@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Unify the user connection flow with a unified screen.
 - Performance: improve processing of blocks with the Blogging Prompt feature.
 - Sitemap: Reduce memory usage when generating sitemaps.
+- Social: Improve performance when sanitizing OpenGraph tags.
 - Subscriptions: improve performance of the legacy Subscriptions widget, by allowing inlining the CSS, and minifying the CSS in production environments.
 - WooCommerce Analytics Module: improve performance of block processing during Analytics gathering
 
