@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Fix how form id is calcualted
 - Forms: Submit forms without page reload
+- Forms: Update how the success messages to use the new Feedback class
 - Forms: update internal_personal_data_exporter to use new Feedback class
 - Forms: Use the new Feedback Class in feedback endpoint response
 - Forms: use the new Feedback Class when downloading a csv file
