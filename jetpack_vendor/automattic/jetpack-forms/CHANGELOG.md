@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Add mailpoet/lists endpoint.
+- Forms: Add slider field block.
 
 ### Changed
 - Forms: Fix how form id is calcualted
