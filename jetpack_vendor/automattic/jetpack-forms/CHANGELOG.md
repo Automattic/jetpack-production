@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update internal_personal_data_exporter to use new Feedback class
 - Forms: Use the new Feedback Class in feedback endpoint response
 - Forms: use the new Feedback Class when downloading a csv file
+- Update @wordpress/dataviews to 5.0.0
 
 ### Fixed
 - Form: fix flaky csv export test
