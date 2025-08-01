@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Unify the user connection flow with a unified screen.
 - Update @wordpress/dataviews to 5.0.0
 
+### Fixed
+- My Jetpack: Prevent expiration alerts for products covered by active bundles
+
 ## [5.21.0] - 2025-07-30
 ### Removed
 - Remove redundant sending on "nocache" headers on the My Jetpack admin screen, as these are already sent by WordPress. [#44322]

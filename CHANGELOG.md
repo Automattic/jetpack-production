@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - WooCommerce Analytics Module: improve performance of block processing during Analytics gathering
 
 ### Bug fixes
+- My Jetpack: Prevent expiration alerts for products covered by active bundles
 - My Jetpack: Restoring plan purchase link.
 - Newsletter: fix bug in category settings
 - Subscriptions: avoid enqueuing the legacy widget's stylesheet in block-based themes.
