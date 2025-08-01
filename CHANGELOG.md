@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Improve performance when sanitizing OpenGraph tags.
 - Social: Improve performance when selecting images for OpenGraph tags.
 - Subscriptions: improve performance of the legacy Subscriptions widget, by allowing inlining the CSS, and minifying the CSS in production environments.
+- Widget Conditions Module: improve performance of block processing during conditional checking
 - WooCommerce Analytics Module: improve performance of block processing during Analytics gathering
 
 ### Bug fixes
