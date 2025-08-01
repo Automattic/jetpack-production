@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix PHP warning in forms admin class.
 - Forms: Fix PHP warnings in Contact_Form_Plugin class.
 - Forms: remove a PHP notice when non string is passed in
+- Forms: trim the value before validating if empty form
 
 ## [5.0.0] - 2025-07-28
 ### Added
