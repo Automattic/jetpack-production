@@ -5,35 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.1.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.1.0] - 2025-08-04
 ### Added
-- Forms: Add mailpoet/lists endpoint.
-- Forms: Add slider field block.
+- Add mailpoet/lists endpoint. [#44516]
+- Add slider field block. [#44150]
 
 ### Changed
-- Forms: Fix how form id is calcualted
-- Forms: ratings field - fix partial translation
-- Forms: Submit forms without page reload
-- Forms: Update how the success messages to use the new Feedback class
-- Forms: update internal_personal_data_exporter to use new Feedback class
-- Forms: update to shorter way to get view.js path
-- Forms: Use the new Feedback Class in feedback endpoint response
-- Forms: use the new Feedback Class when downloading a csv file
-- Update @wordpress/dataviews to 5.0.0
+- Fix how form id is calculated. [#44501]
+- Ratings field: fix translation issues. [#44593]
+- Submit forms without page reload. [#44422]
+- Update @wordpress/dataviews to 5.0.0. [#44376]
+- Update how the success messages to use the new Feedback class. [#44489]
+- Update internal_personal_data_exporter to use new Feedback class. [#44488]
+- Update to shorter way to get view.js path. [#44542]
+- Use the new Feedback Class in feedback endpoint response. [#44485]
+- Use the new Feedback Class when downloading a CSV file. [#44487]
 
 ### Fixed
-- Form: fix flaky csv export test
-- Forms: Add safeguards when getting post properties during AJAX calls
-- Forms: Do not send AJAX submission if form has custom redirect
-- Forms: fix label encoding issues, and handle empty- and duplicate label names
-- Forms: Fix PHP warning in forms admin class.
-- Forms: Fix PHP warnings in Contact_Form_Plugin class.
-- Forms: handle placeholder for textareas in the editor the same way input tags do
-- Forms: remove a PHP notice when non string is passed in
-- Forms: trim the value before validating if empty form
+- Add safeguards when getting post properties during AJAX calls. [#44533]
+- Do not send AJAX submission if form has custom redirect. [#44557]
+- Fix flaky CSV export test. [#44552]
+- Fix label encoding issues, and handle empty and duplicate label names. [#44599]
+- Fix PHP warning in forms admin class. [#44534]
+- Fix PHP warnings in Contact_Form_Plugin class. [#44528]
+- Handle placeholder for textareas in the editor the same way input tags do. [#44596]
+- Remove a PHP notice when non-string is passed in. [#44523]
+- Trim the value before validating if empty form. [#44579]
 
 ## [5.0.0] - 2025-07-28
 ### Added
@@ -1381,7 +1378,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[5.1.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v5.0.0...v5.1.0-alpha
+[5.1.0]: https://github.com/automattic/jetpack-forms/compare/v5.0.0...v5.1.0
 [5.0.0]: https://github.com/automattic/jetpack-forms/compare/v4.0.1...v5.0.0
 [4.0.1]: https://github.com/automattic/jetpack-forms/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/automattic/jetpack-forms/compare/v3.1.0...v4.0.0

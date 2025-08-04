@@ -38,12 +38,12 @@ class Jetpack_Admin {
 	/**
 	 * Filter callback to add `no-store` to the `Cache-Control` header.
 	 *
-	 * @deprecated 14.9-a.8
+	 * @deprecated 14.9
 	 * @param array $headers Headers array.
 	 * @return array Modified headers array.
 	 */
 	public static function add_no_store_header( $headers ) {
-		_deprecated_function( __METHOD__, '14.9-a.8' );
+		_deprecated_function( __METHOD__, '14.9' );
 		$headers['Cache-Control'] .= ', no-store';
 		return $headers;
 	}
