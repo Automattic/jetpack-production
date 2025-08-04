@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Form: fix flaky csv export test
 - Forms: Add safeguards when getting post properties during AJAX calls
 - Forms: Do not send AJAX submission if form has custom redirect
+- Forms: fix label encoding issues, and handle empty- and duplicate label names
 - Forms: Fix PHP warning in forms admin class.
 - Forms: Fix PHP warnings in Contact_Form_Plugin class.
 - Forms: handle placeholder for textareas in the editor the same way input tags do
