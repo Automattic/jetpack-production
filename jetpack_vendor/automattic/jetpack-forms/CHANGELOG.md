@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Submit forms without page reload
 - Forms: Update how the success messages to use the new Feedback class
 - Forms: update internal_personal_data_exporter to use new Feedback class
+- Forms: update to shorter way to get view.js path
 - Forms: Use the new Feedback Class in feedback endpoint response
 - Forms: use the new Feedback Class when downloading a csv file
 - Update @wordpress/dataviews to 5.0.0
