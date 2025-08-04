@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Do not send AJAX submission if form has custom redirect
 - Forms: Fix PHP warning in forms admin class.
 - Forms: Fix PHP warnings in Contact_Form_Plugin class.
+- Forms: handle placeholder for textareas in the editor the same way input tags do
 - Forms: remove a PHP notice when non string is passed in
 - Forms: trim the value before validating if empty form
 
