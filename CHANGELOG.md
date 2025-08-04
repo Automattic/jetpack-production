@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Infinite Scroll: Prevent PHP warnings when settings are malformed.
 - Memberships: Add validation for newsletter plan tiers.
 - Prevent PHP errors when directly accessing various files.
+- Removed Dashboard link from Jetpack admin menu.
 - Remove redundant setting of no-store directive on Cache-Control response header on Jetpack admin screen
 
 ## 14.9-a.7 - 2025-07-28
