@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Connection: extended get_option so it can work with external storage.
 
+### Changed
+- Updated connection webhooks to pass skip_pricing to authorization URL.
+
 ## [6.16.2] - 2025-07-30
 ### Fixed
 - Fix doc types for methods in the connection Manager class. [#44493]
