@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Carousel: Fix crashes on large galleries and reduce server requests, by preloading only adjacent images instead of all at once.
 - Social: Add font option for Social Image Generator.
 
 ## 14.9-beta - 2025-08-04
