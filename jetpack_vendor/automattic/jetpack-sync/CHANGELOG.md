@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Full Sync: Ensure the full syunc limits values are int, no matter what is stored in Settings
 - Full Sync: Updated chunk_size default full sync limit to 500 for posts module.
 
+### Fixed
+- Prevent PHP fatal during login.
+
 ## [4.17.0] - 2025-08-04
 ### Removed
 - Remove custom environment_type handling. [#44576]
