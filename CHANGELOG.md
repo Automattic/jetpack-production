@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Social: Add font option for Social Image Generator.
+
 ## 14.9-beta - 2025-08-04
 ### Enhancements
 - Forms: Add slider field block. [#44150]
