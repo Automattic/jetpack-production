@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add Typescript support on all webpack files
 - Forms: update rating field max field visually
 
+### Fixed
+- Forms: validate form on submission
+
 ## [5.1.0] - 2025-08-04
 ### Added
 - Add mailpoet/lists endpoint. [#44516]
