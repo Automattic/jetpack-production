@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Full Sync: Ensure the full syunc limits values are int, no matter what is stored in Settings
 - Full Sync: Updated chunk_size default full sync limit to 500 for posts module.
 
 ## [4.17.0] - 2025-08-04
