@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Social Image Generator: ensure it can be used on WordPress.com Private sites.
 
+### Fixed
+- Fixed image generator token reset on save resulting in font not being saved.
+
 ## [0.66.4] - 2025-08-04
 ### Changed
 - Internal updates.

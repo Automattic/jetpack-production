@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Site Accelerator: Ignore images from openlibrary.org.
 - Social: Add font option for Social Image Generator.
 
+### Bug fixes
+- Social: Fix image generator token reset on save resulting in font not being saved.
+
 ## 14.9-beta - 2025-08-04
 ### Enhancements
 - Forms: Add slider field block. [#44150]
