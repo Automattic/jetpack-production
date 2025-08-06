@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.66.6-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update dependencies.
+
 ## [0.66.5] - 2025-08-05
 ### Added
 - Social Image Generator: Add font option. [#44514] [#44634]
@@ -1074,6 +1081,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.66.6-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.5...v0.66.6-alpha
 [0.66.5]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.4...v0.66.5
 [0.66.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.3...v0.66.4
 [0.66.3]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.2...v0.66.3
