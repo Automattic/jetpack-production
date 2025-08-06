@@ -13,7 +13,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: Show the form variation picker if you only have the submit button.
-- Open Graph Meta tags: do not attempt to generate a fallback image when the site is not connected to WordPress.com.
 - Sitemaps: Fix PHP warning during generation if there are no posts or pages on the website.
 - Social: Fix image generator token reset on save resulting in font not being saved.
 
@@ -21,6 +20,10 @@ This is an alpha version! The changes listed here are not final.
 - AI Excerpt: add tracking event on generation request
 - Fixing JS in one-image Slideshow shortcodes.
 - Tiled Gallery: Add initial state tests.
+
+## 14.9.1 - 2025-08-06
+### Bug fixes
+- Open Graph Meta tags: Do not attempt to generate a fallback image when the site is not connected to WordPress.com. [#44661]
 
 ## 14.9 - 2025-08-05
 ### Enhancements
