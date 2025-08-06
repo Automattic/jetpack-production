@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Fix rating field causing unsaved post state by replacing useEffect pattern with BlockContextProvider
+- Forms: fix the ordering of fields on submit when JS is disabled
 - Forms: validate form on submission
 
 ## [5.1.0] - 2025-08-04
