@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: Show the form variation picker if you only have the submit button.
+- Open Graph Meta tags: do not attempt to generate a fallback image when the site is not connected to WordPress.com.
 - Sitemaps: Fix PHP warning during generation if there are no posts or pages on the website.
 - Social: Fix image generator token reset on save resulting in font not being saved.
 
