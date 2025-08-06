@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update rating field max field visually
 
 ### Fixed
+- Forms: Fix rating field causing unsaved post state by replacing useEffect pattern with BlockContextProvider
 - Forms: validate form on submission
 
 ## [5.1.0] - 2025-08-04
