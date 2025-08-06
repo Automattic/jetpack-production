@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: Show the form variation picker if you only have the submit button.
+- Sitemaps: Fix PHP warning during generation if there are no posts or pages on the website.
 - Social: Fix image generator token reset on save resulting in font not being saved.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
