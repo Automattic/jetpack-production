@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Add font option for Social Image Generator.
 
 ### Bug fixes
+- Forms: Show the form variation picker if you only have the submit button.
 - Social: Fix image generator token reset on save resulting in font not being saved.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Add Typescript support on all webpack files
+- Forms: Revert back to the variation picker if the form only has the submit button.
 - Forms: update rating field max field visually
 
 ### Fixed
