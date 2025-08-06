@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.0.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Status: Add two new helper functions for p2 and wpcom site id checks, plus tests
+
 ## [6.0.1] - 2025-08-04
 ### Added
 - Requests: consider WPCOM_CLI_SCRIPT as a backend request. [#44553]
@@ -497,6 +504,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Introduce a status package
 
+[6.0.2-alpha]: https://github.com/Automattic/jetpack-status/compare/v6.0.1...v6.0.2-alpha
 [6.0.1]: https://github.com/Automattic/jetpack-status/compare/v6.0.0...v6.0.1
 [6.0.0]: https://github.com/Automattic/jetpack-status/compare/v5.4.0...v6.0.0
 [5.4.0]: https://github.com/Automattic/jetpack-status/compare/v5.3.1...v5.4.0
