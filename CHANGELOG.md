@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fixing JS in one-image Slideshow shortcodes.
+- Tiled Gallery: Add initial state tests.
 
 ## 14.9 - 2025-08-05
 ### Enhancements
