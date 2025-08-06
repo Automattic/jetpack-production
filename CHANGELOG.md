@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Social: Fix image generator token reset on save resulting in font not being saved.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Fixing JS in one-image Slideshow shortcodes.
+
 ## 14.9 - 2025-08-05
 ### Enhancements
 - Add new PayPal Payment block (beta). [#43932]
