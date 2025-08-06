@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Fix image generator token reset on save resulting in font not being saved.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Excerpt: add tracking event on generation request
 - Fixing JS in one-image Slideshow shortcodes.
 - Tiled Gallery: Add initial state tests.
 
