@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: add time field
+
 ### Changed
 - Forms: Add Typescript support on all webpack files
 - Forms: Revert back to the variation picker if the form only has the submit button.
