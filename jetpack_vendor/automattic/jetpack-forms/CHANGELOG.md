@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update rating field max field visually
 
 ### Fixed
+- Forms: Disallow connecting MailPoet without key.
 - Forms: Do not append form HTML id on post-submission link
 - Forms: fix default checkboxes styles, and allow for "browser" styles as a choice.
 - Forms: Fix MailPoet icon border radius.
