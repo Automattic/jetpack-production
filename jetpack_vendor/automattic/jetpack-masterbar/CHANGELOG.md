@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Move "Hosting > Marketing" to "Tools > Marketing"
 - Update dependencies.
 
+### Deprecated
+- Admin Menu: Deprecate "Settings > Newsletter"
+
 ## [0.19.2] - 2025-08-04
 ### Removed
 - Remove Dashboard link from Jetpack admin menu. [#44565]
