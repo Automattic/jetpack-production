@@ -25,7 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Do not append form HTML id on post-submission link
 - Forms: fix default checkboxes styles, and allow for "browser" styles as a choice.
 - Forms: Fix MailPoet icon border radius.
-- Forms: Fix rating field causing unsaved post state by replacing useEffect pattern with BlockContextProvider
+- Forms: Fix rating field causing unsaved post state by replacing useEffect pattern with BlockContextProvider. Also fix heart/star icons showing as filled instead of outlined in Twenty Sixteen theme.
 - Forms: fix the ordering of fields on submit when JS is disabled
 - Forms: validate form on submission
 - I18n: Improve context hints in comments for translators.
