@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixing JS in one-image Slideshow shortcodes.
 - Prevent PHP errors when directly accessing various files.
 - Tiled Gallery: Add initial state tests.
+- Update package dependencies.
 
 ## 14.9.1 - 2025-08-06
 ### Bug fixes

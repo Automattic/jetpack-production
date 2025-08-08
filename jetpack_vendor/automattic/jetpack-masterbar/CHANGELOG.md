@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Admin Menu: Move "Hosting > Marketing" to "Tools > Marketing"
 - Update dependencies.
+- Update package dependencies.
 
 ### Deprecated
 - Admin Menu: Deprecate "Settings > Newsletter"
