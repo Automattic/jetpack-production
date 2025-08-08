@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Disallow connecting MailPoet without key.
+- Forms: don't show dropdzone in the block picker
 - Forms: Do not append form HTML id on post-submission link
 - Forms: fix default checkboxes styles, and allow for "browser" styles as a choice.
 - Forms: Fix MailPoet icon border radius.
