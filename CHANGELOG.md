@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixing JS in one-image Slideshow shortcodes.
 - I18n: Improve context hints in comments for translators.
 - Prevent PHP errors when directly accessing various files.
+- Shortcodes: move Slideshow dependencies into pnpm.
 - Tiled Gallery: Add initial state tests.
 - Update package dependencies.
 
