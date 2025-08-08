@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 - Update package dependencies.
 
+### Fixed
+- I18n: Improve context hints in comments for translators.
+
 ## [0.31.1] - 2025-08-05
 ### Fixed
 - Prevent PHP fatal if URL is not a string. [#44619]

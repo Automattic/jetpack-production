@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 - Update package dependencies.
 
+### Fixed
+- I18n: Improve context hints in comments for translators.
+
 ## [5.22.0] - 2025-08-04
 ### Changed
 - My Jetpack: Unify the user connection flow with a unified screen. [#44469]

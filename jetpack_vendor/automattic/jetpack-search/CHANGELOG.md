@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- I18n: Improve context hints in comments for translators.
 - Prevent PHP errors when directly accessing various files.
 
 ## [0.52.10] - 2025-08-04

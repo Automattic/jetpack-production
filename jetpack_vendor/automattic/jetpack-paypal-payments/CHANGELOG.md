@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 - Update package dependencies.
 
+### Fixed
+- I18n: Improve context hints in comments for translators.
+
 ## [0.4.0] - 2025-08-04
 ### Changed
 - Improve alignment of "Pay with PayPal" block labels. [#44560]
