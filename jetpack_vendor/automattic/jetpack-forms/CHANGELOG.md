@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: don't show dropdzone in the block picker
 - Forms: Do not append form HTML id on post-submission link
 - Forms: fix default checkboxes styles, and allow for "browser" styles as a choice.
+- Forms: fix logic for only upgrade once to work on simple sites
 - Forms: Fix MailPoet icon border radius.
 - Forms: Fix rating field causing unsaved post state by replacing useEffect pattern with BlockContextProvider. Also fix heart/star icons showing as filled instead of outlined in Twenty Sixteen theme.
 - Forms: fix the ordering of fields on submit when JS is disabled
