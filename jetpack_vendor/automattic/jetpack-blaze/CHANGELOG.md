@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 - Update package dependencies.
 
+### Fixed
+- Fixed the stats endpoint for DSP
+
 ## [0.26.1] - 2025-08-04
 ### Changed
 - Update dependencies. [#44551]
