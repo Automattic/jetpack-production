@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Excerpt: add tracking event on generation request
+- Fixing broken e2e tests
 - Fixing JS in one-image Slideshow shortcodes.
 - I18n: Improve context hints in comments for translators.
 - Prevent PHP errors when directly accessing various files.
