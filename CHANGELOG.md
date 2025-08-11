@@ -8,7 +8,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Blocks: Update subscription block JS to be deferred.
-- Shortcodes: Update embed reversal code to only run when content is inserted in the admin.
 - Sitemaps: Add filter to allow suspending object cache addition during generation.
 
 ### Bug fixes
