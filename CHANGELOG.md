@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Carousel: Fix crashes on large galleries and reduce server requests, by preloading only adjacent images instead of all at once.
+- Enable Settings > Sharing WP-Admin page and replace all the links pointing to Calypso with a link pointing to this WP-Admin page
 - Forms: add time field
 - Site Accelerator: Ignore images from openlibrary.org.
 - Social: Add font option for Social Image Generator.
