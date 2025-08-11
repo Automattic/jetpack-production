@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Forms: fix default checkboxes styles, and allow for "browser" styles as a choice.
 - Forms: Show the form variation picker if you only have the submit button.
+- My Jetpack: Fixed multisite availability check for restricted products and modules
 - Sitemaps: Fix PHP warning during generation if there are no posts or pages on the website.
 - Social: Fix image generator token reset on save resulting in font not being saved.
 
