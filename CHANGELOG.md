@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Sitemaps: Add filter to allow suspending object cache addition during generation.
+
 ### Bug fixes
 - My Jetpack: Fixed multisite availability check for restricted products and modules
 
