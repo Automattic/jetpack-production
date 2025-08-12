@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Increase default consent field size.
+- Update package dependencies.
 
 ### Fixed
 - Forms: fix validation of jetpack multi-checkboxes
