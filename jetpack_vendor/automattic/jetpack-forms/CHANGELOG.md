@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Increase default consent field size.
 - Update package dependencies.
+- Update rating field implementation with improved styling and visual feedback
 
 ### Fixed
 - Forms: fix validation of jetpack multi-checkboxes
