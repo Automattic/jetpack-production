@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: Add has_field_type method to Feedback.
 - Forms: Add new method that will make it easier to refactor the save.
 - Forms: Make slider field min/max editable.
 
