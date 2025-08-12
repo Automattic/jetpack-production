@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Add new method that will make it easier to refactor the save.
+- Forms: Make slider field min/max editable.
 
 ### Changed
 - Forms: Increase default consent field size.
