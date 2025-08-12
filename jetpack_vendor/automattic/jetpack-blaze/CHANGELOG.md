@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fixed an issue where the blaze REST controller did not return the request body when the Content-Type header was text/csv.
+
 ## [0.26.2] - 2025-08-11
 ### Changed
 - Update dependencies. [#44673]
