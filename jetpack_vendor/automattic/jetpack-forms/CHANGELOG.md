@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: defer loading JS for more responsive page loading.
 - Forms: enable scss processing for field assets
 - Forms: Increase default consent field size.
+- Forms: move css to scss files
 - Forms: slider - add visually hidden labels for inputs
 - Forms: slider - visual update to min/max/default value inputs
 - Update package dependencies.
