@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: fix validation of jetpack multi-checkboxes
 - Forms: minor css fixes for the ratings field
+- Forms: use the new Feedback get_all_legacy_values method in parse_fields_from_content
 
 ## [5.2.0] - 2025-08-11
 ### Added
