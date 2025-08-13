@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.18.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Created External_Storage class.
+
 ## [6.17.2] - 2025-08-13
 ### Changed
 - Update package dependencies. [#44701]
@@ -1554,6 +1561,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[6.18.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.17.2...v6.18.0-alpha
 [6.17.2]: https://github.com/Automattic/jetpack-connection/compare/v6.17.1...v6.17.2
 [6.17.1]: https://github.com/Automattic/jetpack-connection/compare/v6.17.0...v6.17.1
 [6.17.0]: https://github.com/Automattic/jetpack-connection/compare/v6.16.2...v6.17.0
