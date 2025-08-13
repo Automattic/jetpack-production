@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Make slider field min/max editable.
 
 ### Changed
+- Forms: defer loading JS for more responsive page loading.
 - Forms: Increase default consent field size.
 - Update package dependencies.
 - Update rating field implementation with improved styling and visual feedback
