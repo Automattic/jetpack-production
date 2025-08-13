@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: defer loading JS for more responsive page loading.
+- Forms: enable scss processing for field assets
 - Forms: Increase default consent field size.
 - Update package dependencies.
 - Update rating field implementation with improved styling and visual feedback
