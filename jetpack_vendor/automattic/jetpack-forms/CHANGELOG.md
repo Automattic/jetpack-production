@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Make slider field min/max editable.
 
 ### Changed
+- Extract visually-hidden styles to shared SCSS partial for better code reuse
 - Forms: defer loading JS for more responsive page loading.
 - Forms: enable scss processing for field assets
 - Forms: Increase default consent field size.
