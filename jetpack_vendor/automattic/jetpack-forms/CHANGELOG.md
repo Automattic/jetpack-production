@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Add has_field_type method to Feedback.
 - Forms: Add new method that will make it easier to refactor the save.
+- Forms: Check consent for MailPoet integration.
 - Forms: Make slider field min/max editable.
 
 ### Changed
