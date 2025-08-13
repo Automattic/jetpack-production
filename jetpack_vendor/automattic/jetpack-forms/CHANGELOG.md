@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Update rating field implementation with improved styling and visual feedback
 
 ### Fixed
+- Forms: fix safari animation for animated form style
 - Forms: fix validation of jetpack multi-checkboxes
 - Forms: minor css fixes for the ratings field
 - Forms: use the new Feedback get_all_legacy_values method in parse_fields_from_content
