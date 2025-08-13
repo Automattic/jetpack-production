@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: Update subscription block JS to be deferred.
 - Forms: Add has_field_type method to Feedback.
 - Forms: defer loading JS for more responsive page loading.
+- Shortcodes: Update embed reversal code to only run when content is inserted in the admin.
 - Sitemaps: Add filter to allow suspending object cache addition during generation.
 
 ### Improved compatibility
