@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: defer loading JS for more responsive page loading.
 - Sitemaps: Add filter to allow suspending object cache addition during generation.
 
+### Improved compatibility
+- Open Graph Meta tags: add new filter allowing one to define a custom site representative image.
+
 ### Bug fixes
 - My Jetpack: Fixed multisite availability check for restricted products and modules
 
