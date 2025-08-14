@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Fixed multisite availability check for restricted products and modules
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Added typecheck support for E2E tests.
 - AI Assistant: track generation time on suggestion request
 - Editor assets endpoint: expand allowed block types
 - Fixed onboarding e2e tests.
