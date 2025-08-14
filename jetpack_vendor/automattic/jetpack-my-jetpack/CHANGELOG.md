@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.22.2-alpha] - unreleased
+## [5.23.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Added new Interstitial component
 
 ### Changed
 - My Jetpack: Fixed multisite availability check for restricted products and modules
@@ -2300,7 +2303,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.22.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.22.1...5.22.2-alpha
+[5.23.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.22.1...5.23.0-alpha
 [5.22.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.22.0...5.22.1
 [5.22.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.21.0...5.22.0
 [5.21.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.20.2...5.21.0

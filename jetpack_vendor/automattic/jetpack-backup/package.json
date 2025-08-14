@@ -29,7 +29,7 @@
 	"dependencies": {
 		"@automattic/jetpack-analytics": "^1.0.4",
 		"@automattic/jetpack-api": "^1.0.8",
-		"@automattic/jetpack-components": "^1.1.19",
+		"@automattic/jetpack-components": "^1.2.0-alpha",
 		"@automattic/jetpack-connection": "^1.4.2",
 		"@automattic/jetpack-shared-extension-utils": "^1.3.11-alpha",
 		"@automattic/number-formatters": "^1.0.10",
