@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Increase default consent field size.
 - Forms: move css to scss files
 - Forms: slider - add visually hidden labels for inputs
+- Forms: slider - update is-selected styling
 - Forms: slider - visual update to min/max/default value inputs
 - Update package dependencies.
 - Update rating field implementation with improved styling and visual feedback
