@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.4.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Forms: Add slider field increment option.
+
 ## [5.3.0] - 2025-08-14
 ### Added
 - Add several methods to the Feedback method. [#44713] [#44759] [#44768]
@@ -1429,6 +1436,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[5.4.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v5.3.0...v5.4.0-alpha
 [5.3.0]: https://github.com/automattic/jetpack-forms/compare/v5.2.0...v5.3.0
 [5.2.0]: https://github.com/automattic/jetpack-forms/compare/v5.1.0...v5.2.0
 [5.1.0]: https://github.com/automattic/jetpack-forms/compare/v5.0.0...v5.1.0
