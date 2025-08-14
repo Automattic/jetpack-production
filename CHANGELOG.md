@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Prevent PHP warnings when handling unexpected data types.
+
 ## 15.0-a.3 - 2025-08-14
 ### Enhancements
 - Forms: Add `has_field_type` method to Feedback. [#44759]
