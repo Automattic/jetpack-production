@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.16-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.7.16] - 2025-08-14
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#44725]
 
 ## [0.7.15] - 2025-08-05
 ### Changed
@@ -221,7 +218,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add image CDN package. [#29561]
 
-[0.7.16-alpha]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.7.15...v0.7.16-alpha
+[0.7.16]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.7.15...v0.7.16
 [0.7.15]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.7.14...v0.7.15
 [0.7.14]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.7.13...v0.7.14
 [0.7.13]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.7.12...v0.7.13

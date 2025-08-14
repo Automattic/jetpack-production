@@ -5,36 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.3.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.3.0] - 2025-08-14
 ### Added
-- Forms: Add get_files to the Feedback method
-- Forms: Add has_field_type method to Feedback.
-- Forms: Add MailPoet email consent toggle.
-- Forms: Add new method that will make it easier to refactor the save.
-- Forms: Check consent for MailPoet integration.
-- Forms: Make slider field min/max editable.
+- Add several methods to the Feedback method. [#44713] [#44759] [#44768]
+- MailPoet: Implement email consent. [#44744] [#44780]
+- Slider: Make min/max editable. [#44715]
 
 ### Changed
-- Extract visually-hidden styles to shared SCSS partial for better code reuse
-- Forms: defer loading JS for more responsive page loading.
-- Forms: enable scss processing for field assets
-- Forms: Increase default consent field size.
-- Forms: move css to scss files
-- Forms: slider - add visually hidden labels for inputs
-- Forms: slider - update is-selected styling
-- Forms: slider - visual update to min/max/default value inputs
-- Update package dependencies.
-- Update rating field implementation with improved styling and visual feedback
+- Defer loading JavaScript for more responsive page loading. [#44752]
+- Enable SCSS processing for field assets. [#44763]
+- Extract visually-hidden styles to shared SCSS partial for better code reuse. [#44769]
+- Increase default consent field size. [#44690]
+- Move CSS to SCSS files. [#44777]
+- Slider: Add visually hidden labels for inputs. [#44779]
+- Slider: Update `is-selected` styling. [#44783]
+- Slider: Visual update to min/max/default value inputs. [#44778]
+- Update package dependencies. [#44701]
+- Update rating field implementation with improved styling and visual feedback. [#44757]
 
 ### Fixed
-- Forms: add radio input field backend validation
-- Forms: fix safari animation for animated form style
-- Forms: fix validation of jetpack multi-checkboxes
-- Forms: minor css fixes for the ratings field
-- Forms: use the new Feedback get_all_legacy_values method in parse_fields_from_content
+- Add radio input field backend validation. [#44739]
+- Fix animated form style in Safari. [#44689]
+- Fix minor CSS glitches in the ratings field. [#44738]
+- Fix validation of jetpack multi-checkboxes [#44722]
+- Use the new Feedback `get_all_legacy_values` method in `parse_fields_from_content`. [#44761]
 
 ## [5.2.0] - 2025-08-11
 ### Added
@@ -1435,7 +1429,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[5.3.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v5.2.0...v5.3.0-alpha
+[5.3.0]: https://github.com/automattic/jetpack-forms/compare/v5.2.0...v5.3.0
 [5.2.0]: https://github.com/automattic/jetpack-forms/compare/v5.1.0...v5.2.0
 [5.1.0]: https://github.com/automattic/jetpack-forms/compare/v5.0.0...v5.1.0
 [5.0.0]: https://github.com/automattic/jetpack-forms/compare/v4.0.1...v5.0.0
