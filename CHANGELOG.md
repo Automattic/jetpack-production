@@ -2,32 +2,29 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.0-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.0-a.3 - 2025-08-14
 ### Enhancements
-- Blocks: Update subscription block JS to be deferred.
-- Forms: Add has_field_type method to Feedback.
-- Forms: defer loading JS for more responsive page loading.
-- Shortcodes: Update embed reversal code to only run when content is inserted in the admin.
-- Sitemaps: Add filter to allow suspending object cache addition during generation.
+- Forms: Add `has_field_type` method to Feedback. [#44759]
+- Forms: Defer JavaScript loading for more responsive page loading. [#44752]
+- Shortcodes: Update embed reversal code to only run when content is inserted in the admin. [#44741]
+- Sitemaps: Add filter to allow suspending object cache addition during generation. [#44732]
+- Subscription block: Defer JavaScript loading. [#44734]
 
 ### Improved compatibility
-- Open Graph Meta tags: add new filter allowing one to define a custom site representative image.
+- Open Graph Meta tags: Add new filter allowing one to define a custom site representative image. [#44708]
 
 ### Bug fixes
-- My Jetpack: Fixed multisite availability check for restricted products and modules
+- Infinite Scroll: Prevent PHP warnings in various edge cases. [#44642]
+- My Jetpack: Fix multisite availability check for restricted products and modules. [#44710]
+- Prevent PHP fatals when handling unexpected data types. [#44765]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added typecheck support for E2E tests.
-- AI Assistant: track generation time on suggestion request
-- Editor assets endpoint: expand allowed block types
-- Fixed onboarding e2e tests.
-- Infinite Scroll: Prevent PHP warnings in various edge cases.
-- Open Help Center modal for WPCOM sites and update the support link
-- Prevent PHP fatals when handling unexpected data types.
-- Update package dependencies.
+- AI Assistant: Track generation time on suggestion request. [#44716]
+- E2E: Add typecheck support. [#44788]
+- E2E: Fix onboarding tests. [#44745]
+- Editor assets endpoint: Expand allowed block types. [#44616]
+- Open Help Center modal for WordPress.com sites and update the support link. [#44774]
+- Update package dependencies. [#44701] [#44725]
 
 ## 15.0-a.1 - 2025-08-11
 ### Enhancements

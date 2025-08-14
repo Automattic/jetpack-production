@@ -2176,7 +2176,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 			/**
 			 * Check if Jetpack is active for file uploads.
 			 *
-			 * @since 5.3.0-alpha
+			 * @since 5.3.0
 			 *
 			 * @return bool
 			 */
