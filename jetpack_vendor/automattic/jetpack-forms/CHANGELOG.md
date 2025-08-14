@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add slider field increment option.
 
 ### Changed
+- Forms: Check MailPoet setup not key.
 - Forms: Improve the selected checkbox style
 
 ## [5.3.0] - 2025-08-14
