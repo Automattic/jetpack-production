@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: track generation time on suggestion request
 - Editor assets endpoint: expand allowed block types
 - Fixed onboarding e2e tests.
+- Open Help Center modal for WPCOM sites and update the support link
 - Prevent PHP fatals when handling unexpected data types.
 - Update package dependencies.
 
