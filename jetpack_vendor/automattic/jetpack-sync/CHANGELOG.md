@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.19.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add WooCommerce product meta lookup sync module
+
 ## [4.18.2] - 2025-08-14
 ### Changed
 - Internal updates.
@@ -1523,6 +1530,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.19.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.18.2...v4.19.0-alpha
 [4.18.2]: https://github.com/Automattic/jetpack-sync/compare/v4.18.1...v4.18.2
 [4.18.1]: https://github.com/Automattic/jetpack-sync/compare/v4.18.0...v4.18.1
 [4.18.0]: https://github.com/Automattic/jetpack-sync/compare/v4.17.0...v4.18.0
