@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Check MailPoet setup not key.
 - Forms: Improve the selected checkbox style
 
+### Fixed
+- Forms: silence php warnings with more careful calls on expected values
+
 ## [5.3.0] - 2025-08-14
 ### Added
 - Add several methods to the Feedback method. [#44713] [#44759] [#44768]
