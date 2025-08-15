@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Improve the selected checkbox style
 
 ### Fixed
+- Forms: Fix phone validation in responses.
 - Forms: silence php warnings with more careful calls on expected values
 
 ## [5.3.0] - 2025-08-14
