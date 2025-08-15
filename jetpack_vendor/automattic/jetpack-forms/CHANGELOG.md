@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add slider field increment option.
 
 ### Changed
+- Forms: Add styling and settings to Image Select field under feature flag
 - Forms: Check MailPoet setup not key.
 - Forms: Improve the selected checkbox style
 
