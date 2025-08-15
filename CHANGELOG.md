@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Blocks: Update JavaScript to be non-render blocking.
 - Forms: Improve the checkbox style
 
 ### Bug fixes
