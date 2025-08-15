@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix phone validation for responses.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Memberships: Fix JSON parsing error.
 - Prevent PHP warnings when handling unexpected data types.
 
 ## 15.0-a.3 - 2025-08-14
