@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Add slider field increment option.
+- Forms: Progress Indicator: Dots Style
 
 ### Changed
 - Forms: Add styling and settings to Image Select field under feature flag
