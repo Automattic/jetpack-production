@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.1-alpha] - unreleased
+## [0.6.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Replace URL-based landing page tracking with breadcrumb-based hierarchical page tracking
 
 ### Fixed
 - Fix PHP warnings for undefined array keys and null object properties
@@ -139,7 +142,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix namespace issue with WooCommerce class reference. [#35857]
 - General: bail early when WooCommerce is not active. [#36278]
 
-[0.5.1-alpha]: https://github.com/Automattic/woocommerce-analytics/compare/v0.5.0...v0.5.1-alpha
+[0.6.0-alpha]: https://github.com/Automattic/woocommerce-analytics/compare/v0.5.0...v0.6.0-alpha
 [0.5.0]: https://github.com/Automattic/woocommerce-analytics/compare/v0.4.9...v0.5.0
 [0.4.9]: https://github.com/Automattic/woocommerce-analytics/compare/v0.4.8...v0.4.9
 [0.4.8]: https://github.com/Automattic/woocommerce-analytics/compare/v0.4.7...v0.4.8
