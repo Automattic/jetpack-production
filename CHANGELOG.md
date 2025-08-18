@@ -2,20 +2,21 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.0-a.4 - unreleased
+## 15.0-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 15.0-a.5 - 2025-08-18
 ### Enhancements
-- Blocks: Update JavaScript to be non-render blocking.
-- Forms: Improve the checkbox style
+- Blocks: Update JavaScript to be non-render blocking. [#44791]
+- Forms: Improve the checkbox style. [#44743]
 
 ### Bug fixes
-- Forms: Fix phone validation for responses.
+- Forms: Fix phone validation for responses. [#44806]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Memberships: Fix JSON parsing error.
-- Prevent PHP warnings when handling unexpected data types.
+- Memberships: Fix JSON parsing error. [#44812]
+- Prevent PHP warnings when handling unexpected data types. [#44804]
 
 ## 15.0-a.3 - 2025-08-14
 ### Enhancements

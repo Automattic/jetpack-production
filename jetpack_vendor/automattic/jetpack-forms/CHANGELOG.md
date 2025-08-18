@@ -5,22 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.4.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.4.0] - 2025-08-18
 ### Added
-- Forms: Add slider field increment option.
-- Forms: Progress Indicator: Dots Style
+- Add slider field increment option. [#44782]
+- Add "dots" style variant to form progress indicator block. [#44582]
 
 ### Changed
-- Forms: Add styling and settings to Image Select field under feature flag
-- Forms: Check MailPoet setup not key.
-- Forms: Improve the selected checkbox style
+- Add styling and settings to "Image Select" field under feature flag. [#44786]
+- Update method used to check for a valid MailPoet connection. [#44784]
+- Improve the selected checkbox style. [#44743]
 
 ### Fixed
-- Forms: Fix phone validation in responses.
-- Forms: silence php warnings with more careful calls on expected values
+- Fix phone validation in responses. [#44806]
+- Silence PHP warnings with more careful calls on expected values. [#44805]
 
 ## [5.3.0] - 2025-08-14
 ### Added
@@ -1446,7 +1443,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[5.4.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v5.3.0...v5.4.0-alpha
+[5.4.0]: https://github.com/automattic/jetpack-forms/compare/v5.3.0...v5.4.0
 [5.3.0]: https://github.com/automattic/jetpack-forms/compare/v5.2.0...v5.3.0
 [5.2.0]: https://github.com/automattic/jetpack-forms/compare/v5.1.0...v5.2.0
 [5.1.0]: https://github.com/automattic/jetpack-forms/compare/v5.0.0...v5.1.0
