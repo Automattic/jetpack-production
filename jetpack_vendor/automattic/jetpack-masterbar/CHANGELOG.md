@@ -5,14 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.22.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.22.0] - 2025-08-18
 ### Removed
-- Admin Menu: Remove "Settings > Podcasting"
-- Admin Menu: Remove "Tools > Monetize"
-- Admin Menu: Remove "Users > Subscribers"
+- Admin Menu: Remove "Settings > Podcasting". [#44750]
+- Admin Menu: Remove "Tools > Monetize". [#44748]
+- Admin Menu: Remove "Users > Subscribers". [#44749]
 
 ## [0.21.0] - 2025-08-14
 ### Changed
@@ -421,7 +418,7 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
-[0.22.0-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.21.0...v0.22.0-alpha
+[0.22.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.21.0...v0.22.0
 [0.21.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.20.0...v0.21.0
 [0.20.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.19.2...v0.20.0
 [0.19.2]: https://github.com/Automattic/jetpack-masterbar/compare/v0.19.1...v0.19.2
