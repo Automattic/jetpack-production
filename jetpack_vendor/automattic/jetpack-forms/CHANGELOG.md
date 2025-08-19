@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Fix null handling in wp_style_engine_get_styles to prevent PHP warnings
+- Forms: fix radio button validation
 - Forms: Fix undefined array key "blockName" warning in contact form pre-render hook
 
 ## [5.4.0] - 2025-08-18
