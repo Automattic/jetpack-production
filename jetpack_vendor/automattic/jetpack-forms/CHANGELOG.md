@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add phone-input to handle country selector for field-telephone
 
 ### Changed
+- Forms: create new field below when pressing enter on Slider or Rating fields
 - Forms: Update slider default and step controls.
 
 ### Fixed
