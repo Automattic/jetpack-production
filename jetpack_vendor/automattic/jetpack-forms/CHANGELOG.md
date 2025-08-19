@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: create new field below when pressing enter on Slider or Rating fields
+- Forms: remove stray font loaded for rating field
 - Forms: Update slider default and step controls.
 
 ### Fixed
