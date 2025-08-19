@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix radio button validation
 - Forms: Fix undefined array key "blockName" warning in contact form pre-render hook
 - Forms: slider, replace for with htmlFor to fix JS warning
+- Forms Phone Field: fix some styling inconsistencies
 
 ## [5.4.0] - 2025-08-18
 ### Added
