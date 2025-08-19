@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add phone-input to handle country selector for field-telephone
 
 ### Changed
+- Forms: create form when inserting standalone slider field
 - Forms: create new field below when pressing enter on Slider or Rating fields
 - Forms: remove stray font loaded for rating field
 - Forms: Update slider default and step controls.
