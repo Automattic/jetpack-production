@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: Preserve html ids when processing feedback.
+
 ### Bug fixes
 - SEO settings: update the default Open Graph image tag to match the one in use on the site.
 
