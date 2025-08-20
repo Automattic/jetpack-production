@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Lifted the TS types up from product tabs for reusability.
+
 ## [5.23.1] - 2025-08-18
 ### Changed
 - Update dependencies. [#44736]
