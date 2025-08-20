@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Preserve html ids when processing feedback.
 
 ### Changed
+- Forms: Adjust slider field controls.
 - Forms: allow new fields in step container
 - Forms: create form when inserting standalone slider field
 - Forms: create new field below when pressing enter on Slider or Rating fields
