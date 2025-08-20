@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - SEO settings: update the default Open Graph image tag to match the one in use on the site.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 15.0-a.5 - 2025-08-18
 ### Enhancements
 - Blocks: Update JavaScript to be non-render blocking. [#44791]
