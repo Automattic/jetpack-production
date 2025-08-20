@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add phone-input to handle country selector for field-telephone
+- Forms: Add slider min/max labels.
 
 ### Changed
 - Forms: allow new fields in step container
