@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: rename 'Stars Rating' to 'Stars rating field'
 - Forms: Update slider default and step controls.
 - Forms: use the new Feedback class to save the feedback entries in a new format
+- Update package dependencies.
 
 ### Fixed
 - Forms: Fix null handling in wp_style_engine_get_styles to prevent PHP warnings
