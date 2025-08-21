@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: Preserve html ids when processing feedback.
+- Forms: Save feedback entries in a new format
 - Forms: show trash action alongside view action in inbox
 
 ### Bug fixes
