@@ -47,7 +47,7 @@
 		"automattic/jetpack-roles": "^3.0.8",
 		"automattic/jetpack-search": "^0.52.14-alpha",
 		"automattic/jetpack-stats": "^0.17.2",
-		"automattic/jetpack-stats-admin": "^0.28.4",
+		"automattic/jetpack-stats-admin": "^0.28.5-alpha",
 		"automattic/jetpack-status": "^6.0.3",
 		"automattic/jetpack-subscribers-dashboard": "^0.2.3",
 		"automattic/jetpack-sync": "^4.19.0",

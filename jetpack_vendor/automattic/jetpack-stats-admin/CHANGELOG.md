@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.28.5-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Fix a PHP fatal error in the stats icon column when the first column is "comments"
+
 ## 0.28.4 - 2025-08-11
 ### Changed
 - Update dependencies. [#44673]
