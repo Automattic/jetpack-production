@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: Fix null handling in wp_style_engine_get_styles to prevent PHP warnings
 - Forms: fix radio button validation
+- Forms: fix ratings field in small screens
 - Forms: Fix undefined array key "blockName" warning in contact form pre-render hook
 - Forms: slider, replace for with htmlFor to fix JS warning
 - Forms Phone Field: fix some styling inconsistencies
