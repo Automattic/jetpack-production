@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Preserve html ids when processing feedback.
 - Forms: Save feedback entries in a new format
 - Forms: show trash action alongside view action in inbox
+- No longer allow inserting Simple Payments block via inserter. Deprecating in favor of PayPal Payment Buttons block.
 
 ### Bug fixes
 - SEO settings: update the default Open Graph image tag to match the one in use on the site.
