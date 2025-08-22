@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add LaTeX Block to render mathematical formulae
+- Forms: Add MailPoet integration.
 - Forms: Preserve html ids when processing feedback.
 - Forms: Save feedback entries in a new format
 - Forms: show trash action alongside view action in inbox

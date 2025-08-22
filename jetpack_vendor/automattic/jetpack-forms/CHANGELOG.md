@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add slider min/max labels.
 - Forms: Finally store the feedback in the new format
 - Forms: Preserve html ids when processing feedback.
+- Forms: Remove MailPoet integration feature flag.
 - Forms: show trash action alongside view action in list
 
 ### Changed
