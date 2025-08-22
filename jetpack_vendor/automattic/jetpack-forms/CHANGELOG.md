@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add phone-input to handle country selector for field-telephone
+- Forms: add phone number validation on international phone number input
 - Forms: Add slider min/max labels.
 - Forms: Finally store the feedback in the new format
 - Forms: Preserve html ids when processing feedback.
