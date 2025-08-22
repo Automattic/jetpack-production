@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Code: Resolve PhanImpossibleCondition violations.
 - Images: properly pass SSL argument to Photon for sites with https enabled.
 
 ## [0.52.13] - 2025-08-18

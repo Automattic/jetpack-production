@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO settings: update the default Open Graph image tag to match the one in use on the site.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Code: Resolve PhanImpossibleCondition violations.
 - Editor assets endpoint: disallow the VideoPress block type
 - Slideshow block: Add additional sanitization and validation.
 - Slideshow block: add email rendering.

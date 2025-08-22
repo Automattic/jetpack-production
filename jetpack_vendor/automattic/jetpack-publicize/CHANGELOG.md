@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Code: Resolve PhanImpossibleCondition violations.
+
 ## [0.66.8] - 2025-08-18
 ### Changed
 - Update dependencies. [#44736]
