@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - CDN: gracefully handle an attempt to filter null.
+- Search: ensure images are loaded efficiently when on https sites.
 - SEO settings: update the default Open Graph image tag to match the one in use on the site.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
