@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - No longer allow inserting Simple Payments block via inserter. Deprecating in favor of PayPal Payment Buttons block.
 
 ### Bug fixes
+- Carousel: improve image size processing to return higher quality images in additional situations.
 - CDN: gracefully handle an attempt to filter null.
 - Search: ensure images are loaded efficiently when on https sites.
 - SEO settings: update the default Open Graph image tag to match the one in use on the site.
