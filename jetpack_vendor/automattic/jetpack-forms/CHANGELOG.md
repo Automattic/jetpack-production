@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Forms: Fix MailPoet markup console error.
 - Forms: Fix null handling in wp_style_engine_get_styles to prevent PHP warnings
 - Forms: fix radio button validation
 - Forms: fix ratings field in small screens
