@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Enhance WooCommerce Products Sync to include post-related fields
 - Sync: Themes module, added default value when updating sidebar widgets
 
 ## [4.19.0] - 2025-08-18
