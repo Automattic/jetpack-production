@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Editor assets endpoint: disallow the VideoPress block type
+- Slideshow block: add email rendering.
 - Update package dependencies.
 
 ## 15.0-a.5 - 2025-08-18
