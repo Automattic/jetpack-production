@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: create new field below when pressing enter on Slider or Rating fields
 - Forms: remove stray font loaded for rating field
 - Forms: rename 'Stars Rating' to 'Stars rating field'
+- Forms: reorganise shared lists of allowed inner blocks - core blocks
 - Forms: Update MailPoet to use Feedback class.
 - Forms: Update slider default and step controls.
 - Forms: use the new Feedback class to save the feedback entries in a new format
