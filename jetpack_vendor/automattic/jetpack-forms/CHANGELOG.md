@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: create form when inserting standalone slider field
 - Forms: create new field below when pressing enter on Slider or Rating fields
 - Forms: integrations - opt-in toggle controls into 'next no margin'
+- Forms: Let MailPoet handle old/new form data.
 - Forms: remove stray font loaded for rating field
 - Forms: rename 'Stars Rating' to 'Stars rating field'
 - Forms: reorganise shared lists of allowed inner blocks - core blocks
