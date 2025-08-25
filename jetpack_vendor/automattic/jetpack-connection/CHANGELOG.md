@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.18.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.18.3] - 2025-08-25
 ### Fixed
-- Code: Resolve PhanImpossibleCondition violations.
-- Fix fatal for invalid structure of stored errors.
+- Code: Resolve PhanImpossibleCondition violations. [#44869]
+- Fix fatal for invalid structure of stored errors. [#44890]
 
 ## [6.18.2] - 2025-08-21
 ### Changed
@@ -1574,7 +1571,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.18.3-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.18.2...v6.18.3-alpha
+[6.18.3]: https://github.com/Automattic/jetpack-connection/compare/v6.18.2...v6.18.3
 [6.18.2]: https://github.com/Automattic/jetpack-connection/compare/v6.18.1...v6.18.2
 [6.18.1]: https://github.com/Automattic/jetpack-connection/compare/v6.18.0...v6.18.1
 [6.18.0]: https://github.com/Automattic/jetpack-connection/compare/v6.17.2...v6.18.0
