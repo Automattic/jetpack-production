@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update slider default and step controls.
 - Forms: use the new Feedback class to save the feedback entries in a new format
 - Form step navigation button: don't allow inner text to wrap
+- Updated specificity and css on the site editor to match the frontend for forms
 - Update package dependencies.
 
 ### Fixed
