@@ -52,7 +52,7 @@ class Feedback_Field {
 	/**
 	 * The original form field ID from the form schema.
 	 *
-	 * @since 5.5.0-alpha
+	 * @since 5.5.0
 	 *
 	 * @var string
 	 */
@@ -121,7 +121,7 @@ class Feedback_Field {
 	/**
 	 * Get the original form field ID.
 	 *
-	 * @since 5.5.0-alpha
+	 * @since 5.5.0
 	 *
 	 * @return string
 	 */

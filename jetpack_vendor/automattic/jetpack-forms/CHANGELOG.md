@@ -5,44 +5,41 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.5.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.5.0] - 2025-08-25
 ### Added
-- Add phone-input to handle country selector for field-telephone
-- Forms: add phone number validation on international phone number input
-- Forms: Add slider min/max labels.
-- Forms: Preserve html ids when processing feedback.
-- Forms: Remove MailPoet integration feature flag.
-- Forms: show trash action alongside view action in list
+- Add phone input to handle country selector for field-telephone. [#44635]
+- Add phone number validation on international phone number input. [#44854]
+- Add slider min/max labels. [#44834]
+- Preserve html ids when processing feedback. [#44760]
+- Remove MailPoet integration feature flag. [#44831]
+- Show trash action alongside view action in list. [#44882]
 
 ### Changed
-- Forms: Adjust slider field controls.
-- Forms: allow new fields in step container
-- Forms: create form when inserting standalone slider field
-- Forms: create new field below when pressing enter on Slider or Rating fields
-- Forms: integrations - opt-in toggle controls into 'next no margin'
-- Forms: Let MailPoet handle old/new form data.
-- Forms: remove stray font loaded for rating field
-- Forms: rename 'Stars Rating' to 'Stars rating field'
-- Forms: reorganise shared lists of allowed inner blocks - core blocks
-- Forms: Update MailPoet to use Feedback class.
-- Forms: Update slider default and step controls.
-- Forms: use the new Feedback class to save the feedback entries in a new format
-- Form step navigation button: don't allow inner text to wrap
-- Updated specificity and css on the site editor to match the frontend for forms
-- Update package dependencies.
+- Adjust slider field controls. [#44875]
+- Allow new fields in step container. [#44864]
+- Create form when inserting standalone slider field. [#44840]
+- Create new field below when pressing enter on Slider or Rating fields. [#44781]
+- Integrations - opt-in toggle controls into 'next no margin'. [#44817]
+- Let MailPoet handle old/new form data. [#44930]
+- Remove stray font loaded for rating field. [#44815]
+- Rename 'Stars Rating' to 'Stars rating field' [#44880]
+- Reorganise shared lists of allowed inner blocks - core blocks. [#44879]
+- Update MailPoet to use Feedback class. [#44852]
+- Update slider default and step controls. [#44803]
+- Use the new Feedback class to save the feedback entries in a new format. [#44821]
+- Form step navigation button: don't allow inner text to wrap. [#44926]
+- Updated specificity and css on the site editor to match the frontend for forms. [#44802]
+- Update package dependencies. [#44899]
 
 ### Fixed
-- Fix a case where fatal error might occur after form submission
-- Forms: Fix MailPoet markup console error.
-- Forms: Fix null handling in wp_style_engine_get_styles to prevent PHP warnings
-- Forms: fix radio button validation
-- Forms: fix ratings field in small screens
-- Forms: Fix undefined array key "blockName" warning in contact form pre-render hook
-- Forms: slider, replace for with htmlFor to fix JS warning
-- Forms Phone Field: fix some styling inconsistencies
+- Fix a case where fatal error might occur after form submission [#44908]
+- Forms: Fix MailPoet markup console error. [#44916]
+- Forms: Fix null handling in wp_style_engine_get_styles to prevent PHP warnings [#44827]
+- Forms: fix radio button validation [#44836]
+- Forms: fix ratings field in small screens [#44884]
+- Forms: Fix undefined array key "blockName" warning in contact form pre-render hook [#44833]
+- Forms: slider, replace for with htmlFor to fix JS warning [#44837]
+- Forms Phone Field: fix some styling inconsistencies [#44850]
 
 ## [5.4.0] - 2025-08-18
 ### Added
@@ -1482,7 +1479,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[5.5.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v5.4.0...v5.5.0-alpha
+[5.5.0]: https://github.com/automattic/jetpack-forms/compare/v5.4.0...v5.5.0
 [5.4.0]: https://github.com/automattic/jetpack-forms/compare/v5.3.0...v5.4.0
 [5.3.0]: https://github.com/automattic/jetpack-forms/compare/v5.2.0...v5.3.0
 [5.2.0]: https://github.com/automattic/jetpack-forms/compare/v5.1.0...v5.2.0
