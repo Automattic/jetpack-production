@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.0-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 15.0-a.7 - 2025-08-25
 ### Enhancements
 - Add LaTeX Block to render mathematical formula. [#44895]

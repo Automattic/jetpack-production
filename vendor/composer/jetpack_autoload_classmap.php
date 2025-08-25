@@ -27,11 +27,11 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader-locator.php'
 	),
 	'Automattic\\Block_Delimiter' => array(
-		'version' => '0.3.3.0',
+		'version' => '0.3.4.0-alpha1756137905',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/block-delimiter/src/class-block-delimiter.php'
 	),
 	'Automattic\\Block_Scanner' => array(
-		'version' => '0.3.3.0',
+		'version' => '0.3.4.0-alpha1756137905',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/block-delimiter/src/class-block-scanner.php'
 	),
 	'Automattic\\Jetpack\\A8c_Mc_Stats' => array(
