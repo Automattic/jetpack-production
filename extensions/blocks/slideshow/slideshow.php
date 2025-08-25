@@ -57,7 +57,7 @@ function load_assets( $attr, $content ) {
 /**
  * Render slideshow block for email.
  *
- * @since 15.0-a.6
+ * @since 15.0
  *
  * @param string $block_content     The original block HTML content.
  * @param array  $parsed_block      The parsed block data including attributes.

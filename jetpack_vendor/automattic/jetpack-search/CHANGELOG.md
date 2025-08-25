@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.52.14-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.52.14] - 2025-08-25
 ### Fixed
-- Code: Resolve PhanImpossibleCondition violations.
-- Images: properly pass SSL argument to Photon for sites with https enabled.
+- Resolve `PhanImpossibleCondition` violations. [#44869]
+- Pass SSL argument properly to Photon for sites with https enabled. [#44851]
 
 ## [0.52.13] - 2025-08-18
 ### Changed
@@ -1319,7 +1316,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.52.14-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.52.13...v0.52.14-alpha
+[0.52.14]: https://github.com/Automattic/jetpack-search/compare/v0.52.13...v0.52.14
 [0.52.13]: https://github.com/Automattic/jetpack-search/compare/v0.52.12...v0.52.13
 [0.52.12]: https://github.com/Automattic/jetpack-search/compare/v0.52.11...v0.52.12
 [0.52.11]: https://github.com/Automattic/jetpack-search/compare/v0.52.10...v0.52.11
