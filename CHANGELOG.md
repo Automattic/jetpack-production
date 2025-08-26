@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Related Posts block: Update placeholder text for the site editor, and update the demo date.
+
 ### Bug fixes
 - Forms: error wrapper, make it possible to place the button inside a group block
 
