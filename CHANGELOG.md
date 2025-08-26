@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Forms: error wrapper, make it possible to place the button inside a group block
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Writing Settings: Add Instagram connection
+
 ## 15.0-a.7 - 2025-08-25
 ### Enhancements
 - Add LaTeX Block to render mathematical formula. [#44895]
