@@ -454,8 +454,12 @@ return array(
 		'version' => '5.6.0.0-alpha1756159465',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/blocks/contact-form/class-contact-form-block.php'
 	),
+	'Automattic\\Jetpack\\External_Connections' => array(
+		'version' => '0.1.0.0-alpha1756196589',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-external-connections/src/class-external-connections.php'
+	),
 	'Automattic\\Jetpack\\External_Media\\External_Media' => array(
-		'version' => '0.4.11.0',
+		'version' => '0.5.0.0-alpha1756198398',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-external-media/src/class-external-media.php'
 	),
 	'Automattic\\Jetpack\\Files' => array(
