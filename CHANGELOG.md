@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: error wrapper, make it possible to place the button inside a group block
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Related Posts: Prevent PHP warnings when handling malformed data.
 - Writing Settings: Add Instagram connection
 
 ## 15.0-a.7 - 2025-08-25
