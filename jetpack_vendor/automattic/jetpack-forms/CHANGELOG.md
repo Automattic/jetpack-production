@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Add styles for image select field on frontend
 - Forms: deprecate legacy feedback page, redirect to new dashboard jetpack-forms-admin
+- Forms: fix line break stripping on response values
 
 ### Changed
 - Forms: fix file field test
