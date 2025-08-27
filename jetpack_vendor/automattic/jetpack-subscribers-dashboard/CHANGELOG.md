@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Remove unused JavaScript dependencies.
 
+### Fixed
+- Restore dependency removed in #44813.
+
 ## 0.2.4 - 2025-08-25
 ### Changed
 - Update dependencies. [#44934]
