@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.21.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Sync: Ensure plugins is array before setting plugin action links in callables
+
 ## [4.20.0] - 2025-08-25
 ### Changed
 - Enhance WooCommerce Products Sync to include post-related fields [#44810]
@@ -1532,6 +1539,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.21.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.20.0...v4.21.0-alpha
 [4.20.0]: https://github.com/Automattic/jetpack-sync/compare/v4.19.0...v4.20.0
 [4.19.0]: https://github.com/Automattic/jetpack-sync/compare/v4.18.2...v4.19.0
 [4.18.2]: https://github.com/Automattic/jetpack-sync/compare/v4.18.1...v4.18.2
