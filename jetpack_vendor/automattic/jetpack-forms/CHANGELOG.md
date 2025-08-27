@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix line break stripping on response values
 
 ### Changed
+- Forms: Consolidate slider frontend and editor styles.
 - Forms: fix file field test
 
 ### Fixed
