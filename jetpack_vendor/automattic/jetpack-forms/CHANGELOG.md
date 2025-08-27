@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: add default values when border radius style is missing
 - Forms: Add styles for image select field on frontend
 - Forms: deprecate legacy feedback page, redirect to new dashboard jetpack-forms-admin
 - Forms: fix line break stripping on response values
