@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Consolidate slider frontend and editor styles.
 - Forms: fix file field test
 - Forms: Manage Google Drive connection in dashboard
+- Send JSON with built-in WordPress functions.
 
 ### Fixed
 - Forms: Ensure slider default obeys step.
