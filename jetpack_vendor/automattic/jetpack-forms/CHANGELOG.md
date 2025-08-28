@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix fatal when checking for classic forms dashboard
 - Forms: Fix Google export on Simple sites
 - Forms: improve checkbox validation for older checkboxes
+- Forms: improve slider range touch area
 - Forms: improve the showing of the error div to display correctly across themes.
 
 ## [5.5.0] - 2025-08-25
