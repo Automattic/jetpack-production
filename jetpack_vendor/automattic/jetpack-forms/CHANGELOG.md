@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Ensure slider default obeys step.
+- Forms: Fix default styles for image select field
 - Forms: fix fatal when checking for classic forms dashboard
 - Forms: Fix Google export on Simple sites
 - Forms: fix text wrapping in the slider tooltip
