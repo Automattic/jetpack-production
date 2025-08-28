@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Consolidate slider frontend and editor styles.
 - Forms: fix file field test
+- Forms: Manage Google Drive connection in dashboard
 
 ### Fixed
 - Forms: Ensure slider default obeys step.
