@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Image CDN: Prevent PHP warnings when handling malformed data.
+- Podcast player block: Add email rendering.
 - Prevent PHP warnings when constants are already defined.
 - Related Posts: Prevent PHP warnings when handling malformed data.
 - Send JSON with built-in WordPress functions.
