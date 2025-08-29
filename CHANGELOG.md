@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: improve checkbox validation for older checkboxes
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Image CDN: Prevent PHP warnings when handling malformed data.
 - Prevent PHP warnings when constants are already defined.
 - Related Posts: Prevent PHP warnings when handling malformed data.
 - Send JSON with built-in WordPress functions.
