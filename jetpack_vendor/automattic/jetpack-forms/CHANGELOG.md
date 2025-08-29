@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix fatal when checking for classic forms dashboard
 - Forms: Fix Google export on Simple sites
 - Forms: fix range slider mobile input
+- Forms: Fix slider theme css conflicts.
 - Forms: fix text wrapping in the slider tooltip
 - Forms: improve checkbox validation for older checkboxes
 - Forms: improve slider range touch area
