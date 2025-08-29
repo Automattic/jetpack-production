@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Ensure slider default obeys step.
+- Forms: Fix dataview footer width and reset page on status change
 - Forms: Fix default styles for image select field
 - Forms: fix fatal when checking for classic forms dashboard
 - Forms: Fix Google export on Simple sites
