@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.6.0-alpha] - unreleased
+## [6.0.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix default styles for image select field
 - Forms: fix fatal when checking for classic forms dashboard
 - Forms: Fix Google export on Simple sites
+- Forms: fix range slider mobile input
 - Forms: fix text wrapping in the slider tooltip
 - Forms: improve checkbox validation for older checkboxes
 - Forms: improve slider range touch area
@@ -1506,7 +1507,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[5.6.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v5.5.0...v5.6.0-alpha
+[6.0.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v5.5.0...v6.0.0-alpha
 [5.5.0]: https://github.com/automattic/jetpack-forms/compare/v5.4.0...v5.5.0
 [5.4.0]: https://github.com/automattic/jetpack-forms/compare/v5.3.0...v5.4.0
 [5.3.0]: https://github.com/automattic/jetpack-forms/compare/v5.2.0...v5.3.0
