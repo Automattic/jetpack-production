@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add product sync checksum support and include trash/auto-draft post statuses in queries
 - Sync: Ensure plugins is array before setting plugin action links in callables
 
+### Fixed
+- Fix WooCommerce product sync to handle trashed products
+
 ## [4.20.0] - 2025-08-25
 ### Changed
 - Enhance WooCommerce Products Sync to include post-related fields [#44810]
