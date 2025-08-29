@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts block: Update placeholder text for the site editor, and update the demo date.
 
 ### Bug fixes
+- Fixes an issue with Social where default image id could not be cleared.
 - Forms: error wrapper, make it possible to place the button inside a group block
 - Forms: improve checkbox validation for older checkboxes
 
