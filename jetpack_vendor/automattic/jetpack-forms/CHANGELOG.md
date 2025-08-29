@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: add default values when border radius style is missing
+- Forms: Add input styles to image select field
 - Forms: Add slider field typography controls.
 - Forms: Add styles for image select field on frontend
 - Forms: deprecate legacy feedback page, redirect to new dashboard jetpack-forms-admin
