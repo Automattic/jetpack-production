@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Do not force CRM installation for Complete plan users
 - Related Posts block: Update placeholder text for the site editor, and update the demo date.
 
 ### Bug fixes
