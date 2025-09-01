@@ -2,33 +2,30 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.0-a.8 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.0-beta - 2025-09-01
 ### Enhancements
-- Do not force CRM installation for Complete plan users
-- Related Posts block: Update placeholder text for the site editor, and update the demo date.
+- Remove CRM installation nudge for Complete plan users [#45026]
+- Related Posts block: Update placeholder text for the site editor, and update the demo date. [#44937]
 
 ### Bug fixes
-- Fixes an issue with Social where default image id could not be cleared.
-- Forms: error wrapper, make it possible to place the button inside a group block
-- Forms: improve checkbox validation for older checkboxes
+- Forms: Fix error wrapper when placing button inside a group block. [#44939]
+- Forms: Improve checkbox validation for older checkboxes. [#44931]
+- Social: Allow default image to be cleared. [#44994]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Image CDN: Prevent PHP warnings when handling malformed data.
-- Podcast player block: Add email rendering.
-- Prevent PHP warnings when constants are already defined.
-- Related Posts: Prevent PHP warnings when handling malformed data.
-- Send JSON with built-in WordPress functions.
-- Tiled gallery block: add email rendering.
-- Update package dependencies.
-- Use wp_rand() instead of rand() and mt_rand().
-- Writing Settings: Add Instagram connection
+- Image CDN: Prevent PHP warnings when handling malformed data. [#45015]
+- Podcast player block: Add email rendering. [#45003]
+- Prevent PHP warnings when constants are already defined. [#44957]
+- Related Posts: Prevent PHP warnings when handling malformed data. [#44946]
+- Send JSON with built-in WordPress functions. [#45002]
+- Tiled gallery block: Add email rendering. [#44943]
+- Update package dependencies. [#44948]
+- Use `wp_rand()` instead of `rand()` and `mt_rand()`. [#44964]
+- Writing Settings: Add Instagram connection. [#44936]
 
 ## 15.0-a.7 - 2025-08-25
 ### Enhancements
-- Add LaTeX Block to render mathematical formula. [#44895]
+- Add LaTeX block (Beta) to render mathematical formula. [#44895]
 - Disallow inserting Simple Payments block via inserter. [#44724]
 - Forms: Add MailPoet integration. [#44831] [#44930]
 - Forms: Preserve HTML IDs when processing feedback. [#44760]
