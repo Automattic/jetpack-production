@@ -297,7 +297,7 @@ function render( $name, $template_props = array(), $print = true ) {
 /**
  * Render podcast player block for email.
  *
- * @since 15.0-a.8
+ * @since 15.0
  *
  * @param string $block_content     The original block HTML content.
  * @param array  $parsed_block      The parsed block data including attributes.

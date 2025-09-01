@@ -5,36 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.0.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.0.0] - 2025-09-01
 ### Added
-- Forms: add default values when border radius style is missing
-- Forms: Add input styles to image select field
-- Forms: Add slider field typography controls.
-- Forms: Add styles for image select field on frontend
-- Forms: deprecate legacy feedback page, redirect to new dashboard jetpack-forms-admin
-- Forms: fix line break stripping on response values
+- Add default values when border radius style is missing. [#44978]
+- Add input styles to image select field. [#45009]
+- Add slider field typography controls. [#44967]
+- Add styles for image select field on front end. [#44923]
 
 ### Changed
-- Forms: Consolidate slider frontend and editor styles.
-- Forms: fix file field test
-- Forms: Manage Google Drive connection in dashboard
-- Send JSON with built-in WordPress functions.
+- Consolidate slider front end and editor styles. [#44947]
+- Deprecate legacy feedback page and add redirect to new `jetpack-forms-admin` dashboard. [#44961]
+- Improve checkbox validation for older checkboxes. [#44931]
+- Improve slider range touch area. [#44985]
+- Improve the showing of the error div to display correctly across themes. [#44939]
+- Manage Google Drive connection in dashboard. [#44956]
+- Send JSON with built-in WordPress functions. [#45002]
 
 ### Fixed
-- Forms: Ensure slider default obeys step.
-- Forms: Fix dataview footer width and reset page on status change
-- Forms: Fix default styles for image select field
-- Forms: fix fatal when checking for classic forms dashboard
-- Forms: Fix Google export on Simple sites
-- Forms: fix range slider mobile input
-- Forms: Fix slider theme css conflicts.
-- Forms: fix text wrapping in the slider tooltip
-- Forms: improve checkbox validation for older checkboxes
-- Forms: improve slider range touch area
-- Forms: improve the showing of the error div to display correctly across themes.
+- Ensure slider default obeys step. [#44919]
+- Fix dataview footer width and reset page on status change. [#45021]
+- Fix default styles for image select field. [#44969]
+- Fix fatal when checking for classic forms dashboard. [#44935]
+- Fix file field test. [#44959]
+- Fix form response line breaks. [#44966]
+- Fix Google export on Simple sites. [#44960]
+- Fix range slider mobile input. [#45010]
+- Fix slider theme CSS conflicts. [#45024]
+- Fix text wrapping in the slider tooltip. [#44988]
 
 ## [5.5.0] - 2025-08-25
 ### Added
@@ -1510,7 +1507,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.0.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v5.5.0...v6.0.0-alpha
+[6.0.0]: https://github.com/automattic/jetpack-forms/compare/v5.5.0...v6.0.0
 [5.5.0]: https://github.com/automattic/jetpack-forms/compare/v5.4.0...v5.5.0
 [5.4.0]: https://github.com/automattic/jetpack-forms/compare/v5.3.0...v5.4.0
 [5.3.0]: https://github.com/automattic/jetpack-forms/compare/v5.2.0...v5.3.0
