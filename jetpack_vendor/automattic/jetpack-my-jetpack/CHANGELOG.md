@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Prevent PHP fatal when using WP-CLI.
+
 ## [5.25.0] - 2025-09-01
 ### Added
 - Add product interstitials state management. [#44772]
