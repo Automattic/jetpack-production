@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.1.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.1.0] - 2025-09-02
 ### Added
-- Forms: release rating and slider fields at WP.com (not Jetpack yet)
+- Release rating and slider fields on WP.com (not Jetpack yet). [#44998]
 
 ### Changed
-- Tooling: Generate i18n function variants programmatically.
+- Tooling: Generate i18n function variants programmatically. [#45020]
 
 ### Fixed
-- Forms: switch to v3 and fix v2 encoding
+- Switch to v3 and fix v2 encoding. [#44927]
 
 ## [6.0.0] - 2025-09-01
 ### Added
@@ -1520,7 +1517,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.1.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.0.0...v6.1.0-alpha
+[6.1.0]: https://github.com/automattic/jetpack-forms/compare/v6.0.0...v6.1.0
 [6.0.0]: https://github.com/automattic/jetpack-forms/compare/v5.5.0...v6.0.0
 [5.5.0]: https://github.com/automattic/jetpack-forms/compare/v5.4.0...v5.5.0
 [5.4.0]: https://github.com/automattic/jetpack-forms/compare/v5.3.0...v5.4.0
