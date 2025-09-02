@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Tooling: Generate i18n function variants programmatically.
 
+### Fixed
+- Forms: switch to v3 and fix v2 encoding
+
 ## [6.0.0] - 2025-09-01
 ### Added
 - Add default values when border radius style is missing. [#44978]
