@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.1.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Forms: release rating and slider fields at WP.com (not Jetpack yet)
+
 ## [6.0.0] - 2025-09-01
 ### Added
 - Add default values when border radius style is missing. [#44978]
@@ -1507,6 +1514,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[6.1.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.0.0...v6.1.0-alpha
 [6.0.0]: https://github.com/automattic/jetpack-forms/compare/v5.5.0...v6.0.0
 [5.5.0]: https://github.com/automattic/jetpack-forms/compare/v5.4.0...v5.5.0
 [5.4.0]: https://github.com/automattic/jetpack-forms/compare/v5.3.0...v5.4.0
