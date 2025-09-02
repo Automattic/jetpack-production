@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.1-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add MCP settings to settings endpoint
+
 ## 15.0-beta - 2025-09-01
 ### Enhancements
 - Remove CRM installation nudge for Complete plan users [#45026]
