@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: release rating and slider fields at WP.com (not Jetpack yet)
 
+### Changed
+- Tooling: Generate i18n function variants programmatically.
+
 ## [6.0.0] - 2025-09-01
 ### Added
 - Add default values when border radius style is missing. [#44978]
