@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Block editor: update allowed block types for the mobile editor
+- Subscribe and Button blocks: Add email rendering for the WooCommerce Email Editor."
 
 ## 15.0-beta.3 - 2025-09-03
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
