@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: release rating and slider fields at WP.com (not Jetpack yet)
 
 ### Changed
+- Forms: sentence case couple CTAs from integrations panel
 - Tooling: Generate i18n function variants programmatically.
 
 ### Fixed
