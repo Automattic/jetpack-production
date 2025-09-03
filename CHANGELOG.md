@@ -6,8 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+## 15.0-beta.3 - 2025-09-03
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- My Jetpack: Prevent PHP error when using WP-CLI.
+- My Jetpack: Prevent PHP error when using WP-CLI. [#45045]
 
 ## 15.0-beta.2 - 2025-09-02
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
