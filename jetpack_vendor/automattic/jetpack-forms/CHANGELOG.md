@@ -5,12 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.2.1-alpha] - unreleased
+## [6.3.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Finally store the feedback in the new format
+
+### Changed
+- Forms: move all international phone code and UI back into legacy telephone field, keep backwards compat
 
 ## [6.2.0] - 2025-09-03
 ### Changed
@@ -1528,7 +1531,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.2.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.2.0...v6.2.1-alpha
+[6.3.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.2.0...v6.3.0-alpha
 [6.2.0]: https://github.com/automattic/jetpack-forms/compare/v6.1.0...v6.2.0
 [6.1.0]: https://github.com/automattic/jetpack-forms/compare/v6.0.0...v6.1.0
 [6.0.0]: https://github.com/automattic/jetpack-forms/compare/v5.5.0...v6.0.0
