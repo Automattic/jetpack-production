@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: move all international phone code and UI back into legacy telephone field, keep backwards compat
+- Split editor forms functionality
 
 ## [6.2.0] - 2025-09-03
 ### Changed
