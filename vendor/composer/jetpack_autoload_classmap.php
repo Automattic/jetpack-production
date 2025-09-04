@@ -455,7 +455,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/blocks/contact-form/class-contact-form-block.php'
 	),
 	'Automattic\\Jetpack\\External_Connections' => array(
-		'version' => '0.1.0.0',
+		'version' => '0.1.1.0-alpha1756992653',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-external-connections/src/class-external-connections.php'
 	),
 	'Automattic\\Jetpack\\External_Media\\External_Media' => array(
