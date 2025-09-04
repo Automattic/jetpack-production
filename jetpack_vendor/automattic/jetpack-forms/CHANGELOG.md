@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: move all international phone code and UI back into legacy telephone field, keep backwards compat
 - Split editor forms functionality
+- Update @wordpress/dataviews package v5.0.0 → v7.0.0
 
 ## [6.2.0] - 2025-09-03
 ### Changed
