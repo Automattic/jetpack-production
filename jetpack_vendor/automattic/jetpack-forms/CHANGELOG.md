@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Finally store the feedback in the new format
+- Forms: when exporting to gdrive set button state to busy and ignore further clicks
 
 ### Changed
 - Forms: move all international phone code and UI back into legacy telephone field, keep backwards compat
