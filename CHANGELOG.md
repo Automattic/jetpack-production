@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Added MCP abilities title to site settings
 - Block editor: update allowed block types for the mobile editor
+- Forms: track form submission failure
 - Subscribe and Button blocks: Add email rendering for the WooCommerce Email Editor."
 - Update package dependencies.
 - Writing Settings: Add Mailchimp connection
