@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Added MCP abilities title to site settings
 - Block editor: update allowed block types for the mobile editor
 - Subscribe and Button blocks: Add email rendering for the WooCommerce Email Editor."
+- Update package dependencies.
 - Writing Settings: Add Mailchimp connection
 
 ## 15.0 - 2025-09-04
