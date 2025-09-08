@@ -27,7 +27,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/utilities.php'
 	),
 	'3d45c7e6a7f0e71849e33afe4b3b3ede' => array(
-		'version' => '0.27.3.0-alpha1756991872',
+		'version' => '0.27.3.0-alpha1757345374',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/cli.php'
 	),
 );
