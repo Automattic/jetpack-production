@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: when exporting to gdrive set button state to busy and ignore further clicks
 
 ### Changed
+- Fix URL validation consistency between frontend and backend to prevent malformed URLs from passing validation
 - Forms: move all international phone code and UI back into legacy telephone field, keep backwards compat
 - Forms: remove legacy menu item by defaulting the filter to true
 - Forms: render implicit consent as hidden field instead of a DOM hidden checkbox
