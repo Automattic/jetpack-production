@@ -2,24 +2,21 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.1-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.1-a.1 - 2025-09-08
 ### Enhancements
-- Forms: Add hidden input field block
-- Forms: release rating and slide fields to Jetpack customers
+- Forms: Add hidden input field block. [#44079]
+- Forms: Make rating and slider fields available to self-hosted users. [#45094]
 
 ### Bug fixes
-- Sharing: Fix Facebook sharing URL.
+- Sharing: Fix Facebook sharing URL. [#45083]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Added MCP abilities title to site settings
-- Block editor: update allowed block types for the mobile editor
-- Forms: track form submission failure
-- Subscribe and Button blocks: Add email rendering for the WooCommerce Email Editor."
-- Update package dependencies.
-- Writing Settings: Add Mailchimp connection
+- Add MCP abilities title to site settings. [#45064]
+- Block editor: Update allowed block types for the mobile editor. [#45039]
+- Forms: Track form submission failure. [#45090]
+- Subscribe and Button blocks: Add email rendering for the WooCommerce Email Editor. [#45006]
+- Update package dependencies. [#45027] [#45096] [#45097]
+- Writing Settings: Add Mailchimp connection. [#44999]
 
 ## 15.0 - 2025-09-04
 ### Enhancements
@@ -96,10 +93,7 @@ This is an alpha version! The changes listed here are not final.
 - Slideshow block: Add email rendering. [#44835]
 - Tiled Gallery: Add initial state tests. [#44591]
 - Tiled gallery block: Add email rendering. [#44943]
-- Update package dependencies. [#44677]
-- Update package dependencies. [#44701] [#44725]
-- Update package dependencies. [#44870] [#44894] [#44899]
-- Update package dependencies. [#44948]
+- Update package dependencies. [#44677] [#44701] [#44725] [#44870] [#44894] [#44899] [#44948]
 - Use `wp_rand()` instead of `rand()` and `mt_rand()`. [#44964]
 - Writing Settings: Add Instagram connection. [#44936]
 
