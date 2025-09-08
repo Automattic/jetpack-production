@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Add hidden input block
 - Forms: Finally store the feedback in the new format
+- Forms: release rating and slide fields to Jetpack customers
 - Forms: track form submission failure
 - Forms: when exporting to gdrive set button state to busy and ignore further clicks
 

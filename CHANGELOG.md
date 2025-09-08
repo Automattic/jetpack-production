@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: Add hidden input field block
+- Forms: release rating and slide fields to Jetpack customers
 
 ### Bug fixes
 - Sharing: Fix Facebook sharing URL.
