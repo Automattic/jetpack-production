@@ -1681,7 +1681,7 @@ class Contact_Form_Plugin {
 			/**
 			 * Action when we want to log a jetpack_forms event.
 			 *
-			 * @since 6.3.0-alpha
+			 * @since 6.3.0
 			 *
 			 * @param string $log_message The log message.
 			 */

@@ -5,25 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.3.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.3.0] - 2025-09-08
 ### Added
-- Forms: Add hidden input block
-- Forms: Finally store the feedback in the new format
-- Forms: release rating and slide fields to Jetpack customers
-- Forms: track form submission failure
-- Forms: when exporting to gdrive set button state to busy and ignore further clicks
+- Add hidden input block. [#44079]
+- Make rating and slider fields available to self-hosted users. [#45094]
+- Store the feedback in the new format. [#45047]
+- Track form submission failures. [#45090]
 
 ### Changed
-- Forms: move all international phone code and UI back into legacy telephone field, keep backwards compat
-- Forms: remove legacy menu item by defaulting the filter to true
-- Forms: render implicit consent as hidden field instead of a DOM hidden checkbox
-- Forms: show custom messages for empty inbox/spam/trash folders.
-- Split editor forms functionality
-- Update @wordpress/dataviews package v5.0.0 → v7.0.0
-- Update package dependencies.
+- Improve performance by splitting editor code into two chunks. [#45065]
+- Move all international phone code and UI back into legacy telephone field. [#45061]
+- Remove legacy menu item by defaulting the filter to true. [#44043]
+- Render implicit consent as hidden field instead of a DOM-hidden checkbox. [#45078]
+- Set button state to busy and ignore further clicks when exporting to Google Drive. [#45074]
+- Show custom messages for empty inbox/spam/trash folders. [#45013]
+- Update @wordpress/dataviews package from v5.0.0 to v7.0.0. [#45012]
+- Update package dependencies. [#45027] [#45097]
 
 ## [6.2.0] - 2025-09-03
 ### Changed
@@ -1541,7 +1538,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.3.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.2.0...v6.3.0-alpha
+[6.3.0]: https://github.com/automattic/jetpack-forms/compare/v6.2.0...v6.3.0
 [6.2.0]: https://github.com/automattic/jetpack-forms/compare/v6.1.0...v6.2.0
 [6.1.0]: https://github.com/automattic/jetpack-forms/compare/v6.0.0...v6.1.0
 [6.0.0]: https://github.com/automattic/jetpack-forms/compare/v5.5.0...v6.0.0
