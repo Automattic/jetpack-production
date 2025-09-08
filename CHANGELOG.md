@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.1-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Forms: Add preloaded config endpoint.
+
 ## 15.1-a.1 - 2025-09-08
 ### Enhancements
 - Forms: Add hidden input field block. [#44079]
