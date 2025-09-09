@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: Add integrations permissions check.
 - Forms: Add preloaded config endpoint.
 
 ## 15.1-a.1 - 2025-09-08

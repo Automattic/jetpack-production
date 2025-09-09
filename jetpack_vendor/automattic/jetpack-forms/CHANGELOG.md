@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Fix URL validation consistency between frontend and backend to prevent malformed URLs from passing validation
+- Forms: Add integrations permissions check.
 - Forms: Add preloaded config endpoint.
 - Forms: Update data processing and UI for image select field
 
