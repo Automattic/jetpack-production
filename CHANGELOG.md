@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add integrations permissions check.
 - Forms: Add preloaded config endpoint.
 
+### Bug fixes
+- Forms: Fix MailPoet string warning.
+
 ## 15.1-a.1 - 2025-09-08
 ### Enhancements
 - Forms: Add hidden input field block. [#44079]

@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add preloaded config endpoint.
 - Forms: Update data processing and UI for image select field
 
+### Fixed
+- Forms: Fix MailPoet string warning.
+
 ## [6.3.0] - 2025-09-08
 ### Added
 - Add hidden input block. [#44079]
