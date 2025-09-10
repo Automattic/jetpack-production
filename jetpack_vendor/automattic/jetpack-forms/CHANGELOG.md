@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: add searchable country selector dropdown (combobox)
+- Forms: try and fix deploy cache issue by adding a manual suffix for cache busting
 
 ### Changed
 - Fix URL validation consistency between frontend and backend to prevent malformed URLs from passing validation
