@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add preloaded config endpoint.
 - Forms: phone field can now carry a country selector combobox
 
+### Improved compatibility
+- Forms: Add integrations feature flag.
+
 ### Bug fixes
 - Forms: Fix MailPoet string warning.
 
