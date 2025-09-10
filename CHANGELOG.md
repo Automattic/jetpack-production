@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Forms: Fix MailPoet string warning.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Shortcodes: load Recipe dependency via PNPM.
+
 ## 15.1-a.1 - 2025-09-08
 ### Enhancements
 - Forms: Add hidden input field block. [#44079]
