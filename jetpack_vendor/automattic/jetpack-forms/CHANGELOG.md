@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add integrations feature flag.
 - Forms: Add integrations permissions check.
 - Forms: Add preloaded config endpoint.
+- Forms: Show option label on selected options for Image Select Field
 - Forms: Update data processing and UI for image select field
 - Update package dependencies.
 
