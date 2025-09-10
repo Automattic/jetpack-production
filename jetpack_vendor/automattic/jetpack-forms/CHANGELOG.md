@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add integrations permissions check.
 - Forms: Add preloaded config endpoint.
 - Forms: Update data processing and UI for image select field
+- Update package dependencies.
 
 ### Fixed
 - Forms: Fix MailPoet string warning.
