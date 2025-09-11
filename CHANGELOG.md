@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Bump print-this to 1.16.0
+- Fix a fatal in fetching a non-existing menu in JSON API.
 - Fix fatal caused by an undefined shortcode dependencies function.
 - Shortcodes: load Recipe dependency via PNPM.
 - Update package dependencies.
