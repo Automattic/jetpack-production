@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: Fix MailPoet string warning.
+- Widget Visibility: Fix thrown PHP error under specific block conditions
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Fix fatal caused by an undefined shortcode dependencies function.
