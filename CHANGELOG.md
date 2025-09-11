@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: Add integrations permissions check.
 - Forms: Add preloaded config endpoint.
+- Forms: Improve supported integrations filter.
 - Forms: phone field can now carry a country selector combobox
 
 ### Improved compatibility
