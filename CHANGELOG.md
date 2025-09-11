@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Forms: Add integrations feature flag.
+- Site Accelerator (Image CDN): Add support for images added via Breakdance blocks.
 
 ### Bug fixes
 - Forms: Fix MailPoet string warning.
