@@ -1179,7 +1179,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies. [#34411] [#34427]
 
 ### Fixed
-- Fixed PHP warnings that occured when processing malformed data. [#34386]
+- Fixed PHP warnings that occurred when processing malformed data. [#34386]
 - Added focus state to radio buttons and checkboxes. [#34408]
 - Fixed styling issues for Outlined and Animated styles. [#34272]
 - Made Contact Form error fixing accessible. [#34173]
