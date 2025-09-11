@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Site Accelerator (Image CDN): Add support for images added via Breakdance blocks.
 
 ### Bug fixes
+- AI assistant: Fix spacing on forms block.
 - Forms: Fix MailPoet string warning.
 - Widget Visibility: Fix thrown PHP error under specific block conditions
 
