@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Bump print-this to 1.16.0
 - Fix a fatal in fetching a non-existing menu in JSON API.
 - Fix fatal caused by an undefined shortcode dependencies function.
+- Garden Sites: Exposes the Garden flags and information on the site endpoint
 - Shortcodes: load Recipe dependency via PNPM.
 - Update package dependencies.
 
