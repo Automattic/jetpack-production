@@ -15,7 +15,7 @@
 		"automattic/jetpack-a8c-mc-stats": "^3.0.5",
 		"automattic/jetpack-account-protection": "^0.2.7",
 		"automattic/jetpack-admin-ui": "^0.5.11",
-		"automattic/jetpack-assets": "^4.3.6",
+		"automattic/jetpack-assets": "^4.3.7-alpha",
 		"automattic/jetpack-autoloader": "^5.0.10-alpha",
 		"automattic/jetpack-backup": "^4.2.20",
 		"automattic/jetpack-blaze": "^0.26.7",
@@ -54,12 +54,12 @@
 		"automattic/jetpack-sync": "^4.21.3-alpha",
 		"automattic/jetpack-videopress": "^0.32.5-alpha",
 		"automattic/jetpack-waf": "^0.27.4-alpha",
-		"automattic/woocommerce-analytics": "^0.6.1",
+		"automattic/woocommerce-analytics": "^0.6.2-alpha",
 		"scssphp/scssphp": "1.13.0"
 	},
 	"require-dev": {
 		"antecedent/patchwork": "^2.2",
-		"automattic/jetpack-changelogger": "^6.0.6",
+		"automattic/jetpack-changelogger": "^6.0.7-alpha",
 		"automattic/patchwork-redefine-exit": "^2.0.8",
 		"automattic/phpunit-select-config": "^1.0.3",
 		"yoast/phpunit-polyfills": "^4.0.0"
