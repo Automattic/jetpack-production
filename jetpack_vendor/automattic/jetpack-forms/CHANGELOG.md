@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Forms: Fix a warning and bad handling when JSON_DATA is not preceded by a new line.
 - Forms: Fix MailPoet string warning.
 - Forms: Fix mobile UI of Image Select field
 - Forms: fix V2 missing slashes
