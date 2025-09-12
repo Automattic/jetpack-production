@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: Fix MailPoet string warning.
 - Forms: Fix mobile UI of Image Select field
+- Forms: fix V2 missing slashes
 
 ## [6.3.0] - 2025-09-08
 ### Added
