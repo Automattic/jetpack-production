@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: add extra layer of cache busting for interactivity API files (view.js) with hash suffix
 
+### Fixed
+- Forms: Add cache busting on new version for interactivity API script file on top level context
+
 ## [6.4.0] - 2025-09-15
 ### Added
 - Add new block toggle to skip saving form submisions on WP Admin. [#45072]
