@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: added new block toggle to skip saving form submisions on wp-admin
 - Forms: Add integrations permissions check.
 - Forms: Add preloaded config endpoint.
 - Forms: Improve supported integrations filter.

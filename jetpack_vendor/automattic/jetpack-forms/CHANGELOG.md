@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: added new block toggle to skip saving form submisions on wp-admin
 - Forms: add searchable country selector dropdown (combobox)
 - Forms: try and fix deploy cache issue by adding a manual suffix for cache busting
 
