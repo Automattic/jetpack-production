@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.4.1-alpha] - unreleased
+## [6.5.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add extra layer of cache busting for interactivity API files (view.js) with hash suffix
 
 ### Changed
+- Forms: Return integration titles from endpoint.
 - Forms: Update Image Select Field to beta
 
 ### Fixed
@@ -1572,7 +1573,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.4.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.4.0...v6.4.1-alpha
+[6.5.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.4.0...v6.5.0-alpha
 [6.4.0]: https://github.com/automattic/jetpack-forms/compare/v6.3.0...v6.4.0
 [6.3.0]: https://github.com/automattic/jetpack-forms/compare/v6.2.0...v6.3.0
 [6.2.0]: https://github.com/automattic/jetpack-forms/compare/v6.1.0...v6.2.0

@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: Return integration titles from endpoint.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - On Dotcom Simple site, show all sharing settings even when the site is using a block theme, so that the sharing buttons filter can be disabled
 
