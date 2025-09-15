@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.20-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.7.20] - 2025-09-15
 ### Fixed
-- Add support for images added via Breakdance blocks.
+- Ensure compatibility with images added via Breakdance blocks. [#45059]
 
 ## [0.7.19] - 2025-09-08
 ### Changed
@@ -237,7 +234,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add image CDN package. [#29561]
 
-[0.7.20-alpha]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.7.19...v0.7.20-alpha
+[0.7.20]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.7.19...v0.7.20
 [0.7.19]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.7.18...v0.7.19
 [0.7.18]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.7.17...v0.7.18
 [0.7.17]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.7.16...v0.7.17

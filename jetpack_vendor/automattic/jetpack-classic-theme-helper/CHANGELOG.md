@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.18-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.13.18] - 2025-09-15
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#45127] [#45128]
 
 ### Fixed
-- Featured images: Fix disabling featured images in post preview
+- Featured images: Fix disabling featured images in post preview [#45036]
 
 ## [0.13.17] - 2025-09-08
 ### Changed
@@ -378,7 +375,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add wordpress folder on gitignore. [#37177]
 
-[0.13.18-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.17...v0.13.18-alpha
+[0.13.18]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.17...v0.13.18
 [0.13.17]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.16...v0.13.17
 [0.13.16]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.15...v0.13.16
 [0.13.15]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.14...v0.13.15

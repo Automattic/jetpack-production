@@ -5,31 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.4.0-alpha] - unreleased
+## [6.4.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Forms: added new block toggle to skip saving form submisions on wp-admin
 - Forms: add extra layer of cache busting for interactivity API files (view.js) with hash suffix
-- Forms: add searchable country selector dropdown (combobox)
-- Forms: try and fix deploy cache issue by adding a manual suffix for cache busting
+
+## [6.4.0] - 2025-09-15
+### Added
+- Add new block toggle to skip saving form submisions on WP Admin. [#45072]
+- Add searchable country selector dropdown (combobox). [#45120]
 
 ### Changed
-- Fix URL validation consistency between frontend and backend to prevent malformed URLs from passing validation
-- Forms: Add integrations feature flag.
-- Forms: Add integrations permissions check.
-- Forms: Add preloaded config endpoint.
-- Forms: Improve supported integrations filter.
-- Forms: Show option label on selected options for Image Select Field
-- Forms: Update data processing and UI for image select field
-- Update package dependencies.
+- Add integrations feature flag. [#45037]
+- Add integrations permissions check. [#45063]
+- Add preloaded config endpoint. [#45091]
+- Fix URL validation consistency between frontend and backend to prevent malformed URLs from passing validation. [#45093]
+- Improve supported integrations filter. [#45123]
+- Image Select field: Show option label on selected options. [#45122]
+- Image Select field: Update data processing and UI. [#45080] [#45142]
+- Update package dependencies. [#45127] [#45128]
 
 ### Fixed
-- Forms: Fix a warning and bad handling when JSON_DATA is not preceded by a new line.
-- Forms: Fix MailPoet string warning.
-- Forms: Fix mobile UI of Image Select field
-- Forms: fix V2 missing slashes
+- Address caching issue by adding a manual cache-busting suffix. [#45137]
+- Ensure slashes are not errantly stripped. [#45153]
+- Fix a warning and bad handling when JSON_DATA is not preceded by a new line. [#45110]
+- Fix MailPoet string warning. [#45114]
 
 ## [6.3.0] - 2025-09-08
 ### Added
@@ -1564,7 +1566,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.4.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.3.0...v6.4.0-alpha
+[6.4.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.4.0...v6.4.1-alpha
+[6.4.0]: https://github.com/automattic/jetpack-forms/compare/v6.3.0...v6.4.0
 [6.3.0]: https://github.com/automattic/jetpack-forms/compare/v6.2.0...v6.3.0
 [6.2.0]: https://github.com/automattic/jetpack-forms/compare/v6.1.0...v6.2.0
 [6.1.0]: https://github.com/automattic/jetpack-forms/compare/v6.0.0...v6.1.0
