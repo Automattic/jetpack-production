@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: added new block toggle to skip saving form submisions on wp-admin
+- Forms: add extra layer of cache busting for interactivity API files (view.js) with hash suffix
 - Forms: add searchable country selector dropdown (combobox)
 - Forms: try and fix deploy cache issue by adding a manual suffix for cache busting
 
