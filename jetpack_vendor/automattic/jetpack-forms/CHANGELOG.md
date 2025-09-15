@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Add cache busting on new version for interactivity API script file on top level context
+- Forms: address some wee issues on field error stylings
 
 ## [6.4.0] - 2025-09-15
 ### Added
