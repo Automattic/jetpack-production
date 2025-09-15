@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: add extra layer of cache busting for interactivity API files (view.js) with hash suffix
 
+### Changed
+- Forms: Update Image Select Field to beta
+
 ### Fixed
 - Forms: Add cache busting on new version for interactivity API script file on top level context
 
