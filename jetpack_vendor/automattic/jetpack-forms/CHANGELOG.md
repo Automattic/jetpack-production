@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add hidden field
 
 ### Changed
+- Forms: fix phone field whitespace lint
 - Forms: Return integration titles from endpoint.
 - Forms: Update Image Select Field to beta
 
