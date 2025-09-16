@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: add extra layer of cache busting for interactivity API files (view.js) with hash suffix
+- Forms: add hidden field
 
 ### Changed
 - Forms: Return integration titles from endpoint.
