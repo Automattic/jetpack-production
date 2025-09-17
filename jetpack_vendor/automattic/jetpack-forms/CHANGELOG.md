@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: fix phone field whitespace lint
 - Forms: Return integration titles from endpoint.
+- Forms: track on .com how often forms get submitted without a JWT token.
 - Forms: Update Image Select Field to beta
 - Forms: use new rating block on Feedback variation and pattern
 
