@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: address some wee issues on field error stylings
 - Forms: Fix outline and animated styles for Image Select field
 - Forms: Fix slider value position.
+- Forms: improve button alignment when field width allows wrapping the submit button
 - Forms: remove input element height CSS rule after fixing form-styles hook attribute
 
 ## [6.4.0] - 2025-09-15
