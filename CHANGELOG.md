@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Change the location of the Jetpack -> Stats submenu item to a new top-level admin menu item called "Stats"
 
+### Bug fixes
+- Forms: Fix slider value position.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - On Dotcom Simple site, show all sharing settings even when the site is using a block theme, so that the sharing buttons filter can be disabled
 - Subscriptions: Always link to WP Admin in Newsletter widget
