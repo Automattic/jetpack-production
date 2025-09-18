@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Instant Search: add additional WC attribute taxonomies for Sync.
 
+### Changed
+- Jetpack Sync: Add 'is_connected' property to synced users
+
 ## [4.21.3] - 2025-09-15
 ### Changed
 - Jetpack Sync: Stop triggering 'jetpack_wp_login' actions with empty user ID. [#45132]
