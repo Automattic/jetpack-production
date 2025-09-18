@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: allow custom search placeholder for phone field
 
 ### Changed
+- Forms: add scheduled deletion for submissions that skip the submission's inbox and are stored as temporary feedback.
 - Forms: fix phone field whitespace lint
 - Forms: Return integration titles from endpoint.
 - Forms: track on .com how often forms get submitted without a JWT token.
