@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: track on .com how often forms get submitted without a JWT token.
 - Forms: Update Image Select Field to beta
 - Forms: use new rating block on Feedback variation and pattern
+- Update package dependencies.
 
 ### Fixed
 - Forms: Add cache busting on new version for interactivity API script file on top level context
