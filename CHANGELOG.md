@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: add hidden field
 - Forms: add scheduled deletion for submissions that skip the submission's inbox and are stored as temporary feedback.
+- Forms: Allow enabling integration by default.
 - Forms: Return integration titles from endpoint.
 
 ### Improved compatibility
