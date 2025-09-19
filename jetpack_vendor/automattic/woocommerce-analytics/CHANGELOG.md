@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add server side tracking
 
+### Changed
+- Implement server-side direct event delivery
+
 ## [0.6.2] - 2025-09-15
 ### Changed
 - Internal updates.
