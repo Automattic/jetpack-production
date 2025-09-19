@@ -455,6 +455,8 @@ return array(
     'Automattic\\Woocommerce_Analytics' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woocommerce-analytics.php',
     'Automattic\\Woocommerce_Analytics\\My_Account' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-my-account.php',
     'Automattic\\Woocommerce_Analytics\\Universal' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-universal.php',
+    'Automattic\\Woocommerce_Analytics\\WC_Analytics_Ch_Event' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-wc-analytics-ch-event.php',
+    'Automattic\\Woocommerce_Analytics\\WC_Analytics_Tracking' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-wc-analytics-tracking.php',
     'Automattic\\Woocommerce_Analytics\\Woo_Analytics_Trait' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woo-analytics-trait.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Jetpack_Customize_Control_Title' => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/content-options/customizer.php',
