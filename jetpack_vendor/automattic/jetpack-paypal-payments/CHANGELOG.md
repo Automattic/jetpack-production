@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.5.5] - 2025-09-19
 ### Changed
-- Namespace PayPal SDK to minimize loading conflicts when using other PayPal blocks.
-- Update package dependencies.
+- Namespace PayPal SDK to minimize loading conflicts when using other PayPal blocks. [#45224]
+- Update package dependencies. [#45173] [#45229]
 
 ## [0.5.4] - 2025-09-16
 ### Changed
@@ -79,7 +76,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.5.5-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.4...v0.5.5-alpha
+[0.5.5]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.4...v0.5.5
 [0.5.4]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.3...v0.5.4
 [0.5.3]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.2...v0.5.3
 [0.5.2]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.1...v0.5.2

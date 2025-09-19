@@ -5,35 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.5.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.5.0] - 2025-09-19
 ### Added
-- Forms: add extra layer of cache busting for interactivity API files (view.js) with hash suffix
-- Forms: Add filter to enable integrations.
-- Forms: add hidden field
-- Forms: allow custom search placeholder for phone field
+- Add extra layer of cache busting for interactivity API files (view.js) with hash suffix. [#45138]
+- Add filter to enable integrations. [#45201]
+- Add hidden field. [#45104]
+- Allow custom search placeholder for phone field. [#45197]
 
 ### Changed
-- Forms: add scheduled deletion for submissions that skip the submission's inbox and are stored as temporary feedback.
-- Forms: fix phone field whitespace lint
-- Forms: Return integration titles from endpoint.
-- Forms: track on .com how often forms get submitted without a JWT token.
-- Forms: Update Image Select Field to beta
-- Forms: use new rating block on Feedback variation and pattern
-- Update @wordpress/dataviews package from v7 to v9
-- Update package dependencies.
+- Add scheduled deletion for submissions that skip the submission's inbox and are stored as temporary feedback. [#45178]
+- Fix phone field whitespace lint. [#45194]
+- Return integration titles from endpoint. [#45151]
+- Track on .com how often forms get submitted without a JWT token. [#45221]
+- Update Image Select Field to beta. [#45168]
+- Use new rating block on Feedback variation and pattern. [#45215]
+- Update @wordpress/dataviews package from v7 to v9. [#45213]
+- Update package dependencies. [#45173] [#45229]
 
 ### Fixed
-- Forms: Add cache busting on new version for interactivity API script file on top level context
-- Forms: address some wee issues on field error stylings
-- Forms: Fix outline and animated styles for Image Select field
-- Forms: Fix slider min/max editing.
-- Forms: Fix slider value position.
-- Forms: improve button alignment when field width allows wrapping the submit button
-- Forms: remove input element height CSS rule after fixing form-styles hook attribute
-- Forms: restrict button flex setup after last changes to improve overall layout
+- Add cache busting on new version for interactivity API script file on top level context. [#45167]
+- Address some wee issues on field error stylings. [#45187]
+- Fix outline and animated styles for Image Select field. [#45189]
+- Fix slider min/max editing. [#45219]
+- Fix slider value position. [#45218]
+- Improve button alignment when field width allows wrapping the submit button. [#45188]
+- Remove input element height CSS rule after fixing form-styles hook attribute. [#45202]
+- Restrict button flex setup after last changes to improve overall layout. [#45233]
 
 ## [6.4.0] - 2025-09-15
 ### Added
@@ -1589,7 +1586,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.5.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.4.0...v6.5.0-alpha
+[6.5.0]: https://github.com/automattic/jetpack-forms/compare/v6.4.0...v6.5.0
 [6.4.0]: https://github.com/automattic/jetpack-forms/compare/v6.3.0...v6.4.0
 [6.3.0]: https://github.com/automattic/jetpack-forms/compare/v6.2.0...v6.3.0
 [6.2.0]: https://github.com/automattic/jetpack-forms/compare/v6.1.0...v6.2.0
