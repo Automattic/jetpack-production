@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: track on .com how often forms get submitted without a JWT token.
 - Forms: Update Image Select Field to beta
 - Forms: use new rating block on Feedback variation and pattern
+- Update @wordpress/dataviews package from v7 to v9
 - Update package dependencies.
 
 ### Fixed
