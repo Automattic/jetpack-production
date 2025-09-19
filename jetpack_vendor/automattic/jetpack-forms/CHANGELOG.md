@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add cache busting on new version for interactivity API script file on top level context
 - Forms: address some wee issues on field error stylings
 - Forms: Fix outline and animated styles for Image Select field
+- Forms: Fix slider min/max editing.
 - Forms: Fix slider value position.
 - Forms: improve button alignment when field width allows wrapping the submit button
 - Forms: remove input element height CSS rule after fixing form-styles hook attribute
