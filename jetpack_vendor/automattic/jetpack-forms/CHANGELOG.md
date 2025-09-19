@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Forms: Fix image choice widths
+
 ## [6.5.0] - 2025-09-19
 ### Added
 - Add extra layer of cache busting for interactivity API files (view.js) with hash suffix. [#45138]
