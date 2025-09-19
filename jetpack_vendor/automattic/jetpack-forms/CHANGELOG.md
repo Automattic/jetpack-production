@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix slider value position.
 - Forms: improve button alignment when field width allows wrapping the submit button
 - Forms: remove input element height CSS rule after fixing form-styles hook attribute
+- Forms: restrict button flex setup after last changes to improve overall layout
 
 ## [6.4.0] - 2025-09-15
 ### Added
