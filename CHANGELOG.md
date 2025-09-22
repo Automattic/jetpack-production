@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: rename 'Manage responses' forms sidebar block panel to 'Responses storage'
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Editor assets endpoint: allow all `jetpack/contact-info` inner blocks.
 
