@@ -62,11 +62,11 @@ return array(
     ),
     'jetpack-external-media' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-external-media',
-      'ver' => '0.5.3',
+      'ver' => '0.5.4-alpha1758519718',
     ),
     'jetpack-forms' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
-      'ver' => '6.5.1-alpha1758321466',
+      'ver' => '6.5.1-alpha1758519718',
     ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
