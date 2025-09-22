@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.1-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Editor assets endpoint: allow all `jetpack/contact-info` inner blocks.
+
 ## 15.1-a.7 - 2025-09-22
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Internal updates.
