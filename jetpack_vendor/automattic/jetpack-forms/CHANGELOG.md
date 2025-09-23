@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove unnecessary copy from exports modal
 - Forms: rename 'Manage responses' forms sidebar block panel to 'Responses storage'
 
+### Fixed
+- Forms: fixes the missing _links attribute
+
 ## [6.5.1] - 2025-09-22
 ### Fixed
 - Fix lints. [#45242]
