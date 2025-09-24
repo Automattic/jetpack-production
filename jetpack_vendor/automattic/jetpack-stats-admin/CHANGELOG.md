@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.29.1-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Fix dashboard.wordpress.com breaking non-odyssey stats on older versions of Jetpack.
+
 ## 0.29.0 - 2025-09-19
 ### Changed
 - Change the location of the Jetpack -> Stats submenu item to a new top-level admin menu item called "Stats". [#44524]
