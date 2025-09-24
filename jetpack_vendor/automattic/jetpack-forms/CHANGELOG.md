@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: add setting to enable or disable email notifications for form submissions
+
 ### Changed
 - Forms: remove unnecessary copy from exports modal
 - Forms: rename 'Manage responses' forms sidebar block panel to 'Responses storage'

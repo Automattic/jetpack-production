@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: add setting to enable or disable email notifications for form submissions
 - Forms: rename 'Manage responses' forms sidebar block panel to 'Responses storage'
 
 ### Bug fixes
