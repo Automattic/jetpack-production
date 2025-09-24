@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: rename 'Manage responses' forms sidebar block panel to 'Responses storage'
 
 ### Fixed
+- Forms: don't override field labels on transforms
 - Forms: fixes the missing _links attribute
 
 ## [6.5.1] - 2025-09-22

@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: rename 'Manage responses' forms sidebar block panel to 'Responses storage'
 
 ### Bug fixes
+- Forms: don't override field labels on transforms
 - Forms: fixes the missing rest attributes
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
