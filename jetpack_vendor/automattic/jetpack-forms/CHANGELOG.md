@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove unnecessary copy from exports modal
 - Forms: rename 'Manage responses' forms sidebar block panel to 'Responses storage'
 
+### Removed
+- Forms: remove unused code Dashboard_View_Switch and move useful methods into Dashboard static methods
+
 ### Fixed
 - Forms: don't override field labels on transforms
 - Forms: fixes the missing _links attribute
