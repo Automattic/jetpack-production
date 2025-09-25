@@ -1803,31 +1803,35 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php'
 	),
 	'Automattic\\Woocommerce_Analytics' => array(
-		'version' => '0.9.0.0-alpha1758771804',
+		'version' => '0.9.0.0-alpha1758779981',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woocommerce-analytics.php'
 	),
+	'Automattic\\Woocommerce_Analytics\\Features' => array(
+		'version' => '0.9.0.0-alpha1758779981',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-features.php'
+	),
 	'Automattic\\Woocommerce_Analytics\\My_Account' => array(
-		'version' => '0.9.0.0-alpha1758771804',
+		'version' => '0.9.0.0-alpha1758779981',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-my-account.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\Universal' => array(
-		'version' => '0.9.0.0-alpha1758771804',
+		'version' => '0.9.0.0-alpha1758779981',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-universal.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\WC_Analytics_Ch_Event' => array(
-		'version' => '0.9.0.0-alpha1758771804',
+		'version' => '0.9.0.0-alpha1758779981',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-wc-analytics-ch-event.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\WC_Analytics_Tracking' => array(
-		'version' => '0.9.0.0-alpha1758771804',
+		'version' => '0.9.0.0-alpha1758779981',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-wc-analytics-tracking.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\WC_Analytics_Tracking_Proxy' => array(
-		'version' => '0.9.0.0-alpha1758771804',
+		'version' => '0.9.0.0-alpha1758779981',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/API/class-wc-analytics-tracking-proxy.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\Woo_Analytics_Trait' => array(
-		'version' => '0.9.0.0-alpha1758771804',
+		'version' => '0.9.0.0-alpha1758779981',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woo-analytics-trait.php'
 	),
 	'Container' => array(

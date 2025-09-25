@@ -453,6 +453,7 @@ return array(
     'Automattic\\Jetpack\\Waf\\Waf_Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-stats.php',
     'Automattic\\Jetpack\\Waf\\Waf_Transforms' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php',
     'Automattic\\Woocommerce_Analytics' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woocommerce-analytics.php',
+    'Automattic\\Woocommerce_Analytics\\Features' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-features.php',
     'Automattic\\Woocommerce_Analytics\\My_Account' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-my-account.php',
     'Automattic\\Woocommerce_Analytics\\Universal' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-universal.php',
     'Automattic\\Woocommerce_Analytics\\WC_Analytics_Ch_Event' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-wc-analytics-ch-event.php',

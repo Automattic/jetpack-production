@@ -770,7 +770,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! debug */ "../../../node_modules/.pnpm/debug@4.4.3/node_modules/debug/src/browser.js");
 /* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(debug__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./src/client/constants.ts");
+/* harmony import */ var _api_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api-client */ "./src/client/api-client.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ "./src/client/constants.ts");
 /**
  * External dependencies
  */
@@ -778,6 +779,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Internal dependencies
  */
+
 
 const debug = debug__WEBPACK_IMPORTED_MODULE_0___default()('wc-analytics:analytics');
 
@@ -793,6 +795,7 @@ class Analytics {
   }) {
     this.isInitialized = false;
     this.sessionManager = sessionManager;
+    this.apiClient = new _api_client__WEBPACK_IMPORTED_MODULE_1__.ApiClient();
     this.eventQueue = eventQueue;
     this.commonProps = commonProps;
     this.features = features;
@@ -807,6 +810,11 @@ class Analytics {
       return;
     }
 
+    // Initialize API client if proxy tracking is enabled
+    if (this.features.proxy) {
+      this.apiClient.init();
+    }
+
     /*
      * Initialize the session manager and record the page_view event
      * only if the ClickHouse (ch) feature is enabled as these events are relevant exclusively when ClickHouse is active.
@@ -819,12 +827,15 @@ class Analytics {
         isNewSession
       } = this.sessionManager;
 
-      // Add session ID and landing page to common properties.
-      this.commonProps = {
-        ...this.commonProps,
-        session_id: sessionId,
-        landing_page: landingPage
-      };
+      // Not needed if proxy tracking is enabled.
+      if (!this.features.proxy) {
+        // Add session ID and landing page to common properties.
+        this.commonProps = {
+          ...this.commonProps,
+          session_id: sessionId,
+          landing_page: landingPage
+        };
+      }
       if (isNewSession) {
         this.maybeRecordSessionStartedEvent();
       } else {
@@ -865,13 +876,8 @@ class Analytics {
    * @param properties - The properties of the event.
    */
   recordEvent = (event, properties = {}) => {
-    if (!window._wca) {
-      debug('Skipping event recording because _wca is not defined');
-      return;
-    }
-
     // Validate event name
-    if (typeof event !== 'string' || !_constants__WEBPACK_IMPORTED_MODULE_1__.EVENT_NAME_REGEX.test(event)) {
+    if (typeof event !== 'string' || !_constants__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_REGEX.test(event)) {
       debug('Skipping event recording because event name is not valid');
       return;
     }
@@ -879,19 +885,65 @@ class Analytics {
       ...this.commonProps,
       ...properties
     };
-    if (this.features.ch && _constants__WEBPACK_IMPORTED_MODULE_1__.CLICK_HOUSE_EVENTS.includes(event)) {
-      eventProperties.ch = 1;
+    // Use API client if enabled, otherwise fall back to _wca.push
+    if (this.features.proxy) {
+      // Add client specific properties to the event properties. We don't need to do this for direct pixel tracking since it's already done there.
+      this.addClientProperties(eventProperties);
+      this.apiClient.addEvent(event, eventProperties);
     } else {
-      delete eventProperties.ch;
+      this.fireDirectPixel(event, eventProperties);
     }
-    const eventName = `${_constants__WEBPACK_IMPORTED_MODULE_1__.EVENT_PREFIX}${event}`;
-    eventProperties._en = eventName;
-    debug('Record event "%s" called with props %o', eventName, eventProperties);
-    window._wca.push(eventProperties);
 
     // Post initialization, maybe record engagement event.
     if (this.isInitialized) {
       this.maybeRecordEngagementEvent();
+    }
+  };
+
+  /**
+   * Fire a pixel event.
+   * @param event           - The name of the event.
+   * @param eventProperties - The properties of the event.
+   */
+  fireDirectPixel = (event, eventProperties) => {
+    // Legacy _wca tracking
+    if (!window._wca) {
+      debug('Skipping event recording because _wca is not defined');
+      return;
+    }
+    if (this.features.ch && _constants__WEBPACK_IMPORTED_MODULE_2__.CLICK_HOUSE_EVENTS.includes(event)) {
+      eventProperties.ch = 1;
+    } else {
+      delete eventProperties.ch;
+    }
+    debug('Recording event via _wca: "%s" with props %o', event, eventProperties);
+    eventProperties._en = `${_constants__WEBPACK_IMPORTED_MODULE_2__.EVENT_PREFIX}${event}`;
+    window._wca.push(eventProperties);
+  };
+
+  /**
+   * Add client properties to the event properties.
+   * @param eventProperties - The properties of the event.
+   */
+  addClientProperties = eventProperties => {
+    const date = new Date();
+    eventProperties._ts = date.getTime();
+    eventProperties._tz = date.getTimezoneOffset() / 60;
+    const nav = window.navigator;
+    const screen = window.screen;
+    eventProperties._lg = nav.language;
+    eventProperties._pf = navigator?.platform;
+    eventProperties._ht = screen.height;
+    eventProperties._wd = screen.width;
+    const sx = window.pageXOffset !== undefined ? window.pageXOffset : (document.documentElement || document.body).scrollLeft;
+    const sy = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body).scrollTop;
+    eventProperties._sx = sx !== undefined ? sx : 0;
+    eventProperties._sy = sy !== undefined ? sy : 0;
+    if (document.location !== undefined) {
+      eventProperties._dl = document.location.toString();
+    }
+    if (document.referrer !== undefined) {
+      eventProperties._dr = document.referrer;
     }
   };
 
@@ -925,6 +977,140 @@ class Analytics {
 
 /***/ }),
 
+/***/ "./src/client/api-client.ts":
+/*!**********************************!*\
+  !*** ./src/client/api-client.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ApiClient: () => (/* binding */ ApiClient)
+/* harmony export */ });
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/api-fetch */ "@wordpress/api-fetch");
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! debug */ "../../../node_modules/.pnpm/debug@4.4.3/node_modules/debug/src/browser.js");
+/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(debug__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ "./src/client/constants.ts");
+/**
+ * External dependencies
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+const debug = debug__WEBPACK_IMPORTED_MODULE_1___default()('wc-analytics:api-client');
+
+/**
+ * API Client for sending analytics events to the WordPress REST API
+ */
+class ApiClient {
+  eventQueue = [];
+  debounceTimer = null;
+  isInitialized = false;
+  /**
+   * Initialize the API client
+   */
+  init = () => {
+    if (this.isInitialized) {
+      return;
+    }
+    debug('API client initialized');
+    // Send any pending events when the page is about to unload
+    window.addEventListener('beforeunload', this.flush);
+    window.addEventListener('pagehide', this.flush);
+    this.isInitialized = true;
+  };
+
+  /**
+   * Add an event to the queue for batch sending
+   *
+   * @param eventName  - The name of the event.
+   * @param properties - The properties of the event.
+   */
+  addEvent = (eventName, properties = {}) => {
+    if (!this.isInitialized) {
+      debug('API client not initialized, skipping event: %s', eventName);
+      return;
+    }
+    debug('Recording event via API: "%s" with props %o', eventName, properties);
+    const apiEvent = {
+      event_name: eventName,
+      properties
+    };
+    this.eventQueue.push(apiEvent);
+    debug('Event added to queue: %s (queue size: %d)', eventName, this.eventQueue.length);
+
+    // Schedule debounced send
+    this.debouncedSend();
+
+    // If queue is full, send immediately
+    if (this.eventQueue.length >= _constants__WEBPACK_IMPORTED_MODULE_2__.BATCH_SIZE) {
+      this.flush();
+    }
+  };
+
+  /**
+   * Debounced send function
+   */
+  debouncedSend = () => {
+    if (this.debounceTimer) {
+      clearTimeout(this.debounceTimer);
+    }
+    this.debounceTimer = window.setTimeout(() => {
+      this.flush();
+    }, _constants__WEBPACK_IMPORTED_MODULE_2__.DEBOUNCE_DELAY);
+  };
+
+  /**
+   * Flush all pending events immediately
+   */
+  flush = () => {
+    if (this.debounceTimer) {
+      clearTimeout(this.debounceTimer);
+      this.debounceTimer = null;
+    }
+    if (this.eventQueue.length === 0) {
+      return;
+    }
+    const eventsToSend = [...this.eventQueue];
+    this.eventQueue = [];
+    this.sendEvents(eventsToSend);
+  };
+
+  /**
+   * Send events to the API
+   *
+   * @param events - The events to send.
+   */
+  sendEvents = async events => {
+    if (events.length === 0) {
+      return;
+    }
+    try {
+      debug('Sending %d events to API', events.length);
+      const response = await _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
+        path: `/${_constants__WEBPACK_IMPORTED_MODULE_2__.API_NAMESPACE}/${_constants__WEBPACK_IMPORTED_MODULE_2__.API_ENDPOINT}`,
+        method: 'POST',
+        data: events
+      });
+      debug('API response received: %o', response);
+      if (!response.success) {
+        debug('Some events failed to send: %o', response.results);
+      }
+    } catch (error) {
+      debug('Failed to send events to API: %o', error);
+      // Re-add events to queue for potential retry on next event
+      this.eventQueue.unshift(...events);
+    }
+  };
+}
+
+/***/ }),
+
 /***/ "./src/client/constants.ts":
 /*!*********************************!*\
   !*** ./src/client/constants.ts ***!
@@ -934,14 +1120,25 @@ class Analytics {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   API_ENDPOINT: () => (/* binding */ API_ENDPOINT),
+/* harmony export */   API_NAMESPACE: () => (/* binding */ API_NAMESPACE),
+/* harmony export */   BATCH_SIZE: () => (/* binding */ BATCH_SIZE),
 /* harmony export */   CLICK_HOUSE_EVENTS: () => (/* binding */ CLICK_HOUSE_EVENTS),
 /* harmony export */   COOKIE_NAME: () => (/* binding */ COOKIE_NAME),
+/* harmony export */   DEBOUNCE_DELAY: () => (/* binding */ DEBOUNCE_DELAY),
 /* harmony export */   EVENT_NAME_REGEX: () => (/* binding */ EVENT_NAME_REGEX),
 /* harmony export */   EVENT_PREFIX: () => (/* binding */ EVENT_PREFIX)
 /* harmony export */ });
 const COOKIE_NAME = 'woocommerceanalytics_session';
 const EVENT_PREFIX = 'woocommerceanalytics_';
 const EVENT_NAME_REGEX = /^[a-z_][a-z0-9_]*$/;
+
+// API Configuration
+const API_NAMESPACE = 'woocommerce-analytics/v1';
+const API_ENDPOINT = 'track';
+const BATCH_SIZE = 10;
+const DEBOUNCE_DELAY = 1000; // 1 second
+
 const CLICK_HOUSE_EVENTS = ['session_started', 'session_engagement', 'product_view', 'cart_view', 'add_to_cart', 'remove_from_cart', 'checkout_view', 'product_checkout', 'product_purchase', 'order_confirmation_view', 'search', 'page_view'];
 
 /***/ }),
@@ -1143,6 +1340,17 @@ class SessionManager {
     this.isEngaged = true;
   }
 }
+
+/***/ }),
+
+/***/ "@wordpress/api-fetch":
+/*!**********************************!*\
+  !*** external ["wp","apiFetch"] ***!
+  \**********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["apiFetch"];
 
 /***/ })
 
