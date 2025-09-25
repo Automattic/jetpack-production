@@ -2,10 +2,7 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.1-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.0.2 - 2025-09-25
 ### Bug fixes
 - Resolved conflict with WordPress 6.7.3
 
