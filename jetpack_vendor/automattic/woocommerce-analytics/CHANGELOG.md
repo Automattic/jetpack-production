@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add experimental API-based event tracking
 - Add IP-based visitor tracking as fallback when proxy tracking is enabled and cookies are unavailable
+- Add proxy speed module to enhance proxy API performance
 - Implement client-side analytics tracking
 
 ## [0.8.0] - 2025-09-22
