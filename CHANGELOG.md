@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.1-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Resolved conflict with WordPress 6.7.3
+
 ## 15.0.1 - 2025-09-25
 ### Bug fixes
 - Forms: prevent a conflict between the phone field and WordPress 6.7. [#45120]
