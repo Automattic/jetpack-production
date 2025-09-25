@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Add proxy speed module to enhance proxy API performance
 - Implement client-side analytics tracking
 
+### Changed
+- Update build scripts for production
+
 ## [0.8.0] - 2025-09-22
 ### Added
 - Implement on-site pixel API endpoint with POST support. [#45227]
