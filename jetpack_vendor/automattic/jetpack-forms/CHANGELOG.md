@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: don't override field labels on transforms
 - Forms: fixed 404 response for empty feedback
 - Forms: fixes the missing _links attribute
+- Forms: Hide border on last integration card.
 
 ## [6.5.1] - 2025-09-22
 ### Fixed
