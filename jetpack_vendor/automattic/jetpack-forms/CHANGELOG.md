@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Add options to disable "Go Back" link and summary after submission
 - Forms: add setting to enable or disable email notifications for form submissions
+- Forms: add withSyncEvent fallback for pre 6.8 compatibility
 
 ### Changed
 - Forms: remove unnecessary copy from exports modal
@@ -25,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fixed 404 response for empty feedback
 - Forms: fixes the missing _links attribute
 - Forms: Hide border on last integration card.
+- Resolved conflict with WordPress 6.7.3
 
 ## [6.5.1] - 2025-09-22
 ### Fixed

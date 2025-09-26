@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Forms: don't override field labels on transforms
 - Forms: fixes the missing rest attributes
+- Resolved conflict with WordPress 6.7.3
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Editor assets endpoint: allow all `jetpack/contact-info` inner blocks.
