@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Editor assets endpoint: allow all `jetpack/contact-info` inner blocks.
 - Integrate calls to add and remove the proxy speed module in Jetpack plugin initialization and deactivation processes
+- Update package dependencies.
 - Wrap upgrade nudge with span due to an ongoing Gutenberg issue where link clicks are not captured unless wrapped
 
 ## 15.1-a.7 - 2025-09-22
