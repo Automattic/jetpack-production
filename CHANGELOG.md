@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: use localized number format for number of responses shown
+
 ### Improved compatibility
 - Cookie Consent Block: ensure we always have a default set of colors to style the block when theme colors are not available.
 
