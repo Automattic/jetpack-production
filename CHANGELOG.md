@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.1-a.10 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Improved compatibility
+- Cookie Consent Block: ensure we always have a default set of colors to style the block when theme colors are not available.
+
 ## 15.1-a.9 - 2025-09-29
 ### Enhancements
 - Forms: Add setting to enable or disable email notifications for form submissions. [#45230]
