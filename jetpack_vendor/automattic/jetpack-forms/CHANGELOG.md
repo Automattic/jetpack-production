@@ -5,28 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.6.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.6.0] - 2025-09-29
 ### Added
-- Forms: Add options to disable "Go Back" link and summary after submission
-- Forms: add setting to enable or disable email notifications for form submissions
-- Forms: add withSyncEvent fallback for pre 6.8 compatibility
+- Add options to disable "Go Back" link and summary after submission. [#45273]
+- Add setting to enable or disable email notifications for form submissions. [#45230]
+- Add withSyncEvent fallback for pre 6.8 compatibility. [#45320]
 
 ### Changed
-- Forms: remove unnecessary copy from exports modal
-- Forms: rename 'Manage responses' forms sidebar block panel to 'Responses storage'
+- Remove unnecessary copy from exports modal. [#45280]
+- Rename 'Manage responses' forms sidebar block panel to 'Responses storage'. [#45228]
 
 ### Removed
-- Forms: remove unused code Dashboard_View_Switch and move useful methods into Dashboard static methods
+- Remove unused code `Dashboard_View_Switch` and move useful methods into Dashboard static methods. [#45282]
 
 ### Fixed
-- Forms: don't override field labels on transforms
-- Forms: fixed 404 response for empty feedback
-- Forms: fixes the missing _links attribute
-- Forms: Hide border on last integration card.
-- Resolved conflict with WordPress 6.7.3
+- Don't override field labels on transforms. [#45281]
+- Fix 404 response for empty feedback. [#45289]
+- Fix the missing `_links` attribute. [#45274]
+- Hide border on last integration card. [#45305]
+- Resolve conflict with WordPress 6.7.3. [#45320]
 
 ## [6.5.1] - 2025-09-22
 ### Fixed
@@ -1628,7 +1625,7 @@ Fix image choice widths. [#45257]
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.6.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.5.1...v6.6.0-alpha
+[6.6.0]: https://github.com/automattic/jetpack-forms/compare/v6.5.1...v6.6.0
 [6.5.1]: https://github.com/automattic/jetpack-forms/compare/v6.5.0...v6.5.1
 [6.5.0]: https://github.com/automattic/jetpack-forms/compare/v6.4.0...v6.5.0
 [6.4.0]: https://github.com/automattic/jetpack-forms/compare/v6.3.0...v6.4.0
