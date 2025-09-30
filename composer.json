@@ -54,7 +54,7 @@
 		"automattic/jetpack-sync": "^4.22.0",
 		"automattic/jetpack-videopress": "^0.32.8",
 		"automattic/jetpack-waf": "^0.27.4",
-		"automattic/woocommerce-analytics": "^0.9.1",
+		"automattic/woocommerce-analytics": "^0.9.2-alpha",
 		"scssphp/scssphp": "1.13.0"
 	},
 	"require-dev": {

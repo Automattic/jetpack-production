@@ -21,7 +21,7 @@ class Woocommerce_Analytics {
 	/**
 	 * Package version.
 	 */
-	const PACKAGE_VERSION = '0.9.1';
+	const PACKAGE_VERSION = '0.9.2-alpha';
 
 	/**
 	 * Proxy speed module version.
@@ -89,6 +89,17 @@ class Woocommerce_Analytics {
 		$minimum_woocommerce_active = class_exists( 'WooCommerce' ) && version_compare( \WC_VERSION, '3.0', '>=' );
 		if ( ! $minimum_woocommerce_active ) {
 			return false;
+		}
+
+		// Ensure the WC Tracks classes exist.
+		if ( ! class_exists( 'WC_Tracks' ) ) {
+			if ( ! defined( 'WC_ABSPATH' ) || ! file_exists( WC_ABSPATH . 'includes/tracks/class-wc-tracks.php' ) ) {
+				return false;
+			}
+
+			include_once WC_ABSPATH . 'includes/tracks/class-wc-tracks.php';
+			include_once WC_ABSPATH . 'includes/tracks/class-wc-tracks-event.php';
+			include_once WC_ABSPATH . 'includes/tracks/class-wc-tracks-client.php';
 		}
 
 		// Tracking only Site pages.
