@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Editor assets endpoint: enforce absolute URLs to mitigate failed requests from client origins.
+- Widgets: Prevent PHP warnings.
 
 ## 15.1-a.9 - 2025-09-29
 ### Enhancements
