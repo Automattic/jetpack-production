@@ -853,9 +853,9 @@ To start using the **Jetpack AI Assistant**, type `/AI` in the block editor.',
         array (
           'color' => 
           array (
-            'text' => 'var(--wp--preset--color--contrast, #000000)',
-            'background' => 'var(--wp--preset--color--tertiary, #f0f0f0)',
-            'link' => 'var(--wp--preset--color--contrast, #000000)',
+            'text' => 'var(--wp--preset--color--contrast)',
+            'background' => 'var(--wp--preset--color--tertiary)',
+            'link' => 'var(--wp--preset--color--contrast)',
           ),
           'spacing' => 
           array (
