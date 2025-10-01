@@ -181,7 +181,7 @@ add_action( 'rest_api_init', __NAMESPACE__ . '\cookie_consent_register_settings'
 /**
  * Add a fallback color to block styles.
  *
- * @since 15.1-a.10
+ * @since 15.1-a.12
  *
  * @param string $content The block content.
  * @return string The content with fallback values added to CSS custom properties.
