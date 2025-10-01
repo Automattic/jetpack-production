@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Security
 - Improve PayPal SDK host validation for PayPal Payment Buttons
 
+### Changed
+- Update package dependencies.
+
 ## [0.5.7] - 2025-09-29
 ### Changed
 - Update dependencies. [#44736]

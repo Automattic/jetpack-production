@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Garden Sites: Exposes the garden_is_provisioned flag on the site endpoint
+- Update package dependencies.
 
 ## 15.1-a.11 - 2025-09-30
 ### Enhancements
