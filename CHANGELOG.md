@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: improve preloading for endpoints.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin Menu: Show wp-admin menu of self-hosted Jetpack sites in Calypso
 - Garden Sites: Exposes the garden_is_provisioned flag on the site endpoint
