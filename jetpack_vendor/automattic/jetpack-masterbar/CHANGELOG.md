@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin Menu: Show wp-admin menu of self-hosted Jetpack sites in Calypso
+- Clean-up the code for quick switcher after RDV
 - Update package dependencies.
 
 ### Removed
