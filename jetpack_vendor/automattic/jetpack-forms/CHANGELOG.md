@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Forms: fix integrations bottom border.
+
 ## [6.7.0] - 2025-09-30
 ### Changed
 - Forms: Use localized number format for number of responses shown. [#45326]
