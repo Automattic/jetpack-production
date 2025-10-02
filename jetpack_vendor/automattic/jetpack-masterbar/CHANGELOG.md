@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Show wp-admin menu of self-hosted Jetpack sites in Calypso
 - Update package dependencies.
 
+### Removed
+- Admin Menu: Remove unused menu registrations
+
 ## [0.23.3] - 2025-09-29
 ### Changed
 - Internal updates.
