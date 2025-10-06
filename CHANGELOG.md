@@ -2,22 +2,19 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.1-a.12 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.1-beta - 2025-10-06
 ### Enhancements
-- Forms: improve preloading for endpoints.
+- Forms: Improve preloading for endpoints. [#45362]
 
 ### Bug fixes
-- Cookie Consent Widget: ensure the default widget text can be translated.
+- Cookie Consent Widget: Ensure the default widget text can be translated. [#45367]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Admin Menu: Show wp-admin menu of self-hosted Jetpack sites in Calypso
-- Editor assets endpoint: optimize URL processing
-- Garden Sites: Exposes the garden_is_provisioned flag on the site endpoint
-- Tiled Gallery: Improve editor animation performance by removing loading animations when possible.
-- Update package dependencies.
+- Admin Menu: Show `wp-admin` menu of self-hosted Jetpack sites in Calypso. [#45336]
+- Editor assets endpoint: Optimize URL processing. [#45358]
+- Garden Sites: Exposes the `garden_is_provisioned` flag on the site endpoint. [#45321]
+- Tiled Gallery: Improve editor animation performance by removing loading animations when possible. [#45344]
+- Update package dependencies. [#45334] [#45335]
 
 ## 15.1-a.11 - 2025-09-30
 ### Enhancements
