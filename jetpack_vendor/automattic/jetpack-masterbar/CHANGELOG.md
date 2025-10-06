@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Removed
+- Admin Menu: Remove P2_Admin_Menu class
 - Admin Menu: Remove unused menu registrations
 
 ## [0.23.3] - 2025-09-29
