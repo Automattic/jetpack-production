@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: fix integrations bottom border.
+- Forms: fix telephone field block country selector dropdown so it shows in front of other blocks while selected
 - Forms: remove integrations loading spinner.
 
 ## [6.7.0] - 2025-09-30
