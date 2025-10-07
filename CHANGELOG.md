@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: Added required indicator settings, made forms with a sinble input required by default.
 - Forms: improve preloading for endpoints.
 
 ### Bug fixes

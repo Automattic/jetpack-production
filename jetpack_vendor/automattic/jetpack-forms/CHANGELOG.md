@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: Added required indicator settings, made forms with a sinble input required by default.
 - Forms: add loading spinner for integrations.
 
 ### Changed
