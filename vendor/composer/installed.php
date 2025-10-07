@@ -128,9 +128,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-classic-theme-helper' => array(
-            'pretty_version' => 'v0.13.21',
-            'version' => '0.13.21.0',
-            'reference' => '538cecd30d2bad920486cf53b1523d707bab1137',
+            'pretty_version' => 'v0.13.22',
+            'version' => '0.13.22.0',
+            'reference' => '035ff5a69d38f46247111dc91aa4d98a27aeb6b8',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-classic-theme-helper',
             'aliases' => array(),
