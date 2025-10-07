@@ -5,22 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.8.0-alpha] - unreleased
+## [6.9.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Added required indicator settings, made forms with a sinble input required by default.
-- Forms: add loading spinner for integrations.
-
-### Changed
-- Forms: improve preloading for endpoints.
-- Update package dependencies.
 
 ### Fixed
-- Forms: fix integrations bottom border.
 - Forms: fix telephone field block country selector dropdown so it shows in front of other blocks while selected
-- Forms: remove integrations loading spinner.
+
+## [6.8.0] - 2025-10-06
+### Added
+- Add loading spinner for integrations. [#45363]
+
+### Changed
+- Improve preloading for endpoints. [#45362]
+- Update package dependencies. [#45334] [#45335]
+
+### Fixed
+- Forms: Fix integrations bottom border. [#45359]
+- Forms: Remove integrations loading spinner. [#45373]
 
 ## [6.7.0] - 2025-09-30
 ### Changed
@@ -1645,7 +1650,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.8.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.7.0...v6.8.0-alpha
+[6.9.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.8.0...v6.9.0-alpha
+[6.8.0]: https://github.com/automattic/jetpack-forms/compare/v6.7.0...v6.8.0
 [6.7.0]: https://github.com/automattic/jetpack-forms/compare/v6.6.0...v6.7.0
 [6.6.0]: https://github.com/automattic/jetpack-forms/compare/v6.5.1...v6.6.0
 [6.5.1]: https://github.com/automattic/jetpack-forms/compare/v6.5.0...v6.5.1
