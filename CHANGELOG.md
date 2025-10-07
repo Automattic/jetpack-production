@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin Menu: Show wp-admin menu of self-hosted Jetpack sites in Calypso
 - Editor assets endpoint: optimize URL processing
+- Flex sites: return the is_wpcom_flex flag from the sites API
 - Garden Sites: Exposes the garden_is_provisioned flag on the site endpoint
 - Tiled Gallery: Improve editor animation performance by removing loading animations when possible.
 - Update package dependencies.
