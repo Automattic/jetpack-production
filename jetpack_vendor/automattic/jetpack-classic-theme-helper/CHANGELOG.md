@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Testimonials: Prevent warning when custom post type is not registered.
+
 ## [0.13.20] - 2025-09-22
 ### Changed
 - Update dependencies. [#44300]
