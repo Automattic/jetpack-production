@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: Added required indicator settings, made forms with a sinble input required by default.
 
+### Bug fixes
+- Asset CDN: avoid errors when we do not receive valid information about a plugin from WordPress.org.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Flex sites: return the is_wpcom_flex flag from the sites API
 
