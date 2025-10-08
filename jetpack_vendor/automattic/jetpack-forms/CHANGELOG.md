@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: fix sticky loading state for trash view action
+- Optimize has_feedback() query to improve dashboard load performance by limiting query to fetch only 1 ID instead of loading all feedback posts.
 
 ## [6.9.0] - 2025-10-08
 ### Added
