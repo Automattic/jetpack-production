@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: add integrations store.
+- Forms: add read and unread state
 
 ### Fixed
 - Forms: fix sticky loading state for trash view action
