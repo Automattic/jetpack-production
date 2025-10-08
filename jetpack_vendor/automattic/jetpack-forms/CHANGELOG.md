@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add actions on dashboard inbox's single response view
 - Forms: Added required indicator settings, made forms with a sinble input required by default.
 
+### Changed
+- Forms: optimize inbox data loading with _fields parameter to reduce payload size.
+
 ### Fixed
 - Forms: fix telephone field block country selector dropdown so it shows in front of other blocks while selected
 
