@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: optimize inbox data loading with _fields parameter to reduce payload size.
 
 ### Fixed
+- Forms: fix sticky loading state for trash view action
 - Forms: fix telephone field block country selector dropdown so it shows in front of other blocks while selected
 
 ## [6.8.0] - 2025-10-06
