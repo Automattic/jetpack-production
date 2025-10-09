@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: change how phone field interactivity API is initialized with more atomic registration of the elements
+- Forms: more elaborate empty states.
 - Update package dependencies.
 
 ### Fixed
