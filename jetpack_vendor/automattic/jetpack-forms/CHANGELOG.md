@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix missing tooltip on unread/read quick action button
 - Forms: fix sending data that is not needed in the endpoint to prevent exposing data
 - Forms: fix sticky loading state for trash view action
+- Forms: improve cross plugin compatibility
 - Optimize has_feedback() query to improve dashboard load performance by limiting query to fetch only 1 ID instead of loading all feedback posts.
 
 ## [6.9.0] - 2025-10-08
