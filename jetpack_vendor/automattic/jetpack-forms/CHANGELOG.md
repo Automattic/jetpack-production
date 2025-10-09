@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add integrations store.
 - Forms: add read and unread state
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Forms: fix sticky loading state for trash view action
 - Optimize has_feedback() query to improve dashboard load performance by limiting query to fetch only 1 ID instead of loading all feedback posts.
