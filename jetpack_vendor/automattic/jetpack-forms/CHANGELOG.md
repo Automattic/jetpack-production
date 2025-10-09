@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add read and unread state
 
 ### Changed
+- Forms: change how phone field interactivity API is initialized with more atomic registration of the elements
 - Update package dependencies.
 
 ### Fixed
