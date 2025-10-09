@@ -50,7 +50,7 @@
 		"automattic/jetpack-stats": "^0.17.2",
 		"automattic/jetpack-stats-admin": "^0.29.1",
 		"automattic/jetpack-status": "^6.0.4",
-		"automattic/jetpack-subscribers-dashboard": "^0.4.2",
+		"automattic/jetpack-subscribers-dashboard": "^0.4.3-alpha",
 		"automattic/jetpack-sync": "^4.22.0",
 		"automattic/jetpack-videopress": "^0.32.9",
 		"automattic/jetpack-waf": "^0.27.4",
