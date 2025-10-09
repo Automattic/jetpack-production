@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add read and unread state
 
 ### Changed
+- Add optimistic count updates to Forms inbox for immediate UI feedback when moving items between inbox, spam, and trash.
 - Forms: change how phone field interactivity API is initialized with more atomic registration of the elements
 - Forms: inbox - remove view action for desktop
 - Forms: more elaborate empty states.
