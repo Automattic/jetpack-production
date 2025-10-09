@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: add integrations store.
+- Forms: add notification settings panel
 - Forms: add read and unread state
 
 ### Changed

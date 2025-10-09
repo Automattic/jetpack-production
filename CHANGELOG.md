@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: Added required indicator settings, made forms with a sinble input required by default.
 - Forms: add integrations store.
+- Forms: add notification settings panel
 - Forms: add read and unread state for new form responses
 - Forms: more elaborate empty states.
 
