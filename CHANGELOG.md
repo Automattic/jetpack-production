@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add integrations store.
 - Forms: add notification settings panel
 - Forms: add read and unread state for new form responses
+- Forms: inbox - remove view action for desktop and leave it just for mobile
 - Forms: more elaborate empty states.
 
 ### Bug fixes
