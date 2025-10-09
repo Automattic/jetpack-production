@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: inbox - remove view action for desktop
 - Forms: more elaborate empty states.
 - Forms: reverse copy of 'go back' toggle
+- Replace 3 separate count REST API requests with 1 optimized database query using CASE statements to improve inbox performance.
 - Update package dependencies.
 
 ### Fixed
