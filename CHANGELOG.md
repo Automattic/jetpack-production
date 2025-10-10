@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: inbox - remove view action for desktop and leave it just for mobile
 - Forms: more elaborate empty states.
 - Forms: reorganise settings to a single panel for rating, slider and phone fields
+- Forms: use store for integrations modal.
 
 ### Bug fixes
 - Newsletter Settings: update wording to clarify how the reply-to settings can be used.

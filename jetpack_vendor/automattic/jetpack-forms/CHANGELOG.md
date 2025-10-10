@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: reorganise settings to a single panel for rating, slider and phone fields
 - Forms: reverse copy of 'go back' toggle
 - Forms: update read/unread counts optimistically in the sidebar
+- Forms: use store for integrations modal.
 - Replace 3 separate count REST API requests with 1 optimized database query using CASE statements to improve inbox performance.
 - Update package dependencies.
 
