@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: fix missing tooltip on unread/read quick action button
+- Forms: Fix multistep dropdown showing "Unlabeled" instead of default step titles like "Step 1", "Step 2", etc.
 - Forms: fix sending data that is not needed in the endpoint to prevent exposing data
 - Forms: fix sticky loading state for trash view action
 - Forms: improve cross plugin compatibility
