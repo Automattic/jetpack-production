@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.2-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Asset CDN: avoid errors when we do not receive valid information about a plugin from WordPress.org.
+
 ## 15.1 - 2025-10-08
 
 - Testimonials: Prevent warning when custom post type is not registered.
