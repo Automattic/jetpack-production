@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: change how phone field interactivity API is initialized with more atomic registration of the elements
 - Forms: fix preload middleware registration to properly cache API requests and support both path formats.
 - Forms: fix preload parameters to match actual feedback endpoint requests and avoid duplicate HTTP requests.
+- Forms: hide Google export card if disabled.
 - Forms: improve loading state to show spinner immediately when data hasn't loaded.
 - Forms: inbox - remove view action for desktop
 - Forms: more elaborate empty states.
