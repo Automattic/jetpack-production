@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add optimistic count updates to Forms inbox for immediate UI feedback when moving items between inbox, spam, and trash.
+- Forms: avoid typohraphic orphans in Forms panels in editor
 - Forms: change how phone field interactivity API is initialized with more atomic registration of the elements
 - Forms: fix preload parameters to match actual feedback endpoint requests and avoid duplicate HTTP requests.
 - Forms: improve loading state to show spinner immediately when data hasn't loaded.
