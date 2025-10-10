@@ -17,13 +17,16 @@ This is an alpha version! The changes listed here are not final.
 - Forms: reorganise settings to a single panel for rating, slider and phone fields
 
 ### Bug fixes
-- Asset CDN: avoid errors when we do not receive valid information about a plugin from WordPress.org.
 - Newsletter Settings: update wording to clarify how the reply-to settings can be used.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Comment likes: Prevent PHP warnings if site URL is invalid.
 - Flex sites: return the is_wpcom_flex flag from the sites API
 - Sync: Handle lazy-loading of WP_User object properties.
+
+## 15.1.1 - 2025-10-10
+### Bug fixes
+- Asset CDN: avoid errors when we do not receive valid information about a plugin from WordPress.org. [#45387]
 
 ## 15.1 - 2025-10-08
 
