@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a new Apple Podcasts logo
+- Add new Pocketcasts logo
 
 ### Changed
 - Custom post types: Ensure features remain available when theme support is added.
