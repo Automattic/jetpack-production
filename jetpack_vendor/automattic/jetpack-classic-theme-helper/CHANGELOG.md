@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Custom post types: Ensure features remain available when theme support is added.
 - Reddit: update logo to match new design.
+- Update Pocketcasts name to Pocket Casts (with a space).
 - WooCommerce: update logo to match recent redesign.
 
 ## [0.13.22] - 2025-10-07
