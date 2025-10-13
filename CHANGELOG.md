@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom post types: Ensure features remain available when theme support is added.
 
 ### Bug fixes
+- Forms: fix plugin activation state.
 - Maps Block: fix compatibility with MapKit JS version 5.80.0+.
 - Newsletter Settings: update wording to clarify how the reply-to settings can be used.
 
