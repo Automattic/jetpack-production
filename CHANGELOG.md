@@ -2,21 +2,11 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.2-a.0 - unreleased
+## 15.2-a.2 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Forms: Added required indicator settings, made forms with a sinble input required by default.
-- Forms: add integrations store.
-- Forms: add notification settings panel
-- Forms: add read and unread state for new form responses
-- Forms: avoid typohraphic orphans in Forms panels in editor
-- Forms: hide Google export card if disabled.
-- Forms: inbox - remove view action for desktop and leave it just for mobile
-- Forms: more elaborate empty states.
-- Forms: reorganise settings to a single panel for rating, slider and phone fields
-- Forms: use store for integrations modal.
 - Sharing Buttons block: update Reddit logo to match updated design.
 
 ### Improved compatibility
@@ -25,13 +15,26 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Forms: fix plugin activation state.
 - Maps Block: fix compatibility with MapKit JS version 5.80.0+.
-- Newsletter Settings: update wording to clarify how the reply-to settings can be used.
+
+## 15.2-a.1 - 2025-10-13
+### Enhancements
+- Forms: Add required indicator settings and make forms with a single input required by default. [#45300]
+- Forms: Add integrations store. [#45372] [#45432]
+- Forms: Add notification settings panel. [#45396]
+- Forms: Add read and unread state for new form responses. [#45350]
+- Forms: Avoid typographic orphans in Forms panels in editor. [#45455]
+- Forms: Hide Google export card if disabled. [#45375]
+- Forms: Remove Inbox view action for desktop and leave it just for mobile. [#45444]
+- Forms: Update Inbox empty state notices. [#45421]
+- Forms: Reorganize settings to a single panel for rating, slider and phone fields. [#45196]
+
+### Bug fixes
+- Newsletter: Update wording to clarify how the reply-to settings can be used. [#45368]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Comment likes: Prevent PHP warnings if site URL is invalid.
-- Flex sites: return the is_wpcom_flex flag from the sites API
-- Janitorial: emptied out to-test.md and updated stable tag.
-- Sync: Handle lazy-loading of WP_User object properties.
+- Comment likes: Prevent PHP warnings if site URL is invalid. [#45420]
+- Flex sites: Return the `is_wpcom_flex` flag from the sites API. [#45395]
+- Sync: Handle lazy-loading of `WP_User` object properties. [#45450]
 
 ## 15.1.1 - 2025-10-10
 ### Bug fixes
