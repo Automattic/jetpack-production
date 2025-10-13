@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: improve loading state to show spinner immediately when data hasn't loaded.
 - Forms: inbox - remove view action for desktop
 - Forms: more elaborate empty states.
+- Forms: move view actions to modal header on mobile
 - Forms: preload initial inbox data and essential endpoints for faster page load.
 - Forms: reorganise settings to a single panel for rating, slider and phone fields
 - Forms: reverse copy of 'go back' toggle
