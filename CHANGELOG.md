@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: more elaborate empty states.
 - Forms: reorganise settings to a single panel for rating, slider and phone fields
 - Forms: use store for integrations modal.
+- Sharing Buttons block: update Reddit logo to match updated design.
 
 ### Improved compatibility
 - Custom post types: Ensure features remain available when theme support is added.
