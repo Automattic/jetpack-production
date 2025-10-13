@@ -1470,7 +1470,7 @@ class Contact_Form_Plugin {
 	/**
 	 * Get the count of unread feedback entries.
 	 *
-	 * @since 6.10.0-alpha
+	 * @since 6.10.0
 	 *
 	 * @return int The count of unread feedback entries.
 	 */
@@ -1481,7 +1481,7 @@ class Contact_Form_Plugin {
 	/**
 	 * Recalculate the count of unread feedback entries.
 	 *
-	 * @since 6.10.0-alpha
+	 * @since 6.10.0
 	 *
 	 * @return int The count of unread feedback entries.
 	 */

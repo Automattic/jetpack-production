@@ -31,7 +31,7 @@
 		"automattic/jetpack-error": "^3.0.6",
 		"automattic/jetpack-external-connections": "^0.1.4",
 		"automattic/jetpack-external-media": "^0.5.6",
-		"automattic/jetpack-forms": "^6.10.0-alpha",
+		"automattic/jetpack-forms": "^6.10.0",
 		"automattic/jetpack-image-cdn": "^0.7.21",
 		"automattic/jetpack-import": "^0.9.11",
 		"automattic/jetpack-ip": "^0.4.10",
@@ -39,14 +39,14 @@
 		"automattic/jetpack-licensing": "^3.1.0",
 		"automattic/jetpack-logo": "^3.0.5",
 		"automattic/jetpack-masterbar": "^0.25.0",
-		"automattic/jetpack-my-jetpack": "^5.27.4",
+		"automattic/jetpack-my-jetpack": "^5.27.5",
 		"automattic/jetpack-paypal-payments": "^0.5.8",
 		"automattic/jetpack-plugins-installer": "^0.5.7",
 		"automattic/jetpack-post-list": "^0.8.31",
 		"automattic/jetpack-publicize": "^0.66.17",
 		"automattic/jetpack-redirect": "^3.0.9",
 		"automattic/jetpack-roles": "^3.0.8",
-		"automattic/jetpack-search": "^0.52.22-alpha",
+		"automattic/jetpack-search": "^0.52.22",
 		"automattic/jetpack-stats": "^0.17.3",
 		"automattic/jetpack-stats-admin": "^0.29.1",
 		"automattic/jetpack-status": "^6.0.4",
@@ -90,6 +90,7 @@
 			"pnpm run watch"
 		]
 	},
+	"repositories": [],
 	"autoload": {
 		"classmap": [
 			"src"
@@ -102,7 +103,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_2_a_0",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_2_a_1",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true
