@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.23-alpha] - unreleased
+## [0.14.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add a new Apple Podcasts logo
 
 ### Changed
 - Custom post types: Ensure features remain available when theme support is added.
@@ -398,7 +401,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add wordpress folder on gitignore. [#37177]
 
-[0.13.23-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.22...v0.13.23-alpha
+[0.14.0-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.22...v0.14.0-alpha
 [0.13.22]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.21...v0.13.22
 [0.13.21]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.20...v0.13.21
 [0.13.20]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.19...v0.13.20
