@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix plugin activation state.
 - Maps Block: fix compatibility with MapKit JS version 5.80.0+.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 15.2-a.1 - 2025-10-13
 ### Enhancements
 - Forms: Add required indicator settings and make forms with a single input required by default. [#45300]
