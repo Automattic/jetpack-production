@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack page: fix visual compatibility issue with Hello Dolly plugin.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: fix slideshow sizing for lazy-loaded images.
 - Update package dependencies.
 
 ## 15.2-a.1 - 2025-10-13
