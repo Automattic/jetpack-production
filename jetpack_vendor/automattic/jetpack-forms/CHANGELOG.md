@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: Better handle custom submission message formatting
 - Forms: fix plugin activation state.
+- Forms: Store the feedback source info with more context
 
 ## [6.10.0] - 2025-10-13
 ### Added

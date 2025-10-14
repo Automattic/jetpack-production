@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: fix plugin activation state.
+- Forms: Store the feedback source info with more context
 - Maps Block: fix compatibility with MapKit JS version 5.80.0+.
 - My Jetpack page: fix visual compatibility issue with Hello Dolly plugin.
 
