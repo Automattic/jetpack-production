@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Split components and hooks into their own files
 
 ### Fixed
+- Forms: Better handle custom submission message formatting
 - Forms: fix plugin activation state.
 
 ## [6.10.0] - 2025-10-13
