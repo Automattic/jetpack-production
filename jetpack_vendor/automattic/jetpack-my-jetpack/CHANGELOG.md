@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.27.6-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.27.6] - 2025-10-14
 ### Changed
-- Update dependencies.
+- Update dependencies. [#45488]
 
 ### Fixed
-- My Jetpack page: fix visual compatibility issue with Hello Dolly plugin.
+- My Jetpack page: fix visual compatibility issue with Hello Dolly plugin. [#45474]
 
 ## [5.27.5] - 2025-10-13
 ### Changed
@@ -2383,7 +2380,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.27.6-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.27.5...5.27.6-alpha
+[5.27.6]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.27.5...5.27.6
 [5.27.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.27.4...5.27.5
 [5.27.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.27.3...5.27.4
 [5.27.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.27.2...5.27.3
