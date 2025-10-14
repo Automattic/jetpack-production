@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - De-clutter InboxView component, move data processing to hook
 - Forms: move view actions to modal header on mobile
+- Split components and hooks into their own files
 
 ### Fixed
 - Forms: fix plugin activation state.
