@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: add Hostinger Reach integration.
+
 ### Changed
 - De-clutter InboxView component, move data processing to hook
 - Forms: move view actions to modal header on mobile
