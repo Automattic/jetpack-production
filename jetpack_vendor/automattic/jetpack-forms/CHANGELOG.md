@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - De-clutter InboxView component, move data processing to hook
+- Forms: add new useConfigValue hook and start using it on the dashboard
 - Forms: move view actions to modal header on mobile
 - Forms: remove old file, add tests for hook
 - Forms: Update "Action after submit" sidebar section
