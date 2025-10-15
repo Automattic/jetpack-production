@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: Update "Action after submit" sidebar section
 - Sharing Buttons block: update Reddit logo to match updated design.
 
 ### Improved compatibility
