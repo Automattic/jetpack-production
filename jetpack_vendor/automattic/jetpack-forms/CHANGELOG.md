@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix PHP warning for when a site doesn't have the JWT token yet
 - Forms: fix plugin activation state.
 - Forms: Store the feedback source info with more context
+- Forms: strip period from Terms submission label on the post-submission page.
 
 ## [6.10.0] - 2025-10-13
 ### Added
