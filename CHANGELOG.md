@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blaze: do not display module toggle on WordPress.com sites.
 - Blocks: fix slideshow sizing for lazy-loaded images.
+- Podcast feed: Prevent fatals when content is empty.
 - Prevent fatal when chart response is invalid.
 - Update package dependencies.
 
