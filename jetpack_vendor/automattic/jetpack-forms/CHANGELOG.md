@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: move view actions to modal header on mobile
 - Forms: remove old file, add tests for hook
 - Forms: Update "Action after submit" sidebar section
+- Forms: UX improvements for Image Select field
 - Split components and hooks into their own files
 
 ### Fixed
