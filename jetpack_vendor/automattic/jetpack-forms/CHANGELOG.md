@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Better handle custom submission message formatting
+- Forms: fixed a bug that removed the required text from required fields when creating a form from a pattern.
 - Forms: fix PHP warning for when a site doesn't have the JWT token yet
 - Forms: fix plugin activation state.
 - Forms: Store the feedback source info with more context

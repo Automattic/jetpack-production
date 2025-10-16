@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom post types: Ensure features remain available when theme support is added.
 
 ### Bug fixes
+- Forms: fixed a bug that removed the required text from required fields when creating a form from a pattern.
 - Forms: fix plugin activation state.
 - Forms: Store the feedback source info with more context
 - Maps Block: fix compatibility with MapKit JS version 5.80.0+.
