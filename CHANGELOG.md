@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove unusaed hasAI from config.
 - Forms: Update "Action after submit" sidebar section
 - Sharing Buttons block: update Reddit logo to match updated design.
+- Sitemaps: use XMLWriter by default for more performant sitemap generation
 
 ### Improved compatibility
 - Custom post types: Ensure features remain available when theme support is added.
