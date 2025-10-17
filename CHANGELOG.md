@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove Creative Mail promotion.
 
 ### Bug fixes
+- Forms: do not send emails to the author of the form if they are no longer able to edit it
 - Forms: fixed a bug that removed the required text from required fields when creating a form from a pattern.
 - Forms: fix plugin activation state.
 - Forms: Store the feedback source info with more context
