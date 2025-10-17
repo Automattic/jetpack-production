@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: add Hostinger Reach integration.
 - Forms: Add programmatic initialization support via window.jetpackFormsInit()
+- Forms: Add unread/read filter to the dashboard.
 
 ### Changed
 - De-clutter InboxView component, move data processing to hook
