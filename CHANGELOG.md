@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Custom post types: Ensure features remain available when theme support is added.
+- Forms: remove Creative Mail promotion.
 
 ### Bug fixes
 - Forms: fixed a bug that removed the required text from required fields when creating a form from a pattern.

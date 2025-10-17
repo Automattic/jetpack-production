@@ -22,6 +22,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: UX improvements for Image Select field
 - Split components and hooks into their own files
 
+### Deprecated
+- Forms: remove Creative Mail promotion.
+
 ### Fixed
 - Forms: Better handle custom submission message formatting
 - Forms: fixed a bug that removed the required text from required fields when creating a form from a pattern.
