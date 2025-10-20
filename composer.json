@@ -20,7 +20,7 @@
 		"automattic/jetpack-backup": "^4.2.26-alpha",
 		"automattic/jetpack-blaze": "^0.26.13-alpha",
 		"automattic/jetpack-blocks": "^3.1.1",
-		"automattic/jetpack-boost-speed-score": "^0.4.10",
+		"automattic/jetpack-boost-speed-score": "^0.4.11-alpha",
 		"automattic/jetpack-classic-theme-helper": "^0.14.0-alpha",
 		"automattic/jetpack-compat": "^4.0.1",
 		"automattic/jetpack-composer-plugin": "^4.0.5",
@@ -53,7 +53,7 @@
 		"automattic/jetpack-subscribers-dashboard": "^0.4.3",
 		"automattic/jetpack-sync": "^4.22.1",
 		"automattic/jetpack-videopress": "^0.32.10-alpha",
-		"automattic/jetpack-waf": "^0.27.4",
+		"automattic/jetpack-waf": "^0.27.5-alpha",
 		"automattic/woocommerce-analytics": "^0.10.0",
 		"scssphp/scssphp": "1.13.0"
 	},

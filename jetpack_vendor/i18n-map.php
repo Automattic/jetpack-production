@@ -30,15 +30,15 @@ return array(
     ),
     'jetpack-boost-core' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-boost-core',
-      'ver' => '0.3.13',
+      'ver' => '0.3.14-alpha1760965881',
     ),
     'jetpack-boost-speed-score' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-boost-speed-score',
-      'ver' => '0.4.10',
+      'ver' => '0.4.11-alpha1760965881',
     ),
     'jetpack-classic-theme-helper' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-classic-theme-helper',
-      'ver' => '0.14.0-alpha1760375517',
+      'ver' => '0.14.0-alpha1760965881',
     ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
@@ -62,7 +62,7 @@ return array(
     ),
     'jetpack-external-media' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-external-media',
-      'ver' => '0.5.7-alpha1760962050',
+      'ver' => '0.5.7-alpha1760965881',
     ),
     'jetpack-forms' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
@@ -70,7 +70,7 @@ return array(
     ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
-      'ver' => '0.7.22-alpha1760620421',
+      'ver' => '0.7.22-alpha1760965881',
     ),
     'jetpack-import' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-import',
@@ -94,7 +94,7 @@ return array(
     ),
     'jetpack-masterbar' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-masterbar',
-      'ver' => '0.26.0-alpha1760361399',
+      'ver' => '0.26.0-alpha1760965881',
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
@@ -122,7 +122,7 @@ return array(
     ),
     'jetpack-protect-status' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect-status',
-      'ver' => '0.7.4-alpha1760620421',
+      'ver' => '0.7.4-alpha1760965881',
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
@@ -150,11 +150,11 @@ return array(
     ),
     'jetpack-videopress-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.32.10-alpha1760397205',
+      'ver' => '0.32.10-alpha1760965881',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
-      'ver' => '0.27.4',
+      'ver' => '0.27.5-alpha1760965881',
     ),
     'woocommerce-analytics' => array(
       'path' => 'jetpack_vendor/automattic/woocommerce-analytics',
