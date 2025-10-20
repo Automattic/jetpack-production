@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.9-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.5.9] - 2025-10-20
 ### Changed
-- Update dependencies.
+- Update dependencies. [#45488]
 
 ## [0.5.8] - 2025-10-06
 ### Security
@@ -98,7 +95,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.5.9-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.8...v0.5.9-alpha
+[0.5.9]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.8...v0.5.9
 [0.5.8]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.7...v0.5.8
 [0.5.7]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.6...v0.5.7
 [0.5.6]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.5...v0.5.6

@@ -5,19 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.14.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.14.0] - 2025-10-20
 ### Added
-- Add a new Apple Podcasts logo
-- Add new Pocketcasts logo
+- Add new Apple Podcasts logo. [#45436]
+- Add new Pocket Casts logo. [#45438] [#45485]
 
 ### Changed
-- Custom post types: Ensure features remain available when theme support is added.
-- Reddit: update logo to match new design.
-- Update Pocketcasts name to Pocket Casts (with a space).
-- WooCommerce: update logo to match recent redesign.
+- Custom post types: Ensure features remain available when theme support is added. [#45407]
+- Reddit: Update logo to match new design. [#45437]
+- WooCommerce: Update logo to match recent redesign. [#45435]
 
 ## [0.13.22] - 2025-10-07
 ### Fixed
@@ -405,7 +401,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add wordpress folder on gitignore. [#37177]
 
-[0.14.0-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.22...v0.14.0-alpha
+[0.14.0]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.22...v0.14.0
 [0.13.22]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.21...v0.13.22
 [0.13.21]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.20...v0.13.21
 [0.13.20]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.13.19...v0.13.20
