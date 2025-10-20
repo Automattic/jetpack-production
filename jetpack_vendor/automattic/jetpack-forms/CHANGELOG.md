@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: merged email and push notification settings panels.
 
+### Deprecated
+- Forms: remove unused useFormsConfig hook.
+
 ### Fixed
 - Forms: Fix renderable status of image select field
 

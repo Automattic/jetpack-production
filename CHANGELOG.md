@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: merged email and push notification settings panels.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Forms: remove unused useFormsConfig hook.
+
 ## 15.2-a.3 - 2025-10-20
 ### Enhancements
 - Forms: Update "Action after submit" sidebar section. [#45502]
