@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove unused useFormsConfig hook.
 
 ### Fixed
+- Forms: fix a bug that you makes you click the close button twice.
 - Forms: fix bug where the responsvie modal is not able to be closed.
 - Forms: Fix renderable status of image select field
 - Forms: reset the selection on tab switch
