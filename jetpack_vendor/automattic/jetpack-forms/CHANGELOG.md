@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add new useConfigValue hook and start using it on the dashboard
 - Forms: Make dashboard initialization idempotent for SPA environments by using data attribute to track state
 - Forms: move view actions to modal header on mobile
+- Forms: remove logo from dashboard, align header styles with ciab"
 - Forms: remove old file, add tests for hook
 - Forms: remove unusaed hasAI from config.
 - Forms: Trim empty options and display custom placeholder
