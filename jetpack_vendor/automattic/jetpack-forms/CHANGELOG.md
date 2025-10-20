@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: merged email and push notification settings panels.
+- Forms: stop preloading the integrations endpoint
 
 ### Deprecated
 - Forms: remove unused useFormsConfig hook.
