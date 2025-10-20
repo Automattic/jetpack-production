@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: strip period from Terms submission label on the post-submission page.
 - Podcast feed: Prevent fatals when content is empty.
 - Prevent fatal when chart response is invalid.
+- Related Posts: Prevent PHP errors when settings are malformed.
 - Update package dependencies.
 
 ## 15.2-a.1 - 2025-10-13
