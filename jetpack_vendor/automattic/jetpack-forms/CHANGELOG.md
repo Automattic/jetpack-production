@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: fix bug where the responsvie modal is not able to be closed.
 - Forms: Fix renderable status of image select field
+- Forms: reset the selection on tab switch
 
 ## [6.11.0] - 2025-10-20
 ### Added
