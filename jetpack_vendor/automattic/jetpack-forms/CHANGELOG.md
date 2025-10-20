@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: merged email and push notification settings panels.
 
+### Fixed
+- Forms: Fix renderable status of image select field
+
 ## [6.11.0] - 2025-10-20
 ### Added
 - Forms: Add Hostinger Reach integration. [#45271]
