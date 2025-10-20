@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.12.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Forms: merged email and push notification settings panels.
+
 ## [6.11.0] - 2025-10-20
 ### Added
 - Forms: Add Hostinger Reach integration. [#45271]
@@ -1713,6 +1720,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[6.12.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.11.0...v6.12.0-alpha
 [6.11.0]: https://github.com/automattic/jetpack-forms/compare/v6.10.0...v6.11.0
 [6.10.0]: https://github.com/automattic/jetpack-forms/compare/v6.9.0...v6.10.0
 [6.9.0]: https://github.com/automattic/jetpack-forms/compare/v6.8.0...v6.9.0

@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.2-a.4 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Forms: merged email and push notification settings panels.
+
 ## 15.2-a.3 - 2025-10-20
 ### Enhancements
 - Forms: Update "Action after submit" sidebar section. [#45502]

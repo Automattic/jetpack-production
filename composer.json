@@ -31,7 +31,7 @@
 		"automattic/jetpack-error": "^3.0.6",
 		"automattic/jetpack-external-connections": "^0.1.4",
 		"automattic/jetpack-external-media": "^0.5.7",
-		"automattic/jetpack-forms": "^6.11.0",
+		"automattic/jetpack-forms": "^6.12.0-alpha",
 		"automattic/jetpack-image-cdn": "^0.7.22",
 		"automattic/jetpack-import": "^0.9.11",
 		"automattic/jetpack-ip": "^0.4.10",
@@ -102,7 +102,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_2_a_3",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_2_a_4",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true
