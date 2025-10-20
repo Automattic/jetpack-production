@@ -2,38 +2,35 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.2-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.2-a.3 - 2025-10-20
 ### Enhancements
-- Forms: remove unusaed hasAI from config.
-- Forms: Update "Action after submit" sidebar section
-- Sharing Buttons block: update Reddit logo to match updated design.
-- Sitemaps: use XMLWriter by default for more performant sitemap generation
+- Forms: Update "Action after submit" sidebar section. [#45502]
+- Sharing Buttons block: Update Reddit logo to match updated design. [#45484]
+- Sitemaps: Use XMLWriter by default for more performant sitemap generation. [#45527]
 
 ### Improved compatibility
-- Custom post types: Ensure features remain available when theme support is added.
-- Forms: remove Creative Mail promotion.
+- Custom post types: Ensure features remain available when theme support is added. [#45407]
+- Forms: Remove Creative Mail promotion. [#45524]
 
 ### Bug fixes
-- Forms: do not send emails to the author of the form if they are no longer able to edit it
-- Forms: fixed a bug that removed the required text from required fields when creating a form from a pattern.
-- Forms: fix plugin activation state.
-- Forms: Store the feedback source info with more context
-- Maps Block: fix compatibility with MapKit JS version 5.80.0+.
-- My Jetpack page: fix visual compatibility issue with Hello Dolly plugin.
-- Slideshow block: Ensure image size selection is correctly reflected in editor at all times
+- Forms: Send emails to the author of the form only if they are able to edit it. [#45515]
+- Forms: Prevent the required text from being removed from required fields when creating a form from a pattern. [#45495]
+- Forms: Store the feedback source info with more context. [#45231]
+- Maps Block: Fix compatibility with MapKit JS version 5.80.0+. [#45476]
+- My Jetpack page: Fix visual compatibility issue with Hello Dolly plugin. [#45474]
+- Podcast feed: Prevent fatals when content is empty. [#45498]
+- Related Posts: Prevent PHP errors when settings are malformed. [#45538]
+- Slideshow block: Ensure image size selection is correctly reflected in editor at all times. [#45500]
+- Stats: Prevent fatal when chart response is invalid. [#45496]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Blaze: do not display module toggle on WordPress.com sites.
-- Blocks: fix slideshow sizing for lazy-loaded images.
-- External media: Prevent site editor performance issues by bringing back previous script enqueue approach.
-- Forms: strip period from Terms submission label on the post-submission page.
-- Podcast feed: Prevent fatals when content is empty.
-- Prevent fatal when chart response is invalid.
-- Related Posts: Prevent PHP errors when settings are malformed.
-- Update package dependencies.
+- Blaze: Hide module toggle on WordPress.com sites. [#45499]
+- Slideshow block: Fix sizing for lazy-loaded images. [#45164]
+- External media: Prevent site editor performance issues by bringing back previous script enqueue approach. [#45546]
+- Forms: Strip period from Terms submission label on the post-submission page. [#45509]
+- Forms: Fix plugin activation state. [#45471]
+- Forms: Remove unused `hasAI` from config. [#45522]
+- Update package dependencies. [#45478]
 
 ## 15.2-a.1 - 2025-10-13
 ### Enhancements

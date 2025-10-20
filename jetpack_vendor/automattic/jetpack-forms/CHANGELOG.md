@@ -5,39 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.11.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.11.0] - 2025-10-20
 ### Added
-- Forms: add Hostinger Reach integration.
-- Forms: Add programmatic initialization support via window.jetpackFormsInit()
-- Forms: Add unread/read filter to the dashboard.
+- Forms: Add Hostinger Reach integration. [#45271]
+- Forms: Add programmatic initialization support via `window.jetpackFormsInit()`. [#45531]
+- Forms: Add unread/read filter to the dashboard. [#45514]
 
 ### Changed
-- De-clutter InboxView component, move data processing to hook
-- Forms: add new useConfigValue hook and start using it on the dashboard
-- Forms: Make dashboard initialization idempotent for SPA environments by using data attribute to track state
-- Forms: move view actions to modal header on mobile
-- Forms: remove logo from dashboard, align header styles with ciab"
-- Forms: remove old file, add tests for hook
-- Forms: remove unusaed hasAI from config.
-- Forms: Trim empty options and display custom placeholder
-- Forms: Update "Action after submit" sidebar section
-- Forms: UX improvements for Image Select field
-- Split components and hooks into their own files
+- Add new useConfigValue hook and start using it on the dashboard. [#45472]
+- De-clutter InboxView component and move data processing to hook. [#45489]
+- Make dashboard initialization idempotent for SPA environments by using data attribute to track state. [#45539]
+- Move view actions to modal header on mobile. [#45410]
+- Remove logo from dashboard and align header styles with CIAB. [#45535]
+- Remove old file and add tests for hook. [#45497]
+- Remove unused `hasAI` from config. [#45522]
+- Split components and hooks into their own files. [#45494]
+- Trim empty options and display custom placeholder. [#45528]
+- Update "Action after submit" sidebar section. [#45502]
+- UX improvements for Image Select field. [#45516]
 
 ### Deprecated
-- Forms: remove Creative Mail promotion.
+- Remove Creative Mail promotion. [#45524]
 
 ### Fixed
-- Forms: Better handle custom submission message formatting
-- Forms: do not send emails to the author of the form if they are no longer able to edit it
-- Forms: fixed a bug that removed the required text from required fields when creating a form from a pattern.
-- Forms: fix PHP warning for when a site doesn't have the JWT token yet
-- Forms: fix plugin activation state.
-- Forms: Store the feedback source info with more context
-- Forms: strip period from Terms submission label on the post-submission page.
+- Improve handling of custom submission message formatting. [#45487]
+- Send emails to the author of the form only if they are able to edit it. [#45515]
+- Fix PHP warning for when a site doesn't have the JWT token yet. [#45501]
+- Fix plugin activation state. [#45471]
+- Prevent required text from being removed from required fields when creating a form from a pattern. [#45495]
+- Store the feedback source info with more context. [#45231]
+- Strip period from Terms submission label on the post-submission page. [#45509]
 
 ## [6.10.0] - 2025-10-13
 ### Added
@@ -1716,7 +1713,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.11.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.10.0...v6.11.0-alpha
+[6.11.0]: https://github.com/automattic/jetpack-forms/compare/v6.10.0...v6.11.0
 [6.10.0]: https://github.com/automattic/jetpack-forms/compare/v6.9.0...v6.10.0
 [6.9.0]: https://github.com/automattic/jetpack-forms/compare/v6.8.0...v6.9.0
 [6.8.0]: https://github.com/automattic/jetpack-forms/compare/v6.7.0...v6.8.0

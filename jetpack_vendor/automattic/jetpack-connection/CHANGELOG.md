@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.19.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.19.0] - 2025-10-20
 ### Added
-- Added newspack and vip check to should_allow_error_filtering.
+- Add Newspack and VIP check to `should_allow_error_filtering`. [#45481]
 
 ## [6.18.14] - 2025-10-14
 ### Changed
@@ -1622,7 +1619,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.19.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.18.14...v6.19.0-alpha
+[6.19.0]: https://github.com/Automattic/jetpack-connection/compare/v6.18.14...v6.19.0
 [6.18.14]: https://github.com/Automattic/jetpack-connection/compare/v6.18.13...v6.18.14
 [6.18.13]: https://github.com/Automattic/jetpack-connection/compare/v6.18.12...v6.18.13
 [6.18.12]: https://github.com/Automattic/jetpack-connection/compare/v6.18.11...v6.18.12

@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.27.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [0.27.5] - 2025-10-20
+### Changed
+- Internal updates.
 
 ## [0.27.4] - 2025-09-15
 ### Changed
@@ -493,7 +493,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.27.5-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.27.4...v0.27.5-alpha
+[0.27.5]: https://github.com/Automattic/jetpack-waf/compare/v0.27.4...v0.27.5
 [0.27.4]: https://github.com/Automattic/jetpack-waf/compare/v0.27.3...v0.27.4
 [0.27.3]: https://github.com/Automattic/jetpack-waf/compare/v0.27.2...v0.27.3
 [0.27.2]: https://github.com/Automattic/jetpack-waf/compare/v0.27.1...v0.27.2

@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.66.18-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.66.18] - 2025-10-20
 ### Fixed
-- Sharing: Prevent PHP fatals when passed malformed data.
+- Sharing: Prevent PHP fatals when passed malformed data. [#45418]
 
 ## [0.66.17] - 2025-10-10
 ### Changed
@@ -1133,7 +1130,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.66.18-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.17...v0.66.18-alpha
+[0.66.18]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.17...v0.66.18
 [0.66.17]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.16...v0.66.17
 [0.66.16]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.15...v0.66.16
 [0.66.15]: https://github.com/Automattic/jetpack-publicize/compare/v0.66.14...v0.66.15
