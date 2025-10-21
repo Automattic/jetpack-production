@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.2-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 15.2-a.5 - 2025-10-21
 ### Enhancements
 - Forms: merged email and push notification settings panels. [#45548]
