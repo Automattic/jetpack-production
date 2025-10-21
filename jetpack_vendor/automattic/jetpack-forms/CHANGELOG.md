@@ -5,32 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.12.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.12.0] - 2025-10-21
 ### Added
-- Forms: show gravatar on dataviews list
+- Show gravatar on dataviews list. [#45555]
 
 ### Changed
-- Forms: merged email and push notification settings panels.
-- Forms: stop preloading the integrations endpoint
+- Merge email and push notification settings panels. [#45548]
+- Stop preloading the integrations endpoint. [#45558]
 
 ### Deprecated
-- Forms: remove unused useFormsConfig hook.
+- Remove unused `useFormsConfig` hook. [#45554]
 
 ### Fixed
-- Forms: fix a bug that you makes you click the close button twice.
-- Forms: fix bug where the responsvie modal is not able to be closed.
-- Forms: Fix renderable status of image select field
-- Forms: make integrations background white.
-- Forms: reset the selection on tab switch
+- Fix bug where the responsive modal is not able to be closed. [#45541] [#45557]
+- Fix renderable status of image select field. [#45542]
+- Make integrations background white. [#45562]
+- Reset the selection on tab switch. [#45543]
 
 ## [6.11.0] - 2025-10-20
 ### Added
-- Forms: Add Hostinger Reach integration. [#45271]
-- Forms: Add programmatic initialization support via `window.jetpackFormsInit()`. [#45531]
-- Forms: Add unread/read filter to the dashboard. [#45514]
+- Add Hostinger Reach integration. [#45271]
+- Add programmatic initialization support via `window.jetpackFormsInit()`. [#45531]
+- Add unread/read filter to the dashboard. [#45514]
 
 ### Changed
 - Add new useConfigValue hook and start using it on the dashboard. [#45472]
@@ -1734,7 +1730,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.12.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.11.0...v6.12.0-alpha
+[6.12.0]: https://github.com/automattic/jetpack-forms/compare/v6.11.0...v6.12.0
 [6.11.0]: https://github.com/automattic/jetpack-forms/compare/v6.10.0...v6.11.0
 [6.10.0]: https://github.com/automattic/jetpack-forms/compare/v6.9.0...v6.10.0
 [6.9.0]: https://github.com/automattic/jetpack-forms/compare/v6.8.0...v6.9.0

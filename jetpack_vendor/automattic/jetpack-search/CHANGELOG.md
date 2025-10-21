@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.52.24-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.52.24] - 2025-10-21
 ### Fixed
-- Instant Search: address browser privacy settings from stripping out the search query value.
+- Instant Search: Handle browser privacy settings stripping out the search query value. [#45533]
 
 ## [0.52.23] - 2025-10-20
 ### Changed
@@ -1359,7 +1356,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.52.24-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.52.23...v0.52.24-alpha
+[0.52.24]: https://github.com/Automattic/jetpack-search/compare/v0.52.23...v0.52.24
 [0.52.23]: https://github.com/Automattic/jetpack-search/compare/v0.52.22...v0.52.23
 [0.52.22]: https://github.com/Automattic/jetpack-search/compare/v0.52.21...v0.52.22
 [0.52.21]: https://github.com/Automattic/jetpack-search/compare/v0.52.20...v0.52.21
