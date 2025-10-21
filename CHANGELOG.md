@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix a bug where ther responsive modal is not able to be closed.
 - Forms: reset the selection on tab switch in dashboard
 - Forms stop preloading the integrations endpoint
+- Instant Search: address browser privacy settings from stripping out the search query value.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Forms: remove unused useFormsConfig hook.
