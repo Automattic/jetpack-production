@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: reduce re-renders in the dashboard
+- Forms: UX and accessibility fixes for image select field
 
 ## [6.12.0] - 2025-10-21
 ### Added
