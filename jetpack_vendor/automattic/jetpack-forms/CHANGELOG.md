@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: store the user agent used on form submissions.
 
+### Removed
+- Forms: remove hovercards from inbox list
+
 ### Fixed
 - Forms: reduce re-renders in the dashboard
 - Forms: UX and accessibility fixes for image select field
