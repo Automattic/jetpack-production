@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.12.1-alpha] - unreleased
+## [6.13.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Forms: store the user agent used on form submissions.
 
 ### Fixed
 - Forms: reduce re-renders in the dashboard
@@ -1738,7 +1741,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.12.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.12.0...v6.12.1-alpha
+[6.13.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.12.0...v6.13.0-alpha
 [6.12.0]: https://github.com/automattic/jetpack-forms/compare/v6.11.0...v6.12.0
 [6.11.0]: https://github.com/automattic/jetpack-forms/compare/v6.10.0...v6.11.0
 [6.10.0]: https://github.com/automattic/jetpack-forms/compare/v6.9.0...v6.10.0
