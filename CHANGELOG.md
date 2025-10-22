@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- Tested up to WordPress 6.9
+
 ## 15.2-a.5 - 2025-10-21
 ### Enhancements
 - Forms: merged email and push notification settings panels. [#45548]
