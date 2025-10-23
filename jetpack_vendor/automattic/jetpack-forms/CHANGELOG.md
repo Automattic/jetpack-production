@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: align layout grid/components with DataViews table grid
 - Forms: store the user agent used on form submissions.
+- Forms: update visual representation of "image select field" responses at inbox
 - Update package dependencies.
 
 ### Removed
