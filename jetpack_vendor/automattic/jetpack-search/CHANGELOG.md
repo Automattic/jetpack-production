@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Instant Search: Add global WooCommerce Product Attributes as filter options.
+
 ### Changed
 - Instant Search: Fix issue where Safari's 'Use advanced tracking and fingerprinting protection' setting breaks Search.
 - Instant Search: Revert Safari privacy settings fix due to E2E failure.
