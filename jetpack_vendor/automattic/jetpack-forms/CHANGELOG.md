@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Removed
+- Forms: remove custom green buttons
 - Forms: remove hovercards from inbox list
 
 ### Fixed
