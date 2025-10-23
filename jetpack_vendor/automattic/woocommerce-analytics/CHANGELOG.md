@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Enhance JSON encoding by adding JSON_HEX_TAG and JSON_UNESCAPED_SLASHES options
 
+### Fixed
+- Fix call to undefined method WC_Tracks::get_server_details()
+
 ## [0.10.0] - 2025-10-02
 ### Added
 - Implement WP Consent API Integration [#45323]
