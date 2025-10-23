@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Forms: add 'create new form' CTA to inbox empty state
 - Forms: align layout grid/components with DataViews table grid
 - Forms: store the user agent used on form submissions.
 - Forms: update visual representation of "image select field" responses at inbox
