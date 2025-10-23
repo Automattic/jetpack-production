@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: add 'create new form' CTA to inbox empty state
 - Forms: align layout grid/components with DataViews table grid
+- Forms: record tracks events for inbox actions
 - Forms: store the user agent used on form submissions.
 - Forms: update visual representation of "image select field" responses at inbox
 - Update package dependencies.
