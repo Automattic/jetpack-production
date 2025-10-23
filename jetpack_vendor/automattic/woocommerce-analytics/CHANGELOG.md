@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Enhance JSON encoding by adding JSON_HEX_TAG and JSON_UNESCAPED_SLASHES options
+- Ensure anonymous ID is set
 
 ### Fixed
 - Fix call to undefined method WC_Tracks::get_server_details()
