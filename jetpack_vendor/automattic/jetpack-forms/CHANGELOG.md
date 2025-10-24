@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: add 'create new form' CTA to inbox empty state
 - Forms: align layout grid/components with DataViews table grid
+- Forms: Improve the performance of loading the form responsesn dashboard by breaking it up into two stages
 - Forms: integrate @wordpress/admin-ui Page component into dashboard layout
 - Forms: record tracks events for inbox actions
 - Forms: store the user agent used on form submissions.
