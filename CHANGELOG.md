@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Tested up to WordPress 6.9
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Post Images: Ensure type is WP_Post before treating it as a post.
+
 ## 15.2-a.5 - 2025-10-21
 ### Enhancements
 - Forms: merged email and push notification settings panels. [#45548]
