@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Improve the performance of loading the form responsesn dashboard by breaking it up into two stages
 - Forms: integrate @wordpress/admin-ui Page component into dashboard layout
 - Forms: record tracks events for inbox actions
+- Forms: Remove About page from dashboard
 - Forms: store the user agent used on form submissions.
 - Forms: update visual representation of "image select field" responses at inbox
 - Update package dependencies.
