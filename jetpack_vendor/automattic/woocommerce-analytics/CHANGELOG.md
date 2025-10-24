@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix call to undefined method WC_Tracks::get_server_details()
+- Use existing bot detection from Device Detection package to skip event recording in analytics tracking
 
 ## [0.10.0] - 2025-10-02
 ### Added
