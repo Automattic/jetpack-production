@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove hovercards from inbox list
 
 ### Fixed
+- Forms: fix textarea submission on enter.
 - Forms: reduce re-renders in the dashboard
 - Forms: Update feedback form screenshot
 - Forms: UX and accessibility fixes for image select field

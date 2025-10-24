@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Tested up to WordPress 6.9
 
+### Bug fixes
+- Forms: fix textarea submission on enter.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Post Images: Ensure type is WP_Post before treating it as a post.
 
