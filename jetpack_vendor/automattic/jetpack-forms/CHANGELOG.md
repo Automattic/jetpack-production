@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: fix response selection filtering bug caused by type mismatch
 - Forms: fix where notices show up so they don't overlap the bottom action bar
+- Forms: Simplify the selection so that it changes every time to only the valid set of items
 
 ## [6.13.0] - 2025-10-27
 ### Changed

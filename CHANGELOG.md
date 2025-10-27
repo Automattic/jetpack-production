@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: fix where notices show up so they don't overlap the bottom action bar
+- Forms: Simplify the selection on the responses dashboard so that it changes every time to only the valid set of items
 
 ## 15.2-a.7 - 2025-10-27
 ### Enhancements
