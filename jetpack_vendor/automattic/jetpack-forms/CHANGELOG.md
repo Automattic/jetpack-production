@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: Add error codes to submission errors
 - Forms: start storing the country code with the form responses based on the IP address.
 
 ### Fixed
