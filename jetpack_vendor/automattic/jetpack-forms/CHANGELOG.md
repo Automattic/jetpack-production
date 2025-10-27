@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: start storing the country code with the form responses based on the IP address.
 
 ### Fixed
+- Forms: fix response selection filtering bug caused by type mismatch
 - Forms: fix where notices show up so they don't overlap the bottom action bar
 
 ## [6.13.0] - 2025-10-27
