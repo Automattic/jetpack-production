@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.2-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Forms: Start storing the country_code based on the IP with the form responses.
+
 ## 15.2-a.7 - 2025-10-27
 ### Enhancements
 - Forms: Add shared ConsentToggle component. [#45556]
