@@ -2,24 +2,21 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.2-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.2-a.7 - 2025-10-27
 ### Enhancements
-- Forms: add shared ConsentToggle component.
-- Forms: Improve the performance of loading the form responsesn dashboard by breaking it up into two stages.
-- Instant Search: Add global WooCommerce Product Attributes as filter options.
-- Instant Search: Fix issue where Safari's 'Use advanced tracking and fingerprinting protection' setting breaks Search.
+- Forms: Add shared ConsentToggle component. [#45556]
+- Forms: Improve the performance of loading the form responses. [#45565]
+- Instant Search: Add global WooCommerce Product Attributes as filter options. [#45416]
+- Instant Search: Fix issue where Safari's 'Use advanced tracking and fingerprinting protection' setting breaks Search. [#45588]
 
 ### Improved compatibility
-- Tested up to WordPress 6.9
+- Tested up to WordPress 6.9. [#45571]
 
 ### Bug fixes
-- Forms: fix textarea submission on enter.
+- Forms: Fix textarea submission on enter. [#45602]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Post Images: Ensure type is WP_Post before treating it as a post.
+- Post Images: Ensure type is WP_Post before treating it as a post. [#45623]
 
 ## 15.2-a.5 - 2025-10-21
 ### Enhancements

@@ -5,31 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.13.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.13.0] - 2025-10-27
 ### Changed
-- Forms: add 'create new form' CTA to inbox empty state
-- Forms: add shared ConsentToggle component.
-- Forms: align layout grid/components with DataViews table grid
-- Forms: Improve the performance of loading the form responsesn dashboard by breaking it up into two stages
-- Forms: integrate @wordpress/admin-ui Page component into dashboard layout
-- Forms: record tracks events for inbox actions
-- Forms: Remove About page from dashboard
-- Forms: store the user agent used on form submissions.
-- Forms: update visual representation of "image select field" responses at inbox
-- Update package dependencies.
+- Add 'create new form' CTA to inbox empty state. [#45589]
+- Add shared ConsentToggle component. [#45556]
+- Align layout grid/components with DataViews table grid. [#45559]
+- Improve the performance of loading the form responsesn dashboard by breaking it up into two stages. [#45565]
+- Integrate `@wordpress/admin-ui` Page component into dashboard layout. [#45610]
+- Record tracks events for inbox actions. [#45606]
+- Remove About page from dashboard. [#45615]
+- Store the user agent used on form submissions. [#45586]
+- Update visual representation of "image select field" responses at inbox. [#45585]
+- Update package dependencies. [#45551] [#45592] [#45598]
 
 ### Removed
-- Forms: remove custom green buttons
-- Forms: remove hovercards from inbox list
+- Remove custom green buttons [#45613]
+- Remove hovercards from inbox list [#45572]
 
 ### Fixed
-- Forms: fix textarea submission on enter.
-- Forms: reduce re-renders in the dashboard
-- Forms: Update feedback form screenshot
-- Forms: UX and accessibility fixes for image select field
+- Fix textarea submission on enter. [#45602]
+- Reduce re-renders in the dashboard. [#45567]
+- Update feedback form screenshot. [#45578]
+- UX and accessibility fixes for image select field. [#45560]
 
 ## [6.12.0] - 2025-10-21
 ### Added
@@ -1756,7 +1753,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.13.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.12.0...v6.13.0-alpha
+[6.13.0]: https://github.com/automattic/jetpack-forms/compare/v6.12.0...v6.13.0
 [6.12.0]: https://github.com/automattic/jetpack-forms/compare/v6.11.0...v6.12.0
 [6.11.0]: https://github.com/automattic/jetpack-forms/compare/v6.10.0...v6.11.0
 [6.10.0]: https://github.com/automattic/jetpack-forms/compare/v6.9.0...v6.10.0
