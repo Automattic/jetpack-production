@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Add details for JWT decoding errors
+- Improve empty state centering and fix scrolling by consolidating layout min-height rules and improving flexbox handling.
 
 ### Fixed
 - Forms: fix response selection filtering bug caused by type mismatch
