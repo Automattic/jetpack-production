@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: disable Jetpack CRM integration by default.
 - Forms: link IP to lookup service
 - Forms: Release Image Select Field to production
 - Forms: Start storing the country_code based on the IP with the form responses.
