@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix where notices show up so they don't overlap the bottom action bar
 - Forms: Simplify the selection on the responses dashboard so that it changes every time to only the valid set of items
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 15.2-a.7 - 2025-10-27
 ### Enhancements
 - Forms: Add shared ConsentToggle component. [#45556]
