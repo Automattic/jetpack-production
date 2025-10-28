@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add error codes to submission errors
 - Forms: start storing the country code with the form responses based on the IP address.
 
+### Changed
+- Forms: Add details for JWT decoding errors
+
 ### Fixed
 - Forms: fix response selection filtering bug caused by type mismatch
 - Forms: fix where notices show up so they don't overlap the bottom action bar
