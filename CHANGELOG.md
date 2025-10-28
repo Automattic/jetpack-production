@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Editor assets endpoint: mock current screen to avoid fatal errors from plugins/themes.
+- Prevent PHP error when handling malformed style source.
 - Update package dependencies.
 
 ## 15.2-a.7 - 2025-10-27
