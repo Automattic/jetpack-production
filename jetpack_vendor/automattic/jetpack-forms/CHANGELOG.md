@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Add details for JWT decoding errors
 - Forms: default to notify the post author when the notification recipients list is empty.
+- Forms: use jetpack logo on dashboard header
 - Improve empty state centering and fix scrolling by consolidating layout min-height rules and improving flexbox handling.
 - Update package dependencies.
 
