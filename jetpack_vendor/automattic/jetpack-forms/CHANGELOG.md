@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: disable Jetpack CRM integration by default.
 - Forms: revert CRM frontend default to true.
 - Forms: use jetpack logo on dashboard header
+- Forms: use table to render response meta
 - Improve empty state centering and fix scrolling by consolidating layout min-height rules and improving flexbox handling.
 - Update package dependencies.
 
