@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Simplify the selection on the responses dashboard so that it changes every time to only the valid set of items
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Calendar Reader: remove debugging statement added to bypass caching.
 - Editor assets endpoint: mock current screen to avoid fatal errors from plugins/themes.
 - Prevent PHP error when handling malformed style source.
 - Update package dependencies.
