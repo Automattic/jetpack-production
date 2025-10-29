@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Don't translate product names.
 - Forms: disable Jetpack CRM integration by default.
 - Forms: link IP to lookup service
 - Forms: Release Image Select Field to production
