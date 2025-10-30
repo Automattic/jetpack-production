@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Add error codes to submission errors
+- Forms: Add flag next to the IP address
 - Forms: enable forms push notifications functionality.
 - Forms: link IP to lookup service
 - Forms: Release Image Select Field to production
