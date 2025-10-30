@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Don't translate product names.
+- Forms: Add emoji flag to the response email next to the IP address.
 - Forms: add flag next to the IP Address
 - Forms: disable Jetpack CRM integration by default.
 - Forms: enable forms push notifications functionality.
