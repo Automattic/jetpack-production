@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix improved data handling due to invalid prop name
+
 ## [0.10.1] - 2025-10-27
 ### Changed
 - Enhance JSON encoding by adding `JSON_HEX_TAG` and `JSON_UNESCAPED_SLASHES` options. [#45393]
