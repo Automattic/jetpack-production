@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: link IP to lookup service
 - Forms: Release Image Select Field to production
 - Forms: Start storing the country_code based on the IP with the form responses.
+- Subscription forms: provide autocomplete attribute for email fields, to help with filling in email addresses.
 
 ### Bug fixes
 - Forms: fix where notices show up so they don't overlap the bottom action bar
