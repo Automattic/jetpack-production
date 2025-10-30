@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Forms: Fix a bug with the default email in the editor
 - Forms: fix a consoler error triggered by iterable without key prop
 - Forms: fix an error on phone field controls due to lack of key prop
 - Forms: fix react error due to nesting tr as direct descendant of table, needs tbody
