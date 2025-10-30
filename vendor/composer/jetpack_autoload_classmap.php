@@ -423,11 +423,11 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-plans/src/class-current-plan.php'
 	),
 	'Automattic\\Jetpack\\Device_Detection' => array(
-		'version' => '3.3.0.0-alpha1761816539',
+		'version' => '3.3.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-device-detection/src/class-device-detection.php'
 	),
 	'Automattic\\Jetpack\\Device_Detection\\User_Agent_Info' => array(
-		'version' => '3.3.0.0-alpha1761816539',
+		'version' => '3.3.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-device-detection/src/class-user-agent-info.php'
 	),
 	'Automattic\\Jetpack\\Error' => array(
@@ -451,7 +451,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-jwt/src/class-jwt.php'
 	),
 	'Automattic\\Jetpack\\Extensions\\Contact_Form\\Contact_Form_Block' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/blocks/contact-form/class-contact-form-block.php'
 	),
 	'Automattic\\Jetpack\\External_Connections' => array(
@@ -467,87 +467,87 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Admin' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-admin.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Endpoint' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-endpoint.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Field' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-field.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Plugin' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-plugin.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Shortcode' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-shortcode.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Editor_View' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-editor-view.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback_Author' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback-author.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback_Field' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback-field.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback_Source' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback-source.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Form_Submission_Error' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-form-submission-error.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Form_View' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-form-view.php'
 	),
 	'Automattic\\Jetpack\\Forms\\ContactForm\\Util' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-util.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard_View_Switch' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard-view-switch.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Jetpack_Forms' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-jetpack-forms.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Service\\Google_Drive' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-google-drive.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Service\\Hostinger_Reach_Integration' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-hostinger-reach-integration.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Service\\MailPoet_Integration' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-mailpoet-integration.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Service\\Post_To_Url' => array(
-		'version' => '6.14.0.0-alpha1761847011',
+		'version' => '6.14.0.0-alpha1761851286',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-post-to-url.php'
 	),
 	'Automattic\\Jetpack\\Heartbeat' => array(

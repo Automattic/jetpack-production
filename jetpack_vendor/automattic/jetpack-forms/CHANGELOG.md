@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Device detection: added a method that returns the browser display name.
 - Forms: add emoji flag to the response email next to the IP Address
 - Forms: Add error codes to submission errors
 - Forms: Add flag next to the IP address
