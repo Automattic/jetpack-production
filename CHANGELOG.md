@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add emoji flag to the response email next to the IP address.
 - Forms: add flag next to the IP Address
 - Forms: add new integrations list component.
+- Forms: Add the IP address as the default field in the responses dashboard
 - Forms: add time field
 - Forms: disable Jetpack CRM integration by default.
 - Forms: enable forms push notifications functionality.
