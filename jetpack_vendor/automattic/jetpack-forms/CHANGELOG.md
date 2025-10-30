@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Device detection: added a method that returns the browser display name.
 - Forms: add emoji flag to the response email next to the IP Address
 - Forms: Add error codes to submission errors
+- Forms: add first and last name variations.
 - Forms: Add flag next to the IP address
 - Forms: add time field
 - Forms: enable forms push notifications functionality.

@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Don't translate product names.
 - Forms: Add emoji flag to the response email next to the IP address.
+- Forms: add first and last name variations.
 - Forms: add flag next to the IP Address
 - Forms: add new integrations list component.
 - Forms: Add the IP address as the default field in the responses dashboard
