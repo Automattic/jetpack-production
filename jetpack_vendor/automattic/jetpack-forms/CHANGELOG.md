@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: fix a consoler error triggered by iterable without key prop
 - Forms: fix an error on phone field controls due to lack of key prop
+- Forms: fix react error due to nesting tr as direct descendant of table, needs tbody
 - Forms: fix response selection filtering bug caused by type mismatch
 - Forms: fix where notices show up so they don't overlap the bottom action bar
 - Forms: Simplify the selection so that it changes every time to only the valid set of items
