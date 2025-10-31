@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Sync: Ensure order item meta is only synced if it is in the whitelist.
+
 ### Changed
 - Jetpack Sync: Enable WPCOM REST API feature by default
 - Jetpack Sync: Only enqueue a single HPOS order save event per request

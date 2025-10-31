@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add browser info to form responses detail view.
 - Prevent PHP error when handling malformed style source.
 - Remove incorrect comment
+- Tests: Update WooCommerce sync related tests to account for whitelisting order item meta.
 - Update package dependencies.
 
 ## 15.2-a.7 - 2025-10-27
