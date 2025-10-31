@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix duplicate tracking event for carousel
 - Flex sites: return the is_wpcom_flex flag from the sites API for deleted sites
 - Forms: add browser info to form responses detail view.
+- Phan: Address PhanRedundantCondition, PhanRedundantArrayValuesCall, and PhanPluginRedundantAssignment violations.
 - Prevent PHP error when handling malformed style source.
 - Remove incorrect comment
 - Tests: Update WooCommerce sync related tests to account for whitelisting order item meta.

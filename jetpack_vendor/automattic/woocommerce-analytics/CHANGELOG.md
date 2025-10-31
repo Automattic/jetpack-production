@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix improved data handling due to invalid prop name
+- Phan: Address PhanRedundantCondition, PhanRedundantArrayValuesCall, and PhanPluginRedundantAssignment violations.
 - Set dynamic WebPack public path for split assets
 
 ## [0.10.1] - 2025-10-27

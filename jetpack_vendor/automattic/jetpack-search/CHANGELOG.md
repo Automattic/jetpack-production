@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Don't translate product names.
 - Update dependencies.
 
+### Fixed
+- Phan: Address PhanRedundantCondition, PhanRedundantArrayValuesCall, and PhanPluginRedundantAssignment violations.
+
 ## [0.53.0] - 2025-10-27
 ### Added
 - Instant Search: Add global WooCommerce Product Attributes as filter options. [#45416]
