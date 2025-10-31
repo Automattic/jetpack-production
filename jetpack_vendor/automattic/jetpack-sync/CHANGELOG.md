@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Jetpack Sync: Enable WPCOM REST API feature by default
+- Jetpack Sync: Only enqueue a single HPOS order save event per request
 
 ## [4.22.2] - 2025-10-27
 ### Changed
