@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Calendar Reader: remove debugging statement added to bypass caching.
 - Editor assets endpoint: mock current screen to avoid fatal errors from plugins/themes.
+- Fix duplicate tracking event for carousel
 - Flex sites: return the is_wpcom_flex flag from the sites API for deleted sites
 - Forms: add browser info to form responses detail view.
 - Prevent PHP error when handling malformed style source.
