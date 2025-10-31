@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Enable ClickHouse by default
+- Send all events to clickhouse
 - Update package dependencies.
 
 ### Fixed
