@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: create new integrations list component.
 - Forms: default to notify the post author when the notification recipients list is empty.
 - Forms: disable Jetpack CRM integration by default.
+- Forms: move storage setting lower in sidebar
 - Forms: revert CRM frontend default to true.
 - Forms: use a dropdown selector to list eligible users to receive form notifications.
 - Forms: use jetpack logo on dashboard header
