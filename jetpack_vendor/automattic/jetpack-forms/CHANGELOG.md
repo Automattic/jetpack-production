@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: start storing the country code with the form responses based on the IP address.
 
 ### Changed
+- Forms: add browser info to form responses exports.
 - Forms: Add details for JWT decoding errors
 - Forms: add the IP address as a default field in the forms dashboard
 - Forms: create new integrations list component.
