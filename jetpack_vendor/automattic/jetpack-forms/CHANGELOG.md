@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Device detection: added a method that returns the browser display name.
+- Forms: add "auto" width for fields and detect when a form has a single input in it to show prettier validation errors
 - Forms: add a new jwt filter
 - Forms: add emoji flag to the response email next to the IP Address
 - Forms: Add error codes to submission errors
