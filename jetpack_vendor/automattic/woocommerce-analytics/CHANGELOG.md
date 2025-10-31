@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix improved data handling due to invalid prop name
+- Set dynamic WebPack public path for split assets
 
 ## [0.10.1] - 2025-10-27
 ### Changed
