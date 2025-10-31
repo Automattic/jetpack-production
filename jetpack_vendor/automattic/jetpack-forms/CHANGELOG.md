@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add first and last name variations.
 - Forms: Add flag next to the IP address
 - Forms: add time field
+- Forms: add visibility support for field labels
 - Forms: enable forms push notifications functionality.
 - Forms: link IP to lookup service
 - Forms: Release Image Select Field to production
