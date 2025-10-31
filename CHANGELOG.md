@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Flex sites: return the is_wpcom_flex flag from the sites API for deleted sites
 - Forms: add browser info to form responses detail view.
 - Prevent PHP error when handling malformed style source.
+- Remove incorrect comment
 - Update package dependencies.
 
 ## 15.2-a.7 - 2025-10-27
