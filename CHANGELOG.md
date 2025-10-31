@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Phan: Address PhanRedundantCondition, PhanRedundantArrayValuesCall, and PhanPluginRedundantAssignment violations.
 - Prevent PHP error when handling malformed style source.
 - Remove incorrect comment
+- Shortcodes: fix JS error in presentation shortcode.
 - Tests: Update WooCommerce sync related tests to account for whitelisting order item meta.
 - Update package dependencies.
 
