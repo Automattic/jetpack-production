@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: disable Jetpack CRM integration by default.
 - Forms: move storage setting lower in sidebar
 - Forms: revert CRM frontend default to true.
+- Forms: show gravatars also for rows without emails
 - Forms: use a dropdown selector to list eligible users to receive form notifications.
 - Forms: use jetpack logo on dashboard header
 - Forms: use table to render response meta
