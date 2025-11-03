@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add details for JWT decoding errors
 - Forms: add the IP address as a default field in the forms dashboard
 - Forms: create new integrations list component.
+- Forms: default multistep forms to single step view in the editor and prevent viewport jumping during step navigation.
 - Forms: default to notify the post author when the notification recipients list is empty.
 - Forms: disable Jetpack CRM integration by default.
 - Forms: move storage setting lower in sidebar
