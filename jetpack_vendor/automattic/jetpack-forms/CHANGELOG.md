@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add browser info to the form response email notification.
 - Forms: Add details for JWT decoding errors
 - Forms: add the IP address as a default field in the forms dashboard
+- Forms: change field's attribute width to enum to support both integers and string
 - Forms: create new integrations list component.
 - Forms: default multistep forms to single step view in the editor and prevent viewport jumping during step navigation.
 - Forms: default to notify the post author when the notification recipients list is empty.
