@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: default multistep forms to single step view in the editor and prevent viewport jumping during step navigation.
 - Forms: Move integrations from tab to button and display in modal
 - Forms: use flex-basis 0 for auto width as it will deal better adjusting to content and not extra space
+- Update package dependencies.
 
 ### Fixed
 - Forms: fix error overlapping on single input forms after using position: absolute and turning the main container to display: flex
