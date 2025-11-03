@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: fix error overlapping on single input forms after using position: absolute and turning the main container to display: flex
+- Forms: fix last page invalidation error when items are removed
 
 ## [6.14.0] - 2025-11-03
 ### Added
