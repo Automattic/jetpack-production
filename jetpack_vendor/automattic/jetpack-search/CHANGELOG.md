@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.54.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.54.0] - 2025-11-03
 ### Changed
-- Don't translate product names.
-- Update dependencies.
+- Don't translate product names. [#43961]
+- Update dependencies. [#45664]
 
 ### Fixed
-- Phan: Address PhanRedundantCondition, PhanRedundantArrayValuesCall, and PhanPluginRedundantAssignment violations.
+- Phan: Address PhanRedundantCondition, PhanRedundantArrayValuesCall, and PhanPluginRedundantAssignment violations. [#45681]
 
 ## [0.53.0] - 2025-10-27
 ### Added
@@ -1374,7 +1371,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.54.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.53.0...v0.54.0-alpha
+[0.54.0]: https://github.com/Automattic/jetpack-search/compare/v0.53.0...v0.54.0
 [0.53.0]: https://github.com/Automattic/jetpack-search/compare/v0.52.24...v0.53.0
 [0.52.24]: https://github.com/Automattic/jetpack-search/compare/v0.52.23...v0.52.24
 [0.52.23]: https://github.com/Automattic/jetpack-search/compare/v0.52.22...v0.52.23

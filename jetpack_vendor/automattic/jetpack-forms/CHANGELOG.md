@@ -5,53 +5,50 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.14.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.14.0] - 2025-11-03
 ### Added
-- Device detection: added a method that returns the browser display name.
-- Forms: add "auto" width for fields and detect when a form has a single input in it to show prettier validation errors
-- Forms: add a new jwt filter
-- Forms: add emoji flag to the response email next to the IP Address
-- Forms: Add error codes to submission errors
-- Forms: add first and last name variations.
-- Forms: Add flag next to the IP address
-- Forms: add time field
-- Forms: add visibility support for field labels
-- Forms: enable forms push notifications functionality.
-- Forms: link IP to lookup service
-- Forms: Release Image Select Field to production
-- Forms: start storing the country code with the form responses based on the IP address.
+- Device detection: Add a method that returns the browser display name. [#45674]
+- Add "auto" width for fields and detect when a form has a single input in it to show prettier validation errors. [#45689]
+- Add a new jwt filter. [#45731]
+- Add emoji flag to the response email next to the IP Address. [#45645]
+- Add error codes to submission errors. [#45628]
+- Add first and last name variations. [#45517]
+- Add flag next to the IP address. [#45643]
+- Add time field. [#45665]
+- Add visibility support for field labels. [#45722]
+- Enable forms push notifications functionality.. [#45682]
+- Link IP to lookup service. [#45653]
+- Release Image Select Field to production. [#45577]
+- Start storing the country code with the form responses based on the IP address. [#45599]
 
 ### Changed
-- Forms: add browser info to form responses exports.
-- Forms: Add details for JWT decoding errors
-- Forms: add the IP address as a default field in the forms dashboard
-- Forms: create new integrations list component.
-- Forms: default to notify the post author when the notification recipients list is empty.
-- Forms: disable Jetpack CRM integration by default.
-- Forms: move storage setting lower in sidebar
-- Forms: revert CRM frontend default to true.
-- Forms: show gravatars also for rows without emails
-- Forms: use a dropdown selector to list eligible users to receive form notifications.
-- Forms: use jetpack logo on dashboard header
-- Forms: use table to render response meta
-- Improve empty state centering and fix scrolling by consolidating layout min-height rules and improving flexbox handling.
-- Update package dependencies.
+- Add browser info to form responses exports. [#45709]
+- Add details for JWT decoding errors. [#45646]
+- Add the IP address as a default field in the forms dashboard. [#45704]
+- Create new integrations list component. [#45648]
+- Default to notify the post author when the notification recipients list is empty. [#45633]
+- Disable Jetpack CRM integration by default. [#45667]
+- Move storage setting lower in sidebar. [#45727]
+- Revert CRM frontend default to true. [#45669]
+- Show gravatars also for rows without emails. [#45726]
+- Use a dropdown selector to list eligible users to receive form notifications. [#45634]
+- Use jetpack logo on dashboard header. [#45609]
+- Use table to render response meta. [#45656]
+- Improve empty state centering and fix scrolling by consolidating layout min-height rules and improving flexbox handling. [#45649]
+- Update package dependencies. [#45652]
 
 ### Fixed
-- Forms: Fix a bug with the default email in the editor
-- Forms: fix a consoler error triggered by iterable without key prop
-- Forms: fix an error on phone field controls due to lack of key prop
-- Forms: fix react error due to nesting tr as direct descendant of table, needs tbody
-- Forms: fix response selection filtering bug caused by type mismatch
-- Forms: fix tooltip in response IP link
-- Forms: fix where notices show up so they don't overlap the bottom action bar
-- Forms: make sure fields is array before attempting a count
-- Forms: Simplify the selection so that it changes every time to only the valid set of items
-- Forms: update counts after landing on a mark as spam link
-- Phan: Address PhanRedundantCondition, PhanRedundantArrayValuesCall, and PhanPluginRedundantAssignment violations.
+- Fix a bug with the default email in the editor. [#45711]
+- Fix a consoler error triggered by iterable without key prop. [#45690]
+- Fix an error on phone field controls due to lack of key prop. [#45659]
+- Fix react error due to nesting tr as direct descendant of table, needs tbody. [#45691]
+- Fix response selection filtering bug caused by type mismatch. [#45611]
+- Fix tooltip in response IP link. [#45705]
+- Fix where notices show up so they don't overlap the bottom action bar. [#45616]
+- Make sure fields is array before attempting a count. [#45739]
+- Simplify the selection so that it changes every time to only the valid set of items. [#45618]
+- Update counts after landing on a mark as spam link. [#45644]
+- Phan: Address PhanRedundantCondition, PhanRedundantArrayValuesCall, and PhanPluginRedundantAssignment violations. [#45681]
 
 ## [6.13.0] - 2025-10-27
 ### Changed
@@ -1801,7 +1798,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.14.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.13.0...v6.14.0-alpha
+[6.14.0]: https://github.com/automattic/jetpack-forms/compare/v6.13.0...v6.14.0
 [6.13.0]: https://github.com/automattic/jetpack-forms/compare/v6.12.0...v6.13.0
 [6.12.0]: https://github.com/automattic/jetpack-forms/compare/v6.11.0...v6.12.0
 [6.11.0]: https://github.com/automattic/jetpack-forms/compare/v6.10.0...v6.11.0
