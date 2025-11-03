@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: default multistep forms to single step view in the editor and prevent viewport jumping during step navigation.
 - Forms: default to notify the post author when the notification recipients list is empty.
 - Forms: disable Jetpack CRM integration by default.
+- Forms: Move integrations from tab to button and display in modal
 - Forms: move storage setting lower in sidebar
 - Forms: revert CRM frontend default to true.
 - Forms: show gravatars also for rows without emails
