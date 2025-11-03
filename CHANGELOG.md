@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Don't translate product names.
 - Forms: add browser info to form responses exports.
+- Forms: add browser info to the form response email notification.
 - Forms: Add emoji flag to the response email next to the IP address.
 - Forms: add first and last name variations.
 - Forms: add flag next to the IP Address
