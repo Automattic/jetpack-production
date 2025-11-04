@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Forms: animated and outlined styles need maintenance
 - Forms: fix last page invalidation error when items are removed
 - Forms: fix phone field extra controls option to append to shared field controls
 
