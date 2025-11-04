@@ -1407,17 +1407,17 @@
         },
         {
             "name": "automattic/jetpack-forms",
-            "version": "v6.14.0",
-            "version_normalized": "6.14.0.0",
+            "version": "v6.15.0",
+            "version_normalized": "6.15.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-forms.git",
-                "reference": "a2c97ac466533826e82a068f9bff22a867c370b5"
+                "reference": "35839e1f65785894bcc89f2cf5c7388511ebfa43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-forms/zipball/a2c97ac466533826e82a068f9bff22a867c370b5",
-                "reference": "a2c97ac466533826e82a068f9bff22a867c370b5",
+                "url": "https://api.github.com/repos/Automattic/jetpack-forms/zipball/35839e1f65785894bcc89f2cf5c7388511ebfa43",
+                "reference": "35839e1f65785894bcc89f2cf5c7388511ebfa43",
                 "shasum": ""
             },
             "require": {
@@ -1444,14 +1444,14 @@
             "suggest": {
                 "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
             },
-            "time": "2025-11-03T08:48:27+00:00",
+            "time": "2025-11-04T05:42:29+00:00",
             "type": "jetpack-library",
             "extra": {
                 "autotagger": true,
                 "textdomain": "jetpack-forms",
                 "mirror-repo": "Automattic/jetpack-forms",
                 "branch-alias": {
-                    "dev-trunk": "6.14.x-dev"
+                    "dev-trunk": "6.15.x-dev"
                 },
                 "changelogger": {
                     "link-template": "https://github.com/automattic/jetpack-forms/compare/v${old}...v${new}"
@@ -1472,7 +1472,7 @@
             ],
             "description": "Jetpack Forms",
             "support": {
-                "source": "https://github.com/Automattic/jetpack-forms/tree/v6.14.0"
+                "source": "https://github.com/Automattic/jetpack-forms/tree/v6.15.0"
             },
             "install-path": "../../jetpack_vendor/automattic/jetpack-forms"
         },
