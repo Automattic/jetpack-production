@@ -5,21 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.15.0-alpha] - unreleased
+## [6.16.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: add browser info to the form response email notification.
-- Forms: change field's attribute width to enum to support both integers and string
 - Forms: default multistep forms to single step view in the editor and prevent viewport jumping during step navigation.
 - Forms: Move integrations from tab to button and display in modal
-- Forms: use flex-basis 0 for auto width as it will deal better adjusting to content and not extra space
 - Update package dependencies.
 
 ### Fixed
-- Forms: fix error overlapping on single input forms after using position: absolute and turning the main container to display: flex
 - Forms: fix last page invalidation error when items are removed
+
+## [6.15.0] - 2025-11-04
+### Changed
+- Change field's attribute width to enum to support both integers and string. [#45741]
+- Use `flex-basis: 0` for auto width as it will deal better adjusting to content and not extra space. [#45747]
+
+### Fixed
+- Fix error overlapping on single input forms after using position: absolute and turning the main container to `display: flex`. [#45749]
 
 ## [6.14.0] - 2025-11-03
 ### Added
@@ -1812,7 +1817,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.15.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.14.0...v6.15.0-alpha
+[6.16.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.15.0...v6.16.0-alpha
+[6.15.0]: https://github.com/automattic/jetpack-forms/compare/v6.14.0...v6.15.0
 [6.14.0]: https://github.com/automattic/jetpack-forms/compare/v6.13.0...v6.14.0
 [6.13.0]: https://github.com/automattic/jetpack-forms/compare/v6.12.0...v6.13.0
 [6.12.0]: https://github.com/automattic/jetpack-forms/compare/v6.11.0...v6.12.0
