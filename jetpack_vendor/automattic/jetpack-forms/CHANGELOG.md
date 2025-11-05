@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: add subtitle to dashboard page
+
 ### Changed
 - Forms: add browser info to the form response email notification.
 - Forms: add IP lookup link to IP address in form notification email footer.
