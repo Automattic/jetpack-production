@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: animated and outlined styles need maintenance
 - Forms: fix integrations modal flash.
 - Forms: fix last page invalidation error when items are removed
+- Forms: Fix mobile response view modal spacing
 - Forms: fix phone field extra controls option to append to shared field controls
 
 ## [6.15.0] - 2025-11-04
