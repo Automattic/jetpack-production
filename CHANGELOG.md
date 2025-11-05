@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: add browser info to the form response email notification.
 
+### Improved compatibility
+- Replace icons removed from @wordpress/icons with alternatives.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Shortcodes: extract the jmpress.js dependency into pnpm.
 - Update package dependencies.
