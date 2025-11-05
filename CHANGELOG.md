@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Shortcodes: extract the jmpress.js dependency into pnpm.
+- Tests: Ensure PHP 8.5 compatibility.
 - Update package dependencies.
 
 ## 15.2 - 2025-11-04
