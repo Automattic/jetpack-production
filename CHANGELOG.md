@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: add browser info to the form response email notification.
+- orms: add integrations to dashboard mobile menu.
 
 ### Improved compatibility
 - Replace icons removed from @wordpress/icons with alternatives.
