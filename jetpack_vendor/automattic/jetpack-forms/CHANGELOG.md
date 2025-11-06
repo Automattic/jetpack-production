@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: animated and outlined styles need maintenance
+- Forms: dashboard fix visible sidebar when multiple items are selected
 - Forms: fix horizontal scroll on mobile
 - Forms: fix integrations modal flash.
 - Forms: fix last page invalidation error when items are removed
