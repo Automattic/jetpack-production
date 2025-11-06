@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix mobile response view modal spacing
 - Forms: fix phone field extra controls option to append to shared field controls
 - Forms: Improve the invalid_jwt error message that we show to the user.
+- Forms: revert recently added css overscroll-behavior
 - Forms: single input forms don't show general errors, move general form error into field error when necessary
 
 ## [6.15.0] - 2025-11-04
