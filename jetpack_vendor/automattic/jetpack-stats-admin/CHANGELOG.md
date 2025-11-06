@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Tests: Ensure PHP 8.5 compatibility.
 
+### Fixed
+- Stats: Display post views after quick edit
+
 ## 0.30.0 - 2025-10-27
 ### Removed
 - Remove "Jetpack > Stats" menu. [#45607]
