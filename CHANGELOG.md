@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: fix integrations modal flash.
+- GDoc embeds: ensure that slides/sheets render on the front-end
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Improve PHP 8.5 compatibility.
