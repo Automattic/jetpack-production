@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Tests: Ensure PHP 8.5 compatibility.
 
+### Fixed
+- Tests: Improve compatibility with PHP 8.5.
+
 ## [6.19.3] - 2025-11-03
 ### Changed
 - Update dependencies. [#45493]

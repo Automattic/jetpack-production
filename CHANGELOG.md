@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix integrations modal flash.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Improve PHP 8.5 compatibility.
 - Shortcodes: extract the jmpress.js dependency into pnpm.
 - Tests: Ensure PHP 8.5 compatibility.
 - Update package dependencies.
