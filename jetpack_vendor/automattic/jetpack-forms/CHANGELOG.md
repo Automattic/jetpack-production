@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: modernize responses header with tabs, compact number formatting, and improved mobile layout.
 - Forms: Move integrations from tab to button and display in modal
 - Forms: Update dataview actions
+- Reduced logo size to 20px for better visual balance in the dashboard header
 - Updated dashboard styling for visual consistency - improved header, buttons, tabs, and color variables
 - Update package dependencies.
 
