@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: add browser info to the form response email notification.
 - Forms: add IP lookup link to IP address in form notification email footer.
+- Forms: adjust dataviews paddings for consistent spacing with the header
 - Forms: default multistep forms to single step view in the editor and prevent viewport jumping during step navigation.
 - Forms: disable export button if no form entries.
 - Forms: modernize responses header with tabs, compact number formatting, and improved mobile layout.
