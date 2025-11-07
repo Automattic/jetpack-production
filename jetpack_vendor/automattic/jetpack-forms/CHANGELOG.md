@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: disable export button if no form entries.
 - Forms: modernize responses header with tabs, compact number formatting, and improved mobile layout.
 - Forms: Move integrations from tab to button and display in modal
+- Forms: update arrows to be up and down vs left and right.
 - Forms: Update dataview actions
 - Reduced logo size to 20px for better visual balance in the dashboard header
 - Updated dashboard styling for visual consistency - improved header, buttons, tabs, and color variables
