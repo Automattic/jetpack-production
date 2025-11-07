@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: animated and outlined styles need maintenance
 - Forms: dashboard fix visible sidebar when multiple items are selected
 - Forms: fix a bug where we were not showing duplicate form field values
+- Forms: Fix author name on feedback endpoint
 - Forms: Fix duplicated email on dashboard
 - Forms: fix horizontal scroll on mobile
 - Forms: fix integrations modal flash.
