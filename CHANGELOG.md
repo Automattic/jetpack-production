@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Replace icons removed from @wordpress/icons with alternatives.
 
 ### Bug fixes
+- Forms: fix a bug where we were not showing duplicate form field values on export
 - Forms: fix integrations modal flash.
 - GDoc embeds: ensure that slides/sheets render on the front-end
 
