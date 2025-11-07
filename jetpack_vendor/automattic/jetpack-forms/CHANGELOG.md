@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Forms: Add gravatar everywhere to improve consistency
 - Forms: animated and outlined styles need maintenance
 - Forms: dashboard fix visible sidebar when multiple items are selected
 - Forms: fix horizontal scroll on mobile
