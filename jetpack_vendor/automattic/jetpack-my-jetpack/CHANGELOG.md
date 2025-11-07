@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix Protect card showing as active when Jetpack modules are disabled.
+
 ## [5.28.0] - 2025-11-03
 ### Changed
 - Don't translate product names. [#43961]
