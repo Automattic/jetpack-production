@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Form: add up and down and esc keyboard navigation to view responses quickly
 - Forms: Add email as secondary information on dashboard
 - Forms: add integrations to dashboard mobile menu.
 - Forms: add subtitle to dashboard page
