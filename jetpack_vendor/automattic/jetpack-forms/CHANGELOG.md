@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add gravatar everywhere to improve consistency
 - Forms: animated and outlined styles need maintenance
 - Forms: dashboard fix visible sidebar when multiple items are selected
+- Forms: Fix duplicated email on dashboard
 - Forms: fix horizontal scroll on mobile
 - Forms: fix integrations modal flash.
 - Forms: fix last page invalidation error when items are removed
