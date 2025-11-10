@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - GDoc embeds: ensure that slides/sheets render on the front-end
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- About page: remove Co-Authors Plus and add ActivityPub to list of featured plugins
 - Editor assets endpoint: Filter returned assets with exclude query parameter
 - Editor assets endpoint: refactor to reduce complexity
 - Improve PHP 8.5 compatibility.
