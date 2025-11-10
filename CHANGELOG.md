@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Editor assets endpoint: Filter returned assets with exclude query parameter
 - Editor assets endpoint: refactor to reduce complexity
 - Improve PHP 8.5 compatibility.
+- Jetpack AI: remove tooltip for reading grade score
 - Shortcodes: extract the jmpress.js dependency into pnpm.
 - Tests: Ensure PHP 8.5 compatibility.
 - Update package dependencies.
