@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: let there be only 1 primary header CTA and make it to the right
 - Forms: modernize responses header with tabs, compact number formatting, and improved mobile layout.
 - Forms: Move integrations from tab to button and display in modal
+- Forms: remove un-used CSS from forms dashboard
 - Forms: update arrows to be up and down vs left and right.
 - Forms: Update dataview actions
 - Reduced logo size to 20px for better visual balance in the dashboard header
