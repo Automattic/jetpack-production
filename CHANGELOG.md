@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: add browser info to the form response email notification.
 - Forms: add up, down and esc keyboard navigation to view through reponses really quickly
+- Forms: change integrations modal width.
 - orms: add integrations to dashboard mobile menu.
 
 ### Improved compatibility
