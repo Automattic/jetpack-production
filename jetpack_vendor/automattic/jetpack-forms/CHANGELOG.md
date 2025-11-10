@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: Add gravatar everywhere to improve consistency
 - Forms: animated and outlined styles need maintenance
+- Forms: apply tip-styles on mobile responses as well
 - Forms: dashboard fix visible sidebar when multiple items are selected
 - Forms: fix a bug where we were not showing duplicate form field values
 - Forms: Fix author name on feedback endpoint
