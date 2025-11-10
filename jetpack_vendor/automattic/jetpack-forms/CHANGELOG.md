@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Form: fix export modal styling.
 - Forms: Add gravatar everywhere to improve consistency
 - Forms: animated and outlined styles need maintenance
 - Forms: apply tip-styles on mobile responses as well
