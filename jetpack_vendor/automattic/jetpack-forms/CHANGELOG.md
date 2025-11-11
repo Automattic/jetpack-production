@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: change integrations modal width.
 - Forms: default multistep forms to single step view in the editor and prevent viewport jumping during step navigation.
 - Forms: disable export button if no form entries.
+- Forms: fix regression making our dashboard not scrollable
 - Forms: let there be only 1 primary header CTA and make it to the right
 - Forms: modernize responses header with tabs, compact number formatting, and improved mobile layout.
 - Forms: Move integrations from tab to button and display in modal
