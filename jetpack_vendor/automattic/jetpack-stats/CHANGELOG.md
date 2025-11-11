@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.17.5-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [0.17.4] - 2025-11-10
 ### Changed
 - Tests: Ensure PHP 8.5 compatibility. [#45769]
@@ -282,6 +286,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
+[0.17.5-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.17.4...v0.17.5-alpha
 [0.17.4]: https://github.com/Automattic/jetpack-stats/compare/v0.17.3...v0.17.4
 [0.17.3]: https://github.com/Automattic/jetpack-stats/compare/v0.17.2...v0.17.3
 [0.17.2]: https://github.com/Automattic/jetpack-stats/compare/v0.17.1...v0.17.2
