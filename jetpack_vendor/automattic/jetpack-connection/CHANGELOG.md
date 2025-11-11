@@ -5,15 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.19.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.19.4] - 2025-11-10
 ### Changed
-- Tests: Ensure PHP 8.5 compatibility.
-
-### Fixed
-- Tests: Improve compatibility with PHP 8.5.
+- Tests: Improve compatibility with PHP 8.5. [#45769] [#45771]
 
 ## [6.19.3] - 2025-11-03
 ### Changed
@@ -1641,7 +1635,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[6.19.4-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.19.3...v6.19.4-alpha
+[6.19.4]: https://github.com/Automattic/jetpack-connection/compare/v6.19.3...v6.19.4
 [6.19.3]: https://github.com/Automattic/jetpack-connection/compare/v6.19.2...v6.19.3
 [6.19.2]: https://github.com/Automattic/jetpack-connection/compare/v6.19.1...v6.19.2
 [6.19.1]: https://github.com/Automattic/jetpack-connection/compare/v6.19.0...v6.19.1

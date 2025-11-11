@@ -5,57 +5,58 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.16.0-alpha] - unreleased
+## [6.16.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Forms: fix regression making our dashboard not scrollable
+
+## [6.16.0] - 2025-11-10
 ### Added
-- Form: add up and down and esc keyboard navigation to view responses quickly
-- Forms: add dev docs
-- Forms: Add email as secondary information on dashboard
-- Forms: add integrations to dashboard mobile menu.
-- Forms: add subtitle to dashboard page
+- Add dev docs. [#44841]
+- Add email as secondary information on dashboard. [#45802]
+- Add keyboard navigation to view responses quickly. [#45811] [#45812]
+- Add integrations to dashboard mobile menu. [#45744]
+- Add subtitle to dashboard page. [#45773]
 
 ### Changed
-- Forms: add browser info to the form response email notification.
-- Forms: add IP lookup link to IP address in form notification email footer.
-- Forms: adjust dataviews paddings for consistent spacing with the header
-- Forms: change integrations modal width.
-- Forms: default multistep forms to single step view in the editor and prevent viewport jumping during step navigation.
-- Forms: disable export button if no form entries.
-- Forms: fix regression making our dashboard not scrollable
-- Forms: let there be only 1 primary header CTA and make it to the right
-- Forms: modernize responses header with tabs, compact number formatting, and improved mobile layout.
-- Forms: Move integrations from tab to button and display in modal
-- Forms: remove un-used CSS from forms dashboard
-- Forms: update arrows to be up and down vs left and right.
-- Forms: Update dataview actions
-- Reduced logo size to 20px for better visual balance in the dashboard header
-- Updated dashboard styling for visual consistency - improved header, buttons, tabs, and color variables
-- Update package dependencies.
+- Add browser info to the form response email notification. [#45710]
+- Add IP lookup link to IP address in form notification email footer. [#45762]
+- Adjust dataviews paddings for consistent spacing with the header. [#45824]
+- Change integrations modal width. [#45855]
+- Default multistep forms to single step view in the editor and prevent viewport jumping during step navigation. [#45693]
+- Disable export button if no form entries. [#45777]
+- Let there be only 1 primary header CTA and push it to the right. [#45849]
+- Modernize responses header with tabs, compact number formatting, and improved mobile layout. [#45748]
+- Move integrations from tab to button and display in modal. [#45717]
+- Reduce logo size to 20px for better visual balance in the dashboard header. [#45790]
+- Remove unused CSS from forms dashboard. [#45853]
+- Update dashboard styling for visual consistency (header, buttons, tabs, and color variables). [#45783]
+- Update dataview actions. [#45670]
+- Update package dependencies. [#45735] [#45737] [#45756]
 
 ### Fixed
-- Form: fix export modal styling.
-- Forms: Add gravatar everywhere to improve consistency
-- Forms: animated and outlined styles need maintenance
-- Forms: apply tip-styles on mobile responses as well
-- Forms: dashboard fix visible sidebar when multiple items are selected
-- Forms: fix a bug where we were not showing duplicate form field values
-- Forms: Fix author name on feedback endpoint
-- Forms: Fix duplicated email on dashboard
-- Forms: Fix hidden unread dot
-- Forms: fix horizontal scroll on mobile
-- Forms: fix integrations modal flash.
-- Forms: fix last page invalidation error when items are removed
-- Forms: Fix mobile response view modal spacing
-- Forms: fix phone field extra controls option to append to shared field controls
-- Forms: Improve the invalid_jwt error message that we show to the user.
-- Forms: revert recently added css overscroll-behavior
-- Forms: single input forms don't show general errors, move general form error into field error when necessary
+- Add gravatar everywhere to improve consistency. [#45823]
+- Apply tip styles on mobile responses. [#45846]
+- Fix a bug where we were not showing duplicate form field values. [#45809]
+- Fix animated and outlined styles. [#45743]
+- Fix author name on feedback endpoint. [#45832]
+- Fix duplicated email on dashboard. [#45821]
+- Fix export modal styling. [#45852]
+- Fix hidden unread dot. [#45856]
+- Fix horizontal scroll on mobile. [#45788] [#45808]
+- Fix integrations modal flash. [#45775]
+- Fix last page invalidation error when items are removed. [#45740]
+- Fix mobile response view modal spacing. [#45778]
+- Fix phone field extra controls option to append to shared field controls. [#45764]
+- Fix visible sidebar in dashboard when multiple items are selected. [#45806]
+- Improve the `invalid_jwt` error message that we show to the user. [#45781]
+- Move general form error into field error when necessary. [#45796]
 
 ## [6.15.0] - 2025-11-04
 ### Changed
-- Change field's attribute width to enum to support both integers and string. [#45741]
+- Change field attribute width to enum to support both integers and string. [#45741]
 - Use `flex-basis: 0` for auto width as it will deal better adjusting to content and not extra space. [#45747]
 
 ### Fixed
@@ -92,17 +93,17 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies. [#45652]
 
 ### Fixed
+- Ensure notices don't overlap the bottom action bar. [#45616]
 - Fix a bug with the default email in the editor. [#45711]
 - Fix a console error triggered by iterable without key prop. [#45690]
 - Fix an error on phone field controls due to lack of key prop. [#45659]
 - Fix React error due to missing tbody when nesting tr as direct descendant of table. [#45691]
 - Fix response selection filtering bug caused by type mismatch. [#45611]
 - Fix tooltip in response IP link. [#45705]
-- Ensure notices don't overlap the bottom action bar. [#45616]
 - Make sure fields is array before attempting a count. [#45739]
+- Phan: Address PhanRedundantCondition, PhanRedundantArrayValuesCall, and PhanPluginRedundantAssignment violations. [#45681]
 - Simplify the selection so that it changes every time to only the valid set of items. [#45618]
 - Update counts after landing on a mark as spam link. [#45644]
-- Phan: Address PhanRedundantCondition, PhanRedundantArrayValuesCall, and PhanPluginRedundantAssignment violations. [#45681]
 
 ## [6.13.0] - 2025-10-27
 ### Changed
@@ -1852,7 +1853,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.16.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.15.0...v6.16.0-alpha
+[6.16.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.16.0...v6.16.1-alpha
+[6.16.0]: https://github.com/automattic/jetpack-forms/compare/v6.15.0...v6.16.0
 [6.15.0]: https://github.com/automattic/jetpack-forms/compare/v6.14.0...v6.15.0
 [6.14.0]: https://github.com/automattic/jetpack-forms/compare/v6.13.0...v6.14.0
 [6.13.0]: https://github.com/automattic/jetpack-forms/compare/v6.12.0...v6.13.0

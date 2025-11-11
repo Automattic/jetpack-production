@@ -5,14 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.22.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.22.4] - 2025-11-10
 ### Changed
-- Sync: Ignore the shop_order_placehold post-type from Woo.
-- Sync: prevent unnecessary sync actions running via Jetpack CRM's WooSync
-- Tests: Ensure PHP 8.5 compatibility.
+- Sync: Ignore the `shop_order_placehold` post-type from Woo. [#45772]
+- Sync: Prevent unnecessary sync actions from running via Jetpack CRM's WooSync. [#45761]
+- Tests: Ensure PHP 8.5 compatibility. [#45769]
 
 ## [4.22.3] - 2025-11-03
 ### Added
@@ -1584,7 +1581,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.22.4-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.22.3...v4.22.4-alpha
+[4.22.4]: https://github.com/Automattic/jetpack-sync/compare/v4.22.3...v4.22.4
 [4.22.3]: https://github.com/Automattic/jetpack-sync/compare/v4.22.2...v4.22.3
 [4.22.2]: https://github.com/Automattic/jetpack-sync/compare/v4.22.1...v4.22.2
 [4.22.1]: https://github.com/Automattic/jetpack-sync/compare/v4.22.0...v4.22.1
