@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix regression making our dashboard not scrollable
 - Forms: use core WP colors for basic primitive components such as buttons at Forms dashboard.
 
+### Removed
+- Forms: clean up code and styles
+
 ## [6.16.0] - 2025-11-10
 ### Added
 - Add dev docs. [#44841]
