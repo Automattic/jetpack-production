@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.3-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Forms: use core WP colors for basic primitive components such as buttons at Forms dashboard.
+
 ## 15.3-a.1 - 2025-11-10
 ### Enhancements
 - Forms: Add browser info to the form response email notification. [#45710]
