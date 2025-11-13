@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Forms: clean up code and styles
 
+### Fixed
+- Forms: address spacing issues on single input forms
+
 ## [6.16.0] - 2025-11-10
 ### Added
 - Add dev docs. [#44841]
