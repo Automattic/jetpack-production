@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: add formTitle on default attributes so it persists throughout parsing and processing
+
 ### Changed
 - Forms: componentize response file field
 - Forms: fix regression making our dashboard not scrollable
