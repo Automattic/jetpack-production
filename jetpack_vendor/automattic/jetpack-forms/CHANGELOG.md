@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: show country name as tooltip in IP flags
 - Forms: split styles into smaller files alongside their respective components
 - Forms: use core WP colors for basic primitive components such as buttons at Forms dashboard.
+- Update package dependencies.
 
 ### Removed
 - Forms: clean up code and styles
