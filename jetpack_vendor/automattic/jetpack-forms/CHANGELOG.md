@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: componentize response file field
 - Forms: fix regression making our dashboard not scrollable
+- Forms: improve MailPoet subscriber handling.
 - Forms: show country name as tooltip in IP flags
 - Forms: split styles into smaller files alongside their respective components
 - Forms: use core WP colors for basic primitive components such as buttons at Forms dashboard.

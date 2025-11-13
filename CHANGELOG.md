@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: improve MailPoet subscriber handling.
 - Forms: use core WP colors for basic primitive components such as buttons at Forms dashboard.
 
 ### Bug fixes
