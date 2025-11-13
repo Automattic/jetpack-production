@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.28.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- My Jetpack: Added missing background color for products list.
+
 ## [5.28.2] - 2025-11-12
 ### Changed
 - Update dependencies. [#45493]
@@ -2412,6 +2419,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.28.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.2...5.28.3-alpha
 [5.28.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.1...5.28.2
 [5.28.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.0...5.28.1
 [5.28.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.27.10...5.28.0
