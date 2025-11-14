@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: address spacing issues on single input forms
+- Forms: Fix Delete spam and Empty trash actions
 - Pass requiredText from option block to checkbox field. Add test coverage.
 
 ## [6.16.0] - 2025-11-10
