@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add formTitle on default attributes so it persists throughout parsing and processing
 
 ### Changed
+- Forms: add a new filter for the JWT token error.
 - Forms: componentize response file field
 - Forms: fix regression making our dashboard not scrollable
 - Forms: improve MailPoet subscriber handling.
