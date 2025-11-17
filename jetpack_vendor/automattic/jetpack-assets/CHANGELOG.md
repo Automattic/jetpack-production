@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.3.13-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [4.3.12] - 2025-11-10
 ### Changed
 - Tests: Ensure PHP 8.5 compatibility. [#45769]
@@ -736,6 +743,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Statically access asset tools
 
+[4.3.13-alpha]: https://github.com/Automattic/jetpack-assets/compare/v4.3.12...v4.3.13-alpha
 [4.3.12]: https://github.com/Automattic/jetpack-assets/compare/v4.3.11...v4.3.12
 [4.3.11]: https://github.com/Automattic/jetpack-assets/compare/v4.3.10...v4.3.11
 [4.3.10]: https://github.com/Automattic/jetpack-assets/compare/v4.3.9...v4.3.10

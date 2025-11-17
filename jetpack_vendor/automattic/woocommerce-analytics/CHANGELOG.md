@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Implement batched pixel requests for improved performance when sending tracking events
+- Update package dependencies.
 
 ## [0.11.0] - 2025-11-03
 ### Changed

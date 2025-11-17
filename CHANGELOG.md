@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Editor assets endpoint: mitigate hook errors originating from plugins referencing conditionally defined functions via `is_admin()`, which is false for the REST API.
 - Update Jetpack notifications script tag to use wp_print_inline_script_tag. This allows for injection of a nonce attribute and CSP compatibility.
+- Update package dependencies.
 
 ## 15.3-a.1 - 2025-11-10
 ### Enhancements

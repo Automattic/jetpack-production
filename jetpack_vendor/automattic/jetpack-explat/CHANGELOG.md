@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add the possibility of passing the platform to the explat assignment endpoint
 
+### Changed
+- Update package dependencies.
+
 ## [0.3.14] - 2025-11-10
 ### Changed
 - Update package dependencies. [#45756]
