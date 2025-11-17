@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: render badges in unread/read column when visible
 - Forms: show country name as tooltip in IP flags
 - Forms: split styles into smaller files alongside their respective components
+- Forms: Update to ESM module
 - Forms: use core WP colors for basic primitive components such as buttons at Forms dashboard.
 - Refactor dashboard layout and add Page components for improved structure and maintainability
 - Update package dependencies.
