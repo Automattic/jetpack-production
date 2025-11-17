@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - GifBlock: ensure url is not reset when publishing post
+- Social: Fix connection icon not reflecting the change when profile picture is updated.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Editor assets endpoint: mitigate hook errors originating from plugins referencing conditionally defined functions via `is_admin()`, which is false for the REST API.
