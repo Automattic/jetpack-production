@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: move empty state as component for inbox
 
 ### Fixed
+- Forms: allow long responses to scroll
 - Forms: fix spacing within advanced editor panel
 - Forms: JWT payload v2
 
