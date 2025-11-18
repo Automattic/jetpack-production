@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: move empty state as component for inbox
 
 ### Fixed
+- Forms: fix spacing within advanced editor panel
 - Forms: JWT payload v2
 
 ## [6.18.0] - 2025-11-18
