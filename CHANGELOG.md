@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Social: Improve auto-share UI in the editor by streamlining the notices and descriptions.
 - Social: Update the connections list in the editor to a vertical toggle list with labels and icons.
 
 ## 15.3-a.5 - 2025-11-18
