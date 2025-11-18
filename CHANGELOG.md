@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.3-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Social: Update the connections list in the editor to a vertical toggle list with labels and icons.
+
 ## 15.3-a.5 - 2025-11-18
 ### Bug fixes
 - Fix a compatibility bug with the Gutenberg plugin. [#45967]
