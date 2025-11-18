@@ -5,34 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.17.0-alpha] - unreleased
+## [6.18.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Forms: add formTitle on default attributes so it persists throughout parsing and processing
-
 ### Changed
-- Forms: add a new filter for the JWT token error.
-- Forms: componentize response file field
-- Forms: fix regression making our dashboard not scrollable
-- Forms: improve MailPoet subscriber handling.
-- Forms: Optimistically move items from/to inbox/spam/trash
-- Forms: render badges in unread/read column when visible
-- Forms: show country name as tooltip in IP flags
-- Forms: split styles into smaller files alongside their respective components
 - Forms: Update to ESM module
-- Forms: use core WP colors for basic primitive components such as buttons at Forms dashboard.
 - Refactor dashboard layout and add Page components for improved structure and maintainability
 - Update package dependencies.
 
+## [6.17.0] - 2025-11-17
+### Added
+- Add formTitle on default attributes so it persists throughout parsing and processing. [#45908]
+
+### Changed
+- Add a new filter for the JWT token error. [#45949]
+- Componentize response file field. [#45892]
+- Fix regression making our dashboard not scrollable. [#45867]
+- Improve MailPoet subscriber handling. [#45905]
+- Optimistically move items from/to inbox/spam/trash. [#45912]
+- Render badges in unread/read column when visible. [#45931]
+- Show country name as tooltip in IP flags. [#45886]
+- Split styles into smaller files alongside their respective components. [#45888]
+- Use core WP colors for basic primitive components such as buttons at Forms dashboard. [#45845]
+- Update package dependencies. [#45915] [#45916] [#45958]
+
 ### Removed
-- Forms: clean up code and styles
+- Clean up code and styles. [#45882]
 
 ### Fixed
-- Forms: address spacing issues on single input forms
-- Forms: Fix Delete spam and Empty trash actions
-- Pass requiredText from option block to checkbox field. Add test coverage.
+- Address spacing issues on single input forms. [#45909]
+- Fix Delete spam and Empty trash actions. [#45933]
+- Pass requiredText from option block to checkbox field. [#45897]
 
 ## [6.16.0] - 2025-11-10
 ### Added
@@ -1875,7 +1879,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.17.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.16.0...v6.17.0-alpha
+[6.18.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.17.0...v6.18.0-alpha
+[6.17.0]: https://github.com/automattic/jetpack-forms/compare/v6.16.0...v6.17.0
 [6.16.0]: https://github.com/automattic/jetpack-forms/compare/v6.15.0...v6.16.0
 [6.15.0]: https://github.com/automattic/jetpack-forms/compare/v6.14.0...v6.15.0
 [6.14.0]: https://github.com/automattic/jetpack-forms/compare/v6.13.0...v6.14.0

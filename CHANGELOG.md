@@ -2,22 +2,26 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.3-a.2 - unreleased
+## 15.3-a.4 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
+## 15.3-a.3 - 2025-11-17
 ### Enhancements
-- Forms: improve MailPoet subscriber handling.
-- Forms: use core WP colors for basic primitive components such as buttons at Forms dashboard.
+- Forms: Improve MailPoet subscriber handling. [#45905]
+- Forms: Use core WP colors for basic primitive components such as buttons at Forms dashboard. [#45845]
 
 ### Bug fixes
-- GifBlock: ensure url is not reset when publishing post
-- Social: Fix connection icon not reflecting the change when profile picture is updated.
+- GifBlock: Ensure url is not reset when publishing post. [#45900]
+- Social: Fix connection icon not reflecting the change when profile picture is updated. [#45937]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Editor assets endpoint: mitigate hook errors originating from plugins referencing conditionally defined functions via `is_admin()`, which is false for the REST API.
-- Update Jetpack notifications script tag to use wp_print_inline_script_tag. This allows for injection of a nonce attribute and CSP compatibility.
-- Update package dependencies.
+- Editor assets endpoint: Mitigate hook errors originating from plugins referencing conditionally defined functions via `is_admin()`, which is false for the REST API. [#45924]
+- Update Jetpack notifications script tag to use wp_print_inline_script_tag. This allows for injection of a nonce attribute and CSP compatibility. [#45878]
+- Update package dependencies. [#45915] [#45958]
 
 ## 15.3-a.1 - 2025-11-10
 ### Enhancements

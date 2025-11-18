@@ -5,12 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.27.1-alpha] - unreleased
+## [0.27.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+
+## [0.27.1] - 2025-11-17
+### Changed
+- Update package dependencies. [#45915]
 
 ## [0.27.0] - 2025-11-03
 ### Changed
@@ -478,7 +482,8 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
-[0.27.1-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.27.0...v0.27.1-alpha
+[0.27.2-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.27.1...v0.27.2-alpha
+[0.27.1]: https://github.com/Automattic/jetpack-masterbar/compare/v0.27.0...v0.27.1
 [0.27.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.26.0...v0.27.0
 [0.26.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.25.0...v0.26.0
 [0.25.0]: https://github.com/Automattic/jetpack-masterbar/compare/v0.24.0...v0.25.0

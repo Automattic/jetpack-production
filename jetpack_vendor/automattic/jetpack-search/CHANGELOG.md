@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.54.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.54.3] - 2025-11-17
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#45915] [#45958]
 
 ## [0.54.2] - 2025-11-12
 ### Changed
@@ -1389,7 +1386,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.54.3-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.54.2...v0.54.3-alpha
+[0.54.3]: https://github.com/Automattic/jetpack-search/compare/v0.54.2...v0.54.3
 [0.54.2]: https://github.com/Automattic/jetpack-search/compare/v0.54.1...v0.54.2
 [0.54.1]: https://github.com/Automattic/jetpack-search/compare/v0.54.0...v0.54.1
 [0.54.0]: https://github.com/Automattic/jetpack-search/compare/v0.53.0...v0.54.0
