@@ -2,15 +2,12 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.3-a.4 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.3-a.5 - 2025-11-18
 ### Bug fixes
-- Fixes a compatability bug with the Gutenberg plugin"
+- Fixes a compatability bug with the Gutenberg plugin" [#45967]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Update package dependencies.
+- Update package dependencies. [#45961]
 
 ## 15.3-a.3 - 2025-11-17
 ### Enhancements
