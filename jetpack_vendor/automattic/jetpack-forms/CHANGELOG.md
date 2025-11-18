@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: move empty state as component for inbox
+- Forms: update to Manage Integrations"
 
 ### Fixed
 - Forms: allow long responses to scroll
