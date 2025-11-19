@@ -2,13 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.3-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.3-a.7 - 2025-11-19
 ### Enhancements
-- Social: Improve auto-share UI in the editor by streamlining the notices and descriptions.
-- Social: Update the connections list in the editor to a vertical toggle list with labels and icons.
+- Social: Improve auto-share UI in the editor by streamlining the notices and descriptions. [#45970]
+- Social: Update the connections list in the editor to a vertical toggle list with labels and icons. [#45939]
 
 ## 15.3-a.5 - 2025-11-18
 ### Bug fixes
