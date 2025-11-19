@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Forms: add examples for first/last name field variations
 - Forms: componentize more response styles and JS
 - Forms: protect against invalid attrs when merging new values
 - Forms: update dashboard header buttons.
