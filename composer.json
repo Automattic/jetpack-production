@@ -31,7 +31,7 @@
 		"automattic/jetpack-error": "^3.0.6",
 		"automattic/jetpack-external-connections": "^0.1.6",
 		"automattic/jetpack-external-media": "^0.5.12",
-		"automattic/jetpack-forms": "^6.19.0-alpha",
+		"automattic/jetpack-forms": "^6.19.0",
 		"automattic/jetpack-image-cdn": "^0.7.23",
 		"automattic/jetpack-import": "^0.9.13",
 		"automattic/jetpack-ip": "^0.4.10",
@@ -39,11 +39,11 @@
 		"automattic/jetpack-licensing": "^3.1.1",
 		"automattic/jetpack-logo": "^3.0.5",
 		"automattic/jetpack-masterbar": "^0.27.2",
-		"automattic/jetpack-my-jetpack": "^5.28.4",
+		"automattic/jetpack-my-jetpack": "^5.28.5",
 		"automattic/jetpack-paypal-payments": "^0.5.13",
 		"automattic/jetpack-plugins-installer": "^0.5.7",
 		"automattic/jetpack-post-list": "^0.8.33",
-		"automattic/jetpack-publicize": "^0.67.3",
+		"automattic/jetpack-publicize": "^0.67.4",
 		"automattic/jetpack-redirect": "^3.0.9",
 		"automattic/jetpack-roles": "^3.0.8",
 		"automattic/jetpack-search": "^0.54.4",
@@ -54,7 +54,7 @@
 		"automattic/jetpack-sync": "^4.22.4",
 		"automattic/jetpack-videopress": "^0.32.15",
 		"automattic/jetpack-waf": "^0.27.7",
-		"automattic/woocommerce-analytics": "^0.12.1-alpha"
+		"automattic/woocommerce-analytics": "^0.12.1"
 	},
 	"require-dev": {
 		"antecedent/patchwork": "^2.2",
@@ -101,7 +101,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_3_a_6",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_3_a_7",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true
