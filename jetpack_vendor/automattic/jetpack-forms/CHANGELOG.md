@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: componentize more response styles and JS
 - Forms: protect against invalid attrs when merging new values
 - Forms: update dashboard header buttons.
+- Forms: use first/last name for author.
 
 ## [6.19.0] - 2025-11-19
 ### Changed

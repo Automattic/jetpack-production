@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: update dashboard header buttons.
+- Forms: use first/last name for author.
 
 ## 15.3-a.7 - 2025-11-19
 ### Enhancements
