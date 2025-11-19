@@ -158,7 +158,7 @@ return array(
     ),
     'woocommerce-analytics' => array(
       'path' => 'jetpack_vendor/automattic/woocommerce-analytics',
-      'ver' => '0.12.0',
+      'ver' => '0.12.1-alpha1763509540',
     ),
   ),
 );
