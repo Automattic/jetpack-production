@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update dashboard header buttons.
 - Forms: use first/last name for author.
 
+### Fixed
+- Jetpack: remove getIconColor functions from block icons
+
 ## [6.19.0] - 2025-11-19
 ### Changed
 - Move empty state as component for inbox. [#45971]

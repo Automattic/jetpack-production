@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update dashboard header buttons.
 - Forms: use first/last name for author.
 
+### Bug fixes
+- Jetpack: remove getIconColor functions for block icons
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Likes: update filter docblock formatting.
 
