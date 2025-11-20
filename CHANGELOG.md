@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update dashboard header buttons.
 - Forms: use first/last name for author.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Likes: update filter docblock formatting.
+
 ## 15.3-a.7 - 2025-11-19
 ### Enhancements
 - Social: Improve auto-share UI in the editor by streamlining the notices and descriptions. [#45970]
