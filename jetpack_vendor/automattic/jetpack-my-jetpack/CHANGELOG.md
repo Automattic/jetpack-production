@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - My Jetpack: Fix expiring renewal prompt to show all products
+- Redirect partner coupon redemption requests to Jetpack dashboard to ensure coupon can be redeemed.
 
 ## [5.28.5] - 2025-11-19
 ### Changed
