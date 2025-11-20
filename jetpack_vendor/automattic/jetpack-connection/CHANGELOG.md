@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.19.8-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Phan: Address PhanPossiblyUndeclaredVariable violations.
+
 ## [6.19.7] - 2025-11-18
 ### Changed
 - Update package dependencies. [#45961]
@@ -1647,6 +1654,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[6.19.8-alpha]: https://github.com/Automattic/jetpack-connection/compare/v6.19.7...v6.19.8-alpha
 [6.19.7]: https://github.com/Automattic/jetpack-connection/compare/v6.19.6...v6.19.7
 [6.19.6]: https://github.com/Automattic/jetpack-connection/compare/v6.19.5...v6.19.6
 [6.19.5]: https://github.com/Automattic/jetpack-connection/compare/v6.19.4...v6.19.5

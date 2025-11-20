@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Likes: update filter docblock formatting.
+- Phan: Address PhanPossiblyUndeclaredVariable violations.
 
 ## 15.3-a.7 - 2025-11-19
 ### Enhancements
