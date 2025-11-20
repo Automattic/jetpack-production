@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.28.6-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- My Jetpack: Fix expiring renewal prompt to show all products
+
 ## [5.28.5] - 2025-11-19
 ### Changed
 - Update dependencies. [#45493]
@@ -2427,6 +2434,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.28.6-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.5...5.28.6-alpha
 [5.28.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.4...5.28.5
 [5.28.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.3...5.28.4
 [5.28.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.2...5.28.3
