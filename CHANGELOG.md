@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: use first/last name for author.
 
 ### Bug fixes
+- Forms: fix name variation isActive setting.
 - Jetpack: remove getIconColor functions for block icons
 - My Jetpack: Fix expiring renewal prompt to show all products
 
