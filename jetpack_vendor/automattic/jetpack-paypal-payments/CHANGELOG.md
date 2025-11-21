@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.14-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.5.14] - 2025-11-20
 ### Fixed
-- Jetpack: remove getIconColor functions from block icons
+- Jetpack: Remove getIconColor functions from block icons. [#45992]
 
 ## [0.5.13] - 2025-11-18
 ### Changed
@@ -118,7 +115,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.5.14-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.13...v0.5.14-alpha
+[0.5.14]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.13...v0.5.14
 [0.5.13]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.12...v0.5.13
 [0.5.12]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.11...v0.5.12
 [0.5.11]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.5.10...v0.5.11
