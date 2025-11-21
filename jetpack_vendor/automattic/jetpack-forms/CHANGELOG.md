@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: use first/last name for author.
 
 ### Fixed
+- Forms: fix left margin on inbox
 - Forms: Fix modal/sidebar stacking issue in DataViews inbox where modals would open on top of sidebars at certain screen sizes.
 - Forms: fix name variation isActive setting.
 - Jetpack: remove getIconColor functions from block icons
