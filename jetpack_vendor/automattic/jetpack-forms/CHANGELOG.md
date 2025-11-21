@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix modal/sidebar stacking issue in DataViews inbox where modals would open on top of sidebars at certain screen sizes.
 - Forms: fix name variation isActive setting.
 - Jetpack: remove getIconColor functions from block icons
+- Remove height hacks in dashboard layout and use viewport-based height calculation
 
 ## [6.19.0] - 2025-11-19
 ### Changed
