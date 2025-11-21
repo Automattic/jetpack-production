@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: add docs on classes and usage
+
 ### Changed
 - Forms: add examples for first/last name field variations
 - Forms: componentize more response styles and JS
