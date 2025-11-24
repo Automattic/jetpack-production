@@ -5,26 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.20.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.20.0] - 2025-11-24
 ### Added
-- Forms: add docs on classes and usage
+- Add docs on classes and usage. [#46047]
 
 ### Changed
-- Forms: add examples for first/last name field variations
-- Forms: componentize more response styles and JS
-- Forms: protect against invalid attrs when merging new values
-- Forms: update dashboard header buttons.
-- Forms: use first/last name for author.
+- Add examples for first/last name field variations. [#45985]
+- Componentize more response styles and JS. [#45918]
+- Protect against invalid attributes when merging new values. [#45997]
+- Update dashboard header buttons. [#45983]
+- Use first/last name for author. [#45944]
 
 ### Fixed
-- Forms: fix left margin on inbox
-- Forms: Fix modal/sidebar stacking issue in DataViews inbox where modals would open on top of sidebars at certain screen sizes.
-- Forms: fix name variation isActive setting.
-- Jetpack: remove getIconColor functions from block icons
-- Remove height hacks in dashboard layout and use viewport-based height calculation
+- Fix left margin on inbox. [#46044]
+- Fix modal/sidebar stacking issue in DataViews inbox where modals would open on top of sidebars at certain screen sizes. [#46017]
+- Fix name variation isActive setting. [#46028]
+- Jetpack: Remove `getIconColor` functions from block icons. [#45992]
+- Remove height hacks in dashboard layout and use viewport-based height calculation. [#46052]
 
 ## [6.19.0] - 2025-11-19
 ### Changed
@@ -1907,7 +1904,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.20.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.19.0...v6.20.0-alpha
+[6.20.0]: https://github.com/automattic/jetpack-forms/compare/v6.19.0...v6.20.0
 [6.19.0]: https://github.com/automattic/jetpack-forms/compare/v6.18.0...v6.19.0
 [6.18.0]: https://github.com/automattic/jetpack-forms/compare/v6.17.0...v6.18.0
 [6.17.0]: https://github.com/automattic/jetpack-forms/compare/v6.16.0...v6.17.0
