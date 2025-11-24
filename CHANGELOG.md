@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.3-a.10 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- Forms: remove related-posts from API calls
+
 ## 15.3-a.9 - 2025-11-24
 ### Enhancements
 - Forms: Update dashboard header buttons. [#45983]
