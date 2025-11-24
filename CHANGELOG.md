@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: update dashboard header buttons.
 - Forms: use first/last name for author.
+- Social: Improve the sidebar by making titles more descriptive and combining sections.
 
 ### Bug fixes
 - Forms: fix name variation isActive setting.
