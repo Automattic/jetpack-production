@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove related-posts from API calls
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Media Summary: allow skipping excerpt and text counts
 - Podcasts block: Prevent warnings when podcast content is malformed.
 - Update package dependencies.
 
