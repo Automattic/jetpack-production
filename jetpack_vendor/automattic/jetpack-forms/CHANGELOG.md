@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove related-posts from API calls
 - Update package dependencies.
 
+### Fixed
+- Forms: fix inbox reponse email copy button alignment
+
 ## [6.20.0] - 2025-11-24
 ### Added
 - Add docs on classes and usage. [#46047]
