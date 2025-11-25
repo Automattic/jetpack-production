@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: remove related-posts from API calls
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 15.3-a.9 - 2025-11-24
 ### Enhancements
 - Forms: Update dashboard header buttons. [#45983]

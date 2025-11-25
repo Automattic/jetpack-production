@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: remove related-posts from API calls
+- Update package dependencies.
 
 ## [6.20.0] - 2025-11-24
 ### Added
