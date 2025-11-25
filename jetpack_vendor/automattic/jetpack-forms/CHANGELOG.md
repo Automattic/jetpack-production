@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: fix inbox reponse email copy button alignment
 - Forms: outlined style leading notch was missing base border settings
+- Forms: Trash old spam instead of fully deleting
 - Forms: Use fallback page value on feedback source if variable is polluted
 
 ## [6.20.0] - 2025-11-24
