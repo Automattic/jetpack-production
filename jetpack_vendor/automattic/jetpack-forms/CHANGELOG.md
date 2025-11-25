@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: fix inbox reponse email copy button alignment
+- Forms: outlined style leading notch was missing base border settings
 
 ## [6.20.0] - 2025-11-24
 ### Added
