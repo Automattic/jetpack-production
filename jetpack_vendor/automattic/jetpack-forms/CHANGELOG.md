@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Add fallback values to CSS custom properties to improve form styling compatibility across themes
 - Forms: fix inbox reponse email copy button alignment
+- Forms: Fix spam status change tracking when post is not available
 - Forms: outlined style leading notch was missing base border settings
 - Forms: Trash old spam instead of fully deleting
 - Forms: Use fallback page value on feedback source if variable is polluted
