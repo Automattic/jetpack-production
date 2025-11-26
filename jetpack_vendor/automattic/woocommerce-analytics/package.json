@@ -1,6 +1,6 @@
 {
 	"name": "@automattic/woocommerce-analytics",
-	"version": "0.12.3-alpha",
+	"version": "0.13.0-alpha",
 	"private": true,
 	"description": "WooCommerce Analytics package to track frontend events",
 	"homepage": "https://github.com/Automattic/jetpack/tree/HEAD/projects/packages/woocommerce-analytics/#readme",
@@ -25,7 +25,6 @@
 		"watch": "pnpm build --watch"
 	},
 	"dependencies": {
-		"@wordpress/api-fetch": "7.35.0",
 		"debug": "4.4.3"
 	},
 	"devDependencies": {
