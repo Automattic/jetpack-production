@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: outlined style leading notch was missing base border settings
 - Forms: Trash old spam instead of fully deleting
 - Forms: Use fallback page value on feedback source if variable is polluted
+- Forms: wrap long emails in response
 
 ## [6.20.0] - 2025-11-24
 ### Added
