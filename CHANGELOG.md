@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Media Summary: allow skipping excerpt and text counts
 - Podcasts block: Prevent warnings when podcast content is malformed.
+- Updated Jetpack sidebar labels for post editor sidebar.
 - Update package dependencies.
 
 ## 15.3-a.9 - 2025-11-24
