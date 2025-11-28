@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add WordPress Abilities API integration for form submissions management and integrations access.
 
 ### Changed
+- Forms: Add notice after optimistic response status update
 - Forms: improve name variation handling.
 - Forms: remove related-posts from API calls
 - Update package dependencies.
