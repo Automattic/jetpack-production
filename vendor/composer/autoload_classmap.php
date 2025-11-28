@@ -118,6 +118,7 @@ return array(
     'Automattic\\Jetpack\\External_Connections' => $baseDir . '/jetpack_vendor/automattic/jetpack-external-connections/src/class-external-connections.php',
     'Automattic\\Jetpack\\External_Media\\External_Media' => $baseDir . '/jetpack_vendor/automattic/jetpack-external-media/src/class-external-media.php',
     'Automattic\\Jetpack\\Files' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php',
+    'Automattic\\Jetpack\\Forms\\Abilities\\Forms_Abilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/abilities/class-forms-abilities.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Admin' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-admin.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Endpoint' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-endpoint.php',
