@@ -922,6 +922,10 @@ return array(
 		'version' => '5.28.8.0-alpha1764193548',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php'
 	),
+	'Automattic\\Jetpack\\Newsletter\\Settings' => array(
+		'version' => '0.1.0.0-alpha1764339378',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-settings.php'
+	),
 	'Automattic\\Jetpack\\Partner' => array(
 		'version' => '6.19.9.0-alpha1764234497',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-partner.php'

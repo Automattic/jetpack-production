@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: add filter to disable Jetpack block collection in editor.
 - Media Summary: allow skipping excerpt and text counts
+- Newsletters: Add skeleton for new settings screen
 - Podcasts block: Prevent warnings when podcast content is malformed.
 - Updated Jetpack sidebar labels for post editor sidebar.
 - Update package dependencies.

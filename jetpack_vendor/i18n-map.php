@@ -100,6 +100,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '5.28.8-alpha1764193548',
     ),
+    'jetpack-newsletter' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-newsletter',
+      'ver' => '0.1.0-alpha1764339378',
+    ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',
       'ver' => '0.4.9',
