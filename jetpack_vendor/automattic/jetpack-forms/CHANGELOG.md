@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Add fallback values to CSS custom properties to improve form styling compatibility across themes
 - Fix checkbox styling and block interaction in editor by removing disabled attribute and using CSS pointer-events instead
+- Forms: do not link to to empty source_link
 - Forms: fix inbox reponse email copy button alignment
 - Forms: Fix notices positioning on dashboard
 - Forms: Fix spam status change tracking when post is not available
