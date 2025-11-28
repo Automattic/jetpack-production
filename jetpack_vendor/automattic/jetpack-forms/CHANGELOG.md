@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix inbox reponse email copy button alignment
 - Forms: Fix notices positioning on dashboard
 - Forms: Fix spam status change tracking when post is not available
+- Forms: make the filter count not be cut off
 - Forms: outlined style leading notch was missing base border settings
 - Forms: reject form submissions when the parent post/page with the form has been deleted or is no longer published.
 - Forms: remove clashing between meta and field names
