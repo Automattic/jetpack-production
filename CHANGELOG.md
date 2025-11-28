@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove related-posts from API calls
 
 ### Bug fixes
+- Forms: reject form submissions when the parent post/page with the form has been deleted or is no longer published.
 - GSheets embed: Give time for the iframe to finish before showing an error
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
