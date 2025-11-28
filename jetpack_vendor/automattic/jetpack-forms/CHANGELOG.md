@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix spam status change tracking when post is not available
 - Forms: outlined style leading notch was missing base border settings
 - Forms: reject form submissions when the parent post/page with the form has been deleted or is no longer published.
+- Forms: remove clashing between meta and field names
 - Forms: Trash old spam instead of fully deleting
 - Forms: Use fallback page value on feedback source if variable is polluted
 - Forms: wrap long emails in response
