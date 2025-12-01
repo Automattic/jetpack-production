@@ -806,7 +806,7 @@ class Jetpack_Gutenberg {
 			/**
 			 * Should all blocks get registered the Jetpack block collection in addition to their own categories?
 			 *
-			 * @since 15.3-a.10
+			 * @since 15.3
 			 *
 			 * @param boolean true Enable Jetpack block collection in block categories. Defaults to true.
 			 */

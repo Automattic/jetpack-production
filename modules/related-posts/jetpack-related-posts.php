@@ -2037,7 +2037,7 @@ EOT;
 		/**
 		 * Filter the post types that are allowed to have related posts.
 		 *
-		 * @since 15.3-a.10
+		 * @since 15.3
 		 *
 		 * @param array $post_types The post types that are allowed to have related posts.
 		 */
