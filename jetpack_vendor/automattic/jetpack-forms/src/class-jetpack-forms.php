@@ -138,40 +138,4 @@ class Jetpack_Forms {
 		 */
 		return apply_filters( 'jetpack_forms_webhooks_enabled', false );
 	}
-
-	/**
-	 * Returns true if the Integrations UI should be shown in the Forms dashboard.
-	 *
-	 * @since 6.21.0-alpha
-	 *
-	 * @return boolean
-	 */
-	public static function show_dashboard_integrations() {
-		/**
-		 * Whether to show Integrations UI in the Forms dashboard.
-		 *
-		 * @since 6.21.0-alpha
-		 *
-		 * @param bool true Whether to show the Integrations UI in the dashboard. Default true.
-		 */
-		return apply_filters( 'jetpack_forms_show_dashboard_integrations', true );
-	}
-
-	/**
-	 * Returns true if the Integrations UI should be shown in the Form block editor.
-	 *
-	 * @since 6.21.0-alpha
-	 *
-	 * @return boolean
-	 */
-	public static function show_block_integrations() {
-		/**
-		 * Whether to show Integrations UI in the Form block editor.
-		 *
-		 * @since 6.21.0-alpha
-		 *
-		 * @param bool true Whether to show the Integrations UI in the editor. Default true.
-		 */
-		return apply_filters( 'jetpack_forms_show_block_integrations', true );
-	}
 }

@@ -11,7 +11,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: add form response webhook support.
-- Forms: add integrations display filters.
 - Forms: add WordPress Abilities API integration for form submissions management and integrations access.
 - Forms: use parse_blocks instead of preg_replace for attribute appending on templates and widgets
 - Form Webhooks: add logging and filter flag for initialization
