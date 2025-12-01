@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add WordPress Abilities API integration for form submissions management and integrations access.
 - Forms: improve name variation handling.
 - Forms: remove related-posts from API calls
+- Premium Content Block: added email rendering callback
 
 ### Bug fixes
 - Cookies & Consents Banner Widget: ensure form headings are properly displayed.
