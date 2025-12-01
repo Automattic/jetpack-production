@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: add form response webhook support.
+- Forms: add integrations display filters.
 - Forms: add WordPress Abilities API integration for form submissions management and integrations access.
 - Forms: improve name variation handling.
 - Forms: remove related-posts from API calls
