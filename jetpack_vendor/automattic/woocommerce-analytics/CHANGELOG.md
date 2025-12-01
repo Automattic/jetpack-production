@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Added Beacon API support and replaced @wordpress/api-fetch with native fetch
+- Update package dependencies.
 
 ### Fixed
 - Fix proxy speed module installation using WP_Filesystem API with proper error handling

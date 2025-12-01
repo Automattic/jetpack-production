@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - SSO: Revised copy for flagging external collaborators
+- Update package dependencies.
 
 ## [6.19.8] - 2025-11-20
 ### Fixed
