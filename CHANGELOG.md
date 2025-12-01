@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove related-posts from API calls
 
 ### Bug fixes
+- Cookies & Consents Banner Widget: ensure form headings are properly displayed.
 - Forms: do not link to empty source link
 - Forms: reject form submissions when the parent post/page with the form has been deleted or is no longer published.
 - Forms: remove clashing between meta dn field names on export
