@@ -10,13 +10,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: add form response webhook support.
 - Forms: add WordPress Abilities API integration for form submissions management and integrations access.
 - Forms: use parse_blocks instead of preg_replace for attribute appending on templates and widgets
+- Form Webhooks: add logging and filter flag for initialization
 
 ### Changed
+- Enable form webhooks feature based on current plan support
 - Forms: Add notice after optimistic response status update
 - Forms: improve name variation handling.
 - Forms: remove related-posts from API calls
+- Form Webhooks: clean up and consolidate webhooks to take over the unused-yet-present postToUrl
 - Update package dependencies.
 
 ### Fixed

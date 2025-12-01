@@ -136,6 +136,7 @@ return array(
     'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard.php',
     'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard_View_Switch' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard-view-switch.php',
     'Automattic\\Jetpack\\Forms\\Jetpack_Forms' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-jetpack-forms.php',
+    'Automattic\\Jetpack\\Forms\\Service\\Form_Webhooks' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-form-webhooks.php',
     'Automattic\\Jetpack\\Forms\\Service\\Google_Drive' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-google-drive.php',
     'Automattic\\Jetpack\\Forms\\Service\\Hostinger_Reach_Integration' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-hostinger-reach-integration.php',
     'Automattic\\Jetpack\\Forms\\Service\\MailPoet_Integration' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-mailpoet-integration.php',
