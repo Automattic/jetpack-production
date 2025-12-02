@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add the new media selection UI for Social.
+- OG tags: use media-only Jetpack_Media_Summary::get
 - Tests: Check the publish post action exists, but is not necessarily the last action.
 
 ## 15.3-beta - 2025-12-01
