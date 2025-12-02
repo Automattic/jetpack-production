@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Media Summary: allow skipping excerpt and text counts
 - Newsletters: Add skeleton for new settings screen
 - Podcasts block: Prevent warnings when podcast content is malformed.
+- Tests: Check the publish post action exists, but is not necessarily the last action.
 - Updated Jetpack sidebar labels for post editor sidebar.
 - Update package dependencies.
 
