@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - GSheets embed: Give time for the iframe to finish before showing an error
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add the new media selection UI for Social.
 - Blocks: add filter to disable Jetpack block collection in editor.
 - Media Summary: allow skipping excerpt and text counts
 - Newsletters: Add skeleton for new settings screen
