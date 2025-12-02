@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Forms: fix PHP warning when global gets overwritten
 - Forms: Fix the flickering between the sidebar loading on different browser widths
+- Forms: Set "from" field as primary on dashboard
 
 ## [6.21.0] - 2025-12-01
 ### Added
