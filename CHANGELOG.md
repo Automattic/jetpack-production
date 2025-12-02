@@ -2,33 +2,36 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.3-a.10 - unreleased
+## 15.4-a.0 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Enhancements
-- Forms: add form response webhook support.
-- Forms: add WordPress Abilities API integration for form submissions management and integrations access.
-- Forms: improve name variation handling.
-- Forms: remove related-posts from API calls
-- Premium Content Block: added email rendering callback
-
-### Bug fixes
-- Cookies & Consents Banner Widget: ensure form headings are properly displayed.
-- Forms: do not link to empty source link
-- Forms: reject form submissions when the parent post/page with the form has been deleted or is no longer published.
-- Forms: remove clashing between meta dn field names on export
-- GSheets embed: Give time for the iframe to finish before showing an error
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add the new media selection UI for Social.
-- Blocks: add filter to disable Jetpack block collection in editor.
-- Media Summary: allow skipping excerpt and text counts
-- Newsletters: Add skeleton for new settings screen
-- Podcasts block: Prevent warnings when podcast content is malformed.
 - Tests: Check the publish post action exists, but is not necessarily the last action.
-- Updated Jetpack sidebar labels for post editor sidebar.
-- Update package dependencies.
+
+## 15.3-beta - 2025-12-01
+### Enhancements
+- Forms: Add form response webhook support. [#46059]
+- Forms: Add WordPress Abilities API integration for form submissions management and integrations access. [#45998]
+- Forms: Improve name variation handling. [#46054]
+- Forms: Remove related-posts from API calls. [#45928]
+- Premium Content Block: Added email rendering callback. [#46006]
+
+### Bug fixes
+- Cookies & Consents Banner Widget: ensure form headings are properly displayed. [#46144]
+- Forms: Do not link to empty source link. [#46133]
+- Forms: Reject form submissions when the parent post/page with the form has been deleted or is no longer published. [#46103]
+- Forms: Remove clashing between meta dn field names on export. [#46130]
+- GSheets embed: Give time for the iframe to finish before showing an error. [#46109]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: Add filter to disable Jetpack block collection in editor. [#46077]
+- Media Summary: Allow skipping excerpt and text counts. [#46091]
+- Newsletters: Add skeleton for new settings screen. [#46049]
+- Podcasts block: Prevent warnings when podcast content is malformed. [#46083]
+- Updated Jetpack sidebar labels for post editor sidebar. [#46098]
+- Update package dependencies. [#46072] [#46079] [#46143]
 
 ## 15.3-a.9 - 2025-11-24
 ### Enhancements

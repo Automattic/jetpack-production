@@ -12,8 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added new media selector UI.
 
+## [0.67.7] - 2025-12-01
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#46143]
 
 ## [0.67.6] - 2025-11-24
 ### Changed
@@ -1173,7 +1174,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.68.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.67.6...v0.68.0-alpha
+[0.68.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.67.7...v0.68.0-alpha
+[0.67.7]: https://github.com/Automattic/jetpack-publicize/compare/v0.67.6...v0.67.7
 [0.67.6]: https://github.com/Automattic/jetpack-publicize/compare/v0.67.5...v0.67.6
 [0.67.5]: https://github.com/Automattic/jetpack-publicize/compare/v0.67.4...v0.67.5
 [0.67.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.67.3...v0.67.4

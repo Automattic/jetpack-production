@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.11.0] - 2025-12-01
 ### Changed
-- Add form-webhooks support on free Jetpack plans
+- Add form-webhooks support on free Jetpack plans. [#46059]
 
 ## [0.10.0] - 2025-08-06
 ### Added
@@ -229,7 +226,7 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Moved the options class into Connection. [#24095]
 
-[0.11.0-alpha]: https://github.com/Automattic/jetpack-plans/compare/v0.10.0...v0.11.0-alpha
+[0.11.0]: https://github.com/Automattic/jetpack-plans/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/Automattic/jetpack-plans/compare/v0.9.1...v0.10.0
 [0.9.1]: https://github.com/Automattic/jetpack-plans/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/Automattic/jetpack-plans/compare/v0.8.0...v0.9.0
