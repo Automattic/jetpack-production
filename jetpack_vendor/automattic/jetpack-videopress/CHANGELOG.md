@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Ensure proper flags are used with `json_encode()`.
+
 ## [0.32.17] - 2025-12-01
 ### Changed
 - Update package dependencies. [#46072] [#46143]

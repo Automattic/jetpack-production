@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Ensure proper flags are used with `json_encode()`.
 - Forms: fix PHP warning when global gets overwritten
 - Forms: Set "from" field as primary on dashboard
 

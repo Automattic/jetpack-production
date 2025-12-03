@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.22.7-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Ensure proper flags are used with `json_encode()`.
+
 ## [4.22.6] - 2025-12-01
 ### Changed
 - Sync: Only send a single updated_post_meta action per attachment metadata request. [#45921]
@@ -1590,6 +1597,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.22.7-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.22.6...v4.22.7-alpha
 [4.22.6]: https://github.com/Automattic/jetpack-sync/compare/v4.22.5...v4.22.6
 [4.22.5]: https://github.com/Automattic/jetpack-sync/compare/v4.22.4...v4.22.5
 [4.22.4]: https://github.com/Automattic/jetpack-sync/compare/v4.22.3...v4.22.4

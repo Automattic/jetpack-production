@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added new media selector UI.
 
+### Fixed
+- Ensure proper flags are used with `json_encode()`.
+
 ## [0.67.7] - 2025-12-01
 ### Changed
 - Update package dependencies. [#46143]
