@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: add integrations display filters.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Forms: fix PHP warning when global gets overwritten
 - Forms: Set "from" field as primary on dashboard
