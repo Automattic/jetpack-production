@@ -15,9 +15,6 @@ This is an alpha version! The changes listed here are not final.
 - Tests: Check the publish post action exists, but is not necessarily the last action.
 
 ## 15.3 - 2025-12-03
-
-Incorrectly tagged without releasing new versions of Jetpack Forms. 15.3-beta.3 was created immediately to fix the issue.
-
 ### Enhancements
 - Forms: Add browser info to the form response email notification. [#45710]
 - Forms: Add form response webhook support. [#46059]
