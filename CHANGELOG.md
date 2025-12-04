@@ -14,6 +14,10 @@ This is an alpha version! The changes listed here are not final.
 - OG tags: use media-only Jetpack_Media_Summary::get
 - Tests: Check the publish post action exists, but is not necessarily the last action.
 
+## 15.3.1 - 2025-12-04
+
+- Forms: Use the correct case on cipher names. [#46189]
+
 ## 15.3 - 2025-12-03
 ### Enhancements
 - Forms: Add browser info to the form response email notification. [#45710]
