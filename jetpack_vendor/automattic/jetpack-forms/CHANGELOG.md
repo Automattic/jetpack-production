@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Ensure proper flags are used with `json_encode()`.
+- Forms: Decode HTML entities in exported form names to prevent codes like &#8211; appearing in CSV exports
 - Forms: fix PHP warning when global gets overwritten
 - Forms: Set "from" field as primary on dashboard
 
