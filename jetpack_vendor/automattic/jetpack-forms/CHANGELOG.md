@@ -19,7 +19,10 @@ This is an alpha version! The changes listed here are not final.
 - Ensure proper flags are used with `json_encode()`.
 - Forms: fix PHP warning when global gets overwritten
 - Forms: Set "from" field as primary on dashboard
-- Forms: Use the correct case on cipher names
+
+## [6.21.2] - 2025-12-04
+### Fixed
+- Forms: Use the correct case on cipher names [#46189]
 
 ## [6.21.1] - 2025-12-03
 ### Fixed
@@ -1954,7 +1957,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.22.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.21.1...v6.22.0-alpha
+[6.22.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.21.2...v6.22.0-alpha
+[6.21.2]: https://github.com/automattic/jetpack-forms/compare/v6.21.1...v6.21.2
 [6.21.1]: https://github.com/automattic/jetpack-forms/compare/v6.21.0...v6.21.1
 [6.21.0]: https://github.com/automattic/jetpack-forms/compare/v6.20.0...v6.21.0
 [6.20.0]: https://github.com/automattic/jetpack-forms/compare/v6.19.0...v6.20.0
