@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.15-alpha] - unreleased
+## [0.6.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- External Media: add filter for adding custom sources to the media sources dropdown.
 
 ### Fixed
 - Ensure proper flags are used with `json_encode()`.
@@ -238,7 +241,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix the button size in the editor for Gutenberg 18 or below. [#41619]
 - Media Library: Fix the Import Media button color in some color schemes. [#41664]
 
-[0.5.15-alpha]: https://github.com/Automattic/jetpack-external-media/compare/v0.5.14...v0.5.15-alpha
+[0.6.0-alpha]: https://github.com/Automattic/jetpack-external-media/compare/v0.5.14...v0.6.0-alpha
 [0.5.14]: https://github.com/Automattic/jetpack-external-media/compare/v0.5.13...v0.5.14
 [0.5.13]: https://github.com/Automattic/jetpack-external-media/compare/v0.5.12...v0.5.13
 [0.5.12]: https://github.com/Automattic/jetpack-external-media/compare/v0.5.11...v0.5.12
