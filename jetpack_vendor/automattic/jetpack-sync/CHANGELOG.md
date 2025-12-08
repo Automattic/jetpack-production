@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Jetpack Sync: Update Dedicated Sync locking logic for spawning requests
+
 ### Fixed
 - Ensure proper flags are used with `json_encode()`.
 
