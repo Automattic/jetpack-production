@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Removed
+- Forms: remove admin class files
+
 ### Fixed
 - Ensure proper flags are used with `json_encode()`.
 - Forms: Decode HTML entities in exported form names to prevent codes like &#8211; appearing in CSV exports
