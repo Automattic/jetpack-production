@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: remove admin class files
 
 ### Fixed
+- Forms: Fix slider field text labels showing borders in editor when using certain themes like Assembler
 - Make form buttons take full width on mobile devices
 
 ## [6.22.0] - 2025-12-08
