@@ -5,26 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.22.0-alpha] - unreleased
+## [6.23.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
-
-### Added
-- Forms: add filter to hide integration icons.
-- Forms: add integrations display filters.
-
-### Changed
-- Update package dependencies.
 
 ### Removed
 - Forms: remove admin class files
 
 ### Fixed
-- Ensure proper flags are used with `json_encode()`.
-- Forms: Decode HTML entities in exported form names to prevent codes like &#8211; appearing in CSV exports
-- Forms: fix PHP warning when global gets overwritten
-- Forms: Set "from" field as primary on dashboard
 - Make form buttons take full width on mobile devices
+
+## [6.22.0] - 2025-12-08
+### Added
+- Add filter to hide integration icons. [#46188]
+- Add integrations display filters. [#46156]
+
+### Changed
+- Update package dependencies. [#45914]
+
+### Fixed
+- Ensure proper flags are used with `json_encode()`. [#46092]
+- Decode HTML entities in exported form names to prevent codes like `&#8211;` appearing in CSV exports. [#46178]
+- Fix PHP warning when global gets overwritten. [#46141]
+- Set `from` field as primary on dashboard. [#46170]
 
 ## [6.21.2] - 2025-12-04
 ### Fixed
@@ -1963,7 +1966,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.22.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.21.2...v6.22.0-alpha
+[6.23.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.22.0...v6.23.0-alpha
+[6.22.0]: https://github.com/automattic/jetpack-forms/compare/v6.21.2...v6.22.0
 [6.21.2]: https://github.com/automattic/jetpack-forms/compare/v6.21.1...v6.21.2
 [6.21.1]: https://github.com/automattic/jetpack-forms/compare/v6.21.0...v6.21.1
 [6.21.0]: https://github.com/automattic/jetpack-forms/compare/v6.20.0...v6.21.0

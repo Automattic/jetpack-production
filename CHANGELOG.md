@@ -2,20 +2,21 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.4-a.0 - unreleased
+## 15.4-a.2 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 15.4-a.1 - 2025-12-08
 ### Enhancements
-- Forms: add filter to hide integration icons.
-- Forms: add integrations display filters.
+- Forms: Add filter to hide integration icons. [#46188]
+- Forms: Add integrations display filters. [#46156]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add the new media selection UI for Social.
-- Ensure proper flags are used with `json_encode()`.
-- Janitorial: emptied out to-test.md.
-- OG tags: use media-only Jetpack_Media_Summary::get
-- Tests: Check the publish post action exists, but is not necessarily the last action.
+- Add the new media selection UI for Social. [#46085]
+- Ensure proper flags are used with `json_encode()`. [#46117]
+- Janitorial: emptied out to-test.md. [#46221]
+- OG tags: use media-only Jetpack_Media_Summary::get [#46094]
+- Tests: Check the publish post action exists, but is not necessarily the last action. [#46105]
 
 ## 15.3.1 - 2025-12-04
 

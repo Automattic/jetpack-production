@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.32.18-alpha] - unreleased
+## [0.32.19-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## [0.32.18] - 2025-12-08
 ### Fixed
-- Ensure proper flags are used with `json_encode()`.
+- Ensure proper flags are used with `json_encode()`. [#46092]
 
 ## [0.32.17] - 2025-12-01
 ### Changed
@@ -1799,7 +1800,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.32.18-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.32.17...v0.32.18-alpha
+[0.32.19-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.32.18...v0.32.19-alpha
+[0.32.18]: https://github.com/Automattic/jetpack-videopress/compare/v0.32.17...v0.32.18
 [0.32.17]: https://github.com/Automattic/jetpack-videopress/compare/v0.32.16...v0.32.17
 [0.32.16]: https://github.com/Automattic/jetpack-videopress/compare/v0.32.15...v0.32.16
 [0.32.15]: https://github.com/Automattic/jetpack-videopress/compare/v0.32.14...v0.32.15

@@ -5,15 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.17.6-alpha] - unreleased
+## [0.17.7-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Improve Post Stats cache handling for invalid or error data
 
+## [0.17.6] - 2025-12-08
 ### Fixed
-- Ensure proper flags are used with `json_encode()`.
+- Ensure proper flags are used with `json_encode()`. [#46092]
 
 ## [0.17.5] - 2025-11-12
 ### Changed
@@ -296,7 +297,8 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
-[0.17.6-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.17.5...v0.17.6-alpha
+[0.17.7-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.17.6...v0.17.7-alpha
+[0.17.6]: https://github.com/Automattic/jetpack-stats/compare/v0.17.5...v0.17.6
 [0.17.5]: https://github.com/Automattic/jetpack-stats/compare/v0.17.4...v0.17.5
 [0.17.4]: https://github.com/Automattic/jetpack-stats/compare/v0.17.3...v0.17.4
 [0.17.3]: https://github.com/Automattic/jetpack-stats/compare/v0.17.2...v0.17.3

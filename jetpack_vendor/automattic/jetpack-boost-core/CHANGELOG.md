@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.4.1] - 2025-12-08
 ### Fixed
-- Ensure proper flags are used with `json_encode()`.
+- Ensure proper flags are used with `json_encode()`. [#46092]
 
 ## [0.4.0] - 2025-11-17
 ### Added
@@ -156,7 +153,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Introduce new package. [#31163]
 
-[0.4.1-alpha]: https://github.com/Automattic/jetpack-boost-core/compare/v0.4.0...v0.4.1-alpha
+[0.4.1]: https://github.com/Automattic/jetpack-boost-core/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/Automattic/jetpack-boost-core/compare/v0.3.14...v0.4.0
 [0.3.14]: https://github.com/Automattic/jetpack-boost-core/compare/v0.3.13...v0.3.14
 [0.3.13]: https://github.com/Automattic/jetpack-boost-core/compare/v0.3.12...v0.3.13

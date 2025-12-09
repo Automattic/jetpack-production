@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.9-alpha] - unreleased
+## [0.2.10-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## [0.2.9] - 2025-12-08
 ### Fixed
-- Ensure proper flags are used with `json_encode()`.
+- Ensure proper flags are used with `json_encode()`. [#46092]
 
 ## [0.2.8] - 2025-11-10
 ### Changed
@@ -60,7 +61,8 @@ This is an alpha version! The changes listed here are not final.
 - Use jetpack-config package for Account Protection initialization. [#40925]
 - Use jetpack-logo package for Account Protection logos. [#40925]
 
-[0.2.9-alpha]: https://github.com/Automattic/jetpack-account-protection/compare/v0.2.8...v0.2.9-alpha
+[0.2.10-alpha]: https://github.com/Automattic/jetpack-account-protection/compare/v0.2.9...v0.2.10-alpha
+[0.2.9]: https://github.com/Automattic/jetpack-account-protection/compare/v0.2.8...v0.2.9
 [0.2.8]: https://github.com/Automattic/jetpack-account-protection/compare/v0.2.7...v0.2.8
 [0.2.7]: https://github.com/Automattic/jetpack-account-protection/compare/v0.2.6...v0.2.7
 [0.2.6]: https://github.com/Automattic/jetpack-account-protection/compare/v0.2.5...v0.2.6
