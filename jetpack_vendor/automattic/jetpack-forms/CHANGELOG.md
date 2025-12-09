@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Forms: Add CTA to install/activate Akismet on empty spam dashboard
+
 ### Changed
 - Forms: refactored how we retrieve form submission fields to send in the webhook payload.
 - Replace use of confusing `esc_js` with `wp_json_encode`.
