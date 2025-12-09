@@ -17,9 +17,6 @@ This is an alpha version! The changes listed here are not final.
 - Replace use of confusing `esc_js` with `wp_json_encode`.
 - Update package dependencies.
 
-### Removed
-- Forms: remove admin class files
-
 ### Fixed
 - Forms: Fix slider field text labels showing borders in editor when using certain themes like Assembler
 - Make form buttons take full width on mobile devices
