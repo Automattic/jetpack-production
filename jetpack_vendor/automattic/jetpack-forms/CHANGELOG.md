@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: refactored how we retrieve form submission fields to send in the webhook payload.
 - Replace use of confusing `esc_js` with `wp_json_encode`.
+- Update package dependencies.
 
 ### Removed
 - Forms: remove admin class files

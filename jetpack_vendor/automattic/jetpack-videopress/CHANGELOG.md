@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Replace use of confusing `esc_js` with `wp_json_encode`.
+- Update package dependencies.
 
 ## [0.32.18] - 2025-12-08
 ### Fixed
