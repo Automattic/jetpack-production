@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Jetpack Sync: Update Dedicated Sync locking logic for spawning requests
 
+### Deprecated
+- Jetpack Sync: Deprecate WooCommerce_Products module
+
 ### Removed
 - Jetpack Sync: Stop syncing 'woocommerce_update_order_item' WooCommerce action
 
