@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- General: Replace uses of confusing `esc_js()` function with clearer code.
+
 ## 15.4-a.1 - 2025-12-08
 ### Enhancements
 - Forms: Add filter to hide integration icons. [#46188]

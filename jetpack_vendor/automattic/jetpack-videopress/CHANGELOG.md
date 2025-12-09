@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Replace use of confusing `esc_js` with `wp_json_encode`.
+
 ## [0.32.18] - 2025-12-08
 ### Fixed
 - Ensure proper flags are used with `json_encode()`. [#46092]
