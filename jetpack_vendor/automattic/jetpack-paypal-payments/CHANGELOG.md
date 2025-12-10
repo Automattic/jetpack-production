@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Replace use of confusing `esc_js` with `wp_json_encode`, or `intval` where appropriate.
 
+### Fixed
+- Adds back a # selector to fix a broken selector for the container
+
 ## [0.5.16] - 2025-12-08
 ### Changed
 - Internal updates.
