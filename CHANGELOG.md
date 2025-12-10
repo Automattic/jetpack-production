@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Development Mode: removed references to previously removed code
 - General: Replace uses of confusing `esc_js()` function with clearer code.
 - Update package dependencies.
 
