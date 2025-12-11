@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add jetpack_forms_extra_webhooks filter and include feedback ID in jetpack_forms_before_webhook_request filter
 - Forms: refactored how we retrieve form submission fields to send in the webhook payload.
+- Forms: use entire button area for selecting multi-select options
 - Replace use of confusing `esc_js` with `wp_json_encode`.
 - Tests: Replace PHPUnit mocks with anonymous classes to eliminate PHPUnit 12 strictness warnings
 - Update package dependencies.

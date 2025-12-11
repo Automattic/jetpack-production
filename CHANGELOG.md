@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - External media: add replace flow support
+- Forms: use entire button area for selecting multi-select options
 
 ### Bug fixes
 - Forms: Removes the classic Admin initialization call
