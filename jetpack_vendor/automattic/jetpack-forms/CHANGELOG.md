@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.23.0-alpha] - unreleased
+## [7.0.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Replace use of confusing `esc_js` with `wp_json_encode`.
 - Tests: Replace PHPUnit mocks with anonymous classes to eliminate PHPUnit 12 strictness warnings
 - Update package dependencies.
+
+### Removed
+- Forms: Removes classic Admin initialization code
 
 ### Fixed
 - Fix export functionality to handle null values properly for IP Address, Country code, and Browser fields
@@ -1974,7 +1977,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[6.23.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.22.0...v6.23.0-alpha
+[7.0.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v6.22.0...v7.0.0-alpha
 [6.22.0]: https://github.com/automattic/jetpack-forms/compare/v6.21.2...v6.22.0
 [6.21.2]: https://github.com/automattic/jetpack-forms/compare/v6.21.1...v6.21.2
 [6.21.1]: https://github.com/automattic/jetpack-forms/compare/v6.21.0...v6.21.1
