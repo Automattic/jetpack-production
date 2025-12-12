@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: use entire button area for selecting multi-select options
 
 ### Bug fixes
+- Forms: ensure submission summary is contained within 100% width
 - Forms: fix validation accessibility.
 - Forms: Removes the classic Admin initialization call
 
