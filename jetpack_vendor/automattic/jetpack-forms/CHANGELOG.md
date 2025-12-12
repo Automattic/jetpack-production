@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix export functionality to handle null values properly for IP Address, Country code, and Browser fields
+- Forms: Fix dashboard height
 - Forms: Fix slider field text labels showing borders in editor when using certain themes like Assembler
 - Make form buttons take full width on mobile devices
 
