@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: use entire button area for selecting multi-select options
 
 ### Bug fixes
+- Forms: fix validation accessibility.
 - Forms: Removes the classic Admin initialization call
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
