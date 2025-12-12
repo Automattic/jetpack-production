@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix export functionality to handle null values properly for IP Address, Country code, and Browser fields
+- Fix `Contact_Form_Endpoint_Test::test_resend_email` attempting to actually send email.
 - Forms: ensure submission summary is contained within 100% width
 - Forms: Fix dashboard height
 - Forms: Fix slider field text labels showing borders in editor when using certain themes like Assembler
