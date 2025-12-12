@@ -16,14 +16,14 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_4_a_2
     );
 
     public static $prefixLengthsPsr4 = array (
-        'A' => 
+        'A' =>
         array (
             'Automattic\\Jetpack\\Autoloader\\' => 30,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Automattic\\Jetpack\\Autoloader\\' => 
+        'Automattic\\Jetpack\\Autoloader\\' =>
         array (
             0 => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src',
         ),
