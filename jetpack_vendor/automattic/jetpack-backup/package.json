@@ -30,9 +30,9 @@
 	"dependencies": {
 		"@automattic/jetpack-analytics": "^1.0.6",
 		"@automattic/jetpack-api": "^1.0.12",
-		"@automattic/jetpack-components": "^1.4.1",
+		"@automattic/jetpack-components": "^1.4.2-alpha",
 		"@automattic/jetpack-connection": "^1.4.22",
-		"@automattic/jetpack-shared-extension-utils": "^1.4.1",
+		"@automattic/jetpack-shared-extension-utils": "^1.4.2-alpha",
 		"@automattic/number-formatters": "^1.0.15",
 		"@tanstack/react-query": "5.90.8",
 		"@wordpress/api-fetch": "7.36.0",
