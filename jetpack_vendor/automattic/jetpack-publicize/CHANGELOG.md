@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Replace use of confusing `esc_js` with `wp_json_encode`.
 
+### Removed
+- Social: Remove the usage of useAdminUiV1 feature flag.
+
 ## [0.68.0] - 2025-12-08
 ### Added
 - Added new media selector UI. [#46085]
