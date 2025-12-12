@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - External media: add replace flow support
 - Forms: use entire button area for selecting multi-select options
+- Reuse AI image generation in media section
 
 ### Bug fixes
 - Forms: ensure submission summary is contained within 100% width
