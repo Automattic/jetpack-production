@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Add jetpack_forms_extra_webhooks filter and include feedback ID in jetpack_forms_before_webhook_request filter
 - Forms: auto-generate webhook id so users don't have to fill it.
 - Forms: refactored how we retrieve form submission fields to send in the webhook payload.
+- Forms: track webhook requests done in wpcom infrastructure.
 - Forms: track when users enable and disable webhooks.
 - Forms: use entire button area for selecting multi-select options
 - Replace use of confusing `esc_js` with `wp_json_encode`.
