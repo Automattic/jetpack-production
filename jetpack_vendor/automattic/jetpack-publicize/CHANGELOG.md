@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.68.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.68.1] - 2025-12-15
 ### Changed
-- Replace use of confusing `esc_js` with `wp_json_encode`.
+- Replace use of confusing `esc_js` with `wp_json_encode`. [#46229]
 
 ### Removed
-- Social: Remove the usage of useAdminUiV1 feature flag.
+- Social: Remove the usage of useAdminUiV1 feature flag. [#46280]
 
 ## [0.68.0] - 2025-12-08
 ### Added
@@ -1184,7 +1181,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.68.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.68.0...v0.68.1-alpha
+[0.68.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.68.0...v0.68.1
 [0.68.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.67.7...v0.68.0
 [0.67.7]: https://github.com/Automattic/jetpack-publicize/compare/v0.67.6...v0.67.7
 [0.67.6]: https://github.com/Automattic/jetpack-publicize/compare/v0.67.5...v0.67.6

@@ -39,12 +39,12 @@ class Admin {
 	/**
 	 * Instantiates this singleton class
 	 *
-	 * @deprecated 7.0.0-alpha
+	 * @deprecated 7.0.0
 	 *
 	 * @return Admin The Admin class instance.
 	 */
 	public static function init() {
-		_deprecated_function( __METHOD__, 'package-7.0.0-alpha' );
+		_deprecated_function( __METHOD__, 'package-7.0.0' );
 		static $instance = false;
 
 		if ( ! $instance ) {
@@ -153,12 +153,12 @@ class Admin {
 	 * Ajax handler for wp_ajax_grunion_export_to_gdrive.
 	 * Exports data to Google Drive, based on POST data.
 	 *
-	 * @deprecated 7.0.0-alpha
+	 * @deprecated 7.0.0
 	 *
 	 * @see Contact_Form_Plugin::get_feedback_entries_from_post
 	 */
 	public function export_to_gdrive() {
-		_deprecated_function( __METHOD__, 'package-7.0.0-alpha', 'Automattic\Jetpack\Forms\ContactForm\Contact_Form_Plugin::init()->export_to_gdrive()' );
+		_deprecated_function( __METHOD__, 'package-7.0.0', 'Automattic\Jetpack\Forms\ContactForm\Contact_Form_Plugin::init()->export_to_gdrive()' );
 
 		return Contact_Form_Plugin::init()->export_to_gdrive();
 	}
