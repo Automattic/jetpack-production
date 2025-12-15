@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Search Sync Settings: Add WooCommerce.com product search keywords meta to allow list
+
 ## [4.24.0] - 2025-12-11
 ### Deprecated
 - Jetpack Sync: Deprecate WooCommerce_Products module [#46222]
