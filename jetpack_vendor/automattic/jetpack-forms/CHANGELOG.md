@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Removed
+- Forms: remove admin class files
 - Forms: Removes classic Admin initialization code
 
 ### Fixed
