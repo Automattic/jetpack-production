@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: ensure submission summary is contained within 100% width
 - Forms: fix validation accessibility.
 - Forms: Removes the classic Admin initialization call
+- Forms: strip HTML from styled labels in error summary
 - Jetpack settings: avoid deprecation notices when loading Settings screen or Debugger screen.
 - Social: Fix connections management modal not opening from pre-publish panel.
 
