@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Removes classic Admin initialization code
 
 ### Fixed
+- Fixed textarea placeholders to match input placeholder styling
 - Fix export functionality to handle null values properly for IP Address, Country code, and Browser fields
 - Fix `Contact_Form_Endpoint_Test::test_resend_email` attempting to actually send email.
 - Forms: ensure submission summary is contained within 100% width
