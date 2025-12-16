@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Search Sync Settings: Add WooCommerce.com product search keywords meta to allow list
+- Sync: General cleanup and clarity added in a couple of module files.
 
 ## [4.24.0] - 2025-12-11
 ### Deprecated
