@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.29.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Add benefit-driven success messages for module activation
+
 ## [5.28.10] - 2025-12-11
 ### Changed
 - Update package dependencies. [#46244]
@@ -2454,6 +2461,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.29.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.10...5.29.0-alpha
 [5.28.10]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.9...5.28.10
 [5.28.9]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.8...5.28.9
 [5.28.8]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.7...5.28.8
