@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: fix validation accessibility.
 - Forms: Removes the classic Admin initialization call
 - Jetpack settings: avoid deprecation notices when loading Settings screen or Debugger screen.
+- Social: Fix connections management modal not opening from pre-publish panel.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Development Mode: removed references to previously removed code
