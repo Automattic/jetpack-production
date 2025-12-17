@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add benefit-driven success messages for module activation
 
+## [5.28.11] - 2025-12-15
+### Changed
+- Update dependencies. [#46157]
+
 ## [5.28.10] - 2025-12-11
 ### Changed
 - Update package dependencies. [#46244]
@@ -2461,7 +2465,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.29.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.10...5.29.0-alpha
+[5.29.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.11...5.29.0-alpha
+[5.28.11]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.10...5.28.11
 [5.28.10]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.9...5.28.10
 [5.28.9]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.8...5.28.9
 [5.28.8]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.7...5.28.8
