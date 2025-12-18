@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Fix connections management modal not opening from pre-publish panel.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Adding or removing features to plans for a future experiment. Shouldn't impact existing sites
 - Update the @automattic/social-previews dependency source to the monorepo.
 
 ## 15.4-a.3 - 2025-12-15
