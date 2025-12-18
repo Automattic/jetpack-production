@@ -17,7 +17,7 @@
 		"automattic/jetpack-admin-ui": "^0.5.11",
 		"automattic/jetpack-assets": "^4.3.17",
 		"automattic/jetpack-autoloader": "^5.0.15",
-		"automattic/jetpack-backup": "^4.2.34",
+		"automattic/jetpack-backup": "^4.2.35-alpha",
 		"automattic/jetpack-blaze": "^0.26.21",
 		"automattic/jetpack-blocks": "^3.1.1",
 		"automattic/jetpack-boost-speed-score": "^0.4.12",
@@ -53,7 +53,7 @@
 		"automattic/jetpack-status": "^6.1.2",
 		"automattic/jetpack-subscribers-dashboard": "^0.4.11",
 		"automattic/jetpack-sync": "^4.24.2-alpha",
-		"automattic/jetpack-videopress": "^0.32.19",
+		"automattic/jetpack-videopress": "^0.32.20-alpha",
 		"automattic/jetpack-waf": "^0.27.9",
 		"automattic/woocommerce-analytics": "^0.13.2"
 	},

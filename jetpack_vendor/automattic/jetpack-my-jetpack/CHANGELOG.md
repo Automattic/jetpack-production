@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add benefit-driven success messages for module activation
+- Update package dependencies.
 
 ## [5.28.11] - 2025-12-15
 ### Changed
