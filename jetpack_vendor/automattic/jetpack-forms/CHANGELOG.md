@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fixed textarea placeholders to match input placeholder styling
+- Forms: Fix button padding
 - Forms: strip HTML from styled labels in error summary
 
 ## [7.0.0] - 2025-12-15
