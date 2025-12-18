@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Allow CSV files to be uploaded via contact forms
+- Update package dependencies.
 
 ### Removed
 - Forms: remove admin class files
