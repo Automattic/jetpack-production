@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Adding or removing features to plans for a future experiment. Shouldn't impact existing sites
+- Tests: Update sync tests to allow for actions occuring after post publish.
 - Update the @automattic/social-previews dependency source to the monorepo.
 
 ## 15.4-a.3 - 2025-12-15
