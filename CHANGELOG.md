@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- AI Assistant: Fix product page URL for Simple sites to use jetpack.com instead of My Jetpack
 - Forms: strip HTML from styled labels in error summary
 - Jetpack settings: avoid deprecation notices when loading Settings screen or Debugger screen.
 - Social: Fix connections management modal not opening from pre-publish panel.
