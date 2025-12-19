@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add wp-build based form responses route for DataViews integration
+
 ### Changed
 - Allow CSV files to be uploaded via contact forms
 - Update package dependencies.
