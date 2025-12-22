@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Forms: update 'Learn more' link in form notification settings.
+
 ## [7.1.0] - 2025-12-22
 ### Added
 - Add wp-build based form responses route for DataViews integration. [#46206]
@@ -2000,6 +2007,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[7.1.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.1.0...v7.1.1-alpha
 [7.1.0]: https://github.com/automattic/jetpack-forms/compare/v7.0.0...v7.1.0
 [7.0.0]: https://github.com/automattic/jetpack-forms/compare/v6.22.0...v7.0.0
 [6.22.0]: https://github.com/automattic/jetpack-forms/compare/v6.21.2...v6.22.0
