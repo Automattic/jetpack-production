@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Social: Unified social provider preview.
+
 ### Bug fixes
 - AI Assistant: Fix product page URL for Simple sites to use jetpack.com instead of My Jetpack
 - Forms: strip HTML from styled labels in error summary
