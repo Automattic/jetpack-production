@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Fix product page URL for Simple sites to use jetpack.com instead of My Jetpack
 - Forms: strip HTML from styled labels in error summary
 - Jetpack settings: avoid deprecation notices when loading Settings screen or Debugger screen.
+- Scan: Replace inline onclick handler with target="_blank" for CSP compliance in admin bar notice.
 - Social: Fix connections management modal not opening from pre-publish panel.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
