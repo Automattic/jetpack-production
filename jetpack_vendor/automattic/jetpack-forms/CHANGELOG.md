@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Refactor Feedback_Test.php into 8 focused test classes for better organization and maintainability
+- Update radio button styling to use ::before pseudo-element approach for consistency with checkboxes
 
 ### Fixed
 - Forms: don't allow ::after pseudo element manipulation on Jetpack Forms radio and checkbox input elements
