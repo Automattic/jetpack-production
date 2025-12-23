@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.4-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Clean up the logic for admin page access for Social as the settings page is now widely available.
+
 ## 15.4-a.5 - 2025-12-22
 ### Enhancements
 - Social: Improve social preview for LinkedIn and Tumblr. [#46364]
