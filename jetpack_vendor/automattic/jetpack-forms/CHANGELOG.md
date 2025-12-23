@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Refactor Feedback_Test.php into 8 focused test classes for better organization and maintainability
+
 ### Fixed
 - Forms: update 'Learn more' link in form notification settings.
 
