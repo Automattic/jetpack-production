@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Refactor Feedback_Test.php into 8 focused test classes for better organization and maintainability
 
 ### Fixed
+- Forms: don't allow ::after pseudo element manipulation on Jetpack Forms radio and checkbox input elements
 - Forms: update 'Learn more' link in form notification settings.
 
 ## [7.1.0] - 2025-12-22
