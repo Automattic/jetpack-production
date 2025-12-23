@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add support for setting custom ID on hidden field blocks from block settings
+- Forms: add list view sidebar for easier field management
 
 ### Changed
 - Refactor Feedback_Test.php into 8 focused test classes for better organization and maintainability
