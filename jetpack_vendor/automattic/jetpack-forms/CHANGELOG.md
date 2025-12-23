@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.1.1-alpha] - unreleased
+## [7.2.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add support for setting custom ID on hidden field blocks from block settings
 
 ### Changed
 - Refactor Feedback_Test.php into 8 focused test classes for better organization and maintainability
@@ -2012,7 +2015,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.1.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.1.0...v7.1.1-alpha
+[7.2.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.1.0...v7.2.0-alpha
 [7.1.0]: https://github.com/automattic/jetpack-forms/compare/v7.0.0...v7.1.0
 [7.0.0]: https://github.com/automattic/jetpack-forms/compare/v6.22.0...v7.0.0
 [6.22.0]: https://github.com/automattic/jetpack-forms/compare/v6.21.2...v6.22.0
