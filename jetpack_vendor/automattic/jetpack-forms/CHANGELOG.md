@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix combobox dropdown styling overrides for phone input field
 - Fixed combobox dropdown occlusion by adding z-index when open
 - Forms: don't allow ::after pseudo element manipulation on Jetpack Forms radio and checkbox input elements
+- Forms: fixing form checkboxes and radio styles for dark background themes
 - Forms: update 'Learn more' link in form notification settings.
 
 ## [7.1.0] - 2025-12-22
