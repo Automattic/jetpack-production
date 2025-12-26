@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Update radio button styling to use ::before pseudo-element approach for consistency with checkboxes
 
 ### Fixed
+- Fix combobox dropdown styling overrides for phone input field
 - Fixed combobox dropdown occlusion by adding z-index when open
 - Forms: don't allow ::after pseudo element manipulation on Jetpack Forms radio and checkbox input elements
 - Forms: update 'Learn more' link in form notification settings.
