@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix combobox dropdown styling overrides for phone input field
+- Fixed checkbox-multiple styling by removing incorrect button style selector
 - Fixed combobox dropdown occlusion by adding z-index when open
 - Forms: don't allow ::after pseudo element manipulation on Jetpack Forms radio and checkbox input elements
 - Forms: fixing form checkboxes and radio styles for dark background themes
