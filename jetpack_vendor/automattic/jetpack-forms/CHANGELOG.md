@@ -12,8 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add support for setting custom ID on hidden field blocks from block settings
 - Forms: add list view sidebar for easier field management
+- Forms: allow using the Gutenberg Core Button block as the submit control in Contact Form. The block gets the same interactivity bindings and loading spinner as the Jetpack Button, and all form variations now insert a core button by default.
 
 ### Changed
+- Forms: use core/button instead of jetpack/button
 - Refactor Feedback_Test.php into 8 focused test classes for better organization and maintainability
 - Update radio button styling to use ::before pseudo-element approach for consistency with checkboxes
 
