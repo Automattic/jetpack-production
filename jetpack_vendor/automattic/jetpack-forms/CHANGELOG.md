@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add support for setting custom ID on hidden field blocks from block settings
 - Forms: add list view sidebar for easier field management
 - Forms: allow using the Gutenberg Core Button block as the submit control in Contact Form. The block gets the same interactivity bindings and loading spinner as the Jetpack Button, and all form variations now insert a core button by default.
+- Forms: support Math and Code blocks inside forms.
 
 ### Changed
 - Forms: use core/button instead of jetpack/button
