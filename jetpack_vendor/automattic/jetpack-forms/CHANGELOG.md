@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: don't allow ::after pseudo element manipulation on Jetpack Forms radio and checkbox input elements
 - Forms: fixing form checkboxes and radio styles for dark background themes
 - Forms: update 'Learn more' link in form notification settings.
+- Improved phone field styling to better mimic theme input styles, including focus outline and filter CSS properties
 
 ## [7.1.0] - 2025-12-22
 ### Added
