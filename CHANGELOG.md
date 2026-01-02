@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: disabled Write Brief functionality for non-English sites.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Allow uploads without VideoPress enabled
 - Clean up the logic for admin page access for Social as the settings page is now widely available.
 - Hides some SEO features for WPCOM users without the correct plan
 - Update the URL for Instagram support article.
