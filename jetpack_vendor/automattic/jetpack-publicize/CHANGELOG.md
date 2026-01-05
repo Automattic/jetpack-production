@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Removed
+- Remove the unused Dismissed_Notices class.
 - Remove unused feature flag logic.
 
 ## [0.69.0] - 2025-12-22
