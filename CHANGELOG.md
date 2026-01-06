@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI Assistant: disabled Write Brief functionality for non-English sites.
+- Forms: fix date exports.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Allow uploads without VideoPress enabled
