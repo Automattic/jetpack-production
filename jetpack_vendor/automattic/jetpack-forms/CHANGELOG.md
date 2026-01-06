@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: use core/button instead of jetpack/button
 - Refactor Feedback_Test.php into 8 focused test classes for better organization and maintainability
+- Update package dependencies.
 - Update radio button styling to use ::before pseudo-element approach for consistency with checkboxes
 
 ### Fixed

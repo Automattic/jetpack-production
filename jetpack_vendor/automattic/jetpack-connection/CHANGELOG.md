@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - IDC: add revalidation for IDCs.
 
+### Changed
+- Update package dependencies.
+
 ## [6.19.13] - 2025-12-22
 ### Changed
 - Update dependencies. [#46381]

@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Allow uploads without VideoPress enabled
 - Clean up the logic for admin page access for Social as the settings page is now widely available.
 - Hides some SEO features for WPCOM users without the correct plan
+- Update package dependencies.
 - Update the URL for Instagram support article.
 
 ## 15.4-a.5 - 2025-12-22
