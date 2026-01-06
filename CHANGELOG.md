@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: add list view sidebar for easier field management
 - Forms: support Math and Code blocks inside forms.
+- IDC: Add revalidation of IDC.
 
 ### Bug fixes
 - AI Assistant: disabled Write Brief functionality for non-English sites.
