@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed checkbox-multiple styling by removing incorrect button style selector
 - Fixed combobox dropdown occlusion by adding z-index when open
 - Fixed React console error on checkbox/radio option inputs by providing an onChange handler
+- Fix personal data export search to handle email addresses in all storage formats (legacy, V2, V3) including unicode/emoji characters
 - Forms: don't allow ::after pseudo element manipulation on Jetpack Forms radio and checkbox input elements
 - Forms: fixing form checkboxes and radio styles for dark background themes
 - Forms: update 'Learn more' link in form notification settings.
