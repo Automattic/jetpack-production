@@ -2,26 +2,33 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.4-a.6 - unreleased
+## 15.5-a.0 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
-- Forms: add list view sidebar for easier field management
-- Forms: support Math and Code blocks inside forms.
 - IDC: Add revalidation of IDC.
 
 ### Bug fixes
-- AI Assistant: disabled Write Brief functionality for non-English sites.
 - Forms: fix date exports.
 - UI: Prevent social modals in editor from stretching too wide on large screens.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Allow uploads without VideoPress enabled
-- Clean up the logic for admin page access for Social as the settings page is now widely available.
-- Hides some SEO features for WPCOM users without the correct plan
 - Update package dependencies.
-- Update the URL for Instagram support article.
+
+## 15.4-beta - 2026-01-06
+### Enhancements
+- Forms: add list view sidebar for easier field management. [#46403]
+- Forms: support Math and Code blocks inside forms. [#46421]
+
+### Bug fixes
+- AI Assistant: disabled Write Brief functionality for non-English sites. [#46390]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Allow uploads without VideoPress enabled [#46425]
+- Clean up the logic for admin page access for Social as the settings page is now widely available. [#46386]
+- Hides some SEO features for WPCOM users without the correct plan [#46357]
+- Update the URL for Instagram support article. [#46405]
 
 ## 15.4-a.5 - 2025-12-22
 ### Enhancements
