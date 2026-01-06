@@ -5,31 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [7.2.0] - 2026-01-06
 ### Added
-- Add support for setting custom ID on hidden field blocks from block settings
-- Forms: add a new filter that lets us control when we want to to show the powered by wording in the email.
-- Forms: add list view sidebar for easier field management
-- Forms: allow using the Gutenberg Core Button block as the submit control in Contact Form. The block gets the same interactivity bindings and loading spinner as the Jetpack Button, and all form variations now insert a core button by default.
-- Forms: support Math and Code blocks inside forms.
+- Add support for setting custom ID on hidden field blocks from block settings. [#46360]
+- Add a new filter that lets us control when we want to to show the powered by wording in the email. [#46158]
+- Add list view sidebar for easier field management. [#46403]
+- Allow using the Gutenberg Core Button block as the submit control in Contact Form. The block gets the same interactivity bindings and loading spinner as the Jetpack Button, and all form variations now insert a core button by default. [#46166]
+- Support Math and Code blocks inside forms. [#46421]
 
 ### Changed
-- Forms: use core/button instead of jetpack/button
-- Refactor Feedback_Test.php into 8 focused test classes for better organization and maintainability
-- Update radio button styling to use ::before pseudo-element approach for consistency with checkboxes
+- Use core/button instead of jetpack/button. [#46166]
+- Refactor Feedback_Test.php into 8 focused test classes for better organization and maintainability. [#46394]
+- Update radio button styling to use ::before pseudo-element approach for consistency with checkboxes. [#46392]
 
 ### Fixed
-- Fix combobox dropdown styling overrides for phone input field
-- Fixed checkbox-multiple styling by removing incorrect button style selector
-- Fixed combobox dropdown occlusion by adding z-index when open
-- Fixed React console error on checkbox/radio option inputs by providing an onChange handler
-- Forms: don't allow ::after pseudo element manipulation on Jetpack Forms radio and checkbox input elements
-- Forms: fixing form checkboxes and radio styles for dark background themes
-- Forms: update 'Learn more' link in form notification settings.
-- Improved phone field styling to better mimic theme input styles, including focus outline and filter CSS properties
+- Fix combobox dropdown styling overrides for phone input field. [#46408]
+- Fix checkbox-multiple styling by removing incorrect button style selector. [#46412]
+- Fix combobox dropdown occlusion by adding z-index when open. [#46401]
+- Fix React console error on checkbox/radio option inputs by providing an onChange handler. [#46439]
+- Don't allow ::after pseudo element manipulation on Jetpack Forms radio and checkbox input elements. [#46393]
+- Fixing form checkboxes and radio styles for dark background themes. [#46411]
+- Update 'Learn more' link in form notification settings. [#46385]
+- Improve phone field styling to better mimic theme input styles, including focus outline and filter CSS properties. [#46432]
 
 ## [7.1.0] - 2025-12-22
 ### Added
@@ -2026,7 +2023,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.2.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.1.0...v7.2.0-alpha
+[7.2.0]: https://github.com/automattic/jetpack-forms/compare/v7.1.0...v7.2.0
 [7.1.0]: https://github.com/automattic/jetpack-forms/compare/v7.0.0...v7.1.0
 [7.0.0]: https://github.com/automattic/jetpack-forms/compare/v6.22.0...v7.0.0
 [6.22.0]: https://github.com/automattic/jetpack-forms/compare/v6.21.2...v6.22.0
