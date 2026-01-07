@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: add form editor
 - IDC: Add revalidation of IDC.
 
 ### Bug fixes
