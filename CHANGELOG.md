@@ -14,7 +14,6 @@ This is an alpha version! The changes listed here are not final.
 - UI: Prevent social modals in editor from stretching too wide on large screens.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- This will make the donations block unavailable and will render an upsell based on a feature
 - Update package dependencies.
 
 ## 15.4 - 2026-01-06
