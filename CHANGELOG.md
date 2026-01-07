@@ -14,7 +14,6 @@ This is an alpha version! The changes listed here are not final.
 - UI: Prevent social modals in editor from stretching too wide on large screens.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Feature gating for two blocks
 - Update package dependencies.
 
 ## 15.4-beta - 2026-01-06
