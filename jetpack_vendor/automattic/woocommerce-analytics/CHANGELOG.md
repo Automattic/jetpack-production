@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix product_purchase event not tracking for shortcode checkout due to incorrect order ID type check
+
 ## [0.13.3] - 2025-12-22
 ### Changed
 - Update dependencies. [#46381]
