@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Security
+- Forms: add SSRF protection for webhook URLs to prevent requests to internal networks and cloud metadata endpoints.
+
 ### Added
 - Forms: add feedback comments
 - Forms: Add form editor under a feature flag
