@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add form editor under a feature flag
 
 ### Changed
+- Forms: change how phone combobox handles flag changes, bypassing wpemoji MutationObserver
 - Update package dependencies.
 
 ### Fixed
