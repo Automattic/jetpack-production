@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix personal data export search to handle email addresses in all storage formats (legacy, V2, V3) including unicode/emoji characters
 - Forms: fix date exports.
+- Forms: Use consistent checkbox and radio styles in the editor to match frontend rendering
 
 ## [7.2.0] - 2026-01-06
 ### Added
