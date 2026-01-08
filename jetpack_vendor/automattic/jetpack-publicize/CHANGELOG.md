@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Removed
+- Remove the obsolete share limits logic.
+
 ## [0.69.1] - 2026-01-06
 ### Removed
 - Remove the unused Dismissed_Notices class. [#46398]
