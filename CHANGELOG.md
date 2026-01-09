@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - IDC: Add revalidation of IDC.
 
 ### Bug fixes
+- AI Search: Prevent AI Search from disappearing when returning certain responses.
 - Forms: fix date exports.
 - UI: Prevent social modals in editor from stretching too wide on large screens.
 
