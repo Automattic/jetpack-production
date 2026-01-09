@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: add feedback comments
 - Forms: Add form editor under a feature flag
+- Forms: allow merging two options together with backspace
 
 ### Changed
 - Forms: change how phone combobox handles flag changes, bypassing wpemoji MutationObserver
