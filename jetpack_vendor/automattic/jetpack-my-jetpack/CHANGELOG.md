@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Plans section: update 'Activate a license' text to 'Activate a new license' when user already has active licenses, and add visual separation before actions list.
 - Update package dependencies.
 
 ## [5.29.2] - 2026-01-07
