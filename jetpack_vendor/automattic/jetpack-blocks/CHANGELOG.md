@@ -5,13 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.2.0-alpha] - unreleased
+## [3.3.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Gating for the donations block
 - Gating for the payment buttons block
+
+## [3.2.0] - 2026-01-09
+### Changed
+- Gating for the donations block [#46499]
 
 ## [3.1.1] - 2025-08-14
 ### Added
@@ -259,7 +262,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Blocks: introduce new package for block management
 
-[3.2.0-alpha]: https://github.com/Automattic/jetpack-blocks/compare/v3.1.1...v3.2.0-alpha
+[3.3.0-alpha]: https://github.com/Automattic/jetpack-blocks/compare/v3.2.0...v3.3.0-alpha
+[3.2.0]: https://github.com/Automattic/jetpack-blocks/compare/v3.1.1...v3.2.0
 [3.1.1]: https://github.com/Automattic/jetpack-blocks/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/Automattic/jetpack-blocks/compare/v3.0.10...v3.1.0
 [3.0.10]: https://github.com/Automattic/jetpack-blocks/compare/v3.0.9...v3.0.10
