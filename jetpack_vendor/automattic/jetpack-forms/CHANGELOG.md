@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix personal data export search to handle email addresses in all storage formats (legacy, V2, V3) including unicode/emoji characters
 - Forms: fix date exports.
 - Forms: Fix wp-build dashboard with updated @wordpress/build package
+- Forms: prevent get_render_api_value from mutating internal state when called multiple times on cached feedback objects.
 - Forms: Use consistent checkbox and radio styles in the editor to match frontend rendering
 
 ## [7.2.0] - 2026-01-06
