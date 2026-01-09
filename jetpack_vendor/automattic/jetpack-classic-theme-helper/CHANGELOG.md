@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Add missing jetpack-blocks dependency required for Blocks::is_fse_theme() usage.
+
 ## [0.14.7] - 2025-12-22
 ### Changed
 - Update dependencies. [#46381]
