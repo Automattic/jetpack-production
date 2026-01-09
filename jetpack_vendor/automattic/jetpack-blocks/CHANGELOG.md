@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Gating for the donations block
+- Gating for the payment buttons block
 
 ## [3.1.1] - 2025-08-14
 ### Added

@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Gating for the donations block
+- Gating for the payment buttons block
 - Updated package dependencies.
 - Update package dependencies.
 
