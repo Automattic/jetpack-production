@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - UI: Prevent social modals in editor from stretching too wide on large screens.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Comments API: Use end-user's IP-address for JSON API requests.
 - Gating for the donations block
 - Gating for the payment buttons block
 - Updated package dependencies.
