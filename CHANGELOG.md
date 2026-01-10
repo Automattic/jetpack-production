@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Comments API: Use end-user's IP-address for JSON API requests.
 - Gating for the donations block
 - Gating for the payment buttons block
+- Gating for the PayPal payment buttons block
 - Updated package dependencies.
 - Update package dependencies.
 

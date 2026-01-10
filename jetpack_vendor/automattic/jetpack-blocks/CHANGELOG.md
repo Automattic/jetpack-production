@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Gating for the payment buttons block
+- Gating for the PayPal payment buttons block
 
 ## [3.2.0] - 2026-01-09
 ### Changed
