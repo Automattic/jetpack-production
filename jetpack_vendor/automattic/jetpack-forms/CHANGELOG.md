@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.4.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Forms: add centralized dashboard tabs.
+
 ## [7.3.0] - 2026-01-12
 ### Security
 - Add SSRF protection for webhook URLs to prevent requests to internal networks and cloud metadata endpoints. [#46424]
@@ -2043,6 +2050,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[7.4.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.3.0...v7.4.0-alpha
 [7.3.0]: https://github.com/automattic/jetpack-forms/compare/v7.2.0...v7.3.0
 [7.2.0]: https://github.com/automattic/jetpack-forms/compare/v7.1.0...v7.2.0
 [7.1.0]: https://github.com/automattic/jetpack-forms/compare/v7.0.0...v7.1.0
