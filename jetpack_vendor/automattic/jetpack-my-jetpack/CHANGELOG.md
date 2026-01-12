@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.29.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.29.3] - 2026-01-12
 ### Changed
-- Plans section: update 'Activate a license' text to 'Activate a new license' when user already has active licenses, and add visual separation before actions list.
-- Update package dependencies.
+- Plans section: Update 'Activate a license' text to 'Activate a new license' when user already has active licenses, and add visual separation before actions list. [#46501]
+- Update package dependencies. [#46512]
 
 ## [5.29.2] - 2026-01-07
 ### Changed
@@ -2479,7 +2476,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.29.3-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.29.2...5.29.3-alpha
+[5.29.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.29.2...5.29.3
 [5.29.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.29.1...5.29.2
 [5.29.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.29.0...5.29.1
 [5.29.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.28.11...5.29.0

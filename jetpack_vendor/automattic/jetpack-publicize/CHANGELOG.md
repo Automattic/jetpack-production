@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.69.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.69.2] - 2026-01-12
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#46456]
 
 ### Removed
-- Remove the obsolete share limits logic.
+- Remove the obsolete share limits logic. [#46468]
 
 ## [0.69.1] - 2026-01-06
 ### Removed
@@ -1203,7 +1200,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.69.2-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.69.1...v0.69.2-alpha
+[0.69.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.69.1...v0.69.2
 [0.69.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.69.0...v0.69.1
 [0.69.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.68.1...v0.69.0
 [0.68.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.68.0...v0.68.1
