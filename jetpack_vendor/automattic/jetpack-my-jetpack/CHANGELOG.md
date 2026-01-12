@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Show module descriptions beneath titles instead of in tooltips for improved discoverability.
+- Update package dependencies.
 
 ### Removed
 - Remove the obsolete share limits logic.
