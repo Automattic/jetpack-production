@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Search: Prevent AI Search from disappearing when returning certain responses.
 - Forms: fix date exports.
+- Slideshow: Ensure slideshows do not stretch to parent container width on mobile if no list height is set.
 - UI: Prevent social modals in editor from stretching too wide on large screens.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
