@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Forms: fix dashboard routing on wpcom.
+
 ## [7.3.0] - 2026-01-12
 ### Security
 - Add SSRF protection for webhook URLs to prevent requests to internal networks and cloud metadata endpoints. [#46424]
