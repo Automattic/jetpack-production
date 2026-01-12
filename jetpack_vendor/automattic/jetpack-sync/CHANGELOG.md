@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.25.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Jetpack Sync: Introduce Sync actions blacklist
+
 ## [4.24.2] - 2025-12-22
 ### Changed
 - Search Sync Settings: Add WooCommerce.com product search keywords meta to allow list. [#46290]
@@ -1616,6 +1623,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.25.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.24.2...v4.25.0-alpha
 [4.24.2]: https://github.com/Automattic/jetpack-sync/compare/v4.24.1...v4.24.2
 [4.24.1]: https://github.com/Automattic/jetpack-sync/compare/v4.24.0...v4.24.1
 [4.24.0]: https://github.com/Automattic/jetpack-sync/compare/v4.23.0...v4.24.0
