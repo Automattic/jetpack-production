@@ -21,7 +21,7 @@ class Woocommerce_Analytics {
 	/**
 	 * Package version.
 	 */
-	const PACKAGE_VERSION = '0.13.4-alpha';
+	const PACKAGE_VERSION = '0.13.4';
 
 	/**
 	 * Proxy speed module version.
