@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: add centralized dashboard tabs.
+- Forms: make form webhooks generally available.
 
 ### Changed
 - Update package dependencies.

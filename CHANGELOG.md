@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: make form webhooks generally available.
+
 ### Bug fixes
 - Slideshow: Ensure slideshows do not stretch to parent container width on mobile if no list height is set.
 
