@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Plans section: update 'Activate a license' text to 'Activate a new license' when user already has active licenses, and add visual separation before actions list.
+- Show module descriptions beneath titles instead of in tooltips for improved discoverability.
 - Update package dependencies.
 
 ## [5.29.2] - 2026-01-07
