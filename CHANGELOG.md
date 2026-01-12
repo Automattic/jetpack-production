@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Slideshow: Ensure slideshows do not stretch to parent container width on mobile if no list height is set.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update composer lock following Publicize changes.
+
 ## 15.5-a.1 - 2026-01-12
 ### Enhancements
 - Forms: Add form editor. [#46444]

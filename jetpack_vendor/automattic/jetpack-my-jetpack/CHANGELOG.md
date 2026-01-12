@@ -12,6 +12,12 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Show module descriptions beneath titles instead of in tooltips for improved discoverability.
 
+### Removed
+- Remove the obsolete share limits logic.
+
+### Fixed
+- UI: Prevent the modals in editor from stretching too wide on large screens.
+
 ## [5.29.3] - 2026-01-12
 ### Changed
 - Plans section: Update 'Activate a license' text to 'Activate a new license' when user already has active licenses, and add visual separation before actions list. [#46501]
