@@ -14,9 +14,6 @@ This is an alpha version! The changes listed here are not final.
 - Move publicize-components into publicize package.
 - Update package dependencies.
 
-### Removed
-- =
-
 ## [0.69.2] - 2026-01-12
 ### Changed
 - Update package dependencies. [#46456]

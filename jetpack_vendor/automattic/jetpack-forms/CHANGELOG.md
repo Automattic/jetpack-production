@@ -14,7 +14,6 @@ This is an alpha version! The changes listed here are not final.
 - Forms: make form webhooks generally available.
 
 ### Changed
-- =
 - Forms: update dataviews actions to match between old and new dashboard.
 - Forms: update form submission confirmation page with new design.
 - Update package dependencies.

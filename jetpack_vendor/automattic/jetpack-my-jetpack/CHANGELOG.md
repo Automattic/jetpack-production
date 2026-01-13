@@ -17,7 +17,6 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Removed
-- =
 - Remove the obsolete share limits logic.
 
 ### Fixed
