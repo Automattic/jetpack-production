@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: update dataviews actions to match between old and new dashboard.
 - Forms: update form submission confirmation page with new design.
+- Replace escape function in checkbox input value.
 - Update package dependencies.
 - Update read/unread status column style to match old dashboard.
 - Use Gravatar component in new dashboard inbox.
