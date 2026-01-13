@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Instant Search: Show WooCommerce product filters in filter widget
 
 ### Bug fixes
+- Shortcode: Fix broken YouTube URL on the classic editor
 - Slideshow: Ensure slideshows do not stretch to parent container width on mobile if no list height is set.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
