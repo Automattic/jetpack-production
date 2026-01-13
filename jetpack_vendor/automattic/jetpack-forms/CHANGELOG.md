@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+- Update read/unread status column style to match old dashboard.
 
 ### Removed
 - Forms: clean up all dashboard migration code (filters, methods and wrapped up code)
