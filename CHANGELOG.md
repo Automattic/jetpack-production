@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Slideshow: Ensure slideshows do not stretch to parent container width on mobile if no list height is set.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Tests: Add coverage for modules added to sync configuration mid-progress.
 - Update composer lock following Publicize changes.
 
 ## 15.5-a.1 - 2026-01-12

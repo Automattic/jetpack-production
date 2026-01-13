@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Jetpack Sync: Introduce Sync actions blacklist
 
+### Fixed
+- Jetpack Sync:  Preventing attempting to sync modules that we are not ready to sync.
+
 ## [4.24.2] - 2025-12-22
 ### Changed
 - Search Sync Settings: Add WooCommerce.com product search keywords meta to allow list. [#46290]
