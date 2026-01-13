@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: add ref attribute support for the form block.
 - Forms: make form webhooks generally available.
 - Instant Search: Show WooCommerce product filters in filter widget
 
