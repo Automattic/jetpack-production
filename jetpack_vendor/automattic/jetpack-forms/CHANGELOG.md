@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: make form webhooks generally available.
 
 ### Changed
+- Forms: update dataviews actions to match between old and new dashboard.
 - Update package dependencies.
 - Update read/unread status column style to match old dashboard.
 - Use Gravatar component in new dashboard inbox.
