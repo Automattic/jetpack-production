@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Instant Search: Add a "Show price" option to allow prices to be shown or hidden in Jetpack Instant Search results.
 
 ### Changed
+- Instant Search: Show WooCommerce product filters in filter widget.
 - Update package dependencies.
 
 ## [0.54.10] - 2026-01-12
