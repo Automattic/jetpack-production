@@ -20724,8 +20724,19 @@ function useConfigValue(key) {
 }
 
 // src/dashboard/hooks/use-create-form.ts
+var openFormLinkInNewTab = (url) => {
+  const link = document.createElement("a");
+  link.setAttribute("href", url);
+  link.setAttribute("target", "_blank");
+  link.setAttribute("rel", "noopener noreferrer");
+  link.style.display = "none";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 function useCreateForm() {
   const newFormNonce = useConfigValue("newFormNonce");
+  const isCentralFormManagementEnabled = useConfigValue("isCentralFormManagementEnabled");
   const createForm = (0, import_element59.useCallback)(
     async (formPattern) => {
       const data = new FormData();
@@ -20750,24 +20761,23 @@ function useCreateForm() {
   const openNewForm = (0, import_element59.useCallback)(
     async ({ formPattern, showPatterns, analyticsEvent }) => {
       try {
+        if (isCentralFormManagementEnabled === true) {
+          analyticsEvent?.({ formPattern: formPattern ?? "" });
+          const url = "post-new.php?post_type=jetpack_form";
+          openFormLinkInNewTab(url);
+          return;
+        }
         const postUrl = await createForm(formPattern);
         if (postUrl) {
           analyticsEvent?.({ formPattern });
           const url = `${postUrl}${showPatterns && !formPattern ? "&showJetpackFormsPatterns" : ""}`;
-          const link = document.createElement("a");
-          link.setAttribute("href", url);
-          link.setAttribute("target", "_blank");
-          link.setAttribute("rel", "noopener noreferrer");
-          link.style.display = "none";
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
+          openFormLinkInNewTab(url);
         }
       } catch (error2) {
         console.error(error2.message);
       }
     },
-    [createForm]
+    [createForm, isCentralFormManagementEnabled]
   );
   return { createForm, openNewForm };
 }
