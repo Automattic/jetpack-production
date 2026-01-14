@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Consent block: automatically set required to false when consent type is implicit
 - Forms: fix dashboard routing on wpcom.
+- Use fallback in all email rendering contexts.
 
 ## [7.3.0] - 2026-01-12
 ### Security
