@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Decouple SharePostForm component from the store by adding optional props for controlled mode.
 - Move publicize-components into publicize package.
 - Update package dependencies.
+- Use tab panel for preview and customization in the preview modal.
 
 ## [0.69.2] - 2026-01-12
 ### Changed
