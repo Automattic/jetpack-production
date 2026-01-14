@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: make form webhooks generally available.
 - Instant Search: Show WooCommerce product filters in filter widget
 - My Jetpack: Check red bubble notification async when cache is not available.
+- Sharing: Improve accessibility of sharing button texts by removing "Click to" prefix.
 
 ### Bug fixes
 - Contact Form: Fixed checkbox field value not being properly output in the classic editor form builder.
