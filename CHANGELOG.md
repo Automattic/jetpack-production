@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add ref attribute support for the form block.
 - Forms: make form webhooks generally available.
 - Instant Search: Show WooCommerce product filters in filter widget
+- My Jetpack: Check red bubble notification async when cache is not available.
 
 ### Bug fixes
 - Contact Form: Fixed checkbox field value not being properly output in the classic editor form builder.
