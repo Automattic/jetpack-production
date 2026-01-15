@@ -128,7 +128,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return x2 === y2 && (0 !== x2 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
       }
       function useSyncExternalStore$2(subscribe2, getSnapshot) {
-        didWarnOld18Alpha || void 0 === React33.startTransition || (didWarnOld18Alpha = true, console.error(
+        didWarnOld18Alpha || void 0 === React34.startTransition || (didWarnOld18Alpha = true, console.error(
           "You are using an outdated, pre-release alpha of React 18 that does not support useSyncExternalStore. The use-sync-external-store shim will not work correctly. Upgrade to a newer pre-release."
         ));
         var value = getSnapshot();
@@ -176,8 +176,8 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React33 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState42 = React33.useState, useEffect30 = React33.useEffect, useLayoutEffect4 = React33.useLayoutEffect, useDebugValue = React33.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
-      exports.useSyncExternalStore = void 0 !== React33.useSyncExternalStore ? React33.useSyncExternalStore : shim;
+      var React34 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState42 = React34.useState, useEffect30 = React34.useEffect, useLayoutEffect4 = React34.useLayoutEffect, useDebugValue = React34.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      exports.useSyncExternalStore = void 0 !== React34.useSyncExternalStore ? React34.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
   }
@@ -19281,6 +19281,7 @@ var import_element64 = __toESM(require_element());
 var import_html_entities = __toESM(require_html_entities());
 var import_i18n61 = __toESM(require_i18n());
 var import_notices2 = __toESM(require_notices());
+var React33 = __toESM(require_react());
 import { useParams, useSearch, useNavigate } from "@wordpress/route";
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
@@ -26372,6 +26373,20 @@ var DEFAULT_VIEW = {
 function getItemId(item) {
   return item.id.toString();
 }
+function styleUnreadValue(element, isUnread) {
+  if (!isUnread) {
+    return element;
+  }
+  if (typeof element === "string") {
+    return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { style: { fontWeight: 600 }, children: element });
+  }
+  if (React33.isValidElement(element)) {
+    return React33.cloneElement(element, {
+      style: { ...element.props.style || {}, fontWeight: 600 }
+    });
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { style: { fontWeight: 600 }, children: element });
+}
 function Stage() {
   const params = useParams({ from: "/responses/$view" });
   const searchParams = useSearch({ from: "/responses/$view" });
@@ -26503,10 +26518,13 @@ function Stage() {
                 useHovercard: false
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("span", { style: { display: "flex", flexDirection: "column", gap: "2px" }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { style: { fontWeight: item.is_unread ? 600 : 400 }, children: displayName }),
-              showEmail && /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { style: { fontSize: "12px", color: "#757575" }, children: item.author_email })
-            ] })
+            styleUnreadValue(
+              /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("span", { style: { display: "flex", flexDirection: "column", gap: "2px" }, children: [
+                displayName,
+                showEmail && /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { style: { fontSize: "12px", color: "#757575" }, children: item.author_email })
+              ] }),
+              item.is_unread
+            )
           ] });
         },
         getValue: ({ item }) => item.author_name || item.author_email || item.author_url || item.ip || "Anonymous",
@@ -26522,7 +26540,7 @@ function Stage() {
             month: "long",
             day: "numeric"
           });
-          return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { style: { fontWeight: item.is_unread ? 600 : 400 }, children: dateStr });
+          return styleUnreadValue(dateStr, item.is_unread);
         },
         elements: (filterOptions?.date || []).map((filter) => {
           const date = /* @__PURE__ */ new Date();
@@ -26543,14 +26561,13 @@ function Stage() {
         render: ({ item }) => {
           const source = item.entry_title || (0, import_i18n61.__)("Unknown", "jetpack-forms");
           if (item.entry_permalink) {
-            return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(
+            const link = /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(
               "a",
               {
                 href: item.entry_permalink,
                 target: "_blank",
                 rel: "noopener noreferrer",
                 style: {
-                  fontWeight: item.is_unread ? 600 : 400,
                   color: "var(--wp-admin-theme-color, #3858e9)",
                   textDecoration: "none",
                   display: "inline-flex",
@@ -26563,8 +26580,9 @@ function Stage() {
                 ]
               }
             );
+            return styleUnreadValue(link, item.is_unread);
           }
-          return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { style: { fontWeight: item.is_unread ? 600 : 400 }, children: source });
+          return styleUnreadValue(source, item.is_unread);
         },
         elements: (filterOptions?.source || []).map((source) => ({
           value: source.id.toString(),
@@ -26591,14 +26609,14 @@ function Stage() {
         label: (0, import_i18n61.__)("IP Address", "jetpack-forms"),
         render: ({ item }) => {
           if (!item.ip) {
-            return "-";
+            return styleUnreadValue("-", item.is_unread);
           }
           return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(import_jsx_runtime150.Fragment, { children: [
             /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("span", { className: "jp-forms__inbox-response-country-flag", children: [
               !item.country_code && /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(icon_default, { icon: globe_default, size: 20 }),
               item.country_code && /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(Flag, { countryCode: item.country_code })
             ] }),
-            item.ip || ""
+            styleUnreadValue(item.ip, item.is_unread)
           ] });
         },
         enableSorting: false
