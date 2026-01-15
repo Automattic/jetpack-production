@@ -17,7 +17,6 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - About Page: Fix plugin icon positioning and sizing.
 - Contact Form: Fixed checkbox field value not being properly output in the classic editor form builder.
-- Dashboard: update navigation links across settings, modules, and debugger pages to redirect to My Jetpack.
 - Shortcode: Fix broken YouTube URL on the classic editor
 - Slideshow: Ensure slideshows do not stretch to parent container width on mobile if no list height is set.
 
