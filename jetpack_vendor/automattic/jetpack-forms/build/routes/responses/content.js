@@ -909,11 +909,11 @@ var require_common = __commonJS({
         let enableOverride = null;
         let namespacesCache;
         let enabledCache;
-        function debug2(...args) {
-          if (!debug2.enabled) {
+        function debug4(...args) {
+          if (!debug4.enabled) {
             return;
           }
-          const self2 = debug2;
+          const self2 = debug4;
           const curr = Number(/* @__PURE__ */ new Date());
           const ms = curr - (prevTime || curr);
           self2.diff = ms;
@@ -943,12 +943,12 @@ var require_common = __commonJS({
           const logFn = self2.log || createDebug.log;
           logFn.apply(self2, args);
         }
-        debug2.namespace = namespace;
-        debug2.useColors = createDebug.useColors();
-        debug2.color = createDebug.selectColor(namespace);
-        debug2.extend = extend;
-        debug2.destroy = createDebug.destroy;
-        Object.defineProperty(debug2, "enabled", {
+        debug4.namespace = namespace;
+        debug4.useColors = createDebug.useColors();
+        debug4.color = createDebug.selectColor(namespace);
+        debug4.extend = extend;
+        debug4.destroy = createDebug.destroy;
+        Object.defineProperty(debug4, "enabled", {
           enumerable: true,
           configurable: false,
           get: () => {
@@ -966,9 +966,9 @@ var require_common = __commonJS({
           }
         });
         if (typeof createDebug.init === "function") {
-          createDebug.init(debug2);
+          createDebug.init(debug4);
         }
-        return debug2;
+        return debug4;
       }
       function extend(namespace, delimiter) {
         const newDebug = createDebug(this.namespace + (typeof delimiter === "undefined" ? ":" : delimiter) + namespace);
@@ -1629,9 +1629,9 @@ var require_constants = __commonJS({
 var require_debug = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/internal/debug.js"(exports, module) {
     "use strict";
-    var debug2 = typeof process === "object" && process.env && process.env.NODE_DEBUG && /\bsemver\b/i.test(process.env.NODE_DEBUG) ? (...args) => console.error("SEMVER", ...args) : () => {
+    var debug4 = typeof process === "object" && process.env && process.env.NODE_DEBUG && /\bsemver\b/i.test(process.env.NODE_DEBUG) ? (...args) => console.error("SEMVER", ...args) : () => {
     };
-    module.exports = debug2;
+    module.exports = debug4;
   }
 });
 
@@ -1644,7 +1644,7 @@ var require_re = __commonJS({
       MAX_SAFE_BUILD_LENGTH,
       MAX_LENGTH
     } = require_constants();
-    var debug2 = require_debug();
+    var debug4 = require_debug();
     exports = module.exports = {};
     var re = exports.re = [];
     var safeRe = exports.safeRe = [];
@@ -1667,7 +1667,7 @@ var require_re = __commonJS({
     var createToken = (name, value, isGlobal) => {
       const safe = makeSafeRegex(value);
       const index = R++;
-      debug2(name, index, value);
+      debug4(name, index, value);
       t2[name] = index;
       src[index] = value;
       safeSrc[index] = safe;
@@ -1771,7 +1771,7 @@ var require_identifiers = __commonJS({
 var require_semver = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/classes/semver.js"(exports, module) {
     "use strict";
-    var debug2 = require_debug();
+    var debug4 = require_debug();
     var { MAX_LENGTH, MAX_SAFE_INTEGER } = require_constants();
     var { safeRe: re, t: t2 } = require_re();
     var parseOptions = require_parse_options();
@@ -1793,7 +1793,7 @@ var require_semver = __commonJS({
             `version is longer than ${MAX_LENGTH} characters`
           );
         }
-        debug2("SemVer", version2, options);
+        debug4("SemVer", version2, options);
         this.options = options;
         this.loose = !!options.loose;
         this.includePrerelease = !!options.includePrerelease;
@@ -1841,7 +1841,7 @@ var require_semver = __commonJS({
         return this.version;
       }
       compare(other) {
-        debug2("SemVer.compare", this.version, this.options, other);
+        debug4("SemVer.compare", this.version, this.options, other);
         if (!(other instanceof _SemVer)) {
           if (typeof other === "string" && other === this.version) {
             return 0;
@@ -1892,7 +1892,7 @@ var require_semver = __commonJS({
         do {
           const a2 = this.prerelease[i2];
           const b2 = other.prerelease[i2];
-          debug2("prerelease compare", i2, a2, b2);
+          debug4("prerelease compare", i2, a2, b2);
           if (a2 === void 0 && b2 === void 0) {
             return 0;
           } else if (b2 === void 0) {
@@ -1914,7 +1914,7 @@ var require_semver = __commonJS({
         do {
           const a2 = this.build[i2];
           const b2 = other.build[i2];
-          debug2("build compare", i2, a2, b2);
+          debug4("build compare", i2, a2, b2);
           if (a2 === void 0 && b2 === void 0) {
             return 0;
           } else if (b2 === void 0) {
@@ -2542,21 +2542,21 @@ var require_range = __commonJS({
         const loose = this.options.loose;
         const hr = loose ? re[t2.HYPHENRANGELOOSE] : re[t2.HYPHENRANGE];
         range = range.replace(hr, hyphenReplace(this.options.includePrerelease));
-        debug2("hyphen replace", range);
+        debug4("hyphen replace", range);
         range = range.replace(re[t2.COMPARATORTRIM], comparatorTrimReplace);
-        debug2("comparator trim", range);
+        debug4("comparator trim", range);
         range = range.replace(re[t2.TILDETRIM], tildeTrimReplace);
-        debug2("tilde trim", range);
+        debug4("tilde trim", range);
         range = range.replace(re[t2.CARETTRIM], caretTrimReplace);
-        debug2("caret trim", range);
+        debug4("caret trim", range);
         let rangeList = range.split(" ").map((comp) => parseComparator(comp, this.options)).join(" ").split(/\s+/).map((comp) => replaceGTE0(comp, this.options));
         if (loose) {
           rangeList = rangeList.filter((comp) => {
-            debug2("loose invalid filter", comp, this.options);
+            debug4("loose invalid filter", comp, this.options);
             return !!comp.match(re[t2.COMPARATORLOOSE]);
           });
         }
-        debug2("range list", rangeList);
+        debug4("range list", rangeList);
         const rangeMap = /* @__PURE__ */ new Map();
         const comparators = rangeList.map((comp) => new Comparator(comp, this.options));
         for (const comp of comparators) {
@@ -2611,7 +2611,7 @@ var require_range = __commonJS({
     var cache = new LRU();
     var parseOptions = require_parse_options();
     var Comparator = require_comparator();
-    var debug2 = require_debug();
+    var debug4 = require_debug();
     var SemVer = require_semver();
     var {
       safeRe: re,
@@ -2637,15 +2637,15 @@ var require_range = __commonJS({
     };
     var parseComparator = (comp, options) => {
       comp = comp.replace(re[t2.BUILD], "");
-      debug2("comp", comp, options);
+      debug4("comp", comp, options);
       comp = replaceCarets(comp, options);
-      debug2("caret", comp);
+      debug4("caret", comp);
       comp = replaceTildes(comp, options);
-      debug2("tildes", comp);
+      debug4("tildes", comp);
       comp = replaceXRanges(comp, options);
-      debug2("xrange", comp);
+      debug4("xrange", comp);
       comp = replaceStars(comp, options);
-      debug2("stars", comp);
+      debug4("stars", comp);
       return comp;
     };
     var isX = (id) => !id || id.toLowerCase() === "x" || id === "*";
@@ -2655,7 +2655,7 @@ var require_range = __commonJS({
     var replaceTilde = (comp, options) => {
       const r3 = options.loose ? re[t2.TILDELOOSE] : re[t2.TILDE];
       return comp.replace(r3, (_, M2, m2, p2, pr) => {
-        debug2("tilde", comp, _, M2, m2, p2, pr);
+        debug4("tilde", comp, _, M2, m2, p2, pr);
         let ret;
         if (isX(M2)) {
           ret = "";
@@ -2664,12 +2664,12 @@ var require_range = __commonJS({
         } else if (isX(p2)) {
           ret = `>=${M2}.${m2}.0 <${M2}.${+m2 + 1}.0-0`;
         } else if (pr) {
-          debug2("replaceTilde pr", pr);
+          debug4("replaceTilde pr", pr);
           ret = `>=${M2}.${m2}.${p2}-${pr} <${M2}.${+m2 + 1}.0-0`;
         } else {
           ret = `>=${M2}.${m2}.${p2} <${M2}.${+m2 + 1}.0-0`;
         }
-        debug2("tilde return", ret);
+        debug4("tilde return", ret);
         return ret;
       });
     };
@@ -2677,11 +2677,11 @@ var require_range = __commonJS({
       return comp.trim().split(/\s+/).map((c2) => replaceCaret(c2, options)).join(" ");
     };
     var replaceCaret = (comp, options) => {
-      debug2("caret", comp, options);
+      debug4("caret", comp, options);
       const r3 = options.loose ? re[t2.CARETLOOSE] : re[t2.CARET];
       const z = options.includePrerelease ? "-0" : "";
       return comp.replace(r3, (_, M2, m2, p2, pr) => {
-        debug2("caret", comp, _, M2, m2, p2, pr);
+        debug4("caret", comp, _, M2, m2, p2, pr);
         let ret;
         if (isX(M2)) {
           ret = "";
@@ -2694,7 +2694,7 @@ var require_range = __commonJS({
             ret = `>=${M2}.${m2}.0${z} <${+M2 + 1}.0.0-0`;
           }
         } else if (pr) {
-          debug2("replaceCaret pr", pr);
+          debug4("replaceCaret pr", pr);
           if (M2 === "0") {
             if (m2 === "0") {
               ret = `>=${M2}.${m2}.${p2}-${pr} <${M2}.${m2}.${+p2 + 1}-0`;
@@ -2705,7 +2705,7 @@ var require_range = __commonJS({
             ret = `>=${M2}.${m2}.${p2}-${pr} <${+M2 + 1}.0.0-0`;
           }
         } else {
-          debug2("no pr");
+          debug4("no pr");
           if (M2 === "0") {
             if (m2 === "0") {
               ret = `>=${M2}.${m2}.${p2}${z} <${M2}.${m2}.${+p2 + 1}-0`;
@@ -2716,19 +2716,19 @@ var require_range = __commonJS({
             ret = `>=${M2}.${m2}.${p2} <${+M2 + 1}.0.0-0`;
           }
         }
-        debug2("caret return", ret);
+        debug4("caret return", ret);
         return ret;
       });
     };
     var replaceXRanges = (comp, options) => {
-      debug2("replaceXRanges", comp, options);
+      debug4("replaceXRanges", comp, options);
       return comp.split(/\s+/).map((c2) => replaceXRange(c2, options)).join(" ");
     };
     var replaceXRange = (comp, options) => {
       comp = comp.trim();
       const r3 = options.loose ? re[t2.XRANGELOOSE] : re[t2.XRANGE];
       return comp.replace(r3, (ret, gtlt, M2, m2, p2, pr) => {
-        debug2("xRange", comp, ret, gtlt, M2, m2, p2, pr);
+        debug4("xRange", comp, ret, gtlt, M2, m2, p2, pr);
         const xM = isX(M2);
         const xm = xM || isX(m2);
         const xp = xm || isX(p2);
@@ -2775,16 +2775,16 @@ var require_range = __commonJS({
         } else if (xp) {
           ret = `>=${M2}.${m2}.0${pr} <${M2}.${+m2 + 1}.0-0`;
         }
-        debug2("xRange return", ret);
+        debug4("xRange return", ret);
         return ret;
       });
     };
     var replaceStars = (comp, options) => {
-      debug2("replaceStars", comp, options);
+      debug4("replaceStars", comp, options);
       return comp.trim().replace(re[t2.STAR], "");
     };
     var replaceGTE0 = (comp, options) => {
-      debug2("replaceGTE0", comp, options);
+      debug4("replaceGTE0", comp, options);
       return comp.trim().replace(re[options.includePrerelease ? t2.GTE0PRE : t2.GTE0], "");
     };
     var hyphenReplace = (incPr) => ($0, from, fM, fm, fp, fpr, fb, to, tM, tm, tp, tpr) => {
@@ -2822,7 +2822,7 @@ var require_range = __commonJS({
       }
       if (version2.prerelease.length && !options.includePrerelease) {
         for (let i2 = 0; i2 < set2.length; i2++) {
-          debug2(set2[i2].semver);
+          debug4(set2[i2].semver);
           if (set2[i2].semver === Comparator.ANY) {
             continue;
           }
@@ -2859,7 +2859,7 @@ var require_comparator = __commonJS({
           }
         }
         comp = comp.trim().split(/\s+/).join(" ");
-        debug2("comparator", comp, options);
+        debug4("comparator", comp, options);
         this.options = options;
         this.loose = !!options.loose;
         this.parse(comp);
@@ -2868,7 +2868,7 @@ var require_comparator = __commonJS({
         } else {
           this.value = this.operator + this.semver.version;
         }
-        debug2("comp", this);
+        debug4("comp", this);
       }
       parse(comp) {
         const r3 = this.options.loose ? re[t2.COMPARATORLOOSE] : re[t2.COMPARATOR];
@@ -2890,7 +2890,7 @@ var require_comparator = __commonJS({
         return this.value;
       }
       test(version2) {
-        debug2("Comparator.test", version2, this.options.loose);
+        debug4("Comparator.test", version2, this.options.loose);
         if (this.semver === ANY || version2 === ANY) {
           return true;
         }
@@ -2947,7 +2947,7 @@ var require_comparator = __commonJS({
     var parseOptions = require_parse_options();
     var { safeRe: re, t: t2 } = require_re();
     var cmp = require_cmp();
-    var debug2 = require_debug();
+    var debug4 = require_debug();
     var SemVer = require_semver();
     var Range = require_range();
   }
@@ -19276,7 +19276,7 @@ DataViewsSubComponents.Footer = DataViewsFooter;
 var dataviews_default = DataViewsSubComponents;
 
 // routes/responses/stage.tsx
-var import_date8 = __toESM(require_date());
+var import_date9 = __toESM(require_date());
 var import_element64 = __toESM(require_element());
 var import_html_entities = __toESM(require_html_entities());
 var import_i18n61 = __toESM(require_i18n());
@@ -25861,6 +25861,785 @@ var Tab = (0, import_react29.forwardRef)(function Tab2({ className, children, ..
   );
 });
 
+// ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
+var import_date8 = __toESM(require_date(), 1);
+
+// ../../js-packages/number-formatters/dist/esm/constants.js
+var FALLBACK_LOCALE = "en";
+var FALLBACK_CURRENCY = "USD";
+
+// ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
+var import_debug3 = __toESM(require_browser(), 1);
+
+// ../../js-packages/number-formatters/dist/esm/get-cached-formatter.js
+var import_debug2 = __toESM(require_browser(), 1);
+var debug2 = (0, import_debug2.default)("number-formatters:get-cached-formatter");
+var formatterCache = /* @__PURE__ */ new Map();
+function getCachedFormatter({ locale, fallbackLocale = FALLBACK_LOCALE, options, retries = 1 }) {
+  const cacheKey = JSON.stringify([locale, options]);
+  try {
+    return formatterCache.get(cacheKey) ?? formatterCache.set(cacheKey, new Intl.NumberFormat(locale, options)).get(cacheKey);
+  } catch (error2) {
+    debug2(`Intl.NumberFormat was called with a non-existent locale "${locale}"; falling back to ${fallbackLocale}`);
+    if (retries) {
+      return getCachedFormatter({
+        locale: fallbackLocale,
+        options,
+        retries: retries - 1
+      });
+    }
+    throw error2;
+  }
+}
+
+// ../../js-packages/number-formatters/dist/esm/number-format-currency/currencies.js
+var defaultCurrencyOverrides = {
+  AED: {
+    symbol: "\u062F.\u0625.\u200F"
+  },
+  AFN: {
+    symbol: "\u060B"
+  },
+  ALL: {
+    symbol: "Lek"
+  },
+  AMD: {
+    symbol: "\u058F"
+  },
+  ANG: {
+    symbol: "\u0192"
+  },
+  AOA: {
+    symbol: "Kz"
+  },
+  ARS: {
+    symbol: "$"
+  },
+  AUD: {
+    symbol: "A$"
+  },
+  AWG: {
+    symbol: "\u0192"
+  },
+  AZN: {
+    symbol: "\u20BC"
+  },
+  BAM: {
+    symbol: "\u041A\u041C"
+  },
+  BBD: {
+    symbol: "Bds$"
+  },
+  BDT: {
+    symbol: "\u09F3"
+  },
+  BGN: {
+    symbol: "\u043B\u0432."
+  },
+  BHD: {
+    symbol: "\u062F.\u0628.\u200F"
+  },
+  BIF: {
+    symbol: "FBu"
+  },
+  BMD: {
+    symbol: "$"
+  },
+  BND: {
+    symbol: "$"
+  },
+  BOB: {
+    symbol: "Bs"
+  },
+  BRL: {
+    symbol: "R$"
+  },
+  BSD: {
+    symbol: "$"
+  },
+  BTC: {
+    symbol: "\u0243"
+  },
+  BTN: {
+    symbol: "Nu."
+  },
+  BWP: {
+    symbol: "P"
+  },
+  BYR: {
+    symbol: "\u0440."
+  },
+  BZD: {
+    symbol: "BZ$"
+  },
+  CAD: {
+    symbol: "C$"
+  },
+  CDF: {
+    symbol: "FC"
+  },
+  CHF: {
+    symbol: "CHF"
+  },
+  CLP: {
+    symbol: "$"
+  },
+  CNY: {
+    symbol: "\xA5"
+  },
+  COP: {
+    symbol: "$"
+  },
+  CRC: {
+    symbol: "\u20A1"
+  },
+  CUC: {
+    symbol: "CUC"
+  },
+  CUP: {
+    symbol: "$MN"
+  },
+  CVE: {
+    symbol: "$"
+  },
+  CZK: {
+    symbol: "K\u010D"
+  },
+  DJF: {
+    symbol: "Fdj"
+  },
+  DKK: {
+    symbol: "kr."
+  },
+  DOP: {
+    symbol: "RD$"
+  },
+  DZD: {
+    symbol: "\u062F.\u062C.\u200F"
+  },
+  EGP: {
+    symbol: "\u062C.\u0645.\u200F"
+  },
+  ERN: {
+    symbol: "Nfk"
+  },
+  ETB: {
+    symbol: "ETB"
+  },
+  EUR: {
+    symbol: "\u20AC"
+  },
+  FJD: {
+    symbol: "FJ$"
+  },
+  FKP: {
+    symbol: "\xA3"
+  },
+  GBP: {
+    symbol: "\xA3"
+  },
+  GEL: {
+    symbol: "Lari"
+  },
+  GHS: {
+    symbol: "\u20B5"
+  },
+  GIP: {
+    symbol: "\xA3"
+  },
+  GMD: {
+    symbol: "D"
+  },
+  GNF: {
+    symbol: "FG"
+  },
+  GTQ: {
+    symbol: "Q"
+  },
+  GYD: {
+    symbol: "G$"
+  },
+  HKD: {
+    symbol: "HK$"
+  },
+  HNL: {
+    symbol: "L."
+  },
+  HRK: {
+    symbol: "kn"
+  },
+  HTG: {
+    symbol: "G"
+  },
+  HUF: {
+    symbol: "Ft"
+  },
+  IDR: {
+    symbol: "Rp"
+  },
+  ILS: {
+    symbol: "\u20AA"
+  },
+  INR: {
+    symbol: "\u20B9"
+  },
+  IQD: {
+    symbol: "\u062F.\u0639.\u200F"
+  },
+  IRR: {
+    symbol: "\uFDFC"
+  },
+  ISK: {
+    symbol: "kr."
+  },
+  JMD: {
+    symbol: "J$"
+  },
+  JOD: {
+    symbol: "\u062F.\u0627.\u200F"
+  },
+  JPY: {
+    symbol: "\xA5"
+  },
+  KES: {
+    symbol: "S"
+  },
+  KGS: {
+    symbol: "\u0441\u043E\u043C"
+  },
+  KHR: {
+    symbol: "\u17DB"
+  },
+  KMF: {
+    symbol: "CF"
+  },
+  KPW: {
+    symbol: "\u20A9"
+  },
+  KRW: {
+    symbol: "\u20A9"
+  },
+  KWD: {
+    symbol: "\u062F.\u0643.\u200F"
+  },
+  KYD: {
+    symbol: "$"
+  },
+  KZT: {
+    symbol: "\u20B8"
+  },
+  LAK: {
+    symbol: "\u20AD"
+  },
+  LBP: {
+    symbol: "\u0644.\u0644.\u200F"
+  },
+  LKR: {
+    symbol: "\u20A8"
+  },
+  LRD: {
+    symbol: "L$"
+  },
+  LSL: {
+    symbol: "M"
+  },
+  LYD: {
+    symbol: "\u062F.\u0644.\u200F"
+  },
+  MAD: {
+    symbol: "\u062F.\u0645.\u200F"
+  },
+  MDL: {
+    symbol: "lei"
+  },
+  MGA: {
+    symbol: "Ar"
+  },
+  MKD: {
+    symbol: "\u0434\u0435\u043D."
+  },
+  MMK: {
+    symbol: "K"
+  },
+  MNT: {
+    symbol: "\u20AE"
+  },
+  MOP: {
+    symbol: "MOP$"
+  },
+  MRO: {
+    symbol: "UM"
+  },
+  MTL: {
+    symbol: "\u20A4"
+  },
+  MUR: {
+    symbol: "\u20A8"
+  },
+  MVR: {
+    symbol: "MVR"
+  },
+  MWK: {
+    symbol: "MK"
+  },
+  MXN: {
+    symbol: "MX$"
+  },
+  MYR: {
+    symbol: "RM"
+  },
+  MZN: {
+    symbol: "MT"
+  },
+  NAD: {
+    symbol: "N$"
+  },
+  NGN: {
+    symbol: "\u20A6"
+  },
+  NIO: {
+    symbol: "C$"
+  },
+  NOK: {
+    symbol: "kr"
+  },
+  NPR: {
+    symbol: "\u20A8"
+  },
+  NZD: {
+    symbol: "NZ$"
+  },
+  OMR: {
+    symbol: "\uFDFC"
+  },
+  PAB: {
+    symbol: "B/."
+  },
+  PEN: {
+    symbol: "S/."
+  },
+  PGK: {
+    symbol: "K"
+  },
+  PHP: {
+    symbol: "\u20B1"
+  },
+  PKR: {
+    symbol: "\u20A8"
+  },
+  PLN: {
+    symbol: "z\u0142"
+  },
+  PYG: {
+    symbol: "\u20B2"
+  },
+  QAR: {
+    symbol: "\uFDFC"
+  },
+  RON: {
+    symbol: "lei"
+  },
+  RSD: {
+    symbol: "\u0414\u0438\u043D."
+  },
+  RUB: {
+    symbol: "\u20BD"
+  },
+  RWF: {
+    symbol: "RWF"
+  },
+  SAR: {
+    symbol: "\uFDFC"
+  },
+  SBD: {
+    symbol: "S$"
+  },
+  SCR: {
+    symbol: "\u20A8"
+  },
+  SDD: {
+    symbol: "LSd"
+  },
+  SDG: {
+    symbol: "\xA3\u200F"
+  },
+  SEK: {
+    symbol: "kr"
+  },
+  SGD: {
+    symbol: "S$"
+  },
+  SHP: {
+    symbol: "\xA3"
+  },
+  SLL: {
+    symbol: "Le"
+  },
+  SOS: {
+    symbol: "S"
+  },
+  SRD: {
+    symbol: "$"
+  },
+  STD: {
+    symbol: "Db"
+  },
+  SVC: {
+    symbol: "\u20A1"
+  },
+  SYP: {
+    symbol: "\xA3"
+  },
+  SZL: {
+    symbol: "E"
+  },
+  THB: {
+    symbol: "\u0E3F"
+  },
+  TJS: {
+    symbol: "TJS"
+  },
+  TMT: {
+    symbol: "m"
+  },
+  TND: {
+    symbol: "\u062F.\u062A.\u200F"
+  },
+  TOP: {
+    symbol: "T$"
+  },
+  TRY: {
+    symbol: "TL"
+  },
+  TTD: {
+    symbol: "TT$"
+  },
+  TVD: {
+    symbol: "$T"
+  },
+  TWD: {
+    symbol: "NT$"
+  },
+  TZS: {
+    symbol: "TSh"
+  },
+  UAH: {
+    symbol: "\u20B4"
+  },
+  UGX: {
+    symbol: "USh"
+  },
+  USD: {
+    // No override. Do what the locale thinks is best.
+  },
+  UYU: {
+    symbol: "$U"
+  },
+  UZS: {
+    symbol: "\u0441\u045E\u043C"
+  },
+  VEB: {
+    symbol: "Bs."
+  },
+  VEF: {
+    symbol: "Bs. F."
+  },
+  VND: {
+    symbol: "\u20AB"
+  },
+  VUV: {
+    symbol: "VT"
+  },
+  WST: {
+    symbol: "WS$"
+  },
+  XAF: {
+    symbol: "F"
+  },
+  XCD: {
+    symbol: "$"
+  },
+  XOF: {
+    symbol: "F"
+  },
+  XPF: {
+    symbol: "F"
+  },
+  YER: {
+    symbol: "\uFDFC"
+  },
+  ZAR: {
+    symbol: "R"
+  },
+  ZMW: {
+    symbol: "ZK"
+  },
+  WON: {
+    symbol: "\u20A9"
+  }
+};
+
+// ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
+var debug3 = (0, import_debug3.default)("number-formatters:number-format-currency");
+function getCurrencyOverride(currency, geoLocation) {
+  if (currency === "USD" && geoLocation && geoLocation !== "" && geoLocation !== "US") {
+    return { symbol: "US$" };
+  }
+  return defaultCurrencyOverrides[currency];
+}
+function getValidCurrency(currency, geoLocation) {
+  if (!getCurrencyOverride(currency, geoLocation)) {
+    debug3(`getValidCurrency was called with a non-existent currency "${currency}"; falling back to ${FALLBACK_CURRENCY}`);
+    return FALLBACK_CURRENCY;
+  }
+  return currency;
+}
+function getCurrencyFormatter({ number, currency, browserSafeLocale, forceLatin = true, stripZeros, signForPositive }) {
+  const locale = `${browserSafeLocale}${forceLatin ? "-u-nu-latn" : ""}`;
+  const numberFormatOptions = {
+    style: "currency",
+    currency,
+    ...stripZeros && Number.isInteger(number) && {
+      /**
+       * There's an option called `trailingZeroDisplay` but it does not yet work
+       * in FF so we have to strip zeros manually.
+       */
+      maximumFractionDigits: 0,
+      minimumFractionDigits: 0
+    },
+    ...signForPositive && { signDisplay: "exceptZero" }
+  };
+  return getCachedFormatter({
+    locale,
+    options: numberFormatOptions
+  });
+}
+function getPrecisionForLocaleAndCurrency(browserSafeLocale, currency, forceLatin) {
+  const formatter = getCurrencyFormatter({ number: 0, currency, browserSafeLocale, forceLatin });
+  return formatter.resolvedOptions().maximumFractionDigits;
+}
+function scaleNumberForPrecision(number, currencyPrecision) {
+  const scale = Math.pow(10, currencyPrecision);
+  return Math.round(number * scale) / scale;
+}
+function prepareNumberForFormatting(number, currencyPrecision, isSmallestUnit) {
+  if (isNaN(number)) {
+    debug3("formatCurrency was called with NaN");
+    return 0;
+  }
+  if (isSmallestUnit) {
+    if (!Number.isInteger(number)) {
+      debug3("formatCurrency was called with isSmallestUnit and a float which will be rounded", number);
+    }
+    const smallestUnitDivisor = 10 ** currencyPrecision;
+    return scaleNumberForPrecision(Math.round(number) / smallestUnitDivisor, currencyPrecision);
+  }
+  return scaleNumberForPrecision(number, currencyPrecision);
+}
+var numberFormatCurrency = ({ number, browserSafeLocale, currency, stripZeros, isSmallestUnit, signForPositive, geoLocation, forceLatin }) => {
+  const validCurrency = getValidCurrency(currency, geoLocation);
+  const currencyOverride = getCurrencyOverride(validCurrency, geoLocation);
+  const currencyPrecision = getPrecisionForLocaleAndCurrency(browserSafeLocale, validCurrency, forceLatin);
+  if (isSmallestUnit && typeof currencyPrecision === "undefined") {
+    throw new Error(`Could not determine currency precision for ${validCurrency} in ${browserSafeLocale}`);
+  }
+  const numberAsFloat = prepareNumberForFormatting(number, currencyPrecision ?? 0, isSmallestUnit);
+  const formatter = getCurrencyFormatter({
+    number: numberAsFloat,
+    currency: validCurrency,
+    browserSafeLocale,
+    forceLatin,
+    stripZeros,
+    signForPositive
+  });
+  const parts = formatter.formatToParts(numberAsFloat);
+  return parts.reduce((formatted, part) => {
+    switch (part.type) {
+      case "currency":
+        if (currencyOverride?.symbol) {
+          return formatted + currencyOverride.symbol;
+        }
+        return formatted + part.value;
+      default:
+        return formatted + part.value;
+    }
+  }, "");
+};
+var getCurrencyObject = ({ number, browserSafeLocale, currency, stripZeros, isSmallestUnit, signForPositive, geoLocation, forceLatin }) => {
+  const validCurrency = getValidCurrency(currency, geoLocation);
+  const currencyOverride = getCurrencyOverride(validCurrency, geoLocation);
+  const currencyPrecision = getPrecisionForLocaleAndCurrency(browserSafeLocale, validCurrency, forceLatin);
+  const numberAsFloat = prepareNumberForFormatting(number, currencyPrecision ?? 0, isSmallestUnit);
+  const formatter = getCurrencyFormatter({
+    number: numberAsFloat,
+    currency: validCurrency,
+    browserSafeLocale,
+    forceLatin,
+    stripZeros,
+    signForPositive
+  });
+  const parts = formatter.formatToParts(numberAsFloat);
+  let sign = "";
+  let symbol3 = "$";
+  let symbolPosition = "before";
+  let hasAmountBeenSet = false;
+  let hasDecimalBeenSet = false;
+  let integer = "";
+  let fraction = "";
+  parts.forEach((part) => {
+    switch (part.type) {
+      case "currency":
+        symbol3 = currencyOverride?.symbol ?? part.value;
+        if (hasAmountBeenSet) {
+          symbolPosition = "after";
+        }
+        return;
+      case "group":
+        integer += part.value;
+        hasAmountBeenSet = true;
+        return;
+      case "decimal":
+        fraction += part.value;
+        hasAmountBeenSet = true;
+        hasDecimalBeenSet = true;
+        return;
+      case "integer":
+        integer += part.value;
+        hasAmountBeenSet = true;
+        return;
+      case "fraction":
+        fraction += part.value;
+        hasAmountBeenSet = true;
+        hasDecimalBeenSet = true;
+        return;
+      case "minusSign":
+        sign = "-";
+        return;
+      case "plusSign":
+        sign = "+";
+    }
+  });
+  const hasNonZeroFraction = !Number.isInteger(numberAsFloat) && hasDecimalBeenSet;
+  return {
+    sign,
+    symbol: symbol3,
+    symbolPosition,
+    integer,
+    fraction,
+    hasNonZeroFraction
+  };
+};
+
+// ../../js-packages/number-formatters/dist/esm/number-format.js
+var numberFormat = ({ browserSafeLocale, decimals = 0, forceLatin = true, numberFormatOptions = {} }) => {
+  const locale = `${browserSafeLocale}${forceLatin ? "-u-nu-latn" : ""}`;
+  const options = {
+    minimumFractionDigits: decimals,
+    // minimumFractionDigits default is 0
+    maximumFractionDigits: decimals,
+    // maximumFractionDigits default is the greater between minimumFractionDigits and 3
+    ...numberFormatOptions
+  };
+  return getCachedFormatter({ locale, options });
+};
+var numberFormatCompact = ({ numberFormatOptions = {}, ...params }) => numberFormat({
+  ...params,
+  numberFormatOptions: {
+    notation: "compact",
+    maximumFractionDigits: 1,
+    ...numberFormatOptions
+  }
+});
+
+// ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
+function createNumberFormatters() {
+  let localeState;
+  let geoLocationState;
+  const setLocale2 = (locale) => {
+    localeState = locale;
+  };
+  const getBrowserSafeLocale = () => {
+    const { l10n: { locale: localeFromUserSettings } } = (0, import_date8.getSettings)();
+    return (localeState ?? (localeFromUserSettings || global?.window?.navigator?.language) ?? FALLBACK_LOCALE).split("_")[0];
+  };
+  const setGeoLocation2 = (geoLocation) => {
+    geoLocationState = geoLocation;
+  };
+  const formatNumber2 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
+    try {
+      const formatter = numberFormat({
+        browserSafeLocale: getBrowserSafeLocale(),
+        decimals,
+        forceLatin,
+        numberFormatOptions
+      });
+      return formatter.format(number);
+    } catch {
+      return String(number);
+    }
+  };
+  const formatNumberCompact2 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
+    try {
+      const formatter = numberFormatCompact({
+        browserSafeLocale: getBrowserSafeLocale(),
+        decimals,
+        forceLatin,
+        numberFormatOptions
+      });
+      return formatter.format(number);
+    } catch {
+      return String(number);
+    }
+  };
+  const formatCurrency2 = (number, currency, { stripZeros = false, isSmallestUnit = false, signForPositive = false, forceLatin = true } = {}) => {
+    return numberFormatCurrency({
+      number,
+      currency,
+      browserSafeLocale: getBrowserSafeLocale(),
+      stripZeros,
+      isSmallestUnit,
+      signForPositive,
+      geoLocation: geoLocationState,
+      forceLatin
+    });
+  };
+  const getCurrencyObject3 = (number, currency, { stripZeros = false, isSmallestUnit = false, signForPositive = false, forceLatin = true } = {}) => {
+    return getCurrencyObject({
+      number,
+      currency,
+      browserSafeLocale: getBrowserSafeLocale(),
+      stripZeros,
+      isSmallestUnit,
+      signForPositive,
+      geoLocation: geoLocationState,
+      forceLatin
+    });
+  };
+  return {
+    setLocale: setLocale2,
+    setGeoLocation: setGeoLocation2,
+    formatNumber: formatNumber2,
+    formatNumberCompact: formatNumberCompact2,
+    formatCurrency: formatCurrency2,
+    getCurrencyObject: getCurrencyObject3
+  };
+}
+var create_number_formatters_default = createNumberFormatters;
+
+// ../../js-packages/number-formatters/dist/esm/index.js
+var defaultFormatter = create_number_formatters_default();
+var { setLocale, setGeoLocation, formatNumber, formatNumberCompact, formatCurrency, getCurrencyObject: getCurrencyObject2 } = defaultFormatter;
+
+// src/dashboard/inbox/utils.js
+var getPath = (item) => {
+  try {
+    const url = new URL(item.entry_permalink);
+    return url.pathname;
+  } catch {
+    return "";
+  }
+};
+
 // src/dashboard/store/index.js
 var import_data10 = __toESM(require_data(), 1);
 
@@ -26548,7 +27327,7 @@ function Stage() {
           date.setMonth(filter.month - 1);
           date.setFullYear(filter.year);
           return {
-            label: (0, import_date8.dateI18n)((0, import_i18n61.__)("F Y", "jetpack-forms"), date),
+            label: (0, import_date9.dateI18n)((0, import_i18n61.__)("F Y", "jetpack-forms"), date),
             value: `${filter.year}/${filter.month}`
           };
         }),
@@ -26559,28 +27338,12 @@ function Stage() {
         id: "source",
         label: (0, import_i18n61.__)("Source", "jetpack-forms"),
         render: ({ item }) => {
-          const source = item.entry_title || (0, import_i18n61.__)("Unknown", "jetpack-forms");
+          const source = item.entry_title || getPath(item) || (0, import_i18n61.__)("(no title)", "jetpack-forms");
           if (item.entry_permalink) {
-            const link = /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(
-              "a",
-              {
-                href: item.entry_permalink,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                style: {
-                  color: "var(--wp-admin-theme-color, #3858e9)",
-                  textDecoration: "none",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "4px"
-                },
-                children: [
-                  source,
-                  /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { "aria-hidden": "true", children: "\u2197" })
-                ]
-              }
+            return styleUnreadValue(
+              /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(import_components67.ExternalLink, { href: item.entry_permalink, children: source }),
+              item.is_unread
             );
-            return styleUnreadValue(link, item.is_unread);
           }
           return styleUnreadValue(source, item.is_unread);
         },
@@ -27330,7 +28093,7 @@ var import_api_fetch8 = __toESM(require_api_fetch());
 var import_components71 = __toESM(require_components());
 var import_core_data2 = __toESM(require_core_data());
 var import_data13 = __toESM(require_data());
-var import_date9 = __toESM(require_date());
+var import_date10 = __toESM(require_date());
 var import_element67 = __toESM(require_element());
 var import_html_entities2 = __toESM(require_html_entities());
 var import_i18n63 = __toESM(require_i18n());
@@ -27869,7 +28632,7 @@ function SingleResponseView({
     return /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("div", { style: { padding: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("p", { children: (0, import_i18n63.__)("Response not found.", "jetpack-forms") }) });
   }
   const displayName = getDisplayName(response);
-  const dateSettings = (0, import_date9.getSettings)();
+  const dateSettings = (0, import_date10.getSettings)();
   const gravatarEmail = response.author_email || response.ip;
   const defaultImage = response.author_name || response.author_email ? "initials" : "mp";
   const responseAuthorEmailParts = response.author_email?.split("@") ?? [];
@@ -27943,8 +28706,8 @@ function SingleResponseView({
           /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("td", { style: { padding: "6px 0" }, children: (0, import_i18n63.sprintf)(
             /* Translators: %1$s is the date, %2$s is the time. */
             (0, import_i18n63.__)("%1$s at %2$s", "jetpack-forms"),
-            (0, import_date9.dateI18n)(dateSettings.formats.date, response.date),
-            (0, import_date9.dateI18n)(dateSettings.formats.time, response.date)
+            (0, import_date10.dateI18n)(dateSettings.formats.date, response.date),
+            (0, import_date10.dateI18n)(dateSettings.formats.time, response.date)
           ) })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)("tr", { children: [

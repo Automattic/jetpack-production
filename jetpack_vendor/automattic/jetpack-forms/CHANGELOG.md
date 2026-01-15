@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Replace escape function in checkbox input value.
 - Update package dependencies.
 - Update read/unread status column style to match old dashboard.
+- Update source link to use ExternalLink in new dashboard.
 - Use Gravatar component in new dashboard inbox.
 - Use wrapper function to mark unread rows in new dashboard.
 

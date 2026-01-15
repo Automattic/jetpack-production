@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Slideshow: Ensure slideshows do not stretch to parent container width on mobile if no list height is set.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- E2E: pre-build number-formatter package in E2E run.
 - Forms: update E2E test to match new form submission confirmation heading.
 - Newsletter: Work on new UI, not available yet.
 - Tests: Add coverage for modules added to sync configuration mid-progress.
