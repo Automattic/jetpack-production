@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Command Palette: Add site switcher command to quickly switch between WordPress.com connected sites
 - Forms: add ref attribute support for the form block.
 - Forms: make form webhooks generally available.
 - Instant Search: Show WooCommerce product filters in filter widget
