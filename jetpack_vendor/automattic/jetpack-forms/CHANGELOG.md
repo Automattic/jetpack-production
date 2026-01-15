@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update form submission confirmation page with new design.
 - Implement IP flag in new WP Build dashboard.
 - Replace escape function in checkbox input value.
+- Split wp build dashboard Inspector into multiple files"
 - Update package dependencies.
 - Update read/unread status column style to match old dashboard.
 - Update source link to use ExternalLink in new dashboard.
