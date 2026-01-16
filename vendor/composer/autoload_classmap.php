@@ -124,6 +124,7 @@ return array(
     'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Field' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-field.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Plugin' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-plugin.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Shortcode' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-shortcode.php',
+    'Automattic\\Jetpack\\Forms\\ContactForm\\Country_Code_Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/trait-country-code-utils.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Editor_View' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-editor-view.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback_Author' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback-author.php',
