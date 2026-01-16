@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add tablet device detection to the 'device' event property, distinguishing between mobile, tablet, and desktop devices
 
+### Changed
+- Update package dependencies.
+
 ## [0.13.4] - 2026-01-12
 ### Changed
 - Update package dependencies. [#46456]

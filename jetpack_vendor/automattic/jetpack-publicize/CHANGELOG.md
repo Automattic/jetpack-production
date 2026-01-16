@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Disable customization form when connection is disabled.
+- Update package dependencies.
 
 ## [0.70.0] - 2026-01-14
 ### Changed

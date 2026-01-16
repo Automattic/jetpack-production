@@ -2844,7 +2844,7 @@ var require_range = __commonJS({
 var require_comparator = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/classes/comparator.js"(exports, module) {
     "use strict";
-    var ANY = Symbol("SemVer ANY");
+    var ANY = /* @__PURE__ */ Symbol("SemVer ANY");
     var Comparator = class _Comparator {
       static get ANY() {
         return ANY;
@@ -4140,7 +4140,7 @@ var JetpackLogo = ({ logoColor = "#069e08", showText = true, className, height =
 };
 var jetpack_logo_default = JetpackLogo;
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/icon/index.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/icon/index.mjs
 var import_element = __toESM(require_element(), 1);
 var icon_default = (0, import_element.forwardRef)(
   ({ icon, size = 24, ...props }, ref) => {
@@ -4153,32 +4153,32 @@ var icon_default = (0, import_element.forwardRef)(
   }
 );
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-down.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-down.mjs
 var import_primitives = __toESM(require_primitives(), 1);
 var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
 var arrow_down_default = /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_primitives.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_primitives.Path, { d: "m16.5 13.5-3.7 3.7V4h-1.5v13.2l-3.8-3.7-1 1 5.5 5.6 5.5-5.6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-left.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-left.mjs
 var import_primitives2 = __toESM(require_primitives(), 1);
 var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
 var arrow_left_default = /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_primitives2.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_primitives2.Path, { d: "M20 11.2H6.8l3.7-3.7-1-1L3.9 12l5.6 5.5 1-1-3.7-3.7H20z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-right.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-right.mjs
 var import_primitives3 = __toESM(require_primitives(), 1);
 var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
 var arrow_right_default = /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_primitives3.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_primitives3.Path, { d: "m14.5 6.5-1 1 3.7 3.7H4v1.6h13.2l-3.7 3.7 1 1 5.6-5.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-up.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-up.mjs
 var import_primitives4 = __toESM(require_primitives(), 1);
 var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
 var arrow_up_default = /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_primitives4.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_primitives4.Path, { d: "M12 3.9 6.5 9.5l1 1 3.8-3.7V20h1.5V6.8l3.7 3.7 1-1z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/block-table.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/block-table.mjs
 var import_primitives5 = __toESM(require_primitives(), 1);
 var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
 var block_table_default = /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_primitives5.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_primitives5.Path, { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 4.5h14c.3 0 .5.2.5.5v3.5h-15V5c0-.3.2-.5.5-.5zm8 5.5h6.5v3.5H13V10zm-1.5 3.5h-7V10h7v3.5zm-7 5.5v-4h7v4.5H5c-.3 0-.5-.2-.5-.5zm14.5.5h-6V15h6.5v4c0 .3-.2.5-.5.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/category.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/category.mjs
 var import_primitives6 = __toESM(require_primitives(), 1);
 var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
 var category_default = /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_primitives6.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
@@ -4190,7 +4190,7 @@ var category_default = /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_primi
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/caution.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/caution.mjs
 var import_primitives7 = __toESM(require_primitives(), 1);
 var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
 var caution_default = /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(import_primitives7.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
@@ -4202,37 +4202,37 @@ var caution_default = /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(import_primit
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/check.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/check.mjs
 var import_primitives8 = __toESM(require_primitives(), 1);
 var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
 var check_default = /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_primitives8.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_primitives8.Path, { d: "M16.5 7.5 10 13.9l-2.5-2.4-1 1 3.5 3.6 7.5-7.6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-down.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-down.mjs
 var import_primitives9 = __toESM(require_primitives(), 1);
 var import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
 var chevron_down_default = /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_primitives9.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_primitives9.Path, { d: "M17.5 11.6L12 16l-5.5-4.4.9-1.2L12 14l4.5-3.6 1 1.2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-right.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-right.mjs
 var import_primitives10 = __toESM(require_primitives(), 1);
 var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
 var chevron_right_default = /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_primitives10.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_primitives10.Path, { d: "M10.6 6L9.4 7l4.6 5-4.6 5 1.2 1 5.4-6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-up.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-up.mjs
 var import_primitives11 = __toESM(require_primitives(), 1);
 var import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
 var chevron_up_default = /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(import_primitives11.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(import_primitives11.Path, { d: "M6.5 12.4L12 8l5.5 4.4-.9 1.2L12 10l-4.5 3.6-1-1.2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/close-small.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/close-small.mjs
 var import_primitives12 = __toESM(require_primitives(), 1);
 var import_jsx_runtime13 = __toESM(require_jsx_runtime(), 1);
 var close_small_default = /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(import_primitives12.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(import_primitives12.Path, { d: "M12 13.06l3.712 3.713 1.061-1.06L13.061 12l3.712-3.712-1.06-1.06L12 10.938 8.288 7.227l-1.061 1.06L10.939 12l-3.712 3.712 1.06 1.061L12 13.061z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/close.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/close.mjs
 var import_primitives13 = __toESM(require_primitives(), 1);
 var import_jsx_runtime14 = __toESM(require_jsx_runtime(), 1);
 var close_default = /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(import_primitives13.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(import_primitives13.Path, { d: "m13.06 12 6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06L13.06 12Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/cog.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/cog.mjs
 var import_primitives14 = __toESM(require_primitives(), 1);
 var import_jsx_runtime15 = __toESM(require_jsx_runtime(), 1);
 var cog_default = /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(import_primitives14.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
@@ -4244,7 +4244,7 @@ var cog_default = /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(import_primitive
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/copy-small.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/copy-small.mjs
 var import_primitives15 = __toESM(require_primitives(), 1);
 var import_jsx_runtime16 = __toESM(require_jsx_runtime(), 1);
 var copy_small_default = /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_primitives15.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
@@ -4256,12 +4256,12 @@ var copy_small_default = /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_pr
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/download.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/download.mjs
 var import_primitives16 = __toESM(require_primitives(), 1);
 var import_jsx_runtime17 = __toESM(require_jsx_runtime(), 1);
 var download_default = /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_primitives16.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_primitives16.Path, { d: "M18 11.3l-1-1.1-4 4V3h-1.5v11.3L7 10.2l-1 1.1 6.2 5.8 5.8-5.8zm.5 3.7v3.5h-13V15H4v5h16v-5h-1.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/envelope.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/envelope.mjs
 var import_primitives17 = __toESM(require_primitives(), 1);
 var import_jsx_runtime18 = __toESM(require_jsx_runtime(), 1);
 var envelope_default = /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_primitives17.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
@@ -4273,7 +4273,7 @@ var envelope_default = /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_prim
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/error.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/error.mjs
 var import_primitives18 = __toESM(require_primitives(), 1);
 var import_jsx_runtime19 = __toESM(require_jsx_runtime(), 1);
 var error_default = /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(import_primitives18.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
@@ -4285,27 +4285,27 @@ var error_default = /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(import_primiti
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets-rtl.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets-rtl.mjs
 var import_primitives19 = __toESM(require_primitives(), 1);
 var import_jsx_runtime20 = __toESM(require_jsx_runtime(), 1);
 var format_list_bullets_rtl_default = /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_primitives19.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_primitives19.Path, { d: "M4 8.8h8.9V7.2H4v1.6zm0 7h8.9v-1.5H4v1.5zM18 13c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets.mjs
 var import_primitives20 = __toESM(require_primitives(), 1);
 var import_jsx_runtime21 = __toESM(require_jsx_runtime(), 1);
 var format_list_bullets_default = /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(import_primitives20.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(import_primitives20.Path, { d: "M11.1 15.8H20v-1.5h-8.9v1.5zm0-8.6v1.5H20V7.2h-8.9zM6 13c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/funnel.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/funnel.mjs
 var import_primitives21 = __toESM(require_primitives(), 1);
 var import_jsx_runtime22 = __toESM(require_jsx_runtime(), 1);
 var funnel_default = /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(import_primitives21.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(import_primitives21.Path, { d: "M10 17.5H14V16H10V17.5ZM6 6V7.5H18V6H6ZM8 12.5H16V11H8V12.5Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/globe.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/globe.mjs
 var import_primitives22 = __toESM(require_primitives(), 1);
 var import_jsx_runtime23 = __toESM(require_jsx_runtime(), 1);
 var globe_default = /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(import_primitives22.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(import_primitives22.Path, { d: "M12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8Zm6.5 8c0 .6 0 1.2-.2 1.8h-2.7c0-.6.2-1.1.2-1.8s0-1.2-.2-1.8h2.7c.2.6.2 1.1.2 1.8Zm-.9-3.2h-2.4c-.3-.9-.7-1.8-1.1-2.4-.1-.2-.2-.4-.3-.5 1.6.5 3 1.6 3.8 3ZM12.8 17c-.3.5-.6 1-.8 1.3-.2-.3-.5-.8-.8-1.3-.3-.5-.6-1.1-.8-1.7h3.3c-.2.6-.5 1.2-.8 1.7Zm-2.9-3.2c-.1-.6-.2-1.1-.2-1.8s0-1.2.2-1.8H14c.1.6.2 1.1.2 1.8s0 1.2-.2 1.8H9.9ZM11.2 7c.3-.5.6-1 .8-1.3.2.3.5.8.8 1.3.3.5.6 1.1.8 1.7h-3.3c.2-.6.5-1.2.8-1.7Zm-1-1.2c-.1.2-.2.3-.3.5-.4.7-.8 1.5-1.1 2.4H6.4c.8-1.4 2.2-2.5 3.8-3Zm-1.8 8H5.7c-.2-.6-.2-1.1-.2-1.8s0-1.2.2-1.8h2.7c0 .6-.2 1.1-.2 1.8s0 1.2.2 1.8Zm-2 1.4h2.4c.3.9.7 1.8 1.1 2.4.1.2.2.4.3.5-1.6-.5-3-1.6-3.8-3Zm7.4 3c.1-.2.2-.3.3-.5.4-.7.8-1.5 1.1-2.4h2.4c-.8 1.4-2.2 2.5-3.8 3Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/info.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/info.mjs
 var import_primitives23 = __toESM(require_primitives(), 1);
 var import_jsx_runtime24 = __toESM(require_jsx_runtime(), 1);
 var info_default = /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_primitives23.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(
@@ -4317,42 +4317,42 @@ var info_default = /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_primitiv
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/link.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/link.mjs
 var import_primitives24 = __toESM(require_primitives(), 1);
 var import_jsx_runtime25 = __toESM(require_jsx_runtime(), 1);
 var link_default = /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_primitives24.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_primitives24.Path, { d: "M10 17.389H8.444A5.194 5.194 0 1 1 8.444 7H10v1.5H8.444a3.694 3.694 0 0 0 0 7.389H10v1.5ZM14 7h1.556a5.194 5.194 0 0 1 0 10.39H14v-1.5h1.556a3.694 3.694 0 0 0 0-7.39H14V7Zm-4.5 6h5v-1.5h-5V13Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/mobile.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/mobile.mjs
 var import_primitives25 = __toESM(require_primitives(), 1);
 var import_jsx_runtime26 = __toESM(require_jsx_runtime(), 1);
 var mobile_default = /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_primitives25.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_primitives25.Path, { d: "M15 4H9c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm.5 14c0 .3-.2.5-.5.5H9c-.3 0-.5-.2-.5-.5V6c0-.3.2-.5.5-.5h6c.3 0 .5.2.5.5v12zm-4.5-.5h2V16h-2v1.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/more-vertical.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/more-vertical.mjs
 var import_primitives26 = __toESM(require_primitives(), 1);
 var import_jsx_runtime27 = __toESM(require_jsx_runtime(), 1);
 var more_vertical_default = /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(import_primitives26.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(import_primitives26.Path, { d: "M13 19h-2v-2h2v2zm0-6h-2v-2h2v2zm0-6h-2V5h2v2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/next.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/next.mjs
 var import_primitives27 = __toESM(require_primitives(), 1);
 var import_jsx_runtime28 = __toESM(require_jsx_runtime(), 1);
 var next_default = /* @__PURE__ */ (0, import_jsx_runtime28.jsx)(import_primitives27.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime28.jsx)(import_primitives27.Path, { d: "M6.6 6L5.4 7l4.5 5-4.5 5 1.1 1 5.5-6-5.4-6zm6 0l-1.1 1 4.5 5-4.5 5 1.1 1 5.5-6-5.5-6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plugins.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plugins.mjs
 var import_primitives28 = __toESM(require_primitives(), 1);
 var import_jsx_runtime29 = __toESM(require_jsx_runtime(), 1);
 var plugins_default = /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(import_primitives28.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(import_primitives28.Path, { d: "M10.5 4v4h3V4H15v4h1.5a1 1 0 011 1v4l-3 4v2a1 1 0 01-1 1h-3a1 1 0 01-1-1v-2l-3-4V9a1 1 0 011-1H9V4h1.5zm.5 12.5v2h2v-2l3-4v-3H8v3l3 4z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plus.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plus.mjs
 var import_primitives29 = __toESM(require_primitives(), 1);
 var import_jsx_runtime30 = __toESM(require_jsx_runtime(), 1);
 var plus_default = /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(import_primitives29.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(import_primitives29.Path, { d: "M11 12.5V17.5H12.5V12.5H17.5V11H12.5V6H11V11H6V12.5H11Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/previous.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/previous.mjs
 var import_primitives30 = __toESM(require_primitives(), 1);
 var import_jsx_runtime31 = __toESM(require_jsx_runtime(), 1);
 var previous_default = /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(import_primitives30.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(import_primitives30.Path, { d: "M11.6 7l-1.1-1L5 12l5.5 6 1.1-1L7 12l4.6-5zm6 0l-1.1-1-5.5 6 5.5 6 1.1-1-4.6-5 4.6-5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/published.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/published.mjs
 var import_primitives31 = __toESM(require_primitives(), 1);
 var import_jsx_runtime32 = __toESM(require_jsx_runtime(), 1);
 var published_default = /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(import_primitives31.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(
@@ -4364,7 +4364,7 @@ var published_default = /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(import_pri
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/scheduled.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/scheduled.mjs
 var import_primitives32 = __toESM(require_primitives(), 1);
 var import_jsx_runtime33 = __toESM(require_jsx_runtime(), 1);
 var scheduled_default = /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(import_primitives32.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(
@@ -4376,17 +4376,17 @@ var scheduled_default = /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(import_pri
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/search.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/search.mjs
 var import_primitives33 = __toESM(require_primitives(), 1);
 var import_jsx_runtime34 = __toESM(require_jsx_runtime(), 1);
 var search_default = /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(import_primitives33.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(import_primitives33.Path, { d: "M13 5c-3.3 0-6 2.7-6 6 0 1.4.5 2.7 1.3 3.7l-3.8 3.8 1.1 1.1 3.8-3.8c1 .8 2.3 1.3 3.7 1.3 3.3 0 6-2.7 6-6S16.3 5 13 5zm0 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/seen.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/seen.mjs
 var import_primitives34 = __toESM(require_primitives(), 1);
 var import_jsx_runtime35 = __toESM(require_jsx_runtime(), 1);
 var seen_default = /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(import_primitives34.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(import_primitives34.Path, { d: "M3.99961 13C4.67043 13.3354 4.6703 13.3357 4.67017 13.3359L4.67298 13.3305C4.67621 13.3242 4.68184 13.3135 4.68988 13.2985C4.70595 13.2686 4.7316 13.2218 4.76695 13.1608C4.8377 13.0385 4.94692 12.8592 5.09541 12.6419C5.39312 12.2062 5.84436 11.624 6.45435 11.0431C7.67308 9.88241 9.49719 8.75 11.9996 8.75C14.502 8.75 16.3261 9.88241 17.5449 11.0431C18.1549 11.624 18.6061 12.2062 18.9038 12.6419C19.0523 12.8592 19.1615 13.0385 19.2323 13.1608C19.2676 13.2218 19.2933 13.2686 19.3093 13.2985C19.3174 13.3135 19.323 13.3242 19.3262 13.3305L19.3291 13.3359C19.3289 13.3357 19.3288 13.3354 19.9996 13C20.6704 12.6646 20.6703 12.6643 20.6701 12.664L20.6697 12.6632L20.6688 12.6614L20.6662 12.6563L20.6583 12.6408C20.6517 12.6282 20.6427 12.6108 20.631 12.5892C20.6078 12.5459 20.5744 12.4852 20.5306 12.4096C20.4432 12.2584 20.3141 12.0471 20.1423 11.7956C19.7994 11.2938 19.2819 10.626 18.5794 9.9569C17.1731 8.61759 14.9972 7.25 11.9996 7.25C9.00203 7.25 6.82614 8.61759 5.41987 9.9569C4.71736 10.626 4.19984 11.2938 3.85694 11.7956C3.68511 12.0471 3.55605 12.2584 3.4686 12.4096C3.42484 12.4852 3.39142 12.5459 3.36818 12.5892C3.35656 12.6108 3.34748 12.6282 3.34092 12.6408L3.33297 12.6563L3.33041 12.6614L3.32948 12.6632L3.32911 12.664C3.32894 12.6643 3.32879 12.6646 3.99961 13ZM11.9996 16C13.9326 16 15.4996 14.433 15.4996 12.5C15.4996 10.567 13.9326 9 11.9996 9C10.0666 9 8.49961 10.567 8.49961 12.5C8.49961 14.433 10.0666 16 11.9996 16Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.4.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b_react@18.3.1/node_modules/@wordpress/icons/build-module/library/unseen.js
+// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/unseen.mjs
 var import_primitives35 = __toESM(require_primitives(), 1);
 var import_jsx_runtime36 = __toESM(require_jsx_runtime(), 1);
 var unseen_default = /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_primitives35.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_primitives35.Path, { d: "M20.7 12.7s0-.1-.1-.2c0-.2-.2-.4-.4-.6-.3-.5-.9-1.2-1.6-1.8-.7-.6-1.5-1.3-2.6-1.8l-.6 1.4c.9.4 1.6 1 2.1 1.5.6.6 1.1 1.2 1.4 1.6.1.2.3.4.3.5v.1l.7-.3.7-.3Zm-5.2-9.3-1.8 4c-.5-.1-1.1-.2-1.7-.2-3 0-5.2 1.4-6.6 2.7-.7.7-1.2 1.3-1.6 1.8-.2.3-.3.5-.4.6 0 0 0 .1-.1.2s0 0 .7.3l.7.3V13c0-.1.2-.3.3-.5.3-.4.7-1 1.4-1.6 1.2-1.2 3-2.3 5.5-2.3H13v.3c-.4 0-.8-.1-1.1-.1-1.9 0-3.5 1.6-3.5 3.5s.6 2.3 1.6 2.9l-2 4.4.9.4 7.6-16.2-.9-.4Zm-3 12.6c1.7-.2 3-1.7 3-3.5s-.2-1.4-.6-1.9L12.4 16Z" }) });
@@ -4409,7 +4409,7 @@ var secondsInWeek = secondsInDay * 7;
 var secondsInYear = secondsInDay * daysInYear;
 var secondsInMonth = secondsInYear / 12;
 var secondsInQuarter = secondsInMonth * 3;
-var constructFromSymbol = Symbol.for("constructDateFrom");
+var constructFromSymbol = /* @__PURE__ */ Symbol.for("constructDateFrom");
 
 // ../../../node_modules/.pnpm/date-fns@4.1.0/node_modules/date-fns/constructFrom.js
 function constructFrom(date, value) {
@@ -11525,7 +11525,7 @@ function selectTextField(element, collapseToEnd = false) {
     }
   }
 }
-var FOCUS_SILENTLY = Symbol("FOCUS_SILENTLY");
+var FOCUS_SILENTLY = /* @__PURE__ */ Symbol("FOCUS_SILENTLY");
 function focusSilently(element) {
   element[FOCUS_SILENTLY] = true;
   element.focus({ preventScroll: true });
@@ -11649,7 +11649,7 @@ var alwaysFocusVisibleInputTypes = [
   "datetime",
   "datetime-local"
 ];
-var safariFocusAncestorSymbol = Symbol("safariFocusAncestor");
+var safariFocusAncestorSymbol = /* @__PURE__ */ Symbol("safariFocusAncestor");
 function markSafariFocusAncestor(element, value) {
   if (!element) return;
   element[safariFocusAncestorSymbol] = value;
@@ -11942,7 +11942,7 @@ function isNativeClick(event) {
   }
   return false;
 }
-var symbol = Symbol("command");
+var symbol = /* @__PURE__ */ Symbol("command");
 var useCommand = createHook(
   function useCommand2({ clickOnEnter = true, clickOnSpace = true, ...props }) {
     const ref = (0, import_react11.useRef)(null);
@@ -12041,7 +12041,7 @@ function getInternal(store4, key) {
 function createStore(initialState, ...stores) {
   let state = initialState;
   let prevStateBatch = state;
-  let lastUpdate = Symbol();
+  let lastUpdate = /* @__PURE__ */ Symbol();
   let destroy = noop;
   const instances = /* @__PURE__ */ new Set();
   const updatedKeys = /* @__PURE__ */ new Set();
@@ -12056,7 +12056,7 @@ function createStore(initialState, ...stores) {
   };
   const storeInit = () => {
     const initialized = instances.size;
-    const instance = Symbol();
+    const instance = /* @__PURE__ */ Symbol();
     instances.add(instance);
     const maybeDestroy = () => {
       instances.delete(instance);
@@ -12126,7 +12126,7 @@ function createStore(initialState, ...stores) {
     }
     const prevState = state;
     state = { ...state, [key]: nextValue };
-    const thisUpdate = Symbol();
+    const thisUpdate = /* @__PURE__ */ Symbol();
     lastUpdate = thisUpdate;
     updatedKeys.add(key);
     const run = (listener, prev, uKeys) => {
@@ -13703,7 +13703,7 @@ function createPopoverStore({
     anchorElement: defaultValue(syncState == null ? void 0 : syncState.anchorElement, null),
     popoverElement: defaultValue(syncState == null ? void 0 : syncState.popoverElement, null),
     arrowElement: defaultValue(syncState == null ? void 0 : syncState.arrowElement, null),
-    rendered: Symbol("rendered")
+    rendered: /* @__PURE__ */ Symbol("rendered")
   };
   const popover = createStore(initialState, dialog, store4);
   return {
@@ -13712,7 +13712,7 @@ function createPopoverStore({
     setAnchorElement: (element) => popover.setState("anchorElement", element),
     setPopoverElement: (element) => popover.setState("popoverElement", element),
     setArrowElement: (element) => popover.setState("arrowElement", element),
-    render: () => popover.setState("rendered", Symbol("rendered"))
+    render: () => popover.setState("rendered", /* @__PURE__ */ Symbol("rendered"))
   };
 }
 
@@ -13756,7 +13756,7 @@ function hoveringInside(event) {
   if (!nextElement) return false;
   return contains(event.currentTarget, nextElement);
 }
-var symbol2 = Symbol("composite-hover");
+var symbol2 = /* @__PURE__ */ Symbol("composite-hover");
 function movingToAnotherItem(event) {
   let dest = getMouseDestination(event);
   if (!dest) return false;
@@ -22813,6 +22813,10 @@ var css7 = `/**
 /**
  * Reset the WP Admin page styles for Gutenberg-like pages.
  */
+/**
+ * Creates a checkerboard pattern background to indicate transparency.
+ * @param {String} $size - The size of the squares in the checkerboard pattern. Default is 12px.
+ */
 .jp-forms-stack {
   display: flex;
   gap: var(--wp-ui-stack-gap);
@@ -27989,7 +27993,7 @@ function Stage() {
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.5.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6_3cfae513a13c1bd18fe77cb6ed721e81/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.js
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
 var import_element65 = __toESM(require_element(), 1);
 var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
 var NavigableRegion2 = (0, import_element65.forwardRef)(
@@ -28011,14 +28015,14 @@ var NavigableRegion2 = (0, import_element65.forwardRef)(
 NavigableRegion2.displayName = "NavigableRegion";
 var navigable_region_default2 = NavigableRegion2;
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.5.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6_3cfae513a13c1bd18fe77cb6ed721e81/node_modules/@wordpress/admin-ui/build-module/page/header.js
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
 var import_components69 = __toESM(require_components(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.5.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6_3cfae513a13c1bd18fe77cb6ed721e81/node_modules/@wordpress/admin-ui/build-module/page/sidebar-toggle-slot.js
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/sidebar-toggle-slot.mjs
 var import_components68 = __toESM(require_components(), 1);
 var { Fill: SidebarToggleFill2, Slot: SidebarToggleSlot2 } = (0, import_components68.createSlotFill)("SidebarToggle");
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.5.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6_3cfae513a13c1bd18fe77cb6ed721e81/node_modules/@wordpress/admin-ui/build-module/page/header.js
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
 var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
 function Header2({
   breadcrumbs,
@@ -28056,7 +28060,7 @@ function Header2({
   ] });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.5.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6_3cfae513a13c1bd18fe77cb6ed721e81/node_modules/@wordpress/admin-ui/build-module/page/index.js
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
 var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
 function Page2({
   breadcrumbs,

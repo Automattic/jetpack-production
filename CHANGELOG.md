@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Reader: Fix post embed previews not displaying correctly when reposting from Reader.
 - Tests: Add coverage for modules added to sync configuration mid-progress.
 - Update composer lock following Publicize changes.
+- Update package dependencies.
 
 ## 15.5-a.1 - 2026-01-12
 ### Enhancements

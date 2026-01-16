@@ -4995,7 +4995,7 @@ var Route = class extends BaseRoute {
         return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Link, { ref, from: this.fullPath, ...props });
       }
     );
-    this.$$typeof = Symbol.for("react.memo");
+    this.$$typeof = /* @__PURE__ */ Symbol.for("react.memo");
   }
 };
 function createRoute(options) {
@@ -5052,7 +5052,7 @@ var RootRoute = class extends BaseRootRoute {
         return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Link, { ref, from: this.fullPath, ...props });
       }
     );
-    this.$$typeof = Symbol.for("react.memo");
+    this.$$typeof = /* @__PURE__ */ Symbol.for("react.memo");
   }
 };
 function createRootRoute(options) {
@@ -5125,7 +5125,7 @@ var LazyRoute = class {
       return useNavigate({ from: router.routesById[this.options.id].fullPath });
     };
     this.options = opts;
-    this.$$typeof = Symbol.for("react.memo");
+    this.$$typeof = /* @__PURE__ */ Symbol.for("react.memo");
   }
 };
 function createLazyRoute(id) {
@@ -5676,19 +5676,26 @@ function RouterProvider({ router, ...rest }) {
   return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(RouterContextProvider, { router, ...rest, children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Matches, {}) });
 }
 
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLocation.js
+function useLocation(opts) {
+  return useRouterState({
+    select: (state) => opts?.select ? opts.select(state.location) : state.location
+  });
+}
+
 // ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useCanGoBack.js
 function useCanGoBack() {
   return useRouterState({ select: (s) => s.location.state.__TSR_index !== 0 });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+route@0.2.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/route/build-module/lock-unlock.js
-var import_private_apis = __toESM(require_private_apis());
+// ../../../node_modules/.pnpm/@wordpress+route@0.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/route/build-module/lock-unlock.mjs
+var import_private_apis = __toESM(require_private_apis(), 1);
 var { lock, unlock } = (0, import_private_apis.__dangerousOptInToUnstableAPIsOnlyForCoreModules)(
   "I acknowledge private features are not for use in themes or plugins and doing so will break in the next version of WordPress.",
   "@wordpress/route"
 );
 
-// ../../../node_modules/.pnpm/@wordpress+route@0.2.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/route/build-module/private-apis.js
+// ../../../node_modules/.pnpm/@wordpress+route@0.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/route/build-module/private-apis.mjs
 var privateApis = {};
 lock(privateApis, {
   // Router creation and setup
@@ -5703,13 +5710,15 @@ lock(privateApis, {
   redirect,
   createLink,
   useCanGoBack,
+  useLoaderData,
+  useLocation,
   useMatches,
   useRouter,
   // History utilities
   parseHref
 });
 
-// ../../../node_modules/.pnpm/@wordpress+route@0.2.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/route/build-module/index.js
+// ../../../node_modules/.pnpm/@wordpress+route@0.4.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/route/build-module/index.mjs
 function useInvalidate() {
   const router = useRouter();
   return () => router.invalidate();

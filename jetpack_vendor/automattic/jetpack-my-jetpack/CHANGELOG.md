@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: Check red bubble notification async when cache is not available.
+- Update package dependencies.
 
 ## [5.30.0] - 2026-01-14
 ### Added

@@ -18,13 +18,13 @@ var wp;
   };
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.37.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b/node_modules/@wordpress/private-apis/build-module/index.js
+  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.38.0/node_modules/@wordpress/private-apis/build-module/index.mjs
   var build_module_exports = {};
   __export(build_module_exports, {
     __dangerousOptInToUnstableAPIsOnlyForCoreModules: () => __dangerousOptInToUnstableAPIsOnlyForCoreModules
   });
 
-  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.37.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6dae6307de837e4d30b/node_modules/@wordpress/private-apis/build-module/implementation.js
+  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.38.0/node_modules/@wordpress/private-apis/build-module/implementation.mjs
   var CORE_MODULES_USING_PRIVATE_APIS = [
     "@wordpress/block-directory",
     "@wordpress/block-editor",
@@ -99,7 +99,7 @@ var wp;
     return lockedData.get(_object[__private]);
   }
   var lockedData = /* @__PURE__ */ new WeakMap();
-  var __private = Symbol("Private API ID");
+  var __private = /* @__PURE__ */ Symbol("Private API ID");
   return __toCommonJS(build_module_exports);
 })();
 //# sourceMappingURL=index.js.map

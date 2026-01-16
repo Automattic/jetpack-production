@@ -9,10 +9,10 @@
 
 // Global storage for jetpack-forms-responses routes and menu items
 global $gutenberg_jetpack_forms_responses_routes, $gutenberg_jetpack_forms_responses_menu_items;
-$gutenberg_jetpack_forms_responses_routes = array();
+$gutenberg_jetpack_forms_responses_routes     = array();
 $gutenberg_jetpack_forms_responses_menu_items = array();
 
-if ( ! function_exists( 'register_jetpack_forms_responses_route' ) ) {
+if ( ! function_exists( 'gutenberg_register_jetpack_forms_responses_route' ) ) {
 	/**
 	 * Register a route for the jetpack-forms-responses page.
 	 *
@@ -20,7 +20,7 @@ if ( ! function_exists( 'register_jetpack_forms_responses_route' ) ) {
 	 * @param string|null $content_module Script module ID for content (stage/inspector).
 	 * @param string|null $route_module   Script module ID for route lifecycle hooks.
 	 */
-	function register_jetpack_forms_responses_route( $path, $content_module = null, $route_module = null ) {
+	function gutenberg_register_jetpack_forms_responses_route( $path, $content_module = null, $route_module = null ) {
 		global $gutenberg_jetpack_forms_responses_routes;
 
 		$route = array( 'path' => $path );
@@ -35,7 +35,7 @@ if ( ! function_exists( 'register_jetpack_forms_responses_route' ) ) {
 	}
 }
 
-if ( ! function_exists( 'register_jetpack_forms_responses_menu_item' ) ) {
+if ( ! function_exists( 'gutenberg_register_jetpack_forms_responses_menu_item' ) ) {
 	/**
 	 * Register a menu item for the jetpack-forms-responses page.
 	 *
@@ -45,7 +45,7 @@ if ( ! function_exists( 'register_jetpack_forms_responses_menu_item' ) ) {
 	 * @param string $parent_id   Optional. Parent menu item ID.
 	 * @param string $parent_type Optional. Parent type: 'drilldown' or 'dropdown'.
 	 */
-	function register_jetpack_forms_responses_menu_item( $id, $label, $to, $parent_id = '', $parent_type = '' ) {
+	function gutenberg_register_jetpack_forms_responses_menu_item( $id, $label, $to, $parent_id = '', $parent_type = '' ) {
 		global $gutenberg_jetpack_forms_responses_menu_items;
 
 		$menu_item = array(
@@ -66,36 +66,36 @@ if ( ! function_exists( 'register_jetpack_forms_responses_menu_item' ) ) {
 	}
 }
 
-if ( ! function_exists( 'get_jetpack_forms_responses_routes' ) ) {
+if ( ! function_exists( 'gutenberg_get_jetpack_forms_responses_routes' ) ) {
 	/**
 	 * Get all registered routes for the jetpack-forms-responses page.
 	 *
 	 * @return array Array of route objects.
 	 */
-	function get_jetpack_forms_responses_routes() {
+	function gutenberg_get_jetpack_forms_responses_routes() {
 		global $gutenberg_jetpack_forms_responses_routes;
 		return $gutenberg_jetpack_forms_responses_routes ?? array();
 	}
 }
 
-if ( ! function_exists( 'get_jetpack_forms_responses_menu_items' ) ) {
+if ( ! function_exists( 'gutenberg_get_jetpack_forms_responses_menu_items' ) ) {
 	/**
 	 * Get all registered menu items for the jetpack-forms-responses page.
 	 *
 	 * @return array Array of menu item objects.
 	 */
-	function get_jetpack_forms_responses_menu_items() {
+	function gutenberg_get_jetpack_forms_responses_menu_items() {
 		global $gutenberg_jetpack_forms_responses_menu_items;
 		return $gutenberg_jetpack_forms_responses_menu_items ?? array();
 	}
 }
 
-if ( ! function_exists( 'jetpack_forms_responses_preload_data' ) ) {
+if ( ! function_exists( 'gutenberg_jetpack_forms_responses_preload_data' ) ) {
 	/**
 	 * Preload REST API data for the jetpack-forms-responses page.
 	 * Automatically called during page rendering.
 	 */
-	function jetpack_forms_responses_preload_data() {
+	function gutenberg_jetpack_forms_responses_preload_data() {
 		// Define paths to preload - same for all pages
 		$preload_paths = array(
 			'/?_fields=description,gmt_offset,home,name,site_icon,site_icon_url,site_logo,timezone_string,url,page_for_posts,page_on_front,show_on_front',
@@ -121,12 +121,12 @@ if ( ! function_exists( 'jetpack_forms_responses_preload_data' ) ) {
 	}
 }
 
-if ( ! function_exists( 'jetpack_forms_responses_render_page' ) ) {
+if ( ! function_exists( 'gutenberg_jetpack_forms_responses_render_page' ) ) {
 	/**
 	 * Render the jetpack-forms-responses page.
 	 * Call this function from add_menu_page or add_submenu_page.
 	 */
-	function jetpack_forms_responses_render_page() {
+	function gutenberg_jetpack_forms_responses_render_page() {
 		// Load build constants
 		$build_constants = require __DIR__ . '/../../constants.php';
 
@@ -153,11 +153,11 @@ if ( ! function_exists( 'jetpack_forms_responses_render_page' ) ) {
 		}
 
 		// Preload REST API data
-		jetpack_forms_responses_preload_data();
+		gutenberg_jetpack_forms_responses_preload_data();
 
 		// Get all registered routes and menu items
-		$menu_items = get_jetpack_forms_responses_menu_items();
-		$routes = get_jetpack_forms_responses_routes();
+		$menu_items = gutenberg_get_jetpack_forms_responses_menu_items();
+		$routes = gutenberg_get_jetpack_forms_responses_routes();
 
 		// Get boot module asset file for dependencies
 		$asset_file = __DIR__ . '/../../modules/boot/index.min.asset.php';
@@ -312,19 +312,19 @@ if ( ! function_exists( 'jetpack_forms_responses_render_page' ) ) {
 	}
 }
 
-if ( ! function_exists( 'jetpack_forms_responses_intercept_render' ) ) {
+if ( ! function_exists( 'gutenberg_jetpack_forms_responses_intercept_render' ) ) {
 	/**
 	 * Intercept admin_init to render the page early.
 	 * This bypasses the default WordPress admin template.
 	 */
-	function jetpack_forms_responses_intercept_render() {
+	function gutenberg_jetpack_forms_responses_intercept_render() {
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['page'] ) && 'jetpack-forms-responses' === $_GET['page'] ) {
-			jetpack_forms_responses_render_page();
+			gutenberg_jetpack_forms_responses_render_page();
 			exit;
 		}
 	}
 }
 
 // Hook the interceptor to admin_init
-add_action( 'admin_init', 'jetpack_forms_responses_intercept_render' );
+add_action( 'admin_init', 'gutenberg_jetpack_forms_responses_intercept_render' );
