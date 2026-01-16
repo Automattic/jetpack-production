@@ -25493,7 +25493,9 @@ var import_compose12 = __toESM(require_compose(), 1);
 var import_react26 = __toESM(require_react(), 1);
 
 // src/dashboard/components/tabs/style.scss
-var css9 = `/**
+var css9 = `/* stylelint-disable plugin-wpds/no-setting-wpds-custom-properties -- TODO */
+/* stylelint-disable plugin-wpds/no-unknown-ds-tokens -- TODO */
+/**
  * Tabs component styles
  */
 :root {
