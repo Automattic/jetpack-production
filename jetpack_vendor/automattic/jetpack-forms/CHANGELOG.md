@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Consent block: automatically set required to false when consent type is implicit
+- Contact Form: fix z-index stacking order for animated labels and combobox dropdown.
 - Forms: fix dashboard routing on wpcom.
 - Use fallback in all email rendering contexts.
 
