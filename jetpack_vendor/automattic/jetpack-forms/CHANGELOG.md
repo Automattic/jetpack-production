@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add ref attribute support for the form block.
 - Forms: add centralized dashboard tabs.
 - Forms: add country flag emoji to phone field values in form submission confirmation page.
+- Forms: add reusable forms list to dashboard.
 - Forms: make form webhooks generally available.
 
 ### Changed
