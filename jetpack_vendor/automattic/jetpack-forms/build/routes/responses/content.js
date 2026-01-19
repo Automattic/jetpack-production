@@ -3563,6 +3563,13 @@ var require_notice_outline = __commonJS({
   }
 });
 
+// package-external:@wordpress/url
+var require_url = __commonJS({
+  "package-external:@wordpress/url"(exports, module) {
+    module.exports = window.wp.url;
+  }
+});
+
 // (disabled):crypto
 var require_crypto = __commonJS({
   "(disabled):crypto"() {
@@ -4090,13 +4097,6 @@ var require_sha256 = __commonJS({
         }
       }
     })();
-  }
-});
-
-// package-external:@wordpress/url
-var require_url = __commonJS({
-  "package-external:@wordpress/url"(exports, module) {
-    module.exports = window.wp.url;
   }
 });
 
@@ -6556,9 +6556,9 @@ document.head.appendChild(document.createElement("style")).appendChild(document.
 
 // routes/responses/stage.tsx
 var import_api_fetch7 = __toESM(require_api_fetch());
-var import_components67 = __toESM(require_components());
+var import_components69 = __toESM(require_components());
 var import_core_data = __toESM(require_core_data());
-var import_data12 = __toESM(require_data());
+var import_data13 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.0.0_patch_hash=2659f08edd4c0250f15fb428f013852a17e84da9c745e6da_94dcf881cd65e486d4afac2b3c8df507/node_modules/@wordpress/dataviews/build-module/components/dataviews/index.js
 var import_components49 = __toESM(require_components(), 1);
@@ -19277,9 +19277,9 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/responses/stage.tsx
 var import_date9 = __toESM(require_date());
-var import_element64 = __toESM(require_element());
+var import_element66 = __toESM(require_element());
 var import_html_entities = __toESM(require_html_entities());
-var import_i18n61 = __toESM(require_i18n());
+var import_i18n63 = __toESM(require_i18n());
 var import_notices2 = __toESM(require_notices());
 var React33 = __toESM(require_react());
 import { useParams, useSearch, useNavigate } from "@wordpress/route";
@@ -21642,258 +21642,608 @@ var IntegrationsModal = ({
 };
 var jetpack_integrations_modal_default = IntegrationsModal;
 
-// src/dashboard/components/flag/index.tsx
+// src/dashboard/components/empty-responses/index.tsx
+var import_components65 = __toESM(require_components(), 1);
+var import_data10 = __toESM(require_data(), 1);
+var import_element64 = __toESM(require_element(), 1);
+var import_i18n60 = __toESM(require_i18n(), 1);
+
+// src/store/integrations/index.ts
+var import_data9 = __toESM(require_data(), 1);
+
+// src/store/integrations/actions.ts
+var actions_exports2 = {};
+__export(actions_exports2, {
+  invalidateIntegrations: () => invalidateIntegrations,
+  receiveIntegrations: () => receiveIntegrations,
+  refreshIntegrations: () => refreshIntegrations,
+  setIntegrationsError: () => setIntegrationsError,
+  setIntegrationsLoading: () => setIntegrationsLoading
+});
+
+// src/store/integrations/action-types.ts
+var RECEIVE_INTEGRATIONS = "RECEIVE_INTEGRATIONS";
+var INVALIDATE_INTEGRATIONS = "INVALIDATE_INTEGRATIONS";
+var SET_INTEGRATIONS_LOADING = "SET_INTEGRATIONS_LOADING";
+var SET_INTEGRATIONS_ERROR = "SET_INTEGRATIONS_ERROR";
+
+// src/store/integrations/resolvers.ts
+var resolvers_exports2 = {};
+__export(resolvers_exports2, {
+  getIntegrations: () => getIntegrations,
+  resetMetadataFlag: () => resetMetadataFlag
+});
+var import_api_fetch4 = __toESM(require_api_fetch(), 1);
+var import_url3 = __toESM(require_url(), 1);
+var hasLoadedMeta = false;
+var resetMetadataFlag = () => {
+  hasLoadedMeta = false;
+};
+var fetchIntegrationsMetadata = () => async ({ dispatch }) => {
+  const metadataPath = "/wp/v2/feedback/integrations-metadata";
+  const metadata = await (0, import_api_fetch4.default)({ path: metadataPath });
+  const partialIntegrations = metadata.map((meta) => ({
+    ...meta,
+    pluginFile: null,
+    isInstalled: false,
+    isActive: false,
+    isConnected: false,
+    needsConnection: meta.type === "service",
+    version: null,
+    settingsUrl: null,
+    details: {},
+    __isPartial: true
+    // Flag to indicate this is metadata-only
+  }));
+  dispatch(receiveIntegrations(partialIntegrations));
+};
+var fetchFullIntegrations = () => async ({ dispatch }) => {
+  const fullPath = (0, import_url3.addQueryArgs)("/wp/v2/feedback/integrations", { version: 2 });
+  const fullIntegrations = await (0, import_api_fetch4.default)({ path: fullPath });
+  dispatch(receiveIntegrations(fullIntegrations));
+};
+var getIntegrations = () => async ({ dispatch }) => {
+  dispatch(setIntegrationsLoading(true));
+  try {
+    if (!hasLoadedMeta) {
+      await fetchIntegrationsMetadata()({ dispatch });
+      hasLoadedMeta = true;
+    }
+    await fetchFullIntegrations()({ dispatch });
+  } catch (e2) {
+    const message2 = e2 instanceof Error ? e2.message : UNKNOWN_ERROR_MESSAGE;
+    dispatch(setIntegrationsError(message2));
+  } finally {
+    dispatch(setIntegrationsLoading(false));
+  }
+};
+getIntegrations.shouldInvalidate = (action) => action.type === INVALIDATE_INTEGRATIONS;
+
+// src/store/integrations/actions.ts
+var receiveIntegrations = (items) => ({
+  type: RECEIVE_INTEGRATIONS,
+  items
+});
+var invalidateIntegrations = () => ({
+  type: INVALIDATE_INTEGRATIONS
+});
+var setIntegrationsLoading = (isLoading) => ({
+  type: SET_INTEGRATIONS_LOADING,
+  isLoading
+});
+var setIntegrationsError = (error2) => ({
+  type: SET_INTEGRATIONS_ERROR,
+  error: error2
+});
+var refreshIntegrations = () => getIntegrations();
+
+// src/store/integrations/reducer.ts
+var DEFAULT_STATE2 = {
+  items: null,
+  isLoading: false,
+  error: null
+};
+function reducer2(state = DEFAULT_STATE2, action) {
+  switch (action.type) {
+    case SET_INTEGRATIONS_LOADING:
+      return {
+        ...state,
+        isLoading: !!action.isLoading,
+        error: action.isLoading ? null : state.error
+      };
+    case SET_INTEGRATIONS_ERROR:
+      return {
+        ...state,
+        isLoading: false,
+        error: action.error ?? UNKNOWN_ERROR_MESSAGE
+      };
+    case RECEIVE_INTEGRATIONS:
+      return {
+        ...state,
+        items: action.items,
+        isLoading: false,
+        error: null
+      };
+    case INVALIDATE_INTEGRATIONS:
+      return {
+        ...state,
+        items: null,
+        isLoading: false
+      };
+    default:
+      return state;
+  }
+}
+
+// src/store/integrations/selectors.ts
+var selectors_exports2 = {};
+__export(selectors_exports2, {
+  getIntegrations: () => getIntegrations2,
+  getIntegrationsError: () => getIntegrationsError,
+  isIntegrationsLoading: () => isIntegrationsLoading
+});
+var getIntegrations2 = (state) => state.items;
+var isIntegrationsLoading = (state) => state.isLoading;
+var getIntegrationsError = (state) => state.error;
+
+// src/store/integrations/index.ts
+var INTEGRATIONS_STORE = "jetpack/forms/integrations";
+var store2 = (0, import_data9.createReduxStore)(INTEGRATIONS_STORE, {
+  reducer: reducer2,
+  actions: actions_exports2,
+  selectors: selectors_exports2,
+  resolvers: resolvers_exports2
+});
+(0, import_data9.register)(store2);
+
+// src/dashboard/components/create-form-button/index.tsx
 var import_components64 = __toESM(require_components(), 1);
+var import_element63 = __toESM(require_element(), 1);
+var import_i18n59 = __toESM(require_i18n(), 1);
+var import_jsx_runtime135 = __toESM(require_jsx_runtime(), 1);
+function CreateFormButton({
+  label = (0, import_i18n59.__)("Create a form", "jetpack-forms"),
+  showPatterns = false,
+  variant = "secondary"
+}) {
+  const { openNewForm } = useCreateForm();
+  const onButtonClickHandler = (0, import_element63.useCallback)(
+    () => openNewForm({
+      showPatterns,
+      analyticsEvent: () => {
+        analytics_default.tracks.recordEvent("jetpack_wpa_forms_landing_page_cta_click", {
+          button: "forms"
+        });
+      }
+    }),
+    [openNewForm, showPatterns]
+  );
+  return /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(
+    import_components64.Button,
+    {
+      size: "compact",
+      variant,
+      onClick: onButtonClickHandler,
+      icon: plus_default,
+      className: "create-form-button",
+      children: label
+    }
+  );
+}
+
+// src/dashboard/components/empty-responses/index.tsx
+var import_jsx_runtime136 = __toESM(require_jsx_runtime(), 1);
+var useInstallAkismet = () => {
+  const { akismetIntegration } = (0, import_data10.useSelect)((select) => {
+    const store4 = select(INTEGRATIONS_STORE);
+    const integrations = store4.getIntegrations() || [];
+    return {
+      akismetIntegration: integrations.find(
+        (integration) => integration.id === "akismet"
+      )
+    };
+  }, []);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data10.useDispatch)(INTEGRATIONS_STORE);
+  const akismetIntegrationReady = (0, import_element64.useMemo)(
+    () => !!akismetIntegration && !akismetIntegration.__isPartial,
+    [akismetIntegration]
+  );
+  const isInstalled = !!akismetIntegration?.isInstalled;
+  const isAkismetActive = akismetIntegrationReady && isInstalled && !!akismetIntegration?.isActive;
+  const shouldShowAkismetCta = akismetIntegrationReady && !isAkismetActive && !isSimpleSite();
+  const akismetPluginFile = (0, import_element64.useMemo)(
+    () => akismetIntegration?.pluginFile ?? "akismet/akismet",
+    [akismetIntegration?.pluginFile]
+  );
+  const wrapperBody = (0, import_element64.createInterpolateElement)(
+    (0, import_i18n60.__)(
+      "Want automatic spam filtering? Akismet Anti-spam protects millions of sites. <moreInfoLink>Learn more.</moreInfoLink>",
+      "jetpack-forms"
+    ),
+    {
+      moreInfoLink: /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(import_components65.ExternalLink, { href: "https://akismet.com/" })
+    }
+  );
+  const activateButtonText = (0, import_i18n60.__)("Activate Akismet Anti-spam", "jetpack-forms");
+  const installAndActivateButtonText = (0, import_i18n60.__)("Install Akismet Anti-spam", "jetpack-forms");
+  const wrapperButtonText = isInstalled ? activateButtonText : installAndActivateButtonText;
+  const {
+    isInstalling: isInstallingAkismet,
+    installPlugin,
+    canInstallPlugins,
+    canActivatePlugins
+  } = usePluginInstallation({
+    slug: "akismet",
+    pluginPath: akismetPluginFile,
+    isInstalled,
+    onSuccess: refreshIntegrations2,
+    trackEventName: "jetpack_forms_upsell_akismet_click",
+    trackEventProps: {
+      screen: "dashboard"
+    },
+    successNotices: {
+      install: {
+        message: (0, import_i18n60.__)("Akismet installed and activated.", "jetpack-forms"),
+        options: { type: "snackbar", id: "akismet-install-success" }
+      },
+      activate: {
+        message: (0, import_i18n60.__)("Akismet activated.", "jetpack-forms"),
+        options: { type: "snackbar", id: "akismet-install-success" }
+      }
+    },
+    errorNotice: {
+      message: (0, import_i18n60.__)("Could not set up Akismet. Please try again.", "jetpack-forms"),
+      options: { type: "snackbar", id: "akismet-install-error" }
+    }
+  });
+  const canPerformAkismetAction = isInstalled && akismetIntegrationReady ? canActivatePlugins !== false : canInstallPlugins !== false;
+  const handleAkismetSetup = (0, import_element64.useCallback)(async () => {
+    if (isInstallingAkismet || !akismetIntegrationReady || !canPerformAkismetAction) {
+      return;
+    }
+    await installPlugin();
+  }, [isInstallingAkismet, akismetIntegrationReady, canPerformAkismetAction, installPlugin]);
+  return {
+    shouldShowAkismetCta,
+    wrapperBody,
+    isInstallingAkismet,
+    canPerformAkismetAction,
+    wrapperButtonText,
+    handleAkismetSetup
+  };
+};
+var EmptyWrapper = ({ heading = "", body = "", actions = null }) => /* @__PURE__ */ (0, import_jsx_runtime136.jsxs)(import_components65.__experimentalVStack, { alignment: "center", spacing: "2", children: [
+  heading && /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(import_components65.__experimentalText, { as: "h3", weight: "500", size: "15", children: heading }),
+  body && /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(import_components65.__experimentalText, { variant: "muted", children: body }),
+  actions && /* @__PURE__ */ (0, import_jsx_runtime136.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions })
+] });
+var EmptyResponses = ({ status, isSearch, readStatusFilter }) => {
+  const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
+  const {
+    shouldShowAkismetCta,
+    wrapperBody,
+    isInstallingAkismet,
+    canPerformAkismetAction,
+    wrapperButtonText,
+    handleAkismetSetup
+  } = useInstallAkismet();
+  const hasReadStatusFilter = !!readStatusFilter;
+  const searchHeading = (0, import_i18n60.__)("No results found", "jetpack-forms");
+  const searchMessage = (0, import_i18n60.__)(
+    "Try adjusting your search or filters to find what you're looking for.",
+    "jetpack-forms"
+  );
+  if (isSearch || hasReadStatusFilter) {
+    return /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(EmptyWrapper, { heading: searchHeading, body: searchMessage });
+  }
+  const noTrashHeading = (0, import_i18n60.__)("Trash is empty", "jetpack-forms");
+  const noTrashMessage = (0, import_i18n60.sprintf)(
+    /* translators: %d number of days. */
+    (0, import_i18n60._n)(
+      "Items in trash are permanently deleted after %d day.",
+      "Items in trash are permanently deleted after %d days.",
+      emptyTrashDays,
+      "jetpack-forms"
+    ),
+    emptyTrashDays
+  );
+  if (status === "trash") {
+    return /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(EmptyWrapper, { heading: noTrashHeading, body: emptyTrashDays > 0 && noTrashMessage });
+  }
+  const noSpamHeading = (0, import_i18n60.__)("Lucky you, no spam!", "jetpack-forms");
+  const noSpamMessage = (0, import_i18n60.__)(
+    "Spam responses are permanently deleted after 15 days.",
+    "jetpack-forms"
+  );
+  if (status === "spam") {
+    if (shouldShowAkismetCta) {
+      return /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(
+        EmptyWrapper,
+        {
+          heading: noSpamHeading,
+          body: wrapperBody,
+          actions: /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(
+            import_components65.Button,
+            {
+              variant: "primary",
+              isBusy: isInstallingAkismet,
+              disabled: isInstallingAkismet || !canPerformAkismetAction,
+              onClick: handleAkismetSetup,
+              __next40pxDefaultSize: true,
+              children: wrapperButtonText
+            }
+          )
+        }
+      );
+    }
+    return /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(EmptyWrapper, { heading: noSpamHeading, body: noSpamMessage });
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(
+    EmptyWrapper,
+    {
+      heading: (0, import_i18n60.__)("You're set up. No responses yet.", "jetpack-forms"),
+      body: (0, import_i18n60.__)(
+        "Share your form to start collecting responses. New items will appear here.",
+        "jetpack-forms"
+      ),
+      actions: /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(CreateFormButton, { label: (0, import_i18n60.__)("Create a new form", "jetpack-forms"), variant: "primary" })
+    }
+  );
+};
+var empty_responses_default = EmptyResponses;
+
+// src/dashboard/components/flag/index.tsx
+var import_components66 = __toESM(require_components(), 1);
 
 // src/util/country-names-translated.js
-var import_i18n59 = __toESM(require_i18n(), 1);
+var import_i18n61 = __toESM(require_i18n(), 1);
 var translatedCountryNames = {
-  AF: (0, import_i18n59.__)("Afghanistan", "jetpack-forms"),
-  AL: (0, import_i18n59.__)("Albania", "jetpack-forms"),
-  DZ: (0, import_i18n59.__)("Algeria", "jetpack-forms"),
-  AS: (0, import_i18n59.__)("American Samoa", "jetpack-forms"),
-  AD: (0, import_i18n59.__)("Andorra", "jetpack-forms"),
-  AO: (0, import_i18n59.__)("Angola", "jetpack-forms"),
-  AI: (0, import_i18n59.__)("Anguilla", "jetpack-forms"),
-  AG: (0, import_i18n59.__)("Antigua and Barbuda", "jetpack-forms"),
-  AR: (0, import_i18n59.__)("Argentina", "jetpack-forms"),
-  AM: (0, import_i18n59.__)("Armenia", "jetpack-forms"),
-  AW: (0, import_i18n59.__)("Aruba", "jetpack-forms"),
-  AU: (0, import_i18n59.__)("Australia", "jetpack-forms"),
-  AT: (0, import_i18n59.__)("Austria", "jetpack-forms"),
-  AZ: (0, import_i18n59.__)("Azerbaijan", "jetpack-forms"),
-  BS: (0, import_i18n59.__)("Bahamas", "jetpack-forms"),
-  BH: (0, import_i18n59.__)("Bahrain", "jetpack-forms"),
-  BD: (0, import_i18n59.__)("Bangladesh", "jetpack-forms"),
-  BB: (0, import_i18n59.__)("Barbados", "jetpack-forms"),
-  BY: (0, import_i18n59.__)("Belarus", "jetpack-forms"),
-  BE: (0, import_i18n59.__)("Belgium", "jetpack-forms"),
-  BZ: (0, import_i18n59.__)("Belize", "jetpack-forms"),
-  BJ: (0, import_i18n59.__)("Benin", "jetpack-forms"),
-  BM: (0, import_i18n59.__)("Bermuda", "jetpack-forms"),
-  BT: (0, import_i18n59.__)("Bhutan", "jetpack-forms"),
-  BO: (0, import_i18n59.__)("Bolivia", "jetpack-forms"),
-  BA: (0, import_i18n59.__)("Bosnia and Herzegovina", "jetpack-forms"),
-  BW: (0, import_i18n59.__)("Botswana", "jetpack-forms"),
-  BR: (0, import_i18n59.__)("Brazil", "jetpack-forms"),
-  IO: (0, import_i18n59.__)("British Indian Ocean Territory", "jetpack-forms"),
-  VG: (0, import_i18n59.__)("British Virgin Islands", "jetpack-forms"),
-  BN: (0, import_i18n59.__)("Brunei", "jetpack-forms"),
-  BG: (0, import_i18n59.__)("Bulgaria", "jetpack-forms"),
-  BF: (0, import_i18n59.__)("Burkina Faso", "jetpack-forms"),
-  BI: (0, import_i18n59.__)("Burundi", "jetpack-forms"),
-  KH: (0, import_i18n59.__)("Cambodia", "jetpack-forms"),
-  CM: (0, import_i18n59.__)("Cameroon", "jetpack-forms"),
-  CA: (0, import_i18n59.__)("Canada", "jetpack-forms"),
-  CV: (0, import_i18n59.__)("Cape Verde", "jetpack-forms"),
-  KY: (0, import_i18n59.__)("Cayman Islands", "jetpack-forms"),
-  CF: (0, import_i18n59.__)("Central African Republic", "jetpack-forms"),
-  TD: (0, import_i18n59.__)("Chad", "jetpack-forms"),
-  CL: (0, import_i18n59.__)("Chile", "jetpack-forms"),
-  CN: (0, import_i18n59.__)("China", "jetpack-forms"),
-  CX: (0, import_i18n59.__)("Christmas Island", "jetpack-forms"),
-  CC: (0, import_i18n59.__)("Cocos (Keeling) Islands", "jetpack-forms"),
-  CO: (0, import_i18n59.__)("Colombia", "jetpack-forms"),
-  KM: (0, import_i18n59.__)("Comoros", "jetpack-forms"),
-  CG: (0, import_i18n59.__)("Congo - Brazzaville", "jetpack-forms"),
-  CD: (0, import_i18n59.__)("Congo - Kinshasa", "jetpack-forms"),
-  CK: (0, import_i18n59.__)("Cook Islands", "jetpack-forms"),
-  CR: (0, import_i18n59.__)("Costa Rica", "jetpack-forms"),
-  HR: (0, import_i18n59.__)("Croatia", "jetpack-forms"),
-  CU: (0, import_i18n59.__)("Cuba", "jetpack-forms"),
-  CY: (0, import_i18n59.__)("Cyprus", "jetpack-forms"),
-  CZ: (0, import_i18n59.__)("Czech Republic", "jetpack-forms"),
-  CI: (0, import_i18n59.__)("C\xF4te d'Ivoire", "jetpack-forms"),
-  DK: (0, import_i18n59.__)("Denmark", "jetpack-forms"),
-  DJ: (0, import_i18n59.__)("Djibouti", "jetpack-forms"),
-  DM: (0, import_i18n59.__)("Dominica", "jetpack-forms"),
-  DO: (0, import_i18n59.__)("Dominican Republic", "jetpack-forms"),
-  EC: (0, import_i18n59.__)("Ecuador", "jetpack-forms"),
-  EG: (0, import_i18n59.__)("Egypt", "jetpack-forms"),
-  SV: (0, import_i18n59.__)("El Salvador", "jetpack-forms"),
-  GQ: (0, import_i18n59.__)("Equatorial Guinea", "jetpack-forms"),
-  ER: (0, import_i18n59.__)("Eritrea", "jetpack-forms"),
-  EE: (0, import_i18n59.__)("Estonia", "jetpack-forms"),
-  SZ: (0, import_i18n59.__)("Eswatini", "jetpack-forms"),
-  ET: (0, import_i18n59.__)("Ethiopia", "jetpack-forms"),
-  FK: (0, import_i18n59.__)("Falkland Islands", "jetpack-forms"),
-  FO: (0, import_i18n59.__)("Faroe Islands", "jetpack-forms"),
-  FJ: (0, import_i18n59.__)("Fiji", "jetpack-forms"),
-  FI: (0, import_i18n59.__)("Finland", "jetpack-forms"),
-  FR: (0, import_i18n59.__)("France", "jetpack-forms"),
-  GF: (0, import_i18n59.__)("French Guiana", "jetpack-forms"),
-  PF: (0, import_i18n59.__)("French Polynesia", "jetpack-forms"),
-  GA: (0, import_i18n59.__)("Gabon", "jetpack-forms"),
-  GM: (0, import_i18n59.__)("Gambia", "jetpack-forms"),
-  GE: (0, import_i18n59.__)("Georgia", "jetpack-forms"),
-  DE: (0, import_i18n59.__)("Germany", "jetpack-forms"),
-  GH: (0, import_i18n59.__)("Ghana", "jetpack-forms"),
-  GI: (0, import_i18n59.__)("Gibraltar", "jetpack-forms"),
-  GR: (0, import_i18n59.__)("Greece", "jetpack-forms"),
-  GL: (0, import_i18n59.__)("Greenland", "jetpack-forms"),
-  GD: (0, import_i18n59.__)("Grenada", "jetpack-forms"),
-  GP: (0, import_i18n59.__)("Guadeloupe", "jetpack-forms"),
-  GU: (0, import_i18n59.__)("Guam", "jetpack-forms"),
-  GT: (0, import_i18n59.__)("Guatemala", "jetpack-forms"),
-  GG: (0, import_i18n59.__)("Guernsey", "jetpack-forms"),
-  GN: (0, import_i18n59.__)("Guinea", "jetpack-forms"),
-  GW: (0, import_i18n59.__)("Guinea-Bissau", "jetpack-forms"),
-  GY: (0, import_i18n59.__)("Guyana", "jetpack-forms"),
-  HT: (0, import_i18n59.__)("Haiti", "jetpack-forms"),
-  HN: (0, import_i18n59.__)("Honduras", "jetpack-forms"),
-  HK: (0, import_i18n59.__)("Hong Kong", "jetpack-forms"),
-  HU: (0, import_i18n59.__)("Hungary", "jetpack-forms"),
-  IS: (0, import_i18n59.__)("Iceland", "jetpack-forms"),
-  IN: (0, import_i18n59.__)("India", "jetpack-forms"),
-  ID: (0, import_i18n59.__)("Indonesia", "jetpack-forms"),
-  IR: (0, import_i18n59.__)("Iran", "jetpack-forms"),
-  IQ: (0, import_i18n59.__)("Iraq", "jetpack-forms"),
-  IE: (0, import_i18n59.__)("Ireland", "jetpack-forms"),
-  IM: (0, import_i18n59.__)("Isle of Man", "jetpack-forms"),
-  IL: (0, import_i18n59.__)("Israel", "jetpack-forms"),
-  IT: (0, import_i18n59.__)("Italy", "jetpack-forms"),
-  JM: (0, import_i18n59.__)("Jamaica", "jetpack-forms"),
-  JP: (0, import_i18n59.__)("Japan", "jetpack-forms"),
-  JE: (0, import_i18n59.__)("Jersey", "jetpack-forms"),
-  JO: (0, import_i18n59.__)("Jordan", "jetpack-forms"),
-  KZ: (0, import_i18n59.__)("Kazakhstan", "jetpack-forms"),
-  KE: (0, import_i18n59.__)("Kenya", "jetpack-forms"),
-  KI: (0, import_i18n59.__)("Kiribati", "jetpack-forms"),
-  XK: (0, import_i18n59.__)("Kosovo", "jetpack-forms"),
-  KW: (0, import_i18n59.__)("Kuwait", "jetpack-forms"),
-  KG: (0, import_i18n59.__)("Kyrgyzstan", "jetpack-forms"),
-  LA: (0, import_i18n59.__)("Laos", "jetpack-forms"),
-  LV: (0, import_i18n59.__)("Latvia", "jetpack-forms"),
-  LB: (0, import_i18n59.__)("Lebanon", "jetpack-forms"),
-  LS: (0, import_i18n59.__)("Lesotho", "jetpack-forms"),
-  LR: (0, import_i18n59.__)("Liberia", "jetpack-forms"),
-  LY: (0, import_i18n59.__)("Libya", "jetpack-forms"),
-  LI: (0, import_i18n59.__)("Liechtenstein", "jetpack-forms"),
-  LT: (0, import_i18n59.__)("Lithuania", "jetpack-forms"),
-  LU: (0, import_i18n59.__)("Luxembourg", "jetpack-forms"),
-  MO: (0, import_i18n59.__)("Macao", "jetpack-forms"),
-  MG: (0, import_i18n59.__)("Madagascar", "jetpack-forms"),
-  MW: (0, import_i18n59.__)("Malawi", "jetpack-forms"),
-  MY: (0, import_i18n59.__)("Malaysia", "jetpack-forms"),
-  MV: (0, import_i18n59.__)("Maldives", "jetpack-forms"),
-  ML: (0, import_i18n59.__)("Mali", "jetpack-forms"),
-  MT: (0, import_i18n59.__)("Malta", "jetpack-forms"),
-  MH: (0, import_i18n59.__)("Marshall Islands", "jetpack-forms"),
-  MQ: (0, import_i18n59.__)("Martinique", "jetpack-forms"),
-  MR: (0, import_i18n59.__)("Mauritania", "jetpack-forms"),
-  MU: (0, import_i18n59.__)("Mauritius", "jetpack-forms"),
-  YT: (0, import_i18n59.__)("Mayotte", "jetpack-forms"),
-  MX: (0, import_i18n59.__)("Mexico", "jetpack-forms"),
-  FM: (0, import_i18n59.__)("Micronesia", "jetpack-forms"),
-  MD: (0, import_i18n59.__)("Moldova", "jetpack-forms"),
-  MC: (0, import_i18n59.__)("Monaco", "jetpack-forms"),
-  MN: (0, import_i18n59.__)("Mongolia", "jetpack-forms"),
-  ME: (0, import_i18n59.__)("Montenegro", "jetpack-forms"),
-  MS: (0, import_i18n59.__)("Montserrat", "jetpack-forms"),
-  MA: (0, import_i18n59.__)("Morocco", "jetpack-forms"),
-  MZ: (0, import_i18n59.__)("Mozambique", "jetpack-forms"),
-  MM: (0, import_i18n59.__)("Myanmar", "jetpack-forms"),
-  NA: (0, import_i18n59.__)("Namibia", "jetpack-forms"),
-  NR: (0, import_i18n59.__)("Nauru", "jetpack-forms"),
-  NP: (0, import_i18n59.__)("Nepal", "jetpack-forms"),
-  NL: (0, import_i18n59.__)("Netherlands", "jetpack-forms"),
-  NC: (0, import_i18n59.__)("New Caledonia", "jetpack-forms"),
-  NZ: (0, import_i18n59.__)("New Zealand", "jetpack-forms"),
-  NI: (0, import_i18n59.__)("Nicaragua", "jetpack-forms"),
-  NE: (0, import_i18n59.__)("Niger", "jetpack-forms"),
-  NG: (0, import_i18n59.__)("Nigeria", "jetpack-forms"),
-  NU: (0, import_i18n59.__)("Niue", "jetpack-forms"),
-  NF: (0, import_i18n59.__)("Norfolk Island", "jetpack-forms"),
-  KP: (0, import_i18n59.__)("North Korea", "jetpack-forms"),
-  MK: (0, import_i18n59.__)("North Macedonia", "jetpack-forms"),
-  MP: (0, import_i18n59.__)("Northern Mariana Islands", "jetpack-forms"),
-  NO: (0, import_i18n59.__)("Norway", "jetpack-forms"),
-  OM: (0, import_i18n59.__)("Oman", "jetpack-forms"),
-  PK: (0, import_i18n59.__)("Pakistan", "jetpack-forms"),
-  PW: (0, import_i18n59.__)("Palau", "jetpack-forms"),
-  PS: (0, import_i18n59.__)("Palestine", "jetpack-forms"),
-  PA: (0, import_i18n59.__)("Panama", "jetpack-forms"),
-  PG: (0, import_i18n59.__)("Papua New Guinea", "jetpack-forms"),
-  PY: (0, import_i18n59.__)("Paraguay", "jetpack-forms"),
-  PE: (0, import_i18n59.__)("Peru", "jetpack-forms"),
-  PH: (0, import_i18n59.__)("Philippines", "jetpack-forms"),
-  PN: (0, import_i18n59.__)("Pitcairn Islands", "jetpack-forms"),
-  PL: (0, import_i18n59.__)("Poland", "jetpack-forms"),
-  PT: (0, import_i18n59.__)("Portugal", "jetpack-forms"),
-  PR: (0, import_i18n59.__)("Puerto Rico", "jetpack-forms"),
-  QA: (0, import_i18n59.__)("Qatar", "jetpack-forms"),
-  RO: (0, import_i18n59.__)("Romania", "jetpack-forms"),
-  RU: (0, import_i18n59.__)("Russia", "jetpack-forms"),
-  RW: (0, import_i18n59.__)("Rwanda", "jetpack-forms"),
-  RE: (0, import_i18n59.__)("R\xE9union", "jetpack-forms"),
-  BL: (0, import_i18n59.__)("Saint Barth\xE9lemy", "jetpack-forms"),
-  SH: (0, import_i18n59.__)("Saint Helena", "jetpack-forms"),
-  KN: (0, import_i18n59.__)("Saint Kitts and Nevis", "jetpack-forms"),
-  LC: (0, import_i18n59.__)("Saint Lucia", "jetpack-forms"),
-  MF: (0, import_i18n59.__)("Saint Martin", "jetpack-forms"),
-  PM: (0, import_i18n59.__)("Saint Pierre and Miquelon", "jetpack-forms"),
-  VC: (0, import_i18n59.__)("Saint Vincent and the Grenadines", "jetpack-forms"),
-  WS: (0, import_i18n59.__)("Samoa", "jetpack-forms"),
-  SM: (0, import_i18n59.__)("San Marino", "jetpack-forms"),
-  SA: (0, import_i18n59.__)("Saudi Arabia", "jetpack-forms"),
-  SN: (0, import_i18n59.__)("Senegal", "jetpack-forms"),
-  RS: (0, import_i18n59.__)("Serbia", "jetpack-forms"),
-  SC: (0, import_i18n59.__)("Seychelles", "jetpack-forms"),
-  SL: (0, import_i18n59.__)("Sierra Leone", "jetpack-forms"),
-  SG: (0, import_i18n59.__)("Singapore", "jetpack-forms"),
-  SK: (0, import_i18n59.__)("Slovakia", "jetpack-forms"),
-  SI: (0, import_i18n59.__)("Slovenia", "jetpack-forms"),
-  SB: (0, import_i18n59.__)("Solomon Islands", "jetpack-forms"),
-  SO: (0, import_i18n59.__)("Somalia", "jetpack-forms"),
-  ZA: (0, import_i18n59.__)("South Africa", "jetpack-forms"),
-  GS: (0, import_i18n59.__)("South Georgia and the South Sandwich Islands", "jetpack-forms"),
-  KR: (0, import_i18n59.__)("South Korea", "jetpack-forms"),
-  ES: (0, import_i18n59.__)("Spain", "jetpack-forms"),
-  LK: (0, import_i18n59.__)("Sri Lanka", "jetpack-forms"),
-  SD: (0, import_i18n59.__)("Sudan", "jetpack-forms"),
-  SR: (0, import_i18n59.__)("Suriname", "jetpack-forms"),
-  SJ: (0, import_i18n59.__)("Svalbard and Jan Mayen", "jetpack-forms"),
-  SE: (0, import_i18n59.__)("Sweden", "jetpack-forms"),
-  CH: (0, import_i18n59.__)("Switzerland", "jetpack-forms"),
-  SY: (0, import_i18n59.__)("Syria", "jetpack-forms"),
-  ST: (0, import_i18n59.__)("S\xE3o Tom\xE9 and Pr\xEDncipe", "jetpack-forms"),
-  TW: (0, import_i18n59.__)("Taiwan", "jetpack-forms"),
-  TJ: (0, import_i18n59.__)("Tajikistan", "jetpack-forms"),
-  TZ: (0, import_i18n59.__)("Tanzania", "jetpack-forms"),
-  TH: (0, import_i18n59.__)("Thailand", "jetpack-forms"),
-  TL: (0, import_i18n59.__)("Timor-Leste", "jetpack-forms"),
-  TG: (0, import_i18n59.__)("Togo", "jetpack-forms"),
-  TK: (0, import_i18n59.__)("Tokelau", "jetpack-forms"),
-  TO: (0, import_i18n59.__)("Tonga", "jetpack-forms"),
-  TT: (0, import_i18n59.__)("Trinidad and Tobago", "jetpack-forms"),
-  TN: (0, import_i18n59.__)("Tunisia", "jetpack-forms"),
-  TR: (0, import_i18n59.__)("Turkey", "jetpack-forms"),
-  TM: (0, import_i18n59.__)("Turkmenistan", "jetpack-forms"),
-  TC: (0, import_i18n59.__)("Turks and Caicos Islands", "jetpack-forms"),
-  TV: (0, import_i18n59.__)("Tuvalu", "jetpack-forms"),
-  VI: (0, import_i18n59.__)("U.S. Virgin Islands", "jetpack-forms"),
-  UG: (0, import_i18n59.__)("Uganda", "jetpack-forms"),
-  UA: (0, import_i18n59.__)("Ukraine", "jetpack-forms"),
-  AE: (0, import_i18n59.__)("United Arab Emirates", "jetpack-forms"),
-  GB: (0, import_i18n59.__)("United Kingdom", "jetpack-forms"),
-  US: (0, import_i18n59.__)("United States", "jetpack-forms"),
-  UY: (0, import_i18n59.__)("Uruguay", "jetpack-forms"),
-  UZ: (0, import_i18n59.__)("Uzbekistan", "jetpack-forms"),
-  VU: (0, import_i18n59.__)("Vanuatu", "jetpack-forms"),
-  VA: (0, import_i18n59.__)("Vatican City", "jetpack-forms"),
-  VE: (0, import_i18n59.__)("Venezuela", "jetpack-forms"),
-  VN: (0, import_i18n59.__)("Vietnam", "jetpack-forms"),
-  WF: (0, import_i18n59.__)("Wallis and Futuna", "jetpack-forms"),
-  YE: (0, import_i18n59.__)("Yemen", "jetpack-forms"),
-  ZM: (0, import_i18n59.__)("Zambia", "jetpack-forms"),
-  ZW: (0, import_i18n59.__)("Zimbabwe", "jetpack-forms")
+  AF: (0, import_i18n61.__)("Afghanistan", "jetpack-forms"),
+  AL: (0, import_i18n61.__)("Albania", "jetpack-forms"),
+  DZ: (0, import_i18n61.__)("Algeria", "jetpack-forms"),
+  AS: (0, import_i18n61.__)("American Samoa", "jetpack-forms"),
+  AD: (0, import_i18n61.__)("Andorra", "jetpack-forms"),
+  AO: (0, import_i18n61.__)("Angola", "jetpack-forms"),
+  AI: (0, import_i18n61.__)("Anguilla", "jetpack-forms"),
+  AG: (0, import_i18n61.__)("Antigua and Barbuda", "jetpack-forms"),
+  AR: (0, import_i18n61.__)("Argentina", "jetpack-forms"),
+  AM: (0, import_i18n61.__)("Armenia", "jetpack-forms"),
+  AW: (0, import_i18n61.__)("Aruba", "jetpack-forms"),
+  AU: (0, import_i18n61.__)("Australia", "jetpack-forms"),
+  AT: (0, import_i18n61.__)("Austria", "jetpack-forms"),
+  AZ: (0, import_i18n61.__)("Azerbaijan", "jetpack-forms"),
+  BS: (0, import_i18n61.__)("Bahamas", "jetpack-forms"),
+  BH: (0, import_i18n61.__)("Bahrain", "jetpack-forms"),
+  BD: (0, import_i18n61.__)("Bangladesh", "jetpack-forms"),
+  BB: (0, import_i18n61.__)("Barbados", "jetpack-forms"),
+  BY: (0, import_i18n61.__)("Belarus", "jetpack-forms"),
+  BE: (0, import_i18n61.__)("Belgium", "jetpack-forms"),
+  BZ: (0, import_i18n61.__)("Belize", "jetpack-forms"),
+  BJ: (0, import_i18n61.__)("Benin", "jetpack-forms"),
+  BM: (0, import_i18n61.__)("Bermuda", "jetpack-forms"),
+  BT: (0, import_i18n61.__)("Bhutan", "jetpack-forms"),
+  BO: (0, import_i18n61.__)("Bolivia", "jetpack-forms"),
+  BA: (0, import_i18n61.__)("Bosnia and Herzegovina", "jetpack-forms"),
+  BW: (0, import_i18n61.__)("Botswana", "jetpack-forms"),
+  BR: (0, import_i18n61.__)("Brazil", "jetpack-forms"),
+  IO: (0, import_i18n61.__)("British Indian Ocean Territory", "jetpack-forms"),
+  VG: (0, import_i18n61.__)("British Virgin Islands", "jetpack-forms"),
+  BN: (0, import_i18n61.__)("Brunei", "jetpack-forms"),
+  BG: (0, import_i18n61.__)("Bulgaria", "jetpack-forms"),
+  BF: (0, import_i18n61.__)("Burkina Faso", "jetpack-forms"),
+  BI: (0, import_i18n61.__)("Burundi", "jetpack-forms"),
+  KH: (0, import_i18n61.__)("Cambodia", "jetpack-forms"),
+  CM: (0, import_i18n61.__)("Cameroon", "jetpack-forms"),
+  CA: (0, import_i18n61.__)("Canada", "jetpack-forms"),
+  CV: (0, import_i18n61.__)("Cape Verde", "jetpack-forms"),
+  KY: (0, import_i18n61.__)("Cayman Islands", "jetpack-forms"),
+  CF: (0, import_i18n61.__)("Central African Republic", "jetpack-forms"),
+  TD: (0, import_i18n61.__)("Chad", "jetpack-forms"),
+  CL: (0, import_i18n61.__)("Chile", "jetpack-forms"),
+  CN: (0, import_i18n61.__)("China", "jetpack-forms"),
+  CX: (0, import_i18n61.__)("Christmas Island", "jetpack-forms"),
+  CC: (0, import_i18n61.__)("Cocos (Keeling) Islands", "jetpack-forms"),
+  CO: (0, import_i18n61.__)("Colombia", "jetpack-forms"),
+  KM: (0, import_i18n61.__)("Comoros", "jetpack-forms"),
+  CG: (0, import_i18n61.__)("Congo - Brazzaville", "jetpack-forms"),
+  CD: (0, import_i18n61.__)("Congo - Kinshasa", "jetpack-forms"),
+  CK: (0, import_i18n61.__)("Cook Islands", "jetpack-forms"),
+  CR: (0, import_i18n61.__)("Costa Rica", "jetpack-forms"),
+  HR: (0, import_i18n61.__)("Croatia", "jetpack-forms"),
+  CU: (0, import_i18n61.__)("Cuba", "jetpack-forms"),
+  CY: (0, import_i18n61.__)("Cyprus", "jetpack-forms"),
+  CZ: (0, import_i18n61.__)("Czech Republic", "jetpack-forms"),
+  CI: (0, import_i18n61.__)("C\xF4te d'Ivoire", "jetpack-forms"),
+  DK: (0, import_i18n61.__)("Denmark", "jetpack-forms"),
+  DJ: (0, import_i18n61.__)("Djibouti", "jetpack-forms"),
+  DM: (0, import_i18n61.__)("Dominica", "jetpack-forms"),
+  DO: (0, import_i18n61.__)("Dominican Republic", "jetpack-forms"),
+  EC: (0, import_i18n61.__)("Ecuador", "jetpack-forms"),
+  EG: (0, import_i18n61.__)("Egypt", "jetpack-forms"),
+  SV: (0, import_i18n61.__)("El Salvador", "jetpack-forms"),
+  GQ: (0, import_i18n61.__)("Equatorial Guinea", "jetpack-forms"),
+  ER: (0, import_i18n61.__)("Eritrea", "jetpack-forms"),
+  EE: (0, import_i18n61.__)("Estonia", "jetpack-forms"),
+  SZ: (0, import_i18n61.__)("Eswatini", "jetpack-forms"),
+  ET: (0, import_i18n61.__)("Ethiopia", "jetpack-forms"),
+  FK: (0, import_i18n61.__)("Falkland Islands", "jetpack-forms"),
+  FO: (0, import_i18n61.__)("Faroe Islands", "jetpack-forms"),
+  FJ: (0, import_i18n61.__)("Fiji", "jetpack-forms"),
+  FI: (0, import_i18n61.__)("Finland", "jetpack-forms"),
+  FR: (0, import_i18n61.__)("France", "jetpack-forms"),
+  GF: (0, import_i18n61.__)("French Guiana", "jetpack-forms"),
+  PF: (0, import_i18n61.__)("French Polynesia", "jetpack-forms"),
+  GA: (0, import_i18n61.__)("Gabon", "jetpack-forms"),
+  GM: (0, import_i18n61.__)("Gambia", "jetpack-forms"),
+  GE: (0, import_i18n61.__)("Georgia", "jetpack-forms"),
+  DE: (0, import_i18n61.__)("Germany", "jetpack-forms"),
+  GH: (0, import_i18n61.__)("Ghana", "jetpack-forms"),
+  GI: (0, import_i18n61.__)("Gibraltar", "jetpack-forms"),
+  GR: (0, import_i18n61.__)("Greece", "jetpack-forms"),
+  GL: (0, import_i18n61.__)("Greenland", "jetpack-forms"),
+  GD: (0, import_i18n61.__)("Grenada", "jetpack-forms"),
+  GP: (0, import_i18n61.__)("Guadeloupe", "jetpack-forms"),
+  GU: (0, import_i18n61.__)("Guam", "jetpack-forms"),
+  GT: (0, import_i18n61.__)("Guatemala", "jetpack-forms"),
+  GG: (0, import_i18n61.__)("Guernsey", "jetpack-forms"),
+  GN: (0, import_i18n61.__)("Guinea", "jetpack-forms"),
+  GW: (0, import_i18n61.__)("Guinea-Bissau", "jetpack-forms"),
+  GY: (0, import_i18n61.__)("Guyana", "jetpack-forms"),
+  HT: (0, import_i18n61.__)("Haiti", "jetpack-forms"),
+  HN: (0, import_i18n61.__)("Honduras", "jetpack-forms"),
+  HK: (0, import_i18n61.__)("Hong Kong", "jetpack-forms"),
+  HU: (0, import_i18n61.__)("Hungary", "jetpack-forms"),
+  IS: (0, import_i18n61.__)("Iceland", "jetpack-forms"),
+  IN: (0, import_i18n61.__)("India", "jetpack-forms"),
+  ID: (0, import_i18n61.__)("Indonesia", "jetpack-forms"),
+  IR: (0, import_i18n61.__)("Iran", "jetpack-forms"),
+  IQ: (0, import_i18n61.__)("Iraq", "jetpack-forms"),
+  IE: (0, import_i18n61.__)("Ireland", "jetpack-forms"),
+  IM: (0, import_i18n61.__)("Isle of Man", "jetpack-forms"),
+  IL: (0, import_i18n61.__)("Israel", "jetpack-forms"),
+  IT: (0, import_i18n61.__)("Italy", "jetpack-forms"),
+  JM: (0, import_i18n61.__)("Jamaica", "jetpack-forms"),
+  JP: (0, import_i18n61.__)("Japan", "jetpack-forms"),
+  JE: (0, import_i18n61.__)("Jersey", "jetpack-forms"),
+  JO: (0, import_i18n61.__)("Jordan", "jetpack-forms"),
+  KZ: (0, import_i18n61.__)("Kazakhstan", "jetpack-forms"),
+  KE: (0, import_i18n61.__)("Kenya", "jetpack-forms"),
+  KI: (0, import_i18n61.__)("Kiribati", "jetpack-forms"),
+  XK: (0, import_i18n61.__)("Kosovo", "jetpack-forms"),
+  KW: (0, import_i18n61.__)("Kuwait", "jetpack-forms"),
+  KG: (0, import_i18n61.__)("Kyrgyzstan", "jetpack-forms"),
+  LA: (0, import_i18n61.__)("Laos", "jetpack-forms"),
+  LV: (0, import_i18n61.__)("Latvia", "jetpack-forms"),
+  LB: (0, import_i18n61.__)("Lebanon", "jetpack-forms"),
+  LS: (0, import_i18n61.__)("Lesotho", "jetpack-forms"),
+  LR: (0, import_i18n61.__)("Liberia", "jetpack-forms"),
+  LY: (0, import_i18n61.__)("Libya", "jetpack-forms"),
+  LI: (0, import_i18n61.__)("Liechtenstein", "jetpack-forms"),
+  LT: (0, import_i18n61.__)("Lithuania", "jetpack-forms"),
+  LU: (0, import_i18n61.__)("Luxembourg", "jetpack-forms"),
+  MO: (0, import_i18n61.__)("Macao", "jetpack-forms"),
+  MG: (0, import_i18n61.__)("Madagascar", "jetpack-forms"),
+  MW: (0, import_i18n61.__)("Malawi", "jetpack-forms"),
+  MY: (0, import_i18n61.__)("Malaysia", "jetpack-forms"),
+  MV: (0, import_i18n61.__)("Maldives", "jetpack-forms"),
+  ML: (0, import_i18n61.__)("Mali", "jetpack-forms"),
+  MT: (0, import_i18n61.__)("Malta", "jetpack-forms"),
+  MH: (0, import_i18n61.__)("Marshall Islands", "jetpack-forms"),
+  MQ: (0, import_i18n61.__)("Martinique", "jetpack-forms"),
+  MR: (0, import_i18n61.__)("Mauritania", "jetpack-forms"),
+  MU: (0, import_i18n61.__)("Mauritius", "jetpack-forms"),
+  YT: (0, import_i18n61.__)("Mayotte", "jetpack-forms"),
+  MX: (0, import_i18n61.__)("Mexico", "jetpack-forms"),
+  FM: (0, import_i18n61.__)("Micronesia", "jetpack-forms"),
+  MD: (0, import_i18n61.__)("Moldova", "jetpack-forms"),
+  MC: (0, import_i18n61.__)("Monaco", "jetpack-forms"),
+  MN: (0, import_i18n61.__)("Mongolia", "jetpack-forms"),
+  ME: (0, import_i18n61.__)("Montenegro", "jetpack-forms"),
+  MS: (0, import_i18n61.__)("Montserrat", "jetpack-forms"),
+  MA: (0, import_i18n61.__)("Morocco", "jetpack-forms"),
+  MZ: (0, import_i18n61.__)("Mozambique", "jetpack-forms"),
+  MM: (0, import_i18n61.__)("Myanmar", "jetpack-forms"),
+  NA: (0, import_i18n61.__)("Namibia", "jetpack-forms"),
+  NR: (0, import_i18n61.__)("Nauru", "jetpack-forms"),
+  NP: (0, import_i18n61.__)("Nepal", "jetpack-forms"),
+  NL: (0, import_i18n61.__)("Netherlands", "jetpack-forms"),
+  NC: (0, import_i18n61.__)("New Caledonia", "jetpack-forms"),
+  NZ: (0, import_i18n61.__)("New Zealand", "jetpack-forms"),
+  NI: (0, import_i18n61.__)("Nicaragua", "jetpack-forms"),
+  NE: (0, import_i18n61.__)("Niger", "jetpack-forms"),
+  NG: (0, import_i18n61.__)("Nigeria", "jetpack-forms"),
+  NU: (0, import_i18n61.__)("Niue", "jetpack-forms"),
+  NF: (0, import_i18n61.__)("Norfolk Island", "jetpack-forms"),
+  KP: (0, import_i18n61.__)("North Korea", "jetpack-forms"),
+  MK: (0, import_i18n61.__)("North Macedonia", "jetpack-forms"),
+  MP: (0, import_i18n61.__)("Northern Mariana Islands", "jetpack-forms"),
+  NO: (0, import_i18n61.__)("Norway", "jetpack-forms"),
+  OM: (0, import_i18n61.__)("Oman", "jetpack-forms"),
+  PK: (0, import_i18n61.__)("Pakistan", "jetpack-forms"),
+  PW: (0, import_i18n61.__)("Palau", "jetpack-forms"),
+  PS: (0, import_i18n61.__)("Palestine", "jetpack-forms"),
+  PA: (0, import_i18n61.__)("Panama", "jetpack-forms"),
+  PG: (0, import_i18n61.__)("Papua New Guinea", "jetpack-forms"),
+  PY: (0, import_i18n61.__)("Paraguay", "jetpack-forms"),
+  PE: (0, import_i18n61.__)("Peru", "jetpack-forms"),
+  PH: (0, import_i18n61.__)("Philippines", "jetpack-forms"),
+  PN: (0, import_i18n61.__)("Pitcairn Islands", "jetpack-forms"),
+  PL: (0, import_i18n61.__)("Poland", "jetpack-forms"),
+  PT: (0, import_i18n61.__)("Portugal", "jetpack-forms"),
+  PR: (0, import_i18n61.__)("Puerto Rico", "jetpack-forms"),
+  QA: (0, import_i18n61.__)("Qatar", "jetpack-forms"),
+  RO: (0, import_i18n61.__)("Romania", "jetpack-forms"),
+  RU: (0, import_i18n61.__)("Russia", "jetpack-forms"),
+  RW: (0, import_i18n61.__)("Rwanda", "jetpack-forms"),
+  RE: (0, import_i18n61.__)("R\xE9union", "jetpack-forms"),
+  BL: (0, import_i18n61.__)("Saint Barth\xE9lemy", "jetpack-forms"),
+  SH: (0, import_i18n61.__)("Saint Helena", "jetpack-forms"),
+  KN: (0, import_i18n61.__)("Saint Kitts and Nevis", "jetpack-forms"),
+  LC: (0, import_i18n61.__)("Saint Lucia", "jetpack-forms"),
+  MF: (0, import_i18n61.__)("Saint Martin", "jetpack-forms"),
+  PM: (0, import_i18n61.__)("Saint Pierre and Miquelon", "jetpack-forms"),
+  VC: (0, import_i18n61.__)("Saint Vincent and the Grenadines", "jetpack-forms"),
+  WS: (0, import_i18n61.__)("Samoa", "jetpack-forms"),
+  SM: (0, import_i18n61.__)("San Marino", "jetpack-forms"),
+  SA: (0, import_i18n61.__)("Saudi Arabia", "jetpack-forms"),
+  SN: (0, import_i18n61.__)("Senegal", "jetpack-forms"),
+  RS: (0, import_i18n61.__)("Serbia", "jetpack-forms"),
+  SC: (0, import_i18n61.__)("Seychelles", "jetpack-forms"),
+  SL: (0, import_i18n61.__)("Sierra Leone", "jetpack-forms"),
+  SG: (0, import_i18n61.__)("Singapore", "jetpack-forms"),
+  SK: (0, import_i18n61.__)("Slovakia", "jetpack-forms"),
+  SI: (0, import_i18n61.__)("Slovenia", "jetpack-forms"),
+  SB: (0, import_i18n61.__)("Solomon Islands", "jetpack-forms"),
+  SO: (0, import_i18n61.__)("Somalia", "jetpack-forms"),
+  ZA: (0, import_i18n61.__)("South Africa", "jetpack-forms"),
+  GS: (0, import_i18n61.__)("South Georgia and the South Sandwich Islands", "jetpack-forms"),
+  KR: (0, import_i18n61.__)("South Korea", "jetpack-forms"),
+  ES: (0, import_i18n61.__)("Spain", "jetpack-forms"),
+  LK: (0, import_i18n61.__)("Sri Lanka", "jetpack-forms"),
+  SD: (0, import_i18n61.__)("Sudan", "jetpack-forms"),
+  SR: (0, import_i18n61.__)("Suriname", "jetpack-forms"),
+  SJ: (0, import_i18n61.__)("Svalbard and Jan Mayen", "jetpack-forms"),
+  SE: (0, import_i18n61.__)("Sweden", "jetpack-forms"),
+  CH: (0, import_i18n61.__)("Switzerland", "jetpack-forms"),
+  SY: (0, import_i18n61.__)("Syria", "jetpack-forms"),
+  ST: (0, import_i18n61.__)("S\xE3o Tom\xE9 and Pr\xEDncipe", "jetpack-forms"),
+  TW: (0, import_i18n61.__)("Taiwan", "jetpack-forms"),
+  TJ: (0, import_i18n61.__)("Tajikistan", "jetpack-forms"),
+  TZ: (0, import_i18n61.__)("Tanzania", "jetpack-forms"),
+  TH: (0, import_i18n61.__)("Thailand", "jetpack-forms"),
+  TL: (0, import_i18n61.__)("Timor-Leste", "jetpack-forms"),
+  TG: (0, import_i18n61.__)("Togo", "jetpack-forms"),
+  TK: (0, import_i18n61.__)("Tokelau", "jetpack-forms"),
+  TO: (0, import_i18n61.__)("Tonga", "jetpack-forms"),
+  TT: (0, import_i18n61.__)("Trinidad and Tobago", "jetpack-forms"),
+  TN: (0, import_i18n61.__)("Tunisia", "jetpack-forms"),
+  TR: (0, import_i18n61.__)("Turkey", "jetpack-forms"),
+  TM: (0, import_i18n61.__)("Turkmenistan", "jetpack-forms"),
+  TC: (0, import_i18n61.__)("Turks and Caicos Islands", "jetpack-forms"),
+  TV: (0, import_i18n61.__)("Tuvalu", "jetpack-forms"),
+  VI: (0, import_i18n61.__)("U.S. Virgin Islands", "jetpack-forms"),
+  UG: (0, import_i18n61.__)("Uganda", "jetpack-forms"),
+  UA: (0, import_i18n61.__)("Ukraine", "jetpack-forms"),
+  AE: (0, import_i18n61.__)("United Arab Emirates", "jetpack-forms"),
+  GB: (0, import_i18n61.__)("United Kingdom", "jetpack-forms"),
+  US: (0, import_i18n61.__)("United States", "jetpack-forms"),
+  UY: (0, import_i18n61.__)("Uruguay", "jetpack-forms"),
+  UZ: (0, import_i18n61.__)("Uzbekistan", "jetpack-forms"),
+  VU: (0, import_i18n61.__)("Vanuatu", "jetpack-forms"),
+  VA: (0, import_i18n61.__)("Vatican City", "jetpack-forms"),
+  VE: (0, import_i18n61.__)("Venezuela", "jetpack-forms"),
+  VN: (0, import_i18n61.__)("Vietnam", "jetpack-forms"),
+  WF: (0, import_i18n61.__)("Wallis and Futuna", "jetpack-forms"),
+  YE: (0, import_i18n61.__)("Yemen", "jetpack-forms"),
+  ZM: (0, import_i18n61.__)("Zambia", "jetpack-forms"),
+  ZW: (0, import_i18n61.__)("Zimbabwe", "jetpack-forms")
 };
 var getTranslatedCountryName = (countryCode) => {
   return translatedCountryNames[countryCode] || countryCode;
 };
 
 // src/dashboard/components/flag/index.tsx
-var import_jsx_runtime135 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime137 = __toESM(require_jsx_runtime(), 1);
 function Flag({ countryCode }) {
   if (!countryCode) {
     return null;
@@ -21905,7 +22255,7 @@ function Flag({ countryCode }) {
     upperCountryCode.charCodeAt(1) + offset
   );
   const countryName = getTranslatedCountryName(countryCode);
-  return /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(import_components64.Tooltip, { text: countryName, children: /* @__PURE__ */ (0, import_jsx_runtime135.jsx)("span", { "aria-label": countryName, role: "img", children: flag }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(import_components66.Tooltip, { text: countryName, children: /* @__PURE__ */ (0, import_jsx_runtime137.jsx)("span", { "aria-label": countryName, role: "img", children: flag }) });
 }
 
 // ../../../node_modules/.pnpm/@gravatar-com+hovercards@0.15.0/node_modules/@gravatar-com/hovercards/dist/index.mjs
@@ -22541,8 +22891,8 @@ var css5 = `.gravatar-hovercard{display:inline-block;font-family:"SF Pro Text",-
 document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css5));
 
 // src/dashboard/components/gravatar/index.tsx
-var import_element63 = __toESM(require_element(), 1);
-var import_i18n60 = __toESM(require_i18n(), 1);
+var import_element65 = __toESM(require_element(), 1);
+var import_i18n62 = __toESM(require_i18n(), 1);
 var import_js_sha256 = __toESM(require_sha256(), 1);
 
 // src/dashboard/components/gravatar/style.scss
@@ -22555,7 +22905,7 @@ var css6 = `.jp-forms__gravatar {
 document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css6));
 
 // src/dashboard/components/gravatar/index.tsx
-var import_jsx_runtime136 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime138 = __toESM(require_jsx_runtime(), 1);
 function Gravatar({
   defaultImage = "initials",
   displayName,
@@ -22563,32 +22913,32 @@ function Gravatar({
   size = 48,
   useHovercard = true
 }) {
-  const profileImageRef = (0, import_element63.useRef)(null);
-  const hovercardRef = (0, import_element63.useRef)(null);
-  (0, import_element63.useEffect)(() => {
+  const profileImageRef = (0, import_element65.useRef)(null);
+  const hovercardRef = (0, import_element65.useRef)(null);
+  (0, import_element65.useEffect)(() => {
     if (useHovercard && profileImageRef.current) {
       hovercardRef.current = new __webpack_exports__Hovercards({
         // Documented at https://github.com/Automattic/gravatar/tree/trunk/web/packages/hovercards#translations
         i18n: {
-          "Edit your profile \u2192": (0, import_i18n60.__)("Edit your profile \u2192", "jetpack-forms"),
-          "View profile \u2192": (0, import_i18n60.__)("View profile \u2192", "jetpack-forms"),
-          Contact: (0, import_i18n60.__)("Contact", "jetpack-forms"),
-          "Send money": (0, import_i18n60.__)("Send money", "jetpack-forms"),
-          "Sorry, we are unable to load this Gravatar profile.": (0, import_i18n60.__)(
+          "Edit your profile \u2192": (0, import_i18n62.__)("Edit your profile \u2192", "jetpack-forms"),
+          "View profile \u2192": (0, import_i18n62.__)("View profile \u2192", "jetpack-forms"),
+          Contact: (0, import_i18n62.__)("Contact", "jetpack-forms"),
+          "Send money": (0, import_i18n62.__)("Send money", "jetpack-forms"),
+          "Sorry, we are unable to load this Gravatar profile.": (0, import_i18n62.__)(
             "Sorry, we are unable to load this Gravatar profile.",
             "jetpack-forms"
           ),
-          "Gravatar not found.": (0, import_i18n60.__)("Gravatar not found.", "jetpack-forms"),
-          "Too Many Requests.": (0, import_i18n60.__)("Too many requests.", "jetpack-forms"),
-          "Internal Server Error.": (0, import_i18n60.__)("Internal server error.", "jetpack-forms"),
-          "Is this you?": (0, import_i18n60.__)("Is this you?", "jetpack-forms"),
-          "Claim your free profile.": (0, import_i18n60.__)("Claim your free profile.", "jetpack-forms"),
-          Email: (0, import_i18n60.__)("Email", "jetpack-forms"),
-          "Home Phone": (0, import_i18n60.__)("Home phone", "jetpack-forms"),
-          "Work Phone": (0, import_i18n60.__)("Work phone", "jetpack-forms"),
-          "Cell Phone": (0, import_i18n60.__)("Cell phone", "jetpack-forms"),
-          "Contact Form": (0, import_i18n60.__)("Contact form", "jetpack-forms"),
-          Calendar: (0, import_i18n60.__)("Calendar", "jetpack-forms")
+          "Gravatar not found.": (0, import_i18n62.__)("Gravatar not found.", "jetpack-forms"),
+          "Too Many Requests.": (0, import_i18n62.__)("Too many requests.", "jetpack-forms"),
+          "Internal Server Error.": (0, import_i18n62.__)("Internal server error.", "jetpack-forms"),
+          "Is this you?": (0, import_i18n62.__)("Is this you?", "jetpack-forms"),
+          "Claim your free profile.": (0, import_i18n62.__)("Claim your free profile.", "jetpack-forms"),
+          Email: (0, import_i18n62.__)("Email", "jetpack-forms"),
+          "Home Phone": (0, import_i18n62.__)("Home phone", "jetpack-forms"),
+          "Work Phone": (0, import_i18n62.__)("Work phone", "jetpack-forms"),
+          "Cell Phone": (0, import_i18n62.__)("Cell phone", "jetpack-forms"),
+          "Contact Form": (0, import_i18n62.__)("Contact form", "jetpack-forms"),
+          Calendar: (0, import_i18n62.__)("Calendar", "jetpack-forms")
         }
       });
       hovercardRef.current.attach(profileImageRef.current);
@@ -22598,7 +22948,7 @@ function Gravatar({
     return null;
   }
   const hashedEmail = (0, import_js_sha256.sha256)(email);
-  return /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(
     "img",
     {
       alt: displayName || "",
@@ -22612,15 +22962,15 @@ function Gravatar({
 }
 
 // src/dashboard/components/page/header.tsx
-var import_components66 = __toESM(require_components(), 1);
+var import_components68 = __toESM(require_components(), 1);
 
 // src/dashboard/components/page/sidebar-toggle-slot.tsx
-var import_components65 = __toESM(require_components(), 1);
-var { Fill: SidebarToggleFill, Slot: SidebarToggleSlot } = (0, import_components65.createSlotFill)("SidebarToggle");
+var import_components67 = __toESM(require_components(), 1);
+var { Fill: SidebarToggleFill, Slot: SidebarToggleSlot } = (0, import_components67.createSlotFill)("SidebarToggle");
 
 // src/dashboard/components/page/stack.tsx
 var import_react23 = __toESM(require_react(), 1);
-var import_jsx_runtime137 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime139 = __toESM(require_jsx_runtime(), 1);
 var getNormalizedGap = (gap) => typeof gap === "number" ? `calc( ${gap} * var( --wpds-spacing-05 ) )` : gap;
 var Stack = (0, import_react23.forwardRef)(function Stack2({
   direction,
@@ -22656,11 +23006,11 @@ var Stack = (0, import_react23.forwardRef)(function Stack2({
       style: { ...render9.props.style, ...style }
     });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(Component, { ref, style, className: classes, ...props });
+  return /* @__PURE__ */ (0, import_jsx_runtime139.jsx)(Component, { ref, style, className: classes, ...props });
 });
 
 // src/dashboard/components/page/header.tsx
-var import_jsx_runtime138 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime140 = __toESM(require_jsx_runtime(), 1);
 function Header({
   breadcrumbs,
   badges,
@@ -22670,16 +23020,16 @@ function Header({
   tabs,
   showSidebarToggle = true
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(
     Stack,
     {
       direction: "column",
       className: clsx_default("admin-ui-page__header", {
         "has-tabs": tabs
       }),
-      render: /* @__PURE__ */ (0, import_jsx_runtime138.jsx)("header", {}),
+      render: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)("header", {}),
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(
           Stack,
           {
             direction: "row",
@@ -22688,17 +23038,17 @@ function Header({
             gap: 2,
             align: "center",
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)(Stack, { direction: "row", gap: 2, wrap: "wrap", align: "center", children: [
-                showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(SidebarToggleSlot, { bubblesVirtually: true, className: "admin-ui-page__sidebar-toggle-slot" }),
-                title && /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components66.__experimentalHeading, { level: 1, size: "15px", lineHeight: "32px", truncate: true, children: title }),
+              /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(Stack, { direction: "row", gap: 2, wrap: "wrap", align: "center", children: [
+                showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(SidebarToggleSlot, { bubblesVirtually: true, className: "admin-ui-page__sidebar-toggle-slot" }),
+                title && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(import_components68.__experimentalHeading, { level: 1, size: "15px", lineHeight: "32px", truncate: true, children: title }),
                 breadcrumbs,
                 badges
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(Stack, { direction: "row", gap: 2, children: actions })
+              /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(Stack, { direction: "row", gap: 2, children: actions })
             ]
           }
         ),
-        subTitle && /* @__PURE__ */ (0, import_jsx_runtime138.jsx)("p", { className: "admin-ui-page__header-subtitle", children: subTitle }),
+        subTitle && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)("p", { className: "admin-ui-page__header-subtitle", children: subTitle }),
         tabs
       ]
     }
@@ -22707,10 +23057,10 @@ function Header({
 
 // src/dashboard/components/page/navigable-region.tsx
 var import_react24 = __toESM(require_react(), 1);
-var import_jsx_runtime139 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
 var NavigableRegion = (0, import_react24.forwardRef)(
   ({ children, className, ariaLabel, as: Tag = "div", ...props }, ref) => {
-    return /* @__PURE__ */ (0, import_jsx_runtime139.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(
       Tag,
       {
         ref,
@@ -22902,7 +23252,7 @@ var css7 = `/**
 document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css7));
 
 // src/dashboard/components/page/index.tsx
-var import_jsx_runtime140 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime142 = __toESM(require_jsx_runtime(), 1);
 function Page({
   breadcrumbs,
   badges,
@@ -22918,8 +23268,8 @@ function Page({
   showSidebarToggle = true
 }) {
   const classes = clsx_default("admin-ui-page", className);
-  return /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(navigable_region_default, { className: classes, ariaLabel: title, children: [
-    (title || breadcrumbs || badges) && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime142.jsxs)(navigable_region_default, { className: classes, ariaLabel: title, children: [
+    (title || breadcrumbs || badges) && /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(
       Header,
       {
         breadcrumbs,
@@ -22931,7 +23281,7 @@ function Page({
         showSidebarToggle
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(
       "div",
       {
         className: clsx_default("admin-ui-page__content", {
@@ -23481,7 +23831,7 @@ function useCompositeListContext() {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/list/CompositeList.js
-var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
 function CompositeList(props) {
   const {
     children,
@@ -23587,7 +23937,7 @@ function CompositeList(props) {
     labelsRef,
     nextIndexRef
   }), [register4, unregister, subscribeMapChange, elementsRef, labelsRef, nextIndexRef]);
-  return /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(CompositeListContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(CompositeListContext.Provider, {
     value: contextValue,
     children
   });
@@ -23647,7 +23997,7 @@ var tabsStateAttributesMapping = {
 };
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/root/TabsRoot.js
-var import_jsx_runtime142 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
 var TabsRoot = /* @__PURE__ */ React16.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
   const {
     className,
@@ -23742,9 +24092,9 @@ var TabsRoot = /* @__PURE__ */ React16.forwardRef(function TabsRoot2(componentPr
     props: elementProps,
     stateAttributesMapping: tabsStateAttributesMapping
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(TabsRootContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(TabsRootContext.Provider, {
     value: tabsContextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(CompositeList, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(CompositeList, {
       elementsRef: tabPanelRefs,
       children: element
     })
@@ -24748,7 +25098,7 @@ var TabsIndicatorCssVars = /* @__PURE__ */ (function(TabsIndicatorCssVars2) {
 })({});
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/indicator/TabsIndicator.js
-var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
 var stateAttributesMapping = {
   ...tabsStateAttributesMapping,
   activeTabPosition: () => null,
@@ -24859,8 +25209,8 @@ var TabsIndicator = /* @__PURE__ */ React28.forwardRef(function TabIndicator(com
   if (activeTabValue == null) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)(React28.Fragment, {
-    children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("script", {
+  return /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)(React28.Fragment, {
+    children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("script", {
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML: {
         __html: script
@@ -25269,7 +25619,7 @@ function isModifierKeySet(event, ignoredModifierKeys) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/root/CompositeRoot.js
-var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
 function CompositeRoot(componentProps) {
   const {
     render: render9,
@@ -25330,9 +25680,9 @@ function CompositeRoot(componentProps) {
     highlightItemOnHover,
     relayKeyboardEvent
   }), [highlightedIndex, onHighlightedIndexChange, highlightItemOnHover, relayKeyboardEvent]);
-  return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(CompositeRootContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(CompositeRootContext.Provider, {
     value: contextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(CompositeList, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(CompositeList, {
       elementsRef,
       onMapChange: (newMap) => {
         onMapChangeProp?.(newMap);
@@ -25344,7 +25694,7 @@ function CompositeRoot(componentProps) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/list/TabsList.js
-var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
 var TabsList = /* @__PURE__ */ React32.forwardRef(function TabsList2(componentProps, forwardedRef) {
   const {
     activateOnFocus = false,
@@ -25393,9 +25743,9 @@ var TabsList = /* @__PURE__ */ React32.forwardRef(function TabsList2(componentPr
     tabsListElement,
     value
   }), [activateOnFocus, highlightedTabIndex, onTabActivation, setHighlightedTabIndex, tabsListElement, value]);
-  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(TabsListContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(TabsListContext.Provider, {
     value: tabsListContextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(CompositeRoot, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(CompositeRoot, {
       render: render9,
       className,
       state,
@@ -25738,7 +26088,7 @@ var css9 = `/* stylelint-disable plugin-wpds/no-setting-wpds-custom-properties -
 document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css9));
 
 // src/dashboard/components/tabs/list.tsx
-var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
 var DEFAULT_SCROLL_MARGIN = 0;
 var List = (0, import_react26.forwardRef)(function TabList({ children, density = "default", className, activateOnFocus, render: render9, ...otherProps }, forwardedRef) {
   const [listEl, setListEl] = (0, import_react26.useState)(null);
@@ -25797,11 +26147,11 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       } else if (typeof render9 === "function") {
         return render9(newProps, state);
       }
-      return /* @__PURE__ */ (0, import_jsx_runtime146.jsx)("div", { ...newProps });
+      return /* @__PURE__ */ (0, import_jsx_runtime148.jsx)("div", { ...newProps });
     },
     [render9]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime148.jsxs)(
     index_parts_exports.List,
     {
       ref: mergedListRef,
@@ -25818,7 +26168,7 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       ...otherProps,
       children: [
         children,
-        /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(index_parts_exports.Indicator, { className: "jp-forms-tabs__indicator" })
+        /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(index_parts_exports.Indicator, { className: "jp-forms-tabs__indicator" })
       ]
     }
   );
@@ -25826,9 +26176,9 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
 
 // src/dashboard/components/tabs/panel.tsx
 var import_react27 = __toESM(require_react(), 1);
-var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
 var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focusable = true, tabIndex, ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
     index_parts_exports.Panel,
     {
       ref: forwardedRef,
@@ -25841,27 +26191,27 @@ var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focus
 
 // src/dashboard/components/tabs/root.tsx
 var import_react28 = __toESM(require_react(), 1);
-var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
 var Root = (0, import_react28.forwardRef)(function TabsRoot3({ ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
+  return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
 });
 
 // src/dashboard/components/tabs/tab.tsx
 var import_react29 = __toESM(require_react(), 1);
-var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
 var ChevronRight = (props) => {
   return (0, import_react29.cloneElement)(chevron_right_default, props);
 };
 var Tab = (0, import_react29.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(
     index_parts_exports.Tab,
     {
       ref: forwardedRef,
       className: clsx_default("jp-forms-tabs__tab", className),
       ...otherProps,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime149.jsx)("span", { className: "jp-forms-tabs__tab__children", children }),
-        /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(ChevronRight, { className: "jp-forms-tabs__tab__chevron" })
+        /* @__PURE__ */ (0, import_jsx_runtime151.jsx)("span", { className: "jp-forms-tabs__tab__children", children }),
+        /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(ChevronRight, { className: "jp-forms-tabs__tab__chevron" })
       ]
     }
   );
@@ -26647,11 +26997,11 @@ var getPath = (item) => {
 };
 
 // src/dashboard/store/index.js
-var import_data10 = __toESM(require_data(), 1);
+var import_data12 = __toESM(require_data(), 1);
 
 // src/dashboard/store/actions.js
-var actions_exports2 = {};
-__export(actions_exports2, {
+var actions_exports3 = {};
+__export(actions_exports3, {
   addPendingAction: () => addPendingAction,
   clearInvalidRecords: () => clearInvalidRecords,
   doBulkAction: () => doBulkAction,
@@ -26665,7 +27015,7 @@ __export(actions_exports2, {
   setSelectedResponses: () => setSelectedResponses,
   updateCountsOptimistically: () => updateCountsOptimistically
 });
-var import_api_fetch4 = __toESM(require_api_fetch(), 1);
+var import_api_fetch5 = __toESM(require_api_fetch(), 1);
 
 // src/dashboard/store/action-types.js
 var RECEIVE_FILTERS = "RECEIVE_FILTERS";
@@ -26754,7 +27104,7 @@ function removePendingAction(actionId) {
 }
 var doBulkAction = (ids, action) => async () => {
   try {
-    await (0, import_api_fetch4.default)({
+    await (0, import_api_fetch5.default)({
       path: `wp/v2/feedback/bulk_actions`,
       method: "POST",
       data: {
@@ -26767,7 +27117,7 @@ var doBulkAction = (ids, action) => async () => {
 };
 
 // src/dashboard/store/reducer.js
-var import_data9 = __toESM(require_data(), 1);
+var import_data11 = __toESM(require_data(), 1);
 var filters = (state = {}, action) => {
   if (action.type === RECEIVE_FILTERS) {
     return action.filters;
@@ -26860,7 +27210,7 @@ var pendingActions = (state = /* @__PURE__ */ new Set(), action) => {
   }
   return state;
 };
-var reducer_default = (0, import_data9.combineReducers)({
+var reducer_default = (0, import_data11.combineReducers)({
   selectedResponsesFromCurrentDataset,
   filters,
   currentQuery,
@@ -26870,15 +27220,15 @@ var reducer_default = (0, import_data9.combineReducers)({
 });
 
 // src/dashboard/store/resolvers.js
-var resolvers_exports2 = {};
-__export(resolvers_exports2, {
+var resolvers_exports3 = {};
+__export(resolvers_exports3, {
   getCounts: () => getCounts,
   getFilters: () => getFilters
 });
-var import_api_fetch5 = __toESM(require_api_fetch(), 1);
-var import_url3 = __toESM(require_url(), 1);
+var import_api_fetch6 = __toESM(require_api_fetch(), 1);
+var import_url4 = __toESM(require_url(), 1);
 var getFilters = () => async ({ dispatch }) => {
-  const results = await (0, import_api_fetch5.default)({
+  const results = await (0, import_api_fetch6.default)({
     path: "/wp/v2/feedback/filters"
   });
   dispatch.receiveFilters(results);
@@ -26901,15 +27251,15 @@ var getCounts = (queryParams = {}) => async ({ dispatch }) => {
   if (queryParams?.is_unread !== void 0) {
     params.is_unread = queryParams.is_unread;
   }
-  const path = (0, import_url3.addQueryArgs)("/wp/v2/feedback/counts", params);
-  const response = await (0, import_api_fetch5.default)({ path });
+  const path = (0, import_url4.addQueryArgs)("/wp/v2/feedback/counts", params);
+  const response = await (0, import_api_fetch6.default)({ path });
   dispatch.setCounts(response, queryParams);
 };
 getCounts.shouldInvalidate = (action) => action.type === INVALIDATE_COUNTS;
 
 // src/dashboard/store/selectors.js
-var selectors_exports2 = {};
-__export(selectors_exports2, {
+var selectors_exports3 = {};
+__export(selectors_exports3, {
   getCounts: () => getCounts2,
   getCurrentQuery: () => getCurrentQuery,
   getCurrentStatus: () => getCurrentStatus,
@@ -26960,170 +27310,22 @@ var hasPendingActions = (state) => {
 
 // src/dashboard/store/index.js
 var STORE_NAME = "FORM_RESPONSES";
-var store2 = (0, import_data10.createReduxStore)(STORE_NAME, {
-  actions: actions_exports2,
-  reducer: reducer_default,
-  selectors: selectors_exports2,
-  resolvers: resolvers_exports2
-});
-(0, import_data10.register)(store2);
-
-// src/store/integrations/index.ts
-var import_data11 = __toESM(require_data(), 1);
-
-// src/store/integrations/actions.ts
-var actions_exports3 = {};
-__export(actions_exports3, {
-  invalidateIntegrations: () => invalidateIntegrations,
-  receiveIntegrations: () => receiveIntegrations,
-  refreshIntegrations: () => refreshIntegrations,
-  setIntegrationsError: () => setIntegrationsError,
-  setIntegrationsLoading: () => setIntegrationsLoading
-});
-
-// src/store/integrations/action-types.ts
-var RECEIVE_INTEGRATIONS = "RECEIVE_INTEGRATIONS";
-var INVALIDATE_INTEGRATIONS = "INVALIDATE_INTEGRATIONS";
-var SET_INTEGRATIONS_LOADING = "SET_INTEGRATIONS_LOADING";
-var SET_INTEGRATIONS_ERROR = "SET_INTEGRATIONS_ERROR";
-
-// src/store/integrations/resolvers.ts
-var resolvers_exports3 = {};
-__export(resolvers_exports3, {
-  getIntegrations: () => getIntegrations,
-  resetMetadataFlag: () => resetMetadataFlag
-});
-var import_api_fetch6 = __toESM(require_api_fetch(), 1);
-var import_url4 = __toESM(require_url(), 1);
-var hasLoadedMeta = false;
-var resetMetadataFlag = () => {
-  hasLoadedMeta = false;
-};
-var fetchIntegrationsMetadata = () => async ({ dispatch }) => {
-  const metadataPath = "/wp/v2/feedback/integrations-metadata";
-  const metadata = await (0, import_api_fetch6.default)({ path: metadataPath });
-  const partialIntegrations = metadata.map((meta) => ({
-    ...meta,
-    pluginFile: null,
-    isInstalled: false,
-    isActive: false,
-    isConnected: false,
-    needsConnection: meta.type === "service",
-    version: null,
-    settingsUrl: null,
-    details: {},
-    __isPartial: true
-    // Flag to indicate this is metadata-only
-  }));
-  dispatch(receiveIntegrations(partialIntegrations));
-};
-var fetchFullIntegrations = () => async ({ dispatch }) => {
-  const fullPath = (0, import_url4.addQueryArgs)("/wp/v2/feedback/integrations", { version: 2 });
-  const fullIntegrations = await (0, import_api_fetch6.default)({ path: fullPath });
-  dispatch(receiveIntegrations(fullIntegrations));
-};
-var getIntegrations = () => async ({ dispatch }) => {
-  dispatch(setIntegrationsLoading(true));
-  try {
-    if (!hasLoadedMeta) {
-      await fetchIntegrationsMetadata()({ dispatch });
-      hasLoadedMeta = true;
-    }
-    await fetchFullIntegrations()({ dispatch });
-  } catch (e2) {
-    const message2 = e2 instanceof Error ? e2.message : UNKNOWN_ERROR_MESSAGE;
-    dispatch(setIntegrationsError(message2));
-  } finally {
-    dispatch(setIntegrationsLoading(false));
-  }
-};
-getIntegrations.shouldInvalidate = (action) => action.type === INVALIDATE_INTEGRATIONS;
-
-// src/store/integrations/actions.ts
-var receiveIntegrations = (items) => ({
-  type: RECEIVE_INTEGRATIONS,
-  items
-});
-var invalidateIntegrations = () => ({
-  type: INVALIDATE_INTEGRATIONS
-});
-var setIntegrationsLoading = (isLoading) => ({
-  type: SET_INTEGRATIONS_LOADING,
-  isLoading
-});
-var setIntegrationsError = (error2) => ({
-  type: SET_INTEGRATIONS_ERROR,
-  error: error2
-});
-var refreshIntegrations = () => getIntegrations();
-
-// src/store/integrations/reducer.ts
-var DEFAULT_STATE2 = {
-  items: null,
-  isLoading: false,
-  error: null
-};
-function reducer2(state = DEFAULT_STATE2, action) {
-  switch (action.type) {
-    case SET_INTEGRATIONS_LOADING:
-      return {
-        ...state,
-        isLoading: !!action.isLoading,
-        error: action.isLoading ? null : state.error
-      };
-    case SET_INTEGRATIONS_ERROR:
-      return {
-        ...state,
-        isLoading: false,
-        error: action.error ?? UNKNOWN_ERROR_MESSAGE
-      };
-    case RECEIVE_INTEGRATIONS:
-      return {
-        ...state,
-        items: action.items,
-        isLoading: false,
-        error: null
-      };
-    case INVALIDATE_INTEGRATIONS:
-      return {
-        ...state,
-        items: null,
-        isLoading: false
-      };
-    default:
-      return state;
-  }
-}
-
-// src/store/integrations/selectors.ts
-var selectors_exports3 = {};
-__export(selectors_exports3, {
-  getIntegrations: () => getIntegrations2,
-  getIntegrationsError: () => getIntegrationsError,
-  isIntegrationsLoading: () => isIntegrationsLoading
-});
-var getIntegrations2 = (state) => state.items;
-var isIntegrationsLoading = (state) => state.isLoading;
-var getIntegrationsError = (state) => state.error;
-
-// src/store/integrations/index.ts
-var INTEGRATIONS_STORE = "jetpack/forms/integrations";
-var store3 = (0, import_data11.createReduxStore)(INTEGRATIONS_STORE, {
-  reducer: reducer2,
+var store3 = (0, import_data12.createReduxStore)(STORE_NAME, {
   actions: actions_exports3,
+  reducer: reducer_default,
   selectors: selectors_exports3,
   resolvers: resolvers_exports3
 });
-(0, import_data11.register)(store3);
+(0, import_data12.register)(store3);
 
 // routes/responses/stage.tsx
-var import_jsx_runtime150 = __toESM(require_jsx_runtime());
+var import_jsx_runtime152 = __toESM(require_jsx_runtime());
 function useFilterOptions() {
-  const [filterOptions, setFilterOptions] = (0, import_element64.useState)({
+  const [filterOptions, setFilterOptions] = (0, import_element66.useState)({
     date: [],
     source: []
   });
-  (0, import_element64.useEffect)(() => {
+  (0, import_element66.useEffect)(() => {
     (0, import_api_fetch7.default)({ path: "/wp/v2/feedback/filters" }).then((response) => {
       setFilterOptions({
         date: response.date || [],
@@ -27134,9 +27336,9 @@ function useFilterOptions() {
   return filterOptions;
 }
 function getTabLabel(label, count) {
-  return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("span", { style: { display: "flex", gap: "4px", alignItems: "center" }, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("span", { style: { display: "flex", gap: "4px", alignItems: "center" }, children: [
     label,
-    /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(Badge, { intent: "default", style: { backgroundColor: "#f0f0f0" }, children: count.toString() })
+    /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Badge, { intent: "default", style: { backgroundColor: "#f0f0f0" }, children: count.toString() })
   ] });
 }
 var EMPTY_ARRAY8 = [];
@@ -27163,25 +27365,25 @@ function styleUnreadValue(element, isUnread) {
     return element;
   }
   if (typeof element === "string") {
-    return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { style: { fontWeight: 600 }, children: element });
+    return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("span", { style: { fontWeight: 600 }, children: element });
   }
   if (React33.isValidElement(element)) {
     return React33.cloneElement(element, {
       style: { ...element.props.style || {}, fontWeight: 600 }
     });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { style: { fontWeight: 600 }, children: element });
+  return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("span", { style: { fontWeight: 600 }, children: element });
 }
 function Stage() {
   const params = useParams({ from: "/responses/$view" });
   const searchParams = useSearch({ from: "/responses/$view" });
   const navigate = useNavigate();
-  const counts2 = (0, import_data12.useSelect)(
-    (select) => select(store2).getCounts(),
+  const counts2 = (0, import_data13.useSelect)(
+    (select) => select(store3).getCounts(),
     []
   );
-  const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data12.useDispatch)(
-    store2
+  const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data13.useDispatch)(
+    store3
   );
   const filterOptions = useFilterOptions();
   let status = "publish";
@@ -27190,28 +27392,28 @@ function Stage() {
   } else if (params.view === "trash") {
     status = "trash";
   }
-  const { saveEntityRecord, deleteEntityRecord, invalidateResolution, editEntityRecord } = (0, import_data12.useDispatch)(import_core_data.store);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data12.useDispatch)(import_notices2.store);
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element64.useState)(false);
-  const integrations = (0, import_data12.useSelect)(
+  const { saveEntityRecord, deleteEntityRecord, invalidateResolution, editEntityRecord } = (0, import_data13.useDispatch)(import_core_data.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data13.useDispatch)(import_notices2.store);
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element66.useState)(false);
+  const integrations = (0, import_data13.useSelect)(
     (select) => select(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
   );
-  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data12.useDispatch)(INTEGRATIONS_STORE);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data13.useDispatch)(INTEGRATIONS_STORE);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
-  const [view, setView] = (0, import_element64.useState)(() => ({
+  const [view, setView] = (0, import_element66.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
   const selection = searchParams?.responseIds ?? [];
-  (0, import_element64.useEffect)(() => {
+  (0, import_element66.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((prev) => ({ ...prev, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const onChangeView = (0, import_element64.useCallback)(
+  const onChangeView = (0, import_element66.useCallback)(
     (newView) => {
       setView(newView);
       if (newView.search !== view.search) {
@@ -27225,7 +27427,7 @@ function Stage() {
     },
     [navigate, searchParams, view.search]
   );
-  const onChangeSelection = (0, import_element64.useCallback)(
+  const onChangeSelection = (0, import_element66.useCallback)(
     (items) => {
       navigate({
         search: {
@@ -27236,7 +27438,7 @@ function Stage() {
     },
     [searchParams, navigate]
   );
-  const queryParams = (0, import_element64.useMemo)(() => {
+  const queryParams = (0, import_element66.useMemo)(() => {
     const queryArgs = {
       status,
       per_page: view.perPage,
@@ -27270,17 +27472,17 @@ function Stage() {
     "feedback",
     queryParams
   );
-  const fields = (0, import_element64.useMemo)(
+  const fields = (0, import_element66.useMemo)(
     () => [
       {
         id: "from",
-        label: (0, import_i18n61.__)("From", "jetpack-forms"),
+        label: (0, import_i18n63.__)("From", "jetpack-forms"),
         render: ({ item }) => {
           const displayName = item.author_name || item.author_email || item.author_url || item.ip || "Anonymous";
           const showEmail = item.author_email && item.author_name !== item.author_email;
           const defaultImage = item.author_name || item.author_email ? "initials" : "mp";
-          return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: "12px" }, children: [
-            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: "12px" }, children: [
+            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
               "span",
               {
                 style: {
@@ -27290,10 +27492,10 @@ function Stage() {
                   backgroundColor: "var(--wp-admin-theme-color, #3858e9)",
                   flexShrink: 0
                 },
-                "aria-label": (0, import_i18n61.__)("Unread", "jetpack-forms")
+                "aria-label": (0, import_i18n63.__)("Unread", "jetpack-forms")
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
               Gravatar,
               {
                 email: item.author_email || item.ip,
@@ -27304,9 +27506,9 @@ function Stage() {
               }
             ),
             styleUnreadValue(
-              /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("span", { style: { display: "flex", flexDirection: "column", gap: "2px" }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("span", { style: { display: "flex", flexDirection: "column", gap: "2px" }, children: [
                 displayName,
-                showEmail && /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { style: { fontSize: "12px", color: "#757575" }, children: item.author_email })
+                showEmail && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("span", { style: { fontSize: "12px", color: "#757575" }, children: item.author_email })
               ] }),
               item.is_unread
             )
@@ -27318,7 +27520,7 @@ function Stage() {
       },
       {
         id: "date",
-        label: (0, import_i18n61.__)("Date", "jetpack-forms"),
+        label: (0, import_i18n63.__)("Date", "jetpack-forms"),
         render: ({ item }) => {
           const dateStr = new Date(item.date).toLocaleDateString(void 0, {
             year: "numeric",
@@ -27333,7 +27535,7 @@ function Stage() {
           date.setMonth(filter.month - 1);
           date.setFullYear(filter.year);
           return {
-            label: (0, import_date9.dateI18n)((0, import_i18n61.__)("F Y", "jetpack-forms"), date),
+            label: (0, import_date9.dateI18n)((0, import_i18n63.__)("F Y", "jetpack-forms"), date),
             value: `${filter.year}/${filter.month}`
           };
         }),
@@ -27342,12 +27544,12 @@ function Stage() {
       },
       {
         id: "source",
-        label: (0, import_i18n61.__)("Source", "jetpack-forms"),
+        label: (0, import_i18n63.__)("Source", "jetpack-forms"),
         render: ({ item }) => {
-          const source = item.entry_title || getPath(item) || (0, import_i18n61.__)("(no title)", "jetpack-forms");
+          const source = item.entry_title || getPath(item) || (0, import_i18n63.__)("(no title)", "jetpack-forms");
           if (item.entry_permalink) {
             return styleUnreadValue(
-              /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(import_components67.ExternalLink, { href: item.entry_permalink, children: source }),
+              /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components69.ExternalLink, { href: item.entry_permalink, children: source }),
               item.is_unread
             );
           }
@@ -27362,28 +27564,28 @@ function Stage() {
       },
       {
         id: "read_status",
-        label: (0, import_i18n61.__)("Status", "jetpack-forms"),
+        label: (0, import_i18n63.__)("Status", "jetpack-forms"),
         elements: [
-          { label: (0, import_i18n61.__)("Unread", "jetpack-forms"), value: "unread" },
-          { label: (0, import_i18n61.__)("Read", "jetpack-forms"), value: "read" }
+          { label: (0, import_i18n63.__)("Unread", "jetpack-forms"), value: "unread" },
+          { label: (0, import_i18n63.__)("Read", "jetpack-forms"), value: "read" }
         ],
         filterBy: { operators: ["is"] },
         enableSorting: false,
         render: ({ item }) => {
-          return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n61.__)("Unread", "jetpack-forms") : (0, import_i18n61.__)("Read", "jetpack-forms") });
+          return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n63.__)("Unread", "jetpack-forms") : (0, import_i18n63.__)("Read", "jetpack-forms") });
         }
       },
       {
         id: "ip",
-        label: (0, import_i18n61.__)("IP Address", "jetpack-forms"),
+        label: (0, import_i18n63.__)("IP Address", "jetpack-forms"),
         render: ({ item }) => {
           if (!item.ip) {
             return styleUnreadValue("-", item.is_unread);
           }
-          return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(import_jsx_runtime150.Fragment, { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("span", { className: "jp-forms__inbox-response-country-flag", children: [
-              !item.country_code && /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(icon_default, { icon: globe_default, size: 20 }),
-              item.country_code && /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(Flag, { countryCode: item.country_code })
+          return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(import_jsx_runtime152.Fragment, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("span", { className: "jp-forms__inbox-response-country-flag", children: [
+              !item.country_code && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(icon_default, { icon: globe_default, size: 20 }),
+              item.country_code && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Flag, { countryCode: item.country_code })
             ] }),
             styleUnreadValue(item.ip, item.is_unread)
           ] });
@@ -27393,10 +27595,10 @@ function Stage() {
     ],
     [filterOptions]
   );
-  const invalidateCache = (0, import_element64.useCallback)(() => {
+  const invalidateCache = (0, import_element66.useCallback)(() => {
     invalidateResolution("getEntityRecords", ["postType", "feedback", queryParams]);
   }, [invalidateResolution, queryParams]);
-  const clearSelection = (0, import_element64.useCallback)(() => {
+  const clearSelection = (0, import_element66.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -27404,7 +27606,7 @@ function Stage() {
       }
     });
   }, [navigate, searchParams]);
-  const handleMarkAsSpam = (0, import_element64.useCallback)(
+  const handleMarkAsSpam = (0, import_element66.useCallback)(
     async (items) => {
       const originalStatuses = items.map((item) => item.status);
       items.forEach((item) => {
@@ -27412,9 +27614,9 @@ function Stage() {
         updateCountsOptimistically2(item.status, "spam", 1);
       });
       clearSelection();
-      const message2 = items.length === 1 ? (0, import_i18n61.__)("Response marked as spam.", "jetpack-forms") : (0, import_i18n61.sprintf)(
+      const message2 = items.length === 1 ? (0, import_i18n63.__)("Response marked as spam.", "jetpack-forms") : (0, import_i18n63.sprintf)(
         /* translators: %d: number of responses */
-        (0, import_i18n61._n)(
+        (0, import_i18n63._n)(
           "%d response marked as spam.",
           "%d responses marked as spam.",
           items.length,
@@ -27441,7 +27643,7 @@ function Stage() {
           });
           updateCountsOptimistically2("spam", originalStatuses[index], 1);
         });
-        createErrorNotice((0, import_i18n61.__)("Failed to mark as spam.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n63.__)("Failed to mark as spam.", "jetpack-forms"), {
           type: "snackbar"
         });
       }
@@ -27457,7 +27659,7 @@ function Stage() {
       invalidateCounts2
     ]
   );
-  const handleMarkAsNotSpam = (0, import_element64.useCallback)(
+  const handleMarkAsNotSpam = (0, import_element66.useCallback)(
     async (items) => {
       const originalStatuses = items.map((item) => item.status);
       items.forEach((item) => {
@@ -27465,9 +27667,9 @@ function Stage() {
         updateCountsOptimistically2(item.status, "publish", 1);
       });
       clearSelection();
-      const message2 = items.length === 1 ? (0, import_i18n61.__)("Response restored from spam.", "jetpack-forms") : (0, import_i18n61.sprintf)(
+      const message2 = items.length === 1 ? (0, import_i18n63.__)("Response restored from spam.", "jetpack-forms") : (0, import_i18n63.sprintf)(
         /* translators: %d: number of responses */
-        (0, import_i18n61._n)(
+        (0, import_i18n63._n)(
           "%d response restored from spam.",
           "%d responses restored from spam.",
           items.length,
@@ -27494,7 +27696,7 @@ function Stage() {
           });
           updateCountsOptimistically2("publish", originalStatuses[index], 1);
         });
-        createErrorNotice((0, import_i18n61.__)("Failed to restore from spam.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n63.__)("Failed to restore from spam.", "jetpack-forms"), {
           type: "snackbar"
         });
       }
@@ -27510,7 +27712,7 @@ function Stage() {
       invalidateCounts2
     ]
   );
-  const handleMoveToTrash = (0, import_element64.useCallback)(
+  const handleMoveToTrash = (0, import_element66.useCallback)(
     async (items) => {
       const originalStatuses = items.map((item) => item.status);
       items.forEach((item) => {
@@ -27518,9 +27720,9 @@ function Stage() {
         updateCountsOptimistically2(item.status, "trash", 1);
       });
       clearSelection();
-      const message2 = items.length === 1 ? (0, import_i18n61.__)("Response moved to trash.", "jetpack-forms") : (0, import_i18n61.sprintf)(
+      const message2 = items.length === 1 ? (0, import_i18n63.__)("Response moved to trash.", "jetpack-forms") : (0, import_i18n63.sprintf)(
         /* translators: %d: number of responses */
-        (0, import_i18n61._n)(
+        (0, import_i18n63._n)(
           "%d response moved to trash.",
           "%d responses moved to trash.",
           items.length,
@@ -27544,7 +27746,7 @@ function Stage() {
           });
           updateCountsOptimistically2("trash", originalStatuses[index], 1);
         });
-        createErrorNotice((0, import_i18n61.__)("Failed to move to trash.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n63.__)("Failed to move to trash.", "jetpack-forms"), {
           type: "snackbar"
         });
       }
@@ -27560,7 +27762,7 @@ function Stage() {
       invalidateCounts2
     ]
   );
-  const handleRestore = (0, import_element64.useCallback)(
+  const handleRestore = (0, import_element66.useCallback)(
     async (items) => {
       const originalStatuses = items.map((item) => item.status);
       items.forEach((item) => {
@@ -27568,9 +27770,9 @@ function Stage() {
         updateCountsOptimistically2(item.status, "publish", 1);
       });
       clearSelection();
-      const message2 = items.length === 1 ? (0, import_i18n61.__)("Response restored.", "jetpack-forms") : (0, import_i18n61.sprintf)(
+      const message2 = items.length === 1 ? (0, import_i18n63.__)("Response restored.", "jetpack-forms") : (0, import_i18n63.sprintf)(
         /* translators: %d: number of responses */
-        (0, import_i18n61._n)(
+        (0, import_i18n63._n)(
           "%d response restored.",
           "%d responses restored.",
           items.length,
@@ -27597,7 +27799,7 @@ function Stage() {
           });
           updateCountsOptimistically2("publish", originalStatuses[index], 1);
         });
-        createErrorNotice((0, import_i18n61.__)("Failed to restore.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n63.__)("Failed to restore.", "jetpack-forms"), {
           type: "snackbar"
         });
       }
@@ -27613,15 +27815,15 @@ function Stage() {
       invalidateCounts2
     ]
   );
-  const handleDelete = (0, import_element64.useCallback)(
+  const handleDelete = (0, import_element66.useCallback)(
     async (items) => {
       items.forEach((item) => {
         updateCountsOptimistically2(item.status, "", 1);
       });
       clearSelection();
-      const message2 = items.length === 1 ? (0, import_i18n61.__)("Response permanently deleted.", "jetpack-forms") : (0, import_i18n61.sprintf)(
+      const message2 = items.length === 1 ? (0, import_i18n63.__)("Response permanently deleted.", "jetpack-forms") : (0, import_i18n63.sprintf)(
         /* translators: %d: number of responses */
-        (0, import_i18n61._n)(
+        (0, import_i18n63._n)(
           "%d response permanently deleted.",
           "%d responses permanently deleted.",
           items.length,
@@ -27648,7 +27850,7 @@ function Stage() {
         items.forEach((item) => {
           updateCountsOptimistically2("", item.status, 1);
         });
-        createErrorNotice((0, import_i18n61.__)("Failed to delete.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n63.__)("Failed to delete.", "jetpack-forms"), {
           type: "snackbar"
         });
         invalidateCache();
@@ -27664,14 +27866,14 @@ function Stage() {
       invalidateCounts2
     ]
   );
-  const handleMarkAsRead = (0, import_element64.useCallback)(
+  const handleMarkAsRead = (0, import_element66.useCallback)(
     async (items) => {
       items.forEach((item) => {
         editEntityRecord("postType", "feedback", item.id, { is_unread: false });
       });
-      const message2 = items.length === 1 ? (0, import_i18n61.__)("Response marked as read.", "jetpack-forms") : (0, import_i18n61.sprintf)(
+      const message2 = items.length === 1 ? (0, import_i18n63.__)("Response marked as read.", "jetpack-forms") : (0, import_i18n63.sprintf)(
         /* translators: %d: number of responses */
-        (0, import_i18n61._n)(
+        (0, import_i18n63._n)(
           "%d response marked as read.",
           "%d responses marked as read.",
           items.length,
@@ -27695,21 +27897,21 @@ function Stage() {
         items.forEach((item) => {
           editEntityRecord("postType", "feedback", item.id, { is_unread: true });
         });
-        createErrorNotice((0, import_i18n61.__)("Failed to mark as read.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n63.__)("Failed to mark as read.", "jetpack-forms"), {
           type: "snackbar"
         });
       }
     },
     [editEntityRecord, createSuccessNotice, createErrorNotice, invalidateCache]
   );
-  const handleMarkAsUnread = (0, import_element64.useCallback)(
+  const handleMarkAsUnread = (0, import_element66.useCallback)(
     async (items) => {
       items.forEach((item) => {
         editEntityRecord("postType", "feedback", item.id, { is_unread: true });
       });
-      const message2 = items.length === 1 ? (0, import_i18n61.__)("Response marked as unread.", "jetpack-forms") : (0, import_i18n61.sprintf)(
+      const message2 = items.length === 1 ? (0, import_i18n63.__)("Response marked as unread.", "jetpack-forms") : (0, import_i18n63.sprintf)(
         /* translators: %d: number of responses */
-        (0, import_i18n61._n)(
+        (0, import_i18n63._n)(
           "%d response marked as unread.",
           "%d responses marked as unread.",
           items.length,
@@ -27733,18 +27935,18 @@ function Stage() {
         items.forEach((item) => {
           editEntityRecord("postType", "feedback", item.id, { is_unread: false });
         });
-        createErrorNotice((0, import_i18n61.__)("Failed to mark as unread.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n63.__)("Failed to mark as unread.", "jetpack-forms"), {
           type: "snackbar"
         });
       }
     },
     [editEntityRecord, createSuccessNotice, createErrorNotice, invalidateCache]
   );
-  const actions = (0, import_element64.useMemo)(() => {
+  const actions = (0, import_element66.useMemo)(() => {
     const baseActions = [
       {
         id: "view-details",
-        label: (0, import_i18n61.__)("View", "jetpack-forms"),
+        label: (0, import_i18n63.__)("View", "jetpack-forms"),
         isPrimary: true,
         callback: (items) => {
           const ids = items.map((item) => getItemId(item));
@@ -27762,14 +27964,14 @@ function Stage() {
         ...baseActions,
         {
           id: "mark-as-read",
-          label: (0, import_i18n61.__)("Mark as read", "jetpack-forms"),
+          label: (0, import_i18n63.__)("Mark as read", "jetpack-forms"),
           supportsBulk: true,
           isEligible: (item) => item.is_unread,
           callback: handleMarkAsRead
         },
         {
           id: "mark-as-spam",
-          label: (0, import_i18n61.__)("Spam", "jetpack-forms"),
+          label: (0, import_i18n63.__)("Spam", "jetpack-forms"),
           supportsBulk: true,
           isDestructive: true,
           isPrimary: true,
@@ -27777,7 +27979,7 @@ function Stage() {
         },
         {
           id: "move-to-trash",
-          label: (0, import_i18n61.__)("Trash", "jetpack-forms"),
+          label: (0, import_i18n63.__)("Trash", "jetpack-forms"),
           supportsBulk: true,
           isDestructive: true,
           isPrimary: true,
@@ -27785,7 +27987,7 @@ function Stage() {
         },
         {
           id: "mark-as-unread",
-          label: (0, import_i18n61.__)("Mark as unread", "jetpack-forms"),
+          label: (0, import_i18n63.__)("Mark as unread", "jetpack-forms"),
           supportsBulk: true,
           isEligible: (item) => !item.is_unread,
           callback: handleMarkAsUnread
@@ -27797,14 +27999,14 @@ function Stage() {
         ...baseActions,
         {
           id: "not-spam",
-          label: (0, import_i18n61.__)("Not spam", "jetpack-forms"),
+          label: (0, import_i18n63.__)("Not spam", "jetpack-forms"),
           supportsBulk: true,
           isPrimary: true,
           callback: handleMarkAsNotSpam
         },
         {
           id: "move-to-trash",
-          label: (0, import_i18n61.__)("Trash", "jetpack-forms"),
+          label: (0, import_i18n63.__)("Trash", "jetpack-forms"),
           supportsBulk: true,
           isDestructive: true,
           isPrimary: true,
@@ -27817,14 +28019,14 @@ function Stage() {
         ...baseActions,
         {
           id: "restore",
-          label: (0, import_i18n61.__)("Restore", "jetpack-forms"),
+          label: (0, import_i18n63.__)("Restore", "jetpack-forms"),
           supportsBulk: true,
           isPrimary: true,
           callback: handleRestore
         },
         {
           id: "delete-permanently",
-          label: (0, import_i18n61.__)("Delete", "jetpack-forms"),
+          label: (0, import_i18n63.__)("Delete", "jetpack-forms"),
           supportsBulk: true,
           isDestructive: true,
           isPrimary: true,
@@ -27845,7 +28047,7 @@ function Stage() {
     handleRestore,
     handleDelete
   ]);
-  const paginationInfo = (0, import_element64.useMemo)(
+  const paginationInfo = (0, import_element66.useMemo)(
     () => ({
       totalItems: totalItems || 0,
       totalPages: totalPages || 1
@@ -27853,11 +28055,11 @@ function Stage() {
     [totalItems, totalPages]
   );
   const statusTabs = [
-    { slug: "inbox", label: getTabLabel((0, import_i18n61.__)("Inbox", "jetpack-forms"), counts2.inbox) },
-    { slug: "spam", label: getTabLabel((0, import_i18n61.__)("Spam", "jetpack-forms"), counts2.spam) },
-    { slug: "trash", label: getTabLabel((0, import_i18n61.__)("Trash", "jetpack-forms"), counts2.trash) }
+    { slug: "inbox", label: getTabLabel((0, import_i18n63.__)("Inbox", "jetpack-forms"), counts2.inbox) },
+    { slug: "spam", label: getTabLabel((0, import_i18n63.__)("Spam", "jetpack-forms"), counts2.spam) },
+    { slug: "trash", label: getTabLabel((0, import_i18n63.__)("Trash", "jetpack-forms"), counts2.trash) }
   ];
-  const handleTabChange = (0, import_element64.useCallback)(
+  const handleTabChange = (0, import_element66.useCallback)(
     (newView) => {
       navigate({
         to: "/responses/$view",
@@ -27867,26 +28069,26 @@ function Stage() {
     [navigate]
   );
   const { openNewForm } = useCreateForm();
-  const handleCreateForm = (0, import_element64.useCallback)(() => {
+  const handleCreateForm = (0, import_element66.useCallback)(() => {
     openNewForm({ showPatterns: false });
   }, [openNewForm]);
-  const handleIntegrations = (0, import_element64.useCallback)(() => {
+  const handleIntegrations = (0, import_element66.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element64.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element66.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
-  const headerActions = (0, import_element64.useMemo)(() => {
+  const headerActions = (0, import_element66.useMemo)(() => {
     const actionsArray = [];
     if ((params.view === "inbox" || !params.view) && isIntegrationsEnabled && showDashboardIntegrations) {
       actionsArray.push(
-        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
-          import_components67.Button,
+        /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
+          import_components69.Button,
           {
             variant: "secondary",
             size: "compact",
             onClick: handleIntegrations,
-            children: (0, import_i18n61.__)("Manage integrations", "jetpack-forms")
+            children: (0, import_i18n63.__)("Manage integrations", "jetpack-forms")
           },
           "integrations"
         )
@@ -27894,30 +28096,30 @@ function Stage() {
     }
     if (params.view === "inbox" || !params.view) {
       actionsArray.push(
-        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
-          import_components67.Button,
+        /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
+          import_components69.Button,
           {
             variant: "secondary",
             size: "compact",
             icon: plus_default,
             onClick: handleCreateForm,
-            children: (0, import_i18n61.__)("Create a form", "jetpack-forms")
+            children: (0, import_i18n63.__)("Create a form", "jetpack-forms")
           },
           "create"
         )
       );
     }
     actionsArray.push(
-      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(import_components67.Button, { variant: "primary", size: "compact", icon: download_default, children: (0, import_i18n61.__)("Export", "jetpack-forms") }, "export")
+      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components69.Button, { variant: "primary", size: "compact", icon: download_default, children: (0, import_i18n63.__)("Export", "jetpack-forms") }, "export")
     );
     if (params.view === "trash") {
       actionsArray.push(
-        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(import_components67.Button, { variant: "secondary", isDestructive: true, size: "compact", children: (0, import_i18n61.__)("Empty Trash", "jetpack-forms") }, "empty-trash")
+        /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components69.Button, { variant: "secondary", isDestructive: true, size: "compact", children: (0, import_i18n63.__)("Empty Trash", "jetpack-forms") }, "empty-trash")
       );
     }
     if (params.view === "spam") {
       actionsArray.push(
-        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(import_components67.Button, { variant: "secondary", isDestructive: true, size: "compact", children: (0, import_i18n61.__)("Empty Spam", "jetpack-forms") }, "empty-spam")
+        /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components69.Button, { variant: "secondary", isDestructive: true, size: "compact", children: (0, import_i18n63.__)("Empty Spam", "jetpack-forms") }, "empty-spam")
       );
     }
     return actionsArray;
@@ -27928,21 +28130,30 @@ function Stage() {
     isIntegrationsEnabled,
     showDashboardIntegrations
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(
+  const readStatusFilter = view.filters?.find((filter) => filter.field === "read_status")?.value;
+  return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(
     page_default,
     {
       showSidebarToggle: false,
-      title: /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: "8px" }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
-        (0, import_i18n61.__)("Forms", "jetpack-forms")
+      title: /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: "8px" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
+        (0, import_i18n63.__)("Forms", "jetpack-forms")
       ] }),
-      subTitle: (0, import_i18n61.__)("View and manage all your form submissions in one place.", "jetpack-forms"),
+      subTitle: (0, import_i18n63.__)("View and manage all your form submissions in one place.", "jetpack-forms"),
       actions: headerActions,
       hasPadding: false,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(
           dataviews_default,
           {
+            empty: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
+              empty_responses_default,
+              {
+                status: params.view,
+                isSearch: !!view.search,
+                readStatusFilter
+              }
+            ),
             data: records || EMPTY_ARRAY8,
             fields,
             view,
@@ -27955,7 +28166,7 @@ function Stage() {
             onChangeSelection,
             actions,
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(
+              /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(
                 Stack,
                 {
                   className: "jp-forms-dataviews__view-actions",
@@ -27963,22 +28174,22 @@ function Stage() {
                   justify: "space-between",
                   align: "center",
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(Stack, { direction: "row", align: "center", gap: 2, children: /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(Root, { value: params.view || "inbox", onValueChange: handleTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(List, { density: "compact", children: statusTabs.map((tab) => /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(Tab, { value: tab.slug, children: tab.label }, tab.slug)) }) }) }),
-                    /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(Stack, { direction: "row", align: "center", gap: 2, children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(dataviews_default.Search, {}),
-                      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(dataviews_default.FiltersToggle, {}),
-                      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(dataviews_default.ViewConfig, {})
+                    /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Stack, { direction: "row", align: "center", gap: 2, children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Root, { value: params.view || "inbox", onValueChange: handleTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(List, { density: "compact", children: statusTabs.map((tab) => /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Tab, { value: tab.slug, children: tab.label }, tab.slug)) }) }) }),
+                    /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(Stack, { direction: "row", align: "center", gap: 2, children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(dataviews_default.Search, {}),
+                      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(dataviews_default.FiltersToggle, {}),
+                      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(dataviews_default.ViewConfig, {})
                     ] })
                   ]
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(dataviews_default.Filters, { className: "dataviews-filters__container" }),
-              /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(dataviews_default.Layout, {}),
-              /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(dataviews_default.Footer, {})
+              /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(dataviews_default.Filters, { className: "dataviews-filters__container" }),
+              /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(dataviews_default.Layout, {}),
+              /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(dataviews_default.Footer, {})
             ]
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
           jetpack_integrations_modal_default,
           {
             isOpen: isIntegrationsModalOpen,
@@ -27996,11 +28207,11 @@ function Stage() {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
-var import_element65 = __toESM(require_element(), 1);
-var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
-var NavigableRegion2 = (0, import_element65.forwardRef)(
+var import_element67 = __toESM(require_element(), 1);
+var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
+var NavigableRegion2 = (0, import_element67.forwardRef)(
   ({ children, className, ariaLabel, as: Tag = "div", ...props }, ref) => {
-    return /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
       Tag,
       {
         ref,
@@ -28018,14 +28229,14 @@ NavigableRegion2.displayName = "NavigableRegion";
 var navigable_region_default2 = NavigableRegion2;
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
-var import_components69 = __toESM(require_components(), 1);
+var import_components71 = __toESM(require_components(), 1);
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/sidebar-toggle-slot.mjs
-var import_components68 = __toESM(require_components(), 1);
-var { Fill: SidebarToggleFill2, Slot: SidebarToggleSlot2 } = (0, import_components68.createSlotFill)("SidebarToggle");
+var import_components70 = __toESM(require_components(), 1);
+var { Fill: SidebarToggleFill2, Slot: SidebarToggleSlot2 } = (0, import_components70.createSlotFill)("SidebarToggle");
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
-var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime154 = __toESM(require_jsx_runtime(), 1);
 function Header2({
   breadcrumbs,
   badges,
@@ -28034,22 +28245,22 @@ function Header2({
   actions,
   showSidebarToggle = true
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(import_components69.__experimentalVStack, { className: "admin-ui-page__header", as: "header", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(import_components69.__experimentalHStack, { justify: "space-between", spacing: 2, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(import_components69.__experimentalHStack, { spacing: 2, justify: "left", children: [
-        showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(import_components71.__experimentalVStack, { className: "admin-ui-page__header", as: "header", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(import_components71.__experimentalHStack, { justify: "space-between", spacing: 2, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(import_components71.__experimentalHStack, { spacing: 2, justify: "left", children: [
+        showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(
           SidebarToggleSlot2,
           {
             bubblesVirtually: true,
             className: "admin-ui-page__sidebar-toggle-slot"
           }
         ),
-        title && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components69.__experimentalHeading, { as: "h2", level: 3, weight: 500, truncate: true, children: title }),
+        title && /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(import_components71.__experimentalHeading, { as: "h2", level: 3, weight: 500, truncate: true, children: title }),
         breadcrumbs,
         badges
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
-        import_components69.__experimentalHStack,
+      /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(
+        import_components71.__experimentalHStack,
         {
           style: { width: "auto", flexShrink: 0 },
           spacing: 2,
@@ -28058,12 +28269,12 @@ function Header2({
         }
       )
     ] }),
-    subTitle && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("p", { className: "admin-ui-page__header-subtitle", children: subTitle })
+    subTitle && /* @__PURE__ */ (0, import_jsx_runtime154.jsx)("p", { className: "admin-ui-page__header-subtitle", children: subTitle })
   ] });
 }
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
-var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime155 = __toESM(require_jsx_runtime(), 1);
 function Page2({
   breadcrumbs,
   badges,
@@ -28076,8 +28287,8 @@ function Page2({
   showSidebarToggle = true
 }) {
   const classes = clsx_default("admin-ui-page", className);
-  return /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)(navigable_region_default2, { className: classes, ariaLabel: title, children: [
-    (title || breadcrumbs || badges) && /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(navigable_region_default2, { className: classes, ariaLabel: title, children: [
+    (title || breadcrumbs || badges) && /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
       Header2,
       {
         breadcrumbs,
@@ -28088,7 +28299,7 @@ function Page2({
         showSidebarToggle
       }
     ),
-    hasPadding ? /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("div", { className: "admin-ui-page__content has-padding", children }) : children
+    hasPadding ? /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("div", { className: "admin-ui-page__content has-padding", children }) : children
   ] });
 }
 Page2.SidebarToggleFill = SidebarToggleFill2;
@@ -28096,24 +28307,24 @@ var page_default2 = Page2;
 
 // routes/responses/inspector/index.tsx
 var import_api_fetch9 = __toESM(require_api_fetch());
-var import_components73 = __toESM(require_components());
+var import_components75 = __toESM(require_components());
 var import_core_data3 = __toESM(require_core_data());
-var import_data14 = __toESM(require_data());
+var import_data15 = __toESM(require_data());
 var import_date10 = __toESM(require_date());
-var import_element68 = __toESM(require_element());
+var import_element70 = __toESM(require_element());
 var import_html_entities2 = __toESM(require_html_entities());
-var import_i18n65 = __toESM(require_i18n());
+var import_i18n67 = __toESM(require_i18n());
 import { useParams as useParams2, useSearch as useSearch2, useNavigate as useNavigate2 } from "@wordpress/route";
 
 // src/dashboard/components/copy-clipboard-button/index.tsx
-var import_components70 = __toESM(require_components(), 1);
+var import_components72 = __toESM(require_components(), 1);
 var import_compose13 = __toESM(require_compose(), 1);
-var import_element66 = __toESM(require_element(), 1);
-var import_i18n62 = __toESM(require_i18n(), 1);
-var import_jsx_runtime154 = __toESM(require_jsx_runtime(), 1);
+var import_element68 = __toESM(require_element(), 1);
+var import_i18n64 = __toESM(require_i18n(), 1);
+var import_jsx_runtime156 = __toESM(require_jsx_runtime(), 1);
 function CopyClipboardButton({ text }) {
-  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element66.useState)(false);
-  const timeoutIdRef = (0, import_element66.useRef)(null);
+  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element68.useState)(false);
+  const timeoutIdRef = (0, import_element68.useRef)(null);
   const ref = (0, import_compose13.useCopyToClipboard)(text, () => {
     setShowCopyConfirmation(true);
     if (timeoutIdRef.current) {
@@ -28123,18 +28334,18 @@ function CopyClipboardButton({ text }) {
       setShowCopyConfirmation(false);
     }, 4e3);
   });
-  (0, import_element66.useEffect)(() => {
+  (0, import_element68.useEffect)(() => {
     return () => {
       if (timeoutIdRef.current) {
         clearTimeout(timeoutIdRef.current);
       }
     };
   }, []);
-  const copied = (0, import_i18n62.__)("Copied!", "jetpack-forms");
-  const copy = (0, import_i18n62.__)("Copy", "jetpack-forms");
+  const copied = (0, import_i18n64.__)("Copied!", "jetpack-forms");
+  const copy = (0, import_i18n64.__)("Copy", "jetpack-forms");
   const emailCopyLabel = showCopyConfirmation ? copied : copy;
-  return /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(import_components70.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(
-    import_components70.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components72.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
+    import_components72.Button,
     {
       size: "small",
       "aria-label": emailCopyLabel,
@@ -28147,24 +28358,24 @@ function CopyClipboardButton({ text }) {
 
 // routes/responses/inspector/actions.tsx
 var import_api_fetch8 = __toESM(require_api_fetch());
-var import_components71 = __toESM(require_components());
+var import_components73 = __toESM(require_components());
 var import_core_data2 = __toESM(require_core_data());
-var import_data13 = __toESM(require_data());
-var import_element67 = __toESM(require_element());
-var import_i18n63 = __toESM(require_i18n());
-var import_jsx_runtime155 = __toESM(require_jsx_runtime());
+var import_data14 = __toESM(require_data());
+var import_element69 = __toESM(require_element());
+var import_i18n65 = __toESM(require_i18n());
+var import_jsx_runtime157 = __toESM(require_jsx_runtime());
 function ResponseActions({
   response,
   onActionComplete
 }) {
-  const { saveEntityRecord, deleteEntityRecord, editEntityRecord } = (0, import_data13.useDispatch)(
+  const { saveEntityRecord, deleteEntityRecord, editEntityRecord } = (0, import_data14.useDispatch)(
     import_core_data2.store
   );
-  const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data13.useDispatch)(
-    store2
+  const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data14.useDispatch)(
+    store3
   );
-  const [isLoading] = (0, import_element67.useState)(false);
-  const handleMarkAsSpam = (0, import_element67.useCallback)(async () => {
+  const [isLoading] = (0, import_element69.useState)(false);
+  const handleMarkAsSpam = (0, import_element69.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "spam" });
     updateCountsOptimistically2(originalStatus, "spam", 1);
@@ -28187,7 +28398,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMarkAsNotSpam = (0, import_element67.useCallback)(async () => {
+  const handleMarkAsNotSpam = (0, import_element69.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -28210,7 +28421,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMoveToTrash = (0, import_element67.useCallback)(async () => {
+  const handleMoveToTrash = (0, import_element69.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "trash" });
     updateCountsOptimistically2(originalStatus, "trash", 1);
@@ -28230,7 +28441,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleRestore = (0, import_element67.useCallback)(async () => {
+  const handleRestore = (0, import_element69.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -28253,7 +28464,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleDelete = (0, import_element67.useCallback)(async () => {
+  const handleDelete = (0, import_element69.useCallback)(async () => {
     const originalStatus = response.status;
     updateCountsOptimistically2(originalStatus, "", 1);
     onActionComplete(response);
@@ -28270,7 +28481,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleToggleRead = (0, import_element67.useCallback)(async () => {
+  const handleToggleRead = (0, import_element69.useCallback)(async () => {
     const newIsUnread = !response.is_unread;
     editEntityRecord("postType", "feedback", response.id, { is_unread: newIsUnread });
     onActionComplete({ ...response, is_unread: newIsUnread });
@@ -28292,30 +28503,30 @@ function ResponseActions({
     // Compensate for button internal padding
   };
   if (response.status === "trash") {
-    return /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)("div", { style: containerStyle, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components71.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n63.__)("Mark as read", "jetpack-forms") : (0, import_i18n63.__)("Mark as unread", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components71.Button, { onClick: handleRestore, isBusy: isLoading, size: "compact", children: (0, import_i18n63.__)("Restore", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components71.Button, { onClick: handleDelete, isBusy: isLoading, size: "compact", children: (0, import_i18n63.__)("Delete", "jetpack-forms") })
+    return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("div", { style: containerStyle, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n65.__)("Mark as read", "jetpack-forms") : (0, import_i18n65.__)("Mark as unread", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Button, { onClick: handleRestore, isBusy: isLoading, size: "compact", children: (0, import_i18n65.__)("Restore", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Button, { onClick: handleDelete, isBusy: isLoading, size: "compact", children: (0, import_i18n65.__)("Delete", "jetpack-forms") })
     ] });
   }
   if (response.status === "spam") {
-    return /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)("div", { style: containerStyle, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components71.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n63.__)("Mark as read", "jetpack-forms") : (0, import_i18n63.__)("Mark as unread", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components71.Button, { onClick: handleMarkAsNotSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n63.__)("Not spam", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components71.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n63.__)("Trash", "jetpack-forms") })
+    return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("div", { style: containerStyle, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n65.__)("Mark as read", "jetpack-forms") : (0, import_i18n65.__)("Mark as unread", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Button, { onClick: handleMarkAsNotSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n65.__)("Not spam", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n65.__)("Trash", "jetpack-forms") })
     ] });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)("div", { style: containerStyle, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components71.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n63.__)("Mark as read", "jetpack-forms") : (0, import_i18n63.__)("Mark as unread", "jetpack-forms") }),
-    /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components71.Button, { onClick: handleMarkAsSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n63.__)("Spam", "jetpack-forms") }),
-    /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components71.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n63.__)("Trash", "jetpack-forms") })
+  return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("div", { style: containerStyle, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n65.__)("Mark as read", "jetpack-forms") : (0, import_i18n65.__)("Mark as unread", "jetpack-forms") }),
+    /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Button, { onClick: handleMarkAsSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n65.__)("Spam", "jetpack-forms") }),
+    /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n65.__)("Trash", "jetpack-forms") })
   ] });
 }
 
 // routes/responses/inspector/navigation.tsx
-var import_components72 = __toESM(require_components());
-var import_i18n64 = __toESM(require_i18n());
-var import_jsx_runtime156 = __toESM(require_jsx_runtime());
+var import_components74 = __toESM(require_components());
+var import_i18n66 = __toESM(require_i18n());
+var import_jsx_runtime158 = __toESM(require_jsx_runtime());
 function ResponseNavigation({
   hasNext,
   hasPrevious,
@@ -28329,29 +28540,29 @@ function ResponseNavigation({
     showTooltip: true,
     size: "compact"
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: "8px", flexShrink: 0 }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)("div", { style: { display: "flex", alignItems: "center" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
-        import_components72.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: "8px", flexShrink: 0 }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)("div", { style: { display: "flex", alignItems: "center" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
+        import_components74.Button,
         {
           ...sharedProps,
           disabled: !hasPrevious,
           icon: chevron_up_default,
-          label: (0, import_i18n64.__)("Previous", "jetpack-forms"),
+          label: (0, import_i18n66.__)("Previous", "jetpack-forms"),
           onClick: onPrevious
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
-        import_components72.Button,
+      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
+        import_components74.Button,
         {
           ...sharedProps,
           disabled: !hasNext,
           icon: chevron_down_default,
-          label: (0, import_i18n64.__)("Next", "jetpack-forms"),
+          label: (0, import_i18n66.__)("Next", "jetpack-forms"),
           onClick: onNext
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
         "span",
         {
           style: {
@@ -28365,13 +28576,13 @@ function ResponseNavigation({
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
-      import_components72.Button,
+    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
+      import_components74.Button,
       {
         ...sharedProps,
         iconSize: 20,
         icon: close_default,
-        label: (0, import_i18n64.__)("Close", "jetpack-forms"),
+        label: (0, import_i18n66.__)("Close", "jetpack-forms"),
         onClick: onClose
       }
     )
@@ -28379,7 +28590,7 @@ function ResponseNavigation({
 }
 
 // routes/responses/inspector/index.tsx
-var import_jsx_runtime157 = __toESM(require_jsx_runtime());
+var import_jsx_runtime159 = __toESM(require_jsx_runtime());
 var getDisplayName = (response) => {
   const { author_name, author_email, author_url, ip } = response;
   return (0, import_html_entities2.decodeEntities)(author_name || author_email || author_url || ip || "Anonymous");
@@ -28415,8 +28626,8 @@ function PreviewFile({
   isLoading,
   onImageLoaded
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("div", { style: { position: "relative", minHeight: "200px" }, children: [
-    isLoading && /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("div", { style: { position: "relative", minHeight: "200px" }, children: [
+    isLoading && /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(
       "div",
       {
         style: {
@@ -28429,12 +28640,12 @@ function PreviewFile({
           gap: "8px"
         },
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Spinner, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("span", { children: (0, import_i18n65.__)("Loading preview\u2026", "jetpack-forms") })
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components75.Spinner, {}),
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("span", { children: (0, import_i18n67.__)("Loading preview\u2026", "jetpack-forms") })
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
       "img",
       {
         src: file.url,
@@ -28453,12 +28664,12 @@ function FieldFile({
   files,
   handleFilePreview
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("ul", { style: { margin: 0, paddingLeft: "20px" }, children: files.map((file, index) => /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("li", { children: file.is_image ? /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Button, { variant: "link", onClick: handleFilePreview(file), children: (0, import_html_entities2.decodeEntities)(file.name) }) : /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.ExternalLink, { href: file.url, children: (0, import_html_entities2.decodeEntities)(file.name) }) }, index)) });
+  return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("ul", { style: { margin: 0, paddingLeft: "20px" }, children: files.map((file, index) => /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("li", { children: file.is_image ? /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components75.Button, { variant: "link", onClick: handleFilePreview(file), children: (0, import_html_entities2.decodeEntities)(file.name) }) : /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components75.ExternalLink, { href: file.url, children: (0, import_html_entities2.decodeEntities)(file.name) }) }, index)) });
 }
 function FieldEmail({ email }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: "4px" }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("a", { href: `mailto:${email}`, children: email }),
-    /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(CopyClipboardButton, { text: email })
+  return /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: "4px" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("a", { href: `mailto:${email}`, children: email }),
+    /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(CopyClipboardButton, { text: email })
   ] });
 }
 function createEnterKeyHandler(handler) {
@@ -28472,10 +28683,10 @@ function FieldImageSelect({
   choices,
   handleFilePreview
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("div", { style: { display: "flex", gap: "8px", flexWrap: "wrap" }, children: choices.map((choice, index) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { style: { display: "flex", gap: "8px", flexWrap: "wrap" }, children: choices.map((choice, index) => {
     const previewHandler = handleFilePreview(choice);
     const keyDownHandler = createEnterKeyHandler(previewHandler);
-    return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
       "div",
       {
         style: {
@@ -28488,7 +28699,7 @@ function FieldImageSelect({
         onKeyDown: keyDownHandler,
         role: "button",
         tabIndex: 0,
-        children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+        children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
           "img",
           {
             src: choice.url,
@@ -28507,11 +28718,11 @@ function SingleResponseView({
   onNavigate,
   onClose
 }) {
-  const [previewFile, setPreviewFile] = (0, import_element68.useState)(null);
-  const [isImageLoading, setIsImageLoading] = (0, import_element68.useState)(true);
-  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element68.useState)(null);
-  const { editEntityRecord } = (0, import_data14.useDispatch)(import_core_data3.store);
-  const { response, isLoading } = (0, import_data14.useSelect)(
+  const [previewFile, setPreviewFile] = (0, import_element70.useState)(null);
+  const [isImageLoading, setIsImageLoading] = (0, import_element70.useState)(true);
+  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element70.useState)(null);
+  const { editEntityRecord } = (0, import_data15.useDispatch)(import_core_data3.store);
+  const { response, isLoading } = (0, import_data15.useSelect)(
     (select) => {
       if (!responseId) {
         return { response: null, isLoading: false };
@@ -28534,17 +28745,17 @@ function SingleResponseView({
   const currentIndex = allResponseIds.indexOf(responseId);
   const hasNext = currentIndex < allResponseIds.length - 1;
   const hasPrevious = currentIndex > 0;
-  const handleNext = (0, import_element68.useCallback)(() => {
+  const handleNext = (0, import_element70.useCallback)(() => {
     if (hasNext) {
       onNavigate(allResponseIds[currentIndex + 1]);
     }
   }, [hasNext, allResponseIds, currentIndex, onNavigate]);
-  const handlePrevious = (0, import_element68.useCallback)(() => {
+  const handlePrevious = (0, import_element70.useCallback)(() => {
     if (hasPrevious) {
       onNavigate(allResponseIds[currentIndex - 1]);
     }
   }, [hasPrevious, allResponseIds, currentIndex, onNavigate]);
-  (0, import_element68.useEffect)(() => {
+  (0, import_element70.useEffect)(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowUp" && hasPrevious) {
         event.preventDefault();
@@ -28559,7 +28770,7 @@ function SingleResponseView({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [hasNext, hasPrevious, handleNext, handlePrevious, onClose]);
-  (0, import_element68.useEffect)(() => {
+  (0, import_element70.useEffect)(() => {
     if (!response || !response.id || !response.is_unread) {
       return;
     }
@@ -28580,21 +28791,21 @@ function SingleResponseView({
       });
     });
   }, [response, editEntityRecord, hasMarkedAsRead]);
-  const handleFilePreview = (0, import_element68.useCallback)(
+  const handleFilePreview = (0, import_element70.useCallback)(
     (file) => () => {
       setIsImageLoading(true);
       setPreviewFile(file);
     },
     []
   );
-  const closePreviewModal = (0, import_element68.useCallback)(() => {
+  const closePreviewModal = (0, import_element70.useCallback)(() => {
     setPreviewFile(null);
     setIsImageLoading(true);
   }, []);
-  const handleImageLoaded = (0, import_element68.useCallback)(() => {
+  const handleImageLoaded = (0, import_element70.useCallback)(() => {
     setIsImageLoading(false);
   }, []);
-  const handleActionComplete = (0, import_element68.useCallback)(
+  const handleActionComplete = (0, import_element70.useCallback)(
     (updatedItem) => {
       if (!updatedItem) {
         if (hasNext) {
@@ -28613,7 +28824,7 @@ function SingleResponseView({
       return "-";
     }
     if (isImageSelectField(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
         FieldImageSelect,
         {
           choices: value.choices,
@@ -28622,7 +28833,7 @@ function SingleResponseView({
       );
     }
     if (isFileUploadField(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
         FieldFile,
         {
           files: value.files,
@@ -28632,10 +28843,10 @@ function SingleResponseView({
     }
     const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     if (typeof value === "string" && emailRegEx.test(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(FieldEmail, { email: value });
+      return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(FieldEmail, { email: value });
     }
     if (isLikelyPhoneNumber(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("a", { href: `tel:${value}`, children: value });
+      return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("a", { href: `tel:${value}`, children: value });
     }
     if (Array.isArray(value)) {
       return value.join(", ");
@@ -28646,18 +28857,18 @@ function SingleResponseView({
     return String(value);
   };
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("div", { style: { display: "flex", justifyContent: "center", padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Spinner, {}) });
+    return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { style: { display: "flex", justifyContent: "center", padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components75.Spinner, {}) });
   }
   if (!response) {
-    return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("div", { style: { padding: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("p", { children: (0, import_i18n65.__)("Response not found.", "jetpack-forms") }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { style: { padding: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("p", { children: (0, import_i18n67.__)("Response not found.", "jetpack-forms") }) });
   }
   const displayName = getDisplayName(response);
   const dateSettings = (0, import_date10.getSettings)();
   const gravatarEmail = response.author_email || response.ip;
   const defaultImage = response.author_name || response.author_email ? "initials" : "mp";
   const responseAuthorEmailParts = response.author_email?.split("@") ?? [];
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(import_jsx_runtime157.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(import_jsx_runtime159.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(
       "div",
       {
         style: {
@@ -28670,8 +28881,8 @@ function SingleResponseView({
           flexWrap: "wrap"
         },
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
             ResponseNavigation,
             {
               hasNext,
@@ -28684,9 +28895,9 @@ function SingleResponseView({
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("div", { style: { padding: "20px", overflowY: "auto" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("div", { style: { marginBottom: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(import_components73.__experimentalHStack, { alignment: "topLeft", spacing: "3", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("div", { style: { padding: "20px", overflowY: "auto" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { style: { marginBottom: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(import_components75.__experimentalHStack, { alignment: "topLeft", spacing: "3", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
           Gravatar,
           {
             email: gravatarEmail,
@@ -28695,22 +28906,22 @@ function SingleResponseView({
             size: 48
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(import_components73.__experimentalVStack, { spacing: "0", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("h3", { style: { margin: 0, fontSize: "16px", fontWeight: 600 }, children: displayName }),
-          response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("p", { style: { margin: "4px 0 0", color: "#666", fontSize: "13px" }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("a", { href: `mailto:${response.author_email}`, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(import_components75.__experimentalVStack, { spacing: "0", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("h3", { style: { margin: 0, fontSize: "16px", fontWeight: 600 }, children: displayName }),
+          response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("p", { style: { margin: "4px 0 0", color: "#666", fontSize: "13px" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("a", { href: `mailto:${response.author_email}`, children: [
               responseAuthorEmailParts[0],
-              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("wbr", {}),
+              /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("wbr", {}),
               "@",
               responseAuthorEmailParts[1]
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(CopyClipboardButton, { text: response.author_email })
+            /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(CopyClipboardButton, { text: response.author_email })
           ] })
         ] })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("div", { style: { marginBottom: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("table", { style: { width: "100%", borderCollapse: "collapse", fontSize: "13px" }, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("tbody", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("tr", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { style: { marginBottom: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("table", { style: { width: "100%", borderCollapse: "collapse", fontSize: "13px" }, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("tbody", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
             "th",
             {
               style: {
@@ -28720,18 +28931,18 @@ function SingleResponseView({
                 color: "#666",
                 width: "100px"
               },
-              children: (0, import_i18n65.__)("Date:", "jetpack-forms")
+              children: (0, import_i18n67.__)("Date:", "jetpack-forms")
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("td", { style: { padding: "6px 0" }, children: (0, import_i18n65.sprintf)(
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("td", { style: { padding: "6px 0" }, children: (0, import_i18n67.sprintf)(
             /* Translators: %1$s is the date, %2$s is the time. */
-            (0, import_i18n65.__)("%1$s at %2$s", "jetpack-forms"),
+            (0, import_i18n67.__)("%1$s at %2$s", "jetpack-forms"),
             (0, import_date10.dateI18n)(dateSettings.formats.date, response.date),
             (0, import_date10.dateI18n)(dateSettings.formats.time, response.date)
           ) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("tr", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
             "th",
             {
               style: {
@@ -28740,13 +28951,13 @@ function SingleResponseView({
                 fontWeight: "normal",
                 color: "#666"
               },
-              children: (0, import_i18n65.__)("Source:", "jetpack-forms")
+              children: (0, import_i18n67.__)("Source:", "jetpack-forms")
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("td", { style: { padding: "6px 0" }, children: response.entry_permalink ? /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities2.decodeEntities)(response.entry_title) || response.entry_permalink }) : (0, import_html_entities2.decodeEntities)(response.entry_title) || (0, import_i18n65.__)("Unknown", "jetpack-forms") })
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("td", { style: { padding: "6px 0" }, children: response.entry_permalink ? /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components75.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities2.decodeEntities)(response.entry_title) || response.entry_permalink }) : (0, import_html_entities2.decodeEntities)(response.entry_title) || (0, import_i18n67.__)("Unknown", "jetpack-forms") })
         ] }),
-        response.ip && /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("tr", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+        response.ip && /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
             "th",
             {
               style: {
@@ -28755,16 +28966,16 @@ function SingleResponseView({
                 fontWeight: "normal",
                 color: "#666"
               },
-              children: (0, import_i18n65.__)("IP address:", "jetpack-forms")
+              children: (0, import_i18n67.__)("IP address:", "jetpack-forms")
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("td", { style: { padding: "6px 0" }, children: [
-            response.country_code && /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("span", { style: { marginRight: "6px" }, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Flag, { countryCode: response.country_code }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Tooltip, { text: (0, import_i18n65.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.ExternalLink, { href: getRedirectUrl("ip-lookup", { path: response.ip }), children: response.ip }) })
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("td", { style: { padding: "6px 0" }, children: [
+            response.country_code && /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("span", { style: { marginRight: "6px" }, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(Flag, { countryCode: response.country_code }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components75.Tooltip, { text: (0, import_i18n67.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components75.ExternalLink, { href: getRedirectUrl("ip-lookup", { path: response.ip }), children: response.ip }) })
           ] })
         ] }),
-        response.browser && /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("tr", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+        response.browser && /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("tr", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
             "th",
             {
               style: {
@@ -28773,13 +28984,13 @@ function SingleResponseView({
                 fontWeight: "normal",
                 color: "#666"
               },
-              children: (0, import_i18n65.__)("Browser:", "jetpack-forms")
+              children: (0, import_i18n67.__)("Browser:", "jetpack-forms")
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("td", { style: { padding: "6px 0" }, children: response.browser })
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("td", { style: { padding: "6px 0" }, children: response.browser })
         ] })
       ] }) }) }),
-      response.fields && Object.keys(response.fields).length > 0 && /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("div", { children: Object.entries(response.fields).map(([key, value]) => /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
+      response.fields && Object.keys(response.fields).length > 0 && /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { children: Object.entries(response.fields).map(([key, value]) => /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(
         "div",
         {
           style: {
@@ -28788,7 +28999,7 @@ function SingleResponseView({
             borderBottom: "1px solid #eee"
           },
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
               "div",
               {
                 style: {
@@ -28800,20 +29011,20 @@ function SingleResponseView({
                 children: key.endsWith("?") ? key : `${key}:`
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("div", { style: { color: "#3c434a", fontSize: "14px" }, children: renderFieldValue(value) })
+            /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { style: { color: "#3c434a", fontSize: "14px" }, children: renderFieldValue(value) })
           ]
         },
         key
       )) }),
-      response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("div", { style: { marginTop: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Tip, { children: (0, import_i18n65.__)("Spam responses are permanently deleted after 15 days.", "jetpack-forms") }) }),
-      response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("div", { style: { marginTop: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Tip, { children: (0, import_i18n65._n)(
+      response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { style: { marginTop: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components75.Tip, { children: (0, import_i18n67.__)("Spam responses are permanently deleted after 15 days.", "jetpack-forms") }) }),
+      response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { style: { marginTop: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components75.Tip, { children: (0, import_i18n67._n)(
         "Items in trash are permanently deleted after 30 days.",
         "Items in trash are permanently deleted after 30 days.",
         30,
         "jetpack-forms"
       ) }) })
     ] }),
-    previewFile && /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components73.Modal, { title: (0, import_html_entities2.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+    previewFile && /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components75.Modal, { title: (0, import_html_entities2.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
       PreviewFile,
       {
         file: previewFile,
@@ -28842,7 +29053,7 @@ function Inspector() {
     order: "desc"
   });
   const allRecordIds = records?.map((record) => record.id) ?? [];
-  const handleClose = (0, import_element68.useCallback)(() => {
+  const handleClose = (0, import_element70.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -28850,7 +29061,7 @@ function Inspector() {
       }
     });
   }, [navigate, searchParams]);
-  const handleNavigate = (0, import_element68.useCallback)(
+  const handleNavigate = (0, import_element70.useCallback)(
     (id) => {
       navigate({
         search: {
@@ -28865,7 +29076,7 @@ function Inspector() {
     return null;
   }
   const selectedResponseId = Number(responseIds[0]);
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(page_default2, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(page_default2, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
     SingleResponseView,
     {
       responseId: selectedResponseId,
