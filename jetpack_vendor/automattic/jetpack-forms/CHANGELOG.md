@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add centralized dashboard tabs.
 - Forms: add country flag emoji to phone field values in form submission confirmation page.
 - Forms: add reusable forms list to dashboard.
+- Forms: Display URL field values as clickable links in form submission confirmation page.
 - Forms: make form webhooks generally available.
 
 ### Changed
