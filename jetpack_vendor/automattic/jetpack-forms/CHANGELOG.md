@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Use the generated asset dependency file for the dashboard.
 
+### Fixed
+- Forms Dashboard: Fix race conditions in spam/not-spam actions when triggered in quick succession.
+
 ## [7.4.0] - 2026-01-19
 ### Added
 - Add ref attribute support for the form block. [#46555]
