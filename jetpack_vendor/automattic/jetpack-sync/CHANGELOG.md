@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add _wpas_connection_overrides and _wpas_customize_per_network to post meta whitelist for Jetpack Social.
+
 ## [4.25.0] - 2026-01-14
 ### Added
 - Instant Search: Add 'guest' custom taxonomy for Sync. [#46562]
