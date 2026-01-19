@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.26.24-alpha] - unreleased
+## [0.27.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Improve post promotion speed by handling the Blaze “get article” endpoint locally, reducing the initial sync delay.
 
 ### Changed
 - Update package dependencies.
@@ -759,7 +762,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.26.24-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.26.23...v0.26.24-alpha
+[0.27.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.26.23...v0.27.0-alpha
 [0.26.23]: https://github.com/automattic/jetpack-blaze/compare/v0.26.22...v0.26.23
 [0.26.22]: https://github.com/automattic/jetpack-blaze/compare/v0.26.21...v0.26.22
 [0.26.21]: https://github.com/automattic/jetpack-blaze/compare/v0.26.20...v0.26.21
