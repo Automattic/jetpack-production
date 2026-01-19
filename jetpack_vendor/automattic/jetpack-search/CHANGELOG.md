@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.55.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.55.0] - 2026-01-19
 ### Added
-- Instant Search: Add a "Show price" option to allow prices to be shown or hidden in Jetpack Instant Search results.
+- Add a "Show price" option to allow prices to be shown or hidden in Jetpack Instant Search results. [#46454]
 
 ### Changed
-- Instant Search: Show WooCommerce product filters in filter widget.
-- Update package dependencies.
+- Show WooCommerce product filters in filter widget. [#46373]
+- Update package dependencies. [#46552] [#46647]
 
 ## [0.54.10] - 2026-01-12
 ### Changed
@@ -1425,7 +1422,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.55.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.54.10...v0.55.0-alpha
+[0.55.0]: https://github.com/Automattic/jetpack-search/compare/v0.54.10...v0.55.0
 [0.54.10]: https://github.com/Automattic/jetpack-search/compare/v0.54.9...v0.54.10
 [0.54.9]: https://github.com/Automattic/jetpack-search/compare/v0.54.8...v0.54.9
 [0.54.8]: https://github.com/Automattic/jetpack-search/compare/v0.54.7...v0.54.8

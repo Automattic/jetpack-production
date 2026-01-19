@@ -12,8 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Improve post promotion speed by handling the Blaze “get article” endpoint locally, reducing the initial sync delay.
 
+## [0.26.24] - 2026-01-19
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#46552] [#46647]
 
 ## [0.26.23] - 2026-01-09
 ### Changed
@@ -762,7 +763,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.27.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.26.23...v0.27.0-alpha
+[0.27.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.26.24...v0.27.0-alpha
+[0.26.24]: https://github.com/automattic/jetpack-blaze/compare/v0.26.23...v0.26.24
 [0.26.23]: https://github.com/automattic/jetpack-blaze/compare/v0.26.22...v0.26.23
 [0.26.22]: https://github.com/automattic/jetpack-blaze/compare/v0.26.21...v0.26.22
 [0.26.21]: https://github.com/automattic/jetpack-blaze/compare/v0.26.20...v0.26.21
