@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Update source link to use ExternalLink in new dashboard.
 - Use empty state component for new dashboard.
 - Use Gravatar component in new dashboard inbox.
+- Use the generated asset dependency file for the dashboard.
 - Use wrapper function to mark unread rows in new dashboard.
 
 ### Removed
