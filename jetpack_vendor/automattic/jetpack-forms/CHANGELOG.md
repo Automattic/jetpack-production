@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Use the generated asset dependency file for the dashboard.
 
 ### Fixed
+- Fix a bug where we were overwriting the default wp modules.
 - Forms Dashboard: Fix race conditions in spam/not-spam actions when triggered in quick succession.
 
 ## [7.4.0] - 2026-01-19
