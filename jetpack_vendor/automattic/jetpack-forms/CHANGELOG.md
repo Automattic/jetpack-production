@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add an "Edit Form" button that takes you to edit the form via the form editor.
+- Add redirect for jetpack_forms post type to the new dashboard.
 
 ### Changed
 - Use the generated asset dependency file for the dashboard.
