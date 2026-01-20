@@ -5,7 +5,7 @@
  *
  * Returns an array of constants for use in other templates.
  *
- * @package gutenberg
+ * @package jetpack_forms
  */
 
 return array(

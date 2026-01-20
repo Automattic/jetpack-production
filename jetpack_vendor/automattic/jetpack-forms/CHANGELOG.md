@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix a bug where we were overwriting the default wp modules.
+- Fix wp-build dashboard rendering after wp-build dependency update and prefix functions to avoid conflicts with Gutenberg.
 - Forms Dashboard: Fix race conditions in spam/not-spam actions when triggered in quick succession.
 
 ## [7.4.0] - 2026-01-19

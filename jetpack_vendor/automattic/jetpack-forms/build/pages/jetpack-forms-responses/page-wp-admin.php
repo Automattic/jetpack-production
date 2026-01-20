@@ -7,15 +7,15 @@
  * This version integrates with the standard WordPress admin interface,
  * keeping the wp-admin sidebar and scripts/styles intact.
  *
- * @package gutenberg
+ * @package jetpack_forms
  */
 
 // Global storage for jetpack-forms-responses routes and menu items
-global $gutenberg_jetpack_forms_responses_wp_admin_routes, $gutenberg_jetpack_forms_responses_wp_admin_menu_items;
-$gutenberg_jetpack_forms_responses_wp_admin_routes     = array();
-$gutenberg_jetpack_forms_responses_wp_admin_menu_items = array();
+global $jetpack_forms_jetpack_forms_responses_wp_admin_routes, $jetpack_forms_jetpack_forms_responses_wp_admin_menu_items;
+$jetpack_forms_jetpack_forms_responses_wp_admin_routes     = array();
+$jetpack_forms_jetpack_forms_responses_wp_admin_menu_items = array();
 
-if ( ! function_exists( 'gutenberg_register_jetpack_forms_responses_wp_admin_route' ) ) {
+if ( ! function_exists( 'jetpack_forms_register_jetpack_forms_responses_wp_admin_route' ) ) {
 	/**
 	 * Register a route for the jetpack-forms-responses-wp-admin page.
 	 *
@@ -23,8 +23,8 @@ if ( ! function_exists( 'gutenberg_register_jetpack_forms_responses_wp_admin_rou
 	 * @param string|null $content_module Script module ID for content (stage/inspector).
 	 * @param string|null $route_module   Script module ID for route lifecycle hooks.
 	 */
-	function gutenberg_register_jetpack_forms_responses_wp_admin_route( $path, $content_module = null, $route_module = null ) {
-		global $gutenberg_jetpack_forms_responses_wp_admin_routes;
+	function jetpack_forms_register_jetpack_forms_responses_wp_admin_route( $path, $content_module = null, $route_module = null ) {
+		global $jetpack_forms_jetpack_forms_responses_wp_admin_routes;
 
 		$route = array( 'path' => $path );
 		if ( ! empty( $content_module ) ) {
@@ -34,11 +34,11 @@ if ( ! function_exists( 'gutenberg_register_jetpack_forms_responses_wp_admin_rou
 			$route['route_module'] = $route_module;
 		}
 
-		$gutenberg_jetpack_forms_responses_wp_admin_routes[] = $route;
+		$jetpack_forms_jetpack_forms_responses_wp_admin_routes[] = $route;
 	}
 }
 
-if ( ! function_exists( 'gutenberg_register_jetpack_forms_responses_wp_admin_menu_item' ) ) {
+if ( ! function_exists( 'jetpack_forms_register_jetpack_forms_responses_wp_admin_menu_item' ) ) {
 	/**
 	 * Register a menu item for the jetpack-forms-responses-wp-admin page.
 	 * Note: Menu items are registered but not displayed in single-page mode.
@@ -48,8 +48,8 @@ if ( ! function_exists( 'gutenberg_register_jetpack_forms_responses_wp_admin_men
 	 * @param string $to        Route path to navigate to.
 	 * @param string $parent_id Optional. Parent menu item ID.
 	 */
-	function gutenberg_register_jetpack_forms_responses_wp_admin_menu_item( $id, $label, $to, $parent_id = '' ) {
-		global $gutenberg_jetpack_forms_responses_wp_admin_menu_items;
+	function jetpack_forms_register_jetpack_forms_responses_wp_admin_menu_item( $id, $label, $to, $parent_id = '' ) {
+		global $jetpack_forms_jetpack_forms_responses_wp_admin_menu_items;
 
 		$menu_item = array(
 			'id'    => $id,
@@ -61,40 +61,40 @@ if ( ! function_exists( 'gutenberg_register_jetpack_forms_responses_wp_admin_men
 			$menu_item['parent'] = $parent_id;
 		}
 
-		$gutenberg_jetpack_forms_responses_wp_admin_menu_items[] = $menu_item;
+		$jetpack_forms_jetpack_forms_responses_wp_admin_menu_items[] = $menu_item;
 	}
 }
 
-if ( ! function_exists( 'gutenberg_get_jetpack_forms_responses_wp_admin_routes' ) ) {
+if ( ! function_exists( 'jetpack_forms_get_jetpack_forms_responses_wp_admin_routes' ) ) {
 	/**
 	 * Get all registered routes for the jetpack-forms-responses-wp-admin page.
 	 *
 	 * @return array Array of route objects.
 	 */
-	function gutenberg_get_jetpack_forms_responses_wp_admin_routes() {
-		global $gutenberg_jetpack_forms_responses_wp_admin_routes;
-		return $gutenberg_jetpack_forms_responses_wp_admin_routes ?? array();
+	function jetpack_forms_get_jetpack_forms_responses_wp_admin_routes() {
+		global $jetpack_forms_jetpack_forms_responses_wp_admin_routes;
+		return $jetpack_forms_jetpack_forms_responses_wp_admin_routes ?? array();
 	}
 }
 
-if ( ! function_exists( 'gutenberg_get_jetpack_forms_responses_wp_admin_menu_items' ) ) {
+if ( ! function_exists( 'jetpack_forms_get_jetpack_forms_responses_wp_admin_menu_items' ) ) {
 	/**
 	 * Get all registered menu items for the jetpack-forms-responses-wp-admin page.
 	 *
 	 * @return array Array of menu item objects.
 	 */
-	function gutenberg_get_jetpack_forms_responses_wp_admin_menu_items() {
-		global $gutenberg_jetpack_forms_responses_wp_admin_menu_items;
-		return $gutenberg_jetpack_forms_responses_wp_admin_menu_items ?? array();
+	function jetpack_forms_get_jetpack_forms_responses_wp_admin_menu_items() {
+		global $jetpack_forms_jetpack_forms_responses_wp_admin_menu_items;
+		return $jetpack_forms_jetpack_forms_responses_wp_admin_menu_items ?? array();
 	}
 }
 
-if ( ! function_exists( 'gutenberg_jetpack_forms_responses_wp_admin_preload_data' ) ) {
+if ( ! function_exists( 'jetpack_forms_jetpack_forms_responses_wp_admin_preload_data' ) ) {
 	/**
 	 * Preload REST API data for the jetpack-forms-responses-wp-admin page.
 	 * Automatically called during page rendering.
 	 */
-	function gutenberg_jetpack_forms_responses_wp_admin_preload_data() {
+	function jetpack_forms_jetpack_forms_responses_wp_admin_preload_data() {
 		// Define paths to preload - same for all pages
 		$preload_paths = array(
 			'/?_fields=description,gmt_offset,home,name,site_icon,site_icon_url,site_logo,timezone_string,url,page_for_posts,page_on_front,show_on_front',
@@ -120,14 +120,14 @@ if ( ! function_exists( 'gutenberg_jetpack_forms_responses_wp_admin_preload_data
 	}
 }
 
-if ( ! function_exists( 'gutenberg_jetpack_forms_responses_wp_admin_enqueue_scripts' ) ) {
+if ( ! function_exists( 'jetpack_forms_jetpack_forms_responses_wp_admin_enqueue_scripts' ) ) {
 	/**
 	 * Enqueue scripts and styles for the jetpack-forms-responses-wp-admin page.
 	 * Hooked to admin_enqueue_scripts.
 	 *
 	 * @param string $hook_suffix The current admin page.
 	 */
-	function gutenberg_jetpack_forms_responses_wp_admin_enqueue_scripts( $hook_suffix ) {
+	function jetpack_forms_jetpack_forms_responses_wp_admin_enqueue_scripts( $hook_suffix ) {
 		// Check all possible ways this page can be accessed:
 		// 1. Menu page via admin.php?page=jetpack-forms-responses-wp-admin (plugin)
 		// 2. Direct file via jetpack-forms-responses.php (Core) - screen ID will be 'jetpack-forms-responses'
@@ -148,10 +148,10 @@ if ( ! function_exists( 'gutenberg_jetpack_forms_responses_wp_admin_enqueue_scri
 		do_action( 'jetpack-forms-responses-wp-admin_init' );
 
 		// Preload REST API data
-		gutenberg_jetpack_forms_responses_wp_admin_preload_data();
+		jetpack_forms_jetpack_forms_responses_wp_admin_preload_data();
 
 		// Get all registered routes
-		$routes = gutenberg_get_jetpack_forms_responses_wp_admin_routes();
+		$routes = jetpack_forms_get_jetpack_forms_responses_wp_admin_routes();
 
 		// Get boot module asset file for dependencies
 		$asset_file = __DIR__ . '/../../modules/boot/index.min.asset.php';
@@ -221,13 +221,13 @@ if ( ! function_exists( 'gutenberg_jetpack_forms_responses_wp_admin_enqueue_scri
 	}
 }
 
-if ( ! function_exists( 'gutenberg_jetpack_forms_responses_wp_admin_render_page' ) ) {
+if ( ! function_exists( 'jetpack_forms_jetpack_forms_responses_wp_admin_render_page' ) ) {
 	/**
 	 * Render the jetpack-forms-responses-wp-admin page.
 	 * Call this function from add_menu_page or add_submenu_page.
 	 * This renders within the normal WordPress admin interface.
 	 */
-	function gutenberg_jetpack_forms_responses_wp_admin_render_page() {
+	function jetpack_forms_jetpack_forms_responses_wp_admin_render_page() {
 		?>
 		<style>
 			/* Critical styles to prevent layout shifts - inlined for immediate application */
@@ -288,5 +288,5 @@ if ( ! function_exists( 'gutenberg_jetpack_forms_responses_wp_admin_render_page'
 }
 
 // Hook the enqueue function to admin_enqueue_scripts
-add_action( 'admin_enqueue_scripts', 'gutenberg_jetpack_forms_responses_wp_admin_enqueue_scripts' );
+add_action( 'admin_enqueue_scripts', 'jetpack_forms_jetpack_forms_responses_wp_admin_enqueue_scripts' );
 
