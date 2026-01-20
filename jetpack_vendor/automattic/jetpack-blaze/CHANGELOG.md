@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Improve post promotion speed by handling the Blaze “advise campaign” endpoint locally, reducing the initial sync delay.
+- Improve post promotion speed by handling the Blaze “create campaign” endpoint locally, reducing the initial sync delay.
 - Improve post promotion speed by handling the Blaze “get article” endpoint locally, reducing the initial sync delay.
 
 ## [0.26.24] - 2026-01-19
