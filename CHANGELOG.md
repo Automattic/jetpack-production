@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Render slideshow block as core gallery block in emails.
+- Update package dependencies.
 
 ## 15.5-a.3 - 2026-01-19
 ### Enhancements
