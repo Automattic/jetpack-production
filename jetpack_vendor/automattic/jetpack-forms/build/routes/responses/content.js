@@ -128,7 +128,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return x2 === y2 && (0 !== x2 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
       }
       function useSyncExternalStore$2(subscribe2, getSnapshot) {
-        didWarnOld18Alpha || void 0 === React34.startTransition || (didWarnOld18Alpha = true, console.error(
+        didWarnOld18Alpha || void 0 === React38.startTransition || (didWarnOld18Alpha = true, console.error(
           "You are using an outdated, pre-release alpha of React 18 that does not support useSyncExternalStore. The use-sync-external-store shim will not work correctly. Upgrade to a newer pre-release."
         ));
         var value = getSnapshot();
@@ -176,8 +176,8 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React34 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState43 = React34.useState, useEffect30 = React34.useEffect, useLayoutEffect4 = React34.useLayoutEffect, useDebugValue = React34.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
-      exports.useSyncExternalStore = void 0 !== React34.useSyncExternalStore ? React34.useSyncExternalStore : shim;
+      var React38 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState43 = React38.useState, useEffect30 = React38.useEffect, useLayoutEffect4 = React38.useLayoutEffect, useDebugValue = React38.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      exports.useSyncExternalStore = void 0 !== React38.useSyncExternalStore ? React38.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
   }
@@ -1777,31 +1777,31 @@ var require_semver = __commonJS({
     var parseOptions = require_parse_options();
     var { compareIdentifiers } = require_identifiers();
     var SemVer = class _SemVer {
-      constructor(version2, options) {
+      constructor(version3, options) {
         options = parseOptions(options);
-        if (version2 instanceof _SemVer) {
-          if (version2.loose === !!options.loose && version2.includePrerelease === !!options.includePrerelease) {
-            return version2;
+        if (version3 instanceof _SemVer) {
+          if (version3.loose === !!options.loose && version3.includePrerelease === !!options.includePrerelease) {
+            return version3;
           } else {
-            version2 = version2.version;
+            version3 = version3.version;
           }
-        } else if (typeof version2 !== "string") {
-          throw new TypeError(`Invalid version. Must be a string. Got type "${typeof version2}".`);
+        } else if (typeof version3 !== "string") {
+          throw new TypeError(`Invalid version. Must be a string. Got type "${typeof version3}".`);
         }
-        if (version2.length > MAX_LENGTH) {
+        if (version3.length > MAX_LENGTH) {
           throw new TypeError(
             `version is longer than ${MAX_LENGTH} characters`
           );
         }
-        debug4("SemVer", version2, options);
+        debug4("SemVer", version3, options);
         this.options = options;
         this.loose = !!options.loose;
         this.includePrerelease = !!options.includePrerelease;
-        const m2 = version2.trim().match(options.loose ? re[t2.LOOSE] : re[t2.FULL]);
+        const m2 = version3.trim().match(options.loose ? re[t2.LOOSE] : re[t2.FULL]);
         if (!m2) {
-          throw new TypeError(`Invalid Version: ${version2}`);
+          throw new TypeError(`Invalid Version: ${version3}`);
         }
-        this.raw = version2;
+        this.raw = version3;
         this.major = +m2[1];
         this.minor = +m2[2];
         this.patch = +m2[3];
@@ -2051,12 +2051,12 @@ var require_parse = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/parse.js"(exports, module) {
     "use strict";
     var SemVer = require_semver();
-    var parse = (version2, options, throwErrors = false) => {
-      if (version2 instanceof SemVer) {
-        return version2;
+    var parse = (version3, options, throwErrors = false) => {
+      if (version3 instanceof SemVer) {
+        return version3;
       }
       try {
-        return new SemVer(version2, options);
+        return new SemVer(version3, options);
       } catch (er) {
         if (!throwErrors) {
           return null;
@@ -2073,8 +2073,8 @@ var require_valid = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/valid.js"(exports, module) {
     "use strict";
     var parse = require_parse();
-    var valid = (version2, options) => {
-      const v2 = parse(version2, options);
+    var valid = (version3, options) => {
+      const v2 = parse(version3, options);
       return v2 ? v2.version : null;
     };
     module.exports = valid;
@@ -2086,8 +2086,8 @@ var require_clean = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/clean.js"(exports, module) {
     "use strict";
     var parse = require_parse();
-    var clean = (version2, options) => {
-      const s2 = parse(version2.trim().replace(/^[=v]+/, ""), options);
+    var clean = (version3, options) => {
+      const s2 = parse(version3.trim().replace(/^[=v]+/, ""), options);
       return s2 ? s2.version : null;
     };
     module.exports = clean;
@@ -2099,7 +2099,7 @@ var require_inc = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/inc.js"(exports, module) {
     "use strict";
     var SemVer = require_semver();
-    var inc = (version2, release, options, identifier, identifierBase) => {
+    var inc = (version3, release, options, identifier, identifierBase) => {
       if (typeof options === "string") {
         identifierBase = identifier;
         identifier = options;
@@ -2107,7 +2107,7 @@ var require_inc = __commonJS({
       }
       try {
         return new SemVer(
-          version2 instanceof SemVer ? version2.version : version2,
+          version3 instanceof SemVer ? version3.version : version3,
           options
         ).inc(release, identifier, identifierBase).version;
       } catch (er) {
@@ -2123,9 +2123,9 @@ var require_diff = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/diff.js"(exports, module) {
     "use strict";
     var parse = require_parse();
-    var diff = (version1, version2) => {
+    var diff = (version1, version22) => {
       const v1 = parse(version1, null, true);
-      const v2 = parse(version2, null, true);
+      const v2 = parse(version22, null, true);
       const comparison = v1.compare(v2);
       if (comparison === 0) {
         return null;
@@ -2197,8 +2197,8 @@ var require_prerelease = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/prerelease.js"(exports, module) {
     "use strict";
     var parse = require_parse();
-    var prerelease = (version2, options) => {
-      const parsed = parse(version2, options);
+    var prerelease = (version3, options) => {
+      const parsed = parse(version3, options);
       return parsed && parsed.prerelease.length ? parsed.prerelease : null;
     };
     module.exports = prerelease;
@@ -2386,24 +2386,24 @@ var require_coerce = __commonJS({
     var SemVer = require_semver();
     var parse = require_parse();
     var { safeRe: re, t: t2 } = require_re();
-    var coerce = (version2, options) => {
-      if (version2 instanceof SemVer) {
-        return version2;
+    var coerce = (version3, options) => {
+      if (version3 instanceof SemVer) {
+        return version3;
       }
-      if (typeof version2 === "number") {
-        version2 = String(version2);
+      if (typeof version3 === "number") {
+        version3 = String(version3);
       }
-      if (typeof version2 !== "string") {
+      if (typeof version3 !== "string") {
         return null;
       }
       options = options || {};
       let match2 = null;
       if (!options.rtl) {
-        match2 = version2.match(options.includePrerelease ? re[t2.COERCEFULL] : re[t2.COERCE]);
+        match2 = version3.match(options.includePrerelease ? re[t2.COERCEFULL] : re[t2.COERCE]);
       } else {
         const coerceRtlRegex = options.includePrerelease ? re[t2.COERCERTLFULL] : re[t2.COERCERTL];
         let next;
-        while ((next = coerceRtlRegex.exec(version2)) && (!match2 || match2.index + match2[0].length !== version2.length)) {
+        while ((next = coerceRtlRegex.exec(version3)) && (!match2 || match2.index + match2[0].length !== version3.length)) {
           if (!match2 || next.index + next[0].length !== match2.index + match2[0].length) {
             match2 = next;
           }
@@ -2587,19 +2587,19 @@ var require_range = __commonJS({
         });
       }
       // if ANY of the sets match ALL of its comparators, then pass
-      test(version2) {
-        if (!version2) {
+      test(version3) {
+        if (!version3) {
           return false;
         }
-        if (typeof version2 === "string") {
+        if (typeof version3 === "string") {
           try {
-            version2 = new SemVer(version2, this.options);
+            version3 = new SemVer(version3, this.options);
           } catch (er) {
             return false;
           }
         }
         for (let i2 = 0; i2 < this.set.length; i2++) {
-          if (testSet(this.set[i2], version2, this.options)) {
+          if (testSet(this.set[i2], version3, this.options)) {
             return true;
           }
         }
@@ -2814,13 +2814,13 @@ var require_range = __commonJS({
       }
       return `${from} ${to}`.trim();
     };
-    var testSet = (set2, version2, options) => {
+    var testSet = (set2, version3, options) => {
       for (let i2 = 0; i2 < set2.length; i2++) {
-        if (!set2[i2].test(version2)) {
+        if (!set2[i2].test(version3)) {
           return false;
         }
       }
-      if (version2.prerelease.length && !options.includePrerelease) {
+      if (version3.prerelease.length && !options.includePrerelease) {
         for (let i2 = 0; i2 < set2.length; i2++) {
           debug4(set2[i2].semver);
           if (set2[i2].semver === Comparator.ANY) {
@@ -2828,7 +2828,7 @@ var require_range = __commonJS({
           }
           if (set2[i2].semver.prerelease.length > 0) {
             const allowed = set2[i2].semver;
-            if (allowed.major === version2.major && allowed.minor === version2.minor && allowed.patch === version2.patch) {
+            if (allowed.major === version3.major && allowed.minor === version3.minor && allowed.patch === version3.patch) {
               return true;
             }
           }
@@ -2889,19 +2889,19 @@ var require_comparator = __commonJS({
       toString() {
         return this.value;
       }
-      test(version2) {
-        debug4("Comparator.test", version2, this.options.loose);
-        if (this.semver === ANY || version2 === ANY) {
+      test(version3) {
+        debug4("Comparator.test", version3, this.options.loose);
+        if (this.semver === ANY || version3 === ANY) {
           return true;
         }
-        if (typeof version2 === "string") {
+        if (typeof version3 === "string") {
           try {
-            version2 = new SemVer(version2, this.options);
+            version3 = new SemVer(version3, this.options);
           } catch (er) {
             return false;
           }
         }
-        return cmp(version2, this.operator, this.semver, this.options);
+        return cmp(version3, this.operator, this.semver, this.options);
       }
       intersects(comp, options) {
         if (!(comp instanceof _Comparator)) {
@@ -2958,13 +2958,13 @@ var require_satisfies = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/satisfies.js"(exports, module) {
     "use strict";
     var Range = require_range();
-    var satisfies = (version2, range, options) => {
+    var satisfies = (version3, range, options) => {
       try {
         range = new Range(range, options);
       } catch (er) {
         return false;
       }
-      return range.test(version2);
+      return range.test(version3);
     };
     module.exports = satisfies;
   }
@@ -3126,8 +3126,8 @@ var require_outside = __commonJS({
     var lt = require_lt();
     var lte = require_lte();
     var gte = require_gte();
-    var outside = (version2, range, hilo, options) => {
-      version2 = new SemVer(version2, options);
+    var outside = (version3, range, hilo, options) => {
+      version3 = new SemVer(version3, options);
       range = new Range(range, options);
       let gtfn, ltefn, ltfn, comp, ecomp;
       switch (hilo) {
@@ -3148,7 +3148,7 @@ var require_outside = __commonJS({
         default:
           throw new TypeError('Must provide a hilo val of "<" or ">"');
       }
-      if (satisfies(version2, range, options)) {
+      if (satisfies(version3, range, options)) {
         return false;
       }
       for (let i2 = 0; i2 < range.set.length; ++i2) {
@@ -3170,9 +3170,9 @@ var require_outside = __commonJS({
         if (high.operator === comp || high.operator === ecomp) {
           return false;
         }
-        if ((!low.operator || low.operator === comp) && ltefn(version2, low.semver)) {
+        if ((!low.operator || low.operator === comp) && ltefn(version3, low.semver)) {
           return false;
-        } else if (low.operator === ecomp && ltfn(version2, low.semver)) {
+        } else if (low.operator === ecomp && ltfn(version3, low.semver)) {
           return false;
         }
       }
@@ -3187,7 +3187,7 @@ var require_gtr = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/ranges/gtr.js"(exports, module) {
     "use strict";
     var outside = require_outside();
-    var gtr = (version2, range, options) => outside(version2, range, ">", options);
+    var gtr = (version3, range, options) => outside(version3, range, ">", options);
     module.exports = gtr;
   }
 });
@@ -3197,7 +3197,7 @@ var require_ltr = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/ranges/ltr.js"(exports, module) {
     "use strict";
     var outside = require_outside();
-    var ltr = (version2, range, options) => outside(version2, range, "<", options);
+    var ltr = (version3, range, options) => outside(version3, range, "<", options);
     module.exports = ltr;
   }
 });
@@ -3227,12 +3227,12 @@ var require_simplify = __commonJS({
       let first = null;
       let prev = null;
       const v2 = versions.sort((a2, b2) => compare(a2, b2, options));
-      for (const version2 of v2) {
-        const included = satisfies(version2, range, options);
+      for (const version3 of v2) {
+        const included = satisfies(version3, range, options);
         if (included) {
-          prev = version2;
+          prev = version3;
           if (!first) {
-            first = version2;
+            first = version3;
           }
         } else {
           if (prev) {
@@ -13170,8 +13170,8 @@ function createDisclosureStore(props = {}) {
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/33YRLYNQ.js
-function useDisclosureStoreProps(store4, update2, props) {
-  useUpdateEffect(update2, [props.store, props.disclosure]);
+function useDisclosureStoreProps(store4, update3, props) {
+  useUpdateEffect(update3, [props.store, props.disclosure]);
   useStoreProps(store4, props, "open", "setOpen");
   useStoreProps(store4, props, "mounted", "setMounted");
   useStoreProps(store4, props, "animated");
@@ -13337,8 +13337,8 @@ function createCollectionStore(props = {}) {
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/QHXYX2YB.js
-function useCollectionStoreProps(store4, update2, props) {
-  useUpdateEffect(update2, [props.store]);
+function useCollectionStoreProps(store4, update3, props) {
+  useUpdateEffect(update3, [props.store]);
   useStoreProps(store4, props, "items", "setItems");
   return store4;
 }
@@ -13607,8 +13607,8 @@ function useCompositeStoreOptions(props) {
   const id = useId3(props.id);
   return { id, ...props };
 }
-function useCompositeStoreProps(store4, update2, props) {
-  store4 = useCollectionStoreProps(store4, update2, props);
+function useCompositeStoreProps(store4, update3, props) {
+  store4 = useCollectionStoreProps(store4, update3, props);
   useStoreProps(store4, props, "activeId", "setActiveId");
   useStoreProps(store4, props, "includesBaseElement");
   useStoreProps(store4, props, "virtualFocus");
@@ -13645,8 +13645,8 @@ function createDialogStore(props = {}) {
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/5NIUVND5.js
-function useDialogStoreProps(store4, update2, props) {
-  return useDisclosureStoreProps(store4, update2, props);
+function useDialogStoreProps(store4, update3, props) {
+  return useDisclosureStoreProps(store4, update3, props);
 }
 
 // ../../../node_modules/.pnpm/@floating-ui+utils@0.2.10/node_modules/@floating-ui/utils/dist/floating-ui.utils.mjs
@@ -13717,10 +13717,10 @@ function createPopoverStore({
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6RB43CMC.js
-function usePopoverStoreProps(store4, update2, props) {
-  useUpdateEffect(update2, [props.popover]);
+function usePopoverStoreProps(store4, update3, props) {
+  useUpdateEffect(update3, [props.popover]);
   useStoreProps(store4, props, "placement");
-  return useDialogStoreProps(store4, update2, props);
+  return useDialogStoreProps(store4, update3, props);
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/DTOLNWNF.js
@@ -14739,16 +14739,16 @@ function useComboboxStoreOptions(props) {
   };
   return useCompositeStoreOptions(props);
 }
-function useComboboxStoreProps(store4, update2, props) {
-  useUpdateEffect(update2, [props.tag]);
+function useComboboxStoreProps(store4, update3, props) {
+  useUpdateEffect(update3, [props.tag]);
   useStoreProps(store4, props, "value", "setValue");
   useStoreProps(store4, props, "selectedValue", "setSelectedValue");
   useStoreProps(store4, props, "resetValueOnHide");
   useStoreProps(store4, props, "resetValueOnSelect");
   return Object.assign(
     useCompositeStoreProps(
-      usePopoverStoreProps(store4, update2, props),
-      update2,
+      usePopoverStoreProps(store4, update3, props),
+      update3,
       props
     ),
     { tag: props.tag }
@@ -14756,8 +14756,8 @@ function useComboboxStoreProps(store4, update2, props) {
 }
 function useComboboxStore(props = {}) {
   props = useComboboxStoreOptions(props);
-  const [store4, update2] = useStore(createComboboxStore, props);
-  return useComboboxStoreProps(store4, update2, props);
+  const [store4, update3] = useStore(createComboboxStore, props);
+  return useComboboxStoreProps(store4, update3, props);
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-provider.js
@@ -19277,12 +19277,429 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/responses/stage.tsx
 var import_date9 = __toESM(require_date());
-var import_element66 = __toESM(require_element());
+var import_element67 = __toESM(require_element());
 var import_html_entities = __toESM(require_html_entities());
 var import_i18n63 = __toESM(require_i18n());
 var import_notices2 = __toESM(require_notices());
-var React33 = __toESM(require_react());
 import { useParams, useSearch, useNavigate } from "@wordpress/route";
+
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useRefWithInit.js
+var React4 = __toESM(require_react(), 1);
+var UNINITIALIZED = {};
+function useRefWithInit(init2, initArg) {
+  const ref = React4.useRef(UNINITIALIZED);
+  if (ref.current === UNINITIALIZED) {
+    ref.current = init2(initArg);
+  }
+  return ref;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
+var React7 = __toESM(require_react(), 1);
+
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useMergedRefs.js
+function useMergedRefs(a2, b2, c2, d2) {
+  const forkRef = useRefWithInit(createForkRef).current;
+  if (didChange(forkRef, a2, b2, c2, d2)) {
+    update(forkRef, [a2, b2, c2, d2]);
+  }
+  return forkRef.callback;
+}
+function useMergedRefsN(refs) {
+  const forkRef = useRefWithInit(createForkRef).current;
+  if (didChangeN(forkRef, refs)) {
+    update(forkRef, refs);
+  }
+  return forkRef.callback;
+}
+function createForkRef() {
+  return {
+    callback: null,
+    cleanup: null,
+    refs: []
+  };
+}
+function didChange(forkRef, a2, b2, c2, d2) {
+  return forkRef.refs[0] !== a2 || forkRef.refs[1] !== b2 || forkRef.refs[2] !== c2 || forkRef.refs[3] !== d2;
+}
+function didChangeN(forkRef, newRefs) {
+  return forkRef.refs.length !== newRefs.length || forkRef.refs.some((ref, index) => ref !== newRefs[index]);
+}
+function update(forkRef, refs) {
+  forkRef.refs = refs;
+  if (refs.every((ref) => ref == null)) {
+    forkRef.callback = null;
+    return;
+  }
+  forkRef.callback = (instance) => {
+    if (forkRef.cleanup) {
+      forkRef.cleanup();
+      forkRef.cleanup = null;
+    }
+    if (instance != null) {
+      const cleanupCallbacks = Array(refs.length).fill(null);
+      for (let i2 = 0; i2 < refs.length; i2 += 1) {
+        const ref = refs[i2];
+        if (ref == null) {
+          continue;
+        }
+        switch (typeof ref) {
+          case "function": {
+            const refCleanup = ref(instance);
+            if (typeof refCleanup === "function") {
+              cleanupCallbacks[i2] = refCleanup;
+            }
+            break;
+          }
+          case "object": {
+            ref.current = instance;
+            break;
+          }
+          default:
+        }
+      }
+      forkRef.cleanup = () => {
+        for (let i2 = 0; i2 < refs.length; i2 += 1) {
+          const ref = refs[i2];
+          if (ref == null) {
+            continue;
+          }
+          switch (typeof ref) {
+            case "function": {
+              const cleanupCallback = cleanupCallbacks[i2];
+              if (typeof cleanupCallback === "function") {
+                cleanupCallback();
+              } else {
+                ref(null);
+              }
+              break;
+            }
+            case "object": {
+              ref.current = null;
+              break;
+            }
+            default:
+          }
+        }
+      };
+    }
+  };
+}
+
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
+var React6 = __toESM(require_react(), 1);
+
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/reactVersion.js
+var React5 = __toESM(require_react(), 1);
+var majorVersion = parseInt(React5.version, 10);
+function isReactVersionAtLeast(reactVersionToCheck) {
+  return majorVersion >= reactVersionToCheck;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
+function getReactElementRef(element) {
+  if (!/* @__PURE__ */ React6.isValidElement(element)) {
+    return null;
+  }
+  const reactElement = element;
+  const propsWithRef = reactElement.props;
+  return (isReactVersionAtLeast(19) ? propsWithRef?.ref : reactElement.ref) ?? null;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/mergeObjects.js
+function mergeObjects(a2, b2) {
+  if (a2 && !b2) {
+    return a2;
+  }
+  if (!a2 && b2) {
+    return b2;
+  }
+  if (a2 || b2) {
+    return {
+      ...a2,
+      ...b2
+    };
+  }
+  return void 0;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getStateAttributesProps.js
+function getStateAttributesProps(state, customMapping) {
+  const props = {};
+  for (const key in state) {
+    const value = state[key];
+    if (customMapping?.hasOwnProperty(key)) {
+      const customProps = customMapping[key](value);
+      if (customProps != null) {
+        Object.assign(props, customProps);
+      }
+      continue;
+    }
+    if (value === true) {
+      props[`data-${key.toLowerCase()}`] = "";
+    } else if (value) {
+      props[`data-${key.toLowerCase()}`] = value.toString();
+    }
+  }
+  return props;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveClassName.js
+function resolveClassName(className, state) {
+  return typeof className === "function" ? className(state) : className;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveStyle.js
+function resolveStyle(style, state) {
+  return typeof style === "function" ? style(state) : style;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/merge-props/mergeProps.js
+var EMPTY_PROPS = {};
+function mergeProps2(a2, b2, c2, d2, e2) {
+  let merged = {
+    ...resolvePropsGetter(a2, EMPTY_PROPS)
+  };
+  if (b2) {
+    merged = mergeOne(merged, b2);
+  }
+  if (c2) {
+    merged = mergeOne(merged, c2);
+  }
+  if (d2) {
+    merged = mergeOne(merged, d2);
+  }
+  if (e2) {
+    merged = mergeOne(merged, e2);
+  }
+  return merged;
+}
+function mergePropsN(props) {
+  if (props.length === 0) {
+    return EMPTY_PROPS;
+  }
+  if (props.length === 1) {
+    return resolvePropsGetter(props[0], EMPTY_PROPS);
+  }
+  let merged = {
+    ...resolvePropsGetter(props[0], EMPTY_PROPS)
+  };
+  for (let i2 = 1; i2 < props.length; i2 += 1) {
+    merged = mergeOne(merged, props[i2]);
+  }
+  return merged;
+}
+function mergeOne(merged, inputProps) {
+  if (isPropsGetter(inputProps)) {
+    return inputProps(merged);
+  }
+  return mutablyMergeInto(merged, inputProps);
+}
+function mutablyMergeInto(mergedProps, externalProps) {
+  if (!externalProps) {
+    return mergedProps;
+  }
+  for (const propName in externalProps) {
+    const externalPropValue = externalProps[propName];
+    switch (propName) {
+      case "style": {
+        mergedProps[propName] = mergeObjects(mergedProps.style, externalPropValue);
+        break;
+      }
+      case "className": {
+        mergedProps[propName] = mergeClassNames(mergedProps.className, externalPropValue);
+        break;
+      }
+      default: {
+        if (isEventHandler(propName, externalPropValue)) {
+          mergedProps[propName] = mergeEventHandlers(mergedProps[propName], externalPropValue);
+        } else {
+          mergedProps[propName] = externalPropValue;
+        }
+      }
+    }
+  }
+  return mergedProps;
+}
+function isEventHandler(key, value) {
+  const code0 = key.charCodeAt(0);
+  const code1 = key.charCodeAt(1);
+  const code2 = key.charCodeAt(2);
+  return code0 === 111 && code1 === 110 && code2 >= 65 && code2 <= 90 && (typeof value === "function" || typeof value === "undefined");
+}
+function isPropsGetter(inputProps) {
+  return typeof inputProps === "function";
+}
+function resolvePropsGetter(inputProps, previousProps) {
+  if (isPropsGetter(inputProps)) {
+    return inputProps(previousProps);
+  }
+  return inputProps ?? EMPTY_PROPS;
+}
+function mergeEventHandlers(ourHandler, theirHandler) {
+  if (!theirHandler) {
+    return ourHandler;
+  }
+  if (!ourHandler) {
+    return theirHandler;
+  }
+  return (event) => {
+    if (isSyntheticEvent(event)) {
+      const baseUIEvent = event;
+      makeEventPreventable(baseUIEvent);
+      const result2 = theirHandler(baseUIEvent);
+      if (!baseUIEvent.baseUIHandlerPrevented) {
+        ourHandler?.(baseUIEvent);
+      }
+      return result2;
+    }
+    const result = theirHandler(event);
+    ourHandler?.(event);
+    return result;
+  };
+}
+function makeEventPreventable(event) {
+  event.preventBaseUIHandler = () => {
+    event.baseUIHandlerPrevented = true;
+  };
+  return event;
+}
+function mergeClassNames(ourClassName, theirClassName) {
+  if (theirClassName) {
+    if (ourClassName) {
+      return theirClassName + " " + ourClassName;
+    }
+    return theirClassName;
+  }
+  return ourClassName;
+}
+function isSyntheticEvent(event) {
+  return event != null && typeof event === "object" && "nativeEvent" in event;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/empty.js
+var EMPTY_ARRAY6 = Object.freeze([]);
+var EMPTY_OBJECT = Object.freeze({});
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
+var import_react23 = __toESM(require_react(), 1);
+function useRenderElement(element, componentProps, params = {}) {
+  const renderProp = componentProps.render;
+  const outProps = useRenderElementProps(componentProps, params);
+  if (params.enabled === false) {
+    return null;
+  }
+  const state = params.state ?? EMPTY_OBJECT;
+  return evaluateRenderProp(element, renderProp, outProps, state);
+}
+function useRenderElementProps(componentProps, params = {}) {
+  const {
+    className: classNameProp,
+    style: styleProp,
+    render: renderProp
+  } = componentProps;
+  const {
+    state = EMPTY_OBJECT,
+    ref,
+    props,
+    stateAttributesMapping: stateAttributesMapping2,
+    enabled = true
+  } = params;
+  const className = enabled ? resolveClassName(classNameProp, state) : void 0;
+  const style = enabled ? resolveStyle(styleProp, state) : void 0;
+  const stateProps = enabled ? getStateAttributesProps(state, stateAttributesMapping2) : EMPTY_OBJECT;
+  const outProps = enabled ? mergeObjects(stateProps, Array.isArray(props) ? mergePropsN(props) : props) ?? EMPTY_OBJECT : EMPTY_OBJECT;
+  if (typeof document !== "undefined") {
+    if (!enabled) {
+      useMergedRefs(null, null);
+    } else if (Array.isArray(ref)) {
+      outProps.ref = useMergedRefsN([outProps.ref, getReactElementRef(renderProp), ...ref]);
+    } else {
+      outProps.ref = useMergedRefs(outProps.ref, getReactElementRef(renderProp), ref);
+    }
+  }
+  if (!enabled) {
+    return EMPTY_OBJECT;
+  }
+  if (className !== void 0) {
+    outProps.className = mergeClassNames(outProps.className, className);
+  }
+  if (style !== void 0) {
+    outProps.style = mergeObjects(outProps.style, style);
+  }
+  return outProps;
+}
+function evaluateRenderProp(element, render9, props, state) {
+  if (render9) {
+    if (typeof render9 === "function") {
+      return render9(props, state);
+    }
+    const mergedProps = mergeProps2(props, render9.props);
+    mergedProps.ref = props.ref;
+    return /* @__PURE__ */ React7.cloneElement(render9, mergedProps);
+  }
+  if (element) {
+    if (typeof element === "string") {
+      return renderTag(element, props);
+    }
+  }
+  throw new Error(true ? "Base UI: Render element or function are not defined." : formatErrorMessage(8));
+}
+function renderTag(Tag, props) {
+  if (Tag === "button") {
+    return /* @__PURE__ */ (0, import_react23.createElement)("button", {
+      type: "button",
+      ...props,
+      key: props.key
+    });
+  }
+  if (Tag === "img") {
+    return /* @__PURE__ */ (0, import_react23.createElement)("img", {
+      alt: "",
+      ...props,
+      key: props.key
+    });
+  }
+  return /* @__PURE__ */ React7.createElement(Tag, props);
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-render/useRender.js
+function useRender(params) {
+  return useRenderElement(params.defaultTagName ?? "div", params, params);
+}
+
+// ../../../node_modules/.pnpm/@wordpress+ui@0.5.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/stack/stack.mjs
+var import_element53 = __toESM(require_element(), 1);
+var css2 = `@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;
+
+@layer wp-ui-components {
+	.style-module__stack__Gc4EG {
+		display: flex;
+	}
+}
+`;
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css2));
+var style_default = {
+  "stack": "style-module__stack__Gc4EG"
+};
+var Stack = (0, import_element53.forwardRef)(function Stack2({ direction, gap, align, justify, wrap, render: render9, ...props }, ref) {
+  const style = {
+    gap: gap && `var(--wpds-dimension-gap-${gap})`,
+    alignItems: align,
+    justifyContent: justify,
+    flexDirection: direction,
+    flexWrap: wrap
+  };
+  const element = useRender({
+    render: render9,
+    ref,
+    props: mergeProps2(props, { style, className: style_default.stack })
+  });
+  return element;
+});
+
+// routes/responses/stage.tsx
+var React37 = __toESM(require_react());
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
 var import_components63 = __toESM(require_components(), 1);
@@ -19495,7 +19912,7 @@ var analytics = {
 var analytics_default = analytics;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integrations-list.tsx
-var import_element62 = __toESM(require_element(), 1);
+var import_element63 = __toESM(require_element(), 1);
 
 // ../../js-packages/components/build/tools/jp-redirect/index.js
 function getRedirectUrl(source, args = {}) {
@@ -19526,7 +19943,7 @@ function getRedirectUrl(source, args = {}) {
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/akismet.tsx
 var import_components50 = __toESM(require_components(), 1);
-var import_element53 = __toESM(require_element(), 1);
+var import_element54 = __toESM(require_element(), 1);
 var import_i18n44 = __toESM(require_i18n(), 1);
 
 // src/icons/akismet.tsx
@@ -19617,7 +20034,7 @@ function buildAkismetCard({
       showHeaderToggle: context === "block-editor",
       headerToggleValue: isConnected,
       isHeaderToggleEnabled: false,
-      notInstalledMessage: (0, import_element53.createInterpolateElement)(
+      notInstalledMessage: (0, import_element54.createInterpolateElement)(
         (0, import_i18n44.__)(
           "Add one-click spam protection for your forms with <a>Akismet</a>. Simply install the plugin and you're set.",
           "jetpack-forms"
@@ -19632,7 +20049,7 @@ function buildAkismetCard({
     },
     toggleTooltip: (0, import_i18n44.__)("We keep your forms protected", "jetpack-forms"),
     body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime115.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime115.jsx)("p", { className: "integration-card__description", children: (0, import_element53.createInterpolateElement)(
+      /* @__PURE__ */ (0, import_jsx_runtime115.jsx)("p", { className: "integration-card__description", children: (0, import_element54.createInterpolateElement)(
         (0, import_i18n44.__)(
           "Akismet is active. There is one step left. Please add your <a>Akismet key</a>.",
           "jetpack-forms"
@@ -19773,7 +20190,7 @@ var esm_default2 = requestExternalAccess;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/components/google-drive-connect-button.tsx
 var import_components51 = __toESM(require_components(), 1);
-var import_element54 = __toESM(require_element(), 1);
+var import_element55 = __toESM(require_element(), 1);
 var import_i18n45 = __toESM(require_i18n(), 1);
 var import_jsx_runtime117 = __toESM(require_jsx_runtime(), 1);
 function GoogleDriveConnectButton({
@@ -19783,8 +20200,8 @@ function GoogleDriveConnectButton({
 }) {
   const connectingText = (0, import_i18n45.__)("Connecting\u2026", "jetpack-forms");
   const connectText = (0, import_i18n45.__)("Connect to Google Drive", "jetpack-forms");
-  const [isToggling, setIsToggling] = (0, import_element54.useState)(false);
-  (0, import_element54.useEffect)(() => {
+  const [isToggling, setIsToggling] = (0, import_element55.useState)(false);
+  (0, import_element55.useEffect)(() => {
     setIsToggling(false);
   }, [isConnected]);
   const handleClick = () => {
@@ -19813,14 +20230,14 @@ function GoogleDriveConnectButton({
 // src/blocks/contact-form/components/jetpack-integrations-modal/components/google-drive-disconnect-button.tsx
 var import_api_fetch = __toESM(require_api_fetch(), 1);
 var import_components52 = __toESM(require_components(), 1);
-var import_element55 = __toESM(require_element(), 1);
+var import_element56 = __toESM(require_element(), 1);
 var import_i18n46 = __toESM(require_i18n(), 1);
 var import_jsx_runtime118 = __toESM(require_jsx_runtime(), 1);
 function GoogleDriveDisconnectButton({ onDisconnected, isConnected }) {
   const disconnectingText = (0, import_i18n46.__)("Disconnecting\u2026", "jetpack-forms");
   const disconnectText = (0, import_i18n46.__)("Disconnect Google Drive", "jetpack-forms");
-  const [isToggling, setIsToggling] = (0, import_element55.useState)(false);
-  (0, import_element55.useEffect)(() => {
+  const [isToggling, setIsToggling] = (0, import_element56.useState)(false);
+  (0, import_element56.useEffect)(() => {
     setIsToggling(false);
   }, [isConnected]);
   const handleClick = () => {
@@ -19898,7 +20315,7 @@ function buildGoogleDriveCard({
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/hostinger-reach.tsx
 var import_components54 = __toESM(require_components(), 1);
-var import_element56 = __toESM(require_element(), 1);
+var import_element57 = __toESM(require_element(), 1);
 var import_i18n49 = __toESM(require_i18n(), 1);
 
 // src/icons/hostinger-reach.tsx
@@ -19963,7 +20380,7 @@ function buildHostingerReachCard({
           }
         })
       },
-      notInstalledMessage: (0, import_element56.createInterpolateElement)(
+      notInstalledMessage: (0, import_element57.createInterpolateElement)(
         (0, import_i18n49.__)(
           "Add powerful email marketing to your forms with <a>Hostinger Reach</a>. Simply install the plugin to start sending emails.",
           "jetpack-forms"
@@ -20215,7 +20632,7 @@ var colors_default = {
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/jetpack-crm.tsx
 var import_components55 = __toESM(require_components(), 1);
-var import_element57 = __toESM(require_element(), 1);
+var import_element58 = __toESM(require_element(), 1);
 var import_i18n50 = __toESM(require_i18n(), 1);
 var import_semver = __toESM(require_semver2(), 1);
 var import_jsx_runtime122 = __toESM(require_jsx_runtime(), 1);
@@ -20227,9 +20644,9 @@ function buildJetpackCrmCard({
   attributes,
   setAttributes
 }) {
-  const { settingsUrl = "", marketingUrl = "", version: version2 = "", details = {} } = integration || {};
+  const { settingsUrl = "", marketingUrl = "", version: version3 = "", details = {} } = integration || {};
   const { hasExtension = false, canActivateExtension = false } = details;
-  const crmVersion = import_semver.default.coerce(version2);
+  const crmVersion = import_semver.default.coerce(version3);
   const isRecentVersion = crmVersion && import_semver.default.gte(crmVersion, "4.9.1");
   const connectedMsgEditor = (0, import_i18n50.__)("This form is connected to Jetpack CRM.", "jetpack-forms");
   const connectedMsgDashboard = (0, import_i18n50.__)("Jetpack CRM is connected.", "jetpack-forms");
@@ -20255,7 +20672,7 @@ function buildJetpackCrmCard({
     }
     if (!hasExtension) {
       return /* @__PURE__ */ (0, import_jsx_runtime122.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime122.jsx)("p", { className: "integration-card__description", children: (0, import_element57.createInterpolateElement)(
+        /* @__PURE__ */ (0, import_jsx_runtime122.jsx)("p", { className: "integration-card__description", children: (0, import_element58.createInterpolateElement)(
           (0, import_i18n50.__)(
             "You can integrate this contact form with Jetpack CRM by enabling Jetpack CRM's <a>Jetpack Forms extension</a>.",
             "jetpack-forms"
@@ -20312,7 +20729,7 @@ function buildJetpackCrmCard({
         }
       },
       trackEventName: "jetpack_forms_upsell_crm_click",
-      notInstalledMessage: (0, import_element57.createInterpolateElement)(
+      notInstalledMessage: (0, import_element58.createInterpolateElement)(
         (0, import_i18n50.__)(
           "You can save your form contacts in <a>Jetpack CRM</a>. To get started, please install the plugin.",
           "jetpack-forms"
@@ -20331,7 +20748,7 @@ function buildJetpackCrmCard({
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/mailpoet.tsx
 var import_components56 = __toESM(require_components(), 1);
-var import_element58 = __toESM(require_element(), 1);
+var import_element59 = __toESM(require_element(), 1);
 var import_i18n52 = __toESM(require_i18n(), 1);
 
 // src/icons/mailpoet.tsx
@@ -20410,7 +20827,7 @@ function buildMailPoetCard({
           }
         })
       },
-      notInstalledMessage: (0, import_element58.createInterpolateElement)(
+      notInstalledMessage: (0, import_element59.createInterpolateElement)(
         (0, import_i18n52.__)(
           "Add powerful email marketing to your forms with <a>MailPoet</a>. Simply install the plugin to start sending emails.",
           "jetpack-forms"
@@ -20425,7 +20842,7 @@ function buildMailPoetCard({
     },
     toggleTooltip: (0, import_i18n52.__)("Grow your audience with MailPoet", "jetpack-forms"),
     body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime124.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime124.jsx)("p", { className: "integration-card__description", children: (0, import_element58.createInterpolateElement)(
+      /* @__PURE__ */ (0, import_jsx_runtime124.jsx)("p", { className: "integration-card__description", children: (0, import_element59.createInterpolateElement)(
         (0, import_i18n52.__)(
           "MailPoet is active. There is one step left. Please complete <a>MailPoet setup</a>.",
           "jetpack-forms"
@@ -20516,7 +20933,7 @@ var salesforce_default = SalesforceIcon;
 var import_notice_outline = __toESM(require_notice_outline(), 1);
 
 // src/blocks/contact-form/components/help-message/style.scss
-var css2 = `.help-message {
+var css3 = `.help-message {
   display: flex;
   font-size: 13px;
   line-height: 1.4;
@@ -20536,7 +20953,7 @@ var css2 = `.help-message {
 .help-message.help-message-is-error svg {
   fill: var(--color-error);
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css2));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css3));
 
 // src/blocks/contact-form/components/help-message/index.jsx
 var import_jsx_runtime126 = __toESM(require_jsx_runtime(), 1);
@@ -20556,7 +20973,7 @@ var import_components57 = __toESM(require_components(), 1);
 var import_i18n54 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-create-form.ts
-var import_element59 = __toESM(require_element(), 1);
+var import_element60 = __toESM(require_element(), 1);
 
 // src/hooks/use-config-value.ts
 var import_data7 = __toESM(require_data(), 1);
@@ -20738,7 +21155,7 @@ var openFormLinkInNewTab = (url) => {
 function useCreateForm() {
   const newFormNonce = useConfigValue("newFormNonce");
   const isCentralFormManagementEnabled = useConfigValue("isCentralFormManagementEnabled");
-  const createForm = (0, import_element59.useCallback)(
+  const createForm = (0, import_element60.useCallback)(
     async (formPattern) => {
       const data = new FormData();
       data.append("action", "create_new_form");
@@ -20759,7 +21176,7 @@ function useCreateForm() {
     },
     [newFormNonce]
   );
-  const openNewForm = (0, import_element59.useCallback)(
+  const openNewForm = (0, import_element60.useCallback)(
     async ({ formPattern, showPatterns, analyticsEvent }) => {
       try {
         if (isCentralFormManagementEnabled === true) {
@@ -20995,12 +21412,12 @@ var import_i18n57 = __toESM(require_i18n(), 1);
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/plugin-action-button.tsx
 var import_components60 = __toESM(require_components(), 1);
-var import_element61 = __toESM(require_element(), 1);
+var import_element62 = __toESM(require_element(), 1);
 var import_i18n56 = __toESM(require_i18n(), 1);
 
 // src/hooks/use-plugin-installation.ts
 var import_data8 = __toESM(require_data(), 1);
-var import_element60 = __toESM(require_element(), 1);
+var import_element61 = __toESM(require_element(), 1);
 var import_notices = __toESM(require_notices(), 1);
 
 // ../../js-packages/script-data/src/utils.ts
@@ -21062,11 +21479,11 @@ var usePluginInstallation = ({
   successNotices,
   errorNotice
 }) => {
-  const [isInstalling, setIsInstalling] = (0, import_element60.useState)(false);
+  const [isInstalling, setIsInstalling] = (0, import_element61.useState)(false);
   const { createSuccessNotice, createErrorNotice } = (0, import_data8.useDispatch)(import_notices.store);
   const canInstallPlugins = useConfigValue("canInstallPlugins");
   const canActivatePlugins = useConfigValue("canActivatePlugins");
-  const installPlugin = (0, import_element60.useCallback)(async () => {
+  const installPlugin = (0, import_element61.useCallback)(async () => {
     setIsInstalling(true);
     if (trackEventName) {
       analytics_default.tracks.recordEvent(trackEventName, {
@@ -21149,7 +21566,7 @@ var PluginActionButton = ({
     trackEventProps
   });
   const canPerformAction = isInstalled ? canActivatePlugins : canInstallPlugins;
-  const [isReconcilingStatus, setIsReconcilingStatus] = (0, import_element61.useState)(false);
+  const [isReconcilingStatus, setIsReconcilingStatus] = (0, import_element62.useState)(false);
   const isDisabled = isInstalling || isReconcilingStatus || !canPerformAction;
   const handleAction = async (event) => {
     event.stopPropagation();
@@ -21162,7 +21579,7 @@ var PluginActionButton = ({
       refreshStatus();
     }
   };
-  (0, import_element61.useEffect)(() => {
+  (0, import_element62.useEffect)(() => {
     if (isReconcilingStatus && isActive) {
       setIsReconcilingStatus(false);
     }
@@ -21360,7 +21777,7 @@ var IntegrationCardHeader = ({
 var integration_card_header_default = IntegrationCardHeader;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/style.scss
-var css3 = `.integration-card__header.is-clickable {
+var css4 = `.integration-card__header.is-clickable {
   cursor: pointer;
 }
 .integration-card__header-content {
@@ -21499,7 +21916,7 @@ var css3 = `.integration-card__header.is-clickable {
 .integration-card:last-child {
   border-bottom: none;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css3));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css4));
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/index.tsx
 var import_jsx_runtime132 = __toESM(require_jsx_runtime(), 1);
@@ -21559,15 +21976,15 @@ var IntegrationsList = ({
     setAttributes,
     components
   });
-  const initialCardsExpandedState = (0, import_element62.useMemo)(() => {
+  const initialCardsExpandedState = (0, import_element63.useMemo)(() => {
     const state = {};
     integrations.forEach((integration) => {
       state[integration.id] = false;
     });
     return state;
   }, [integrations]);
-  const [expandedCards, setExpandedCards] = (0, import_element62.useState)(initialCardsExpandedState);
-  const toggleCard = (0, import_element62.useCallback)(
+  const [expandedCards, setExpandedCards] = (0, import_element63.useState)(initialCardsExpandedState);
+  const toggleCard = (0, import_element63.useCallback)(
     (id) => {
       setExpandedCards((prev) => {
         const isExpanding = !prev[id];
@@ -21599,10 +22016,10 @@ var IntegrationsList = ({
 var integrations_list_default = IntegrationsList;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/style.scss
-var css4 = `.jetpack-forms-integrations-modal .components-modal__header-heading {
+var css5 = `.jetpack-forms-integrations-modal .components-modal__header-heading {
   font-weight: 400;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css4));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css5));
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
 var import_jsx_runtime134 = __toESM(require_jsx_runtime(), 1);
@@ -21645,7 +22062,7 @@ var jetpack_integrations_modal_default = IntegrationsModal;
 // src/dashboard/components/empty-responses/index.tsx
 var import_components65 = __toESM(require_components(), 1);
 var import_data10 = __toESM(require_data(), 1);
-var import_element64 = __toESM(require_element(), 1);
+var import_element65 = __toESM(require_element(), 1);
 var import_i18n60 = __toESM(require_i18n(), 1);
 
 // src/store/integrations/index.ts
@@ -21798,7 +22215,7 @@ var store2 = (0, import_data9.createReduxStore)(INTEGRATIONS_STORE, {
 
 // src/dashboard/components/create-form-button/index.tsx
 var import_components64 = __toESM(require_components(), 1);
-var import_element63 = __toESM(require_element(), 1);
+var import_element64 = __toESM(require_element(), 1);
 var import_i18n59 = __toESM(require_i18n(), 1);
 var import_jsx_runtime135 = __toESM(require_jsx_runtime(), 1);
 function CreateFormButton({
@@ -21807,7 +22224,7 @@ function CreateFormButton({
   variant = "secondary"
 }) {
   const { openNewForm } = useCreateForm();
-  const onButtonClickHandler = (0, import_element63.useCallback)(
+  const onButtonClickHandler = (0, import_element64.useCallback)(
     () => openNewForm({
       showPatterns,
       analyticsEvent: () => {
@@ -21844,18 +22261,18 @@ var useInstallAkismet = () => {
     };
   }, []);
   const { refreshIntegrations: refreshIntegrations2 } = (0, import_data10.useDispatch)(INTEGRATIONS_STORE);
-  const akismetIntegrationReady = (0, import_element64.useMemo)(
+  const akismetIntegrationReady = (0, import_element65.useMemo)(
     () => !!akismetIntegration && !akismetIntegration.__isPartial,
     [akismetIntegration]
   );
   const isInstalled = !!akismetIntegration?.isInstalled;
   const isAkismetActive = akismetIntegrationReady && isInstalled && !!akismetIntegration?.isActive;
   const shouldShowAkismetCta = akismetIntegrationReady && !isAkismetActive && !isSimpleSite();
-  const akismetPluginFile = (0, import_element64.useMemo)(
+  const akismetPluginFile = (0, import_element65.useMemo)(
     () => akismetIntegration?.pluginFile ?? "akismet/akismet",
     [akismetIntegration?.pluginFile]
   );
-  const wrapperBody = (0, import_element64.createInterpolateElement)(
+  const wrapperBody = (0, import_element65.createInterpolateElement)(
     (0, import_i18n60.__)(
       "Want automatic spam filtering? Akismet Anti-spam protects millions of sites. <moreInfoLink>Learn more.</moreInfoLink>",
       "jetpack-forms"
@@ -21897,7 +22314,7 @@ var useInstallAkismet = () => {
     }
   });
   const canPerformAkismetAction = isInstalled && akismetIntegrationReady ? canActivatePlugins !== false : canInstallPlugins !== false;
-  const handleAkismetSetup = (0, import_element64.useCallback)(async () => {
+  const handleAkismetSetup = (0, import_element65.useCallback)(async () => {
     if (isInstallingAkismet || !akismetIntegrationReady || !canPerformAkismetAction) {
       return;
     }
@@ -22885,24 +23302,24 @@ Hovercards.createHovercardError = function(avatarUrl, message2, _temp6) {
 var __webpack_exports__Hovercards = __webpack_exports__.S;
 
 // ../../../node_modules/.pnpm/@gravatar-com+hovercards@0.15.0/node_modules/@gravatar-com/hovercards/dist/style.css
-var css5 = `.gravatar-hovercard{display:inline-block;font-family:"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;font-size:14px;line-height:1.5;color:#000;z-index:10000000}.gravatar-hovercard,.gravatar-hovercard::before,.gravatar-hovercard::after{box-sizing:border-box}.gravatar-hovercard *{margin:0;padding:0;border:0;box-sizing:inherit;font:inherit;line-height:inherit;color:inherit;background:rgba(0,0,0,0);vertical-align:baseline;list-style:none;appearance:none;-webkit-appearance:none;-moz-appearance:none}.gravatar-hovercard a{text-decoration:none;cursor:pointer}.gravatar-hovercard button{background:none;border:none;padding:0;cursor:pointer}.gravatar-hovercard img,.gravatar-hovercard svg{display:block;max-width:100%;height:auto}.gravatar-hovercard a:focus-visible,.gravatar-hovercard button:focus-visible{outline:2px solid revert}.gravatar-hovercard .gravatar-hovercard__inner{display:flex;flex-direction:column;justify-content:space-between;width:336px;min-height:273px;position:relative;padding:24px 24px 16px;background-color:#fff;border:1px solid #d8dbdd;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08);overflow:hidden}.gravatar-hovercard .gravatar-hovercard__header-image{position:absolute;top:0;left:50%;height:75px;width:100%;transform:translateX(-50%);overflow-y:hidden}.gravatar-hovercard .gravatar-hovercard__header-image-img{width:100%;-o-object-fit:cover;object-fit:cover;transform:translateY(-30%);filter:blur(40px)}.gravatar-hovercard .gravatar-hovercard__header{z-index:1;display:flex;flex-direction:column;gap:8px}.gravatar-hovercard .gravatar-hovercard__avatar-link{width:-moz-fit-content;width:fit-content}.gravatar-hovercard .gravatar-hovercard__avatar{border-radius:50%;background-color:#eee}.gravatar-hovercard .gravatar-hovercard__name{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:break-word;font-family:"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;font-size:32px;font-weight:700;line-height:38px}.gravatar-hovercard .gravatar-hovercard__job,.gravatar-hovercard .gravatar-hovercard__location{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:break-word;color:#707070}.gravatar-hovercard .gravatar-hovercard__body{margin-top:8px}.gravatar-hovercard .gravatar-hovercard__description{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:break-word}.gravatar-hovercard .gravatar-hovercard__social-links{display:flex;align-items:center;gap:4px;margin-top:16px}.gravatar-hovercard .gravatar-hovercard__buttons{display:flex;gap:16px;margin-top:16px}.gravatar-hovercard .gravatar-hovercard__button{width:100%;min-height:42px;padding:8px;border-radius:4px;border:1px solid rgba(29,79,196,.3);font-family:"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;font-size:15px;font-weight:600;line-height:21px;color:#1d4fc4}.gravatar-hovercard .gravatar-hovercard__button:hover{border:1px solid rgba(29,79,196,.6)}.gravatar-hovercard .gravatar-hovercard__footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}.gravatar-hovercard .gravatar-hovercard__profile-url{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:break-word;word-break:break-all;color:#707070}.gravatar-hovercard .gravatar-hovercard__profile-link{flex-shrink:0;color:#707070}.gravatar-hovercard .gravatar-hovercard__profile-color{position:absolute;bottom:0;left:0;width:100%;height:4px}.gravatar-hovercard--skeleton .gravatar-hovercard__avatar-link,.gravatar-hovercard--skeleton .gravatar-hovercard__personal-info-link,.gravatar-hovercard--skeleton .gravatar-hovercard__social-link,.gravatar-hovercard--skeleton .gravatar-hovercard__profile-link,.gravatar-hovercard--skeleton .gravatar-hovercard__profile-url{background-color:#eee}.gravatar-hovercard--skeleton .gravatar-hovercard__avatar-link{width:104px;height:104px;border-radius:50%}.gravatar-hovercard--skeleton .gravatar-hovercard__personal-info-link{height:38px;width:70%}.gravatar-hovercard--skeleton .gravatar-hovercard__social-link{width:32px;height:32px;border-radius:50%}.gravatar-hovercard--skeleton .gravatar-hovercard__profile-url{width:50%;height:21px}.gravatar-hovercard--skeleton .gravatar-hovercard__profile-link{height:21px;width:96px}.gravatar-hovercard--error .gravatar-hovercard__inner{align-items:center;justify-content:center;gap:34px}.gravatar-hovercard--error .gravatar-hovercard__error-message-wrapper{display:flex;flex-direction:column;align-items:center}.gravatar-hovercard--error .gravatar-hovercard__error-message{color:#707070}.gravatar-hovercard--error .gravatar-hovercard__error-message.gravatar-hovercard__error-message--claim-gravatar a{text-decoration:underline}.gravatar-hovercard__drawer{position:absolute;top:0;left:0;bottom:0;right:0;visibility:hidden;overflow:hidden;z-index:1}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-backdrop{position:absolute;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,.4);opacity:0;transition:opacity .3s ease-in-out}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-card{position:absolute;left:0;bottom:0;width:100%;max-height:100%;display:flex;flex-direction:column;background-color:#fff;border-top-left-radius:4px;border-top-right-radius:4px;padding:20px 0;transform:translate3d(0, 100%, 0);transition:transform .3s ease-in-out}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-header{display:flex;align-items:center;justify-content:space-between;padding:0 20px;margin-bottom:16px}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-title{font-family:"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;font-size:18px;font-weight:700;line-height:27px}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-close{display:flex;align-items:center;justify-content:center}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-items{display:flex;flex-direction:column;padding:0 20px;gap:12px;overflow-y:auto}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-item{display:flex;align-items:start;gap:8px}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-item-info{display:flex;flex-direction:column}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-item-label{font-weight:600;line-height:24px;text-transform:capitalize}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-item-link{color:#1d4fc4}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-item-link:hover{text-decoration:underline}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--open{visibility:visible}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--open .gravatar-hovercard__drawer-backdrop{opacity:1}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--open .gravatar-hovercard__drawer-card{transform:translate3d(0, 0, 0)}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--closing{visibility:visible}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--closing .gravatar-hovercard__drawer-backdrop{opacity:0}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--closing .gravatar-hovercard__drawer-card{transform:translate3d(0, 100%, 0)}
+var css6 = `.gravatar-hovercard{display:inline-block;font-family:"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;font-size:14px;line-height:1.5;color:#000;z-index:10000000}.gravatar-hovercard,.gravatar-hovercard::before,.gravatar-hovercard::after{box-sizing:border-box}.gravatar-hovercard *{margin:0;padding:0;border:0;box-sizing:inherit;font:inherit;line-height:inherit;color:inherit;background:rgba(0,0,0,0);vertical-align:baseline;list-style:none;appearance:none;-webkit-appearance:none;-moz-appearance:none}.gravatar-hovercard a{text-decoration:none;cursor:pointer}.gravatar-hovercard button{background:none;border:none;padding:0;cursor:pointer}.gravatar-hovercard img,.gravatar-hovercard svg{display:block;max-width:100%;height:auto}.gravatar-hovercard a:focus-visible,.gravatar-hovercard button:focus-visible{outline:2px solid revert}.gravatar-hovercard .gravatar-hovercard__inner{display:flex;flex-direction:column;justify-content:space-between;width:336px;min-height:273px;position:relative;padding:24px 24px 16px;background-color:#fff;border:1px solid #d8dbdd;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08);overflow:hidden}.gravatar-hovercard .gravatar-hovercard__header-image{position:absolute;top:0;left:50%;height:75px;width:100%;transform:translateX(-50%);overflow-y:hidden}.gravatar-hovercard .gravatar-hovercard__header-image-img{width:100%;-o-object-fit:cover;object-fit:cover;transform:translateY(-30%);filter:blur(40px)}.gravatar-hovercard .gravatar-hovercard__header{z-index:1;display:flex;flex-direction:column;gap:8px}.gravatar-hovercard .gravatar-hovercard__avatar-link{width:-moz-fit-content;width:fit-content}.gravatar-hovercard .gravatar-hovercard__avatar{border-radius:50%;background-color:#eee}.gravatar-hovercard .gravatar-hovercard__name{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:break-word;font-family:"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;font-size:32px;font-weight:700;line-height:38px}.gravatar-hovercard .gravatar-hovercard__job,.gravatar-hovercard .gravatar-hovercard__location{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:break-word;color:#707070}.gravatar-hovercard .gravatar-hovercard__body{margin-top:8px}.gravatar-hovercard .gravatar-hovercard__description{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:break-word}.gravatar-hovercard .gravatar-hovercard__social-links{display:flex;align-items:center;gap:4px;margin-top:16px}.gravatar-hovercard .gravatar-hovercard__buttons{display:flex;gap:16px;margin-top:16px}.gravatar-hovercard .gravatar-hovercard__button{width:100%;min-height:42px;padding:8px;border-radius:4px;border:1px solid rgba(29,79,196,.3);font-family:"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;font-size:15px;font-weight:600;line-height:21px;color:#1d4fc4}.gravatar-hovercard .gravatar-hovercard__button:hover{border:1px solid rgba(29,79,196,.6)}.gravatar-hovercard .gravatar-hovercard__footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}.gravatar-hovercard .gravatar-hovercard__profile-url{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:break-word;word-break:break-all;color:#707070}.gravatar-hovercard .gravatar-hovercard__profile-link{flex-shrink:0;color:#707070}.gravatar-hovercard .gravatar-hovercard__profile-color{position:absolute;bottom:0;left:0;width:100%;height:4px}.gravatar-hovercard--skeleton .gravatar-hovercard__avatar-link,.gravatar-hovercard--skeleton .gravatar-hovercard__personal-info-link,.gravatar-hovercard--skeleton .gravatar-hovercard__social-link,.gravatar-hovercard--skeleton .gravatar-hovercard__profile-link,.gravatar-hovercard--skeleton .gravatar-hovercard__profile-url{background-color:#eee}.gravatar-hovercard--skeleton .gravatar-hovercard__avatar-link{width:104px;height:104px;border-radius:50%}.gravatar-hovercard--skeleton .gravatar-hovercard__personal-info-link{height:38px;width:70%}.gravatar-hovercard--skeleton .gravatar-hovercard__social-link{width:32px;height:32px;border-radius:50%}.gravatar-hovercard--skeleton .gravatar-hovercard__profile-url{width:50%;height:21px}.gravatar-hovercard--skeleton .gravatar-hovercard__profile-link{height:21px;width:96px}.gravatar-hovercard--error .gravatar-hovercard__inner{align-items:center;justify-content:center;gap:34px}.gravatar-hovercard--error .gravatar-hovercard__error-message-wrapper{display:flex;flex-direction:column;align-items:center}.gravatar-hovercard--error .gravatar-hovercard__error-message{color:#707070}.gravatar-hovercard--error .gravatar-hovercard__error-message.gravatar-hovercard__error-message--claim-gravatar a{text-decoration:underline}.gravatar-hovercard__drawer{position:absolute;top:0;left:0;bottom:0;right:0;visibility:hidden;overflow:hidden;z-index:1}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-backdrop{position:absolute;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,.4);opacity:0;transition:opacity .3s ease-in-out}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-card{position:absolute;left:0;bottom:0;width:100%;max-height:100%;display:flex;flex-direction:column;background-color:#fff;border-top-left-radius:4px;border-top-right-radius:4px;padding:20px 0;transform:translate3d(0, 100%, 0);transition:transform .3s ease-in-out}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-header{display:flex;align-items:center;justify-content:space-between;padding:0 20px;margin-bottom:16px}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-title{font-family:"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;font-size:18px;font-weight:700;line-height:27px}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-close{display:flex;align-items:center;justify-content:center}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-items{display:flex;flex-direction:column;padding:0 20px;gap:12px;overflow-y:auto}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-item{display:flex;align-items:start;gap:8px}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-item-info{display:flex;flex-direction:column}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-item-label{font-weight:600;line-height:24px;text-transform:capitalize}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-item-link{color:#1d4fc4}.gravatar-hovercard__drawer .gravatar-hovercard__drawer-item-link:hover{text-decoration:underline}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--open{visibility:visible}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--open .gravatar-hovercard__drawer-backdrop{opacity:1}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--open .gravatar-hovercard__drawer-card{transform:translate3d(0, 0, 0)}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--closing{visibility:visible}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--closing .gravatar-hovercard__drawer-backdrop{opacity:0}.gravatar-hovercard__drawer.gravatar-hovercard__drawer--closing .gravatar-hovercard__drawer-card{transform:translate3d(0, 100%, 0)}
 
 /*# sourceMappingURL=style.css.map*/`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css5));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css6));
 
 // src/dashboard/components/gravatar/index.tsx
-var import_element65 = __toESM(require_element(), 1);
+var import_element66 = __toESM(require_element(), 1);
 var import_i18n62 = __toESM(require_i18n(), 1);
 var import_js_sha256 = __toESM(require_sha256(), 1);
 
 // src/dashboard/components/gravatar/style.scss
-var css6 = `.jp-forms__gravatar {
+var css7 = `.jp-forms__gravatar {
   background-color: var(--jp-gray-5);
   border-radius: 50%;
   flex-shrink: 0;
   overflow: hidden;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css6));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css7));
 
 // src/dashboard/components/gravatar/index.tsx
 var import_jsx_runtime138 = __toESM(require_jsx_runtime(), 1);
@@ -22913,9 +23330,9 @@ function Gravatar({
   size = 48,
   useHovercard = true
 }) {
-  const profileImageRef = (0, import_element65.useRef)(null);
-  const hovercardRef = (0, import_element65.useRef)(null);
-  (0, import_element65.useEffect)(() => {
+  const profileImageRef = (0, import_element66.useRef)(null);
+  const hovercardRef = (0, import_element66.useRef)(null);
+  (0, import_element66.useEffect)(() => {
     if (useHovercard && profileImageRef.current) {
       hovercardRef.current = new __webpack_exports__Hovercards({
         // Documented at https://github.com/Automattic/gravatar/tree/trunk/web/packages/hovercards#translations
@@ -22969,10 +23386,10 @@ var import_components67 = __toESM(require_components(), 1);
 var { Fill: SidebarToggleFill, Slot: SidebarToggleSlot } = (0, import_components67.createSlotFill)("SidebarToggle");
 
 // src/dashboard/components/page/stack.tsx
-var import_react23 = __toESM(require_react(), 1);
+var import_react25 = __toESM(require_react(), 1);
 var import_jsx_runtime139 = __toESM(require_jsx_runtime(), 1);
 var getNormalizedGap = (gap) => typeof gap === "number" ? `calc( ${gap} * var( --wpds-spacing-05 ) )` : gap;
-var Stack = (0, import_react23.forwardRef)(function Stack2({
+var Stack3 = (0, import_react25.forwardRef)(function Stack4({
   direction,
   gap = "initial",
   align = "initial",
@@ -22999,7 +23416,7 @@ var Stack = (0, import_react23.forwardRef)(function Stack2({
     "--wp-ui-stack-justify": justify
   };
   if (render9) {
-    return import_react23.default.cloneElement(render9, {
+    return import_react25.default.cloneElement(render9, {
       ...props,
       ref,
       className: clsx_default(render9.props.className, classes),
@@ -23021,7 +23438,7 @@ function Header({
   showSidebarToggle = true
 }) {
   return /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(
-    Stack,
+    Stack3,
     {
       direction: "column",
       className: clsx_default("admin-ui-page__header", {
@@ -23030,7 +23447,7 @@ function Header({
       render: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)("header", {}),
       children: [
         /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(
-          Stack,
+          Stack3,
           {
             direction: "row",
             className: "admin-ui-page__header-title",
@@ -23038,13 +23455,13 @@ function Header({
             gap: 2,
             align: "center",
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(Stack, { direction: "row", gap: 2, wrap: "wrap", align: "center", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(Stack3, { direction: "row", gap: 2, wrap: "wrap", align: "center", children: [
                 showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(SidebarToggleSlot, { bubblesVirtually: true, className: "admin-ui-page__sidebar-toggle-slot" }),
                 title && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(import_components68.__experimentalHeading, { level: 1, size: "15px", lineHeight: "32px", truncate: true, children: title }),
                 breadcrumbs,
                 badges
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(Stack, { direction: "row", gap: 2, children: actions })
+              /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(Stack3, { direction: "row", gap: 2, children: actions })
             ]
           }
         ),
@@ -23056,9 +23473,9 @@ function Header({
 }
 
 // src/dashboard/components/page/navigable-region.tsx
-var import_react24 = __toESM(require_react(), 1);
+var import_react26 = __toESM(require_react(), 1);
 var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
-var NavigableRegion = (0, import_react24.forwardRef)(
+var NavigableRegion = (0, import_react26.forwardRef)(
   ({ children, className, ariaLabel, as: Tag = "div", ...props }, ref) => {
     return /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(
       Tag,
@@ -23078,7 +23495,7 @@ NavigableRegion.displayName = "NavigableRegion";
 var navigable_region_default = NavigableRegion;
 
 // src/dashboard/components/page/style.scss
-var css7 = `/**
+var css8 = `/**
  * SCSS Variables.
  *
  * Please use variables from this sheet to ensure consistency across the UI.
@@ -23249,7 +23666,7 @@ var css7 = `/**
 .admin-ui-page__sidebar-toggle-slot:empty {
   display: none;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css7));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css8));
 
 // src/dashboard/components/page/index.tsx
 var import_jsx_runtime142 = __toESM(require_jsx_runtime(), 1);
@@ -23298,7 +23715,7 @@ Page.SidebarToggleFill = SidebarToggleFill;
 var page_default = Page;
 
 // routes/responses/style.scss
-var css8 = `@media (max-width: 782px) {
+var css9 = `@media (max-width: 782px) {
   .admin-ui-page__header {
     top: 46px;
   }
@@ -23334,7 +23751,7 @@ var css8 = `@media (max-width: 782px) {
   fill: currentColor;
   vertical-align: text-top;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css8));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css9));
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/index.parts.js
 var index_parts_exports = {};
@@ -23347,10 +23764,10 @@ __export(index_parts_exports, {
 });
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/root/TabsRoot.js
-var React16 = __toESM(require_react(), 1);
+var React20 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/useControlled.js
-var React5 = __toESM(require_react(), 1);
+var React9 = __toESM(require_react(), 1);
 function useControlled({
   controlled,
   default: defaultProp,
@@ -23359,25 +23776,25 @@ function useControlled({
 }) {
   const {
     current: isControlled
-  } = React5.useRef(controlled !== void 0);
-  const [valueState, setValue] = React5.useState(defaultProp);
+  } = React9.useRef(controlled !== void 0);
+  const [valueState, setValue] = React9.useState(defaultProp);
   const value = isControlled ? controlled : valueState;
   if (true) {
-    React5.useEffect(() => {
+    React9.useEffect(() => {
       if (isControlled !== (controlled !== void 0)) {
         console.error([`Base UI: A component is changing the ${isControlled ? "" : "un"}controlled ${state} state of ${name} to be ${isControlled ? "un" : ""}controlled.`, "Elements should not switch from uncontrolled to controlled (or vice versa).", `Decide between using a controlled or uncontrolled ${name} element for the lifetime of the component.`, "The nature of the state is determined during the first render. It's considered controlled if the value is not `undefined`.", "More info: https://fb.me/react-controlled-components"].join("\n"));
       }
     }, [state, name, controlled]);
     const {
       current: defaultValue2
-    } = React5.useRef(defaultProp);
-    React5.useEffect(() => {
+    } = React9.useRef(defaultProp);
+    React9.useEffect(() => {
       if (!isControlled && JSON.stringify(defaultValue2) !== JSON.stringify(defaultProp)) {
         console.error([`Base UI: A component is changing the default ${state} state of an uncontrolled ${name} after being initialized. To suppress this warning opt to use a controlled ${name}.`].join("\n"));
       }
     }, [JSON.stringify(defaultProp)]);
   }
-  const setValueIfUncontrolled = React5.useCallback((newValue) => {
+  const setValueIfUncontrolled = React9.useCallback((newValue) => {
     if (!isControlled) {
       setValue(newValue);
     }
@@ -23386,28 +23803,28 @@ function useControlled({
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/useStableCallback.js
-var React7 = __toESM(require_react(), 1);
+var React11 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/useRefWithInit.js
-var React6 = __toESM(require_react(), 1);
-var UNINITIALIZED = {};
-function useRefWithInit(init2, initArg) {
-  const ref = React6.useRef(UNINITIALIZED);
-  if (ref.current === UNINITIALIZED) {
+var React10 = __toESM(require_react(), 1);
+var UNINITIALIZED2 = {};
+function useRefWithInit2(init2, initArg) {
+  const ref = React10.useRef(UNINITIALIZED2);
+  if (ref.current === UNINITIALIZED2) {
     ref.current = init2(initArg);
   }
   return ref;
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/useStableCallback.js
-var useInsertionEffect = React7[`useInsertionEffect${Math.random().toFixed(1)}`.slice(0, -3)];
+var useInsertionEffect = React11[`useInsertionEffect${Math.random().toFixed(1)}`.slice(0, -3)];
 var useSafeInsertionEffect = (
   // React 17 doesn't have useInsertionEffect.
   useInsertionEffect && // Preact replaces useInsertionEffect with useLayoutEffect and fires too late.
-  useInsertionEffect !== React7.useLayoutEffect ? useInsertionEffect : (fn) => fn()
+  useInsertionEffect !== React11.useLayoutEffect ? useInsertionEffect : (fn) => fn()
 );
 function useStableCallback(callback) {
-  const stable = useRefWithInit(createStableCallback).current;
+  const stable = useRefWithInit2(createStableCallback).current;
   stable.next = callback;
   useSafeInsertionEffect(stable.effect);
   return stable.trampoline;
@@ -23430,37 +23847,37 @@ function assertNotCalled() {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/utils/useRenderElement.js
-var React10 = __toESM(require_react(), 1);
+var React14 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/useMergedRefs.js
-function useMergedRefs(a2, b2, c2, d2) {
-  const forkRef = useRefWithInit(createForkRef).current;
-  if (didChange(forkRef, a2, b2, c2, d2)) {
-    update(forkRef, [a2, b2, c2, d2]);
+function useMergedRefs2(a2, b2, c2, d2) {
+  const forkRef = useRefWithInit2(createForkRef2).current;
+  if (didChange2(forkRef, a2, b2, c2, d2)) {
+    update2(forkRef, [a2, b2, c2, d2]);
   }
   return forkRef.callback;
 }
-function useMergedRefsN(refs) {
-  const forkRef = useRefWithInit(createForkRef).current;
-  if (didChangeN(forkRef, refs)) {
-    update(forkRef, refs);
+function useMergedRefsN2(refs) {
+  const forkRef = useRefWithInit2(createForkRef2).current;
+  if (didChangeN2(forkRef, refs)) {
+    update2(forkRef, refs);
   }
   return forkRef.callback;
 }
-function createForkRef() {
+function createForkRef2() {
   return {
     callback: null,
     cleanup: null,
     refs: []
   };
 }
-function didChange(forkRef, a2, b2, c2, d2) {
+function didChange2(forkRef, a2, b2, c2, d2) {
   return forkRef.refs[0] !== a2 || forkRef.refs[1] !== b2 || forkRef.refs[2] !== c2 || forkRef.refs[3] !== d2;
 }
-function didChangeN(forkRef, newRefs) {
+function didChangeN2(forkRef, newRefs) {
   return forkRef.refs.length !== newRefs.length || forkRef.refs.some((ref, index) => ref !== newRefs[index]);
 }
-function update(forkRef, refs) {
+function update2(forkRef, refs) {
   forkRef.refs = refs;
   if (refs.every((ref) => ref == null)) {
     forkRef.callback = null;
@@ -23522,27 +23939,27 @@ function update(forkRef, refs) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/getReactElementRef.js
-var React9 = __toESM(require_react(), 1);
+var React13 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/reactVersion.js
-var React8 = __toESM(require_react(), 1);
-var majorVersion = parseInt(React8.version, 10);
-function isReactVersionAtLeast(reactVersionToCheck) {
-  return majorVersion >= reactVersionToCheck;
+var React12 = __toESM(require_react(), 1);
+var majorVersion2 = parseInt(React12.version, 10);
+function isReactVersionAtLeast2(reactVersionToCheck) {
+  return majorVersion2 >= reactVersionToCheck;
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/getReactElementRef.js
-function getReactElementRef(element) {
-  if (!/* @__PURE__ */ React9.isValidElement(element)) {
+function getReactElementRef2(element) {
+  if (!/* @__PURE__ */ React13.isValidElement(element)) {
     return null;
   }
   const reactElement = element;
   const propsWithRef = reactElement.props;
-  return (isReactVersionAtLeast(19) ? propsWithRef?.ref : reactElement.ref) ?? null;
+  return (isReactVersionAtLeast2(19) ? propsWithRef?.ref : reactElement.ref) ?? null;
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/mergeObjects.js
-function mergeObjects(a2, b2) {
+function mergeObjects2(a2, b2) {
   if (a2 && !b2) {
     return a2;
   }
@@ -23559,7 +23976,7 @@ function mergeObjects(a2, b2) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/utils/getStateAttributesProps.js
-function getStateAttributesProps(state, customMapping) {
+function getStateAttributesProps2(state, customMapping) {
   const props = {};
   for (const key in state) {
     const value = state[key];
@@ -23580,57 +23997,57 @@ function getStateAttributesProps(state, customMapping) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/utils/resolveClassName.js
-function resolveClassName(className, state) {
+function resolveClassName2(className, state) {
   return typeof className === "function" ? className(state) : className;
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/utils/resolveStyle.js
-function resolveStyle(style, state) {
+function resolveStyle2(style, state) {
   return typeof style === "function" ? style(state) : style;
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/merge-props/mergeProps.js
-var EMPTY_PROPS = {};
-function mergeProps2(a2, b2, c2, d2, e2) {
+var EMPTY_PROPS2 = {};
+function mergeProps3(a2, b2, c2, d2, e2) {
   let merged = {
-    ...resolvePropsGetter(a2, EMPTY_PROPS)
+    ...resolvePropsGetter2(a2, EMPTY_PROPS2)
   };
   if (b2) {
-    merged = mergeOne(merged, b2);
+    merged = mergeOne2(merged, b2);
   }
   if (c2) {
-    merged = mergeOne(merged, c2);
+    merged = mergeOne2(merged, c2);
   }
   if (d2) {
-    merged = mergeOne(merged, d2);
+    merged = mergeOne2(merged, d2);
   }
   if (e2) {
-    merged = mergeOne(merged, e2);
+    merged = mergeOne2(merged, e2);
   }
   return merged;
 }
-function mergePropsN(props) {
+function mergePropsN2(props) {
   if (props.length === 0) {
-    return EMPTY_PROPS;
+    return EMPTY_PROPS2;
   }
   if (props.length === 1) {
-    return resolvePropsGetter(props[0], EMPTY_PROPS);
+    return resolvePropsGetter2(props[0], EMPTY_PROPS2);
   }
   let merged = {
-    ...resolvePropsGetter(props[0], EMPTY_PROPS)
+    ...resolvePropsGetter2(props[0], EMPTY_PROPS2)
   };
   for (let i2 = 1; i2 < props.length; i2 += 1) {
-    merged = mergeOne(merged, props[i2]);
+    merged = mergeOne2(merged, props[i2]);
   }
   return merged;
 }
-function mergeOne(merged, inputProps) {
-  if (isPropsGetter(inputProps)) {
+function mergeOne2(merged, inputProps) {
+  if (isPropsGetter2(inputProps)) {
     return inputProps(merged);
   }
-  return mutablyMergeInto(merged, inputProps);
+  return mutablyMergeInto2(merged, inputProps);
 }
-function mutablyMergeInto(mergedProps, externalProps) {
+function mutablyMergeInto2(mergedProps, externalProps) {
   if (!externalProps) {
     return mergedProps;
   }
@@ -23638,16 +24055,16 @@ function mutablyMergeInto(mergedProps, externalProps) {
     const externalPropValue = externalProps[propName];
     switch (propName) {
       case "style": {
-        mergedProps[propName] = mergeObjects(mergedProps.style, externalPropValue);
+        mergedProps[propName] = mergeObjects2(mergedProps.style, externalPropValue);
         break;
       }
       case "className": {
-        mergedProps[propName] = mergeClassNames(mergedProps.className, externalPropValue);
+        mergedProps[propName] = mergeClassNames2(mergedProps.className, externalPropValue);
         break;
       }
       default: {
-        if (isEventHandler(propName, externalPropValue)) {
-          mergedProps[propName] = mergeEventHandlers(mergedProps[propName], externalPropValue);
+        if (isEventHandler2(propName, externalPropValue)) {
+          mergedProps[propName] = mergeEventHandlers2(mergedProps[propName], externalPropValue);
         } else {
           mergedProps[propName] = externalPropValue;
         }
@@ -23656,22 +24073,22 @@ function mutablyMergeInto(mergedProps, externalProps) {
   }
   return mergedProps;
 }
-function isEventHandler(key, value) {
+function isEventHandler2(key, value) {
   const code0 = key.charCodeAt(0);
   const code1 = key.charCodeAt(1);
   const code2 = key.charCodeAt(2);
   return code0 === 111 && code1 === 110 && code2 >= 65 && code2 <= 90 && (typeof value === "function" || typeof value === "undefined");
 }
-function isPropsGetter(inputProps) {
+function isPropsGetter2(inputProps) {
   return typeof inputProps === "function";
 }
-function resolvePropsGetter(inputProps, previousProps) {
-  if (isPropsGetter(inputProps)) {
+function resolvePropsGetter2(inputProps, previousProps) {
+  if (isPropsGetter2(inputProps)) {
     return inputProps(previousProps);
   }
-  return inputProps ?? EMPTY_PROPS;
+  return inputProps ?? EMPTY_PROPS2;
 }
-function mergeEventHandlers(ourHandler, theirHandler) {
+function mergeEventHandlers2(ourHandler, theirHandler) {
   if (!theirHandler) {
     return ourHandler;
   }
@@ -23679,9 +24096,9 @@ function mergeEventHandlers(ourHandler, theirHandler) {
     return theirHandler;
   }
   return (event) => {
-    if (isSyntheticEvent(event)) {
+    if (isSyntheticEvent2(event)) {
       const baseUIEvent = event;
-      makeEventPreventable(baseUIEvent);
+      makeEventPreventable2(baseUIEvent);
       const result2 = theirHandler(baseUIEvent);
       if (!baseUIEvent.baseUIHandlerPrevented) {
         ourHandler?.(baseUIEvent);
@@ -23693,13 +24110,13 @@ function mergeEventHandlers(ourHandler, theirHandler) {
     return result;
   };
 }
-function makeEventPreventable(event) {
+function makeEventPreventable2(event) {
   event.preventBaseUIHandler = () => {
     event.baseUIHandlerPrevented = true;
   };
   return event;
 }
-function mergeClassNames(ourClassName, theirClassName) {
+function mergeClassNames2(ourClassName, theirClassName) {
   if (theirClassName) {
     if (ourClassName) {
       return theirClassName + " " + ourClassName;
@@ -23708,108 +24125,108 @@ function mergeClassNames(ourClassName, theirClassName) {
   }
   return ourClassName;
 }
-function isSyntheticEvent(event) {
+function isSyntheticEvent2(event) {
   return event != null && typeof event === "object" && "nativeEvent" in event;
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/empty.js
-var EMPTY_ARRAY6 = Object.freeze([]);
-var EMPTY_OBJECT = Object.freeze({});
+var EMPTY_ARRAY7 = Object.freeze([]);
+var EMPTY_OBJECT2 = Object.freeze({});
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/utils/useRenderElement.js
-var import_react25 = __toESM(require_react(), 1);
-function useRenderElement(element, componentProps, params = {}) {
+var import_react27 = __toESM(require_react(), 1);
+function useRenderElement2(element, componentProps, params = {}) {
   const renderProp = componentProps.render;
-  const outProps = useRenderElementProps(componentProps, params);
+  const outProps = useRenderElementProps2(componentProps, params);
   if (params.enabled === false) {
     return null;
   }
-  const state = params.state ?? EMPTY_OBJECT;
-  return evaluateRenderProp(element, renderProp, outProps, state);
+  const state = params.state ?? EMPTY_OBJECT2;
+  return evaluateRenderProp2(element, renderProp, outProps, state);
 }
-function useRenderElementProps(componentProps, params = {}) {
+function useRenderElementProps2(componentProps, params = {}) {
   const {
     className: classNameProp,
     style: styleProp,
     render: renderProp
   } = componentProps;
   const {
-    state = EMPTY_OBJECT,
+    state = EMPTY_OBJECT2,
     ref,
     props,
     stateAttributesMapping: stateAttributesMapping2,
     enabled = true
   } = params;
-  const className = enabled ? resolveClassName(classNameProp, state) : void 0;
-  const style = enabled ? resolveStyle(styleProp, state) : void 0;
-  const stateProps = enabled ? getStateAttributesProps(state, stateAttributesMapping2) : EMPTY_OBJECT;
-  const outProps = enabled ? mergeObjects(stateProps, Array.isArray(props) ? mergePropsN(props) : props) ?? EMPTY_OBJECT : EMPTY_OBJECT;
+  const className = enabled ? resolveClassName2(classNameProp, state) : void 0;
+  const style = enabled ? resolveStyle2(styleProp, state) : void 0;
+  const stateProps = enabled ? getStateAttributesProps2(state, stateAttributesMapping2) : EMPTY_OBJECT2;
+  const outProps = enabled ? mergeObjects2(stateProps, Array.isArray(props) ? mergePropsN2(props) : props) ?? EMPTY_OBJECT2 : EMPTY_OBJECT2;
   if (typeof document !== "undefined") {
     if (!enabled) {
-      useMergedRefs(null, null);
+      useMergedRefs2(null, null);
     } else if (Array.isArray(ref)) {
-      outProps.ref = useMergedRefsN([outProps.ref, getReactElementRef(renderProp), ...ref]);
+      outProps.ref = useMergedRefsN2([outProps.ref, getReactElementRef2(renderProp), ...ref]);
     } else {
-      outProps.ref = useMergedRefs(outProps.ref, getReactElementRef(renderProp), ref);
+      outProps.ref = useMergedRefs2(outProps.ref, getReactElementRef2(renderProp), ref);
     }
   }
   if (!enabled) {
-    return EMPTY_OBJECT;
+    return EMPTY_OBJECT2;
   }
   if (className !== void 0) {
-    outProps.className = mergeClassNames(outProps.className, className);
+    outProps.className = mergeClassNames2(outProps.className, className);
   }
   if (style !== void 0) {
-    outProps.style = mergeObjects(outProps.style, style);
+    outProps.style = mergeObjects2(outProps.style, style);
   }
   return outProps;
 }
-function evaluateRenderProp(element, render9, props, state) {
+function evaluateRenderProp2(element, render9, props, state) {
   if (render9) {
     if (typeof render9 === "function") {
       return render9(props, state);
     }
-    const mergedProps = mergeProps2(props, render9.props);
+    const mergedProps = mergeProps3(props, render9.props);
     mergedProps.ref = props.ref;
-    return /* @__PURE__ */ React10.cloneElement(render9, mergedProps);
+    return /* @__PURE__ */ React14.cloneElement(render9, mergedProps);
   }
   if (element) {
     if (typeof element === "string") {
-      return renderTag(element, props);
+      return renderTag2(element, props);
     }
   }
   throw new Error(true ? "Base UI: Render element or function are not defined." : formatErrorMessage(8));
 }
-function renderTag(Tag, props) {
+function renderTag2(Tag, props) {
   if (Tag === "button") {
-    return /* @__PURE__ */ (0, import_react25.createElement)("button", {
+    return /* @__PURE__ */ (0, import_react27.createElement)("button", {
       type: "button",
       ...props,
       key: props.key
     });
   }
   if (Tag === "img") {
-    return /* @__PURE__ */ (0, import_react25.createElement)("img", {
+    return /* @__PURE__ */ (0, import_react27.createElement)("img", {
       alt: "",
       ...props,
       key: props.key
     });
   }
-  return /* @__PURE__ */ React10.createElement(Tag, props);
+  return /* @__PURE__ */ React14.createElement(Tag, props);
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/list/CompositeList.js
-var React13 = __toESM(require_react(), 1);
+var React17 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/useIsoLayoutEffect.js
-var React11 = __toESM(require_react(), 1);
+var React15 = __toESM(require_react(), 1);
 var noop3 = () => {
 };
-var useIsoLayoutEffect = typeof document !== "undefined" ? React11.useLayoutEffect : noop3;
+var useIsoLayoutEffect = typeof document !== "undefined" ? React15.useLayoutEffect : noop3;
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/list/CompositeListContext.js
-var React12 = __toESM(require_react(), 1);
-var CompositeListContext = /* @__PURE__ */ React12.createContext({
+var React16 = __toESM(require_react(), 1);
+var CompositeListContext = /* @__PURE__ */ React16.createContext({
   register: () => {
   },
   unregister: () => {
@@ -23827,7 +24244,7 @@ var CompositeListContext = /* @__PURE__ */ React12.createContext({
 });
 if (true) CompositeListContext.displayName = "CompositeListContext";
 function useCompositeListContext() {
-  return React12.useContext(CompositeListContext);
+  return React16.useContext(CompositeListContext);
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/list/CompositeList.js
@@ -23840,11 +24257,11 @@ function CompositeList(props) {
     onMapChange: onMapChangeProp
   } = props;
   const onMapChange = useStableCallback(onMapChangeProp);
-  const nextIndexRef = React13.useRef(0);
-  const listeners = useRefWithInit(createListeners).current;
-  const map = useRefWithInit(createMap).current;
-  const [mapTick, setMapTick] = React13.useState(0);
-  const lastTickRef = React13.useRef(mapTick);
+  const nextIndexRef = React17.useRef(0);
+  const listeners = useRefWithInit2(createListeners).current;
+  const map = useRefWithInit2(createMap).current;
+  const [mapTick, setMapTick] = React17.useState(0);
+  const lastTickRef = React17.useRef(mapTick);
   const register4 = useStableCallback((node, metadata) => {
     map.set(node, metadata ?? null);
     lastTickRef.current += 1;
@@ -23855,7 +24272,7 @@ function CompositeList(props) {
     lastTickRef.current += 1;
     setMapTick(lastTickRef.current);
   });
-  const sortedMap = React13.useMemo(() => {
+  const sortedMap = React17.useMemo(() => {
     disableEslintWarning(mapTick);
     const newMap = /* @__PURE__ */ new Map();
     const sortedNodes = Array.from(map.keys()).filter((node) => node.isConnected).sort(sortByDocumentPosition);
@@ -23929,7 +24346,7 @@ function CompositeList(props) {
   useIsoLayoutEffect(() => {
     listeners.forEach((l2) => l2(sortedMap));
   }, [listeners, sortedMap]);
-  const contextValue = React13.useMemo(() => ({
+  const contextValue = React17.useMemo(() => ({
     register: register4,
     unregister,
     subscribeMapChange,
@@ -23962,20 +24379,20 @@ function disableEslintWarning(_) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/direction-provider/DirectionContext.js
-var React14 = __toESM(require_react(), 1);
-var DirectionContext = /* @__PURE__ */ React14.createContext(void 0);
+var React18 = __toESM(require_react(), 1);
+var DirectionContext = /* @__PURE__ */ React18.createContext(void 0);
 if (true) DirectionContext.displayName = "DirectionContext";
 function useDirection() {
-  const context = React14.useContext(DirectionContext);
+  const context = React18.useContext(DirectionContext);
   return context?.direction ?? "ltr";
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/root/TabsRootContext.js
-var React15 = __toESM(require_react(), 1);
-var TabsRootContext = /* @__PURE__ */ React15.createContext(void 0);
+var React19 = __toESM(require_react(), 1);
+var TabsRootContext = /* @__PURE__ */ React19.createContext(void 0);
 if (true) TabsRootContext.displayName = "TabsRootContext";
 function useTabsRootContext() {
-  const context = React15.useContext(TabsRootContext);
+  const context = React19.useContext(TabsRootContext);
   if (context === void 0) {
     throw new Error(true ? "Base UI: TabsRootContext is missing. Tabs parts must be placed within <Tabs.Root>." : formatErrorMessage(64));
   }
@@ -23998,7 +24415,7 @@ var tabsStateAttributesMapping = {
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/root/TabsRoot.js
 var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
-var TabsRoot = /* @__PURE__ */ React16.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
+var TabsRoot = /* @__PURE__ */ React20.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
   const {
     className,
     defaultValue: defaultValue2 = 0,
@@ -24009,16 +24426,16 @@ var TabsRoot = /* @__PURE__ */ React16.forwardRef(function TabsRoot2(componentPr
     ...elementProps
   } = componentProps;
   const direction = useDirection();
-  const tabPanelRefs = React16.useRef([]);
-  const [mountedTabPanels, setMountedTabPanels] = React16.useState(() => /* @__PURE__ */ new Map());
+  const tabPanelRefs = React20.useRef([]);
+  const [mountedTabPanels, setMountedTabPanels] = React20.useState(() => /* @__PURE__ */ new Map());
   const [value, setValue] = useControlled({
     controlled: valueProp,
     default: defaultValue2,
     name: "Tabs",
     state: "value"
   });
-  const [tabMap, setTabMap] = React16.useState(() => /* @__PURE__ */ new Map());
-  const [tabActivationDirection, setTabActivationDirection] = React16.useState("none");
+  const [tabMap, setTabMap] = React20.useState(() => /* @__PURE__ */ new Map());
+  const [tabActivationDirection, setTabActivationDirection] = React20.useState("none");
   const onValueChange = useStableCallback((newValue, eventDetails) => {
     onValueChangeProp?.(newValue, eventDetails);
     if (eventDetails.isCanceled) {
@@ -24047,10 +24464,10 @@ var TabsRoot = /* @__PURE__ */ React16.forwardRef(function TabsRoot2(componentPr
       return next;
     });
   });
-  const getTabPanelIdByValue = React16.useCallback((tabValue) => {
+  const getTabPanelIdByValue = React20.useCallback((tabValue) => {
     return mountedTabPanels.get(tabValue);
   }, [mountedTabPanels]);
-  const getTabIdByPanelValue = React16.useCallback((tabPanelValue) => {
+  const getTabIdByPanelValue = React20.useCallback((tabPanelValue) => {
     for (const tabMetadata of tabMap.values()) {
       if (tabPanelValue === tabMetadata?.value) {
         return tabMetadata?.id;
@@ -24058,7 +24475,7 @@ var TabsRoot = /* @__PURE__ */ React16.forwardRef(function TabsRoot2(componentPr
     }
     return void 0;
   }, [tabMap]);
-  const getTabElementBySelectedValue = React16.useCallback((selectedValue) => {
+  const getTabElementBySelectedValue = React20.useCallback((selectedValue) => {
     if (selectedValue === void 0) {
       return null;
     }
@@ -24069,7 +24486,7 @@ var TabsRoot = /* @__PURE__ */ React16.forwardRef(function TabsRoot2(componentPr
     }
     return null;
   }, [tabMap]);
-  const tabsContextValue = React16.useMemo(() => ({
+  const tabsContextValue = React20.useMemo(() => ({
     direction,
     getTabElementBySelectedValue,
     getTabIdByPanelValue,
@@ -24086,7 +24503,7 @@ var TabsRoot = /* @__PURE__ */ React16.forwardRef(function TabsRoot2(componentPr
     orientation,
     tabActivationDirection
   };
-  const element = useRenderElement("div", componentProps, {
+  const element = useRenderElement2("div", componentProps, {
     state,
     ref: forwardedRef,
     props: elementProps,
@@ -24103,7 +24520,7 @@ var TabsRoot = /* @__PURE__ */ React16.forwardRef(function TabsRoot2(componentPr
 if (true) TabsRoot.displayName = "TabsRoot";
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/tab/TabsTab.js
-var React25 = __toESM(require_react(), 1);
+var React29 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/owner.js
 function ownerDocument(node) {
@@ -24111,20 +24528,20 @@ function ownerDocument(node) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/useId.js
-var React18 = __toESM(require_react(), 1);
+var React22 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/safeReact.js
-var React17 = __toESM(require_react(), 1);
+var React21 = __toESM(require_react(), 1);
 var SafeReact = {
-  ...React17
+  ...React21
 };
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/useId.js
 var globalId = 0;
 function useGlobalId(idOverride, prefix = "mui") {
-  const [defaultId, setDefaultId] = React18.useState(idOverride);
+  const [defaultId, setDefaultId] = React22.useState(idOverride);
   const id = idOverride || defaultId;
-  React18.useEffect(() => {
+  React22.useEffect(() => {
     if (defaultId == null) {
       globalId += 1;
       setDefaultId(`${prefix}-${globalId}`);
@@ -24147,7 +24564,7 @@ function useBaseUiId(idOverride) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/use-button/useButton.js
-var React21 = __toESM(require_react(), 1);
+var React25 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/error.js
 var set;
@@ -24165,11 +24582,11 @@ function error(...messages) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/root/CompositeRootContext.js
-var React19 = __toESM(require_react(), 1);
-var CompositeRootContext = /* @__PURE__ */ React19.createContext(void 0);
+var React23 = __toESM(require_react(), 1);
+var CompositeRootContext = /* @__PURE__ */ React23.createContext(void 0);
 if (true) CompositeRootContext.displayName = "CompositeRootContext";
 function useCompositeRootContext(optional = false) {
-  const context = React19.useContext(CompositeRootContext);
+  const context = React23.useContext(CompositeRootContext);
   if (context === void 0 && !optional) {
     throw new Error(true ? "Base UI: CompositeRootContext is missing. Composite parts must be placed within <Composite.Root>." : formatErrorMessage(16));
   }
@@ -24177,7 +24594,7 @@ function useCompositeRootContext(optional = false) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/utils/useFocusableWhenDisabled.js
-var React20 = __toESM(require_react(), 1);
+var React24 = __toESM(require_react(), 1);
 function useFocusableWhenDisabled(parameters) {
   const {
     focusableWhenDisabled,
@@ -24188,7 +24605,7 @@ function useFocusableWhenDisabled(parameters) {
   } = parameters;
   const isFocusableComposite = composite && focusableWhenDisabled !== false;
   const isNonFocusableComposite = composite && focusableWhenDisabled === false;
-  const props = React20.useMemo(() => {
+  const props = React24.useMemo(() => {
     const additionalProps = {
       // allow Tabbing away from focusableWhenDisabled elements
       onKeyDown(event) {
@@ -24224,7 +24641,7 @@ function useButton(parameters = {}) {
     tabIndex = 0,
     native: isNativeButton = true
   } = parameters;
-  const elementRef = React21.useRef(null);
+  const elementRef = React25.useRef(null);
   const isCompositeItem = useCompositeRootContext(true) !== void 0;
   const isValidLink = useStableCallback(() => {
     const element = elementRef.current;
@@ -24240,7 +24657,7 @@ function useButton(parameters = {}) {
     isNativeButton
   });
   if (true) {
-    React21.useEffect(() => {
+    React25.useEffect(() => {
       if (!elementRef.current) {
         return;
       }
@@ -24254,7 +24671,7 @@ function useButton(parameters = {}) {
       }
     }, [isNativeButton]);
   }
-  const updateDisabled = React21.useCallback(() => {
+  const updateDisabled = React25.useCallback(() => {
     const element = elementRef.current;
     if (!isButtonElement(element)) {
       return;
@@ -24264,7 +24681,7 @@ function useButton(parameters = {}) {
     }
   }, [disabled2, focusableWhenDisabledProps.disabled, isCompositeItem]);
   useIsoLayoutEffect(updateDisabled, [updateDisabled]);
-  const getButtonProps = React21.useCallback((externalProps = {}) => {
+  const getButtonProps = React25.useCallback((externalProps = {}) => {
     const {
       onClick: externalOnClick,
       onMouseDown: externalOnMouseDown,
@@ -24274,7 +24691,7 @@ function useButton(parameters = {}) {
       ...otherExternalProps
     } = externalProps;
     const type = isNativeButton ? "button" : void 0;
-    return mergeProps2({
+    return mergeProps3({
       type,
       onClick(event) {
         if (disabled2) {
@@ -24290,7 +24707,7 @@ function useButton(parameters = {}) {
       },
       onKeyDown(event) {
         if (!disabled2) {
-          makeEventPreventable(event);
+          makeEventPreventable2(event);
           externalOnKeyDown?.(event);
         }
         if (event.baseUIHandlerPrevented) {
@@ -24310,7 +24727,7 @@ function useButton(parameters = {}) {
       },
       onKeyUp(event) {
         if (!disabled2) {
-          makeEventPreventable(event);
+          makeEventPreventable2(event);
           externalOnKeyUp?.(event);
         }
         if (event.baseUIHandlerPrevented) {
@@ -24348,10 +24765,10 @@ function isButtonElement(elem) {
 var ACTIVE_COMPOSITE_ITEM = "data-composite-item-active";
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/item/useCompositeItem.js
-var React23 = __toESM(require_react(), 1);
+var React27 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/list/useCompositeListItem.js
-var React22 = __toESM(require_react(), 1);
+var React26 = __toESM(require_react(), 1);
 var IndexGuessBehavior = /* @__PURE__ */ (function(IndexGuessBehavior2) {
   IndexGuessBehavior2[IndexGuessBehavior2["None"] = 0] = "None";
   IndexGuessBehavior2[IndexGuessBehavior2["GuessFromOrder"] = 1] = "GuessFromOrder";
@@ -24373,8 +24790,8 @@ function useCompositeListItem(params = {}) {
     labelsRef,
     nextIndexRef
   } = useCompositeListContext();
-  const indexRef = React22.useRef(-1);
-  const [index, setIndex] = React22.useState(externalIndex ?? (indexGuessBehavior === IndexGuessBehavior.GuessFromOrder ? () => {
+  const indexRef = React26.useRef(-1);
+  const [index, setIndex] = React26.useState(externalIndex ?? (indexGuessBehavior === IndexGuessBehavior.GuessFromOrder ? () => {
     if (indexRef.current === -1) {
       const newIndex = nextIndexRef.current;
       nextIndexRef.current += 1;
@@ -24382,8 +24799,8 @@ function useCompositeListItem(params = {}) {
     }
     return indexRef.current;
   } : -1));
-  const componentRef = React22.useRef(null);
-  const ref = React22.useCallback((node) => {
+  const componentRef = React26.useRef(null);
+  const ref = React26.useCallback((node) => {
     componentRef.current = node;
     if (index !== -1 && node !== null) {
       elementsRef.current[index] = node;
@@ -24417,7 +24834,7 @@ function useCompositeListItem(params = {}) {
       }
     });
   }, [externalIndex, subscribeMapChange, setIndex]);
-  return React22.useMemo(() => ({
+  return React26.useMemo(() => ({
     ref,
     index
   }), [index, ref]);
@@ -24435,9 +24852,9 @@ function useCompositeItem3(params = {}) {
     index
   } = useCompositeListItem(params);
   const isHighlighted = highlightedIndex === index;
-  const itemRef = React23.useRef(null);
-  const mergedRef = useMergedRefs(ref, itemRef);
-  const compositeProps = React23.useMemo(() => ({
+  const itemRef = React27.useRef(null);
+  const mergedRef = useMergedRefs2(ref, itemRef);
+  const compositeProps = React27.useMemo(() => ({
     tabIndex: isHighlighted ? 0 : -1,
     onFocus() {
       onHighlightedIndexChange(index);
@@ -24461,11 +24878,11 @@ function useCompositeItem3(params = {}) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/list/TabsListContext.js
-var React24 = __toESM(require_react(), 1);
-var TabsListContext = /* @__PURE__ */ React24.createContext(void 0);
+var React28 = __toESM(require_react(), 1);
+var TabsListContext = /* @__PURE__ */ React28.createContext(void 0);
 if (true) TabsListContext.displayName = "TabsListContext";
 function useTabsListContext() {
-  const context = React24.useContext(TabsListContext);
+  const context = React28.useContext(TabsListContext);
   if (context === void 0) {
     throw new Error(true ? "Base UI: TabsListContext is missing. TabsList parts must be placed within <Tabs.List>." : formatErrorMessage(65));
   }
@@ -24541,7 +24958,7 @@ var windowResize = "window-resize";
 function createChangeEventDetails(reason, event, trigger, customProperties) {
   let canceled = false;
   let allowPropagation = false;
-  const custom = customProperties ?? EMPTY_OBJECT;
+  const custom = customProperties ?? EMPTY_OBJECT2;
   const details = {
     reason,
     event: event ?? new Event("base-ui"),
@@ -24929,7 +25346,7 @@ function isListIndexDisabled(listRef, index, disabledIndices) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/tab/TabsTab.js
-var TabsTab = /* @__PURE__ */ React25.forwardRef(function TabsTab2(componentProps, forwardedRef) {
+var TabsTab = /* @__PURE__ */ React29.forwardRef(function TabsTab2(componentProps, forwardedRef) {
   const {
     className,
     disabled: disabled2 = false,
@@ -24952,7 +25369,7 @@ var TabsTab = /* @__PURE__ */ React25.forwardRef(function TabsTab2(componentProp
     tabsListElement
   } = useTabsListContext();
   const id = useBaseUiId(idProp);
-  const tabMetadata = React25.useMemo(() => ({
+  const tabMetadata = React29.useMemo(() => ({
     disabled: disabled2,
     id,
     value
@@ -24967,7 +25384,7 @@ var TabsTab = /* @__PURE__ */ React25.forwardRef(function TabsTab2(componentProp
     metadata: tabMetadata
   });
   const active = value === activeTabValue;
-  const isNavigatingRef = React25.useRef(false);
+  const isNavigatingRef = React29.useRef(false);
   useIsoLayoutEffect(() => {
     if (isNavigatingRef.current) {
       isNavigatingRef.current = false;
@@ -24994,8 +25411,8 @@ var TabsTab = /* @__PURE__ */ React25.forwardRef(function TabsTab2(componentProp
     focusableWhenDisabled: true
   });
   const tabPanelId = getTabPanelIdByValue(value);
-  const isPressingRef = React25.useRef(false);
-  const isMainButtonRef = React25.useRef(false);
+  const isPressingRef = React29.useRef(false);
+  const isMainButtonRef = React29.useRef(false);
   function onClick(event) {
     if (active || disabled2) {
       return;
@@ -25038,12 +25455,12 @@ var TabsTab = /* @__PURE__ */ React25.forwardRef(function TabsTab2(componentProp
       });
     }
   }
-  const state = React25.useMemo(() => ({
+  const state = React29.useMemo(() => ({
     disabled: disabled2,
     active,
     orientation
   }), [disabled2, active, orientation]);
-  const element = useRenderElement("button", componentProps, {
+  const element = useRenderElement2("button", componentProps, {
     state,
     ref: [forwardedRef, buttonRef, compositeRef],
     props: [compositeProps, {
@@ -25065,22 +25482,22 @@ var TabsTab = /* @__PURE__ */ React25.forwardRef(function TabsTab2(componentProp
 if (true) TabsTab.displayName = "TabsTab";
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/indicator/TabsIndicator.js
-var React28 = __toESM(require_react(), 1);
+var React32 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/useForcedRerendering.js
-var React26 = __toESM(require_react(), 1);
+var React30 = __toESM(require_react(), 1);
 function useForcedRerendering() {
-  const [, setState] = React26.useState({});
-  return React26.useCallback(() => {
+  const [, setState] = React30.useState({});
+  return React30.useCallback(() => {
     setState({});
   }, []);
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/useOnMount.js
-var React27 = __toESM(require_react(), 1);
+var React31 = __toESM(require_react(), 1);
 var EMPTY = [];
 function useOnMount(fn) {
-  React27.useEffect(fn, EMPTY);
+  React31.useEffect(fn, EMPTY);
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/indicator/prehydrationScript.min.js
@@ -25104,7 +25521,7 @@ var stateAttributesMapping = {
   activeTabPosition: () => null,
   activeTabSize: () => null
 };
-var TabsIndicator = /* @__PURE__ */ React28.forwardRef(function TabIndicator(componentProps, forwardedRef) {
+var TabsIndicator = /* @__PURE__ */ React32.forwardRef(function TabIndicator(componentProps, forwardedRef) {
   const {
     className,
     render: render9,
@@ -25120,14 +25537,14 @@ var TabsIndicator = /* @__PURE__ */ React28.forwardRef(function TabIndicator(com
   const {
     tabsListElement
   } = useTabsListContext();
-  const [isMounted, setIsMounted] = React28.useState(false);
+  const [isMounted, setIsMounted] = React32.useState(false);
   const {
     value: activeTabValue
   } = useTabsRootContext();
   const direction = useDirection();
   useOnMount(() => setIsMounted(true));
   const rerender = useForcedRerendering();
-  React28.useEffect(() => {
+  React32.useEffect(() => {
     if (value != null && tabsListElement != null && typeof ResizeObserver !== "undefined") {
       const resizeObserver = new ResizeObserver(rerender);
       resizeObserver.observe(tabsListElement);
@@ -25163,17 +25580,17 @@ var TabsIndicator = /* @__PURE__ */ React28.forwardRef(function TabIndicator(com
       bottom = tabsListElement.scrollHeight - top - height - tabsListElement.clientTop;
     }
   }
-  const activeTabPosition = React28.useMemo(() => isTabSelected ? {
+  const activeTabPosition = React32.useMemo(() => isTabSelected ? {
     left,
     right,
     top,
     bottom
   } : null, [left, right, top, bottom, isTabSelected]);
-  const activeTabSize = React28.useMemo(() => isTabSelected ? {
+  const activeTabSize = React32.useMemo(() => isTabSelected ? {
     width,
     height
   } : null, [width, height, isTabSelected]);
-  const style = React28.useMemo(() => {
+  const style = React32.useMemo(() => {
     if (!isTabSelected) {
       return void 0;
     }
@@ -25187,13 +25604,13 @@ var TabsIndicator = /* @__PURE__ */ React28.forwardRef(function TabIndicator(com
     };
   }, [left, right, top, bottom, width, height, isTabSelected]);
   const displayIndicator = isTabSelected && width > 0 && height > 0;
-  const state = React28.useMemo(() => ({
+  const state = React32.useMemo(() => ({
     orientation,
     activeTabPosition,
     activeTabSize,
     tabActivationDirection
   }), [orientation, activeTabPosition, activeTabSize, tabActivationDirection]);
-  const element = useRenderElement("span", componentProps, {
+  const element = useRenderElement2("span", componentProps, {
     state,
     ref: forwardedRef,
     props: [{
@@ -25209,7 +25626,7 @@ var TabsIndicator = /* @__PURE__ */ React28.forwardRef(function TabIndicator(com
   if (activeTabValue == null) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)(React28.Fragment, {
+  return /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)(React32.Fragment, {
     children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("script", {
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML: {
@@ -25222,7 +25639,7 @@ var TabsIndicator = /* @__PURE__ */ React28.forwardRef(function TabIndicator(com
 if (true) TabsIndicator.displayName = "TabsIndicator";
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/panel/TabsPanel.js
-var React29 = __toESM(require_react(), 1);
+var React33 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/panel/TabsPanelDataAttributes.js
 var TabsPanelDataAttributes = /* @__PURE__ */ (function(TabsPanelDataAttributes2) {
@@ -25234,7 +25651,7 @@ var TabsPanelDataAttributes = /* @__PURE__ */ (function(TabsPanelDataAttributes2
 })({});
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/panel/TabsPanel.js
-var TabsPanel = /* @__PURE__ */ React29.forwardRef(function TabPanel(componentProps, forwardedRef) {
+var TabsPanel = /* @__PURE__ */ React33.forwardRef(function TabPanel(componentProps, forwardedRef) {
   const {
     className,
     value,
@@ -25251,7 +25668,7 @@ var TabsPanel = /* @__PURE__ */ React29.forwardRef(function TabPanel(componentPr
     unregisterMountedTabPanel
   } = useTabsRootContext();
   const id = useBaseUiId();
-  const metadata = React29.useMemo(() => ({
+  const metadata = React33.useMemo(() => ({
     id,
     value
   }), [id, value]);
@@ -25263,12 +25680,12 @@ var TabsPanel = /* @__PURE__ */ React29.forwardRef(function TabPanel(componentPr
   });
   const hidden = value !== selectedValue;
   const correspondingTabId = getTabIdByPanelValue(value);
-  const state = React29.useMemo(() => ({
+  const state = React33.useMemo(() => ({
     hidden,
     orientation,
     tabActivationDirection
   }), [hidden, orientation, tabActivationDirection]);
-  const element = useRenderElement("div", componentProps, {
+  const element = useRenderElement2("div", componentProps, {
     state,
     ref: [forwardedRef, listItemRef],
     props: [{
@@ -25302,13 +25719,13 @@ var TabsPanel = /* @__PURE__ */ React29.forwardRef(function TabPanel(componentPr
 if (true) TabsPanel.displayName = "TabsPanel";
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/list/TabsList.js
-var React32 = __toESM(require_react(), 1);
+var React36 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/root/CompositeRoot.js
-var React31 = __toESM(require_react(), 1);
+var React35 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/root/useCompositeRoot.js
-var React30 = __toESM(require_react(), 1);
+var React34 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui-components+utils@0.2.2_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/utils/esm/isElementDisabled.js
 function isElementDisabled(element) {
@@ -25415,7 +25832,7 @@ function getStyles(element) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/root/useCompositeRoot.js
-var EMPTY_ARRAY7 = [];
+var EMPTY_ARRAY8 = [];
 function useCompositeRoot(params) {
   const {
     itemSizes,
@@ -25430,14 +25847,14 @@ function useCompositeRoot(params) {
     enableHomeAndEndKeys = false,
     stopEventPropagation = false,
     disabledIndices,
-    modifierKeys = EMPTY_ARRAY7
+    modifierKeys = EMPTY_ARRAY8
   } = params;
-  const [internalHighlightedIndex, internalSetHighlightedIndex] = React30.useState(0);
+  const [internalHighlightedIndex, internalSetHighlightedIndex] = React34.useState(0);
   const isGrid2 = cols > 1;
-  const rootRef = React30.useRef(null);
-  const mergedRef = useMergedRefs(rootRef, externalRef);
-  const elementsRef = React30.useRef([]);
-  const hasSetDefaultIndexRef = React30.useRef(false);
+  const rootRef = React34.useRef(null);
+  const mergedRef = useMergedRefs2(rootRef, externalRef);
+  const elementsRef = React34.useRef([]);
+  const hasSetDefaultIndexRef = React34.useRef(false);
   const highlightedIndex = externalHighlightedIndex ?? internalHighlightedIndex;
   const onHighlightedIndexChange = useStableCallback((index, shouldScrollIntoView = false) => {
     (externalSetHighlightedIndex ?? internalSetHighlightedIndex)(index);
@@ -25459,7 +25876,7 @@ function useCompositeRoot(params) {
     }
     scrollIntoViewIfNeeded2(rootRef.current, activeItem, direction, orientation);
   });
-  const props = React30.useMemo(() => ({
+  const props = React34.useMemo(() => ({
     "aria-orientation": orientation === "both" ? void 0 : orientation,
     ref: mergedRef,
     onFocus(event) {
@@ -25596,7 +26013,7 @@ function useCompositeRoot(params) {
       }
     }
   }), [cols, dense, direction, disabledIndices, elementsRef, enableHomeAndEndKeys, highlightedIndex, isGrid2, itemSizes, loopFocus, mergedRef, modifierKeys, onHighlightedIndexChange, orientation, stopEventPropagation]);
-  return React30.useMemo(() => ({
+  return React34.useMemo(() => ({
     props,
     highlightedIndex,
     onHighlightedIndexChange,
@@ -25624,9 +26041,9 @@ function CompositeRoot(componentProps) {
   const {
     render: render9,
     className,
-    refs = EMPTY_ARRAY6,
-    props = EMPTY_ARRAY6,
-    state = EMPTY_OBJECT,
+    refs = EMPTY_ARRAY7,
+    props = EMPTY_ARRAY7,
+    state = EMPTY_OBJECT2,
     stateAttributesMapping: stateAttributesMapping2,
     highlightedIndex: highlightedIndexProp,
     onHighlightedIndexChange: onHighlightedIndexChangeProp,
@@ -25668,13 +26085,13 @@ function CompositeRoot(componentProps) {
     disabledIndices,
     modifierKeys
   });
-  const element = useRenderElement(tag, componentProps, {
+  const element = useRenderElement2(tag, componentProps, {
     state,
     ref: refs,
     props: [defaultProps, ...props, elementProps],
     stateAttributesMapping: stateAttributesMapping2
   });
-  const contextValue = React31.useMemo(() => ({
+  const contextValue = React35.useMemo(() => ({
     highlightedIndex,
     onHighlightedIndexChange,
     highlightItemOnHover,
@@ -25695,7 +26112,7 @@ function CompositeRoot(componentProps) {
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/list/TabsList.js
 var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
-var TabsList = /* @__PURE__ */ React32.forwardRef(function TabsList2(componentProps, forwardedRef) {
+var TabsList = /* @__PURE__ */ React36.forwardRef(function TabsList2(componentProps, forwardedRef) {
   const {
     activateOnFocus = false,
     className,
@@ -25711,8 +26128,8 @@ var TabsList = /* @__PURE__ */ React32.forwardRef(function TabsList2(componentPr
     setTabMap,
     tabActivationDirection
   } = useTabsRootContext();
-  const [highlightedTabIndex, setHighlightedTabIndex] = React32.useState(0);
-  const [tabsListElement, setTabsListElement] = React32.useState(null);
+  const [highlightedTabIndex, setHighlightedTabIndex] = React36.useState(0);
+  const [tabsListElement, setTabsListElement] = React36.useState(null);
   const detectActivationDirection = useActivationDirectionDetector(
     value,
     // the old value
@@ -25727,7 +26144,7 @@ var TabsList = /* @__PURE__ */ React32.forwardRef(function TabsList2(componentPr
       onValueChange(newValue, eventDetails);
     }
   });
-  const state = React32.useMemo(() => ({
+  const state = React36.useMemo(() => ({
     orientation,
     tabActivationDirection
   }), [orientation, tabActivationDirection]);
@@ -25735,7 +26152,7 @@ var TabsList = /* @__PURE__ */ React32.forwardRef(function TabsList2(componentPr
     "aria-orientation": orientation === "vertical" ? "vertical" : void 0,
     role: "tablist"
   };
-  const tabsListContextValue = React32.useMemo(() => ({
+  const tabsListContextValue = React36.useMemo(() => ({
     activateOnFocus,
     highlightedTabIndex,
     onTabActivation,
@@ -25758,7 +26175,7 @@ var TabsList = /* @__PURE__ */ React32.forwardRef(function TabsList2(componentPr
       orientation,
       onHighlightedIndexChange: setHighlightedTabIndex,
       onMapChange: setTabMap,
-      disabledIndices: EMPTY_ARRAY6
+      disabledIndices: EMPTY_ARRAY7
     })
   });
 });
@@ -25780,7 +26197,7 @@ function getInset(tab, tabsList) {
   };
 }
 function useActivationDirectionDetector(activeTabValue, orientation, tabsListElement, getTabElement) {
-  const [previousTabEdge, setPreviousTabEdge] = React32.useState(null);
+  const [previousTabEdge, setPreviousTabEdge] = React36.useState(null);
   useIsoLayoutEffect(() => {
     if (activeTabValue == null || tabsListElement == null) {
       setPreviousTabEdge(null);
@@ -25797,7 +26214,7 @@ function useActivationDirectionDetector(activeTabValue, orientation, tabsListEle
     } = getInset(activeTab, tabsListElement);
     setPreviousTabEdge(orientation === "horizontal" ? left : top);
   }, [orientation, getTabElement, tabsListElement, activeTabValue]);
-  return React32.useCallback((newValue) => {
+  return React36.useCallback((newValue) => {
     if (newValue === activeTabValue) {
       return "none";
     }
@@ -25840,10 +26257,10 @@ function useActivationDirectionDetector(activeTabValue, orientation, tabsListEle
 
 // src/dashboard/components/tabs/list.tsx
 var import_compose12 = __toESM(require_compose(), 1);
-var import_react26 = __toESM(require_react(), 1);
+var import_react28 = __toESM(require_react(), 1);
 
 // src/dashboard/components/tabs/style.scss
-var css9 = `/* stylelint-disable plugin-wpds/no-setting-wpds-custom-properties -- TODO */
+var css10 = `/* stylelint-disable plugin-wpds/no-setting-wpds-custom-properties -- TODO */
 /* stylelint-disable plugin-wpds/no-unknown-ds-tokens -- TODO */
 /**
  * Tabs component styles
@@ -26085,18 +26502,18 @@ var css9 = `/* stylelint-disable plugin-wpds/no-setting-wpds-custom-properties -
   outline: 2px solid transparent;
   outline-offset: 0;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css9));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css10));
 
 // src/dashboard/components/tabs/list.tsx
 var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
 var DEFAULT_SCROLL_MARGIN = 0;
-var List = (0, import_react26.forwardRef)(function TabList({ children, density = "default", className, activateOnFocus, render: render9, ...otherProps }, forwardedRef) {
-  const [listEl, setListEl] = (0, import_react26.useState)(null);
-  const [overflow, setOverflow] = (0, import_react26.useState)({
+var List = (0, import_react28.forwardRef)(function TabList({ children, density = "default", className, activateOnFocus, render: render9, ...otherProps }, forwardedRef) {
+  const [listEl, setListEl] = (0, import_react28.useState)(null);
+  const [overflow, setOverflow] = (0, import_react28.useState)({
     first: false,
     last: false
   });
-  (0, import_react26.useEffect)(() => {
+  (0, import_react28.useEffect)(() => {
     if (!listEl) {
       return;
     }
@@ -26134,16 +26551,16 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       resizeObserver.disconnect();
     };
   }, [listEl]);
-  const setListElRef = (0, import_react26.useCallback)((el) => setListEl(el), []);
+  const setListElRef = (0, import_react28.useCallback)((el) => setListEl(el), []);
   const mergedListRef = (0, import_compose12.useMergeRefs)([forwardedRef, setListElRef]);
-  const renderTabList = (0, import_react26.useCallback)(
+  const renderTabList = (0, import_react28.useCallback)(
     (props, state) => {
       const newProps = {
         ...props,
         tabIndex: props.tabIndex ?? -1
       };
-      if ((0, import_react26.isValidElement)(render9)) {
-        return (0, import_react26.cloneElement)(render9, newProps);
+      if ((0, import_react28.isValidElement)(render9)) {
+        return (0, import_react28.cloneElement)(render9, newProps);
       } else if (typeof render9 === "function") {
         return render9(newProps, state);
       }
@@ -26175,9 +26592,9 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
 });
 
 // src/dashboard/components/tabs/panel.tsx
-var import_react27 = __toESM(require_react(), 1);
+var import_react29 = __toESM(require_react(), 1);
 var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
-var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focusable = true, tabIndex, ...otherProps }, forwardedRef) {
+var Panel = (0, import_react29.forwardRef)(function TabPanel2({ className, focusable = true, tabIndex, ...otherProps }, forwardedRef) {
   return /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
     index_parts_exports.Panel,
     {
@@ -26190,19 +26607,19 @@ var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focus
 });
 
 // src/dashboard/components/tabs/root.tsx
-var import_react28 = __toESM(require_react(), 1);
+var import_react30 = __toESM(require_react(), 1);
 var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
-var Root = (0, import_react28.forwardRef)(function TabsRoot3({ ...otherProps }, forwardedRef) {
+var Root = (0, import_react30.forwardRef)(function TabsRoot3({ ...otherProps }, forwardedRef) {
   return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
 });
 
 // src/dashboard/components/tabs/tab.tsx
-var import_react29 = __toESM(require_react(), 1);
+var import_react31 = __toESM(require_react(), 1);
 var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
 var ChevronRight = (props) => {
-  return (0, import_react29.cloneElement)(chevron_right_default, props);
+  return (0, import_react31.cloneElement)(chevron_right_default, props);
 };
-var Tab = (0, import_react29.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
+var Tab = (0, import_react31.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
   return /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(
     index_parts_exports.Tab,
     {
@@ -27321,11 +27738,11 @@ var store3 = (0, import_data12.createReduxStore)(STORE_NAME, {
 // routes/responses/stage.tsx
 var import_jsx_runtime152 = __toESM(require_jsx_runtime());
 function useFilterOptions() {
-  const [filterOptions, setFilterOptions] = (0, import_element66.useState)({
+  const [filterOptions, setFilterOptions] = (0, import_element67.useState)({
     date: [],
     source: []
   });
-  (0, import_element66.useEffect)(() => {
+  (0, import_element67.useEffect)(() => {
     (0, import_api_fetch7.default)({ path: "/wp/v2/feedback/filters" }).then((response) => {
       setFilterOptions({
         date: response.date || [],
@@ -27336,12 +27753,12 @@ function useFilterOptions() {
   return filterOptions;
 }
 function getTabLabel(label, count) {
-  return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("span", { style: { display: "flex", gap: "4px", alignItems: "center" }, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(Stack, { align: "center", gap: "2xs", children: [
     label,
     /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Badge, { intent: "default", style: { backgroundColor: "#f0f0f0" }, children: count.toString() })
   ] });
 }
-var EMPTY_ARRAY8 = [];
+var EMPTY_ARRAY9 = [];
 var defaultLayouts = {
   table: {},
   list: {}
@@ -27367,8 +27784,8 @@ function styleUnreadValue(element, isUnread) {
   if (typeof element === "string") {
     return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("span", { style: { fontWeight: 600 }, children: element });
   }
-  if (React33.isValidElement(element)) {
-    return React33.cloneElement(element, {
+  if (React37.isValidElement(element)) {
+    return React37.cloneElement(element, {
       style: { ...element.props.style || {}, fontWeight: 600 }
     });
   }
@@ -27394,7 +27811,7 @@ function Stage() {
   }
   const { saveEntityRecord, deleteEntityRecord, invalidateResolution, editEntityRecord } = (0, import_data13.useDispatch)(import_core_data.store);
   const { createSuccessNotice, createErrorNotice } = (0, import_data13.useDispatch)(import_notices2.store);
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element66.useState)(false);
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element67.useState)(false);
   const integrations = (0, import_data13.useSelect)(
     (select) => select(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
@@ -27402,18 +27819,18 @@ function Stage() {
   const { refreshIntegrations: refreshIntegrations2 } = (0, import_data13.useDispatch)(INTEGRATIONS_STORE);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
-  const [view, setView] = (0, import_element66.useState)(() => ({
+  const [view, setView] = (0, import_element67.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
   const selection = searchParams?.responseIds ?? [];
-  (0, import_element66.useEffect)(() => {
+  (0, import_element67.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((prev) => ({ ...prev, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const onChangeView = (0, import_element66.useCallback)(
+  const onChangeView = (0, import_element67.useCallback)(
     (newView) => {
       setView(newView);
       if (newView.search !== view.search) {
@@ -27427,7 +27844,7 @@ function Stage() {
     },
     [navigate, searchParams, view.search]
   );
-  const onChangeSelection = (0, import_element66.useCallback)(
+  const onChangeSelection = (0, import_element67.useCallback)(
     (items) => {
       navigate({
         search: {
@@ -27438,7 +27855,7 @@ function Stage() {
     },
     [searchParams, navigate]
   );
-  const queryParams = (0, import_element66.useMemo)(() => {
+  const queryParams = (0, import_element67.useMemo)(() => {
     const queryArgs = {
       status,
       per_page: view.perPage,
@@ -27472,7 +27889,7 @@ function Stage() {
     "feedback",
     queryParams
   );
-  const fields = (0, import_element66.useMemo)(
+  const fields = (0, import_element67.useMemo)(
     () => [
       {
         id: "from",
@@ -27481,7 +27898,7 @@ function Stage() {
           const displayName = item.author_name || item.author_email || item.author_url || item.ip || "Anonymous";
           const showEmail = item.author_email && item.author_name !== item.author_email;
           const defaultImage = item.author_name || item.author_email ? "initials" : "mp";
-          return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: "12px" }, children: [
+          return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(Stack, { align: "center", gap: "sm", children: [
             item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
               "span",
               {
@@ -27506,7 +27923,7 @@ function Stage() {
               }
             ),
             styleUnreadValue(
-              /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("span", { style: { display: "flex", flexDirection: "column", gap: "2px" }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
                 displayName,
                 showEmail && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("span", { style: { fontSize: "12px", color: "#757575" }, children: item.author_email })
               ] }),
@@ -27595,10 +28012,10 @@ function Stage() {
     ],
     [filterOptions]
   );
-  const invalidateCache = (0, import_element66.useCallback)(() => {
+  const invalidateCache = (0, import_element67.useCallback)(() => {
     invalidateResolution("getEntityRecords", ["postType", "feedback", queryParams]);
   }, [invalidateResolution, queryParams]);
-  const clearSelection = (0, import_element66.useCallback)(() => {
+  const clearSelection = (0, import_element67.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -27606,7 +28023,7 @@ function Stage() {
       }
     });
   }, [navigate, searchParams]);
-  const handleMarkAsSpam = (0, import_element66.useCallback)(
+  const handleMarkAsSpam = (0, import_element67.useCallback)(
     async (items) => {
       const originalStatuses = items.map((item) => item.status);
       items.forEach((item) => {
@@ -27659,7 +28076,7 @@ function Stage() {
       invalidateCounts2
     ]
   );
-  const handleMarkAsNotSpam = (0, import_element66.useCallback)(
+  const handleMarkAsNotSpam = (0, import_element67.useCallback)(
     async (items) => {
       const originalStatuses = items.map((item) => item.status);
       items.forEach((item) => {
@@ -27712,7 +28129,7 @@ function Stage() {
       invalidateCounts2
     ]
   );
-  const handleMoveToTrash = (0, import_element66.useCallback)(
+  const handleMoveToTrash = (0, import_element67.useCallback)(
     async (items) => {
       const originalStatuses = items.map((item) => item.status);
       items.forEach((item) => {
@@ -27762,7 +28179,7 @@ function Stage() {
       invalidateCounts2
     ]
   );
-  const handleRestore = (0, import_element66.useCallback)(
+  const handleRestore = (0, import_element67.useCallback)(
     async (items) => {
       const originalStatuses = items.map((item) => item.status);
       items.forEach((item) => {
@@ -27815,7 +28232,7 @@ function Stage() {
       invalidateCounts2
     ]
   );
-  const handleDelete = (0, import_element66.useCallback)(
+  const handleDelete = (0, import_element67.useCallback)(
     async (items) => {
       items.forEach((item) => {
         updateCountsOptimistically2(item.status, "", 1);
@@ -27866,7 +28283,7 @@ function Stage() {
       invalidateCounts2
     ]
   );
-  const handleMarkAsRead = (0, import_element66.useCallback)(
+  const handleMarkAsRead = (0, import_element67.useCallback)(
     async (items) => {
       items.forEach((item) => {
         editEntityRecord("postType", "feedback", item.id, { is_unread: false });
@@ -27904,7 +28321,7 @@ function Stage() {
     },
     [editEntityRecord, createSuccessNotice, createErrorNotice, invalidateCache]
   );
-  const handleMarkAsUnread = (0, import_element66.useCallback)(
+  const handleMarkAsUnread = (0, import_element67.useCallback)(
     async (items) => {
       items.forEach((item) => {
         editEntityRecord("postType", "feedback", item.id, { is_unread: true });
@@ -27942,7 +28359,7 @@ function Stage() {
     },
     [editEntityRecord, createSuccessNotice, createErrorNotice, invalidateCache]
   );
-  const actions = (0, import_element66.useMemo)(() => {
+  const actions = (0, import_element67.useMemo)(() => {
     const baseActions = [
       {
         id: "view-details",
@@ -28047,7 +28464,7 @@ function Stage() {
     handleRestore,
     handleDelete
   ]);
-  const paginationInfo = (0, import_element66.useMemo)(
+  const paginationInfo = (0, import_element67.useMemo)(
     () => ({
       totalItems: totalItems || 0,
       totalPages: totalPages || 1
@@ -28059,7 +28476,7 @@ function Stage() {
     { slug: "spam", label: getTabLabel((0, import_i18n63.__)("Spam", "jetpack-forms"), counts2.spam) },
     { slug: "trash", label: getTabLabel((0, import_i18n63.__)("Trash", "jetpack-forms"), counts2.trash) }
   ];
-  const handleTabChange = (0, import_element66.useCallback)(
+  const handleTabChange = (0, import_element67.useCallback)(
     (newView) => {
       navigate({
         to: "/responses/$view",
@@ -28069,16 +28486,16 @@ function Stage() {
     [navigate]
   );
   const { openNewForm } = useCreateForm();
-  const handleCreateForm = (0, import_element66.useCallback)(() => {
+  const handleCreateForm = (0, import_element67.useCallback)(() => {
     openNewForm({ showPatterns: false });
   }, [openNewForm]);
-  const handleIntegrations = (0, import_element66.useCallback)(() => {
+  const handleIntegrations = (0, import_element67.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element66.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element67.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
-  const headerActions = (0, import_element66.useMemo)(() => {
+  const headerActions = (0, import_element67.useMemo)(() => {
     const actionsArray = [];
     if ((params.view === "inbox" || !params.view) && isIntegrationsEnabled && showDashboardIntegrations) {
       actionsArray.push(
@@ -28135,7 +28552,7 @@ function Stage() {
     page_default,
     {
       showSidebarToggle: false,
-      title: /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: "8px" }, children: [
+      title: /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(Stack, { align: "center", gap: "xs", children: [
         /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
         (0, import_i18n63.__)("Forms", "jetpack-forms")
       ] }),
@@ -28154,7 +28571,7 @@ function Stage() {
                 readStatusFilter
               }
             ),
-            data: records || EMPTY_ARRAY8,
+            data: records || EMPTY_ARRAY9,
             fields,
             view,
             onChangeView,
@@ -28169,13 +28586,13 @@ function Stage() {
               /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(
                 Stack,
                 {
-                  className: "jp-forms-dataviews__view-actions",
-                  direction: "row",
-                  justify: "space-between",
                   align: "center",
+                  className: "jp-forms-dataviews__view-actions",
+                  gap: "sm",
+                  justify: "space-between",
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Stack, { direction: "row", align: "center", gap: 2, children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Root, { value: params.view || "inbox", onValueChange: handleTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(List, { density: "compact", children: statusTabs.map((tab) => /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Tab, { value: tab.slug, children: tab.label }, tab.slug)) }) }) }),
-                    /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(Stack, { direction: "row", align: "center", gap: 2, children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Stack, { align: "center", gap: "sm", children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Root, { value: params.view || "inbox", onValueChange: handleTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(List, { density: "compact", children: statusTabs.map((tab) => /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Tab, { value: tab.slug, children: tab.label }, tab.slug)) }) }) }),
+                    /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(Stack, { align: "center", gap: "sm", children: [
                       /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(dataviews_default.Search, {}),
                       /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(dataviews_default.FiltersToggle, {}),
                       /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(dataviews_default.ViewConfig, {})
@@ -28207,9 +28624,9 @@ function Stage() {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
-var import_element67 = __toESM(require_element(), 1);
+var import_element68 = __toESM(require_element(), 1);
 var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
-var NavigableRegion2 = (0, import_element67.forwardRef)(
+var NavigableRegion2 = (0, import_element68.forwardRef)(
   ({ children, className, ariaLabel, as: Tag = "div", ...props }, ref) => {
     return /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
       Tag,
@@ -28311,7 +28728,7 @@ var import_components75 = __toESM(require_components());
 var import_core_data3 = __toESM(require_core_data());
 var import_data15 = __toESM(require_data());
 var import_date10 = __toESM(require_date());
-var import_element70 = __toESM(require_element());
+var import_element71 = __toESM(require_element());
 var import_html_entities2 = __toESM(require_html_entities());
 var import_i18n67 = __toESM(require_i18n());
 import { useParams as useParams2, useSearch as useSearch2, useNavigate as useNavigate2 } from "@wordpress/route";
@@ -28319,12 +28736,12 @@ import { useParams as useParams2, useSearch as useSearch2, useNavigate as useNav
 // src/dashboard/components/copy-clipboard-button/index.tsx
 var import_components72 = __toESM(require_components(), 1);
 var import_compose13 = __toESM(require_compose(), 1);
-var import_element68 = __toESM(require_element(), 1);
+var import_element69 = __toESM(require_element(), 1);
 var import_i18n64 = __toESM(require_i18n(), 1);
 var import_jsx_runtime156 = __toESM(require_jsx_runtime(), 1);
 function CopyClipboardButton({ text }) {
-  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element68.useState)(false);
-  const timeoutIdRef = (0, import_element68.useRef)(null);
+  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element69.useState)(false);
+  const timeoutIdRef = (0, import_element69.useRef)(null);
   const ref = (0, import_compose13.useCopyToClipboard)(text, () => {
     setShowCopyConfirmation(true);
     if (timeoutIdRef.current) {
@@ -28334,7 +28751,7 @@ function CopyClipboardButton({ text }) {
       setShowCopyConfirmation(false);
     }, 4e3);
   });
-  (0, import_element68.useEffect)(() => {
+  (0, import_element69.useEffect)(() => {
     return () => {
       if (timeoutIdRef.current) {
         clearTimeout(timeoutIdRef.current);
@@ -28361,7 +28778,7 @@ var import_api_fetch8 = __toESM(require_api_fetch());
 var import_components73 = __toESM(require_components());
 var import_core_data2 = __toESM(require_core_data());
 var import_data14 = __toESM(require_data());
-var import_element69 = __toESM(require_element());
+var import_element70 = __toESM(require_element());
 var import_i18n65 = __toESM(require_i18n());
 var import_jsx_runtime157 = __toESM(require_jsx_runtime());
 function ResponseActions({
@@ -28374,8 +28791,8 @@ function ResponseActions({
   const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data14.useDispatch)(
     store3
   );
-  const [isLoading] = (0, import_element69.useState)(false);
-  const handleMarkAsSpam = (0, import_element69.useCallback)(async () => {
+  const [isLoading] = (0, import_element70.useState)(false);
+  const handleMarkAsSpam = (0, import_element70.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "spam" });
     updateCountsOptimistically2(originalStatus, "spam", 1);
@@ -28398,7 +28815,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMarkAsNotSpam = (0, import_element69.useCallback)(async () => {
+  const handleMarkAsNotSpam = (0, import_element70.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -28421,7 +28838,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMoveToTrash = (0, import_element69.useCallback)(async () => {
+  const handleMoveToTrash = (0, import_element70.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "trash" });
     updateCountsOptimistically2(originalStatus, "trash", 1);
@@ -28441,7 +28858,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleRestore = (0, import_element69.useCallback)(async () => {
+  const handleRestore = (0, import_element70.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -28464,7 +28881,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleDelete = (0, import_element69.useCallback)(async () => {
+  const handleDelete = (0, import_element70.useCallback)(async () => {
     const originalStatus = response.status;
     updateCountsOptimistically2(originalStatus, "", 1);
     onActionComplete(response);
@@ -28481,7 +28898,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleToggleRead = (0, import_element69.useCallback)(async () => {
+  const handleToggleRead = (0, import_element70.useCallback)(async () => {
     const newIsUnread = !response.is_unread;
     editEntityRecord("postType", "feedback", response.id, { is_unread: newIsUnread });
     onActionComplete({ ...response, is_unread: newIsUnread });
@@ -28718,9 +29135,9 @@ function SingleResponseView({
   onNavigate,
   onClose
 }) {
-  const [previewFile, setPreviewFile] = (0, import_element70.useState)(null);
-  const [isImageLoading, setIsImageLoading] = (0, import_element70.useState)(true);
-  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element70.useState)(null);
+  const [previewFile, setPreviewFile] = (0, import_element71.useState)(null);
+  const [isImageLoading, setIsImageLoading] = (0, import_element71.useState)(true);
+  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element71.useState)(null);
   const { editEntityRecord } = (0, import_data15.useDispatch)(import_core_data3.store);
   const { response, isLoading } = (0, import_data15.useSelect)(
     (select) => {
@@ -28745,17 +29162,17 @@ function SingleResponseView({
   const currentIndex = allResponseIds.indexOf(responseId);
   const hasNext = currentIndex < allResponseIds.length - 1;
   const hasPrevious = currentIndex > 0;
-  const handleNext = (0, import_element70.useCallback)(() => {
+  const handleNext = (0, import_element71.useCallback)(() => {
     if (hasNext) {
       onNavigate(allResponseIds[currentIndex + 1]);
     }
   }, [hasNext, allResponseIds, currentIndex, onNavigate]);
-  const handlePrevious = (0, import_element70.useCallback)(() => {
+  const handlePrevious = (0, import_element71.useCallback)(() => {
     if (hasPrevious) {
       onNavigate(allResponseIds[currentIndex - 1]);
     }
   }, [hasPrevious, allResponseIds, currentIndex, onNavigate]);
-  (0, import_element70.useEffect)(() => {
+  (0, import_element71.useEffect)(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowUp" && hasPrevious) {
         event.preventDefault();
@@ -28770,7 +29187,7 @@ function SingleResponseView({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [hasNext, hasPrevious, handleNext, handlePrevious, onClose]);
-  (0, import_element70.useEffect)(() => {
+  (0, import_element71.useEffect)(() => {
     if (!response || !response.id || !response.is_unread) {
       return;
     }
@@ -28791,21 +29208,21 @@ function SingleResponseView({
       });
     });
   }, [response, editEntityRecord, hasMarkedAsRead]);
-  const handleFilePreview = (0, import_element70.useCallback)(
+  const handleFilePreview = (0, import_element71.useCallback)(
     (file) => () => {
       setIsImageLoading(true);
       setPreviewFile(file);
     },
     []
   );
-  const closePreviewModal = (0, import_element70.useCallback)(() => {
+  const closePreviewModal = (0, import_element71.useCallback)(() => {
     setPreviewFile(null);
     setIsImageLoading(true);
   }, []);
-  const handleImageLoaded = (0, import_element70.useCallback)(() => {
+  const handleImageLoaded = (0, import_element71.useCallback)(() => {
     setIsImageLoading(false);
   }, []);
-  const handleActionComplete = (0, import_element70.useCallback)(
+  const handleActionComplete = (0, import_element71.useCallback)(
     (updatedItem) => {
       if (!updatedItem) {
         if (hasNext) {
@@ -29053,7 +29470,7 @@ function Inspector() {
     order: "desc"
   });
   const allRecordIds = records?.map((record) => record.id) ?? [];
-  const handleClose = (0, import_element70.useCallback)(() => {
+  const handleClose = (0, import_element71.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -29061,7 +29478,7 @@ function Inspector() {
       }
     });
   }, [navigate, searchParams]);
-  const handleNavigate = (0, import_element70.useCallback)(
+  const handleNavigate = (0, import_element71.useCallback)(
     (id) => {
       navigate({
         search: {

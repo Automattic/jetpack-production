@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add form delete action.
 
 ### Changed
+- Use Stack component from WP-UI package in new wp-build dashboard.
 - Use the generated asset dependency file for the dashboard.
 
 ### Fixed
