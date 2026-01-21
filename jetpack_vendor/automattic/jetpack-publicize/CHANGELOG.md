@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update the customization toggle and save the flag to post meta.
+- Use fallback avatar for Jetpack Social connection icons.
 
 ## [0.71.0] - 2026-01-19
 ### Added

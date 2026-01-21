@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Social: Use fallback avatar for Jetpack Social connection icons.
+
 ### Bug fixes
 - Social Previews: Use fallback image when social preview profile picture fails.
 
