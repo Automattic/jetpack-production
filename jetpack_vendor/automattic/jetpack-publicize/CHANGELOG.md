@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.71.1-alpha] - unreleased
+## [0.72.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Added sharing activity modal with tabs for All shares, Shared, and Scheduled views.
 - Wire up per-network customization form.
 
 ### Changed
@@ -1226,7 +1227,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.71.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.71.0...v0.71.1-alpha
+[0.72.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.71.0...v0.72.0-alpha
 [0.71.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.70.0...v0.71.0
 [0.70.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.69.2...v0.70.0
 [0.69.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.69.1...v0.69.2
