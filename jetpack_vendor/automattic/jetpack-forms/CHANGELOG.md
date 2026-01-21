@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add an "Edit Form" button that takes you to edit the form via the form editor.
 - Add redirect for jetpack_forms post type to the new dashboard.
+- Display image-select field choices with thumbnails and captions on submission confirmation page.
 - Forms: add form delete action.
 
 ### Changed
