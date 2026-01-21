@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Social Previews: Use fallback image when social preview profile picture fails.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Render slideshow block as core gallery block in emails.
 - Update package dependencies.
