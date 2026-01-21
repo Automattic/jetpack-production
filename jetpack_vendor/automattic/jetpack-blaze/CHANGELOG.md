@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Improve post promotion speed by handling the Blaze “create campaign” endpoint locally, reducing the initial sync delay.
 - Improve post promotion speed by handling the Blaze “get article” endpoint locally, reducing the initial sync delay.
 
+### Changed
+- Blaze: reduce time-to-first-use by querying local database when Jetpack Sync is not ready.
+
 ## [0.26.24] - 2026-01-19
 ### Changed
 - Update package dependencies. [#46552] [#46647]
