@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix wp-build dashboard rendering after wp-build dependency update and prefix functions to avoid conflicts with Gutenberg.
 - Forms Dashboard: Fix race conditions in spam/not-spam actions when triggered in quick succession.
 - Image Select Response: fix image previews by handling edge cases where Photon should not be used (localhost, blob URLs, local domains, private atomic sites).
+- Slider Field: fix React iteration render error by adding key prop to control wrapper.
 
 ## [7.4.0] - 2026-01-19
 ### Added
