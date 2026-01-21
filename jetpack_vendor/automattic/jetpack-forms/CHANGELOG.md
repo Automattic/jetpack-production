@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add an "Edit Form" button that takes you to edit the form via the form editor.
+- Add granular block categories for better organization of form fields in the block inserter on the Form Editor.
 - Add redirect for jetpack_forms post type to the new dashboard.
 - Display image-select field choices with thumbnails and captions on submission confirmation page.
 - Forms: add form delete action.
