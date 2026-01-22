@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+- Use components for empty actions in trash/spam for new wp-build dashboard.
 - Use Stack component from WP-UI package in new wp-build dashboard.
 - Use the generated asset dependency file for the dashboard.
 
