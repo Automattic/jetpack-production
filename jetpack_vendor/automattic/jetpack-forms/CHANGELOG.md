@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add status filter for form posts.
 
 ### Changed
+- Update package dependencies.
 - Use Stack component from WP-UI package in new wp-build dashboard.
 - Use the generated asset dependency file for the dashboard.
 
