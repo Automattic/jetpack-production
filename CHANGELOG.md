@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Social: Show a snackbar while sharing is in progress.
 - Social: Use fallback avatar for Jetpack Social connection icons.
 
 ### Bug fixes

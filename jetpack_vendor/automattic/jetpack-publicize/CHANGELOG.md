@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Wire up per-network customization form.
 
 ### Changed
+- Show a snackbar while sharing is in progress.
 - Update the customization toggle and save the flag to post meta.
 - Use fallback avatar for Jetpack Social connection icons.
 
