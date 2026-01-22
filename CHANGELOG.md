@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Use fallback avatar for Jetpack Social connection icons.
 
 ### Bug fixes
+- Copy Post: Copy Gutenberg Footnotes block content when duplicating posts.
 - Social Previews: Use fallback image when social preview profile picture fails.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
