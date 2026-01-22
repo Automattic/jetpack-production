@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: fix markdown rendering in feedback sidebar to properly display bold text, lists, and other formatting.
 - Copy Post: Copy Gutenberg Footnotes block content when duplicating posts.
+- Google Fonts: Prevent Gutenberg 22.4+ from printing all registered fonts.
 - Social Previews: Use fallback image when social preview profile picture fails.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
