@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Use fallback avatar for Jetpack Social connection icons.
 
 ### Bug fixes
+- AI Assistant: fix markdown rendering in feedback sidebar to properly display bold text, lists, and other formatting.
 - Copy Post: Copy Gutenberg Footnotes block content when duplicating posts.
 - Social Previews: Use fallback image when social preview profile picture fails.
 
