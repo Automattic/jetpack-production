@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added sharing activity modal with tabs for All shares, Shared, and Scheduled views.
+- Add HMR support by wiring up webpack dev server.
 - Unify shared and scheduled sharing activity in Dataviews table.
 - Wire up media customization per network.
 - Wire up per-network customization form.
