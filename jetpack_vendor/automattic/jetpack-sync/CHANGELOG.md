@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Sync: Stop sending redundant actions when Dedicated Sync fails to enable.
+
 ### Fixed
 - Jetpack Sync: Prevent warnings when unexpected data is passed into filters or added meta consumed by Sync.
 
