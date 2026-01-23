@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Add redirect for jetpack_forms post type to the new dashboard.
 - Create a new form post type when inserting a form.
 - Display image-select field choices with thumbnails and captions on submission confirmation page.
+- Forms: add bulk actions for form posts.
 - Forms: add form delete action.
 - Forms: add permanent delete for form posts.
 - Forms: add status filter for form posts.
