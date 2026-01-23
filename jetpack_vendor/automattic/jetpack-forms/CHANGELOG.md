@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add status filter for form posts.
 
 ### Changed
+- Allow hiding settings URL for integrations.
 - Fix unread count not updating when feedback status changes between published and unpublished states.
 - Forms: update dataviews header and filters.
 - Update copy for MailPoet integration.

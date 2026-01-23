@@ -20084,8 +20084,10 @@ function buildAkismetCard({
       /* @__PURE__ */ (0, import_jsx_runtime116.jsxs)(import_components50.__experimentalHStack, { spacing: "2", justify: "start", className: "integration-card__links", children: [
         context === "dashboard" && handlers?.goToSpam ? /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(import_components50.Button, { variant: "link", onClick: handlers.goToSpam, children: (0, import_i18n44.__)("View spam", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(import_components50.Button, { variant: "link", href: spamUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n44.__)("View spam", "jetpack-forms") }),
         /* @__PURE__ */ (0, import_jsx_runtime116.jsx)("span", { children: "|" }),
-        /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(import_components50.Button, { variant: "link", href: settingsUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n44.__)("View stats and settings", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime116.jsx)("span", { children: "|" }),
+        settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime116.jsxs)(import_jsx_runtime116.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(import_components50.Button, { variant: "link", href: settingsUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n44.__)("View stats and settings", "jetpack-forms") }),
+          /* @__PURE__ */ (0, import_jsx_runtime116.jsx)("span", { children: "|" })
+        ] }),
         /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(import_components50.ExternalLink, { href: getRedirectUrl("akismet-jetpack-forms-docs"), children: (0, import_i18n44.__)("Learn about Akismet", "jetpack-forms") })
       ] })
     ] })
@@ -20445,7 +20447,7 @@ function buildHostingerReachCard({
         }
       ) }),
       context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(ConsentToggle, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime122.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(import_components54.ExternalLink, { href: settingsUrl, children: (0, import_i18n49.__)("View Hostinger Reach dashboard", "jetpack-forms") }) })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime122.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(import_components54.ExternalLink, { href: settingsUrl, children: (0, import_i18n49.__)("View Hostinger Reach dashboard", "jetpack-forms") }) })
     ] })
   };
   return base;
@@ -20720,7 +20722,7 @@ function buildJetpackCrmCard({
     }
     return /* @__PURE__ */ (0, import_jsx_runtime123.jsxs)("div", { children: [
       /* @__PURE__ */ (0, import_jsx_runtime123.jsx)("p", { className: "integration-card__description", children: context === "block-editor" ? connectedMsgEditor : connectedMsgDashboard }),
-      /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(import_components55.ExternalLink, { href: settingsUrl, children: (0, import_i18n50.__)("Open Jetpack CRM settings", "jetpack-forms") })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(import_components55.ExternalLink, { href: settingsUrl, children: (0, import_i18n50.__)("Open Jetpack CRM settings", "jetpack-forms") })
     ] });
   };
   const base = {
@@ -20896,7 +20898,7 @@ function buildMailPoetCard({
         "jetpack-forms"
       ) })),
       context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(ConsentToggle, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime125.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(import_components56.ExternalLink, { href: settingsUrl, children: (0, import_i18n52.__)("View dashboard", "jetpack-forms") }) })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime125.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(import_components56.ExternalLink, { href: settingsUrl, children: (0, import_i18n52.__)("View dashboard", "jetpack-forms") }) })
     ] })
   };
   return base;
