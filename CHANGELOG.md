@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Likes: enable CSS inlining.
 - Social: Refactor share status UI to use Notice component.
 - Social: Show a snackbar while sharing is in progress.
 - Social: Use fallback avatar for Jetpack Social connection icons.
