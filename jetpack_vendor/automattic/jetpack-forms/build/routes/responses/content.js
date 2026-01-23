@@ -20879,7 +20879,7 @@ function buildMailPoetCard({
       context === "block-editor" && (lists.length ? /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(
         import_components56.SelectControl,
         {
-          label: (0, import_i18n52.__)("Which MailPoet list should contacts be added to?", "jetpack-forms"),
+          label: (0, import_i18n52.__)("Which email list should contacts be added to?", "jetpack-forms"),
           value: selectedListId,
           options: lists.map((list) => ({ label: list.name, value: list.id })),
           onChange: (newId) => setAttributes?.({
@@ -20896,7 +20896,7 @@ function buildMailPoetCard({
         "jetpack-forms"
       ) })),
       context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(ConsentToggle, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime125.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(import_components56.ExternalLink, { href: settingsUrl, children: (0, import_i18n52.__)("View MailPoet dashboard", "jetpack-forms") }) })
+      /* @__PURE__ */ (0, import_jsx_runtime125.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(import_components56.ExternalLink, { href: settingsUrl, children: (0, import_i18n52.__)("View dashboard", "jetpack-forms") }) })
     ] })
   };
   return base;
