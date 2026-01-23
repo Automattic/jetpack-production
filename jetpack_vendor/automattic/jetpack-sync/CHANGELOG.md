@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Jetpack Sync: Move installation and update failure actions to shutdown to decrease their associated lag.
+- Search Sync Settings: Add some more meta fields for WooCommerce.com products to allow list.
 - Stats Module: Send Heartbeat data immediately.
 - Sync: Stop sending redundant actions when Dedicated Sync fails to enable.
 
