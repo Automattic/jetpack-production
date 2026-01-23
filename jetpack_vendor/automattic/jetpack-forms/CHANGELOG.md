@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix a bug where we were overwriting the default wp modules.
 - Fix wp-build dashboard rendering after wp-build dependency update and prefix functions to avoid conflicts with Gutenberg.
+- Forms: fix block styles not loading in CIAB environment.
 - Forms Dashboard: Fix race conditions in spam/not-spam actions when triggered in quick succession.
 - Image Select Field: fix useSelect returning different values warning by memoizing derived data.
 - Image Select Response: fix image previews by handling edge cases where Photon should not be used (localhost, blob URLs, local domains, private atomic sites).
