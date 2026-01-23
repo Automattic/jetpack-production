@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add status filter for form posts.
 
 ### Changed
+- Fix unread count not updating when feedback status changes between published and unpublished states.
 - Update package dependencies.
 - Use components for empty actions in trash/spam for new wp-build dashboard.
 - Use Stack component from WP-UI package in new wp-build dashboard.
