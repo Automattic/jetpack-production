@@ -21167,6 +21167,8 @@ var openFormLinkInNewTab = (url) => {
 function useCreateForm() {
   const newFormNonce = useConfigValue("newFormNonce");
   const isCentralFormManagementEnabled = useConfigValue("isCentralFormManagementEnabled");
+  const adminUrl = useConfigValue("adminUrl");
+  const ajaxUrl = useConfigValue("ajaxUrl");
   const createForm = (0, import_element60.useCallback)(
     async (formPattern) => {
       const data = new FormData();
@@ -21175,7 +21177,8 @@ function useCreateForm() {
       if (formPattern) {
         data.append("pattern", formPattern);
       }
-      const response = await fetch(window.ajaxurl, { method: "POST", body: data });
+      const fetchUrl = ajaxUrl || window.ajaxurl;
+      const response = await fetch(fetchUrl, { method: "POST", body: data });
       const {
         success,
         post_url: postUrl,
@@ -21186,14 +21189,14 @@ function useCreateForm() {
       }
       return postUrl;
     },
-    [newFormNonce]
+    [newFormNonce, ajaxUrl]
   );
   const openNewForm = (0, import_element60.useCallback)(
     async ({ formPattern, showPatterns, analyticsEvent }) => {
       try {
         if (isCentralFormManagementEnabled === true) {
           analyticsEvent?.({ formPattern: formPattern ?? "" });
-          const url = "post-new.php?post_type=jetpack_form";
+          const url = `${adminUrl || ""}post-new.php?post_type=jetpack_form`;
           openFormLinkInNewTab(url);
           return;
         }
@@ -21207,7 +21210,7 @@ function useCreateForm() {
         console.error(error2.message);
       }
     },
-    [createForm, isCentralFormManagementEnabled]
+    [createForm, isCentralFormManagementEnabled, adminUrl]
   );
   return { createForm, openNewForm };
 }
