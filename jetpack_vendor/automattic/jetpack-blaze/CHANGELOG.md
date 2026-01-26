@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.27.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.27.0] - 2026-01-26
 ### Added
-- Improve post promotion speed by handling the Blaze “advise campaign” endpoint locally, reducing the initial sync delay.
-- Improve post promotion speed by handling the Blaze “create campaign” endpoint locally, reducing the initial sync delay.
-- Improve post promotion speed by handling the Blaze “get article” endpoint locally, reducing the initial sync delay.
+- Improve post promotion speed by handling the Blaze “advise campaign” endpoint locally, reducing the initial sync delay. [#46623]
+- Improve post promotion speed by handling the Blaze “create campaign” endpoint locally, reducing the initial sync delay. [#46642]
+- Improve post promotion speed by handling the Blaze “get article” endpoint locally, reducing the initial sync delay. [#46578]
 
 ### Changed
-- Blaze: reduce time-to-first-use by querying local database when Jetpack Sync is not ready.
+- Reduce time-to-first-use by querying local database when Jetpack Sync is not ready. [#46500]
 
 ## [0.26.24] - 2026-01-19
 ### Changed
@@ -768,7 +765,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.27.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.26.24...v0.27.0-alpha
+[0.27.0]: https://github.com/automattic/jetpack-blaze/compare/v0.26.24...v0.27.0
 [0.26.24]: https://github.com/automattic/jetpack-blaze/compare/v0.26.23...v0.26.24
 [0.26.23]: https://github.com/automattic/jetpack-blaze/compare/v0.26.22...v0.26.23
 [0.26.22]: https://github.com/automattic/jetpack-blaze/compare/v0.26.21...v0.26.22
