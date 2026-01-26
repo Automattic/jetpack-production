@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - Use Page component from package for WP Build dashboard.
 
+### Fixed
+- Forms: Fix dashboard inspector "mark as read/unread" action
+
 ## [7.5.0] - 2026-01-26
 ### Added
 - Add an "Edit Form" button that takes you to edit the form via the form editor. [#46582]
