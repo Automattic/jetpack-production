@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Forms: Add item click handler for DataViews on dashboards
+- Forms: add new field preview component for response view with improved field type rendering and styling.
 
 ### Changed
 - Update package dependencies.

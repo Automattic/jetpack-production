@@ -23716,16 +23716,20 @@ var setSelectedResponses = (selectedResponses) => ({
 function setCurrentQuery(currentQuery2) {
   return ({ dispatch, select, registry }) => {
     const previousQuery = select.getCurrentQuery();
-    const filtersChanged = previousQuery.status !== currentQuery2.status || previousQuery.search !== currentQuery2.search || previousQuery.is_unread !== currentQuery2.is_unread || previousQuery.parent !== currentQuery2.parent || previousQuery.before !== currentQuery2.before || previousQuery.after !== currentQuery2.after;
+    const queryWithFormat = {
+      ...currentQuery2,
+      fields_format: currentQuery2.fields_format ?? previousQuery.fields_format ?? "collection"
+    };
+    const filtersChanged = previousQuery.status !== queryWithFormat.status || previousQuery.search !== queryWithFormat.search || previousQuery.is_unread !== queryWithFormat.is_unread || previousQuery.parent !== queryWithFormat.parent || previousQuery.before !== queryWithFormat.before || previousQuery.after !== queryWithFormat.after;
     if (filtersChanged) {
       dispatch(clearInvalidRecords());
       if (registry && registry.dispatch("core")) {
-        registry.dispatch("core").invalidateResolution("getEntityRecords", ["postType", "feedback", currentQuery2]);
+        registry.dispatch("core").invalidateResolution("getEntityRecords", ["postType", "feedback", queryWithFormat]);
       }
     }
     dispatch({
       type: SET_CURRENT_QUERY,
-      currentQuery: currentQuery2
+      currentQuery: queryWithFormat
     });
   };
 }
@@ -23795,7 +23799,8 @@ var currentQuery = (state = {
   orderby: "date",
   page: 1,
   per_page: 20,
-  status: "draft,publish"
+  status: "draft,publish",
+  fields_format: "collection"
 }, action) => {
   if (action.type === SET_CURRENT_QUERY) {
     return action.currentQuery;
