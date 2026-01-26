@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.5.1-alpha] - unreleased
+## [7.6.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+- Use Page component from package for WP Build dashboard.
 
 ## [7.5.0] - 2026-01-26
 ### Added
@@ -2116,7 +2117,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.5.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.5.0...v7.5.1-alpha
+[7.6.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.5.0...v7.6.0-alpha
 [7.5.0]: https://github.com/automattic/jetpack-forms/compare/v7.4.0...v7.5.0
 [7.4.0]: https://github.com/automattic/jetpack-forms/compare/v7.3.0...v7.4.0
 [7.3.0]: https://github.com/automattic/jetpack-forms/compare/v7.2.0...v7.3.0
