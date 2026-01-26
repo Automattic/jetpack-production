@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Add item click handler for DataViews on dashboards
 
+### Changed
+- Update package dependencies.
+
 ## [7.5.0] - 2026-01-26
 ### Added
 - Add an "Edit Form" button that takes you to edit the form via the form editor. [#46582]

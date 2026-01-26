@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Sync media to connections for per network customizations.
 
+### Changed
+- Update package dependencies.
+
 ## [0.72.0] - 2026-01-26
 ### Added
 - Add sharing activity modal with tabs for All shares, Shared, and Scheduled views. [#46633]

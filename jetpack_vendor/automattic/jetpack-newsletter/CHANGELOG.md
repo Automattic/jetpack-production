@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add settings sections: subscriptions, paid newsletter, and welcome message.
 
+### Changed
+- Update package dependencies.
+
 ## [0.3.0] - 2026-01-26
 ### Added
 - Add newsletter settings to the new screen. [#46471]
