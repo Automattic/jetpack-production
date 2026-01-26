@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Display image-select field choices with thumbnails and captions on submission confirmation page.
 - Forms: add bulk actions for form posts.
 - Forms: add form delete action.
+- Forms: Add item click handler for DataViews on dashboards
 - Forms: add permanent delete for form posts.
 - Forms: add status filter for form posts.
 

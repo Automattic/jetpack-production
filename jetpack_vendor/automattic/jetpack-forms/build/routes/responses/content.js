@@ -29076,6 +29076,12 @@ function Stage() {
     showDashboardIntegrations
   ]);
   const readStatusFilter = view.filters?.find((filter) => filter.field === "read_status")?.value;
+  const onClickItem = (0, import_element72.useCallback)(
+    (item) => {
+      onChangeSelection([String(item.id)]);
+    },
+    [onChangeSelection]
+  );
   return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
     page_default,
     {
@@ -29112,6 +29118,7 @@ function Stage() {
             defaultLayouts,
             selection,
             onChangeSelection,
+            onClickItem,
             actions,
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
