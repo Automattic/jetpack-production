@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Forms: Add item click handler for DataViews on dashboards
 - Forms: add new field preview component for response view with improved field type rendering and styling.
+- Forms: Display uploaded files with icon, filename, and size on confirmation page.
 
 ### Changed
 - Forms: update copy from "submissions" to "responses" for consistency.
