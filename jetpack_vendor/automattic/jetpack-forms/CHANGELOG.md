@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update copy from "submissions" to "responses" for consistency.
 - Response view: display phone numbers with country flags and international formatting.
 - Update package dependencies.
+- Update unread badge styles for the new dashboard.
 - Use Page component from package for WP Build dashboard.
 
 ### Fixed

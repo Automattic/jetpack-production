@@ -28519,21 +28519,23 @@ function Stage() {
         id: "from",
         label: (0, import_i18n66.__)("From", "jetpack-forms"),
         render: ({ item }) => {
-          const displayName = item.author_name || item.author_email || item.author_url || item.ip || "Anonymous";
-          const showEmail = item.author_email && item.author_name !== item.author_email;
+          const displayName = (0, import_html_entities2.decodeEntities)(
+            item.author_name || item.author_email || item.author_url || item.ip || "Anonymous"
+          );
+          const showEmail = item.author_email && displayName !== (0, import_html_entities2.decodeEntities)(item.author_email);
           const defaultImage = item.author_name || item.author_email ? "initials" : "mp";
           return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(Stack, { align: "center", gap: "sm", children: [
             item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
               "span",
               {
                 style: {
-                  width: "8px",
-                  height: "8px",
-                  borderRadius: "50%",
-                  backgroundColor: "var(--wp-admin-theme-color, #3858e9)",
-                  flexShrink: 0
+                  color: "#d63638",
+                  fontSize: "8px",
+                  position: "absolute",
+                  marginLeft: "-12px"
                 },
-                "aria-label": (0, import_i18n66.__)("Unread", "jetpack-forms")
+                "aria-label": (0, import_i18n66.__)("(Unread form response)", "jetpack-forms"),
+                children: "\u25CF"
               }
             ),
             /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
@@ -28541,15 +28543,15 @@ function Stage() {
               {
                 email: item.author_email || item.ip,
                 defaultImage,
-                displayName: (0, import_html_entities2.decodeEntities)(displayName),
-                size: 40,
+                displayName,
+                size: 32,
                 useHovercard: false
               }
             ),
             styleUnreadValue(
               /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
-                displayName,
-                showEmail && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("span", { style: { fontSize: "12px", color: "#757575" }, children: item.author_email })
+                /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components66.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
+                showEmail && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components66.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
               ] }),
               item.is_unread
             )
