@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add new field preview component for response view with improved field type rendering and styling.
 
 ### Changed
+- Forms: update copy from "submissions" to "responses" for consistency.
 - Update package dependencies.
 - Use Page component from package for WP Build dashboard.
 
