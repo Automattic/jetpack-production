@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.5-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Site Switcher: fix partial keyword matching so typing 'swit' shows 'Switch to...' results in the command palette.
+
 ## 15.5-a.5 - 2026-01-26
 ### Enhancements
 - Forms: Update DataViews header and filters. [#46732]
