@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Use Page component from package for WP Build dashboard.
 
 ### Fixed
+- Contact Form: Fix Edit Form button in the Site Editor by navigating directly to the form editor.
 - Forms: Fix dashboard inspector "mark as read/unread" action
 
 ## [7.5.0] - 2026-01-26
