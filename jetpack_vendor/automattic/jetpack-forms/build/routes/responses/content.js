@@ -70,20 +70,6 @@ var require_components = __commonJS({
   }
 });
 
-// package-external:@wordpress/api-fetch
-var require_api_fetch = __commonJS({
-  "package-external:@wordpress/api-fetch"(exports, module) {
-    module.exports = window.wp.apiFetch;
-  }
-});
-
-// package-external:@wordpress/core-data
-var require_core_data = __commonJS({
-  "package-external:@wordpress/core-data"(exports, module) {
-    module.exports = window.wp.coreData;
-  }
-});
-
 // package-external:@wordpress/data
 var require_data = __commonJS({
   "package-external:@wordpress/data"(exports, module) {
@@ -1583,6 +1569,13 @@ var require_events = __commonJS({
         throw new TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof emitter);
       }
     }
+  }
+});
+
+// package-external:@wordpress/api-fetch
+var require_api_fetch = __commonJS({
+  "package-external:@wordpress/api-fetch"(exports, module) {
+    module.exports = window.wp.apiFetch;
   }
 });
 
@@ -3567,6 +3560,13 @@ var require_notices = __commonJS({
 var require_url = __commonJS({
   "package-external:@wordpress/url"(exports, module) {
     module.exports = window.wp.url;
+  }
+});
+
+// package-external:@wordpress/core-data
+var require_core_data = __commonJS({
+  "package-external:@wordpress/core-data"(exports, module) {
+    module.exports = window.wp.coreData;
   }
 });
 
@@ -6683,9 +6683,7 @@ Page.SidebarToggleFill = SidebarToggleFill;
 var page_default = Page;
 
 // routes/responses/stage.tsx
-var import_api_fetch10 = __toESM(require_api_fetch());
 var import_components67 = __toESM(require_components());
-var import_core_data5 = __toESM(require_core_data());
 var import_data16 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.2.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
@@ -24035,10 +24033,39 @@ var formatFieldValue = (fieldValue) => {
   }
   return fieldValue;
 };
-function useInboxData() {
+var decodeValue = (value) => {
+  if (typeof value === "string") {
+    return (0, import_html_entities.decodeEntities)(value);
+  }
+  if (Array.isArray(value)) {
+    return value.map((v2) => typeof v2 === "string" ? (0, import_html_entities.decodeEntities)(v2) : v2);
+  }
+  return value;
+};
+var hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
+var normalizeFieldsForDisplay = (fields) => {
+  if (!fields || !Array.isArray(fields)) {
+    return /* @__PURE__ */ Object.create(null);
+  }
+  return fields.reduce(
+    (accumulator, field) => {
+      const baseLabel = field.label || formatFieldName(field.key) || field.key;
+      let label = baseLabel;
+      let counter = 2;
+      while (hasOwn(accumulator, label)) {
+        label = `${baseLabel} (${counter})`;
+        counter++;
+      }
+      accumulator[label] = formatFieldValue(decodeValue(field.value));
+      return accumulator;
+    },
+    /* @__PURE__ */ Object.create(null)
+  );
+};
+function useInboxData(options = {}) {
   const [searchParams] = useDashboardSearchParams();
   const { setCurrentQuery: setCurrentQuery2, setSelectedResponses: setSelectedResponses2 } = (0, import_data13.useDispatch)(store3);
-  const urlStatus = searchParams.get("status");
+  const urlStatus = options.status ?? searchParams.get("status");
   const statusFilter = getStatusFilter(urlStatus);
   const {
     selectedResponsesCount,
@@ -24114,19 +24141,7 @@ function useInboxData() {
       const formResponse = record;
       return {
         ...formResponse,
-        fields: Object.entries(formResponse.fields || {}).reduce(
-          (accumulator, [key, value]) => {
-            let _key = formatFieldName(key);
-            let counter = 2;
-            while (accumulator[_key]) {
-              _key = `${formatFieldName(key)} (${counter})`;
-              counter++;
-            }
-            accumulator[_key] = formatFieldValue((0, import_html_entities.decodeEntities)(value));
-            return accumulator;
-          },
-          {}
-        )
+        fields: normalizeFieldsForDisplay(formResponse.fields)
       };
     });
   }, [editedRecords, statusFilter]);
@@ -29309,21 +29324,6 @@ document.head.appendChild(document.createElement("style")).appendChild(document.
 
 // routes/responses/stage.tsx
 var import_jsx_runtime157 = __toESM(require_jsx_runtime());
-function useFilterOptions() {
-  const [filterOptions, setFilterOptions] = (0, import_element75.useState)({
-    date: [],
-    source: []
-  });
-  (0, import_element75.useEffect)(() => {
-    (0, import_api_fetch10.default)({ path: "/wp/v2/feedback/filters" }).then((response) => {
-      setFilterOptions({
-        date: response.date || [],
-        source: response.source || []
-      });
-    });
-  }, []);
-  return filterOptions;
-}
 function getTabLabel(label, count) {
   return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack, { align: "center", gap: "2xs", children: [
     label,
@@ -29363,21 +29363,12 @@ function styleUnreadValue(element, isUnread) {
   }
   return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("span", { style: { fontWeight: 600 }, children: element });
 }
-function Stage() {
+function StageInner() {
   const params = useParams({ from: "/responses/$view" });
   const searchParams = useSearch2({ from: "/responses/$view" });
   const navigate = useNavigate2();
-  const counts2 = (0, import_data16.useSelect)(
-    (select) => select(store3).getCounts(),
-    []
-  );
-  const filterOptions = useFilterOptions();
-  let status = "publish";
-  if (params.view === "spam") {
-    status = "spam";
-  } else if (params.view === "trash") {
-    status = "trash";
-  }
+  const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
+  const statusFilter = statusView === "inbox" ? "draft,publish" : statusView;
   const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element75.useState)(false);
   const integrations = (0, import_data16.useSelect)(
     (select) => select(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
@@ -29390,7 +29381,19 @@ function Stage() {
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  const selection = searchParams?.responseIds ?? [];
+  const selection = (0, import_element75.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
+  const {
+    setCurrentQuery: setCurrentQuery2,
+    setSelectedResponses: setSelectedResponses2,
+    filterOptions,
+    records,
+    isLoadingData,
+    totalItems,
+    totalPages,
+    totalItemsInbox,
+    totalItemsSpam,
+    totalItemsTrash
+  } = useInboxData({ status: statusView });
   (0, import_element75.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
@@ -29424,7 +29427,7 @@ function Stage() {
   );
   const queryParams = (0, import_element75.useMemo)(() => {
     const queryArgs = {
-      status,
+      status: statusFilter,
       per_page: view.perPage,
       page: view.page || 1,
       orderby: view.sort?.field || "date",
@@ -29450,12 +29453,16 @@ function Stage() {
       }
     });
     return queryArgs;
-  }, [status, view]);
-  const { records, isResolving, totalItems, totalPages } = (0, import_core_data5.useEntityRecords)(
-    "postType",
-    "feedback",
-    queryParams
-  );
+  }, [statusFilter, view]);
+  (0, import_element75.useEffect)(() => {
+    setCurrentQuery2(queryParams);
+  }, [queryParams, setCurrentQuery2]);
+  (0, import_element75.useEffect)(() => {
+    const validSelectedIds = (selection || []).filter((id) => {
+      return records?.some((record) => getItemId(record) === id);
+    });
+    setSelectedResponses2(validSelectedIds);
+  }, [records, selection, setSelectedResponses2]);
   const fields = (0, import_element75.useMemo)(
     () => [
       {
@@ -29541,10 +29548,12 @@ function Stage() {
           }
           return styleUnreadValue(source, item.is_unread);
         },
-        elements: (filterOptions?.source || []).map((source) => ({
-          value: source.id.toString(),
-          label: (0, import_html_entities2.decodeEntities)(source.title) || source.url
-        })),
+        elements: (filterOptions?.source || []).map(
+          (source) => ({
+            value: source.id.toString(),
+            label: (0, import_html_entities2.decodeEntities)(source.title) || source.url
+          })
+        ),
         filterBy: { operators: ["is"] },
         enableSorting: false
       },
@@ -29591,9 +29600,9 @@ function Stage() {
     [totalItems, totalPages]
   );
   const statusTabs = [
-    { slug: "inbox", label: getTabLabel((0, import_i18n67.__)("Inbox", "jetpack-forms"), counts2.inbox) },
-    { slug: "spam", label: getTabLabel((0, import_i18n67.__)("Spam", "jetpack-forms"), counts2.spam) },
-    { slug: "trash", label: getTabLabel((0, import_i18n67.__)("Trash", "jetpack-forms"), counts2.trash) }
+    { slug: "inbox", label: getTabLabel((0, import_i18n67.__)("Inbox", "jetpack-forms"), totalItemsInbox) },
+    { slug: "spam", label: getTabLabel((0, import_i18n67.__)("Spam", "jetpack-forms"), totalItemsSpam) },
+    { slug: "trash", label: getTabLabel((0, import_i18n67.__)("Trash", "jetpack-forms"), totalItemsTrash) }
   ];
   const handleTabChange = (0, import_element75.useCallback)(
     (newView) => {
@@ -29678,7 +29687,7 @@ function Stage() {
     },
     [onChangeSelection]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
     page_default,
     {
       showSidebarToggle: false,
@@ -29686,10 +29695,7 @@ function Stage() {
         /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
         (0, import_i18n67.__)("Forms", "jetpack-forms")
       ] }),
-      subTitle: (0, import_i18n67.__)(
-        "View and manage all your form submissions in one place.",
-        "jetpack-forms"
-      ),
+      subTitle: (0, import_i18n67.__)("View and manage all your form submissions in one place.", "jetpack-forms"),
       actions: headerActions,
       hasPadding: false,
       children: [
@@ -29709,7 +29715,7 @@ function Stage() {
             view,
             onChangeView,
             paginationInfo,
-            isLoading: isResolving,
+            isLoading: isLoadingData,
             getItemId,
             defaultLayouts: defaultLayouts2,
             selection,
@@ -29754,13 +29760,16 @@ function Stage() {
         )
       ]
     }
-  ) });
+  );
 }
+var Stage = () => {
+  return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(StageInner, {}) });
+};
 
 // routes/responses/response/index.tsx
-var import_api_fetch12 = __toESM(require_api_fetch());
+var import_api_fetch11 = __toESM(require_api_fetch());
 var import_components72 = __toESM(require_components());
-var import_core_data7 = __toESM(require_core_data());
+var import_core_data6 = __toESM(require_core_data());
 var import_data18 = __toESM(require_data());
 var import_element78 = __toESM(require_element());
 var import_html_entities4 = __toESM(require_html_entities());
@@ -30008,9 +30017,9 @@ var ResponseMeta = ({ response }) => {
 var response_meta_default = ResponseMeta;
 
 // routes/responses/response/actions.tsx
-var import_api_fetch11 = __toESM(require_api_fetch());
+var import_api_fetch10 = __toESM(require_api_fetch());
 var import_components70 = __toESM(require_components());
-var import_core_data6 = __toESM(require_core_data());
+var import_core_data5 = __toESM(require_core_data());
 var import_data17 = __toESM(require_data());
 var import_element77 = __toESM(require_element());
 var import_i18n70 = __toESM(require_i18n());
@@ -30020,7 +30029,7 @@ function ResponseActions({
   onActionComplete
 }) {
   const { saveEntityRecord, deleteEntityRecord, editEntityRecord } = (0, import_data17.useDispatch)(
-    import_core_data6.store
+    import_core_data5.store
   );
   const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data17.useDispatch)(
     store3
@@ -30137,7 +30146,7 @@ function ResponseActions({
     editEntityRecord("postType", "feedback", response.id, { is_unread: newIsUnread });
     onActionComplete({ ...response, is_unread: newIsUnread });
     try {
-      await (0, import_api_fetch11.default)({
+      await (0, import_api_fetch10.default)({
         path: `/wp/v2/feedback/${response.id}/read`,
         method: "POST",
         data: { is_unread: newIsUnread }
@@ -30242,6 +30251,23 @@ function ResponseNavigation({
 
 // routes/responses/response/index.tsx
 var import_jsx_runtime162 = __toESM(require_jsx_runtime());
+var getDisplayFields = (fields) => {
+  if (!fields) {
+    return [];
+  }
+  if (Array.isArray(fields)) {
+    return fields.map((field, index) => ({
+      label: field.label || field.key || String(index),
+      value: field.value,
+      key: field.key || field.id || `${index}-${field.label}`
+    }));
+  }
+  return Object.entries(fields).map(([label, value]) => ({
+    label,
+    value,
+    key: label
+  }));
+};
 var isFileUploadField = (value) => {
   return !!value && typeof value === "object" && "files" in value;
 };
@@ -30368,19 +30394,19 @@ function SingleResponseView({
   const [previewFile, setPreviewFile] = (0, import_element78.useState)(null);
   const [isImageLoading, setIsImageLoading] = (0, import_element78.useState)(true);
   const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element78.useState)(null);
-  const { editEntityRecord } = (0, import_data18.useDispatch)(import_core_data7.store);
+  const { editEntityRecord } = (0, import_data18.useDispatch)(import_core_data6.store);
   const { response, isLoading } = (0, import_data18.useSelect)(
     (select) => {
       if (!responseId) {
         return { response: null, isLoading: false };
       }
       return {
-        response: select(import_core_data7.store).getEntityRecord(
+        response: select(import_core_data6.store).getEntityRecord(
           "postType",
           "feedback",
           responseId
         ),
-        isLoading: select(import_core_data7.store).isResolving(
+        isLoading: select(import_core_data6.store).isResolving(
           "getEntityRecord",
           ["postType", "feedback", responseId]
         )
@@ -30427,7 +30453,7 @@ function SingleResponseView({
     editEntityRecord("postType", "feedback", response.id, {
       is_unread: false
     });
-    (0, import_api_fetch12.default)({
+    (0, import_api_fetch11.default)({
       path: `/wp/v2/feedback/${response.id}/read`,
       method: "POST",
       data: { is_unread: false }
@@ -30502,6 +30528,7 @@ function SingleResponseView({
     }
     return String(value);
   };
+  const displayFields = (0, import_element78.useMemo)(() => getDisplayFields(response?.fields), [response?.fields]);
   if (isLoading) {
     return /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("div", { style: { display: "flex", justifyContent: "center", padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components72.Spinner, {}) });
   }
@@ -30538,7 +30565,7 @@ function SingleResponseView({
     ),
     /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { style: { padding: "20px", overflowY: "auto" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(response_meta_default, { response }),
-      response.fields && Object.keys(response.fields).length > 0 && /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("div", { children: Object.entries(response.fields).map(([key, value]) => /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)(
+      displayFields.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("div", { children: displayFields.map(({ label, value, key }) => /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)(
         "div",
         {
           style: {
@@ -30556,7 +30583,7 @@ function SingleResponseView({
                   color: "#1e1e1e",
                   fontSize: "13px"
                 },
-                children: key.endsWith("?") ? key : `${key}:`
+                children: label.endsWith("?") ? label : `${label}:`
               }
             ),
             /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("div", { style: { color: "#3c434a", fontSize: "14px" }, children: renderFieldValue(value) })
@@ -30587,19 +30614,8 @@ function Response() {
   const searchParams = useSearch3({ from: "/responses/$view" });
   const navigate = useNavigate3();
   const responseIds = searchParams?.responseIds || [];
-  let status = "publish";
-  if (params.view === "spam") {
-    status = "spam";
-  } else if (params.view === "trash") {
-    status = "trash";
-  }
-  const { records } = (0, import_core_data7.useEntityRecords)("postType", "feedback", {
-    status,
-    per_page: 20,
-    page: 1,
-    orderby: "date",
-    order: "desc"
-  });
+  const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
+  const { records } = useInboxData({ status: statusView });
   const allRecordIds = records?.map((record) => record.id) ?? [];
   const handleClose = (0, import_element78.useCallback)(() => {
     navigate({
