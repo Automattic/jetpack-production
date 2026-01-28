@@ -24390,272 +24390,6 @@ var EmptyTrashButton = ({
 };
 var empty_trash_button_default = EmptyTrashButton;
 
-// src/dashboard/components/flag/index.tsx
-var import_components65 = __toESM(require_components(), 1);
-
-// src/util/country-names-translated.js
-var import_i18n64 = __toESM(require_i18n(), 1);
-var translatedCountryNames = {
-  AF: (0, import_i18n64.__)("Afghanistan", "jetpack-forms"),
-  AL: (0, import_i18n64.__)("Albania", "jetpack-forms"),
-  DZ: (0, import_i18n64.__)("Algeria", "jetpack-forms"),
-  AS: (0, import_i18n64.__)("American Samoa", "jetpack-forms"),
-  AD: (0, import_i18n64.__)("Andorra", "jetpack-forms"),
-  AO: (0, import_i18n64.__)("Angola", "jetpack-forms"),
-  AI: (0, import_i18n64.__)("Anguilla", "jetpack-forms"),
-  AG: (0, import_i18n64.__)("Antigua and Barbuda", "jetpack-forms"),
-  AR: (0, import_i18n64.__)("Argentina", "jetpack-forms"),
-  AM: (0, import_i18n64.__)("Armenia", "jetpack-forms"),
-  AW: (0, import_i18n64.__)("Aruba", "jetpack-forms"),
-  AU: (0, import_i18n64.__)("Australia", "jetpack-forms"),
-  AT: (0, import_i18n64.__)("Austria", "jetpack-forms"),
-  AZ: (0, import_i18n64.__)("Azerbaijan", "jetpack-forms"),
-  BS: (0, import_i18n64.__)("Bahamas", "jetpack-forms"),
-  BH: (0, import_i18n64.__)("Bahrain", "jetpack-forms"),
-  BD: (0, import_i18n64.__)("Bangladesh", "jetpack-forms"),
-  BB: (0, import_i18n64.__)("Barbados", "jetpack-forms"),
-  BY: (0, import_i18n64.__)("Belarus", "jetpack-forms"),
-  BE: (0, import_i18n64.__)("Belgium", "jetpack-forms"),
-  BZ: (0, import_i18n64.__)("Belize", "jetpack-forms"),
-  BJ: (0, import_i18n64.__)("Benin", "jetpack-forms"),
-  BM: (0, import_i18n64.__)("Bermuda", "jetpack-forms"),
-  BT: (0, import_i18n64.__)("Bhutan", "jetpack-forms"),
-  BO: (0, import_i18n64.__)("Bolivia", "jetpack-forms"),
-  BA: (0, import_i18n64.__)("Bosnia and Herzegovina", "jetpack-forms"),
-  BW: (0, import_i18n64.__)("Botswana", "jetpack-forms"),
-  BR: (0, import_i18n64.__)("Brazil", "jetpack-forms"),
-  IO: (0, import_i18n64.__)("British Indian Ocean Territory", "jetpack-forms"),
-  VG: (0, import_i18n64.__)("British Virgin Islands", "jetpack-forms"),
-  BN: (0, import_i18n64.__)("Brunei", "jetpack-forms"),
-  BG: (0, import_i18n64.__)("Bulgaria", "jetpack-forms"),
-  BF: (0, import_i18n64.__)("Burkina Faso", "jetpack-forms"),
-  BI: (0, import_i18n64.__)("Burundi", "jetpack-forms"),
-  KH: (0, import_i18n64.__)("Cambodia", "jetpack-forms"),
-  CM: (0, import_i18n64.__)("Cameroon", "jetpack-forms"),
-  CA: (0, import_i18n64.__)("Canada", "jetpack-forms"),
-  CV: (0, import_i18n64.__)("Cape Verde", "jetpack-forms"),
-  KY: (0, import_i18n64.__)("Cayman Islands", "jetpack-forms"),
-  CF: (0, import_i18n64.__)("Central African Republic", "jetpack-forms"),
-  TD: (0, import_i18n64.__)("Chad", "jetpack-forms"),
-  CL: (0, import_i18n64.__)("Chile", "jetpack-forms"),
-  CN: (0, import_i18n64.__)("China", "jetpack-forms"),
-  CX: (0, import_i18n64.__)("Christmas Island", "jetpack-forms"),
-  CC: (0, import_i18n64.__)("Cocos (Keeling) Islands", "jetpack-forms"),
-  CO: (0, import_i18n64.__)("Colombia", "jetpack-forms"),
-  KM: (0, import_i18n64.__)("Comoros", "jetpack-forms"),
-  CG: (0, import_i18n64.__)("Congo - Brazzaville", "jetpack-forms"),
-  CD: (0, import_i18n64.__)("Congo - Kinshasa", "jetpack-forms"),
-  CK: (0, import_i18n64.__)("Cook Islands", "jetpack-forms"),
-  CR: (0, import_i18n64.__)("Costa Rica", "jetpack-forms"),
-  HR: (0, import_i18n64.__)("Croatia", "jetpack-forms"),
-  CU: (0, import_i18n64.__)("Cuba", "jetpack-forms"),
-  CY: (0, import_i18n64.__)("Cyprus", "jetpack-forms"),
-  CZ: (0, import_i18n64.__)("Czech Republic", "jetpack-forms"),
-  CI: (0, import_i18n64.__)("C\xF4te d'Ivoire", "jetpack-forms"),
-  DK: (0, import_i18n64.__)("Denmark", "jetpack-forms"),
-  DJ: (0, import_i18n64.__)("Djibouti", "jetpack-forms"),
-  DM: (0, import_i18n64.__)("Dominica", "jetpack-forms"),
-  DO: (0, import_i18n64.__)("Dominican Republic", "jetpack-forms"),
-  EC: (0, import_i18n64.__)("Ecuador", "jetpack-forms"),
-  EG: (0, import_i18n64.__)("Egypt", "jetpack-forms"),
-  SV: (0, import_i18n64.__)("El Salvador", "jetpack-forms"),
-  GQ: (0, import_i18n64.__)("Equatorial Guinea", "jetpack-forms"),
-  ER: (0, import_i18n64.__)("Eritrea", "jetpack-forms"),
-  EE: (0, import_i18n64.__)("Estonia", "jetpack-forms"),
-  SZ: (0, import_i18n64.__)("Eswatini", "jetpack-forms"),
-  ET: (0, import_i18n64.__)("Ethiopia", "jetpack-forms"),
-  FK: (0, import_i18n64.__)("Falkland Islands", "jetpack-forms"),
-  FO: (0, import_i18n64.__)("Faroe Islands", "jetpack-forms"),
-  FJ: (0, import_i18n64.__)("Fiji", "jetpack-forms"),
-  FI: (0, import_i18n64.__)("Finland", "jetpack-forms"),
-  FR: (0, import_i18n64.__)("France", "jetpack-forms"),
-  GF: (0, import_i18n64.__)("French Guiana", "jetpack-forms"),
-  PF: (0, import_i18n64.__)("French Polynesia", "jetpack-forms"),
-  GA: (0, import_i18n64.__)("Gabon", "jetpack-forms"),
-  GM: (0, import_i18n64.__)("Gambia", "jetpack-forms"),
-  GE: (0, import_i18n64.__)("Georgia", "jetpack-forms"),
-  DE: (0, import_i18n64.__)("Germany", "jetpack-forms"),
-  GH: (0, import_i18n64.__)("Ghana", "jetpack-forms"),
-  GI: (0, import_i18n64.__)("Gibraltar", "jetpack-forms"),
-  GR: (0, import_i18n64.__)("Greece", "jetpack-forms"),
-  GL: (0, import_i18n64.__)("Greenland", "jetpack-forms"),
-  GD: (0, import_i18n64.__)("Grenada", "jetpack-forms"),
-  GP: (0, import_i18n64.__)("Guadeloupe", "jetpack-forms"),
-  GU: (0, import_i18n64.__)("Guam", "jetpack-forms"),
-  GT: (0, import_i18n64.__)("Guatemala", "jetpack-forms"),
-  GG: (0, import_i18n64.__)("Guernsey", "jetpack-forms"),
-  GN: (0, import_i18n64.__)("Guinea", "jetpack-forms"),
-  GW: (0, import_i18n64.__)("Guinea-Bissau", "jetpack-forms"),
-  GY: (0, import_i18n64.__)("Guyana", "jetpack-forms"),
-  HT: (0, import_i18n64.__)("Haiti", "jetpack-forms"),
-  HN: (0, import_i18n64.__)("Honduras", "jetpack-forms"),
-  HK: (0, import_i18n64.__)("Hong Kong", "jetpack-forms"),
-  HU: (0, import_i18n64.__)("Hungary", "jetpack-forms"),
-  IS: (0, import_i18n64.__)("Iceland", "jetpack-forms"),
-  IN: (0, import_i18n64.__)("India", "jetpack-forms"),
-  ID: (0, import_i18n64.__)("Indonesia", "jetpack-forms"),
-  IR: (0, import_i18n64.__)("Iran", "jetpack-forms"),
-  IQ: (0, import_i18n64.__)("Iraq", "jetpack-forms"),
-  IE: (0, import_i18n64.__)("Ireland", "jetpack-forms"),
-  IM: (0, import_i18n64.__)("Isle of Man", "jetpack-forms"),
-  IL: (0, import_i18n64.__)("Israel", "jetpack-forms"),
-  IT: (0, import_i18n64.__)("Italy", "jetpack-forms"),
-  JM: (0, import_i18n64.__)("Jamaica", "jetpack-forms"),
-  JP: (0, import_i18n64.__)("Japan", "jetpack-forms"),
-  JE: (0, import_i18n64.__)("Jersey", "jetpack-forms"),
-  JO: (0, import_i18n64.__)("Jordan", "jetpack-forms"),
-  KZ: (0, import_i18n64.__)("Kazakhstan", "jetpack-forms"),
-  KE: (0, import_i18n64.__)("Kenya", "jetpack-forms"),
-  KI: (0, import_i18n64.__)("Kiribati", "jetpack-forms"),
-  XK: (0, import_i18n64.__)("Kosovo", "jetpack-forms"),
-  KW: (0, import_i18n64.__)("Kuwait", "jetpack-forms"),
-  KG: (0, import_i18n64.__)("Kyrgyzstan", "jetpack-forms"),
-  LA: (0, import_i18n64.__)("Laos", "jetpack-forms"),
-  LV: (0, import_i18n64.__)("Latvia", "jetpack-forms"),
-  LB: (0, import_i18n64.__)("Lebanon", "jetpack-forms"),
-  LS: (0, import_i18n64.__)("Lesotho", "jetpack-forms"),
-  LR: (0, import_i18n64.__)("Liberia", "jetpack-forms"),
-  LY: (0, import_i18n64.__)("Libya", "jetpack-forms"),
-  LI: (0, import_i18n64.__)("Liechtenstein", "jetpack-forms"),
-  LT: (0, import_i18n64.__)("Lithuania", "jetpack-forms"),
-  LU: (0, import_i18n64.__)("Luxembourg", "jetpack-forms"),
-  MO: (0, import_i18n64.__)("Macao", "jetpack-forms"),
-  MG: (0, import_i18n64.__)("Madagascar", "jetpack-forms"),
-  MW: (0, import_i18n64.__)("Malawi", "jetpack-forms"),
-  MY: (0, import_i18n64.__)("Malaysia", "jetpack-forms"),
-  MV: (0, import_i18n64.__)("Maldives", "jetpack-forms"),
-  ML: (0, import_i18n64.__)("Mali", "jetpack-forms"),
-  MT: (0, import_i18n64.__)("Malta", "jetpack-forms"),
-  MH: (0, import_i18n64.__)("Marshall Islands", "jetpack-forms"),
-  MQ: (0, import_i18n64.__)("Martinique", "jetpack-forms"),
-  MR: (0, import_i18n64.__)("Mauritania", "jetpack-forms"),
-  MU: (0, import_i18n64.__)("Mauritius", "jetpack-forms"),
-  YT: (0, import_i18n64.__)("Mayotte", "jetpack-forms"),
-  MX: (0, import_i18n64.__)("Mexico", "jetpack-forms"),
-  FM: (0, import_i18n64.__)("Micronesia", "jetpack-forms"),
-  MD: (0, import_i18n64.__)("Moldova", "jetpack-forms"),
-  MC: (0, import_i18n64.__)("Monaco", "jetpack-forms"),
-  MN: (0, import_i18n64.__)("Mongolia", "jetpack-forms"),
-  ME: (0, import_i18n64.__)("Montenegro", "jetpack-forms"),
-  MS: (0, import_i18n64.__)("Montserrat", "jetpack-forms"),
-  MA: (0, import_i18n64.__)("Morocco", "jetpack-forms"),
-  MZ: (0, import_i18n64.__)("Mozambique", "jetpack-forms"),
-  MM: (0, import_i18n64.__)("Myanmar", "jetpack-forms"),
-  NA: (0, import_i18n64.__)("Namibia", "jetpack-forms"),
-  NR: (0, import_i18n64.__)("Nauru", "jetpack-forms"),
-  NP: (0, import_i18n64.__)("Nepal", "jetpack-forms"),
-  NL: (0, import_i18n64.__)("Netherlands", "jetpack-forms"),
-  NC: (0, import_i18n64.__)("New Caledonia", "jetpack-forms"),
-  NZ: (0, import_i18n64.__)("New Zealand", "jetpack-forms"),
-  NI: (0, import_i18n64.__)("Nicaragua", "jetpack-forms"),
-  NE: (0, import_i18n64.__)("Niger", "jetpack-forms"),
-  NG: (0, import_i18n64.__)("Nigeria", "jetpack-forms"),
-  NU: (0, import_i18n64.__)("Niue", "jetpack-forms"),
-  NF: (0, import_i18n64.__)("Norfolk Island", "jetpack-forms"),
-  KP: (0, import_i18n64.__)("North Korea", "jetpack-forms"),
-  MK: (0, import_i18n64.__)("North Macedonia", "jetpack-forms"),
-  MP: (0, import_i18n64.__)("Northern Mariana Islands", "jetpack-forms"),
-  NO: (0, import_i18n64.__)("Norway", "jetpack-forms"),
-  OM: (0, import_i18n64.__)("Oman", "jetpack-forms"),
-  PK: (0, import_i18n64.__)("Pakistan", "jetpack-forms"),
-  PW: (0, import_i18n64.__)("Palau", "jetpack-forms"),
-  PS: (0, import_i18n64.__)("Palestine", "jetpack-forms"),
-  PA: (0, import_i18n64.__)("Panama", "jetpack-forms"),
-  PG: (0, import_i18n64.__)("Papua New Guinea", "jetpack-forms"),
-  PY: (0, import_i18n64.__)("Paraguay", "jetpack-forms"),
-  PE: (0, import_i18n64.__)("Peru", "jetpack-forms"),
-  PH: (0, import_i18n64.__)("Philippines", "jetpack-forms"),
-  PN: (0, import_i18n64.__)("Pitcairn Islands", "jetpack-forms"),
-  PL: (0, import_i18n64.__)("Poland", "jetpack-forms"),
-  PT: (0, import_i18n64.__)("Portugal", "jetpack-forms"),
-  PR: (0, import_i18n64.__)("Puerto Rico", "jetpack-forms"),
-  QA: (0, import_i18n64.__)("Qatar", "jetpack-forms"),
-  RO: (0, import_i18n64.__)("Romania", "jetpack-forms"),
-  RU: (0, import_i18n64.__)("Russia", "jetpack-forms"),
-  RW: (0, import_i18n64.__)("Rwanda", "jetpack-forms"),
-  RE: (0, import_i18n64.__)("R\xE9union", "jetpack-forms"),
-  BL: (0, import_i18n64.__)("Saint Barth\xE9lemy", "jetpack-forms"),
-  SH: (0, import_i18n64.__)("Saint Helena", "jetpack-forms"),
-  KN: (0, import_i18n64.__)("Saint Kitts and Nevis", "jetpack-forms"),
-  LC: (0, import_i18n64.__)("Saint Lucia", "jetpack-forms"),
-  MF: (0, import_i18n64.__)("Saint Martin", "jetpack-forms"),
-  PM: (0, import_i18n64.__)("Saint Pierre and Miquelon", "jetpack-forms"),
-  VC: (0, import_i18n64.__)("Saint Vincent and the Grenadines", "jetpack-forms"),
-  WS: (0, import_i18n64.__)("Samoa", "jetpack-forms"),
-  SM: (0, import_i18n64.__)("San Marino", "jetpack-forms"),
-  SA: (0, import_i18n64.__)("Saudi Arabia", "jetpack-forms"),
-  SN: (0, import_i18n64.__)("Senegal", "jetpack-forms"),
-  RS: (0, import_i18n64.__)("Serbia", "jetpack-forms"),
-  SC: (0, import_i18n64.__)("Seychelles", "jetpack-forms"),
-  SL: (0, import_i18n64.__)("Sierra Leone", "jetpack-forms"),
-  SG: (0, import_i18n64.__)("Singapore", "jetpack-forms"),
-  SK: (0, import_i18n64.__)("Slovakia", "jetpack-forms"),
-  SI: (0, import_i18n64.__)("Slovenia", "jetpack-forms"),
-  SB: (0, import_i18n64.__)("Solomon Islands", "jetpack-forms"),
-  SO: (0, import_i18n64.__)("Somalia", "jetpack-forms"),
-  ZA: (0, import_i18n64.__)("South Africa", "jetpack-forms"),
-  GS: (0, import_i18n64.__)("South Georgia and the South Sandwich Islands", "jetpack-forms"),
-  KR: (0, import_i18n64.__)("South Korea", "jetpack-forms"),
-  ES: (0, import_i18n64.__)("Spain", "jetpack-forms"),
-  LK: (0, import_i18n64.__)("Sri Lanka", "jetpack-forms"),
-  SD: (0, import_i18n64.__)("Sudan", "jetpack-forms"),
-  SR: (0, import_i18n64.__)("Suriname", "jetpack-forms"),
-  SJ: (0, import_i18n64.__)("Svalbard and Jan Mayen", "jetpack-forms"),
-  SE: (0, import_i18n64.__)("Sweden", "jetpack-forms"),
-  CH: (0, import_i18n64.__)("Switzerland", "jetpack-forms"),
-  SY: (0, import_i18n64.__)("Syria", "jetpack-forms"),
-  ST: (0, import_i18n64.__)("S\xE3o Tom\xE9 and Pr\xEDncipe", "jetpack-forms"),
-  TW: (0, import_i18n64.__)("Taiwan", "jetpack-forms"),
-  TJ: (0, import_i18n64.__)("Tajikistan", "jetpack-forms"),
-  TZ: (0, import_i18n64.__)("Tanzania", "jetpack-forms"),
-  TH: (0, import_i18n64.__)("Thailand", "jetpack-forms"),
-  TL: (0, import_i18n64.__)("Timor-Leste", "jetpack-forms"),
-  TG: (0, import_i18n64.__)("Togo", "jetpack-forms"),
-  TK: (0, import_i18n64.__)("Tokelau", "jetpack-forms"),
-  TO: (0, import_i18n64.__)("Tonga", "jetpack-forms"),
-  TT: (0, import_i18n64.__)("Trinidad and Tobago", "jetpack-forms"),
-  TN: (0, import_i18n64.__)("Tunisia", "jetpack-forms"),
-  TR: (0, import_i18n64.__)("Turkey", "jetpack-forms"),
-  TM: (0, import_i18n64.__)("Turkmenistan", "jetpack-forms"),
-  TC: (0, import_i18n64.__)("Turks and Caicos Islands", "jetpack-forms"),
-  TV: (0, import_i18n64.__)("Tuvalu", "jetpack-forms"),
-  VI: (0, import_i18n64.__)("U.S. Virgin Islands", "jetpack-forms"),
-  UG: (0, import_i18n64.__)("Uganda", "jetpack-forms"),
-  UA: (0, import_i18n64.__)("Ukraine", "jetpack-forms"),
-  AE: (0, import_i18n64.__)("United Arab Emirates", "jetpack-forms"),
-  GB: (0, import_i18n64.__)("United Kingdom", "jetpack-forms"),
-  US: (0, import_i18n64.__)("United States", "jetpack-forms"),
-  UY: (0, import_i18n64.__)("Uruguay", "jetpack-forms"),
-  UZ: (0, import_i18n64.__)("Uzbekistan", "jetpack-forms"),
-  VU: (0, import_i18n64.__)("Vanuatu", "jetpack-forms"),
-  VA: (0, import_i18n64.__)("Vatican City", "jetpack-forms"),
-  VE: (0, import_i18n64.__)("Venezuela", "jetpack-forms"),
-  VN: (0, import_i18n64.__)("Vietnam", "jetpack-forms"),
-  WF: (0, import_i18n64.__)("Wallis and Futuna", "jetpack-forms"),
-  YE: (0, import_i18n64.__)("Yemen", "jetpack-forms"),
-  ZM: (0, import_i18n64.__)("Zambia", "jetpack-forms"),
-  ZW: (0, import_i18n64.__)("Zimbabwe", "jetpack-forms")
-};
-var getTranslatedCountryName = (countryCode) => {
-  return translatedCountryNames[countryCode] || countryCode;
-};
-
-// src/dashboard/components/flag/index.tsx
-var import_jsx_runtime140 = __toESM(require_jsx_runtime(), 1);
-function Flag({ countryCode }) {
-  if (!countryCode) {
-    return null;
-  }
-  const upperCountryCode = countryCode.toUpperCase();
-  const offset = 127397;
-  const flag = String.fromCodePoint(
-    upperCountryCode.charCodeAt(0) + offset,
-    upperCountryCode.charCodeAt(1) + offset
-  );
-  const countryName = getTranslatedCountryName(countryCode);
-  return /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(import_components65.Tooltip, { text: countryName, children: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)("span", { "aria-label": countryName, role: "img", children: flag }) });
-}
-
 // ../../../node_modules/.pnpm/@gravatar-com+hovercards@0.15.0/node_modules/@gravatar-com/hovercards/dist/index.mjs
 var __webpack_require__ = {};
 (() => {
@@ -25290,7 +25024,7 @@ document.head.appendChild(document.createElement("style")).appendChild(document.
 
 // src/dashboard/components/gravatar/index.tsx
 var import_element72 = __toESM(require_element(), 1);
-var import_i18n65 = __toESM(require_i18n(), 1);
+var import_i18n64 = __toESM(require_i18n(), 1);
 var import_js_sha256 = __toESM(require_sha256(), 1);
 
 // src/dashboard/components/gravatar/style.scss
@@ -25303,7 +25037,7 @@ var css7 = `.jp-forms__gravatar {
 document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css7));
 
 // src/dashboard/components/gravatar/index.tsx
-var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime140 = __toESM(require_jsx_runtime(), 1);
 function Gravatar({
   defaultImage = "initials",
   displayName,
@@ -25318,25 +25052,25 @@ function Gravatar({
       hovercardRef.current = new __webpack_exports__Hovercards({
         // Documented at https://github.com/Automattic/gravatar/tree/trunk/web/packages/hovercards#translations
         i18n: {
-          "Edit your profile \u2192": (0, import_i18n65.__)("Edit your profile \u2192", "jetpack-forms"),
-          "View profile \u2192": (0, import_i18n65.__)("View profile \u2192", "jetpack-forms"),
-          Contact: (0, import_i18n65.__)("Contact", "jetpack-forms"),
-          "Send money": (0, import_i18n65.__)("Send money", "jetpack-forms"),
-          "Sorry, we are unable to load this Gravatar profile.": (0, import_i18n65.__)(
+          "Edit your profile \u2192": (0, import_i18n64.__)("Edit your profile \u2192", "jetpack-forms"),
+          "View profile \u2192": (0, import_i18n64.__)("View profile \u2192", "jetpack-forms"),
+          Contact: (0, import_i18n64.__)("Contact", "jetpack-forms"),
+          "Send money": (0, import_i18n64.__)("Send money", "jetpack-forms"),
+          "Sorry, we are unable to load this Gravatar profile.": (0, import_i18n64.__)(
             "Sorry, we are unable to load this Gravatar profile.",
             "jetpack-forms"
           ),
-          "Gravatar not found.": (0, import_i18n65.__)("Gravatar not found.", "jetpack-forms"),
-          "Too Many Requests.": (0, import_i18n65.__)("Too many requests.", "jetpack-forms"),
-          "Internal Server Error.": (0, import_i18n65.__)("Internal server error.", "jetpack-forms"),
-          "Is this you?": (0, import_i18n65.__)("Is this you?", "jetpack-forms"),
-          "Claim your free profile.": (0, import_i18n65.__)("Claim your free profile.", "jetpack-forms"),
-          Email: (0, import_i18n65.__)("Email", "jetpack-forms"),
-          "Home Phone": (0, import_i18n65.__)("Home phone", "jetpack-forms"),
-          "Work Phone": (0, import_i18n65.__)("Work phone", "jetpack-forms"),
-          "Cell Phone": (0, import_i18n65.__)("Cell phone", "jetpack-forms"),
-          "Contact Form": (0, import_i18n65.__)("Contact form", "jetpack-forms"),
-          Calendar: (0, import_i18n65.__)("Calendar", "jetpack-forms")
+          "Gravatar not found.": (0, import_i18n64.__)("Gravatar not found.", "jetpack-forms"),
+          "Too Many Requests.": (0, import_i18n64.__)("Too many requests.", "jetpack-forms"),
+          "Internal Server Error.": (0, import_i18n64.__)("Internal server error.", "jetpack-forms"),
+          "Is this you?": (0, import_i18n64.__)("Is this you?", "jetpack-forms"),
+          "Claim your free profile.": (0, import_i18n64.__)("Claim your free profile.", "jetpack-forms"),
+          Email: (0, import_i18n64.__)("Email", "jetpack-forms"),
+          "Home Phone": (0, import_i18n64.__)("Home phone", "jetpack-forms"),
+          "Work Phone": (0, import_i18n64.__)("Work phone", "jetpack-forms"),
+          "Cell Phone": (0, import_i18n64.__)("Cell phone", "jetpack-forms"),
+          "Contact Form": (0, import_i18n64.__)("Contact form", "jetpack-forms"),
+          Calendar: (0, import_i18n64.__)("Calendar", "jetpack-forms")
         }
       });
       hovercardRef.current.attach(profileImageRef.current);
@@ -25346,7 +25080,7 @@ function Gravatar({
     return null;
   }
   const hashedEmail = (0, import_js_sha256.sha256)(email);
-  return /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
     "img",
     {
       alt: displayName || "",
@@ -25358,45 +25092,6 @@ function Gravatar({
     }
   );
 }
-
-// routes/responses/style.scss
-var css8 = `@media (max-width: 782px) {
-  .admin-ui-page__header {
-    top: 46px;
-  }
-}
-
-.jp-forms-dataviews__view-actions {
-  border-bottom: 1px solid var(--wpds-color-stroke-surface-neutral, #e0e0e0);
-  padding-inline: 20px;
-  overflow-x: auto;
-  width: 100%;
-  box-sizing: border-box;
-  container-type: inline-size;
-  flex-shrink: 0;
-}
-@container (width < 500px) {
-  .jp-forms-dataviews__view-actions {
-    --wp-ui-stack-justify: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-.jp-forms-dataviews__view-actions > div:not(:empty) {
-  min-height: 48px;
-}
-
-.jp-forms__inbox-response-country-flag {
-  font-size: 16px;
-  display: inline;
-  padding-right: 4px;
-  vertical-align: middle;
-}
-.jp-forms__inbox-response-country-flag svg {
-  fill: currentColor;
-  vertical-align: text-top;
-}`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css8));
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/index.parts.js
 var index_parts_exports = {};
@@ -25893,7 +25588,7 @@ function useCompositeListContext() {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/list/CompositeList.js
-var import_jsx_runtime142 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
 function CompositeList(props) {
   const {
     children,
@@ -25999,7 +25694,7 @@ function CompositeList(props) {
     labelsRef,
     nextIndexRef
   }), [register4, unregister, subscribeMapChange, elementsRef, labelsRef, nextIndexRef]);
-  return /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(CompositeListContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(CompositeListContext.Provider, {
     value: contextValue,
     children
   });
@@ -26059,7 +25754,7 @@ var tabsStateAttributesMapping = {
 };
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/root/TabsRoot.js
-var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime142 = __toESM(require_jsx_runtime(), 1);
 var TabsRoot = /* @__PURE__ */ React19.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
   const {
     className,
@@ -26154,9 +25849,9 @@ var TabsRoot = /* @__PURE__ */ React19.forwardRef(function TabsRoot2(componentPr
     props: elementProps,
     stateAttributesMapping: tabsStateAttributesMapping
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(TabsRootContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(TabsRootContext.Provider, {
     value: tabsContextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(CompositeList, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(CompositeList, {
       elementsRef: tabPanelRefs,
       children: element
     })
@@ -27160,7 +26855,7 @@ var TabsIndicatorCssVars = /* @__PURE__ */ (function(TabsIndicatorCssVars2) {
 })({});
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/indicator/TabsIndicator.js
-var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
 var stateAttributesMapping = {
   ...tabsStateAttributesMapping,
   activeTabPosition: () => null,
@@ -27271,8 +26966,8 @@ var TabsIndicator = /* @__PURE__ */ React31.forwardRef(function TabIndicator(com
   if (activeTabValue == null) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(React31.Fragment, {
-    children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime144.jsx)("script", {
+  return /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)(React31.Fragment, {
+    children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("script", {
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML: {
         __html: script
@@ -27681,7 +27376,7 @@ function isModifierKeySet(event, ignoredModifierKeys) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/root/CompositeRoot.js
-var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
 function CompositeRoot(componentProps) {
   const {
     render: render4,
@@ -27742,9 +27437,9 @@ function CompositeRoot(componentProps) {
     highlightItemOnHover,
     relayKeyboardEvent
   }), [highlightedIndex, onHighlightedIndexChange, highlightItemOnHover, relayKeyboardEvent]);
-  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(CompositeRootContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(CompositeRootContext.Provider, {
     value: contextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(CompositeList, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(CompositeList, {
       elementsRef,
       onMapChange: (newMap) => {
         onMapChangeProp?.(newMap);
@@ -27756,7 +27451,7 @@ function CompositeRoot(componentProps) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/list/TabsList.js
-var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
 var TabsList = /* @__PURE__ */ React35.forwardRef(function TabsList2(componentProps, forwardedRef) {
   const {
     activateOnFocus = false,
@@ -27805,9 +27500,9 @@ var TabsList = /* @__PURE__ */ React35.forwardRef(function TabsList2(componentPr
     tabsListElement,
     value
   }), [activateOnFocus, highlightedTabIndex, onTabActivation, setHighlightedTabIndex, tabsListElement, value]);
-  return /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(TabsListContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(TabsListContext.Provider, {
     value: tabsListContextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(CompositeRoot, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(CompositeRoot, {
       render: render4,
       className,
       state,
@@ -27905,7 +27600,7 @@ var import_compose12 = __toESM(require_compose(), 1);
 var import_react26 = __toESM(require_react(), 1);
 
 // src/dashboard/components/tabs/style.scss
-var css9 = `/* stylelint-disable plugin-wpds/no-setting-wpds-custom-properties -- TODO */
+var css8 = `/* stylelint-disable plugin-wpds/no-setting-wpds-custom-properties -- TODO */
 /* stylelint-disable plugin-wpds/no-unknown-ds-tokens -- TODO */
 /**
  * Tabs component styles
@@ -28147,10 +27842,10 @@ var css9 = `/* stylelint-disable plugin-wpds/no-setting-wpds-custom-properties -
   outline: 2px solid transparent;
   outline-offset: 0;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css9));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css8));
 
 // src/dashboard/components/tabs/list.tsx
-var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
 var DEFAULT_SCROLL_MARGIN = 0;
 var List = (0, import_react26.forwardRef)(function TabList({ children, density = "default", className, activateOnFocus, render: render4, ...otherProps }, forwardedRef) {
   const [listEl, setListEl] = (0, import_react26.useState)(null);
@@ -28209,11 +27904,11 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       } else if (typeof render4 === "function") {
         return render4(newProps, state);
       }
-      return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)("div", { ...newProps });
+      return /* @__PURE__ */ (0, import_jsx_runtime146.jsx)("div", { ...newProps });
     },
     [render4]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime147.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(
     index_parts_exports.List,
     {
       ref: mergedListRef,
@@ -28230,7 +27925,7 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       ...otherProps,
       children: [
         children,
-        /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(index_parts_exports.Indicator, { className: "jp-forms-tabs__indicator" })
+        /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(index_parts_exports.Indicator, { className: "jp-forms-tabs__indicator" })
       ]
     }
   );
@@ -28238,9 +27933,9 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
 
 // src/dashboard/components/tabs/panel.tsx
 var import_react27 = __toESM(require_react(), 1);
-var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
 var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focusable = true, tabIndex, ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(
     index_parts_exports.Panel,
     {
       ref: forwardedRef,
@@ -28253,31 +27948,332 @@ var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focus
 
 // src/dashboard/components/tabs/root.tsx
 var import_react28 = __toESM(require_react(), 1);
-var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
 var Root = (0, import_react28.forwardRef)(function TabsRoot3({ ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
+  return /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
 });
 
 // src/dashboard/components/tabs/tab.tsx
 var import_react29 = __toESM(require_react(), 1);
-var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
 var ChevronRight = (props) => {
   return (0, import_react29.cloneElement)(chevron_right_default, props);
 };
 var Tab = (0, import_react29.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)(
     index_parts_exports.Tab,
     {
       ref: forwardedRef,
       className: clsx_default("jp-forms-tabs__tab", className),
       ...otherProps,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { className: "jp-forms-tabs__tab__children", children }),
-        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(ChevronRight, { className: "jp-forms-tabs__tab__chevron" })
+        /* @__PURE__ */ (0, import_jsx_runtime149.jsx)("span", { className: "jp-forms-tabs__tab__children", children }),
+        /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(ChevronRight, { className: "jp-forms-tabs__tab__chevron" })
       ]
     }
   );
 });
+
+// src/dashboard/components/text-with-flag/index.tsx
+var import_components65 = __toESM(require_components(), 1);
+
+// src/util/country-names-translated.js
+var import_i18n65 = __toESM(require_i18n(), 1);
+var translatedCountryNames = {
+  AF: (0, import_i18n65.__)("Afghanistan", "jetpack-forms"),
+  AL: (0, import_i18n65.__)("Albania", "jetpack-forms"),
+  DZ: (0, import_i18n65.__)("Algeria", "jetpack-forms"),
+  AS: (0, import_i18n65.__)("American Samoa", "jetpack-forms"),
+  AD: (0, import_i18n65.__)("Andorra", "jetpack-forms"),
+  AO: (0, import_i18n65.__)("Angola", "jetpack-forms"),
+  AI: (0, import_i18n65.__)("Anguilla", "jetpack-forms"),
+  AG: (0, import_i18n65.__)("Antigua and Barbuda", "jetpack-forms"),
+  AR: (0, import_i18n65.__)("Argentina", "jetpack-forms"),
+  AM: (0, import_i18n65.__)("Armenia", "jetpack-forms"),
+  AW: (0, import_i18n65.__)("Aruba", "jetpack-forms"),
+  AU: (0, import_i18n65.__)("Australia", "jetpack-forms"),
+  AT: (0, import_i18n65.__)("Austria", "jetpack-forms"),
+  AZ: (0, import_i18n65.__)("Azerbaijan", "jetpack-forms"),
+  BS: (0, import_i18n65.__)("Bahamas", "jetpack-forms"),
+  BH: (0, import_i18n65.__)("Bahrain", "jetpack-forms"),
+  BD: (0, import_i18n65.__)("Bangladesh", "jetpack-forms"),
+  BB: (0, import_i18n65.__)("Barbados", "jetpack-forms"),
+  BY: (0, import_i18n65.__)("Belarus", "jetpack-forms"),
+  BE: (0, import_i18n65.__)("Belgium", "jetpack-forms"),
+  BZ: (0, import_i18n65.__)("Belize", "jetpack-forms"),
+  BJ: (0, import_i18n65.__)("Benin", "jetpack-forms"),
+  BM: (0, import_i18n65.__)("Bermuda", "jetpack-forms"),
+  BT: (0, import_i18n65.__)("Bhutan", "jetpack-forms"),
+  BO: (0, import_i18n65.__)("Bolivia", "jetpack-forms"),
+  BA: (0, import_i18n65.__)("Bosnia and Herzegovina", "jetpack-forms"),
+  BW: (0, import_i18n65.__)("Botswana", "jetpack-forms"),
+  BR: (0, import_i18n65.__)("Brazil", "jetpack-forms"),
+  IO: (0, import_i18n65.__)("British Indian Ocean Territory", "jetpack-forms"),
+  VG: (0, import_i18n65.__)("British Virgin Islands", "jetpack-forms"),
+  BN: (0, import_i18n65.__)("Brunei", "jetpack-forms"),
+  BG: (0, import_i18n65.__)("Bulgaria", "jetpack-forms"),
+  BF: (0, import_i18n65.__)("Burkina Faso", "jetpack-forms"),
+  BI: (0, import_i18n65.__)("Burundi", "jetpack-forms"),
+  KH: (0, import_i18n65.__)("Cambodia", "jetpack-forms"),
+  CM: (0, import_i18n65.__)("Cameroon", "jetpack-forms"),
+  CA: (0, import_i18n65.__)("Canada", "jetpack-forms"),
+  CV: (0, import_i18n65.__)("Cape Verde", "jetpack-forms"),
+  KY: (0, import_i18n65.__)("Cayman Islands", "jetpack-forms"),
+  CF: (0, import_i18n65.__)("Central African Republic", "jetpack-forms"),
+  TD: (0, import_i18n65.__)("Chad", "jetpack-forms"),
+  CL: (0, import_i18n65.__)("Chile", "jetpack-forms"),
+  CN: (0, import_i18n65.__)("China", "jetpack-forms"),
+  CX: (0, import_i18n65.__)("Christmas Island", "jetpack-forms"),
+  CC: (0, import_i18n65.__)("Cocos (Keeling) Islands", "jetpack-forms"),
+  CO: (0, import_i18n65.__)("Colombia", "jetpack-forms"),
+  KM: (0, import_i18n65.__)("Comoros", "jetpack-forms"),
+  CG: (0, import_i18n65.__)("Congo - Brazzaville", "jetpack-forms"),
+  CD: (0, import_i18n65.__)("Congo - Kinshasa", "jetpack-forms"),
+  CK: (0, import_i18n65.__)("Cook Islands", "jetpack-forms"),
+  CR: (0, import_i18n65.__)("Costa Rica", "jetpack-forms"),
+  HR: (0, import_i18n65.__)("Croatia", "jetpack-forms"),
+  CU: (0, import_i18n65.__)("Cuba", "jetpack-forms"),
+  CY: (0, import_i18n65.__)("Cyprus", "jetpack-forms"),
+  CZ: (0, import_i18n65.__)("Czech Republic", "jetpack-forms"),
+  CI: (0, import_i18n65.__)("C\xF4te d'Ivoire", "jetpack-forms"),
+  DK: (0, import_i18n65.__)("Denmark", "jetpack-forms"),
+  DJ: (0, import_i18n65.__)("Djibouti", "jetpack-forms"),
+  DM: (0, import_i18n65.__)("Dominica", "jetpack-forms"),
+  DO: (0, import_i18n65.__)("Dominican Republic", "jetpack-forms"),
+  EC: (0, import_i18n65.__)("Ecuador", "jetpack-forms"),
+  EG: (0, import_i18n65.__)("Egypt", "jetpack-forms"),
+  SV: (0, import_i18n65.__)("El Salvador", "jetpack-forms"),
+  GQ: (0, import_i18n65.__)("Equatorial Guinea", "jetpack-forms"),
+  ER: (0, import_i18n65.__)("Eritrea", "jetpack-forms"),
+  EE: (0, import_i18n65.__)("Estonia", "jetpack-forms"),
+  SZ: (0, import_i18n65.__)("Eswatini", "jetpack-forms"),
+  ET: (0, import_i18n65.__)("Ethiopia", "jetpack-forms"),
+  FK: (0, import_i18n65.__)("Falkland Islands", "jetpack-forms"),
+  FO: (0, import_i18n65.__)("Faroe Islands", "jetpack-forms"),
+  FJ: (0, import_i18n65.__)("Fiji", "jetpack-forms"),
+  FI: (0, import_i18n65.__)("Finland", "jetpack-forms"),
+  FR: (0, import_i18n65.__)("France", "jetpack-forms"),
+  GF: (0, import_i18n65.__)("French Guiana", "jetpack-forms"),
+  PF: (0, import_i18n65.__)("French Polynesia", "jetpack-forms"),
+  GA: (0, import_i18n65.__)("Gabon", "jetpack-forms"),
+  GM: (0, import_i18n65.__)("Gambia", "jetpack-forms"),
+  GE: (0, import_i18n65.__)("Georgia", "jetpack-forms"),
+  DE: (0, import_i18n65.__)("Germany", "jetpack-forms"),
+  GH: (0, import_i18n65.__)("Ghana", "jetpack-forms"),
+  GI: (0, import_i18n65.__)("Gibraltar", "jetpack-forms"),
+  GR: (0, import_i18n65.__)("Greece", "jetpack-forms"),
+  GL: (0, import_i18n65.__)("Greenland", "jetpack-forms"),
+  GD: (0, import_i18n65.__)("Grenada", "jetpack-forms"),
+  GP: (0, import_i18n65.__)("Guadeloupe", "jetpack-forms"),
+  GU: (0, import_i18n65.__)("Guam", "jetpack-forms"),
+  GT: (0, import_i18n65.__)("Guatemala", "jetpack-forms"),
+  GG: (0, import_i18n65.__)("Guernsey", "jetpack-forms"),
+  GN: (0, import_i18n65.__)("Guinea", "jetpack-forms"),
+  GW: (0, import_i18n65.__)("Guinea-Bissau", "jetpack-forms"),
+  GY: (0, import_i18n65.__)("Guyana", "jetpack-forms"),
+  HT: (0, import_i18n65.__)("Haiti", "jetpack-forms"),
+  HN: (0, import_i18n65.__)("Honduras", "jetpack-forms"),
+  HK: (0, import_i18n65.__)("Hong Kong", "jetpack-forms"),
+  HU: (0, import_i18n65.__)("Hungary", "jetpack-forms"),
+  IS: (0, import_i18n65.__)("Iceland", "jetpack-forms"),
+  IN: (0, import_i18n65.__)("India", "jetpack-forms"),
+  ID: (0, import_i18n65.__)("Indonesia", "jetpack-forms"),
+  IR: (0, import_i18n65.__)("Iran", "jetpack-forms"),
+  IQ: (0, import_i18n65.__)("Iraq", "jetpack-forms"),
+  IE: (0, import_i18n65.__)("Ireland", "jetpack-forms"),
+  IM: (0, import_i18n65.__)("Isle of Man", "jetpack-forms"),
+  IL: (0, import_i18n65.__)("Israel", "jetpack-forms"),
+  IT: (0, import_i18n65.__)("Italy", "jetpack-forms"),
+  JM: (0, import_i18n65.__)("Jamaica", "jetpack-forms"),
+  JP: (0, import_i18n65.__)("Japan", "jetpack-forms"),
+  JE: (0, import_i18n65.__)("Jersey", "jetpack-forms"),
+  JO: (0, import_i18n65.__)("Jordan", "jetpack-forms"),
+  KZ: (0, import_i18n65.__)("Kazakhstan", "jetpack-forms"),
+  KE: (0, import_i18n65.__)("Kenya", "jetpack-forms"),
+  KI: (0, import_i18n65.__)("Kiribati", "jetpack-forms"),
+  XK: (0, import_i18n65.__)("Kosovo", "jetpack-forms"),
+  KW: (0, import_i18n65.__)("Kuwait", "jetpack-forms"),
+  KG: (0, import_i18n65.__)("Kyrgyzstan", "jetpack-forms"),
+  LA: (0, import_i18n65.__)("Laos", "jetpack-forms"),
+  LV: (0, import_i18n65.__)("Latvia", "jetpack-forms"),
+  LB: (0, import_i18n65.__)("Lebanon", "jetpack-forms"),
+  LS: (0, import_i18n65.__)("Lesotho", "jetpack-forms"),
+  LR: (0, import_i18n65.__)("Liberia", "jetpack-forms"),
+  LY: (0, import_i18n65.__)("Libya", "jetpack-forms"),
+  LI: (0, import_i18n65.__)("Liechtenstein", "jetpack-forms"),
+  LT: (0, import_i18n65.__)("Lithuania", "jetpack-forms"),
+  LU: (0, import_i18n65.__)("Luxembourg", "jetpack-forms"),
+  MO: (0, import_i18n65.__)("Macao", "jetpack-forms"),
+  MG: (0, import_i18n65.__)("Madagascar", "jetpack-forms"),
+  MW: (0, import_i18n65.__)("Malawi", "jetpack-forms"),
+  MY: (0, import_i18n65.__)("Malaysia", "jetpack-forms"),
+  MV: (0, import_i18n65.__)("Maldives", "jetpack-forms"),
+  ML: (0, import_i18n65.__)("Mali", "jetpack-forms"),
+  MT: (0, import_i18n65.__)("Malta", "jetpack-forms"),
+  MH: (0, import_i18n65.__)("Marshall Islands", "jetpack-forms"),
+  MQ: (0, import_i18n65.__)("Martinique", "jetpack-forms"),
+  MR: (0, import_i18n65.__)("Mauritania", "jetpack-forms"),
+  MU: (0, import_i18n65.__)("Mauritius", "jetpack-forms"),
+  YT: (0, import_i18n65.__)("Mayotte", "jetpack-forms"),
+  MX: (0, import_i18n65.__)("Mexico", "jetpack-forms"),
+  FM: (0, import_i18n65.__)("Micronesia", "jetpack-forms"),
+  MD: (0, import_i18n65.__)("Moldova", "jetpack-forms"),
+  MC: (0, import_i18n65.__)("Monaco", "jetpack-forms"),
+  MN: (0, import_i18n65.__)("Mongolia", "jetpack-forms"),
+  ME: (0, import_i18n65.__)("Montenegro", "jetpack-forms"),
+  MS: (0, import_i18n65.__)("Montserrat", "jetpack-forms"),
+  MA: (0, import_i18n65.__)("Morocco", "jetpack-forms"),
+  MZ: (0, import_i18n65.__)("Mozambique", "jetpack-forms"),
+  MM: (0, import_i18n65.__)("Myanmar", "jetpack-forms"),
+  NA: (0, import_i18n65.__)("Namibia", "jetpack-forms"),
+  NR: (0, import_i18n65.__)("Nauru", "jetpack-forms"),
+  NP: (0, import_i18n65.__)("Nepal", "jetpack-forms"),
+  NL: (0, import_i18n65.__)("Netherlands", "jetpack-forms"),
+  NC: (0, import_i18n65.__)("New Caledonia", "jetpack-forms"),
+  NZ: (0, import_i18n65.__)("New Zealand", "jetpack-forms"),
+  NI: (0, import_i18n65.__)("Nicaragua", "jetpack-forms"),
+  NE: (0, import_i18n65.__)("Niger", "jetpack-forms"),
+  NG: (0, import_i18n65.__)("Nigeria", "jetpack-forms"),
+  NU: (0, import_i18n65.__)("Niue", "jetpack-forms"),
+  NF: (0, import_i18n65.__)("Norfolk Island", "jetpack-forms"),
+  KP: (0, import_i18n65.__)("North Korea", "jetpack-forms"),
+  MK: (0, import_i18n65.__)("North Macedonia", "jetpack-forms"),
+  MP: (0, import_i18n65.__)("Northern Mariana Islands", "jetpack-forms"),
+  NO: (0, import_i18n65.__)("Norway", "jetpack-forms"),
+  OM: (0, import_i18n65.__)("Oman", "jetpack-forms"),
+  PK: (0, import_i18n65.__)("Pakistan", "jetpack-forms"),
+  PW: (0, import_i18n65.__)("Palau", "jetpack-forms"),
+  PS: (0, import_i18n65.__)("Palestine", "jetpack-forms"),
+  PA: (0, import_i18n65.__)("Panama", "jetpack-forms"),
+  PG: (0, import_i18n65.__)("Papua New Guinea", "jetpack-forms"),
+  PY: (0, import_i18n65.__)("Paraguay", "jetpack-forms"),
+  PE: (0, import_i18n65.__)("Peru", "jetpack-forms"),
+  PH: (0, import_i18n65.__)("Philippines", "jetpack-forms"),
+  PN: (0, import_i18n65.__)("Pitcairn Islands", "jetpack-forms"),
+  PL: (0, import_i18n65.__)("Poland", "jetpack-forms"),
+  PT: (0, import_i18n65.__)("Portugal", "jetpack-forms"),
+  PR: (0, import_i18n65.__)("Puerto Rico", "jetpack-forms"),
+  QA: (0, import_i18n65.__)("Qatar", "jetpack-forms"),
+  RO: (0, import_i18n65.__)("Romania", "jetpack-forms"),
+  RU: (0, import_i18n65.__)("Russia", "jetpack-forms"),
+  RW: (0, import_i18n65.__)("Rwanda", "jetpack-forms"),
+  RE: (0, import_i18n65.__)("R\xE9union", "jetpack-forms"),
+  BL: (0, import_i18n65.__)("Saint Barth\xE9lemy", "jetpack-forms"),
+  SH: (0, import_i18n65.__)("Saint Helena", "jetpack-forms"),
+  KN: (0, import_i18n65.__)("Saint Kitts and Nevis", "jetpack-forms"),
+  LC: (0, import_i18n65.__)("Saint Lucia", "jetpack-forms"),
+  MF: (0, import_i18n65.__)("Saint Martin", "jetpack-forms"),
+  PM: (0, import_i18n65.__)("Saint Pierre and Miquelon", "jetpack-forms"),
+  VC: (0, import_i18n65.__)("Saint Vincent and the Grenadines", "jetpack-forms"),
+  WS: (0, import_i18n65.__)("Samoa", "jetpack-forms"),
+  SM: (0, import_i18n65.__)("San Marino", "jetpack-forms"),
+  SA: (0, import_i18n65.__)("Saudi Arabia", "jetpack-forms"),
+  SN: (0, import_i18n65.__)("Senegal", "jetpack-forms"),
+  RS: (0, import_i18n65.__)("Serbia", "jetpack-forms"),
+  SC: (0, import_i18n65.__)("Seychelles", "jetpack-forms"),
+  SL: (0, import_i18n65.__)("Sierra Leone", "jetpack-forms"),
+  SG: (0, import_i18n65.__)("Singapore", "jetpack-forms"),
+  SK: (0, import_i18n65.__)("Slovakia", "jetpack-forms"),
+  SI: (0, import_i18n65.__)("Slovenia", "jetpack-forms"),
+  SB: (0, import_i18n65.__)("Solomon Islands", "jetpack-forms"),
+  SO: (0, import_i18n65.__)("Somalia", "jetpack-forms"),
+  ZA: (0, import_i18n65.__)("South Africa", "jetpack-forms"),
+  GS: (0, import_i18n65.__)("South Georgia and the South Sandwich Islands", "jetpack-forms"),
+  KR: (0, import_i18n65.__)("South Korea", "jetpack-forms"),
+  ES: (0, import_i18n65.__)("Spain", "jetpack-forms"),
+  LK: (0, import_i18n65.__)("Sri Lanka", "jetpack-forms"),
+  SD: (0, import_i18n65.__)("Sudan", "jetpack-forms"),
+  SR: (0, import_i18n65.__)("Suriname", "jetpack-forms"),
+  SJ: (0, import_i18n65.__)("Svalbard and Jan Mayen", "jetpack-forms"),
+  SE: (0, import_i18n65.__)("Sweden", "jetpack-forms"),
+  CH: (0, import_i18n65.__)("Switzerland", "jetpack-forms"),
+  SY: (0, import_i18n65.__)("Syria", "jetpack-forms"),
+  ST: (0, import_i18n65.__)("S\xE3o Tom\xE9 and Pr\xEDncipe", "jetpack-forms"),
+  TW: (0, import_i18n65.__)("Taiwan", "jetpack-forms"),
+  TJ: (0, import_i18n65.__)("Tajikistan", "jetpack-forms"),
+  TZ: (0, import_i18n65.__)("Tanzania", "jetpack-forms"),
+  TH: (0, import_i18n65.__)("Thailand", "jetpack-forms"),
+  TL: (0, import_i18n65.__)("Timor-Leste", "jetpack-forms"),
+  TG: (0, import_i18n65.__)("Togo", "jetpack-forms"),
+  TK: (0, import_i18n65.__)("Tokelau", "jetpack-forms"),
+  TO: (0, import_i18n65.__)("Tonga", "jetpack-forms"),
+  TT: (0, import_i18n65.__)("Trinidad and Tobago", "jetpack-forms"),
+  TN: (0, import_i18n65.__)("Tunisia", "jetpack-forms"),
+  TR: (0, import_i18n65.__)("Turkey", "jetpack-forms"),
+  TM: (0, import_i18n65.__)("Turkmenistan", "jetpack-forms"),
+  TC: (0, import_i18n65.__)("Turks and Caicos Islands", "jetpack-forms"),
+  TV: (0, import_i18n65.__)("Tuvalu", "jetpack-forms"),
+  VI: (0, import_i18n65.__)("U.S. Virgin Islands", "jetpack-forms"),
+  UG: (0, import_i18n65.__)("Uganda", "jetpack-forms"),
+  UA: (0, import_i18n65.__)("Ukraine", "jetpack-forms"),
+  AE: (0, import_i18n65.__)("United Arab Emirates", "jetpack-forms"),
+  GB: (0, import_i18n65.__)("United Kingdom", "jetpack-forms"),
+  US: (0, import_i18n65.__)("United States", "jetpack-forms"),
+  UY: (0, import_i18n65.__)("Uruguay", "jetpack-forms"),
+  UZ: (0, import_i18n65.__)("Uzbekistan", "jetpack-forms"),
+  VU: (0, import_i18n65.__)("Vanuatu", "jetpack-forms"),
+  VA: (0, import_i18n65.__)("Vatican City", "jetpack-forms"),
+  VE: (0, import_i18n65.__)("Venezuela", "jetpack-forms"),
+  VN: (0, import_i18n65.__)("Vietnam", "jetpack-forms"),
+  WF: (0, import_i18n65.__)("Wallis and Futuna", "jetpack-forms"),
+  YE: (0, import_i18n65.__)("Yemen", "jetpack-forms"),
+  ZM: (0, import_i18n65.__)("Zambia", "jetpack-forms"),
+  ZW: (0, import_i18n65.__)("Zimbabwe", "jetpack-forms")
+};
+var getTranslatedCountryName = (countryCode) => {
+  return translatedCountryNames[countryCode] || countryCode;
+};
+
+// src/dashboard/components/text-with-flag/style.scss
+var css9 = `.jp-forms__text-with-flag-emoji {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.jp-forms__text-with-flag-globe {
+  fill: currentColor;
+  vertical-align: text-top;
+}`;
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css9));
+
+// src/dashboard/components/text-with-flag/index.tsx
+var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
+function getFlagEmoji(countryCode) {
+  if (!countryCode || countryCode.length !== 2) {
+    return "";
+  }
+  const upperCountryCode = countryCode.toUpperCase();
+  if (!/^[A-Z]{2}$/.test(upperCountryCode)) {
+    return "";
+  }
+  const offset = 127397;
+  return String.fromCodePoint(
+    upperCountryCode.charCodeAt(0) + offset,
+    upperCountryCode.charCodeAt(1) + offset
+  );
+}
+function TextWithFlag({
+  children,
+  countryCode,
+  fallbackIcon = false
+}) {
+  let flag, countryName;
+  if (countryCode) {
+    flag = getFlagEmoji(countryCode);
+    countryName = getTranslatedCountryName(countryCode);
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("span", { children: [
+    flag && /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(import_jsx_runtime150.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(import_components65.Tooltip, { text: countryName, children: /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("span", { "aria-label": countryName, role: "img", className: "jp-forms__text-with-flag-emoji", children: flag }) }),
+      " "
+    ] }),
+    !flag && fallbackIcon && /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(import_jsx_runtime150.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(icon_default, { icon: globe_default, size: 16, className: "jp-forms__text-with-flag-globe" }),
+      " "
+    ] }),
+    children
+  ] });
+}
 
 // src/dashboard/inbox/utils.js
 var getPath = (item) => {
@@ -28357,6 +28353,34 @@ function WpRouteDashboardSearchParamsProvider({
   );
   return /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(DashboardSearchParamsProvider, { value, children });
 }
+
+// routes/responses/style.scss
+var css10 = `@media (max-width: 782px) {
+  .admin-ui-page__header {
+    top: 46px;
+  }
+}
+
+.jp-forms-dataviews__view-actions {
+  border-bottom: 1px solid var(--wpds-color-stroke-surface-neutral, #e0e0e0);
+  padding-inline: 20px;
+  overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
+  container-type: inline-size;
+  flex-shrink: 0;
+}
+@container (width < 500px) {
+  .jp-forms-dataviews__view-actions {
+    --wp-ui-stack-justify: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.jp-forms-dataviews__view-actions > div:not(:empty) {
+  min-height: 48px;
+}`;
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css10));
 
 // routes/responses/stage.tsx
 var import_jsx_runtime152 = __toESM(require_jsx_runtime());
@@ -28625,13 +28649,7 @@ function Stage() {
           if (!item.ip) {
             return styleUnreadValue("-", item.is_unread);
           }
-          return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(import_jsx_runtime152.Fragment, { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("span", { className: "jp-forms__inbox-response-country-flag", children: [
-              !item.country_code && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(icon_default, { icon: globe_default, size: 20 }),
-              item.country_code && /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Flag, { countryCode: item.country_code })
-            ] }),
-            styleUnreadValue(item.ip, item.is_unread)
-          ] });
+          return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(TextWithFlag, { countryCode: item.country_code, fallbackIcon: true, children: styleUnreadValue(item.ip, item.is_unread) });
         },
         enableSorting: false
       }
@@ -29321,7 +29339,7 @@ var import_html_entities3 = __toESM(require_html_entities(), 1);
 var import_i18n68 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/response-meta/style.scss
-var css10 = `/**
+var css11 = `/**
  * Breakpoints & Media Queries
  */
 /**
@@ -29435,7 +29453,7 @@ var css10 = `/**
   vertical-align: top;
   white-space: nowrap;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css10));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css11));
 
 // src/dashboard/components/inspector/response-meta/index.tsx
 var import_jsx_runtime154 = __toESM(require_jsx_runtime(), 1);
@@ -29494,16 +29512,13 @@ var ResponseMeta = ({ response }) => {
           (0, import_i18n68.__)("IP address:", "jetpack-forms"),
           "\xA0"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)("td", { children: [
-          response.country_code && /* @__PURE__ */ (0, import_jsx_runtime154.jsx)("span", { className: "jp-forms__inbox-response-country-flag", children: /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(Flag, { countryCode: response.country_code }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(import_components68.Tooltip, { text: (0, import_i18n68.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(
-            import_components68.ExternalLink,
-            {
-              href: `https://apps.db.ripe.net/db-web-ui/query?searchtext=/${response.ip}`,
-              children: response.ip
-            }
-          ) })
-        ] })
+        /* @__PURE__ */ (0, import_jsx_runtime154.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(import_components68.Tooltip, { text: (0, import_i18n68.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(
+          import_components68.ExternalLink,
+          {
+            href: `https://apps.db.ripe.net/db-web-ui/query?searchtext=/${response.ip}`,
+            children: response.ip
+          }
+        ) }) }) })
       ] }),
       response.browser && /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)("tr", { children: [
         /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)("th", { children: [

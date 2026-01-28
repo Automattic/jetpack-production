@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: update copy from "submissions" to "responses" for consistency.
+- Improve country flag and text display consistency across the dashboard.
 - Response view: display phone numbers with country flags and international formatting.
 - Share response header via component for new and old dashboard.
 - Update package dependencies.
