@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add "View" action to the scheduled post snackbar.
+- Add 'View scheduled' link in share preview modal.
 - Sync media to connections for per network customizations.
 
 ### Changed
