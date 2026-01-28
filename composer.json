@@ -27,7 +27,7 @@
 		"automattic/jetpack-config": "^3.1.1",
 		"automattic/jetpack-connection": "^6.20.5",
 		"automattic/jetpack-constants": "^3.0.8",
-		"automattic/jetpack-device-detection": "^3.3.0",
+		"automattic/jetpack-device-detection": "^3.4.0-alpha",
 		"automattic/jetpack-error": "^3.0.6",
 		"automattic/jetpack-external-connections": "^0.1.13",
 		"automattic/jetpack-external-media": "^0.7.5",
