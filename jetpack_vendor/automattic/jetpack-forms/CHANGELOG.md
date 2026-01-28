@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Display uploaded files with icon, filename, and size on confirmation page.
 
 ### Changed
+- Forms: refactor actions for wp build dashboard
 - Forms: update copy from "submissions" to "responses" for consistency.
 - Improve country flag and text display consistency across the dashboard.
 - Response view: display phone numbers with country flags and international formatting.
