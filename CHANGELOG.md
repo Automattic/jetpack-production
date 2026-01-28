@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Likes: Display a notice to block theme users explaining they can add the Like block directly in the site editor instead of enabling the legacy feature.
+
 ### Bug fixes
 - Site Switcher: fix partial keyword matching so typing 'swit' shows 'Switch to...' results in the command palette.
 
