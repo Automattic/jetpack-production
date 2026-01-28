@@ -11226,7 +11226,7 @@ var import_components23 = __toESM(require_components(), 1);
 var import_i18n25 = __toESM(require_i18n(), 1);
 var import_element29 = __toESM(require_element(), 1);
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/__chunks/XMCVU3LR.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/XMCVU3LR.js
 function noop(..._) {
 }
 function applyState(argument, currentValue) {
@@ -11313,7 +11313,7 @@ function defaultValue(...values) {
   return void 0;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/YXGXYGQX.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/YXGXYGQX.js
 var import_react7 = __toESM(require_react(), 1);
 function setRef(ref, value) {
   if (typeof ref === "function") {
@@ -11364,7 +11364,7 @@ function mergeProps2(base, overrides) {
   return props;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/__chunks/37JWRFYW.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/3DNM6L6E.js
 var canUseDOM = checkIsBrowser();
 function checkIsBrowser() {
   var _a;
@@ -11376,11 +11376,12 @@ function getDocument(node) {
   return node.ownerDocument || document;
 }
 function getActiveElement(node, activeDescendant = false) {
+  var _a;
   const { activeElement: activeElement2 } = getDocument(node);
   if (!(activeElement2 == null ? void 0 : activeElement2.nodeName)) {
     return null;
   }
-  if (isFrame(activeElement2) && activeElement2.contentDocument) {
+  if (isFrame(activeElement2) && ((_a = activeElement2.contentDocument) == null ? void 0 : _a.body)) {
     return getActiveElement(
       activeElement2.contentDocument.body,
       activeDescendant
@@ -11528,7 +11529,7 @@ function isElementPreceding(a2, b2) {
   );
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/__chunks/O6E4ZWCP.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/SNHYQNEZ.js
 function isTouchDevice() {
   return canUseDOM && !!navigator.maxTouchPoints;
 }
@@ -11543,7 +11544,7 @@ function isFirefox() {
   return canUseDOM && /firefox\//i.test(navigator.userAgent);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/utils/events.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/utils/events.js
 function isPortalEvent(event) {
   return Boolean(
     event.currentTarget && !contains(event.currentTarget, event.target)
@@ -11635,7 +11636,7 @@ function addGlobalEventListener(type, listener, options, scope = window) {
   return removeEventListener;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/K2XTQB3X.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/KPHZR4MB.js
 var React5 = __toESM(require_react(), 1);
 var import_react8 = __toESM(require_react(), 1);
 var _React = { ...React5 };
@@ -11829,11 +11830,14 @@ function resetMouseMoving() {
   mouseMoving = false;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ILRXHV7V.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GWSL6KNJ.js
 var React6 = __toESM(require_react(), 1);
 var import_jsx_runtime68 = __toESM(require_jsx_runtime(), 1);
 function forwardRef22(render4) {
-  const Role = React6.forwardRef((props, ref) => render4({ ...props, ref }));
+  const Role = React6.forwardRef(
+    // @ts-ignore Incompatible with React 19 types. Ignore for now.
+    (props, ref) => render4({ ...props, ref })
+  );
   Role.displayName = render4.displayName || render4.name;
   return Role;
 }
@@ -11845,7 +11849,11 @@ function createElement4(Type, props) {
   const mergedRef = useMergeRefs(props.ref, getRefProperty(render4));
   let element;
   if (React6.isValidElement(render4)) {
-    const renderProps = { ...render4.props, ref: mergedRef };
+    const renderProps = {
+      // @ts-ignore Incompatible with React 19 types. Ignore for now.
+      ...render4.props,
+      ref: mergedRef
+    };
     element = React6.cloneElement(render4, mergeProps2(rest, renderProps));
   } else if (render4) {
     element = render4(rest);
@@ -11903,7 +11911,7 @@ function createStoreContext(providers = [], scopedProviders = []) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/45YOMIF3.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SMPCIMZM.js
 var ctx = createStoreContext();
 var useCollectionContext = ctx.useContext;
 var useCollectionScopedContext = ctx.useScopedContext;
@@ -11911,7 +11919,7 @@ var useCollectionProviderContext = ctx.useProviderContext;
 var CollectionContextProvider = ctx.ContextProvider;
 var CollectionScopedContextProvider = ctx.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/72IB6YNO.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/AVVXDJMZ.js
 var import_react9 = __toESM(require_react(), 1);
 var ctx2 = createStoreContext(
   [CollectionContextProvider],
@@ -11929,7 +11937,7 @@ var CompositeRowContext = (0, import_react9.createContext)(
   void 0
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/5VQZOHHZ.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/5VQZOHHZ.js
 function findFirstEnabledItem(items, excludeId) {
   return items.find((item) => {
     if (excludeId) {
@@ -11990,7 +11998,7 @@ function isItem(store4, element, exclude) {
   return true;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/DTXGDDAC.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/Z2O3VLAQ.js
 var import_react10 = __toESM(require_react(), 1);
 var TagName = "div";
 var useCollectionItem = createHook(
@@ -12026,11 +12034,11 @@ var CollectionItem = forwardRef22(function CollectionItem2(props) {
   return createElement4(TagName, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SWN3JYXT.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SWN3JYXT.js
 var import_react11 = __toESM(require_react(), 1);
 var FocusableContext = (0, import_react11.createContext)(true);
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/utils/focus.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/utils/focus.js
 var selector = "input:not([type='hidden']):not([disabled]), select:not([disabled]), textarea:not([disabled]), a[href], button:not([disabled]), [tabindex], summary, iframe, object, embed, area[href], audio[controls], video[controls], [contenteditable]:not([contenteditable='false'])";
 function isFocusable(element) {
   if (!element.matches(selector)) return false;
@@ -12076,7 +12084,7 @@ function focusIntoView(element, options) {
   }
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/US3TW2XI.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/U6HHPQDW.js
 var import_react12 = __toESM(require_react(), 1);
 var TagName2 = "div";
 var isSafariBrowser = isSafari();
@@ -12374,7 +12382,7 @@ var Focusable = forwardRef22(function Focusable2(props) {
   return createElement4(TagName2, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WJ7PHYH7.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/PZ3OL7I2.js
 var import_react13 = __toESM(require_react(), 1);
 var TagName3 = "button";
 function isNativeClick(event) {
@@ -12478,7 +12486,7 @@ var Command = forwardRef22(function Command2(props) {
   return createElement4(TagName3, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/__chunks/SXKM4CGU.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/SXKM4CGU.js
 function getInternal(store4, key) {
   const internals = store4.__unstableInternals;
   invariant(internals, "Invalid store");
@@ -12685,7 +12693,7 @@ If there's a particular need for this, please submit a feature request at https:
   );
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/Q3KUZPD7.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/Q5W46E73.js
 var React7 = __toESM(require_react(), 1);
 var import_shim = __toESM(require_shim(), 1);
 var { useSyncExternalStore } = import_shim.default;
@@ -12791,7 +12799,7 @@ function useStore(createStore2, props) {
   return [memoizedStore, updateStore];
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/FIT2LC3L.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WZWDIE3S.js
 var import_react14 = __toESM(require_react(), 1);
 var import_jsx_runtime69 = __toESM(require_jsx_runtime(), 1);
 var TagName4 = "button";
@@ -13086,7 +13094,7 @@ var CompositeItem = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/__chunks/7PRQYBBV.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/7PRQYBBV.js
 function toArray(arg) {
   if (Array.isArray(arg)) {
     return arg;
@@ -13104,7 +13112,7 @@ function reverseArray(array) {
   return array.slice().reverse();
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/E7PWFDGB.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ZMWF7ASR.js
 var import_react15 = __toESM(require_react(), 1);
 var import_jsx_runtime70 = __toESM(require_jsx_runtime(), 1);
 var TagName5 = "div";
@@ -13378,7 +13386,7 @@ var Composite5 = forwardRef22(function Composite22(props) {
   return createElement4(TagName5, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/FFSBKSAM.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/LVDQFHCH.js
 var ctx3 = createStoreContext();
 var useDisclosureContext = ctx3.useContext;
 var useDisclosureScopedContext = ctx3.useScopedContext;
@@ -13386,7 +13394,7 @@ var useDisclosureProviderContext = ctx3.useProviderContext;
 var DisclosureContextProvider = ctx3.ContextProvider;
 var DisclosureScopedContextProvider = ctx3.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/63N3TCQX.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/A62MDFCW.js
 var import_react16 = __toESM(require_react(), 1);
 var ctx4 = createStoreContext(
   [DisclosureContextProvider],
@@ -13400,7 +13408,7 @@ var DialogScopedContextProvider = ctx4.ScopedContextProvider;
 var DialogHeadingContext = (0, import_react16.createContext)(void 0);
 var DialogDescriptionContext = (0, import_react16.createContext)(void 0);
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/HAX24JB7.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6B3RXHKP.js
 var import_react17 = __toESM(require_react(), 1);
 var import_react_dom = __toESM(require_react_dom(), 1);
 var import_jsx_runtime71 = __toESM(require_jsx_runtime(), 1);
@@ -13558,7 +13566,7 @@ var DisclosureContent = forwardRef22(function DisclosureContent2({
   return /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(DisclosureContentImpl, { ...props });
 });
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/__chunks/75BJEVSH.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/75BJEVSH.js
 function createDisclosureStore(props = {}) {
   const store4 = mergeStore(
     props.store,
@@ -13615,7 +13623,7 @@ function createDisclosureStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/33YRLYNQ.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WLZ6H5FH.js
 function useDisclosureStoreProps(store4, update3, props) {
   useUpdateEffect(update3, [props.store, props.disclosure]);
   useStoreProps(store4, props, "open", "setOpen");
@@ -13624,7 +13632,7 @@ function useDisclosureStoreProps(store4, update3, props) {
   return Object.assign(store4, { disclosure: props.disclosure });
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/MWF5B7KS.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/JMU4N4M5.js
 var ctx5 = createStoreContext(
   [DialogContextProvider],
   [DialogScopedContextProvider]
@@ -13635,7 +13643,7 @@ var usePopoverProviderContext = ctx5.useProviderContext;
 var PopoverContextProvider = ctx5.ContextProvider;
 var PopoverScopedContextProvider = ctx5.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/__chunks/AMRA5WUK.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/N5XGANPW.js
 function getCommonParent(items) {
   var _a;
   const firstItem = items.find((item) => !!item.element);
@@ -13782,14 +13790,14 @@ function createCollectionStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/QHXYX2YB.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GVAFFF2B.js
 function useCollectionStoreProps(store4, update3, props) {
   useUpdateEffect(update3, [props.store]);
   useStoreProps(store4, props, "items", "setItems");
   return store4;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/__chunks/73UNQSFO.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/RVTIKFRL.js
 var NULL_ITEM = { id: null };
 function findFirstEnabledItem2(items, excludeId) {
   return items.find((item) => {
@@ -14048,7 +14056,7 @@ function createCompositeStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/VEHC2EHR.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IQYAUKXT.js
 function useCompositeStoreOptions(props) {
   const id = useId3(props.id);
   return { id, ...props };
@@ -14066,7 +14074,7 @@ function useCompositeStoreProps(store4, update3, props) {
   return store4;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/7P7IWEBR.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CVCFNOHX.js
 var import_react18 = __toESM(require_react(), 1);
 var ComboboxListRoleContext = (0, import_react18.createContext)(
   void 0
@@ -14085,17 +14093,17 @@ var ComboboxItemValueContext = (0, import_react18.createContext)(
 );
 var ComboboxItemCheckedContext = (0, import_react18.createContext)(false);
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/__chunks/KMAUV3TY.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/KMAUV3TY.js
 function createDialogStore(props = {}) {
   return createDisclosureStore(props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/5NIUVND5.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/4NYSH4UO.js
 function useDialogStoreProps(store4, update3, props) {
   return useDisclosureStoreProps(store4, update3, props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/__chunks/BFGNM53A.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/BFGNM53A.js
 function createPopoverStore({
   popover: otherPopover,
   ...props
@@ -14138,14 +14146,14 @@ function createPopoverStore({
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6RB43CMC.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/B6FLPFJM.js
 function usePopoverStoreProps(store4, update3, props) {
   useUpdateEffect(update3, [props.popover]);
   useStoreProps(store4, props, "placement");
   return useDialogStoreProps(store4, update3, props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/DTOLNWNF.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/4POTBZ2J.js
 var TagName7 = "div";
 var usePopoverAnchor = createHook(
   function usePopoverAnchor2({ store: store4, ...props }) {
@@ -14163,7 +14171,7 @@ var PopoverAnchor = forwardRef22(function PopoverAnchor2(props) {
   return createElement4(TagName7, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/RIJYZEV5.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/X6LNAU2F.js
 var import_react19 = __toESM(require_react(), 1);
 var TagName8 = "div";
 function getMouseDestination(event) {
@@ -14251,7 +14259,7 @@ var CompositeHover = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox.js
 var import_react20 = __toESM(require_react(), 1);
 var TagName9 = "input";
 function isFirstItemAutoSelected(items, activeValue, autoSelect) {
@@ -14318,7 +14326,7 @@ var useCombobox = createHook(
       setCanInline(true);
     }, [inline]);
     const storeValue = store4.useState("value");
-    const prevSelectedValueRef = (0, import_react20.useRef)();
+    const prevSelectedValueRef = (0, import_react20.useRef)(void 0);
     (0, import_react20.useEffect)(() => {
       return sync(store4, ["selectedValue", "activeId"], (_, prev) => {
         prevSelectedValueRef.current = prev.selectedValue;
@@ -14643,7 +14651,7 @@ var Combobox = forwardRef22(function Combobox2(props) {
   return createElement4(TagName9, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/QKXRU7QI.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IBXZ2LQC.js
 var import_react21 = __toESM(require_react(), 1);
 var import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
 var TagName10 = "div";
@@ -14800,7 +14808,7 @@ var ComboboxItem = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-item-value.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-item-value.js
 var import_react22 = __toESM(require_react(), 1);
 var import_jsx_runtime73 = __toESM(require_jsx_runtime(), 1);
 var TagName11 = "span";
@@ -14895,7 +14903,7 @@ var ComboboxItemValue = forwardRef22(function ComboboxItemValue2(props) {
   return createElement4(TagName11, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-label.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-label.js
 var TagName12 = "label";
 var useComboboxLabel = createHook(
   function useComboboxLabel2({ store: store4, ...props }) {
@@ -14923,7 +14931,7 @@ var ComboboxLabel = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/MDHGE4WQ.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/2G6YEJT4.js
 var import_react23 = __toESM(require_react(), 1);
 var import_jsx_runtime74 = __toESM(require_jsx_runtime(), 1);
 var TagName13 = "div";
@@ -14995,7 +15003,7 @@ var ComboboxList = forwardRef22(function ComboboxList2(props) {
   return createElement4(TagName13, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IUIPXKOL.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/XSIEPKGA.js
 var import_react24 = __toESM(require_react(), 1);
 var TagValueContext = (0, import_react24.createContext)(null);
 var TagRemoveIdContext = (0, import_react24.createContext)(
@@ -15011,7 +15019,7 @@ var useTagProviderContext = ctx7.useProviderContext;
 var TagContextProvider = ctx7.ContextProvider;
 var TagScopedContextProvider = ctx7.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.17/node_modules/@ariakit/core/esm/combobox/combobox-store.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/combobox/combobox-store.js
 var isTouchSafari = isSafari() && isTouchDevice();
 function createComboboxStore({
   tag,
@@ -15152,7 +15160,7 @@ function createComboboxStore({
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/BAEM5RK7.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SVN33SY6.js
 function useComboboxStoreOptions(props) {
   const tag = useTagContext();
   props = {
@@ -15182,7 +15190,7 @@ function useComboboxStore(props = {}) {
   return useComboboxStoreProps(store4, update3, props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.20_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-provider.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-provider.js
 var import_jsx_runtime75 = __toESM(require_jsx_runtime(), 1);
 function ComboboxProvider(props = {}) {
   const store4 = useComboboxStore(props);

@@ -343,7 +343,7 @@ var Store = class {
   }
 };
 
-// ../../../node_modules/.pnpm/@tanstack+history@1.139.0/node_modules/@tanstack/history/dist/esm/index.js
+// ../../../node_modules/.pnpm/@tanstack+history@1.154.14/node_modules/@tanstack/history/dist/esm/index.js
 var stateIndexKey = "__TSR_index";
 var popStateEvent = "popstate";
 var beforeUnloadEvent = "beforeunload";
@@ -674,18 +674,29 @@ function createBrowserHistory(opts) {
   };
   return history;
 }
+function sanitizePath(path) {
+  let sanitized = path.replace(/[\x00-\x1f\x7f]/g, "");
+  if (sanitized.startsWith("//")) {
+    sanitized = "/" + sanitized.replace(/^\/+/, "");
+  }
+  return sanitized;
+}
 function parseHref(href, state) {
-  const hashIndex = href.indexOf("#");
-  const searchIndex = href.indexOf("?");
+  const sanitizedHref = sanitizePath(href);
+  const hashIndex = sanitizedHref.indexOf("#");
+  const searchIndex = sanitizedHref.indexOf("?");
   const addedKey = createRandomKey();
   return {
-    href,
-    pathname: href.substring(
+    href: sanitizedHref,
+    pathname: sanitizedHref.substring(
       0,
-      hashIndex > 0 ? searchIndex > 0 ? Math.min(hashIndex, searchIndex) : hashIndex : searchIndex > 0 ? searchIndex : href.length
+      hashIndex > 0 ? searchIndex > 0 ? Math.min(hashIndex, searchIndex) : hashIndex : searchIndex > 0 ? searchIndex : sanitizedHref.length
     ),
-    hash: hashIndex > -1 ? href.substring(hashIndex) : "",
-    search: searchIndex > -1 ? href.slice(searchIndex, hashIndex === -1 ? void 0 : hashIndex) : "",
+    hash: hashIndex > -1 ? sanitizedHref.substring(hashIndex) : "",
+    search: searchIndex > -1 ? sanitizedHref.slice(
+      searchIndex,
+      hashIndex === -1 ? void 0 : hashIndex
+    ) : "",
     state: state || { [stateIndexKey]: 0, key: addedKey, __TSR_key: addedKey }
   };
 }
@@ -693,7 +704,22 @@ function createRandomKey() {
   return (Math.random() + 1).toString(36).substring(7);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/utils.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/isServer/client.js
+var isServer = false;
+
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/utils/batch.js
+function batch2(fn) {
+  if (isServer) {
+    return fn();
+  }
+  let result;
+  batch(() => {
+    result = fn();
+  });
+  return result;
+}
+
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/utils.js
 function last(arr) {
   return arr[arr.length - 1];
 }
@@ -707,10 +733,15 @@ function functionalUpdate(updater, previous) {
   return updater;
 }
 var hasOwn = Object.prototype.hasOwnProperty;
-function replaceEqualDeep(prev, _next) {
+var isEnumerable = Object.prototype.propertyIsEnumerable;
+function replaceEqualDeep(prev, _next, _depth = 0) {
+  if (isServer) {
+    return _next;
+  }
   if (prev === _next) {
     return prev;
   }
+  if (_depth > 500) return _next;
   const next = _next;
   const array = isPlainArray(prev) && isPlainArray(next);
   if (!array && !(isPlainObject(prev) && isPlainObject(next))) return next;
@@ -735,22 +766,22 @@ function replaceEqualDeep(prev, _next) {
       copy[key] = n;
       continue;
     }
-    const v = replaceEqualDeep(p, n);
+    const v = replaceEqualDeep(p, n, _depth + 1);
     copy[key] = v;
     if (v === p) equalItems++;
   }
   return prevSize === nextSize && equalItems === prevSize ? prev : copy;
 }
 function getEnumerableOwnKeys(o) {
-  const keys = [];
   const names = Object.getOwnPropertyNames(o);
   for (const name of names) {
-    if (!Object.prototype.propertyIsEnumerable.call(o, name)) return false;
-    keys.push(name);
+    if (!isEnumerable.call(o, name)) return false;
   }
   const symbols = Object.getOwnPropertySymbols(o);
+  if (symbols.length === 0) return names;
+  const keys = names;
   for (const symbol of symbols) {
-    if (!Object.prototype.propertyIsEnumerable.call(o, symbol)) return false;
+    if (!isEnumerable.call(o, symbol)) return false;
     keys.push(symbol);
   }
   return keys;
@@ -853,11 +884,15 @@ function findLast(array, predicate) {
   }
   return void 0;
 }
+function sanitizePathSegment(segment) {
+  return segment.replace(/[\x00-\x1f\x7f]/g, "");
+}
 function decodeSegment(segment) {
+  let decoded;
   try {
-    return decodeURI(segment);
+    decoded = decodeURI(segment);
   } catch {
-    return segment.replaceAll(/%[0-9A-F]{2}/gi, (match) => {
+    decoded = segment.replaceAll(/%[0-9A-F]{2}/gi, (match) => {
       try {
         return decodeURI(match);
       } catch {
@@ -865,9 +900,34 @@ function decodeSegment(segment) {
       }
     });
   }
+  return sanitizePathSegment(decoded);
+}
+var SAFE_URL_PROTOCOLS = ["http:", "https:", "mailto:", "tel:"];
+function isDangerousProtocol(url) {
+  if (!url) return false;
+  try {
+    const parsed = new URL(url);
+    return !SAFE_URL_PROTOCOLS.includes(parsed.protocol);
+  } catch {
+    return false;
+  }
+}
+var HTML_ESCAPE_LOOKUP = {
+  "&": "\\u0026",
+  ">": "\\u003e",
+  "<": "\\u003c",
+  "\u2028": "\\u2028",
+  "\u2029": "\\u2029"
+};
+var HTML_ESCAPE_REGEX = /[&><\u2028\u2029]/g;
+function escapeHtml(str) {
+  return str.replace(HTML_ESCAPE_REGEX, (match) => HTML_ESCAPE_LOOKUP[match]);
 }
 function decodePath(path, decodeIgnore) {
   if (!path) return path;
+  if (!/[%\\\x00-\x1f\x7f]/.test(path) && !path.startsWith("//")) {
+    return path;
+  }
   const re = decodeIgnore ? new RegExp(`${decodeIgnore.join("|")}`, "gi") : /%25|%5C/gi;
   let cursor = 0;
   let result = "";
@@ -876,7 +936,15 @@ function decodePath(path, decodeIgnore) {
     result += decodeSegment(path.slice(cursor, match.index)) + match[0];
     cursor = re.lastIndex;
   }
-  return result + decodeSegment(cursor ? path.slice(cursor) : path);
+  result = result + decodeSegment(cursor ? path.slice(cursor) : path);
+  if (result.startsWith("//")) {
+    result = "/" + result.replace(/^\/+/, "");
+  }
+  return result;
+}
+function encodeNonAscii(path) {
+  if (!/[^\u0000-\u007F]/.test(path)) return path;
+  return path.replace(/[^\u0000-\u007F]/gu, encodeURIComponent);
 }
 
 // ../../../node_modules/.pnpm/tiny-invariant@1.3.3/node_modules/tiny-invariant/dist/esm/tiny-invariant.js
@@ -894,7 +962,7 @@ function invariant(condition, message) {
   throw new Error(value);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/lru-cache.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/lru-cache.js
 function createLRUCache(max) {
   const cache = /* @__PURE__ */ new Map();
   let oldest;
@@ -959,14 +1027,22 @@ function createLRUCache(max) {
   };
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/new-process-route-tree.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/new-process-route-tree.js
 var SEGMENT_TYPE_PATHNAME = 0;
 var SEGMENT_TYPE_PARAM = 1;
 var SEGMENT_TYPE_WILDCARD = 2;
 var SEGMENT_TYPE_OPTIONAL_PARAM = 3;
-var PARAM_W_CURLY_BRACES_RE = /^([^{]*)\{\$([a-zA-Z_$][a-zA-Z0-9_$]*)\}([^}]*)$/;
-var OPTIONAL_PARAM_W_CURLY_BRACES_RE = /^([^{]*)\{-\$([a-zA-Z_$][a-zA-Z0-9_$]*)\}([^}]*)$/;
-var WILDCARD_W_CURLY_BRACES_RE = /^([^{]*)\{\$\}([^}]*)$/;
+var SEGMENT_TYPE_INDEX = 4;
+var SEGMENT_TYPE_PATHLESS = 5;
+function getOpenAndCloseBraces(part) {
+  const openBrace = part.indexOf("{");
+  if (openBrace === -1) return null;
+  const closeBrace = part.indexOf("}", openBrace);
+  if (closeBrace === -1) return null;
+  const afterOpen = openBrace + 1;
+  if (afterOpen >= part.length) return null;
+  return [openBrace, closeBrace];
+}
 function parseSegment(path, start, output = new Uint16Array(6)) {
   const next = path.indexOf("/", start);
   const end = next === -1 ? path.length : next;
@@ -999,45 +1075,44 @@ function parseSegment(path, start, output = new Uint16Array(6)) {
     output[5] = end;
     return output;
   }
-  const wildcardBracesMatch = part.match(WILDCARD_W_CURLY_BRACES_RE);
-  if (wildcardBracesMatch) {
-    const prefix2 = wildcardBracesMatch[1];
-    const pLength = prefix2.length;
-    output[0] = SEGMENT_TYPE_WILDCARD;
-    output[1] = start + pLength;
-    output[2] = start + pLength + 1;
-    output[3] = start + pLength + 2;
-    output[4] = start + pLength + 3;
-    output[5] = path.length;
-    return output;
-  }
-  const optionalParamBracesMatch = part.match(OPTIONAL_PARAM_W_CURLY_BRACES_RE);
-  if (optionalParamBracesMatch) {
-    const prefix2 = optionalParamBracesMatch[1];
-    const paramName = optionalParamBracesMatch[2];
-    const suffix = optionalParamBracesMatch[3];
-    const pLength = prefix2.length;
-    output[0] = SEGMENT_TYPE_OPTIONAL_PARAM;
-    output[1] = start + pLength;
-    output[2] = start + pLength + 3;
-    output[3] = start + pLength + 3 + paramName.length;
-    output[4] = end - suffix.length;
-    output[5] = end;
-    return output;
-  }
-  const paramBracesMatch = part.match(PARAM_W_CURLY_BRACES_RE);
-  if (paramBracesMatch) {
-    const prefix2 = paramBracesMatch[1];
-    const paramName = paramBracesMatch[2];
-    const suffix = paramBracesMatch[3];
-    const pLength = prefix2.length;
-    output[0] = SEGMENT_TYPE_PARAM;
-    output[1] = start + pLength;
-    output[2] = start + pLength + 2;
-    output[3] = start + pLength + 2 + paramName.length;
-    output[4] = end - suffix.length;
-    output[5] = end;
-    return output;
+  const braces = getOpenAndCloseBraces(part);
+  if (braces) {
+    const [openBrace, closeBrace] = braces;
+    const firstChar = part.charCodeAt(openBrace + 1);
+    if (firstChar === 45) {
+      if (openBrace + 2 < part.length && part.charCodeAt(openBrace + 2) === 36) {
+        const paramStart = openBrace + 3;
+        const paramEnd = closeBrace;
+        if (paramStart < paramEnd) {
+          output[0] = SEGMENT_TYPE_OPTIONAL_PARAM;
+          output[1] = start + openBrace;
+          output[2] = start + paramStart;
+          output[3] = start + paramEnd;
+          output[4] = start + closeBrace + 1;
+          output[5] = end;
+          return output;
+        }
+      }
+    } else if (firstChar === 36) {
+      const dollarPos = openBrace + 1;
+      const afterDollar = openBrace + 2;
+      if (afterDollar === closeBrace) {
+        output[0] = SEGMENT_TYPE_WILDCARD;
+        output[1] = start + openBrace;
+        output[2] = start + dollarPos;
+        output[3] = start + afterDollar;
+        output[4] = start + closeBrace + 1;
+        output[5] = path.length;
+        return output;
+      }
+      output[0] = SEGMENT_TYPE_PARAM;
+      output[1] = start + openBrace;
+      output[2] = start + afterDollar;
+      output[3] = start + closeBrace;
+      output[4] = start + closeBrace + 1;
+      output[5] = end;
+      return output;
+    }
   }
   output[0] = SEGMENT_TYPE_PATHNAME;
   output[1] = start;
@@ -1054,6 +1129,7 @@ function parseSegments(defaultCaseSensitive, data, route, start, node, depth, on
     const path = route.fullPath ?? route.from;
     const length = path.length;
     const caseSensitive = route.options?.caseSensitive ?? defaultCaseSensitive;
+    const skipOnParamError = !!(route.options?.params?.parse && route.options?.skipRouteOnParseError?.params);
     while (cursor < length) {
       const segment = parseSegment(path, cursor, data);
       let nextNode;
@@ -1103,8 +1179,8 @@ function parseSegments(defaultCaseSensitive, data, route, start, node, depth, on
           const actuallyCaseSensitive = caseSensitive && !!(prefix_raw || suffix_raw);
           const prefix2 = !prefix_raw ? void 0 : actuallyCaseSensitive ? prefix_raw : prefix_raw.toLowerCase();
           const suffix = !suffix_raw ? void 0 : actuallyCaseSensitive ? suffix_raw : suffix_raw.toLowerCase();
-          const existingNode = node.dynamic?.find(
-            (s) => s.caseSensitive === actuallyCaseSensitive && s.prefix === prefix2 && s.suffix === suffix
+          const existingNode = !skipOnParamError && node.dynamic?.find(
+            (s) => !s.skipOnParamError && s.caseSensitive === actuallyCaseSensitive && s.prefix === prefix2 && s.suffix === suffix
           );
           if (existingNode) {
             nextNode = existingNode;
@@ -1130,8 +1206,8 @@ function parseSegments(defaultCaseSensitive, data, route, start, node, depth, on
           const actuallyCaseSensitive = caseSensitive && !!(prefix_raw || suffix_raw);
           const prefix2 = !prefix_raw ? void 0 : actuallyCaseSensitive ? prefix_raw : prefix_raw.toLowerCase();
           const suffix = !suffix_raw ? void 0 : actuallyCaseSensitive ? suffix_raw : suffix_raw.toLowerCase();
-          const existingNode = node.optional?.find(
-            (s) => s.caseSensitive === actuallyCaseSensitive && s.prefix === prefix2 && s.suffix === suffix
+          const existingNode = !skipOnParamError && node.optional?.find(
+            (s) => !s.skipOnParamError && s.caseSensitive === actuallyCaseSensitive && s.prefix === prefix2 && s.suffix === suffix
           );
           if (existingNode) {
             nextNode = existingNode;
@@ -1173,14 +1249,36 @@ function parseSegments(defaultCaseSensitive, data, route, start, node, depth, on
       }
       node = nextNode;
     }
-    if ((route.path || !route.children) && !route.isRoot) {
-      const isIndex = path.endsWith("/");
-      if (!isIndex) node.notFound = route;
-      if (!node.route || !node.isIndex && isIndex) {
-        node.route = route;
-        node.fullPath = route.fullPath ?? route.from;
-      }
-      node.isIndex ||= isIndex;
+    if (skipOnParamError && route.children && !route.isRoot && route.id && route.id.charCodeAt(route.id.lastIndexOf("/") + 1) === 95) {
+      const pathlessNode = createStaticNode(
+        route.fullPath ?? route.from
+      );
+      pathlessNode.kind = SEGMENT_TYPE_PATHLESS;
+      pathlessNode.parent = node;
+      depth++;
+      pathlessNode.depth = depth;
+      node.pathless ??= [];
+      node.pathless.push(pathlessNode);
+      node = pathlessNode;
+    }
+    const isLeaf = (route.path || !route.children) && !route.isRoot;
+    if (isLeaf && path.endsWith("/")) {
+      const indexNode = createStaticNode(
+        route.fullPath ?? route.from
+      );
+      indexNode.kind = SEGMENT_TYPE_INDEX;
+      indexNode.parent = node;
+      depth++;
+      indexNode.depth = depth;
+      node.index = indexNode;
+      node = indexNode;
+    }
+    node.parse = route.options?.params?.parse ?? null;
+    node.skipOnParamError = skipOnParamError;
+    node.parsingPriority = route.options?.skipRouteOnParseError?.priority ?? 0;
+    if (isLeaf && !node.route) {
+      node.route = route;
+      node.fullPath = route.fullPath ?? route.from;
     }
   }
   if (route.children)
@@ -1197,6 +1295,10 @@ function parseSegments(defaultCaseSensitive, data, route, start, node, depth, on
     }
 }
 function sortDynamic(a, b) {
+  if (a.skipOnParamError && !b.skipOnParamError) return -1;
+  if (!a.skipOnParamError && b.skipOnParamError) return 1;
+  if (a.skipOnParamError && b.skipOnParamError && (a.parsingPriority || b.parsingPriority))
+    return b.parsingPriority - a.parsingPriority;
   if (a.prefix && b.prefix && a.prefix !== b.prefix) {
     if (a.prefix.startsWith(b.prefix)) return -1;
     if (b.prefix.startsWith(a.prefix)) return 1;
@@ -1214,6 +1316,11 @@ function sortDynamic(a, b) {
   return 0;
 }
 function sortTreeNodes(node) {
+  if (node.pathless) {
+    for (const child of node.pathless) {
+      sortTreeNodes(child);
+    }
+  }
   if (node.static) {
     for (const child of node.static.values()) {
       sortTreeNodes(child);
@@ -1247,6 +1354,8 @@ function createStaticNode(fullPath) {
   return {
     kind: SEGMENT_TYPE_PATHNAME,
     depth: 0,
+    pathless: null,
+    index: null,
     static: null,
     staticInsensitive: null,
     dynamic: null,
@@ -1255,14 +1364,17 @@ function createStaticNode(fullPath) {
     route: null,
     fullPath,
     parent: null,
-    isIndex: false,
-    notFound: null
+    parse: null,
+    skipOnParamError: false,
+    parsingPriority: 0
   };
 }
 function createDynamicNode(kind, fullPath, caseSensitive, prefix2, suffix) {
   return {
     kind,
     depth: 0,
+    pathless: null,
+    index: null,
     static: null,
     staticInsensitive: null,
     dynamic: null,
@@ -1271,8 +1383,9 @@ function createDynamicNode(kind, fullPath, caseSensitive, prefix2, suffix) {
     route: null,
     fullPath,
     parent: null,
-    isIndex: false,
-    notFound: null,
+    parse: null,
+    skipOnParamError: false,
+    parsingPriority: 0,
     caseSensitive,
     prefix: prefix2,
     suffix
@@ -1314,11 +1427,20 @@ function findRouteMatch(path, processedTree, fuzzy = false) {
   const cached = processedTree.matchCache.get(key);
   if (cached !== void 0) return cached;
   path ||= "/";
-  const result = findMatch(
-    path,
-    processedTree.segmentTree,
-    fuzzy
-  );
+  let result;
+  try {
+    result = findMatch(
+      path,
+      processedTree.segmentTree,
+      fuzzy
+    );
+  } catch (err) {
+    if (err instanceof URIError) {
+      result = null;
+    } else {
+      throw err;
+    }
+  }
   if (result) result.branch = buildRouteBranch(result.route);
   processedTree.matchCache.set(key, result);
   return result;
@@ -1365,27 +1487,36 @@ function findMatch(path, segmentTree, fuzzy = false) {
   const parts = path.split("/");
   const leaf = getNodeMatch(path, parts, segmentTree, fuzzy);
   if (!leaf) return null;
-  const params = extractParams(path, parts, leaf);
-  const isFuzzyMatch = "**" in leaf;
-  if (isFuzzyMatch) params["**"] = leaf["**"];
-  const route = isFuzzyMatch ? leaf.node.notFound ?? leaf.node.route : leaf.node.route;
+  const [rawParams] = extractParams(path, parts, leaf);
   return {
-    route,
-    params
+    route: leaf.node.route,
+    rawParams,
+    parsedParams: leaf.parsedParams
   };
 }
 function extractParams(path, parts, leaf) {
   const list = buildBranch(leaf.node);
   let nodeParts = null;
-  const params = {};
-  for (let partIndex = 0, nodeIndex = 0, pathIndex = 0; nodeIndex < list.length; partIndex++, nodeIndex++, pathIndex++) {
+  const rawParams = {};
+  let partIndex = leaf.extract?.part ?? 0;
+  let nodeIndex = leaf.extract?.node ?? 0;
+  let pathIndex = leaf.extract?.path ?? 0;
+  let segmentCount = leaf.extract?.segment ?? 0;
+  for (; nodeIndex < list.length; partIndex++, nodeIndex++, pathIndex++, segmentCount++) {
     const node = list[nodeIndex];
+    if (node.kind === SEGMENT_TYPE_INDEX) break;
+    if (node.kind === SEGMENT_TYPE_PATHLESS) {
+      segmentCount--;
+      partIndex--;
+      pathIndex--;
+      continue;
+    }
     const part = parts[partIndex];
     const currentPathIndex = pathIndex;
     if (part) pathIndex += part.length;
     if (node.kind === SEGMENT_TYPE_PARAM) {
       nodeParts ??= leaf.node.fullPath.split("/");
-      const nodePart = nodeParts[nodeIndex];
+      const nodePart = nodeParts[segmentCount];
       const preLength = node.prefix?.length ?? 0;
       const isCurlyBraced = nodePart.charCodeAt(preLength) === 123;
       if (isCurlyBraced) {
@@ -1395,18 +1526,19 @@ function extractParams(path, parts, leaf) {
           nodePart.length - sufLength - 1
         );
         const value = part.substring(preLength, part.length - sufLength);
-        params[name] = decodeURIComponent(value);
+        rawParams[name] = decodeURIComponent(value);
       } else {
         const name = nodePart.substring(1);
-        params[name] = decodeURIComponent(part);
+        rawParams[name] = decodeURIComponent(part);
       }
     } else if (node.kind === SEGMENT_TYPE_OPTIONAL_PARAM) {
       if (leaf.skipped & 1 << nodeIndex) {
         partIndex--;
+        pathIndex = currentPathIndex - 1;
         continue;
       }
       nodeParts ??= leaf.node.fullPath.split("/");
-      const nodePart = nodeParts[nodeIndex];
+      const nodePart = nodeParts[segmentCount];
       const preLength = node.prefix?.length ?? 0;
       const sufLength = node.suffix?.length ?? 0;
       const name = nodePart.substring(
@@ -1414,7 +1546,7 @@ function extractParams(path, parts, leaf) {
         nodePart.length - sufLength - 1
       );
       const value = node.suffix || node.prefix ? part.substring(preLength, part.length - sufLength) : part;
-      if (value) params[name] = decodeURIComponent(value);
+      if (value) rawParams[name] = decodeURIComponent(value);
     } else if (node.kind === SEGMENT_TYPE_WILDCARD) {
       const n = node;
       const value = path.substring(
@@ -1422,12 +1554,21 @@ function extractParams(path, parts, leaf) {
         path.length - (n.suffix?.length ?? 0)
       );
       const splat = decodeURIComponent(value);
-      params["*"] = splat;
-      params._splat = splat;
+      rawParams["*"] = splat;
+      rawParams._splat = splat;
       break;
     }
   }
-  return params;
+  if (leaf.rawParams) Object.assign(rawParams, leaf.rawParams);
+  return [
+    rawParams,
+    {
+      part: partIndex,
+      node: nodeIndex,
+      path: pathIndex,
+      segment: segmentCount
+    }
+  ];
 }
 function buildRouteBranch(route) {
   const list = [route];
@@ -1447,6 +1588,8 @@ function buildBranch(node) {
   return list;
 }
 function getNodeMatch(path, parts, segmentTree, fuzzy) {
+  if (path === "/" && segmentTree.index)
+    return { node: segmentTree.index, skipped: 0 };
   const trailingSlash = !last(parts);
   const pathIsIndex = trailingSlash && path !== "/";
   const partsLength = parts.length - (trailingSlash ? 1 : 0);
@@ -1466,22 +1609,55 @@ function getNodeMatch(path, parts, segmentTree, fuzzy) {
   let bestMatch = null;
   while (stack.length) {
     const frame = stack.pop();
-    let { node, index, skipped, depth, statics, dynamics, optionals } = frame;
-    if (fuzzy && node.notFound && isFrameMoreSpecific(bestFuzzy, frame)) {
+    const { node, index, skipped, depth, statics, dynamics, optionals } = frame;
+    let { extract, rawParams, parsedParams } = frame;
+    if (node.skipOnParamError) {
+      const result = validateMatchParams(path, parts, frame);
+      if (!result) continue;
+      rawParams = frame.rawParams;
+      extract = frame.extract;
+      parsedParams = frame.parsedParams;
+    }
+    if (fuzzy && node.route && node.kind !== SEGMENT_TYPE_INDEX && isFrameMoreSpecific(bestFuzzy, frame)) {
       bestFuzzy = frame;
     }
     const isBeyondPath = index === partsLength;
     if (isBeyondPath) {
-      if (node.route && (!pathIsIndex || node.isIndex)) {
-        if (isFrameMoreSpecific(bestMatch, frame)) {
-          bestMatch = frame;
-        }
-        if (statics === partsLength && node.isIndex) return bestMatch;
+      if (node.route && !pathIsIndex && isFrameMoreSpecific(bestMatch, frame)) {
+        bestMatch = frame;
       }
-      if (!node.optional && !node.wildcard) continue;
+      if (!node.optional && !node.wildcard && !node.index && !node.pathless)
+        continue;
     }
     const part = isBeyondPath ? void 0 : parts[index];
     let lowerPart;
+    if (isBeyondPath && node.index) {
+      const indexFrame = {
+        node: node.index,
+        index,
+        skipped,
+        depth: depth + 1,
+        statics,
+        dynamics,
+        optionals,
+        extract,
+        rawParams,
+        parsedParams
+      };
+      let indexValid = true;
+      if (node.index.skipOnParamError) {
+        const result = validateMatchParams(path, parts, indexFrame);
+        if (!result) indexValid = false;
+      }
+      if (indexValid) {
+        if (statics === partsLength && !dynamics && !optionals && !skipped) {
+          return indexFrame;
+        }
+        if (isFrameMoreSpecific(bestMatch, indexFrame)) {
+          bestMatch = indexFrame;
+        }
+      }
+    }
     if (node.wildcard && isFrameMoreSpecific(wildcardMatch, frame)) {
       for (const segment of node.wildcard) {
         const { prefix: prefix2, suffix } = segment;
@@ -1496,15 +1672,23 @@ function getNodeMatch(path, parts, segmentTree, fuzzy) {
           const casePart = segment.caseSensitive ? end : end.toLowerCase();
           if (casePart !== suffix) continue;
         }
-        wildcardMatch = {
+        const frame2 = {
           node: segment,
-          index,
+          index: partsLength,
           skipped,
           depth,
           statics,
           dynamics,
-          optionals
+          optionals,
+          extract,
+          rawParams,
+          parsedParams
         };
+        if (segment.skipOnParamError) {
+          const result = validateMatchParams(path, parts, frame2);
+          if (!result) continue;
+        }
+        wildcardMatch = frame2;
         break;
       }
     }
@@ -1520,7 +1704,10 @@ function getNodeMatch(path, parts, segmentTree, fuzzy) {
           depth: nextDepth,
           statics,
           dynamics,
-          optionals
+          optionals,
+          extract,
+          rawParams,
+          parsedParams
         });
       }
       if (!isBeyondPath) {
@@ -1539,7 +1726,10 @@ function getNodeMatch(path, parts, segmentTree, fuzzy) {
             depth: nextDepth,
             statics,
             dynamics,
-            optionals: optionals + 1
+            optionals: optionals + 1,
+            extract,
+            rawParams,
+            parsedParams
           });
         }
       }
@@ -1560,7 +1750,10 @@ function getNodeMatch(path, parts, segmentTree, fuzzy) {
           depth: depth + 1,
           statics,
           dynamics: dynamics + 1,
-          optionals
+          optionals,
+          extract,
+          rawParams,
+          parsedParams
         });
       }
     }
@@ -1576,7 +1769,10 @@ function getNodeMatch(path, parts, segmentTree, fuzzy) {
           depth: depth + 1,
           statics: statics + 1,
           dynamics,
-          optionals
+          optionals,
+          extract,
+          rawParams,
+          parsedParams
         });
       }
     }
@@ -1590,7 +1786,28 @@ function getNodeMatch(path, parts, segmentTree, fuzzy) {
           depth: depth + 1,
           statics: statics + 1,
           dynamics,
-          optionals
+          optionals,
+          extract,
+          rawParams,
+          parsedParams
+        });
+      }
+    }
+    if (node.pathless) {
+      const nextDepth = depth + 1;
+      for (let i = node.pathless.length - 1; i >= 0; i--) {
+        const segment = node.pathless[i];
+        stack.push({
+          node: segment,
+          index,
+          skipped,
+          depth: nextDepth,
+          statics,
+          dynamics,
+          optionals,
+          extract,
+          rawParams,
+          parsedParams
         });
       }
     }
@@ -1606,20 +1823,30 @@ function getNodeMatch(path, parts, segmentTree, fuzzy) {
       sliceIndex += parts[i].length;
     }
     const splat = sliceIndex === path.length ? "/" : path.slice(sliceIndex);
-    return {
-      node: bestFuzzy.node,
-      skipped: bestFuzzy.skipped,
-      "**": decodeURIComponent(splat)
-    };
+    bestFuzzy.rawParams ??= {};
+    bestFuzzy.rawParams["**"] = decodeURIComponent(splat);
+    return bestFuzzy;
   }
   return null;
 }
+function validateMatchParams(path, parts, frame) {
+  try {
+    const [rawParams, state] = extractParams(path, parts, frame);
+    frame.rawParams = rawParams;
+    frame.extract = state;
+    const parsed = frame.node.parse(rawParams);
+    frame.parsedParams = Object.assign({}, frame.parsedParams, parsed);
+    return true;
+  } catch {
+    return null;
+  }
+}
 function isFrameMoreSpecific(prev, next) {
   if (!prev) return true;
-  return next.statics > prev.statics || next.statics === prev.statics && (next.dynamics > prev.dynamics || next.dynamics === prev.dynamics && (next.optionals > prev.optionals || next.optionals === prev.optionals && (next.node.isIndex > prev.node.isIndex || next.node.isIndex === prev.node.isIndex && next.depth > prev.depth)));
+  return next.statics > prev.statics || next.statics === prev.statics && (next.dynamics > prev.dynamics || next.dynamics === prev.dynamics && (next.optionals > prev.optionals || next.optionals === prev.optionals && ((next.node.kind === SEGMENT_TYPE_INDEX) > (prev.node.kind === SEGMENT_TYPE_INDEX) || next.node.kind === SEGMENT_TYPE_INDEX === (prev.node.kind === SEGMENT_TYPE_INDEX) && next.depth > prev.depth)));
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/path.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/path.js
 function joinPaths(paths) {
   return cleanPath(
     paths.filter((val) => {
@@ -1728,19 +1955,28 @@ function resolvePath({
   if (key && cache) cache.set(key, result);
   return result;
 }
-function encodeParam(key, params, decodeCharMap) {
+function compileDecodeCharMap(pathParamsAllowedCharacters) {
+  const charMap = new Map(
+    pathParamsAllowedCharacters.map((char) => [encodeURIComponent(char), char])
+  );
+  const pattern = Array.from(charMap.keys()).map((key) => key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|");
+  const regex = new RegExp(pattern, "g");
+  return (encoded) => encoded.replace(regex, (match) => charMap.get(match) ?? match);
+}
+function encodeParam(key, params, decoder) {
   const value = params[key];
   if (typeof value !== "string") return value;
   if (key === "_splat") {
     return encodeURI(value);
   } else {
-    return encodePathParam(value, decodeCharMap);
+    return encodePathParam(value, decoder);
   }
 }
 function interpolatePath({
   path,
   params,
-  decodeCharMap
+  decoder,
+  server
 }) {
   let isMissingParams = false;
   const usedParams = {};
@@ -1748,6 +1984,49 @@ function interpolatePath({
     return { interpolatedPath: "/", usedParams, isMissingParams };
   if (!path.includes("$"))
     return { interpolatedPath: path, usedParams, isMissingParams };
+  if (isServer ?? server) {
+    if (path.indexOf("{") === -1) {
+      const length2 = path.length;
+      let cursor2 = 0;
+      let joined2 = "";
+      while (cursor2 < length2) {
+        while (cursor2 < length2 && path.charCodeAt(cursor2) === 47) cursor2++;
+        if (cursor2 >= length2) break;
+        const start = cursor2;
+        let end = path.indexOf("/", cursor2);
+        if (end === -1) end = length2;
+        cursor2 = end;
+        const part = path.substring(start, end);
+        if (!part) continue;
+        if (part.charCodeAt(0) === 36) {
+          if (part.length === 1) {
+            const splat = params._splat;
+            usedParams._splat = splat;
+            usedParams["*"] = splat;
+            if (!splat) {
+              isMissingParams = true;
+              continue;
+            }
+            const value = encodeParam("_splat", params, decoder);
+            joined2 += "/" + value;
+          } else {
+            const key = part.substring(1);
+            if (!isMissingParams && !(key in params)) {
+              isMissingParams = true;
+            }
+            usedParams[key] = params[key];
+            const value = encodeParam(key, params, decoder) ?? "undefined";
+            joined2 += "/" + value;
+          }
+        } else {
+          joined2 += "/" + part;
+        }
+      }
+      if (path.endsWith("/")) joined2 += "/";
+      const interpolatedPath2 = joined2 || "/";
+      return { usedParams, interpolatedPath: interpolatedPath2, isMissingParams };
+    }
+  }
   const length = path.length;
   let cursor = 0;
   let segment;
@@ -1776,7 +2055,7 @@ function interpolatePath({
         }
         continue;
       }
-      const value = encodeParam("_splat", params, decodeCharMap);
+      const value = encodeParam("_splat", params, decoder);
       joined += "/" + prefix2 + value + suffix;
       continue;
     }
@@ -1788,7 +2067,7 @@ function interpolatePath({
       usedParams[key] = params[key];
       const prefix2 = path.substring(start, segment[1]);
       const suffix = path.substring(segment[4], end);
-      const value = encodeParam(key, params, decodeCharMap) ?? "undefined";
+      const value = encodeParam(key, params, decoder) ?? "undefined";
       joined += "/" + prefix2 + value + suffix;
       continue;
     }
@@ -1799,7 +2078,7 @@ function interpolatePath({
       usedParams[key] = valueRaw;
       const prefix2 = path.substring(start, segment[1]);
       const suffix = path.substring(segment[4], end);
-      const value = encodeParam(key, params, decodeCharMap) ?? "";
+      const value = encodeParam(key, params, decoder) ?? "";
       joined += "/" + prefix2 + value + suffix;
       continue;
     }
@@ -1808,22 +2087,17 @@ function interpolatePath({
   const interpolatedPath = joined || "/";
   return { usedParams, interpolatedPath, isMissingParams };
 }
-function encodePathParam(value, decodeCharMap) {
-  let encoded = encodeURIComponent(value);
-  if (decodeCharMap) {
-    for (const [encodedChar, char] of decodeCharMap) {
-      encoded = encoded.replaceAll(encodedChar, char);
-    }
-  }
-  return encoded;
+function encodePathParam(value, decoder) {
+  const encoded = encodeURIComponent(value);
+  return decoder?.(encoded) ?? encoded;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/not-found.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/not-found.js
 function isNotFound(obj) {
   return !!obj?.isNotFound;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/scroll-restoration.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/scroll-restoration.js
 function getSafeSessionStorage() {
   try {
     if (typeof window !== "undefined" && typeof window.sessionStorage === "object") {
@@ -1857,7 +2131,16 @@ function createScrollRestorationCache() {
     // This setter is simply to make sure that we set the sessionStorage right
     // after the state is updated. It doesn't necessarily need to be a functional
     // update.
-    set: (updater) => (state = functionalUpdate(updater, state) || state, safeSessionStorage.setItem(storageKey, JSON.stringify(state)))
+    set: (updater) => {
+      state = functionalUpdate(updater, state) || state;
+      try {
+        safeSessionStorage.setItem(storageKey, JSON.stringify(state));
+      } catch {
+        console.warn(
+          "[ts-router] Could not persist scroll restoration state to sessionStorage."
+        );
+      }
+    }
   };
 }
 var scrollRestorationCache = createScrollRestorationCache();
@@ -1938,14 +2221,14 @@ function restoreScroll({
   ignoreScroll = false;
 }
 function setupScrollRestoration(router, force) {
-  if (!scrollRestorationCache && !router.isServer) {
+  if (!scrollRestorationCache && !(isServer ?? router.isServer)) {
     return;
   }
   const shouldScrollRestoration = force ?? router.options.scrollRestoration ?? false;
   if (shouldScrollRestoration) {
     router.isScrollRestoring = true;
   }
-  if (router.isServer || router.isScrollRestorationSetup || !scrollRestorationCache) {
+  if ((isServer ?? router.isServer) || router.isScrollRestorationSetup || !scrollRestorationCache) {
     return;
   }
   router.isScrollRestorationSetup = true;
@@ -2031,7 +2314,7 @@ function handleHashScroll(router) {
   }
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/qss.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/qss.js
 function encode(obj, stringify = String) {
   const result = new URLSearchParams();
   for (const key in obj) {
@@ -2064,7 +2347,7 @@ function decode(str) {
   return result;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/searchParams.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/searchParams.js
 var defaultParseSearch = parseSearchWith(JSON.parse);
 var defaultStringifySearch = stringifySearchWith(
   JSON.stringify,
@@ -2111,13 +2394,18 @@ function stringifySearchWith(stringify, parser) {
   };
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/root.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/root.js
 var rootRouteId = "__root__";
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/redirect.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/redirect.js
 function redirect(opts) {
   opts.statusCode = opts.statusCode || opts.code || 307;
-  if (!opts.reloadDocument && typeof opts.href === "string") {
+  if (!opts._builtLocation && typeof opts.href === "string" && isDangerousProtocol(opts.href)) {
+    throw new Error(
+      `Redirect blocked: unsafe protocol in href "${opts.href}". Only ${SAFE_URL_PROTOCOLS.join(", ")} protocols are allowed.`
+    );
+  }
+  if (!opts._builtLocation && !opts.reloadDocument && typeof opts.href === "string") {
     try {
       new URL(opts.href);
       opts.reloadDocument = true;
@@ -2142,7 +2430,7 @@ function isRedirect(obj) {
   return obj instanceof Response && !!obj.options;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/load-matches.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/load-matches.js
 var triggerOnReady = (inner) => {
   if (!inner.rendered) {
     inner.rendered = true;
@@ -2151,6 +2439,20 @@ var triggerOnReady = (inner) => {
 };
 var resolvePreload = (inner, matchId) => {
   return !!(inner.preload && !inner.router.state.matches.some((d) => d.id === matchId));
+};
+var buildMatchContext = (inner, index, includeCurrentMatch = true) => {
+  const context = {
+    ...inner.router.options.context ?? {}
+  };
+  const end = includeCurrentMatch ? index : index - 1;
+  for (let i = 0; i <= end; i++) {
+    const innerMatch = inner.matches[i];
+    if (!innerMatch) continue;
+    const m = inner.router.getMatch(innerMatch.id);
+    if (!m) continue;
+    Object.assign(context, m.__routeContext, m.__beforeLoadContext);
+  }
+  return context;
 };
 var _handleNotFound = (inner, err) => {
   const routeCursor = inner.router.routesById[err.routeId ?? ""] ?? inner.router.routeTree;
@@ -2189,6 +2491,7 @@ var handleRedirectAndNotFound = (inner, match, err) => {
     inner.updateMatch(match.id, (prev) => ({
       ...prev,
       status,
+      context: buildMatchContext(inner, match.index),
       isFetching: false,
       error: err
     }));
@@ -2210,10 +2513,10 @@ var handleRedirectAndNotFound = (inner, match, err) => {
 };
 var shouldSkipLoader = (inner, matchId) => {
   const match = inner.router.getMatch(matchId);
-  if (!inner.router.isServer && match._nonReactive.dehydrated) {
+  if (!(isServer ?? inner.router.isServer) && match._nonReactive.dehydrated) {
     return true;
   }
-  if (inner.router.isServer && match.ssr === false) {
+  if ((isServer ?? inner.router.isServer) && match.ssr === false) {
     return true;
   }
   return false;
@@ -2303,7 +2606,7 @@ var isBeforeLoadSsr = (inner, matchId, index, route) => {
 var setupPendingTimeout = (inner, matchId, route, match) => {
   if (match._nonReactive.pendingTimeout !== void 0) return;
   const pendingMs = route.options.pendingMs ?? inner.router.options.defaultPendingMs;
-  const shouldPending = !!(inner.onReady && !inner.router.isServer && !resolvePreload(inner, matchId) && (route.options.loader || route.options.beforeLoad || routeNeedsPreload(route)) && typeof pendingMs === "number" && pendingMs !== Infinity && (route.options.pendingComponent ?? inner.router.options?.defaultPendingComponent));
+  const shouldPending = !!(inner.onReady && !(isServer ?? inner.router.isServer) && !resolvePreload(inner, matchId) && (route.options.loader || route.options.beforeLoad || routeNeedsPreload(route)) && typeof pendingMs === "number" && pendingMs !== Infinity && (route.options.pendingComponent ?? inner.router.options?.defaultPendingComponent));
   if (shouldPending) {
     const pendingTimeout = setTimeout(() => {
       triggerOnReady(inner);
@@ -2339,10 +2642,6 @@ var executeBeforeLoad = (inner, matchId, index, route) => {
   }
   setupPendingTimeout(inner, matchId, route, match);
   const abortController = new AbortController();
-  const parentMatchId = inner.matches[index - 1]?.id;
-  const parentMatch = parentMatchId ? inner.router.getMatch(parentMatchId) : void 0;
-  const parentMatchContext = parentMatch?.context ?? inner.router.options.context ?? void 0;
-  const context = { ...parentMatchContext, ...match.__routeContext };
   let isPending = false;
   const pending = () => {
     if (isPending) return;
@@ -2351,8 +2650,10 @@ var executeBeforeLoad = (inner, matchId, index, route) => {
       ...prev,
       isFetching: "beforeLoad",
       fetchCount: prev.fetchCount + 1,
-      abortController,
-      context
+      abortController
+      // Note: We intentionally don't update context here.
+      // Context should only be updated after beforeLoad resolves to avoid
+      // components seeing incomplete context during async beforeLoad execution.
     }));
   };
   const resolve = () => {
@@ -2364,13 +2665,17 @@ var executeBeforeLoad = (inner, matchId, index, route) => {
     }));
   };
   if (!route.options.beforeLoad) {
-    batch(() => {
+    batch2(() => {
       pending();
       resolve();
     });
     return;
   }
   match._nonReactive.beforeLoadPromise = createControlledPromise();
+  const context = {
+    ...buildMatchContext(inner, index, false),
+    ...match.__routeContext
+  };
   const { search, params, cause } = match;
   const preload = resolvePreload(inner, matchId);
   const beforeLoadFnContext = {
@@ -2391,7 +2696,7 @@ var executeBeforeLoad = (inner, matchId, index, route) => {
   };
   const updateContext = (beforeLoadContext2) => {
     if (beforeLoadContext2 === void 0) {
-      batch(() => {
+      batch2(() => {
         pending();
         resolve();
       });
@@ -2401,15 +2706,11 @@ var executeBeforeLoad = (inner, matchId, index, route) => {
       pending();
       handleSerialError(inner, index, beforeLoadContext2, "BEFORE_LOAD");
     }
-    batch(() => {
+    batch2(() => {
       pending();
       inner.updateMatch(matchId, (prev) => ({
         ...prev,
-        __beforeLoadContext: beforeLoadContext2,
-        context: {
-          ...prev.context,
-          ...beforeLoadContext2
-        }
+        __beforeLoadContext: beforeLoadContext2
       }));
       resolve();
     });
@@ -2434,7 +2735,7 @@ var handleBeforeLoad = (inner, index) => {
   const { id: matchId, routeId } = inner.matches[index];
   const route = inner.router.looseRoutesById[routeId];
   const serverSsr = () => {
-    if (inner.router.isServer) {
+    if (isServer ?? inner.router.isServer) {
       const maybePromise = isBeforeLoadSsr(inner, matchId, index, route);
       if (isPromise(maybePromise)) return maybePromise.then(queueExecution);
     }
@@ -2457,6 +2758,7 @@ var executeHead = (inner, matchId, route) => {
     return;
   }
   const assetContext = {
+    ssr: inner.router.options.ssr,
     matches: inner.matches,
     match,
     params: match.params,
@@ -2484,18 +2786,7 @@ var executeHead = (inner, matchId, route) => {
 var getLoaderContext = (inner, matchId, index, route) => {
   const parentMatchPromise = inner.matchPromises[index - 1];
   const { params, loaderDeps, abortController, cause } = inner.router.getMatch(matchId);
-  let context = inner.router.options.context ?? {};
-  for (let i = 0; i <= index; i++) {
-    const innerMatch = inner.matches[i];
-    if (!innerMatch) continue;
-    const m = inner.router.getMatch(innerMatch.id);
-    if (!m) continue;
-    context = {
-      ...context,
-      ...m.__routeContext ?? {},
-      ...m.__beforeLoadContext ?? {}
-    };
-  }
+  const context = buildMatchContext(inner, index);
   const preload = resolvePreload(inner, matchId);
   return {
     params,
@@ -2518,7 +2809,7 @@ var runLoader = async (inner, matchId, index, route) => {
   try {
     const match = inner.router.getMatch(matchId);
     try {
-      if (!inner.router.isServer || match.ssr === true) {
+      if (!(isServer ?? inner.router.isServer) || match.ssr === true) {
         loadRouteChunk(route);
       }
       const loaderResult = route.options.loader?.(
@@ -2547,21 +2838,28 @@ var runLoader = async (inner, matchId, index, route) => {
         }
       }
       if (route._lazyPromise) await route._lazyPromise;
-      const headResult = executeHead(inner, matchId, route);
-      const head = headResult ? await headResult : void 0;
       const pendingPromise = match._nonReactive.minPendingPromise;
       if (pendingPromise) await pendingPromise;
       if (route._componentsPromise) await route._componentsPromise;
       inner.updateMatch(matchId, (prev) => ({
         ...prev,
         error: void 0,
+        context: buildMatchContext(inner, index),
         status: "success",
         isFetching: false,
-        updatedAt: Date.now(),
-        ...head
+        updatedAt: Date.now()
       }));
     } catch (e) {
       let error = e;
+      if (error?.name === "AbortError") {
+        inner.updateMatch(matchId, (prev) => ({
+          ...prev,
+          status: prev.status === "pending" ? "success" : prev.status,
+          isFetching: false,
+          context: buildMatchContext(inner, index)
+        }));
+        return;
+      }
       const pendingPromise = match._nonReactive.minPendingPromise;
       if (pendingPromise) await pendingPromise;
       if (isNotFound(e)) {
@@ -2578,27 +2876,17 @@ var runLoader = async (inner, matchId, index, route) => {
           onErrorError
         );
       }
-      const headResult = executeHead(inner, matchId, route);
-      const head = headResult ? await headResult : void 0;
       inner.updateMatch(matchId, (prev) => ({
         ...prev,
         error,
+        context: buildMatchContext(inner, index),
         status: "error",
-        isFetching: false,
-        ...head
+        isFetching: false
       }));
     }
   } catch (err) {
     const match = inner.router.getMatch(matchId);
     if (match) {
-      const headResult = executeHead(inner, matchId, route);
-      if (headResult) {
-        const head = await headResult;
-        inner.updateMatch(matchId, (prev) => ({
-          ...prev,
-          ...head
-        }));
-      }
       match._nonReactive.loaderPromise = void 0;
     }
     handleRedirectAndNotFound(inner, match, err);
@@ -2610,15 +2898,7 @@ var loadRouteMatch = async (inner, index) => {
   let loaderIsRunningAsync = false;
   const route = inner.router.looseRoutesById[routeId];
   if (shouldSkipLoader(inner, matchId)) {
-    if (inner.router.isServer) {
-      const headResult = executeHead(inner, matchId, route);
-      if (headResult) {
-        const head = await headResult;
-        inner.updateMatch(matchId, (prev) => ({
-          ...prev,
-          ...head
-        }));
-      }
+    if (isServer ?? inner.router.isServer) {
       return inner.router.getMatch(matchId);
     }
   } else {
@@ -2668,15 +2948,6 @@ var loadRouteMatch = async (inner, index) => {
         })();
       } else if (status !== "success" || loaderShouldRunAsync && inner.sync) {
         await runLoader(inner, matchId, index, route);
-      } else {
-        const headResult = executeHead(inner, matchId, route);
-        if (headResult) {
-          const head = await headResult;
-          inner.updateMatch(matchId, (prev) => ({
-            ...prev,
-            ...head
-          }));
-        }
       }
     }
   }
@@ -2705,7 +2976,7 @@ async function loadMatches(arg) {
   const inner = Object.assign(arg, {
     matchPromises: []
   });
-  if (!inner.router.isServer && inner.router.state.matches.some((d) => d._forcePending)) {
+  if (!(isServer ?? inner.router.isServer) && inner.router.state.matches.some((d) => d._forcePending)) {
     triggerOnReady(inner);
   }
   try {
@@ -2717,7 +2988,38 @@ async function loadMatches(arg) {
     for (let i = 0; i < max; i++) {
       inner.matchPromises.push(loadRouteMatch(inner, i));
     }
-    await Promise.all(inner.matchPromises);
+    const results = await Promise.allSettled(inner.matchPromises);
+    const failures = results.filter(
+      (result) => result.status === "rejected"
+    ).map((result) => result.reason);
+    let firstNotFound;
+    for (const err of failures) {
+      if (isRedirect(err)) {
+        throw err;
+      }
+      if (!firstNotFound && isNotFound(err)) {
+        firstNotFound = err;
+      }
+    }
+    for (const match of inner.matches) {
+      const { id: matchId, routeId } = match;
+      const route = inner.router.looseRoutesById[routeId];
+      try {
+        const headResult = executeHead(inner, matchId, route);
+        if (headResult) {
+          const head = await headResult;
+          inner.updateMatch(matchId, (prev) => ({
+            ...prev,
+            ...head
+          }));
+        }
+      } catch (err) {
+        console.error(`Error executing head for route ${routeId}:`, err);
+      }
+    }
+    if (firstNotFound) {
+      throw firstNotFound;
+    }
     const readyPromise = triggerOnReady(inner);
     if (isPromise(readyPromise)) await readyPromise;
   } catch (err) {
@@ -2786,7 +3088,7 @@ var componentTypes = [
   "notFoundComponent"
 ];
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/rewrite.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/rewrite.js
 function composeRewrites(rewrites) {
   return {
     input: ({ url }) => {
@@ -2848,7 +3150,7 @@ function executeRewriteOutput(rewrite, url) {
   return url;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/router.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/router.js
 function getLocationChangeInfo(routerState) {
   const fromLocation = routerState.resolvedLocation;
   const toLocation = routerState.location;
@@ -2856,6 +3158,15 @@ function getLocationChangeInfo(routerState) {
   const hrefChanged = fromLocation?.href !== toLocation.href;
   const hashChanged = fromLocation?.hash !== toLocation.hash;
   return { fromLocation, toLocation, pathChanged, hrefChanged, hashChanged };
+}
+function createServerStore(initialState) {
+  const store = {
+    state: initialState,
+    setState: (updater) => {
+      store.state = updater(store.state);
+    }
+  };
+  return store;
 }
 var RouterCore = class {
   /**
@@ -2887,15 +3198,13 @@ var RouterCore = class {
         ...newOptions
       };
       this.isServer = this.options.isServer ?? typeof document === "undefined";
-      this.pathParamsDecodeCharMap = this.options.pathParamsAllowedCharacters ? new Map(
-        this.options.pathParamsAllowedCharacters.map((char) => [
-          encodeURIComponent(char),
-          char
-        ])
-      ) : void 0;
+      if (this.options.pathParamsAllowedCharacters)
+        this.pathParamsDecoder = compileDecodeCharMap(
+          this.options.pathParamsAllowedCharacters
+        );
       if (!this.history || this.options.history && this.options.history !== this.history) {
         if (!this.options.history) {
-          if (!this.isServer) {
+          if (!(isServer ?? this.isServer)) {
             this.history = createBrowserHistory();
           }
         } else {
@@ -2904,7 +3213,7 @@ var RouterCore = class {
       }
       this.origin = this.options.origin;
       if (!this.origin) {
-        if (!this.isServer && window?.origin && window.origin !== "null") {
+        if (!(isServer ?? this.isServer) && window?.origin && window.origin !== "null") {
           this.origin = window.origin;
         } else {
           this.origin = "http://localhost";
@@ -2915,20 +3224,42 @@ var RouterCore = class {
       }
       if (this.options.routeTree !== this.routeTree) {
         this.routeTree = this.options.routeTree;
-        this.buildRouteTree();
-      }
-      if (!this.__store && this.latestLocation) {
-        this.__store = new Store(getInitialRouterState(this.latestLocation), {
-          onUpdate: () => {
-            this.__store.state = {
-              ...this.state,
-              cachedMatches: this.state.cachedMatches.filter(
-                (d) => !["redirected"].includes(d.status)
-              )
+        let processRouteTreeResult;
+        if ((isServer ?? this.isServer) && globalThis.__TSR_CACHE__ && globalThis.__TSR_CACHE__.routeTree === this.routeTree) {
+          const cached = globalThis.__TSR_CACHE__;
+          this.resolvePathCache = cached.resolvePathCache;
+          processRouteTreeResult = cached.processRouteTreeResult;
+        } else {
+          this.resolvePathCache = createLRUCache(1e3);
+          processRouteTreeResult = this.buildRouteTree();
+          if ((isServer ?? this.isServer) && globalThis.__TSR_CACHE__ === void 0) {
+            globalThis.__TSR_CACHE__ = {
+              routeTree: this.routeTree,
+              processRouteTreeResult,
+              resolvePathCache: this.resolvePathCache
             };
           }
-        });
-        setupScrollRestoration(this);
+        }
+        this.setRoutes(processRouteTreeResult);
+      }
+      if (!this.__store && this.latestLocation) {
+        if (isServer ?? this.isServer) {
+          this.__store = createServerStore(
+            getInitialRouterState(this.latestLocation)
+          );
+        } else {
+          this.__store = new Store(getInitialRouterState(this.latestLocation), {
+            onUpdate: () => {
+              this.__store.state = {
+                ...this.state,
+                cachedMatches: this.state.cachedMatches.filter(
+                  (d) => !["redirected"].includes(d.status)
+                )
+              };
+            }
+          });
+          setupScrollRestoration(this);
+        }
       }
       let needsLocationUpdate = false;
       const nextBasepath = this.options.basepath ?? "/";
@@ -2938,7 +3269,8 @@ var RouterCore = class {
       if (basepathChanged || rewriteChanged) {
         this.basepath = nextBasepath;
         const rewrites = [];
-        if (trimPath(nextBasepath) !== "") {
+        const trimmed = trimPath(nextBasepath);
+        if (trimmed && trimmed !== "/") {
           rewrites.push(
             rewriteBasepath({
               basepath: nextBasepath
@@ -2973,7 +3305,7 @@ var RouterCore = class {
       );
     };
     this.buildRouteTree = () => {
-      const { routesById, routesByPath, processedTree } = processRouteTree(
+      const result = processRouteTree(
         this.routeTree,
         this.options.caseSensitive,
         (route, i) => {
@@ -2983,18 +3315,9 @@ var RouterCore = class {
         }
       );
       if (this.options.routeMasks) {
-        processRouteMasks(this.options.routeMasks, processedTree);
+        processRouteMasks(this.options.routeMasks, result.processedTree);
       }
-      this.routesById = routesById;
-      this.routesByPath = routesByPath;
-      this.processedTree = processedTree;
-      const notFoundRoute = this.options.notFoundRoute;
-      if (notFoundRoute) {
-        notFoundRoute.init({
-          originalIndex: 99999999999
-        });
-        this.routesById[notFoundRoute.id] = notFoundRoute;
-      }
+      return result;
     };
     this.subscribe = (eventType, fn) => {
       const listener = {
@@ -3015,24 +3338,43 @@ var RouterCore = class {
     };
     this.parseLocation = (locationToParse, previousLocation) => {
       const parse = ({
+        pathname,
+        search,
+        hash,
         href,
         state
       }) => {
+        if (!this.rewrite && !/[ \x00-\x1f\x7f\u0080-\uffff]/.test(pathname)) {
+          const parsedSearch2 = this.options.parseSearch(search);
+          const searchStr2 = this.options.stringifySearch(parsedSearch2);
+          return {
+            href: pathname + searchStr2 + hash,
+            publicHref: href,
+            pathname: decodePath(pathname),
+            external: false,
+            searchStr: searchStr2,
+            search: replaceEqualDeep(
+              previousLocation?.search,
+              parsedSearch2
+            ),
+            hash: decodePath(hash.slice(1)),
+            state: replaceEqualDeep(previousLocation?.state, state)
+          };
+        }
         const fullUrl = new URL(href, this.origin);
         const url = executeRewriteInput(this.rewrite, fullUrl);
         const parsedSearch = this.options.parseSearch(url.search);
         const searchStr = this.options.stringifySearch(parsedSearch);
         url.search = searchStr;
         const fullPath = url.href.replace(url.origin, "");
-        const { pathname, hash } = url;
         return {
           href: fullPath,
           publicHref: href,
-          url: url.href,
-          pathname: decodePath(pathname),
+          pathname: decodePath(url.pathname),
+          external: !!this.rewrite && url.origin !== this.origin,
           searchStr,
           search: replaceEqualDeep(previousLocation?.search, parsedSearch),
-          hash: hash.split("#").reverse()[0] ?? "",
+          hash: decodePath(url.hash.slice(1)),
           state: replaceEqualDeep(previousLocation?.state, state)
         };
       };
@@ -3050,7 +3392,6 @@ var RouterCore = class {
       }
       return location;
     };
-    this.resolvePathCache = createLRUCache(1e3);
     this.resolvePathWithBase = (from, path) => {
       const resolvedPath = resolvePath({
         base: from,
@@ -3105,26 +3446,23 @@ var RouterCore = class {
     this.buildLocation = (opts) => {
       const build = (dest = {}) => {
         const currentLocation = dest._fromLocation || this.pendingBuiltLocation || this.latestLocation;
-        const allCurrentLocationMatches = this.matchRoutes(currentLocation, {
-          _buildLocation: true
-        });
-        const lastMatch = last(allCurrentLocationMatches);
+        const lightweightResult = this.matchRoutesLightweight(currentLocation);
         if (dest.from && true && dest._isNavigate) {
           const allFromMatches = this.getMatchedRoutes(dest.from).matchedRoutes;
-          const matchedFrom = findLast(allCurrentLocationMatches, (d) => {
+          const matchedFrom = findLast(lightweightResult.matchedRoutes, (d) => {
             return comparePaths(d.fullPath, dest.from);
           });
           const matchedCurrent = findLast(allFromMatches, (d) => {
-            return comparePaths(d.fullPath, lastMatch.fullPath);
+            return comparePaths(d.fullPath, lightweightResult.fullPath);
           });
           if (!matchedFrom && !matchedCurrent) {
             console.warn(`Could not find match for from: ${dest.from}`);
           }
         }
-        const defaultedFromPath = dest.unsafeRelative === "path" ? currentLocation.pathname : dest.from ?? lastMatch.fullPath;
+        const defaultedFromPath = dest.unsafeRelative === "path" ? currentLocation.pathname : dest.from ?? lightweightResult.fullPath;
         const fromPath = this.resolvePathWithBase(defaultedFromPath, ".");
-        const fromSearch = lastMatch.search;
-        const fromParams = { ...lastMatch.params };
+        const fromSearch = lightweightResult.search;
+        const fromParams = { ...lightweightResult.params };
         const nextTo = dest.to ? this.resolvePathWithBase(fromPath, `${dest.to}`) : this.resolvePathWithBase(fromPath, ".");
         const nextParams = dest.params === false || dest.params === null ? {} : (dest.params ?? true) === true ? fromParams : Object.assign(
           fromParams,
@@ -3132,15 +3470,22 @@ var RouterCore = class {
         );
         const interpolatedNextTo = interpolatePath({
           path: nextTo,
-          params: nextParams
+          params: nextParams,
+          decoder: this.pathParamsDecoder,
+          server: this.isServer
         }).interpolatedPath;
-        const destRoutes = this.matchRoutes(interpolatedNextTo, void 0, {
-          _buildLocation: true
-        }).map((d) => this.looseRoutesById[d.routeId]);
+        const destMatchResult = this.getMatchedRoutes(interpolatedNextTo);
+        let destRoutes = destMatchResult.matchedRoutes;
+        const isGlobalNotFound = destMatchResult.foundRoute ? destMatchResult.foundRoute.path !== "/" && destMatchResult.routeParams["**"] : trimPathRight2(interpolatedNextTo);
+        if (isGlobalNotFound && this.options.notFoundRoute) {
+          destRoutes = [...destRoutes, this.options.notFoundRoute];
+        }
+        let changedParams = false;
         if (Object.keys(nextParams).length > 0) {
           for (const route of destRoutes) {
             const fn = route.options.params?.stringify ?? route.options.stringifyParams;
             if (fn) {
+              changedParams = true;
               Object.assign(nextParams, fn(nextParams));
             }
           }
@@ -3150,10 +3495,11 @@ var RouterCore = class {
           // This preserves the original parameter syntax including optional parameters
           nextTo
         ) : decodePath(
-          interpolatePath({
+          !changedParams ? interpolatedNextTo : interpolatePath({
             path: nextTo,
             params: nextParams,
-            decodeCharMap: this.pathParamsDecodeCharMap
+            decoder: this.pathParamsDecoder,
+            server: this.isServer
           }).interpolatedPath
         );
         let nextSearch = fromSearch;
@@ -3188,17 +3534,32 @@ var RouterCore = class {
         let nextState = dest.state === true ? currentLocation.state : dest.state ? functionalUpdate(dest.state, currentLocation.state) : {};
         nextState = replaceEqualDeep(currentLocation.state, nextState);
         const fullPath = `${nextPathname}${searchStr}${hashStr}`;
-        const url = new URL(fullPath, this.origin);
-        const rewrittenUrl = executeRewriteOutput(this.rewrite, url);
+        let href;
+        let publicHref;
+        let external = false;
+        if (this.rewrite) {
+          const url = new URL(fullPath, this.origin);
+          const rewrittenUrl = executeRewriteOutput(this.rewrite, url);
+          href = url.href.replace(url.origin, "");
+          if (rewrittenUrl.origin !== this.origin) {
+            publicHref = rewrittenUrl.href;
+            external = true;
+          } else {
+            publicHref = rewrittenUrl.pathname + rewrittenUrl.search + rewrittenUrl.hash;
+          }
+        } else {
+          href = encodeNonAscii(fullPath);
+          publicHref = href;
+        }
         return {
-          publicHref: rewrittenUrl.pathname + rewrittenUrl.search + rewrittenUrl.hash,
-          href: fullPath,
-          url: rewrittenUrl.href,
+          publicHref,
+          href,
           pathname: nextPathname,
           search: nextSearch,
           searchStr,
           state: nextState,
           hash: hash ?? "",
+          external,
           unmaskOnReload: dest.unmaskOnReload
         };
       };
@@ -3213,7 +3574,7 @@ var RouterCore = class {
               this.processedTree
             );
             if (match) {
-              Object.assign(params, match.params);
+              Object.assign(params, match.rawParams);
               const {
                 from: _from,
                 params: maskParams,
@@ -3242,7 +3603,7 @@ var RouterCore = class {
       }
       return buildWithMatches(opts);
     };
-    this.commitLocation = ({
+    this.commitLocation = async ({
       viewTransition,
       ignoreBlocker,
       ...next
@@ -3272,7 +3633,13 @@ var RouterCore = class {
       if (isSameUrl && isSameState()) {
         this.load();
       } else {
-        let { maskedLocation, hashScrollIntoView, ...nextHistory } = next;
+        let {
+          // eslint-disable-next-line prefer-const
+          maskedLocation,
+          // eslint-disable-next-line prefer-const
+          hashScrollIntoView,
+          ...nextHistory
+        } = next;
         if (maskedLocation) {
           nextHistory = {
             ...maskedLocation,
@@ -3325,7 +3692,9 @@ var RouterCore = class {
         const parsed = parseHref(href, {
           __TSR_index: replace ? currentIndex : currentIndex + 1
         });
-        rest.to = parsed.pathname;
+        const hrefUrl = new URL(parsed.pathname, this.origin);
+        const rewrittenUrl = executeRewriteInput(this.rewrite, hrefUrl);
+        rest.to = rewrittenUrl.pathname;
         rest.search = this.options.parseSearch(parsed.search);
         rest.hash = parsed.hash.slice(1);
       }
@@ -3349,18 +3718,38 @@ var RouterCore = class {
       });
       return commitPromise;
     };
-    this.navigate = async ({ to, reloadDocument, href, ...rest }) => {
-      if (!reloadDocument && href) {
+    this.navigate = async ({
+      to,
+      reloadDocument,
+      href,
+      publicHref,
+      ...rest
+    }) => {
+      let hrefIsUrl = false;
+      if (href) {
         try {
           new URL(`${href}`);
-          reloadDocument = true;
+          hrefIsUrl = true;
         } catch {
         }
       }
+      if (hrefIsUrl && !reloadDocument) {
+        reloadDocument = true;
+      }
       if (reloadDocument) {
-        if (!href) {
+        if (to !== void 0 || !href) {
           const location = this.buildLocation({ to, ...rest });
-          href = location.url;
+          href = href ?? location.publicHref;
+          publicHref = publicHref ?? location.publicHref;
+        }
+        const reloadHref = !hrefIsUrl && publicHref ? publicHref : href;
+        if (isDangerousProtocol(reloadHref)) {
+          if (true) {
+            console.warn(
+              `Blocked navigation to dangerous protocol: ${reloadHref}`
+            );
+          }
+          return Promise.resolve();
         }
         if (!rest.ignoreBlocker) {
           const historyWithBlockers = this.history;
@@ -3380,9 +3769,9 @@ var RouterCore = class {
           }
         }
         if (rest.replace) {
-          window.location.replace(href);
+          window.location.replace(reloadHref);
         } else {
-          window.location.href = href;
+          window.location.href = reloadHref;
         }
         return Promise.resolve();
       }
@@ -3396,7 +3785,7 @@ var RouterCore = class {
     this.beforeLoad = () => {
       this.cancelMatches();
       this.updateLatestLocation();
-      if (this.isServer) {
+      if (isServer ?? this.isServer) {
         const nextLocation = this.buildLocation({
           to: this.latestLocation.pathname,
           search: true,
@@ -3405,19 +3794,13 @@ var RouterCore = class {
           state: true,
           _includeValidateSearch: true
         });
-        const normalizeUrl = (url) => {
-          try {
-            return encodeURI(decodeURI(url));
-          } catch {
-            return url;
+        if (this.latestLocation.publicHref !== nextLocation.publicHref) {
+          const href = this.getParsedLocationHref(nextLocation);
+          if (nextLocation.external) {
+            throw redirect({ href });
+          } else {
+            throw redirect({ href, _builtLocation: nextLocation });
           }
-        };
-        if (trimPath(normalizeUrl(this.latestLocation.href)) !== trimPath(normalizeUrl(nextLocation.href))) {
-          let href = nextLocation.url;
-          if (this.origin && href.startsWith(this.origin)) {
-            href = href.replace(this.origin, "") || "/";
-          }
-          throw redirect({ href });
         }
       }
       const pendingMatches = this.matchRoutes(this.latestLocation);
@@ -3473,7 +3856,7 @@ var RouterCore = class {
                     let exitingMatches = [];
                     let enteringMatches = [];
                     let stayingMatches = [];
-                    batch(() => {
+                    batch2(() => {
                       this.__store.setState((s) => {
                         const previousMatches = s.matches;
                         const newMatches = s.pendingMatches || s.matches;
@@ -3526,7 +3909,7 @@ var RouterCore = class {
           } catch (err) {
             if (isRedirect(err)) {
               redirect2 = err;
-              if (!this.isServer) {
+              if (!(isServer ?? this.isServer)) {
                 this.navigate({
                   ...redirect2.options,
                   replace: true,
@@ -3570,7 +3953,7 @@ var RouterCore = class {
     };
     this.startViewTransition = (fn) => {
       const shouldViewTransition = this.shouldViewTransition ?? this.options.defaultViewTransition;
-      delete this.shouldViewTransition;
+      this.shouldViewTransition = void 0;
       if (shouldViewTransition && typeof document !== "undefined" && "startViewTransition" in document && typeof document.startViewTransition === "function") {
         let startViewTransitionParams;
         if (typeof shouldViewTransition === "object" && this.isViewTransitionTypesSupported) {
@@ -3635,15 +4018,26 @@ var RouterCore = class {
       this.shouldViewTransition = false;
       return this.load({ sync: opts?.sync });
     };
+    this.getParsedLocationHref = (location) => {
+      return location.publicHref || "/";
+    };
     this.resolveRedirect = (redirect2) => {
-      if (!redirect2.options.href) {
-        const location = this.buildLocation(redirect2.options);
-        let href = location.url;
-        if (this.origin && href.startsWith(this.origin)) {
-          href = href.replace(this.origin, "") || "/";
-        }
-        redirect2.options.href = location.href;
+      const locationHeader = redirect2.headers.get("Location");
+      if (!redirect2.options.href || redirect2.options._builtLocation) {
+        const location = redirect2.options._builtLocation ?? this.buildLocation(redirect2.options);
+        const href = this.getParsedLocationHref(location);
+        redirect2.options.href = href;
         redirect2.headers.set("Location", href);
+      } else if (locationHeader) {
+        try {
+          const url = new URL(locationHeader);
+          if (this.origin && url.origin === this.origin) {
+            const href = url.pathname + url.search + url.hash;
+            redirect2.options.href = href;
+            redirect2.headers.set("Location", href);
+          }
+        } catch {
+        }
       }
       if (!redirect2.headers.get("Location")) {
         redirect2.headers.set("Location", redirect2.options.href);
@@ -3701,7 +4095,7 @@ var RouterCore = class {
         ...activeMatchIds,
         ...this.state.cachedMatches.map((d) => d.id)
       ]);
-      batch(() => {
+      batch2(() => {
         matches.forEach((match) => {
           if (!loadedMatchIds.has(match.id)) {
             this.__store.setState((s) => ({
@@ -3769,14 +4163,14 @@ var RouterCore = class {
         return false;
       }
       if (location.params) {
-        if (!deepEqual(match.params, location.params, { partial: true })) {
+        if (!deepEqual(match.rawParams, location.params, { partial: true })) {
           return false;
         }
       }
       if (opts?.includeSearch ?? true) {
-        return deepEqual(baseLocation.search, next.search, { partial: true }) ? match.params : false;
+        return deepEqual(baseLocation.search, next.search, { partial: true }) ? match.rawParams : false;
       }
-      return match.params;
+      return match.rawParams;
     };
     this.hasNotFoundMatch = () => {
       return this.__store.state.matches.some(
@@ -3807,12 +4201,28 @@ var RouterCore = class {
   get state() {
     return this.__store.state;
   }
+  setRoutes({
+    routesById,
+    routesByPath,
+    processedTree
+  }) {
+    this.routesById = routesById;
+    this.routesByPath = routesByPath;
+    this.processedTree = processedTree;
+    const notFoundRoute = this.options.notFoundRoute;
+    if (notFoundRoute) {
+      notFoundRoute.init({
+        originalIndex: 99999999999
+      });
+      this.routesById[notFoundRoute.id] = notFoundRoute;
+    }
+  }
   get looseRoutesById() {
     return this.routesById;
   }
   matchRoutesInternal(next, opts) {
     const matchedRoutesResult = this.getMatchedRoutes(next.pathname);
-    const { foundRoute, routeParams } = matchedRoutesResult;
+    const { foundRoute, routeParams, parsedParams } = matchedRoutesResult;
     let { matchedRoutes } = matchedRoutesResult;
     let isGlobalNotFound = false;
     if (
@@ -3828,20 +4238,7 @@ var RouterCore = class {
         isGlobalNotFound = true;
       }
     }
-    const globalNotFoundRouteId = (() => {
-      if (!isGlobalNotFound) {
-        return void 0;
-      }
-      if (this.options.notFoundMode !== "root") {
-        for (let i = matchedRoutes.length - 1; i >= 0; i--) {
-          const route = matchedRoutes[i];
-          if (route.children) {
-            return route.id;
-          }
-        }
-      }
-      return rootRouteId;
-    })();
+    const globalNotFoundRouteId = isGlobalNotFound ? findGlobalNotFoundRouteId(this.options.notFoundMode, matchedRoutes) : void 0;
     const matches = [];
     const getParentContext = (parentMatch) => {
       const parentMatchId = parentMatch?.id;
@@ -3883,7 +4280,8 @@ var RouterCore = class {
       const { interpolatedPath, usedParams } = interpolatePath({
         path: route.fullPath,
         params: routeParams,
-        decodeCharMap: this.pathParamsDecodeCharMap
+        decoder: this.pathParamsDecoder,
+        server: this.isServer
       });
       const matchId = (
         // route.id for disambiguation
@@ -3898,24 +4296,18 @@ var RouterCore = class {
       const strictParams = existingMatch?._strictParams ?? usedParams;
       let paramsError = void 0;
       if (!existingMatch) {
-        const strictParseParams = route.options.params?.parse ?? route.options.parseParams;
-        if (strictParseParams) {
-          try {
-            Object.assign(
-              strictParams,
-              strictParseParams(strictParams)
-            );
-          } catch (err) {
-            if (isNotFound(err) || isRedirect(err)) {
-              paramsError = err;
-            } else {
-              paramsError = new PathParamError(err.message, {
-                cause: err
-              });
-            }
-            if (opts?.throwOnError) {
-              throw paramsError;
-            }
+        try {
+          extractStrictParams(route, usedParams, parsedParams, strictParams);
+        } catch (err) {
+          if (isNotFound(err) || isRedirect(err)) {
+            paramsError = err;
+          } else {
+            paramsError = new PathParamError(err.message, {
+              cause: err
+            });
+          }
+          if (opts?.throwOnError) {
+            throw paramsError;
           }
         }
       }
@@ -3935,7 +4327,7 @@ var RouterCore = class {
         const status = route.options.loader || route.options.beforeLoad || route.lazyFn || routeNeedsPreload(route) ? "pending" : "success";
         match = {
           id: matchId,
-          ssr: this.isServer ? void 0 : route.options.ssr,
+          ssr: isServer ?? this.isServer ? void 0 : route.options.ssr,
           index,
           routeId: route.id,
           params: previousMatch ? replaceEqualDeep(previousMatch.params, routeParams) : routeParams,
@@ -3984,7 +4376,7 @@ var RouterCore = class {
     matches.forEach((match, index) => {
       const route = this.looseRoutesById[match.routeId];
       const existingMatch = this.getMatch(match.id);
-      if (!existingMatch && opts?._buildLocation !== true) {
+      if (!existingMatch) {
         const parentMatch = matches[index - 1];
         const parentContext = getParentContext(parentMatch);
         if (route.options.context) {
@@ -4010,6 +4402,53 @@ var RouterCore = class {
       }
     });
     return matches;
+  }
+  /**
+   * Lightweight route matching for buildLocation.
+   * Only computes fullPath, accumulated search, and params - skipping expensive
+   * operations like AbortController, ControlledPromise, loaderDeps, and full match objects.
+   */
+  matchRoutesLightweight(location) {
+    const { matchedRoutes, routeParams, parsedParams } = this.getMatchedRoutes(
+      location.pathname
+    );
+    const lastRoute = last(matchedRoutes);
+    const accumulatedSearch = { ...location.search };
+    for (const route of matchedRoutes) {
+      try {
+        Object.assign(
+          accumulatedSearch,
+          validateSearch(route.options.validateSearch, accumulatedSearch)
+        );
+      } catch {
+      }
+    }
+    const lastStateMatch = last(this.state.matches);
+    const canReuseParams = lastStateMatch && lastStateMatch.routeId === lastRoute.id && location.pathname === this.state.location.pathname;
+    let params;
+    if (canReuseParams) {
+      params = lastStateMatch.params;
+    } else {
+      const strictParams = { ...routeParams };
+      for (const route of matchedRoutes) {
+        try {
+          extractStrictParams(
+            route,
+            routeParams,
+            parsedParams ?? {},
+            strictParams
+          );
+        } catch {
+        }
+      }
+      params = strictParams;
+    }
+    return {
+      matchedRoutes,
+      fullPath: lastRoute.fullPath,
+      search: accumulatedSearch,
+      params
+    };
   }
 };
 var SearchParamError = class extends Error {
@@ -4062,13 +4501,15 @@ function getMatchedRoutes({
   const routeParams = {};
   const trimmedPath = trimPathRight2(pathname);
   let foundRoute = void 0;
+  let parsedParams = void 0;
   const match = findRouteMatch(trimmedPath, processedTree, true);
   if (match) {
     foundRoute = match.route;
-    Object.assign(routeParams, match.params);
+    Object.assign(routeParams, match.rawParams);
+    parsedParams = Object.assign({}, match.parsedParams);
   }
   const matchedRoutes = match?.branch || [routesById[rootRouteId]];
-  return { matchedRoutes, routeParams, foundRoute };
+  return { matchedRoutes, routeParams, foundRoute, parsedParams };
 }
 function applySearchMiddleware({
   search,
@@ -4076,82 +4517,115 @@ function applySearchMiddleware({
   destRoutes,
   _includeValidateSearch
 }) {
-  const allMiddlewares = destRoutes.reduce(
-    (acc, route) => {
-      const middlewares = [];
-      if ("search" in route.options) {
-        if (route.options.search?.middlewares) {
-          middlewares.push(...route.options.search.middlewares);
+  const middleware = buildMiddlewareChain(destRoutes);
+  return middleware(search, dest, _includeValidateSearch ?? false);
+}
+function buildMiddlewareChain(destRoutes) {
+  const context = {
+    dest: null,
+    _includeValidateSearch: false,
+    middlewares: []
+  };
+  for (const route of destRoutes) {
+    if ("search" in route.options) {
+      if (route.options.search?.middlewares) {
+        context.middlewares.push(...route.options.search.middlewares);
+      }
+    } else if (route.options.preSearchFilters || route.options.postSearchFilters) {
+      const legacyMiddleware = ({ search, next }) => {
+        let nextSearch = search;
+        if ("preSearchFilters" in route.options && route.options.preSearchFilters) {
+          nextSearch = route.options.preSearchFilters.reduce(
+            (prev, next2) => next2(prev),
+            search
+          );
         }
-      } else if (route.options.preSearchFilters || route.options.postSearchFilters) {
-        const legacyMiddleware = ({
-          search: search2,
-          next
-        }) => {
-          let nextSearch = search2;
-          if ("preSearchFilters" in route.options && route.options.preSearchFilters) {
-            nextSearch = route.options.preSearchFilters.reduce(
-              (prev, next2) => next2(prev),
-              search2
-            );
-          }
-          const result = next(nextSearch);
-          if ("postSearchFilters" in route.options && route.options.postSearchFilters) {
-            return route.options.postSearchFilters.reduce(
-              (prev, next2) => next2(prev),
-              result
-            );
-          }
+        const result = next(nextSearch);
+        if ("postSearchFilters" in route.options && route.options.postSearchFilters) {
+          return route.options.postSearchFilters.reduce(
+            (prev, next2) => next2(prev),
+            result
+          );
+        }
+        return result;
+      };
+      context.middlewares.push(legacyMiddleware);
+    }
+    if (route.options.validateSearch) {
+      const validate = ({ search, next }) => {
+        const result = next(search);
+        if (!context._includeValidateSearch) return result;
+        try {
+          const validatedSearch = {
+            ...result,
+            ...validateSearch(route.options.validateSearch, result) ?? void 0
+          };
+          return validatedSearch;
+        } catch {
           return result;
-        };
-        middlewares.push(legacyMiddleware);
-      }
-      if (_includeValidateSearch && route.options.validateSearch) {
-        const validate = ({ search: search2, next }) => {
-          const result = next(search2);
-          try {
-            const validatedSearch = {
-              ...result,
-              ...validateSearch(route.options.validateSearch, result) ?? void 0
-            };
-            return validatedSearch;
-          } catch {
-            return result;
-          }
-        };
-        middlewares.push(validate);
-      }
-      return acc.concat(middlewares);
-    },
-    []
-  ) ?? [];
-  const final = ({ search: search2 }) => {
+        }
+      };
+      context.middlewares.push(validate);
+    }
+  }
+  const final = ({ search }) => {
+    const dest = context.dest;
     if (!dest.search) {
       return {};
     }
     if (dest.search === true) {
-      return search2;
+      return search;
     }
-    return functionalUpdate(dest.search, search2);
+    return functionalUpdate(dest.search, search);
   };
-  allMiddlewares.push(final);
-  const applyNext = (index, currentSearch) => {
-    if (index >= allMiddlewares.length) {
+  context.middlewares.push(final);
+  const applyNext = (index, currentSearch, middlewares) => {
+    if (index >= middlewares.length) {
       return currentSearch;
     }
-    const middleware = allMiddlewares[index];
+    const middleware = middlewares[index];
     const next = (newSearch) => {
-      return applyNext(index + 1, newSearch);
+      return applyNext(index + 1, newSearch, middlewares);
     };
     return middleware({ search: currentSearch, next });
   };
-  return applyNext(0, search);
+  return function middleware(search, dest, _includeValidateSearch) {
+    context.dest = dest;
+    context._includeValidateSearch = _includeValidateSearch;
+    return applyNext(0, search, context.middlewares);
+  };
+}
+function findGlobalNotFoundRouteId(notFoundMode, routes) {
+  if (notFoundMode !== "root") {
+    for (let i = routes.length - 1; i >= 0; i--) {
+      const route = routes[i];
+      if (route.children) {
+        return route.id;
+      }
+    }
+  }
+  return rootRouteId;
+}
+function extractStrictParams(route, referenceParams, parsedParams, accumulatedParams) {
+  const parseParams = route.options.params?.parse ?? route.options.parseParams;
+  if (parseParams) {
+    if (route.options.skipRouteOnParseError) {
+      for (const key in referenceParams) {
+        if (key in parsedParams) {
+          accumulatedParams[key] = parsedParams[key];
+        }
+      }
+    } else {
+      const result = parseParams(accumulatedParams);
+      Object.assign(accumulatedParams, result);
+    }
+  }
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/link.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/link.js
 var preloadWarning = "Error preloading route! \u261D\uFE0F";
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.139.14/node_modules/@tanstack/router-core/dist/esm/route.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/route.js
 var BaseRoute = class {
   constructor(options) {
     this.init = (opts) => {
@@ -4186,7 +4660,7 @@ var BaseRoute = class {
       this._path = path;
       this._id = id;
       this._fullPath = fullPath;
-      this._to = fullPath;
+      this._to = trimPathRight2(fullPath);
     };
     this.addChildren = (children) => {
       return this._addFileChildren(children);
@@ -4215,6 +4689,7 @@ var BaseRoute = class {
       this.lazyFn = lazyFn2;
       return this;
     };
+    this.redirect = (opts) => redirect({ from: this.fullPath, ...opts });
     this.options = options || {};
     this.isRoot = !options?.getParentRoute;
     if (options?.id && options?.path) {
@@ -4240,9 +4715,48 @@ var BaseRootRoute = class extends BaseRoute {
   }
 };
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js
-var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/utils.js
 var React = __toESM(require_react(), 1);
+var REACT_USE = "use";
+var reactUse = React[REACT_USE];
+var useLayoutEffect2 = typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
+function usePrevious(value) {
+  const ref = React.useRef({
+    value,
+    prev: null
+  });
+  const current = ref.current.value;
+  if (value !== current) {
+    ref.current = {
+      value,
+      prev: current
+    };
+  }
+  return ref.current.prev;
+}
+function useIntersectionObserver(ref, callback, intersectionObserverOptions2 = {}, options = {}) {
+  React.useEffect(() => {
+    if (!ref.current || options.disabled || typeof IntersectionObserver !== "function") {
+      return;
+    }
+    const observer = new IntersectionObserver(([entry]) => {
+      callback(entry);
+    }, intersectionObserverOptions2);
+    observer.observe(ref.current);
+    return () => {
+      observer.disconnect();
+    };
+  }, [callback, intersectionObserverOptions2, options.disabled, ref]);
+}
+function useForwardedRef(ref) {
+  const innerRef = React.useRef(null);
+  React.useImperativeHandle(ref, () => innerRef.current, []);
+  return innerRef;
+}
+
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js
+var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
+var React2 = __toESM(require_react(), 1);
 function CatchBoundary(props) {
   const errorComponent = props.errorComponent ?? ErrorComponent;
   return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
@@ -4252,7 +4766,7 @@ function CatchBoundary(props) {
       onCatch: props.onCatch,
       children: ({ error, reset }) => {
         if (error) {
-          return React.createElement(errorComponent, {
+          return React2.createElement(errorComponent, {
             error,
             reset
           });
@@ -4262,7 +4776,7 @@ function CatchBoundary(props) {
     }
   );
 }
-var CatchBoundaryImpl = class extends React.Component {
+var CatchBoundaryImpl = class extends React2.Component {
   constructor() {
     super(...arguments);
     this.state = { error: null };
@@ -4296,7 +4810,7 @@ var CatchBoundaryImpl = class extends React.Component {
   }
 };
 function ErrorComponent({ error }) {
-  const [show, setShow] = React.useState(true);
+  const [show, setShow] = React2.useState(true);
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: ".5rem", maxWidth: "100%" }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: ".5rem" }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { style: { fontSize: "1rem" }, children: "Something went wrong!" }),
@@ -4334,7 +4848,7 @@ function ErrorComponent({ error }) {
   ] });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ClientOnly.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ClientOnly.js
 var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
 var import_react = __toESM(require_react(), 1);
 function ClientOnly({ children, fallback = null }) {
@@ -4371,12 +4885,12 @@ function warning(condition, message) {
 }
 var tiny_warning_esm_default = warning;
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
 var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
 var import_react3 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
-var React5 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
+var React6 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@tanstack+react-store@0.8.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-store/dist/esm/index.js
 var import_with_selector = __toESM(require_with_selector(), 1);
@@ -4433,15 +4947,15 @@ function getOwnKeys(obj) {
   );
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
 var import_react2 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
-var React3 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
+var React4 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/routerContext.js
-var React2 = __toESM(require_react(), 1);
-var routerContext = React2.createContext(null);
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/routerContext.js
+var React3 = __toESM(require_react(), 1);
+var routerContext = React3.createContext(null);
 function getRouterContext() {
   if (typeof document === "undefined") {
     return routerContext;
@@ -4453,9 +4967,9 @@ function getRouterContext() {
   return routerContext;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
 function useRouter(opts) {
-  const value = React3.useContext(getRouterContext());
+  const value = React4.useContext(getRouterContext());
   tiny_warning_esm_default(
     !((opts?.warn ?? true) && !value),
     "useRouter must be used inside a <RouterProvider> component!"
@@ -4463,13 +4977,21 @@ function useRouter(opts) {
   return value;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
 function useRouterState(opts) {
   const contextRouter = useRouter({
     warn: opts?.router === void 0
   });
   const router = opts?.router || contextRouter;
-  const previousResult = (0, import_react2.useRef)(void 0);
+  const _isServer = isServer ?? router.isServer;
+  if (_isServer) {
+    const state = router.state;
+    return opts?.select ? opts.select(state) : state;
+  }
+  const previousResult = (
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    (0, import_react2.useRef)(void 0)
+  );
   return useStore(router.__store, (state) => {
     if (opts?.select) {
       if (opts.structuralSharing ?? router.options.defaultStructuralSharing) {
@@ -4486,16 +5008,16 @@ function useRouterState(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/matchContext.js
-var React4 = __toESM(require_react(), 1);
-var matchContext = React4.createContext(void 0);
-var dummyMatchContext = React4.createContext(
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/matchContext.js
+var React5 = __toESM(require_react(), 1);
+var matchContext = React5.createContext(void 0);
+var dummyMatchContext = React5.createContext(
   void 0
 );
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
 function useMatch(opts) {
-  const nearestMatchId = React5.useContext(
+  const nearestMatchId = React6.useContext(
     opts.from ? dummyMatchContext : matchContext
   );
   const matchSelection = useRouterState({
@@ -4517,7 +5039,7 @@ function useMatch(opts) {
   return matchSelection;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderData.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderData.js
 function useLoaderData(opts) {
   return useMatch({
     from: opts.from,
@@ -4529,7 +5051,7 @@ function useLoaderData(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderDeps.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderDeps.js
 function useLoaderDeps(opts) {
   const { select, ...rest } = opts;
   return useMatch({
@@ -4540,7 +5062,7 @@ function useLoaderDeps(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useParams.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useParams.js
 function useParams(opts) {
   return useMatch({
     from: opts.from,
@@ -4554,7 +5076,7 @@ function useParams(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useSearch.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useSearch.js
 function useSearch(opts) {
   return useMatch({
     from: opts.from,
@@ -4567,47 +5089,8 @@ function useSearch(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useNavigate.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useNavigate.js
 var React7 = __toESM(require_react(), 1);
-
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/utils.js
-var React6 = __toESM(require_react(), 1);
-var useLayoutEffect2 = typeof window !== "undefined" ? React6.useLayoutEffect : React6.useEffect;
-function usePrevious(value) {
-  const ref = React6.useRef({
-    value,
-    prev: null
-  });
-  const current = ref.current.value;
-  if (value !== current) {
-    ref.current = {
-      value,
-      prev: current
-    };
-  }
-  return ref.current.prev;
-}
-function useIntersectionObserver(ref, callback, intersectionObserverOptions2 = {}, options = {}) {
-  React6.useEffect(() => {
-    if (!ref.current || options.disabled || typeof IntersectionObserver !== "function") {
-      return;
-    }
-    const observer = new IntersectionObserver(([entry]) => {
-      callback(entry);
-    }, intersectionObserverOptions2);
-    observer.observe(ref.current);
-    return () => {
-      observer.disconnect();
-    };
-  }, [callback, intersectionObserverOptions2, options.disabled, ref]);
-}
-function useForwardedRef(ref) {
-  const innerRef = React6.useRef(null);
-  React6.useImperativeHandle(ref, () => innerRef.current, []);
-  return innerRef;
-}
-
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useNavigate.js
 function useNavigate(_defaultOpts) {
   const router = useRouter();
   return React7.useCallback(
@@ -4621,15 +5104,14 @@ function useNavigate(_defaultOpts) {
   );
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/link.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/link.js
 var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
 var React8 = __toESM(require_react(), 1);
 var import_react_dom = __toESM(require_react_dom(), 1);
 function useLinkProps(options, forwardedRef) {
   const router = useRouter();
-  const [isTransitioning, setIsTransitioning] = React8.useState(false);
-  const hasRenderFetched = React8.useRef(false);
   const innerRef = useForwardedRef(forwardedRef);
+  const _isServer = isServer ?? router.isServer;
   const {
     // custom props
     activeProps,
@@ -4667,6 +5149,195 @@ function useLinkProps(options, forwardedRef) {
     _fromLocation,
     ...propsSafeToSpread
   } = options;
+  if (_isServer) {
+    const safeInternal = isSafeInternal(to);
+    if (typeof to === "string" && !safeInternal && // Quick checks to avoid `new URL` in common internal-like cases
+    to.indexOf(":") > -1) {
+      try {
+        new URL(to);
+        if (isDangerousProtocol(to)) {
+          if (true) {
+            console.warn(`Blocked Link with dangerous protocol: ${to}`);
+          }
+          return {
+            ...propsSafeToSpread,
+            ref: innerRef,
+            href: void 0,
+            ...children && { children },
+            ...target && { target },
+            ...disabled && { disabled },
+            ...style && { style },
+            ...className && { className }
+          };
+        }
+        return {
+          ...propsSafeToSpread,
+          ref: innerRef,
+          href: to,
+          ...children && { children },
+          ...target && { target },
+          ...disabled && { disabled },
+          ...style && { style },
+          ...className && { className }
+        };
+      } catch {
+      }
+    }
+    const next2 = router.buildLocation({ ...options, from: options.from });
+    const hrefOptionPublicHref2 = next2.maskedLocation ? next2.maskedLocation.publicHref : next2.publicHref;
+    const hrefOptionExternal2 = next2.maskedLocation ? next2.maskedLocation.external : next2.external;
+    const hrefOption2 = getHrefOption(
+      hrefOptionPublicHref2,
+      hrefOptionExternal2,
+      router.history,
+      disabled
+    );
+    const externalLink2 = (() => {
+      if (hrefOption2?.external) {
+        if (isDangerousProtocol(hrefOption2.href)) {
+          if (true) {
+            console.warn(
+              `Blocked Link with dangerous protocol: ${hrefOption2.href}`
+            );
+          }
+          return void 0;
+        }
+        return hrefOption2.href;
+      }
+      if (safeInternal) return void 0;
+      if (typeof to === "string" && to.indexOf(":") > -1) {
+        try {
+          new URL(to);
+          if (isDangerousProtocol(to)) {
+            if (true) {
+              console.warn(`Blocked Link with dangerous protocol: ${to}`);
+            }
+            return void 0;
+          }
+          return to;
+        } catch {
+        }
+      }
+      return void 0;
+    })();
+    const isActive2 = (() => {
+      if (externalLink2) return false;
+      const currentLocation = router.state.location;
+      const exact = activeOptions?.exact ?? false;
+      if (exact) {
+        const testExact = exactPathTest(
+          currentLocation.pathname,
+          next2.pathname,
+          router.basepath
+        );
+        if (!testExact) {
+          return false;
+        }
+      } else {
+        const currentPathSplit = removeTrailingSlash(
+          currentLocation.pathname,
+          router.basepath
+        );
+        const nextPathSplit = removeTrailingSlash(
+          next2.pathname,
+          router.basepath
+        );
+        const pathIsFuzzyEqual = currentPathSplit.startsWith(nextPathSplit) && (currentPathSplit.length === nextPathSplit.length || currentPathSplit[nextPathSplit.length] === "/");
+        if (!pathIsFuzzyEqual) {
+          return false;
+        }
+      }
+      const includeSearch = activeOptions?.includeSearch ?? true;
+      if (includeSearch) {
+        if (currentLocation.search !== next2.search) {
+          const currentSearchEmpty = !currentLocation.search || typeof currentLocation.search === "object" && Object.keys(currentLocation.search).length === 0;
+          const nextSearchEmpty = !next2.search || typeof next2.search === "object" && Object.keys(next2.search).length === 0;
+          if (!(currentSearchEmpty && nextSearchEmpty)) {
+            const searchTest = deepEqual(currentLocation.search, next2.search, {
+              partial: !exact,
+              ignoreUndefined: !activeOptions?.explicitUndefined
+            });
+            if (!searchTest) {
+              return false;
+            }
+          }
+        }
+      }
+      if (activeOptions?.includeHash) {
+        return false;
+      }
+      return true;
+    })();
+    if (externalLink2) {
+      return {
+        ...propsSafeToSpread,
+        ref: innerRef,
+        href: externalLink2,
+        ...children && { children },
+        ...target && { target },
+        ...disabled && { disabled },
+        ...style && { style },
+        ...className && { className }
+      };
+    }
+    const resolvedActiveProps2 = isActive2 ? functionalUpdate(activeProps, {}) ?? STATIC_ACTIVE_OBJECT : STATIC_EMPTY_OBJECT;
+    const resolvedInactiveProps2 = isActive2 ? STATIC_EMPTY_OBJECT : functionalUpdate(inactiveProps, {}) ?? STATIC_EMPTY_OBJECT;
+    const resolvedStyle2 = (() => {
+      const baseStyle = style;
+      const activeStyle = resolvedActiveProps2.style;
+      const inactiveStyle = resolvedInactiveProps2.style;
+      if (!baseStyle && !activeStyle && !inactiveStyle) {
+        return void 0;
+      }
+      if (baseStyle && !activeStyle && !inactiveStyle) {
+        return baseStyle;
+      }
+      if (!baseStyle && activeStyle && !inactiveStyle) {
+        return activeStyle;
+      }
+      if (!baseStyle && !activeStyle && inactiveStyle) {
+        return inactiveStyle;
+      }
+      return {
+        ...baseStyle,
+        ...activeStyle,
+        ...inactiveStyle
+      };
+    })();
+    const resolvedClassName2 = (() => {
+      const baseClassName = className;
+      const activeClassName = resolvedActiveProps2.className;
+      const inactiveClassName = resolvedInactiveProps2.className;
+      if (!baseClassName && !activeClassName && !inactiveClassName) {
+        return "";
+      }
+      let out = "";
+      if (baseClassName) {
+        out = baseClassName;
+      }
+      if (activeClassName) {
+        out = out ? `${out} ${activeClassName}` : activeClassName;
+      }
+      if (inactiveClassName) {
+        out = out ? `${out} ${inactiveClassName}` : inactiveClassName;
+      }
+      return out;
+    })();
+    return {
+      ...propsSafeToSpread,
+      ...resolvedActiveProps2,
+      ...resolvedInactiveProps2,
+      href: hrefOption2?.href,
+      ref: innerRef,
+      disabled: !!disabled,
+      target,
+      ...resolvedStyle2 && { style: resolvedStyle2 },
+      ...resolvedClassName2 && { className: resolvedClassName2 },
+      ...disabled && STATIC_DISABLED_PROPS,
+      ...isActive2 && STATIC_ACTIVE_PROPS
+    };
+  }
+  const isHydrated = useHydrated();
   const currentSearch = useRouterState({
     select: (s) => s.location.search,
     structuralSharing: true
@@ -4695,34 +5366,45 @@ function useLinkProps(options, forwardedRef) {
     () => router.buildLocation({ ..._options }),
     [router, _options]
   );
-  const hrefOption = React8.useMemo(() => {
-    if (disabled) {
-      return void 0;
-    }
-    let href = next.maskedLocation ? next.maskedLocation.url : next.url;
-    let external = false;
-    if (router.origin) {
-      if (href.startsWith(router.origin)) {
-        href = router.history.createHref(href.replace(router.origin, "")) || "/";
-      } else {
-        external = true;
-      }
-    }
-    return { href, external };
-  }, [disabled, next.maskedLocation, next.url, router.origin, router.history]);
+  const hrefOptionPublicHref = next.maskedLocation ? next.maskedLocation.publicHref : next.publicHref;
+  const hrefOptionExternal = next.maskedLocation ? next.maskedLocation.external : next.external;
+  const hrefOption = React8.useMemo(
+    () => getHrefOption(
+      hrefOptionPublicHref,
+      hrefOptionExternal,
+      router.history,
+      disabled
+    ),
+    [disabled, hrefOptionExternal, hrefOptionPublicHref, router.history]
+  );
   const externalLink = React8.useMemo(() => {
     if (hrefOption?.external) {
+      if (isDangerousProtocol(hrefOption.href)) {
+        if (true) {
+          console.warn(
+            `Blocked Link with dangerous protocol: ${hrefOption.href}`
+          );
+        }
+        return void 0;
+      }
       return hrefOption.href;
     }
+    const safeInternal = isSafeInternal(to);
+    if (safeInternal) return void 0;
+    if (typeof to !== "string" || to.indexOf(":") === -1) return void 0;
     try {
       new URL(to);
+      if (isDangerousProtocol(to)) {
+        if (true) {
+          console.warn(`Blocked Link with dangerous protocol: ${to}`);
+        }
+        return void 0;
+      }
       return to;
     } catch {
     }
     return void 0;
   }, [to, hrefOption]);
-  const preload = options.reloadDocument || externalLink ? false : userPreload ?? router.options.defaultPreload;
-  const preloadDelay = userPreloadDelay ?? router.options.defaultPreloadDelay ?? 0;
   const isActive = useRouterState({
     select: (s) => {
       if (externalLink) return false;
@@ -4759,11 +5441,27 @@ function useLinkProps(options, forwardedRef) {
         }
       }
       if (activeOptions?.includeHash) {
-        return s.location.hash === next.hash;
+        return isHydrated && s.location.hash === next.hash;
       }
       return true;
     }
   });
+  const resolvedActiveProps = isActive ? functionalUpdate(activeProps, {}) ?? STATIC_ACTIVE_OBJECT : STATIC_EMPTY_OBJECT;
+  const resolvedInactiveProps = isActive ? STATIC_EMPTY_OBJECT : functionalUpdate(inactiveProps, {}) ?? STATIC_EMPTY_OBJECT;
+  const resolvedClassName = [
+    className,
+    resolvedActiveProps.className,
+    resolvedInactiveProps.className
+  ].filter(Boolean).join(" ");
+  const resolvedStyle = (style || resolvedActiveProps.style || resolvedInactiveProps.style) && {
+    ...style,
+    ...resolvedActiveProps.style,
+    ...resolvedInactiveProps.style
+  };
+  const [isTransitioning, setIsTransitioning] = React8.useState(false);
+  const hasRenderFetched = React8.useRef(false);
+  const preload = options.reloadDocument || externalLink ? false : userPreload ?? router.options.defaultPreload;
+  const preloadDelay = userPreloadDelay ?? router.options.defaultPreloadDelay ?? 0;
   const doPreload = React8.useCallback(() => {
     router.preloadRoute({ ..._options }).catch((err) => {
       console.warn(err);
@@ -4865,18 +5563,6 @@ function useLinkProps(options, forwardedRef) {
       timeoutMap.delete(eventTarget);
     }
   };
-  const resolvedActiveProps = isActive ? functionalUpdate(activeProps, {}) ?? STATIC_ACTIVE_OBJECT : STATIC_EMPTY_OBJECT;
-  const resolvedInactiveProps = isActive ? STATIC_EMPTY_OBJECT : functionalUpdate(inactiveProps, {}) ?? STATIC_EMPTY_OBJECT;
-  const resolvedClassName = [
-    className,
-    resolvedActiveProps.className,
-    resolvedInactiveProps.className
-  ].filter(Boolean).join(" ");
-  const resolvedStyle = (style || resolvedActiveProps.style || resolvedInactiveProps.style) && {
-    ...style,
-    ...resolvedActiveProps.style,
-    ...resolvedInactiveProps.style
-  };
   return {
     ...propsSafeToSpread,
     ...resolvedActiveProps,
@@ -4894,7 +5580,7 @@ function useLinkProps(options, forwardedRef) {
     ...resolvedClassName && { className: resolvedClassName },
     ...disabled && STATIC_DISABLED_PROPS,
     ...isActive && STATIC_ACTIVE_PROPS,
-    ...isTransitioning && STATIC_TRANSITIONING_PROPS
+    ...isHydrated && isTransitioning && STATIC_TRANSITIONING_PROPS
   };
 }
 var STATIC_EMPTY_OBJECT = {};
@@ -4913,6 +5599,22 @@ var composeHandlers = (handlers) => (e) => {
     handler(e);
   }
 };
+function getHrefOption(publicHref, external, history, disabled) {
+  if (disabled) return void 0;
+  if (external) {
+    return { href: publicHref, external: true };
+  }
+  return {
+    href: history.createHref(publicHref) || "/",
+    external: false
+  };
+}
+function isSafeInternal(to) {
+  if (typeof to !== "string") return false;
+  const zero = to.charCodeAt(0);
+  if (zero === 47) return to.charCodeAt(1) !== 47;
+  return zero === 46;
+}
 function createLink(Comp) {
   return React8.forwardRef(function CreatedLink(props, ref) {
     return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Link, { ...props, _asChild: Comp, ref });
@@ -4921,32 +5623,22 @@ function createLink(Comp) {
 var Link = React8.forwardRef(
   (props, ref) => {
     const { _asChild, ...rest } = props;
-    const {
-      type: _type,
-      ref: innerRef,
-      ...linkProps
-    } = useLinkProps(rest, ref);
+    const { type: _type, ...linkProps } = useLinkProps(rest, ref);
     const children = typeof rest.children === "function" ? rest.children({
       isActive: linkProps["data-status"] === "active"
     }) : rest.children;
-    if (_asChild === void 0) {
-      delete linkProps.disabled;
+    if (!_asChild) {
+      const { disabled: _, ...rest2 } = linkProps;
+      return React8.createElement("a", rest2, children);
     }
-    return React8.createElement(
-      _asChild ? _asChild : "a",
-      {
-        ...linkProps,
-        ref: innerRef
-      },
-      children
-    );
+    return React8.createElement(_asChild, linkProps, children);
   }
 );
 function isCtrlEvent(e) {
   return !!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
 var Route = class extends BaseRoute {
   /**
    * @deprecated Use the `createRoute` function instead.
@@ -5059,7 +5751,7 @@ function createRootRoute(options) {
   return new RootRoute(options);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/fileRoute.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/fileRoute.js
 function createFileRoute(path) {
   if (typeof path === "object") {
     return new FileRoute(path, {
@@ -5143,11 +5835,11 @@ function createLazyFileRoute(id) {
   return (opts) => new LazyRoute({ id, ...opts });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
 var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
 var React11 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Transitioner.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Transitioner.js
 var React9 = __toESM(require_react(), 1);
 function Transitioner() {
   const router = useRouter();
@@ -5182,7 +5874,7 @@ function Transitioner() {
       state: true,
       _includeValidateSearch: true
     });
-    if (trimPathRight2(router.latestLocation.href) !== trimPathRight2(nextLocation.href)) {
+    if (trimPathRight2(router.latestLocation.publicHref) !== trimPathRight2(nextLocation.publicHref)) {
       router.commitLocation({ ...nextLocation, replace: true });
     }
     return () => {
@@ -5243,11 +5935,11 @@ function Transitioner() {
   return null;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
 var import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
 var React10 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/not-found.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/not-found.js
 var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
 function CatchNotFound(props) {
   const resetKey = useRouterState({
@@ -5279,13 +5971,13 @@ function DefaultGlobalNotFound() {
   return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "Not Found" });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/SafeFragment.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/SafeFragment.js
 var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
 function SafeFragment(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_jsx_runtime6.Fragment, { children: props.children });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/renderRouteNotFound.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/renderRouteNotFound.js
 var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
 function renderRouteNotFound(router, route, data) {
   if (!route.options.notFoundComponent) {
@@ -5303,32 +5995,31 @@ function renderRouteNotFound(router, route, data) {
   return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(route.options.notFoundComponent, { ...data });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
 var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ScriptOnce.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ScriptOnce.js
 var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
 function ScriptOnce({ children }) {
   const router = useRouter();
-  if (!router.isServer) {
+  if (!(isServer ?? router.isServer)) {
     return null;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
     "script",
     {
       nonce: router.options.ssr?.nonce,
-      className: "$tsr",
       dangerouslySetInnerHTML: {
-        __html: children + ';typeof $_TSR !== "undefined" && $_TSR.c()'
+        __html: children + ";document.currentScript.remove()"
       }
     }
   );
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
 function ScrollRestoration() {
   const router = useRouter();
-  if (!router.isScrollRestoring || !router.isServer) {
+  if (!router.isScrollRestoring || !(isServer ?? router.isServer)) {
     return null;
   }
   if (typeof router.options.scrollRestoration === "function") {
@@ -5352,19 +6043,20 @@ function ScrollRestoration() {
   return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
     ScriptOnce,
     {
-      children: `(${restoreScroll.toString()})(${JSON.stringify(restoreScrollOptions)})`
+      children: `(${restoreScroll.toString()})(${escapeHtml(JSON.stringify(restoreScrollOptions))})`
     }
   );
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
 var Match = React10.memo(function MatchImpl({
   matchId
 }) {
   const router = useRouter();
   const matchState = useRouterState({
     select: (s) => {
-      const match = s.matches.find((d) => d.id === matchId);
+      const matchIndex = s.matches.findIndex((d) => d.id === matchId);
+      const match = s.matches[matchIndex];
       invariant(
         match,
         `Could not find match for matchId "${matchId}". Please file an issue!`
@@ -5372,7 +6064,9 @@ var Match = React10.memo(function MatchImpl({
       return {
         routeId: match.routeId,
         ssr: match.ssr,
-        _displayPending: match._displayPending
+        _displayPending: match._displayPending,
+        resetKey: s.loadedAt,
+        parentRouteId: s.matches[matchIndex - 1]?.routeId
       };
     },
     structuralSharing: true
@@ -5393,21 +6087,12 @@ var Match = React10.memo(function MatchImpl({
   );
   const ResolvedCatchBoundary = routeErrorComponent ? CatchBoundary : SafeFragment;
   const ResolvedNotFoundBoundary = routeNotFoundComponent ? CatchNotFound : SafeFragment;
-  const resetKey = useRouterState({
-    select: (s) => s.loadedAt
-  });
-  const parentRouteId = useRouterState({
-    select: (s) => {
-      const index = s.matches.findIndex((d) => d.id === matchId);
-      return s.matches[index - 1]?.routeId;
-    }
-  });
   const ShellComponent = route.isRoot ? route.options.shellComponent ?? SafeFragment : SafeFragment;
   return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(ShellComponent, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(matchContext.Provider, { value: matchId, children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ResolvedSuspenseBoundary, { fallback: pendingElement, children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
       ResolvedCatchBoundary,
       {
-        getResetKey: () => resetKey,
+        getResetKey: () => matchState.resetKey,
         errorComponent: routeErrorComponent || ErrorComponent,
         onCatch: (error, errorInfo) => {
           if (isNotFound(error)) throw error;
@@ -5427,7 +6112,7 @@ var Match = React10.memo(function MatchImpl({
         )
       }
     ) }) }),
-    parentRouteId === rootRouteId && router.options.scrollRestoration ? /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
+    matchState.parentRouteId === rootRouteId && router.options.scrollRestoration ? /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(OnRendered, {}),
       /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ScrollRestoration, {})
     ] }) : null
@@ -5478,6 +6163,7 @@ var MatchInner = React10.memo(function MatchInnerImpl({
           id: match2.id,
           status: match2.status,
           error: match2.error,
+          invalid: match2.invalid,
           _forcePending: match2._forcePending,
           _displayPending: match2._displayPending
         }
@@ -5504,7 +6190,7 @@ var MatchInner = React10.memo(function MatchInnerImpl({
     if (pendingMinMs) {
       const routerMatch = router.getMatch(match.id);
       if (routerMatch && !routerMatch._nonReactive.minPendingPromise) {
-        if (!router.isServer) {
+        if (!(isServer ?? router.isServer)) {
           const minPendingPromise = createControlledPromise();
           routerMatch._nonReactive.minPendingPromise = minPendingPromise;
           setTimeout(() => {
@@ -5525,7 +6211,7 @@ var MatchInner = React10.memo(function MatchInnerImpl({
     throw router.getMatch(match.id)?._nonReactive.loadPromise;
   }
   if (match.status === "error") {
-    if (router.isServer) {
+    if (isServer ?? router.isServer) {
       const RouteErrorComponent = (route.options.errorComponent ?? router.options.defaultErrorComponent) || ErrorComponent;
       return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
         RouteErrorComponent,
@@ -5581,15 +6267,15 @@ var Outlet = React10.memo(function OutletImpl() {
   return nextMatch;
 });
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
 function Matches() {
   const router = useRouter();
   const rootRoute = router.routesById[rootRouteId];
   const PendingComponent = rootRoute.options.pendingComponent ?? router.options.defaultPendingComponent;
   const pendingElement = PendingComponent ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(PendingComponent, {}) : null;
-  const ResolvedSuspense = router.isServer || typeof document !== "undefined" && router.ssr ? SafeFragment : React11.Suspense;
+  const ResolvedSuspense = (isServer ?? router.isServer) || typeof document !== "undefined" && router.ssr ? SafeFragment : React11.Suspense;
   const inner = /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(ResolvedSuspense, { fallback: pendingElement, children: [
-    !router.isServer && /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Transitioner, {}),
+    !(isServer ?? router.isServer) && /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Transitioner, {}),
     /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(MatchesInner, {})
   ] });
   return router.options.InnerWrap ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(router.options.InnerWrap, { children: inner }) : inner;
@@ -5631,7 +6317,7 @@ function useMatches(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/router.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/router.js
 var createRouter = (options) => {
   return new Router(options);
 };
@@ -5648,7 +6334,7 @@ if (typeof globalThis !== "undefined") {
   window.createLazyFileRoute = createLazyFileRoute;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/RouterProvider.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/RouterProvider.js
 var import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
 function RouterContextProvider({
   router,
@@ -5676,14 +6362,14 @@ function RouterProvider({ router, ...rest }) {
   return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(RouterContextProvider, { router, ...rest, children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Matches, {}) });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLocation.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLocation.js
 function useLocation(opts) {
   return useRouterState({
     select: (state) => opts?.select ? opts.select(state.location) : state.location
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.139.14_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useCanGoBack.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useCanGoBack.js
 function useCanGoBack() {
   return useRouterState({ select: (s) => s.location.state.__TSR_index !== 0 });
 }

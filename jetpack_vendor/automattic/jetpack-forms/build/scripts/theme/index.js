@@ -76,7 +76,7 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/multiply-matrices.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/multiply-matrices.js
   function dot3(a, b2) {
     return a[0] * b2[0] + a[1] * b2[1] + a[2] * b2[2];
   }
@@ -90,7 +90,7 @@ var wp;
     return out;
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/util.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/util.js
   function isString(str) {
     return type(str) === "string";
   }
@@ -180,7 +180,7 @@ var wp;
     return false;
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/Type.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/Type.js
   var Type = class {
     // Class properties - declared here so that type inference works
     type;
@@ -288,7 +288,7 @@ var wp;
     }
   };
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/Format.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/Format.js
   var instance = /* @__PURE__ */ Symbol("instance");
   var Format = class _Format {
     // Class properties - declared here so that type inference works
@@ -405,7 +405,7 @@ var wp;
     }
   };
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/hooks.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/hooks.js
   var Hooks = class {
     add(name, callback, first) {
       if (typeof arguments[0] != "string") {
@@ -431,7 +431,7 @@ var wp;
   var hooks = new Hooks();
   var hooks_default = hooks;
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/adapt.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/adapt.js
   var WHITES = {
     // for compatibility, the four-digit chromaticity-derived ones everyone else uses
     D50: [0.3457 / 0.3585, 1, (1 - 0.3457 - 0.3585) / 0.3585],
@@ -479,7 +479,7 @@ var wp;
     }
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/defaults.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/defaults.js
   var defaults_default = {
     gamut_mapping: "css",
     precision: 5,
@@ -493,7 +493,7 @@ var wp;
     }
   };
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/parse.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/parse.js
   function parse(str, options) {
     let env = {
       str: String(str)?.trim(),
@@ -677,7 +677,7 @@ var wp;
     }
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/getColor.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/getColor.js
   function getColor(color, options) {
     if (Array.isArray(color)) {
       return color.map((c) => getColor(c, options));
@@ -698,7 +698,7 @@ var wp;
     return color;
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/ColorSpace.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/ColorSpace.js
   var \u03B5 = 75e-6;
   var ColorSpace = class _ColorSpace {
     constructor(options) {
@@ -1015,7 +1015,7 @@ var wp;
     return ret;
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/xyz-d65.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/xyz-d65.js
   var xyz_d65_default = new ColorSpace({
     id: "xyz-d65",
     name: "XYZ D65",
@@ -1042,7 +1042,7 @@ var wp;
     aliases: ["xyz"]
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/RGBColorSpace.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/RGBColorSpace.js
   var RGBColorSpace = class extends ColorSpace {
     /**
      * Creates a new RGB ColorSpace.
@@ -1089,7 +1089,7 @@ var wp;
     }
   };
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/getAll.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/getAll.js
   function getAll(color, options) {
     color = getColor(color);
     let space = ColorSpace.get(options, options?.space);
@@ -1103,7 +1103,7 @@ var wp;
     return precision === void 0 ? coords : coords.map((coord) => toPrecision(coord, precision));
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/get.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/get.js
   function get(color, prop) {
     color = getColor(color);
     if (prop === "alpha") {
@@ -1114,7 +1114,7 @@ var wp;
     return coords[index];
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/setAll.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/setAll.js
   function setAll(color, space, coords, alpha) {
     color = getColor(color);
     if (Array.isArray(space)) {
@@ -1129,7 +1129,7 @@ var wp;
   }
   setAll.returns = "color";
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/set.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/set.js
   function set(color, prop, value) {
     color = getColor(color);
     if (arguments.length === 2 && type(arguments[1]) === "object") {
@@ -1154,7 +1154,7 @@ var wp;
   }
   set.returns = "color";
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/xyz-d50.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/xyz-d50.js
   var xyz_d50_default = new ColorSpace({
     id: "xyz-d50",
     name: "XYZ D50",
@@ -1164,7 +1164,7 @@ var wp;
     toBase: (coords) => adapt("D50", xyz_d65_default.white, coords)
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/lab.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/lab.js
   var \u03B52 = 216 / 24389;
   var \u03B53 = 24 / 116;
   var \u03BA = 24389 / 27;
@@ -1225,7 +1225,7 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/angles.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/angles.js
   function constrain(angle) {
     if (typeof angle !== "number") {
       return angle;
@@ -1233,7 +1233,7 @@ var wp;
     return (angle % 360 + 360) % 360;
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/lch.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/lch.js
   var lch_default = new ColorSpace({
     id: "lch",
     name: "LCH",
@@ -1282,7 +1282,7 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/deltaE/deltaE2000.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/deltaE/deltaE2000.js
   var Gfactor = 25 ** 7;
   var \u03C0 = Math.PI;
   var r2d = 180 / \u03C0;
@@ -1371,7 +1371,7 @@ var wp;
     return Math.sqrt(dE);
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/oklab.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/oklab.js
   var XYZtoLMS_M = [
     [0.819022437996703, 0.3619062600528904, -0.1288737815209879],
     [0.0329836539323885, 0.9292868615863434, 0.0361446663506424],
@@ -1435,7 +1435,7 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/deltaE/deltaEOK.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/deltaE/deltaEOK.js
   function deltaEOK_default(color, sample) {
     [color, sample] = getColor([color, sample]);
     let [L1, a1, b1] = oklab_default.from(color);
@@ -1446,7 +1446,7 @@ var wp;
     return Math.sqrt(\u0394L ** 2 + \u0394a ** 2 + \u0394b ** 2);
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/inGamut.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/inGamut.js
   var \u03B54 = 75e-6;
   function inGamut(color, space, { epsilon = \u03B54 } = {}) {
     color = getColor(color);
@@ -1461,7 +1461,7 @@ var wp;
     return space.inGamut(coords, { epsilon });
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/clone.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/clone.js
   function clone(color) {
     return {
       space: color.space,
@@ -1473,7 +1473,7 @@ var wp;
     };
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/distance.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/distance.js
   function distance(color1, color2, space = "lab") {
     space = ColorSpace.get(space);
     let coords1 = space.from(color1);
@@ -1489,12 +1489,12 @@ var wp;
     );
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/deltaE/deltaE76.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/deltaE/deltaE76.js
   function deltaE76(color, sample) {
     return distance(color, sample, "lab");
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/deltaE/deltaECMC.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/deltaE/deltaECMC.js
   var \u03C02 = Math.PI;
   var d2r2 = \u03C02 / 180;
   function deltaECMC_default(color, sample, { l = 2, c = 1 } = {}) {
@@ -1537,7 +1537,7 @@ var wp;
     return Math.sqrt(dE);
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/xyz-abs-d65.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/xyz-abs-d65.js
   var Yw = 203;
   var xyz_abs_d65_default = new ColorSpace({
     // Absolute CIE XYZ, with a D65 whitepoint,
@@ -1570,7 +1570,7 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/jzazbz.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/jzazbz.js
   var b = 1.15;
   var g = 0.66;
   var n = 2610 / 2 ** 14;
@@ -1665,7 +1665,7 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/jzczhz.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/jzczhz.js
   var jzczhz_default = new ColorSpace({
     id: "jzczhz",
     name: "JzCzHz",
@@ -1695,7 +1695,7 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/deltaE/deltaEJz.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/deltaE/deltaEJz.js
   function deltaEJz_default(color, sample) {
     [color, sample] = getColor([color, sample]);
     let [Jz1, Cz1, Hz1] = jzczhz_default.from(color);
@@ -1715,7 +1715,7 @@ var wp;
     return Math.sqrt(\u0394J ** 2 + \u0394C ** 2 + \u0394H ** 2);
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/ictcp.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/ictcp.js
   var c12 = 3424 / 4096;
   var c22 = 2413 / 128;
   var c32 = 2392 / 128;
@@ -1814,7 +1814,7 @@ var wp;
     return LMS;
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/deltaE/deltaEITP.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/deltaE/deltaEITP.js
   function deltaEITP_default(color, sample) {
     [color, sample] = getColor([color, sample]);
     let [I1, T1, P1] = ictcp_default.from(color);
@@ -1822,7 +1822,7 @@ var wp;
     return 720 * Math.sqrt((I1 - I2) ** 2 + 0.25 * (T1 - T2) ** 2 + (P1 - P2) ** 2);
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/deltaE/deltaEOK2.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/deltaE/deltaEOK2.js
   function deltaEOK2_default(color, sample) {
     [color, sample] = getColor([color, sample]);
     let abscale = 2;
@@ -1834,7 +1834,7 @@ var wp;
     return Math.sqrt(\u0394L ** 2 + \u0394a ** 2 + \u0394b ** 2);
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/cam16.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/cam16.js
   var white2 = WHITES.D65;
   var adaptedCoef = 0.42;
   var adaptedCoefInv = 1 / adaptedCoef;
@@ -2081,7 +2081,7 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/hct.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/hct.js
   var white3 = WHITES.D65;
   var \u03B55 = 216 / 24389;
   var \u03BA2 = 24389 / 27;
@@ -2181,7 +2181,7 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/deltaE/deltaEHCT.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/deltaE/deltaEHCT.js
   var rad2deg2 = 180 / Math.PI;
   var deg2rad2 = Math.PI / 180;
   var ucsCoeff = [1, 7e-3, 0.0228];
@@ -2202,7 +2202,7 @@ var wp;
     return Math.sqrt((t1 - t2) ** 2 + (a1 - a2) ** 2 + (b1 - b2) ** 2);
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/deltaE/index.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/deltaE/index.js
   var deltaE_default = {
     deltaE76,
     deltaECMC: deltaECMC_default,
@@ -2214,7 +2214,7 @@ var wp;
     deltaEHCT: deltaEHCT_default
   };
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/toGamut.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/toGamut.js
   function calcEpsilon(jnd) {
     const order = !jnd ? 0 : Math.floor(Math.log10(Math.abs(jnd)));
     return Math.max(parseFloat(`1e${order - 2}`), 1e-6);
@@ -2425,7 +2425,7 @@ var wp;
     return clipped;
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/to.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/to.js
   function to(color, space, { inGamut: inGamut2 } = {}) {
     color = getColor(color);
     space = ColorSpace.get(space);
@@ -2438,7 +2438,7 @@ var wp;
   }
   to.returns = "color";
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/serialize.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/serialize.js
   function serialize(color, options = {}) {
     let {
       precision = defaults_default.precision,
@@ -2518,7 +2518,7 @@ var wp;
     return ret;
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/p3-linear.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/p3-linear.js
   var toXYZ_M = [
     [0.4865709486482162, 0.26566769316909306, 0.1982172852343625],
     [0.2289745640697488, 0.6917385218365064, 0.079286914093745],
@@ -2538,7 +2538,7 @@ var wp;
     fromXYZ_M
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/srgb-linear.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/srgb-linear.js
   var toXYZ_M2 = [
     [0.41239079926595934, 0.357584339383878, 0.1804807884018343],
     [0.21263900587151027, 0.715168678767756, 0.07219231536073371],
@@ -2557,7 +2557,7 @@ var wp;
     fromXYZ_M: fromXYZ_M2
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/keywords.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/keywords.js
   var keywords_default = {
     aliceblue: [240 / 255, 248 / 255, 1],
     antiquewhite: [250 / 255, 235 / 255, 215 / 255],
@@ -2709,7 +2709,7 @@ var wp;
     yellowgreen: [154 / 255, 205 / 255, 50 / 255]
   };
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/srgb.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/srgb.js
   var coordGrammar = Array(3).fill("<percentage> | <number>[0, 255]");
   var coordGrammarNumber = Array(3).fill("<number>[0, 255]");
   var srgb_default = new RGBColorSpace({
@@ -2823,7 +2823,7 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/p3.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/p3.js
   var p3_default = new RGBColorSpace({
     id: "p3",
     cssId: "display-p3",
@@ -2834,12 +2834,12 @@ var wp;
     toBase: srgb_default.toBase
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/luminance.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/luminance.js
   function getLuminance(color) {
     return get(color, [xyz_d65_default, "y"]);
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/contrast/WCAG21.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/contrast/WCAG21.js
   function contrastWCAG21(color1, color2) {
     color1 = getColor(color1);
     color2 = getColor(color2);
@@ -2851,7 +2851,7 @@ var wp;
     return (Y1 + 0.05) / (Y2 + 0.05);
   }
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/hsl.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/hsl.js
   var hsl_default = new ColorSpace({
     id: "hsl",
     name: "HSL",
@@ -2929,7 +2929,7 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/colorjs.io@0.6.0/node_modules/colorjs.io/src/spaces/oklch.js
+  // ../../../node_modules/.pnpm/colorjs.io@0.6.1/node_modules/colorjs.io/src/spaces/oklch.js
   var oklch_default = new ColorSpace({
     id: "oklch",
     name: "OkLCh",
