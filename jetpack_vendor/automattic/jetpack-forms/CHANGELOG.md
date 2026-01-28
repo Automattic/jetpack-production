@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Display star/heart rating icons on submission confirmation page.
 - Forms: Add item click handler for DataViews on dashboards
 - Forms: add new field preview component for response view with improved field type rendering and styling.
 - Forms: Display uploaded files with icon, filename, and size on confirmation page.
