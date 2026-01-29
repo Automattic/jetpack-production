@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Announce form submission and errors to VoiceOver.
 - Contact Form: Fix Edit Form button in the Site Editor by navigating directly to the form editor.
 - Ensure form block is selected and locked when editing forms, and restrict available blocks to form-related blocks only.
+- Form Editor: stop hiding editor toolbar and sidebar panel tabs.
 - Forms: ensure first step is selected when switching to or loading a multistep form.
 - Forms: Fix dashboard inspector "mark as read/unread" action
 - Forms: Fix data normalization on dashboard
