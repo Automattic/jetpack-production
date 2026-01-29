@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix dashboard inspector "mark as read/unread" action
 - Forms: Fix data normalization on dashboard
 - Forms: Fix filters alignment and spacing in the new wp-build dashboard responses view so the filters row matches the Inbox layout.
+- Multi-step forms: fix submit button spinner CSS selector to target the correct element.
 
 ## [7.5.0] - 2026-01-26
 ### Added
