@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update copy from "submissions" to "responses" for consistency.
 - Forms: Update dashboard default view and tab labels - rename "All responses" to "Responses", set "Responses" as the default landing page instead of Forms, and reorder tabs to show Responses first.
 - Forms: Update wp-build dashboard to use useInboxData
+- Gating for the Forms Integrations feature
 - Improve country flag and text display consistency across the dashboard.
 - Response view: display phone numbers with country flags and international formatting.
 - Share response header via component for new and old dashboard.
