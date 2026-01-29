@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Adding Jetpack Protect details page for users without the dedicated Jetpack Protect plugin.
 - Forms: add single forms screen.
 - Forms: display star and heart rating icons on form submission confirmation page.
 - Likes: add minified build for CSS.

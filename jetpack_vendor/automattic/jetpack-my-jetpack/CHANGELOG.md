@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.30.4-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Adding Jetpack Protect details page for users without the dedicated Jetpack Protect plugin.
+
 ## [5.30.3] - 2026-01-26
 ### Changed
 - Update package dependencies. [#46430]
@@ -2500,6 +2507,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.30.4-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.30.3...5.30.4-alpha
 [5.30.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.30.2...5.30.3
 [5.30.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.30.1...5.30.2
 [5.30.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.30.0...5.30.1
