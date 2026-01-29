@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Contact Form: Fix Edit Form button in the Site Editor by navigating directly to the form editor.
 - Ensure form block is selected and locked when editing forms, and restrict available blocks to form-related blocks only.
+- Forms: ensure first step is selected when switching to or loading a multistep form.
 - Forms: Fix dashboard inspector "mark as read/unread" action
 - Forms: Fix data normalization on dashboard
 - Forms: Fix filters alignment and spacing in the new wp-build dashboard responses view so the filters row matches the Inbox layout.
