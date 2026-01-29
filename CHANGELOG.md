@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- General: Update minimum WordPress version to 6.8.
+
 ### Enhancements
 - Adding Jetpack Protect details page for users without the dedicated Jetpack Protect plugin.
 - Forms: add single forms screen.
