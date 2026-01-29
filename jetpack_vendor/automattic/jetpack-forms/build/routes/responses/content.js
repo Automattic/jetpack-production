@@ -29295,7 +29295,52 @@ function getActions({
 }
 
 // routes/responses/style.scss
-var css10 = `@media (max-width: 782px) {
+var css10 = `/**
+ * SCSS Variables.
+ *
+ * Please use variables from this sheet to ensure consistency across the UI.
+ * Don't add to this sheet unless you're pretty sure the value will be reused in many places.
+ * For example, don't add rules to this sheet that affect block visuals. It's purely for UI.
+ */
+/**
+ * Colors
+ */
+/**
+ * Fonts & basic variables.
+ */
+/**
+ * Typography
+ */
+/**
+ * Grid System.
+ * https://make.wordpress.org/design/2019/10/31/proposal-a-consistent-spacing-system-for-wordpress/
+ */
+/**
+ * Radius scale.
+ */
+/**
+ * Elevation scale.
+ */
+/**
+ * Dimensions.
+ */
+/**
+ * Mobile specific styles
+ */
+/**
+ * Editor styles.
+ */
+/**
+ * Block & Editor UI.
+ */
+/**
+ * Block paddings.
+ */
+/**
+ * React Native specific.
+ * These variables do not appear to be used anywhere else.
+ */
+@media (max-width: 782px) {
   .admin-ui-page__header {
     top: 46px;
   }
@@ -29319,6 +29364,16 @@ var css10 = `@media (max-width: 782px) {
 }
 .jp-forms-dataviews__view-actions > div:not(:empty) {
   min-height: 48px;
+}
+
+.jp-forms-dataviews-filters__container,
+.jp-forms-dataviews-filters__container:not(:empty) {
+  padding: 0;
+}
+
+.jp-forms-dataviews-filters__container:not(:empty) {
+  padding-inline: 20px;
+  padding-block: 12px;
 }`;
 document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css10));
 
@@ -29740,7 +29795,7 @@ function StageInner() {
                   ]
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.Filters, { className: "dataviews-filters__container" }),
+              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.FiltersToggled, { className: "dataviews-filters__container jp-forms-dataviews-filters__container" }),
               /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.Layout, {}),
               /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.Footer, {})
             ]
