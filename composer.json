@@ -15,7 +15,7 @@
 		"automattic/jetpack-a8c-mc-stats": "^3.0.5",
 		"automattic/jetpack-account-protection": "^0.2.10",
 		"automattic/jetpack-admin-ui": "^0.5.11",
-		"automattic/jetpack-assets": "^4.3.21",
+		"automattic/jetpack-assets": "^4.3.22-alpha",
 		"automattic/jetpack-autoloader": "^5.0.15",
 		"automattic/jetpack-backup": "^4.2.38",
 		"automattic/jetpack-blaze": "^0.27.0",
@@ -59,7 +59,7 @@
 	},
 	"require-dev": {
 		"antecedent/patchwork": "^2.2",
-		"automattic/jetpack-changelogger": "^6.0.12",
+		"automattic/jetpack-changelogger": "^6.0.13-alpha",
 		"automattic/patchwork-redefine-exit": "^2.0.9",
 		"automattic/phpunit-select-config": "^1.0.3",
 		"yoast/phpunit-polyfills": "^4.0.0"
