@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Sync media to connections for per network customizations.
 
 ### Changed
+- Mark new connections as shared by default for privileged users.
 - Update package dependencies.
 
 ## [0.72.0] - 2026-01-26

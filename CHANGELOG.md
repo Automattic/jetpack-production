@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: display star and heart rating icons on form submission confirmation page.
 - Likes: add minified build for CSS.
 - Likes: Display a notice to block theme users explaining they can add the Like block directly in the site editor instead of enabling the legacy feature.
+- Social: Mark new connections as shared by default for privileged users.
 
 ### Bug fixes
 - Site Switcher: fix partial keyword matching so typing 'swit' shows 'Switch to...' results in the command palette.
