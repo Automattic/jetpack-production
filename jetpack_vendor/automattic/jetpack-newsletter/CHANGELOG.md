@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a newsletter categories section to the settings screen.
 - Add settings sections: subscriptions, paid newsletter, and welcome message.
 
 ### Changed
