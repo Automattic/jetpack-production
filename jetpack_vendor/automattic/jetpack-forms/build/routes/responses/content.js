@@ -20161,10 +20161,10 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/responses/stage.tsx
 var import_date9 = __toESM(require_date());
-var import_element75 = __toESM(require_element());
+var import_element76 = __toESM(require_element());
 var import_html_entities3 = __toESM(require_html_entities());
-var import_i18n67 = __toESM(require_i18n());
-import { useParams, useSearch as useSearch2, useNavigate as useNavigate2 } from "@wordpress/route";
+var import_i18n68 = __toESM(require_i18n());
+import { useParams, useSearch as useSearch2, useNavigate as useNavigate3 } from "@wordpress/route";
 var React36 = __toESM(require_react());
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
@@ -25166,6 +25166,422 @@ function Gravatar({
   );
 }
 
+// src/dashboard/components/text-with-flag/index.tsx
+var import_components65 = __toESM(require_components(), 1);
+
+// src/util/country-names-translated.js
+var import_i18n65 = __toESM(require_i18n(), 1);
+var translatedCountryNames = {
+  AF: (0, import_i18n65.__)("Afghanistan", "jetpack-forms"),
+  AL: (0, import_i18n65.__)("Albania", "jetpack-forms"),
+  DZ: (0, import_i18n65.__)("Algeria", "jetpack-forms"),
+  AS: (0, import_i18n65.__)("American Samoa", "jetpack-forms"),
+  AD: (0, import_i18n65.__)("Andorra", "jetpack-forms"),
+  AO: (0, import_i18n65.__)("Angola", "jetpack-forms"),
+  AI: (0, import_i18n65.__)("Anguilla", "jetpack-forms"),
+  AG: (0, import_i18n65.__)("Antigua and Barbuda", "jetpack-forms"),
+  AR: (0, import_i18n65.__)("Argentina", "jetpack-forms"),
+  AM: (0, import_i18n65.__)("Armenia", "jetpack-forms"),
+  AW: (0, import_i18n65.__)("Aruba", "jetpack-forms"),
+  AU: (0, import_i18n65.__)("Australia", "jetpack-forms"),
+  AT: (0, import_i18n65.__)("Austria", "jetpack-forms"),
+  AZ: (0, import_i18n65.__)("Azerbaijan", "jetpack-forms"),
+  BS: (0, import_i18n65.__)("Bahamas", "jetpack-forms"),
+  BH: (0, import_i18n65.__)("Bahrain", "jetpack-forms"),
+  BD: (0, import_i18n65.__)("Bangladesh", "jetpack-forms"),
+  BB: (0, import_i18n65.__)("Barbados", "jetpack-forms"),
+  BY: (0, import_i18n65.__)("Belarus", "jetpack-forms"),
+  BE: (0, import_i18n65.__)("Belgium", "jetpack-forms"),
+  BZ: (0, import_i18n65.__)("Belize", "jetpack-forms"),
+  BJ: (0, import_i18n65.__)("Benin", "jetpack-forms"),
+  BM: (0, import_i18n65.__)("Bermuda", "jetpack-forms"),
+  BT: (0, import_i18n65.__)("Bhutan", "jetpack-forms"),
+  BO: (0, import_i18n65.__)("Bolivia", "jetpack-forms"),
+  BA: (0, import_i18n65.__)("Bosnia and Herzegovina", "jetpack-forms"),
+  BW: (0, import_i18n65.__)("Botswana", "jetpack-forms"),
+  BR: (0, import_i18n65.__)("Brazil", "jetpack-forms"),
+  IO: (0, import_i18n65.__)("British Indian Ocean Territory", "jetpack-forms"),
+  VG: (0, import_i18n65.__)("British Virgin Islands", "jetpack-forms"),
+  BN: (0, import_i18n65.__)("Brunei", "jetpack-forms"),
+  BG: (0, import_i18n65.__)("Bulgaria", "jetpack-forms"),
+  BF: (0, import_i18n65.__)("Burkina Faso", "jetpack-forms"),
+  BI: (0, import_i18n65.__)("Burundi", "jetpack-forms"),
+  KH: (0, import_i18n65.__)("Cambodia", "jetpack-forms"),
+  CM: (0, import_i18n65.__)("Cameroon", "jetpack-forms"),
+  CA: (0, import_i18n65.__)("Canada", "jetpack-forms"),
+  CV: (0, import_i18n65.__)("Cape Verde", "jetpack-forms"),
+  KY: (0, import_i18n65.__)("Cayman Islands", "jetpack-forms"),
+  CF: (0, import_i18n65.__)("Central African Republic", "jetpack-forms"),
+  TD: (0, import_i18n65.__)("Chad", "jetpack-forms"),
+  CL: (0, import_i18n65.__)("Chile", "jetpack-forms"),
+  CN: (0, import_i18n65.__)("China", "jetpack-forms"),
+  CX: (0, import_i18n65.__)("Christmas Island", "jetpack-forms"),
+  CC: (0, import_i18n65.__)("Cocos (Keeling) Islands", "jetpack-forms"),
+  CO: (0, import_i18n65.__)("Colombia", "jetpack-forms"),
+  KM: (0, import_i18n65.__)("Comoros", "jetpack-forms"),
+  CG: (0, import_i18n65.__)("Congo - Brazzaville", "jetpack-forms"),
+  CD: (0, import_i18n65.__)("Congo - Kinshasa", "jetpack-forms"),
+  CK: (0, import_i18n65.__)("Cook Islands", "jetpack-forms"),
+  CR: (0, import_i18n65.__)("Costa Rica", "jetpack-forms"),
+  HR: (0, import_i18n65.__)("Croatia", "jetpack-forms"),
+  CU: (0, import_i18n65.__)("Cuba", "jetpack-forms"),
+  CY: (0, import_i18n65.__)("Cyprus", "jetpack-forms"),
+  CZ: (0, import_i18n65.__)("Czech Republic", "jetpack-forms"),
+  CI: (0, import_i18n65.__)("C\xF4te d'Ivoire", "jetpack-forms"),
+  DK: (0, import_i18n65.__)("Denmark", "jetpack-forms"),
+  DJ: (0, import_i18n65.__)("Djibouti", "jetpack-forms"),
+  DM: (0, import_i18n65.__)("Dominica", "jetpack-forms"),
+  DO: (0, import_i18n65.__)("Dominican Republic", "jetpack-forms"),
+  EC: (0, import_i18n65.__)("Ecuador", "jetpack-forms"),
+  EG: (0, import_i18n65.__)("Egypt", "jetpack-forms"),
+  SV: (0, import_i18n65.__)("El Salvador", "jetpack-forms"),
+  GQ: (0, import_i18n65.__)("Equatorial Guinea", "jetpack-forms"),
+  ER: (0, import_i18n65.__)("Eritrea", "jetpack-forms"),
+  EE: (0, import_i18n65.__)("Estonia", "jetpack-forms"),
+  SZ: (0, import_i18n65.__)("Eswatini", "jetpack-forms"),
+  ET: (0, import_i18n65.__)("Ethiopia", "jetpack-forms"),
+  FK: (0, import_i18n65.__)("Falkland Islands", "jetpack-forms"),
+  FO: (0, import_i18n65.__)("Faroe Islands", "jetpack-forms"),
+  FJ: (0, import_i18n65.__)("Fiji", "jetpack-forms"),
+  FI: (0, import_i18n65.__)("Finland", "jetpack-forms"),
+  FR: (0, import_i18n65.__)("France", "jetpack-forms"),
+  GF: (0, import_i18n65.__)("French Guiana", "jetpack-forms"),
+  PF: (0, import_i18n65.__)("French Polynesia", "jetpack-forms"),
+  GA: (0, import_i18n65.__)("Gabon", "jetpack-forms"),
+  GM: (0, import_i18n65.__)("Gambia", "jetpack-forms"),
+  GE: (0, import_i18n65.__)("Georgia", "jetpack-forms"),
+  DE: (0, import_i18n65.__)("Germany", "jetpack-forms"),
+  GH: (0, import_i18n65.__)("Ghana", "jetpack-forms"),
+  GI: (0, import_i18n65.__)("Gibraltar", "jetpack-forms"),
+  GR: (0, import_i18n65.__)("Greece", "jetpack-forms"),
+  GL: (0, import_i18n65.__)("Greenland", "jetpack-forms"),
+  GD: (0, import_i18n65.__)("Grenada", "jetpack-forms"),
+  GP: (0, import_i18n65.__)("Guadeloupe", "jetpack-forms"),
+  GU: (0, import_i18n65.__)("Guam", "jetpack-forms"),
+  GT: (0, import_i18n65.__)("Guatemala", "jetpack-forms"),
+  GG: (0, import_i18n65.__)("Guernsey", "jetpack-forms"),
+  GN: (0, import_i18n65.__)("Guinea", "jetpack-forms"),
+  GW: (0, import_i18n65.__)("Guinea-Bissau", "jetpack-forms"),
+  GY: (0, import_i18n65.__)("Guyana", "jetpack-forms"),
+  HT: (0, import_i18n65.__)("Haiti", "jetpack-forms"),
+  HN: (0, import_i18n65.__)("Honduras", "jetpack-forms"),
+  HK: (0, import_i18n65.__)("Hong Kong", "jetpack-forms"),
+  HU: (0, import_i18n65.__)("Hungary", "jetpack-forms"),
+  IS: (0, import_i18n65.__)("Iceland", "jetpack-forms"),
+  IN: (0, import_i18n65.__)("India", "jetpack-forms"),
+  ID: (0, import_i18n65.__)("Indonesia", "jetpack-forms"),
+  IR: (0, import_i18n65.__)("Iran", "jetpack-forms"),
+  IQ: (0, import_i18n65.__)("Iraq", "jetpack-forms"),
+  IE: (0, import_i18n65.__)("Ireland", "jetpack-forms"),
+  IM: (0, import_i18n65.__)("Isle of Man", "jetpack-forms"),
+  IL: (0, import_i18n65.__)("Israel", "jetpack-forms"),
+  IT: (0, import_i18n65.__)("Italy", "jetpack-forms"),
+  JM: (0, import_i18n65.__)("Jamaica", "jetpack-forms"),
+  JP: (0, import_i18n65.__)("Japan", "jetpack-forms"),
+  JE: (0, import_i18n65.__)("Jersey", "jetpack-forms"),
+  JO: (0, import_i18n65.__)("Jordan", "jetpack-forms"),
+  KZ: (0, import_i18n65.__)("Kazakhstan", "jetpack-forms"),
+  KE: (0, import_i18n65.__)("Kenya", "jetpack-forms"),
+  KI: (0, import_i18n65.__)("Kiribati", "jetpack-forms"),
+  XK: (0, import_i18n65.__)("Kosovo", "jetpack-forms"),
+  KW: (0, import_i18n65.__)("Kuwait", "jetpack-forms"),
+  KG: (0, import_i18n65.__)("Kyrgyzstan", "jetpack-forms"),
+  LA: (0, import_i18n65.__)("Laos", "jetpack-forms"),
+  LV: (0, import_i18n65.__)("Latvia", "jetpack-forms"),
+  LB: (0, import_i18n65.__)("Lebanon", "jetpack-forms"),
+  LS: (0, import_i18n65.__)("Lesotho", "jetpack-forms"),
+  LR: (0, import_i18n65.__)("Liberia", "jetpack-forms"),
+  LY: (0, import_i18n65.__)("Libya", "jetpack-forms"),
+  LI: (0, import_i18n65.__)("Liechtenstein", "jetpack-forms"),
+  LT: (0, import_i18n65.__)("Lithuania", "jetpack-forms"),
+  LU: (0, import_i18n65.__)("Luxembourg", "jetpack-forms"),
+  MO: (0, import_i18n65.__)("Macao", "jetpack-forms"),
+  MG: (0, import_i18n65.__)("Madagascar", "jetpack-forms"),
+  MW: (0, import_i18n65.__)("Malawi", "jetpack-forms"),
+  MY: (0, import_i18n65.__)("Malaysia", "jetpack-forms"),
+  MV: (0, import_i18n65.__)("Maldives", "jetpack-forms"),
+  ML: (0, import_i18n65.__)("Mali", "jetpack-forms"),
+  MT: (0, import_i18n65.__)("Malta", "jetpack-forms"),
+  MH: (0, import_i18n65.__)("Marshall Islands", "jetpack-forms"),
+  MQ: (0, import_i18n65.__)("Martinique", "jetpack-forms"),
+  MR: (0, import_i18n65.__)("Mauritania", "jetpack-forms"),
+  MU: (0, import_i18n65.__)("Mauritius", "jetpack-forms"),
+  YT: (0, import_i18n65.__)("Mayotte", "jetpack-forms"),
+  MX: (0, import_i18n65.__)("Mexico", "jetpack-forms"),
+  FM: (0, import_i18n65.__)("Micronesia", "jetpack-forms"),
+  MD: (0, import_i18n65.__)("Moldova", "jetpack-forms"),
+  MC: (0, import_i18n65.__)("Monaco", "jetpack-forms"),
+  MN: (0, import_i18n65.__)("Mongolia", "jetpack-forms"),
+  ME: (0, import_i18n65.__)("Montenegro", "jetpack-forms"),
+  MS: (0, import_i18n65.__)("Montserrat", "jetpack-forms"),
+  MA: (0, import_i18n65.__)("Morocco", "jetpack-forms"),
+  MZ: (0, import_i18n65.__)("Mozambique", "jetpack-forms"),
+  MM: (0, import_i18n65.__)("Myanmar", "jetpack-forms"),
+  NA: (0, import_i18n65.__)("Namibia", "jetpack-forms"),
+  NR: (0, import_i18n65.__)("Nauru", "jetpack-forms"),
+  NP: (0, import_i18n65.__)("Nepal", "jetpack-forms"),
+  NL: (0, import_i18n65.__)("Netherlands", "jetpack-forms"),
+  NC: (0, import_i18n65.__)("New Caledonia", "jetpack-forms"),
+  NZ: (0, import_i18n65.__)("New Zealand", "jetpack-forms"),
+  NI: (0, import_i18n65.__)("Nicaragua", "jetpack-forms"),
+  NE: (0, import_i18n65.__)("Niger", "jetpack-forms"),
+  NG: (0, import_i18n65.__)("Nigeria", "jetpack-forms"),
+  NU: (0, import_i18n65.__)("Niue", "jetpack-forms"),
+  NF: (0, import_i18n65.__)("Norfolk Island", "jetpack-forms"),
+  KP: (0, import_i18n65.__)("North Korea", "jetpack-forms"),
+  MK: (0, import_i18n65.__)("North Macedonia", "jetpack-forms"),
+  MP: (0, import_i18n65.__)("Northern Mariana Islands", "jetpack-forms"),
+  NO: (0, import_i18n65.__)("Norway", "jetpack-forms"),
+  OM: (0, import_i18n65.__)("Oman", "jetpack-forms"),
+  PK: (0, import_i18n65.__)("Pakistan", "jetpack-forms"),
+  PW: (0, import_i18n65.__)("Palau", "jetpack-forms"),
+  PS: (0, import_i18n65.__)("Palestine", "jetpack-forms"),
+  PA: (0, import_i18n65.__)("Panama", "jetpack-forms"),
+  PG: (0, import_i18n65.__)("Papua New Guinea", "jetpack-forms"),
+  PY: (0, import_i18n65.__)("Paraguay", "jetpack-forms"),
+  PE: (0, import_i18n65.__)("Peru", "jetpack-forms"),
+  PH: (0, import_i18n65.__)("Philippines", "jetpack-forms"),
+  PN: (0, import_i18n65.__)("Pitcairn Islands", "jetpack-forms"),
+  PL: (0, import_i18n65.__)("Poland", "jetpack-forms"),
+  PT: (0, import_i18n65.__)("Portugal", "jetpack-forms"),
+  PR: (0, import_i18n65.__)("Puerto Rico", "jetpack-forms"),
+  QA: (0, import_i18n65.__)("Qatar", "jetpack-forms"),
+  RO: (0, import_i18n65.__)("Romania", "jetpack-forms"),
+  RU: (0, import_i18n65.__)("Russia", "jetpack-forms"),
+  RW: (0, import_i18n65.__)("Rwanda", "jetpack-forms"),
+  RE: (0, import_i18n65.__)("R\xE9union", "jetpack-forms"),
+  BL: (0, import_i18n65.__)("Saint Barth\xE9lemy", "jetpack-forms"),
+  SH: (0, import_i18n65.__)("Saint Helena", "jetpack-forms"),
+  KN: (0, import_i18n65.__)("Saint Kitts and Nevis", "jetpack-forms"),
+  LC: (0, import_i18n65.__)("Saint Lucia", "jetpack-forms"),
+  MF: (0, import_i18n65.__)("Saint Martin", "jetpack-forms"),
+  PM: (0, import_i18n65.__)("Saint Pierre and Miquelon", "jetpack-forms"),
+  VC: (0, import_i18n65.__)("Saint Vincent and the Grenadines", "jetpack-forms"),
+  WS: (0, import_i18n65.__)("Samoa", "jetpack-forms"),
+  SM: (0, import_i18n65.__)("San Marino", "jetpack-forms"),
+  SA: (0, import_i18n65.__)("Saudi Arabia", "jetpack-forms"),
+  SN: (0, import_i18n65.__)("Senegal", "jetpack-forms"),
+  RS: (0, import_i18n65.__)("Serbia", "jetpack-forms"),
+  SC: (0, import_i18n65.__)("Seychelles", "jetpack-forms"),
+  SL: (0, import_i18n65.__)("Sierra Leone", "jetpack-forms"),
+  SG: (0, import_i18n65.__)("Singapore", "jetpack-forms"),
+  SK: (0, import_i18n65.__)("Slovakia", "jetpack-forms"),
+  SI: (0, import_i18n65.__)("Slovenia", "jetpack-forms"),
+  SB: (0, import_i18n65.__)("Solomon Islands", "jetpack-forms"),
+  SO: (0, import_i18n65.__)("Somalia", "jetpack-forms"),
+  ZA: (0, import_i18n65.__)("South Africa", "jetpack-forms"),
+  GS: (0, import_i18n65.__)("South Georgia and the South Sandwich Islands", "jetpack-forms"),
+  KR: (0, import_i18n65.__)("South Korea", "jetpack-forms"),
+  ES: (0, import_i18n65.__)("Spain", "jetpack-forms"),
+  LK: (0, import_i18n65.__)("Sri Lanka", "jetpack-forms"),
+  SD: (0, import_i18n65.__)("Sudan", "jetpack-forms"),
+  SR: (0, import_i18n65.__)("Suriname", "jetpack-forms"),
+  SJ: (0, import_i18n65.__)("Svalbard and Jan Mayen", "jetpack-forms"),
+  SE: (0, import_i18n65.__)("Sweden", "jetpack-forms"),
+  CH: (0, import_i18n65.__)("Switzerland", "jetpack-forms"),
+  SY: (0, import_i18n65.__)("Syria", "jetpack-forms"),
+  ST: (0, import_i18n65.__)("S\xE3o Tom\xE9 and Pr\xEDncipe", "jetpack-forms"),
+  TW: (0, import_i18n65.__)("Taiwan", "jetpack-forms"),
+  TJ: (0, import_i18n65.__)("Tajikistan", "jetpack-forms"),
+  TZ: (0, import_i18n65.__)("Tanzania", "jetpack-forms"),
+  TH: (0, import_i18n65.__)("Thailand", "jetpack-forms"),
+  TL: (0, import_i18n65.__)("Timor-Leste", "jetpack-forms"),
+  TG: (0, import_i18n65.__)("Togo", "jetpack-forms"),
+  TK: (0, import_i18n65.__)("Tokelau", "jetpack-forms"),
+  TO: (0, import_i18n65.__)("Tonga", "jetpack-forms"),
+  TT: (0, import_i18n65.__)("Trinidad and Tobago", "jetpack-forms"),
+  TN: (0, import_i18n65.__)("Tunisia", "jetpack-forms"),
+  TR: (0, import_i18n65.__)("Turkey", "jetpack-forms"),
+  TM: (0, import_i18n65.__)("Turkmenistan", "jetpack-forms"),
+  TC: (0, import_i18n65.__)("Turks and Caicos Islands", "jetpack-forms"),
+  TV: (0, import_i18n65.__)("Tuvalu", "jetpack-forms"),
+  VI: (0, import_i18n65.__)("U.S. Virgin Islands", "jetpack-forms"),
+  UG: (0, import_i18n65.__)("Uganda", "jetpack-forms"),
+  UA: (0, import_i18n65.__)("Ukraine", "jetpack-forms"),
+  AE: (0, import_i18n65.__)("United Arab Emirates", "jetpack-forms"),
+  GB: (0, import_i18n65.__)("United Kingdom", "jetpack-forms"),
+  US: (0, import_i18n65.__)("United States", "jetpack-forms"),
+  UY: (0, import_i18n65.__)("Uruguay", "jetpack-forms"),
+  UZ: (0, import_i18n65.__)("Uzbekistan", "jetpack-forms"),
+  VU: (0, import_i18n65.__)("Vanuatu", "jetpack-forms"),
+  VA: (0, import_i18n65.__)("Vatican City", "jetpack-forms"),
+  VE: (0, import_i18n65.__)("Venezuela", "jetpack-forms"),
+  VN: (0, import_i18n65.__)("Vietnam", "jetpack-forms"),
+  WF: (0, import_i18n65.__)("Wallis and Futuna", "jetpack-forms"),
+  YE: (0, import_i18n65.__)("Yemen", "jetpack-forms"),
+  ZM: (0, import_i18n65.__)("Zambia", "jetpack-forms"),
+  ZW: (0, import_i18n65.__)("Zimbabwe", "jetpack-forms")
+};
+var getTranslatedCountryName = (countryCode) => {
+  return translatedCountryNames[countryCode] || countryCode;
+};
+
+// src/dashboard/components/text-with-flag/style.scss
+var css8 = `.jp-forms__text-with-flag-emoji {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.jp-forms__text-with-flag-globe {
+  fill: currentColor;
+  vertical-align: text-top;
+}`;
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css8));
+
+// src/dashboard/components/text-with-flag/index.tsx
+var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
+function getFlagEmoji(countryCode) {
+  if (!countryCode || countryCode.length !== 2) {
+    return "";
+  }
+  const upperCountryCode = countryCode.toUpperCase();
+  if (!/^[A-Z]{2}$/.test(upperCountryCode)) {
+    return "";
+  }
+  const offset = 127397;
+  return String.fromCodePoint(
+    upperCountryCode.charCodeAt(0) + offset,
+    upperCountryCode.charCodeAt(1) + offset
+  );
+}
+function TextWithFlag({
+  children,
+  countryCode,
+  fallbackIcon = false
+}) {
+  let flag, countryName;
+  if (countryCode) {
+    flag = getFlagEmoji(countryCode);
+    countryName = getTranslatedCountryName(countryCode);
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)("span", { children: [
+    flag && /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)(import_jsx_runtime143.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(import_components65.Tooltip, { text: countryName, children: /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("span", { "aria-label": countryName, role: "img", className: "jp-forms__text-with-flag-emoji", children: flag }) }),
+      " "
+    ] }),
+    !flag && fallbackIcon && /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)(import_jsx_runtime143.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(icon_default, { icon: globe_default, size: 16, className: "jp-forms__text-with-flag-globe" }),
+      " "
+    ] }),
+    children
+  ] });
+}
+
+// src/dashboard/inbox/utils.js
+var getPath = (item) => {
+  try {
+    const url = new URL(item.entry_permalink);
+    return url.pathname;
+  } catch {
+    return "";
+  }
+};
+function updateBadge(element, count) {
+  const oldClass = [...element.classList].find((c2) => c2.startsWith("count-"));
+  if (oldClass) {
+    element.classList.replace(oldClass, `count-${count}`);
+  } else {
+    element.classList.add(`count-${count}`);
+  }
+  element.ariaHidden = count > 0 ? "false" : "true";
+  element.textContent = formatNumber(count);
+}
+var updateMenuCounter = (count) => {
+  document.querySelectorAll(".jp-feedback-unread-counter").forEach((item) => {
+    if (item.dataset.unreadDiff) {
+      const unreadDiff = parseInt(item.dataset.unreadDiff, 10) + count;
+      updateBadge(item, unreadDiff);
+    } else {
+      updateBadge(item, count);
+    }
+  });
+};
+var updateMenuCounterOptimistically = (count) => {
+  document.querySelectorAll(".jp-feedback-unread-counter").forEach((item) => {
+    let optimisticCount = 0;
+    if (item.textContent !== "") {
+      optimisticCount = parseInt(item.textContent.replace(/\D/g, ""), 10) + count;
+    }
+    if (optimisticCount >= 0) {
+      updateBadge(item, optimisticCount);
+    }
+  });
+};
+
+// src/dashboard/router/wp-route-dashboard-search-params-provider.tsx
+var import_element73 = __toESM(require_element(), 1);
+import { useSearch, useNavigate } from "@wordpress/route";
+var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
+function searchRecordToUrlSearchParams(search) {
+  const params = new URLSearchParams();
+  for (const [key, value] of Object.entries(search || {})) {
+    if (value === void 0 || value === null) {
+      continue;
+    }
+    if (Array.isArray(value)) {
+      for (const v2 of value) {
+        if (v2 === void 0 || v2 === null) {
+          continue;
+        }
+        params.append(key, String(v2));
+      }
+      continue;
+    }
+    params.set(key, String(value));
+  }
+  return params;
+}
+function urlSearchParamsToSearchRecord(params, options = {}) {
+  const { arrayKeys = /* @__PURE__ */ new Set() } = options;
+  const out = {};
+  for (const key of params.keys()) {
+    const values = params.getAll(key);
+    if (values.length < 1) {
+      continue;
+    }
+    if (arrayKeys.has(key)) {
+      out[key] = values;
+      continue;
+    }
+    out[key] = values[values.length - 1];
+  }
+  return out;
+}
+function WpRouteDashboardSearchParamsProvider({
+  from,
+  children
+}) {
+  const search = useSearch({
+    // In this build, the router type isn't registered, so `@wordpress/route` models `from` as `never`.
+    // We still want to pass the runtime route id through.
+    from,
+    strict: false
+  });
+  const navigate = useNavigate();
+  const searchParams = (0, import_element73.useMemo)(() => searchRecordToUrlSearchParams(search), [search]);
+  const setSearchParams = (0, import_element73.useCallback)(
+    (next) => {
+      const resolved = typeof next === "function" ? next(searchParams) : next;
+      const nextSearch = urlSearchParamsToSearchRecord(resolved, {
+        arrayKeys: /* @__PURE__ */ new Set(["responseIds"])
+      });
+      const replaceSearch = (() => nextSearch);
+      navigate({ search: replaceSearch });
+    },
+    [navigate, searchParams]
+  );
+  const value = (0, import_element73.useMemo)(
+    () => [searchParams, setSearchParams],
+    [searchParams, setSearchParams]
+  );
+  return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(DashboardSearchParamsProvider, { value, children });
+}
+
+// src/dashboard/wp-build/components/dataviews-header-row/index.tsx
+var import_element74 = __toESM(require_element(), 1);
+var import_i18n66 = __toESM(require_i18n(), 1);
+import { useNavigate as useNavigate2 } from "@wordpress/route";
+
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/index.parts.js
 var index_parts_exports = {};
 __export(index_parts_exports, {
@@ -25661,7 +26077,7 @@ function useCompositeListContext() {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/list/CompositeList.js
-var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
 function CompositeList(props) {
   const {
     children,
@@ -25767,7 +26183,7 @@ function CompositeList(props) {
     labelsRef,
     nextIndexRef
   }), [register4, unregister, subscribeMapChange, elementsRef, labelsRef, nextIndexRef]);
-  return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(CompositeListContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(CompositeListContext.Provider, {
     value: contextValue,
     children
   });
@@ -25827,7 +26243,7 @@ var tabsStateAttributesMapping = {
 };
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/root/TabsRoot.js
-var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
 var TabsRoot = /* @__PURE__ */ React19.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
   const {
     className,
@@ -25922,9 +26338,9 @@ var TabsRoot = /* @__PURE__ */ React19.forwardRef(function TabsRoot2(componentPr
     props: elementProps,
     stateAttributesMapping: tabsStateAttributesMapping
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(TabsRootContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(TabsRootContext.Provider, {
     value: tabsContextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(CompositeList, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(CompositeList, {
       elementsRef: tabPanelRefs,
       children: element
     })
@@ -26928,7 +27344,7 @@ var TabsIndicatorCssVars = /* @__PURE__ */ (function(TabsIndicatorCssVars2) {
 })({});
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/indicator/TabsIndicator.js
-var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
 var stateAttributesMapping = {
   ...tabsStateAttributesMapping,
   activeTabPosition: () => null,
@@ -27039,8 +27455,8 @@ var TabsIndicator = /* @__PURE__ */ React31.forwardRef(function TabIndicator(com
   if (activeTabValue == null) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)(React31.Fragment, {
-    children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("script", {
+  return /* @__PURE__ */ (0, import_jsx_runtime147.jsxs)(React31.Fragment, {
+    children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime147.jsx)("script", {
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML: {
         __html: script
@@ -27449,7 +27865,7 @@ function isModifierKeySet(event, ignoredModifierKeys) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/root/CompositeRoot.js
-var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
 function CompositeRoot(componentProps) {
   const {
     render: render4,
@@ -27510,9 +27926,9 @@ function CompositeRoot(componentProps) {
     highlightItemOnHover,
     relayKeyboardEvent
   }), [highlightedIndex, onHighlightedIndexChange, highlightItemOnHover, relayKeyboardEvent]);
-  return /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(CompositeRootContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(CompositeRootContext.Provider, {
     value: contextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(CompositeList, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(CompositeList, {
       elementsRef,
       onMapChange: (newMap) => {
         onMapChangeProp?.(newMap);
@@ -27524,7 +27940,7 @@ function CompositeRoot(componentProps) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/list/TabsList.js
-var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
 var TabsList = /* @__PURE__ */ React35.forwardRef(function TabsList2(componentProps, forwardedRef) {
   const {
     activateOnFocus = false,
@@ -27573,9 +27989,9 @@ var TabsList = /* @__PURE__ */ React35.forwardRef(function TabsList2(componentPr
     tabsListElement,
     value
   }), [activateOnFocus, highlightedTabIndex, onTabActivation, setHighlightedTabIndex, tabsListElement, value]);
-  return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(TabsListContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(TabsListContext.Provider, {
     value: tabsListContextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(CompositeRoot, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(CompositeRoot, {
       render: render4,
       className,
       state,
@@ -27673,7 +28089,7 @@ var import_compose12 = __toESM(require_compose(), 1);
 var import_react26 = __toESM(require_react(), 1);
 
 // src/dashboard/components/tabs/style.scss
-var css8 = `/* stylelint-disable plugin-wpds/no-setting-wpds-custom-properties -- TODO */
+var css9 = `/* stylelint-disable plugin-wpds/no-setting-wpds-custom-properties -- TODO */
 /* stylelint-disable plugin-wpds/no-unknown-ds-tokens -- TODO */
 /**
  * Tabs component styles
@@ -27915,10 +28331,10 @@ var css8 = `/* stylelint-disable plugin-wpds/no-setting-wpds-custom-properties -
   outline: 2px solid transparent;
   outline-offset: 0;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css8));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css9));
 
 // src/dashboard/components/tabs/list.tsx
-var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
 var DEFAULT_SCROLL_MARGIN = 0;
 var List = (0, import_react26.forwardRef)(function TabList({ children, density = "default", className, activateOnFocus, render: render4, ...otherProps }, forwardedRef) {
   const [listEl, setListEl] = (0, import_react26.useState)(null);
@@ -27977,11 +28393,11 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       } else if (typeof render4 === "function") {
         return render4(newProps, state);
       }
-      return /* @__PURE__ */ (0, import_jsx_runtime148.jsx)("div", { ...newProps });
+      return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("div", { ...newProps });
     },
     [render4]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime148.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(
     index_parts_exports.List,
     {
       ref: mergedListRef,
@@ -27998,7 +28414,7 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       ...otherProps,
       children: [
         children,
-        /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(index_parts_exports.Indicator, { className: "jp-forms-tabs__indicator" })
+        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(index_parts_exports.Indicator, { className: "jp-forms-tabs__indicator" })
       ]
     }
   );
@@ -28006,9 +28422,9 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
 
 // src/dashboard/components/tabs/panel.tsx
 var import_react27 = __toESM(require_react(), 1);
-var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
 var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focusable = true, tabIndex, ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
     index_parts_exports.Panel,
     {
       ref: forwardedRef,
@@ -28021,465 +28437,169 @@ var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focus
 
 // src/dashboard/components/tabs/root.tsx
 var import_react28 = __toESM(require_react(), 1);
-var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
 var Root = (0, import_react28.forwardRef)(function TabsRoot3({ ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
+  return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
 });
 
 // src/dashboard/components/tabs/tab.tsx
 var import_react29 = __toESM(require_react(), 1);
-var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
 var ChevronRight = (props) => {
   return (0, import_react29.cloneElement)(chevron_right_default, props);
 };
 var Tab = (0, import_react29.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)(
     index_parts_exports.Tab,
     {
       ref: forwardedRef,
       className: clsx_default("jp-forms-tabs__tab", className),
       ...otherProps,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime151.jsx)("span", { className: "jp-forms-tabs__tab__children", children }),
-        /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(ChevronRight, { className: "jp-forms-tabs__tab__chevron" })
+        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("span", { className: "jp-forms-tabs__tab__children", children }),
+        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(ChevronRight, { className: "jp-forms-tabs__tab__chevron" })
       ]
     }
   );
 });
 
-// src/dashboard/components/text-with-flag/index.tsx
-var import_components65 = __toESM(require_components(), 1);
-
-// src/util/country-names-translated.js
-var import_i18n65 = __toESM(require_i18n(), 1);
-var translatedCountryNames = {
-  AF: (0, import_i18n65.__)("Afghanistan", "jetpack-forms"),
-  AL: (0, import_i18n65.__)("Albania", "jetpack-forms"),
-  DZ: (0, import_i18n65.__)("Algeria", "jetpack-forms"),
-  AS: (0, import_i18n65.__)("American Samoa", "jetpack-forms"),
-  AD: (0, import_i18n65.__)("Andorra", "jetpack-forms"),
-  AO: (0, import_i18n65.__)("Angola", "jetpack-forms"),
-  AI: (0, import_i18n65.__)("Anguilla", "jetpack-forms"),
-  AG: (0, import_i18n65.__)("Antigua and Barbuda", "jetpack-forms"),
-  AR: (0, import_i18n65.__)("Argentina", "jetpack-forms"),
-  AM: (0, import_i18n65.__)("Armenia", "jetpack-forms"),
-  AW: (0, import_i18n65.__)("Aruba", "jetpack-forms"),
-  AU: (0, import_i18n65.__)("Australia", "jetpack-forms"),
-  AT: (0, import_i18n65.__)("Austria", "jetpack-forms"),
-  AZ: (0, import_i18n65.__)("Azerbaijan", "jetpack-forms"),
-  BS: (0, import_i18n65.__)("Bahamas", "jetpack-forms"),
-  BH: (0, import_i18n65.__)("Bahrain", "jetpack-forms"),
-  BD: (0, import_i18n65.__)("Bangladesh", "jetpack-forms"),
-  BB: (0, import_i18n65.__)("Barbados", "jetpack-forms"),
-  BY: (0, import_i18n65.__)("Belarus", "jetpack-forms"),
-  BE: (0, import_i18n65.__)("Belgium", "jetpack-forms"),
-  BZ: (0, import_i18n65.__)("Belize", "jetpack-forms"),
-  BJ: (0, import_i18n65.__)("Benin", "jetpack-forms"),
-  BM: (0, import_i18n65.__)("Bermuda", "jetpack-forms"),
-  BT: (0, import_i18n65.__)("Bhutan", "jetpack-forms"),
-  BO: (0, import_i18n65.__)("Bolivia", "jetpack-forms"),
-  BA: (0, import_i18n65.__)("Bosnia and Herzegovina", "jetpack-forms"),
-  BW: (0, import_i18n65.__)("Botswana", "jetpack-forms"),
-  BR: (0, import_i18n65.__)("Brazil", "jetpack-forms"),
-  IO: (0, import_i18n65.__)("British Indian Ocean Territory", "jetpack-forms"),
-  VG: (0, import_i18n65.__)("British Virgin Islands", "jetpack-forms"),
-  BN: (0, import_i18n65.__)("Brunei", "jetpack-forms"),
-  BG: (0, import_i18n65.__)("Bulgaria", "jetpack-forms"),
-  BF: (0, import_i18n65.__)("Burkina Faso", "jetpack-forms"),
-  BI: (0, import_i18n65.__)("Burundi", "jetpack-forms"),
-  KH: (0, import_i18n65.__)("Cambodia", "jetpack-forms"),
-  CM: (0, import_i18n65.__)("Cameroon", "jetpack-forms"),
-  CA: (0, import_i18n65.__)("Canada", "jetpack-forms"),
-  CV: (0, import_i18n65.__)("Cape Verde", "jetpack-forms"),
-  KY: (0, import_i18n65.__)("Cayman Islands", "jetpack-forms"),
-  CF: (0, import_i18n65.__)("Central African Republic", "jetpack-forms"),
-  TD: (0, import_i18n65.__)("Chad", "jetpack-forms"),
-  CL: (0, import_i18n65.__)("Chile", "jetpack-forms"),
-  CN: (0, import_i18n65.__)("China", "jetpack-forms"),
-  CX: (0, import_i18n65.__)("Christmas Island", "jetpack-forms"),
-  CC: (0, import_i18n65.__)("Cocos (Keeling) Islands", "jetpack-forms"),
-  CO: (0, import_i18n65.__)("Colombia", "jetpack-forms"),
-  KM: (0, import_i18n65.__)("Comoros", "jetpack-forms"),
-  CG: (0, import_i18n65.__)("Congo - Brazzaville", "jetpack-forms"),
-  CD: (0, import_i18n65.__)("Congo - Kinshasa", "jetpack-forms"),
-  CK: (0, import_i18n65.__)("Cook Islands", "jetpack-forms"),
-  CR: (0, import_i18n65.__)("Costa Rica", "jetpack-forms"),
-  HR: (0, import_i18n65.__)("Croatia", "jetpack-forms"),
-  CU: (0, import_i18n65.__)("Cuba", "jetpack-forms"),
-  CY: (0, import_i18n65.__)("Cyprus", "jetpack-forms"),
-  CZ: (0, import_i18n65.__)("Czech Republic", "jetpack-forms"),
-  CI: (0, import_i18n65.__)("C\xF4te d'Ivoire", "jetpack-forms"),
-  DK: (0, import_i18n65.__)("Denmark", "jetpack-forms"),
-  DJ: (0, import_i18n65.__)("Djibouti", "jetpack-forms"),
-  DM: (0, import_i18n65.__)("Dominica", "jetpack-forms"),
-  DO: (0, import_i18n65.__)("Dominican Republic", "jetpack-forms"),
-  EC: (0, import_i18n65.__)("Ecuador", "jetpack-forms"),
-  EG: (0, import_i18n65.__)("Egypt", "jetpack-forms"),
-  SV: (0, import_i18n65.__)("El Salvador", "jetpack-forms"),
-  GQ: (0, import_i18n65.__)("Equatorial Guinea", "jetpack-forms"),
-  ER: (0, import_i18n65.__)("Eritrea", "jetpack-forms"),
-  EE: (0, import_i18n65.__)("Estonia", "jetpack-forms"),
-  SZ: (0, import_i18n65.__)("Eswatini", "jetpack-forms"),
-  ET: (0, import_i18n65.__)("Ethiopia", "jetpack-forms"),
-  FK: (0, import_i18n65.__)("Falkland Islands", "jetpack-forms"),
-  FO: (0, import_i18n65.__)("Faroe Islands", "jetpack-forms"),
-  FJ: (0, import_i18n65.__)("Fiji", "jetpack-forms"),
-  FI: (0, import_i18n65.__)("Finland", "jetpack-forms"),
-  FR: (0, import_i18n65.__)("France", "jetpack-forms"),
-  GF: (0, import_i18n65.__)("French Guiana", "jetpack-forms"),
-  PF: (0, import_i18n65.__)("French Polynesia", "jetpack-forms"),
-  GA: (0, import_i18n65.__)("Gabon", "jetpack-forms"),
-  GM: (0, import_i18n65.__)("Gambia", "jetpack-forms"),
-  GE: (0, import_i18n65.__)("Georgia", "jetpack-forms"),
-  DE: (0, import_i18n65.__)("Germany", "jetpack-forms"),
-  GH: (0, import_i18n65.__)("Ghana", "jetpack-forms"),
-  GI: (0, import_i18n65.__)("Gibraltar", "jetpack-forms"),
-  GR: (0, import_i18n65.__)("Greece", "jetpack-forms"),
-  GL: (0, import_i18n65.__)("Greenland", "jetpack-forms"),
-  GD: (0, import_i18n65.__)("Grenada", "jetpack-forms"),
-  GP: (0, import_i18n65.__)("Guadeloupe", "jetpack-forms"),
-  GU: (0, import_i18n65.__)("Guam", "jetpack-forms"),
-  GT: (0, import_i18n65.__)("Guatemala", "jetpack-forms"),
-  GG: (0, import_i18n65.__)("Guernsey", "jetpack-forms"),
-  GN: (0, import_i18n65.__)("Guinea", "jetpack-forms"),
-  GW: (0, import_i18n65.__)("Guinea-Bissau", "jetpack-forms"),
-  GY: (0, import_i18n65.__)("Guyana", "jetpack-forms"),
-  HT: (0, import_i18n65.__)("Haiti", "jetpack-forms"),
-  HN: (0, import_i18n65.__)("Honduras", "jetpack-forms"),
-  HK: (0, import_i18n65.__)("Hong Kong", "jetpack-forms"),
-  HU: (0, import_i18n65.__)("Hungary", "jetpack-forms"),
-  IS: (0, import_i18n65.__)("Iceland", "jetpack-forms"),
-  IN: (0, import_i18n65.__)("India", "jetpack-forms"),
-  ID: (0, import_i18n65.__)("Indonesia", "jetpack-forms"),
-  IR: (0, import_i18n65.__)("Iran", "jetpack-forms"),
-  IQ: (0, import_i18n65.__)("Iraq", "jetpack-forms"),
-  IE: (0, import_i18n65.__)("Ireland", "jetpack-forms"),
-  IM: (0, import_i18n65.__)("Isle of Man", "jetpack-forms"),
-  IL: (0, import_i18n65.__)("Israel", "jetpack-forms"),
-  IT: (0, import_i18n65.__)("Italy", "jetpack-forms"),
-  JM: (0, import_i18n65.__)("Jamaica", "jetpack-forms"),
-  JP: (0, import_i18n65.__)("Japan", "jetpack-forms"),
-  JE: (0, import_i18n65.__)("Jersey", "jetpack-forms"),
-  JO: (0, import_i18n65.__)("Jordan", "jetpack-forms"),
-  KZ: (0, import_i18n65.__)("Kazakhstan", "jetpack-forms"),
-  KE: (0, import_i18n65.__)("Kenya", "jetpack-forms"),
-  KI: (0, import_i18n65.__)("Kiribati", "jetpack-forms"),
-  XK: (0, import_i18n65.__)("Kosovo", "jetpack-forms"),
-  KW: (0, import_i18n65.__)("Kuwait", "jetpack-forms"),
-  KG: (0, import_i18n65.__)("Kyrgyzstan", "jetpack-forms"),
-  LA: (0, import_i18n65.__)("Laos", "jetpack-forms"),
-  LV: (0, import_i18n65.__)("Latvia", "jetpack-forms"),
-  LB: (0, import_i18n65.__)("Lebanon", "jetpack-forms"),
-  LS: (0, import_i18n65.__)("Lesotho", "jetpack-forms"),
-  LR: (0, import_i18n65.__)("Liberia", "jetpack-forms"),
-  LY: (0, import_i18n65.__)("Libya", "jetpack-forms"),
-  LI: (0, import_i18n65.__)("Liechtenstein", "jetpack-forms"),
-  LT: (0, import_i18n65.__)("Lithuania", "jetpack-forms"),
-  LU: (0, import_i18n65.__)("Luxembourg", "jetpack-forms"),
-  MO: (0, import_i18n65.__)("Macao", "jetpack-forms"),
-  MG: (0, import_i18n65.__)("Madagascar", "jetpack-forms"),
-  MW: (0, import_i18n65.__)("Malawi", "jetpack-forms"),
-  MY: (0, import_i18n65.__)("Malaysia", "jetpack-forms"),
-  MV: (0, import_i18n65.__)("Maldives", "jetpack-forms"),
-  ML: (0, import_i18n65.__)("Mali", "jetpack-forms"),
-  MT: (0, import_i18n65.__)("Malta", "jetpack-forms"),
-  MH: (0, import_i18n65.__)("Marshall Islands", "jetpack-forms"),
-  MQ: (0, import_i18n65.__)("Martinique", "jetpack-forms"),
-  MR: (0, import_i18n65.__)("Mauritania", "jetpack-forms"),
-  MU: (0, import_i18n65.__)("Mauritius", "jetpack-forms"),
-  YT: (0, import_i18n65.__)("Mayotte", "jetpack-forms"),
-  MX: (0, import_i18n65.__)("Mexico", "jetpack-forms"),
-  FM: (0, import_i18n65.__)("Micronesia", "jetpack-forms"),
-  MD: (0, import_i18n65.__)("Moldova", "jetpack-forms"),
-  MC: (0, import_i18n65.__)("Monaco", "jetpack-forms"),
-  MN: (0, import_i18n65.__)("Mongolia", "jetpack-forms"),
-  ME: (0, import_i18n65.__)("Montenegro", "jetpack-forms"),
-  MS: (0, import_i18n65.__)("Montserrat", "jetpack-forms"),
-  MA: (0, import_i18n65.__)("Morocco", "jetpack-forms"),
-  MZ: (0, import_i18n65.__)("Mozambique", "jetpack-forms"),
-  MM: (0, import_i18n65.__)("Myanmar", "jetpack-forms"),
-  NA: (0, import_i18n65.__)("Namibia", "jetpack-forms"),
-  NR: (0, import_i18n65.__)("Nauru", "jetpack-forms"),
-  NP: (0, import_i18n65.__)("Nepal", "jetpack-forms"),
-  NL: (0, import_i18n65.__)("Netherlands", "jetpack-forms"),
-  NC: (0, import_i18n65.__)("New Caledonia", "jetpack-forms"),
-  NZ: (0, import_i18n65.__)("New Zealand", "jetpack-forms"),
-  NI: (0, import_i18n65.__)("Nicaragua", "jetpack-forms"),
-  NE: (0, import_i18n65.__)("Niger", "jetpack-forms"),
-  NG: (0, import_i18n65.__)("Nigeria", "jetpack-forms"),
-  NU: (0, import_i18n65.__)("Niue", "jetpack-forms"),
-  NF: (0, import_i18n65.__)("Norfolk Island", "jetpack-forms"),
-  KP: (0, import_i18n65.__)("North Korea", "jetpack-forms"),
-  MK: (0, import_i18n65.__)("North Macedonia", "jetpack-forms"),
-  MP: (0, import_i18n65.__)("Northern Mariana Islands", "jetpack-forms"),
-  NO: (0, import_i18n65.__)("Norway", "jetpack-forms"),
-  OM: (0, import_i18n65.__)("Oman", "jetpack-forms"),
-  PK: (0, import_i18n65.__)("Pakistan", "jetpack-forms"),
-  PW: (0, import_i18n65.__)("Palau", "jetpack-forms"),
-  PS: (0, import_i18n65.__)("Palestine", "jetpack-forms"),
-  PA: (0, import_i18n65.__)("Panama", "jetpack-forms"),
-  PG: (0, import_i18n65.__)("Papua New Guinea", "jetpack-forms"),
-  PY: (0, import_i18n65.__)("Paraguay", "jetpack-forms"),
-  PE: (0, import_i18n65.__)("Peru", "jetpack-forms"),
-  PH: (0, import_i18n65.__)("Philippines", "jetpack-forms"),
-  PN: (0, import_i18n65.__)("Pitcairn Islands", "jetpack-forms"),
-  PL: (0, import_i18n65.__)("Poland", "jetpack-forms"),
-  PT: (0, import_i18n65.__)("Portugal", "jetpack-forms"),
-  PR: (0, import_i18n65.__)("Puerto Rico", "jetpack-forms"),
-  QA: (0, import_i18n65.__)("Qatar", "jetpack-forms"),
-  RO: (0, import_i18n65.__)("Romania", "jetpack-forms"),
-  RU: (0, import_i18n65.__)("Russia", "jetpack-forms"),
-  RW: (0, import_i18n65.__)("Rwanda", "jetpack-forms"),
-  RE: (0, import_i18n65.__)("R\xE9union", "jetpack-forms"),
-  BL: (0, import_i18n65.__)("Saint Barth\xE9lemy", "jetpack-forms"),
-  SH: (0, import_i18n65.__)("Saint Helena", "jetpack-forms"),
-  KN: (0, import_i18n65.__)("Saint Kitts and Nevis", "jetpack-forms"),
-  LC: (0, import_i18n65.__)("Saint Lucia", "jetpack-forms"),
-  MF: (0, import_i18n65.__)("Saint Martin", "jetpack-forms"),
-  PM: (0, import_i18n65.__)("Saint Pierre and Miquelon", "jetpack-forms"),
-  VC: (0, import_i18n65.__)("Saint Vincent and the Grenadines", "jetpack-forms"),
-  WS: (0, import_i18n65.__)("Samoa", "jetpack-forms"),
-  SM: (0, import_i18n65.__)("San Marino", "jetpack-forms"),
-  SA: (0, import_i18n65.__)("Saudi Arabia", "jetpack-forms"),
-  SN: (0, import_i18n65.__)("Senegal", "jetpack-forms"),
-  RS: (0, import_i18n65.__)("Serbia", "jetpack-forms"),
-  SC: (0, import_i18n65.__)("Seychelles", "jetpack-forms"),
-  SL: (0, import_i18n65.__)("Sierra Leone", "jetpack-forms"),
-  SG: (0, import_i18n65.__)("Singapore", "jetpack-forms"),
-  SK: (0, import_i18n65.__)("Slovakia", "jetpack-forms"),
-  SI: (0, import_i18n65.__)("Slovenia", "jetpack-forms"),
-  SB: (0, import_i18n65.__)("Solomon Islands", "jetpack-forms"),
-  SO: (0, import_i18n65.__)("Somalia", "jetpack-forms"),
-  ZA: (0, import_i18n65.__)("South Africa", "jetpack-forms"),
-  GS: (0, import_i18n65.__)("South Georgia and the South Sandwich Islands", "jetpack-forms"),
-  KR: (0, import_i18n65.__)("South Korea", "jetpack-forms"),
-  ES: (0, import_i18n65.__)("Spain", "jetpack-forms"),
-  LK: (0, import_i18n65.__)("Sri Lanka", "jetpack-forms"),
-  SD: (0, import_i18n65.__)("Sudan", "jetpack-forms"),
-  SR: (0, import_i18n65.__)("Suriname", "jetpack-forms"),
-  SJ: (0, import_i18n65.__)("Svalbard and Jan Mayen", "jetpack-forms"),
-  SE: (0, import_i18n65.__)("Sweden", "jetpack-forms"),
-  CH: (0, import_i18n65.__)("Switzerland", "jetpack-forms"),
-  SY: (0, import_i18n65.__)("Syria", "jetpack-forms"),
-  ST: (0, import_i18n65.__)("S\xE3o Tom\xE9 and Pr\xEDncipe", "jetpack-forms"),
-  TW: (0, import_i18n65.__)("Taiwan", "jetpack-forms"),
-  TJ: (0, import_i18n65.__)("Tajikistan", "jetpack-forms"),
-  TZ: (0, import_i18n65.__)("Tanzania", "jetpack-forms"),
-  TH: (0, import_i18n65.__)("Thailand", "jetpack-forms"),
-  TL: (0, import_i18n65.__)("Timor-Leste", "jetpack-forms"),
-  TG: (0, import_i18n65.__)("Togo", "jetpack-forms"),
-  TK: (0, import_i18n65.__)("Tokelau", "jetpack-forms"),
-  TO: (0, import_i18n65.__)("Tonga", "jetpack-forms"),
-  TT: (0, import_i18n65.__)("Trinidad and Tobago", "jetpack-forms"),
-  TN: (0, import_i18n65.__)("Tunisia", "jetpack-forms"),
-  TR: (0, import_i18n65.__)("Turkey", "jetpack-forms"),
-  TM: (0, import_i18n65.__)("Turkmenistan", "jetpack-forms"),
-  TC: (0, import_i18n65.__)("Turks and Caicos Islands", "jetpack-forms"),
-  TV: (0, import_i18n65.__)("Tuvalu", "jetpack-forms"),
-  VI: (0, import_i18n65.__)("U.S. Virgin Islands", "jetpack-forms"),
-  UG: (0, import_i18n65.__)("Uganda", "jetpack-forms"),
-  UA: (0, import_i18n65.__)("Ukraine", "jetpack-forms"),
-  AE: (0, import_i18n65.__)("United Arab Emirates", "jetpack-forms"),
-  GB: (0, import_i18n65.__)("United Kingdom", "jetpack-forms"),
-  US: (0, import_i18n65.__)("United States", "jetpack-forms"),
-  UY: (0, import_i18n65.__)("Uruguay", "jetpack-forms"),
-  UZ: (0, import_i18n65.__)("Uzbekistan", "jetpack-forms"),
-  VU: (0, import_i18n65.__)("Vanuatu", "jetpack-forms"),
-  VA: (0, import_i18n65.__)("Vatican City", "jetpack-forms"),
-  VE: (0, import_i18n65.__)("Venezuela", "jetpack-forms"),
-  VN: (0, import_i18n65.__)("Vietnam", "jetpack-forms"),
-  WF: (0, import_i18n65.__)("Wallis and Futuna", "jetpack-forms"),
-  YE: (0, import_i18n65.__)("Yemen", "jetpack-forms"),
-  ZM: (0, import_i18n65.__)("Zambia", "jetpack-forms"),
-  ZW: (0, import_i18n65.__)("Zimbabwe", "jetpack-forms")
-};
-var getTranslatedCountryName = (countryCode) => {
-  return translatedCountryNames[countryCode] || countryCode;
-};
-
-// src/dashboard/components/text-with-flag/style.scss
-var css9 = `.jp-forms__text-with-flag-emoji {
-  font-size: 16px;
-  vertical-align: middle;
+// src/dashboard/wp-build/components/dataviews-header-row/style.scss
+var css10 = `/**
+ * SCSS Variables.
+ *
+ * Please use variables from this sheet to ensure consistency across the UI.
+ * Don't add to this sheet unless you're pretty sure the value will be reused in many places.
+ * For example, don't add rules to this sheet that affect block visuals. It's purely for UI.
+ */
+/**
+ * Colors
+ */
+/**
+ * Fonts & basic variables.
+ */
+/**
+ * Typography
+ */
+/**
+ * Grid System.
+ * https://make.wordpress.org/design/2019/10/31/proposal-a-consistent-spacing-system-for-wordpress/
+ */
+/**
+ * Radius scale.
+ */
+/**
+ * Elevation scale.
+ */
+/**
+ * Dimensions.
+ */
+/**
+ * Mobile specific styles
+ */
+/**
+ * Editor styles.
+ */
+/**
+ * Block & Editor UI.
+ */
+/**
+ * Block paddings.
+ */
+/**
+ * React Native specific.
+ * These variables do not appear to be used anywhere else.
+ */
+.jp-forms-dataviews__view-actions {
+  border-bottom: 1px solid var(--wpds-color-stroke-surface-neutral, #e0e0e0);
+  padding-inline: 20px;
+  overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
+  container-type: inline-size;
+  flex-shrink: 0;
+}
+@container (width < 500px) {
+  .jp-forms-dataviews__view-actions {
+    --wp-ui-stack-justify: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.jp-forms-dataviews__view-actions > div:not(:empty) {
+  min-height: 48px;
 }
 
-.jp-forms__text-with-flag-globe {
-  fill: currentColor;
-  vertical-align: text-top;
+.jp-forms-dataviews-filters__container,
+.jp-forms-dataviews-filters__container:not(:empty) {
+  padding: 0;
+}
+
+.jp-forms-dataviews-filters__container:not(:empty) {
+  padding-inline: 20px;
+  padding-block: 12px;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css9));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css10));
 
-// src/dashboard/components/text-with-flag/index.tsx
-var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
-function getFlagEmoji(countryCode) {
-  if (!countryCode || countryCode.length !== 2) {
-    return "";
-  }
-  const upperCountryCode = countryCode.toUpperCase();
-  if (!/^[A-Z]{2}$/.test(upperCountryCode)) {
-    return "";
-  }
-  const offset = 127397;
-  return String.fromCodePoint(
-    upperCountryCode.charCodeAt(0) + offset,
-    upperCountryCode.charCodeAt(1) + offset
-  );
-}
-function TextWithFlag({
-  children,
-  countryCode,
-  fallbackIcon = false
-}) {
-  let flag, countryName;
-  if (countryCode) {
-    flag = getFlagEmoji(countryCode);
-    countryName = getTranslatedCountryName(countryCode);
-  }
-  return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("span", { children: [
-    flag && /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(import_jsx_runtime152.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components65.Tooltip, { text: countryName, children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("span", { "aria-label": countryName, role: "img", className: "jp-forms__text-with-flag-emoji", children: flag }) }),
-      " "
-    ] }),
-    !flag && fallbackIcon && /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(import_jsx_runtime152.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(icon_default, { icon: globe_default, size: 16, className: "jp-forms__text-with-flag-globe" }),
-      " "
-    ] }),
-    children
-  ] });
-}
-
-// src/dashboard/inbox/utils.js
-var getPath = (item) => {
-  try {
-    const url = new URL(item.entry_permalink);
-    return url.pathname;
-  } catch {
-    return "";
-  }
-};
-function updateBadge(element, count) {
-  const oldClass = [...element.classList].find((c2) => c2.startsWith("count-"));
-  if (oldClass) {
-    element.classList.replace(oldClass, `count-${count}`);
-  } else {
-    element.classList.add(`count-${count}`);
-  }
-  element.ariaHidden = count > 0 ? "false" : "true";
-  element.textContent = formatNumber(count);
-}
-var updateMenuCounter = (count) => {
-  document.querySelectorAll(".jp-feedback-unread-counter").forEach((item) => {
-    if (item.dataset.unreadDiff) {
-      const unreadDiff = parseInt(item.dataset.unreadDiff, 10) + count;
-      updateBadge(item, unreadDiff);
-    } else {
-      updateBadge(item, count);
-    }
-  });
-};
-var updateMenuCounterOptimistically = (count) => {
-  document.querySelectorAll(".jp-feedback-unread-counter").forEach((item) => {
-    let optimisticCount = 0;
-    if (item.textContent !== "") {
-      optimisticCount = parseInt(item.textContent.replace(/\D/g, ""), 10) + count;
-    }
-    if (optimisticCount >= 0) {
-      updateBadge(item, optimisticCount);
-    }
-  });
-};
-
-// src/dashboard/router/wp-route-dashboard-search-params-provider.tsx
-var import_element73 = __toESM(require_element(), 1);
-import { useSearch, useNavigate } from "@wordpress/route";
-var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
-function searchRecordToUrlSearchParams(search) {
-  const params = new URLSearchParams();
-  for (const [key, value] of Object.entries(search || {})) {
-    if (value === void 0 || value === null) {
-      continue;
-    }
-    if (Array.isArray(value)) {
-      for (const v2 of value) {
-        if (v2 === void 0 || v2 === null) {
-          continue;
-        }
-        params.append(key, String(v2));
+// src/dashboard/wp-build/components/dataviews-header-row/index.tsx
+var import_jsx_runtime154 = __toESM(require_jsx_runtime(), 1);
+function DataViewsHeaderRow({ activeTab }) {
+  const navigate = useNavigate2();
+  const onTabChange = (0, import_element74.useCallback)(
+    (nextValue) => {
+      if (nextValue === "forms") {
+        navigate({ href: "/forms" });
+        return;
       }
-      continue;
-    }
-    params.set(key, String(value));
-  }
-  return params;
-}
-function urlSearchParamsToSearchRecord(params, options = {}) {
-  const { arrayKeys = /* @__PURE__ */ new Set() } = options;
-  const out = {};
-  for (const key of params.keys()) {
-    const values = params.getAll(key);
-    if (values.length < 1) {
-      continue;
-    }
-    if (arrayKeys.has(key)) {
-      out[key] = values;
-      continue;
-    }
-    out[key] = values[values.length - 1];
-  }
-  return out;
-}
-function WpRouteDashboardSearchParamsProvider({
-  from,
-  children
-}) {
-  const search = useSearch({
-    // In this build, the router type isn't registered, so `@wordpress/route` models `from` as `never`.
-    // We still want to pass the runtime route id through.
-    from,
-    strict: false
-  });
-  const navigate = useNavigate();
-  const searchParams = (0, import_element73.useMemo)(() => searchRecordToUrlSearchParams(search), [search]);
-  const setSearchParams = (0, import_element73.useCallback)(
-    (next) => {
-      const resolved = typeof next === "function" ? next(searchParams) : next;
-      const nextSearch = urlSearchParamsToSearchRecord(resolved, {
-        arrayKeys: /* @__PURE__ */ new Set(["responseIds"])
-      });
-      const replaceSearch = (() => nextSearch);
-      navigate({ search: replaceSearch });
+      navigate({ href: "/responses/inbox" });
     },
-    [navigate, searchParams]
+    [navigate]
   );
-  const value = (0, import_element73.useMemo)(
-    () => [searchParams, setSearchParams],
-    [searchParams, setSearchParams]
-  );
-  return /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(DashboardSearchParamsProvider, { value, children });
+  return /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(import_jsx_runtime154.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(
+      Stack,
+      {
+        align: "center",
+        className: "jp-forms-dataviews__view-actions",
+        gap: "sm",
+        justify: "space-between",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(Stack, { align: "center", gap: "sm", children: /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(List, { density: "compact", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(Tab, { value: "responses", children: (0, import_i18n66.__)("Responses", "jetpack-forms") }),
+            /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(Tab, { value: "forms", children: (0, import_i18n66.__)("Forms", "jetpack-forms") })
+          ] }) }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(Stack, { align: "center", gap: "sm", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(dataviews_default.Search, {}),
+            /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(dataviews_default.ViewConfig, {})
+          ] })
+        ]
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(dataviews_default.FiltersToggled, { className: "jp-forms-dataviews-filters__container" })
+  ] });
 }
 
 // routes/responses/actions.tsx
 var import_api_fetch9 = __toESM(require_api_fetch());
 var import_components66 = __toESM(require_components());
 var import_core_data4 = __toESM(require_core_data());
-var import_i18n66 = __toESM(require_i18n());
+var import_i18n67 = __toESM(require_i18n());
 var import_notices4 = __toESM(require_notices());
 
 // src/dashboard/icons/not-spam.tsx
 var import_primitives45 = __toESM(require_primitives(), 1);
-var import_jsx_runtime154 = __toESM(require_jsx_runtime(), 1);
-var notSpam = /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(import_primitives45.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(import_primitives45.Path, { d: "M13 17v-2h-.9l-.9 2H13Zm3.6-11.9-.7 1.5 2.5 2.5v5.8l-3.6 3.6h-4.3L9.8 20h5.6l4.5-4.5v-7l-3.4-3.4ZM15 2.8 14.4 4h-6L3.9 8.5v7l3.6 3.6-.5 1.2.9.4L16 3.2l-.9-.4Zm-2 4.5V7h-2v4.6l-2.7 6-2.8-2.8V9l3.6-3.6h4.7L13 7.2Z" }) });
+var import_jsx_runtime155 = __toESM(require_jsx_runtime(), 1);
+var notSpam = /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_primitives45.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_primitives45.Path, { d: "M13 17v-2h-.9l-.9 2H13Zm3.6-11.9-.7 1.5 2.5 2.5v5.8l-3.6 3.6h-4.3L9.8 20h5.6l4.5-4.5v-7l-3.4-3.4ZM15 2.8 14.4 4h-6L3.9 8.5v7l3.6 3.6-.5 1.2.9.4L16 3.2l-.9-.4Zm-2 4.5V7h-2v4.6l-2.7 6-2.8-2.8V9l3.6-3.6h4.7L13 7.2Z" }) });
 var not_spam_default = notSpam;
 
 // src/dashboard/icons/spam.tsx
 var import_primitives46 = __toESM(require_primitives(), 1);
-var import_jsx_runtime155 = __toESM(require_jsx_runtime(), 1);
-var spam = /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_primitives46.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_primitives46.Path, { d: "M11 13h2V7h-2v6Zm0 4h2v-2h-2v2Zm4.5-13h-7L4 8.5v7L8.5 20h7l4.5-4.5v-7L15.5 4Zm3 10.9-3.6 3.6H9.1l-3.6-3.6V9.1l3.6-3.6h5.8l3.6 3.6v5.8Z" }) });
+var import_jsx_runtime156 = __toESM(require_jsx_runtime(), 1);
+var spam = /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_primitives46.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_primitives46.Path, { d: "M11 13h2V7h-2v6Zm0 4h2v-2h-2v2Zm4.5-13h-7L4 8.5v7L8.5 20h7l4.5-4.5v-7L15.5 4Zm3 10.9-3.6 3.6H9.1l-3.6-3.6V9.1l3.6-3.6h5.8l3.6 3.6v5.8Z" }) });
 var spam_default = spam;
 
 // src/dashboard/inbox/stage/views.js
 var import_compose13 = __toESM(require_compose(), 1);
-var import_element74 = __toESM(require_element(), 1);
+var import_element75 = __toESM(require_element(), 1);
 var LAYOUT_TABLE2 = "table";
 var defaultView = {
   type: LAYOUT_TABLE2,
@@ -28495,7 +28615,7 @@ var defaultLayouts = {
 };
 
 // routes/responses/actions.tsx
-var import_jsx_runtime156 = __toESM(require_jsx_runtime());
+var import_jsx_runtime157 = __toESM(require_jsx_runtime());
 var getCountQueryParams = (currentQuery2) => {
   const queryParams = {};
   if (currentQuery2?.search) {
@@ -28515,7 +28635,7 @@ var getCountQueryParams = (currentQuery2) => {
   }
   return queryParams;
 };
-var undoingMessage = (0, import_i18n66.__)("Undoing\u2026", "jetpack-forms");
+var undoingMessage = (0, import_i18n67.__)("Undoing\u2026", "jetpack-forms");
 var pendingRefetches = /* @__PURE__ */ new Map();
 var invalidateCacheAndNavigate = (registry, currentQuery2, queryParams, statusBeingRemovedFrom) => {
   registry.dispatch(store3).invalidateCounts();
@@ -28546,9 +28666,9 @@ var invalidateCacheAndNavigate = (registry, currentQuery2, queryParams, statusBe
   setCurrentQuery2(updatedQuery);
 };
 var getGenericErrorMessage = (numberOfErrors) => {
-  return numberOfErrors === 1 ? (0, import_i18n66.__)("An error occurred.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+  return numberOfErrors === 1 ? (0, import_i18n67.__)("An error occurred.", "jetpack-forms") : (0, import_i18n67.sprintf)(
     /* translators: %d: the number of responses. */
-    (0, import_i18n66._n)(
+    (0, import_i18n67._n)(
       "An error occurred for %d response.",
       "An error occurred for %d responses.",
       numberOfErrors,
@@ -28631,8 +28751,8 @@ function getActions({
   const viewAction = {
     id: "view-response",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Icon, { icon: comment_content_default }),
-    label: (0, import_i18n66.__)("View", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Icon, { icon: comment_content_default }),
+    label: (0, import_i18n67.__)("View", "jetpack-forms"),
     async callback(items) {
       analytics_default.tracks.recordEvent("jetpack_forms_inbox_action_click", {
         action: "view-response",
@@ -28650,8 +28770,8 @@ function getActions({
   const editFormAction = {
     id: "edit-form",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Icon, { icon: backup_default }),
-    label: (0, import_i18n66.__)("Edit form", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Icon, { icon: backup_default }),
+    label: (0, import_i18n67.__)("Edit form", "jetpack-forms"),
     isEligible: (item) => !!item?.edit_form_url,
     supportsBulk: false,
     async callback(items) {
@@ -28669,8 +28789,8 @@ function getActions({
   const markAsSpamAction = {
     id: "mark-as-spam",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Icon, { icon: spam_default }),
-    label: (0, import_i18n66.__)("Spam", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Icon, { icon: spam_default }),
+    label: (0, import_i18n67.__)("Spam", "jetpack-forms"),
     isEligible: (item) => item.status !== "spam",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -28684,9 +28804,9 @@ function getActions({
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const actionId = `mark-as-spam-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n66.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n67.sprintf)(
         /* translators: %d: the number of responses. */
-        (0, import_i18n66._n)(
+        (0, import_i18n67._n)(
           "Moving %d response to spam\u2026",
           "Moving %d responses to spam\u2026",
           items.length,
@@ -28697,7 +28817,7 @@ function getActions({
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "mark-as-spam-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -28720,9 +28840,9 @@ function getActions({
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n66.__)("Response marked as spam.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n67.__)("Response marked as spam.", "jetpack-forms") : (0, import_i18n67.sprintf)(
             /* translators: %d: the number of responses. */
-            (0, import_i18n66._n)(
+            (0, import_i18n67._n)(
               "%d response marked as spam.",
               "%d responses marked as spam.",
               items.length,
@@ -28736,7 +28856,7 @@ function getActions({
               id: "mark-as-spam-action",
               actions: [
                 {
-                  label: (0, import_i18n66.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n67.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -28775,8 +28895,8 @@ function getActions({
   const markAsNotSpamAction = {
     id: "mark-as-not-spam",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Icon, { icon: not_spam_default }),
-    label: (0, import_i18n66.__)("Not spam", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Icon, { icon: not_spam_default }),
+    label: (0, import_i18n67.__)("Not spam", "jetpack-forms"),
     isEligible: (item) => item.status === "spam",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -28790,9 +28910,9 @@ function getActions({
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const actionId = `mark-as-not-spam-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n66.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n67.sprintf)(
         /* translators: %d: the number of responses. */
-        (0, import_i18n66._n)(
+        (0, import_i18n67._n)(
           "Marking %d response as not spam\u2026",
           "Marking %d responses as not spam\u2026",
           items.length,
@@ -28803,7 +28923,7 @@ function getActions({
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "mark-as-not-spam-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -28822,9 +28942,9 @@ function getActions({
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n66.__)("Response marked as not spam.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n67.__)("Response marked as not spam.", "jetpack-forms") : (0, import_i18n67.sprintf)(
             /* translators: %d: the number of responses. */
-            (0, import_i18n66._n)(
+            (0, import_i18n67._n)(
               "%d response marked as not spam.",
               "%d responses marked as not spam.",
               items.length,
@@ -28838,7 +28958,7 @@ function getActions({
               id: "mark-as-not-spam-action",
               actions: [
                 {
-                  label: (0, import_i18n66.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n67.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -28877,8 +28997,8 @@ function getActions({
   const restoreAction = {
     id: "restore",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Icon, { icon: backup_default }),
-    label: (0, import_i18n66.__)("Restore", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Icon, { icon: backup_default }),
+    label: (0, import_i18n67.__)("Restore", "jetpack-forms"),
     isEligible: (item) => item.status === "trash",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false, targetStatus = "publish" } = {}) {
@@ -28893,9 +29013,9 @@ function getActions({
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const newStatus = targetStatus === "trash" ? "publish" : targetStatus;
       const actionId = `restore-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n66.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n67.sprintf)(
         /* translators: %d: the number of responses. */
-        (0, import_i18n66._n)(
+        (0, import_i18n67._n)(
           "Restoring %d response\u2026",
           "Restoring %d responses\u2026",
           items.length,
@@ -28906,7 +29026,7 @@ function getActions({
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "restore-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -28925,9 +29045,9 @@ function getActions({
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n66.__)("Response restored.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n67.__)("Response restored.", "jetpack-forms") : (0, import_i18n67.sprintf)(
             /* translators: %d: the number of responses. */
-            (0, import_i18n66._n)(
+            (0, import_i18n67._n)(
               "%d response restored.",
               "%d responses restored.",
               items.length,
@@ -28941,7 +29061,7 @@ function getActions({
               id: "restore-action",
               actions: [
                 {
-                  label: (0, import_i18n66.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n67.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -28974,8 +29094,8 @@ function getActions({
   const moveToTrashAction = {
     id: "move-to-trash",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Icon, { icon: trash_default }),
-    label: (0, import_i18n66.__)("Trash", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Icon, { icon: trash_default }),
+    label: (0, import_i18n67.__)("Trash", "jetpack-forms"),
     isEligible: (item) => item.status !== "trash",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -28990,9 +29110,9 @@ function getActions({
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const previousStatus = items[0]?.status;
       const actionId = `move-to-trash-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n66.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n67.sprintf)(
         /* translators: %d: the number of responses. */
-        (0, import_i18n66._n)(
+        (0, import_i18n67._n)(
           "Moving %d response to trash\u2026",
           "Moving %d responses to trash\u2026",
           items.length,
@@ -29003,7 +29123,7 @@ function getActions({
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "move-to-trash-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -29026,9 +29146,9 @@ function getActions({
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n66.__)("Response moved to trash.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n67.__)("Response moved to trash.", "jetpack-forms") : (0, import_i18n67.sprintf)(
             /* translators: %d: the number of responses. */
-            (0, import_i18n66._n)(
+            (0, import_i18n67._n)(
               "%d response moved to trash.",
               "%d responses moved to trash.",
               items.length,
@@ -29043,7 +29163,7 @@ function getActions({
               id: "move-to-trash-action",
               actions: [
                 {
-                  label: (0, import_i18n66.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n67.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -29081,8 +29201,8 @@ function getActions({
   const deleteAction = {
     id: "delete",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Icon, { icon: trash_default }),
-    label: (0, import_i18n66.__)("Delete", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Icon, { icon: trash_default }),
+    label: (0, import_i18n67.__)("Delete", "jetpack-forms"),
     isEligible: (item) => item.status === "trash",
     supportsBulk: true,
     isDestructive: true,
@@ -29110,9 +29230,9 @@ function getActions({
         invalidateCacheAndNavigate(registry, getCurrentQuery2(), queryParams, "trash");
       }
       if (itemsUpdated.length === items.length) {
-        const successMessage = items.length === 1 ? (0, import_i18n66.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n67.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n67.sprintf)(
           /* translators: %d: the number of responses. */
-          (0, import_i18n66._n)(
+          (0, import_i18n67._n)(
             "%d response deleted permanently.",
             "%d responses deleted permanently.",
             items.length,
@@ -29146,8 +29266,8 @@ function getActions({
   const markAsReadAction = {
     id: "mark-as-read",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Icon, { icon: seen_default }),
-    label: (0, import_i18n66.__)("Mark as read", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Icon, { icon: seen_default }),
+    label: (0, import_i18n67.__)("Mark as read", "jetpack-forms"),
     isEligible: (item) => item.is_unread,
     supportsBulk: true,
     async callback(items, { registry }) {
@@ -29196,9 +29316,9 @@ function getActions({
         markRecordsAsInvalid2(updatedIds);
       }
       if (promises.every(({ status }) => status === "fulfilled")) {
-        const successMessage = items.length === 1 ? (0, import_i18n66.__)("Response marked as read.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n67.__)("Response marked as read.", "jetpack-forms") : (0, import_i18n67.sprintf)(
           /* translators: %d: the number of responses. */
-          (0, import_i18n66._n)(
+          (0, import_i18n67._n)(
             "%d response marked as read.",
             "%d responses marked as read.",
             items.length,
@@ -29211,7 +29331,7 @@ function getActions({
           id: "mark-as-read-action",
           actions: [
             {
-              label: (0, import_i18n66.__)("Undo", "jetpack-forms"),
+              label: (0, import_i18n67.__)("Undo", "jetpack-forms"),
               onClick: () => {
                 markAsUnreadAction.callback?.(items, { registry });
               }
@@ -29228,8 +29348,8 @@ function getActions({
   const markAsUnreadAction = {
     id: "mark-as-unread",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Icon, { icon: unseen_default }),
-    label: (0, import_i18n66.__)("Mark as unread", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components66.Icon, { icon: unseen_default }),
+    label: (0, import_i18n67.__)("Mark as unread", "jetpack-forms"),
     isEligible: (item) => !item.is_unread,
     supportsBulk: true,
     async callback(items, { registry }) {
@@ -29276,9 +29396,9 @@ function getActions({
         invalidateCounts2();
         const updatedIds = items.map((item) => item.id);
         markRecordsAsInvalid2(updatedIds);
-        const successMessage = items.length === 1 ? (0, import_i18n66.__)("Response marked as unread.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n67.__)("Response marked as unread.", "jetpack-forms") : (0, import_i18n67.sprintf)(
           /* translators: %d: the number of responses. */
-          (0, import_i18n66._n)(
+          (0, import_i18n67._n)(
             "%d response marked as unread.",
             "%d responses marked as unread.",
             items.length,
@@ -29291,7 +29411,7 @@ function getActions({
           id: "mark-as-unread-action",
           actions: [
             {
-              label: (0, import_i18n66.__)("Undo", "jetpack-forms"),
+              label: (0, import_i18n67.__)("Undo", "jetpack-forms"),
               onClick: () => {
                 markAsReadAction.callback?.(items, { registry });
               }
@@ -29329,7 +29449,7 @@ function getActions({
 }
 
 // routes/responses/style.scss
-var css10 = `/**
+var css11 = `/**
  * SCSS Variables.
  *
  * Please use variables from this sheet to ensure consistency across the UI.
@@ -29409,16 +29529,10 @@ var css10 = `/**
   padding-inline: 20px;
   padding-block: 12px;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css10));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css11));
 
 // routes/responses/stage.tsx
-var import_jsx_runtime157 = __toESM(require_jsx_runtime());
-function getTabLabel(label, count) {
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack, { align: "center", gap: "2xs", children: [
-    label,
-    /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Badge, { intent: "default", style: { backgroundColor: "#f0f0f0" }, children: count.toString() })
-  ] });
-}
+var import_jsx_runtime158 = __toESM(require_jsx_runtime());
 var EMPTY_ARRAY9 = [];
 var defaultLayouts2 = {
   table: {},
@@ -29443,22 +29557,22 @@ function styleUnreadValue(element, isUnread) {
     return element;
   }
   if (typeof element === "string") {
-    return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("span", { style: { fontWeight: 600 }, children: element });
+    return /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("span", { style: { fontWeight: 600 }, children: element });
   }
   if (React36.isValidElement(element)) {
     return React36.cloneElement(element, {
       style: { ...element.props.style || {}, fontWeight: 600 }
     });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("span", { style: { fontWeight: 600 }, children: element });
+  return /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("span", { style: { fontWeight: 600 }, children: element });
 }
 function StageInner() {
   const params = useParams({ from: "/responses/$view" });
   const searchParams = useSearch2({ from: "/responses/$view" });
-  const navigate = useNavigate2();
+  const navigate = useNavigate3();
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const statusFilter = statusView === "inbox" ? "draft,publish" : statusView;
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element75.useState)(false);
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element76.useState)(false);
   const integrations = (0, import_data16.useSelect)(
     (select) => select(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
@@ -29466,11 +29580,11 @@ function StageInner() {
   const { refreshIntegrations: refreshIntegrations2 } = (0, import_data16.useDispatch)(INTEGRATIONS_STORE);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
-  const [view, setView] = (0, import_element75.useState)(() => ({
+  const [view, setView] = (0, import_element76.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  const selection = (0, import_element75.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
+  const selection = (0, import_element76.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
   const {
     setCurrentQuery: setCurrentQuery2,
     setSelectedResponses: setSelectedResponses2,
@@ -29478,19 +29592,29 @@ function StageInner() {
     records,
     isLoadingData,
     totalItems,
-    totalPages,
-    totalItemsInbox,
-    totalItemsSpam,
-    totalItemsTrash
+    totalPages
   } = useInboxData({ status: statusView });
-  (0, import_element75.useEffect)(() => {
+  (0, import_element76.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((prev) => ({ ...prev, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const onChangeView = (0, import_element75.useCallback)(
+  const onChangeView = (0, import_element76.useCallback)(
     (newView) => {
+      const folderValue = newView.filters?.find((filter) => filter.field === "folder")?.value || "inbox";
+      if (folderValue !== statusView) {
+        navigate({
+          to: "/responses/$view",
+          params: { view: folderValue },
+          search: {
+            ...searchParams,
+            responseIds: void 0
+          }
+        });
+        setView({ ...newView, page: 1 });
+        return;
+      }
       setView(newView);
       if (newView.search !== view.search) {
         navigate({
@@ -29501,9 +29625,9 @@ function StageInner() {
         });
       }
     },
-    [navigate, searchParams, view.search]
+    [navigate, searchParams, statusView, view.search]
   );
-  const onChangeSelection = (0, import_element75.useCallback)(
+  const onChangeSelection = (0, import_element76.useCallback)(
     (items) => {
       navigate({
         search: {
@@ -29514,7 +29638,23 @@ function StageInner() {
     },
     [searchParams, navigate]
   );
-  const queryParams = (0, import_element75.useMemo)(() => {
+  (0, import_element76.useEffect)(() => {
+    setView((previousView) => {
+      const previousFilters = previousView.filters || [];
+      const existing = previousFilters.find((filter) => filter.field === "folder");
+      if (existing?.value === statusView) {
+        return previousView;
+      }
+      return {
+        ...previousView,
+        filters: [
+          { field: "folder", operator: "is", value: statusView },
+          ...previousFilters.filter((filter) => filter.field !== "folder")
+        ]
+      };
+    });
+  }, [setView, statusView]);
+  const queryParams = (0, import_element76.useMemo)(() => {
     const queryArgs = {
       status: statusFilter,
       per_page: view.perPage,
@@ -29543,28 +29683,44 @@ function StageInner() {
     });
     return queryArgs;
   }, [statusFilter, view]);
-  (0, import_element75.useEffect)(() => {
+  (0, import_element76.useEffect)(() => {
     setCurrentQuery2(queryParams);
   }, [queryParams, setCurrentQuery2]);
-  (0, import_element75.useEffect)(() => {
+  (0, import_element76.useEffect)(() => {
     const validSelectedIds = (selection || []).filter((id) => {
       return records?.some((record) => getItemId(record) === id);
     });
     setSelectedResponses2(validSelectedIds);
   }, [records, selection, setSelectedResponses2]);
-  const fields = (0, import_element75.useMemo)(
+  const fields = (0, import_element76.useMemo)(
     () => [
       {
+        id: "folder",
+        label: (0, import_i18n68.__)("Folder", "jetpack-forms"),
+        elements: [
+          { label: (0, import_i18n68.__)("Inbox", "jetpack-forms"), value: "inbox" },
+          { label: (0, import_i18n68.__)("Spam", "jetpack-forms"), value: "spam" },
+          { label: (0, import_i18n68.__)("Trash", "jetpack-forms"), value: "trash" }
+        ],
+        // Primary so the filter UI (and its pill) is visible by default.
+        filterBy: { operators: ["is"], isPrimary: true },
+        enableSorting: false,
+        enableHiding: false,
+        // Filter-only field; not shown as a column.
+        render: () => null,
+        getValue: () => null
+      },
+      {
         id: "from",
-        label: (0, import_i18n67.__)("From", "jetpack-forms"),
+        label: (0, import_i18n68.__)("From", "jetpack-forms"),
         render: ({ item }) => {
           const displayName = (0, import_html_entities3.decodeEntities)(
             item.author_name || item.author_email || item.author_url || item.ip || "Anonymous"
           );
           const showEmail = item.author_email && displayName !== (0, import_html_entities3.decodeEntities)(item.author_email);
           const defaultImage = item.author_name || item.author_email ? "initials" : "mp";
-          return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack, { align: "center", gap: "sm", children: [
-            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(Stack, { align: "center", gap: "sm", children: [
+            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
               "span",
               {
                 style: {
@@ -29573,11 +29729,11 @@ function StageInner() {
                   position: "absolute",
                   marginLeft: "-12px"
                 },
-                "aria-label": (0, import_i18n67.__)("(Unread form response)", "jetpack-forms"),
+                "aria-label": (0, import_i18n68.__)("(Unread form response)", "jetpack-forms"),
                 children: "\u25CF"
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
               Gravatar,
               {
                 email: item.author_email || item.ip,
@@ -29588,9 +29744,9 @@ function StageInner() {
               }
             ),
             styleUnreadValue(
-              /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components67.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
-                showEmail && /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components67.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
+              /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components67.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
+                showEmail && /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components67.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
               ] }),
               item.is_unread
             )
@@ -29602,7 +29758,7 @@ function StageInner() {
       },
       {
         id: "date",
-        label: (0, import_i18n67.__)("Date", "jetpack-forms"),
+        label: (0, import_i18n68.__)("Date", "jetpack-forms"),
         render: ({ item }) => {
           const dateStr = new Date(item.date).toLocaleDateString(void 0, {
             year: "numeric",
@@ -29617,7 +29773,7 @@ function StageInner() {
           date.setMonth(filter.month - 1);
           date.setFullYear(filter.year);
           return {
-            label: (0, import_date9.dateI18n)((0, import_i18n67.__)("F Y", "jetpack-forms"), date),
+            label: (0, import_date9.dateI18n)((0, import_i18n68.__)("F Y", "jetpack-forms"), date),
             value: `${filter.year}/${filter.month}`
           };
         }),
@@ -29626,12 +29782,12 @@ function StageInner() {
       },
       {
         id: "source",
-        label: (0, import_i18n67.__)("Source", "jetpack-forms"),
+        label: (0, import_i18n68.__)("Source", "jetpack-forms"),
         render: ({ item }) => {
-          const source = item.entry_title || getPath(item) || (0, import_i18n67.__)("(no title)", "jetpack-forms");
+          const source = item.entry_title || getPath(item) || (0, import_i18n68.__)("(no title)", "jetpack-forms");
           if (item.entry_permalink) {
             return styleUnreadValue(
-              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components67.ExternalLink, { href: item.entry_permalink, children: source }),
+              /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components67.ExternalLink, { href: item.entry_permalink, children: source }),
               item.is_unread
             );
           }
@@ -29648,153 +29804,139 @@ function StageInner() {
       },
       {
         id: "read_status",
-        label: (0, import_i18n67.__)("Status", "jetpack-forms"),
+        label: (0, import_i18n68.__)("Status", "jetpack-forms"),
         elements: [
-          { label: (0, import_i18n67.__)("Unread", "jetpack-forms"), value: "unread" },
-          { label: (0, import_i18n67.__)("Read", "jetpack-forms"), value: "read" }
+          { label: (0, import_i18n68.__)("Unread", "jetpack-forms"), value: "unread" },
+          { label: (0, import_i18n68.__)("Read", "jetpack-forms"), value: "read" }
         ],
         filterBy: { operators: ["is"] },
         enableSorting: false,
         render: ({ item }) => {
-          return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n67.__)("Unread", "jetpack-forms") : (0, import_i18n67.__)("Read", "jetpack-forms") });
+          return /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n68.__)("Unread", "jetpack-forms") : (0, import_i18n68.__)("Read", "jetpack-forms") });
         }
       },
       {
         id: "ip",
-        label: (0, import_i18n67.__)("IP Address", "jetpack-forms"),
+        label: (0, import_i18n68.__)("IP Address", "jetpack-forms"),
         render: ({ item }) => {
           if (!item.ip) {
             return styleUnreadValue("-", item.is_unread);
           }
-          return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(TextWithFlag, { countryCode: item.country_code, fallbackIcon: true, children: styleUnreadValue(item.ip, item.is_unread) });
+          return /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(TextWithFlag, { countryCode: item.country_code, fallbackIcon: true, children: styleUnreadValue(item.ip, item.is_unread) });
         },
         enableSorting: false
       }
     ],
     [filterOptions]
   );
-  const actions = (0, import_element75.useMemo)(
+  const actions = (0, import_element76.useMemo)(
     () => getActions({
       navigate,
       searchParams,
-      view: params.view
+      view: statusView
     }),
-    [navigate, searchParams, params.view]
+    [navigate, searchParams, statusView]
   );
-  const paginationInfo = (0, import_element75.useMemo)(
+  const paginationInfo = (0, import_element76.useMemo)(
     () => ({
       totalItems: totalItems || 0,
       totalPages: totalPages || 1
     }),
     [totalItems, totalPages]
   );
-  const statusTabs = [
-    { slug: "inbox", label: getTabLabel((0, import_i18n67.__)("Inbox", "jetpack-forms"), totalItemsInbox) },
-    { slug: "spam", label: getTabLabel((0, import_i18n67.__)("Spam", "jetpack-forms"), totalItemsSpam) },
-    { slug: "trash", label: getTabLabel((0, import_i18n67.__)("Trash", "jetpack-forms"), totalItemsTrash) }
-  ];
-  const handleTabChange = (0, import_element75.useCallback)(
-    (newView) => {
-      navigate({
-        to: "/responses/$view",
-        params: { view: newView }
-      });
-    },
-    [navigate]
-  );
   const { openNewForm } = useCreateForm();
-  const handleCreateForm = (0, import_element75.useCallback)(() => {
+  const handleCreateForm = (0, import_element76.useCallback)(() => {
     openNewForm({ showPatterns: false });
   }, [openNewForm]);
-  const handleIntegrations = (0, import_element75.useCallback)(() => {
+  const handleIntegrations = (0, import_element76.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element75.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element76.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
-  const headerActions = (0, import_element75.useMemo)(() => {
+  const headerActions = (0, import_element76.useMemo)(() => {
     const actionsArray = [];
-    if ((params.view === "inbox" || !params.view) && isIntegrationsEnabled && showDashboardIntegrations) {
+    if (statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations) {
       actionsArray.push(
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
           import_components67.Button,
           {
             variant: "secondary",
             size: "compact",
             onClick: handleIntegrations,
-            children: (0, import_i18n67.__)("Manage integrations", "jetpack-forms")
+            children: (0, import_i18n68.__)("Manage integrations", "jetpack-forms")
           },
           "integrations"
         )
       );
     }
-    if (params.view === "inbox" || !params.view) {
+    if (statusView === "inbox") {
       actionsArray.push(
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
           import_components67.Button,
           {
             variant: "secondary",
             size: "compact",
             icon: plus_default,
             onClick: handleCreateForm,
-            children: (0, import_i18n67.__)("Create a form", "jetpack-forms")
+            children: (0, import_i18n68.__)("Create a form", "jetpack-forms")
           },
           "create"
         )
       );
     }
     actionsArray.push(
-      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
         import_components67.Button,
         {
-          variant: params.view === "inbox" ? "primary" : "secondary",
+          variant: statusView === "inbox" ? "primary" : "secondary",
           size: "compact",
           icon: download_default,
-          children: (0, import_i18n67.__)("Export", "jetpack-forms")
+          children: (0, import_i18n68.__)("Export", "jetpack-forms")
         },
         "export"
       )
     );
-    if (params.view === "trash") {
-      actionsArray.push(/* @__PURE__ */ (0, import_jsx_runtime157.jsx)(empty_trash_button_default, {}, "empty-trash"));
+    if (statusView === "trash") {
+      actionsArray.push(/* @__PURE__ */ (0, import_jsx_runtime158.jsx)(empty_trash_button_default, {}, "empty-trash"));
     }
-    if (params.view === "spam") {
-      actionsArray.push(/* @__PURE__ */ (0, import_jsx_runtime157.jsx)(empty_spam_button_default, {}, "empty-spam"));
+    if (statusView === "spam") {
+      actionsArray.push(/* @__PURE__ */ (0, import_jsx_runtime158.jsx)(empty_spam_button_default, {}, "empty-spam"));
     }
     return actionsArray;
   }, [
-    params.view,
     handleIntegrations,
     handleCreateForm,
     isIntegrationsEnabled,
-    showDashboardIntegrations
+    showDashboardIntegrations,
+    statusView
   ]);
   const readStatusFilter = view.filters?.find((filter) => filter.field === "read_status")?.value;
-  const onClickItem = (0, import_element75.useCallback)(
+  const onClickItem = (0, import_element76.useCallback)(
     (item) => {
       onChangeSelection([String(item.id)]);
     },
     [onChangeSelection]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(
     page_default,
     {
       showSidebarToggle: false,
-      title: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack, { align: "center", gap: "xs", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
-        (0, import_i18n67.__)("Forms", "jetpack-forms")
+      title: /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(Stack, { align: "center", gap: "xs", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
+        (0, import_i18n68.__)("Forms", "jetpack-forms")
       ] }),
-      subTitle: (0, import_i18n67.__)("View and manage all your form submissions in one place.", "jetpack-forms"),
+      subTitle: (0, import_i18n68.__)("View and manage all your form submissions in one place.", "jetpack-forms"),
       actions: headerActions,
       hasPadding: false,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(
           dataviews_default,
           {
-            empty: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+            empty: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
               empty_responses_default,
               {
-                status: params.view,
+                status: statusView,
                 isSearch: !!view.search,
                 readStatusFilter
               }
@@ -29812,30 +29954,13 @@ function StageInner() {
             onClickItem,
             actions,
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
-                Stack,
-                {
-                  align: "center",
-                  className: "jp-forms-dataviews__view-actions",
-                  gap: "sm",
-                  justify: "space-between",
-                  children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Stack, { align: "center", gap: "sm", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Root, { value: params.view || "inbox", onValueChange: handleTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(List, { density: "compact", children: statusTabs.map((tab) => /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Tab, { value: tab.slug, children: tab.label }, tab.slug)) }) }) }),
-                    /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack, { align: "center", gap: "sm", children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.Search, {}),
-                      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.FiltersToggle, {}),
-                      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.ViewConfig, {})
-                    ] })
-                  ]
-                }
-              ),
-              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.FiltersToggled, { className: "dataviews-filters__container jp-forms-dataviews-filters__container" }),
-              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.Layout, {}),
-              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.Footer, {})
+              /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(DataViewsHeaderRow, { activeTab: "responses" }),
+              /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(dataviews_default.Layout, {}),
+              /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(dataviews_default.Footer, {})
             ]
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
           jetpack_integrations_modal_default,
           {
             isOpen: isIntegrationsModalOpen,
@@ -29852,7 +29977,7 @@ function StageInner() {
   );
 }
 var Stage = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(StageInner, {}) });
+  return /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(StageInner, {}) });
 };
 
 // routes/responses/response/index.tsx
@@ -29860,20 +29985,20 @@ var import_api_fetch11 = __toESM(require_api_fetch());
 var import_components73 = __toESM(require_components());
 var import_core_data6 = __toESM(require_core_data());
 var import_data18 = __toESM(require_data());
-var import_element78 = __toESM(require_element());
+var import_element79 = __toESM(require_element());
 var import_html_entities6 = __toESM(require_html_entities());
-var import_i18n73 = __toESM(require_i18n());
-import { useParams as useParams2, useSearch as useSearch3, useNavigate as useNavigate3 } from "@wordpress/route";
+var import_i18n74 = __toESM(require_i18n());
+import { useParams as useParams2, useSearch as useSearch3, useNavigate as useNavigate4 } from "@wordpress/route";
 
 // src/dashboard/components/copy-clipboard-button/index.tsx
 var import_components68 = __toESM(require_components(), 1);
 var import_compose14 = __toESM(require_compose(), 1);
-var import_element76 = __toESM(require_element(), 1);
-var import_i18n68 = __toESM(require_i18n(), 1);
-var import_jsx_runtime158 = __toESM(require_jsx_runtime(), 1);
+var import_element77 = __toESM(require_element(), 1);
+var import_i18n69 = __toESM(require_i18n(), 1);
+var import_jsx_runtime159 = __toESM(require_jsx_runtime(), 1);
 function CopyClipboardButton({ text }) {
-  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element76.useState)(false);
-  const timeoutIdRef = (0, import_element76.useRef)(null);
+  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element77.useState)(false);
+  const timeoutIdRef = (0, import_element77.useRef)(null);
   const ref = (0, import_compose14.useCopyToClipboard)(text, () => {
     setShowCopyConfirmation(true);
     if (timeoutIdRef.current) {
@@ -29883,17 +30008,17 @@ function CopyClipboardButton({ text }) {
       setShowCopyConfirmation(false);
     }, 4e3);
   });
-  (0, import_element76.useEffect)(() => {
+  (0, import_element77.useEffect)(() => {
     return () => {
       if (timeoutIdRef.current) {
         clearTimeout(timeoutIdRef.current);
       }
     };
   }, []);
-  const copied = (0, import_i18n68.__)("Copied!", "jetpack-forms");
-  const copy = (0, import_i18n68.__)("Copy", "jetpack-forms");
+  const copied = (0, import_i18n69.__)("Copied!", "jetpack-forms");
+  const copy = (0, import_i18n69.__)("Copy", "jetpack-forms");
   const emailCopyLabel = showCopyConfirmation ? copied : copy;
-  return /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components68.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components68.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
     import_components68.Button,
     {
       size: "small",
@@ -29908,18 +30033,18 @@ function CopyClipboardButton({ text }) {
 // src/dashboard/components/inspector/preview-file.tsx
 var import_components69 = __toESM(require_components(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
-var import_i18n69 = __toESM(require_i18n(), 1);
-var import_jsx_runtime159 = __toESM(require_jsx_runtime(), 1);
+var import_i18n70 = __toESM(require_i18n(), 1);
+var import_jsx_runtime160 = __toESM(require_jsx_runtime(), 1);
 var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
   const imageClass = clsx_default("jp-forms__inbox-file-preview-container", {
     "is-loading": isLoading
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("div", { className: "jp-forms__inbox-file-preview-shell", children: [
-    isLoading && /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("div", { className: "jp-forms__inbox-file-loading", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components69.Spinner, { className: "jp-forms__inbox-file-spinner" }),
-      /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { className: "jp-forms__inbox-file-loading-message ", children: (0, import_i18n69.__)("Loading preview\u2026", "jetpack-forms") })
+  return /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("div", { className: "jp-forms__inbox-file-preview-shell", children: [
+    isLoading && /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("div", { className: "jp-forms__inbox-file-loading", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(import_components69.Spinner, { className: "jp-forms__inbox-file-spinner" }),
+      /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("div", { className: "jp-forms__inbox-file-loading-message ", children: (0, import_i18n70.__)("Loading preview\u2026", "jetpack-forms") })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { className: imageClass, children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("div", { className: imageClass, children: /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
       "img",
       {
         src: file.url,
@@ -29936,10 +30061,10 @@ var preview_file_default = PreviewFile;
 var import_components70 = __toESM(require_components(), 1);
 var import_date10 = __toESM(require_date(), 1);
 var import_html_entities5 = __toESM(require_html_entities(), 1);
-var import_i18n70 = __toESM(require_i18n(), 1);
+var import_i18n71 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/response-meta/style.scss
-var css11 = `/**
+var css12 = `/**
  * Breakpoints & Media Queries
  */
 /**
@@ -30053,10 +30178,10 @@ var css11 = `/**
   vertical-align: top;
   white-space: nowrap;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css11));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css12));
 
 // src/dashboard/components/inspector/response-meta/index.tsx
-var import_jsx_runtime160 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime161 = __toESM(require_jsx_runtime(), 1);
 var getDisplayName = (response) => {
   const { author_name, author_email, author_url, ip } = response;
   return (0, import_html_entities5.decodeEntities)(author_name || author_email || author_url || ip);
@@ -30066,9 +30191,9 @@ var ResponseMeta = ({ response }) => {
   const gravatarEmail = response.author_email || response.ip;
   const defaultImage = response.author_name || response.author_email ? "initials" : "mp";
   const responseAuthorEmailParts = response.author_email?.split("@") ?? [];
-  return /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)(import_jsx_runtime160.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("div", { className: "jp-forms__inbox-response-header", children: /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)(import_components70.__experimentalHStack, { alignment: "topLeft", spacing: "3", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)(import_jsx_runtime161.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("div", { className: "jp-forms__inbox-response-header", children: /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)(import_components70.__experimentalHStack, { alignment: "topLeft", spacing: "3", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(
         Gravatar,
         {
           email: gravatarEmail,
@@ -30077,42 +30202,42 @@ var ResponseMeta = ({ response }) => {
         },
         gravatarEmail
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)(import_components70.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-header-title", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("h3", { className: "jp-forms__inbox-response-name", children: displayName }),
-        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("p", { className: "jp-forms__inbox-response-email", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("a", { href: `mailto:${response.author_email}`, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)(import_components70.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-header-title", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("h3", { className: "jp-forms__inbox-response-name", children: displayName }),
+        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("p", { className: "jp-forms__inbox-response-email", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("a", { href: `mailto:${response.author_email}`, children: [
             responseAuthorEmailParts[0],
-            /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("wbr", {}),
+            /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("wbr", {}),
             "@",
             responseAuthorEmailParts[1]
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(CopyClipboardButton, { text: response.author_email })
+          /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(CopyClipboardButton, { text: response.author_email })
         ] })
       ] })
     ] }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("div", { className: "jp-forms__inbox-response-meta", children: /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("table", { children: /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("tbody", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("th", { children: (0, import_i18n70.__)("Date:", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("td", { children: (0, import_i18n70.sprintf)(
+    /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("div", { className: "jp-forms__inbox-response-meta", children: /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("table", { children: /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("tbody", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("th", { children: (0, import_i18n71.__)("Date:", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("td", { children: (0, import_i18n71.sprintf)(
           /* Translators: %1$s is the date, %2$s is the time. */
-          (0, import_i18n70.__)("%1$s at %2$s", "jetpack-forms"),
+          (0, import_i18n71.__)("%1$s at %2$s", "jetpack-forms"),
           (0, import_date10.dateI18n)((0, import_date10.getSettings)().formats.date, response.date),
           (0, import_date10.dateI18n)((0, import_date10.getSettings)().formats.time, response.date)
         ) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("th", { children: (0, import_i18n70.__)("Source:", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("td", { children: [
-          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(import_components70.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities5.decodeEntities)(response.entry_title) || getPath(response) }),
+      /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("th", { children: (0, import_i18n71.__)("Source:", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("td", { children: [
+          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components70.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities5.decodeEntities)(response.entry_title) || getPath(response) }),
           !response.entry_permalink && (0, import_html_entities5.decodeEntities)(response.entry_title)
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("th", { children: [
-          (0, import_i18n70.__)("IP address:", "jetpack-forms"),
+      /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("th", { children: [
+          (0, import_i18n71.__)("IP address:", "jetpack-forms"),
           "\xA0"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(import_components70.Tooltip, { text: (0, import_i18n70.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components70.Tooltip, { text: (0, import_i18n71.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(
           import_components70.ExternalLink,
           {
             href: `https://apps.db.ripe.net/db-web-ui/query?searchtext=/${response.ip}`,
@@ -30120,12 +30245,12 @@ var ResponseMeta = ({ response }) => {
           }
         ) }) }) })
       ] }),
-      response.browser && /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("th", { children: [
-          (0, import_i18n70.__)("Browser:", "jetpack-forms"),
+      response.browser && /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("th", { children: [
+          (0, import_i18n71.__)("Browser:", "jetpack-forms"),
           "\xA0"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("td", { children: response.browser })
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("td", { children: response.browser })
       ] })
     ] }) }) })
   ] });
@@ -30137,9 +30262,9 @@ var import_api_fetch10 = __toESM(require_api_fetch());
 var import_components71 = __toESM(require_components());
 var import_core_data5 = __toESM(require_core_data());
 var import_data17 = __toESM(require_data());
-var import_element77 = __toESM(require_element());
-var import_i18n71 = __toESM(require_i18n());
-var import_jsx_runtime161 = __toESM(require_jsx_runtime());
+var import_element78 = __toESM(require_element());
+var import_i18n72 = __toESM(require_i18n());
+var import_jsx_runtime162 = __toESM(require_jsx_runtime());
 function ResponseActions({
   response,
   onActionComplete
@@ -30150,8 +30275,8 @@ function ResponseActions({
   const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data17.useDispatch)(
     store3
   );
-  const [isLoading] = (0, import_element77.useState)(false);
-  const handleMarkAsSpam = (0, import_element77.useCallback)(async () => {
+  const [isLoading] = (0, import_element78.useState)(false);
+  const handleMarkAsSpam = (0, import_element78.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "spam" });
     updateCountsOptimistically2(originalStatus, "spam", 1);
@@ -30174,7 +30299,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMarkAsNotSpam = (0, import_element77.useCallback)(async () => {
+  const handleMarkAsNotSpam = (0, import_element78.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -30197,7 +30322,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMoveToTrash = (0, import_element77.useCallback)(async () => {
+  const handleMoveToTrash = (0, import_element78.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "trash" });
     updateCountsOptimistically2(originalStatus, "trash", 1);
@@ -30217,7 +30342,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleRestore = (0, import_element77.useCallback)(async () => {
+  const handleRestore = (0, import_element78.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -30240,7 +30365,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleDelete = (0, import_element77.useCallback)(async () => {
+  const handleDelete = (0, import_element78.useCallback)(async () => {
     const originalStatus = response.status;
     updateCountsOptimistically2(originalStatus, "", 1);
     onActionComplete(response);
@@ -30257,7 +30382,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleToggleRead = (0, import_element77.useCallback)(async () => {
+  const handleToggleRead = (0, import_element78.useCallback)(async () => {
     const newIsUnread = !response.is_unread;
     editEntityRecord("postType", "feedback", response.id, { is_unread: newIsUnread });
     onActionComplete({ ...response, is_unread: newIsUnread });
@@ -30279,30 +30404,30 @@ function ResponseActions({
     // Compensate for button internal padding
   };
   if (response.status === "trash") {
-    return /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("div", { style: containerStyle, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components71.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n71.__)("Mark as read", "jetpack-forms") : (0, import_i18n71.__)("Mark as unread", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components71.Button, { onClick: handleRestore, isBusy: isLoading, size: "compact", children: (0, import_i18n71.__)("Restore", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components71.Button, { onClick: handleDelete, isBusy: isLoading, size: "compact", children: (0, import_i18n71.__)("Delete", "jetpack-forms") })
+    return /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { style: containerStyle, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components71.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n72.__)("Mark as read", "jetpack-forms") : (0, import_i18n72.__)("Mark as unread", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components71.Button, { onClick: handleRestore, isBusy: isLoading, size: "compact", children: (0, import_i18n72.__)("Restore", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components71.Button, { onClick: handleDelete, isBusy: isLoading, size: "compact", children: (0, import_i18n72.__)("Delete", "jetpack-forms") })
     ] });
   }
   if (response.status === "spam") {
-    return /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("div", { style: containerStyle, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components71.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n71.__)("Mark as read", "jetpack-forms") : (0, import_i18n71.__)("Mark as unread", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components71.Button, { onClick: handleMarkAsNotSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n71.__)("Not spam", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components71.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n71.__)("Trash", "jetpack-forms") })
+    return /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { style: containerStyle, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components71.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n72.__)("Mark as read", "jetpack-forms") : (0, import_i18n72.__)("Mark as unread", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components71.Button, { onClick: handleMarkAsNotSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n72.__)("Not spam", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components71.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n72.__)("Trash", "jetpack-forms") })
     ] });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)("div", { style: containerStyle, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components71.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n71.__)("Mark as read", "jetpack-forms") : (0, import_i18n71.__)("Mark as unread", "jetpack-forms") }),
-    /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components71.Button, { onClick: handleMarkAsSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n71.__)("Spam", "jetpack-forms") }),
-    /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components71.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n71.__)("Trash", "jetpack-forms") })
+  return /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { style: containerStyle, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components71.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n72.__)("Mark as read", "jetpack-forms") : (0, import_i18n72.__)("Mark as unread", "jetpack-forms") }),
+    /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components71.Button, { onClick: handleMarkAsSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n72.__)("Spam", "jetpack-forms") }),
+    /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components71.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n72.__)("Trash", "jetpack-forms") })
   ] });
 }
 
 // routes/responses/response/navigation.tsx
 var import_components72 = __toESM(require_components());
-var import_i18n72 = __toESM(require_i18n());
-var import_jsx_runtime162 = __toESM(require_jsx_runtime());
+var import_i18n73 = __toESM(require_i18n());
+var import_jsx_runtime163 = __toESM(require_jsx_runtime());
 function ResponseNavigation({
   hasNext,
   hasPrevious,
@@ -30316,29 +30441,29 @@ function ResponseNavigation({
     showTooltip: true,
     size: "compact"
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: "8px", flexShrink: 0 }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { style: { display: "flex", alignItems: "center" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: "8px", flexShrink: 0 }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("div", { style: { display: "flex", alignItems: "center" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
         import_components72.Button,
         {
           ...sharedProps,
           disabled: !hasPrevious,
           icon: chevron_up_default,
-          label: (0, import_i18n72.__)("Previous", "jetpack-forms"),
+          label: (0, import_i18n73.__)("Previous", "jetpack-forms"),
           onClick: onPrevious
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
         import_components72.Button,
         {
           ...sharedProps,
           disabled: !hasNext,
           icon: chevron_down_default,
-          label: (0, import_i18n72.__)("Next", "jetpack-forms"),
+          label: (0, import_i18n73.__)("Next", "jetpack-forms"),
           onClick: onNext
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
         "span",
         {
           style: {
@@ -30352,13 +30477,13 @@ function ResponseNavigation({
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
       import_components72.Button,
       {
         ...sharedProps,
         iconSize: 20,
         icon: close_default,
-        label: (0, import_i18n72.__)("Close", "jetpack-forms"),
+        label: (0, import_i18n73.__)("Close", "jetpack-forms"),
         onClick: onClose
       }
     )
@@ -30366,7 +30491,7 @@ function ResponseNavigation({
 }
 
 // src/dashboard/components/inspector/style.scss
-var css12 = `/**
+var css13 = `/**
  * Response View Component Styles
  */
 /**
@@ -30587,10 +30712,10 @@ var css12 = `/**
 .jp-forms__inbox-file-spinner.jp-forms__inbox-file-spinner {
   margin-top: 0;
 }`;
-document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css12));
+document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(css13));
 
 // routes/responses/response/index.tsx
-var import_jsx_runtime163 = __toESM(require_jsx_runtime());
+var import_jsx_runtime164 = __toESM(require_jsx_runtime());
 var getDisplayFields = (fields) => {
   if (!fields) {
     return [];
@@ -30612,12 +30737,12 @@ function FieldFile({
   files,
   handleFilePreview
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("ul", { style: { margin: 0, paddingLeft: "20px" }, children: files.map((file, index) => /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("li", { children: file.is_image ? /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components73.Button, { variant: "link", onClick: handleFilePreview(file), children: (0, import_html_entities6.decodeEntities)(file.name) }) : /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components73.ExternalLink, { href: file.url, children: (0, import_html_entities6.decodeEntities)(file.name) }) }, index)) });
+  return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("ul", { style: { margin: 0, paddingLeft: "20px" }, children: files.map((file, index) => /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("li", { children: file.is_image ? /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(import_components73.Button, { variant: "link", onClick: handleFilePreview(file), children: (0, import_html_entities6.decodeEntities)(file.name) }) : /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(import_components73.ExternalLink, { href: file.url, children: (0, import_html_entities6.decodeEntities)(file.name) }) }, index)) });
 }
 function FieldEmail({ email }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: "4px" }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("a", { href: `mailto:${email}`, children: email }),
-    /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(CopyClipboardButton, { text: email })
+  return /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: "4px" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("a", { href: `mailto:${email}`, children: email }),
+    /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(CopyClipboardButton, { text: email })
   ] });
 }
 function createEnterKeyHandler(handler) {
@@ -30631,10 +30756,10 @@ function FieldImageSelect({
   choices,
   handleFilePreview
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { style: { display: "flex", gap: "8px", flexWrap: "wrap" }, children: choices.map((choice, index) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("div", { style: { display: "flex", gap: "8px", flexWrap: "wrap" }, children: choices.map((choice, index) => {
     const previewHandler = handleFilePreview(choice);
     const keyDownHandler = createEnterKeyHandler(previewHandler);
-    return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
       "div",
       {
         style: {
@@ -30647,7 +30772,7 @@ function FieldImageSelect({
         onKeyDown: keyDownHandler,
         role: "button",
         tabIndex: 0,
-        children: /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+        children: /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
           "img",
           {
             src: choice.url,
@@ -30666,9 +30791,9 @@ function SingleResponseView({
   onNavigate,
   onClose
 }) {
-  const [previewFile, setPreviewFile] = (0, import_element78.useState)(null);
-  const [isImageLoading, setIsImageLoading] = (0, import_element78.useState)(true);
-  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element78.useState)(null);
+  const [previewFile, setPreviewFile] = (0, import_element79.useState)(null);
+  const [isImageLoading, setIsImageLoading] = (0, import_element79.useState)(true);
+  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element79.useState)(null);
   const { editEntityRecord } = (0, import_data18.useDispatch)(import_core_data6.store);
   const { response, isLoading } = (0, import_data18.useSelect)(
     (select) => {
@@ -30692,17 +30817,17 @@ function SingleResponseView({
   const currentIndex = allResponseIds.indexOf(responseId);
   const hasNext = currentIndex < allResponseIds.length - 1;
   const hasPrevious = currentIndex > 0;
-  const handleNext = (0, import_element78.useCallback)(() => {
+  const handleNext = (0, import_element79.useCallback)(() => {
     if (hasNext) {
       onNavigate(allResponseIds[currentIndex + 1]);
     }
   }, [hasNext, allResponseIds, currentIndex, onNavigate]);
-  const handlePrevious = (0, import_element78.useCallback)(() => {
+  const handlePrevious = (0, import_element79.useCallback)(() => {
     if (hasPrevious) {
       onNavigate(allResponseIds[currentIndex - 1]);
     }
   }, [hasPrevious, allResponseIds, currentIndex, onNavigate]);
-  (0, import_element78.useEffect)(() => {
+  (0, import_element79.useEffect)(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowUp" && hasPrevious) {
         event.preventDefault();
@@ -30717,7 +30842,7 @@ function SingleResponseView({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [hasNext, hasPrevious, handleNext, handlePrevious, onClose]);
-  (0, import_element78.useEffect)(() => {
+  (0, import_element79.useEffect)(() => {
     if (!response || !response.id || !response.is_unread) {
       return;
     }
@@ -30738,21 +30863,21 @@ function SingleResponseView({
       });
     });
   }, [response, editEntityRecord, hasMarkedAsRead]);
-  const handleFilePreview = (0, import_element78.useCallback)(
+  const handleFilePreview = (0, import_element79.useCallback)(
     (file) => () => {
       setIsImageLoading(true);
       setPreviewFile(file);
     },
     []
   );
-  const closePreviewModal = (0, import_element78.useCallback)(() => {
+  const closePreviewModal = (0, import_element79.useCallback)(() => {
     setPreviewFile(null);
     setIsImageLoading(true);
   }, []);
-  const handleImageLoaded = (0, import_element78.useCallback)(() => {
+  const handleImageLoaded = (0, import_element79.useCallback)(() => {
     setIsImageLoading(false);
   }, []);
-  const handleActionComplete = (0, import_element78.useCallback)(
+  const handleActionComplete = (0, import_element79.useCallback)(
     (updatedItem) => {
       if (!updatedItem) {
         if (hasNext) {
@@ -30771,7 +30896,7 @@ function SingleResponseView({
       return "-";
     }
     if (isImageSelectField(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
         FieldImageSelect,
         {
           choices: value.choices,
@@ -30780,7 +30905,7 @@ function SingleResponseView({
       );
     }
     if (isFileUploadField(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
         FieldFile,
         {
           files: value.files,
@@ -30790,10 +30915,10 @@ function SingleResponseView({
     }
     const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     if (typeof value === "string" && emailRegEx.test(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(FieldEmail, { email: value });
+      return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(FieldEmail, { email: value });
     }
     if (isLikelyPhoneNumber(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("a", { href: `tel:${value}`, children: value });
+      return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("a", { href: `tel:${value}`, children: value });
     }
     if (Array.isArray(value)) {
       return value.join(", ");
@@ -30803,15 +30928,15 @@ function SingleResponseView({
     }
     return String(value);
   };
-  const displayFields = (0, import_element78.useMemo)(() => getDisplayFields(response?.fields), [response?.fields]);
+  const displayFields = (0, import_element79.useMemo)(() => getDisplayFields(response?.fields), [response?.fields]);
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { style: { display: "flex", justifyContent: "center", padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components73.Spinner, {}) });
+    return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("div", { style: { display: "flex", justifyContent: "center", padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(import_components73.Spinner, {}) });
   }
   if (!response) {
-    return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { style: { padding: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("p", { children: (0, import_i18n73.__)("Response not found.", "jetpack-forms") }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("div", { style: { padding: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("p", { children: (0, import_i18n74.__)("Response not found.", "jetpack-forms") }) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(import_jsx_runtime163.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)(import_jsx_runtime164.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)(
       "div",
       {
         style: {
@@ -30824,8 +30949,8 @@ function SingleResponseView({
           flexWrap: "wrap"
         },
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
-          /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
+          /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
             ResponseNavigation,
             {
               hasNext,
@@ -30838,9 +30963,9 @@ function SingleResponseView({
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("div", { style: { padding: "20px", overflowY: "auto" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(response_meta_default, { response }),
-      displayFields.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { children: displayFields.map(({ label, value, key }) => /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)("div", { style: { padding: "20px", overflowY: "auto" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(response_meta_default, { response }),
+      displayFields.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("div", { children: displayFields.map(({ label, value, key }) => /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)(
         "div",
         {
           style: {
@@ -30849,7 +30974,7 @@ function SingleResponseView({
             borderBottom: "1px solid #eee"
           },
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
               "div",
               {
                 style: {
@@ -30861,20 +30986,20 @@ function SingleResponseView({
                 children: label.endsWith("?") ? label : `${label}:`
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { style: { color: "#3c434a", fontSize: "14px" }, children: renderFieldValue(value) })
+            /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("div", { style: { color: "#3c434a", fontSize: "14px" }, children: renderFieldValue(value) })
           ]
         },
         key
       )) }),
-      response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { style: { marginTop: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components73.Tip, { children: (0, import_i18n73.__)("Spam responses are permanently deleted after 15 days.", "jetpack-forms") }) }),
-      response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { style: { marginTop: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components73.Tip, { children: (0, import_i18n73._n)(
+      response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("div", { style: { marginTop: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(import_components73.Tip, { children: (0, import_i18n74.__)("Spam responses are permanently deleted after 15 days.", "jetpack-forms") }) }),
+      response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("div", { style: { marginTop: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(import_components73.Tip, { children: (0, import_i18n74._n)(
         "Items in trash are permanently deleted after 30 days.",
         "Items in trash are permanently deleted after 30 days.",
         30,
         "jetpack-forms"
       ) }) })
     ] }),
-    previewFile && /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components73.Modal, { title: (0, import_html_entities6.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+    previewFile && /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(import_components73.Modal, { title: (0, import_html_entities6.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
       preview_file_default,
       {
         file: previewFile,
@@ -30887,12 +31012,12 @@ function SingleResponseView({
 function Response() {
   const params = useParams2({ from: "/responses/$view" });
   const searchParams = useSearch3({ from: "/responses/$view" });
-  const navigate = useNavigate3();
+  const navigate = useNavigate4();
   const responseIds = searchParams?.responseIds || [];
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const { records } = useInboxData({ status: statusView });
   const allRecordIds = records?.map((record) => record.id) ?? [];
-  const handleClose = (0, import_element78.useCallback)(() => {
+  const handleClose = (0, import_element79.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -30900,7 +31025,7 @@ function Response() {
       }
     });
   }, [navigate, searchParams]);
-  const handleNavigate = (0, import_element78.useCallback)(
+  const handleNavigate = (0, import_element79.useCallback)(
     (id) => {
       navigate({
         search: {
@@ -30915,7 +31040,7 @@ function Response() {
     return null;
   }
   const selectedResponseId = Number(responseIds[0]);
-  return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
     SingleResponseView,
     {
       responseId: selectedResponseId,
@@ -30927,9 +31052,9 @@ function Response() {
 }
 
 // routes/responses/inspector.tsx
-var import_jsx_runtime164 = __toESM(require_jsx_runtime());
+var import_jsx_runtime165 = __toESM(require_jsx_runtime());
 function Inspector() {
-  return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(page_default, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(Response, {}) }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(page_default, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(Response, {}) }) });
 }
 export {
   Inspector as inspector,

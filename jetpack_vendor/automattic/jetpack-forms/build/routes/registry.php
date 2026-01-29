@@ -8,6 +8,13 @@
 
 return array(
 	array(
+		'name'        => 'forms',
+		'path'        => '/forms',
+		'page'        => 'jetpack-forms-responses',
+		'has_route'   => false,
+		'has_content' => true,
+	),
+	array(
 		'name'        => 'responses',
 		'path'        => '/responses/$view',
 		'page'        => 'jetpack-forms-responses',
