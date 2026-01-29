@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Use Page component from package for WP Build dashboard.
 
 ### Fixed
+- Announce form submission and errors to VoiceOver.
 - Contact Form: Fix Edit Form button in the Site Editor by navigating directly to the form editor.
 - Ensure form block is selected and locked when editing forms, and restrict available blocks to form-related blocks only.
 - Forms: ensure first step is selected when switching to or loading a multistep form.

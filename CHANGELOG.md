@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Mark new connections as shared by default for privileged users.
 
 ### Bug fixes
+- Forms: improve VoiceOver for form submissions.
 - Site Switcher: fix partial keyword matching so typing 'swit' shows 'Switch to...' results in the command palette.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
