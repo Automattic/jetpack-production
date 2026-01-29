@@ -20162,7 +20162,7 @@ var dataviews_default = DataViewsSubComponents;
 // routes/responses/stage.tsx
 var import_date9 = __toESM(require_date());
 var import_element75 = __toESM(require_element());
-var import_html_entities2 = __toESM(require_html_entities());
+var import_html_entities3 = __toESM(require_html_entities());
 var import_i18n67 = __toESM(require_i18n());
 import { useParams, useSearch as useSearch2, useNavigate as useNavigate2 } from "@wordpress/route";
 var React36 = __toESM(require_react());
@@ -23662,7 +23662,39 @@ var import_notices2 = __toESM(require_notices(), 1);
 var import_core_data = __toESM(require_core_data(), 1);
 var import_data13 = __toESM(require_data(), 1);
 var import_element69 = __toESM(require_element(), 1);
+var import_html_entities2 = __toESM(require_html_entities(), 1);
+
+// src/dashboard/components/inspector/utils.ts
 var import_html_entities = __toESM(require_html_entities(), 1);
+var isFileUploadField = (value) => {
+  return !!value && typeof value === "object" && "files" in value;
+};
+var isImageSelectField = (value) => {
+  return !!value && typeof value === "object" && "type" in value && value.type === "image-select";
+};
+var isLikelyPhoneNumber = (value) => {
+  if (typeof value !== "string") {
+    return false;
+  }
+  const normalizedValue = value.trim();
+  if (!/^[\d+\-\s().]+$/.test(normalizedValue)) {
+    return false;
+  }
+  if (/^\d{4}[-/]\d{1,2}[-/]\d{1,2}$/.test(normalizedValue)) {
+    return false;
+  }
+  if (/^\d{1,2}[-/]\d{1,2}[-/]\d{2,4}$/.test(normalizedValue)) {
+    return false;
+  }
+  const digits = normalizedValue.replace(/\D/g, "");
+  if (digits.length < 7 || digits.length > 15) {
+    return false;
+  }
+  return true;
+};
+var isCollectionFormatField = (item) => {
+  return item !== null && typeof item === "object" && "label" in item && "value" in item && "key" in item;
+};
 
 // src/dashboard/router/dashboard-search-params-context.tsx
 var import_element68 = __toESM(require_element(), 1);
@@ -24035,10 +24067,10 @@ var formatFieldValue = (fieldValue) => {
 };
 var decodeValue = (value) => {
   if (typeof value === "string") {
-    return (0, import_html_entities.decodeEntities)(value);
+    return (0, import_html_entities2.decodeEntities)(value);
   }
   if (Array.isArray(value)) {
-    return value.map((v2) => typeof v2 === "string" ? (0, import_html_entities.decodeEntities)(v2) : v2);
+    return value.map((v2) => typeof v2 === "string" ? (0, import_html_entities2.decodeEntities)(v2) : v2);
   }
   return value;
 };
@@ -24047,16 +24079,18 @@ var normalizeFieldsForDisplay = (fields) => {
   if (!fields || !Array.isArray(fields)) {
     return /* @__PURE__ */ Object.create(null);
   }
-  return fields.reduce(
-    (accumulator, field) => {
-      const baseLabel = field.label || formatFieldName(field.key) || field.key;
-      let label = baseLabel;
+  if (isCollectionFormatField(fields[0])) {
+    return fields;
+  }
+  return Object.entries(fields || {}).reduce(
+    (accumulator, [key, value]) => {
+      let _key = formatFieldName(key);
       let counter = 2;
-      while (hasOwn(accumulator, label)) {
-        label = `${baseLabel} (${counter})`;
+      while (hasOwn(accumulator, _key)) {
+        _key = `${formatFieldName(key)} (${counter})`;
         counter++;
       }
-      accumulator[label] = formatFieldValue(decodeValue(field.value));
+      accumulator[_key] = formatFieldValue(decodeValue(value));
       return accumulator;
     },
     /* @__PURE__ */ Object.create(null)
@@ -29524,10 +29558,10 @@ function StageInner() {
         id: "from",
         label: (0, import_i18n67.__)("From", "jetpack-forms"),
         render: ({ item }) => {
-          const displayName = (0, import_html_entities2.decodeEntities)(
+          const displayName = (0, import_html_entities3.decodeEntities)(
             item.author_name || item.author_email || item.author_url || item.ip || "Anonymous"
           );
-          const showEmail = item.author_email && displayName !== (0, import_html_entities2.decodeEntities)(item.author_email);
+          const showEmail = item.author_email && displayName !== (0, import_html_entities3.decodeEntities)(item.author_email);
           const defaultImage = item.author_name || item.author_email ? "initials" : "mp";
           return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack, { align: "center", gap: "sm", children: [
             item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
@@ -29606,7 +29640,7 @@ function StageInner() {
         elements: (filterOptions?.source || []).map(
           (source) => ({
             value: source.id.toString(),
-            label: (0, import_html_entities2.decodeEntities)(source.title) || source.url
+            label: (0, import_html_entities3.decodeEntities)(source.title) || source.url
           })
         ),
         filterBy: { operators: ["is"] },
@@ -29873,7 +29907,7 @@ function CopyClipboardButton({ text }) {
 
 // src/dashboard/components/inspector/preview-file.tsx
 var import_components69 = __toESM(require_components(), 1);
-var import_html_entities3 = __toESM(require_html_entities(), 1);
+var import_html_entities4 = __toESM(require_html_entities(), 1);
 var import_i18n69 = __toESM(require_i18n(), 1);
 var import_jsx_runtime159 = __toESM(require_jsx_runtime(), 1);
 var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
@@ -29889,7 +29923,7 @@ var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
       "img",
       {
         src: file.url,
-        alt: (0, import_html_entities3.decodeEntities)(file.name),
+        alt: (0, import_html_entities4.decodeEntities)(file.name),
         onLoad: onImageLoaded,
         className: "jp-forms__inbox-file-preview-image"
       }
@@ -29901,7 +29935,7 @@ var preview_file_default = PreviewFile;
 // src/dashboard/components/inspector/response-meta/index.tsx
 var import_components70 = __toESM(require_components(), 1);
 var import_date10 = __toESM(require_date(), 1);
-var import_html_entities4 = __toESM(require_html_entities(), 1);
+var import_html_entities5 = __toESM(require_html_entities(), 1);
 var import_i18n70 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/response-meta/style.scss
@@ -30025,7 +30059,7 @@ document.head.appendChild(document.createElement("style")).appendChild(document.
 var import_jsx_runtime160 = __toESM(require_jsx_runtime(), 1);
 var getDisplayName = (response) => {
   const { author_name, author_email, author_url, ip } = response;
-  return (0, import_html_entities4.decodeEntities)(author_name || author_email || author_url || ip);
+  return (0, import_html_entities5.decodeEntities)(author_name || author_email || author_url || ip);
 };
 var ResponseMeta = ({ response }) => {
   const displayName = getDisplayName(response);
@@ -30069,8 +30103,8 @@ var ResponseMeta = ({ response }) => {
       /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("tr", { children: [
         /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("th", { children: (0, import_i18n70.__)("Source:", "jetpack-forms") }),
         /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("td", { children: [
-          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(import_components70.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities4.decodeEntities)(response.entry_title) || getPath(response) }),
-          !response.entry_permalink && (0, import_html_entities4.decodeEntities)(response.entry_title)
+          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(import_components70.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities5.decodeEntities)(response.entry_title) || getPath(response) }),
+          !response.entry_permalink && (0, import_html_entities5.decodeEntities)(response.entry_title)
         ] })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("tr", { children: [
@@ -30097,35 +30131,6 @@ var ResponseMeta = ({ response }) => {
   ] });
 };
 var response_meta_default = ResponseMeta;
-
-// src/dashboard/components/inspector/utils.ts
-var import_html_entities5 = __toESM(require_html_entities(), 1);
-var isFileUploadField = (value) => {
-  return !!value && typeof value === "object" && "files" in value;
-};
-var isImageSelectField = (value) => {
-  return !!value && typeof value === "object" && "type" in value && value.type === "image-select";
-};
-var isLikelyPhoneNumber = (value) => {
-  if (typeof value !== "string") {
-    return false;
-  }
-  const normalizedValue = value.trim();
-  if (!/^[\d+\-\s().]+$/.test(normalizedValue)) {
-    return false;
-  }
-  if (/^\d{4}[-/]\d{1,2}[-/]\d{1,2}$/.test(normalizedValue)) {
-    return false;
-  }
-  if (/^\d{1,2}[-/]\d{1,2}[-/]\d{2,4}$/.test(normalizedValue)) {
-    return false;
-  }
-  const digits = normalizedValue.replace(/\D/g, "");
-  if (digits.length < 7 || digits.length > 15) {
-    return false;
-  }
-  return true;
-};
 
 // routes/responses/response/actions.tsx
 var import_api_fetch10 = __toESM(require_api_fetch());
