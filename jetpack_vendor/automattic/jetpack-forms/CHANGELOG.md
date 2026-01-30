@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Display uploaded files with icon, filename, and size on confirmation page.
 
 ### Changed
+- Extract Forms logo and product name into a shared FormsLogo component and use it in both the responses and forms wp-build dashboard stage headers.
 - Forms: refactor actions for wp build dashboard
 - Forms: update copy from "submissions" to "responses" for consistency.
 - Forms: Update dashboard default view and tab labels - rename "All responses" to "Responses", set "Responses" as the default landing page instead of Forms, and reorder tabs to show Responses first.
