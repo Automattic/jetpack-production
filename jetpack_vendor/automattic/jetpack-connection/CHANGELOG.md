@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Remove error handling methods for external storage and add host agnostic error reporting.
+- Update package dependencies.
 
 ## [6.20.5] - 2026-01-26
 ### Changed

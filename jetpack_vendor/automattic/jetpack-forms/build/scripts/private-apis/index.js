@@ -18,13 +18,13 @@ var wp;
   };
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.38.0/node_modules/@wordpress/private-apis/build-module/index.mjs
+  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.39.0/node_modules/@wordpress/private-apis/build-module/index.mjs
   var build_module_exports = {};
   __export(build_module_exports, {
     __dangerousOptInToUnstableAPIsOnlyForCoreModules: () => __dangerousOptInToUnstableAPIsOnlyForCoreModules
   });
 
-  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.38.0/node_modules/@wordpress/private-apis/build-module/implementation.mjs
+  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.39.0/node_modules/@wordpress/private-apis/build-module/implementation.mjs
   var CORE_MODULES_USING_PRIVATE_APIS = [
     "@wordpress/block-directory",
     "@wordpress/block-editor",
@@ -52,12 +52,14 @@ var wp;
     "@wordpress/routes",
     "@wordpress/sync",
     "@wordpress/theme",
+    "@wordpress/ui",
     "@wordpress/dataviews",
     "@wordpress/fields",
     "@wordpress/lazy-editor",
     "@wordpress/media-utils",
     "@wordpress/upload-media",
-    "@wordpress/global-styles-ui"
+    "@wordpress/global-styles-ui",
+    "@wordpress/ui"
   ];
   var requiredConsent = "I acknowledge private features are not for use in themes or plugins and doing so will break in the next version of WordPress.";
   var __dangerousOptInToUnstableAPIsOnlyForCoreModules = (consent, moduleName) => {

@@ -4100,7 +4100,7 @@ var require_sha256 = __commonJS({
   }
 });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/icon/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/icon/index.mjs
 var import_element = __toESM(require_element(), 1);
 var icon_default = (0, import_element.forwardRef)(
   ({ icon, size = 24, ...props }, ref) => {
@@ -4113,37 +4113,37 @@ var icon_default = (0, import_element.forwardRef)(
   }
 );
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-down.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-down.mjs
 var import_primitives = __toESM(require_primitives(), 1);
 var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
 var arrow_down_default = /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_primitives.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_primitives.Path, { d: "m16.5 13.5-3.7 3.7V4h-1.5v13.2l-3.8-3.7-1 1 5.5 5.6 5.5-5.6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-left.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-left.mjs
 var import_primitives2 = __toESM(require_primitives(), 1);
 var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
 var arrow_left_default = /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_primitives2.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_primitives2.Path, { d: "M20 11.2H6.8l3.7-3.7-1-1L3.9 12l5.6 5.5 1-1-3.7-3.7H20z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-right.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-right.mjs
 var import_primitives3 = __toESM(require_primitives(), 1);
 var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
 var arrow_right_default = /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_primitives3.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_primitives3.Path, { d: "m14.5 6.5-1 1 3.7 3.7H4v1.6h13.2l-3.7 3.7 1 1 5.6-5.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-up.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-up.mjs
 var import_primitives4 = __toESM(require_primitives(), 1);
 var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
 var arrow_up_default = /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_primitives4.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_primitives4.Path, { d: "M12 3.9 6.5 9.5l1 1 3.8-3.7V20h1.5V6.8l3.7 3.7 1-1z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/backup.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/backup.mjs
 var import_primitives5 = __toESM(require_primitives(), 1);
 var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
 var backup_default = /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_primitives5.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_primitives5.Path, { d: "M5.5 12h1.75l-2.5 3-2.5-3H4a8 8 0 113.134 6.35l.907-1.194A6.5 6.5 0 105.5 12zm9.53 1.97l-2.28-2.28V8.5a.75.75 0 00-1.5 0V12a.747.747 0 00.218.529l1.282-.84-1.28.842 2.5 2.5a.75.75 0 101.06-1.061z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/block-table.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/block-table.mjs
 var import_primitives6 = __toESM(require_primitives(), 1);
 var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
 var block_table_default = /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_primitives6.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_primitives6.Path, { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 4.5h14c.3 0 .5.2.5.5v3.5h-15V5c0-.3.2-.5.5-.5zm8 5.5h6.5v3.5H13V10zm-1.5 3.5h-7V10h7v3.5zm-7 5.5v-4h7v4.5H5c-.3 0-.5-.2-.5-.5zm14.5.5h-6V15h6.5v4c0 .3-.2.5-.5.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/category.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/category.mjs
 var import_primitives7 = __toESM(require_primitives(), 1);
 var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
 var category_default = /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_primitives7.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
@@ -4155,7 +4155,7 @@ var category_default = /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_primi
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/caution.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/caution.mjs
 var import_primitives8 = __toESM(require_primitives(), 1);
 var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
 var caution_default = /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(import_primitives8.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
@@ -4167,37 +4167,37 @@ var caution_default = /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(import_primit
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/check.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/check.mjs
 var import_primitives9 = __toESM(require_primitives(), 1);
 var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
 var check_default = /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_primitives9.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_primitives9.Path, { d: "M16.5 7.5 10 13.9l-2.5-2.4-1 1 3.5 3.6 7.5-7.6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-down.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-down.mjs
 var import_primitives10 = __toESM(require_primitives(), 1);
 var import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
 var chevron_down_default = /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_primitives10.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_primitives10.Path, { d: "M17.5 11.6L12 16l-5.5-4.4.9-1.2L12 14l4.5-3.6 1 1.2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-right.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-right.mjs
 var import_primitives11 = __toESM(require_primitives(), 1);
 var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
 var chevron_right_default = /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_primitives11.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_primitives11.Path, { d: "M10.6 6L9.4 7l4.6 5-4.6 5 1.2 1 5.4-6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-up.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-up.mjs
 var import_primitives12 = __toESM(require_primitives(), 1);
 var import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
 var chevron_up_default = /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(import_primitives12.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(import_primitives12.Path, { d: "M6.5 12.4L12 8l5.5 4.4-.9 1.2L12 10l-4.5 3.6-1-1.2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/close-small.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/close-small.mjs
 var import_primitives13 = __toESM(require_primitives(), 1);
 var import_jsx_runtime13 = __toESM(require_jsx_runtime(), 1);
 var close_small_default = /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(import_primitives13.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(import_primitives13.Path, { d: "M12 13.06l3.712 3.713 1.061-1.06L13.061 12l3.712-3.712-1.06-1.06L12 10.938 8.288 7.227l-1.061 1.06L10.939 12l-3.712 3.712 1.06 1.061L12 13.061z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/close.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/close.mjs
 var import_primitives14 = __toESM(require_primitives(), 1);
 var import_jsx_runtime14 = __toESM(require_jsx_runtime(), 1);
 var close_default = /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(import_primitives14.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(import_primitives14.Path, { d: "m13.06 12 6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06L13.06 12Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/cog.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/cog.mjs
 var import_primitives15 = __toESM(require_primitives(), 1);
 var import_jsx_runtime15 = __toESM(require_jsx_runtime(), 1);
 var cog_default = /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(import_primitives15.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
@@ -4209,7 +4209,7 @@ var cog_default = /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(import_primitive
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/comment-content.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/comment-content.mjs
 var import_primitives16 = __toESM(require_primitives(), 1);
 var import_jsx_runtime16 = __toESM(require_jsx_runtime(), 1);
 var comment_content_default = /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_primitives16.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
@@ -4221,7 +4221,7 @@ var comment_content_default = /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(impo
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/copy-small.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/copy-small.mjs
 var import_primitives17 = __toESM(require_primitives(), 1);
 var import_jsx_runtime17 = __toESM(require_jsx_runtime(), 1);
 var copy_small_default = /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_primitives17.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
@@ -4233,12 +4233,12 @@ var copy_small_default = /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_pr
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/download.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/download.mjs
 var import_primitives18 = __toESM(require_primitives(), 1);
 var import_jsx_runtime18 = __toESM(require_jsx_runtime(), 1);
 var download_default = /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_primitives18.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_primitives18.Path, { d: "M18 11.3l-1-1.1-4 4V3h-1.5v11.3L7 10.2l-1 1.1 6.2 5.8 5.8-5.8zm.5 3.7v3.5h-13V15H4v5h16v-5h-1.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/envelope.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/envelope.mjs
 var import_primitives19 = __toESM(require_primitives(), 1);
 var import_jsx_runtime19 = __toESM(require_jsx_runtime(), 1);
 var envelope_default = /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(import_primitives19.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
@@ -4250,7 +4250,7 @@ var envelope_default = /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(import_prim
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/error.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/error.mjs
 var import_primitives20 = __toESM(require_primitives(), 1);
 var import_jsx_runtime20 = __toESM(require_jsx_runtime(), 1);
 var error_default = /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_primitives20.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
@@ -4262,27 +4262,27 @@ var error_default = /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_primiti
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets-rtl.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets-rtl.mjs
 var import_primitives21 = __toESM(require_primitives(), 1);
 var import_jsx_runtime21 = __toESM(require_jsx_runtime(), 1);
 var format_list_bullets_rtl_default = /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(import_primitives21.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(import_primitives21.Path, { d: "M4 8.8h8.9V7.2H4v1.6zm0 7h8.9v-1.5H4v1.5zM18 13c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets.mjs
 var import_primitives22 = __toESM(require_primitives(), 1);
 var import_jsx_runtime22 = __toESM(require_jsx_runtime(), 1);
 var format_list_bullets_default = /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(import_primitives22.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(import_primitives22.Path, { d: "M11.1 15.8H20v-1.5h-8.9v1.5zm0-8.6v1.5H20V7.2h-8.9zM6 13c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/funnel.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/funnel.mjs
 var import_primitives23 = __toESM(require_primitives(), 1);
 var import_jsx_runtime23 = __toESM(require_jsx_runtime(), 1);
 var funnel_default = /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(import_primitives23.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(import_primitives23.Path, { d: "M10 17.5H14V16H10V17.5ZM6 6V7.5H18V6H6ZM8 12.5H16V11H8V12.5Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/globe.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/globe.mjs
 var import_primitives24 = __toESM(require_primitives(), 1);
 var import_jsx_runtime24 = __toESM(require_jsx_runtime(), 1);
 var globe_default = /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_primitives24.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_primitives24.Path, { d: "M12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8Zm6.5 8c0 .6 0 1.2-.2 1.8h-2.7c0-.6.2-1.1.2-1.8s0-1.2-.2-1.8h2.7c.2.6.2 1.1.2 1.8Zm-.9-3.2h-2.4c-.3-.9-.7-1.8-1.1-2.4-.1-.2-.2-.4-.3-.5 1.6.5 3 1.6 3.8 3ZM12.8 17c-.3.5-.6 1-.8 1.3-.2-.3-.5-.8-.8-1.3-.3-.5-.6-1.1-.8-1.7h3.3c-.2.6-.5 1.2-.8 1.7Zm-2.9-3.2c-.1-.6-.2-1.1-.2-1.8s0-1.2.2-1.8H14c.1.6.2 1.1.2 1.8s0 1.2-.2 1.8H9.9ZM11.2 7c.3-.5.6-1 .8-1.3.2.3.5.8.8 1.3.3.5.6 1.1.8 1.7h-3.3c.2-.6.5-1.2.8-1.7Zm-1-1.2c-.1.2-.2.3-.3.5-.4.7-.8 1.5-1.1 2.4H6.4c.8-1.4 2.2-2.5 3.8-3Zm-1.8 8H5.7c-.2-.6-.2-1.1-.2-1.8s0-1.2.2-1.8h2.7c0 .6-.2 1.1-.2 1.8s0 1.2.2 1.8Zm-2 1.4h2.4c.3.9.7 1.8 1.1 2.4.1.2.2.4.3.5-1.6-.5-3-1.6-3.8-3Zm7.4 3c.1-.2.2-.3.3-.5.4-.7.8-1.5 1.1-2.4h2.4c-.8 1.4-2.2 2.5-3.8 3Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/info.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/info.mjs
 var import_primitives25 = __toESM(require_primitives(), 1);
 var import_jsx_runtime25 = __toESM(require_jsx_runtime(), 1);
 var info_default = /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_primitives25.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(
@@ -4294,42 +4294,42 @@ var info_default = /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_primitiv
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/link.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/link.mjs
 var import_primitives26 = __toESM(require_primitives(), 1);
 var import_jsx_runtime26 = __toESM(require_jsx_runtime(), 1);
 var link_default = /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_primitives26.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_primitives26.Path, { d: "M10 17.389H8.444A5.194 5.194 0 1 1 8.444 7H10v1.5H8.444a3.694 3.694 0 0 0 0 7.389H10v1.5ZM14 7h1.556a5.194 5.194 0 0 1 0 10.39H14v-1.5h1.556a3.694 3.694 0 0 0 0-7.39H14V7Zm-4.5 6h5v-1.5h-5V13Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/mobile.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/mobile.mjs
 var import_primitives27 = __toESM(require_primitives(), 1);
 var import_jsx_runtime27 = __toESM(require_jsx_runtime(), 1);
 var mobile_default = /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(import_primitives27.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(import_primitives27.Path, { d: "M15 4H9c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm.5 14c0 .3-.2.5-.5.5H9c-.3 0-.5-.2-.5-.5V6c0-.3.2-.5.5-.5h6c.3 0 .5.2.5.5v12zm-4.5-.5h2V16h-2v1.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/more-vertical.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/more-vertical.mjs
 var import_primitives28 = __toESM(require_primitives(), 1);
 var import_jsx_runtime28 = __toESM(require_jsx_runtime(), 1);
 var more_vertical_default = /* @__PURE__ */ (0, import_jsx_runtime28.jsx)(import_primitives28.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime28.jsx)(import_primitives28.Path, { d: "M13 19h-2v-2h2v2zm0-6h-2v-2h2v2zm0-6h-2V5h2v2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/next.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/next.mjs
 var import_primitives29 = __toESM(require_primitives(), 1);
 var import_jsx_runtime29 = __toESM(require_jsx_runtime(), 1);
 var next_default = /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(import_primitives29.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(import_primitives29.Path, { d: "M6.6 6L5.4 7l4.5 5-4.5 5 1.1 1 5.5-6-5.4-6zm6 0l-1.1 1 4.5 5-4.5 5 1.1 1 5.5-6-5.5-6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plugins.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plugins.mjs
 var import_primitives30 = __toESM(require_primitives(), 1);
 var import_jsx_runtime30 = __toESM(require_jsx_runtime(), 1);
 var plugins_default = /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(import_primitives30.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(import_primitives30.Path, { d: "M10.5 4v4h3V4H15v4h1.5a1 1 0 011 1v4l-3 4v2a1 1 0 01-1 1h-3a1 1 0 01-1-1v-2l-3-4V9a1 1 0 011-1H9V4h1.5zm.5 12.5v2h2v-2l3-4v-3H8v3l3 4z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plus.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plus.mjs
 var import_primitives31 = __toESM(require_primitives(), 1);
 var import_jsx_runtime31 = __toESM(require_jsx_runtime(), 1);
 var plus_default = /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(import_primitives31.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(import_primitives31.Path, { d: "M11 12.5V17.5H12.5V12.5H17.5V11H12.5V6H11V11H6V12.5H11Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/previous.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/previous.mjs
 var import_primitives32 = __toESM(require_primitives(), 1);
 var import_jsx_runtime32 = __toESM(require_jsx_runtime(), 1);
 var previous_default = /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(import_primitives32.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(import_primitives32.Path, { d: "M11.6 7l-1.1-1L5 12l5.5 6 1.1-1L7 12l4.6-5zm6 0l-1.1-1-5.5 6 5.5 6 1.1-1-4.6-5 4.6-5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/published.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/published.mjs
 var import_primitives33 = __toESM(require_primitives(), 1);
 var import_jsx_runtime33 = __toESM(require_jsx_runtime(), 1);
 var published_default = /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(import_primitives33.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(
@@ -4341,7 +4341,7 @@ var published_default = /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(import_pri
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/scheduled.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/scheduled.mjs
 var import_primitives34 = __toESM(require_primitives(), 1);
 var import_jsx_runtime34 = __toESM(require_jsx_runtime(), 1);
 var scheduled_default = /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(import_primitives34.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(
@@ -4353,17 +4353,17 @@ var scheduled_default = /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(import_pri
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/search.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/search.mjs
 var import_primitives35 = __toESM(require_primitives(), 1);
 var import_jsx_runtime35 = __toESM(require_jsx_runtime(), 1);
 var search_default = /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(import_primitives35.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(import_primitives35.Path, { d: "M13 5c-3.3 0-6 2.7-6 6 0 1.4.5 2.7 1.3 3.7l-3.8 3.8 1.1 1.1 3.8-3.8c1 .8 2.3 1.3 3.7 1.3 3.3 0 6-2.7 6-6S16.3 5 13 5zm0 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/seen.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/seen.mjs
 var import_primitives36 = __toESM(require_primitives(), 1);
 var import_jsx_runtime36 = __toESM(require_jsx_runtime(), 1);
 var seen_default = /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_primitives36.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_primitives36.Path, { d: "M3.99961 13C4.67043 13.3354 4.6703 13.3357 4.67017 13.3359L4.67298 13.3305C4.67621 13.3242 4.68184 13.3135 4.68988 13.2985C4.70595 13.2686 4.7316 13.2218 4.76695 13.1608C4.8377 13.0385 4.94692 12.8592 5.09541 12.6419C5.39312 12.2062 5.84436 11.624 6.45435 11.0431C7.67308 9.88241 9.49719 8.75 11.9996 8.75C14.502 8.75 16.3261 9.88241 17.5449 11.0431C18.1549 11.624 18.6061 12.2062 18.9038 12.6419C19.0523 12.8592 19.1615 13.0385 19.2323 13.1608C19.2676 13.2218 19.2933 13.2686 19.3093 13.2985C19.3174 13.3135 19.323 13.3242 19.3262 13.3305L19.3291 13.3359C19.3289 13.3357 19.3288 13.3354 19.9996 13C20.6704 12.6646 20.6703 12.6643 20.6701 12.664L20.6697 12.6632L20.6688 12.6614L20.6662 12.6563L20.6583 12.6408C20.6517 12.6282 20.6427 12.6108 20.631 12.5892C20.6078 12.5459 20.5744 12.4852 20.5306 12.4096C20.4432 12.2584 20.3141 12.0471 20.1423 11.7956C19.7994 11.2938 19.2819 10.626 18.5794 9.9569C17.1731 8.61759 14.9972 7.25 11.9996 7.25C9.00203 7.25 6.82614 8.61759 5.41987 9.9569C4.71736 10.626 4.19984 11.2938 3.85694 11.7956C3.68511 12.0471 3.55605 12.2584 3.4686 12.4096C3.42484 12.4852 3.39142 12.5459 3.36818 12.5892C3.35656 12.6108 3.34748 12.6282 3.34092 12.6408L3.33297 12.6563L3.33041 12.6614L3.32948 12.6632L3.32911 12.664C3.32894 12.6643 3.32879 12.6646 3.99961 13ZM11.9996 16C13.9326 16 15.4996 14.433 15.4996 12.5C15.4996 10.567 13.9326 9 11.9996 9C10.0666 9 8.49961 10.567 8.49961 12.5C8.49961 14.433 10.0666 16 11.9996 16Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/trash.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/trash.mjs
 var import_primitives37 = __toESM(require_primitives(), 1);
 var import_jsx_runtime37 = __toESM(require_jsx_runtime(), 1);
 var trash_default = /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(import_primitives37.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(
@@ -4375,7 +4375,7 @@ var trash_default = /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(import_primiti
   }
 ) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.5.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/unseen.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/unseen.mjs
 var import_primitives38 = __toESM(require_primitives(), 1);
 var import_jsx_runtime38 = __toESM(require_jsx_runtime(), 1);
 var unseen_default = /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(import_primitives38.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(import_primitives38.Path, { d: "M20.7 12.7s0-.1-.1-.2c0-.2-.2-.4-.4-.6-.3-.5-.9-1.2-1.6-1.8-.7-.6-1.5-1.3-2.6-1.8l-.6 1.4c.9.4 1.6 1 2.1 1.5.6.6 1.1 1.2 1.4 1.6.1.2.3.4.3.5v.1l.7-.3.7-.3Zm-5.2-9.3-1.8 4c-.5-.1-1.1-.2-1.7-.2-3 0-5.2 1.4-6.6 2.7-.7.7-1.2 1.3-1.6 1.8-.2.3-.3.5-.4.6 0 0 0 .1-.1.2s0 0 .7.3l.7.3V13c0-.1.2-.3.3-.5.3-.4.7-1 1.4-1.6 1.2-1.2 3-2.3 5.5-2.3H13v.3c-.4 0-.8-.1-1.1-.1-1.9 0-3.5 1.6-3.5 3.5s.6 2.3 1.6 2.9l-2 4.4.9.4 7.6-16.2-.9-.4Zm-3 12.6c1.7-.2 3-1.7 3-3.5s-.2-1.4-.6-1.9L12.4 16Z" }) });
@@ -6190,7 +6190,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
   document.head.appendChild(style);
 }
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
 var import_element3 = __toESM(require_element(), 1);
 var import_jsx_runtime44 = __toESM(require_jsx_runtime(), 1);
 var NavigableRegion = (0, import_element3.forwardRef)(
@@ -6212,14 +6212,14 @@ var NavigableRegion = (0, import_element3.forwardRef)(
 NavigableRegion.displayName = "NavigableRegion";
 var navigable_region_default = NavigableRegion;
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
 var import_components2 = __toESM(require_components(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/sidebar-toggle-slot.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/sidebar-toggle-slot.mjs
 var import_components = __toESM(require_components(), 1);
 var { Fill: SidebarToggleFill, Slot: SidebarToggleSlot } = (0, import_components.createSlotFill)("SidebarToggle");
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
 var import_jsx_runtime45 = __toESM(require_jsx_runtime(), 1);
 function Header({
   breadcrumbs,
@@ -6257,7 +6257,7 @@ function Header({
   ] });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
 var import_jsx_runtime46 = __toESM(require_jsx_runtime(), 1);
 function Page({
   breadcrumbs,
@@ -19768,10 +19768,37 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/responses/stage.tsx
 var import_date9 = __toESM(require_date());
-var import_element76 = __toESM(require_element());
+var import_element77 = __toESM(require_element());
 var import_html_entities3 = __toESM(require_html_entities());
 var import_i18n68 = __toESM(require_i18n());
 import { useParams, useSearch as useSearch2, useNavigate as useNavigate3 } from "@wordpress/route";
+
+// ../../../node_modules/.pnpm/@wordpress+ui@0.6.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/ui/build-module/stack/stack.mjs
+var import_element56 = __toESM(require_element(), 1);
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='71d20935c2']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "71d20935c2");
+  style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._19ce0419607e1896__stack{display:flex}}"));
+  document.head.appendChild(style);
+}
+var style_default2 = { "stack": "_19ce0419607e1896__stack" };
+var Stack3 = (0, import_element56.forwardRef)(function Stack22({ direction, gap, align, justify, wrap, render: render4, ...props }, ref) {
+  const style = {
+    gap: gap && `var(--wpds-dimension-gap-${gap})`,
+    alignItems: align,
+    justifyContent: justify,
+    flexDirection: direction,
+    flexWrap: wrap
+  };
+  const element = useRender({
+    render: render4,
+    ref,
+    props: mergeProps(props, { style, className: style_default2.stack })
+  });
+  return element;
+});
+
+// routes/responses/stage.tsx
 var React36 = __toESM(require_react());
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
@@ -19985,7 +20012,7 @@ var analytics = {
 var analytics_default = analytics;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integrations-list.tsx
-var import_element65 = __toESM(require_element(), 1);
+var import_element66 = __toESM(require_element(), 1);
 
 // ../../js-packages/components/build/tools/jp-redirect/index.js
 function getRedirectUrl(source, args = {}) {
@@ -20016,7 +20043,7 @@ function getRedirectUrl(source, args = {}) {
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/akismet.tsx
 var import_components47 = __toESM(require_components(), 1);
-var import_element56 = __toESM(require_element(), 1);
+var import_element57 = __toESM(require_element(), 1);
 var import_i18n44 = __toESM(require_i18n(), 1);
 
 // src/icons/akismet.tsx
@@ -20107,12 +20134,12 @@ function buildAkismetCard({
       showHeaderToggle: context === "block-editor",
       headerToggleValue: isConnected,
       isHeaderToggleEnabled: false,
-      notInstalledMessage: (0, import_element56.createInterpolateElement)(
+      notInstalledMessage: (0, import_element57.createInterpolateElement)(
         (0, import_i18n44.__)(
           "Add one-click spam protection for your forms with <a>Akismet</a>. Simply install the plugin and you're set.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(import_components47.ExternalLink, { href: marketingUrl }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(import_components47.ExternalLink, { href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n44.__)(
         "Akismet is installed. Just activate the plugin to start blocking spam.",
@@ -20122,12 +20149,12 @@ function buildAkismetCard({
     },
     toggleTooltip: (0, import_i18n44.__)("We keep your forms protected", "jetpack-forms"),
     body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime116.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime116.jsx)("p", { className: "integration-card__description", children: (0, import_element56.createInterpolateElement)(
+      /* @__PURE__ */ (0, import_jsx_runtime116.jsx)("p", { className: "integration-card__description", children: (0, import_element57.createInterpolateElement)(
         (0, import_i18n44.__)(
           "Akismet is active. There is one step left. Please add your <a>Akismet key</a>.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(import_components47.ExternalLink, { href: settingsUrl }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(import_components47.ExternalLink, { href: settingsUrl, children: null }) }
       ) }),
       /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(
         import_components47.Button,
@@ -20265,7 +20292,7 @@ var esm_default2 = requestExternalAccess;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/components/google-drive-connect-button.tsx
 var import_components48 = __toESM(require_components(), 1);
-var import_element57 = __toESM(require_element(), 1);
+var import_element58 = __toESM(require_element(), 1);
 var import_i18n45 = __toESM(require_i18n(), 1);
 var import_jsx_runtime118 = __toESM(require_jsx_runtime(), 1);
 function GoogleDriveConnectButton({
@@ -20275,8 +20302,8 @@ function GoogleDriveConnectButton({
 }) {
   const connectingText = (0, import_i18n45.__)("Connecting\u2026", "jetpack-forms");
   const connectText = (0, import_i18n45.__)("Connect to Google Drive", "jetpack-forms");
-  const [isToggling, setIsToggling] = (0, import_element57.useState)(false);
-  (0, import_element57.useEffect)(() => {
+  const [isToggling, setIsToggling] = (0, import_element58.useState)(false);
+  (0, import_element58.useEffect)(() => {
     setIsToggling(false);
   }, [isConnected]);
   const handleClick = () => {
@@ -20305,14 +20332,14 @@ function GoogleDriveConnectButton({
 // src/blocks/contact-form/components/jetpack-integrations-modal/components/google-drive-disconnect-button.tsx
 var import_api_fetch = __toESM(require_api_fetch(), 1);
 var import_components49 = __toESM(require_components(), 1);
-var import_element58 = __toESM(require_element(), 1);
+var import_element59 = __toESM(require_element(), 1);
 var import_i18n46 = __toESM(require_i18n(), 1);
 var import_jsx_runtime119 = __toESM(require_jsx_runtime(), 1);
 function GoogleDriveDisconnectButton({ onDisconnected, isConnected }) {
   const disconnectingText = (0, import_i18n46.__)("Disconnecting\u2026", "jetpack-forms");
   const disconnectText = (0, import_i18n46.__)("Disconnect Google Drive", "jetpack-forms");
-  const [isToggling, setIsToggling] = (0, import_element58.useState)(false);
-  (0, import_element58.useEffect)(() => {
+  const [isToggling, setIsToggling] = (0, import_element59.useState)(false);
+  (0, import_element59.useEffect)(() => {
     setIsToggling(false);
   }, [isConnected]);
   const handleClick = () => {
@@ -20390,7 +20417,7 @@ function buildGoogleDriveCard({
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/hostinger-reach.tsx
 var import_components51 = __toESM(require_components(), 1);
-var import_element59 = __toESM(require_element(), 1);
+var import_element60 = __toESM(require_element(), 1);
 var import_i18n49 = __toESM(require_i18n(), 1);
 
 // src/icons/hostinger-reach.tsx
@@ -20455,12 +20482,14 @@ function buildHostingerReachCard({
           }
         })
       },
-      notInstalledMessage: (0, import_element59.createInterpolateElement)(
+      notInstalledMessage: (0, import_element60.createInterpolateElement)(
         (0, import_i18n49.__)(
           "Add powerful email marketing to your forms with <a>Hostinger Reach</a>. Simply install the plugin to start sending emails.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(import_components51.ExternalLink, { href: integration.marketingUrl || "" }) }
+        {
+          a: /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(import_components51.ExternalLink, { href: integration.marketingUrl || "", children: null })
+        }
       ),
       notActivatedMessage: (0, import_i18n49.__)(
         "Hostinger Reach is installed. Just activate the plugin to start sending emails.",
@@ -20729,7 +20758,7 @@ var jetpack_logo_default = JetpackLogo;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/jetpack-crm.tsx
 var import_components52 = __toESM(require_components(), 1);
-var import_element60 = __toESM(require_element(), 1);
+var import_element61 = __toESM(require_element(), 1);
 var import_i18n51 = __toESM(require_i18n(), 1);
 var import_semver = __toESM(require_semver2(), 1);
 var import_jsx_runtime124 = __toESM(require_jsx_runtime(), 1);
@@ -20769,7 +20798,7 @@ function buildJetpackCrmCard({
     }
     if (!hasExtension) {
       return /* @__PURE__ */ (0, import_jsx_runtime124.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime124.jsx)("p", { className: "integration-card__description", children: (0, import_element60.createInterpolateElement)(
+        /* @__PURE__ */ (0, import_jsx_runtime124.jsx)("p", { className: "integration-card__description", children: (0, import_element61.createInterpolateElement)(
           (0, import_i18n51.__)(
             "You can integrate this contact form with Jetpack CRM by enabling Jetpack CRM's <a>Jetpack Forms extension</a>.",
             "jetpack-forms"
@@ -20826,12 +20855,12 @@ function buildJetpackCrmCard({
         }
       },
       trackEventName: "jetpack_forms_upsell_crm_click",
-      notInstalledMessage: (0, import_element60.createInterpolateElement)(
+      notInstalledMessage: (0, import_element61.createInterpolateElement)(
         (0, import_i18n51.__)(
           "You can save your form contacts in <a>Jetpack CRM</a>. To get started, please install the plugin.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(import_components52.ExternalLink, { href: marketingUrl }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(import_components52.ExternalLink, { href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n51.__)(
         "Jetpack CRM is installed. To start saving contacts, simply activate the plugin.",
@@ -20845,7 +20874,7 @@ function buildJetpackCrmCard({
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/mailpoet.tsx
 var import_components53 = __toESM(require_components(), 1);
-var import_element61 = __toESM(require_element(), 1);
+var import_element62 = __toESM(require_element(), 1);
 var import_i18n53 = __toESM(require_i18n(), 1);
 
 // src/icons/mailpoet.tsx
@@ -20924,12 +20953,12 @@ function buildMailPoetCard({
           }
         })
       },
-      notInstalledMessage: (0, import_element61.createInterpolateElement)(
+      notInstalledMessage: (0, import_element62.createInterpolateElement)(
         (0, import_i18n53.__)(
           "Add powerful email marketing to your forms with <a>MailPoet</a>. Simply install the plugin to start sending emails.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(import_components53.ExternalLink, { href: marketingUrl }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(import_components53.ExternalLink, { href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n53.__)(
         "MailPoet is installed. Just activate the plugin to start sending emails.",
@@ -20939,12 +20968,12 @@ function buildMailPoetCard({
     },
     toggleTooltip: (0, import_i18n53.__)("Grow your audience with MailPoet", "jetpack-forms"),
     body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime126.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime126.jsx)("p", { className: "integration-card__description", children: (0, import_element61.createInterpolateElement)(
+      /* @__PURE__ */ (0, import_jsx_runtime126.jsx)("p", { className: "integration-card__description", children: (0, import_element62.createInterpolateElement)(
         (0, import_i18n53.__)(
           "MailPoet is active. There is one step left. Please complete <a>MailPoet setup</a>.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(import_components53.ExternalLink, { href: settingsUrl }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(import_components53.ExternalLink, { href: settingsUrl, children: null }) }
       ) }),
       /* @__PURE__ */ (0, import_jsx_runtime126.jsxs)(import_components53.__experimentalHStack, { spacing: "3", justify: "start", children: [
         /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(
@@ -21055,7 +21084,7 @@ var import_components54 = __toESM(require_components(), 1);
 var import_i18n55 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-create-form.ts
-var import_element62 = __toESM(require_element(), 1);
+var import_element63 = __toESM(require_element(), 1);
 
 // src/hooks/use-config-value.ts
 var import_data7 = __toESM(require_data(), 1);
@@ -21239,7 +21268,7 @@ function useCreateForm() {
   const isCentralFormManagementEnabled = useConfigValue("isCentralFormManagementEnabled");
   const adminUrl = useConfigValue("adminUrl");
   const ajaxUrl = useConfigValue("ajaxUrl");
-  const createForm = (0, import_element62.useCallback)(
+  const createForm = (0, import_element63.useCallback)(
     async (formPattern) => {
       const data = new FormData();
       data.append("action", "create_new_form");
@@ -21261,7 +21290,7 @@ function useCreateForm() {
     },
     [newFormNonce, ajaxUrl]
   );
-  const openNewForm = (0, import_element62.useCallback)(
+  const openNewForm = (0, import_element63.useCallback)(
     async ({ formPattern, showPatterns, analyticsEvent }) => {
       try {
         if (isCentralFormManagementEnabled === true) {
@@ -21497,12 +21526,12 @@ var import_i18n58 = __toESM(require_i18n(), 1);
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/plugin-action-button.tsx
 var import_components57 = __toESM(require_components(), 1);
-var import_element64 = __toESM(require_element(), 1);
+var import_element65 = __toESM(require_element(), 1);
 var import_i18n57 = __toESM(require_i18n(), 1);
 
 // src/hooks/use-plugin-installation.ts
 var import_data8 = __toESM(require_data(), 1);
-var import_element63 = __toESM(require_element(), 1);
+var import_element64 = __toESM(require_element(), 1);
 var import_notices = __toESM(require_notices(), 1);
 
 // ../../js-packages/script-data/src/utils.ts
@@ -21564,11 +21593,11 @@ var usePluginInstallation = ({
   successNotices,
   errorNotice
 }) => {
-  const [isInstalling, setIsInstalling] = (0, import_element63.useState)(false);
+  const [isInstalling, setIsInstalling] = (0, import_element64.useState)(false);
   const { createSuccessNotice, createErrorNotice } = (0, import_data8.useDispatch)(import_notices.store);
   const canInstallPlugins = useConfigValue("canInstallPlugins");
   const canActivatePlugins = useConfigValue("canActivatePlugins");
-  const installPlugin = (0, import_element63.useCallback)(async () => {
+  const installPlugin = (0, import_element64.useCallback)(async () => {
     setIsInstalling(true);
     if (trackEventName) {
       analytics_default.tracks.recordEvent(trackEventName, {
@@ -21651,7 +21680,7 @@ var PluginActionButton = ({
     trackEventProps
   });
   const canPerformAction = isInstalled ? canActivatePlugins : canInstallPlugins;
-  const [isReconcilingStatus, setIsReconcilingStatus] = (0, import_element64.useState)(false);
+  const [isReconcilingStatus, setIsReconcilingStatus] = (0, import_element65.useState)(false);
   const isDisabled = isInstalling || isReconcilingStatus || !canPerformAction;
   const handleAction = async (event) => {
     event.stopPropagation();
@@ -21664,7 +21693,7 @@ var PluginActionButton = ({
       refreshStatus();
     }
   };
-  (0, import_element64.useEffect)(() => {
+  (0, import_element65.useEffect)(() => {
     if (isReconcilingStatus && isActive) {
       setIsReconcilingStatus(false);
     }
@@ -21927,15 +21956,15 @@ var IntegrationsList = ({
     setAttributes,
     components
   });
-  const initialCardsExpandedState = (0, import_element65.useMemo)(() => {
+  const initialCardsExpandedState = (0, import_element66.useMemo)(() => {
     const state = {};
     integrations.forEach((integration) => {
       state[integration.id] = false;
     });
     return state;
   }, [integrations]);
-  const [expandedCards, setExpandedCards] = (0, import_element65.useState)(initialCardsExpandedState);
-  const toggleCard = (0, import_element65.useCallback)(
+  const [expandedCards, setExpandedCards] = (0, import_element66.useState)(initialCardsExpandedState);
+  const toggleCard = (0, import_element66.useCallback)(
     (id) => {
       setExpandedCards((prev) => {
         const isExpanding = !prev[id];
@@ -22015,7 +22044,7 @@ var jetpack_integrations_modal_default = IntegrationsModal;
 // src/dashboard/components/empty-responses/index.tsx
 var import_components62 = __toESM(require_components(), 1);
 var import_data10 = __toESM(require_data(), 1);
-var import_element67 = __toESM(require_element(), 1);
+var import_element68 = __toESM(require_element(), 1);
 var import_i18n61 = __toESM(require_i18n(), 1);
 
 // src/store/integrations/index.ts
@@ -22168,7 +22197,7 @@ var store2 = (0, import_data9.createReduxStore)(INTEGRATIONS_STORE, {
 
 // src/dashboard/components/create-form-button/index.tsx
 var import_components61 = __toESM(require_components(), 1);
-var import_element66 = __toESM(require_element(), 1);
+var import_element67 = __toESM(require_element(), 1);
 var import_i18n60 = __toESM(require_i18n(), 1);
 var import_jsx_runtime137 = __toESM(require_jsx_runtime(), 1);
 function CreateFormButton({
@@ -22177,7 +22206,7 @@ function CreateFormButton({
   variant = "secondary"
 }) {
   const { openNewForm } = useCreateForm();
-  const onButtonClickHandler = (0, import_element66.useCallback)(
+  const onButtonClickHandler = (0, import_element67.useCallback)(
     () => openNewForm({
       showPatterns,
       analyticsEvent: () => {
@@ -22214,24 +22243,24 @@ var useInstallAkismet = () => {
     };
   }, []);
   const { refreshIntegrations: refreshIntegrations2 } = (0, import_data10.useDispatch)(INTEGRATIONS_STORE);
-  const akismetIntegrationReady = (0, import_element67.useMemo)(
+  const akismetIntegrationReady = (0, import_element68.useMemo)(
     () => !!akismetIntegration && !akismetIntegration.__isPartial,
     [akismetIntegration]
   );
   const isInstalled = !!akismetIntegration?.isInstalled;
   const isAkismetActive = akismetIntegrationReady && isInstalled && !!akismetIntegration?.isActive;
   const shouldShowAkismetCta = akismetIntegrationReady && !isAkismetActive && !isSimpleSite();
-  const akismetPluginFile = (0, import_element67.useMemo)(
+  const akismetPluginFile = (0, import_element68.useMemo)(
     () => akismetIntegration?.pluginFile ?? "akismet/akismet",
     [akismetIntegration?.pluginFile]
   );
-  const wrapperBody = (0, import_element67.createInterpolateElement)(
+  const wrapperBody = (0, import_element68.createInterpolateElement)(
     (0, import_i18n61.__)(
       "Want automatic spam filtering? Akismet Anti-spam protects millions of sites. <moreInfoLink>Learn more.</moreInfoLink>",
       "jetpack-forms"
     ),
     {
-      moreInfoLink: /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components62.ExternalLink, { href: "https://akismet.com/" })
+      moreInfoLink: /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components62.ExternalLink, { href: "https://akismet.com/", children: null })
     }
   );
   const activateButtonText = (0, import_i18n61.__)("Activate Akismet Anti-spam", "jetpack-forms");
@@ -22267,7 +22296,7 @@ var useInstallAkismet = () => {
     }
   });
   const canPerformAkismetAction = isInstalled && akismetIntegrationReady ? canActivatePlugins !== false : canInstallPlugins !== false;
-  const handleAkismetSetup = (0, import_element67.useCallback)(async () => {
+  const handleAkismetSetup = (0, import_element68.useCallback)(async () => {
     if (isInstallingAkismet || !akismetIntegrationReady || !canPerformAkismetAction) {
       return;
     }
@@ -23136,14 +23165,14 @@ var import_api_fetch7 = __toESM(require_api_fetch(), 1);
 var import_components63 = __toESM(require_components(), 1);
 var import_core_data2 = __toESM(require_core_data(), 1);
 var import_data14 = __toESM(require_data(), 1);
-var import_element70 = __toESM(require_element(), 1);
+var import_element71 = __toESM(require_element(), 1);
 var import_i18n62 = __toESM(require_i18n(), 1);
 var import_notices2 = __toESM(require_notices(), 1);
 
 // src/dashboard/hooks/use-inbox-data.ts
 var import_core_data = __toESM(require_core_data(), 1);
 var import_data13 = __toESM(require_data(), 1);
-var import_element69 = __toESM(require_element(), 1);
+var import_element70 = __toESM(require_element(), 1);
 var import_html_entities2 = __toESM(require_html_entities(), 1);
 
 // src/dashboard/components/inspector/utils.ts
@@ -23179,9 +23208,9 @@ var isCollectionFormatField = (item) => {
 };
 
 // src/dashboard/router/dashboard-search-params-context.tsx
-var import_element68 = __toESM(require_element(), 1);
+var import_element69 = __toESM(require_element(), 1);
 var import_jsx_runtime139 = __toESM(require_jsx_runtime(), 1);
-var DashboardSearchParamsContext = (0, import_element68.createContext)(null);
+var DashboardSearchParamsContext = (0, import_element69.createContext)(null);
 function DashboardSearchParamsProvider({
   value,
   children
@@ -23189,7 +23218,7 @@ function DashboardSearchParamsProvider({
   return /* @__PURE__ */ (0, import_jsx_runtime139.jsx)(DashboardSearchParamsContext.Provider, { value, children });
 }
 function useDashboardSearchParams() {
-  const ctx8 = (0, import_element68.useContext)(DashboardSearchParamsContext);
+  const ctx8 = (0, import_element69.useContext)(DashboardSearchParamsContext);
   if (!ctx8) {
     throw new Error(
       "useDashboardSearchParams must be used within a DashboardSearchParamsProvider."
@@ -23601,9 +23630,9 @@ function useInboxData(options = {}) {
     }),
     []
   );
-  const [frozenInvalidIds, setFrozenInvalidIds] = (0, import_element69.useState)([]);
-  const currentPageRef = (0, import_element69.useRef)(currentQuery2?.page || 1);
-  (0, import_element69.useEffect)(() => {
+  const [frozenInvalidIds, setFrozenInvalidIds] = (0, import_element70.useState)([]);
+  const currentPageRef = (0, import_element70.useRef)(currentQuery2?.page || 1);
+  (0, import_element70.useEffect)(() => {
     const newPage = currentQuery2?.page || 1;
     const hasUnreadFilter = currentQuery2?.is_unread === true;
     if (newPage !== currentPageRef.current) {
@@ -23615,7 +23644,7 @@ function useInboxData(options = {}) {
       }
     }
   }, [currentQuery2?.page, currentQuery2?.is_unread, invalidRecords2]);
-  const queryWithInvalidIds = (0, import_element69.useMemo)(() => {
+  const queryWithInvalidIds = (0, import_element70.useMemo)(() => {
     if (frozenInvalidIds.length > 0) {
       return {
         ...currentQuery2,
@@ -23649,7 +23678,7 @@ function useInboxData(options = {}) {
     }
     return status === filter;
   };
-  const records = (0, import_element69.useMemo)(() => {
+  const records = (0, import_element70.useMemo)(() => {
     const filteredRecords = (editedRecords || []).filter((record) => {
       return statusMatchesFilter(record.status, statusFilter);
     });
@@ -23661,7 +23690,7 @@ function useInboxData(options = {}) {
       };
     });
   }, [editedRecords, statusFilter]);
-  const countsQueryParams = (0, import_element69.useMemo)(() => {
+  const countsQueryParams = (0, import_element70.useMemo)(() => {
     const params = {};
     if (currentQuery2?.search) {
       params.search = currentQuery2.search;
@@ -23716,9 +23745,9 @@ var EmptySpamButton = ({
   totalItemsSpam: totalItemsSpamProp,
   isLoadingCounts: isLoadingCountsProp
 } = {}) => {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element70.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element70.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element70.useState)(true);
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element71.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element71.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element71.useState)(true);
   const { createSuccessNotice, createErrorNotice } = (0, import_data14.useDispatch)(import_notices2.store);
   const { invalidateResolution } = (0, import_data14.useDispatch)(import_core_data2.store);
   const { invalidateCounts: invalidateCounts2 } = (0, import_data14.useDispatch)(store3);
@@ -23726,12 +23755,12 @@ var EmptySpamButton = ({
   const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam;
   const isLoadingCounts = isLoadingCountsProp ?? false;
   const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
-  (0, import_element70.useEffect)(() => {
+  (0, import_element71.useEffect)(() => {
     setIsEmpty(isLoadingCounts || !totalItemsSpam);
   }, [totalItemsSpam, isLoadingCounts]);
-  const openConfirmDialog = (0, import_element70.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element70.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element70.useCallback)(async () => {
+  const openConfirmDialog = (0, import_element71.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element71.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element71.useCallback)(async () => {
     if (isEmptying || isEmpty4) {
       return;
     }
@@ -23829,7 +23858,7 @@ var import_api_fetch8 = __toESM(require_api_fetch(), 1);
 var import_components64 = __toESM(require_components(), 1);
 var import_core_data3 = __toESM(require_core_data(), 1);
 var import_data15 = __toESM(require_data(), 1);
-var import_element71 = __toESM(require_element(), 1);
+var import_element72 = __toESM(require_element(), 1);
 var import_i18n63 = __toESM(require_i18n(), 1);
 var import_notices3 = __toESM(require_notices(), 1);
 var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
@@ -23837,9 +23866,9 @@ var EmptyTrashButton = ({
   totalItemsTrash: totalItemsTrashProp,
   isLoadingCounts: isLoadingCountsProp
 } = {}) => {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element71.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element71.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element71.useState)(true);
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element72.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element72.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element72.useState)(true);
   const { createSuccessNotice, createErrorNotice } = (0, import_data15.useDispatch)(import_notices3.store);
   const { invalidateResolution } = (0, import_data15.useDispatch)(import_core_data3.store);
   const { invalidateCounts: invalidateCounts2 } = (0, import_data15.useDispatch)(store3);
@@ -23847,12 +23876,12 @@ var EmptyTrashButton = ({
   const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash;
   const isLoadingCounts = isLoadingCountsProp ?? false;
   const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
-  (0, import_element71.useEffect)(() => {
+  (0, import_element72.useEffect)(() => {
     setIsEmpty(isLoadingCounts || !totalItemsTrash);
   }, [totalItemsTrash, isLoadingCounts]);
-  const openConfirmDialog = (0, import_element71.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element71.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element71.useCallback)(async () => {
+  const openConfirmDialog = (0, import_element72.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element72.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element72.useCallback)(async () => {
     if (isEmptying || isEmpty4) {
       return;
     }
@@ -23948,7 +23977,7 @@ var empty_trash_button_default = EmptyTrashButton;
 // src/dashboard/components/forms-logo/index.tsx
 var import_jsx_runtime142 = __toESM(require_jsx_runtime(), 1);
 function FormsLogo() {
-  return /* @__PURE__ */ (0, import_jsx_runtime142.jsxs)(Stack, { align: "center", gap: "xs", children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime142.jsxs)(Stack3, { align: "center", gap: "xs", children: [
     /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
     "Forms"
   ] });
@@ -24589,7 +24618,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/gravatar/index.tsx
-var import_element72 = __toESM(require_element(), 1);
+var import_element73 = __toESM(require_element(), 1);
 var import_i18n64 = __toESM(require_i18n(), 1);
 var import_js_sha256 = __toESM(require_sha256(), 1);
 
@@ -24610,9 +24639,9 @@ function Gravatar({
   size = 48,
   useHovercard = true
 }) {
-  const profileImageRef = (0, import_element72.useRef)(null);
-  const hovercardRef = (0, import_element72.useRef)(null);
-  (0, import_element72.useEffect)(() => {
+  const profileImageRef = (0, import_element73.useRef)(null);
+  const hovercardRef = (0, import_element73.useRef)(null);
+  (0, import_element73.useEffect)(() => {
     if (useHovercard && profileImageRef.current) {
       hovercardRef.current = new __webpack_exports__Hovercards({
         // Documented at https://github.com/Automattic/gravatar/tree/trunk/web/packages/hovercards#translations
@@ -24997,7 +25026,7 @@ var updateMenuCounterOptimistically = (count) => {
 };
 
 // src/dashboard/router/wp-route-dashboard-search-params-provider.tsx
-var import_element73 = __toESM(require_element(), 1);
+var import_element74 = __toESM(require_element(), 1);
 import { useSearch, useNavigate } from "@wordpress/route";
 var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
 function searchRecordToUrlSearchParams(search) {
@@ -25046,8 +25075,8 @@ function WpRouteDashboardSearchParamsProvider({
     strict: false
   });
   const navigate = useNavigate();
-  const searchParams = (0, import_element73.useMemo)(() => searchRecordToUrlSearchParams(search), [search]);
-  const setSearchParams = (0, import_element73.useCallback)(
+  const searchParams = (0, import_element74.useMemo)(() => searchRecordToUrlSearchParams(search), [search]);
+  const setSearchParams = (0, import_element74.useCallback)(
     (next) => {
       const resolved = typeof next === "function" ? next(searchParams) : next;
       const nextSearch = urlSearchParamsToSearchRecord(resolved, {
@@ -25058,7 +25087,7 @@ function WpRouteDashboardSearchParamsProvider({
     },
     [navigate, searchParams]
   );
-  const value = (0, import_element73.useMemo)(
+  const value = (0, import_element74.useMemo)(
     () => [searchParams, setSearchParams],
     [searchParams, setSearchParams]
   );
@@ -25066,7 +25095,7 @@ function WpRouteDashboardSearchParamsProvider({
 }
 
 // src/dashboard/wp-build/components/dataviews-header-row/index.tsx
-var import_element74 = __toESM(require_element(), 1);
+var import_element75 = __toESM(require_element(), 1);
 var import_i18n66 = __toESM(require_i18n(), 1);
 import { useNavigate as useNavigate2 } from "@wordpress/route";
 
@@ -25451,7 +25480,7 @@ var EMPTY_ARRAY7 = Object.freeze([]);
 var EMPTY_OBJECT2 = Object.freeze({});
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/utils/useRenderElement.js
-var import_react25 = __toESM(require_react(), 1);
+var import_react26 = __toESM(require_react(), 1);
 function useRenderElement2(element, componentProps, params = {}) {
   const renderProp = componentProps.render;
   const outProps = useRenderElementProps2(componentProps, params);
@@ -25516,14 +25545,14 @@ function evaluateRenderProp2(element, render4, props, state) {
 }
 function renderTag2(Tag, props) {
   if (Tag === "button") {
-    return /* @__PURE__ */ (0, import_react25.createElement)("button", {
+    return /* @__PURE__ */ (0, import_react26.createElement)("button", {
       type: "button",
       ...props,
       key: props.key
     });
   }
   if (Tag === "img") {
-    return /* @__PURE__ */ (0, import_react25.createElement)("img", {
+    return /* @__PURE__ */ (0, import_react26.createElement)("img", {
       alt: "",
       ...props,
       key: props.key
@@ -27574,7 +27603,7 @@ function useActivationDirectionDetector(activeTabValue, orientation, tabsListEle
 
 // src/dashboard/components/tabs/list.tsx
 var import_compose12 = __toESM(require_compose(), 1);
-var import_react26 = __toESM(require_react(), 1);
+var import_react27 = __toESM(require_react(), 1);
 
 // src/dashboard/components/tabs/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='b037ec6f12']")) {
@@ -27587,13 +27616,13 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 // src/dashboard/components/tabs/list.tsx
 var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
 var DEFAULT_SCROLL_MARGIN = 0;
-var List = (0, import_react26.forwardRef)(function TabList({ children, density = "default", className, activateOnFocus, render: render4, ...otherProps }, forwardedRef) {
-  const [listEl, setListEl] = (0, import_react26.useState)(null);
-  const [overflow, setOverflow] = (0, import_react26.useState)({
+var List = (0, import_react27.forwardRef)(function TabList({ children, density = "default", className, activateOnFocus, render: render4, ...otherProps }, forwardedRef) {
+  const [listEl, setListEl] = (0, import_react27.useState)(null);
+  const [overflow, setOverflow] = (0, import_react27.useState)({
     first: false,
     last: false
   });
-  (0, import_react26.useEffect)(() => {
+  (0, import_react27.useEffect)(() => {
     if (!listEl) {
       return;
     }
@@ -27631,16 +27660,16 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       resizeObserver.disconnect();
     };
   }, [listEl]);
-  const setListElRef = (0, import_react26.useCallback)((el) => setListEl(el), []);
+  const setListElRef = (0, import_react27.useCallback)((el) => setListEl(el), []);
   const mergedListRef = (0, import_compose12.useMergeRefs)([forwardedRef, setListElRef]);
-  const renderTabList = (0, import_react26.useCallback)(
+  const renderTabList = (0, import_react27.useCallback)(
     (props, state) => {
       const newProps = {
         ...props,
         tabIndex: props.tabIndex ?? -1
       };
-      if ((0, import_react26.isValidElement)(render4)) {
-        return (0, import_react26.cloneElement)(render4, newProps);
+      if ((0, import_react27.isValidElement)(render4)) {
+        return (0, import_react27.cloneElement)(render4, newProps);
       } else if (typeof render4 === "function") {
         return render4(newProps, state);
       }
@@ -27672,9 +27701,9 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
 });
 
 // src/dashboard/components/tabs/panel.tsx
-var import_react27 = __toESM(require_react(), 1);
+var import_react28 = __toESM(require_react(), 1);
 var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
-var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focusable = true, tabIndex, ...otherProps }, forwardedRef) {
+var Panel = (0, import_react28.forwardRef)(function TabPanel2({ className, focusable = true, tabIndex, ...otherProps }, forwardedRef) {
   return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
     index_parts_exports.Panel,
     {
@@ -27687,19 +27716,19 @@ var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focus
 });
 
 // src/dashboard/components/tabs/root.tsx
-var import_react28 = __toESM(require_react(), 1);
+var import_react29 = __toESM(require_react(), 1);
 var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
-var Root = (0, import_react28.forwardRef)(function TabsRoot3({ ...otherProps }, forwardedRef) {
+var Root = (0, import_react29.forwardRef)(function TabsRoot3({ ...otherProps }, forwardedRef) {
   return /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
 });
 
 // src/dashboard/components/tabs/tab.tsx
-var import_react29 = __toESM(require_react(), 1);
+var import_react30 = __toESM(require_react(), 1);
 var import_jsx_runtime154 = __toESM(require_jsx_runtime(), 1);
 var ChevronRight = (props) => {
-  return (0, import_react29.cloneElement)(chevron_right_default, props);
+  return (0, import_react30.cloneElement)(chevron_right_default, props);
 };
-var Tab = (0, import_react29.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
+var Tab = (0, import_react30.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
   return /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(
     index_parts_exports.Tab,
     {
@@ -27726,7 +27755,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 var import_jsx_runtime155 = __toESM(require_jsx_runtime(), 1);
 function DataViewsHeaderRow({ activeTab }) {
   const navigate = useNavigate2();
-  const onTabChange = (0, import_element74.useCallback)(
+  const onTabChange = (0, import_element75.useCallback)(
     (nextValue) => {
       if (nextValue === "forms") {
         navigate({ href: "/forms" });
@@ -27738,18 +27767,18 @@ function DataViewsHeaderRow({ activeTab }) {
   );
   return /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(import_jsx_runtime155.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(
-      Stack,
+      Stack3,
       {
         align: "center",
         className: "jp-forms-dataviews__view-actions",
         gap: "sm",
         justify: "space-between",
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Stack, { align: "center", gap: "sm", children: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(List, { density: "compact", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Stack3, { align: "center", gap: "sm", children: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(List, { density: "compact", children: [
             /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Tab, { value: "responses", children: (0, import_i18n66.__)("Responses", "jetpack-forms") }),
             /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Tab, { value: "forms", children: (0, import_i18n66.__)("Forms", "jetpack-forms") })
           ] }) }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(Stack, { align: "center", gap: "sm", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(Stack3, { align: "center", gap: "sm", children: [
             /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(dataviews_default.Search, {}),
             /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(dataviews_default.ViewConfig, {})
           ] })
@@ -27781,7 +27810,7 @@ var spam_default = spam;
 
 // src/dashboard/inbox/stage/views.js
 var import_compose13 = __toESM(require_compose(), 1);
-var import_element75 = __toESM(require_element(), 1);
+var import_element76 = __toESM(require_element(), 1);
 var LAYOUT_TABLE2 = "table";
 var defaultView = {
   type: LAYOUT_TABLE2,
@@ -28679,7 +28708,7 @@ function StageInner() {
   const navigate = useNavigate3();
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const statusFilter = statusView === "inbox" ? "draft,publish" : statusView;
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element76.useState)(false);
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element77.useState)(false);
   const integrations = (0, import_data16.useSelect)(
     (select) => select(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
@@ -28687,11 +28716,11 @@ function StageInner() {
   const { refreshIntegrations: refreshIntegrations2 } = (0, import_data16.useDispatch)(INTEGRATIONS_STORE);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
-  const [view, setView] = (0, import_element76.useState)(() => ({
+  const [view, setView] = (0, import_element77.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  const selection = (0, import_element76.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
+  const selection = (0, import_element77.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
   const {
     setCurrentQuery: setCurrentQuery2,
     setSelectedResponses: setSelectedResponses2,
@@ -28701,13 +28730,13 @@ function StageInner() {
     totalItems,
     totalPages
   } = useInboxData({ status: statusView });
-  (0, import_element76.useEffect)(() => {
+  (0, import_element77.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((prev) => ({ ...prev, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const onChangeView = (0, import_element76.useCallback)(
+  const onChangeView = (0, import_element77.useCallback)(
     (newView) => {
       const folderValue = newView.filters?.find((filter) => filter.field === "folder")?.value || "inbox";
       if (folderValue !== statusView) {
@@ -28734,7 +28763,7 @@ function StageInner() {
     },
     [navigate, searchParams, statusView, view.search]
   );
-  const onChangeSelection = (0, import_element76.useCallback)(
+  const onChangeSelection = (0, import_element77.useCallback)(
     (items) => {
       navigate({
         search: {
@@ -28745,7 +28774,7 @@ function StageInner() {
     },
     [searchParams, navigate]
   );
-  (0, import_element76.useEffect)(() => {
+  (0, import_element77.useEffect)(() => {
     setView((previousView) => {
       const previousFilters = previousView.filters || [];
       const existing = previousFilters.find((filter) => filter.field === "folder");
@@ -28761,7 +28790,7 @@ function StageInner() {
       };
     });
   }, [setView, statusView]);
-  const queryParams = (0, import_element76.useMemo)(() => {
+  const queryParams = (0, import_element77.useMemo)(() => {
     const queryArgs = {
       status: statusFilter,
       per_page: view.perPage,
@@ -28790,16 +28819,16 @@ function StageInner() {
     });
     return queryArgs;
   }, [statusFilter, view]);
-  (0, import_element76.useEffect)(() => {
+  (0, import_element77.useEffect)(() => {
     setCurrentQuery2(queryParams);
   }, [queryParams, setCurrentQuery2]);
-  (0, import_element76.useEffect)(() => {
+  (0, import_element77.useEffect)(() => {
     const validSelectedIds = (selection || []).filter((id) => {
       return records?.some((record) => getItemId(record) === id);
     });
     setSelectedResponses2(validSelectedIds);
   }, [records, selection, setSelectedResponses2]);
-  const fields = (0, import_element76.useMemo)(
+  const fields = (0, import_element77.useMemo)(
     () => [
       {
         id: "folder",
@@ -28826,7 +28855,7 @@ function StageInner() {
           );
           const showEmail = item.author_email && displayName !== (0, import_html_entities3.decodeEntities)(item.author_email);
           const defaultImage = item.author_name || item.author_email ? "initials" : "mp";
-          return /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(Stack, { align: "center", gap: "sm", children: [
+          return /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(Stack3, { align: "center", gap: "sm", children: [
             item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
               "span",
               {
@@ -28851,7 +28880,7 @@ function StageInner() {
               }
             ),
             styleUnreadValue(
-              /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(Stack3, { direction: "column", gap: "2xs", children: [
                 /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components67.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
                 showEmail && /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components67.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
               ] }),
@@ -28936,7 +28965,7 @@ function StageInner() {
     ],
     [filterOptions]
   );
-  const actions = (0, import_element76.useMemo)(
+  const actions = (0, import_element77.useMemo)(
     () => getActions({
       navigate,
       searchParams,
@@ -28944,7 +28973,7 @@ function StageInner() {
     }),
     [navigate, searchParams, statusView]
   );
-  const paginationInfo = (0, import_element76.useMemo)(
+  const paginationInfo = (0, import_element77.useMemo)(
     () => ({
       totalItems: totalItems || 0,
       totalPages: totalPages || 1
@@ -28952,16 +28981,16 @@ function StageInner() {
     [totalItems, totalPages]
   );
   const { openNewForm } = useCreateForm();
-  const handleCreateForm = (0, import_element76.useCallback)(() => {
+  const handleCreateForm = (0, import_element77.useCallback)(() => {
     openNewForm({ showPatterns: false });
   }, [openNewForm]);
-  const handleIntegrations = (0, import_element76.useCallback)(() => {
+  const handleIntegrations = (0, import_element77.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element76.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element77.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
-  const headerActions = (0, import_element76.useMemo)(() => {
+  const headerActions = (0, import_element77.useMemo)(() => {
     const actionsArray = [];
     if (statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations) {
       actionsArray.push(
@@ -29019,7 +29048,7 @@ function StageInner() {
     statusView
   ]);
   const readStatusFilter = view.filters?.find((filter) => filter.field === "read_status")?.value;
-  const onClickItem = (0, import_element76.useCallback)(
+  const onClickItem = (0, import_element77.useCallback)(
     (item) => {
       onChangeSelection([String(item.id)]);
     },
@@ -29089,7 +29118,7 @@ var import_api_fetch11 = __toESM(require_api_fetch());
 var import_components73 = __toESM(require_components());
 var import_core_data6 = __toESM(require_core_data());
 var import_data18 = __toESM(require_data());
-var import_element79 = __toESM(require_element());
+var import_element80 = __toESM(require_element());
 var import_html_entities6 = __toESM(require_html_entities());
 var import_i18n74 = __toESM(require_i18n());
 import { useParams as useParams2, useSearch as useSearch3, useNavigate as useNavigate4 } from "@wordpress/route";
@@ -29097,12 +29126,12 @@ import { useParams as useParams2, useSearch as useSearch3, useNavigate as useNav
 // src/dashboard/components/copy-clipboard-button/index.tsx
 var import_components68 = __toESM(require_components(), 1);
 var import_compose14 = __toESM(require_compose(), 1);
-var import_element77 = __toESM(require_element(), 1);
+var import_element78 = __toESM(require_element(), 1);
 var import_i18n69 = __toESM(require_i18n(), 1);
 var import_jsx_runtime160 = __toESM(require_jsx_runtime(), 1);
 function CopyClipboardButton({ text }) {
-  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element77.useState)(false);
-  const timeoutIdRef = (0, import_element77.useRef)(null);
+  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element78.useState)(false);
+  const timeoutIdRef = (0, import_element78.useRef)(null);
   const ref = (0, import_compose14.useCopyToClipboard)(text, () => {
     setShowCopyConfirmation(true);
     if (timeoutIdRef.current) {
@@ -29112,7 +29141,7 @@ function CopyClipboardButton({ text }) {
       setShowCopyConfirmation(false);
     }, 4e3);
   });
-  (0, import_element77.useEffect)(() => {
+  (0, import_element78.useEffect)(() => {
     return () => {
       if (timeoutIdRef.current) {
         clearTimeout(timeoutIdRef.current);
@@ -29257,7 +29286,7 @@ var import_api_fetch10 = __toESM(require_api_fetch());
 var import_components71 = __toESM(require_components());
 var import_core_data5 = __toESM(require_core_data());
 var import_data17 = __toESM(require_data());
-var import_element78 = __toESM(require_element());
+var import_element79 = __toESM(require_element());
 var import_i18n72 = __toESM(require_i18n());
 var import_jsx_runtime163 = __toESM(require_jsx_runtime());
 function ResponseActions({
@@ -29270,8 +29299,8 @@ function ResponseActions({
   const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data17.useDispatch)(
     store3
   );
-  const [isLoading] = (0, import_element78.useState)(false);
-  const handleMarkAsSpam = (0, import_element78.useCallback)(async () => {
+  const [isLoading] = (0, import_element79.useState)(false);
+  const handleMarkAsSpam = (0, import_element79.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "spam" });
     updateCountsOptimistically2(originalStatus, "spam", 1);
@@ -29294,7 +29323,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMarkAsNotSpam = (0, import_element78.useCallback)(async () => {
+  const handleMarkAsNotSpam = (0, import_element79.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -29317,7 +29346,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMoveToTrash = (0, import_element78.useCallback)(async () => {
+  const handleMoveToTrash = (0, import_element79.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "trash" });
     updateCountsOptimistically2(originalStatus, "trash", 1);
@@ -29337,7 +29366,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleRestore = (0, import_element78.useCallback)(async () => {
+  const handleRestore = (0, import_element79.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -29360,7 +29389,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleDelete = (0, import_element78.useCallback)(async () => {
+  const handleDelete = (0, import_element79.useCallback)(async () => {
     const originalStatus = response.status;
     updateCountsOptimistically2(originalStatus, "", 1);
     onActionComplete(response);
@@ -29377,7 +29406,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleToggleRead = (0, import_element78.useCallback)(async () => {
+  const handleToggleRead = (0, import_element79.useCallback)(async () => {
     const newIsUnread = !response.is_unread;
     editEntityRecord("postType", "feedback", response.id, { is_unread: newIsUnread });
     onActionComplete({ ...response, is_unread: newIsUnread });
@@ -29570,9 +29599,9 @@ function SingleResponseView({
   onNavigate,
   onClose
 }) {
-  const [previewFile, setPreviewFile] = (0, import_element79.useState)(null);
-  const [isImageLoading, setIsImageLoading] = (0, import_element79.useState)(true);
-  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element79.useState)(null);
+  const [previewFile, setPreviewFile] = (0, import_element80.useState)(null);
+  const [isImageLoading, setIsImageLoading] = (0, import_element80.useState)(true);
+  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element80.useState)(null);
   const { editEntityRecord } = (0, import_data18.useDispatch)(import_core_data6.store);
   const { response, isLoading } = (0, import_data18.useSelect)(
     (select) => {
@@ -29596,17 +29625,17 @@ function SingleResponseView({
   const currentIndex = allResponseIds.indexOf(responseId);
   const hasNext = currentIndex < allResponseIds.length - 1;
   const hasPrevious = currentIndex > 0;
-  const handleNext = (0, import_element79.useCallback)(() => {
+  const handleNext = (0, import_element80.useCallback)(() => {
     if (hasNext) {
       onNavigate(allResponseIds[currentIndex + 1]);
     }
   }, [hasNext, allResponseIds, currentIndex, onNavigate]);
-  const handlePrevious = (0, import_element79.useCallback)(() => {
+  const handlePrevious = (0, import_element80.useCallback)(() => {
     if (hasPrevious) {
       onNavigate(allResponseIds[currentIndex - 1]);
     }
   }, [hasPrevious, allResponseIds, currentIndex, onNavigate]);
-  (0, import_element79.useEffect)(() => {
+  (0, import_element80.useEffect)(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowUp" && hasPrevious) {
         event.preventDefault();
@@ -29621,7 +29650,7 @@ function SingleResponseView({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [hasNext, hasPrevious, handleNext, handlePrevious, onClose]);
-  (0, import_element79.useEffect)(() => {
+  (0, import_element80.useEffect)(() => {
     if (!response || !response.id || !response.is_unread) {
       return;
     }
@@ -29642,21 +29671,21 @@ function SingleResponseView({
       });
     });
   }, [response, editEntityRecord, hasMarkedAsRead]);
-  const handleFilePreview = (0, import_element79.useCallback)(
+  const handleFilePreview = (0, import_element80.useCallback)(
     (file) => () => {
       setIsImageLoading(true);
       setPreviewFile(file);
     },
     []
   );
-  const closePreviewModal = (0, import_element79.useCallback)(() => {
+  const closePreviewModal = (0, import_element80.useCallback)(() => {
     setPreviewFile(null);
     setIsImageLoading(true);
   }, []);
-  const handleImageLoaded = (0, import_element79.useCallback)(() => {
+  const handleImageLoaded = (0, import_element80.useCallback)(() => {
     setIsImageLoading(false);
   }, []);
-  const handleActionComplete = (0, import_element79.useCallback)(
+  const handleActionComplete = (0, import_element80.useCallback)(
     (updatedItem) => {
       if (!updatedItem) {
         if (hasNext) {
@@ -29707,7 +29736,7 @@ function SingleResponseView({
     }
     return String(value);
   };
-  const displayFields = (0, import_element79.useMemo)(() => getDisplayFields(response?.fields), [response?.fields]);
+  const displayFields = (0, import_element80.useMemo)(() => getDisplayFields(response?.fields), [response?.fields]);
   if (isLoading) {
     return /* @__PURE__ */ (0, import_jsx_runtime165.jsx)("div", { style: { display: "flex", justifyContent: "center", padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components73.Spinner, {}) });
   }
@@ -29796,7 +29825,7 @@ function Response() {
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const { records } = useInboxData({ status: statusView });
   const allRecordIds = records?.map((record) => record.id) ?? [];
-  const handleClose = (0, import_element79.useCallback)(() => {
+  const handleClose = (0, import_element80.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -29804,7 +29833,7 @@ function Response() {
       }
     });
   }, [navigate, searchParams]);
-  const handleNavigate = (0, import_element79.useCallback)(
+  const handleNavigate = (0, import_element80.useCallback)(
     (id) => {
       navigate({
         search: {

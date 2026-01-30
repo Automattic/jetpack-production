@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Adding Jetpack Protect details page for users without the dedicated Jetpack Protect plugin.
 
+### Changed
+- Update package dependencies.
+
 ## [5.30.3] - 2026-01-26
 ### Changed
 - Update package dependencies. [#46430]
