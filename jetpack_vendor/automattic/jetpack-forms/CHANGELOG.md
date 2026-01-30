@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Improve country flag and text display consistency across the dashboard.
 - Response view: display phone numbers with country flags and international formatting.
 - Share response header via component for new and old dashboard.
+- Simplify labels for form responses.
 - Update package dependencies.
 - Update unread badge styles for the new dashboard.
 - Use Page component from package for WP Build dashboard.
