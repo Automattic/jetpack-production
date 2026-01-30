@@ -28,6 +28,476 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 
+// package-external:@wordpress/date
+var require_date = __commonJS({
+  "package-external:@wordpress/date"(exports, module) {
+    module.exports = window.wp.date;
+  }
+});
+
+// ../../../node_modules/.pnpm/ms@2.1.3/node_modules/ms/index.js
+var require_ms = __commonJS({
+  "../../../node_modules/.pnpm/ms@2.1.3/node_modules/ms/index.js"(exports, module) {
+    var s2 = 1e3;
+    var m2 = s2 * 60;
+    var h2 = m2 * 60;
+    var d2 = h2 * 24;
+    var w2 = d2 * 7;
+    var y2 = d2 * 365.25;
+    module.exports = function(val, options) {
+      options = options || {};
+      var type = typeof val;
+      if (type === "string" && val.length > 0) {
+        return parse(val);
+      } else if (type === "number" && isFinite(val)) {
+        return options.long ? fmtLong(val) : fmtShort(val);
+      }
+      throw new Error(
+        "val is not a non-empty string or a valid number. val=" + JSON.stringify(val)
+      );
+    };
+    function parse(str) {
+      str = String(str);
+      if (str.length > 100) {
+        return;
+      }
+      var match2 = /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
+        str
+      );
+      if (!match2) {
+        return;
+      }
+      var n2 = parseFloat(match2[1]);
+      var type = (match2[2] || "ms").toLowerCase();
+      switch (type) {
+        case "years":
+        case "year":
+        case "yrs":
+        case "yr":
+        case "y":
+          return n2 * y2;
+        case "weeks":
+        case "week":
+        case "w":
+          return n2 * w2;
+        case "days":
+        case "day":
+        case "d":
+          return n2 * d2;
+        case "hours":
+        case "hour":
+        case "hrs":
+        case "hr":
+        case "h":
+          return n2 * h2;
+        case "minutes":
+        case "minute":
+        case "mins":
+        case "min":
+        case "m":
+          return n2 * m2;
+        case "seconds":
+        case "second":
+        case "secs":
+        case "sec":
+        case "s":
+          return n2 * s2;
+        case "milliseconds":
+        case "millisecond":
+        case "msecs":
+        case "msec":
+        case "ms":
+          return n2;
+        default:
+          return void 0;
+      }
+    }
+    function fmtShort(ms) {
+      var msAbs = Math.abs(ms);
+      if (msAbs >= d2) {
+        return Math.round(ms / d2) + "d";
+      }
+      if (msAbs >= h2) {
+        return Math.round(ms / h2) + "h";
+      }
+      if (msAbs >= m2) {
+        return Math.round(ms / m2) + "m";
+      }
+      if (msAbs >= s2) {
+        return Math.round(ms / s2) + "s";
+      }
+      return ms + "ms";
+    }
+    function fmtLong(ms) {
+      var msAbs = Math.abs(ms);
+      if (msAbs >= d2) {
+        return plural(ms, msAbs, d2, "day");
+      }
+      if (msAbs >= h2) {
+        return plural(ms, msAbs, h2, "hour");
+      }
+      if (msAbs >= m2) {
+        return plural(ms, msAbs, m2, "minute");
+      }
+      if (msAbs >= s2) {
+        return plural(ms, msAbs, s2, "second");
+      }
+      return ms + " ms";
+    }
+    function plural(ms, msAbs, n2, name) {
+      var isPlural = msAbs >= n2 * 1.5;
+      return Math.round(ms / n2) + " " + name + (isPlural ? "s" : "");
+    }
+  }
+});
+
+// ../../../node_modules/.pnpm/debug@4.4.3/node_modules/debug/src/common.js
+var require_common = __commonJS({
+  "../../../node_modules/.pnpm/debug@4.4.3/node_modules/debug/src/common.js"(exports, module) {
+    function setup2(env) {
+      createDebug.debug = createDebug;
+      createDebug.default = createDebug;
+      createDebug.coerce = coerce;
+      createDebug.disable = disable;
+      createDebug.enable = enable;
+      createDebug.enabled = enabled;
+      createDebug.humanize = require_ms();
+      createDebug.destroy = destroy;
+      Object.keys(env).forEach((key) => {
+        createDebug[key] = env[key];
+      });
+      createDebug.names = [];
+      createDebug.skips = [];
+      createDebug.formatters = {};
+      function selectColor(namespace) {
+        let hash = 0;
+        for (let i2 = 0; i2 < namespace.length; i2++) {
+          hash = (hash << 5) - hash + namespace.charCodeAt(i2);
+          hash |= 0;
+        }
+        return createDebug.colors[Math.abs(hash) % createDebug.colors.length];
+      }
+      createDebug.selectColor = selectColor;
+      function createDebug(namespace) {
+        let prevTime;
+        let enableOverride = null;
+        let namespacesCache;
+        let enabledCache;
+        function debug4(...args) {
+          if (!debug4.enabled) {
+            return;
+          }
+          const self2 = debug4;
+          const curr = Number(/* @__PURE__ */ new Date());
+          const ms = curr - (prevTime || curr);
+          self2.diff = ms;
+          self2.prev = prevTime;
+          self2.curr = curr;
+          prevTime = curr;
+          args[0] = createDebug.coerce(args[0]);
+          if (typeof args[0] !== "string") {
+            args.unshift("%O");
+          }
+          let index = 0;
+          args[0] = args[0].replace(/%([a-zA-Z%])/g, (match2, format6) => {
+            if (match2 === "%%") {
+              return "%";
+            }
+            index++;
+            const formatter = createDebug.formatters[format6];
+            if (typeof formatter === "function") {
+              const val = args[index];
+              match2 = formatter.call(self2, val);
+              args.splice(index, 1);
+              index--;
+            }
+            return match2;
+          });
+          createDebug.formatArgs.call(self2, args);
+          const logFn = self2.log || createDebug.log;
+          logFn.apply(self2, args);
+        }
+        debug4.namespace = namespace;
+        debug4.useColors = createDebug.useColors();
+        debug4.color = createDebug.selectColor(namespace);
+        debug4.extend = extend;
+        debug4.destroy = createDebug.destroy;
+        Object.defineProperty(debug4, "enabled", {
+          enumerable: true,
+          configurable: false,
+          get: () => {
+            if (enableOverride !== null) {
+              return enableOverride;
+            }
+            if (namespacesCache !== createDebug.namespaces) {
+              namespacesCache = createDebug.namespaces;
+              enabledCache = createDebug.enabled(namespace);
+            }
+            return enabledCache;
+          },
+          set: (v2) => {
+            enableOverride = v2;
+          }
+        });
+        if (typeof createDebug.init === "function") {
+          createDebug.init(debug4);
+        }
+        return debug4;
+      }
+      function extend(namespace, delimiter) {
+        const newDebug = createDebug(this.namespace + (typeof delimiter === "undefined" ? ":" : delimiter) + namespace);
+        newDebug.log = this.log;
+        return newDebug;
+      }
+      function enable(namespaces) {
+        createDebug.save(namespaces);
+        createDebug.namespaces = namespaces;
+        createDebug.names = [];
+        createDebug.skips = [];
+        const split = (typeof namespaces === "string" ? namespaces : "").trim().replace(/\s+/g, ",").split(",").filter(Boolean);
+        for (const ns of split) {
+          if (ns[0] === "-") {
+            createDebug.skips.push(ns.slice(1));
+          } else {
+            createDebug.names.push(ns);
+          }
+        }
+      }
+      function matchesTemplate(search, template) {
+        let searchIndex = 0;
+        let templateIndex = 0;
+        let starIndex = -1;
+        let matchIndex = 0;
+        while (searchIndex < search.length) {
+          if (templateIndex < template.length && (template[templateIndex] === search[searchIndex] || template[templateIndex] === "*")) {
+            if (template[templateIndex] === "*") {
+              starIndex = templateIndex;
+              matchIndex = searchIndex;
+              templateIndex++;
+            } else {
+              searchIndex++;
+              templateIndex++;
+            }
+          } else if (starIndex !== -1) {
+            templateIndex = starIndex + 1;
+            matchIndex++;
+            searchIndex = matchIndex;
+          } else {
+            return false;
+          }
+        }
+        while (templateIndex < template.length && template[templateIndex] === "*") {
+          templateIndex++;
+        }
+        return templateIndex === template.length;
+      }
+      function disable() {
+        const namespaces = [
+          ...createDebug.names,
+          ...createDebug.skips.map((namespace) => "-" + namespace)
+        ].join(",");
+        createDebug.enable("");
+        return namespaces;
+      }
+      function enabled(name) {
+        for (const skip of createDebug.skips) {
+          if (matchesTemplate(name, skip)) {
+            return false;
+          }
+        }
+        for (const ns of createDebug.names) {
+          if (matchesTemplate(name, ns)) {
+            return true;
+          }
+        }
+        return false;
+      }
+      function coerce(val) {
+        if (val instanceof Error) {
+          return val.stack || val.message;
+        }
+        return val;
+      }
+      function destroy() {
+        console.warn("Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.");
+      }
+      createDebug.enable(createDebug.load());
+      return createDebug;
+    }
+    module.exports = setup2;
+  }
+});
+
+// ../../../node_modules/.pnpm/debug@4.4.3/node_modules/debug/src/browser.js
+var require_browser = __commonJS({
+  "../../../node_modules/.pnpm/debug@4.4.3/node_modules/debug/src/browser.js"(exports, module) {
+    exports.formatArgs = formatArgs;
+    exports.save = save;
+    exports.load = load;
+    exports.useColors = useColors;
+    exports.storage = localstorage();
+    exports.destroy = /* @__PURE__ */ (() => {
+      let warned = false;
+      return () => {
+        if (!warned) {
+          warned = true;
+          console.warn("Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.");
+        }
+      };
+    })();
+    exports.colors = [
+      "#0000CC",
+      "#0000FF",
+      "#0033CC",
+      "#0033FF",
+      "#0066CC",
+      "#0066FF",
+      "#0099CC",
+      "#0099FF",
+      "#00CC00",
+      "#00CC33",
+      "#00CC66",
+      "#00CC99",
+      "#00CCCC",
+      "#00CCFF",
+      "#3300CC",
+      "#3300FF",
+      "#3333CC",
+      "#3333FF",
+      "#3366CC",
+      "#3366FF",
+      "#3399CC",
+      "#3399FF",
+      "#33CC00",
+      "#33CC33",
+      "#33CC66",
+      "#33CC99",
+      "#33CCCC",
+      "#33CCFF",
+      "#6600CC",
+      "#6600FF",
+      "#6633CC",
+      "#6633FF",
+      "#66CC00",
+      "#66CC33",
+      "#9900CC",
+      "#9900FF",
+      "#9933CC",
+      "#9933FF",
+      "#99CC00",
+      "#99CC33",
+      "#CC0000",
+      "#CC0033",
+      "#CC0066",
+      "#CC0099",
+      "#CC00CC",
+      "#CC00FF",
+      "#CC3300",
+      "#CC3333",
+      "#CC3366",
+      "#CC3399",
+      "#CC33CC",
+      "#CC33FF",
+      "#CC6600",
+      "#CC6633",
+      "#CC9900",
+      "#CC9933",
+      "#CCCC00",
+      "#CCCC33",
+      "#FF0000",
+      "#FF0033",
+      "#FF0066",
+      "#FF0099",
+      "#FF00CC",
+      "#FF00FF",
+      "#FF3300",
+      "#FF3333",
+      "#FF3366",
+      "#FF3399",
+      "#FF33CC",
+      "#FF33FF",
+      "#FF6600",
+      "#FF6633",
+      "#FF9900",
+      "#FF9933",
+      "#FFCC00",
+      "#FFCC33"
+    ];
+    function useColors() {
+      if (typeof window !== "undefined" && window.process && (window.process.type === "renderer" || window.process.__nwjs)) {
+        return true;
+      }
+      if (typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/)) {
+        return false;
+      }
+      let m2;
+      return typeof document !== "undefined" && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || // Is firebug? http://stackoverflow.com/a/398120/376773
+      typeof window !== "undefined" && window.console && (window.console.firebug || window.console.exception && window.console.table) || // Is firefox >= v31?
+      // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
+      typeof navigator !== "undefined" && navigator.userAgent && (m2 = navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/)) && parseInt(m2[1], 10) >= 31 || // Double check webkit in userAgent just in case we are in a worker
+      typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
+    }
+    function formatArgs(args) {
+      args[0] = (this.useColors ? "%c" : "") + this.namespace + (this.useColors ? " %c" : " ") + args[0] + (this.useColors ? "%c " : " ") + "+" + module.exports.humanize(this.diff);
+      if (!this.useColors) {
+        return;
+      }
+      const c2 = "color: " + this.color;
+      args.splice(1, 0, c2, "color: inherit");
+      let index = 0;
+      let lastC = 0;
+      args[0].replace(/%[a-zA-Z%]/g, (match2) => {
+        if (match2 === "%%") {
+          return;
+        }
+        index++;
+        if (match2 === "%c") {
+          lastC = index;
+        }
+      });
+      args.splice(lastC, 0, c2);
+    }
+    exports.log = console.debug || console.log || (() => {
+    });
+    function save(namespaces) {
+      try {
+        if (namespaces) {
+          exports.storage.setItem("debug", namespaces);
+        } else {
+          exports.storage.removeItem("debug");
+        }
+      } catch (error2) {
+      }
+    }
+    function load() {
+      let r3;
+      try {
+        r3 = exports.storage.getItem("debug") || exports.storage.getItem("DEBUG");
+      } catch (error2) {
+      }
+      if (!r3 && typeof process !== "undefined" && "env" in process) {
+        r3 = process.env.DEBUG;
+      }
+      return r3;
+    }
+    function localstorage() {
+      try {
+        return localStorage;
+      } catch (error2) {
+      }
+    }
+    module.exports = require_common()(exports);
+    var { formatters: formatters2 } = module.exports;
+    formatters2.j = function(v2) {
+      try {
+        return JSON.stringify(v2);
+      } catch (error2) {
+        return "[UnexpectedJSONParseError]: " + error2.message;
+      }
+    };
+  }
+});
+
 // package-external:@wordpress/element
 var require_element = __commonJS({
   "package-external:@wordpress/element"(exports, module) {
@@ -726,480 +1196,10 @@ var require_warning = __commonJS({
   }
 });
 
-// package-external:@wordpress/date
-var require_date = __commonJS({
-  "package-external:@wordpress/date"(exports, module) {
-    module.exports = window.wp.date;
-  }
-});
-
 // package-external:@wordpress/html-entities
 var require_html_entities = __commonJS({
   "package-external:@wordpress/html-entities"(exports, module) {
     module.exports = window.wp.htmlEntities;
-  }
-});
-
-// ../../../node_modules/.pnpm/ms@2.1.3/node_modules/ms/index.js
-var require_ms = __commonJS({
-  "../../../node_modules/.pnpm/ms@2.1.3/node_modules/ms/index.js"(exports, module) {
-    var s2 = 1e3;
-    var m2 = s2 * 60;
-    var h2 = m2 * 60;
-    var d2 = h2 * 24;
-    var w2 = d2 * 7;
-    var y2 = d2 * 365.25;
-    module.exports = function(val, options) {
-      options = options || {};
-      var type = typeof val;
-      if (type === "string" && val.length > 0) {
-        return parse(val);
-      } else if (type === "number" && isFinite(val)) {
-        return options.long ? fmtLong(val) : fmtShort(val);
-      }
-      throw new Error(
-        "val is not a non-empty string or a valid number. val=" + JSON.stringify(val)
-      );
-    };
-    function parse(str) {
-      str = String(str);
-      if (str.length > 100) {
-        return;
-      }
-      var match2 = /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
-        str
-      );
-      if (!match2) {
-        return;
-      }
-      var n2 = parseFloat(match2[1]);
-      var type = (match2[2] || "ms").toLowerCase();
-      switch (type) {
-        case "years":
-        case "year":
-        case "yrs":
-        case "yr":
-        case "y":
-          return n2 * y2;
-        case "weeks":
-        case "week":
-        case "w":
-          return n2 * w2;
-        case "days":
-        case "day":
-        case "d":
-          return n2 * d2;
-        case "hours":
-        case "hour":
-        case "hrs":
-        case "hr":
-        case "h":
-          return n2 * h2;
-        case "minutes":
-        case "minute":
-        case "mins":
-        case "min":
-        case "m":
-          return n2 * m2;
-        case "seconds":
-        case "second":
-        case "secs":
-        case "sec":
-        case "s":
-          return n2 * s2;
-        case "milliseconds":
-        case "millisecond":
-        case "msecs":
-        case "msec":
-        case "ms":
-          return n2;
-        default:
-          return void 0;
-      }
-    }
-    function fmtShort(ms) {
-      var msAbs = Math.abs(ms);
-      if (msAbs >= d2) {
-        return Math.round(ms / d2) + "d";
-      }
-      if (msAbs >= h2) {
-        return Math.round(ms / h2) + "h";
-      }
-      if (msAbs >= m2) {
-        return Math.round(ms / m2) + "m";
-      }
-      if (msAbs >= s2) {
-        return Math.round(ms / s2) + "s";
-      }
-      return ms + "ms";
-    }
-    function fmtLong(ms) {
-      var msAbs = Math.abs(ms);
-      if (msAbs >= d2) {
-        return plural(ms, msAbs, d2, "day");
-      }
-      if (msAbs >= h2) {
-        return plural(ms, msAbs, h2, "hour");
-      }
-      if (msAbs >= m2) {
-        return plural(ms, msAbs, m2, "minute");
-      }
-      if (msAbs >= s2) {
-        return plural(ms, msAbs, s2, "second");
-      }
-      return ms + " ms";
-    }
-    function plural(ms, msAbs, n2, name) {
-      var isPlural = msAbs >= n2 * 1.5;
-      return Math.round(ms / n2) + " " + name + (isPlural ? "s" : "");
-    }
-  }
-});
-
-// ../../../node_modules/.pnpm/debug@4.4.3/node_modules/debug/src/common.js
-var require_common = __commonJS({
-  "../../../node_modules/.pnpm/debug@4.4.3/node_modules/debug/src/common.js"(exports, module) {
-    function setup2(env) {
-      createDebug.debug = createDebug;
-      createDebug.default = createDebug;
-      createDebug.coerce = coerce;
-      createDebug.disable = disable;
-      createDebug.enable = enable;
-      createDebug.enabled = enabled;
-      createDebug.humanize = require_ms();
-      createDebug.destroy = destroy;
-      Object.keys(env).forEach((key) => {
-        createDebug[key] = env[key];
-      });
-      createDebug.names = [];
-      createDebug.skips = [];
-      createDebug.formatters = {};
-      function selectColor(namespace) {
-        let hash = 0;
-        for (let i2 = 0; i2 < namespace.length; i2++) {
-          hash = (hash << 5) - hash + namespace.charCodeAt(i2);
-          hash |= 0;
-        }
-        return createDebug.colors[Math.abs(hash) % createDebug.colors.length];
-      }
-      createDebug.selectColor = selectColor;
-      function createDebug(namespace) {
-        let prevTime;
-        let enableOverride = null;
-        let namespacesCache;
-        let enabledCache;
-        function debug4(...args) {
-          if (!debug4.enabled) {
-            return;
-          }
-          const self2 = debug4;
-          const curr = Number(/* @__PURE__ */ new Date());
-          const ms = curr - (prevTime || curr);
-          self2.diff = ms;
-          self2.prev = prevTime;
-          self2.curr = curr;
-          prevTime = curr;
-          args[0] = createDebug.coerce(args[0]);
-          if (typeof args[0] !== "string") {
-            args.unshift("%O");
-          }
-          let index = 0;
-          args[0] = args[0].replace(/%([a-zA-Z%])/g, (match2, format6) => {
-            if (match2 === "%%") {
-              return "%";
-            }
-            index++;
-            const formatter = createDebug.formatters[format6];
-            if (typeof formatter === "function") {
-              const val = args[index];
-              match2 = formatter.call(self2, val);
-              args.splice(index, 1);
-              index--;
-            }
-            return match2;
-          });
-          createDebug.formatArgs.call(self2, args);
-          const logFn = self2.log || createDebug.log;
-          logFn.apply(self2, args);
-        }
-        debug4.namespace = namespace;
-        debug4.useColors = createDebug.useColors();
-        debug4.color = createDebug.selectColor(namespace);
-        debug4.extend = extend;
-        debug4.destroy = createDebug.destroy;
-        Object.defineProperty(debug4, "enabled", {
-          enumerable: true,
-          configurable: false,
-          get: () => {
-            if (enableOverride !== null) {
-              return enableOverride;
-            }
-            if (namespacesCache !== createDebug.namespaces) {
-              namespacesCache = createDebug.namespaces;
-              enabledCache = createDebug.enabled(namespace);
-            }
-            return enabledCache;
-          },
-          set: (v2) => {
-            enableOverride = v2;
-          }
-        });
-        if (typeof createDebug.init === "function") {
-          createDebug.init(debug4);
-        }
-        return debug4;
-      }
-      function extend(namespace, delimiter) {
-        const newDebug = createDebug(this.namespace + (typeof delimiter === "undefined" ? ":" : delimiter) + namespace);
-        newDebug.log = this.log;
-        return newDebug;
-      }
-      function enable(namespaces) {
-        createDebug.save(namespaces);
-        createDebug.namespaces = namespaces;
-        createDebug.names = [];
-        createDebug.skips = [];
-        const split = (typeof namespaces === "string" ? namespaces : "").trim().replace(/\s+/g, ",").split(",").filter(Boolean);
-        for (const ns of split) {
-          if (ns[0] === "-") {
-            createDebug.skips.push(ns.slice(1));
-          } else {
-            createDebug.names.push(ns);
-          }
-        }
-      }
-      function matchesTemplate(search, template) {
-        let searchIndex = 0;
-        let templateIndex = 0;
-        let starIndex = -1;
-        let matchIndex = 0;
-        while (searchIndex < search.length) {
-          if (templateIndex < template.length && (template[templateIndex] === search[searchIndex] || template[templateIndex] === "*")) {
-            if (template[templateIndex] === "*") {
-              starIndex = templateIndex;
-              matchIndex = searchIndex;
-              templateIndex++;
-            } else {
-              searchIndex++;
-              templateIndex++;
-            }
-          } else if (starIndex !== -1) {
-            templateIndex = starIndex + 1;
-            matchIndex++;
-            searchIndex = matchIndex;
-          } else {
-            return false;
-          }
-        }
-        while (templateIndex < template.length && template[templateIndex] === "*") {
-          templateIndex++;
-        }
-        return templateIndex === template.length;
-      }
-      function disable() {
-        const namespaces = [
-          ...createDebug.names,
-          ...createDebug.skips.map((namespace) => "-" + namespace)
-        ].join(",");
-        createDebug.enable("");
-        return namespaces;
-      }
-      function enabled(name) {
-        for (const skip of createDebug.skips) {
-          if (matchesTemplate(name, skip)) {
-            return false;
-          }
-        }
-        for (const ns of createDebug.names) {
-          if (matchesTemplate(name, ns)) {
-            return true;
-          }
-        }
-        return false;
-      }
-      function coerce(val) {
-        if (val instanceof Error) {
-          return val.stack || val.message;
-        }
-        return val;
-      }
-      function destroy() {
-        console.warn("Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.");
-      }
-      createDebug.enable(createDebug.load());
-      return createDebug;
-    }
-    module.exports = setup2;
-  }
-});
-
-// ../../../node_modules/.pnpm/debug@4.4.3/node_modules/debug/src/browser.js
-var require_browser = __commonJS({
-  "../../../node_modules/.pnpm/debug@4.4.3/node_modules/debug/src/browser.js"(exports, module) {
-    exports.formatArgs = formatArgs;
-    exports.save = save;
-    exports.load = load;
-    exports.useColors = useColors;
-    exports.storage = localstorage();
-    exports.destroy = /* @__PURE__ */ (() => {
-      let warned = false;
-      return () => {
-        if (!warned) {
-          warned = true;
-          console.warn("Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.");
-        }
-      };
-    })();
-    exports.colors = [
-      "#0000CC",
-      "#0000FF",
-      "#0033CC",
-      "#0033FF",
-      "#0066CC",
-      "#0066FF",
-      "#0099CC",
-      "#0099FF",
-      "#00CC00",
-      "#00CC33",
-      "#00CC66",
-      "#00CC99",
-      "#00CCCC",
-      "#00CCFF",
-      "#3300CC",
-      "#3300FF",
-      "#3333CC",
-      "#3333FF",
-      "#3366CC",
-      "#3366FF",
-      "#3399CC",
-      "#3399FF",
-      "#33CC00",
-      "#33CC33",
-      "#33CC66",
-      "#33CC99",
-      "#33CCCC",
-      "#33CCFF",
-      "#6600CC",
-      "#6600FF",
-      "#6633CC",
-      "#6633FF",
-      "#66CC00",
-      "#66CC33",
-      "#9900CC",
-      "#9900FF",
-      "#9933CC",
-      "#9933FF",
-      "#99CC00",
-      "#99CC33",
-      "#CC0000",
-      "#CC0033",
-      "#CC0066",
-      "#CC0099",
-      "#CC00CC",
-      "#CC00FF",
-      "#CC3300",
-      "#CC3333",
-      "#CC3366",
-      "#CC3399",
-      "#CC33CC",
-      "#CC33FF",
-      "#CC6600",
-      "#CC6633",
-      "#CC9900",
-      "#CC9933",
-      "#CCCC00",
-      "#CCCC33",
-      "#FF0000",
-      "#FF0033",
-      "#FF0066",
-      "#FF0099",
-      "#FF00CC",
-      "#FF00FF",
-      "#FF3300",
-      "#FF3333",
-      "#FF3366",
-      "#FF3399",
-      "#FF33CC",
-      "#FF33FF",
-      "#FF6600",
-      "#FF6633",
-      "#FF9900",
-      "#FF9933",
-      "#FFCC00",
-      "#FFCC33"
-    ];
-    function useColors() {
-      if (typeof window !== "undefined" && window.process && (window.process.type === "renderer" || window.process.__nwjs)) {
-        return true;
-      }
-      if (typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/)) {
-        return false;
-      }
-      let m2;
-      return typeof document !== "undefined" && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || // Is firebug? http://stackoverflow.com/a/398120/376773
-      typeof window !== "undefined" && window.console && (window.console.firebug || window.console.exception && window.console.table) || // Is firefox >= v31?
-      // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
-      typeof navigator !== "undefined" && navigator.userAgent && (m2 = navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/)) && parseInt(m2[1], 10) >= 31 || // Double check webkit in userAgent just in case we are in a worker
-      typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
-    }
-    function formatArgs(args) {
-      args[0] = (this.useColors ? "%c" : "") + this.namespace + (this.useColors ? " %c" : " ") + args[0] + (this.useColors ? "%c " : " ") + "+" + module.exports.humanize(this.diff);
-      if (!this.useColors) {
-        return;
-      }
-      const c2 = "color: " + this.color;
-      args.splice(1, 0, c2, "color: inherit");
-      let index = 0;
-      let lastC = 0;
-      args[0].replace(/%[a-zA-Z%]/g, (match2) => {
-        if (match2 === "%%") {
-          return;
-        }
-        index++;
-        if (match2 === "%c") {
-          lastC = index;
-        }
-      });
-      args.splice(lastC, 0, c2);
-    }
-    exports.log = console.debug || console.log || (() => {
-    });
-    function save(namespaces) {
-      try {
-        if (namespaces) {
-          exports.storage.setItem("debug", namespaces);
-        } else {
-          exports.storage.removeItem("debug");
-        }
-      } catch (error2) {
-      }
-    }
-    function load() {
-      let r3;
-      try {
-        r3 = exports.storage.getItem("debug") || exports.storage.getItem("DEBUG");
-      } catch (error2) {
-      }
-      if (!r3 && typeof process !== "undefined" && "env" in process) {
-        r3 = process.env.DEBUG;
-      }
-      return r3;
-    }
-    function localstorage() {
-      try {
-        return localStorage;
-      } catch (error2) {
-      }
-    }
-    module.exports = require_common()(exports);
-    var { formatters: formatters2 } = module.exports;
-    formatters2.j = function(v2) {
-      try {
-        return JSON.stringify(v2);
-      } catch (error2) {
-        return "[UnexpectedJSONParseError]: " + error2.message;
-      }
-    };
   }
 });
 
@@ -4099,6 +4099,775 @@ var require_sha256 = __commonJS({
     })();
   }
 });
+
+// ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
+var import_date = __toESM(require_date(), 1);
+
+// ../../js-packages/number-formatters/dist/esm/constants.js
+var FALLBACK_LOCALE = "en";
+var FALLBACK_CURRENCY = "USD";
+
+// ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
+var import_debug2 = __toESM(require_browser(), 1);
+
+// ../../js-packages/number-formatters/dist/esm/get-cached-formatter.js
+var import_debug = __toESM(require_browser(), 1);
+var debug = (0, import_debug.default)("number-formatters:get-cached-formatter");
+var formatterCache = /* @__PURE__ */ new Map();
+function getCachedFormatter({ locale, fallbackLocale = FALLBACK_LOCALE, options, retries = 1 }) {
+  const cacheKey = JSON.stringify([locale, options]);
+  try {
+    return formatterCache.get(cacheKey) ?? formatterCache.set(cacheKey, new Intl.NumberFormat(locale, options)).get(cacheKey);
+  } catch (error2) {
+    debug(`Intl.NumberFormat was called with a non-existent locale "${locale}"; falling back to ${fallbackLocale}`);
+    if (retries) {
+      return getCachedFormatter({
+        locale: fallbackLocale,
+        options,
+        retries: retries - 1
+      });
+    }
+    throw error2;
+  }
+}
+
+// ../../js-packages/number-formatters/dist/esm/number-format-currency/currencies.js
+var defaultCurrencyOverrides = {
+  AED: {
+    symbol: "\u062F.\u0625.\u200F"
+  },
+  AFN: {
+    symbol: "\u060B"
+  },
+  ALL: {
+    symbol: "Lek"
+  },
+  AMD: {
+    symbol: "\u058F"
+  },
+  ANG: {
+    symbol: "\u0192"
+  },
+  AOA: {
+    symbol: "Kz"
+  },
+  ARS: {
+    symbol: "$"
+  },
+  AUD: {
+    symbol: "A$"
+  },
+  AWG: {
+    symbol: "\u0192"
+  },
+  AZN: {
+    symbol: "\u20BC"
+  },
+  BAM: {
+    symbol: "\u041A\u041C"
+  },
+  BBD: {
+    symbol: "Bds$"
+  },
+  BDT: {
+    symbol: "\u09F3"
+  },
+  BGN: {
+    symbol: "\u043B\u0432."
+  },
+  BHD: {
+    symbol: "\u062F.\u0628.\u200F"
+  },
+  BIF: {
+    symbol: "FBu"
+  },
+  BMD: {
+    symbol: "$"
+  },
+  BND: {
+    symbol: "$"
+  },
+  BOB: {
+    symbol: "Bs"
+  },
+  BRL: {
+    symbol: "R$"
+  },
+  BSD: {
+    symbol: "$"
+  },
+  BTC: {
+    symbol: "\u0243"
+  },
+  BTN: {
+    symbol: "Nu."
+  },
+  BWP: {
+    symbol: "P"
+  },
+  BYR: {
+    symbol: "\u0440."
+  },
+  BZD: {
+    symbol: "BZ$"
+  },
+  CAD: {
+    symbol: "C$"
+  },
+  CDF: {
+    symbol: "FC"
+  },
+  CHF: {
+    symbol: "CHF"
+  },
+  CLP: {
+    symbol: "$"
+  },
+  CNY: {
+    symbol: "\xA5"
+  },
+  COP: {
+    symbol: "$"
+  },
+  CRC: {
+    symbol: "\u20A1"
+  },
+  CUC: {
+    symbol: "CUC"
+  },
+  CUP: {
+    symbol: "$MN"
+  },
+  CVE: {
+    symbol: "$"
+  },
+  CZK: {
+    symbol: "K\u010D"
+  },
+  DJF: {
+    symbol: "Fdj"
+  },
+  DKK: {
+    symbol: "kr."
+  },
+  DOP: {
+    symbol: "RD$"
+  },
+  DZD: {
+    symbol: "\u062F.\u062C.\u200F"
+  },
+  EGP: {
+    symbol: "\u062C.\u0645.\u200F"
+  },
+  ERN: {
+    symbol: "Nfk"
+  },
+  ETB: {
+    symbol: "ETB"
+  },
+  EUR: {
+    symbol: "\u20AC"
+  },
+  FJD: {
+    symbol: "FJ$"
+  },
+  FKP: {
+    symbol: "\xA3"
+  },
+  GBP: {
+    symbol: "\xA3"
+  },
+  GEL: {
+    symbol: "Lari"
+  },
+  GHS: {
+    symbol: "\u20B5"
+  },
+  GIP: {
+    symbol: "\xA3"
+  },
+  GMD: {
+    symbol: "D"
+  },
+  GNF: {
+    symbol: "FG"
+  },
+  GTQ: {
+    symbol: "Q"
+  },
+  GYD: {
+    symbol: "G$"
+  },
+  HKD: {
+    symbol: "HK$"
+  },
+  HNL: {
+    symbol: "L."
+  },
+  HRK: {
+    symbol: "kn"
+  },
+  HTG: {
+    symbol: "G"
+  },
+  HUF: {
+    symbol: "Ft"
+  },
+  IDR: {
+    symbol: "Rp"
+  },
+  ILS: {
+    symbol: "\u20AA"
+  },
+  INR: {
+    symbol: "\u20B9"
+  },
+  IQD: {
+    symbol: "\u062F.\u0639.\u200F"
+  },
+  IRR: {
+    symbol: "\uFDFC"
+  },
+  ISK: {
+    symbol: "kr."
+  },
+  JMD: {
+    symbol: "J$"
+  },
+  JOD: {
+    symbol: "\u062F.\u0627.\u200F"
+  },
+  JPY: {
+    symbol: "\xA5"
+  },
+  KES: {
+    symbol: "S"
+  },
+  KGS: {
+    symbol: "\u0441\u043E\u043C"
+  },
+  KHR: {
+    symbol: "\u17DB"
+  },
+  KMF: {
+    symbol: "CF"
+  },
+  KPW: {
+    symbol: "\u20A9"
+  },
+  KRW: {
+    symbol: "\u20A9"
+  },
+  KWD: {
+    symbol: "\u062F.\u0643.\u200F"
+  },
+  KYD: {
+    symbol: "$"
+  },
+  KZT: {
+    symbol: "\u20B8"
+  },
+  LAK: {
+    symbol: "\u20AD"
+  },
+  LBP: {
+    symbol: "\u0644.\u0644.\u200F"
+  },
+  LKR: {
+    symbol: "\u20A8"
+  },
+  LRD: {
+    symbol: "L$"
+  },
+  LSL: {
+    symbol: "M"
+  },
+  LYD: {
+    symbol: "\u062F.\u0644.\u200F"
+  },
+  MAD: {
+    symbol: "\u062F.\u0645.\u200F"
+  },
+  MDL: {
+    symbol: "lei"
+  },
+  MGA: {
+    symbol: "Ar"
+  },
+  MKD: {
+    symbol: "\u0434\u0435\u043D."
+  },
+  MMK: {
+    symbol: "K"
+  },
+  MNT: {
+    symbol: "\u20AE"
+  },
+  MOP: {
+    symbol: "MOP$"
+  },
+  MRO: {
+    symbol: "UM"
+  },
+  MTL: {
+    symbol: "\u20A4"
+  },
+  MUR: {
+    symbol: "\u20A8"
+  },
+  MVR: {
+    symbol: "MVR"
+  },
+  MWK: {
+    symbol: "MK"
+  },
+  MXN: {
+    symbol: "MX$"
+  },
+  MYR: {
+    symbol: "RM"
+  },
+  MZN: {
+    symbol: "MT"
+  },
+  NAD: {
+    symbol: "N$"
+  },
+  NGN: {
+    symbol: "\u20A6"
+  },
+  NIO: {
+    symbol: "C$"
+  },
+  NOK: {
+    symbol: "kr"
+  },
+  NPR: {
+    symbol: "\u20A8"
+  },
+  NZD: {
+    symbol: "NZ$"
+  },
+  OMR: {
+    symbol: "\uFDFC"
+  },
+  PAB: {
+    symbol: "B/."
+  },
+  PEN: {
+    symbol: "S/."
+  },
+  PGK: {
+    symbol: "K"
+  },
+  PHP: {
+    symbol: "\u20B1"
+  },
+  PKR: {
+    symbol: "\u20A8"
+  },
+  PLN: {
+    symbol: "z\u0142"
+  },
+  PYG: {
+    symbol: "\u20B2"
+  },
+  QAR: {
+    symbol: "\uFDFC"
+  },
+  RON: {
+    symbol: "lei"
+  },
+  RSD: {
+    symbol: "\u0414\u0438\u043D."
+  },
+  RUB: {
+    symbol: "\u20BD"
+  },
+  RWF: {
+    symbol: "RWF"
+  },
+  SAR: {
+    symbol: "\uFDFC"
+  },
+  SBD: {
+    symbol: "S$"
+  },
+  SCR: {
+    symbol: "\u20A8"
+  },
+  SDD: {
+    symbol: "LSd"
+  },
+  SDG: {
+    symbol: "\xA3\u200F"
+  },
+  SEK: {
+    symbol: "kr"
+  },
+  SGD: {
+    symbol: "S$"
+  },
+  SHP: {
+    symbol: "\xA3"
+  },
+  SLL: {
+    symbol: "Le"
+  },
+  SOS: {
+    symbol: "S"
+  },
+  SRD: {
+    symbol: "$"
+  },
+  STD: {
+    symbol: "Db"
+  },
+  SVC: {
+    symbol: "\u20A1"
+  },
+  SYP: {
+    symbol: "\xA3"
+  },
+  SZL: {
+    symbol: "E"
+  },
+  THB: {
+    symbol: "\u0E3F"
+  },
+  TJS: {
+    symbol: "TJS"
+  },
+  TMT: {
+    symbol: "m"
+  },
+  TND: {
+    symbol: "\u062F.\u062A.\u200F"
+  },
+  TOP: {
+    symbol: "T$"
+  },
+  TRY: {
+    symbol: "TL"
+  },
+  TTD: {
+    symbol: "TT$"
+  },
+  TVD: {
+    symbol: "$T"
+  },
+  TWD: {
+    symbol: "NT$"
+  },
+  TZS: {
+    symbol: "TSh"
+  },
+  UAH: {
+    symbol: "\u20B4"
+  },
+  UGX: {
+    symbol: "USh"
+  },
+  USD: {
+    // No override. Do what the locale thinks is best.
+  },
+  UYU: {
+    symbol: "$U"
+  },
+  UZS: {
+    symbol: "\u0441\u045E\u043C"
+  },
+  VEB: {
+    symbol: "Bs."
+  },
+  VEF: {
+    symbol: "Bs. F."
+  },
+  VND: {
+    symbol: "\u20AB"
+  },
+  VUV: {
+    symbol: "VT"
+  },
+  WST: {
+    symbol: "WS$"
+  },
+  XAF: {
+    symbol: "F"
+  },
+  XCD: {
+    symbol: "$"
+  },
+  XOF: {
+    symbol: "F"
+  },
+  XPF: {
+    symbol: "F"
+  },
+  YER: {
+    symbol: "\uFDFC"
+  },
+  ZAR: {
+    symbol: "R"
+  },
+  ZMW: {
+    symbol: "ZK"
+  },
+  WON: {
+    symbol: "\u20A9"
+  }
+};
+
+// ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
+var debug2 = (0, import_debug2.default)("number-formatters:number-format-currency");
+function getCurrencyOverride(currency, geoLocation) {
+  if (currency === "USD" && geoLocation && geoLocation !== "" && geoLocation !== "US") {
+    return { symbol: "US$" };
+  }
+  return defaultCurrencyOverrides[currency];
+}
+function getValidCurrency(currency, geoLocation) {
+  if (!getCurrencyOverride(currency, geoLocation)) {
+    debug2(`getValidCurrency was called with a non-existent currency "${currency}"; falling back to ${FALLBACK_CURRENCY}`);
+    return FALLBACK_CURRENCY;
+  }
+  return currency;
+}
+function getCurrencyFormatter({ number, currency, browserSafeLocale, forceLatin = true, stripZeros, signForPositive }) {
+  const locale = `${browserSafeLocale}${forceLatin ? "-u-nu-latn" : ""}`;
+  const numberFormatOptions = {
+    style: "currency",
+    currency,
+    ...stripZeros && Number.isInteger(number) && {
+      /**
+       * There's an option called `trailingZeroDisplay` but it does not yet work
+       * in FF so we have to strip zeros manually.
+       */
+      maximumFractionDigits: 0,
+      minimumFractionDigits: 0
+    },
+    ...signForPositive && { signDisplay: "exceptZero" }
+  };
+  return getCachedFormatter({
+    locale,
+    options: numberFormatOptions
+  });
+}
+function getPrecisionForLocaleAndCurrency(browserSafeLocale, currency, forceLatin) {
+  const formatter = getCurrencyFormatter({ number: 0, currency, browserSafeLocale, forceLatin });
+  return formatter.resolvedOptions().maximumFractionDigits;
+}
+function scaleNumberForPrecision(number, currencyPrecision) {
+  const scale = Math.pow(10, currencyPrecision);
+  return Math.round(number * scale) / scale;
+}
+function prepareNumberForFormatting(number, currencyPrecision, isSmallestUnit) {
+  if (isNaN(number)) {
+    debug2("formatCurrency was called with NaN");
+    return 0;
+  }
+  if (isSmallestUnit) {
+    if (!Number.isInteger(number)) {
+      debug2("formatCurrency was called with isSmallestUnit and a float which will be rounded", number);
+    }
+    const smallestUnitDivisor = 10 ** currencyPrecision;
+    return scaleNumberForPrecision(Math.round(number) / smallestUnitDivisor, currencyPrecision);
+  }
+  return scaleNumberForPrecision(number, currencyPrecision);
+}
+var numberFormatCurrency = ({ number, browserSafeLocale, currency, stripZeros, isSmallestUnit, signForPositive, geoLocation, forceLatin }) => {
+  const validCurrency = getValidCurrency(currency, geoLocation);
+  const currencyOverride = getCurrencyOverride(validCurrency, geoLocation);
+  const currencyPrecision = getPrecisionForLocaleAndCurrency(browserSafeLocale, validCurrency, forceLatin);
+  if (isSmallestUnit && typeof currencyPrecision === "undefined") {
+    throw new Error(`Could not determine currency precision for ${validCurrency} in ${browserSafeLocale}`);
+  }
+  const numberAsFloat = prepareNumberForFormatting(number, currencyPrecision ?? 0, isSmallestUnit);
+  const formatter = getCurrencyFormatter({
+    number: numberAsFloat,
+    currency: validCurrency,
+    browserSafeLocale,
+    forceLatin,
+    stripZeros,
+    signForPositive
+  });
+  const parts = formatter.formatToParts(numberAsFloat);
+  return parts.reduce((formatted, part) => {
+    switch (part.type) {
+      case "currency":
+        if (currencyOverride?.symbol) {
+          return formatted + currencyOverride.symbol;
+        }
+        return formatted + part.value;
+      default:
+        return formatted + part.value;
+    }
+  }, "");
+};
+var getCurrencyObject = ({ number, browserSafeLocale, currency, stripZeros, isSmallestUnit, signForPositive, geoLocation, forceLatin }) => {
+  const validCurrency = getValidCurrency(currency, geoLocation);
+  const currencyOverride = getCurrencyOverride(validCurrency, geoLocation);
+  const currencyPrecision = getPrecisionForLocaleAndCurrency(browserSafeLocale, validCurrency, forceLatin);
+  const numberAsFloat = prepareNumberForFormatting(number, currencyPrecision ?? 0, isSmallestUnit);
+  const formatter = getCurrencyFormatter({
+    number: numberAsFloat,
+    currency: validCurrency,
+    browserSafeLocale,
+    forceLatin,
+    stripZeros,
+    signForPositive
+  });
+  const parts = formatter.formatToParts(numberAsFloat);
+  let sign = "";
+  let symbol3 = "$";
+  let symbolPosition = "before";
+  let hasAmountBeenSet = false;
+  let hasDecimalBeenSet = false;
+  let integer = "";
+  let fraction = "";
+  parts.forEach((part) => {
+    switch (part.type) {
+      case "currency":
+        symbol3 = currencyOverride?.symbol ?? part.value;
+        if (hasAmountBeenSet) {
+          symbolPosition = "after";
+        }
+        return;
+      case "group":
+        integer += part.value;
+        hasAmountBeenSet = true;
+        return;
+      case "decimal":
+        fraction += part.value;
+        hasAmountBeenSet = true;
+        hasDecimalBeenSet = true;
+        return;
+      case "integer":
+        integer += part.value;
+        hasAmountBeenSet = true;
+        return;
+      case "fraction":
+        fraction += part.value;
+        hasAmountBeenSet = true;
+        hasDecimalBeenSet = true;
+        return;
+      case "minusSign":
+        sign = "-";
+        return;
+      case "plusSign":
+        sign = "+";
+    }
+  });
+  const hasNonZeroFraction = !Number.isInteger(numberAsFloat) && hasDecimalBeenSet;
+  return {
+    sign,
+    symbol: symbol3,
+    symbolPosition,
+    integer,
+    fraction,
+    hasNonZeroFraction
+  };
+};
+
+// ../../js-packages/number-formatters/dist/esm/number-format.js
+var numberFormat = ({ browserSafeLocale, decimals = 0, forceLatin = true, numberFormatOptions = {} }) => {
+  const locale = `${browserSafeLocale}${forceLatin ? "-u-nu-latn" : ""}`;
+  const options = {
+    minimumFractionDigits: decimals,
+    // minimumFractionDigits default is 0
+    maximumFractionDigits: decimals,
+    // maximumFractionDigits default is the greater between minimumFractionDigits and 3
+    ...numberFormatOptions
+  };
+  return getCachedFormatter({ locale, options });
+};
+var numberFormatCompact = ({ numberFormatOptions = {}, ...params }) => numberFormat({
+  ...params,
+  numberFormatOptions: {
+    notation: "compact",
+    maximumFractionDigits: 1,
+    ...numberFormatOptions
+  }
+});
+
+// ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
+function createNumberFormatters() {
+  let localeState;
+  let geoLocationState;
+  const setLocale2 = (locale) => {
+    localeState = locale;
+  };
+  const getBrowserSafeLocale = () => {
+    const { l10n: { locale: localeFromUserSettings } } = (0, import_date.getSettings)();
+    return (localeState ?? (localeFromUserSettings || global?.window?.navigator?.language) ?? FALLBACK_LOCALE).split("_")[0];
+  };
+  const setGeoLocation2 = (geoLocation) => {
+    geoLocationState = geoLocation;
+  };
+  const formatNumber2 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
+    try {
+      const formatter = numberFormat({
+        browserSafeLocale: getBrowserSafeLocale(),
+        decimals,
+        forceLatin,
+        numberFormatOptions
+      });
+      return formatter.format(number);
+    } catch {
+      return String(number);
+    }
+  };
+  const formatNumberCompact2 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
+    try {
+      const formatter = numberFormatCompact({
+        browserSafeLocale: getBrowserSafeLocale(),
+        decimals,
+        forceLatin,
+        numberFormatOptions
+      });
+      return formatter.format(number);
+    } catch {
+      return String(number);
+    }
+  };
+  const formatCurrency2 = (number, currency, { stripZeros = false, isSmallestUnit = false, signForPositive = false, forceLatin = true } = {}) => {
+    return numberFormatCurrency({
+      number,
+      currency,
+      browserSafeLocale: getBrowserSafeLocale(),
+      stripZeros,
+      isSmallestUnit,
+      signForPositive,
+      geoLocation: geoLocationState,
+      forceLatin
+    });
+  };
+  const getCurrencyObject3 = (number, currency, { stripZeros = false, isSmallestUnit = false, signForPositive = false, forceLatin = true } = {}) => {
+    return getCurrencyObject({
+      number,
+      currency,
+      browserSafeLocale: getBrowserSafeLocale(),
+      stripZeros,
+      isSmallestUnit,
+      signForPositive,
+      geoLocation: geoLocationState,
+      forceLatin
+    });
+  };
+  return {
+    setLocale: setLocale2,
+    setGeoLocation: setGeoLocation2,
+    formatNumber: formatNumber2,
+    formatNumberCompact: formatNumberCompact2,
+    formatCurrency: formatCurrency2,
+    getCurrencyObject: getCurrencyObject3
+  };
+}
+var create_number_formatters_default = createNumberFormatters;
+
+// ../../js-packages/number-formatters/dist/esm/index.js
+var defaultFormatter = create_number_formatters_default();
+var { setLocale, setGeoLocation, formatNumber, formatNumberCompact, formatCurrency, getCurrencyObject: getCurrencyObject2 } = defaultFormatter;
 
 // ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/icon/index.mjs
 var import_element = __toESM(require_element(), 1);
@@ -16748,7 +17517,7 @@ function Checkbox({
 var import_components32 = __toESM(require_components(), 1);
 var import_element42 = __toESM(require_element(), 1);
 var import_i18n33 = __toESM(require_i18n(), 1);
-var import_date2 = __toESM(require_date(), 1);
+var import_date3 = __toESM(require_date(), 1);
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.2.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/utils/relative-date-control.mjs
 var import_components31 = __toESM(require_components(), 1);
@@ -16837,12 +17606,12 @@ function RelativeDateControl({
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.2.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/field-types/utils/parse-date-time.mjs
-var import_date = __toESM(require_date(), 1);
+var import_date2 = __toESM(require_date(), 1);
 function parseDateTime(dateTimeString) {
   if (!dateTimeString) {
     return null;
   }
-  const parsed = (0, import_date.getDate)(dateTimeString);
+  const parsed = (0, import_date2.getDate)(dateTimeString);
   return parsed && isValid(parsed) ? parsed : null;
 }
 
@@ -16939,10 +17708,10 @@ function CalendarDateTimeControl({
     [onChangeCallback]
   );
   const { format: fieldFormat } = field;
-  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date2.getSettings)().l10n.startOfWeek;
+  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date3.getSettings)().l10n.startOfWeek;
   const {
     timezone: { string: timezoneString }
-  } = (0, import_date2.getSettings)();
+  } = (0, import_date3.getSettings)();
   const displayLabel = isValid2?.required && !hideLabelFromVision ? `${label} (${(0, import_i18n33.__)("Required")})` : label;
   return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
     import_components32.BaseControl,
@@ -17021,20 +17790,20 @@ function DateTime({
 var import_components33 = __toESM(require_components(), 1);
 var import_element43 = __toESM(require_element(), 1);
 var import_i18n34 = __toESM(require_i18n(), 1);
-var import_date3 = __toESM(require_date(), 1);
+var import_date4 = __toESM(require_date(), 1);
 var import_jsx_runtime94 = __toESM(require_jsx_runtime(), 1);
 var { DateCalendar: DateCalendar2, DateRangeCalendar } = unlock(import_components33.privateApis);
 var DATE_PRESETS = [
   {
     id: "today",
     label: (0, import_i18n34.__)("Today"),
-    getValue: () => (0, import_date3.getDate)(null)
+    getValue: () => (0, import_date4.getDate)(null)
   },
   {
     id: "yesterday",
     label: (0, import_i18n34.__)("Yesterday"),
     getValue: () => {
-      const today = (0, import_date3.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return subDays(today, 1);
     }
   },
@@ -17042,7 +17811,7 @@ var DATE_PRESETS = [
     id: "past-week",
     label: (0, import_i18n34.__)("Past week"),
     getValue: () => {
-      const today = (0, import_date3.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return subDays(today, 7);
     }
   },
@@ -17050,7 +17819,7 @@ var DATE_PRESETS = [
     id: "past-month",
     label: (0, import_i18n34.__)("Past month"),
     getValue: () => {
-      const today = (0, import_date3.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return subMonths(today, 1);
     }
   }
@@ -17060,7 +17829,7 @@ var DATE_RANGE_PRESETS = [
     id: "last-7-days",
     label: (0, import_i18n34.__)("Last 7 days"),
     getValue: () => {
-      const today = (0, import_date3.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return [subDays(today, 7), today];
     }
   },
@@ -17068,7 +17837,7 @@ var DATE_RANGE_PRESETS = [
     id: "last-30-days",
     label: (0, import_i18n34.__)("Last 30 days"),
     getValue: () => {
-      const today = (0, import_date3.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return [subDays(today, 30), today];
     }
   },
@@ -17076,7 +17845,7 @@ var DATE_RANGE_PRESETS = [
     id: "month-to-date",
     label: (0, import_i18n34.__)("Month to date"),
     getValue: () => {
-      const today = (0, import_date3.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return [startOfMonth(today), today];
     }
   },
@@ -17084,7 +17853,7 @@ var DATE_RANGE_PRESETS = [
     id: "last-year",
     label: (0, import_i18n34.__)("Last year"),
     getValue: () => {
-      const today = (0, import_date3.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return [subYears(today, 1), today];
     }
   },
@@ -17092,7 +17861,7 @@ var DATE_RANGE_PRESETS = [
     id: "year-to-date",
     label: (0, import_i18n34.__)("Year to date"),
     getValue: () => {
-      const today = (0, import_date3.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return [startOfYear(today), today];
     }
   }
@@ -17101,7 +17870,7 @@ var parseDate = (dateString) => {
   if (!dateString) {
     return null;
   }
-  const parsed = (0, import_date3.getDate)(dateString);
+  const parsed = (0, import_date4.getDate)(dateString);
   return parsed && isValid(parsed) ? parsed : null;
 };
 var formatDate = (date) => {
@@ -17199,7 +17968,7 @@ function CalendarDateControl({
   const [selectedPresetId, setSelectedPresetId] = (0, import_element43.useState)(
     null
   );
-  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date3.getSettings)().l10n.startOfWeek;
+  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date4.getSettings)().l10n.startOfWeek;
   const fieldValue = getValue({ item: data });
   const value = typeof fieldValue === "string" ? fieldValue : void 0;
   const [calendarMonth, setCalendarMonth] = (0, import_element43.useState)(() => {
@@ -17248,7 +18017,7 @@ function CalendarDateControl({
   );
   const {
     timezone: { string: timezoneString }
-  } = (0, import_date3.getSettings)();
+  } = (0, import_date4.getSettings)();
   const displayLabel = isValid2?.required ? `${label} (${(0, import_i18n34.__)("Required")})` : label;
   return /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
     ValidatedDateControl,
@@ -17348,7 +18117,7 @@ function CalendarDateRangeControl({
   if (Array.isArray(fieldValue) && fieldValue.length === 2 && fieldValue.every((date) => typeof date === "string")) {
     value = fieldValue;
   }
-  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date3.getSettings)().l10n.startOfWeek;
+  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date4.getSettings)().l10n.startOfWeek;
   const onChangeCallback = (0, import_element43.useCallback)(
     (newValue) => {
       onChange(
@@ -17430,7 +18199,7 @@ function CalendarDateRangeControl({
     },
     [value, updateDateRange]
   );
-  const { timezone } = (0, import_date3.getSettings)();
+  const { timezone } = (0, import_date4.getSettings)();
   const displayLabel = field.isValid?.required ? `${label} (${(0, import_i18n34.__)("Required")})` : label;
   return /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
     ValidatedDateControl,
@@ -18958,10 +19727,10 @@ var text_default = {
 };
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.2.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/field-types/datetime.mjs
-var import_date5 = __toESM(require_date(), 1);
+var import_date6 = __toESM(require_date(), 1);
 var format4 = {
-  datetime: (0, import_date5.getSettings)().formats.datetime,
-  weekStartsOn: (0, import_date5.getSettings)().l10n.startOfWeek
+  datetime: (0, import_date6.getSettings)().formats.datetime,
+  weekStartsOn: (0, import_date6.getSettings)().l10n.startOfWeek
 };
 function getValueFormatted4({
   item,
@@ -18977,7 +19746,7 @@ function getValueFormatted4({
   } else {
     formatDatetime = field.format;
   }
-  return (0, import_date5.dateI18n)(formatDatetime.datetime, (0, import_date5.getDate)(value));
+  return (0, import_date6.dateI18n)(formatDatetime.datetime, (0, import_date6.getDate)(value));
 }
 var sort = (a2, b2, direction) => {
   const timeA = new Date(a2).getTime();
@@ -19020,10 +19789,10 @@ var datetime_default = {
 };
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.2.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/field-types/date.mjs
-var import_date6 = __toESM(require_date(), 1);
+var import_date7 = __toESM(require_date(), 1);
 var format5 = {
-  date: (0, import_date6.getSettings)().formats.date,
-  weekStartsOn: (0, import_date6.getSettings)().l10n.startOfWeek
+  date: (0, import_date7.getSettings)().formats.date,
+  weekStartsOn: (0, import_date7.getSettings)().l10n.startOfWeek
 };
 function getValueFormatted5({
   item,
@@ -19039,7 +19808,7 @@ function getValueFormatted5({
   } else {
     formatDate2 = field.format;
   }
-  return (0, import_date6.dateI18n)(formatDate2.date, (0, import_date6.getDate)(value));
+  return (0, import_date7.dateI18n)(formatDate2.date, (0, import_date7.getDate)(value));
 }
 var sort2 = (a2, b2, direction) => {
   const timeA = new Date(a2).getTime();
@@ -19806,8 +20575,8 @@ var import_components60 = __toESM(require_components(), 1);
 var import_i18n59 = __toESM(require_i18n(), 1);
 
 // ../../js-packages/analytics/index.jsx
-var import_debug = __toESM(require_browser(), 1);
-var debug = (0, import_debug.default)("dops:analytics");
+var import_debug3 = __toESM(require_browser(), 1);
+var debug3 = (0, import_debug3.default)("dops:analytics");
 var _superProps;
 var _user;
 window._tkq = window._tkq || [];
@@ -19821,10 +20590,10 @@ function buildQuerystring(group, name) {
     for (const key in group) {
       uriComponent += "&x_" + encodeURIComponent(key) + "=" + encodeURIComponent(group[key]);
     }
-    debug("Bumping stats %o", group);
+    debug3("Bumping stats %o", group);
   } else {
     uriComponent = "&x_" + encodeURIComponent(group) + "=" + encodeURIComponent(name);
-    debug('Bumping stat "%s" in group "%s"', name, group);
+    debug3('Bumping stat "%s" in group "%s"', name, group);
   }
   return uriComponent;
 }
@@ -19834,10 +20603,10 @@ function buildQuerystringNoPrefix(group, name) {
     for (const key in group) {
       uriComponent += "&" + encodeURIComponent(key) + "=" + encodeURIComponent(group[key]);
     }
-    debug("Built stats %o", group);
+    debug3("Built stats %o", group);
   } else {
     uriComponent = "&" + encodeURIComponent(group) + "=" + encodeURIComponent(name);
-    debug('Built stat "%s" in group "%s"', name, group);
+    debug3('Built stat "%s" in group "%s"', name, group);
   }
   return uriComponent;
 }
@@ -19900,14 +20669,14 @@ var analytics = {
     recordEvent: function(eventName, eventProperties) {
       eventProperties = eventProperties || {};
       if (eventName.indexOf("akismet_") !== 0 && eventName.indexOf("jetpack_") !== 0) {
-        debug('- Event name must be prefixed by "akismet_" or "jetpack_"');
+        debug3('- Event name must be prefixed by "akismet_" or "jetpack_"');
         return;
       }
       if (_superProps) {
-        debug("- Super Props: %o", _superProps);
+        debug3("- Super Props: %o", _superProps);
         eventProperties = Object.assign(eventProperties, _superProps);
       }
-      debug(
+      debug3(
         'Record event "%s" called with props %s',
         eventName,
         JSON.stringify(eventProperties)
@@ -19924,7 +20693,7 @@ var analytics = {
       });
     },
     setOptOut: function(isOptingOut) {
-      debug("Pushing setOptOut: %o", isOptingOut);
+      debug3("Pushing setOptOut: %o", isOptingOut);
       window._tkq.push(["setOptOut", isOptingOut]);
     }
   },
@@ -19945,7 +20714,7 @@ var analytics = {
     },
     recordPageView: function(urlPath, pageTitle) {
       analytics.ga.initialize();
-      debug("Recording Page View ~ [URL: " + urlPath + "] [Title: " + pageTitle + "]");
+      debug3("Recording Page View ~ [URL: " + urlPath + "] [Title: " + pageTitle + "]");
       if (this.googleAnalyticsEnabled) {
         window.ga("set", "page", urlPath);
         window.ga("send", {
@@ -19964,7 +20733,7 @@ var analytics = {
       if ("undefined" !== typeof value) {
         debugText += " [Option Value: " + value + "]";
       }
-      debug(debugText);
+      debug3(debugText);
       if (this.googleAnalyticsEnabled) {
         window.ga("send", "event", category, action, label, value);
       }
@@ -22390,775 +23159,6 @@ var EmptyResponses = ({ status, isSearch, readStatusFilter }) => {
   );
 };
 var empty_responses_default = EmptyResponses;
-
-// ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
-var import_date8 = __toESM(require_date(), 1);
-
-// ../../js-packages/number-formatters/dist/esm/constants.js
-var FALLBACK_LOCALE = "en";
-var FALLBACK_CURRENCY = "USD";
-
-// ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
-var import_debug3 = __toESM(require_browser(), 1);
-
-// ../../js-packages/number-formatters/dist/esm/get-cached-formatter.js
-var import_debug2 = __toESM(require_browser(), 1);
-var debug2 = (0, import_debug2.default)("number-formatters:get-cached-formatter");
-var formatterCache = /* @__PURE__ */ new Map();
-function getCachedFormatter({ locale, fallbackLocale = FALLBACK_LOCALE, options, retries = 1 }) {
-  const cacheKey = JSON.stringify([locale, options]);
-  try {
-    return formatterCache.get(cacheKey) ?? formatterCache.set(cacheKey, new Intl.NumberFormat(locale, options)).get(cacheKey);
-  } catch (error2) {
-    debug2(`Intl.NumberFormat was called with a non-existent locale "${locale}"; falling back to ${fallbackLocale}`);
-    if (retries) {
-      return getCachedFormatter({
-        locale: fallbackLocale,
-        options,
-        retries: retries - 1
-      });
-    }
-    throw error2;
-  }
-}
-
-// ../../js-packages/number-formatters/dist/esm/number-format-currency/currencies.js
-var defaultCurrencyOverrides = {
-  AED: {
-    symbol: "\u062F.\u0625.\u200F"
-  },
-  AFN: {
-    symbol: "\u060B"
-  },
-  ALL: {
-    symbol: "Lek"
-  },
-  AMD: {
-    symbol: "\u058F"
-  },
-  ANG: {
-    symbol: "\u0192"
-  },
-  AOA: {
-    symbol: "Kz"
-  },
-  ARS: {
-    symbol: "$"
-  },
-  AUD: {
-    symbol: "A$"
-  },
-  AWG: {
-    symbol: "\u0192"
-  },
-  AZN: {
-    symbol: "\u20BC"
-  },
-  BAM: {
-    symbol: "\u041A\u041C"
-  },
-  BBD: {
-    symbol: "Bds$"
-  },
-  BDT: {
-    symbol: "\u09F3"
-  },
-  BGN: {
-    symbol: "\u043B\u0432."
-  },
-  BHD: {
-    symbol: "\u062F.\u0628.\u200F"
-  },
-  BIF: {
-    symbol: "FBu"
-  },
-  BMD: {
-    symbol: "$"
-  },
-  BND: {
-    symbol: "$"
-  },
-  BOB: {
-    symbol: "Bs"
-  },
-  BRL: {
-    symbol: "R$"
-  },
-  BSD: {
-    symbol: "$"
-  },
-  BTC: {
-    symbol: "\u0243"
-  },
-  BTN: {
-    symbol: "Nu."
-  },
-  BWP: {
-    symbol: "P"
-  },
-  BYR: {
-    symbol: "\u0440."
-  },
-  BZD: {
-    symbol: "BZ$"
-  },
-  CAD: {
-    symbol: "C$"
-  },
-  CDF: {
-    symbol: "FC"
-  },
-  CHF: {
-    symbol: "CHF"
-  },
-  CLP: {
-    symbol: "$"
-  },
-  CNY: {
-    symbol: "\xA5"
-  },
-  COP: {
-    symbol: "$"
-  },
-  CRC: {
-    symbol: "\u20A1"
-  },
-  CUC: {
-    symbol: "CUC"
-  },
-  CUP: {
-    symbol: "$MN"
-  },
-  CVE: {
-    symbol: "$"
-  },
-  CZK: {
-    symbol: "K\u010D"
-  },
-  DJF: {
-    symbol: "Fdj"
-  },
-  DKK: {
-    symbol: "kr."
-  },
-  DOP: {
-    symbol: "RD$"
-  },
-  DZD: {
-    symbol: "\u062F.\u062C.\u200F"
-  },
-  EGP: {
-    symbol: "\u062C.\u0645.\u200F"
-  },
-  ERN: {
-    symbol: "Nfk"
-  },
-  ETB: {
-    symbol: "ETB"
-  },
-  EUR: {
-    symbol: "\u20AC"
-  },
-  FJD: {
-    symbol: "FJ$"
-  },
-  FKP: {
-    symbol: "\xA3"
-  },
-  GBP: {
-    symbol: "\xA3"
-  },
-  GEL: {
-    symbol: "Lari"
-  },
-  GHS: {
-    symbol: "\u20B5"
-  },
-  GIP: {
-    symbol: "\xA3"
-  },
-  GMD: {
-    symbol: "D"
-  },
-  GNF: {
-    symbol: "FG"
-  },
-  GTQ: {
-    symbol: "Q"
-  },
-  GYD: {
-    symbol: "G$"
-  },
-  HKD: {
-    symbol: "HK$"
-  },
-  HNL: {
-    symbol: "L."
-  },
-  HRK: {
-    symbol: "kn"
-  },
-  HTG: {
-    symbol: "G"
-  },
-  HUF: {
-    symbol: "Ft"
-  },
-  IDR: {
-    symbol: "Rp"
-  },
-  ILS: {
-    symbol: "\u20AA"
-  },
-  INR: {
-    symbol: "\u20B9"
-  },
-  IQD: {
-    symbol: "\u062F.\u0639.\u200F"
-  },
-  IRR: {
-    symbol: "\uFDFC"
-  },
-  ISK: {
-    symbol: "kr."
-  },
-  JMD: {
-    symbol: "J$"
-  },
-  JOD: {
-    symbol: "\u062F.\u0627.\u200F"
-  },
-  JPY: {
-    symbol: "\xA5"
-  },
-  KES: {
-    symbol: "S"
-  },
-  KGS: {
-    symbol: "\u0441\u043E\u043C"
-  },
-  KHR: {
-    symbol: "\u17DB"
-  },
-  KMF: {
-    symbol: "CF"
-  },
-  KPW: {
-    symbol: "\u20A9"
-  },
-  KRW: {
-    symbol: "\u20A9"
-  },
-  KWD: {
-    symbol: "\u062F.\u0643.\u200F"
-  },
-  KYD: {
-    symbol: "$"
-  },
-  KZT: {
-    symbol: "\u20B8"
-  },
-  LAK: {
-    symbol: "\u20AD"
-  },
-  LBP: {
-    symbol: "\u0644.\u0644.\u200F"
-  },
-  LKR: {
-    symbol: "\u20A8"
-  },
-  LRD: {
-    symbol: "L$"
-  },
-  LSL: {
-    symbol: "M"
-  },
-  LYD: {
-    symbol: "\u062F.\u0644.\u200F"
-  },
-  MAD: {
-    symbol: "\u062F.\u0645.\u200F"
-  },
-  MDL: {
-    symbol: "lei"
-  },
-  MGA: {
-    symbol: "Ar"
-  },
-  MKD: {
-    symbol: "\u0434\u0435\u043D."
-  },
-  MMK: {
-    symbol: "K"
-  },
-  MNT: {
-    symbol: "\u20AE"
-  },
-  MOP: {
-    symbol: "MOP$"
-  },
-  MRO: {
-    symbol: "UM"
-  },
-  MTL: {
-    symbol: "\u20A4"
-  },
-  MUR: {
-    symbol: "\u20A8"
-  },
-  MVR: {
-    symbol: "MVR"
-  },
-  MWK: {
-    symbol: "MK"
-  },
-  MXN: {
-    symbol: "MX$"
-  },
-  MYR: {
-    symbol: "RM"
-  },
-  MZN: {
-    symbol: "MT"
-  },
-  NAD: {
-    symbol: "N$"
-  },
-  NGN: {
-    symbol: "\u20A6"
-  },
-  NIO: {
-    symbol: "C$"
-  },
-  NOK: {
-    symbol: "kr"
-  },
-  NPR: {
-    symbol: "\u20A8"
-  },
-  NZD: {
-    symbol: "NZ$"
-  },
-  OMR: {
-    symbol: "\uFDFC"
-  },
-  PAB: {
-    symbol: "B/."
-  },
-  PEN: {
-    symbol: "S/."
-  },
-  PGK: {
-    symbol: "K"
-  },
-  PHP: {
-    symbol: "\u20B1"
-  },
-  PKR: {
-    symbol: "\u20A8"
-  },
-  PLN: {
-    symbol: "z\u0142"
-  },
-  PYG: {
-    symbol: "\u20B2"
-  },
-  QAR: {
-    symbol: "\uFDFC"
-  },
-  RON: {
-    symbol: "lei"
-  },
-  RSD: {
-    symbol: "\u0414\u0438\u043D."
-  },
-  RUB: {
-    symbol: "\u20BD"
-  },
-  RWF: {
-    symbol: "RWF"
-  },
-  SAR: {
-    symbol: "\uFDFC"
-  },
-  SBD: {
-    symbol: "S$"
-  },
-  SCR: {
-    symbol: "\u20A8"
-  },
-  SDD: {
-    symbol: "LSd"
-  },
-  SDG: {
-    symbol: "\xA3\u200F"
-  },
-  SEK: {
-    symbol: "kr"
-  },
-  SGD: {
-    symbol: "S$"
-  },
-  SHP: {
-    symbol: "\xA3"
-  },
-  SLL: {
-    symbol: "Le"
-  },
-  SOS: {
-    symbol: "S"
-  },
-  SRD: {
-    symbol: "$"
-  },
-  STD: {
-    symbol: "Db"
-  },
-  SVC: {
-    symbol: "\u20A1"
-  },
-  SYP: {
-    symbol: "\xA3"
-  },
-  SZL: {
-    symbol: "E"
-  },
-  THB: {
-    symbol: "\u0E3F"
-  },
-  TJS: {
-    symbol: "TJS"
-  },
-  TMT: {
-    symbol: "m"
-  },
-  TND: {
-    symbol: "\u062F.\u062A.\u200F"
-  },
-  TOP: {
-    symbol: "T$"
-  },
-  TRY: {
-    symbol: "TL"
-  },
-  TTD: {
-    symbol: "TT$"
-  },
-  TVD: {
-    symbol: "$T"
-  },
-  TWD: {
-    symbol: "NT$"
-  },
-  TZS: {
-    symbol: "TSh"
-  },
-  UAH: {
-    symbol: "\u20B4"
-  },
-  UGX: {
-    symbol: "USh"
-  },
-  USD: {
-    // No override. Do what the locale thinks is best.
-  },
-  UYU: {
-    symbol: "$U"
-  },
-  UZS: {
-    symbol: "\u0441\u045E\u043C"
-  },
-  VEB: {
-    symbol: "Bs."
-  },
-  VEF: {
-    symbol: "Bs. F."
-  },
-  VND: {
-    symbol: "\u20AB"
-  },
-  VUV: {
-    symbol: "VT"
-  },
-  WST: {
-    symbol: "WS$"
-  },
-  XAF: {
-    symbol: "F"
-  },
-  XCD: {
-    symbol: "$"
-  },
-  XOF: {
-    symbol: "F"
-  },
-  XPF: {
-    symbol: "F"
-  },
-  YER: {
-    symbol: "\uFDFC"
-  },
-  ZAR: {
-    symbol: "R"
-  },
-  ZMW: {
-    symbol: "ZK"
-  },
-  WON: {
-    symbol: "\u20A9"
-  }
-};
-
-// ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
-var debug3 = (0, import_debug3.default)("number-formatters:number-format-currency");
-function getCurrencyOverride(currency, geoLocation) {
-  if (currency === "USD" && geoLocation && geoLocation !== "" && geoLocation !== "US") {
-    return { symbol: "US$" };
-  }
-  return defaultCurrencyOverrides[currency];
-}
-function getValidCurrency(currency, geoLocation) {
-  if (!getCurrencyOverride(currency, geoLocation)) {
-    debug3(`getValidCurrency was called with a non-existent currency "${currency}"; falling back to ${FALLBACK_CURRENCY}`);
-    return FALLBACK_CURRENCY;
-  }
-  return currency;
-}
-function getCurrencyFormatter({ number, currency, browserSafeLocale, forceLatin = true, stripZeros, signForPositive }) {
-  const locale = `${browserSafeLocale}${forceLatin ? "-u-nu-latn" : ""}`;
-  const numberFormatOptions = {
-    style: "currency",
-    currency,
-    ...stripZeros && Number.isInteger(number) && {
-      /**
-       * There's an option called `trailingZeroDisplay` but it does not yet work
-       * in FF so we have to strip zeros manually.
-       */
-      maximumFractionDigits: 0,
-      minimumFractionDigits: 0
-    },
-    ...signForPositive && { signDisplay: "exceptZero" }
-  };
-  return getCachedFormatter({
-    locale,
-    options: numberFormatOptions
-  });
-}
-function getPrecisionForLocaleAndCurrency(browserSafeLocale, currency, forceLatin) {
-  const formatter = getCurrencyFormatter({ number: 0, currency, browserSafeLocale, forceLatin });
-  return formatter.resolvedOptions().maximumFractionDigits;
-}
-function scaleNumberForPrecision(number, currencyPrecision) {
-  const scale = Math.pow(10, currencyPrecision);
-  return Math.round(number * scale) / scale;
-}
-function prepareNumberForFormatting(number, currencyPrecision, isSmallestUnit) {
-  if (isNaN(number)) {
-    debug3("formatCurrency was called with NaN");
-    return 0;
-  }
-  if (isSmallestUnit) {
-    if (!Number.isInteger(number)) {
-      debug3("formatCurrency was called with isSmallestUnit and a float which will be rounded", number);
-    }
-    const smallestUnitDivisor = 10 ** currencyPrecision;
-    return scaleNumberForPrecision(Math.round(number) / smallestUnitDivisor, currencyPrecision);
-  }
-  return scaleNumberForPrecision(number, currencyPrecision);
-}
-var numberFormatCurrency = ({ number, browserSafeLocale, currency, stripZeros, isSmallestUnit, signForPositive, geoLocation, forceLatin }) => {
-  const validCurrency = getValidCurrency(currency, geoLocation);
-  const currencyOverride = getCurrencyOverride(validCurrency, geoLocation);
-  const currencyPrecision = getPrecisionForLocaleAndCurrency(browserSafeLocale, validCurrency, forceLatin);
-  if (isSmallestUnit && typeof currencyPrecision === "undefined") {
-    throw new Error(`Could not determine currency precision for ${validCurrency} in ${browserSafeLocale}`);
-  }
-  const numberAsFloat = prepareNumberForFormatting(number, currencyPrecision ?? 0, isSmallestUnit);
-  const formatter = getCurrencyFormatter({
-    number: numberAsFloat,
-    currency: validCurrency,
-    browserSafeLocale,
-    forceLatin,
-    stripZeros,
-    signForPositive
-  });
-  const parts = formatter.formatToParts(numberAsFloat);
-  return parts.reduce((formatted, part) => {
-    switch (part.type) {
-      case "currency":
-        if (currencyOverride?.symbol) {
-          return formatted + currencyOverride.symbol;
-        }
-        return formatted + part.value;
-      default:
-        return formatted + part.value;
-    }
-  }, "");
-};
-var getCurrencyObject = ({ number, browserSafeLocale, currency, stripZeros, isSmallestUnit, signForPositive, geoLocation, forceLatin }) => {
-  const validCurrency = getValidCurrency(currency, geoLocation);
-  const currencyOverride = getCurrencyOverride(validCurrency, geoLocation);
-  const currencyPrecision = getPrecisionForLocaleAndCurrency(browserSafeLocale, validCurrency, forceLatin);
-  const numberAsFloat = prepareNumberForFormatting(number, currencyPrecision ?? 0, isSmallestUnit);
-  const formatter = getCurrencyFormatter({
-    number: numberAsFloat,
-    currency: validCurrency,
-    browserSafeLocale,
-    forceLatin,
-    stripZeros,
-    signForPositive
-  });
-  const parts = formatter.formatToParts(numberAsFloat);
-  let sign = "";
-  let symbol3 = "$";
-  let symbolPosition = "before";
-  let hasAmountBeenSet = false;
-  let hasDecimalBeenSet = false;
-  let integer = "";
-  let fraction = "";
-  parts.forEach((part) => {
-    switch (part.type) {
-      case "currency":
-        symbol3 = currencyOverride?.symbol ?? part.value;
-        if (hasAmountBeenSet) {
-          symbolPosition = "after";
-        }
-        return;
-      case "group":
-        integer += part.value;
-        hasAmountBeenSet = true;
-        return;
-      case "decimal":
-        fraction += part.value;
-        hasAmountBeenSet = true;
-        hasDecimalBeenSet = true;
-        return;
-      case "integer":
-        integer += part.value;
-        hasAmountBeenSet = true;
-        return;
-      case "fraction":
-        fraction += part.value;
-        hasAmountBeenSet = true;
-        hasDecimalBeenSet = true;
-        return;
-      case "minusSign":
-        sign = "-";
-        return;
-      case "plusSign":
-        sign = "+";
-    }
-  });
-  const hasNonZeroFraction = !Number.isInteger(numberAsFloat) && hasDecimalBeenSet;
-  return {
-    sign,
-    symbol: symbol3,
-    symbolPosition,
-    integer,
-    fraction,
-    hasNonZeroFraction
-  };
-};
-
-// ../../js-packages/number-formatters/dist/esm/number-format.js
-var numberFormat = ({ browserSafeLocale, decimals = 0, forceLatin = true, numberFormatOptions = {} }) => {
-  const locale = `${browserSafeLocale}${forceLatin ? "-u-nu-latn" : ""}`;
-  const options = {
-    minimumFractionDigits: decimals,
-    // minimumFractionDigits default is 0
-    maximumFractionDigits: decimals,
-    // maximumFractionDigits default is the greater between minimumFractionDigits and 3
-    ...numberFormatOptions
-  };
-  return getCachedFormatter({ locale, options });
-};
-var numberFormatCompact = ({ numberFormatOptions = {}, ...params }) => numberFormat({
-  ...params,
-  numberFormatOptions: {
-    notation: "compact",
-    maximumFractionDigits: 1,
-    ...numberFormatOptions
-  }
-});
-
-// ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
-function createNumberFormatters() {
-  let localeState;
-  let geoLocationState;
-  const setLocale2 = (locale) => {
-    localeState = locale;
-  };
-  const getBrowserSafeLocale = () => {
-    const { l10n: { locale: localeFromUserSettings } } = (0, import_date8.getSettings)();
-    return (localeState ?? (localeFromUserSettings || global?.window?.navigator?.language) ?? FALLBACK_LOCALE).split("_")[0];
-  };
-  const setGeoLocation2 = (geoLocation) => {
-    geoLocationState = geoLocation;
-  };
-  const formatNumber2 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
-    try {
-      const formatter = numberFormat({
-        browserSafeLocale: getBrowserSafeLocale(),
-        decimals,
-        forceLatin,
-        numberFormatOptions
-      });
-      return formatter.format(number);
-    } catch {
-      return String(number);
-    }
-  };
-  const formatNumberCompact2 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
-    try {
-      const formatter = numberFormatCompact({
-        browserSafeLocale: getBrowserSafeLocale(),
-        decimals,
-        forceLatin,
-        numberFormatOptions
-      });
-      return formatter.format(number);
-    } catch {
-      return String(number);
-    }
-  };
-  const formatCurrency2 = (number, currency, { stripZeros = false, isSmallestUnit = false, signForPositive = false, forceLatin = true } = {}) => {
-    return numberFormatCurrency({
-      number,
-      currency,
-      browserSafeLocale: getBrowserSafeLocale(),
-      stripZeros,
-      isSmallestUnit,
-      signForPositive,
-      geoLocation: geoLocationState,
-      forceLatin
-    });
-  };
-  const getCurrencyObject3 = (number, currency, { stripZeros = false, isSmallestUnit = false, signForPositive = false, forceLatin = true } = {}) => {
-    return getCurrencyObject({
-      number,
-      currency,
-      browserSafeLocale: getBrowserSafeLocale(),
-      stripZeros,
-      isSmallestUnit,
-      signForPositive,
-      geoLocation: geoLocationState,
-      forceLatin
-    });
-  };
-  return {
-    setLocale: setLocale2,
-    setGeoLocation: setGeoLocation2,
-    formatNumber: formatNumber2,
-    formatNumberCompact: formatNumberCompact2,
-    formatCurrency: formatCurrency2,
-    getCurrencyObject: getCurrencyObject3
-  };
-}
-var create_number_formatters_default = createNumberFormatters;
-
-// ../../js-packages/number-formatters/dist/esm/index.js
-var defaultFormatter = create_number_formatters_default();
-var { setLocale, setGeoLocation, formatNumber, formatNumberCompact, formatCurrency, getCurrencyObject: getCurrencyObject2 } = defaultFormatter;
 
 // src/dashboard/components/empty-spam-button/index.tsx
 var import_api_fetch7 = __toESM(require_api_fetch(), 1);
@@ -28728,7 +28728,10 @@ function StageInner() {
     records,
     isLoadingData,
     totalItems,
-    totalPages
+    totalPages,
+    totalItemsInbox,
+    totalItemsSpam,
+    totalItemsTrash
   } = useInboxData({ status: statusView });
   (0, import_element77.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
@@ -28834,9 +28837,30 @@ function StageInner() {
         id: "folder",
         label: (0, import_i18n68.__)("Folder", "jetpack-forms"),
         elements: [
-          { label: (0, import_i18n68.__)("Inbox", "jetpack-forms"), value: "inbox" },
-          { label: (0, import_i18n68.__)("Spam", "jetpack-forms"), value: "spam" },
-          { label: (0, import_i18n68.__)("Trash", "jetpack-forms"), value: "trash" }
+          {
+            label: (0, import_i18n68.sprintf)(
+              /* translators: %s is the number of inbox responses. */
+              (0, import_i18n68.__)("Inbox (%s)", "jetpack-forms"),
+              formatNumber(totalItemsInbox ?? 0)
+            ),
+            value: "inbox"
+          },
+          {
+            label: (0, import_i18n68.sprintf)(
+              /* translators: %s is the number of spam responses. */
+              (0, import_i18n68.__)("Spam (%s)", "jetpack-forms"),
+              formatNumber(totalItemsSpam ?? 0)
+            ),
+            value: "spam"
+          },
+          {
+            label: (0, import_i18n68.sprintf)(
+              /* translators: %s is the number of trash responses. */
+              (0, import_i18n68.__)("Trash (%s)", "jetpack-forms"),
+              formatNumber(totalItemsTrash ?? 0)
+            ),
+            value: "trash"
+          }
         ],
         // Primary so the filter UI (and its pill) is visible by default.
         filterBy: { operators: ["is"], isPrimary: true },
@@ -28963,7 +28987,7 @@ function StageInner() {
         enableSorting: false
       }
     ],
-    [filterOptions]
+    [filterOptions, totalItemsInbox, totalItemsSpam, totalItemsTrash]
   );
   const actions = (0, import_element77.useMemo)(
     () => getActions({
