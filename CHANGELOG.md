@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Adding Jetpack Protect details page for users without the dedicated Jetpack Protect plugin.
 - Forms: add single forms screen.
 - Forms: display star and heart rating icons on form submission confirmation page.
+- Jetpack Social: Gate per-network customization behind paid features.
 - Likes: add minified build for CSS.
 - Likes: Display a notice to block theme users explaining they can add the Like block directly in the site editor instead of enabling the legacy feature.
 - Social: Mark new connections as shared by default for privileged users.
