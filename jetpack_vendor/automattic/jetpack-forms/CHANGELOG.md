@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Display uploaded files with icon, filename, and size on confirmation page.
 
 ### Changed
+- Contain file preview modal component styles with component by moving preview-file component to its own folder with co-located styles.
 - Extract Forms logo and product name into a shared FormsLogo component and use it in both the responses and forms wp-build dashboard stage headers.
 - Format number field values in the response field preview component using formatNumber() for proper locale-specific formatting (e.g., thousands separators).
 - Forms: add SVG icon files for all form field blocks and configure webpack for SVG component and raw imports.
