@@ -2,33 +2,30 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.5-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.5-beta - 2026-02-02
 ### Major Enhancements
-- General: Update minimum WordPress version to 6.8.
+- General: Update minimum WordPress version to 6.8. [#46801]
 
 ### Enhancements
-- Adding Jetpack Protect details page for users without the dedicated Jetpack Protect plugin.
-- Forms: add single forms screen.
-- Forms: display star and heart rating icons on form submission confirmation page.
-- Jetpack Social: Gate per-network customization behind paid features.
-- Likes: add minified build for CSS.
-- Likes: Display a notice to block theme users explaining they can add the Like block directly in the site editor instead of enabling the legacy feature.
-- Social: Mark new connections as shared by default for privileged users.
+- Add Jetpack Protect details page for users without the dedicated Jetpack Protect plugin. [#46630]
+- Forms: Add single forms screen. [#46767]
+- Forms: Display star and heart rating icons on form submission confirmation page. [#46679]
+- Social: Gate per-network customization behind paid features. [#46740]
+- Likes: Add minified build for CSS. [#46750]
+- Likes: Display a notice to block theme users explaining they can add the Like block directly in the site editor instead of enabling the legacy feature. [#46726]
+- Social: Mark new connections as shared by default for privileged users. [#46796]
 
 ### Bug fixes
-- Forms: improve VoiceOver for form submissions.
-- Site Switcher: fix partial keyword matching so typing 'swit' shows 'Switch to...' results in the command palette.
+- Forms: Improve VoiceOver for form submissions. [#46707]
+- Site Switcher: Fix partial keyword matching so typing 'swit' shows 'Switch to...' results in the command palette. [#46766]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Disable buttons on VideoPress block renders that require an upgrade to function
-- Podcast player email rendering: Use audio block rendering and link to post.
-- Remove experimental Math (LaTeX) block.
-- Social: Update social post preview modal height.
-- Switch Site command: disable for now - note this was never included in a jetpack-plugin release
-- Update package dependencies.
+- Disable buttons on VideoPress block renders that require an upgrade to function. [#46822]
+- Podcast player email rendering: Use audio block rendering and link to post. [#46768]
+- Remove experimental Math (LaTeX) block. [#45746]
+- Social: Update social post preview modal height. [#46882]
+- Switch Site command: Disable for now - note this was never included in a jetpack-plugin release. [#46855]
+- Update package dependencies. [#46785] [#46854]
 
 ## 15.5-a.5 - 2026-01-26
 ### Enhancements
