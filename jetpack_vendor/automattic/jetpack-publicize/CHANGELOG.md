@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Mark new connections as shared by default for privileged users.
+- Preview Modal: Clarify disabled account state with icon and simple text.
 - Update package dependencies.
 
 ### Fixed
