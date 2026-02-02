@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Sync media to connections for per network customizations.
 
 ### Changed
+- Adjust connection toggle UI and remove redundant "Preview" heading.
 - Mark new connections as shared by default for privileged users.
 - Preview Modal: Clarify disabled account state with icon and simple text.
 - Social Preview: Retain previously selected preview tab on navigation.
