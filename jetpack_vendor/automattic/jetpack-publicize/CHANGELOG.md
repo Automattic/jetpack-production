@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Adjust connection toggle UI and remove redundant "Preview" heading.
+- Convert upgrade and demo buttons to links that open in new tab.
 - Mark new connections as shared by default for privileged users.
 - Preview Modal: Clarify disabled account state with icon and simple text.
 - Social Preview: Retain previously selected preview tab on navigation.
