@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Mark new connections as shared by default for privileged users.
 - Update package dependencies.
 
+### Fixed
+- Fix the social preview modal UX.
+
 ## [0.72.0] - 2026-01-26
 ### Added
 - Add sharing activity modal with tabs for All shares, Shared, and Scheduled views. [#46633]
