@@ -30,8 +30,8 @@
 	"dependencies": {
 		"@automattic/jetpack-analytics": "^1.0.7",
 		"@automattic/jetpack-api": "^1.0.16",
-		"@automattic/jetpack-components": "^1.4.9",
-		"@automattic/jetpack-connection": "^1.4.30",
+		"@automattic/jetpack-components": "^1.4.10-alpha",
+		"@automattic/jetpack-connection": "^1.4.31-alpha",
 		"@automattic/jetpack-shared-extension-utils": "^1.4.8",
 		"@automattic/number-formatters": "^1.0.16",
 		"@tanstack/react-query": "5.90.8",
@@ -61,7 +61,7 @@
 		"jest": "30.2.0",
 		"sass-embedded": "1.97.2",
 		"sass-loader": "16.0.5",
-		"storybook": "10.1.10",
+		"storybook": "10.2.3",
 		"typescript": "5.9.3",
 		"webpack": "5.101.3",
 		"webpack-cli": "6.0.1"

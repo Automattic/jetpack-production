@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Modules: add new Reader module.
 
+### Changed
+- Update package dependencies.
+
 ## [5.30.4] - 2026-02-02
 ### Added
 - Adding Jetpack Protect details page for users without the dedicated Jetpack Protect plugin. [#46630]
