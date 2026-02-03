@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Contain file preview modal component styles with component by moving preview-file component to its own folder with co-located styles.
 - Forms: add SVG icon files for all form field blocks and configure webpack for SVG component and raw imports.
+- Use dynamic number values for spam and trash tip in response sidebar, and add styles.
 
 ### Fixed
 - Contact Form: Add support for form editing in widget editor context.

@@ -30020,6 +30020,7 @@ function SingleResponseView({
   const [previewFile, setPreviewFile] = (0, import_element81.useState)(null);
   const [isImageLoading, setIsImageLoading] = (0, import_element81.useState)(true);
   const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element81.useState)(null);
+  const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
   const { editEntityRecord } = (0, import_data18.useDispatch)(import_core_data6.store);
   const { response, isLoading } = (0, import_data18.useSelect)(
     (select) => {
@@ -30217,12 +30218,26 @@ function SingleResponseView({
         },
         key
       )) }),
-      response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime167.jsx)("div", { style: { marginTop: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components74.Tip, { children: (0, import_i18n76.__)("Spam responses are permanently deleted after 15 days.", "jetpack-forms") }) }),
-      response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime167.jsx)("div", { style: { marginTop: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components74.Tip, { children: (0, import_i18n76._n)(
-        "Items in trash are permanently deleted after 30 days.",
-        "Items in trash are permanently deleted after 30 days.",
-        30,
-        "jetpack-forms"
+      response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime167.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components74.Tip, { children: (0, import_i18n76.sprintf)(
+        /* translators: %d number of days. */
+        (0, import_i18n76._n)(
+          "Spam responses are permanently deleted after %d day.",
+          "Spam responses are permanently deleted after %d days.",
+          15,
+          "jetpack-forms"
+        ),
+        // Number from https://github.com/Automattic/jetpack/blob/bde3cf9a89ce0d02e50469df173a6253383bd276/projects/packages/forms/src/contact-form/class-contact-form-plugin.php#L132
+        15
+      ) }) }),
+      response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime167.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components74.Tip, { children: (0, import_i18n76.sprintf)(
+        /* translators: %d number of days. */
+        (0, import_i18n76._n)(
+          "Items in trash are permanently deleted after %d day.",
+          "Items in trash are permanently deleted after %d days.",
+          emptyTrashDays,
+          "jetpack-forms"
+        ),
+        emptyTrashDays
       ) }) })
     ] }),
     previewFile && /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components74.Modal, { title: (0, import_html_entities6.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(
