@@ -230,6 +230,11 @@ function jetpack_get_module_i18n( $key ) {
 				'name' => _x( 'Ads', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Earn revenue by displaying high‑quality ads on your site.', 'Module Description', 'jetpack' ),
 			),
+
+			'wpcom-reader' => array(
+				'name' => _x( 'WordPress.com Reader', 'Module Name', 'jetpack' ),
+				'description' => _x( 'Quickly access the WordPress.com Reader from your site\'s admin bar.', 'Module Description', 'jetpack' ),
+			),
 		);
 	}
 	return isset( $modules[ $key ] ) ? $modules[ $key ] : null;
@@ -275,6 +280,7 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/shortlinks.php
 			// - modules/subscriptions.php
 			// - modules/widgets.php
+			// - modules/wpcom-reader.php
 			'Social' => _x( 'Social', 'Module Tag', 'jetpack' ),
 
 			// Modules with `blocks` tag:
@@ -1141,6 +1147,24 @@ function jetpack_get_module_info( $key ) {
 	    'feature' => '',
 	    'additional_search_queries' => 'advertising, ad codes, ads, creator',
 	    'plan_classes' => 'premium, business, security, complete',
+	  ),
+	  'wpcom-reader' => 
+	  array (
+	    'name' => 'WordPress.com Reader',
+	    'description' => 'Quickly access the WordPress.com Reader from your site\'s admin bar.',
+	    'sort' => '12',
+	    'recommendation_order' => '',
+	    'introduced' => '15.5',
+	    'changed' => '',
+	    'deactivate' => '',
+	    'free' => '',
+	    'requires_connection' => 'No',
+	    'requires_user_connection' => '',
+	    'auto_activate' => 'No',
+	    'module_tags' => 'Social',
+	    'feature' => 'Engagement',
+	    'additional_search_queries' => 'read, subscriptions, subscribe, reader, follow',
+	    'plan_classes' => '',
 	  ),
 	);
 	return isset( $module_info[ $key ] ) ? $module_info[ $key ] : null;
