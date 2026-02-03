@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Contact Form: add shortcode transform support for synced form references.
 - Display star/heart rating icons on submission confirmation page.
 - Forms: add filter counts to wp-build inbox.
 - Forms: add form DataViews table to wp-build dashboard.
@@ -42,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Announce form submission and errors to VoiceOver.
+- Contact Form: Add support for form editing in widget editor context.
 - Contact Form: Fix Edit Form button in the Site Editor by navigating directly to the form editor.
 - Ensure form block is selected and locked when editing forms, and restrict available blocks to form-related blocks only.
 - Form Editor: stop hiding editor toolbar and sidebar panel tabs.
