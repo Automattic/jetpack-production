@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress.com Reader: add new option to show a link to the WordPress.com Reader in the admin bar.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin dashboard: add new "Reader" section.
 - VideoPress: Improve attachment details display with proper i18n support and WordPress core styling.
 
 ## 15.5-beta - 2026-02-02
