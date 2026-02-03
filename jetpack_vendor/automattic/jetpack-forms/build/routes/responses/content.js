@@ -28220,14 +28220,14 @@ var invalidateCacheAndNavigate = (registry, currentQuery2, queryParams, statusBe
 };
 var getGenericErrorMessage = (numberOfErrors) => {
   return numberOfErrors === 1 ? (0, import_i18n69.__)("An error occurred.", "jetpack-forms") : (0, import_i18n69.sprintf)(
-    /* translators: %d: the number of responses. */
+    /* translators: %s: the number of responses. */
     (0, import_i18n69._n)(
-      "An error occurred for %d response.",
-      "An error occurred for %d responses.",
+      "An error occurred for %s response.",
+      "An error occurred for %s responses.",
       numberOfErrors,
       "jetpack-forms"
     ),
-    numberOfErrors
+    formatNumber(numberOfErrors)
   );
 };
 var withTimeout = (promise, timeoutMs = 3e4) => {
@@ -28358,14 +28358,14 @@ function getActions({
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const actionId = `mark-as-spam-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
       const busyMessage = isUndo ? undoingMessage : (0, import_i18n69.sprintf)(
-        /* translators: %d: the number of responses. */
+        /* translators: %s: the number of responses. */
         (0, import_i18n69._n)(
-          "Moving %d response to spam\u2026",
-          "Moving %d responses to spam\u2026",
+          "Moving %s response to spam\u2026",
+          "Moving %s responses to spam\u2026",
           items.length,
           "jetpack-forms"
         ),
-        items.length
+        formatNumber(items.length)
       );
       createInfoNotice(busyMessage, {
         type: "snackbar",
@@ -28394,14 +28394,14 @@ function getActions({
         }
         if (numberOfErrors === 0) {
           const successMessage = items.length === 1 ? (0, import_i18n69.__)("Response marked as spam.", "jetpack-forms") : (0, import_i18n69.sprintf)(
-            /* translators: %d: the number of responses. */
+            /* translators: %s: the number of responses. */
             (0, import_i18n69._n)(
-              "%d response marked as spam.",
-              "%d responses marked as spam.",
+              "%s response marked as spam.",
+              "%s responses marked as spam.",
               items.length,
               "jetpack-forms"
             ),
-            items.length
+            formatNumber(items.length)
           );
           if (!isUndo) {
             createSuccessNotice(successMessage, {
@@ -28464,14 +28464,14 @@ function getActions({
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const actionId = `mark-as-not-spam-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
       const busyMessage = isUndo ? undoingMessage : (0, import_i18n69.sprintf)(
-        /* translators: %d: the number of responses. */
+        /* translators: %s: the number of responses. */
         (0, import_i18n69._n)(
-          "Marking %d response as not spam\u2026",
-          "Marking %d responses as not spam\u2026",
+          "Marking %s response as not spam\u2026",
+          "Marking %s responses as not spam\u2026",
           items.length,
           "jetpack-forms"
         ),
-        items.length
+        formatNumber(items.length)
       );
       createInfoNotice(busyMessage, {
         type: "snackbar",
@@ -28496,14 +28496,14 @@ function getActions({
         }
         if (numberOfErrors === 0) {
           const successMessage = items.length === 1 ? (0, import_i18n69.__)("Response marked as not spam.", "jetpack-forms") : (0, import_i18n69.sprintf)(
-            /* translators: %d: the number of responses. */
+            /* translators: %s: the number of responses. */
             (0, import_i18n69._n)(
-              "%d response marked as not spam.",
-              "%d responses marked as not spam.",
+              "%s response marked as not spam.",
+              "%s responses marked as not spam.",
               items.length,
               "jetpack-forms"
             ),
-            items.length
+            formatNumber(items.length)
           );
           if (!isUndo) {
             createSuccessNotice(successMessage, {
@@ -28567,14 +28567,14 @@ function getActions({
       const newStatus = targetStatus === "trash" ? "publish" : targetStatus;
       const actionId = `restore-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
       const busyMessage = isUndo ? undoingMessage : (0, import_i18n69.sprintf)(
-        /* translators: %d: the number of responses. */
+        /* translators: %s: the number of responses. */
         (0, import_i18n69._n)(
-          "Restoring %d response\u2026",
-          "Restoring %d responses\u2026",
+          "Restoring %s response\u2026",
+          "Restoring %s responses\u2026",
           items.length,
           "jetpack-forms"
         ),
-        items.length
+        formatNumber(items.length)
       );
       createInfoNotice(busyMessage, {
         type: "snackbar",
@@ -28599,14 +28599,14 @@ function getActions({
         }
         if (numberOfErrors === 0) {
           const successMessage = items.length === 1 ? (0, import_i18n69.__)("Response restored.", "jetpack-forms") : (0, import_i18n69.sprintf)(
-            /* translators: %d: the number of responses. */
+            /* translators: %s: the number of responses. */
             (0, import_i18n69._n)(
-              "%d response restored.",
-              "%d responses restored.",
+              "%s response restored.",
+              "%s responses restored.",
               items.length,
               "jetpack-forms"
             ),
-            items.length
+            formatNumber(items.length)
           );
           if (!isUndo) {
             createSuccessNotice(successMessage, {
@@ -28664,14 +28664,14 @@ function getActions({
       const previousStatus = items[0]?.status;
       const actionId = `move-to-trash-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
       const busyMessage = isUndo ? undoingMessage : (0, import_i18n69.sprintf)(
-        /* translators: %d: the number of responses. */
+        /* translators: %s: the number of responses. */
         (0, import_i18n69._n)(
-          "Moving %d response to trash\u2026",
-          "Moving %d responses to trash\u2026",
+          "Moving %s response to trash\u2026",
+          "Moving %s responses to trash\u2026",
           items.length,
           "jetpack-forms"
         ),
-        items.length
+        formatNumber(items.length)
       );
       createInfoNotice(busyMessage, {
         type: "snackbar",
@@ -28700,14 +28700,14 @@ function getActions({
         }
         if (numberOfErrors === 0) {
           const successMessage = items.length === 1 ? (0, import_i18n69.__)("Response moved to trash.", "jetpack-forms") : (0, import_i18n69.sprintf)(
-            /* translators: %d: the number of responses. */
+            /* translators: %s: the number of responses. */
             (0, import_i18n69._n)(
-              "%d response moved to trash.",
-              "%d responses moved to trash.",
+              "%s response moved to trash.",
+              "%s responses moved to trash.",
               items.length,
               "jetpack-forms"
             ),
-            items.length
+            formatNumber(items.length)
           );
           if (!isUndo) {
             receiveEntityRecords("postType", "feedback", items, queryParams, true);
@@ -28784,14 +28784,14 @@ function getActions({
       }
       if (itemsUpdated.length === items.length) {
         const successMessage = items.length === 1 ? (0, import_i18n69.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n69.sprintf)(
-          /* translators: %d: the number of responses. */
+          /* translators: %s: the number of responses. */
           (0, import_i18n69._n)(
-            "%d response deleted permanently.",
-            "%d responses deleted permanently.",
+            "%s response deleted permanently.",
+            "%s responses deleted permanently.",
             items.length,
             "jetpack-forms"
           ),
-          items.length
+          formatNumber(items.length)
         );
         createSuccessNotice(successMessage, { type: "snackbar", id: "delete-action" });
         const hash = window.location.hash;
@@ -28870,14 +28870,14 @@ function getActions({
       }
       if (promises.every(({ status }) => status === "fulfilled")) {
         const successMessage = items.length === 1 ? (0, import_i18n69.__)("Response marked as read.", "jetpack-forms") : (0, import_i18n69.sprintf)(
-          /* translators: %d: the number of responses. */
+          /* translators: %s: the number of responses. */
           (0, import_i18n69._n)(
-            "%d response marked as read.",
-            "%d responses marked as read.",
+            "%s response marked as read.",
+            "%s responses marked as read.",
             items.length,
             "jetpack-forms"
           ),
-          items.length
+          formatNumber(items.length)
         );
         createSuccessNotice(successMessage, {
           type: "snackbar",
@@ -28950,14 +28950,14 @@ function getActions({
         const updatedIds = items.map((item) => item.id);
         markRecordsAsInvalid2(updatedIds);
         const successMessage = items.length === 1 ? (0, import_i18n69.__)("Response marked as unread.", "jetpack-forms") : (0, import_i18n69.sprintf)(
-          /* translators: %d: the number of responses. */
+          /* translators: %s: the number of responses. */
           (0, import_i18n69._n)(
-            "%d response marked as unread.",
-            "%d responses marked as unread.",
+            "%s response marked as unread.",
+            "%s responses marked as unread.",
             items.length,
             "jetpack-forms"
           ),
-          items.length
+          formatNumber(items.length)
         );
         createSuccessNotice(successMessage, {
           type: "snackbar",
