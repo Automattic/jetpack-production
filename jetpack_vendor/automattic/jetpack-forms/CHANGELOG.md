@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Contact Form: Add support for form editing in widget editor context.
+- Contact Form: Fix loading spinner not showing on submit button.
 - Forms: remove focus outline from form success message.
 
 ## [7.6.0] - 2026-02-02
