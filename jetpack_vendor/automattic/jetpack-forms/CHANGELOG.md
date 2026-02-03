@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Format numbers consistently in response action messages using formatNumber() for proper locale-specific formatting (e.g., thousands separators) in all sprintf calls with _n() pluralization.
 - Forms: add hook for shared wp-build dashboard heaader details.
 - Forms: add SVG icon files for all form field blocks and configure webpack for SVG component and raw imports.
+- Update package dependencies.
 - Use dynamic number values for spam and trash tip in response sidebar, and add styles.
 
 ### Fixed

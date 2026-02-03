@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin dashboard: add new "Reader" section.
+- Update package dependencies.
 - VideoPress: Improve attachment details display with proper i18n support and WordPress core styling.
 
 ## 15.5 - 2026-02-03
