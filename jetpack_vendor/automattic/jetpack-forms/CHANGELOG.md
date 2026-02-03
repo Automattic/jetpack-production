@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Contact Form: add shortcode transform support for synced form references.
 - Forms: add single form view to wp-build dashboard.
+- Response inspector: display star rating icons for rating field submissions.
 
 ### Changed
 - Contain file preview modal component styles with component by moving preview-file component to its own folder with co-located styles.
