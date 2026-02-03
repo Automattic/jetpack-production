@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.6-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- VideoPress: Improve attachment details display with proper i18n support and WordPress core styling.
+
 ## 15.5-beta - 2026-02-02
 ### Major Enhancements
 - General: Update minimum WordPress version to 6.8. [#46801]
