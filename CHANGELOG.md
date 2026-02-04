@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - WordPress.com Reader: add new option to show a link to the WordPress.com Reader in the admin bar.
 
+### Bug fixes
+- Slideshow: fix an issue with sizing when images are lazily loaded.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin dashboard: add new "Reader" section.
 - Janitorial: Clean up to-test.md.
