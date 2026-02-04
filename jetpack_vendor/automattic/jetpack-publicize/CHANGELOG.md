@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Preview Modal: Fix footer scroll on smaller screens.
+
 ## [0.72.1] - 2026-02-02
 ### Added
 - Add "View" action to the scheduled post snackbar. [#46772]
