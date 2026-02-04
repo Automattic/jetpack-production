@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix compatibility with Gutenberg 22.4 by removing invalid null timezone argument from dateI18n calls.
+- Fix upgrade notice incorrectly showing for A4A (Automattic for Agencies) VideoPress customers by using dynamic features API instead of hardcoded plan slugs.
 - Video Library: fix video query to only return VideoPress videos instead of all video types.
 
 ## [0.33.4] - 2026-02-02

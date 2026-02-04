@@ -422,6 +422,7 @@ return array(
     'Automattic\\Jetpack\\VideoPress\\Uploader_Rest_Endpoints' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader-rest-endpoints.php',
     'Automattic\\Jetpack\\VideoPress\\Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-utils.php',
     'Automattic\\Jetpack\\VideoPress\\VideoPressToken' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopresstoken.php',
+    'Automattic\\Jetpack\\VideoPress\\VideoPress_Rest_Api_V1_Features' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopress-rest-api-v1-features.php',
     'Automattic\\Jetpack\\VideoPress\\VideoPress_Rest_Api_V1_Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopress-rest-api-v1-settings.php',
     'Automattic\\Jetpack\\VideoPress\\VideoPress_Rest_Api_V1_Site' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopress-rest-api-v1-site.php',
     'Automattic\\Jetpack\\VideoPress\\VideoPress_Rest_Api_V1_Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopress-rest-api-v1-stats.php',

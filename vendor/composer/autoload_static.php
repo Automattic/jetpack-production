@@ -446,6 +446,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_6_a_0
         'Automattic\\Jetpack\\VideoPress\\Uploader_Rest_Endpoints' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader-rest-endpoints.php',
         'Automattic\\Jetpack\\VideoPress\\Utils' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-utils.php',
         'Automattic\\Jetpack\\VideoPress\\VideoPressToken' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopresstoken.php',
+        'Automattic\\Jetpack\\VideoPress\\VideoPress_Rest_Api_V1_Features' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopress-rest-api-v1-features.php',
         'Automattic\\Jetpack\\VideoPress\\VideoPress_Rest_Api_V1_Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopress-rest-api-v1-settings.php',
         'Automattic\\Jetpack\\VideoPress\\VideoPress_Rest_Api_V1_Site' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopress-rest-api-v1-site.php',
         'Automattic\\Jetpack\\VideoPress\\VideoPress_Rest_Api_V1_Stats' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-videopress-rest-api-v1-stats.php',
